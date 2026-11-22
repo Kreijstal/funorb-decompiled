@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface CallbackContract010 extends CallbackContract006 {
-    public abstract void performAction1111(UiComponentPart029 uiComponentPart029Argument1, UiComponentPart015 uiComponentPart015Argument2, byte byteArgument3);
+    public abstract void performAction1092(UiComponentPart029 uiComponentPart029Argument1, UiComponentPart015 uiComponentPart015Argument2, byte byteArgument3);
 }

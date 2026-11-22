@@ -1,86 +1,262 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport127 implements CallbackContract004 {
-    static String[] stringArrayState0047;
-    static RenderingSupport010 renderingSupport010State0006;
-    static SecondaryNodeHashTable secondaryNodeHashTableState0005;
-    static SceneWidget sceneWidgetState0117;
-    static SceneWidget sceneWidgetState0118;
-    static int integerState0777;
-    static String[][] stringArrayArrayState0008;
-    static SceneWidget sceneWidgetState0119;
-    static int integerState0778;
+final class MixedSupport127 {
+    static MouseWheelInput mouseWheelInputState0001;
+    static boolean booleanState0191;
+    static long longState0050;
+    static MixedSupport004 mixedSupport004State0005;
+    static int integerState0793;
+    static String stringState0553;
+    static String stringState0554;
 
     public static void clearStaticReferences(boolean booleanArgument1) {
-        stringArrayArrayState0008 = (String[][]) null;
-        stringArrayState0047 = null;
-        sceneWidgetState0117 = null;
-        renderingSupport010State0006 = null;
-        sceneWidgetState0118 = null;
+        mouseWheelInputState0001 = null;
         if (!booleanArgument1) {
-          secondaryNodeHashTableState0005 = null;
-          sceneWidgetState0119 = null;
           return;
         }
+        stringState0554 = null;
+        mixedSupport004State0005 = null;
+        stringState0553 = null;
     }
 
-    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
-        RuntimeException stackRuntimeExceptionLocal1 = null;
-        StringBuilder stackStringBuilderLocal2 = null;
-        String stackStringLocal3 = null;
-        RuntimeException caughtExceptionLocal4 = null;
-        int integerLocal5 = 0;
-        RuntimeException runtimeExceptionLocal6 = null;
-        int integerLocal7 = 0;
-        RgbSprite rgbSpriteLocal8 = null;
+    final static void performAction1631(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3) {
+        if (!booleanArgument1) {
+          SoftwareRaster.performAction0648();
+        } else {
+          SoftwareRaster.performAction0641(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 192);
+        }
+        if (integerArgument3 <= 39) {
+          return;
+        }
+        RenderingSupport002.performAction0248(booleanArgument1, 91);
+    }
+
+    final static void performAction1630(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, int integerArgument4) {
+        if (!booleanArgument2) {
+          stringState0554 = (String) null;
+        }
+        NodeHashTable.performAction1500(ComponentContainer.integerState0377, booleanArgument3, SecondaryNodeHashTable.integerState0540, GameApplet.integerState0292, integerArgument1, (byte) -41, integerArgument4);
+    }
+
+    final static void performAction1629(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, SceneWidgetPart013 sceneWidgetPart013Argument7, boolean booleanArgument8) {
+        SceneWidgetPart009[][] stackSceneWidgetPart009ArrayArrayLocal1 = null;
+        int stackIntegerLocal2 = 0;
+        int stackIntegerLocal3 = 0;
+        int stackIntegerLocal4 = 0;
+        int stackIntegerLocal5 = 0;
+        int stackIntegerLocal6 = 0;
+        RuntimeException stackRuntimeExceptionLocal7 = null;
+        StringBuilder stackStringBuilderLocal8 = null;
+        String stackStringLocal9 = null;
+        RuntimeException caughtExceptionLocal10 = null;
+        int integerLocal11 = 0;
+        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal12 = null;
+        RuntimeException runtimeExceptionLocal13 = null;
+        int integerLocal14 = 0;
+        int[] integerArrayLocal15 = null;
+        int integerLocal16 = 0;
+        int integerLocal17 = 0;
+        int integerLocal18 = 0;
+        int integerLocal19 = 0;
+        SceneWidgetPart009 sceneWidgetPart009Local20 = null;
+        int integerLocal21 = 0;
+        int integerLocal22 = 0;
+        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal23 = null;
+        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal24 = null;
+        int[] integerArrayLocal25 = null;
+        int[] integerArrayLocal26 = null;
+        int integerLocal27;
+        int integerLocal28;
+        integerLocal22 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal5 = integerArgument2 + uiComponentArgument5.integerState0110;
-          integerLocal7 = uiComponentArgument5.integerState0104 + integerArgument3;
-          RenderingSupport008.performAction0867(integerLocal5, integerLocal7, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 101);
-          rgbSpriteLocal8 = MixedSupport129.rgbSpriteArrayState0028[1];
-          if (uiComponentArgument5 instanceof InteractiveComponent &&
-            ((InteractiveComponent) (uiComponentArgument5)).booleanState0034) {
-            rgbSpriteLocal8.performAction0295((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
+          boolean frameCompletedLocal29 = true;
+          boolean frameCompletedLocal30 = true;
+          if (integerArgument6 <= integerArgument3) {
+            integerLocal11 = 1;
+            integerLocal14 = 0;
+            while (true) {
+              if (MixedSupport009.integerArrayArrayState0004.length <= integerLocal14) {
+                if (integerLocal11 == 0) {
+                  frameCompletedLocal29 = false;
+                  break;
+                }
+                SceneWidgetPart013.booleanState0207 = true;
+                frameCompletedLocal30 = false;
+                break;
+              }
+              integerArrayLocal26 = MixedSupport009.integerArrayArrayState0004[integerLocal14];
+              integerArrayLocal25 = integerArrayLocal26;
+              integerArrayLocal15 = integerArrayLocal25;
+              integerLocal17 = 0;
+              integerLocal18 = 0;
+              scanLoop1: while (true) {
+                if (integerLocal18 >= integerArrayLocal26.length) {
+                  if (integerLocal17 == 0 &&
+                    integerArgument3 != MixedSupport063.integerState0336) {
+                    break scanLoop1;
+                  }
+                  integerLocal11 = 0;
+                  for (integerLocal18 = 0; integerLocal18 < integerArrayLocal26.length; integerLocal18 += 2) {
+                    integerLocal19 = integerArrayLocal26[integerLocal18];
+                    if (integerLocal19 == -1) {
+                      MixedSupport046.booleanState0052 = true;
+                    } else {
+                      if (integerLocal19 < integerArgument3) {
+                        MixedSupport108.booleanArrayState0009[integerLocal19] = true;
+                      }
+                    }
+                  }
+                  break scanLoop1;
+                }
+                integerLocal28 = integerArrayLocal26[integerLocal18];
+                integerLocal21 = integerArrayLocal15[1 + integerLocal18];
+                if (integerLocal28 == -1) {
+                  if (UiComponentPart002.integerArrayState0014[integerArgument1] != integerLocal21) {
+                    break scanLoop1;
+                  }
+                } else {
+                  if (integerArgument3 == integerLocal28 &&
+                    integerArgument5 == integerLocal21) {
+                    integerLocal17 = 1;
+                  } else {
+                    if (integerArgument3 <= integerLocal28) {
+                      break scanLoop1;
+                    }
+                    if ((SceneWidgetNode.byteArrayState0012[integerLocal28] & 255) != integerLocal21) {
+                      break scanLoop1;
+                    }
+                  }
+                }
+                integerLocal18 += 2;
+                continue;
+
+              }
+              integerLocal14++;
+            }
           }
-          if (uiComponentArgument5.computeBoolean0220(true)) {
-            RenderingSupport007.performAction0860(-4 + uiComponentArgument5.integerState0107, 2 + integerLocal5, (byte) 124, 2 + integerLocal7, uiComponentArgument5.integerState0108 - 4);
+          if ((frameCompletedLocal29) &&
+            (frameCompletedLocal30)) {
+            stackSceneWidgetPart009ArrayArrayLocal1 = MixedSupport103.sceneWidgetPart009ArrayArrayState0001;
+            if (integerArgument3 != -1) {
+              stackIntegerLocal2 = integerArgument3 + 4;
+            } else {
+              stackIntegerLocal2 = 1;
+            }
+            sceneWidgetPart009ArrayLocal23 = stackSceneWidgetPart009ArrayArrayLocal1[stackIntegerLocal2];
+            sceneWidgetPart009ArrayLocal24 = sceneWidgetPart009ArrayLocal23;
+            sceneWidgetPart009ArrayLocal12 = sceneWidgetPart009ArrayLocal24;
+            integerLocal14 = 1;
+            if (booleanArgument2) {
+              if (integerArgument3 != -1) {
+                for (integerLocal16 = 0; sceneWidgetPart009ArrayLocal23.length - 1 > integerLocal16; integerLocal16++) {
+                  if (0 == (MixedSupport134.byteArrayState0029[(integerArgument4 + integerLocal16) / 8] & 1 << (7 & integerArgument4 + integerLocal16))) {
+                    continue;
+                  }
+                  integerLocal14 = 0;
+                  break;
+                }
+                integerArgument4 = integerArgument4 + (255 & MixedSupport107.byteArrayState0026[integerArgument3]);
+              } else {
+                integerLocal16 = 0;
+                while (!(UiComponentPart002.integerArrayState0014.length <= integerLocal16)) {
+                  if ((MixedSupport070.byteArrayState0011[integerLocal16 / 8] & 1 << (7 & integerLocal16)) == 0) {
+                    integerLocal16++;
+                    continue;
+                  }
+                  integerLocal14 = 0;
+                  break;
+                }
+              }
+            }
+            integerLocal27 = 0;
+            integerLocal17 = 0;
+            while (true) {
+              stackIntegerLocal3 = integerLocal17;
+              if (integerArgument3 != -1) {
+                stackIntegerLocal4 = -1 + sceneWidgetPart009ArrayLocal24.length;
+              } else {
+                stackIntegerLocal4 = UiComponentPart002.integerArrayState0014.length;
+              }
+              if (stackIntegerLocal3 >= stackIntegerLocal4) {
+                if (integerLocal27 != 0) {
+                  break;
+                }
+                for (integerLocal17 = 0; integerLocal17 < -1 + sceneWidgetPart009ArrayLocal24.length; integerLocal17++) {
+                  if (-1 == integerArgument3) {
+                    integerArgument1 = integerLocal17;
+                  } else {
+                    SceneWidgetNode.byteArrayState0012[integerArgument3] = (byte)integerLocal17;
+                  }
+                  MixedSupport127.performAction1629(integerArgument1, booleanArgument2, 1 + integerArgument3, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
+                  if (SceneWidgetPart013.booleanState0207) {
+                    return;
+                  }
+                }
+                break;
+              }
+              if (integerArgument3 != -1) {
+                SceneWidgetNode.byteArrayState0012[integerArgument3] = (byte)integerLocal17;
+              } else {
+                integerArgument1 = integerLocal17;
+              }
+              if (integerArgument3 == -1 &&
+                UiComponentPart002.integerArrayState0014.length == 1) {
+                integerLocal18 = 1;
+              } else {
+                sceneWidgetPart009Local20 = sceneWidgetPart009ArrayLocal12[1 + integerLocal17];
+                if (booleanArgument2) {
+                  if (!sceneWidgetPart009Local20.booleanState0217) {
+                    if (integerLocal14 != 0) {
+                      stackIntegerLocal6 = (sceneWidgetPart009Local20.booleanState0212) ? 1 : 0;
+                    } else {
+                      stackIntegerLocal6 = 0;
+                    }
+                  } else {
+                    stackIntegerLocal6 = 1;
+                  }
+                  integerLocal18 = stackIntegerLocal6;
+                } else {
+                  if (integerArgument3 != -1) {
+                    stackIntegerLocal5 = (integerLocal17 != (255 & MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032[integerArgument3])) ? 0 : 1;
+                  } else {
+                    stackIntegerLocal5 = (MixedSupport016.sceneWidgetPart013State0001.integerState0840 != UiComponentPart002.integerArrayState0014[integerLocal17]) ? 0 : 1;
+                  }
+                  integerLocal18 = stackIntegerLocal5;
+                }
+              }
+              if (integerLocal18 != 0) {
+                MixedSupport127.performAction1629(integerArgument1, booleanArgument2, integerArgument3 + 1, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
+                integerLocal27 = 1;
+              }
+              if (SceneWidgetPart013.booleanState0207) {
+                return;
+              }
+              integerLocal17++;
+            }
           }
-          if (byteArgument4 < -60) {
-            return;
+          if (booleanArgument8) {
+            stringState0554 = (String) null;
           }
-          MixedSupport127.clearStaticReferences(false);
           return;
-        } catch (java.lang.RuntimeException caughtParameterLocal9) {
-          caughtExceptionLocal4 = caughtParameterLocal9;
-          runtimeExceptionLocal6 = caughtExceptionLocal4;
-          stackRuntimeExceptionLocal1 = runtimeExceptionLocal6;
-          stackStringBuilderLocal2 = new StringBuilder().append("tg.B(").append(booleanArgument1).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',');
-          if (uiComponentArgument5 == null) {
-            stackStringLocal3 = "null";
+        } catch (java.lang.RuntimeException caughtParameterLocal31) {
+          caughtExceptionLocal10 = caughtParameterLocal31;
+          runtimeExceptionLocal13 = caughtExceptionLocal10;
+          stackRuntimeExceptionLocal7 = runtimeExceptionLocal13;
+          stackStringBuilderLocal8 = new StringBuilder().append("uc.A(").append(integerArgument1).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',');
+          if (sceneWidgetPart013Argument7 == null) {
+            stackStringLocal9 = "null";
           } else {
-            stackStringLocal3 = "{...}";
+            stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(booleanArgument8).append(')').toString());
         }
-    }
-
-    final static void performAction1630(byte byteArgument1) {
-        UiComponentPart018.performAction1051(9, 11, MixedSupport016.sceneWidgetPart013State0001.computeInteger1741(102));
-        GameDomainSupport006.booleanState0227 = true;
-        if (byteArgument1 >= -2) {
-          sceneWidgetState0117 = (SceneWidget) null;
-        }
-    }
-
-    final static RgbSprite computeRgbSprite1631(boolean booleanArgument1, int integerArgument2) {
-        if (!booleanArgument1) {
-          return (RgbSprite) null;
-        }
-        return MixedSupport063.rgbSpriteArrayArrayState0008[integerArgument2][(12 & CipherPacketBuffer.integerState0799) >> 2];
     }
 
     static {
-        stringArrayArrayState0008 = new String[][]{new String[]{"Standard", "Large"}, new String[]{"Slow", "Medium", "Fast", "Maximum", "Panic!"}, new String[]{"3", "4", "5", "6", "7"}, new String[]{"None", "W/cards", "+Drills", "+Bombs", "All"}, new String[]{"Level 1", "Level 2", "Level 3", "Off"}};
+        booleanState0191 = true;
+        mixedSupport004State0005 = new MixedSupport004();
+        stringState0553 = "Accept";
+        stringState0554 = "Lobby";
     }
 }

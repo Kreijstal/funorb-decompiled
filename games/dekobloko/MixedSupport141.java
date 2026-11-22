@@ -2,150 +2,79 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport141 {
-    static String stringState0575;
-    static String stringState0576;
-    static boolean booleanState0194;
-    static String stringState0577;
-    static String stringState0578;
-    static String stringState0579;
-    static byte[] byteArrayState0029;
+    int[] integerArrayState0251;
+    int integerState0860;
+    int[][] integerArrayArrayState0026;
+    byte byteState0005;
+    int integerState0861;
+    static int[] integerArrayState0252;
+    int integerState0862;
+    byte[] byteArrayState0034;
+    int integerState0863;
+    int integerState0864;
+    int integerState0865;
+    int integerState0866;
+    byte[] byteArrayState0035;
+    int integerState0867;
+    int integerState0868;
+    int integerState0869;
+    int integerState0870;
+    int integerState0871;
+    byte[] byteArrayState0036;
+    byte[][] byteArrayArrayState0012;
+    int[][] integerArrayArrayState0027;
+    byte[] byteArrayState0037;
+    byte[] byteArrayState0038;
+    int integerState0872;
+    byte[] byteArrayState0039;
+    static int integerState0873;
+    int[] integerArrayState0253;
+    int integerState0874;
+    int[] integerArrayState0254;
+    static byte[] byteArrayState0040;
+    boolean[] booleanArrayState0012;
+    int[] integerArrayState0255;
+    int integerState0875;
+    int[][] integerArrayArrayState0028;
+    boolean[] booleanArrayState0013;
 
-    final static boolean computeBoolean1713(char characterArgument1, int integerArgument2) {
-        if (integerArgument2 != -24380) {
-          short[] shortArrayLocal1 = (short[]) null;
-          MixedSupport141.computeShortArray1715((CipherPacketBuffer) null, true, (short[]) null, -23);
-          if (characterArgument1 < 65) {
-            if (characterArgument1 < 97) {
-              return false;
-            }
-            if (122 >= characterArgument1) {
-              return true;
-            }
-            return false;
-          }
-          if (characterArgument1 <= 90) {
-            return true;
-          }
-          if (characterArgument1 < 97) {
-            return false;
-          }
-          if (122 >= characterArgument1) {
-            return true;
-          }
-          return false;
+    final static int computeInteger1754(int integerArgument1, int integerArgument2, int integerArgument3) {
+        int integerLocal1 = integerArgument3 >>> 31;
+        if (integerArgument1 == 23841) {
+          return (integerArgument3 + integerLocal1) / integerArgument2 - integerLocal1;
         }
-        if (characterArgument1 >= 65) {
-          if (characterArgument1 <= 90) {
-            return true;
-          }
-          if (characterArgument1 < 97) {
-            return false;
-          }
-          if (122 >= characterArgument1) {
-            return true;
-          }
-          return false;
-        }
-        if (characterArgument1 < 97) {
-          return false;
-        }
-        if (122 >= characterArgument1) {
-          return true;
-        }
-        return false;
+        integerState0873 = -119;
+        return (integerArgument3 + integerLocal1) / integerArgument2 - integerLocal1;
     }
 
-    final static void performAction1716(int integerArgument1) {
-        if (integerArgument1 != 0) {
-          MixedSupport141.performAction1716(118);
-          DualNode.performAction0127((byte) 123, GameplayControls.sceneWidgetPart005State0003);
-          return;
+    public static void clearStaticReferences(boolean booleanArgument1) {
+        byteArrayState0040 = null;
+        integerArrayState0252 = null;
+        if (!booleanArgument1) {
+          integerArrayState0252 = (int[]) null;
         }
-        DualNode.performAction0127((byte) 123, GameplayControls.sceneWidgetPart005State0003);
     }
 
-    public static void performAction1714(int integerArgument1) {
-        stringState0576 = null;
-        stringState0577 = null;
-        byteArrayState0029 = null;
-        stringState0575 = null;
-        stringState0578 = null;
-        if (integerArgument1 == -66) {
-          stringState0579 = null;
-          return;
-        }
-        booleanState0194 = true;
-        stringState0579 = null;
-    }
-
-    final static short[] computeShortArray1715(CipherPacketBuffer cipherPacketBufferArgument1, boolean booleanArgument2, short[] shortArrayArgument3, int integerArgument4) {
-        int integerLocal1 = 0;
-        int integerLocal2 = 0;
-        int integerLocal3 = 0;
-        int integerLocal4 = 0;
-        int integerLocal5 = 0;
-        Object stackObjectLocal6 = null;
-        short[] stackShortArrayLocal7 = null;
-        RuntimeException stackRuntimeExceptionLocal8 = null;
-        StringBuilder stackStringBuilderLocal9 = null;
-        String stackStringLocal10 = null;
-        StringBuilder stackStringBuilderLocal11 = null;
-        String stackStringLocal12 = null;
-        RuntimeException caughtExceptionLocal13 = null;
-        RuntimeException runtimeExceptionLocal14 = null;
-        integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        try {
-          if (!booleanArgument2) {
-            MixedSupport141.computeBoolean1713('\016', -20);
-          }
-          integerLocal1 = cipherPacketBufferArgument1.computeInteger1668(integerArgument4, (byte) 110);
-          if (integerLocal1 == 0) {
-            stackObjectLocal6 = null;
-            return (short[]) (stackObjectLocal6);
-          }
-          if (shortArrayArgument3 == null ||
-            shortArrayArgument3.length != integerLocal1) {
-            shortArrayArgument3 = new short[integerLocal1];
-          }
-          integerLocal2 = cipherPacketBufferArgument1.computeInteger1668(4, (byte) 123);
-          integerLocal3 = (short)cipherPacketBufferArgument1.computeInteger1668(16, (byte) 46);
-          if (integerLocal2 > 0) {
-            for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
-              shortArrayArgument3[integerLocal4] = (short)(cipherPacketBufferArgument1.computeInteger1668(integerLocal2, (byte) 99) + integerLocal3);
-            }
-          } else {
-            for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
-              shortArrayArgument3[integerLocal4] = (short)integerLocal3;
-            }
-          }
-          stackShortArrayLocal7 = (short[]) (shortArrayArgument3);
-          return stackShortArrayLocal7;
-        } catch (java.lang.RuntimeException caughtParameterLocal15) {
-          caughtExceptionLocal13 = caughtParameterLocal15;
-          runtimeExceptionLocal14 = caughtExceptionLocal13;
-          stackRuntimeExceptionLocal8 = runtimeExceptionLocal14;
-          stackStringBuilderLocal9 = new StringBuilder().append("v.B(");
-          if (cipherPacketBufferArgument1 == null) {
-            stackStringLocal10 = "null";
-          } else {
-            stackStringLocal10 = "{...}";
-          }
-          stackStringBuilderLocal11 = ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(booleanArgument2).append(',');
-          if (shortArrayArgument3 == null) {
-            stackStringLocal12 = "null";
-          } else {
-            stackStringLocal12 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(integerArgument4).append(')').toString());
-        }
+    MixedSupport141() {
+        this.integerArrayState0251 = new int[6];
+        this.integerState0863 = 0;
+        this.byteArrayArrayState0012 = new byte[6][258];
+        this.byteArrayState0038 = new byte[18002];
+        this.integerArrayArrayState0026 = new int[6][258];
+        this.byteArrayState0039 = new byte[4096];
+        this.integerArrayState0253 = new int[257];
+        this.byteArrayState0035 = new byte[256];
+        this.integerArrayState0254 = new int[16];
+        this.integerArrayState0255 = new int[256];
+        this.integerState0869 = 0;
+        this.booleanArrayState0012 = new boolean[16];
+        this.integerArrayArrayState0027 = new int[6][258];
+        this.integerArrayArrayState0028 = new int[6][258];
+        this.booleanArrayState0013 = new boolean[256];
+        this.byteArrayState0036 = new byte[18002];
     }
 
     static {
-        stringState0576 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        stringState0575 = "Email: ";
-        stringState0577 = "Unpacking music";
-        booleanState0194 = true;
-        stringState0578 = "Resigned";
-        stringState0579 = "Mouse over an icon for details";
+        byteArrayState0040 = new byte[]{(byte)2, (byte)5, (byte)5, (byte)5, (byte)3};
     }
 }

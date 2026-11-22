@@ -12,41 +12,41 @@ final class MixedSupport029 {
     static int integerState0182;
     static String stringState0149;
 
-    final static void performAction0409(int integerArgument1, int integerArgument2, String stringArgument3, int integerArgument4, byte byteArgument5, BitmapFont bitmapFontArgument6) {
+    final static void performAction0407(int integerArgument1, int integerArgument2, String stringArgument3, int integerArgument4, byte byteArgument5, BitmapFont bitmapFontArgument6) {
         int integerLocal1 = 0;
         try {
           integerLocal1 = 2;
-          if (UiComponentPart029.renderingSupport010State0005 == bitmapFontArgument6) {
+          if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument6) {
             integerLocal1 = 1;
           }
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 - integerLocal1, integerArgument4 - integerLocal1, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, -integerLocal1 + integerArgument2, integerArgument4, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 - integerLocal1, integerArgument4 + integerLocal1, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2, integerArgument4 - integerLocal1, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2, integerLocal1 + integerArgument4, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 - integerLocal1, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerLocal1 + integerArgument2, integerArgument4, 0, -1);
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 + integerLocal1, 0, -1);
-          if (bitmapFontArgument6 == SceneWidget.renderingSupport010State0007) {
-            bitmapFontArgument6.performAction1101(stringArgument3, 1 + integerArgument2, integerArgument4 - integerLocal1, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 - 1, -integerLocal1 + integerArgument4, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 - 1, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, -integerLocal1 + integerArgument2, -1 + integerArgument4, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerLocal1 + integerArgument2, 1 + integerArgument4, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 - integerLocal1, 1 + integerArgument4, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 + 1, integerLocal1 + integerArgument4, 0, -1);
-            bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2 - 1, integerLocal1 + integerArgument4, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 - integerLocal1, integerArgument4 - integerLocal1, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, -integerLocal1 + integerArgument2, integerArgument4, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 - integerLocal1, integerArgument4 + integerLocal1, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2, integerArgument4 - integerLocal1, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2, integerLocal1 + integerArgument4, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 - integerLocal1, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerLocal1 + integerArgument2, integerArgument4, 0, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 + integerLocal1, 0, -1);
+          if (bitmapFontArgument6 == SceneWidget.renderingSupport009State0007) {
+            bitmapFontArgument6.performAction1082(stringArgument3, 1 + integerArgument2, integerArgument4 - integerLocal1, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 - 1, -integerLocal1 + integerArgument4, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 + integerLocal1, integerArgument4 - 1, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, -integerLocal1 + integerArgument2, -1 + integerArgument4, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerLocal1 + integerArgument2, 1 + integerArgument4, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 - integerLocal1, 1 + integerArgument4, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 + 1, integerLocal1 + integerArgument4, 0, -1);
+            bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2 - 1, integerLocal1 + integerArgument4, 0, -1);
           }
           if (byteArgument5 != 75) {
             stringState0149 = (String) null;
           }
-          bitmapFontArgument6.performAction1101(stringArgument3, integerArgument2, integerArgument4, integerArgument1, -1);
+          bitmapFontArgument6.performAction1082(stringArgument3, integerArgument2, integerArgument4, integerArgument1, -1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ed.E(" + integerArgument1 + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + byteArgument5 + ',' + (bitmapFontArgument6 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ed.E(" + integerArgument1 + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + byteArgument5 + ',' + (bitmapFontArgument6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction0412(int integerArgument1) {
+    public static void performAction0410(int integerArgument1) {
         stringState0148 = null;
         stringArrayState0011 = null;
         int integerLocal1 = -49 / ((-30 - integerArgument1) / 54);
@@ -55,9 +55,9 @@ final class MixedSupport029 {
         stringState0149 = null;
     }
 
-    final static void performAction0407(byte byteArgument1, boolean booleanArgument2) {
+    final static void performAction0405(byte byteArgument1, boolean booleanArgument2) {
         int integerLocal1 = -33 / ((byteArgument1 - 79) / 41);
-        RichTextLayout.sceneWidgetState0021.performAction1798(1141039778, booleanArgument2);
+        RichTextLayout.sceneWidgetState0021.performAction1767(1141039778, booleanArgument2);
         UiComponentPart019 uiComponentPart019Local2 = MixedSupport009.uiComponentPart019State0001;
         if (uiComponentPart019Local2 == null) {
           return;
@@ -65,38 +65,38 @@ final class MixedSupport029 {
         uiComponentPart019Local2.performAction0210(RichTextLayout.sceneWidgetState0021.integerState0886, RichTextLayout.sceneWidgetState0021.integerState0892, (byte) -72);
     }
 
-    final static void performAction0411(ResourceArchive resourceArchiveArgument1, int integerArgument2, PcmStreamMixer pcmStreamMixerArgument3, int integerArgument4) {
+    final static void performAction0409(ResourceArchive resourceArchiveArgument1, int integerArgument2, PcmStreamMixer pcmStreamMixerArgument3, int integerArgument4) {
         GameAssets.integerState0747 = integerArgument2 * KeyboardInputHandler.getTickRate((byte) -74) / 1000;
         if (integerArgument4 != 20350) {
           return;
         }
         try {
-          MixedSupport154.performAction1840((byte) -51, resourceArchiveArgument1);
-          GameDomainSupport005.performAction1237(resourceArchiveArgument1, -2);
-          MixedSupport032.performAction0473((byte) -113, resourceArchiveArgument1);
+          MixedSupport147.performAction1808((byte) -51, resourceArchiveArgument1);
+          GameDomainSupport005.performAction1210(resourceArchiveArgument1, -2);
+          MixedSupport032.performAction0471((byte) -113, resourceArchiveArgument1);
           MixedSupport010.performAction0141(-120);
           GameDomainSupport001.performAction0095(true);
           MixedSupport046.integerState0250 = 0 - GameAssets.integerState0747;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ed.A(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (pcmStreamMixerArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ed.A(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (pcmStreamMixerArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
         }
     }
 
-    final static void performAction0408(int integerArgument1) {
-        if (!MixedSupport141.booleanState0194) {
+    final static void performAction0406(int integerArgument1) {
+        if (!MixedSupport134.booleanState0194) {
           throw new IllegalStateException();
         }
         UiComponentPart025.booleanState0152 = true;
-        GameplayControls.performAction1784(true, 841566312);
+        GameplayControls.performAction1753(true, 841566312);
         MixedSupport052.integerState0269 = 0;
         if (integerArgument1 > 101) {
           return;
         }
         String stringLocal1 = (String) null;
-        MixedSupport029.computeSceneWidgetPart0140410((String) null, (byte) -16);
+        MixedSupport029.computeSceneWidgetPart0140408((String) null, (byte) -16);
     }
 
-    final static SceneWidgetPart014 computeSceneWidgetPart0140410(String stringArgument1, byte byteArgument2) {
+    final static SceneWidgetPart014 computeSceneWidgetPart0140408(String stringArgument1, byte byteArgument2) {
         String stringLocal1 = null;
         int integerLocal2 = 0;
         SceneWidgetPart014 sceneWidgetPart014Local3 = null;
@@ -112,7 +112,7 @@ final class MixedSupport029 {
         RuntimeException runtimeExceptionLocal13 = null;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (MixedSupport085.secondaryNodeHashTableState0003 == null) {
+          if (MixedSupport081.secondaryNodeHashTableState0003 == null) {
             return null;
           }
           if (stringArgument1 == null) {
@@ -122,20 +122,20 @@ final class MixedSupport029 {
             return null;
           }
           charSequenceLocal6 = (CharSequence) ((Object) stringArgument1);
-          stringLocal1 = ComponentContainer.computeString0913(charSequenceLocal6, (byte) 2);
+          stringLocal1 = ComponentContainer.computeString0894(charSequenceLocal6, (byte) 2);
           integerLocal2 = 38 % ((-44 - byteArgument2) / 47);
           if (stringLocal1 == null) {
             return null;
           }
-          sceneWidgetPart014Local3 = (SceneWidgetPart014) (MixedSupport085.secondaryNodeHashTableState0003.get(24710, (long)stringLocal1.hashCode()));
+          sceneWidgetPart014Local3 = (SceneWidgetPart014) (MixedSupport081.secondaryNodeHashTableState0003.get(24710, (long)stringLocal1.hashCode()));
           while (sceneWidgetPart014Local3 != null) {
             charSequenceLocal7 = (CharSequence) ((Object) sceneWidgetPart014Local3.stringState0606);
-            stringLocal4 = ComponentContainer.computeString0913(charSequenceLocal7, (byte) 2);
+            stringLocal4 = ComponentContainer.computeString0894(charSequenceLocal7, (byte) 2);
             if (stringLocal4.equals(stringLocal1)) {
               stackSceneWidgetPart014Local8 = sceneWidgetPart014Local3;
               return stackSceneWidgetPart014Local8;
             }
-            sceneWidgetPart014Local3 = (SceneWidgetPart014) (MixedSupport085.secondaryNodeHashTableState0003.nextWithSameKey(-17713));
+            sceneWidgetPart014Local3 = (SceneWidgetPart014) (MixedSupport081.secondaryNodeHashTableState0003.nextWithSameKey(-17713));
           }
           return null;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
@@ -148,7 +148,7 @@ final class MixedSupport029 {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(byteArgument2).append(')').toString());
         }
     }
 

@@ -17,7 +17,7 @@ final class AudioFilter {
         return 1.0f - (float)Math.pow(10.0, (double)(-floatLocal1 / 20.0f));
     }
 
-    final void decode(PacketBuffer packetBufferArgument1, MixedSupport119 mixedSupport119Argument2) {
+    final void decode(PacketBuffer packetBufferArgument1, MixedSupport114 mixedSupport114Argument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -55,7 +55,7 @@ final class AudioFilter {
           }
           if (integerLocal2 != 0 ||
             this.integerArrayState0056[1] != this.integerArrayState0056[0]) {
-            mixedSupport119Argument2.performAction1508(packetBufferArgument1);
+            mixedSupport114Argument2.performAction1481(packetBufferArgument1);
           }
         } else {
           integerArrayLocal6 = this.integerArrayState0056;

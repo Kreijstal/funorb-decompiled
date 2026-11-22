@@ -5,7 +5,7 @@ final class MixedSupport047 {
     static boolean booleanState0057;
     static RgbSprite rgbSpriteState0018;
     static MixedSupport048 mixedSupport048State0001;
-    static MixedSupport111 mixedSupport111State0002;
+    static MixedSupport106 mixedSupport106State0002;
     static MixedSupport015 mixedSupport015State0002;
     static IndexedSprite[] indexedSpriteArrayState0003;
     static SceneWidget sceneWidgetState0038;
@@ -13,7 +13,7 @@ final class MixedSupport047 {
     static String stringState0200;
     static String stringState0201;
 
-    final static boolean computeBoolean0579(int integerArgument1, String stringArgument2, String stringArgument3) {
+    final static boolean computeBoolean0576(int integerArgument1, String stringArgument2, String stringArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -23,12 +23,12 @@ final class MixedSupport047 {
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (integerArgument1 > -94) {
-            MixedSupport047.performAction0578(-99);
+            MixedSupport047.performAction0575(-99);
           }
-          if (InputAdapter002.computeBoolean1378(stringArgument3, 0)) {
+          if (InputAdapter002.computeBoolean1351(stringArgument3, 0)) {
             return false;
           }
-          if (MixedSupport085.computeBoolean1048(stringArgument3, (byte) -111)) {
+          if (MixedSupport081.computeBoolean1029(stringArgument3, (byte) -111)) {
             return false;
           }
           if (DekoBlokoClient.computeBoolean0302(92, stringArgument3)) {
@@ -37,13 +37,13 @@ final class MixedSupport047 {
           if (stringArgument2.length() == 0) {
             return true;
           }
-          if (MixedSupport092.computeBoolean1162(false, stringArgument2, stringArgument3)) {
+          if (MixedSupport087.computeBoolean1135(false, stringArgument2, stringArgument3)) {
             return false;
           }
-          if (MixedSupport062.computeBoolean0743(stringArgument3, stringArgument2, (byte) -117)) {
+          if (MixedSupport061.computeBoolean0732(stringArgument3, stringArgument2, (byte) -117)) {
             return false;
           }
-          if (!UiComponentPart013.computeBoolean0630(stringArgument2, (byte) 126, stringArgument3)) {
+          if (!UiComponentPart013.computeBoolean0627(stringArgument2, (byte) 126, stringArgument3)) {
             return true;
           }
           return false;
@@ -63,11 +63,11 @@ final class MixedSupport047 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final static String computeString0580(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
+    final static String computeString0577(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
         int integerLocal1 = 0;
         if (integerArgument1 <= -124) {
           integerLocal1 = 0;
@@ -85,7 +85,7 @@ final class MixedSupport047 {
         return (String) null;
     }
 
-    final static void performAction0581(String[] args, boolean booleanArgument2) {
+    final static void performAction0578(String[] args, boolean booleanArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -96,12 +96,12 @@ final class MixedSupport047 {
             return;
           }
           if (MixedSupport022.uiComponentPart031State0001 != null) {
-            MixedSupport022.uiComponentPart031State0001.uiComponentPart007State0002.performAction0361(32, args);
+            MixedSupport022.uiComponentPart031State0001.uiComponentPart007State0002.performAction0359(32, args);
           }
-          if (null == MixedSupport123.uiComponentPart005State0001) {
+          if (null == MixedSupport118.uiComponentPart005State0001) {
             return;
           }
-          MixedSupport123.uiComponentPart005State0001.uiComponentPart007State0001.performAction0361(32, args);
+          MixedSupport118.uiComponentPart005State0001.uiComponentPart007State0001.performAction0359(32, args);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
@@ -113,28 +113,28 @@ final class MixedSupport047 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 
-    final static void performAction0577(byte byteArgument1) {
-        if (!MixedSupport141.booleanState0194) {
+    final static void performAction0574(byte byteArgument1) {
+        if (!MixedSupport134.booleanState0194) {
           throw new IllegalStateException();
         }
         if (byteArgument1 == -126) {
           UiComponentPart025.booleanState0152 = true;
-          GameplayControls.performAction1784(false, 841566312);
+          GameplayControls.performAction1753(false, 841566312);
           MixedSupport052.integerState0269 = 0;
           return;
         }
         String[] stringArrayLocal1 = (String[]) null;
-        MixedSupport047.performAction0581((String[]) null, true);
+        MixedSupport047.performAction0578((String[]) null, true);
         UiComponentPart025.booleanState0152 = true;
-        GameplayControls.performAction1784(false, 841566312);
+        GameplayControls.performAction1753(false, 841566312);
         MixedSupport052.integerState0269 = 0;
     }
 
-    public static void performAction0578(int integerArgument1) {
+    public static void performAction0575(int integerArgument1) {
         indexedSpriteArrayState0003 = null;
         stringState0201 = null;
         stringState0200 = null;
@@ -144,18 +144,18 @@ final class MixedSupport047 {
         if (integerArgument1 == 2) {
           rgbSpriteState0018 = null;
           sceneWidgetPart008State0003 = null;
-          mixedSupport111State0002 = null;
+          mixedSupport106State0002 = null;
           return;
         }
-        MixedSupport047.computeString0580(46, true, false, false);
+        MixedSupport047.computeString0577(46, true, false, false);
         rgbSpriteState0018 = null;
         sceneWidgetPart008State0003 = null;
-        mixedSupport111State0002 = null;
+        mixedSupport106State0002 = null;
     }
 
     static {
         mixedSupport048State0001 = new MixedSupport048(0);
-        mixedSupport111State0002 = new MixedSupport111(4, 1, 1, 1);
+        mixedSupport106State0002 = new MixedSupport106(4, 1, 1, 1);
         stringState0200 = "<%0> has declined the invitation.";
         stringState0201 = "Hide lobby chat";
     }

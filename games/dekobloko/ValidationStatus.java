@@ -6,27 +6,27 @@ final class ValidationStatus {
     static SceneWidget sceneWidgetState0112;
     static String stringState0524;
 
-    final static void performAction1596(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final static void performAction1569(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int integerLocal1;
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument6 > integerArgument1) {
           if (integerArgument2 > integerArgument6) {
-            UiComponentPart014.performAction0707(integerArgument3, integerArgument6, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument5, integerArgument1, SoftwareRaster.integerArrayState0063);
+            UiComponentPart014.performAction0698(integerArgument3, integerArgument6, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument5, integerArgument1, SoftwareRaster.integerArrayState0063);
           } else {
             if (integerArgument1 >= integerArgument2) {
-              UiComponentPart014.performAction0707(integerArgument8, integerArgument1, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument3, integerArgument2, SoftwareRaster.integerArrayState0063);
+              UiComponentPart014.performAction0698(integerArgument8, integerArgument1, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument3, integerArgument2, SoftwareRaster.integerArrayState0063);
             } else {
-              UiComponentPart014.performAction0707(integerArgument3, integerArgument2, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument8, integerArgument1, SoftwareRaster.integerArrayState0063);
+              UiComponentPart014.performAction0698(integerArgument3, integerArgument2, integerArgument5, integerArgument6, integerArgument4, (byte) 117, integerArgument8, integerArgument1, SoftwareRaster.integerArrayState0063);
             }
           }
         } else {
           if (integerArgument1 < integerArgument2) {
-            UiComponentPart014.performAction0707(integerArgument5, integerArgument1, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument3, integerArgument6, SoftwareRaster.integerArrayState0063);
+            UiComponentPart014.performAction0698(integerArgument5, integerArgument1, integerArgument8, integerArgument2, integerArgument4, (byte) 117, integerArgument3, integerArgument6, SoftwareRaster.integerArrayState0063);
           } else {
             if (integerArgument2 <= integerArgument6) {
-              UiComponentPart014.performAction0707(integerArgument8, integerArgument6, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063);
+              UiComponentPart014.performAction0698(integerArgument8, integerArgument6, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063);
             } else {
-              UiComponentPart014.performAction0707(integerArgument5, integerArgument2, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument8, integerArgument6, SoftwareRaster.integerArrayState0063);
+              UiComponentPart014.performAction0698(integerArgument5, integerArgument2, integerArgument3, integerArgument1, integerArgument4, (byte) 117, integerArgument8, integerArgument6, SoftwareRaster.integerArrayState0063);
             }
           }
         }
@@ -36,11 +36,11 @@ final class ValidationStatus {
         sceneWidgetState0112 = (SceneWidget) null;
     }
 
-    final static void performAction1595(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction1568(int integerArgument1, int integerArgument2, int integerArgument3) {
         MixedSupport004.integerState0029 = integerArgument1;
-        MixedSupport074.integerState0402 = integerArgument3;
+        MixedSupport070.integerState0402 = integerArgument3;
         if (integerArgument2 != -25073) {
-          ValidationStatus.performAction1596(-106, -58, 44, 19, 93, -115, 108, -54);
+          ValidationStatus.performAction1569(-106, -58, 44, 19, 93, -115, 108, -54);
         }
     }
 
@@ -48,15 +48,15 @@ final class ValidationStatus {
         throw new IllegalStateException();
     }
 
-    final static void performAction1597(boolean booleanArgument1, RgbSprite rgbSpriteArgument2) {
+    final static void performAction1570(boolean booleanArgument1, RgbSprite rgbSpriteArgument2) {
         try {
-          IterableNodeCollection.performAction1687(-9074);
-          SoftwareRaster.performAction0654(rgbSpriteArgument2.integerArrayState0024, rgbSpriteArgument2.integerState0254, rgbSpriteArgument2.integerState0260);
+          IterableNodeCollection.performAction1656(-9074);
+          SoftwareRaster.performAction0645(rgbSpriteArgument2.integerArrayState0024, rgbSpriteArgument2.integerState0254, rgbSpriteArgument2.integerState0260);
           if (!booleanArgument1) {
-            ValidationStatus.performAction1595(60, 93, -89);
+            ValidationStatus.performAction1568(60, 93, -89);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "tb.D(" + booleanArgument1 + ',' + (rgbSpriteArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "tb.D(" + booleanArgument1 + ',' + (rgbSpriteArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 

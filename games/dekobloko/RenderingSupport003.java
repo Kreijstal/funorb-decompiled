@@ -7,13 +7,13 @@ final class RenderingSupport003 {
     static String stringState0199;
     static boolean booleanState0054;
     static RgbSprite rgbSpriteState0017;
-    static MixedSupport062 mixedSupport062State0002;
+    static MixedSupport061 mixedSupport061State0002;
     static int integerState0252;
     static volatile int integerState0253;
     static volatile boolean booleanState0055;
     static boolean booleanState0056;
 
-    final static int computeInteger0575(BucketBoard bucketBoardArgument1, int integerArgument2) {
+    final static int computeInteger0572(BucketBoard bucketBoardArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -38,7 +38,7 @@ final class RenderingSupport003 {
           integerLocal10 = 10000 / bucketBoardArgument1.boardWidth;
           if (integerArgument2 <= 14) {
             bucketBoardLocal13 = (BucketBoard) null;
-            RenderingSupport003.computeInteger0575((BucketBoard) null, 96);
+            RenderingSupport003.computeInteger0572((BucketBoard) null, 96);
           }
           for (integerLocal11 = bucketBoardArgument1.integerState0473; bucketBoardArgument1.boardHeight > integerLocal11; integerLocal11++) {
             for (integerLocal1 = 0; bucketBoardArgument1.boardWidth > integerLocal1; integerLocal1++) {
@@ -68,11 +68,11 @@ final class RenderingSupport003 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final static LoginCredentials computeLoginCredentials0576(byte byteArgument1) {
+    final static LoginCredentials computeLoginCredentials0573(byte byteArgument1) {
         String stringLocal1 = MixedSupport002.computeString0025(byteArgument1 + 35);
         if (stringLocal1 != null &&
           stringLocal1.indexOf('@') >= 0) {
@@ -81,7 +81,7 @@ final class RenderingSupport003 {
         if (byteArgument1 != -89) {
           integerState0252 = 0;
         }
-        return new LoginCredentials(MixedSupport002.computeString0025(-65), AnimatedTileRegion.computeBoolean1699((byte) -17));
+        return new LoginCredentials(MixedSupport002.computeString0025(-65), AnimatedTileRegion.computeBoolean1668((byte) -17));
     }
 
     public static void clearStaticReferences(boolean booleanArgument1) {
@@ -91,16 +91,16 @@ final class RenderingSupport003 {
         }
         sceneWidgetPart010State0001 = null;
         rgbSpriteState0017 = null;
-        mixedSupport062State0002 = null;
+        mixedSupport061State0002 = null;
     }
 
-    final static RenderingSupport011 computeRenderingSupport0110572(byte byteArgument1, int integerArgument2, int integerArgument3, IndexedSprite[] indexedSpriteArrayArgument4, byte[] byteArrayArgument5, int integerArgument6) {
+    final static RenderingSupport010 computeRenderingSupport0100569(byte byteArgument1, int integerArgument2, int integerArgument3, IndexedSprite[] indexedSpriteArrayArgument4, byte[] byteArrayArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         byte[] byteArrayLocal2 = null;
         int previousIntegerLocal3 = 0;
         int integerLocal4 = 0;
         int previousIntegerLocal5 = 0;
-        RenderingSupport011 stackRenderingSupport011Local6 = null;
+        RenderingSupport010 stackRenderingSupport010Local6 = null;
         RuntimeException stackRuntimeExceptionLocal7 = null;
         StringBuilder stackStringBuilderLocal8 = null;
         String stackStringLocal9 = null;
@@ -117,7 +117,7 @@ final class RenderingSupport003 {
         byte[][] byteArrayArrayLocal20 = null;
         int integerLocal21 = 0;
         int integerLocal22 = 0;
-        RenderingSupport011 renderingSupport011Local23 = null;
+        RenderingSupport010 renderingSupport010Local23 = null;
         byte[] byteArrayLocal24 = null;
         byte[] byteArrayLocal25 = null;
         int integerLocal26 = 0;
@@ -170,7 +170,7 @@ final class RenderingSupport003 {
           integerLocal21 = SoftwareRaster.integerState0285;
           integerLocal22 = SoftwareRaster.integerState0284;
           integerArrayLocal44 = new int[4];
-          SoftwareRaster.performAction0661(integerArrayLocal44);
+          SoftwareRaster.performAction0652(integerArrayLocal44);
           for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {
             integerArrayLocal13[integerLocal1] = indexedSpriteArrayArgument4[integerLocal1].integerState0427 - integerArgument3;
             integerArrayLocal15[integerLocal1] = indexedSpriteArrayArgument4[integerLocal1].integerState0428 - integerArgument3;
@@ -184,14 +184,14 @@ final class RenderingSupport003 {
             integerLocal27 = indexedSpriteArrayArgument4[integerLocal1].integerState0426;
             integerLocal28 = integerArrayLocal39[integerLocal1];
             integerLocal29 = integerLocal28 - integerLocal26;
-            SoftwareRaster.performAction0654(new int[integerArrayLocal40[integerLocal1] * integerArrayLocal39[integerLocal1]], integerArrayLocal39[integerLocal1], integerArrayLocal40[integerLocal1]);
+            SoftwareRaster.performAction0645(new int[integerArrayLocal40[integerLocal1] * integerArrayLocal39[integerLocal1]], integerArrayLocal39[integerLocal1], integerArrayLocal40[integerLocal1]);
             integerLocal30 = 0;
             for (integerLocal31 = 0; integerLocal31 < integerLocal27; integerLocal31++) {
               for (integerLocal32 = 0; integerLocal26 > integerLocal32; integerLocal32++) {
                 previousIntegerLocal3 = integerLocal30;
                 integerLocal30++;
                 if (0 != byteArrayLocal25[previousIntegerLocal3]) {
-                  SoftwareRaster.performAction0649(integerLocal32, integerLocal31, (integerArgument3 << 1) + 1, (integerArgument3 << 1) + 1, 2);
+                  SoftwareRaster.performAction0640(integerLocal32, integerLocal31, (integerArgument3 << 1) + 1, (integerArgument3 << 1) + 1, 2);
                 }
               }
             }
@@ -213,14 +213,14 @@ final class RenderingSupport003 {
               integerLocal48 = integerLocal48 + integerLocal29;
             }
           }
-          renderingSupport011Local23 = new RenderingSupport011(byteArrayArgument5, integerArrayLocal41, integerArrayLocal42, integerArrayLocal39, integerArrayLocal40, integerArrayLocal18, byteArrayArrayLocal43);
-          renderingSupport011Local23.integerState0517 = renderingSupport011Local23.integerState0517 - integerArgument3;
-          renderingSupport011Local23.integerState0523 = renderingSupport011Local23.integerState0523 - integerArgument3;
-          renderingSupport011Local23.integerState0518 = renderingSupport011Local23.integerState0518 - integerArgument3;
-          SoftwareRaster.performAction0654(integerArrayLocal45, integerLocal21, integerLocal22);
-          SoftwareRaster.performAction0653(integerArrayLocal44);
-          stackRenderingSupport011Local6 = renderingSupport011Local23;
-          return stackRenderingSupport011Local6;
+          renderingSupport010Local23 = new RenderingSupport010(byteArrayArgument5, integerArrayLocal41, integerArrayLocal42, integerArrayLocal39, integerArrayLocal40, integerArrayLocal18, byteArrayArrayLocal43);
+          renderingSupport010Local23.integerState0517 = renderingSupport010Local23.integerState0517 - integerArgument3;
+          renderingSupport010Local23.integerState0523 = renderingSupport010Local23.integerState0523 - integerArgument3;
+          renderingSupport010Local23.integerState0518 = renderingSupport010Local23.integerState0518 - integerArgument3;
+          SoftwareRaster.performAction0645(integerArrayLocal45, integerLocal21, integerLocal22);
+          SoftwareRaster.performAction0644(integerArrayLocal44);
+          stackRenderingSupport010Local6 = renderingSupport010Local23;
+          return stackRenderingSupport010Local6;
         } catch (java.lang.RuntimeException caughtParameterLocal50) {
           caughtExceptionLocal12 = caughtParameterLocal50;
           runtimeExceptionLocal14 = caughtExceptionLocal12;
@@ -237,25 +237,25 @@ final class RenderingSupport003 {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
-    final static void performAction0574(int integerArgument1, int integerArgument2, byte byteArgument3, RawSound rawSoundArgument4) {
+    final static void performAction0571(int integerArgument1, int integerArgument2, byte byteArgument3, RawSound rawSoundArgument4) {
         try {
           UiComponentPart001.performAction0057(80, 0, rawSoundArgument4, integerArgument1, integerArgument2);
           if (byteArgument3 != 127) {
-            RenderingSupport003.performAction0571((byte) 73);
+            RenderingSupport003.performAction0568((byte) 73);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ge.D(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (rawSoundArgument4 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ge.D(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (rawSoundArgument4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction0571(byte byteArgument1) {
+    final static void performAction0568(byte byteArgument1) {
         UiComponentPart024.stringArrayState0032 = new String[NetworkArchiveRequestManager.integerState0598];
         UiComponentPart024.stringArrayState0032[18] = RenderingSupport004.stringState0202;
-        UiComponentPart024.stringArrayState0032[17] = MixedSupport135.stringState0555;
+        UiComponentPart024.stringArrayState0032[17] = MixedSupport128.stringState0555;
         UiComponentPart024.stringArrayState0032[5] = MixedSupport015.stringState0073;
         UiComponentPart024.stringArrayState0032[4] = CacheWorkQueue.stringState0264;
         UiComponentPart024.stringArrayState0032[9] = SceneWidgetPart002.stringState0194;
@@ -266,29 +266,29 @@ final class RenderingSupport003 {
         UiComponentPart024.stringArrayState0032[20] = MixedSupport053.stringState0222;
         UiComponentPart024.stringArrayState0032[19] = GameDomainSupport006.stringState0624;
         UiComponentPart024.stringArrayState0032[6] = SceneWidgetPart006.stringState0277;
-        UiComponentPart024.stringArrayState0032[13] = MixedSupport146.stringState0593;
+        UiComponentPart024.stringArrayState0032[13] = MixedSupport139.stringState0593;
         if (byteArgument1 != 123) {
           integerState0251 = 114;
         }
-        UiComponentPart024.stringArrayState0032[16] = MixedSupport137.stringState0563;
+        UiComponentPart024.stringArrayState0032[16] = MixedSupport130.stringState0563;
     }
 
-    final static void performAction0573(byte byteArgument1, MixedSupport068 mixedSupport068Argument2) {
+    final static void performAction0570(byte byteArgument1, HuffmanCodec huffmanCodecArgument2) {
         try {
           if (byteArgument1 > -65) {
             byte[] byteArrayLocal1 = (byte[]) null;
-            RenderingSupport003.computeRenderingSupport0110572((byte) -116, -89, -66, (IndexedSprite[]) null, (byte[]) null, 119);
+            RenderingSupport003.computeRenderingSupport0100569((byte) -116, -89, -66, (IndexedSprite[]) null, (byte[]) null, 119);
           }
-          NetworkSupport007.mixedSupport068State0001 = mixedSupport068Argument2;
+          NetworkSupport007.huffmanCodecState0001 = huffmanCodecArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ge.G(" + byteArgument1 + ',' + (mixedSupport068Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ge.G(" + byteArgument1 + ',' + (huffmanCodecArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         booleanState0054 = false;
         stringState0199 = "Invalid name";
-        mixedSupport062State0002 = new MixedSupport062("usename");
+        mixedSupport061State0002 = new MixedSupport061("usename");
         integerState0253 = 0;
         booleanState0055 = true;
     }

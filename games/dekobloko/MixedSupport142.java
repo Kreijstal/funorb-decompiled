@@ -1,103 +1,188 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport142 {
-    private java.awt.GraphicsDevice graphicsDeviceState0001;
-    private java.awt.DisplayMode displayModeState0001;
+final class MixedSupport142 extends HashNode {
+    static String stringState0596;
+    int integerState0876;
+    static String stringState0597;
+    static int integerState0877;
+    int integerState0878;
+    int integerState0879;
+    static int integerState0880;
+    int integerState0881;
+    int integerState0882;
+    static ValidationStatus validationStatusState0005;
+    static int integerState0883;
+    ReturnedShape returnedShapeState0001;
 
-    private final void performAction1735(java.awt.Frame frameArgument1, int integerArgument2) {
+    final static boolean computeBoolean1759(int[] integerArrayArgument1, long longArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
+        int integerLocal1 = 0;
+        RuntimeException runtimeExceptionLocal2 = null;
+        SceneWidgetPart005 sceneWidgetPart005Local3 = null;
+        CharSequence charSequenceLocal4 = null;
+        RuntimeException stackRuntimeExceptionLocal5 = null;
+        StringBuilder stackStringBuilderLocal6 = null;
+        String stackStringLocal7 = null;
+        StringBuilder stackStringBuilderLocal8 = null;
+        String stackStringLocal9 = null;
+        RuntimeException caughtExceptionLocal10 = null;
+        try {
+          if (!MixedSupport096.computeBoolean1213(integerArgument5, 2, longArgument2, stringArgument3, integerArrayArgument1)) {
+            return false;
+          }
+          if (integerArgument5 == 1) {
+            integerArgument5 = 0;
+          }
+          MixedSupport029.stringState0149 = stringArgument3;
+          NetworkSupport010.integerState0585 = integerArgument5;
+          integerLocal1 = -49 / ((-60 - integerArgument4) / 43);
+          charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
+          TextLayout.stringState0081 = ComponentContainer.computeString0894(charSequenceLocal4, (byte) 2);
+          MixedSupport043.longState0017 = longArgument2;
+          sceneWidgetPart005Local3 = MixedSupport143.computeSceneWidgetPart0051780(integerArrayArgument1, ResourceSupport001.sceneWidgetState0001, (byte) -127, MixedSupport040.sceneWidgetState0031, MixedSupport108.sceneWidgetState0103);
+          DualNode.performAction0127((byte) 120, sceneWidgetPart005Local3);
+          return true;
+        } catch (java.lang.RuntimeException caughtParameterLocal11) {
+          caughtExceptionLocal10 = caughtParameterLocal11;
+          runtimeExceptionLocal2 = caughtExceptionLocal10;
+          stackRuntimeExceptionLocal5 = runtimeExceptionLocal2;
+          stackStringBuilderLocal6 = new StringBuilder().append("vm.D(");
+          if (integerArrayArgument1 == null) {
+            stackStringLocal7 = "null";
+          } else {
+            stackStringLocal7 = "{...}";
+          }
+          stackStringBuilderLocal8 = ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(longArgument2).append(',');
+          if (stringArgument3 == null) {
+            stackStringLocal9 = "null";
+          } else {
+            stackStringLocal9 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+        }
+    }
+
+    final static void performAction1758(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        try {
+          if (integerArgument4 != -11) {
+            integerState0877 = -57;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "vm.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+        }
+    }
+
+    final static boolean computeBoolean1756(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
-        integerLocal1 = -31 % ((1 - integerArgument2) / 51);
-        this.graphicsDeviceState0001.setFullScreenWindow((java.awt.Window) ((Object) frameArgument1));
-    }
-
-    public final int[] listmodes() {
-        int integerLocal1 = 0;
-        java.awt.DisplayMode[] displayModeArrayLocal2 = this.graphicsDeviceState0001.getDisplayModes();
-        java.awt.DisplayMode[] displayModeArrayLocal3 = displayModeArrayLocal2;
-        int[] integerArrayLocal4 = new int[displayModeArrayLocal2.length << 2];
-        for (integerLocal1 = 0; integerLocal1 < displayModeArrayLocal2.length; integerLocal1++) {
-          integerArrayLocal4[integerLocal1 << 2] = displayModeArrayLocal2[integerLocal1].getWidth();
-          integerArrayLocal4[(integerLocal1 << 2) + 1] = displayModeArrayLocal2[integerLocal1].getHeight();
-          integerArrayLocal4[2 + (integerLocal1 << 2)] = displayModeArrayLocal2[integerLocal1].getBitDepth();
-          integerArrayLocal4[3 + (integerLocal1 << 2)] = displayModeArrayLocal2[integerLocal1].getRefreshRate();
-        }
-        return integerArrayLocal4;
-    }
-
-    public final void enter(java.awt.Frame frameArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        int integerLocal1 = 0;
         int integerLocal2;
-        java.awt.DisplayMode[] displayModeArrayLocal3;
-        int integerLocal4;
-        int integerLocal5;
-        this.displayModeState0001 = this.graphicsDeviceState0001.getDisplayMode();
-        if (this.displayModeState0001 == null) {
-          throw new NullPointerException();
-        }
-        frameArgument1.setUndecorated(true);
-        frameArgument1.enableInputMethods(false);
-        this.performAction1735(frameArgument1, 127);
-        if (integerArgument5 == 0) {
-          integerLocal2 = this.displayModeState0001.getRefreshRate();
-          displayModeArrayLocal3 = this.graphicsDeviceState0001.getDisplayModes();
-          integerLocal4 = 0;
-          for (integerLocal1 = 0; integerLocal1 < displayModeArrayLocal3.length; integerLocal1++) {
-            if (displayModeArrayLocal3[integerLocal1].getWidth() == integerArgument2 &&
-              displayModeArrayLocal3[integerLocal1].getHeight() == integerArgument3 &&
-              integerArgument4 == displayModeArrayLocal3[integerLocal1].getBitDepth()) {
-              integerLocal5 = displayModeArrayLocal3[integerLocal1].getRefreshRate();
-              if (integerLocal4 == 0 ||
-                !(Math.abs(integerLocal5 - integerLocal2) >= Math.abs(-integerLocal2 + integerArgument5))) {
-                integerLocal4 = 1;
-                integerArgument5 = integerLocal5;
+        int stackIntegerLocal3 = 0;
+        int stackIntegerLocal4 = 0;
+        integerLocal1 = 104 % ((3 - integerArgument1) / 61);
+        if (MixedSupport067.sceneWidgetPart001State0001 == null) {
+          if (!LoginCredentials.booleanState0085) {
+            if (!GameDomainSupport004.booleanState0087 &&
+              MixedSupport146.integerState0931 != 9 &&
+              MixedSupport146.integerState0931 != 10 &&
+              MixedSupport146.integerState0931 != 11) {
+              if (MixedSupport146.integerState0931 == 80 &&
+                FullscreenCanvas.computeBoolean1380(2)) {
+                LoginCredentials.booleanState0085 = true;
+                return true;
               }
+              return false;
+            }
+            return ConfirmedEmailAvailabilityValidator.computeBoolean1614(integerArgument2, 102, integerArgument4);
+          }
+          if (!FullscreenCanvas.computeBoolean1380(2)) {
+            return false;
+          }
+          stackIntegerLocal4 = (!SceneWidgetPart008.computeBoolean1121(integerArgument3, 1, integerArgument4)) ? 0 : 1;
+          integerLocal2 = stackIntegerLocal4;
+          if (MixedSupport146.integerState0931 == 80 ||
+            MixedSupport146.integerState0931 == 84) {
+            LoginCredentials.booleanState0085 = false;
+            integerLocal2 = 1;
+          }
+        } else {
+          if (13 == MixedSupport146.integerState0931) {
+            MixedSupport067.sceneWidgetPart001State0001 = null;
+            return true;
+          }
+          if (!LoginCredentials.booleanState0085) {
+            if (GameDomainSupport004.booleanState0087) {
+              return ConfirmedEmailAvailabilityValidator.computeBoolean1614(integerArgument2, 102, integerArgument4);
+            }
+            if (MixedSupport146.integerState0931 == 9) {
+              return ConfirmedEmailAvailabilityValidator.computeBoolean1614(integerArgument2, 102, integerArgument4);
+            }
+            if (MixedSupport146.integerState0931 != 10 &&
+              MixedSupport146.integerState0931 != 11) {
+              if (MixedSupport146.integerState0931 == 80 &&
+                FullscreenCanvas.computeBoolean1380(2)) {
+                LoginCredentials.booleanState0085 = true;
+                return true;
+              }
+              return false;
+            }
+            return ConfirmedEmailAvailabilityValidator.computeBoolean1614(integerArgument2, 102, integerArgument4);
+          }
+          if (!FullscreenCanvas.computeBoolean1380(2)) {
+            return false;
+          }
+          stackIntegerLocal3 = (!SceneWidgetPart008.computeBoolean1121(integerArgument3, 1, integerArgument4)) ? 0 : 1;
+          integerLocal2 = stackIntegerLocal3;
+          if (MixedSupport146.integerState0931 == 80) {
+            LoginCredentials.booleanState0085 = false;
+            integerLocal2 = 1;
+          } else {
+            if (MixedSupport146.integerState0931 == 84) {
+              LoginCredentials.booleanState0085 = false;
+              integerLocal2 = 1;
             }
           }
-          if (integerLocal4 == 0) {
-            integerArgument5 = integerLocal2;
-          }
         }
-        this.graphicsDeviceState0001.setDisplayMode(new java.awt.DisplayMode(integerArgument2, integerArgument3, integerArgument4, integerArgument5));
+        if (13 == MixedSupport146.integerState0931) {
+          BufferedSocket.performAction1371((byte) 94);
+          LoginCredentials.booleanState0085 = false;
+          integerLocal2 = 1;
+        }
+        return integerLocal2 != 0;
     }
 
-    public final void exit() {
-        if (this.displayModeState0001 != null) {
-          this.graphicsDeviceState0001.setDisplayMode(this.displayModeState0001);
-          if (!this.graphicsDeviceState0001.getDisplayMode().equals(this.displayModeState0001)) {
-            throw new RuntimeException("");
-          }
-          this.displayModeState0001 = null;
-        }
-        this.performAction1735((java.awt.Frame) null, 121);
-    }
-
-    public MixedSupport142() throws Exception {
-        int integerLocal1 = 0;
-        java.awt.GraphicsEnvironment graphicsEnvironmentLocal2;
-        java.awt.GraphicsDevice[] graphicsDeviceArrayLocal3;
-        java.awt.GraphicsDevice[] graphicsDeviceArrayLocal4;
-        java.awt.GraphicsDevice graphicsDeviceLocal5;
-        graphicsEnvironmentLocal2 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        this.graphicsDeviceState0001 = graphicsEnvironmentLocal2.getDefaultScreenDevice();
-        if (this.graphicsDeviceState0001.isFullScreenSupported()) {
+    public static void performAction1755(int integerArgument1) {
+        validationStatusState0005 = null;
+        stringState0596 = null;
+        if (integerArgument1 < 120) {
+          integerState0883 = -61;
+          stringState0597 = null;
           return;
         }
-        graphicsDeviceArrayLocal3 = graphicsEnvironmentLocal2.getScreenDevices();
-        graphicsDeviceArrayLocal4 = graphicsDeviceArrayLocal3;
-        for (integerLocal1 = 0; graphicsDeviceArrayLocal4.length > integerLocal1; integerLocal1++) {
-          graphicsDeviceLocal5 = graphicsDeviceArrayLocal4[integerLocal1];
-          if (graphicsDeviceLocal5 != null &&
-            graphicsDeviceLocal5.isFullScreenSupported()) {
-            this.graphicsDeviceState0001 = graphicsDeviceLocal5;
-            return;
-          }
-        }
-        throw MixedSupport142.<RuntimeException>computeRuntimeException1734(new Exception());
+        stringState0597 = null;
     }
 
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1734(Throwable throwable) throws T {
-        throw (T) throwable;
+    final static void performAction1757(int integerArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
+        try {
+          MixedSupport059.sceneWidgetState0055.performAction1768(sceneWidgetPart005Argument2, -16834);
+          int integerLocal1 = 14 / ((55 - integerArgument1) / 49);
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "vm.B(" + integerArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static String computeString1760(int integerArgument1) {
+        if (integerArgument1 != -30185) {
+          integerState0877 = 3;
+          return MixedSupport056.stringState0242;
+        }
+        return MixedSupport056.stringState0242;
+    }
+
+    MixedSupport142() {
+    }
+
+    static {
+        stringState0597 = "Name";
+        stringState0596 = "Withdraw invitation to <%0> to join this game";
+        validationStatusState0005 = new ValidationStatus();
     }
 }

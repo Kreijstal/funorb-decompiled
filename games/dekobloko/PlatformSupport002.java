@@ -17,7 +17,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001.update(graphicsArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dk.update(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dk.update(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,11 +25,11 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001 = componentArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dk.<init>(" + (componentArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dk.<init>(" + (componentArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction0376(int integerArgument1) {
+    final static void performAction0374(int integerArgument1) {
         int integerLocal1 = 0;
         MixedSupport033 cachedMixedSupport033Local2 = null;
         RuntimeException caughtExceptionLocal3 = null;
@@ -60,9 +60,9 @@ final class PlatformSupport002 extends java.awt.Canvas {
             for (integerLocal1 = 0; integerLocal11 > integerLocal1; integerLocal1++) {
               integerArrayLocal13[integerLocal1] = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).readInt(7553);
             }
-            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1772((byte) 92));
+            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) 92));
             if (mixedSupport033Local15 == null) {
-              NodeHashTable.performAction1525(95);
+              NodeHashTable.performAction1498(95);
               return;
             }
             mixedSupport033Local15.booleanState0041 = true;
@@ -70,27 +70,27 @@ final class PlatformSupport002 extends java.awt.Canvas {
             mixedSupport033Local15.performAction0149((byte) 112);
           } else {
             if (integerLocal5 == 1) {
-              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1772((byte) -66));
+              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1741((byte) -66));
               if (networkSupport005Local16 == null) {
-                NodeHashTable.performAction1525(127);
+                NodeHashTable.performAction1498(127);
                 return;
               }
               networkSupport005Local16.performAction0149((byte) 106);
             } else {
               if (integerLocal5 == 2) {
-                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1772((byte) -64));
+                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) -64));
                 mixedSupport033Local14 = cachedMixedSupport033Local2;
                 mixedSupport033Local6 = cachedMixedSupport033Local2;
                 if (mixedSupport033Local14 == null) {
-                  NodeHashTable.performAction1525(115);
+                  NodeHashTable.performAction1498(115);
                   return;
                 }
                 mixedSupport033Local14.integerArrayState0042 = UiComponentPart002.computeIntegerArray0082(109);
                 mixedSupport033Local14.booleanState0041 = true;
                 mixedSupport033Local14.performAction0149((byte) 119);
               } else {
-                NetworkArchiveRequestManager.performAction1316((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1406((byte) 89));
-                NodeHashTable.performAction1525(90);
+                NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1379((byte) 89));
+                NodeHashTable.performAction1498(90);
               }
             }
           }
@@ -99,7 +99,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
           caughtExceptionLocal3 = caughtParameterLocal18;
           runtimeExceptionLocal4 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal4), "dk.B(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal4), "dk.B(" + integerArgument1 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001.paint(graphicsArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dk.paint(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dk.paint(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         stringState0123 = "Some special items will sit in your bucket until you activate them. To activate one, pop a shape next to it.";
         stringState0124 = "Invite only";
         stringArrayState0007 = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-        MixedSupport080.performAction0964((byte) 125, 50);
+        MixedSupport076.performAction0945((byte) 125, 50);
         stringState0125 = "Hide game chat";
     }
 }

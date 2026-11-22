@@ -9,7 +9,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
     static int[][] integerArrayArrayState0007;
     private int integerState0143;
     private BitmapFont bitmapFontState0010;
-    static MixedSupport091 mixedSupport091State0001;
+    static BufferedFile bufferedFileState0001;
     private int[] integerArrayState0033;
     static RgbSprite rgbSpriteState0012;
     static int integerState0144;
@@ -24,14 +24,14 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
           this.bitmapFontState0010 = bitmapFontArgument2;
           this.stringState0120 = stringArgument3;
           this.uiComponentPart012State0002 = uiComponentPart012Argument1;
-          integerLocal1 = null == this.stringState0120 ? 0 : this.bitmapFontState0010.computeInteger1100(this.stringState0120, 260, this.bitmapFontState0010.integerState0518);
+          integerLocal1 = null == this.stringState0120 ? 0 : this.bitmapFontState0010.computeInteger1081(this.stringState0120, 260, this.bitmapFontState0010.integerState0518);
           this.performAction0222(integerLocal1 + 22, 288, 0, 0, -16555);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dj.<init>(" + (uiComponentPart012Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.<init>(" + (uiComponentPart012Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger0371(int integerArgument1) {
+    final static int computeInteger0369(int integerArgument1) {
         if (integerArgument1 < 106) {
           UiComponentPart008.clearStaticReferences(false);
         }
@@ -47,18 +47,18 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
         integerArrayArrayState0007 = (int[][]) null;
         stringState0122 = null;
         stringState0121 = null;
-        mixedSupport091State0001 = null;
+        bufferedFileState0001 = null;
     }
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         super.performAction0162(integerArgument1, -104, integerArgument3, integerArgument4);
-        this.bitmapFontState0010.computeInteger1090(this.stringState0120, integerArgument1 - (-this.integerState0110 - 14), this.integerState0104 + (integerArgument4 + 10), this.integerState0107 - 28, this.integerState0108, 16777215, -1, 0, 0, this.bitmapFontState0010.integerState0518);
+        this.bitmapFontState0010.computeInteger1071(this.stringState0120, integerArgument1 - (-this.integerState0110 - 14), this.integerState0104 + (integerArgument4 + 10), this.integerState0107 - 28, this.integerState0108, 16777215, -1, 0, 0, this.bitmapFontState0010.integerState0518);
         if (integerArgument2 > -103) {
           this.performAction0162(67, 1, 70, -22);
         }
     }
 
-    private final void performAction0375(int integerArgument1, int integerArgument2) {
+    private final void performAction0373(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal3;
@@ -78,7 +78,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
         this.interactiveComponentArrayState0002 = interactiveComponentArrayLocal5;
     }
 
-    final InteractiveComponent computeInteractiveComponent0372(int integerArgument1, String stringArgument2, CallbackContract006 callbackContract006Argument3) {
+    final InteractiveComponent computeInteractiveComponent0370(int integerArgument1, String stringArgument2, CallbackContract006 callbackContract006Argument3) {
         InteractiveComponent interactiveComponentLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -100,7 +100,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
           }
           this.performAction0222(this.integerState0108 + 34, this.integerState0107, 0, 0, -16555);
           interactiveComponentLocal1.performAction0222(30, -14 + this.integerState0107, 7, integerLocal3, -16555);
-          this.performAction0914(interactiveComponentLocal1, (byte) -55);
+          this.performAction0895(interactiveComponentLocal1, (byte) -55);
           stackInteractiveComponentLocal5 = interactiveComponentLocal1;
           return stackInteractiveComponentLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
@@ -119,38 +119,38 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    final void performAction0373(String stringArgument1, int integerArgument2, int integerArgument3) {
+    final void performAction0371(String stringArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         try {
           if (integerArgument3 != 14) {
             this.stringState0120 = (String) null;
           }
           integerLocal1 = this.integerState0143;
-          this.performAction0375(1 + integerLocal1, -104);
-          this.interactiveComponentArrayState0002[integerLocal1] = this.computeInteractiveComponent0372(103, stringArgument1, (CallbackContract006) (this));
+          this.performAction0373(1 + integerLocal1, -104);
+          this.interactiveComponentArrayState0002[integerLocal1] = this.computeInteractiveComponent0370(103, stringArgument1, (CallbackContract006) (this));
           this.integerArrayState0033[integerLocal1] = integerArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dj.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
-    final static void performAction0374(RawSound rawSoundArgument1, int integerArgument2) {
+    final static void performAction0372(RawSound rawSoundArgument1, int integerArgument2) {
         try {
           UiComponentPart001.performAction0057(98, 0, rawSoundArgument1, 128, 128);
           if (integerArgument2 != 22) {
             RawSound rawSoundLocal1 = (RawSound) null;
-            UiComponentPart008.performAction0374((RawSound) null, 24);
+            UiComponentPart008.performAction0372((RawSound) null, 24);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "dj.D(" + (rawSoundArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.D(" + (rawSoundArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    public final void performAction0314(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -170,9 +170,9 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
             }
             integerLocal2 = this.integerArrayState0033[integerLocal1];
             if (integerLocal2 != -1) {
-              MouseWheelInput.performAction0679(this.integerArrayState0033[integerLocal1], (byte) -109);
+              MouseWheelInput.performAction0670(this.integerArrayState0033[integerLocal1], (byte) -109);
             } else {
-              this.uiComponentPart012State0002.performAction0596(-123);
+              this.uiComponentPart012State0002.performAction0593(-123);
             }
             break;
           }
@@ -187,7 +187,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 

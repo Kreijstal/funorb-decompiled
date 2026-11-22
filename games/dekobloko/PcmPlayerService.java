@@ -15,7 +15,7 @@ final class PcmPlayerService implements Runnable {
     static InputAdapter003[] inputAdapter003ArrayState0001;
     static RawSound rawSoundState0019;
 
-    final static int[] computeIntegerArray1438(int[] integerArrayArgument1, byte byteArgument2, int[] integerArrayArgument3) {
+    final static int[] computeIntegerArray1411(int[] integerArrayArgument1, byte byteArgument2, int[] integerArrayArgument3) {
         int[] integerArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -39,7 +39,7 @@ final class PcmPlayerService implements Runnable {
             return stackIntegerArrayLocal6;
           }
           while (8 > integerLocal3) {
-            integerArrayLocal5[integerLocal3] = MixedSupport079.computeInteger0949(~integerArrayArgument3[integerLocal3], integerArrayArgument1[integerLocal3]);
+            integerArrayLocal5[integerLocal3] = MixedSupport075.computeInteger0930(~integerArrayArgument3[integerLocal3], integerArrayArgument1[integerLocal3]);
             integerLocal3++;
           }
           stackIntegerArrayLocal7 = integerArrayLocal1;
@@ -60,7 +60,7 @@ final class PcmPlayerService implements Runnable {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
         }
     }
 
@@ -87,89 +87,89 @@ final class PcmPlayerService implements Runnable {
             for (integerLocal1 = 0; integerLocal1 < 2; integerLocal1++) {
               pcmPlayerLocal2 = this.pcmPlayerArrayState0001[integerLocal1];
               if (pcmPlayerLocal2 != null) {
-                pcmPlayerLocal2.performAction0493();
+                pcmPlayerLocal2.performAction0491();
               }
             }
-            MixedSupport132.performAction1651(10L, -128);
-            DiagnosticSupport001.performAction0332(-68, (Object) null, this.platformServiceState0007);
+            MixedSupport125.performAction1620(10L, -128);
+            DiagnosticSupport001.performAction0331(-68, (Object) null, this.platformServiceState0007);
           }
         } catch (Exception exception) {
           String stringLocal5 = (String) null;
-          NetworkArchiveRequestManager.performAction1316((Throwable) ((Object) exception), 16408, (String) null);
+          NetworkArchiveRequestManager.performAction1289((Throwable) ((Object) exception), 16408, (String) null);
         } finally {
           this.booleanState0160 = false;
         }
     }
 
-    final static boolean computeBoolean1436(boolean booleanArgument1) {
+    final static boolean computeBoolean1409(boolean booleanArgument1) {
         if (booleanArgument1) {
-          PcmPlayerService.computeBoolean1436(true);
+          PcmPlayerService.computeBoolean1409(true);
         }
         return ComponentContainer.sceneWidgetState0069 != null ? true : false;
     }
 
-    final static RenderingSupport008 computeRenderingSupport0081437(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, byte byteArgument4, boolean booleanArgument5) {
-        RenderingSupport008 stackRenderingSupport008Local1 = null;
+    final static RenderingSupport007 computeRenderingSupport0071410(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, byte byteArgument4, boolean booleanArgument5) {
+        RenderingSupport007 stackRenderingSupport007Local1 = null;
         boolean stackBooleanLocal2 = false;
-        RenderingSupport008 stackRenderingSupport008Local3 = null;
+        RenderingSupport007 stackRenderingSupport007Local3 = null;
         boolean stackBooleanLocal4 = false;
-        RenderingSupport008 stackRenderingSupport008Local5 = null;
+        RenderingSupport007 stackRenderingSupport007Local5 = null;
         boolean stackBooleanLocal6 = false;
         int integerLocal7;
         int integerLocal8;
-        RenderingSupport008 renderingSupport008Local9;
-        RenderingSupport008 renderingSupport008Local10;
+        RenderingSupport007 renderingSupport007Local9;
+        RenderingSupport007 renderingSupport007Local10;
         int integerLocal11;
         int integerLocal12;
         int integerLocal13;
         int integerLocal14;
-        renderingSupport008Local9 = new RenderingSupport008(2);
-        renderingSupport008Local10 = renderingSupport008Local9;
-        stackRenderingSupport008Local1 = renderingSupport008Local10;
+        renderingSupport007Local9 = new RenderingSupport007(2);
+        renderingSupport007Local10 = renderingSupport007Local9;
+        stackRenderingSupport007Local1 = renderingSupport007Local10;
         stackBooleanLocal2 = (!booleanArgument2) ? false : true;
-        stackRenderingSupport008Local1.booleanState0096 = stackBooleanLocal2;
+        stackRenderingSupport007Local1.booleanState0096 = stackBooleanLocal2;
         if (byteArgument4 > 0) {
           PcmPlayerService.clearStaticReferences(-21);
         }
-        stackRenderingSupport008Local3 = renderingSupport008Local10;
+        stackRenderingSupport007Local3 = renderingSupport007Local10;
         stackBooleanLocal4 = (!booleanArgument3) ? false : true;
-        stackRenderingSupport008Local3.booleanState0092 = stackBooleanLocal4;
-        stackRenderingSupport008Local5 = renderingSupport008Local10;
+        stackRenderingSupport007Local3.booleanState0092 = stackBooleanLocal4;
+        stackRenderingSupport007Local5 = renderingSupport007Local10;
         stackBooleanLocal6 = (!booleanArgument1) ? false : true;
-        stackRenderingSupport008Local5.booleanState0095 = stackBooleanLocal6;
-        renderingSupport008Local10.performAction0871(new GameDomainSupport002(20, UiComponentPart026.stringState0461, MixedSupport001.renderingSupport010State0001), 115);
-        renderingSupport008Local10.performAction0871(new GameDomainSupport002(21, UiComponentPart017.stringState0329, MixedSupport001.renderingSupport010State0001), 102);
-        renderingSupport008Local9.gameDomainSupport002ArrayState0001[0].integerState0174 = 320 - renderingSupport008Local9.gameDomainSupport002ArrayState0001[0].integerState0176 / 2;
-        renderingSupport008Local9.gameDomainSupport002ArrayState0001[0].integerState0178 = 150;
-        renderingSupport008Local9.gameDomainSupport002ArrayState0001[1].integerState0178 = 250;
-        renderingSupport008Local9.gameDomainSupport002ArrayState0001[1].integerState0174 = 320 - renderingSupport008Local9.gameDomainSupport002ArrayState0001[1].integerState0176 / 2;
-        renderingSupport008Local10.performAction0870(-1, booleanArgument5, -129);
-        integerLocal7 = renderingSupport008Local9.gameDomainSupport002ArrayState0001[0].integerState0176;
-        integerLocal8 = renderingSupport008Local9.gameDomainSupport002ArrayState0001[1].integerState0176;
+        stackRenderingSupport007Local5.booleanState0095 = stackBooleanLocal6;
+        renderingSupport007Local10.performAction0852(new GameDomainSupport002(20, UiComponentPart026.stringState0461, MixedSupport001.renderingSupport009State0001), 115);
+        renderingSupport007Local10.performAction0852(new GameDomainSupport002(21, UiComponentPart017.stringState0329, MixedSupport001.renderingSupport009State0001), 102);
+        renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0174 = 320 - renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0176 / 2;
+        renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0178 = 150;
+        renderingSupport007Local9.gameDomainSupport002ArrayState0001[1].integerState0178 = 250;
+        renderingSupport007Local9.gameDomainSupport002ArrayState0001[1].integerState0174 = 320 - renderingSupport007Local9.gameDomainSupport002ArrayState0001[1].integerState0176 / 2;
+        renderingSupport007Local10.performAction0851(-1, booleanArgument5, -129);
+        integerLocal7 = renderingSupport007Local9.gameDomainSupport002ArrayState0001[0].integerState0176;
+        integerLocal8 = renderingSupport007Local9.gameDomainSupport002ArrayState0001[1].integerState0176;
         if (integerLocal7 < integerLocal8) {
           integerLocal7 = integerLocal8;
         }
-        integerLocal11 = SceneWidget.renderingSupport010State0007.computeInteger1085(NodeHashTable.stringState0509);
+        integerLocal11 = SceneWidget.renderingSupport009State0007.computeInteger1066(NodeHashTable.stringState0509);
         if (integerLocal11 > integerLocal7) {
           integerLocal7 = integerLocal11;
         }
-        integerLocal12 = SceneWidget.renderingSupport010State0007.computeInteger1085(MixedSupport047.computeString0580(-127, booleanArgument2, booleanArgument3, booleanArgument1));
+        integerLocal12 = SceneWidget.renderingSupport009State0007.computeInteger1066(MixedSupport047.computeString0577(-127, booleanArgument2, booleanArgument3, booleanArgument1));
         if (integerLocal7 < integerLocal12) {
           integerLocal7 = integerLocal12;
         }
-        integerLocal13 = SceneWidget.renderingSupport010State0007.computeInteger1085(DisplayModeController.computeString1467(0, booleanArgument2, booleanArgument3, booleanArgument1));
+        integerLocal13 = SceneWidget.renderingSupport009State0007.computeInteger1066(DisplayModeController.computeString1440(0, booleanArgument2, booleanArgument3, booleanArgument1));
         if (integerLocal13 > integerLocal7) {
           integerLocal7 = integerLocal13;
         }
-        integerLocal14 = SceneWidget.renderingSupport010State0007.computeInteger1085(MixedSupport074.computeString0932(booleanArgument3, booleanArgument2, booleanArgument1, true));
+        integerLocal14 = SceneWidget.renderingSupport009State0007.computeInteger1066(MixedSupport070.computeString0913(booleanArgument3, booleanArgument2, booleanArgument1, true));
         if (integerLocal7 < integerLocal14) {
           integerLocal7 = integerLocal14;
         }
-        renderingSupport008Local10.integerState0375 = 76;
-        renderingSupport008Local10.integerState0374 = -(integerLocal7 / 2) + 280;
-        renderingSupport008Local10.integerState0372 = 260;
-        renderingSupport008Local10.integerState0368 = -renderingSupport008Local10.integerState0374 + (integerLocal7 / 2 + 360);
-        return renderingSupport008Local10;
+        renderingSupport007Local10.integerState0375 = 76;
+        renderingSupport007Local10.integerState0374 = -(integerLocal7 / 2) + 280;
+        renderingSupport007Local10.integerState0372 = 260;
+        renderingSupport007Local10.integerState0368 = -renderingSupport007Local10.integerState0374 + (integerLocal7 / 2 + 360);
+        return renderingSupport007Local10;
     }
 
     PcmPlayerService() {

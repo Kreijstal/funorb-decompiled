@@ -17,16 +17,16 @@ final class MixedSupport038 extends HashNode {
         bitmapFontState0013 = null;
     }
 
-    final static void performAction0523(boolean booleanArgument1, int integerArgument2) {
-        if (null != MixedSupport071.sceneWidgetPart001State0001) {
-          if (!MixedSupport071.sceneWidgetPart001State0001.computeBoolean0158(-1, booleanArgument1)) {
+    final static void performAction0520(boolean booleanArgument1, int integerArgument2) {
+        if (null != MixedSupport067.sceneWidgetPart001State0001) {
+          if (!MixedSupport067.sceneWidgetPart001State0001.computeBoolean0158(-1, booleanArgument1)) {
             if (integerArgument2 != 10891) {
               bitmapFontState0013 = (BitmapFont) null;
               return;
             }
             return;
           }
-          MixedSupport071.sceneWidgetPart001State0001 = null;
+          MixedSupport067.sceneWidgetPart001State0001 = null;
         }
         if (integerArgument2 == 10891) {
           return;

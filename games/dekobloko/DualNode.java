@@ -8,7 +8,7 @@ class DualNode extends HashNode {
     DualNode dualNodeState0003;
     static int[] integerArrayState0018;
     static int integerState0061;
-    static MixedSupport066 mixedSupport066State0001;
+    static EmailValidationError emailValidationErrorState0001;
     static int integerState0062;
     DualNode dualNodeState0004;
     long longState0003;
@@ -21,7 +21,7 @@ class DualNode extends HashNode {
         rgbSpriteArrayArrayState0003 = (RgbSprite[][]) null;
         integerArrayState0017 = null;
         int integerLocal1 = -75 / ((-44 - integerArgument1) / 60);
-        mixedSupport066State0001 = null;
+        emailValidationErrorState0001 = null;
     }
 
     final static boolean computeBoolean0128(byte byteArgument1, CharSequence charSequenceArgument2) {
@@ -33,7 +33,7 @@ class DualNode extends HashNode {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument1 == 98) {
-            stackBooleanLocal2 = MixedSupport121.computeBoolean1546(true, charSequenceArgument2, true, 10);
+            stackBooleanLocal2 = MixedSupport116.computeBoolean1519(true, charSequenceArgument2, true, 10);
             return stackBooleanLocal2;
           }
           return false;
@@ -47,7 +47,7 @@ class DualNode extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -67,10 +67,10 @@ class DualNode extends HashNode {
           return;
         }
         try {
-          MixedSupport094.performAction1166(appletArgument1, -1, "");
-          SceneWidgetPart014.performAction1813(appletArgument1, 30307);
+          MixedSupport089.performAction1139(appletArgument1, -1, "");
+          SceneWidgetPart014.performAction1782(appletArgument1, 30307);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
@@ -92,11 +92,11 @@ class DualNode extends HashNode {
             DualNode.performAction0127((byte) 85, (SceneWidgetPart005) null);
           }
           SceneWidgetPart007.sceneWidgetPart005State0002 = sceneWidgetPart005Argument2;
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1773(110);
-          MixedSupport059.sceneWidgetState0055.performAction1799(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
+          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1742(110);
+          MixedSupport059.sceneWidgetState0055.performAction1768(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
           GameDomainSupport004.booleanState0087 = true;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,6 +137,6 @@ class DualNode extends HashNode {
         integerState0062 = 0;
         stringState0044 = "Average rating";
         integerState0061 = 0;
-        mixedSupport066State0001 = new MixedSupport066();
+        emailValidationErrorState0001 = new EmailValidationError();
     }
 }

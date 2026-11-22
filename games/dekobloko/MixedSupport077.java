@@ -2,60 +2,76 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport077 {
-    static int integerState0415;
-    static RgbSprite[] rgbSpriteArrayState0017;
-    static int integerState0416;
-    static RgbSprite rgbSpriteState0028;
-    static String stringState0321;
-    static ClientException[] clientExceptionArrayState0001;
-    static RgbSprite rgbSpriteState0029;
-    static SceneWidget sceneWidgetState0073;
-    static long longState0025;
-    static int[] integerArrayState0140;
+    static String stringState0330;
+    static String stringState0331;
+    static SceneWidget sceneWidgetState0074;
+    static String stringState0332;
+    static DisplayModeController displayModeControllerState0001;
+    static RgbSprite rgbSpriteState0032;
+    static SceneWidget sceneWidgetState0075;
+    static long longState0029;
+    static String stringState0333;
 
-    final static SceneWidget computeSceneWidget0938(int integerArgument1) {
-        if (integerArgument1 > -72) {
-          return (SceneWidget) null;
-        }
-        return SoftwareFramebuffer.computeSceneWidget1832(-122);
-    }
-
-    final static int[] computeIntegerArray0940(int integerArgument1) {
+    final static String computeString0958(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
         int integerLocal1 = 0;
-        int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        if (integerArgument1 != 4) {
-          MixedSupport077.computeSceneWidget0938(64);
+        Exception exceptionLocal2 = null;
+        RuntimeException runtimeExceptionLocal3 = null;
+        byte[] byteArrayLocal4 = null;
+        String stringLocal5 = null;
+        String stackStringLocal6 = null;
+        String stackStringLocal7 = null;
+        RuntimeException stackRuntimeExceptionLocal8 = null;
+        StringBuilder stackStringBuilderLocal9 = null;
+        String stackStringLocal10 = null;
+        Throwable caughtExceptionLocal11 = null;
+        try {
+          try {
+            integerLocal1 = packetBufferArgument3.readUnsignedSmart(false);
+            if (integerLocal1 > integerArgument1) {
+              integerLocal1 = integerArgument1;
+            }
+            byteArrayLocal4 = new byte[integerLocal1];
+            packetBufferArgument3.position = packetBufferArgument3.position + NetworkSupport007.huffmanCodecState0001.decompress(packetBufferArgument3.position, (byte) 91, integerArgument2, byteArrayLocal4, packetBufferArgument3.payload, integerLocal1);
+            stringLocal5 = MixedSupport133.decodeCp1252(byteArrayLocal4, 0, 0, integerLocal1);
+            stackStringLocal6 = stringLocal5;
+            return stackStringLocal6;
+          } catch (java.lang.Exception caughtParameterLocal12) {
+            caughtExceptionLocal11 = caughtParameterLocal12;
+            exceptionLocal2 = (Exception) (Object) caughtExceptionLocal11;
+            stackStringLocal7 = "Cabbage";
+            return stackStringLocal7;
+          }
+        } catch (java.lang.RuntimeException caughtParameterLocal13) {
+          caughtExceptionLocal11 = caughtParameterLocal13;
+          runtimeExceptionLocal3 = (RuntimeException) (Object) caughtExceptionLocal11;
+          stackRuntimeExceptionLocal8 = runtimeExceptionLocal3;
+          stackStringBuilderLocal9 = new StringBuilder().append("li.A(").append(integerArgument1).append(',').append(integerArgument2).append(',');
+          if (packetBufferArgument3 == null) {
+            stackStringLocal10 = "null";
+          } else {
+            stackStringLocal10 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
-        int[] integerArrayLocal3 = new int[4];
-        int[] integerArrayLocal4 = integerArrayLocal3;
-        for (integerLocal1 = 0; integerLocal1 < 4; integerLocal1++) {
-          integerArrayLocal3[integerLocal1] = RenderingSupport001.randomState0001.nextInt();
-        }
-        return integerArrayLocal4;
     }
 
-    public static void performAction0939(int integerArgument1) {
-        sceneWidgetState0073 = null;
-        stringState0321 = null;
-        rgbSpriteState0029 = null;
-        if (integerArgument1 < 118) {
-          longState0025 = -47L;
-        }
-        clientExceptionArrayState0001 = null;
-        rgbSpriteState0028 = null;
-        rgbSpriteArrayState0017 = null;
-        integerArrayState0140 = null;
+    public static void performAction0957(int integerArgument1) {
+        displayModeControllerState0001 = null;
+        rgbSpriteState0032 = null;
+        stringState0332 = null;
+        sceneWidgetState0074 = null;
+        sceneWidgetState0075 = null;
+        stringState0330 = null;
+        stringState0333 = null;
+        int integerLocal1 = 26 % ((integerArgument1 + 65) / 33);
+        stringState0331 = null;
     }
 
     static {
-        int integerLocal1 = 0;
-        rgbSpriteArrayState0017 = new RgbSprite[64];
-        integerState0416 = 0;
-        stringState0321 = "City";
-        for (integerLocal1 = 0; integerLocal1 < 64; integerLocal1++) {
-          rgbSpriteArrayState0017[integerLocal1] = new RgbSprite(9, 9);
-        }
-        longState0025 = 0L;
-        integerArrayState0140 = new int[8];
+        stringState0331 = "Email is valid";
+        stringState0332 = "Report <%0> for abuse";
+        stringState0333 = "Status";
+        displayModeControllerState0001 = null;
+        stringState0330 = "You are invited to <%0>'s game.";
     }
 }

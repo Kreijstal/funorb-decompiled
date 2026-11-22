@@ -1,318 +1,501 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport069 extends TextFieldValidator {
-    private String stringState0290;
-    static NodeDeque nodeDequeState0011;
-    static String stringState0291;
-    static RawSound[] rawSoundArrayState0002;
-    static int integerState0354;
-    static RgbSprite rgbSpriteState0025;
-    private boolean booleanState0089;
+import java.io.*;
 
-    MixedSupport069(UiComponentPart028 uiComponentPart028Argument1) {
-        super(uiComponentPart028Argument1);
-        this.booleanState0089 = false;
-    }
+final class MixedSupport069 {
+    private BufferedFile bufferedFileState0002;
+    static String stringState0310;
+    static String stringState0311;
+    static int[] integerArrayState0123;
+    private BufferedFile bufferedFileState0003;
+    private int integerState0380;
+    private int integerState0381;
+    static String stringState0312;
 
-    final ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2) {
-        MixedSupport016 mixedSupport016Local1 = null;
-        RuntimeException runtimeExceptionLocal2 = null;
-        String stringLocal3 = null;
-        CharSequence charSequenceLocal4 = null;
-        ValidationStatus stackValidationStatusLocal5 = null;
-        ValidationStatus stackValidationStatusLocal6 = null;
-        ValidationStatus stackValidationStatusLocal7 = null;
-        RuntimeException stackRuntimeExceptionLocal8 = null;
-        StringBuilder stackStringBuilderLocal9 = null;
-        String stackStringLocal10 = null;
-        RuntimeException caughtExceptionLocal11 = null;
-        try {
-          if (byteArgument2 != -40) {
-            stringLocal3 = (String) null;
-            MixedSupport069.computeString0841('�', (String) null, (String) null, 32);
-          }
-          charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
-          if (!MixedSupport113.computeBoolean1445(charSequenceLocal4, byteArgument2 ^ 27418)) {
-            stackValidationStatusLocal5 = MixedSupport149.validationStatusState0005;
-            return stackValidationStatusLocal5;
-          }
-          if (!stringArgument1.equals(this.stringState0290)) {
-            mixedSupport016Local1 = MixedSupport033.computeMixedSupport0160496(byteArgument2 - 11039, stringArgument1);
-            if (mixedSupport016Local1 != null &&
-              null == mixedSupport016Local1.stringState0075) {
-              this.booleanState0089 = mixedSupport016Local1.booleanState0014;
-              this.stringState0290 = stringArgument1;
-            } else {
-              stackValidationStatusLocal6 = DiagnosticSupport002.validationStatusState0002;
-              return stackValidationStatusLocal6;
-            }
-          }
-          if (this.booleanState0089) {
-            stackValidationStatusLocal7 = MixedSupport023.validationStatusState0001;
-          } else {
-            stackValidationStatusLocal7 = MixedSupport149.validationStatusState0005;
-          }
-          return stackValidationStatusLocal7;
-        } catch (java.lang.RuntimeException caughtParameterLocal12) {
-          caughtExceptionLocal11 = caughtParameterLocal12;
-          runtimeExceptionLocal2 = caughtExceptionLocal11;
-          stackRuntimeExceptionLocal8 = runtimeExceptionLocal2;
-          stackStringBuilderLocal9 = new StringBuilder().append("jm.B(");
-          if (stringArgument1 == null) {
-            stackStringLocal10 = "null";
-          } else {
-            stackStringLocal10 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
-        }
-    }
-
-    final void performAction0843(boolean booleanArgument1) {
-        if (!booleanArgument1) {
-          this.booleanState0089 = true;
-          this.stringState0290 = null;
-          return;
-        }
-        this.stringState0290 = null;
-    }
-
-    final static void performAction0842(int integerArgument1, boolean booleanArgument2) {
-        if (integerArgument1 != 0) {
-          String stringLocal1 = (String) null;
-          MixedSupport069.computeString0841('_', (String) null, (String) null, -55);
-          if (!UiComponentPart023.computeBoolean1269(-30146)) {
-            SocketFactory.cipherPacketBufferState0002.performAction1672(9, -4);
-            MixedSupport087.booleanState0118 = true;
-            UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
-            return;
-          }
-          UiComponentPart033.performAction1846(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
-          return;
-        }
-        if (!UiComponentPart023.computeBoolean1269(-30146)) {
-          SocketFactory.cipherPacketBufferState0002.performAction1672(9, -4);
-          MixedSupport087.booleanState0118 = true;
-          UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
-          return;
-        }
-        UiComponentPart033.performAction1846(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
-    }
-
-    final String getValidationMessage(String stringArgument1, byte byteArgument2) {
-        String stringLocal1 = null;
-        RuntimeException runtimeExceptionLocal2 = null;
-        MixedSupport016 mixedSupport016Local3 = null;
-        CharSequence charSequenceLocal4 = null;
-        String stackStringLocal5 = null;
-        String stackStringLocal6 = null;
-        String stackStringLocal7 = null;
-        RuntimeException stackRuntimeExceptionLocal8 = null;
-        StringBuilder stackStringBuilderLocal9 = null;
-        String stackStringLocal10 = null;
-        RuntimeException caughtExceptionLocal11 = null;
-        try {
-          charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
-          stringLocal1 = MixedSupport062.computeString0740(5, charSequenceLocal4);
-          if (stringLocal1 != null) {
-            stackStringLocal5 = stringLocal1;
-            return stackStringLocal5;
-          }
-          if (!stringArgument1.equals(this.stringState0290)) {
-            mixedSupport016Local3 = MixedSupport033.computeMixedSupport0160496(byteArgument2 - 11068, stringArgument1);
-            if (mixedSupport016Local3 == null) {
-              return null;
-            }
-            if (null != mixedSupport016Local3.stringState0075) {
-              return null;
-            }
-            this.stringState0290 = stringArgument1;
-            this.booleanState0089 = mixedSupport016Local3.booleanState0014;
-          }
-          if (byteArgument2 != -11) {
-            MixedSupport069.performAction0842(109, false);
-          }
-          if (this.booleanState0089) {
-            stackStringLocal7 = MixedSupport029.stringState0147;
-            return stackStringLocal7;
-          }
-          stackStringLocal6 = ResourceSupport003.stringState0381;
-          return stackStringLocal6;
-        } catch (java.lang.RuntimeException caughtParameterLocal12) {
-          caughtExceptionLocal11 = caughtParameterLocal12;
-          runtimeExceptionLocal2 = caughtExceptionLocal11;
-          stackRuntimeExceptionLocal8 = runtimeExceptionLocal2;
-          stackStringBuilderLocal9 = new StringBuilder().append("jm.A(");
-          if (stringArgument1 == null) {
-            stackStringLocal10 = "null";
-          } else {
-            stackStringLocal10 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
-        }
-    }
-
-    public static void clearStaticReferences(int integerArgument1) {
-        rgbSpriteState0025 = null;
-        nodeDequeState0011 = null;
-        stringState0291 = null;
-        if (integerArgument1 <= 41) {
-          rgbSpriteState0025 = (RgbSprite) null;
-          rawSoundArrayState0002 = null;
-          return;
-        }
-        rawSoundArrayState0002 = null;
-    }
-
-    final static String computeString0841(char characterArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
-        StringBuilder discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
+    final static void performAction0900(int integerArgument1) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        int integerLocal3 = 0;
         int integerLocal4 = 0;
-        RuntimeException runtimeExceptionLocal5 = null;
-        int integerLocal6 = 0;
-        int integerLocal7 = 0;
-        int integerLocal8 = 0;
-        int integerLocal9 = 0;
-        StringBuilder stringBuilderLocal10 = null;
-        int integerLocal11 = 0;
-        int integerLocal12 = 0;
-        int integerLocal13 = 0;
-        String stackStringLocal14 = null;
-        RuntimeException stackRuntimeExceptionLocal15 = null;
-        StringBuilder stackStringBuilderLocal16 = null;
-        String stackStringLocal17 = null;
-        StringBuilder stackStringBuilderLocal18 = null;
-        String stackStringLocal19 = null;
-        RuntimeException caughtExceptionLocal20 = null;
-        integerLocal13 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        RuntimeException caughtExceptionLocal5 = null;
+        RuntimeException runtimeExceptionLocal6 = null;
+        integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal4 = stringArgument2.length();
-          integerLocal6 = stringArgument3.length();
-          integerLocal7 = integerLocal4;
-          integerLocal8 = -1 + integerLocal6;
-          if (~integerLocal8 != integerArgument4) {
-            integerLocal9 = 0;
-            while (true) {
-              integerLocal9 = stringArgument2.indexOf((int) characterArgument1, integerLocal9);
-              if (integerLocal9 < 0) {
-                break;
-              }
-              integerLocal7 = integerLocal7 + integerLocal8;
-              integerLocal9++;
-            }
+          integerLocal2 = MixedSupport001.integerArrayState0001[0];
+          if (integerArgument1 != 2) {
+            integerArrayState0123 = (int[]) null;
           }
-          stringBuilderLocal10 = new StringBuilder(integerLocal7);
-          integerLocal11 = 0;
-          while (true) {
-            integerLocal12 = stringArgument2.indexOf((int) characterArgument1, integerLocal11);
-            if (integerLocal12 < 0) {
-              discarded$3 = stringBuilderLocal10.append(stringArgument2.substring(integerLocal11));
-              stackStringLocal14 = stringBuilderLocal10.toString();
-              return stackStringLocal14;
-            }
-            discarded$4 = stringBuilderLocal10.append(stringArgument2.substring(integerLocal11, integerLocal12));
-            integerLocal11 = 1 + integerLocal12;
-            discarded$5 = stringBuilderLocal10.append(stringArgument3);
+          for (integerLocal1 = 1; MixedSupport001.integerArrayState0001.length > integerLocal1; integerLocal1++) {
+            integerLocal3 = MixedSupport001.integerArrayState0001[integerLocal1];
+            MixedSupport008.performAction0076(SceneWidgetPart004.integerArrayState0053, integerLocal1 << 4, SceneWidgetPart004.integerArrayState0053, integerLocal2, integerLocal3);
+            integerLocal2 = integerLocal2 + integerLocal3;
           }
-        } catch (java.lang.RuntimeException caughtParameterLocal21) {
-          caughtExceptionLocal20 = caughtParameterLocal21;
-          runtimeExceptionLocal5 = caughtExceptionLocal20;
-          stackRuntimeExceptionLocal15 = runtimeExceptionLocal5;
-          stackStringBuilderLocal16 = new StringBuilder().append("jm.L(").append(characterArgument1).append(',');
-          if (stringArgument2 == null) {
-            stackStringLocal17 = "null";
-          } else {
-            stackStringLocal17 = "{...}";
-          }
-          stackStringBuilderLocal18 = ((StringBuilder) (Object) stackStringBuilderLocal16).append(stackStringLocal17).append(',');
-          if (stringArgument3 == null) {
-            stackStringLocal19 = "null";
-          } else {
-            stackStringLocal19 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal15), ((StringBuilder) (Object) stackStringBuilderLocal18).append(stackStringLocal19).append(',').append(integerArgument4).append(')').toString());
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal7) {
+          caughtExceptionLocal5 = caughtParameterLocal7;
+          runtimeExceptionLocal6 = caughtExceptionLocal5;
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal6), "kh.B(" + integerArgument1 + ')');
         }
     }
 
-    final static void performAction0844(boolean booleanArgument1, MixedSupport043 mixedSupport043Argument2, int integerArgument3, byte byteArgument4, boolean booleanArgument5) {
-        RuntimeException stackRuntimeExceptionLocal1 = null;
-        StringBuilder stackStringBuilderLocal2 = null;
-        String stackStringLocal3 = null;
-        RuntimeException caughtExceptionLocal4 = null;
-        int integerLocal5 = 0;
-        RuntimeException runtimeExceptionLocal6 = null;
-        int integerLocal7 = 0;
-        String stringLocal8 = null;
-        try {
-          MixedSupport102.integerArrayState0179[0] = RenderingSupport004.randomState0002.nextInt();
-          MixedSupport102.integerArrayState0179[1] = RenderingSupport004.randomState0002.nextInt();
-          MixedSupport102.integerArrayState0179[2] = (int)(Sprite.longState0027 >> 32);
-          MixedSupport147.packetBufferState0008.position = 0;
-          MixedSupport102.integerArrayState0179[3] = (int)Sprite.longState0027;
-          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[0], false);
-          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[1], false);
-          if (byteArgument4 < 123) {
-            MixedSupport069.clearStaticReferences(2);
-          }
-          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[2], false);
-          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[3], false);
-          MixedSupport057.performAction0693(MixedSupport147.packetBufferState0008, 0);
-          MixedSupport147.packetBufferState0008.writeShort(-1, integerArgument3);
-          mixedSupport043Argument2.performAction0548(MixedSupport147.packetBufferState0008, (byte) 124);
-          SocketFactory.cipherPacketBufferState0002.position = 0;
-          if (!booleanArgument1) {
-            SocketFactory.cipherPacketBufferState0002.writeByte(true, 16);
-          } else {
-            SocketFactory.cipherPacketBufferState0002.writeByte(true, 18);
-          }
-          SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 2;
-          integerLocal5 = SocketFactory.cipherPacketBufferState0002.position;
-          SocketFactory.cipherPacketBufferState0002.writeInt(MatchingFieldValidator.integerState0686, false);
-          SocketFactory.cipherPacketBufferState0002.writeLong(MixedSupport115.longState0045, (byte) 0);
-          integerLocal7 = 0;
-          if (UiComponent.booleanState0017) {
-            integerLocal7 = integerLocal7 | 1;
-          }
-          if (MixedSupport018.booleanState0021) {
-            integerLocal7 = integerLocal7 | 4;
-          }
-          if (booleanArgument5) {
-            integerLocal7 = integerLocal7 | 8;
-          }
-          if (null != MixedSupport146.stringState0594) {
-            integerLocal7 = integerLocal7 | 16;
-          }
-          SocketFactory.cipherPacketBufferState0002.writeByte(true, integerLocal7);
-          stringLocal8 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1512(25144), (byte) 114);
-          if (stringLocal8 == null) {
-            stringLocal8 = "";
-          }
-          SocketFactory.cipherPacketBufferState0002.writeNullTerminatedString(0, stringLocal8);
-          if (MixedSupport146.stringState0594 != null) {
-            SocketFactory.cipherPacketBufferState0002.writeNullCircumfixedString(8, MixedSupport146.stringState0594);
-          }
-          MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport147.packetBufferState0008, 0);
-          SocketFactory.cipherPacketBufferState0002.writeLengthShort(true, SocketFactory.cipherPacketBufferState0002.position - integerLocal5);
-          UiComponentPart033.performAction1850(4792, -1);
+    final static void performAction0902(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        MixedSupport140.packetBufferState0008.position = 0;
+        MixedSupport140.packetBufferState0008.writeByte(true, 12);
+        MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+        if (integerArgument1 < -17) {
+          MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+          MixedSupport140.packetBufferState0008.writeByte(true, integerArgument2);
+          MixedSupport140.packetBufferState0008.writeByte(true, integerArgument4);
+          MixedSupport140.packetBufferState0008.writeShort(-1, integerArgument3);
+          MixedSupport140.packetBufferState0008.rsaEncrypt(RichTextLayout.bigIntegerState0001, AnimatedTileRegion.bigIntegerState0004, true);
+          SocketFactory.cipherPacketBufferState0002.performAction1641(18, -4);
+          integerLocal1 = SocketFactory.cipherPacketBufferState0002.position + 1;
+          SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 1;
+          integerLocal2 = integerLocal1;
+          SocketFactory.cipherPacketBufferState0002.writeBytes(false, MixedSupport140.packetBufferState0008.position, MixedSupport140.packetBufferState0008.payload, 0);
+          SocketFactory.cipherPacketBufferState0002.writeLengthByte(SocketFactory.cipherPacketBufferState0002.position - integerLocal2, true);
           return;
-        } catch (java.lang.RuntimeException caughtParameterLocal9) {
-          caughtExceptionLocal4 = caughtParameterLocal9;
-          runtimeExceptionLocal6 = caughtExceptionLocal4;
-          stackRuntimeExceptionLocal1 = runtimeExceptionLocal6;
-          stackStringBuilderLocal2 = new StringBuilder().append("jm.C(").append(booleanArgument1).append(',');
-          if (mixedSupport043Argument2 == null) {
-            stackStringLocal3 = "null";
-          } else {
-            stackStringLocal3 = "{...}";
+        }
+    }
+
+    public final String toString() {
+        return "" + this.integerState0380;
+    }
+
+    final boolean computeBoolean0898(byte byteArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4) {
+        Object objectLocal1 = null;
+        RuntimeException runtimeExceptionLocal2 = null;
+        int integerLocal3 = 0;
+        Throwable throwableLocal4 = null;
+        int stackIntegerLocal5 = 0;
+        RuntimeException stackRuntimeExceptionLocal6 = null;
+        StringBuilder stackStringBuilderLocal7 = null;
+        String stackStringLocal8 = null;
+        Throwable caughtExceptionLocal9 = null;
+        try {
+          objectLocal1 = this.bufferedFileState0003;
+          synchronized (objectLocal1) {
+            if (integerArgument4 >= 0 &&
+              integerArgument4 <= this.integerState0381) {
+              if (byteArgument1 != 43) {
+                MixedSupport069.computeBoolean0899(')', -33);
+              }
+              integerLocal3 = this.computeBoolean0904(true, (byte) -108, integerArgument3, integerArgument4, byteArrayArgument2) ? 1 : 0;
+              if (integerLocal3 == 0) {
+                integerLocal3 = this.computeBoolean0904(false, (byte) -43, integerArgument3, integerArgument4, byteArrayArgument2) ? 1 : 0;
+              }
+              stackIntegerLocal5 = integerLocal3;
+            } else {
+              throw new IllegalArgumentException();
+            }
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',').append(booleanArgument5).append(')').toString());
+          return stackIntegerLocal5 != 0;
+        } catch (java.lang.RuntimeException caughtParameterLocal10) {
+          caughtExceptionLocal9 = caughtParameterLocal10;
+          runtimeExceptionLocal2 = (RuntimeException) (Object) caughtExceptionLocal9;
+          stackRuntimeExceptionLocal6 = runtimeExceptionLocal2;
+          stackStringBuilderLocal7 = new StringBuilder().append("kh.D(").append(byteArgument1).append(',');
+          if (byteArrayArgument2 == null) {
+            stackStringLocal8 = "null";
+          } else {
+            stackStringLocal8 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+        }
+    }
+
+    private final boolean computeBoolean0904(boolean booleanArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, byte[] byteArrayArgument5) {
+        try {
+          RuntimeException stackRuntimeExceptionLocal1 = null;
+          StringBuilder stackStringBuilderLocal2 = null;
+          String stackStringLocal3 = null;
+          int regionSelectorLocal4 = 0;
+          int regionSelectorLocal5 = 0;
+          Throwable caughtExceptionLocal6 = null;
+          Object objectLocal7 = null;
+          RuntimeException runtimeExceptionLocal8 = null;
+          int integerLocal9 = 0;
+          IOException iOExceptionLocal10 = null;
+          int integerLocal11 = 0;
+          int integerLocal12 = 0;
+          int integerLocal13 = 0;
+          int integerLocal14 = 0;
+          int integerLocal15 = 0;
+          int integerLocal16 = 0;
+          EOFException eOFExceptionLocal17 = null;
+          int integerLocal18 = 0;
+          integerLocal18 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+          try {
+            objectLocal7 = this.bufferedFileState0003;
+            synchronized (objectLocal7) {
+              try {
+                if (byteArgument2 > -39) {
+                  return false;
+                }
+                if (booleanArgument1) {
+                  if (this.bufferedFileState0002.length(37) < (long)(6 + integerArgument3 * 6)) {
+                    return false;
+                  }
+                  this.bufferedFileState0002.seek((long)(6 * integerArgument3), (byte) -109);
+                  this.bufferedFileState0002.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, 6);
+                  integerLocal9 = (255 & DiagnosticSupport002.byteArrayState0008[5]) + (((255 & DiagnosticSupport002.byteArrayState0008[3]) << 16) + (DiagnosticSupport002.byteArrayState0008[4] << 8 & 65280));
+                  if (0 >= integerLocal9 ||
+                    !((this.bufferedFileState0003.length(-94) / 520L) >= (long)integerLocal9)) {
+                    return false;
+                  }
+                } else {
+                  integerLocal9 = (int)((this.bufferedFileState0003.length(74) + 519L) / 520L);
+                  if (integerLocal9 == 0) {
+                    integerLocal9 = 1;
+                  }
+                }
+                DiagnosticSupport002.byteArrayState0008[0] = (byte)(integerArgument4 >> 16);
+                DiagnosticSupport002.byteArrayState0008[2] = (byte)integerArgument4;
+                DiagnosticSupport002.byteArrayState0008[5] = (byte)integerLocal9;
+                DiagnosticSupport002.byteArrayState0008[1] = (byte)(integerArgument4 >> 8);
+                DiagnosticSupport002.byteArrayState0008[3] = (byte)(integerLocal9 >> 16);
+                DiagnosticSupport002.byteArrayState0008[4] = (byte)(integerLocal9 >> 8);
+                this.bufferedFileState0002.seek((long)(6 * integerArgument3), (byte) -109);
+                this.bufferedFileState0002.write(DiagnosticSupport002.byteArrayState0008, (byte) 118, 0, 6);
+                integerLocal11 = 0;
+                integerLocal12 = 0;
+                scanLoop1: while (true) {
+                  if (integerLocal11 < integerArgument4) {
+                    boolean frameRemainderLocal19 = true;
+                    integerLocal13 = 0;
+                    if (booleanArgument1) {
+                      this.bufferedFileState0003.seek((long)(520 * integerLocal9), (byte) -109);
+                      if (integerArgument3 <= 65535) {
+                        try {
+                          this.bufferedFileState0003.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, 8);
+                          regionSelectorLocal4 = 0;
+                        } catch (java.io.EOFException caughtParameterLocal20) {
+                          caughtExceptionLocal6 = caughtParameterLocal20;
+                          eOFExceptionLocal17 = (EOFException) (Object) caughtExceptionLocal6;
+                          regionSelectorLocal4 = 1;
+                        }
+                        if (regionSelectorLocal4 != 0) {
+                          break scanLoop1;
+                        }
+                        integerLocal13 = (255 & DiagnosticSupport002.byteArrayState0008[6]) + (16711680 & DiagnosticSupport002.byteArrayState0008[4] << 16) + ((255 & DiagnosticSupport002.byteArrayState0008[5]) << 8);
+                        integerLocal16 = 255 & DiagnosticSupport002.byteArrayState0008[7];
+                        integerLocal15 = (255 & DiagnosticSupport002.byteArrayState0008[3]) + ((DiagnosticSupport002.byteArrayState0008[2] & 255) << 8);
+                        integerLocal14 = (255 & DiagnosticSupport002.byteArrayState0008[1]) + ((255 & DiagnosticSupport002.byteArrayState0008[0]) << 8);
+                      } else {
+                        try {
+                          this.bufferedFileState0003.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, 10);
+                          regionSelectorLocal5 = 0;
+                        } catch (java.io.EOFException caughtParameterLocal21) {
+                          caughtExceptionLocal6 = caughtParameterLocal21;
+                          eOFExceptionLocal17 = (EOFException) (Object) caughtExceptionLocal6;
+                          regionSelectorLocal5 = 1;
+                        }
+                        if (regionSelectorLocal5 != 0) {
+                          break scanLoop1;
+                        }
+                        integerLocal15 = ((DiagnosticSupport002.byteArrayState0008[4] & 255) << 8) + (DiagnosticSupport002.byteArrayState0008[5] & 255);
+                        integerLocal16 = 255 & DiagnosticSupport002.byteArrayState0008[9];
+                        integerLocal14 = (255 & DiagnosticSupport002.byteArrayState0008[3]) + (-16777216 & DiagnosticSupport002.byteArrayState0008[0] << 24) + ((DiagnosticSupport002.byteArrayState0008[1] & 255) << 16) + ((DiagnosticSupport002.byteArrayState0008[2] & 255) << 8);
+                        integerLocal13 = ((255 & DiagnosticSupport002.byteArrayState0008[6]) << 16) + (65280 & DiagnosticSupport002.byteArrayState0008[7] << 8) + (DiagnosticSupport002.byteArrayState0008[8] & 255);
+                      }
+                      if ((integerLocal14 == integerArgument3 &&
+                        integerLocal12 == integerLocal15 &&
+                        integerLocal16 == this.integerState0380) &&
+                        (frameRemainderLocal19 = (!(integerLocal13 >= 0) ||
+                        !((long)integerLocal13 <= this.bufferedFileState0003.length(-103) / 520L)))) {
+                        return false;
+                      }
+                      if (frameRemainderLocal19) {
+                        return false;
+                      }
+                    }
+                    if (integerLocal13 == 0) {
+                      booleanArgument1 = false;
+                      integerLocal13 = (int)((this.bufferedFileState0003.length(-121) + 519L) / 520L);
+                      if (integerLocal13 == 0) {
+                        integerLocal13++;
+                      }
+                      if (integerLocal9 == integerLocal13) {
+                        integerLocal13++;
+                      }
+                    }
+                    if (-integerLocal11 + integerArgument4 <= 512) {
+                      integerLocal13 = 0;
+                    }
+                    if (integerArgument3 > 65535) {
+                      DiagnosticSupport002.byteArrayState0008[3] = (byte)integerArgument3;
+                      DiagnosticSupport002.byteArrayState0008[1] = (byte)(integerArgument3 >> 16);
+                      DiagnosticSupport002.byteArrayState0008[8] = (byte)integerLocal13;
+                      DiagnosticSupport002.byteArrayState0008[6] = (byte)(integerLocal13 >> 16);
+                      DiagnosticSupport002.byteArrayState0008[4] = (byte)(integerLocal12 >> 8);
+                      DiagnosticSupport002.byteArrayState0008[9] = (byte)this.integerState0380;
+                      DiagnosticSupport002.byteArrayState0008[0] = (byte)(integerArgument3 >> 24);
+                      DiagnosticSupport002.byteArrayState0008[5] = (byte)integerLocal12;
+                      DiagnosticSupport002.byteArrayState0008[7] = (byte)(integerLocal13 >> 8);
+                      DiagnosticSupport002.byteArrayState0008[2] = (byte)(integerArgument3 >> 8);
+                      this.bufferedFileState0003.seek((long)(integerLocal9 * 520), (byte) -109);
+                      this.bufferedFileState0003.write(DiagnosticSupport002.byteArrayState0008, (byte) 96, 0, 10);
+                      integerLocal14 = integerArgument4 - integerLocal11;
+                      if (integerLocal14 > 510) {
+                        integerLocal14 = 510;
+                      }
+                      this.bufferedFileState0003.write(byteArrayArgument5, (byte) 126, integerLocal11, integerLocal14);
+                      integerLocal11 = integerLocal11 + integerLocal14;
+                    } else {
+                      DiagnosticSupport002.byteArrayState0008[0] = (byte)(integerArgument3 >> 8);
+                      DiagnosticSupport002.byteArrayState0008[7] = (byte)this.integerState0380;
+                      DiagnosticSupport002.byteArrayState0008[3] = (byte)integerLocal12;
+                      DiagnosticSupport002.byteArrayState0008[5] = (byte)(integerLocal13 >> 8);
+                      DiagnosticSupport002.byteArrayState0008[4] = (byte)(integerLocal13 >> 16);
+                      DiagnosticSupport002.byteArrayState0008[1] = (byte)integerArgument3;
+                      DiagnosticSupport002.byteArrayState0008[2] = (byte)(integerLocal12 >> 8);
+                      DiagnosticSupport002.byteArrayState0008[6] = (byte)integerLocal13;
+                      this.bufferedFileState0003.seek((long)(integerLocal9 * 520), (byte) -109);
+                      this.bufferedFileState0003.write(DiagnosticSupport002.byteArrayState0008, (byte) 124, 0, 8);
+                      integerLocal14 = integerArgument4 - integerLocal11;
+                      if (integerLocal14 > 512) {
+                        integerLocal14 = 512;
+                      }
+                      this.bufferedFileState0003.write(byteArrayArgument5, (byte) 126, integerLocal11, integerLocal14);
+                      integerLocal11 = integerLocal11 + integerLocal14;
+                    }
+                    integerLocal9 = integerLocal13;
+                    integerLocal12++;
+                    continue;
+                  }
+                  break;
+                }
+                return true;
+              } catch (java.io.IOException caughtParameterLocal22) {
+                caughtExceptionLocal6 = caughtParameterLocal22;
+                iOExceptionLocal10 = (IOException) (Object) caughtExceptionLocal6;
+                return false;
+              }
+            }
+          } catch (java.lang.RuntimeException caughtParameterLocal23) {
+            caughtExceptionLocal6 = caughtParameterLocal23;
+            runtimeExceptionLocal8 = (RuntimeException) (Object) caughtExceptionLocal6;
+            stackRuntimeExceptionLocal1 = runtimeExceptionLocal8;
+            stackStringBuilderLocal2 = new StringBuilder().append("kh.C(").append(booleanArgument1).append(',').append(byteArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',');
+            if (byteArrayArgument5 == null) {
+              stackStringLocal3 = "null";
+            } else {
+              stackStringLocal3 = "{...}";
+            }
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          }
+        } catch (RuntimeException | Error uncheckedExceptionLocal24) {
+          throw uncheckedExceptionLocal24;
+        } catch (Throwable checkedExceptionLocal25) {
+          throw new RuntimeException(checkedExceptionLocal25);
+        }
+    }
+
+    public static void performAction0905(int integerArgument1) {
+        stringState0310 = null;
+        stringState0312 = null;
+        integerArrayState0123 = null;
+        stringState0311 = null;
+        if (integerArgument1 != -1643605936) {
+          MixedSupport069.performAction0905(15);
+        }
+    }
+
+    final static boolean computeBoolean0899(char characterArgument1, int integerArgument2) {
+        if (characterArgument1 >= 32 &&
+          characterArgument1 <= 126) {
+          return true;
+        }
+        if (characterArgument1 >= 160 &&
+          255 >= characterArgument1) {
+          return true;
+        }
+        if (8364 == characterArgument1) {
+          return true;
+        }
+        if (characterArgument1 == 338) {
+          return true;
+        }
+        if (characterArgument1 == 8212) {
+          return true;
+        }
+        if (339 == characterArgument1) {
+          return true;
+        }
+        if (characterArgument1 == 376) {
+          return true;
+        }
+        if (integerArgument2 == 8212) {
+          return false;
+        }
+        return true;
+    }
+
+    final static void performAction0903(boolean booleanArgument1) {
+        int integerLocal1 = 0;
+        int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        try {
+          integerLocal1 = 0;
+          if (!booleanArgument1) {
+            stringState0311 = (String) null;
+          }
+          while (MixedSupport058.integerState0317 > integerLocal1) {
+            MixedSupport097.mixedSupport056ArrayState0001[integerLocal1] = null;
+            integerLocal1++;
+          }
+          MixedSupport058.integerState0317 = 0;
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "kh.E(" + booleanArgument1 + ')');
+        }
+    }
+
+    final byte[] computeByteArray0901(int integerArgument1, byte byteArgument2) {
+        try {
+          int integerLocal1 = 0;
+          int previousIntegerLocal2 = 0;
+          Object objectLocal3 = null;
+          Object objectLocal4 = null;
+          int integerLocal5 = 0;
+          IOException iOExceptionLocal6 = null;
+          int integerLocal7 = 0;
+          byte[] byteArrayLocal8 = null;
+          int integerLocal9 = 0;
+          int integerLocal10 = 0;
+          int integerLocal11 = 0;
+          int integerLocal12 = 0;
+          int integerLocal13 = 0;
+          int integerLocal14 = 0;
+          int integerLocal15 = 0;
+          int integerLocal16 = 0;
+          int integerLocal17 = 0;
+          Throwable throwableLocal18 = null;
+          int integerLocal19 = 0;
+          byte[] stackByteArrayLocal20 = null;
+          Object stackObjectLocal21 = null;
+          Object stackObjectLocal22 = null;
+          byte[] stackByteArrayLocal23 = null;
+          Object stackObjectLocal24 = null;
+          Throwable caughtExceptionLocal25 = null;
+          integerLocal19 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+          objectLocal4 = this.bufferedFileState0003;
+          synchronized (objectLocal4) {
+            try {
+              if ((long)(6 + integerArgument1 * 6) > this.bufferedFileState0002.length(103)) {
+                return null;
+              }
+              this.bufferedFileState0002.seek((long)(6 * integerArgument1), (byte) -109);
+              this.bufferedFileState0002.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, 6);
+              integerLocal5 = (DiagnosticSupport002.byteArrayState0008[2] & 255) + (DiagnosticSupport002.byteArrayState0008[1] << 8 & 65280) + (DiagnosticSupport002.byteArrayState0008[0] << 16 & 16711680);
+              if (byteArgument2 <= 38) {
+                stackByteArrayLocal20 = (byte[]) null;
+                return stackByteArrayLocal20;
+              }
+              integerLocal7 = (16711680 & DiagnosticSupport002.byteArrayState0008[3] << 16) - (-((DiagnosticSupport002.byteArrayState0008[4] & 255) << 8) - (255 & DiagnosticSupport002.byteArrayState0008[5]));
+              if (integerLocal5 < 0) {
+                return null;
+              }
+              if (this.integerState0381 < integerLocal5) {
+                stackObjectLocal21 = null;
+                return (byte[]) (stackObjectLocal21);
+              }
+              if (0 >= integerLocal7) {
+                return null;
+              }
+              if ((long)integerLocal7 > this.bufferedFileState0003.length(-128) / 520L) {
+                return null;
+              }
+              byteArrayLocal8 = new byte[integerLocal5];
+              integerLocal9 = 0;
+              integerLocal10 = 0;
+              while (integerLocal9 < integerLocal5) {
+                if (0 == integerLocal7) {
+                  stackObjectLocal22 = null;
+                  return (byte[]) (stackObjectLocal22);
+                }
+                this.bufferedFileState0003.seek((long)(integerLocal7 * 520), (byte) -109);
+                integerLocal11 = -integerLocal9 + integerLocal5;
+                if (integerArgument1 > 65535) {
+                  if (integerLocal11 > 510) {
+                    integerLocal11 = 510;
+                  }
+                  integerLocal16 = 10;
+                  this.bufferedFileState0003.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, integerLocal11 + integerLocal16);
+                  integerLocal13 = ((255 & DiagnosticSupport002.byteArrayState0008[4]) << 8) + (DiagnosticSupport002.byteArrayState0008[5] & 255);
+                  integerLocal14 = ((DiagnosticSupport002.byteArrayState0008[6] & 255) << 16) + (DiagnosticSupport002.byteArrayState0008[7] << 8 & 65280) + (DiagnosticSupport002.byteArrayState0008[8] & 255);
+                  integerLocal15 = DiagnosticSupport002.byteArrayState0008[9] & 255;
+                  integerLocal12 = (-16777216 & DiagnosticSupport002.byteArrayState0008[0] << 24) + ((DiagnosticSupport002.byteArrayState0008[1] & 255) << 16) + ((DiagnosticSupport002.byteArrayState0008[2] & 255) << 8) + (255 & DiagnosticSupport002.byteArrayState0008[3]);
+                } else {
+                  integerLocal16 = 8;
+                  if (512 < integerLocal11) {
+                    integerLocal11 = 512;
+                  }
+                  this.bufferedFileState0003.readFully(0, DiagnosticSupport002.byteArrayState0008, 741, integerLocal16 + integerLocal11);
+                  integerLocal14 = (DiagnosticSupport002.byteArrayState0008[4] << 16 & 16711680) + (DiagnosticSupport002.byteArrayState0008[5] << 8 & 65280) + (255 & DiagnosticSupport002.byteArrayState0008[6]);
+                  integerLocal13 = (255 & DiagnosticSupport002.byteArrayState0008[3]) + ((DiagnosticSupport002.byteArrayState0008[2] & 255) << 8);
+                  integerLocal15 = DiagnosticSupport002.byteArrayState0008[7] & 255;
+                  integerLocal12 = (DiagnosticSupport002.byteArrayState0008[1] & 255) + (65280 & DiagnosticSupport002.byteArrayState0008[0] << 8);
+                }
+                if (integerLocal12 != integerArgument1) {
+                  return null;
+                }
+                if (integerLocal10 != integerLocal13) {
+                  return null;
+                }
+                if (this.integerState0380 != integerLocal15) {
+                  return null;
+                }
+                if (integerLocal14 < 0) {
+                  return null;
+                }
+                if (this.bufferedFileState0003.length(55) / 520L < (long)integerLocal14) {
+                  return null;
+                }
+                integerLocal17 = integerLocal16 + integerLocal11;
+                for (integerLocal1 = integerLocal16; integerLocal17 > integerLocal1; integerLocal1++) {
+                  previousIntegerLocal2 = integerLocal9;
+                  integerLocal9++;
+                  byteArrayLocal8[previousIntegerLocal2] = DiagnosticSupport002.byteArrayState0008[integerLocal1];
+                }
+                integerLocal10++;
+                integerLocal7 = integerLocal14;
+              }
+              stackByteArrayLocal23 = byteArrayLocal8;
+              return stackByteArrayLocal23;
+            } catch (java.io.IOException caughtParameterLocal26) {
+              caughtExceptionLocal25 = caughtParameterLocal26;
+              iOExceptionLocal6 = (IOException) (Object) caughtExceptionLocal25;
+              stackObjectLocal24 = null;
+              return (byte[]) (stackObjectLocal24);
+            }
+          }
+        } catch (RuntimeException | Error uncheckedExceptionLocal27) {
+          throw uncheckedExceptionLocal27;
+        } catch (Throwable checkedExceptionLocal28) {
+          throw new RuntimeException(checkedExceptionLocal28);
+        }
+    }
+
+    MixedSupport069(int integerArgument1, BufferedFile bufferedFileArgument2, BufferedFile bufferedFileArgument3, int integerArgument4) {
+        this.bufferedFileState0002 = null;
+        this.bufferedFileState0003 = null;
+        this.integerState0381 = 65000;
+        try {
+          this.bufferedFileState0002 = bufferedFileArgument3;
+          this.bufferedFileState0003 = bufferedFileArgument2;
+          this.integerState0381 = integerArgument4;
+          this.integerState0380 = integerArgument1;
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "kh.<init>(" + integerArgument1 + ',' + (bufferedFileArgument2 != null ? "{...}" : "null") + ',' + (bufferedFileArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
         }
     }
 
     static {
-        nodeDequeState0011 = new NodeDeque();
-        rawSoundArrayState0002 = new RawSound[4];
-        integerState0354 = 0;
+        stringState0311 = "Connection timed out. Please try using a different server.";
+        stringState0310 = "Hint: to start quickly, choose 'Don't mind' for as many options as you can!";
+        integerArrayState0123 = new int[4];
+        stringState0312 = "Play the game without logging in just yet";
     }
 }

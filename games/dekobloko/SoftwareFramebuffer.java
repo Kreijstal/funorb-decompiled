@@ -5,8 +5,8 @@ import java.util.*;
 
 final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel colorModelState0001;
-    static MixedSupport139 mixedSupport139State0011;
-    static MixedSupport139 mixedSupport139State0012;
+    static MixedSupport132 mixedSupport132State0011;
+    static MixedSupport132 mixedSupport132State0012;
     private java.awt.image.ImageConsumer imageConsumerState0001;
     static String stringState0616;
     static BitmapFont bitmapFontState0021;
@@ -16,12 +16,12 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
     static String stringState0618;
     static java.awt.Font fontState0001;
 
-    final static void performAction1829(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
+    final static void performAction1797(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
         TextFieldValidator.integerState0937 = integerArgument2;
         NetworkSupport004.integerState0266 = integerArgument1;
-        MixedSupport150.integerState0918 = integerArgument3;
+        MixedSupport143.integerState0918 = integerArgument3;
         if (!booleanArgument4) {
-          SoftwareFramebuffer.performAction1835(-31);
+          SoftwareFramebuffer.performAction1803(-31);
         }
     }
 
@@ -33,13 +33,13 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
           imageConsumerArgument1.setColorModel(this.colorModelState0001);
           imageConsumerArgument1.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wf.addConsumer(" + (imageConsumerArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wf.addConsumer(" + (imageConsumerArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final synchronized void performAction1834(int integerArgument1) {
+    private final synchronized void performAction1802(int integerArgument1) {
         if (integerArgument1 >= -113) {
-          this.performAction1834(-60);
+          this.performAction1802(-60);
         }
         if (null == this.imageConsumerState0001) {
           return;
@@ -48,12 +48,12 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         this.imageConsumerState0001.imageComplete(2);
     }
 
-    final static SceneWidget computeSceneWidget1832(int integerArgument1) {
+    final static SceneWidget computeSceneWidget1800(int integerArgument1) {
         int integerLocal1 = 12 % ((-44 - integerArgument1) / 51);
-        return MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108;
+        return MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0108;
     }
 
-    final void performAction0426(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4) {
+    final void performAction0424(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4) {
         try {
           this.integerState0190 = integerArgument1;
           this.integerArrayState0040 = new int[1 + integerArgument1 * integerArgument3];
@@ -63,15 +63,15 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
           this.integerState0191 = integerArgument3;
           this.colorModelState0001 = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.imageState0001 = componentArgument4.createImage((java.awt.image.ImageProducer) (this));
-          this.performAction1834(-117);
+          this.performAction1802(-117);
           componentArgument4.prepareImage(this.imageState0001, (java.awt.image.ImageObserver) (this));
-          this.performAction1834(-123);
+          this.performAction1802(-123);
           componentArgument4.prepareImage(this.imageState0001, (java.awt.image.ImageObserver) (this));
-          this.performAction1834(byteArgument2 ^ -46);
+          this.performAction1802(byteArgument2 ^ -46);
           componentArgument4.prepareImage(this.imageState0001, (java.awt.image.ImageObserver) (this));
-          this.performAction0422((byte) -98);
+          this.performAction0420((byte) -98);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wf.C(" + integerArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (componentArgument4 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wf.C(" + integerArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (componentArgument4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,18 +86,18 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         try {
           this.addConsumer(imageConsumerArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wf.startProduction(" + (imageConsumerArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wf.startProduction(" + (imageConsumerArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction1835(int integerArgument1) {
+    public static void performAction1803(int integerArgument1) {
         fontState0001 = null;
         integerArrayState0259 = null;
-        mixedSupport139State0011 = null;
+        mixedSupport132State0011 = null;
         int integerLocal1 = 4 / ((integerArgument1 - 24) / 42);
         stringState0618 = null;
         stringState0616 = null;
-        mixedSupport139State0012 = null;
+        mixedSupport132State0012 = null;
         rawPcmStreamArrayState0003 = null;
         stringState0617 = null;
         bitmapFontState0021 = null;
@@ -124,11 +124,11 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
         }
     }
 
-    final static void performAction1833(int integerArgument1) {
+    final static void performAction1801(int integerArgument1) {
         Throwable caughtExceptionLocal1 = null;
         Object objectLocal2 = null;
         if (MixedSupport033.keyboardInputHandlerState0001 != null) {
@@ -142,58 +142,58 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         }
     }
 
-    final static void performAction1828(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, boolean booleanArgument13, int integerArgument14, int integerArgument15, int integerArgument16) {
+    final static void performAction1796(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, boolean booleanArgument13, int integerArgument14, int integerArgument15, int integerArgument16) {
         int integerLocal1;
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument2 > integerArgument12) {
           if (integerArgument9 > integerArgument2) {
-            NetworkSupport009.performAction1209(integerArgument4, integerArgument8, integerArgument14, integerArgument2, integerArgument5, integerArgument15, integerArgument16, (byte) -105, integerArgument10, integerArgument11, integerArgument3, integerArgument12, SoftwareRaster.integerArrayState0063, integerArgument7, integerArgument9, integerArgument6, integerArgument1);
+            NetworkSupport009.performAction1182(integerArgument4, integerArgument8, integerArgument14, integerArgument2, integerArgument5, integerArgument15, integerArgument16, (byte) -105, integerArgument10, integerArgument11, integerArgument3, integerArgument12, SoftwareRaster.integerArrayState0063, integerArgument7, integerArgument9, integerArgument6, integerArgument1);
           } else {
             if (integerArgument9 > integerArgument12) {
-              NetworkSupport009.performAction1209(integerArgument10, integerArgument7, integerArgument14, integerArgument9, integerArgument15, integerArgument5, integerArgument11, (byte) -101, integerArgument4, integerArgument16, integerArgument3, integerArgument12, SoftwareRaster.integerArrayState0063, integerArgument8, integerArgument2, integerArgument6, integerArgument1);
+              NetworkSupport009.performAction1182(integerArgument10, integerArgument7, integerArgument14, integerArgument9, integerArgument15, integerArgument5, integerArgument11, (byte) -101, integerArgument4, integerArgument16, integerArgument3, integerArgument12, SoftwareRaster.integerArrayState0063, integerArgument8, integerArgument2, integerArgument6, integerArgument1);
             } else {
-              NetworkSupport009.performAction1209(integerArgument10, integerArgument1, integerArgument11, integerArgument12, integerArgument3, integerArgument5, integerArgument14, (byte) -120, integerArgument6, integerArgument16, integerArgument15, integerArgument9, SoftwareRaster.integerArrayState0063, integerArgument8, integerArgument2, integerArgument4, integerArgument7);
+              NetworkSupport009.performAction1182(integerArgument10, integerArgument1, integerArgument11, integerArgument12, integerArgument3, integerArgument5, integerArgument14, (byte) -120, integerArgument6, integerArgument16, integerArgument15, integerArgument9, SoftwareRaster.integerArrayState0063, integerArgument8, integerArgument2, integerArgument4, integerArgument7);
             }
           }
         } else {
           if (integerArgument12 < integerArgument9) {
-            NetworkSupport009.performAction1209(integerArgument4, integerArgument1, integerArgument16, integerArgument12, integerArgument3, integerArgument15, integerArgument14, (byte) -52, integerArgument6, integerArgument11, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063, integerArgument7, integerArgument9, integerArgument10, integerArgument8);
+            NetworkSupport009.performAction1182(integerArgument4, integerArgument1, integerArgument16, integerArgument12, integerArgument3, integerArgument15, integerArgument14, (byte) -52, integerArgument6, integerArgument11, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063, integerArgument7, integerArgument9, integerArgument10, integerArgument8);
           } else {
             if (integerArgument9 > integerArgument2) {
-              NetworkSupport009.performAction1209(integerArgument6, integerArgument7, integerArgument16, integerArgument9, integerArgument15, integerArgument3, integerArgument11, (byte) -95, integerArgument4, integerArgument14, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063, integerArgument1, integerArgument12, integerArgument10, integerArgument8);
+              NetworkSupport009.performAction1182(integerArgument6, integerArgument7, integerArgument16, integerArgument9, integerArgument15, integerArgument3, integerArgument11, (byte) -95, integerArgument4, integerArgument14, integerArgument5, integerArgument2, SoftwareRaster.integerArrayState0063, integerArgument1, integerArgument12, integerArgument10, integerArgument8);
             } else {
-              NetworkSupport009.performAction1209(integerArgument6, integerArgument8, integerArgument11, integerArgument2, integerArgument5, integerArgument3, integerArgument16, (byte) -39, integerArgument10, integerArgument14, integerArgument15, integerArgument9, SoftwareRaster.integerArrayState0063, integerArgument1, integerArgument12, integerArgument4, integerArgument7);
+              NetworkSupport009.performAction1182(integerArgument6, integerArgument8, integerArgument11, integerArgument2, integerArgument5, integerArgument3, integerArgument16, (byte) -39, integerArgument10, integerArgument14, integerArgument15, integerArgument9, SoftwareRaster.integerArrayState0063, integerArgument1, integerArgument12, integerArgument4, integerArgument7);
             }
           }
         }
         if (!booleanArgument13) {
-          mixedSupport139State0011 = (MixedSupport139) null;
+          mixedSupport132State0011 = (MixedSupport132) null;
         }
     }
 
-    final static boolean computeBoolean1830(boolean booleanArgument1) {
-        if (MixedSupport078.booleanState0097) {
+    final static boolean computeBoolean1798(boolean booleanArgument1) {
+        if (MixedSupport074.booleanState0097) {
           return true;
         }
-        if (!MixedSupport061.resourceArchiveState0008.computeBoolean0824("benefits", (byte) -75)) {
+        if (!EmailFormatValidator.resourceArchiveState0008.computeBoolean0811("benefits", (byte) -75)) {
           return false;
         }
         if (booleanArgument1) {
           return true;
         }
-        RgbSprite rgbSpriteLocal1 = UiComponentPart015.computeRgbSprite0713(MixedSupport061.resourceArchiveState0008, "borders", "benefits", 8192);
-        RgbSprite rgbSpriteLocal2 = UiComponentPart015.computeRgbSprite0713(MixedSupport061.resourceArchiveState0008, "price", "benefits", 8192);
-        RgbSprite rgbSpriteLocal3 = UiComponentPart015.computeRgbSprite0713(MixedSupport061.resourceArchiveState0008, "logo", "benefits", 8192);
-        RgbSprite[] rgbSpriteArrayLocal4 = MixedSupport011.computeRgbSpriteArray0154(112, MixedSupport061.resourceArchiveState0008, "benefits", "screenshots");
-        MixedSupport063.performAction0746(200, rgbSpriteLocal1, UiComponentPart023.stringState0425);
-        UiComponentPart015.performAction0712(103, 92, 2, -2400, 35, 13, 8192, rgbSpriteLocal2, 15);
-        UiComponentPart014.performAction0706((byte) -108, rgbSpriteArrayLocal4);
-        UiComponentPart033.performAction1847(rgbSpriteLocal3, 369179521);
-        MixedSupport078.booleanState0097 = true;
+        RgbSprite rgbSpriteLocal1 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "borders", "benefits", 8192);
+        RgbSprite rgbSpriteLocal2 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "price", "benefits", 8192);
+        RgbSprite rgbSpriteLocal3 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "logo", "benefits", 8192);
+        RgbSprite[] rgbSpriteArrayLocal4 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "benefits", "screenshots");
+        MixedSupport062.performAction0735(200, rgbSpriteLocal1, UiComponentPart023.stringState0425);
+        UiComponentPart015.performAction0703(103, 92, 2, -2400, 35, 13, 8192, rgbSpriteLocal2, 15);
+        UiComponentPart014.performAction0697((byte) -108, rgbSpriteArrayLocal4);
+        UiComponentPart033.performAction1815(rgbSpriteLocal3, 369179521);
+        MixedSupport074.booleanState0097 = true;
         return true;
     }
 
-    final static void performAction1831(int integerArgument1) {
+    final static void performAction1799(int integerArgument1) {
         Object objectLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -205,21 +205,21 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
           objectLocal1 = MixedSupport033.keyboardInputHandlerState0001;
           synchronized (objectLocal1) {
             if (integerArgument1 != 19012) {
-              mixedSupport139State0011 = (MixedSupport139) null;
+              mixedSupport132State0011 = (MixedSupport132) null;
             }
-            MixedSupport120.integerState0746 = RichTextLayout.integerState0160;
-            MixedSupport098.integerState0569 = MixedSupport098.integerState0569 + 1;
-            if (MixedSupport154.integerState0933 < 0) {
+            MixedSupport115.integerState0746 = RichTextLayout.integerState0160;
+            MixedSupport093.integerState0569 = MixedSupport093.integerState0569 + 1;
+            if (MixedSupport147.integerState0933 < 0) {
               integerLocal6 = 0;
               integerLocal2 = integerLocal6;
               while (integerLocal6 < 112) {
                 MixedSupport011.booleanArrayState0002[integerLocal6] = false;
                 integerLocal6++;
               }
-              MixedSupport154.integerState0933 = PcmPlayerService.integerState0685;
+              MixedSupport147.integerState0933 = PcmPlayerService.integerState0685;
             } else {
-              while (MixedSupport154.integerState0933 != PcmPlayerService.integerState0685) {
-                integerLocal2 = MixedSupport078.integerArrayState0141[PcmPlayerService.integerState0685];
+              while (MixedSupport147.integerState0933 != PcmPlayerService.integerState0685) {
+                integerLocal2 = MixedSupport074.integerArrayState0141[PcmPlayerService.integerState0685];
                 PcmPlayerService.integerState0685 = 1 + PcmPlayerService.integerState0685 & 127;
                 if (0 > integerLocal2) {
                   MixedSupport011.booleanArrayState0002[~integerLocal2] = false;
@@ -234,23 +234,23 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal4 = caughtParameterLocal7;
           runtimeExceptionLocal5 = (RuntimeException) (Object) caughtExceptionLocal4;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal5), "wf.A(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal5), "wf.A(" + integerArgument1 + ')');
         }
     }
 
     SoftwareFramebuffer() {
     }
 
-    final void performAction0423(byte byteArgument1, java.awt.Graphics graphicsArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction0421(byte byteArgument1, java.awt.Graphics graphicsArgument2, int integerArgument3, int integerArgument4) {
         try {
-          this.performAction1834(-127);
+          this.performAction1802(-127);
           graphicsArgument2.drawImage(this.imageState0001, integerArgument3, integerArgument4, (java.awt.image.ImageObserver) (this));
           if (byteArgument1 < 38) {
             java.awt.image.ImageConsumer imageConsumerLocal1 = (java.awt.image.ImageConsumer) null;
             this.requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wf.H(" + byteArgument1 + ',' + (graphicsArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wf.H(" + byteArgument1 + ',' + (graphicsArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
@@ -272,14 +272,14 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
     static {
-        mixedSupport139State0011 = new MixedSupport139();
+        mixedSupport132State0011 = new MixedSupport132();
         stringState0616 = "Loading...";
-        mixedSupport139State0012 = new MixedSupport139();
+        mixedSupport132State0012 = new MixedSupport132();
         rawPcmStreamArrayState0003 = new RawPcmStream[8];
         stringState0618 = "Account created successfully!";
     }

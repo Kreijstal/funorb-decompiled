@@ -7,7 +7,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
     static int integerState0504;
     private InteractiveComponent interactiveComponentState0011;
     private UiComponentPart024 uiComponentPart024State0001;
-    static MixedSupport118 mixedSupport118State0001;
+    static MixedSupport113 mixedSupport113State0001;
     static RgbSprite rgbSpriteState0035;
     static int integerState0505;
     static String stringState0350;
@@ -18,27 +18,27 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
             stringState0349 = (String) null;
           }
           super.performAction0218(uiComponentArgument1, 98, integerArgument3, integerArgument4);
-          this.interactiveComponentState0011.booleanState0035 = this.uiComponentPart024State0001.computeCallbackContract0110840(-128).computeValidationStatus0084(20350) == MixedSupport023.validationStatusState0001 ? true : false;
+          this.interactiveComponentState0011.booleanState0035 = this.uiComponentPart024State0001.computeCallbackContract0110824(-128).computeValidationStatus0084(20350) == MixedSupport023.validationStatusState0001 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "mf.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "mf.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    public final void performAction0314(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         if (byteArgument1 != 67) {
           integerState0505 = -124;
         }
-        if (this.uiComponentPart024State0001.computeCallbackContract0110840(-101).computeValidationStatus0084(byteArgument1 ^ 20285) != MixedSupport023.validationStatusState0001) {
+        if (this.uiComponentPart024State0001.computeCallbackContract0110824(-101).computeValidationStatus0084(byteArgument1 ^ 20285) != MixedSupport023.validationStatusState0001) {
           return;
         }
         try {
-          MixedSupport073.performAction0921(-31, this.uiComponentPart024State0001.computeInteger1307(-22079), this.uiComponentPart024State0001.computeInteger1306((byte) 48), this.uiComponentPart024State0001.computeInteger1305(false));
+          MixedSupport069.performAction0902(-31, this.uiComponentPart024State0001.computeInteger1280(-22079), this.uiComponentPart024State0001.computeInteger1279((byte) 48), this.uiComponentPart024State0001.computeInteger1278(false));
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "mf.H(" + byteArgument1 + ',' + integerArgument2 + ',' + (interactiveComponentArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "mf.H(" + byteArgument1 + ',' + integerArgument2 + ',' + (interactiveComponentArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
-    final static void performAction1064(int integerArgument1, int integerArgument2, int integerArgument3, java.awt.Canvas canvasArgument4) {
+    final static void performAction1045(int integerArgument1, int integerArgument2, int integerArgument3, java.awt.Canvas canvasArgument4) {
         java.awt.Graphics graphicsLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -49,7 +49,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
         try {
           try {
             graphicsLocal1 = canvasArgument4.getGraphics();
-            MixedSupport080.framebufferState0001.performAction0423((byte) 54, graphicsLocal1, integerArgument2, integerArgument3);
+            MixedSupport076.framebufferState0001.performAction0421((byte) 54, graphicsLocal1, integerArgument2, integerArgument3);
             graphicsLocal1.dispose();
             if (integerArgument1 != 1) {
               stringState0349 = (String) null;
@@ -70,39 +70,39 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final static void performAction1067(int integerArgument1) {
+    final static void performAction1048(int integerArgument1) {
         GameplayControls.integerState0859 = SoftwareRaster.integerState0284;
         UiComponentPart033.integerState0934 = SoftwareRaster.integerState0285;
-        UiComponentPart022.performAction1233((byte) 115);
+        UiComponentPart022.performAction1206((byte) 115);
         MixedSupport023.mixedSupport006State0001.performAction0066(UiComponentPart011.sceneWidgetState0035.integerState0915 - 42, UiComponentPart011.sceneWidgetState0035.integerState0896, 0, 107, 0);
-        MixedSupport044.sceneWidgetState0034.performAction1795(NetworkSupport001.sceneWidgetState0003.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
+        MixedSupport044.sceneWidgetState0034.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
         int integerLocal1 = ComponentContainer.integerState0377 + 2;
-        RenderingSupport004.sceneWidgetState0039.performAction1795(NetworkSupport001.sceneWidgetState0003.integerState0896, integerArgument1 ^ 5, !MixedSupport102.booleanState0133 ? 0 : integerLocal1, -(!MixedSupport102.booleanState0133 ? 0 : integerLocal1) + NetworkSupport001.sceneWidgetState0003.integerState0915, 0);
+        RenderingSupport004.sceneWidgetState0039.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, integerArgument1 ^ 5, !MixedSupport097.booleanState0133 ? 0 : integerLocal1, -(!MixedSupport097.booleanState0133 ? 0 : integerLocal1) + NetworkSupport001.sceneWidgetState0003.integerState0915, 0);
         RenderingSupport001.performAction0139((byte) -103);
-        IterableNodeCollection.sceneWidgetState0126.performAction1795(UiComponentPart011.sceneWidgetState0035.integerState0896, 0, -40 + UiComponentPart011.sceneWidgetState0035.integerState0915, 40, 0);
-        MixedSupport100.sceneWidgetState0095.performAction1795(TextFieldValidator.sceneWidgetState0151.integerState0896, 0, 0, 30, 0);
-        MixedSupport081.sceneWidgetState0074.performAction1795(TextFieldValidator.sceneWidgetState0151.integerState0896, integerArgument1 ^ 5, 30, -70 + (TextFieldValidator.sceneWidgetState0151.integerState0915 - 2), 0);
-        MixedSupport033.sceneWidgetState0025.performAction1795(68, integerArgument1 ^ 5, 5, 30, 5);
-        MixedSupport021.sceneWidgetState0016.performAction1795(78, 0, 5, 30, 75);
-        MixedSupport127.sceneWidgetState0118.performAction1795(48, 0, 5, 30, 155);
-        UiComponentPart018.sceneWidgetState0079.performAction1795(48, 0, integerArgument1, 30, 205);
-        int integerLocal2 = !MixedSupport102.booleanState0133 ? 200 : 250;
-        MixedSupport066.sceneWidgetState0058.performAction1795(363 - integerLocal2, integerArgument1 - 5, 5, 30, 5 + integerLocal2);
-        SceneWidgetPart001.sceneWidgetState0006.performAction1795(-370 + (TextFieldValidator.sceneWidgetState0151.integerState0896 - 5), 0, 5, 30, 370);
-        MixedSupport047.sceneWidgetPart008State0003.performAction1149(6, 37, MixedSupport146.integerState0855, 5, -10 + (MixedSupport081.sceneWidgetState0074.integerState0915 - 32), MixedSupport081.sceneWidgetState0074.integerState0896 - 5 - 5, 2);
+        IterableNodeCollection.sceneWidgetState0126.performAction1764(UiComponentPart011.sceneWidgetState0035.integerState0896, 0, -40 + UiComponentPart011.sceneWidgetState0035.integerState0915, 40, 0);
+        MixedSupport095.sceneWidgetState0095.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896, 0, 0, 30, 0);
+        MixedSupport077.sceneWidgetState0074.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896, integerArgument1 ^ 5, 30, -70 + (TextFieldValidator.sceneWidgetState0151.integerState0915 - 2), 0);
+        MixedSupport033.sceneWidgetState0025.performAction1764(68, integerArgument1 ^ 5, 5, 30, 5);
+        MixedSupport021.sceneWidgetState0016.performAction1764(78, 0, 5, 30, 75);
+        MixedSupport121.sceneWidgetState0118.performAction1764(48, 0, 5, 30, 155);
+        UiComponentPart018.sceneWidgetState0079.performAction1764(48, 0, integerArgument1, 30, 205);
+        int integerLocal2 = !MixedSupport097.booleanState0133 ? 200 : 250;
+        EmailValidationError.sceneWidgetState0058.performAction1764(363 - integerLocal2, integerArgument1 - 5, 5, 30, 5 + integerLocal2);
+        SceneWidgetPart001.sceneWidgetState0006.performAction1764(-370 + (TextFieldValidator.sceneWidgetState0151.integerState0896 - 5), 0, 5, 30, 370);
+        MixedSupport047.sceneWidgetPart008State0003.performAction1122(6, 37, MixedSupport139.integerState0855, 5, -10 + (MixedSupport077.sceneWidgetState0074.integerState0915 - 32), MixedSupport077.sceneWidgetState0074.integerState0896 - 5 - 5, 2);
         int integerLocal3 = (TextFieldValidator.sceneWidgetState0151.integerState0896 + 2) / 2;
-        MixedSupport093.sceneWidgetState0092.performAction1795(integerLocal3 - 2, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, 0);
-        if (!MixedSupport102.booleanState0133) {
+        MixedSupport088.sceneWidgetState0092.performAction1764(integerLocal3 - 2, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, 0);
+        if (!MixedSupport097.booleanState0133) {
           integerLocal3 = 0;
         }
-        UiComponentPart029.sceneWidgetState0109.performAction1795(TextFieldValidator.sceneWidgetState0151.integerState0896 - integerLocal3, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, integerLocal3);
+        UiComponentPart029.sceneWidgetState0109.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896 - integerLocal3, 0, TextFieldValidator.sceneWidgetState0151.integerState0915 - 40, 40, integerLocal3);
     }
 
-    final static void performAction1065(int integerArgument1, String[] stringArrayArgument2, byte[] byteArrayArgument3, ResourceArchive resourceArchiveArgument4, int integerArgument5, String[][] stringArrayArrayArgument6, RgbSprite[][] rgbSpriteArrayArrayArgument7, int integerArgument8, String[][] stringArrayArrayArgument9, String[] stringArrayArgument10, String[] stringArrayArgument11, RgbSprite[][] rgbSpriteArrayArrayArgument12, int integerArgument13, byte[] byteArrayArgument14, int[] integerArrayArgument15) {
+    final static void performAction1046(int integerArgument1, String[] stringArrayArgument2, byte[] byteArrayArgument3, ResourceArchive resourceArchiveArgument4, int integerArgument5, String[][] stringArrayArrayArgument6, RgbSprite[][] rgbSpriteArrayArrayArgument7, int integerArgument8, String[][] stringArrayArrayArgument9, String[] stringArrayArgument10, String[] stringArrayArgument11, RgbSprite[][] rgbSpriteArrayArrayArgument12, int integerArgument13, byte[] byteArrayArgument14, int[] integerArrayArgument15) {
         SceneWidgetPart009[] sceneWidgetPart009ArrayLocal1 = null;
         SceneWidgetPart009[] sceneWidgetPart009ArrayLocal2 = null;
         SceneWidgetPart009[] sceneWidgetPart009ArrayLocal3 = null;
@@ -160,9 +160,9 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           ThemeTips.stringArrayState0018 = stringArrayArgument2;
           NetworkSupport004.stringArrayArrayState0002 = stringArrayArrayArgument6;
           SceneWidgetPart004.stringArrayArrayState0003 = stringArrayArrayArgument9;
-          MixedSupport104.stringArrayState0029 = stringArrayArgument10;
+          MixedSupport099.stringArrayState0029 = stringArrayArgument10;
           MixedSupport053.integerState0272 = integerArgument1;
-          MixedSupport116.rgbSpriteArrayArrayState0011 = rgbSpriteArrayArrayArgument7;
+          MixedSupport111.rgbSpriteArrayArrayState0011 = rgbSpriteArrayArrayArgument7;
           MixedSupport022.byteArrayState0005 = byteArrayArgument14;
           SceneWidgetPart007.integerState0506 = integerArgument8;
           DualNode.rgbSpriteArrayArrayState0003 = rgbSpriteArrayArrayArgument12;
@@ -173,47 +173,47 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           DekoBlokoClient.rgbSpriteArrayState0006 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument4, "lobby", "opentome");
           GameDomainSupport001.rgbSpriteArrayState0002 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument4, "lobby", "allowspectators");
           MixedSupport029.stringArrayState0011 = new String[5];
-          MixedSupport029.stringArrayState0011[2] = MixedSupport098.stringState0390;
+          MixedSupport029.stringArrayState0011[2] = MixedSupport093.stringState0390;
           MixedSupport029.stringArrayState0011[3] = MixedSupport053.stringState0223;
-          MixedSupport029.stringArrayState0011[4] = MixedSupport063.stringState0262;
-          MixedSupport029.stringArrayState0011[1] = MixedSupport138.stringState0569;
+          MixedSupport029.stringArrayState0011[4] = MixedSupport062.stringState0262;
+          MixedSupport029.stringArrayState0011[1] = MixedSupport131.stringState0569;
           MixedSupport029.stringArrayState0011[0] = PlatformSupport002.stringState0124;
           RenderingSupport004.sceneWidgetState0039 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport048.sceneWidgetState0041 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
-          MixedSupport076.sceneWidgetState0071 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);
-          GameDomainSupport002.sceneWidgetPart008State0002 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport130.sceneWidgetPart006State0002);
-          RenderingSupport004.sceneWidgetState0039.performAction1799(MixedSupport048.sceneWidgetState0041, -16834);
-          if (MixedSupport102.booleanState0133) {
-            RenderingSupport004.sceneWidgetState0039.performAction1799(MixedSupport076.sceneWidgetState0071, integerArgument5 - 7940);
+          MixedSupport072.sceneWidgetState0071 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);
+          GameDomainSupport002.sceneWidgetPart008State0002 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
+          RenderingSupport004.sceneWidgetState0039.performAction1768(MixedSupport048.sceneWidgetState0041, -16834);
+          if (MixedSupport097.booleanState0133) {
+            RenderingSupport004.sceneWidgetState0039.performAction1768(MixedSupport072.sceneWidgetState0071, integerArgument5 - 7940);
           }
-          RenderingSupport004.sceneWidgetState0039.performAction1799(GameDomainSupport002.sceneWidgetPart008State0002, -16834);
-          GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.performAction1797(-122, MixedSupport132.sceneWidgetState0125);
+          RenderingSupport004.sceneWidgetState0039.performAction1768(GameDomainSupport002.sceneWidgetPart008State0002, -16834);
+          GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.performAction1766(-122, MixedSupport125.sceneWidgetState0125);
           sceneWidgetLocal44 = GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089;
           sceneWidgetLocal45 = sceneWidgetLocal44;
           GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.integerState0885 = 1;
           sceneWidgetLocal45.integerState0916 = 1;
-          MixedSupport044.sceneWidgetState0034 = new SceneWidget(0L, MixedSupport132.sceneWidgetState0125);
+          MixedSupport044.sceneWidgetState0034 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           MixedSupport044.sceneWidgetState0034.integerState0916 = 1;
-          IterableNodeCollection.sceneWidgetState0126 = new SceneWidget(0L, MixedSupport053.sceneWidgetState0047, MixedSupport101.stringState0411.toUpperCase());
-          MixedSupport100.sceneWidgetState0095 = new SceneWidget(0L, TranslatedUiText.sceneWidgetState0086, RenderingSupport006.stringState0267.toUpperCase());
-          MixedSupport081.sceneWidgetState0074 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
-          MixedSupport033.sceneWidgetState0025 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport081.stringState0333);
+          IterableNodeCollection.sceneWidgetState0126 = new SceneWidget(0L, MixedSupport053.sceneWidgetState0047, MixedSupport096.stringState0411.toUpperCase());
+          MixedSupport095.sceneWidgetState0095 = new SceneWidget(0L, TranslatedUiText.sceneWidgetState0086, RenderingSupport006.stringState0267.toUpperCase());
+          MixedSupport077.sceneWidgetState0074 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
+          MixedSupport033.sceneWidgetState0025 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport077.stringState0333);
           MixedSupport021.sceneWidgetState0016 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, TranslatedUiText.stringState0352);
-          MixedSupport127.sceneWidgetState0118 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, ResourceSupport002.stringState0038);
+          MixedSupport121.sceneWidgetState0118 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, ResourceSupport002.stringState0038);
           UiComponentPart018.sceneWidgetState0079 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, DualNode.stringState0044);
-          MixedSupport066.sceneWidgetState0058 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, UiComponentPart012.stringState0206);
+          EmailValidationError.sceneWidgetState0058 = new SceneWidget(0L, UiComponentPart003.sceneWidgetState0008, UiComponentPart012.stringState0206);
           SceneWidgetPart001.sceneWidgetState0006 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, SceneWidgetPart001.stringState0057);
-          MixedSupport047.sceneWidgetPart008State0003 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport130.sceneWidgetPart006State0002);
-          MixedSupport093.sceneWidgetState0092 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015, RenderingSupport013.stringState0442.toUpperCase());
-          MixedSupport093.sceneWidgetState0092.booleanState0212 = MixedSupport102.booleanState0133;
+          MixedSupport047.sceneWidgetPart008State0003 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
+          MixedSupport088.sceneWidgetState0092 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015, RenderingSupport012.stringState0442.toUpperCase());
+          MixedSupport088.sceneWidgetState0092.booleanState0212 = MixedSupport097.booleanState0133;
           stackSceneWidgetLocal5 = null;
           stackSceneWidgetLocal6 = null;
           stackLongLocal7 = 0L;
           stackSceneWidgetLocal8 = MixedSupport021.sceneWidgetState0015;
-          if (MixedSupport102.booleanState0133) {
+          if (MixedSupport097.booleanState0133) {
             stackSceneWidgetLocal9 = null;
             stackSceneWidgetLocal10 = null;
-            stackStringLocal11 = MixedSupport100.stringState0398;
+            stackStringLocal11 = MixedSupport095.stringState0398;
           } else {
             stackSceneWidgetLocal9 = null;
             stackSceneWidgetLocal10 = null;
@@ -221,30 +221,30 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           }
           UiComponentPart029.sceneWidgetState0109 = new SceneWidget(stackLongLocal7, stackSceneWidgetLocal8, ((String) (Object) stackStringLocal11).toUpperCase());
           TextFieldValidator.sceneWidgetState0151 = new SceneWidget(0L, (SceneWidget) null);
-          TextFieldValidator.sceneWidgetState0151.performAction1799(MixedSupport100.sceneWidgetState0095, -16834);
-          TextFieldValidator.sceneWidgetState0151.performAction1799(MixedSupport081.sceneWidgetState0074, -16834);
-          MixedSupport081.sceneWidgetState0074.performAction1799(MixedSupport033.sceneWidgetState0025, -16834);
-          MixedSupport081.sceneWidgetState0074.performAction1799(MixedSupport021.sceneWidgetState0016, -16834);
-          MixedSupport081.sceneWidgetState0074.performAction1799(MixedSupport127.sceneWidgetState0118, -16834);
-          if (MixedSupport102.booleanState0133) {
-            MixedSupport081.sceneWidgetState0074.performAction1799(UiComponentPart018.sceneWidgetState0079, -16834);
+          TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport095.sceneWidgetState0095, -16834);
+          TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport077.sceneWidgetState0074, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(MixedSupport033.sceneWidgetState0025, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(MixedSupport021.sceneWidgetState0016, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(MixedSupport121.sceneWidgetState0118, -16834);
+          if (MixedSupport097.booleanState0133) {
+            MixedSupport077.sceneWidgetState0074.performAction1768(UiComponentPart018.sceneWidgetState0079, -16834);
           }
-          MixedSupport081.sceneWidgetState0074.performAction1799(MixedSupport066.sceneWidgetState0058, -16834);
-          MixedSupport081.sceneWidgetState0074.performAction1799(SceneWidgetPart001.sceneWidgetState0006, -16834);
-          MixedSupport081.sceneWidgetState0074.performAction1799(MixedSupport047.sceneWidgetPart008State0003, integerArgument5 - 7940);
-          if (MixedSupport102.booleanState0133) {
-            TextFieldValidator.sceneWidgetState0151.performAction1799(MixedSupport093.sceneWidgetState0092, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(EmailValidationError.sceneWidgetState0058, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(SceneWidgetPart001.sceneWidgetState0006, -16834);
+          MixedSupport077.sceneWidgetState0074.performAction1768(MixedSupport047.sceneWidgetPart008State0003, integerArgument5 - 7940);
+          if (MixedSupport097.booleanState0133) {
+            TextFieldValidator.sceneWidgetState0151.performAction1768(MixedSupport088.sceneWidgetState0092, -16834);
           }
-          TextFieldValidator.sceneWidgetState0151.performAction1799(UiComponentPart029.sceneWidgetState0109, -16834);
-          MixedSupport033.sceneWidgetState0024 = new SceneWidget(0L, MixedSupport132.sceneWidgetState0125);
+          TextFieldValidator.sceneWidgetState0151.performAction1768(UiComponentPart029.sceneWidgetState0109, -16834);
+          MixedSupport033.sceneWidgetState0024 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           MixedSupport033.sceneWidgetState0024.integerState0885 = 0;
           MixedSupport033.sceneWidgetState0024.integerState0916 = 1;
-          UiComponent.sceneWidgetState0009 = new SceneWidget(0L, MixedSupport076.sceneWidgetState0072, MixedSupport050.stringState0208.toUpperCase());
+          UiComponent.sceneWidgetState0009 = new SceneWidget(0L, MixedSupport072.sceneWidgetState0072, MixedSupport050.stringState0208.toUpperCase());
           SceneWidgetPart011.sceneWidgetState0115 = new SceneWidget(0L, MusicTrack.sceneWidgetState0127);
-          SceneWidgetPart011.sceneWidgetState0115.performAction1799(MixedSupport033.sceneWidgetState0024, -16834);
-          SceneWidgetPart011.sceneWidgetState0115.performAction1799(UiComponent.sceneWidgetState0009, -16834);
+          SceneWidgetPart011.sceneWidgetState0115.performAction1768(MixedSupport033.sceneWidgetState0024, -16834);
+          SceneWidgetPart011.sceneWidgetState0115.performAction1768(UiComponent.sceneWidgetState0009, -16834);
           MixedSupport020.sceneWidgetState0012 = new SceneWidget(0L, MixedSupport047.sceneWidgetState0038);
-          MixedSupport020.sceneWidgetState0012.performAction1797(-128, MixedSupport132.sceneWidgetState0125);
+          MixedSupport020.sceneWidgetState0012.performAction1766(-128, MixedSupport125.sceneWidgetState0125);
           MixedSupport020.sceneWidgetState0012.integerState0885 = 1;
           sceneWidgetLocal37 = MixedSupport020.sceneWidgetState0012;
           sceneWidgetLocal37.integerState0916 = 1;
@@ -252,59 +252,59 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           if (integerArgument5 != -8894) {
             return;
           }
-          UiComponentPart013.sceneWidgetState0048 = new SceneWidget(0L, MixedSupport132.sceneWidgetState0125);
+          UiComponentPart013.sceneWidgetState0048 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
           UiComponentPart013.sceneWidgetState0048.integerState0916 = 1;
-          MixedSupport075.sceneWidgetState0070 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
+          MixedSupport071.sceneWidgetState0070 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
           RichTextLayout.sceneWidgetState0020 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);
-          ValidationStatus.sceneWidgetPart008State0006 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport130.sceneWidgetPart006State0002);
-          RenderingSupport006.sceneWidgetState0056.performAction1799(UiComponentPart013.sceneWidgetState0048, -16834);
-          RenderingSupport006.sceneWidgetState0056.performAction1799(MixedSupport075.sceneWidgetState0070, -16834);
-          if (MixedSupport102.booleanState0133) {
-            RenderingSupport006.sceneWidgetState0056.performAction1799(RichTextLayout.sceneWidgetState0020, integerArgument5 ^ 25468);
+          ValidationStatus.sceneWidgetPart008State0006 = new SceneWidgetPart008(0L, new SceneWidget(0L, (SceneWidget) null), MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002);
+          RenderingSupport006.sceneWidgetState0056.performAction1768(UiComponentPart013.sceneWidgetState0048, -16834);
+          RenderingSupport006.sceneWidgetState0056.performAction1768(MixedSupport071.sceneWidgetState0070, -16834);
+          if (MixedSupport097.booleanState0133) {
+            RenderingSupport006.sceneWidgetState0056.performAction1768(RichTextLayout.sceneWidgetState0020, integerArgument5 ^ 25468);
           }
-          RenderingSupport006.sceneWidgetState0056.performAction1799(ValidationStatus.sceneWidgetPart008State0006, integerArgument5 ^ 25468);
-          ComponentDecorator.sceneWidgetState0078 = new SceneWidget(0L, MixedSupport053.sceneWidgetState0047, MixedSupport098.stringState0389.toUpperCase());
+          RenderingSupport006.sceneWidgetState0056.performAction1768(ValidationStatus.sceneWidgetPart008State0006, integerArgument5 ^ 25468);
+          ComponentDecorator.sceneWidgetState0078 = new SceneWidget(0L, MixedSupport053.sceneWidgetState0047, MixedSupport093.stringState0389.toUpperCase());
           MixedSupport042.sceneWidgetState0033 = new SceneWidget(0L, TranslatedUiText.sceneWidgetState0086);
-          MixedSupport111.sceneWidgetState0102 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
-          MixedSupport081.sceneWidgetState0075 = new SceneWidget(0L, MixedSupport057.sceneWidgetState0051, SceneWidgetPart001.stringState0056.toUpperCase());
-          MixedSupport139.sceneWidgetArrayState0008 = new SceneWidget[4 + integerArgument13];
-          MixedSupport108.sceneWidgetPart009ArrayArrayState0001 = new SceneWidgetPart009[integerArgument13 + 4][];
-          MixedSupport139.sceneWidgetArrayState0008[0] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, GameSession.stringState0439);
-          MixedSupport108.sceneWidgetPart009ArrayArrayState0001[0] = new SceneWidgetPart009[6];
+          MixedSupport106.sceneWidgetState0102 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
+          MixedSupport077.sceneWidgetState0075 = new SceneWidget(0L, MixedSupport057.sceneWidgetState0051, SceneWidgetPart001.stringState0056.toUpperCase());
+          MixedSupport132.sceneWidgetArrayState0008 = new SceneWidget[4 + integerArgument13];
+          MixedSupport103.sceneWidgetPart009ArrayArrayState0001 = new SceneWidgetPart009[integerArgument13 + 4][];
+          MixedSupport132.sceneWidgetArrayState0008[0] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, GameSession.stringState0439);
+          MixedSupport103.sceneWidgetPart009ArrayArrayState0001[0] = new SceneWidgetPart009[6];
           for (integerLocal38 = 0; integerLocal38 < 5; integerLocal38++) {
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[0][integerLocal38 + 1] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, MixedSupport040.rgbSpriteArrayState0011[integerLocal38], MixedSupport029.stringArrayState0011[integerLocal38]);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[0][integerLocal38 + 1] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, MixedSupport040.rgbSpriteArrayState0011[integerLocal38], MixedSupport029.stringArrayState0011[integerLocal38]);
           }
           if (2 <= UiComponentPart002.integerArrayState0014.length) {
-            MixedSupport139.sceneWidgetArrayState0008[1] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, SceneWidgetPart004.stringState0215);
+            MixedSupport132.sceneWidgetArrayState0008[1] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, SceneWidgetPart004.stringState0215);
             sceneWidgetPart009ArrayLocal1 = new SceneWidgetPart009[1 + UiComponentPart002.integerArrayState0014.length];
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[1] = sceneWidgetPart009ArrayLocal1;
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[1][0] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1] = sceneWidgetPart009ArrayLocal1;
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][0] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal48 = 0; UiComponentPart002.integerArrayState0014.length > integerLocal48; integerLocal48++) {
-              MixedSupport108.sceneWidgetPart009ArrayArrayState0001[1][integerLocal48 + 1] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, Integer.toString(UiComponentPart002.integerArrayState0014[integerLocal48]));
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][integerLocal48 + 1] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, Integer.toString(UiComponentPart002.integerArrayState0014[integerLocal48]));
             }
           }
-          MixedSupport139.sceneWidgetArrayState0008[2] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport009.stringState0040);
-          MixedSupport108.sceneWidgetPart009ArrayArrayState0001[2] = new SceneWidgetPart009[]{new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220), new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[0], GameDomainSupport004.stringState0284), new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[1], MixedSupport051.stringState0214)};
+          MixedSupport132.sceneWidgetArrayState0008[2] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport009.stringState0040);
+          MixedSupport103.sceneWidgetPart009ArrayArrayState0001[2] = new SceneWidgetPart009[]{new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220), new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[0], GameDomainSupport004.stringState0284), new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[1], MixedSupport051.stringState0214)};
           if (SceneWidgetPart007.integerState0506 > 1) {
-            MixedSupport139.sceneWidgetArrayState0008[3] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport086.stringState0351);
+            MixedSupport132.sceneWidgetArrayState0008[3] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport082.stringState0351);
             sceneWidgetPart009ArrayLocal2 = new SceneWidgetPart009[SceneWidgetPart007.integerState0506 + 1];
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[3] = sceneWidgetPart009ArrayLocal2;
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[3][0] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3] = sceneWidgetPart009ArrayLocal2;
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][0] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal49 = 0; SceneWidgetPart007.integerState0506 > integerLocal49; integerLocal49++) {
-              MixedSupport108.sceneWidgetPart009ArrayArrayState0001[3][integerLocal49 + 1] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport104.stringArrayState0029[integerLocal49]);
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][integerLocal49 + 1] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport099.stringArrayState0029[integerLocal49]);
             }
           }
           for (integerLocal50 = 0; integerArgument13 > integerLocal50; integerLocal50++) {
-            MixedSupport139.sceneWidgetArrayState0008[4 + integerLocal50] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, UiComponentPart022.stringArrayState0026[integerLocal50]);
-            sceneWidgetPart009ArrayLocal3 = new SceneWidgetPart009[MixedSupport079.computeInteger0949((int) MixedSupport022.byteArrayState0005[integerLocal50], 255) + 1];
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[4 + integerLocal50] = sceneWidgetPart009ArrayLocal3;
-            MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][0] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport132.sceneWidgetArrayState0008[4 + integerLocal50] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, UiComponentPart022.stringArrayState0026[integerLocal50]);
+            sceneWidgetPart009ArrayLocal3 = new SceneWidgetPart009[MixedSupport075.computeInteger0930((int) MixedSupport022.byteArrayState0005[integerLocal50], 255) + 1];
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[4 + integerLocal50] = sceneWidgetPart009ArrayLocal3;
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][0] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal40 = 0; (MixedSupport022.byteArrayState0005[integerLocal50] & 255) > integerLocal40; integerLocal40++) {
-              if (MixedSupport116.rgbSpriteArrayArrayState0011 == null) {
+              if (MixedSupport111.rgbSpriteArrayArrayState0011 == null) {
                 objectLocal41 = null;
               } else {
-                if (null != MixedSupport116.rgbSpriteArrayArrayState0011[integerLocal50]) {
-                  objectLocal41 = MixedSupport116.rgbSpriteArrayArrayState0011[integerLocal50][integerLocal40];
+                if (null != MixedSupport111.rgbSpriteArrayArrayState0011[integerLocal50]) {
+                  objectLocal41 = MixedSupport111.rgbSpriteArrayArrayState0011[integerLocal50][integerLocal40];
                 } else {
                   objectLocal41 = null;
                 }
@@ -318,50 +318,50 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
               } else {
                 objectLocal42 = null;
               }
-              MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][integerLocal40 + 1] = new SceneWidgetPart009(0L, MixedSupport077.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) (objectLocal41), (String) (objectLocal42));
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][integerLocal40 + 1] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) (objectLocal41), (String) (objectLocal42));
             }
           }
           for (integerLocal51 = 0; integerLocal51 < integerArgument13 + 4; integerLocal51++) {
-            if (null != MixedSupport139.sceneWidgetArrayState0008[integerLocal51]) {
-              MixedSupport139.sceneWidgetArrayState0008[integerLocal51].integerState0908 = 11;
+            if (null != MixedSupport132.sceneWidgetArrayState0008[integerLocal51]) {
+              MixedSupport132.sceneWidgetArrayState0008[integerLocal51].integerState0908 = 11;
             }
-            if (null != MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal51]) {
-              for (integerLocal46 = 0; integerLocal46 < MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal51].length; integerLocal46++) {
-                if (MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46] != null &&
-                  MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46].sceneWidgetState0100 != null) {
-                  MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46].sceneWidgetState0100.integerState0908 = 11;
+            if (null != MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal51]) {
+              for (integerLocal46 = 0; integerLocal46 < MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal51].length; integerLocal46++) {
+                if (MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46] != null &&
+                  MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46].sceneWidgetState0100 != null) {
+                  MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal51][integerLocal46].sceneWidgetState0100.integerState0908 = 11;
                 }
               }
             }
           }
           MixedSupport039.sceneWidgetState0030 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015);
-          MixedSupport092.sceneWidgetState0091 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015);
-          MixedSupport127.sceneWidgetState0117 = new SceneWidget(0L, MixedSupport036.sceneWidgetState0028);
-          MixedSupport127.sceneWidgetState0117.performAction1797(-112, MixedSupport132.sceneWidgetState0125);
-          MixedSupport127.sceneWidgetState0117.integerState0885 = 1;
-          sceneWidgetLocal39 = MixedSupport127.sceneWidgetState0117;
+          MixedSupport087.sceneWidgetState0091 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015);
+          MixedSupport121.sceneWidgetState0117 = new SceneWidget(0L, MixedSupport036.sceneWidgetState0028);
+          MixedSupport121.sceneWidgetState0117.performAction1766(-112, MixedSupport125.sceneWidgetState0125);
+          MixedSupport121.sceneWidgetState0117.integerState0885 = 1;
+          sceneWidgetLocal39 = MixedSupport121.sceneWidgetState0117;
           sceneWidgetLocal39.integerState0916 = 1;
           NetworkSupport008.sceneWidgetState0093 = new SceneWidget(0L, (SceneWidget) null);
-          NetworkSupport008.sceneWidgetState0093.performAction1799(MixedSupport042.sceneWidgetState0033, -16834);
-          NetworkSupport008.sceneWidgetState0093.performAction1799(MixedSupport111.sceneWidgetState0102, -16834);
-          MixedSupport111.sceneWidgetState0102.performAction1799(MixedSupport081.sceneWidgetState0075, -16834);
+          NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport042.sceneWidgetState0033, -16834);
+          NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport106.sceneWidgetState0102, -16834);
+          MixedSupport106.sceneWidgetState0102.performAction1768(MixedSupport077.sceneWidgetState0075, -16834);
           for (integerLocal47 = 0; integerLocal47 < 4 + integerArgument13; integerLocal47++) {
             if ((integerLocal47 != 1 ||
               !(UiComponentPart002.integerArrayState0014.length < 2)) && (integerLocal47 != 3 ||
               !(SceneWidgetPart007.integerState0506 <= 1))) {
-              MixedSupport111.sceneWidgetState0102.performAction1799(MixedSupport139.sceneWidgetArrayState0008[integerLocal47], -16834);
-              for (integerLocal4 = 0; integerLocal4 < MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal47].length; integerLocal4++) {
-                if (MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal47][integerLocal4] != null) {
-                  MixedSupport111.sceneWidgetState0102.performAction1799(MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal47][integerLocal4], -16834);
+              MixedSupport106.sceneWidgetState0102.performAction1768(MixedSupport132.sceneWidgetArrayState0008[integerLocal47], -16834);
+              for (integerLocal4 = 0; integerLocal4 < MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal47].length; integerLocal4++) {
+                if (MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal47][integerLocal4] != null) {
+                  MixedSupport106.sceneWidgetState0102.performAction1768(MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal47][integerLocal4], -16834);
                 }
               }
             }
           }
-          NetworkSupport008.sceneWidgetState0093.performAction1799(MixedSupport039.sceneWidgetState0030, -16834);
-          NetworkSupport008.sceneWidgetState0093.performAction1799(MixedSupport092.sceneWidgetState0091, integerArgument5 - 7940);
-          NetworkSupport008.sceneWidgetState0093.performAction1799(MixedSupport127.sceneWidgetState0117, -16834);
-          MixedSupport059.sceneWidgetState0054 = new SceneWidget(0L, MixedSupport127.sceneWidgetState0119, RichTextLayout.stringState0133.toUpperCase());
-          GameSession.sceneWidgetState0099 = new SceneWidget(0L, MixedSupport076.sceneWidgetState0072, MixedSupport071.stringState0299.toUpperCase());
+          NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport039.sceneWidgetState0030, -16834);
+          NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport087.sceneWidgetState0091, integerArgument5 - 7940);
+          NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport121.sceneWidgetState0117, -16834);
+          MixedSupport059.sceneWidgetState0054 = new SceneWidget(0L, MixedSupport121.sceneWidgetState0119, RichTextLayout.stringState0133.toUpperCase());
+          GameSession.sceneWidgetState0099 = new SceneWidget(0L, MixedSupport072.sceneWidgetState0072, MixedSupport067.stringState0299.toUpperCase());
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal52) {
           caughtExceptionLocal35 = caughtParameterLocal52;
@@ -433,22 +433,22 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           } else {
             stackStringLocal34 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal33).append(stackStringLocal34).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal33).append(stackStringLocal34).append(')').toString());
         }
     }
 
-    final void performAction1066(int integerArgument1) {
+    final void performAction1047(int integerArgument1) {
         int integerLocal1 = 250;
         this.uiComponentPart024State0001.performAction0222(25, 140, -integerLocal1 + this.integerState0107 >> 1, this.integerState0108 - 5 >> 1, -16555);
         this.interactiveComponentState0011.performAction0222(30, 100, 10 + (140 + (-integerLocal1 + this.integerState0107 >> 1)), 2 + (20 + (this.integerState0108 - integerArgument1) >> 1), integerArgument1 ^ -16565);
     }
 
-    final static void performAction1063(byte byteArgument1, int integerArgument2) {
+    final static void performAction1044(byte byteArgument1, int integerArgument2) {
         if (byteArgument1 < 80) {
           stringState0348 = (String) null;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1672(integerArgument2, -4);
+        cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
         cipherPacketBufferLocal1.writeByte(true, 2);
         cipherPacketBufferLocal1.writeByte(true, 4);
         cipherPacketBufferLocal1.writeByte(true, MixedSupport007.computeInteger0071(112));
@@ -458,7 +458,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
         rgbSpriteState0035 = null;
         stringState0348 = null;
         stringState0349 = null;
-        mixedSupport118State0001 = null;
+        mixedSupport113State0001 = null;
         stringState0350 = null;
         if (integerArgument1 != -17690) {
           rgbSpriteState0035 = (RgbSprite) null;
@@ -467,17 +467,17 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         super.performAction0162(integerArgument1, -106, integerArgument3, integerArgument4);
-        MixedSupport011.bitmapFontState0006.performAction1088(MixedSupport144.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
+        MixedSupport011.bitmapFontState0006.performAction1069(MixedSupport137.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
         if (integerArgument2 >= -103) {
           InteractiveComponent interactiveComponentLocal1 = (InteractiveComponent) null;
-          this.performAction0314((byte) -51, -52, (InteractiveComponent) null, -94, 59);
+          this.performAction0313((byte) -51, -52, (InteractiveComponent) null, -94, 59);
         }
     }
 
     UiComponentPart019(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, (CallbackContract004) null);
         this.uiComponentPart024State0001 = new UiComponentPart024(new MixedSupport024(10000536), MixedSupport047.booleanState0057, 0, 0, 140, 25);
-        this.uiComponentPart024State0001.performAction1297((byte) 79, new InputAdapter002());
+        this.uiComponentPart024State0001.performAction1270((byte) 79, new InputAdapter002());
         this.interactiveComponentState0011 = new InteractiveComponent(MixedSupport034.stringState0163, (CallbackContract006) (this));
         this.uiComponentArrayState0001 = new UiComponent[]{(UiComponent) ((Object) this.uiComponentPart024State0001), (UiComponent) ((Object) this.interactiveComponentState0011)};
         this.interactiveComponentState0011.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());

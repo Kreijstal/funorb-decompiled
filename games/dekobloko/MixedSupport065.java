@@ -2,236 +2,78 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport065 {
-    private int[] integerArrayState0112;
-    private int integerState0337;
-    private int[] integerArrayState0113;
-    int integerState0338;
-    private float[][] floatArrayArrayState0002;
-    private int[] integerArrayState0114;
+    static String stringState0278;
+    static GzipDecompressor gzipDecompressorState0001;
+    static int integerState0347;
+    static String stringState0279;
+    static String stringState0280;
+    static long longState0022;
+    static SceneWidget sceneWidgetState0067;
 
-    private final static int computeInteger0770(int integerArgument1, int integerArgument2) {
+    final static void performAction0786(java.awt.Canvas canvasArgument1, boolean booleanArgument2, int integerArgument3) {
         int integerLocal1 = 0;
-        for (integerLocal1 = (int)Math.pow((double)integerArgument1, 1.0 / (double)integerArgument2) + 1; UiComponentPart032.computeInteger1730(integerLocal1, integerArgument2, false) > integerArgument1; integerLocal1--) {
-        }
-        return integerLocal1;
-    }
-
-    private final void performAction0772() {
-        int[] integerArrayLocal1;
-        int integerLocal2;
-        int integerLocal3;
-        int integerLocal4;
-        int integerLocal5;
-        int integerLocal6;
-        int integerLocal7;
-        int integerLocal8;
-        int[] integerArrayLocal9;
-        int integerLocal10;
-        int integerLocal11;
-        int integerLocal12;
-        int[] integerArrayLocal13;
-        int[] integerArrayLocal14;
-        int[] integerArrayLocal15;
-        int integerLocal16;
-        int integerLocal17;
-        int integerLocal18;
-        int integerLocal19;
-        int integerLocal20;
-        int integerLocal21;
-        int integerLocal22;
-        int integerLocal23;
-        int integerLocal24;
-        integerArrayLocal15 = new int[this.integerState0337];
-        integerArrayLocal14 = new int[33];
-        integerArrayLocal13 = integerArrayLocal14;
-        integerArrayLocal1 = integerArrayLocal13;
-        for (integerLocal3 = 0; integerLocal3 < this.integerState0337; integerLocal3++) {
-          integerLocal4 = this.integerArrayState0114[integerLocal3];
-          if (integerLocal4 != 0) {
-            {
-              integerLocal5 = 1 << 32 - integerLocal4;
-              integerLocal6 = integerArrayLocal14[integerLocal4];
-              integerArrayLocal15[integerLocal3] = integerLocal6;
-              if ((integerLocal6 & integerLocal5) == 0) {
-                integerLocal7 = integerLocal6 | integerLocal5;
-                for (integerLocal8 = integerLocal4 - 1; integerLocal8 >= 1; integerLocal8--) {
-                  integerLocal10 = integerArrayLocal14[integerLocal8];
-                  if (integerLocal10 != integerLocal6) {
-                    break;
-                  }
-                  integerLocal11 = 1 << 32 - integerLocal8;
-                  if ((integerLocal10 & integerLocal11) != 0) {
-                    integerArrayLocal1[integerLocal8] = integerArrayLocal1[integerLocal8 - 1];
-                    break;
-                  }
-                  integerArrayLocal1[integerLocal8] = integerLocal10 | integerLocal11;
-                }
-              } else {
-                integerLocal7 = integerArrayLocal1[integerLocal4 - 1];
-              }
-            }
-            integerArrayLocal14[integerLocal4] = integerLocal7;
-            for (integerLocal23 = integerLocal4 + 1; integerLocal23 <= 32; integerLocal23++) {
-              integerLocal24 = integerArrayLocal14[integerLocal23];
-              if (integerLocal24 == integerLocal6) {
-                integerArrayLocal14[integerLocal23] = integerLocal7;
-              }
-            }
-          }
-        }
-        this.integerArrayState0112 = new int[8];
-        integerLocal2 = 0;
-        for (integerLocal16 = 0; integerLocal16 < this.integerState0337; integerLocal16++) {
-          integerLocal17 = this.integerArrayState0114[integerLocal16];
-          if (integerLocal17 != 0) {
-            integerLocal18 = integerArrayLocal15[integerLocal16];
-            integerLocal19 = 0;
-            for (integerLocal20 = 0; integerLocal20 < integerLocal17; integerLocal20++) {
-              integerLocal21 = -2147483648 >>> integerLocal20;
-              if ((integerLocal18 & integerLocal21) == 0) {
-                integerLocal19++;
-              } else {
-                if (this.integerArrayState0112[integerLocal19] == 0) {
-                  this.integerArrayState0112[integerLocal19] = integerLocal2;
-                }
-                integerLocal19 = this.integerArrayState0112[integerLocal19];
-              }
-              if (integerLocal19 >= this.integerArrayState0112.length) {
-                integerArrayLocal9 = new int[this.integerArrayState0112.length * 2];
-                integerLocal12 = 0;
-                integerLocal22 = integerLocal12;
-                while (integerLocal12 < this.integerArrayState0112.length) {
-                  integerArrayLocal9[integerLocal12] = this.integerArrayState0112[integerLocal12];
-                  integerLocal12++;
-                }
-                this.integerArrayState0112 = integerArrayLocal9;
-              }
-              integerLocal21 = integerLocal21 >>> 1;
-            }
-            this.integerArrayState0112[integerLocal19] = ~integerLocal16;
-            if (integerLocal19 >= integerLocal2) {
-              integerLocal2 = integerLocal19 + 1;
-            }
-          }
-        }
-    }
-
-    final float[] computeFloatArray0771() {
-        return this.floatArrayArrayState0002[this.computeInteger0769()];
-    }
-
-    MixedSupport065() {
-        int previousIntegerLocal1 = 0;
-        int stackIntegerLocal2 = 0;
-        int stackIntegerLocal3 = 0;
-        int stackIntegerLocal4 = 0;
-        int integerLocal5;
-        int integerLocal6;
-        int integerLocal7;
-        float floatLocal8;
-        int integerLocal9;
-        float floatLocal10;
-        int integerLocal11;
-        int integerLocal12;
-        int integerLocal13;
-        int integerLocal14;
-        float floatLocal15;
-        int integerLocal16;
-        int integerLocal17;
-        float floatLocal18;
-        int integerLocal19;
-        float floatLocal20;
-        int integerLocal21;
-        int integerLocal22;
-        int integerLocal23;
-        int integerLocal24;
-        VorbisSample.computeInteger1727(24);
-        this.integerState0338 = VorbisSample.computeInteger1727(16);
-        this.integerState0337 = VorbisSample.computeInteger1727(24);
-        this.integerArrayState0114 = new int[this.integerState0337];
-        stackIntegerLocal2 = (VorbisSample.computeInteger1725() == 0) ? 0 : 1;
-        integerLocal5 = stackIntegerLocal2;
-        if (integerLocal5 != 0) {
-          integerLocal6 = 0;
-          integerLocal7 = VorbisSample.computeInteger1727(5) + 1;
-          while (integerLocal6 < this.integerState0337) {
-            integerLocal9 = VorbisSample.computeInteger1727(SceneWidgetPart010.computeInteger1492((byte) 120, this.integerState0337 - integerLocal6));
-            for (integerLocal11 = 0; integerLocal11 < integerLocal9; integerLocal11++) {
-              previousIntegerLocal1 = integerLocal6;
-              integerLocal6++;
-              this.integerArrayState0114[previousIntegerLocal1] = integerLocal7;
-            }
-            integerLocal7++;
-          }
-        } else {
-          stackIntegerLocal3 = (VorbisSample.computeInteger1725() == 0) ? 0 : 1;
-          integerLocal6 = stackIntegerLocal3;
-          integerLocal21 = 0;
-          integerLocal7 = integerLocal21;
-          while (integerLocal21 < this.integerState0337) {
-            if (integerLocal6 != 0 &&
-              VorbisSample.computeInteger1725() == 0) {
-              this.integerArrayState0114[integerLocal21] = 0;
+        int integerLocal2 = 0;
+        RuntimeException stackRuntimeExceptionLocal3 = null;
+        StringBuilder stackStringBuilderLocal4 = null;
+        String stackStringLocal5 = null;
+        RuntimeException caughtExceptionLocal6 = null;
+        RuntimeException runtimeExceptionLocal7 = null;
+        integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        try {
+          if (UiComponentPart004.integerState0091 >= 10) {
+            if (!UiComponentPart009.computeBoolean0376(480)) {
+              SoftwareRaster.performAction0648();
+              GameSession.performAction1300(240, 320, integerArgument3 ^ -21986);
+              UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
             } else {
-              this.integerArrayState0114[integerLocal21] = VorbisSample.computeInteger1727(5) + 1;
-            }
-            integerLocal21++;
-          }
-        }
-        this.performAction0772();
-        integerLocal22 = VorbisSample.computeInteger1727(4);
-        if (integerLocal22 > 0) {
-          floatLocal8 = VorbisSample.computeFloat1718(VorbisSample.computeInteger1727(32));
-          floatLocal10 = VorbisSample.computeFloat1718(VorbisSample.computeInteger1727(32));
-          integerLocal23 = VorbisSample.computeInteger1727(4) + 1;
-          stackIntegerLocal4 = (VorbisSample.computeInteger1725() == 0) ? 0 : 1;
-          integerLocal12 = stackIntegerLocal4;
-          if (integerLocal22 != 1) {
-            integerLocal13 = this.integerState0337 * this.integerState0338;
-          } else {
-            integerLocal13 = MixedSupport065.computeInteger0770(this.integerState0337, this.integerState0338);
-          }
-          this.integerArrayState0113 = new int[integerLocal13];
-          for (integerLocal14 = 0; integerLocal14 < integerLocal13; integerLocal14++) {
-            this.integerArrayState0113[integerLocal14] = VorbisSample.computeInteger1727(integerLocal23);
-          }
-          this.floatArrayArrayState0002 = new float[this.integerState0337][this.integerState0338];
-          if (integerLocal22 != 1) {
-            for (integerLocal24 = 0; integerLocal24 < this.integerState0337; integerLocal24++) {
-              floatLocal15 = 0.0f;
-              integerLocal16 = integerLocal24 * this.integerState0338;
-              for (integerLocal17 = 0; integerLocal17 < this.integerState0338; integerLocal17++) {
-                floatLocal18 = (float)this.integerArrayState0113[integerLocal16] * floatLocal10 + floatLocal8 + floatLocal15;
-                this.floatArrayArrayState0002[integerLocal24][integerLocal17] = floatLocal18;
-                if (integerLocal12 != 0) {
-                  floatLocal15 = floatLocal18;
-                }
-                integerLocal16++;
+              if (MixedSupport052.integerState0269 != 0) {
+                UiComponentPart005.performAction0319(true, canvasArgument1);
+              } else {
+                MixedSupport127.performAction1631(false, booleanArgument2, 78);
+                UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
               }
             }
           } else {
-            for (integerLocal24 = 0; integerLocal24 < this.integerState0337; integerLocal24++) {
-              floatLocal15 = 0.0f;
-              integerLocal16 = 1;
-              for (integerLocal17 = 0; integerLocal17 < this.integerState0338; integerLocal17++) {
-                integerLocal19 = integerLocal24 / integerLocal16 % integerLocal13;
-                floatLocal20 = (float)this.integerArrayState0113[integerLocal19] * floatLocal10 + floatLocal8 + floatLocal15;
-                this.floatArrayArrayState0002[integerLocal24][integerLocal17] = floatLocal20;
-                if (integerLocal12 != 0) {
-                  floatLocal15 = floatLocal20;
-                }
-                integerLocal16 = integerLocal16 * integerLocal13;
-              }
+            integerLocal1 = 0;
+            if (MixedSupport016.booleanState0016) {
+              integerLocal1 = 1;
+              MixedSupport016.booleanState0016 = false;
             }
+            RenderingSupport001.performAction0136(UiComponentPart005.computeInteger0320(true), integerLocal1 != 0, 6, TextLayout.computeString0231(-11777), MixedSupport035.colorState0001);
           }
+          if (integerArgument3 == -6351) {
+            return;
+          }
+          MixedSupport065.performAction0785(-78);
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal8) {
+          caughtExceptionLocal6 = caughtParameterLocal8;
+          runtimeExceptionLocal7 = caughtExceptionLocal6;
+          stackRuntimeExceptionLocal3 = runtimeExceptionLocal7;
+          stackStringBuilderLocal4 = new StringBuilder().append("jf.B(");
+          if (canvasArgument1 == null) {
+            stackStringLocal5 = "null";
+          } else {
+            stackStringLocal5 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final int computeInteger0769() {
-        int integerLocal1 = 0;
-        while (this.integerArrayState0112[integerLocal1] >= 0) {
-          integerLocal1 = VorbisSample.computeInteger1725() != 0 ? this.integerArrayState0112[integerLocal1] : integerLocal1 + 1;
-        }
-        return ~this.integerArrayState0112[integerLocal1];
+    public static void performAction0785(int integerArgument1) {
+        sceneWidgetState0067 = null;
+        stringState0278 = null;
+        int integerLocal1 = -128 % ((integerArgument1 + 47) / 61);
+        stringState0279 = null;
+        gzipDecompressorState0001 = null;
+        stringState0280 = null;
+    }
+
+    static {
+        stringState0278 = "Your game";
+        stringState0280 = "Invite more players, or alternatively try changing the following settings:  ";
+        stringState0279 = "<%0> might change the options - wait and see.";
+        integerState0347 = 0;
+        gzipDecompressorState0001 = new GzipDecompressor();
     }
 }

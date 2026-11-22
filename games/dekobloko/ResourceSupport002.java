@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class ResourceSupport002 implements CallbackContract011 {
-    static MixedSupport139 mixedSupport139State0001;
+    static MixedSupport132 mixedSupport132State0001;
     static String stringState0038;
     private long longState0001;
     static PacketBuffer packetBufferState0001;
@@ -15,7 +15,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         if (byteArgument1 != -51) {
           this.longState0001 = -32L;
         }
-        this.longState0001 = MixedSupport063.computeLong0745(byteArgument1 + 55);
+        this.longState0001 = MixedSupport062.computeLong0734(byteArgument1 + 55);
     }
 
     final static boolean computeBoolean0087(ResourceArchive resourceArchiveArgument1, int integerArgument2) {
@@ -27,9 +27,9 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (integerArgument2 != -2147483648) {
-            mixedSupport139State0001 = (MixedSupport139) null;
+            mixedSupport132State0001 = (MixedSupport132) null;
           }
-          stackBooleanLocal2 = resourceArchiveArgument1.computeBoolean0827(false);
+          stackBooleanLocal2 = resourceArchiveArgument1.computeBoolean0814(false);
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -41,14 +41,14 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
     abstract String computeString0091(byte byteArgument1);
 
     public static void clearStaticReferences(byte byteArgument1) {
-        mixedSupport139State0001 = null;
+        mixedSupport132State0001 = null;
         stringState0038 = null;
         if (byteArgument1 < 70) {
           return;
@@ -57,13 +57,13 @@ abstract class ResourceSupport002 implements CallbackContract011 {
     }
 
     public final String computeString0088(byte byteArgument1) {
-        if (this.computeBoolean1112((byte) -101)) {
+        if (this.computeBoolean1093((byte) -101)) {
           return null;
         }
         if (byteArgument1 < 52) {
           return (String) null;
         }
-        if (MixedSupport063.computeLong0745(4) < (350L + this.longState0001)) {
+        if (MixedSupport062.computeLong0734(4) < (350L + this.longState0001)) {
           return null;
         }
         return this.computeString0091((byte) 49);
@@ -100,11 +100,11 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           Object objectLocal25 = null;
           ObjectInputStream objectInputStreamLocal26 = null;
           int integerLocal27 = 0;
-          MixedSupport075 mixedSupport075Local28 = null;
+          MixedSupport071 mixedSupport071Local28 = null;
           java.lang.reflect.Field fieldLocal29 = null;
           Object objectLocal30 = null;
           java.lang.reflect.Field fieldLocal31 = null;
-          MixedSupport075 mixedSupport075Local32 = null;
+          MixedSupport071 mixedSupport071Local32 = null;
           Object objectLocal33 = null;
           java.lang.reflect.Field fieldLocal34 = null;
           Object objectLocal35 = null;
@@ -120,29 +120,29 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           objectLocal36 = null;
           integerLocal27 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
-            mixedSupport075Local28 = (MixedSupport075) (MixedSupport002.nodeDequeState0001.computeHashNode1772((byte) -54));
-            mixedSupport075Local32 = mixedSupport075Local28;
-            if (mixedSupport075Local32 == null) {
+            mixedSupport071Local28 = (MixedSupport071) (MixedSupport002.nodeDequeState0001.computeHashNode1741((byte) -54));
+            mixedSupport071Local32 = mixedSupport071Local28;
+            if (mixedSupport071Local32 == null) {
               return;
             }
             integerLocal8 = 0;
             if (integerArgument1 != -32141) {
               return;
             }
-            for (integerLocal9 = 0; mixedSupport075Local32.integerState0407 > integerLocal9; integerLocal9++) {
-              if (mixedSupport075Local28.asyncTaskArrayState0002[integerLocal9] != null) {
-                if (mixedSupport075Local28.asyncTaskArrayState0002[integerLocal9].integerState0510 == 2) {
-                  mixedSupport075Local28.integerArrayState0135[integerLocal9] = -5;
+            for (integerLocal9 = 0; mixedSupport071Local32.integerState0407 > integerLocal9; integerLocal9++) {
+              if (mixedSupport071Local28.asyncTaskArrayState0002[integerLocal9] != null) {
+                if (mixedSupport071Local28.asyncTaskArrayState0002[integerLocal9].integerState0510 == 2) {
+                  mixedSupport071Local28.integerArrayState0135[integerLocal9] = -5;
                 }
-                if (mixedSupport075Local28.asyncTaskArrayState0002[integerLocal9].integerState0510 == 0) {
+                if (mixedSupport071Local28.asyncTaskArrayState0002[integerLocal9].integerState0510 == 0) {
                   integerLocal8 = 1;
                 }
               }
-              if (mixedSupport075Local28.asyncTaskArrayState0001[integerLocal9] != null) {
-                if (mixedSupport075Local28.asyncTaskArrayState0001[integerLocal9].integerState0510 == 2) {
-                  mixedSupport075Local28.integerArrayState0135[integerLocal9] = -6;
+              if (mixedSupport071Local28.asyncTaskArrayState0001[integerLocal9] != null) {
+                if (mixedSupport071Local28.asyncTaskArrayState0001[integerLocal9].integerState0510 == 2) {
+                  mixedSupport071Local28.integerArrayState0135[integerLocal9] = -6;
                 }
-                if (mixedSupport075Local28.asyncTaskArrayState0001[integerLocal9].integerState0510 == 0) {
+                if (mixedSupport071Local28.asyncTaskArrayState0001[integerLocal9].integerState0510 == 0) {
                   integerLocal8 = 1;
                 }
               }
@@ -151,25 +151,25 @@ abstract class ResourceSupport002 implements CallbackContract011 {
               return;
             }
             integerLocal9 = cipherPacketBufferArgument2.position;
-            cipherPacketBufferArgument2.writeInt(mixedSupport075Local32.integerState0406, false);
-            for (integerLocal1 = 0; integerLocal1 < mixedSupport075Local32.integerState0407; integerLocal1++) {
-              if (0 == mixedSupport075Local32.integerArrayState0135[integerLocal1]) {
+            cipherPacketBufferArgument2.writeInt(mixedSupport071Local32.integerState0406, false);
+            for (integerLocal1 = 0; integerLocal1 < mixedSupport071Local32.integerState0407; integerLocal1++) {
+              if (0 == mixedSupport071Local32.integerArrayState0135[integerLocal1]) {
                 try {
-                  integerLocal10 = mixedSupport075Local32.integerArrayState0138[integerLocal1];
+                  integerLocal10 = mixedSupport071Local32.integerArrayState0138[integerLocal1];
                   if (integerLocal10 == 0) {
-                    fieldLocal29 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
+                    fieldLocal29 = (java.lang.reflect.Field) (mixedSupport071Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                     integerLocal23 = fieldLocal29.getInt((Object) null);
                     cipherPacketBufferArgument2.writeByte(true, 0);
                     cipherPacketBufferArgument2.writeInt(integerLocal23, false);
                   } else {
                     if (integerLocal10 == 1) {
-                      fieldLocal31 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
+                      fieldLocal31 = (java.lang.reflect.Field) (mixedSupport071Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                       fieldLocal34 = fieldLocal31;
-                      fieldLocal34.setInt((Object) null, mixedSupport075Local32.integerArrayState0136[integerLocal1]);
+                      fieldLocal34.setInt((Object) null, mixedSupport071Local32.integerArrayState0136[integerLocal1]);
                       cipherPacketBufferArgument2.writeByte(true, 0);
                     } else {
                       if (integerLocal10 == 2) {
-                        fieldLocal38 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
+                        fieldLocal38 = (java.lang.reflect.Field) (mixedSupport071Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                         integerLocal23 = fieldLocal38.getModifiers();
                         cipherPacketBufferArgument2.writeByte(true, 0);
                         cipherPacketBufferArgument2.writeInt(integerLocal23, false);
@@ -177,8 +177,8 @@ abstract class ResourceSupport002 implements CallbackContract011 {
                     }
                   }
                   if (3 == integerLocal10) {
-                    methodLocal39 = (java.lang.reflect.Method) (mixedSupport075Local32.asyncTaskArrayState0001[integerLocal1].objectState0004);
-                    byteArrayArrayLocal37 = mixedSupport075Local32.byteArrayArrayArrayState0002[integerLocal1];
+                    methodLocal39 = (java.lang.reflect.Method) (mixedSupport071Local32.asyncTaskArrayState0001[integerLocal1].objectState0004);
+                    byteArrayArrayLocal37 = mixedSupport071Local32.byteArrayArrayArrayState0002[integerLocal1];
                     objectArrayLocal24 = new Object[byteArrayArrayLocal37.length];
                     for (integerLocal2 = 0; integerLocal2 < byteArrayArrayLocal37.length; integerLocal2++) {
                       objectInputStreamLocal26 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(byteArrayArrayLocal37[integerLocal2])));
@@ -198,7 +198,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
                     }
                   } else {
                     if (4 == integerLocal10) {
-                      methodLocal40 = (java.lang.reflect.Method) (mixedSupport075Local32.asyncTaskArrayState0001[integerLocal1].objectState0004);
+                      methodLocal40 = (java.lang.reflect.Method) (mixedSupport071Local32.asyncTaskArrayState0001[integerLocal1].objectState0004);
                       integerLocal41 = methodLocal40.getModifiers();
                       cipherPacketBufferArgument2.writeByte(true, 0);
                       cipherPacketBufferArgument2.writeInt(integerLocal41, false);
@@ -254,11 +254,11 @@ abstract class ResourceSupport002 implements CallbackContract011 {
                   cipherPacketBufferArgument2.writeByte(true, -21);
                 }
               } else {
-                cipherPacketBufferArgument2.writeByte(true, mixedSupport075Local32.integerArrayState0135[integerLocal1]);
+                cipherPacketBufferArgument2.writeByte(true, mixedSupport071Local32.integerArrayState0135[integerLocal1]);
               }
             }
             cipherPacketBufferArgument2.appendCrc32((byte) -15, integerLocal9);
-            mixedSupport075Local32.performAction0149((byte) 103);
+            mixedSupport071Local32.performAction0149((byte) 103);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal54) {
             caughtExceptionLocal6 = caughtParameterLocal54;
@@ -270,7 +270,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
             } else {
               stackStringLocal5 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal55) {
           throw uncheckedExceptionLocal55;
@@ -280,14 +280,14 @@ abstract class ResourceSupport002 implements CallbackContract011 {
     }
 
     public final ValidationStatus computeValidationStatus0084(int integerArgument1) {
-        if (this.computeBoolean1112((byte) 119)) {
+        if (this.computeBoolean1093((byte) 119)) {
           return NetworkSupport005.validationStatusState0003;
         }
         if (integerArgument1 != 20350) {
           ResourceSupport002.performAction0085(-21, -85, -33);
         }
-        if (!(MixedSupport063.computeLong0745(4) >= this.longState0001 + 350L)) {
-          return MixedSupport080.validationStatusState0004;
+        if (!(MixedSupport062.computeLong0734(4) >= this.longState0001 + 350L)) {
+          return MixedSupport076.validationStatusState0004;
         }
         return this.computeValidationStatus0089(integerArgument1 - 25870);
     }
@@ -301,17 +301,17 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           !(ResourceSupport001.integerArrayState0012.length >= integerArgument2)) {
           ResourceSupport001.integerArrayState0012 = new int[integerArgument2 * 2];
         }
-        if (MixedSupport094.integerArrayState0173 == null ||
-          !(MixedSupport094.integerArrayState0173.length >= integerArgument2)) {
-          MixedSupport094.integerArrayState0173 = new int[2 * integerArgument2];
+        if (MixedSupport089.integerArrayState0173 == null ||
+          !(MixedSupport089.integerArrayState0173.length >= integerArgument2)) {
+          MixedSupport089.integerArrayState0173 = new int[2 * integerArgument2];
         }
-        if (MixedSupport084.integerArrayState0150 == null ||
-          !(integerArgument2 <= MixedSupport084.integerArrayState0150.length)) {
-          MixedSupport084.integerArrayState0150 = new int[2 * integerArgument2];
+        if (MixedSupport080.integerArrayState0150 == null ||
+          !(integerArgument2 <= MixedSupport080.integerArrayState0150.length)) {
+          MixedSupport080.integerArrayState0150 = new int[2 * integerArgument2];
         }
-        if (null == MixedSupport086.integerArrayState0157 ||
-          !(integerArgument2 <= MixedSupport086.integerArrayState0157.length)) {
-          MixedSupport086.integerArrayState0157 = new int[2 * integerArgument2];
+        if (null == MixedSupport082.integerArrayState0157 ||
+          !(integerArgument2 <= MixedSupport082.integerArrayState0157.length)) {
+          MixedSupport082.integerArrayState0157 = new int[2 * integerArgument2];
         }
         if (null == MixedSupport015.integerArrayState0020 ||
           !(MixedSupport015.integerArrayState0020.length >= integerArgument2)) {
@@ -334,6 +334,6 @@ abstract class ResourceSupport002 implements CallbackContract011 {
 
     static {
         stringState0038 = "Players";
-        mixedSupport139State0001 = new MixedSupport139();
+        mixedSupport132State0001 = new MixedSupport132();
     }
 }

@@ -13,18 +13,18 @@ final class SceneWidgetPart003 extends SceneWidget {
           this.sceneWidgetState0044.rgbSpriteState0069 = rgbSpriteArgument2;
           this.sceneWidgetState0044.integerState0885 = integerArgument4;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ha.<init>(" + longArgument1 + ',' + (rgbSpriteArgument2 != null ? "{...}" : "null") + ',' + (rgbSpriteArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ha.<init>(" + longArgument1 + ',' + (rgbSpriteArgument2 != null ? "{...}" : "null") + ',' + (rgbSpriteArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction0616(int integerArgument1) {
+    public static void performAction0613(int integerArgument1) {
         if (integerArgument1 != 3) {
           return;
         }
         rawSoundArrayState0001 = null;
     }
 
-    final static void performAction0615(int integerArgument1) {
+    final static void performAction0612(int integerArgument1) {
         MixedSupport022.uiComponentPart031State0001 = new UiComponentPart031();
         if (integerArgument1 != 0) {
           return;
@@ -32,23 +32,23 @@ final class SceneWidgetPart003 extends SceneWidget {
         UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport022.uiComponentPart031State0001, (byte) 62);
     }
 
-    final int computeInteger0613(int integerArgument1, int integerArgument2) {
+    final int computeInteger0610(int integerArgument1, int integerArgument2) {
         if (integerArgument2 == -4168) {
-          return integerArgument1 + (this.sceneWidgetState0044.computeInteger1801(true) + this.sceneWidgetState0043.computeInteger1801(true));
+          return integerArgument1 + (this.sceneWidgetState0044.computeInteger1770(true) + this.sceneWidgetState0043.computeInteger1770(true));
         }
-        SceneWidgetPart003.performAction0616(-106);
-        return integerArgument1 + (this.sceneWidgetState0044.computeInteger1801(true) + this.sceneWidgetState0043.computeInteger1801(true));
+        SceneWidgetPart003.performAction0613(-106);
+        return integerArgument1 + (this.sceneWidgetState0044.computeInteger1770(true) + this.sceneWidgetState0043.computeInteger1770(true));
     }
 
-    final void performAction0612(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
-        this.performAction1795(integerArgument1, 0, integerArgument3, integerArgument6, integerArgument4);
-        this.performAction0614(integerArgument5, integerArgument2 ^ integerArgument2);
+    final void performAction0609(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+        this.performAction1764(integerArgument1, 0, integerArgument3, integerArgument6, integerArgument4);
+        this.performAction0611(integerArgument5, integerArgument2 ^ integerArgument2);
     }
 
-    private final void performAction0614(int integerArgument1, int integerArgument2) {
-        this.sceneWidgetState0044.performAction1795(this.sceneWidgetState0044.computeInteger1801(true), integerArgument2, 0, this.integerState0915, 0);
+    private final void performAction0611(int integerArgument1, int integerArgument2) {
+        this.sceneWidgetState0044.performAction1764(this.sceneWidgetState0044.computeInteger1770(true), integerArgument2, 0, this.integerState0915, 0);
         int integerLocal1 = this.sceneWidgetState0044.integerState0896 + integerArgument1;
-        this.sceneWidgetState0043.performAction1795(this.integerState0896 - integerLocal1, 0, 0, this.integerState0915, integerLocal1);
+        this.sceneWidgetState0043.performAction1764(this.integerState0896 - integerLocal1, 0, 0, this.integerState0915, integerLocal1);
     }
 
     private SceneWidgetPart003(long longArgument1, SceneWidget sceneWidgetArgument2, SceneWidget sceneWidgetArgument3, String stringArgument4) {
@@ -57,15 +57,15 @@ final class SceneWidgetPart003 extends SceneWidget {
           this.sceneWidgetState0044 = new SceneWidget(0L, sceneWidgetArgument2);
           this.sceneWidgetState0043 = new SceneWidget(0L, sceneWidgetArgument3);
           this.sceneWidgetState0043.stringState0598 = stringArgument4;
-          this.performAction1799(this.sceneWidgetState0044, -16834);
-          this.performAction1799(this.sceneWidgetState0043, -16834);
-          this.performAction1805(-126);
+          this.performAction1768(this.sceneWidgetState0044, -16834);
+          this.performAction1768(this.sceneWidgetState0043, -16834);
+          this.performAction1774(-126);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ha.<init>(" + longArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument3 != null ? "{...}" : "null") + ',' + (stringArgument4 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ha.<init>(" + longArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument3 != null ? "{...}" : "null") + ',' + (stringArgument4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger0611(int integerArgument1, byte byteArgument2) {
+    final static int computeInteger0608(int integerArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -76,7 +76,7 @@ final class SceneWidgetPart003 extends SceneWidget {
           integerLocal1 = integerArgument1 + integerLocal2;
           return integerLocal1;
         }
-        SceneWidgetPart003.computeInteger0611(-69, (byte) 62);
+        SceneWidgetPart003.computeInteger0608(-69, (byte) 62);
         integerLocal3 = integerArgument1 + integerLocal2;
         return integerLocal3;
     }

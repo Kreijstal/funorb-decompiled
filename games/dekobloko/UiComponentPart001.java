@@ -61,7 +61,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           integerLocal1 = (int)(0.5 + (double)(rawSoundArgument3.integerState0794 * 256) * Math.pow(2.0, (double)integerArgument2 * 0.08333333333333333) / (double)PcmPlayer.integerState0209);
           SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSampleStream(rawSoundArgument3, integerLocal1, integerArgument5 * GameDomainSupport005.integerState0578, integerArgument4 << 6);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ai.G(" + integerArgument1 + ',' + integerArgument2 + ',' + (rawSoundArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ai.G(" + integerArgument1 + ',' + integerArgument2 + ',' + (rawSoundArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
@@ -107,8 +107,8 @@ final class UiComponentPart001 extends InteractiveComponent {
         int integerLocal9;
         int integerLocal10;
         if (!DiagnosticSupport001.booleanState0024) {
-          rgbSpriteLocal5 = MixedSupport135.rgbSpriteState0060;
-          integerLocal9 = 320 * (MixedSupport144.integerState0848 * MixedSupport144.integerState0848) / 900;
+          rgbSpriteLocal5 = MixedSupport128.rgbSpriteState0060;
+          integerLocal9 = 320 * (MixedSupport137.integerState0848 * MixedSupport137.integerState0848) / 900;
           stackIntegerLocal3 = (!SceneWidgetPart009.booleanState0151) ? 0 : 1;
           integerLocal8 = stackIntegerLocal3;
           stackIntegerLocal4 = (!MouseInput.booleanState0223) ? 0 : 1;
@@ -118,35 +118,35 @@ final class UiComponentPart001 extends InteractiveComponent {
           rgbSpriteLocal5 = GameDomainSupport003.rgbSpriteState0020;
           stackIntegerLocal1 = (!MouseInput.booleanState0223) ? 0 : 1;
           integerLocal8 = stackIntegerLocal1;
-          rgbSpriteLocal6 = MixedSupport135.rgbSpriteState0060;
+          rgbSpriteLocal6 = MixedSupport128.rgbSpriteState0060;
           stackIntegerLocal2 = (!SceneWidgetPart009.booleanState0151) ? 0 : 1;
           integerLocal7 = stackIntegerLocal2;
-          integerLocal9 = 320 - MixedSupport144.integerState0848 * MixedSupport144.integerState0848 * 320 / 900;
+          integerLocal9 = 320 - MixedSupport137.integerState0848 * MixedSupport137.integerState0848 * 320 / 900;
         }
         if (integerLocal7 != 0 &&
           integerLocal8 != 0) {
           integerLocal8 = 0;
           integerLocal7 = 0;
         }
-        SoftwareRaster.performAction0658(0, 0, 640, 160 - integerLocal9);
+        SoftwareRaster.performAction0649(0, 0, 640, 160 - integerLocal9);
         integerLocal10 = 128 * integerLocal9 / 320 + 128;
-        UiComponentPart009.performAction0377((byte) 93, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0658(0, 160 - integerLocal9, 213, 320 - integerLocal9);
-        UiComponentPart009.performAction0377((byte) 123, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0658(427, 160 - integerLocal9, 640, 320 - integerLocal9);
-        UiComponentPart009.performAction0377((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0658(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
-        UiComponentPart009.performAction0377((byte) 92, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0658(213, 160 - integerLocal9, 427, integerLocal9 + 160);
-        UiComponentPart009.performAction0377((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0658(427, 320 - integerLocal9, 640, 320 + integerLocal9);
-        UiComponentPart009.performAction0377((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        UiComponentPart009.performAction0375((byte) 93, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0649(0, 160 - integerLocal9, 213, 320 - integerLocal9);
+        UiComponentPart009.performAction0375((byte) 123, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0649(427, 160 - integerLocal9, 640, 320 - integerLocal9);
+        UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0649(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
+        UiComponentPart009.performAction0375((byte) 92, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        SoftwareRaster.performAction0649(213, 160 - integerLocal9, 427, integerLocal9 + 160);
+        UiComponentPart009.performAction0375((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        SoftwareRaster.performAction0649(427, 320 - integerLocal9, 640, 320 + integerLocal9);
+        UiComponentPart009.performAction0375((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
         if (byteArgument1 == 84) {
-          SoftwareRaster.performAction0658(213, 160 + integerLocal9, 427, 320 + integerLocal9);
-          UiComponentPart009.performAction0377((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0658(0, integerLocal9 + 320, 640, 480);
-          UiComponentPart009.performAction0377((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0666();
+          SoftwareRaster.performAction0649(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+          UiComponentPart009.performAction0375((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+          SoftwareRaster.performAction0649(0, integerLocal9 + 320, 640, 480);
+          UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+          SoftwareRaster.performAction0657();
           if (!SceneWidgetPart009.booleanState0151) {
             return;
           }
@@ -156,15 +156,15 @@ final class UiComponentPart001 extends InteractiveComponent {
           if (MixedSupport049.booleanState0058) {
             return;
           }
-          MixedSupport040.performAction0534(0, 256, -71, 0);
+          MixedSupport040.performAction0531(0, 256, -71, 0);
           return;
         }
         stringState0025 = (String) null;
-        SoftwareRaster.performAction0658(213, 160 + integerLocal9, 427, 320 + integerLocal9);
-        UiComponentPart009.performAction0377((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0658(0, integerLocal9 + 320, 640, 480);
-        UiComponentPart009.performAction0377((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0666();
+        SoftwareRaster.performAction0649(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+        UiComponentPart009.performAction0375((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+        SoftwareRaster.performAction0649(0, integerLocal9 + 320, 640, 480);
+        UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+        SoftwareRaster.performAction0657();
         if (!SceneWidgetPart009.booleanState0151) {
           return;
         }
@@ -172,7 +172,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           return;
         }
         if (!MixedSupport049.booleanState0058) {
-          MixedSupport040.performAction0534(0, 256, -71, 0);
+          MixedSupport040.performAction0531(0, 256, -71, 0);
         }
     }
 
@@ -183,7 +183,7 @@ final class UiComponentPart001 extends InteractiveComponent {
 
     final static void performAction0060(int integerArgument1) {
         String stringLocal1 = (String) null;
-        InputAdapter002.performAction1379(MixedSupport126.stringState0527, -128, (String) null);
+        InputAdapter002.performAction1352(PasswordValidator.stringState0527, -128, (String) null);
         if (integerArgument1 >= -6) {
           RawSound rawSoundLocal2 = (RawSound) null;
           UiComponentPart001.performAction0057(-10, 44, (RawSound) null, 29, -93);
@@ -198,27 +198,27 @@ final class UiComponentPart001 extends InteractiveComponent {
     final static MixedSupport020 computeMixedSupport0200055(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         MixedSupport020 mixedSupport020Local1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1772((byte) 19));
+        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1741((byte) 19));
         while (mixedSupport020Local3 != null) {
           if (integerArgument4 == mixedSupport020Local3.integerState0115) {
             return mixedSupport020Local3;
           }
-          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1776(true));
+          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1745(true));
         }
         if (byteArgument3 == -111) {
           mixedSupport020Local1 = new MixedSupport020();
           mixedSupport020Local1.integerState0116 = integerArgument2;
           mixedSupport020Local1.integerState0115 = integerArgument4;
-          UiComponentPart020.nodeDequeState0022.performAction1766(mixedSupport020Local1, byteArgument3 + 2888);
-          MixedSupport039.performAction0528((byte) 8, mixedSupport020Local1, integerArgument1);
+          UiComponentPart020.nodeDequeState0022.performAction1735(mixedSupport020Local1, byteArgument3 + 2888);
+          MixedSupport039.performAction0525((byte) 8, mixedSupport020Local1, integerArgument1);
           return mixedSupport020Local1;
         }
         stringState0024 = (String) null;
         MixedSupport020 mixedSupport020Local4 = new MixedSupport020();
         mixedSupport020Local4.integerState0116 = integerArgument2;
         mixedSupport020Local4.integerState0115 = integerArgument4;
-        UiComponentPart020.nodeDequeState0022.performAction1766(mixedSupport020Local4, byteArgument3 + 2888);
-        MixedSupport039.performAction0528((byte) 8, mixedSupport020Local4, integerArgument1);
+        UiComponentPart020.nodeDequeState0022.performAction1735(mixedSupport020Local4, byteArgument3 + 2888);
+        MixedSupport039.performAction0525((byte) 8, mixedSupport020Local4, integerArgument1);
         return mixedSupport020Local4;
     }
 

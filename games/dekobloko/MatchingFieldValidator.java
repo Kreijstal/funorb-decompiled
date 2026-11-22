@@ -28,7 +28,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             this.getValidationStatus((String) null, (byte) -68);
           }
           if (this.uiComponentPart028State0006 instanceof CallbackContract005) {
-            callbackContract011Local10 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110840(byteArgument2 - 78);
+            callbackContract011Local10 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110824(byteArgument2 - 78);
             if (callbackContract011Local10 != null) {
               if (callbackContract011Local10.computeValidationStatus0084(20350) == MixedSupport023.validationStatusState0001 &&
                 !stringArgument1.equals(this.uiComponentPart028State0006.stringState0078)) {
@@ -55,11 +55,11 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static void performAction1452(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, RgbSprite rgbSpriteArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final static void performAction1425(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, RgbSprite rgbSpriteArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -104,9 +104,9 @@ final class MatchingFieldValidator extends TextFieldValidator {
             integerLocal10 = SoftwareRaster.integerState0285;
             integerLocal11 = SoftwareRaster.integerState0284;
             integerArrayLocal12 = new int[4];
-            SoftwareRaster.performAction0661(integerArrayLocal12);
+            SoftwareRaster.performAction0652(integerArrayLocal12);
             rgbSpriteArgument5.performAction0256();
-            SoftwareRaster.performAction0672(integerArrayLocal12[0], integerArrayLocal12[1], integerArrayLocal12[integerArgument4], integerArrayLocal12[3]);
+            SoftwareRaster.performAction0663(integerArrayLocal12[0], integerArrayLocal12[1], integerArrayLocal12[integerArgument4], integerArrayLocal12[3]);
             integerLocal13 = integerArgument6 * rgbSpriteArgument5.integerState0258 + integerArgument3;
             integerLocal14 = rgbSpriteArgument5.integerState0258 - integerArgument7;
             integerArrayLocal15 = rgbSpriteLocal7.integerArrayState0024;
@@ -128,7 +128,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
                   integerArrayLocal15[1 + integerLocal13] == 0 ||
                   !(-1 + rgbSpriteArgument5.integerState0255 <= integerLocal16) &&
                   integerArrayLocal15[rgbSpriteArgument5.integerState0258 + integerLocal13] == 0)) {
-                  SoftwareRaster.performAction0670(integerLocal17, integerLocal16, integerArgument1, integerArgument2);
+                  SoftwareRaster.performAction0661(integerLocal17, integerLocal16, integerArgument1, integerArgument2);
                 }
                 integerLocal13++;
                 integerLocal17++;
@@ -139,8 +139,8 @@ final class MatchingFieldValidator extends TextFieldValidator {
               integerLocal16++;
             }
             rgbSpriteLocal7.performAction0278(-rgbSpriteArgument5.integerState0259, -rgbSpriteArgument5.integerState0256);
-            SoftwareRaster.performAction0654(integerArrayLocal9, integerLocal10, integerLocal11);
-            SoftwareRaster.performAction0653(integerArrayLocal12);
+            SoftwareRaster.performAction0645(integerArrayLocal9, integerLocal10, integerLocal11);
+            SoftwareRaster.performAction0644(integerArrayLocal12);
             return;
           }
           return;
@@ -154,11 +154,11 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(',').append(integerArgument8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(',').append(integerArgument8).append(')').toString());
         }
     }
 
-    public static void performAction1454(byte byteArgument1) {
+    public static void performAction1427(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
@@ -176,7 +176,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "re.M(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal2), "re.M(" + byteArgument1 + ')');
         }
     }
 
@@ -223,11 +223,11 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1451(int integerArgument1, char characterArgument2, CharSequence charSequenceArgument3) {
+    final static boolean computeBoolean1424(int integerArgument1, char characterArgument2, CharSequence charSequenceArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -236,7 +236,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          if (!UiComponentPart020.computeBoolean1180(characterArgument2, -6237)) {
+          if (!UiComponentPart020.computeBoolean1153(characterArgument2, -6237)) {
             return false;
           }
           if (null == charSequenceArgument3) {
@@ -246,7 +246,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (12 <= integerLocal1) {
             return false;
           }
-          if (MixedSupport136.computeBoolean1681(characterArgument2, 32) &&
+          if (MixedSupport129.computeBoolean1650(characterArgument2, 32) &&
             0 == integerLocal1) {
             return false;
           }
@@ -262,7 +262,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
@@ -277,10 +277,10 @@ final class MatchingFieldValidator extends TextFieldValidator {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           if (this.uiComponentPart028State0006 instanceof CallbackContract005) {
-            callbackContract011Local1 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110840(-87);
+            callbackContract011Local1 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110824(-87);
             if (callbackContract011Local1 != null &&
               callbackContract011Local1.computeValidationStatus0084(20350) != MixedSupport023.validationStatusState0001) {
-              stackValidationStatusLocal3 = MixedSupport149.validationStatusState0005;
+              stackValidationStatusLocal3 = MixedSupport142.validationStatusState0005;
               return stackValidationStatusLocal3;
             }
           }
@@ -290,7 +290,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (stringArgument1.equals(this.uiComponentPart028State0006.stringState0078)) {
             stackValidationStatusLocal4 = MixedSupport023.validationStatusState0001;
           } else {
-            stackValidationStatusLocal4 = MixedSupport149.validationStatusState0005;
+            stackValidationStatusLocal4 = MixedSupport142.validationStatusState0005;
           }
           return stackValidationStatusLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
@@ -303,7 +303,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
@@ -335,11 +335,11 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final static void performAction1453(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, SceneWidget sceneWidgetArgument3, SceneWidget sceneWidgetArgument4, SceneWidget sceneWidgetArgument5, boolean booleanArgument6, SceneWidget sceneWidgetArgument7, SceneWidget sceneWidgetArgument8, BitmapFont bitmapFontArgument9, SceneWidget sceneWidgetArgument10, byte byteArgument11, SceneWidgetPart006 sceneWidgetPart006Argument12) {
+    final static void performAction1426(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, SceneWidget sceneWidgetArgument3, SceneWidget sceneWidgetArgument4, SceneWidget sceneWidgetArgument5, boolean booleanArgument6, SceneWidget sceneWidgetArgument7, SceneWidget sceneWidgetArgument8, BitmapFont bitmapFontArgument9, SceneWidget sceneWidgetArgument10, byte byteArgument11, SceneWidgetPart006 sceneWidgetPart006Argument12) {
         String stackStringLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -377,20 +377,20 @@ final class MatchingFieldValidator extends TextFieldValidator {
         int integerLocal35 = 0;
         integerLocal35 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport129.integerArrayState0207[1] = 6356832;
-          MixedSupport129.integerArrayState0207[0] = 16764000;
-          MixedSupport129.integerArrayState0207[3] = 16736511;
-          MixedSupport129.integerArrayState0207[4] = 16711935;
-          MixedSupport129.integerArrayState0207[2] = 9474303;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[1] = 6356832;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[0] = 16764000;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[3] = 16736511;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[4] = 16711935;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[2] = 9474303;
           MixedSupport040.sceneWidgetState0032 = sceneWidgetArgument2;
-          MixedSupport061.booleanState0077 = booleanArgument6;
+          EmailFormatValidator.booleanState0077 = booleanArgument6;
           MixedSupport038.bitmapFontState0013 = bitmapFontArgument9;
-          MixedSupport138.integerArrayState0234[0] = 16764000;
-          MixedSupport129.integerArrayState0207[4] = 16711935;
-          MixedSupport138.integerArrayState0234[3] = 16736511;
-          MixedSupport138.integerArrayState0234[2] = 16736352;
-          MixedSupport138.integerArrayState0234[1] = 6356832;
-          MixedSupport062.integerState0332 = 8421504;
+          MixedSupport131.integerArrayState0234[0] = 16764000;
+          ConfirmedEmailAvailabilityValidator.integerArrayState0207[4] = 16711935;
+          MixedSupport131.integerArrayState0234[3] = 16736511;
+          MixedSupport131.integerArrayState0234[2] = 16736352;
+          MixedSupport131.integerArrayState0234[1] = 6356832;
+          MixedSupport061.integerState0332 = 8421504;
           rgbSpriteLocal26 = new RgbSprite(4, 4);
           integerArrayLocal28 = rgbSpriteLocal26.integerArrayState0024;
           integerArrayLocal29 = rgbSpriteLocal26.integerArrayState0024;
@@ -403,24 +403,24 @@ final class MatchingFieldValidator extends TextFieldValidator {
           rgbSpriteArrayLocal31[4] = rgbSpriteLocal26;
           RichTextLayout.sceneWidgetState0021 = new SceneWidget(0L, sceneWidgetArgument7);
           sceneWidgetState0105 = new SceneWidget(0L, sceneWidgetArgument8);
-          RichTextLayout.sceneWidgetState0021.performAction1799(sceneWidgetState0105, -16834);
+          RichTextLayout.sceneWidgetState0021.performAction1768(sceneWidgetState0105, -16834);
           sceneWidgetLocal32 = new SceneWidget(0L, (SceneWidget) null);
           sceneWidgetLocal32.nodeDequeState0034 = new NodeDeque();
           MixedSupport026.sceneWidgetPart008State0001 = new SceneWidgetPart008(0L, sceneWidgetLocal32, sceneWidgetArgument5, sceneWidgetPart006Argument12);
-          sceneWidgetState0105.performAction1799(MixedSupport026.sceneWidgetPart008State0001, -16834);
-          MixedSupport121.sceneWidgetState0111 = new SceneWidget(0L, sceneWidgetArgument1);
-          sceneWidgetState0105.performAction1799(MixedSupport121.sceneWidgetState0111, -16834);
+          sceneWidgetState0105.performAction1768(MixedSupport026.sceneWidgetPart008State0001, -16834);
+          MixedSupport116.sceneWidgetState0111 = new SceneWidget(0L, sceneWidgetArgument1);
+          sceneWidgetState0105.performAction1768(MixedSupport116.sceneWidgetState0111, -16834);
           UiComponentPart033.sceneWidgetState0150 = new SceneWidget(0L, sceneWidgetArgument3);
           UiComponentPart033.sceneWidgetState0150.bitmapFontState0020 = MixedSupport038.bitmapFontState0013;
-          MixedSupport121.sceneWidgetState0111.performAction1799(UiComponentPart033.sceneWidgetState0150, -16834);
-          MixedSupport121.sceneWidgetState0111.performAction1805(-25);
+          MixedSupport116.sceneWidgetState0111.performAction1768(UiComponentPart033.sceneWidgetState0150, -16834);
+          MixedSupport116.sceneWidgetState0111.performAction1774(-25);
           DiagnosticSupport002.sceneWidgetState0057 = new SceneWidget(0L, (SceneWidget) null);
           DiagnosticSupport002.sceneWidgetState0057.rgbSpriteArrayState0033 = rgbSpriteArrayLocal31;
-          MixedSupport121.sceneWidgetState0111.performAction1799(DiagnosticSupport002.sceneWidgetState0057, -16834);
+          MixedSupport116.sceneWidgetState0111.performAction1768(DiagnosticSupport002.sceneWidgetState0057, -16834);
           ClientException.sceneWidgetArrayState0001 = new SceneWidget[5];
           MusicTrack.sceneWidgetArrayState0007 = new SceneWidget[5];
           NodeHashTable.sceneWidgetArrayState0004 = new SceneWidget[5];
-          MixedSupport080.sceneWidgetArrayState0002 = new SceneWidget[5];
+          MixedSupport076.sceneWidgetArrayState0002 = new SceneWidget[5];
           integerLocal33 = 0;
           boolean naturalLoopExitLocal36 = false;
           while (!(naturalLoopExitLocal36 = (integerLocal33 >= 5))) {
@@ -429,17 +429,17 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (integerLocal35 == 0) {
               boolean frameRemainderLocal37 = true;
               if (stackIntegerLocal2 == stackIntegerLocal3) {
-                if (MixedSupport061.booleanState0077) {
-                  stackStringLocal1 = MixedSupport134.stringState0554;
+                if (EmailFormatValidator.booleanState0077) {
+                  stackStringLocal1 = MixedSupport127.stringState0554;
                 } else {
-                  stackStringLocal1 = MixedSupport111.stringState0457;
+                  stackStringLocal1 = MixedSupport106.stringState0457;
                 }
                 stringLocal34 = stackStringLocal1;
               } else if (1 != integerLocal33 ||
-                !MixedSupport061.booleanState0077) {
+                !EmailFormatValidator.booleanState0077) {
                 frameRemainderLocal37 = (2 == integerLocal33);
                 if (frameRemainderLocal37) {
-                  stringLocal34 = MixedSupport121.stringState0512;
+                  stringLocal34 = MixedSupport116.stringState0512;
                 }
               } else {
                 stringLocal34 = MixedSupport031.stringState0152;
@@ -449,13 +449,13 @@ final class MatchingFieldValidator extends TextFieldValidator {
                 MusicTrack.sceneWidgetArrayState0007[integerLocal33] = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032, stringLocal34);
                 NodeHashTable.sceneWidgetArrayState0004[integerLocal33] = new SceneWidget(0L, (SceneWidget) null);
                 NodeHashTable.sceneWidgetArrayState0004[integerLocal33].integerState0885 = 1;
-                MixedSupport080.sceneWidgetArrayState0002[integerLocal33] = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032);
-                MixedSupport080.sceneWidgetArrayState0002[integerLocal33].integerState0885 = 1;
-                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1799(MusicTrack.sceneWidgetArrayState0007[integerLocal33], -16834);
-                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1799(NodeHashTable.sceneWidgetArrayState0004[integerLocal33], byteArgument11 - 16937);
-                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1799(MixedSupport080.sceneWidgetArrayState0002[integerLocal33], -16834);
-                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1805(-64);
-                RichTextLayout.sceneWidgetState0021.performAction1799(ClientException.sceneWidgetArrayState0001[integerLocal33], byteArgument11 ^ -16807);
+                MixedSupport076.sceneWidgetArrayState0002[integerLocal33] = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032);
+                MixedSupport076.sceneWidgetArrayState0002[integerLocal33].integerState0885 = 1;
+                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1768(MusicTrack.sceneWidgetArrayState0007[integerLocal33], -16834);
+                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1768(NodeHashTable.sceneWidgetArrayState0004[integerLocal33], byteArgument11 - 16937);
+                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1768(MixedSupport076.sceneWidgetArrayState0002[integerLocal33], -16834);
+                ClientException.sceneWidgetArrayState0001[integerLocal33].performAction1774(-64);
+                RichTextLayout.sceneWidgetState0021.performAction1768(ClientException.sceneWidgetArrayState0001[integerLocal33], byteArgument11 ^ -16807);
                 ClientException.integerState0140 = ClientException.integerState0140 + 1;
               }
               integerLocal33++;
@@ -468,13 +468,13 @@ final class MatchingFieldValidator extends TextFieldValidator {
             stackIntegerLocal3 = 103;
           }
           if (stackIntegerLocal2 != stackIntegerLocal3) {
-            MatchingFieldValidator.performAction1454((byte) -47);
+            MatchingFieldValidator.performAction1427((byte) -47);
           }
           NetworkArchiveRequestManager.sceneWidgetState0098 = new SceneWidget(0L, sceneWidgetArgument10);
-          NetworkArchiveRequestManager.sceneWidgetState0098.stringState0598 = PlatformSupport004.stringState0231;
-          RichTextLayout.sceneWidgetState0021.performAction1799(NetworkArchiveRequestManager.sceneWidgetState0098, -16834);
-          if (NodeHashTable.computeBoolean1533(-12851) &&
-            !MixedSupport151.booleanState0221) {
+          NetworkArchiveRequestManager.sceneWidgetState0098.stringState0598 = BoundedRandomAccessFile.stringState0231;
+          RichTextLayout.sceneWidgetState0021.performAction1768(NetworkArchiveRequestManager.sceneWidgetState0098, -16834);
+          if (NodeHashTable.computeBoolean1506(-12851) &&
+            !MixedSupport144.booleanState0221) {
             return;
           }
           MixedSupport009.uiComponentPart019State0001 = new UiComponentPart019(0, 0, 0, 0);
@@ -543,7 +543,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackStringLocal24 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal23).append(stackStringLocal24).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal23).append(stackStringLocal24).append(')').toString());
         }
     }
 

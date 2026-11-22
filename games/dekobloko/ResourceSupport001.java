@@ -6,8 +6,8 @@ final class ResourceSupport001 {
     byte[][] byteArrayArrayState0001;
     static int integerState0021;
     int[][] integerArrayArrayState0001;
-    MixedSupport096 mixedSupport096State0001;
-    MixedSupport096[] mixedSupport096ArrayState0001;
+    MixedSupport091 mixedSupport091State0001;
+    MixedSupport091[] mixedSupport091ArrayState0001;
     static RgbSprite rgbSpriteState0003;
     int[] integerArrayState0006;
     int integerState0022;
@@ -52,7 +52,7 @@ final class ResourceSupport001 {
           sceneWidgetState0001 = (SceneWidget) null;
         }
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1672(integerArgument2, -4);
+        cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
         cipherPacketBufferLocal1.writeByte(true, 1);
         cipherPacketBufferLocal1.writeByte(true, 0);
     }
@@ -71,7 +71,7 @@ final class ResourceSupport001 {
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          if (!resourceArchiveArgument1.computeBoolean0811((byte) 121)) {
+          if (!resourceArchiveArgument1.computeBoolean0798((byte) 121)) {
             stackStringLocal3 = (String) (stringArgument2);
             return stackStringLocal3;
           }
@@ -79,7 +79,7 @@ final class ResourceSupport001 {
             byteArrayLocal2 = (byte[]) null;
             ResourceSupport001.performAction0047((byte[]) null, -41, true, 8, -58, true);
           }
-          stackStringLocal4 = stringArgument4 + " - " + resourceArchiveArgument1.computeInteger0829((byte) -89) + "%";
+          stackStringLocal4 = stringArgument4 + " - " + resourceArchiveArgument1.computeInteger0816((byte) -89) + "%";
           return stackStringLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal12 = caughtParameterLocal13;
@@ -103,7 +103,7 @@ final class ResourceSupport001 {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ResourceSupport001 {
         int integerLocal3 = 0;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1672(integerArgument2, -4);
+          cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
           cipherPacketBufferLocal1.writeByte(booleanArgument3, 4);
@@ -126,7 +126,7 @@ final class ResourceSupport001 {
           cipherPacketBufferLocal1.writeBytes(false, byteArrayArgument1.length, byteArrayArgument1, 0);
           cipherPacketBufferLocal1.writeLengthByte(-integerLocal2 + cipherPacketBufferLocal1.position, booleanArgument3);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ad.A(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + booleanArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + booleanArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ad.A(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + booleanArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + booleanArgument6 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class ResourceSupport001 {
         int integerLocal44;
         integerLocal29 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          packetBufferLocal30 = new PacketBuffer(MixedSupport057.computeByteArray0694(byteArrayArgument1, -89));
+          packetBufferLocal30 = new PacketBuffer(MixedSupport057.computeByteArray0685(byteArrayArgument1, -89));
           integerLocal17 = packetBufferLocal30.readUnsignedByte((byte) -114);
           if (integerLocal17 >= 5 &&
             integerLocal17 <= 7) {
@@ -201,7 +201,7 @@ final class ResourceSupport001 {
             this.integerArrayState0008 = new int[this.integerState0020];
             if (integerLocal17 < 7) {
               for (integerLocal23 = 0; this.integerState0020 > integerLocal23; integerLocal23++) {
-                cachedIntegerLocal1 = integerLocal21 + packetBufferLocal30.readUnsignedShort(MixedSupport111.computeInteger1414(integerArgument2, 3));
+                cachedIntegerLocal1 = integerLocal21 + packetBufferLocal30.readUnsignedShort(MixedSupport106.computeInteger1387(integerArgument2, 3));
                 integerLocal21 = cachedIntegerLocal1;
                 this.integerArrayState0008[integerLocal23] = cachedIntegerLocal1;
                 if (this.integerArrayState0008[integerLocal23] > integerLocal22) {
@@ -235,7 +235,7 @@ final class ResourceSupport001 {
               for (integerLocal43 = 0; this.integerState0020 > integerLocal43; integerLocal43++) {
                 this.integerArrayState0009[this.integerArrayState0008[integerLocal43]] = packetBufferLocal30.readInt(integerArgument2 + 7553);
               }
-              this.mixedSupport096State0001 = new MixedSupport096(this.integerArrayState0009);
+              this.mixedSupport091State0001 = new MixedSupport091(this.integerArrayState0009);
             }
             for (integerLocal34 = integerArgument2; this.integerState0020 > integerLocal34; integerLocal34++) {
               this.integerArrayState0010[this.integerArrayState0008[integerLocal34]] = packetBufferLocal30.readInt(7553);
@@ -304,7 +304,7 @@ final class ResourceSupport001 {
               }
             }
             if (integerLocal19 != 0) {
-              this.mixedSupport096ArrayState0001 = new MixedSupport096[integerLocal22 + 1];
+              this.mixedSupport091ArrayState0001 = new MixedSupport091[integerLocal22 + 1];
               this.integerArrayArrayState0002 = new int[integerLocal22 + 1][];
               for (integerLocal38 = 0; this.integerState0020 > integerLocal38; integerLocal38++) {
                 integerLocal41 = this.integerArrayState0008[integerLocal38];
@@ -320,9 +320,9 @@ final class ResourceSupport001 {
                   } else {
                     integerLocal40 = integerLocal44;
                   }
-                  this.integerArrayArrayState0002[integerLocal41][integerLocal40] = packetBufferLocal30.readInt(MixedSupport111.computeInteger1414(integerArgument2, 7553));
+                  this.integerArrayArrayState0002[integerLocal41][integerLocal40] = packetBufferLocal30.readInt(MixedSupport106.computeInteger1387(integerArgument2, 7553));
                 }
-                this.mixedSupport096ArrayState0001[integerLocal41] = new MixedSupport096(this.integerArrayArrayState0002[integerLocal41]);
+                this.mixedSupport091ArrayState0001[integerLocal41] = new MixedSupport091(this.integerArrayArrayState0002[integerLocal41]);
               }
               return;
             }
@@ -339,14 +339,14 @@ final class ResourceSupport001 {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
     ResourceSupport001(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3) {
         int integerLocal1 = 0;
         try {
-          this.integerState0024 = SceneWidgetPart012.computeInteger1636(byteArrayArgument1.length, 0, byteArrayArgument1);
+          this.integerState0024 = SceneWidgetPart012.computeInteger1606(byteArrayArgument1.length, 0, byteArrayArgument1);
           if (this.integerState0024 != integerArgument2) {
             throw new RuntimeException();
           }
@@ -354,7 +354,7 @@ final class ResourceSupport001 {
             if (byteArrayArgument3.length != 64) {
               throw new RuntimeException();
             }
-            this.byteArrayState0001 = MixedSupport139.computeByteArray1706(0, byteArrayArgument1, 0, byteArrayArgument1.length);
+            this.byteArrayState0001 = MixedSupport132.computeByteArray1675(0, byteArrayArgument1, 0, byteArrayArgument1.length);
             for (integerLocal1 = 0; integerLocal1 < 64; integerLocal1++) {
               if (byteArrayArgument3[integerLocal1] != this.byteArrayState0001[integerLocal1]) {
                 throw new RuntimeException();
@@ -363,7 +363,7 @@ final class ResourceSupport001 {
           }
           this.performAction0046(byteArrayArgument1, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ad.<init>(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ad.<init>(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 

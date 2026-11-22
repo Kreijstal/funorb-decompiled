@@ -13,8 +13,8 @@ final class MixedSupport015 {
 
     final static MixedSupport033 computeMixedSupport0330201(int integerArgument1, byte byteArgument2) {
         MixedSupport033 mixedSupport033Local1 = new MixedSupport033();
-        PcmPlayerService.nodeDequeState0028.performAction1766(mixedSupport033Local1, 2777);
-        MixedSupport050.performAction0600(integerArgument1, 65);
+        PcmPlayerService.nodeDequeState0028.performAction1735(mixedSupport033Local1, 2777);
+        MixedSupport050.performAction0597(integerArgument1, 65);
         if (byteArgument2 <= -81) {
           return mixedSupport033Local1;
         }
@@ -37,7 +37,7 @@ final class MixedSupport015 {
     }
 
     final static void performAction0200(int integerArgument1) {
-        MixedSupport071.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport127.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport132.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019);
+        MixedSupport067.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019);
         if (integerArgument1 != 8) {
           MixedSupport015.clearStaticReferences((byte) 88);
         }
@@ -47,13 +47,13 @@ final class MixedSupport015 {
         try {
           this.rgbSpriteArrayState0004 = rgbSpriteArrayArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void performAction0202(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = -29 / ((integerArgument2 + 69) / 54);
-        GameplayControls.performAction1780(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
+        GameplayControls.performAction1749(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
     }
 
     static {

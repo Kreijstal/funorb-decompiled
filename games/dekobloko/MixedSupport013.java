@@ -116,7 +116,7 @@ final class MixedSupport013 {
                     if (integerLocal16 <= 255) {
                       integerLocal19 = SoftwareRaster.integerArrayState0063[integerLocal9];
                       integerLocal20 = integerLocal17 * (16711935 & integerLocal19) + integerLocal16 * (integerLocal18 & 16711935) >> 8 & 16711935;
-                      SoftwareRaster.integerArrayState0063[integerLocal9] = MixedSupport079.computeInteger0949(65280, MixedSupport079.computeInteger0949(65280, integerLocal18) * integerLocal16 + integerLocal17 * MixedSupport079.computeInteger0949(65280, integerLocal19) >> 8) + integerLocal20;
+                      SoftwareRaster.integerArrayState0063[integerLocal9] = MixedSupport075.computeInteger0930(65280, MixedSupport075.computeInteger0930(65280, integerLocal18) * integerLocal16 + integerLocal17 * MixedSupport075.computeInteger0930(65280, integerLocal19) >> 8) + integerLocal20;
                     } else {
                       SoftwareRaster.integerArrayState0063[integerLocal9] = integerLocal18;
                     }
@@ -142,7 +142,7 @@ final class MixedSupport013 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class MixedSupport013 {
         int integerLocal4;
         if (byteArgument3 == -84) {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1672(integerArgument2, -4);
+          cipherPacketBufferLocal1.performAction1641(integerArgument2, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
           cipherPacketBufferLocal1.writeByte(true, 6);
@@ -178,7 +178,7 @@ final class MixedSupport013 {
         }
         booleanArrayState0003 = (boolean[]) null;
         cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal3.performAction1672(integerArgument2, -4);
+        cipherPacketBufferLocal3.performAction1641(integerArgument2, -4);
         cipherPacketBufferLocal3.position = cipherPacketBufferLocal3.position + 1;
         integerLocal4 = cipherPacketBufferLocal3.position;
         cipherPacketBufferLocal3.writeByte(true, 6);

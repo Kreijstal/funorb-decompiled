@@ -3,19 +3,19 @@
  */
 final class MixedSupport048 {
     int integerState0261;
-    static MixedSupport111 mixedSupport111State0003;
+    static MixedSupport106 mixedSupport106State0003;
     static String stringState0203;
     static SceneWidget sceneWidgetState0041;
-    static MixedSupport076 mixedSupport076State0001;
+    static MixedSupport072 mixedSupport072State0001;
     static String stringState0204;
 
-    final static void performAction0586(boolean booleanArgument1) {
+    final static void performAction0583(boolean booleanArgument1) {
         if (MixedSupport052.integerState0269 == 10) {
-          Js5ArchiveManager.performAction1121(-5);
+          Js5ArchiveManager.performAction1102(-5);
           MixedSupport052.integerState0269 = 11;
         } else {
           if (!FunOrbClient.computeBoolean0115((byte) -124)) {
-            Js5ArchiveManager.performAction1121(-5);
+            Js5ArchiveManager.performAction1102(-5);
             MixedSupport052.integerState0269 = 11;
           }
         }
@@ -41,14 +41,14 @@ final class MixedSupport048 {
           return;
         }
         sceneWidgetState0041 = null;
-        mixedSupport111State0003 = null;
-        mixedSupport076State0001 = null;
+        mixedSupport106State0003 = null;
+        mixedSupport072State0001 = null;
     }
 
     static {
-        mixedSupport111State0003 = new MixedSupport111(15, 0, 1, 0);
+        mixedSupport106State0003 = new MixedSupport106(15, 0, 1, 0);
         stringState0203 = "Macroing or use of bots";
-        mixedSupport076State0001 = null;
+        mixedSupport072State0001 = null;
         stringState0204 = "Public chat is unavailable while setting up a rated game.";
     }
 }

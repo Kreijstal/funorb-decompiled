@@ -35,7 +35,7 @@ final class MixedSupport011 {
         RuntimeException caughtExceptionLocal12 = null;
         RuntimeException runtimeExceptionLocal13 = null;
         try {
-          KeyboardInputHandler.performAction1110(integerArgument19, new MixedSupport015(rgbSpriteArrayArgument13), bitmapFontArgument5, integerArgument7, integerArgument21, new MixedSupport015(rgbSpriteArrayArgument2), integerArgument14, bitmapFontArgument3, integerArgument15, integerArgument20, new MixedSupport015(rgbSpriteArrayArgument17), integerArgument8, -6, integerArgument18, integerArgument16, integerArgument1, integerArgument11, integerArgument9, integerArgument6, integerArgument12, integerArgument10);
+          KeyboardInputHandler.performAction1091(integerArgument19, new MixedSupport015(rgbSpriteArrayArgument13), bitmapFontArgument5, integerArgument7, integerArgument21, new MixedSupport015(rgbSpriteArrayArgument2), integerArgument14, bitmapFontArgument3, integerArgument15, integerArgument20, new MixedSupport015(rgbSpriteArrayArgument17), integerArgument8, -6, integerArgument18, integerArgument16, integerArgument1, integerArgument11, integerArgument9, integerArgument6, integerArgument12, integerArgument10);
           if (!booleanArgument4) {
             rawSoundState0004 = (RawSound) null;
           }
@@ -74,7 +74,7 @@ final class MixedSupport011 {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(',').append(integerArgument21).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(',').append(integerArgument21).append(')').toString());
         }
     }
 
@@ -97,9 +97,9 @@ final class MixedSupport011 {
             stackRgbSpriteArrayLocal4 = (RgbSprite[]) null;
             return stackRgbSpriteArrayLocal4;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0832(integerArgument1 - 113, stringArgument3);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0819(integerLocal1, 13030, stringArgument4);
-          stackRgbSpriteArrayLocal5 = SocketFactory.computeRgbSpriteArray1825(resourceArchiveArgument2, -126, integerLocal3, integerLocal1);
+          integerLocal1 = resourceArchiveArgument2.computeInteger0819(integerArgument1 - 113, stringArgument3);
+          integerLocal3 = resourceArchiveArgument2.computeInteger0806(integerLocal1, 13030, stringArgument4);
+          stackRgbSpriteArrayLocal5 = SocketFactory.computeRgbSpriteArray1793(resourceArchiveArgument2, -126, integerLocal3, integerLocal1);
           return stackRgbSpriteArrayLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
           caughtExceptionLocal13 = caughtParameterLocal14;
@@ -123,7 +123,7 @@ final class MixedSupport011 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
         }
     }
 

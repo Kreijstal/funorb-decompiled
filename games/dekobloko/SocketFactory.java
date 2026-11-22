@@ -12,14 +12,14 @@ abstract class SocketFactory {
     String stringState0614;
     static String stringState0615;
 
-    final static void performAction1824(byte byteArgument1) {
+    final static void performAction1792(byte byteArgument1) {
         if (MixedSupport046.booleanState0053) {
           GameDomainSupport001.performAction0097(true);
-          SceneWidgetPart006.performAction0791(74);
-          MixedSupport021.performAction0326(true);
+          SceneWidgetPart006.performAction0778(74);
+          MixedSupport021.performAction0325(true);
           MixedSupport046.booleanState0053 = false;
           if (byteArgument1 <= 46) {
-            SocketFactory.computeInteger1826(true);
+            SocketFactory.computeInteger1794(true);
             return;
           }
           return;
@@ -27,10 +27,10 @@ abstract class SocketFactory {
         if (byteArgument1 > 46) {
           return;
         }
-        SocketFactory.computeInteger1826(true);
+        SocketFactory.computeInteger1794(true);
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1825(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RgbSprite[] computeRgbSpriteArray1793(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         RgbSprite[] stackRgbSpriteArrayLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -38,13 +38,13 @@ abstract class SocketFactory {
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          if (!SceneWidgetPart002.computeBoolean0561(integerArgument4, resourceArchiveArgument1, integerArgument3, 115)) {
+          if (!SceneWidgetPart002.computeBoolean0558(integerArgument4, resourceArchiveArgument1, integerArgument3, 115)) {
             return null;
           }
           if (integerArgument2 >= -123) {
-            SocketFactory.performAction1824((byte) 55);
+            SocketFactory.performAction1792((byte) 55);
           }
-          stackRgbSpriteArrayLocal2 = UiComponentPart006.computeRgbSpriteArray0358(false);
+          stackRgbSpriteArrayLocal2 = UiComponentPart006.computeRgbSpriteArray0356(false);
           return stackRgbSpriteArrayLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -56,18 +56,18 @@ abstract class SocketFactory {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final java.net.Socket computeSocket1827(int integerArgument1) throws IOException {
+    final java.net.Socket computeSocket1795(int integerArgument1) throws IOException {
         if (integerArgument1 != 2) {
           return (java.net.Socket) null;
         }
         return new java.net.Socket(this.stringState0614, this.integerState0927);
     }
 
-    abstract java.net.Socket computeSocket1503(int integerArgument1) throws IOException;
+    abstract java.net.Socket computeSocket1476(int integerArgument1) throws IOException;
 
     public static void clearStaticReferences(byte byteArgument1) {
         stringState0612 = null;
@@ -80,7 +80,7 @@ abstract class SocketFactory {
         stringState0611 = null;
     }
 
-    final static int computeInteger1826(boolean booleanArgument1) {
+    final static int computeInteger1794(boolean booleanArgument1) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -91,22 +91,22 @@ abstract class SocketFactory {
         try {
           integerLocal1 = booleanArgument1 ? 1 : 0;
           while (DualNodeDeque.computeBoolean0027(114)) {
-            UiComponentPart033.mixedSupport121State0004.performAction1539(-38);
-            if (!UiComponentPart033.mixedSupport121State0004.computeBoolean1547((byte) 114)) {
+            UiComponentPart033.mixedSupport116State0004.performAction1512(-38);
+            if (!UiComponentPart033.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
               continue;
             }
             integerLocal1 = 1;
           }
-          UiComponentPart033.mixedSupport121State0004.performAction1542(MixedSupport106.computeInteger1296(MixedSupport106.integerState0590, -2141435999, HashNode.integerState0069), -20563, MixedSupport106.computeInteger1296(TextLineMetrics.integerState0535, -2141435999, UiComponentPart013.integerState0276));
-          if (UiComponentPart033.mixedSupport121State0004.computeBoolean1547((byte) 114)) {
+          UiComponentPart033.mixedSupport116State0004.performAction1515(MixedSupport101.computeInteger1269(MixedSupport101.integerState0590, -2141435999, HashNode.integerState0069), -20563, MixedSupport101.computeInteger1269(TextLineMetrics.integerState0535, -2141435999, UiComponentPart013.integerState0276));
+          if (UiComponentPart033.mixedSupport116State0004.computeBoolean1520((byte) 114)) {
             integerLocal1 = 1;
           }
           integerLocal3 = 0;
           if (integerLocal1 != 0 &&
-            UiComponentPart033.mixedSupport121State0004.integerState0754 >= 0) {
-            integerLocal3 = UiComponentPart010.integerArrayState0039[UiComponentPart033.mixedSupport121State0004.integerState0754];
+            UiComponentPart033.mixedSupport116State0004.integerState0754 >= 0) {
+            integerLocal3 = UiComponentPart010.integerArrayState0039[UiComponentPart033.mixedSupport116State0004.integerState0754];
             if (integerLocal3 == 2) {
-              InteractiveComponent.performAction0467(-1209);
+              InteractiveComponent.performAction0465(-1209);
             }
           }
           stackIntegerLocal5 = integerLocal3;
@@ -114,7 +114,7 @@ abstract class SocketFactory {
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
           runtimeExceptionLocal2 = caughtExceptionLocal6;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "we.C(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal2), "we.C(" + booleanArgument1 + ')');
         }
     }
 

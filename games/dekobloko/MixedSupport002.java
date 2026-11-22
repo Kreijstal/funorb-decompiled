@@ -33,7 +33,7 @@ final class MixedSupport002 {
           if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
             return UiComponentPart024.stringState0435;
           }
-          if (!ThemeTips.mixedSupport124State0001.computeBoolean1588(92)) {
+          if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {
             return UiComponentPart024.stringState0435;
           }
           return SceneWidgetPart004.stringState0217;
@@ -41,7 +41,7 @@ final class MixedSupport002 {
         if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
           return UiComponentPart024.stringState0435;
         }
-        if (!ThemeTips.mixedSupport124State0001.computeBoolean1588(92)) {
+        if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {
           return UiComponentPart024.stringState0435;
         }
         return SceneWidgetPart004.stringState0217;

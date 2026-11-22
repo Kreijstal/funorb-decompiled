@@ -1,69 +1,291 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class MixedSupport086 {
-    static int integerState0514;
-    static int[] integerArrayState0157;
-    static MixedSupport091 mixedSupport091State0004;
-    static int[] integerArrayState0158;
-    static String stringState0351;
+final class MixedSupport086 {
+    static String stringState0362;
+    private HashNode[] hashNodeArrayState0001;
+    private int integerState0536;
+    static String stringState0363;
+    private int integerState0537;
+    static String stringState0364;
+    static long longState0032;
+    static SceneWidget sceneWidgetState0088;
+    static RgbSprite rgbSpriteState0036;
+    static String stringState0365;
+    private HashNode hashNodeState0005;
+    private HashNode hashNodeState0006;
 
-    public static void clearStaticReferences(boolean booleanArgument1) {
-        integerArrayState0158 = null;
-        mixedSupport091State0004 = null;
-        stringState0351 = null;
-        integerArrayState0157 = null;
-        if (booleanArgument1) {
-          stringState0351 = (String) null;
-        }
-    }
-
-    abstract byte[] computeByteArray0550(int integerArgument1);
-
-    final static void performAction1080(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
+    final static void performAction1110(RgbSprite[] rgbSpriteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        RuntimeException stackRuntimeExceptionLocal1 = null;
+        StringBuilder stackStringBuilderLocal2 = null;
+        String stackStringLocal3 = null;
+        RuntimeException caughtExceptionLocal4 = null;
+        int integerLocal5 = 0;
+        RuntimeException runtimeExceptionLocal6 = null;
+        int integerLocal7 = 0;
+        int integerLocal8 = 0;
+        int integerLocal9 = 0;
+        int integerLocal10 = 0;
+        int integerLocal11 = 0;
+        integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (byteArgument3 >= 0) {
-            MixedSupport086.performAction1079((byte) 1);
+          if (rgbSpriteArrayArgument1 != null &&
+            integerArgument2 > 0) {
+            integerLocal5 = rgbSpriteArrayArgument1[0].integerState0254;
+            integerLocal7 = rgbSpriteArrayArgument1[2].integerState0254;
+            if (integerArgument4 != -1) {
+              stringState0362 = (String) null;
+            }
+            integerLocal8 = rgbSpriteArrayArgument1[1].integerState0254;
+            rgbSpriteArrayArgument1[0].performAction0278(integerArgument5, integerArgument3);
+            rgbSpriteArrayArgument1[2].performAction0278(integerArgument5 + integerArgument2 - integerLocal7, integerArgument3);
+            SoftwareRaster.performAction0652(MixedSupport069.integerArrayState0123);
+            SoftwareRaster.performAction0663(integerLocal5 + integerArgument5, integerArgument3, integerArgument5 + (integerArgument2 - integerLocal7), integerArgument3 + rgbSpriteArrayArgument1[1].integerState0260);
+            integerLocal9 = integerLocal5 + integerArgument5;
+            integerLocal10 = -integerLocal7 + integerArgument5 + integerArgument2;
+            for (integerArgument5 = integerLocal9; integerArgument5 < integerLocal10; integerArgument5 = integerArgument5 + integerLocal8) {
+              rgbSpriteArrayArgument1[1].performAction0278(integerArgument5, integerArgument3);
+            }
+            SoftwareRaster.performAction0644(MixedSupport069.integerArrayState0123);
+            return;
           }
-          MixedSupport080.integerState0433 = integerArgument1;
-          PcmResampler.integerState0344 = integerArgument2;
-          FullscreenCanvas.mixedSupport015State0004 = mixedSupport015Argument6;
-          ResourceSupport002.integerState0050 = integerArgument5;
-          MixedSupport047.mixedSupport015State0002 = mixedSupport015Argument4;
-        } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "mk.C(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (mixedSupport015Argument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal12) {
+          caughtExceptionLocal4 = caughtParameterLocal12;
+          runtimeExceptionLocal6 = caughtExceptionLocal4;
+          stackRuntimeExceptionLocal1 = runtimeExceptionLocal6;
+          stackStringBuilderLocal2 = new StringBuilder().append("ng.A(");
+          if (rgbSpriteArrayArgument1 == null) {
+            stackStringLocal3 = "null";
+          } else {
+            stackStringLocal3 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    final static void performAction1079(byte byteArgument1) {
-        MixedSupport151 mixedSupport151Local1 = null;
-        if (byteArgument1 != -5) {
-          MixedSupport015 mixedSupport015Local2 = (MixedSupport015) null;
-          MixedSupport086.performAction1080(-94, -9, (byte) -115, (MixedSupport015) null, -10, (MixedSupport015) null);
-          mixedSupport151Local1 = (MixedSupport151) (MixedSupport018.nodeDequeState0005.computeHashNode1775(byteArgument1 ^ 113));
-          if (mixedSupport151Local1 == null) {
-            throw new IllegalStateException();
-          }
-          SoftwareRaster.performAction0654(mixedSupport151Local1.integerArrayState0258, mixedSupport151Local1.integerState0926, mixedSupport151Local1.integerState0924);
-          SoftwareRaster.performAction0658(mixedSupport151Local1.integerState0922, mixedSupport151Local1.integerState0921, mixedSupport151Local1.integerState0925, mixedSupport151Local1.integerState0923);
-          mixedSupport151Local1.integerArrayState0258 = null;
-          MixedSupport123.nodeDequeState0032.performAction1766(mixedSupport151Local1, byteArgument1 ^ -2782);
+    public static void clearStaticReferences(int integerArgument1) {
+        sceneWidgetState0088 = null;
+        stringState0362 = null;
+        if (integerArgument1 > -26) {
           return;
         }
-        MixedSupport151 mixedSupport151Local3 = (MixedSupport151) (MixedSupport018.nodeDequeState0005.computeHashNode1775(byteArgument1 ^ 113));
-        if (mixedSupport151Local3 == null) {
-          throw new IllegalStateException();
-        }
-        SoftwareRaster.performAction0654(mixedSupport151Local3.integerArrayState0258, mixedSupport151Local3.integerState0926, mixedSupport151Local3.integerState0924);
-        SoftwareRaster.performAction0658(mixedSupport151Local3.integerState0922, mixedSupport151Local3.integerState0921, mixedSupport151Local3.integerState0925, mixedSupport151Local3.integerState0923);
-        mixedSupport151Local3.integerArrayState0258 = null;
-        MixedSupport123.nodeDequeState0032.performAction1766(mixedSupport151Local3, byteArgument1 ^ -2782);
+        stringState0364 = null;
+        rgbSpriteState0036 = null;
+        stringState0365 = null;
+        stringState0363 = null;
     }
 
-    abstract void performAction0552(byte[] byteArrayArgument1, boolean booleanArgument2);
+    final void performAction1109(long longArgument1, int integerArgument2, HashNode hashNodeArgument3) {
+        HashNode hashNodeLocal1 = null;
+        try {
+          if (null != hashNodeArgument3.next) {
+            hashNodeArgument3.performAction0149((byte) 116);
+          }
+          hashNodeLocal1 = this.hashNodeArrayState0001[(int)((long)(this.integerState0537 + integerArgument2) & longArgument1)];
+          hashNodeArgument3.next = hashNodeLocal1.next;
+          hashNodeArgument3.previous = hashNodeLocal1;
+          hashNodeArgument3.next.previous = hashNodeArgument3;
+          hashNodeArgument3.previous.next = hashNodeArgument3;
+          hashNodeArgument3.key = longArgument1;
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ng.E(" + longArgument1 + ',' + integerArgument2 + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final HashNode computeHashNode1108(long longArgument1, int integerArgument2) {
+        HashNode hashNodeLocal1 = null;
+        int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        HashNode hashNodeLocal3 = this.hashNodeArrayState0001[(int)((long)(this.integerState0537 - 1) & longArgument1)];
+        this.hashNodeState0005 = hashNodeLocal3.previous;
+        while (this.hashNodeState0005 != hashNodeLocal3) {
+          if (~this.hashNodeState0005.key == ~longArgument1) {
+            hashNodeLocal1 = this.hashNodeState0005;
+            this.hashNodeState0005 = this.hashNodeState0005.previous;
+            return hashNodeLocal1;
+          }
+          this.hashNodeState0005 = this.hashNodeState0005.previous;
+        }
+        this.hashNodeState0005 = null;
+        if (integerArgument2 < 48) {
+          return (HashNode) null;
+        }
+        return null;
+    }
+
+    final static EmailValidationError computeEmailValidationError1107(int integerArgument1, String stringArgument2) {
+        EmailValidationError stackEmailValidationErrorLocal1 = null;
+        EmailValidationError stackEmailValidationErrorLocal2 = null;
+        EmailValidationError stackEmailValidationErrorLocal3 = null;
+        int stackIntegerLocal4 = 0;
+        EmailValidationError stackEmailValidationErrorLocal5 = null;
+        EmailValidationError stackEmailValidationErrorLocal6 = null;
+        EmailValidationError stackEmailValidationErrorLocal7 = null;
+        RuntimeException stackRuntimeExceptionLocal8 = null;
+        StringBuilder stackStringBuilderLocal9 = null;
+        String stackStringLocal10 = null;
+        RuntimeException caughtExceptionLocal11 = null;
+        int integerLocal12 = 0;
+        RuntimeException runtimeExceptionLocal13 = null;
+        int integerLocal14 = 0;
+        int integerLocal15 = 0;
+        int integerLocal16 = 0;
+        int integerLocal17 = 0;
+        RgbSprite[] rgbSpriteArrayLocal18 = null;
+        int integerLocal19;
+        int integerLocal20;
+        int integerLocal21;
+        integerLocal17 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        try {
+          integerLocal12 = stringArgument2.length();
+          if (integerLocal12 == 0) {
+            stackEmailValidationErrorLocal1 = MouseWheelInput.emailValidationErrorState0004;
+            return stackEmailValidationErrorLocal1;
+          }
+          if (integerLocal12 > 64) {
+            stackEmailValidationErrorLocal2 = MixedSupport045.emailValidationErrorState0003;
+            return stackEmailValidationErrorLocal2;
+          }
+          if (integerArgument1 != -1) {
+            rgbSpriteArrayLocal18 = (RgbSprite[]) null;
+            MixedSupport086.performAction1110((RgbSprite[]) null, 38, -12, 7, -118);
+          }
+          if (stringArgument2.charAt(0) == 34) {
+            if (stringArgument2.charAt(integerLocal12 - 1) != 34) {
+              stackEmailValidationErrorLocal3 = DualNode.emailValidationErrorState0001;
+              return stackEmailValidationErrorLocal3;
+            }
+            integerLocal14 = 0;
+            for (integerLocal15 = 1; integerLocal12 - 1 > integerLocal15; integerLocal15++) {
+              integerLocal16 = stringArgument2.charAt(integerLocal15);
+              if (integerLocal16 == 92) {
+                stackIntegerLocal4 = (integerLocal14 != 0) ? 0 : 1;
+                integerLocal14 = stackIntegerLocal4;
+              } else {
+                if (integerLocal16 == 34 &&
+                  integerLocal14 == 0) {
+                  stackEmailValidationErrorLocal5 = DualNode.emailValidationErrorState0001;
+                  return stackEmailValidationErrorLocal5;
+                }
+                integerLocal14 = 0;
+              }
+            }
+            return null;
+          }
+          integerLocal19 = 0;
+          for (integerLocal20 = 0; integerLocal12 > integerLocal20; integerLocal20++) {
+            boolean frameRemainderLocal22 = true;
+            integerLocal21 = stringArgument2.charAt(integerLocal20);
+            if (46 == integerLocal21) {
+              if (0 != integerLocal20 &&
+                integerLocal20 != -1 + integerLocal12 &&
+                integerLocal19 == 0) {
+                integerLocal19 = 1;
+                frameRemainderLocal22 = false;
+              }
+              else {
+                stackEmailValidationErrorLocal6 = DualNode.emailValidationErrorState0001;
+                return stackEmailValidationErrorLocal6;
+              }
+            }
+            if (frameRemainderLocal22) {
+              if (-1 == SceneWidgetPart008.stringState0368.indexOf(integerLocal21)) {
+                stackEmailValidationErrorLocal7 = DualNode.emailValidationErrorState0001;
+                return stackEmailValidationErrorLocal7;
+              }
+              integerLocal19 = 0;
+            }
+          }
+          return null;
+        } catch (java.lang.RuntimeException caughtParameterLocal23) {
+          caughtExceptionLocal11 = caughtParameterLocal23;
+          runtimeExceptionLocal13 = caughtExceptionLocal11;
+          stackRuntimeExceptionLocal8 = runtimeExceptionLocal13;
+          stackStringBuilderLocal9 = new StringBuilder().append("ng.B(").append(integerArgument1).append(',');
+          if (stringArgument2 == null) {
+            stackStringLocal10 = "null";
+          } else {
+            stackStringLocal10 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+        }
+    }
+
+    final HashNode computeHashNode1106(byte byteArgument1) {
+        this.integerState0536 = 0;
+        if (byteArgument1 != 126) {
+          this.computeHashNode1111((byte) 112);
+          return this.computeHashNode1111((byte) 49);
+        }
+        return this.computeHashNode1111((byte) 49);
+    }
+
+    final HashNode computeHashNode1111(byte byteArgument1) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        int integerLocal3;
+        HashNode hashNodeLocal4;
+        HashNode hashNodeLocal5;
+        HashNode hashNodeLocal6;
+        HashNode hashNodeLocal7;
+        integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        if (this.integerState0536 <= 0) {
+          if (byteArgument1 < 37) {
+            return (HashNode) null;
+          }
+          do {
+            if (this.integerState0537 <= this.integerState0536) {
+              return null;
+            }
+            integerLocal1 = this.integerState0536;
+            this.integerState0536 = this.integerState0536 + 1;
+            hashNodeLocal4 = this.hashNodeArrayState0001[integerLocal1].previous;
+            hashNodeLocal7 = hashNodeLocal4;
+          } while (hashNodeLocal4 == this.hashNodeArrayState0001[-1 + this.integerState0536]);
+          this.hashNodeState0006 = hashNodeLocal7.previous;
+          return hashNodeLocal7;
+        }
+        if (this.hashNodeArrayState0001[-1 + this.integerState0536] != this.hashNodeState0006) {
+          hashNodeLocal6 = this.hashNodeState0006;
+          this.hashNodeState0006 = hashNodeLocal6.previous;
+          return hashNodeLocal6;
+        }
+        if (byteArgument1 < 37) {
+          return (HashNode) null;
+        }
+        do {
+          if (this.integerState0537 <= this.integerState0536) {
+            return null;
+          }
+          integerLocal2 = this.integerState0536;
+          this.integerState0536 = this.integerState0536 + 1;
+          hashNodeLocal4 = this.hashNodeArrayState0001[integerLocal2].previous;
+          hashNodeLocal5 = hashNodeLocal4;
+        } while (hashNodeLocal4 == this.hashNodeArrayState0001[-1 + this.integerState0536]);
+        this.hashNodeState0006 = hashNodeLocal5.previous;
+        return hashNodeLocal5;
+    }
+
+    MixedSupport086(int integerArgument1) {
+        int integerLocal1 = 0;
+        HashNode cachedHashNodeLocal2 = null;
+        HashNode hashNodeLocal3;
+        this.integerState0536 = 0;
+        this.integerState0537 = integerArgument1;
+        this.hashNodeArrayState0001 = new HashNode[integerArgument1];
+        for (integerLocal1 = 0; integerArgument1 > integerLocal1; integerLocal1++) {
+          cachedHashNodeLocal2 = new HashNode();
+          hashNodeLocal3 = cachedHashNodeLocal2;
+          this.hashNodeArrayState0001[integerLocal1] = cachedHashNodeLocal2;
+          hashNodeLocal3.previous = hashNodeLocal3;
+          hashNodeLocal3.next = hashNodeLocal3;
+        }
+    }
 
     static {
-        stringState0351 = "Match by...";
-        integerArrayState0158 = new int[256];
+        stringState0363 = "Please check if address is correct";
+        stringState0362 = "Stage";
+        stringState0364 = "This password is part of your Player Name, and would be easy to guess";
+        stringState0365 = "Waiting for graphics";
     }
 }

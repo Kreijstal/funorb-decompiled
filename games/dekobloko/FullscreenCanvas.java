@@ -14,16 +14,16 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
         try {
           this.booleanState0156 = true;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ql.focusLost(" + (focusEventArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ql.focusLost(" + (focusEventArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void focusGained(java.awt.event.FocusEvent focusEventArgument1) {
     }
 
-    final static RenderingSupport010 computeRenderingSupport0101409(ResourceArchive resourceArchiveArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static RenderingSupport009 computeRenderingSupport0091382(ResourceArchive resourceArchiveArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
-        RenderingSupport010 stackRenderingSupport010Local2 = null;
+        RenderingSupport009 stackRenderingSupport009Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -34,11 +34,11 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           if (byteArgument2 != 41) {
             stringState0454 = (String) null;
           }
-          if (!SceneWidgetPart002.computeBoolean0561(integerArgument4, resourceArchiveArgument1, integerArgument3, 56)) {
+          if (!SceneWidgetPart002.computeBoolean0558(integerArgument4, resourceArchiveArgument1, integerArgument3, 56)) {
             return null;
           }
-          stackRenderingSupport010Local2 = SceneWidget.computeRenderingSupport0101804(resourceArchiveArgument5.computeByteArray0818(integerArgument3, -117, integerArgument4), (byte) -5);
-          return stackRenderingSupport010Local2;
+          stackRenderingSupport009Local2 = SceneWidget.computeRenderingSupport0091773(resourceArchiveArgument5.computeByteArray0805(integerArgument3, -117, integerArgument4), (byte) -5);
+          return stackRenderingSupport009Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
           runtimeExceptionLocal1 = caughtExceptionLocal8;
@@ -55,7 +55,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
@@ -65,12 +65,12 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     public final void update(java.awt.Graphics graphicsArgument1) {
     }
 
-    final static void performAction1408(int integerArgument1, byte byteArgument2) {
+    final static void performAction1381(int integerArgument1, byte byteArgument2) {
         int integerLocal1 = -50 % ((byteArgument2 + 51) / 49);
-        MixedSupport111.computeInteger1410((byte) 57);
+        MixedSupport106.computeInteger1383((byte) 57);
     }
 
-    final static boolean computeBoolean1407(int integerArgument1) {
+    final static boolean computeBoolean1380(int integerArgument1) {
         if (integerArgument1 != 2) {
           return false;
         }
@@ -105,7 +105,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
             integerLocal2 += 2;
           }
           nodeDequeLocal3 = new NodeDeque();
-          nodeDequeArgument1.performAction1765(-128, hashNodeLocal1, nodeDequeLocal3);
+          nodeDequeArgument1.performAction1734(-128, hashNodeLocal1, nodeDequeLocal3);
           FullscreenCanvas.mergeSortTileRegions(nodeDequeArgument1, -117, (1 + integerArgument3) / 2);
           FullscreenCanvas.mergeSortTileRegions(nodeDequeLocal3, -127, integerArgument3 / 2);
           hashNodeLocal4 = nodeDequeArgument1.hashNodeState0009.previous;
@@ -117,12 +117,12 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
             animatedTileRegionLocal6 = (AnimatedTileRegion) (hashNodeLocal5);
             while (nodeDequeArgument1.hashNodeState0009 != hashNodeLocal4) {
               if (animatedTileRegionLocal6.integerState0812 <= ((AnimatedTileRegion) (hashNodeLocal4)).integerState0812) {
-                MixedSupport043.performAction0543(113, animatedTileRegionLocal6, hashNodeLocal4);
+                MixedSupport043.performAction0540(113, animatedTileRegionLocal6, hashNodeLocal4);
                 continue scanLoop1;
               }
               hashNodeLocal4 = hashNodeLocal4.previous;
             }
-            MixedSupport043.performAction0543(113, animatedTileRegionLocal6, hashNodeLocal4);
+            MixedSupport043.performAction0540(113, animatedTileRegionLocal6, hashNodeLocal4);
           }
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal11 = caughtParameterLocal13;
@@ -134,7 +134,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
@@ -151,20 +151,20 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     final static void snapshotMouseInput(int integerArgument1) {
         Throwable caughtExceptionLocal1 = null;
         Object objectLocal2 = null;
-        objectLocal2 = MixedSupport063.mouseInputState0001;
+        objectLocal2 = MixedSupport062.mouseInputState0001;
         synchronized (objectLocal2) {
-          MixedSupport104.integerState0579 = MixedSupport104.integerState0579 + 1;
+          MixedSupport099.integerState0579 = MixedSupport099.integerState0579 + 1;
           DualNode.integerState0062 = UiComponentPart022.integerState0572;
           HashNode.integerState0069 = Sprite.integerState0424;
           if (integerArgument1 != -2) {
             FullscreenCanvas.snapshotMouseInput(-55);
           }
-          MixedSupport106.integerState0590 = MixedSupport126.integerState0775;
-          MixedSupport106.booleanState0135 = TranslatedUiText.booleanState0115;
+          MixedSupport101.integerState0590 = PasswordValidator.integerState0775;
+          MixedSupport101.booleanState0135 = TranslatedUiText.booleanState0115;
           TranslatedUiText.booleanState0115 = false;
           SceneWidgetPart005.integerState0328 = SecondaryNodeHashTable.integerState0544;
           UiComponentPart013.integerState0276 = RenderingSupport003.integerState0253;
-          TextLineMetrics.integerState0535 = MixedSupport108.integerState0597;
+          TextLineMetrics.integerState0535 = MixedSupport103.integerState0597;
           SecondaryNodeHashTable.integerState0544 = 0;
         }
     }
@@ -177,7 +177,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           }
           UiComponentPart033.exitFullscreen(true, this.frameState0003, platformServiceArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ql.F(" + (platformServiceArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ql.F(" + (platformServiceArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 

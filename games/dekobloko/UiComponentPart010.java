@@ -42,13 +42,13 @@ final class UiComponentPart010 extends ComponentDecorator {
             return;
           }
           rgbSpriteLocal2 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
-          ValidationStatus.performAction1597(true, rgbSpriteLocal2);
+          ValidationStatus.performAction1570(true, rgbSpriteLocal2);
           this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
-          MixedSupport086.performAction1079((byte) -5);
+          MixedSupport082.performAction1060((byte) -5);
           rgbSpriteLocal2.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
           return;
         }
-        UiComponentPart010.performAction0418((byte) -51);
+        UiComponentPart010.performAction0416((byte) -51);
         if (0 != integerArgument3) {
           return;
         }
@@ -63,9 +63,9 @@ final class UiComponentPart010 extends ComponentDecorator {
           return;
         }
         rgbSpriteLocal1 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
-        ValidationStatus.performAction1597(true, rgbSpriteLocal1);
+        ValidationStatus.performAction1570(true, rgbSpriteLocal1);
         this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
-        MixedSupport086.performAction1079((byte) -5);
+        MixedSupport082.performAction1060((byte) -5);
         rgbSpriteLocal1.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
         return;
     }
@@ -77,7 +77,7 @@ final class UiComponentPart010 extends ComponentDecorator {
           this.integerState0187 = 256;
           this.uiComponentState0002 = uiComponentArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ef.<init>(" + (uiComponentArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ef.<init>(" + (uiComponentArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,15 +86,15 @@ final class UiComponentPart010 extends ComponentDecorator {
         this.integerState0187 = 256;
     }
 
-    final static void performAction0418(byte byteArgument1) {
-        if (MixedSupport003.integerState0017 != MixedSupport080.framebufferState0001.integerState0191) {
-          GameSession.integerState0618 = GameSession.integerState0618 + (MixedSupport080.framebufferState0001.integerState0191 - MixedSupport003.integerState0017);
-          MixedSupport003.integerState0017 = MixedSupport080.framebufferState0001.integerState0191;
+    final static void performAction0416(byte byteArgument1) {
+        if (MixedSupport003.integerState0017 != MixedSupport076.framebufferState0001.integerState0191) {
+          GameSession.integerState0618 = GameSession.integerState0618 + (MixedSupport076.framebufferState0001.integerState0191 - MixedSupport003.integerState0017);
+          MixedSupport003.integerState0017 = MixedSupport076.framebufferState0001.integerState0191;
           if (!(0 >= UiComponentPart003.integerState0073)) {
             UiComponentPart003.integerState0073 = UiComponentPart003.integerState0073 - 1;
           }
           if (!(UiComponentPart003.integerState0073 <= 0)) {
-            MixedSupport099.performAction1230((byte) -100);
+            MixedSupport094.performAction1203((byte) -100);
           }
           if (byteArgument1 < 51) {
             UiComponentPart010.clearStaticReferences(-58);
@@ -106,7 +106,7 @@ final class UiComponentPart010 extends ComponentDecorator {
           UiComponentPart003.integerState0073 = UiComponentPart003.integerState0073 - 1;
         }
         if (!(UiComponentPart003.integerState0073 <= 0)) {
-          MixedSupport099.performAction1230((byte) -100);
+          MixedSupport094.performAction1203((byte) -100);
         }
         if (byteArgument1 >= 51) {
           return;

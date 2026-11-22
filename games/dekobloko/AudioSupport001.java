@@ -6,23 +6,23 @@ import java.util.*;
 final class AudioSupport001 {
     private AudioFilter audioFilterState0001;
     int integerState0388;
-    private MixedSupport119 mixedSupport119State0001;
-    private MixedSupport119 mixedSupport119State0002;
-    private MixedSupport119 mixedSupport119State0003;
+    private MixedSupport114 mixedSupport114State0001;
+    private MixedSupport114 mixedSupport114State0002;
+    private MixedSupport114 mixedSupport114State0003;
     private static int[] integerArrayState0124;
-    private MixedSupport119 mixedSupport119State0004;
-    private MixedSupport119 mixedSupport119State0005;
+    private MixedSupport114 mixedSupport114State0004;
+    private MixedSupport114 mixedSupport114State0005;
     private static int[] integerArrayState0125;
     private int[] integerArrayState0126;
-    private MixedSupport119 mixedSupport119State0006;
-    private MixedSupport119 mixedSupport119State0007;
-    private MixedSupport119 mixedSupport119State0008;
+    private MixedSupport114 mixedSupport114State0006;
+    private MixedSupport114 mixedSupport114State0007;
+    private MixedSupport114 mixedSupport114State0008;
     int integerState0389;
     private int[] integerArrayState0127;
     private int integerState0390;
     private static int[] integerArrayState0128;
     private int[] integerArrayState0129;
-    private MixedSupport119 mixedSupport119State0009;
+    private MixedSupport114 mixedSupport114State0009;
     private static int[] integerArrayState0130;
     private int integerState0391;
     private static int[] integerArrayState0131;
@@ -41,7 +41,7 @@ final class AudioSupport001 {
         integerArrayState0134 = null;
     }
 
-    final int[] computeIntegerArray0928(int integerArgument1, int integerArgument2) {
+    final int[] computeIntegerArray0909(int integerArgument1, int integerArgument2) {
         int stackIntegerLocal1 = 0;
         double doubleLocal2;
         int integerLocal3;
@@ -90,73 +90,73 @@ final class AudioSupport001 {
           return integerArrayState0124;
         }
         doubleLocal2 = (double)integerArgument1 / ((double)integerArgument2 + 0.0);
-        this.mixedSupport119State0001.performAction1506();
-        this.mixedSupport119State0007.performAction1506();
+        this.mixedSupport114State0001.performAction1479();
+        this.mixedSupport114State0007.performAction1479();
         integerLocal3 = 0;
         integerLocal4 = 0;
         integerLocal5 = 0;
-        if (this.mixedSupport119State0002 != null) {
-          this.mixedSupport119State0002.performAction1506();
-          this.mixedSupport119State0003.performAction1506();
-          integerLocal3 = (int)((double)(this.mixedSupport119State0002.integerState0741 - this.mixedSupport119State0002.integerState0737) * 32.768 / doubleLocal2);
-          integerLocal4 = (int)((double)this.mixedSupport119State0002.integerState0737 * 32.768 / doubleLocal2);
+        if (this.mixedSupport114State0002 != null) {
+          this.mixedSupport114State0002.performAction1479();
+          this.mixedSupport114State0003.performAction1479();
+          integerLocal3 = (int)((double)(this.mixedSupport114State0002.integerState0741 - this.mixedSupport114State0002.integerState0737) * 32.768 / doubleLocal2);
+          integerLocal4 = (int)((double)this.mixedSupport114State0002.integerState0737 * 32.768 / doubleLocal2);
         }
         integerLocal6 = 0;
         integerLocal7 = 0;
         integerLocal8 = 0;
-        if (this.mixedSupport119State0005 != null) {
-          this.mixedSupport119State0005.performAction1506();
-          this.mixedSupport119State0006.performAction1506();
-          integerLocal6 = (int)((double)(this.mixedSupport119State0005.integerState0741 - this.mixedSupport119State0005.integerState0737) * 32.768 / doubleLocal2);
-          integerLocal7 = (int)((double)this.mixedSupport119State0005.integerState0737 * 32.768 / doubleLocal2);
+        if (this.mixedSupport114State0005 != null) {
+          this.mixedSupport114State0005.performAction1479();
+          this.mixedSupport114State0006.performAction1479();
+          integerLocal6 = (int)((double)(this.mixedSupport114State0005.integerState0741 - this.mixedSupport114State0005.integerState0737) * 32.768 / doubleLocal2);
+          integerLocal7 = (int)((double)this.mixedSupport114State0005.integerState0737 * 32.768 / doubleLocal2);
         }
         for (integerLocal9 = 0; integerLocal9 < 5; integerLocal9++) {
           if (this.integerArrayState0126[integerLocal9] != 0) {
             integerArrayState0130[integerLocal9] = 0;
             integerArrayState0131[integerLocal9] = (int)((double)this.integerArrayState0127[integerLocal9] * doubleLocal2);
             integerArrayState0133[integerLocal9] = (this.integerArrayState0126[integerLocal9] << 14) / 100;
-            integerArrayState0132[integerLocal9] = (int)((double)(this.mixedSupport119State0001.integerState0741 - this.mixedSupport119State0001.integerState0737) * 32.768 * Math.pow(1.0057929410678534, (double)this.integerArrayState0129[integerLocal9]) / doubleLocal2);
-            integerArrayState0134[integerLocal9] = (int)((double)this.mixedSupport119State0001.integerState0737 * 32.768 / doubleLocal2);
+            integerArrayState0132[integerLocal9] = (int)((double)(this.mixedSupport114State0001.integerState0741 - this.mixedSupport114State0001.integerState0737) * 32.768 * Math.pow(1.0057929410678534, (double)this.integerArrayState0129[integerLocal9]) / doubleLocal2);
+            integerArrayState0134[integerLocal9] = (int)((double)this.mixedSupport114State0001.integerState0737 * 32.768 / doubleLocal2);
           }
         }
         for (integerLocal16 = 0; integerLocal16 < integerArgument1; integerLocal16++) {
-          integerLocal10 = this.mixedSupport119State0001.computeInteger1507(integerArgument1);
-          integerLocal11 = this.mixedSupport119State0007.computeInteger1507(integerArgument1);
-          if (this.mixedSupport119State0002 != null) {
-            integerLocal12 = this.mixedSupport119State0002.computeInteger1507(integerArgument1);
-            integerLocal13 = this.mixedSupport119State0003.computeInteger1507(integerArgument1);
-            integerLocal10 = integerLocal10 + (this.computeInteger0929(integerLocal5, integerLocal13, this.mixedSupport119State0002.integerState0739) >> 1);
+          integerLocal10 = this.mixedSupport114State0001.computeInteger1480(integerArgument1);
+          integerLocal11 = this.mixedSupport114State0007.computeInteger1480(integerArgument1);
+          if (this.mixedSupport114State0002 != null) {
+            integerLocal12 = this.mixedSupport114State0002.computeInteger1480(integerArgument1);
+            integerLocal13 = this.mixedSupport114State0003.computeInteger1480(integerArgument1);
+            integerLocal10 = integerLocal10 + (this.computeInteger0910(integerLocal5, integerLocal13, this.mixedSupport114State0002.integerState0739) >> 1);
             integerLocal5 = integerLocal5 + ((integerLocal12 * integerLocal3 >> 16) + integerLocal4);
           }
-          if (this.mixedSupport119State0005 != null) {
-            integerLocal31 = this.mixedSupport119State0005.computeInteger1507(integerArgument1);
-            integerLocal33 = this.mixedSupport119State0006.computeInteger1507(integerArgument1);
-            integerLocal11 = integerLocal11 * ((this.computeInteger0929(integerLocal8, integerLocal33, this.mixedSupport119State0005.integerState0739) >> 1) + 32768) >> 15;
+          if (this.mixedSupport114State0005 != null) {
+            integerLocal31 = this.mixedSupport114State0005.computeInteger1480(integerArgument1);
+            integerLocal33 = this.mixedSupport114State0006.computeInteger1480(integerArgument1);
+            integerLocal11 = integerLocal11 * ((this.computeInteger0910(integerLocal8, integerLocal33, this.mixedSupport114State0005.integerState0739) >> 1) + 32768) >> 15;
             integerLocal8 = integerLocal8 + ((integerLocal31 * integerLocal6 >> 16) + integerLocal7);
           }
           for (integerLocal32 = 0; integerLocal32 < 5; integerLocal32++) {
             if (this.integerArrayState0126[integerLocal32] != 0) {
               integerLocal34 = integerLocal16 + integerArrayState0131[integerLocal32];
               if (integerLocal34 < integerArgument1) {
-                integerArrayState0124[integerLocal34] = integerArrayState0124[integerLocal34] + this.computeInteger0929(integerArrayState0130[integerLocal32], integerLocal11 * integerArrayState0133[integerLocal32] >> 15, this.mixedSupport119State0001.integerState0739);
+                integerArrayState0124[integerLocal34] = integerArrayState0124[integerLocal34] + this.computeInteger0910(integerArrayState0130[integerLocal32], integerLocal11 * integerArrayState0133[integerLocal32] >> 15, this.mixedSupport114State0001.integerState0739);
                 integerArrayState0130[integerLocal32] = integerArrayState0130[integerLocal32] + ((integerLocal10 * integerArrayState0132[integerLocal32] >> 16) + integerArrayState0134[integerLocal32]);
               }
             }
           }
         }
-        if (this.mixedSupport119State0004 != null) {
-          this.mixedSupport119State0004.performAction1506();
-          this.mixedSupport119State0008.performAction1506();
+        if (this.mixedSupport114State0004 != null) {
+          this.mixedSupport114State0004.performAction1479();
+          this.mixedSupport114State0008.performAction1479();
           integerLocal17 = 0;
           integerLocal21 = 0;
           integerLocal24 = 1;
           for (integerLocal26 = 0; integerLocal26 < integerArgument1; integerLocal26++) {
-            integerLocal28 = this.mixedSupport119State0004.computeInteger1507(integerArgument1);
-            integerLocal14 = this.mixedSupport119State0008.computeInteger1507(integerArgument1);
+            integerLocal28 = this.mixedSupport114State0004.computeInteger1480(integerArgument1);
+            integerLocal14 = this.mixedSupport114State0008.computeInteger1480(integerArgument1);
             if (integerLocal24 == 0) {
-              integerLocal37 = this.mixedSupport119State0004.integerState0737 + ((this.mixedSupport119State0004.integerState0741 - this.mixedSupport119State0004.integerState0737) * integerLocal14 >> 8);
+              integerLocal37 = this.mixedSupport114State0004.integerState0737 + ((this.mixedSupport114State0004.integerState0741 - this.mixedSupport114State0004.integerState0737) * integerLocal14 >> 8);
             } else {
-              integerLocal37 = this.mixedSupport119State0004.integerState0737 + ((this.mixedSupport119State0004.integerState0741 - this.mixedSupport119State0004.integerState0737) * integerLocal28 >> 8);
+              integerLocal37 = this.mixedSupport114State0004.integerState0737 + ((this.mixedSupport114State0004.integerState0741 - this.mixedSupport114State0004.integerState0737) * integerLocal28 >> 8);
             }
             integerLocal17 += 256;
             if (integerLocal17 >= integerLocal37) {
@@ -178,8 +178,8 @@ final class AudioSupport001 {
         }
         if (!(this.audioFilterState0001.integerArrayState0057[0] <= 0) ||
           !(this.audioFilterState0001.integerArrayState0057[1] <= 0)) {
-          this.mixedSupport119State0009.performAction1506();
-          integerLocal19 = this.mixedSupport119State0009.computeInteger1507(integerArgument1 + 1);
+          this.mixedSupport114State0009.performAction1479();
+          integerLocal19 = this.mixedSupport114State0009.computeInteger1480(integerArgument1 + 1);
           integerLocal23 = this.audioFilterState0001.computeCoefficients(0, (float)integerLocal19 / 65536.0f);
           integerLocal25 = this.audioFilterState0001.computeCoefficients(1, (float)integerLocal19 / 65536.0f);
           if (integerArgument1 >= integerLocal23 + integerLocal25) {
@@ -197,7 +197,7 @@ final class AudioSupport001 {
                 integerLocal30 = integerLocal30 - (int)((long)integerArrayState0124[integerLocal27 - 1 - integerLocal41] * (long)AudioFilter.integerArrayArrayState0009[1][integerLocal41] >> 16);
               }
               integerArrayState0124[integerLocal27] = integerLocal30;
-              integerLocal19 = this.mixedSupport119State0009.computeInteger1507(integerArgument1 + 1);
+              integerLocal19 = this.mixedSupport114State0009.computeInteger1480(integerArgument1 + 1);
               integerLocal27++;
             }
             integerLocal38 = 128;
@@ -214,7 +214,7 @@ final class AudioSupport001 {
                   integerLocal39 = integerLocal39 - (int)((long)integerArrayState0124[integerLocal27 - 1 - integerLocal42] * (long)AudioFilter.integerArrayArrayState0009[1][integerLocal42] >> 16);
                 }
                 integerArrayState0124[integerLocal27] = integerLocal39;
-                integerLocal19 = this.mixedSupport119State0009.computeInteger1507(integerArgument1 + 1);
+                integerLocal19 = this.mixedSupport114State0009.computeInteger1480(integerArgument1 + 1);
                 integerLocal27++;
               }
               if (integerLocal27 < integerArgument1 - integerLocal23) {
@@ -234,7 +234,7 @@ final class AudioSupport001 {
                 integerLocal40 = integerLocal40 - (int)((long)integerArrayState0124[integerLocal27 - 1 - integerLocal43] * (long)AudioFilter.integerArrayArrayState0009[1][integerLocal43] >> 16);
               }
               integerArrayState0124[integerLocal27] = integerLocal40;
-              integerLocal19 = this.mixedSupport119State0009.computeInteger1507(integerArgument1 + 1);
+              integerLocal19 = this.mixedSupport114State0009.computeInteger1480(integerArgument1 + 1);
               integerLocal27++;
             }
           }
@@ -250,7 +250,7 @@ final class AudioSupport001 {
         return integerArrayState0124;
     }
 
-    private final int computeInteger0929(int integerArgument1, int integerArgument2, int integerArgument3) {
+    private final int computeInteger0910(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument3 == 1) {
           if ((integerArgument1 & 32767) < 16384) {
             return integerArgument2;
@@ -269,36 +269,36 @@ final class AudioSupport001 {
         return 0;
     }
 
-    final void performAction0930(PacketBuffer packetBufferArgument1) {
+    final void performAction0911(PacketBuffer packetBufferArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
-        this.mixedSupport119State0001 = new MixedSupport119();
-        this.mixedSupport119State0001.performAction1509(packetBufferArgument1);
-        this.mixedSupport119State0007 = new MixedSupport119();
-        this.mixedSupport119State0007.performAction1509(packetBufferArgument1);
+        this.mixedSupport114State0001 = new MixedSupport114();
+        this.mixedSupport114State0001.performAction1482(packetBufferArgument1);
+        this.mixedSupport114State0007 = new MixedSupport114();
+        this.mixedSupport114State0007.performAction1482(packetBufferArgument1);
         int integerLocal3 = packetBufferArgument1.readUnsignedByte((byte) -127);
         if (integerLocal3 != 0) {
           packetBufferArgument1.position = packetBufferArgument1.position - 1;
-          this.mixedSupport119State0002 = new MixedSupport119();
-          this.mixedSupport119State0002.performAction1509(packetBufferArgument1);
-          this.mixedSupport119State0003 = new MixedSupport119();
-          this.mixedSupport119State0003.performAction1509(packetBufferArgument1);
+          this.mixedSupport114State0002 = new MixedSupport114();
+          this.mixedSupport114State0002.performAction1482(packetBufferArgument1);
+          this.mixedSupport114State0003 = new MixedSupport114();
+          this.mixedSupport114State0003.performAction1482(packetBufferArgument1);
         }
         integerLocal3 = packetBufferArgument1.readUnsignedByte((byte) -31);
         if (integerLocal3 != 0) {
           packetBufferArgument1.position = packetBufferArgument1.position - 1;
-          this.mixedSupport119State0005 = new MixedSupport119();
-          this.mixedSupport119State0005.performAction1509(packetBufferArgument1);
-          this.mixedSupport119State0006 = new MixedSupport119();
-          this.mixedSupport119State0006.performAction1509(packetBufferArgument1);
+          this.mixedSupport114State0005 = new MixedSupport114();
+          this.mixedSupport114State0005.performAction1482(packetBufferArgument1);
+          this.mixedSupport114State0006 = new MixedSupport114();
+          this.mixedSupport114State0006.performAction1482(packetBufferArgument1);
         }
         integerLocal3 = packetBufferArgument1.readUnsignedByte((byte) -89);
         if (integerLocal3 != 0) {
           packetBufferArgument1.position = packetBufferArgument1.position - 1;
-          this.mixedSupport119State0004 = new MixedSupport119();
-          this.mixedSupport119State0004.performAction1509(packetBufferArgument1);
-          this.mixedSupport119State0008 = new MixedSupport119();
-          this.mixedSupport119State0008.performAction1509(packetBufferArgument1);
+          this.mixedSupport114State0004 = new MixedSupport114();
+          this.mixedSupport114State0004.performAction1482(packetBufferArgument1);
+          this.mixedSupport114State0008 = new MixedSupport114();
+          this.mixedSupport114State0008.performAction1482(packetBufferArgument1);
         }
         for (integerLocal1 = 0; integerLocal1 < 10; integerLocal1++) {
           integerLocal2 = packetBufferArgument1.readUnsignedSmart(false);
@@ -314,8 +314,8 @@ final class AudioSupport001 {
         this.integerState0388 = packetBufferArgument1.readUnsignedShort(3);
         this.integerState0389 = packetBufferArgument1.readUnsignedShort(3);
         this.audioFilterState0001 = new AudioFilter();
-        this.mixedSupport119State0009 = new MixedSupport119();
-        this.audioFilterState0001.decode(packetBufferArgument1, this.mixedSupport119State0009);
+        this.mixedSupport114State0009 = new MixedSupport114();
+        this.audioFilterState0001.decode(packetBufferArgument1, this.mixedSupport114State0009);
     }
 
     AudioSupport001() {

@@ -1,99 +1,181 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport115 {
-    static long longState0045;
-    static MusicTrack musicTrackState0006;
-    static RgbSprite[] rgbSpriteArrayState0024;
+abstract class MixedSupport115 extends DualNode {
+    static String[] stringArrayState0041;
+    boolean booleanState0172;
+    static int integerState0746;
+    static int[] integerArrayState0205;
+    static long[] longArrayState0009;
+    volatile boolean booleanState0173;
+    boolean booleanState0174;
 
-    final static boolean computeBoolean1485(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
-        int integerLocal1 = -27 % ((-37 - byteArgument3) / 37);
-        if (MixedSupport151.booleanState0221) {
-          return MixedSupport009.uiComponentPart019State0001.computeBoolean0209(MixedSupport153.integerState0931, ArchiveRequestManager.characterState0002, (byte) 126);
-        }
-        if (GameDomainSupport004.booleanState0087) {
-          return MixedSupport129.computeBoolean1644(integerArgument1, 102, integerArgument4);
-        }
-        if (MixedSupport023.computeBoolean0340(integerArgument4, integerArgument1, 6774)) {
-          return true;
-        }
-        if (!PacketBuffer.booleanState0228) {
-          return SceneWidgetPart008.computeBoolean1148(integerArgument2, 1, integerArgument4);
-        }
-        return false;
-    }
+    abstract byte[] computeByteArray0469(byte byteArgument1);
 
-    final static void performAction1483(byte byteArgument1, String stringArgument2) {
-        try {
-          MixedSupport146.stringState0594 = stringArgument2;
-          if (byteArgument1 != 73) {
-            rgbSpriteArrayState0024 = (RgbSprite[]) null;
-          }
-        } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "rm.A(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    final static void performAction1486(int integerArgument1, RgbSprite[] rgbSpriteArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
-        RuntimeException stackRuntimeExceptionLocal1 = null;
-        StringBuilder stackStringBuilderLocal2 = null;
-        String stackStringLocal3 = null;
-        RuntimeException caughtExceptionLocal4 = null;
-        int integerLocal5 = 0;
-        RuntimeException runtimeExceptionLocal6 = null;
+    final static String computeString1487(int integerArgument1) {
+        String stackStringLocal1 = null;
+        Object stackObjectLocal2 = null;
+        RuntimeException caughtExceptionLocal3 = null;
+        Object objectLocal4 = null;
+        Object objectLocal5 = null;
+        String stringLocal6 = null;
         int integerLocal7 = 0;
-        int integerLocal8 = 0;
-        int integerLocal9 = 0;
+        String stringLocal8 = null;
+        String stringLocal9 = null;
         int integerLocal10 = 0;
         int integerLocal11 = 0;
-        integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        String stringLocal12 = null;
+        int integerLocal13 = 0;
+        int integerLocal14 = 0;
+        String stringLocal15;
+        integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (rgbSpriteArrayArgument2 != null &&
-            integerArgument4 > 0) {
-            integerLocal5 = rgbSpriteArrayArgument2[0].integerState0254;
-            integerLocal7 = rgbSpriteArrayArgument2[2].integerState0254;
-            integerLocal8 = rgbSpriteArrayArgument2[1].integerState0254;
-            rgbSpriteArrayArgument2[0].performAction0257(integerArgument3, integerArgument1, integerArgument5);
-            rgbSpriteArrayArgument2[2].performAction0257(-integerLocal7 + integerArgument3 + integerArgument4, integerArgument1, integerArgument5);
-            SoftwareRaster.performAction0661(MixedSupport073.integerArrayState0123);
-            SoftwareRaster.performAction0672(integerLocal5 + integerArgument3, integerArgument1, -integerLocal7 + (integerArgument4 + integerArgument3), rgbSpriteArrayArgument2[1].integerState0260 + integerArgument1);
-            integerLocal9 = integerArgument3 + integerLocal5;
-            integerLocal10 = integerArgument4 + integerArgument3 - integerLocal7;
-            if (integerArgument6 >= -98) {
-              rgbSpriteArrayState0024 = (RgbSprite[]) null;
-            }
-            for (integerArgument3 = integerLocal9; integerArgument3 < integerLocal10; integerArgument3 = integerArgument3 + integerLocal8) {
-              rgbSpriteArrayArgument2[1].performAction0257(integerArgument3, integerArgument1, integerArgument5);
-            }
-            SoftwareRaster.performAction0653(MixedSupport073.integerArrayState0123);
-            return;
+          objectLocal4 = null;
+          objectLocal5 = null;
+          if (NetworkSupport010.integerState0585 == 0 &&
+            UiComponentPart011.sceneWidgetPart013State0002 != null) {
+            objectLocal5 = MixedSupport048.stringState0204;
           }
-          return;
-        } catch (java.lang.RuntimeException caughtParameterLocal12) {
-          caughtExceptionLocal4 = caughtParameterLocal12;
-          runtimeExceptionLocal6 = caughtExceptionLocal4;
-          stackRuntimeExceptionLocal1 = runtimeExceptionLocal6;
-          stackStringBuilderLocal2 = new StringBuilder().append("rm.B(").append(integerArgument1).append(',');
-          if (rgbSpriteArrayArgument2 == null) {
-            stackStringLocal3 = "null";
+          if (2 == NetworkSupport010.integerState0585 &&
+            !MixedSupport056.computeBoolean0666((byte) -53)) {
+            if (!RenderingSupport012.computeBoolean1345(TextLayout.stringState0081, 3)) {
+              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, UiComponentPart029.stringState0496, new String[]{MixedSupport029.stringState0149});
+              if (integerLocal14 != 0) {
+                objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
+              }
+            } else {
+              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
+            }
+            if (GameDomainSupport004.booleanState0087) {
+              UiComponentPart004.performAction0184((String) null, (String) null, (String) (objectLocal5), (byte) 125, 2, 0);
+              UiComponentPart026.performAction1393(13);
+            }
+          }
+          if (null == objectLocal5 &&
+            !ProxySocketFactory.booleanState0169 &&
+            UiComponentPart031.sceneWidgetState0116 == null) {
+            objectLocal5 = UiComponentPart003.stringState0059;
+          }
+          if (null != objectLocal5) {
+            MixedSupport020.performAction0298((String) null, 0, MixedSupport061.integerState0332, (String) (objectLocal5), -24503);
           } else {
-            stackStringLocal3 = "{...}";
+            stringLocal6 = MixedSupport089.stringState0372;
+            stringLocal6 = UiComponentPart002.computeString0079(107, stringLocal6);
+            stringLocal8 = "";
+            stringLocal9 = "|";
+            integerLocal10 = NetworkSupport010.integerState0585;
+            integerLocal11 = 0;
+            if (integerLocal10 == 2) {
+              stringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(81, NetworkSupport009.stringState0388, new String[]{MixedSupport029.stringState0149});
+              stringLocal12 = NodeHashTableIterator.substituteIndexedPlaceholders(125, CacheWorkQueue.stringState0266, new String[]{stringLocal6});
+              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + UiComponentPart033.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal12) + MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal8));
+              if (0 > integerLocal11) {
+                integerLocal11 = 0;
+              }
+            }
+            if (integerLocal10 != 2 ||
+              integerLocal14 != 0) {
+              if (0 == integerLocal10) {
+                if (MixedSupport016.sceneWidgetPart013State0001 == null &&
+                  EmailFormatValidator.booleanState0077) {
+                  stringLocal8 = "[" + MixedSupport127.stringState0554 + "] ";
+                }
+                if (null != MixedSupport016.sceneWidgetPart013State0001) {
+                  boolean sharedTailLocal16 = (!(MixedSupport146.booleanState0224) ||
+                    null == MixedSupport033.stringState0158);
+                  if (!sharedTailLocal16) {
+                    stringLocal8 = "[" + MixedSupport033.stringState0158 + "] ";
+                    sharedTailLocal16 = (integerLocal14 != 0);
+                  }
+                  if (sharedTailLocal16) {
+                    stringLocal8 = "[" + NodeHashTableIterator.substituteIndexedPlaceholders(115, BoundedRandomAccessFile.stringState0232, new String[]{MixedSupport016.sceneWidgetPart013State0001.stringState0585}) + "] ";
+                  }
+                  integerLocal10 = 1;
+                }
+              }
+              if (PcmPlayerService.computeBoolean1409(false)) {
+                stackStringLocal1 = ": ";
+              } else {
+                stackStringLocal1 = "<img=3>: ";
+              }
+              stringLocal15 = stackStringLocal1;
+              stringLocal8 = stringLocal8 + stringLocal6 + stringLocal15;
+              if (!MixedSupport144.booleanState0221) {
+                if (PacketBuffer.booleanState0228) {
+                  stringLocal9 = "";
+                  stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport018.stringState0092 + "</col>";
+                  if (integerLocal14 != 0) {
+                    stringLocal9 = "";
+                    stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport138.stringState0591 + "</col>";
+                  }
+                }
+              } else {
+                stringLocal9 = "";
+                stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport138.stringState0591 + "</col>";
+              }
+              integerLocal13 = MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal8);
+              if (!PcmPlayerService.computeBoolean1409(false)) {
+                if (UiComponentPart033.sceneWidgetState0150.booleanState0218 &&
+                  (HashNode.integerState0069 - UiComponentPart033.sceneWidgetState0150.integerState0892) < integerLocal13) {
+                  if (MixedSupport144.booleanState0221) {
+                    objectLocal4 = "Broken!";
+                  } else {
+                    objectLocal4 = MixedSupport018.stringState0092;
+                  }
+                }
+                if (UiComponentPart033.sceneWidgetState0150.integerState0891 != 0 &&
+                  integerLocal13 > UiComponentPart033.sceneWidgetState0150.integerState0897 &&
+                  !MixedSupport144.booleanState0221) {
+                  NetworkSupport001.performAction0061(-1045);
+                }
+              }
+            }
+            MixedSupport020.performAction0298(stringLocal9, integerLocal11, ConfirmedEmailAvailabilityValidator.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.computeString1084(UiComponentPart008.stringBuilderState0001.toString()), -24503);
+            if (!LoginCredentials.booleanState0085) {
+              DiagnosticSupport002.sceneWidgetState0057.booleanState0218 = false;
+            }
+            if (DiagnosticSupport002.sceneWidgetState0057.booleanState0218) {
+              objectLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(126, MixedSupport137.stringState0590, new String[]{stringLocal6, MixedSupport029.stringState0149});
+            }
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
+          integerLocal7 = 125 % ((30 - integerArgument1) / 41);
+          stackObjectLocal2 = objectLocal4;
+          return (String) (stackObjectLocal2);
+        } catch (java.lang.RuntimeException caughtParameterLocal17) {
+          caughtExceptionLocal3 = caughtParameterLocal17;
+          objectLocal4 = caughtExceptionLocal3;
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) (objectLocal4), "sf.C(" + integerArgument1 + ')');
         }
     }
 
-    public static void performAction1484(int integerArgument1) {
-        if (integerArgument1 != 2) {
-          longState0045 = 40L;
-          rgbSpriteArrayState0024 = null;
-          musicTrackState0006 = null;
+    abstract int computeInteger0467(boolean booleanArgument1);
+
+    public static void performAction1488(byte byteArgument1) {
+        RuntimeException caughtExceptionLocal1 = null;
+        RuntimeException runtimeExceptionLocal2 = null;
+        try {
+          longArrayState0009 = null;
+          stringArrayState0041 = null;
+          if (byteArgument1 > -123) {
+            integerState0746 = -69;
+          }
+          integerArrayState0205 = null;
           return;
+        } catch (java.lang.RuntimeException caughtParameterLocal3) {
+          caughtExceptionLocal1 = caughtParameterLocal3;
+          runtimeExceptionLocal2 = caughtExceptionLocal1;
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal2), "sf.A(" + byteArgument1 + ')');
         }
-        rgbSpriteArrayState0024 = null;
-        musicTrackState0006 = null;
+    }
+
+    MixedSupport115() {
+        this.booleanState0173 = true;
     }
 
     static {
+        integerArrayState0205 = new int[8192];
+        longArrayState0009 = new long[32];
+        integerState0746 = 0;
+        stringArrayState0041 = new String[]{"All scores", "My scores", "Best each"};
     }
 }

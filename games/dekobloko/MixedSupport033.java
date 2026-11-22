@@ -13,10 +13,10 @@ final class MixedSupport033 extends HashNode {
     static String stringState0160;
     static String stringState0161;
     static SceneWidget sceneWidgetState0025;
-    static RenderingSupport008 renderingSupport008State0004;
+    static RenderingSupport007 renderingSupport007State0004;
     static String stringState0162;
 
-    final static boolean computeBoolean0499(PacketBuffer packetBufferArgument1, int integerArgument2) {
+    final static boolean computeBoolean0496(PacketBuffer packetBufferArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -45,19 +45,19 @@ final class MixedSupport033 extends HashNode {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final static RenderingSupport008 computeRenderingSupport0080500(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, int integerArgument6, boolean booleanArgument7, boolean booleanArgument8) {
-        RenderingSupport008 stackRenderingSupport008Local1 = null;
+    final static RenderingSupport007 computeRenderingSupport0070497(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, int integerArgument6, boolean booleanArgument7, boolean booleanArgument8) {
+        RenderingSupport007 stackRenderingSupport007Local1 = null;
         boolean stackBooleanLocal2 = false;
-        RenderingSupport008 stackRenderingSupport008Local3 = null;
+        RenderingSupport007 stackRenderingSupport007Local3 = null;
         boolean stackBooleanLocal4 = false;
         GameDomainSupport002 stackGameDomainSupport002Local5 = null;
         GameDomainSupport002 stackGameDomainSupport002Local6 = null;
         int stackIntegerLocal7 = 0;
-        RenderingSupport008 stackRenderingSupport008Local8 = null;
+        RenderingSupport007 stackRenderingSupport007Local8 = null;
         int stackIntegerLocal9 = 0;
         GameDomainSupport002 gameDomainSupport002Local10;
         GameDomainSupport002 gameDomainSupport002Local11;
@@ -68,7 +68,7 @@ final class MixedSupport033 extends HashNode {
         int integerLocal16;
         int integerLocal17;
         int integerLocal18;
-        RenderingSupport008 renderingSupport008Local19;
+        RenderingSupport007 renderingSupport007Local19;
         int integerLocal20;
         int integerLocal21;
         int integerLocal22;
@@ -79,30 +79,30 @@ final class MixedSupport033 extends HashNode {
         int integerLocal27;
         int integerLocal28;
         integerLocal18 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        renderingSupport008Local19 = new RenderingSupport008(12);
-        stackRenderingSupport008Local1 = renderingSupport008Local19;
+        renderingSupport007Local19 = new RenderingSupport007(12);
+        stackRenderingSupport007Local1 = renderingSupport007Local19;
         stackBooleanLocal2 = (!booleanArgument8) ? false : true;
-        stackRenderingSupport008Local1.booleanState0093 = stackBooleanLocal2;
-        renderingSupport008Local19.integerState0371 = integerArgument3;
-        stackRenderingSupport008Local3 = renderingSupport008Local19;
+        stackRenderingSupport007Local1.booleanState0093 = stackBooleanLocal2;
+        renderingSupport007Local19.integerState0371 = integerArgument3;
+        stackRenderingSupport007Local3 = renderingSupport007Local19;
         stackBooleanLocal4 = (!booleanArgument1) ? false : true;
-        stackRenderingSupport008Local3.booleanState0094 = stackBooleanLocal4;
+        stackRenderingSupport007Local3.booleanState0094 = stackBooleanLocal4;
         if (booleanArgument8) {
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(13, MixedSupport087.stringState0355, MixedSupport001.renderingSupport010State0001), integerArgument6 ^ 32284);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(13, MixedSupport083.stringState0355, MixedSupport001.renderingSupport009State0001), integerArgument6 ^ 32284);
         } else {
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(1, NetworkSupport004.stringState0209, MixedSupport001.renderingSupport010State0001), integerArgument6 - 32232);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(2, UiComponentPart002.stringState0037, MixedSupport001.renderingSupport010State0001), integerArgument6 ^ 32281);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(3, MixedSupport094.stringState0373, MixedSupport001.renderingSupport010State0001), 117);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(1, NetworkSupport004.stringState0209, MixedSupport001.renderingSupport009State0001), integerArgument6 - 32232);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(2, UiComponentPart002.stringState0037, MixedSupport001.renderingSupport009State0001), integerArgument6 ^ 32281);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(3, MixedSupport089.stringState0373, MixedSupport001.renderingSupport009State0001), 117);
         }
-        renderingSupport008Local19.performAction0871(new GameDomainSupport002(4, UiComponentPart006.stringState0109, MixedSupport001.renderingSupport010State0001), 117);
+        renderingSupport007Local19.performAction0852(new GameDomainSupport002(4, UiComponentPart006.stringState0109, MixedSupport001.renderingSupport009State0001), 117);
         if (booleanArgument4) {
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(5, UiComponentPart032.stringState0581, MixedSupport001.renderingSupport010State0001), 119);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(5, UiComponentPart032.stringState0581, MixedSupport001.renderingSupport009State0001), 119);
         }
         if (integerArgument6 != 32357) {
-          MixedSupport033.computeRenderingSupport0080500(false, true, 98, true, false, 42, false, false);
+          MixedSupport033.computeRenderingSupport0070497(false, true, 98, true, false, 42, false, false);
         }
-        gameDomainSupport002Local10 = new GameDomainSupport002(6, MixedSupport106.stringState0434, MixedSupport001.renderingSupport010State0001);
-        gameDomainSupport002Local11 = new GameDomainSupport002(7, MixedSupport040.stringState0179, MixedSupport001.renderingSupport010State0001);
+        gameDomainSupport002Local10 = new GameDomainSupport002(6, MixedSupport101.stringState0434, MixedSupport001.renderingSupport009State0001);
+        gameDomainSupport002Local11 = new GameDomainSupport002(7, MixedSupport040.stringState0179, MixedSupport001.renderingSupport009State0001);
         stackGameDomainSupport002Local5 = gameDomainSupport002Local10;
         stackGameDomainSupport002Local6 = gameDomainSupport002Local11;
         if (gameDomainSupport002Local11.integerState0176 < gameDomainSupport002Local10.integerState0176) {
@@ -112,95 +112,95 @@ final class MixedSupport033 extends HashNode {
         }
         stackGameDomainSupport002Local6.integerState0176 = stackIntegerLocal7;
         stackGameDomainSupport002Local5.integerState0176 = stackIntegerLocal7;
-        renderingSupport008Local19.performAction0871(gameDomainSupport002Local10, 125);
-        renderingSupport008Local19.performAction0871(gameDomainSupport002Local11, 114);
+        renderingSupport007Local19.performAction0852(gameDomainSupport002Local10, 125);
+        renderingSupport007Local19.performAction0852(gameDomainSupport002Local11, 114);
         integerLocal12 = 1;
         if (booleanArgument8 &&
           Framebuffer.integerState0192 <= 0) {
           integerLocal12 = 0;
         }
         if (integerLocal12 != 0) {
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(8, MatchingFieldValidator.stringState0468, MixedSupport001.renderingSupport010State0001), 105);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(8, MatchingFieldValidator.stringState0468, MixedSupport001.renderingSupport009State0001), 105);
         }
         integerLocal13 = 116;
         if (booleanArgument8) {
           integerLocal14 = 0;
           integerLocal15 = LoginCredentials.tutorialTips.length;
-          if (MixedSupport035.computeBoolean0505(0, 10040319, MixedSupport093.integerArrayState0172)) {
+          if (MixedSupport035.computeBoolean0502(0, 10040319, MixedSupport088.integerArrayState0172)) {
             integerLocal14 += 2;
             integerLocal15 -= 2;
           }
-          renderingSupport008Local19.integerState0370 = UiComponentPart016.computeInteger0847((byte) 114, integerLocal15, UiComponentPart031.randomState0003) + integerLocal14;
+          renderingSupport007Local19.integerState0370 = UiComponentPart016.computeInteger0830((byte) 114, integerLocal15, UiComponentPart031.randomState0003) + integerLocal14;
           if (booleanArgument1) {
             integerLocal13 = 96;
             if (booleanArgument2) {
-              renderingSupport008Local19.performAction0871(new GameDomainSupport002(15), 124);
+              renderingSupport007Local19.performAction0852(new GameDomainSupport002(15), 124);
               integerLocal13 = 86;
-              integerLocal16 = MixedSupport001.renderingSupport010State0001.computeInteger1085(ComponentContainer.stringState0308);
-              integerLocal17 = MixedSupport001.renderingSupport010State0001.computeInteger1085(MixedSupport027.stringState0131);
+              integerLocal16 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ComponentContainer.stringState0308);
+              integerLocal17 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport027.stringState0131);
               if (integerLocal17 > integerLocal16) {
                 integerLocal16 = integerLocal17;
               }
-              integerLocal22 = MixedSupport001.renderingSupport010State0001.computeInteger1085(MixedSupport105.stringState0421);
+              integerLocal22 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport100.stringState0421);
               if (integerLocal16 < integerLocal22) {
                 integerLocal16 = integerLocal22;
               }
-              renderingSupport008Local19.gameDomainSupport002ArrayState0001[-1 + renderingSupport008Local19.mixedSupport121State0002.integerState0756].integerState0176 = integerLocal16 + 46;
-              renderingSupport008Local19.performAction0871(new GameDomainSupport002(16, DualNodeDeque.stringState0006, MixedSupport001.renderingSupport010State0001), 116);
+              renderingSupport007Local19.gameDomainSupport002ArrayState0001[-1 + renderingSupport007Local19.mixedSupport116State0002.integerState0756].integerState0176 = integerLocal16 + 46;
+              renderingSupport007Local19.performAction0852(new GameDomainSupport002(16, DualNodeDeque.stringState0006, MixedSupport001.renderingSupport009State0001), 116);
             }
             if (booleanArgument7) {
-              renderingSupport008Local19.performAction0871(new GameDomainSupport002(17), 107);
-              integerLocal20 = MixedSupport001.renderingSupport010State0001.computeInteger1085(ResourceArchive.stringState0287);
-              integerLocal21 = MixedSupport001.renderingSupport010State0001.computeInteger1085(MixedSupport063.stringState0261);
+              renderingSupport007Local19.performAction0852(new GameDomainSupport002(17), 107);
+              integerLocal20 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ResourceArchive.stringState0287);
+              integerLocal21 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport062.stringState0261);
               if (integerLocal20 < integerLocal21) {
                 integerLocal20 = integerLocal21;
               }
-              integerLocal23 = MixedSupport001.renderingSupport010State0001.computeInteger1085(MixedSupport070.stringState0294);
+              integerLocal23 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport066.stringState0294);
               if (integerLocal23 > integerLocal20) {
                 integerLocal20 = integerLocal23;
               }
-              integerLocal24 = MixedSupport001.renderingSupport010State0001.computeInteger1085(UiComponentPart033.stringState0623);
+              integerLocal24 = MixedSupport001.renderingSupport009State0001.computeInteger1066(UiComponentPart033.stringState0623);
               if (integerLocal24 > integerLocal20) {
                 integerLocal20 = integerLocal24;
               }
-              integerLocal25 = MixedSupport001.renderingSupport010State0001.computeInteger1085(ProxySocketFactory.stringState0493);
+              integerLocal25 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ProxySocketFactory.stringState0493);
               if (integerLocal20 < integerLocal25) {
                 integerLocal20 = integerLocal25;
               }
-              integerLocal26 = MixedSupport001.renderingSupport010State0001.computeInteger1085(PcmPlayerService.stringState0467);
+              integerLocal26 = MixedSupport001.renderingSupport009State0001.computeInteger1066(PcmPlayerService.stringState0467);
               if (integerLocal26 > integerLocal20) {
                 integerLocal20 = integerLocal26;
               }
-              integerLocal27 = MixedSupport001.renderingSupport010State0001.computeInteger1085(SceneWidgetPart005.stringState0254);
+              integerLocal27 = MixedSupport001.renderingSupport009State0001.computeInteger1066(SceneWidgetPart005.stringState0254);
               if (integerLocal20 < integerLocal27) {
                 integerLocal20 = integerLocal27;
               }
-              integerLocal28 = MixedSupport001.renderingSupport010State0001.computeInteger1085(MixedSupport024.stringState0117);
+              integerLocal28 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport024.stringState0117);
               if (integerLocal20 < integerLocal28) {
                 integerLocal20 = integerLocal28;
               }
-              renderingSupport008Local19.gameDomainSupport002ArrayState0001[-1 + renderingSupport008Local19.mixedSupport121State0002.integerState0756].integerState0176 = 46 + integerLocal20;
+              renderingSupport007Local19.gameDomainSupport002ArrayState0001[-1 + renderingSupport007Local19.mixedSupport116State0002.integerState0756].integerState0176 = 46 + integerLocal20;
             }
-            renderingSupport008Local19.performAction0871(new GameDomainSupport002(18, MixedSupport098.stringState0389, MixedSupport001.renderingSupport010State0001), integerArgument6 - 32248);
+            renderingSupport007Local19.performAction0852(new GameDomainSupport002(18, MixedSupport093.stringState0389, MixedSupport001.renderingSupport009State0001), integerArgument6 - 32248);
           } else {
-            renderingSupport008Local19.performAction0871(new GameDomainSupport002(14, MixedSupport078.stringState0322, MixedSupport001.renderingSupport010State0001), 99);
+            renderingSupport007Local19.performAction0852(new GameDomainSupport002(14, MixedSupport074.stringState0322, MixedSupport001.renderingSupport009State0001), 99);
           }
         } else {
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(19, MixedSupport006.stringState0028, MixedSupport001.renderingSupport010State0001), 108);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(10, MixedSupport138.stringState0567, MixedSupport001.renderingSupport010State0001), 126);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(9, MixedSupport131.stringState0542, MixedSupport001.renderingSupport010State0001), 118);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(11, UiComponentPart019.stringState0350, MixedSupport001.renderingSupport010State0001), 108);
-          renderingSupport008Local19.performAction0871(new GameDomainSupport002(12, TextLayout.stringState0084, MixedSupport001.renderingSupport010State0001), 112);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(19, MixedSupport006.stringState0028, MixedSupport001.renderingSupport009State0001), 108);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(10, MixedSupport131.stringState0567, MixedSupport001.renderingSupport009State0001), 126);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(9, MixedSupport124.stringState0542, MixedSupport001.renderingSupport009State0001), 118);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(11, UiComponentPart019.stringState0350, MixedSupport001.renderingSupport009State0001), 108);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(12, TextLayout.stringState0084, MixedSupport001.renderingSupport009State0001), 112);
         }
-        renderingSupport008Local19.performAction0868(integerLocal13, 320, true, 53, 24);
-        stackRenderingSupport008Local8 = renderingSupport008Local19;
+        renderingSupport007Local19.performAction0849(integerLocal13, 320, true, 53, 24);
+        stackRenderingSupport007Local8 = renderingSupport007Local19;
         stackIntegerLocal9 = (!booleanArgument5) ? 0 : 1;
-        ((RenderingSupport008) (Object) stackRenderingSupport008Local8).performAction0870(stackIntegerLocal9, false, -129);
-        renderingSupport008Local19.performAction0900((byte) -7);
-        return renderingSupport008Local19;
+        ((RenderingSupport007) (Object) stackRenderingSupport007Local8).performAction0851(stackIntegerLocal9, false, -129);
+        renderingSupport007Local19.performAction0881((byte) -7);
+        return renderingSupport007Local19;
     }
 
-    final static int computeInteger0498(BucketBoard bucketBoardArgument1, BucketBoard bucketBoardArgument2, int integerArgument3, byte byteArgument4) {
+    final static int computeInteger0495(BucketBoard bucketBoardArgument1, BucketBoard bucketBoardArgument2, int integerArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -215,10 +215,10 @@ final class MixedSupport033 extends HashNode {
         RuntimeException caughtExceptionLocal12 = null;
         try {
           if (byteArgument4 != -119) {
-            MixedSupport033.computeRenderingSupport0080500(false, true, -83, false, false, 55, true, true);
+            MixedSupport033.computeRenderingSupport0070497(false, true, -83, false, false, 55, true, true);
           }
-          integerLocal1 = RenderingSupport003.computeInteger0575(bucketBoardArgument1, byteArgument4 ^ -54);
-          integerLocal3 = RenderingSupport003.computeInteger0575(bucketBoardArgument2, 40);
+          integerLocal1 = RenderingSupport003.computeInteger0572(bucketBoardArgument1, byteArgument4 ^ -54);
+          integerLocal3 = RenderingSupport003.computeInteger0572(bucketBoardArgument2, 40);
           if (2 + integerLocal1 <= integerLocal3) {
             stackIntegerLocal6 = 3;
             return stackIntegerLocal6;
@@ -246,11 +246,11 @@ final class MixedSupport033 extends HashNode {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final static MixedSupport016 computeMixedSupport0160496(int integerArgument1, String stringArgument2) {
+    final static MixedSupport016 pollPlayerNameAvailability(int integerArgument1, String stringArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         Object stackObjectLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -261,15 +261,15 @@ final class MixedSupport033 extends HashNode {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           if (integerArgument1 != -11079) {
-            MixedSupport033.computeRenderingSupport0080500(false, false, 6, true, true, -105, true, true);
+            MixedSupport033.computeRenderingSupport0070497(false, false, 6, true, true, -105, true, true);
           }
           if (UiComponentPart022.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001) {
             stackObjectLocal2 = null;
             return (MixedSupport016) (stackObjectLocal2);
           }
-          if (UiComponentPart016.mixedSupport004State0001 == MixedSupport075.mixedSupport004State0002 &&
+          if (UiComponentPart016.mixedSupport004State0001 == MixedSupport071.mixedSupport004State0002 &&
             stringArgument2.equals(UiComponentPart024.stringState0435)) {
-            UiComponentPart016.mixedSupport004State0001 = MixedSupport134.mixedSupport004State0005;
+            UiComponentPart016.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
             stackMixedSupport016Local4 = PcmResampler.mixedSupport016State0002;
             return stackMixedSupport016Local4;
           }
@@ -288,45 +288,45 @@ final class MixedSupport033 extends HashNode {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
-    final static void performAction0502(int integerArgument1) {
-        MixedSupport099.performAction1230((byte) -100);
-        MixedSupport137.performAction1696(ComponentContainer.integerState0377, MixedSupport146.integerState0855, UiComponentPart010.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
+    final static void performAction0499(int integerArgument1) {
+        MixedSupport094.performAction1203((byte) -100);
+        MixedSupport130.performAction1665(ComponentContainer.integerState0377, MixedSupport139.integerState0855, UiComponentPart010.rgbSpriteArrayState0010[0].integerState0254, GameApplet.integerState0292, SecondaryNodeHashTable.integerState0540, integerArgument1 ^ -110);
         if (integerArgument1 != 18) {
-          MixedSupport033.performAction0497(79, true);
+          MixedSupport033.performAction0494(79, true);
         }
     }
 
-    public static void performAction0501(int integerArgument1) {
+    public static void performAction0498(int integerArgument1) {
         stringState0158 = null;
         stringState0162 = null;
         stringState0161 = null;
         keyboardInputHandlerState0001 = null;
         if (integerArgument1 != 30061) {
-          MixedSupport033.computeString0495(120);
+          MixedSupport033.computeString0493(120);
         }
         sceneWidgetState0025 = null;
         stringState0159 = null;
-        renderingSupport008State0004 = null;
+        renderingSupport007State0004 = null;
         sceneWidgetState0024 = null;
         stringState0160 = null;
     }
 
-    final static void performAction0497(int integerArgument1, boolean booleanArgument2) {
-        if (RichTextLayout.computeBoolean0401((byte) 74)) {
+    final static void performAction0494(int integerArgument1, boolean booleanArgument2) {
+        if (RichTextLayout.computeBoolean0399((byte) 74)) {
           booleanArgument2 = false;
         }
         MixedSupport017.performAction0250(booleanArgument2, 0);
         if (UiComponentPart006.booleanState0027) {
-          SoftwareRaster.performAction0667(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0890, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0903, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0896, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0915);
-          PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1798(integerArgument1 ^ 1141039776, booleanArgument2);
+          SoftwareRaster.performAction0658(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0890, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0903, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0896, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0915);
+          PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1767(integerArgument1 ^ 1141039776, booleanArgument2);
         }
-        MixedSupport029.performAction0407((byte) 127, booleanArgument2);
+        MixedSupport029.performAction0405((byte) 127, booleanArgument2);
         if (integerArgument1 != 2) {
-          MixedSupport033.performAction0497(123, false);
+          MixedSupport033.performAction0494(123, false);
         }
     }
 
@@ -334,15 +334,15 @@ final class MixedSupport033 extends HashNode {
         this.booleanState0041 = false;
     }
 
-    final static String computeString0495(int integerArgument1) {
+    final static String computeString0493(int integerArgument1) {
         if (UiComponentPart022.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
-          return MixedSupport126.stringState0527;
+          return PasswordValidator.stringState0527;
         }
-        if (!ThemeTips.mixedSupport124State0001.computeBoolean1588(85)) {
-          return ThemeTips.mixedSupport124State0001.computeString1593((byte) 62);
+        if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(85)) {
+          return ThemeTips.mixedSupport119State0001.computeString1566((byte) 62);
         }
         if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
-          return ThemeTips.mixedSupport124State0001.computeString1593((byte) 123);
+          return ThemeTips.mixedSupport119State0001.computeString1566((byte) 123);
         }
         if (integerArgument1 == 116) {
           return SceneWidgetPart004.stringState0217;

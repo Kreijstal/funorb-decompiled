@@ -24,12 +24,12 @@ final class DisplayModeController {
     private int integerState0713;
     private int integerState0714;
 
-    final static boolean computeBoolean1464(int integerArgument1) {
+    final static boolean computeBoolean1437(int integerArgument1) {
         int integerLocal1 = -44 / ((-56 - integerArgument1) / 32);
         return UiComponentPart032.booleanState0198;
     }
 
-    final static String computeString1467(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
+    final static String computeString1440(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
         int integerLocal1;
         integerLocal1 = integerArgument1;
         if (booleanArgument4) {
@@ -39,10 +39,10 @@ final class DisplayModeController {
           integerLocal1 += 2;
         }
         if (!booleanArgument2) {
-          return MixedSupport063.stringArrayState0014[integerLocal1];
+          return MixedSupport062.stringArrayState0014[integerLocal1];
         }
         integerLocal1++;
-        return MixedSupport063.stringArrayState0014[integerLocal1];
+        return MixedSupport062.stringArrayState0014[integerLocal1];
     }
 
     final static void writeEncryptedPayload(int integerArgument1, byte byteArgument2, int integerArgument3, java.math.BigInteger bigIntegerArgument4, java.math.BigInteger bigIntegerArgument5, PacketBuffer packetBufferArgument6, byte[] byteArrayArgument7) {
@@ -67,7 +67,7 @@ final class DisplayModeController {
         int integerLocal19;
         integerLocal15 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal11 = SceneWidgetPart003.computeInteger0611(integerArgument3, (byte) -126);
+          integerLocal11 = SceneWidgetPart003.computeInteger0608(integerArgument3, (byte) -126);
           if (UiComponentPart028.secureRandomState0001 == null) {
             UiComponentPart028.secureRandomState0001 = new java.security.SecureRandom();
           }
@@ -133,7 +133,7 @@ final class DisplayModeController {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
@@ -141,9 +141,9 @@ final class DisplayModeController {
         FullscreenCanvas fullscreenCanvasLocal1 = null;
         FullscreenCanvas fullscreenCanvasLocal2;
         if (integerArgument1 == 27134) {
-          this.integerState0701 = MixedSupport095.integerState0548;
+          this.integerState0701 = MixedSupport090.integerState0548;
           this.integerState0702 = UiComponentPart006.integerState0133;
-          this.callbackContract017State0001.performAction1643(-4328, this.integerState0709, this.integerState0699);
+          this.callbackContract017State0001.performAction1613(-4328, this.integerState0709, this.integerState0699);
           LoginCredentials.booleanState0086 = false;
           fullscreenCanvasLocal1 = InputAdapter003.createFullscreenCanvas(this.integerState0699, GzipDecompressor.platformServiceState0003, 0, 0, 67, this.integerState0709);
           if (fullscreenCanvasLocal1 == null) {
@@ -151,10 +151,10 @@ final class DisplayModeController {
           }
           return fullscreenCanvasLocal1;
         }
-        DisplayModeController.computeBoolean1464(-14);
-        this.integerState0701 = MixedSupport095.integerState0548;
+        DisplayModeController.computeBoolean1437(-14);
+        this.integerState0701 = MixedSupport090.integerState0548;
         this.integerState0702 = UiComponentPart006.integerState0133;
-        this.callbackContract017State0001.performAction1643(-4328, this.integerState0709, this.integerState0699);
+        this.callbackContract017State0001.performAction1613(-4328, this.integerState0709, this.integerState0699);
         LoginCredentials.booleanState0086 = false;
         fullscreenCanvasLocal2 = InputAdapter003.createFullscreenCanvas(this.integerState0699, GzipDecompressor.platformServiceState0003, 0, 0, 67, this.integerState0709);
         if (fullscreenCanvasLocal2 == null) {
@@ -183,7 +183,7 @@ final class DisplayModeController {
           } else {
             this.applyRequestedSize(60);
             if (booleanArgument1) {
-              DisplayModeController.performAction1465(-99, -30, 116, 96, -46, -122);
+              DisplayModeController.performAction1438(-99, -30, 116, 96, -46, -122);
             }
           }
           return;
@@ -196,10 +196,10 @@ final class DisplayModeController {
           }
         }
         if (this.integerState0703 == UiComponentPart006.integerState0133 &&
-          MixedSupport095.integerState0548 == this.integerState0706) {
+          MixedSupport090.integerState0548 == this.integerState0706) {
           return;
         }
-        this.callbackContract017State0001.performAction1643(-4328, this.integerState0706, this.integerState0703);
+        this.callbackContract017State0001.performAction1613(-4328, this.integerState0706, this.integerState0703);
     }
 
     private final void applyRequestedSize(int integerArgument1) {
@@ -229,10 +229,10 @@ final class DisplayModeController {
             integerLocal2 = this.integerState0714;
             if (!(0.0f < this.floatState0004)) {
               if (UiComponentPart006.integerState0133 != integerLocal1) {
-                this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+                this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
               } else {
-                if (MixedSupport095.integerState0548 != integerLocal2) {
-                  this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+                if (MixedSupport090.integerState0548 != integerLocal2) {
+                  this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
                 }
               }
               if (integerArgument1 != 60) {
@@ -252,10 +252,10 @@ final class DisplayModeController {
               integerLocal2 = (int)((float)integerLocal1 / this.floatState0004);
             }
             if (UiComponentPart006.integerState0133 != integerLocal1) {
-              this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+              this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             } else {
-              if (MixedSupport095.integerState0548 != integerLocal2) {
-                this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+              if (MixedSupport090.integerState0548 != integerLocal2) {
+                this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
               }
             }
             if (integerArgument1 != 60) {
@@ -269,8 +269,8 @@ final class DisplayModeController {
         }
         if (!(0.0f < this.floatState0004)) {
           if (UiComponentPart006.integerState0133 != integerLocal1 ||
-            MixedSupport095.integerState0548 != integerLocal2) {
-            this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+            MixedSupport090.integerState0548 != integerLocal2) {
+            this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             if (integerArgument1 == 60) {
               if (this.integerState0704 <= 0) {
                 return;
@@ -289,18 +289,18 @@ final class DisplayModeController {
           if (integerLocal5 > integerLocal1) {
             integerLocal2 = (int)((float)integerLocal1 / this.floatState0004);
             if (UiComponentPart006.integerState0133 != integerLocal1 ||
-              MixedSupport095.integerState0548 != integerLocal2) {
-              this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+              MixedSupport090.integerState0548 != integerLocal2) {
+              this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             }
           } else {
             if (integerLocal1 > integerLocal5) {
               integerLocal1 = integerLocal5;
             }
             if (UiComponentPart006.integerState0133 != integerLocal1) {
-              this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+              this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
             } else {
-              if (MixedSupport095.integerState0548 != integerLocal2) {
-                this.callbackContract017State0001.performAction1643(-4328, integerLocal2, integerLocal1);
+              if (MixedSupport090.integerState0548 != integerLocal2) {
+                this.callbackContract017State0001.performAction1613(-4328, integerLocal2, integerLocal1);
               }
             }
           }
@@ -314,7 +314,7 @@ final class DisplayModeController {
         SceneWidgetPart009.integerState0648 = (this.integerState0704 - UiComponentPart006.integerState0133) / 2;
     }
 
-    final static void performAction1466(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final static void performAction1439(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         RuntimeException caughtExceptionLocal3 = null;
@@ -333,16 +333,16 @@ final class DisplayModeController {
           integerLocal6 = 0;
           if (integerArgument2 >= 60) {
             if (integerArgument2 < 80) {
-              integerLocal4 = integerLocal4 + MixedSupport148.computeInteger1785(23841, 80, 40 + integerArgument6 * 18);
+              integerLocal4 = integerLocal4 + MixedSupport141.computeInteger1754(23841, 80, 40 + integerArgument6 * 18);
             } else {
               if (integerArgument2 >= 93) {
-                SoftwareRaster.performAction0651(-30 + integerArgument5, 54 + integerArgument1 - 2, 60, 40, 4, 65280, 100);
+                SoftwareRaster.performAction0642(-30 + integerArgument5, 54 + integerArgument1 - 2, 60, 40, 4, 65280, 100);
               } else {
-                integerLocal6 = MixedSupport148.computeInteger1785(23841, 80, 40 + SceneWidgetPart013.integerArrayState0239[1 + integerArgument2 - 80] * 18);
+                integerLocal6 = MixedSupport141.computeInteger1754(23841, 80, 40 + SceneWidgetPart013.integerArrayState0239[1 + integerArgument2 - 80] * 18);
               }
             }
           } else {
-            integerLocal4 = integerLocal4 + MixedSupport148.computeInteger1785(23841, 80, integerArgument3 * 18 + 40);
+            integerLocal4 = integerLocal4 + MixedSupport141.computeInteger1754(23841, 80, integerArgument3 * 18 + 40);
           }
           if (integerArgument4 >= -57) {
             integerState0700 = -11;
@@ -355,11 +355,11 @@ final class DisplayModeController {
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal3 = caughtParameterLocal8;
           runtimeExceptionLocal5 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal5), "ri.G(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal5), "ri.G(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ')');
         }
     }
 
-    final static void performAction1465(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction1438(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int integerLocal3;
@@ -373,9 +373,9 @@ final class DisplayModeController {
           UiComponentPart019.integerState0504 = integerArgument4;
         }
         if (integerArgument4 <= MixedSupport010.integerState0066) {
-          MixedSupport094.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
-          MixedSupport084.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
-          MixedSupport086.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
+          MixedSupport089.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
+          MixedSupport080.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
+          MixedSupport082.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
           integerLocal3 = integerArgument6 + (integerArgument5 + integerArgument2);
           if (~integerLocal3 == integerArgument3) {
             stackIntegerLocal2 = 0;
@@ -395,9 +395,9 @@ final class DisplayModeController {
           return;
         }
         ReturnedShape.integerState0695 = integerArgument4;
-        MixedSupport094.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
-        MixedSupport084.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
-        MixedSupport086.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
+        MixedSupport089.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
+        MixedSupport080.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
+        MixedSupport082.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
         integerLocal5 = integerArgument6 + (integerArgument5 + integerArgument2);
         if (~integerLocal5 == integerArgument3) {
           stackIntegerLocal1 = 0;
@@ -446,11 +446,11 @@ final class DisplayModeController {
 
     final void restorePreviousSize(byte byteArgument1) {
         if (byteArgument1 <= -49) {
-          this.callbackContract017State0001.performAction1643(-4328, this.integerState0701, this.integerState0702);
+          this.callbackContract017State0001.performAction1613(-4328, this.integerState0701, this.integerState0702);
           return;
         }
         this.integerState0712 = -34;
-        this.callbackContract017State0001.performAction1643(-4328, this.integerState0701, this.integerState0702);
+        this.callbackContract017State0001.performAction1613(-4328, this.integerState0701, this.integerState0702);
     }
 
     public static void clearStaticReferences(byte byteArgument1) {

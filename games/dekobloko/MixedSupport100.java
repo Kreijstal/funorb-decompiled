@@ -2,43 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport100 {
-    static String stringState0398;
-    static SceneWidget sceneWidgetState0095;
-    static String stringState0399;
-    static long longState0040;
+    static RgbSprite rgbSpriteState0041;
+    static boolean[] booleanArrayState0008;
+    static RawSound rawSoundState0016;
+    static RgbSprite rgbSpriteState0042;
+    static String stringState0420;
+    static String stringState0421;
+    static double doubleState0002;
 
-    public static void clearStaticReferences(int integerArgument1) {
-        if (integerArgument1 >= 104) {
-          sceneWidgetState0095 = null;
-          stringState0399 = null;
-          stringState0398 = null;
-          return;
+    final static Boolean computeBoolean1238(int integerArgument1) {
+        Boolean booleanLocal1 = null;
+        Boolean booleanLocal2;
+        if (integerArgument1 != 24994) {
+          stringState0420 = (String) null;
+          booleanLocal1 = SceneWidgetPart014.booleanState0220;
+          SceneWidgetPart014.booleanState0220 = null;
+          return booleanLocal1;
         }
-        sceneWidgetState0095 = (SceneWidget) null;
-        sceneWidgetState0095 = null;
-        stringState0399 = null;
-        stringState0398 = null;
+        booleanLocal2 = SceneWidgetPart014.booleanState0220;
+        SceneWidgetPart014.booleanState0220 = null;
+        return booleanLocal2;
     }
 
-    final static void performAction1231(int integerArgument1, byte byteArgument2) {
-        try {
-          try {
-            MixedSupport088.computeObject1114("resizing", byteArgument2 - 14511, UiComponentPart029.computeApplet1512(byteArgument2 ^ -25126), new Object[]{new Integer(integerArgument1)});
-          } catch (Throwable throwable) {
-          }
-          if (byteArgument2 == -30) {
-            return;
-          }
-          MixedSupport100.performAction1231(72, (byte) -105);
-        } catch (RuntimeException | Error uncheckedExceptionLocal2) {
-          throw uncheckedExceptionLocal2;
-        } catch (Throwable checkedExceptionLocal3) {
-          throw new RuntimeException(checkedExceptionLocal3);
+    public static void performAction1237(byte byteArgument1) {
+        stringState0421 = null;
+        booleanArrayState0008 = null;
+        stringState0420 = null;
+        rgbSpriteState0042 = null;
+        rgbSpriteState0041 = null;
+        rawSoundState0016 = null;
+        if (byteArgument1 != 126) {
+          MixedSupport100.performAction1237((byte) 95);
         }
     }
 
     static {
-        stringState0398 = "Create unrated game";
-        stringState0399 = "Position";
+        booleanArrayState0008 = new boolean[8];
+        stringState0421 = "Accept draw";
+        stringState0420 = "TAB - hide chat temporarily";
+        doubleState0002 = 0.0;
     }
 }

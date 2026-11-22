@@ -2,206 +2,134 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport062 {
-    static boolean booleanState0078;
-    private String stringState0259;
-    static RgbSprite rgbSpriteState0021;
-    static int integerState0332;
-    static String stringState0260;
+    static SceneWidgetPart002 sceneWidgetPart002State0001;
+    static int[][] integerArrayArrayState0012;
+    static RawPcmStream[] rawPcmStreamArrayState0002;
+    static String[] stringArrayState0014;
+    static RgbSprite[][] rgbSpriteArrayArrayState0008;
+    static String stringState0261;
+    static MouseInput mouseInputState0001;
+    static String stringState0262;
 
-    final boolean computeBoolean0742(String stringArgument1, int integerArgument2) {
-        int integerLocal1 = 0;
-        RuntimeException runtimeExceptionLocal2 = null;
-        boolean stackBooleanLocal3 = false;
-        RuntimeException stackRuntimeExceptionLocal4 = null;
-        StringBuilder stackStringBuilderLocal5 = null;
-        String stackStringLocal6 = null;
-        RuntimeException caughtExceptionLocal7 = null;
+    final static void performAction0735(int integerArgument1, RgbSprite rgbSpriteArgument2, String stringArgument3) {
         try {
-          integerLocal1 = -19 % ((42 - integerArgument2) / 60);
-          stackBooleanLocal3 = this.stringState0259.equals(stringArgument1);
-          return stackBooleanLocal3;
-        } catch (java.lang.RuntimeException caughtParameterLocal8) {
-          caughtExceptionLocal7 = caughtParameterLocal8;
-          runtimeExceptionLocal2 = caughtExceptionLocal7;
-          stackRuntimeExceptionLocal4 = runtimeExceptionLocal2;
-          stackStringBuilderLocal5 = new StringBuilder().append("ij.A(");
-          if (stringArgument1 == null) {
-            stackStringLocal6 = "null";
-          } else {
-            stackStringLocal6 = "{...}";
+          MixedSupport075.rgbSpriteState0030 = rgbSpriteArgument2;
+          KeyboardInputHandler.stringState0358 = stringArgument3;
+          if (integerArgument1 != 200) {
+            mouseInputState0001 = (MouseInput) null;
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
-        }
-    }
-
-    final void performAction0739(int integerArgument1, java.applet.Applet appletArgument2) {
-        try {
-          if (integerArgument1 >= -40) {
-            booleanState0078 = true;
-          }
-          MixedSupport104.performAction1256(appletArgument2, "jagex-last-login-method", 31536000L, (byte) 96, this.stringState0259);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ij.C(" + integerArgument1 + ',' + (appletArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ik.G(" + integerArgument1 + ',' + (rgbSpriteArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger0741(int integerArgument1, PacketBuffer packetBufferArgument2, String stringArgument3) {
-        int integerLocal1 = 0;
-        RuntimeException runtimeExceptionLocal2 = null;
-        byte[] byteArrayLocal3 = null;
-        String stringLocal4 = null;
-        CharSequence charSequenceLocal5 = null;
-        int stackIntegerLocal6 = 0;
-        RuntimeException stackRuntimeExceptionLocal7 = null;
-        StringBuilder stackStringBuilderLocal8 = null;
-        String stackStringLocal9 = null;
-        StringBuilder stackStringBuilderLocal10 = null;
-        String stackStringLocal11 = null;
-        RuntimeException caughtExceptionLocal12 = null;
-        try {
-          integerLocal1 = packetBufferArgument2.position;
-          charSequenceLocal5 = (CharSequence) ((Object) stringArgument3);
-          byteArrayLocal3 = SceneWidgetNode.computeByteArray0934(integerArgument1 ^ -18547, charSequenceLocal5);
-          packetBufferArgument2.writeUnsignedSmart(byteArrayLocal3.length, 57);
-          packetBufferArgument2.position = packetBufferArgument2.position + NetworkSupport007.mixedSupport068State0001.computeInteger0839(packetBufferArgument2.payload, byteArrayLocal3, byteArrayLocal3.length, packetBufferArgument2.position, 0, 8);
-          if (integerArgument1 != -20539) {
-            stringLocal4 = (String) null;
-            MixedSupport062.computeBoolean0743((String) null, (String) null, (byte) -115);
-          }
-          stackIntegerLocal6 = -integerLocal1 + packetBufferArgument2.position;
-          return stackIntegerLocal6;
-        } catch (java.lang.RuntimeException caughtParameterLocal13) {
-          caughtExceptionLocal12 = caughtParameterLocal13;
-          runtimeExceptionLocal2 = caughtExceptionLocal12;
-          stackRuntimeExceptionLocal7 = runtimeExceptionLocal2;
-          stackStringBuilderLocal8 = new StringBuilder().append("ij.D(").append(integerArgument1).append(',');
-          if (packetBufferArgument2 == null) {
-            stackStringLocal9 = "null";
-          } else {
-            stackStringLocal9 = "{...}";
-          }
-          stackStringBuilderLocal10 = ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',');
-          if (stringArgument3 == null) {
-            stackStringLocal11 = "null";
-          } else {
-            stackStringLocal11 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
-        }
-    }
-
-    public static void performAction0737(int integerArgument1) {
-        if (integerArgument1 < -38) {
-          rgbSpriteState0021 = null;
-          stringState0260 = null;
+    final static void performAction0737(int integerArgument1) {
+        if (integerArgument1 < 34) {
+          integerArrayArrayState0012 = (int[][]) null;
+          UiComponentPart008.performAction0372(MixedSupport145.rawSoundState0023, 22);
           return;
         }
-        String stringLocal1 = (String) null;
-        MixedSupport062.computeBoolean0743((String) null, (String) null, (byte) -11);
-        rgbSpriteState0021 = null;
-        stringState0260 = null;
+        UiComponentPart008.performAction0372(MixedSupport145.rawSoundState0023, 22);
     }
 
-    final static String computeString0740(int integerArgument1, CharSequence charSequenceArgument2) {
-        RuntimeException runtimeExceptionLocal1 = null;
-        String stackStringLocal2 = null;
-        String stackStringLocal3 = null;
-        RuntimeException stackRuntimeExceptionLocal4 = null;
-        StringBuilder stackStringBuilderLocal5 = null;
-        String stackStringLocal6 = null;
-        RuntimeException caughtExceptionLocal7 = null;
-        try {
-          if (integerArgument1 == 5) {
-            stackStringLocal3 = MixedSupport151.computeString1820(false, charSequenceArgument2, integerArgument1 - 5);
-            return stackStringLocal3;
-          }
-          stackStringLocal2 = (String) null;
-          return stackStringLocal2;
-        } catch (java.lang.RuntimeException caughtParameterLocal8) {
-          caughtExceptionLocal7 = caughtParameterLocal8;
-          runtimeExceptionLocal1 = caughtExceptionLocal7;
-          stackRuntimeExceptionLocal4 = runtimeExceptionLocal1;
-          stackStringBuilderLocal5 = new StringBuilder().append("ij.E(").append(integerArgument1).append(',');
-          if (charSequenceArgument2 == null) {
-            stackStringLocal6 = "null";
-          } else {
-            stackStringLocal6 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+    public static void clearStaticReferences(int integerArgument1) {
+        rawPcmStreamArrayState0002 = null;
+        stringState0261 = null;
+        mouseInputState0001 = null;
+        if (integerArgument1 >= 74) {
+          stringArrayState0014 = null;
+          stringState0262 = null;
+          rgbSpriteArrayArrayState0008 = (RgbSprite[][]) null;
+          sceneWidgetPart002State0001 = null;
+          integerArrayArrayState0012 = (int[][]) null;
+          return;
         }
     }
 
-    public final String toString() {
-        throw new IllegalStateException();
+    final synchronized static long computeLong0734(int integerArgument1) {
+        long longLocal1 = 0L;
+        if (integerArgument1 == 4) {
+          longLocal1 = System.currentTimeMillis();
+          if (!(MixedSupport065.longState0022 <= longLocal1)) {
+            MixedSupport101.longState0042 = MixedSupport101.longState0042 + (-longLocal1 + MixedSupport065.longState0022);
+          }
+          MixedSupport065.longState0022 = longLocal1;
+          return MixedSupport101.longState0042 + longLocal1;
+        }
+        return -114L;
     }
 
-    final static boolean computeBoolean0743(String stringArgument1, String stringArgument2, byte byteArgument3) {
-        String stringLocal1 = null;
+    final static int computeInteger0733(byte byteArgument1, int integerArgument2) {
+        int integerLocal1 = -14 % ((byteArgument1 - 36) / 56);
+        return 200 * (-1 + integerArgument2) * integerArgument2;
+    }
+
+    final static boolean computeBoolean0736(String stringArgument1, byte byteArgument2) {
+        RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
-        StringBuilder stackStringBuilderLocal6 = null;
-        String stackStringLocal7 = null;
-        RuntimeException caughtExceptionLocal8 = null;
-        RuntimeException runtimeExceptionLocal9 = null;
+        RuntimeException caughtExceptionLocal6 = null;
         try {
-          stringArgument2 = MixedSupport069.computeString0841('_', stringArgument2, "", -1);
-          if (byteArgument3 > -101) {
-            MixedSupport062.performAction0738(-68, -120);
+          if (byteArgument2 != -118) {
+            rgbSpriteArrayArrayState0008 = (RgbSprite[][]) null;
           }
-          stringLocal1 = MixedSupport094.computeString1167(stringArgument1, -1);
-          stackBooleanLocal2 = (stringArgument2.indexOf(stringArgument1) != -1) || (-1 != stringArgument2.indexOf(stringLocal1));
+          stackBooleanLocal2 = (UiComponentPart011.computeSceneWidgetPart0140551(-3805, stringArgument1) != null);
           return stackBooleanLocal2;
-        } catch (java.lang.RuntimeException caughtParameterLocal10) {
-          caughtExceptionLocal8 = caughtParameterLocal10;
-          runtimeExceptionLocal9 = caughtExceptionLocal8;
-          stackRuntimeExceptionLocal3 = runtimeExceptionLocal9;
-          stackStringBuilderLocal4 = new StringBuilder().append("ij.G(");
+        } catch (java.lang.RuntimeException caughtParameterLocal7) {
+          caughtExceptionLocal6 = caughtParameterLocal7;
+          runtimeExceptionLocal1 = caughtExceptionLocal6;
+          stackRuntimeExceptionLocal3 = runtimeExceptionLocal1;
+          stackStringBuilderLocal4 = new StringBuilder().append("ik.D(");
           if (stringArgument1 == null) {
             stackStringLocal5 = "null";
           } else {
             stackStringLocal5 = "{...}";
           }
-          stackStringBuilderLocal6 = ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',');
-          if (stringArgument2 == null) {
-            stackStringLocal7 = "null";
-          } else {
-            stackStringLocal7 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static void performAction0738(int integerArgument1, int integerArgument2) {
-        int integerLocal1 = 0;
-        int integerLocal2 = 0;
-        GameSession.integerState0618 = integerArgument1;
-        if (UiComponentPart003.integerState0073 != UiComponentPart009.integerState0149) {
-          integerLocal1 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
-          integerLocal2 = integerLocal1 - UiComponentPart003.integerState0073 * UiComponentPart003.integerState0073;
-          integerArgument1 = integerArgument1 + integerLocal2 * (MixedSupport003.integerState0017 - integerArgument1) / integerLocal1;
-        }
-        if (integerArgument2 <= -24) {
-          RichTextLayout.sceneWidgetState0021.performAction1795(640, 0, integerArgument1, 120, MixedSupport146.integerState0857);
-          MixedSupport049.performAction0588(-24 + MixedSupport003.integerState0017, MixedSupport064.integerState0335, 640, SecondaryNodeHashTable.integerState0540, 0, 5, (byte) -113);
-          return;
-        }
-        MixedSupport062.performAction0737(105);
-        RichTextLayout.sceneWidgetState0021.performAction1795(640, 0, integerArgument1, 120, MixedSupport146.integerState0857);
-        MixedSupport049.performAction0588(-24 + MixedSupport003.integerState0017, MixedSupport064.integerState0335, 640, SecondaryNodeHashTable.integerState0540, 0, 5, (byte) -113);
-    }
-
-    MixedSupport062(String stringArgument1) {
+    final static MixedSupport119 getEmailAvailabilityRequest(int integerArgument1, String stringArgument2) {
+        RuntimeException runtimeExceptionLocal1 = null;
+        MixedSupport119 stackMixedSupport119Local2 = null;
+        MixedSupport119 stackMixedSupport119Local3 = null;
+        RuntimeException stackRuntimeExceptionLocal4 = null;
+        StringBuilder stackStringBuilderLocal5 = null;
+        String stackStringLocal6 = null;
+        RuntimeException caughtExceptionLocal7 = null;
         try {
-          this.stringState0259 = stringArgument1;
-        } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ij.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ')');
+          if (ThemeTips.mixedSupport119State0001.computeBoolean1561(91) &&
+            !stringArgument2.equals(ThemeTips.mixedSupport119State0001.computeString1566((byte) 86))) {
+            ThemeTips.mixedSupport119State0001 = MusicTrack.computeMixedSupport1191663(0, stringArgument2);
+          }
+          if (integerArgument1 > 96) {
+            stackMixedSupport119Local3 = ThemeTips.mixedSupport119State0001;
+            return stackMixedSupport119Local3;
+          }
+          stackMixedSupport119Local2 = (MixedSupport119) null;
+          return stackMixedSupport119Local2;
+        } catch (java.lang.RuntimeException caughtParameterLocal8) {
+          caughtExceptionLocal7 = caughtParameterLocal8;
+          runtimeExceptionLocal1 = caughtExceptionLocal7;
+          stackRuntimeExceptionLocal4 = runtimeExceptionLocal1;
+          stackStringBuilderLocal5 = new StringBuilder().append("ik.F(").append(integerArgument1).append(',');
+          if (stringArgument2 == null) {
+            stackStringLocal6 = "null";
+          } else {
+            stackStringLocal6 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
     static {
-        booleanState0078 = true;
-        stringState0260 = "Player Name: ";
+        stringArrayState0014 = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+        stringState0261 = "Offer unrated rematch";
+        rgbSpriteArrayArrayState0008 = new RgbSprite[6][4];
+        rawPcmStreamArrayState0002 = new RawPcmStream[8];
+        mouseInputState0001 = new MouseInput();
+        stringState0262 = "Open";
     }
 }

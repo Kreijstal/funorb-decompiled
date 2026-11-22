@@ -2,92 +2,83 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport096 {
-    static int integerState0549;
-    static NodeDeque nodeDequeState0021;
-    static String stringState0378;
-    private int[] integerArrayState0174;
+    static String stringState0407;
+    static String stringState0408;
+    static ResourceArchive resourceArchiveState0014;
+    static String stringState0409;
+    static String stringState0410;
+    static String stringState0411;
 
-    public static void clearStaticReferences(boolean booleanArgument1) {
-        if (!booleanArgument1) {
-          stringState0378 = (String) null;
+    final static String computeString1212(int integerArgument1) {
+        if (GameAssets.mixedSupport004State0004 == UiComponentPart022.mixedSupport004State0003) {
+          return SceneWidgetPart013.stringState0586;
         }
-        stringState0378 = null;
-        nodeDequeState0021 = null;
+        if (integerArgument1 != 2) {
+          return (String) null;
+        }
+        return SceneWidgetPart011.stringState0525;
     }
 
-    final int computeInteger1175(byte byteArgument1, int integerArgument2) {
-        int integerLocal1;
-        int integerLocal2;
-        int integerLocal3;
-        int integerLocal4;
-        integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        integerLocal1 = -1 + (this.integerArrayState0174.length >> 1);
-        if (byteArgument1 != -68) {
-          return 51;
-        }
-        integerLocal2 = integerLocal1 & integerArgument2;
-        while (true) {
-          integerLocal3 = this.integerArrayState0174[1 + (integerLocal2 + integerLocal2)];
-          if (integerLocal3 == -1) {
-            return -1;
-          }
-          if (this.integerArrayState0174[integerLocal2 + integerLocal2] == integerArgument2) {
-            return integerLocal3;
-          }
-          integerLocal2 = 1 + integerLocal2 & integerLocal1;
-        }
-    }
-
-    final static MixedSupport062[] computeMixedSupport062Array1174(byte byteArgument1) {
-        if (byteArgument1 != 27) {
-          MixedSupport096.clearStaticReferences(false);
-        }
-        return new MixedSupport062[]{MixedSupport005.mixedSupport062State0001, RenderingSupport003.mixedSupport062State0002, GameApplet.mixedSupport062State0003};
-    }
-
-    MixedSupport096(int[] integerArrayArgument1) {
-        int integerLocal1 = 0;
-        int integerLocal2 = 0;
-        int integerLocal3 = 0;
-        RuntimeException stackRuntimeExceptionLocal4 = null;
-        StringBuilder stackStringBuilderLocal5 = null;
-        String stackStringLocal6 = null;
-        RuntimeException caughtExceptionLocal7 = null;
-        RuntimeException runtimeExceptionLocal8 = null;
-        int integerLocal9;
-        try {
-          integerLocal1 = 1;
-          while (integerLocal1 <= integerArrayArgument1.length + (integerArrayArgument1.length >> 1)) {
-            integerLocal1 = integerLocal1 << 1;
-          }
-          this.integerArrayState0174 = new int[integerLocal1 + integerLocal1];
-          for (integerLocal2 = 0; integerLocal1 + integerLocal1 > integerLocal2; integerLocal2++) {
-            this.integerArrayState0174[integerLocal2] = -1;
-          }
-          for (integerLocal9 = 0; integerLocal9 < integerArrayArgument1.length; integerLocal9++) {
-            integerLocal3 = integerArrayArgument1[integerLocal9] & -1 + integerLocal1;
-            while (-1 != this.integerArrayState0174[integerLocal3 - (-integerLocal3 - 1)]) {
-              integerLocal3 = -1 + integerLocal1 & integerLocal3 + 1;
-            }
-            this.integerArrayState0174[integerLocal3 + integerLocal3] = integerArrayArgument1[integerLocal9];
-            this.integerArrayState0174[1 + integerLocal3 + integerLocal3] = integerLocal9;
-          }
+    public static void clearStaticReferences(byte byteArgument1) {
+        stringState0408 = null;
+        stringState0409 = null;
+        if (byteArgument1 >= -9) {
           return;
-        } catch (java.lang.RuntimeException caughtParameterLocal10) {
-          caughtExceptionLocal7 = caughtParameterLocal10;
-          runtimeExceptionLocal8 = caughtExceptionLocal7;
-          stackRuntimeExceptionLocal4 = runtimeExceptionLocal8;
-          stackStringBuilderLocal5 = new StringBuilder().append("oc.<init>(");
-          if (integerArrayArgument1 == null) {
-            stackStringLocal6 = "null";
-          } else {
-            stackStringLocal6 = "{...}";
+        }
+        stringState0410 = null;
+        resourceArchiveState0014 = null;
+        stringState0407 = null;
+        stringState0411 = null;
+    }
+
+    final static boolean computeBoolean1213(int integerArgument1, int integerArgument2, long longArgument3, String stringArgument4, int[] integerArrayArgument5) {
+        RuntimeException runtimeExceptionLocal1 = null;
+        boolean stackBooleanLocal2 = false;
+        RuntimeException stackRuntimeExceptionLocal3 = null;
+        StringBuilder stackStringBuilderLocal4 = null;
+        String stackStringLocal5 = null;
+        StringBuilder stackStringBuilderLocal6 = null;
+        String stackStringLocal7 = null;
+        RuntimeException caughtExceptionLocal8 = null;
+        try {
+          if (integerArgument2 != 2) {
+            stringState0409 = (String) null;
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          boolean frameRemainderLocal9 = true;
+          if (integerArrayArgument5 != null && (integerArgument1 != 2 ||
+            InputAdapter003.computeBoolean1490(stringArgument4, 120, longArgument3))) {
+            stackBooleanLocal2 = true;
+            frameRemainderLocal9 = false;
+          }
+          else {
+            stackBooleanLocal2 = false;
+          }
+          return stackBooleanLocal2;
+        } catch (java.lang.RuntimeException caughtParameterLocal10) {
+          caughtExceptionLocal8 = caughtParameterLocal10;
+          runtimeExceptionLocal1 = caughtExceptionLocal8;
+          stackRuntimeExceptionLocal3 = runtimeExceptionLocal1;
+          stackStringBuilderLocal4 = new StringBuilder().append("pc.C(").append(integerArgument1).append(',').append(integerArgument2).append(',').append(longArgument3).append(',');
+          if (stringArgument4 == null) {
+            stackStringLocal5 = "null";
+          } else {
+            stackStringLocal5 = "{...}";
+          }
+          stackStringBuilderLocal6 = ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',');
+          if (integerArrayArgument5 == null) {
+            stackStringLocal7 = "null";
+          } else {
+            stackStringLocal7 = "{...}";
+          }
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
     static {
-        stringState0378 = "Confirm Email:";
+        stringState0407 = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
+        stringState0408 = "Private";
+        stringState0409 = "FINISH<br><%0>";
+        stringState0410 = "Change display name";
+        stringState0411 = "Return to Main Menu";
     }
 }

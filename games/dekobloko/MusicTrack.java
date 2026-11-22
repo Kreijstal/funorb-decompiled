@@ -44,9 +44,9 @@ final class MusicTrack {
     private NetworkSupport011 networkSupport011State0002;
     static String stringState0561;
 
-    final static MixedSupport124 computeMixedSupport1241694(int integerArgument1, String stringArgument2) {
+    final static MixedSupport119 computeMixedSupport1191663(int integerArgument1, String stringArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
-        MixedSupport124 stackMixedSupport124Local2 = null;
+        MixedSupport119 stackMixedSupport119Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -55,8 +55,8 @@ final class MusicTrack {
           if (integerArgument1 != 0) {
             sceneWidgetArrayState0007 = (SceneWidget[]) null;
           }
-          stackMixedSupport124Local2 = new MixedSupport124(stringArgument2);
-          return stackMixedSupport124Local2;
+          stackMixedSupport119Local2 = new MixedSupport119(stringArgument2);
+          return stackMixedSupport119Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
           runtimeExceptionLocal1 = caughtExceptionLocal6;
@@ -67,11 +67,11 @@ final class MusicTrack {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static String computeString1693(int integerArgument1) {
+    final static String computeString1662(int integerArgument1) {
         if (integerArgument1 != -12040) {
           return (String) null;
         }
@@ -89,7 +89,7 @@ final class MusicTrack {
         }
     }
 
-    private final void performAction1692(byte byteArgument1) {
+    private final void performAction1661(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -100,17 +100,17 @@ final class MusicTrack {
         }
         integerLocal2 = 1;
         if (byteArgument1 != 103) {
-          MusicTrack.computeString1693(-5);
+          MusicTrack.computeString1662(-5);
         }
         for (integerLocal1 = 0; integerLocal1 < this.rawSoundArrayState0003.length; integerLocal1++) {
           if (this.rawSoundArrayState0003[integerLocal1] == null) {
             if (this.integerArrayState0213[integerLocal1] >> 4 == 0) {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1286(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
+              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1259(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
             } else {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1294(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
+              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1267(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
             }
             if (rawSoundLocal4 != null) {
-              this.integerArrayState0213[integerLocal1] = MixedSupport079.computeInteger0949(this.integerArrayState0213[integerLocal1], 15);
+              this.integerArrayState0213[integerLocal1] = MixedSupport075.computeInteger0930(this.integerArrayState0213[integerLocal1], 15);
               this.rawSoundArrayState0003[integerLocal1] = rawSoundLocal4;
             } else {
               integerLocal2 = 0;
@@ -179,7 +179,7 @@ final class MusicTrack {
           for (integerLocal19 = 0; integerLocal19 < this.integerState0809; integerLocal19++) {
             cachedIntegerLocal3 = integerLocal2 + packetBufferArgument1.readUnsignedByte((byte) -126);
             integerLocal2 = cachedIntegerLocal3;
-            this.integerArrayState0220[integerLocal19] = MixedSupport079.computeInteger0949(255, cachedIntegerLocal3);
+            this.integerArrayState0220[integerLocal19] = MixedSupport075.computeInteger0930(255, cachedIntegerLocal3);
           }
           this.byteArrayArrayState0009 = new byte[256][];
           this.integerArrayState0212 = new int[256];
@@ -230,7 +230,7 @@ final class MusicTrack {
               for (integerLocal21 = 0; 96 > integerLocal21; integerLocal21++) {
                 cachedIntegerLocal6 = integerLocal23 + packetBufferArgument1.readUnsignedByte((byte) -79);
                 integerLocal23 = cachedIntegerLocal6;
-                this.integerArrayArrayState0025[integerLocal33][integerLocal21] = integerLocal32 + MixedSupport079.computeInteger0949(cachedIntegerLocal6, 255);
+                this.integerArrayArrayState0025[integerLocal33][integerLocal21] = integerLocal32 + MixedSupport075.computeInteger0930(cachedIntegerLocal6, 255);
               }
               this.integerArrayState0226[integerLocal33] = packetBufferArgument1.readUnsignedByte((byte) -64);
               integerLocal34 = packetBufferArgument1.readUnsignedByte((byte) -99);
@@ -259,7 +259,7 @@ final class MusicTrack {
               for (integerLocal25 = 0; integerLocal25 < integerLocal34; integerLocal25++) {
                 cachedIntegerLocal13 = integerLocal36 + packetBufferArgument1.readUnsignedByte((byte) -27);
                 integerLocal36 = cachedIntegerLocal13;
-                this.integerArrayArrayState0023[integerLocal33][integerLocal25] = MixedSupport079.computeInteger0949(255, cachedIntegerLocal13);
+                this.integerArrayArrayState0023[integerLocal33][integerLocal25] = MixedSupport075.computeInteger0930(255, cachedIntegerLocal13);
               }
               integerLocal24 = 0;
               integerArrayLocal14 = new int[integerLocal7];
@@ -278,7 +278,7 @@ final class MusicTrack {
               for (integerLocal27 = 0; integerLocal7 > integerLocal27; integerLocal27++) {
                 cachedIntegerLocal18 = integerLocal38 + packetBufferArgument1.readUnsignedByte((byte) -110);
                 integerLocal38 = cachedIntegerLocal18;
-                this.integerArrayArrayState0022[integerLocal33][integerLocal27] = MixedSupport079.computeInteger0949(255, cachedIntegerLocal18);
+                this.integerArrayArrayState0022[integerLocal33][integerLocal27] = MixedSupport075.computeInteger0930(255, cachedIntegerLocal18);
               }
               this.integerArrayState0232[integerLocal33] = packetBufferArgument1.readUnsignedShort(3);
               for (integerLocal28 = 0; integerLocal5 > integerLocal28; integerLocal28++) {
@@ -296,9 +296,9 @@ final class MusicTrack {
               }
             }
           }
-          this.performAction1692((byte) 103);
+          this.performAction1661((byte) 103);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ui.<init>(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + (networkSupport011Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ui.<init>(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + (networkSupport011Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 

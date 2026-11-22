@@ -2,67 +2,102 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport135 {
-    static RgbSprite rgbSpriteState0060;
-    static String stringState0555;
-    static String stringState0556;
-    static String stringState0557;
+    private java.awt.GraphicsDevice graphicsDeviceState0001;
+    private java.awt.DisplayMode displayModeState0001;
 
-    final static boolean computeBoolean1666(int integerArgument1, String stringArgument2) {
-        RuntimeException runtimeExceptionLocal1 = null;
-        String stringLocal2 = null;
-        boolean stackBooleanLocal3 = false;
-        RuntimeException stackRuntimeExceptionLocal4 = null;
-        StringBuilder stackStringBuilderLocal5 = null;
-        String stackStringLocal6 = null;
-        RuntimeException caughtExceptionLocal7 = null;
-        try {
-          if (null == MixedSupport068.stringState0288) {
-            return false;
-          }
-          if (integerArgument1 != 2048) {
-            stringLocal2 = (String) null;
-            MixedSupport135.computeBoolean1666(-5, (String) null);
-          }
-          stackBooleanLocal3 = !(stringArgument2.toLowerCase().indexOf(MixedSupport068.stringState0288.toLowerCase()) < 0);
-          return stackBooleanLocal3;
-        } catch (java.lang.RuntimeException caughtParameterLocal8) {
-          caughtExceptionLocal7 = caughtParameterLocal8;
-          runtimeExceptionLocal1 = caughtExceptionLocal7;
-          stackRuntimeExceptionLocal4 = runtimeExceptionLocal1;
-          stackStringBuilderLocal5 = new StringBuilder().append("ue.C(").append(integerArgument1).append(',');
-          if (stringArgument2 == null) {
-            stackStringLocal6 = "null";
-          } else {
-            stackStringLocal6 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
-        }
+    private final void performAction1704(java.awt.Frame frameArgument1, int integerArgument2) {
+        int integerLocal1;
+        integerLocal1 = -31 % ((1 - integerArgument2) / 51);
+        this.graphicsDeviceState0001.setFullScreenWindow((java.awt.Window) ((Object) frameArgument1));
     }
 
-    public static void performAction1664(byte byteArgument1) {
-        rgbSpriteState0060 = null;
-        stringState0556 = null;
-        stringState0555 = null;
-        if (byteArgument1 < -4) {
-          stringState0557 = null;
+    public final int[] listmodes() {
+        int integerLocal1 = 0;
+        java.awt.DisplayMode[] displayModeArrayLocal2 = this.graphicsDeviceState0001.getDisplayModes();
+        java.awt.DisplayMode[] displayModeArrayLocal3 = displayModeArrayLocal2;
+        int[] integerArrayLocal4 = new int[displayModeArrayLocal2.length << 2];
+        for (integerLocal1 = 0; integerLocal1 < displayModeArrayLocal2.length; integerLocal1++) {
+          integerArrayLocal4[integerLocal1 << 2] = displayModeArrayLocal2[integerLocal1].getWidth();
+          integerArrayLocal4[(integerLocal1 << 2) + 1] = displayModeArrayLocal2[integerLocal1].getHeight();
+          integerArrayLocal4[2 + (integerLocal1 << 2)] = displayModeArrayLocal2[integerLocal1].getBitDepth();
+          integerArrayLocal4[3 + (integerLocal1 << 2)] = displayModeArrayLocal2[integerLocal1].getRefreshRate();
+        }
+        return integerArrayLocal4;
+    }
+
+    public final void enter(java.awt.Frame frameArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        int integerLocal1 = 0;
+        int integerLocal2;
+        java.awt.DisplayMode[] displayModeArrayLocal3;
+        int integerLocal4;
+        int integerLocal5;
+        this.displayModeState0001 = this.graphicsDeviceState0001.getDisplayMode();
+        if (this.displayModeState0001 == null) {
+          throw new NullPointerException();
+        }
+        frameArgument1.setUndecorated(true);
+        frameArgument1.enableInputMethods(false);
+        this.performAction1704(frameArgument1, 127);
+        if (integerArgument5 == 0) {
+          integerLocal2 = this.displayModeState0001.getRefreshRate();
+          displayModeArrayLocal3 = this.graphicsDeviceState0001.getDisplayModes();
+          integerLocal4 = 0;
+          for (integerLocal1 = 0; integerLocal1 < displayModeArrayLocal3.length; integerLocal1++) {
+            if (displayModeArrayLocal3[integerLocal1].getWidth() == integerArgument2 &&
+              displayModeArrayLocal3[integerLocal1].getHeight() == integerArgument3 &&
+              integerArgument4 == displayModeArrayLocal3[integerLocal1].getBitDepth()) {
+              integerLocal5 = displayModeArrayLocal3[integerLocal1].getRefreshRate();
+              if (integerLocal4 == 0 ||
+                !(Math.abs(integerLocal5 - integerLocal2) >= Math.abs(-integerLocal2 + integerArgument5))) {
+                integerLocal4 = 1;
+                integerArgument5 = integerLocal5;
+              }
+            }
+          }
+          if (integerLocal4 == 0) {
+            integerArgument5 = integerLocal2;
+          }
+        }
+        this.graphicsDeviceState0001.setDisplayMode(new java.awt.DisplayMode(integerArgument2, integerArgument3, integerArgument4, integerArgument5));
+    }
+
+    public final void exit() {
+        if (this.displayModeState0001 != null) {
+          this.graphicsDeviceState0001.setDisplayMode(this.displayModeState0001);
+          if (!this.graphicsDeviceState0001.getDisplayMode().equals(this.displayModeState0001)) {
+            throw new RuntimeException("");
+          }
+          this.displayModeState0001 = null;
+        }
+        this.performAction1704((java.awt.Frame) null, 121);
+    }
+
+    public MixedSupport135() throws Exception {
+        int integerLocal1 = 0;
+        java.awt.GraphicsEnvironment graphicsEnvironmentLocal2;
+        java.awt.GraphicsDevice[] graphicsDeviceArrayLocal3;
+        java.awt.GraphicsDevice[] graphicsDeviceArrayLocal4;
+        java.awt.GraphicsDevice graphicsDeviceLocal5;
+        graphicsEnvironmentLocal2 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
+        this.graphicsDeviceState0001 = graphicsEnvironmentLocal2.getDefaultScreenDevice();
+        if (this.graphicsDeviceState0001.isFullScreenSupported()) {
           return;
         }
-        MixedSupport135.computeInteger1665(-36, 12);
-        stringState0557 = null;
-    }
-
-    final static int computeInteger1665(int integerArgument1, int integerArgument2) {
-        integerArgument1 = integerArgument1 & 8191;
-        int integerLocal1 = -44 % ((integerArgument2 + 3) / 44);
-        if (integerArgument1 >= 4096) {
-          return integerArgument1 >= 6144 ? MixedSupport102.integerArrayState0180[-6144 + integerArgument1] : -MixedSupport102.integerArrayState0180[-integerArgument1 + 6144];
+        graphicsDeviceArrayLocal3 = graphicsEnvironmentLocal2.getScreenDevices();
+        graphicsDeviceArrayLocal4 = graphicsDeviceArrayLocal3;
+        for (integerLocal1 = 0; graphicsDeviceArrayLocal4.length > integerLocal1; integerLocal1++) {
+          graphicsDeviceLocal5 = graphicsDeviceArrayLocal4[integerLocal1];
+          if (graphicsDeviceLocal5 != null &&
+            graphicsDeviceLocal5.isFullScreenSupported()) {
+            this.graphicsDeviceState0001 = graphicsDeviceLocal5;
+            return;
+          }
         }
-        return 2048 <= integerArgument1 ? -MixedSupport102.integerArrayState0180[-2048 + integerArgument1] : MixedSupport102.integerArrayState0180[-integerArgument1 + 2048];
+        throw MixedSupport135.<RuntimeException>computeRuntimeException1703(new Exception());
     }
 
-    static {
-        stringState0555 = "Solicitation";
-        stringState0557 = "Tips";
-        stringState0556 = "Report abuse";
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException computeRuntimeException1703(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

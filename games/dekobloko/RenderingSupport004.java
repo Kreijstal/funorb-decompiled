@@ -16,9 +16,9 @@ abstract class RenderingSupport004 extends DualNode {
     static String stringState0202;
     static SceneWidget sceneWidgetState0040;
 
-    final static RenderingSupport010 computeRenderingSupport0100583(IndexedSprite[] indexedSpriteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3) {
+    final static RenderingSupport009 computeRenderingSupport0090580(IndexedSprite[] indexedSpriteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3) {
         int integerLocal1 = 0;
-        RenderingSupport010 stackRenderingSupport010Local2 = null;
+        RenderingSupport009 stackRenderingSupport009Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -49,7 +49,7 @@ abstract class RenderingSupport004 extends DualNode {
             throw new IllegalArgumentException();
           }
           if (integerArgument2 <= 48) {
-            RenderingSupport004.performAction0585(-68);
+            RenderingSupport004.performAction0582(-68);
           }
           integerArrayLocal22 = new int[256];
           integerArrayLocal17 = integerArrayLocal22;
@@ -74,8 +74,8 @@ abstract class RenderingSupport004 extends DualNode {
             integerArrayLocal13[integerLocal1] = indexedSpriteArrayArgument1[integerLocal1].integerState0426;
             byteArrayArrayLocal14[integerLocal1] = indexedSpriteArrayArgument1[integerLocal1].byteArrayState0021;
           }
-          stackRenderingSupport010Local2 = new RenderingSupport010(byteArrayArgument3, integerArrayLocal22, integerArrayLocal23, integerArrayLocal24, integerArrayLocal25, byteArrayArrayLocal26);
-          return stackRenderingSupport010Local2;
+          stackRenderingSupport009Local2 = new RenderingSupport009(byteArrayArgument3, integerArrayLocal22, integerArrayLocal23, integerArrayLocal24, integerArrayLocal25, byteArrayArrayLocal26);
+          return stackRenderingSupport009Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal27) {
           caughtExceptionLocal8 = caughtParameterLocal27;
           runtimeExceptionLocal10 = caughtExceptionLocal8;
@@ -92,34 +92,34 @@ abstract class RenderingSupport004 extends DualNode {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
-    final static int computeInteger0584(int integerArgument1, int integerArgument2) {
+    final static int computeInteger0581(int integerArgument1, int integerArgument2) {
         if (integerArgument2 != 27935) {
           return 72;
         }
         return 5 * ((integerArgument1 + 1) * integerArgument1);
     }
 
-    final static void performAction0582(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        IterableNodeCollection.performAction1687(-9074);
+    final static void performAction0579(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        IterableNodeCollection.performAction1656(-9074);
         if (integerArgument2 == 20763) {
-          SoftwareRaster.performAction0672(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
+          SoftwareRaster.performAction0663(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
           return;
         }
-        RenderingSupport004.computeInteger0584(119, 2);
-        SoftwareRaster.performAction0672(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
+        RenderingSupport004.computeInteger0581(119, 2);
+        SoftwareRaster.performAction0663(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
     }
 
-    public static void performAction0585(int integerArgument1) {
+    public static void performAction0582(int integerArgument1) {
         stringState0202 = null;
         randomState0002 = null;
         sceneWidgetState0040 = null;
         sceneWidgetState0039 = null;
         if (integerArgument1 != 0) {
-          RenderingSupport004.performAction0585(-109);
+          RenderingSupport004.performAction0582(-109);
         }
     }
 

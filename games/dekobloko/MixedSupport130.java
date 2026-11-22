@@ -2,113 +2,142 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport130 {
-    static String stringState0539;
-    static SceneWidgetPart006 sceneWidgetPart006State0002;
-    static int[] integerArrayState0208;
-    static int integerState0787;
-    static String stringState0540;
-    static String[] stringArrayState0048;
-    static String stringState0541;
-    static int integerState0788;
+    static String stringState0562;
+    static String[] stringArrayState0050;
+    static int integerState0810;
+    static String stringState0563;
+    static String stringState0564;
+    static String stringState0565;
+    static RgbSprite[][] rgbSpriteArrayArrayState0012;
 
-    final static int computeInteger1646(byte byteArgument1) {
-        int stackIntegerLocal1 = 0;
-        RuntimeException caughtExceptionLocal2 = null;
+    final static void performAction1665(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
         int integerLocal3 = 0;
-        RuntimeException runtimeExceptionLocal4 = null;
+        int integerLocal4 = 0;
         int integerLocal5 = 0;
         int integerLocal6 = 0;
-        long longLocal7 = 0L;
+        int integerLocal7 = 0;
         int integerLocal8 = 0;
         int integerLocal9 = 0;
-        integerLocal9 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        int integerLocal10 = 0;
+        RuntimeException caughtExceptionLocal11 = null;
+        RuntimeException runtimeExceptionLocal12 = null;
+        int integerLocal13;
+        integerLocal10 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal3 = 0;
-          integerLocal5 = 0;
-          while (DualNodeDeque.computeBoolean0027(52)) {
-            MixedSupport070.mixedSupport121State0001.performAction1539(-111);
-            if (MixedSupport070.mixedSupport121State0001.computeBoolean1547((byte) 114)) {
-              integerLocal3 = 1;
-            }
-            if (MixedSupport153.integerState0931 != 13) {
-              continue;
-            }
-            integerLocal5 = 1;
+          integerLocal2 = integerArgument2 + (2 + (485 + integerArgument5) + 16);
+          integerLocal3 = -37 / ((-64 - integerArgument6) / 62);
+          MatchingFieldValidator.sceneWidgetState0105.performAction1764(-6 + integerLocal2, 0, 3, -6 + RichTextLayout.sceneWidgetState0021.integerState0915, 3);
+          integerLocal4 = -5 + MatchingFieldValidator.sceneWidgetState0105.integerState0915;
+          MixedSupport116.sceneWidgetState0111.performAction1764(2 + (485 + integerArgument5) + integerArgument2, 0, -integerArgument1 + integerLocal4, integerArgument1, 5);
+          UiComponentPart033.sceneWidgetState0150.performAction1764(MixedSupport116.sceneWidgetState0111.integerState0896 - (integerArgument5 + DiagnosticSupport002.sceneWidgetState0057.integerState0896), 0, 0, integerArgument1, integerArgument5);
+          integerLocal4 = integerLocal4 - (integerArgument1 + 2);
+          DiagnosticSupport002.sceneWidgetState0057.performAction1764(DiagnosticSupport002.sceneWidgetState0057.integerState0896, 0, 0, integerArgument1, integerArgument5 + UiComponentPart033.sceneWidgetState0150.integerState0896);
+          MixedSupport026.sceneWidgetPart008State0001.performAction1122(6, 5, integerArgument2, 5, integerLocal4 - 5, 487 + integerArgument5 + integerArgument2, 2);
+          if (null != MixedSupport009.uiComponentPart019State0001) {
+            MixedSupport009.uiComponentPart019State0001.performAction0222(MixedSupport026.sceneWidgetPart008State0001.integerState0915, MixedSupport026.sceneWidgetPart008State0001.integerState0896, MixedSupport026.sceneWidgetPart008State0001.integerState0890, MixedSupport026.sceneWidgetPart008State0001.integerState0903, -16555);
           }
-          MixedSupport070.mixedSupport121State0001.performAction1542(MixedSupport133.computeInteger1658(HashNode.integerState0069, (byte) -81, MixedSupport106.integerState0590), -20563, MixedSupport133.computeInteger1658(UiComponentPart013.integerState0276, (byte) -81, TextLineMetrics.integerState0535));
-          if (MixedSupport070.mixedSupport121State0001.computeBoolean1547((byte) 114)) {
-            integerLocal3 = 1;
-          }
-          integerLocal6 = 0;
-          if (integerLocal3 != 0 &&
-            MixedSupport070.mixedSupport121State0001.integerState0754 >= 0) {
-            integerLocal6 = InputAdapter002.integerArrayState0192[MixedSupport070.mixedSupport121State0001.integerState0754];
-            if (2 == integerLocal6 ||
-              integerLocal6 == 5) {
-              RenderingSupport001.performAction0137(false);
-            }
-          } else {
-            if (integerLocal5 != 0 &&
-              MixedSupport009.integerState0054 != 2) {
-              RenderingSupport001.performAction0137(false);
-            }
-          }
-          if (byteArgument1 > -88) {
-            MixedSupport130.computeInteger1646((byte) 116);
-          }
-          if (integerLocal6 == 0 &&
-            2 == MixedSupport009.integerState0054) {
-            longLocal7 = MixedSupport063.computeLong0745(4) - MixedSupport024.longState0007;
-            integerLocal8 = (int)((10999L - longLocal7) / 1000L);
-            if (0 >= integerLocal8) {
-              integerLocal6 = 2;
-              UiComponentPart003.performAction0163(-79, 5, true);
+          integerLocal5 = -integerLocal2 + (-integerArgument5 + RichTextLayout.sceneWidgetState0021.integerState0896);
+          integerLocal6 = integerLocal5 / 2;
+          integerLocal7 = integerArgument3 + (integerLocal6 + integerArgument5);
+          integerLocal8 = 0;
+          for (integerLocal1 = 0; integerLocal1 < 6; integerLocal1++) {
+            if (integerLocal1 >= 5 ||
+              null != ClientException.sceneWidgetArrayState0001[integerLocal1]) {
+              integerLocal9 = 3 + (-6 + (RichTextLayout.sceneWidgetState0021.integerState0915 + 2)) * integerLocal8 / (ClientException.integerState0140 + 1);
+              integerLocal8++;
+              integerLocal13 = 1 + ((-4 + RichTextLayout.sceneWidgetState0021.integerState0915) * integerLocal8 / (1 + ClientException.integerState0140) - integerLocal9);
+              if (integerLocal1 >= 5) {
+                NetworkArchiveRequestManager.sceneWidgetState0098.performAction1764(integerLocal5, 0, integerLocal9, integerLocal13, integerLocal2);
+              } else {
+                ClientException.sceneWidgetArrayState0001[integerLocal1].performAction1764(integerLocal5, 0, integerLocal9, integerLocal13, integerLocal2);
+                MusicTrack.sceneWidgetArrayState0007[integerLocal1].performAction1764(-integerArgument5 + integerLocal6, 0, 0, integerLocal13, integerArgument5);
+                NodeHashTable.sceneWidgetArrayState0004[integerLocal1].performAction1764(integerArgument3, 0, integerArgument4, -integerArgument4 + (integerLocal13 - integerArgument4), integerLocal6);
+                MixedSupport076.sceneWidgetArrayState0002[integerLocal1].performAction1764(-integerLocal7 + (-integerArgument5 + integerLocal5), 0, integerArgument4, -integerArgument4 + (integerLocal13 - integerArgument4), integerLocal7);
+              }
             }
           }
-          stackIntegerLocal1 = integerLocal6;
-          return stackIntegerLocal1;
-        } catch (java.lang.RuntimeException caughtParameterLocal10) {
-          caughtExceptionLocal2 = caughtParameterLocal10;
-          runtimeExceptionLocal4 = caughtExceptionLocal2;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal4), "tm.B(" + byteArgument1 + ')');
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal14) {
+          caughtExceptionLocal11 = caughtParameterLocal14;
+          runtimeExceptionLocal12 = caughtExceptionLocal11;
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal12), "uj.A(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
-    public static void clearStaticReferences(int integerArgument1) {
-        stringState0540 = null;
-        sceneWidgetPart006State0002 = null;
-        integerArrayState0208 = null;
-        stringArrayState0048 = null;
-        stringState0541 = null;
-        if (integerArgument1 > 87) {
-          stringState0539 = null;
+    public static void clearStaticReferences(byte byteArgument1) {
+        stringState0564 = null;
+        stringArrayState0050 = null;
+        stringState0565 = null;
+        if (byteArgument1 <= 99) {
           return;
         }
-        stringState0541 = (String) null;
-        stringState0539 = null;
+        stringState0563 = null;
+        rgbSpriteArrayArrayState0012 = (RgbSprite[][]) null;
+        stringState0562 = null;
     }
 
-    final static void performAction1647(byte byteArgument1) {
-        UiComponentPart018.stringArrayState0021[4] = MixedSupport026.stringState0128;
-        UiComponentPart018.stringArrayState0021[7] = UiComponentPart022.stringState0401;
-        UiComponentPart018.stringArrayState0021[1] = UiComponentPart030.stringState0520;
-        UiComponentPart018.stringArrayState0021[2] = MixedSupport131.stringState0545;
-        UiComponentPart018.stringArrayState0021[3] = MixedSupport075.stringState0317;
-        UiComponentPart018.stringArrayState0021[6] = MixedSupport077.stringState0321;
-        if (byteArgument1 <= -30) {
-          UiComponentPart018.stringArrayState0021[5] = RichTextLayout.stringState0135;
-          UiComponentPart018.stringArrayState0021[0] = MixedSupport144.stringState0588;
-          MixedSupport003.stringArrayState0001[MixedSupport003.stringArrayState0001.length - 2] = MixedSupport124.stringState0522;
-          MixedSupport003.stringArrayState0001[-1 + MixedSupport003.stringArrayState0001.length] = UiComponentPart023.stringState0426;
-          return;
+    final synchronized static byte[] computeByteArray1664(int integerArgument1, int integerArgument2) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        int integerLocal3 = 0;
+        int integerLocal4 = 0;
+        int cachedIntegerLocal5 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] byteArrayLocal7;
+        byte[] byteArrayLocal8;
+        byte[] byteArrayLocal9;
+        byte[] byteArrayLocal10;
+        if (integerArgument2 == 100 &&
+          MixedSupport107.integerState0684 > 0) {
+          integerLocal1 = MixedSupport107.integerState0684 - 1;
+          MixedSupport107.integerState0684 = MixedSupport107.integerState0684 - 1;
+          byteArrayLocal7 = ResourceSupport003.byteArrayArrayState0006[integerLocal1];
+          ResourceSupport003.byteArrayArrayState0006[MixedSupport107.integerState0684] = null;
+          return byteArrayLocal7;
         }
+        if (integerArgument2 == 5000 &&
+          MixedSupport074.integerState0418 > 0) {
+          integerLocal2 = MixedSupport074.integerState0418 - 1;
+          MixedSupport074.integerState0418 = MixedSupport074.integerState0418 - 1;
+          byteArrayLocal9 = GameplayControls.byteArrayArrayState0011[integerLocal2];
+          GameplayControls.byteArrayArrayState0011[MixedSupport074.integerState0418] = null;
+          return byteArrayLocal9;
+        }
+        if (integerArgument1 != 5) {
+          return (byte[]) null;
+        }
+        if (integerArgument2 == 30000 &&
+          MixedSupport021.integerState0124 > 0) {
+          integerLocal3 = MixedSupport021.integerState0124 - 1;
+          MixedSupport021.integerState0124 = MixedSupport021.integerState0124 - 1;
+          byteArrayLocal10 = UiComponentPart012.byteArrayArrayState0002[integerLocal3];
+          UiComponentPart012.byteArrayArrayState0002[MixedSupport021.integerState0124] = null;
+          return byteArrayLocal10;
+        }
+        if (null != LoginCredentials.byteArrayArrayArrayState0001) {
+          for (integerLocal4 = 0; MixedSupport080.integerArrayState0149.length > integerLocal4; integerLocal4++) {
+            if (MixedSupport080.integerArrayState0149[integerLocal4] == integerArgument2 &&
+              MixedSupport143.integerArrayState0256[integerLocal4] > 0) {
+              cachedIntegerLocal5 = MixedSupport143.integerArrayState0256[integerLocal4] - 1;
+              arrayValue$7 = LoginCredentials.byteArrayArrayArrayState0001[integerLocal4];
+              MixedSupport143.integerArrayState0256[integerLocal4] = cachedIntegerLocal5;
+              byteArrayLocal8 = arrayValue$7[cachedIntegerLocal5];
+              LoginCredentials.byteArrayArrayArrayState0001[integerLocal4][MixedSupport143.integerArrayState0256[integerLocal4]] = null;
+              return byteArrayLocal8;
+            }
+          }
+        }
+        return new byte[integerArgument2];
     }
 
     static {
-        stringState0540 = "You have not yet unlocked this option for use.";
-        integerState0787 = 0;
-        stringState0539 = "Waiting for music";
-        stringArrayState0048 = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        stringState0541 = "Create your own free Jagex account";
+        stringArrayState0050 = new String[]{"Welcome to the Master Challenge!<br><br>The Master Challenge is not for the faint of heart. Games are short, and, unlike Stamina Mode, the Master Challenge gets very harsh very quickly. Get as many points as you can, while you can.", "The Master Challenge will test your skill in every different Deko Bloko strategy. You will need to use different strategies as the game progresses. Have you noticed the strategy box on the right? Keep checking it for each new theme."};
+        stringState0563 = "Seriously offensive language";
+        stringState0564 = "<%0> SHAPES";
+        stringState0565 = "to return to the normal view.";
+        rgbSpriteArrayArrayState0012 = new RgbSprite[8][];
+        stringState0562 = "Rated games are available to members only. To become a member and gain access to Rated games, extra game options and more, please visit the 'Account' section of the website.";
     }
 }

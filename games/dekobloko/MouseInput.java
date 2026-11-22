@@ -6,7 +6,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static String stringState0619;
     static RgbSprite rgbSpriteState0072;
     static ResourceArchive resourceArchiveState0026;
-    static MixedSupport111 mixedSupport111State0014;
+    static MixedSupport106 mixedSupport106State0014;
     static RgbSprite rgbSpriteState0073;
     static int integerState0929;
     static boolean booleanState0223;
@@ -14,18 +14,18 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent mouseEventArgument1) {
         try {
-          if (null != MixedSupport063.mouseInputState0001) {
-            MixedSupport104.integerState0579 = 0;
+          if (null != MixedSupport062.mouseInputState0001) {
+            MixedSupport099.integerState0579 = 0;
             Sprite.integerState0424 = mouseEventArgument1.getX();
-            MixedSupport126.integerState0775 = mouseEventArgument1.getY();
+            PasswordValidator.integerState0775 = mouseEventArgument1.getY();
             TranslatedUiText.booleanState0115 = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wg.mouseEntered(" + (mouseEventArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wg.mouseEntered(" + (mouseEventArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger1837(boolean booleanArgument1, CharSequence charSequenceArgument2, char characterArgument3) {
+    final static int computeInteger1805(boolean booleanArgument1, CharSequence charSequenceArgument2, char characterArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -60,14 +60,14 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(characterArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(characterArgument3).append(')').toString());
         }
     }
 
     public static void clearStaticReferences(boolean booleanArgument1) {
         stringState0619 = null;
         rgbSpriteState0072 = null;
-        mixedSupport111State0014 = null;
+        mixedSupport106State0014 = null;
         resourceArchiveState0026 = null;
         if (!booleanArgument1) {
           return;
@@ -83,8 +83,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          if (null != MixedSupport063.mouseInputState0001) {
-            MixedSupport104.integerState0579 = 0;
+          if (null != MixedSupport062.mouseInputState0001) {
+            MixedSupport099.integerState0579 = 0;
             UiComponentPart022.integerState0572 = 0;
             TranslatedUiText.booleanState0115 = true;
             integerLocal1 = mouseEventArgument1.getModifiers();
@@ -110,7 +110,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -121,12 +121,12 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackStringLocal4 = null;
         RuntimeException caughtExceptionLocal5 = null;
         try {
-          if (MixedSupport063.mouseInputState0001 == null) {
+          if (MixedSupport062.mouseInputState0001 == null) {
             return;
           }
-          MixedSupport104.integerState0579 = 0;
+          MixedSupport099.integerState0579 = 0;
           Sprite.integerState0424 = mouseEventArgument1.getX();
-          MixedSupport126.integerState0775 = mouseEventArgument1.getY();
+          PasswordValidator.integerState0775 = mouseEventArgument1.getY();
           TranslatedUiText.booleanState0115 = true;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -139,11 +139,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final static void performAction1838(boolean booleanArgument1, PacketBuffer packetBufferArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, byte byteArgument4) {
+    final static void performAction1806(boolean booleanArgument1, PacketBuffer packetBufferArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, byte byteArgument4) {
         int integerLocal1 = 0;
         SceneWidgetPart013 stackSceneWidgetPart013Local2 = null;
         boolean stackBooleanLocal3 = false;
@@ -207,7 +207,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           integerLocal25 = stackIntegerLocal15;
           packetBufferArgument2.readBytes(sceneWidgetPart013Argument3.byteArrayState0032, 0, (byte) 126, sceneWidgetPart013Argument3.byteArrayState0032.length);
           sceneWidgetPart013Argument3.integerState0838 = packetBufferArgument2.readUnsignedShort(3);
-          sceneWidgetPart013Argument3.longState0052 = MixedSupport063.computeLong0745(4) - (long)packetBufferArgument2.readInt(7553);
+          sceneWidgetPart013Argument3.longState0052 = MixedSupport062.computeLong0734(4) - (long)packetBufferArgument2.readInt(7553);
           if (integerLocal24 == 0) {
             sceneWidgetPart013Argument3.integerState0841 = -1;
           } else {
@@ -245,11 +245,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal20 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal19).append(stackStringLocal20).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal19).append(stackStringLocal20).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1836(CipherPacketBuffer cipherPacketBufferArgument1, byte byteArgument2) {
+    final static boolean computeBoolean1804(CipherPacketBuffer cipherPacketBufferArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -259,7 +259,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException caughtExceptionLocal7 = null;
         try {
           integerLocal1 = 82 % ((-69 - byteArgument2) / 43);
-          stackBooleanLocal3 = (cipherPacketBufferArgument1.computeInteger1668(1, (byte) 53) == 1);
+          stackBooleanLocal3 = (cipherPacketBufferArgument1.computeInteger1637(1, (byte) 53) == 1);
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -271,7 +271,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackStringLocal4 = null;
         RuntimeException caughtExceptionLocal5 = null;
         try {
-          if (MixedSupport063.mouseInputState0001 == null) {
+          if (MixedSupport062.mouseInputState0001 == null) {
             return;
           }
           UiComponentPart022.integerState0572 = 0;
@@ -297,7 +297,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -309,11 +309,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          if (MixedSupport063.mouseInputState0001 != null) {
-            MixedSupport104.integerState0579 = 0;
+          if (MixedSupport062.mouseInputState0001 != null) {
+            MixedSupport099.integerState0579 = 0;
             RenderingSupport003.integerState0253 = mouseEventArgument1.getX();
-            MixedSupport108.integerState0597 = mouseEventArgument1.getY();
-            MixedSupport063.computeLong0745(4);
+            MixedSupport103.integerState0597 = mouseEventArgument1.getY();
+            MixedSupport062.computeLong0734(4);
             if (javax.swing.SwingUtilities.isRightMouseButton(mouseEventArgument1)) {
               SecondaryNodeHashTable.integerState0544 = 2;
               UiComponentPart022.integerState0572 = 2;
@@ -345,7 +345,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -356,12 +356,12 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackStringLocal4 = null;
         RuntimeException caughtExceptionLocal5 = null;
         try {
-          if (MixedSupport063.mouseInputState0001 == null) {
+          if (MixedSupport062.mouseInputState0001 == null) {
             return;
           }
-          MixedSupport104.integerState0579 = 0;
+          MixedSupport099.integerState0579 = 0;
           Sprite.integerState0424 = mouseEventArgument1.getX();
-          MixedSupport126.integerState0775 = mouseEventArgument1.getY();
+          PasswordValidator.integerState0775 = mouseEventArgument1.getY();
           TranslatedUiText.booleanState0115 = true;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -374,7 +374,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -400,7 +400,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -409,19 +409,19 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent mouseEventArgument1) {
         try {
-          if (MixedSupport063.mouseInputState0001 != null) {
-            MixedSupport104.integerState0579 = 0;
+          if (MixedSupport062.mouseInputState0001 != null) {
+            MixedSupport099.integerState0579 = 0;
             Sprite.integerState0424 = -1;
-            MixedSupport126.integerState0775 = -1;
+            PasswordValidator.integerState0775 = -1;
             TranslatedUiText.booleanState0115 = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wg.mouseExited(" + (mouseEventArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wg.mouseExited(" + (mouseEventArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         stringState0619 = "Find opponents";
-        mixedSupport111State0014 = new MixedSupport111(11, 0, 1, 2);
+        mixedSupport106State0014 = new MixedSupport106(11, 0, 1, 2);
     }
 }

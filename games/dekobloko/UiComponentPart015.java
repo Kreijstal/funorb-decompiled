@@ -17,18 +17,18 @@ final class UiComponentPart015 extends ComponentDecorator {
               return;
             }
             if (this.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (this.callbackContract006State0001)).performAction1111(uiComponentPart029Local1, this, (byte) -128);
+              ((CallbackContract010) (this.callbackContract006State0001)).performAction1092(uiComponentPart029Local1, this, (byte) -128);
               UiComponentPart017.uiComponentPart029State0001 = null;
               return;
             }
             if (uiComponentPart029Local1.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (uiComponentPart029Local1.callbackContract006State0001)).performAction1111(uiComponentPart029Local1, this, (byte) -128);
+              ((CallbackContract010) (uiComponentPart029Local1.callbackContract006State0001)).performAction1092(uiComponentPart029Local1, this, (byte) -128);
               UiComponentPart017.uiComponentPart029State0001 = null;
               return;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "id.IB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "id.IB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
@@ -37,11 +37,11 @@ final class UiComponentPart015 extends ComponentDecorator {
         try {
           this.uiComponentState0002 = uiComponentArgument7;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "id.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (callbackContract004Argument5 != null ? "{...}" : "null") + ',' + (callbackContract006Argument6 != null ? "{...}" : "null") + ',' + (uiComponentArgument7 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "id.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (callbackContract004Argument5 != null ? "{...}" : "null") + ',' + (callbackContract006Argument6 != null ? "{...}" : "null") + ',' + (uiComponentArgument7 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static RgbSprite computeRgbSprite0713(ResourceArchive resourceArchiveArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
+    final static RgbSprite computeRgbSprite0704(ResourceArchive resourceArchiveArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -58,8 +58,8 @@ final class UiComponentPart015 extends ComponentDecorator {
           if (integerArgument4 != 8192) {
             sceneWidgetPart010State0002 = (SceneWidgetPart010) null;
           }
-          integerLocal1 = resourceArchiveArgument1.computeInteger0832(-1, stringArgument3);
-          integerLocal3 = resourceArchiveArgument1.computeInteger0819(integerLocal1, 13030, stringArgument2);
+          integerLocal1 = resourceArchiveArgument1.computeInteger0819(-1, stringArgument3);
+          integerLocal3 = resourceArchiveArgument1.computeInteger0806(integerLocal1, 13030, stringArgument2);
           stackRgbSpriteLocal4 = MixedSupport004.computeRgbSprite0052(integerLocal3, 50, resourceArchiveArgument1, integerLocal1);
           return stackRgbSpriteLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
@@ -84,11 +84,11 @@ final class UiComponentPart015 extends ComponentDecorator {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    public static void performAction0714(boolean booleanArgument1) {
+    public static void performAction0705(boolean booleanArgument1) {
         integerArrayState0100 = null;
         sceneWidgetPart010State0002 = null;
         if (booleanArgument1) {
@@ -96,34 +96,34 @@ final class UiComponentPart015 extends ComponentDecorator {
           return;
         }
         RgbSprite rgbSpriteLocal1 = (RgbSprite) null;
-        UiComponentPart015.performAction0712(99, 26, 67, 28, -65, -116, 74, (RgbSprite) null, 106);
+        UiComponentPart015.performAction0703(99, 26, 67, 28, -65, -116, 74, (RgbSprite) null, 106);
         stringState0252 = null;
     }
 
-    final static void performAction0712(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, RgbSprite rgbSpriteArgument8, int integerArgument9) {
+    final static void performAction0703(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, RgbSprite rgbSpriteArgument8, int integerArgument9) {
         try {
           BufferedSocket.integerState0668 = integerArgument9;
-          MixedSupport106.integerState0591 = integerArgument6;
+          MixedSupport101.integerState0591 = integerArgument6;
           UiComponentPart011.integerState0240 = integerArgument3;
           DiagnosticSupport001.integerState0125 = integerArgument4;
-          MixedSupport080.integerState0429 = integerArgument5;
+          MixedSupport076.integerState0429 = integerArgument5;
           UiComponent.integerState0106 = integerArgument2;
           MouseInput.rgbSpriteState0073 = rgbSpriteArgument8;
           if (integerArgument7 != 8192) {
-            UiComponentPart015.performAction0714(false);
+            UiComponentPart015.performAction0705(false);
           }
           SecondaryNodeHashTable.integerState0543 = integerArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "id.E(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + (rgbSpriteArgument8 != null ? "{...}" : "null") + ',' + integerArgument9 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "id.E(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + (rgbSpriteArgument8 != null ? "{...}" : "null") + ',' + integerArgument9 + ')');
         }
     }
 
-    final static SceneWidget computeSceneWidget0715(int integerArgument1) {
+    final static SceneWidget computeSceneWidget0706(int integerArgument1) {
         if (integerArgument1 != 8192) {
-          UiComponentPart015.performAction0714(false);
-          return LoginCredentials.computeSceneWidget0808(false);
+          UiComponentPart015.performAction0705(false);
+          return LoginCredentials.computeSceneWidget0795(false);
         }
-        return LoginCredentials.computeSceneWidget0808(false);
+        return LoginCredentials.computeSceneWidget0795(false);
     }
 
     static {

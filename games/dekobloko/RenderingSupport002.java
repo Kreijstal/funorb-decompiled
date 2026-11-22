@@ -8,32 +8,32 @@ final class RenderingSupport002 {
     static String stringState0086;
 
     final static void performAction0244(int integerArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3) {
-        MixedSupport104 mixedSupport104Local1 = null;
+        MixedSupport099 mixedSupport099Local1 = null;
         RgbSprite rgbSpriteLocal2 = null;
         String stringLocal3 = null;
-        MixedSupport104 mixedSupport104Local4 = null;
+        MixedSupport099 mixedSupport099Local4 = null;
         RgbSprite rgbSpriteLocal5 = null;
         String stringLocal6 = null;
-        MixedSupport104 mixedSupport104Local7 = null;
+        MixedSupport099 mixedSupport099Local7 = null;
         RgbSprite rgbSpriteLocal8 = null;
         String stringLocal9 = null;
-        MixedSupport104 mixedSupport104Local10 = null;
+        MixedSupport099 mixedSupport099Local10 = null;
         String stringLocal11 = null;
-        MixedSupport104 mixedSupport104Local12 = null;
+        MixedSupport099 mixedSupport099Local12 = null;
         RgbSprite rgbSpriteLocal13 = null;
         String stringLocal14 = null;
-        MixedSupport104 mixedSupport104Local15 = null;
+        MixedSupport099 mixedSupport099Local15 = null;
         RgbSprite rgbSpriteLocal16 = null;
         String stringLocal17 = null;
-        MixedSupport104 mixedSupport104Local18 = null;
+        MixedSupport099 mixedSupport099Local18 = null;
         String stringLocal19 = null;
-        MixedSupport104 mixedSupport104Local20 = null;
+        MixedSupport099 mixedSupport099Local20 = null;
         RgbSprite rgbSpriteLocal21 = null;
         String stringLocal22 = null;
-        MixedSupport104 mixedSupport104Local23 = null;
+        MixedSupport099 mixedSupport099Local23 = null;
         RgbSprite rgbSpriteLocal24 = null;
         String stringLocal25 = null;
-        MixedSupport104 mixedSupport104Local26 = null;
+        MixedSupport099 mixedSupport099Local26 = null;
         int integerLocal27 = 0;
         int integerLocal28 = 0;
         int integerLocal29 = 0;
@@ -56,72 +56,72 @@ final class RenderingSupport002 {
         RgbSprite rgbSpriteLocal46;
         RgbSprite rgbSpriteLocal47;
         try {
-          MixedSupport122.performAction1553((String) null, (int[]) null, 90, (SceneWidgetPart008) null, sceneWidgetArgument2, (String) null, 0L, integerArgument3, -1);
+          MixedSupport117.performAction1526((String) null, (int[]) null, 90, (SceneWidgetPart008) null, sceneWidgetArgument2, (String) null, 0L, integerArgument3, -1);
           if (0 == integerArgument3) {
-            mixedSupport104Local1 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local1 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal2 = UiComponentPart010.rgbSpriteArrayState0010[0];
             rgbSpriteLocal31 = rgbSpriteLocal2;
             rgbSpriteLocal32 = rgbSpriteLocal31;
             rgbSpriteLocal36 = rgbSpriteLocal2;
-            stringLocal3 = MixedSupport091.stringState0366;
-            mixedSupport104Local1.sceneWidgetPart002State0002.performAction0559(4193, 11, rgbSpriteLocal2, stringLocal3);
-            mixedSupport104Local4 = SceneWidget.mixedSupport104State0001;
+            stringLocal3 = BufferedFile.stringState0366;
+            mixedSupport099Local1.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal2, stringLocal3);
+            mixedSupport099Local4 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal5 = UiComponentPart010.rgbSpriteArrayState0010[1];
             rgbSpriteLocal37 = rgbSpriteLocal5;
             rgbSpriteLocal41 = rgbSpriteLocal37;
             rgbSpriteLocal38 = rgbSpriteLocal5;
             stringLocal6 = UiComponentPart008.stringState0122;
-            mixedSupport104Local4.sceneWidgetPart002State0002.performAction0559(4193, 12, rgbSpriteLocal5, stringLocal6);
-            mixedSupport104Local7 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local4.sceneWidgetPart002State0002.performAction0556(4193, 12, rgbSpriteLocal5, stringLocal6);
+            mixedSupport099Local7 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal8 = UiComponentPart010.rgbSpriteArrayState0010[2];
             rgbSpriteLocal39 = rgbSpriteLocal8;
             rgbSpriteLocal42 = rgbSpriteLocal39;
             rgbSpriteLocal40 = rgbSpriteLocal8;
             stringLocal9 = MixedSupport047.stringState0201;
-            mixedSupport104Local7.sceneWidgetPart002State0002.performAction0559(integerArgument1 ^ 4192, 13, rgbSpriteLocal8, stringLocal9);
+            mixedSupport099Local7.sceneWidgetPart002State0002.performAction0556(integerArgument1 ^ 4192, 13, rgbSpriteLocal8, stringLocal9);
           }
           if (integerArgument1 == integerArgument3) {
-            mixedSupport104Local10 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local10 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal33 = UiComponentPart010.rgbSpriteArrayState0010[0];
             rgbSpriteLocal34 = rgbSpriteLocal33;
             rgbSpriteLocal43 = rgbSpriteLocal33;
             stringLocal11 = UiComponentPart008.stringState0121;
-            mixedSupport104Local10.sceneWidgetPart002State0002.performAction0559(4193, 11, rgbSpriteLocal33, stringLocal11);
-            mixedSupport104Local12 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local10.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal33, stringLocal11);
+            mixedSupport099Local12 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal13 = UiComponentPart010.rgbSpriteArrayState0010[1];
             rgbSpriteLocal44 = rgbSpriteLocal13;
             rgbSpriteLocal45 = rgbSpriteLocal13;
             stringLocal14 = ReturnedShape.stringState0473;
-            mixedSupport104Local12.sceneWidgetPart002State0002.performAction0559(integerArgument1 ^ 4192, 12, rgbSpriteLocal13, stringLocal14);
-            mixedSupport104Local15 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local12.sceneWidgetPart002State0002.performAction0556(integerArgument1 ^ 4192, 12, rgbSpriteLocal13, stringLocal14);
+            mixedSupport099Local15 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal16 = UiComponentPart010.rgbSpriteArrayState0010[2];
             rgbSpriteLocal46 = rgbSpriteLocal16;
             rgbSpriteLocal47 = rgbSpriteLocal16;
             stringLocal17 = PlatformSupport002.stringState0125;
-            mixedSupport104Local15.sceneWidgetPart002State0002.performAction0559(4193, 13, rgbSpriteLocal16, stringLocal17);
+            mixedSupport099Local15.sceneWidgetPart002State0002.performAction0556(4193, 13, rgbSpriteLocal16, stringLocal17);
           }
           if (integerArgument3 == 2) {
-            mixedSupport104Local18 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local18 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal35 = UiComponentPart010.rgbSpriteArrayState0010[0];
             stringLocal19 = DekoBlokoClient.stringState0096;
-            mixedSupport104Local18.sceneWidgetPart002State0002.performAction0559(4193, 11, rgbSpriteLocal35, stringLocal19);
-            mixedSupport104Local20 = SceneWidget.mixedSupport104State0001;
+            mixedSupport099Local18.sceneWidgetPart002State0002.performAction0556(4193, 11, rgbSpriteLocal35, stringLocal19);
+            mixedSupport099Local20 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal21 = UiComponentPart010.rgbSpriteArrayState0010[1];
-            stringLocal22 = MixedSupport098.stringState0392;
-            mixedSupport104Local20.sceneWidgetPart002State0002.performAction0559(integerArgument1 ^ 4192, 12, rgbSpriteLocal21, stringLocal22);
-            mixedSupport104Local23 = SceneWidget.mixedSupport104State0001;
+            stringLocal22 = MixedSupport093.stringState0392;
+            mixedSupport099Local20.sceneWidgetPart002State0002.performAction0556(integerArgument1 ^ 4192, 12, rgbSpriteLocal21, stringLocal22);
+            mixedSupport099Local23 = SceneWidget.mixedSupport099State0001;
             rgbSpriteLocal24 = UiComponentPart010.rgbSpriteArrayState0010[2];
             stringLocal25 = MixedSupport018.stringState0088;
-            mixedSupport104Local23.sceneWidgetPart002State0002.performAction0559(4193, 13, rgbSpriteLocal24, stringLocal25);
+            mixedSupport099Local23.sceneWidgetPart002State0002.performAction0556(4193, 13, rgbSpriteLocal24, stringLocal25);
           }
-          mixedSupport104Local26 = SceneWidget.mixedSupport104State0001;
+          mixedSupport099Local26 = SceneWidget.mixedSupport099State0001;
           integerLocal27 = sceneWidgetArgument2.integerState0892;
           integerLocal28 = sceneWidgetArgument2.integerState0886;
           integerLocal29 = sceneWidgetArgument2.integerState0896;
           integerLocal30 = sceneWidgetArgument2.integerState0915;
-          mixedSupport104Local26.sceneWidgetPart002State0002.performAction0564(integerLocal28, integerLocal27, 43, integerLocal30, integerLocal29);
+          mixedSupport099Local26.sceneWidgetPart002State0002.performAction0561(integerLocal28, integerLocal27, 43, integerLocal30, integerLocal29);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "cg.A(" + integerArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "cg.A(" + integerArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
     }
 
@@ -146,14 +146,14 @@ final class RenderingSupport002 {
     final static void performAction0249(boolean booleanArgument1, int integerArgument2) {
         if (UiComponentPart017.integerState0437 > 0 &&
           SceneWidgetPart013.booleanState0202) {
-          SoftwareRaster.performAction0667(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
-          SceneWidgetPart011.sceneWidgetState0115.performAction1798(integerArgument2 ^ 1141039779, booleanArgument1);
+          SoftwareRaster.performAction0658(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
+          SceneWidgetPart011.sceneWidgetState0115.performAction1767(integerArgument2 ^ 1141039779, booleanArgument1);
         }
         if ((!(RenderingSupport001.integerState0064 <= 0) ||
-          !(MixedSupport127.integerState0778 <= 0)) &&
+          !(MixedSupport121.integerState0778 <= 0)) &&
           MixedSupport026.booleanState0028) {
-          SoftwareRaster.performAction0667(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
-          MixedSupport087.sceneWidgetState0087.performAction1798(1141039778, booleanArgument1);
+          SoftwareRaster.performAction0658(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
+          MixedSupport083.sceneWidgetState0087.performAction1767(1141039778, booleanArgument1);
         }
         if (integerArgument2 != 1) {
           floatState0002 = 1.5652884244918823f;
@@ -164,7 +164,7 @@ final class RenderingSupport002 {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
-        int[] integerArrayLocal4 = MixedSupport095.rgbSpriteArrayArrayArrayState0001[integerArgument1][integerArgument2][integerArgument3].integerArrayState0024;
+        int[] integerArrayLocal4 = MixedSupport090.rgbSpriteArrayArrayArrayState0001[integerArgument1][integerArgument2][integerArgument3].integerArrayState0024;
         byte[] byteArrayLocal5 = MixedSupport047.indexedSpriteArrayState0003[integerArgument3].byteArrayState0021;
         int[] integerArrayLocal6 = ResourceSupport001.rgbSpriteState0003.integerArrayState0024;
         int integerLocal7 = 0;
@@ -220,7 +220,7 @@ final class RenderingSupport002 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
@@ -269,11 +269,11 @@ final class RenderingSupport002 {
           integerLocal10 = integerArgument5 * integerLocal5 + (integerArgument6 - integerArgument5) * (integerLocal1 - integerArgument3) + (integerArgument6 - integerArgument5 >> 1);
           integerLocal11 = integerArgument7 * integerLocal5 + (integerArgument8 - integerArgument7) * (integerLocal1 - integerArgument3) + (integerArgument8 - integerArgument7 >> 1);
           integerLocal12 = integerLocal11 - integerLocal10;
-          integerLocal13 = MixedSupport148.computeInteger1785(23841, integerLocal5, integerLocal10 + (integerLocal5 >> 1));
+          integerLocal13 = MixedSupport141.computeInteger1754(23841, integerLocal5, integerLocal10 + (integerLocal5 >> 1));
           if (integerLocal13 < SoftwareRaster.integerState0280) {
             integerLocal13 = SoftwareRaster.integerState0280;
           }
-          integerLocal14 = MixedSupport148.computeInteger1785(23841, integerLocal5, integerLocal11 + (integerLocal5 >> 1));
+          integerLocal14 = MixedSupport141.computeInteger1754(23841, integerLocal5, integerLocal11 + (integerLocal5 >> 1));
           if (integerLocal14 > SoftwareRaster.integerState0283) {
             integerLocal14 = SoftwareRaster.integerState0283;
           }
@@ -327,7 +327,7 @@ final class RenderingSupport002 {
         int integerLocal2 = 0;
         int integerLocal3 = 0;
         RgbSprite rgbSpriteLocal4 = new RgbSprite(36, 36);
-        int[] integerArrayLocal5 = MixedSupport095.rgbSpriteArrayArrayArrayState0001[integerArgument1][integerArgument2][integerArgument3].integerArrayState0024;
+        int[] integerArrayLocal5 = MixedSupport090.rgbSpriteArrayArrayArrayState0001[integerArgument1][integerArgument2][integerArgument3].integerArrayState0024;
         byte[] byteArrayLocal6 = MixedSupport047.indexedSpriteArrayState0003[integerArgument3].byteArrayState0021;
         int[] integerArrayLocal7 = rgbSpriteLocal4.integerArrayState0024;
         int integerLocal8 = 0;
@@ -407,7 +407,7 @@ final class RenderingSupport002 {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
@@ -416,7 +416,7 @@ final class RenderingSupport002 {
         if (byteArgument2 != -9) {
           nodeDequeState0004 = (NodeDeque) null;
         }
-        cipherPacketBufferLocal1.performAction1672(integerArgument3, -4);
+        cipherPacketBufferLocal1.performAction1641(integerArgument3, -4);
         cipherPacketBufferLocal1.writeByte(true, 3);
         cipherPacketBufferLocal1.writeByte(true, 8);
         cipherPacketBufferLocal1.writeShort(-1, integerArgument1);

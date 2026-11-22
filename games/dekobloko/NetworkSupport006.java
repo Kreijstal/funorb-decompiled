@@ -12,7 +12,7 @@ final class NetworkSupport006 {
     static int[] integerArrayState0152;
     private int integerState0500;
 
-    final static boolean computeBoolean1044(boolean booleanArgument1, int integerArgument2) {
+    final static boolean computeBoolean1025(boolean booleanArgument1, int integerArgument2) {
         try {
           long cachedLongLocal1 = 0L;
           int integerLocal2 = 0;
@@ -20,40 +20,40 @@ final class NetworkSupport006 {
           IOException iOExceptionLocal4 = null;
           int stackIntegerLocal5 = 0;
           Throwable caughtExceptionLocal6 = null;
-          if (MixedSupport070.asyncTaskState0004 == null) {
-            MixedSupport070.asyncTaskState0004 = GzipDecompressor.platformServiceState0002.computeAsyncTask0517(114, MixedSupport085.stringState0340, MixedSupport052.integerState0270);
+          if (MixedSupport066.asyncTaskState0004 == null) {
+            MixedSupport066.asyncTaskState0004 = GzipDecompressor.platformServiceState0002.computeAsyncTask0514(114, MixedSupport081.stringState0340, MixedSupport052.integerState0270);
           }
-          if (MixedSupport070.asyncTaskState0004.integerState0510 == 0) {
+          if (MixedSupport066.asyncTaskState0004.integerState0510 == 0) {
             return false;
           }
-          cachedLongLocal1 = MixedSupport063.computeLong0745(4);
+          cachedLongLocal1 = MixedSupport062.computeLong0734(4);
           ArchiveRequestManager.longState0011 = cachedLongLocal1;
-          MixedSupport100.longState0040 = cachedLongLocal1;
-          if (MixedSupport070.asyncTaskState0004.integerState0510 != 1) {
-            UiComponentPart023.mixedSupport139State0009 = MixedSupport075.mixedSupport139State0005;
+          MixedSupport095.longState0040 = cachedLongLocal1;
+          if (MixedSupport066.asyncTaskState0004.integerState0510 != 1) {
+            UiComponentPart023.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
           } else {
             try {
-              GameSession.bufferedSocketState0002 = new BufferedSocket((java.net.Socket) (MixedSupport070.asyncTaskState0004.objectState0004), GzipDecompressor.platformServiceState0002);
+              GameSession.bufferedSocketState0002 = new BufferedSocket((java.net.Socket) (MixedSupport066.asyncTaskState0004.objectState0004), GzipDecompressor.platformServiceState0002);
               cipherPacketBufferLocal3 = UiComponentPart006.cipherPacketBufferState0001;
               SocketFactory.cipherPacketBufferState0002.position = 0;
-              UiComponentPart023.mixedSupport139State0009 = ResourceSupport002.mixedSupport139State0001;
+              UiComponentPart023.mixedSupport132State0009 = ResourceSupport002.mixedSupport132State0001;
               stackIntegerLocal5 = (!booleanArgument1) ? -1 : -2;
               UiComponentPart017.integerState0438 = stackIntegerLocal5;
               GameDomainSupport001.integerState0051 = stackIntegerLocal5;
               ComponentContainer.integerState0378 = stackIntegerLocal5;
               cipherPacketBufferLocal3.position = 0;
-              MixedSupport049.performAction0590(MixedSupport071.integerState0356, MixedSupport077.integerState0415, 17, SocketFactory.cipherPacketBufferState0002, BufferedSocket.integerState0662);
-              UiComponentPart033.performAction1850(4792, -1);
+              MixedSupport049.performAction0587(MixedSupport067.integerState0356, MixedSupport073.integerState0415, 17, SocketFactory.cipherPacketBufferState0002, BufferedSocket.integerState0662);
+              UiComponentPart033.performAction1818(4792, -1);
             } catch (java.io.IOException caughtParameterLocal7) {
               caughtExceptionLocal6 = caughtParameterLocal7;
               iOExceptionLocal4 = (IOException) (Object) caughtExceptionLocal6;
-              UiComponentPart023.mixedSupport139State0009 = MixedSupport075.mixedSupport139State0005;
-              MixedSupport070.asyncTaskState0004 = null;
+              UiComponentPart023.mixedSupport132State0009 = MixedSupport071.mixedSupport132State0005;
+              MixedSupport066.asyncTaskState0004 = null;
               integerLocal2 = 79 / ((integerArgument2 - 21) / 48);
               return true;
             }
           }
-          MixedSupport070.asyncTaskState0004 = null;
+          MixedSupport066.asyncTaskState0004 = null;
           integerLocal2 = 79 / ((integerArgument2 - 21) / 48);
           return true;
         } catch (RuntimeException | Error uncheckedExceptionLocal8) {
@@ -63,12 +63,12 @@ final class NetworkSupport006 {
         }
     }
 
-    final int computeInteger1040(int integerArgument1) {
+    final int computeInteger1021(int integerArgument1) {
         int integerLocal1 = 97 % ((integerArgument1 - 37) / 50);
         return this.integerState0498 + 1;
     }
 
-    final static String computeString1042(int integerArgument1, MixedSupport056 mixedSupport056Argument2) {
+    final static String computeString1023(int integerArgument1, MixedSupport056 mixedSupport056Argument2) {
         String stackStringLocal1 = null;
         Object stackObjectLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -114,11 +114,11 @@ final class NetworkSupport006 {
             }
           } else {
             if (0 == mixedSupport056Argument2.integerState0290 &&
-              MixedSupport061.booleanState0077) {
-              stringLocal11 = "[" + MixedSupport134.stringState0554 + "] ";
+              EmailFormatValidator.booleanState0077) {
+              stringLocal11 = "[" + MixedSupport127.stringState0554 + "] ";
             }
             if (mixedSupport056Argument2.integerState0290 == 1) {
-              stringLocal11 = "[" + NodeHashTableIterator.substituteIndexedPlaceholders(125, PlatformSupport004.stringState0232, new String[]{mixedSupport056Argument2.stringState0244}) + "] ";
+              stringLocal11 = "[" + NodeHashTableIterator.substituteIndexedPlaceholders(125, BoundedRandomAccessFile.stringState0232, new String[]{mixedSupport056Argument2.stringState0244}) + "] ";
             }
             if (4 == mixedSupport056Argument2.integerState0290 &&
               MixedSupport033.stringState0158 != null) {
@@ -143,11 +143,11 @@ final class NetworkSupport006 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) (stackObjectLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) (stackObjectLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final int computeInteger1046(int integerArgument1, int integerArgument2) {
+    final int computeInteger1027(int integerArgument1, int integerArgument2) {
         if (integerArgument1 > this.integerState0498) {
           throw new ArrayIndexOutOfBoundsException(integerArgument1);
         }
@@ -158,20 +158,20 @@ final class NetworkSupport006 {
         return this.integerArrayState0151[integerArgument1];
     }
 
-    private final void performAction1041(int integerArgument1, int integerArgument2) {
-        int[] integerArrayLocal1 = new int[this.computeInteger1038((byte) -63, integerArgument1)];
+    private final void performAction1022(int integerArgument1, int integerArgument2) {
+        int[] integerArrayLocal1 = new int[this.computeInteger1019((byte) -63, integerArgument1)];
         int[] integerArrayLocal2 = integerArrayLocal1;
         if (integerArgument2 < -4) {
           MixedSupport008.performAction0076(this.integerArrayState0151, 0, integerArrayLocal1, 0, this.integerArrayState0151.length);
           this.integerArrayState0151 = integerArrayLocal1;
           return;
         }
-        this.computeInteger1046(9, -101);
+        this.computeInteger1027(9, -101);
         MixedSupport008.performAction0076(this.integerArrayState0151, 0, integerArrayLocal1, 0, this.integerArrayState0151.length);
         this.integerArrayState0151 = integerArrayLocal1;
     }
 
-    private final int computeInteger1038(byte byteArgument1, int integerArgument2) {
+    private final int computeInteger1019(byte byteArgument1, int integerArgument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -207,14 +207,14 @@ final class NetworkSupport006 {
         return integerLocal3;
     }
 
-    private final void performAction1039(byte byteArgument1, int integerArgument2, int integerArgument3) {
+    private final void performAction1020(byte byteArgument1, int integerArgument2, int integerArgument3) {
         if (this.integerState0498 < integerArgument2) {
           this.integerState0498 = integerArgument2;
           if (byteArgument1 < 38) {
             return;
           }
           if (integerArgument2 >= this.integerArrayState0151.length) {
-            this.performAction1041(integerArgument2, -23);
+            this.performAction1022(integerArgument2, -23);
             this.integerArrayState0151[integerArgument2] = integerArgument3;
             return;
           }
@@ -228,7 +228,7 @@ final class NetworkSupport006 {
           this.integerArrayState0151[integerArgument2] = integerArgument3;
           return;
         }
-        this.performAction1041(integerArgument2, -23);
+        this.performAction1022(integerArgument2, -23);
         this.integerArrayState0151[integerArgument2] = integerArgument3;
     }
 
@@ -236,7 +236,7 @@ final class NetworkSupport006 {
         throw new Error();
     }
 
-    final static int computeInteger1045(boolean booleanArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
+    final static int computeInteger1026(boolean booleanArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 256 + integerArgument2 * (-integerArgument5 + integerArgument4);
         if (booleanArgument1) {
           integerLocal1 += 64;
@@ -248,13 +248,13 @@ final class NetworkSupport006 {
         return integerLocal1;
     }
 
-    final void performAction1043(int integerArgument1, boolean booleanArgument2) {
+    final void performAction1024(int integerArgument1, boolean booleanArgument2) {
         if (!booleanArgument2) {
-          this.performAction1039((byte) 114, this.integerState0498 + 1, integerArgument1);
+          this.performAction1020((byte) 114, this.integerState0498 + 1, integerArgument1);
           return;
         }
         stringState0339 = (String) null;
-        this.performAction1039((byte) 114, this.integerState0498 + 1, integerArgument1);
+        this.performAction1020((byte) 114, this.integerState0498 + 1, integerArgument1);
     }
 
     public static void clearStaticReferences(boolean booleanArgument1) {
@@ -265,7 +265,7 @@ final class NetworkSupport006 {
         }
     }
 
-    final void performAction1047(int integerArgument1, int integerArgument2) {
+    final void performAction1028(int integerArgument1, int integerArgument2) {
         if (integerArgument2 < 0) {
           throw new ArrayIndexOutOfBoundsException(integerArgument2);
         }

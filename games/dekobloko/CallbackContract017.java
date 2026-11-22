@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface CallbackContract017 {
-    public abstract void performAction1643(int integerArgument1, int integerArgument2, int integerArgument3);
+    public abstract void performAction1613(int integerArgument1, int integerArgument2, int integerArgument3);
 }

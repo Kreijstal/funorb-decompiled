@@ -1,65 +1,144 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport144 {
-    static String stringState0588;
-    static boolean booleanState0209;
-    static String stringState0589;
-    static int integerState0848;
-    static String stringState0590;
+final class MixedSupport144 extends HashNode {
+    int integerState0921;
+    int[] integerArrayState0258;
+    static String stringState0607;
+    int integerState0922;
+    static boolean booleanState0221;
+    static RgbSprite rgbSpriteState0071;
+    int integerState0923;
+    int integerState0924;
+    int integerState0925;
+    int integerState0926;
 
-    public static void performAction1745(int integerArgument1) {
-        if (integerArgument1 == 27067) {
-          stringState0589 = null;
-          stringState0590 = null;
-          stringState0588 = null;
-          return;
+    final void performAction1786(byte byteArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+        try {
+          this.integerState0924 = integerArgument2;
+          if (byteArgument1 != 37) {
+            CharSequence charSequenceLocal1 = (CharSequence) null;
+            MixedSupport144.getPlayerNameValidationMessage(false, (CharSequence) null, -40);
+          }
+          this.integerState0922 = integerArgument6;
+          this.integerArrayState0258 = integerArrayArgument3;
+          this.integerState0923 = integerArgument8;
+          this.integerState0926 = integerArgument4;
+          this.integerState0921 = integerArgument7;
+          this.integerState0925 = integerArgument5;
+        } catch (RuntimeException runtimeException) {
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wc.D(" + byteArgument1 + ',' + integerArgument2 + ',' + (integerArrayArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ')');
         }
-        booleanState0209 = false;
-        stringState0589 = null;
-        stringState0590 = null;
-        stringState0588 = null;
     }
 
-    final static StringBuilder computeStringBuilder1746(StringBuilder stringBuilderArgument1, int integerArgument2, int integerArgument3, char characterArgument4) {
+    public static void performAction1787(int integerArgument1) {
+        stringState0607 = null;
+        if (integerArgument1 != 2) {
+          MixedSupport144.performAction1788(64, -36, -122);
+          rgbSpriteState0071 = null;
+          return;
+        }
+        rgbSpriteState0071 = null;
+    }
+
+    final static String getPlayerNameValidationMessage(boolean booleanArgument1, CharSequence charSequenceArgument2, int integerArgument3) {
         int integerLocal1 = 0;
-        int integerLocal2 = 0;
-        RuntimeException runtimeExceptionLocal3 = null;
-        int integerLocal4 = 0;
-        StringBuilder stackStringBuilderLocal5 = null;
+        String stringLocal2 = null;
+        int integerLocal3 = 0;
+        String stackStringLocal4 = null;
+        String stackStringLocal5 = null;
         RuntimeException stackRuntimeExceptionLocal6 = null;
         StringBuilder stackStringBuilderLocal7 = null;
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
-        integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        RuntimeException runtimeExceptionLocal10 = null;
+        integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal2 = stringBuilderArgument1.length();
-          stringBuilderArgument1.setLength(integerArgument3);
-          if (integerArgument2 != -23510) {
-            stringState0588 = (String) null;
+          stringLocal2 = MixedSupport107.computeString1407(booleanArgument1, (byte) 19, charSequenceArgument2);
+          if (stringLocal2 != null) {
+            stackStringLocal4 = stringLocal2;
+            return stackStringLocal4;
           }
-          for (integerLocal1 = integerLocal2; integerArgument3 > integerLocal1; integerLocal1++) {
-            stringBuilderArgument1.setCharAt(integerLocal1, characterArgument4);
+          for (integerLocal1 = integerArgument3; charSequenceArgument2.length() > integerLocal1; integerLocal1++) {
+            if (!MixedSupport018.computeBoolean0252(charSequenceArgument2.charAt(integerLocal1), (byte) 90)) {
+              stackStringLocal5 = HuffmanCodec.stringState0289;
+              return stackStringLocal5;
+            }
           }
-          stackStringBuilderLocal5 = (StringBuilder) (stringBuilderArgument1);
-          return stackStringBuilderLocal5;
-        } catch (java.lang.RuntimeException caughtParameterLocal10) {
-          caughtExceptionLocal9 = caughtParameterLocal10;
-          runtimeExceptionLocal3 = caughtExceptionLocal9;
-          stackRuntimeExceptionLocal6 = runtimeExceptionLocal3;
-          stackStringBuilderLocal7 = new StringBuilder().append("vf.B(");
-          if (stringBuilderArgument1 == null) {
+          return null;
+        } catch (java.lang.RuntimeException caughtParameterLocal11) {
+          caughtExceptionLocal9 = caughtParameterLocal11;
+          runtimeExceptionLocal10 = caughtExceptionLocal9;
+          stackRuntimeExceptionLocal6 = runtimeExceptionLocal10;
+          stackStringBuilderLocal7 = new StringBuilder().append("wc.A(").append(booleanArgument1).append(',');
+          if (charSequenceArgument2 == null) {
             stackStringLocal8 = "null";
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
+    final static void performAction1788(int integerArgument1, int integerArgument2, int integerArgument3) {
+        int integerLocal1 = 0;
+        int integerLocal2 = 0;
+        int integerLocal3 = 0;
+        int integerLocal4 = 0;
+        int integerLocal5 = 0;
+        int integerLocal6 = 0;
+        int integerLocal7 = 0;
+        int integerLocal8 = 0;
+        int integerLocal9 = 0;
+        RuntimeException caughtExceptionLocal10 = null;
+        RuntimeException runtimeExceptionLocal11 = null;
+        integerLocal9 = DekoBlokoClient.obfuscationControl ? 1 : 0;
+        try {
+          if (integerArgument1 <= integerArgument2 + 5) {
+            return;
+          }
+          integerLocal2 = integerArgument2;
+          integerLocal3 = NetworkSupport004.integerArrayState0052[integerLocal2];
+          integerLocal4 = NetworkSupport004.integerArrayState0052[integerLocal2 + 1];
+          integerLocal5 = NetworkSupport004.integerArrayState0052[2 + integerLocal2];
+          integerLocal6 = NetworkSupport004.integerArrayState0052[integerLocal2 + 3];
+          integerLocal7 = NetworkSupport004.integerArrayState0052[4 + integerLocal2];
+          for (integerLocal1 = integerArgument2 + 5; integerLocal1 < integerArgument1; integerLocal1 += 5) {
+            integerLocal8 = NetworkSupport004.integerArrayState0052[3 + integerLocal1];
+            if (integerLocal6 < integerLocal8) {
+              NetworkSupport004.integerArrayState0052[integerLocal2] = NetworkSupport004.integerArrayState0052[integerLocal1];
+              NetworkSupport004.integerArrayState0052[integerLocal2 + 1] = NetworkSupport004.integerArrayState0052[integerLocal1 + 1];
+              NetworkSupport004.integerArrayState0052[2 + integerLocal2] = NetworkSupport004.integerArrayState0052[2 + integerLocal1];
+              NetworkSupport004.integerArrayState0052[3 + integerLocal2] = integerLocal8;
+              NetworkSupport004.integerArrayState0052[4 + integerLocal2] = NetworkSupport004.integerArrayState0052[integerLocal1 + 4];
+              integerLocal2 += 5;
+              NetworkSupport004.integerArrayState0052[integerLocal1] = NetworkSupport004.integerArrayState0052[integerLocal2];
+              NetworkSupport004.integerArrayState0052[1 + integerLocal1] = NetworkSupport004.integerArrayState0052[integerLocal2 + 1];
+              NetworkSupport004.integerArrayState0052[integerLocal1 + 2] = NetworkSupport004.integerArrayState0052[integerLocal2 + 2];
+              NetworkSupport004.integerArrayState0052[integerLocal1 + 3] = NetworkSupport004.integerArrayState0052[3 + integerLocal2];
+              NetworkSupport004.integerArrayState0052[4 + integerLocal1] = NetworkSupport004.integerArrayState0052[4 + integerLocal2];
+            }
+          }
+          NetworkSupport004.integerArrayState0052[integerLocal2] = integerLocal3;
+          NetworkSupport004.integerArrayState0052[integerLocal2 + 1] = integerLocal4;
+          NetworkSupport004.integerArrayState0052[integerLocal2 + 2] = integerLocal5;
+          NetworkSupport004.integerArrayState0052[integerLocal2 + 3] = integerLocal6;
+          NetworkSupport004.integerArrayState0052[4 + integerLocal2] = integerLocal7;
+          MixedSupport144.performAction1788(integerLocal2, integerArgument2, integerArgument3);
+          MixedSupport144.performAction1788(integerArgument1, 5 + integerLocal2, integerArgument3 + 0);
+          return;
+        } catch (java.lang.RuntimeException caughtParameterLocal12) {
+          caughtExceptionLocal10 = caughtParameterLocal12;
+          runtimeExceptionLocal11 = caughtExceptionLocal10;
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal11), "wc.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+        }
+    }
+
+    MixedSupport144() {
+    }
+
     static {
-        stringState0589 = "Please enter your date of birth to enable chat:";
-        stringState0588 = "Fruit";
-        stringState0590 = "This private message is prefixed with \"<col=9090FF>To <%1>:</col>\" on your screen.<br>On <%1>'s screen, it will be prefixed with \"<col=FF6060>From <%0>:</col>\", which is<br>a different length and may leave less room for the message itself.<br><br>This shading covers the area which is not available on <%1>'s screen.<br>Provided your message fits to the left of the shaded area,<br><%1> should be able to see it in full.<br><br>(Note: this may be inaccurate if <%1> is playing in a different<br>language from you.)";
+        booleanState0221 = true;
+        stringState0607 = "<%0> is not on your friend list.";
     }
 }

@@ -6,23 +6,23 @@ abstract class Framebuffer {
     int[] integerArrayState0040;
     int integerState0191;
     java.awt.Image imageState0001;
-    static MixedSupport066 mixedSupport066State0002;
+    static EmailValidationError emailValidationErrorState0002;
     static boolean[][] booleanArrayArrayState0002;
     static String stringState0154;
     static String stringState0155;
-    static RenderingSupport011 renderingSupport011State0001;
+    static RenderingSupport010 renderingSupport010State0001;
     static int integerState0192;
 
-    final void performAction0422(byte byteArgument1) {
+    final void performAction0420(byte byteArgument1) {
         if (byteArgument1 > -82) {
-          this.performAction0422((byte) 23);
+          this.performAction0420((byte) 23);
         }
-        SoftwareRaster.performAction0654(this.integerArrayState0040, this.integerState0190, this.integerState0191);
+        SoftwareRaster.performAction0645(this.integerArrayState0040, this.integerState0190, this.integerState0191);
     }
 
-    abstract void performAction0426(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4);
+    abstract void performAction0424(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4);
 
-    final static void performAction0424(byte byteArgument1, byte[] byteArrayArgument2) {
+    final static void performAction0422(byte byteArgument1, byte[] byteArrayArgument2) {
         byte cachedByteLocal1 = 0;
         byte cachedByteLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -70,22 +70,22 @@ abstract class Framebuffer {
           MixedSupport022.booleanArrayState0004 = new boolean[GameDomainSupport002.integerState0177];
           InputAdapter003.integerArrayState0206 = new int[GameDomainSupport002.integerState0177];
           MixedSupport039.integerArrayState0047 = new int[GameDomainSupport002.integerState0177];
-          MixedSupport130.integerArrayState0208 = new int[GameDomainSupport002.integerState0177];
+          MixedSupport123.integerArrayState0208 = new int[GameDomainSupport002.integerState0177];
           MixedSupport052.integerArrayState0054 = new int[GameDomainSupport002.integerState0177];
-          MixedSupport102.byteArrayArrayState0007 = new byte[GameDomainSupport002.integerState0177][];
+          MixedSupport097.byteArrayArrayState0007 = new byte[GameDomainSupport002.integerState0177][];
           SceneWidgetPart011.byteArrayArrayState0008 = new byte[GameDomainSupport002.integerState0177][];
           packetBufferLocal26.position = -(GameDomainSupport002.integerState0177 * 8) + (byteArrayArgument2.length - 7);
           MixedSupport029.integerState0181 = packetBufferLocal26.readUnsignedShort(3);
           MixedSupport057.integerState0297 = packetBufferLocal26.readUnsignedShort(3);
           integerLocal12 = 1 + (packetBufferLocal26.readUnsignedByte((byte) -104) & 255);
           for (integerLocal13 = 0; integerLocal13 < GameDomainSupport002.integerState0177; integerLocal13++) {
-            InputAdapter003.integerArrayState0206[integerLocal13] = packetBufferLocal25.readUnsignedShort(MixedSupport111.computeInteger1414((int) byteArgument1, -69));
+            InputAdapter003.integerArrayState0206[integerLocal13] = packetBufferLocal25.readUnsignedShort(MixedSupport106.computeInteger1387((int) byteArgument1, -69));
           }
           for (integerLocal31 = 0; GameDomainSupport002.integerState0177 > integerLocal31; integerLocal31++) {
-            MixedSupport039.integerArrayState0047[integerLocal31] = packetBufferLocal26.readUnsignedShort(MixedSupport111.computeInteger1414((int) byteArgument1, -69));
+            MixedSupport039.integerArrayState0047[integerLocal31] = packetBufferLocal26.readUnsignedShort(MixedSupport106.computeInteger1387((int) byteArgument1, -69));
           }
           for (integerLocal32 = 0; integerLocal32 < GameDomainSupport002.integerState0177; integerLocal32++) {
-            MixedSupport130.integerArrayState0208[integerLocal32] = packetBufferLocal26.readUnsignedShort(3);
+            MixedSupport123.integerArrayState0208[integerLocal32] = packetBufferLocal26.readUnsignedShort(3);
           }
           for (integerLocal33 = 0; GameDomainSupport002.integerState0177 > integerLocal33; integerLocal33++) {
             MixedSupport052.integerArrayState0054[integerLocal33] = packetBufferLocal26.readUnsignedShort(3);
@@ -100,7 +100,7 @@ abstract class Framebuffer {
           }
           packetBufferLocal26.position = 0;
           for (integerLocal35 = 0; GameDomainSupport002.integerState0177 > integerLocal35; integerLocal35++) {
-            integerLocal14 = MixedSupport130.integerArrayState0208[integerLocal35];
+            integerLocal14 = MixedSupport123.integerArrayState0208[integerLocal35];
             integerLocal15 = MixedSupport052.integerArrayState0054[integerLocal35];
             integerLocal16 = integerLocal14 * integerLocal15;
             byteArrayLocal29 = new byte[integerLocal16];
@@ -110,7 +110,7 @@ abstract class Framebuffer {
             byteArrayLocal30 = new byte[integerLocal16];
             byteArrayLocal28 = byteArrayLocal30;
             byteArrayLocal18 = byteArrayLocal28;
-            MixedSupport102.byteArrayArrayState0007[integerLocal35] = byteArrayLocal30;
+            MixedSupport097.byteArrayArrayState0007[integerLocal35] = byteArrayLocal30;
             integerLocal19 = 0;
             integerLocal20 = packetBufferLocal26.readUnsignedByte((byte) -35);
             if ((integerLocal20 & 1) == 0) {
@@ -167,25 +167,25 @@ abstract class Framebuffer {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
-    abstract void performAction0423(byte byteArgument1, java.awt.Graphics graphicsArgument2, int integerArgument3, int integerArgument4);
+    abstract void performAction0421(byte byteArgument1, java.awt.Graphics graphicsArgument2, int integerArgument3, int integerArgument4);
 
-    public static void performAction0425(int integerArgument1) {
+    public static void performAction0423(int integerArgument1) {
         stringState0154 = null;
         stringState0155 = null;
         booleanArrayArrayState0002 = (boolean[][]) null;
-        mixedSupport066State0002 = null;
-        renderingSupport011State0001 = null;
+        emailValidationErrorState0002 = null;
+        renderingSupport010State0001 = null;
         if (integerArgument1 != 24744) {
-          Framebuffer.performAction0425(125);
+          Framebuffer.performAction0423(125);
         }
     }
 
     static {
-        mixedSupport066State0002 = new MixedSupport066();
+        emailValidationErrorState0002 = new EmailValidationError();
         stringState0154 = "Shape feedback:";
     }
 }

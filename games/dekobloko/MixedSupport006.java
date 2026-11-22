@@ -18,15 +18,15 @@ final class MixedSupport006 {
         }
         if (MixedSupport025.integerState0151 <= integerArgument1 &&
           NetworkSupport002.rgbSpriteState0008.integerState0258 + MixedSupport025.integerState0151 > integerArgument1 &&
-          MixedSupport121.integerState0751 <= integerArgument2 &&
-          integerArgument2 < MixedSupport121.integerState0751 + NetworkSupport002.rgbSpriteState0008.integerState0255) {
+          MixedSupport116.integerState0751 <= integerArgument2 &&
+          integerArgument2 < MixedSupport116.integerState0751 + NetworkSupport002.rgbSpriteState0008.integerState0255) {
           return 0;
         }
         if (byteArgument3 != 7) {
           MixedSupport006.performAction0067(32, 49, false, -4);
         }
-        if (MixedSupport121.integerState0753 <= integerArgument1 &&
-          NetworkSupport002.rgbSpriteState0008.integerState0258 + MixedSupport121.integerState0753 > integerArgument1 &&
+        if (MixedSupport116.integerState0753 <= integerArgument1 &&
+          NetworkSupport002.rgbSpriteState0008.integerState0258 + MixedSupport116.integerState0753 > integerArgument1 &&
           integerArgument2 >= SecondaryNodeDequeIterator.integerState0138 &&
           NetworkSupport002.rgbSpriteState0008.integerState0255 + SecondaryNodeDequeIterator.integerState0138 > integerArgument2) {
           return 1;
@@ -38,7 +38,7 @@ final class MixedSupport006 {
         int integerLocal1;
         NetworkSupport002.rgbSpriteState0008.performAction0278(integerArgument1, integerArgument2);
         if (booleanArgument3) {
-          integerLocal1 = MixedSupport112.integerState0682 % NetworkSupport002.rgbSpriteState0008.integerState0258 * 2;
+          integerLocal1 = MixedSupport107.integerState0682 % NetworkSupport002.rgbSpriteState0008.integerState0258 * 2;
           if (NetworkSupport002.rgbSpriteState0008.integerState0258 <= integerLocal1) {
             integerLocal1 = NetworkSupport002.rgbSpriteState0008.integerState0258 - (integerLocal1 - NetworkSupport002.rgbSpriteState0008.integerState0258);
           }
@@ -49,7 +49,7 @@ final class MixedSupport006 {
               integerLocal1 = NetworkSupport002.rgbSpriteState0008.integerState0258 - 40;
             }
           }
-          GameAssets.performAction1522(0, 80, 25547, integerArgument1, 30, 0, integerLocal1, NetworkSupport002.rgbSpriteState0008, integerArgument2);
+          GameAssets.performAction1495(0, 80, 25547, integerArgument1, 30, 0, integerLocal1, NetworkSupport002.rgbSpriteState0008, integerArgument2);
         }
         if (integerArgument4 != 40) {
           MixedSupport006.performAction0067(43, 33, true, -46);
@@ -72,26 +72,26 @@ final class MixedSupport006 {
     final void performAction0066(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 24;
         int integerLocal2 = 5;
-        this.sceneWidgetPart011State0001.performAction1598(integerArgument1, integerArgument5, integerArgument2, integerLocal2, integerLocal1, integerArgument3, -53);
+        this.sceneWidgetPart011State0001.performAction1571(integerArgument1, integerArgument5, integerArgument2, integerLocal2, integerLocal1, integerArgument3, -53);
         if (integerArgument4 < 97) {
           MixedSupport006.performAction0067(127, 8, false, -33);
         }
-        MixedSupport066.sceneWidgetState0060.performAction1795(ValidationStatus.sceneWidgetState0112.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
-        SceneWidgetPart011.sceneWidgetState0114.performAction1795(-2 - MixedSupport146.integerState0855 + (ValidationStatus.sceneWidgetState0112.integerState0896 - 80) - 2, 0, ComponentContainer.integerState0377 + 2, 18, 0);
-        TextLayout.sceneWidgetState0010.performAction1795(MixedSupport146.integerState0855 + 82, 0, 2 + ComponentContainer.integerState0377, 18, -80 - MixedSupport146.integerState0855 + (ValidationStatus.sceneWidgetState0112.integerState0896 - 2));
-        MixedSupport070.sceneWidgetPart010State0003.performAction1489(0, 1, -ComponentContainer.integerState0377 + (ValidationStatus.sceneWidgetState0112.integerState0915 - 22), ComponentContainer.integerState0377 + 22, MixedSupport146.integerState0855, 2, ValidationStatus.sceneWidgetState0112.integerState0896, 20);
-        RenderingSupport003.sceneWidgetPart010State0001.performAction1488(MixedSupport146.integerState0855, 20, 2, 16);
+        EmailValidationError.sceneWidgetState0060.performAction1764(ValidationStatus.sceneWidgetState0112.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
+        SceneWidgetPart011.sceneWidgetState0114.performAction1764(-2 - MixedSupport139.integerState0855 + (ValidationStatus.sceneWidgetState0112.integerState0896 - 80) - 2, 0, ComponentContainer.integerState0377 + 2, 18, 0);
+        TextLayout.sceneWidgetState0010.performAction1764(MixedSupport139.integerState0855 + 82, 0, 2 + ComponentContainer.integerState0377, 18, -80 - MixedSupport139.integerState0855 + (ValidationStatus.sceneWidgetState0112.integerState0896 - 2));
+        MixedSupport066.sceneWidgetPart010State0003.performAction1462(0, 1, -ComponentContainer.integerState0377 + (ValidationStatus.sceneWidgetState0112.integerState0915 - 22), ComponentContainer.integerState0377 + 22, MixedSupport139.integerState0855, 2, ValidationStatus.sceneWidgetState0112.integerState0896, 20);
+        RenderingSupport003.sceneWidgetPart010State0001.performAction1461(MixedSupport139.integerState0855, 20, 2, 16);
     }
 
     MixedSupport006(String stringArgument1, SceneWidget sceneWidgetArgument2) {
         String[] stringArrayLocal1 = null;
         SceneWidget[] sceneWidgetArrayLocal2 = null;
         try {
-          stringArrayLocal1 = new String[]{stringArgument1, InputAdapter001.stringState0033, MixedSupport129.stringState0536};
+          stringArrayLocal1 = new String[]{stringArgument1, InputAdapter001.stringState0033, ConfirmedEmailAvailabilityValidator.stringState0536};
           sceneWidgetArrayLocal2 = new SceneWidget[]{sceneWidgetArgument2, ValidationStatus.sceneWidgetState0112, (SceneWidget) ((Object) RenderingSupport003.sceneWidgetPart010State0001)};
           this.sceneWidgetPart011State0001 = new SceneWidgetPart011(0L, GameDomainSupport002.sceneWidgetState0022, stringArrayLocal1, MixedSupport035.sceneWidgetState0026, sceneWidgetArrayLocal2, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ak.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ak.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,9 +118,9 @@ final class MixedSupport006 {
             stackMixedSupport023ArrayLocal2 = new MixedSupport023[]{};
             return stackMixedSupport023ArrayLocal2;
           }
-          asyncTaskLocal14 = platformServiceArgument2.computeAsyncTask0512((byte) 123);
+          asyncTaskLocal14 = platformServiceArgument2.computeAsyncTask0509((byte) 123);
           while (asyncTaskLocal14.integerState0510 == 0) {
-            MixedSupport132.performAction1651(10L, -128);
+            MixedSupport125.performAction1620(10L, -128);
           }
           if (asyncTaskLocal14.integerState0510 == 2) {
             stackMixedSupport023ArrayLocal3 = new MixedSupport023[]{};
@@ -153,7 +153,7 @@ final class MixedSupport006 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 

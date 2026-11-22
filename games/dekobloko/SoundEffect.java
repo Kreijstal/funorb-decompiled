@@ -33,7 +33,7 @@ final class SoundEffect {
           if (this.audioSupport001ArrayState0001[integerLocal1] != null) {
             integerLocal6 = this.audioSupport001ArrayState0001[integerLocal1].integerState0388 * 22050 / 1000;
             integerLocal7 = this.audioSupport001ArrayState0001[integerLocal1].integerState0389 * 22050 / 1000;
-            integerArrayLocal9 = this.audioSupport001ArrayState0001[integerLocal1].computeIntegerArray0928(integerLocal6, this.audioSupport001ArrayState0001[integerLocal1].integerState0388);
+            integerArrayLocal9 = this.audioSupport001ArrayState0001[integerLocal1].computeIntegerArray0909(integerLocal6, this.audioSupport001ArrayState0001[integerLocal1].integerState0388);
             for (integerLocal2 = 0; integerLocal2 < integerLocal6; integerLocal2++) {
               integerLocal8 = byteArrayLocal5[integerLocal2 + integerLocal7] + (integerArrayLocal9[integerLocal2] >> 8);
               if ((integerLocal8 + 128 & -256) != 0) {
@@ -60,7 +60,7 @@ final class SoundEffect {
           if (integerLocal2 != 0) {
             packetBufferArgument1.position = packetBufferArgument1.position - 1;
             this.audioSupport001ArrayState0001[integerLocal1] = new AudioSupport001();
-            this.audioSupport001ArrayState0001[integerLocal1].performAction0930(packetBufferArgument1);
+            this.audioSupport001ArrayState0001[integerLocal1].performAction0911(packetBufferArgument1);
           }
         }
         this.integerState0071 = packetBufferArgument1.readUnsignedShort(3);
@@ -68,7 +68,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect computeSoundEffect0152(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
-        byte[] byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0818(integerArgument3, 76, integerArgument2);
+        byte[] byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0805(integerArgument3, 76, integerArgument2);
         if (byteArrayLocal1 == null) {
           return null;
         }

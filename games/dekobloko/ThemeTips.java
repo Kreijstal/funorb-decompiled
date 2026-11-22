@@ -6,16 +6,16 @@ import java.util.*;
 final class ThemeTips {
     static String[] themeTips;
     static String[] stringArrayState0018;
-    static MixedSupport124 mixedSupport124State0001;
+    static MixedSupport119 mixedSupport119State0001;
     static ResourceArchive resourceArchiveState0009;
     static IndexedSprite[] indexedSpriteArrayState0004;
     static int integerState0351;
 
-    static long computeLong0835(long longArgument1, long longArgument2) {
+    static long computeLong0822(long longArgument1, long longArgument2) {
         return longArgument1 | longArgument2;
     }
 
-    final static int computeInteger0834(int integerArgument1) {
+    final static int computeInteger0821(int integerArgument1) {
         int integerLocal1 = -122 / ((integerArgument1 + 40) / 55);
         return new Date().getYear() + 1900;
     }
@@ -24,13 +24,13 @@ final class ThemeTips {
         resourceArchiveState0009 = null;
         indexedSpriteArrayState0004 = null;
         if (!booleanArgument1) {
-          mixedSupport124State0001 = null;
+          mixedSupport119State0001 = null;
           stringArrayState0018 = null;
           themeTips = null;
           return;
         }
-        mixedSupport124State0001 = (MixedSupport124) null;
-        mixedSupport124State0001 = null;
+        mixedSupport119State0001 = (MixedSupport119) null;
+        mixedSupport119State0001 = null;
         stringArrayState0018 = null;
         themeTips = null;
     }

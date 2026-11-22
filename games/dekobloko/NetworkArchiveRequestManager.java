@@ -7,21 +7,21 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
     static CacheWorkQueue cacheWorkQueueState0003;
     static String stringState0438;
     private BufferedSocket bufferedSocketState0001;
-    static MixedSupport084 mixedSupport084State0003;
+    static MixedSupport080 mixedSupport080State0003;
     static RgbSprite rgbSpriteState0044;
     static int integerState0598;
     static SceneWidget sceneWidgetState0098;
 
-    final void performAction0355(byte byteArgument1) {
+    final void performAction0354(byte byteArgument1) {
         if (byteArgument1 < 107) {
-          this.performAction0355((byte) 12);
+          this.performAction0354((byte) 12);
         }
         if (null != this.bufferedSocketState0001) {
-          this.bufferedSocketState0001.performAction1399(0);
+          this.bufferedSocketState0001.performAction1372(0);
         }
     }
 
-    final void performAction0345(Object objectArgument1, byte byteArgument2, boolean booleanArgument3) {
+    final void performAction0344(Object objectArgument1, byte byteArgument2, boolean booleanArgument3) {
         try {
           RuntimeException stackRuntimeExceptionLocal1 = null;
           StringBuilder stackStringBuilderLocal2 = null;
@@ -39,7 +39,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           try {
             if (null != this.bufferedSocketState0001) {
               try {
-                this.bufferedSocketState0001.performAction1399(0);
+                this.bufferedSocketState0001.performAction1372(0);
               } catch (java.lang.Exception caughtParameterLocal13) {
                 caughtExceptionLocal4 = caughtParameterLocal13;
                 exceptionLocal5 = (Exception) (Object) caughtExceptionLocal4;
@@ -47,8 +47,8 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               this.bufferedSocketState0001 = null;
             }
             this.bufferedSocketState0001 = (BufferedSocket) (objectArgument1);
-            this.performAction1319((byte) -15);
-            this.performAction1313((byte) -124, booleanArgument3);
+            this.performAction1292((byte) -15);
+            this.performAction1286((byte) -124, booleanArgument3);
             integerLocal6 = -84 % ((byteArgument2 + 75) / 50);
             this.resourceSupport004State0001 = null;
             this.packetBufferState0003.position = 0;
@@ -74,12 +74,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 this.packetBufferState0002.writeByte(true, 4);
                 this.packetBufferState0002.writeByte(true, (int) this.byteState0001);
                 this.packetBufferState0002.writeInt(0, false);
-                this.bufferedSocketState0001.performAction1401(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+                this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               } catch (java.io.IOException caughtParameterLocal14) {
                 caughtExceptionLocal4 = caughtParameterLocal14;
                 iOExceptionLocal9 = (IOException) (Object) caughtExceptionLocal4;
                 try {
-                  this.bufferedSocketState0001.performAction1399(0);
+                  this.bufferedSocketState0001.performAction1372(0);
                 } catch (java.lang.Exception caughtParameterLocal15) {
                   caughtExceptionLocal4 = caughtParameterLocal15;
                   exceptionLocal10 = (Exception) (Object) caughtExceptionLocal4;
@@ -90,7 +90,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               }
             }
             this.integerState0130 = 0;
-            this.longState0006 = MixedSupport063.computeLong0745(4);
+            this.longState0006 = MixedSupport062.computeLong0734(4);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal16) {
             caughtExceptionLocal4 = caughtParameterLocal16;
@@ -102,7 +102,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             } else {
               stackStringLocal3 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(byteArgument2).append(',').append(booleanArgument3).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(byteArgument2).append(',').append(booleanArgument3).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal17) {
           throw uncheckedExceptionLocal17;
@@ -111,7 +111,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    private final void performAction1313(byte byteArgument1, boolean booleanArgument2) {
+    private final void performAction1286(byte byteArgument1, boolean booleanArgument2) {
         try {
           IOException iOException = null;
           PacketBuffer stackPacketBufferLocal2 = null;
@@ -136,12 +136,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               return;
             }
             this.packetBufferState0002.writeLong40(-93, 0L);
-            this.bufferedSocketState0001.performAction1401(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+            this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
           } catch (java.io.IOException caughtParameterLocal7) {
             caughtExceptionLocal5 = caughtParameterLocal7;
             iOException = (IOException) (Object) caughtExceptionLocal5;
             try {
-              this.bufferedSocketState0001.performAction1399(0);
+              this.bufferedSocketState0001.performAction1372(0);
             } catch (java.lang.Exception caughtParameterLocal8) {
               caughtExceptionLocal5 = caughtParameterLocal8;
               exceptionLocal6 = (Exception) (Object) caughtExceptionLocal5;
@@ -157,7 +157,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    final static int computeInteger1317(boolean booleanArgument1, int integerArgument2, LoginCredentials loginCredentialsArgument3, int integerArgument4, int integerArgument5, LoginCredentials loginCredentialsArgument6, String stringArgument7) {
+    final static int computeInteger1290(boolean booleanArgument1, int integerArgument2, LoginCredentials loginCredentialsArgument3, int integerArgument4, int integerArgument5, LoginCredentials loginCredentialsArgument6, String stringArgument7) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         PacketBuffer stackPacketBufferLocal3 = null;
@@ -202,36 +202,36 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         objectLocal32 = null;
         integerLocal30 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          stringLocal31 = loginCredentialsArgument3.computeString0800((byte) 56);
+          stringLocal31 = loginCredentialsArgument3.computeString0787((byte) 56);
           stringLocal28 = stringLocal31;
           stringLocal34 = stringLocal31;
           integerLocal23 = -65 / ((-58 - integerArgument4) / 43);
-          stringLocal24 = loginCredentialsArgument6.computeString0800((byte) 56);
+          stringLocal24 = loginCredentialsArgument6.computeString0787((byte) 56);
           stringLocal35 = stringLocal24;
           stringLocal36 = stringLocal24;
           if (null == GameSession.bufferedSocketState0002 &&
-            !NetworkSupport006.computeBoolean1044(false, -75)) {
+            !NetworkSupport006.computeBoolean1025(false, -75)) {
             stackIntegerLocal2 = -1;
             return stackIntegerLocal2;
           }
-          if (UiComponentPart023.mixedSupport139State0009 == ResourceSupport002.mixedSupport139State0001) {
+          if (UiComponentPart023.mixedSupport132State0009 == ResourceSupport002.mixedSupport132State0001) {
             SceneWidgetPart014.booleanState0220 = null;
             SocketFactory.cipherPacketBufferState0002.position = 0;
             if (stringArgument7 == null) {
-              MixedSupport147.packetBufferState0008.position = 0;
-              MixedSupport147.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
-              MixedSupport147.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
-              stackPacketBufferLocal3 = MixedSupport147.packetBufferState0008;
+              MixedSupport140.packetBufferState0008.position = 0;
+              MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+              MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+              stackPacketBufferLocal3 = MixedSupport140.packetBufferState0008;
               stackIntegerLocal4 = 8;
-              if (!loginCredentialsArgument3.computeBoolean0804(true)) {
+              if (!loginCredentialsArgument3.computeBoolean0791(true)) {
                 stackStringLocal5 = "";
               } else {
                 stackStringLocal5 = stringLocal31;
               }
               ((PacketBuffer) (Object) stackPacketBufferLocal3).writeNullCircumfixedString(stackIntegerLocal4, stackStringLocal5);
-              stackPacketBufferLocal6 = MixedSupport147.packetBufferState0008;
+              stackPacketBufferLocal6 = MixedSupport140.packetBufferState0008;
               stackIntegerLocal7 = 8;
-              if (loginCredentialsArgument6.computeBoolean0804(true)) {
+              if (loginCredentialsArgument6.computeBoolean0791(true)) {
                 stackStringLocal8 = stringLocal24;
               } else {
                 stackStringLocal8 = "";
@@ -240,101 +240,101 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               SocketFactory.cipherPacketBufferState0002.writeByte(true, 16);
               SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 1;
               integerLocal25 = SocketFactory.cipherPacketBufferState0002.position;
-              MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport147.packetBufferState0008, 0);
+              MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport140.packetBufferState0008, 0);
               SocketFactory.cipherPacketBufferState0002.writeLengthByte(-integerLocal25 + SocketFactory.cipherPacketBufferState0002.position, true);
             } else {
               integerLocal25 = 0;
               if (booleanArgument1) {
                 integerLocal25 = integerLocal25 | 1;
               }
-              MixedSupport147.packetBufferState0008.position = 0;
-              MixedSupport147.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
-              MixedSupport147.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
-              MixedSupport147.packetBufferState0008.writeNullCircumfixedString(8, stringLocal31);
-              MixedSupport147.packetBufferState0008.writeNullCircumfixedString(8, stringLocal24);
+              MixedSupport140.packetBufferState0008.position = 0;
+              MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+              MixedSupport140.packetBufferState0008.writeInt(RenderingSupport004.randomState0002.nextInt(), false);
+              MixedSupport140.packetBufferState0008.writeNullCircumfixedString(8, stringLocal31);
+              MixedSupport140.packetBufferState0008.writeNullCircumfixedString(8, stringLocal24);
               charSequenceLocal33 = (CharSequence) ((Object) stringArgument7);
-              MixedSupport147.packetBufferState0008.writeNullCircumfixedString(8, MixedSupport009.computeString0102(charSequenceLocal33, 65));
-              MixedSupport147.packetBufferState0008.writeShort(-1, integerArgument5);
-              MixedSupport147.packetBufferState0008.writeByte(true, integerArgument2);
-              MixedSupport147.packetBufferState0008.writeByte(true, integerLocal25);
+              MixedSupport140.packetBufferState0008.writeNullCircumfixedString(8, MixedSupport009.computeString0102(charSequenceLocal33, 65));
+              MixedSupport140.packetBufferState0008.writeShort(-1, integerArgument5);
+              MixedSupport140.packetBufferState0008.writeByte(true, integerArgument2);
+              MixedSupport140.packetBufferState0008.writeByte(true, integerLocal25);
               SocketFactory.cipherPacketBufferState0002.writeByte(true, 18);
               SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 2;
               integerLocal27 = SocketFactory.cipherPacketBufferState0002.position;
-              stringLocal37 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1512(25144), (byte) 121);
+              stringLocal37 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 121);
               if (stringLocal37 == null) {
                 stringLocal37 = "";
               }
               SocketFactory.cipherPacketBufferState0002.writeNullTerminatedString(0, stringLocal37);
-              MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport147.packetBufferState0008, 0);
+              MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport140.packetBufferState0008, 0);
               SocketFactory.cipherPacketBufferState0002.writeLengthShort(true, -integerLocal27 + SocketFactory.cipherPacketBufferState0002.position);
             }
-            UiComponentPart033.performAction1850(4792, -1);
-            UiComponentPart023.mixedSupport139State0009 = MixedSupport071.mixedSupport139State0003;
+            UiComponentPart033.performAction1818(4792, -1);
+            UiComponentPart023.mixedSupport132State0009 = MixedSupport067.mixedSupport132State0003;
           }
-          if (MixedSupport071.mixedSupport139State0003 == UiComponentPart023.mixedSupport139State0009 &&
-            MixedSupport103.computeBoolean1246(25973, 1)) {
+          if (MixedSupport067.mixedSupport132State0003 == UiComponentPart023.mixedSupport132State0009 &&
+            MixedSupport098.computeBoolean1219(25973, 1)) {
             integerLocal39 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -70);
             UiComponentPart006.cipherPacketBufferState0001.position = 0;
             if (integerLocal39 >= 100 &&
               integerLocal39 <= 105) {
-              UiComponentPart023.mixedSupport139State0009 = MixedSupport083.mixedSupport139State0006;
+              UiComponentPart023.mixedSupport132State0009 = MixedSupport079.mixedSupport132State0006;
               UiComponentPart023.stringArrayState0030 = new String[-100 + integerLocal39];
             } else {
               if (integerLocal39 == 248) {
-                LoginCredentials.performAction0803(UiComponentPart029.computeApplet1512(25144), 0);
+                LoginCredentials.performAction0790(UiComponentPart029.computeApplet1485(25144), 0);
                 UiComponentPart028.stringState0483 = SceneWidgetPart012.stringState0533;
-                NodeHashTable.performAction1525(89);
+                NodeHashTable.performAction1498(89);
                 SceneWidgetPart006.booleanState0083 = false;
                 stackIntegerLocal9 = integerLocal39;
                 return stackIntegerLocal9;
               }
               if (99 == integerLocal39) {
-                MixedSupport103.computeBoolean1246(25973, MixedSupport147.computeInteger1760(1));
-                SceneWidgetPart014.booleanState0220 = new Boolean(MixedSupport033.computeBoolean0499(UiComponentPart006.cipherPacketBufferState0001, 19));
+                MixedSupport098.computeBoolean1219(25973, MixedSupport140.computeInteger1729(1));
+                SceneWidgetPart014.booleanState0220 = new Boolean(MixedSupport033.computeBoolean0496(UiComponentPart006.cipherPacketBufferState0001, 19));
                 UiComponentPart006.cipherPacketBufferState0001.position = 0;
               } else {
                 NetworkSupport012.integerState0759 = -1;
                 HashNode.integerState0070 = integerLocal39;
-                UiComponentPart023.mixedSupport139State0009 = MixedSupport112.mixedSupport139State0010;
+                UiComponentPart023.mixedSupport132State0009 = MixedSupport107.mixedSupport132State0010;
               }
             }
           }
-          if (UiComponentPart023.mixedSupport139State0009 == MixedSupport083.mixedSupport139State0006) {
+          if (UiComponentPart023.mixedSupport132State0009 == MixedSupport079.mixedSupport132State0006) {
             integerLocal40 = 2;
-            if (MixedSupport103.computeBoolean1246(25973, integerLocal40)) {
+            if (MixedSupport098.computeBoolean1219(25973, integerLocal40)) {
               integerLocal38 = UiComponentPart006.cipherPacketBufferState0001.readUnsignedShort(3);
               UiComponentPart006.cipherPacketBufferState0001.position = 0;
-              if (MixedSupport103.computeBoolean1246(25973, integerLocal38)) {
+              if (MixedSupport098.computeBoolean1219(25973, integerLocal38)) {
                 integerLocal29 = UiComponentPart023.stringArrayState0030.length;
                 for (integerLocal1 = 0; integerLocal29 > integerLocal1; integerLocal1++) {
                   UiComponentPart023.stringArrayState0030[integerLocal1] = UiComponentPart006.cipherPacketBufferState0001.readNullCircumfixedString(true);
                 }
-                NodeHashTable.performAction1525(60);
+                NodeHashTable.performAction1498(60);
                 SceneWidgetPart006.booleanState0083 = false;
                 stackIntegerLocal10 = integerLocal29 + 100;
                 return stackIntegerLocal10;
               }
             }
           }
-          if (MixedSupport112.mixedSupport139State0010 == UiComponentPart023.mixedSupport139State0009 &&
-            MixedSupport039.computeBoolean0527((byte) 117)) {
+          if (MixedSupport107.mixedSupport132State0010 == UiComponentPart023.mixedSupport132State0009 &&
+            MixedSupport039.computeBoolean0524((byte) 117)) {
             if (255 == HashNode.integerState0070) {
               stringLocal26 = UiComponentPart006.cipherPacketBufferState0001.readNullableString(-16829);
               if (stringLocal26 != null) {
-                MixedSupport001.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1512(25144));
+                MixedSupport001.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1485(25144));
               }
             } else {
               UiComponentPart028.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
             }
-            NodeHashTable.performAction1525(105);
+            NodeHashTable.performAction1498(105);
             SceneWidgetPart006.booleanState0083 = false;
             stackIntegerLocal11 = HashNode.integerState0070;
             return stackIntegerLocal11;
           }
           if (null == GameSession.bufferedSocketState0002) {
             if (SceneWidgetPart006.booleanState0083) {
-              if (30000L < MixedSupport122.computeLong1555(-1)) {
-                UiComponentPart028.stringState0483 = MixedSupport073.stringState0311;
+              if (30000L < MixedSupport117.computeLong1528(-1)) {
+                UiComponentPart028.stringState0483 = MixedSupport069.stringState0311;
               } else {
                 UiComponentPart028.stringState0483 = MatchingFieldValidator.stringState0470;
               }
@@ -371,11 +371,11 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           } else {
             stackStringLocal20 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal14), ((StringBuilder) (Object) stackStringBuilderLocal19).append(stackStringLocal20).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal14), ((StringBuilder) (Object) stackStringBuilderLocal19).append(stackStringLocal20).append(')').toString());
         }
     }
 
-    final boolean computeBoolean0343(byte byteArgument1) {
+    final boolean computeBoolean0342(byte byteArgument1) {
         try {
           int integerLocal1 = 0;
           int stackIntegerLocal2 = 0;
@@ -403,7 +403,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           ResourceSupport004 resourceSupport004Local24;
           integerLocal23 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           if (null != this.bufferedSocketState0001) {
-            longLocal5 = MixedSupport063.computeLong0745(byteArgument1 ^ -52);
+            longLocal5 = MixedSupport062.computeLong0734(byteArgument1 ^ -52);
             integerLocal10 = (int)(-this.longState0006 + longLocal5);
             if (200 < integerLocal10) {
               integerLocal10 = 200;
@@ -412,7 +412,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.integerState0130 = this.integerState0130 + integerLocal10;
             if (this.integerState0130 > 30000) {
               try {
-                this.bufferedSocketState0001.performAction1399(0);
+                this.bufferedSocketState0001.performAction1372(0);
               } catch (java.lang.Exception caughtParameterLocal25) {
                 caughtExceptionLocal4 = caughtParameterLocal25;
                 exceptionLocal11 = (Exception) (Object) caughtExceptionLocal4;
@@ -421,20 +421,20 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             }
           }
           if (null == this.bufferedSocketState0001) {
-            if (this.computeInteger0353((byte) -114) == 0 &&
-              this.computeInteger0354(byteArgument1 ^ -56) == 0) {
+            if (this.computeInteger0352((byte) -114) == 0 &&
+              this.computeInteger0353(byteArgument1 ^ -56) == 0) {
               return true;
             }
             return false;
           }
           try {
-            this.bufferedSocketState0001.performAction1403((byte) -124);
+            this.bufferedSocketState0001.performAction1376((byte) -124);
             resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.computeDualNode0033(-2198));
             while (resourceSupport004Local6 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 1);
               this.packetBufferState0002.writeLong40(-71, resourceSupport004Local6.longState0003);
-              this.bufferedSocketState0001.performAction1401(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+              this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0002.performAction0031(resourceSupport004Local6, -7267);
               resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.computeDualNode0032((byte) 20));
             }
@@ -446,12 +446,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 0);
               this.packetBufferState0002.writeLong40(-98, resourceSupport004Local24.longState0003);
-              this.bufferedSocketState0001.performAction1401(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+              this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0004.performAction0031(resourceSupport004Local24, -7267);
               resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.computeDualNode0032((byte) 20));
             }
             for (integerLocal1 = 0; integerLocal1 < 100; integerLocal1++) {
-              integerLocal8 = this.bufferedSocketState0001.computeInteger1404(0);
+              integerLocal8 = this.bufferedSocketState0001.computeInteger1377(0);
               if (integerLocal8 < 0) {
                 throw new IOException();
               }
@@ -476,10 +476,10 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 if (integerLocal13 > integerLocal8) {
                   integerLocal13 = integerLocal8;
                 }
-                this.bufferedSocketState0001.performAction1400(integerLocal13, this.resourceSupport004State0001.packetBufferState0007.position, (byte) 17, this.resourceSupport004State0001.packetBufferState0007.payload);
+                this.bufferedSocketState0001.performAction1373(integerLocal13, this.resourceSupport004State0001.packetBufferState0007.position, (byte) 17, this.resourceSupport004State0001.packetBufferState0007.payload);
                 if (0 != this.byteState0001) {
                   for (integerLocal14 = 0; integerLocal14 < integerLocal13; integerLocal14++) {
-                    this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position] = (byte)MixedSupport111.computeInteger1414((int) this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position], (int) this.byteState0001);
+                    this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position] = (byte)MixedSupport106.computeInteger1387((int) this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position], (int) this.byteState0001);
                   }
                 }
                 this.resourceSupport004State0001.integerState0582 = this.resourceSupport004State0001.integerState0582 + integerLocal13;
@@ -498,10 +498,10 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 if (integerLocal12 > integerLocal8) {
                   integerLocal12 = integerLocal8;
                 }
-                this.bufferedSocketState0001.performAction1400(integerLocal12, this.packetBufferState0003.position, (byte) 17, this.packetBufferState0003.payload);
+                this.bufferedSocketState0001.performAction1373(integerLocal12, this.packetBufferState0003.position, (byte) 17, this.packetBufferState0003.payload);
                 if (this.byteState0001 != 0) {
                   for (integerLocal13 = 0; integerLocal12 > integerLocal13; integerLocal13++) {
-                    this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13] = (byte)MixedSupport111.computeInteger1414((int) this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13], (int) this.byteState0001);
+                    this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13] = (byte)MixedSupport106.computeInteger1387((int) this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13], (int) this.byteState0001);
                   }
                 }
                 this.packetBufferState0003.position = this.packetBufferState0003.position + integerLocal12;
@@ -570,7 +570,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             caughtExceptionLocal4 = caughtParameterLocal28;
             iOExceptionLocal7 = (IOException) (Object) caughtExceptionLocal4;
             try {
-              this.bufferedSocketState0001.performAction1399(0);
+              this.bufferedSocketState0001.performAction1372(0);
             } catch (java.lang.Exception caughtParameterLocal29) {
               caughtExceptionLocal4 = caughtParameterLocal29;
               exceptionLocal9 = (Exception) (Object) caughtExceptionLocal4;
@@ -578,8 +578,8 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.integerState0132 = this.integerState0132 + 1;
             this.integerState0131 = -2;
             this.bufferedSocketState0001 = null;
-            if (this.computeInteger0353((byte) -115) == 0 &&
-              this.computeInteger0354(0) == 0) {
+            if (this.computeInteger0352((byte) -115) == 0 &&
+              this.computeInteger0353(0) == 0) {
               return true;
             }
             return false;
@@ -591,13 +591,13 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    final void performAction0344(int integerArgument1) {
+    final void performAction0343(int integerArgument1) {
         Exception exception = null;
         Throwable caughtExceptionLocal2 = null;
         try {
-          this.bufferedSocketState0001.performAction1399(0);
+          this.bufferedSocketState0001.performAction1372(0);
           if (integerArgument1 != 8192) {
-            this.computeBoolean0343((byte) -2);
+            this.computeBoolean0342((byte) -2);
           }
         } catch (java.lang.Exception caughtParameterLocal3) {
           caughtExceptionLocal2 = caughtParameterLocal3;
@@ -609,8 +609,8 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         this.byteState0001 = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    public static void performAction1318(int integerArgument1) {
-        mixedSupport084State0003 = null;
+    public static void performAction1291(int integerArgument1) {
+        mixedSupport080State0003 = null;
         rgbSpriteState0044 = null;
         sceneWidgetState0098 = null;
         int integerLocal1 = -57 % ((60 - integerArgument1) / 50);
@@ -618,7 +618,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         cacheWorkQueueState0003 = null;
     }
 
-    final static int computeInteger1315(int integerArgument1, String stringArgument2, boolean booleanArgument3) {
+    final static int computeInteger1288(int integerArgument1, String stringArgument2, boolean booleanArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -633,10 +633,10 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             return stackIntegerLocal2;
           }
           if (booleanArgument3) {
-            stackIntegerLocal4 = NetworkSupport001.bitmapFontState0003.computeInteger1085(stringArgument2);
+            stackIntegerLocal4 = NetworkSupport001.bitmapFontState0003.computeInteger1066(stringArgument2);
             return stackIntegerLocal4;
           }
-          stackIntegerLocal3 = SoftwareFramebuffer.bitmapFontState0021.computeInteger1085(stringArgument2);
+          stackIntegerLocal3 = SoftwareFramebuffer.bitmapFontState0021.computeInteger1066(stringArgument2);
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -648,23 +648,23 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(booleanArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(booleanArgument3).append(')').toString());
         }
     }
 
-    final static void performAction1314(int integerArgument1, byte byteArgument2, MixedSupport076 mixedSupport076Argument3) {
+    final static void performAction1287(int integerArgument1, byte byteArgument2, MixedSupport072 mixedSupport072Argument3) {
         try {
-          GameDomainSupport005.nodeDequeState0023.performAction1766(mixedSupport076Argument3, 2777);
+          GameDomainSupport005.nodeDequeState0023.performAction1735(mixedSupport072Argument3, 2777);
           if (byteArgument2 != 85) {
             stringState0438 = (String) null;
           }
-          MixedSupport043.performAction0544((byte) -113, integerArgument1, mixedSupport076Argument3);
+          MixedSupport043.performAction0541((byte) -113, integerArgument1, mixedSupport072Argument3);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "qb.B(" + integerArgument1 + ',' + byteArgument2 + ',' + (mixedSupport076Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qb.B(" + integerArgument1 + ',' + byteArgument2 + ',' + (mixedSupport072Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction1316(Throwable throwableArgument1, int integerArgument2, String stringArgument3) {
+    final static void performAction1289(Throwable throwableArgument1, int integerArgument2, String stringArgument3) {
         try {
           PlatformService stackPlatformServiceLocal1;
           java.net.URL stackURLLocal2;
@@ -685,7 +685,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           try {
             stringLocal10 = "";
             if (throwableArgument1 != null) {
-              stringLocal10 = MixedSupport064.computeString0768(throwableArgument1, (byte) 37);
+              stringLocal10 = MixedSupport063.computeString0756(throwableArgument1, (byte) 37);
             }
             if (stringArgument3 != null) {
               if (throwableArgument1 != null) {
@@ -693,18 +693,18 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               }
               stringLocal10 = stringLocal10 + stringArgument3;
             }
-            CacheWorkQueue.performAction0753(18239, stringLocal10);
+            CacheWorkQueue.performAction0741(18239, stringLocal10);
             stringLocal10 = HashNode.computeString0147(0, stringLocal10, "%3a", ":");
             stringLocal10 = HashNode.computeString0147(integerArgument2 - 16408, stringLocal10, "%40", "@");
             stringLocal10 = HashNode.computeString0147(integerArgument2 ^ integerArgument2, stringLocal10, "%26", "&");
             stringLocal15 = HashNode.computeString0147(0, stringLocal10, "%23", "#");
-            if (null == MixedSupport128.appletState0002) {
+            if (null == MixedSupport122.appletState0002) {
               return;
             }
-            stackPlatformServiceLocal1 = MixedSupport093.platformServiceState0004;
+            stackPlatformServiceLocal1 = MixedSupport088.platformServiceState0004;
             stackURLLocal2 = null;
             stackURLLocal3 = null;
-            stackURLLocal4 = MixedSupport128.appletState0002.getCodeBase();
+            stackURLLocal4 = MixedSupport122.appletState0002.getCodeBase();
             stackStringBuilderLocal5 = new StringBuilder().append("clienterror.ws?c=").append(SceneWidgetPart014.integerState0919).append("&u=");
             if (Framebuffer.stringState0155 != null) {
               stackURLLocal6 = null;
@@ -713,11 +713,11 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             } else {
               stackURLLocal6 = null;
               stackURLLocal7 = null;
-              stackStringLocal8 = "" + MixedSupport132.longState0049;
+              stackStringLocal8 = "" + MixedSupport125.longState0049;
             }
-            asyncTaskLocal12 = ((PlatformService) (Object) stackPlatformServiceLocal1).computeAsyncTask0520(new java.net.URL(stackURLLocal4, ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal8).append("&v1=").append(PlatformService.stringState0168).append("&v2=").append(PlatformService.stringState0170).append("&e=").append(stringLocal15).toString()), (byte) 42);
+            asyncTaskLocal12 = ((PlatformService) (Object) stackPlatformServiceLocal1).computeAsyncTask0517(new java.net.URL(stackURLLocal4, ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal8).append("&v1=").append(PlatformService.stringState0168).append("&v2=").append(PlatformService.stringState0170).append("&e=").append(stringLocal15).toString()), (byte) 42);
             while (asyncTaskLocal12.integerState0510 == 0) {
-              MixedSupport132.performAction1651(1L, -128);
+              MixedSupport125.performAction1620(1L, -128);
             }
             if (1 == asyncTaskLocal12.integerState0510) {
               dataInputStreamLocal13 = (DataInputStream) (asyncTaskLocal12.objectState0004);
@@ -735,7 +735,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         }
     }
 
-    private final void performAction1319(byte byteArgument1) {
+    private final void performAction1292(byte byteArgument1) {
         try {
           IOException iOException = null;
           Throwable caughtExceptionLocal2 = null;
@@ -751,12 +751,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.packetBufferState0002.writeByte(true, 6);
             this.packetBufferState0002.writeMedium((byte) 46, 3);
             this.packetBufferState0002.writeShort(-1, 0);
-            this.bufferedSocketState0001.performAction1401(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+            this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
           } catch (java.io.IOException caughtParameterLocal4) {
             caughtExceptionLocal2 = caughtParameterLocal4;
             iOException = (IOException) (Object) caughtExceptionLocal2;
             try {
-              this.bufferedSocketState0001.performAction1399(byteArgument1 + 15);
+              this.bufferedSocketState0001.performAction1372(byteArgument1 + 15);
             } catch (java.lang.Exception caughtParameterLocal5) {
               caughtExceptionLocal2 = caughtParameterLocal5;
               exceptionLocal3 = (Exception) (Object) caughtExceptionLocal2;
@@ -777,6 +777,6 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
 
     static {
         integerState0598 = 22;
-        mixedSupport084State0003 = new MixedSupport084();
+        mixedSupport080State0003 = new MixedSupport080();
     }
 }

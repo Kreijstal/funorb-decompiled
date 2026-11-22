@@ -8,5 +8,5 @@ interface CallbackContract011 {
 
     public abstract void performAction0090(byte byteArgument1);
 
-    public abstract boolean computeBoolean1112(byte byteArgument1);
+    public abstract boolean computeBoolean1093(byte byteArgument1);
 }

@@ -16,25 +16,25 @@ final class SceneWidgetPart014 extends SceneWidget {
     String stringState0606;
     static String[] stringArrayState0057;
 
-    final static void performAction1814(MixedSupport072 mixedSupport072Argument1, int integerArgument2, int integerArgument3) {
+    final static void performAction1783(MixedSupport068 mixedSupport068Argument1, int integerArgument2, int integerArgument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1672(integerArgument2, integerArgument3 - 64);
+          cipherPacketBufferLocal1.performAction1641(integerArgument2, integerArgument3 - 64);
           if (integerArgument3 != 60) {
             mixedSupport043State0001 = (MixedSupport043) null;
           }
           cipherPacketBufferLocal1.writeByte(true, 5);
           cipherPacketBufferLocal1.writeByte(true, 0);
-          cipherPacketBufferLocal1.writeShort(integerArgument3 ^ -61, mixedSupport072Argument1.integerState0358);
-          cipherPacketBufferLocal1.writeByte(true, mixedSupport072Argument1.integerState0359);
-          cipherPacketBufferLocal1.writeByte(true, mixedSupport072Argument1.integerState0357);
+          cipherPacketBufferLocal1.writeShort(integerArgument3 ^ -61, mixedSupport068Argument1.integerState0358);
+          cipherPacketBufferLocal1.writeByte(true, mixedSupport068Argument1.integerState0359);
+          cipherPacketBufferLocal1.writeByte(true, mixedSupport068Argument1.integerState0357);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wb.B(" + (mixedSupport072Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wb.B(" + (mixedSupport068Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
-    final static void performAction1813(java.applet.Applet appletArgument1, int integerArgument2) {
+    final static void performAction1782(java.applet.Applet appletArgument1, int integerArgument2) {
         try {
           String stringLocal1 = null;
           Exception exceptionLocal2 = null;
@@ -62,7 +62,7 @@ final class SceneWidgetPart014 extends SceneWidget {
                 stringLocal12 = stringLocal12 + stringLocal1.substring(integerLocal4);
               }
               uRLLocal6 = new java.net.URL(appletArgument1.getCodeBase(), stringLocal12);
-              appletArgument1.getAppletContext().showDocument(NetworkSupport004.computeURL0602(uRLLocal6, -1, appletArgument1), "_self");
+              appletArgument1.getAppletContext().showDocument(NetworkSupport004.computeURL0599(uRLLocal6, -1, appletArgument1), "_self");
               return;
             } catch (java.lang.Exception caughtParameterLocal13) {
               caughtExceptionLocal10 = caughtParameterLocal13;
@@ -80,7 +80,7 @@ final class SceneWidgetPart014 extends SceneWidget {
             } else {
               stackStringLocal9 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal15) {
           throw uncheckedExceptionLocal15;
@@ -89,7 +89,7 @@ final class SceneWidgetPart014 extends SceneWidget {
         }
     }
 
-    final static void performAction1812(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction1781(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         RuntimeException caughtExceptionLocal1 = null;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -134,7 +134,7 @@ final class SceneWidgetPart014 extends SceneWidget {
                   integerLocal7 = integerLocal5 & 65280;
                   integerLocal7 = (integerLocal7 >> 1) - (integerLocal7 >> 5) & 65280;
                   integerLocal8 = 31 & integerLocal5 >> 3;
-                  SoftwareRaster.integerArrayState0063[integerLocal2] = UiComponentPart006.computeInteger0357(integerLocal8, UiComponentPart006.computeInteger0357(integerLocal6 << 16, integerLocal7));
+                  SoftwareRaster.integerArrayState0063[integerLocal2] = UiComponentPart006.bitwiseOr(integerLocal8, UiComponentPart006.bitwiseOr(integerLocal6 << 16, integerLocal7));
                 }
                 integerLocal2++;
               }
@@ -146,11 +146,11 @@ final class SceneWidgetPart014 extends SceneWidget {
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal1 = caughtParameterLocal10;
           runtimeExceptionLocal3 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal3), "wb.A(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal3), "wb.A(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
-    public static void performAction1816(int integerArgument1) {
+    public static void performAction1785(int integerArgument1) {
         if (integerArgument1 < -73) {
           stringArrayState0057 = null;
           integerArrayState0257 = null;
@@ -165,7 +165,7 @@ final class SceneWidgetPart014 extends SceneWidget {
         booleanState0220 = null;
     }
 
-    final static int computeInteger1815(byte byteArgument1, int integerArgument2) {
+    final static int computeInteger1784(byte byteArgument1, int integerArgument2) {
         int integerLocal1 = integerArgument2 >>> 1;
         integerLocal1 = integerLocal1 | integerLocal1 >>> 1;
         if (byteArgument1 <= -77) {
@@ -175,8 +175,8 @@ final class SceneWidgetPart014 extends SceneWidget {
           integerLocal1 = integerLocal1 | integerLocal1 >>> 16;
           return integerArgument2 & ~integerLocal1;
         }
-        MixedSupport072 mixedSupport072Local2 = (MixedSupport072) null;
-        SceneWidgetPart014.performAction1814((MixedSupport072) null, -48, 106);
+        MixedSupport068 mixedSupport068Local2 = (MixedSupport068) null;
+        SceneWidgetPart014.performAction1783((MixedSupport068) null, -48, 106);
         integerLocal1 = integerLocal1 | integerLocal1 >>> 2;
         integerLocal1 = integerLocal1 | integerLocal1 >>> 4;
         integerLocal1 = integerLocal1 | integerLocal1 >>> 8;

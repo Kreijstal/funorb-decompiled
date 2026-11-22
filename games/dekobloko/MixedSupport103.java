@@ -1,188 +1,78 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.io.*;
+final class MixedSupport103 extends GameDomainSupport006 {
+    static String stringState0436;
+    static String stringState0437;
+    static int integerState0595;
+    static RawSound rawSoundState0018;
+    static SceneWidgetPart009[][] sceneWidgetPart009ArrayArrayState0001;
+    static int integerState0596;
+    static volatile int integerState0597;
+    static float[] floatArrayState0002;
 
-final class MixedSupport103 {
-    static RgbSprite rgbSpriteState0040;
-    static String stringState0414;
-    static String stringState0415;
-    static String stringState0416;
-    static SceneWidget sceneWidgetState0096;
-
-    public static void performAction1243(int integerArgument1) {
-        sceneWidgetState0096 = null;
-        stringState0416 = null;
-        stringState0415 = null;
-        stringState0414 = null;
-        if (integerArgument1 != -1) {
-          MixedSupport103.computeBoolean1244(100, -24);
+    final static SceneWidget computeSceneWidget1284(int integerArgument1) {
+        if (integerArgument1 != 5) {
+          return (SceneWidget) null;
         }
-        rgbSpriteState0040 = null;
+        return ValidationStatus.sceneWidgetPart008State0006.sceneWidgetState0090;
     }
 
-    final static void performAction1245(int integerArgument1) {
-        RuntimeException caughtExceptionLocal1 = null;
-        RuntimeException runtimeExceptionLocal2 = null;
-        int integerLocal3 = 0;
-        int integerLocal4 = 0;
-        int integerLocal5 = 0;
-        MixedSupport034 mixedSupport034Local6 = null;
-        Object objectLocal7 = null;
-        int integerLocal8 = 0;
-        MixedSupport053 mixedSupport053Local9 = null;
-        CipherPacketBuffer cipherPacketBufferLocal10 = null;
-        byte[] byteArrayLocal11 = null;
-        integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        try {
-          cipherPacketBufferLocal10 = UiComponentPart006.cipherPacketBufferState0001;
-          integerLocal3 = cipherPacketBufferLocal10.readUnsignedByte((byte) -119);
-          if (integerArgument1 != 14750) {
-            sceneWidgetState0096 = (SceneWidget) null;
-          }
-          if (integerLocal3 == 0) {
-            mixedSupport053Local9 = (MixedSupport053) (NetworkSupport002.nodeDequeState0002.computeHashNode1772((byte) 80));
-            if (mixedSupport053Local9 == null) {
-              NodeHashTable.performAction1525(67);
-              return;
-            }
-            integerLocal5 = cipherPacketBufferLocal10.readUnsignedByte((byte) -90);
-            if (0 == integerLocal5) {
-              objectLocal7 = null;
-            } else {
-              byteArrayLocal11 = new byte[integerLocal5];
-              cipherPacketBufferLocal10.readBytes(byteArrayLocal11, 0, (byte) 125, integerLocal5);
-            }
-            cipherPacketBufferLocal10.position = cipherPacketBufferLocal10.position + 4;
-            if (!cipherPacketBufferLocal10.checkCrc32(0)) {
-              NodeHashTable.performAction1525(integerArgument1 ^ 14802);
-              return;
-            }
-            mixedSupport053Local9.performAction0149((byte) 109);
-          } else {
-            if (integerLocal3 == 1) {
-              integerLocal4 = cipherPacketBufferLocal10.readInt(7553);
-              mixedSupport034Local6 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1772((byte) 46));
-              while (mixedSupport034Local6 != null) {
-                if (integerLocal4 != mixedSupport034Local6.integerState0218) {
-                  mixedSupport034Local6 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1776(true));
-                  continue;
-                }
-                break;
-              }
-              if (mixedSupport034Local6 != null) {
-                mixedSupport034Local6.performAction0149((byte) 119);
-                return;
-              }
-              NodeHashTable.performAction1525(60);
-              return;
-            }
-            NetworkArchiveRequestManager.performAction1316((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1406((byte) 47));
-            NodeHashTable.performAction1525(78);
-          }
-          return;
-        } catch (java.lang.RuntimeException caughtParameterLocal12) {
-          caughtExceptionLocal1 = caughtParameterLocal12;
-          runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "pe.E(" + integerArgument1 + ')');
-        }
-    }
-
-    final static boolean computeBoolean1246(int integerArgument1, int integerArgument2) {
-        try {
-          int integerLocal1 = 0;
-          Throwable caughtExceptionLocal2 = null;
-          IOException iOExceptionLocal3 = null;
-          if (integerArgument1 != 25973) {
-            stringState0416 = (String) null;
-          }
-          if (UiComponentPart006.cipherPacketBufferState0001.position >= integerArgument2) {
-            return true;
-          }
-          if (GameSession.bufferedSocketState0002 == null) {
-            return false;
-          }
-          try {
-            integerLocal1 = GameSession.bufferedSocketState0002.computeInteger1404(0);
-            if (integerLocal1 > 0) {
-              if (-UiComponentPart006.cipherPacketBufferState0001.position + integerArgument2 < integerLocal1) {
-                integerLocal1 = -UiComponentPart006.cipherPacketBufferState0001.position + integerArgument2;
-              }
-              GameSession.bufferedSocketState0002.performAction1400(integerLocal1, UiComponentPart006.cipherPacketBufferState0001.position, (byte) 17, UiComponentPart006.cipherPacketBufferState0001.payload);
-              MixedSupport100.longState0040 = MixedSupport063.computeLong0745(4);
-              UiComponentPart006.cipherPacketBufferState0001.position = UiComponentPart006.cipherPacketBufferState0001.position + integerLocal1;
-              if (integerArgument2 > UiComponentPart006.cipherPacketBufferState0001.position) {
-                return false;
-              }
-              UiComponentPart006.cipherPacketBufferState0001.position = 0;
-              return true;
-            }
-            if (integerLocal1 < 0) {
-              NodeHashTable.performAction1525(69);
-            } else {
-              if (MixedSupport122.computeLong1555(integerArgument1 - 25974) <= 30000L) {
-                return false;
-              }
-              NodeHashTable.performAction1525(69);
-            }
-          } catch (java.io.IOException caughtParameterLocal4) {
-            caughtExceptionLocal2 = caughtParameterLocal4;
-            iOExceptionLocal3 = (IOException) (Object) caughtExceptionLocal2;
-            NodeHashTable.performAction1525(96);
-          }
-          return false;
-        } catch (RuntimeException | Error uncheckedExceptionLocal5) {
-          throw uncheckedExceptionLocal5;
-        } catch (Throwable checkedExceptionLocal6) {
-          throw new RuntimeException(checkedExceptionLocal6);
-        }
-    }
-
-    final static int computeCrc32(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction1283(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
-        int integerLocal2 = 0;
-        RuntimeException runtimeExceptionLocal3 = null;
-        int integerLocal4 = 0;
-        int stackIntegerLocal5 = 0;
-        RuntimeException stackRuntimeExceptionLocal6 = null;
-        StringBuilder stackStringBuilderLocal7 = null;
-        String stackStringLocal8 = null;
-        RuntimeException caughtExceptionLocal9 = null;
-        integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        try {
-          integerLocal2 = -1;
-          if (integerArgument3 > -103) {
-            MixedSupport103.computeBoolean1244(73, -42);
-          }
-          for (integerLocal1 = integerArgument4; integerLocal1 < integerArgument2; integerLocal1++) {
-            integerLocal2 = MixedSupport001.integerArrayState0003[(byteArrayArgument1[integerLocal1] ^ integerLocal2) & 255] ^ integerLocal2 >>> 8;
-          }
-          integerLocal2 = ~integerLocal2;
-          stackIntegerLocal5 = integerLocal2;
-          return stackIntegerLocal5;
-        } catch (java.lang.RuntimeException caughtParameterLocal10) {
-          caughtExceptionLocal9 = caughtParameterLocal10;
-          runtimeExceptionLocal3 = caughtExceptionLocal9;
-          stackRuntimeExceptionLocal6 = runtimeExceptionLocal3;
-          stackStringBuilderLocal7 = new StringBuilder().append("pe.A(");
-          if (byteArrayArgument1 == null) {
-            stackStringLocal8 = "null";
-          } else {
-            stackStringLocal8 = "{...}";
-          }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+        CipherPacketBuffer cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
+        int integerLocal3;
+        cipherPacketBufferLocal2.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
+        int integerLocal4 = cipherPacketBufferLocal2.position;
+        cipherPacketBufferLocal2.writeByte(true, 5);
+        cipherPacketBufferLocal2.writeByte(true, MixedSupport016.sceneWidgetPart013State0001.integerState0840);
+        if (integerArgument2 == 1850462342) {
+          integerLocal1 = (MixedSupport016.sceneWidgetPart013State0001.integerState0845 << 6) + MixedSupport016.sceneWidgetPart013State0001.integerState0842;
+          cipherPacketBufferLocal2.writeByte(true, integerLocal1);
+          cipherPacketBufferLocal2.writeBytes(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
+          cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal4, true);
+          return;
         }
+        MixedSupport103.performAction1285(-25);
+        integerLocal3 = (MixedSupport016.sceneWidgetPart013State0001.integerState0845 << 6) + MixedSupport016.sceneWidgetPart013State0001.integerState0842;
+        cipherPacketBufferLocal2.writeByte(true, integerLocal3);
+        cipherPacketBufferLocal2.writeBytes(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
+        cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal4, true);
     }
 
-    final static boolean computeBoolean1244(int integerArgument1, int integerArgument2) {
-        if (integerArgument1 != 922790152) {
-          return false;
+    public static void performAction1285(int integerArgument1) {
+        if (integerArgument1 == -30349) {
+          stringState0437 = null;
+          rawSoundState0018 = null;
+          floatArrayState0002 = null;
+          stringState0436 = null;
+          sceneWidgetPart009ArrayArrayState0001 = (SceneWidgetPart009[][]) null;
+          return;
         }
-        return integerArgument2 == (-integerArgument2 & integerArgument2) ? true : false;
+        MixedSupport103.performAction1283(99, -109);
+        stringState0437 = null;
+        rawSoundState0018 = null;
+        floatArrayState0002 = null;
+        stringState0436 = null;
+        sceneWidgetPart009ArrayArrayState0001 = (SceneWidgetPart009[][]) null;
+    }
+
+    MixedSupport103(long longArgument1, String stringArgument2) {
+        super(longArgument1, stringArgument2);
+    }
+
+    final MixedSupport048 computeMixedSupport0480543(int integerArgument1) {
+        if (integerArgument1 != 18) {
+          return (MixedSupport048) null;
+        }
+        return MixedSupport047.mixedSupport048State0001;
     }
 
     static {
-        stringState0415 = "Passwords must be between 5 and 20 characters long";
-        stringState0414 = "Please remove <%0> from your ignore list first.";
+        stringState0437 = "Stage:";
+        stringState0436 = "Waiting for backgrounds";
+        floatArrayState0002 = new float[8];
+        integerState0597 = 0;
     }
 }

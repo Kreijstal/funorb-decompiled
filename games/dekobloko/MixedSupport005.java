@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport005 {
-    static MixedSupport062 mixedSupport062State0001;
+    static MixedSupport061 mixedSupport061State0001;
     static SceneWidget sceneWidgetState0002;
     static boolean[] booleanArrayState0001;
     static ResourceArchive resourceArchiveState0001;
@@ -21,7 +21,7 @@ final class MixedSupport005 {
         stringState0019 = null;
         resourceArchiveState0002 = null;
         uiComponentPart016State0001 = null;
-        mixedSupport062State0001 = null;
+        mixedSupport061State0001 = null;
         if (integerArgument1 == 8) {
           stringState0018 = null;
           return;
@@ -33,7 +33,7 @@ final class MixedSupport005 {
     static {
         stringState0021 = "ah.A(";
         booleanArrayState0001 = new boolean[8];
-        mixedSupport062State0001 = new MixedSupport062("email");
+        mixedSupport061State0001 = new MixedSupport061("email");
         stringState0018 = "This game has been updated! Please reload this page.";
         stringState0019 = "Solid shapes can come back to your bucket - watch out!";
         stringState0020 = "Unable to add friend - system busy";

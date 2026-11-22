@@ -19,7 +19,7 @@ final class NodeHashTable implements Iterable {
     static String stringState0509;
     static String stringState0510;
 
-    final HashNode computeHashNode1529(long longArgument1, byte byteArgument2) {
+    final HashNode computeHashNode1502(long longArgument1, byte byteArgument2) {
         HashNode hashNodeLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         HashNode hashNodeLocal3 = this.hashNodeArrayState0002[(int)(longArgument1 & (long)(this.integerState0748 - 1))];
@@ -40,7 +40,7 @@ final class NodeHashTable implements Iterable {
         return null;
     }
 
-    final void performAction1530(long longArgument1, boolean booleanArgument2, HashNode hashNodeArgument3) {
+    final void performAction1503(long longArgument1, boolean booleanArgument2, HashNode hashNodeArgument3) {
         HashNode hashNodeLocal1 = null;
         try {
           if (null != hashNodeArgument3.next) {
@@ -56,11 +56,11 @@ final class NodeHashTable implements Iterable {
           hashNodeArgument3.previous.next = hashNodeArgument3;
           hashNodeArgument3.key = longArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "si.D(" + longArgument1 + ',' + booleanArgument2 + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "si.D(" + longArgument1 + ',' + booleanArgument2 + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger1531(boolean booleanArgument1, String stringArgument2, boolean booleanArgument3) {
+    final static int computeInteger1504(boolean booleanArgument1, String stringArgument2, boolean booleanArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -70,13 +70,13 @@ final class NodeHashTable implements Iterable {
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (booleanArgument1) {
-            NodeHashTable.performAction1527(115, true, -31, -28, 79, (byte) 85, -127);
+            NodeHashTable.performAction1500(115, true, -31, -28, 79, (byte) 85, -127);
           }
           if (booleanArgument3) {
-            stackIntegerLocal3 = MixedSupport010.bitmapFontState0005.computeInteger1085(stringArgument2);
+            stackIntegerLocal3 = MixedSupport010.bitmapFontState0005.computeInteger1066(stringArgument2);
             return stackIntegerLocal3;
           }
-          stackIntegerLocal2 = UiComponentPart028.bitmapFontState0019.computeInteger1085(stringArgument2);
+          stackIntegerLocal2 = UiComponentPart028.bitmapFontState0019.computeInteger1066(stringArgument2);
           return stackIntegerLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -88,48 +88,48 @@ final class NodeHashTable implements Iterable {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument3).append(')').toString());
         }
     }
 
-    final static void performAction1534(int integerArgument1) {
+    final static void performAction1507(int integerArgument1) {
         String stringLocal1 = null;
         String stringLocal2;
         if (MixedSupport020.uiComponentPart012State0001 != null) {
-          MixedSupport020.uiComponentPart012State0001.performAction0596(22);
-          MixedSupport123.uiComponentPart005State0001 = new UiComponentPart005();
+          MixedSupport020.uiComponentPart012State0001.performAction0593(22);
+          MixedSupport118.uiComponentPart005State0001 = new UiComponentPart005();
           if (integerArgument1 != -31842) {
             stringLocal1 = (String) null;
-            NodeHashTable.computeInteger1531(true, (String) null, true);
-            UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport123.uiComponentPart005State0001, (byte) 87);
+            NodeHashTable.computeInteger1504(true, (String) null, true);
+            UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
             return;
           }
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport123.uiComponentPart005State0001, (byte) 87);
+          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
         }
-        MixedSupport123.uiComponentPart005State0001 = new UiComponentPart005();
+        MixedSupport118.uiComponentPart005State0001 = new UiComponentPart005();
         if (integerArgument1 == -31842) {
-          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport123.uiComponentPart005State0001, (byte) 87);
+          UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
         }
         stringLocal2 = (String) null;
-        NodeHashTable.computeInteger1531(true, (String) null, true);
-        UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport123.uiComponentPart005State0001, (byte) 87);
+        NodeHashTable.computeInteger1504(true, (String) null, true);
+        UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
     }
 
-    final static void performAction1525(int integerArgument1) {
+    final static void performAction1498(int integerArgument1) {
         if (null != GameSession.bufferedSocketState0002) {
-          GameSession.bufferedSocketState0002.performAction1399(0);
+          GameSession.bufferedSocketState0002.performAction1372(0);
           GameSession.bufferedSocketState0002 = null;
         }
         if (integerArgument1 > 57) {
           return;
         }
         String stringLocal1 = (String) null;
-        NodeHashTable.computeInteger1531(true, (String) null, true);
+        NodeHashTable.computeInteger1504(true, (String) null, true);
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1526(int integerArgument1, int integerArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4) {
+    final static RgbSprite[] computeRgbSpriteArray1499(int integerArgument1, int integerArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         RgbSprite[] rgbSpriteArrayLocal2 = null;
         RgbSprite[] stackRgbSpriteArrayLocal3 = null;
@@ -138,12 +138,12 @@ final class NodeHashTable implements Iterable {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          if (!SceneWidgetPart002.computeBoolean0561(integerArgument2, resourceArchiveArgument3, integerArgument1, 106)) {
+          if (!SceneWidgetPart002.computeBoolean0558(integerArgument2, resourceArchiveArgument3, integerArgument1, 106)) {
             return null;
           }
           if (byteArgument4 != -46) {
             rgbSpriteArrayLocal2 = (RgbSprite[]) null;
-            NodeHashTable.computeRgbSpriteArray1528(55, false, (RgbSprite[]) null, true);
+            NodeHashTable.computeRgbSpriteArray1501(55, false, (RgbSprite[]) null, true);
           }
           stackRgbSpriteArrayLocal3 = UiComponentPart004.computeRgbSpriteArray0189(0);
           return stackRgbSpriteArrayLocal3;
@@ -157,11 +157,11 @@ final class NodeHashTable implements Iterable {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1528(int integerArgument1, boolean booleanArgument2, RgbSprite[] rgbSpriteArrayArgument3, boolean booleanArgument4) {
+    final static RgbSprite[] computeRgbSpriteArray1501(int integerArgument1, boolean booleanArgument2, RgbSprite[] rgbSpriteArrayArgument3, boolean booleanArgument4) {
         int integerLocal1 = 0;
         RgbSprite[] rgbSpriteArrayLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -182,7 +182,7 @@ final class NodeHashTable implements Iterable {
           rgbSpriteArrayLocal5 = new RgbSprite[rgbSpriteArrayArgument3.length];
           rgbSpriteArrayLocal2 = rgbSpriteArrayLocal5;
           for (integerLocal1 = 0; rgbSpriteArrayArgument3.length > integerLocal1; integerLocal1++) {
-            rgbSpriteArrayLocal5[integerLocal1] = NetworkSupport007.computeRgbSprite1059(rgbSpriteArrayArgument3[integerLocal1], booleanArgument4, (byte) -87, booleanArgument2);
+            rgbSpriteArrayLocal5[integerLocal1] = NetworkSupport007.computeRgbSprite1040(rgbSpriteArrayArgument3[integerLocal1], booleanArgument4, (byte) -87, booleanArgument2);
           }
           stackRgbSpriteArrayLocal7 = rgbSpriteArrayLocal2;
           return stackRgbSpriteArrayLocal7;
@@ -196,17 +196,17 @@ final class NodeHashTable implements Iterable {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(booleanArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(booleanArgument4).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1533(int integerArgument1) {
+    final static boolean computeBoolean1506(int integerArgument1) {
         if (integerArgument1 != -12851) {
           stringState0506 = (String) null;
           if (null == GameSession.bufferedSocketState0002) {
             return false;
           }
-          if (UiComponentPart023.mixedSupport139State0009 == SoftwareFramebuffer.mixedSupport139State0012) {
+          if (UiComponentPart023.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0012) {
             return true;
           }
           return false;
@@ -214,7 +214,7 @@ final class NodeHashTable implements Iterable {
         if (null == GameSession.bufferedSocketState0002) {
           return false;
         }
-        if (UiComponentPart023.mixedSupport139State0009 == SoftwareFramebuffer.mixedSupport139State0012) {
+        if (UiComponentPart023.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0012) {
           return true;
         }
         return false;
@@ -224,7 +224,7 @@ final class NodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static void performAction1532(int integerArgument1) {
+    final static void performAction1505(int integerArgument1) {
         try {
           Throwable caughtExceptionLocal1 = null;
           java.lang.reflect.Method methodLocal2 = null;
@@ -264,15 +264,15 @@ final class NodeHashTable implements Iterable {
         }
     }
 
-    final static void performAction1527(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, byte byteArgument6, int integerArgument7) {
+    final static void performAction1500(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, byte byteArgument6, int integerArgument7) {
         String stringLocal1 = null;
         if (byteArgument6 == -41) {
           if (NetworkSupport010.integerState0585 == 2) {
             stringLocal1 = GameDomainSupport006.stringState0625;
           } else {
-            stringLocal1 = MixedSupport095.stringState0376;
+            stringLocal1 = MixedSupport090.stringState0376;
           }
-          UiComponentPart024.performAction1298(integerArgument4, integerArgument3, booleanArgument2, integerArgument5, stringLocal1, byteArgument6 + 168, integerArgument1, integerArgument7);
+          UiComponentPart024.performAction1271(integerArgument4, integerArgument3, booleanArgument2, integerArgument5, stringLocal1, byteArgument6 + 168, integerArgument1, integerArgument7);
           return;
         }
     }

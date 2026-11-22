@@ -2,75 +2,57 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport122 {
-    static String stringState0514;
-    static String stringState0515;
-    static int integerState0757;
-    static boolean booleanState0179;
-    static String stringState0516;
-    static String stringState0517;
-    static String stringState0518;
+    static java.applet.Applet appletState0002;
+    static String stringState0530;
 
-    final static void performAction1557(String stringArgument1, int[] integerArrayArgument2, byte byteArgument3, SceneWidgetPart008 sceneWidgetPart008Argument4, SceneWidget sceneWidgetArgument5, String stringArgument6, long longArgument7, int integerArgument8, int integerArgument9) {
+    final static void performAction1604(MusicTrack musicTrackArgument1, int integerArgument2) {
         try {
-          NetworkSupport005.sceneWidgetPart008State0004 = sceneWidgetPart008Argument4;
-          SceneWidget.mixedSupport104State0001 = new MixedSupport104(sceneWidgetArgument5, longArgument7, stringArgument1, stringArgument6, integerArgument9, integerArgument8, integerArrayArgument2);
-          if (byteArgument3 <= 84) {
-            stringState0515 = (String) null;
-          }
+          UiComponentPart033.midiSynthesizerState0001.performAction0689(musicTrackArgument1, integerArgument2, 0, -1);
+          PcmPlayerService.musicTrackState0005 = musicTrackArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "sl.A(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (integerArrayArgument2 != null ? "{...}" : "null") + ',' + byteArgument3 + ',' + (sceneWidgetPart008Argument4 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + longArgument7 + ',' + integerArgument8 + ',' + integerArgument9 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "th.B(" + (musicTrackArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    public static void performAction1554(byte byteArgument1) {
-        stringState0518 = null;
-        stringState0517 = null;
-        stringState0516 = null;
-        stringState0515 = null;
-        if (byteArgument1 != 110) {
-          booleanState0179 = true;
+    public static void clearStaticReferences(int integerArgument1) {
+        stringState0530 = null;
+        if (integerArgument1 <= 120) {
+          appletState0002 = (java.applet.Applet) null;
+          appletState0002 = null;
+          return;
         }
-        stringState0514 = null;
+        appletState0002 = null;
     }
 
-    final static void performAction1556(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        int integerLocal1 = MixedSupport085.integerArrayState0153[MixedSupport069.integerState0354];
-        int integerLocal2 = MixedSupport085.integerArrayState0153[(MixedSupport069.integerState0354 + 1) % MixedSupport085.integerArrayState0153.length];
-        int integerLocal3 = MixedSupport042.computeInteger0539(integerLocal2, LoginCredentials.integerState0348, integerArgument4, integerLocal1, 110);
-        int integerLocal4 = MixedSupport118.integerArrayState0201[MixedSupport069.integerState0354];
-        if (integerArgument2 >= -35) {
-          MixedSupport122.performAction1554((byte) 86);
+    final static void performAction1602(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4, boolean booleanArgument5, boolean booleanArgument6, boolean booleanArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, byte byteArgument12, int integerArgument13, boolean booleanArgument14) {
+        MixedSupport117.stringState0515 = null;
+        UiComponent.performAction0227(116);
+        booleanArgument14 = BucketBoard.computeBoolean0968(integerArgument9, -121, integerArgument2, integerArgument11, booleanArgument14, integerArgument10, integerArgument4);
+        UiComponentPart023.performAction1240(booleanArgument6, integerArgument13, integerArgument8, booleanArgument7, booleanArgument14, booleanArgument3, booleanArgument5, -1, integerArgument1, integerArgument11);
+        MixedSupport001.performAction0010(integerArgument13, booleanArgument6, true);
+        if (byteArgument12 <= 42) {
+          stringState0530 = (String) null;
+        } else {
+          UiComponentPart031.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
+          return;
         }
-        int integerLocal5 = MixedSupport118.integerArrayState0201[(MixedSupport069.integerState0354 + 1) % MixedSupport085.integerArrayState0153.length];
-        int integerLocal6 = MixedSupport042.computeInteger0539(integerLocal5, LoginCredentials.integerState0348, integerArgument4, integerLocal4, 114);
-        SoftwareRaster.performAction0669(integerArgument3, integerArgument1, 640, 480, integerLocal3, integerLocal6);
+        UiComponentPart031.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
     }
 
-    final static long computeLong1555(int integerArgument1) {
-        if (integerArgument1 != -1) {
-          MixedSupport122.performAction1553((String) null, (int[]) null, 24, (SceneWidgetPart008) null, (SceneWidget) null, (String) null, -106L, 12, -60);
-        }
-        return -MixedSupport100.longState0040 + MixedSupport063.computeLong0745(4);
+    final static void performAction1603(int integerArgument1, boolean booleanArgument2) {
+        CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
+        cipherPacketBufferLocal1.performAction1641(integerArgument1, -4);
+        cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
+        int integerLocal2 = cipherPacketBufferLocal1.position;
+        cipherPacketBufferLocal1.writeByte(true, 2);
+        cipherPacketBufferLocal1.writeBytes(false, MixedSupport070.byteArrayState0011.length, MixedSupport070.byteArrayState0011, 0);
+        cipherPacketBufferLocal1.writeByte(true, MixedSupport103.integerState0595);
+        cipherPacketBufferLocal1.writeByte(booleanArgument2, DiagnosticSupport002.integerState0340);
+        cipherPacketBufferLocal1.writeBytes(false, MixedSupport134.byteArrayState0029.length, MixedSupport134.byteArrayState0029, 0);
+        cipherPacketBufferLocal1.writeLengthByte(cipherPacketBufferLocal1.position - integerLocal2, booleanArgument2);
     }
 
     static {
-        stringState0514 = "Username: ";
-        stringState0516 = "Score";
-        stringState0517 = "You have been removed from <%0>'s game.";
-        stringState0518 = "Passwords must be between 5 and 20 letters and numbers";
-        integerState0757 = 0;
-    }
-
-    /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void performAction1553(String stringArgument1, int[] integerArrayArgument2, int integerArgument3, SceneWidgetPart008 sceneWidgetPart008Argument4, SceneWidget sceneWidgetArgument5, String stringArgument6, long longArgument7, int integerArgument8, int integerArgument9) {
-        try {
-          NetworkSupport005.sceneWidgetPart008State0004 = sceneWidgetPart008Argument4;
-          SceneWidget.mixedSupport104State0001 = new MixedSupport104(sceneWidgetArgument5, longArgument7, stringArgument1, stringArgument6, integerArgument9, integerArgument8, integerArrayArgument2);
-          if (integerArgument3 <= 84) {
-            stringState0515 = (String) null;
-          }
-        } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "sl.A(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (integerArrayArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + (sceneWidgetPart008Argument4 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + longArgument7 + ',' + integerArgument8 + ',' + integerArgument9 + ')');
-        }
+        stringState0530 = "Settling Score: ";
     }
 }

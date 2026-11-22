@@ -23,7 +23,7 @@ final class RichTextLayout extends TextLayout {
     static String stringState0136;
     static MixedSupport016 mixedSupport016State0001;
 
-    final void performAction0393(int integerArgument1, int integerArgument2, String stringArgument3, byte byteArgument4, BitmapFont bitmapFontArgument5) {
+    final void performAction0391(int integerArgument1, int integerArgument2, String stringArgument3, byte byteArgument4, BitmapFont bitmapFontArgument5) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -48,11 +48,11 @@ final class RichTextLayout extends TextLayout {
           this.font = bitmapFontArgument5;
           this.integerState0158 = 1;
           if (byteArgument4 != 8) {
-            RichTextLayout.computeRgbSpriteArray0392(54, 119, -124, -51, 32, 28);
+            RichTextLayout.computeRgbSpriteArray0390(54, 119, -124, -51, 32, 28);
           }
           this.booleanState0030 = true;
-          textLineMetricsLocal9 = this.computeTextLineMetrics0394(-95, integerArgument1, bitmapFontArgument5, stringArgument3);
-          integerLocal8 = bitmapFontArgument5.computeInteger1085(stringArgument3);
+          textLineMetricsLocal9 = this.computeTextLineMetrics0392(-95, integerArgument1, bitmapFontArgument5, stringArgument3);
+          integerLocal8 = bitmapFontArgument5.computeInteger1066(stringArgument3);
           textLineMetricsLocal9.characterXPositions[0] = integerArgument2 - (integerLocal8 >> 1);
           textLineMetricsLocal9.characterXPositions[stringArgument3.length()] = integerArgument2 + (integerLocal8 >> 1);
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal9, bitmapFontArgument5, 0, stringArgument3, byteArgument4 ^ -9);
@@ -73,24 +73,24 @@ final class RichTextLayout extends TextLayout {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean0400(byte byteArgument1) {
+    final static boolean computeBoolean0398(byte byteArgument1) {
         if (byteArgument1 >= -23) {
           return false;
         }
         if (MixedSupport052.integerState0269 < 10) {
           return false;
         }
-        if (!MixedSupport141.booleanState0194) {
-          return !NodeHashTable.computeBoolean1533(-12851) ? true : false;
+        if (!MixedSupport134.booleanState0194) {
+          return !NodeHashTable.computeBoolean1506(-12851) ? true : false;
         }
         return false;
     }
 
-    final static RgbSprite[] computeRgbSpriteArray0392(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static RgbSprite[] computeRgbSpriteArray0390(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         RgbSprite rgbSpriteLocal1 = null;
         RgbSprite rgbSpriteLocal2 = null;
         Object objectLocal3 = null;
@@ -103,34 +103,34 @@ final class RichTextLayout extends TextLayout {
         int integerLocal10 = SoftwareRaster.integerState0284;
         RgbSprite rgbSpriteLocal11 = new RgbSprite(integerArgument3, integerArgument4 - integerArgument3 * 2);
         rgbSpriteLocal11.performAction0256();
-        SoftwareRaster.performAction0669(0, 0, integerArgument3, integerArgument4 - 2 * integerArgument3, integerArgument6, integerArgument5);
+        SoftwareRaster.performAction0660(0, 0, integerArgument3, integerArgument4 - 2 * integerArgument3, integerArgument6, integerArgument5);
         RgbSprite rgbSpriteLocal12 = new RgbSprite(integerArgument3, integerArgument3);
         rgbSpriteLocal12.performAction0256();
-        SoftwareRaster.performAction0649(0, 0, integerArgument3, integerArgument3, integerArgument6);
+        SoftwareRaster.performAction0640(0, 0, integerArgument3, integerArgument3, integerArgument6);
         RgbSprite rgbSpriteLocal13 = new RgbSprite(16, integerArgument3);
         if (integerArgument2 == -20982) {
           rgbSpriteLocal13.performAction0256();
-          SoftwareRaster.performAction0649(0, 0, 16, integerArgument3, integerArgument6);
+          SoftwareRaster.performAction0640(0, 0, 16, integerArgument3, integerArgument6);
           rgbSpriteLocal1 = new RgbSprite(integerArgument3, integerArgument3);
           rgbSpriteLocal1.performAction0256();
-          SoftwareRaster.performAction0649(0, 0, integerArgument3, integerArgument3, integerArgument5);
+          SoftwareRaster.performAction0640(0, 0, integerArgument3, integerArgument3, integerArgument5);
           rgbSpriteLocal2 = new RgbSprite(16, integerArgument3);
           rgbSpriteLocal2.performAction0256();
-          SoftwareRaster.performAction0649(0, 0, 16, integerArgument3, integerArgument5);
+          SoftwareRaster.performAction0640(0, 0, 16, integerArgument3, integerArgument5);
           objectLocal3 = null;
           if (integerArgument1 > 0) {
             rgbSpriteLocal4 = new RgbSprite(16, 16);
             objectLocal3 = rgbSpriteLocal4;
             rgbSpriteLocal4.performAction0256();
-            SoftwareRaster.performAction0649(0, 0, 16, 16, integerArgument1);
+            SoftwareRaster.performAction0640(0, 0, 16, 16, integerArgument1);
           }
-          SoftwareRaster.performAction0654(integerArrayLocal5, integerLocal9, integerLocal10);
+          SoftwareRaster.performAction0645(integerArrayLocal5, integerLocal9, integerLocal10);
           return new RgbSprite[]{rgbSpriteLocal12, rgbSpriteLocal13, rgbSpriteLocal12, rgbSpriteLocal11, (RgbSprite) (objectLocal3), rgbSpriteLocal11, rgbSpriteLocal1, rgbSpriteLocal2, rgbSpriteLocal1};
         }
         return (RgbSprite[]) null;
     }
 
-    final void performAction0396(int integerArgument1, BitmapFont bitmapFontArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction0394(int integerArgument1, BitmapFont bitmapFontArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
         TextLineMetrics textLineMetricsLocal1 = null;
         TextLineMetrics textLineMetricsLocal2 = null;
         if (stringArgument3 == null) {
@@ -149,17 +149,17 @@ final class RichTextLayout extends TextLayout {
           this.font = bitmapFontArgument2;
           this.stringState0134 = stringArgument3;
           this.integerState0158 = 0;
-          textLineMetricsLocal1 = this.computeTextLineMetrics0394(-27, integerArgument4, bitmapFontArgument2, stringArgument3);
+          textLineMetricsLocal1 = this.computeTextLineMetrics0392(-27, integerArgument4, bitmapFontArgument2, stringArgument3);
           textLineMetricsLocal2 = textLineMetricsLocal1;
           textLineMetricsLocal1.characterXPositions[0] = integerArgument1;
-          textLineMetricsLocal2.characterXPositions[stringArgument3.length()] = bitmapFontArgument2.computeInteger1085(stringArgument3) + integerArgument1;
+          textLineMetricsLocal2.characterXPositions[stringArgument3.length()] = bitmapFontArgument2.computeInteger1066(stringArgument3) + integerArgument1;
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal2, bitmapFontArgument2, 0, stringArgument3, -1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ea.T(" + integerArgument1 + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ea.T(" + integerArgument1 + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
-    final void performAction0397(String stringArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final void performAction0395(String stringArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         TextLineMetrics stackTextLineMetricsLocal1;
         TextLineMetrics stackTextLineMetricsLocal2;
         int stackIntegerLocal3;
@@ -214,15 +214,15 @@ final class RichTextLayout extends TextLayout {
           this.integerState0159 = integerArgument5;
           this.booleanState0030 = false;
           this.integerState0158 = integerArgument6;
-          stringArrayLocal24 = new String[bitmapFontArgument3.computeInteger1086(stringArgument1, integerArgument4) + 1];
+          stringArrayLocal24 = new String[bitmapFontArgument3.computeInteger1067(stringArgument1, integerArgument4) + 1];
           stringArrayLocal25 = stringArrayLocal24;
-          integerLocal18 = Math.max(1, bitmapFontArgument3.computeInteger1092(stringArgument1, new int[]{integerArgument4}, stringArrayLocal25));
+          integerLocal18 = Math.max(1, bitmapFontArgument3.computeInteger1073(stringArgument1, new int[]{integerArgument4}, stringArrayLocal25));
           if (this.integerState0164 == 3 &&
             integerLocal18 == 1) {
             this.integerState0164 = 1;
           }
           if (integerArgument7 < 8) {
-            RichTextLayout.computeString0399(true);
+            RichTextLayout.computeString0397(true);
           }
           this.lines = new TextLineMetrics[integerLocal18];
           if (this.integerState0164 != 0) {
@@ -261,11 +261,11 @@ final class RichTextLayout extends TextLayout {
             textLineMetricsLocal22 = new TextLineMetrics(stackIntegerLocal3, stackIntegerLocal4, stackIntegerLocal7);
             textLineMetricsLocal22.characterXPositions[0] = 0;
             if (stringLocal21 != null) {
-              textLineMetricsLocal22.characterXPositions[stringLocal21.length()] = bitmapFontArgument3.computeInteger1085(stringLocal21);
+              textLineMetricsLocal22.characterXPositions[stringLocal21.length()] = bitmapFontArgument3.computeInteger1066(stringLocal21);
               stackTextLineMetricsLocal8 = textLineMetricsLocal22;
               stackBitmapFontLocal9 = (BitmapFont) (bitmapFontArgument3);
               if (integerArgument6 == 3) {
-                stackIntegerLocal10 = this.computeInteger0230((byte) 64, bitmapFontArgument3.computeInteger1085(stringLocal21), stringLocal21, integerArgument4);
+                stackIntegerLocal10 = this.computeInteger0230((byte) 64, bitmapFontArgument3.computeInteger1066(stringLocal21), stringLocal21, integerArgument4);
               } else {
                 stackIntegerLocal10 = 0;
               }
@@ -291,36 +291,36 @@ final class RichTextLayout extends TextLayout {
           } else {
             stackStringLocal15 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal14).append(stackStringLocal15).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(',').append(integerArgument8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal14).append(stackStringLocal15).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(',').append(integerArgument8).append(')').toString());
         }
     }
 
-    final static String computeString0399(boolean booleanArgument1) {
-        if (MixedSupport152.booleanState0222) {
+    final static String computeString0397(boolean booleanArgument1) {
+        if (MixedSupport145.booleanState0222) {
           if (!booleanArgument1) {
-            RichTextLayout.computeString0399(true);
+            RichTextLayout.computeString0397(true);
             return null;
           }
           return null;
         }
-        if (MixedSupport066.integerState0341 < MixedSupport093.integerState0545) {
+        if (EmailValidationError.integerState0341 < MixedSupport088.integerState0545) {
           if (!booleanArgument1) {
-            RichTextLayout.computeString0399(true);
+            RichTextLayout.computeString0397(true);
             return null;
           }
           return null;
         }
-        if (UiComponentPart013.integerState0274 + MixedSupport093.integerState0545 > MixedSupport066.integerState0341) {
-          return MixedSupport070.stringState0295;
+        if (UiComponentPart013.integerState0274 + MixedSupport088.integerState0545 > EmailValidationError.integerState0341) {
+          return MixedSupport066.stringState0295;
         }
         if (!booleanArgument1) {
-          RichTextLayout.computeString0399(true);
+          RichTextLayout.computeString0397(true);
           return null;
         }
         return null;
     }
 
-    final void performAction0395(int integerArgument1, BitmapFont bitmapFontArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
+    final void performAction0393(int integerArgument1, BitmapFont bitmapFontArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
         TextLineMetrics textLineMetricsLocal1 = null;
         TextLineMetrics textLineMetricsLocal2 = null;
         if (stringArgument5 == null) {
@@ -339,17 +339,17 @@ final class RichTextLayout extends TextLayout {
           this.font = bitmapFontArgument2;
           this.booleanState0030 = true;
           this.integerState0158 = 2;
-          textLineMetricsLocal1 = this.computeTextLineMetrics0394(88, integerArgument4, bitmapFontArgument2, stringArgument5);
+          textLineMetricsLocal1 = this.computeTextLineMetrics0392(88, integerArgument4, bitmapFontArgument2, stringArgument5);
           textLineMetricsLocal2 = textLineMetricsLocal1;
-          textLineMetricsLocal2.characterXPositions[integerArgument1] = -bitmapFontArgument2.computeInteger1085(stringArgument5) + integerArgument3;
+          textLineMetricsLocal2.characterXPositions[integerArgument1] = -bitmapFontArgument2.computeInteger1066(stringArgument5) + integerArgument3;
           textLineMetricsLocal2.characterXPositions[stringArgument5.length()] = integerArgument3;
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal2, bitmapFontArgument2, 0, stringArgument5, -1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ea.N(" + integerArgument1 + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (stringArgument5 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ea.N(" + integerArgument1 + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (stringArgument5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction0398(byte byteArgument1) {
+    public static void performAction0396(byte byteArgument1) {
         if (byteArgument1 == -37) {
           stringState0135 = null;
           mixedSupport016State0001 = null;
@@ -366,7 +366,7 @@ final class RichTextLayout extends TextLayout {
     public RichTextLayout() {
     }
 
-    private final TextLineMetrics computeTextLineMetrics0394(int integerArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, String stringArgument4) {
+    private final TextLineMetrics computeTextLineMetrics0392(int integerArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, String stringArgument4) {
         TextLineMetrics textLineMetricsLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -401,20 +401,20 @@ final class RichTextLayout extends TextLayout {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean0401(byte byteArgument1) {
+    final static boolean computeBoolean0399(byte byteArgument1) {
         if (byteArgument1 <= 34) {
           stringState0135 = (String) null;
-          if (SceneWidget.mixedSupport104State0001 != null) {
+          if (SceneWidget.mixedSupport099State0001 != null) {
             return true;
           }
-          if (SceneWidgetPart009.computeBoolean1366(-6)) {
+          if (SceneWidgetPart009.computeBoolean1339(-6)) {
             return true;
           }
-          if (MixedSupport102.sceneWidgetPart007State0001 != null) {
+          if (MixedSupport097.sceneWidgetPart007State0001 != null) {
             return true;
           }
           if (!DualNodeDeque.computeBoolean0035(48)) {
@@ -422,13 +422,13 @@ final class RichTextLayout extends TextLayout {
           }
           return true;
         }
-        if (SceneWidget.mixedSupport104State0001 != null) {
+        if (SceneWidget.mixedSupport099State0001 != null) {
           return true;
         }
-        if (SceneWidgetPart009.computeBoolean1366(-6)) {
+        if (SceneWidgetPart009.computeBoolean1339(-6)) {
           return true;
         }
-        if (MixedSupport102.sceneWidgetPart007State0001 != null) {
+        if (MixedSupport097.sceneWidgetPart007State0001 != null) {
           return true;
         }
         if (!DualNodeDeque.computeBoolean0035(48)) {

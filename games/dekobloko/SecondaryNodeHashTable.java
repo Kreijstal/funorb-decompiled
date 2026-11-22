@@ -12,7 +12,7 @@ final class SecondaryNodeHashTable {
     static int integerState0543;
     private DualNode[] dualNodeArrayState0001;
     private long longState0039;
-    static MixedSupport111 mixedSupport111State0006;
+    static MixedSupport106 mixedSupport106State0006;
     static int[] integerArrayState0169;
     static String[][] stringArrayArrayState0006;
     static volatile int integerState0544;
@@ -22,10 +22,10 @@ final class SecondaryNodeHashTable {
         stringState0367 = null;
         stringArrayArrayState0006 = (String[][]) null;
         integerArrayState0169 = null;
-        mixedSupport111State0006 = null;
+        mixedSupport106State0006 = null;
         if (integerArgument1 > -31) {
           byte[] byteArrayLocal1 = (byte[]) null;
-          SecondaryNodeHashTable.performAction1146((SceneWidget) null, (SceneWidget) null, 83, -100, -58, (SceneWidget) null, (byte[]) null, 7, 17, -108);
+          SecondaryNodeHashTable.performAction1119((SceneWidget) null, (SceneWidget) null, 83, -100, -58, (SceneWidget) null, (byte[]) null, 7, 17, -108);
         }
     }
 
@@ -109,7 +109,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class SecondaryNodeHashTable {
         return this.next(-81);
     }
 
-    final static void performAction1146(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4, int integerArgument5, SceneWidget sceneWidgetArgument6, byte[] byteArrayArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    final static void performAction1119(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4, int integerArgument5, SceneWidget sceneWidgetArgument6, byte[] byteArrayArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -138,43 +138,43 @@ final class SecondaryNodeHashTable {
         int integerLocal14 = 0;
         integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport112.byteArrayState0026 = byteArrayArgument7;
-          MixedSupport134.longState0050 = -1L;
+          MixedSupport107.byteArrayState0026 = byteArrayArgument7;
+          MixedSupport127.longState0050 = -1L;
           MixedSupport054.integerState0277 = integerArgument4;
-          MixedSupport064.integerState0336 = byteArrayArgument7.length;
-          MixedSupport074.byteArrayState0011 = new byte[(MixedSupport054.integerState0277 + 7) / 8];
+          MixedSupport063.integerState0336 = byteArrayArgument7.length;
+          MixedSupport070.byteArrayState0011 = new byte[(MixedSupport054.integerState0277 + 7) / 8];
           MixedSupport040.booleanState0047 = false;
           UiComponentPart011.sceneWidgetPart013State0002 = null;
           MixedSupport016.sceneWidgetPart013State0001 = null;
           integerLocal12 = integerArgument3;
-          for (integerLocal1 = 0; integerLocal1 < MixedSupport112.byteArrayState0026.length; integerLocal1++) {
-            integerLocal12 = integerLocal12 + (255 & MixedSupport112.byteArrayState0026[integerLocal1]);
+          for (integerLocal1 = 0; integerLocal1 < MixedSupport107.byteArrayState0026.length; integerLocal1++) {
+            integerLocal12 = integerLocal12 + (255 & MixedSupport107.byteArrayState0026[integerLocal1]);
           }
           integerLocal12 = (7 + integerLocal12) / 8;
-          MixedSupport141.byteArrayState0029 = new byte[integerLocal12];
+          MixedSupport134.byteArrayState0029 = new byte[integerLocal12];
           if (null == sceneWidgetArgument2.nodeDequeState0034) {
             sceneWidgetArgument2.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport057.nodeDequeState0010 = sceneWidgetArgument2.nodeDequeState0034;
-          MixedSupport057.nodeDequeState0010.performAction1773(118);
-          MixedSupport095.secondaryNodeHashTableState0004 = new SecondaryNodeHashTable(integerArgument5);
+          MixedSupport057.nodeDequeState0010.performAction1742(118);
+          MixedSupport090.secondaryNodeHashTableState0004 = new SecondaryNodeHashTable(integerArgument5);
           ReturnedShape.integerState0693 = -1;
           UiComponentPart006.integerState0137 = -1;
           MixedSupport019.integerState0113 = 0;
-          MixedSupport124.integerState0772 = 0;
+          MixedSupport119.integerState0772 = 0;
           if (null == sceneWidgetArgument1.nodeDequeState0034) {
             sceneWidgetArgument1.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport051.nodeDequeState0009 = sceneWidgetArgument1.nodeDequeState0034;
-          MixedSupport051.nodeDequeState0009.performAction1773(integerArgument3 ^ 105);
-          MixedSupport127.secondaryNodeHashTableState0005 = new SecondaryNodeHashTable(integerArgument10);
+          MixedSupport051.nodeDequeState0009.performAction1742(integerArgument3 ^ 105);
+          MixedSupport121.secondaryNodeHashTableState0005 = new SecondaryNodeHashTable(integerArgument10);
           if (sceneWidgetArgument6.nodeDequeState0034 == null) {
             sceneWidgetArgument6.nodeDequeState0034 = new NodeDeque();
           }
-          MixedSupport096.nodeDequeState0021 = sceneWidgetArgument6.nodeDequeState0034;
-          MixedSupport096.nodeDequeState0021.performAction1773(121);
+          MixedSupport091.nodeDequeState0021 = sceneWidgetArgument6.nodeDequeState0034;
+          MixedSupport091.nodeDequeState0021.performAction1742(121);
           GameApplet.secondaryNodeHashTableState0002 = new SecondaryNodeHashTable(integerArgument9);
-          MixedSupport094.integerState0547 = integerArgument8;
+          MixedSupport089.integerState0547 = integerArgument8;
           SceneWidgetNode.longState0023 = 0L;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
@@ -205,11 +205,11 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument8).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument8).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1145(String stringArgument1, byte byteArgument2, UiComponentPart031 uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
+    final static boolean computeBoolean1118(String stringArgument1, byte byteArgument2, UiComponentPart031 uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponentPart033 uiComponentPart033Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -223,21 +223,21 @@ final class SecondaryNodeHashTable {
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          if (MixedSupport134.mixedSupport004State0005 != GameAssets.mixedSupport004State0004) {
+          if (MixedSupport127.mixedSupport004State0005 != GameAssets.mixedSupport004State0004) {
             return false;
           }
           uiComponentPart033Local2 = new UiComponentPart033(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
-          MixedSupport005.uiComponentPart016State0001.performAction0848((byte) -123, uiComponentPart033Local2);
-          if (!SecondaryNodeDequeIterator.computeBoolean0365(-40)) {
+          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -123, uiComponentPart033Local2);
+          if (!SecondaryNodeDequeIterator.computeBoolean0363(-40)) {
             SceneWidgetPart013.stringState0586 = stringArgument1;
             RichTextLayout.mixedSupport016State0001 = null;
-            MixedSupport126.stringState0527 = stringArgument7;
+            PasswordValidator.stringState0527 = stringArgument7;
             GameAssets.mixedSupport004State0004 = UiComponentPart022.mixedSupport004State0003;
             NetworkArchiveRequestManager.stringState0438 = stringArgument6;
-            MixedSupport068.integerState0352 = integerArgument5;
+            HuffmanCodec.integerState0352 = integerArgument5;
             TextLayout.booleanState0019 = booleanArgument4;
           } else {
-            uiComponentPart033Local2.performAction1849(true);
+            uiComponentPart033Local2.performAction1817(true);
           }
           if (byteArgument2 > 120) {
             return true;
@@ -271,7 +271,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class SecondaryNodeHashTable {
         }
         if (integerArgument1 != 24710) {
           String stringLocal4 = (String) null;
-          SecondaryNodeHashTable.computeBoolean1145((String) null, (byte) 91, (UiComponentPart031) null, false, 64, (String) null, (String) null);
+          SecondaryNodeHashTable.computeBoolean1118((String) null, (byte) 91, (UiComponentPart031) null, false, 64, (String) null, (String) null);
         }
         this.dualNodeState0008 = null;
         return null;
@@ -317,7 +317,7 @@ final class SecondaryNodeHashTable {
         stringState0367 = "The wildcard special item can be used in place of any other colour.";
         integerArrayState0169 = new int[8];
         stringArrayArrayState0006 = new String[][]{new String[]{"Earthquake", "Causes stacks of loose pieces to collapse."}, new String[]{"Drill", "Individually pops every piece in its path."}, new String[]{"Bomb", "When you pop a shape touching a bomb, everything in your bucket of the same colour will explode."}, new String[]{"Power Drill", "Pops every entire shape, loose or solid, in its path. Loose shapes take touching solid shapes with them!"}, new String[]{"Water Capsule", "Turns every solid shape in your bucket into loose pieces. Can be quite spectacular."}, new String[]{"Poison", "Turns all the loose pieces in your bucket into solid shapes. Not good!"}, new String[]{"Wildcard", "Can be used in place of any other loose piece."}};
-        mixedSupport111State0006 = new MixedSupport111(8, 0, 4, 1);
+        mixedSupport106State0006 = new MixedSupport106(8, 0, 4, 1);
         integerState0544 = 0;
         booleanState0122 = false;
     }

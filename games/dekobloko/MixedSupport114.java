@@ -2,89 +2,70 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport114 {
-    static String stringState0475;
-    static String stringState0476;
-    static String stringState0477;
-    static String stringState0478;
-    static MixedSupport111 mixedSupport111State0010;
-    static boolean booleanState0162;
-    static MixedSupport121 mixedSupport121State0003;
+    private int integerState0733;
+    private int[] integerArrayState0203;
+    private int[] integerArrayState0204;
+    private int integerState0734;
+    private int integerState0735;
+    private int integerState0736;
+    int integerState0737;
+    private int integerState0738;
+    int integerState0739;
+    private int integerState0740;
+    int integerState0741;
 
-    final static boolean computeBoolean1463(java.applet.Applet appletArgument1, byte byteArgument2) {
-        try {
-          int integerLocal1 = 0;
-          String stringLocal2 = null;
-          String stringLocal3 = null;
-          String[] stringArrayLocal4 = null;
-          int integerLocal5 = 0;
-          int integerLocal6 = 0;
-          boolean stackBooleanLocal7 = false;
-          RuntimeException stackRuntimeExceptionLocal8 = null;
-          StringBuilder stackStringBuilderLocal9 = null;
-          String stackStringLocal10 = null;
-          Throwable caughtExceptionLocal11 = null;
-          Throwable throwableLocal12 = null;
-          RuntimeException runtimeExceptionLocal13 = null;
-          integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-          try {
-            if (MixedSupport144.booleanState0209) {
-              return true;
-            }
-            try {
-              stringLocal2 = "tuhstatbut";
-              stringLocal3 = (String) (MixedSupport088.computeObject1115(true, "getcookies", appletArgument1));
-              stringArrayLocal4 = ResourceArchive.computeStringArray0814(';', (byte) 66, stringLocal3);
-              if (byteArgument2 >= -55) {
-                MixedSupport114.performAction1462(-124);
-              }
-              for (integerLocal1 = 0; integerLocal1 < stringArrayLocal4.length; integerLocal1++) {
-                integerLocal5 = stringArrayLocal4[integerLocal1].indexOf('=');
-                if (integerLocal5 >= 0 &&
-                  stringArrayLocal4[integerLocal1].substring(0, integerLocal5).trim().equals(stringLocal2)) {
-                  return true;
-                }
-              }
-            } catch (java.lang.Throwable caughtParameterLocal14) {
-              caughtExceptionLocal11 = caughtParameterLocal14;
-              throwableLocal12 = caughtExceptionLocal11;
-            }
-            stackBooleanLocal7 = (null != appletArgument1.getParameter("tuhstatbut"));
-            return stackBooleanLocal7;
-          } catch (java.lang.RuntimeException caughtParameterLocal15) {
-            caughtExceptionLocal11 = caughtParameterLocal15;
-            runtimeExceptionLocal13 = (RuntimeException) (Object) caughtExceptionLocal11;
-            stackRuntimeExceptionLocal8 = runtimeExceptionLocal13;
-            stackStringBuilderLocal9 = new StringBuilder().append("rg.B(");
-            if (appletArgument1 == null) {
-              stackStringLocal10 = "null";
-            } else {
-              stackStringLocal10 = "{...}";
-            }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
+    final int computeInteger1480(int integerArgument1) {
+        int integerLocal1 = 0;
+        if (this.integerState0734 >= this.integerState0733) {
+          integerLocal1 = this.integerState0738;
+          this.integerState0738 = this.integerState0738 + 1;
+          this.integerState0736 = this.integerArrayState0204[integerLocal1] << 15;
+          if (this.integerState0738 >= this.integerState0735) {
+            this.integerState0738 = this.integerState0735 - 1;
           }
-        } catch (RuntimeException | Error uncheckedExceptionLocal16) {
-          throw uncheckedExceptionLocal16;
-        } catch (Throwable checkedExceptionLocal17) {
-          throw new RuntimeException(checkedExceptionLocal17);
+          this.integerState0733 = (int)((double)this.integerArrayState0203[this.integerState0738] / 65536.0 * (double)integerArgument1);
+          if (this.integerState0733 > this.integerState0734) {
+            this.integerState0740 = ((this.integerArrayState0204[this.integerState0738] << 15) - this.integerState0736) / (this.integerState0733 - this.integerState0734);
+          }
+        }
+        this.integerState0736 = this.integerState0736 + this.integerState0740;
+        this.integerState0734 = this.integerState0734 + 1;
+        return this.integerState0736 - this.integerState0740 >> 15;
+    }
+
+    final void performAction1479() {
+        this.integerState0733 = 0;
+        this.integerState0738 = 0;
+        this.integerState0740 = 0;
+        this.integerState0736 = 0;
+        this.integerState0734 = 0;
+    }
+
+    final void performAction1482(PacketBuffer packetBufferArgument1) {
+        this.integerState0739 = packetBufferArgument1.readUnsignedByte((byte) -28);
+        this.integerState0737 = packetBufferArgument1.readInt(7553);
+        this.integerState0741 = packetBufferArgument1.readInt(7553);
+        this.performAction1481(packetBufferArgument1);
+    }
+
+    final void performAction1481(PacketBuffer packetBufferArgument1) {
+        int integerLocal1 = 0;
+        this.integerState0735 = packetBufferArgument1.readUnsignedByte((byte) -69);
+        this.integerArrayState0203 = new int[this.integerState0735];
+        this.integerArrayState0204 = new int[this.integerState0735];
+        for (integerLocal1 = 0; integerLocal1 < this.integerState0735; integerLocal1++) {
+          this.integerArrayState0203[integerLocal1] = packetBufferArgument1.readUnsignedShort(3);
+          this.integerArrayState0204[integerLocal1] = packetBufferArgument1.readUnsignedShort(3);
         }
     }
 
-    public static void performAction1462(int integerArgument1) {
-        stringState0477 = null;
-        stringState0475 = null;
-        stringState0476 = null;
-        mixedSupport111State0010 = null;
-        mixedSupport121State0003 = null;
-        int integerLocal1 = 36 / ((-41 - integerArgument1) / 35);
-        stringState0478 = null;
-    }
-
-    static {
-        stringState0475 = "Offline";
-        stringState0476 = "Player names can be up to 12 letters, numbers and underscores";
-        stringState0478 = "Can you unlock the Master Challenge by reaching Stage<nbsp>4 of Stamina Mode?";
-        stringState0477 = "Please try again in a few minutes.";
-        mixedSupport111State0010 = new MixedSupport111(10, 2, 2, 0);
-        booleanState0162 = true;
+    MixedSupport114() {
+        this.integerState0735 = 2;
+        this.integerArrayState0203 = new int[2];
+        this.integerArrayState0204 = new int[2];
+        this.integerArrayState0203[0] = 0;
+        this.integerArrayState0203[1] = 65535;
+        this.integerArrayState0204[0] = 0;
+        this.integerArrayState0204[1] = 65535;
     }
 }

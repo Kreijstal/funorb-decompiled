@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static PcmStreamMixer pcmStreamMixerState0002;
     static RawSound rawSoundState0009;
-    static MixedSupport066 mixedSupport066State0004;
+    static EmailValidationError emailValidationErrorState0004;
     static SceneWidget sceneWidgetState0050;
     static int[][] integerArrayArrayState0010;
 
@@ -32,7 +32,7 @@ abstract class MouseWheelInput {
           for (integerLocal1 = 1; stringArgument4.length() > integerLocal1; integerLocal1++) {
             integerLocal13 = stringArgument4.charAt(integerLocal1);
             if (integerLocal13 == 60) {
-              integerLocal12 = textLineMetricsArgument1.characterXPositions[0] + ((integerLocal10 >> 8) + bitmapFontArgument2.computeInteger1085(stringArgument4.substring(0, integerLocal1)));
+              integerLocal12 = textLineMetricsArgument1.characterXPositions[0] + ((integerLocal10 >> 8) + bitmapFontArgument2.computeInteger1066(stringArgument4.substring(0, integerLocal1)));
             }
             if (-1 != integerLocal12) {
               textLineMetricsArgument1.characterXPositions[integerLocal1] = integerLocal12;
@@ -40,7 +40,7 @@ abstract class MouseWheelInput {
               if (32 == integerLocal13) {
                 integerLocal10 = integerLocal10 + integerArgument3;
               }
-              textLineMetricsArgument1.characterXPositions[integerLocal1] = (integerLocal10 >> 8) + textLineMetricsArgument1.characterXPositions[0] - (-bitmapFontArgument2.computeInteger1085(stringArgument4.substring(0, integerLocal1 + 1)) + bitmapFontArgument2.computeInteger1083((char) integerLocal13));
+              textLineMetricsArgument1.characterXPositions[integerLocal1] = (integerLocal10 >> 8) + textLineMetricsArgument1.characterXPositions[0] - (-bitmapFontArgument2.computeInteger1066(stringArgument4.substring(0, integerLocal1 + 1)) + bitmapFontArgument2.computeInteger1064((char) integerLocal13));
             }
             if (integerLocal13 == 62) {
               integerLocal12 = -1;
@@ -69,7 +69,7 @@ abstract class MouseWheelInput {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
@@ -78,20 +78,20 @@ abstract class MouseWheelInput {
         rawSoundState0009 = null;
         sceneWidgetState0050 = null;
         int integerLocal1 = -36 / ((integerArgument1 + 11) / 52);
-        mixedSupport066State0004 = null;
+        emailValidationErrorState0004 = null;
         integerArrayArrayState0010 = (int[][]) null;
     }
 
     abstract void detachFromComponent(int integerArgument1, java.awt.Component componentArgument2);
 
-    final static void performAction0679(int integerArgument1, byte byteArgument2) {
+    final static void performAction0670(int integerArgument1, byte byteArgument2) {
         if (byteArgument2 >= -101) {
           return;
         }
         UiComponentPart001.integerState0034 = integerArgument1;
     }
 
-    final static MixedSupport043 computeMixedSupport0430681(boolean booleanArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
+    final static MixedSupport043 computeMixedSupport0430672(boolean booleanArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
         long longLocal1 = 0L;
         RuntimeException runtimeExceptionLocal2 = null;
         Object objectLocal3 = null;
@@ -115,7 +115,7 @@ abstract class MouseWheelInput {
             charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
             longLocal1 = DualNodeDeque.computeLong0030(121, charSequenceLocal4);
           }
-          stackMixedSupport043Local5 = MixedSupport118.computeMixedSupport0431499(longLocal1, stringArgument2, booleanArgument1, (String) (objectLocal3), 0);
+          stackMixedSupport043Local5 = MixedSupport113.computeMixedSupport0431472(longLocal1, stringArgument2, booleanArgument1, (String) (objectLocal3), 0);
           return stackMixedSupport043Local5;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal11 = caughtParameterLocal12;
@@ -133,40 +133,40 @@ abstract class MouseWheelInput {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
     abstract void attachToComponent(java.awt.Component componentArgument1, int integerArgument2);
 
-    final static void performAction0680(int integerArgument1, boolean booleanArgument2) {
-        if (null != MixedSupport122.stringState0515) {
-          SceneWidgetPart009.performAction1364(MixedSupport122.stringState0515, -2);
+    final static void performAction0671(int integerArgument1, boolean booleanArgument2) {
+        if (null != MixedSupport117.stringState0515) {
+          SceneWidgetPart009.performAction1337(MixedSupport117.stringState0515, -2);
         }
-        if (SceneWidget.mixedSupport104State0001 != null) {
-          SceneWidget.mixedSupport104State0001.performAction1249((byte) 39, booleanArgument2);
+        if (SceneWidget.mixedSupport099State0001 != null) {
+          SceneWidget.mixedSupport099State0001.performAction1222((byte) 39, booleanArgument2);
         }
-        UiComponentPart027.performAction1425(booleanArgument2, 4028);
+        UiComponentPart027.performAction1398(booleanArgument2, 4028);
         if (integerArgument1 != -1) {
           rawSoundState0009 = (RawSound) null;
-          if (null != MixedSupport102.sceneWidgetPart007State0001) {
-            MixedSupport102.sceneWidgetPart007State0001.performAction1798(1141039778, booleanArgument2);
-            UiComponentPart017.performAction0975(booleanArgument2, -123);
+          if (null != MixedSupport097.sceneWidgetPart007State0001) {
+            MixedSupport097.sceneWidgetPart007State0001.performAction1767(1141039778, booleanArgument2);
+            UiComponentPart017.performAction0956(booleanArgument2, -123);
             return;
           }
-          UiComponentPart017.performAction0975(booleanArgument2, -123);
+          UiComponentPart017.performAction0956(booleanArgument2, -123);
           return;
         }
-        if (null == MixedSupport102.sceneWidgetPart007State0001) {
-          UiComponentPart017.performAction0975(booleanArgument2, -123);
+        if (null == MixedSupport097.sceneWidgetPart007State0001) {
+          UiComponentPart017.performAction0956(booleanArgument2, -123);
           return;
         }
-        MixedSupport102.sceneWidgetPart007State0001.performAction1798(1141039778, booleanArgument2);
-        UiComponentPart017.performAction0975(booleanArgument2, -123);
+        MixedSupport097.sceneWidgetPart007State0001.performAction1767(1141039778, booleanArgument2);
+        UiComponentPart017.performAction0956(booleanArgument2, -123);
     }
 
     static {
-        mixedSupport066State0004 = new MixedSupport066();
+        emailValidationErrorState0004 = new EmailValidationError();
         integerArrayArrayState0010 = (int[][]) null;
     }
 }

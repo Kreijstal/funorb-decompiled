@@ -10,7 +10,7 @@ class MixedSupport024 extends MixedSupport001 {
     static String stringState0119;
     static long longState0007;
 
-    public static void performAction0370(int integerArgument1) {
+    public static void performAction0368(int integerArgument1) {
         stringState0115 = null;
         stringState0119 = null;
         stringState0116 = null;
@@ -27,7 +27,7 @@ class MixedSupport024 extends MixedSupport001 {
 
     public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         if (booleanArgument1) {
-          RenderingSupport008.performAction0867(uiComponentArgument5.integerState0110 + integerArgument2, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 112);
+          RenderingSupport007.performAction0848(uiComponentArgument5.integerState0110 + integerArgument2, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 112);
         }
         if (byteArgument4 > -60) {
           return;
@@ -35,17 +35,17 @@ class MixedSupport024 extends MixedSupport001 {
         try {
           super.performAction0017(booleanArgument1, integerArgument2, integerArgument3, (byte) -120, uiComponentArgument5);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "di.B(" + booleanArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + (uiComponentArgument5 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "di.B(" + booleanArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + (uiComponentArgument5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean computeBoolean0369(boolean booleanArgument1) {
+    final static boolean computeBoolean0367(boolean booleanArgument1) {
         if (booleanArgument1) {
-          MixedSupport024.computeBoolean0369(false);
+          MixedSupport024.computeBoolean0367(false);
           if (null == GameSession.bufferedSocketState0002) {
             return false;
           }
-          if (UiComponentPart023.mixedSupport139State0009.computeBoolean1707(22277)) {
+          if (UiComponentPart023.mixedSupport132State0009.computeBoolean1676(22277)) {
             return true;
           }
           return false;
@@ -53,7 +53,7 @@ class MixedSupport024 extends MixedSupport001 {
         if (null == GameSession.bufferedSocketState0002) {
           return false;
         }
-        if (UiComponentPart023.mixedSupport139State0009.computeBoolean1707(22277)) {
+        if (UiComponentPart023.mixedSupport132State0009.computeBoolean1676(22277)) {
           return true;
         }
         return false;

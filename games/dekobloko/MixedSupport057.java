@@ -12,7 +12,7 @@ final class MixedSupport057 {
     static int integerState0297;
     static SceneWidget sceneWidgetState0051;
 
-    final static int computeInteger0692(int integerArgument1) {
+    final static int computeInteger0683(int integerArgument1) {
         if (integerArgument1 != 1) {
           return -83;
         }
@@ -30,7 +30,7 @@ final class MixedSupport057 {
         stringState0247 = null;
     }
 
-    final static void performAction0693(PacketBuffer packetBufferArgument1, int integerArgument2) {
+    final static void performAction0684(PacketBuffer packetBufferArgument1, int integerArgument2) {
         try {
           int integerLocal1 = 0;
           byte[] byteArrayLocal2 = null;
@@ -47,10 +47,10 @@ final class MixedSupport057 {
           try {
             byteArrayLocal6 = new byte[24];
             byteArrayLocal2 = byteArrayLocal6;
-            if (UiComponentPart008.mixedSupport091State0001 != null) {
+            if (UiComponentPart008.bufferedFileState0001 != null) {
               try {
-                UiComponentPart008.mixedSupport091State0001.performAction1134(0L, (byte) -109);
-                UiComponentPart008.mixedSupport091State0001.performAction1135(byteArrayLocal6, (byte) -76);
+                UiComponentPart008.bufferedFileState0001.seek(0L, (byte) -109);
+                UiComponentPart008.bufferedFileState0001.readFully(byteArrayLocal6, (byte) -76);
                 for (integerLocal3 = 0; integerLocal3 < 24; integerLocal3++) {
                   if (byteArrayLocal2[integerLocal3] == 0) {
                     continue;
@@ -82,7 +82,7 @@ final class MixedSupport057 {
             } else {
               stackStringLocal9 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal14) {
           throw uncheckedExceptionLocal14;
@@ -91,7 +91,7 @@ final class MixedSupport057 {
         }
     }
 
-    final static byte[] computeByteArray0694(byte[] byteArrayArgument1, int integerArgument2) {
+    final static byte[] computeByteArray0685(byte[] byteArrayArgument1, int integerArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -133,12 +133,12 @@ final class MixedSupport057 {
               byteArrayLocal9 = byteArrayLocal11;
               byteArrayLocal7 = byteArrayLocal9;
               if (1 != integerLocal2) {
-                objectLocal19 = MixedSupport067.gzipDecompressorState0001;
+                objectLocal19 = MixedSupport065.gzipDecompressorState0001;
                 synchronized (objectLocal19) {
-                  MixedSupport067.gzipDecompressorState0001.decompress((byte) 111, packetBufferLocal8, byteArrayLocal11);
+                  MixedSupport065.gzipDecompressorState0001.decompress((byte) 111, packetBufferLocal8, byteArrayLocal11);
                 }
               } else {
-                MixedSupport125.computeInteger1605(byteArrayLocal11, integerLocal5, byteArrayArgument1, integerLocal3, 9);
+                MixedSupport120.computeInteger1578(byteArrayLocal11, integerLocal5, byteArrayArgument1, integerLocal3, 9);
               }
               stackByteArrayLocal13 = byteArrayLocal7;
               return stackByteArrayLocal13;
@@ -156,7 +156,7 @@ final class MixedSupport057 {
           } else {
             stackStringLocal17 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal15), ((StringBuilder) (Object) stackStringBuilderLocal16).append(stackStringLocal17).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal15), ((StringBuilder) (Object) stackStringBuilderLocal16).append(stackStringLocal17).append(',').append(integerArgument2).append(')').toString());
         }
     }
 

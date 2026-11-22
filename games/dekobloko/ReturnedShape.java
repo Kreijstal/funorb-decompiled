@@ -8,7 +8,7 @@ final class ReturnedShape {
     int height;
     int width;
     int integerState0691;
-    static MixedSupport111 mixedSupport111State0009;
+    static MixedSupport106 mixedSupport106State0009;
     int integerState0692;
     static String stringState0472;
     static String stringState0473;
@@ -19,7 +19,7 @@ final class ReturnedShape {
     static int integerState0696;
     static int integerState0697;
 
-    final static ClientException[] computeClientExceptionArray1458(int integerArgument1, CipherPacketBuffer cipherPacketBufferArgument2) {
+    final static ClientException[] computeClientExceptionArray1431(int integerArgument1, CipherPacketBuffer cipherPacketBufferArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -36,7 +36,7 @@ final class ReturnedShape {
         RuntimeException caughtExceptionLocal14 = null;
         integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal2 = cipherPacketBufferArgument2.computeInteger1668(8, (byte) 80);
+          integerLocal2 = cipherPacketBufferArgument2.computeInteger1637(8, (byte) 80);
           if (integerLocal2 > 0) {
             stackObjectLocal9 = null;
             return (ClientException[]) (stackObjectLocal9);
@@ -44,21 +44,21 @@ final class ReturnedShape {
           if (integerArgument1 <= 121) {
             stringState0474 = (String) null;
           }
-          integerLocal4 = cipherPacketBufferArgument2.computeInteger1668(12, (byte) 77);
+          integerLocal4 = cipherPacketBufferArgument2.computeInteger1637(12, (byte) 77);
           clientExceptionArrayLocal5 = new ClientException[integerLocal4];
           for (integerLocal1 = 0; integerLocal1 < integerLocal4; integerLocal1++) {
-            if (MouseInput.computeBoolean1836(cipherPacketBufferArgument2, (byte) 26)) {
+            if (MouseInput.computeBoolean1804(cipherPacketBufferArgument2, (byte) 26)) {
               clientExceptionLocal7 = new ClientException();
-              cipherPacketBufferArgument2.computeInteger1668(24, (byte) 40);
-              cipherPacketBufferArgument2.computeInteger1668(24, (byte) 73);
-              clientExceptionLocal7.integerState0139 = cipherPacketBufferArgument2.computeInteger1668(24, (byte) 42);
-              cipherPacketBufferArgument2.computeInteger1668(9, (byte) 98);
-              cipherPacketBufferArgument2.computeInteger1668(12, (byte) 77);
-              cipherPacketBufferArgument2.computeInteger1668(12, (byte) 86);
-              cipherPacketBufferArgument2.computeInteger1668(12, (byte) 108);
+              cipherPacketBufferArgument2.computeInteger1637(24, (byte) 40);
+              cipherPacketBufferArgument2.computeInteger1637(24, (byte) 73);
+              clientExceptionLocal7.integerState0139 = cipherPacketBufferArgument2.computeInteger1637(24, (byte) 42);
+              cipherPacketBufferArgument2.computeInteger1637(9, (byte) 98);
+              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 77);
+              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 86);
+              cipherPacketBufferArgument2.computeInteger1637(12, (byte) 108);
               clientExceptionArrayLocal5[integerLocal1] = clientExceptionLocal7;
             } else {
-              integerLocal6 = cipherPacketBufferArgument2.computeInteger1668(ComponentDecorator.computeInteger1030(integerLocal1 - 1, (byte) 49), (byte) 118);
+              integerLocal6 = cipherPacketBufferArgument2.computeInteger1637(ComponentDecorator.computeInteger1011(integerLocal1 - 1, (byte) 49), (byte) 118);
               clientExceptionArrayLocal5[integerLocal1] = clientExceptionArrayLocal5[integerLocal6];
             }
           }
@@ -74,11 +74,11 @@ final class ReturnedShape {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
         }
     }
 
-    final static void performAction1459(int integerArgument1, boolean booleanArgument2, float floatArgument3, String stringArgument4) {
+    final static void performAction1432(int integerArgument1, boolean booleanArgument2, float floatArgument3, String stringArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -87,13 +87,13 @@ final class ReturnedShape {
         try {
           if (null == NetworkSupport010.uiComponentPart026State0001) {
             NetworkSupport010.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
-            MixedSupport005.uiComponentPart016State0001.performAction0848((byte) -107, NetworkSupport010.uiComponentPart026State0001);
+            MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, NetworkSupport010.uiComponentPart026State0001);
           }
-          NetworkSupport010.uiComponentPart026State0001.performAction1418(booleanArgument2, floatArgument3, 4210752, stringArgument4);
-          SoftwareRaster.performAction0657();
+          NetworkSupport010.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
+          SoftwareRaster.performAction0648();
           RenderingSupport002.performAction0248(true, integerArgument1 + 106);
           if (integerArgument1 != 12) {
-            mixedSupport111State0009 = (MixedSupport111) null;
+            mixedSupport106State0009 = (MixedSupport106) null;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -106,56 +106,56 @@ final class ReturnedShape {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
         }
     }
 
-    public static void performAction1460(boolean booleanArgument1) {
+    public static void performAction1433(boolean booleanArgument1) {
         stringState0474 = null;
         stringState0472 = null;
         stringState0473 = null;
         if (booleanArgument1) {
           CipherPacketBuffer cipherPacketBufferLocal1 = (CipherPacketBuffer) null;
-          ReturnedShape.computeClientExceptionArray1458(88, (CipherPacketBuffer) null);
+          ReturnedShape.computeClientExceptionArray1431(88, (CipherPacketBuffer) null);
         }
-        mixedSupport111State0009 = null;
+        mixedSupport106State0009 = null;
     }
 
-    final static void performAction1455(byte byteArgument1) {
+    final static void performAction1428(byte byteArgument1) {
         Throwable caughtExceptionLocal1 = null;
         Object objectLocal2 = null;
         if (byteArgument1 != 0) {
           return;
         }
-        if (null != MixedSupport063.mouseInputState0001) {
-          objectLocal2 = MixedSupport063.mouseInputState0001;
+        if (null != MixedSupport062.mouseInputState0001) {
+          objectLocal2 = MixedSupport062.mouseInputState0001;
           synchronized (objectLocal2) {
-            MixedSupport063.mouseInputState0001 = null;
+            MixedSupport062.mouseInputState0001 = null;
           }
         }
     }
 
-    final static void performAction1457(int integerArgument1, java.awt.Component componentArgument2) {
+    final static void performAction1430(int integerArgument1, java.awt.Component componentArgument2) {
         try {
           if (integerArgument1 != 12) {
             String stringLocal1 = (String) null;
-            ReturnedShape.performAction1459(29, true, 0.5555365681648254f, (String) null);
+            ReturnedShape.performAction1432(29, true, 0.5555365681648254f, (String) null);
           }
           componentArgument2.removeKeyListener(MixedSupport033.keyboardInputHandlerState0001);
           componentArgument2.removeFocusListener(MixedSupport033.keyboardInputHandlerState0001);
-          MixedSupport154.integerState0933 = -1;
+          MixedSupport147.integerState0933 = -1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "rf.F(" + integerArgument1 + ',' + (componentArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rf.F(" + integerArgument1 + ',' + (componentArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int computeInteger1456(int integerArgument1, int integerArgument2) {
+    final static int computeInteger1429(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         if (integerArgument2 == integerArgument1) {
           integerLocal1 = BufferedSocket.integerState0667;
         }
         if (integerArgument2 == 1) {
-          integerLocal1 = MixedSupport153.integerState0932;
+          integerLocal1 = MixedSupport146.integerState0932;
         }
         if (integerArgument2 == 2) {
           integerLocal1 = PacketBuffer.integerState0936;
@@ -163,7 +163,7 @@ final class ReturnedShape {
         return integerLocal1;
     }
 
-    final static void performAction1461(String[] args, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, java.applet.Applet appletArgument6) {
+    final static void performAction1434(String[] args, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, java.applet.Applet appletArgument6) {
         int integerLocal1 = 0;
         String stringLocal2 = null;
         int integerLocal3 = 0;
@@ -180,29 +180,29 @@ final class ReturnedShape {
           if (SoftwareFramebuffer.stringState0617 == null) {
             SoftwareFramebuffer.stringState0617 = "0";
           }
-          MixedSupport069.stringState0291 = appletArgument6.getParameter("overxachievements");
+          PlayerNameAvailabilityValidator.stringState0291 = appletArgument6.getParameter("overxachievements");
           if (integerArgument4 > -22) {
             stringState0474 = (String) null;
           }
-          if (MixedSupport069.stringState0291 == null) {
-            MixedSupport069.stringState0291 = "0";
+          if (PlayerNameAvailabilityValidator.stringState0291 == null) {
+            PlayerNameAvailabilityValidator.stringState0291 = "0";
           }
           stringLocal2 = appletArgument6.getParameter("currency");
           if (stringLocal2 == null) {
-            MixedSupport112.integerState0683 = 2;
+            MixedSupport107.integerState0683 = 2;
           } else {
             if (!DualNode.computeBoolean0128((byte) 98, (CharSequence) ((Object) stringLocal2))) {
-              MixedSupport112.integerState0683 = 2;
+              MixedSupport107.integerState0683 = 2;
             } else {
-              MixedSupport112.integerState0683 = MixedSupport014.computeInteger0191((byte) -33, (CharSequence) ((Object) stringLocal2));
+              MixedSupport107.integerState0683 = MixedSupport014.computeInteger0191((byte) -33, (CharSequence) ((Object) stringLocal2));
             }
           }
           SceneWidget.integerState0909 = integerArgument3;
-          MixedSupport093.integerState0546 = integerArgument5;
+          MixedSupport088.integerState0546 = integerArgument5;
           UiComponentPart026.integerState0673 = integerArgument2;
-          MixedSupport147.rgbSpriteArrayState0031 = new RgbSprite[args.length];
+          MixedSupport140.rgbSpriteArrayState0031 = new RgbSprite[args.length];
           for (integerLocal1 = 0; integerLocal1 < args.length; integerLocal1++) {
-            MixedSupport147.rgbSpriteArrayState0031[integerLocal1] = new RgbSprite(317, 34);
+            MixedSupport140.rgbSpriteArrayState0031[integerLocal1] = new RgbSprite(317, 34);
           }
           UiComponentPart009.stringArrayState0008 = args;
           return;
@@ -222,7 +222,7 @@ final class ReturnedShape {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class ReturnedShape {
     }
 
     static {
-        mixedSupport111State0009 = new MixedSupport111(14, 0, 4, 1);
+        mixedSupport106State0009 = new MixedSupport106(14, 0, 4, 1);
         stringState0472 = "Unpacking sound effects";
         stringState0474 = "When you match pieces, the machine transforms them into solid shapes.";
         stringState0473 = "Show game chat from my friends";

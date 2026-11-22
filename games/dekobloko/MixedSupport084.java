@@ -2,27 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport084 {
-    static int[] integerArrayState0149;
-    static int[] integerArrayState0150;
-    static RgbSprite rgbSpriteState0033;
-    static String stringState0337;
-    static String stringState0338;
-
-    public final String toString() {
-        throw new IllegalStateException();
+    final static void performAction1094(byte byteArgument1, java.applet.Applet appletArgument2, String stringArgument3) throws Throwable {
+        netscape.javascript.JSObject.getWindow(appletArgument2).eval(stringArgument3);
+        if (byteArgument1 != -51) {
+          return;
+        }
     }
 
-    public static void performAction1027(byte byteArgument1) {
-        stringState0337 = null;
-        rgbSpriteState0033 = null;
-        stringState0338 = null;
-        integerArrayState0150 = null;
-        int integerLocal1 = 52 / ((byteArgument1 - 7) / 42);
-        integerArrayState0149 = null;
+    final static Object computeObject1095(String stringArgument1, int integerArgument2, java.applet.Applet appletArgument3, Object[] objectArrayArgument4) throws Throwable {
+        if (integerArgument2 != -14541) {
+          return (Object) null;
+        }
+        return netscape.javascript.JSObject.getWindow(appletArgument3).call(stringArgument1, objectArrayArgument4);
     }
 
-    static {
-        stringState0337 = "<%0> has lost connection.";
-        stringState0338 = "Press F10 to open Quick Chat.";
+    final static Object computeObject1096(boolean booleanArgument1, String stringArgument2, java.applet.Applet appletArgument3) throws Throwable {
+        if (!booleanArgument1) {
+          return (Object) null;
+        }
+        return netscape.javascript.JSObject.getWindow(appletArgument3).call(stringArgument2, (Object[]) null);
     }
 }

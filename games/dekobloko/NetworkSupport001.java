@@ -34,7 +34,7 @@ final class NetworkSupport001 {
           try {
             try {
               uRLLocal1 = new java.net.URL(appletArgument3.getCodeBase(), stringArgument1);
-              uRLLocal1 = NetworkSupport004.computeURL0602(uRLLocal1, -1, appletArgument3);
+              uRLLocal1 = NetworkSupport004.computeURL0599(uRLLocal1, -1, appletArgument3);
               NetworkSupport002.performAction0175((byte) 92, uRLLocal1.toString(), true, appletArgument3);
             } catch (java.lang.Exception caughtParameterLocal11) {
               caughtExceptionLocal8 = caughtParameterLocal11;
@@ -59,7 +59,7 @@ final class NetworkSupport001 {
             } else {
               stackStringLocal7 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal13) {
           throw uncheckedExceptionLocal13;
@@ -73,7 +73,7 @@ final class NetworkSupport001 {
         if (integerArgument1 != -1045) {
           return;
         }
-        MixedSupport141.performAction1716(0);
+        MixedSupport134.performAction1685(0);
     }
 
     static {

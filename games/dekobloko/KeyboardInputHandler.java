@@ -20,7 +20,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         stringState0357 = null;
     }
 
-    final static void performAction1110(int integerArgument1, MixedSupport015 mixedSupport015Argument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, BitmapFont bitmapFontArgument8, int integerArgument9, int integerArgument10, MixedSupport015 mixedSupport015Argument11, int integerArgument12, int integerArgument13, int integerArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20, int integerArgument21) {
+    final static void performAction1091(int integerArgument1, MixedSupport015 mixedSupport015Argument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, BitmapFont bitmapFontArgument8, int integerArgument9, int integerArgument10, MixedSupport015 mixedSupport015Argument11, int integerArgument12, int integerArgument13, int integerArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20, int integerArgument21) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -36,13 +36,13 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int integerLocal13 = 0;
         RuntimeException runtimeExceptionLocal14 = null;
         try {
-          BucketBoard.performAction0992(bitmapFontArgument8, true, bitmapFontArgument3, integerArgument9);
+          BucketBoard.performAction0973(bitmapFontArgument8, true, bitmapFontArgument3, integerArgument9);
           integerLocal13 = 80 % ((integerArgument13 + 81) / 39);
-          SceneWidgetPart010.performAction1487(integerArgument7, integerArgument21, (byte) -91, integerArgument1, integerArgument17);
-          ResourceSupport004.performAction1274(31004, integerArgument16, integerArgument15);
+          SceneWidgetPart010.performAction1460(integerArgument7, integerArgument21, (byte) -91, integerArgument1, integerArgument17);
+          ResourceSupport004.performAction1247(31004, integerArgument16, integerArgument15);
           MixedSupport018.performAction0253(mixedSupport015Argument11, integerArgument14, integerArgument5, (byte) -63, integerArgument12, mixedSupport015Argument6);
-          UiComponentPart012.performAction0593(integerArgument20, integerArgument19, (byte) -75, mixedSupport015Argument2);
-          SoftwareFramebuffer.performAction1829(integerArgument18, integerArgument4, integerArgument10, true);
+          UiComponentPart012.performAction0590(integerArgument20, integerArgument19, (byte) -75, mixedSupport015Argument2);
+          SoftwareFramebuffer.performAction1797(integerArgument18, integerArgument4, integerArgument10, true);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal12 = caughtParameterLocal15;
@@ -78,7 +78,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument12).append(',').append(integerArgument13).append(',').append(integerArgument14).append(',').append(integerArgument15).append(',').append(integerArgument16).append(',').append(integerArgument17).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(',').append(integerArgument21).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument12).append(',').append(integerArgument13).append(',').append(integerArgument14).append(',').append(integerArgument15).append(',').append(integerArgument16).append(',').append(integerArgument17).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(',').append(integerArgument21).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (MixedSupport033.keyboardInputHandlerState0001 == null) {
             return;
           }
-          MixedSupport098.integerState0569 = 0;
+          MixedSupport093.integerState0569 = 0;
           integerLocal1 = keyEventArgument1.getKeyCode();
           if (0 <= integerLocal1 &&
             integerLocal1 < DualNode.integerArrayState0018.length) {
@@ -106,18 +106,18 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             integerLocal1 = -1;
           }
-          if (MixedSupport154.integerState0933 >= 0 &&
+          if (MixedSupport147.integerState0933 >= 0 &&
             integerLocal1 >= 0) {
-            MixedSupport078.integerArrayState0141[MixedSupport154.integerState0933] = integerLocal1;
-            MixedSupport154.integerState0933 = MixedSupport154.integerState0933 + 1 & 127;
-            if (MixedSupport154.integerState0933 == PcmPlayerService.integerState0685) {
-              MixedSupport154.integerState0933 = -1;
+            MixedSupport074.integerArrayState0141[MixedSupport147.integerState0933] = integerLocal1;
+            MixedSupport147.integerState0933 = MixedSupport147.integerState0933 + 1 & 127;
+            if (MixedSupport147.integerState0933 == PcmPlayerService.integerState0685) {
+              MixedSupport147.integerState0933 = -1;
             }
           }
           if (integerLocal1 >= 0) {
             integerLocal7 = GameDomainSupport004.integerState0349 + 1 & 127;
-            if (integerLocal7 != MixedSupport120.integerState0746) {
-              MixedSupport104.integerArrayState0182[GameDomainSupport004.integerState0349] = integerLocal1;
+            if (integerLocal7 != MixedSupport115.integerState0746) {
+              MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = integerLocal1;
               UiComponentPart003.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)0;
               GameDomainSupport004.integerState0349 = integerLocal7;
             }
@@ -146,7 +146,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -156,10 +156,10 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     public final synchronized void focusLost(java.awt.event.FocusEvent focusEventArgument1) {
         try {
           if (null != MixedSupport033.keyboardInputHandlerState0001) {
-            MixedSupport154.integerState0933 = -1;
+            MixedSupport147.integerState0933 = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "n.focusLost(" + (focusEventArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "n.focusLost(" + (focusEventArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,10 +170,10 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (MixedSupport033.keyboardInputHandlerState0001 != null) {
             integerLocal1 = keyEventArgument1.getKeyChar();
             if (integerLocal1 != 0 && 65535 != integerLocal1 &&
-              UiComponentPart013.computeBoolean0628(-97, (char) integerLocal1)) {
+              UiComponentPart013.computeBoolean0625(-97, (char) integerLocal1)) {
               integerLocal2 = 1 + GameDomainSupport004.integerState0349 & 127;
-              if (integerLocal2 != MixedSupport120.integerState0746) {
-                MixedSupport104.integerArrayState0182[GameDomainSupport004.integerState0349] = -1;
+              if (integerLocal2 != MixedSupport115.integerState0746) {
+                MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = -1;
                 UiComponentPart003.characterArrayState0003[GameDomainSupport004.integerState0349] = (char)integerLocal1;
                 GameDomainSupport004.integerState0349 = integerLocal2;
               }
@@ -181,7 +181,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           keyEventArgument1.consume();
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "n.keyTyped(" + (keyEventArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "n.keyTyped(" + (keyEventArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (MixedSupport033.keyboardInputHandlerState0001 != null) {
-            MixedSupport098.integerState0569 = 0;
+            MixedSupport093.integerState0569 = 0;
             integerLocal2 = keyEventArgument1.getKeyCode();
             if (integerLocal2 >= 0 &&
               integerLocal2 < DualNode.integerArrayState0018.length) {
@@ -202,12 +202,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               integerLocal2 = -1;
             }
-            if (MixedSupport154.integerState0933 >= 0 &&
+            if (MixedSupport147.integerState0933 >= 0 &&
               integerLocal2 >= 0) {
-              MixedSupport078.integerArrayState0141[MixedSupport154.integerState0933] = ~integerLocal2;
-              MixedSupport154.integerState0933 = 127 & MixedSupport154.integerState0933 + 1;
-              if (PcmPlayerService.integerState0685 == MixedSupport154.integerState0933) {
-                MixedSupport154.integerState0933 = -1;
+              MixedSupport074.integerArrayState0141[MixedSupport147.integerState0933] = ~integerLocal2;
+              MixedSupport147.integerState0933 = 127 & MixedSupport147.integerState0933 + 1;
+              if (PcmPlayerService.integerState0685 == MixedSupport147.integerState0933) {
+                MixedSupport147.integerState0933 = -1;
               }
             }
           }
@@ -223,19 +223,19 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
     final static int getTickRate(byte byteArgument1) {
         if (byteArgument1 != -74) {
           KeyboardInputHandler.getTickRate((byte) -95);
-          return (int)(1000000000L / MixedSupport138.longState0051);
+          return (int)(1000000000L / MixedSupport131.longState0051);
         }
-        return (int)(1000000000L / MixedSupport138.longState0051);
+        return (int)(1000000000L / MixedSupport131.longState0051);
     }
 
-    final static void performAction1109(int integerArgument1) {
+    final static void performAction1090(int integerArgument1) {
         int integerLocal1;
         int integerLocal2;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -245,19 +245,19 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
         SceneWidgetPart007.booleanState0113 = false;
         if (UiComponentPart032.booleanState0198) {
-          MixedSupport020.uiComponentPart012State0001.performAction0597(4210752);
+          MixedSupport020.uiComponentPart012State0001.performAction0594(4210752);
         } else {
           integerLocal1 = GameDomainSupport001.integerState0052;
           if (0 < integerLocal1) {
             if (integerLocal1 == 1) {
               MixedSupport029.stringState0148 = MixedSupport002.stringState0005;
             } else {
-              MixedSupport029.stringState0148 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport066.stringState0274, new String[]{Integer.toString(integerLocal1)});
+              MixedSupport029.stringState0148 = NodeHashTableIterator.substituteIndexedPlaceholders(87, EmailValidationError.stringState0274, new String[]{Integer.toString(integerLocal1)});
             }
-            MixedSupport029.stringState0148 = DiagnosticSupport001.computeString0337(new CharSequence[]{(CharSequence) ((Object) MixedSupport029.stringState0148), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PlatformSupport004.stringState0228)}, -62);
+            MixedSupport029.stringState0148 = DiagnosticSupport001.computeString0336(new CharSequence[]{(CharSequence) ((Object) MixedSupport029.stringState0148), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BoundedRandomAccessFile.stringState0228)}, -62);
           }
-          MixedSupport020.uiComponentPart012State0001.performAction0596(-127);
-          MixedSupport032.performAction0474(-1199770620);
+          MixedSupport020.uiComponentPart012State0001.performAction0593(-127);
+          MixedSupport032.performAction0472(-1199770620);
         }
     }
 
@@ -288,7 +288,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal5 = caughtParameterLocal7;
           runtimeExceptionLocal2 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "n.E(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal2), "n.E(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 

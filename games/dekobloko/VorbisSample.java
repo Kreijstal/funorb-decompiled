@@ -20,12 +20,12 @@ final class VorbisSample extends HashNode {
     private static MixedSupport060[] mixedSupport060ArrayState0001;
     private static MixedSupport012[] mixedSupport012ArrayState0001;
     private static boolean[] booleanArrayState0011;
-    static MixedSupport065[] mixedSupport065ArrayState0001;
+    static MixedSupport064[] mixedSupport064ArrayState0001;
     private int integerState0829;
     private static float[] floatArrayState0007;
     private byte[] byteArrayState0030;
     private static int[] integerArrayState0236;
-    private static MixedSupport107[] mixedSupport107ArrayState0001;
+    private static MixedSupport102[] mixedSupport102ArrayState0001;
     private static boolean booleanState0196;
     private static byte[] byteArrayState0031;
     private static float[] floatArrayState0008;
@@ -39,7 +39,7 @@ final class VorbisSample extends HashNode {
     private static int[] integerArrayState0237;
     private boolean booleanState0197;
 
-    final static float computeFloat1718(int integerArgument1) {
+    final static float computeFloat1687(int integerArgument1) {
         int integerLocal1 = integerArgument1 & 2097151;
         int integerLocal2 = integerArgument1 & -2147483648;
         int integerLocal3 = (integerArgument1 & 2145386496) >> 21;
@@ -49,7 +49,7 @@ final class VorbisSample extends HashNode {
         return (float)((double)integerLocal1 * Math.pow(2.0, (double)(integerLocal3 - 788)));
     }
 
-    final static void performAction1726(byte[] byteArrayArgument1) {
+    final static void performAction1695(byte[] byteArrayArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -80,9 +80,9 @@ final class VorbisSample extends HashNode {
         int integerLocal28;
         int integerLocal29;
         int integerLocal30;
-        VorbisSample.performAction1723(byteArrayArgument1, 0);
-        integerState0823 = 1 << VorbisSample.computeInteger1727(4);
-        integerState0834 = 1 << VorbisSample.computeInteger1727(4);
+        VorbisSample.performAction1692(byteArrayArgument1, 0);
+        integerState0823 = 1 << VorbisSample.computeInteger1696(4);
+        integerState0834 = 1 << VorbisSample.computeInteger1696(4);
         floatArrayState0010 = new float[integerState0834];
         for (integerLocal10 = 0; integerLocal10 < 2; integerLocal10++) {
           if (integerLocal10 == 0) {
@@ -110,9 +110,9 @@ final class VorbisSample extends HashNode {
             floatArrayLocal17[2 * integerLocal3 + 1] = -(float)Math.sin((double)(4 * integerLocal3 + 2) * 3.141592653589793 / (double)integerLocal11);
           }
           integerArrayLocal18 = new int[integerLocal14];
-          integerLocal19 = SceneWidgetPart010.computeInteger1492((byte) -57, integerLocal14 - 1);
+          integerLocal19 = SceneWidgetPart010.computeInteger1465((byte) -57, integerLocal14 - 1);
           for (integerLocal4 = 0; integerLocal4 < integerLocal14; integerLocal4++) {
-            integerArrayLocal18[integerLocal4] = MixedSupport113.computeInteger1440((byte) 16, integerLocal19, integerLocal4);
+            integerArrayLocal18[integerLocal4] = MixedSupport108.computeInteger1413((byte) 16, integerLocal19, integerLocal4);
           }
           if (integerLocal10 == 0) {
             floatArrayState0006 = floatArrayLocal15;
@@ -126,46 +126,46 @@ final class VorbisSample extends HashNode {
             integerArrayState0236 = integerArrayLocal18;
           }
         }
-        integerLocal20 = VorbisSample.computeInteger1727(8) + 1;
-        mixedSupport065ArrayState0001 = new MixedSupport065[integerLocal20];
+        integerLocal20 = VorbisSample.computeInteger1696(8) + 1;
+        mixedSupport064ArrayState0001 = new MixedSupport064[integerLocal20];
         for (integerLocal21 = 0; integerLocal21 < integerLocal20; integerLocal21++) {
-          mixedSupport065ArrayState0001[integerLocal21] = new MixedSupport065();
+          mixedSupport064ArrayState0001[integerLocal21] = new MixedSupport064();
         }
-        integerLocal22 = VorbisSample.computeInteger1727(6) + 1;
+        integerLocal22 = VorbisSample.computeInteger1696(6) + 1;
         for (integerLocal24 = 0; integerLocal24 < integerLocal22; integerLocal24++) {
-          VorbisSample.computeInteger1727(16);
+          VorbisSample.computeInteger1696(16);
         }
-        integerLocal23 = VorbisSample.computeInteger1727(6) + 1;
+        integerLocal23 = VorbisSample.computeInteger1696(6) + 1;
         mixedSupport060ArrayState0001 = new MixedSupport060[integerLocal23];
         for (integerLocal25 = 0; integerLocal25 < integerLocal23; integerLocal25++) {
           mixedSupport060ArrayState0001[integerLocal25] = new MixedSupport060();
         }
-        integerLocal26 = VorbisSample.computeInteger1727(6) + 1;
+        integerLocal26 = VorbisSample.computeInteger1696(6) + 1;
         mixedSupport012ArrayState0001 = new MixedSupport012[integerLocal26];
         for (integerLocal27 = 0; integerLocal27 < integerLocal26; integerLocal27++) {
           mixedSupport012ArrayState0001[integerLocal27] = new MixedSupport012();
         }
-        integerLocal28 = VorbisSample.computeInteger1727(6) + 1;
-        mixedSupport107ArrayState0001 = new MixedSupport107[integerLocal28];
+        integerLocal28 = VorbisSample.computeInteger1696(6) + 1;
+        mixedSupport102ArrayState0001 = new MixedSupport102[integerLocal28];
         for (integerLocal29 = 0; integerLocal29 < integerLocal28; integerLocal29++) {
-          mixedSupport107ArrayState0001[integerLocal29] = new MixedSupport107();
+          mixedSupport102ArrayState0001[integerLocal29] = new MixedSupport102();
         }
-        integerLocal30 = VorbisSample.computeInteger1727(6) + 1;
+        integerLocal30 = VorbisSample.computeInteger1696(6) + 1;
         booleanArrayState0011 = new boolean[integerLocal30];
         integerArrayState0235 = new int[integerLocal30];
         for (integerLocal5 = 0; integerLocal5 < integerLocal30; integerLocal5++) {
           stackBooleanArrayLocal7 = (boolean[]) (booleanArrayState0011);
           stackIntegerLocal8 = integerLocal5;
-          stackBooleanLocal9 = (VorbisSample.computeInteger1725() != 0);
+          stackBooleanLocal9 = (VorbisSample.computeInteger1694() != 0);
           stackBooleanArrayLocal7[stackIntegerLocal8] = stackBooleanLocal9;
-          VorbisSample.computeInteger1727(16);
-          VorbisSample.computeInteger1727(16);
-          integerArrayState0235[integerLocal5] = VorbisSample.computeInteger1727(8);
+          VorbisSample.computeInteger1696(16);
+          VorbisSample.computeInteger1696(16);
+          integerArrayState0235[integerLocal5] = VorbisSample.computeInteger1696(8);
         }
         booleanState0196 = true;
     }
 
-    final static int computeInteger1725() {
+    final static int computeInteger1694() {
         int integerLocal1 = byteArrayState0031[integerState0826] >> integerState0825 & 1;
         integerState0825 = integerState0825 + 1;
         integerState0826 = integerState0826 + (integerState0825 >> 3);
@@ -173,7 +173,7 @@ final class VorbisSample extends HashNode {
         return integerLocal1;
     }
 
-    private final void performAction1722(byte[] byteArrayArgument1) throws IOException {
+    private final void performAction1691(byte[] byteArrayArgument1) throws IOException {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -204,7 +204,7 @@ final class VorbisSample extends HashNode {
         }
     }
 
-    final RawSound computeRawSound1724(int[] integerArrayArgument1) {
+    final RawSound computeRawSound1693(int[] integerArrayArgument1) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int integerLocal3;
@@ -228,7 +228,7 @@ final class VorbisSample extends HashNode {
             integerArrayArgument1[0] <= 0) {
             return null;
           }
-          floatArrayLocal6 = this.computeFloatArray1728(this.integerState0829);
+          floatArrayLocal6 = this.computeFloatArray1697(this.integerState0829);
           if (floatArrayLocal6 != null) {
             integerLocal3 = this.integerState0828;
             integerLocal4 = floatArrayLocal6.length;
@@ -257,7 +257,7 @@ final class VorbisSample extends HashNode {
         return new RawSound(this.integerState0831, byteArrayLocal7, this.integerState0827, this.integerState0832, this.booleanState0197);
     }
 
-    final RawSound computeRawSound1717() {
+    final RawSound computeRawSound1686() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -271,7 +271,7 @@ final class VorbisSample extends HashNode {
         byteArrayLocal4 = new byte[this.integerState0833];
         integerLocal5 = 0;
         for (integerLocal1 = 0; integerLocal1 < this.byteArrayArrayState0010.length; integerLocal1++) {
-          floatArrayLocal6 = this.computeFloatArray1728(integerLocal1);
+          floatArrayLocal6 = this.computeFloatArray1697(integerLocal1);
           if (floatArrayLocal6 != null) {
             integerLocal7 = floatArrayLocal6.length;
             if (integerLocal7 > this.integerState0833 - integerLocal5) {
@@ -292,7 +292,7 @@ final class VorbisSample extends HashNode {
         return new RawSound(this.integerState0831, byteArrayLocal4, this.integerState0827, this.integerState0832, this.booleanState0197);
     }
 
-    private final float[] computeFloatArray1728(int integerArgument1) {
+    private final float[] computeFloatArray1697(int integerArgument1) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -315,7 +315,7 @@ final class VorbisSample extends HashNode {
         int integerLocal20;
         int integerLocal21;
         int integerLocal22;
-        MixedSupport107 mixedSupport107Local23;
+        MixedSupport102 mixedSupport102Local23;
         int integerLocal24;
         int integerLocal25;
         int integerLocal26;
@@ -404,9 +404,9 @@ final class VorbisSample extends HashNode {
         float floatLocal109;
         int integerLocal110;
         int integerLocal111;
-        VorbisSample.performAction1723(this.byteArrayArrayState0010[integerArgument1], 0);
-        VorbisSample.computeInteger1725();
-        integerLocal11 = VorbisSample.computeInteger1727(SceneWidgetPart010.computeInteger1492((byte) -26, integerArrayState0235.length - 1));
+        VorbisSample.performAction1692(this.byteArrayArrayState0010[integerArgument1], 0);
+        VorbisSample.computeInteger1694();
+        integerLocal11 = VorbisSample.computeInteger1696(SceneWidgetPart010.computeInteger1465((byte) -26, integerArrayState0235.length - 1));
         integerLocal12 = booleanArrayState0011[integerLocal11] ? 1 : 0;
         if (integerLocal12 == 0) {
           stackIntegerLocal2 = integerState0823;
@@ -417,9 +417,9 @@ final class VorbisSample extends HashNode {
         integerLocal14 = 0;
         integerLocal15 = 0;
         if (integerLocal12 != 0) {
-          stackIntegerLocal3 = (VorbisSample.computeInteger1725() == 0) ? 0 : 1;
+          stackIntegerLocal3 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
           integerLocal14 = stackIntegerLocal3;
-          stackIntegerLocal4 = (VorbisSample.computeInteger1725() == 0) ? 0 : 1;
+          stackIntegerLocal4 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
           integerLocal15 = stackIntegerLocal4;
         }
         integerLocal16 = integerLocal13 >> 1;
@@ -443,21 +443,21 @@ final class VorbisSample extends HashNode {
           integerLocal21 = integerLocal13;
           integerLocal22 = integerLocal13 >> 1;
         }
-        mixedSupport107Local23 = mixedSupport107ArrayState0001[integerArrayState0235[integerLocal11]];
-        integerLocal25 = mixedSupport107Local23.integerState0593;
-        integerLocal26 = mixedSupport107Local23.integerArrayState0185[integerLocal25];
-        stackIntegerLocal5 = (mixedSupport060ArrayState0001[integerLocal26].computeBoolean0729()) ? 0 : 1;
+        mixedSupport102Local23 = mixedSupport102ArrayState0001[integerArrayState0235[integerLocal11]];
+        integerLocal25 = mixedSupport102Local23.integerState0593;
+        integerLocal26 = mixedSupport102Local23.integerArrayState0185[integerLocal25];
+        stackIntegerLocal5 = (mixedSupport060ArrayState0001[integerLocal26].computeBoolean0720()) ? 0 : 1;
         integerLocal24 = stackIntegerLocal5;
         integerLocal70 = integerLocal24;
-        for (integerLocal71 = 0; integerLocal71 < mixedSupport107Local23.integerState0594; integerLocal71++) {
-          mixedSupport012Local62 = mixedSupport012ArrayState0001[mixedSupport107Local23.integerArrayState0186[integerLocal71]];
+        for (integerLocal71 = 0; integerLocal71 < mixedSupport102Local23.integerState0594; integerLocal71++) {
+          mixedSupport012Local62 = mixedSupport012ArrayState0001[mixedSupport102Local23.integerArrayState0186[integerLocal71]];
           floatArrayLocal69 = floatArrayState0010;
           mixedSupport012Local62.performAction0170(floatArrayLocal69, integerLocal13 >> 1, integerLocal70 != 0);
         }
         if (integerLocal24 == 0) {
-          integerLocal72 = mixedSupport107Local23.integerState0593;
-          integerLocal28 = mixedSupport107Local23.integerArrayState0185[integerLocal72];
-          mixedSupport060ArrayState0001[integerLocal28].performAction0733(floatArrayState0010, integerLocal13 >> 1);
+          integerLocal72 = mixedSupport102Local23.integerState0593;
+          integerLocal28 = mixedSupport102Local23.integerArrayState0185[integerLocal72];
+          mixedSupport060ArrayState0001[integerLocal28].performAction0724(floatArrayState0010, integerLocal13 >> 1);
         }
         if (integerLocal24 != 0) {
           for (integerLocal73 = integerLocal13 >> 1; integerLocal73 < integerLocal13; integerLocal73++) {
@@ -525,7 +525,7 @@ final class VorbisSample extends HashNode {
             floatArrayLocal31[4 * integerLocal77 + 3] = (floatLocal90 - floatLocal96) * floatLocal47 - (floatLocal91 - floatLocal99) * floatLocal49;
             floatArrayLocal31[4 * integerLocal77 + 1] = (floatLocal91 - floatLocal99) * floatLocal47 + (floatLocal90 - floatLocal96) * floatLocal49;
           }
-          integerLocal78 = SceneWidgetPart010.computeInteger1492((byte) -63, integerLocal13 - 1);
+          integerLocal78 = SceneWidgetPart010.computeInteger1465((byte) -63, integerLocal13 - 1);
           for (integerLocal39 = 0; integerLocal39 < integerLocal78 - 3; integerLocal39++) {
             integerLocal42 = integerLocal13 >> integerLocal39 + 2;
             integerLocal44 = 8 << integerLocal39;
@@ -644,7 +644,7 @@ final class VorbisSample extends HashNode {
         return (float[]) (objectLocal27);
     }
 
-    final static int computeInteger1727(int integerArgument1) {
+    final static int computeInteger1696(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -667,14 +667,14 @@ final class VorbisSample extends HashNode {
         return integerLocal3;
     }
 
-    final static VorbisSample computeVorbisSample1720(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
+    final static VorbisSample computeVorbisSample1689(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
         try {
           VorbisSample vorbisSampleLocal1 = null;
-          if (!VorbisSample.computeBoolean1719(resourceArchiveArgument1)) {
-            resourceArchiveArgument1.computeBoolean0813((byte) -83, integerArgument3, integerArgument2);
+          if (!VorbisSample.computeBoolean1688(resourceArchiveArgument1)) {
+            resourceArchiveArgument1.computeBoolean0800((byte) -83, integerArgument3, integerArgument2);
             return null;
           }
-          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0818(integerArgument3, -124, integerArgument2);
+          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0805(integerArgument3, -124, integerArgument2);
           if (byteArrayLocal2 == null) {
             return null;
           }
@@ -692,24 +692,24 @@ final class VorbisSample extends HashNode {
         }
     }
 
-    private final static boolean computeBoolean1719(ResourceArchive resourceArchiveArgument1) {
+    private final static boolean computeBoolean1688(ResourceArchive resourceArchiveArgument1) {
         byte[] byteArrayLocal1 = null;
         if (!booleanState0196) {
-          byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0818(0, -121, 0);
+          byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0805(0, -121, 0);
           if (byteArrayLocal1 == null) {
             return false;
           }
-          VorbisSample.performAction1726(byteArrayLocal1);
+          VorbisSample.performAction1695(byteArrayLocal1);
         }
         return true;
     }
 
     public static void clearStaticReferences() {
         byteArrayState0031 = null;
-        mixedSupport065ArrayState0001 = null;
+        mixedSupport064ArrayState0001 = null;
         mixedSupport060ArrayState0001 = null;
         mixedSupport012ArrayState0001 = null;
-        mixedSupport107ArrayState0001 = null;
+        mixedSupport102ArrayState0001 = null;
         booleanArrayState0011 = null;
         integerArrayState0235 = null;
         floatArrayState0010 = null;
@@ -723,20 +723,20 @@ final class VorbisSample extends HashNode {
         integerArrayState0236 = null;
     }
 
-    private final static void performAction1723(byte[] byteArrayArgument1, int integerArgument2) {
+    private final static void performAction1692(byte[] byteArrayArgument1, int integerArgument2) {
         byteArrayState0031 = byteArrayArgument1;
         integerState0826 = integerArgument2;
         integerState0825 = 0;
     }
 
-    final static VorbisSample computeVorbisSample1721(ResourceArchive resourceArchiveArgument1, String stringArgument2, String stringArgument3) {
+    final static VorbisSample computeVorbisSample1690(ResourceArchive resourceArchiveArgument1, String stringArgument2, String stringArgument3) {
         try {
           VorbisSample vorbisSampleLocal1 = null;
-          if (!VorbisSample.computeBoolean1719(resourceArchiveArgument1)) {
-            resourceArchiveArgument1.computeBoolean0826(stringArgument3, true, stringArgument2);
+          if (!VorbisSample.computeBoolean1688(resourceArchiveArgument1)) {
+            resourceArchiveArgument1.computeBoolean0813(stringArgument3, true, stringArgument2);
             return null;
           }
-          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0822(0, stringArgument3, stringArgument2);
+          byte[] byteArrayLocal2 = resourceArchiveArgument1.computeByteArray0809(0, stringArgument3, stringArgument2);
           if (byteArrayLocal2 == null) {
             return null;
           }
@@ -755,7 +755,7 @@ final class VorbisSample extends HashNode {
     }
 
     private VorbisSample(byte[] byteArrayArgument1) throws IOException {
-        this.performAction1722(byteArrayArgument1);
+        this.performAction1691(byteArrayArgument1);
     }
 
     static {

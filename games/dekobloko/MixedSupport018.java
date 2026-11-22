@@ -32,9 +32,9 @@ final class MixedSupport018 {
           return (IndexedSprite[]) null;
         }
         for (integerLocal1 = 0; integerLocal1 < GameDomainSupport002.integerState0177; integerLocal1++) {
-          indexedSpriteArrayLocal3[integerLocal1] = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport130.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], SceneWidgetPart011.byteArrayArrayState0008[integerLocal1], NetworkSupport006.integerArrayState0152);
+          indexedSpriteArrayLocal3[integerLocal1] = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], SceneWidgetPart011.byteArrayArrayState0008[integerLocal1], NetworkSupport006.integerArrayState0152);
         }
-        MixedSupport094.performAction1165(126);
+        MixedSupport089.performAction1138(126);
         return indexedSpriteArrayLocal3;
     }
 
@@ -68,7 +68,7 @@ final class MixedSupport018 {
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal7 = caughtParameterLocal9;
           runtimeExceptionLocal8 = caughtExceptionLocal7;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal8), "ci.A(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal8), "ci.A(" + byteArgument1 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class MixedSupport018 {
           BufferedSocket.integerState0665 = integerArgument5;
           UiComponentPart022.integerState0575 = integerArgument3;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ci.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ci.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class MixedSupport018 {
         if (Character.isISOControl(characterArgument1)) {
           return false;
         }
-        if (MixedSupport064.computeBoolean0765(-8241, characterArgument1)) {
+        if (MixedSupport063.computeBoolean0753(-8241, characterArgument1)) {
           return true;
         }
         if (45 != characterArgument1 &&

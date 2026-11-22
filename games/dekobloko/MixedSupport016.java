@@ -17,11 +17,11 @@ final class MixedSupport016 {
     static String stringState0077;
     static volatile boolean booleanState0016;
 
-    final static RenderingSupport010 computeRenderingSupport0100204(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
+    final static RenderingSupport009 computeRenderingSupport0090204(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
-        RenderingSupport010 stackRenderingSupport010Local4 = null;
+        RenderingSupport009 stackRenderingSupport009Local4 = null;
         RuntimeException stackRuntimeExceptionLocal5 = null;
         StringBuilder stackStringBuilderLocal6 = null;
         String stackStringLocal7 = null;
@@ -36,10 +36,10 @@ final class MixedSupport016 {
           if (byteArgument4 <= 86) {
             integerArrayState0021 = (int[]) null;
           }
-          integerLocal1 = resourceArchiveArgument3.computeInteger0832(-1, stringArgument5);
-          integerLocal3 = resourceArchiveArgument3.computeInteger0819(integerLocal1, 13030, stringArgument1);
-          stackRenderingSupport010Local4 = FullscreenCanvas.computeRenderingSupport0101409(resourceArchiveArgument3, (byte) 41, integerLocal3, integerLocal1, resourceArchiveArgument2);
-          return stackRenderingSupport010Local4;
+          integerLocal1 = resourceArchiveArgument3.computeInteger0819(-1, stringArgument5);
+          integerLocal3 = resourceArchiveArgument3.computeInteger0806(integerLocal1, 13030, stringArgument1);
+          stackRenderingSupport009Local4 = FullscreenCanvas.computeRenderingSupport0091382(resourceArchiveArgument3, (byte) 41, integerLocal3, integerLocal1, resourceArchiveArgument2);
+          return stackRenderingSupport009Local4;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal14 = caughtParameterLocal15;
           runtimeExceptionLocal2 = caughtExceptionLocal14;
@@ -68,7 +68,7 @@ final class MixedSupport016 {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
         }
     }
 
@@ -81,14 +81,14 @@ final class MixedSupport016 {
     }
 
     final static void performAction0205(boolean booleanArgument1) {
-        MixedSupport007.renderingSupport008State0001 = null;
+        MixedSupport007.renderingSupport007State0001 = null;
         SecondaryNodeHashTable.booleanState0121 = false;
-        MixedSupport051.renderingSupport008State0005 = null;
-        MixedSupport033.renderingSupport008State0004 = null;
-        MixedSupport102.renderingSupport008State0007 = null;
-        UiComponentPart004.renderingSupport008State0002 = null;
-        ComponentContainer.renderingSupport008State0006 = null;
-        MixedSupport020.renderingSupport008State0003 = null;
+        MixedSupport051.renderingSupport007State0005 = null;
+        MixedSupport033.renderingSupport007State0004 = null;
+        MixedSupport097.renderingSupport007State0007 = null;
+        UiComponentPart004.renderingSupport007State0002 = null;
+        ComponentContainer.renderingSupport007State0006 = null;
+        MixedSupport020.renderingSupport007State0003 = null;
         if (!booleanArgument1) {
           sceneWidgetPart013State0001 = (SceneWidgetPart013) null;
         }

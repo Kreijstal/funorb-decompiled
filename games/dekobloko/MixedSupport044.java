@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport044 extends MixedSupport086 {
+final class MixedSupport044 extends MixedSupport082 {
     static String stringState0187;
     static SceneWidget sceneWidgetState0034;
     private java.nio.ByteBuffer byteBufferState0001;
 
-    final byte[] computeByteArray0550(int integerArgument1) {
+    final byte[] computeByteArray0547(int integerArgument1) {
         if (integerArgument1 != 256) {
           return (byte[]) null;
         }
@@ -17,7 +17,7 @@ final class MixedSupport044 extends MixedSupport086 {
         return byteArrayLocal1;
     }
 
-    final static void performAction0551(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, int integerArgument4) {
+    final static void performAction0548(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, int integerArgument4) {
         RgbSprite rgbSpriteLocal1 = null;
         IndexedSprite[] indexedSpriteArrayLocal2 = null;
         IndexedSprite[][] indexedSpriteArrayArrayLocal3 = null;
@@ -38,15 +38,15 @@ final class MixedSupport044 extends MixedSupport086 {
         try {
           NetworkSupport002.rgbSpriteArrayState0003 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "frame_top");
           UiComponentPart011.rgbSpriteArrayState0013 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "frame_bottom");
-          MixedSupport069.rgbSpriteState0025 = UiComponentPart015.computeRgbSprite0713(resourceArchiveArgument1, "jagex_logo_grey", "commonui", 8192);
-          MixedSupport115.rgbSpriteArrayState0024 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "button");
-          MixedSupport129.rgbSpriteArrayState0028 = MixedSupport003.computeRgbSpriteArray0039(0, "commonui", "validation", resourceArchiveArgument1);
-          MixedSupport011.bitmapFontState0006 = (BitmapFont) ((Object) MixedSupport147.computeRenderingSupport0121758(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 110, "arezzo12"));
-          GameDomainSupport003.bitmapFontState0015 = (BitmapFont) ((Object) MixedSupport147.computeRenderingSupport0121758(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 93, "arezzo14"));
-          GameDomainSupport002.bitmapFontState0012 = (BitmapFont) ((Object) MixedSupport147.computeRenderingSupport0121758(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) -121, "arezzo14bold"));
-          rgbSpriteLocal1 = new RgbSprite(resourceArchiveArgument2.computeByteArray0822(0, "", "button.gif"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
-          GameApplet.computeIndexedSprite0685("dropdown", resourceArchiveArgument1, "commonui", (byte) 73);
-          indexedSpriteArrayLocal2 = UiComponentPart030.computeIndexedSpriteArray1581("screen_options", resourceArchiveArgument1, false, "commonui");
+          PlayerNameAvailabilityValidator.rgbSpriteState0025 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument1, "jagex_logo_grey", "commonui", 8192);
+          MixedSupport110.rgbSpriteArrayState0024 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "button");
+          ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028 = MixedSupport003.computeRgbSpriteArray0039(0, "commonui", "validation", resourceArchiveArgument1);
+          MixedSupport011.bitmapFontState0006 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 110, "arezzo12"));
+          GameDomainSupport003.bitmapFontState0015 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) 93, "arezzo14"));
+          GameDomainSupport002.bitmapFontState0012 = (BitmapFont) ((Object) MixedSupport140.computeRenderingSupport0111727(resourceArchiveArgument3, resourceArchiveArgument1, "commonui", (byte) -121, "arezzo14bold"));
+          rgbSpriteLocal1 = new RgbSprite(resourceArchiveArgument2.computeByteArray0809(0, "", "button.gif"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+          GameApplet.computeIndexedSprite0676("dropdown", resourceArchiveArgument1, "commonui", (byte) 73);
+          indexedSpriteArrayLocal2 = UiComponentPart030.computeIndexedSpriteArray1554("screen_options", resourceArchiveArgument1, false, "commonui");
           UiComponentPart007.indexedSpriteArrayState0002 = new IndexedSprite[4];
           ThemeTips.indexedSpriteArrayState0004 = new IndexedSprite[4];
           MixedSupport002.indexedSpriteArrayState0001 = new IndexedSprite[4];
@@ -66,13 +66,13 @@ final class MixedSupport044 extends MixedSupport086 {
             indexedSpriteArrayLocal7 = indexedSpriteArrayArrayLocal3[integerLocal14];
             IndexedSprite[] indexedSpriteArrayLocal18 = indexedSpriteArrayLocal7;
             for (integerLocal8 = 0; indexedSpriteArrayLocal7.length > integerLocal8; integerLocal8++) {
-              indexedSpriteArrayLocal7[integerLocal8] = MixedSupport052.computeIndexedSprite0623(0, integerArrayArrayLocal4[integerLocal8], indexedSpriteArrayLocal2[integerLocal14]);
+              indexedSpriteArrayLocal7[integerLocal8] = MixedSupport052.computeIndexedSprite0620(0, integerArrayArrayLocal4[integerLocal8], indexedSpriteArrayLocal2[integerLocal14]);
             }
           }
           integerLocal17 = rgbSpriteLocal1.integerState0255;
-          IterableNodeCollection.performAction1687(-9074);
+          IterableNodeCollection.performAction1656(-9074);
           rgbSpriteLocal1.performAction0256();
-          SoftwareRaster.performAction0663(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284);
+          SoftwareRaster.performAction0654(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284);
           rgbSpriteLocal9 = new RgbSprite(integerLocal17, integerLocal17);
           rgbSpriteLocal10 = rgbSpriteLocal9;
           rgbSpriteLocal10.performAction0256();
@@ -83,26 +83,26 @@ final class MixedSupport044 extends MixedSupport086 {
           rgbSpriteLocal12 = new RgbSprite(rgbSpriteLocal1.integerState0258 - 2 * integerLocal17, integerLocal17);
           rgbSpriteLocal12.performAction0256();
           rgbSpriteLocal1.performAction0290(-integerLocal17, 0);
-          MixedSupport086.performAction1079((byte) -5);
-          MixedSupport115.rgbSpriteArrayState0024 = new RgbSprite[]{rgbSpriteLocal9, rgbSpriteLocal12, rgbSpriteLocal11};
+          MixedSupport082.performAction1060((byte) -5);
+          MixedSupport110.rgbSpriteArrayState0024 = new RgbSprite[]{rgbSpriteLocal9, rgbSpriteLocal12, rgbSpriteLocal11};
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "fn.F(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument2 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "fn.F(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument2 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
         }
     }
 
     MixedSupport044() {
     }
 
-    public static void performAction0553(int integerArgument1) {
+    public static void performAction0550(int integerArgument1) {
         if (integerArgument1 != 0) {
           ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-          MixedSupport044.performAction0551((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 51);
+          MixedSupport044.performAction0548((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 51);
         }
         sceneWidgetState0034 = null;
         stringState0187 = null;
     }
 
-    final void performAction0552(byte[] byteArrayArgument1, boolean booleanArgument2) {
+    final void performAction0549(byte[] byteArrayArgument1, boolean booleanArgument2) {
         this.byteBufferState0001 = java.nio.ByteBuffer.allocateDirect(byteArrayArgument1.length);
         this.byteBufferState0001.position(0);
         if (!booleanArgument2) {
@@ -111,7 +111,7 @@ final class MixedSupport044 extends MixedSupport086 {
         try {
           this.byteBufferState0001.put(byteArrayArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "fn.A(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "fn.A(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
         }
     }
 

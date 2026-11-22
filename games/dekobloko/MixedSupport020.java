@@ -3,7 +3,7 @@
  */
 final class MixedSupport020 extends HashNode {
     static SceneWidget sceneWidgetState0012;
-    static RenderingSupport008 renderingSupport008State0003;
+    static RenderingSupport007 renderingSupport007State0003;
     int integerState0115;
     int integerState0116;
     int integerState0117;
@@ -95,9 +95,9 @@ final class MixedSupport020 extends HashNode {
           integerLocal20 = 0;
           if (MixedSupport016.sceneWidgetPart013State0001 != null && (MixedSupport014.booleanArrayArrayState0001 != null ||
             SceneWidgetPart007.integerArrayArrayState0017 != null ||
-            MixedSupport063.integerArrayArrayState0012 != null ||
+            MixedSupport062.integerArrayArrayState0012 != null ||
             null != MixedSupport004.integerArrayArrayState0003)) {
-            for (integerLocal21 = 0; MixedSupport064.integerState0336 > integerLocal21; integerLocal21++) {
+            for (integerLocal21 = 0; MixedSupport063.integerState0336 > integerLocal21; integerLocal21++) {
               integerLocal22 = 255 & MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032[integerLocal21];
               if (MixedSupport014.booleanArrayArrayState0001 != null &&
                 MixedSupport014.booleanArrayArrayState0001[integerLocal21] != null &&
@@ -108,7 +108,7 @@ final class MixedSupport020 extends HashNode {
                 null != SceneWidgetPart007.integerArrayArrayState0017[integerLocal21]) {
                 integerLocal24 = SceneWidgetPart007.integerArrayArrayState0017[integerLocal21][integerLocal22];
                 if (integerLocal24 != 0 &&
-                  !MixedSupport134.booleanState0191) {
+                  !MixedSupport127.booleanState0191) {
                   integerLocal16 = 1;
                 }
                 if (integerLocal24 > integerLocal18) {
@@ -119,14 +119,14 @@ final class MixedSupport020 extends HashNode {
                 null != MixedSupport004.integerArrayArrayState0003[integerLocal21]) {
                 integerLocal20 = integerLocal20 | MixedSupport004.integerArrayArrayState0003[integerLocal21][integerLocal22];
               }
-              if (MixedSupport063.integerArrayArrayState0012 != null &&
-                null != MixedSupport063.integerArrayArrayState0012[integerLocal21]) {
-                integerLocal59 = MixedSupport063.integerArrayArrayState0012[integerLocal21][integerLocal22];
+              if (MixedSupport062.integerArrayArrayState0012 != null &&
+                null != MixedSupport062.integerArrayArrayState0012[integerLocal21]) {
+                integerLocal59 = MixedSupport062.integerArrayArrayState0012[integerLocal21][integerLocal22];
                 if (integerLocal19 < integerLocal59) {
                   integerLocal19 = integerLocal59;
                 }
                 if (integerLocal59 != 0 &&
-                  !MixedSupport134.booleanState0191) {
+                  !MixedSupport127.booleanState0191) {
                   integerLocal16 = 1;
                 }
               }
@@ -137,28 +137,28 @@ final class MixedSupport020 extends HashNode {
           stackIntegerLocal4 = integerArgument1 * (8 + ComponentContainer.integerState0377 * 4);
           stackIntegerLocal5 = integerArgument2 + 2109;
           stackBooleanLocal6 = (sceneWidgetPart008Argument4 == NetworkSupport005.sceneWidgetPart008State0004);
-          stackIntegerLocal7 = (!((SceneWidgetPart008) (Object) stackSceneWidgetPart008Local2).computeBoolean1151(stackIntegerLocal3, stackIntegerLocal4, stackIntegerLocal5, stackBooleanLocal6, 2, booleanArgument5)) ? 0 : 1;
+          stackIntegerLocal7 = (!((SceneWidgetPart008) (Object) stackSceneWidgetPart008Local2).computeBoolean1124(stackIntegerLocal3, stackIntegerLocal4, stackIntegerLocal5, stackBooleanLocal6, 2, booleanArgument5)) ? 0 : 1;
           integerLocal58 = stackIntegerLocal7;
           nodeDequeLocal23 = sceneWidgetPart008Argument4.sceneWidgetState0090.nodeDequeState0034;
           objectLocal25 = null;
-          sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1772((byte) 25));
+          sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1741((byte) 25));
           while (sceneWidgetPart012Local26 != null) {
             integerLocal27 = 0;
             if (sceneWidgetPart012Local26.nodeDequeState0034 == null) {
               sceneWidgetPart012Local26.sceneWidgetState0122 = new SceneWidget(0L, RenderingSupport004.sceneWidgetState0040);
-              sceneWidgetPart012Local26.performAction1799(sceneWidgetPart012Local26.sceneWidgetState0122, -16834);
+              sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0122, -16834);
               sceneWidgetPart012Local26.sceneWidgetState0121 = new SceneWidget(0L, MixedSupport036.sceneWidgetState0027);
-              if (MixedSupport102.booleanState0133) {
-                sceneWidgetPart012Local26.performAction1799(sceneWidgetPart012Local26.sceneWidgetState0121, -16834);
+              if (MixedSupport097.booleanState0133) {
+                sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0121, -16834);
               }
               sceneWidgetPart012Local26.sceneWidgetState0121.integerState0916 = 2;
-              sceneWidgetPart012Local26.sceneWidgetState0123 = new SceneWidget(0L, MixedSupport132.sceneWidgetState0125);
-              sceneWidgetPart012Local26.performAction1799(sceneWidgetPart012Local26.sceneWidgetState0123, -16834);
-              sceneWidgetPart012Local26.performAction1805(-117);
-              sceneWidgetPart012Local26.sceneWidgetState0124 = new SceneWidget(0L, MixedSupport082.sceneWidgetState0076);
-              sceneWidgetPart012Local26.performAction1799(sceneWidgetPart012Local26.sceneWidgetState0124, integerArgument2 + 505);
+              sceneWidgetPart012Local26.sceneWidgetState0123 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
+              sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0123, -16834);
+              sceneWidgetPart012Local26.performAction1774(-117);
+              sceneWidgetPart012Local26.sceneWidgetState0124 = new SceneWidget(0L, MixedSupport078.sceneWidgetState0076);
+              sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0124, integerArgument2 + 505);
               sceneWidgetPart012Local26.sceneWidgetState0120 = new SceneWidget(0L, UiComponentPart012.sceneWidgetState0042);
-              sceneWidgetPart012Local26.performAction1799(sceneWidgetPart012Local26.sceneWidgetState0120, -16834);
+              sceneWidgetPart012Local26.performAction1768(sceneWidgetPart012Local26.sceneWidgetState0120, -16834);
               integerLocal27 = 1;
             }
             sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = null;
@@ -188,7 +188,7 @@ final class MixedSupport020 extends HashNode {
             if (GameDomainSupport002.sceneWidgetPart008State0002 == sceneWidgetPart008Argument4) {
               integerLocal35 += 42;
             }
-            stringLocal52 = BitmapFont.computeString1093(sceneWidgetPart012Local26.sceneWidgetState0122.bitmapFontState0020, stringLocal51, integerLocal35);
+            stringLocal52 = BitmapFont.computeString1074(sceneWidgetPart012Local26.sceneWidgetState0122.bitmapFontState0020, stringLocal51, integerLocal35);
             stringLocal34 = stringLocal52;
             stackIntegerLocal8 = (stringLocal52.equals(sceneWidgetPart012Local26.stringState0534)) ? 0 : 1;
             integerLocal36 = stackIntegerLocal8;
@@ -200,7 +200,7 @@ final class MixedSupport020 extends HashNode {
               }
             }
             sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = stringLocal34;
-            if (!sceneWidgetPart012Local26.computeBoolean1641((byte) 101)) {
+            if (!sceneWidgetPart012Local26.computeBoolean1611((byte) 101)) {
               integerLocal37 = 16764006;
               integerLocal39 = 16777215;
               if (integerLocal16 != 0 &&
@@ -229,86 +229,86 @@ final class MixedSupport020 extends HashNode {
                 }
               } else {
                 if (sceneWidgetPart012Local26.booleanState0189) {
-                  sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport079.stringState0325, new String[]{stringLocal34});
+                  sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport075.stringState0325, new String[]{stringLocal34});
                   sceneWidgetPart012Local26.sceneWidgetState0120.stringState0598 = MixedSupport036.stringState0167;
                 } else {
                   if (!sceneWidgetPart012Local26.booleanState0187) {
                     sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = MixedSupport001.stringState0003;
                   } else {
                     sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(91, ResourceSupport001.stringState0010, new String[]{stringLocal34});
-                    sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = MixedSupport134.stringState0553;
+                    sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = MixedSupport127.stringState0553;
                     sceneWidgetPart012Local26.sceneWidgetState0120.stringState0598 = FullscreenCanvas.stringState0455;
                   }
                 }
               }
               integerLocal41 = 0;
               if (MixedSupport016.sceneWidgetPart013State0001 != null &&
-                SceneWidgetPart005.computeBoolean0725(true) &&
-                ~sceneWidgetPart012Local26.longState0048 != ~MixedSupport134.longState0050) {
+                SceneWidgetPart005.computeBoolean0716(true) &&
+                ~sceneWidgetPart012Local26.longState0048 != ~MixedSupport127.longState0050) {
                 if (null != sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598) {
-                  integerLocal43 = sceneWidgetPart012Local26.sceneWidgetState0124.computeInteger1801(true) + SecondaryNodeHashTable.integerState0540 * 2;
-                  sceneWidgetPart012Local26.sceneWidgetState0124.performAction1795(integerLocal43, 0, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
+                  integerLocal43 = sceneWidgetPart012Local26.sceneWidgetState0124.computeInteger1770(true) + SecondaryNodeHashTable.integerState0540 * 2;
+                  sceneWidgetPart012Local26.sceneWidgetState0124.performAction1764(integerLocal43, 0, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
                   integerLocal41 = integerLocal41 + integerLocal43;
                 }
                 if (null != sceneWidgetPart012Local26.sceneWidgetState0120.stringState0598) {
                   if (sceneWidgetPart008Argument4 != ValidationStatus.sceneWidgetPart008State0006) {
-                    integerLocal63 = sceneWidgetPart012Local26.sceneWidgetState0120.computeInteger1801(true) + 2 * SecondaryNodeHashTable.integerState0540;
+                    integerLocal63 = sceneWidgetPart012Local26.sceneWidgetState0120.computeInteger1770(true) + 2 * SecondaryNodeHashTable.integerState0540;
                   } else {
                     integerLocal63 = 40;
                   }
-                  sceneWidgetPart012Local26.sceneWidgetState0120.performAction1795(integerLocal63, integerArgument2 + 17339, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
+                  sceneWidgetPart012Local26.sceneWidgetState0120.performAction1764(integerLocal63, integerArgument2 + 17339, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
                   integerLocal41 = integerLocal41 + integerLocal63;
                 }
               }
               stackSceneWidgetLocal9 = sceneWidgetPart012Local26.sceneWidgetState0122;
               stackIntegerLocal10 = sceneWidgetPart012Local26.integerState0896;
-              if (MixedSupport102.booleanState0133) {
+              if (MixedSupport097.booleanState0133) {
                 stackIntegerLocal11 = 42;
               } else {
                 stackIntegerLocal11 = 0;
               }
-              ((SceneWidget) (Object) stackSceneWidgetLocal9).performAction1795(stackIntegerLocal10 - stackIntegerLocal11 - integerLocal41, 0, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
+              ((SceneWidget) (Object) stackSceneWidgetLocal9).performAction1764(stackIntegerLocal10 - stackIntegerLocal11 - integerLocal41, 0, integerLocal33, ComponentContainer.integerState0377, integerLocal41);
               sceneWidgetPart012Local26.sceneWidgetState0121.stringState0598 = Integer.toString(sceneWidgetPart012Local26.integerState0781);
-              sceneWidgetPart012Local26.sceneWidgetState0121.performAction1795(40, integerArgument2 + 17339, integerLocal33, ComponentContainer.integerState0377, sceneWidgetPart012Local26.integerState0896 - 40);
+              sceneWidgetPart012Local26.sceneWidgetState0121.performAction1764(40, integerArgument2 + 17339, integerLocal33, ComponentContainer.integerState0377, sceneWidgetPart012Local26.integerState0896 - 40);
               if (sceneWidgetPart012Local26.sceneWidgetState0122.booleanState0218 &&
                 integerLocal36 != 0) {
-                MixedSupport122.stringState0515 = sceneWidgetPart012Local26.stringState0534;
+                MixedSupport117.stringState0515 = sceneWidgetPart012Local26.stringState0534;
                 if (null != NodeDeque.stringArrayState0055 &&
                   null != NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780]) {
-                  MixedSupport122.stringState0515 = MixedSupport122.stringState0515 + " - " + NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780];
+                  MixedSupport117.stringState0515 = MixedSupport117.stringState0515 + " - " + NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780];
                 }
               } else {
                 if (sceneWidgetPart012Local26.sceneWidgetState0122.booleanState0218 &&
                   NodeDeque.stringArrayState0055 != null &&
                   null != NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780]) {
-                  MixedSupport122.stringState0515 = NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780];
+                  MixedSupport117.stringState0515 = NodeDeque.stringArrayState0055[sceneWidgetPart012Local26.integerState0780];
                 }
               }
               integerLocal33 = integerLocal33 + ComponentContainer.integerState0377;
             }
-            stringLocal38 = PcmResampler.computeString0797(stringLocal34, sceneWidgetPart012Local26.integerState0786, (byte) -128);
+            stringLocal38 = PcmResampler.computeString0784(stringLocal34, sceneWidgetPart012Local26.integerState0786, (byte) -128);
             objectLocal40 = stringLocal38;
             objectLocal54 = stringLocal38;
             if (stringLocal38 != null) {
-              integerLocal60 = sceneWidgetPart012Local26.sceneWidgetState0123.bitmapFontState0020.computeInteger1086(stringLocal38, -SecondaryNodeHashTable.integerState0540 + sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540);
-              sceneWidgetPart012Local26.sceneWidgetState0123.integerState0917 = 256 * sceneWidgetPart012Local26.integerState0785 / MixedSupport094.integerState0547;
+              integerLocal60 = sceneWidgetPart012Local26.sceneWidgetState0123.bitmapFontState0020.computeInteger1067(stringLocal38, -SecondaryNodeHashTable.integerState0540 + sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540);
+              sceneWidgetPart012Local26.sceneWidgetState0123.integerState0917 = 256 * sceneWidgetPart012Local26.integerState0785 / MixedSupport089.integerState0547;
               sceneWidgetPart012Local26.sceneWidgetState0123.stringState0598 = stringLocal38;
-              sceneWidgetPart012Local26.sceneWidgetState0123.performAction1795(sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540 * 2, 0, integerLocal33, ComponentContainer.integerState0377 * integerLocal60, SecondaryNodeHashTable.integerState0540);
+              sceneWidgetPart012Local26.sceneWidgetState0123.performAction1764(sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540 * 2, 0, integerLocal33, ComponentContainer.integerState0377 * integerLocal60, SecondaryNodeHashTable.integerState0540);
               integerLocal33 = integerLocal33 + integerLocal60 * ComponentContainer.integerState0377;
             }
             if (integerLocal58 == 0) {
               sceneWidgetPart012Local26.integerState0895 = -sceneWidgetPart012Local26.integerState0915 + integerLocal33;
             }
             if (integerLocal27 != 0) {
-              sceneWidgetPart008Argument4.sceneWidgetState0090.performAction1800((SceneWidget) (objectLocal25), sceneWidgetPart012Local26, 2, 0);
+              sceneWidgetPart008Argument4.sceneWidgetState0090.performAction1769((SceneWidget) (objectLocal25), sceneWidgetPart012Local26, 2, 0);
             }
             if (sceneWidgetPart012Local26.integerState0891 != 0 &&
-              !sceneWidgetPart012Local26.computeBoolean1641((byte) 101)) {
+              !sceneWidgetPart012Local26.computeBoolean1611((byte) 101)) {
               if (0 == sceneWidgetPart012Local26.sceneWidgetState0124.integerState0891) {
                 if (0 != sceneWidgetPart012Local26.sceneWidgetState0120.integerState0891) {
-                  MixedSupport087.performAction1108(true, sceneWidgetPart012Local26.longState0048, integerArgument3);
+                  MixedSupport083.performAction1089(true, sceneWidgetPart012Local26.longState0048, integerArgument3);
                 } else {
-                  MixedSupport042.performAction0541(0, sceneWidgetPart012Local26, sceneWidgetPart008Argument4, UiComponentPart013.integerState0276, 0, integerArgument2 ^ 17358, TextLineMetrics.integerState0535);
+                  MixedSupport042.performAction0538(0, sceneWidgetPart012Local26, sceneWidgetPart008Argument4, UiComponentPart013.integerState0276, 0, integerArgument2 ^ 17358, TextLineMetrics.integerState0535);
                 }
               } else {
                 MixedSupport013.performAction0172(sceneWidgetPart012Local26.longState0048, integerArgument3, (byte) -84);
@@ -316,18 +316,18 @@ final class MixedSupport020 extends HashNode {
             }
             objectLocal25 = sceneWidgetPart012Local26;
             if (sceneWidgetPart012Local26.booleanState0211 &&
-              !sceneWidgetPart012Local26.computeBoolean1641((byte) 111)) {
+              !sceneWidgetPart012Local26.computeBoolean1611((byte) 111)) {
               objectLocal55 = null;
-              if (~MixedSupport134.longState0050 == ~sceneWidgetPart012Local26.longState0048) {
+              if (~MixedSupport127.longState0050 == ~sceneWidgetPart012Local26.longState0048) {
                 if (integerLocal16 != 0 &&
                   !sceneWidgetPart012Local26.booleanState0186) {
-                  objectLocal55 = MixedSupport116.stringState0484;
+                  objectLocal55 = MixedSupport111.stringState0484;
                 } else {
                   if (sceneWidgetPart012Local26.integerState0784 >= integerLocal19) {
                     if (sceneWidgetPart012Local26.integerState0781 >= integerLocal18) {
                       if ((integerLocal20 & ~sceneWidgetPart012Local26.integerState0782) != 0) {
-                        integerLocal41 = SceneWidgetPart014.computeInteger1815((byte) -94, integerLocal20 & ~sceneWidgetPart012Local26.integerState0782);
-                        objectLocal55 = MixedSupport130.stringState0540;
+                        integerLocal41 = SceneWidgetPart014.computeInteger1784((byte) -94, integerLocal20 & ~sceneWidgetPart012Local26.integerState0782);
+                        objectLocal55 = MixedSupport123.stringState0540;
                         if (integerLocal41 > 0 &&
                           Sprite.stringArrayArrayState0005 != null &&
                           integerLocal41 <= Sprite.stringArrayArrayState0005.length &&
@@ -341,9 +341,9 @@ final class MixedSupport020 extends HashNode {
                   } else {
                     integerLocal41 = -sceneWidgetPart012Local26.integerState0784 + integerLocal19;
                     if (integerLocal41 == 1) {
-                      objectLocal55 = MixedSupport094.stringState0374;
+                      objectLocal55 = MixedSupport089.stringState0374;
                     }
-                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(118, MixedSupport079.stringState0323, new String[]{null, Integer.toString(integerLocal41)});
+                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(118, MixedSupport075.stringState0323, new String[]{null, Integer.toString(integerLocal41)});
                   }
                 }
               } else {
@@ -354,7 +354,7 @@ final class MixedSupport020 extends HashNode {
                   if (sceneWidgetPart012Local26.integerState0784 >= integerLocal19) {
                     if (sceneWidgetPart012Local26.integerState0781 >= integerLocal18) {
                       if (0 != (~sceneWidgetPart012Local26.integerState0782 & integerLocal20)) {
-                        integerLocal41 = SceneWidgetPart014.computeInteger1815((byte) -120, integerLocal20 & ~sceneWidgetPart012Local26.integerState0782);
+                        integerLocal41 = SceneWidgetPart014.computeInteger1784((byte) -120, integerLocal20 & ~sceneWidgetPart012Local26.integerState0782);
                         objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(91, MixedSupport018.stringState0089, new String[]{stringLocal34});
                         if (integerLocal41 > 0 &&
                           Sprite.stringArrayArrayState0005 != null &&
@@ -371,7 +371,7 @@ final class MixedSupport020 extends HashNode {
                     if (integerLocal41 == 1) {
                       objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(93, InputAdapter002.stringState0448, new String[]{stringLocal34});
                     }
-                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(99, MixedSupport076.stringState0320, new String[]{stringLocal34, Integer.toString(integerLocal41)});
+                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(99, MixedSupport072.stringState0320, new String[]{stringLocal34, Integer.toString(integerLocal41)});
                   }
                 }
               }
@@ -384,7 +384,7 @@ final class MixedSupport020 extends HashNode {
                 objectLocal42 = stringLocal56;
                 objectLocal42 = null;
                 integerLocal61 = 0;
-                for (integerLocal1 = 0; integerLocal1 < MixedSupport064.integerState0336; integerLocal1++) {
+                for (integerLocal1 = 0; integerLocal1 < MixedSupport063.integerState0336; integerLocal1++) {
                   integerLocal45 = MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032[integerLocal1] & 255;
                   integerLocal46 = 0;
                   if (MixedSupport014.booleanArrayArrayState0001 != null &&
@@ -397,7 +397,7 @@ final class MixedSupport020 extends HashNode {
                     SceneWidgetPart007.integerArrayArrayState0017[integerLocal1] != null) {
                     integerLocal48 = SceneWidgetPart007.integerArrayArrayState0017[integerLocal1][integerLocal45];
                     if (integerLocal48 != 0 &&
-                      !MixedSupport134.booleanState0191 &&
+                      !MixedSupport127.booleanState0191 &&
                       !sceneWidgetPart012Local26.booleanState0186) {
                       integerLocal46 = 1;
                     }
@@ -405,11 +405,11 @@ final class MixedSupport020 extends HashNode {
                       integerLocal46 = 1;
                     }
                   }
-                  if (MixedSupport063.integerArrayArrayState0012 != null &&
-                    MixedSupport063.integerArrayArrayState0012[integerLocal1] != null) {
-                    integerLocal62 = MixedSupport063.integerArrayArrayState0012[integerLocal1][integerLocal45];
+                  if (MixedSupport062.integerArrayArrayState0012 != null &&
+                    MixedSupport062.integerArrayArrayState0012[integerLocal1] != null) {
+                    integerLocal62 = MixedSupport062.integerArrayArrayState0012[integerLocal1][integerLocal45];
                     if (0 != integerLocal62 &&
-                      !MixedSupport134.booleanState0191 &&
+                      !MixedSupport127.booleanState0191 &&
                       !sceneWidgetPart012Local26.booleanState0186) {
                       integerLocal46 = 1;
                     }
@@ -438,7 +438,7 @@ final class MixedSupport020 extends HashNode {
                   }
                 }
                 if (sceneWidgetPart008Argument4 == ValidationStatus.sceneWidgetPart008State0006 &&
-                  SceneWidgetPart005.computeBoolean0725(true)) {
+                  SceneWidgetPart005.computeBoolean0716(true)) {
                   if (integerLocal61 != 0) {
                     objectLocal55 = stringLocal53 + "<br>" + GameDomainSupport005.stringState0405 + (String) (objectLocal42);
                   } else {
@@ -452,14 +452,14 @@ final class MixedSupport020 extends HashNode {
                   }
                 }
                 if (ValidationStatus.sceneWidgetPart008State0006 == sceneWidgetPart008Argument4 &&
-                  !SceneWidgetPart005.computeBoolean0725(true)) {
+                  !SceneWidgetPart005.computeBoolean0716(true)) {
                   stringLocal44 = MixedSupport016.sceneWidgetPart013State0001.stringState0585;
-                  objectLocal55 = (String) (objectLocal55) + "<br>" + NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport067.stringState0279, new String[]{stringLocal44});
+                  objectLocal55 = (String) (objectLocal55) + "<br>" + NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport065.stringState0279, new String[]{stringLocal44});
                 }
-                MixedSupport122.stringState0515 = (String) (objectLocal55);
+                MixedSupport117.stringState0515 = (String) (objectLocal55);
               }
             }
-            sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1776(true));
+            sceneWidgetPart012Local26 = (SceneWidgetPart012) (nodeDequeLocal23.computeHashNode1745(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal64) {
@@ -472,7 +472,7 @@ final class MixedSupport020 extends HashNode {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(booleanArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(booleanArgument5).append(')').toString());
         }
     }
 
@@ -490,14 +490,14 @@ final class MixedSupport020 extends HashNode {
           UiComponentPart033.sceneWidgetState0150.integerState0896 = UiComponentPart033.sceneWidgetState0150.integerState0896 - DiagnosticSupport002.sceneWidgetState0057.integerState0896;
           DiagnosticSupport002.sceneWidgetState0057.integerState0890 = DiagnosticSupport002.sceneWidgetState0057.integerState0890 - DiagnosticSupport002.sceneWidgetState0057.integerState0896;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "cl.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "cl.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');
         }
     }
 
     public static void clearStaticReferences(byte byteArgument1) {
         resourceArchiveState0003 = null;
         fullscreenCanvasState0001 = null;
-        renderingSupport008State0003 = null;
+        renderingSupport007State0003 = null;
         uiComponentPart012State0001 = null;
         if (byteArgument1 != -39) {
           return;
@@ -536,7 +536,7 @@ final class MixedSupport020 extends HashNode {
           integerLocal10 = MixedSupport036.integerState0221;
           integerLocal12 = 0;
           if (MixedSupport009.integerState0054 == 2) {
-            longLocal13 = MixedSupport063.computeLong0745(4) - MixedSupport024.longState0007;
+            longLocal13 = MixedSupport062.computeLong0734(4) - MixedSupport024.longState0007;
             integerLocal12 = (int)((10999L - longLocal13) / 1000L);
             if (integerLocal12 < 0) {
               integerLocal12 = 0;
@@ -544,15 +544,15 @@ final class MixedSupport020 extends HashNode {
           }
           integerLocal14 = 0;
           if (!booleanArgument1) {
-            renderingSupport008State0003 = (RenderingSupport008) null;
+            renderingSupport007State0003 = (RenderingSupport007) null;
           }
           while (integerLocal14 < UiComponentPart028.stringArrayState0039.length) {
-            integerLocal15 = MixedSupport070.integerArrayState0119[integerLocal14];
+            integerLocal15 = MixedSupport066.integerArrayState0119[integerLocal14];
             if (0 > integerLocal15) {
               integerLocal16 = TextFieldValidator.integerState0937;
             } else {
-              if (integerLocal15 != MixedSupport070.mixedSupport121State0001.integerState0754) {
-                integerLocal16 = MixedSupport150.integerState0918;
+              if (integerLocal15 != MixedSupport066.mixedSupport116State0001.integerState0754) {
+                integerLocal16 = MixedSupport143.integerState0918;
               } else {
                 integerLocal16 = NetworkSupport004.integerState0266;
               }
@@ -560,18 +560,18 @@ final class MixedSupport020 extends HashNode {
             stringLocal17 = UiComponentPart028.stringArrayState0039[integerLocal14];
             if (MixedSupport009.integerState0054 == 2 &&
               integerLocal12 == 1) {
-              if (UiComponentPart032.stringArrayState0051.length <= MixedSupport127.stringArrayState0047.length) {
-                stackIntegerLocal1 = MixedSupport127.stringArrayState0047.length;
+              if (UiComponentPart032.stringArrayState0051.length <= MixedSupport121.stringArrayState0047.length) {
+                stackIntegerLocal1 = MixedSupport121.stringArrayState0047.length;
               } else {
                 stackIntegerLocal1 = UiComponentPart032.stringArrayState0051.length;
               }
               integerLocal18 = stackIntegerLocal1;
               if (integerLocal14 >= 6 &&
                 integerLocal18 + 6 > integerLocal14) {
-                if (-integerLocal18 + integerLocal14 - (6 - MixedSupport127.stringArrayState0047.length) < 0) {
+                if (-integerLocal18 + integerLocal14 - (6 - MixedSupport121.stringArrayState0047.length) < 0) {
                   stackStringLocal2 = "";
                 } else {
-                  stackStringLocal2 = MixedSupport127.stringArrayState0047[-6 + (integerLocal14 + MixedSupport127.stringArrayState0047.length - integerLocal18)];
+                  stackStringLocal2 = MixedSupport121.stringArrayState0047[-6 + (integerLocal14 + MixedSupport121.stringArrayState0047.length - integerLocal18)];
                 }
                 stringLocal17 = stackStringLocal2;
               }
@@ -597,11 +597,11 @@ final class MixedSupport020 extends HashNode {
             stackBooleanLocal5 = false;
             stackStringLocal6 = stringLocal17;
             stackBooleanLocal7 = !(integerLocal15 < 0);
-            integerLocal22 = NodeHashTable.computeInteger1531(stackBooleanLocal5, stackStringLocal6, stackBooleanLocal7);
+            integerLocal22 = NodeHashTable.computeInteger1504(stackBooleanLocal5, stackStringLocal6, stackBooleanLocal7);
             integerLocal23 = -(integerLocal22 >> 1) + BufferedSocket.integerState0661;
             if (integerLocal15 >= 0) {
               integerLocal10 = integerLocal10 + BufferedSocket.integerState0665;
-              if (MixedSupport070.mixedSupport121State0001.integerState0754 != integerLocal15) {
+              if (MixedSupport066.mixedSupport116State0001.integerState0754 != integerLocal15) {
                 stackMixedSupport015Local8 = MixedSupport022.mixedSupport015State0001;
               } else {
                 stackMixedSupport015Local8 = TextLineMetrics.mixedSupport015State0003;
@@ -613,11 +613,11 @@ final class MixedSupport020 extends HashNode {
               integerLocal10 = integerLocal10 + UiComponentPart022.integerState0575;
             }
             if (0 <= integerLocal15) {
-              MixedSupport010.bitmapFontState0005.performAction1088(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
+              MixedSupport010.bitmapFontState0005.performAction1069(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
               integerLocal10 = integerLocal10 + (UiComponentPart022.integerState0575 - (-BufferedSocket.integerState0665 - MixedSupport015.integerState0100));
             } else {
-              UiComponentPart028.bitmapFontState0019.performAction1088(stringLocal17, integerLocal23, MixedSupport089.integerState0531 + integerLocal10, integerLocal16, -1);
-              integerLocal10 = integerLocal10 + RenderingSupport008.integerState0362;
+              UiComponentPart028.bitmapFontState0019.performAction1069(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);
+              integerLocal10 = integerLocal10 + RenderingSupport007.integerState0362;
             }
             integerLocal14++;
           }
@@ -625,7 +625,7 @@ final class MixedSupport020 extends HashNode {
         } catch (java.lang.RuntimeException caughtParameterLocal24) {
           caughtExceptionLocal9 = caughtParameterLocal24;
           runtimeExceptionLocal11 = caughtExceptionLocal9;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal11), "cl.D(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeExceptionLocal11), "cl.D(" + booleanArgument1 + ')');
         }
     }
 
@@ -649,7 +649,7 @@ final class MixedSupport020 extends HashNode {
           if (mixedSupport056Argument1.integerState0291 != 0 ||
             mixedSupport056Argument1.integerState0286 != 0) {
             for (integerLocal1 = 0; integerLocal1 < MixedSupport058.integerState0317; integerLocal1++) {
-              mixedSupport056Local2 = MixedSupport102.mixedSupport056ArrayState0001[integerLocal1];
+              mixedSupport056Local2 = MixedSupport097.mixedSupport056ArrayState0001[integerLocal1];
               if (mixedSupport056Local2.integerState0290 == 2 &&
                 mixedSupport056Local2.integerState0291 == mixedSupport056Argument1.integerState0291 &&
                 mixedSupport056Local2.integerState0286 == mixedSupport056Argument1.integerState0286) {
@@ -661,9 +661,9 @@ final class MixedSupport020 extends HashNode {
             SoftwareFramebuffer.integerArrayState0259 = mixedSupport056Argument1.integerArrayState0065;
             UiComponentPart013.stringState0226 = mixedSupport056Argument1.stringState0238;
             IterableNodeCollection.integerState0802 = mixedSupport056Argument1.integerState0290;
-            MixedSupport090.longState0032 = mixedSupport056Argument1.longState0021;
+            MixedSupport086.longState0032 = mixedSupport056Argument1.longState0021;
           }
-          MixedSupport112.performAction1433(mixedSupport056Argument1, -3);
+          MixedSupport107.performAction1406(mixedSupport056Argument1, -3);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal7 = caughtParameterLocal9;
@@ -675,7 +675,7 @@ final class MixedSupport020 extends HashNode {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 

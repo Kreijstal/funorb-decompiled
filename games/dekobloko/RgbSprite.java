@@ -411,7 +411,7 @@ class RgbSprite extends RenderingSupport004 {
     }
 
     final void performAction0256() {
-        SoftwareRaster.performAction0654(this.integerArrayState0024, this.integerState0258, this.integerState0255);
+        SoftwareRaster.performAction0645(this.integerArrayState0024, this.integerState0258, this.integerState0255);
     }
 
     private final static void performAction0283(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {

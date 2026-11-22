@@ -1,181 +1,621 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class MixedSupport120 extends DualNode {
-    static String[] stringArrayState0041;
-    boolean booleanState0172;
-    static int integerState0746;
-    static int[] integerArrayState0205;
-    static long[] longArrayState0009;
-    volatile boolean booleanState0173;
-    boolean booleanState0174;
+final class MixedSupport120 {
+    private static MixedSupport141 mixedSupport141State0001;
 
-    abstract byte[] computeByteArray0471(byte byteArgument1);
-
-    final static String computeString1514(int integerArgument1) {
-        String stackStringLocal1 = null;
-        Object stackObjectLocal2 = null;
-        RuntimeException caughtExceptionLocal3 = null;
-        Object objectLocal4 = null;
-        Object objectLocal5 = null;
-        String stringLocal6 = null;
-        int integerLocal7 = 0;
-        String stringLocal8 = null;
-        String stringLocal9 = null;
-        int integerLocal10 = 0;
-        int integerLocal11 = 0;
-        String stringLocal12 = null;
-        int integerLocal13 = 0;
-        int integerLocal14 = 0;
-        String stringLocal15;
-        integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        try {
-          objectLocal4 = null;
-          objectLocal5 = null;
-          if (NetworkSupport010.integerState0585 == 0 &&
-            UiComponentPart011.sceneWidgetPart013State0002 != null) {
-            objectLocal5 = MixedSupport048.stringState0204;
+    private final static void performAction1581(MixedSupport141 mixedSupport141Argument1) {
+        int integerLocal1;
+        int integerLocal2;
+        int integerLocal3;
+        int integerLocal4;
+        int integerLocal5;
+        int[] integerArrayLocal6;
+        int integerLocal7;
+        byte[] byteArrayLocal8;
+        int integerLocal9;
+        int integerLocal10;
+        int integerLocal11;
+        int integerLocal12;
+        int integerLocal13;
+        int[] integerArrayLocal14;
+        int[] integerArrayLocal15;
+        int[] integerArrayLocal16;
+        integerLocal2 = mixedSupport141Argument1.byteState0005;
+        integerLocal3 = mixedSupport141Argument1.integerState0867;
+        integerLocal4 = mixedSupport141Argument1.integerState0864;
+        integerLocal5 = mixedSupport141Argument1.integerState0866;
+        integerArrayLocal15 = SceneWidgetPart014.integerArrayState0257;
+        integerArrayLocal14 = integerArrayLocal15;
+        integerArrayLocal6 = integerArrayLocal14;
+        integerLocal7 = mixedSupport141Argument1.integerState0871;
+        byteArrayLocal8 = mixedSupport141Argument1.byteArrayState0034;
+        integerLocal9 = mixedSupport141Argument1.integerState0869;
+        integerLocal10 = mixedSupport141Argument1.integerState0865;
+        integerLocal11 = integerLocal10;
+        integerLocal12 = mixedSupport141Argument1.integerState0860 + 1;
+        scanLoop1: while (true) {
+          if (integerLocal3 > 0) {
+            while (true) {
+              if (integerLocal10 == 0) {
+                break scanLoop1;
+              }
+              if (integerLocal3 != 1) {
+                byteArrayLocal8[integerLocal9] = (byte)integerLocal2;
+                integerLocal3--;
+                integerLocal9++;
+                integerLocal10--;
+                continue;
+              }
+              break;
+            }
+            if (integerLocal10 == 0) {
+              integerLocal3 = 1;
+              break scanLoop1;
+            }
+            byteArrayLocal8[integerLocal9] = (byte)integerLocal2;
+            integerLocal9++;
+            integerLocal10--;
           }
-          if (2 == NetworkSupport010.integerState0585 &&
-            !MixedSupport056.computeBoolean0675((byte) -53)) {
-            if (!RenderingSupport013.computeBoolean1372(TextLayout.stringState0081, 3)) {
-              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, UiComponentPart029.stringState0496, new String[]{MixedSupport029.stringState0149});
-              if (integerLocal14 != 0) {
-                objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
+          while (integerLocal4 != integerLocal12) {
+            integerArrayLocal16 = integerArrayLocal14;
+            integerLocal2 = (byte)integerLocal5;
+            integerLocal7 = integerArrayLocal16[integerLocal7];
+            integerLocal1 = (byte)integerLocal7;
+            integerLocal7 = integerLocal7 >> 8;
+            integerLocal4++;
+            if (integerLocal1 == integerLocal5) {
+              if (integerLocal4 != integerLocal12) {
+                integerLocal3 = 2;
+                integerLocal7 = integerArrayLocal16[integerLocal7];
+                integerLocal1 = (byte)integerLocal7;
+                integerLocal7 = integerLocal7 >> 8;
+                integerLocal4++;
+                if (integerLocal4 == integerLocal12) {
+                  continue scanLoop1;
+                }
+                if (integerLocal1 != integerLocal5) {
+                  integerLocal5 = integerLocal1;
+                  continue scanLoop1;
+                }
+                integerLocal3 = 3;
+                integerLocal7 = integerArrayLocal16[integerLocal7];
+                integerLocal1 = (byte)integerLocal7;
+                integerLocal7 = integerLocal7 >> 8;
+                integerLocal4++;
+                if (integerLocal4 == integerLocal12) {
+                  continue scanLoop1;
+                }
+                if (integerLocal1 != integerLocal5) {
+                  integerLocal5 = integerLocal1;
+                  continue scanLoop1;
+                }
+                integerLocal7 = integerArrayLocal16[integerLocal7];
+                integerLocal1 = (byte)integerLocal7;
+                integerLocal7 = integerLocal7 >> 8;
+                integerLocal4++;
+                integerLocal3 = (integerLocal1 & 255) + 4;
+                integerLocal7 = integerArrayLocal16[integerLocal7];
+                integerLocal5 = (byte)integerLocal7;
+                integerLocal7 = integerLocal7 >> 8;
+                integerLocal4++;
+                continue scanLoop1;
+              }
+              if (integerLocal10 == 0) {
+                integerLocal3 = 1;
+                break scanLoop1;
               }
             } else {
-              objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(87, MixedSupport023.stringState0105, new String[]{MixedSupport029.stringState0149});
-            }
-            if (GameDomainSupport004.booleanState0087) {
-              UiComponentPart004.performAction0184((String) null, (String) null, (String) (objectLocal5), (byte) 125, 2, 0);
-              UiComponentPart026.performAction1420(13);
-            }
-          }
-          if (null == objectLocal5 &&
-            !ProxySocketFactory.booleanState0169 &&
-            UiComponentPart031.sceneWidgetState0116 == null) {
-            objectLocal5 = UiComponentPart003.stringState0059;
-          }
-          if (null != objectLocal5) {
-            MixedSupport020.performAction0298((String) null, 0, MixedSupport062.integerState0332, (String) (objectLocal5), -24503);
-          } else {
-            stringLocal6 = MixedSupport094.stringState0372;
-            stringLocal6 = UiComponentPart002.computeString0079(107, stringLocal6);
-            stringLocal8 = "";
-            stringLocal9 = "|";
-            integerLocal10 = NetworkSupport010.integerState0585;
-            integerLocal11 = 0;
-            if (integerLocal10 == 2) {
-              stringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(81, NetworkSupport009.stringState0388, new String[]{MixedSupport029.stringState0149});
-              stringLocal12 = NodeHashTableIterator.substituteIndexedPlaceholders(125, CacheWorkQueue.stringState0266, new String[]{stringLocal6});
-              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + UiComponentPart033.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.computeInteger1085(stringLocal12) + MixedSupport038.bitmapFontState0013.computeInteger1085(stringLocal8));
-              if (0 > integerLocal11) {
-                integerLocal11 = 0;
+              integerLocal5 = integerLocal1;
+              if (integerLocal10 == 0) {
+                integerLocal3 = 1;
+                break scanLoop1;
               }
             }
-            if (integerLocal10 != 2 ||
-              integerLocal14 != 0) {
-              if (0 == integerLocal10) {
-                if (MixedSupport016.sceneWidgetPart013State0001 == null &&
-                  MixedSupport061.booleanState0077) {
-                  stringLocal8 = "[" + MixedSupport134.stringState0554 + "] ";
-                }
-                if (null != MixedSupport016.sceneWidgetPart013State0001) {
-                  boolean sharedTailLocal16 = (!(MixedSupport153.booleanState0224) ||
-                    null == MixedSupport033.stringState0158);
-                  if (!sharedTailLocal16) {
-                    stringLocal8 = "[" + MixedSupport033.stringState0158 + "] ";
-                    sharedTailLocal16 = (integerLocal14 != 0);
-                  }
-                  if (sharedTailLocal16) {
-                    stringLocal8 = "[" + NodeHashTableIterator.substituteIndexedPlaceholders(115, PlatformSupport004.stringState0232, new String[]{MixedSupport016.sceneWidgetPart013State0001.stringState0585}) + "] ";
-                  }
-                  integerLocal10 = 1;
+            byteArrayLocal8[integerLocal9] = (byte)integerLocal2;
+            integerLocal9++;
+            integerLocal10--;
+          }
+          integerLocal3 = 0;
+          break;
+        }
+        integerLocal13 = mixedSupport141Argument1.integerState0870;
+        mixedSupport141Argument1.integerState0870 = mixedSupport141Argument1.integerState0870 + (integerLocal11 - integerLocal10);
+        if (mixedSupport141Argument1.integerState0870 >= integerLocal13) {
+        }
+        mixedSupport141Argument1.byteState0005 = (byte) integerLocal2;
+        mixedSupport141Argument1.integerState0867 = integerLocal3;
+        mixedSupport141Argument1.integerState0864 = integerLocal4;
+        mixedSupport141Argument1.integerState0866 = integerLocal5;
+        SceneWidgetPart014.integerArrayState0257 = integerArrayLocal6;
+        mixedSupport141Argument1.integerState0871 = integerLocal7;
+        mixedSupport141Argument1.byteArrayState0034 = byteArrayLocal8;
+        mixedSupport141Argument1.integerState0869 = integerLocal9;
+        mixedSupport141Argument1.integerState0865 = integerLocal10;
+        return;
+    }
+
+    private final static void performAction1582(MixedSupport141 mixedSupport141Argument1) {
+        int cachedIntegerLocal1 = 0;
+        int cachedIntegerLocal2 = 0;
+        int integerLocal3;
+        int integerLocal4;
+        int integerLocal5;
+        int integerLocal6;
+        int integerLocal7;
+        int integerLocal8;
+        int integerLocal9;
+        int integerLocal10;
+        int integerLocal11;
+        int integerLocal12;
+        int integerLocal13;
+        int integerLocal14;
+        int integerLocal15;
+        int integerLocal16;
+        int integerLocal17;
+        int integerLocal18;
+        int integerLocal19;
+        int integerLocal20;
+        int integerLocal21;
+        int integerLocal22;
+        int integerLocal23;
+        int integerLocal24;
+        Object objectLocal25;
+        Object objectLocal26;
+        Object objectLocal27;
+        int integerLocal28;
+        byte[] byteArrayLocal29;
+        int integerLocal30;
+        int integerLocal31;
+        int integerLocal32;
+        int integerLocal33;
+        int integerLocal34;
+        int integerLocal35;
+        int integerLocal36;
+        int integerLocal37;
+        int integerLocal38;
+        byte[] byteArrayLocal39;
+        byte[] byteArrayLocal40;
+        integerLocal6 = 0;
+        integerLocal7 = 0;
+        integerLocal8 = 0;
+        integerLocal9 = 0;
+        integerLocal10 = 0;
+        integerLocal11 = 0;
+        integerLocal12 = 0;
+        integerLocal13 = 0;
+        integerLocal14 = 0;
+        integerLocal15 = 0;
+        integerLocal16 = 0;
+        integerLocal17 = 0;
+        integerLocal18 = 0;
+        integerLocal19 = 0;
+        integerLocal20 = 0;
+        integerLocal21 = 0;
+        integerLocal22 = 0;
+        integerLocal23 = 0;
+        integerLocal24 = 0;
+        objectLocal25 = null;
+        objectLocal26 = null;
+        objectLocal27 = null;
+        mixedSupport141Argument1.integerState0862 = 1;
+        if (SceneWidgetPart014.integerArrayState0257 == null) {
+          SceneWidgetPart014.integerArrayState0257 = new int[mixedSupport141Argument1.integerState0862 * 100000];
+        }
+        integerLocal28 = 1;
+        while (true) {
+          if (integerLocal28 == 0) {
+            return;
+          }
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          if (integerLocal3 == 23) {
+            return;
+          }
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+          if (integerLocal3 == 0) {
+          }
+          mixedSupport141Argument1.integerState0875 = 0;
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
+          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
+          for (integerLocal6 = 0; integerLocal6 < 16; integerLocal6++) {
+            integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+            if (integerLocal3 != 1) {
+              mixedSupport141Argument1.booleanArrayState0012[integerLocal6] = false;
+            } else {
+              mixedSupport141Argument1.booleanArrayState0012[integerLocal6] = true;
+            }
+          }
+          for (integerLocal6 = 0; integerLocal6 < 256; integerLocal6++) {
+            mixedSupport141Argument1.booleanArrayState0013[integerLocal6] = false;
+          }
+          for (integerLocal6 = 0; integerLocal6 < 16; integerLocal6++) {
+            if (mixedSupport141Argument1.booleanArrayState0012[integerLocal6]) {
+              for (integerLocal7 = 0; integerLocal7 < 16; integerLocal7++) {
+                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                if (integerLocal3 == 1) {
+                  mixedSupport141Argument1.booleanArrayState0013[integerLocal6 * 16 + integerLocal7] = true;
                 }
               }
-              if (PcmPlayerService.computeBoolean1436(false)) {
-                stackStringLocal1 = ": ";
+            }
+          }
+          MixedSupport120.performAction1580(mixedSupport141Argument1);
+          integerLocal9 = mixedSupport141Argument1.integerState0872 + 2;
+          integerLocal10 = MixedSupport120.computeInteger1576(3, mixedSupport141Argument1);
+          integerLocal11 = MixedSupport120.computeInteger1576(15, mixedSupport141Argument1);
+          integerLocal6 = 0;
+          while (integerLocal6 < integerLocal11) {
+            integerLocal7 = 0;
+            while (true) {
+              integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+              if (integerLocal3 != 0) {
+                integerLocal7++;
+                continue;
+              }
+              break;
+            }
+            mixedSupport141Argument1.byteArrayState0036[integerLocal6] = (byte)integerLocal7;
+            integerLocal6++;
+          }
+          byteArrayLocal40 = new byte[6];
+          byteArrayLocal39 = byteArrayLocal40;
+          byteArrayLocal29 = byteArrayLocal39;
+          integerLocal32 = 0;
+          while (integerLocal32 < integerLocal10) {
+            byteArrayLocal29[integerLocal32] = (byte)integerLocal32;
+            integerLocal32 = (byte)(integerLocal32 + 1);
+          }
+          for (integerLocal6 = 0; integerLocal6 < integerLocal11; integerLocal6++) {
+            integerLocal32 = mixedSupport141Argument1.byteArrayState0036[integerLocal6];
+            integerLocal31 = byteArrayLocal40[integerLocal32];
+            while (integerLocal32 > 0) {
+              byteArrayLocal29[integerLocal32] = byteArrayLocal29[integerLocal32 - 1];
+              integerLocal32 = (byte)(integerLocal32 - 1);
+            }
+            byteArrayLocal29[0] = (byte)integerLocal31;
+            mixedSupport141Argument1.byteArrayState0038[integerLocal6] = (byte)integerLocal31;
+          }
+          integerLocal8 = 0;
+          while (integerLocal8 < integerLocal10) {
+            integerLocal19 = MixedSupport120.computeInteger1576(5, mixedSupport141Argument1);
+            integerLocal6 = 0;
+            while (true) {
+              if (integerLocal6 >= integerLocal9) {
+                integerLocal8++;
+                break;
+              }
+              while (true) {
+                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                if (integerLocal3 == 0) {
+                  mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6] = (byte)integerLocal19;
+                  integerLocal6++;
+                  break;
+                }
+                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                if (integerLocal3 != 0) {
+                  integerLocal19--;
+                  continue;
+                }
+                integerLocal19++;
+              }
+            }
+          }
+          for (integerLocal8 = 0; integerLocal8 < integerLocal10; integerLocal8++) {
+            integerLocal4 = 32;
+            integerLocal5 = 0;
+            for (integerLocal6 = 0; integerLocal6 < integerLocal9; integerLocal6++) {
+              if (mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6] > integerLocal5) {
+                integerLocal5 = mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6];
+              }
+              if (mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6] < integerLocal4) {
+                integerLocal4 = mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6];
+              }
+            }
+            MixedSupport120.performAction1579(mixedSupport141Argument1.integerArrayArrayState0027[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0028[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0026[integerLocal8], mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8], integerLocal4, integerLocal5, integerLocal9);
+            mixedSupport141Argument1.integerArrayState0251[integerLocal8] = integerLocal4;
+          }
+          integerLocal12 = mixedSupport141Argument1.integerState0872 + 1;
+          integerLocal13 = -1;
+          integerLocal14 = 0;
+          for (integerLocal6 = 0; integerLocal6 <= 255; integerLocal6++) {
+            mixedSupport141Argument1.integerArrayState0255[integerLocal6] = 0;
+          }
+          integerLocal32 = 4095;
+          for (integerLocal30 = 15; integerLocal30 >= 0; integerLocal30--) {
+            for (integerLocal31 = 15; integerLocal31 >= 0; integerLocal31--) {
+              mixedSupport141Argument1.byteArrayState0039[integerLocal32] = (byte)(integerLocal30 * 16 + integerLocal31);
+              integerLocal32--;
+            }
+            mixedSupport141Argument1.integerArrayState0254[integerLocal30] = integerLocal32 + 1;
+          }
+          integerLocal16 = 0;
+          if (integerLocal14 == 0) {
+            integerLocal13++;
+            integerLocal14 = 50;
+            integerLocal23 = mixedSupport141Argument1.byteArrayState0038[integerLocal13];
+            integerLocal24 = mixedSupport141Argument1.integerArrayState0251[integerLocal23];
+            objectLocal25 = mixedSupport141Argument1.integerArrayArrayState0027[integerLocal23];
+            objectLocal27 = mixedSupport141Argument1.integerArrayArrayState0026[integerLocal23];
+            objectLocal26 = mixedSupport141Argument1.integerArrayArrayState0028[integerLocal23];
+          }
+          integerLocal14--;
+          integerLocal20 = integerLocal24;
+          integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+          while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
+            integerLocal20++;
+            integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+            integerLocal21 = integerLocal21 << 1 | integerLocal22;
+          }
+          integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
+          while (true) {
+            if (integerLocal15 == integerLocal12) {
+              mixedSupport141Argument1.integerState0867 = 0;
+              mixedSupport141Argument1.byteState0005 = (byte) 0;
+              mixedSupport141Argument1.integerArrayState0253[0] = 0;
+              for (integerLocal6 = 1; integerLocal6 <= 256; integerLocal6++) {
+                mixedSupport141Argument1.integerArrayState0253[integerLocal6] = mixedSupport141Argument1.integerArrayState0255[integerLocal6 - 1];
+              }
+              for (integerLocal6 = 1; integerLocal6 <= 256; integerLocal6++) {
+                mixedSupport141Argument1.integerArrayState0253[integerLocal6] = mixedSupport141Argument1.integerArrayState0253[integerLocal6] + mixedSupport141Argument1.integerArrayState0253[integerLocal6 - 1];
+              }
+              for (integerLocal6 = 0; integerLocal6 < integerLocal16; integerLocal6++) {
+                integerLocal3 = (byte)(SceneWidgetPart014.integerArrayState0257[integerLocal6] & 255);
+                cachedIntegerLocal1 = mixedSupport141Argument1.integerArrayState0253[integerLocal3 & 255];
+                SceneWidgetPart014.integerArrayState0257[cachedIntegerLocal1] = SceneWidgetPart014.integerArrayState0257[cachedIntegerLocal1] | integerLocal6 << 8;
+                mixedSupport141Argument1.integerArrayState0253[integerLocal3 & 255] = mixedSupport141Argument1.integerArrayState0253[integerLocal3 & 255] + 1;
+              }
+              mixedSupport141Argument1.integerState0871 = SceneWidgetPart014.integerArrayState0257[mixedSupport141Argument1.integerState0875] >> 8;
+              mixedSupport141Argument1.integerState0864 = 0;
+              mixedSupport141Argument1.integerState0871 = SceneWidgetPart014.integerArrayState0257[mixedSupport141Argument1.integerState0871];
+              mixedSupport141Argument1.integerState0866 = (byte)(mixedSupport141Argument1.integerState0871 & 255);
+              mixedSupport141Argument1.integerState0871 = mixedSupport141Argument1.integerState0871 >> 8;
+              mixedSupport141Argument1.integerState0864 = mixedSupport141Argument1.integerState0864 + 1;
+              mixedSupport141Argument1.integerState0860 = integerLocal16;
+              MixedSupport120.performAction1581(mixedSupport141Argument1);
+              if (mixedSupport141Argument1.integerState0864 == mixedSupport141Argument1.integerState0860 + 1 &&
+                mixedSupport141Argument1.integerState0867 == 0) {
+                integerLocal28 = 1;
+                break;
+              }
+              integerLocal28 = 0;
+              break;
+            }
+            if (integerLocal15 != 0 &&
+              integerLocal15 != 1) {
+              integerLocal36 = integerLocal15 - 1;
+              if (integerLocal36 < 16) {
+                integerLocal33 = mixedSupport141Argument1.integerArrayState0254[0];
+                integerLocal3 = mixedSupport141Argument1.byteArrayState0039[integerLocal33 + integerLocal36];
+                while (integerLocal36 > 3) {
+                  integerLocal37 = integerLocal33 + integerLocal36;
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal37] = mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 1];
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 1] = mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 2];
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 2] = mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 3];
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 3] = mixedSupport141Argument1.byteArrayState0039[integerLocal37 - 4];
+                  integerLocal36 -= 4;
+                }
+                while (integerLocal36 > 0) {
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal33 + integerLocal36] = mixedSupport141Argument1.byteArrayState0039[integerLocal33 + integerLocal36 - 1];
+                  integerLocal36--;
+                }
+                mixedSupport141Argument1.byteArrayState0039[integerLocal33] = (byte)integerLocal3;
               } else {
-                stackStringLocal1 = "<img=3>: ";
-              }
-              stringLocal15 = stackStringLocal1;
-              stringLocal8 = stringLocal8 + stringLocal6 + stringLocal15;
-              if (!MixedSupport151.booleanState0221) {
-                if (PacketBuffer.booleanState0228) {
-                  stringLocal9 = "";
-                  stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport018.stringState0092 + "</col>";
-                  if (integerLocal14 != 0) {
-                    stringLocal9 = "";
-                    stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport145.stringState0591 + "</col>";
+                integerLocal34 = integerLocal36 / 16;
+                integerLocal35 = integerLocal36 % 16;
+                integerLocal38 = mixedSupport141Argument1.integerArrayState0254[integerLocal34] + integerLocal35;
+                integerLocal33 = integerLocal38;
+                integerLocal3 = mixedSupport141Argument1.byteArrayState0039[integerLocal38];
+                while (integerLocal38 > mixedSupport141Argument1.integerArrayState0254[integerLocal34]) {
+                  mixedSupport141Argument1.byteArrayState0039[integerLocal38] = mixedSupport141Argument1.byteArrayState0039[integerLocal38 - 1];
+                  integerLocal38--;
+                }
+                mixedSupport141Argument1.integerArrayState0254[integerLocal34] = mixedSupport141Argument1.integerArrayState0254[integerLocal34] + 1;
+                while (integerLocal34 > 0) {
+                  mixedSupport141Argument1.integerArrayState0254[integerLocal34] = mixedSupport141Argument1.integerArrayState0254[integerLocal34] - 1;
+                  mixedSupport141Argument1.byteArrayState0039[mixedSupport141Argument1.integerArrayState0254[integerLocal34]] = mixedSupport141Argument1.byteArrayState0039[mixedSupport141Argument1.integerArrayState0254[integerLocal34 - 1] + 16 - 1];
+                  integerLocal34--;
+                }
+                mixedSupport141Argument1.integerArrayState0254[0] = mixedSupport141Argument1.integerArrayState0254[0] - 1;
+                mixedSupport141Argument1.byteArrayState0039[mixedSupport141Argument1.integerArrayState0254[0]] = (byte)integerLocal3;
+                if (mixedSupport141Argument1.integerArrayState0254[0] == 0) {
+                  integerLocal32 = 4095;
+                  for (integerLocal30 = 15; integerLocal30 >= 0; integerLocal30--) {
+                    for (integerLocal31 = 15; integerLocal31 >= 0; integerLocal31--) {
+                      mixedSupport141Argument1.byteArrayState0039[integerLocal32] = mixedSupport141Argument1.byteArrayState0039[mixedSupport141Argument1.integerArrayState0254[integerLocal30] + integerLocal31];
+                      integerLocal32--;
+                    }
+                    mixedSupport141Argument1.integerArrayState0254[integerLocal30] = integerLocal32 + 1;
                   }
+                }
+              }
+              cachedIntegerLocal2 = mixedSupport141Argument1.byteArrayState0035[integerLocal3 & 255] & 255;
+              mixedSupport141Argument1.integerArrayState0255[cachedIntegerLocal2] = mixedSupport141Argument1.integerArrayState0255[cachedIntegerLocal2] + 1;
+              SceneWidgetPart014.integerArrayState0257[integerLocal16] = mixedSupport141Argument1.byteArrayState0035[integerLocal3 & 255] & 255;
+              integerLocal16++;
+              if (integerLocal14 == 0) {
+                integerLocal13++;
+                integerLocal14 = 50;
+                integerLocal23 = mixedSupport141Argument1.byteArrayState0038[integerLocal13];
+                integerLocal24 = mixedSupport141Argument1.integerArrayState0251[integerLocal23];
+                objectLocal25 = mixedSupport141Argument1.integerArrayArrayState0027[integerLocal23];
+                objectLocal27 = mixedSupport141Argument1.integerArrayArrayState0026[integerLocal23];
+                objectLocal26 = mixedSupport141Argument1.integerArrayArrayState0028[integerLocal23];
+              }
+              integerLocal14--;
+              integerLocal20 = integerLocal24;
+              integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+              while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
+                integerLocal20++;
+                integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal21 = integerLocal21 << 1 | integerLocal22;
+              }
+              integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
+              continue;
+            }
+            integerLocal17 = -1;
+            integerLocal18 = 1;
+            do {
+              if (integerLocal15 != 0) {
+                if (integerLocal15 == 1) {
+                  integerLocal17 = integerLocal17 + 2 * integerLocal18;
                 }
               } else {
-                stringLocal9 = "";
-                stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport145.stringState0591 + "</col>";
+                integerLocal17 = integerLocal17 + 1 * integerLocal18;
               }
-              integerLocal13 = MixedSupport038.bitmapFontState0013.computeInteger1085(stringLocal8);
-              if (!PcmPlayerService.computeBoolean1436(false)) {
-                if (UiComponentPart033.sceneWidgetState0150.booleanState0218 &&
-                  (HashNode.integerState0069 - UiComponentPart033.sceneWidgetState0150.integerState0892) < integerLocal13) {
-                  if (MixedSupport151.booleanState0221) {
-                    objectLocal4 = "Broken!";
-                  } else {
-                    objectLocal4 = MixedSupport018.stringState0092;
-                  }
-                }
-                if (UiComponentPart033.sceneWidgetState0150.integerState0891 != 0 &&
-                  integerLocal13 > UiComponentPart033.sceneWidgetState0150.integerState0897 &&
-                  !MixedSupport151.booleanState0221) {
-                  NetworkSupport001.performAction0061(-1045);
-                }
+              integerLocal18 = integerLocal18 * 2;
+              if (integerLocal14 == 0) {
+                integerLocal13++;
+                integerLocal14 = 50;
+                integerLocal23 = mixedSupport141Argument1.byteArrayState0038[integerLocal13];
+                integerLocal24 = mixedSupport141Argument1.integerArrayState0251[integerLocal23];
+                objectLocal25 = mixedSupport141Argument1.integerArrayArrayState0027[integerLocal23];
+                objectLocal27 = mixedSupport141Argument1.integerArrayArrayState0026[integerLocal23];
+                objectLocal26 = mixedSupport141Argument1.integerArrayArrayState0028[integerLocal23];
               }
-            }
-            MixedSupport020.performAction0298(stringLocal9, integerLocal11, MixedSupport129.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.computeString1103(UiComponentPart008.stringBuilderState0001.toString()), -24503);
-            if (!LoginCredentials.booleanState0085) {
-              DiagnosticSupport002.sceneWidgetState0057.booleanState0218 = false;
-            }
-            if (DiagnosticSupport002.sceneWidgetState0057.booleanState0218) {
-              objectLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(126, MixedSupport144.stringState0590, new String[]{stringLocal6, MixedSupport029.stringState0149});
+              integerLocal14--;
+              integerLocal20 = integerLocal24;
+              integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+              while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
+                integerLocal20++;
+                integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal21 = integerLocal21 << 1 | integerLocal22;
+              }
+              integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
+            } while (integerLocal15 == 0 ||
+              integerLocal15 == 1);
+            integerLocal17++;
+            integerLocal3 = mixedSupport141Argument1.byteArrayState0035[mixedSupport141Argument1.byteArrayState0039[mixedSupport141Argument1.integerArrayState0254[0]] & 255];
+            mixedSupport141Argument1.integerArrayState0255[integerLocal3 & 255] = mixedSupport141Argument1.integerArrayState0255[integerLocal3 & 255] + integerLocal17;
+            while (integerLocal17 > 0) {
+              SceneWidgetPart014.integerArrayState0257[integerLocal16] = integerLocal3 & 255;
+              integerLocal16++;
+              integerLocal17--;
             }
           }
-          integerLocal7 = 125 % ((30 - integerArgument1) / 41);
-          stackObjectLocal2 = objectLocal4;
-          return (String) (stackObjectLocal2);
-        } catch (java.lang.RuntimeException caughtParameterLocal17) {
-          caughtExceptionLocal3 = caughtParameterLocal17;
-          objectLocal4 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) (objectLocal4), "sf.C(" + integerArgument1 + ')');
         }
     }
 
-    abstract int computeInteger0469(boolean booleanArgument1);
-
-    public static void performAction1515(byte byteArgument1) {
-        RuntimeException caughtExceptionLocal1 = null;
-        RuntimeException runtimeExceptionLocal2 = null;
-        try {
-          longArrayState0009 = null;
-          stringArrayState0041 = null;
-          if (byteArgument1 > -123) {
-            integerState0746 = -69;
+    private final static void performAction1579(int[] integerArrayArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, byte[] byteArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+        int integerLocal1 = 0;
+        int cachedIntegerLocal2 = 0;
+        int integerLocal3;
+        int integerLocal4;
+        int integerLocal5;
+        int integerLocal6;
+        int integerLocal7;
+        int integerLocal8;
+        int integerLocal9;
+        int integerLocal10;
+        int integerLocal11;
+        integerLocal3 = 0;
+        for (integerLocal4 = integerArgument5; integerLocal4 <= integerArgument6; integerLocal4++) {
+          for (integerLocal1 = 0; integerLocal1 < integerArgument7; integerLocal1++) {
+            if (byteArrayArgument4[integerLocal1] == integerLocal4) {
+              integerArrayArgument3[integerLocal3] = integerLocal1;
+              integerLocal3++;
+            }
           }
-          integerArrayState0205 = null;
-          return;
-        } catch (java.lang.RuntimeException caughtParameterLocal3) {
-          caughtExceptionLocal1 = caughtParameterLocal3;
-          runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "sf.A(" + byteArgument1 + ')');
+        }
+        for (integerLocal6 = 0; integerLocal6 < 23; integerLocal6++) {
+          integerArrayArgument2[integerLocal6] = 0;
+        }
+        for (integerLocal7 = 0; integerLocal7 < integerArgument7; integerLocal7++) {
+          cachedIntegerLocal2 = byteArrayArgument4[integerLocal7] + 1;
+          integerArrayArgument2[cachedIntegerLocal2] = integerArrayArgument2[cachedIntegerLocal2] + 1;
+        }
+        for (integerLocal8 = 1; integerLocal8 < 23; integerLocal8++) {
+          integerArrayArgument2[integerLocal8] = integerArrayArgument2[integerLocal8] + integerArrayArgument2[integerLocal8 - 1];
+        }
+        for (integerLocal9 = 0; integerLocal9 < 23; integerLocal9++) {
+          integerArrayArgument1[integerLocal9] = 0;
+        }
+        integerLocal5 = 0;
+        for (integerLocal10 = integerArgument5; integerLocal10 <= integerArgument6; integerLocal10++) {
+          integerLocal5 = integerLocal5 + (integerArrayArgument2[integerLocal10 + 1] - integerArrayArgument2[integerLocal10]);
+          integerArrayArgument1[integerLocal10] = integerLocal5 - 1;
+          integerLocal5 = integerLocal5 << 1;
+        }
+        for (integerLocal11 = integerArgument5 + 1; integerLocal11 <= integerArgument6; integerLocal11++) {
+          integerArrayArgument2[integerLocal11] = (integerArrayArgument1[integerLocal11 - 1] + 1 << 1) - integerArrayArgument2[integerLocal11];
         }
     }
 
-    MixedSupport120() {
-        this.booleanState0173 = true;
+    private final static void performAction1580(MixedSupport141 mixedSupport141Argument1) {
+        int integerLocal1 = 0;
+        mixedSupport141Argument1.integerState0872 = 0;
+        for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {
+          if (mixedSupport141Argument1.booleanArrayState0013[integerLocal1]) {
+            mixedSupport141Argument1.byteArrayState0035[mixedSupport141Argument1.integerState0872] = (byte)integerLocal1;
+            mixedSupport141Argument1.integerState0872 = mixedSupport141Argument1.integerState0872 + 1;
+          }
+        }
+    }
+
+    public static void clearStaticReferences() {
+        mixedSupport141State0001 = null;
+    }
+
+    private final static byte computeByte1583(MixedSupport141 mixedSupport141Argument1) {
+        return (byte)MixedSupport120.computeInteger1576(1, mixedSupport141Argument1);
+    }
+
+    final static int computeInteger1578(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
+        int stackIntegerLocal1 = 0;
+        Throwable caughtExceptionLocal2 = null;
+        Object objectLocal3 = null;
+        objectLocal3 = mixedSupport141State0001;
+        synchronized (objectLocal3) {
+          mixedSupport141State0001.byteArrayState0037 = byteArrayArgument3;
+          mixedSupport141State0001.integerState0863 = integerArgument5;
+          mixedSupport141State0001.byteArrayState0034 = byteArrayArgument1;
+          mixedSupport141State0001.integerState0869 = 0;
+          mixedSupport141State0001.integerState0865 = integerArgument2;
+          mixedSupport141State0001.integerState0868 = 0;
+          mixedSupport141State0001.integerState0861 = 0;
+          mixedSupport141State0001.integerState0874 = 0;
+          mixedSupport141State0001.integerState0870 = 0;
+          MixedSupport120.performAction1582(mixedSupport141State0001);
+          integerArgument2 = integerArgument2 - mixedSupport141State0001.integerState0865;
+          mixedSupport141State0001.byteArrayState0037 = null;
+          mixedSupport141State0001.byteArrayState0034 = null;
+          stackIntegerLocal1 = integerArgument2;
+        }
+        return stackIntegerLocal1;
+    }
+
+    private final static byte computeByte1577(MixedSupport141 mixedSupport141Argument1) {
+        return (byte)MixedSupport120.computeInteger1576(8, mixedSupport141Argument1);
+    }
+
+    private final static int computeInteger1576(int integerArgument1, MixedSupport141 mixedSupport141Argument2) {
+        int integerLocal1;
+        while (mixedSupport141Argument2.integerState0868 < integerArgument1) {
+          mixedSupport141Argument2.integerState0861 = mixedSupport141Argument2.integerState0861 << 8 | mixedSupport141Argument2.byteArrayState0037[mixedSupport141Argument2.integerState0863] & 255;
+          mixedSupport141Argument2.integerState0868 = mixedSupport141Argument2.integerState0868 + 8;
+          mixedSupport141Argument2.integerState0863 = mixedSupport141Argument2.integerState0863 + 1;
+          mixedSupport141Argument2.integerState0874 = mixedSupport141Argument2.integerState0874 + 1;
+          if (mixedSupport141Argument2.integerState0874 != 0) {
+            continue;
+          }
+        }
+        integerLocal1 = mixedSupport141Argument2.integerState0861 >> mixedSupport141Argument2.integerState0868 - integerArgument1 & (1 << integerArgument1) - 1;
+        mixedSupport141Argument2.integerState0868 = mixedSupport141Argument2.integerState0868 - integerArgument1;
+        return integerLocal1;
     }
 
     static {
-        integerArrayState0205 = new int[8192];
-        longArrayState0009 = new long[32];
-        integerState0746 = 0;
-        stringArrayState0041 = new String[]{"All scores", "My scores", "Best each"};
+        mixedSupport141State0001 = new MixedSupport141();
     }
 }

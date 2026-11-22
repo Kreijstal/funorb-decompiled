@@ -17,7 +17,7 @@ final class MixedSupport003 extends DualNode {
         if (byteArgument1 > -68) {
           MixedSupport003.performAction0042((byte) 55);
         }
-        MixedSupport074.integerState0396 = 0;
+        MixedSupport070.integerState0396 = 0;
         RenderingSupport002.performAction0247(true);
     }
 
@@ -35,12 +35,12 @@ final class MixedSupport003 extends DualNode {
         String stackStringLocal11 = null;
         RuntimeException caughtExceptionLocal12 = null;
         try {
-          integerLocal1 = resourceArchiveArgument4.computeInteger0832(-1, stringArgument2);
-          integerLocal3 = resourceArchiveArgument4.computeInteger0819(integerLocal1, 13030, stringArgument3);
+          integerLocal1 = resourceArchiveArgument4.computeInteger0819(-1, stringArgument2);
+          integerLocal3 = resourceArchiveArgument4.computeInteger0806(integerLocal1, 13030, stringArgument3);
           if (integerArgument1 != 0) {
             MixedSupport003.performAction0043((byte) 24);
           }
-          stackRgbSpriteArrayLocal4 = NodeHashTable.computeRgbSpriteArray1526(integerLocal3, integerLocal1, resourceArchiveArgument4, (byte) -46);
+          stackRgbSpriteArrayLocal4 = NodeHashTable.computeRgbSpriteArray1499(integerLocal3, integerLocal1, resourceArchiveArgument4, (byte) -46);
           return stackRgbSpriteArrayLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal12 = caughtParameterLocal13;
@@ -64,7 +64,7 @@ final class MixedSupport003 extends DualNode {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class MixedSupport003 extends DualNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class MixedSupport003 extends DualNode {
                 if (0 == integerLocal14) {
                   stackCharacterLocal3 = (char)0;
                 } else {
-                  stackCharacterLocal3 = DiagnosticSupport002.computeCharacter0774((byte) integerLocal14, (byte) 78);
+                  stackCharacterLocal3 = DiagnosticSupport002.computeCharacter0762((byte) integerLocal14, (byte) 78);
                 }
                 stackCharacterArrayLocal1[stackIntegerLocal2] = stackCharacterLocal3;
               }
@@ -160,7 +160,7 @@ final class MixedSupport003 extends DualNode {
                   if (integerLocal14 == 0) {
                     stackCharacterLocal6 = (char)0;
                   } else {
-                    stackCharacterLocal6 = DiagnosticSupport002.computeCharacter0774((byte) integerLocal14, (byte) 88);
+                    stackCharacterLocal6 = DiagnosticSupport002.computeCharacter0762((byte) integerLocal14, (byte) 88);
                   }
                   stackCharacterArrayLocal4[stackIntegerLocal5] = stackCharacterLocal6;
                 }
@@ -183,7 +183,7 @@ final class MixedSupport003 extends DualNode {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
@@ -197,14 +197,14 @@ final class MixedSupport003 extends DualNode {
         }
         if (this.integerArrayState0005 != null) {
           for (integerLocal2 = 0; integerLocal2 < this.integerArrayState0005.length; integerLocal2++) {
-            this.integerArrayState0005[integerLocal2] = UiComponentPart006.computeInteger0357(this.integerArrayState0005[integerLocal2], 32768);
+            this.integerArrayState0005[integerLocal2] = UiComponentPart006.bitwiseOr(this.integerArrayState0005[integerLocal2], 32768);
           }
         }
         if (this.integerArrayState0004 != null) {
           integerLocal1 = 0;
           integerLocal4 = integerLocal1;
           while (integerLocal1 < this.integerArrayState0004.length) {
-            this.integerArrayState0004[integerLocal1] = UiComponentPart006.computeInteger0357(this.integerArrayState0004[integerLocal1], 32768);
+            this.integerArrayState0004[integerLocal1] = UiComponentPart006.bitwiseOr(this.integerArrayState0004[integerLocal1], 32768);
             integerLocal1++;
           }
         }

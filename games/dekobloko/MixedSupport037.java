@@ -6,7 +6,7 @@ final class MixedSupport037 {
     static int integerState0224;
     private static String stringState0175;
 
-    public static void performAction0522(byte byteArgument1) {
+    public static void performAction0519(byte byteArgument1) {
         stringState0174 = null;
         int integerLocal1 = -37 / ((-34 - byteArgument1) / 50);
     }

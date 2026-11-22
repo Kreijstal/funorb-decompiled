@@ -1,58 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport075 extends HashNode {
-    int integerState0406;
-    AsyncTask[] asyncTaskArrayState0001;
-    int[] integerArrayState0135;
-    AsyncTask[] asyncTaskArrayState0002;
-    int integerState0407;
-    static MixedSupport139 mixedSupport139State0005;
-    int[] integerArrayState0136;
-    static MixedSupport004 mixedSupport004State0002;
-    byte[][][] byteArrayArrayArrayState0002;
-    static RgbSprite rgbSpriteState0027;
-    static int[] integerArrayState0137;
-    static String stringState0316;
-    int[] integerArrayState0138;
-    static MixedSupport084 mixedSupport084State0002;
-    static SceneWidget sceneWidgetState0070;
-    static String stringState0317;
+final class MixedSupport075 {
+    static String stringState0323;
+    static boolean booleanState0098;
+    int integerState0420;
+    static String stringState0324;
+    NodeDeque nodeDequeState0014;
+    static RgbSprite rgbSpriteState0030;
+    static String stringState0325;
+    int integerState0421;
+    static long longState0026;
 
-    public static void clearStaticReferences(boolean booleanArgument1) {
-        if (booleanArgument1) {
-          mixedSupport139State0005 = null;
-          sceneWidgetState0070 = null;
-          stringState0316 = null;
-          mixedSupport084State0002 = null;
-          mixedSupport004State0002 = null;
-          integerArrayState0137 = null;
-          stringState0317 = null;
-          rgbSpriteState0027 = null;
+    public static void performAction0929(int integerArgument1) {
+        stringState0323 = null;
+        stringState0324 = null;
+        if (integerArgument1 == -19893) {
+          rgbSpriteState0030 = null;
+          stringState0325 = null;
           return;
         }
+        MixedSupport075.performAction0929(101);
+        rgbSpriteState0030 = null;
+        stringState0325 = null;
     }
 
-    final static void performAction0933(int integerArgument1, int integerArgument2, int integerArgument3) {
-        if (integerArgument1 != 11024) {
-          MixedSupport075.performAction0933(-96, 40, 17);
-          MixedSupport131.integerState0790 = integerArgument3;
-          MixedSupport117.integerState0726 = integerArgument2;
-          return;
-        }
-        MixedSupport131.integerState0790 = integerArgument3;
-        MixedSupport117.integerState0726 = integerArgument2;
-    }
-
-    MixedSupport075() {
+    static int computeInteger0930(int integerArgument1, int integerArgument2) {
+        return integerArgument1 & integerArgument2;
     }
 
     static {
-        mixedSupport139State0005 = new MixedSupport139();
-        stringState0316 = "Unable to delete friend - system busy";
-        integerArrayState0137 = new int[8192];
-        mixedSupport004State0002 = new MixedSupport004();
-        mixedSupport084State0002 = new MixedSupport084();
-        stringState0317 = "Bugs";
+        booleanState0098 = true;
+        stringState0323 = "You must play <%1> more rated games before playing with the current options.";
+        stringState0324 = "Show chat (1 unread message)";
+        stringState0325 = "Inviting <%0>";
     }
 }
