@@ -31,7 +31,7 @@ final class pe {
         var1.unlink(param0 - 25194);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
           return;
         }

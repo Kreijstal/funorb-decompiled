@@ -150,7 +150,7 @@ final class bn {
         this.e(-1);
         this.field_j.c(-1);
         if (param0 != 0) {
-          bn.a(true);
+          bn.clearStaticReferences(true);
         }
     }
 
@@ -238,7 +238,7 @@ final class bn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -472,7 +472,7 @@ final class bn {
               }
             }
             if (param1 >= -17) {
-              bn.a(false);
+              bn.clearStaticReferences(false);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -17,7 +17,7 @@ final class gl {
         field_i = field_a / 2;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = null;
         field_h = null;
         field_g = null;

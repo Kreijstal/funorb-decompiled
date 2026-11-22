@@ -107,7 +107,7 @@ final class w extends hd {
 
     final il a(int param0, byte param1) {
         if (param1 != -76) {
-          w.b(-56);
+          w.clearStaticReferences(-56);
         }
         il dupTemp$0 = new il();
         this.field_s[param0] = dupTemp$0;
@@ -180,7 +180,7 @@ final class w extends hd {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 3) {
           return;
         }

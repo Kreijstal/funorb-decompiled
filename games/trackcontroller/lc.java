@@ -29,7 +29,7 @@ final class lc extends td implements ButtonListener {
         this.field_I = param0;
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         if (param0 <= 111) {
           field_E = (String) null;

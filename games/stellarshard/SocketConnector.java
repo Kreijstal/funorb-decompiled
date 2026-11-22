@@ -14,7 +14,7 @@ abstract class SocketConnector {
 
     final static int[] a(int param0, int param1, int param2) {
         if (param0 > -110) {
-          SocketConnector.a((byte) 75);
+          SocketConnector.clearStaticReferences((byte) 75);
         }
         int var3 = hd.a(param1, 49);
         int var4 = lc.a(param1, false);
@@ -27,7 +27,7 @@ abstract class SocketConnector {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 < 45) {
           return;

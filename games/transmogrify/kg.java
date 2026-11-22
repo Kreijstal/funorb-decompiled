@@ -816,7 +816,7 @@ abstract class kg extends DualLinkNode {
         return this.a(param0, new int[]{param1}, field_s);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_E = null;
         field_s = null;
     }

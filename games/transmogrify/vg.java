@@ -456,7 +456,7 @@ final class vg {
                     }
                     vk.a((byte) 83, FullscreenFocusCanvas.field_d[0]);
                     if (null != ub.field_c) {
-                      qd.b(5);
+                      GzipDecompressor.b(5);
                     } else {
                       var9 = param0 ? 1 : 0;
                       dj.a(param2, var9 != 0);
@@ -724,7 +724,7 @@ final class vg {
             if (!uf.a(var4.charAt(0), (byte) -56) &&
               !uf.a(var4.charAt(-1 + var4.length()), (byte) -104)) {
               if (param2 != 26) {
-                vg.a((byte) -35);
+                vg.clearStaticReferences((byte) -35);
               }
               var5 = 0;
               for (var6 = 0; var6 < param1.length(); var6++) {
@@ -761,7 +761,7 @@ final class vg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -60) {
           return;
         }

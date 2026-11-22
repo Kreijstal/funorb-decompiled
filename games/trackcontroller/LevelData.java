@@ -196,7 +196,7 @@ final class LevelData extends LevelGrid {
 
     final static int b(boolean param0, int param1) {
         if (param0) {
-          LevelData.d((byte) 81);
+          LevelData.clearStaticReferences((byte) 81);
         }
         int var2 = 0;
         if (0 > param1 ||
@@ -223,7 +223,7 @@ final class LevelData extends LevelGrid {
         return param1 + var2;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         field_w = null;
         field_t = null;

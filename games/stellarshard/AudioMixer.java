@@ -163,7 +163,7 @@ class AudioMixer {
         this.field_r = param0;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_p = null;
     }
 

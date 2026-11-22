@@ -17,7 +17,7 @@ final class jg {
         return jg.a(var4);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_h = (float[][]) null;
         field_a = (int[][]) null;
     }

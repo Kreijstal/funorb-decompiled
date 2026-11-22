@@ -3978,9 +3978,9 @@ final class re {
           }
         }
         if (rl.field_c >= 9) {
-          stackIn_50_0 = fh.field_d + (rl.field_c + 1);
+          stackIn_50_0 = GzipDecompressor.field_d + (rl.field_c + 1);
         } else {
-          stackIn_50_0 = fh.field_d + '0' + (1 + rl.field_c);
+          stackIn_50_0 = GzipDecompressor.field_d + '0' + (1 + rl.field_c);
         }
         var11 = stackIn_50_0;
         var5Lifetime2 = var11;

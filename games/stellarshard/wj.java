@@ -98,7 +98,7 @@ final class wj extends fb {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (sl.field_d == oa.field_C) {
+            if (GzipDecompressor.field_d == oa.field_C) {
               if (!param5) {
                 le.field_n = h.a(param0, (byte) -117, false, param3);
               } else {
@@ -109,30 +109,30 @@ final class wj extends fb {
               pg.field_fb.writeByte(false, 14);
               pg.field_fb.writeByte(false, le.field_n.a(160).field_h);
               ue.a((byte) 114, -1);
-              sl.field_d = de.field_a;
+              GzipDecompressor.field_d = de.field_a;
             }
             var6_int = 119 / ((param4 + 28) / 43);
-            if (sl.field_d == de.field_a &&
+            if (GzipDecompressor.field_d == de.field_a &&
               GameEntity.b(64, 1)) {
               var7 = ae.field_N.readUnsignedByte(4);
               ae.field_N.position = 0;
               if (var7 == 0) {
-                sl.field_d = vg.field_p;
+                GzipDecompressor.field_d = vg.field_p;
               } else {
-                sl.field_d = ih.field_a;
+                GzipDecompressor.field_d = ih.field_a;
                 ue.field_b = -1;
                 ja.field_t = var7;
               }
             }
-            if (sl.field_d == vg.field_p &&
+            if (GzipDecompressor.field_d == vg.field_p &&
               GameEntity.b(64, 8)) {
               ob.field_a = ae.field_N.readLong(0);
               ae.field_N.position = 0;
               cd.a(54, param2, le.field_n, param1, param5);
-              sl.field_d = lb.field_o;
+              GzipDecompressor.field_d = lb.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (sl.field_d == lb.field_o &&
+            if (GzipDecompressor.field_d == lb.field_o &&
               GameEntity.b(64, 1)) {
               var7Lifetime1 = ae.field_N.readUnsignedByte(4);
               ja.field_t = var7Lifetime1;
@@ -141,7 +141,7 @@ final class wj extends fb {
               if (var7Lifetime1 != 0 &&
                 var7Lifetime1 != 1) {
                 if (8 != var7Lifetime1) {
-                  sl.field_d = ih.field_a;
+                  GzipDecompressor.field_d = ih.field_a;
                   ue.field_b = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -154,10 +154,10 @@ final class wj extends fb {
               }
               if (decompiledFrameRemainder0) {
                 ue.field_b = -1;
-                sl.field_d = ge.field_m;
+                GzipDecompressor.field_d = ge.field_m;
               }
             }
-            if (sl.field_d == ge.field_m &&
+            if (GzipDecompressor.field_d == ge.field_m &&
               cd.e((byte) 125)) {
               we.field_a = ae.field_N.readLong(0);
               ph.field_D = ae.field_N.readUnsignedByte(4);
@@ -190,7 +190,7 @@ final class wj extends fb {
               var12 = (CharSequence) ((Object) wf.field_b);
               wb.field_b = nh.a(var12, false);
               ag.field_c = ae.field_N.readUnsignedByte(4);
-              sl.field_d = la.field_O;
+              GzipDecompressor.field_d = la.field_O;
               if (le.field_n.a(160) != hc.field_s) {
                 if (le.field_n.a(160) == ea.field_o) {
                   ak.field_d.a(hf.a((byte) -34), (byte) 73);
@@ -229,7 +229,7 @@ final class wj extends fb {
               stackIn_72_0 = ja.field_t;
               return stackIn_72_0;
             }
-            if (ih.field_a == sl.field_d &&
+            if (ih.field_a == GzipDecompressor.field_d &&
               cd.e((byte) 123)) {
               IntrusiveDeque.c(-2290);
               if (ja.field_t == 7 &&

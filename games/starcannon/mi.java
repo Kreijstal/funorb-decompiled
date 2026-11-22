@@ -17,7 +17,7 @@ abstract class mi extends DualLinkNode {
         try {
           ve.field_d = true;
           if (param0 != 1048576) {
-            mi.d(35);
+            mi.clearStaticReferences(35);
           }
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
@@ -79,7 +79,7 @@ abstract class mi extends DualLinkNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }

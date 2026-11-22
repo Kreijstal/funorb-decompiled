@@ -163,14 +163,14 @@ final class bf {
           }
         }
         if (param0 != -1) {
-          bf.a(48);
+          bf.clearStaticReferences(48);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           this.field_c[var2Lifetime3] = ga.a(this.field_c[var2Lifetime3], ga.a(this.field_h[var2Lifetime3], this.field_l[var2Lifetime3]));
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_f = (bd[][]) null;
         field_d = null;

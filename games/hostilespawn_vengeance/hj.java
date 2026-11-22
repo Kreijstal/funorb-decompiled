@@ -22,7 +22,7 @@ final class hj extends DualLinkNode {
           var7_int = 0;
           var9 = param1;
           if (param5 != 32101) {
-            hj.e(123);
+            hj.clearStaticReferences(123);
           }
           while (var9 < param4 + param1) {
             var8 = param3 + (-param3 + param2) * (var9 - param1) / param4;
@@ -37,7 +37,7 @@ final class hj extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_t = null;
         field_s = null;

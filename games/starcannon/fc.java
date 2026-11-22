@@ -82,7 +82,7 @@ final class fc {
             var15 = var6[var9];
             id[] var10 = var15;
             for (var11_int = 0; var11_int < var15.length; var11_int++) {
-              var15[var11_int] = nc.a((byte) -106, var5[var9], var20[var11_int]);
+              var15[var11_int] = GzipDecompressor.a((byte) -106, var5[var9], var20[var11_int]);
             }
           }
           var9Lifetime1 = var18.field_v;

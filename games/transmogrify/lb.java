@@ -13,7 +13,7 @@ final class lb {
     static int field_i;
     static int field_j;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 62) {
           field_g = (int[][]) null;
         }

@@ -556,9 +556,9 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (bi.field_L == 3 &&
           ud.a(nd.field_n, true, RasterBuffer.field_c, wi.field_e) &&
-          qd.a(nd.field_n, (byte) -109)) {
+          GzipDecompressor.a(nd.field_n, (byte) -109)) {
           BufferedSocket.e(0);
-          wl.p(121);
+          wl.clearStaticReferences(121);
           bg.field_n = false;
           ea.field_n = TileRack.field_a;
           cf.a(nd.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);

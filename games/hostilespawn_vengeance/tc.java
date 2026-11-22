@@ -9,7 +9,7 @@ final class tc {
     static String field_e;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
           field_b = null;

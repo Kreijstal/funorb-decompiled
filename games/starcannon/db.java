@@ -114,7 +114,7 @@ final class db extends vk implements ga {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         if (param0 >= -91) {
           field_B = (String) null;

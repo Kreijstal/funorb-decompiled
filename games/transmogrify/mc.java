@@ -8,12 +8,12 @@ final class mc {
 
     final static long b(boolean param0) {
         if (!param0) {
-          mc.a(true);
+          mc.clearStaticReferences(true);
         }
         return -wi.field_q + lk.a(0);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (!param0) {
           return;

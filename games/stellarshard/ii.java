@@ -107,7 +107,7 @@ final class ii extends ig {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         if (param0 != 25) {
           field_G = (String) null;

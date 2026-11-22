@@ -534,7 +534,7 @@ final class rb extends ArchiveProvider {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_s = null;
         if (param0) {
           return;

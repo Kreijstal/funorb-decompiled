@@ -83,7 +83,7 @@ final class md extends me {
         super(param0);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_j = (String) null;
           field_j = null;

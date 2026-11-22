@@ -129,7 +129,7 @@ final class ij implements t {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_d = null;
         if (param0 != -18515) {
@@ -433,7 +433,7 @@ final class ij implements t {
             }
             fe.field_N = qg.a(false);
           }
-          vi.field_f.field_i = ac.field_c.length;
+          GzipDecompressor.field_f.field_i = ac.field_c.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < sa.field_I.length; var4Lifetime1++) {
             stackIn_88_0 = !(mj.field_b[var4Lifetime1] < 0);
@@ -463,7 +463,7 @@ final class ij implements t {
           }
           cd.field_b = var3_intLifetime1 + (sf.field_F - (var3_intLifetime1 >> 1));
           bk.field_D = -(var3_intLifetime1 >> 1) + sf.field_F;
-          oi.field_b = vi.field_f.field_i * (na.field_e + of.field_f << 1);
+          oi.field_b = GzipDecompressor.field_f.field_i * (na.field_e + of.field_f << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < sa.field_I.length; var4Lifetime2++) {
             stackIn_110_0 = oi.field_b;
             if (mj.field_b[var4Lifetime2] < 0) {
@@ -498,9 +498,9 @@ final class ij implements t {
             var4Lifetime3++;
           }
           if (di.field_h == 2) {
-            vi.field_f.a(-1, -1, param2, 113);
+            GzipDecompressor.field_f.a(-1, -1, param2, 113);
           } else {
-            vi.field_f.a(0, GameScreen.b(fg.mouseY, 0, kf.mouseX), param2, 106);
+            GzipDecompressor.field_f.a(0, GameScreen.b(fg.mouseY, 0, kf.mouseX), param2, 106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

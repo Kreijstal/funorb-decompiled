@@ -19,7 +19,7 @@ final class ef {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 27887) {

@@ -9,7 +9,7 @@ final class rc {
     static ub field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 8281) {
           return;
         }

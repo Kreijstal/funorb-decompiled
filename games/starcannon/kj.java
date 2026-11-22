@@ -56,7 +56,7 @@ final class kj extends vk implements ga {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         if (param0 != 0) {
           return;

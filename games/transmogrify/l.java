@@ -117,7 +117,7 @@ final class l {
             var5 = 1;
             var4 = 1;
           }
-          qd.field_a = rc.a(var2 * var4, -110, var2 * var5);
+          GzipDecompressor.field_a = rc.a(var2 * var4, -110, var2 * var5);
           return;
         }
         var2Lifetime1 = 0;
@@ -168,7 +168,7 @@ final class l {
             var5Lifetime1 = 1;
             var4Lifetime1 = 1;
           }
-          qd.field_a = rc.a(var2Lifetime1 * var4Lifetime1, -110, var2Lifetime1 * var5Lifetime1);
+          GzipDecompressor.field_a = rc.a(var2Lifetime1 * var4Lifetime1, -110, var2Lifetime1 * var5Lifetime1);
           return;
         }
         if (var3Lifetime1 < 105) {
@@ -221,7 +221,7 @@ final class l {
             var5Lifetime2 = 1;
             var4Lifetime2 = 1;
           }
-          qd.field_a = rc.a(var2Lifetime1 * var4Lifetime2, -110, var2Lifetime1 * var5Lifetime2);
+          GzipDecompressor.field_a = rc.a(var2Lifetime1 * var4Lifetime2, -110, var2Lifetime1 * var5Lifetime2);
           return;
         }
         if (var3Lifetime1 >= 120) {
@@ -269,7 +269,7 @@ final class l {
             var5Lifetime3 = 1;
             var4Lifetime3 = 1;
           }
-          qd.field_a = rc.a(var2Lifetime1 * var4Lifetime3, -110, var2Lifetime1 * var5Lifetime3);
+          GzipDecompressor.field_a = rc.a(var2Lifetime1 * var4Lifetime3, -110, var2Lifetime1 * var5Lifetime3);
           return;
         }
         var3Lifetime1 = -var3Lifetime1 + 120;
@@ -318,7 +318,7 @@ final class l {
           var5Lifetime4 = 1;
           var4Lifetime4 = 1;
         }
-        qd.field_a = rc.a(var2Lifetime2 * var4Lifetime4, -110, var2Lifetime2 * var5Lifetime4);
+        GzipDecompressor.field_a = rc.a(var2Lifetime2 * var4Lifetime4, -110, var2Lifetime2 * var5Lifetime4);
         return;
     }
 

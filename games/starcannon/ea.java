@@ -7,7 +7,7 @@ final class ea {
     static n field_a;
     static df field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -91,7 +91,7 @@ final class ea {
         }
         ti.field_b.a((byte) 81, (UiWidget) (ve.field_f));
         if (param0 > -19) {
-          ea.a((byte) -78);
+          ea.clearStaticReferences((byte) -78);
         }
     }
 

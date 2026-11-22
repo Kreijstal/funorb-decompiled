@@ -65,7 +65,7 @@ class UiWidget extends IntrusiveNode {
               } else {
                 var7 = bd.field_b;
                 synchronized (var7) {
-                  bd.field_b.a((byte) 28, var6, var9);
+                  bd.field_b.decompress((byte) 28, var6, var9);
                 }
               }
               stackIn_24_0 = var6;

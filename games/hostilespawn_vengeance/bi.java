@@ -29,7 +29,7 @@ final class bi {
         try {
           var4_int = 0;
           if (param1 != -457) {
-            bi.a(false);
+            bi.clearStaticReferences(false);
           }
           while (rc.field_e > var4_int) {
             var8 = re.field_n[var4_int];
@@ -100,7 +100,7 @@ final class bi {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_b = null;
         field_g = null;

@@ -6,7 +6,7 @@ final class aj {
     static int field_b;
     static pa[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 >= 49) {
           return;
@@ -19,7 +19,7 @@ final class aj {
         if (param1 == 11236) {
           return;
         }
-        aj.a((byte) -89);
+        aj.clearStaticReferences((byte) -89);
     }
 
     final static void a(int[] param0, boolean param1, int param2, int param3, int param4) {

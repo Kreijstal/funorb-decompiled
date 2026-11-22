@@ -39,7 +39,7 @@ final class aa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 6) {
           return;
         }
@@ -51,7 +51,7 @@ final class aa {
     final static void a(java.applet.Applet param0, boolean param1) {
         String var3 = null;
         long var4 = 0L;
-        sl.field_c = true;
+        GzipDecompressor.field_c = true;
         String var2 = "tuhstatbut";
         if (param1) {
           return;

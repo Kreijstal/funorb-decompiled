@@ -267,7 +267,7 @@ class ph extends ag {
         var2Lifetime3 = -61 / ((param0 + 27) / 39);
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_z = null;
         if (param0 == 84) {

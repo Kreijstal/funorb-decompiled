@@ -113,7 +113,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > 91) {
           field_f = null;
           field_b = null;
@@ -156,7 +156,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           return;
         }
-        GameKeyHandler.a(-39);
+        GameKeyHandler.clearStaticReferences(-39);
         if (r.field_i != null) {
           r.field_i.d(16777215);
           r.field_i = null;

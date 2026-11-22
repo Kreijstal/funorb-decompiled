@@ -267,7 +267,7 @@ final class eh {
           return var2;
         }
         if (param1 > -33) {
-          eh.a((byte) -13);
+          eh.clearStaticReferences((byte) -13);
         }
         var2Lifetime1 = 2;
         if (param0 < -65536) {
@@ -293,7 +293,7 @@ final class eh {
         return var2Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_c = null;
         field_f = null;

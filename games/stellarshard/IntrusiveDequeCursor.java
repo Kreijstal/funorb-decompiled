@@ -176,7 +176,7 @@ final class IntrusiveDequeCursor {
         return param0 + var2;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_f = null;
         if (param0 > 23) {

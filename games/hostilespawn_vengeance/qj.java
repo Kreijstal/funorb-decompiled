@@ -227,7 +227,7 @@ final class qj extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         if (param0 != -13206) {
           return;

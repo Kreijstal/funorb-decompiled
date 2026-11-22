@@ -270,7 +270,7 @@ abstract class ul extends vd {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_P = null;
         field_E = null;
         field_J = null;

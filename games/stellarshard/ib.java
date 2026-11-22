@@ -91,7 +91,7 @@ abstract class ib {
 
     abstract void a(boolean param0, int param1, int param2, int param3);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 0) {
           return;

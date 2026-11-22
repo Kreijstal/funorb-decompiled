@@ -128,7 +128,7 @@ final class ka {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_e = null;
         field_b = null;

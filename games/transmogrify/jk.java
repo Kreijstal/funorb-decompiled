@@ -463,7 +463,7 @@ final class jk extends aj implements df {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         if (param0 != 486302657) {
           field_x = (mg) null;

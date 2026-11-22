@@ -155,7 +155,7 @@ final class jg extends ck implements oi {
         return super.d(true);
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }
@@ -164,7 +164,7 @@ final class jg extends ck implements oi {
 
     final static int i(byte param0) {
         if (param0 != 113) {
-          jg.e(true);
+          jg.clearStaticReferences(true);
           return u.field_k;
         }
         return u.field_k;

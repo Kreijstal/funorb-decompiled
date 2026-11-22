@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fh {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_g;
     static String field_i;
     static String field_e;
@@ -14,7 +14,7 @@ final class fh {
     static String field_d;
     static boolean[] field_c;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_a = null;
         if (param0 == 9992) {
@@ -33,7 +33,7 @@ final class fh {
         field_d = null;
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (param2.field_n[param2.field_i] != 31 ||
@@ -41,7 +41,7 @@ final class fh {
               throw new RuntimeException("");
             }
             if (param0 < 82) {
-              fh.a(62);
+              GzipDecompressor.a(62);
             }
             if (null == this.field_g) {
               this.field_g = new java.util.zip.Inflater(true);
@@ -64,11 +64,11 @@ final class fh {
         }
     }
 
-    public fh() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    private fh(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     final static void a(int param0) {

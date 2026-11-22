@@ -43,7 +43,7 @@ final class re {
     boolean[] field_w;
     int field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         field_m = null;
         if (param0 == -37) {

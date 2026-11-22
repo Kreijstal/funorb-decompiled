@@ -7,7 +7,7 @@ final class rl {
     static int field_c;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 719371458) {
           field_d = (bd) null;
@@ -85,7 +85,7 @@ final class rl {
           var3 = s.field_b;
           var3.i(19319, param0);
           if (param2 != 746037954) {
-            rl.a(40);
+            rl.clearStaticReferences(40);
           }
           var3.d(103, 5);
           var3.d(122, 0);

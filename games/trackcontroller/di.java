@@ -53,7 +53,7 @@ abstract class di extends v implements se {
     public final void b(int param0, lb param1) {
         try {
           if (param0 >= -23) {
-            di.c((byte) -43);
+            di.clearStaticReferences((byte) -43);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -68,7 +68,7 @@ abstract class di extends v implements se {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 != 73) {
           return;

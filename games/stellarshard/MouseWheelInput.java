@@ -50,7 +50,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         if (param0 == 31147) {

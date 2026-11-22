@@ -229,7 +229,7 @@ abstract class mk extends aj {
         return (UiWidget) (this);
     }
 
-    public static void n(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         field_w = null;
         field_B = null;

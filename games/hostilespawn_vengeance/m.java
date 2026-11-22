@@ -16,7 +16,7 @@ final class m extends IntrusiveNode {
     static String[] field_m;
     static String field_p;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         field_m = null;
         field_k = null;
@@ -50,7 +50,7 @@ final class m extends IntrusiveNode {
           try {
             sc.field_g = new CipherPacketBuffer(param7);
             s.field_b = new CipherPacketBuffer(param4);
-            fh.field_b = param8;
+            GzipDecompressor.field_b = param8;
             uj.field_k = param2;
             PacketBuffer.field_l = param9;
             uc.field_d = param10;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mj {
-    static nc field_b;
+    static GzipDecompressor field_b;
     private String field_a;
     static String[] field_c;
 
@@ -53,7 +53,7 @@ final class mj {
     final void a(java.applet.Applet param0, boolean param1) {
         try {
           if (!param1) {
-            field_b = (nc) null;
+            field_b = (GzipDecompressor) null;
           }
           wg.a((byte) 100, this.field_a, param0, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
@@ -61,7 +61,7 @@ final class mj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         if (!param0) {
@@ -177,6 +177,6 @@ final class mj {
     }
 
     static {
-        field_b = new nc();
+        field_b = new GzipDecompressor();
     }
 }

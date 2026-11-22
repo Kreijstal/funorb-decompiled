@@ -239,7 +239,7 @@ class le extends lj {
         return ob.field_F;
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         if (param0 != -1) {
           field_C = (IntrusiveDeque) null;

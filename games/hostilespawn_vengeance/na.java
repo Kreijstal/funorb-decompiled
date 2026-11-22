@@ -251,7 +251,7 @@ final class na {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 < 80) {
           field_q = (String) null;

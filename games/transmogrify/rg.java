@@ -245,7 +245,7 @@ class rg extends lj {
         return var2Lifetime1;
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -40) {
           field_I = null;
           field_B = null;

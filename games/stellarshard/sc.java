@@ -107,7 +107,7 @@ final class sc extends bj {
         this.field_L = true;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_W = null;
         field_k = null;
         field_V = null;

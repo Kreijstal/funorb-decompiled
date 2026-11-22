@@ -241,7 +241,7 @@ final class ol extends PcmStream {
         return (PcmStream) ((Object) var1_ref.field_l);
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 > -2) {
           return;
@@ -261,7 +261,7 @@ final class ol extends PcmStream {
           }
           return;
         }
-        ol.f(-80);
+        ol.clearStaticReferences(-80);
         if (qd.field_d >= 224) {
           SocketArchiveRequestConnection.a(256, (byte) -74);
         } else {

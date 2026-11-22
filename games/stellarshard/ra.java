@@ -18,7 +18,7 @@ final class ra {
         var1 = 36 / ((68 - param0) / 48);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -14755) {
           field_a = (String) null;

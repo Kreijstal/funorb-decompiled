@@ -11,7 +11,7 @@ final class vb extends le {
     int field_Gb;
     static bd[] field_Kb;
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_Hb = null;
         if (param0 != 17469) {
           return;

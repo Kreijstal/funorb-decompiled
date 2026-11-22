@@ -6,7 +6,7 @@ final class mc {
     static String field_b;
     static vh field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 17913) {
           return;
         }
@@ -23,7 +23,7 @@ final class mc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -38) {
-            mc.a(-13);
+            mc.clearStaticReferences(-13);
           }
           stackIn_3_0 = uj.a(param2, (byte) 124, param1, true);
           return stackIn_3_0;

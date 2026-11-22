@@ -20,7 +20,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 2188) {
           field_j = (byte[][]) null;
           field_h = null;

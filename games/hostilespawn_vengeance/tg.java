@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg {
-    static fh field_b;
+    static GzipDecompressor field_b;
     static boolean field_a;
 
     final static void a(int param0, bd[] param1, int param2, int param3, int param4) {
@@ -497,6 +497,6 @@ final class tg {
     }
 
     static {
-        field_b = new fh();
+        field_b = new GzipDecompressor();
     }
 }

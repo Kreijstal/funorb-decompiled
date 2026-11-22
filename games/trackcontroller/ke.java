@@ -6,7 +6,7 @@ final class ke {
     static int field_c;
     static int[] field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           field_a = (int[]) null;
@@ -236,7 +236,7 @@ final class ke {
         var3 = TrackController.field_F ? 1 : 0;
         try {
           if (param0 != -101) {
-            ke.a(true);
+            ke.clearStaticReferences(true);
           }
           var4 = (GameStringTable) (LevelData.field_t.first(2));
           while (var4 != null) {

@@ -53,7 +53,7 @@ final class gf {
         return (String) null;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_g = null;
         field_d = null;

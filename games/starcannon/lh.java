@@ -83,7 +83,7 @@ final class lh {
         bc.a(wj.field_g, 26095);
         gl.b();
         ki.b();
-        nc.a(-1196777214);
+        GzipDecompressor.a(-1196777214);
         if (var5 < 256) {
           ki.b(0, 0, ki.field_j, ki.field_f, 0, 256 - var5);
         }

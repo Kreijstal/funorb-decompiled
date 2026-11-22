@@ -11,7 +11,7 @@ final class hf extends dj {
     static int field_i;
     static Sprite[] field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 118) {
           field_h = null;
           field_g = null;

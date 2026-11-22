@@ -67,7 +67,7 @@ final class sg {
           return;
         }
         SpriteState.field_u[oe.field_c] = param4;
-        if (vi.field_d < param4) {
+        if (GzipDecompressor.field_d < param4) {
           sd.field_b = param4;
         }
         if (!(fj.field_U <= param4)) {

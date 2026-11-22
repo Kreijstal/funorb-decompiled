@@ -619,7 +619,7 @@ final class jl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_k = null;
@@ -1454,7 +1454,7 @@ final class jl {
         int stackIn_25_1Lifetime1;
         var3 = StarCannon.field_A;
         if (this.field_f == 7) {
-          var2 = nc.a(true, param0 + 0);
+          var2 = GzipDecompressor.a(true, param0 + 0);
           if (var2 == 3) {
             bl.a(false, ll.b(94));
           }

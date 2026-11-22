@@ -116,7 +116,7 @@ abstract class v implements eh {
         return this.f(38);
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 0) {
           return;

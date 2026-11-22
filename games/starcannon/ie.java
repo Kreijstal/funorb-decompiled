@@ -75,7 +75,7 @@ final class ie extends kf {
         try {
           field_x = s.field_f;
           if (param0 > -99) {
-            ie.g(-121);
+            ie.clearStaticReferences(-121);
           }
           if (param3 == 255) {
             stackIn_6_0 = !(qb.field_a >= 13);
@@ -113,7 +113,7 @@ final class ie extends kf {
         }
     }
 
-    final static void g(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           field_y = (gi) null;
         }

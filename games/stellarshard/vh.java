@@ -59,7 +59,7 @@ final class vh {
           Throwable var2_ref = null;
           var7 = stellarshard.field_B;
           try {
-            if (sl.field_c) {
+            if (GzipDecompressor.field_c) {
               return true;
             }
             try {

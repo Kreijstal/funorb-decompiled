@@ -51,7 +51,7 @@ final class dn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 != 16) {
           field_h = (bd) null;

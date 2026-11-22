@@ -21,11 +21,11 @@ final class vg {
           t.field_h.j(-125);
           return;
         }
-        vg.b(-60);
+        vg.clearStaticReferences(-60);
         t.field_h.j(-125);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 > -87) {

@@ -16,7 +16,7 @@ final class oa {
     static kk field_l;
     static bd field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 == 32) {
           field_i = null;

@@ -291,7 +291,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
         this.field_i = (byte)(int)(1.0 + 255.0 * Math.random());
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         avatarSprites = (Sprite[][]) null;
         if (param0 < 63) {

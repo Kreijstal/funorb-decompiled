@@ -337,7 +337,7 @@ final class qi {
     final qi a(byte param0, int param1) {
         this.field_l = param1;
         if (param0 < 68) {
-          qi.a(-25);
+          qi.clearStaticReferences(-25);
         }
         return this;
     }
@@ -553,7 +553,7 @@ final class qi {
         this.field_l = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_b = null;
         field_k = null;

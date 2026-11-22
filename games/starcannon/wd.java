@@ -856,7 +856,7 @@ final class wd extends oa {
         return var14 != 0;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_jb = null;
         field_U = null;
     }

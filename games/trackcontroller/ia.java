@@ -5,7 +5,7 @@ final class ia {
     static RasterBuffer field_b;
     static aa field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {

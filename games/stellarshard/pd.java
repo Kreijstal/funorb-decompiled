@@ -334,7 +334,7 @@ final class pd extends vk {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         if (param0 < 110) {
           return;

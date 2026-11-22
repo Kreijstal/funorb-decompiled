@@ -26,7 +26,7 @@ final class ta extends IntrusiveNode {
     }
 
     final static void a(boolean param0, int param1) {
-        sl.field_b = 0;
+        GzipDecompressor.field_b = 0;
         ha.field_w = cj.field_c;
         gj.field_v = 0;
         nk.field_c = 0;
@@ -39,7 +39,7 @@ final class ta extends IntrusiveNode {
         cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), -1, param0, false);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_m = null;
           field_r = null;

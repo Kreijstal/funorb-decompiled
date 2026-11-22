@@ -29,7 +29,7 @@ final class oc extends IntrusiveNode {
           var2.field_f = param0 ? true : false;
           return var2;
         }
-        oc.a((byte) -68);
+        oc.clearStaticReferences((byte) -68);
         var2Lifetime1 = new nj(true);
         var2Lifetime1.field_f = param0 ? true : false;
         return var2Lifetime1;
@@ -39,7 +39,7 @@ final class oc extends IntrusiveNode {
         this.field_l = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != -63) {
           field_k = (String) null;

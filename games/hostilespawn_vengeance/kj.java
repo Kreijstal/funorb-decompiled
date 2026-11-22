@@ -37,7 +37,7 @@ final class kj implements Iterator {
           }
           return new s(qc.d(750938499), ia.b(32674));
         }
-        kj.a((byte) 44);
+        kj.clearStaticReferences((byte) 44);
         var1Lifetime1 = qc.d(750938499);
         if (var1Lifetime1 != null &&
           var1Lifetime1.indexOf('@') >= 0) {
@@ -62,7 +62,7 @@ final class kj implements Iterator {
         this.field_d = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         if (param0 != -13) {

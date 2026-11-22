@@ -166,7 +166,7 @@ final class pf {
         qa.a(false, (byte) -37, uj.field_h);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_I = null;
         if (!param0) {

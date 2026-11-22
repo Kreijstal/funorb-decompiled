@@ -109,7 +109,7 @@ abstract class wd extends hl {
         return ProxySocketConnector.field_e;
     }
 
-    public static void p(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_J = null;
         field_I = null;
         if (param0 != 35) {

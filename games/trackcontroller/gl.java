@@ -6,7 +6,7 @@ final class gl extends ok {
     int field_H;
     static vl field_E;
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -101) {
           return;
         }

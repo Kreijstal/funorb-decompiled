@@ -3,7 +3,7 @@
  */
 final class bd {
     static String[] field_a;
-    static vi field_b;
+    static GzipDecompressor field_b;
 
     final static li a(int param0, PcmSampleStream param1) {
         li var2 = null;
@@ -48,6 +48,6 @@ final class bd {
 
     static {
         field_a = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-        field_b = new vi();
+        field_b = new GzipDecompressor();
     }
 }

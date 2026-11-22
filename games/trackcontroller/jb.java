@@ -53,7 +53,7 @@ final class jb {
         SecondaryNodeDeque.field_d.field_b = 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -104) {
           field_b = (int[]) null;
           field_c = null;

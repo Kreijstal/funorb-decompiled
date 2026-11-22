@@ -25,7 +25,7 @@ final class fk extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_r = null;
         if (param0 != 23976) {

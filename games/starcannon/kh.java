@@ -737,7 +737,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 126) {
           field_y = (IntrusiveDeque) null;
         }

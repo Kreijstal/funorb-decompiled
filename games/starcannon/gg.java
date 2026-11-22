@@ -147,7 +147,7 @@ final class gg implements Runnable {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != 121) {
           return;

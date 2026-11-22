@@ -7,7 +7,7 @@ final class ua {
     static ge field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 128) {
           return;
         }

@@ -94,7 +94,7 @@ abstract class wj {
         ij.a((byte) 111, var3Lifetime1, param1);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -6424) {
           return;

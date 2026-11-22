@@ -59,7 +59,7 @@ final class jf {
         eg.field_h = 2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 >= -32) {
           return;

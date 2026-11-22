@@ -7,7 +7,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
     static String field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;

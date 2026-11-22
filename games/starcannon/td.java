@@ -250,7 +250,7 @@ final class td {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_j = null;
         if (param0 != -12539) {

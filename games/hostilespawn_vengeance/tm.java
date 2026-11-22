@@ -33,7 +33,7 @@ final class tm extends IntrusiveNode {
         hh.field_e = param1;
         nf.field_m = param2;
         if (!param3) {
-          tm.a(false);
+          tm.clearStaticReferences(false);
         }
     }
 
@@ -86,7 +86,7 @@ final class tm extends IntrusiveNode {
         this.field_p = null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

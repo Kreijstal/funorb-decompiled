@@ -157,7 +157,7 @@ final class gh {
         return 0;
     }
 
-    public static void f() {
+    public static void clearStaticReferences() {
         field_i = null;
     }
 

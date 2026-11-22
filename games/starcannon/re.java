@@ -15,7 +15,7 @@ final class re extends IntrusiveNode {
     int field_j;
     int field_g;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_q = null;
         field_f = null;

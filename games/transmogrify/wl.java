@@ -546,7 +546,7 @@ final class wl extends aj implements hl, df, tc {
         }
     }
 
-    final static void p(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 < 101) {
           field_K = (Sprite) null;
         }

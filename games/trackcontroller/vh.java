@@ -19,7 +19,7 @@ abstract class vh extends DualLinkNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 == 32) {
           return;

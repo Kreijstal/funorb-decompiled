@@ -20,7 +20,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 < -7) {
           return var2;
         }
-        CipherPacketBuffer.r(117);
+        CipherPacketBuffer.clearStaticReferences(117);
         return var2;
     }
 
@@ -100,7 +100,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_x = 8 * this.field_i;
     }
 
-    public static void r(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -10723) {
           field_z = null;
           field_w = null;

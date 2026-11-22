@@ -296,7 +296,7 @@ final class ff extends aj implements fb, df {
         String var4 = null;
         try {
           if (param1 != 30) {
-            ff.m(-73);
+            ff.clearStaticReferences(-73);
           }
           var3 = this.field_L;
           var4 = param0;
@@ -344,7 +344,7 @@ final class ff extends aj implements fb, df {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_D = null;
         if (param0 <= 119) {
           field_x = (String) null;

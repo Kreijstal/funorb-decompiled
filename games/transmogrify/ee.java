@@ -12,7 +12,7 @@ final class ee extends aj implements df {
     static String field_C;
     static String field_y;
 
-    public static void l(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -31263) {
           field_C = (String) null;
         }

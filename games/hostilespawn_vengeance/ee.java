@@ -310,8 +310,8 @@ final class ee {
                 return stackIn_97_0;
               }
               var6_intLifetime2 = cb.field_c;
-              cb.field_c = fh.field_b;
-              fh.field_b = var6_intLifetime2;
+              cb.field_c = GzipDecompressor.field_b;
+              GzipDecompressor.field_b = var6_intLifetime2;
               jn.field_C = true;
             }
             stackIn_100_0 = -1;

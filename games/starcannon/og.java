@@ -9,7 +9,7 @@ final class og {
     static Sprite[] field_d;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 92) {
           return;
         }

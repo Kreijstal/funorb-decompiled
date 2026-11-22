@@ -682,7 +682,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (pb.field_Kb == 3 &&
           ca.a(ll.field_b, mb.field_m, im.field_c, param1 - 9768) &&
           jh.a(-95, ll.field_b)) {
-          fh.a(1);
+          GzipDecompressor.a(1);
           ni.c(-30074);
           wi.field_c = l.field_e;
           ka.field_r = false;

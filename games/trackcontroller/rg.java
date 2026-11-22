@@ -6,7 +6,7 @@ final class rg {
     static int field_b;
     static PlatformTaskDispatcher field_c;
 
-    final static void a(boolean param0) {
+    final static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_c = (PlatformTaskDispatcher) null;
         }
@@ -24,7 +24,7 @@ final class rg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 17883) {
           field_a = (String) null;

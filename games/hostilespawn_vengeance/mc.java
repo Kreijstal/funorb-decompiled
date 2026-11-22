@@ -119,7 +119,7 @@ final class mc extends vd implements qk {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         if (param0 > -123) {
           return;

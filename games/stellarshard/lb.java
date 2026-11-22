@@ -13,7 +13,7 @@ final class lb extends IntrusiveNode {
     int[] field_p;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         if (param0 < 81) {
           field_o = (th) null;

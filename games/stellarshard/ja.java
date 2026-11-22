@@ -202,7 +202,7 @@ final class ja extends IntrusiveNode {
         int var13Lifetime1;
         var19 = stellarshard.field_B;
         try {
-          sl.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          GzipDecompressor.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = sj.field_B.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -214,17 +214,17 @@ final class ja extends IntrusiveNode {
             var5 = var4_ref_n.field_t + var4_ref_n.field_F >> 1;
             var6 = var4_ref_n.field_x + var4_ref_n.field_G >> 1;
             var7 = var4_ref_n.field_u + var4_ref_n.field_k >> 1;
-            var8 = sl.field_a[9] >> 2;
-            var9 = sl.field_a[10] >> 2;
-            var10_int = sl.field_a[11] >> 2;
+            var8 = GzipDecompressor.field_a[9] >> 2;
+            var9 = GzipDecompressor.field_a[10] >> 2;
+            var10_int = GzipDecompressor.field_a[11] >> 2;
             var11 = pd.field_u[5] * var10_int + var8 * pd.field_u[3] + pd.field_u[4] * var9 >> 14;
             var12 = pd.field_u[8] * var10_int + (var8 * pd.field_u[6] + var9 * pd.field_u[7]) >> 14;
             var13 = var8 * pd.field_u[9] + (pd.field_u[10] * var9 + pd.field_u[11] * var10_int) >> 14;
             var2[var3] = var12 * var6 + (var11 * var5 + var13 * var7) >> 16;
           }
-          var3Lifetime1 = sl.field_a[9] >> 8;
-          var4 = sl.field_a[10] >> 8;
-          var5Lifetime1 = sl.field_a[11] >> 8;
+          var3Lifetime1 = GzipDecompressor.field_a[9] >> 8;
+          var4 = GzipDecompressor.field_a[10] >> 8;
+          var5Lifetime1 = GzipDecompressor.field_a[11] >> 8;
           var6Lifetime1 = ni.field_d << 4;
           if (param0 != 4) {
             return;
@@ -262,7 +262,7 @@ final class ja extends IntrusiveNode {
             for (var18 = 0; var18 < 3; var18++) {
               pd.field_u[var18] = pd.field_u[var18] + bi.field_s[var15][var18];
             }
-            RasterBuffer.a(var17, (byte) -116, pd.field_u, true, false, sl.field_a, false);
+            RasterBuffer.a(var17, (byte) -116, pd.field_u, true, false, GzipDecompressor.field_a, false);
             kf.a(-62, var8Lifetime1, var13Lifetime1, var7Lifetime1, var12Lifetime1, var14, var17, var9Lifetime1);
           }
           return;

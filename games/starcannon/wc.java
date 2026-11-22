@@ -45,7 +45,7 @@ final class wc {
         return false;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != -1) {
           return;

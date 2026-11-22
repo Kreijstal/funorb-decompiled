@@ -303,7 +303,7 @@ final class bk extends td implements a, ButtonListener {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         font = null;
         if (param0 >= -71) {
           return;

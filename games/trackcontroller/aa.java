@@ -10,7 +10,7 @@ final class aa {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != -14) {
           field_a = (Sprite[]) null;

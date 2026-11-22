@@ -35,7 +35,7 @@ final class mb {
         return var2;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -36) {
           field_a = (String) null;
         }

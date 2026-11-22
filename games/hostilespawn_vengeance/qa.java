@@ -363,7 +363,7 @@ final class qa {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_a = null;
         field_g = null;

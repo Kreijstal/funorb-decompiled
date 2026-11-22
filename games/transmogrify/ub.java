@@ -8,7 +8,7 @@ final class ub {
     static FullscreenFocusCanvas field_c;
     static boolean field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != -31455) {
@@ -41,7 +41,7 @@ final class ub {
         }
         oj.a(ug.field_f, 256);
         if (param2 != 116) {
-          ub.a(-11);
+          ub.clearStaticReferences(-11);
           ka.c();
           sb.c();
           f.a((byte) 16);

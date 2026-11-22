@@ -87,7 +87,7 @@ final class o {
         mj.field_c[14] = pe.field_b;
         mj.field_c[5] = StarCannon.field_C;
         mj.field_c[1] = rd.field_n;
-        mj.field_c[4] = nc.field_e;
+        mj.field_c[4] = GzipDecompressor.field_e;
         mj.field_c[15] = oi.field_n;
         mj.field_c[11] = cf.field_j;
         mj.field_c[13] = ta.field_g;
@@ -112,7 +112,7 @@ final class o {
         mj.field_c[9] = hj.field_b[1];
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4432) {
           field_c = (String) null;
           field_c = null;

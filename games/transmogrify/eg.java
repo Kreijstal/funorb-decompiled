@@ -20,13 +20,13 @@ final class eg {
             LetterTile.a(-7812, param1, var4);
             var4 = (jl) (ll.field_T.a(true));
           }
-          var5 = (oi) (qd.field_d.a((byte) -95));
+          var5 = (oi) (GzipDecompressor.field_d.a((byte) -95));
           if (param0) {
             eg.a((byte) 21);
           }
           while (var5 != null) {
             de.a(var5, param1, 2);
-            stackIn_9_0 = qd.field_d;
+            stackIn_9_0 = GzipDecompressor.field_d;
             stackIn_10_1 = !(param0);
             var5 = (oi) (((IntrusiveDeque) (Object) stackIn_9_0).a(stackIn_10_1));
           }

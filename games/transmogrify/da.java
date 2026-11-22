@@ -9,7 +9,7 @@ final class da extends fi {
     static int field_C;
     static int field_y;
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         if (param0 != 0) {
           return;

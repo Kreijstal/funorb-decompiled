@@ -54,7 +54,7 @@ final class fa {
         this.field_g.position = this.field_a[param0];
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

@@ -9,7 +9,7 @@ final class mg {
     static String field_e;
     private int[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -28) {
           return;
         }

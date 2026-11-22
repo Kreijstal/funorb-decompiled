@@ -12,7 +12,7 @@ final class rh extends IntrusiveNode {
     static Sprite[] field_f;
     static int field_i;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (param0) {
           return;
@@ -99,7 +99,7 @@ final class rh extends IntrusiveNode {
         hb var8 = new hb(param7, param0, param2, param4, param3, param1);
         hi.field_f.b(101, var8);
         if (param5 != -1893600464) {
-          rh.a(false);
+          rh.clearStaticReferences(false);
         }
         hb.a(-16, param6, var8);
         return var8;

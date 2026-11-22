@@ -43,7 +43,7 @@ final class bc extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 > -127) {
           return;

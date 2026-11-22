@@ -171,7 +171,7 @@ final class qa {
         field_j[2] = var26 + var29 * var19 + var32 * var22 + var35 * var25 + 2048 >> 12;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_q = null;
         field_a = null;
         field_c = null;

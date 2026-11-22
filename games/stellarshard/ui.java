@@ -68,7 +68,7 @@ abstract class ui extends WidgetContainer {
         return this.field_G ? this.field_H.d((byte) -120) != this ? 0 : 256 : 0;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_F = null;
         field_C = null;

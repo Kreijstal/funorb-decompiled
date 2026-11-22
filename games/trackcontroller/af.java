@@ -127,7 +127,7 @@ final class af extends di {
             var3_int = 1;
             if (param1 == 8) {
               if (vg.field_o) {
-                param2 = vi.field_e;
+                param2 = GzipDecompressor.field_e;
               } else {
                 param2 = ba.field_d;
               }

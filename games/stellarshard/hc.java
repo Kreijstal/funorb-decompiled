@@ -133,7 +133,7 @@ final class hc {
         int var8 = 0;
         try {
           if (param0 >= -83) {
-            hc.a(92);
+            hc.clearStaticReferences(92);
           }
           var5_int = this.field_g.b(param1);
           var6 = this.field_g.field_r + this.field_g.field_x;
@@ -305,7 +305,7 @@ final class hc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 != 21215) {
           return;

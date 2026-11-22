@@ -10,7 +10,7 @@ final class hc extends dl {
     private Object field_s;
     static int field_u;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 105) {
           return;
         }

@@ -42,7 +42,7 @@ final class eg implements de {
           if (param1 == -47) {
             return;
           }
-          eg.a((byte) -82);
+          eg.clearStaticReferences((byte) -82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,7 +154,7 @@ final class eg implements de {
         nh.field_h = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 > -11) {
           return;

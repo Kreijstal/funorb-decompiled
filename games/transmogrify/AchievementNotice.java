@@ -13,7 +13,7 @@ final class AchievementNotice extends IntrusiveNode {
     static int[] field_n;
     static int field_m;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > 35) {
           field_k = null;
           field_n = null;

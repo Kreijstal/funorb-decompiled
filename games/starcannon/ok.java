@@ -47,7 +47,7 @@ final class ok extends ph implements ga {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_sb = null;
         if (param0 != -90) {
           return;

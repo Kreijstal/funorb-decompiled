@@ -134,7 +134,7 @@ class oa {
     void d() throws Exception {
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_q = null;
     }
 

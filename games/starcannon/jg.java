@@ -149,14 +149,14 @@ final class jg extends dk {
         field_I = null;
         field_C = null;
         if (param0 != 934716193) {
-          jg.e((byte) -6);
+          jg.clearStaticReferences((byte) -6);
           field_F = null;
           return;
         }
         field_F = null;
     }
 
-    final static void e(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 < 99) {
           field_F = (ue) null;
         }

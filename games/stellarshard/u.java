@@ -10,7 +10,7 @@ final class u extends IntrusiveNode {
     static int field_p;
     static String field_l;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 540) {
           return;
         }

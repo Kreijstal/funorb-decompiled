@@ -779,7 +779,7 @@ final class pf {
             var9 = tf.a(2, false, this.field_f[param1]);
           }
           try {
-            var36 = sl.a((byte) -76, var9);
+            var36 = GzipDecompressor.decompressArchiveContainer((byte) -76, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;

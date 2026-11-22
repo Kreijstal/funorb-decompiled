@@ -22,7 +22,7 @@ class dd extends ic {
 
     final static boolean c(byte param0) {
         if (param0 < 6) {
-          dd.b(30);
+          dd.clearStaticReferences(30);
           return ij.field_d.a(-119);
         }
         return ij.field_d.a(-119);
@@ -42,7 +42,7 @@ class dd extends ic {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -3674) {
           field_p = (String) null;
           field_p = null;

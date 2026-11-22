@@ -273,7 +273,7 @@ final class al {
         if (param0) {
           return this.field_b == 96 ? true : false;
         }
-        al.a(25);
+        al.clearStaticReferences(25);
         return this.field_b == 96 ? true : false;
     }
 
@@ -408,7 +408,7 @@ final class al {
         if (param0 > 69) {
           return this.field_e != 0 ? true : false;
         }
-        al.a(-25);
+        al.clearStaticReferences(-25);
         return this.field_e != 0 ? true : false;
     }
 
@@ -428,7 +428,7 @@ final class al {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -84) {
           return;
         }

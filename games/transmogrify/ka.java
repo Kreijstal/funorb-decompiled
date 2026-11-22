@@ -12,7 +12,7 @@ final class ka {
     private static int[] field_b;
     static int field_i;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_d = null;
         field_e = null;
         field_c = null;

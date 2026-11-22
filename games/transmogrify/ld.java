@@ -50,7 +50,7 @@ final class ld {
         return this.b(-1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = (byte[][]) null;
         field_f = null;
         if (param0 < 75) {

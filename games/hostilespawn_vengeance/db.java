@@ -156,7 +156,7 @@ final class db extends hi {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_t = null;
         field_r = null;
         field_u = null;

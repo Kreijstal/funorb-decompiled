@@ -5,7 +5,7 @@ final class wd {
     static ResourceArchive field_a;
     static bd field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 69) {
           field_b = (bd) null;
         }

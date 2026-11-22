@@ -30,7 +30,7 @@ final class tj {
     private qg field_i;
     private dh field_r;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_q = null;
         field_t = null;
         field_e = null;

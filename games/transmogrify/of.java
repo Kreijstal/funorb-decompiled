@@ -9,7 +9,7 @@ final class of {
     static StringBuilder wordBuffer;
     static pd field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         wordBuffer = null;

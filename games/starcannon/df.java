@@ -223,7 +223,7 @@ class df {
         this.field_h = dd.b(101);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_q = null;
     }
 

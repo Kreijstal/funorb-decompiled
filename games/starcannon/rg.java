@@ -63,7 +63,7 @@ final class rg extends vk implements si, ga {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_K = null;
         if (param0 > -94) {
           return;

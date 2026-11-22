@@ -9,7 +9,7 @@ final class lh {
     static bd field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < -15) {
           field_e = null;
           field_d = null;

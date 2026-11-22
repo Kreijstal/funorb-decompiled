@@ -10,7 +10,7 @@ final class gb extends hd {
     static Sprite[] field_v;
     private int field_s;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         if (param0 < 32) {
           field_r = (Sprite) null;

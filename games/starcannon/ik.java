@@ -128,7 +128,7 @@ abstract class ik extends DualLinkNode {
         this.field_r = true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         if (param0 != 0) {
           return;

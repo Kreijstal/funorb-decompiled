@@ -100,7 +100,7 @@ final class lh {
         int var13Lifetime1Lifetime1;
         var16 = stellarshard.field_B;
         try {
-          var17 = new PacketBuffer(sl.a((byte) -64, param1));
+          var17 = new PacketBuffer(GzipDecompressor.decompressArchiveContainer((byte) -64, param1));
           var4 = var17.readUnsignedByte(4);
           if (var4 >= 5 &&
             7 >= var4) {

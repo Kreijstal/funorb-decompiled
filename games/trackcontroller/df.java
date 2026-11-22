@@ -252,7 +252,7 @@ final class df {
         return true;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_k = null;
         field_g = null;
         field_j = null;

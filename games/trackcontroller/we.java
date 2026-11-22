@@ -10,7 +10,7 @@ abstract class we {
         try {
           kc.a(param1, param0 ^ 1263, "");
           if (param0 != 0) {
-            we.a((byte) 108);
+            we.clearStaticReferences((byte) 108);
           }
           q.a(param1, param0 - 1);
         } catch (RuntimeException runtimeException) {
@@ -61,7 +61,7 @@ abstract class we {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 < 15) {

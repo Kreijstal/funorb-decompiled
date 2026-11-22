@@ -595,7 +595,7 @@ final class qf extends IntrusiveNode {
         return true;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_F = null;
         field_w = null;
         field_q = null;

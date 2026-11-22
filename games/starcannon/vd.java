@@ -10,7 +10,7 @@ final class vd extends hh {
     static long[] field_g;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_e = null;
         field_g = null;

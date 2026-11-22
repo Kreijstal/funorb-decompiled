@@ -277,7 +277,7 @@ final class hh {
             ArchiveIndex.field_m = stackIn_112_0 + stackIn_113_1;
           }
           if (param0 != 5) {
-            hh.a(36);
+            hh.clearStaticReferences(36);
           }
           s.field_g = -(ArchiveIndex.field_m >> 1) + qg.field_l;
           q.field_e = new int[hf.field_d.length][];
@@ -319,7 +319,7 @@ final class hh {
           jj.field_k = param2;
           fk.field_a = param4;
           if (param8 != -1) {
-            hh.a(114);
+            hh.clearStaticReferences(114);
           }
           mb.field_p = param1;
           ab.field_c = param7;
@@ -558,7 +558,7 @@ final class hh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           field_a = (bd[]) null;
         }

@@ -66,7 +66,7 @@ final class lf {
     }
 
     final static void a(boolean param0) {
-        qd.b(5);
+        GzipDecompressor.b(5);
         if (null != AchievementNotice.field_k) {
           AchievementNotice.a(AchievementNotice.field_k, (byte) 118);
           jh.a(false);

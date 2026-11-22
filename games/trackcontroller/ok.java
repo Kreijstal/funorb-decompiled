@@ -56,7 +56,7 @@ abstract class ok extends UiWidget implements je {
         return null;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_C = null;
         if (param0 != -7) {
@@ -197,7 +197,7 @@ abstract class ok extends UiWidget implements je {
     }
 
     final static void a(k param0, int param1, byte param2, Archive param3) {
-        vi.field_c = BufferedCacheFile.c(-14496) * param1 / 1000;
+        GzipDecompressor.field_c = BufferedCacheFile.c(-14496) * param1 / 1000;
         if (param2 != 52) {
           return;
         }
@@ -207,7 +207,7 @@ abstract class ok extends UiWidget implements je {
           cl.a(param3, (byte) -123);
           LevelData.a(false);
           cj.d(param2 + 45);
-          fb.field_a = 0 - vi.field_c;
+          fb.field_a = 0 - GzipDecompressor.field_c;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ok.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

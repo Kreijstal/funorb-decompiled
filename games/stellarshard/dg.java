@@ -7,7 +7,7 @@ abstract class dg extends UiWidget implements f {
     UiWidget field_y;
     static ei field_z;
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 32) {
           field_z = (ei) null;
         }
@@ -111,7 +111,7 @@ abstract class dg extends UiWidget implements f {
 
     final static void g(int param0) {
         if (param0 != 16608) {
-          dg.h(58);
+          dg.clearStaticReferences(58);
         }
         rh.a(17, (byte) -72);
     }

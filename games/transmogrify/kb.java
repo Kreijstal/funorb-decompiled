@@ -37,7 +37,7 @@ class kb extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 104) {
-            kb.b(true);
+            kb.clearStaticReferences(true);
           }
           stackIn_3_0 = AchievementUnlockEvent.field_g.a(param0, (byte) 118, "");
           return stackIn_3_0;
@@ -55,7 +55,7 @@ class kb extends DualLinkNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         field_m = null;
         field_o = null;

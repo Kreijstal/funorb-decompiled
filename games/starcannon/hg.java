@@ -9,7 +9,7 @@ final class hg extends vk implements qk, ga {
     static String field_D;
     static tk field_y;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -139,7 +139,7 @@ final class hg extends vk implements qk, ga {
             return null;
           }
           if (param0 != 120) {
-            hg.a(false);
+            hg.clearStaticReferences(false);
           }
           var6 = (CharSequence) ((Object) param1);
           var2 = ni.a(param0 ^ 21, var6);

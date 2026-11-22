@@ -101,7 +101,7 @@ final class hg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 == 0) {
@@ -131,7 +131,7 @@ final class hg {
             return;
           }
           if (param0 != 64) {
-            hg.a(-79);
+            hg.clearStaticReferences(-79);
           }
           var13 = mm.field_m[0];
           var3 = jj.a(param1, 1, var13);

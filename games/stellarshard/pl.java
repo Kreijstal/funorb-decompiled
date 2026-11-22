@@ -76,7 +76,7 @@ final class pl extends ae implements je {
         }
     }
 
-    public static void q(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_S = null;
         field_V = null;
         if (param0 != 0) {

@@ -7,7 +7,7 @@ final class og {
     static int field_a;
     static int[][] field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= 60) {
           field_d = (int[][]) null;
           field_c = null;

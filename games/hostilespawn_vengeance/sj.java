@@ -13,7 +13,7 @@ final class sj {
     static sg field_a;
     static bd field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 58) {
           field_c = null;
           field_h = null;

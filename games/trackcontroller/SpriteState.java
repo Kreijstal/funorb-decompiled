@@ -106,7 +106,7 @@ abstract class SpriteState extends DualLinkNode {
         return var10;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         field_u = null;
         field_x = null;

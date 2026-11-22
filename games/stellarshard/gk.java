@@ -80,7 +80,7 @@ final class gk {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (sl.field_d == oa.field_C) {
+          if (GzipDecompressor.field_d == oa.field_C) {
             pg.field_fb.position = 0;
             nb.field_M = null;
             if (param3 != null) {
@@ -135,16 +135,16 @@ final class gk {
               pg.field_fb.a(pg.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);
-            sl.field_d = i.field_d;
+            GzipDecompressor.field_d = i.field_d;
           }
-          if (sl.field_d == i.field_d &&
+          if (GzipDecompressor.field_d == i.field_d &&
             GameEntity.b(64, 1)) {
             var9Lifetime1 = ae.field_N.readUnsignedByte(4);
             ae.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               fc.field_b = new String[-100 + var9Lifetime1];
-              sl.field_d = stellarshard.field_E;
+              GzipDecompressor.field_d = stellarshard.field_E;
             } else {
               if (var9Lifetime1 == 248) {
                 aa.a(hf.a((byte) -64), false);
@@ -159,13 +159,13 @@ final class gk {
                 nb.field_M = new Boolean(h.a(ae.field_N, 31184));
                 ae.field_N.position = 0;
               } else {
-                sl.field_d = DualLinkDeque.field_c;
+                GzipDecompressor.field_d = DualLinkDeque.field_c;
                 ja.field_t = var9Lifetime1;
                 ue.field_b = -1;
               }
             }
           }
-          if (sl.field_d == stellarshard.field_E) {
+          if (GzipDecompressor.field_d == stellarshard.field_E) {
             var9Lifetime2 = 2;
             if (GameEntity.b(64, var9Lifetime2)) {
               var10Lifetime1 = ae.field_N.readUnsignedShort((byte) 74);
@@ -182,7 +182,7 @@ final class gk {
               }
             }
           }
-          if (sl.field_d == DualLinkDeque.field_c &&
+          if (GzipDecompressor.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
             if (ja.field_t == 255) {
               var9_ref_String = ae.field_N.a(0);

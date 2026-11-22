@@ -5,7 +5,7 @@ final class ce {
     static o field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 30518) {
           field_a = (o) null;
@@ -51,7 +51,7 @@ final class ce {
         var3 = StarCannon.field_A;
         try {
           if (param1 >= -46) {
-            ce.a(55);
+            ce.clearStaticReferences(55);
           }
           var4 = (re) (s.field_e.c(-3905));
           while (var4 != null) {

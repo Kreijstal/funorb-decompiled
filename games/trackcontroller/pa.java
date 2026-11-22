@@ -6,7 +6,7 @@ final class pa {
     static long field_b;
     static volatile int idleTicks;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -120) {
           return;
         }

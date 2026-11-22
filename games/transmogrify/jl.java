@@ -74,7 +74,7 @@ final class jl extends IntrusiveNode {
           var2 = var9.d((byte) 78);
           var3 = var9.d((byte) 106);
           if (var2 == 0) {
-            var4_ref_oi = (oi) (qd.field_d.a((byte) -95));
+            var4_ref_oi = (oi) (GzipDecompressor.field_d.a((byte) -95));
             if (var4_ref_oi == null) {
               pc.a(1);
               return;
@@ -125,7 +125,7 @@ final class jl extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 < 9) {
           field_l = (Sprite) null;

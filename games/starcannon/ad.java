@@ -79,7 +79,7 @@ final class ad extends kf {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_D = null;
         if (param0 > -88) {
           field_C = (ta) null;

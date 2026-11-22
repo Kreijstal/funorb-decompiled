@@ -131,7 +131,7 @@ final class ai {
         try {
           SecondaryNodeDequeIterator.a(123);
           if (param12 != 25574) {
-            ai.a(-124);
+            ai.clearStaticReferences(-124);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
@@ -475,7 +475,7 @@ final class ai {
         mh.field_j = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_g = null;
         if (param0 != 0) {

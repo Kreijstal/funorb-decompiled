@@ -324,7 +324,7 @@ final class wc extends wf {
         }
         this.field_o = null;
         if (param0 > -8) {
-          wc.a(false);
+          wc.clearStaticReferences(false);
         }
         if (null != this.field_h) {
           this.field_B = new byte[this.field_k.field_e];
@@ -369,7 +369,7 @@ final class wc extends wf {
         return var3.a(true);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_s = (Sprite) null;
         }

@@ -54,7 +54,7 @@ final class kk extends lk {
           param1.previous.next = param1;
           param1.next.previous = param1;
           if (param0 < 53) {
-            kk.e((byte) 58);
+            kk.clearStaticReferences((byte) 58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class kk extends lk {
         super(param0);
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_k = null;
         field_n = null;

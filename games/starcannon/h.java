@@ -82,7 +82,7 @@ final class h {
         this.field_g = new int[2][2][4];
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = (float[][]) null;
         field_f = (int[][]) null;
     }

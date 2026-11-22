@@ -62,7 +62,7 @@ final class qf implements Runnable {
         this.field_c = false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -15967) {
           return;
         }

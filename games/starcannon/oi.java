@@ -16,7 +16,7 @@ final class oi extends IntrusiveNode {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
           if (11 == bl.field_a) {
-            ab.g((byte) -114);
+            ab.clearStaticReferences((byte) -114);
           }
           int var2_int = -70 / ((-59 - param1) / 54);
           w.a(o.field_b, (byte) 86, kb.field_a, nb.field_a);

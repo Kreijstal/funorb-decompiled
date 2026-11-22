@@ -343,7 +343,7 @@ final class ej implements Runnable {
         this.field_k = null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_f = null;
         field_d = null;

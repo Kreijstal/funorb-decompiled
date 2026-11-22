@@ -8,7 +8,7 @@ final class of extends IntrusiveNode {
     static int field_f;
     int field_h;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_g = null;
         if (!param0) {

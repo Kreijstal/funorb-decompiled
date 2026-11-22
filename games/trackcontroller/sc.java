@@ -58,7 +58,7 @@ final class sc extends kd {
           }
           var11 = param0.a(86, param1, param2, param5, param4);
           if (param3 <= 85) {
-            sc.a(-111);
+            sc.clearStaticReferences(-111);
           }
           while (var11.field_f == 0) {
             wl.a(10L, false);
@@ -100,7 +100,7 @@ final class sc extends kd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 255) {
           field_d = (java.math.BigInteger) null;
         }
@@ -112,7 +112,7 @@ final class sc extends kd {
         param0 = (858993459 & param0) + (param0 >>> 2 & 858993459);
         param0 = (param0 >>> 4) + param0 & 252645135;
         if (param1 != -1) {
-          sc.a(-83);
+          sc.clearStaticReferences(-83);
         }
         param0 = param0 + (param0 >>> 8);
         param0 = param0 + (param0 >>> 16);

@@ -418,7 +418,7 @@ final class ue {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_c = (int[]) null;
         }
@@ -798,7 +798,7 @@ final class ue {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -57) {
-            ue.b(-26);
+            ue.clearStaticReferences(-26);
           }
           if (!qb.a((byte) -106, param3, param2, param4)) {
             return null;

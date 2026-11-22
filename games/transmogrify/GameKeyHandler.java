@@ -50,7 +50,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static boolean a(int param0) {
         if (param0 != 0) {
-          GameKeyHandler.a((byte) 110);
+          GameKeyHandler.clearStaticReferences((byte) 110);
         }
         if (-1 == tg.field_a) {
           if (!ue.a(1, 0)) {
@@ -172,7 +172,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -127) {
           return;
         }

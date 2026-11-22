@@ -138,7 +138,7 @@ final class pk extends ql {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         if (param0 == 2) {

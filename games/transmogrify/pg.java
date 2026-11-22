@@ -13,7 +13,7 @@ final class pg {
 
     final static void a(int param0) {
         if (param0 != 0) {
-          pg.a((byte) -65);
+          pg.clearStaticReferences((byte) -65);
           if (null != ci.field_f) {
             ci.field_f.j(param0 + 127);
             if (gh.field_m != null) {
@@ -62,7 +62,7 @@ final class pg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -15) {
           field_b = (PacketBuffer) null;
           field_b = null;

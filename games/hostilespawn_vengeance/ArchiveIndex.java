@@ -29,7 +29,7 @@ final class ArchiveIndex {
     final static void a(int param0, int param1, int param2) {
         wk.field_c = param0;
         if (param2 != -1) {
-          ArchiveIndex.a(41);
+          ArchiveIndex.clearStaticReferences(41);
         }
         qg.field_l = param1;
     }
@@ -154,7 +154,7 @@ final class ArchiveIndex {
             var8 = 0;
             var9 = -1;
             if (param0 != 0) {
-              ArchiveIndex.a(-105);
+              ArchiveIndex.clearStaticReferences(-105);
             }
             this.field_t = new int[this.field_j];
             if (var4 < 7) {
@@ -322,7 +322,7 @@ final class ArchiveIndex {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 23) {
-            ArchiveIndex.a(-98);
+            ArchiveIndex.clearStaticReferences(-98);
           }
           var5_int = param3.a((byte) -2, param0);
           var6 = param3.a(var5_int, param4, -1);
@@ -384,7 +384,7 @@ final class ArchiveIndex {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = (bd[][]) null;
         field_s = null;
         if (param0 != -17514) {

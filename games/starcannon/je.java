@@ -30,7 +30,7 @@ final class je {
     private static int[] field_m;
     private static int[] field_k;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_t = null;
         field_u = null;
         field_w = null;

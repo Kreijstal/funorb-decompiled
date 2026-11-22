@@ -8,7 +8,7 @@ final class og {
     static hh field_a;
     static String[] field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_c = null;
         field_a = null;

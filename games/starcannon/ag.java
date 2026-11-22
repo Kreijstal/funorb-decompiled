@@ -99,7 +99,7 @@ abstract class ag extends GameApplet {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != 39) {
           field_k = (String) null;
@@ -429,7 +429,7 @@ abstract class ag extends GameApplet {
           kb.a(li.field_b, fk.field_k, (byte) 107, bf.field_y) &&
           pa.a(li.field_b, -206)) {
           eg.b((byte) -64);
-          jg.e((byte) 109);
+          jg.clearStaticReferences((byte) 109);
           o.field_b = pa.field_J;
           sh.field_t = false;
           StarCannon.a(li.field_b, ah.field_i, -20169, bf.field_y, fk.field_k);

@@ -192,7 +192,7 @@ final class dh extends aj implements df {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -258,7 +258,7 @@ final class dh extends aj implements df {
     final static int b(int param0, int param1, int param2) {
         int var3 = param2 >>> 31;
         if (param0 != 15) {
-          dh.l(125);
+          dh.clearStaticReferences(125);
         }
         return (param2 + var3) / param1 - var3;
     }

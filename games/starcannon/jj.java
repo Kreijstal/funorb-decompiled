@@ -30,7 +30,7 @@ final class jj extends vk implements dc, ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 > -92) {
-            jj.a(32);
+            jj.clearStaticReferences(32);
           }
           if (!qb.a((byte) 94, param0, param2, param1)) {
             return null;
@@ -202,7 +202,7 @@ final class jj extends vk implements dc, ga {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         if (param0 != 0) {
           return;

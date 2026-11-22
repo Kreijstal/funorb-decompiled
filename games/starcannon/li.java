@@ -66,7 +66,7 @@ final class li {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (byte[][]) null;
         if (param0 != -23) {
           return;

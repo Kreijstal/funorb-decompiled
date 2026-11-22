@@ -340,7 +340,7 @@ final class ld {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -16723) {
           field_a = (String) null;
         }

@@ -90,7 +90,7 @@ final class lk {
               } else {
                 var8 = je.field_d;
                 synchronized (var8) {
-                  je.field_d.a(var10, -115, var14);
+                  je.field_d.decompress(var10, -115, var14);
                 }
               }
               stackIn_21_0 = var7;

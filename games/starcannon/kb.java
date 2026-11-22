@@ -293,7 +293,7 @@ final class kb {
           if (la.a((byte) 96, param1)) {
             return false;
           }
-          if (nc.a(-100, param1)) {
+          if (GzipDecompressor.hasUniformCharacters(-100, param1)) {
             return false;
           }
           if (param2 != -28169) {

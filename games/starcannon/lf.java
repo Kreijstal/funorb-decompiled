@@ -79,7 +79,7 @@ final class lf extends kc {
         tk.field_a.a(this.field_X, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, tk.field_a.field_p);
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_gb = null;
         field_eb = null;
         if (!param0) {

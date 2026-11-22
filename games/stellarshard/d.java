@@ -66,7 +66,7 @@ final class d extends p {
         }
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_P = null;
         field_K = null;
     }

@@ -21,7 +21,7 @@ final class rh extends ae {
         return 100;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_x = null;
         field_D = null;

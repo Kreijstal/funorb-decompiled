@@ -313,7 +313,7 @@ final class el {
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 != 33) {
-            el.a((byte) -81);
+            el.clearStaticReferences((byte) -81);
           }
           rh.field_v = AchievementNotice.field_l;
           if (param0 != 255) {
@@ -355,7 +355,7 @@ final class el {
         return c.field_d;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 < 75) {
           field_a = (String) null;

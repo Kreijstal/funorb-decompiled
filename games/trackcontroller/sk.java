@@ -18,7 +18,7 @@ final class sk {
         sg var4;
         var3 = TrackController.field_F ? 1 : 0;
         if (!param0) {
-          sk.a((byte) 43);
+          sk.clearStaticReferences((byte) 43);
         }
         while (this.field_f < this.field_c) {
           var4 = this.field_d[this.field_f];
@@ -48,7 +48,7 @@ final class sk {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_h = null;
         if (param0 <= 99) {

@@ -78,7 +78,7 @@ final class ob extends DualLinkNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         field_w = null;
         field_u = null;

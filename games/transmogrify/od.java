@@ -20,7 +20,7 @@ final class od extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         submissionRack = null;
         field_h = null;
         if (!param0) {

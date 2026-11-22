@@ -235,7 +235,7 @@ final class nb extends vd implements qk {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 82) {
           field_F = null;
           field_J = null;

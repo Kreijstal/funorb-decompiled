@@ -19,7 +19,7 @@ final class dd {
         return var1 + IterableNodeHashTable.field_d;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 >= -54) {
           field_a = (PacketBuffer) null;

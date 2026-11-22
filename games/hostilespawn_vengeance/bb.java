@@ -11,13 +11,13 @@ final class bb {
 
     final static String b(byte param0) {
         if (param0 != 99) {
-          bb.a((byte) 82);
+          bb.clearStaticReferences((byte) 82);
           return sc.field_g.o(32);
         }
         return sc.field_g.o(32);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -59) {
           field_e = null;
           field_b = null;

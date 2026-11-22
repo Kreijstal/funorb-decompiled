@@ -12,7 +12,7 @@ final class ig {
     private static int[] field_e;
     private static int[] field_b;
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_e = null;
         field_c = null;

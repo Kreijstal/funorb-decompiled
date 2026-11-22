@@ -83,7 +83,7 @@ final class bh {
           var12 = -qg.field_n + qh.field_e;
           var13 = var11_int * var11_int + var12 * var12 >> 2;
           if (param10 != 9233) {
-            bh.a(83);
+            bh.clearStaticReferences(83);
           }
           if (var13 == 0) {
             return;
@@ -141,7 +141,7 @@ final class bh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_j = null;
         field_c = null;

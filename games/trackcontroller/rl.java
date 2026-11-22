@@ -95,7 +95,7 @@ final class rl extends td implements se, ButtonListener {
         this.field_F.l(-72);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_C = null;
         if (param0) {
           return;

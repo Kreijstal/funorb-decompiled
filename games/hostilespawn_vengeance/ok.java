@@ -30,7 +30,7 @@ final class ok {
     int field_g;
     private static int[] field_b;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_j = null;
         field_v = null;
         field_m = null;

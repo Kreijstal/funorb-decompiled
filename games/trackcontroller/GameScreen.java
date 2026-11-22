@@ -1273,7 +1273,7 @@ final class GameScreen {
         var4Lifetime1 = SpriteState.g(1);
         var5Lifetime1 = null;
         if (23 == var4Lifetime1) {
-          var5Lifetime1 = vi.field_a;
+          var5Lifetime1 = GzipDecompressor.field_a;
         }
         if (var4Lifetime1 == 24) {
           var5Lifetime1 = NodeHashTable.field_i;

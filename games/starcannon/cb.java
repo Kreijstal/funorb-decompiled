@@ -45,7 +45,7 @@ final class cb {
     final void a(int param0, long param1) throws IOException {
         this.field_h.seek(param1);
         if (param0 != 0) {
-          cb.b(17);
+          cb.clearStaticReferences(17);
         }
         this.field_e = param1;
     }
@@ -223,7 +223,7 @@ final class cb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_b = (byte[]) null;
         }

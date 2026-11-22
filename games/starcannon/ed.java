@@ -11,7 +11,7 @@ final class ed extends PcmStream {
     static int field_n;
     static Sprite[] field_o;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != -61) {
           return;

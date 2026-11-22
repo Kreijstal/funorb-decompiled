@@ -354,7 +354,7 @@ class ug {
         this.field_l = hn.a((byte) 80);
     }
 
-    public static void g() {
+    public static void clearStaticReferences() {
         field_j = null;
     }
 

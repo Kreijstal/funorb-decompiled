@@ -140,7 +140,7 @@ final class hi extends AsyncRequest {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         if (param0 != -81) {
           field_A = (int[]) null;

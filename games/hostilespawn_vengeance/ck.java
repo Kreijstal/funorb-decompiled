@@ -40,7 +40,7 @@ final class ck {
     byte field_n;
     int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         if (param0 != -665) {
           return;

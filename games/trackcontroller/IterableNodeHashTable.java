@@ -12,7 +12,7 @@ final class IterableNodeHashTable implements Iterable {
     private IntrusiveNode field_g;
     static boolean[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_f = null;
         field_d = null;

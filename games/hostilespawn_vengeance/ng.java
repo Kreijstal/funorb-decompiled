@@ -33,7 +33,7 @@ final class ng extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 != -8625) {
-            ng.c(-53);
+            ng.clearStaticReferences(-53);
           }
           if (od.field_I != e.field_q) {
             return false;
@@ -84,7 +84,7 @@ final class ng extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 10448) {
           return;
         }

@@ -8,7 +8,7 @@ abstract class nj {
     static int field_a;
     static pg[][] field_d;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -93) {
           field_c = (KeyboardInput) null;
         }
@@ -318,7 +318,7 @@ abstract class nj {
           }
           var3_int = stackIn_3_0;
           if (param2 != -28835) {
-            nj.b((byte) -110);
+            nj.clearStaticReferences((byte) -110);
           }
           if (param1.field_g <= param0.field_g) {
             stackIn_8_0 = param0.field_g - param1.field_g;

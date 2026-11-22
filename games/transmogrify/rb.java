@@ -260,7 +260,7 @@ final class rb {
           }
           var3_int = param1.length();
           if (param0 >= -63) {
-            rb.a(-55);
+            rb.clearStaticReferences(-55);
           }
           if (1 <= var3_int &&
             var3_int <= 12) {
@@ -311,7 +311,7 @@ final class rb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -23) {
           field_b = (wb) null;
         }

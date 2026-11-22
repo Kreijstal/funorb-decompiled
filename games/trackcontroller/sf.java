@@ -1277,7 +1277,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "invalidpass");
                 if (null != var2) {
-                  vi.field_e = ta.a(32200, var2);
+                  GzipDecompressor.field_e = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "retry");
                 if (var2 != null) {

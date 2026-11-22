@@ -99,7 +99,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         field_f = null;

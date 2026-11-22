@@ -214,8 +214,8 @@ final class rk extends wd {
           var1_int = 0;
           var2 = 0;
           while (mh.e(param0 + 128)) {
-            vi.field_f.b((byte) -84);
-            if (vi.field_f.d(0)) {
+            GzipDecompressor.field_f.b((byte) -84);
+            if (GzipDecompressor.field_f.d(0)) {
               var1_int = 1;
             }
             if (kg.field_d != 13) {
@@ -223,14 +223,14 @@ final class rk extends wd {
             }
             var2 = 1;
           }
-          vi.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(wg.clickY, 0, db.clickX));
-          if (vi.field_f.d(0)) {
+          GzipDecompressor.field_f.a(-123, GameScreen.b(fg.mouseY, param0 ^ param0, kf.mouseX), GameScreen.b(wg.clickY, 0, db.clickX));
+          if (GzipDecompressor.field_f.d(0)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            vi.field_f.field_e >= 0) {
-            var3 = ac.field_c[vi.field_f.field_e];
+            GzipDecompressor.field_f.field_e >= 0) {
+            var3 = ac.field_c[GzipDecompressor.field_f.field_e];
             if (var3 == 2) {
               vh.h(-2532);
             } else if (var3 == 5) {

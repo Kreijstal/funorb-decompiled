@@ -20,7 +20,7 @@ final class si extends IntrusiveNode {
         this.field_o = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         newRack = null;
         if (param0 < 74) {
           newRack = (TileRack) null;

@@ -10,7 +10,7 @@ final class ac extends kk {
     static long field_j;
     static String[] field_k;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 < -75) {
           field_k = null;
@@ -27,7 +27,7 @@ final class ac extends kk {
     final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 >= -50) {
-            ac.a((byte) -2);
+            ac.clearStaticReferences((byte) -2);
           }
           param1.a(this.field_l, 124);
           param1.a((byte) 118, this.field_i);

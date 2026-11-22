@@ -289,7 +289,7 @@ class id implements uk, pj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 1392322465) {
           field_g = (IntrusiveDeque) null;

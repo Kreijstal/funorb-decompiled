@@ -8,7 +8,7 @@ final class na {
     static int field_e;
     private Sprite[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -4775) {
           return;

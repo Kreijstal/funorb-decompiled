@@ -19,7 +19,7 @@ final class nf {
     private long[] field_a;
     static int[] field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -92) {
           return;
         }
@@ -205,7 +205,7 @@ final class nf {
           }
         }
         if (!param0) {
-          nf.b(-86);
+          nf.clearStaticReferences(-86);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           this.field_a[var2Lifetime3] = ba.a(this.field_a[var2Lifetime3], ba.a(this.field_m[var2Lifetime3], this.field_c[var2Lifetime3]));
@@ -230,7 +230,7 @@ final class nf {
             return false;
           }
           if (param5 != 0) {
-            nf.b(124);
+            nf.clearStaticReferences(124);
           }
           var8 = new ok(ti.field_b, param6);
           ti.field_b.a((byte) 72, (UiWidget) (var8));

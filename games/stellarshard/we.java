@@ -21,7 +21,7 @@ final class we {
         oc.field_c = new IntrusiveDeque();
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 82) {
           field_e = (String) null;
         }

@@ -144,7 +144,7 @@ final class sg {
         ki.a(param1, param2, param4, param3, param0);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_o = null;
         field_n = null;
         if (param0) {

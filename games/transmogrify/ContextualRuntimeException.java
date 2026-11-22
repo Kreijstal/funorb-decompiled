@@ -1071,7 +1071,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("pleasetryagain", (byte) 126);
                 if (var2 != null) {
-                  qd.field_c = eg.a(127, var2);
+                  GzipDecompressor.field_c = eg.a(127, var2);
                 }
                 var2 = kb.a("pleasereenterpass", (byte) 125);
                 if (var2 != null) {
@@ -2824,11 +2824,11 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("rating_mode_long_name,0", (byte) 105);
                 if (null != var2) {
-                  qd.field_e[0] = eg.a(110, var2);
+                  GzipDecompressor.field_e[0] = eg.a(110, var2);
                 }
                 var2 = kb.a("rating_mode_long_name,1", (byte) 120);
                 if (var2 != null) {
-                  qd.field_e[1] = eg.a(104, var2);
+                  GzipDecompressor.field_e[1] = eg.a(104, var2);
                 }
                 var2 = kb.a("graphics_config_fixed_size", (byte) 113);
                 if (null != var2) {

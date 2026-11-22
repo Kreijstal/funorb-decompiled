@@ -149,7 +149,7 @@ final class rf implements nn {
           uj.d(92);
           return var4;
         }
-        rf.b(-63);
+        rf.clearStaticReferences(-63);
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = bf.field_d[ua.a((int) var7[var4_intLifetime1], 255)];
         }
@@ -158,7 +158,7 @@ final class rf implements nn {
         return var4Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 == 5592405) {
           field_s = null;

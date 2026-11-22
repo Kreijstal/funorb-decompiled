@@ -77,7 +77,7 @@ final class ol {
 
     final int a(int param0) {
         if (param0 > -26) {
-          ol.a(false);
+          ol.clearStaticReferences(false);
           if (null != this.field_g) {
             return this.field_g.length == 0 ? 0 : this.field_g[-1 + this.field_g.length];
           }
@@ -92,7 +92,7 @@ final class ol {
         return 0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_d = null;
         if (param0) {

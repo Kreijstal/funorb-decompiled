@@ -21,7 +21,7 @@ abstract class sm {
         int var2 = -15 % ((param0 - 49) / 57);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_h = null;
         field_i = null;
@@ -46,7 +46,7 @@ abstract class sm {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param0 != -11003) {
-            sm.a((byte) 109);
+            sm.clearStaticReferences((byte) 109);
           }
           if (qi.field_J < param2) {
             qi.field_J = param2;

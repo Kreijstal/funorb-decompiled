@@ -22,7 +22,7 @@ abstract class td {
         return this.a(param1, -122);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_c = (byte[]) null;
           field_c = null;

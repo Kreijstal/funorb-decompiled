@@ -270,7 +270,7 @@ final class nh extends fc {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_P = null;
         field_C = null;
         field_E = null;

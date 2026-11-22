@@ -51,7 +51,7 @@ abstract class SocketConnector {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         if (param0 != 0) {

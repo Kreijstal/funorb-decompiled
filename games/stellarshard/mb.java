@@ -156,7 +156,7 @@ final class mb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;

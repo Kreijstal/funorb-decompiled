@@ -58,7 +58,7 @@ final class sc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         if (param0 != 0) {

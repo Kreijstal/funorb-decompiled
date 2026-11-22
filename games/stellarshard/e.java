@@ -36,7 +36,7 @@ final class e {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 186) {
           return;

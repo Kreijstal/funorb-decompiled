@@ -40,7 +40,7 @@ final class jb {
         this.field_q.a((byte) 71, this.field_i, this.field_k);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_p = null;
         if (param0 != 0) {

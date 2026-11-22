@@ -14,7 +14,7 @@ final class ah {
     static PcmSampleStream field_a;
     String field_h;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < -76) {
           field_d = null;
           field_e = null;

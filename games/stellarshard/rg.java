@@ -288,7 +288,7 @@ class rg extends ig {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_J = null;
         field_I = null;
         if (!param0) {

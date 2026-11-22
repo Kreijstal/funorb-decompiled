@@ -26,7 +26,7 @@ final class lb {
         try {
           var14 = sc.field_g;
           if (param0 != -20785) {
-            lb.a(107);
+            lb.clearStaticReferences(107);
           }
           var2 = var14.l(32270);
           if (0 == var2) {
@@ -79,7 +79,7 @@ final class lb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -16182) {
           return;
@@ -272,9 +272,9 @@ final class lb {
               return stackIn_65_0;
             }
             var9Lifetime3 = cb.field_c;
-            cb.field_c = fh.field_b;
+            cb.field_c = GzipDecompressor.field_b;
             jn.field_C = true;
-            fh.field_b = var9Lifetime3;
+            GzipDecompressor.field_b = var9Lifetime3;
           }
           stackIn_67_0 = -1;
           return stackIn_67_0;

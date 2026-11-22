@@ -22,7 +22,7 @@ final class ba extends IntrusiveNode {
         return new hg(le.h(23), uf.a((byte) -76));
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         if (param0 != 2) {
           return;

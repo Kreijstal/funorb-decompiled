@@ -135,7 +135,7 @@ final class cl extends od {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 81) {
           field_k = (pf) null;
         }

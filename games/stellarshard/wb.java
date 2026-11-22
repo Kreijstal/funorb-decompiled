@@ -90,7 +90,7 @@ final class wb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_g = null;
         field_c = null;

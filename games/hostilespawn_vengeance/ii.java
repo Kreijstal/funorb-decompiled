@@ -26,7 +26,7 @@ final class ii {
         return this.field_a;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 < -64) {
           field_c = null;

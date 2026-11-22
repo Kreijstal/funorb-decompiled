@@ -111,7 +111,7 @@ abstract class rb extends GameApplet {
           if (var4 == 1) {
             var5_int = dc.a(tb.g((byte) 118), -112, n.a(20));
             if (var5_int != -1) {
-              sl.a(NodeHashTableIterator.field_a, var5_int, (byte) -110, fc.field_b);
+              GzipDecompressor.a(NodeHashTableIterator.field_a, var5_int, (byte) -110, fc.field_b);
               fc.field_b = null;
               NodeHashTableIterator.field_a = null;
             }
@@ -723,7 +723,7 @@ abstract class rb extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                sl.a((byte) 51);
+                                GzipDecompressor.a((byte) 51);
                                 return;
                               }
                               GameEntity.a(-6, "MGS1: " + bh.b((byte) -98), (Throwable) null);
@@ -802,7 +802,7 @@ abstract class rb extends GameApplet {
             h.a(-96, 6);
           }
           if (wc.field_x[6]) {
-            sl.a(7, (byte) -105);
+            GzipDecompressor.a(7, (byte) -105);
           }
           if (wc.field_x[8]) {
             we.a((byte) 15);

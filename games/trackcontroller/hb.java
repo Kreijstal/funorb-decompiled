@@ -248,7 +248,7 @@ final class hb {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_d = null;
         field_i = null;

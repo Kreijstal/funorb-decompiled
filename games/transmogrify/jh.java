@@ -256,7 +256,7 @@ final class jh extends ue {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         if (param0 != -1) {
           field_h = (Sprite) null;

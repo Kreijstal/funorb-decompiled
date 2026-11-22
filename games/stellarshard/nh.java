@@ -25,7 +25,7 @@ class nh extends sk {
         PacketBuffer.field_o = dupTemp$2;
         if (am.field_c.field_f != 1) {
         }
-        sl.field_d = lh.field_n;
+        GzipDecompressor.field_d = lh.field_n;
         am.field_c = null;
         return true;
     }
@@ -49,7 +49,7 @@ class nh extends sk {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;

@@ -215,7 +215,7 @@ final class VorbisDecoder extends IntrusiveNode {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_y = null;
         field_w = null;
         field_q = null;

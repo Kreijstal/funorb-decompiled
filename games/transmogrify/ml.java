@@ -107,7 +107,7 @@ final class ml extends IntrusiveNode {
         return new PcmSample(this.field_E, var1, this.field_l, this.field_z, this.field_A);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_I = null;
         field_y = null;
         field_N = null;

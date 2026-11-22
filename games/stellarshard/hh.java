@@ -12,7 +12,7 @@ final class hh implements uk {
     private int field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 25434) {
           field_d = (String) null;

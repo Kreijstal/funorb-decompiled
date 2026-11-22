@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nc {
+final class GzipDecompressor {
     static Random field_c;
     static String field_e;
     static String field_d;
@@ -119,7 +119,7 @@ final class nc {
         }
     }
 
-    public nc() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
@@ -140,7 +140,7 @@ final class nc {
           var3.field_m = param2;
           var3.field_g = param1.field_g;
           if (param0 >= -60) {
-            nc.a(false, -94);
+            GzipDecompressor.a(false, -94);
           }
           var3.field_e = param1.field_e;
           var3.field_f = param1.field_f;
@@ -168,7 +168,7 @@ final class nc {
         }
     }
 
-    final void a(PacketBuffer param0, boolean param1, byte[] param2) {
+    final void decompress(PacketBuffer param0, boolean param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -361,7 +361,7 @@ final class nc {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean hasUniformCharacters(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -395,7 +395,7 @@ final class nc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_d = null;
         int var1 = -4 % ((param0 + 55) / 54);
@@ -413,7 +413,7 @@ final class nc {
         KeyboardInput.b(1000);
     }
 
-    private nc(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {

@@ -170,7 +170,7 @@ final class bb {
         this.field_s.a((byte) 61, this.field_g, this.field_h);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
           field_j = (o) null;
           field_j = null;

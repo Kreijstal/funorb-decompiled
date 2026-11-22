@@ -134,7 +134,7 @@ final class e {
         return bh.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + jj.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 38) {
           field_q = (String) null;
         }

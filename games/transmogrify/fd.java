@@ -12,7 +12,7 @@ final class fd {
     static String field_i;
     static long field_g;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         field_h = (int[][]) null;
@@ -31,7 +31,7 @@ final class fd {
           ob.field_F = param3;
           jj.a(param1, gb.field_c, 1702);
           if (param0 < 58) {
-            fd.a(-9);
+            fd.clearStaticReferences(-9);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

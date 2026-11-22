@@ -39,7 +39,7 @@ final class nb {
           }
           var10.l(118);
           if (param1 <= 87) {
-            nb.a(-75);
+            nb.clearStaticReferences(-75);
           }
           var9 = 0;
           var4Lifetime1 = var9;
@@ -333,7 +333,7 @@ final class nb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_b = null;
         field_d = null;

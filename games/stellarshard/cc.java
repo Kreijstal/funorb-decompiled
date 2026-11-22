@@ -138,7 +138,7 @@ final class cc {
         }
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_e = null;
         field_k = null;

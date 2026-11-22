@@ -1760,7 +1760,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_passwordvalid", -37);
                 if (null != var2) {
-                  nc.field_a = DualLinkNode.a(116, var2);
+                  GzipDecompressor.field_a = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("create_emailvalid", -107);
                 if (var2 != null) {
@@ -1964,7 +1964,7 @@ abstract class eh {
                 }
                 var2 = rd.a("unpacking_music", -115);
                 if (var2 != null) {
-                  nc.field_d = DualLinkNode.a(param0 ^ 74, var2);
+                  GzipDecompressor.field_d = DualLinkNode.a(param0 ^ 74, var2);
                 }
                 var2 = rd.a("unpacking_levels", 122);
                 if (null != var2) {
@@ -2004,7 +2004,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fullscreen", param0 - 183);
                 if (var2 != null) {
-                  nc.field_e = DualLinkNode.a(116, var2);
+                  GzipDecompressor.field_e = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("screensize", 77);
                 if (null != var2) {

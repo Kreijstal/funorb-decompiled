@@ -53,7 +53,7 @@ final class nb extends ig {
         try {
           if (!super.a(param0, param1, param2, param3, param4, (byte) 65, param6)) {
             if (param5 < 24) {
-              nb.a((byte) 61);
+              nb.clearStaticReferences((byte) 61);
             }
             return false;
           }
@@ -120,7 +120,7 @@ final class nb extends ig {
         return this.field_L.a(19692);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 105) {
           field_K = (di) null;
         }

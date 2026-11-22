@@ -108,7 +108,7 @@ final class WhirlpoolDigest {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_f = null;
         field_d = null;
@@ -228,7 +228,7 @@ final class WhirlpoolDigest {
         try {
           kg.field_a = param1;
           if (param0 >= -23) {
-            WhirlpoolDigest.a((byte) 1);
+            WhirlpoolDigest.clearStaticReferences((byte) 1);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -71,7 +71,7 @@ final class hc {
               if (var3 != 1) {
                 var7 = mj.field_b;
                 synchronized (var7) {
-                  mj.field_b.a(var9, true, var12);
+                  mj.field_b.decompress(var9, true, var12);
                 }
               } else {
                 nk.a(var12, var5_int, param1, var4, 9);

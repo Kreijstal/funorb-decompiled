@@ -99,7 +99,7 @@ final class qb extends lk {
           if (null == ob.field_b) {
             return false;
           }
-          if (sl.field_d.b(48)) {
+          if (GzipDecompressor.field_d.b(48)) {
             return true;
           }
           return false;
@@ -107,7 +107,7 @@ final class qb extends lk {
         if (null == ob.field_b) {
           return false;
         }
-        if (sl.field_d.b(48)) {
+        if (GzipDecompressor.field_d.b(48)) {
           return true;
         }
         return false;

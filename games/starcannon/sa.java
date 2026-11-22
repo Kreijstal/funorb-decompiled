@@ -62,7 +62,7 @@ final class sa {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 30334) {
           field_a = (int[]) null;

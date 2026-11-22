@@ -108,7 +108,7 @@ class p {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_g = null;
         field_m = null;

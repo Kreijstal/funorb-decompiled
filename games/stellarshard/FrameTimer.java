@@ -7,7 +7,7 @@ abstract class FrameTimer {
     static String[] field_a;
     static String field_c;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -1) {
           field_c = null;
           field_d = null;

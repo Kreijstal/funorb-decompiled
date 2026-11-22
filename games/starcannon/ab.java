@@ -45,7 +45,7 @@ class ab extends dk {
         return cc.a(1, param4, 1, param3, 3, param0, 3, 1, param2);
     }
 
-    final static void g(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != -114) {
           field_A = (int[]) null;
         }
@@ -185,7 +185,7 @@ class ab extends dk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            ab.g((byte) 85);
+            ab.clearStaticReferences((byte) 85);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

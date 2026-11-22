@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class qd {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_b;
     static IntrusiveDeque field_d;
     static String[] field_e;
     static int[] field_a;
     static String field_c;
 
-    final void a(PacketBuffer param0, int param1, byte[] param2) {
+    final void decompress(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
             if (param0.payload[param0.position] != 31 ||
@@ -18,7 +18,7 @@ final class qd {
               throw new RuntimeException("");
             }
             if (param1 >= -106) {
-              qd.b(51);
+              GzipDecompressor.b(51);
             }
             if (null == this.field_b) {
               this.field_b = new java.util.zip.Inflater(true);
@@ -41,11 +41,11 @@ final class qd {
         }
     }
 
-    public qd() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    private qd(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     final static void a(int param0) {
@@ -83,7 +83,7 @@ final class qd {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         if (param0 > 7) {
@@ -111,7 +111,7 @@ final class qd {
           return;
         }
         ci var2 = (ci) null;
-        qd.a((ci) null, (byte) 107);
+        GzipDecompressor.a((ci) null, (byte) 107);
         ub.field_c = null;
         if (vg.field_b != null) {
           vg.field_b.c((byte) -126);

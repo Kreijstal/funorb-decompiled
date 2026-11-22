@@ -194,7 +194,7 @@ final class eg {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         if (param0 == -1) {
           field_v = null;

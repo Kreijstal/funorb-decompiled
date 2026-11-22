@@ -68,7 +68,7 @@ class cj extends ph {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 7844) {
-            cj.a(false);
+            cj.clearStaticReferences(false);
           }
           if (!rl.a(2884, param3, param4, param2)) {
             return null;
@@ -176,7 +176,7 @@ class cj extends ph {
         this.j(-25638);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

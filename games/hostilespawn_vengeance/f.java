@@ -17,7 +17,7 @@ final class f implements nn {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != -90) {
           return;

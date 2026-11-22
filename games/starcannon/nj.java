@@ -619,7 +619,7 @@ final class nj extends IntrusiveNode {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_y = null;
         field_k = null;

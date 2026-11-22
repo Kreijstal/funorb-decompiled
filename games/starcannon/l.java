@@ -179,7 +179,7 @@ final class l {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_j = null;
         field_e = null;

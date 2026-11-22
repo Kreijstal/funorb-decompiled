@@ -27,7 +27,7 @@ abstract class fi {
           gl.b();
           ki.b();
           qb.field_h = 0;
-          nc.a(-1196777214);
+          GzipDecompressor.a(-1196777214);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);

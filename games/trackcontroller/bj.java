@@ -22,7 +22,7 @@ final class bj {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
+          ij.a((byte) 120, fj.field_U, param1, GzipDecompressor.field_d, oe.field_c, true, 0);
           for (var2_int = param0; var2_int < oe.field_c; var2_int++) {
             lf.field_Y[param1 + var2_int] = var2_int;
           }

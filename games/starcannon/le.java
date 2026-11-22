@@ -10,7 +10,7 @@ final class le extends IOException {
     static boolean[] field_d;
     static IntrusiveDeque field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_b = null;
         field_c = null;

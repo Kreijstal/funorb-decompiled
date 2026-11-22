@@ -88,7 +88,7 @@ class ni extends h {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 255) {
           field_o = (sh) null;

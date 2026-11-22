@@ -137,7 +137,7 @@ final class LevelView extends LevelGrid {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         field_t = null;
         if (param0 >= -64) {

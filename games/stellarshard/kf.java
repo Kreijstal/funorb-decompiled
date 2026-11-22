@@ -65,7 +65,7 @@ final class kf implements uk {
         return ce.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;

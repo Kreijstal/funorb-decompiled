@@ -307,7 +307,7 @@ final class pg {
         this.field_u.a(param0, this.field_i);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_x = null;
         field_s = null;
         field_d = null;

@@ -99,7 +99,7 @@ final class cc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         if (!param0) {
           field_f = (int[]) null;

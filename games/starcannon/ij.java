@@ -60,7 +60,7 @@ final class ij extends kk {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 20756) {
           return;
         }

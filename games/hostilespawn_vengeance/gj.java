@@ -48,7 +48,7 @@ final class gj {
         return -24.0 + (24.0 * param0 - (double)uj.field_p.field_e);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -5) {
           field_d = (bd) null;
         }
@@ -60,7 +60,7 @@ final class gj {
         if (param0 != -17) {
           field_d = (bd) null;
         }
-        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, kd.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, fh.field_a, bc.field_j, oa.field_g, ee.field_a};
+        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, kd.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, ee.field_a};
     }
 
     final static u[] a(boolean param0, CipherPacketBuffer param1) {

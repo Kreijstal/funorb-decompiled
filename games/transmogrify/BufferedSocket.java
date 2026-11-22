@@ -73,7 +73,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_a = null;
         field_j = null;
@@ -256,7 +256,7 @@ final class BufferedSocket implements Runnable {
     final static void a(boolean param0, int param1) {
         IntrusiveNode.a(-1);
         if (!param0) {
-          BufferedSocket.b(-59);
+          BufferedSocket.clearStaticReferences(-59);
         }
     }
 

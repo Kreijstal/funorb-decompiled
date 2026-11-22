@@ -487,7 +487,7 @@ final class vd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -111) {
           field_h = (kg) null;
         }
@@ -726,7 +726,7 @@ final class vd {
           sb.d(var7, var8, var5_int + 6, var6 + 6, this.field_k);
           sb.a(1 + var7, var8 + 1, 4 + var5_int, 4 + var6, this.field_n);
           if (param0 != 89) {
-            vd.a((byte) -12);
+            vd.clearStaticReferences((byte) -12);
           }
           this.field_m.b(param2, var7 + 3, this.field_m.field_D + 3 + var8, this.field_k, -1);
           return;

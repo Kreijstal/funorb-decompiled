@@ -12,7 +12,7 @@ final class pm {
     static long field_c;
     static int field_d;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -12) {
           return;
         }
@@ -63,7 +63,7 @@ final class pm {
 
     final static bd[] a(int param0, int param1, byte param2, int param3) {
         if (param2 != -117) {
-          pm.b((byte) -84);
+          pm.clearStaticReferences((byte) -84);
         }
         return ei.a(param0, 1, param1, param3, 119);
     }

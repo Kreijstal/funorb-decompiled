@@ -198,7 +198,7 @@ abstract class AsyncRequest extends DualLinkNode {
             }
           }
         }
-        vi.field_d = -2147483648;
+        GzipDecompressor.field_d = -2147483648;
         oe.field_c = 0;
         fj.field_U = 2147483647;
         sd.field_b = -2147483648;

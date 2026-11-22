@@ -16,7 +16,7 @@ final class ra implements nn {
     private int field_j;
     private int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 == 11129) {
           field_f = null;
@@ -56,7 +56,7 @@ final class ra implements nn {
           if (param0 == 1) {
             return;
           }
-          ra.a(115);
+          ra.clearStaticReferences(115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

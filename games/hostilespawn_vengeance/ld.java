@@ -181,9 +181,9 @@ final class ld extends hi {
           boolean decompiledFrameRemainder0 = true;
           if (3 == param1 &&
             NetworkGameClient.field_u <= 10) {
-            if ((!fh.field_c[0] ||
+            if ((!GzipDecompressor.field_c[0] ||
               kh.field_U[0] != 3) &&
-              (!fh.field_c[1] ||
+              (!GzipDecompressor.field_c[1] ||
               kh.field_U[1] != 3)) {
               if ((NetworkGameClient.field_u == 0)) {
                 var4 = 1;

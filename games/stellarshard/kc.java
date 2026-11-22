@@ -6,7 +6,7 @@ final class kc {
     static int field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

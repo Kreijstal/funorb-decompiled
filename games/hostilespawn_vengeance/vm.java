@@ -673,7 +673,7 @@ abstract class vm extends DualLinkNode {
         this.a(param0, param1, param2);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_H = null;
         field_r = null;
     }

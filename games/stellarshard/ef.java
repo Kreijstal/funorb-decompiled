@@ -14,7 +14,7 @@ final class ef extends lk {
           InterruptedException var3 = null;
           try {
             if (param0 != 11) {
-              ef.a(true);
+              ef.clearStaticReferences(true);
             }
             Thread.sleep(param1);
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class ef extends lk {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         if (param0) {
           return;

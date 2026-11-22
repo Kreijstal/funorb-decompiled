@@ -9,7 +9,7 @@ final class sf {
     static pg field_f;
     static MouseHandler field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_c = null;
           field_f = null;

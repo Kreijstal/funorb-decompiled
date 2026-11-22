@@ -581,7 +581,7 @@ final class ad extends IntrusiveNode {
         return var0;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_G = null;
         field_A = null;
         field_k = null;

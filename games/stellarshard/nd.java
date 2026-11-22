@@ -189,7 +189,7 @@ final class nd extends ig {
         RuntimeException var2 = null;
         try {
           DualLinkNode.a((java.awt.Component) ((Object) param1), false);
-          sl.a((java.awt.Component) ((Object) param1), (byte) 103);
+          GzipDecompressor.detachMouseInput((java.awt.Component) ((Object) param1), (byte) 103);
           if (param0 != -26621) {
             var3 = (CharSequence) null;
             nd.a((CharSequence) null, (byte) -126);

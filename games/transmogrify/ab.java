@@ -268,7 +268,7 @@ final class ab {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != -2147483648) {

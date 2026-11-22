@@ -191,7 +191,7 @@ final class sc implements Runnable {
 
     final static void a(byte param0) {
         u.field_f = new String[34];
-        u.field_f[4] = fh.field_e;
+        u.field_f[4] = GzipDecompressor.field_e;
         u.field_f[16] = ch.field_d;
         u.field_f[1] = hn.field_d;
         u.field_f[14] = ob.field_E;

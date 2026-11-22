@@ -39,7 +39,7 @@ final class t extends IntrusiveNode {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         if (param0 != -15154) {

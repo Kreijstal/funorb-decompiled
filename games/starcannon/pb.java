@@ -85,7 +85,7 @@ final class pb {
         return new fb(param1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 < 70) {
           field_a = (ge) null;

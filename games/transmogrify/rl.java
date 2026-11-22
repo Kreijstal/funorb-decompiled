@@ -129,7 +129,7 @@ final class rl {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 != 7) {
           field_d = (int[]) null;

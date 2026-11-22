@@ -74,7 +74,7 @@ final class fa extends UiWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1851621384) {
           return;
         }

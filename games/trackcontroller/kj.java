@@ -18,7 +18,7 @@ final class kj extends IntrusiveNode {
     static int field_o;
     static int field_k;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_l = null;
         field_s = null;
         field_q = null;
@@ -38,8 +38,8 @@ final class kj extends IntrusiveNode {
     }
 
     final static void d(int param0) {
-        if (-vi.field_c + 0 != fb.field_a &&
-          -vi.field_c + 250 == fb.field_a) {
+        if (-GzipDecompressor.field_c + 0 != fb.field_a &&
+          -GzipDecompressor.field_c + 250 == fb.field_a) {
         }
         if (param0 != 250) {
           return;

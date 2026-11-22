@@ -16,7 +16,7 @@ final class ge {
         ge.a(si.field_b, si.field_j, si.field_l, si.field_a);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_g = null;
         field_i = null;

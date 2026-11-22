@@ -302,7 +302,7 @@ final class ob extends ql {
         this.field_d.e(-125);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         field_C = null;
         field_e = null;

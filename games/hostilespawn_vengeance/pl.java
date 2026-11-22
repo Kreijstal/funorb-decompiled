@@ -20,7 +20,7 @@ final class pl {
     static String field_a;
     static byte[][] field_i;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         if (!param0) {
           return;

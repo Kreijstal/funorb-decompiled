@@ -26,7 +26,7 @@ final class ih {
           bh.field_c = var1;
           return IntrusiveNode.field_a + var1;
         }
-        ih.a(-100);
+        ih.clearStaticReferences(-100);
         var1Lifetime1 = System.currentTimeMillis();
         if (!(bh.field_c <= var1Lifetime1)) {
           IntrusiveNode.field_a = IntrusiveNode.field_a + (bh.field_c - var1Lifetime1);
@@ -59,7 +59,7 @@ final class ih {
           if (null == ob.field_b) {
             return false;
           }
-          if (la.field_O == sl.field_d) {
+          if (la.field_O == GzipDecompressor.field_d) {
             return true;
           }
           return false;
@@ -67,13 +67,13 @@ final class ih {
         if (null == ob.field_b) {
           return false;
         }
-        if (la.field_O == sl.field_d) {
+        if (la.field_O == GzipDecompressor.field_d) {
           return true;
         }
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 == 38858) {
           field_e = null;

@@ -56,7 +56,7 @@ final class il {
         RuntimeException var7 = null;
         try {
           if (param4 != -1) {
-            il.b(111);
+            il.clearStaticReferences(111);
           }
           if (this.field_m) {
             param0.a(param1, 21, param2, param5, param3);
@@ -265,7 +265,7 @@ final class il {
         return this;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 2147483647) {
           field_k = null;
           field_f = null;

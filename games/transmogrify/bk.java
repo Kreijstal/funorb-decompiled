@@ -37,7 +37,7 @@ final class bk {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 <= 107) {
-          bk.b(81);
+          bk.clearStaticReferences(81);
           var2 = this.field_b.field_h;
           if (this.field_b != var2) {
             this.field_e = var2.field_h;
@@ -80,7 +80,7 @@ final class bk {
         return var2Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -81) {
           return;
         }

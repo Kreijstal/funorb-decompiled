@@ -11,7 +11,7 @@ final class ak {
     private we field_d;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 114) {
           field_c = (String) null;
         }

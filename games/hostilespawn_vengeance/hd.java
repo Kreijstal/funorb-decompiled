@@ -1214,24 +1214,24 @@ final class hd extends hi {
           if (0 > ri.field_h) {
             var6Lifetime2 = ig.field_L;
             if (1 == var6Lifetime2) {
-              fh.field_c[0] = true;
-              fh.field_c[1] = false;
+              GzipDecompressor.field_c[0] = true;
+              GzipDecompressor.field_c[1] = false;
             } else {
               if (var6Lifetime2 == 2) {
-                fh.field_c[1] = true;
-                fh.field_c[0] = false;
+                GzipDecompressor.field_c[1] = true;
+                GzipDecompressor.field_c[0] = false;
               } else {
                 if ((1 & el.field_m) == 0) {
                   if ((4 & el.field_m) == 0) {
-                    fh.field_c[1] = false;
-                    fh.field_c[0] = false;
+                    GzipDecompressor.field_c[1] = false;
+                    GzipDecompressor.field_c[0] = false;
                   } else {
-                    fh.field_c[0] = false;
-                    fh.field_c[1] = true;
+                    GzipDecompressor.field_c[0] = false;
+                    GzipDecompressor.field_c[1] = true;
                   }
                 } else {
-                  fh.field_c[0] = true;
-                  fh.field_c[1] = false;
+                  GzipDecompressor.field_c[0] = true;
+                  GzipDecompressor.field_c[1] = false;
                 }
               }
             }
@@ -1243,8 +1243,8 @@ final class hd extends hi {
             } else {
               t.a(35, 0, ri.field_h);
             }
-            fh.field_c[1] = false;
-            fh.field_c[0] = false;
+            GzipDecompressor.field_c[1] = false;
+            GzipDecompressor.field_c[0] = false;
           }
           if (nh.field_M > 0) {
             nh.field_M = nh.field_M - 1;
@@ -1283,12 +1283,12 @@ final class hd extends hi {
               if (null == of.field_h &&
                 jf.field_c == 0) {
                 if (0 < kh.field_U[0]) {
-                  if (fh.field_c[0] &&
+                  if (GzipDecompressor.field_c[0] &&
                     kh.field_ib[an.field_r[kh.field_U[0]]] <= 0) {
                     MouseInput.field_a[0] = ld.a(-7, 0);
                     var6Lifetime3 = 0;
                   }
-                  if (fh.field_c[0] &&
+                  if (GzipDecompressor.field_c[0] &&
                     kh.field_ib[an.field_r[kh.field_U[0]]] > 0) {
                     dupTemp$2 = an.field_r[kh.field_U[0]];
                     kh.field_ib[dupTemp$2] = kh.field_ib[dupTemp$2] - 1;
@@ -1296,7 +1296,7 @@ final class hd extends hi {
                     var6Lifetime3 = kh.field_U[0];
                   }
                 } else {
-                  if (fh.field_c[0] &&
+                  if (GzipDecompressor.field_c[0] &&
                     dn.field_j < 2) {
                     MouseInput.field_a[0] = ld.a(bm.a(param4, -39), 0);
                     if (kh.field_U[1] == 0) {
@@ -1308,7 +1308,7 @@ final class hd extends hi {
               }
             } else {
               MouseInput.field_a[0] = MouseInput.field_a[0] - 1;
-              if (fh.field_c[0] && (!(an.field_r[kh.field_U[0]] >= 0) ||
+              if (GzipDecompressor.field_c[0] && (!(an.field_r[kh.field_U[0]] >= 0) ||
                 !(kh.field_ib[an.field_r[kh.field_U[0]]] <= 0))) {
                 var6Lifetime3 = kh.field_U[0];
               }
@@ -1317,12 +1317,12 @@ final class hd extends hi {
               if (of.field_h == null &&
                 jf.field_c == 0) {
                 if (kh.field_U[1] > 0) {
-                  if (fh.field_c[1] &&
+                  if (GzipDecompressor.field_c[1] &&
                     kh.field_ib[an.field_r[kh.field_U[1]]] <= 0) {
                     MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
                   }
-                  if (fh.field_c[1] &&
+                  if (GzipDecompressor.field_c[1] &&
                     0 < kh.field_ib[an.field_r[kh.field_U[1]]]) {
                     dupTemp$3 = an.field_r[kh.field_U[1]];
                     kh.field_ib[dupTemp$3] = kh.field_ib[dupTemp$3] - 1;
@@ -1330,7 +1330,7 @@ final class hd extends hi {
                     var6Lifetime3 = kh.field_U[1];
                   }
                 } else {
-                  if (fh.field_c[1] &&
+                  if (GzipDecompressor.field_c[1] &&
                     dn.field_j < 2) {
                     MouseInput.field_a[1] = ld.a(-104, 0);
                     var6Lifetime3 = 0;
@@ -1343,7 +1343,7 @@ final class hd extends hi {
             } else {
               MouseInput.field_a[1] = MouseInput.field_a[1] - 1;
               if (var6Lifetime3 < 0 &&
-                fh.field_c[1] && (!(0 <= an.field_r[kh.field_U[1]]) ||
+                GzipDecompressor.field_c[1] && (!(0 <= an.field_r[kh.field_U[1]]) ||
                 !(0 >= kh.field_ib[an.field_r[kh.field_U[1]]]))) {
                 var6Lifetime3 = kh.field_U[1];
               }

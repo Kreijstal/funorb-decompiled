@@ -2014,7 +2014,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("loading_music", 24);
                 if (null != var2) {
-                  fh.field_i = nm.a(126, var2);
+                  GzipDecompressor.field_i = nm.a(126, var2);
                 }
                 var2 = vj.a("loading_instruments", 24);
                 if (null != var2) {
@@ -2094,7 +2094,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("fullscreen", 24);
                 if (null != var2) {
-                  fh.field_e = nm.a(126, var2);
+                  GzipDecompressor.field_e = nm.a(126, var2);
                 }
                 var2 = vj.a("screensize", 24);
                 if (null != var2) {
@@ -2218,7 +2218,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("ok", 24);
                 if (null != var2) {
-                  fh.field_h = nm.a(127, var2);
+                  GzipDecompressor.field_h = nm.a(127, var2);
                 }
                 var2 = vj.a("on", 24);
                 if (var2 != null) {

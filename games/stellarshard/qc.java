@@ -23,10 +23,10 @@ final class qc {
         int var5 = 0;
         var5 = stellarshard.field_B;
         try {
-          sl.field_b = sl.field_b + 65536;
-          while (65536 <= wi.a(sl.field_b, (byte) 98, cj.field_d)) {
+          GzipDecompressor.field_b = GzipDecompressor.field_b + 65536;
+          while (65536 <= wi.a(GzipDecompressor.field_b, (byte) 98, cj.field_d)) {
             gj.field_v = gj.field_v + 1;
-            sl.field_b = sl.field_b - cj.field_d;
+            GzipDecompressor.field_b = GzipDecompressor.field_b - cj.field_d;
           }
           if (param0 > -110) {
             stackIn_6_0 = -72;

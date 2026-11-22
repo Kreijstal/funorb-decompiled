@@ -18,7 +18,7 @@ final class cf extends IntrusiveNode {
         return oe.field_b == rk.field_X ? true : false;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 29211) {
           return;
         }

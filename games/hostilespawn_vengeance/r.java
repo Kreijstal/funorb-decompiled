@@ -44,7 +44,7 @@ final class r {
           param2.field_l.field_a = param2.field_l.field_a - 0.5;
           param2.field_e = 0;
           param2.field_l.field_f = param2.field_l.field_f - 0.5;
-          param2.field_i = fh.field_f[param1];
+          param2.field_i = GzipDecompressor.field_f[param1];
           param2.field_l.a(6, (byte) 94, param2.field_c + 192.0);
           param2.field_l.a(20, (byte) 94, param2.field_c);
           var5_int = 0;
@@ -160,7 +160,7 @@ final class r {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 == 13496) {
           field_c = null;

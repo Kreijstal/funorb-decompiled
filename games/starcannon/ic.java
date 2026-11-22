@@ -7,7 +7,7 @@ final class ic {
     static GameApplet field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 > -71) {
           field_d = (java.awt.Frame) null;

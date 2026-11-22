@@ -137,7 +137,7 @@ final class BufferedSocket implements Runnable {
           throw new IOException();
         }
         if (param0 != 58962) {
-          BufferedSocket.a((byte) 63);
+          BufferedSocket.clearStaticReferences((byte) 63);
         }
     }
 
@@ -241,7 +241,7 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param0 >= -84) {
-          BufferedSocket.a((byte) -53);
+          BufferedSocket.clearStaticReferences((byte) -53);
         }
         return this.field_d.available();
     }
@@ -256,7 +256,7 @@ final class BufferedSocket implements Runnable {
         return this.field_d.read();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 <= 44) {
           return;
@@ -279,7 +279,7 @@ final class BufferedSocket implements Runnable {
         int var7 = 0;
         var7 = stellarshard.field_B;
         try {
-          if (sl.field_d != la.field_O) {
+          if (GzipDecompressor.field_d != la.field_O) {
             return false;
           }
           var2_long = ih.a((byte) -98);

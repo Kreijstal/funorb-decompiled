@@ -144,7 +144,7 @@ final class gb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;
@@ -188,7 +188,7 @@ final class gb {
                 param2 = ij.a(ol.field_e, new String[]{param2}, (byte) -113);
               }
               if (hd.field_b) {
-                param2 = qd.field_c;
+                param2 = GzipDecompressor.field_c;
               }
               SecondaryNodeDequeIterator.field_d.a(param2, param0, -4);
             }

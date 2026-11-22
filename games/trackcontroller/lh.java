@@ -20,7 +20,7 @@ final class lh extends AsyncRequest {
         return this.field_z;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         field_D = null;
         field_x = null;

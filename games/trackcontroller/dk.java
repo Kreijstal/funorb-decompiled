@@ -5,7 +5,7 @@ final class dk {
     static int field_a;
     static String[] field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

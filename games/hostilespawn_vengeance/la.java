@@ -293,7 +293,7 @@ final class la extends ca {
         return new s(jm.a((byte) 93), hm.c(8));
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != -62) {
           field_h = (bd) null;

@@ -308,7 +308,7 @@ final class ij extends vd implements kn, qk {
         this.field_G = new sf("", (mh) null, 12);
         cn var1 = new cn(jn.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
         ag var2 = new ag(bl.field_d, var1, (mh) null);
-        this.field_E = new ph(fh.field_h, (mh) null);
+        this.field_E = new ph(GzipDecompressor.field_h, (mh) null);
         this.field_H = new ph(qc.field_C, (mh) null);
         this.field_G.field_i = u.field_g;
         this.field_G.a(new n(this.field_G), (byte) -105);

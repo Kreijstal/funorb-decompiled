@@ -23,7 +23,7 @@ final class ok {
               kj.a(22102, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
               kj.a(22102, "updatelinks", new Object[]{"options", var3 + "options.ws"}, param1);
               if (param0 != 9507) {
-                ok.a(-5);
+                ok.clearStaticReferences(-5);
               }
               kj.a(param0 ^ 29557, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param1);
               kj.a(22102, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param1);
@@ -52,7 +52,7 @@ final class ok {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 29) {
           return;
         }

@@ -98,7 +98,7 @@ final class cc extends qf {
             stackIn_10_0 = wc.field_e;
             return stackIn_10_0;
           }
-          if (nc.a(-68, var5)) {
+          if (GzipDecompressor.hasUniformCharacters(-68, var5)) {
             stackIn_13_0 = rg.field_K;
             return stackIn_13_0;
           }
@@ -107,7 +107,7 @@ final class cc extends qf {
             return stackIn_16_0;
           }
           if (var3.length() <= 0) {
-            stackIn_19_0 = nc.field_a;
+            stackIn_19_0 = GzipDecompressor.field_a;
             return stackIn_19_0;
           }
           if (k.a(19272, var5, var3)) {
@@ -190,7 +190,7 @@ final class cc extends qf {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -53) {
           return;
         }

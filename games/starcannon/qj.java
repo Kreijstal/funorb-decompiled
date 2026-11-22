@@ -153,7 +153,7 @@ abstract class qj extends kc {
           if (param0 == -124) {
             return super.g((byte) -124);
           }
-          qj.l(-17);
+          qj.clearStaticReferences(-17);
           return super.g((byte) -124);
         }
         if (na.field_e == this.field_Z) {
@@ -162,7 +162,7 @@ abstract class qj extends kc {
           if (fieldTemp$0 != this.field_W) {
             this.field_Y.field_w = -((this.field_ab << 8) / this.field_W) + 256;
             if (param0 != -124) {
-              qj.l(-17);
+              qj.clearStaticReferences(-17);
               return super.g((byte) -124);
             }
             return super.g((byte) -124);
@@ -174,7 +174,7 @@ abstract class qj extends kc {
           if (param0 == -124) {
             return super.g((byte) -124);
           }
-          qj.l(-17);
+          qj.clearStaticReferences(-17);
           return super.g((byte) -124);
         }
         if (this.field_Z == w.field_w) {
@@ -185,7 +185,7 @@ abstract class qj extends kc {
             if (param0 == -124) {
               return super.g((byte) -124);
             }
-            qj.l(-17);
+            qj.clearStaticReferences(-17);
             return super.g((byte) -124);
           }
           this.field_Z = null;
@@ -193,13 +193,13 @@ abstract class qj extends kc {
           if (param0 == -124) {
             return super.g((byte) -124);
           }
-          qj.l(-17);
+          qj.clearStaticReferences(-17);
           return super.g((byte) -124);
         }
         if (param0 == -124) {
           return super.g((byte) -124);
         }
-        qj.l(-17);
+        qj.clearStaticReferences(-17);
         return super.g((byte) -124);
     }
 
@@ -234,7 +234,7 @@ abstract class qj extends kc {
         this.i(123);
     }
 
-    public static void l(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_V = null;
         if (param0 > -77) {
           field_V = (String) null;

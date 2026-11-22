@@ -36,7 +36,7 @@ final class vj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 8) {
           return;
         }
@@ -61,7 +61,7 @@ final class vj {
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param2 >= -10) {
-            vj.a((byte) 60);
+            vj.clearStaticReferences((byte) 60);
           }
           var5_int = 0;
           while (true) {

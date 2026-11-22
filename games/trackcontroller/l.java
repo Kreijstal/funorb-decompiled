@@ -165,7 +165,7 @@ final class l extends di {
     final static void a(byte param0, java.awt.Canvas param1) {
         try {
           if (rl.field_N == 11) {
-            rg.a(false);
+            rg.clearStaticReferences(false);
           }
           ob.a(qh.field_i, 209, pb.field_a, qi.field_k);
           if (param0 <= 52) {

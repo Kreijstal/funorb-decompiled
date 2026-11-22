@@ -172,7 +172,7 @@ final class kh {
         return this.field_d;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 61) {
           return;

@@ -29,7 +29,7 @@ final class am {
         tl.field_c = 6;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -53) {
           field_c = null;
           field_b = null;

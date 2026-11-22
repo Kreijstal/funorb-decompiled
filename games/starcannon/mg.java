@@ -268,7 +268,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_i = null;
         field_m = null;

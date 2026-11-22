@@ -587,7 +587,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 32) {
           return;
         }

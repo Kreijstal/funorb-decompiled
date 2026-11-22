@@ -13,7 +13,7 @@ final class u {
     static bd field_h;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_f = null;
         field_g = null;
@@ -52,7 +52,7 @@ final class u {
           if (param3 == 0) {
             return;
           }
-          u.a(true);
+          u.clearStaticReferences(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class u {
           if (param2) {
             return;
           }
-          u.a(true);
+          u.clearStaticReferences(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

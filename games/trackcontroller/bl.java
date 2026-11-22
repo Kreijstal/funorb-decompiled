@@ -10,7 +10,7 @@ final class bl {
     static Sprite field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -106) {
           field_c = null;
           field_d = null;

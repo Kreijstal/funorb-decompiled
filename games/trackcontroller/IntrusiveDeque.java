@@ -143,7 +143,7 @@ final class IntrusiveDeque {
         return this.field_d == this.field_d.next ? true : false;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_c = (String[]) null;
           field_c = null;
@@ -160,7 +160,7 @@ final class IntrusiveDeque {
         if (param0 == 1) {
           return;
         }
-        IntrusiveDeque.c(true);
+        IntrusiveDeque.clearStaticReferences(true);
     }
 
     final int size(boolean param0) {

@@ -645,7 +645,7 @@ class fe extends dk {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         if (param0 != 73) {
           field_H = (Sprite) null;

@@ -34,7 +34,7 @@ class wj extends kk {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 == 480) {
           field_l = null;

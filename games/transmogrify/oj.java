@@ -169,7 +169,7 @@ final class oj extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 <= 35) {
           field_u = (IntrusiveDeque) null;

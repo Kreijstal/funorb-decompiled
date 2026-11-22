@@ -258,12 +258,12 @@ final class qe extends PcmStream {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 != 1) {
-          qe.e(52);
+          qe.clearStaticReferences(52);
         }
         return gl.b(param2, 1, param1, 104, param0);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_z = null;
         if (param0 != 1048576) {

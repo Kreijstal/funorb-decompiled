@@ -199,7 +199,7 @@ final class ib {
                 }
                 var2 = mk.b("levelspace", (byte) -127);
                 if (null != var2) {
-                  fh.field_d = nm.a(123, var2);
+                  GzipDecompressor.field_d = nm.a(123, var2);
                 }
                 var2 = mk.b("misdat13", (byte) -123);
                 if (null != var2) {

@@ -15,7 +15,7 @@ final class ha {
         return (java.applet.Applet) ((Object) wi.field_f);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -19424) {
           field_a = (java.awt.Font) null;
           field_a = null;

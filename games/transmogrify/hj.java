@@ -9,7 +9,7 @@ final class hj extends PacketBuffer {
     final static void a(java.awt.Component param0, int param1) {
         try {
           if (param1 != -2) {
-            hj.m(75);
+            hj.clearStaticReferences(75);
           }
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener(el.field_n);
@@ -156,7 +156,7 @@ final class hj extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -62) {
-            hj.m(-31);
+            hj.clearStaticReferences(-31);
           }
           if (rl.a(param2, 0, param3, param0)) {
             stackIn_6_0 = pd.a((byte) 113);
@@ -228,7 +228,7 @@ final class hj extends PacketBuffer {
         return var5;
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 255) {
           field_o = (String) null;

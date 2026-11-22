@@ -9,7 +9,7 @@ final class mj {
     static String field_f;
     static int[] field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -2069072125) {
           return;

@@ -99,7 +99,7 @@ final class ln {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_l = null;
         field_a = null;
@@ -331,7 +331,7 @@ final class ln {
             return 1;
           }
           if (param0) {
-            ln.a(-93);
+            ln.clearStaticReferences(-93);
           }
           if (bj.field_b == 2 &&
             dh.a(this.field_r, (byte) 111)) {

@@ -12,7 +12,7 @@ final class i {
     static char[] field_g;
     static boolean field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (!param0) {
           field_e = (String) null;

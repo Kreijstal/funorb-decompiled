@@ -9,7 +9,7 @@ final class fk {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = (byte[][]) null;
         if (param0 != 14934) {
           return;

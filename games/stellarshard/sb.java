@@ -12,7 +12,7 @@ final class sb {
     static int field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 > 75) {
           field_a = null;

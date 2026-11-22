@@ -14,7 +14,7 @@ final class fg extends ig {
     static int field_M;
     static float field_K;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_P = null;
         if (param0 != 0) {
           return;

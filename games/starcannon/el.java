@@ -13,7 +13,7 @@ final class el extends dk {
     static Sprite field_J;
     int field_B;
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_H = null;
         field_D = null;

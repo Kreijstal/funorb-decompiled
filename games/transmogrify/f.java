@@ -60,9 +60,9 @@ final class f {
             var8 = rk.field_n[9] >> 2;
             var9 = rk.field_n[10] >> 2;
             var10_int = rk.field_n[11] >> 2;
-            var11 = var10_int * qd.field_a[5] + var9 * qd.field_a[4] + var8 * qd.field_a[3] >> 14;
-            var12 = var9 * qd.field_a[7] + qd.field_a[6] * var8 + qd.field_a[8] * var10_int >> 14;
-            var13 = qd.field_a[9] * var8 - (-(var9 * qd.field_a[10]) - qd.field_a[11] * var10_int) >> 14;
+            var11 = var10_int * GzipDecompressor.field_a[5] + var9 * GzipDecompressor.field_a[4] + var8 * GzipDecompressor.field_a[3] >> 14;
+            var12 = var9 * GzipDecompressor.field_a[7] + GzipDecompressor.field_a[6] * var8 + GzipDecompressor.field_a[8] * var10_int >> 14;
+            var13 = GzipDecompressor.field_a[9] * var8 - (-(var9 * GzipDecompressor.field_a[10]) - GzipDecompressor.field_a[11] * var10_int) >> 14;
             var2[var3] = var13 * var7 + var6 * var12 + var11 * var5 >> 16;
           }
           var3Lifetime1 = rk.field_n[9] >> 8;
@@ -70,7 +70,7 @@ final class f {
           var5Lifetime1 = rk.field_n[11] >> 8;
           var6Lifetime1 = si.field_l << 4;
           if (param0 != 16) {
-            f.a(true);
+            f.clearStaticReferences(true);
           }
           var7Lifetime1 = 0;
           var8Lifetime1 = pe.a(4096, var6Lifetime1) >> 8;
@@ -103,9 +103,9 @@ final class f {
             var17Lifetime1 = rf.field_eb[var16];
             l.a(var16, -95);
             for (var18 = 0; 3 > var18; var18++) {
-              qd.field_a[var18] = qd.field_a[var18] + ae.field_a[var15][var18];
+              GzipDecompressor.field_a[var18] = GzipDecompressor.field_a[var18] + ae.field_a[var15][var18];
             }
-            gg.a((byte) 119, rk.field_n, true, false, var17Lifetime1, false, qd.field_a);
+            gg.a((byte) 119, rk.field_n, true, false, var17Lifetime1, false, GzipDecompressor.field_a);
             vd.a(var12Lifetime1, var14, var7Lifetime1, var8Lifetime1, -110, var13Lifetime1, var17Lifetime1, var9Lifetime1);
           }
           return;
@@ -116,7 +116,7 @@ final class f {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_b = (PlatformTaskDispatcher) null;
         }

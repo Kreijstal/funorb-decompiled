@@ -8,7 +8,7 @@ final class tf {
     static int field_c;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != 16976) {
           field_b = (nd) null;

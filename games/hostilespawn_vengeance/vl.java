@@ -82,7 +82,7 @@ final class vl {
         return var2Lifetime1;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 46) {
           field_c = (vl) null;
           field_c = null;

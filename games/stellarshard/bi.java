@@ -7,7 +7,7 @@ class bi extends DualLinkNode {
     static String field_t;
     static nf field_u;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = (int[][]) null;
         if (param0 != 0) {
           return;

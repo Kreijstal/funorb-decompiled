@@ -48,7 +48,7 @@ abstract class ca implements wa {
               return;
             }
             if (!param5) {
-              ca.d(-92);
+              ca.clearStaticReferences(-92);
             }
             var14 = param7 - param6;
             if (param6 == param1) {
@@ -206,7 +206,7 @@ abstract class ca implements wa {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_g = null;

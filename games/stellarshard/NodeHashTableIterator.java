@@ -52,7 +52,7 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 3) {
           field_a = (String) null;
           field_a = null;

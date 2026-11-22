@@ -220,7 +220,7 @@ final class IsaacGenerator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_j = null;
         if (!param0) {

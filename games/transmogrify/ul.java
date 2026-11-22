@@ -170,7 +170,7 @@ final class ul {
         return this.field_d.length;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_c = null;
     }
 

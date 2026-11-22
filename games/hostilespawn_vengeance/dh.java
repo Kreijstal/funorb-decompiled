@@ -75,7 +75,7 @@ final class dh implements Runnable {
         sc.field_g.l(32270);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -3) {
           field_a = (e) null;

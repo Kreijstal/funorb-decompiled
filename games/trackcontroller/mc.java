@@ -8,7 +8,7 @@ final class mc extends ok {
     static Sprite field_E;
     static int field_L;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_J = null;
         field_K = null;
         field_H = null;

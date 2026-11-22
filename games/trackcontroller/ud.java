@@ -68,7 +68,7 @@ final class ud {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_b = (String) null;
           field_a = (int[][]) null;

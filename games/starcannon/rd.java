@@ -7,7 +7,7 @@ class rd extends DualLinkNode {
     static String field_o;
     static String[] field_q;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         if (param0 != -29826) {
           return;

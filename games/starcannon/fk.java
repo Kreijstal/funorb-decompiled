@@ -54,7 +54,7 @@ final class fk {
           var6 = 65535 & param1;
           return (var4 * var6 >> 16) + (var4 * var5 + param1 * var3);
         }
-        fk.a(-8);
+        fk.clearStaticReferences(-8);
         var3Lifetime1 = param0 >> 16;
         var4Lifetime1 = param0 & 65535;
         var5Lifetime1 = param1 >> 16;
@@ -62,7 +62,7 @@ final class fk {
         return (var4Lifetime1 * var6Lifetime1 >> 16) + (var4Lifetime1 * var5Lifetime1 + param1 * var3Lifetime1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_v = null;
         if (param0 != -4918) {

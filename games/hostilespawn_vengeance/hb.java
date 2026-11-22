@@ -12,7 +12,7 @@ final class hb extends lj {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_v = null;
         if (param0) {
           field_v = (ll) null;

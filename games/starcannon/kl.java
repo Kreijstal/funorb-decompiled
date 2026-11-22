@@ -8,7 +8,7 @@ final class kl {
     int field_e;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 21367) {
           return;

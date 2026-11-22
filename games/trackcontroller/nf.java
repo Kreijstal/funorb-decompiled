@@ -143,7 +143,7 @@ final class nf {
         this.field_a = 256;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 != 261211) {
           field_g = (String[]) null;

@@ -46,7 +46,7 @@ abstract class ArchiveProvider {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < -12) {
           field_b = null;
           field_a = null;

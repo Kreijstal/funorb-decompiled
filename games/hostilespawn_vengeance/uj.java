@@ -14,7 +14,7 @@ final class uj extends IntrusiveNode {
     static vl field_o;
     static String field_h;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_r = null;
         field_k = null;
@@ -72,7 +72,7 @@ final class uj extends IntrusiveNode {
             if (param1 == 41) {
               return;
             }
-            uj.c(-75);
+            uj.clearStaticReferences(-75);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -103,7 +103,7 @@ final class uj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 18719) {
-            uj.c(33);
+            uj.clearStaticReferences(33);
           }
           var2 = pm.a(l.a(param0, (byte) 114), (byte) 100);
           if (var2 == null) {

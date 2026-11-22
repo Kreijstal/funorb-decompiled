@@ -15,7 +15,7 @@ final class te {
           rh.field_r.a(param0, -101);
           ne.a((byte) 7, param0, param2);
           if (param1 != -10) {
-            te.a((byte) 61);
+            te.clearStaticReferences((byte) 61);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "te.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -92,7 +92,7 @@ final class te {
             param0[2].a(-var7 + param5 + param3, param2, param1);
             sb.a(q.field_i);
             if (param4 < 13) {
-              te.a((byte) 8);
+              te.clearStaticReferences((byte) 8);
             }
             sb.g(param5 + var6_int, param2, -var7 + (param5 + param3), param2 + param0[1].field_s);
             var9 = param5 + var6_int;
@@ -138,7 +138,7 @@ final class te {
         return 1 + this.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 < 8) {
           return;

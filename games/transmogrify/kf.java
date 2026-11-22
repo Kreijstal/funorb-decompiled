@@ -56,7 +56,7 @@ final class kf extends td {
           }
           if (null != ub.field_c &&
             ub.field_c.field_c) {
-            qd.b(param0 + 3);
+            GzipDecompressor.b(param0 + 3);
             oi.field_k.b((UiWidget) (new ll(oi.field_k, fi.field_w)), (byte) -71);
           }
           return;

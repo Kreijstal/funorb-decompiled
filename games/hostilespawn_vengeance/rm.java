@@ -48,7 +48,7 @@ final class rm {
         this.a(var3 + 1, param1);
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_l = null;
         field_g = null;

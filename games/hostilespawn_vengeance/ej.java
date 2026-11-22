@@ -133,7 +133,7 @@ abstract class ej {
 
     abstract void a(byte param0);
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_o = null;
         field_n = null;

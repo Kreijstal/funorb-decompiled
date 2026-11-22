@@ -32,7 +32,7 @@ final class wh extends lj {
         return GameApplet.field_i;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 43) {
           return;
         }
@@ -119,7 +119,7 @@ final class wh extends lj {
         try {
           var1 = null;
           if (param0 != 104) {
-            wh.h(86);
+            wh.clearStaticReferences(86);
           }
           for (var2 = 11; var2 >= 0; var2--) {
             dupTemp$1 = od.submissionRack.tiles[var2];

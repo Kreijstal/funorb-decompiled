@@ -303,7 +303,7 @@ final class sh extends fh {
         RuntimeException var2 = null;
         try {
           var2_int = -20 / ((param0 + 78) / 48);
-          stackIn_1_0 = eh.a(2, nc.field_c, param1);
+          stackIn_1_0 = eh.a(2, GzipDecompressor.field_c, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -321,7 +321,7 @@ final class uf extends ql {
         return;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 == 24) {
           field_g = null;

@@ -13,7 +13,7 @@ final class tg {
         return mc.field_c.a(-26);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 0) {
           field_a = (int[]) null;
           field_a = null;

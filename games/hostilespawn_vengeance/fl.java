@@ -49,7 +49,7 @@ final class fl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -25) {
           return;
         }
@@ -72,7 +72,7 @@ final class fl {
             return stackIn_4_0;
           }
           if (param0 >= -60) {
-            fl.a((byte) 15);
+            fl.clearStaticReferences((byte) 15);
           }
           var1_int = 1;
           while (true) {

@@ -65,7 +65,7 @@ class ii extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_p = null;
         if (param0 == -5146) {

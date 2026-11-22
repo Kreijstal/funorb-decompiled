@@ -13,7 +13,7 @@ final class jb {
     private int field_g;
     static long[] field_j;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -730625660) {
           field_c = (java.awt.Font) null;
         }

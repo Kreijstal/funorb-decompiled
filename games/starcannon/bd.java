@@ -229,7 +229,7 @@ abstract class bd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -2) {
           return;
         }
@@ -265,7 +265,7 @@ abstract class bd {
         byte[] var6 = null;
         try {
           if (param2 <= 57) {
-            bd.a((byte) 100);
+            bd.clearStaticReferences((byte) 100);
           }
           if (param3 > 0) {
             var7 = new byte[param0];

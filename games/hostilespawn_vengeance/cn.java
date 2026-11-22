@@ -209,7 +209,7 @@ class cn implements nn, mi {
           lj.field_u = param1;
           na.field_c = param3;
           if (param0 <= 125) {
-            cn.a(122);
+            cn.clearStaticReferences(122);
           }
           ArchiveIndex.a(si.field_e / 2, si.field_k / 2, -1);
           ub.a(param1.field_F + param1.field_N, param3.field_F + param3.field_N, param3.field_N, param1.field_N, (byte) -127);
@@ -365,7 +365,7 @@ class cn implements nn, mi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = (byte[][]) null;
         field_e = null;
         field_c = null;

@@ -126,7 +126,7 @@ final class lj extends WidgetContainer implements rf, oi {
         this.b(496, 0, 0, var3 - (-55 - var4), 23987);
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_B = null;
         if (param0 != 120) {

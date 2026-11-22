@@ -92,7 +92,7 @@ final class lj {
         jh.field_b.field_d = 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 <= 65) {
           field_d = (String) null;

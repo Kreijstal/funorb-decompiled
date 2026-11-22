@@ -12,7 +12,7 @@ final class hm extends IntrusiveNode {
     static String field_n;
     static String field_o;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 5) {
           return;
         }
@@ -154,7 +154,7 @@ final class hm extends IntrusiveNode {
               si.a(rj.field_M);
             }
             if (param2) {
-              hm.d(79);
+              hm.clearStaticReferences(79);
             }
             if (null != param1[5] &&
               param1[5].field_r != 0) {

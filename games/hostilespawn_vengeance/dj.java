@@ -22,7 +22,7 @@ final class dj {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = (float[][]) null;
         field_b = (int[][]) null;
     }

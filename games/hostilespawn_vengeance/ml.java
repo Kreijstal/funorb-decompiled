@@ -13,7 +13,7 @@ final class ml {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != -67) {
           return;
@@ -201,7 +201,7 @@ final class ml {
               if (var3 != 1) {
                 var7 = tg.field_b;
                 synchronized (var7) {
-                  tg.field_b.a(124, var13, var10);
+                  tg.field_b.decompress(124, var13, var10);
                 }
               } else {
                 wf.a(var13, var5_int, param0, var4, 9);
@@ -358,7 +358,7 @@ final class ml {
           }
         }
         if (param14) {
-          ml.a((byte) -43);
+          ml.clearStaticReferences((byte) -43);
         }
     }
 

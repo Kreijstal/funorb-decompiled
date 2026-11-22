@@ -21,7 +21,7 @@ final class IntrusiveDeque {
 
     final static void c(int param0) {
         if (param0 != -2290) {
-          IntrusiveDeque.a(false);
+          IntrusiveDeque.clearStaticReferences(false);
         }
         if (ob.field_b != null) {
           ob.field_b.a(true);
@@ -178,7 +178,7 @@ final class IntrusiveDeque {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

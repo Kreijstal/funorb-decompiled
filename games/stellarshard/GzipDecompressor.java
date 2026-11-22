@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class sl {
+final class GzipDecompressor {
     static int[] field_a;
     static boolean field_c;
-    private static sl field_e;
+    private static GzipDecompressor field_e;
     private java.util.zip.Inflater field_f;
     static int field_b;
     static th field_d;
 
-    public sl() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -115) {
           field_d = null;
           field_a = null;
@@ -23,7 +23,7 @@ final class sl {
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
-        sl.a((java.awt.Component) null, (byte) 78);
+        GzipDecompressor.detachMouseInput((java.awt.Component) null, (byte) 78);
         field_d = null;
         field_a = null;
         field_e = null;
@@ -44,7 +44,7 @@ final class sl {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] decompressArchiveContainer(byte param0, byte[] param1) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -69,7 +69,7 @@ final class sl {
           var3 = var10.readUnsignedByte(4);
           if (param0 >= -57) {
             var9 = (String[]) null;
-            sl.a((String) null, 44, (byte) -44, (String[]) null);
+            GzipDecompressor.a((String) null, 44, (byte) -44, (String[]) null);
           }
           var4 = var10.readInt(false);
           if (var4 >= 0 && (0 == of.field_B ||
@@ -93,7 +93,7 @@ final class sl {
               } else {
                 var7 = field_e;
                 synchronized (var7) {
-                  field_e.a(-1, var14, var10);
+                  field_e.decompress(-1, var14, var10);
                 }
               }
               stackIn_23_0 = var6;
@@ -173,7 +173,7 @@ final class sl {
         }
     }
 
-    private final void a(int param0, byte[] param1, PacketBuffer param2) {
+    private final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -240,7 +240,7 @@ final class sl {
         ae.field_N.readUnsignedByte(4);
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachMouseInput(java.awt.Component param0, byte param1) {
         try {
           param0.removeMouseListener(sf.field_c);
           param0.removeMouseMotionListener(sf.field_c);
@@ -254,12 +254,12 @@ final class sl {
         }
     }
 
-    private sl(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {
         field_a = new int[12];
-        field_e = new sl();
+        field_e = new GzipDecompressor();
         field_b = 0;
     }
 }

@@ -25,7 +25,7 @@ final class df {
         int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
         if (param0 != 0) {
-          df.a(-32);
+          df.clearStaticReferences(-32);
         }
         var3 = this.field_i.length;
         while (param1 >= var3) {
@@ -272,7 +272,7 @@ final class df {
         this.field_i = var4;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 < 44) {
           field_g = (bd[]) null;

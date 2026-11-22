@@ -9,7 +9,7 @@ final class ClientException extends RuntimeException {
     static long field_e;
     static boolean field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 >= -13) {
           return;
@@ -56,7 +56,7 @@ final class ClientException extends RuntimeException {
           while (var3 < sa.field_I.length) {
             var4 = mj.field_b[var3];
             if (var4 >= 0) {
-              if (vi.field_f.field_e == var4) {
+              if (GzipDecompressor.field_f.field_e == var4) {
                 var5 = j.field_a;
               } else {
                 var5 = LevelGrid.field_n;
@@ -105,7 +105,7 @@ final class ClientException extends RuntimeException {
             var8Lifetime1 = sf.field_F - (var7Lifetime1 >> 1);
             if (0 <= var4) {
               var1_int = var1_int + na.field_e;
-              if (var4 == vi.field_f.field_e) {
+              if (var4 == GzipDecompressor.field_f.field_e) {
                 stackIn_45_0 = nh.field_c;
               } else {
                 stackIn_45_0 = mk.field_a;

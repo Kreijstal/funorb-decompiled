@@ -28,7 +28,7 @@ final class rg {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         if (param0 != 1) {

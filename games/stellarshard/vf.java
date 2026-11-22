@@ -227,7 +227,7 @@ final class vf extends WidgetContainer implements oi {
 
     final static id a(int param0) {
         if (param0 != 0) {
-          vf.d(true);
+          vf.clearStaticReferences(true);
         }
         if (null == mk.field_l) {
           mk.field_l = new id(de.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, de.field_c.field_N, -1, 2147483647, true);
@@ -250,7 +250,7 @@ final class vf extends WidgetContainer implements oi {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_L = null;
         field_E = null;
         if (param0) {

@@ -10,7 +10,7 @@ final class ue {
     static int field_d;
     static hc field_e;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -69) {
           return;
         }
@@ -42,7 +42,7 @@ final class ue {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           if (null != ob.field_b && (param1 < 0 ||
-            sl.field_d == la.field_O)) {
+            GzipDecompressor.field_d == la.field_O)) {
             if (pg.field_fb.position == 0 &&
               ih.a((byte) -98) > 10000L + t.field_d) {
               pg.field_fb.f(param1, 950);

@@ -11,7 +11,7 @@ final class eh {
     static int field_d;
     static wm field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_h = null;
         field_c = null;
@@ -81,7 +81,7 @@ final class eh {
 
     final static void b(boolean param0) {
         if (param0) {
-          eh.a(false);
+          eh.clearStaticReferences(false);
         }
         hk var1 = (hk) (ak.field_i.b(-27493));
         if (var1 == null) {

@@ -8,7 +8,7 @@ final class gf {
     static PcmSample[] field_c;
     static Sprite[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -102) {
           field_c = null;
           field_e = null;

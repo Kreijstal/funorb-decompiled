@@ -18,7 +18,7 @@ final class nk extends IntrusiveNode {
           cj.field_j.addLast((byte) -97, var1);
           return;
         }
-        nk.d(-35);
+        nk.clearStaticReferences(-35);
         if (var1 == null) {
           var1 = new vg();
         }
@@ -37,7 +37,7 @@ final class nk extends IntrusiveNode {
         field_j = (String) null;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 23985) {
           return;
         }

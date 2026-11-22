@@ -17,7 +17,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         this.field_g.imageComplete(2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != 12) {
           field_e = (IntrusiveDeque) null;
