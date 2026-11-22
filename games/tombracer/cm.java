@@ -597,7 +597,7 @@ final class cm implements GamePacket {
                   if (var23 != 0) {
                     var21 = GridWidgetContainer.field_G + (String) (var22);
                   } else {
-                    var21 = LegacyOpenGlFlowingWaterEffect.formatText(106, cna.field_d, new String[]{(String) (var22)});
+                    var21 = LegacyOpenGlFlowingWaterEffect.formatText(106, PendingRequestFactory.field_d, new String[]{(String) (var22)});
                   }
                 }
                 if (var21 != null) {

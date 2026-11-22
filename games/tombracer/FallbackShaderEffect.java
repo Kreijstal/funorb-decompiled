@@ -93,10 +93,10 @@ final class FallbackShaderEffect extends ShaderEffect {
             var6 = MessageOverlay.field_t;
             MessageOverlay.field_t.field_t = 0;
             var6.field_G = 0;
-            StatusEffect.field_g.field_r = dka.field_a.toUpperCase();
-            var7 = (dka.field_b.field_G + 2) / 2;
-            MessageOverlay.field_t.setBounds(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
-            hw.field_a.setBounds(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);
+            StatusEffect.field_g.field_r = MouseWheelFactory.field_a.toUpperCase();
+            var7 = (MouseWheelFactory.field_b.field_G + 2) / 2;
+            MessageOverlay.field_t.setBounds(-2 + var7, 40, -23776, -40 + MouseWheelFactory.field_b.field_t, 0);
+            hw.field_a.setBounds(MouseWheelFactory.field_b.field_G - var7, 40, param0 - 23777, -40 + MouseWheelFactory.field_b.field_t, var7);
             if (SafeZoneBehaviour.field_u.length == 1 &&
               SafeZoneBehaviour.field_u[0] == 2) {
               var8 = 0;
@@ -130,7 +130,7 @@ final class FallbackShaderEffect extends ShaderEffect {
             if (!PlayerViewport.field_o) {
               stackIn_34_0 = hw.field_a;
               if (var8 != 0) {
-                stackIn_35_1 = kk.field_a;
+                stackIn_35_1 = PacketDiagnostics.field_a;
               } else {
                 stackIn_35_1 = rf.field_b;
               }
@@ -204,15 +204,15 @@ final class FallbackShaderEffect extends ShaderEffect {
               var9 = var16;
               var9 = var16;
               var10Lifetime1 = MessageOverlay.field_t.field_H.stringWidth(var16) + 3 * MessageOverlay.field_t.field_H.charWidth('.');
-              if ((lh.field_a & 48) == 16) {
+              if ((ByteArrayCopies.field_a & 48) == 16) {
                 var9 = var16 + ".";
               }
               MessageOverlay.field_t.field_x = (MessageOverlay.field_t.field_G - var10Lifetime1) / 2;
               MessageOverlay.field_t.field_z = 0;
-              if ((lh.field_a & 48) == 32) {
+              if ((ByteArrayCopies.field_a & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if (48 == (lh.field_a & 48)) {
+              if (48 == (ByteArrayCopies.field_a & 48)) {
                 var9 = (String) (var9) + "...";
               }
               MessageOverlay.field_t.field_r = (String) (var9);
@@ -223,7 +223,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           stackIn_67_1 = param0 ^ -102;
           stackIn_68_2 = (param1) && (!param2) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_67_0).layoutFullScreen(stackIn_67_1, stackIn_68_2);
-          stackIn_72_0 = dka.field_b;
+          stackIn_72_0 = MouseWheelFactory.field_b;
           stackIn_72_1 = -111;
           stackIn_73_2 = (param1) && (!param2) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_72_0).layoutFullScreen(stackIn_72_1, stackIn_73_2);

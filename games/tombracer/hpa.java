@@ -39,11 +39,11 @@ final class hpa extends aa {
             null == C2SChooseRewardPacket.field_a &&
             null == WaveformOperator.field_n) {
             if (!PowerDownItemBehaviour.field_s) {
-              var5 = hka.field_b;
+              var5 = UnlockEntryDecoder.field_b;
               var6 = cga.field_i;
               var5.field_f.addItem((byte) -80, 14, var6);
             }
-            var7 = hka.field_b;
+            var7 = UnlockEntryDecoder.field_b;
             var8 = TextureFilter.field_d;
             var7.field_f.addItem((byte) -117, 20, var8);
           }
@@ -52,20 +52,20 @@ final class hpa extends aa {
             C2SChooseRewardPacket.field_a != null &&
             param1.field_e == C2SChooseRewardPacket.field_a.getGameId(0)) {
             if (!PowerDownItemBehaviour.field_s) {
-              var9 = hka.field_b;
+              var9 = UnlockEntryDecoder.field_b;
               var10 = lw.field_i;
               var9.field_f.addItem((byte) -84, 14, var10);
             }
-            var11 = hka.field_b;
+            var11 = UnlockEntryDecoder.field_b;
             var12 = SafeZoneBehaviour.field_s;
             var11.field_f.addItem((byte) -93, 20, var12);
           }
-          hka.field_b.addLobbyGameActions((byte) -19);
-          hka.field_b.populateItems((byte) -22, false);
-          hka.field_b.addSocialActions(param1.field_h, param1.field_d, 19);
-          hka.field_b.addMessageActions(0);
-          hka.field_b.addChatFilterActions(param1, 13);
-          var13 = hka.field_b;
+          UnlockEntryDecoder.field_b.addLobbyGameActions((byte) -19);
+          UnlockEntryDecoder.field_b.populateItems((byte) -22, false);
+          UnlockEntryDecoder.field_b.addSocialActions(param1.field_h, param1.field_d, 19);
+          UnlockEntryDecoder.field_b.addMessageActions(0);
+          UnlockEntryDecoder.field_b.addChatFilterActions(param1, 13);
+          var13 = UnlockEntryDecoder.field_b;
           var3 = PasswordValidator.field_m;
           if (param0 != -2) {
             return;

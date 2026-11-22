@@ -180,7 +180,7 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$5 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$5, (byte) 47, param1);
-          rc.field_b = SpriteData.loadSheet(param3, "", "fillfont");
+          LobbyPlayerMenuActions.field_b = SpriteData.loadSheet(param3, "", "fillfont");
           incrementValue$6 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$6, (byte) 47, param1);

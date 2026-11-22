@@ -158,7 +158,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
               var2_int = -WeaveOperator.field_q.position + param0;
             }
             OpenGlTransform3D.field_e.readFully(param1 + 1, WeaveOperator.field_q.position, WeaveOperator.field_q.payload, var2_int);
-            MiscItemBehaviour.field_s = bva.currentTimeMillis((byte) -107);
+            MiscItemBehaviour.field_s = AdjustedWallClock.currentTimeMillis((byte) -107);
             WeaveOperator.field_q.position = WeaveOperator.field_q.position + var2_int;
             if (param0 > WeaveOperator.field_q.position) {
               return false;

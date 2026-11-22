@@ -13,7 +13,7 @@ final class vt {
     }
 
     public vt() {
-        of discarded$0 = new of();
+        TooltipVisibility discarded$0 = new TooltipVisibility();
     }
 
     static {

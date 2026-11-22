@@ -42,11 +42,11 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
                 VerticalScrollbar.field_tb[var5] = false;
                 var5++;
               }
-              SoftwareDepthBuffer.field_f = hka.field_a;
+              SoftwareDepthBuffer.field_f = UnlockEntryDecoder.field_a;
             } else {
-              while (hka.field_a != SoftwareDepthBuffer.field_f) {
-                var2 = cna.field_c[hka.field_a];
-                hka.field_a = 127 & hka.field_a + 1;
+              while (UnlockEntryDecoder.field_a != SoftwareDepthBuffer.field_f) {
+                var2 = PendingRequestFactory.field_c[UnlockEntryDecoder.field_a];
+                UnlockEntryDecoder.field_a = 127 & UnlockEntryDecoder.field_a + 1;
                 if (var2 < 0) {
                   VerticalScrollbar.field_tb[~var2] = false;
                   continue;
@@ -110,7 +110,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_P = SecondaryNodeHashTable.queryDisplayModes(99, dsa.field_c);
+          this.field_P = SecondaryNodeHashTable.queryDisplayModes(99, ComponentTypeNames.field_c);
           if (this.field_P.length > 0) {
             for (var2_int = 0; var2_int < this.field_P.length; var2_int++) {
               if (this.field_P[var2_int] != null) {
@@ -193,7 +193,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           if (var2_intLifetime1 != 0) {
             this.field_N = this.addIconButton(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
           }
-          this.field_V = this.addIconButton(-94, SoftwareDepthBuffer.field_e, pa.field_c, (WidgetListener) (this));
+          this.field_V = this.addIconButton(-94, SoftwareDepthBuffer.field_e, OpenGlVertexNormal.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {

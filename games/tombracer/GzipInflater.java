@@ -135,7 +135,7 @@ final class GzipInflater {
           if (0 == Room.field_R.field_b) {
             return false;
           }
-          dupTemp$1 = bva.currentTimeMillis((byte) -107);
+          dupTemp$1 = AdjustedWallClock.currentTimeMillis((byte) -107);
           ValidationStatusIcon.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {

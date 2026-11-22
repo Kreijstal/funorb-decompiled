@@ -1396,7 +1396,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.bindContextToCurrentThread(0);
           CanvasImageBuffer.a(true, (byte) 100, true);
           this.field_E = true;
-          this.field_j = (int)bva.currentTimeMillis((byte) -107);
+          this.field_j = (int)AdjustedWallClock.currentTimeMillis((byte) -107);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.close(true);

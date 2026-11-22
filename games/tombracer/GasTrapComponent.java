@@ -40,7 +40,7 @@ final class GasTrapComponent extends PrefabComponent {
 
     final static boolean isDialogOpen(byte param0) {
         int var1 = -84 % ((27 - param0) / 45);
-        if (hka.field_b != null) {
+        if (UnlockEntryDecoder.field_b != null) {
           return true;
         }
         if (HardwareTurbulentWaterNoise.h(9807)) {

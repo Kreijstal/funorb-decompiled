@@ -406,7 +406,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             this.field_E >= 0 &&
             10 > this.field_E &&
             !this.isMenuBackgroundDemo((byte) 33)) {
-            aqa.sendByteGameMessage(this.field_E, (byte) 120);
+            ByteGameMessageSender.sendByteGameMessage(this.field_E, (byte) 120);
             return;
           }
           return;
@@ -1207,7 +1207,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var6 = TombRacer.field_G ? 1 : 0;
         if (this.localPlayerIndex >= 0) {
           var4 = this.field_D ? 1 : 0;
-          if (!wka.field_d &&
+          if (!JavaKeyCodeMapPatches.field_d &&
             var4 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
@@ -1484,7 +1484,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != this.field_j) {
           var3 = -this.field_j + param0;
-          if (!wka.field_d &&
+          if (!JavaKeyCodeMapPatches.field_d &&
             null != SecondaryNodeDequeIterator.field_a &&
             SecondaryNodeDequeIterator.field_a.localPlayerIndex >= 0 &&
             !SecondaryNodeDequeIterator.field_a.field_D &&
@@ -1506,7 +1506,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         } else {
           stackIn_4_0 = (!this.field_D) ? 0 : 1;
           var3 = stackIn_4_0;
-          if (!wka.field_d &&
+          if (!JavaKeyCodeMapPatches.field_d &&
             var3 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&

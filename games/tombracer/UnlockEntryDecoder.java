@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hka {
+final class UnlockEntryDecoder {
     static SpriteData field_c;
     static PlayerContextMenu field_b;
     static int field_a;
@@ -19,7 +19,7 @@ final class hka {
         try {
           if (param0 != 0) {
             var4 = (PacketBuffer) null;
-            hka.decodeUnlockEntry(62, (PacketBuffer) null);
+            UnlockEntryDecoder.decodeUnlockEntry(62, (PacketBuffer) null);
           }
           var2_int = param1.readUnsignedByte(255);
           var3 = param1.readUnsignedByte(255);
@@ -42,7 +42,7 @@ final class hka {
     public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
-          hka.releaseStatics(true);
+          UnlockEntryDecoder.releaseStatics(true);
           field_b = null;
           return;
         }

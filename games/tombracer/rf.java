@@ -19,7 +19,7 @@ final class rf {
         if (param0 != -121) {
           return 20L;
         }
-        return -MiscItemBehaviour.field_s + bva.currentTimeMillis((byte) -107);
+        return -MiscItemBehaviour.field_s + AdjustedWallClock.currentTimeMillis((byte) -107);
     }
 
     final static String requestAddFriend(boolean param0, String param1, int param2) {

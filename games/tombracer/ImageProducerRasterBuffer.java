@@ -127,23 +127,23 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           DateInputWidget.openPlayerContextMenu(SoftwareModelBillboardState.field_i, param1.getGameId(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
-            var10 = hka.field_b;
+            var10 = UnlockEntryDecoder.field_b;
             var11 = LegacyOpenGlFlowingWaterEffect.formatText(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);
           }
-          hka.field_b.addLobbyGameActions((byte) -84);
+          UnlockEntryDecoder.field_b.addLobbyGameActions((byte) -84);
           if (param2) {
-            if (hka.field_b.field_k == RasterizerOperator.field_o) {
-              var14 = hka.field_b;
-              var15 = LegacyOpenGlFlowingWaterEffect.formatText(103, dka.field_d, new String[]{param3});
+            if (UnlockEntryDecoder.field_b.field_k == RasterizerOperator.field_o) {
+              var14 = UnlockEntryDecoder.field_b;
+              var15 = LegacyOpenGlFlowingWaterEffect.formatText(103, MouseWheelFactory.field_d, new String[]{param3});
               var14.field_f.addItem((byte) -65, 16, var15);
             } else {
-              var12 = hka.field_b;
+              var12 = UnlockEntryDecoder.field_b;
               var13 = LegacyOpenGlFlowingWaterEffect.formatText(125, IdolItemComponent.field_J, new String[]{param3});
               var12.field_f.addItem((byte) -90, 15, var13);
             }
           }
-          var16 = hka.field_b;
+          var16 = UnlockEntryDecoder.field_b;
           var5 = PasswordValidator.field_m;
           var6 = RidgedNoise3D.field_p;
           if (param0 >= -45) {

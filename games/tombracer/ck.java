@@ -324,9 +324,9 @@ final class ck {
           stackIn_98_0Lifetime1 = MessageOverlay.field_t;
           var17 = stackIn_98_0Lifetime1;
           ((UiComponent) (var17)).field_z = 1;
-          dka.field_b = new UiComponent(0L, (UiComponent) null);
-          dka.field_b.addChild(param11 ^ -25373, StatusEffect.field_g);
-          dka.field_b.addChild(-128, C2SSubmitSettingsPacket.field_g);
+          MouseWheelFactory.field_b = new UiComponent(0L, (UiComponent) null);
+          MouseWheelFactory.field_b.addChild(param11 ^ -25373, StatusEffect.field_g);
+          MouseWheelFactory.field_b.addChild(-128, C2SSubmitSettingsPacket.field_g);
           C2SSubmitSettingsPacket.field_g.addChild(-122, qna.field_b);
           var18Lifetime1 = 0;
           while (var18Lifetime1 < 4 + param0) {
@@ -349,9 +349,9 @@ final class ck {
             }
             var18Lifetime1++;
           }
-          dka.field_b.addChild(-128, HiscoresScreen.field_z);
-          dka.field_b.addChild(-125, hw.field_a);
-          dka.field_b.addChild(-123, MessageOverlay.field_t);
+          MouseWheelFactory.field_b.addChild(-128, HiscoresScreen.field_z);
+          MouseWheelFactory.field_b.addChild(-125, hw.field_a);
+          MouseWheelFactory.field_b.addChild(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
           return;

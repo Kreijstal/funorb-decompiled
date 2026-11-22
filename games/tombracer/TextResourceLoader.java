@@ -133,7 +133,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -47, "mu_chat_ignore");
                 if (null != var2) {
-                  of.field_a = jaa.decodeText((byte) 103, var2);
+                  TooltipVisibility.field_a = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_chat_tips");
                 if (null != var2) {
@@ -469,7 +469,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -84, "rated_game");
                 if (null != var2) {
-                  dka.field_a = jaa.decodeText((byte) 92, var2);
+                  MouseWheelFactory.field_a = jaa.decodeText((byte) 92, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 104, "unrated_game");
                 if (null != var2) {
@@ -493,7 +493,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "find_opponents_plural");
                 if (null != var2) {
-                  kk.field_a = jaa.decodeText((byte) 83, var2);
+                  PacketDiagnostics.field_a = jaa.decodeText((byte) 83, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 126, "rated_game_tips_setup_singular");
                 if (var2 != null) {
@@ -649,7 +649,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -90, "hide_players_in_xs_game");
                 if (var2 != null) {
-                  dka.field_d = jaa.decodeText((byte) 72, var2);
+                  MouseWheelFactory.field_d = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 105, "show_players_in_xs_game");
                 if (var2 != null) {
@@ -793,7 +793,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -27, "gameopt_cannotbecombined1");
                 if (null != var2) {
-                  cna.field_d = jaa.decodeText((byte) 29, var2);
+                  PendingRequestFactory.field_d = jaa.decodeText((byte) 29, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 123, "gameopt_cannotbecombined2");
                 if (null != var2) {
@@ -991,7 +991,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -116, "rule_2_2");
                 if (var2 != null) {
-                  aqa.field_b = jaa.decodeText((byte) 39, var2);
+                  ByteGameMessageSender.field_b = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -93, "createafreeaccount");
                 if (var2 != null) {
@@ -1299,7 +1299,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -66, "creatingyouraccount");
                 if (null != var2) {
-                  dsa.field_d = jaa.decodeText((byte) 63, var2);
+                  ComponentTypeNames.field_d = jaa.decodeText((byte) 63, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 109, "create_youmustaccept");
                 if (null != var2) {
@@ -1511,7 +1511,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 105, "create_displayname_tooltip");
                 if (var2 != null) {
-                  rma.field_a = jaa.decodeText((byte) 56, var2);
+                  LoginAttemptStarter.field_a = jaa.decodeText((byte) 56, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -46, "create_displayname_hint");
                 if (var2 != null) {
@@ -1699,7 +1699,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -43, "ignorelistdupe");
                 if (var2 != null) {
-                  bva.field_a = jaa.decodeText((byte) 122, var2);
+                  AdjustedWallClock.field_a = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -125, "ignorenotfound");
                 if (null != var2) {
@@ -2787,7 +2787,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "graphics_config_fullscreen");
                 if (null != var2) {
-                  pa.field_c = jaa.decodeText((byte) 41, var2);
+                  OpenGlVertexNormal.field_c = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -102, "graphics_config_done");
                 if (var2 != null) {

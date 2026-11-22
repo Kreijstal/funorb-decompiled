@@ -229,7 +229,7 @@ class FocusableWidget extends UiWidget {
             return;
           }
           if (var2 != 1) {
-            ClipStack.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 117, (Throwable) null);
+            ClipStack.reportClientError("A1: " + PacketDiagnostics.formatPacketDump(32), (byte) 117, (Throwable) null);
             DropAnimation.closeGameSocket(60);
             return;
           }

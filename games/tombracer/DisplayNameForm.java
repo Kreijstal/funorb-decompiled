@@ -112,7 +112,7 @@ final class DisplayNameForm extends WidgetContainer implements SuggestionsHost, 
         UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
         this.field_A = new FocusableWidget(GridLineWalker.field_j, (WidgetListener) null);
         this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);
-        this.field_z.field_q = rma.field_a;
+        this.field_z.field_q = LoginAttemptStarter.field_a;
         this.field_z.setValidationSource(-13861, new NameFieldValidator(this.field_z));
         this.field_A.field_y = false;
         this.field_A.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());

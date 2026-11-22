@@ -225,7 +225,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           CharacterChoiceFactory.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
           CharacterChoiceFactory.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
           CharacterChoiceFactory.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
-          rma.field_b = ComponentMount.field_b;
+          LoginAttemptStarter.field_b = ComponentMount.field_b;
           RenderableNode.field_i = CharacterChoiceFactory.field_g;
           SimpleMoveLocomotor.field_s = new UiComponent((long)param1, param4);
           ClientMemoryVertexArray.field_e = new UiComponent(0L, param0);
@@ -234,7 +234,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           CharacterChoiceFactory.field_g = new UiComponent(0L, param2);
           CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
           dh.field_e.addChild(-123, CharacterChoiceFactory.field_g);
-          ComponentMount.field_b = new UiComponent(0L, rma.field_b);
+          ComponentMount.field_b = new UiComponent(0L, LoginAttemptStarter.field_b);
           dh.field_e.addChild(-128, ComponentMount.field_b);
           ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, BillboardDefinitionCache.field_a);
           qpa.field_b = new UiComponent(0L, VortexBehaviour.field_t);

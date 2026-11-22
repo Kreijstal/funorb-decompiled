@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dsa {
+final class ComponentTypeNames {
     static String field_d;
     static int field_b;
     static PlatformTaskDispatcher field_c;

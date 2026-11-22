@@ -21,7 +21,7 @@ final class HardwareOpenGlVertexBuffer extends OpenGlBuffer implements VertexStr
           return;
         }
         CharacterChoiceFactory.detachCanvasInput(ColourRowCacheEntry.field_f, false);
-        ColourRowCacheEntry.field_f.exitFullscreen((byte) -34, dsa.field_c);
+        ColourRowCacheEntry.field_f.exitFullscreen((byte) -34, ComponentTypeNames.field_c);
         ColourRowCacheEntry.field_f = null;
         if (null != OpenGlSceneLight.field_o) {
           OpenGlSceneLight.field_o.restoreWindowSize(118);

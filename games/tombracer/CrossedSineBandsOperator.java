@@ -340,7 +340,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             var6_ref_kb.unlink(39);
             return;
           }
-          ClipStack.reportClientError("HS1: " + kk.formatPacketDump(32), (byte) 121, (Throwable) null);
+          ClipStack.reportClientError("HS1: " + PacketDiagnostics.formatPacketDump(32), (byte) 121, (Throwable) null);
           DropAnimation.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,7 +413,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           return;
         }
         ava.updateLobbyPlayerRows(MidiPatch.field_n, param6, param0, param9, 2);
-        lh.field_a = lh.field_a + 1;
+        ByteArrayCopies.field_a = ByteArrayCopies.field_a + 1;
     }
 
     private final boolean a(int param0, byte param1, int param2) {

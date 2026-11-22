@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa {
+final class OpenGlVertexNormal {
     static String field_c;
     int field_a;
     int field_e;
     int field_d;
     int field_b;
 
-    final static int b(byte param0) {
+    final static int getRoomDefinitionCount(byte param0) {
         if (param0 <= 110) {
-          pa.b((byte) 37);
+          OpenGlVertexNormal.getRoomDefinitionCount((byte) 37);
           return PitSnakeModel.field_b;
         }
         return PitSnakeModel.field_b;
@@ -19,7 +19,7 @@ final class pa {
     public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != 117) {
-          pa.b((byte) -106);
+          OpenGlVertexNormal.getRoomDefinitionCount((byte) -106);
         }
     }
 

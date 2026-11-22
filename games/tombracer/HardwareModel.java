@@ -1208,7 +1208,7 @@ final class HardwareModel extends ToolkitModel {
           if (null != param1 ||
             null != this.field_u) {
             ProgressDialog.field_O = var5.field_k * var6.field_g + var6.field_k * var5.field_q + var5.field_m * var6.field_p;
-            wka.field_b = var5.field_f * var6.field_h + (var6.field_f * var5.field_g + var5.field_l * var6.field_m);
+            JavaKeyCodeMapPatches.field_b = var5.field_f * var6.field_h + (var6.field_f * var5.field_g + var5.field_l * var6.field_m);
             ChatChannelType.field_a = var6.field_g * var5.field_p + var5.field_o * var6.field_k + var6.field_p * var5.field_h;
             baa.field_c = var5.field_f * var6.field_p + (var6.field_k * var5.field_l + var5.field_g * var6.field_g);
             ct.field_b = var6.field_h * var5.field_m + (var5.field_q * var6.field_m + var6.field_f * var5.field_k);
@@ -2157,7 +2157,7 @@ final class HardwareModel extends ToolkitModel {
                   var7 = 0.3333333134651184f * (float)(this.field_Z[var5.field_i] + (this.field_Z[var5.field_c] + this.field_Z[var5.field_k]));
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
-                  var10 = var9 * wka.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
+                  var10 = var9 * JavaKeyCodeMapPatches.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
                   var11 = var9 * ct.field_b + (ScoreSubmission.field_p * var8 + var7 * ProgressDialog.field_O) + MatchScoringObserver.field_g;
                   var12 = VertexAttribute.field_h + (var9 * TextureFilter.field_c + (var7 * ChatChannelType.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
@@ -4795,7 +4795,7 @@ final class HardwareModel extends ToolkitModel {
           if (null != param1 ||
             this.field_u != null) {
             ProgressDialog.field_O = var4.field_m * var5.field_p + (var5.field_k * var4.field_q + var5.field_g * var4.field_k);
-            wka.field_b = var4.field_f * var5.field_h + (var5.field_f * var4.field_g + var5.field_m * var4.field_l);
+            JavaKeyCodeMapPatches.field_b = var4.field_f * var5.field_h + (var5.field_f * var4.field_g + var5.field_m * var4.field_l);
             ct.field_b = var5.field_m * var4.field_q + var5.field_f * var4.field_k + var5.field_h * var4.field_m;
             TextureFilter.field_c = var4.field_o * var5.field_m + var4.field_p * var5.field_f + var4.field_h * var5.field_h;
             ChatChannelType.field_a = var4.field_o * var5.field_k + var5.field_g * var4.field_p + var4.field_h * var5.field_p;

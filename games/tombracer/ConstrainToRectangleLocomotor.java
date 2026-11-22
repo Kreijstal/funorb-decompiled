@@ -156,7 +156,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               param1 != 12) {
               TripBeamComponent.playMusicTrack(1, 0);
               RaceStandings.releaseAllSounds(18916);
-              if ((!(wka.field_d) ||
+              if ((!(JavaKeyCodeMapPatches.field_d) ||
                 cs.field_c == null)) {
                 TextureCombineSource.startMenuBackgroundDemo(48);
               }
@@ -166,14 +166,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               if (-2 == param1) {
                 TripBeamComponent.playMusicTrack(1, 0);
                 RaceStandings.releaseAllSounds(18916);
-                wka.field_d = false;
+                JavaKeyCodeMapPatches.field_d = false;
                 cs.field_c = null;
               }
             }
           } else {
             TripBeamComponent.playMusicTrack(1, 1);
             cs.field_c = null;
-            wka.field_d = false;
+            JavaKeyCodeMapPatches.field_d = false;
           }
           wm.field_a = SpriteTileOperator.field_t;
           if (null != wm.field_a) {

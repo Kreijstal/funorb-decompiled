@@ -82,28 +82,28 @@ final class wp {
     final static void closeContextMenu(int param0) {
         String var2 = null;
         String var2Lifetime1;
-        if (null != hka.field_b) {
-          if (null == hka.field_b.field_h) {
+        if (null != UnlockEntryDecoder.field_b) {
+          if (null == UnlockEntryDecoder.field_b.field_h) {
             ChatTarget.field_b = null;
             if (param0 != -1) {
               var2 = (String) null;
               wp.findFriendByName(-23, (String) null);
-              hka.field_b = null;
+              UnlockEntryDecoder.field_b = null;
               return;
             }
-            hka.field_b = null;
+            UnlockEntryDecoder.field_b = null;
             return;
           }
-          hka.field_b.field_h.field_cb = false;
+          UnlockEntryDecoder.field_b.field_h.field_cb = false;
         }
         ChatTarget.field_b = null;
         if (param0 == -1) {
-          hka.field_b = null;
+          UnlockEntryDecoder.field_b = null;
           return;
         }
         var2Lifetime1 = (String) null;
         wp.findFriendByName(-23, (String) null);
-        hka.field_b = null;
+        UnlockEntryDecoder.field_b = null;
     }
 
     static {

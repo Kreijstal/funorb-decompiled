@@ -440,7 +440,7 @@ final class PlayPhase extends MatchPhase {
           PlayPhase.fillRectAlpha(-107, -110, (byte) -67, -77, -33, 57);
         }
         fpa.field_c = true;
-        LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
+        LegacyOpenGlPostProcessEffect.field_f = 15000L + AdjustedWallClock.currentTimeMillis((byte) -107);
         return Transform3D.field_c == 11 ? true : false;
     }
 

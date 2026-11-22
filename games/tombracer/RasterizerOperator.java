@@ -148,9 +148,9 @@ final class RasterizerOperator extends TextureOperator {
             if (null != Projectile.field_k) {
               Projectile.field_k.shutdown((byte) 118);
             }
-            if (null != wka.field_c) {
+            if (null != JavaKeyCodeMapPatches.field_c) {
               try {
-                wka.field_c.close((byte) -52);
+                JavaKeyCodeMapPatches.field_c.close((byte) -52);
               } catch (IOException iOException) {
               }
             }

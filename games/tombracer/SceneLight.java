@@ -68,7 +68,7 @@ abstract class SceneLight extends IntrusiveNode {
           RasterStateFrame.field_i = QuickChatParamType.createToolkitSprite(ara.field_vb, param0, (byte) -20);
           ColourFillOperator.field_m = QuickChatParamType.createToolkitSprite(OpenGlDisplayLists.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = QuickChatParamType.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
-          lh.field_b = QuickChatParamType.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
+          ByteArrayCopies.field_b = QuickChatParamType.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
           vua.field_A = QuickChatParamType.createToolkitSprite(wj.field_a, param0, (byte) 126);
           TextureCoordinateGeneration.field_d = LoadLevelCommand.createToolkitSprites(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.createToolkitSprites(param0, FullscreenCanvas.field_a, param1 ^ -17261);
@@ -107,7 +107,7 @@ abstract class SceneLight extends IntrusiveNode {
           }
           bsa.field_i = QuickChatParamType.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
           fa.field_a = LoadLevelCommand.createToolkitSprites(param0, AnimationFrameBase.field_k, -99);
-          nc.field_e = QuickChatParamType.createToolkitSprite(hka.field_c, param0, (byte) -15);
+          nc.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
           LegacyOpenGlEffectManager.field_a = QuickChatParamType.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(mp.field_d, param0, (byte) 126);
           QuickChatParamType.createToolkitSprite(baa.field_g, param0, (byte) -43);

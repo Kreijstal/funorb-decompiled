@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class of {
+class TooltipVisibility {
     static String field_a;
 
     final static ResourceArchive getOrOpenArchive(boolean param0, int param1) {
@@ -25,14 +25,14 @@ class of {
     final static String getVisibleTooltipText(int param0) {
         if (HardwareOpenGlToolkit.field_pd) {
           if (param0 != 1) {
-            of.getVisibleTooltipText(97);
+            TooltipVisibility.getVisibleTooltipText(97);
             return null;
           }
           return null;
         }
         if (WhiteNoiseOperator.field_m > fr.field_c) {
           if (param0 != 1) {
-            of.getVisibleTooltipText(97);
+            TooltipVisibility.getVisibleTooltipText(97);
             return null;
           }
           return null;
@@ -41,7 +41,7 @@ class of {
           return MazeComponent.field_F;
         }
         if (param0 != 1) {
-          of.getVisibleTooltipText(97);
+          TooltipVisibility.getVisibleTooltipText(97);
           return null;
         }
         return null;

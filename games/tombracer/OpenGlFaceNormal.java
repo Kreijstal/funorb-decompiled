@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo {
+final class OpenGlFaceNormal {
     int field_b;
     static String[] field_d;
     int field_c;
@@ -10,11 +10,11 @@ final class uo {
     public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 != 10) {
-          uo.releaseStatics((byte) -76);
+          OpenGlFaceNormal.releaseStatics((byte) -76);
         }
     }
 
-    final static void b(byte param0) {
+    final static void buildSortedRoomLists(byte param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException decompiledCaughtException = null;

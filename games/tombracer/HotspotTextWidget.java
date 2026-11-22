@@ -468,7 +468,7 @@ class HotspotTextWidget extends FocusableWidget {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (null == DropdownList.field_D) {
-            DropdownList.field_D = cna.newPendingRequest(4, 128);
+            DropdownList.field_D = PendingRequestFactory.newPendingRequest(4, 128);
           }
           if (param0) {
             var5 = (PacketBuffer) null;

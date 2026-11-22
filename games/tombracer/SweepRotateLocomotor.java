@@ -119,7 +119,7 @@ final class SweepRotateLocomotor extends Locomotor {
               return;
             }
             if (var2 != 4) {
-              ClipStack.reportClientError("F1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
+              ClipStack.reportClientError("F1: " + PacketDiagnostics.formatPacketDump(32), (byte) 116, (Throwable) null);
               if (param0 != 14180) {
                 field_q = 74;
               }

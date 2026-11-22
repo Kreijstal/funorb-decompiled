@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh {
+final class ByteArrayCopies {
     static ToolkitSprite field_b;
     static int field_a;
 
     public static void releaseStatics(byte param0) {
         if (param0 < 82) {
           byte[] var2 = (byte[]) null;
-          lh.copyBytes((byte[]) null, 101);
+          ByteArrayCopies.copyBytes((byte[]) null, 101);
           field_b = null;
           return;
         }

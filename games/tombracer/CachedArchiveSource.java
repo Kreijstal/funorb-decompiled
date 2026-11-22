@@ -151,7 +151,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (this.field_v &&
-          this.field_c <= bva.currentTimeMillis((byte) -107)) {
+          this.field_c <= AdjustedWallClock.currentTimeMillis((byte) -107)) {
           var2 = (ArchiveRequest) (this.field_p.firstWithKey(param0 - 1000));
           while (var2 != null) {
             if (!var2.field_m) {
@@ -166,7 +166,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             var2 = (ArchiveRequest) (this.field_p.nextWithKey(20806));
           }
-          this.field_c = 1000L + bva.currentTimeMillis((byte) -107);
+          this.field_c = 1000L + AdjustedWallClock.currentTimeMillis((byte) -107);
         }
         if (param0 != 1000) {
           this.field_c = -79L;

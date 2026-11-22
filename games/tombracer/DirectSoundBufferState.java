@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nva implements pga {
+final class DirectSoundBufferState implements pga {
     private com.ms.directX.DSCursors[] field_a;
     private com.ms.directX.DSBufferDesc[] field_b;
 
-    public nva() throws Exception {
+    public DirectSoundBufferState() throws Exception {
         int var1 = 0;
         int var1Lifetime1;
         this.field_a = new com.ms.directX.DSCursors[2];

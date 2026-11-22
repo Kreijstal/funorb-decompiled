@@ -201,7 +201,7 @@ final class TextureCombineSource {
             AnimationFrameBase.field_k[var13] = var11[var13];
             var13++;
           }
-          hka.field_c = var11[var13];
+          UnlockEntryDecoder.field_c = var11[var13];
           incrementValue$8 = param1;
           param1++;
           var16_ref.drawLoadingProgress(incrementValue$8, (byte) 47, param0);
@@ -245,7 +245,7 @@ final class TextureCombineSource {
           }
           var2 = 0;
           if (mq.field_a == 2) {
-            var3_long = bva.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
+            var3_long = AdjustedWallClock.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -346,7 +346,7 @@ final class TextureCombineSource {
         int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
         cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new DemoCourseGenerator(var3));
         cs.field_c.startMenuBackgroundDemo((byte) -25);
-        wka.field_d = true;
+        JavaKeyCodeMapPatches.field_d = true;
     }
 
     static {

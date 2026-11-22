@@ -139,10 +139,10 @@ final class ClipFrame {
             }
             if (var6.field_y != 0) {
               DateInputWidget.openPlayerContextMenu(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
-              var16 = hka.field_b;
+              var16 = UnlockEntryDecoder.field_b;
               var13_ref_String = uma.field_a;
               var16.field_f.addItem((byte) -100, 7, var13_ref_String);
-              var17 = hka.field_b;
+              var17 = UnlockEntryDecoder.field_b;
               var13 = PasswordValidator.field_m;
               var14 = RidgedNoise3D.field_p;
               var17.field_f.openAt(var14, 0, -69, 0, var13);

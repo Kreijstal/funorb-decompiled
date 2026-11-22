@@ -101,7 +101,7 @@ final class EditableTextField extends UiComponent {
             } else {
               this.setCaret(param0 + 18539, var2_int);
               this.field_tb = true;
-              var3_long = bva.currentTimeMillis((byte) -107);
+              var3_long = AdjustedWallClock.currentTimeMillis((byte) -107);
               stackIn_6_1 = !(-this.field_Hb + var3_long >= 250L);
               this.field_vb = stackIn_6_1;
               if (this.field_vb) {

@@ -9,7 +9,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
     static String field_a;
 
     public final void markEdited(int param0) {
-        this.lastEditTime = bva.currentTimeMillis((byte) -107);
+        this.lastEditTime = AdjustedWallClock.currentTimeMillis((byte) -107);
         if (param0 > -63) {
           this.getMessage(109);
         }
@@ -21,7 +21,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
         if (this.isEmpty(true)) {
           return null;
         }
-        if (bva.currentTimeMillis((byte) -107) < this.lastEditTime + 350L) {
+        if (AdjustedWallClock.currentTimeMillis((byte) -107) < this.lastEditTime + 350L) {
           return null;
         }
         if (param0 >= 34) {
@@ -71,7 +71,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
           if (this.isEmpty(true)) {
             return ColourRowCache.field_d;
           }
-          if (!(bva.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
+          if (!(AdjustedWallClock.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
             return BevelOperator.field_p;
           }
           return this.computeState(-1891);
@@ -79,7 +79,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
         if (this.isEmpty(true)) {
           return ColourRowCache.field_d;
         }
-        if (!(bva.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
+        if (!(AdjustedWallClock.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
           return BevelOperator.field_p;
         }
         return this.computeState(-1891);

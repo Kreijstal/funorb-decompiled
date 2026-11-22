@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aqa {
+final class ByteGameMessageSender {
     static String field_b;
     static int field_d;
     static String field_c;
@@ -19,7 +19,7 @@ final class aqa {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -59) {
-          aqa.releaseStatics((byte) -84);
+          ByteGameMessageSender.releaseStatics((byte) -84);
           field_b = null;
           field_c = null;
           return;

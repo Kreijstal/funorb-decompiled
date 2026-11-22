@@ -772,9 +772,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
           this.field_hd.ageCache(-29413);
           if (!(this.estimatedResourceBytes(-44) <= 100663296) &&
-            !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
+            !(AdjustedWallClock.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
-            this.field_Lb = bva.currentTimeMillis((byte) -107);
+            this.field_Lb = AdjustedWallClock.currentTimeMillis((byte) -107);
           }
         } else {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, EllipseShape.field_k, 0);
@@ -797,9 +797,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
           this.field_hd.ageCache(-29413);
           if (!(this.estimatedResourceBytes(-44) <= 100663296) &&
-            !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
+            !(AdjustedWallClock.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
-            this.field_Lb = bva.currentTimeMillis((byte) -107);
+            this.field_Lb = AdjustedWallClock.currentTimeMillis((byte) -107);
           }
         }
         this.field_Oc = param0;

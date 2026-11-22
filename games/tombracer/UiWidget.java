@@ -132,14 +132,14 @@ class UiWidget extends IntrusiveNode {
         while (true) {
           if (var4 < var5) {
             if (param0 < -23) {
-              var11 = of.getVisibleTooltipText(1);
+              var11 = TooltipVisibility.getVisibleTooltipText(1);
               if (var11 != null) {
                 afa.field_c.drawTooltip(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
               }
               return;
             }
             this.field_m = -42;
-            var10 = of.getVisibleTooltipText(1);
+            var10 = TooltipVisibility.getVisibleTooltipText(1);
             if (var10 != null) {
               afa.field_c.drawTooltip(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
@@ -148,7 +148,7 @@ class UiWidget extends IntrusiveNode {
           this.renderLayer(param2, param1, 0, var5);
           var5++;
           if (var6 != 0) {
-            var7 = of.getVisibleTooltipText(1);
+            var7 = TooltipVisibility.getVisibleTooltipText(1);
             if (var7 != null) {
               afa.field_c.drawTooltip(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
             }

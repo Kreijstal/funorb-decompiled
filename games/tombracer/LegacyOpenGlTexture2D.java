@@ -24,7 +24,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             String var4 = (String) null;
             LegacyOpenGlTexture2D.submitLogin(true, (String) null, (String) null);
           }
-          rma.startLoginAttempt(false, param1, param2, (byte) 100);
+          LoginAttemptStarter.startLoginAttempt(false, param1, param2, (byte) 100);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rt.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

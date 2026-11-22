@@ -20,7 +20,7 @@ final class lla {
         String[] var3 = null;
         UiComponent[] var4 = null;
         try {
-          var3 = new String[]{param0, MonochromeFillOperator.field_o, of.field_a};
+          var3 = new String[]{param0, MonochromeFillOperator.field_o, TooltipVisibility.field_a};
           var4 = new UiComponent[]{param1, OpenGlVertexLayout.field_e, (UiComponent) ((Object) OpenGlSprite.field_j)};
           this.field_a = new TabbedPanel(0L, HazardEffect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {

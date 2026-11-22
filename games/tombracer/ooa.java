@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ooa extends wka {
+final class ooa extends JavaKeyCodeMapPatches {
     static String field_h;
     static int[] field_e;
     static int field_g;

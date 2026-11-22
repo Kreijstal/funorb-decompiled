@@ -27,7 +27,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
     }
 
     AccountCreationDialog(DialogStack param0, AccountRegistrationPanel param1) {
-        super(param0, TextureFormat.field_c, dsa.field_d, false, false);
+        super(param0, TextureFormat.field_c, ComponentTypeNames.field_d, false, false);
         try {
           this.field_fb = param1;
         } catch (RuntimeException runtimeException) {

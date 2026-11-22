@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rma {
+final class LoginAttemptStarter {
     static UiComponent field_b;
     static String field_a;
 

@@ -42,7 +42,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h = new String[TouchSwitchBehaviour.field_n];
         aca.field_h[17] = CharacterChoiceFactory.field_d;
         aca.field_h[20] = afa.field_b;
-        aca.field_h[11] = aqa.field_b;
+        aca.field_h[11] = ByteGameMessageSender.field_b;
         aca.field_h[9] = MotionTrackingModel.field_u;
         aca.field_h[21] = AccountCreationDialog.field_jb;
         aca.field_h[19] = GrowableIntList.field_b;

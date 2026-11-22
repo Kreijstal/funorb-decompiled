@@ -66,7 +66,7 @@ final class Bzip2State {
             return stackIn_9_0;
           }
           if (MouseWheelInput.isIgnored(2180, param1)) {
-            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, bva.field_a, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, AdjustedWallClock.field_a, new String[]{param1});
             return stackIn_13_0;
           }
           if (100 <= MonochromeRowCacheEntry.field_k) {

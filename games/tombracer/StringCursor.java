@@ -20,7 +20,7 @@ final class StringCursor {
             }
           } else {
             if (OpenGlSceneLight.field_o == null) {
-              ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+              ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, ComponentTypeNames.field_c, 640, 0);
               if (ColourRowCacheEntry.field_f == null) {
                 var2 = 3;
               } else {
@@ -63,7 +63,7 @@ final class StringCursor {
             return;
           }
           if (OpenGlSceneLight.field_o == null) {
-            ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+            ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, ComponentTypeNames.field_c, 640, 0);
             if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
               if (OpenGlSceneLight.field_o == null &&

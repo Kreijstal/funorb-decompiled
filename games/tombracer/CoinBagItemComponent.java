@@ -125,8 +125,8 @@ final class CoinBagItemComponent extends ItemComponent {
             var7.field_G = 0;
             if (ComponentMount.isLocalPlayerHost(param1 + 8193)) {
               StatusEffect.field_g.field_r = GpuDataType.field_d.toUpperCase();
-              var9 = (2 + dka.field_b.field_G) / 2;
-              HiscoresScreen.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
+              var9 = (2 + MouseWheelFactory.field_b.field_G) / 2;
+              HiscoresScreen.field_z.setBounds(-2 + var9, 40, -23776, -40 + MouseWheelFactory.field_b.field_t, 0);
               if (C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
                 HiscoresScreen.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 HiscoresScreen.field_z.field_X = false;
@@ -148,13 +148,13 @@ final class CoinBagItemComponent extends ItemComponent {
                 if (decompiledSharedTail0) {
                   var10_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
                 }
-                if ((lh.field_a & 16) == 0 &&
+                if ((ByteArrayCopies.field_a & 16) == 0 &&
                   !OpenGlDisplayLists.field_e) {
                   HiscoresScreen.field_z.field_w = HardwareModelVertexStream.field_g.field_C;
                 }
                 HiscoresScreen.field_z.field_r = HiscoresScreen.field_z.field_r + "<br>" + var10_ref_String;
               }
-              hw.field_a.setBounds(dka.field_b.field_G - var9, 40, -23776, dka.field_b.field_t - 40, var9);
+              hw.field_a.setBounds(MouseWheelFactory.field_b.field_G - var9, 40, -23776, MouseWheelFactory.field_b.field_t - 40, var9);
               hw.field_a.field_r = PlantModel.field_p.toUpperCase();
               var8 = hw.field_a;
               stackIn_20_0 = hw.field_a;
@@ -437,19 +437,19 @@ final class CoinBagItemComponent extends ItemComponent {
               if (var19 != 0) {
                 var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
                 StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
-                MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+                MessageOverlay.field_t.setBounds(MouseWheelFactory.field_b.field_G, 40, -23776, MouseWheelFactory.field_b.field_t - 40, 0);
                 MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextBlockLayout.field_d, new String[]{var9_ref_String});
                 var8 = MessageOverlay.field_t;
               }
             } else {
               var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
               StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
-              MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+              MessageOverlay.field_t.setBounds(MouseWheelFactory.field_b.field_G, 40, -23776, MouseWheelFactory.field_b.field_t - 40, 0);
               MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextBlockLayout.field_d, new String[]{var9_ref_String});
               var8 = MessageOverlay.field_t;
             }
             if (TileRenderable.field_d != 0L) {
-              var9 = (int)(-bva.currentTimeMillis((byte) -107) + TileRenderable.field_d);
+              var9 = (int)(-AdjustedWallClock.currentTimeMillis((byte) -107) + TileRenderable.field_d);
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -462,7 +462,7 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_168_1 = -98;
           stackIn_169_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_168_0).layoutFullScreen(stackIn_168_1, stackIn_169_2);
-          stackIn_173_0 = dka.field_b;
+          stackIn_173_0 = MouseWheelFactory.field_b;
           stackIn_173_1 = 67;
           stackIn_174_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_173_0).layoutFullScreen(stackIn_173_1, stackIn_174_2);

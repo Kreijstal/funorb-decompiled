@@ -42,7 +42,7 @@ final class BannerCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new ConsoleValue(rma.readFreeLevelBanner(-80));
+            stackIn_4_0 = new ConsoleValue(LoginAttemptStarter.readFreeLevelBanner(-80));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

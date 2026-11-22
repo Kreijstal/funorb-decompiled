@@ -312,7 +312,7 @@ final class ava {
                 RewardChoiceSlot.a((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
-                  rc.openLobbyPlayerContextMenu(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
+                  LobbyPlayerMenuActions.openLobbyPlayerContextMenu(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
                   HardwareAnimatedWaterEffect.a(param1, var12.field_yb, -118);
                 }

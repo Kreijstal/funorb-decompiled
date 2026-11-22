@@ -30,7 +30,7 @@ class TextInputWidget extends FocusableWidget {
               if (this.selectionAnchor != this.caret) {
                 var5.drawSelection(-1, (UiWidget) (this), param1, param0, this.selectionAnchor, this.caret);
               }
-              var6 = bva.currentTimeMillis((byte) -107);
+              var6 = AdjustedWallClock.currentTimeMillis((byte) -107);
               if ((-this.field_H + var6) % 1000L < 500L) {
                 var5.drawCaret(this.caret, param1, param2 - 22502, param0, (UiWidget) (this));
               }
@@ -56,7 +56,7 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_H = bva.currentTimeMillis((byte) -107);
+          this.field_H = AdjustedWallClock.currentTimeMillis((byte) -107);
           if (param0 != 60 &&
             param0 != 62) {
             if (!param3) {
@@ -604,7 +604,7 @@ class TextInputWidget extends FocusableWidget {
                 this.caret = var6;
               }
             }
-            this.field_H = bva.currentTimeMillis((byte) -107);
+            this.field_H = AdjustedWallClock.currentTimeMillis((byte) -107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -646,7 +646,7 @@ class TextInputWidget extends FocusableWidget {
               stackIn_11_2 = var8_int;
             }
             this.setCaret(stackIn_10_1, stackIn_11_2);
-            var8_long = bva.currentTimeMillis((byte) -107);
+            var8_long = AdjustedWallClock.currentTimeMillis((byte) -107);
             stackIn_15_1 = !(250L <= -this.field_G + var8_long);
             this.field_E = stackIn_15_1;
             if (this.field_E) {
@@ -951,7 +951,7 @@ class TextInputWidget extends FocusableWidget {
           this.maxLength = param2;
           this.setText(true, -16719, param0);
           this.field_D = true;
-          this.field_H = bva.currentTimeMillis((byte) -107);
+          this.field_H = AdjustedWallClock.currentTimeMillis((byte) -107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

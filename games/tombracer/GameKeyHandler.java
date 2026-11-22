@@ -84,9 +84,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (SoftwareDepthBuffer.field_f >= 0 &&
             var2_int >= 0) {
-            cna.field_c[SoftwareDepthBuffer.field_f] = var2_int;
+            PendingRequestFactory.field_c[SoftwareDepthBuffer.field_f] = var2_int;
             SoftwareDepthBuffer.field_f = 127 & 1 + SoftwareDepthBuffer.field_f;
-            if (SoftwareDepthBuffer.field_f == hka.field_a) {
+            if (SoftwareDepthBuffer.field_f == UnlockEntryDecoder.field_a) {
               SoftwareDepthBuffer.field_f = -1;
             }
           }
@@ -165,9 +165,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= SoftwareDepthBuffer.field_f &&
               0 <= var2_int) {
-              cna.field_c[SoftwareDepthBuffer.field_f] = ~var2_int;
+              PendingRequestFactory.field_c[SoftwareDepthBuffer.field_f] = ~var2_int;
               SoftwareDepthBuffer.field_f = 127 & 1 + SoftwareDepthBuffer.field_f;
-              if (SoftwareDepthBuffer.field_f == hka.field_a) {
+              if (SoftwareDepthBuffer.field_f == UnlockEntryDecoder.field_a) {
                 SoftwareDepthBuffer.field_f = -1;
               }
             }

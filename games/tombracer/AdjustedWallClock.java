@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bva {
+final class AdjustedWallClock {
     static fta field_b;
     static float field_c;
     static String field_a;
@@ -21,7 +21,7 @@ final class bva {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != -107) {
-          bva.releaseStatics((byte) 0);
+          AdjustedWallClock.releaseStatics((byte) 0);
           var1 = System.currentTimeMillis();
           if (var1 < LegacyTurbulentWaterNoise.field_o) {
             QuickChatCategory.field_p = QuickChatCategory.field_p + (-var1 + LegacyTurbulentWaterNoise.field_o);

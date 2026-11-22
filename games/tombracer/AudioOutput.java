@@ -144,7 +144,7 @@ class AudioOutput {
         if (this.field_i != null) {
           this.field_i.fill(param0, 0, param1);
         }
-        this.field_n = bva.currentTimeMillis((byte) -107);
+        this.field_n = AdjustedWallClock.currentTimeMillis((byte) -107);
     }
 
     int getQueuedFrames() throws Exception {
@@ -225,7 +225,7 @@ class AudioOutput {
           if (this.field_g) {
             return;
           }
-          var1 = bva.currentTimeMillis((byte) -107);
+          var1 = AdjustedWallClock.currentTimeMillis((byte) -107);
           try {
             if (var1 > this.field_n + 6000L) {
               this.field_n = var1 - 6000L;
@@ -233,7 +233,7 @@ class AudioOutput {
             while (var1 > this.field_n + 5000L) {
               this.skipFrames(256);
               this.field_n = this.field_n + (long)(256000 / field_d);
-              var1 = bva.currentTimeMillis((byte) -107);
+              var1 = AdjustedWallClock.currentTimeMillis((byte) -107);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_l = 32;
         this.field_g = false;
-        this.field_n = bva.currentTimeMillis((byte) -107);
+        this.field_n = AdjustedWallClock.currentTimeMillis((byte) -107);
         this.field_f = 0;
         this.field_m = 0L;
         this.field_u = new PcmStream[8];

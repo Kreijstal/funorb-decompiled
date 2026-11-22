@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc {
+final class LobbyPlayerMenuActions {
     static ToolkitCandidate[] field_a;
     static SpriteData[] field_b;
 
@@ -13,13 +13,13 @@ final class rc {
         int var11 = 0;
         try {
           DateInputWidget.openPlayerContextMenu(param6, -1, param2.field_vb, param2.field_yb, param3 - 11542, (int[]) null, param2, -1, param2.field_wb);
-          hka.field_b.populateItems((byte) -22, true);
-          hka.field_b.addSocialActions((int[]) null, 0, 19);
+          UnlockEntryDecoder.field_b.populateItems((byte) -22, true);
+          UnlockEntryDecoder.field_b.addSocialActions((int[]) null, 0, 19);
           if (param3 != -93) {
             field_b = (SpriteData[]) null;
           }
-          hka.field_b.addMessageActions(0);
-          var12 = hka.field_b;
+          UnlockEntryDecoder.field_b.addMessageActions(0);
+          var12 = UnlockEntryDecoder.field_b;
           var8 = param0;
           var9 = param1;
           var10 = param5;

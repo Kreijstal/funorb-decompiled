@@ -27,14 +27,14 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 111);
           return;
         }
-        cna.field_a = true;
+        PendingRequestFactory.field_a = true;
         if (param0 != 0) {
           return;
         }
         for (var3 = -1 + HuffmanCodec.field_c.size(); var3 >= 0; var3--) {
           ((ShellListener) (HuffmanCodec.field_c.elementAt(var3))).drawOverlay(param0 + 1);
         }
-        if (!cna.field_a) {
+        if (!PendingRequestFactory.field_a) {
           this.c(true);
         } else {
           pka.a(false);

@@ -220,9 +220,9 @@ final class ChatOverlay {
               ql.field_k.writeByte(14, 0);
               ql.field_k.writeByte(OpenGlModelBillboardState.field_d.getChannelType((byte) 113).field_d, 0);
               bl.flushPacketBuffer(-1, -1);
-              ProceduralTexture.field_p = bva.field_b;
+              ProceduralTexture.field_p = AdjustedWallClock.field_b;
             }
-            if (ProceduralTexture.field_p == bva.field_b &&
+            if (ProceduralTexture.field_p == AdjustedWallClock.field_b &&
               LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
               var6_int = WeaveOperator.field_q.readUnsignedByte(255);
               if (var6_int == 0) {

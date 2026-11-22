@@ -204,7 +204,7 @@ final class dta {
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
                 vua.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
-                lh.field_b.draw(-lh.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.height() - CachedTextLayout.field_l.height());
+                ByteArrayCopies.field_b.draw(-ByteArrayCopies.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - ByteArrayCopies.field_b.height() - CachedTextLayout.field_l.height());
                 CurrentGraphicsToolkit.toolkit.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
                   TextureCoordinateGeneration.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
@@ -356,7 +356,7 @@ final class dta {
                 return;
               }
               var42 = TextureMetadata.field_j;
-              var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
+              var31Lifetime3 = (int)(128.0 - Math.sin((double)AdjustedWallClock.currentTimeMillis((byte) -107) / 512.0) * 128.0);
               NotLoggedInMenu.drawCentredTextAlpha(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.getCanvasHeight(0) >> 1) + (SwitchLinkList.getCanvasHeight(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.roundDeadlineTick - param4.matchState.getSimulationTick((byte) 115, param2);
               if (var32Lifetime2 >= 250) {

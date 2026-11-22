@@ -599,7 +599,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleIcons", (byte) 114);
                 if (null != var2) {
-                  dka.field_c = jaa.decodeText((byte) 50, var2);
+                  MouseWheelFactory.field_c = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextIcons", (byte) 105);
                 if (var2 != null) {

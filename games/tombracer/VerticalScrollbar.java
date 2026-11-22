@@ -107,7 +107,7 @@ final class VerticalScrollbar extends UiComponent {
         int var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        var1 = bva.currentTimeMillis((byte) -107);
+        var1 = AdjustedWallClock.currentTimeMillis((byte) -107);
         if (param0 != -1) {
           field_tb = (boolean[]) null;
         }

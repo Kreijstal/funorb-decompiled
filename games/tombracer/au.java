@@ -100,7 +100,7 @@ final class au extends aa {
               var13.unlink(35);
             } else {
               if (var2 != 2) {
-                ClipStack.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
+                ClipStack.reportClientError("A1: " + PacketDiagnostics.formatPacketDump(32), (byte) 116, (Throwable) null);
                 DropAnimation.closeGameSocket(param0 ^ 63);
               } else {
                 var15 = (PendingReply) (MovingWallComponent.field_N.first(-80));

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cna {
+final class PendingRequestFactory {
     static boolean field_a;
     static String field_d;
     static int[] field_c;
@@ -14,7 +14,7 @@ final class cna {
         if (param1 == 128) {
           return var2;
         }
-        cna.releaseStatics(-55);
+        PendingRequestFactory.releaseStatics(-55);
         return var2;
     }
 

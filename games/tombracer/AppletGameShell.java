@@ -23,25 +23,25 @@ abstract class AppletGameShell extends GameApplet {
         var2 = this.attemptReconnect((byte) -46);
         if (var2 == 0 ||
           var2 == 1) {
-          if (hd.field_a[1]) {
+          if (UsernameQueryRequests.field_a[1]) {
             ql.a(2, -28521);
           }
-          if (hd.field_a[2]) {
+          if (UsernameQueryRequests.field_a[2]) {
             PlantModel.resendPendingSubmissions(false, 3);
           }
-          if (hd.field_a[3]) {
+          if (UsernameQueryRequests.field_a[3]) {
             S2CNextRoundPacket.resendQueuedRequests(4, 2);
           }
-          if (hd.field_a[4]) {
+          if (UsernameQueryRequests.field_a[4]) {
             ArchiveNetworkClient.resendQueuedListRequests(5, -21);
           }
-          if (hd.field_a[5]) {
+          if (UsernameQueryRequests.field_a[5]) {
             PlantComponent.resendPendingRequests(param0 ^ -109, 6);
           }
-          if (hd.field_a[6]) {
+          if (UsernameQueryRequests.field_a[6]) {
             Puddle.resendRatingTableRequests(7, (byte) -105);
           }
-          if (hd.field_a[8]) {
+          if (UsernameQueryRequests.field_a[8]) {
             GridLineWalker.a((byte) 5);
           }
         }
@@ -77,7 +77,7 @@ abstract class AppletGameShell extends GameApplet {
 
     final void enableMessageGroup6(int param0) {
         int var2 = -114 / ((param0 - 66) / 34);
-        hd.field_a[6] = true;
+        UsernameQueryRequests.field_a[6] = true;
     }
 
     private final int pollLoginResponse(byte param0, boolean param1, boolean param2) {
@@ -180,7 +180,7 @@ abstract class AppletGameShell extends GameApplet {
           if (13 == var4) {
             try {
               if (DarknessBehaviour.field_o == null) {
-                DarknessBehaviour.field_o = new UrlDownloadRequest(dsa.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                DarknessBehaviour.field_o = new UrlDownloadRequest(ComponentTypeNames.field_c, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (DarknessBehaviour.field_o.poll(false)) {
                 var7 = DarknessBehaviour.field_o.getResult((byte) -123);
@@ -238,7 +238,7 @@ abstract class AppletGameShell extends GameApplet {
           this.field_z = 113;
         }
         if (var2 < 64 &&
-          hd.field_a[var2]) {
+          UsernameQueryRequests.field_a[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -260,7 +260,7 @@ abstract class AppletGameShell extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          PlayerInputQueue.readReflectionCheckRequest(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
+                          PlayerInputQueue.readReflectionCheckRequest(uca.field_d, ComponentTypeNames.field_c, (byte) 72, WeaveOperator.field_q);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -277,7 +277,7 @@ abstract class AppletGameShell extends GameApplet {
                                 HardwareUnlitEffect.c((byte) 101);
                                 return;
                               }
-                              ClipStack.reportClientError("MGS1: " + kk.formatPacketDump(32), (byte) 123, (Throwable) null);
+                              ClipStack.reportClientError("MGS1: " + PacketDiagnostics.formatPacketDump(32), (byte) 123, (Throwable) null);
                               DropAnimation.closeGameSocket(60);
                               return;
                             }
@@ -302,7 +302,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           return;
         }
-        ClipStack.reportClientError("MGS2: " + kk.formatPacketDump(32), (byte) 120, (Throwable) null);
+        ClipStack.reportClientError("MGS2: " + PacketDiagnostics.formatPacketDump(32), (byte) 120, (Throwable) null);
         DropAnimation.closeGameSocket(60);
     }
 
@@ -336,7 +336,7 @@ abstract class AppletGameShell extends GameApplet {
             TextureMetadata.b(param0);
             epa.handleLoginResponseCode(var2, (byte) -84, io.field_b);
             TrackingCrusherComponent.field_G = true;
-            LegacyOpenGlPostProcessEffect.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
+            LegacyOpenGlPostProcessEffect.field_f = AdjustedWallClock.currentTimeMillis((byte) -107) + 15000L;
             return var2;
           }
           if (Transform3D.field_c == 11 &&
@@ -355,14 +355,14 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     final void enableMessageGroup5(int param0) {
-        hd.field_a[5] = true;
+        UsernameQueryRequests.field_a[5] = true;
         if (param0 != 9822) {
           this.field_A = false;
         }
     }
 
     final void enableMessageGroup2(int param0) {
-        hd.field_a[2] = true;
+        UsernameQueryRequests.field_a[2] = true;
         if (param0 != -13) {
           this.field_t = -50;
         }
@@ -400,9 +400,9 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     final void enableMessageGroups11To13(byte param0) {
-        hd.field_a[11] = true;
-        hd.field_a[13] = true;
-        hd.field_a[12] = true;
+        UsernameQueryRequests.field_a[11] = true;
+        UsernameQueryRequests.field_a[13] = true;
+        UsernameQueryRequests.field_a[12] = true;
         if (param0 != 87) {
           this.field_u = 29;
         }
@@ -415,10 +415,10 @@ abstract class AppletGameShell extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ApproachPlayerLocomotor.field_t = this.field_z;
         FacePlayerLocomotor.applyLanguage(ApproachPlayerLocomotor.field_t, (byte) 65);
-        IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
-        MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
-        wka.patchJavaKeyCodeMap(520);
-        HardCacheEntry.field_q = dka.createMouseWheelInput((byte) -86);
+        IsaacCipher.configureClientConnection(this.field_s, this.field_v, ComponentTypeNames.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
+        MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, ComponentTypeNames.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
+        JavaKeyCodeMapPatches.patchJavaKeyCodeMap(520);
+        HardCacheEntry.field_q = MouseWheelFactory.createMouseWheelInput((byte) -86);
         fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
         SoftwareRasterBlitter.field_c = param2;
         MonochromeFillOperator.field_p = param3;
@@ -430,7 +430,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     final void enableMessageGroup4(byte param0) {
-        hd.field_a[4] = true;
+        UsernameQueryRequests.field_a[4] = true;
         if (param0 >= -45) {
           this.enableMessageGroup1(120);
         }
@@ -572,7 +572,7 @@ abstract class AppletGameShell extends GameApplet {
           TermsLinksPanel.field_y = HardCacheEntry.field_q.pollWheelRotation(65);
         }
         if (HeapIndexArray.e(540800)) {
-          var3 = aqa.getFrameRate(1188664449) * 1200;
+          var3 = ByteGameMessageSender.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
             !(rg.g((byte) 118) <= var3) &&
             !(var3 >= DateOfBirthPanel.b(false))) {
@@ -582,7 +582,7 @@ abstract class AppletGameShell extends GameApplet {
             epa.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
-            LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
+            LegacyOpenGlPostProcessEffect.field_f = 15000L + AdjustedWallClock.currentTimeMillis((byte) -107);
           }
         }
         if (Trap.field_m == -1 ||
@@ -598,7 +598,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (Trap.field_m != -1 &&
             Trap.field_m != 0) {
-            LegacyOpenGlPostProcessEffect.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
+            LegacyOpenGlPostProcessEffect.field_f = AdjustedWallClock.currentTimeMillis((byte) -107) + 15000L;
           }
         }
         if (-1 != Trap.field_m &&
@@ -648,7 +648,7 @@ abstract class AppletGameShell extends GameApplet {
         if ((Trap.field_m != -1 &&
           Trap.field_m != 0 ||
           uma.b(-1)) &&
-          LegacyOpenGlPostProcessEffect.field_f <= bva.currentTimeMillis((byte) -107)) {
+          LegacyOpenGlPostProcessEffect.field_f <= AdjustedWallClock.currentTimeMillis((byte) -107)) {
           TrackingCrusherComponent.field_G = false;
           if (-1 != Trap.field_m &&
             Trap.field_m != 0) {
@@ -761,29 +761,29 @@ abstract class AppletGameShell extends GameApplet {
           this.recreateCanvas((byte) 14);
           fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
         }
-        if (hd.field_a[8]) {
+        if (UsernameQueryRequests.field_a[8]) {
           dra.sendReflectionCheckResponses(true);
         }
     }
 
     final void enableDefaultMessageGroups(byte param0, boolean param1) {
-        hd.field_a[3] = true;
+        UsernameQueryRequests.field_a[3] = true;
         if (param0 < 101) {
           this.enableMessageGroups11To13((byte) 96);
         }
-        hd.field_a[8] = param1;
-        hd.field_a[7] = true;
-        hd.field_a[16] = true;
-        hd.field_a[0] = true;
-        hd.field_a[17] = true;
-        hd.field_a[18] = true;
+        UsernameQueryRequests.field_a[8] = param1;
+        UsernameQueryRequests.field_a[7] = true;
+        UsernameQueryRequests.field_a[16] = true;
+        UsernameQueryRequests.field_a[0] = true;
+        UsernameQueryRequests.field_a[17] = true;
+        UsernameQueryRequests.field_a[18] = true;
     }
 
     AppletGameShell() {
     }
 
     final void enableMessageGroup1(int param0) {
-        hd.field_a[1] = true;
+        UsernameQueryRequests.field_a[1] = true;
         if (param0 != -1) {
           this.field_t = -30;
         }

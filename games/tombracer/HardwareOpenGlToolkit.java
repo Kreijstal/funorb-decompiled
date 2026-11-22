@@ -860,9 +860,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
               }
               if ((!(this.estimatedResourceBytes(10) <= 100663296)) &&
-                (!(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L))) {
+                (!(AdjustedWallClock.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L))) {
                 System.gc();
-                this.field_Xc = bva.currentTimeMillis((byte) -107);
+                this.field_Xc = AdjustedWallClock.currentTimeMillis((byte) -107);
               }
               decompiledFrameRemainder2 = false;
             }
@@ -923,9 +923,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.value);
           }
           if (!(this.estimatedResourceBytes(10) <= 100663296) &&
-            !(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L)) {
+            !(AdjustedWallClock.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L)) {
             System.gc();
-            this.field_Xc = bva.currentTimeMillis((byte) -107);
+            this.field_Xc = AdjustedWallClock.currentTimeMillis((byte) -107);
           }
         }
         super.updateTime(param0);

@@ -28,7 +28,7 @@ final class CoinItemComponent extends ItemComponent {
           qpa.createMenuScreen(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
           qpa.createMenuScreen(335, mna.field_a, 9, 40, 440, 126, 200);
           qpa.createMenuScreen(400, HardwareModelBillboardState.field_f, 10, 40, 440, 124, 200);
-          qpa.createMenuScreen(400, hd.field_b, 11, 40, 440, 125, 200);
+          qpa.createMenuScreen(400, UsernameQueryRequests.field_b, 11, 40, 440, 125, 200);
           param0.stringWidth(FloatPacketBuffer.field_l);
           param0.stringWidth(DamageableBehaviour.field_x);
         } catch (RuntimeException runtimeException) {

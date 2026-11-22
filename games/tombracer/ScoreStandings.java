@@ -80,7 +80,7 @@ final class ScoreStandings {
             stackIn_12_0 = -1;
             return stackIn_12_0;
           }
-          var3 = aqa.field_c + var10;
+          var3 = ByteGameMessageSender.field_c + var10;
           if (!SecondaryNodeHashTable.field_b.hasFile(var3, "", param1 - 28893)) {
             stackIn_15_0 = -1;
             return stackIn_15_0;

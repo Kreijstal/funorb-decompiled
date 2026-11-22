@@ -61,7 +61,7 @@ final class RatingTable extends IntrusiveNode {
             stackIn_46_1 = param1 + 118;
             stackIn_47_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_46_0).drawFullScreen(stackIn_46_1, stackIn_47_2);
-            stackIn_50_0 = dka.field_b;
+            stackIn_50_0 = MouseWheelFactory.field_b;
             stackIn_50_1 = 67;
             stackIn_51_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_50_0).drawFullScreen(stackIn_50_1, stackIn_51_2);
@@ -74,7 +74,7 @@ final class RatingTable extends IntrusiveNode {
               stackIn_60_1 = param1 + 118;
               stackIn_61_2 = (param0) && (!OpenGlDisplayLists.field_e);
               ((UiComponent) (Object) stackIn_60_0).drawFullScreen(stackIn_60_1, stackIn_61_2);
-              stackIn_64_0 = dka.field_b;
+              stackIn_64_0 = MouseWheelFactory.field_b;
               stackIn_64_1 = 67;
               stackIn_65_2 = (param0) && (!OpenGlDisplayLists.field_e);
               ((UiComponent) (Object) stackIn_64_0).drawFullScreen(stackIn_64_1, stackIn_65_2);
@@ -100,7 +100,7 @@ final class RatingTable extends IntrusiveNode {
             stackIn_32_1 = param1 + 118;
             stackIn_33_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_32_0).drawFullScreen(stackIn_32_1, stackIn_33_2);
-            stackIn_36_0 = dka.field_b;
+            stackIn_36_0 = MouseWheelFactory.field_b;
             stackIn_36_1 = 67;
             stackIn_37_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_36_0).drawFullScreen(stackIn_36_1, stackIn_37_2);
@@ -113,7 +113,7 @@ final class RatingTable extends IntrusiveNode {
               stackIn_19_1 = param1 + 118;
               stackIn_20_2 = (param0) && (!OpenGlDisplayLists.field_e);
               ((UiComponent) (Object) stackIn_19_0).drawFullScreen(stackIn_19_1, stackIn_20_2);
-              stackIn_23_0 = dka.field_b;
+              stackIn_23_0 = MouseWheelFactory.field_b;
               stackIn_23_1 = 67;
               stackIn_24_2 = (param0) && (!OpenGlDisplayLists.field_e);
               ((UiComponent) (Object) stackIn_23_0).drawFullScreen(stackIn_23_1, stackIn_24_2);

@@ -304,8 +304,8 @@ abstract class MazeComponent extends PrefabComponent {
           RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
           MidiPatch.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
           bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
-          StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
-          C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
+          StatusEffect.field_g.setBounds(MouseWheelFactory.field_b.field_G, 30, -23776, 0, 0);
+          C2SSubmitSettingsPacket.field_g.setBounds(MouseWheelFactory.field_b.field_G, MouseWheelFactory.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + ColourRowCache.field_b;
           if (SafeZoneBehaviour.field_u.length < 2) {
             var2_int--;
@@ -392,7 +392,7 @@ abstract class MazeComponent extends PrefabComponent {
                       var9_ref_tv.field_G = 0;
                     }
                   }
-                  var9 = -5 + dka.field_b.field_G - (var8 - 2);
+                  var9 = -5 + MouseWheelFactory.field_b.field_G - (var8 - 2);
                   var10 = SoftwareRenderTarget.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9 / var10;

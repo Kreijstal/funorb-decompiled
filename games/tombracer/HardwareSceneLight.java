@@ -6,7 +6,7 @@ final class HardwareSceneLight extends SceneLight {
 
     final static void resetChatRateLimit(byte param0) {
         int var1 = -20 % ((64 - param0) / 44);
-        vaa.field_b = bva.currentTimeMillis((byte) -107);
+        vaa.field_b = AdjustedWallClock.currentTimeMillis((byte) -107);
         gp.field_h = 0;
     }
 

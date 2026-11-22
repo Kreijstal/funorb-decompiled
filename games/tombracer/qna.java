@@ -99,7 +99,7 @@ final class qna {
             SpriteTileOperator.field_w[0] = 5;
           } else if (mq.field_a != 2) {
             if (mq.field_a == 3) {
-              if (dsa.field_c.field_c) {
+              if (ComponentTypeNames.field_c.field_c) {
                 var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               } else {
                 var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, SwitchState.field_o, rg.field_z, 1, ClientMemoryVertexArray.field_c);
@@ -241,7 +241,7 @@ final class qna {
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }
-            PlatformComponent.field_H = bva.currentTimeMillis((byte) -107);
+            PlatformComponent.field_H = AdjustedWallClock.currentTimeMillis((byte) -107);
           }
           FacePointLocomotor.field_r.itemCount = SpriteTileOperator.field_w.length;
           var3_intLifetime1 = 0;

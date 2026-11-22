@@ -160,7 +160,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             MatchScoringObserver.field_h = 0;
             ConsoleTokenStream.field_d = param0.getX();
             TestModel.field_m = param0.getY();
-            bva.currentTimeMillis((byte) -107);
+            AdjustedWallClock.currentTimeMillis((byte) -107);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DisplaySettingsDialog.field_X = 1;
               tka.field_n = 1;

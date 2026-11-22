@@ -133,7 +133,7 @@ final class qt {
                   var21.updateNames(var22, 75, var23);
                 }
               }
-              var8_ref_pha.field_Mb = bva.currentTimeMillis((byte) -107) - (long)((PacketBuffer) ((Object) var1)).readInt(-87);
+              var8_ref_pha.field_Mb = AdjustedWallClock.currentTimeMillis((byte) -107) - (long)((PacketBuffer) ((Object) var1)).readInt(-87);
               var8_ref_pha.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(121);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 100);
               stackIn_19_0 = var8_ref_pha;
@@ -282,7 +282,7 @@ final class qt {
                       TileRenderable.field_d = 0L;
                       return;
                     }
-                    TileRenderable.field_d = bva.currentTimeMillis((byte) -107) + (long)var3Lifetime5;
+                    TileRenderable.field_d = AdjustedWallClock.currentTimeMillis((byte) -107) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
@@ -294,7 +294,7 @@ final class qt {
                     SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     return;
                   }
-                  ClipStack.reportClientError("L1: " + kk.formatPacketDump(32), (byte) 118, (Throwable) null);
+                  ClipStack.reportClientError("L1: " + PacketDiagnostics.formatPacketDump(32), (byte) 118, (Throwable) null);
                   DropAnimation.closeGameSocket(60);
                   return;
                 }

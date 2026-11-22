@@ -28,11 +28,11 @@ final class BoulderComponent extends PathMoverComponent {
         if (param1 < -76) {
           var3 = IntrusiveDeque.a(param2, param0, -117);
           if (var3 != null) {
-            hka.field_b.populateItems((byte) -22, false);
-            var4 = hka.field_b;
+            UnlockEntryDecoder.field_b.populateItems((byte) -22, false);
+            var4 = UnlockEntryDecoder.field_b;
             var5_ref_String = AvailabilityQueryFactory.field_d;
             var4.field_f.addItem((byte) -101, 5, var5_ref_String);
-            var4Lifetime2 = hka.field_b;
+            var4Lifetime2 = UnlockEntryDecoder.field_b;
             var5 = PasswordValidator.field_m;
             var6 = RidgedNoise3D.field_p;
             var4Lifetime2.field_f.openAt(var6, 0, -100, 0, var5);
@@ -44,11 +44,11 @@ final class BoulderComponent extends PathMoverComponent {
         BoulderComponent.loadSpritesByName((ResourceArchive) null, (String) null, -33, (String) null);
         var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
         if (var3Lifetime1 != null) {
-          hka.field_b.populateItems((byte) -22, false);
-          var4Lifetime1 = hka.field_b;
+          UnlockEntryDecoder.field_b.populateItems((byte) -22, false);
+          var4Lifetime1 = UnlockEntryDecoder.field_b;
           var5_ref_StringLifetime1 = AvailabilityQueryFactory.field_d;
           var4Lifetime1.field_f.addItem((byte) -101, 5, var5_ref_StringLifetime1);
-          var4Lifetime1Lifetime1 = hka.field_b;
+          var4Lifetime1Lifetime1 = UnlockEntryDecoder.field_b;
           var5Lifetime1 = PasswordValidator.field_m;
           var6Lifetime1 = RidgedNoise3D.field_p;
           var4Lifetime1Lifetime1.field_f.openAt(var6Lifetime1, 0, -100, 0, var5Lifetime1);

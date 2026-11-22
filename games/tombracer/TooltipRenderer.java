@@ -73,14 +73,14 @@ final class TooltipRenderer {
               var13 = var9 / var8;
               var12 = (-1 + (var13 + var9 % var8)) / var13 * 2 + var8;
             }
-            if (uo.field_d == null) {
-              uo.field_d = new String[16];
+            if (OpenGlFaceNormal.field_d == null) {
+              OpenGlFaceNormal.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_q.wrapText(param1, new int[]{var12}, uo.field_d);
+            var11Lifetime1 = this.field_q.wrapText(param1, new int[]{var12}, OpenGlFaceNormal.field_d);
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_q.stringWidth(uo.field_d[var13Lifetime2]);
+              var14 = this.field_q.stringWidth(OpenGlFaceNormal.field_d[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

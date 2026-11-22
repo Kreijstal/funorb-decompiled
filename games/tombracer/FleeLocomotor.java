@@ -368,7 +368,7 @@ final class FleeLocomotor extends Locomotor {
           vea.field_c = new RendererOption(1, 1, true, false, false, true, true, true, true, false, true);
           UsernameSuggestionsPanel.field_x = new RendererOption(0, 1, true, false, false, false, false, false, false, true, false);
           CharacterSelection.field_d = new RendererOption(0, 1, false, false, false, false, false, false, false, true, false);
-          rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
+          LobbyPlayerMenuActions.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
           return;
         }
         field_B = (String) null;
@@ -376,7 +376,7 @@ final class FleeLocomotor extends Locomotor {
         vea.field_c = new RendererOption(1, 1, true, false, false, true, true, true, true, false, true);
         UsernameSuggestionsPanel.field_x = new RendererOption(0, 1, true, false, false, false, false, false, false, true, false);
         CharacterSelection.field_d = new RendererOption(0, 1, false, false, false, false, false, false, false, true, false);
-        rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
+        LobbyPlayerMenuActions.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
     }
 
     static {

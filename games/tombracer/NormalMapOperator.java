@@ -8,7 +8,7 @@ final class NormalMapOperator extends TextureOperator {
 
     final static int d(int param0) {
         int var1 = 50 / ((32 - param0) / 60);
-        return aqa.field_d - wt.field_a;
+        return ByteGameMessageSender.field_d - wt.field_a;
     }
 
     public NormalMapOperator() {

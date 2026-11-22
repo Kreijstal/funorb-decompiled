@@ -55,7 +55,7 @@ final class ToolkitSelector {
     }
 
     ToolkitSelector(TextureProvider param0, ToolkitCandidate[] param1) {
-        this(MonochromeRowCacheEntry.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
+        this(MonochromeRowCacheEntry.a((byte) 98), CommonChooseReward.e(-1), param0, ComponentTypeNames.field_c, param1);
     }
 
     final boolean ensureToolkitForActiveCanvas(int param0) {
@@ -328,7 +328,7 @@ final class ToolkitSelector {
                         var9.field_d.useHeap(var9.field_d.createHeap(100663296));
                       }
                       if (var3 == null) {
-                        var9.field_f = bva.currentTimeMillis((byte) -107);
+                        var9.field_f = AdjustedWallClock.currentTimeMillis((byte) -107);
                       } else {
                         ((ToolkitState) (var3)).restore((byte) -77, var9);
                       }
@@ -380,7 +380,7 @@ final class ToolkitSelector {
             this.selectToolkit(param1, (byte) -70);
           }
           if (null != this.field_i) {
-            this.field_i.field_d.updateTime((int)(bva.currentTimeMillis((byte) -107) - this.field_i.field_f));
+            this.field_i.field_d.updateTime((int)(AdjustedWallClock.currentTimeMillis((byte) -107) - this.field_i.field_f));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != this.field_i && (var3 == null ||

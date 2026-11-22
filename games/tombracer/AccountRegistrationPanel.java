@@ -170,7 +170,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_D = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_F = new FocusableWidget(sla.field_c, (WidgetListener) null);
         this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
-        this.field_G.field_q = rma.field_a;
+        this.field_G.field_q = LoginAttemptStarter.field_a;
         this.field_z.field_q = ema.field_a;
         this.field_J.field_q = EmailConfirmationHintText.text;
         this.field_E.field_q = MatchOverlay.field_f;

@@ -472,7 +472,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         if (param0 != -7694) {
           field_w = (TextureFormat) null;
         }
-        rma.startLoginAttempt(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
+        LoginAttemptStarter.startLoginAttempt(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
         S2CProfileUpdatePacket.field_d = true;
     }
 

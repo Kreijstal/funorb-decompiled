@@ -267,14 +267,14 @@ final class IntrusiveDeque {
                       var16 = var7.field_tb;
                       DateInputWidget.openPlayerContextMenu(TextureCoordinateGeneration.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
                       if (var7.field_Cb != null &&
-                        !RewardChoicePhase.isPrivateChatTarget(hka.field_b.field_i, (byte) -13) &&
+                        !RewardChoicePhase.isPrivateChatTarget(UnlockEntryDecoder.field_b.field_i, (byte) -13) &&
                         !DropdownButtonPainter.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
-                          var17 = hka.field_b;
+                          var17 = UnlockEntryDecoder.field_b;
                           var18 = LegacyOpenGlFlowingWaterEffect.formatText(114, RoomViewRenderer.field_b, new String[]{var16});
                           var17.field_f.addItem((byte) -79, 8, var18);
                         }
-                        var17Lifetime1 = hka.field_b;
+                        var17Lifetime1 = UnlockEntryDecoder.field_b;
                         var18Lifetime1 = LegacyOpenGlFlowingWaterEffect.formatText(86, SceneLight.field_f, new String[]{var16});
                         var17Lifetime1.field_f.addItem((byte) -97, 18, var18Lifetime1);
                       }

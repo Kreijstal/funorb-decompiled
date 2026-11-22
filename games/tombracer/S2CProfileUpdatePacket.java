@@ -40,7 +40,7 @@ final class S2CProfileUpdatePacket implements GamePacket {
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = hka.decodeUnlockEntry(0, param0);
+          this.field_a = UnlockEntryDecoder.decodeUnlockEntry(0, param0);
           if (param1 != -19) {
             field_d = true;
           }

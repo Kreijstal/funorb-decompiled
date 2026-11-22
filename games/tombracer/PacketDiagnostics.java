@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk {
+final class PacketDiagnostics {
     static String field_a;
 
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 120) {
-          kk.formatPacketDump(26);
+          PacketDiagnostics.formatPacketDump(26);
         }
     }
 

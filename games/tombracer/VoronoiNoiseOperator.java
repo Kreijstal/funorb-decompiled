@@ -66,19 +66,19 @@ final class VoronoiNoiseOperator extends TextureOperator {
         try {
           DateInputWidget.openPlayerContextMenu((ScrollPanel) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
           if (param1 == 0) {
-            var10 = hka.field_b;
+            var10 = UnlockEntryDecoder.field_b;
             var11 = ColouriseOperator.field_m[0];
             var29 = var11;
             var29Lifetime3 = var11;
             var12 = TileRenderable.field_f;
             var10.field_f.addIconItem(var11, 11, var12, false);
-            var13 = hka.field_b;
+            var13 = UnlockEntryDecoder.field_b;
             var14 = ColouriseOperator.field_m[1];
             var29Lifetime4 = var14;
             var29Lifetime5 = var14;
             var15 = ImageProducerCanvasImageBuffer.field_k;
             var13.field_f.addIconItem(var14, 12, var15, false);
-            var16 = hka.field_b;
+            var16 = UnlockEntryDecoder.field_b;
             var17 = ColouriseOperator.field_m[2];
             var29Lifetime6 = var17;
             var29Lifetime7 = var17;
@@ -86,19 +86,19 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var16.field_f.addIconItem(var17, 13, var18, false);
           }
           if (param1 == 1) {
-            var19 = hka.field_b;
+            var19 = UnlockEntryDecoder.field_b;
             var20 = ColouriseOperator.field_m[0];
             var29Lifetime1 = var20;
             var29Lifetime1Lifetime1 = var20;
             var21 = pda.field_a;
             var19.field_f.addIconItem(var20, 11, var21, false);
-            var22 = hka.field_b;
+            var22 = UnlockEntryDecoder.field_b;
             var23 = ColouriseOperator.field_m[1];
             var29Lifetime1Lifetime2 = var23;
             var29Lifetime1Lifetime3 = var23;
             var24 = ContextMenuRow.field_xb;
             var22.field_f.addIconItem(var23, 12, var24, param0);
-            var25 = hka.field_b;
+            var25 = UnlockEntryDecoder.field_b;
             var26 = ColouriseOperator.field_m[2];
             var29Lifetime1Lifetime4 = var26;
             var29Lifetime1Lifetime5 = var26;
@@ -106,20 +106,20 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var25.field_f.addIconItem(var26, 13, var27, false);
           }
           if (param1 == 2) {
-            var28 = hka.field_b;
+            var28 = UnlockEntryDecoder.field_b;
             var29Lifetime2 = ColouriseOperator.field_m[0];
             var30 = FormFieldRow.field_z;
             var28.field_f.addIconItem(var29Lifetime2, 11, var30, param0);
-            var31 = hka.field_b;
+            var31 = UnlockEntryDecoder.field_b;
             var32 = ColouriseOperator.field_m[1];
             var33 = ConstrainToFacingArcLocomotor.field_t;
             var31.field_f.addIconItem(var32, 12, var33, false);
-            var34 = hka.field_b;
+            var34 = UnlockEntryDecoder.field_b;
             var35 = ColouriseOperator.field_m[2];
             var36 = LegacyOpenGlUnlitEffect.field_c;
             var34.field_f.addIconItem(var35, 13, var36, false);
           }
-          var37 = hka.field_b;
+          var37 = UnlockEntryDecoder.field_b;
           var4 = param2.field_q;
           var5 = param2.field_A;
           var6 = param2.field_G;

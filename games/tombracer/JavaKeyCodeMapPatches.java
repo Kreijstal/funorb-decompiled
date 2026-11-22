@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wka extends BillboardSpriteData {
+class JavaKeyCodeMapPatches extends BillboardSpriteData {
     static float field_b;
     static BufferedCacheFile field_c;
     static boolean field_d;
 
-    wka() {
+    JavaKeyCodeMapPatches() {
     }
 
     final static void patchJavaKeyCodeMap(int param0) {

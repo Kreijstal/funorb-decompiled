@@ -131,7 +131,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           stackIn_6_6 = (SoftwareModelBillboardState.field_i == ChatTarget.field_b);
           var7_int = ((ScrollPanel) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = SoftwareModelBillboardState.field_i.field_tb.field_J;
-          var9 = bva.currentTimeMillis((byte) -107);
+          var9 = AdjustedWallClock.currentTimeMillis((byte) -107);
           var11 = null;
           var12 = (LobbyGameWidget) (var8.first(-80));
           while (var12 != null) {
@@ -516,7 +516,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             if (var12.field_fc.field_o) {
               if (var12.field_Ob) {
-                stackIn_151_0 = dka.field_a;
+                stackIn_151_0 = MouseWheelFactory.field_a;
               } else {
                 stackIn_151_0 = sda.field_i;
               }

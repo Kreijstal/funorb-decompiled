@@ -29,9 +29,9 @@ final class sla {
     final static void b(int param0) {
         qpa.field_b = null;
         if (RenderableNode.field_i != null) {
-          ComponentMount.field_b = rma.field_b;
+          ComponentMount.field_b = LoginAttemptStarter.field_b;
           CharacterChoiceFactory.field_g = RenderableNode.field_i;
-          rma.field_b = null;
+          LoginAttemptStarter.field_b = null;
           CharacterChoiceFactory.field_g.field_N = -1;
           RenderableNode.field_i = null;
           CharacterChoiceFactory.field_g.field_ab = -1;

@@ -32,15 +32,15 @@ final class ConsoleToken extends IntrusiveNode {
         int var10 = 0;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var1_int = aqa.field_d - wt.field_a;
+          var1_int = ByteGameMessageSender.field_d - wt.field_a;
           wt.field_a = -(var1_int >> 1) + Transform3D.field_a;
-          aqa.field_d = wt.field_a + var1_int;
+          ByteGameMessageSender.field_d = wt.field_a + var1_int;
           wp.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
           var2 = wp.field_b;
           if (param0 <= 79) {
             return;
           }
-          for (var3 = 0; cna.field_b.length > var3; var3++) {
+          for (var3 = 0; PendingRequestFactory.field_b.length > var3; var3++) {
             var4 = ComponentTargetList.field_c[var3];
             if (var4 < 0) {
               var5 = OpenGlToolkit.field_H;
@@ -51,7 +51,7 @@ final class ConsoleToken extends IntrusiveNode {
                 var5 = RotaterMountComponent.field_I;
               }
             }
-            var6 = cna.field_b[var3];
+            var6 = PendingRequestFactory.field_b[var3];
             stackIn_12_0 = -50;
             stackIn_13_1 = !(var4 < 0);
             var7 = apa.$cfr$intArgs$a$62abead39cee(stackIn_12_0, stackIn_13_1, var6);
@@ -63,7 +63,7 @@ final class ConsoleToken extends IntrusiveNode {
                 stackIn_17_0 = QuickChatPhraseDefinition.field_o;
               }
               var9 = stackIn_17_0;
-              var2 = var2 + aqa.field_a;
+              var2 = var2 + ByteGameMessageSender.field_a;
               if (var9 != null) {
                 var9.drawFrame((byte) 57, (S2CCharacterChoicePacket.field_a << 1) + var7, var2, var8 - S2CCharacterChoicePacket.field_a, FurnitureModel.field_n + (RenderLayer.field_d << 1));
               }
@@ -74,7 +74,7 @@ final class ConsoleToken extends IntrusiveNode {
               var2 = var2 + CharacterSelectPhase.field_x;
             } else {
               OpenGlUnderwaterEffect.field_d.drawText(var6, var8, var2 + OpenGlBufferObject.field_f, var5, -1);
-              var2 = var2 + (aqa.field_a + RenderLayer.field_d + FurnitureModel.field_n);
+              var2 = var2 + (ByteGameMessageSender.field_a + RenderLayer.field_d + FurnitureModel.field_n);
             }
           }
           return;

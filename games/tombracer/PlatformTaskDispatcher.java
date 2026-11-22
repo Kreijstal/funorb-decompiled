@@ -94,13 +94,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_a;
                 switch (var2_int) {
                   case 1:
-                    if (bva.currentTimeMillis((byte) -107) < field_o) {
+                    if (AdjustedWallClock.currentTimeMillis((byte) -107) < field_o) {
                       throw new IOException();
                     }
                     var8.field_f = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_c)), var8.field_e);
                     break;
                   case 22:
-                    if (field_o > bva.currentTimeMillis((byte) -107)) {
+                    if (field_o > AdjustedWallClock.currentTimeMillis((byte) -107)) {
                       throw new IOException();
                     }
                     try {
@@ -230,13 +230,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (bva.currentTimeMillis((byte) -107) < field_o) {
+                        if (AdjustedWallClock.currentTimeMillis((byte) -107) < field_o) {
                           throw new IOException();
                         }
                         var8.field_f = java.net.InetAddress.getByName((String) (var8.field_c)).getAddress();
                         break;
                       case 3:
-                        if (bva.currentTimeMillis((byte) -107) < field_o) {
+                        if (AdjustedWallClock.currentTimeMillis((byte) -107) < field_o) {
                           throw new IOException();
                         }
                         var11 = (255 & var8.field_e >> 24) + "." + ((16739670 & var8.field_e) >> 16) + "." + (var8.field_e >> 8 & 255) + "." + (255 & var8.field_e);
@@ -257,7 +257,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_f = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (field_o > bva.currentTimeMillis((byte) -107)) {
+                    if (field_o > AdjustedWallClock.currentTimeMillis((byte) -107)) {
                       throw new IOException();
                     }
                     var8.field_f = new DataInputStream(((java.net.URL) (var8.field_c)).openStream());
@@ -629,7 +629,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_p) {
             try {
-              Class.forName("nva").newInstance();
+              Class.forName("DirectSoundBufferState").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;

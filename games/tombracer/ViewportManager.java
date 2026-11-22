@@ -276,7 +276,7 @@ final class ViewportManager {
           this.field_c = mma.field_a;
           this.field_l.onViewportResized(this.field_s, -123, this.field_p);
           ReportAbuseDialog.field_Cb = false;
-          var2 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
+          var2 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, ComponentTypeNames.field_c, this.field_s, 0);
           if (var2 == null) {
             this.restoreWindowSize(53);
             return var2;
@@ -286,7 +286,7 @@ final class ViewportManager {
         this.field_c = mma.field_a;
         this.field_l.onViewportResized(this.field_s, -123, this.field_p);
         ReportAbuseDialog.field_Cb = false;
-        var2Lifetime1 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
+        var2Lifetime1 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, ComponentTypeNames.field_c, this.field_s, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

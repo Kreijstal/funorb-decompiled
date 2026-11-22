@@ -282,22 +282,22 @@ final class BridgeModel extends TrapModel {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           SoftwareModelBillboard.field_a = param1;
-          aqa.field_c = "";
+          ByteGameMessageSender.field_c = "";
           SecondaryNodeHashTable.field_b = param0;
           if (!VerticalScrollbar.field_vb.startsWith("win")) {
             if (VerticalScrollbar.field_vb.startsWith("linux")) {
-              aqa.field_c = aqa.field_c + "linux/";
+              ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "linux/";
             } else {
               if (VerticalScrollbar.field_vb.startsWith("mac")) {
-                aqa.field_c = aqa.field_c + "macos/";
+                ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "macos/";
               }
             }
           } else {
-            aqa.field_c = aqa.field_c + "windows/";
+            ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "windows/";
           }
           boolean decompiledFrameRemainder0 = true;
           if (SoftwareModelBillboard.field_a.field_p) {
-            aqa.field_c = aqa.field_c + "msjava/";
+            ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "msjava/";
           } else {
             if (!VerticalScrollbar.field_zb.startsWith("amd64") &&
               !VerticalScrollbar.field_zb.startsWith("x86_64")) {
@@ -306,17 +306,17 @@ final class BridgeModel extends TrapModel {
                 !VerticalScrollbar.field_zb.startsWith("i586") &&
                 !VerticalScrollbar.field_zb.startsWith("x86")) {
                 if (VerticalScrollbar.field_zb.startsWith("ppc")) {
-                  aqa.field_c = aqa.field_c + "ppc/";
+                  ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "ppc/";
                 } else {
-                  aqa.field_c = aqa.field_c + "universal/";
+                  ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "universal/";
                 }
               } else {
-                aqa.field_c = aqa.field_c + "x86/";
+                ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "x86/";
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              aqa.field_c = aqa.field_c + "x86_64/";
+              ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "x86_64/";
             }
           }
           var3_int = -13 % ((9 - param2) / 41);
@@ -617,7 +617,7 @@ final class BridgeModel extends TrapModel {
             return;
           }
           if (TextSpewerBehaviour.field_o != 0) {
-            var2_long = bva.currentTimeMillis((byte) -107);
+            var2_long = AdjustedWallClock.currentTimeMillis((byte) -107);
             var4 = TextSpewerBehaviour.field_o;
             if (0.0 != RotaterMountComponent.field_J) {
               var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * RotaterMountComponent.field_J);

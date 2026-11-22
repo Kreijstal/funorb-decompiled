@@ -1390,7 +1390,7 @@ final class OpenGlModel extends ToolkitModel {
             NameEntryPopup.field_Ab = var5.field_l * var6.field_l + var5.field_k * var6.field_i + var6.field_j * var5.field_s;
             Weapon.field_u = var6.field_l * var5.field_j + var5.field_h * var6.field_i + var6.field_j * var5.field_q;
             ContactListEntry.field_ub = var6.field_q * var5.field_s + (var5.field_l * var6.field_s + var5.field_k * var6.field_g);
-            bva.field_c = var6.field_q * var5.field_g + (var6.field_g * var5.field_r + var6.field_s * var5.field_i);
+            AdjustedWallClock.field_c = var6.field_q * var5.field_g + (var6.field_g * var5.field_r + var6.field_s * var5.field_i);
             AllPlatformsMazeComponent.field_L = var6.field_i * var5.field_r + var5.field_i * var6.field_l + var5.field_g * var6.field_j;
             NativeSceneLight.field_q = var5.field_h * var6.field_g + var6.field_s * var5.field_j + var6.field_q * var5.field_q;
           }
@@ -2375,7 +2375,7 @@ final class OpenGlModel extends ToolkitModel {
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = MonsterModel.field_B + (var8 * ContactListEntry.field_ub + (ChooseRewardFactory.field_a * var7 + var6 * NameEntryPopup.field_Ab));
-                var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + bva.field_c * var8);
+                var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + AdjustedWallClock.field_c * var8);
                 var11 = TextBlockLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * ValidationState.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
@@ -2510,7 +2510,7 @@ final class OpenGlModel extends ToolkitModel {
             NativeSceneLight.field_q = var4.field_q * var5.field_q + (var5.field_g * var4.field_h + var4.field_j * var5.field_s);
             ContactListEntry.field_ub = var4.field_s * var5.field_q + (var4.field_l * var5.field_s + var5.field_g * var4.field_k);
             AllPlatformsMazeComponent.field_L = var5.field_j * var4.field_g + (var5.field_i * var4.field_r + var4.field_i * var5.field_l);
-            bva.field_c = var5.field_s * var4.field_i + var4.field_r * var5.field_g + var5.field_q * var4.field_g;
+            AdjustedWallClock.field_c = var5.field_s * var4.field_i + var4.field_r * var5.field_g + var5.field_q * var4.field_g;
           }
           if (param1 != null) {
             var18 = 0;
@@ -4268,7 +4268,7 @@ final class OpenGlModel extends ToolkitModel {
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
         short dupTemp$3 = 0;
-        uo dupTemp$4 = null;
+        OpenGlFaceNormal dupTemp$4 = null;
         int[] array$6 = null;
         int dupTemp$7 = 0;
         int[] arrayValue$8 = null;
@@ -4310,7 +4310,7 @@ final class OpenGlModel extends ToolkitModel {
         TextureMetadata var10_ref_dw = null;
         int var10 = 0;
         int var11_int = 0;
-        pa[] var11 = null;
+        OpenGlVertexNormal[] var11 = null;
         int var12 = 0;
         Object var13_ref = null;
         int var13 = 0;
@@ -4318,7 +4318,7 @@ final class OpenGlModel extends ToolkitModel {
         BillboardDefinition var14 = null;
         ima var14_ref = null;
         int var15_int = 0;
-        uo[] var15 = null;
+        OpenGlFaceNormal[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -4344,19 +4344,19 @@ final class OpenGlModel extends ToolkitModel {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        pa var31_ref_pa = null;
-        uo var31_ref_uo = null;
+        OpenGlVertexNormal var31_ref_pa = null;
+        OpenGlFaceNormal var31_ref_uo = null;
         int var31 = 0;
         int var32_int = 0;
         long var32_long = 0L;
-        uo var32 = null;
+        OpenGlFaceNormal var32 = null;
         int var33_int = 0;
         long var33 = 0L;
         int var34 = 0;
         int var35 = 0;
         int var36 = 0;
         int var37_int = 0;
-        pa var37 = null;
+        OpenGlVertexNormal var37 = null;
         float[] var38_ref_float__ = null;
         float var38 = 0.0f;
         int var39_int = 0;
@@ -4557,7 +4557,7 @@ final class OpenGlModel extends ToolkitModel {
               this.field_t = param1.field_e;
             }
             boolean decompiledFrameCompleted0 = true;
-            var11 = new pa[this.field_lb];
+            var11 = new OpenGlVertexNormal[this.field_lb];
             this.field_D = param1.field_B;
             if (param1.field_m != null) {
               this.field_G = param1.field_m.length;
@@ -4637,11 +4637,11 @@ final class OpenGlModel extends ToolkitModel {
               var15_int = this.field_e[var14_int];
               this.field_e[var14_int] = var13;
               var13 = var13 + var15_int;
-              var11[var14_int] = new pa();
+              var11[var14_int] = new OpenGlVertexNormal();
               var14_int++;
             } while (var63 == 0);
             var14_ref = NetworkArchiveRequest.a(var8, param1, this.field_W, (byte) -6);
-            var15 = new uo[param1.field_o];
+            var15 = new OpenGlFaceNormal[param1.field_o];
             var16 = 0;
             scanLoop1: while (true) {
               if (var16 < param1.field_o) {
@@ -4711,7 +4711,7 @@ final class OpenGlModel extends ToolkitModel {
                   var31_ref_pa.field_a = var31_ref_pa.field_a + var28;
                 } else {
                   if (var30 == 1) {
-                    dupTemp$4 = new uo();
+                    dupTemp$4 = new OpenGlFaceNormal();
                     var15[var16] = dupTemp$4;
                     var31_ref_uo = dupTemp$4;
                     var31_ref_uo.field_a = var28;

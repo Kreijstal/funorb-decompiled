@@ -64,7 +64,7 @@ final class ScrollPanel extends UiComponent {
             DropAnimation.closeGameSocket(60);
             return;
           }
-          ClipStack.reportClientError("LR1: " + kk.formatPacketDump(32), (byte) 122, (Throwable) null);
+          ClipStack.reportClientError("LR1: " + PacketDiagnostics.formatPacketDump(32), (byte) 122, (Throwable) null);
           DropAnimation.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

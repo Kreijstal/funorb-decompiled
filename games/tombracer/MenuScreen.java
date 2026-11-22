@@ -89,7 +89,7 @@ abstract class MenuScreen extends GameScreen {
             var4_int = this.items[param2].field_g;
             var5 = this.field_k.isActivated(param0) ? 1 : 0;
             if (var5 != 0) {
-              dsa.createRandomClickSound(-80);
+              ComponentTypeNames.createRandomClickSound(-80);
               discarded$0 = this.performAction(var4_int, param1, (byte) 119);
             }
             var8 = var4_int;

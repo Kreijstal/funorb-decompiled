@@ -204,8 +204,8 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     }
 
     final static boolean dispatchCancelKey(int param0, int param1, byte param2, int param3) {
-        if (hka.field_b != null &&
-          hka.field_b.handleEscape(13)) {
+        if (UnlockEntryDecoder.field_b != null &&
+          UnlockEntryDecoder.field_b.handleEscape(13)) {
           wp.closeContextMenu(param2 ^ 105);
           return true;
         }

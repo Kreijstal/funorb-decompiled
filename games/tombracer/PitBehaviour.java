@@ -333,8 +333,8 @@ final class PitBehaviour extends Behaviour {
         if (this.field_s) {
           this.field_n = 0;
         }
-        if (!(dsa.field_b <= this.field_u)) {
-          this.field_u = dsa.field_b;
+        if (!(ComponentTypeNames.field_b <= this.field_u)) {
+          this.field_u = ComponentTypeNames.field_b;
         }
     }
 

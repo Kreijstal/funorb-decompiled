@@ -105,7 +105,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             this.field_p = 0;
-            this.field_j = bva.currentTimeMillis((byte) -107);
+            this.field_j = AdjustedWallClock.currentTimeMillis((byte) -107);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -231,7 +231,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           NetworkArchiveRequest var2Lifetime1;
           var16 = TombRacer.field_G ? 1 : 0;
           if (null != this.field_t) {
-            var2_long = bva.currentTimeMillis((byte) -107);
+            var2_long = AdjustedWallClock.currentTimeMillis((byte) -107);
             var4 = (int)(-this.field_j + var2_long);
             this.field_j = var2_long;
             if (var4 > 200) {

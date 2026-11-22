@@ -122,7 +122,7 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
-          this.field_P = bva.currentTimeMillis((byte) -107);
+          this.field_P = AdjustedWallClock.currentTimeMillis((byte) -107);
           var3 = new UiWidget(TombRacerShell.field_B, (WidgetListener) null);
           var3.field_m = this.field_m;
           var3.field_p = 100;
@@ -316,7 +316,7 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
           if (ProceduralTextureProvider.field_c) {
             param2.clearKeyboardFocus((byte) 64);
           }
-          var5_long = -this.field_P + bva.currentTimeMillis((byte) -107);
+          var5_long = -this.field_P + AdjustedWallClock.currentTimeMillis((byte) -107);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (0 >= var7) {
             HardwareOpenGlVertexBuffer.exitFullscreen(0);
