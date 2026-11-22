@@ -61,7 +61,7 @@ final class HardwareModelVertexStream {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean canDiscardCpuData(int param0) {
         if (param0 != 16440) {
           bladeDeathMessages = (String[]) null;
           if (!this.field_h) {

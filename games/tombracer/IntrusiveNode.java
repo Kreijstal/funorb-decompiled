@@ -30,7 +30,7 @@ class IntrusiveNode {
     }
 
     final static void reopenLoginForm(int param0) {
-        pr.showLoginForm(param0 - 30497, BridgeTile.field_g, (String) null);
+        OpenGlShader.showLoginForm(param0 - 30497, BridgeTile.field_g, (String) null);
         if (param0 != 30497) {
           field_c = (String[]) null;
         }

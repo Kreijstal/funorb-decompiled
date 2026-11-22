@@ -20,7 +20,7 @@ final class PasswordValidator extends TextFieldValidator {
         CurrentGraphicsToolkit.toolkit = null;
     }
 
-    final static OpenGlShaderProgram linkShaderProgram(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
+    final static OpenGlShaderProgram linkShaderProgram(OpenGlShader[] param0, HardwareOpenGlToolkit param1, int param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
         OpenGlShaderProgram stackIn_27_0 = null;
@@ -43,13 +43,13 @@ final class PasswordValidator extends TextFieldValidator {
             if (param0[var3_int] == null) {
               return null;
             }
-            if (0L >= param0[var3_int].field_c) {
+            if (0L >= param0[var3_int].handle) {
               return null;
             }
           }
           var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
           for (var5 = 0; var5 < param0.length; var5++) {
-            jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].field_c);
+            jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].handle);
           }
           if (param2 != 1) {
             field_l = 12;
@@ -70,7 +70,7 @@ final class PasswordValidator extends TextFieldValidator {
               var7 = 0;
               var5Lifetime1 = var7;
               while (var7 < param0.length) {
-                jaggl.OpenGL.glDetachObjectARB(var3_long, param0[var7].field_c);
+                jaggl.OpenGL.glDetachObjectARB(var3_long, param0[var7].handle);
                 var7++;
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);

@@ -52,7 +52,7 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
 
     final native boolean prepareAnimation();
 
-    final native void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    final native void applyMaskedTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
     final void lockForUpdate() {
         try {

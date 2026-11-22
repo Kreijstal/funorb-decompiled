@@ -8,7 +8,7 @@ abstract class ToolkitModel {
 
     abstract void rotateX(int param0);
 
-    abstract void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    abstract void applyMaskedTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
     public static void releaseStatics(int param0) {
         field_c = null;
@@ -22,9 +22,9 @@ abstract class ToolkitModel {
 
     abstract void scale(int param0, int param1, int param2);
 
-    final static pr compileShader(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
+    final static OpenGlShader compileShader(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
         Object stackIn_14_0 = null;
-        pr stackIn_16_0 = null;
+        OpenGlShader stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -60,10 +60,10 @@ abstract class ToolkitModel {
             if (SoftwareDepthBuffer.field_a[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_14_0 = null;
-              return (pr) (stackIn_14_0);
+              return (OpenGlShader) (stackIn_14_0);
             }
           }
-          stackIn_16_0 = new pr(param3, var4_long, param2);
+          stackIn_16_0 = new OpenGlShader(param3, var4_long, param2);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ abstract class ToolkitModel {
             this.draw((Transform3D) null, (el) null, -114);
           }
           if (param5 != 65535) {
-            this.I(param2, param0, param7, param8, param6, param4, param5, param3);
+            this.applyMaskedTransform(param2, param0, param7, param8, param6, param4, param5, param3);
           } else {
             this.applyTransform(param2, param0, param7, param8, param6, param1, param4);
           }

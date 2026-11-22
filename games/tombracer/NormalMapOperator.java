@@ -6,7 +6,7 @@ final class NormalMapOperator extends TextureOperator {
     private int field_o;
     private boolean field_n;
 
-    final static int d(int param0) {
+    final static int getSelectionMenuWidth(int param0) {
         int var1 = 50 / ((32 - param0) / 60);
         return ByteGameMessageSender.field_d - wt.field_a;
     }

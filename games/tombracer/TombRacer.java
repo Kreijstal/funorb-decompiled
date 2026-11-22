@@ -876,7 +876,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         TextResourceLoader.releaseStatics((byte) -3);
         pua.releaseStatics((byte) -115);
         hq.releaseStatics(-6682);
-        pr.releaseStatics(28122);
+        OpenGlShader.releaseStatics(28122);
         vt.releaseStatics((byte) 117);
         ClipStackEntry.releaseStatics((byte) -66);
         ClipFrame.releaseStatics(-1);

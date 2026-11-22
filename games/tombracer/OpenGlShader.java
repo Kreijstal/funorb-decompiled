@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pr {
-    private HardwareOpenGlToolkit field_a;
-    long field_c;
+final class OpenGlShader {
+    private HardwareOpenGlToolkit toolkit;
+    long handle;
     private static String[] field_b;
 
     final static boolean a(int param0, int param1, int param2) {
@@ -15,7 +15,7 @@ final class pr {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_a.queueShaderObjectDeletion(this.field_c, -6115);
+        this.toolkit.queueShaderObjectDeletion(this.handle, -6115);
         super.finalize();
     }
 
@@ -37,14 +37,14 @@ final class pr {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 28122) {
-          pr.a(-61, 4, -35);
+          OpenGlShader.a(-61, 4, -35);
         }
     }
 
-    pr(HardwareOpenGlToolkit param0, long param1, int param2) {
+    OpenGlShader(HardwareOpenGlToolkit param0, long param1, int param2) {
         try {
-          this.field_a = param0;
-          this.field_c = param1;
+          this.toolkit = param0;
+          this.handle = param1;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

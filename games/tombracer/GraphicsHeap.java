@@ -27,7 +27,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
         field_f = null;
     }
 
-    final static int a(int param0) {
+    final static int getSelectionMenuHeight(int param0) {
         if (param0 != 18998) {
           return 12;
         }

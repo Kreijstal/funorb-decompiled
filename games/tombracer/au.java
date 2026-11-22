@@ -18,7 +18,7 @@ final class au extends aa {
               if (MandelbrotOperator.field_o != null) {
                 QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
               }
-              qfa.a(-116);
+              qfa.closeSelectionMenu(-116);
               if (FlagSet.field_c) {
                 FlagSet.field_c = false;
                 StringCursor.a(-30600, false);

@@ -53,7 +53,7 @@ final class pka {
           return var1 != 0;
         }
         if (!GpuDataType.a((byte) -115)) {
-          if (!ResizingDialog.d(true)) {
+          if (!ResizingDialog.isSelectionMenuOpen(true)) {
             if (PlayPhase.beginReconnectGracePeriod(89)) {
               if (GpuDataType.a((byte) -87)) {
                 if (!MessagePage.a(125)) {
@@ -81,7 +81,7 @@ final class pka {
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var1 = 1;
-          OpenGlModel.b(-69);
+          OpenGlModel.drawSelectionMenu(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (GpuDataType.a((byte) -87)) {
               if (!MessagePage.a(125)) {

@@ -49,7 +49,7 @@ final class OpenGlShaderProgram {
         }
     }
 
-    OpenGlShaderProgram(HardwareOpenGlToolkit param0, long param1, pr[] param2) {
+    OpenGlShaderProgram(HardwareOpenGlToolkit param0, long param1, OpenGlShader[] param2) {
         try {
           this.toolkit = param0;
           this.handle = param1;

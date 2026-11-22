@@ -14,7 +14,7 @@ final class ConsoleToken extends IntrusiveNode {
     static String field_j;
     static int field_f;
 
-    final static void a(int param0) {
+    final static void drawSelectionMenuItems(int param0) {
         int var3 = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_13_1 = false;

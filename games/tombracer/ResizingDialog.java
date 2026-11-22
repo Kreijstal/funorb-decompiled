@@ -232,7 +232,7 @@ abstract class ResizingDialog extends FadingDialog {
         }
     }
 
-    final static boolean d(boolean param0) {
+    final static boolean isSelectionMenuOpen(boolean param0) {
         if (!param0) {
           return false;
         }

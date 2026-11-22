@@ -4,7 +4,7 @@
 final class qfa {
     static String field_a;
 
-    final static void a(int param0) {
+    final static void closeSelectionMenu(int param0) {
         BoxBlurOperator.field_o = false;
         if (param0 >= -75) {
           field_a = (String) null;

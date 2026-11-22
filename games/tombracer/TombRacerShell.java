@@ -128,7 +128,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
                 this.updateScreen(true, false);
               }
             } else {
-              if (ResizingDialog.d(true)) {
+              if (ResizingDialog.isSelectionMenuOpen(true)) {
                 if (MessagePage.a(119)) {
                   au.b(false);
                 } else {

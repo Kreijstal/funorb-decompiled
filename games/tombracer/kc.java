@@ -36,7 +36,7 @@ final class kc {
             BillboardDefinition.field_h.selectedIndex >= 0) {
             var2 = rga.field_b[BillboardDefinition.field_h.selectedIndex];
             if (var2 == 2) {
-              qfa.a(-103);
+              qfa.closeSelectionMenu(-103);
             }
           }
           stackIn_18_0 = var2;

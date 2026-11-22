@@ -197,7 +197,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    private final int a(int param0, int param1, byte param2, short param3, int param4) {
+    private final int computeFaceRgba(int param0, int param1, byte param2, short param3, int param4) {
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -1047,7 +1047,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void uploadIndexBuffer(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         FloatPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
@@ -1098,7 +1098,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           if (0 != var3.position) {
             if (param0 > 0) {
-              this.I(68, (int[]) null, -92, 111, -30, false, -95, (int[]) null);
+              this.applyMaskedTransform(68, (int[]) null, -92, 111, -30, false, -95, (int[]) null);
             }
             if (param1) {
               if (null == this.field_jb) {
@@ -1406,7 +1406,7 @@ final class OpenGlModel extends ToolkitModel {
           this.field_R.setOrthographicScale((byte) 88, (float)param2);
           this.field_R.prepareOrthographicModelRendering((byte) -121);
           this.field_R.pushTransformMatrix(var6, 112);
-          this.a(false);
+          this.drawMaterialBatches(false);
           this.field_R.popMatrix((byte) -91);
           this.renderBuffers((byte) -30);
           return;
@@ -1430,7 +1430,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void applyMaskedTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
         int stackIn_101_0 = 0;
@@ -2305,7 +2305,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final static void b(int param0) {
+    final static void drawSelectionMenu(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2314,10 +2314,10 @@ final class OpenGlModel extends ToolkitModel {
           if (param0 > -19) {
             field_m = (ResourceArchive) null;
           }
-          var1_int = NormalMapOperator.d(-77);
-          var2 = GraphicsHeap.a(18998);
+          var1_int = NormalMapOperator.getSelectionMenuWidth(-77);
+          var2 = GraphicsHeap.getSelectionMenuHeight(18998);
           S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
-          ConsoleToken.a(125);
+          ConsoleToken.drawSelectionMenuItems(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2542,7 +2542,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           this.field_R.preparePerspectiveModelRendering(false);
           this.field_R.pushTransformMatrix(var5, 117);
-          this.a(false);
+          this.drawMaterialBatches(false);
           this.field_R.popMatrix((byte) -96);
           this.renderBuffers((byte) -30);
           return;
@@ -2600,7 +2600,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void uploadVertexBuffers(int param0, boolean param1) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_22_0 = 0;
@@ -2900,7 +2900,7 @@ final class OpenGlModel extends ToolkitModel {
             if (null != this.field_F) {
               var13_intLifetime1 = 0;
               while (this.field_W > var13_intLifetime1) {
-                var14_intLifetime1 = this.a(-2117016184, (int) this.field_X[var13_intLifetime1], this.field_o[var13_intLifetime1], this.field_I[var13_intLifetime1], (int) this.field_B);
+                var14_intLifetime1 = this.computeFaceRgba(-2117016184, (int) this.field_X[var13_intLifetime1], this.field_o[var13_intLifetime1], this.field_I[var13_intLifetime1], (int) this.field_B);
                 var12.position = var9 + var7 * this.field_H[var13_intLifetime1];
                 var12.writeInt(var14_intLifetime1, (byte) 92);
                 var12.position = var7 * this.field_z[var13_intLifetime1] + var9;
@@ -2941,7 +2941,7 @@ final class OpenGlModel extends ToolkitModel {
               var33 = 768.0f * this.field_R.field_Sb / (float)this.field_h;
               var34 = 0;
               while (this.field_W > var34) {
-                var24 = this.a(-2117016184, (int) this.field_X[var34], this.field_o[var34], this.field_I[var34], (int) this.field_B);
+                var24 = this.computeFaceRgba(-2117016184, (int) this.field_X[var34], this.field_o[var34], this.field_I[var34], (int) this.field_B);
                 var20_float = (float)(var24 >>> 24) * this.field_R.field_wc;
                 var22 = this.field_R.field_bc * (float)(255 & var24 >> 8);
                 var21 = (float)(var24 >> 16 & 255) * this.field_R.field_Fb;
@@ -3241,7 +3241,7 @@ final class OpenGlModel extends ToolkitModel {
     final void lockForUpdate() {
     }
 
-    private final void a(boolean param0) {
+    private final void drawMaterialBatches(boolean param0) {
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
         OpenGlToolkit stackIn_24_0 = null;
@@ -3264,14 +3264,14 @@ final class OpenGlModel extends ToolkitModel {
             return;
           }
           if (this.field_Z != 0) {
-            this.a(0, true);
+            this.uploadVertexBuffers(0, true);
           }
-          this.a(0, param0);
+          this.uploadVertexBuffers(0, param0);
           if (this.field_w != null) {
             if (null == this.field_w.field_a) {
               stackIn_16_1 = -24;
               stackIn_17_2 = (0 != (this.field_Z & 16));
-              this.a((byte) stackIn_16_1, stackIn_17_2);
+              this.uploadIndexBuffer((byte) stackIn_16_1, stackIn_17_2);
             }
             if (this.field_w.field_a != null) {
               stackIn_24_0 = this.field_R;
@@ -3300,7 +3300,7 @@ final class OpenGlModel extends ToolkitModel {
               }
             }
           }
-          this.c((byte) 31);
+          this.releaseUnusedCpuArrays((byte) 31);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4007,7 +4007,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    private final void c(byte param0) {
+    private final void releaseUnusedCpuArrays(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;

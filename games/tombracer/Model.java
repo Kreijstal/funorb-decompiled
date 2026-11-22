@@ -1811,7 +1811,7 @@ final class Model extends ToolkitModel {
         return (ToolkitModel) ((Object) param0);
     }
 
-    final void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void applyMaskedTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int var35_int = 0;
         int var42 = 0;
         int var9;

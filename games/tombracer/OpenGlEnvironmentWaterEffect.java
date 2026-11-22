@@ -13,10 +13,10 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
-        pr var4 = null;
+        OpenGlShader var4 = null;
         RuntimeException var4_ref = null;
-        pr var5 = null;
-        pr var6 = null;
+        OpenGlShader var5 = null;
+        OpenGlShader var6 = null;
         boolean stackIn_12_1 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -43,7 +43,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           var6 = ToolkitModel.compileShader((byte) -95, param1.getFileByName("gl", (byte) 122, "environment_mapped_water_v"), 35633, param0);
           var4 = var6;
           var5 = ToolkitModel.compileShader((byte) 123, param1.getFileByName("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
-          this.field_k = PasswordValidator.linkShaderProgram(new pr[]{var6, var5}, param0, 1);
+          this.field_k = PasswordValidator.linkShaderProgram(new OpenGlShader[]{var6, var5}, param0, 1);
           stackIn_12_1 = (this.field_k != null) && (this.field_f.b(-37));
           this.field_e = stackIn_12_1;
           return;

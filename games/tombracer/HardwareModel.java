@@ -1002,7 +1002,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    private final void d(byte param0) {
+    private final void invalidateNormalBuffer(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1227,7 +1227,7 @@ final class HardwareModel extends ToolkitModel {
           this.field_S.prepareOrthographicModelRendering((byte) 102);
           this.field_S.setModelTransform(var6, (byte) 88);
           this.renderBuffers((byte) -100);
-          this.c(-125);
+          this.drawBillboards(-125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1525,7 +1525,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    private final void b(int param0) {
+    private final void releaseUnusedCpuArrays(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -1549,7 +1549,7 @@ final class HardwareModel extends ToolkitModel {
             if (null != this.field_Z &&
               !WhiteLightShooterComponent.a(this.field_h, (byte) 3, this.field_Y)) {
               if (null == this.field_ib ||
-                this.field_ib.b(16440)) {
+                this.field_ib.canDiscardCpuData(16440)) {
                 var2_int = 1;
                 if (!this.field_A) {
                   this.computeBounds(-913);
@@ -1564,7 +1564,7 @@ final class HardwareModel extends ToolkitModel {
             if (null != this.field_r &&
               !SingleChildWidget.c(458752, this.field_h, this.field_Y)) {
               if (null == this.field_ib ||
-                this.field_ib.b(16440)) {
+                this.field_ib.canDiscardCpuData(16440)) {
                 var3 = 1;
                 if (!this.field_A) {
                   this.computeBounds(-913);
@@ -1579,7 +1579,7 @@ final class HardwareModel extends ToolkitModel {
             if (this.field_l != null &&
               !DamageableBehaviour.a(-79, this.field_Y, this.field_h)) {
               if (null != this.field_ib &&
-                !this.field_ib.b(16440)) {
+                !this.field_ib.canDiscardCpuData(16440)) {
                 this.field_N = true;
                 if (var5 != 0) {
                   if (!this.field_A) {
@@ -1617,10 +1617,10 @@ final class HardwareModel extends ToolkitModel {
             boolean decompiledFrameRemainder0 = true;
             if (0 == (55 & this.field_h)) {
               decompiledFrameRemainder0 = (this.field_E == null ||
-                this.field_E.b(16440));
+                this.field_E.canDiscardCpuData(16440));
             } else {
               decompiledFrameRemainder0 = (null == this.field_O ||
-                this.field_O.b(16440));
+                this.field_O.canDiscardCpuData(16440));
             }
             if (decompiledFrameRemainder0) {
               this.field_lb = null;
@@ -1636,7 +1636,7 @@ final class HardwareModel extends ToolkitModel {
           if (null != this.field_P &&
             !WindZoneBehaviour.b(this.field_Y, 8, this.field_h)) {
             if (this.field_E != null &&
-              !this.field_E.b(16440)) {
+              !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;
               if (var5 != 0) {
                 this.field_P = null;
@@ -1648,7 +1648,7 @@ final class HardwareModel extends ToolkitModel {
           if (this.field_C != null &&
             !GreyscaleOperator.d(this.field_h, -28090, this.field_Y)) {
             if (null == this.field_E ||
-              this.field_E.b(16440)) {
+              this.field_E.canDiscardCpuData(16440)) {
               this.field_C = null;
               if (var5 != 0) {
                 this.field_N = true;
@@ -1660,7 +1660,7 @@ final class HardwareModel extends ToolkitModel {
           if (null != this.field_eb &&
             !BeamShooterBehaviour.a((byte) -96, this.field_Y, this.field_h)) {
             if (this.field_d != null &&
-              !this.field_d.b(16440)) {
+              !this.field_d.canDiscardCpuData(16440)) {
               this.field_N = true;
               if (var5 != 0) {
                 this.field_t = null;
@@ -1674,7 +1674,7 @@ final class HardwareModel extends ToolkitModel {
           if (this.field_gb != null &&
             !RenderScene.a(this.field_h, this.field_Y, -102)) {
             if (null != this.field_E &&
-              !this.field_E.b(16440)) {
+              !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;
               if (var5 != 0) {
                 this.field_gb = null;
@@ -1688,7 +1688,7 @@ final class HardwareModel extends ToolkitModel {
             if (this.field_g != null &&
               !this.field_g.a(false) ||
               null != this.field_E &&
-              !this.field_E.b(16440)) {
+              !this.field_E.canDiscardCpuData(16440)) {
               this.field_N = true;
               if (var5 != 0) {
                 this.field_z = null;
@@ -1703,7 +1703,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (this.field_kb != null) {
             if (this.field_ib == null ||
-              this.field_ib.b(16440)) {
+              this.field_ib.canDiscardCpuData(16440)) {
               this.field_kb = null;
               if (var5 != 0) {
                 this.field_N = true;
@@ -1714,7 +1714,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (null != this.field_G) {
             if (this.field_E == null ||
-              this.field_E.b(16440)) {
+              this.field_E.canDiscardCpuData(16440)) {
               this.field_G = null;
               if (var5 != 0) {
                 this.field_N = true;
@@ -1822,7 +1822,7 @@ final class HardwareModel extends ToolkitModel {
               var3++;
             }
           }
-          this.b(-46);
+          this.releaseUnusedCpuArrays(-46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2117,7 +2117,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawBillboards(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         AffineTransform3D var3 = null;
@@ -2199,7 +2199,7 @@ final class HardwareModel extends ToolkitModel {
             this.field_E.field_h = false;
           }
           if (param0 != 0) {
-            this.I(-112, (int[]) null, 56, 86, -123, true, 104, (int[]) null);
+            this.applyMaskedTransform(-112, (int[]) null, 56, 86, -123, true, 104, (int[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2711,7 +2711,7 @@ final class HardwareModel extends ToolkitModel {
             param0.field_t = this.field_t;
             param0.field_eb = this.field_eb;
           }
-          if (pr.a(param4, -23611, this.field_h)) {
+          if (OpenGlShader.a(param4, -23611, this.field_h)) {
             param0.field_d = param2.field_d;
             param0.field_d.field_e = this.field_d.field_e;
             param0.field_d.field_h = this.field_d.field_h;
@@ -3557,7 +3557,7 @@ final class HardwareModel extends ToolkitModel {
                     continue;
                   }
                 }
-                this.d((byte) 28);
+                this.invalidateNormalBuffer((byte) 28);
                 return;
               }
             }
@@ -3623,7 +3623,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    final void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void applyMaskedTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
         int stackIn_102_0 = 0;
@@ -3948,7 +3948,7 @@ final class HardwareModel extends ToolkitModel {
                     var10++;
                   }
                 }
-                this.d((byte) 123);
+                this.invalidateNormalBuffer((byte) 123);
                 break;
               }
               if (var47 == 0) {
@@ -4831,7 +4831,7 @@ final class HardwareModel extends ToolkitModel {
           this.field_S.preparePerspectiveModelRendering(11);
           this.field_S.setModelTransform(var5, (byte) 93);
           this.renderBuffers((byte) -51);
-          this.c(-119);
+          this.drawBillboards(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4879,7 +4879,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (param3 ||
             S2CRoundDeadlinePacket.hasFlag2048(this.field_Y, this.field_h, 0)) {
-            this.field_d = new HardwareModelVertexStream(pr.a(this.field_Y, -23611, this.field_h));
+            this.field_d = new HardwareModelVertexStream(OpenGlShader.a(this.field_Y, -23611, this.field_h));
           }
           if (param3 ||
             S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {
