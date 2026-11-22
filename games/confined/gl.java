@@ -175,7 +175,7 @@ final class gl extends mf {
             stackIn_28_0 = wh.field_eb;
             return stackIn_28_0;
           }
-          if (!ig.a(var6, 0, var5)) {
+          if (!DirectByteStorage.a(var6, 0, var5)) {
             return vm.field_bb;
           }
           stackIn_32_0 = fg.field_pb;

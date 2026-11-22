@@ -155,7 +155,7 @@ final class pma extends k {
           MartyrAnimation.field_x = false;
         }
         if (CreatureType.field_n <= 5) {
-          gla.field_k = false;
+          DirectByteStorage.field_k = false;
         }
         if (CreatureType.field_n < 8) {
           mka.field_j = false;

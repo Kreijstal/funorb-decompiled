@@ -63,7 +63,7 @@ final class uj extends IntrusiveNode {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(nj.a(param0, true, var2), "_top");
+              param0.getAppletContext().showDocument(ByteStorage.a(param0, true, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

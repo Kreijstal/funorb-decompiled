@@ -22,7 +22,7 @@ final class PetAttackSpecial extends SpecialOrder {
           if (param3 == null) {
             var9.writeShort(param0, -127);
           } else {
-            nu.a(param3, var9, -21840);
+            ByteStorage.a(param3, var9, -21840);
           }
           var9.writeLengthByte((byte) -38, -var7 + var9.position);
         } catch (RuntimeException runtimeException) {

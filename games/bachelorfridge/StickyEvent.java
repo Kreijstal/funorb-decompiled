@@ -1069,7 +1069,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "rule_0_5");
                 if (null != var2) {
-                  nu.field_a = qq.a(var2, false);
+                  ByteStorage.field_a = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_pillar_1");
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "ignorelistdupe");
                 if (null != var2) {
-                  nu.field_d = qq.a(var2, false);
+                  ByteStorage.field_d = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "ignorenotfound");
                 if (null != var2) {

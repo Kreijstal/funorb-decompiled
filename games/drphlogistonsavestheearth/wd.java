@@ -68,9 +68,9 @@ abstract class wd {
               var2_int = la.field_b * (60 + var7.field_z) / rd.field_F;
               var3 = var2_int - 30;
               if (!ie.field_B) {
-                jc.a(var7, 256 * (-var3 + var7.field_z) / 30, var3 * -256 / 30, (byte) 110, 199, 245);
+                DirectByteStorage.a(var7, 256 * (-var3 + var7.field_z) / 30, var3 * -256 / 30, (byte) 110, 199, 245);
               } else {
-                jc.a(var7, -256 * var3 / 30, (-var3 + var7.field_z) * 256 / 30, (byte) 77, 199, 245);
+                DirectByteStorage.a(var7, -256 * var3 / 30, (-var3 + var7.field_z) * 256 / 30, (byte) 77, 199, 245);
               }
             }
           }

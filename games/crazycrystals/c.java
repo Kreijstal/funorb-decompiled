@@ -41,9 +41,9 @@ final class c extends bo implements Cloneable {
         var7 = -38 % ((param0 - 74) / 41);
         if (param1 == 24 &&
           param2 == 24) {
-          qb.field_b.a(param4, param5 - param2);
+          ByteStorage.field_b.a(param4, param5 - param2);
         } else {
-          qb.field_b.b(param4, param5 - param2, param1 * 2, param2 * 3);
+          ByteStorage.field_b.b(param4, param5 - param2, param1 * 2, param2 * 3);
         }
     }
 

@@ -18,7 +18,7 @@ final class nh {
           th.field_cb = param0;
           rh.field_X = sh.field_K;
           wm.field_hb = va.field_a;
-          m.field_a = qf.field_f;
+          m.field_a = ByteStorage.field_f;
           sh.field_K = 0;
           b.field_f = mg.field_e;
         }

@@ -2373,7 +2373,7 @@ final class bf {
           if (64 == var7_int &&
             var11 == 0) {
             if (Math.random() <= 0.5) {
-              this.field_n = bh.field_e;
+              this.field_n = ByteStorage.field_e;
               this.field_F = ad.field_v;
             } else {
               this.field_F = sh.field_c[this.field_Q];
@@ -2391,7 +2391,7 @@ final class bf {
               decompiledFrameRemainder1 = (var11 != 0);
             }
             if (decompiledFrameRemainder1) {
-              this.field_F = bh.field_b;
+              this.field_F = ByteStorage.field_b;
               this.field_n = tl.field_I;
               decompiledFrameRemainder1 = (var11 != 0);
             }

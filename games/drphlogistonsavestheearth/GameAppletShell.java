@@ -67,7 +67,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             eh.field_a = true;
             qh.field_b = qh.field_b - 50;
-            n.field_g.setSize(fg.field_h, bh.field_a);
+            n.field_g.setSize(fg.field_h, ByteStorage.field_a);
             n.field_g.setVisible(true);
             if (bb.field_a != null &&
               null == qd.field_Gb) {
@@ -206,7 +206,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 b.e(-117);
                 this.f(118);
-                lb.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) n.field_g), bh.field_a);
+                lb.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) n.field_g), ByteStorage.field_a);
                 this.a(32);
                 qe.field_e = qk.a(65280);
                 do {
@@ -556,7 +556,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
             }
             if (decompiledFrameCompleted0) {
-              stackIn_28_0 = jc.field_j;
+              stackIn_28_0 = DirectByteStorage.field_j;
             }
             vb.field_l = stackIn_28_0;
           }
@@ -697,7 +697,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           n.field_g = (java.awt.Canvas) ((Object) new ua((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) n.field_g));
-          n.field_g.setSize(fg.field_h, bh.field_a);
+          n.field_g.setSize(fg.field_h, ByteStorage.field_a);
           n.field_g.setVisible(true);
           boolean decompiledSharedTail0 = (bb.field_a == var2);
           if (!decompiledSharedTail0) {
@@ -901,7 +901,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               hg.field_pb = 0;
               tg.field_b = 0;
               vb.field_o = param2;
-              bh.field_a = param4;
+              ByteStorage.field_a = param4;
               ta.field_c = param4;
               hh.field_e = this;
               if (param0 != -4) {

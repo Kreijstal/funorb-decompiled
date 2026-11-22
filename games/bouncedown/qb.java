@@ -282,7 +282,7 @@ final class qb {
           if (ee.a(-1, param2, param1)) {
             return false;
           }
-          if (!ah.a(param1, param2, (byte) 8)) {
+          if (!ByteStorage.a(param1, param2, (byte) 8)) {
             return true;
           }
           return false;

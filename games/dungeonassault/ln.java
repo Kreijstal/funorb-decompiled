@@ -96,9 +96,9 @@ final class ln {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_g.a((long)(6 * param0), -26296);
-              this.field_g.a(0, -1, un.field_c, 6);
-              var4_int = ((255 & un.field_c[0]) << 16) + (((un.field_c[1] & 255) << 8) + (un.field_c[2] & 255));
-              var5 = (un.field_c[5] & 255) + (((un.field_c[4] & 255) << 8) + ((un.field_c[3] & 255) << 16));
+              this.field_g.a(0, -1, ByteStorage.field_c, 6);
+              var4_int = ((255 & ByteStorage.field_c[0]) << 16) + (((ByteStorage.field_c[1] & 255) << 8) + (ByteStorage.field_c[2] & 255));
+              var5 = (ByteStorage.field_c[5] & 255) + (((ByteStorage.field_c[4] & 255) << 8) + ((ByteStorage.field_c[3] & 255) << 16));
               if (var4_int < 0) {
                 return null;
               }
@@ -128,21 +128,21 @@ final class ln {
                     var10 = 512;
                   }
                   var15 = 8;
-                  this.field_f.a(0, -1, un.field_c, var15 + var10);
-                  var11 = (65280 & un.field_c[0] << 8) + (255 & un.field_c[1]);
-                  var14 = 255 & un.field_c[7];
-                  var13 = ((un.field_c[5] & 255) << 8) + (((un.field_c[4] & 255) << 16) + (255 & un.field_c[6]));
-                  var12 = (un.field_c[3] & 255) + (65280 & un.field_c[2] << 8);
+                  this.field_f.a(0, -1, ByteStorage.field_c, var15 + var10);
+                  var11 = (65280 & ByteStorage.field_c[0] << 8) + (255 & ByteStorage.field_c[1]);
+                  var14 = 255 & ByteStorage.field_c[7];
+                  var13 = ((ByteStorage.field_c[5] & 255) << 8) + (((ByteStorage.field_c[4] & 255) << 16) + (255 & ByteStorage.field_c[6]));
+                  var12 = (ByteStorage.field_c[3] & 255) + (65280 & ByteStorage.field_c[2] << 8);
                 } else {
                   var15 = 10;
                   if (510 < var10) {
                     var10 = 510;
                   }
-                  this.field_f.a(0, -1, un.field_c, var15 + var10);
-                  var13 = ((255 & un.field_c[6]) << 16) - (-((un.field_c[7] & 255) << 8) - (un.field_c[8] & 255));
-                  var14 = 255 & un.field_c[9];
-                  var11 = (un.field_c[3] & 255) + ((65280 & un.field_c[2] << 8) + (-16777216 & un.field_c[0] << 24) + ((un.field_c[1] & 255) << 16));
-                  var12 = ((un.field_c[4] & 255) << 8) + (255 & un.field_c[5]);
+                  this.field_f.a(0, -1, ByteStorage.field_c, var15 + var10);
+                  var13 = ((255 & ByteStorage.field_c[6]) << 16) - (-((ByteStorage.field_c[7] & 255) << 8) - (ByteStorage.field_c[8] & 255));
+                  var14 = 255 & ByteStorage.field_c[9];
+                  var11 = (ByteStorage.field_c[3] & 255) + ((65280 & ByteStorage.field_c[2] << 8) + (-16777216 & ByteStorage.field_c[0] << 24) + ((ByteStorage.field_c[1] & 255) << 16));
+                  var12 = ((ByteStorage.field_c[4] & 255) << 8) + (255 & ByteStorage.field_c[5]);
                 }
                 if (var11 != param0) {
                   return null;
@@ -165,7 +165,7 @@ final class ln {
                 for (var17 = var15; var16 > var17; var17++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = un.field_c[var17];
+                  var6[incrementValue$2] = ByteStorage.field_c[var17];
                 }
               }
               stackIn_48_0 = var6;
@@ -249,8 +249,8 @@ final class ln {
                     return false;
                   }
                   this.field_g.a((long)(param2 * 6), -26296);
-                  this.field_g.a(0, -1, un.field_c, 6);
-                  var7_int = ((255 & un.field_c[4]) << 8) + ((255 & un.field_c[3]) << 16) + (255 & un.field_c[5]);
+                  this.field_g.a(0, -1, ByteStorage.field_c, 6);
+                  var7_int = ((255 & ByteStorage.field_c[4]) << 8) + ((255 & ByteStorage.field_c[3]) << 16) + (255 & ByteStorage.field_c[5]);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_f.a((byte) -92) / 520L))) {
                     return false;
@@ -261,14 +261,14 @@ final class ln {
                     var7_int = 1;
                   }
                 }
-                un.field_c[5] = (byte)var7_int;
-                un.field_c[3] = (byte)(var7_int >> 16);
-                un.field_c[4] = (byte)(var7_int >> 8);
-                un.field_c[2] = (byte)param1;
-                un.field_c[0] = (byte)(param1 >> 16);
-                un.field_c[1] = (byte)(param1 >> 8);
+                ByteStorage.field_c[5] = (byte)var7_int;
+                ByteStorage.field_c[3] = (byte)(var7_int >> 16);
+                ByteStorage.field_c[4] = (byte)(var7_int >> 8);
+                ByteStorage.field_c[2] = (byte)param1;
+                ByteStorage.field_c[0] = (byte)(param1 >> 16);
+                ByteStorage.field_c[1] = (byte)(param1 >> 8);
                 this.field_g.a((long)(6 * param2), -26296);
-                this.field_g.a(0, -91, 6, un.field_c);
+                this.field_g.a(0, -91, 6, ByteStorage.field_c);
                 var8 = 0;
                 if (!param0) {
                   this.field_b = 88;
@@ -282,7 +282,7 @@ final class ln {
                       this.field_f.a((long)(520 * var7_int), -26296);
                       if (65535 >= param2) {
                         try {
-                          this.field_f.a(0, -1, un.field_c, 8);
+                          this.field_f.a(0, -1, ByteStorage.field_c, 8);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,13 +292,13 @@ final class ln {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (65280 & un.field_c[2] << 8) + (un.field_c[3] & 255);
-                        var13 = un.field_c[7] & 255;
-                        var10 = (un.field_c[4] << 16 & 16711680) + (((un.field_c[5] & 255) << 8) + (255 & un.field_c[6]));
-                        var11 = (un.field_c[1] & 255) + (un.field_c[0] << 8 & 65280);
+                        var12 = (65280 & ByteStorage.field_c[2] << 8) + (ByteStorage.field_c[3] & 255);
+                        var13 = ByteStorage.field_c[7] & 255;
+                        var10 = (ByteStorage.field_c[4] << 16 & 16711680) + (((ByteStorage.field_c[5] & 255) << 8) + (255 & ByteStorage.field_c[6]));
+                        var11 = (ByteStorage.field_c[1] & 255) + (ByteStorage.field_c[0] << 8 & 65280);
                       } else {
                         try {
-                          this.field_f.a(0, -1, un.field_c, 10);
+                          this.field_f.a(0, -1, ByteStorage.field_c, 10);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -308,10 +308,10 @@ final class ln {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = ((un.field_c[1] & 255) << 16) + ((-16777216 & un.field_c[0] << 24) + (un.field_c[2] << 8 & 65280) + (un.field_c[3] & 255));
-                        var10 = (un.field_c[7] << 8 & 65280) + ((un.field_c[6] & 255) << 16) + (255 & un.field_c[8]);
-                        var12 = ((255 & un.field_c[4]) << 8) + (255 & un.field_c[5]);
-                        var13 = 255 & un.field_c[9];
+                        var11 = ((ByteStorage.field_c[1] & 255) << 16) + ((-16777216 & ByteStorage.field_c[0] << 24) + (ByteStorage.field_c[2] << 8 & 65280) + (ByteStorage.field_c[3] & 255));
+                        var10 = (ByteStorage.field_c[7] << 8 & 65280) + ((ByteStorage.field_c[6] & 255) << 16) + (255 & ByteStorage.field_c[8]);
+                        var12 = ((255 & ByteStorage.field_c[4]) << 8) + (255 & ByteStorage.field_c[5]);
+                        var13 = 255 & ByteStorage.field_c[9];
                       }
                       if ((var11 == param2 &&
                         var9 == var12 &&
@@ -338,18 +338,18 @@ final class ln {
                       var10 = 0;
                     }
                     if (param2 > 65535) {
-                      un.field_c[1] = (byte)(param2 >> 16);
-                      un.field_c[7] = (byte)(var10 >> 8);
-                      un.field_c[5] = (byte)var9;
-                      un.field_c[6] = (byte)(var10 >> 16);
-                      un.field_c[4] = (byte)(var9 >> 8);
-                      un.field_c[3] = (byte)param2;
-                      un.field_c[0] = (byte)(param2 >> 24);
-                      un.field_c[9] = (byte)this.field_a;
-                      un.field_c[2] = (byte)(param2 >> 8);
-                      un.field_c[8] = (byte)var10;
+                      ByteStorage.field_c[1] = (byte)(param2 >> 16);
+                      ByteStorage.field_c[7] = (byte)(var10 >> 8);
+                      ByteStorage.field_c[5] = (byte)var9;
+                      ByteStorage.field_c[6] = (byte)(var10 >> 16);
+                      ByteStorage.field_c[4] = (byte)(var9 >> 8);
+                      ByteStorage.field_c[3] = (byte)param2;
+                      ByteStorage.field_c[0] = (byte)(param2 >> 24);
+                      ByteStorage.field_c[9] = (byte)this.field_a;
+                      ByteStorage.field_c[2] = (byte)(param2 >> 8);
+                      ByteStorage.field_c[8] = (byte)var10;
                       this.field_f.a((long)(var7_int * 520), -26296);
-                      this.field_f.a(0, -116, 10, un.field_c);
+                      this.field_f.a(0, -116, 10, ByteStorage.field_c);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
@@ -357,16 +357,16 @@ final class ln {
                       this.field_f.a(var8, -106, var11, param4);
                       var8 = var8 + var11;
                     } else {
-                      un.field_c[2] = (byte)(var9 >> 8);
-                      un.field_c[6] = (byte)var10;
-                      un.field_c[5] = (byte)(var10 >> 8);
-                      un.field_c[1] = (byte)param2;
-                      un.field_c[4] = (byte)(var10 >> 16);
-                      un.field_c[7] = (byte)this.field_a;
-                      un.field_c[3] = (byte)var9;
-                      un.field_c[0] = (byte)(param2 >> 8);
+                      ByteStorage.field_c[2] = (byte)(var9 >> 8);
+                      ByteStorage.field_c[6] = (byte)var10;
+                      ByteStorage.field_c[5] = (byte)(var10 >> 8);
+                      ByteStorage.field_c[1] = (byte)param2;
+                      ByteStorage.field_c[4] = (byte)(var10 >> 16);
+                      ByteStorage.field_c[7] = (byte)this.field_a;
+                      ByteStorage.field_c[3] = (byte)var9;
+                      ByteStorage.field_c[0] = (byte)(param2 >> 8);
                       this.field_f.a((long)(520 * var7_int), -26296);
-                      this.field_f.a(0, -97, 8, un.field_c);
+                      this.field_f.a(0, -97, 8, ByteStorage.field_c);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;

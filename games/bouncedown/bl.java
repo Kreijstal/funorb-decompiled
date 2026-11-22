@@ -52,7 +52,7 @@ final class bl {
     bl(boolean param0) {
         this.field_i = jg.field_D;
         this.field_k = ka.field_n;
-        this.field_j = de.field_c;
+        this.field_j = DirectByteStorage.field_c;
         this.field_c = g.field_i;
         this.field_g = ek.field_f;
         this.field_a = ib.field_n;

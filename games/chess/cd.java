@@ -220,7 +220,7 @@ final class cd extends pk {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new km(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) ja.field_h));
+          var2 = new km(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
           var3 = var2.field_w;
           var4 = var2.field_t;
           r.k(3029);

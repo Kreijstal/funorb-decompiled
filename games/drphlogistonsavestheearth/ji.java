@@ -31,7 +31,7 @@ final class ji {
     final static byte[] a(int param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        bh var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
@@ -54,9 +54,9 @@ final class ji {
             stackIn_6_0 = qd.a((byte) 111, var3);
             return stackIn_6_0;
           }
-          if (param1 instanceof bh) {
-            var4 = (bh) (param1);
-            stackIn_12_0 = var4.c(19707);
+          if (param1 instanceof ByteStorage) {
+            var4 = (ByteStorage) (param1);
+            stackIn_12_0 = var4.getBytes(19707);
             return stackIn_12_0;
           }
           if (param0 != 23436) {

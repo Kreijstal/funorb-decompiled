@@ -42,9 +42,9 @@ final class hl {
         try {
           var1_int = uk.field_e - hg.field_rb;
           hg.field_rb = ma.field_wb - (var1_int >> 1);
-          jc.field_i = -(hi.field_a >> 1) + rd.field_B;
+          DirectByteStorage.field_i = -(hi.field_a >> 1) + rd.field_B;
           uk.field_e = var1_int + hg.field_rb;
-          var2 = jc.field_i;
+          var2 = DirectByteStorage.field_i;
           for (var3 = param0; var3 < bc.field_e.length; var3++) {
             var4 = vh.field_c[var3];
             if (0 > var4) {

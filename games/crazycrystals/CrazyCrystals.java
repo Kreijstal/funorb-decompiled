@@ -708,7 +708,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           GameCanvas.a((byte) -126);
           tf.clearStaticReferences(param0 - 215);
           v.clearStaticReferences(114);
-          qb.a((byte) 100);
+          ByteStorage.a((byte) 100);
           di.clearStaticReferences();
           qn.clearStaticReferences(param0 + 169);
           pi.a(102);
@@ -772,7 +772,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           dq.clearStaticReferences((byte) -69);
           bk.clearStaticReferences();
           kj.a(-99);
-          af.clearStaticReferences(0);
+          DirectByteStorage.clearStaticReferences(0);
           ch.clearStaticReferences(855);
           oj.clearStaticReferences((byte) 0);
           ed.f((byte) 87);
@@ -955,7 +955,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == MouseInputHandler.field_b) {
             if (r.field_m) {
               dq.a(-26477);
-              qb.b(480);
+              ByteStorage.b(480);
             }
             if (!fj.a(136)) {
               if (null != uh.field_p) {
@@ -1206,7 +1206,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             td.a(28.0f, oi.field_b, false);
             this.a(-124);
             h.field_d = bf.a(-1, "buttonframe", "", l.field_d);
-            af.field_c = bf.a(-1, "hoverbuttonframe", "", l.field_d);
+            DirectByteStorage.field_c = bf.a(-1, "hoverbuttonframe", "", l.field_d);
             fo.field_g = bf.a(-1, "smallbuttonframe", "", l.field_d);
             mi.field_x = bf.a(-1, "hoversmallbuttonframe", "", l.field_d);
             jn.field_o = bf.a(-1, "hollowframe", "", l.field_d);
@@ -1356,7 +1356,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             td.a(32.0f, oi.field_b, false);
             this.a(-124);
             s.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
-            qb.field_b = wl.a("fgtiles_laserhub", l.field_d, 10, "");
+            ByteStorage.field_b = wl.a("fgtiles_laserhub", l.field_d, 10, "");
             MouseWheelInput.field_i = wl.a("sprites_rock", l.field_d, 10, "");
             vp.field_i = new dl[2][];
             vp.field_i[0] = bf.a(-1, "sprites_crystal1", "", l.field_d);

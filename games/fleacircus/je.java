@@ -1571,7 +1571,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_password_hint", 0);
                 if (var2 != null) {
-                  hd.field_f = ab.a(0, var2);
+                  ByteStorage.field_f = ab.a(0, var2);
                 }
                 var2 = ad.a("create_password_confirm_tooltip", 0);
                 if (null != var2) {
@@ -1935,7 +1935,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("music_colon", 0);
                 if (var2 != null) {
-                  hd.field_e = ab.a(0, var2);
+                  ByteStorage.field_e = ab.a(0, var2);
                 }
                 var2 = ad.a("fullscreen", 0);
                 if (null != var2) {

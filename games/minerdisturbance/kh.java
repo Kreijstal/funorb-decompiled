@@ -13,7 +13,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (lb.field_y != null) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             DualLinkNode.field_n = param0.getX();
             vl.field_G = param0.getY();
             sf.a((byte) -42);
@@ -77,7 +77,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (lb.field_y != null) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             nm.field_a = param0.getY();
             kk.field_d = true;
@@ -103,7 +103,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (lb.field_y != null) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             sa.field_o = -1;
             nm.field_a = -1;
             kk.field_d = true;
@@ -178,7 +178,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (lb.field_y != null) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             nm.field_a = param0.getY();
             kk.field_d = true;
@@ -276,7 +276,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         try {
           if (lb.field_y != null) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             qd.field_J = 0;
             kk.field_d = true;
             var2_int = param0.getModifiers();
@@ -308,7 +308,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (null != lb.field_y) {
-            t.field_c = 0;
+            DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             nm.field_a = param0.getY();
             kk.field_d = true;

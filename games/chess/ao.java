@@ -81,8 +81,8 @@ final class ao {
 
     final static void b(int param0) {
         b.a(true);
-        if (ja.field_h != null) {
-          kl.a(ja.field_h, (byte) -114);
+        if (DirectByteStorage.field_h != null) {
+          kl.a(DirectByteStorage.field_h, (byte) -114);
         }
         rl.a(76);
         if (param0 != -25220) {

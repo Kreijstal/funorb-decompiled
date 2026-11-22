@@ -193,10 +193,10 @@ final class t {
             b.field_d[var2] = -400;
             ContextualRuntimeException.field_g[var2] = je.field_O[this.b(param0 + 399)];
           }
-          dupTemp$2 = hd.field_h[var2] - (2 + var2);
-          hd.field_h[var2] = dupTemp$2;
+          dupTemp$2 = ByteStorage.field_h[var2] - (2 + var2);
+          ByteStorage.field_h[var2] = dupTemp$2;
           if (dupTemp$2 < -400) {
-            hd.field_h[var2] = 1040;
+            ByteStorage.field_h[var2] = 1040;
             ua.field_tb[var2] = je.field_O[this.b(df.a(param0, 399))];
           }
         }
@@ -468,7 +468,7 @@ final class t {
           qi.field_c.f(0, 0);
           for (var2_int = 0; var2_int < ContextualRuntimeException.field_g.length; var2_int++) {
             ContextualRuntimeException.field_g[var2_int].d(b.field_d[var2_int], 200 + var2_int * 5);
-            ua.field_tb[var2_int].g(hd.field_h[var2_int], 200 + 5 * var2_int);
+            ua.field_tb[var2_int].g(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
           }
         } else {
           fc.c(param0 ^ 124);

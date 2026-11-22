@@ -1585,7 +1585,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_displayname_tooltip", 51);
                 if (var2 != null) {
-                  un.field_d = dj.a(var2, false);
+                  ByteStorage.field_d = dj.a(var2, false);
                 }
                 var2 = rp.a("create_displayname_hint", 59);
                 if (null != var2) {
@@ -1717,7 +1717,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_alert_mismatch", 126);
                 if (null != var2) {
-                  ep.field_j = dj.a(var2, false);
+                  DirectByteStorage.field_j = dj.a(var2, false);
                 }
                 var2 = rp.a("create_passwordvalid", 84);
                 if (var2 != null) {
@@ -2835,11 +2835,11 @@ final class ng extends ck {
                 }
                 var2 = rp.a("rating_mode_name,0", param0 ^ -27121);
                 if (var2 != null) {
-                  ep.field_f[0] = dj.a(var2, false);
+                  DirectByteStorage.field_f[0] = dj.a(var2, false);
                 }
                 var2 = rp.a("rating_mode_name,1", 87);
                 if (var2 != null) {
-                  ep.field_f[1] = dj.a(var2, false);
+                  DirectByteStorage.field_f[1] = dj.a(var2, false);
                 }
                 var2 = rp.a("rating_mode_long_name,0", 61);
                 if (null != var2) {

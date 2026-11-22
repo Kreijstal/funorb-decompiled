@@ -222,16 +222,16 @@ final class bc extends IntrusiveNode {
         } else if (0 == bm.field_c &&
           rl.field_c == 1) {
           if (vg.field_e.length > 0 &&
-            md.field_l == vg.field_e[0].field_k) {
+            DirectByteStorage.field_l == vg.field_e[0].field_k) {
             return;
           }
           vg.field_e = new v[2];
-          vg.field_e[0] = new v(md.field_l, 600, 650, 200, true);
+          vg.field_e[0] = new v(DirectByteStorage.field_l, 600, 650, 200, true);
           vg.field_e[1] = new v(nm.field_d, 480, 650, 200, true);
         } else if (0 == bm.field_c &&
           rl.field_c == 3) {
           if (vg.field_e.length > 0 &&
-            md.field_l == vg.field_e[0].field_k) {
+            DirectByteStorage.field_l == vg.field_e[0].field_k) {
             return;
           }
           vg.field_e = new v[1];

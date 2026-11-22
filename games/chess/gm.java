@@ -223,7 +223,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_chat_lobby", -117);
                 if (var2 != null) {
-                  ja.field_c = ad.a(-29410, var2);
+                  DirectByteStorage.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_public", -111);
                 if (var2 != null) {
@@ -903,7 +903,7 @@ abstract class gm {
                 }
                 var2 = cd.a("gameopt_younotmember", -115);
                 if (var2 != null) {
-                  ja.field_e = ad.a(-29410, var2);
+                  DirectByteStorage.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_playerneedsrating", -77);
                 if (var2 != null) {

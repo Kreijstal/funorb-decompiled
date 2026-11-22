@@ -234,7 +234,7 @@ final class s {
                   MouseInput.field_b[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
-                  jc.field_h[var23Lifetime2] = var27Lifetime1 >> b.field_m;
+                  DirectByteStorage.field_h[var23Lifetime2] = var27Lifetime1 >> b.field_m;
                   wd.field_b[var23Lifetime2] = var28Lifetime1 >> b.field_m;
                   ClientException.field_g[var23Lifetime2] = var29Lifetime1;
                 }

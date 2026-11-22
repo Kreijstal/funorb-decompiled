@@ -1385,7 +1385,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "enterToContinue");
                 if (var2 != null) {
-                  ni.field_b = bh.a(var2, 76);
+                  ByteStorage.field_b = bh.a(var2, 76);
                 }
                 var2 = lh.b(-1, "enterToClose");
                 if (var2 != null) {
@@ -1939,7 +1939,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "keycode_cheat_down");
                 if (null != var2) {
-                  ni.field_a = var2[0] & 255;
+                  ByteStorage.field_a = var2[0] & 255;
                 }
                 fa.field_d = null;
             }

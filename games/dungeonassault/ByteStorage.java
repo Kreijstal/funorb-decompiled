@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class un {
+abstract class ByteStorage {
     static en field_e;
     static String field_d;
     static byte[] field_c;
@@ -20,7 +20,7 @@ abstract class un {
     final static void a(boolean param0, byte param1) {
         lg.field_w.a(0, 0, 452);
         if (param1 != -106) {
-          un.a(-99, (byte) -119, 66, 70, false);
+          ByteStorage.a(-99, (byte) -119, 66, 70, false);
         }
     }
 
@@ -33,9 +33,9 @@ abstract class un {
         vd.a(param2, 0, -14561, 0, param0, param3);
     }
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] param0, int param1);
 
-    abstract byte[] b(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     static {
         field_d = "Enter the name you'd prefer. This is the name displayed to other players.";

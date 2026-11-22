@@ -94,10 +94,10 @@ final class hg extends hc {
           var1 = "";
         }
         if (param0 <= -11) {
-          return new a(vd.f(-52), bh.b((byte) -94));
+          return new a(vd.f(-52), ByteStorage.b((byte) -94));
         }
         hg.a(-53, 13, (byte) 24);
-        return new a(vd.f(-52), bh.b((byte) -94));
+        return new a(vd.f(-52), ByteStorage.b((byte) -94));
     }
 
     static long a(long param0, long param1) {

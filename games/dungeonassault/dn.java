@@ -179,7 +179,7 @@ final class dn extends ii implements jo, vg {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
-        un var5 = null;
+        ByteStorage var5 = null;
         Object stackIn_4_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
@@ -198,11 +198,11 @@ final class dn extends ii implements jo, vg {
             return (byte[]) (stackIn_4_0);
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof un)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (un) (param0);
-            stackIn_13_0 = var5.b((byte) 60);
+            var5 = (ByteStorage) (param0);
+            stackIn_13_0 = var5.getBytes((byte) 60);
             return stackIn_13_0;
           }
           var3 = (byte[]) (param0);

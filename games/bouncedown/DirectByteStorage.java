@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends ah {
+final class DirectByteStorage extends ByteStorage {
     static tg[] field_d;
     static int field_f;
     static int field_c;
     static int field_b;
     static int[] field_e;
-    private java.nio.ByteBuffer field_a;
+    private java.nio.ByteBuffer buffer;
 
-    final byte[] a(int param0) {
-        byte[] var3 = new byte[this.field_a.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_a.position(param0);
-        this.field_a.get(var3);
+        this.buffer.position(param0);
+        this.buffer.get(var3);
         return var3;
     }
 
-    de() {
+    DirectByteStorage() {
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte param0, byte[] param1) {
         try {
-          this.field_a = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 != 68) {
-            this.field_a = (java.nio.ByteBuffer) null;
+            this.buffer = (java.nio.ByteBuffer) null;
           }
-          this.field_a.position(0);
-          this.field_a.put(param1);
+          this.buffer.position(0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

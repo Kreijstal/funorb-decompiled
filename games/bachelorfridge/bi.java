@@ -180,7 +180,7 @@ abstract class bi extends jla {
     final void i(int param0) {
         super.i(param0);
         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
-        nu.field_e.draw(-5, 0);
+        ByteStorage.field_e.draw(-5, 0);
     }
 
     bi(int param0) {

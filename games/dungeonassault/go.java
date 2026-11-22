@@ -2772,7 +2772,7 @@ final class go extends qe {
               var8Lifetime1 = stackIn_17_0;
               if (var6.field_h.a((byte) -54, 7) &&
                 var8Lifetime1 != 0) {
-                var9 = new oc(var7, var6, false, jk.a(new String[]{var6.field_h.field_z}, ep.field_i, 30496));
+                var9 = new oc(var7, var6, false, jk.a(new String[]{var6.field_h.field_z}, DirectByteStorage.field_i, 30496));
                 decompiledFrameRemainder0 = false;
               }
               else {

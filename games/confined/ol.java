@@ -55,7 +55,7 @@ final class ol {
         if (!fd.field_j) {
           throw new IllegalStateException();
         }
-        qf.field_g = true;
+        ByteStorage.field_g = true;
         aa.a((byte) -113, true);
         IntrusiveNode.field_e = 0;
     }

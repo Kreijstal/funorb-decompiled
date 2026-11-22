@@ -433,7 +433,7 @@ final class pa extends ql {
             var6 = 0;
             while (var6 < var5.length) {
               var7 = var5[var6];
-              if (nj.a(mm.field_m[var4].field_j, var7, -28835) > 1) {
+              if (ByteStorage.a(mm.field_m[var4].field_j, var7, -28835) > 1) {
                 var6++;
                 continue;
               }

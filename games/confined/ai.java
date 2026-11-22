@@ -89,17 +89,17 @@ class ai extends em {
             vh.field_a.position = 0;
             ca.field_o = null;
             if (param1 == null) {
-              qf.field_c.position = 0;
-              qf.field_c.writeInt(-106, hj.field_h.nextInt());
-              qf.field_c.writeInt(-103, hj.field_h.nextInt());
-              stackIn_16_0 = qf.field_c;
+              ByteStorage.field_c.position = 0;
+              ByteStorage.field_c.writeInt(-106, hj.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-103, hj.field_h.nextInt());
+              stackIn_16_0 = ByteStorage.field_c;
               if (!param6.b(0)) {
                 stackIn_17_1 = "";
               } else {
                 stackIn_17_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_17_1, (byte) 112);
-              stackIn_19_0 = qf.field_c;
+              stackIn_19_0 = ByteStorage.field_c;
               if (!param2.b(0)) {
                 stackIn_20_1 = "";
               } else {
@@ -109,23 +109,23 @@ class ai extends em {
               vh.field_a.writeByte(110, 16);
               vh.field_a.position = vh.field_a.position + 1;
               var9 = vh.field_a.position;
-              jf.a(qf.field_c, hk.field_a, vh.field_a, 0, an.field_r);
+              jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
               vh.field_a.backpatchByteLength(25859, vh.field_a.position - var9);
             } else {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              qf.field_c.position = 0;
-              qf.field_c.writeInt(-98, hj.field_h.nextInt());
-              qf.field_c.writeInt(-114, hj.field_h.nextInt());
-              qf.field_c.writePrefixedString(var14, (byte) 45);
-              qf.field_c.writePrefixedString(var8, (byte) 105);
+              ByteStorage.field_c.position = 0;
+              ByteStorage.field_c.writeInt(-98, hj.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-114, hj.field_h.nextInt());
+              ByteStorage.field_c.writePrefixedString(var14, (byte) 45);
+              ByteStorage.field_c.writePrefixedString(var8, (byte) 105);
               var15 = (CharSequence) ((Object) param1);
-              qf.field_c.writePrefixedString(ka.a(var15, 23617), (byte) 75);
-              qf.field_c.writeShort(param0, 8);
-              qf.field_c.writeByte(114, param4);
-              qf.field_c.writeByte(117, var9);
+              ByteStorage.field_c.writePrefixedString(ka.a(var15, 23617), (byte) 75);
+              ByteStorage.field_c.writeShort(param0, 8);
+              ByteStorage.field_c.writeByte(114, param4);
+              ByteStorage.field_c.writeByte(117, var9);
               vh.field_a.writeByte(101, 18);
               vh.field_a.position = vh.field_a.position + 2;
               var10 = vh.field_a.position;
@@ -134,7 +134,7 @@ class ai extends em {
                 var11_ref_StringLifetime4 = "";
               }
               vh.field_a.writeString(var11_ref_StringLifetime4, 123);
-              jf.a(qf.field_c, hk.field_a, vh.field_a, 0, an.field_r);
+              jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, 0, an.field_r);
               vh.field_a.backpatchShortLength(-var10 + vh.field_a.position, -109);
             }
             tb.a(-1, 123);

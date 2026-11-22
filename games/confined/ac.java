@@ -23,7 +23,7 @@ final class ac {
         va.field_b = null;
         IntrusiveNodeHashTable.field_k = false;
         ji.field_e = null;
-        qf.field_e = false;
+        ByteStorage.field_e = false;
         hh.field_d = null;
         rh.field_X = 0;
     }

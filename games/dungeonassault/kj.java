@@ -12,10 +12,10 @@ final class kj extends IntrusiveNode {
     static wh field_o;
 
     final static Object a(boolean param0, boolean param1, byte[] param2) {
-        ep var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        ep stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -31,8 +31,8 @@ final class kj extends IntrusiveNode {
             kj.a(false, true, (byte[]) null);
           }
           if (136 < param2.length) {
-            var3 = new ep();
-            ((un) ((Object) var3)).a(param2, 105);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param2, 105);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }
@@ -90,7 +90,7 @@ final class kj extends IntrusiveNode {
             kj.a(93);
           }
           gf.a();
-          un.a(true, (byte) -106);
+          ByteStorage.a(true, (byte) -106);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "kj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

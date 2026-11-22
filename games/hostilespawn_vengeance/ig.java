@@ -287,7 +287,7 @@ class ig extends ph {
           var2 = (String) null;
           ig.a(false, (java.net.URL) null, (String) null, 120, (String) null);
         }
-        stackIn_7_0 = (fa.field_c >= 10) && (!md.field_k) && (!kl.b(50));
+        stackIn_7_0 = (fa.field_c >= 10) && (!DirectByteStorage.field_k) && (!kl.b(50));
         return stackIn_7_0;
     }
 

@@ -89,8 +89,8 @@ final class fg {
     }
 
     final static java.awt.Container b(byte param0) {
-        if (null != md.field_n) {
-          return (java.awt.Container) ((Object) md.field_n);
+        if (null != DirectByteStorage.field_n) {
+          return (java.awt.Container) ((Object) DirectByteStorage.field_n);
         }
         if (param0 != -31) {
           field_b = (jb[]) null;

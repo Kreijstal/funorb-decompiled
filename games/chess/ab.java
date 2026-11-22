@@ -147,7 +147,7 @@ abstract class ab extends l {
         l var1Lifetime1;
         var2 = Chess.field_G;
         try {
-          f.field_a = null;
+          ByteStorage.field_a = null;
           wc.field_v = 0;
           wg.field_w = 0;
           me.field_e.e(-31023);

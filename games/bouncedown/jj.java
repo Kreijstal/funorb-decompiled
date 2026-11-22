@@ -139,12 +139,12 @@ final class jj {
             }
             for (var2 = 0; ok.field_c.length > var2; var2++) {
               if (param1 == ok.field_c[var2] &&
-                de.field_e[var2] > 0) {
-                dupTemp$29 = de.field_e[var2] - 1;
+                DirectByteStorage.field_e[var2] > 0) {
+                dupTemp$29 = DirectByteStorage.field_e[var2] - 1;
                 arrayValue$30 = ri.field_B[var2];
-                de.field_e[var2] = dupTemp$29;
+                DirectByteStorage.field_e[var2] = dupTemp$29;
                 var3 = arrayValue$30[dupTemp$29];
-                ri.field_B[var2][de.field_e[var2]] = null;
+                ri.field_B[var2][DirectByteStorage.field_e[var2]] = null;
                 return var3;
               }
             }
@@ -171,12 +171,12 @@ final class jj {
             }
             for (var2Lifetime5 = 0; ok.field_c.length > var2Lifetime5; var2Lifetime5++) {
               if (param1 == ok.field_c[var2Lifetime5] &&
-                de.field_e[var2Lifetime5] > 0) {
-                dupTemp$25 = de.field_e[var2Lifetime5] - 1;
+                DirectByteStorage.field_e[var2Lifetime5] > 0) {
+                dupTemp$25 = DirectByteStorage.field_e[var2Lifetime5] - 1;
                 arrayValue$26 = ri.field_B[var2Lifetime5];
-                de.field_e[var2Lifetime5] = dupTemp$25;
+                DirectByteStorage.field_e[var2Lifetime5] = dupTemp$25;
                 var3Lifetime5 = arrayValue$26[dupTemp$25];
-                ri.field_B[var2Lifetime5][de.field_e[var2Lifetime5]] = null;
+                ri.field_B[var2Lifetime5][DirectByteStorage.field_e[var2Lifetime5]] = null;
                 return var3Lifetime5;
               }
             }
@@ -202,12 +202,12 @@ final class jj {
           }
           for (var2Lifetime6 = 0; ok.field_c.length > var2Lifetime6; var2Lifetime6++) {
             if (param1 == ok.field_c[var2Lifetime6] &&
-              de.field_e[var2Lifetime6] > 0) {
-              dupTemp$22 = de.field_e[var2Lifetime6] - 1;
+              DirectByteStorage.field_e[var2Lifetime6] > 0) {
+              dupTemp$22 = DirectByteStorage.field_e[var2Lifetime6] - 1;
               arrayValue$23 = ri.field_B[var2Lifetime6];
-              de.field_e[var2Lifetime6] = dupTemp$22;
+              DirectByteStorage.field_e[var2Lifetime6] = dupTemp$22;
               var3Lifetime6 = arrayValue$23[dupTemp$22];
-              ri.field_B[var2Lifetime6][de.field_e[var2Lifetime6]] = null;
+              ri.field_B[var2Lifetime6][DirectByteStorage.field_e[var2Lifetime6]] = null;
               return var3Lifetime6;
             }
           }
@@ -228,12 +228,12 @@ final class jj {
             }
             for (var2Lifetime1 = 0; ok.field_c.length > var2Lifetime1; var2Lifetime1++) {
               if (param1 == ok.field_c[var2Lifetime1] &&
-                de.field_e[var2Lifetime1] > 0) {
-                dupTemp$3 = de.field_e[var2Lifetime1] - 1;
+                DirectByteStorage.field_e[var2Lifetime1] > 0) {
+                dupTemp$3 = DirectByteStorage.field_e[var2Lifetime1] - 1;
                 arrayValue$4 = ri.field_B[var2Lifetime1];
-                de.field_e[var2Lifetime1] = dupTemp$3;
+                DirectByteStorage.field_e[var2Lifetime1] = dupTemp$3;
                 var3Lifetime1 = arrayValue$4[dupTemp$3];
-                ri.field_B[var2Lifetime1][de.field_e[var2Lifetime1]] = null;
+                ri.field_B[var2Lifetime1][DirectByteStorage.field_e[var2Lifetime1]] = null;
                 return var3Lifetime1;
               }
             }
@@ -259,12 +259,12 @@ final class jj {
           }
           for (var2Lifetime1Lifetime1 = 0; ok.field_c.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
             if (param1 == ok.field_c[var2Lifetime1Lifetime1] &&
-              de.field_e[var2Lifetime1Lifetime1] > 0) {
-              dupTemp$7 = de.field_e[var2Lifetime1Lifetime1] - 1;
+              DirectByteStorage.field_e[var2Lifetime1Lifetime1] > 0) {
+              dupTemp$7 = DirectByteStorage.field_e[var2Lifetime1Lifetime1] - 1;
               arrayValue$8 = ri.field_B[var2Lifetime1Lifetime1];
-              de.field_e[var2Lifetime1Lifetime1] = dupTemp$7;
+              DirectByteStorage.field_e[var2Lifetime1Lifetime1] = dupTemp$7;
               var3Lifetime1Lifetime1 = arrayValue$8[dupTemp$7];
-              ri.field_B[var2Lifetime1Lifetime1][de.field_e[var2Lifetime1Lifetime1]] = null;
+              ri.field_B[var2Lifetime1Lifetime1][DirectByteStorage.field_e[var2Lifetime1Lifetime1]] = null;
               return var3Lifetime1Lifetime1;
             }
           }
@@ -298,12 +298,12 @@ final class jj {
           }
           for (var2Lifetime2 = 0; ok.field_c.length > var2Lifetime2; var2Lifetime2++) {
             if (param1 == ok.field_c[var2Lifetime2] &&
-              de.field_e[var2Lifetime2] > 0) {
-              dupTemp$15 = de.field_e[var2Lifetime2] - 1;
+              DirectByteStorage.field_e[var2Lifetime2] > 0) {
+              dupTemp$15 = DirectByteStorage.field_e[var2Lifetime2] - 1;
               arrayValue$16 = ri.field_B[var2Lifetime2];
-              de.field_e[var2Lifetime2] = dupTemp$15;
+              DirectByteStorage.field_e[var2Lifetime2] = dupTemp$15;
               var3Lifetime2 = arrayValue$16[dupTemp$15];
-              ri.field_B[var2Lifetime2][de.field_e[var2Lifetime2]] = null;
+              ri.field_B[var2Lifetime2][DirectByteStorage.field_e[var2Lifetime2]] = null;
               return var3Lifetime2;
             }
           }
@@ -315,12 +315,12 @@ final class jj {
           }
           for (var2Lifetime3 = 0; ok.field_c.length > var2Lifetime3; var2Lifetime3++) {
             if (param1 == ok.field_c[var2Lifetime3] &&
-              de.field_e[var2Lifetime3] > 0) {
-              dupTemp$12 = de.field_e[var2Lifetime3] - 1;
+              DirectByteStorage.field_e[var2Lifetime3] > 0) {
+              dupTemp$12 = DirectByteStorage.field_e[var2Lifetime3] - 1;
               arrayValue$13 = ri.field_B[var2Lifetime3];
-              de.field_e[var2Lifetime3] = dupTemp$12;
+              DirectByteStorage.field_e[var2Lifetime3] = dupTemp$12;
               var3Lifetime3 = arrayValue$13[dupTemp$12];
-              ri.field_B[var2Lifetime3][de.field_e[var2Lifetime3]] = null;
+              ri.field_B[var2Lifetime3][DirectByteStorage.field_e[var2Lifetime3]] = null;
               return var3Lifetime3;
             }
           }
@@ -338,12 +338,12 @@ final class jj {
         }
         for (var2Lifetime4 = 0; ok.field_c.length > var2Lifetime4; var2Lifetime4++) {
           if (param1 == ok.field_c[var2Lifetime4] &&
-            de.field_e[var2Lifetime4] > 0) {
-            dupTemp$10 = de.field_e[var2Lifetime4] - 1;
+            DirectByteStorage.field_e[var2Lifetime4] > 0) {
+            dupTemp$10 = DirectByteStorage.field_e[var2Lifetime4] - 1;
             arrayValue$11 = ri.field_B[var2Lifetime4];
-            de.field_e[var2Lifetime4] = dupTemp$10;
+            DirectByteStorage.field_e[var2Lifetime4] = dupTemp$10;
             var3Lifetime4 = arrayValue$11[dupTemp$10];
-            ri.field_B[var2Lifetime4][de.field_e[var2Lifetime4]] = null;
+            ri.field_B[var2Lifetime4][DirectByteStorage.field_e[var2Lifetime4]] = null;
             return var3Lifetime4;
           }
         }

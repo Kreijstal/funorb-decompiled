@@ -199,18 +199,18 @@ class id extends ik {
             }
             hf.field_b = new String[var4];
             o.a(ug.field_r, 0, hf.field_b, 0, var4);
-            nl.field_a = new String[-1 + (-var4 + var3_int)];
-            o.a(ug.field_r, 1 + var4, nl.field_a, 0, -1 + var3_int - var4);
+            ByteStorage.field_a = new String[-1 + (-var4 + var3_int)];
+            o.a(ug.field_r, 1 + var4, ByteStorage.field_a, 0, -1 + var3_int - var4);
             if (ed.field_t.length >= hf.field_b.length) {
               stackIn_29_0 = ed.field_t.length;
             } else {
               stackIn_29_0 = hf.field_b.length;
             }
             var5 = stackIn_29_0;
-            if (qc.field_e.length >= nl.field_a.length) {
+            if (qc.field_e.length >= ByteStorage.field_a.length) {
               stackIn_32_0 = qc.field_e.length;
             } else {
-              stackIn_32_0 = nl.field_a.length;
+              stackIn_32_0 = ByteStorage.field_a.length;
             }
             var6 = stackIn_32_0;
             var7 = var6 + 7 + var5;
@@ -245,10 +245,10 @@ class id extends ik {
             for (var8Lifetime4 = 0; var6 > var8Lifetime4; var8Lifetime4++) {
               stackIn_45_0 = MouseWheelInput.field_g;
               stackIn_45_1 = var5 + (7 + var8Lifetime4);
-              if (var8Lifetime4 >= nl.field_a.length) {
+              if (var8Lifetime4 >= ByteStorage.field_a.length) {
                 stackIn_46_2 = "";
               } else {
-                stackIn_46_2 = nl.field_a[var8Lifetime4];
+                stackIn_46_2 = ByteStorage.field_a[var8Lifetime4];
               }
               stackIn_45_0[stackIn_45_1] = stackIn_46_2;
             }

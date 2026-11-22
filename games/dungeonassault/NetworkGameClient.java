@@ -185,7 +185,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             fl.a((byte) -93, 3);
           }
           if (CombatState.field_w[3]) {
-            ep.a((byte) 127, 4);
+            DirectByteStorage.a((byte) 127, 4);
           }
           if (CombatState.field_w[4]) {
             ko.a(true, 5);

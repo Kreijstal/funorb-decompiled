@@ -99,7 +99,7 @@ final class bja extends BoardChange {
           var12 = BagpipeSpecial.a(IterableNodeHashTable.field_a, param1 ^ -7, "basic", "fridge_rust");
           var4 = FullHealEvent.a("fridge_drips", IterableNodeHashTable.field_a, "basic", (byte) -107);
           var5 = FullHealEvent.a("fridge_muck", IterableNodeHashTable.field_a, "basic", (byte) -107);
-          ld.a(gla.field_j, var4, var5, var12, param2, param0, (byte) 27);
+          ld.a(DirectByteStorage.field_j, var4, var5, var12, param2, param0, (byte) 27);
           if (param1 != 6) {
             return;
           }

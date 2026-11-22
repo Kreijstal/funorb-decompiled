@@ -349,7 +349,7 @@ final class ln {
           this.field_o = null;
         }
         this.field_r = qg.field_o;
-        this.field_s = md.field_f;
+        this.field_s = DirectByteStorage.field_f;
         this.field_f = lb.field_b;
         this.field_k = ja.field_c;
         this.field_i = KeyboardInput.field_c;

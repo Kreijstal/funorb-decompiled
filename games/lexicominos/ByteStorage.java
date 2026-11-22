@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nl {
+abstract class ByteStorage {
     static aj field_b;
     static String[] field_a;
     static boolean field_c;
@@ -9,7 +9,7 @@ abstract class nl {
     final static byte[] a(Object param0, byte param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        nl var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         byte[] stackIn_9_0 = null;
@@ -29,11 +29,11 @@ abstract class nl {
             return (byte[]) (stackIn_5_0);
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof nl)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (nl) (param0);
-            stackIn_15_0 = var4.a((byte) -121);
+            var4 = (ByteStorage) (param0);
+            stackIn_15_0 = var4.getBytes((byte) -121);
             return stackIn_15_0;
           }
           var3 = (byte[]) (param0);
@@ -121,8 +121,8 @@ abstract class nl {
                 }
               }
             }
-            nl.a(param0, param1, param2, -86, param4, var9, var8);
-            nl.a(param0, var8, param2, -122, var10, param5, param6);
+            ByteStorage.a(param0, param1, param2, -86, param4, var9, var8);
+            ByteStorage.a(param0, var8, param2, -122, var10, param5, param6);
             return;
           }
           for (var7_intLifetime1 = param6 - 1; param1 < var7_intLifetime1; var7_intLifetime1--) {
@@ -191,9 +191,9 @@ abstract class nl {
         }
     }
 
-    abstract byte[] a(byte param0);
+    abstract byte[] getBytes(byte param0);
 
-    abstract void a(byte[] param0, boolean param1);
+    abstract void setBytes(byte[] param0, boolean param1);
 
     final static int a(int param0, int param1, byte param2, byte[] param3, CharSequence param4, int param5) {
         int var7 = 0;

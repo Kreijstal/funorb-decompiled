@@ -223,7 +223,7 @@ final class sh {
             throw new RuntimeException("");
           }
           if (this.field_b[param2][param3] != null) {
-            var8 = nl.a(this.field_b[param2][param3], (byte) -74, false);
+            var8 = ByteStorage.a(this.field_b[param2][param3], (byte) -74, false);
             var5 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -668,7 +668,7 @@ final class sh {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var36 = nl.a(this.field_j[param0], (byte) -74, true);
+            var36 = ByteStorage.a(this.field_j[param0], (byte) -74, true);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -676,7 +676,7 @@ final class sh {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = nl.a(this.field_j[param0], (byte) -74, false);
+            var10 = ByteStorage.a(this.field_j[param0], (byte) -74, false);
           }
           try {
             var37 = qk.a(65, var10);

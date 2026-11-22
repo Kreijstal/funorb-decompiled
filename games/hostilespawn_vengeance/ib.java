@@ -275,7 +275,7 @@ final class ib {
                 }
                 var2 = mk.b("totalcompletedtimecolon", (byte) -125);
                 if (null != var2) {
-                  md.field_m = nm.a(124, var2);
+                  DirectByteStorage.field_m = nm.a(124, var2);
                 }
                 var2 = mk.b("partimecolon", (byte) -128);
                 if (null != var2) {
@@ -291,7 +291,7 @@ final class ib {
                 }
                 var2 = mk.b("newtag0", (byte) -125);
                 if (var2 != null) {
-                  md.field_l = nm.a(126, var2);
+                  DirectByteStorage.field_l = nm.a(126, var2);
                 }
                 var2 = mk.b("newtag1", (byte) -128);
                 if (null != var2) {
@@ -814,7 +814,7 @@ final class ib {
                 }
                 var2 = mk.b("starthardmode", (byte) -128);
                 if (null != var2) {
-                  nj.field_e = nm.a(124, var2);
+                  ByteStorage.field_e = nm.a(124, var2);
                 }
                 var2 = mk.b("switch_level_set", (byte) -127);
                 if (var2 != null) {

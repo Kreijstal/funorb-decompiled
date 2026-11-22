@@ -150,7 +150,7 @@ final class jn extends fc {
         Throwable var3 = null;
         boolean stackIn_5_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = nj.field_c;
+        var1_ref = ByteStorage.field_c;
         synchronized (var1_ref) {
           if (nm.field_j == ee.field_e) {
             return false;

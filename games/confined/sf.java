@@ -43,11 +43,11 @@ final class sf extends IntrusiveNode {
             rg.field_K = false;
             bj.field_m = true;
           }
-          qf.field_e = false;
+          ByteStorage.field_e = false;
           ei.a(-87, param0);
         } else {
           if (oj.field_B != 0) {
-            qf.field_e = true;
+            ByteStorage.field_e = true;
             stackIn_13_0 = false;
             stackIn_13_1 = param0;
             stackIn_14_2 = (oj.field_B == 0) ? false : true;
@@ -62,10 +62,10 @@ final class sf extends IntrusiveNode {
                 rg.field_K = false;
                 bj.field_m = true;
               }
-              qf.field_e = false;
+              ByteStorage.field_e = false;
               ei.a(-87, param0);
             } else {
-              qf.field_e = true;
+              ByteStorage.field_e = true;
               stackIn_21_0 = false;
               stackIn_21_1 = param0;
               stackIn_22_2 = (oj.field_B == 0) ? false : true;

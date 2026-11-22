@@ -25,10 +25,10 @@ final class pg {
             s.a(var4, param1, false);
             var4 = (oa) (cf.field_d.b((byte) -105));
           }
-          var2 = hd.field_a.c((byte) 47);
+          var2 = ByteStorage.field_a.c((byte) 47);
           while (var2 != null) {
             ef.a(0, param1);
-            var2 = hd.field_a.b((byte) -105);
+            var2 = ByteStorage.field_a.b((byte) -105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

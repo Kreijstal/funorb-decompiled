@@ -9,10 +9,10 @@ final class qh implements ad {
     static String field_b;
 
     final static Object a(byte param0, boolean param1, byte[] param2) {
-        t var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
-        t stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -28,8 +28,8 @@ final class qh implements ad {
             return stackIn_4_0;
           }
           if (136 < param2.length) {
-            var3 = new t();
-            ((ni) ((Object) var3)).a((byte) -119, param2);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes((byte) -119, param2);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }

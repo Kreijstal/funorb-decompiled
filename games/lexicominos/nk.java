@@ -364,7 +364,7 @@ abstract class nk extends GameAppletShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (ij.field_o[1]) {
-            bh.a((byte) 77, 2);
+            DirectByteStorage.a((byte) 77, 2);
           }
           if (ij.field_o[2]) {
             g.a(3, (byte) -39);
@@ -477,7 +477,7 @@ abstract class nk extends GameAppletShell {
         }
         if (var2 != 0 &&
           var2 != 1) {
-          if (!nl.field_c) {
+          if (!ByteStorage.field_c) {
             this.a("reconnect", 89);
           }
           ia.a((byte) 83);
@@ -558,7 +558,7 @@ abstract class nk extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = il.a(this.field_A, dg.a(false), el.b(param1 ^ 1), ve.b(25594), tf.a((byte) -101), 103, a.c(true));
             if (var5_intLifetime1 != -1) {
-              nl.a(var5_intLifetime1, -6258, wj.field_p, fc.field_S);
+              ByteStorage.a(var5_intLifetime1, -6258, wj.field_p, fc.field_S);
               fc.field_S = null;
               wj.field_p = null;
             }

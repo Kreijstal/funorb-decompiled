@@ -600,7 +600,7 @@ final class tm extends IntrusiveNode {
             }
           }
           if (this.field_B) {
-            ce.field_d.a(ni.field_b, var10Lifetime2, (1 + var9Lifetime2) * var2_int + var11Lifetime2 + var12Lifetime2, 1, -1);
+            ce.field_d.a(ByteStorage.field_b, var10Lifetime2, (1 + var9Lifetime2) * var2_int + var11Lifetime2 + var12Lifetime2, 1, -1);
             if (var28 != 0) {
               ce.field_d.a(aj.field_a, var10Lifetime2, var12Lifetime2 + (var11Lifetime2 + var2_int * (var9Lifetime2 + 1)), 1, -1);
               ce.field_d.c(qe.field_d, -15 + (var10Lifetime2 + var7 + var13Lifetime1), var11Lifetime2 - (-(var2_int * (var9Lifetime2 + 1)) - var12Lifetime2), 1, -1);

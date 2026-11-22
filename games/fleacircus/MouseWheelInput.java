@@ -26,7 +26,7 @@ abstract class MouseWheelInput {
     final static byte[] a(boolean param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        hd var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
@@ -52,11 +52,11 @@ abstract class MouseWheelInput {
           if (param0) {
             MouseWheelInput.a(-40);
           }
-          if (!(param1 instanceof hd)) {
+          if (!(param1 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (hd) (param1);
-          stackIn_14_0 = var4.b(256);
+          var4 = (ByteStorage) (param1);
+          stackIn_14_0 = var4.getBytes(256);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

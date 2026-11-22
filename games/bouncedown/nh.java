@@ -117,10 +117,10 @@ final class nh extends wk implements rc {
     }
 
     final static Object a(boolean param0, int param1, byte[] param2) {
-        de var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
-        de stackIn_7_0 = null;
+        DirectByteStorage stackIn_7_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -136,8 +136,8 @@ final class nh extends wk implements rc {
             return stackIn_4_0;
           }
           if (param2.length > 136) {
-            var3 = new de();
-            ((ah) ((Object) var3)).a((byte) 68, param2);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes((byte) 68, param2);
             stackIn_7_0 = var3;
             return stackIn_7_0;
           }

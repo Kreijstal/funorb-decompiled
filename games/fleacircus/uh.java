@@ -806,7 +806,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime123 = tf.a(0, "RECESSED_WALL_TIP");
           if (var2Lifetime123 != null) {
-            hd.field_d = ab.a(0, var2Lifetime123);
+            ByteStorage.field_d = ab.a(0, var2Lifetime123);
           }
           var2Lifetime124 = tf.a(0, "ANTI_GRAVITY_TIP");
           if (null != var2Lifetime124) {

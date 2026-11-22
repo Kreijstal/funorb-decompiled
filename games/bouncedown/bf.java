@@ -124,7 +124,7 @@ final class bf extends al {
             stackIn_28_0 = GameClient.field_t;
             return stackIn_28_0;
           }
-          if (!ah.a(var5, var6, (byte) 8)) {
+          if (!ByteStorage.a(var5, var6, (byte) 8)) {
             stackIn_33_0 = ve.field_b;
             return stackIn_33_0;
           }

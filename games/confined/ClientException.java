@@ -106,7 +106,7 @@ final class ClientException extends RuntimeException {
             va.field_b = null;
           }
           if (null != hh.field_d &&
-            !qf.field_e) {
+            !ByteStorage.field_e) {
             if (hh.field_d.field_e != 0) {
               return;
             }

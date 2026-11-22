@@ -54,12 +54,12 @@ final class ea {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(nj.field_c);
+          param1.removeKeyListener(ByteStorage.field_c);
           if (param0 != 1) {
             java.awt.Component var3 = (java.awt.Component) null;
             ea.a(-106, (java.awt.Component) null);
           }
-          param1.removeFocusListener(nj.field_c);
+          param1.removeFocusListener(ByteStorage.field_c);
           uc.field_b = -1;
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "ea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

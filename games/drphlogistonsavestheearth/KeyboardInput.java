@@ -24,11 +24,11 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             if (var2_int != 0 &&
               65535 != var2_int &&
               ka.a((char) var2_int, 8192)) {
-              var3 = 1 + jc.field_j & 127;
+              var3 = 1 + DirectByteStorage.field_j & 127;
               if (var3 != rc.field_g) {
-                ac.field_f[jc.field_j] = -1;
-                na.field_a[jc.field_j] = (char)var2_int;
-                jc.field_j = var3;
+                ac.field_f[DirectByteStorage.field_j] = -1;
+                na.field_a[DirectByteStorage.field_j] = (char)var2_int;
+                DirectByteStorage.field_j = var3;
               }
             }
           }
@@ -80,11 +80,11 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
           }
           if (var2_int >= 0) {
-            var3 = 127 & jc.field_j + 1;
+            var3 = 127 & DirectByteStorage.field_j + 1;
             if (rc.field_g != var3) {
-              ac.field_f[jc.field_j] = var2_int;
-              na.field_a[jc.field_j] = (char)0;
-              jc.field_j = var3;
+              ac.field_f[DirectByteStorage.field_j] = var2_int;
+              na.field_a[DirectByteStorage.field_j] = (char)0;
+              DirectByteStorage.field_j = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

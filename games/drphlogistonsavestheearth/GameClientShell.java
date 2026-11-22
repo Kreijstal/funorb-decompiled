@@ -199,7 +199,7 @@ abstract class GameClientShell extends GameAppletShell {
           sb.field_i = null;
           ig.field_t = null;
           qd.field_Jb = null;
-          jc.a(79, (java.applet.Applet) (this));
+          DirectByteStorage.a(79, (java.applet.Applet) (this));
           tc.a((byte) 86);
           hj.field_f = 10;
         }

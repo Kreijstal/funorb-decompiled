@@ -1559,7 +1559,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_dragonsofrenown4,1", false);
                 if (null != var2) {
-                  un.field_b[1] = dj.a(var2, false);
+                  ByteStorage.field_b[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_selectraiders,1", param1);
                 if (var2 != null) {
@@ -3561,7 +3561,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raiders_flee_in_terror", false);
                 if (var2 != null) {
-                  ep.field_i = dj.a(var2, false);
+                  DirectByteStorage.field_i = dj.a(var2, false);
                 }
                 var2 = gm.a("text_raider_trapped_incap", false);
                 if (null != var2) {

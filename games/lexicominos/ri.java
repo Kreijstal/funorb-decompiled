@@ -32,9 +32,9 @@ abstract class ri implements ma {
     }
 
     final static Object a(int param0, byte[] param1, boolean param2) {
-        bh var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        bh stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -46,8 +46,8 @@ abstract class ri implements ma {
             return null;
           }
           if (param0 < param1.length) {
-            var3 = new bh();
-            ((nl) ((Object) var3)).a(param1, true);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param1, true);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

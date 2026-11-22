@@ -213,7 +213,7 @@ final class uc extends lc implements rc {
         int var9Lifetime1;
         try {
           ij.field_c = vh.a(param0, "commonui", (byte) -38, "frame_top");
-          de.field_d = vh.a(param0, "commonui", (byte) 114, "frame_bottom");
+          DirectByteStorage.field_d = vh.a(param0, "commonui", (byte) 114, "frame_bottom");
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = vh.a(param0, "commonui", (byte) 111, "button");
           la.field_E = ri.a("commonui", param0, false, "validation");

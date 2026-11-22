@@ -207,7 +207,7 @@ final class ji extends kn {
                 }
                 else {
                   si.d(65280);
-                  ja.field_f = false;
+                  DirectByteStorage.field_f = false;
                   stackIn_31_0 = var7Lifetime1;
                   return stackIn_31_0;
                 }
@@ -264,7 +264,7 @@ final class ji extends kn {
                   le.field_g.a(25799, bh.i(81));
                 }
               }
-              ja.field_f = false;
+              DirectByteStorage.field_f = false;
               if (var7_ref_String != null) {
                 aa.a(bh.i(81), -1, var7_ref_String);
               }
@@ -299,8 +299,8 @@ final class ji extends kn {
               jl.a(false)) {
               si.d(65280);
               if (wg.field_B == 7 &&
-                !ja.field_f) {
-                ja.field_f = true;
+                !DirectByteStorage.field_f) {
+                DirectByteStorage.field_f = true;
                 stackIn_95_0 = -1;
                 return stackIn_95_0;
               }
@@ -308,25 +308,25 @@ final class ji extends kn {
                 wg.field_B = 3;
               }
               n.field_c = tk.field_h.readString(0);
-              ja.field_f = false;
+              DirectByteStorage.field_f = false;
               stackIn_93_0 = wg.field_B;
               return stackIn_93_0;
             }
             if (ArchiveIndex.field_a == null) {
-              if (ja.field_f) {
+              if (DirectByteStorage.field_f) {
                 if (ea.i((byte) 17) > 30000L) {
                   n.field_c = nc.field_Q;
                 } else {
                   n.field_c = li.field_b;
                 }
-                ja.field_f = false;
+                DirectByteStorage.field_f = false;
                 stackIn_104_0 = 3;
                 return stackIn_104_0;
               }
               var7Lifetime2 = qh.field_a;
               qh.field_a = bk.field_n;
               bk.field_n = var7Lifetime2;
-              ja.field_f = true;
+              DirectByteStorage.field_f = true;
             }
             stackIn_106_0 = -1;
             return stackIn_106_0;

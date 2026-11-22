@@ -167,8 +167,8 @@ final class fm {
           qe.b(var4_int, var5Lifetime1, param1, param2, 8421504, 128, 128);
           var6 = be.field_o.field_d / 2;
           var7 = bk.field_e.field_b / 2;
-          un.a(var4_int, (byte) 41, param1, var5Lifetime1 - var7, true);
-          un.a(var4_int, (byte) 81, param1, -var7 + var5Lifetime1 + param2, true);
+          ByteStorage.a(var4_int, (byte) 41, param1, var5Lifetime1 - var7, true);
+          ByteStorage.a(var4_int, (byte) 81, param1, -var7 + var5Lifetime1 + param2, true);
           vf.a(param2, true, var4_int - var6, 118, var5Lifetime1);
           vf.a(param2, true, var4_int - (var6 - param1), 101, var5Lifetime1);
           var8 = 37;

@@ -8,7 +8,7 @@ final class pb extends kd {
     static BitmapFont field_i;
 
     final static boolean c(boolean param0) {
-        nl.field_c = param0 ? true : false;
+        ByteStorage.field_c = param0 ? true : false;
         mc.field_i = 15000L + rf.c(0);
         return ta.field_g == 11 ? true : false;
     }

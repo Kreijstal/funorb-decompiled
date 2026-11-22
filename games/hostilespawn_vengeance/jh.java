@@ -359,7 +359,7 @@ final class jh extends wb implements qk {
               var3 = ha.field_y;
               if (kd.a((byte) -114)) {
                 this.field_x = this.field_x + 20;
-                var3 = nj.field_b;
+                var3 = ByteStorage.field_b;
               }
             }
           }

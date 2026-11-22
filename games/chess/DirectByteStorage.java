@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends f {
+final class DirectByteStorage extends ByteStorage {
     static String field_e;
-    private java.nio.ByteBuffer field_d;
+    private java.nio.ByteBuffer buffer;
     static java.awt.Canvas field_h;
     static String field_c;
     static int field_i;
@@ -75,18 +75,18 @@ final class ja extends f {
         }
     }
 
-    final byte[] b(int param0) {
+    final byte[] getBytes(int param0) {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         byte[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new byte[this.field_d.capacity()];
-          this.field_d.position(0);
+          var2 = new byte[this.buffer.capacity()];
+          this.buffer.position(0);
           if (param0 != 438) {
-            this.field_d = (java.nio.ByteBuffer) null;
+            this.buffer = (java.nio.ByteBuffer) null;
           }
-          this.field_d.get(var2);
+          this.buffer.get(var2);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,10 +96,10 @@ final class ja extends f {
         }
     }
 
-    ja() {
+    DirectByteStorage() {
     }
 
-    final void a(byte[] param0, int param1) {
+    final void setBytes(byte[] param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -107,11 +107,11 @@ final class ja extends f {
         RuntimeException var3 = null;
         try {
           if (param1 != 199) {
-            ja.a((em) null, -70, (byte) -122, -75, true);
+            DirectByteStorage.a((em) null, -70, (byte) -122, -75, true);
           }
-          this.field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_d.position(0);
-          this.field_d.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,7 +298,7 @@ final class ja extends f {
             return stackIn_3_0;
           }
           if (param0 < 126) {
-            ja.a((byte) 47, (java.applet.Applet) null);
+            DirectByteStorage.a((byte) 47, (java.applet.Applet) null);
           }
           var3 = hb.a(2);
           var4 = 0;

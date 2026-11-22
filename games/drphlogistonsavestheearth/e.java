@@ -81,7 +81,7 @@ final class e extends ei {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_p)) {
-            var3 = jc.a((byte) 45, param1);
+            var3 = DirectByteStorage.a((byte) 45, param1);
             if (!var3.a(false)) {
               stackIn_8_0 = nd.field_P;
               return stackIn_8_0;

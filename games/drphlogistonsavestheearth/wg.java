@@ -67,7 +67,7 @@ final class wg {
             }
           }
           if (this.field_p == fg.field_h &&
-            bh.field_a == this.field_t) {
+            ByteStorage.field_a == this.field_t) {
             return;
           }
           this.field_b.a(this.field_t, this.field_p, -64);
@@ -204,7 +204,7 @@ final class wg {
           if (fg.field_h != var2) {
             this.field_b.a(var3, var2, -64);
           } else {
-            if (var3 != bh.field_a) {
+            if (var3 != ByteStorage.field_a) {
               this.field_b.a(var3, var2, -64);
             }
           }
@@ -296,7 +296,7 @@ final class wg {
         if (fg.field_h != var2Lifetime1) {
           this.field_b.a(var3Lifetime1, var2Lifetime1, -64);
         } else {
-          if (var3Lifetime1 != bh.field_a) {
+          if (var3Lifetime1 != ByteStorage.field_a) {
             this.field_b.a(var3Lifetime1, var2Lifetime1, -64);
           }
         }

@@ -13,7 +13,7 @@ final class jf {
     final static byte[] a(boolean param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        f var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
@@ -39,11 +39,11 @@ final class jf {
             stackIn_12_0 = (byte[]) null;
             return stackIn_12_0;
           }
-          if (!(param2 instanceof f)) {
+          if (!(param2 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (f) (param2);
-          stackIn_15_0 = var4.b(438);
+          var4 = (ByteStorage) (param2);
+          stackIn_15_0 = var4.getBytes(438);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -650,7 +650,7 @@ public final class Chess extends gb {
         this.k((byte) 117);
         jd.field_c = qm.a(1, "", "help", mm.field_d);
         ph.field_l = jn.a("clock", 8221, "", mm.field_d);
-        ja.field_g = jn.a("clock_button", 8221, "", mm.field_d);
+        DirectByteStorage.field_g = jn.a("clock_button", 8221, "", mm.field_d);
         pg.field_v = qm.a(param0 ^ 17, "", "clock_numbers", mm.field_d);
         da.field_y = jn.a("clock_display_separator", 8221, "", mm.field_d);
     }
@@ -666,7 +666,7 @@ public final class Chess extends gb {
         Object var6;
         var5 = field_G;
         if (rm.field_R == null) {
-          stackIn_3_0 = ja.field_h;
+          stackIn_3_0 = DirectByteStorage.field_h;
         } else {
           stackIn_3_0 = rm.field_R;
         }
@@ -1014,8 +1014,8 @@ public final class Chess extends gb {
         nj.a(-20, mm.field_e, 85.0f);
         this.a(true);
         v.field_j = dm.a(param0 - 16231, mm.field_d, "font", bo.field_d, "");
-        jj.field_b = dm.a(param0 - 16231, hm.field_e, "", f.field_b, "kartika13");
-        jj.field_d = dm.a(0, hm.field_e, "", f.field_b, "roman12");
+        jj.field_b = dm.a(param0 - 16231, hm.field_e, "", ByteStorage.field_b, "kartika13");
+        jj.field_d = dm.a(0, hm.field_e, "", ByteStorage.field_b, "roman12");
         dm.a(0, mm.field_d, "font_prose_bold", bo.field_d, "");
         ArchiveIndex.field_n = jn.a("unachieved", 8221, "basic", hm.field_e);
         ArchiveIndex.field_n.a();
@@ -1287,7 +1287,7 @@ public final class Chess extends gb {
         var4.b(128, 16383, 9);
         vl var3 = new vl();
         var3.b(128, 16383, 9);
-        d.a(var3, 22050, var4, oc.field_l, (java.awt.Component) ((Object) ja.field_h), true, (byte) -71);
+        d.a(var3, 22050, var4, oc.field_l, (java.awt.Component) ((Object) DirectByteStorage.field_h), true, (byte) -71);
         kj.field_h = 255;
         ni.field_d = 1;
         le.field_f = 16777215;
@@ -1707,7 +1707,7 @@ public final class Chess extends gb {
         g.clearStaticReferences(-20905);
         qm.clearStaticReferences((byte) -6);
         qh.clearStaticReferences(-99);
-        f.clearStaticReferences(-24420);
+        ByteStorage.clearStaticReferences(-24420);
         en.clearStaticReferences();
         ia.clearStaticReferences(256);
         ql.a((byte) 109);
@@ -1774,7 +1774,7 @@ public final class Chess extends gb {
         bh.j(0);
         bf.clearStaticReferences(false);
         ah.clearStaticReferences((byte) 83);
-        ja.a((byte) -115);
+        DirectByteStorage.a((byte) -115);
         ml.clearStaticReferences((byte) -122);
         kb.i(-15237);
         ji.i(5849);
@@ -1931,7 +1931,7 @@ public final class Chess extends gb {
             mm.field_d = null;
           }
           var6 = (km[][]) null;
-          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, f.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
+          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
           ig.field_h = wf.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
@@ -1960,16 +1960,16 @@ public final class Chess extends gb {
                         hm.field_e.b("basic", 100)) {
                         if (hm.field_e.c((byte) 122) &&
                           hm.field_e.b("roman12", param0 - 19663)) {
-                          if (f.field_b.c((byte) 123) &&
-                            f.field_b.b("roman12", param0 - 19663)) {
+                          if (ByteStorage.field_b.c((byte) 123) &&
+                            ByteStorage.field_b.b("roman12", param0 - 19663)) {
                             if (hm.field_e.c((byte) 123) &&
                               hm.field_e.b("kartika13", 100)) {
-                              if (f.field_b.c((byte) 127) &&
-                                f.field_b.b("kartika13", 100)) {
+                              if (ByteStorage.field_b.c((byte) 127) &&
+                                ByteStorage.field_b.b("kartika13", 100)) {
                                 if (hm.field_e.c((byte) 118) &&
                                   hm.field_e.b("lobby", 100)) {
-                                  if (f.field_b.c((byte) 118) &&
-                                    f.field_b.b("lobby", 100)) {
+                                  if (ByteStorage.field_b.c((byte) 118) &&
+                                    ByteStorage.field_b.b("lobby", 100)) {
                                     if (ca.field_b.c((byte) 123) &&
                                       ca.field_b.b((byte) -40)) {
                                       if (!param1) {
@@ -1986,19 +1986,19 @@ public final class Chess extends gb {
                                     nj.a(-20, da.a(ld.field_a, wn.field_g, ca.field_b, -62), 80.0f);
                                     return false;
                                   }
-                                  nj.a(param0 ^ -19745, ji.a(sn.field_d, "lobby", nc.field_P, f.field_b, (byte) 126), 17.0f);
+                                  nj.a(param0 ^ -19745, ji.a(sn.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
                                   return false;
                                 }
                                 nj.a(-20, ji.a(gb.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
                                 return false;
                               }
-                              nj.a(-20, ji.a(sn.field_d, "kartika13", nc.field_P, f.field_b, (byte) 95), 17.0f);
+                              nj.a(-20, ji.a(sn.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
                               return false;
                             }
                             nj.a(-20, ji.a(gb.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
                             return false;
                           }
-                          nj.a(-20, ji.a(sn.field_d, "roman12", nc.field_P, f.field_b, (byte) 86), 17.0f);
+                          nj.a(-20, ji.a(sn.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
                           return false;
                         }
                         nj.a(-20, ji.a(gb.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);

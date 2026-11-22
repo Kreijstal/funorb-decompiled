@@ -239,7 +239,7 @@ class PacketBuffer extends kd {
             field_i = 51;
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + nl.a(param1.length(), 0, (byte) -80, this.payload, var4, this.position);
+          this.position = this.position + ByteStorage.a(param1.length(), 0, (byte) -80, this.payload, var4, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -429,7 +429,7 @@ class PacketBuffer extends kd {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + nl.a(param0.length(), 0, (byte) -107, this.payload, var4, this.position);
+          this.position = this.position + ByteStorage.a(param0.length(), 0, (byte) -107, this.payload, var4, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)param1;

@@ -323,7 +323,7 @@ final class gk extends ii implements mg, vg {
         lm var2 = new lm(vo.field_q, var1, (pg) null);
         this.field_M = new ck(m.field_g, (pg) null);
         this.field_N = new ck(dc.field_v, (pg) null);
-        this.field_R.field_i = un.field_d;
+        this.field_R.field_i = ByteStorage.field_d;
         this.field_R.a(new kh(this.field_R), 10508);
         this.field_M.field_B = false;
         this.field_M.field_o = (ca) ((Object) new na());

@@ -64,9 +64,9 @@ final class u {
     final static int b(int param0) {
         if (param0 != -4440) {
           field_a = (String) null;
-          return t.field_c;
+          return DirectByteStorage.field_c;
         }
-        return t.field_c;
+        return DirectByteStorage.field_c;
     }
 
     public static void clearStaticReferences(int param0) {

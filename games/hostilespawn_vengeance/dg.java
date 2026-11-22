@@ -185,7 +185,7 @@ class dg extends me implements qk {
                   this.b(var6, (byte) 110);
                   return;
                 }
-                var6.a((mh) (this), md.field_j, 30);
+                var6.a((mh) (this), DirectByteStorage.field_j, 30);
               }
             } else {
               var6.a(param1 + 22753, 8, pe.field_gb);

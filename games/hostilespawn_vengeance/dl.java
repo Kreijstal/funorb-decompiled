@@ -1244,7 +1244,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("changedisplayname", 24);
                 if (null != var2) {
-                  md.field_j = nm.a(126, var2);
+                  DirectByteStorage.field_j = nm.a(126, var2);
                 }
                 var2 = vj.a("returntohomepage", 24);
                 if (null != var2) {
@@ -2892,7 +2892,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("fs_focus_or_resolution", 24);
                 if (var2 != null) {
-                  nj.field_b = nm.a(125, var2);
+                  ByteStorage.field_b = nm.a(125, var2);
                 }
                 var2 = vj.a("fs_timeout", 24);
                 if (null != var2) {

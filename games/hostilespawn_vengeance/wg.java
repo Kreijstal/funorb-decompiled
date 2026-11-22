@@ -220,7 +220,7 @@ final class wg extends dg implements qk {
               var4 = param0.field_l;
               if (248 == param0.field_a) {
                 if (!param2) {
-                  md.c(-125);
+                  DirectByteStorage.c(-125);
                 }
                 this.field_wb = true;
                 var4 = dg.field_sb;

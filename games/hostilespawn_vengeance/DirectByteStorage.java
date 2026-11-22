@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class md extends nj {
+final class DirectByteStorage extends ByteStorage {
     static String field_j;
     static boolean field_k;
-    private java.nio.ByteBuffer field_h;
+    private java.nio.ByteBuffer buffer;
     static int field_o;
     static lf[] field_g;
     static String field_f;
@@ -62,11 +62,11 @@ final class md extends nj {
         }
     }
 
-    final void a(int param0, byte[] param1) {
+    final void setBytes(int param0, byte[] param1) {
         try {
-          this.field_h = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_h.position(0);
-          this.field_h.put(param1);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(0);
+          this.buffer.put(param1);
           if (param0 != 24) {
             field_l = (String) null;
           }
@@ -100,7 +100,7 @@ final class md extends nj {
               }
             }
             if (param0 <= 15) {
-              md.b(-30);
+              DirectByteStorage.b(-30);
             }
             if (null != oe.field_a) {
               for (var1_int = 0; oe.field_a.length > var1_int; var1_int++) {
@@ -137,13 +137,13 @@ final class md extends nj {
         cj.a(bn.c(-1), 0);
     }
 
-    final byte[] a(byte param0) {
+    final byte[] getBytes(byte param0) {
         byte[] var3 = null;
         if (param0 <= -25) {
-          var3 = new byte[this.field_h.capacity()];
+          var3 = new byte[this.buffer.capacity()];
           byte[] var2 = var3;
-          this.field_h.position(0);
-          this.field_h.get(var3);
+          this.buffer.position(0);
+          this.buffer.get(var3);
           return var3;
         }
         return (byte[]) null;
@@ -159,7 +159,7 @@ final class md extends nj {
           field_m = null;
           return;
         }
-        md.c(87);
+        DirectByteStorage.c(87);
         field_f = null;
         field_l = null;
         field_j = null;
@@ -167,7 +167,7 @@ final class md extends nj {
         field_m = null;
     }
 
-    md() {
+    DirectByteStorage() {
     }
 
     static {

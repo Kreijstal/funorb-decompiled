@@ -107,7 +107,7 @@ final class pf {
           if (!kd.field_t) {
             me.field_ib[var4_int].a(true, 128, (int)param2.field_c, param3, param0);
           } else {
-            nj.a(param3, 128, param0, 22173, me.field_ib[var4_int], (int)param2.field_c);
+            ByteStorage.a(param3, 128, param0, 22173, me.field_ib[var4_int], (int)param2.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

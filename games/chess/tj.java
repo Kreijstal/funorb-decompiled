@@ -24,7 +24,7 @@ final class tj extends vm {
           dc.field_q.a((byte) 127, fe.field_h);
         }
         dc.field_q.a((byte) 124, bh.field_G);
-        wf.field_W = new id(ja.field_c, dc.field_q);
+        wf.field_W = new id(DirectByteStorage.field_c, dc.field_q);
         ql.field_d = new ci(0L, (ci) null);
         ql.field_d.a((byte) 124, wf.field_W.field_a);
         ql.field_d.a((byte) 123, ln.field_cc);

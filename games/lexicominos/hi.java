@@ -125,8 +125,8 @@ final class hi {
                 stackIn_16_0 = ed.field_t.length;
               }
               var7 = stackIn_16_0;
-              if (qc.field_e.length < nl.field_a.length) {
-                stackIn_19_0 = nl.field_a.length;
+              if (qc.field_e.length < ByteStorage.field_a.length) {
+                stackIn_19_0 = ByteStorage.field_a.length;
               } else {
                 stackIn_19_0 = qc.field_e.length;
               }

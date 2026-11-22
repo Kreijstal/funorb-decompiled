@@ -46,7 +46,7 @@ final class k extends cb {
         var1_ref = lb.field_y;
         synchronized (var1_ref) {
           CipherPacketBuffer.field_B = qd.field_J;
-          t.field_c = t.field_c + 1;
+          DirectByteStorage.field_c = DirectByteStorage.field_c + 1;
           nk.field_w = sa.field_o;
           gb.field_e = nm.field_a;
           field_i = kk.field_d;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nj {
+abstract class ByteStorage {
     static String field_e;
     static KeyboardInput field_c;
     static String field_b;
@@ -96,7 +96,7 @@ abstract class nj {
                           break regionExit1;
                         }
                         if (kd.field_t) {
-                          nj.a(var2 - me.field_ib[var11].field_z / 2, 128, -(me.field_ib[var11].field_A / 2) + var3, 22173, me.field_ib[var11], (int)var8_ref_p.field_c);
+                          ByteStorage.a(var2 - me.field_ib[var11].field_z / 2, 128, -(me.field_ib[var11].field_A / 2) + var3, 22173, me.field_ib[var11], (int)var8_ref_p.field_c);
                           break regionExit1;
                         }
                         if (var11 <= 0) {
@@ -318,7 +318,7 @@ abstract class nj {
           }
           var3_int = stackIn_3_0;
           if (param2 != -28835) {
-            nj.clearStaticReferences((byte) -110);
+            ByteStorage.clearStaticReferences((byte) -110);
           }
           if (param1.field_g <= param0.field_g) {
             stackIn_8_0 = param0.field_g - param1.field_g;
@@ -348,9 +348,9 @@ abstract class nj {
         }
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
-    abstract byte[] a(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     static {
         field_e = "Hard mode";

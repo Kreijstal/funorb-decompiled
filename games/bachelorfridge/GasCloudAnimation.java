@@ -868,8 +868,8 @@ final class GasCloudAnimation extends EventAnimation {
           var11.field_N = 1;
           p.field_o = new UiComponent(0L, var8);
           p.field_o.field_eb = tj.a(gw.a("lobby", "heading", param2, -74), (byte) 104);
-          nu.field_c = new UiComponent(0L, (UiComponent) null);
-          nu.field_c.field_eb = nba.a(false, 8421504, 1, false, 120, 4210752);
+          ByteStorage.field_c = new UiComponent(0L, (UiComponent) null);
+          ByteStorage.field_c.field_eb = nba.a(false, 8421504, 1, false, 120, 4210752);
           oe.field_c = new UiComponent(0L, (UiComponent) null);
           oe.field_c.field_eb = mu.a(6316128, 3, 114, 6316128, 1, (byte) 17);
           kha.field_i = new UiComponent(0L, (UiComponent) null);

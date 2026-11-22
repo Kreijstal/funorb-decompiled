@@ -253,7 +253,7 @@ final class ka extends hj {
         try {
           var4 = (bg) (gf.field_h.h(-11151));
           while (var4 != null) {
-            jc.a(param0, var4, -125);
+            DirectByteStorage.a(param0, var4, -125);
             var4 = (bg) (gf.field_h.e(0));
           }
           if (param1 >= -23) {

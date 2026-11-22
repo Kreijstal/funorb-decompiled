@@ -29,7 +29,7 @@ final class t {
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, fg.field_h, bh.field_a);
+              var9.fillRect(0, 0, fg.field_h, ByteStorage.field_a);
             }
             if (param4 == null) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -48,12 +48,12 @@ final class t {
               var10.setFont(bd.field_S);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(ac.field_h, -152 + fg.field_h / 2, bh.field_a / param3 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ac.field_h, -152 + fg.field_h / 2, ByteStorage.field_a / param3 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
               var7 = fg.field_h / 2 - 152;
-              var8 = -18 + bh.field_a / 2;
+              var8 = -18 + ByteStorage.field_a / 2;
               var9.setColor(param4);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, 3 * param1, 30);
@@ -69,7 +69,7 @@ final class t {
             }
             var9.setFont(bd.field_S);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(pc.field_d, fg.field_h / 2 - pc.field_d.length() * 6 / 2, bh.field_a / 2 - 26);
+            var9.drawString(pc.field_d, fg.field_h / 2 - pc.field_d.length() * 6 / 2, ByteStorage.field_a / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

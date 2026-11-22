@@ -75,7 +75,7 @@ final class sj {
             if (ce.field_e == 2) {
               be.field_g = new td((java.net.Socket) (db.field_o.field_c), jj.field_k);
               var2 = new PacketBuffer(13);
-              hm.a(ab.field_c, mm.field_s, var2, nj.field_a, 4122);
+              hm.a(ab.field_c, mm.field_s, var2, ByteStorage.field_a, 4122);
               var2.d(87, 15);
               var2.b(ik.field_a, 25251);
               be.field_g.a(13, var2.field_n, (byte) -70, 0);

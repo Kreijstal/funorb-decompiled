@@ -124,7 +124,7 @@ final class SplitAnimation extends EventAnimation {
           if (var2_int != 7) {
             throw new IllegalStateException("Invalid move category");
           }
-          stackIn_26_0 = gla.a(param0, (byte) -19);
+          stackIn_26_0 = DirectByteStorage.a(param0, (byte) -19);
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

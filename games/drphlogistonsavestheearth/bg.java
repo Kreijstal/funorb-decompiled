@@ -111,9 +111,9 @@ final class bg extends IntrusiveNode {
             t.field_d.c();
             var12.d(18 - t.field_d.field_D, -t.field_d.field_v + 241);
             for (var7 = 0; var7 < bc.field_b.length; var7++) {
-              bh.field_c[var7].c();
-              sc.field_f.a(bc.field_b[var7], 3, 3, -6 + bh.field_c[var7].field_y, bh.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
-              p.a(bh.field_c[var7].field_y, 3, 0, bh.field_c[var7].field_w, 1, 0, 0, bh.field_c[var7]);
+              ByteStorage.field_c[var7].c();
+              sc.field_f.a(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
+              p.a(ByteStorage.field_c[var7].field_y, 3, 0, ByteStorage.field_c[var7].field_w, 1, 0, 0, ByteStorage.field_c[var7]);
             }
             bc.field_b = null;
             ul.field_c = eg.field_d.a();
@@ -297,7 +297,7 @@ final class bg extends IntrusiveNode {
               var2Lifetime5 = 40 + (k.b(0, k.field_L << 4) * 40 >> 16);
               if (var2Lifetime5 <= 0) {
                 wd.b(139);
-                bh.field_c[ig.field_k].d(269, 340);
+                ByteStorage.field_c[ig.field_k].d(269, 340);
                 return;
               }
               if (ck.field_c > -sc.field_c.field_y + 269 &&
@@ -318,7 +318,7 @@ final class bg extends IntrusiveNode {
             }
           }
           wd.b(139);
-          bh.field_c[ig.field_k].d(269, 340);
+          ByteStorage.field_c[ig.field_k].d(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

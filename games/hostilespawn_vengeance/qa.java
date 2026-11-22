@@ -340,12 +340,12 @@ final class qa {
 
     final static void a(boolean param0, byte param1, String param2) {
         try {
-          md.field_i = param0;
+          DirectByteStorage.field_i = param0;
           eh.field_e = true;
           if (param1 > -19) {
             field_b = -46;
           }
-          jj.field_d = new dg(im.field_e, pe.field_eb, param2, li.field_o, md.field_i);
+          jj.field_d = new dg(im.field_e, pe.field_eb, param2, li.field_o, DirectByteStorage.field_i);
           im.field_e.c(jj.field_d, 101);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "qa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

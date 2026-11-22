@@ -107,7 +107,7 @@ final class cha extends lw {
               if (this.field_e == 2 &&
                 param0 == 18) {
                 this.b(1);
-                gla.field_k = true;
+                DirectByteStorage.field_k = true;
                 return;
               }
               if (param0 != 37) {
@@ -160,7 +160,7 @@ final class cha extends lw {
               if (this.field_e == 2 &&
                 param0 == 18) {
                 this.b(1);
-                gla.field_k = true;
+                DirectByteStorage.field_k = true;
                 return;
               }
               if (param0 == 37 &&
@@ -181,7 +181,7 @@ final class cha extends lw {
               if (this.field_e == 2 &&
                 param0 == 18) {
                 this.b(1);
-                gla.field_k = true;
+                DirectByteStorage.field_k = true;
                 return;
               }
               if (param0 == 37 &&
@@ -211,7 +211,7 @@ final class cha extends lw {
         }
         if (param0 == 18) {
           this.b(1);
-          gla.field_k = true;
+          DirectByteStorage.field_k = true;
         } else {
           if (param0 == 37 &&
             this.field_e == 3) {

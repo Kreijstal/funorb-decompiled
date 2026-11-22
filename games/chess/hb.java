@@ -222,7 +222,7 @@ final class hb {
             } while (var30 == 0);
             break;
           }
-          ja.a(param5, var8, (byte) -100, var7_int, param4);
+          DirectByteStorage.a(param5, var8, (byte) -100, var7_int, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

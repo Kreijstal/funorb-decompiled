@@ -56,7 +56,7 @@ final class ip extends TileEffect {
             return stackIn_9_0;
           }
           if (DisableAnimation.a((byte) 5, param0)) {
-            stackIn_12_0 = lga.a(true, new String[]{param0}, nu.field_d);
+            stackIn_12_0 = lga.a(true, new String[]{param0}, ByteStorage.field_d);
             return stackIn_12_0;
           }
           if (100 <= bda.field_l) {

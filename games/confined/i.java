@@ -271,7 +271,7 @@ abstract class i extends GameAppletShell {
           qn.a(tf.field_k, -1)) {
           bd.b(param0 ^ -4585);
           lb.d(param0 - 228);
-          qf.field_g = false;
+          ByteStorage.field_g = false;
           ui.field_b = ClientException.field_d;
           fi.a(tf.field_k, 0, d.field_d, wc.field_Wb, field_r);
           if (ad.field_d ||
@@ -808,7 +808,7 @@ abstract class i extends GameAppletShell {
             jn.a(false, ii.b(false));
           }
           if (var4 == 6 &&
-            qf.field_g) {
+            ByteStorage.field_g) {
             IntrusiveNode.field_e = 10;
           }
           if (var4 == 7) {

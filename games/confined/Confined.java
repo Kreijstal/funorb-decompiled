@@ -174,7 +174,7 @@ public final class Confined extends i {
           rl.c(-114);
           IsaacRandom.a(-1);
           ni.a(false);
-          qf.clearStaticReferences(param0 ^ param0);
+          ByteStorage.clearStaticReferences(param0 ^ param0);
           oa.clearStaticReferences();
           eb.clearStaticReferences(79);
           jd.clearStaticReferences((byte) -38);
@@ -245,7 +245,7 @@ public final class Confined extends i {
           nj.a((byte) -93);
           uf.clearStaticReferences();
           fb.clearStaticReferences(false);
-          ig.c(-6348);
+          DirectByteStorage.c(-6348);
           c.a((byte) 87);
           wl.clearStaticReferences(false);
           qe.h(44);
@@ -320,14 +320,14 @@ public final class Confined extends i {
           this.a((byte) 19, 20, 13, 11, false, 10, 0, 14);
           dk.a(22050, true, 10);
           ei.field_ob = dk.a(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
-          ig.field_h = dk.a(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
+          DirectByteStorage.field_h = dk.a(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
           if (param0 != -3998) {
             field_F = -38;
           }
           cb.field_a = new be();
           ei.field_ob.b(cb.field_a);
           he.field_d = new be();
-          ig.field_h.b(he.field_d);
+          DirectByteStorage.field_h.b(he.field_d);
           ti.field_n = false;
           t.field_c = 10;
           this.a(true, (byte) 111, true, true, true);
@@ -357,7 +357,7 @@ public final class Confined extends i {
             gm.i((byte) -29);
           }
           ei.field_ob.c();
-          ig.field_h.c();
+          DirectByteStorage.field_h.c();
           stackIn_11_1 = 110;
           stackIn_12_2 = (dn.field_d != null);
           this.b(stackIn_11_1, stackIn_12_2);
@@ -750,12 +750,12 @@ public final class Confined extends i {
               pn.field_a.a(Integer.toString(var4), 631, 446, 16777215, -1);
               pn.field_a.a(CipherPacketBuffer.field_s, 521, 470, 16777215, -1);
               pn.field_a.a(Integer.toString(qn.field_v.field_h), 631, 470, 16777215, -1);
-              ig.a(0, 176, (byte) 118, qn.field_v.field_B.field_Bb.field_d);
-              ig.a(1, 208, (byte) -56, qn.field_v.field_B.field_Hb);
+              DirectByteStorage.a(0, 176, (byte) 118, qn.field_v.field_B.field_Bb.field_d);
+              DirectByteStorage.a(1, 208, (byte) -56, qn.field_v.field_B.field_Hb);
               if (null == qn.field_v.field_Q) {
                 break;
               }
-              ig.a(2, 240, (byte) -58, qn.field_v.field_Q.field_fb.field_d);
+              DirectByteStorage.a(2, 240, (byte) -58, qn.field_v.field_Q.field_fb.field_d);
               break;
             }
           }
@@ -1213,7 +1213,7 @@ public final class Confined extends i {
             mn.field_b = null;
             h.field_R = new dd(GameAppletShell.field_c);
             h.field_R.b(64 * hd.field_f >> 7);
-            h.field_R.b(ig.field_j[0], 32);
+            h.field_R.b(DirectByteStorage.field_j[0], 32);
             am.g(-4258);
             return;
           }
@@ -1300,8 +1300,8 @@ public final class Confined extends i {
         RuntimeException var2 = null;
         try {
           qh.c(4);
-          if (null != ig.field_h) {
-            ig.field_h.d();
+          if (null != DirectByteStorage.field_h) {
+            DirectByteStorage.field_h.d();
           }
           if (null != ei.field_ob) {
             ei.field_ob.d();
@@ -1455,7 +1455,7 @@ public final class Confined extends i {
               md.d(-102);
               h.field_R.d();
               h.field_R.b(hd.field_f * 64 >> 7);
-              h.field_R.b(ig.field_j[0], 32);
+              h.field_R.b(DirectByteStorage.field_j[0], 32);
               da.field_e = og.a(false, (byte) 55);
               sf.a(false, 36);
               qn.field_v.c(-87);
@@ -1489,7 +1489,7 @@ public final class Confined extends i {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted1 = true;
           if (null != da.field_e) {
-            if (qf.field_e) {
+            if (ByteStorage.field_e) {
               hh.field_d.b((byte) 68);
               decompiledFrameRemainder1 = (var3 != 0);
             }

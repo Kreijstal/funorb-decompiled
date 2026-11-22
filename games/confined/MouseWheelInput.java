@@ -151,7 +151,7 @@ abstract class MouseWheelInput {
               }
               else {
                 if (stackIn_59_0 >= stackIn_59_1) {
-                  qf.field_a[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  ByteStorage.field_a[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   db.field_x[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;

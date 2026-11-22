@@ -322,7 +322,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               (decompiledSharedTail0)) {
               hc.b((byte) -51);
               if (a.a(-27365)) {
-                bh.b(-95);
+                ByteStorage.b(-95);
                 gf.b((byte) 86);
                 if (hl.field_f == 9 &&
                   ej.field_h == 0) {
@@ -621,7 +621,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ua.clearStaticReferences((byte) 50);
           rc.a(2);
           qf.a((byte) 64);
-          bh.clearStaticReferences(67);
+          ByteStorage.clearStaticReferences(67);
           gh.clearStaticReferences();
           lc.b((byte) 111);
           sc.a(-63);
@@ -675,7 +675,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           da.clearStaticReferences();
           hh.a(false);
           o.a((byte) 99);
-          jc.c((byte) 56);
+          DirectByteStorage.c((byte) 56);
           rb.clearStaticReferences(0);
           pi.j(2147483647);
           jk.j(7624);
@@ -1969,10 +1969,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           sf.field_m = ij.a("scenery_tile_mothership_gun_turret_base", (byte) 83, kf.field_d, "");
           sf.field_m[0].c();
           lc.field_i = be.b(eh.a("", (byte) -26, kf.field_d, "scenery_tile_mothership_gun_turret"), 32);
-          bh.field_b = new he[1];
-          bh.field_b[0] = sf.field_m[0].e();
-          bh.field_b[0].f();
-          bh.field_b[0].c();
+          ByteStorage.field_b = new he[1];
+          ByteStorage.field_b[0] = sf.field_m[0].e();
+          ByteStorage.field_b[0].f();
+          ByteStorage.field_b[0].c();
           sj.field_f = sf.field_m;
           jk.field_I = be.b(eh.a("", (byte) -47, kf.field_d, "scenery_tile_mothership_missile_launcher"), 32);
           qf.field_g = this.a(-1745, 4, eh.a("", (byte) -78, kf.field_d, "scenery_tile_mothership_docking_platform_broken"));
@@ -1986,9 +1986,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           le.field_b[0].c();
           ck.field_k[0].c();
           ad.field_v = new he[1];
-          bh.field_e = new he[1];
+          ByteStorage.field_e = new he[1];
           ad.field_v[0] = le.field_b[0].a();
-          bh.field_e[0] = ck.field_k[0].a();
+          ByteStorage.field_e[0] = ck.field_k[0].a();
           this.a(124, pj.field_B[0]);
           this.a(97, pj.field_B[1]);
           this.a(97, pj.field_B[2]);
@@ -2060,7 +2060,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                             if (!param0) {
                               return false;
                             }
-                            bh.b(77);
+                            ByteStorage.b(77);
                             cf.field_c = new cf(aa.field_b, ua.field_b);
                             qk.field_g = new ng(22050, id.field_d);
                             this.j((byte) -30);
@@ -2070,7 +2070,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                           we.a(qg.a(td.field_o, sa.field_b, 34, "basic", ph.field_b), -118, 48.0f);
                           return false;
                         }
-                        we.a(qg.a(bh.field_d, ij.field_a, 34, "", ff.field_P), -127, 45.0f);
+                        we.a(qg.a(ByteStorage.field_d, ij.field_a, 34, "", ff.field_P), -127, 45.0f);
                         return false;
                       }
                       we.a(qg.a(l.field_s, hl.field_e, 34, "", mh.field_a), -115, 40.0f);

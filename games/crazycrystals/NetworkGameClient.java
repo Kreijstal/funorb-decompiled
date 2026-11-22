@@ -596,7 +596,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               be.field_e = null;
             } else {
               if (be.field_e.a(-20402, "")) {
-                qb.a(be.field_e, param1 ^ -15041);
+                ByteStorage.a(be.field_e, param1 ^ -15041);
                 be.field_e = null;
                 vp.a(106);
               }

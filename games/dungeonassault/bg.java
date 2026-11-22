@@ -134,7 +134,7 @@ final class bg extends qe {
         vf.a(432, true, 599, 115, 48);
         vf.a(32, true, 164, -54, 8);
         vf.a(32, true, 468, 107, 8);
-        un.a(41, (byte) 63, 558, 416, true);
+        ByteStorage.a(41, (byte) 63, 558, 416, true);
         this.a(40, 70, 117);
         jh.b();
         fk.a((byte) 121, CipherPacketBuffer.field_u);

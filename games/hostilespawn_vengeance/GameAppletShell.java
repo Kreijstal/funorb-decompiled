@@ -49,8 +49,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           boolean decompiledFrameRemainder0 = true;
           if (null == db.field_r) {
-            if (md.field_n != null) {
-              var2 = md.field_n;
+            if (DirectByteStorage.field_n != null) {
+              var2 = DirectByteStorage.field_n;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -75,13 +75,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) field_h));
           field_h.setSize(hf.field_h, qc.field_s);
           field_h.setVisible(true);
-          boolean decompiledSharedTail0 = (md.field_n == var2);
+          boolean decompiledSharedTail0 = (DirectByteStorage.field_n == var2);
           if (!decompiledSharedTail0) {
             field_h.setLocation(sg.field_a, bb.field_d);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = md.field_n.getInsets();
+            var3 = DirectByteStorage.field_n.getInsets();
             field_h.setLocation(var3.left + sg.field_a, bb.field_d + var3.top);
           }
           field_h.addFocusListener((java.awt.event.FocusListener) (this));
@@ -176,14 +176,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             pc.field_a = true;
             field_h.setSize(hf.field_h, qc.field_s);
             field_h.setVisible(true);
-            boolean decompiledSharedTail0 = (md.field_n != null &&
+            boolean decompiledSharedTail0 = (DirectByteStorage.field_n != null &&
               db.field_r == null);
             if (!decompiledSharedTail0) {
               field_h.setLocation(sg.field_a, bb.field_d);
               decompiledSharedTail0 = (HostileSpawn.field_I);
             }
             if (decompiledSharedTail0) {
-              var6 = md.field_n.getInsets();
+              var6 = DirectByteStorage.field_n.getInsets();
               field_h.setLocation(sg.field_a + var6.left, bb.field_d + var6.top);
             }
           }
@@ -256,7 +256,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != md.field_n) {
+          if (null != DirectByteStorage.field_n) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -434,7 +434,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           this.c(28);
-          if (md.field_n != null) {
+          if (DirectByteStorage.field_n != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -586,7 +586,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != md.field_n) {
+          if (null != DirectByteStorage.field_n) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -645,7 +645,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (md.field_n != null) {
+          if (DirectByteStorage.field_n != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -831,7 +831,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != md.field_n) {
+        if (null != DirectByteStorage.field_n) {
           return null;
         }
         if (p.field_a != null &&

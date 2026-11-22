@@ -72,8 +72,8 @@ final class lha {
                         var1Lifetime1 = stackIn_60_0;
                       } else {
                         if (var2 == 8) {
-                          nu.field_h = MusicTrack.a(oaa.field_b, "", "bf_competition_lose_jingle");
-                          stackIn_64_0 = (null == nu.field_h) ? 0 : 1;
+                          ByteStorage.field_h = MusicTrack.a(oaa.field_b, "", "bf_competition_lose_jingle");
+                          stackIn_64_0 = (null == ByteStorage.field_h) ? 0 : 1;
                           var1Lifetime1 = stackIn_64_0;
                         } else {
                           if (var2 != 9) {
@@ -112,7 +112,7 @@ final class lha {
                                                 stackIn_112_0 = (!uf.field_c.a(db.field_a, mu.field_d, ai.field_d, (byte) -102, 22050)) ? 0 : 1;
                                                 var1Lifetime1 = stackIn_112_0;
                                               } else {
-                                                stackIn_108_0 = (!uf.field_c.a(db.field_a, nu.field_h, ai.field_d, (byte) -89, 22050)) ? 0 : 1;
+                                                stackIn_108_0 = (!uf.field_c.a(db.field_a, ByteStorage.field_h, ai.field_d, (byte) -89, 22050)) ? 0 : 1;
                                                 var1Lifetime1 = stackIn_108_0;
                                               }
                                             } else {

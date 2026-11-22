@@ -42,7 +42,7 @@ final class o extends ql {
               var5Lifetime2 = var5Lifetime2 + var3.substring(var4);
             }
             var6 = new java.net.URL(param1.getCodeBase(), var5Lifetime2);
-            param1.getAppletContext().showDocument(nj.a(param1, true, var6), "_self");
+            param1.getAppletContext().showDocument(ByteStorage.a(param1, true, var6), "_self");
           } catch (Exception exception) {
             exception.printStackTrace();
           }

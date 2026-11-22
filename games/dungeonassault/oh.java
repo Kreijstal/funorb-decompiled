@@ -114,7 +114,7 @@ final class oh implements ca {
         int var4 = 0;
         if (null != m.field_e &&
           20 <= gn.field_h) {
-          if (m.field_e != un.field_e) {
+          if (m.field_e != ByteStorage.field_e) {
             of.field_f = m.field_e.b((byte) -114);
             if (of.field_f != null) {
               uo.field_a = dd.a((byte) -112, 8, of.field_f);

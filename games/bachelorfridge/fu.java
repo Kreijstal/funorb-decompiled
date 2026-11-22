@@ -161,7 +161,7 @@ final class fu extends AnimationNode {
             GasCloudEvent.a((byte) -62, var4);
           }
           us.field_c = BagpipeSpecial.a(param0, -1, "basic", "rank_star");
-          nu.field_e = FullHealEvent.a("generic_slime_bg", param0, "basic", (byte) -26);
+          ByteStorage.field_e = FullHealEvent.a("generic_slime_bg", param0, "basic", (byte) -26);
           ew.field_r = FullHealEvent.a("small_bg", param0, "basic", (byte) 70);
           FoodShopPanel.field_g = FullHealEvent.a("lrg_button", param0, "basic", (byte) 126);
           BattleScreen.field_F = FullHealEvent.a("med_button", param0, "basic", (byte) -68);

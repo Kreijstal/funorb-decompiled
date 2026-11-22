@@ -799,7 +799,7 @@ final class re {
             ul.field_O = false;
             if (var6 != 0) {
               this.a(138, (byte) -55, 74, 324, 235);
-              nj.field_d[bm.field_c][rl.field_c].b(327, 77);
+              ByteStorage.field_d[bm.field_c][rl.field_c].b(327, 77);
               this.a(146, (byte) -55, 216, 324, 235);
               this.a(146, (byte) -55, 216, 567, 20);
               if (null != this.field_G) {
@@ -810,7 +810,7 @@ final class re {
           }
         } else {
           this.a(138, (byte) -55, 74, 324, 235);
-          nj.field_d[bm.field_c][rl.field_c].b(327, 77);
+          ByteStorage.field_d[bm.field_c][rl.field_c].b(327, 77);
           this.a(146, (byte) -55, 216, 324, 235);
           this.a(146, (byte) -55, 216, 567, 20);
           if (null != this.field_G) {
@@ -1196,7 +1196,7 @@ final class re {
           al.field_Z.a(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
         }
         this.a(138, (byte) -55, 86, 353, 235);
-        nj.field_d[bm.field_c][rl.field_c].b(356, 89);
+        ByteStorage.field_d[bm.field_c][rl.field_c].b(356, 89);
         this.a(131, (byte) -55, 230, 353, 235);
         this.a(235, 230, (byte) 56, 353, 131);
     }
@@ -2861,7 +2861,7 @@ final class re {
                 stackIn_33_0.field_jb = stackIn_34_1;
                 var13.field_T = 8421376;
               } else {
-                var13.field_fb = nj.field_e.toUpperCase();
+                var13.field_fb = ByteStorage.field_e.toUpperCase();
                 var13.field_T = 8388608;
                 var13.field_jb = true;
               }
@@ -4106,7 +4106,7 @@ final class re {
           var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, GameCanvas.field_f).toUpperCase();
           var10 += 26;
           ((vm) ((Object) var12)).b(var18, var9, var10, var13, -1);
-          var19 = md.field_m + jh.a((byte) -67, sg.field_i / 50);
+          var19 = DirectByteStorage.field_m + jh.a((byte) -67, sg.field_i / 50);
           var10 += 26;
           var20 = var19.toUpperCase();
           var11 = var20;

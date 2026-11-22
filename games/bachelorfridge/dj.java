@@ -18,7 +18,7 @@ final class dj {
     }
 
     final static void a(int param0, boolean param1) {
-        BitPacketBuffer.field_n = !param1 ? new lm(WidgetWrapper.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
+        BitPacketBuffer.field_n = !param1 ? new lm(WidgetWrapper.field_B, ByteStorage.field_f) : new lm(dea.field_l, sr.field_b);
         ela.field_i = new UiComponent(0L, (UiComponent) null);
         ela.field_i.a(-1, BitPacketBuffer.field_n.field_a);
         ela.field_i.a(param0 - 1, jj.field_wb);

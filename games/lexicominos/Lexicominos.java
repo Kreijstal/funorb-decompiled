@@ -1035,7 +1035,7 @@ public final class Lexicominos extends nk {
           he.a(-1);
           jc.clearStaticReferences(-63);
           el.clearStaticReferences(true);
-          nl.clearStaticReferences((byte) -125);
+          ByteStorage.clearStaticReferences((byte) -125);
           Bzip2Decoder.clearStaticReferences();
           ok.clearStaticReferences((byte) 28);
           pd.b(118);
@@ -1458,7 +1458,7 @@ public final class Lexicominos extends nk {
             } else {
               stackIn_88_1 = vi.field_j;
             }
-            bh.a(stackIn_87_0, stackIn_88_1);
+            DirectByteStorage.a(stackIn_87_0, stackIn_88_1);
           }
           if (param0 != 18380) {
             return;

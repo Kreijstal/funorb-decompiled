@@ -65,7 +65,7 @@ final class vn extends ue {
         if (param0 != 8) {
           this.b(-19);
         }
-        var2 = 580 * qb.field_a * qb.field_a / 400 + 30;
+        var2 = 580 * ByteStorage.field_a * ByteStorage.field_a / 400 + 30;
         if (!this.field_n) {
           stackIn_5_0 = this.field_v;
         } else {
@@ -81,7 +81,7 @@ final class vn extends ue {
         stackIn_9_0 = this.field_g;
         stackIn_10_1 = (this.field_u) ? -1 : 10;
         ((re) (Object) stackIn_9_0).a(stackIn_10_1, false);
-        if (qb.field_a != 20) {
+        if (ByteStorage.field_a != 20) {
           return;
         }
         if (this.field_n) {
@@ -367,10 +367,10 @@ final class vn extends ue {
         int var7;
         var7 = CrazyCrystals.field_B;
         if (this.field_u) {
-          if (qb.field_a > 0) {
-            qb.field_a = qb.field_a - 1;
+          if (ByteStorage.field_a > 0) {
+            ByteStorage.field_a = ByteStorage.field_a - 1;
           }
-          if (0 == qb.field_a) {
+          if (0 == ByteStorage.field_a) {
             MouseInputHandler.field_b = (ue) ((Object) this.field_g);
             this.field_g.a(this.field_b.field_i, -13880);
           }
@@ -386,8 +386,8 @@ final class vn extends ue {
         if (!this.field_p &&
           !this.field_r) {
           if (this.field_s) {
-            if (0 < qb.field_a) {
-              qb.field_a = qb.field_a - 1;
+            if (0 < ByteStorage.field_a) {
+              ByteStorage.field_a = ByteStorage.field_a - 1;
             }
             this.field_g.c(2, 40, 180);
             if (this.field_g.field_f < 40) {
@@ -408,8 +408,8 @@ final class vn extends ue {
               }
             }
           }
-          if (qb.field_a < 20) {
-            qb.field_a = qb.field_a + 1;
+          if (ByteStorage.field_a < 20) {
+            ByteStorage.field_a = ByteStorage.field_a + 1;
           }
           this.field_g.c(-1);
           if (param0) {
@@ -501,10 +501,10 @@ final class vn extends ue {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (qb.field_a > 0) {
-            qb.field_a = qb.field_a - 1;
+          if (ByteStorage.field_a > 0) {
+            ByteStorage.field_a = ByteStorage.field_a - 1;
           }
-          if (qb.field_a == 0) {
+          if (ByteStorage.field_a == 0) {
             if (!this.field_r) {
               MouseInputHandler.field_b = (ue) ((Object) this.field_t);
               this.field_t.a(this.field_b.field_i, -13880);
@@ -526,7 +526,7 @@ final class vn extends ue {
         this.field_o = -1;
         try {
           if (!(MouseInputHandler.field_b instanceof vn)) {
-            qb.field_a = 0;
+            ByteStorage.field_a = 0;
           }
           this.field_g = param1;
           this.field_n = param2 ? true : false;

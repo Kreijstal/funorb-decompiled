@@ -75,7 +75,7 @@ final class jg extends cb {
           if (param2 >= -100) {
             jg.clearStaticReferences((byte) -17);
           }
-          t.a(param3, rf.field_a, 0);
+          DirectByteStorage.a(param3, rf.field_a, 0);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "jg.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

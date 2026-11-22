@@ -11,9 +11,9 @@ final class kh {
     static int field_b;
 
     final static Object a(boolean param0, byte[] param1, int param2) {
-        qe var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        qe stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -25,8 +25,8 @@ final class kh {
             return null;
           }
           if (~param1.length < param2) {
-            var3 = new qe();
-            ((hd) ((Object) var3)).a(param2 + 13, param1);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param2 + 13, param1);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

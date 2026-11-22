@@ -559,7 +559,7 @@ final class s extends ma implements wl, mj {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Hb) {
-                  var24 = ja.field_e;
+                  var24 = DirectByteStorage.field_e;
                 } else {
                   if (var12.field_Jb >= var7) {
                     if (var12.field_Pb < var6) {

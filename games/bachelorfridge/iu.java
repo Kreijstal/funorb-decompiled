@@ -284,7 +284,7 @@ final class iu extends AnimationNode {
     final static void a(int param0, vr param1) {
         try {
           fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
-          gla.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y));
+          DirectByteStorage.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) TBomberAnimation.field_y));
           if (param0 != -1638641311) {
             iu.d(-98);
           }

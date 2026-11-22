@@ -24,7 +24,7 @@ final class CreatureSelectPanel {
         String var6 = null;
         String var7 = null;
         var4 = BachelorFridge.field_y;
-        nu.field_e.draw(0, 0);
+        ByteStorage.field_e.draw(0, 0);
         ShieldAnimation.field_v.draw(77, 44);
         jha.field_g.a(InsanoSauceSpecial.field_p, 320, 68, 16776960, -1);
         WidgetWrapper.field_z.a(InsanoSauceSpecial.field_p, 320, 68, 65793, -1);

@@ -243,7 +243,7 @@ final class dc {
               if (param0 < 60) {
                 return;
               }
-              param1.getAppletContext().showDocument(nj.a(param1, true, var2), "_top");
+              param1.getAppletContext().showDocument(ByteStorage.a(param1, true, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

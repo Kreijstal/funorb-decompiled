@@ -436,8 +436,8 @@ final class wa extends pj implements kd, ke {
           if (null != ClientException.field_e) {
             var2_int = ClientException.field_e.length;
           } else {
-            if (bh.field_c != null) {
-              var2_int = bh.field_c.length;
+            if (ByteStorage.field_c != null) {
+              var2_int = ByteStorage.field_c.length;
             }
           }
           var3 = -10 / ((param0 + 62) / 33);
@@ -595,8 +595,8 @@ final class wa extends pj implements kd, ke {
           if (null != ClientException.field_e) {
             var2_int = ClientException.field_e.length;
           } else {
-            if (bh.field_c != null) {
-              var2_int = bh.field_c.length;
+            if (ByteStorage.field_c != null) {
+              var2_int = ByteStorage.field_c.length;
             }
           }
           var3 = -10 / ((param0 + 62) / 33);

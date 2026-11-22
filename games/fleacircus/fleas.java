@@ -934,7 +934,7 @@ public final class fleas extends NetworkGameClient {
               gb.g(0, 0, gb.field_d, gb.field_k, 0, var3Lifetime1);
             }
           }
-          if (qe.field_k >= 2) {
+          if (DirectByteStorage.field_k >= 2) {
             ve.field_d.b("FPS: " + ak.field_c, 640, 480, 255, 16776960);
           }
           ul.c(param0);
@@ -1088,7 +1088,7 @@ public final class fleas extends NetworkGameClient {
           ld.a((byte) -95);
           lf.clearStaticReferences((byte) 65);
           fl.clearStaticReferences(26113);
-          hd.clearStaticReferences((byte) -75);
+          ByteStorage.clearStaticReferences((byte) -75);
           fe.clearStaticReferences();
           gk.a(true);
           fg.a(-5);
@@ -1135,7 +1135,7 @@ public final class fleas extends NetworkGameClient {
           am.clearStaticReferences();
           dh.a(120);
           j.a(-113);
-          qe.c(-1);
+          DirectByteStorage.c(-1);
           id.a((byte) 110);
           pk.d((byte) 89);
           qj.i(param0 ^ 124);
@@ -1517,7 +1517,7 @@ public final class fleas extends NetworkGameClient {
             this.f(true);
             d.field_Q = false;
           }
-          if (qe.field_k >= 2) {
+          if (DirectByteStorage.field_k >= 2) {
             boolean decompiledFrameCompleted0 = true;
             if (ei.field_H[1]) {
               var2_int = -1 + hj.field_a.length;
@@ -1927,7 +1927,7 @@ public final class fleas extends NetworkGameClient {
         this.a(9, 11, 22, false, 0, 8, 8, 10);
         ei var2 = new ei();
         var2.b(9, 128, 238);
-        hd.a(220, var2, 22050, 11, 22050, fg.field_q, (java.awt.Component) ((Object) ol.field_e), true);
+        ByteStorage.a(220, var2, 22050, 11, 22050, fg.field_q, (java.awt.Component) ((Object) ol.field_e), true);
         fb.field_c = 0;
         rg.field_n = 1;
         cm.field_j = 0;
@@ -2333,7 +2333,7 @@ public final class fleas extends NetworkGameClient {
           boolean decompiledFrameRemainder0 = true;
           var16 = ia.field_m[field_E][var2_int];
           if (jk.field_l != 10 &&
-            pl.field_f < var16.field_e && (!(qe.field_k >= 2) ||
+            pl.field_f < var16.field_e && (!(DirectByteStorage.field_k >= 2) ||
             ji.field_a != 2)) {
             stackIn_100_0 = 0;
             decompiledFrameRemainder0 = false;

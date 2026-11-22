@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nu {
+abstract class ByteStorage {
     static MusicTrack field_h;
     static Sprite field_e;
     static String field_g;
@@ -11,9 +11,9 @@ abstract class nu {
     static UiComponent field_f;
     static String field_d;
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte param0, byte[] param1);
 
-    abstract byte[] a(boolean param0);
+    abstract byte[] getBytes(boolean param0);
 
     public static void releaseStatics(int param0) {
         if (param0 > 64) {

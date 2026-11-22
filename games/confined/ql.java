@@ -228,7 +228,7 @@ final class ql {
         var6 = Confined.field_J ? 1 : 0;
         if (param1 &&
           h.field_R != null) {
-          h.field_R.b(ig.field_j[this.field_o], 32);
+          h.field_R.b(DirectByteStorage.field_j[this.field_o], 32);
         }
         if (this.field_o == 20 &&
           !this.field_i.field_t) {

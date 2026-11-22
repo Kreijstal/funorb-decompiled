@@ -35,14 +35,14 @@ final class pd extends ci {
             return true;
           }
           var3_int = -param2.field_Ib + param1.field_Ib;
-          if (f.field_a == param1.field_Lb) {
+          if (ByteStorage.field_a == param1.field_Lb) {
             var3_int -= 200;
           } else {
             if (null == param1.field_Lb) {
               var3_int += 200;
             }
           }
-          if (param2.field_Lb == f.field_a) {
+          if (param2.field_Lb == ByteStorage.field_a) {
             var3_int += 200;
           } else {
             if (null == param2.field_Lb) {
@@ -178,7 +178,7 @@ final class pd extends ci {
             return false;
           }
           if (dk.c(false)) {
-            IsaacCipher.a(param0 ^ -17303, vg.field_f, hd.field_e, param1, ja.field_i, (String) null);
+            IsaacCipher.a(param0 ^ -17303, vg.field_f, hd.field_e, param1, DirectByteStorage.field_i, (String) null);
           }
           return true;
         }

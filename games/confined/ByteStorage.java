@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qf {
+abstract class ByteStorage {
     static PacketBuffer field_c;
     static boolean field_g;
     static volatile int field_f;
@@ -10,7 +10,7 @@ abstract class qf {
     static int[] field_a;
     static String field_b;
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte param0, byte[] param1);
 
     public static void clearStaticReferences(int param0) {
         field_d = null;
@@ -22,7 +22,7 @@ abstract class qf {
         field_c = null;
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static boolean a(int param0, String param1, boolean param2, ke param3, String param4, String param5, int param6) {
         RuntimeException var7 = null;

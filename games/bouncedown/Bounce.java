@@ -262,7 +262,7 @@ public final class Bounce extends GameClient {
           cd.clearStaticReferences();
           kb.a(-9192);
           mb.c(60);
-          de.clearStaticReferences(11041);
+          DirectByteStorage.clearStaticReferences(11041);
           aj.a(false);
           bj.clearStaticReferences(-119);
           se.a(true);
@@ -1391,7 +1391,7 @@ public final class Bounce extends GameClient {
           ec.a(gk.field_e, 4, 16777215, 0, od.field_f, 240, (tg[]) null, 8, 320, 20, -35, 20, (tg[]) null, 320, 16741888, 14, (tg[]) null, 8, 20, 16697912, 0);
           ag.field_c = 16777215;
           ub.field_a = null;
-          de.field_f = 16697912;
+          DirectByteStorage.field_f = 16697912;
           bc.field_a = 16741888;
           vc.e((byte) -44);
           return;

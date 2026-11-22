@@ -86,7 +86,7 @@ class pv extends IntrusiveNode {
           stackIn_9_1 = !(param1);
           dna.c(stackIn_6_0, stackIn_9_1);
           BitPacketBuffer.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
-          StampedeSpecial.field_t.a(rg.field_h, 31407, nu.field_f.field_sb, 0, 0);
+          StampedeSpecial.field_t.a(rg.field_h, 31407, ByteStorage.field_f.field_sb, 0, 0);
           stackIn_11_0 = FlirtEvent.field_t;
           stackIn_11_1 = 18;
           stackIn_11_2 = 31407;
@@ -95,9 +95,9 @@ class pv extends IntrusiveNode {
           } else {
             stackIn_12_3 = 4 + rj.field_j + 40;
           }
-          ((UiComponent) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + nu.field_f.field_sb, 0, rg.field_h + 2);
-          ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (nu.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
-          SnowEvent.field_q.a((byte) -58, -2 + (nu.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, nu.field_f.field_sb, rj.field_j, 2);
+          ((UiComponent) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + ByteStorage.field_f.field_sb, 0, rg.field_h + 2);
+          ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (ByteStorage.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
+          SnowEvent.field_q.a((byte) -58, -2 + (ByteStorage.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, ByteStorage.field_f.field_sb, rj.field_j, 2);
           jj.field_wb.a(40, 31407, ela.field_i.field_sb, 0, -40 + ela.field_i.field_p);
           GzipDecompressor.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
           vm.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);

@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends qf {
+final class DirectByteStorage extends ByteStorage {
     static dk field_h;
-    private java.nio.ByteBuffer field_i;
+    private java.nio.ByteBuffer buffer;
     static int[] field_j;
 
-    final byte[] a(int param0) {
-        byte[] var4 = new byte[this.field_i.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var4 = new byte[this.buffer.capacity()];
         byte[] var2 = var4;
         int var3 = -11 % ((param0 - 25) / 56);
-        this.field_i.position(0);
-        this.field_i.get(var4);
+        this.buffer.position(0);
+        this.buffer.get(var4);
         return var4;
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte param0, byte[] param1) {
         try {
-          this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           int var3_int = 43 % ((-43 - param0) / 42);
-          this.field_i.position(0);
-          this.field_i.put(param1);
+          this.buffer.position(0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -71,7 +71,7 @@ final class ig extends qf {
 
     public static void c(int param0) {
         if (param0 != -6348) {
-          ig.c(78);
+          DirectByteStorage.c(78);
           field_j = null;
           field_h = null;
           return;
@@ -80,7 +80,7 @@ final class ig extends qf {
         field_h = null;
     }
 
-    ig() {
+    DirectByteStorage() {
     }
 
     final static boolean a(String param0, int param1, String param2) {

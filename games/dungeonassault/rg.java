@@ -442,7 +442,7 @@ final class rg extends ii implements pf, vg, mg {
         this.field_T = new rb("", (pg) null, var1 != 0);
         this.field_N = new ck(ef.field_a, (pg) null);
         this.field_V = new ck(pp.field_I, (pg) null);
-        this.field_R.field_i = un.field_d;
+        this.field_R.field_i = ByteStorage.field_d;
         this.field_O.field_i = lk.field_Q;
         this.field_U.field_i = bk.field_c;
         this.field_K.field_i = ce.field_t;

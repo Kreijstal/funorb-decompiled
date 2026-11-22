@@ -260,18 +260,18 @@ final class pna extends UiComponent {
           var16 = sr.field_b;
           sr.field_b.field_Y = 1;
           var16.field_N = 1;
-          nu.field_f = new UiComponent(0L, (UiComponent) null);
+          ByteStorage.field_f = new UiComponent(0L, (UiComponent) null);
           StampedeSpecial.field_t = new UiComponent(0L, qs.field_m);
           StampedeSpecial.field_t.field_N = 1;
           FlirtEvent.field_t = new UiComponent(0L, iia.field_m, bs.field_j);
           ut.field_q = new UiComponent(0L, vda.field_a, tv.field_m);
           SnowEvent.field_q = new sga(0L, new UiComponent(0L, (UiComponent) null), vg.field_k, MoveEventAnimation.field_y);
-          nu.field_f.a(-1, StampedeSpecial.field_t);
-          nu.field_f.a(-1, FlirtEvent.field_t);
+          ByteStorage.field_f.a(-1, StampedeSpecial.field_t);
+          ByteStorage.field_f.a(-1, FlirtEvent.field_t);
           if (IntrusiveDeque.field_c) {
-            nu.field_f.a(-1, ut.field_q);
+            ByteStorage.field_f.a(-1, ut.field_q);
           }
-          nu.field_f.a(-1, SnowEvent.field_q);
+          ByteStorage.field_f.a(-1, SnowEvent.field_q);
           jj.field_wb = new UiComponent(0L, iw.field_a, dh.field_i.toUpperCase());
           GzipDecompressor.field_a = new UiComponent(0L, p.field_o);
           vm.field_i = new UiComponent(0L, SlowAllAnimation.field_v);

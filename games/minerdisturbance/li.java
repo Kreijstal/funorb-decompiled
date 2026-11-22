@@ -1436,7 +1436,7 @@ final class li implements uj {
                 }
                 var2 = e.a(param0 - 9236, "create_password_confirm");
                 if (var2 != null) {
-                  t.field_d = bh.a(var2, 111);
+                  DirectByteStorage.field_d = bh.a(var2, 111);
                 }
                 var2 = e.a(param0 ^ 9239, "create_email");
                 if (var2 != null) {

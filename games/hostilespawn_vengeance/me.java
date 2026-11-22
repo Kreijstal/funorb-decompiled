@@ -268,8 +268,8 @@ abstract class me extends wb {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           int var2_int = -39 / ((param1 - 44) / 60);
-          param0.addKeyListener(nj.field_c);
-          param0.addFocusListener(nj.field_c);
+          param0.addKeyListener(ByteStorage.field_c);
+          param0.addFocusListener(ByteStorage.field_c);
         } catch (RuntimeException runtimeException) {
           throw wg.a((Throwable) ((Object) runtimeException), "me.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

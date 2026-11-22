@@ -40,9 +40,9 @@ final class wb {
           em.field_d = param3;
           rh.field_e = param5;
           qf.field_d = param2;
-          bh.field_c = new nh[param4.length];
+          ByteStorage.field_c = new nh[param4.length];
           for (var7 = 0; var7 < param4.length; var7++) {
-            bh.field_c[var7] = new nh(317, 34);
+            ByteStorage.field_c[var7] = new nh(317, 34);
           }
           bc.field_b = param4;
           return;

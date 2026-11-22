@@ -822,10 +822,10 @@ final class he extends ip {
           li.field_b[0] = ek.field_d;
           li.field_b[2] = df.field_d;
           li.field_b[1] = tp.field_z;
-          un.field_a[1] = lj.field_j;
-          un.field_a[0] = da.field_E;
-          un.field_a[3] = bj.field_J;
-          un.field_a[2] = an.field_C;
+          ByteStorage.field_a[1] = lj.field_j;
+          ByteStorage.field_a[0] = da.field_E;
+          ByteStorage.field_a[3] = bj.field_J;
+          ByteStorage.field_a[2] = an.field_C;
           cc.field_e = new String[254];
           for (var3 = 0; var3 < dc.field_p.length; var3++) {
             cc.field_e[var3 + wm.field_a] = od.field_b[var3];
@@ -1039,7 +1039,7 @@ final class he extends ip {
             ia.field_Q = oh.a(jb.field_Qb, "benefits", 11091, "headline");
             gn.field_c = oh.a(jb.field_Qb, "benefits", 11091, "blurbpane");
             tl.field_i = oh.a(jb.field_Qb, "benefits", 11091, "button");
-            ep.field_g = oh.a(jb.field_Qb, "benefits", 11091, "signup_text");
+            DirectByteStorage.field_g = oh.a(jb.field_Qb, "benefits", 11091, "signup_text");
             lg.field_u = oh.a(jb.field_Qb, "benefits", 11091, "menu_text");
             MouseWheelInput.field_g = oh.a(jb.field_Qb, "benefits", 11091, "button_frame");
             ql.field_c = oh.a(jb.field_Qb, "benefits", 11091, "arrow");
@@ -1073,7 +1073,7 @@ final class he extends ip {
               uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
             }
             PacketBuffer.field_l = null;
-            IntrusiveNode.field_d = ep.field_g.d();
+            IntrusiveNode.field_d = DirectByteStorage.field_g.d();
             IntrusiveNode.field_d.e();
             jj.a(64, -971598481, 0, 0, 2 * gf.field_c / 3, gf.field_i);
             gf.a(var27, var2, var3);
@@ -1206,7 +1206,7 @@ final class he extends ip {
           if (tl.field_i != null &&
             MouseWheelInput.field_g != null) {
             tl.field_i.h(231, 390);
-            var2_ref_cn = ep.field_g;
+            var2_ref_cn = DirectByteStorage.field_g;
             if (o.field_i.field_b == 0) {
               var2_ref_cn = IntrusiveNode.field_d;
             }

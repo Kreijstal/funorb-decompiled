@@ -963,7 +963,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("warning_you_win", (byte) 75);
                 if (null != var2) {
-                  nu.field_g = qq.a(var2, false);
+                  ByteStorage.field_g = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("view_stats", (byte) 80);
                 if (var2 != null) {

@@ -64,7 +64,7 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         var6 = Bounce.field_N;
         try {
-          var2 = ah.a(-3058, param0, "jagex-last-login-method");
+          var2 = ByteStorage.a(-3058, param0, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_4_0 = DualLinkNode.field_k;
             return stackIn_4_0;

@@ -152,7 +152,7 @@ final class rb extends gj implements da {
             if (ll.field_r == ResourceArchive.field_k &&
               gf.b(-128)) {
               aj.field_w = ae.field_a.readLong(-109);
-              qe.field_k = ae.field_a.readUnsignedByte(false);
+              DirectByteStorage.field_k = ae.field_a.readUnsignedByte(false);
               ae.field_a.readUnsignedByte(false);
               wc.field_q = ae.field_a.readUnsignedShort((byte) -116);
               var11 = ae.field_a.readNullableString((byte) -115);

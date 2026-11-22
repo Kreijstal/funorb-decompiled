@@ -420,7 +420,7 @@ class ul extends rg {
           return pb.field_a;
         }
         if (!i.field_r.a("commonui", 0)) {
-          return qf.field_d + " - " + i.field_r.b(param0 - 8087, "commonui") + "%";
+          return ByteStorage.field_d + " - " + i.field_r.b(param0 - 8087, "commonui") + "%";
         }
         if (!tf.field_k.b(param0)) {
           return nl.field_d;

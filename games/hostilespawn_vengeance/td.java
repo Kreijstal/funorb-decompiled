@@ -164,7 +164,7 @@ final class td implements Runnable {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(nj.a(param0, true, var2), "_top");
+              param0.getAppletContext().showDocument(ByteStorage.a(param0, true, var2), "_top");
               if (param1 != 200) {
                 td.b(-26);
               }

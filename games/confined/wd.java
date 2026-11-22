@@ -181,7 +181,7 @@ final class wd {
           if (qd.a(param1, param2, false)) {
             return false;
           }
-          if (!ig.a(param1, 0, param2)) {
+          if (!DirectByteStorage.a(param1, 0, param2)) {
             return true;
           }
           return false;

@@ -12,7 +12,7 @@ final class vb {
     final static byte[] a(boolean param0, int param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        qf var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
@@ -35,9 +35,9 @@ final class vb {
             stackIn_7_0 = ug.a(var3, 194);
             return stackIn_7_0;
           }
-          if (param2 instanceof qf) {
-            var4 = (qf) (param2);
-            stackIn_13_0 = var4.a(87);
+          if (param2 instanceof ByteStorage) {
+            var4 = (ByteStorage) (param2);
+            stackIn_13_0 = var4.getBytes(87);
             return stackIn_13_0;
           }
           if (param1 != 6) {
@@ -62,7 +62,7 @@ final class vb {
         if (!fd.field_j) {
           throw new IllegalStateException();
         }
-        qf.field_g = true;
+        ByteStorage.field_g = true;
         if (param0 < 104) {
           vb.a((byte) -90, '￘');
         }

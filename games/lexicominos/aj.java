@@ -13,7 +13,7 @@ final class aj {
         if (param0 != 9) {
           return;
         }
-        nl.field_a = null;
+        ByteStorage.field_a = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, db[] param12, db[] param13, int param14, boolean param15, int param16, db[] param17, int param18, int param19, int param20) {

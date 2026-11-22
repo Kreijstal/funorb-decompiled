@@ -63,7 +63,7 @@ final class ak extends IntrusiveNode {
         kh.f(param1, param2 + 10, 79, 4, 0);
         kh.f(param1 + 1, param2 + 9, 77, 6, 0);
         kh.f(param1 + 1, 10 + param2, 77, 4, param4);
-        oc.a(af.field_c, 26, param2, param3 + param1, 15, -123);
+        oc.a(DirectByteStorage.field_c, 26, param2, param3 + param1, 15, -123);
         if (param0 != 61) {
           ak.a(-86);
         }

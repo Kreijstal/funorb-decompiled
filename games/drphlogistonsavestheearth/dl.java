@@ -49,7 +49,7 @@ final class dl extends si {
               pi.field_O.b((byte) 37, qf.field_c);
             }
             if (param1 == 10) {
-              bh.a((byte) -31);
+              ByteStorage.a((byte) -31);
               var3_int = 0;
             }
             if (var3_int != 0) {

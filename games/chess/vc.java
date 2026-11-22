@@ -259,7 +259,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             var5 = var6;
             if (var6.field_L != 0) {
-              ja.$cfr$intArgs$a$c398e174f2fe(0L, var6.field_Fb, -97, fg.field_d.field_Kb, -1, var6, (int[]) null, -1, var6.field_Kb);
+              DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, var6.field_Fb, -97, fg.field_d.field_Kb, -1, var6, (int[]) null, -1, var6.field_Kb);
               var16 = pi.field_d;
               var13_ref_String = field_b;
               var16.field_b.a((byte) -12, var13_ref_String, 7);

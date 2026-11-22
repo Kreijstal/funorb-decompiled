@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hd {
+abstract class ByteStorage {
     static int field_g;
     static int field_c;
     static int field_b;
@@ -64,7 +64,7 @@ abstract class hd {
         }
         if (param2 != -27794) {
           var9 = (java.awt.Component) null;
-          hd.a(-21, (ei) null, 14, -111, -71, (ce) null, (java.awt.Component) null, false);
+          ByteStorage.a(-21, (ei) null, 14, -111, -71, (ce) null, (java.awt.Component) null, false);
         }
         var6Lifetime1 = vg.field_z - 140;
         if (var6Lifetime1 > 0) {
@@ -77,7 +77,7 @@ abstract class hd {
         return;
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     final static wh a(boolean param0, java.applet.Applet param1) {
         String var2 = null;
@@ -99,7 +99,7 @@ abstract class hd {
           var2 = ck.a(-5174, "jagex-last-login-method", param1);
           if (!param0) {
             var7 = (java.awt.Component) null;
-            hd.a(98, (ei) null, -46, 17, -94, (ce) null, (java.awt.Component) null, true);
+            ByteStorage.a(98, (ei) null, -46, 17, -94, (ce) null, (java.awt.Component) null, true);
           }
           if (var2 == null) {
             stackIn_6_0 = bf.field_a;
@@ -180,7 +180,7 @@ abstract class hd {
         field_d = null;
     }
 
-    abstract byte[] b(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static void a(int param0, ei param1, int param2, int param3, int param4, ce param5, java.awt.Component param6, boolean param7) {
         la.a(param4, param7, 10);

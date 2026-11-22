@@ -574,7 +574,7 @@ public final class MinerDisturbance extends ob {
               IntrusiveNode.a(this.field_K, 2);
             }
             if (sc.field_b) {
-              if (!ni.a(14, 11764) &&
+              if (!ByteStorage.a(14, 11764) &&
                 10 < Math.abs(this.field_D[this.field_I])) {
                 ag.a(true, 14, -1, -1);
               }
@@ -3429,7 +3429,7 @@ public final class MinerDisturbance extends ob {
               kn.field_E > 300 &&
               !qe.field_b[3]) {
               if (sc.field_b &&
-                !ni.a(16, 11764)) {
+                !ByteStorage.a(16, 11764)) {
                 var6Lifetime3 = 32 * ca.field_k + sk.field_d / 10;
                 var7Lifetime3 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                 var8Lifetime2 = -GzipDecompressor.field_a.field_x + (var6Lifetime3 - 1);
@@ -3446,7 +3446,7 @@ public final class MinerDisturbance extends ob {
                 !(kn.field_E < 950)) {
                 if ((!qe.field_b[2]) &&
                   (!(450 <= kn.field_E)) &&
-                  (!ni.a(9, 11764))) {
+                  (!ByteStorage.a(9, 11764))) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
@@ -3454,7 +3454,7 @@ public final class MinerDisturbance extends ob {
                   ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (GzipDecompressor.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
                 }
               } else {
-                if (!ni.a(9, 11764)) {
+                if (!ByteStorage.a(9, 11764)) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
@@ -3528,7 +3528,7 @@ public final class MinerDisturbance extends ob {
                 if (var21 != 0) {
                   cn.field_C = cn.field_C - 1;
                   if (sc.field_b &&
-                    !ni.a(29, 11764)) {
+                    !ByteStorage.a(29, 11764)) {
                     var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
                     var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                     var8Lifetime3 = 28 + var6Lifetime4;
@@ -3548,7 +3548,7 @@ public final class MinerDisturbance extends ob {
           } else {
             cn.field_C = cn.field_C - 1;
             if (sc.field_b &&
-              !ni.a(29, 11764)) {
+              !ByteStorage.a(29, 11764)) {
               var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
               var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
               var8Lifetime3 = 28 + var6Lifetime4;
@@ -4816,7 +4816,7 @@ public final class MinerDisturbance extends ob {
           IsaacRandom.clearStaticReferences((byte) 81);
           GameCanvas.clearStaticReferences((byte) -22);
           nj.a(-109);
-          ni.a((byte) -112);
+          ByteStorage.a((byte) -112);
           va.clearStaticReferences();
           cn.a(param0 - 129);
           qf.a(param0 - 28582);
@@ -4889,7 +4889,7 @@ public final class MinerDisturbance extends ob {
           nh.a((byte) -76);
           la.clearStaticReferences();
           lj.a((byte) -69);
-          t.b(param0 - 1);
+          DirectByteStorage.b(param0 - 1);
           bm.clearStaticReferences(0);
           aa.clearStaticReferences((byte) -123);
           ma.n(27934);
@@ -7027,7 +7027,7 @@ public final class MinerDisturbance extends ob {
                   uf.field_p[jf.b((byte) 52)] = new gf(ca.field_k, hf.field_t, 22);
                 }
               }
-              if (~ni.field_a == ~lj.field_t) {
+              if (~ByteStorage.field_a == ~lj.field_t) {
                 qm.field_f = true;
                 hf.field_t = hf.field_t + 4;
                 mh.field_e[ca.field_k][hf.field_t].field_a = false;

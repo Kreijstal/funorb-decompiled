@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gla extends nu {
+final class DirectByteStorage extends ByteStorage {
     static Sprite field_j;
-    private java.nio.ByteBuffer field_i;
+    private java.nio.ByteBuffer buffer;
     static boolean field_k;
 
     public static void a(byte param0) {
         field_j = null;
         if (param0 != -62) {
           PacketBuffer var2 = (PacketBuffer) null;
-          gla.a((PacketBuffer) null, (byte) -126);
+          DirectByteStorage.a((PacketBuffer) null, (byte) -126);
         }
     }
 
@@ -41,17 +41,17 @@ final class gla extends nu {
         }
     }
 
-    final byte[] a(boolean param0) {
-        byte[] var3 = new byte[this.field_i.capacity()];
+    final byte[] getBytes(boolean param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
         if (!param0) {
-          this.field_i.position(0);
-          this.field_i.get(var3);
+          this.buffer.position(0);
+          this.buffer.get(var3);
           return var3;
         }
-        this.field_i = (java.nio.ByteBuffer) null;
-        this.field_i.position(0);
-        this.field_i.get(var3);
+        this.buffer = (java.nio.ByteBuffer) null;
+        this.buffer.position(0);
+        this.buffer.get(var3);
         return var3;
     }
 
@@ -59,7 +59,7 @@ final class gla extends nu {
         try {
           if (param0 > -97) {
             PacketBuffer var5 = (PacketBuffer) null;
-            gla.a((PacketBuffer) null, (byte) 47);
+            DirectByteStorage.a((PacketBuffer) null, (byte) 47);
           }
           it.field_s = new lda(param3);
           MidiNote.field_v = param2;
@@ -70,17 +70,17 @@ final class gla extends nu {
         }
     }
 
-    gla() {
+    DirectByteStorage() {
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte param0, byte[] param1) {
         try {
-          this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_i.position(0);
-          this.field_i.put(param1);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(0);
+          this.buffer.put(param1);
           if (param0 < 14) {
             PacketBuffer var4 = (PacketBuffer) null;
-            gla.a((PacketBuffer) null, (byte) 36);
+            DirectByteStorage.a((PacketBuffer) null, (byte) 36);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gla.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

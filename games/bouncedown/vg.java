@@ -38,7 +38,7 @@ final class vg implements fc {
         stackIn_5_0 = ((128 & var3) != 0);
         ba.field_I = stackIn_5_0;
         eg.field_o = 127 & var3;
-        de.field_c = var8.readUnsignedByte((byte) -65);
+        DirectByteStorage.field_c = var8.readUnsignedByte((byte) -65);
         ek.field_f = var8.readLong((byte) -121);
         if (2 != eg.field_o) {
           ib.field_n = 0;

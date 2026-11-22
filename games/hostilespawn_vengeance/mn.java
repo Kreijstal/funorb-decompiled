@@ -20,7 +20,7 @@ final class mn {
     final static void c(byte param0) {
         if (param0 != 67) {
           field_b = (bd) null;
-          if (md.field_k) {
+          if (DirectByteStorage.field_k) {
             ka.field_r = true;
             w.b(true, -23960);
             fa.field_c = 0;
@@ -28,7 +28,7 @@ final class mn {
           }
           throw new IllegalStateException();
         }
-        if (md.field_k) {
+        if (DirectByteStorage.field_k) {
           ka.field_r = true;
           w.b(true, -23960);
           fa.field_c = 0;

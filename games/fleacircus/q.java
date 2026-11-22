@@ -61,7 +61,7 @@ final class q {
           }
           var2 = var10.readUnsignedByte(false);
           if (var2 == 0) {
-            var9 = (kf) (hd.field_a.c((byte) 47));
+            var9 = (kf) (ByteStorage.field_a.c((byte) 47));
             if (var9 == null) {
               k.c(-28354);
               return;

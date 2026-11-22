@@ -49,15 +49,15 @@ final class wb {
           ha.field_c[0] = hj.field_h.nextInt();
           ha.field_c[1] = hj.field_h.nextInt();
           ha.field_c[2] = (int)(uh.field_b >> 32);
-          qf.field_c.position = 0;
+          ByteStorage.field_c.position = 0;
           ha.field_c[3] = (int)uh.field_b;
-          qf.field_c.writeInt(-87, ha.field_c[0]);
-          qf.field_c.writeInt(param3 - 25556, ha.field_c[1]);
-          qf.field_c.writeInt(param3 ^ -25403, ha.field_c[2]);
-          qf.field_c.writeInt(param3 ^ -25373, ha.field_c[3]);
-          jg.a(qf.field_c, param3 - 25420);
-          qf.field_c.writeShort(param0, 8);
-          param1.a(qf.field_c, (byte) 108);
+          ByteStorage.field_c.writeInt(-87, ha.field_c[0]);
+          ByteStorage.field_c.writeInt(param3 - 25556, ha.field_c[1]);
+          ByteStorage.field_c.writeInt(param3 ^ -25403, ha.field_c[2]);
+          ByteStorage.field_c.writeInt(param3 ^ -25373, ha.field_c[3]);
+          jg.a(ByteStorage.field_c, param3 - 25420);
+          ByteStorage.field_c.writeShort(param0, 8);
+          param1.a(ByteStorage.field_c, (byte) 108);
           vh.field_a.position = 0;
           if (!param2) {
             vh.field_a.writeByte(112, 16);
@@ -92,7 +92,7 @@ final class wb {
           if (ag.field_e != null) {
             vh.field_a.writePrefixedString(ag.field_e, (byte) 113);
           }
-          jf.a(qf.field_c, hk.field_a, vh.field_a, param3 ^ param3, an.field_r);
+          jf.a(ByteStorage.field_c, hk.field_a, vh.field_a, param3 ^ param3, an.field_r);
           vh.field_a.backpatchShortLength(vh.field_a.position - var5_int, -20);
           tb.a(-1, 105);
           return;
@@ -1920,7 +1920,7 @@ final class wb {
                 }
                 var2 = ha.a("loading_fonts", (byte) 24);
                 if (null != var2) {
-                  qf.field_d = va.a(0, var2);
+                  ByteStorage.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("loading_soundeffects", (byte) 47);
                 if (var2 != null) {

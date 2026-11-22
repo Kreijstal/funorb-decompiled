@@ -323,7 +323,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 } else {
                   wg.field_yb = ib.field_d;
                   ba.e((byte) -86);
-                  md.field_k = false;
+                  DirectByteStorage.field_k = false;
                   fa.field_c = 10;
                 }
               }
@@ -333,7 +333,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (ArchiveIndex.field_g) {
               aa.a(bn.c(-1), 2429);
             } else {
-              md.field_k = true;
+              DirectByteStorage.field_k = true;
               fa.field_c = 10;
             }
           }
@@ -655,9 +655,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (nl.field_c != 0) {
             GameCanvas.field_d = qm.b(1, tb.field_P);
           }
-          im.field_c = nj.a(param1 ^ 9811, ck.field_e, true, false, 1);
-          mb.field_m = nj.a(96, uh.field_k, true, false, 1);
-          ll.field_b = nj.a(114, nm.field_i, true, false, 1);
+          im.field_c = ByteStorage.a(param1 ^ 9811, ck.field_e, true, false, 1);
+          mb.field_m = ByteStorage.a(96, uh.field_k, true, false, 1);
+          ll.field_b = ByteStorage.a(114, nm.field_i, true, false, 1);
           wd.field_a = im.field_c;
           ResourceArchive.field_a = mb.field_m;
           pb.field_Kb = 2;
@@ -718,7 +718,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (11 == pb.field_Kb) {
           if (uh.field_m != null && (!uh.field_m.a(-15879) ||
             !uh.field_m.e(param1 - 9768))) {
-            gj.a(param1 ^ 9788, md.a(ad.field_b, uh.field_m, u.field_j, (byte) -69), 0.0f);
+            gj.a(param1 ^ 9788, DirectByteStorage.a(ad.field_b, uh.field_m, u.field_j, (byte) -69), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

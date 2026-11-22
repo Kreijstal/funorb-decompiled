@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends nl {
-    private java.nio.ByteBuffer field_d;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
 
     final static void a(byte param0, int param1) {
         int var2_int = 0;
@@ -29,19 +29,19 @@ final class bh extends nl {
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
           CharSequence var3 = (CharSequence) null;
-          bh.a(true, (CharSequence) null, -76);
+          DirectByteStorage.a(true, (CharSequence) null, -76);
         }
         tg.a(param1, true, 114);
     }
 
-    final void a(byte[] param0, boolean param1) {
+    final void setBytes(byte[] param0, boolean param1) {
         try {
           if (!param1) {
-            this.field_d = (java.nio.ByteBuffer) null;
+            this.buffer = (java.nio.ByteBuffer) null;
           }
-          this.field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_d.position(0);
-          this.field_d.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "bh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -54,14 +54,14 @@ final class bh extends nl {
         RuntimeException var2 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          nl.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
+          ByteStorage.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
           if (param0 != 83) {
             return;
           }
           for (var2_int = 0; var2_int < pf.field_o; var2_int++) {
             ff.field_a[var2_int + param1] = var2_int;
           }
-          nl.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o + param1);
+          ByteStorage.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o + param1);
           if (param1 < pf.field_o) {
             pf.field_o = param1;
           }
@@ -109,18 +109,18 @@ final class bh extends nl {
         }
     }
 
-    final byte[] a(byte param0) {
-        byte[] var3 = new byte[this.field_d.capacity()];
+    final byte[] getBytes(byte param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
         if (param0 != -121) {
           return (byte[]) null;
         }
-        this.field_d.position(0);
-        this.field_d.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         return var3;
     }
 
-    bh() {
+    DirectByteStorage() {
     }
 
     static {

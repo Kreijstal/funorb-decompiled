@@ -154,7 +154,7 @@ final class ca {
           }
           if (decompiledFrameRemainder1) {
             hb.field_a.field_tb = true;
-            oj.field_c.field_db = oc.a(gf.field_g, new String[]{f.field_a}, (byte) -59);
+            oj.field_c.field_db = oc.a(gf.field_g, new String[]{ByteStorage.field_a}, (byte) -59);
             ea.field_bb.field_Kb.field_Jb.field_db = null;
             var6 = null;
             var7 = (ve) (var4.g(-18110));
@@ -177,7 +177,7 @@ final class ca {
                   var7.field_M = ea.field_bb.field_Fb.field_M;
                   var9 = 0;
                   if (null != var7.field_Lb) {
-                    if (f.field_a != var7.field_Lb) {
+                    if (ByteStorage.field_a != var7.field_Lb) {
                       var10 = 13421568;
                       var11 = 16777062;
                     } else {
@@ -239,7 +239,7 @@ final class ca {
                     !var7.field_Eb.field_F) {
                     if (var7.field_L != 0) {
                       var16 = var7.field_Fb;
-                      ja.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 68, ea.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
+                      DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 68, ea.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
                       if (var7.field_Lb != null &&
                         !am.a(false, pi.field_d.field_i) &&
                         !qf.field_b) {

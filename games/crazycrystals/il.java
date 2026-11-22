@@ -205,7 +205,7 @@ final class il extends l {
         }
         dl[] var6 = h.field_d;
         if (param1) {
-          var6 = af.field_c;
+          var6 = DirectByteStorage.field_c;
         }
         wi.a(param3, var6, param2, param0, (byte) -71, param4);
     }

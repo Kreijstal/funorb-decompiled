@@ -144,7 +144,7 @@ final class RageSpecial extends SpecialOrder {
         lw.field_k[21] = us.field_d;
         lw.field_k[20] = DisableSpecial.field_q;
         lw.field_k[5] = CranberryEvent.field_r;
-        lw.field_k[4] = nu.field_a;
+        lw.field_k[4] = ByteStorage.field_a;
         lw.field_k[15] = qc.field_e;
     }
 

@@ -205,7 +205,7 @@ final class ba extends ma implements nn, mj {
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
                 return true;
               }
-              var8 = "[" + ja.field_c + "] ";
+              var8 = "[" + DirectByteStorage.field_c + "] ";
             }
             if (null != pd.field_Rb) {
               if (!qj.field_d) {

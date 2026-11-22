@@ -135,7 +135,7 @@ final class gb implements Iterator {
           return;
         }
         try {
-          t.a(false, rf.field_a, 0);
+          DirectByteStorage.a(false, rf.field_a, 0);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -163,7 +163,7 @@ final class od extends fc {
     }
 
     final static void k(int param0) {
-        if (!md.field_k) {
+        if (!DirectByteStorage.field_k) {
           throw new IllegalStateException();
         }
         ka.field_r = true;

@@ -2925,61 +2925,61 @@ final class je {
                     var5Lifetime2Lifetime1 = hf.field_t - var2Lifetime2;
                     if (var4Lifetime2Lifetime1 * var4Lifetime2Lifetime1 + var5Lifetime2Lifetime1 * var5Lifetime2Lifetime1 < 40) {
                       if (!field_I[var3_intLifetime2][var2Lifetime2].field_a) {
-                        if (!ni.a(0, 11764) &&
+                        if (!ByteStorage.a(0, 11764) &&
                           field_O.i(-62, var3_intLifetime2 << 2, var2Lifetime2 << 2) &&
                           field_O.j(-126, var2Lifetime2 << 2, var3_intLifetime2 << 2) > 50) {
                           ag.a(true, 0, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                         }
                         if (cm.field_o == 1) {
-                          if (!ni.a(24, 11764)) {
+                          if (!ByteStorage.a(24, 11764)) {
                             if (field_I[var3_intLifetime2][var2Lifetime2].field_A) {
                               if (je.c(var3_intLifetime2, var2Lifetime2, 1, 1)) {
                                 ag.a(true, 24, var2Lifetime2 * 32, var3_intLifetime2 * 32);
-                                if (!ni.a(30, 11764) &&
+                                if (!ByteStorage.a(30, 11764) &&
                                   field_O.f(var2Lifetime2, 2, var3_intLifetime2)) {
                                   ag.a(true, 30, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                                 }
                               } else {
-                                if (!ni.a(30, 11764) &&
+                                if (!ByteStorage.a(30, 11764) &&
                                   field_O.f(var2Lifetime2, 2, var3_intLifetime2)) {
                                   ag.a(true, 30, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                                 }
                               }
                             } else {
-                              if (!ni.a(30, 11764) &&
+                              if (!ByteStorage.a(30, 11764) &&
                                 field_O.f(var2Lifetime2, 2, var3_intLifetime2)) {
                                 ag.a(true, 30, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                               }
                             }
                           } else {
-                            if (!ni.a(30, 11764) &&
+                            if (!ByteStorage.a(30, 11764) &&
                               field_O.f(var2Lifetime2, 2, var3_intLifetime2)) {
                               ag.a(true, 30, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                             }
                           }
-                          if (!ni.a(34, 11764) &&
+                          if (!ByteStorage.a(34, 11764) &&
                             field_O.b(var3_intLifetime2, var2Lifetime2, (byte) 76)) {
                             ag.a(true, 34, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                           }
                         }
                       }
                       if (field_I[var3_intLifetime2][var2Lifetime2].field_U >= 0) {
-                        if (!ni.a(5, 11764)) {
+                        if (!ByteStorage.a(5, 11764)) {
                           if (field_I[var3_intLifetime2][var2Lifetime2].field_b) {
                             ag.a(true, 5, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                             if (field_I[var3_intLifetime2][var2Lifetime2].field_U < 3 &&
-                              ni.a(8, 11764)) {
+                              ByteStorage.a(8, 11764)) {
                               ag.a(true, 3, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                             }
                           } else {
                             if (field_I[var3_intLifetime2][var2Lifetime2].field_U < 3 &&
-                              ni.a(8, 11764)) {
+                              ByteStorage.a(8, 11764)) {
                               ag.a(true, 3, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                             }
                           }
                         } else {
                           if (field_I[var3_intLifetime2][var2Lifetime2].field_U < 3 &&
-                            ni.a(8, 11764)) {
+                            ByteStorage.a(8, 11764)) {
                             ag.a(true, 3, var2Lifetime2 * 32, var3_intLifetime2 * 32);
                           }
                         }

@@ -39,7 +39,7 @@ final class la extends ca {
               if (rj.field_K) {
                 param1 = vg.a(new String[]{param1}, 21, ck.field_o);
               }
-              if (md.field_i) {
+              if (DirectByteStorage.field_i) {
                 param1 = jm.field_h;
               }
               jj.field_d.a(param0, 17, param1);

@@ -785,7 +785,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ql.b((byte) 20);
           ik.a(0);
           ra.a((byte) -114);
-          un.a((byte) 23);
+          ByteStorage.a((byte) 23);
           ej.clearStaticReferences();
           dc.a((byte) 108);
           oe.a(0);
@@ -858,7 +858,7 @@ public final class DungeonAssault extends NetworkGameClient {
           eb.f((byte) 86);
           ol.clearStaticReferences((byte) -96);
           fe.b((byte) -34);
-          ep.a(124);
+          DirectByteStorage.a(124);
           bp.a(-1);
           oi.h(119);
           bj.h(31029);

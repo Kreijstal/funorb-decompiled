@@ -15,7 +15,7 @@ final class kb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ig.a(param0, param2, (byte) 37)) {
+          if (!DirectByteStorage.a(param0, param2, (byte) 37)) {
             stackIn_2_0 = null;
             return (bm) (stackIn_2_0);
           }

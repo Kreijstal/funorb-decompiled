@@ -606,7 +606,7 @@ final class wc extends id {
           this.field_Kb.field_w = 2.0 * this.field_C;
           this.field_Kb.field_m = 192;
           if (null != h.field_R) {
-            h.field_R.b(ig.field_j[1 + this.field_A.field_J.field_o], 32);
+            h.field_R.b(DirectByteStorage.field_j[1 + this.field_A.field_J.field_o], 32);
           }
           if (this.field_A.field_J.field_o == 24) {
             this.field_A.field_i = true;

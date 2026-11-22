@@ -48,10 +48,10 @@ final class jk extends si {
     }
 
     final static Object a(boolean param0, byte[] param1, byte param2) {
-        jc var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
-        jc stackIn_7_0 = null;
+        DirectByteStorage stackIn_7_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -67,8 +67,8 @@ final class jk extends si {
             return stackIn_4_0;
           }
           if (param1.length > 136) {
-            var3 = new jc();
-            ((bh) ((Object) var3)).a(param1, (byte) -125);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param1, (byte) -125);
             stackIn_7_0 = var3;
             return stackIn_7_0;
           }

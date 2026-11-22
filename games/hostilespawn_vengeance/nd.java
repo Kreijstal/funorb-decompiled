@@ -30,7 +30,7 @@ final class nd {
             var7 = (oj) null;
             nd.a(78, (oj) null, -25);
           }
-          var8 = md.field_g;
+          var8 = DirectByteStorage.field_g;
           var3 = var8;
           for (var4 = 0; var4 < var8.length; var4++) {
             var5 = var8[var4];

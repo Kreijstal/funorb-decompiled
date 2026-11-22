@@ -153,11 +153,11 @@ final class wl {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = qf.field_a[var15Lifetime1];
+            var22 = ByteStorage.field_a[var15Lifetime1];
             var23 = db.field_x[var15Lifetime1];
-            var24 = qf.field_a[var16];
+            var24 = ByteStorage.field_a[var16];
             var25 = db.field_x[var16];
-            var26 = qf.field_a[var17];
+            var26 = ByteStorage.field_a[var17];
             var27 = db.field_x[var17];
             if (var19 == var18 &&
               var20 == var19) {

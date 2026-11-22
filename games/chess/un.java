@@ -301,7 +301,7 @@ final class un {
         int var17Lifetime2;
         int var19Lifetime1Lifetime1;
         var24 = Chess.field_G;
-        var2 = -(ja.field_g.field_j / 2) + (8 + ph.field_l.field_j / 2);
+        var2 = -(DirectByteStorage.field_g.field_j / 2) + (8 + ph.field_l.field_j / 2);
         if (this.c(25)) {
           stackIn_3_0 = this.field_d;
         } else {
@@ -324,7 +324,7 @@ final class un {
         stackIn_9_6 = (this.field_y | this.field_g) ? 96 : 256;
         wb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5, stackIn_9_6);
         wb.a(8, 169, 100, 158, 11, 0, 96);
-        stackIn_11_0 = ja.field_g;
+        stackIn_11_0 = DirectByteStorage.field_g;
         stackIn_11_1 = var2;
         stackIn_11_2 = 169;
         stackIn_12_3 = (this.field_B.field_l == this.field_B.field_k) ? 0 : 3;
@@ -333,7 +333,7 @@ final class un {
         wb.d(13, 178, 90, 42, 1);
         ph.field_l.a(8, 173);
         se.a(16777215, pg.field_v, 20, 186, 3, param0 + 166, 0, this.field_e / 50, 35, da.field_y);
-        stackIn_14_0 = ja.field_g;
+        stackIn_14_0 = DirectByteStorage.field_g;
         stackIn_14_1 = var2;
         stackIn_14_2 = 111;
         stackIn_15_3 = (this.field_B.field_l != this.field_B.field_k) ? 0 : 3;

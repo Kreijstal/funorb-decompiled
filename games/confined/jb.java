@@ -1429,7 +1429,7 @@ final class jb {
         if (17 == var3 &&
           this.field_p.d((byte) 55)) {
           IntrusiveNode.d((byte) -61);
-          qf.field_e = false;
+          ByteStorage.field_e = false;
           ei.a(-54, param1);
           this.e((byte) -121);
           return true;

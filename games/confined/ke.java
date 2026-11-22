@@ -67,7 +67,7 @@ final class ke extends ga implements ge, el, pg {
           var2 = Integer.parseInt(this.field_V.field_B);
         } catch (NumberFormatException numberFormatException) {
         }
-        return qf.a(30692, this.field_U.field_B, this.field_bb.field_O, this, this.field_H.field_B, this.field_R.field_B, var2);
+        return ByteStorage.a(30692, this.field_U.field_B, this.field_bb.field_O, this, this.field_H.field_B, this.field_R.field_B, var2);
     }
 
     public final void a(na param0, int param1, int param2, boolean param3) {

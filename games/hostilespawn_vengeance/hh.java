@@ -323,7 +323,7 @@ final class hh {
           }
           mb.field_p = param1;
           ab.field_c = param7;
-          nj.field_a = param0;
+          ByteStorage.field_a = param0;
           ik.field_a = param3;
           mm.field_s = param5;
           ig.field_N = (ej) ((Object) new ih());

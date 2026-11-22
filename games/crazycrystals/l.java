@@ -20,7 +20,7 @@ abstract class l {
     final static byte[] a(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        qb var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_4_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -38,11 +38,11 @@ abstract class l {
             return (byte[]) (stackIn_4_0);
           }
           if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof qb)) {
+            if (!(param2 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (qb) (param2);
-            stackIn_14_0 = var4.a(78);
+            var4 = (ByteStorage) (param2);
+            stackIn_14_0 = var4.getBytes(78);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param2);

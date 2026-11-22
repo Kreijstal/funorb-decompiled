@@ -68,7 +68,7 @@ class wc extends hl {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = ja.field_h.getGraphics();
+            var9 = DirectByteStorage.field_h.getGraphics();
             if (li.field_f == null) {
               li.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -81,7 +81,7 @@ class wc extends hl {
             }
             try {
               if (ga.field_a == null) {
-                ga.field_a = ja.field_h.createImage(304, 34);
+                ga.field_a = DirectByteStorage.field_h.createImage(304, 34);
               }
               var10 = ga.field_a.getGraphics();
               var10.setColor(param0);
@@ -120,7 +120,7 @@ class wc extends hl {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            ja.field_h.repaint();
+            DirectByteStorage.field_h.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

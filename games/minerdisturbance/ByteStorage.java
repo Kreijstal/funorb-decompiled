@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ni {
+abstract class ByteStorage {
     static int field_a;
     static String field_b;
 
@@ -18,14 +18,14 @@ abstract class ni {
         return true;
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     public static void a(byte param0) {
         int var1 = -11 % ((-37 - param0) / 60);
         field_b = null;
     }
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte param0, byte[] param1);
 
     static {
         field_a = 38;

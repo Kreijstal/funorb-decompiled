@@ -522,7 +522,7 @@ abstract class gb extends GameAppletShell {
           Chess.field_B = sh.a(1, m.field_b, true, 935, false);
           bi.field_a = sh.a(1, kf.field_u, true, 935, false);
           hm.field_e = fl.field_m;
-          f.field_b = Chess.field_B;
+          ByteStorage.field_b = Chess.field_B;
           il.field_a = 2;
         }
         if (il.field_a == 2) {
@@ -608,9 +608,9 @@ abstract class gb extends GameAppletShell {
         }
         if (!param0 &&
           hf.field_a) {
-          kl.a(ja.field_h, (byte) -114);
+          kl.a(DirectByteStorage.field_h, (byte) -114);
           this.d((byte) 125);
-          ca.a(13369344, ja.field_h);
+          ca.a(13369344, DirectByteStorage.field_h);
         }
         if (wc.field_t[8]) {
           jj.c(8);
@@ -639,7 +639,7 @@ abstract class gb extends GameAppletShell {
         jb.a(350, this.field_w, se.field_V, param4, this.field_r, oc.field_l, this.field_q, this.field_x, this.field_m);
         bf.g((byte) 69);
         ii.field_L = sa.createMouseWheelInput(param6 + 28);
-        ca.a(13369344, ja.field_h);
+        ca.a(13369344, DirectByteStorage.field_h);
         nk.field_q = param2;
         kf.field_u = param0;
         dh.field_c = param3;

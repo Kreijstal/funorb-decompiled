@@ -1273,7 +1273,7 @@ final class c extends sc {
           }
           var2Lifetime162 = wm.a("youAlreadyHaveChargeCannon", (byte) 50);
           if (null != var2Lifetime162) {
-            qf.field_b = va.a(0, var2Lifetime162);
+            ByteStorage.field_b = va.a(0, var2Lifetime162);
           }
           var2Lifetime163 = wm.a("disruptionCannon", (byte) 86);
           if (var2Lifetime163 != null) {

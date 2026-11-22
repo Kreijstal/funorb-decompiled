@@ -42,10 +42,10 @@ final class il {
           } else {
             var6.d(245, 199);
           }
-          if (BufferedSocket.field_i < hd.field_c) {
+          if (BufferedSocket.field_i < ByteStorage.field_c) {
             var7 = wa.field_k[t.field_a];
             if (var7 != null) {
-              var2_int = BufferedSocket.field_i * (60 + var7.field_x) / hd.field_c;
+              var2_int = BufferedSocket.field_i * (60 + var7.field_x) / ByteStorage.field_c;
               var3 = var2_int - 30;
               if (!rc.field_i) {
                 d.a(var3 * -256 / 30, 199, var7, 245, 2147483647, 256 * (-var3 + var7.field_x) / 30);

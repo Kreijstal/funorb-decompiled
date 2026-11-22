@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qb {
+abstract class ByteStorage {
     static int field_a;
     static dl field_b;
 
@@ -490,9 +490,9 @@ abstract class qb {
         }
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] param0, int param1);
 
     final static void a(db param0, int param1) {
         class $CfrPartitionedBody {

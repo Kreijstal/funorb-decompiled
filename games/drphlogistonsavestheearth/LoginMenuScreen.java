@@ -1769,7 +1769,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("waitingfor_fonts", 0);
                 if (null != var2) {
-                  bh.field_d = mj.a((byte) -94, var2);
+                  ByteStorage.field_d = mj.a((byte) -94, var2);
                 }
                 var2 = wg.a("waitingfor_soundeffects", 0);
                 if (var2 != null) {

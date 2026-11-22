@@ -79,7 +79,7 @@ final class cf extends ci {
           } else {
             stackIn_4_0 = ed.field_c;
           }
-          f.a(stackIn_4_0, true);
+          ByteStorage.a(stackIn_4_0, true);
           qa.field_f.a(fm.field_T.field_M, 0, 0, -2 + (-40 + fm.field_T.field_pb), true);
           ec.field_j.a(0, de.field_d.field_M, -2147483648, fe.field_g, 0);
           stackIn_6_0 = ln.field_vc;

@@ -248,7 +248,7 @@ final class hn implements Runnable {
         rc.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
         rb.field_b = (lh) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
         tk.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
-        km var17 = new km(param2.a("button.gif", 30045, ""), (java.awt.Component) ((Object) ja.field_h));
+        km var17 = new km(param2.a("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
         jn.a("dropdown", 8221, "commonui", param3);
         rk[] var5 = qm.a(1, "commonui", "screen_options", param3);
         mf.field_s = new rk[4];
@@ -317,7 +317,7 @@ final class hn implements Runnable {
             hn.b(50);
           }
           dc.field_m = true;
-          ja.field_i = param3;
+          DirectByteStorage.field_i = param3;
           vg.field_f = param1;
           tj.field_m = param4;
           hd.field_e = param0;

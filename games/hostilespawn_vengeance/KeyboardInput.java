@@ -23,7 +23,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != nj.field_c) {
+          if (null != ByteStorage.field_c) {
             ae.field_s = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
@@ -36,7 +36,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var2_int >= 0) {
               al.field_W[uc.field_b] = ~var2_int;
               uc.field_b = uc.field_b + 1 & 127;
-              if (md.field_o == uc.field_b) {
+              if (DirectByteStorage.field_o == uc.field_b) {
                 uc.field_b = -1;
               }
             }
@@ -59,7 +59,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != nj.field_c) {
+          if (null != ByteStorage.field_c) {
             uc.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
@@ -77,7 +77,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != nj.field_c) {
+          if (null != ByteStorage.field_c) {
             ae.field_s = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -93,7 +93,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               0 <= var2_int) {
               al.field_W[uc.field_b] = var2_int;
               uc.field_b = 127 & 1 + uc.field_b;
-              if (uc.field_b == md.field_o) {
+              if (uc.field_b == DirectByteStorage.field_o) {
                 uc.field_b = -1;
               }
             }
@@ -141,7 +141,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != nj.field_c) {
+          if (null != ByteStorage.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               65535 != var2_int &&

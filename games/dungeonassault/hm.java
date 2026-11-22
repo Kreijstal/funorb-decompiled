@@ -368,7 +368,7 @@ final class hm extends IntrusiveNode {
           } else {
             if (rb.field_O != m.field_e) {
               m.field_e = null;
-              un.field_e = null;
+              ByteStorage.field_e = null;
             }
             gn.field_h = gn.field_h + 1;
           }

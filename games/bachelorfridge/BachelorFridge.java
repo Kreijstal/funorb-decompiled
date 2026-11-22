@@ -362,7 +362,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
             if (vs.a(23864)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
-              gla.a(-101, uma.field_J[0].field_p, uma.field_J[0].field_q, uma.field_J);
+              DirectByteStorage.a(-101, uma.field_J[0].field_p, uma.field_J[0].field_q, uma.field_J);
             }
             if (nba.b((byte) -125) &&
               !vs.a(23864) &&
@@ -793,7 +793,7 @@ public final class BachelorFridge extends NetworkGameClient {
         en.releaseStatics(-10132);
         WhirlpoolDigest.releaseStatics(107);
         cr.a(21592);
-        nu.releaseStatics(76);
+        ByteStorage.releaseStatics(76);
         Bzip2Decoder.releaseStatics();
         bv.releaseStatics(98);
         rh.releaseStatics(0);
@@ -945,7 +945,7 @@ public final class BachelorFridge extends NetworkGameClient {
         lfa.releaseStatics((byte) -128);
         qca.releaseStatics(-98);
         ProxySocketConnector.releaseStatics((byte) -100);
-        gla.a((byte) -62);
+        DirectByteStorage.a((byte) -62);
         IterableNodeHashTable.releaseStatics(-1);
         IterableDualLinkDeque.releaseStatics(-124);
         ul.releaseStatics(false);
@@ -1842,7 +1842,7 @@ public final class BachelorFridge extends NetworkGameClient {
                           gja.field_n = false;
                           kaa.field_m = 0;
                           sia.field_h = false;
-                          nu.field_b = true;
+                          ByteStorage.field_b = true;
                           ge.field_D = true;
                         }
                         hm.field_b = false;
@@ -1931,7 +1931,7 @@ public final class BachelorFridge extends NetworkGameClient {
                         kaa.field_m = -2;
                         UiWidget.field_g = true;
                         sia.field_h = false;
-                        nu.field_b = true;
+                        ByteStorage.field_b = true;
                         ArchiveIndex.a(-128);
                       }
                       pha.field_a = false;
@@ -1971,7 +1971,7 @@ public final class BachelorFridge extends NetworkGameClient {
                 if (OhNoEvent.field_s != -3 &&
                   OhNoEvent.field_s != 12) {
                   if (hm.field_b) {
-                    nu.field_b = true;
+                    ByteStorage.field_b = true;
                     ge.field_D = true;
                     sia.field_h = false;
                     if (!vs.field_d) {
@@ -1991,13 +1991,13 @@ public final class BachelorFridge extends NetworkGameClient {
                     vs.field_d = false;
                     ArchiveIndex.a(-128);
                     if (var8 != 0) {
-                      nu.field_b = true;
+                      ByteStorage.field_b = true;
                       sia.field_h = false;
                       lg.a(true, 0, false);
                     }
                   }
                 } else {
-                  nu.field_b = true;
+                  ByteStorage.field_b = true;
                   sia.field_h = false;
                   lg.a(true, 0, false);
                 }

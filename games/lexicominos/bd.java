@@ -29,7 +29,7 @@ final class bd extends kd {
           if (param1 != 3) {
             field_i = (be[]) null;
           }
-          stackIn_3_0 = bh.a(false, param0, -84);
+          stackIn_3_0 = DirectByteStorage.a(false, param0, -84);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

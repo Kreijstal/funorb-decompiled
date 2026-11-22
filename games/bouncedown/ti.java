@@ -183,7 +183,7 @@ final class ti extends ba implements wc {
               var5 = bc.field_a;
             } else {
               if (var4 != cf.field_f.field_b) {
-                var5 = de.field_f;
+                var5 = DirectByteStorage.field_f;
               } else {
                 var5 = ag.field_c;
               }
@@ -269,7 +269,7 @@ final class ti extends ba implements wc {
 
     final static void a(int param0, int param1, int param2, byte param3) {
         bc.field_a = param2;
-        de.field_f = param0;
+        DirectByteStorage.field_f = param0;
         ag.field_c = param1;
         if (param3 != 102) {
           field_O = 92;

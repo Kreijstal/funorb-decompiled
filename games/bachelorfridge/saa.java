@@ -614,7 +614,7 @@ final class saa {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
-          gla.field_j.c(param1, 0);
+          DirectByteStorage.field_j.c(param1, 0);
           Math.sin(0.5 * ((double)vr.field_b / 10.0));
           if (!this.field_p) {
             if (sn.field_m.field_T &&

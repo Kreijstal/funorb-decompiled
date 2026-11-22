@@ -59,14 +59,14 @@ final class wk {
           }
         }
         if (!param1) {
-          md.field_f = pk.a(80, 122, var8);
+          DirectByteStorage.field_f = pk.a(80, 122, var8);
           bn.field_b = null;
           return new ln(param1);
         }
         var5 = var8.e(8);
         try {
           var9 = le.field_ub.a(var5, 1);
-          md.field_f = var9.d((byte) -53);
+          DirectByteStorage.field_f = var9.d((byte) -53);
           if (!qg.field_o.equals(qg.field_r)) {
             stackIn_24_0 = var9.field_w;
           } else {
@@ -77,7 +77,7 @@ final class wk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           ic.a((byte) -115, "CC1", (Throwable) ((Object) var6));
-          md.field_f = null;
+          DirectByteStorage.field_f = null;
           bn.field_b = null;
           return new ln(param1);
         }

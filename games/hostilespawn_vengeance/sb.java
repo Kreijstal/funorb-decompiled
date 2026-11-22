@@ -13,7 +13,7 @@ final class sb {
         bd var5 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var1 = nj.field_c;
+          var1 = ByteStorage.field_c;
           synchronized (var1) {
             ae.field_s = ae.field_s + 1;
             ee.field_e = nm.field_j;
@@ -21,11 +21,11 @@ final class sb {
               for (var2 = 0; var2 < 112; var2++) {
                 qh.field_m[var2] = false;
               }
-              uc.field_b = md.field_o;
+              uc.field_b = DirectByteStorage.field_o;
             } else {
-              while (uc.field_b != md.field_o) {
-                var2 = al.field_W[md.field_o];
-                md.field_o = 127 & md.field_o + 1;
+              while (uc.field_b != DirectByteStorage.field_o) {
+                var2 = al.field_W[DirectByteStorage.field_o];
+                DirectByteStorage.field_o = 127 & DirectByteStorage.field_o + 1;
                 if (var2 < 0) {
                   qh.field_m[~var2] = false;
                   continue;
@@ -100,7 +100,7 @@ final class sb {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
-        nj var5 = null;
+        ByteStorage var5 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_13_0 = null;
@@ -117,11 +117,11 @@ final class sb {
             return null;
           }
           if (!(param1 instanceof byte[])) {
-            if (!(param1 instanceof nj)) {
+            if (!(param1 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (nj) (param1);
-            stackIn_13_0 = var5.a((byte) -26);
+            var5 = (ByteStorage) (param1);
+            stackIn_13_0 = var5.getBytes((byte) -26);
             return stackIn_13_0;
           }
           var3 = (byte[]) (param1);

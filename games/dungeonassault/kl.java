@@ -81,8 +81,8 @@ class kl {
           jh.a(this.field_l);
           ke.a(-101, 0, this.field_i, 0);
           ke.a(21, this.field_a - 8, this.field_i, 0);
-          un.a(8, (byte) -127, this.field_a - 16, 0, true);
-          un.a(8, (byte) 50, this.field_a - 16, this.field_i - 8, true);
+          ByteStorage.a(8, (byte) -127, this.field_a - 16, 0, true);
+          ByteStorage.a(8, (byte) 50, this.field_a - 16, this.field_i - 8, true);
           qe.a(8, 8, -16 + this.field_a, this.field_i - 16, 224, 32, 7, 128);
           jh.b();
           return;

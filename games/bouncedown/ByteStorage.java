@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ah {
-    abstract void a(byte param0, byte[] param1);
+abstract class ByteStorage {
+    abstract void setBytes(byte param0, byte[] param1);
 
     final static String a(int param0, java.applet.Applet param1, String param2) {
         try {
@@ -70,7 +70,7 @@ abstract class ah {
         }
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static boolean a(String param0, String param1, byte param2) {
         String var3 = null;

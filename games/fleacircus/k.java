@@ -193,7 +193,7 @@ final class k {
               var4 = -40 + df.field_b.field_w;
             }
           }
-          qe.a(0, 30, df.field_b, 0, var4, param1, 80, 5120, param2);
+          DirectByteStorage.a(0, 30, df.field_b, 0, var4, param1, 80, 5120, param2);
         }
     }
 

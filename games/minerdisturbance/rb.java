@@ -172,7 +172,7 @@ final class rb {
                   var12 = -(var6 >> 2) + hf.field_t;
                   var13 = var11 * var11 + var12 * var12;
                   if (sc.field_b &&
-                    !ni.a(6, 11764) &&
+                    !ByteStorage.a(6, 11764) &&
                     var13 < 40) {
                     ag.a(true, 6, 8 * var6, var8 * 8);
                   }

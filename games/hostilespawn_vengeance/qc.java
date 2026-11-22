@@ -43,12 +43,12 @@ abstract class qc extends DualLinkNode {
         if (param0 > -93) {
           return;
         }
-        if (null == nj.field_c) {
+        if (null == ByteStorage.field_c) {
           return;
         }
-        var1 = nj.field_c;
+        var1 = ByteStorage.field_c;
         synchronized (var1) {
-          nj.field_c = null;
+          ByteStorage.field_c = null;
         }
     }
 

@@ -375,7 +375,7 @@ class jla {
     void i(int param0) {
         int var2;
         ada.field_p.d(0, 0);
-        gla.field_j.c(137, 0);
+        DirectByteStorage.field_j.c(137, 0);
         ml.field_a.d(127, 0);
         var2 = 137;
         bh.field_r.draw(418 + var2, 41);
@@ -1102,7 +1102,7 @@ class jla {
               }
               vs.field_d = false;
               sia.field_h = false;
-              nu.field_b = true;
+              ByteStorage.field_b = true;
               if (mg.field_m.a((byte) 102)) {
                 break regionExit1;
               }

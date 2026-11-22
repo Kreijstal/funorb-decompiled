@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ep extends un {
+final class DirectByteStorage extends ByteStorage {
     static String field_i;
     static String field_j;
     static cn field_g;
     static String[] field_f;
-    private java.nio.ByteBuffer field_h;
+    private java.nio.ByteBuffer buffer;
 
-    final void a(byte[] param0, int param1) {
+    final void setBytes(byte[] param0, int param1) {
         try {
           if (param1 < 30) {
-            ep.a((byte) -76, 4);
+            DirectByteStorage.a((byte) -76, 4);
           }
-          this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_h.position(0);
-          this.field_h.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -29,12 +29,12 @@ final class ep extends un {
         field_f = null;
     }
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         int var3 = 23 % ((-67 - param0) / 39);
-        byte[] var4 = new byte[this.field_h.capacity()];
+        byte[] var4 = new byte[this.buffer.capacity()];
         byte[] var2 = var4;
-        this.field_h.position(0);
-        this.field_h.get(var4);
+        this.buffer.position(0);
+        this.buffer.get(var4);
         return var4;
     }
 
@@ -107,7 +107,7 @@ final class ep extends un {
         }
     }
 
-    ep() {
+    DirectByteStorage() {
     }
 
     static {

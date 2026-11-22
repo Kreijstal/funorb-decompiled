@@ -613,7 +613,7 @@ class vg extends IntrusiveNode {
           }
           var9 = new bg(param8, param5, param2, param6, param1, param4, param7);
           gf.field_h.a(var9, 255);
-          jc.a(param3, var9, -121);
+          DirectByteStorage.a(param3, var9, -121);
           stackIn_3_0 = var9;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

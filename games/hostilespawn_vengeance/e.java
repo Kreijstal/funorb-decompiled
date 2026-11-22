@@ -213,7 +213,7 @@ final class e {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = nj.a(param1, true, var4).getFile();
+              var3 = ByteStorage.a(param1, true, var4).getFile();
               a.a(param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks", -13730);
               a.a(param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param0 ^ -28622);
               a.a(param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", -13730);

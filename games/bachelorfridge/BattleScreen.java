@@ -1819,7 +1819,7 @@ final class BattleScreen extends dfa {
           var4 = lga.a(true, new String[]{this.field_h.field_y[param1], Integer.toString(param2)}, pja.field_c);
           this.a(16711680, var4, -22468);
         } else {
-          var4 = lga.a(true, new String[]{Integer.toString(param2)}, nu.field_g);
+          var4 = lga.a(true, new String[]{Integer.toString(param2)}, ByteStorage.field_g);
           this.a(65280, var4, -22468);
         }
         if (param0 != 640) {

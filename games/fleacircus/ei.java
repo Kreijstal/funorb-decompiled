@@ -431,7 +431,7 @@ final class ei extends sh {
         String var9 = db.a(of.field_g, new String[]{ti.field_a, ua.field_xb}, true);
         String var10 = db.a(ca.field_O, new String[]{ti.field_a, ua.field_xb}, true);
         String var11 = db.a(fh.field_f, new String[]{ti.field_a, ua.field_xb}, true);
-        String var12 = db.a(hd.field_d, new String[]{ti.field_a, ua.field_xb}, true);
+        String var12 = db.a(ByteStorage.field_d, new String[]{ti.field_a, ua.field_xb}, true);
         String var13 = db.a(qj.field_F, new String[]{ti.field_a, ua.field_xb}, true);
         String var14 = db.a(ti.field_b, new String[]{ti.field_a, ua.field_xb}, param0);
         String var15 = db.a(wa.field_p, new String[]{ti.field_a, ua.field_xb}, true);
@@ -446,7 +446,7 @@ final class ei extends sh {
         DualLinkNode.field_i[6] = hg.field_l;
         DualLinkNode.field_i[5] = hg.field_l;
         DualLinkNode.field_i[11] = bk.field_c;
-        DualLinkNode.field_i[13] = hd.field_e;
+        DualLinkNode.field_i[13] = ByteStorage.field_e;
         DualLinkNode.field_i[2] = uh.field_t;
         DualLinkNode.field_i[12] = pj.field_z;
         DualLinkNode.field_i[3] = ji.field_b;

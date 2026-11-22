@@ -41,10 +41,10 @@ final class ArchiveIndex {
           tf.a(90);
         }
         if (aj.field_c > 0) {
-          f.a(aj.field_c, true);
+          ByteStorage.a(aj.field_c, true);
         }
         if (ed.field_c > 0) {
-          f.a(ed.field_c, true);
+          ByteStorage.a(ed.field_c, true);
         }
         if (param0 != 19) {
           ArchiveIndex.a((byte) -39);

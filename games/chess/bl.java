@@ -135,7 +135,7 @@ final class bl implements Iterable {
         RuntimeException var20 = null;
         try {
           bb.a(param16, param10, param18, (byte) -105, param4);
-          ja.a(param16, 1);
+          DirectByteStorage.a(param16, 1);
           wm.a(args, param11, 0, param6, param17, param16, param3, param14, param15, param19, param12, param1, param7, param8, param13);
           ij.a(param5, param9, param16, (byte) 91);
           if (param2 != 31) {

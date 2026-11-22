@@ -140,7 +140,7 @@ final class wf extends ma implements ha, mj {
             this.field_r = this.field_r + (5 + var7.b(this.field_V, this.field_y - 40, var7.field_C));
           }
           var8 = rc.field_e;
-          var9 = ja.a((byte) 127, bh.i(81));
+          var9 = DirectByteStorage.a((byte) 127, bh.i(81));
           if (var9 != ph.field_g) {
             if (le.field_g == var9) {
               var8 = oj.field_a;

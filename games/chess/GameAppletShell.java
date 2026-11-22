@@ -509,7 +509,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 bb.a(75);
                 this.d((byte) 125);
-                ph.field_j = ad.a((java.awt.Component) ((Object) ja.field_h), (byte) -80, em.field_O, tm.field_c);
+                ph.field_j = ad.a((java.awt.Component) ((Object) DirectByteStorage.field_h), (byte) -80, em.field_O, tm.field_c);
                 this.b(2);
                 v.field_e = dj.h(-13154);
                 do {
@@ -530,7 +530,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(hk.field_M > var3)) {
                       this.c((byte) 119);
-                      ak.a(oc.field_l, (byte) 111, ja.field_h);
+                      ak.a(oc.field_l, (byte) 111, DirectByteStorage.field_h);
                       break;
                     }
                     this.c(-120);
@@ -663,10 +663,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != ja.field_h) {
+          if (null != DirectByteStorage.field_h) {
             try {
-              ja.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-              ja.field_h.getParent().remove((java.awt.Component) ((Object) ja.field_h));
+              DirectByteStorage.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+              DirectByteStorage.field_h.getParent().remove((java.awt.Component) ((Object) DirectByteStorage.field_h));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -841,17 +841,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (50 < fieldTemp$1) {
             td.field_p = td.field_p - 50;
             od.field_W = true;
-            ja.field_h.setSize(tm.field_c, em.field_O);
-            ja.field_h.setVisible(true);
+            DirectByteStorage.field_h.setSize(tm.field_c, em.field_O);
+            DirectByteStorage.field_h.setVisible(true);
             boolean decompiledSharedTail0 = (null != lk.field_a &&
               null == ec.field_e);
             if (!decompiledSharedTail0) {
-              ja.field_h.setLocation(db.field_p, ka.field_c);
+              DirectByteStorage.field_h.setLocation(db.field_p, ka.field_c);
               decompiledSharedTail0 = (Chess.field_G != 0);
             }
             if (decompiledSharedTail0) {
               var6 = lk.field_a.getInsets();
-              ja.field_h.setLocation(var6.left + db.field_p, var6.top + ka.field_c);
+              DirectByteStorage.field_h.setLocation(var6.left + db.field_p, var6.top + ka.field_c);
             }
           }
           this.a(true);
@@ -896,10 +896,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = Chess.field_G;
         try {
-          if (null != ja.field_h) {
-            ja.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-            ja.field_h.getParent().setBackground(java.awt.Color.black);
-            ja.field_h.getParent().remove((java.awt.Component) ((Object) ja.field_h));
+          if (null != DirectByteStorage.field_h) {
+            DirectByteStorage.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+            DirectByteStorage.field_h.getParent().setBackground(java.awt.Color.black);
+            DirectByteStorage.field_h.getParent().remove((java.awt.Component) ((Object) DirectByteStorage.field_h));
           }
           boolean decompiledFrameRemainder0 = true;
           if (ec.field_e == null) {
@@ -925,21 +925,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var2 = ec.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ja.field_h = (java.awt.Canvas) ((Object) new g((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ja.field_h));
-          ja.field_h.setSize(tm.field_c, em.field_O);
-          ja.field_h.setVisible(true);
+          DirectByteStorage.field_h = (java.awt.Canvas) ((Object) new g((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DirectByteStorage.field_h));
+          DirectByteStorage.field_h.setSize(tm.field_c, em.field_O);
+          DirectByteStorage.field_h.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == lk.field_a);
           if (!decompiledSharedTail0) {
-            ja.field_h.setLocation(db.field_p, ka.field_c);
+            DirectByteStorage.field_h.setLocation(db.field_p, ka.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = lk.field_a.getInsets();
-            ja.field_h.setLocation(var3.left + db.field_p, ka.field_c + var3.top);
+            DirectByteStorage.field_h.setLocation(var3.left + db.field_p, ka.field_c + var3.top);
           }
-          ja.field_h.addFocusListener((java.awt.event.FocusListener) (this));
-          ja.field_h.requestFocus();
+          DirectByteStorage.field_h.addFocusListener((java.awt.event.FocusListener) (this));
+          DirectByteStorage.field_h.requestFocus();
           wc.field_x = true;
           b.field_f = true;
           od.field_W = true;

@@ -448,7 +448,7 @@ final class CombatState {
           this.field_q = param2.readByte((byte) 2);
           this.field_B = param2.readByte((byte) 2);
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 4; var4_intLifetime1++) {
-            this.field_A[var4_intLifetime1] = ep.a(var4_intLifetime1, -1, param2);
+            this.field_A[var4_intLifetime1] = DirectByteStorage.a(var4_intLifetime1, -1, param2);
           }
           if (param0 < 57) {
             this.field_y = 110;

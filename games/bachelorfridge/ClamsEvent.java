@@ -200,7 +200,7 @@ final class ClamsEvent extends SpecialEvent {
             return;
           }
           ada.field_p.d(0, 0);
-          gla.field_j.c(137, 0);
+          DirectByteStorage.field_j.c(137, 0);
           ml.field_a.d(127, 0);
           vj.field_p.draw(154, 17);
           var1_int = 249;

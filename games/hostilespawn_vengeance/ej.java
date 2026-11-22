@@ -85,10 +85,10 @@ abstract class ej {
     abstract void c(int param0);
 
     final static Object a(boolean param0, byte[] param1, int param2) {
-        md var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        md stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
@@ -102,8 +102,8 @@ abstract class ej {
             return stackIn_2_0;
           }
           if (param1.length > 136) {
-            var3 = new md();
-            ((nj) ((Object) var3)).a(24, param1);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(24, param1);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }

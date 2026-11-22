@@ -207,7 +207,7 @@ final class dl extends jla {
           vj.field_m.c(0, 0);
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
-        nu.field_e.draw(-5, 0);
+        ByteStorage.field_e.draw(-5, 0);
         if (param0 != 9) {
           discarded$0 = this.b(23, (byte) -91);
         }

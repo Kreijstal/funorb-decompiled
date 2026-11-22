@@ -46,8 +46,8 @@ final class StatusEffectInfo {
           if (!param0) {
             field_h = (String) null;
           }
-          if (nu.field_b) {
-            nu.field_b = false;
+          if (ByteStorage.field_b) {
+            ByteStorage.field_b = false;
             gs.field_f = null;
             dj.field_c = null;
             UiComponent.field_fb = null;

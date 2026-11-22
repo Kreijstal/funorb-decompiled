@@ -34,7 +34,7 @@ final class tb {
           return sa.field_b + " - " + qd.field_Jb.b(10461, "commonui") + "%";
         }
         if (!sb.field_i.a(0)) {
-          return bh.field_d;
+          return ByteStorage.field_d;
         }
         if (param0 != -81) {
           return (String) null;

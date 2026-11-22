@@ -558,7 +558,7 @@ final class FridgeScreen {
           au.field_c = 5;
         }
         if (1 == this.field_a.field_R &&
-          gla.field_k) {
+          DirectByteStorage.field_k) {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_m.e(12917) && (!AttackUpAllAnimation.e(-29919) ||
             af.field_a)) {

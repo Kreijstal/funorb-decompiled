@@ -264,7 +264,7 @@ abstract class ul extends vd {
 
     final static void e(byte param0) {
         ri.a((byte) 126, true, qi.field_G, fj.field_Sb);
-        md.field_i = true;
+        DirectByteStorage.field_i = true;
         if (param0 != -25) {
           field_M = (String) null;
         }

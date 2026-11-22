@@ -1250,11 +1250,11 @@ final class ld {
           field_b = -52L;
         }
         if (this.field_c == 3 &&
-          jc.field_g > 0) {
-          kc.field_r = kc.field_r - jc.field_g / 2;
+          DirectByteStorage.field_g > 0) {
+          kc.field_r = kc.field_r - DirectByteStorage.field_g / 2;
           if (0 != (lf.field_b & 1)) {
             kc.field_r = kc.field_r - 1;
-            jc.field_g = jc.field_g - 1;
+            DirectByteStorage.field_g = DirectByteStorage.field_g - 1;
           }
         }
         if (this.field_c != 6) {
@@ -1780,10 +1780,10 @@ final class ld {
                   }
                 } else {
                   if (this.field_e.e(-748)) {
-                    jc.field_g = 31;
+                    DirectByteStorage.field_g = 31;
                     lf.field_b = 0;
                     gf.field_b = 0;
-                    kc.field_r = jc.field_g * (1 + jc.field_g) / 2;
+                    kc.field_r = DirectByteStorage.field_g * (1 + DirectByteStorage.field_g) / 2;
                     al.a((byte) -43);
                     ek.a(param1 ^ -57, param2, 3);
                     tc.field_d = this.field_c;

@@ -1080,7 +1080,7 @@ final class gf {
             this.field_h >= 12) && this.field_h < 15) {
             if (12 <= this.field_h &&
               15 != this.field_h &&
-              !ni.a(13, 11764)) {
+              !ByteStorage.a(13, 11764)) {
               var4Lifetime1 = -this.field_n + ca.field_k;
               var5 = -this.field_p + hf.field_t;
               if (var4Lifetime1 * var4Lifetime1 + var5 * var5 < 25) {

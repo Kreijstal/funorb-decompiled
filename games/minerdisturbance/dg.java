@@ -11,12 +11,12 @@ final class dg {
         gd.field_B = true;
         if (param0 == 117) {
           mb.field_b.n(21974);
-          t.a(false, ArchiveProvider.field_a, param0 ^ 117);
+          DirectByteStorage.a(false, ArchiveProvider.field_a, param0 ^ 117);
           return;
         }
         field_b = false;
         mb.field_b.n(21974);
-        t.a(false, ArchiveProvider.field_a, param0 ^ 117);
+        DirectByteStorage.a(false, ArchiveProvider.field_a, param0 ^ 117);
     }
 
     final static gj a(String param0, int param1) {

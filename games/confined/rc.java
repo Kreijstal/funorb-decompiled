@@ -159,10 +159,10 @@ final class rc implements fe {
             stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
               if (stackIn_14_0) {
-                var12 = qf.field_a[var9];
+                var12 = ByteStorage.field_a[var9];
                 var13 = db.field_x[var9];
-                var14 = -var12 + qf.field_a[var10];
-                var15 = qf.field_a[var11] - var12;
+                var14 = -var12 + ByteStorage.field_a[var10];
+                var15 = ByteStorage.field_a[var11] - var12;
                 var16 = -var13 + db.field_x[var10];
                 var17 = db.field_x[var11] - var13;
               }
@@ -343,10 +343,10 @@ final class rc implements fe {
             stackIn_14_0 = stackOut_13_0;
             if (var19 == 0) {
               if (stackIn_14_0) {
-                var12 = qf.field_a[var9];
+                var12 = ByteStorage.field_a[var9];
                 var13 = db.field_x[var9];
-                var14 = -var12 + qf.field_a[var10];
-                var15 = qf.field_a[var11] - var12;
+                var14 = -var12 + ByteStorage.field_a[var10];
+                var15 = ByteStorage.field_a[var11] - var12;
                 var16 = -var13 + db.field_x[var10];
                 var17 = db.field_x[var11] - var13;
               }

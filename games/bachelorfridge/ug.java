@@ -12,10 +12,10 @@ final class ug extends pv {
     static Sprite field_o;
 
     final static Object a(boolean param0, byte[] param1, int param2) {
-        gla var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
-        gla stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -31,8 +31,8 @@ final class ug extends pv {
             return stackIn_4_0;
           }
           if (param1.length > 136) {
-            var3 = new gla();
-            ((nu) ((Object) var3)).a((byte) 43, param1);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes((byte) 43, param1);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }

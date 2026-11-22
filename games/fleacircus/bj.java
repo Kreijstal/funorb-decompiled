@@ -67,7 +67,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         var3 = fleas.field_A ? 1 : 0;
         try {
           var1 = ud.field_b;
-          while (hd.a(-101)) {
+          while (ByteStorage.a(-101)) {
             var1.e(8, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

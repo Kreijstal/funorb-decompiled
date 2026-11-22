@@ -581,7 +581,7 @@ final class pc extends ci {
         var18 = null;
         var19 = Chess.field_G;
         try {
-          f.a(ed.field_c, true);
+          ByteStorage.a(ed.field_c, true);
           if (null != pd.field_Rb) {
             sc.field_d.field_tb = true;
             uj.field_j.field_pb = 0;

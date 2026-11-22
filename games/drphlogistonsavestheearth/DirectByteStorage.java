@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends bh {
+final class DirectByteStorage extends ByteStorage {
     static int field_g;
     static int field_j;
-    private java.nio.ByteBuffer field_f;
+    private java.nio.ByteBuffer buffer;
     static int[] field_h;
     static int field_i;
 
@@ -21,7 +21,7 @@ final class jc extends bh {
             ib.field_f = ug.a(param1, 0);
           }
           if (param0 != 45) {
-            jc.c((byte) -81);
+            DirectByteStorage.c((byte) -81);
           }
           stackIn_7_0 = ib.field_f;
           return stackIn_7_0;
@@ -72,28 +72,28 @@ final class jc extends bh {
         }
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
-          this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_f.position(0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
           if (param1 >= -124) {
             String var4 = (String) null;
-            jc.a((byte) -95, (String) null);
+            DirectByteStorage.a((byte) -95, (String) null);
           }
-          this.field_f.put(param0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final byte[] c(int param0) {
-        byte[] var3 = new byte[this.field_f.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_f.position(0);
+        this.buffer.position(0);
         if (param0 != 19707) {
           return (byte[]) null;
         }
-        this.field_f.get(var3);
+        this.buffer.get(var3);
         return var3;
     }
 
@@ -116,7 +116,7 @@ final class jc extends bh {
           var8.writeInt(param1.field_o, (byte) 126);
           var8.writeInt(param1.field_s, (byte) 107);
           if (param2 >= -93) {
-            jc.c((byte) -14);
+            DirectByteStorage.c((byte) -14);
           }
           var8.writeInt(param1.field_j, (byte) -112);
           var8.writeInt(param1.field_h, (byte) -16);
@@ -131,7 +131,7 @@ final class jc extends bh {
         }
     }
 
-    jc() {
+    DirectByteStorage() {
     }
 
     final static void a(nh param0, int param1, int param2, byte param3, int param4, int param5) {
@@ -170,7 +170,7 @@ final class jc extends bh {
           var10 = param0.field_w;
           var11 = param0.field_y;
           if (param3 < 28) {
-            jc.c((byte) -103);
+            DirectByteStorage.c((byte) -103);
           }
           var12 = wj.field_k - var11;
           var13 = 0;

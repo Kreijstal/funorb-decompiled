@@ -134,7 +134,7 @@ final class da extends ArchiveProvider {
                 if (!dn.field_b) {
                   stackIn_27_0 = ij.field_e;
                 } else {
-                  stackIn_27_0 = ja.field_c;
+                  stackIn_27_0 = DirectByteStorage.field_c;
                 }
                 var19 = stackIn_27_0;
               }
@@ -353,7 +353,7 @@ final class da extends ArchiveProvider {
                 bo.a(bh.i(81), (byte) -12);
                 n.field_c = rb.field_d;
                 si.d(param5 + 65350);
-                ja.field_f = false;
+                DirectByteStorage.field_f = false;
                 stackIn_49_0 = var9;
                 return stackIn_49_0;
               }
@@ -393,7 +393,7 @@ final class da extends ArchiveProvider {
                 do {
                   if (var12 >= var11) {
                     si.d(65280);
-                    ja.field_f = false;
+                    DirectByteStorage.field_f = false;
                     break;
                   }
                   sa.field_b[var12] = tk.field_h.readPrefixedString(false);
@@ -418,12 +418,12 @@ final class da extends ArchiveProvider {
               }
             }
             si.d(65280);
-            ja.field_f = false;
+            DirectByteStorage.field_f = false;
             stackIn_91_0 = wg.field_B;
             return stackIn_91_0;
           }
           if (null == ArchiveIndex.field_a) {
-            if (ja.field_f) {
+            if (DirectByteStorage.field_f) {
               if (ea.i((byte) -121) > 30000L) {
                 n.field_c = nc.field_Q;
                 if (var13 != 0) {
@@ -432,14 +432,14 @@ final class da extends ArchiveProvider {
               } else {
                 n.field_c = li.field_b;
               }
-              ja.field_f = false;
+              DirectByteStorage.field_f = false;
               stackIn_105_0 = 249;
               return stackIn_105_0;
             }
             var9 = qh.field_a;
             qh.field_a = bk.field_n;
             bk.field_n = var9;
-            ja.field_f = true;
+            DirectByteStorage.field_f = true;
           }
           stackIn_108_0 = -1;
           return stackIn_108_0;
@@ -1384,7 +1384,7 @@ final class da extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          ja.$cfr$intArgs$a$c398e174f2fe(param0.field_Yb, param0.field_Lb, -122, param5, -1, param0, (int[]) null, -1, param0.field_Rb);
+          DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(param0.field_Yb, param0.field_Lb, -122, param5, -1, param0, (int[]) null, -1, param0.field_Rb);
           pi.field_d.a(0, true);
           pi.field_d.a(17, (int[]) null, 0);
           pi.field_d.d(-32);

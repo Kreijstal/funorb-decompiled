@@ -264,7 +264,7 @@ final class am {
             }
             ld.field_g = 1;
             var3 = var1.readString(0);
-            f.field_a = ((String) (var3)).intern();
+            ByteStorage.field_a = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-82);
             mh.a(2, var4);
             return;

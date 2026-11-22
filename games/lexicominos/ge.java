@@ -129,7 +129,7 @@ final class ge implements Runnable {
                 ra.a(sg.field_a, 0, th.field_s, hh.field_I, var6_intLifetime1, ki.field_g);
               }
             }
-            bh.b((byte) 83, var5);
+            DirectByteStorage.b((byte) 83, var5);
             var6 = new String[2][var5];
             var19 = new int[2][4 * var5];
             var8 = pf.field_o;

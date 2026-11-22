@@ -242,7 +242,7 @@ final class b {
         if (null != ch.field_gb) {
           ch.field_gb.c((byte) -103);
         }
-        ja.field_h.requestFocus();
+        DirectByteStorage.field_h.requestFocus();
     }
 
     public static void clearStaticReferences(int param0) {

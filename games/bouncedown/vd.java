@@ -76,10 +76,10 @@ final class vd {
           if (param0 <= 35) {
             field_a = 33;
           }
-          de.field_b = param1.readUnsignedShort(-1640531527) << 5;
+          DirectByteStorage.field_b = param1.readUnsignedShort(-1640531527) << 5;
           var2_int = param1.readUnsignedByte((byte) -104);
           MouseWheelInput.field_a = (7 & var2_int) << 18;
-          de.field_b = de.field_b + (var2_int >> 3);
+          DirectByteStorage.field_b = DirectByteStorage.field_b + (var2_int >> 3);
           MouseWheelInput.field_a = MouseWheelInput.field_a + (param1.readUnsignedShort(-1640531527) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -119);
           ed.field_b = (63 & var2_intLifetime1) << 15;

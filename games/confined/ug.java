@@ -246,9 +246,9 @@ abstract class ug extends oe {
     }
 
     final static Object a(int param0, boolean param1, byte[] param2) {
-        ig var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        ig stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
@@ -261,8 +261,8 @@ abstract class ug extends oe {
             return null;
           }
           if (param2.length > 136) {
-            var3 = new ig();
-            ((qf) ((Object) var3)).a((byte) 49, param2);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes((byte) 49, param2);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

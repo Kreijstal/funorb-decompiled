@@ -11,7 +11,7 @@ final class ta extends me {
         if (param0 != 3) {
           field_mb = (int[]) null;
         }
-        return md.field_k;
+        return DirectByteStorage.field_k;
     }
 
     final void b(ag param0, byte param1) {
@@ -282,10 +282,10 @@ final class ta extends me {
           }
           uj.field_p.field_g = (int)(24.0 * (mm.field_m[0].field_l.field_a + (double)mm.field_m[0].field_j.field_g) - 240.0);
           uj.field_p.field_e = (int)(-320.0 + (mm.field_m[0].field_l.field_f + (double)mm.field_m[0].field_j.field_e) * 24.0);
-          if (null != md.field_g) {
-            for (var6Lifetime2 = 0; var6Lifetime2 < md.field_g.length; var6Lifetime2++) {
-              md.field_g[var6Lifetime2].a(18421);
-              md.field_g[var6Lifetime2] = null;
+          if (null != DirectByteStorage.field_g) {
+            for (var6Lifetime2 = 0; var6Lifetime2 < DirectByteStorage.field_g.length; var6Lifetime2++) {
+              DirectByteStorage.field_g[var6Lifetime2].a(18421);
+              DirectByteStorage.field_g[var6Lifetime2] = null;
             }
           }
           var6Lifetime3 = 0;
@@ -298,9 +298,9 @@ final class ta extends me {
               var6Lifetime3 = var6Lifetime3 | 1 << var9;
             }
           }
-          if (md.field_g == null ||
-            var7Lifetime2 != md.field_g.length) {
-            md.field_g = new lf[var7Lifetime2];
+          if (DirectByteStorage.field_g == null ||
+            var7Lifetime2 != DirectByteStorage.field_g.length) {
+            DirectByteStorage.field_g = new lf[var7Lifetime2];
           }
           var8Lifetime1 = 0;
           var9Lifetime1 = 1;
@@ -308,7 +308,7 @@ final class ta extends me {
             if ((var6Lifetime3 & 1 << var9Lifetime1) != 0) {
               incrementValue$0 = var8Lifetime1;
               var8Lifetime1++;
-              md.field_g[incrementValue$0] = new lf(var9Lifetime1, 0, 640);
+              DirectByteStorage.field_g[incrementValue$0] = new lf(var9Lifetime1, 0, 640);
             }
             var9Lifetime1++;
           }
@@ -427,7 +427,7 @@ final class ta extends me {
           }
           try {
             var3 = new java.net.URL(param2.getCodeBase(), param1);
-            var3 = nj.a(param2, true, var3);
+            var3 = ByteStorage.a(param2, true, var3);
             ArchiveIndex.a(param2, var3.toString(), (byte) -97, true);
           } catch (Exception exception) {
             exception.printStackTrace();

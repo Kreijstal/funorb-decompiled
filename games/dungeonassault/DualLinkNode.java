@@ -109,7 +109,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[20] = lc.a(-27711, new String[][]{hh.field_n, fj.field_a, k.field_a});
         le.field_b[21] = lc.a(-27711, new String[][]{rn.field_g});
         le.field_b[22] = lc.a(-27711, new String[][]{GameAppletShell.field_e});
-        le.field_b[23] = lc.a(-27711, new String[][]{vf.field_A, qd.field_e, rk.field_k, un.field_b});
+        le.field_b[23] = lc.a(-27711, new String[][]{vf.field_A, qd.field_e, rk.field_k, ByteStorage.field_b});
         le.field_b[24] = lc.a(-27711, new String[][]{tp.field_A});
         if (!(kd.field_c <= 25)) {
           kd.field_c = 0;

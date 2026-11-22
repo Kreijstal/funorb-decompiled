@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class f {
+abstract class ByteStorage {
     static String field_a;
     static ResourceArchive field_b;
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] param0, int param1);
 
-    abstract byte[] b(int param0);
+    abstract byte[] getBytes(int param0);
 
     public static void clearStaticReferences(int param0) {
         if (param0 != -24420) {

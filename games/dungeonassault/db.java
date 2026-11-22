@@ -1044,7 +1044,7 @@ final class db extends qe {
             stackIn_15_0 = (var7 <= gm.field_d.field_s) ? 0 : 16711680;
             var8 = stackIn_15_0;
             field_v.c(jk.a(new String[]{Integer.toString(var7 / 10)}, ho.field_c, 30496), var2, 105 + var3, var8, -1);
-            la.field_b.a(un.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+            la.field_b.a(ByteStorage.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             if (var9 != 0) {
               la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             }

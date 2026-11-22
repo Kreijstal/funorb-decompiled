@@ -31,7 +31,7 @@ final class be extends ip {
             if (var3 != null) {
               if (var3.a((byte) -117) == c.field_d &&
                 !param1.equals(this.field_p.field_w)) {
-                stackIn_9_0 = ep.field_j;
+                stackIn_9_0 = DirectByteStorage.field_j;
                 return stackIn_9_0;
               }
               stackIn_11_0 = var3.a(true);
@@ -41,7 +41,7 @@ final class be extends ip {
           if (param1.equals(this.field_p.field_w)) {
             return null;
           }
-          stackIn_15_0 = ep.field_j;
+          stackIn_15_0 = DirectByteStorage.field_j;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

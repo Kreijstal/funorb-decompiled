@@ -359,7 +359,7 @@ final class cl extends ee {
                       this.d(10797);
                     }
                   } else {
-                    this.a(qf.field_b, -84);
+                    this.a(ByteStorage.field_b, -84);
                   }
                 } else {
                   if (var4 == 5) {

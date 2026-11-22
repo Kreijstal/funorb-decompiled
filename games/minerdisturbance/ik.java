@@ -399,7 +399,7 @@ final class ik extends kn implements be, sh, f {
         var3 = var3 + this.a(170, var3, id.field_i, this.field_P, -2791);
         var3 = var3 + (5 + this.a(20, di.field_cb, "", this.field_M, var3, (byte) -116, 170));
         var3 = var3 + this.a(170, var3, tk.field_c, this.field_J, -2791);
-        var3 = var3 + (5 + this.a(170, di.field_E, var3, this.field_O, -100, t.field_d));
+        var3 = var3 + (5 + this.a(170, di.field_E, var3, this.field_O, -100, DirectByteStorage.field_d));
         var3 = var3 + (5 + this.a(170, SpriteState.field_w, var3, this.field_I, -100, wm.field_c));
         var3 = var3 + this.a(oc.field_j, this.field_Q, 170, var3, 105);
         am var4 = new am(46, var3, this.field_v - 90, 25, this.field_V, true, -120 + this.field_v, 5, sl.field_q, 11579568, mc.field_x);

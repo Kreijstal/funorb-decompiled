@@ -22,7 +22,7 @@ final class mj {
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (!param2) {
           gf.a();
-          un.a(param2, (byte) -106);
+          ByteStorage.a(param2, (byte) -106);
           if (param0) {
             field_b = (String) null;
             return;
@@ -30,7 +30,7 @@ final class mj {
           return;
         }
         gf.b(0, 0, gf.field_i, gf.field_c, 0, 192);
-        un.a(param2, (byte) -106);
+        ByteStorage.a(param2, (byte) -106);
         if (param0) {
           field_b = (String) null;
           return;

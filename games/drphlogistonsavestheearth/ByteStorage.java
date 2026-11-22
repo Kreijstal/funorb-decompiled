@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bh {
+abstract class ByteStorage {
     static String field_d;
     static he[] field_b;
     static nh[] field_c;
@@ -17,7 +17,7 @@ abstract class bh {
         if (param0 < -11) {
           return;
         }
-        bh.a((byte) 18);
+        ByteStorage.a((byte) 18);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -30,14 +30,14 @@ abstract class bh {
         field_d = null;
     }
 
-    abstract byte[] c(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static void b(int param0) {
         int var1 = -57 % ((param0 + 21) / 51);
         e.e(-20480);
     }
 
-    abstract void a(byte[] param0, byte param1);
+    abstract void setBytes(byte[] param0, byte param1);
 
     final static boolean b(byte param0) {
         if (param0 < -92) {

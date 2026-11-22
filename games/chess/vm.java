@@ -111,10 +111,10 @@ abstract class vm extends jb implements ha {
     abstract mk a(byte param0, String param1);
 
     final static Object a(int param0, byte[] param1, boolean param2) {
-        ja var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        ja stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
@@ -128,8 +128,8 @@ abstract class vm extends jb implements ha {
             return stackIn_2_0;
           }
           if (param1.length > 136) {
-            var3 = new ja();
-            ((f) ((Object) var3)).a(param1, 199);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param1, 199);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }

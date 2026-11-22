@@ -67,7 +67,7 @@ final class af implements Runnable {
               }
             } else {
               gb.c();
-              hd.a(320, 240, -27794);
+              ByteStorage.a(320, 240, -27794);
               be.a(0, param0, (byte) -29, 0);
             }
           } else {

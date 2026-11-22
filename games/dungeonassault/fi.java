@@ -176,7 +176,7 @@ final class fi extends qe {
         vf.a(432, true, 599, 117, 48);
         vf.a(32, true, 164, -110, 8);
         vf.a(32, true, 468, -2, 8);
-        un.a(41, (byte) -98, 558, 416, true);
+        ByteStorage.a(41, (byte) -98, 558, 416, true);
         ad.field_e.h(41, 48);
         ad.field_e.j(-ad.field_e.field_d + 599, 48);
         ad.field_e.f(164 - ad.field_e.field_d, -ad.field_e.field_b + 40);

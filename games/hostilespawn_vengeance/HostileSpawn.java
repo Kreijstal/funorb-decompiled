@@ -188,27 +188,27 @@ public final class HostileSpawn extends NetworkGameClient {
               field_J[1] = fg.a("", "hud_health_slice", vd.field_C, false);
               field_J[2] = fg.a("", "hud_health_top", vd.field_C, false);
               vg.field_c = qm.a("", 0, "marine_face", vd.field_C);
-              nj.field_d = new pg[2][10];
-              nj.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
-              nj.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
-              nj.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
-              nj.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", vd.field_C);
-              nj.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", vd.field_C);
-              nj.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", vd.field_C);
-              nj.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", vd.field_C);
-              nj.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", vd.field_C);
-              nj.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", vd.field_C);
-              nj.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", vd.field_C);
-              nj.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", vd.field_C);
-              nj.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", vd.field_C);
-              nj.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", vd.field_C);
-              nj.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", vd.field_C);
-              nj.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", vd.field_C);
-              nj.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", vd.field_C);
-              nj.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", vd.field_C);
-              nj.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
-              nj.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
-              nj.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
+              ByteStorage.field_d = new pg[2][10];
+              ByteStorage.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
+              ByteStorage.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
+              ByteStorage.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
+              ByteStorage.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", vd.field_C);
+              ByteStorage.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", vd.field_C);
+              ByteStorage.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", vd.field_C);
+              ByteStorage.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", vd.field_C);
+              ByteStorage.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", vd.field_C);
+              ByteStorage.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", vd.field_C);
+              ByteStorage.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", vd.field_C);
+              ByteStorage.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", vd.field_C);
+              ByteStorage.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", vd.field_C);
+              ByteStorage.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", vd.field_C);
+              ByteStorage.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", vd.field_C);
+              ByteStorage.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", vd.field_C);
+              ByteStorage.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", vd.field_C);
+              ByteStorage.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", vd.field_C);
+              ByteStorage.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
+              ByteStorage.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
+              ByteStorage.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
               this.s(param0 + 152);
               ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
               ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
@@ -1245,7 +1245,7 @@ public final class HostileSpawn extends NetworkGameClient {
           GameCanvas.a(119);
           mf.b(-33);
           rg.clearStaticReferences(1);
-          nj.clearStaticReferences((byte) -93);
+          ByteStorage.clearStaticReferences((byte) -93);
           wf.clearStaticReferences();
           ck.clearStaticReferences(-665);
           ng.clearStaticReferences(10448);
@@ -1302,7 +1302,7 @@ public final class HostileSpawn extends NetworkGameClient {
           dj.clearStaticReferences();
           tf.clearStaticReferences(16976);
           mb.c(param0 + 99);
-          md.c((byte) 70);
+          DirectByteStorage.c((byte) 70);
           df.clearStaticReferences(49);
           rj.e((byte) -122);
           od.e((byte) -55);
@@ -1885,7 +1885,7 @@ public final class HostileSpawn extends NetworkGameClient {
                           he.field_t.e(0)) {
                           if (te.field_J != null && (!te.field_J.a(-15879) ||
                             !te.field_J.e(param0 ^ 4))) {
-                            gj.a(param0 ^ 16, md.a(in.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
+                            gj.a(param0 ^ 16, DirectByteStorage.a(in.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
                             return false;
                           }
                           if (wd.field_a.a(param0 - 15883) &&
@@ -1920,25 +1920,25 @@ public final class HostileSpawn extends NetworkGameClient {
                         gj.a(20, s.a(tk.field_a, "", 66, cl.field_h, lj.field_r), 80.0f);
                         return false;
                       }
-                      gj.a(20, md.a(MouseInput.field_f, IsaacGenerator.field_h, dg.field_rb, (byte) -82), 35.0f);
+                      gj.a(20, DirectByteStorage.a(MouseInput.field_f, IsaacGenerator.field_h, dg.field_rb, (byte) -82), 35.0f);
                       return false;
                     }
-                    gj.a(param0 ^ 16, md.a(MouseInput.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
+                    gj.a(param0 ^ 16, DirectByteStorage.a(MouseInput.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
                     return false;
                   }
-                  gj.a(20, md.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
+                  gj.a(20, DirectByteStorage.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
                   return false;
                 }
-                gj.a(param0 ^ 16, md.a(GzipDecompressor.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
+                gj.a(param0 ^ 16, DirectByteStorage.a(GzipDecompressor.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
                 return false;
               }
-              gj.a(20, md.a(GzipDecompressor.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
+              gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
               return false;
             }
-            gj.a(param0 ^ 16, md.a(sd.field_v, ph.field_F, hn.field_c, (byte) 84), 10.0f);
+            gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, ph.field_F, hn.field_c, (byte) 84), 10.0f);
             return false;
           }
-          gj.a(20, md.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
+          gj.a(20, DirectByteStorage.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -2334,7 +2334,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           try {
             var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-            param0.getAppletContext().showDocument(nj.a(param0, true, var2), "_top");
+            param0.getAppletContext().showDocument(ByteStorage.a(param0, true, var2), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }

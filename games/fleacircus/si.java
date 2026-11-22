@@ -162,8 +162,8 @@ final class si {
         var5 = fleas.field_A ? 1 : 0;
         try {
           ib.field_g = ib.field_g + 65536;
-          while (a.a(hd.field_b, ib.field_g, (byte) -17) >= 65536) {
-            ib.field_g = ib.field_g - hd.field_b;
+          while (a.a(ByteStorage.field_b, ib.field_g, (byte) -17) >= 65536) {
+            ib.field_g = ib.field_g - ByteStorage.field_b;
             bf.field_b = bf.field_b + 1;
           }
           var2_int = -1;
@@ -176,21 +176,21 @@ final class si {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (BufferedSocket.field_i < hd.field_g) {
+            if (BufferedSocket.field_i < ByteStorage.field_g) {
               BufferedSocket.field_i = BufferedSocket.field_i + 1;
-              if (BufferedSocket.field_i > hd.field_c && (null == wa.field_k ||
+              if (BufferedSocket.field_i > ByteStorage.field_c && (null == wa.field_k ||
                 null == wa.field_k[ql.field_o])) {
                 BufferedSocket.field_i = BufferedSocket.field_i - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (BufferedSocket.field_i >= hd.field_g &&
+                if (BufferedSocket.field_i >= ByteStorage.field_g &&
                   null == wa.field_k[(1 + ql.field_o) % var2_int]) {
                   BufferedSocket.field_i = BufferedSocket.field_i - 1;
                 }
               }
             }
-            if (BufferedSocket.field_i >= hd.field_g) {
+            if (BufferedSocket.field_i >= ByteStorage.field_g) {
               t.field_a = ql.field_o;
               if (rc.field_i) {
                 ql.field_o = ql.field_o + 1;
@@ -203,9 +203,9 @@ final class si {
                   ql.field_o = ql.field_o + var2_int;
                 }
               }
-              BufferedSocket.field_i = BufferedSocket.field_i - hd.field_g;
+              BufferedSocket.field_i = BufferedSocket.field_i - ByteStorage.field_g;
             }
-            if (BufferedSocket.field_i > hd.field_c) {
+            if (BufferedSocket.field_i > ByteStorage.field_c) {
               rc.field_i = true;
             }
           }
@@ -217,7 +217,7 @@ final class si {
               var3 + MouseWheelInput.field_f.field_t > ob.field_e) {
               if (269 - MouseWheelInput.field_f.field_w < pb.field_d &&
                 pb.field_d < 269) {
-                BufferedSocket.field_i = hd.field_g;
+                BufferedSocket.field_i = ByteStorage.field_g;
                 var4 = 1;
                 rc.field_i = false;
               }
@@ -225,20 +225,20 @@ final class si {
                 pb.field_d < MouseWheelInput.field_f.field_w + 586) {
                 rc.field_i = true;
                 var4 = 1;
-                BufferedSocket.field_i = hd.field_g;
+                BufferedSocket.field_i = ByteStorage.field_g;
               }
             }
             if (var4 == 0 &&
-              hd.field_c < BufferedSocket.field_i &&
+              ByteStorage.field_c < BufferedSocket.field_i &&
               var3 < kc.field_b &&
               kc.field_b < MouseWheelInput.field_f.field_t + var3) {
               if (ag.field_f > 269 - MouseWheelInput.field_f.field_w &&
                 ag.field_f < 269) {
-                BufferedSocket.field_i = hd.field_c;
+                BufferedSocket.field_i = ByteStorage.field_c;
               }
               if (ag.field_f > 586 &&
                 ag.field_f < MouseWheelInput.field_f.field_w + 586) {
-                BufferedSocket.field_i = hd.field_c;
+                BufferedSocket.field_i = ByteStorage.field_c;
               }
             }
           }

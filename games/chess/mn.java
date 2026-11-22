@@ -211,7 +211,7 @@ final class mn extends wn {
           if (2 != param1.field_k) {
             if (param1.field_k == 0 &&
               dn.field_b) {
-              var3 = "[" + ja.field_c + "] ";
+              var3 = "[" + DirectByteStorage.field_c + "] ";
             }
             if (param1.field_k == 1) {
               var3 = "[" + oc.a(fb.field_D, new String[]{param1.field_b}, (byte) -122) + "] ";
