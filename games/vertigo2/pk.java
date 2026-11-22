@@ -105,7 +105,7 @@ final class pk extends IntrusiveNode {
           DelegatingCanvas.field_e = param1;
           var3 = (gg) (fm.field_b.a((byte) 100));
           while (var3 != null) {
-            if (!var3.field_q.b(99)) {
+            if (!var3.field_q.isLinked(99)) {
               var3.unlink(2);
             } else {
               var3.field_r.g(128 + var3.field_p * DelegatingCanvas.field_e >> 8);
@@ -115,7 +115,7 @@ final class pk extends IntrusiveNode {
           if (ro.field_b != null) {
             var3Lifetime1 = (gg) (ro.field_b.a((byte) 100));
             while (var3Lifetime1 != null) {
-              stackIn_12_0 = var3Lifetime1.field_q.b(114);
+              stackIn_12_0 = var3Lifetime1.field_q.isLinked(114);
               if (!stackIn_12_0) {
                 var3Lifetime1.unlink(2);
               } else {

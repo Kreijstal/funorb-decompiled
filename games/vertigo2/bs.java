@@ -28,7 +28,7 @@ final class bs extends UiPanel {
         if (param0 != 15) {
           this.field_Nb = (UiPanel) null;
         }
-        return !this.e(param0 - 109) ? true : false;
+        return !this.isSecondaryLinked(param0 - 109) ? true : false;
     }
 
     bs(String param0, String param1, long param2) {

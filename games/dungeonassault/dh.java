@@ -26,7 +26,7 @@ final class dh implements Iterable {
         }
         try {
           if (null != param0.field_l) {
-            param0.b((byte) -2);
+            param0.unlinkSecondary((byte) -2);
           }
           param0.field_n = this.field_d;
           param0.field_l = this.field_d.field_l;
@@ -97,7 +97,7 @@ final class dh implements Iterable {
         if (this.field_d == var2) {
           return null;
         }
-        var2.b((byte) -2);
+        var2.unlinkSecondary((byte) -2);
         if (param0) {
           return var2;
         }

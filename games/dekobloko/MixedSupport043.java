@@ -13,7 +13,7 @@ abstract class MixedSupport043 {
         try {
           int integerLocal1 = 32 % ((byteArgument1 - 60) / 49);
           if (null != hashNodeArgument2.next) {
-            hashNodeArgument2.performAction0149((byte) 113);
+            hashNodeArgument2.unlink((byte) 113);
           }
           hashNodeArgument2.previous = hashNodeArgument3;
           hashNodeArgument2.next = hashNodeArgument3.next;
@@ -135,7 +135,7 @@ abstract class MixedSupport043 {
         try {
           int integerLocal1 = 32 % ((integerArgument1 - 60) / 49);
           if (null != hashNodeArgument2.next) {
-            hashNodeArgument2.performAction0149((byte) 113);
+            hashNodeArgument2.unlink((byte) 113);
           }
           hashNodeArgument2.previous = hashNodeArgument3;
           hashNodeArgument2.next = hashNodeArgument3.next;

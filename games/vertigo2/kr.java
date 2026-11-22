@@ -108,7 +108,7 @@ final class kr {
           return;
         }
         try {
-          fi.a(31820, false, gn.field_a);
+          SecondaryNodeHashTable.a(31820, false, gn.field_a);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -10,7 +10,7 @@ final class IterableNodeHashTable implements Iterable {
     static java.applet.Applet field_b;
     IntrusiveNode[] field_a;
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -56,7 +56,7 @@ final class IterableNodeHashTable implements Iterable {
         return var3Lifetime1;
     }
 
-    final void a(long param0, int param1, IntrusiveNode param2) {
+    final void put(long param0, int param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {

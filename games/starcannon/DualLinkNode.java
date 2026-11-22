@@ -79,7 +79,7 @@ class DualLinkNode extends IntrusiveNode {
     protected DualLinkNode() {
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.secondaryPrevious == null) {
           return;
         }

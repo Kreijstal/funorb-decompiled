@@ -28,7 +28,7 @@ final class ri {
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (null != param2.field_a) {
-            param2.a(true);
+            param2.unlink(true);
           }
           param2.field_a = param0.field_a;
           param2.field_h = param0;

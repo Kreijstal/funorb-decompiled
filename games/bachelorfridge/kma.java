@@ -194,7 +194,7 @@ final class kma extends k {
             return;
           }
           for (var1_int = 0; fj.field_m.length > var1_int; var1_int++) {
-            MoveInfoPanel.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
+            MoveInfoPanel.field_f.put((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

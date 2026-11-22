@@ -28,7 +28,7 @@ final class dl {
         while (true) {
           var2 = this.field_d.field_g;
           if (this.field_d != var2) {
-            var2.a(7847);
+            var2.unlinkSecondary(7847);
             continue;
           }
           break;
@@ -80,7 +80,7 @@ final class dl {
     final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_e != null) {
-            param0.a(7847);
+            param0.unlinkSecondary(7847);
           }
           param0.field_g = this.field_d;
           param0.field_e = this.field_d.field_e;
@@ -207,7 +207,7 @@ final class dl {
           return (DualLinkNode) null;
         }
         if (this.field_d != var2) {
-          var2.a(7847);
+          var2.unlinkSecondary(7847);
           return var2;
         }
         return null;
@@ -216,7 +216,7 @@ final class dl {
     final void a(int param0, DualLinkNode param1) {
         try {
           if (null != param1.field_e) {
-            param1.a(7847);
+            param1.unlinkSecondary(7847);
           }
           param1.field_g = this.field_d.field_g;
           if (param0 > -104) {

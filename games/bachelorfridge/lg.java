@@ -19,7 +19,7 @@ class lg {
         try {
           cw.field_zb = new IntrusiveNodeHashTable(param0);
           for (var1_int = 0; var1_int < vca.field_f.length; var1_int++) {
-            cw.field_zb.a((long)vca.field_f[var1_int].toLowerCase().hashCode(), (byte) 104, new ji(var1_int));
+            cw.field_zb.put((long)vca.field_f[var1_int].toLowerCase().hashCode(), (byte) 104, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ class lg {
             lg.c(56);
           }
           for (var1_int = 0; mka.field_i.length > var1_int; var1_int++) {
-            DualLinkNode.field_f.a((long)mka.field_i[var1_int].toLowerCase().hashCode(), (byte) -102, new ji(var1_int));
+            DualLinkNode.field_f.put((long)mka.field_i[var1_int].toLowerCase().hashCode(), (byte) -102, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

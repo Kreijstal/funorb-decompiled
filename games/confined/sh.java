@@ -14,7 +14,7 @@ final class sh extends am {
         oe var3 = (oe) (var2.a((byte) 120));
         while (var3 != null) {
           if (var3.l(-6)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (oe) (var2.b(-92));
         }
@@ -186,7 +186,7 @@ final class sh extends am {
         oe var3 = (oe) (var2.a((byte) 120));
         while (var3 != null) {
           if (var3.j(-53)) {
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (oe) (var2.b(62));
         }

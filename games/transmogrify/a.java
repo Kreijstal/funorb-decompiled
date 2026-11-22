@@ -82,7 +82,7 @@ abstract class a extends bi {
 
     private final void a(byte param0, UiWidget param1) {
         if (null != this.field_Z) {
-          this.field_Z.c(5);
+          this.field_Z.unlink(5);
         }
         if (param0 < 68) {
           return;

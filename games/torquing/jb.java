@@ -16,7 +16,7 @@ final class jb {
           if (param0 < 28) {
             jb.a((double[]) null, true, (double[]) null, -1.3623750460198865, 0.7041108610855004, 54);
           }
-          stackIn_10_0 = (vd.field_c != null) && (vd.field_c.e(17));
+          stackIn_10_0 = (vd.field_c != null) && (vd.field_c.isLinked(17));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

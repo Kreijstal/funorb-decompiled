@@ -34,13 +34,13 @@ final class al {
         if (param0 < 57) {
           field_e = (String) null;
           if (var2 != this.field_d) {
-            var2.c((byte) 36);
+            var2.unlinkSecondary((byte) 36);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_d) {
-          var2.c((byte) 36);
+          var2.unlinkSecondary((byte) 36);
           return var2;
         }
         return null;
@@ -49,7 +49,7 @@ final class al {
     final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_l != null) {
-            param1.c((byte) 36);
+            param1.unlinkSecondary((byte) 36);
           }
           param1.field_l = this.field_d.field_l;
           param1.field_m = this.field_d;

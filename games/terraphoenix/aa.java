@@ -53,7 +53,7 @@ final class aa extends IntrusiveNode {
         var5.field_j = param1;
         var5.field_s = param2;
         var5.field_n = param4;
-        BattleUnit.field_Q.a(var5, -16611);
+        BattleUnit.field_Q.addFirst(var5, -16611);
         if (param0 == 8166) {
           WidgetContainer.a((byte) 15, var5, param3);
           return var5;

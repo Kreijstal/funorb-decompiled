@@ -149,7 +149,7 @@ final class hb {
 
     final Object a(long param0, byte param1) {
         ad var7 = null;
-        vh var8 = (vh) (this.field_e.a(param0, 20));
+        vh var8 = (vh) (this.field_e.get(param0, 20));
         int var5 = 79 / ((param1 + 50) / 50);
         if (var8 == null) {
           return null;
@@ -161,16 +161,16 @@ final class hb {
             var8.field_m = 0L;
           } else {
             var7 = new ad(var6, var8.field_o);
-            this.field_e.a(var7, var8.key, -1);
+            this.field_e.put(var7, var8.key, -1);
             this.field_h.a(var7, 8466);
             ((vh) ((Object) var7)).field_m = 0L;
             var8.unlink(-57);
-            var8.e(0);
+            var8.unlinkSecondary(0);
           }
           return var6;
         }
         var8.unlink(-110);
-        var8.e(0);
+        var8.unlinkSecondary(0);
         this.field_g = this.field_g + var8.field_o;
         return null;
     }
@@ -191,7 +191,7 @@ final class hb {
             return;
           }
           param1.unlink(-113);
-          param1.e(0);
+          param1.unlinkSecondary(0);
           this.field_g = this.field_g + param1.field_o;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ final class hb {
     }
 
     private final void a(long param0, int param1) {
-        vh var4 = (vh) (this.field_e.a(param0, 20));
+        vh var4 = (vh) (this.field_e.get(param0, 20));
         if (param1 < -68) {
           this.a((byte) -108, var4);
           return;
@@ -236,7 +236,7 @@ final class hb {
         }
         try {
           var6 = new ad(param3, param0);
-          this.field_e.a(var6, param2, -1);
+          this.field_e.put(var6, param2, -1);
           this.field_h.a(var6, 8466);
           ((vh) ((Object) var6)).field_m = 0L;
         } catch (RuntimeException runtimeException) {

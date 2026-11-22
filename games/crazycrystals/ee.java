@@ -58,7 +58,7 @@ final class ee extends lk {
               if (0 == this.field_h[var4]) {
                 var2 = 0;
               } else {
-                var3.a(false);
+                var3.unlink(false);
               }
               var3 = this.field_j.a(false);
             }
@@ -100,7 +100,7 @@ final class ee extends lk {
                   discarded$1 = this.a(true, 2, var4Lifetime1);
                 }
                 if (this.field_h[var4Lifetime1] == 1) {
-                  var3Lifetime1.a(false);
+                  var3Lifetime1.unlink(false);
                 } else {
                   var2Lifetime2 = 0;
                 }
@@ -148,7 +148,7 @@ final class ee extends lk {
                 if (!var2_ref_wl.field_q) {
                   throw new RuntimeException();
                 }
-                var2_ref_wl.a(false);
+                var2_ref_wl.unlink(false);
               } else {
                 var2_ref_wl.field_l = true;
               }
@@ -227,7 +227,7 @@ final class ee extends lk {
           return null;
         }
         byte[] var4 = var3.e(-27);
-        var3.a(param1);
+        var3.unlink(param1);
         return var4;
     }
 
@@ -271,7 +271,7 @@ final class ee extends lk {
           param1 == 0 &&
           !var12.field_q &&
           var12.field_n) {
-          var12.a(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (!param0) {
@@ -350,7 +350,7 @@ final class ee extends lk {
               if (!((wl) (var4)).field_q) {
                 stackIn_58_0 = var4;
                 stackIn_59_1 = !(param0);
-                ((wl) stackIn_58_0).a(stackIn_59_1);
+                ((wl) stackIn_58_0).unlink(stackIn_59_1);
               }
               stackIn_61_0 = var4;
               return (wl) (stackIn_61_0);
@@ -360,7 +360,7 @@ final class ee extends lk {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_h[param2] = (byte)-1;
-            ((wl) (var4)).a(false);
+            ((wl) (var4)).unlink(false);
             if (((wl) (var4)).field_q &&
               !this.field_w.c((byte) -72)) {
               var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
@@ -402,7 +402,7 @@ final class ee extends lk {
           this.field_w.e(20406);
           stackIn_85_0 = var4;
           stackIn_86_1 = !(param0);
-          ((wl) stackIn_85_0).a(stackIn_86_1);
+          ((wl) stackIn_85_0).unlink(stackIn_86_1);
           if (((wl) (var4)).field_q) {
             if (this.field_w.c((byte) -73)) {
               return null;
@@ -423,7 +423,7 @@ final class ee extends lk {
           }
         }
         if (!((wl) (var4)).field_q) {
-          ((wl) (var4)).a(false);
+          ((wl) (var4)).unlink(false);
         }
         return (wl) (var4);
     }
@@ -531,7 +531,7 @@ final class ee extends lk {
           if (var3 >= 0) {
             if (this.field_p.field_a > var3) {
               if (this.field_p.field_f[var3] == 0) {
-                var2.a(false);
+                var2.unlink(false);
               } else {
                 if (0 == this.field_h[var3]) {
                   discarded$0 = this.a(true, 1, var3);
@@ -540,14 +540,14 @@ final class ee extends lk {
                   discarded$1 = this.a(true, 2, var3);
                 }
                 if (this.field_h[var3] == 1) {
-                  var2.a(false);
+                  var2.unlink(false);
                 }
               }
             } else {
-              var2.a(false);
+              var2.unlink(false);
             }
           } else {
-            var2.a(false);
+            var2.unlink(false);
           }
           var2 = this.field_n.a(false);
         }
@@ -581,7 +581,7 @@ final class ee extends lk {
             var4_ref_mo = (mo) (bn.field_i.g(32073));
             if (var4_ref_mo != null &&
               var4_ref_mo.field_k < var2_long) {
-              var4_ref_mo.a(false);
+              var4_ref_mo.unlink(false);
               rk.field_b = var4_ref_mo.field_g.length;
               kd.field_n.position = 0;
               for (var5_int = 0; rk.field_b > var5_int; var5_int++) {

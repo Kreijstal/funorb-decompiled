@@ -130,7 +130,7 @@ final class ie extends sh {
         if (this.field_s < 0) {
           if (this.field_o <= 0) {
             this.l();
-            this.c(-1);
+            this.unlink(-1);
             return;
           }
           this.field_s = 0;
@@ -138,7 +138,7 @@ final class ie extends sh {
         if (this.field_s >= var7) {
           if (this.field_o >= 0) {
             this.l();
-            this.c(-1);
+            this.unlink(-1);
             return;
           }
           this.field_s = var7 - 1;
@@ -265,7 +265,7 @@ final class ie extends sh {
           if (this.field_s >= var7) {
             this.field_s = var7;
             this.l();
-            this.c(-1);
+            this.unlink(-1);
           }
           return;
         }
@@ -275,7 +275,7 @@ final class ie extends sh {
         }
         this.field_s = -1;
         this.l();
-        this.c(-1);
+        this.unlink(-1);
         return;
     }
 
@@ -825,7 +825,7 @@ final class ie extends sh {
           this.field_u = 0;
           this.field_p = 0;
           this.field_x = 0;
-          this.c(-1);
+          this.unlink(-1);
           return true;
         }
         if (this.field_x >= var1) {
@@ -1147,7 +1147,7 @@ final class ie extends sh {
               this.field_u = 0;
               this.field_p = 0;
               this.field_x = 0;
-              this.c(-1);
+              this.unlink(-1);
               param0 = this.field_q;
             }
             this.field_q = 0;
@@ -1165,7 +1165,7 @@ final class ie extends sh {
         if (this.field_s < 0) {
           if (this.field_o <= 0) {
             this.l();
-            this.c(-1);
+            this.unlink(-1);
             return;
           }
           this.field_s = 0;
@@ -1173,7 +1173,7 @@ final class ie extends sh {
         if (this.field_s >= var5) {
           if (this.field_o >= 0) {
             this.l();
-            this.c(-1);
+            this.unlink(-1);
             return;
           }
           this.field_s = var5 - 1;
@@ -1286,7 +1286,7 @@ final class ie extends sh {
           if (this.field_s >= var5) {
             this.field_s = var5;
             this.l();
-            this.c(-1);
+            this.unlink(-1);
           }
           return;
         }
@@ -1295,7 +1295,7 @@ final class ie extends sh {
         }
         this.field_s = -1;
         this.l();
-        this.c(-1);
+        this.unlink(-1);
     }
 
     private final synchronized void c(int param0, int param1) {
@@ -1491,7 +1491,7 @@ final class ie extends sh {
         int var2Lifetime1;
         if (param0 == 0) {
           this.h(0);
-          this.c(-1);
+          this.unlink(-1);
           return;
         }
         if (this.field_p != 0) {
@@ -1551,7 +1551,7 @@ final class ie extends sh {
         this.field_q = 0;
         this.field_n = 0;
         this.field_x = 0;
-        this.c(-1);
+        this.unlink(-1);
     }
 
     private final void j() {

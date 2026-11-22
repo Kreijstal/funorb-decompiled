@@ -46,7 +46,7 @@ final class ki extends IntrusiveNode {
             }
             var12.field_p = var3;
             var12.field_o = true;
-            var12.b(34);
+            var12.unlink(34);
             return;
           }
           if (var2 == 1) {
@@ -55,7 +55,7 @@ final class ki extends IntrusiveNode {
               si.a(param0 + 14908);
               return;
             }
-            var11.b(param0 + 15037);
+            var11.unlink(param0 + 15037);
             return;
           }
           if (var2 != 2) {
@@ -70,7 +70,7 @@ final class ki extends IntrusiveNode {
           }
           var14.field_p = hk.b(param0 + 15003);
           var14.field_o = true;
-          var14.b(34);
+          var14.unlink(34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

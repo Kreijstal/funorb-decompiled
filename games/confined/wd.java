@@ -62,12 +62,12 @@ final class wd {
           if (var2 == this.field_b) {
             return null;
           }
-          var2.b(!param0 ? true : false);
+          var2.unlinkSecondary(!param0 ? true : false);
           return var2;
         }
         var2Lifetime1 = this.field_b.field_o;
         if (var2Lifetime1 != this.field_b) {
-          var2Lifetime1.b(!param0 ? true : false);
+          var2Lifetime1.unlinkSecondary(!param0 ? true : false);
           return var2Lifetime1;
         }
         return null;
@@ -81,7 +81,7 @@ final class wd {
           if (var2 == this.field_b) {
             break;
           }
-          var2.b(true);
+          var2.unlinkSecondary(true);
         }
         if (param0) {
           this.field_a = null;
@@ -208,7 +208,7 @@ final class wd {
     final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_q) {
-            param0.b(true);
+            param0.unlinkSecondary(true);
           }
           param0.field_q = this.field_b.field_q;
           int var3_int = 121 / ((67 - param1) / 46);

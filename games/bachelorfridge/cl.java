@@ -389,7 +389,7 @@ final class cl extends vm {
         if (var3.equals("random")) {
           return -1;
         }
-        return ((ji) (du.field_a.a(true, (long)var3.hashCode()))).field_h;
+        return ((ji) (du.field_a.get(true, (long)var3.hashCode()))).field_h;
     }
 
     public static void releaseStatics(boolean param0) {

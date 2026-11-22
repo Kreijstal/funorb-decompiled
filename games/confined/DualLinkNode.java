@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     long field_r;
     DualLinkNode field_q;
 
-    final void b(boolean param0) {
+    final void unlinkSecondary(boolean param0) {
         if (null == this.field_q) {
           return;
         }

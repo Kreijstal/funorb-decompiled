@@ -136,7 +136,7 @@ final class d extends jc {
         }
         try {
           var3 = (kh) (param0);
-          this.field_A.a((IntrusiveNode) (var3), (byte) 0);
+          this.field_A.addLast((IntrusiveNode) (var3), (byte) 0);
           var3.field_J = true;
           var3.a((byte) 14, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {

@@ -90,7 +90,7 @@ final class ie {
         dn var5 = (dn) (this.field_c.b(69));
         while (var5 != null) {
           if (var5.a((byte) -126)) {
-            var5.b(34);
+            var5.unlink(34);
           }
           var5 = (dn) (this.field_c.b((byte) 56));
         }

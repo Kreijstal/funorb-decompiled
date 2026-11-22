@@ -133,13 +133,13 @@ final class MixedSupport076 extends ResourceSupport003 {
         while (hashNodeLocal5 != null) {
           integerLocal1 = (int)hashNodeLocal5.key;
           if (integerLocal1 < 0) {
-            hashNodeLocal5.performAction0149((byte) 105);
+            hashNodeLocal5.unlink((byte) 105);
           } else {
             if (this.resourceSupport001State0002.integerState0023 <= integerLocal1) {
-              hashNodeLocal5.performAction0149((byte) 105);
+              hashNodeLocal5.unlink((byte) 105);
             } else {
               if (this.resourceSupport001State0002.integerArrayState0011[integerLocal1] == 0) {
-                hashNodeLocal5.performAction0149((byte) 105);
+                hashNodeLocal5.unlink((byte) 105);
               } else {
                 if (0 == this.byteArrayState0013[integerLocal1]) {
                   discarded$0 = this.computeMixedSupport1150948(1, integerLocal1, (byte) -20);
@@ -148,7 +148,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                   discarded$1 = this.computeMixedSupport1150948(2, integerLocal1, (byte) -20);
                 }
                 if (this.byteArrayState0013[integerLocal1] == 1) {
-                  hashNodeLocal5.performAction0149((byte) 117);
+                  hashNodeLocal5.unlink((byte) 117);
                 }
               }
             }
@@ -211,7 +211,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           integerArgument1 == 0 &&
           !mixedSupport115Local12.booleanState0172 &&
           mixedSupport115Local12.booleanState0173) {
-          mixedSupport115Local12.performAction0149((byte) 114);
+          mixedSupport115Local12.unlink((byte) 114);
           objectLocal3 = null;
         }
         if (objectLocal3 == null) {
@@ -288,7 +288,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                 this.byteArrayState0013[integerArgument2] = (byte) 1;
               }
               if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
-                ((MixedSupport115) (objectLocal3)).performAction0149((byte) 115);
+                ((MixedSupport115) (objectLocal3)).unlink((byte) 115);
               }
               stackObjectLocal1 = objectLocal3;
               return (MixedSupport115) (stackObjectLocal1);
@@ -298,7 +298,7 @@ final class MixedSupport076 extends ResourceSupport003 {
             caughtExceptionLocal2 = caughtParameterLocal20;
             exceptionLocal7 = (Exception) (Object) caughtExceptionLocal2;
             this.byteArrayState0013[integerArgument2] = (byte)-1;
-            ((MixedSupport115) (objectLocal3)).performAction0149((byte) 119);
+            ((MixedSupport115) (objectLocal3)).unlink((byte) 119);
             if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
               return null;
             }
@@ -340,7 +340,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           caughtExceptionLocal2 = caughtParameterLocal21;
           runtimeExceptionLocal6 = (RuntimeException) (Object) caughtExceptionLocal2;
           this.networkSupport003State0001.performAction0343(8192);
-          ((MixedSupport115) (objectLocal3)).performAction0149((byte) 117);
+          ((MixedSupport115) (objectLocal3)).unlink((byte) 117);
           if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
             return null;
           }
@@ -360,7 +360,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           }
         }
         if (!((MixedSupport115) (objectLocal3)).booleanState0172) {
-          ((MixedSupport115) (objectLocal3)).performAction0149((byte) 117);
+          ((MixedSupport115) (objectLocal3)).unlink((byte) 117);
         }
         return (MixedSupport115) (objectLocal3);
     }
@@ -412,7 +412,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                 discarded$3 = this.computeMixedSupport1150948(1, integerLocal8, (byte) -20);
               }
               if (this.byteArrayState0013[integerLocal8] != 0) {
-                hashNodeLocal7.performAction0149((byte) 121);
+                hashNodeLocal7.unlink((byte) 121);
               } else {
                 integerLocal5 = 0;
               }
@@ -458,7 +458,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                 if (this.byteArrayState0013[integerLocal13] != 1) {
                   integerLocal12 = 0;
                 } else {
-                  hashNodeLocal14.performAction0149((byte) 102);
+                  hashNodeLocal14.unlink((byte) 102);
                 }
                 hashNodeLocal14 = this.nodeDequeState0015.computeHashNode1745(true);
               }
@@ -504,7 +504,7 @@ final class MixedSupport076 extends ResourceSupport003 {
                 if (!mixedSupport115Local6.booleanState0172) {
                   throw new RuntimeException();
                 }
-                mixedSupport115Local6.performAction0149((byte) 101);
+                mixedSupport115Local6.unlink((byte) 101);
               } else {
                 mixedSupport115Local6.booleanState0174 = true;
               }
@@ -521,7 +521,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           return null;
         }
         byte[] byteArrayLocal2 = mixedSupport115Local1.computeByteArray0469((byte) 126);
-        mixedSupport115Local1.performAction0149((byte) 107);
+        mixedSupport115Local1.unlink((byte) 107);
         if (byteArgument2 != 91) {
           return (byte[]) null;
         }

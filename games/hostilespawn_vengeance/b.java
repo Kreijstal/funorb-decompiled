@@ -627,7 +627,7 @@ final class b extends PcmStream {
           this.field_w = 0;
           this.field_v = 0;
           this.field_z = 0;
-          this.b(107);
+          this.unlink(107);
           return true;
         }
         if (this.field_z >= var1) {
@@ -991,7 +991,7 @@ final class b extends PcmStream {
               this.field_w = 0;
               this.field_v = 0;
               this.field_z = 0;
-              this.b(-113);
+              this.unlink(-113);
               param0 = this.field_t;
             }
             this.field_t = 0;
@@ -1009,7 +1009,7 @@ final class b extends PcmStream {
         if (this.field_n < 0) {
           if (this.field_x <= 0) {
             this.h();
-            this.b(108);
+            this.unlink(108);
             return;
           }
           this.field_n = 0;
@@ -1017,7 +1017,7 @@ final class b extends PcmStream {
         if (this.field_n >= var5) {
           if (this.field_x >= 0) {
             this.h();
-            this.b(-22);
+            this.unlink(-22);
             return;
           }
           this.field_n = var5 - 1;
@@ -1130,7 +1130,7 @@ final class b extends PcmStream {
           if (this.field_n >= var5) {
             this.field_n = var5;
             this.h();
-            this.b(11);
+            this.unlink(11);
           }
           return;
         }
@@ -1139,7 +1139,7 @@ final class b extends PcmStream {
         }
         this.field_n = -1;
         this.h();
-        this.b(-65);
+        this.unlink(-65);
     }
 
     final synchronized int f() {
@@ -1163,7 +1163,7 @@ final class b extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.b(123);
+          this.unlink(123);
           return;
         }
         if (this.field_v != 0) {
@@ -1223,7 +1223,7 @@ final class b extends PcmStream {
         this.field_t = 0;
         this.field_r = 0;
         this.field_z = 0;
-        this.b(112);
+        this.unlink(112);
     }
 
     private final static int a(int param0, int param1) {
@@ -1595,7 +1595,7 @@ final class b extends PcmStream {
         if (this.field_n < 0) {
           if (this.field_x <= 0) {
             this.h();
-            this.b(-77);
+            this.unlink(-77);
             return;
           }
           this.field_n = 0;
@@ -1603,7 +1603,7 @@ final class b extends PcmStream {
         if (this.field_n >= var7) {
           if (this.field_x >= 0) {
             this.h();
-            this.b(127);
+            this.unlink(127);
             return;
           }
           this.field_n = var7 - 1;
@@ -1730,7 +1730,7 @@ final class b extends PcmStream {
           if (this.field_n >= var7) {
             this.field_n = var7;
             this.h();
-            this.b(-72);
+            this.unlink(-72);
           }
           return;
         }
@@ -1740,7 +1740,7 @@ final class b extends PcmStream {
         }
         this.field_n = -1;
         this.h();
-        this.b(106);
+        this.unlink(106);
         return;
     }
 }

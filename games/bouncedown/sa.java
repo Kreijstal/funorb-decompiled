@@ -205,7 +205,7 @@ final class sa extends IntrusiveNode {
               }
             }
             param1.appendCrc32(var4, -1);
-            var19.c(2);
+            var19.unlink(2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

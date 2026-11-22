@@ -37,7 +37,7 @@ final class wd {
             var4_ref_ei = (ei) (ck.field_u.g(-69));
             if (var4_ref_ei != null &&
               var4_ref_ei.field_j < var2_long) {
-              var4_ref_ei.b(-115);
+              var4_ref_ei.unlink(-115);
               jd.field_q = var4_ref_ei.field_r.length;
               sc.field_g.field_i = 0;
               for (var5_int = 0; var5_int < jd.field_q; var5_int++) {

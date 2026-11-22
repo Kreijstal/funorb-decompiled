@@ -126,7 +126,7 @@ abstract class jk extends wf {
     private final void b(int param0, fe param1) {
         try {
           if (null != this.field_bb) {
-            this.field_bb.b(34);
+            this.field_bb.unlink(34);
           }
           if (param1 != null) {
             param1.a(param1.field_q, param0 ^ -28163, 6, param1.field_v, this.field_fb + 6);

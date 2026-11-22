@@ -280,13 +280,13 @@ final class wn {
             param2.field_M = new IntrusiveDeque();
           }
           if (se.field_A == null) {
-            se.field_A = new fi(64);
+            se.field_A = new SecondaryNodeHashTable(64);
           }
           if (param0 >= -43) {
             wn.c(-19);
           }
           if (jn.field_g == null) {
-            jn.field_g = new fi(64);
+            jn.field_g = new SecondaryNodeHashTable(64);
           }
           vj.field_d = param2.field_M;
           tm.field_a = param1.field_M;
@@ -488,9 +488,9 @@ final class wn {
               uh.field_Wb.patchShortLength((byte) -120, -var10 + uh.field_Wb.position);
             }
             lf.d(106, -1);
-            rg.field_d = fi.field_b;
+            rg.field_d = SecondaryNodeHashTable.field_b;
           }
-          if (fi.field_b == rg.field_d &&
+          if (SecondaryNodeHashTable.field_b == rg.field_d &&
             c.a(1, (byte) -104)) {
             var9Lifetime1 = id.field_f.readUnsignedByte(-11);
             id.field_f.position = 0;

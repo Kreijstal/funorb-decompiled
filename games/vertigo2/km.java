@@ -11,8 +11,8 @@ final class km extends DualLinkNode {
     final static void a(String param0, boolean param1, boolean param2, String param3) {
         try {
           ff.field_u = param3;
-          fi.field_e = param0;
-          fi.a(31820, param1, gn.field_a);
+          SecondaryNodeHashTable.field_e = param0;
+          SecondaryNodeHashTable.a(31820, param1, gn.field_a);
           if (!param2) {
             km.h(-35);
           }

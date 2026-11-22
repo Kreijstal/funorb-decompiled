@@ -24,7 +24,7 @@ class DualLinkNode extends IntrusiveNode {
         int var1 = 107 % ((param0 - 8) / 51);
     }
 
-    final void c(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.field_g == null) {
           return;
         }

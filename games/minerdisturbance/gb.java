@@ -51,16 +51,16 @@ final class gb implements Iterator {
             sa.field_s = 200;
             var1 = (sa) (hj.field_b.b(114));
             while (var1 != null) {
-              if (!var1.field_p.c(121)) {
-                var1.b(param0 + 6163);
+              if (!var1.field_p.isLinked(121)) {
+                var1.unlink(param0 + 6163);
               }
               var1 = (sa) (hj.field_b.b((byte) 56));
             }
             if (null != GameAppletShell.field_c) {
               var1Lifetime1 = (sa) (GameAppletShell.field_c.b(114));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_p.c(122)) {
-                  var1Lifetime1.b(34);
+                if (!var1Lifetime1.field_p.isLinked(122)) {
+                  var1Lifetime1.unlink(34);
                 }
                 var1Lifetime1 = (sa) (GameAppletShell.field_c.b((byte) 56));
               }
@@ -155,7 +155,7 @@ final class gb implements Iterator {
         if (null == this.field_c) {
           throw new IllegalStateException();
         }
-        this.field_c.b(34);
+        this.field_c.unlink(34);
         this.field_c = null;
     }
 

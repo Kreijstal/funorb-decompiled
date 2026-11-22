@@ -569,7 +569,7 @@ final class mk {
         try {
           BuffVendorEvent.field_t = new IntrusiveNodeHashTable(16);
           for (var1_int = 0; var1_int < gb.field_f.length; var1_int++) {
-            BuffVendorEvent.field_t.a((long)gb.field_f[var1_int].toLowerCase().hashCode(), (byte) 78, new ji(var1_int));
+            BuffVendorEvent.field_t.put((long)gb.field_f[var1_int].toLowerCase().hashCode(), (byte) 78, new ji(var1_int));
           }
           if (param0 != -43) {
             field_f = (String) null;

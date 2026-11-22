@@ -53,7 +53,7 @@ abstract class sj extends ug {
     private final void a(boolean param0, fj param1) {
         try {
           if (null != this.field_lb) {
-            this.field_lb.a(true);
+            this.field_lb.unlink(true);
           }
           if (!param0) {
             this.field_mb = 112;

@@ -233,7 +233,7 @@ final class dk {
               }
             }
             param1.appendCrc32(-18951, var5);
-            var18.b(57);
+            var18.unlink(57);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

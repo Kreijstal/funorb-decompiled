@@ -241,7 +241,7 @@ final class vc {
           }
           var7_ref.field_Z = (String) (var4Lifetime1);
           var7_ref.field_db = var5_ref_StringLifetime1;
-          var7_ref.b(57);
+          var7_ref.unlink(57);
           var8_ref = (ti) (lf.field_b.b((byte) 126));
           scanLoop1: while (true) {
             if (var8_ref != null) {

@@ -27,7 +27,7 @@ final class bc {
         if (this.field_b == var2) {
           return null;
         }
-        var2.c(param0 ^ -50);
+        var2.unlink(param0 ^ -50);
         return var2;
     }
 
@@ -70,14 +70,14 @@ final class bc {
         if (var2 == this.field_b) {
           return null;
         }
-        var2.c(2);
+        var2.unlink(2);
         return var2;
     }
 
     final void a(int param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_f) {
-            param1.c(2);
+            param1.unlink(2);
           }
           if (param0 != 1) {
             this.field_c = (IntrusiveNode) null;
@@ -106,7 +106,7 @@ final class bc {
 
     final void a(byte param0, IntrusiveNode param1) {
         if (null != param1.field_f) {
-          param1.c(param0 ^ 81);
+          param1.unlink(param0 ^ 81);
         }
         param1.field_c = this.field_b.field_c;
         if (param0 != 83) {
@@ -130,7 +130,7 @@ final class bc {
           if (var3 == this.field_b) {
             break;
           }
-          var3.c(2);
+          var3.unlink(2);
         }
         this.field_c = null;
     }

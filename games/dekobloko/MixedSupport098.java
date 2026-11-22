@@ -58,7 +58,7 @@ final class MixedSupport098 {
               NodeHashTable.performAction1498(integerArgument1 ^ 14802);
               return;
             }
-            mixedSupport053Local9.performAction0149((byte) 109);
+            mixedSupport053Local9.unlink((byte) 109);
           } else {
             if (integerLocal3 == 1) {
               integerLocal4 = cipherPacketBufferLocal10.readInt(7553);
@@ -71,7 +71,7 @@ final class MixedSupport098 {
                 break;
               }
               if (mixedSupport034Local6 != null) {
-                mixedSupport034Local6.performAction0149((byte) 119);
+                mixedSupport034Local6.unlink((byte) 119);
                 return;
               }
               NodeHashTable.performAction1498(60);

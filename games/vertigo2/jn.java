@@ -3,7 +3,7 @@
  */
 final class jn {
     static String field_d;
-    static fi field_g;
+    static SecondaryNodeHashTable field_g;
     private lo field_e;
     private Archive field_f;
     private Archive field_a;

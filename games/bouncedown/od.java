@@ -44,8 +44,8 @@ final class od {
         }
         Object var5 = var7.e(-103);
         if (var5 == null) {
-          var7.c(2);
-          var7.a(-122);
+          var7.unlink(2);
+          var7.unlinkSecondary(-122);
           this.field_a = this.field_a + var7.field_m;
           return null;
         }
@@ -58,8 +58,8 @@ final class od {
             this.field_b.a(param1 ^ -1828, var7.field_d, var6);
             this.field_e.a(6753, var6);
             ((eg) ((Object) var6)).field_j = 0L;
-            var7.c(param1 - 1870);
-            var7.a(89);
+            var7.unlink(param1 - 1870);
+            var7.unlinkSecondary(89);
           }
           return var5;
         }
@@ -72,8 +72,8 @@ final class od {
           this.field_b.a(param1 ^ -1828, var7.field_d, var6Lifetime1);
           this.field_e.a(6753, var6Lifetime1);
           ((eg) ((Object) var6Lifetime1)).field_j = 0L;
-          var7.c(param1 - 1870);
-          var7.a(89);
+          var7.unlink(param1 - 1870);
+          var7.unlinkSecondary(89);
         }
         return var5;
     }
@@ -121,8 +121,8 @@ final class od {
           if (param1 == null) {
             return;
           }
-          param1.c(param0 + 2);
-          param1.a(109);
+          param1.unlink(param0 + 2);
+          param1.unlinkSecondary(109);
           this.field_a = this.field_a + param1.field_m;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

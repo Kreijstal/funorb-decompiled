@@ -298,7 +298,7 @@ final class tb extends v {
                     this.field_b.field_t = 0;
                   }
                 } else {
-                  this.field_b.a(param0 ^ 7);
+                  this.field_b.unlinkSecondary(param0 ^ 7);
                   this.field_b.field_n = false;
                   this.field_b = null;
                 }

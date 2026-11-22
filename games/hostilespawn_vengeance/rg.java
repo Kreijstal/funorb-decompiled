@@ -133,7 +133,7 @@ final class rg {
               var13++;
             }
           }
-          var3.b(param0 ^ 109);
+          var3.unlink(param0 ^ 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

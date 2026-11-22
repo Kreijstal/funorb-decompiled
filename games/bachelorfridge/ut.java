@@ -238,7 +238,7 @@ final class ut extends tia {
         try {
           eu.field_b = new IntrusiveNodeHashTable(8);
           for (var1_int = 0; ra.field_k.length > var1_int; var1_int++) {
-            eu.field_b.a((long)ra.field_k[var1_int].toLowerCase().hashCode(), (byte) -81, new ji(var1_int));
+            eu.field_b.put((long)ra.field_k[var1_int].toLowerCase().hashCode(), (byte) -81, new ji(var1_int));
           }
           if (param0 != -22021) {
             ut.b(11);

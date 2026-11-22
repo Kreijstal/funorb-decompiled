@@ -323,7 +323,7 @@ final class h {
             }
             var9.field_t = (byte[]) (var5);
             var9.field_q = true;
-            var9.b(34);
+            var9.unlink(34);
           } else {
             if (var2 == 1) {
               var3 = var10.readInt((byte) 119);
@@ -339,7 +339,7 @@ final class h {
                 si.a(-60);
                 return;
               }
-              var4_ref_hf.b(34);
+              var4_ref_hf.unlink(34);
               return;
             }
             di.a((Throwable) null, 1, "A1: " + hj.a((byte) 118));

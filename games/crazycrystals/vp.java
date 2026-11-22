@@ -42,7 +42,7 @@ final class vp {
             this.a((DualLinkNode) null, 115L, (byte) -90);
           }
           if (null != param0.field_g) {
-            param0.a(1);
+            param0.unlinkSecondary(1);
           }
           var5 = this.field_e[(int)(param1 & (long)(this.field_h - 1))];
           param0.field_j = var5;

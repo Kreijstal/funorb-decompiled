@@ -130,7 +130,7 @@ public final class Terraphoenix extends GameShell {
             this.field_R = this.field_R + 1;
             if (fieldTemp$0 == 335) {
               this.field_R = 0;
-              ga.field_k.d((byte) 57);
+              ga.field_k.removeLast((byte) 57);
             }
           }
           if (!uk.field_b.c(-112)) {

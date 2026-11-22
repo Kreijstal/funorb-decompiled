@@ -16,7 +16,7 @@ final class sk extends kj {
         sg var3 = (sg) (var2.d(27935));
         while (var3 != null) {
           if (var3.d(false)) {
-            var3.b(57);
+            var3.unlink(57);
           }
           var3 = (sg) (var2.b(true));
         }
@@ -97,7 +97,7 @@ final class sk extends kj {
         sg var3 = (sg) (var2.d(27935));
         while (var3 != null) {
           if (var3.l(194)) {
-            var3.b(57);
+            var3.unlink(57);
           }
           var3 = (sg) (var2.b(true));
         }

@@ -86,7 +86,7 @@ final class lb {
             var14.field_i = var16[0];
             var14.field_g = true;
             var14.field_f = var3;
-            var14.b(57);
+            var14.unlink(57);
           } else {
             if (var2 == 1) {
               var11 = (ha) (oa.field_d.b((byte) 122));
@@ -94,7 +94,7 @@ final class lb {
                 th.a(103);
                 return;
               }
-              var11.b(57);
+              var11.unlink(57);
             } else {
               if (var2 != 2) {
                 MouseWheelInput.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
@@ -108,7 +108,7 @@ final class lb {
                 var15.field_f = KeyboardListener.b(8);
                 var15.field_g = true;
                 var15.field_i = var15.field_f[0];
-                var15.b(57);
+                var15.unlink(57);
               }
             }
           }

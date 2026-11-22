@@ -27,7 +27,7 @@ final class NodeDeque {
         while (true) {
           hashNodeLocal1 = this.hashNodeState0009.previous;
           if (this.hashNodeState0009 != hashNodeLocal1) {
-            hashNodeLocal1.performAction0149((byte) 120);
+            hashNodeLocal1.unlink((byte) 120);
             continue;
           }
           break;
@@ -44,7 +44,7 @@ final class NodeDeque {
         if (this.hashNodeState0009 == hashNodeLocal1) {
           return null;
         }
-        hashNodeLocal1.performAction0149((byte) 115);
+        hashNodeLocal1.unlink((byte) 115);
         return hashNodeLocal1;
     }
 
@@ -227,7 +227,7 @@ final class NodeDeque {
 
     final void performAction1735(HashNode hashNodeArgument1, int integerArgument2) {
         if (hashNodeArgument1.next != null) {
-          hashNodeArgument1.performAction0149((byte) 124);
+          hashNodeArgument1.unlink((byte) 124);
         }
         hashNodeArgument1.previous = this.hashNodeState0009;
         hashNodeArgument1.next = this.hashNodeState0009.next;
@@ -276,7 +276,7 @@ final class NodeDeque {
         RuntimeException runtimeExceptionLocal5 = null;
         try {
           if (hashNodeArgument1.next != null) {
-            hashNodeArgument1.performAction0149((byte) 115);
+            hashNodeArgument1.unlink((byte) 115);
           }
           hashNodeArgument1.previous = this.hashNodeState0009.previous;
           hashNodeArgument1.next = this.hashNodeState0009;
@@ -305,7 +305,7 @@ final class NodeDeque {
         if (this.hashNodeState0009 == hashNodeLocal1) {
           return null;
         }
-        hashNodeLocal1.performAction0149((byte) 108);
+        hashNodeLocal1.unlink((byte) 108);
         if (integerArgument1 != 4) {
           return (HashNode) null;
         }

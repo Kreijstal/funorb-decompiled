@@ -159,7 +159,7 @@ final class cb {
         RuntimeException var5_ref = null;
         try {
           if (null != param1.field_i) {
-            param1.c(-1);
+            param1.unlinkSecondary(-1);
           }
           var5 = this.field_f[(int)(param0 & (long)(-1 + this.field_i))];
           param1.field_j = var5;

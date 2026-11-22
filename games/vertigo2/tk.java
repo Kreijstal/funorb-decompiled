@@ -237,7 +237,7 @@ abstract class tk {
           var6 = ((long)param1 << 32) + (long)param0;
           var8 = new ia();
           var8.field_B = param3;
-          var8.field_n = var6;
+          var8.secondaryKey = var6;
           stackIn_16_0 = var8;
           stackIn_17_1 = (!param2) ? false : true;
           stackIn_16_0.field_u = stackIn_17_1;
@@ -258,7 +258,7 @@ abstract class tk {
         var6Lifetime1 = ((long)param1 << 32) + (long)param0;
         var8Lifetime1 = new ia();
         var8Lifetime1.field_B = param3;
-        var8Lifetime1.field_n = var6Lifetime1;
+        var8Lifetime1.secondaryKey = var6Lifetime1;
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param2) ? false : true;
         stackIn_3_0.field_u = stackIn_4_1;

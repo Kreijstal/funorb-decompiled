@@ -337,7 +337,7 @@ final class g extends w {
                   this.field_p.field_y = this.field_p.field_y + var6;
                   this.field_p.field_A.position = this.field_p.field_A.position + var6;
                   if (this.field_p.field_A.position == var5) {
-                    this.field_p.e(-100);
+                    this.field_p.unlinkSecondary(-100);
                     this.field_p.field_q = false;
                     this.field_p = null;
                   } else {

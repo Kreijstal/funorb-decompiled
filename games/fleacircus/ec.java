@@ -207,7 +207,7 @@ final class ec implements Runnable {
               }
             }
             param0.appendCrc32(var4, -30532);
-            var17.c(-1);
+            var17.unlink(-1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

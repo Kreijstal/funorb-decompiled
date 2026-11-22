@@ -464,7 +464,7 @@ final class lc extends PcmStream {
             var14.field_i = true;
             var14.field_k = var16[0];
             var14.field_g = var3;
-            var14.c(5);
+            var14.unlink(5);
             return;
           }
           if (var2 == 1) {
@@ -473,7 +473,7 @@ final class lc extends PcmStream {
               pc.a(1);
               return;
             }
-            var11.c(5);
+            var11.unlink(5);
           } else {
             if (var2 == 2) {
               var15 = (oh) (oc.field_G.a((byte) -95));
@@ -484,7 +484,7 @@ final class lc extends PcmStream {
               var15.field_g = rf.c(false);
               var15.field_k = var15.field_g[0];
               var15.field_i = true;
-              var15.c(5);
+              var15.unlink(5);
             } else {
               d.a((Throwable) null, 63, "A1: " + ik.q(48));
               pc.a(1);
@@ -584,7 +584,7 @@ final class lc extends PcmStream {
             if (var4.field_p < 0) {
               this.field_u[var4.field_u][var4.field_i] = null;
             }
-            var4.c(5);
+            var4.unlink(5);
           }
           var4 = (kc) (this.field_m.field_q.a(true));
         }
@@ -1070,7 +1070,7 @@ final class lc extends PcmStream {
               }
             }
             param1.appendCrc32(var4, -1323322296);
-            var18.c(5);
+            var18.unlink(5);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -1214,7 +1214,7 @@ final class lc extends PcmStream {
           if (0 <= param4.field_p && (param4.field_y == null ||
             param4.field_y.l())) {
             param4.b(false);
-            param4.c(5);
+            param4.unlink(5);
             if (param4.field_j > 0 &&
               param4 == this.field_l[param4.field_u][param4.field_j]) {
               this.field_l[param4.field_u][param4.field_j] = null;
@@ -1302,7 +1302,7 @@ final class lc extends PcmStream {
           }
           param4.b(false);
           if (param4.field_p >= 0) {
-            param4.c(5);
+            param4.unlink(5);
             if (param4.field_j > 0 &&
               this.field_l[param4.field_u][param4.field_j] == param4) {
               this.field_l[param4.field_u][param4.field_j] = null;
@@ -1391,7 +1391,7 @@ final class lc extends PcmStream {
             return false;
           }
           if (0 <= param1.field_p) {
-            param1.c(5);
+            param1.unlink(5);
             if (0 < param1.field_j &&
               param1 == this.field_l[param1.field_u][param1.field_j]) {
               this.field_l[param1.field_u][param1.field_j] = null;

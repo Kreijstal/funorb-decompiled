@@ -75,7 +75,7 @@ final class tc {
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);
-        var1.b(57);
+        var1.unlink(57);
         if (param0 > -35) {
           field_b = 85;
         }

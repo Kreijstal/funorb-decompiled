@@ -268,7 +268,7 @@ abstract class ke {
               }
             }
             param0.appendCrc32(var4, (byte) -101);
-            var17.a(false);
+            var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

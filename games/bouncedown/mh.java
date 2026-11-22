@@ -269,7 +269,7 @@ abstract class mh extends wk {
     private final void b(lk param0, int param1) {
         try {
           if (null != this.field_S) {
-            this.field_S.c(2);
+            this.field_S.unlink(2);
           }
           if (param1 != 6) {
             lk var4 = (lk) null;

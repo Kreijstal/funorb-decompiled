@@ -271,7 +271,7 @@ final class pd extends IntrusiveNode {
             this.field_p.d(9);
             this.field_p = null;
           } else {
-            if (!this.field_p.b(true)) {
+            if (!this.field_p.isLinked(true)) {
               this.field_p = null;
             }
           }

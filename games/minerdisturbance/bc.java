@@ -15,7 +15,7 @@ final class bc implements Iterator {
         if (null == this.field_e) {
           throw new IllegalStateException();
         }
-        this.field_e.a((byte) -93);
+        this.field_e.unlinkSecondary((byte) -93);
         this.field_e = null;
     }
 

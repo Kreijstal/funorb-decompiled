@@ -164,7 +164,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_f = null;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_b = this.field_e.field_a[param0].previous;
         this.field_c = 1;
         this.field_f = null;
@@ -174,7 +174,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_f = null;
         try {
           this.field_e = param0;
-          this.a(0);
+          this.reset(0);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

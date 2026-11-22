@@ -86,7 +86,7 @@ final class NodeHashTableIterator implements Iterator {
         return var3;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_c = this.field_e.field_e[0].next;
         this.field_b = null;
         this.field_d = param0;
@@ -96,7 +96,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_b = null;
         try {
           this.field_e = param0;
-          this.a(1);
+          this.reset(1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

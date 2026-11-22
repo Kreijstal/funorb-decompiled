@@ -473,7 +473,7 @@ final class wj extends fb {
                       this.field_r.field_C = 0;
                     }
                   } else {
-                    this.field_r.c((byte) 36);
+                    this.field_r.unlinkSecondary((byte) 36);
                     this.field_r.field_w = false;
                     this.field_r = null;
                   }

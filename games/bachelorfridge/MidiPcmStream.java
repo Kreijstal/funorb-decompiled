@@ -83,7 +83,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MidiNote) (this.field_k.field_k.c((byte) 116));
           }
         }
-        var11 = (MusicPatch) (this.field_m.a(true, (long)this.field_n[param2]));
+        var11 = (MusicPatch) (this.field_m.get(true, (long)this.field_n[param2]));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -988,10 +988,10 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != -5359) {
           this.d();
         }
-        MusicPatch var4 = (MusicPatch) (this.field_m.b(param0 ^ 9776));
+        MusicPatch var4 = (MusicPatch) (this.field_m.first(param0 ^ 9776));
         while (var4 != null) {
           var4.b(false);
-          var4 = (MusicPatch) (this.field_m.c(-21446));
+          var4 = (MusicPatch) (this.field_m.next(-21446));
         }
     }
 
@@ -1212,12 +1212,12 @@ final class MidiPcmStream extends PcmStream {
           if (param4 > 0) {
             var7 = new int[]{param4};
           }
-          var8 = (g) (param1.field_f.b(-13023));
+          var8 = (g) (param1.field_f.first(-13023));
           var9 = 47 / ((57 - param3) / 37);
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var10 = (int)var8.key;
-            var11 = (MusicPatch) (this.field_m.a(true, (long)var10));
+            var11 = (MusicPatch) (this.field_m.get(true, (long)var10));
             if (var11 == null) {
               var11 = UiWidget.a(param0, false, var10);
               if (var11 == null) {
@@ -1225,7 +1225,7 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_m.a((long)var10, (byte) -89, var11);
+                this.field_m.put((long)var10, (byte) -89, var11);
                 decompiledFrameRemainder0 = !(var11.a(var8.field_h, 1436234146, param2, (int[]) (var7)));
               }
             } else {
@@ -1234,7 +1234,7 @@ final class MidiPcmStream extends PcmStream {
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (g) (param1.field_f.c(-21446));
+            var8 = (g) (param1.field_f.next(-21446));
           }
           if (var6_int != 0) {
             param1.b();

@@ -34,7 +34,7 @@ final class id implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.b((byte) -2);
+        this.field_a.unlinkSecondary((byte) -2);
         this.field_a = null;
     }
 

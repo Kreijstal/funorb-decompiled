@@ -32,7 +32,7 @@ final class dn {
             this.a(var9, (byte) -111);
           }
           var6 = new hb(param2, param1);
-          this.field_e.a((byte) 91, param3, var6);
+          this.field_e.put((byte) 91, param3, var6);
           this.field_d.a(24, var6);
           ((lj) ((Object) var6)).field_h = 0L;
         } catch (RuntimeException runtimeException) {
@@ -68,8 +68,8 @@ final class dn {
         RuntimeException var3 = null;
         try {
           if (param0 != null) {
-            param0.b(112);
-            param0.c(-1);
+            param0.unlink(112);
+            param0.unlinkSecondary(-1);
             this.field_f = this.field_f + param0.field_s;
           }
           if (param1 > -100) {
@@ -94,7 +94,7 @@ final class dn {
         if (param0 < 110) {
           return;
         }
-        lj var4 = (lj) (this.field_e.a(param1, -1));
+        lj var4 = (lj) (this.field_e.get(param1, -1));
         this.a(var4, (byte) -107);
     }
 
@@ -164,7 +164,7 @@ final class dn {
 
     final Object a(int param0, long param1) {
         hb var6 = null;
-        lj var8 = (lj) (this.field_e.a(param1, -1));
+        lj var8 = (lj) (this.field_e.get(param1, -1));
         if (var8 == null) {
           return null;
         }
@@ -174,8 +174,8 @@ final class dn {
           dn.a((CharSequence) null, -112, 19);
         }
         if (var5 == null) {
-          var8.b(param0 ^ 117);
-          var8.c(-1);
+          var8.unlink(param0 ^ 117);
+          var8.unlinkSecondary(-1);
           this.field_f = this.field_f + var8.field_s;
           return null;
         }
@@ -184,11 +184,11 @@ final class dn {
           var8.field_h = 0L;
         } else {
           var6 = new hb(var5, var8.field_s);
-          this.field_e.a((byte) 108, var8.field_c, var6);
+          this.field_e.put((byte) 108, var8.field_c, var6);
           this.field_d.a(param0 ^ 24, var6);
           ((lj) ((Object) var6)).field_h = 0L;
-          var8.b(115);
-          var8.c(-1);
+          var8.unlink(115);
+          var8.unlinkSecondary(-1);
         }
         return var5;
     }

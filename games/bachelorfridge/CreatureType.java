@@ -387,7 +387,7 @@ final class CreatureType {
           }
           dl.field_h = new IntrusiveNodeHashTable(16);
           for (var1_int = 0; var1_int < ol.field_l.length; var1_int++) {
-            dl.field_h.a((long)ol.field_l[var1_int].hashCode(), (byte) -55, new ji(var1_int));
+            dl.field_h.put((long)ol.field_l[var1_int].hashCode(), (byte) -55, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

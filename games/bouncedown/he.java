@@ -131,10 +131,10 @@ final class he extends IntrusiveNode {
               var13++;
               var9Lifetime1++;
             }
-            var3_ref.c(2);
+            var3_ref.unlink(2);
             return;
           }
-          var3_ref.c(2);
+          var3_ref.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

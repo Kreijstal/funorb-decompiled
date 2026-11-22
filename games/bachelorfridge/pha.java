@@ -55,7 +55,7 @@ final class pha {
         if (param0 != -76) {
           return;
         }
-        ul var4 = (ul) (this.field_d.a(param1, (byte) -122));
+        ul var4 = (ul) (this.field_d.get(param1, (byte) -122));
         this.a(-29063, var4);
     }
 
@@ -70,7 +70,7 @@ final class pha {
     final Object a(int param0, long param1) {
         oea var7 = null;
         int var4 = 78 % ((30 - param0) / 60);
-        ul var5 = (ul) (this.field_d.a(param1, (byte) -119));
+        ul var5 = (ul) (this.field_d.get(param1, (byte) -119));
         if (var5 == null) {
           return null;
         }
@@ -81,7 +81,7 @@ final class pha {
             var5.secondaryKey = 0L;
           } else {
             var7 = new oea(var6, var5.field_n);
-            this.field_d.a(0, var5.key, var7);
+            this.field_d.put(0, var5.key, var7);
             this.field_b.a(var7, (byte) -118);
             ((ul) ((Object) var7)).secondaryKey = 0L;
             var5.unlink(false);
@@ -111,7 +111,7 @@ final class pha {
             this.a(-29063, var7);
           }
           var7_ref = new oea(param3, param1);
-          this.field_d.a(0, param2, var7_ref);
+          this.field_d.put(0, param2, var7_ref);
           this.field_b.a(var7_ref, (byte) -118);
           ((ul) ((Object) var7_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {

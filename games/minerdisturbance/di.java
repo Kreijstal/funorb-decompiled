@@ -256,7 +256,7 @@ final class di extends PcmStream {
           if (0 <= param1.field_G && (null == param1.field_w ||
             param1.field_w.k())) {
             param1.a((byte) -103);
-            param1.b(34);
+            param1.unlink(34);
             if (param1.field_J > 0) {
               if (param1 != this.field_U[param1.field_n][param1.field_J]) {
                 return true;
@@ -345,7 +345,7 @@ final class di extends PcmStream {
           }
           param1.a((byte) 80);
           if (0 <= param1.field_G) {
-            param1.b(34);
+            param1.unlink(34);
             if (param1.field_J > 0 &&
               this.field_U[param1.field_n][param1.field_J] == param1) {
               this.field_U[param1.field_n][param1.field_J] = null;
@@ -652,7 +652,7 @@ final class di extends PcmStream {
             if (var3.field_G < 0) {
               this.field_gb[var3.field_n][var3.field_F] = null;
             }
-            var3.b(34);
+            var3.unlink(34);
           }
           var3 = (cg) (this.field_z.field_v.b((byte) 56));
         }
@@ -951,7 +951,7 @@ final class di extends PcmStream {
           if (param0.field_G < 0) {
             return true;
           }
-          param0.b(34);
+          param0.unlink(34);
           if (param0.field_J > 0 &&
             this.field_U[param0.field_n][param0.field_J] == param0) {
             this.field_U[param0.field_n][param0.field_J] = null;

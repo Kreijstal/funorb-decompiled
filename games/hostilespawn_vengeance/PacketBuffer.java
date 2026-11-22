@@ -627,7 +627,7 @@ class PacketBuffer extends IntrusiveNode {
               }
             }
             var4.field_m = true;
-            var4.b(113);
+            var4.unlink(113);
             return;
           }
           if (var2 == 1) {
@@ -646,7 +646,7 @@ class PacketBuffer extends IntrusiveNode {
               return;
             }
             var6_ref_jd.field_k = var4_long;
-            var6_ref_jd.b(-105);
+            var6_ref_jd.unlink(-105);
             return;
           }
           ic.a((byte) -125, "HS1: " + gf.a((byte) -126), (Throwable) null);

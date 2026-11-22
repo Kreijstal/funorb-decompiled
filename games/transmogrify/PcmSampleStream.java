@@ -827,7 +827,7 @@ final class PcmSampleStream extends PcmStream {
               this.field_k = 0;
               this.field_u = 0;
               this.field_n = 0;
-              this.c(5);
+              this.unlink(5);
               param0 = this.field_w;
             }
             this.field_w = 0;
@@ -845,7 +845,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l < 0) {
           if (this.field_y <= 0) {
             this.j();
-            this.c(5);
+            this.unlink(5);
             return;
           }
           this.field_l = 0;
@@ -853,7 +853,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l >= var5) {
           if (this.field_y >= 0) {
             this.j();
-            this.c(5);
+            this.unlink(5);
             return;
           }
           this.field_l = var5 - 1;
@@ -966,7 +966,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l >= var5) {
             this.field_l = var5;
             this.j();
-            this.c(5);
+            this.unlink(5);
           }
           return;
         }
@@ -975,7 +975,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.field_l = -1;
         this.j();
-        this.c(5);
+        this.unlink(5);
     }
 
     private final synchronized void c(int param0, int param1) {
@@ -1203,7 +1203,7 @@ final class PcmSampleStream extends PcmStream {
           this.field_k = 0;
           this.field_u = 0;
           this.field_n = 0;
-          this.c(5);
+          this.unlink(5);
           return true;
         }
         if (this.field_n >= var1) {
@@ -1260,7 +1260,7 @@ final class PcmSampleStream extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.i(0);
-          this.c(5);
+          this.unlink(5);
           return;
         }
         if (this.field_u != 0) {
@@ -1320,7 +1320,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_w = 0;
         this.field_v = 0;
         this.field_n = 0;
-        this.c(5);
+        this.unlink(5);
     }
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
@@ -1442,7 +1442,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l < 0) {
           if (this.field_y <= 0) {
             this.j();
-            this.c(5);
+            this.unlink(5);
             return;
           }
           this.field_l = 0;
@@ -1450,7 +1450,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.field_l >= var7) {
           if (this.field_y >= 0) {
             this.j();
-            this.c(5);
+            this.unlink(5);
             return;
           }
           this.field_l = var7 - 1;
@@ -1577,7 +1577,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l >= var7) {
             this.field_l = var7;
             this.j();
-            this.c(5);
+            this.unlink(5);
           }
           return;
         }
@@ -1587,7 +1587,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.field_l = -1;
         this.j();
-        this.c(5);
+        this.unlink(5);
         return;
     }
 

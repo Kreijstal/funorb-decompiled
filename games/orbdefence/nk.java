@@ -1920,7 +1920,7 @@ final class nk {
                 break scanLoop1;
               }
               if (stackIn_37_0 >= stackIn_37_1) {
-                var3_ref_pd.b(57);
+                var3_ref_pd.unlink(57);
               }
               var3_ref_pd = (pd) (this.field_v.b(10708));
             }
@@ -2697,7 +2697,7 @@ final class nk {
                             while (true) {
                               if (!wf.field_c.field_o.c(-3088)) {
                                 var24_ref = (kb) (wf.field_c.field_o.b((byte) -74));
-                                var24_ref.b(param0 ^ 28858);
+                                var24_ref.unlink(param0 ^ 28858);
                                 var12_ref_im.a(-98, var24_ref);
                                 if (var19 == 0) {
                                   continue;
@@ -2779,7 +2779,7 @@ final class nk {
                         var28 = new im();
                         while (!wf.field_c.field_o.c(-3088)) {
                           var27_ref = (kb) (wf.field_c.field_o.b((byte) -85));
-                          var27_ref.b(57);
+                          var27_ref.unlink(57);
                           var28.a(param0 - 28917, var27_ref);
                           if (var19 != 0) {
                             decompiledFrameCompleted1 = false;

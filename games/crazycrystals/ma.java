@@ -323,7 +323,7 @@ final class ma extends pn {
               }
             }
             var4.field_n = true;
-            var4.a(false);
+            var4.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -342,7 +342,7 @@ final class ma extends pn {
               return;
             }
             var6_ref_hp.field_i = var4_long;
-            var6_ref_hp.a(false);
+            var6_ref_hp.unlink(false);
             return;
           }
           wp.a((Throwable) null, "HS1: " + IntrusiveNodeHashTable.a(-1815), 21862);

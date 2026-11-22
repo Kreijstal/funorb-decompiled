@@ -253,7 +253,7 @@ final class fa extends wl {
                 this.field_k.field_p = this.field_k.field_p + var6;
                 this.field_k.field_o.position = this.field_k.field_o.position + var6;
                 if (this.field_k.field_o.position == var5) {
-                  this.field_k.a(7847);
+                  this.field_k.unlinkSecondary(7847);
                   this.field_k.field_j = false;
                   this.field_k = null;
                 } else {

@@ -60,7 +60,7 @@ final class eq extends TextureOperator {
         if (param1 < 80) {
           return (bs) null;
         }
-        return (bs) (ck.field_I.a(3661, param0));
+        return (bs) (ck.field_I.get(3661, param0));
     }
 
     final int[][] b(int param0, int param1) {

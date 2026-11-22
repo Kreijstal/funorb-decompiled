@@ -27,7 +27,7 @@ final class WeightedObjectCache {
             this.a(var6, 4821);
           }
           var6_ref = new la(param0, param1);
-          this.field_b.a(param3, true, var6_ref);
+          this.field_b.put(param3, true, var6_ref);
           this.field_g.a(12, var6_ref);
           ((b) ((Object) var6_ref)).field_f = (long)param2;
         } catch (RuntimeException runtimeException) {
@@ -57,7 +57,7 @@ final class WeightedObjectCache {
             return;
           }
           param0.unlink(param1 - 24643);
-          param0.a(7847);
+          param0.unlinkSecondary(7847);
           this.field_e = this.field_e + param0.field_n;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ final class WeightedObjectCache {
     }
 
     final Object a(long param0, byte param1) {
-        b var8 = (b) (this.field_b.a((byte) -83, param0));
+        b var8 = (b) (this.field_b.get((byte) -83, param0));
         int var5 = -6 / ((param1 + 61) / 51);
         if (var8 == null) {
           return null;
@@ -92,7 +92,7 @@ final class WeightedObjectCache {
         Object var6 = var8.a((byte) -78);
         if (var6 == null) {
           var8.unlink(-19822);
-          var8.a(7847);
+          var8.unlinkSecondary(7847);
           this.field_e = this.field_e + var8.field_n;
           return null;
         }
@@ -102,16 +102,16 @@ final class WeightedObjectCache {
           return var6;
         }
         la var7 = new la(var6, var8.field_n);
-        this.field_b.a(var8.key, true, var7);
+        this.field_b.put(var8.key, true, var7);
         this.field_g.a(12, var7);
         ((b) ((Object) var7)).field_f = 0L;
         var8.unlink(-19822);
-        var8.a(7847);
+        var8.unlinkSecondary(7847);
         return var6;
     }
 
     private final void a(int param0, long param1) {
-        b var4 = (b) (this.field_b.a((byte) -85, param1));
+        b var4 = (b) (this.field_b.get((byte) -85, param1));
         if (param0 == 0) {
           this.a(var4, 4821);
           return;

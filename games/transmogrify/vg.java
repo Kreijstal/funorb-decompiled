@@ -405,7 +405,7 @@ final class vg {
                       var7 == 0) {
                       break regionExit2;
                     }
-                    if ((!(lj.field_u.b(8)) ||
+                    if ((!(lj.field_u.isLinked(8)) ||
                       lj.field_u.l())) {
                       lj.field_u.j(0);
                       lj.field_u.k(255);

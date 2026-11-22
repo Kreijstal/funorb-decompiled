@@ -820,7 +820,7 @@ final class lj extends di {
             if (!(0 <= var3.field_n)) {
               this.field_I[var3.field_F][var3.field_h] = null;
             }
-            var3.b(57);
+            var3.unlink(57);
           }
           var3 = (he) (this.field_O.field_k.d(853));
         }
@@ -845,7 +845,7 @@ final class lj extends di {
           if (param1.field_n >= 0 && (null == param1.field_l ||
             param1.field_l.k())) {
             param1.d(param0 ^ 4165);
-            param1.b(57);
+            param1.unlink(57);
             if (param1.field_f > 0) {
               if (this.field_t[param1.field_F][param1.field_f] != param1) {
                 return true;
@@ -934,7 +934,7 @@ final class lj extends di {
           }
           param1.d(5);
           if (0 <= param1.field_n) {
-            param1.b(param0 - 4103);
+            param1.unlink(param0 - 4103);
             if (param1.field_f > 0 &&
               param1 == this.field_t[param1.field_F][param1.field_f]) {
               this.field_t[param1.field_F][param1.field_f] = null;
@@ -976,16 +976,16 @@ final class lj extends di {
             kg.field_f = 200;
             var1 = (hf) (ba.field_b.b((byte) -28));
             while (var1 != null) {
-              if (!var1.field_f.b(true)) {
-                var1.b(57);
+              if (!var1.field_f.isLinked(true)) {
+                var1.unlink(57);
               }
               var1 = (hf) (ba.field_b.d(853));
             }
             if (bg.field_a != null) {
               var1Lifetime1 = (hf) (bg.field_a.b((byte) 126));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_f.b(true)) {
-                  var1Lifetime1.b(57);
+                if (!var1Lifetime1.field_f.isLinked(true)) {
+                  var1Lifetime1.unlink(57);
                 }
                 var1Lifetime1 = (hf) (bg.field_a.d(853));
               }
@@ -1289,7 +1289,7 @@ final class lj extends di {
           if (param0.field_n < 0) {
             return true;
           }
-          param0.b(57);
+          param0.unlink(57);
           if (0 < param0.field_f &&
             this.field_t[param0.field_F][param0.field_f] == param0) {
             this.field_t[param0.field_F][param0.field_f] = null;

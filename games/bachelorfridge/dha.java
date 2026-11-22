@@ -114,7 +114,7 @@ final class dha {
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (!var2.equals("")) {
-          return ((ji) (InsanoSauceAnimation.field_x.a(true, (long)var2.hashCode()))).field_h;
+          return ((ji) (InsanoSauceAnimation.field_x.get(true, (long)var2.hashCode()))).field_h;
         }
         return -1;
     }

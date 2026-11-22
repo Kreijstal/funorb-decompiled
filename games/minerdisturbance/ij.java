@@ -68,7 +68,7 @@ final class ij extends ArchiveProvider {
         }
         byte[] var4 = var3.c((byte) -115);
         int var5 = 22 / ((-32 - param0) / 34);
-        var3.b(34);
+        var3.unlink(34);
         return var4;
     }
 
@@ -185,7 +185,7 @@ final class ij extends ArchiveProvider {
               if (0 == this.field_A[var4]) {
                 var2_int = 0;
               } else {
-                var3.b(34);
+                var3.unlink(34);
               }
               var3 = this.field_x.b((byte) 56);
             }
@@ -228,7 +228,7 @@ final class ij extends ArchiveProvider {
                 if (this.field_A[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(34);
+                  var3Lifetime1.unlink(34);
                 }
                 var3Lifetime1 = this.field_x.b((byte) 56);
               }
@@ -275,7 +275,7 @@ final class ij extends ArchiveProvider {
                 if (!var2.field_v) {
                   throw new RuntimeException();
                 }
-                var2.b(param0 ^ 34);
+                var2.unlink(param0 ^ 34);
               }
             }
             var2 = (em) (this.field_i.a(true));
@@ -367,7 +367,7 @@ final class ij extends ArchiveProvider {
           if (var3 >= 0) {
             if (this.field_w.field_c > var3) {
               if (this.field_w.field_d[var3] == 0) {
-                var2.b(34);
+                var2.unlink(34);
               } else {
                 if (this.field_A[var3] == 0) {
                   discarded$0 = this.a(103, 1, var3);
@@ -376,14 +376,14 @@ final class ij extends ArchiveProvider {
                   discarded$1 = this.a(92, 2, var3);
                 }
                 if (1 == this.field_A[var3]) {
-                  var2.b(34);
+                  var2.unlink(34);
                 }
               }
             } else {
-              var2.b(34);
+              var2.unlink(34);
             }
           } else {
-            var2.b(34);
+            var2.unlink(34);
           }
           var2 = this.field_r.b((byte) 56);
         }
@@ -432,7 +432,7 @@ final class ij extends ArchiveProvider {
           0 == param1 &&
           !var12.field_v &&
           var12.field_C) {
-          var12.b(34);
+          var12.unlink(34);
           var4 = null;
         }
         if (var4 == null) {
@@ -506,7 +506,7 @@ final class ij extends ArchiveProvider {
                 this.field_A[param2] = (byte) 1;
               }
               if (!((em) (var4)).field_v) {
-                ((em) (var4)).b(34);
+                ((em) (var4)).unlink(34);
               }
               stackIn_60_0 = var4;
               return (em) (stackIn_60_0);
@@ -516,7 +516,7 @@ final class ij extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_A[param2] = (byte)-1;
-            ((em) (var4)).b(34);
+            ((em) (var4)).unlink(34);
             if (((em) (var4)).field_v) {
               if (this.field_j.d((byte) -111)) {
                 return null;
@@ -558,7 +558,7 @@ final class ij extends ArchiveProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_j.d(20);
-          ((em) (var4)).b(34);
+          ((em) (var4)).unlink(34);
           if (!((em) (var4)).field_v) {
             return null;
           }
@@ -578,7 +578,7 @@ final class ij extends ArchiveProvider {
           }
         }
         if (!((em) (var4)).field_v) {
-          ((em) (var4)).b(34);
+          ((em) (var4)).unlink(34);
         }
         return (em) (var4);
     }

@@ -80,7 +80,7 @@ final class MixedSupport086 {
         HashNode hashNodeLocal1 = null;
         try {
           if (null != hashNodeArgument3.next) {
-            hashNodeArgument3.performAction0149((byte) 116);
+            hashNodeArgument3.unlink((byte) 116);
           }
           hashNodeLocal1 = this.hashNodeArrayState0001[(int)((long)(this.integerState0537 + integerArgument2) & longArgument1)];
           hashNodeArgument3.next = hashNodeLocal1.next;

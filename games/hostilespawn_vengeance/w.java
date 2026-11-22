@@ -186,7 +186,7 @@ class w extends PcmStream {
             if (var3.field_h < 0) {
               this.field_q[var3.field_E][var3.field_z] = null;
             }
-            var3.b(123);
+            var3.unlink(123);
           }
           var3 = (tm) (this.field_B.field_t.a(12684));
         }
@@ -206,7 +206,7 @@ class w extends PcmStream {
             return false;
           }
           if (0 <= param1.field_h) {
-            param1.b(-108);
+            param1.unlink(-108);
             if (param1.field_m > 0) {
               if (param1 != this.field_P[param1.field_E][param1.field_m]) {
                 return true;
@@ -473,7 +473,7 @@ class w extends PcmStream {
           if (0 <= param0.field_h && (param0.field_A == null ||
             param0.field_A.j())) {
             param0.b(true);
-            param0.b(119);
+            param0.unlink(119);
             if (param0.field_m > 0) {
               if (this.field_P[param0.field_E][param0.field_m] != param0) {
                 return true;
@@ -559,7 +559,7 @@ class w extends PcmStream {
           }
           param0.b(true);
           if (param0.field_h >= 0) {
-            param0.b(-29);
+            param0.unlink(-29);
             if (param0.field_m > 0 &&
               param0 == this.field_P[param0.field_E][param0.field_m]) {
               this.field_P[param0.field_E][param0.field_m] = null;

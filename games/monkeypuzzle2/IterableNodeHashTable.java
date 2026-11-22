@@ -130,7 +130,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final void a(long param0, boolean param1, IntrusiveNode param2) {
+    final void put(long param0, boolean param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (!param1) {
@@ -150,7 +150,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(byte param0, long param1) {
+    final IntrusiveNode get(byte param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;

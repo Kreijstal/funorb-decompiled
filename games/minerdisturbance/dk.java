@@ -63,11 +63,11 @@ final class dk {
         var2.readInt((byte) 117);
         var2.readInt((byte) 49);
         if (param0 == 22288) {
-          var1.b(param0 ^ 22322);
+          var1.unlink(param0 ^ 22322);
           return;
         }
         dk.clearStaticReferences(-78);
-        var1.b(param0 ^ 22322);
+        var1.unlink(param0 ^ 22322);
     }
 
     public static void clearStaticReferences(int param0) {

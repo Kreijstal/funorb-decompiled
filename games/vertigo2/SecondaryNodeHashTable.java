@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi {
-    private DualLinkNode field_i;
+final class SecondaryNodeHashTable {
+    private DualLinkNode lookupCursor;
     static String field_j;
     static byte[] field_c;
     static tj field_b;
-    private long field_d;
+    private long lookupKey;
     static String field_e;
-    private int field_h;
-    private int field_g;
-    private DualLinkNode field_a;
-    private DualLinkNode[] field_f;
+    private int iterationBucketIndex;
+    private int bucketCount;
+    private DualLinkNode iterationCursor;
+    private DualLinkNode[] buckets;
 
     final static void a(int param0, boolean param1, String param2) {
         try {
@@ -24,18 +24,18 @@ final class fi {
         }
     }
 
-    final void a(DualLinkNode param0, long param1, int param2) {
+    final void put(DualLinkNode param0, long param1, int param2) {
         DualLinkNode var5 = null;
         try {
           if (null != param0.secondaryNext) {
             param0.unlinkSecondary(-107);
           }
           int var6 = 118 / ((param2 + 20) / 35);
-          var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_g))];
+          var5 = this.buckets[(int)(param1 & (long)(-1 + this.bucketCount))];
           param0.secondaryPrevious = var5;
           param0.secondaryNext = var5.secondaryNext;
           param0.secondaryNext.secondaryPrevious = param0;
-          param0.field_n = param1;
+          param0.secondaryKey = param1;
           param0.secondaryPrevious.secondaryNext = param0;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -52,7 +52,7 @@ final class fi {
         field_c = null;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode next(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
@@ -65,62 +65,62 @@ final class fi {
         DualLinkNode var58;
         DualLinkNode var59;
         var3 = Vertigo2.field_L ? 1 : 0;
-        if (this.field_h <= 0) {
+        if (this.iterationBucketIndex <= 0) {
           if (param0 == -60) {
             do {
-              if (this.field_g <= this.field_h) {
+              if (this.bucketCount <= this.iterationBucketIndex) {
                 return null;
               }
-              fieldTemp$1 = this.field_h;
-              this.field_h = this.field_h + 1;
-              var4 = this.field_f[fieldTemp$1].secondaryPrevious;
+              fieldTemp$1 = this.iterationBucketIndex;
+              this.iterationBucketIndex = this.iterationBucketIndex + 1;
+              var4 = this.buckets[fieldTemp$1].secondaryPrevious;
               var58 = var4;
-            } while (var4 == this.field_f[-1 + this.field_h]);
-            this.field_a = var58.secondaryPrevious;
+            } while (var4 == this.buckets[-1 + this.iterationBucketIndex]);
+            this.iterationCursor = var58.secondaryPrevious;
             return var58;
           }
-          this.a(-90);
+          this.nextWithSameKey(-90);
           do {
-            if (this.field_g <= this.field_h) {
+            if (this.bucketCount <= this.iterationBucketIndex) {
               return null;
             }
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            var4 = this.field_f[fieldTemp$0].secondaryPrevious;
+            fieldTemp$0 = this.iterationBucketIndex;
+            this.iterationBucketIndex = this.iterationBucketIndex + 1;
+            var4 = this.buckets[fieldTemp$0].secondaryPrevious;
             var59 = var4;
-          } while (var4 == this.field_f[-1 + this.field_h]);
-          this.field_a = var59.secondaryPrevious;
+          } while (var4 == this.buckets[-1 + this.iterationBucketIndex]);
+          this.iterationCursor = var59.secondaryPrevious;
           return var59;
         }
-        if (this.field_a != this.field_f[this.field_h - 1]) {
-          var57 = this.field_a;
-          this.field_a = var57.secondaryPrevious;
+        if (this.iterationCursor != this.buckets[this.iterationBucketIndex - 1]) {
+          var57 = this.iterationCursor;
+          this.iterationCursor = var57.secondaryPrevious;
           return var57;
         }
         if (param0 == -60) {
           do {
-            if (this.field_g <= this.field_h) {
+            if (this.bucketCount <= this.iterationBucketIndex) {
               return null;
             }
-            fieldTemp$3 = this.field_h;
-            this.field_h = this.field_h + 1;
-            var4 = this.field_f[fieldTemp$3].secondaryPrevious;
+            fieldTemp$3 = this.iterationBucketIndex;
+            this.iterationBucketIndex = this.iterationBucketIndex + 1;
+            var4 = this.buckets[fieldTemp$3].secondaryPrevious;
             var5 = var4;
-          } while (var4 == this.field_f[-1 + this.field_h]);
-          this.field_a = var5.secondaryPrevious;
+          } while (var4 == this.buckets[-1 + this.iterationBucketIndex]);
+          this.iterationCursor = var5.secondaryPrevious;
           return var5;
         }
-        this.a(-90);
+        this.nextWithSameKey(-90);
         do {
-          if (this.field_g <= this.field_h) {
+          if (this.bucketCount <= this.iterationBucketIndex) {
             return null;
           }
-          fieldTemp$2 = this.field_h;
-          this.field_h = this.field_h + 1;
-          var4 = this.field_f[fieldTemp$2].secondaryPrevious;
+          fieldTemp$2 = this.iterationBucketIndex;
+          this.iterationBucketIndex = this.iterationBucketIndex + 1;
+          var4 = this.buckets[fieldTemp$2].secondaryPrevious;
           var29 = var4;
-        } while (var4 == this.field_f[-1 + this.field_h]);
-        this.field_a = var29.secondaryPrevious;
+        } while (var4 == this.buckets[-1 + this.iterationBucketIndex]);
+        this.iterationCursor = var29.secondaryPrevious;
         return var29;
     }
 
@@ -163,78 +163,78 @@ final class fi {
         }
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode first(int param0) {
         int var2 = 59 / ((-72 - param0) / 53);
-        this.field_h = 0;
-        return this.a((byte) -60);
+        this.iterationBucketIndex = 0;
+        return this.next((byte) -60);
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
         var6 = Vertigo2.field_L ? 1 : 0;
-        this.field_d = param1;
+        this.lookupKey = param1;
         if (param0 != 3661) {
           return (DualLinkNode) null;
         }
-        var4 = this.field_f[(int)((long)(this.field_g - 1) & param1)];
-        this.field_i = var4.secondaryPrevious;
+        var4 = this.buckets[(int)((long)(this.bucketCount - 1) & param1)];
+        this.lookupCursor = var4.secondaryPrevious;
         while (true) {
-          if (var4 == this.field_i) {
-            this.field_i = null;
+          if (var4 == this.lookupCursor) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~param1 != ~this.field_i.field_n) {
-            this.field_i = this.field_i.secondaryPrevious;
+          if (~param1 != ~this.lookupCursor.secondaryKey) {
+            this.lookupCursor = this.lookupCursor.secondaryPrevious;
             continue;
           }
           break;
         }
-        var5 = this.field_i;
-        this.field_i = this.field_i.secondaryPrevious;
+        var5 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryPrevious;
         return var5;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode nextWithSameKey(int param0) {
         DualLinkNode var2;
         DualLinkNode var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
-        if (null == this.field_i) {
+        if (null == this.lookupCursor) {
           return null;
         }
         if (param0 > -89) {
           return (DualLinkNode) null;
         }
-        var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_g))];
+        var2 = this.buckets[(int)(this.lookupKey & (long)(-1 + this.bucketCount))];
         while (true) {
-          if (this.field_i == var2) {
-            this.field_i = null;
+          if (this.lookupCursor == var2) {
+            this.lookupCursor = null;
             return null;
           }
-          if (~this.field_i.field_n != ~this.field_d) {
-            this.field_i = this.field_i.secondaryPrevious;
+          if (~this.lookupCursor.secondaryKey != ~this.lookupKey) {
+            this.lookupCursor = this.lookupCursor.secondaryPrevious;
             continue;
           }
           break;
         }
-        var3 = this.field_i;
-        this.field_i = this.field_i.secondaryPrevious;
+        var3 = this.lookupCursor;
+        this.lookupCursor = this.lookupCursor.secondaryPrevious;
         return var3;
     }
 
-    fi(int param0) {
+    SecondaryNodeHashTable(int param0) {
         int var2 = 0;
         DualLinkNode dupTemp$1 = null;
         DualLinkNode var3;
-        this.field_h = 0;
-        this.field_g = param0;
-        this.field_f = new DualLinkNode[param0];
+        this.iterationBucketIndex = 0;
+        this.bucketCount = param0;
+        this.buckets = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
           dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
-          this.field_f[var2] = dupTemp$1;
+          this.buckets[var2] = dupTemp$1;
           var3.secondaryPrevious = var3;
           var3.secondaryNext = var3;
         }

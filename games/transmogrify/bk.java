@@ -14,11 +14,11 @@ final class bk {
           return null;
         }
         if (param0 == -31914) {
-          var2.b((byte) -109);
+          var2.unlinkSecondary((byte) -109);
           return var2;
         }
         field_d = 111;
-        var2.b((byte) -109);
+        var2.unlinkSecondary((byte) -109);
         return var2;
     }
 
@@ -112,7 +112,7 @@ final class bk {
     final void a(byte param0, DualLinkNode param1) {
         try {
           if (param1.field_g != null) {
-            param1.b((byte) -116);
+            param1.unlinkSecondary((byte) -116);
           }
           if (param0 != -128) {
             field_a = 94;

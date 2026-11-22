@@ -1860,6 +1860,14 @@
       "renamedSymbol": "M:lg.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:ll.b(B)V",
+      "originalName": "b",
+      "to": "unlinkSecondary",
+      "evidence": "If field_l null return. Write first secondary neighbor;wrong byte!=-2 clears static String-array field_t before second neighbor write,then clear field_l and field_n. Preserve intermediate failure/side-effect ordering. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(B)V"
+    },
+    {
       "symbol": "M:lm.d(B)V",
       "originalName": "d",
       "to": "clearStaticReferences",
@@ -243001,9 +243009,9 @@
     },
     {
       "symbol": "M:ll.b(B)V",
-      "renamedSymbol": "M:DualLinkNode.b(B)V",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "unlinkSecondary",
       "declaration": {
         "file": "ll.java",
         "start": 5159,
@@ -301400,7 +301408,7 @@
     },
     {
       "symbol": "P:ll.b(B)V#0",
-      "renamedSymbol": "P:DualLinkNode.b(B)V#0",
+      "renamedSymbol": "P:DualLinkNode.unlinkSecondary(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -347978,7 +347986,7 @@
       "original": "dh.java",
       "renamed": "dh.java",
       "inputSha256": "d201cea7f53d7c2929853d8a8976d5ff10c1a4af0acd3e357bbfe8524ddd622b",
-      "outputSha256": "ae27d2e87928be3ca6c016f12514ab5ad16636bb6bd7fe3f8c76e316c2c36412",
+      "outputSha256": "48b1e0d2f2caa489ead2b3e17b80704b89f9b5a28c219f76fe28165a6bdfb163",
       "edits": [
         {
           "start": 107,
@@ -348000,6 +348008,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 586,
+          "end": 587,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 858,
@@ -348084,6 +348099,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2952,
+          "end": 2953,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 3029,
@@ -353354,7 +353376,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "d373955132b9653a929b07818dee68b671027f74e58db223c62ea848a33645a3",
-      "outputSha256": "7a90862958b4eef11cf801493d5e147d5f6d19d67b2fb374e9f4533bcfee9243",
+      "outputSha256": "cde98e2db85666a38434c75bbae9329cd03bd2e964471e3a01f0f5022c27bf05",
       "edits": [
         {
           "start": 619,
@@ -353362,6 +353384,13 @@
           "symbol": "M:ne.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 644,
+          "end": 645,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 853,
@@ -353378,6 +353407,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 1008,
+          "end": 1009,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
+        },
+        {
           "start": 1275,
           "end": 1282,
           "symbol": "F:ne.field_h:J",
@@ -353390,6 +353426,13 @@
           "symbol": "M:ne.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 1449,
+          "end": 1450,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 1610,
@@ -353425,6 +353468,13 @@
           "symbol": "M:ne.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 3402,
+          "end": 3403,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 3609,
@@ -360716,7 +360766,7 @@
       "original": "id.java",
       "renamed": "id.java",
       "inputSha256": "d4a1d751d55ca59602c554dd0356c6b6e79faf42290dc0881823e75d3141484d",
-      "outputSha256": "bb6ec863cc7f4fb64d6f724da431f4e87e0d746d0ee7e867a80fa661e38b9baa",
+      "outputSha256": "ac9a6e8d4eb0476700bdf664cf9b4bb112ce15903d66809a691d2d4df850390a",
       "edits": [
         {
           "start": 108,
@@ -360759,6 +360809,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 875,
+          "end": 876,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2795,
@@ -366847,7 +366904,7 @@
       "original": "ll.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "6e6aa391b4869f15187d0ba8811df27fc288baee0c0a5a7d9922d8bbd51f8503",
-      "outputSha256": "87276d10a5ce6cfa983dc71611c140936fd7d2d22d1829b0ccf5805956ba0277",
+      "outputSha256": "111511b8afd08ea7602d1d3c44a98593d223cb73ee22d5724df2e5690c3f3e3f",
       "edits": [
         {
           "start": 65,
@@ -366953,6 +367010,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 5159,
+          "end": 5160,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 5960,
@@ -381200,7 +381264,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "e43d85ec5bc8a108eca02a889b824057c0e2b1322869e8f80f812d188f636b90",
-      "outputSha256": "d260c2c817a916db1db40ba3cff0c7ca6c32c7f6376d6683548be576988a2df5",
+      "outputSha256": "05ed3110cdfd48fd2e8991aea8a0a65b1fcdee1aa078bc38a1adf5efdc9023b9",
       "edits": [
         {
           "start": 67,
@@ -381243,6 +381307,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1229,
+          "end": 1230,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 1261,
@@ -382747,7 +382818,7 @@
       "original": "tp.java",
       "renamed": "tp.java",
       "inputSha256": "9989ba022c2faa57fc7ad384887afa80645f6cfacc5871e08a50bc513f144f96",
-      "outputSha256": "f2959c1ed4fd959094d59ed319fc76bdc2363fb392ebf9a34b31c86150da22cf",
+      "outputSha256": "404f8bafe9386d825e0d54e335f5eb5f8225d77fd4dab270ee500c5a29625b49",
       "edits": [
         {
           "start": 372,
@@ -383077,6 +383148,13 @@
           "symbol": "F:ec.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 9240,
+          "end": 9241,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 10850,
@@ -384411,7 +384489,7 @@
       "original": "up.java",
       "renamed": "up.java",
       "inputSha256": "c0ee67a7d38cdaac47ad937ae7c4225cf8e4e25809fb8872f38d09b8e13f209d",
-      "outputSha256": "7b314a61ac2bf64ba86494d74ffc7e418178e6aa6b3896f8d7ac0112d0fd5443",
+      "outputSha256": "762e38739a4ec59793aa0b6f5ee808c8a1957c6c799b99b00fefac018237e776",
       "edits": [
         {
           "start": 91,
@@ -384477,6 +384555,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 2869,
+          "end": 2870,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
+        },
+        {
           "start": 2954,
           "end": 2956,
           "symbol": "C:ll",
@@ -384496,6 +384581,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3640,
+          "end": 3641,
+          "symbol": "M:ll.b(B)V",
+          "original": "b",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 3982,
@@ -387840,10 +387932,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "1619f16fd6e4374821c271175ba6feee1e2c4488800e89ed29b7a12a92fd76f8",
+    "rulesSha256": "47a1d8a7a6fa782aa2d253ea2b021460c4141f1211f845e6bc5048ff8e550861",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "39b016e78b793a1510deec231d2e686012ba1a97184d91dcdf9a41f65029e5df",
+    "outputTreeSha256": "1c7471a97a01527374b4356205688f4b3f94092daeab4eacb8989f76616e782f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

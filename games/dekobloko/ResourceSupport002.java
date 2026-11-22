@@ -258,7 +258,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
               }
             }
             cipherPacketBufferArgument2.appendCrc32((byte) -15, integerLocal9);
-            mixedSupport071Local32.performAction0149((byte) 103);
+            mixedSupport071Local32.unlink((byte) 103);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal54) {
             caughtExceptionLocal6 = caughtParameterLocal54;

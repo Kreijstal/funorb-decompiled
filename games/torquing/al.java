@@ -95,7 +95,7 @@ final class al {
     }
 
     private final void a(long param0, int param1) {
-        d var4 = (d) (this.field_a.a(param0, param1 - 19110));
+        d var4 = (d) (this.field_a.get(param0, param1 - 19110));
         this.a(var4, 111);
         if (param1 == 18998) {
           return;
@@ -104,7 +104,7 @@ final class al {
     }
 
     final Object a(int param0, long param1) {
-        d var7 = (d) (this.field_a.a(param1, 115));
+        d var7 = (d) (this.field_a.get(param1, 115));
         if (param0 > -122) {
           return (Object) null;
         }

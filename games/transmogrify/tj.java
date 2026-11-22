@@ -198,7 +198,7 @@ final class tj extends uh {
                       this.field_e.field_C = 0;
                     }
                   } else {
-                    this.field_e.b((byte) -79);
+                    this.field_e.unlinkSecondary((byte) -79);
                     this.field_e.field_m = false;
                     this.field_e = null;
                   }

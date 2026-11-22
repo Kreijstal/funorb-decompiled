@@ -94,7 +94,7 @@ final class w extends TextureOperator {
           }
           var5_int = param1.a((byte) 118, param3);
           var6 = param1.a(var5_int, param2, 113);
-          stackIn_3_0 = fi.a(var5_int, param1, param0, var6, (byte) 70);
+          stackIn_3_0 = SecondaryNodeHashTable.a(var5_int, param1, param0, var6, (byte) 70);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

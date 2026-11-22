@@ -97,7 +97,7 @@ final class ha extends di {
           return;
         }
         try {
-          ic.field_s.a(param0, -16611);
+          ic.field_s.addFirst(param0, -16611);
           qc.a(param1, param0, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

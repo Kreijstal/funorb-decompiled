@@ -115,7 +115,7 @@ class IntrusiveNode {
         field_l = null;
     }
 
-    final void a(boolean param0) {
+    final void unlink(boolean param0) {
         if (this.field_a == null) {
           return;
         }
@@ -134,7 +134,7 @@ class IntrusiveNode {
         int var1 = -49 / ((82 - param0) / 34);
     }
 
-    final boolean c(byte param0) {
+    final boolean isLinked(byte param0) {
         if (null == this.field_a) {
           return false;
         }

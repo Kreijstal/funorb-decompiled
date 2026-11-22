@@ -135,7 +135,7 @@ final class ed {
           var2 = (ik) (qc.field_Y.b(param0));
           while (var2 != null) {
             var2.a(-2857);
-            if (!var2.e(17)) {
+            if (!var2.isLinked(17)) {
               var1_int++;
             }
             var2 = (ik) (qc.field_Y.f(-24059));

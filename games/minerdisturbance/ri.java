@@ -477,7 +477,7 @@ final class ri {
             stackIn_23_0 = null;
             return (ji) (stackIn_23_0);
           }
-          var9.b(34);
+          var9.unlink(34);
           this.field_g.a(0, var6, var8Lifetime1);
           stackIn_25_0 = var8Lifetime1;
           return stackIn_25_0;

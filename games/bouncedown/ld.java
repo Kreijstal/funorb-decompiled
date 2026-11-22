@@ -43,7 +43,7 @@ final class ld extends IntrusiveNode {
             }
             var9.position = var9.position + 4;
             if (var9.verifyCrc32(-19)) {
-              var8.c(2);
+              var8.unlink(2);
               return;
             }
             kc.a((byte) 18);
@@ -64,7 +64,7 @@ final class ld extends IntrusiveNode {
             break;
           }
           if (var4_ref_gf != null) {
-            var4_ref_gf.c(2);
+            var4_ref_gf.unlink(2);
             return;
           }
           kc.a((byte) 18);

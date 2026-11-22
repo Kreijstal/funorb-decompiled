@@ -28,7 +28,7 @@ final class mb {
         if (this.field_e == var2) {
           return null;
         }
-        var2.e(0);
+        var2.unlinkSecondary(0);
         if (param0 != -58) {
           mb.a(-120, -63, -45, (byte) 19, 80);
         }
@@ -145,7 +145,7 @@ final class mb {
     final void a(DualLinkNode param0, boolean param1) {
         try {
           if (null != param0.field_j) {
-            param0.e(0);
+            param0.unlinkSecondary(0);
           }
           if (!param1) {
             field_a = (String) null;

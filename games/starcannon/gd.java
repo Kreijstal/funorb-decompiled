@@ -28,7 +28,7 @@ final class gd {
     final Object a(long param0, int param1) {
         ej var7 = null;
         int var5 = -27 % ((param1 + 2) / 51);
-        mi var8 = (mi) (this.field_b.a(param0, 1));
+        mi var8 = (mi) (this.field_b.get(param0, 1));
         if (var8 == null) {
           return null;
         }
@@ -39,16 +39,16 @@ final class gd {
             var8.field_j = 0L;
           } else {
             var7 = new ej(var6, var8.field_p);
-            this.field_b.a(var8.key, -1, var7);
+            this.field_b.put(var8.key, -1, var7);
             this.field_e.a(var7, 25184);
             ((mi) ((Object) var7)).field_j = 0L;
             var8.unlink(4);
-            var8.a(-6242);
+            var8.unlinkSecondary(-6242);
           }
           return var6;
         }
         var8.unlink(4);
-        var8.a(-6242);
+        var8.unlinkSecondary(-6242);
         this.field_f = this.field_f + var8.field_p;
         return null;
     }
@@ -94,7 +94,7 @@ final class gd {
             this.a((byte) 23, var6);
           }
           var6_ref = new ej(param1, param3);
-          this.field_b.a(param2, -1, var6_ref);
+          this.field_b.put(param2, -1, var6_ref);
           this.field_e.a(var6_ref, 25184);
           ((mi) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
@@ -107,7 +107,7 @@ final class gd {
     }
 
     private final void b(long param0, int param1) {
-        mi var4 = (mi) (this.field_b.a(param0, 1));
+        mi var4 = (mi) (this.field_b.get(param0, 1));
         if (param1 == -31649) {
           this.a((byte) 23, var4);
           return;
@@ -130,7 +130,7 @@ final class gd {
             return;
           }
           param1.unlink(param0 - 19);
-          param1.a(-6242);
+          param1.unlinkSecondary(-6242);
           this.field_f = this.field_f + param1.field_p;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

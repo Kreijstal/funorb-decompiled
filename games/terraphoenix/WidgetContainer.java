@@ -114,7 +114,7 @@ class WidgetContainer extends UiWidget implements sf {
 
     final void b(byte param0, UiWidget param1) {
         try {
-          this.field_C.a(param1, -16611);
+          this.field_C.addFirst(param1, -16611);
           if (param0 != 95) {
             WidgetContainer.a((byte) -55, 'ﾬ');
           }

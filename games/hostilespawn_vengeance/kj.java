@@ -58,7 +58,7 @@ final class kj implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.c(-1);
+        this.field_d.unlinkSecondary(-1);
         this.field_d = null;
     }
 

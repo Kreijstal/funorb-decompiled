@@ -107,10 +107,10 @@ final class ad {
               var9Lifetime1++;
               var14++;
             }
-            var3.b(57);
+            var3.unlink(57);
             return;
           }
-          var3.b(57);
+          var3.unlink(57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -54,12 +54,12 @@ final class mh {
         }
         ef.field_i = ef.field_i | var3;
         TutorialText.field_a = TutorialText.field_a | var3;
-        ga.field_k.a(new hd(param1), -16611);
+        ga.field_k.addFirst(new hd(param1), -16611);
         if (!kg.field_q) {
           if (!bk.c(-25704)) {
             cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, ArchiveIndex.field_e, bh.field_a, param2, (byte) 43);
           } else {
-            u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, ArchiveIndex.field_e, oh.field_e, bh.field_a), -16611);
+            u.field_c.addFirst(new eg(param1, param2, -ge.field_e + oe.field_c, ArchiveIndex.field_e, oh.field_e, bh.field_a), -16611);
           }
         }
     }

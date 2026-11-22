@@ -453,7 +453,7 @@ final class vd {
               }
             }
             var4.field_k = true;
-            var4.c(5);
+            var4.unlink(5);
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) -96);
             var4_long = var28.readLong((byte) 110);
@@ -470,7 +470,7 @@ final class vd {
               return;
             }
             var6_ref_am.field_o = var4_long;
-            var6_ref_am.c(param0 - 11);
+            var6_ref_am.unlink(param0 - 11);
           } else {
             d.a((Throwable) null, 94, "HS1: " + ik.q(48));
             pc.a(1);

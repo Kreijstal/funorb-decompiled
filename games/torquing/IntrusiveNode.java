@@ -46,7 +46,7 @@ class IntrusiveNode {
         this.previous = null;
     }
 
-    final boolean e(int param0) {
+    final boolean isLinked(int param0) {
         if (this.next == null) {
           return false;
         }

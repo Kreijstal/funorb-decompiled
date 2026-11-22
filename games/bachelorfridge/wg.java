@@ -210,14 +210,14 @@ final class wg extends aba {
           if (var2.equals("")) {
             return -1;
           }
-          return ((ji) (pga.field_b.a(true, (long)var2.hashCode()))).field_h;
+          return ((ji) (pga.field_b.get(true, (long)var2.hashCode()))).field_h;
         }
         var2Lifetime1 = TextInputWidget.field_E[param0][19];
         var2Lifetime1 = var2Lifetime1.trim();
         if (var2Lifetime1.equals("")) {
           return -1;
         }
-        return ((ji) (pga.field_b.a(true, (long)var2Lifetime1.hashCode()))).field_h;
+        return ((ji) (pga.field_b.get(true, (long)var2Lifetime1.hashCode()))).field_h;
     }
 
     wg(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {

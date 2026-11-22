@@ -49,7 +49,7 @@ class IntrusiveNode {
         return null;
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (param0 < 76) {
           this.next = (IntrusiveNode) null;
         }

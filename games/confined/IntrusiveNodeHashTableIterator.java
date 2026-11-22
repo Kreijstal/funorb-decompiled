@@ -31,7 +31,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
         if (null == this.field_c) {
           throw new IllegalStateException();
         }
-        this.field_c.a(true);
+        this.field_c.unlink(true);
         this.field_c = null;
     }
 
@@ -54,7 +54,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
         return false;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_c = null;
         this.field_e = this.field_a.field_j[0].field_h;
         this.field_b = param0;
@@ -64,7 +64,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
         this.field_c = null;
         try {
           this.field_a = param0;
-          this.a(1);
+          this.reset(1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

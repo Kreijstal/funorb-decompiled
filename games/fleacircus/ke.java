@@ -104,7 +104,7 @@ final class ke extends sh {
     }
 
     private final void a(vl param0) {
-        param0.c(-1);
+        param0.unlink(-1);
         param0.a();
         IntrusiveNode var2 = this.field_p.field_e.field_h;
         if (var2 == this.field_p.field_e) {

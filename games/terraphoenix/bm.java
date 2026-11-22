@@ -133,7 +133,7 @@ final class bm {
             field_b = (String) null;
           }
           var9 = new fb(param1, param5, param0, param6, param8, param7, param2);
-          hd.field_p.a(var9, -16611);
+          hd.field_p.addFirst(var9, -16611);
           mh.a(var9, param3, 0);
           stackIn_3_0 = var9;
           return stackIn_3_0;

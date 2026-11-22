@@ -21,7 +21,7 @@ final class ol extends om {
         ab var3 = (ab) (var2.a((byte) 97));
         while (var3 != null) {
           if (var3.e((byte) 79)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (ab) (var2.b(-6));
         }
@@ -41,7 +41,7 @@ final class ol extends om {
         ab var3 = (ab) (var2.a((byte) 124));
         while (var3 != null) {
           if (var3.g((byte) 8)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (ab) (var2.b(-27));
         }

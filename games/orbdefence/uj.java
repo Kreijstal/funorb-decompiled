@@ -151,7 +151,7 @@ final class uj implements Runnable {
             var5_ref_hc = (hc) (t.field_q.b((byte) 121));
             if (var5_ref_hc != null &&
               var5_ref_hc.field_h < var3) {
-              var5_ref_hc.b(57);
+              var5_ref_hc.unlink(57);
               GameAppletShell.field_c = var5_ref_hc.field_m.length;
               cd.field_t.position = 0;
               for (var6_int = 0; var6_int < GameAppletShell.field_c; var6_int++) {

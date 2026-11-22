@@ -75,7 +75,7 @@ final class q {
             }
             var10.position = var10.position + 4;
             if (var10.verifyCrc32(-124)) {
-              var9.c(-1);
+              var9.unlink(-1);
               return;
             }
             k.c(-28354);
@@ -99,7 +99,7 @@ final class q {
             k.c(-28354);
             return;
           }
-          var4_ref_oa.c(-1);
+          var4_ref_oa.unlink(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

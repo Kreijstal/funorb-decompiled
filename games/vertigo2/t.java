@@ -93,11 +93,11 @@ final class t implements Runnable {
             }
             try {
               if (var7.field_B == 2) {
-                var7.field_F.a(var7.field_L.length, (int)var7.field_n, var7.field_L, (byte) -84);
+                var7.field_F.a(var7.field_L.length, (int)var7.secondaryKey, var7.field_L, (byte) -84);
                 var7.field_z = false;
               } else {
                 if (3 == var7.field_B) {
-                  var7.field_L = var7.field_F.a((int)var7.field_n, 27176);
+                  var7.field_L = var7.field_F.a((int)var7.secondaryKey, 27176);
                   var7.field_z = false;
                 } else {
                   var7.field_z = false;
@@ -235,7 +235,7 @@ final class t implements Runnable {
           synchronized (var5) {
             var6 = (nq) (this.field_e.b((byte) -50));
             while (var6 != null) {
-              if (~var6.field_n == ~(long)param2 &&
+              if (~var6.secondaryKey == ~(long)param2 &&
                 var6.field_F == param1 &&
                 2 == var6.field_B) {
                 var4.field_L = var6.field_L;
@@ -279,7 +279,7 @@ final class t implements Runnable {
         try {
           var5 = -57 % ((3 - param2) / 35);
           var4 = new nq();
-          var4.field_n = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_u = false;
           var4.field_B = 3;
           var4.field_F = param0;
@@ -741,7 +741,7 @@ final class t implements Runnable {
         try {
           var5 = new nq();
           var5.field_B = 2;
-          var5.field_n = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_u = false;
           var5.field_F = param2;
           if (param0 != -19932) {

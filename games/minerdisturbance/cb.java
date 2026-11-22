@@ -222,7 +222,7 @@ abstract class cb extends ok implements wg {
           }
           var6.field_ob = var4_ref_StringLifetime1;
           var6.field_nb = (String) (var3Lifetime1);
-          var6.b(34);
+          var6.unlink(34);
           var7 = (pe) (pe.field_qb.b(82));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

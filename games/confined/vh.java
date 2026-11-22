@@ -24,7 +24,7 @@ final class vh {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.field_a) {
-            param0.a(true);
+            param0.unlink(true);
           }
           if (param1 != 11) {
             vh.b(false);

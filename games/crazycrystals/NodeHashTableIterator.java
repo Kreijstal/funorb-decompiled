@@ -14,11 +14,11 @@ final class NodeHashTableIterator implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.a(false);
+        this.field_a.unlink(false);
         this.field_a = null;
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte param0) {
         if (param0 == -112) {
           this.field_a = null;
           this.field_b = this.field_c.field_c[0].field_b;
@@ -97,7 +97,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_a = null;
         try {
           this.field_c = param0;
-          this.a((byte) -112);
+          this.reset((byte) -112);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

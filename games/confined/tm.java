@@ -149,7 +149,7 @@ final class tm implements Iterator {
         if (this.field_b == null) {
           throw new IllegalStateException();
         }
-        this.field_b.b(true);
+        this.field_b.unlinkSecondary(true);
         this.field_b = null;
     }
 

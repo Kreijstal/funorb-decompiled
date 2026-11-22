@@ -628,7 +628,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
           sceneWidgetPart014Local24.stringState0604 = (String) (objectLocal21);
           sceneWidgetPart014Local24.stringState0606 = stringLocal22;
           sceneWidgetPart014Local24.stringState0605 = stringLocal23;
-          sceneWidgetPart014Local24.performAction0149((byte) 125);
+          sceneWidgetPart014Local24.unlink((byte) 125);
           sceneWidgetPart014Local17 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.computeHashNode1741((byte) 18));
           scanLoop1: while (true) {
             boolean frameRemainderLocal25 = true;

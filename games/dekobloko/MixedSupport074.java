@@ -18,7 +18,7 @@ final class MixedSupport074 {
         MixedSupport140 mixedSupport140Local4;
         MixedSupport140 mixedSupport140Local5;
         if (integerArgument1 == 0) {
-          cachedMixedSupport140Local1 = (MixedSupport140) (this.nodeHashTableState0002.computeHashNode1502(longArgument2, (byte) -37));
+          cachedMixedSupport140Local1 = (MixedSupport140) (this.nodeHashTableState0002.get(longArgument2, (byte) -37));
           mixedSupport140Local2 = cachedMixedSupport140Local1;
           mixedSupport140Local3 = cachedMixedSupport140Local1;
           this.performAction0924(-124, mixedSupport140Local2);
@@ -26,7 +26,7 @@ final class MixedSupport074 {
         }
         ResourceArchive resourceArchiveLocal6 = (ResourceArchive) null;
         MixedSupport074.performAction0928((ResourceArchive) null, 118);
-        MixedSupport140 cachedMixedSupport140Local7 = (MixedSupport140) (this.nodeHashTableState0002.computeHashNode1502(longArgument2, (byte) -37));
+        MixedSupport140 cachedMixedSupport140Local7 = (MixedSupport140) (this.nodeHashTableState0002.get(longArgument2, (byte) -37));
         mixedSupport140Local4 = cachedMixedSupport140Local7;
         mixedSupport140Local5 = cachedMixedSupport140Local7;
         this.performAction0924(-124, mixedSupport140Local4);
@@ -34,7 +34,7 @@ final class MixedSupport074 {
 
     final Object computeObject0925(long longArgument1, byte byteArgument2) {
         MixedSupport125 mixedSupport125Local1 = null;
-        MixedSupport140 mixedSupport140Local2 = (MixedSupport140) (this.nodeHashTableState0002.computeHashNode1502(longArgument1, (byte) -37));
+        MixedSupport140 mixedSupport140Local2 = (MixedSupport140) (this.nodeHashTableState0002.get(longArgument1, (byte) -37));
         if (mixedSupport140Local2 == null) {
           return null;
         }
@@ -48,15 +48,15 @@ final class MixedSupport074 {
             mixedSupport140Local2.longState0003 = 0L;
           } else {
             mixedSupport125Local1 = new MixedSupport125(objectLocal3, mixedSupport140Local2.integerState0858);
-            this.nodeHashTableState0002.performAction1503(mixedSupport140Local2.key, false, mixedSupport125Local1);
+            this.nodeHashTableState0002.put(mixedSupport140Local2.key, false, mixedSupport125Local1);
             this.iterableNodeCollectionState0002.performAction1655((byte) 4, mixedSupport125Local1);
             ((MixedSupport140) ((Object) mixedSupport125Local1)).longState0003 = 0L;
-            mixedSupport140Local2.performAction0149((byte) 106);
+            mixedSupport140Local2.unlink((byte) 106);
             mixedSupport140Local2.performAction0134((byte) 125);
           }
           return objectLocal3;
         }
-        mixedSupport140Local2.performAction0149((byte) 119);
+        mixedSupport140Local2.unlink((byte) 119);
         mixedSupport140Local2.performAction0134((byte) 92);
         this.integerState0417 = this.integerState0417 + mixedSupport140Local2.integerState0858;
         return null;
@@ -88,7 +88,7 @@ final class MixedSupport074 {
             this.performAction0924(-122, mixedSupport140Local1);
           }
           mixedSupport125Local2 = new MixedSupport125(objectArgument4, integerArgument3);
-          this.nodeHashTableState0002.performAction1503(longArgument1, false, mixedSupport125Local2);
+          this.nodeHashTableState0002.put(longArgument1, false, mixedSupport125Local2);
           this.iterableNodeCollectionState0002.performAction1655((byte) 4, mixedSupport125Local2);
           if (byteArgument2 != 77) {
             MixedSupport074.performAction0922((byte) -109);
@@ -161,7 +161,7 @@ final class MixedSupport074 {
           if (mixedSupport140Argument2 == null) {
             return;
           }
-          mixedSupport140Argument2.performAction0149((byte) 105);
+          mixedSupport140Argument2.unlink((byte) 105);
           mixedSupport140Argument2.performAction0134((byte) 76);
           this.integerState0417 = this.integerState0417 + mixedSupport140Argument2.integerState0858;
           return;

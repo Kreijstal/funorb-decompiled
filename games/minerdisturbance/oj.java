@@ -141,7 +141,7 @@ final class oj extends jc {
             field_K = -82;
           }
           if (param0.field_c != null) {
-            param0.b(34);
+            param0.unlink(34);
           }
           param0.field_f = param1;
           param0.field_c = param1.field_c;
@@ -204,7 +204,7 @@ final class oj extends jc {
             field_K = -82;
           }
           if (param0.field_c != null) {
-            param0.b(34);
+            param0.unlink(34);
           }
           param0.field_f = param1;
           param0.field_c = param1.field_c;

@@ -194,7 +194,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           var6.field_kb = (String) (var3Lifetime1);
           var6.field_ob = var4_ref_StringLifetime1;
-          var6.a(true);
+          var6.unlink(true);
           var7 = (fg) (il.field_fb.a(56));
           scanLoop1: while (true) {
             if (var7 != null) {

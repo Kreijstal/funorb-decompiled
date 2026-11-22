@@ -159,11 +159,11 @@ class gk extends IntrusiveNode {
           return;
         }
         if (this.field_x) {
-          this.a(true);
+          this.unlink(true);
           return;
         }
         cb.field_a.b(this.field_n);
-        this.a(true);
+        this.unlink(true);
     }
 
     final void g(int param0) {
@@ -289,8 +289,8 @@ class gk extends IntrusiveNode {
             }
           }
         } else {
-          if (!this.field_n.c((byte) 119)) {
-            this.a(true);
+          if (!this.field_n.isLinked((byte) 119)) {
+            this.unlink(true);
             return;
           }
           if (param0 == -25071) {

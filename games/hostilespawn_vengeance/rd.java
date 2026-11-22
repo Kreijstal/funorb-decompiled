@@ -58,7 +58,7 @@ final class rd {
             stackIn_18_0 = null;
             return (jb) (stackIn_18_0);
           }
-          var9.b(126);
+          var9.unlink(126);
           this.field_e.a(param3 ^ -21, var6, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;

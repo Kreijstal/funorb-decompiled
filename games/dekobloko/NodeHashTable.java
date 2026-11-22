@@ -19,7 +19,7 @@ final class NodeHashTable implements Iterable {
     static String stringState0509;
     static String stringState0510;
 
-    final HashNode computeHashNode1502(long longArgument1, byte byteArgument2) {
+    final HashNode get(long longArgument1, byte byteArgument2) {
         HashNode hashNodeLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         HashNode hashNodeLocal3 = this.hashNodeArrayState0002[(int)(longArgument1 & (long)(this.integerState0748 - 1))];
@@ -40,11 +40,11 @@ final class NodeHashTable implements Iterable {
         return null;
     }
 
-    final void performAction1503(long longArgument1, boolean booleanArgument2, HashNode hashNodeArgument3) {
+    final void put(long longArgument1, boolean booleanArgument2, HashNode hashNodeArgument3) {
         HashNode hashNodeLocal1 = null;
         try {
           if (null != hashNodeArgument3.next) {
-            hashNodeArgument3.performAction0149((byte) 107);
+            hashNodeArgument3.unlink((byte) 107);
           }
           hashNodeLocal1 = this.hashNodeArrayState0002[(int)(longArgument1 & (long)(this.integerState0748 - 1))];
           hashNodeArgument3.next = hashNodeLocal1.next;

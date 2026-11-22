@@ -260,7 +260,7 @@ final class rc {
                 le.c((byte) 60);
                 return;
               }
-              var4.b(-80);
+              var4.unlink(-80);
             } else {
               ic.a((byte) -119, "A1: " + gf.a((byte) -122), (Throwable) null);
               le.c((byte) 117);
@@ -284,7 +284,7 @@ final class rc {
               return;
             }
             var3_ref_uj.field_j = true;
-            var3_ref_uj.b(120);
+            var3_ref_uj.unlink(120);
           }
           if (param0 == 2) {
             return;

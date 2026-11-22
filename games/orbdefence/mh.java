@@ -15,7 +15,7 @@ final class mh {
         IntrusiveNode var5 = null;
         try {
           if (param2.field_c != null) {
-            param2.b(57);
+            param2.unlink(57);
           }
           var5 = this.field_e[(int)((long)(this.field_d - 1) & param0)];
           param2.field_c = var5.field_c;

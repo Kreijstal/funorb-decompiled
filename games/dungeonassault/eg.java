@@ -24,7 +24,7 @@ final class eg {
         Object var5 = var7.d(22698);
         if (var5 == null) {
           var7.unlink(false);
-          var7.b((byte) -2);
+          var7.unlinkSecondary((byte) -2);
           this.field_e = this.field_e + var7.field_A;
           return null;
         }
@@ -34,7 +34,7 @@ final class eg {
           this.field_c.a(var6, false);
           ((wf) ((Object) var6)).field_o = 0L;
           var7.unlink(false);
-          var7.b((byte) -2);
+          var7.unlinkSecondary((byte) -2);
           return var5;
         }
         this.field_c.a(var7, false);
@@ -47,7 +47,7 @@ final class eg {
         this.field_c.a(var6Lifetime1, false);
         ((wf) ((Object) var6Lifetime1)).field_o = 0L;
         var7.unlink(false);
-        var7.b((byte) -2);
+        var7.unlinkSecondary((byte) -2);
         return var5;
     }
 
@@ -107,7 +107,7 @@ final class eg {
         try {
           if (param0 != null) {
             param0.unlink(false);
-            param0.b((byte) -2);
+            param0.unlinkSecondary((byte) -2);
             this.field_e = this.field_e + param0.field_A;
           }
           int var3_int = -12 / ((param1 - 44) / 38);

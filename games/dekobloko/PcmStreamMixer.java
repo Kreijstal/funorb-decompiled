@@ -104,7 +104,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void removeSubStream(PcmStream pcmStreamArgument1) {
-        pcmStreamArgument1.performAction0149((byte) 108);
+        pcmStreamArgument1.unlink((byte) 108);
     }
 
     final PcmStream nextSubStream() {
@@ -120,7 +120,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void removeListener(PcmMixerListener pcmMixerListenerArgument1) {
-        pcmMixerListenerArgument1.performAction0149((byte) 114);
+        pcmMixerListenerArgument1.unlink((byte) 114);
         pcmMixerListenerArgument1.onRemovedFromMixer();
         pcmMixerListenerArgument1.pcmStreamMixerState0003 = null;
         HashNode hashNodeLocal1 = this.nodeDequeState0020.hashNodeState0009.previous;

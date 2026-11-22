@@ -16,7 +16,7 @@ final class pf extends ak {
         ri var3 = (ri) (var2.a(22092));
         while (var3 != null) {
           if (var3.e((byte) 21)) {
-            var3.c(2);
+            var3.unlink(2);
           }
           var3 = (ri) (var2.c(-124));
         }
@@ -41,7 +41,7 @@ final class pf extends ak {
         ri var3 = (ri) (var2.a(22092));
         while (var3 != null) {
           if (var3.f((byte) -33)) {
-            var3.c(param0 ^ -26621);
+            var3.unlink(param0 ^ -26621);
           }
           var3 = (ri) (var2.c(-102));
         }

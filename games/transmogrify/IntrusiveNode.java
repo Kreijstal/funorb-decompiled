@@ -17,7 +17,7 @@ class IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void unlink(int param0) {
         if (this.previous == null) {
           return;
         }
@@ -238,12 +238,12 @@ class IntrusiveNode {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (null == this.previous) {
           return false;
         }
         if (param0 != 8) {
-          this.b(29);
+          this.isLinked(29);
           return true;
         }
         return true;

@@ -26,14 +26,14 @@ final class IterableNodeHashTable implements Iterable {
         field_b = null;
     }
 
-    final void a(long param0, IntrusiveNode param1, byte param2) {
+    final void put(long param0, IntrusiveNode param1, byte param2) {
         IntrusiveNode var5 = null;
         try {
           if (param2 != 43) {
             IterableNodeHashTable.clearStaticReferences((byte) -31);
           }
           if (null != param1.field_a) {
-            param1.c(param2 ^ -44);
+            param1.unlink(param2 ^ -44);
           }
           var5 = this.field_f[(int)((long)(this.field_g - 1) & param0)];
           param1.field_a = var5.field_a;
@@ -111,7 +111,7 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;

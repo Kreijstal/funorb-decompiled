@@ -73,7 +73,7 @@ final class s extends am {
             }
             var9.position = var9.position + 4;
             if (var9.verifyCrc32(4)) {
-              var3_ref_pe.a(true);
+              var3_ref_pe.unlink(true);
               return;
             }
             dc.d(119);
@@ -94,7 +94,7 @@ final class s extends am {
             break;
           }
           if (var4 != null) {
-            var4.a(true);
+            var4.unlink(true);
             return;
           }
           dc.d(116);

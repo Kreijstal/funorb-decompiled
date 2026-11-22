@@ -99,7 +99,7 @@ final class vk extends jc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param0.field_c) {
-            param0.b(57);
+            param0.unlink(57);
           }
           param0.field_c = param2.field_c;
           param0.field_e = param2;
@@ -158,7 +158,7 @@ final class vk extends jc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param0.field_c) {
-            param0.b(57);
+            param0.unlink(57);
           }
           param0.field_c = param2.field_c;
           param0.field_e = param2;

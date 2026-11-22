@@ -121,7 +121,7 @@ class DualLinkNode extends IntrusiveNode {
         KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
     }
 
-    final void b(byte param0) {
+    final void unlinkSecondary(byte param0) {
         if (this.field_l == null) {
           return;
         }

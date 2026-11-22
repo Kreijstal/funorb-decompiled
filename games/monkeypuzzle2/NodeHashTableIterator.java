@@ -14,7 +14,7 @@ final class NodeHashTableIterator implements Iterator {
     static String field_a;
     private IntrusiveNode field_f;
 
-    private final void a(boolean param0) {
+    private final void reset(boolean param0) {
         this.field_f = this.field_b.field_f[0].previous;
         if (param0) {
           this.field_i = null;
@@ -135,7 +135,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_i = null;
         try {
           this.field_b = param0;
-          this.a(true);
+          this.reset(true);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

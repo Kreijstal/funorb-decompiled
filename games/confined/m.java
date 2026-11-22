@@ -134,7 +134,7 @@ final class m {
             stackIn_15_0 = null;
             return (bi) (stackIn_15_0);
           }
-          var10.a(true);
+          var10.unlink(true);
           this.field_j.a(var9Lifetime1, 11, var6);
           stackIn_17_0 = var9Lifetime1;
           return stackIn_17_0;

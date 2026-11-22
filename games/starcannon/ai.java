@@ -490,7 +490,7 @@ final class ai {
         DualLinkNode var5 = null;
         try {
           if (param2.secondaryPrevious != null) {
-            param2.a(-6242);
+            param2.unlinkSecondary(-6242);
           }
           var5 = this.field_f[(int)((long)(-1 + this.field_b) & param1)];
           param2.secondaryNext = var5;

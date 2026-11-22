@@ -16,7 +16,7 @@ final class mn {
         }
         IntrusiveNode var2 = this.field_a.field_a;
         if (this.field_a != var2) {
-          var2.a(true);
+          var2.unlink(true);
           return var2;
         }
         return null;
@@ -43,14 +43,14 @@ final class mn {
           this.b((byte) 116);
           var2 = this.field_a.field_h;
           if (var2 != this.field_a) {
-            var2.a(true);
+            var2.unlink(true);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_a.field_h;
         if (var2Lifetime1 != this.field_a) {
-          var2Lifetime1.a(true);
+          var2Lifetime1.unlink(true);
           return var2Lifetime1;
         }
         return null;
@@ -60,7 +60,7 @@ final class mn {
         try {
           int var3_int = -8 / ((param1 - 0) / 61);
           if (param0.field_a != null) {
-            param0.a(true);
+            param0.unlink(true);
           }
           param0.field_a = this.field_a.field_a;
           param0.field_h = this.field_a;
@@ -97,7 +97,7 @@ final class mn {
         }
         try {
           if (param0.field_a != null) {
-            param0.a(true);
+            param0.unlink(true);
           }
           param0.field_h = this.field_a.field_h;
           param0.field_a = this.field_a;
@@ -126,7 +126,7 @@ final class mn {
         while (true) {
           var2 = this.field_a.field_h;
           if (var2 != this.field_a) {
-            var2.a(true);
+            var2.unlink(true);
             continue;
           }
           break;

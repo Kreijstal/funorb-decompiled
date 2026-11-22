@@ -113,8 +113,8 @@ final class th extends le {
         this.field_Ib.field_tb = 0;
         this.field_Kb.field_sb = this.field_sb;
         this.field_Ib.field_zb = 0;
-        this.field_Gb.b(110);
-        this.field_Mb.b(115);
+        this.field_Gb.unlink(110);
+        this.field_Mb.unlink(115);
         var5 = 30 / ((param2 + 45) / 56);
         stackIn_3_0 = (this.field_Kb.field_qb >= this.field_Ib.field_qb) ? 0 : 1;
         var4 = stackIn_3_0;

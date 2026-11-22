@@ -172,7 +172,7 @@ final class uf extends ch {
                   this.field_c.field_D = this.field_c.field_D + var6;
                   this.field_c.field_G.position = this.field_c.field_G.position + var6;
                   if (this.field_c.field_G.position == var5) {
-                    this.field_c.a((byte) -119);
+                    this.field_c.unlinkSecondary((byte) -119);
                     this.field_c.field_C = false;
                     this.field_c = null;
                   } else {

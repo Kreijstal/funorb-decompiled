@@ -159,7 +159,7 @@ final class md {
               }
             }
             var4.field_t = true;
-            var4.a(true);
+            var4.unlink(true);
             return;
           }
           if (1 == var2) {
@@ -178,7 +178,7 @@ final class md {
               return;
             }
             var6_ref_bj.field_v = var4_long;
-            var6_ref_bj.a(true);
+            var6_ref_bj.unlink(true);
             return;
           }
           mb.a("HS1: " + ui.a(param0 ^ -10970), true, (Throwable) null);
@@ -380,7 +380,7 @@ final class md {
               md.b((byte) 97);
             }
             param0.appendCrc32(26199, var4);
-            var17.a(true);
+            var17.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -465,7 +465,7 @@ final class md {
             var16_ref.field_p = var3;
             var16_ref.field_s = var17[0];
             var16_ref.field_o = true;
-            var16_ref.a(true);
+            var16_ref.unlink(true);
             return;
           }
           if (1 == var2) {
@@ -474,7 +474,7 @@ final class md {
               dc.d(118);
               return;
             }
-            var12.a(true);
+            var12.unlink(true);
           } else {
             if (var2 != 2) {
               mb.a("A1: " + ui.a(10), true, (Throwable) null);
@@ -488,7 +488,7 @@ final class md {
               var14.field_p = ek.c(16317);
               var14.field_o = true;
               var14.field_s = var14.field_p[0];
-              var14.a(true);
+              var14.unlink(true);
             }
           }
           return;

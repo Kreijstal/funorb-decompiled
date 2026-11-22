@@ -50,7 +50,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
     }
 
-    private final void b(int param0) {
+    private final void reset(int param0) {
         this.field_f = this.field_e.buckets[0].previous;
         this.field_d = null;
         if (param0 <= -23) {
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_e = param0;
-          this.b(-59);
+          this.reset(-59);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -265,7 +265,7 @@ class d extends UiWidget {
           var2 = var1.readUnsignedByte(-11);
           if (var2 == 0) {
             if (null == jn.field_g) {
-              jn.field_g = new fi(128);
+              jn.field_g = new SecondaryNodeHashTable(128);
               vd.field_a = 0;
             }
             stackIn_14_0 = (1 != var1.readUnsignedByte(-11)) ? 0 : 1;
@@ -287,12 +287,12 @@ class d extends UiWidget {
             if (null == var6) {
               var6 = or.a(56, var7_ref);
               if (var6 != null) {
-                jn.field_g.a(var6, (long)var8.hashCode(), 72);
+                jn.field_g.put(var6, (long)var8.hashCode(), 72);
               }
             }
             if (null == var6) {
               var6 = new tp();
-              jn.field_g.a(var6, (long)var8.hashCode(), 98);
+              jn.field_g.put(var6, (long)var8.hashCode(), 98);
               fieldTemp$1 = vd.field_a;
               vd.field_a = vd.field_a + 1;
               var6.field_Pb = fieldTemp$1;
@@ -329,7 +329,7 @@ class d extends UiWidget {
             return;
           }
           if (se.field_A == null) {
-            se.field_A = new fi(128);
+            se.field_A = new SecondaryNodeHashTable(128);
             sq.field_b = 0;
           }
           var3Lifetime1 = var1.readString(128);
@@ -342,12 +342,12 @@ class d extends UiWidget {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = vo.a(var5Lifetime1, 0);
             if (null != var6Lifetime1) {
-              se.field_A.a(var6Lifetime1, (long)rc.a((CharSequence) ((Object) var4_ref_StringLifetime1), 320).hashCode(), -107);
+              se.field_A.put(var6Lifetime1, (long)rc.a((CharSequence) ((Object) var4_ref_StringLifetime1), 320).hashCode(), -107);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new tp();
-            se.field_A.a(var6Lifetime1, (long)rc.a((CharSequence) ((Object) var4_ref_StringLifetime1), 320).hashCode(), -111);
+            se.field_A.put(var6Lifetime1, (long)rc.a((CharSequence) ((Object) var4_ref_StringLifetime1), 320).hashCode(), -111);
             fieldTemp$0 = sq.field_b;
             sq.field_b = sq.field_b + 1;
             var6Lifetime1.field_Pb = fieldTemp$0;

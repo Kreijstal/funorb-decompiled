@@ -36,7 +36,7 @@ final class NodeHashTableIterator implements Iterator {
         return var3;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_b = this.field_a.field_c[0].next;
         this.field_c = 1;
         if (param0 <= -34) {
@@ -80,7 +80,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_a = param0;
-          this.a(-87);
+          this.reset(-87);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

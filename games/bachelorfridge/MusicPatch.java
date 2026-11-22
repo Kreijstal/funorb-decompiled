@@ -111,7 +111,7 @@ final class MusicPatch extends IntrusiveNode {
         String var2 = TextInputWidget.field_E[param1][6];
         var2 = var2.toLowerCase();
         var2 = var2.trim();
-        ji var3 = (ji) (PizzaArenaTheme.field_i.a(true, (long)var2.hashCode()));
+        ji var3 = (ji) (PizzaArenaTheme.field_i.get(true, (long)var2.hashCode()));
         return var3.field_h;
     }
 

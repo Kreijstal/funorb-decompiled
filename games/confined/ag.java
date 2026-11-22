@@ -18,8 +18,8 @@ final class ag {
     private final void a(int param0, nd param1) {
         try {
           if (param1 != null) {
-            param1.a(true);
-            param1.b(true);
+            param1.unlink(true);
+            param1.unlinkSecondary(true);
             this.field_i = this.field_i + param1.field_t;
           }
           int var3_int = 55 / ((-2 - param0) / 52);
@@ -231,12 +231,12 @@ final class ag {
         Object var4 = null;
         nd var5Lifetime1;
         if (param0 < -76) {
-          var5 = (nd) (this.field_f.a(1, param1));
+          var5 = (nd) (this.field_f.get(1, param1));
           this.a(83, var5);
           return;
         }
         this.b(64, 29L);
-        var5Lifetime1 = (nd) (this.field_f.a(1, param1));
+        var5Lifetime1 = (nd) (this.field_f.get(1, param1));
         this.a(83, var5Lifetime1);
     }
 
@@ -259,7 +259,7 @@ final class ag {
             this.a(param3 ^ -96, var6);
           }
           var6_ref = new oj(param2, param0);
-          this.field_f.a(var6_ref, param1, ~param3);
+          this.field_f.put(var6_ref, param1, ~param3);
           this.field_b.a(var6_ref, 18425);
           ((nd) ((Object) var6_ref)).field_r = (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -268,7 +268,7 @@ final class ag {
     }
 
     final Object a(int param0, long param1) {
-        nd var7 = (nd) (this.field_f.a(1, param1));
+        nd var7 = (nd) (this.field_f.get(1, param1));
         if (param0 != 0) {
           return (Object) null;
         }
@@ -277,8 +277,8 @@ final class ag {
         }
         Object var5 = var7.d(param0 - 4);
         if (var5 == null) {
-          var7.a(true);
-          var7.b(true);
+          var7.unlink(true);
+          var7.unlinkSecondary(true);
           this.field_i = this.field_i + var7.field_t;
           return null;
         }
@@ -288,11 +288,11 @@ final class ag {
           return var5;
         }
         oj var6 = new oj(var5, var7.field_t);
-        this.field_f.a(var6, var7.field_i, param0 - 1);
+        this.field_f.put(var6, var7.field_i, param0 - 1);
         this.field_b.a(var6, param0 + 18425);
         ((nd) ((Object) var6)).field_r = 0L;
-        var7.a(true);
-        var7.b(true);
+        var7.unlink(true);
+        var7.unlinkSecondary(true);
         return var5;
     }
 

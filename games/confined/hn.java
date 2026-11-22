@@ -140,14 +140,14 @@ final class hn {
         var5 = (kh) (this.field_b.a(param0 ^ 22168));
         while (var5 != null) {
           if (!var5.a(this.field_m, -1073453180)) {
-            var5.a(true);
+            var5.unlink(true);
           }
           var5 = (kh) (this.field_b.d(2123));
         }
         var6 = (hm) (this.field_F.a(50));
         while (var6 != null) {
           if (!var6.a(this.field_m, -1073453180)) {
-            var6.a(true);
+            var6.unlink(true);
           }
           var6 = (hm) (this.field_F.d(2123));
         }
@@ -876,7 +876,7 @@ final class hn {
           var8 = var7Lifetime1.field_N;
           if (param2 < var7Lifetime1.field_F) {
             var9 = 65536;
-            var7Lifetime1.b(true);
+            var7Lifetime1.unlinkSecondary(true);
           } else {
             var9 = var7Lifetime1.a((int)((param2 - var7Lifetime1.field_I) / (-var7Lifetime1.field_I + var7Lifetime1.field_F) * 65536.0), (byte) -63);
             if (var7Lifetime1.field_N > var9) {
@@ -1259,7 +1259,7 @@ final class hn {
         var2_ref_pm = (pm) (this.field_g.a(60));
         while (var2_ref_pm != null) {
           if (var2_ref_pm.field_z) {
-            var2_ref_pm.a(true);
+            var2_ref_pm.unlink(true);
           }
           var2_ref_pm = (pm) (this.field_g.d(param0 ^ 2123));
         }
@@ -1299,7 +1299,7 @@ final class hn {
             if (this.field_B != var8 &&
               var8 != this.field_m &&
               !(var8 instanceof h)) {
-              var8.a(true);
+              var8.unlink(true);
             }
             var8 = (pm) (this.field_g.d(param0 ^ 2123));
           }
@@ -1354,7 +1354,7 @@ final class hn {
           var33 = (gk) (this.field_z.d(2123));
         }
         if (this.field_n != null) {
-          if (!this.field_n.c((byte) 115)) {
+          if (!this.field_n.isLinked((byte) 115)) {
             this.field_n = null;
           } else {
             this.field_n.g(256);

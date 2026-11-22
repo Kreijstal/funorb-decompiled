@@ -89,12 +89,12 @@ final class je {
         lb var4 = null;
         lb var4Lifetime1;
         if (param0 == 50) {
-          var4 = (lb) (this.field_d.a(104, param1));
+          var4 = (lb) (this.field_d.get(104, param1));
           this.a(var4, -27615);
           return;
         }
         this.a((Object) null, (byte) -11, -42L);
-        var4Lifetime1 = (lb) (this.field_d.a(104, param1));
+        var4Lifetime1 = (lb) (this.field_d.get(104, param1));
         this.a(var4Lifetime1, -27615);
     }
 
@@ -328,7 +328,7 @@ final class je {
     final Object a(long param0, int param1) {
         Object var8 = null;
         re var6 = null;
-        lb var7 = (lb) (this.field_d.a(103, param0));
+        lb var7 = (lb) (this.field_d.get(103, param0));
         re var6Lifetime1;
         if (var7 == null) {
           return null;

@@ -111,7 +111,7 @@ final class i {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(2);
+          var9.unlink(2);
           this.field_e.a(var6, param3 + 1911228564, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

@@ -113,10 +113,10 @@ final class pj extends cb {
               var9Lifetime1++;
               var14++;
             }
-            var3.c(-1);
+            var3.unlink(-1);
             return;
           }
-          var3.c(-1);
+          var3.unlink(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

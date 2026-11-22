@@ -25,7 +25,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_j = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isSecondaryLinked(byte param0) {
         if (param0 <= 71) {
           field_n = 110;
           if (this.field_j != null) {

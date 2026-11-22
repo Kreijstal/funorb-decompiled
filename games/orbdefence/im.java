@@ -13,7 +13,7 @@ final class im {
           return null;
         }
         int var3 = -80 / ((param0 + 14) / 34);
-        var2.b(57);
+        var2.unlink(57);
         return var2;
     }
 
@@ -63,7 +63,7 @@ final class im {
 
     final void a(int param0, IntrusiveNode param1) {
         if (null != param1.field_c) {
-          param1.b(57);
+          param1.unlink(57);
         }
         if (param0 >= -68) {
           return;
@@ -134,7 +134,7 @@ final class im {
 
     final void a(IntrusiveNode param0, int param1) {
         if (param0.field_c != null) {
-          param0.b(57);
+          param0.unlink(57);
         }
         if (param1 != 9) {
           return;
@@ -157,7 +157,7 @@ final class im {
           if (var2 == this.field_d) {
             break;
           }
-          var2.b(57);
+          var2.unlink(57);
         }
         if (param0) {
           this.d(79);
@@ -173,7 +173,7 @@ final class im {
         if (this.field_d == var2) {
           return null;
         }
-        var2.b(param0 ^ 57);
+        var2.unlink(param0 ^ 57);
         return var2;
     }
 

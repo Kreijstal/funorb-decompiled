@@ -62,7 +62,7 @@ final class NodeHashTableIterator implements Iterator {
         return var3;
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte param0) {
         this.field_b = 1;
         this.field_c = this.field_e.field_b[0].field_e;
         this.field_g = null;
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_g = null;
         try {
           this.field_e = param0;
-          this.a((byte) 103);
+          this.reset((byte) 103);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -99,7 +99,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_g == null) {
           throw new IllegalStateException();
         }
-        this.field_g.b(57);
+        this.field_g.unlink(57);
         this.field_g = null;
     }
 

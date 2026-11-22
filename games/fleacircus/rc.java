@@ -390,7 +390,7 @@ final class rc implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.e(-90);
+        this.field_d.unlinkSecondary(-90);
         this.field_d = null;
     }
 

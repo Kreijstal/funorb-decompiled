@@ -111,7 +111,7 @@ final class nm extends gk {
           }
           return;
         }
-        if (!this.field_H.c((byte) 105)) {
+        if (!this.field_H.isLinked((byte) 105)) {
           this.f(128);
           return;
         }
@@ -157,7 +157,7 @@ final class nm extends gk {
         double var13Lifetime1;
         double var15Lifetime1;
         double var17Lifetime1;
-        if (!this.field_H.c((byte) 105)) {
+        if (!this.field_H.isLinked((byte) 105)) {
           this.field_B = false;
           this.field_n.h(0);
           this.field_n.d(0);

@@ -63,7 +63,7 @@ final class gg extends fc {
         ul var3 = (ul) (var2.b(1));
         while (var3 != null) {
           if (var3.j(-15953)) {
-            var3.b(121);
+            var3.unlink(121);
           }
           var3 = (ul) (var2.c(0));
         }
@@ -112,7 +112,7 @@ final class gg extends fc {
         ul var3 = (ul) (var2.b(param0 - 113));
         while (var3 != null) {
           if (var3.l(param0 + 65279)) {
-            var3.b(127);
+            var3.unlink(127);
           }
           var3 = (ul) (var2.c(0));
         }

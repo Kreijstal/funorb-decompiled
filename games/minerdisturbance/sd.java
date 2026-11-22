@@ -28,7 +28,7 @@ final class sd implements Iterable {
 
     final void a(long param0, boolean param1, IntrusiveNode param2) {
         if (null != param2.field_c) {
-          param2.b(34);
+          param2.unlink(34);
         }
         IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
         if (!param1) {

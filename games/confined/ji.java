@@ -61,7 +61,7 @@ final class ji {
             for (var7 = 0; var7 < var5; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32) << va.a(768, var7 << 8));
             }
-            var4_ref_ca.a(true);
+            var4_ref_ca.unlink(true);
           } else {
             if (var2 == 1) {
               var4 = var10.readSignedSmart(1647);
@@ -75,7 +75,7 @@ final class ji {
                 break;
               }
               if (var5_ref_om != null) {
-                var5_ref_om.a(true);
+                var5_ref_om.unlink(true);
                 decompiledFrameRemainder0 = false;
               }
               else {

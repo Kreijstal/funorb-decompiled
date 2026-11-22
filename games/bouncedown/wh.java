@@ -17,7 +17,7 @@ final class wh implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.field_i != null) {
-            param1.a(param0 - 6875);
+            param1.unlinkSecondary(param0 - 6875);
           }
           param1.field_l = this.field_a;
           param1.field_i = this.field_a.field_i;
@@ -52,7 +52,7 @@ final class wh implements Iterable {
         }
         DualLinkNode var2 = this.field_a.field_l;
         if (this.field_a != var2) {
-          var2.a(92);
+          var2.unlinkSecondary(92);
           return var2;
         }
         return null;

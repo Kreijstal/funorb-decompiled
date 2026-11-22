@@ -174,7 +174,7 @@ final class pk {
               jj.a(4);
               return;
             }
-            var8.a(false);
+            var8.unlink(false);
           } else {
             if (var2 == 1) {
               var3 = var9.readInt((byte) -114);
@@ -190,7 +190,7 @@ final class pk {
                 jj.a(4);
                 return;
               }
-              var4_ref_qp.a(false);
+              var4_ref_qp.unlink(false);
               return;
             }
             wp.a((Throwable) null, "A1: " + IntrusiveNodeHashTable.a(-1815), 21862);

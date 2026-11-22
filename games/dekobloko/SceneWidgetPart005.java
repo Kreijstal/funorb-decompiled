@@ -224,7 +224,7 @@ final class SceneWidgetPart005 extends SceneWidget {
         }
         if (null != this.sceneWidgetPart005State0001) {
           this.sceneWidgetPart005State0001.performAction0717(0);
-          this.sceneWidgetPart005State0001.performAction0149((byte) 104);
+          this.sceneWidgetPart005State0001.unlink((byte) 104);
         }
         this.integerState0329 = -1;
         this.sceneWidgetPart005State0001 = null;

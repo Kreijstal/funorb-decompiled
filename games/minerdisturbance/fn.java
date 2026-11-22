@@ -229,7 +229,7 @@ final class fn extends IntrusiveNode {
               }
             }
             var4_ref.field_t = true;
-            var4_ref.b(34);
+            var4_ref.unlink(34);
             return;
           }
           if (var2 == 1) {
@@ -247,7 +247,7 @@ final class fn extends IntrusiveNode {
               si.a(param0 - 41);
               return;
             }
-            var4.b(34);
+            var4.unlink(34);
             return;
           }
           di.a((Throwable) null, 1, "HS1: " + hj.a((byte) 68));

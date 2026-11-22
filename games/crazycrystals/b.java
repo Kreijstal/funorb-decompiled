@@ -24,8 +24,8 @@ final class b {
             this.a((Object) null, -109, (byte) 8, -120L);
           }
           if (param1 != null) {
-            param1.a(false);
-            param1.a(1);
+            param1.unlink(false);
+            param1.unlinkSecondary(1);
             this.field_g = this.field_g + param1.field_n;
           }
           return;
@@ -150,7 +150,7 @@ final class b {
 
     final Object a(int param0, long param1) {
         qd var6 = null;
-        ib var7 = (ib) (this.field_e.a(param1, -114));
+        ib var7 = (ib) (this.field_e.get(param1, -114));
         if (var7 == null) {
           return null;
         }
@@ -159,8 +159,8 @@ final class b {
         }
         Object var5 = var7.f(-18088);
         if (var5 == null) {
-          var7.a(false);
-          var7.a(1);
+          var7.unlink(false);
+          var7.unlinkSecondary(1);
           this.field_g = this.field_g + var7.field_n;
           return null;
         }
@@ -169,11 +169,11 @@ final class b {
           var7.field_k = 0L;
         } else {
           var6 = new qd(var5, var7.field_n);
-          this.field_e.a(var7.field_e, (byte) 42, var6);
+          this.field_e.put(var7.field_e, (byte) 42, var6);
           this.field_c.a((byte) 124, var6);
           ((ib) ((Object) var6)).field_k = 0L;
-          var7.a(false);
-          var7.a(1);
+          var7.unlink(false);
+          var7.unlinkSecondary(1);
         }
         return var5;
     }
@@ -196,7 +196,7 @@ final class b {
             this.a(66, var6);
           }
           var6_ref = new qd(param0, param1);
-          this.field_e.a(param3, (byte) 42, var6_ref);
+          this.field_e.put(param3, (byte) 42, var6_ref);
           this.field_c.a((byte) 119, var6_ref);
           ((ib) ((Object) var6_ref)).field_k = 0L;
         } catch (RuntimeException runtimeException) {
@@ -310,7 +310,7 @@ final class b {
     }
 
     private final void a(long param0, int param1) {
-        ib var4 = (ib) (this.field_e.a(param0, -117));
+        ib var4 = (ib) (this.field_e.get(param0, -117));
         this.a(98, var4);
         if (param1 > -66) {
           b.a(6, -67, 121, -107, 106, -115, -66, 114, 26, -103, -124, 35, 74, -126, 34, 60);

@@ -55,13 +55,13 @@ final class cl {
             var16_ref.field_n = true;
             var16_ref.field_k = var17[0];
             var16_ref.field_i = var3;
-            var16_ref.c(-1);
+            var16_ref.unlink(-1);
             return;
           }
           if (var2 == 1) {
             var12 = (hi) (bf.field_e.c((byte) 47));
             if (var12 != null) {
-              var12.c(-1);
+              var12.unlink(-1);
               return;
             }
             k.c(param0 ^ 28386);
@@ -80,7 +80,7 @@ final class cl {
           var14.field_i = ContextualRuntimeException.a((byte) -121);
           var14.field_n = true;
           var14.field_k = var14.field_i[0];
-          var14.c(-1);
+          var14.unlink(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -54,10 +54,10 @@ final class ln {
 
     final static uh a(int param0, int param1) {
         if (param0 == 0) {
-          return null != lh.field_b ? (uh) (lh.field_b.a(param0 + 3661, (long)param1)) : null;
+          return null != lh.field_b ? (uh) (lh.field_b.get(param0 + 3661, (long)param1)) : null;
         }
         ln.d(29);
-        return null != lh.field_b ? (uh) (lh.field_b.a(param0 + 3661, (long)param1)) : null;
+        return null != lh.field_b ? (uh) (lh.field_b.get(param0 + 3661, (long)param1)) : null;
     }
 
     final static void d(int param0) {

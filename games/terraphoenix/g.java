@@ -161,7 +161,7 @@ class g extends wa {
         stackIn_40_1 = (this.field_D) && (this.field_N == oh.field_f) && (param4);
         this.field_Z = stackIn_40_1;
         if (null != this.field_L) {
-          var13 = (g) (this.field_L.c((byte) 127));
+          var13 = (g) (this.field_L.beginForward((byte) 127));
           while (var13 != null) {
             var13.a(this.field_Bb, this.field_lb, (byte) -8, this.field_x, param4, this.field_vb);
             var13 = (g) (this.field_L.nextForward(-115));
@@ -205,7 +205,7 @@ class g extends wa {
           if (param1 != -14951) {
             this.field_w = (Sprite) null;
           }
-          this.field_L.a(param0, -16611);
+          this.field_L.addFirst(param0, -16611);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "g.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

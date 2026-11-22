@@ -32,12 +32,12 @@ final class lo {
         }
         if (!var7.i(0)) {
           this.field_e.addFirst((byte) 118, var7);
-          var7.field_n = 0L;
+          var7.secondaryKey = 0L;
         } else {
           var6 = new oq(var5, var7.field_C);
           this.field_f.put(var7.key, var6, 120);
           this.field_e.addFirst((byte) 102, var6);
-          ((qc) ((Object) var6)).field_n = 0L;
+          ((qc) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(2);
           var7.unlinkSecondary(-122);
         }
@@ -93,7 +93,7 @@ final class lo {
           var6 = new oq(param2, param1);
           this.field_f.put(param3, var6, param0 ^ 32);
           this.field_e.addFirst((byte) 35, var6);
-          ((qc) ((Object) var6)).field_n = 0L;
+          ((qc) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lo.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

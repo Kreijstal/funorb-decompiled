@@ -8,9 +8,9 @@ class IntrusiveNode {
     IntrusiveNode field_b;
     static String field_a;
 
-    final void a(boolean param0) {
+    final void unlink(boolean param0) {
         if (param0) {
-          this.b(-25);
+          this.isLinked(-25);
           if (null != this.field_d) {
             this.field_d.field_b = this.field_b;
             this.field_b.field_d = this.field_d;
@@ -43,7 +43,7 @@ class IntrusiveNode {
         field_a = null;
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (this.field_d == null) {
           return false;
         }

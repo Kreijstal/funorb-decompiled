@@ -133,7 +133,7 @@ final class da extends fi {
         }
         while (var3 != null) {
           if (var3.m(0)) {
-            var3.c(param0 ^ 5);
+            var3.unlink(param0 ^ 5);
           }
           var3 = (mk) (var2.a(param0 ^ 405142401));
         }
@@ -190,7 +190,7 @@ final class da extends fi {
         mk var3 = (mk) (var2.c(-120));
         while (var3 != null) {
           if (var3.a((byte) -97)) {
-            var3.c(5);
+            var3.unlink(5);
           }
           var3 = (mk) (var2.a(405142401));
         }

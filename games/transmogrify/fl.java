@@ -86,7 +86,7 @@ final class fl {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {
-            param2.c(5);
+            param2.unlink(5);
           }
           var5 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
           param2.next = var5;

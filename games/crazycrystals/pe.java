@@ -126,10 +126,10 @@ final class pe extends IntrusiveNode {
               var13++;
               var9Lifetime1++;
             }
-            var3.a(false);
+            var3.unlink(false);
             return;
           }
-          var3.a(false);
+          var3.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

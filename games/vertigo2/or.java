@@ -46,13 +46,13 @@ final class or {
         if (param0 == 4) {
           un.field_Ib = true;
           AccountServiceResult.field_e.i(0);
-          fi.a(param0 + 31816, false, wp.field_c);
+          SecondaryNodeHashTable.a(param0 + 31816, false, wp.field_c);
           return;
         }
         field_l = (String) null;
         un.field_Ib = true;
         AccountServiceResult.field_e.i(0);
-        fi.a(param0 + 31816, false, wp.field_c);
+        SecondaryNodeHashTable.a(param0 + 31816, false, wp.field_c);
     }
 
     final static String a(int param0) {
@@ -277,7 +277,7 @@ final class or {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (tp) (jn.field_g.a(3661, (long)var2.hashCode()));
+          var3 = (tp) (jn.field_g.get(3661, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = rc.a(var7, 320);
@@ -288,7 +288,7 @@ final class or {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (tp) (jn.field_g.a(-122));
+            var3 = (tp) (jn.field_g.nextWithSameKey(-122));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

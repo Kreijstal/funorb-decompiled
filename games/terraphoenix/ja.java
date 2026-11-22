@@ -63,13 +63,13 @@ final class ja extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        aa var1 = (aa) (pb.field_a.b((byte) 105));
+        aa var1 = (aa) (pb.field_a.removeFirst((byte) 105));
         int var2 = 53 % ((5 - param0) / 43);
         if (var1 == null) {
           var1 = new aa();
         }
         var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_k, SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, 83, SoftwareRasterizer.field_j);
-        vl.field_i.a(var1, -16611);
+        vl.field_i.addFirst(var1, -16611);
     }
 
     final static void a(int param0, boolean param1, int param2) {

@@ -339,7 +339,7 @@ final class ga {
 
     final static void a(byte param0, int param1, cc param2) {
         try {
-          qb.field_a.a(param2, -16611);
+          qb.field_a.addFirst(param2, -16611);
           if (param0 != 7) {
             ga.d(113);
           }

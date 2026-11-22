@@ -68,7 +68,7 @@ final class bj {
         DualLinkNode var5 = null;
         try {
           if (null != param0.field_j) {
-            param0.e(0);
+            param0.unlinkSecondary(0);
           }
           var5 = this.field_d[(int)(param1 & (long)(this.field_a - 1))];
           param0.field_j = var5.field_j;

@@ -188,7 +188,7 @@ final class oc {
           }
           var6_ref.field_Ib = var4_ref_StringLifetime1;
           var6_ref.field_Mb = (String) (var3Lifetime1);
-          var6_ref.b(-23);
+          var6_ref.unlink(-23);
           var7_ref = (vb) (gm.field_d.g(-97));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

@@ -49,7 +49,7 @@ final class InputAdapter003 {
             stackStringLocal9 = NodeHashTableIterator.substituteIndexedPlaceholders(97, EmailFormatValidator.stringState0258, new String[]{stringArgument2});
             return stackStringLocal9;
           }
-          sceneWidgetPart014Local4.performAction0149((byte) 109);
+          sceneWidgetPart014Local4.unlink((byte) 109);
           sceneWidgetPart014Local4.performAction0134((byte) 74);
           MixedSupport029.integerState0182 = MixedSupport029.integerState0182 - 1;
           cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;

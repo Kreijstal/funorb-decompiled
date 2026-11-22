@@ -8,7 +8,7 @@ final class hg extends PcmStream {
     private int field_t;
 
     private final void a(rl param0) {
-        param0.b(34);
+        param0.unlink(34);
         param0.a();
         IntrusiveNode var2 = this.field_r.field_c.field_f;
         if (var2 == this.field_r.field_c) {
@@ -69,7 +69,7 @@ final class hg extends PcmStream {
     }
 
     final synchronized void a(PcmStream param0) {
-        param0.b(34);
+        param0.unlink(34);
     }
 
     final PcmStream b() {

@@ -16,7 +16,7 @@ final class SecondaryNodeDeque implements Iterable {
         DualLinkNode var2 = this.field_f.secondaryNext;
         int var3 = -14 % ((param0 - 15) / 50);
         if (this.field_f != var2) {
-          var2.a(-6242);
+          var2.unlinkSecondary(-6242);
           return var2;
         }
         return null;
@@ -99,7 +99,7 @@ final class SecondaryNodeDeque implements Iterable {
             this.b(-80);
           }
           if (null != param0.secondaryPrevious) {
-            param0.a(param1 - 31426);
+            param0.unlinkSecondary(param1 - 31426);
           }
           param0.secondaryNext = this.field_f;
           param0.secondaryPrevious = this.field_f.secondaryPrevious;

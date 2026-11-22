@@ -34,7 +34,7 @@ class DualLinkNode extends IntrusiveNode {
         field_f = null;
     }
 
-    final long d(int param0) {
+    final long getSecondaryKey(int param0) {
         if (param0 >= -97) {
           return 6L;
         }

@@ -175,7 +175,7 @@ final class tq {
                 }
               } else {
                 var8_ref_bs = new bs(var20, var21, var3_long);
-                GameShell.field_l.a(var8_ref_bs, var3_long, 61);
+                GameShell.field_l.put(var8_ref_bs, var3_long, 61);
               }
               var8_ref_bs.field_Jb = gk.a(53) - (long)((PacketBuffer) ((Object) var1)).readInt(true);
               var8_ref_bs.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
@@ -221,10 +221,10 @@ final class tq {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
-              var4 = (uh) (lh.field_b.a(3661, (long)var3));
+              var4 = (uh) (lh.field_b.get(3661, (long)var3));
               if (var4 == null) {
                 var4 = new uh(ol.field_A);
-                lh.field_b.a(var4, (long)var3, 45);
+                lh.field_b.put(var4, (long)var3, 45);
               }
               ph.a(var4, true, var1, true);
               ce.a(true, var4);
@@ -233,7 +233,7 @@ final class tq {
             if (9 == var2) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-11);
-              var32 = (uh) (lh.field_b.a(3661, (long)var3Lifetime4));
+              var32 = (uh) (lh.field_b.get(3661, (long)var3Lifetime4));
               if (var32 == null) {
                 return;
               }
@@ -260,7 +260,7 @@ final class tq {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-11);
-                var15 = (uh) (lh.field_b.a(3661, (long)var3Lifetime5));
+                var15 = (uh) (lh.field_b.get(3661, (long)var3Lifetime5));
                 if (var15 == null) {
                   return;
                 }
@@ -286,7 +286,7 @@ final class tq {
                     var7 = eq.a(var3_longLifetime2, (byte) 89);
                     if (var7 == null) {
                       var7 = new bs(var26, var27, var3_longLifetime2);
-                      ck.field_I.a(var7, var3_longLifetime2, param0 - 1);
+                      ck.field_I.put(var7, var3_longLifetime2, param0 - 1);
                       gd.field_j.field_Qb = gd.field_j.field_Qb + 1;
                     }
                     var7.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
@@ -380,7 +380,7 @@ final class tq {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
-            var18_ref = (uh) (lh.field_b.a(param0 ^ -3597, (long)var3Lifetime6));
+            var18_ref = (uh) (lh.field_b.get(param0 ^ -3597, (long)var3Lifetime6));
             var24 = var18_ref;
             if (var24 != null) {
               if (var2 != 11) {
@@ -398,7 +398,7 @@ final class tq {
             var3_ref_bs.unlinkSecondary(-117);
             var3_ref_bs = (bs) (kq.field_Rb.b(param0 + 181));
           }
-          var3_ref_bsLifetime1 = (bs) (GameShell.field_l.b(-128));
+          var3_ref_bsLifetime1 = (bs) (GameShell.field_l.first(-128));
           while (var3_ref_bsLifetime1 != null) {
             if (var3_ref_bsLifetime1.field_Yb ||
               var3_ref_bsLifetime1.field_Ob) {
@@ -409,7 +409,7 @@ final class tq {
               var3_ref_bsLifetime1.field_Yb = false;
               ia.a((byte) 77, var3_ref_bsLifetime1);
             }
-            var3_ref_bsLifetime1 = (bs) (GameShell.field_l.a((byte) -60));
+            var3_ref_bsLifetime1 = (bs) (GameShell.field_l.next((byte) -60));
           }
           if (var2 == 1 &&
             gd.field_j != null) {
@@ -418,7 +418,7 @@ final class tq {
           if (4 == var2) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
             gd.field_j = new uh(ol.field_A);
-            gd.field_j.a(-1, (long)var3Lifetime1);
+            gd.field_j.setSecondaryKey(-1, (long)var3Lifetime1);
             ph.a(gd.field_j, true, var1, false);
             Archive.field_h = 0L;
           } else {

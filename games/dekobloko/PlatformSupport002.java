@@ -67,7 +67,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
             }
             mixedSupport033Local15.booleanState0041 = true;
             mixedSupport033Local15.integerArrayState0042 = integerArrayLocal7;
-            mixedSupport033Local15.performAction0149((byte) 112);
+            mixedSupport033Local15.unlink((byte) 112);
           } else {
             if (integerLocal5 == 1) {
               networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1741((byte) -66));
@@ -75,7 +75,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
                 NodeHashTable.performAction1498(127);
                 return;
               }
-              networkSupport005Local16.performAction0149((byte) 106);
+              networkSupport005Local16.unlink((byte) 106);
             } else {
               if (integerLocal5 == 2) {
                 cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1741((byte) -64));
@@ -87,7 +87,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
                 }
                 mixedSupport033Local14.integerArrayState0042 = UiComponentPart002.computeIntegerArray0082(109);
                 mixedSupport033Local14.booleanState0041 = true;
-                mixedSupport033Local14.performAction0149((byte) 119);
+                mixedSupport033Local14.unlink((byte) 119);
               } else {
                 NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1379((byte) 89));
                 NodeHashTable.performAction1498(90);

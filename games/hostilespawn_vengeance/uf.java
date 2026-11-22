@@ -132,7 +132,7 @@ final class uf extends ql {
     final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param0.field_f != null) {
-            param0.b(-124);
+            param0.unlink(-124);
           }
           param0.field_g = param1;
           param0.field_f = param1.field_f;

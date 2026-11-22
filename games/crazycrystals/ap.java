@@ -357,7 +357,7 @@ final class ap extends ob {
           }
           var6_ref.field_cb = (String) (var3Lifetime1);
           var6_ref.field_fb = var4_ref_StringLifetime1;
-          var6_ref.a(param0);
+          var6_ref.unlink(param0);
           var7_ref = (ce) (df.field_b.g(32073));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -542,7 +542,7 @@ final class ap extends ob {
                         this.field_h.field_t = this.field_h.field_t + var6;
                       }
                       if (var5 == this.field_h.field_s.position) {
-                        this.field_h.a(1);
+                        this.field_h.unlinkSecondary(1);
                         this.field_h.field_n = false;
                         this.field_h = null;
                         decompiledFrameRemainder1 = (var16 != 0);

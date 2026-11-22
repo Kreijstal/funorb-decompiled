@@ -42,7 +42,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
                 pc.a(param0 - 3);
                 return;
               }
-              var4.c(5);
+              var4.unlink(5);
             } else {
               d.a((Throwable) null, 13, "A1: " + ik.q(48));
               pc.a(1);
@@ -65,7 +65,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               pc.a(param0 - 3);
               return;
             }
-            var3_ref_he.c(param0 ^ 1);
+            var3_ref_he.unlink(param0 ^ 1);
           }
           if (param0 == 4) {
             return;
@@ -83,7 +83,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (this.field_a == null) {
           throw new IllegalStateException();
         }
-        this.field_a.b((byte) -81);
+        this.field_a.unlinkSecondary((byte) -81);
         this.field_a = null;
     }
 

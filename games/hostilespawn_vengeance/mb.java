@@ -229,7 +229,7 @@ final class mb extends ce {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.l(32270) << (ua.a(var7, 3) << 8));
             }
             var4.field_j = true;
-            var4.b(param0 - 170);
+            var4.unlink(param0 - 170);
             return;
           }
           if (1 != var2) {
@@ -251,7 +251,7 @@ final class mb extends ce {
             le.c((byte) 76);
             return;
           }
-          var5_ref_ne.b(param0 + 61);
+          var5_ref_ne.unlink(param0 + 61);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

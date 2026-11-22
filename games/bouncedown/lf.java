@@ -203,7 +203,7 @@ final class lf extends gj {
     final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (null != param1.field_f) {
-            param1.c(2);
+            param1.unlink(2);
           }
           if (param2 != -17957) {
             lf.a(true);

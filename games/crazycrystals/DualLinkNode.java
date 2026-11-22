@@ -101,14 +101,14 @@ class DualLinkNode extends IntrusiveNode {
         field_f = null;
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.field_g) {
           return;
         }
         this.field_g.field_j = this.field_j;
         this.field_j.field_g = this.field_g;
         if (param0 != 1) {
-          this.a(37);
+          this.unlinkSecondary(37);
         }
         this.field_j = null;
         this.field_g = null;

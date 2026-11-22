@@ -52,7 +52,7 @@ final class ClientException extends RuntimeException {
             w.field_z != rc.field_a[0]) {
             w.field_z = rc.field_a[0];
           }
-          wc.a(fi.field_c, w.field_z, param1, param0 - 101, true, 0);
+          wc.a(SecondaryNodeHashTable.field_c, w.field_z, param1, param0 - 101, true, 0);
         }
         if (param0 != gb.field_c.field_tb) {
           ce.field_c = false;

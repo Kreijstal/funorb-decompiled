@@ -27,14 +27,14 @@ final class IntrusiveDeque {
           IntrusiveDeque.c((byte) 97);
           var2 = this.field_d.previous;
           if (this.field_d != var2) {
-            var2.c(5);
+            var2.unlink(5);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_d.previous;
         if (this.field_d != var2Lifetime1) {
-          var2Lifetime1.c(5);
+          var2Lifetime1.unlink(5);
           return var2Lifetime1;
         }
         return null;
@@ -99,7 +99,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param0.previous) {
-            param0.c(5);
+            param0.unlink(5);
           }
           param0.previous = this.field_d.previous;
           param0.next = this.field_d;
@@ -179,7 +179,7 @@ final class IntrusiveDeque {
           while (true) {
             var4 = this.field_d.next;
             if (this.field_d != var4) {
-              var4.c(5);
+              var4.unlink(5);
               continue;
             }
             break;
@@ -191,7 +191,7 @@ final class IntrusiveDeque {
         while (true) {
           var5 = this.field_d.next;
           if (this.field_d != var5) {
-            var5.c(5);
+            var5.unlink(5);
             continue;
           }
           break;
@@ -223,7 +223,7 @@ final class IntrusiveDeque {
 
     final void a(IntrusiveNode param0, byte param1) {
         if (param0.previous != null) {
-          param0.c(5);
+          param0.unlink(5);
         }
         if (param1 != 33) {
           return;
@@ -251,12 +251,12 @@ final class IntrusiveDeque {
           return null;
         }
         if (param0 <= -71) {
-          var2.c(5);
+          var2.unlink(5);
           return var2;
         }
         CharSequence var3 = (CharSequence) null;
         IntrusiveDeque.a((CharSequence) null, 11);
-        var2.c(5);
+        var2.unlink(5);
         return var2;
     }
 

@@ -98,7 +98,7 @@ final class rj {
             for (var6 = 0; qh.field_d > var6; var6++) {
               var5.field_k[var6] = LevelEditor.field_j.payload[var6];
             }
-            am.field_F.a(var5, param0 ^ 1491066943);
+            am.field_F.addFirst(var5, param0 ^ 1491066943);
             fg.field_d = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -192,7 +192,7 @@ final class a extends ge {
                 this.field_a.field_v = this.field_a.field_v + var6;
                 this.field_a.field_u.position = this.field_a.field_u.position + var6;
                 if (this.field_a.field_u.position == var5) {
-                  this.field_a.c(-1);
+                  this.field_a.unlinkSecondary(-1);
                   this.field_a.field_l = false;
                   this.field_a = null;
                 } else {

@@ -80,7 +80,7 @@ final class NodeHashTableIterator implements Iterator {
               integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.readUnsignedByte((byte) -108) << (MixedSupport075.computeInteger0930(3, integerLocal1) << 8));
             }
             mixedSupport113Local7.booleanState0168 = true;
-            mixedSupport113Local7.performAction0149((byte) 118);
+            mixedSupport113Local7.unlink((byte) 118);
             return;
           }
           if (integerLocal4 == 1) {
@@ -98,7 +98,7 @@ final class NodeHashTableIterator implements Iterator {
               NodeHashTable.performAction1498(71);
               return;
             }
-            mixedSupport038Local8.performAction0149((byte) 124);
+            mixedSupport038Local8.unlink((byte) 124);
             return;
           }
           NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "LR1: " + BufferedSocket.computeString1379((byte) 74));
@@ -158,7 +158,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.hashNodeState0004 == null) {
           throw new IllegalStateException();
         }
-        this.hashNodeState0004.performAction0149((byte) 112);
+        this.hashNodeState0004.unlink((byte) 112);
         this.hashNodeState0004 = null;
     }
 

@@ -109,7 +109,7 @@ final class vo extends va {
             stackIn_12_0 = null;
             return (tp) (stackIn_12_0);
           }
-          var3 = (tp) (se.field_A.a(3661, (long)var2.hashCode()));
+          var3 = (tp) (se.field_A.get(3661, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = rc.a(var7, param1 + 320);
@@ -117,7 +117,7 @@ final class vo extends va {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (tp) (se.field_A.a(-121));
+            var3 = (tp) (se.field_A.nextWithSameKey(-121));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -75,7 +75,7 @@ final class hb {
             for (var7 = 0; var7 < var5; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 90) << (vi.a(3, var7) << 8));
             }
-            var4.b(57);
+            var4.unlink(57);
             return;
           }
           if (1 == var2) {
@@ -93,7 +93,7 @@ final class hb {
               th.a(param0 ^ 554553381);
               return;
             }
-            var5_ref_qf.b(param0 ^ 554553457);
+            var5_ref_qf.unlink(param0 ^ 554553457);
             return;
           }
           MouseWheelInput.a((byte) -13, (Throwable) null, "LR1: " + sj.b(true));

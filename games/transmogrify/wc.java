@@ -437,10 +437,10 @@ final class wc {
               var10Lifetime1++;
               var15++;
             }
-            var3.c(5);
+            var3.unlink(5);
             return;
           }
-          var3.c(5);
+          var3.unlink(5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

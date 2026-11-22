@@ -804,7 +804,7 @@ final class vc extends gf {
           this.field_x = 0;
           this.field_r = 0;
           this.field_C = 0;
-          this.a(true);
+          this.unlink(true);
           return true;
         }
         if (this.field_C >= var1) {
@@ -916,7 +916,7 @@ final class vc extends gf {
         int var2Lifetime1;
         if (param0 == 0) {
           this.g(0);
-          this.a(true);
+          this.unlink(true);
           return;
         }
         if (this.field_r != 0) {
@@ -976,7 +976,7 @@ final class vc extends gf {
         this.field_q = 0;
         this.field_A = 0;
         this.field_C = 0;
-        this.a(true);
+        this.unlink(true);
     }
 
     private final synchronized void c(int param0, int param1) {
@@ -1108,7 +1108,7 @@ final class vc extends gf {
         if (this.field_t < 0) {
           if (this.field_B <= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = 0;
@@ -1116,7 +1116,7 @@ final class vc extends gf {
         if (this.field_t >= var7) {
           if (this.field_B >= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = var7 - 1;
@@ -1243,7 +1243,7 @@ final class vc extends gf {
           if (this.field_t >= var7) {
             this.field_t = var7;
             this.e();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -1253,7 +1253,7 @@ final class vc extends gf {
         }
         this.field_t = -1;
         this.e();
-        this.a(true);
+        this.unlink(true);
         return;
     }
 
@@ -1337,7 +1337,7 @@ final class vc extends gf {
               this.field_x = 0;
               this.field_r = 0;
               this.field_C = 0;
-              this.a(true);
+              this.unlink(true);
               param0 = this.field_q;
             }
             this.field_q = 0;
@@ -1355,7 +1355,7 @@ final class vc extends gf {
         if (this.field_t < 0) {
           if (this.field_B <= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = 0;
@@ -1363,7 +1363,7 @@ final class vc extends gf {
         if (this.field_t >= var5) {
           if (this.field_B >= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = var5 - 1;
@@ -1476,7 +1476,7 @@ final class vc extends gf {
           if (this.field_t >= var5) {
             this.field_t = var5;
             this.e();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -1485,7 +1485,7 @@ final class vc extends gf {
         }
         this.field_t = -1;
         this.e();
-        this.a(true);
+        this.unlink(true);
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, vc param8) {

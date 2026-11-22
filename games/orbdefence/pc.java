@@ -299,7 +299,7 @@ final class pc extends hl {
               th.a(108);
               return;
             }
-            var9.b(57);
+            var9.unlink(57);
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(0);
@@ -315,7 +315,7 @@ final class pc extends hl {
                 th.a(126);
                 return;
               }
-              var4_ref_ef.b(57);
+              var4_ref_ef.unlink(57);
             } else {
               MouseWheelInput.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
               th.a(119);

@@ -14,7 +14,7 @@ final class IterableNodeHashTable implements Iterable {
     static boolean field_h;
     static vd field_e;
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Transmogrify.field_A ? 1 : 0;
         IntrusiveNode var4 = this.field_d[(int)((long)(param0 + this.field_c) & param1)];
@@ -31,11 +31,11 @@ final class IterableNodeHashTable implements Iterable {
         return null;
     }
 
-    final void a(IntrusiveNode param0, byte param1, long param2) {
+    final void put(IntrusiveNode param0, byte param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
-            param0.c(5);
+            param0.unlink(5);
           }
           var5 = this.field_d[(int)((long)(-1 + this.field_c) & param2)];
           param0.previous = var5.previous;

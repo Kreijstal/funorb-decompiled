@@ -319,7 +319,7 @@ final class tg {
         IntrusiveNode var5 = null;
         try {
           if (param2.field_c != null) {
-            param2.b(34);
+            param2.unlink(34);
           }
           var5 = this.field_b[(int)(param1 & (long)(this.field_a - 1))];
           param2.field_c = var5.field_c;

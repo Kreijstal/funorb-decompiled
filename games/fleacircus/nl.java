@@ -25,7 +25,7 @@ final class nl {
             field_b = (String[]) null;
           }
           if (null != param2.field_a) {
-            param2.c(-1);
+            param2.unlink(-1);
           }
           param2.field_h = param1;
           param2.field_a = param1.field_a;

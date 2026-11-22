@@ -23,7 +23,7 @@ abstract class ef {
         var2.readInt(-3);
         var2.readInt(-3);
         var2.readInt(-3);
-        var1.c(2);
+        var1.unlink(2);
         if (param0 >= 99) {
           return;
         }

@@ -66,7 +66,7 @@ final class ml {
 
     final void a(byte param0, DualLinkNode param1) {
         if (param1.field_i != null) {
-          param1.a(92);
+          param1.unlinkSecondary(92);
         }
         param1.field_l = this.field_a;
         param1.field_i = this.field_a.field_i;
@@ -87,7 +87,7 @@ final class ml {
           return (DualLinkNode) null;
         }
         if (this.field_a != var2) {
-          var2.a(param0 ^ -7);
+          var2.unlinkSecondary(param0 ^ -7);
           return var2;
         }
         return null;

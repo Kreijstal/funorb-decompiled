@@ -996,6 +996,22 @@
       "renamedSymbol": "M:eg.exitFullscreenFrame(Ljava/awt/Frame;BLPlatformTaskDispatcher;)V"
     },
     {
+      "symbol": "M:ek.a(JI)Lrf;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Choose bucket using longKey&(bucketCount-intArgument),then scan next links by complemented key equality,advance lookup cursor after match and clear on exhaustion. Preserve every int mask/overflow domain,global reads and duplicates. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JI)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:ek.a(JILrf;)V",
+      "originalName": "a",
+      "to": "put",
+      "evidence": "If linked unlink4,select bucket by longKey&(bucketCount+intArgument),write own next/previous,neighbor links,key in exact order. Preserve arbitrary mask argument,overflow,duplicates,aliases and wrapper. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.put(JILIntrusiveNode;)V"
+    },
+    {
       "symbol": "M:el.e(B)V",
       "originalName": "e",
       "to": "clearStaticReferences",
@@ -2164,6 +2180,14 @@
       "renamedSymbol": "M:ug.copyByteRange([BI[BII)V"
     },
     {
+      "symbol": "M:uh.a(I)V",
+      "originalName": "a",
+      "to": "unlinkSecondary",
+      "evidence": "If secondaryPrevious null return. Splice both named secondary neighbors,clear secondaryPrevious then secondaryNext,then int!=-6242 clears static String-array field_h. Preserve linked-only guard side effect. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(I)V"
+    },
+    {
       "symbol": "M:vd.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2218,6 +2242,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 88a64b8dc9cb737ee49695427d621cc9a3b22a9e3558e2f0656f8b8d29db1915.",
       "confidence": "reviewed",
       "renamedSymbol": "M:wd.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:wh.a(I)V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Set current node from bucket0.next and bucket index1 first. Wrong int!=-17399 recursively calls reset(-19),repeating those writes while guard stays invalid,before last-returned clear. Valid guard clears last-returned and returns. Preserve recursion and partial writes. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V"
     },
     {
       "symbol": "M:wk.a(Z)V",
@@ -50559,7 +50591,7 @@
     },
     {
       "symbol": "L:ek.a(JI)Lrf;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -50570,7 +50602,7 @@
     },
     {
       "symbol": "L:ek.a(JI)Lrf;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -50581,7 +50613,7 @@
     },
     {
       "symbol": "L:ek.a(JI)Lrf;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JI)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JI)LIntrusiveNode;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -50592,7 +50624,7 @@
     },
     {
       "symbol": "L:ek.a(JILrf;)V#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JILIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IterableNodeHashTable.put(JILIntrusiveNode;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -50603,7 +50635,7 @@
     },
     {
       "symbol": "L:ek.a(JILrf;)V#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JILIntrusiveNode;)V#1",
+      "renamedSymbol": "L:IterableNodeHashTable.put(JILIntrusiveNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -147546,9 +147578,9 @@
     },
     {
       "symbol": "M:ek.a(JI)Lrf;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JI)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JI)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "ek.java",
         "start": 233,
@@ -147557,9 +147589,9 @@
     },
     {
       "symbol": "M:ek.a(JILrf;)V",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JILIntrusiveNode;)V",
+      "renamedSymbol": "M:IterableNodeHashTable.put(JILIntrusiveNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "put",
       "declaration": {
         "file": "ek.java",
         "start": 1391,
@@ -163155,9 +163187,9 @@
     },
     {
       "symbol": "M:uh.a(I)V",
-      "renamedSymbol": "M:DualLinkNode.a(I)V",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "unlinkSecondary",
       "declaration": {
         "file": "uh.java",
         "start": 2535,
@@ -165267,9 +165299,9 @@
     },
     {
       "symbol": "M:wh.a(I)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "wh.java",
         "start": 1292,
@@ -175112,7 +175144,7 @@
     },
     {
       "symbol": "P:ek.a(JI)Lrf;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JI)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175123,7 +175155,7 @@
     },
     {
       "symbol": "P:ek.a(JI)Lrf;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JI)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JI)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175134,7 +175166,7 @@
     },
     {
       "symbol": "P:ek.a(JILrf;)V#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JILIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JILIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175145,7 +175177,7 @@
     },
     {
       "symbol": "P:ek.a(JILrf;)V#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JILIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JILIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175156,7 +175188,7 @@
     },
     {
       "symbol": "P:ek.a(JILrf;)V#2",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JILIntrusiveNode;)V#2",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JILIntrusiveNode;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216384,7 +216416,7 @@
     },
     {
       "symbol": "P:uh.a(I)V#0",
-      "renamedSymbol": "P:DualLinkNode.a(I)V#0",
+      "renamedSymbol": "P:DualLinkNode.unlinkSecondary(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220938,7 +220970,7 @@
     },
     {
       "symbol": "P:wh.a(I)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -225661,7 +225693,7 @@
       "original": "ai.java",
       "renamed": "ai.java",
       "inputSha256": "7577f2cb78e5a9d922363a4de8fc8bd62799284fd2e659ea6b46159f8075b095",
-      "outputSha256": "868543c11bc95f80020db5dfb56d6581bb2d288d956bf8c7af2cafc13ca77c0f",
+      "outputSha256": "32303274602c56d552de80c75a909b954bb4cf3316393389ba682420ddb1dfe8",
       "edits": [
         {
           "start": 89,
@@ -226012,6 +226044,13 @@
           "symbol": "F:uh.field_f:Luh;",
           "original": "field_f",
           "renamed": "secondaryPrevious"
+        },
+        {
+          "start": 18010,
+          "end": 18011,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 18123,
@@ -228194,7 +228233,7 @@
       "original": "bh.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "da8a4fb4f51aecab3396c149a2251e61d55bcca55516af828075a52371eaad4f",
-      "outputSha256": "8853bec1744bc11105e9a35b20df4a480b9c7fee54da91c3ec8184fbd67a1670",
+      "outputSha256": "cd3e059bf9178f65445e9291eb4c4bf5553b3fcdaf395885c0a384c88da62091",
       "edits": [
         {
           "start": 71,
@@ -228239,6 +228278,13 @@
           "renamed": "secondaryNext"
         },
         {
+          "start": 428,
+          "end": 429,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
           "start": 742,
           "end": 744,
           "symbol": "C:ob",
@@ -228265,6 +228311,13 @@
           "symbol": "F:uh.field_f:Luh;",
           "original": "field_f",
           "renamed": "secondaryPrevious"
+        },
+        {
+          "start": 3249,
+          "end": 3250,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 3297,
@@ -236588,7 +236641,7 @@
       "original": "ek.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "edf8a8a7736632298cb00788d7596e5b76b6f8767171404df3ff387b646230ac",
-      "outputSha256": "b2df79e1f69635ef52000326c81e7fb6ca3da2d85ab386ae16ccea161ea3ac34",
+      "outputSha256": "fdfab558f2a552037a98995780d094eb4bff0876f040aee4fec368ded24a8340",
       "edits": [
         {
           "start": 71,
@@ -236617,6 +236670,13 @@
           "symbol": "C:rf",
           "original": "rf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 233,
+          "end": 234,
+          "symbol": "M:ek.a(JI)Lrf;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 270,
@@ -236673,6 +236733,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 1391,
+          "end": 1392,
+          "symbol": "M:ek.a(JILrf;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 1418,
@@ -238627,7 +238694,7 @@
       "original": "gd.java",
       "renamed": "gd.java",
       "inputSha256": "d13405ac070290b06676639c404c5ebe69f072d6ccda4264bd4a31bf4881b607",
-      "outputSha256": "5960815682164b756debd9199f6398ffb482af7f2ef2bf6583c063ea91ba0a17",
+      "outputSha256": "2a42b587d7bbf4570606d0f358c7f5aa9b97bce85a284804d992e16987a49c3e",
       "edits": [
         {
           "start": 67,
@@ -238644,6 +238711,20 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 846,
+          "end": 847,
+          "symbol": "M:ek.a(JI)Lrf;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 1183,
+          "end": 1184,
+          "symbol": "M:ek.a(JILrf;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
           "start": 1190,
           "end": 1197,
           "symbol": "F:rf.field_b:J",
@@ -238658,11 +238739,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 1340,
+          "end": 1341,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
           "start": 1408,
           "end": 1409,
           "symbol": "M:rf.b(I)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 1427,
+          "end": 1428,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 1783,
@@ -238707,11 +238802,32 @@
           "renamed": "position"
         },
         {
+          "start": 3105,
+          "end": 3106,
+          "symbol": "M:ek.a(JILrf;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
+          "start": 3615,
+          "end": 3616,
+          "symbol": "M:ek.a(JI)Lrf;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 4251,
           "end": 4252,
           "symbol": "M:rf.b(I)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 4284,
+          "end": 4285,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         }
       ]
     },
@@ -242983,7 +243099,7 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "b39cb9ebf34f88fca725ae400a9e9bfd83e53f4dbaebdaeee7437d702324be57",
-      "outputSha256": "69e17f73201a5ad19168c64aa019986632ec92a205ddb0dd00acccf12ad839f2",
+      "outputSha256": "c4963a86bff9bb83a74e1b7067c1f27209c80f7786ea7afbcc12b8b65b33b706",
       "edits": [
         {
           "start": 163,
@@ -243026,6 +243142,13 @@
           "symbol": "F:uh.field_f:Luh;",
           "original": "field_f",
           "renamed": "secondaryPrevious"
+        },
+        {
+          "start": 1096,
+          "end": 1097,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 1135,
@@ -243271,6 +243394,20 @@
           "symbol": "F:uh.field_m:Luh;",
           "original": "field_m",
           "renamed": "secondaryNext"
+        },
+        {
+          "start": 5076,
+          "end": 5077,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 5207,
+          "end": 5208,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 5323,
@@ -248290,7 +248427,7 @@
       "original": "ob.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "122260e1ba66a1841e1472c700ba57dfaecbc1ac3291044405cfb147ad8ef289",
-      "outputSha256": "362762aaf3e19cebc5dac279d5dee794e03ec2715ec5ea02e95558025f87caeb",
+      "outputSha256": "42bbcf1a8457ff23070aba372a366c344a5e4423857824c56eb29b5b74d214bd",
       "edits": [
         {
           "start": 71,
@@ -248361,6 +248498,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2829,
+          "end": 2830,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 3149,
@@ -256322,7 +256466,7 @@
       "original": "uh.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "179a248aaec29febb1e10ecc6de1a6e19dc6c81472a9cd98a523d479b2044a8f",
-      "outputSha256": "60a787b00ee2b17651bea9971ee466a8638e86ae35f1d780fa8e4adbe22e4913",
+      "outputSha256": "22eee7fa0b6d882118ecaa751a5703280c5192afb36bb80f7716f6b4ebed038b",
       "edits": [
         {
           "start": 44,
@@ -256407,6 +256551,13 @@
           "symbol": "M:uh.<init>()V",
           "original": "uh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2535,
+          "end": 2536,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2568,
@@ -257690,7 +257841,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "f6ea58ecb45666bd04f5f2cb381e0241624eb3959484934ce7ed74eb5e59d82e",
-      "outputSha256": "52b89bf6723a69bad82f244b7dd947437d0b2438364a3a1e39d05b06967c20b0",
+      "outputSha256": "9d115f0449ccada92d98eb73a1a8de9df8b39530de9432f98b5bc2cfdb4f7cf0",
       "edits": [
         {
           "start": 172,
@@ -258401,6 +258552,20 @@
           "symbol": "F:rb.field_g:I",
           "original": "field_g",
           "renamed": "position"
+        },
+        {
+          "start": 33764,
+          "end": 33765,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 34011,
+          "end": 34012,
+          "symbol": "M:uh.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 37831,
@@ -260136,7 +260301,7 @@
       "original": "wh.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "2ac1a2b381393420db0a7ab4d58e2bca7555b2146ee62f40e25550d6631a4edf",
-      "outputSha256": "a6c6cfb2b57b4df440e27bf0b750d902e2d641fc9b174caf9c647d0bf89ab920",
+      "outputSha256": "39c082f0fa65011b21af36f5ed55550f70a47255e650bf761366b61b53ba4257",
       "edits": [
         {
           "start": 71,
@@ -260202,11 +260367,25 @@
           "renamed": "next"
         },
         {
+          "start": 1292,
+          "end": 1293,
+          "symbol": "M:wh.a(I)V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
           "start": 1355,
           "end": 1362,
           "symbol": "F:rf.field_a:Lrf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 1494,
+          "end": 1495,
+          "symbol": "M:wh.a(I)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 1724,
@@ -260270,6 +260449,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 4773,
+          "end": 4774,
+          "symbol": "M:wh.a(I)V",
+          "original": "a",
+          "renamed": "reset"
         }
       ]
     },
@@ -260529,10 +260715,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/starcannon"
     },
-    "rulesSha256": "27dcaf96419048bc0c9ef2fd8996941aac458e3ca979c45d225afa797b0815e7",
+    "rulesSha256": "e6205357870e5e04becd4b2369931e19807a3213fb7cb70f94bac0f4c85937b3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
-    "outputTreeSha256": "2ea407d76b3280ff6895a6cf0a5f8bff7374968c4b57b34619b182035d51e09e",
+    "outputTreeSha256": "883611e0cd075b351570e6aa13de9a7fc2a02fffced7ab28e42fb74f90c53df6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

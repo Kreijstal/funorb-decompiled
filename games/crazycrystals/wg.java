@@ -60,7 +60,7 @@ final class wg extends od {
           if (0 > param0.field_l) {
             return true;
           }
-          param0.a(false);
+          param0.unlink(false);
           if (param0.field_C > 0 &&
             this.field_w[param0.field_i][param0.field_C] == param0) {
             this.field_w[param0.field_i][param0.field_C] = null;
@@ -724,7 +724,7 @@ final class wg extends od {
             if (var3.field_l < 0) {
               this.field_z[var3.field_i][var3.field_y] = null;
             }
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (pl) (this.field_m.field_k.a(false));
         }
@@ -975,7 +975,7 @@ final class wg extends od {
           if (param3.field_l >= 0 && (param3.field_v == null ||
             param3.field_v.h())) {
             param3.d(12426);
-            param3.a(false);
+            param3.unlink(false);
             if (param3.field_C > 0 &&
               this.field_w[param3.field_i][param3.field_C] == param3) {
               this.field_w[param3.field_i][param3.field_C] = null;
@@ -1061,7 +1061,7 @@ final class wg extends od {
           }
           param3.d(12426);
           if (param3.field_l >= 0) {
-            param3.a(false);
+            param3.unlink(false);
             if (param3.field_C > 0 &&
               param3 == this.field_w[param3.field_i][param3.field_C]) {
               this.field_w[param3.field_i][param3.field_C] = null;

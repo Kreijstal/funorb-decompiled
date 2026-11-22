@@ -91,7 +91,7 @@ final class vg extends PcmStream {
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_m.a((IntrusiveNode) (param0), (byte) 0);
+        this.field_m.addLast((IntrusiveNode) (param0), (byte) 0);
     }
 
     final int d() {

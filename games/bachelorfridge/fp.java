@@ -150,7 +150,7 @@ final class fp extends tja {
         }
         if (this.field_p &&
           this.field_m <= f.b((byte) 73)) {
-          var2 = (cga) (this.field_q.b(-13023));
+          var2 = (cga) (this.field_q.first(-13023));
           while (var2 != null) {
             if (!var2.field_n) {
               if (var2.field_o) {
@@ -162,7 +162,7 @@ final class fp extends tja {
                 var2.field_o = true;
               }
             }
-            var2 = (cga) (this.field_q.c(-21446));
+            var2 = (cga) (this.field_q.next(-21446));
           }
           this.field_m = f.b((byte) 73) + 1000L;
         }
@@ -185,7 +185,7 @@ final class fp extends tja {
     }
 
     final int a(int param0, int param1) {
-        cga var3 = (cga) (this.field_q.a(true, (long)param1));
+        cga var3 = (cga) (this.field_q.get(true, (long)param1));
         if (var3 != null) {
           return var3.e(-6298);
         }
@@ -217,7 +217,7 @@ final class fp extends tja {
         byte[] var30 = null;
         byte[] var31 = null;
         var11 = BachelorFridge.field_y;
-        var13 = (cga) (this.field_q.a(true, (long)param2));
+        var13 = (cga) (this.field_q.get(true, (long)param2));
         var4 = var13;
         if (var13 != null &&
           0 == param0 &&
@@ -259,7 +259,7 @@ final class fp extends tja {
               var4 = this.field_r.a(this.field_h, (byte) -124, param2);
             }
           }
-          this.field_q.a((long)param2, (byte) -93, (IntrusiveNode) (var4));
+          this.field_q.put((long)param2, (byte) -93, (IntrusiveNode) (var4));
         }
         if (((cga) (var4)).field_n) {
           return null;
@@ -316,7 +316,7 @@ final class fp extends tja {
               return null;
             }
             var4 = this.field_n.a(this.field_o, param2, 127, (byte) 2, true);
-            this.field_q.a((long)param2, (byte) -38, (IntrusiveNode) (var4));
+            this.field_q.put((long)param2, (byte) -38, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -357,7 +357,7 @@ final class fp extends tja {
           }
           if (!this.field_n.b(20)) {
             var4 = this.field_n.a(this.field_o, param2, 126, (byte) 2, true);
-            this.field_q.a((long)param2, (byte) -77, (IntrusiveNode) (var4));
+            this.field_q.put((long)param2, (byte) -77, (IntrusiveNode) (var4));
           }
           return null;
         }

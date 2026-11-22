@@ -26,7 +26,7 @@ class WidgetContainer extends UiWidget implements dq {
           }
           var6_ref_iq = (UiWidget) (var8.d(param1 - 9));
           while (var6_ref_iq != null) {
-            if (var6_ref_iq.b(92)) {
+            if (var6_ref_iq.isLinked(92)) {
               if (var6_ref_iq.f(102) &&
                 var6_ref_iq.a(param0, param1 ^ 0, param2, param3)) {
                 return true;
@@ -174,7 +174,7 @@ class WidgetContainer extends UiWidget implements dq {
           var8 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var8.d(4));
           while (var9 != null) {
-            if (var9.b(94)) {
+            if (var9.isLinked(94)) {
               if (var9.f(61) &&
                 var9.a(param0, param1, param2, param3, param4, (byte) -123, param6)) {
                 return true;
@@ -251,7 +251,7 @@ class WidgetContainer extends UiWidget implements dq {
           var12 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var12.d(4));
           while (var9 != null) {
-            if (var9.b(115)) {
+            if (var9.isLinked(115)) {
               if (var9.a(param0, param1 + this.x, param2 + this.y, param3, param4, (byte) -108, param6)) {
                 return true;
               }
@@ -347,7 +347,7 @@ class WidgetContainer extends UiWidget implements dq {
           var7 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var7.d(4));
           while (var8 != null) {
-            if (var8.b(125)) {
+            if (var8.isLinked(125)) {
               var8.a(param0, (byte) 46, param2 + this.x, this.y + param3, param4, param5);
               var8 = (UiWidget) (var7.c(param1 - 44));
               continue;
@@ -526,7 +526,7 @@ class WidgetContainer extends UiWidget implements dq {
           }
           var6 = (UiWidget) (var5.d(4));
           while (var6 != null) {
-            if (var6.b(101)) {
+            if (var6.isLinked(101)) {
               var6.a((byte) 73, param1 + this.x, this.y + param2, param3);
               var6 = (UiWidget) (var5.c(2));
               continue;

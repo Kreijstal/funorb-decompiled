@@ -81,7 +81,7 @@ final class tj extends tk {
           param1 == 0 &&
           !var12.field_t &&
           var12.field_v) {
-          var12.a(true);
+          var12.unlink(true);
           var4 = null;
         }
         if (var4 == null) {
@@ -161,7 +161,7 @@ final class tj extends tk {
                 this.field_p[param2] = (byte) 1;
               }
               if (!((rl) (var4)).field_t) {
-                ((rl) (var4)).a(true);
+                ((rl) (var4)).unlink(true);
               }
               stackIn_90_0 = var4;
               return (rl) (stackIn_90_0);
@@ -171,7 +171,7 @@ final class tj extends tk {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_p[param2] = (byte)-1;
-            ((rl) (var4)).a(true);
+            ((rl) (var4)).unlink(true);
             if (((rl) (var4)).field_t) {
               if (this.field_q.c(92)) {
                 return null;
@@ -210,7 +210,7 @@ final class tj extends tk {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_q.a(true);
-          ((rl) (var4)).a(true);
+          ((rl) (var4)).unlink(true);
           if (!((rl) (var4)).field_t) {
             return null;
           }
@@ -229,7 +229,7 @@ final class tj extends tk {
           }
         }
         if (!((rl) (var4)).field_t) {
-          ((rl) (var4)).a(true);
+          ((rl) (var4)).unlink(true);
         }
         return (rl) (var4);
     }
@@ -240,7 +240,7 @@ final class tj extends tk {
           return null;
         }
         byte[] var4 = var3.e((byte) 119);
-        var3.a(true);
+        var3.unlink(true);
         return var4;
     }
 
@@ -398,7 +398,7 @@ final class tj extends tk {
                 discarded$1 = this.a(13860, 1, var4);
               }
               if (this.field_p[var4] != 0) {
-                var3.a(true);
+                var3.unlink(true);
               } else {
                 var2 = 0;
               }
@@ -442,7 +442,7 @@ final class tj extends tk {
                   discarded$3 = this.a(13860, 2, var4Lifetime1);
                 }
                 if (this.field_p[var4Lifetime1] == 1) {
-                  var3Lifetime1.a(true);
+                  var3Lifetime1.unlink(true);
                 } else {
                   var2Lifetime2 = 0;
                 }
@@ -493,7 +493,7 @@ final class tj extends tk {
                 if (!var3_ref.field_t) {
                   throw new RuntimeException();
                 }
-                var3_ref.a(true);
+                var3_ref.unlink(true);
               }
             }
             var3_ref = (rl) (this.field_i.a(70));
@@ -626,13 +626,13 @@ final class tj extends tk {
         while (var2 != null) {
           var3 = (int)var2.field_i;
           if (var3 < 0) {
-            var2.a(true);
+            var2.unlink(true);
           } else {
             if (this.field_h.field_i <= var3) {
-              var2.a(true);
+              var2.unlink(true);
             } else {
               if (this.field_h.field_t[var3] == 0) {
-                var2.a(true);
+                var2.unlink(true);
               } else {
                 if (this.field_p[var3] == 0) {
                   discarded$0 = this.a(13860, 1, var3);
@@ -641,7 +641,7 @@ final class tj extends tk {
                   discarded$1 = this.a(13860, 2, var3);
                 }
                 if (this.field_p[var3] == 1) {
-                  var2.a(true);
+                  var2.unlink(true);
                 }
               }
             }

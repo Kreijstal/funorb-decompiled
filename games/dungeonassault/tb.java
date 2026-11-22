@@ -42,7 +42,7 @@ final class tb {
 
     final void a(DualLinkNode param0, long param1, int param2) {
         if (param0.field_l != null) {
-          param0.b((byte) -2);
+          param0.unlinkSecondary((byte) -2);
         }
         DualLinkNode var5 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
         if (param2 >= -60) {

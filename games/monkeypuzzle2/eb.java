@@ -304,12 +304,12 @@ final class eb extends WidgetContainer implements sh, ql {
               var1.field_D = 0.0f;
               var1.field_v = 0.0f;
               var1.unlink(-19822);
-              var1.a(7847);
+              var1.unlinkSecondary(7847);
               ok.field_a.a(-8212, var1);
             } else {
               if (ri.field_b == var1.field_t) {
                 var1.unlink(-19822);
-                var1.a(7847);
+                var1.unlinkSecondary(7847);
                 ri.field_b.a(-8212, var1);
               }
             }
@@ -328,7 +328,7 @@ final class eb extends WidgetContainer implements sh, ql {
               boolean decompiledFrameCompleted8 = true;
               boolean decompiledFrameCompleted7 = true;
               var4.unlink(-19822);
-              var4.a(7847);
+              var4.unlinkSecondary(7847);
               var4.g(120);
               if (var4.field_t == hd.field_u) {
                 var1_int = 1;

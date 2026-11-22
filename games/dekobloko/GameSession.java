@@ -335,7 +335,7 @@ final class GameSession {
           if ((this.integerState0631 == 120) &&
             (frameRemainderLocal115 = (!(this.mixedSupport028State0001.booleanState0031) ||
             this.nodeDequeState0024.hashNodeState0009 != renderingSupport006Local53.previous))) {
-            renderingSupport006Local53.performAction0149((byte) 126);
+            renderingSupport006Local53.unlink((byte) 126);
             this.integerState0631 = 0;
             while (true) {
               renderingSupport006Local55 = (RenderingSupport006) (this.nodeDequeState0024.computeHashNode1741((byte) -82));
@@ -398,7 +398,7 @@ final class GameSession {
                 break;
               }
               if (renderingSupport006Local55.previous != this.nodeDequeState0024.hashNodeState0009) {
-                renderingSupport006Local55.performAction0149((byte) 127);
+                renderingSupport006Local55.unlink((byte) 127);
                 continue;
               }
               break;
@@ -942,7 +942,7 @@ final class GameSession {
             if (mixedSupport112Local51 != null &&
               this.integerState0637 >= mixedSupport112Local51.integerState0723) {
               this.integerState0599 = this.integerState0599 + mixedSupport112Local51.integerState0730;
-              mixedSupport112Local51.performAction0149((byte) 124);
+              mixedSupport112Local51.unlink((byte) 124);
               continue;
             }
             break;
@@ -2208,7 +2208,7 @@ final class GameSession {
             }
             regionExit1: {
               mixedSupport142Local16 = (MixedSupport142) (hashNodeLocal9);
-              mixedSupport142Local16.performAction0149((byte) 103);
+              mixedSupport142Local16.unlink((byte) 103);
               if (mixedSupport142Local16.returnedShapeState0001.packedCells == null) {
                 integerLocal10 = -1;
                 integerLocal11 = 0;
@@ -2261,7 +2261,7 @@ final class GameSession {
           mixedSupport075Local7.integerState0420 = mixedSupport075Local7.integerState0420 - 1;
           mixedSupport075Local7.integerState0421 = mixedSupport075Local7.integerState0421 - 1;
           if (mixedSupport075Local7.integerState0421 == 0) {
-            cipherPacketBufferLocal17.performAction0149((byte) 111);
+            cipherPacketBufferLocal17.unlink((byte) 111);
           }
           if (bucketBoardLocal15.livesRemaining > 0 &&
             !bucketBoardLocal15.landed) {

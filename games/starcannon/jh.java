@@ -45,7 +45,7 @@ final class jh {
             this.b((byte) 89);
           }
           if (null != param1.secondaryPrevious) {
-            param1.a(-6242);
+            param1.unlinkSecondary(-6242);
           }
           param1.secondaryNext = this.field_i;
           param1.secondaryPrevious = this.field_i.secondaryPrevious;
@@ -171,13 +171,13 @@ final class jh {
         if (param0 != 8) {
           this.c(-118);
           if (var2 != this.field_i) {
-            var2.a(-6242);
+            var2.unlinkSecondary(-6242);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_i) {
-          var2.a(-6242);
+          var2.unlinkSecondary(-6242);
           return var2;
         }
         return null;

@@ -8,7 +8,7 @@ final class IntrusiveNodeHashTable {
     private int field_e;
     private IntrusiveNode field_d;
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
@@ -33,7 +33,7 @@ final class IntrusiveNodeHashTable {
           this.field_d = var2.next;
           return var2;
         }
-        this.a(false, -79L);
+        this.get(false, -79L);
         if (this.field_a <= 0) {
           do {
             if (this.field_a >= this.field_e) {
@@ -63,7 +63,7 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
+    final void put(long param0, byte param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {
@@ -81,7 +81,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -125,13 +125,13 @@ final class IntrusiveNodeHashTable {
         return var5Lifetime1;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_a = 0;
         if (param0 != -13023) {
-          this.b(45);
-          return this.c(-21446);
+          this.first(45);
+          return this.next(-21446);
         }
-        return this.c(-21446);
+        return this.next(-21446);
     }
 
     final static void a(int param0) {

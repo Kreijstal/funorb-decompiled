@@ -55,7 +55,7 @@ final class ak extends jl {
             0 == param2 &&
             !var12.field_n &&
             var12.field_l) {
-            var12.b(57);
+            var12.unlink(57);
             var4 = null;
           }
           if (var4 == null) {
@@ -133,7 +133,7 @@ final class ak extends jl {
                   this.field_g[param0] = (byte) 1;
                 }
                 if (!((wj) (var4)).field_n) {
-                  ((wj) (var4)).b(57);
+                  ((wj) (var4)).unlink(57);
                 }
                 stackIn_76_0 = var4;
                 return (wj) (stackIn_76_0);
@@ -143,7 +143,7 @@ final class ak extends jl {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (Exception) (Object) decompiledCaughtException;
               this.field_g[param0] = (byte)-1;
-              ((wj) (var4)).b(57);
+              ((wj) (var4)).unlink(57);
               if (!((wj) (var4)).field_n) {
                 return null;
               }
@@ -186,7 +186,7 @@ final class ak extends jl {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
             this.field_n.f(-105);
-            ((wj) (var4)).b(57);
+            ((wj) (var4)).unlink(57);
             if (!((wj) (var4)).field_n) {
               return null;
             }
@@ -206,7 +206,7 @@ final class ak extends jl {
             }
           }
           if (!((wj) (var4)).field_n) {
-            ((wj) (var4)).b(57);
+            ((wj) (var4)).unlink(57);
           }
           stackIn_120_0 = var4;
           return (wj) (stackIn_120_0);
@@ -331,7 +331,7 @@ final class ak extends jl {
             if (var3 >= 0) {
               if (this.field_i.field_s > var3) {
                 if (0 == this.field_i.field_d[var3]) {
-                  var2.b(57);
+                  var2.unlink(57);
                 } else {
                   if (this.field_g[var3] == 0) {
                     discarded$0 = this.a(var3, (byte) 122, 1);
@@ -340,14 +340,14 @@ final class ak extends jl {
                     discarded$1 = this.a(var3, (byte) 76, 2);
                   }
                   if (this.field_g[var3] == 1) {
-                    var2.b(57);
+                    var2.unlink(57);
                   }
                 }
               } else {
-                var2.b(57);
+                var2.unlink(57);
               }
             } else {
-              var2.b(57);
+              var2.unlink(57);
             }
             var2 = this.field_x.d(853);
           }
@@ -428,7 +428,7 @@ final class ak extends jl {
             this.field_m = (im) null;
           }
           var4 = var3.f(0);
-          var3.b(param0 + 15918);
+          var3.unlink(param0 + 15918);
           stackIn_7_0 = var4;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -477,7 +477,7 @@ final class ak extends jl {
                   discarded$1 = this.a(var4, (byte) 55, 1);
                 }
                 if (this.field_g[var4] != 0) {
-                  var3.b(57);
+                  var3.unlink(57);
                 } else {
                   var2_int = 0;
                 }
@@ -520,7 +520,7 @@ final class ak extends jl {
                     discarded$3 = this.a(var4Lifetime1, (byte) 107, 2);
                   }
                   if (this.field_g[var4Lifetime1] == 1) {
-                    var3Lifetime1.b(57);
+                    var3Lifetime1.unlink(57);
                   } else {
                     var2_intLifetime1 = 0;
                   }
@@ -571,7 +571,7 @@ final class ak extends jl {
                         if (!var2_ref.field_n) {
                           throw new RuntimeException();
                         }
-                        var2_ref.b(57);
+                        var2_ref.unlink(57);
                       } else {
                         var2_ref.field_p = true;
                       }
@@ -604,7 +604,7 @@ final class ak extends jl {
                   if (!var2_refLifetime1.field_n) {
                     throw new RuntimeException();
                   }
-                  var2_refLifetime1.b(57);
+                  var2_refLifetime1.unlink(57);
                 } else {
                   var2_refLifetime1.field_p = true;
                 }

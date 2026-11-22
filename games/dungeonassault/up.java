@@ -80,7 +80,7 @@ final class up {
         DualLinkNode var2 = this.field_a.field_n;
         int var3 = 89 / ((58 - param0) / 60);
         if (var2 != this.field_a) {
-          var2.b((byte) -2);
+          var2.unlinkSecondary((byte) -2);
           return var2;
         }
         return null;
@@ -113,7 +113,7 @@ final class up {
 
     final void a(DualLinkNode param0, int param1) {
         if (null != param0.field_l) {
-          param0.b((byte) -2);
+          param0.unlinkSecondary((byte) -2);
         }
         param0.field_n = this.field_a;
         if (param1 != -32711) {

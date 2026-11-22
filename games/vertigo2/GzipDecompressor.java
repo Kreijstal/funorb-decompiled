@@ -37,10 +37,10 @@ final class GzipDecompressor {
           if (null == GameShell.field_l) {
             return;
           }
-          var3 = (bs) (GameShell.field_l.b(29));
+          var3 = (bs) (GameShell.field_l.first(29));
           while (var3 != null) {
             var3.unlinkSecondary(-123);
-            var3 = (bs) (GameShell.field_l.a((byte) -60));
+            var3 = (bs) (GameShell.field_l.next((byte) -60));
           }
           GameShell.field_l = null;
           return;

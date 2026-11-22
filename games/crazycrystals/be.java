@@ -68,7 +68,7 @@ final class be implements Iterable {
 
     final void a(byte param0, DualLinkNode param1) {
         if (param1.field_g != null) {
-          param1.a(1);
+          param1.unlinkSecondary(1);
         }
         param1.field_g = this.field_f.field_g;
         param1.field_j = this.field_f;
@@ -93,12 +93,12 @@ final class be implements Iterable {
           return null;
         }
         if (param0 == 30244) {
-          var2.a(1);
+          var2.unlinkSecondary(1);
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
         this.a((byte) 94, (DualLinkNode) null);
-        var2.a(1);
+        var2.unlinkSecondary(1);
         return var2;
     }
 

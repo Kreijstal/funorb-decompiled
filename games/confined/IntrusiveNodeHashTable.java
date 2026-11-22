@@ -23,7 +23,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         return nh.field_b;
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -59,11 +59,11 @@ final class IntrusiveNodeHashTable implements Iterable {
         }
     }
 
-    final void a(IntrusiveNode param0, long param1, int param2) {
+    final void put(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.field_a) {
-            param0.a(true);
+            param0.unlink(true);
           }
           var5 = this.field_j[(int)((long)(this.field_i + param2) & param1)];
           param0.field_h = var5;

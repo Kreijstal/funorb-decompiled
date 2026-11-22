@@ -23,8 +23,8 @@ final class ce {
           }
           var2 = (hf) (ba.field_b.b((byte) 117));
           while (var2 != null) {
-            if (!var2.field_f.b(true)) {
-              var2.b(57);
+            if (!var2.field_f.isLinked(true)) {
+              var2.unlink(57);
             } else {
               var2.field_h.g(128 + ck.field_f * var2.field_j >> 8);
             }
@@ -33,11 +33,11 @@ final class ce {
           if (null != bg.field_a) {
             var2Lifetime1 = (hf) (bg.field_a.b((byte) 116));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_f.b(true);
+              stackIn_14_0 = var2Lifetime1.field_f.isLinked(true);
               if (stackIn_14_0) {
                 var2Lifetime1.field_h.g(128 + var2Lifetime1.field_j * ck.field_f >> 8);
               } else {
-                var2Lifetime1.b(57);
+                var2Lifetime1.unlink(57);
               }
               var2Lifetime1 = (hf) (bg.field_a.d(853));
             }

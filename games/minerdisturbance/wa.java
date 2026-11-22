@@ -25,13 +25,13 @@ final class wa {
         if (param0 != 8192) {
           this.b(-20);
           if (var2 != this.field_c) {
-            var2.a((byte) -119);
+            var2.unlinkSecondary((byte) -119);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_c) {
-          var2.a((byte) -119);
+          var2.unlinkSecondary((byte) -119);
           return var2;
         }
         return null;
@@ -62,7 +62,7 @@ final class wa {
 
     final void a(DualLinkNode param0, boolean param1) {
         if (param0.field_q != null) {
-          param0.a((byte) -112);
+          param0.unlinkSecondary((byte) -112);
         }
         if (param1) {
           return;

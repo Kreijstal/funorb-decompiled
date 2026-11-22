@@ -46,7 +46,7 @@ final class lb {
             }
             var13.field_j = var3;
             var13.field_l = true;
-            var13.b(111);
+            var13.unlink(111);
             return;
           }
           if (var2 != 1) {
@@ -58,7 +58,7 @@ final class lb {
               }
               var15.field_j = nf.a(false);
               var15.field_l = true;
-              var15.b(param0 ^ 20777);
+              var15.unlink(param0 ^ 20777);
             } else {
               ic.a((byte) -118, "A1: " + gf.a((byte) -125), (Throwable) null);
               le.c((byte) 78);
@@ -69,7 +69,7 @@ final class lb {
               le.c((byte) 81);
               return;
             }
-            var12.b(-76);
+            var12.unlink(-76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

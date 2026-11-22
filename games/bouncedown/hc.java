@@ -58,7 +58,7 @@ final class hc {
         DualLinkNode var5 = null;
         try {
           if (param1.field_i != null) {
-            param1.a(96);
+            param1.unlinkSecondary(96);
           }
           var5 = this.field_f[(int)((long)(this.field_c - 1) & param0)];
           param1.field_l = var5;

@@ -11,7 +11,7 @@ class IntrusiveNode {
     static int field_f;
     IntrusiveNode field_h;
 
-    final boolean b(byte param0) {
+    final boolean isLinked(byte param0) {
         if (null == this.field_a) {
           return false;
         }
@@ -45,7 +45,7 @@ class IntrusiveNode {
         field_e = (int[][]) null;
     }
 
-    final void c(int param0) {
+    final void unlink(int param0) {
         if (this.field_a == null) {
           return;
         }

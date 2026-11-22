@@ -57,14 +57,14 @@ final class qc implements Iterable {
         if (var2 == this.field_e) {
           return null;
         }
-        var2.a((byte) -99);
+        var2.unlinkSecondary((byte) -99);
         return var2;
     }
 
     final void a(byte param0, DualLinkNode param1) {
         try {
           if (null != param1.field_q) {
-            param1.a((byte) -120);
+            param1.unlinkSecondary((byte) -120);
           }
           param1.field_q = this.field_e.field_q;
           param1.field_t = this.field_e;

@@ -120,7 +120,7 @@ abstract class oh extends jj {
 
     private final void c(UiComponent param0, int param1) {
         if (null != this.field_hb) {
-          this.field_hb.c(-1);
+          this.field_hb.unlink(-1);
         }
         if (param0 != null) {
           param0.a(6, param0.field_u, 6 + this.field_gb, param0.field_j, 80);

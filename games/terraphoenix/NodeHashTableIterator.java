@@ -208,7 +208,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void reset(boolean param0) {
         this.field_e = this.field_h.buckets[0].previous;
         if (param0) {
           return;
@@ -221,7 +221,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_g = null;
         try {
           this.field_h = param0;
-          this.a(false);
+          this.reset(false);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

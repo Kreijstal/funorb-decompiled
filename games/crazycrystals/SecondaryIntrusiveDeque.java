@@ -40,7 +40,7 @@ final class SecondaryIntrusiveDeque {
 
     final void a(byte param0, DualLinkNode param1) {
         if (param1.field_g != null) {
-          param1.a(1);
+          param1.unlinkSecondary(1);
         }
         param1.field_g = this.field_a.field_g;
         param1.field_j = this.field_a;
@@ -69,14 +69,14 @@ final class SecondaryIntrusiveDeque {
           this.field_a = (DualLinkNode) null;
           var2 = this.field_a.field_j;
           if (this.field_a != var2) {
-            var2.a(1);
+            var2.unlinkSecondary(1);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_a.field_j;
         if (this.field_a != var2Lifetime1) {
-          var2Lifetime1.a(1);
+          var2Lifetime1.unlinkSecondary(1);
           return var2Lifetime1;
         }
         return null;

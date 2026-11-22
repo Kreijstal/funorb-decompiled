@@ -189,7 +189,7 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
             this.performAction0454();
-            this.performAction0149((byte) 121);
+            this.unlink((byte) 121);
             return;
           }
           this.integerState0203 = 0;
@@ -197,7 +197,7 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0203 >= integerLocal9) {
           if (this.integerState0199 >= 0) {
             this.performAction0454();
-            this.performAction0149((byte) 113);
+            this.unlink((byte) 113);
             return;
           }
           this.integerState0203 = integerLocal9 - 1;
@@ -324,7 +324,7 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0203 >= integerLocal9) {
             this.integerState0203 = integerLocal9;
             this.performAction0454();
-            this.performAction0149((byte) 123);
+            this.unlink((byte) 123);
           }
           return;
         }
@@ -334,7 +334,7 @@ final class RawPcmStream extends PcmStream {
         }
         this.integerState0203 = -1;
         this.performAction0454();
-        this.performAction0149((byte) 124);
+        this.unlink((byte) 124);
         return;
     }
 
@@ -504,7 +504,7 @@ final class RawPcmStream extends PcmStream {
           this.integerState0204 = 0;
           this.integerState0206 = 0;
           this.integerState0195 = 0;
-          this.performAction0149((byte) 101);
+          this.unlink((byte) 101);
           return true;
         }
         if (this.integerState0195 >= integerLocal1) {
@@ -1187,7 +1187,7 @@ final class RawPcmStream extends PcmStream {
         int integerLocal2;
         if (integerArgument1 == 0) {
           this.performAction0447(0);
-          this.performAction0149((byte) 102);
+          this.unlink((byte) 102);
           return;
         }
         if (this.integerState0206 != 0) {
@@ -1247,7 +1247,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0200 = 0;
         this.integerState0197 = 0;
         this.integerState0195 = 0;
-        this.performAction0149((byte) 127);
+        this.unlink((byte) 127);
     }
 
     private final static int computeInteger0442(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
@@ -1480,7 +1480,7 @@ final class RawPcmStream extends PcmStream {
               this.integerState0204 = 0;
               this.integerState0206 = 0;
               this.integerState0195 = 0;
-              this.performAction0149((byte) 125);
+              this.unlink((byte) 125);
               integerArgument1 = this.integerState0200;
             }
             this.integerState0200 = 0;
@@ -1498,7 +1498,7 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
             this.performAction0454();
-            this.performAction0149((byte) 123);
+            this.unlink((byte) 123);
             return;
           }
           this.integerState0203 = 0;
@@ -1506,7 +1506,7 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0203 >= integerLocal7) {
           if (this.integerState0199 >= 0) {
             this.performAction0454();
-            this.performAction0149((byte) 119);
+            this.unlink((byte) 119);
             return;
           }
           this.integerState0203 = integerLocal7 - 1;
@@ -1619,7 +1619,7 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0203 >= integerLocal7) {
             this.integerState0203 = integerLocal7;
             this.performAction0454();
-            this.performAction0149((byte) 122);
+            this.unlink((byte) 122);
           }
           return;
         }
@@ -1628,7 +1628,7 @@ final class RawPcmStream extends PcmStream {
         }
         this.integerState0203 = -1;
         this.performAction0454();
-        this.performAction0149((byte) 105);
+        this.unlink((byte) 105);
     }
 
     private final static int computeInteger0429(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {

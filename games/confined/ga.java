@@ -24,7 +24,7 @@ class ga extends fj implements hi {
           var11 = new vb(this.field_N);
           var9 = (fj) (var11.a((byte) 120));
           while (var9 != null) {
-            if (var9.c((byte) 115)) {
+            if (var9.isLinked((byte) 115)) {
               if (var9.e((byte) -125) &&
                 var9.a(param0, param1, (byte) 36, param3, param4, param5, param6)) {
                 return true;
@@ -69,7 +69,7 @@ class ga extends fj implements hi {
           }
           var9 = (fj) (var8.a((byte) 120));
           while (var9 != null) {
-            if (var9.c((byte) 110)) {
+            if (var9.isLinked((byte) 110)) {
               if (var9.a(this.field_q + param0, param1, (byte) 91, param3 + this.field_m, param4, param5, param6)) {
                 return true;
               }
@@ -301,7 +301,7 @@ class ga extends fj implements hi {
           var7 = new vb(this.field_N);
           var8 = (fj) (var7.a((byte) 120));
           while (var8 != null) {
-            if (var8.c((byte) 127)) {
+            if (var8.isLinked((byte) 127)) {
               var8.a(-81, param1 + this.field_m, param2, param3, param4, param5 + this.field_q);
               var8 = (fj) (var7.b(-108));
               continue;
@@ -352,7 +352,7 @@ class ga extends fj implements hi {
           var5 = new vb(this.field_N);
           var6 = (fj) (var5.a((byte) 120));
           while (var6 != null) {
-            if (var6.c((byte) 126)) {
+            if (var6.isLinked((byte) 126)) {
               var6.a(param0, param1 + 0, this.field_q + param2, this.field_m + param3);
               var6 = (fj) (var5.b(-88));
               continue;
@@ -489,7 +489,7 @@ class ga extends fj implements hi {
           var6 = new vb(this.field_N);
           var9 = (fj) (var6.a((byte) 120));
           while (var9 != null) {
-            if (var9.c((byte) 106)) {
+            if (var9.isLinked((byte) 106)) {
               if (var9.e((byte) -125) &&
                 var9.a(param0, (byte) -49, param2, param3)) {
                 return true;

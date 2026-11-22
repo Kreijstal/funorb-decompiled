@@ -71,7 +71,7 @@ final class pi extends wf {
         if (this.field_u < 0) {
           if (this.field_t <= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_u = 0;
@@ -79,7 +79,7 @@ final class pi extends wf {
         if (this.field_u >= var7) {
           if (this.field_t >= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_u = var7 - 1;
@@ -206,7 +206,7 @@ final class pi extends wf {
           if (this.field_u >= var7) {
             this.field_u = var7;
             this.f();
-            this.c(2);
+            this.unlink(2);
           }
           return;
         }
@@ -216,7 +216,7 @@ final class pi extends wf {
         }
         this.field_u = -1;
         this.f();
-        this.c(2);
+        this.unlink(2);
         return;
     }
 
@@ -246,7 +246,7 @@ final class pi extends wf {
               this.field_q = 0;
               this.field_w = 0;
               this.field_y = 0;
-              this.c(2);
+              this.unlink(2);
               param0 = this.field_l;
             }
             this.field_l = 0;
@@ -264,7 +264,7 @@ final class pi extends wf {
         if (this.field_u < 0) {
           if (this.field_t <= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_u = 0;
@@ -272,7 +272,7 @@ final class pi extends wf {
         if (this.field_u >= var5) {
           if (this.field_t >= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_u = var5 - 1;
@@ -385,7 +385,7 @@ final class pi extends wf {
           if (this.field_u >= var5) {
             this.field_u = var5;
             this.f();
-            this.c(2);
+            this.unlink(2);
           }
           return;
         }
@@ -394,7 +394,7 @@ final class pi extends wf {
         }
         this.field_u = -1;
         this.f();
-        this.c(2);
+        this.unlink(2);
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, pi param10, int param11, int param12) {
@@ -443,7 +443,7 @@ final class pi extends wf {
         int var2Lifetime1;
         if (param0 == 0) {
           this.h(0);
-          this.c(2);
+          this.unlink(2);
           return;
         }
         if (this.field_w != 0) {
@@ -503,7 +503,7 @@ final class pi extends wf {
         this.field_l = 0;
         this.field_v = 0;
         this.field_y = 0;
-        this.c(2);
+        this.unlink(2);
     }
 
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
@@ -581,7 +581,7 @@ final class pi extends wf {
           this.field_q = 0;
           this.field_w = 0;
           this.field_y = 0;
-          this.c(2);
+          this.unlink(2);
           return true;
         }
         if (this.field_y >= var1) {

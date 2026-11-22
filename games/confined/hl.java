@@ -25,7 +25,7 @@ final class hl implements de {
             this.field_f.a(var5, -1);
             return var5.field_t;
           }
-          var5.a(true);
+          var5.unlink(true);
           var5.a();
           this.field_c = this.field_c + 1;
         }
@@ -54,7 +54,7 @@ final class hl implements de {
         var2.readInt((byte) 40);
         var2.readInt((byte) 100);
         var2.readInt((byte) 80);
-        var1.a(true);
+        var1.unlink(true);
         if (param0 != -251) {
           hl.clearStaticReferences(-118);
           return;

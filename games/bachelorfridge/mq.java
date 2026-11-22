@@ -252,16 +252,16 @@ final class mq {
           if (var3.equals("0")) {
             return 0;
           }
-          if (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()) != null) {
-            return ((ji) (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()))).field_h;
+          if (MoveInfoPanel.field_f.get(true, (long)var3.hashCode()) != null) {
+            return ((ji) (MoveInfoPanel.field_f.get(true, (long)var3.hashCode()))).field_h;
           }
           return Integer.parseInt(var3);
         }
         if (var3.equals("0")) {
           return 0;
         }
-        if (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()) != null) {
-          return ((ji) (MoveInfoPanel.field_f.a(true, (long)var3.hashCode()))).field_h;
+        if (MoveInfoPanel.field_f.get(true, (long)var3.hashCode()) != null) {
+          return ((ji) (MoveInfoPanel.field_f.get(true, (long)var3.hashCode()))).field_h;
         }
         return Integer.parseInt(var3);
     }

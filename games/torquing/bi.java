@@ -347,7 +347,7 @@ final class bi {
               this.field_q = var2_int + 1;
             }
             if (!(ri.field_E >= 2) ||
-              !ResourceArchive.field_k[this.field_q].e(17)) {
+              !ResourceArchive.field_k[this.field_q].isLinked(17)) {
               ResourceArchive.field_k[this.field_q].g();
             }
             this.h(67);
@@ -1453,7 +1453,7 @@ final class bi {
                 if (null == ig.field_r[13]) {
                   ig.field_r[13] = PcmSampleStream.a(th.field_F[13], 100, 96);
                 }
-                if (!ig.field_r[13].e(17)) {
+                if (!ig.field_r[13].isLinked(17)) {
                   ig.field_r[13].c(0);
                   ni.a(ig.field_r[13], true);
                 }
@@ -1580,7 +1580,7 @@ final class bi {
             }
           }
           if (jb.field_d == 10 &&
-            !ResourceArchive.field_k[10].e(17)) {
+            !ResourceArchive.field_k[10].isLinked(17)) {
             np.a(ResourceArchive.field_k[this.field_q], false, 127);
             return;
           }

@@ -13,7 +13,7 @@ final class vl {
         while (true) {
           var2 = this.field_b.field_g;
           if (this.field_b != var2) {
-            var2.b(param0 - 5692);
+            var2.unlink(param0 - 5692);
             continue;
           }
           break;
@@ -54,7 +54,7 @@ final class vl {
         }
         IntrusiveNode var2 = this.field_b.field_f;
         if (var2 != this.field_b) {
-          var2.b(27);
+          var2.unlink(27);
           return var2;
         }
         return null;
@@ -97,7 +97,7 @@ final class vl {
           return (IntrusiveNode) null;
         }
         if (this.field_b != var2) {
-          var2.b(106);
+          var2.unlink(106);
           return var2;
         }
         return null;
@@ -106,7 +106,7 @@ final class vl {
     final void a(IntrusiveNode param0, int param1) {
         try {
           if (param0.field_f != null) {
-            param0.b(123);
+            param0.unlink(123);
           }
           param0.field_g = this.field_b;
           param0.field_f = this.field_b.field_f;
@@ -151,7 +151,7 @@ final class vl {
     final void a(byte param0, IntrusiveNode param1) {
         try {
           if (param1.field_f != null) {
-            param1.b(116);
+            param1.unlink(116);
           }
           if (param0 > -45) {
             this.field_b = (IntrusiveNode) null;

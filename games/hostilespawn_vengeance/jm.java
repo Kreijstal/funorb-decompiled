@@ -29,7 +29,7 @@ final class jm {
         RuntimeException var5_ref = null;
         try {
           if (null != param2.field_f) {
-            param2.b(-39);
+            param2.unlink(-39);
           }
           var5 = this.field_d[(int)((long)(this.field_f - 1) & param1)];
           param2.field_g = var5;

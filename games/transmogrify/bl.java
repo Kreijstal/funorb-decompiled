@@ -52,7 +52,7 @@ final class bl {
           if (param3 != 79289964) {
             achievementDescriptions = (String[]) null;
           }
-          var9.c(5);
+          var9.unlink(5);
           this.field_e.a(var6, (byte) 74, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

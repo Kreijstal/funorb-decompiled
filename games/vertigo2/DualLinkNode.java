@@ -3,7 +3,7 @@
  */
 class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryPrevious;
-    long field_n;
+    long secondaryKey;
     DualLinkNode secondaryNext;
     static Archive field_s;
     static String field_r;
@@ -16,9 +16,9 @@ class DualLinkNode extends IntrusiveNode {
         field_q = null;
     }
 
-    final long f(int param0) {
+    final long getSecondaryKey(int param0) {
         int var2 = 51 / ((56 - param0) / 35);
-        return this.field_n;
+        return this.secondaryKey;
     }
 
     final void unlinkSecondary(int param0) {
@@ -34,11 +34,11 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final void a(int param0, long param1) {
+    final void setSecondaryKey(int param0, long param1) {
         if (null != this.secondaryNext) {
           throw new RuntimeException();
         }
-        this.field_n = param1;
+        this.secondaryKey = param1;
         if (param0 != -1) {
           field_s = (Archive) null;
         }
@@ -47,7 +47,7 @@ class DualLinkNode extends IntrusiveNode {
     protected DualLinkNode() {
     }
 
-    final boolean e(int param0) {
+    final boolean isSecondaryLinked(int param0) {
         if (null == this.secondaryNext) {
           return false;
         }

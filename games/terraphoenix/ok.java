@@ -15,13 +15,13 @@ final class ok extends IntrusiveNode {
         jh var2Lifetime1;
         if (!param0) {
           var2 = new jh();
-          qc.field_a.a(var2, -16611);
+          qc.field_a.addFirst(var2, -16611);
           da.a(0, param1);
           return var2;
         }
         ok.a(false, -126);
         var2Lifetime1 = new jh();
-        qc.field_a.a(var2Lifetime1, -16611);
+        qc.field_a.addFirst(var2Lifetime1, -16611);
         da.a(0, param1);
         return var2Lifetime1;
     }

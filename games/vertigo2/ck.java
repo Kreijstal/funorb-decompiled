@@ -4,7 +4,7 @@
 final class ck extends d {
     static String[][] field_H;
     static String field_K;
-    static fi field_I;
+    static SecondaryNodeHashTable field_I;
     static int field_J;
 
     final void a(int param0, int param1, byte param2, int param3) {

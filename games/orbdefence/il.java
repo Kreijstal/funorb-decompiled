@@ -47,7 +47,7 @@ final class il {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param1.field_g) {
-            param1.c(-1);
+            param1.unlinkSecondary(-1);
           }
           param1.field_g = this.field_b.field_g;
           param1.field_f = this.field_b;
@@ -96,14 +96,14 @@ final class il {
           this.b(40);
           var2 = this.field_b.field_f;
           if (this.field_b != var2) {
-            var2.c(param0 ^ -30665);
+            var2.unlinkSecondary(param0 ^ -30665);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_b.field_f;
         if (this.field_b != var2Lifetime1) {
-          var2Lifetime1.c(param0 ^ -30665);
+          var2Lifetime1.unlinkSecondary(param0 ^ -30665);
           return var2Lifetime1;
         }
         return null;

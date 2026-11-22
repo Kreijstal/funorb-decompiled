@@ -72,7 +72,7 @@ final class uh extends UiPanel {
         if (param0 != 4043) {
           this.k(22);
         }
-        return !this.e(param0 ^ -3977) ? true : false;
+        return !this.isSecondaryLinked(param0 ^ -3977) ? true : false;
     }
 
     final static void a(boolean param0, Sprite param1) {
@@ -250,7 +250,7 @@ final class uh extends UiPanel {
         if (param0 != -38) {
           this.a((byte) -33);
         }
-        return (int)this.f(113);
+        return (int)this.getSecondaryKey(113);
     }
 
     public static void clearStaticReferences(byte param0) {

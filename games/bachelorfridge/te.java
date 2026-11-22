@@ -78,7 +78,7 @@ final class te extends TileEffect {
         var2 = var2.trim();
         var2 = var2.toLowerCase();
         if (!var2.equals("")) {
-          return ((ji) (dl.field_h.a(true, (long)var2.hashCode()))).field_h;
+          return ((ji) (dl.field_h.get(true, (long)var2.hashCode()))).field_h;
         }
         return 0;
     }

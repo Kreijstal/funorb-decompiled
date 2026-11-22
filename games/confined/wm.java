@@ -42,7 +42,7 @@ final class wm extends hf {
           }
           while (this.field_cb.length > var3_int) {
             var4 = this.field_cb[var3_int];
-            if (!var4.c((byte) 125)) {
+            if (!var4.isLinked((byte) 125)) {
               var4.a(8401151, 0, 50.0, 1.0);
               if (var4.a(this.field_cb, false, 15.0)) {
                 this.field_A.field_B.field_Db = this.field_A.field_B.field_Db + 2.0;

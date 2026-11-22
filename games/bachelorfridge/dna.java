@@ -135,7 +135,7 @@ final class dna extends UiComponent {
           return 84;
         }
         var2 = var2.toLowerCase();
-        return ((ji) (cw.field_zb.a(!param1 ? true : false, (long)var2.hashCode()))).field_h;
+        return ((ji) (cw.field_zb.get(!param1 ? true : false, (long)var2.hashCode()))).field_h;
     }
 
     private final void a(boolean param0, int param1, int param2) {

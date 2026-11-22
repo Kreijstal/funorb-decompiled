@@ -668,7 +668,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       if (stackIntegerLocal18 != integerLocal27) {
                         continue scanLoop2;
                       }
-                      while (mixedSupport142Local33.computeBoolean0144((byte) 58)) {
+                      while (mixedSupport142Local33.isLinked((byte) 58)) {
                         ((GameSession) (objectLocal26)).computeBoolean1320(-118, integerLocal27);
                       }
                       SocketFactory.cipherPacketBufferState0002.performAction1641(59, -4);
@@ -1823,7 +1823,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             if (!MixedSupport100.booleanArrayState0008[integerLocal2] &&
               SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2] != null) {
               SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].performAction0458(0);
-              if (!SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].computeBoolean0144((byte) 78)) {
+              if (!SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2].isLinked((byte) 78)) {
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[integerLocal2] = null;
               }
             }

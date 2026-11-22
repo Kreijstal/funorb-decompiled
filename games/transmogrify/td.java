@@ -47,7 +47,7 @@ abstract class td {
     final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
-            param2.c(5);
+            param2.unlink(5);
           }
           int var3_int = 8 % ((param1 - 51) / 40);
           param2.next = param0;

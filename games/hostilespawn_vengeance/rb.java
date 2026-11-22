@@ -61,7 +61,7 @@ final class rb extends ArchiveProvider {
           param1 == 0 &&
           !var12.field_w &&
           var12.field_v) {
-          var12.b(-37);
+          var12.unlink(-37);
           var4 = null;
         }
         if (var4 == null) {
@@ -138,7 +138,7 @@ final class rb extends ArchiveProvider {
                 this.field_r[param0] = (byte) 1;
               }
               if (!((ae) (var4)).field_w) {
-                ((ae) (var4)).b(-116);
+                ((ae) (var4)).unlink(-116);
               }
               stackIn_88_0 = var4;
               return (ae) (stackIn_88_0);
@@ -148,7 +148,7 @@ final class rb extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_r[param0] = (byte)-1;
-            ((ae) (var4)).b(113);
+            ((ae) (var4)).unlink(113);
             if (((ae) (var4)).field_w &&
               !this.field_h.a(20)) {
               var4 = this.field_h.a((byte) 2, this.field_g, param0, -18986, true);
@@ -185,7 +185,7 @@ final class rb extends ArchiveProvider {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_h.c(194);
-          ((ae) (var4)).b(-9);
+          ((ae) (var4)).unlink(-9);
           if (!((ae) (var4)).field_w) {
             return null;
           }
@@ -204,7 +204,7 @@ final class rb extends ArchiveProvider {
           }
         }
         if (!((ae) (var4)).field_w) {
-          ((ae) (var4)).b(26);
+          ((ae) (var4)).unlink(26);
         }
         return (ae) (var4);
     }
@@ -233,7 +233,7 @@ final class rb extends ArchiveProvider {
           return null;
         }
         byte[] var4 = var3.c((byte) 127);
-        var3.b(-76);
+        var3.unlink(-76);
         if (param0 != -50) {
           this.b(-104, 72);
         }
@@ -276,7 +276,7 @@ final class rb extends ArchiveProvider {
               if (this.field_r[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b(126);
+                var3.unlink(126);
               }
               var3 = this.field_w.a(12684);
             }
@@ -320,7 +320,7 @@ final class rb extends ArchiveProvider {
                 if (this.field_r[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(-124);
+                  var3Lifetime1.unlink(-124);
                 }
                 var3Lifetime1 = this.field_w.a(param0 + 12685);
               }
@@ -366,7 +366,7 @@ final class rb extends ArchiveProvider {
                         if (!var2.field_w) {
                           throw new RuntimeException();
                         }
-                        var2.b(20);
+                        var2.unlink(20);
                       }
                     }
                     var2 = (ae) (this.field_i.b(param0 + 0));
@@ -401,7 +401,7 @@ final class rb extends ArchiveProvider {
                   if (!var2Lifetime1.field_w) {
                     throw new RuntimeException();
                   }
-                  var2Lifetime1.b(20);
+                  var2Lifetime1.unlink(20);
                 }
               }
               var2Lifetime1 = (ae) (this.field_i.b(param0 + 0));
@@ -510,13 +510,13 @@ final class rb extends ArchiveProvider {
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {
-            var2.b(113);
+            var2.unlink(113);
           } else {
             if (var3 >= this.field_x.field_c) {
-              var2.b(113);
+              var2.unlink(113);
             } else {
               if (this.field_x.field_o[var3] == 0) {
-                var2.b(113);
+                var2.unlink(113);
               } else {
                 if (this.field_r[var3] == 0) {
                   discarded$0 = this.a(var3, 1, false);
@@ -525,7 +525,7 @@ final class rb extends ArchiveProvider {
                   discarded$1 = this.a(var3, 2, false);
                 }
                 if (1 == this.field_r[var3]) {
-                  var2.b(-79);
+                  var2.unlink(-79);
                 }
               }
             }

@@ -138,7 +138,7 @@ class gj extends UiComponent implements wg {
           var7 = new we(this.field_C);
           var8 = (UiComponent) (var7.b(-128));
           while (var8 != null) {
-            if (var8.b((byte) -54)) {
+            if (var8.isLinked((byte) -54)) {
               var8.a((byte) 5, param1, param2 + this.field_y, param3, param4, this.field_z + param5);
               var8 = (UiComponent) (var7.c(-6144));
               continue;
@@ -209,7 +209,7 @@ class gj extends UiComponent implements wg {
           var8 = new we(this.field_C);
           var9 = (UiComponent) (var8.b(-75));
           while (var9 != null) {
-            if (var9.b((byte) -54)) {
+            if (var9.isLinked((byte) -54)) {
               if (!var9.a(param0 + this.field_z, true, param2, param3, param4, param5, param6 + this.field_y)) {
                 var9 = (UiComponent) (var8.c(-6144));
                 continue;
@@ -297,7 +297,7 @@ class gj extends UiComponent implements wg {
           var8 = new we(this.field_C);
           var9 = (UiComponent) (var8.b(-62));
           while (var9 != null) {
-            if (var9.b((byte) -54)) {
+            if (var9.isLinked((byte) -54)) {
               if (var9.e(1) &&
                 var9.a(param0, param1, param2, -31628, param4, param5, param6)) {
                 return true;
@@ -380,7 +380,7 @@ class gj extends UiComponent implements wg {
           var9 = new we(this.field_C);
           var8 = (UiComponent) (var9.b(102));
           while (var8 != null) {
-            if (var8.b((byte) -54)) {
+            if (var8.isLinked((byte) -54)) {
               if (var8.e(1) &&
                 var8.a(-2, param1, param2, param3)) {
                 return true;
@@ -599,7 +599,7 @@ class gj extends UiComponent implements wg {
           }
           var6 = (UiComponent) (var5.b(-67));
           while (var6 != null) {
-            if (var6.b((byte) -54)) {
+            if (var6.isLinked((byte) -54)) {
               var6.a(this.field_z + param0, param1 + this.field_y, param2, (byte) -123);
               var6 = (UiComponent) (var5.c(-6144));
               continue;

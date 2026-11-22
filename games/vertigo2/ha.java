@@ -72,7 +72,7 @@ final class ha {
           kh.field_d = param1;
           an.field_f = param8;
           rc.field_a = param10;
-          fi.field_c = param13;
+          SecondaryNodeHashTable.field_c = param13;
           sp.field_O = param0;
           eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
           ne.field_I = gk.a(param14, "lobby", "ratedgame", true);
@@ -106,7 +106,7 @@ final class ha {
           po.field_a = new UiPanel(0L, db.field_t, pe.field_u);
           mn.field_n = new UiPanel(0L, kl.field_Ib, he.field_B);
           ve.field_f = new UiPanel(0L, kl.field_Ib, MenuSelectionCursor.field_h);
-          ok.field_b = new UiPanel(0L, kl.field_Ib, fi.field_j);
+          ok.field_b = new UiPanel(0L, kl.field_Ib, SecondaryNodeHashTable.field_j);
           tp.field_Nb = new UiPanel(0L, kl.field_Ib, eq.field_C);
           MouseInputHandler.field_b = new UiPanel(0L, MouseInputHandler.field_a, fm.field_a);
           uk.field_v = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);

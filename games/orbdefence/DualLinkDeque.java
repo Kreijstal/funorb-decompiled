@@ -30,7 +30,7 @@ final class DualLinkDeque implements Iterable {
             DualLinkDeque.b(92);
           }
           if (param0.field_g != null) {
-            param0.c(-1);
+            param0.unlinkSecondary(-1);
           }
           param0.field_f = this.field_a;
           param0.field_g = this.field_a.field_g;
@@ -49,7 +49,7 @@ final class DualLinkDeque implements Iterable {
         int var2 = 13 % ((21 - param0) / 47);
         DualLinkNode var3 = this.field_a.field_f;
         if (this.field_a != var3) {
-          var3.c(-1);
+          var3.unlinkSecondary(-1);
           return var3;
         }
         return null;

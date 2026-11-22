@@ -385,7 +385,7 @@ final class FridgeCreature extends IntrusiveNode {
         if (var2.equals("")) {
           return -1;
         }
-        return ((ji) (eu.field_b.a(true, (long)var2.hashCode()))).field_h;
+        return ((ji) (eu.field_b.get(true, (long)var2.hashCode()))).field_h;
     }
 
     final void a(byte param0, int param1) {

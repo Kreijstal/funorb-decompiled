@@ -16,12 +16,12 @@ class IntrusiveNode {
     static int[] field_m;
     static boolean[] field_k;
 
-    final boolean c(int param0) {
+    final boolean isLinked(int param0) {
         if (this.field_c == null) {
           return false;
         }
         if (param0 < 115) {
-          this.b(95);
+          this.unlink(95);
           return true;
         }
         return true;
@@ -72,7 +72,7 @@ class IntrusiveNode {
         ag.a(true, 22, -1, -1);
     }
 
-    final void b(int param0) {
+    final void unlink(int param0) {
         if (null == this.field_c) {
           return;
         }

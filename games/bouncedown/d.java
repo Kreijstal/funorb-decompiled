@@ -313,7 +313,7 @@ final class d extends wd {
           }
           var6_ref.field_ob = var4_ref_StringLifetime1;
           var6_ref.field_kb = (String) (var3Lifetime1);
-          var6_ref.c(2);
+          var6_ref.unlink(2);
           var7_ref = (fb) (oa.field_b.a((byte) -76));
           scanLoop1: while (true) {
             if (null != var7_ref) {

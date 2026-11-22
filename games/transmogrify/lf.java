@@ -11,7 +11,7 @@ final class lf {
     static jc field_d;
 
     private final void a(byte param0, long param1) {
-        dl var4 = (dl) (this.field_b.a(-1, param1));
+        dl var4 = (dl) (this.field_b.get(-1, param1));
         if (param0 >= -34) {
           return;
         }
@@ -36,7 +36,7 @@ final class lf {
           if (param2 >= -73) {
             this.field_a = 94;
           }
-          this.field_b.a(var6_ref, (byte) 63, param3);
+          this.field_b.put(var6_ref, (byte) 63, param3);
           this.field_f.a(false, var6_ref);
           ((dl) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
@@ -110,24 +110,24 @@ final class lf {
         Object var12;
         hc var6Lifetime1;
         if (param0 == 17699) {
-          var11 = (dl) (this.field_b.a(-1, param1));
+          var11 = (dl) (this.field_b.get(-1, param1));
           if (var11 == null) {
             return null;
           }
           var12 = var11.c((byte) -82);
           if (var12 == null) {
-            var11.c(5);
-            var11.b((byte) -121);
+            var11.unlink(5);
+            var11.unlinkSecondary((byte) -121);
             this.field_a = this.field_a + var11.field_o;
             return null;
           }
           if (var11.d(8)) {
             var6 = new hc(var12, var11.field_o);
-            this.field_b.a(var6, (byte) 93, var11.key);
+            this.field_b.put(var6, (byte) 93, var11.key);
             this.field_f.a(false, var6);
             ((dl) ((Object) var6)).field_j = 0L;
-            var11.c(param0 - 17694);
-            var11.b((byte) -69);
+            var11.unlink(param0 - 17694);
+            var11.unlinkSecondary((byte) -69);
           } else {
             this.field_f.a(false, var11);
             var11.field_j = 0L;
@@ -136,24 +136,24 @@ final class lf {
         }
         var7 = (byte[]) null;
         lf.storeBytes((byte) 50, false, (byte[]) null);
-        var9 = (dl) (this.field_b.a(-1, param1));
+        var9 = (dl) (this.field_b.get(-1, param1));
         if (var9 == null) {
           return null;
         }
         var10 = var9.c((byte) -82);
         if (var10 == null) {
-          var9.c(5);
-          var9.b((byte) -121);
+          var9.unlink(5);
+          var9.unlinkSecondary((byte) -121);
           this.field_a = this.field_a + var9.field_o;
           return null;
         }
         if (var9.d(8)) {
           var6Lifetime1 = new hc(var10, var9.field_o);
-          this.field_b.a(var6Lifetime1, (byte) 93, var9.key);
+          this.field_b.put(var6Lifetime1, (byte) 93, var9.key);
           this.field_f.a(false, var6Lifetime1);
           ((dl) ((Object) var6Lifetime1)).field_j = 0L;
-          var9.c(param0 - 17694);
-          var9.b((byte) -69);
+          var9.unlink(param0 - 17694);
+          var9.unlinkSecondary((byte) -69);
         } else {
           this.field_f.a(false, var9);
           var9.field_j = 0L;
@@ -169,8 +169,8 @@ final class lf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null) {
-            param1.c(param0 + 5);
-            param1.b((byte) -119);
+            param1.unlink(param0 + 5);
+            param1.unlinkSecondary((byte) -119);
             this.field_a = this.field_a + param1.field_o;
           }
           if (param0 == 0) {

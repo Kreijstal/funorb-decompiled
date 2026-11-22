@@ -37,7 +37,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (this.uiComponentPart010State0001 != null) {
-            this.uiComponentPart010State0001.performAction0149((byte) 111);
+            this.uiComponentPart010State0001.unlink((byte) 111);
           }
           boolean sharedTailLocal7 = (uiComponentArgument1 != null);
           if (!sharedTailLocal7) {

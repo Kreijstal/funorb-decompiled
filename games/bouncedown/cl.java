@@ -195,7 +195,7 @@ final class cl extends al {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -125) << da.b(768, var7 << 8));
             }
-            var4.c(2);
+            var4.unlink(2);
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart(128);
@@ -212,7 +212,7 @@ final class cl extends al {
                 kc.a((byte) 18);
                 return;
               }
-              var5_ref_jc.c(2);
+              var5_ref_jc.unlink(2);
               decompiledFrameRemainder0 = false;
             }
             else {

@@ -8,7 +8,7 @@ final class v extends di {
     private int field_k;
 
     private final void a(rk param0) {
-        param0.b(57);
+        param0.unlink(57);
         param0.a();
         IntrusiveNode var2 = this.field_l.field_d.field_e;
         if (var2 == this.field_l.field_d) {

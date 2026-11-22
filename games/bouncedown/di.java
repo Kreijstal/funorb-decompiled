@@ -115,7 +115,7 @@ final class di implements Iterator {
         if (this.field_c == null) {
           throw new IllegalStateException();
         }
-        this.field_c.a(10);
+        this.field_c.unlinkSecondary(10);
         this.field_c = null;
     }
 

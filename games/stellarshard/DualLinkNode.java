@@ -10,7 +10,7 @@ class DualLinkNode extends IntrusiveNode {
     static String field_n;
     long field_o;
 
-    final void c(byte param0) {
+    final void unlinkSecondary(byte param0) {
         if (param0 != 36) {
           return;
         }

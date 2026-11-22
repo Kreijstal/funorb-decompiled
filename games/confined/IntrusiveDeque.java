@@ -20,7 +20,7 @@ final class IntrusiveDeque implements Iterable {
 
     final void a(DualLinkNode param0, int param1) {
         if (null != param0.field_q) {
-          param0.b(true);
+          param0.unlinkSecondary(true);
         }
         if (param1 != 18425) {
           return;
@@ -54,14 +54,14 @@ final class IntrusiveDeque implements Iterable {
           this.a(-12);
           var2 = this.field_b.field_o;
           if (this.field_b != var2) {
-            var2.b(true);
+            var2.unlinkSecondary(true);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_b.field_o;
         if (this.field_b != var2Lifetime1) {
-          var2Lifetime1.b(true);
+          var2Lifetime1.unlinkSecondary(true);
           return var2Lifetime1;
         }
         return null;

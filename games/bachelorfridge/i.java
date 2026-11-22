@@ -242,7 +242,7 @@ final class i {
           var5_int = param0 ^ (65530 & param1 << 4 | param1 >>> 12);
           var5_int = var5_int | param1 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_c.a(true, var6));
+          var8 = (PcmSample) (this.field_c.get(true, var6));
           if (param3 != -1884086484) {
             field_e = (String[]) null;
           }
@@ -255,20 +255,20 @@ final class i {
             stackIn_8_0 = null;
             return (PcmSample) (stackIn_8_0);
           }
-          var9 = (VorbisSample) (this.field_f.a(true, var6));
+          var9 = (VorbisSample) (this.field_f.get(true, var6));
           if (var9 == null) {
             var9 = VorbisSample.a(this.field_b, param1, param0);
             if (var9 == null) {
               return null;
             }
-            this.field_f.a(var6, (byte) -111, var9);
+            this.field_f.put(var6, (byte) -111, var9);
           }
           var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink(false);
-          this.field_c.a(var6, (byte) 124, var8Lifetime1);
+          this.field_c.put(var6, (byte) 124, var8Lifetime1);
           stackIn_18_0 = var8Lifetime1;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -314,7 +314,7 @@ final class i {
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int;
           var9 = 124 % ((param2 - 55) / 42);
-          var8 = (PcmSample) (this.field_c.a(true, var6));
+          var8 = (PcmSample) (this.field_c.get(true, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -330,7 +330,7 @@ final class i {
           }
           var11 = var10.toPcmSample();
           var8Lifetime1 = var11;
-          this.field_c.a(var6, (byte) 67, var8Lifetime1);
+          this.field_c.put(var6, (byte) 67, var8Lifetime1);
           if (param3 != null) {
             param3[0] = param3[0] - var11.field_i.length;
           }

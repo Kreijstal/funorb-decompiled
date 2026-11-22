@@ -106,7 +106,7 @@ final class s extends vc {
             var4_ref_j = (j) (ih.field_w.a((byte) -99));
             if (var4_ref_j != null &&
               var4_ref_j.field_h < var2_long) {
-              var4_ref_j.c(2);
+              var4_ref_j.unlink(2);
               pe.field_d = var4_ref_j.field_i.length;
               jc.field_g.position = 0;
               for (var5_int = 0; pe.field_d > var5_int; var5_int++) {

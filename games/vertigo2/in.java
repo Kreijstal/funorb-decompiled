@@ -30,7 +30,7 @@ final class in {
         if (un.field_Hb == bf.field_b) {
           return af.field_H;
         }
-        return fi.field_e;
+        return SecondaryNodeHashTable.field_e;
     }
 
     final static void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, int param5, int param6, int param7, byte param8, boolean param9) {

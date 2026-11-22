@@ -39,7 +39,7 @@ final class ag {
           }
           int var6_int = -125 % ((48 - param3) / 46);
           var7 = new pj(param2, param0);
-          this.field_b.a(param1, var7, (byte) 43);
+          this.field_b.put(param1, var7, (byte) 43);
           this.field_c.a(-99, var7);
           ((cb) ((Object) var7)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
@@ -51,7 +51,7 @@ final class ag {
         if (param1 != 94) {
           return;
         }
-        cb var4 = (cb) (this.field_b.a(true, param0));
+        cb var4 = (cb) (this.field_b.get(true, param0));
         this.a(var4, 13);
     }
 
@@ -107,7 +107,7 @@ final class ag {
 
     final Object a(byte param0, long param1) {
         pj var7 = null;
-        cb var8 = (cb) (this.field_b.a(true, param1));
+        cb var8 = (cb) (this.field_b.get(true, param1));
         int var5 = 60 / ((-15 - param0) / 34);
         if (var8 == null) {
           return null;
@@ -119,16 +119,16 @@ final class ag {
             var8.field_j = 0L;
           } else {
             var7 = new pj(var6, var8.field_r);
-            this.field_b.a(var8.field_c, var7, (byte) 43);
+            this.field_b.put(var8.field_c, var7, (byte) 43);
             this.field_c.a(-36, var7);
             ((cb) ((Object) var7)).field_j = 0L;
-            var8.c(-1);
-            var8.e(90);
+            var8.unlink(-1);
+            var8.unlinkSecondary(90);
           }
           return var6;
         }
-        var8.c(-1);
-        var8.e(30);
+        var8.unlink(-1);
+        var8.unlinkSecondary(30);
         this.field_d = this.field_d + var8.field_r;
         return null;
     }
@@ -150,8 +150,8 @@ final class ag {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.c(-1);
-            param0.e(-118);
+            param0.unlink(-1);
+            param0.unlinkSecondary(-118);
             this.field_d = this.field_d + param0.field_r;
           }
           if (param1 > 3) {

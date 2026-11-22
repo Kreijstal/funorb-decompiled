@@ -22,14 +22,14 @@ final class gh extends IntrusiveNode {
           var2.readInt((byte) -108);
           var2.readInt((byte) -105);
           var2.readInt((byte) -119);
-          var1.c(param0 + 5);
+          var1.unlink(param0 + 5);
           return;
         }
         gh.e(38);
         var2.readInt((byte) -108);
         var2.readInt((byte) -105);
         var2.readInt((byte) -119);
-        var1.c(param0 + 5);
+        var1.unlink(param0 + 5);
     }
 
     public static void e(int param0) {

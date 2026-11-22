@@ -49,7 +49,7 @@ final class le extends ln {
             var15.field_k = true;
             var15.field_g = var3;
             var15.field_f = var16[0];
-            var15.a(false);
+            var15.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -58,7 +58,7 @@ final class le extends ln {
               jj.a(4);
               return;
             }
-            var11.a(false);
+            var11.unlink(false);
           } else {
             if (var2 == 2) {
               var13 = (dp) (pm.field_c.g(param0 ^ 18166));
@@ -69,7 +69,7 @@ final class le extends ln {
               var13.field_g = wl.a((byte) -117);
               var13.field_k = true;
               var13.field_f = var13.field_g[0];
-              var13.a(false);
+              var13.unlink(false);
             } else {
               wp.a((Throwable) null, "A1: " + IntrusiveNodeHashTable.a(-1815), 21862);
               jj.a(4);

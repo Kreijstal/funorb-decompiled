@@ -241,7 +241,7 @@ final class ib implements ComponentLayout {
           }
           var6.field_lb = (String) (var3Lifetime1);
           var6.field_jb = var4_ref_StringLifetime1;
-          var6.c(-1);
+          var6.unlink(-1);
           var7 = (gm) (tf.field_E.c((byte) 47));
           scanLoop1: while (true) {
             if (var7 != null) {

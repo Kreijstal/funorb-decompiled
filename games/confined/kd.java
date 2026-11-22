@@ -421,7 +421,7 @@ final class kd extends jf {
                     this.field_f.field_B = 0;
                   }
                 } else {
-                  this.field_f.b(true);
+                  this.field_f.unlinkSecondary(true);
                   this.field_f.field_v = false;
                   this.field_f = null;
                 }

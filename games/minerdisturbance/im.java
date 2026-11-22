@@ -50,7 +50,7 @@ final class im {
             var4_ref_jn = (jn) (mc.field_m.b(74));
             if (var4_ref_jn != null &&
               var2_long > var4_ref_jn.field_o) {
-              var4_ref_jn.b(34);
+              var4_ref_jn.unlink(34);
               rj.field_d = var4_ref_jn.field_s.length;
               kj.field_a.position = 0;
               for (var5_int = 0; rj.field_d > var5_int; var5_int++) {

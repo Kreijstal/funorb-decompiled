@@ -76,7 +76,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.field_j == null) {
           return;
         }
@@ -87,7 +87,7 @@ class DualLinkNode extends IntrusiveNode {
           this.field_j = null;
           return;
         }
-        this.e(11);
+        this.unlinkSecondary(11);
         this.field_j.field_k = this.field_k;
         this.field_k.field_j = this.field_j;
         this.field_k = null;

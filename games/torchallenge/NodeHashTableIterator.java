@@ -58,7 +58,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_d = 1;
         this.field_c = null;
         if (param0 < 82) {
@@ -323,7 +323,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_c = null;
         try {
           this.field_e = param0;
-          this.a(101);
+          this.reset(101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

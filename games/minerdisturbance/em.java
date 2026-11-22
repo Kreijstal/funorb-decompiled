@@ -76,7 +76,7 @@ abstract class em extends DualLinkNode {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -54) << c.a(768, var7 << 8));
             }
-            var4.b(34);
+            var4.unlink(34);
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart((byte) 127);
@@ -93,7 +93,7 @@ abstract class em extends DualLinkNode {
                 si.a(param0 ^ 117);
                 return;
               }
-              var5_ref_il.b(34);
+              var5_ref_il.unlink(34);
               decompiledFrameRemainder0 = false;
             }
             else {

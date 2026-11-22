@@ -5588,6 +5588,14 @@
       "renamedSymbol": "M:DualLinkNode.releaseStatics(B)V"
     },
     {
+      "symbol": "M:eo.d(I)J",
+      "originalName": "d",
+      "to": "getSecondaryKey",
+      "evidence": "Int>=-97 returns sentinel6L instead of the stored secondaryKey;otherwise return that already-named field. Preserve full input domain and no mutation. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DualLinkNode.getSecondaryKey(I)J"
+    },
+    {
       "symbol": "M:ep.b(I)V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -7516,6 +7524,38 @@
       "renamedSymbol": "M:jr.releaseStatics(I)V"
     },
     {
+      "symbol": "M:js.a(JBLbw;)V",
+      "originalName": "a",
+      "to": "put",
+      "evidence": "Unlink linked node(false),select masked bucket,write own next/previous,neighbors and key,then evaluate41/((byteGuard-13)/45) inside original wrapper. Preserve arithmetic exception after completed insertion,duplicates and aliases. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V"
+    },
+    {
+      "symbol": "M:js.a(ZJ)Lbw;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "False Boolean first calls original static helper93,then both domains select key&(count-1),scan next links by long-key equality,advance lookup cursor past first match and clear at sentinel exhaustion. Preserve helper/global reads/exception order and duplicate order. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:js.b(I)Lbw;",
+      "originalName": "b",
+      "to": "first",
+      "evidence": "Reset iteration bucket index0 first;wrong int!=-13023 recursively calls this method45,which stays invalid,then would delegate next(-21446). Preserve repeated index resets and recursive failure;valid guard delegates once. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.first(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:js.c(I)Lbw;",
+      "originalName": "c",
+      "to": "next",
+      "evidence": "Valid int-21446 traverses current bucket via next then increments bucket index over sentinels. Other ints first perform get(false,-79L),including its static helper and lookup-cursor mutation,before table iteration. Preserve independent cursors,duplicate/global reads and all branches. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.next(I)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:jt.b(Z)V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -9418,6 +9458,14 @@
       "evidence": "Abstract hook that each order implements to build the event the BattleState executes. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PetAttackSpecial.createEvent(LBattleState;I)LCreatureEvent;"
+    },
+    {
+      "symbol": "M:np.a(I)V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Set current node from bucket0.next,then bucket index1. Int>-34 overwrites index-99 before clearing last-returned node;other ints only clear it. Preserve zero-bucket failures and bad-index state;constructor and JDK iterator methods reviewed. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V"
     },
     {
       "symbol": "M:nq.c(B)V",
@@ -12730,6 +12778,22 @@
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IterableNodeHashTable.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:wha.a(IJLbw;)V",
+      "originalName": "a",
+      "to": "put",
+      "evidence": "Unlink linked node(false),select masked bucket,write own previous/next,then wrong int!=0 changes bucketCount63 before first neighbor/key/second neighbor writes. Preserve insertion into already-selected bucket,partial state,duplicates and wrapper. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.put(IJLIntrusiveNode;)V"
+    },
+    {
+      "symbol": "M:wha.a(JB)Lbw;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Masked bucket lookup traverses next links using complemented long-key equality,advances cursor past first match and clears on sentinel exhaustion. Both miss-only byte branches return null without additional mutation. Preserve comparisons/global reads and all guards. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JB)LIntrusiveNode;"
     },
     {
       "symbol": "M:wi.b(Z)V",
@@ -203361,7 +203425,7 @@
     },
     {
       "symbol": "L:js.a(JBLbw;)V#0",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -203372,7 +203436,7 @@
     },
     {
       "symbol": "L:js.a(JBLbw;)V#1",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#1",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -203383,7 +203447,7 @@
     },
     {
       "symbol": "L:js.a(JBLbw;)V#2",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#2",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -203394,7 +203458,7 @@
     },
     {
       "symbol": "L:js.a(ZJ)Lbw;#0",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -203405,7 +203469,7 @@
     },
     {
       "symbol": "L:js.a(ZJ)Lbw;#1",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -203416,7 +203480,7 @@
     },
     {
       "symbol": "L:js.a(ZJ)Lbw;#2",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -203427,7 +203491,7 @@
     },
     {
       "symbol": "L:js.a(ZJ)Lbw;#3",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#3",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -203438,7 +203502,7 @@
     },
     {
       "symbol": "L:js.a(ZJ)Lbw;#4",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -203449,7 +203513,7 @@
     },
     {
       "symbol": "L:js.c(I)Lbw;#0",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -203460,7 +203524,7 @@
     },
     {
       "symbol": "L:js.c(I)Lbw;#1",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#1",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -203471,7 +203535,7 @@
     },
     {
       "symbol": "L:js.c(I)Lbw;#2",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#2",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -203482,7 +203546,7 @@
     },
     {
       "symbol": "L:js.c(I)Lbw;#3",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -203493,7 +203557,7 @@
     },
     {
       "symbol": "L:js.c(I)Lbw;#4",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -365248,7 +365312,7 @@
     },
     {
       "symbol": "L:wha.a(IJLbw;)V#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJLIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IterableNodeHashTable.put(IJLIntrusiveNode;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -365259,7 +365323,7 @@
     },
     {
       "symbol": "L:wha.a(IJLbw;)V#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJLIntrusiveNode;)V#1",
+      "renamedSymbol": "L:IterableNodeHashTable.put(IJLIntrusiveNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -365270,7 +365334,7 @@
     },
     {
       "symbol": "L:wha.a(JB)Lbw;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -365281,7 +365345,7 @@
     },
     {
       "symbol": "L:wha.a(JB)Lbw;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -365292,7 +365356,7 @@
     },
     {
       "symbol": "L:wha.a(JB)Lbw;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -383739,9 +383803,9 @@
     },
     {
       "symbol": "M:eo.d(I)J",
-      "renamedSymbol": "M:DualLinkNode.d(I)J",
+      "renamedSymbol": "M:DualLinkNode.getSecondaryKey(I)J",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getSecondaryKey",
       "declaration": {
         "file": "eo.java",
         "start": 763,
@@ -398325,9 +398389,9 @@
     },
     {
       "symbol": "M:js.a(JBLbw;)V",
-      "renamedSymbol": "M:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "put",
       "declaration": {
         "file": "js.java",
         "start": 1955,
@@ -398336,9 +398400,9 @@
     },
     {
       "symbol": "M:js.a(ZJ)Lbw;",
-      "renamedSymbol": "M:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "js.java",
         "start": 2662,
@@ -398347,9 +398411,9 @@
     },
     {
       "symbol": "M:js.b(I)Lbw;",
-      "renamedSymbol": "M:IntrusiveNodeHashTable.b(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.first(I)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "first",
       "declaration": {
         "file": "js.java",
         "start": 3969,
@@ -398358,9 +398422,9 @@
     },
     {
       "symbol": "M:js.c(I)Lbw;",
-      "renamedSymbol": "M:IntrusiveNodeHashTable.c(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.next(I)LIntrusiveNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "next",
       "declaration": {
         "file": "js.java",
         "start": 193,
@@ -408500,9 +408564,9 @@
     },
     {
       "symbol": "M:np.a(I)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "np.java",
         "start": 1050,
@@ -430247,9 +430311,9 @@
     },
     {
       "symbol": "M:wha.a(IJLbw;)V",
-      "renamedSymbol": "M:IterableNodeHashTable.a(IJLIntrusiveNode;)V",
+      "renamedSymbol": "M:IterableNodeHashTable.put(IJLIntrusiveNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "put",
       "declaration": {
         "file": "wha.java",
         "start": 373,
@@ -430258,9 +430322,9 @@
     },
     {
       "symbol": "M:wha.a(JB)Lbw;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JB)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JB)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "wha.java",
         "start": 1103,
@@ -457890,7 +457954,7 @@
     },
     {
       "symbol": "P:eo.d(I)J#0",
-      "renamedSymbol": "P:DualLinkNode.d(I)J#0",
+      "renamedSymbol": "P:DualLinkNode.getSecondaryKey(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492353,7 +492417,7 @@
     },
     {
       "symbol": "P:js.a(JBLbw;)V#0",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492364,7 +492428,7 @@
     },
     {
       "symbol": "P:js.a(JBLbw;)V#1",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -492375,7 +492439,7 @@
     },
     {
       "symbol": "P:js.a(JBLbw;)V#2",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(JBLIntrusiveNode;)V#2",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.put(JBLIntrusiveNode;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -492386,7 +492450,7 @@
     },
     {
       "symbol": "P:js.a(ZJ)Lbw;#0",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492397,7 +492461,7 @@
     },
     {
       "symbol": "P:js.a(ZJ)Lbw;#1",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(ZJ)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.get(ZJ)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -492408,7 +492472,7 @@
     },
     {
       "symbol": "P:js.b(I)Lbw;#0",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.b(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.first(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -492419,7 +492483,7 @@
     },
     {
       "symbol": "P:js.c(I)Lbw;#0",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.next(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -514980,7 +515044,7 @@
     },
     {
       "symbol": "P:np.a(I)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -565217,7 +565281,7 @@
     },
     {
       "symbol": "P:wha.a(IJLbw;)V#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(IJLIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IterableNodeHashTable.put(IJLIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -565228,7 +565292,7 @@
     },
     {
       "symbol": "P:wha.a(IJLbw;)V#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(IJLIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IterableNodeHashTable.put(IJLIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -565239,7 +565303,7 @@
     },
     {
       "symbol": "P:wha.a(IJLbw;)V#2",
-      "renamedSymbol": "P:IterableNodeHashTable.a(IJLIntrusiveNode;)V#2",
+      "renamedSymbol": "P:IterableNodeHashTable.put(IJLIntrusiveNode;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -565250,7 +565314,7 @@
     },
     {
       "symbol": "P:wha.a(JB)Lbw;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JB)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JB)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -565261,7 +565325,7 @@
     },
     {
       "symbol": "P:wha.a(JB)Lbw;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JB)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JB)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -602074,7 +602138,7 @@
       "original": "bm.java",
       "renamed": "bm.java",
       "inputSha256": "a97a2f0ddc80184b0b1655ae161493cc13e2ca89d9091a37e1a5805d130d8cbe",
-      "outputSha256": "1067a26bd953b03d509faa7518af9ebb707d122a69d508be66ee392bf781d73c",
+      "outputSha256": "15ae1f0d549f6e6b404112d5faa6eb6ab0be73100d4be3cbd7bad1525d59efcc",
       "edits": [
         {
           "start": 61,
@@ -602096,6 +602160,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 540,
+          "end": 541,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 870,
@@ -605587,7 +605658,7 @@
       "original": "ch.java",
       "renamed": "BagpipeSpecial.java",
       "inputSha256": "7ffb24b9a90903d2b17cc8a7cde0855e6c97e134f8b4dbcd447269e98ee76ce5",
-      "outputSha256": "c43f42a96a35fd9c85002dfc3d1cdec4c03948f38f6de22e1d6a6c2c1a8953d1",
+      "outputSha256": "4b3e236b7cc4f6d85565557c79e413e2f102acf25aede1e4801c4e2fdfc9f9b5",
       "edits": [
         {
           "start": 50,
@@ -605826,6 +605897,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 4976,
+          "end": 4977,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 5048,
@@ -608171,7 +608249,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "c771d4f7493439529c9900d1b9a0eb2ff4019a6b3b389413d901d2bba9a26430",
-      "outputSha256": "241f482412d03b8042ad1d76bc186c38f17028cb9e7c3467e26cb5c7d14395a5",
+      "outputSha256": "22a2ce07a36e56bc8b5b3b41e65531377f950be9fb968ae91d466f169ea85500",
       "edits": [
         {
           "start": 127,
@@ -608634,6 +608712,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 15603,
+          "end": 15604,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 15675,
@@ -614051,7 +614136,7 @@
       "original": "dha.java",
       "renamed": "dha.java",
       "inputSha256": "d4a2ddb0266db21992b9896927688b5e0196f1204cbb96f1f52c135fa7e3164d",
-      "outputSha256": "abfc43defbe1f8c703aaa2abc428a9e4dc4f5a9e32447e724df51c491ce07dee",
+      "outputSha256": "0744484bc436017e3b1bd307e5db66a361781f141dc9a4a67c40fbc36d3707f4",
       "edits": [
         {
           "start": 908,
@@ -614185,6 +614270,13 @@
           "symbol": "C:cma",
           "original": "cma",
           "renamed": "InsanoSauceAnimation"
+        },
+        {
+          "start": 4371,
+          "end": 4372,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 4637,
@@ -616170,7 +616262,7 @@
       "original": "dna.java",
       "renamed": "dna.java",
       "inputSha256": "58b180fe71fc9c24363848ef649d5d52a2c711e7797c568261a9cccfa747a978",
-      "outputSha256": "6b328587f54ff995f373d6d957ab9225bd1b5df8dded4005440896a94d6357df",
+      "outputSha256": "cfeb8d26d8f928cfd08cad604e4eb138f81579792e70d4b4f972c6c34bfe734a",
       "edits": [
         {
           "start": 62,
@@ -616304,6 +616396,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 4833,
+          "end": 4834,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 4975,
@@ -622975,7 +623074,7 @@
       "original": "eka.java",
       "renamed": "MusicPatch.java",
       "inputSha256": "9a73d962681caadf11c6a0bf7f426b24a40dd7cf0dee1edcf22cec6fd375d41a",
-      "outputSha256": "05d47d3226f19419acc510dd2ab571eb141f4c1cb1d496ebd41c1615b2652bab",
+      "outputSha256": "ff37974986ea2bf6aa25d8c759a1fbba40ae51f62c3f64cdc91f331a1e34a6bd",
       "edits": [
         {
           "start": 50,
@@ -623060,6 +623159,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "PizzaArenaTheme"
+        },
+        {
+          "start": 3606,
+          "end": 3607,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 3679,
@@ -625306,7 +625412,7 @@
       "original": "eo.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "35d64ba85e0d78009492bfc48bbdf602ea166de61467765bf2b03a1bae7875d7",
-      "outputSha256": "ad56eb316a0dbde8ca9e297cd52f636287ce0c9cdc7c9a9068c3e11130e8080d",
+      "outputSha256": "a39957dc2f58a523f1fc4ea94186aef0d3f90c2869f4545cd4a9007b60018014",
       "edits": [
         {
           "start": 44,
@@ -625447,6 +625553,13 @@
           "symbol": "M:eo.c(B)V",
           "original": "c",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 763,
+          "end": 764,
+          "symbol": "M:eo.d(I)J",
+          "original": "d",
+          "renamed": "getSecondaryKey"
         },
         {
           "start": 859,
@@ -626477,7 +626590,7 @@
       "original": "ev.java",
       "renamed": "DualLinkDequeIterator.java",
       "inputSha256": "31ad5538ed677dcbf59d0c8034c53c458388a2727ea828d78203a0ebda32328b",
-      "outputSha256": "a661c38ab320c64667c0ed55ff1757fcd19cda8f61e132b6e2048fafd6dc4472",
+      "outputSha256": "d3762247bc6a72b1cc111a480f2baf3ac5fd12e338b469af39875778d16953f6",
       "edits": [
         {
           "start": 71,
@@ -626527,6 +626640,13 @@
           "symbol": "C:fla",
           "original": "fla",
           "renamed": "ShieldSpecial"
+        },
+        {
+          "start": 790,
+          "end": 791,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 798,
@@ -631535,7 +631655,7 @@
       "original": "fp.java",
       "renamed": "fp.java",
       "inputSha256": "88e20982a979a778f4f4a86d743dd0033e9385cfc6bbd1631badd0b28776338e",
-      "outputSha256": "df0bc35c543a1c95442046a3f11b2ee62fd7dc67fcf878bebef52345f280270a",
+      "outputSha256": "03cc8dbad4a7f37c1e208fe5762cf9b878cd171812970c1f2a1146b0f13e7a64",
       "edits": [
         {
           "start": 79,
@@ -631717,11 +631837,25 @@
           "renamed": "key"
         },
         {
+          "start": 4887,
+          "end": 4888,
+          "symbol": "M:js.b(I)Lbw;",
+          "original": "b",
+          "renamed": "first"
+        },
+        {
           "start": 5123,
           "end": 5124,
           "symbol": "M:bw.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 5262,
+          "end": 5263,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
         },
         {
           "start": 5682,
@@ -631731,11 +631865,32 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 5787,
+          "end": 5788,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 6688,
+          "end": 6689,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 6859,
           "end": 6860,
           "symbol": "M:bw.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 8088,
+          "end": 8089,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 8117,
@@ -631773,6 +631928,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 10361,
+          "end": 10362,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
           "start": 10390,
           "end": 10392,
           "symbol": "C:bw",
@@ -631792,6 +631954,13 @@
           "symbol": "M:bw.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 11915,
+          "end": 11916,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 11944,
@@ -647477,7 +647646,7 @@
       "original": "hba.java",
       "renamed": "hba.java",
       "inputSha256": "867bad9219941d5e604cfb5ea0bc46da0aafcc832da10025ce59dc12440e6ba2",
-      "outputSha256": "eb1bfc9f473b0c805f592119a63f190a11942df4d0cf60f4ba3b23c4aeaf260d",
+      "outputSha256": "b155e2f85c7c623a55f2e92d3d3990253b7156ee8db56089e81f313253e24464",
       "edits": [
         {
           "start": 62,
@@ -648780,6 +648949,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "PizzaArenaTheme"
+        },
+        {
+          "start": 17078,
+          "end": 17079,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 17474,
@@ -656974,7 +657150,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "20566edcb009ca52c3af3c273b78d657d08b7d6397d3d5ee2ae0a6ef82fbeddc",
-      "outputSha256": "6d8acfcabc436eb4e3a8893f624b692dd9467ada514d03f65258c5af19cb0f33",
+      "outputSha256": "15b9f0eccb87446555f78b5ddd80091e3efc933cff04960712779fd22296674c",
       "edits": [
         {
           "start": 118,
@@ -657208,6 +657384,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 9494,
+          "end": 9495,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 9820,
           "end": 9822,
           "symbol": "C:be",
@@ -657222,11 +657405,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 9887,
+          "end": 9888,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 9952,
           "end": 9954,
           "symbol": "C:dv",
           "original": "dv",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 10086,
+          "end": 10087,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 10157,
@@ -657241,6 +657438,13 @@
           "symbol": "M:bw.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 10292,
+          "end": 10293,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 10882,
@@ -657313,6 +657517,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 12051,
+          "end": 12052,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 12287,
           "end": 12289,
           "symbol": "C:be",
@@ -657332,6 +657543,13 @@
           "symbol": "M:vp.b()Lbe;",
           "original": "b",
           "renamed": "toPcmSample"
+        },
+        {
+          "start": 12525,
+          "end": 12526,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 13243,
@@ -671187,7 +671405,7 @@
       "original": "jfa.java",
       "renamed": "FridgeCreature.java",
       "inputSha256": "e16c369ae442cdc931d6288c6262713183b164d520e95f5d90c80c2f598e2176",
-      "outputSha256": "c79a57eb90bceacc0227e0bdf331ce8734f163e2350069942f22dd6f720e0b74",
+      "outputSha256": "2a8fda3f47e960c9c6b7a017cd9925db0f435932e02079093556ea92479ca3a9",
       "edits": [
         {
           "start": 71,
@@ -671384,6 +671602,13 @@
           "symbol": "C:jfa",
           "original": "jfa",
           "renamed": "FridgeCreature"
+        },
+        {
+          "start": 12597,
+          "end": 12598,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 13220,
@@ -679367,7 +679592,7 @@
       "original": "jp.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "d2c6c362192912461c8feb1c169c11fddbe4608ac718a158b95f5f27446fc932",
-      "outputSha256": "373b1fe791879e9f0424f631cc2f4c15614ddb9eacbd180ddac79985ea301f4f",
+      "outputSha256": "f324024238817a6635d97540f51c13010e4e7f17fab61ce6639641070418645d",
       "edits": [
         {
           "start": 50,
@@ -679515,6 +679740,13 @@
           "symbol": "C:eka",
           "original": "eka",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 2576,
+          "end": 2577,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 2807,
@@ -679902,11 +680134,25 @@
           "renamed": "MusicPatch"
         },
         {
+          "start": 35409,
+          "end": 35410,
+          "symbol": "M:js.b(I)Lbw;",
+          "original": "b",
+          "renamed": "first"
+        },
+        {
           "start": 35502,
           "end": 35505,
           "symbol": "C:eka",
           "original": "eka",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 35521,
+          "end": 35522,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
         },
         {
           "start": 35620,
@@ -680028,6 +680274,13 @@
           "renamed": "MusicPatch"
         },
         {
+          "start": 43238,
+          "end": 43239,
+          "symbol": "M:js.b(I)Lbw;",
+          "original": "b",
+          "renamed": "first"
+        },
+        {
           "start": 43411,
           "end": 43418,
           "symbol": "F:bw.field_c:J",
@@ -680042,11 +680295,32 @@
           "renamed": "MusicPatch"
         },
         {
+          "start": 43460,
+          "end": 43461,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 43538,
           "end": 43540,
           "symbol": "C:wj",
           "original": "wj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 43748,
+          "end": 43749,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
+          "start": 44170,
+          "end": 44171,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
         },
         {
           "start": 45228,
@@ -680217,7 +680491,7 @@
       "original": "js.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "12865ad0120a9dba011ca2808a001dd3ef7f3116cf53c3b496de7b9ebac43f84",
-      "outputSha256": "5acfc17d83438b0ebc7b910b529c1c195428bcd75d1b7fe7dff48ee653af6370",
+      "outputSha256": "98929158e33d23ad0cff92c208b0afd9c583d7875f751626b35b611f4d6bafb6",
       "edits": [
         {
           "start": 50,
@@ -680255,6 +680529,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 193,
+          "end": 194,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
+        },
+        {
           "start": 304,
           "end": 306,
           "symbol": "C:bw",
@@ -680281,6 +680562,13 @@
           "symbol": "F:bw.field_b:Lbw;",
           "original": "field_b",
           "renamed": "next"
+        },
+        {
+          "start": 998,
+          "end": 999,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 1281,
@@ -680316,6 +680604,13 @@
           "symbol": "F:bw.field_b:Lbw;",
           "original": "field_b",
           "renamed": "next"
+        },
+        {
+          "start": 1955,
+          "end": 1956,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 1983,
@@ -680416,6 +680711,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2662,
+          "end": 2663,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 2703,
           "end": 2705,
           "symbol": "C:bw",
@@ -680512,6 +680814,34 @@
           "symbol": "C:bw",
           "original": "bw",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3969,
+          "end": 3970,
+          "symbol": "M:js.b(I)Lbw;",
+          "original": "b",
+          "renamed": "first"
+        },
+        {
+          "start": 4058,
+          "end": 4059,
+          "symbol": "M:js.b(I)Lbw;",
+          "original": "b",
+          "renamed": "first"
+        },
+        {
+          "start": 4087,
+          "end": 4088,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
+        },
+        {
+          "start": 4128,
+          "end": 4129,
+          "symbol": "M:js.c(I)Lbw;",
+          "original": "c",
+          "renamed": "next"
         },
         {
           "start": 4214,
@@ -685393,7 +685723,7 @@
       "original": "kia.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "49aa69a78bf10eed0533bd76ad839722dcf490ad5008ee2378eeac04ff11592b",
-      "outputSha256": "943436dfb2a93ff4a2b626e97a433793e17ef6ab48d5b5af5fd874ae8e36c911",
+      "outputSha256": "bd10d926a59990c44aa05381a0fcd6b1804aefdfe933d93ea8dbe68b5c43041c",
       "edits": [
         {
           "start": 50,
@@ -685471,6 +685801,20 @@
           "symbol": "M:vga.e()Z",
           "original": "e",
           "renamed": "isDone"
+        },
+        {
+          "start": 2883,
+          "end": 2884,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 3055,
+          "end": 3056,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 3307,
@@ -686923,7 +687267,7 @@
       "original": "kka.java",
       "renamed": "kka.java",
       "inputSha256": "106e8c5b1f539e6325b5fe1a1c95c5b953b152bbe6fd064f77e3019dd70261e0",
-      "outputSha256": "aace882e2063bc4a46a5c313199f55822aba2bd30a2770bc8bed362c9576008c",
+      "outputSha256": "a939e42c9235bc21f42cd71a1c1e616a26382391d2a16e06f37c8b86df4de6a6",
       "edits": [
         {
           "start": 62,
@@ -686966,6 +687310,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 545,
+          "end": 546,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 646,
@@ -687641,7 +687992,7 @@
       "original": "kma.java",
       "renamed": "kma.java",
       "inputSha256": "91007fbfe46e4ae42675fa75104a66cd26971b3ae2a3a7eee50034f95c7f13df",
-      "outputSha256": "2cce5bdb708b2df185119625c90bb71ae5f52bc2ecb7b27d97daaa8a60ae5319",
+      "outputSha256": "9c22ad67be90e7289f0f6a90c129349f1d976c487a7d499c010a43a6159f7f30",
       "edits": [
         {
           "start": 208,
@@ -687698,6 +688049,13 @@
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "MoveInfoPanel"
+        },
+        {
+          "start": 6491,
+          "end": 6492,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 6811,
@@ -696101,7 +696459,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "550508bfa2028241e034bfd73f71c1b784b8f4f858e82204d6f64c327cb07a01",
-      "outputSha256": "990bd9654978057d84e9a9ed18e98a807060fff2c1493be50cf6c71f9be9dfc0",
+      "outputSha256": "e391fdc2bfe80194c46f2a3c880453b72e168a5b8564aa888129fa936c8a9ccf",
       "edits": [
         {
           "start": 124,
@@ -696123,6 +696481,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 554,
+          "end": 555,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 874,
@@ -696172,6 +696537,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1958,
+          "end": 1959,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 2279,
@@ -696735,7 +697107,7 @@
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "5d5bb8f8408e26874c77698a4c16b59212080e5141ea56a1f2729a25fd7dcb00",
-      "outputSha256": "3e4e48c63e399f00a969d458ea55c58abed5b3eab0b0066337ac67a2bd4dc1cc",
+      "outputSha256": "68a4a15cb13ed58dbd5fd250e1964115374da3cb6716df4ab4a6a16bc2c4cc7f",
       "edits": [
         {
           "start": 386,
@@ -696757,6 +697129,13 @@
           "symbol": "C:cma",
           "original": "cma",
           "renamed": "InsanoSauceAnimation"
+        },
+        {
+          "start": 549,
+          "end": 550,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 859,
@@ -699181,7 +699560,7 @@
       "original": "ln.java",
       "renamed": "TeleportAnimation.java",
       "inputSha256": "49b7289bfe1112c91dfcfb88cbe81747ac99b698efdb40f764dd5a689ee4f63d",
-      "outputSha256": "3467362e7ed29bf5b55bb5349cf2dc5a0fdb2f40a103d296c81ebc890b1805aa",
+      "outputSha256": "ef020a2fa6df5e1548ef3c544f14d5e2eb80293102841c4605ab3300520a6804",
       "edits": [
         {
           "start": 50,
@@ -699490,6 +699869,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SuperSpeedEvent"
+        },
+        {
+          "start": 4997,
+          "end": 4998,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 5005,
@@ -705602,7 +705988,7 @@
       "original": "m.java",
       "renamed": "m.java",
       "inputSha256": "267b8f3401d9057553e73ad2abd31e8cd745ab515c914659ed4824d0cccc83e0",
-      "outputSha256": "17b0e7ab893881f106fd863af7f2c0deb97aa2dd630c2302466ca40d36ea88dc",
+      "outputSha256": "114126cb13c9737dad41f5bd26318994fdbc1f8b96376341ebdb90ab19183d05",
       "edits": [
         {
           "start": 140,
@@ -705617,6 +706003,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 481,
+          "end": 482,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         }
       ]
     },
@@ -708814,7 +709207,7 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "d39443cff699bbb6ed1e0e914ca931232fcfcd89cd80a3b05a0604c2cdef1ce3",
-      "outputSha256": "dc259e30ccb7134c269fb7942c6c02d75c7d9a48c0c01f820f9e66a16d953c9c",
+      "outputSha256": "2702dc8d10a83750e10d9f6e3381ee7bf613effd694f71b85e2133af6f18c59b",
       "edits": [
         {
           "start": 67,
@@ -710329,6 +710722,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "BuffVendorEvent"
+        },
+        {
+          "start": 26943,
+          "end": 26944,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 27341,
@@ -712459,7 +712859,7 @@
       "original": "mq.java",
       "renamed": "mq.java",
       "inputSha256": "66609283331aac2be0a8101605c07cba60d0d93fe2a54ea0f4ae5a08feb3938d",
-      "outputSha256": "6084d20d0544f6b11bed6ff3f50f8595147eb9a44a88beba71c070abc66451bc",
+      "outputSha256": "2ea944dc03c9d7fb29c94662cbadbb6f660610d217195e16a668db3971558dde",
       "edits": [
         {
           "start": 95,
@@ -712497,11 +712897,25 @@
           "renamed": "MoveInfoPanel"
         },
         {
+          "start": 8812,
+          "end": 8813,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 8880,
           "end": 8882,
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "MoveInfoPanel"
+        },
+        {
+          "start": 8891,
+          "end": 8892,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 9070,
@@ -712511,11 +712925,25 @@
           "renamed": "MoveInfoPanel"
         },
         {
+          "start": 9081,
+          "end": 9082,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 9147,
           "end": 9149,
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "MoveInfoPanel"
+        },
+        {
+          "start": 9158,
+          "end": 9159,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         }
       ]
     },
@@ -721739,7 +722167,7 @@
       "original": "np.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "e7cb0ba3522139b58387038698e10af7c9b0a9b548d8fec569540e66b4c35f60",
-      "outputSha256": "09c847f9dfb6ae13766fb338ca77e207cfd21dbb25ea77054d49506479f5f26c",
+      "outputSha256": "872009688c4340e6250aa287cc41b680941701bdc7b7fbcb61d7450dd16b5fc7",
       "edits": [
         {
           "start": 71,
@@ -721812,6 +722240,13 @@
           "renamed": "next"
         },
         {
+          "start": 1050,
+          "end": 1051,
+          "symbol": "M:np.a(I)V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
           "start": 1113,
           "end": 1120,
           "symbol": "F:bw.field_b:Lbw;",
@@ -721859,6 +722294,13 @@
           "symbol": "C:wha",
           "original": "wha",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 2352,
+          "end": 2353,
+          "symbol": "M:np.a(I)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 2433,
@@ -723884,7 +724326,7 @@
       "original": "oaa.java",
       "renamed": "oaa.java",
       "inputSha256": "74ec1f58e294d72d4dd1b10c517813e2370c322fed174b3df345901d6db17d5e",
-      "outputSha256": "c808f3def33b97b8e44d8dc7bf6f5b8ad1918d86268b739700dbd5c7e3eac41f",
+      "outputSha256": "9c2780e22517fdc8d29e1bcf66454d7c2fcec2c18fa78941b3bc696a7f17fce8",
       "edits": [
         {
           "start": 67,
@@ -723936,6 +724378,13 @@
           "renamed": "BuffVendorEvent"
         },
         {
+          "start": 1756,
+          "end": 1757,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 1865,
           "end": 1868,
           "symbol": "C:lka",
@@ -723948,6 +724397,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "BuffVendorEvent"
+        },
+        {
+          "start": 2065,
+          "end": 2066,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         }
       ]
     },
@@ -741898,7 +742354,7 @@
       "original": "pha.java",
       "renamed": "pha.java",
       "inputSha256": "33cc8d6ac27a4e0dcd94941e4a0501235e94c201b9c8de7608c34a7d68af1b8c",
-      "outputSha256": "98909f2573e65bee3c07451fa0dde06b8910d9c31d968da1f7747657a8a6279e",
+      "outputSha256": "f449b70ac1f59a59282394f5dc4e1eec3186edadd73eb69660eb842011bb390c",
       "edits": [
         {
           "start": 145,
@@ -741950,6 +742406,13 @@
           "renamed": "TBomberAnimation"
         },
         {
+          "start": 1828,
+          "end": 1829,
+          "symbol": "M:wha.a(JB)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 2083,
           "end": 2084,
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
@@ -741957,11 +742420,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2382,
+          "end": 2383,
+          "symbol": "M:wha.a(JB)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 2628,
           "end": 2635,
           "symbol": "F:eo.field_h:J",
           "original": "field_h",
           "renamed": "secondaryKey"
+        },
+        {
+          "start": 2734,
+          "end": 2735,
+          "symbol": "M:wha.a(IJLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 2744,
@@ -742004,6 +742481,13 @@
           "symbol": "M:eo.b(I)V",
           "original": "b",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 3700,
+          "end": 3701,
+          "symbol": "M:wha.a(IJLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 3810,
@@ -751260,7 +751744,7 @@
       "original": "qh.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "f2133c65ef61f2355d4aaad142723cc05f5a22a8cfcf44c87d6de0b7e761db2c",
-      "outputSha256": "c4bb166297ebd1e7653aaeca1c60a29d7041e0335e584c43c1d20fd75a5016cb",
+      "outputSha256": "bcf550e114606bfa751732b6acb5ae7e47cdfdcb9fabb0dd4ab8df0238338c86",
       "edits": [
         {
           "start": 50,
@@ -751583,6 +752067,13 @@
           "symbol": "C:rf",
           "original": "rf",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 5157,
+          "end": 5158,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 5165,
@@ -754800,7 +755291,7 @@
       "original": "qs.java",
       "renamed": "qs.java",
       "inputSha256": "004964e159784ea42db2837ec645967ba5ab39db2adf6527a85e3123ccd977bb",
-      "outputSha256": "af161a8f2948502597b70412227abed690ff1c4aa05a77afe02087ed2a6e84f4",
+      "outputSha256": "c78efc4b342ea73ee15ee7490f7f274cb68b65b6fda6315defa4b4a03f9fc092",
       "edits": [
         {
           "start": 101,
@@ -754878,6 +755369,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "StampedeAnimation"
+        },
+        {
+          "start": 2171,
+          "end": 2172,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 2179,
@@ -774736,7 +775234,7 @@
       "original": "te.java",
       "renamed": "te.java",
       "inputSha256": "dc4dcaf2183bfe6698e348ba684f830fe6cb6732a511f2ed466f906edb00eefa",
-      "outputSha256": "8f38a9926f80d8f2354ea8ab11a092cc05f0b6a117d3fa3f2f010b0ae18c6fa2",
+      "outputSha256": "1a1a17d0f7b000453bff72e2a861d262e0e4544579bb7a4c10caeca5c13d1f4e",
       "edits": [
         {
           "start": 100,
@@ -774772,6 +775270,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 2714,
+          "end": 2715,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 3046,
@@ -783255,7 +783760,7 @@
       "original": "uha.java",
       "renamed": "uha.java",
       "inputSha256": "78531dfe63ad085d9217f905177d93dff545cbc66dc7c0b23b4209bd38ef243c",
-      "outputSha256": "223b1f005c1c9199494f09bf9fb7be616aa1f7ba784e542d0469dab9af73d901",
+      "outputSha256": "2521bf26e41dae1e31e91f9d6e7b09ad38ffef0dfb295cefab844cb576b38dca",
       "edits": [
         {
           "start": 62,
@@ -783487,6 +783992,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 6386,
+          "end": 6387,
+          "symbol": "M:eo.d(I)J",
+          "original": "d",
+          "renamed": "getSecondaryKey"
         },
         {
           "start": 6443,
@@ -786647,7 +787159,7 @@
       "original": "ut.java",
       "renamed": "ut.java",
       "inputSha256": "609b6a79bda5304bb0df55b4fe9417e8fc5646f018480d3ad924c65ae414a7ba",
-      "outputSha256": "75a7c583dd9cb9e7cb086ff79e4dc239069478a3155609bbb44e674ad51890dc",
+      "outputSha256": "cb0d8cb41816ed1c77c0326c0d592bb8529627fc5df48c3868b2820ba8a18492",
       "edits": [
         {
           "start": 197,
@@ -786781,6 +787293,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 8460,
+          "end": 8461,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 8847,
@@ -793021,7 +793540,7 @@
       "original": "vi.java",
       "renamed": "vi.java",
       "inputSha256": "328df99459cd4e700ca13e7ffdfa8f05211475f5a71da5d4f8c69a91c16388c2",
-      "outputSha256": "77436720cb69cb2aac19e35c8012853ed8cbd1d2205a333c22998d023491d851",
+      "outputSha256": "ff4d670c3584357a52202a5c7167b7401b5d0075fb4a5fecea93659ef8e0ad43",
       "edits": [
         {
           "start": 66,
@@ -793094,6 +793613,13 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 760,
+          "end": 761,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
           "start": 911,
           "end": 912,
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
@@ -793120,6 +793646,13 @@
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "ResetAnimation"
+        },
+        {
+          "start": 1426,
+          "end": 1427,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 1745,
@@ -793162,6 +793695,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2102,
+          "end": 2103,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 2300,
@@ -799179,7 +799719,7 @@
       "original": "wca.java",
       "renamed": "CreatureType.java",
       "inputSha256": "5b5a26454ab8056096ef42bc2b04c66205b49e5a805e184ba1cc5d0a36fa7766",
-      "outputSha256": "485b1896ffff0fc2900b09bf32fb37c271f16a74e94df96d780c0c5a25ee7bfa",
+      "outputSha256": "7b8e0208fb01dd997ebf44c9f755336ce1111ff4cc64c9e8ac6aa2d4bd407851",
       "edits": [
         {
           "start": 71,
@@ -799285,6 +799825,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 12441,
+          "end": 12442,
+          "symbol": "M:js.a(JBLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 12746,
@@ -800369,7 +800916,7 @@
       "original": "wg.java",
       "renamed": "wg.java",
       "inputSha256": "4d2694aaeb929eae6579ecae1d7ac7072e91e550c0081312b7a5ecc1b1fa6250",
-      "outputSha256": "3bb04be3bb16792b2df933d7812a6de3b2652143aa2c9e6bcc3e8bc2d2a55a7e",
+      "outputSha256": "6b426f17896532e51e3881c7e3b13340d7d37d7a45203c533f3625b1a7253e98",
       "edits": [
         {
           "start": 107,
@@ -800526,11 +801073,25 @@
           "renamed": "TextInputWidget"
         },
         {
+          "start": 7009,
+          "end": 7010,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 7085,
           "end": 7088,
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "TextInputWidget"
+        },
+        {
+          "start": 7261,
+          "end": 7262,
+          "symbol": "M:js.a(ZJ)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 7326,
@@ -801030,7 +801591,7 @@
       "original": "wha.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "6645ecf0e1c02d9d2cdbb74a3ae8d619071c0911ef13dd4a7ff1ea33465d08d3",
-      "outputSha256": "5c79c29fb97926a13730cb146235cd230b3562d6d6fb6d2e2c910061bcb04501",
+      "outputSha256": "c4c7219dbb90e410c7136e9bbeeae3fabb8fe4cf136f53d8edc96dce270c66eb",
       "edits": [
         {
           "start": 71,
@@ -801059,6 +801620,13 @@
           "symbol": "C:np",
           "original": "np",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 373,
+          "end": 374,
+          "symbol": "M:wha.a(IJLbw;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 400,
@@ -801157,6 +801725,13 @@
           "symbol": "C:bw",
           "original": "bw",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1103,
+          "end": 1104,
+          "symbol": "M:wha.a(JB)Lbw;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 1141,
@@ -806460,10 +807035,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "c6d6530cf13870fa5a62978b5e9a0fea8ed30600c2905590ab0100fb16712f3a",
+    "rulesSha256": "269dea762bffc3187159a2782bad536c199468a537ffafd710ca5c585fe5cbf0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "b49188518dd626e96d0d4e01e766d9e8bd837a19221cc8877279f611495c574d",
+    "outputTreeSha256": "8abc44617d504c2f5b2bb3d6d60216b55619a60f36a64d63e8ec751ad77bb4cc",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

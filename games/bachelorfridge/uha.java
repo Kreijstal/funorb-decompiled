@@ -208,7 +208,7 @@ final class uha extends UiComponent {
         if (param0 >= -44) {
           return -126;
         }
-        return (int)this.d(-115);
+        return (int)this.getSecondaryKey(-115);
     }
 
     uha(int param0) {

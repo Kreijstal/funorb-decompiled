@@ -18,7 +18,7 @@ abstract class ud extends en {
     private final void a(int param0, qm param1) {
         try {
           if (null != this.field_V) {
-            this.field_V.a(false);
+            this.field_V.unlink(false);
           }
           if (param1 == null) {
             this.field_V = new th();

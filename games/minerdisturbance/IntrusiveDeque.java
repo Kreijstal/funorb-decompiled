@@ -89,7 +89,7 @@ final class IntrusiveDeque {
     final void a(IntrusiveNode param0, int param1) {
         try {
           if (param0.field_c != null) {
-            param0.b(34);
+            param0.unlink(34);
           }
           param0.field_f = this.field_c.field_f;
           param0.field_c = this.field_c;
@@ -147,7 +147,7 @@ final class IntrusiveDeque {
           if (var2 == this.field_c) {
             break;
           }
-          var2.b(34);
+          var2.unlink(34);
         }
         this.field_e = null;
         if (param0 == 55) {
@@ -174,7 +174,7 @@ final class IntrusiveDeque {
     final void a(byte param0, IntrusiveNode param1) {
         try {
           if (param1.field_c != null) {
-            param1.b(34);
+            param1.unlink(34);
           }
           param1.field_c = this.field_c.field_c;
           int var3_int = 7 / ((-29 - param0) / 56);
@@ -192,11 +192,11 @@ final class IntrusiveDeque {
           return null;
         }
         if (param0 == 51510) {
-          var2.b(34);
+          var2.unlink(34);
           return var2;
         }
         this.field_e = (IntrusiveNode) null;
-        var2.b(34);
+        var2.unlink(34);
         return var2;
     }
 
@@ -221,7 +221,7 @@ final class IntrusiveDeque {
           return null;
         }
         if (param0 == 63854) {
-          var2.b(34);
+          var2.unlink(34);
           return var2;
         }
         return (IntrusiveNode) null;

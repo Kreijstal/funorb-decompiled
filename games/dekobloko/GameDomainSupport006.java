@@ -24,7 +24,7 @@ class GameDomainSupport006 extends MixedSupport043 {
         RuntimeException caughtExceptionLocal7 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart012Argument2.performAction0149((byte) 111);
+          sceneWidgetPart012Argument2.unlink((byte) 111);
           sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1741((byte) -61));
           while (sceneWidgetPart012Local1 != null) {
             if (sceneWidgetPart012Local1.computeBoolean1607(-985, sceneWidgetPart012Argument2)) {

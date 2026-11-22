@@ -386,7 +386,7 @@ final class hba extends AttackEvent {
         try {
           PizzaArenaTheme.field_i = new IntrusiveNodeHashTable(4);
           for (var1_int = 0; jk.field_k.length > var1_int; var1_int++) {
-            PizzaArenaTheme.field_i.a((long)jk.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
+            PizzaArenaTheme.field_i.put((long)jk.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
           }
           if (param0 != 7) {
             field_v = (String) null;

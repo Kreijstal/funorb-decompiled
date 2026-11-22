@@ -408,7 +408,7 @@ final class NetworkSupport011 {
             stackObjectLocal6 = null;
             return (RawSound) (stackObjectLocal6);
           }
-          vorbisSampleLocal16.performAction0149((byte) 101);
+          vorbisSampleLocal16.unlink((byte) 101);
           this.mixedSupport086State0003.performAction1109(longLocal14, -1, rawSoundLocal18);
           stackRawSoundLocal7 = rawSoundLocal18;
           return stackRawSoundLocal7;

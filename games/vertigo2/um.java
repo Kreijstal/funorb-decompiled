@@ -248,7 +248,7 @@ abstract class um extends UiWidget implements dq {
             eh.field_c = 200;
             var1 = (gg) (fm.field_b.a((byte) 100));
             while (var1 != null) {
-              if (!var1.field_q.b(param0 + 91)) {
+              if (!var1.field_q.isLinked(param0 + 91)) {
                 var1.unlink(2);
               }
               var1 = (gg) (fm.field_b.b(104));
@@ -256,7 +256,7 @@ abstract class um extends UiWidget implements dq {
             if (ro.field_b != null) {
               var1Lifetime1 = (gg) (ro.field_b.a((byte) 100));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_q.b(86)) {
+                if (!var1Lifetime1.field_q.isLinked(86)) {
                   var1Lifetime1.unlink(2);
                 }
                 var1Lifetime1 = (gg) (ro.field_b.b(96));

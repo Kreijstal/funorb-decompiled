@@ -34,7 +34,7 @@ final class tb {
             var4_ref_ha = (ha) (bj.field_n.c((byte) 47));
             if (var4_ref_ha != null &&
               var4_ref_ha.field_q < var2_long) {
-              var4_ref_ha.c(-1);
+              var4_ref_ha.unlink(-1);
               pd.field_l = var4_ref_ha.field_r.length;
               AccountRequestState.field_a.position = 0;
               for (var5_int = 0; pd.field_l > var5_int; var5_int++) {

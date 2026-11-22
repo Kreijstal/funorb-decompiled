@@ -220,7 +220,7 @@ final class vi implements Runnable {
               }
             }
             var4_ref_sa.field_i = true;
-            var4_ref_sa.c(2);
+            var4_ref_sa.unlink(2);
             return;
           }
           if (var2 == 1) {
@@ -239,7 +239,7 @@ final class vi implements Runnable {
               return;
             }
             var6.field_o = var4;
-            var6.c(2);
+            var6.unlink(2);
             return;
           }
           ti.a((Throwable) null, (byte) 100, "HS1: " + la.a(-105));

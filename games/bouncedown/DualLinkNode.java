@@ -21,7 +21,7 @@ class DualLinkNode extends IntrusiveNode {
         field_h = null;
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.field_i != null) {
           int var2 = -31 % ((param0 + 57) / 61);
           this.field_i.field_l = this.field_l;

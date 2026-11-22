@@ -874,7 +874,7 @@ public final class Vertigo2 extends GameShell {
           ca.a((byte) -90);
           UiPanel.clearStaticReferences(false);
           uh.clearStaticReferences((byte) -69);
-          fi.clearStaticReferences(0);
+          SecondaryNodeHashTable.clearStaticReferences(0);
           bs.b((byte) 100);
           BitPacketBuffer.r(116);
           jd.a(-109);

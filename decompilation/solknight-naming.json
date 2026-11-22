@@ -1788,6 +1788,14 @@
       "renamedSymbol": "M:mh.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:n.b(I)V",
+      "originalName": "b",
+      "to": "reset",
+      "evidence": "Set current node from bucket0.previous and clear last-returned first. Int>-23 calls hasNext while old bucket index still applies,then sets index1;other ints set1 directly. Preserve stale-index traversal/possible failure and all cursor effects. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V"
+    },
+    {
       "symbol": "M:na.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "to": "throwUnchecked",
@@ -158146,9 +158154,9 @@
     },
     {
       "symbol": "M:n.b(I)V",
-      "renamedSymbol": "M:NodeHashTableIterator.b(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "reset",
       "declaration": {
         "file": "n.java",
         "start": 1403,
@@ -198010,7 +198018,7 @@
     },
     {
       "symbol": "P:n.b(I)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.b(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258097,7 +258105,7 @@
       "original": "n.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "5e60400efb69400d290c956749ab2ca7b51d7872ad3487e493b37a33b04f3204",
-      "outputSha256": "e56b27dd30e59d89ff559072a848dcf2feddd813f6637edc49121402a5050373",
+      "outputSha256": "cb3d52b744340e17429f92963165cac71aecfe19a8d36b40b2c6cdd7be9af305",
       "edits": [
         {
           "start": 71,
@@ -258191,6 +258199,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 1403,
+          "end": 1404,
+          "symbol": "M:n.b(I)V",
+          "original": "b",
+          "renamed": "reset"
+        },
+        {
           "start": 1455,
           "end": 1462,
           "symbol": "F:ii.field_b:[Lgg;",
@@ -258266,6 +258281,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 2504,
+          "end": 2505,
+          "symbol": "M:n.b(I)V",
+          "original": "b",
+          "renamed": "reset"
         }
       ]
     },
@@ -277044,10 +277066,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/solknight"
     },
-    "rulesSha256": "dd12c214bb596b4eaeb406cc8f6f0f28c0170a0db2a5c1fd4373eedd27aa6d20",
+    "rulesSha256": "d048c5daaa16d8662c8decb07dd3acb14aedd48385c793defabb8cb4797aa8fd",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
-    "outputTreeSha256": "df911d9873df29460f57db44db30022220d9ee1fc2c97ef436c2939b46d69dc8",
+    "outputTreeSha256": "0982ccb0bc87fecbe20542456142992980dadfc5a0834b8b64d3baa51a06b4b0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

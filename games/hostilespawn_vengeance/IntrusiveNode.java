@@ -253,7 +253,7 @@ class IntrusiveNode {
         }
     }
 
-    final void b(int param0) {
+    final void unlink(int param0) {
         if (null == this.field_f) {
           return;
         }
@@ -264,7 +264,7 @@ class IntrusiveNode {
         int var2 = -107 % ((67 - param0) / 39);
     }
 
-    final boolean a(int param0) {
+    final boolean isLinked(int param0) {
         if (param0 != 3000) {
           return false;
         }

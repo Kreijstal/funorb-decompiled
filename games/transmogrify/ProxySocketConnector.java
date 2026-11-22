@@ -362,7 +362,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var6.field_eb = var4_ref_StringLifetime1;
           var6.field_fb = (String) (var3Lifetime1);
-          var6.c(param0 + 12);
+          var6.unlink(param0 + 12);
           var7 = (uk) (PacketBuffer.field_k.a((byte) -95));
           while (var7 != null) {
             if (fc.a((byte) 118, var7, var6)) {

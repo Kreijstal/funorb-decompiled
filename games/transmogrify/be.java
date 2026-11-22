@@ -62,7 +62,7 @@ final class be extends ih {
           param2 == 0 &&
           !var12.field_p &&
           var12.field_m) {
-          var12.c(5);
+          var12.unlink(5);
           var4 = null;
         }
         if (var4 == null) {
@@ -142,7 +142,7 @@ final class be extends ih {
                 this.field_k[param0] = (byte) 1;
               }
               if (!((rh) (var4)).field_p) {
-                ((rh) (var4)).c(param1 + 3);
+                ((rh) (var4)).unlink(param1 + 3);
               }
               stackIn_91_0 = var4;
               return (rh) (stackIn_91_0);
@@ -152,7 +152,7 @@ final class be extends ih {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_k[param0] = (byte)-1;
-            ((rh) (var4)).c(param1 ^ 7);
+            ((rh) (var4)).unlink(param1 ^ 7);
             if (((rh) (var4)).field_p) {
               if (this.field_t.b(6)) {
                 return null;
@@ -191,7 +191,7 @@ final class be extends ih {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_t.d(126);
-          ((rh) (var4)).c(5);
+          ((rh) (var4)).unlink(5);
           if (!((rh) (var4)).field_p) {
             return null;
           }
@@ -213,7 +213,7 @@ final class be extends ih {
           }
         }
         if (!((rh) (var4)).field_p) {
-          ((rh) (var4)).c(5);
+          ((rh) (var4)).unlink(5);
         }
         return (rh) (var4);
     }
@@ -310,13 +310,13 @@ final class be extends ih {
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.c(5);
+            var2.unlink(5);
           } else {
             if (this.field_v.field_l <= var3) {
-              var2.c(5);
+              var2.unlink(5);
             } else {
               if (0 == this.field_v.field_s[var3]) {
-                var2.c(5);
+                var2.unlink(5);
               } else {
                 if (0 == this.field_k[var3]) {
                   discarded$0 = this.a(var3, (byte) 2, 1);
@@ -325,7 +325,7 @@ final class be extends ih {
                   discarded$1 = this.a(var3, (byte) 2, 2);
                 }
                 if (this.field_k[var3] == 1) {
-                  var2.c(param0 ^ 23884);
+                  var2.unlink(param0 ^ 23884);
                 }
               }
             }
@@ -490,7 +490,7 @@ final class be extends ih {
               if (this.field_k[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.c(5);
+                var3.unlink(5);
               }
               var3 = this.field_s.a(true);
             }
@@ -532,7 +532,7 @@ final class be extends ih {
                   discarded$3 = this.a(var4Lifetime1, (byte) 2, 2);
                 }
                 if (1 == this.field_k[var4Lifetime1]) {
-                  var3Lifetime1.c(5);
+                  var3Lifetime1.unlink(5);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -582,7 +582,7 @@ final class be extends ih {
                 if (!var2.field_p) {
                   throw new RuntimeException();
                 }
-                var2.c(5);
+                var2.unlink(5);
               } else {
                 var2.field_o = true;
               }
@@ -600,7 +600,7 @@ final class be extends ih {
           return null;
         }
         byte[] var5 = var4.e(256);
-        var4.c(5);
+        var4.unlink(5);
         return var5;
     }
 

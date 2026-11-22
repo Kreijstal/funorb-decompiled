@@ -28,7 +28,7 @@ final class DualLinkDequeIterator implements Iterator {
             return;
           }
           for (var1_int = 0; ShieldSpecial.field_t.length > var1_int; var1_int++) {
-            pga.field_b.a((long)ShieldSpecial.field_t[var1_int].hashCode(), (byte) 61, new ji(var1_int));
+            pga.field_b.put((long)ShieldSpecial.field_t[var1_int].hashCode(), (byte) 61, new ji(var1_int));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

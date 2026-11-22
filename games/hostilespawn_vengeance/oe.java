@@ -39,7 +39,7 @@ final class oe implements Iterator {
         if (this.field_f == null) {
           throw new IllegalStateException();
         }
-        this.field_f.b(-124);
+        this.field_f.unlink(-124);
         this.field_f = null;
     }
 

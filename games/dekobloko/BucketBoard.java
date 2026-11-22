@@ -1237,7 +1237,7 @@ final class BucketBoard {
                 rawPcmStreamLocal29.performAction0458(-1);
               }
               if (rawPcmStreamLocal23 != null &&
-                rawPcmStreamLocal29.computeBoolean0144((byte) 93) &&
+                rawPcmStreamLocal29.isLinked((byte) 93) &&
                 rawPcmStreamLocal29.abstractAudioSampleState0001 == rawSoundLocal20) {
                 rawPcmStreamLocal23.performAction0437(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               } else {

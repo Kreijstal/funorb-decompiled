@@ -1484,7 +1484,7 @@ public final class Torquing extends tg {
                           }
                           if (GzipDecompressor.field_b * 2 != oo.field_b) {
                             if (2 * GzipDecompressor.field_b < oo.field_b) {
-                              if (!ResourceArchive.field_k[11].e(17) &&
+                              if (!ResourceArchive.field_k[11].isLinked(17) &&
                                 var11 <= oo.field_b) {
                                 this.a(true, GzipDecompressor.field_c, 5, var6 != 0);
                               } else {

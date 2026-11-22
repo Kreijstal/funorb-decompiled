@@ -98,7 +98,7 @@ final class se {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(false) << sc.a(768, var7 << 8));
             }
             var4_ref_fi.field_p = true;
-            var4_ref_fi.c(-1);
+            var4_ref_fi.unlink(-1);
             return;
           }
           if (var2 == 1) {
@@ -116,7 +116,7 @@ final class se {
               k.c(-28354);
               return;
             }
-            var5.c(-1);
+            var5.unlink(-1);
             return;
           }
           ud.a("LR1: " + ak.a(true), (Throwable) null, 0);

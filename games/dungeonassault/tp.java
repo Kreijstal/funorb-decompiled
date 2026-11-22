@@ -240,7 +240,7 @@ final class tp extends bb {
                       this.field_i.field_G = 0;
                     }
                   } else {
-                    this.field_i.b((byte) -2);
+                    this.field_i.unlinkSecondary((byte) -2);
                     this.field_i.field_v = false;
                     this.field_i = null;
                   }

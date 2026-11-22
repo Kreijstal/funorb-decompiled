@@ -44,7 +44,7 @@ final class ce extends td {
           this.field_h = (bc) null;
         }
         byte[] var4 = var3.d((byte) -124);
-        var3.c(2);
+        var3.unlink(2);
         return var4;
     }
 
@@ -172,7 +172,7 @@ final class ce extends td {
           0 == param0 &&
           !var12.field_m &&
           var12.field_n) {
-          var12.c(param1 ^ 253);
+          var12.unlink(param1 ^ 253);
           var4 = null;
         }
         if (var4 == null) {
@@ -252,7 +252,7 @@ final class ce extends td {
                 this.field_p[param2] = (byte) 1;
               }
               if (!((gj) (var4)).field_m) {
-                ((gj) (var4)).c(2);
+                ((gj) (var4)).unlink(2);
               }
               stackIn_92_0 = var4;
               return (gj) (stackIn_92_0);
@@ -262,7 +262,7 @@ final class ce extends td {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_p[param2] = (byte)-1;
-            ((gj) (var4)).c(2);
+            ((gj) (var4)).unlink(2);
             if (((gj) (var4)).field_m &&
               !this.field_f.b(false)) {
               var4 = this.field_f.a(param2, (byte) 2, 36, true, this.field_q);
@@ -299,7 +299,7 @@ final class ce extends td {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_f.c((byte) 113);
-          ((gj) (var4)).c(2);
+          ((gj) (var4)).unlink(2);
           if (((gj) (var4)).field_m) {
             if (this.field_f.b(false)) {
               return null;
@@ -318,7 +318,7 @@ final class ce extends td {
           }
         }
         if (!((gj) (var4)).field_m) {
-          ((gj) (var4)).c(2);
+          ((gj) (var4)).unlink(2);
         }
         return (gj) (var4);
     }
@@ -434,7 +434,7 @@ final class ce extends td {
               if (this.field_p[var5] == 0) {
                 var3_int = 0;
               } else {
-                var4.c(2);
+                var4.unlink(2);
               }
               var4 = this.field_h.d((byte) -102);
             }
@@ -475,7 +475,7 @@ final class ce extends td {
                   discarded$1 = this.a(2, 255, var5Lifetime1);
                 }
                 if (1 == this.field_p[var5Lifetime1]) {
-                  var4Lifetime1.c(2);
+                  var4Lifetime1.unlink(2);
                 } else {
                   var3_intLifetime1 = 0;
                 }
@@ -525,7 +525,7 @@ final class ce extends td {
                 if (!var3.field_m) {
                   throw new RuntimeException();
                 }
-                var3.c(2);
+                var3.unlink(2);
               }
             }
             var3 = (gj) (this.field_o.a(-1));
@@ -556,7 +556,7 @@ final class ce extends td {
           if (0 <= var3) {
             if (var3 < this.field_s.field_m) {
               if (this.field_s.field_q[var3] == 0) {
-                var2.c(2);
+                var2.unlink(2);
               } else {
                 if (this.field_p[var3] == 0) {
                   discarded$0 = this.a(1, param0 - 2093, var3);
@@ -565,14 +565,14 @@ final class ce extends td {
                   discarded$1 = this.a(2, 255, var3);
                 }
                 if (this.field_p[var3] == 1) {
-                  var2.c(2);
+                  var2.unlink(2);
                 }
               }
             } else {
-              var2.c(2);
+              var2.unlink(2);
             }
           } else {
-            var2.c(2);
+            var2.unlink(2);
           }
           var2 = this.field_c.d((byte) -108);
         }

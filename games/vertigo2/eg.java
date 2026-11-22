@@ -74,7 +74,7 @@ final class eg extends tk {
             while (var2 != null) {
               this.field_f.position = 0;
               this.field_f.writeByte(1, param0 ^ -3703);
-              this.field_f.b((byte) 90, var2.field_n);
+              this.field_f.b((byte) 90, var2.secondaryKey);
               this.field_u.a(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
               this.field_a.a(false, var2);
               var2 = (ia) (this.field_b.a(true));
@@ -83,7 +83,7 @@ final class eg extends tk {
             while (var2Lifetime1 != null) {
               this.field_f.position = 0;
               this.field_f.writeByte(0, 93);
-              this.field_f.b((byte) 125, var2Lifetime1.field_n);
+              this.field_f.b((byte) 125, var2Lifetime1.secondaryKey);
               this.field_u.a(0, this.field_f.payload.length, -93, this.field_f.payload);
               this.field_g.a(false, var2Lifetime1);
               var2Lifetime1 = (ia) (this.field_d.a(true));
@@ -171,7 +171,7 @@ final class eg extends tk {
                       if (var11 == 0) {
                         var14_ref = (ia) (this.field_a.b((byte) -50));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_n == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -183,7 +183,7 @@ final class eg extends tk {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (ia) (this.field_g.b((byte) -50));
                         while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_n) {
+                          if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (ia) (this.field_g.a(true));

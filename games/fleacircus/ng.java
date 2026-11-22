@@ -220,7 +220,7 @@ final class ng {
             stackIn_17_0 = null;
             return (sf) (stackIn_17_0);
           }
-          var9.c(-1);
+          var9.unlink(-1);
           this.field_f.a(var8Lifetime1, true, var6);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;

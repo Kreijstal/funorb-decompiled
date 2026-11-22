@@ -180,7 +180,7 @@ final class gf {
           var2.readInt((byte) 122);
           var2.readInt((byte) 127);
           var2.readInt((byte) 124);
-          var1.c(-1);
+          var1.unlink(-1);
           return;
         }
         if (var1 == null) {
@@ -192,7 +192,7 @@ final class gf {
         var2Lifetime1.readInt((byte) 122);
         var2Lifetime1.readInt((byte) 127);
         var2Lifetime1.readInt((byte) 124);
-        var1.c(-1);
+        var1.unlink(-1);
     }
 
     public static void c(int param0) {

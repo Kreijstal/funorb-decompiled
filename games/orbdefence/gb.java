@@ -23,8 +23,8 @@ final class gb {
             field_g = (String[]) null;
           }
           if (param0 != null) {
-            param0.b(57);
-            param0.c(-1);
+            param0.unlink(57);
+            param0.unlinkSecondary(-1);
             this.field_f = this.field_f + param0.field_m;
           }
           return;
@@ -57,7 +57,7 @@ final class gb {
             this.a(var6, param0 ^ 0);
           }
           var6_ref = new lc(param1, param2);
-          this.field_i.a(var6_ref, param0 - 124, param3);
+          this.field_i.put(var6_ref, param0 - 124, param3);
           this.field_c.a(var6_ref, 21693);
           ((nf) ((Object) var6_ref)).field_h = (long)param0;
         } catch (RuntimeException runtimeException) {
@@ -67,24 +67,24 @@ final class gb {
 
     final Object a(long param0, int param1) {
         lc var6 = null;
-        nf var7 = (nf) (this.field_i.a(param0, param1 - 1));
+        nf var7 = (nf) (this.field_i.get(param0, param1 - 1));
         if (var7 == null) {
           return null;
         }
         Object var5 = var7.f(param1);
         if (var5 == null) {
-          var7.b(57);
-          var7.c(-1);
+          var7.unlink(57);
+          var7.unlinkSecondary(-1);
           this.field_f = this.field_f + var7.field_m;
           return null;
         }
         if (var7.g(param1 ^ 9)) {
           var6 = new lc(var5, var7.field_m);
-          this.field_i.a(var6, -128, var7.field_d);
+          this.field_i.put(var6, -128, var7.field_d);
           this.field_c.a(var6, 21693);
           ((nf) ((Object) var6)).field_h = 0L;
-          var7.b(57);
-          var7.c(-1);
+          var7.unlink(57);
+          var7.unlinkSecondary(-1);
         } else {
           this.field_c.a(var7, 21693);
           var7.field_h = 0L;
@@ -93,7 +93,7 @@ final class gb {
     }
 
     private final void a(int param0, long param1) {
-        nf var4 = (nf) (this.field_i.a(param1, -1));
+        nf var4 = (nf) (this.field_i.get(param1, -1));
         if (param0 != 2) {
           this.field_c = (DualLinkDeque) null;
         }

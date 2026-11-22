@@ -137,7 +137,7 @@ final class BagpipeSpecial extends SpecialOrder {
         if (var2.equals("")) {
           return -1;
         }
-        return ((ji) (i.field_h.a(true, (long)var2.hashCode()))).field_h;
+        return ((ji) (i.field_h.get(true, (long)var2.hashCode()))).field_h;
     }
 
     public static void releaseStatics(int param0) {

@@ -18,7 +18,7 @@ final class bh {
         if (this.field_f == var2) {
           return null;
         }
-        var2.c(-1);
+        var2.unlinkSecondary(-1);
         if (param0 == 27) {
           return var2;
         }
@@ -310,7 +310,7 @@ final class bh {
         try {
           int var3_int = -17 / ((param1 + 79) / 43);
           if (null != param0.field_i) {
-            param0.c(-1);
+            param0.unlinkSecondary(-1);
           }
           param0.field_i = this.field_f.field_i;
           param0.field_j = this.field_f;

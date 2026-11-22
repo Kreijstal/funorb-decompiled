@@ -42,7 +42,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
           mixedSupport108Local2 = new MixedSupport108(this.nodeDequeState0013);
           uiComponentLocal3 = (UiComponent) (mixedSupport108Local2.computeHashNode1412((byte) 71));
           while (uiComponentLocal3 != null) {
-            if (uiComponentLocal3.computeBoolean0144((byte) 38)) {
+            if (uiComponentLocal3.isLinked((byte) 38)) {
               uiComponentLocal3.performAction0218(uiComponentArgument1, 47, this.integerState0104 + integerArgument3, integerArgument4 + this.integerState0110);
               uiComponentLocal3 = (UiComponent) (mixedSupport108Local2.computeHashNode1414(-62));
               continue;
@@ -94,7 +94,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
           integerLocal2 = 18 % ((-22 - integerArgument1) / 49);
           uiComponentLocal5 = (UiComponent) (mixedSupport108Local6.computeHashNode1412((byte) 71));
           while (uiComponentLocal5 != null) {
-            if (uiComponentLocal5.computeBoolean0144((byte) 124)) {
+            if (uiComponentLocal5.isLinked((byte) 124)) {
               if (uiComponentLocal5.computeBoolean0220(true) &&
                 uiComponentLocal5.computeBoolean0182(-79, integerArgument2, uiComponentArgument3, characterArgument4)) {
                 return true;
@@ -142,7 +142,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
           mixedSupport108Local1 = new MixedSupport108(this.nodeDequeState0013);
           uiComponentLocal2 = (UiComponent) (mixedSupport108Local1.computeHashNode1412((byte) 71));
           while (uiComponentLocal2 != null) {
-            if (uiComponentLocal2.computeBoolean0144((byte) 119)) {
+            if (uiComponentLocal2.isLinked((byte) 119)) {
               uiComponentLocal2.performAction0213(integerArgument1, integerArgument2 ^ 0, this.integerState0110 + integerArgument3, uiComponentArgument4, this.integerState0104 + integerArgument5, integerArgument6);
               uiComponentLocal2 = (UiComponent) (mixedSupport108Local1.computeHashNode1414(-126));
               continue;
@@ -393,7 +393,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
             return true;
           }
           while (uiComponentLocal3 != null) {
-            if (uiComponentLocal3.computeBoolean0144((byte) 120)) {
+            if (uiComponentLocal3.isLinked((byte) 120)) {
               if (uiComponentLocal3.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, this.integerState0104 + integerArgument5, this.integerState0110 + integerArgument6, (byte) -55)) {
                 return true;
               }
@@ -441,7 +441,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
           }
           uiComponentLocal2 = (UiComponent) (mixedSupport108Local5.computeHashNode1412((byte) 71));
           while (uiComponentLocal2 != null) {
-            if (uiComponentLocal2.computeBoolean0144((byte) 67)) {
+            if (uiComponentLocal2.isLinked((byte) 67)) {
               if (uiComponentLocal2.computeBoolean0220(true) &&
                 uiComponentLocal2.computeBoolean0214(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6, booleanArgument7)) {
                 return true;

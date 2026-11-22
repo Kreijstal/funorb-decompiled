@@ -2294,7 +2294,7 @@ final class mh {
                 if (ig.field_r[25] == null) {
                   ig.field_r[25] = PcmSampleStream.a(th.field_F[25], 100, 96);
                 }
-                if (ig.field_r[25].e(17)) {
+                if (ig.field_r[25].isLinked(17)) {
                   break regionExit1;
                 }
                 ig.field_r[25].c(0);

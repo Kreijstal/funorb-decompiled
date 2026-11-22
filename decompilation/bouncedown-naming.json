@@ -684,6 +684,22 @@
       "renamedSymbol": "M:ByteStorage.getBytes(I)[B"
     },
     {
+      "symbol": "M:ai.b(I)Z",
+      "originalName": "b",
+      "to": "isLinked",
+      "evidence": "Return false when field_f null,then false for int<108,otherwise true. Preserve test order and guard domain. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.isLinked(I)Z"
+    },
+    {
+      "symbol": "M:ai.c(I)V",
+      "originalName": "c",
+      "to": "unlink",
+      "evidence": "If field_f nonnull splice both neighboring primary links,clear field_f then field_c,then wrong int!=2 writes key field_d=120L. If already unlinked return before guard/key mutation;preserve all partial effects. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.unlink(I)V"
+    },
+    {
       "symbol": "M:ba.d(B)V",
       "originalName": "d",
       "to": "clearStaticReferences",
@@ -1634,6 +1650,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 d0b0898d1a42e128820965da5a82df0d5f40de8df45fa67cf9afcfafc70ee9fe.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Slime.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ug.a(I)V",
+      "originalName": "a",
+      "to": "unlinkSecondary",
+      "evidence": "If secondary link field_i nonnull evaluate-31%((int+57)/61) before either splice;then splice both secondary neighbors and clear field_i then field_l. Unlinked path skips arithmetic. Preserve overflow/failure/write order. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(I)V"
     },
     {
       "symbol": "M:ug.b(B)V",
@@ -125817,7 +125841,7 @@
     },
     {
       "symbol": "L:ug.a(I)V#0",
-      "renamedSymbol": "L:DualLinkNode.a(I)V#0",
+      "renamedSymbol": "L:DualLinkNode.unlinkSecondary(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136520,9 +136544,9 @@
     },
     {
       "symbol": "M:ai.b(I)Z",
-      "renamedSymbol": "M:IntrusiveNode.b(I)Z",
+      "renamedSymbol": "M:IntrusiveNode.isLinked(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isLinked",
       "declaration": {
         "file": "ai.java",
         "start": 1078,
@@ -136531,9 +136555,9 @@
     },
     {
       "symbol": "M:ai.c(I)V",
-      "renamedSymbol": "M:IntrusiveNode.c(I)V",
+      "renamedSymbol": "M:IntrusiveNode.unlink(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "unlink",
       "declaration": {
         "file": "ai.java",
         "start": 202,
@@ -155528,9 +155552,9 @@
     },
     {
       "symbol": "M:ug.a(I)V",
-      "renamedSymbol": "M:DualLinkNode.a(I)V",
+      "renamedSymbol": "M:DualLinkNode.unlinkSecondary(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "unlinkSecondary",
       "declaration": {
         "file": "ug.java",
         "start": 482,
@@ -159004,7 +159028,7 @@
     },
     {
       "symbol": "P:ai.b(I)Z#0",
-      "renamedSymbol": "P:IntrusiveNode.b(I)Z#0",
+      "renamedSymbol": "P:IntrusiveNode.isLinked(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -159015,7 +159039,7 @@
     },
     {
       "symbol": "P:ai.c(I)V#0",
-      "renamedSymbol": "P:IntrusiveNode.c(I)V#0",
+      "renamedSymbol": "P:IntrusiveNode.unlink(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -204610,7 +204634,7 @@
     },
     {
       "symbol": "P:ug.a(I)V#0",
-      "renamedSymbol": "P:DualLinkNode.a(I)V#0",
+      "renamedSymbol": "P:DualLinkNode.unlinkSecondary(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -211493,7 +211517,7 @@
       "original": "ai.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "731d3e200664c7f17832d03f8466852a42a9afc5c38d346c489b7ac994e3b4c7",
-      "outputSha256": "275f85de5a0dc452e6dd26bc458f28038f9cd055d135a6d5bb0b0cbf18bf3cf6",
+      "outputSha256": "25224217ef4fe32c54a30df2281c450ba24e66abb2a57ca4947b236594516529",
       "edits": [
         {
           "start": 44,
@@ -211517,11 +211541,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 202,
+          "end": 203,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 733,
           "end": 735,
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1078,
+          "end": 1079,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
         },
         {
           "start": 5320,
@@ -211926,7 +211964,7 @@
       "original": "bc.java",
       "renamed": "bc.java",
       "inputSha256": "c7f413b6ae1e669fbf12829332dd4c97ca53003ecceec6e8d3f4cba9b5ff2bf3",
-      "outputSha256": "513752bdd24e916a9aa9c7a21d87cedd1cb049513c74707b2825395ed9636302",
+      "outputSha256": "435491533b2a204868f7ee865ce2387b5ecbdf3fbbeaf19b7aa9fbe7d1a5fab5",
       "edits": [
         {
           "start": 59,
@@ -211969,6 +212007,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 636,
+          "end": 637,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 691,
@@ -212027,11 +212072,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1651,
+          "end": 1652,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 1714,
           "end": 1716,
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1800,
+          "end": 1801,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 1875,
@@ -212076,6 +212135,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2677,
+          "end": 2678,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 3017,
           "end": 3019,
           "symbol": "C:ii",
@@ -212088,6 +212154,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3431,
+          "end": 3432,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 3528,
@@ -213744,14 +213817,28 @@
       "original": "ce.java",
       "renamed": "ce.java",
       "inputSha256": "4183fca27877c9838b2f9899d10ac91f05e483d24dfdb16ca8bba9fb9bcad93b",
-      "outputSha256": "97398822121eff3fd1e190f67e1c613a7f665e83acd2e2df474088592d7f422d",
+      "outputSha256": "a84d5ecac0e50b2540e9b8345b2842d3b337c0c0ae1c65f7aaea51a4d4366a0e",
       "edits": [
+        {
+          "start": 1142,
+          "end": 1143,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
         {
           "start": 4126,
           "end": 4127,
           "symbol": "M:ce.c(B)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5084,
+          "end": 5085,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 6342,
@@ -213761,6 +213848,20 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7957,
+          "end": 7958,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 8387,
+          "end": 8388,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 8602,
           "end": 8604,
           "symbol": "C:ai",
@@ -213768,11 +213869,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 9857,
+          "end": 9858,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 10118,
           "end": 10120,
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 10597,
+          "end": 10598,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 13017,
@@ -213810,11 +213925,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 14209,
+          "end": 14210,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 14779,
           "end": 14781,
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 15736,
+          "end": 15737,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 15916,
@@ -213840,11 +213969,46 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 17471,
+          "end": 17472,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 17727,
           "end": 17729,
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 18245,
+          "end": 18246,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 18593,
+          "end": 18594,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 18673,
+          "end": 18674,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 18729,
+          "end": 18730,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 21730,
@@ -214262,7 +214426,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "d2d5c19b9140a6d67b141925e97480a78f6a9984eddab1e5b55acd461a9da3df",
-      "outputSha256": "86becdaad69001e09f8d9357d9ff043825679999cdc96557a9f41dfd501216e0",
+      "outputSha256": "7fe26bcfb006dfb707e0db43a84f67f047d9c2f06b162f3ac882bb77803a22d9",
       "edits": [
         {
           "start": 1741,
@@ -214342,11 +214506,25 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 6617,
+          "end": 6618,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 6701,
           "end": 6702,
           "symbol": "M:wi.i(I)I",
           "original": "i",
           "renamed": "readSignedSmart"
+        },
+        {
+          "start": 7205,
+          "end": 7206,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 7731,
@@ -214361,7 +214539,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "3a06135a8dfdcfb8299e55e0114319d8f259e2ab69ebfa21646670127e1ebce4",
-      "outputSha256": "7b0221d1193bffb7eba7e2fe3c70801eef007fc9299284837a650b047ab459fd",
+      "outputSha256": "acc2dfaa2cfc7a97f7e6d99f2125bc4c8a9284aed1edf8fe7203e542a02a1dd3",
       "edits": [
         {
           "start": 661,
@@ -214488,6 +214666,13 @@
           "symbol": "M:wi.b(Z)Ljava/lang/String;",
           "original": "b",
           "renamed": "readString"
+        },
+        {
+          "start": 11069,
+          "end": 11070,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 11139,
@@ -214782,7 +214967,7 @@
       "original": "dh.java",
       "renamed": "dh.java",
       "inputSha256": "ab5c076535d7fab21fbdbc7815336e8e84250dc3867bd7780cd7badfe8db9ae5",
-      "outputSha256": "25c64a5c455dd9d7118fcb820db740f01294b938a6e89b93bf614d1c07dcd978",
+      "outputSha256": "7998cfa3ddd0c061db61d9395987e4c7e0c8bd415d146b38656bbabd29abeb2a",
       "edits": [
         {
           "start": 197,
@@ -214797,6 +214982,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 456,
+          "end": 457,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 2045,
@@ -214839,7 +215031,7 @@
       "original": "di.java",
       "renamed": "di.java",
       "inputSha256": "adcdc441e194c13db23fb2fb8580b9b3d106c2bc08b2abfff33a0bd26f19f084",
-      "outputSha256": "e91b60bf2b6a60f89e8e919197f28ae5aa2e4040e1de6fbbae8b968627986a6c",
+      "outputSha256": "475dc75950d8888e71e62078ad1e727b54161df43490a70b40a86ab531daedfb",
       "edits": [
         {
           "start": 108,
@@ -214896,6 +215088,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 3733,
+          "end": 3734,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         }
       ]
     },
@@ -215648,7 +215847,7 @@
       "original": "ef.java",
       "renamed": "ef.java",
       "inputSha256": "4ca3a4e7d43fa39afb94169195cafe023f09b42bc30ddf3192dce377722ea2c0",
-      "outputSha256": "bdc9663c46754371b31043cfc6ede394e99ba426b2d01a223e0a792f99428c7e",
+      "outputSha256": "dbeb474ad3d488a54a3abbbc83908940c5fd8cc339c462c5df37be4bec201337",
       "edits": [
         {
           "start": 463,
@@ -215684,6 +215883,13 @@
           "symbol": "M:wi.j(I)I",
           "original": "j",
           "renamed": "readInt"
+        },
+        {
+          "start": 578,
+          "end": 579,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         }
       ]
     },
@@ -218028,7 +218234,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "5bc0e7ea789192f89af0f87016330ab0bb8e92e28ec236251c56c335cb33477b",
-      "outputSha256": "7798c5db2c047a4d85731004ae89011e9a55036a51d9ad0fdcfb29db6048b5cc",
+      "outputSha256": "528fc547032165dfeecf8b440df1ef96311a2915994aba02eca12c6a57416726",
       "edits": [
         {
           "start": 354,
@@ -218101,6 +218307,27 @@
           "renamed": "Slime"
         },
         {
+          "start": 7662,
+          "end": 7663,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 7833,
+          "end": 7834,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 8367,
+          "end": 8368,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 8591,
           "end": 8593,
           "symbol": "C:ii",
@@ -218120,7 +218347,7 @@
       "original": "hc.java",
       "renamed": "hc.java",
       "inputSha256": "67edb973c07d1777583d294252d1a11c67fae7b11a0b240a58f861d8dae1e183",
-      "outputSha256": "d11d1a55964296dd14bedfbd4c86a0ae6d7bf0660ba7375fa9d3d4fe43d6fec8",
+      "outputSha256": "b1ce09e79071594c40b7ab446a1d6dc4a6f5cf8b1c9e1ebc33f3dc4deffc9001",
       "edits": [
         {
           "start": 96,
@@ -218184,6 +218411,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1681,
+          "end": 1682,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2087,
@@ -218353,7 +218587,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "516a0744b0fbdf7553c6bea106ba5c01a622693d29b6b87408dddf0d3716642e",
-      "outputSha256": "1e0698e71cb79c76c2c348c76098e15e41c823e71e28f0f75fad6a6dee373148",
+      "outputSha256": "3e01cf9cc1ca62d361bac12eeaf89c4eba9477e4e73df3263806cfd89213566c",
       "edits": [
         {
           "start": 61,
@@ -218466,6 +218700,20 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 4332,
+          "end": 4333,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 4389,
+          "end": 4390,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 4613,
@@ -218913,7 +219161,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "d437ceb05d65e0f95275b730f8f1416a0c7f249b6834ae78049dee1adc99e7c9",
-      "outputSha256": "fa420dc582bb8ba2ae3e78e62bd66652e203ab37d8c34df20cf5ed67157ce7c7",
+      "outputSha256": "3c1bf0105b81779dafaca96be778e014228b638f06b116ac775b30974c8435a8",
       "edits": [
         {
           "start": 1541,
@@ -218935,6 +219183,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 3912,
+          "end": 3913,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 4483,
@@ -221825,14 +222080,28 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "52ca0552e17f0308df16fd04c910b40697d90c9e6afb6067a8347e3e60b841dc",
-      "outputSha256": "a0b48e5e950ebbd383c2eedd13ec82ac766ffbf08f463b3a5dc87148772b71be",
+      "outputSha256": "e6e683c73ac435603a6af54fbd9bbc88b763ba9c3d2a76087717caf173ae1925",
       "edits": [
+        {
+          "start": 751,
+          "end": 752,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
+        },
         {
           "start": 1497,
           "end": 1499,
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 3173,
+          "end": 3174,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
         },
         {
           "start": 4143,
@@ -221847,6 +222116,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 7619,
+          "end": 7620,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
         },
         {
           "start": 8369,
@@ -221877,6 +222153,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 12100,
+          "end": 12101,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
+        },
+        {
           "start": 13072,
           "end": 13074,
           "symbol": "C:ii",
@@ -221896,6 +222179,13 @@
           "symbol": "M:lc.i(I)V",
           "original": "i",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 16397,
+          "end": 16398,
+          "symbol": "M:ai.b(I)Z",
+          "original": "b",
+          "renamed": "isLinked"
         },
         {
           "start": 17273,
@@ -221931,7 +222221,7 @@
       "original": "ld.java",
       "renamed": "ld.java",
       "inputSha256": "a927141e5a25254476c70e2456b4e6d9f9589f3f759e84cb24daabc71f1ecf5c",
-      "outputSha256": "52b1ed725f9045e10b724a47b2039090997b2a7ec37fd452fa78934ba67a6dd2",
+      "outputSha256": "b61ea6158f9b86659e19a06dec13d32d0c566819b52433d7e2bcb65e7034ca20",
       "edits": [
         {
           "start": 61,
@@ -221997,6 +222287,13 @@
           "renamed": "verifyCrc32"
         },
         {
+          "start": 1225,
+          "end": 1226,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 1507,
           "end": 1508,
           "symbol": "M:wi.j(I)I",
@@ -222016,6 +222313,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "Slime"
+        },
+        {
+          "start": 1849,
+          "end": 1850,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 2132,
@@ -222052,7 +222356,7 @@
       "original": "lf.java",
       "renamed": "lf.java",
       "inputSha256": "c80e1c578b492e12058f94869c298a9cd2c927d275bd6118bf94911a6b9491d4",
-      "outputSha256": "a9d5728b8562df6b540521439de044145fa55a4157d478d00cb32332e37479e3",
+      "outputSha256": "5301842ddc96e253889fc6eb2de2e06e92a275d1d4218dd247927fdf8a4f14a8",
       "edits": [
         {
           "start": 93,
@@ -222144,6 +222448,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6792,
+          "end": 6793,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 7114,
@@ -222394,7 +222705,7 @@
       "original": "m.java",
       "renamed": "m.java",
       "inputSha256": "4902a366c23c608156b6709da674348b596b5d81858ffc0cb6da432c73ba46b9",
-      "outputSha256": "986a146b80baef0bea4b532090ceff8ebf5c67d87fd9eef6534381459f263d5b",
+      "outputSha256": "d1bbc2d57a380ed4b9c7112798d6e55b0dc8c6fb3c805ec929d958d7db20943c",
       "edits": [
         {
           "start": 124,
@@ -222444,6 +222755,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1347,
+          "end": 1348,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 1704,
@@ -222947,7 +223265,7 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "d42114df4f16e80617f3449c57c487e99bb02574d39a11c09403c82c9caeafab",
-      "outputSha256": "9158977c0048ed962c185c6d4a32804c69e90b15bdc7a254a54f13c8bba0ad1f",
+      "outputSha256": "974d118ed15815ed071a4007e86c06d419fed8ba78054efff189d681fb9a89bb",
       "edits": [
         {
           "start": 1571,
@@ -222990,6 +223308,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 10677,
+          "end": 10678,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 11175,
@@ -223434,7 +223759,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "5c6a4267978e38631be3699900f61b88abdded21fe4b452ca1dc19f7be535975",
-      "outputSha256": "000ea76d2cfca70afe8ffa2c228af529790e357f971c8fdca02444f0e20a726e",
+      "outputSha256": "e90e97c31f28a51705f10113f6825ea219088b486d2968e3ed53ec77dfdd48e7",
       "edits": [
         {
           "start": 67,
@@ -223486,6 +223811,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1671,
+          "end": 1672,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
           "start": 1999,
           "end": 2001,
           "symbol": "C:ii",
@@ -223512,6 +223844,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2317,
+          "end": 2318,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2648,
@@ -224812,7 +225151,7 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "8554c8707fa6688181a9802fc783f023eff9eb95e3e3f9a86f86777906624aef",
-      "outputSha256": "244f0aff9b340457f1ca723936db9f2d92c7f5d62c24b83a133baec5bc203c68",
+      "outputSha256": "9f516ca0c68b03f6e428d59f9d74ff0e84a57218d90d58489258ea772637e19e",
       "edits": [
         {
           "start": 1013,
@@ -224820,6 +225159,48 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1470,
+          "end": 1471,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 1491,
+          "end": 1492,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 1961,
+          "end": 1962,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 1996,
+          "end": 1997,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 2439,
+          "end": 2440,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 2472,
+          "end": 2473,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2802,
@@ -224841,6 +225222,20 @@
           "symbol": "M:od.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 3886,
+          "end": 3887,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 3918,
+          "end": 3919,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 4450,
@@ -225874,14 +226269,28 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "8555f0193e63733d27c88a3a29ab03607d20f2720dbe8bd9b4c6979db87062f5",
-      "outputSha256": "be018db443beb871e55d7cc3a974fca63a624c183d299d49f990ba34771ddcd2",
+      "outputSha256": "359e75c4074ade566e39c265a4cd982f083e3ba4e6358e1d8c490a745a8d0836",
       "edits": [
+        {
+          "start": 476,
+          "end": 477,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
         {
           "start": 626,
           "end": 627,
           "symbol": "M:pf.j(I)V",
           "original": "j",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1083,
+          "end": 1084,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 2771,
@@ -226024,8 +226433,93 @@
       "original": "pi.java",
       "renamed": "pi.java",
       "inputSha256": "e177a7810cf28fcbe011399fb1ddd4248e74c453ca2373f7f0ff3205316fcfd5",
-      "outputSha256": "e177a7810cf28fcbe011399fb1ddd4248e74c453ca2373f7f0ff3205316fcfd5",
-      "edits": []
+      "outputSha256": "d9e07b6db976c094d898e3dcfa646ac07783c8524d7b71a05fdb3447df62a244",
+      "edits": [
+        {
+          "start": 1916,
+          "end": 1917,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 2102,
+          "end": 2103,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 6998,
+          "end": 6999,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 7221,
+          "end": 7222,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 8064,
+          "end": 8065,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 8537,
+          "end": 8538,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 8723,
+          "end": 8724,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 12565,
+          "end": 12566,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 12730,
+          "end": 12731,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 14508,
+          "end": 14509,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 16340,
+          "end": 16341,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 19434,
+          "end": 19435,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        }
+      ]
     },
     {
       "original": "pj.java",
@@ -226074,7 +226568,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "16401ee00a865246d460a48d33b66d0a5a497c088f0df914a5917388915338eb",
-      "outputSha256": "1e50de503fe5572250c7b48174b4f4483427c72c0f0dc4136daa57b21be90b9c",
+      "outputSha256": "d7d5b619600b7b92dfa8cd735bb3e59f678b4c826f86f834ebf47b0b56dcdc3c",
       "edits": [
         {
           "start": 1420,
@@ -226112,11 +226606,32 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 11128,
+          "end": 11129,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 11851,
           "end": 11853,
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 14204,
+          "end": 14205,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
+          "start": 19130,
+          "end": 19131,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 20077,
@@ -226131,6 +226646,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 23356,
+          "end": 23357,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 27411,
@@ -227423,7 +227945,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "e48bea345d3083a630c4d58c79d305504ab4eb6c7d2ff0cf20f6b25ac1f1f192",
-      "outputSha256": "5ce2241ad4c65b656623d7140c39c4bf62b8c021c18b73b8aa4490b6188df846",
+      "outputSha256": "e8aca13643783906ef3b66059442790d7c64efe9cbbe3dba7d89cb2285efc29a",
       "edits": [
         {
           "start": 2199,
@@ -227431,6 +227953,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3421,
+          "end": 3422,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 3455,
@@ -228270,7 +228799,7 @@
       "original": "s.java",
       "renamed": "s.java",
       "inputSha256": "88d08ddcbba5e63645a06fd45a35299139393949f5bc2d27764b308f7729f55f",
-      "outputSha256": "3cd7483b3d4f741fd8ac6386cbbecd62f1fcef0cc13e0b7eac3d451a5e55256a",
+      "outputSha256": "b4e3e4524876d394b1f6631130d457a9a0e399cc7cf9343439da45cf3fed3128",
       "edits": [
         {
           "start": 471,
@@ -228327,6 +228856,13 @@
           "original": "L0",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 3420,
+          "end": 3421,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 3505,
@@ -228411,7 +228947,7 @@
       "original": "sa.java",
       "renamed": "sa.java",
       "inputSha256": "f082194f894e225454ad38c0e79b593e2c17f9daee683bba2a17b5a1057a6950",
-      "outputSha256": "b700d6bc8a5c8d114e25cda00a7547b07a59e6a5b5109e9c3fa50b0958107b25",
+      "outputSha256": "8ded5891bfc4825712987dae15a9005e8f134a78e41975cdba2177afc6d126b2",
       "edits": [
         {
           "start": 80,
@@ -228692,6 +229228,13 @@
           "symbol": "M:wi.b(II)I",
           "original": "b",
           "renamed": "appendCrc32"
+        },
+        {
+          "start": 9614,
+          "end": 9615,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 10146,
@@ -230430,7 +230973,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "8b68ac692c81f6bacfb7854b54667f9be3ff541cc3ed6609f28c9060decaa729",
-      "outputSha256": "4d5e58c30a96f7e6817ac9b83ecfef2cd7f0ca3a36180a6d31c7b9b045065a68",
+      "outputSha256": "f1d9ad984b1b7cdf3a145d4d0fe8ccf9a274b95b9f92f07cf6c499a67cef6eda",
       "edits": [
         {
           "start": 1279,
@@ -230697,6 +231240,13 @@
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 11142,
+          "end": 11143,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 11322,
@@ -231601,7 +232151,7 @@
       "original": "ug.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "4b8dd98807c7c2131b870936927d70c51f6833f3eacfc9bc7e7f915a403d4b15",
-      "outputSha256": "a8efb4a6816fd26ce5b55e2b583b7b6c744e6e9cf71e5968d762eef2c30016d8",
+      "outputSha256": "4c6aa871d315ef6f75464d8d346e0ba537fcc7ddb8c884e10afeb262daf204a9",
       "edits": [
         {
           "start": 44,
@@ -231637,6 +232187,13 @@
           "symbol": "M:ug.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 482,
+          "end": 483,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 788,
@@ -231774,7 +232331,7 @@
       "original": "uk.java",
       "renamed": "uk.java",
       "inputSha256": "edca21022cc36d2f671c20ae6f93cee999d6eba0711c2f4b1c44c2cd8ebc7711",
-      "outputSha256": "9c19362108fb742d5ef2866042c26f065fbf63bdbf15c14b13d8e651be6ac08a",
+      "outputSha256": "7391af397564a6685f3ae529d2f313ac2877aa2a0bca2a5075e293be563791ef",
       "edits": [
         {
           "start": 140,
@@ -231810,6 +232367,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 572,
+          "end": 573,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 631,
@@ -233152,7 +233716,7 @@
       "original": "vi.java",
       "renamed": "vi.java",
       "inputSha256": "0705b93d010a39c6b7a0ebe5b5209163cc04797f471fd48e6082c857cf5fb445",
-      "outputSha256": "8ee44b6f8ef06eb6e1590dfc89409cb3fcefec3e012264bbb9285572bc782cdb",
+      "outputSha256": "00ea476f3d3d7fc913fc1b4a2cf193425d11dcf1a7355a134d708290ec4960fe",
       "edits": [
         {
           "start": 250,
@@ -233288,6 +233852,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 7399,
+          "end": 7400,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
+        },
+        {
           "start": 7498,
           "end": 7499,
           "symbol": "M:wi.a(I)I",
@@ -233300,6 +233871,13 @@
           "symbol": "M:wi.f(B)J",
           "original": "f",
           "renamed": "readLong"
+        },
+        {
+          "start": 7975,
+          "end": 7976,
+          "symbol": "M:ai.c(I)V",
+          "original": "c",
+          "renamed": "unlink"
         },
         {
           "start": 8326,
@@ -233628,7 +234206,7 @@
       "original": "wh.java",
       "renamed": "wh.java",
       "inputSha256": "625c7e5d7114865fedae4859a070a73bea9ae50fc3d73c706c76edec1e8a6677",
-      "outputSha256": "daf5f56ec7423eb9ddc16543b9a3f46d257bbc41f6be2213a2a7dd7c0d552ea0",
+      "outputSha256": "21131468e0ed5a9a96968d9e71901d74e4601bf8aa1a750a8070135b976b2a6a",
       "edits": [
         {
           "start": 100,
@@ -233643,6 +234221,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 532,
+          "end": 533,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 828,
@@ -233678,6 +234263,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1731,
+          "end": 1732,
+          "symbol": "M:ug.a(I)V",
+          "original": "a",
+          "renamed": "unlinkSecondary"
         },
         {
           "start": 2215,
@@ -236353,10 +236945,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "02a5a20ad61fc01b4c284c09592c1766cf61527449bb6210c9f00d0205a9df89",
+    "rulesSha256": "66a23563a79801624a4343b32b17b9702df569816d5b7409c20934367e05b475",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "a755b915c9eb6e22a5c3a7d4bea88a18e3b9026dc7bd7e24e8afeaada6757ef3",
+    "outputTreeSha256": "b88338317a75a73237a2106b69f7516155c171fa20b01bc955d0919935280f1d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

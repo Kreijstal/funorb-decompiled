@@ -22,7 +22,7 @@ class ta extends pj implements c {
           var8 = new km(this.field_x);
           var9 = (pj) (var8.d(27935));
           while (var9 != null) {
-            if (var9.b(true)) {
+            if (var9.isLinked(true)) {
               if (var9.d(-81) &&
                 var9.a(false, param1, param2, param3, param4, param5, param6)) {
                 return true;
@@ -145,7 +145,7 @@ class ta extends pj implements c {
           }
           var9 = (pj) (var11.d(27935));
           while (var9 != null) {
-            if (var9.b(true)) {
+            if (var9.isLinked(true)) {
               if (var9.a((byte) -124, param1, param2, param3 + this.field_s, param4, param5, this.field_n + param6)) {
                 return true;
               }
@@ -384,7 +384,7 @@ class ta extends pj implements c {
           }
           var8 = (pj) (var7.d(27935));
           while (var8 != null) {
-            if (var8.b(true)) {
+            if (var8.isLinked(true)) {
               var8.a(this.field_n + param0, param1, (byte) -98, param3, param4 + this.field_s, param5);
               var8 = (pj) (var7.b(true));
               continue;
@@ -645,7 +645,7 @@ class ta extends pj implements c {
           var5 = new km(this.field_x);
           var6 = (pj) (var5.d(27935));
           while (var6 != null) {
-            if (var6.b(true)) {
+            if (var6.isLinked(true)) {
               var6.a((byte) -77, param1, param2 + this.field_s, this.field_n + param3);
               var6 = (pj) (var5.b(true));
               continue;
@@ -684,7 +684,7 @@ class ta extends pj implements c {
           var10 = new km(this.field_x);
           var9 = (pj) (var10.d(27935));
           while (var9 != null) {
-            if (var9.b(true)) {
+            if (var9.isLinked(true)) {
               if (var9.d(-81) &&
                 var9.a(param0, param1, param2, 0)) {
                 return true;

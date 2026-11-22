@@ -129,7 +129,7 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
             }
             break;
           }
-          sceneWidgetPart014Local17.performAction0149((byte) 119);
+          sceneWidgetPart014Local17.unlink((byte) 119);
           sceneWidgetPart014Local17.performAction0134((byte) 121);
           integerState0502 = integerState0502 - 1;
           cipherPacketBufferLocal18 = SocketFactory.cipherPacketBufferState0002;

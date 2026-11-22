@@ -209,7 +209,7 @@ class vj extends eb {
             if (var10 != null) {
               ((hh) (var10)).field_j = var15;
             }
-            this.field_R.a(var15, -16611);
+            this.field_R.addFirst(var15, -16611);
             var10 = var15;
           }
         }

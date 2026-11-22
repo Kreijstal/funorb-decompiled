@@ -65,7 +65,7 @@ final class hm extends jc {
         cc var3 = (cc) (var2.d(param0 - 19608));
         while (var3 != null) {
           if (var3.n(-4)) {
-            var3.b(34);
+            var3.unlink(34);
           }
           var3 = (cc) (var2.a(12537));
         }
@@ -152,7 +152,7 @@ final class hm extends jc {
         cc var3 = (cc) (var2.d(-19864));
         while (var3 != null) {
           if (var3.a(false)) {
-            var3.b(34);
+            var3.unlink(34);
           }
           var3 = (cc) (var2.a(12537));
         }

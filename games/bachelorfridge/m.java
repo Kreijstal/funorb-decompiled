@@ -16,7 +16,7 @@ final class m {
         if (var3.equals("anything")) {
           return -1;
         }
-        return ((ji) (cw.field_zb.a(true, (long)var3.hashCode()))).field_h;
+        return ((ji) (cw.field_zb.get(true, (long)var3.hashCode()))).field_h;
     }
 
     public static void a(byte param0) {

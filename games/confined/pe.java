@@ -168,7 +168,7 @@ final class pe extends IntrusiveNode {
             var4_ref_hc = (hc) (qh.field_w.a(-121));
             if (var4_ref_hc != null &&
               var4_ref_hc.field_r < var2_long) {
-              var4_ref_hc.a(true);
+              var4_ref_hc.unlink(true);
               ai.field_i = var4_ref_hc.field_q.length;
               e.field_c.position = 0;
               for (var5_int = 0; var5_int < ai.field_i; var5_int++) {

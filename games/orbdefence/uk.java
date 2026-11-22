@@ -208,7 +208,7 @@ final class uk {
               }
             }
             var4.field_h = true;
-            var4.b(param0 ^ 125);
+            var4.unlink(param0 ^ 125);
             return;
           }
           if (var2 == 1) {
@@ -224,7 +224,7 @@ final class uk {
             }
             if (var6_ref_vg != null) {
               var6_ref_vg.field_h = var4_long;
-              var6_ref_vg.b(param0 - 11);
+              var6_ref_vg.unlink(param0 - 11);
               return;
             }
             stackIn_12_0 = param0;

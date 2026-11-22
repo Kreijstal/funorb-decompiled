@@ -40,7 +40,7 @@ final class fc {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.field_d) {
-            param2.a(false);
+            param2.unlink(false);
           }
           var5 = this.field_e[(int)((long)(-1 + this.field_c) & param1)];
           param2.field_b = var5;

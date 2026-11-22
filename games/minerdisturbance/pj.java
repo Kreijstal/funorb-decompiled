@@ -206,7 +206,7 @@ final class pj implements uj {
               }
             }
             param1.appendCrc32(-84, var4);
-            var17.b(param0 - 85);
+            var17.unlink(param0 - 85);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

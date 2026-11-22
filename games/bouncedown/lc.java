@@ -23,7 +23,7 @@ class lc extends lk implements ik {
           var5 = new ea(this.field_w);
           var6 = (lk) (var5.a(22092));
           while (var6 != null) {
-            if (var6.b(115)) {
+            if (var6.isLinked(115)) {
               var6.a(-1, param1 + this.field_r, this.field_i + param2, param3);
               var6 = (lk) (var5.c(-91));
               continue;
@@ -98,7 +98,7 @@ class lc extends lk implements ik {
           var8 = new ea(this.field_w);
           var9 = (lk) (var8.a(22092));
           while (var9 != null) {
-            if (var9.b(126)) {
+            if (var9.isLinked(126)) {
               if (var9.e(1) &&
                 var9.a(param0, param1, param2, param3, param4, param5, true)) {
                 return true;
@@ -222,7 +222,7 @@ class lc extends lk implements ik {
           }
           var8 = (lk) (var7.a(22092));
           while (var8 != null) {
-            if (var8.b(121)) {
+            if (var8.isLinked(121)) {
               var8.a(param0, param1 + this.field_r, param2, param3 + this.field_i, 34, param5);
               var8 = (lk) (var7.c(param4 ^ -121));
               continue;
@@ -343,7 +343,7 @@ class lc extends lk implements ik {
             field_y = -32;
           }
           while (var9 != null) {
-            if (var9.b(119)) {
+            if (var9.isLinked(119)) {
               if (var9.e(1) &&
                 var9.a(param0, param1, param2, -14565)) {
                 return true;
@@ -471,7 +471,7 @@ class lc extends lk implements ik {
           var11 = new ea(this.field_w);
           var9 = (lk) (var11.a(22092));
           while (var9 != null) {
-            if (var9.b(param4 - 28340)) {
+            if (var9.isLinked(param4 - 28340)) {
               if (var9.a(param0, param1, this.field_r + param2, param3, 28455, param5, param6 + this.field_i)) {
                 return true;
               }

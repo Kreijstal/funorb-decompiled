@@ -103,8 +103,8 @@ final class ia extends IntrusiveNode {
           }
           var2 = (pd) (bk.field_d.c((byte) 47));
           while (var2 != null) {
-            if (!var2.field_n.b((byte) -54)) {
-              var2.c(-1);
+            if (!var2.field_n.isLinked((byte) -54)) {
+              var2.unlink(-1);
             } else {
               var2.field_m.h(gf.field_d * var2.field_j + 128 >> 8);
             }
@@ -115,11 +115,11 @@ final class ia extends IntrusiveNode {
           }
           var2Lifetime1 = (pd) (jc.field_c.c((byte) 47));
           while (var2Lifetime1 != null) {
-            stackIn_15_0 = var2Lifetime1.field_n.b((byte) -54);
+            stackIn_15_0 = var2Lifetime1.field_n.isLinked((byte) -54);
             if (stackIn_15_0) {
               var2Lifetime1.field_m.h(128 + gf.field_d * var2Lifetime1.field_j >> 8);
             } else {
-              var2Lifetime1.c(-1);
+              var2Lifetime1.unlink(-1);
             }
             var2Lifetime1 = (pd) (jc.field_c.b((byte) -105));
           }

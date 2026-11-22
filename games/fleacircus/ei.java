@@ -489,7 +489,7 @@ final class ei extends sh {
           if (param3.field_q >= 0 && (param3.field_k == null ||
             param3.field_k.e())) {
             param3.d(param2 + 30809);
-            param3.c(-1);
+            param3.unlink(-1);
             if (param3.field_B > 0) {
               if (param3 != this.field_A[param3.field_o][param3.field_B]) {
                 return true;
@@ -575,7 +575,7 @@ final class ei extends sh {
           }
           param3.d(114);
           if (0 <= param3.field_q) {
-            param3.c(-1);
+            param3.unlink(-1);
             if (0 < param3.field_B &&
               param3 == this.field_A[param3.field_o][param3.field_B]) {
               this.field_A[param3.field_o][param3.field_B] = null;
@@ -616,7 +616,7 @@ final class ei extends sh {
             return false;
           }
           if (param0.field_q >= 0) {
-            param0.c(-1);
+            param0.unlink(-1);
             if (param0.field_B > 0 &&
               param0 == this.field_A[param0.field_o][param0.field_B]) {
               this.field_A[param0.field_o][param0.field_B] = null;
@@ -1170,7 +1170,7 @@ final class ei extends sh {
             if (var3.field_q < 0) {
               this.field_D[var3.field_o][var3.field_F] = null;
             }
-            var3.c(-1);
+            var3.unlink(-1);
           }
           var3 = (tk) (this.field_O.field_n.b((byte) -105));
         }

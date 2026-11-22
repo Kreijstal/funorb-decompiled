@@ -16,7 +16,7 @@ class HashNode {
     static MixedSupport132 mixedSupport132State0002;
     static int integerState0070;
 
-    final boolean computeBoolean0144(byte byteArgument1) {
+    final boolean isLinked(byte byteArgument1) {
         if (byteArgument1 > 34) {
           return this.next != null ? true : false;
         }
@@ -62,7 +62,7 @@ class HashNode {
         }
     }
 
-    final void performAction0149(byte byteArgument1) {
+    final void unlink(byte byteArgument1) {
         if (this.next == null) {
           return;
         }

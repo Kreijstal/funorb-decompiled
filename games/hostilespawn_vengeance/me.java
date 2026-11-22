@@ -362,7 +362,7 @@ abstract class me extends wb {
             this.j(1);
           }
           if (this.field_fb != null) {
-            this.field_fb.b(121);
+            this.field_fb.unlink(121);
           }
           if (param0 != null) {
             param0.a(param0.field_s, 6 + this.field_cb, 0, 6, param0.field_x);

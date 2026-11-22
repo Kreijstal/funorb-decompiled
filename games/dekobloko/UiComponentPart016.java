@@ -158,7 +158,7 @@ final class UiComponentPart016 extends ComponentDecorator {
         UiComponentPart003 uiComponentPart003Local3 = (UiComponentPart003) (mixedSupport108Local2.computeHashNode1412((byte) 71));
         while (uiComponentPart003Local3 != null) {
           if (uiComponentPart003Local3.computeBoolean0169((byte) 39)) {
-            uiComponentPart003Local3.performAction0149((byte) 124);
+            uiComponentPart003Local3.unlink((byte) 124);
           }
           uiComponentPart003Local3 = (UiComponentPart003) (mixedSupport108Local2.computeHashNode1414(integerArgument1 - 70));
         }
@@ -201,7 +201,7 @@ final class UiComponentPart016 extends ComponentDecorator {
         UiComponentPart003 uiComponentPart003Local3 = (UiComponentPart003) (mixedSupport108Local2.computeHashNode1412((byte) 71));
         while (uiComponentPart003Local3 != null) {
           if (uiComponentPart003Local3.computeBoolean0167((byte) 110)) {
-            uiComponentPart003Local3.performAction0149((byte) 120);
+            uiComponentPart003Local3.unlink((byte) 120);
           }
           uiComponentPart003Local3 = (UiComponentPart003) (mixedSupport108Local2.computeHashNode1414(byteArgument1 ^ 8));
         }

@@ -26,7 +26,7 @@ final class tj extends od {
     }
 
     final synchronized void a(od param0) {
-        param0.a(false);
+        param0.unlink(false);
     }
 
     final synchronized void b(od param0) {
@@ -76,7 +76,7 @@ final class tj extends od {
     }
 
     private final void a(rj param0) {
-        param0.a(false);
+        param0.unlink(false);
         param0.a();
         IntrusiveNode var2 = this.field_m.field_a.field_b;
         if (var2 == this.field_m.field_a) {

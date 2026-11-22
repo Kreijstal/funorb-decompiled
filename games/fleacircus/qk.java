@@ -110,7 +110,7 @@ final class qk {
         DualLinkNode var5 = null;
         try {
           if (null != param0.field_m) {
-            param0.e(param1 ^ -103);
+            param0.unlinkSecondary(param1 ^ -103);
           }
           var5 = this.field_c[(int)((long)(param1 + this.field_g) & param2)];
           param0.field_m = var5.field_m;

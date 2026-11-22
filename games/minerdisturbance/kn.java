@@ -26,7 +26,7 @@ class kn extends fe implements rk {
           var9 = new hh(this.field_G);
           var8 = (fe) (var9.d(param2 - 19785));
           while (var8 != null) {
-            if (var8.c(123)) {
+            if (var8.isLinked(123)) {
               if (var8.k(param2 - 5) &&
                 var8.a(param0, param1, (byte) -79, param3)) {
                 return true;
@@ -123,7 +123,7 @@ class kn extends fe implements rk {
           var7 = new hh(this.field_G);
           var8 = (fe) (var7.d(-19864));
           while (var8 != null) {
-            if (var8.c(param5 + 127)) {
+            if (var8.isLinked(param5 + 127)) {
               var8.a(param0 + this.field_u, param1, param2, param3 + this.field_t, param4, param5 + 0);
               var8 = (fe) (var7.a(12537));
               continue;
@@ -257,7 +257,7 @@ class kn extends fe implements rk {
           var5 = new hh(this.field_G);
           var6 = (fe) (var5.d(-19864));
           while (var6 != null) {
-            if (var6.c(123)) {
+            if (var6.isLinked(123)) {
               var6.a(this.field_t + param0, this.field_u + param1, (byte) 90, param3);
               var6 = (fe) (var5.a(12537));
               continue;
@@ -409,7 +409,7 @@ class kn extends fe implements rk {
           var8 = new hh(this.field_G);
           var9 = (fe) (var8.d(-19864));
           while (var9 != null) {
-            if (var9.c(126)) {
+            if (var9.isLinked(126)) {
               if (var9.k(35) &&
                 var9.a(param0, param1, param2, param3, (byte) -100, param5, param6)) {
                 return true;
@@ -483,7 +483,7 @@ class kn extends fe implements rk {
           var11 = new hh(this.field_G);
           var9 = (fe) (var11.d(-19864));
           while (var9 != null) {
-            if (var9.c(param2 + 124)) {
+            if (var9.isLinked(param2 + 124)) {
               if (!var9.a(param0, param1 + this.field_t, 0, param3, param4, param5, this.field_u + param6)) {
                 var9 = (fe) (var11.a(12537));
                 continue;

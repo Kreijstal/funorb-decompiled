@@ -99,7 +99,7 @@ final class cl extends WidgetContainer implements jf, n {
           cl.a(-72, 87, (byte) 30, (Sprite) null, -31, 97);
         }
         eg var8 = new eg(param3, param6, param1, param4, param2, param5);
-        ic.field_s.a(var8, -16611);
+        ic.field_s.addFirst(var8, -16611);
         qc.a(param0, var8, (byte) -7);
         return var8;
     }

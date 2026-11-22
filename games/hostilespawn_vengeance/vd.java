@@ -381,7 +381,7 @@ class vd extends ag implements ai {
           var6_ref_ag = (ag) (var5.b(param0 - 273));
           scanLoop1: while (true) {
             if (null != var6_ref_ag) {
-              stackOut_6_0 = var6_ref_ag.a(3000);
+              stackOut_6_0 = var6_ref_ag.isLinked(3000);
               stackIn_20_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
@@ -461,7 +461,7 @@ class vd extends ag implements ai {
           var9 = (ag) (var8.b(1));
           scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_6_0 = var9.a(param3 + 3000);
+              stackOut_6_0 = var9.isLinked(param3 + 3000);
               stackIn_22_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
@@ -622,7 +622,7 @@ class vd extends ag implements ai {
           var5 = new fl(this.field_z);
           var6 = (ag) (var5.b(1));
           while (var6 != null) {
-            if (var6.a(3000)) {
+            if (var6.isLinked(3000)) {
               var6.a(param0, this.field_m + param1, param2 + 0, param3 + this.field_v);
               var6 = (ag) (var5.c(0));
               if (var7 == 0) {
@@ -731,7 +731,7 @@ class vd extends ag implements ai {
           }
           var8 = (ag) (var7.b(1));
           while (var8 != null) {
-            if (var8.a(3000)) {
+            if (var8.isLinked(3000)) {
               var8.a(param0, param1 + this.field_m, this.field_v + param2, param3, param4, 0);
               var8 = (ag) (var7.c(param5 + 0));
               if (var9 == 0) {
@@ -884,7 +884,7 @@ class vd extends ag implements ai {
           var9 = (ag) (var8.b(param4 - 109));
           scanLoop1: while (true) {
             if (null != var9) {
-              stackOut_6_0 = var9.a(3000);
+              stackOut_6_0 = var9.isLinked(3000);
               stackIn_17_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {

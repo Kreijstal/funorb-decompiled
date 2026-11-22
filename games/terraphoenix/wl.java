@@ -519,7 +519,7 @@ final class wl extends PcmStream {
         var10 = Terraphoenix.field_V;
         this.a(param1, (byte) 119, 64, param2);
         if ((2 & this.field_q[param2]) != 0) {
-          var5 = (sh) (this.field_t.field_n.c((byte) -81));
+          var5 = (sh) (this.field_t.field_n.beginForward((byte) -81));
           while (var5 != null) {
             if (param2 == var5.field_v &&
               var5.field_h < 0) {
@@ -580,7 +580,7 @@ final class wl extends PcmStream {
           }
           this.field_O[param2][var8.field_C] = var8;
         }
-        this.field_t.field_n.a(var8, -16611);
+        this.field_t.field_n.addFirst(var8, -16611);
         this.field_J[param2][param1] = var8;
         return;
     }

@@ -28,7 +28,7 @@ final class vc {
         int var2 = 3 / ((28 - param0) / 36);
         IntrusiveNode var3 = this.field_e.field_a;
         if (this.field_e != var3) {
-          var3.c(-1);
+          var3.unlink(-1);
           return var3;
         }
         return null;
@@ -37,7 +37,7 @@ final class vc {
     final void b(boolean param0, IntrusiveNode param1) {
         try {
           if (param1.field_a != null) {
-            param1.c(-1);
+            param1.unlink(-1);
           }
           param1.field_a = this.field_e;
           param1.field_h = this.field_e.field_h;
@@ -161,7 +161,7 @@ final class vc {
     final void a(boolean param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_a) {
-            param1.c(-1);
+            param1.unlink(-1);
           }
           if (param0) {
             field_b = false;
@@ -214,7 +214,7 @@ final class vc {
           return null;
         }
         if (param0 == -22033) {
-          var2.c(-1);
+          var2.unlink(-1);
           return var2;
         }
         return (IntrusiveNode) null;
@@ -227,7 +227,7 @@ final class vc {
         while (true) {
           var2 = this.field_e.field_h;
           if (this.field_e != var2) {
-            var2.c(-1);
+            var2.unlink(-1);
             continue;
           }
           break;

@@ -132,7 +132,7 @@ final class WidgetTheme {
           du.field_a = new IntrusiveNodeHashTable(256);
           var1_int = 35 % ((param0 + 49) / 38);
           for (var2 = 0; var2 < ArchiveIndex.field_h.length; var2++) {
-            du.field_a.a((long)ArchiveIndex.field_h[var2].toLowerCase().hashCode(), (byte) -34, new ji(var2));
+            du.field_a.put((long)ArchiveIndex.field_h[var2].toLowerCase().hashCode(), (byte) -34, new ji(var2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

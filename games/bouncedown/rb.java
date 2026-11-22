@@ -124,7 +124,7 @@ final class rb extends wf {
     }
 
     private final void a(oi param0) {
-        param0.c(2);
+        param0.unlink(2);
         param0.a();
         IntrusiveNode var2 = this.field_l.field_b.field_c;
         if (var2 == this.field_l.field_b) {

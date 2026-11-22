@@ -16,7 +16,7 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(int param0, long param1, IntrusiveNode param2) {
+    final void put(int param0, long param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {
@@ -36,7 +36,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var5 = null;
         int var6 = BachelorFridge.field_y;
         IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_f) & param0)];

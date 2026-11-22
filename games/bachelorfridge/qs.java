@@ -62,7 +62,7 @@ final class qs extends pu {
             field_l = (Sprite[][]) null;
           }
           while (StampedeAnimation.field_C.length > var1_int) {
-            i.field_h.a((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
+            i.field_h.put((long)StampedeAnimation.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
             var1_int++;
           }
           return;

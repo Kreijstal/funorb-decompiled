@@ -376,7 +376,7 @@ final class tb extends uj {
                   var6 = new IntrusiveNode();
                   var6.key = (long)this.field_z;
                   var2_int = 0;
-                  this.field_k.a(var6, -16611);
+                  this.field_k.addFirst(var6, -16611);
                 }
                 this.field_z = this.field_z + 1;
                 continue;
@@ -419,7 +419,7 @@ final class tb extends uj {
                     if (1 != this.field_n[this.field_z]) {
                       var7 = new IntrusiveNode();
                       var7.key = (long)this.field_z;
-                      this.field_k.a(var7, -16611);
+                      this.field_k.addFirst(var7, -16611);
                       var2_intLifetime1 = 0;
                     }
                   }

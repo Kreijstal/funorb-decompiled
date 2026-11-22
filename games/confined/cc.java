@@ -101,10 +101,10 @@ final class cc extends IntrusiveNode {
               var14++;
               var9Lifetime1++;
             }
-            var3.a(true);
+            var3.unlink(true);
             return;
           }
-          var3.a(true);
+          var3.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

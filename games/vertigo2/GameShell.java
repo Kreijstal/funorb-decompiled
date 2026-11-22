@@ -4,7 +4,7 @@
 abstract class GameShell extends GameApplet {
     static String field_B;
     String field_u;
-    static fi field_l;
+    static SecondaryNodeHashTable field_l;
     private boolean field_n;
     private boolean field_t;
     static int field_x;
@@ -268,7 +268,7 @@ abstract class GameShell extends GameApplet {
 
     private final void h(int param0) {
         if (param0 != 30624) {
-          field_l = (fi) null;
+          field_l = (SecondaryNodeHashTable) null;
         }
         wi.field_h[11] = true;
         wi.field_h[13] = true;

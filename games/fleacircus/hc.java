@@ -154,7 +154,7 @@ final class hc {
         IntrusiveNode var5 = null;
         try {
           if (param0.field_a != null) {
-            param0.c(-1);
+            param0.unlink(-1);
           }
           if (!param1) {
             this.a((IntrusiveNode) null, true, 11L);

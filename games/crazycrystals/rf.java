@@ -135,7 +135,7 @@ class rf extends pc {
             rf.a(-16);
           }
           if (param1.field_d != null) {
-            param1.a(false);
+            param1.unlink(false);
           }
           param1.field_b = param0;
           param1.field_d = param0.field_d;

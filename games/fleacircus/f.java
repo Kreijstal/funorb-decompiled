@@ -42,7 +42,7 @@ final class f extends dk {
         db var3 = (db) (var2.b(78));
         while (var3 != null) {
           if (var3.a(-71)) {
-            var3.c(-1);
+            var3.unlink(-1);
           }
           var3 = (db) (var2.c(-6144));
         }
@@ -72,7 +72,7 @@ final class f extends dk {
         db var3 = (db) (var2.b(120));
         while (var3 != null) {
           if (var3.j(112)) {
-            var3.c(-1);
+            var3.unlink(-1);
           }
           var3 = (db) (var2.c(-6144));
         }

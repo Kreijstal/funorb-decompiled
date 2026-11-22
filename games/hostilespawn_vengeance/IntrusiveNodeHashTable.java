@@ -109,7 +109,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         ke.field_s.m(param0 ^ -108);
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = HostileSpawn.field_I ? 1 : 0;
         IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(this.field_b + param1))];
@@ -126,9 +126,9 @@ final class IntrusiveNodeHashTable implements Iterable {
         return null;
     }
 
-    final void a(byte param0, long param1, IntrusiveNode param2) {
+    final void put(byte param0, long param1, IntrusiveNode param2) {
         if (null != param2.field_f) {
-          param2.b(120);
+          param2.unlink(120);
         }
         IntrusiveNode var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_b))];
         if (param0 <= 59) {
@@ -160,8 +160,8 @@ final class IntrusiveNodeHashTable implements Iterable {
           }
           var2 = (qb) (jn.field_H.g(-9));
           while (var2 != null) {
-            if (!var2.field_j.a(3000)) {
-              var2.b(-69);
+            if (!var2.field_j.isLinked(3000)) {
+              var2.unlink(-69);
             } else {
               var2.field_h.f(var2.field_l * wj.field_O + 128 >> 8);
             }
@@ -170,11 +170,11 @@ final class IntrusiveNodeHashTable implements Iterable {
           if (ej.field_g != null) {
             var2Lifetime1 = (qb) (ej.field_g.g(-69));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_j.a(3000);
+              stackIn_14_0 = var2Lifetime1.field_j.isLinked(3000);
               if (stackIn_14_0) {
                 var2Lifetime1.field_h.f(var2Lifetime1.field_l * wj.field_O + 128 >> 8);
               } else {
-                var2Lifetime1.b(119);
+                var2Lifetime1.unlink(119);
               }
               var2Lifetime1 = (qb) (ej.field_g.a(12684));
             }

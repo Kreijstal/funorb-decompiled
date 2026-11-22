@@ -8,7 +8,7 @@ final class jc extends PcmStream {
     private int field_k;
 
     private final void a(gi param0) {
-        param0.c(5);
+        param0.unlink(5);
         param0.a();
         IntrusiveNode var2 = this.field_m.field_d.next;
         if (var2 == this.field_m.field_d) {

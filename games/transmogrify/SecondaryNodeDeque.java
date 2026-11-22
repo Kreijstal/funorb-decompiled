@@ -20,12 +20,12 @@ final class SecondaryNodeDeque implements Iterable {
           return null;
         }
         if (!param0) {
-          var2.b((byte) -74);
+          var2.unlinkSecondary((byte) -74);
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
         this.a(true, (DualLinkNode) null);
-        var2.b((byte) -74);
+        var2.unlinkSecondary((byte) -74);
         return var2;
     }
 
@@ -59,7 +59,7 @@ final class SecondaryNodeDeque implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param1.field_g) {
-            param1.b((byte) -116);
+            param1.unlinkSecondary((byte) -116);
           }
           param1.field_g = this.field_e.field_g;
           param1.field_h = this.field_e;

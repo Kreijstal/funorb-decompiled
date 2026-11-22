@@ -137,7 +137,7 @@ class IntrusiveNode {
         return 100;
     }
 
-    final void b(int param0) {
+    final void unlink(int param0) {
         if (null == this.field_c) {
           return;
         }
@@ -151,7 +151,7 @@ class IntrusiveNode {
         this.field_c = null;
     }
 
-    final boolean b(boolean param0) {
+    final boolean isLinked(boolean param0) {
         if (null == this.field_c) {
           return false;
         }

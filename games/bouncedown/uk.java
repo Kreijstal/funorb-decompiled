@@ -22,7 +22,7 @@ final class uk {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.field_f) {
-            param2.c(2);
+            param2.unlink(2);
           }
           if (param1 < 18) {
             IntrusiveNode var6 = (IntrusiveNode) null;

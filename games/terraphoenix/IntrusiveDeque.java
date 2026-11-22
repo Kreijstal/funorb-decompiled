@@ -9,7 +9,7 @@ final class IntrusiveDeque {
     static String field_d;
     private IntrusiveNode cursor;
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode beginForward(byte param0) {
         int var2 = 31 % ((param0 - 36) / 56);
         IntrusiveNode var3 = this.sentinel.next;
         if (this.sentinel == var3) {
@@ -20,7 +20,7 @@ final class IntrusiveDeque {
         return var3;
     }
 
-    final IntrusiveNode d(byte param0) {
+    final IntrusiveNode removeLast(byte param0) {
         IntrusiveNode var2 = this.sentinel.previous;
         if (var2 != this.sentinel) {
           var2.unlink((byte) 12);
@@ -116,7 +116,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (obfuscationGuard != -119) {
-          this.b((byte) -7);
+          this.removeFirst((byte) -7);
           var2 = this.cursor;
           if (var2 != this.sentinel) {
             this.cursor = var2.previous;
@@ -171,7 +171,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final void a(IntrusiveNode param0, byte param1) {
+    final void addLast(IntrusiveNode param0, byte param1) {
         try {
           if (param0.next != null) {
             param0.unlink((byte) 12);
@@ -188,7 +188,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode removeFirst(byte param0) {
         int var2 = -86 % ((53 - param0) / 47);
         IntrusiveNode var3 = this.sentinel.next;
         if (this.sentinel != var3) {
@@ -198,7 +198,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addFirst(IntrusiveNode param0, int param1) {
         if (null != param0.next) {
           param0.unlink((byte) 12);
         }

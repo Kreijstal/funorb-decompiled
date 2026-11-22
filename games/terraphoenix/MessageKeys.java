@@ -3252,7 +3252,7 @@ final class MessageKeys {
         aa var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (aa) (vl.field_i.b((byte) -79));
+          var1 = (aa) (vl.field_i.removeFirst((byte) -79));
           if (var1 == null) {
             throw new IllegalStateException();
           }
@@ -3262,7 +3262,7 @@ final class MessageKeys {
             field_a = (String[]) null;
           }
           var1.field_p = null;
-          pb.field_a.a(var1, -16611);
+          pb.field_a.addFirst(var1, -16611);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

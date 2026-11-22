@@ -66,7 +66,7 @@ final class ResourceSupport004 extends MixedSupport115 {
         RuntimeException caughtExceptionLocal8 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart013Argument1.performAction0149((byte) 108);
+          sceneWidgetPart013Argument1.unlink((byte) 108);
           if (byteArgument2 != -50) {
             return;
           }

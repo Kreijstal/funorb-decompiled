@@ -290,7 +290,7 @@ final class ee {
               fieldTemp$1 = cb.field_I;
               cb.field_I = cb.field_I + 1;
               var5_ref.field_Mb = fieldTemp$1;
-              BattleUnit.field_j.a(var5_ref, -16611);
+              BattleUnit.field_j.addFirst(var5_ref, -16611);
             }
             var5_ref.field_Lb = var4_ref_String;
             return;
@@ -346,7 +346,7 @@ final class ee {
             fieldTemp$0 = gj.field_a;
             gj.field_a = gj.field_a + 1;
             var6.field_Mb = fieldTemp$0;
-            sb.field_h.a(var6, -16611);
+            sb.field_h.addFirst(var6, -16611);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -380,7 +380,7 @@ final class ee {
             }
             break;
           }
-          sb.field_h.a(var6, -16611);
+          sb.field_h.addFirst(var6, -16611);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

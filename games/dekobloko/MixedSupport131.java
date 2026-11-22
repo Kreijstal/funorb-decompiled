@@ -119,7 +119,7 @@ final class MixedSupport131 {
             MixedSupport131.computeInteger1672(-19, 9, -103);
           }
           mixedSupport020Local6.booleanState0022 = true;
-          mixedSupport020Local6.performAction0149((byte) 104);
+          mixedSupport020Local6.unlink((byte) 104);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal23) {
           caughtExceptionLocal3 = caughtParameterLocal23;

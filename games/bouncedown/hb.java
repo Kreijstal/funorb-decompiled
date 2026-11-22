@@ -212,13 +212,13 @@ final class hb extends ak {
             var15.field_g = true;
             var15.field_i = var3;
             var15.field_k = var16[0];
-            var15.c(2);
+            var15.unlink(2);
             return;
           }
           if (1 == var2) {
             var11 = (ke) (uk.field_d.a((byte) -72));
             if (var11 != null) {
-              var11.c(2);
+              var11.unlink(2);
               return;
             }
             kc.a((byte) 18);
@@ -237,7 +237,7 @@ final class hb extends ak {
           var13.field_i = eh.a(-117);
           var13.field_k = var13.field_i[0];
           var13.field_g = true;
-          var13.c(2);
+          var13.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

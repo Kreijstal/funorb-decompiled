@@ -28,7 +28,7 @@ final class wk implements Iterator {
         if (this.field_a == null) {
           throw new IllegalStateException();
         }
-        this.field_a.a(1);
+        this.field_a.unlinkSecondary(1);
         this.field_a = null;
     }
 

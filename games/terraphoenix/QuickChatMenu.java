@@ -286,7 +286,7 @@ final class QuickChatMenu {
               }
             }
             var5 = 89 / ((param0 + 6) / 38);
-            rd.field_k.a(var18, -16611);
+            rd.field_k.addFirst(var18, -16611);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

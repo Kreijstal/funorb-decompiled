@@ -15,7 +15,7 @@ abstract class hl extends ej {
     private final void b(int param0, pj param1) {
         try {
           if (this.field_Q != null) {
-            this.field_Q.b(57);
+            this.field_Q.unlink(57);
           }
           if (param0 != -6142) {
             this.field_R = (li) null;

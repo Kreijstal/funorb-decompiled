@@ -133,7 +133,7 @@ final class MixedSupport125 extends MixedSupport140 {
         cipherPacketBufferLocal3.readInt(7553);
         cipherPacketBufferLocal3.readInt(7553);
         cipherPacketBufferLocal3.readInt(7553);
-        mixedSupport129Local1.performAction0149((byte) 124);
+        mixedSupport129Local1.unlink((byte) 124);
     }
 
     final boolean computeBoolean1623(byte byteArgument1) {

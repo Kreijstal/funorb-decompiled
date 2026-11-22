@@ -39,7 +39,7 @@ final class MixedSupport113 extends HashNode {
               if (sceneWidgetPart012Local2.integerState0785 == 0) {
                 sceneWidgetPart012Local2.integerState0786 = 0;
                 if (sceneWidgetPart012Local2.computeBoolean1611((byte) 111)) {
-                  sceneWidgetPart012Local2.performAction0149((byte) 112);
+                  sceneWidgetPart012Local2.unlink((byte) 112);
                 }
               }
             }
@@ -52,7 +52,7 @@ final class MixedSupport113 extends HashNode {
               if (sceneWidgetPart013Local3.integerState0846 == 0) {
                 sceneWidgetPart013Local3.integerState0844 = 0;
                 if (sceneWidgetPart013Local3.computeBoolean1713((byte) 115)) {
-                  sceneWidgetPart013Local3.performAction0149((byte) 113);
+                  sceneWidgetPart013Local3.unlink((byte) 113);
                 }
               }
             }
@@ -65,7 +65,7 @@ final class MixedSupport113 extends HashNode {
               if (sceneWidgetPart012Local7.integerState0785 == 0) {
                 sceneWidgetPart012Local7.integerState0786 = 0;
                 if (sceneWidgetPart012Local7.computeBoolean1611((byte) 59)) {
-                  sceneWidgetPart012Local7.performAction0149((byte) 101);
+                  sceneWidgetPart012Local7.unlink((byte) 101);
                 }
               }
             }

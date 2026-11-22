@@ -20,7 +20,7 @@ final class bm extends EventEffect {
         String var2 = TextInputWidget.field_E[param1][5];
         var2 = var2.toLowerCase();
         var2 = var2.trim();
-        ji var3 = (ji) (fi.field_m.a(true, (long)var2.hashCode()));
+        ji var3 = (ji) (fi.field_m.get(true, (long)var2.hashCode()));
         if (param0 > 58) {
           return var3.field_h;
         }

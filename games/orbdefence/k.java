@@ -13,7 +13,7 @@ final class k {
         DualLinkNode var5 = null;
         try {
           if (param1.field_g != null) {
-            param1.c(-1);
+            param1.unlinkSecondary(-1);
           }
           var5 = this.field_b[(int)((long)(param0 + this.field_d) & param2)];
           param1.field_f = var5;

@@ -116,7 +116,7 @@ final class wm extends PcmStream {
     }
 
     final synchronized void a(PcmStream param0) {
-        param0.b(-104);
+        param0.unlink(-104);
     }
 
     final synchronized void b(PcmStream param0) {
@@ -132,7 +132,7 @@ final class wm extends PcmStream {
     }
 
     private final void a(da param0) {
-        param0.b(-62);
+        param0.unlink(-62);
         param0.a();
         IntrusiveNode var2 = this.field_o.field_b.field_g;
         if (var2 == this.field_o.field_b) {

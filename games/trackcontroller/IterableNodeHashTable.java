@@ -42,7 +42,7 @@ final class IterableNodeHashTable implements Iterable {
         return false;
     }
 
-    final void a(IntrusiveNode param0, long param1, int param2) {
+    final void put(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param0.previous) {
@@ -59,7 +59,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
         IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];

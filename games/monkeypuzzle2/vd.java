@@ -11,7 +11,7 @@ final class vd {
 
     final void a(DualLinkNode param0, long param1, int param2) {
         if (param0.field_e != null) {
-          param0.a(7847);
+          param0.unlinkSecondary(7847);
         }
         DualLinkNode var5 = this.field_c[(int)(param1 & (long)(-1 + this.field_b))];
         param0.field_g = var5;

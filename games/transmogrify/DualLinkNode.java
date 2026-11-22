@@ -17,7 +17,7 @@ class DualLinkNode extends IntrusiveNode {
         return param1 < 6144 ? -nj.field_r[-param1 + 6144] : nj.field_r[-6144 + param1];
     }
 
-    final void b(byte param0) {
+    final void unlinkSecondary(byte param0) {
         if (this.field_g == null) {
           return;
         }

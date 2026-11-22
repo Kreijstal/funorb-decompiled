@@ -51,7 +51,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte param0) {
         this.field_g = this.field_a.field_c[0].next;
         this.field_b = 1;
         this.field_d = null;
@@ -100,7 +100,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_a = param0;
-          this.a((byte) 73);
+          this.reset((byte) 73);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

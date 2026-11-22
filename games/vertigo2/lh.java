@@ -4,7 +4,7 @@
 final class lh {
     static String field_d;
     static String field_e;
-    static fi field_b;
+    static SecondaryNodeHashTable field_b;
     static String field_a;
     static String[] field_c;
 
@@ -47,15 +47,15 @@ final class lh {
           vd.field_a = 0;
           tm.field_a.clear(0);
           vj.field_d.clear(0);
-          var1 = se.field_A.b(-125);
+          var1 = se.field_A.first(-125);
           while (var1 != null) {
             var1.unlinkSecondary(-111);
-            var1 = se.field_A.a((byte) -60);
+            var1 = se.field_A.next((byte) -60);
           }
-          var1Lifetime1 = jn.field_g.b(param0 ^ 106);
+          var1Lifetime1 = jn.field_g.first(param0 ^ 106);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(-128);
-            var1Lifetime1 = jn.field_g.a((byte) -60);
+            var1Lifetime1 = jn.field_g.next((byte) -60);
           }
           ba.field_d = 0;
         } catch (RuntimeException runtimeException) {

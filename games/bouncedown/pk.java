@@ -311,7 +311,7 @@ final class pk extends wf {
             return false;
           }
           if (param0.field_C >= 0) {
-            param0.c(param1 ^ 8335402);
+            param0.unlink(param1 ^ 8335402);
             if (param0.field_z > 0) {
               if (param0 != this.field_O[param0.field_E][param0.field_z]) {
                 return true;
@@ -401,7 +401,7 @@ final class pk extends wf {
           if (0 <= param3.field_C && (param3.field_i == null ||
             param3.field_i.e())) {
             param3.d(0);
-            param3.c(2);
+            param3.unlink(2);
             if (param3.field_z > 0) {
               if (param3 != this.field_O[param3.field_E][param3.field_z]) {
                 return true;
@@ -525,7 +525,7 @@ final class pk extends wf {
           }
           param3.d(0);
           if (param3.field_C >= 0) {
-            param3.c(2);
+            param3.unlink(2);
             if (0 < param3.field_z &&
               this.field_O[param3.field_E][param3.field_z] == param3) {
               this.field_O[param3.field_E][param3.field_z] = null;
@@ -659,7 +659,7 @@ final class pk extends wf {
               if (0 > var3.field_C) {
                 this.field_C[var3.field_E][var3.field_r] = null;
               }
-              var3.c(2);
+              var3.unlink(2);
             }
             var3 = (kl) (this.field_o.field_m.d((byte) 75));
             continue;

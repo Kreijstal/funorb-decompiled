@@ -175,7 +175,7 @@ final class RenderingSupport007 {
               }
             }
             mixedSupport068Local15.booleanState0091 = true;
-            mixedSupport068Local15.performAction0149((byte) 107);
+            mixedSupport068Local15.unlink((byte) 107);
             return;
           }
           if (integerLocal13 == 1) {
@@ -194,7 +194,7 @@ final class RenderingSupport007 {
               return;
             }
             mixedSupport072Local19.longState0024 = longLocal16;
-            mixedSupport072Local19.performAction0149((byte) 101);
+            mixedSupport072Local19.unlink((byte) 101);
             return;
           }
           NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "HS1: " + BufferedSocket.computeString1379((byte) 30));
@@ -1251,7 +1251,7 @@ final class RenderingSupport007 {
                 MixedSupport019.integerState0113 = MixedSupport019.integerState0113 - 1;
               }
               if (integerLocal15 == 0) {
-                sceneWidgetPart012Local40.performAction0149((byte) 114);
+                sceneWidgetPart012Local40.unlink((byte) 114);
               } else {
                 sceneWidgetPart012Local40.integerState0786 = integerLocal15;
                 sceneWidgetPart012Local40.integerState0785 = MixedSupport089.integerState0547;
@@ -1262,7 +1262,7 @@ final class RenderingSupport007 {
             if (integerLocal9 == 7) {
               sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1741((byte) 43));
               while (sceneWidgetPart012Local46 != null) {
-                sceneWidgetPart012Local46.performAction0149((byte) 108);
+                sceneWidgetPart012Local46.unlink((byte) 108);
                 sceneWidgetPart012Local46.performAction0134((byte) 112);
                 sceneWidgetPart012Local46 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1745(true));
               }
@@ -1288,7 +1288,7 @@ final class RenderingSupport007 {
                 return;
               }
               if (integerLocal13 == 0) {
-                sceneWidgetPart013Local44.performAction0149((byte) 127);
+                sceneWidgetPart013Local44.unlink((byte) 127);
               } else {
                 sceneWidgetPart013Local44.integerState0846 = MixedSupport089.integerState0547;
                 sceneWidgetPart013Local44.integerState0844 = integerLocal13;
@@ -1299,7 +1299,7 @@ final class RenderingSupport007 {
             if (integerLocal9 == 10) {
               sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1741((byte) 121));
               while (sceneWidgetPart013Local45 != null) {
-                sceneWidgetPart013Local45.performAction0149((byte) 115);
+                sceneWidgetPart013Local45.unlink((byte) 115);
                 sceneWidgetPart013Local45.performAction0134((byte) 118);
                 sceneWidgetPart013Local45 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1745(true));
               }
@@ -1358,7 +1358,7 @@ final class RenderingSupport007 {
                       return;
                     }
                     if (integerLocal54 == 0) {
-                      sceneWidgetPart012Local36.performAction0149((byte) 105);
+                      sceneWidgetPart012Local36.unlink((byte) 105);
                     } else {
                       sceneWidgetPart012Local36.integerState0786 = integerLocal54;
                       sceneWidgetPart012Local36.integerState0785 = MixedSupport089.integerState0547;
@@ -1446,7 +1446,7 @@ final class RenderingSupport007 {
           }
           sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1741((byte) 117));
           while (sceneWidgetPart012Local12 != null) {
-            sceneWidgetPart012Local12.performAction0149((byte) 110);
+            sceneWidgetPart012Local12.unlink((byte) 110);
             sceneWidgetPart012Local12.performAction0134((byte) 73);
             sceneWidgetPart012Local12 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.computeHashNode1745(true));
           }

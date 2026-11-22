@@ -129745,7 +129745,7 @@
       "to": "hashNodeLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#0"
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#0"
     },
     {
       "symbol": "L:si.a(JB)Lbh;#1",
@@ -129753,7 +129753,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#1"
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#1"
     },
     {
       "symbol": "L:si.a(JB)Lbh;#2",
@@ -129761,7 +129761,7 @@
       "to": "hashNodeLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#2"
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#2"
     },
     {
       "symbol": "L:si.a(JZLbh;)V#0",
@@ -129769,7 +129769,7 @@
       "to": "hashNodeLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NodeHashTable.performAction1503(JZLHashNode;)V#0"
+      "renamedSymbol": "L:NodeHashTable.put(JZLHashNode;)V#0"
     },
     {
       "symbol": "L:si.a(ZLjava/lang/String;Z)I#0",
@@ -148518,10 +148518,10 @@
     {
       "symbol": "M:bh.a(B)Z",
       "originalName": "a",
-      "to": "computeBoolean0144",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:HashNode.computeBoolean0144(B)Z"
+      "to": "isLinked",
+      "evidence": "Byte<=34 clears static MixedSupport132 alias before named next nonnull test,including on unlinked nodes;byte>34 only tests next. Preserve both guard domains,existing field/local aliases and no neighbor repairs. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HashNode.isLinked(B)Z"
     },
     {
       "symbol": "M:bh.a(II)V",
@@ -148558,10 +148558,10 @@
     {
       "symbol": "M:bh.b(B)V",
       "originalName": "b",
-      "to": "performAction0149",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:HashNode.performAction0149(B)V"
+      "to": "unlink",
+      "evidence": "If next null return. Splice both named primary neighbors,then byte<100 writes static integer alias=-105 before own next/previous clears. Byte>=100 clears own links without static write. Preserve all aliases and write/exception order. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HashNode.unlink(B)V"
     },
     {
       "symbol": "M:bh.b(I)V",
@@ -162830,18 +162830,18 @@
     {
       "symbol": "M:si.a(JB)Lbh;",
       "originalName": "a",
-      "to": "computeHashNode1502",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:NodeHashTable.computeHashNode1502(JB)LHashNode;"
+      "to": "get",
+      "evidence": "Select key&(bucketCount-1) bucket,walk previous links by complemented long-key equality,advance lookup cursor past first match. Only on miss clear cursor and then byte!=-37 overwrites bucketCount79. Preserve miss-only guard side effect,existing typed aliases outside reviewed IDs and all partial/overflow failures. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTable.get(JB)LHashNode;"
     },
     {
       "symbol": "M:si.a(JZLbh;)V",
       "originalName": "a",
-      "to": "performAction1503",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:NodeHashTable.performAction1503(JZLHashNode;)V"
+      "to": "put",
+      "evidence": "If linked invoke reviewed primary unlink(byte107),then choose masked bucket and write node.next. True Boolean clears static sprite-array alias before node.previous,neighbor links and key writes. Preserve duplicates,all existing field/local aliases and exact wrapper/write order. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTable.put(JZLHashNode;)V"
     },
     {
       "symbol": "M:si.a(ZLjava/lang/String;Z)I",
@@ -169681,7 +169681,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:HashNode.computeBoolean0144(B)Z#0"
+      "renamedSymbol": "P:HashNode.isLinked(B)Z#0"
     },
     {
       "symbol": "P:bh.a(II)V#0",
@@ -169777,7 +169777,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:HashNode.performAction0149(B)V#0"
+      "renamedSymbol": "P:HashNode.unlink(B)V#0"
     },
     {
       "symbol": "P:bh.b(I)V#0",
@@ -214001,7 +214001,7 @@
       "to": "longArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NodeHashTable.computeHashNode1502(JB)LHashNode;#0"
+      "renamedSymbol": "P:NodeHashTable.get(JB)LHashNode;#0"
     },
     {
       "symbol": "P:si.a(JB)Lbh;#1",
@@ -214009,7 +214009,7 @@
       "to": "byteArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NodeHashTable.computeHashNode1502(JB)LHashNode;#1"
+      "renamedSymbol": "P:NodeHashTable.get(JB)LHashNode;#1"
     },
     {
       "symbol": "P:si.a(JZLbh;)V#0",
@@ -214017,7 +214017,7 @@
       "to": "longArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#0"
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#0"
     },
     {
       "symbol": "P:si.a(JZLbh;)V#1",
@@ -214025,7 +214025,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#1"
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#1"
     },
     {
       "symbol": "P:si.a(JZLbh;)V#2",
@@ -214033,7 +214033,7 @@
       "to": "hashNodeArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#2"
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#2"
     },
     {
       "symbol": "P:si.a(ZLjava/lang/String;Z)I#0",
@@ -405129,7 +405129,7 @@
     },
     {
       "symbol": "L:si.a(JB)Lbh;#0",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#0",
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#0",
       "originalName": "var5",
       "renamedName": "hashNodeLocal1",
       "declaration": {
@@ -405140,7 +405140,7 @@
     },
     {
       "symbol": "L:si.a(JB)Lbh;#1",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#1",
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#1",
       "originalName": "var6",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -405151,7 +405151,7 @@
     },
     {
       "symbol": "L:si.a(JB)Lbh;#2",
-      "renamedSymbol": "L:NodeHashTable.computeHashNode1502(JB)LHashNode;#2",
+      "renamedSymbol": "L:NodeHashTable.get(JB)LHashNode;#2",
       "originalName": "var4",
       "renamedName": "hashNodeLocal3",
       "declaration": {
@@ -405162,7 +405162,7 @@
     },
     {
       "symbol": "L:si.a(JZLbh;)V#0",
-      "renamedSymbol": "L:NodeHashTable.performAction1503(JZLHashNode;)V#0",
+      "renamedSymbol": "L:NodeHashTable.put(JZLHashNode;)V#0",
       "originalName": "var5",
       "renamedName": "hashNodeLocal1",
       "declaration": {
@@ -405173,7 +405173,7 @@
     },
     {
       "symbol": "L:si.a(JZLbh;)V#1",
-      "renamedSymbol": "L:NodeHashTable.performAction1503(JZLHashNode;)V#1",
+      "renamedSymbol": "L:NodeHashTable.put(JZLHashNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -431826,9 +431826,9 @@
     },
     {
       "symbol": "M:bh.a(B)Z",
-      "renamedSymbol": "M:HashNode.computeBoolean0144(B)Z",
+      "renamedSymbol": "M:HashNode.isLinked(B)Z",
       "originalName": "a",
-      "renamedName": "computeBoolean0144",
+      "renamedName": "isLinked",
       "declaration": {
         "file": "bh.java",
         "start": 377,
@@ -431881,9 +431881,9 @@
     },
     {
       "symbol": "M:bh.b(B)V",
-      "renamedSymbol": "M:HashNode.performAction0149(B)V",
+      "renamedSymbol": "M:HashNode.unlink(B)V",
       "originalName": "b",
-      "renamedName": "performAction0149",
+      "renamedName": "unlink",
       "declaration": {
         "file": "bh.java",
         "start": 1721,
@@ -454299,9 +454299,9 @@
     },
     {
       "symbol": "M:si.a(JB)Lbh;",
-      "renamedSymbol": "M:NodeHashTable.computeHashNode1502(JB)LHashNode;",
+      "renamedSymbol": "M:NodeHashTable.get(JB)LHashNode;",
       "originalName": "a",
-      "renamedName": "computeHashNode1502",
+      "renamedName": "get",
       "declaration": {
         "file": "si.java",
         "start": 455,
@@ -454310,9 +454310,9 @@
     },
     {
       "symbol": "M:si.a(JZLbh;)V",
-      "renamedSymbol": "M:NodeHashTable.performAction1503(JZLHashNode;)V",
+      "renamedSymbol": "M:NodeHashTable.put(JZLHashNode;)V",
       "originalName": "a",
-      "renamedName": "performAction1503",
+      "renamedName": "put",
       "declaration": {
         "file": "si.java",
         "start": 1091,
@@ -464430,7 +464430,7 @@
     },
     {
       "symbol": "P:bh.a(B)Z#0",
-      "renamedSymbol": "P:HashNode.computeBoolean0144(B)Z#0",
+      "renamedSymbol": "P:HashNode.isLinked(B)Z#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -464562,7 +464562,7 @@
     },
     {
       "symbol": "P:bh.b(B)V#0",
-      "renamedSymbol": "P:HashNode.performAction0149(B)V#0",
+      "renamedSymbol": "P:HashNode.unlink(B)V#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -525480,7 +525480,7 @@
     },
     {
       "symbol": "P:si.a(JB)Lbh;#0",
-      "renamedSymbol": "P:NodeHashTable.computeHashNode1502(JB)LHashNode;#0",
+      "renamedSymbol": "P:NodeHashTable.get(JB)LHashNode;#0",
       "originalName": "param0",
       "renamedName": "longArgument1",
       "declaration": {
@@ -525491,7 +525491,7 @@
     },
     {
       "symbol": "P:si.a(JB)Lbh;#1",
-      "renamedSymbol": "P:NodeHashTable.computeHashNode1502(JB)LHashNode;#1",
+      "renamedSymbol": "P:NodeHashTable.get(JB)LHashNode;#1",
       "originalName": "param1",
       "renamedName": "byteArgument2",
       "declaration": {
@@ -525502,7 +525502,7 @@
     },
     {
       "symbol": "P:si.a(JZLbh;)V#0",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#0",
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#0",
       "originalName": "param0",
       "renamedName": "longArgument1",
       "declaration": {
@@ -525513,7 +525513,7 @@
     },
     {
       "symbol": "P:si.a(JZLbh;)V#1",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#1",
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -525524,7 +525524,7 @@
     },
     {
       "symbol": "P:si.a(JZLbh;)V#2",
-      "renamedSymbol": "P:NodeHashTable.performAction1503(JZLHashNode;)V#2",
+      "renamedSymbol": "P:NodeHashTable.put(JZLHashNode;)V#2",
       "originalName": "param2",
       "renamedName": "hashNodeArgument3",
       "declaration": {
@@ -576117,7 +576117,7 @@
       "original": "ba.java",
       "renamed": "ResourceSupport002.java",
       "inputSha256": "eef164b20e76fdb163ae7b1c1734355580de61197ba9460f4b4a2df21097fe9d",
-      "outputSha256": "5b8cf30b392ae23b0604a46012960c6467cc13f7a9a5e95ee1b4f723eb5f08b6",
+      "outputSha256": "a0aa0f5ae5f4cbdde97f3622afacd1e6c8316c06aa2b02e861e9ef266903e4d1",
       "edits": [
         {
           "start": 72,
@@ -578770,7 +578770,7 @@
           "end": 11047,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 11127,
@@ -608198,7 +608198,7 @@
       "original": "bh.java",
       "renamed": "HashNode.java",
       "inputSha256": "3378fc233d6eda1d889b68420d9a76fd037e4023607885680320326b354b80f4",
-      "outputSha256": "f5d3989d6be7df7beacf26e2a4bf0dda3a5232dd780900be65735ab950a08f9b",
+      "outputSha256": "673c91b7c655e03e1f66bda443b9bfd3deb52793db70ac83f6bcc6e2b9591f4b",
       "edits": [
         {
           "start": 44,
@@ -608331,7 +608331,7 @@
           "end": 378,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 384,
@@ -608730,7 +608730,7 @@
           "end": 1722,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1728,
@@ -630942,7 +630942,7 @@
       "original": "ca.java",
       "renamed": "UiComponentPart004.java",
       "inputSha256": "3c1887d26b12ea5628e222f3eb12a6cc1c833012675f588bae8a08123cad2296",
-      "outputSha256": "dba649a52f2e8e11dbf294a65cee76d31bfb4770585c4e7b5a32870d4153f083",
+      "outputSha256": "554fbdc3baa5f0427aa5cb0ea8c4e38a972fc19e027f8915bef87c6b718c9641",
       "edits": [
         {
           "start": 53,
@@ -631292,7 +631292,7 @@
           "end": 1112,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1156,
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "ab3129fb67d5e7ed6e6d0f9878124b6c74bf77d93c3605325b30f76bfb7d97e1",
+      "outputSha256": "5ef7cf40eaed3fd3797166867ed9594233202ec3198b9242d6d348160150c2cd",
       "edits": [
         {
           "start": 57,
@@ -717858,7 +717858,7 @@
           "end": 27118,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 27159,
@@ -732313,7 +732313,7 @@
           "end": 64786,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 64817,
@@ -760654,7 +760654,7 @@
       "original": "cm.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "8c460f29a2e9bff1c023206f2a7ad6fc21616a5c20be6101cf60b1a9081bfbaa",
-      "outputSha256": "aab1914f4f5dc130abae0a9e886946c2a02e2bfa6e96df6f59a1c4427ebf0d84",
+      "outputSha256": "9376346fa2729345d2ef00a1f4bd89fd09b77d3f9dc2c09c84688321bd51fdb2",
       "edits": [
         {
           "start": 71,
@@ -761585,7 +761585,7 @@
           "end": 2441,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2501,
@@ -761767,7 +761767,7 @@
           "end": 2959,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 3015,
@@ -762264,7 +762264,7 @@
           "end": 4784,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4811,
@@ -791537,7 +791537,7 @@
       "original": "dk.java",
       "renamed": "PlatformSupport002.java",
       "inputSha256": "b3df2c647dcae5ba0edb6a759d8a6c32a62f4f680d5e93b1392095e29ef8a27f",
-      "outputSha256": "dd68d32af77626db5cc165b651f9271b2aa2915d0dd58b94d71008b0e4c5c1a7",
+      "outputSha256": "8d6201df24640dbc070b22d754b380529c963c2abb959f3c0b995633eb8a5344",
       "edits": [
         {
           "start": 50,
@@ -792223,7 +792223,7 @@
           "end": 2135,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2184,
@@ -792300,7 +792300,7 @@
           "end": 2375,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2428,
@@ -792447,7 +792447,7 @@
           "end": 2789,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2842,
@@ -814083,7 +814083,7 @@
       "original": "ei.java",
       "renamed": "RawPcmStream.java",
       "inputSha256": "02ab6ff643e4dd5a40eaaae03c3be51f4980cbf0fbaeabdc2198883125663873",
-      "outputSha256": "24aef53b9cc523609b81ad05df6b929cddf93b71015893b8d76838e2c3b4adeb",
+      "outputSha256": "d448b6670a4d44f575b39a0d5c8a1eac2b8c8086362532aef615058cb31cde25",
       "edits": [
         {
           "start": 50,
@@ -817058,7 +817058,7 @@
           "end": 6898,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 6959,
@@ -817100,7 +817100,7 @@
           "end": 7093,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 7154,
@@ -818731,7 +818731,7 @@
           "end": 11998,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 12079,
@@ -818787,7 +818787,7 @@
           "end": 12230,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 12295,
@@ -821671,7 +821671,7 @@
           "end": 18791,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 18855,
@@ -832703,7 +832703,7 @@
           "end": 44742,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 44801,
@@ -833277,7 +833277,7 @@
           "end": 46583,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 46633,
@@ -836770,7 +836770,7 @@
           "end": 55045,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 55073,
@@ -836931,7 +836931,7 @@
           "end": 55527,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 55588,
@@ -836973,7 +836973,7 @@
           "end": 55722,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 55783,
@@ -837988,7 +837988,7 @@
           "end": 59573,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 59644,
@@ -838016,7 +838016,7 @@
           "end": 59747,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 59797,
@@ -873348,7 +873348,7 @@
       "original": "fm.java",
       "renamed": "MixedSupport043.java",
       "inputSha256": "91f41fb71a627c9df07f92308ce53bfc50b7999c4ac74418602ba4b3ec4c1173",
-      "outputSha256": "0bff037ef370a50602f69f965ccfa30fe5511a4cc12aa81c971a5f72aeee54ea",
+      "outputSha256": "edb3a1713433f53a09a72847c613ddd8ca33e04e6e620265c8e9acebf7202518",
       "edits": [
         {
           "start": 53,
@@ -873481,7 +873481,7 @@
           "end": 409,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 445,
@@ -875259,7 +875259,7 @@
           "end": 4849,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4885,
@@ -975120,7 +975120,7 @@
       "original": "ig.java",
       "renamed": "SceneWidgetPart005.java",
       "inputSha256": "0d59e5ebb8d4148f0458c93f514602fda498430313a0a23a222792d1ee4d612a",
-      "outputSha256": "b3fa34963d88fefe5851e08eec666efbd9610b2f0d794ccec178e06fe31e529b",
+      "outputSha256": "1e9be94deaff0d8fa2bf5f43bf478244065b32f5c2846e760d74fdc5c43866e4",
       "edits": [
         {
           "start": 50,
@@ -977864,7 +977864,7 @@
           "end": 7036,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 7073,
@@ -1045103,7 +1045103,7 @@
       "original": "ka.java",
       "renamed": "UiComponentPart016.java",
       "inputSha256": "e60f0627f7ba99b4aa3441098e86b363938f30e6682e70c6082c5455baf91a4a",
-      "outputSha256": "69cd1ca78fc5ba64b548ee6d0b3bc35ef04f69d16b4ed38461a4c2c5d2549e73",
+      "outputSha256": "d6dec4e91afd92d309eb8f340446a6b0bd3ae6add020e2763d4d1af986265ad5",
       "edits": [
         {
           "start": 71,
@@ -1046860,7 +1046860,7 @@
           "end": 4981,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 5017,
@@ -1047329,7 +1047329,7 @@
           "end": 6083,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 6119,
@@ -1052520,7 +1052520,7 @@
       "original": "ke.java",
       "renamed": "RenderingSupport007.java",
       "inputSha256": "dde8853d6c4caa6caff6315ff0096737e2873d4912ff8b5ec37c4b2f16944397",
-      "outputSha256": "ded8d741ca6a7f8471aa96ba635e8a54d53bd3604ff9d72844a079a434ecda7f",
+      "outputSha256": "1e8e80ee449460b79b79d8072e949bba1215015f70651191940e8cc47089ba57",
       "edits": [
         {
           "start": 50,
@@ -1054704,7 +1054704,7 @@
           "end": 5848,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 5908,
@@ -1054907,7 +1054907,7 @@
           "end": 6470,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 6526,
@@ -1069607,7 +1069607,7 @@
           "end": 42581,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 42634,
@@ -1069733,7 +1069733,7 @@
           "end": 42931,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 42961,
@@ -1070125,7 +1070125,7 @@
           "end": 43931,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 43984,
@@ -1070251,7 +1070251,7 @@
           "end": 44283,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 44313,
@@ -1071189,7 +1071189,7 @@
           "end": 46939,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 47004,
@@ -1072211,7 +1072211,7 @@
           "end": 50237,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 50263,
@@ -1084308,7 +1084308,7 @@
       "original": "kf.java",
       "renamed": "ComponentContainer.java",
       "inputSha256": "ba1cddc3278d50797ec7d09c7cf30a5e87736ebbae40d6188e11131c97f42238",
-      "outputSha256": "4d93f823283c5574e933395ca5dd9b609d4b2786265d6f51dabe136763343bfd",
+      "outputSha256": "61d169c9dc340d8a422a0ea77a9ce6955f0cce7152bbe9dda2fb04456cbf70e8",
       "edits": [
         {
           "start": 65,
@@ -1084714,7 +1084714,7 @@
           "end": 1210,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 1239,
@@ -1085267,7 +1085267,7 @@
           "end": 3200,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 3234,
@@ -1085778,7 +1085778,7 @@
           "end": 4980,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 5010,
@@ -1088389,7 +1088389,7 @@
           "end": 13172,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 13206,
@@ -1089019,7 +1089019,7 @@
           "end": 15128,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 15161,
@@ -1108961,7 +1108961,7 @@
       "original": "la.java",
       "renamed": "MixedSupport074.java",
       "inputSha256": "197e97a5129e0b5138ff08b8d89fab0057b6fd1f60f2a8b2c26f8dbf6117a04a",
-      "outputSha256": "13e7fc6291765821c5754c1b32e741952e60eaea361d5585a1940960a3bc7906",
+      "outputSha256": "b4063c1d928f653598b1ef4352cb108732351a7396e639d933c59476a618b81b",
       "edits": [
         {
           "start": 50,
@@ -1109164,7 +1109164,7 @@
           "end": 509,
           "symbol": "M:si.a(JB)Lbh;",
           "original": "a",
-          "renamed": "computeHashNode1502"
+          "renamed": "get"
         },
         {
           "start": 510,
@@ -1109290,7 +1109290,7 @@
           "end": 748,
           "symbol": "M:si.a(JB)Lbh;",
           "original": "a",
-          "renamed": "computeHashNode1502"
+          "renamed": "get"
         },
         {
           "start": 749,
@@ -1109409,7 +1109409,7 @@
           "end": 994,
           "symbol": "M:si.a(JB)Lbh;",
           "original": "a",
-          "renamed": "computeHashNode1502"
+          "renamed": "get"
         },
         {
           "start": 995,
@@ -1109563,7 +1109563,7 @@
           "end": 1417,
           "symbol": "M:si.a(JZLbh;)V",
           "original": "a",
-          "renamed": "performAction1503"
+          "renamed": "put"
         },
         {
           "start": 1418,
@@ -1109640,7 +1109640,7 @@
           "end": 1557,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1583,
@@ -1109675,7 +1109675,7 @@
           "end": 1662,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1684,
@@ -1110046,7 +1110046,7 @@
           "end": 2768,
           "symbol": "M:si.a(JZLbh;)V",
           "original": "a",
-          "renamed": "performAction1503"
+          "renamed": "put"
         },
         {
           "start": 2769,
@@ -1111341,7 +1111341,7 @@
           "end": 5441,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 5465,
@@ -1127627,7 +1127627,7 @@
       "original": "le.java",
       "renamed": "MixedSupport076.java",
       "inputSha256": "d8d9a8fb0c8125ca23db5b369d8d037d603895a51439c3958b8675558eef3aa7",
-      "outputSha256": "0b20ed0c5ee222d6aca7792ba1e36db86214fc5ba44b53857101832a98344931",
+      "outputSha256": "42d12833e72561979aaf1e098c376dde66cd4b49817df6b20938274beaf70f34",
       "edits": [
         {
           "start": 50,
@@ -1128810,7 +1128810,7 @@
           "end": 4052,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4106,
@@ -1128845,7 +1128845,7 @@
           "end": 4153,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4211,
@@ -1128880,7 +1128880,7 @@
           "end": 4263,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4330,
@@ -1128964,7 +1128964,7 @@
           "end": 4624,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4708,
@@ -1129524,7 +1129524,7 @@
           "end": 6286,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 6310,
@@ -1130315,7 +1130315,7 @@
           "end": 9076,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 9120,
@@ -1130413,7 +1130413,7 @@
           "end": 9519,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 9552,
@@ -1130889,7 +1130889,7 @@
           "end": 11099,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 11130,
@@ -1131176,7 +1131176,7 @@
           "end": 11856,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 11896,
@@ -1131673,7 +1131673,7 @@
           "end": 13299,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 13352,
@@ -1132053,7 +1132053,7 @@
           "end": 15003,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 15051,
@@ -1132426,7 +1132426,7 @@
           "end": 16624,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 16677,
@@ -1132580,7 +1132580,7 @@
           "end": 17065,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 17091,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "3b470ea3772db82cf6952718861ec34511d3563eb3c5995e2e413924ccb09d5e",
+      "outputSha256": "577d412b91c69d47777feebb3c929393360ac91ab2ca594599c8bf6c15dba3d4",
       "edits": [
         {
           "start": 71,
@@ -1151972,7 +1151972,7 @@
           "end": 41751,
           "symbol": "M:bh.a(B)Z",
           "original": "a",
-          "renamed": "computeBoolean0144"
+          "renamed": "isLinked"
         },
         {
           "start": 41782,
@@ -1196733,7 +1196733,7 @@
       "original": "md.java",
       "renamed": "UiComponentPart018.java",
       "inputSha256": "651fb75bc5165525151d57186ee74c2be23e6e25d9bccaa3fb52d5e42574ecbd",
-      "outputSha256": "51f0c3db1b4d2eee1c36763d3842f9bc35a4b38d588b7208396971207e9d80cc",
+      "outputSha256": "c57bad58100f2612b16b8d92a1f91204054a00450c8614f8f3ba169b300b5755",
       "edits": [
         {
           "start": 50,
@@ -1198252,7 +1198252,7 @@
           "end": 4687,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4711,
@@ -1222280,7 +1222280,7 @@
       "original": "mi.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "53c103923f7eb69bcbb2759d06de2d1b43858b34aa0b30c21e29cd2e8b7ece50",
-      "outputSha256": "c89df3b997bde8e13f892fe1a075112953a879014536db0b98eb2e105037b0fe",
+      "outputSha256": "79661fbdb591840e52e1d155ddbea2a4f40102ba51a67ff258d2961b801874e8",
       "edits": [
         {
           "start": 50,
@@ -1223463,7 +1223463,7 @@
           "end": 3010,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 3041,
@@ -1223666,7 +1223666,7 @@
           "end": 3370,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 3392,
@@ -1293938,7 +1293938,7 @@
       "original": "ng.java",
       "renamed": "MixedSupport086.java",
       "inputSha256": "2e48d6cc884132c9c15943762ce2cc0ce87932549b773ccf24d47de028d86227",
-      "outputSha256": "f3d48fcf86626dbe2e326c3b041ed2dfdbc094bec1f3b02dabe87e4dbfcdb69c",
+      "outputSha256": "7c5e12df7fc0480d6c2ddfe0c5dea7412b90a2891becbf22c7acdc8b10ed1f12",
       "edits": [
         {
           "start": 50,
@@ -1294911,7 +1294911,7 @@
           "end": 2717,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2753,
@@ -1322322,7 +1322322,7 @@
       "original": "oe.java",
       "renamed": "UiComponentPart020.java",
       "inputSha256": "f064a6a225e55b9c630e95164bf8944a00a345ea4c586a38e36f82ea524c1ab4",
-      "outputSha256": "486b348fb3bec8e3a3ca38f58f44b5662034ccc48acd10dc78901ba83542a106",
+      "outputSha256": "7949eac33c8d75fb1673d8be96a084a8aab72b598bc4d8949a47fc1927ff17df",
       "edits": [
         {
           "start": 74,
@@ -1328443,7 +1328443,7 @@
           "end": 21743,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 21767,
@@ -1376235,7 +1376235,7 @@
       "original": "pe.java",
       "renamed": "MixedSupport098.java",
       "inputSha256": "96341eabf2fb5bd7e3244a0d009e797b9d8e317832a73646d264f14bfede1f90",
-      "outputSha256": "379b089dbb08e5e22b444f66284981059767c41fad825f3f7ddb625d83bbddae",
+      "outputSha256": "7cbdd7990f4811ef8d3471ae9f8f9777f37e08cc6966201c63e8ff86c773800c",
       "edits": [
         {
           "start": 69,
@@ -1376774,7 +1376774,7 @@
           "end": 1539,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1588,
@@ -1376921,7 +1376921,7 @@
           "end": 2005,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2073,
@@ -1393614,7 +1393614,7 @@
       "original": "pj.java",
       "renamed": "ResourceSupport004.java",
       "inputSha256": "ab41a5d2fdb6c35a33ee309386d95f9c949976bcf436c103e1899a9c9dd85325",
-      "outputSha256": "94ed3cd8f711473fe9b6620825f5b60f4366dbf6998fc1a866a01cc13431ceb8",
+      "outputSha256": "ceef6bac80a099459df6db478777b575ed39a21459524bb1fddb420ddbbf7dd8",
       "edits": [
         {
           "start": 50,
@@ -1394139,7 +1394139,7 @@
           "end": 1736,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1764,
@@ -1395408,7 +1395408,7 @@
       "original": "pl.java",
       "renamed": "NetworkSupport011.java",
       "inputSha256": "16f7e724ca4ae73a29c63186e1781c5b6ebc77f089db963b29a36c95f7887024",
-      "outputSha256": "f77baba9d9f3e93d1fd49aff18fdde8afbc28a9637183a6cded0dca6a8b29c02",
+      "outputSha256": "4e6428d66f1aa871b6f06ed8c8e5823711ba6bd2af695531b2e45eda9cbd56b6",
       "edits": [
         {
           "start": 50,
@@ -1399090,7 +1399090,7 @@
           "end": 15846,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 15875,
@@ -1415588,7 +1415588,7 @@
       "original": "qc.java",
       "renamed": "GameSession.java",
       "inputSha256": "7a5446e9a9f769263f0e6ae2c0a4efa579defbcdd10bccd04e1a0259a23203ab",
-      "outputSha256": "fe67b4b2c7b1707ca9a001c283fea7b85e27602f63ddbb2bf2716b5760307869",
+      "outputSha256": "8705500d00637e3dfbbc7d5e970c62f5a4420e544a3b0f82665424b41fcca6a1",
       "edits": [
         {
           "start": 71,
@@ -1419123,7 +1419123,7 @@
           "end": 10502,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 10533,
@@ -1419445,7 +1419445,7 @@
           "end": 12723,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 12831,
@@ -1425608,7 +1425608,7 @@
           "end": 34776,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 34869,
@@ -1444278,7 +1444278,7 @@
           "end": 85153,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 85185,
@@ -1445042,7 +1445042,7 @@
           "end": 87207,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 87247,
@@ -1560985,7 +1560985,7 @@
       "original": "sb.java",
       "renamed": "MixedSupport113.java",
       "inputSha256": "8728a2eb3841d66edbc2480f7a2fec294486121e041a0aa0f2d964c21613917b",
-      "outputSha256": "13958068fd14fb76d3522cdac3b24ab09ce3b2ee9418b65e0d328acb879ae1b5",
+      "outputSha256": "a7ae3300f780d89c0caca812000c9e513f98eeb01bc047faf1cb912aa7a30107",
       "edits": [
         {
           "start": 50,
@@ -1561384,7 +1561384,7 @@
           "end": 1143,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1217,
@@ -1561559,7 +1561559,7 @@
           "end": 1606,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1680,
@@ -1561734,7 +1561734,7 @@
           "end": 2118,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 2192,
@@ -1571294,7 +1571294,7 @@
       "original": "sg.java",
       "renamed": "InputAdapter003.java",
       "inputSha256": "7ba401d719a9a6510b573e102138bdd82a7d74a8436f0bfe39bdc7780f19dc33",
-      "outputSha256": "fe53e62e4996271471ce73b901f3ac66da0e44a0b9f5071b6735edb45b1a336c",
+      "outputSha256": "079fe95af5fd634d66a0f1086207808513ad42aad0328eb8ca317b4467eec55d",
       "edits": [
         {
           "start": 50,
@@ -1571770,7 +1571770,7 @@
           "end": 1611,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1635,
@@ -1595078,7 +1595078,7 @@
       "original": "si.java",
       "renamed": "NodeHashTable.java",
       "inputSha256": "a20bb63fddd3570cb874b1d207f2c2211a436fdf8d2c6c97f82cfcb0a0b81a1e",
-      "outputSha256": "9a073bd6f90674dcac6d7bb43401a26b642b35a6c5239f2811d1acd681a7b44e",
+      "outputSha256": "e9a9bad713dce4aaa8d857d4468539cb26cdd0d262dbb444ad231fc2e287bd34",
       "edits": [
         {
           "start": 71,
@@ -1595239,7 +1595239,7 @@
           "end": 456,
           "symbol": "M:si.a(JB)Lbh;",
           "original": "a",
-          "renamed": "computeHashNode1502"
+          "renamed": "get"
         },
         {
           "start": 462,
@@ -1595470,7 +1595470,7 @@
           "end": 1092,
           "symbol": "M:si.a(JZLbh;)V",
           "original": "a",
-          "renamed": "performAction1503"
+          "renamed": "put"
         },
         {
           "start": 1098,
@@ -1595540,7 +1595540,7 @@
           "end": 1233,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1269,
@@ -1646064,7 +1646064,7 @@
       "original": "ua.java",
       "renamed": "MixedSupport125.java",
       "inputSha256": "bf2b2bd6757db4c687b696c43501d7ac8acae06bcd6664fce36ec36e2accba3d",
-      "outputSha256": "529691fea1ef47af27cb887651a6bcd49024326c08bfaf38961a9cca563b9424",
+      "outputSha256": "36540a768def8b67df92de3c496b306d4db6240b71fc979aea7db02c6b42e8d9",
       "edits": [
         {
           "start": 50,
@@ -1647597,7 +1647597,7 @@
           "end": 4239,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4278,
@@ -1675381,7 +1675381,7 @@
       "original": "ul.java",
       "renamed": "MixedSupport131.java",
       "inputSha256": "1798cfc0b793834f65890a20932215eed0a294c317a649c62a06473392135c4e",
-      "outputSha256": "5a0a9f5eb5fc1ec7df4723cf495076029abe1332297ee4d9b9d1515cc103106e",
+      "outputSha256": "7888e6cf0e30d42722f449fcb7934d0ba3413657a43dae76ae59b4e2f9c42765",
       "edits": [
         {
           "start": 50,
@@ -1677257,7 +1677257,7 @@
           "end": 4216,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 4292,
@@ -1706361,7 +1706361,7 @@
       "original": "vi.java",
       "renamed": "MixedSupport140.java",
       "inputSha256": "41231c731cbcf5fd5b32bc7befb7b7cc11cae0cba75d6c80c7ebbd23f48e7982",
-      "outputSha256": "a20bf510177929d8f48e6d2833993e7bda8f49e4e85569b566316489854679c8",
+      "outputSha256": "74d5a7a3f8f7cfcaf24c130d697cbd7c1523c78fd80743bcddabb27739ce90d8",
       "edits": [
         {
           "start": 53,
@@ -1707425,7 +1707425,7 @@
           "end": 3724,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 3752,
@@ -1708413,7 +1708413,7 @@
       "original": "vj.java",
       "renamed": "NodeDeque.java",
       "inputSha256": "eb290370f3622cf34cbd7513e70c7030f4703931b44746845b3f4976156296fb",
-      "outputSha256": "6e2cad4f9b0ed8bd86f93ef97bef0e43a13f14dede3711c8025ff588b7b26423",
+      "outputSha256": "25814916a77823d6bcf1d4fdced4ab2dccc319345fb738d4328283cfc86b040d",
       "edits": [
         {
           "start": 50,
@@ -1708679,7 +1708679,7 @@
           "end": 695,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 783,
@@ -1708777,7 +1708777,7 @@
           "end": 1041,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 1070,
@@ -1710583,7 +1710583,7 @@
           "end": 7240,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 7272,
@@ -1711031,7 +1711031,7 @@
           "end": 8635,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 8671,
@@ -1711346,7 +1711346,7 @@
           "end": 9670,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 9696,
@@ -1754188,7 +1754188,7 @@
       "original": "wk.java",
       "renamed": "GameDomainSupport006.java",
       "inputSha256": "6d25f154cefa4ff60673256e7b1c29ce5830d3fe0ecb225f2cdc26c6e97c54a1",
-      "outputSha256": "dc5d40a797c714c63a8469bba8fa2d0ba8d1353353f99c49c01d0c15be7526e2",
+      "outputSha256": "00abb67958d3afdee68094e25b727bf2e8d0a0341d2e233779ba0160871c87a4",
       "edits": [
         {
           "start": 44,
@@ -1754412,7 +1754412,7 @@
           "end": 744,
           "symbol": "M:bh.b(B)V",
           "original": "b",
-          "renamed": "performAction0149"
+          "renamed": "unlink"
         },
         {
           "start": 768,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "ec5e9f84063727d0ee316f5afdc24c1be044fe3bf1e7e42c1fe892895924295c",
+    "rulesSha256": "96e948cdc3e2750683f65ed01efe25a57751e3f1eb46f66cbfb99ad8a9719580",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "bb1e41f86217f8219ad865ed071eedad6f720c12ab62ce6e35d3d873feb835e0",
+    "outputTreeSha256": "e3882470c5af50f93bda57371046fc9df97a0ea2e3c276be470ab48760c18564",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

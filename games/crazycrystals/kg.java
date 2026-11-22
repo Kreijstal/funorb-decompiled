@@ -138,7 +138,7 @@ final class kg extends od {
         if (this.field_p < 0) {
           if (this.field_m <= 0) {
             this.i();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.field_p = 0;
@@ -146,7 +146,7 @@ final class kg extends od {
         if (this.field_p >= var7) {
           if (this.field_m >= 0) {
             this.i();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.field_p = var7 - 1;
@@ -273,7 +273,7 @@ final class kg extends od {
           if (this.field_p >= var7) {
             this.field_p = var7;
             this.i();
-            this.a(false);
+            this.unlink(false);
           }
           return;
         }
@@ -283,7 +283,7 @@ final class kg extends od {
         }
         this.field_p = -1;
         this.i();
-        this.a(false);
+        this.unlink(false);
         return;
     }
 
@@ -1392,7 +1392,7 @@ final class kg extends od {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.a(false);
+          this.unlink(false);
           return;
         }
         if (this.field_u != 0) {
@@ -1452,7 +1452,7 @@ final class kg extends od {
         this.field_v = 0;
         this.field_o = 0;
         this.field_s = 0;
-        this.a(false);
+        this.unlink(false);
     }
 
     final synchronized void f(int param0) {
@@ -1483,7 +1483,7 @@ final class kg extends od {
           this.field_q = 0;
           this.field_u = 0;
           this.field_s = 0;
-          this.a(false);
+          this.unlink(false);
           return true;
         }
         if (this.field_s >= var1) {
@@ -1557,7 +1557,7 @@ final class kg extends od {
               this.field_q = 0;
               this.field_u = 0;
               this.field_s = 0;
-              this.a(false);
+              this.unlink(false);
               param0 = this.field_v;
             }
             this.field_v = 0;
@@ -1575,7 +1575,7 @@ final class kg extends od {
         if (this.field_p < 0) {
           if (this.field_m <= 0) {
             this.i();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.field_p = 0;
@@ -1583,7 +1583,7 @@ final class kg extends od {
         if (this.field_p >= var5) {
           if (this.field_m >= 0) {
             this.i();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.field_p = var5 - 1;
@@ -1696,7 +1696,7 @@ final class kg extends od {
           if (this.field_p >= var5) {
             this.field_p = var5;
             this.i();
-            this.a(false);
+            this.unlink(false);
           }
           return;
         }
@@ -1705,7 +1705,7 @@ final class kg extends od {
         }
         this.field_p = -1;
         this.i();
-        this.a(false);
+        this.unlink(false);
     }
 
     final od d() {

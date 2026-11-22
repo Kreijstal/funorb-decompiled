@@ -15,7 +15,7 @@ final class om {
         DualLinkNode var5 = null;
         try {
           if (null != param2.field_q) {
-            param2.a((byte) -105);
+            param2.unlinkSecondary((byte) -105);
           }
           var5 = this.field_a[(int)(param0 & (long)(-1 + this.field_e))];
           param2.field_t = var5;

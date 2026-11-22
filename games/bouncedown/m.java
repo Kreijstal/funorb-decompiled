@@ -53,7 +53,7 @@ final class m implements Iterable {
             this.iterator();
           }
           if (null != param2.field_f) {
-            param2.c(2);
+            param2.unlink(2);
           }
           var5 = this.field_b[(int)((long)(-1 + this.field_d) & param1)];
           param2.field_f = var5.field_f;

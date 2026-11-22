@@ -502,7 +502,7 @@ final class pf extends pn implements Cloneable {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << pf.b(var7 << 8, 768));
             }
             var4.field_h = true;
-            var4.a(false);
+            var4.unlink(false);
             return;
           }
           if (var2 == 1) {
@@ -517,7 +517,7 @@ final class pf extends pn implements Cloneable {
               break;
             }
             if (var5_ref_we != null) {
-              var5_ref_we.a(false);
+              var5_ref_we.unlink(false);
               return;
             }
             jj.a(4);

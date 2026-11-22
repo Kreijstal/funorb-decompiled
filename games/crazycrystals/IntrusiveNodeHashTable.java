@@ -115,7 +115,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         return var1;
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var6 = null;
         int var7 = CrazyCrystals.field_B;
         IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
@@ -137,11 +137,11 @@ final class IntrusiveNodeHashTable implements Iterable {
         throw new Error();
     }
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
+    final void put(long param0, byte param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.field_d) {
-            param2.a(false);
+            param2.unlink(false);
           }
           var5 = this.field_c[(int)((long)(-1 + this.field_e) & param0)];
           param2.field_b = var5;

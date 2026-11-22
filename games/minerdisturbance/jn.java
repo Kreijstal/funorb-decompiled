@@ -117,10 +117,10 @@ final class jn extends IntrusiveNode {
               var9Lifetime1++;
               var13++;
             }
-            var3.b(34);
+            var3.unlink(34);
             return;
           }
-          var3.b(34);
+          var3.unlink(34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

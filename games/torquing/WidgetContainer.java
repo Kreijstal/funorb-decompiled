@@ -88,7 +88,7 @@ class WidgetContainer extends UiWidget implements cj {
           }
           var9 = (UiWidget) (var8.a((byte) 124));
           while (var9 != null) {
-            if (var9.e(17)) {
+            if (var9.isLinked(17)) {
               if (var9.g(2) &&
                 var9.a(param0, false, param2, param3, param4, param5, param6)) {
                 return true;
@@ -171,7 +171,7 @@ class WidgetContainer extends UiWidget implements cj {
           }
           var8 = (UiWidget) (var7.a((byte) 110));
           while (var8 != null) {
-            if (var8.e(17)) {
+            if (var8.isLinked(17)) {
               var8.a(this.y + param0, this.x + param1, param2, (byte) 116, param4, param5);
               var8 = (UiWidget) (var7.b(true));
               continue;
@@ -391,7 +391,7 @@ class WidgetContainer extends UiWidget implements cj {
           var5 = new re(this.children);
           var7 = (UiWidget) (var5.a((byte) 29));
           while (var7 != null) {
-            if (var7.e(17)) {
+            if (var7.isLinked(17)) {
               var7.a(113, param1, this.y + param2, this.x + param3);
               var7 = (UiWidget) (var5.b(true));
               continue;
@@ -478,7 +478,7 @@ class WidgetContainer extends UiWidget implements cj {
           }
           var9 = (UiWidget) (var8.a((byte) 122));
           while (var9 != null) {
-            if (var9.e(17)) {
+            if (var9.isLinked(17)) {
               if (var9.a(param0, param1 + this.x, this.y + param2, param3, param4, param5, (byte) 58)) {
                 return true;
               }
@@ -569,7 +569,7 @@ class WidgetContainer extends UiWidget implements cj {
           var6 = new re(this.children);
           var9 = (UiWidget) (var6.a((byte) 125));
           while (var9 != null) {
-            if (var9.e(17)) {
+            if (var9.isLinked(17)) {
               if (var9.g(2) &&
                 var9.a(param0, param1, param2, 41)) {
                 return true;

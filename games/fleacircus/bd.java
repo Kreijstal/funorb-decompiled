@@ -263,7 +263,7 @@ class bd extends oh implements da {
               }
             }
             var4.field_l = true;
-            var4.c(param0 + 24020);
+            var4.unlink(param0 + 24020);
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) -53);
             var4_long = var28.readLong(-102);
@@ -280,7 +280,7 @@ class bd extends oh implements da {
               return;
             }
             var6_ref_bh.field_k = var4_long;
-            var6_ref_bh.c(-1);
+            var6_ref_bh.unlink(-1);
           } else {
             ud.a("HS1: " + ak.a(true), (Throwable) null, 0);
             k.c(-28354);

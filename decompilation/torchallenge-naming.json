@@ -1644,6 +1644,14 @@
       "renamedSymbol": "M:IterableNodeHashTable.put(BLIntrusiveNode;J)V"
     },
     {
+      "symbol": "M:fd.a(IJ)Lda;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Read masked bucket first. Int<=72 calls original static helper(nullQk,-124,nullQk) before lookup-cursor assignment. Then both domains scan next links by key equality,advance after first match and clear on exhaustion. Preserve helper/global reads,duplicates and partial effects. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(IJ)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:fd.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -2082,6 +2090,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 10 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ab14375bd40e22df93aa85b65f40cfde723272a80f44627a733cca157dee2e90.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mb.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:md.a(I)V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Write bucket index1 and last-returned null first. Int<82 returns leaving current node stale;other ints set current from bucket0.next inside original exception wrapper. Preserve partial reset,zero-bucket failure and constructor/JDK methods. Complete selected instance body,owning constructor and relevant link/cursor context reviewed. Preserve exact original argument widths/domains,guards,overflow,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V"
     },
     {
       "symbol": "M:me.a(I)V",
@@ -73141,7 +73157,7 @@
     },
     {
       "symbol": "L:fd.a(IJ)Lda;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJ)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(IJ)LIntrusiveNode;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -73152,7 +73168,7 @@
     },
     {
       "symbol": "L:fd.a(IJ)Lda;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJ)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(IJ)LIntrusiveNode;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -73163,7 +73179,7 @@
     },
     {
       "symbol": "L:fd.a(IJ)Lda;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJ)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(IJ)LIntrusiveNode;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -73174,7 +73190,7 @@
     },
     {
       "symbol": "L:fd.a(IJ)Lda;#3",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJ)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IterableNodeHashTable.get(IJ)LIntrusiveNode;#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -73185,7 +73201,7 @@
     },
     {
       "symbol": "L:fd.a(IJ)Lda;#4",
-      "renamedSymbol": "L:IterableNodeHashTable.a(IJ)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IterableNodeHashTable.get(IJ)LIntrusiveNode;#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -115755,7 +115771,7 @@
     },
     {
       "symbol": "L:md.a(I)V#0",
-      "renamedSymbol": "L:NodeHashTableIterator.a(I)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.reset(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -205009,9 +205025,9 @@
     },
     {
       "symbol": "M:fd.a(IJ)Lda;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(IJ)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(IJ)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "fd.java",
         "start": 5538,
@@ -212588,9 +212604,9 @@
     },
     {
       "symbol": "M:md.a(I)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "md.java",
         "start": 1923,
@@ -241991,7 +242007,7 @@
     },
     {
       "symbol": "P:fd.a(IJ)Lda;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(IJ)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(IJ)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242002,7 +242018,7 @@
     },
     {
       "symbol": "P:fd.a(IJ)Lda;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(IJ)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(IJ)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -261494,7 +261510,7 @@
     },
     {
       "symbol": "P:md.a(I)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -315428,7 +315444,7 @@
       "original": "fd.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "9b855bed19c9f3892215e0e8040850f7d431b9db04dd7121bfaa6ccb7627b385",
-      "outputSha256": "084e241b2bc8914320436360624ff13d130d5e9dd3c0c8eea37e35e16f8acce6",
+      "outputSha256": "72c96505c7998f6e221db97dd8c51a938ad7ab92417208afab65506ef3e19a8b",
       "edits": [
         {
           "start": 71,
@@ -315814,6 +315830,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5538,
+          "end": 5539,
+          "symbol": "M:fd.a(IJ)Lda;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 5575,
@@ -324085,7 +324108,7 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "09b572a332216af45f33b3433c99815e3bf444017c38fc6f0eb1cf44c7befef1",
-      "outputSha256": "0224e824f3ed580adf78a7acb28f5e4d94a2bb59aabecdac3db0a89f0521611b",
+      "outputSha256": "a1f01e2795573d8eee091ab39ba980968f9badaaecf4549e8ce5489bcb6f531c",
       "edits": [
         {
           "start": 96,
@@ -324149,6 +324172,20 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3133,
+          "end": 3134,
+          "symbol": "M:fd.a(IJ)Lda;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
+          "start": 3302,
+          "end": 3303,
+          "symbol": "M:fd.a(IJ)Lda;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 3439,
@@ -324226,6 +324263,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 10610,
+          "end": 10611,
+          "symbol": "M:fd.a(IJ)Lda;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 10895,
@@ -338247,7 +338291,7 @@
       "original": "md.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "477e6d370b8edd1f38cd638f0127f96b1b067a3082e3bd7a1d4f06b7052381f4",
-      "outputSha256": "5dd87bff5b2852c46445348a2f8e6513718170522841feb74a7676999c2a72dc",
+      "outputSha256": "08d29994e5e039c708a36089ecb5572089905bf23dc1f2bc37a5d664c76b0ab9",
       "edits": [
         {
           "start": 71,
@@ -338374,6 +338418,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1923,
+          "end": 1924,
+          "symbol": "M:md.a(I)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 2101,
@@ -338577,6 +338628,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 11618,
+          "end": 11619,
+          "symbol": "M:md.a(I)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 12099,
@@ -386361,10 +386419,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "698089d664fc16913313ad7cafc9a910847fc1ba41044a22d1ef65a1a5f6c3c1",
+    "rulesSha256": "ccedb97d958d10f737f291818ee31315088676be1791035091247f2cd1c69502",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "03c8ad3078bad272a478c595f3e4ad0a3a694507b1a3bfe7ba8bce11e2dfc15e",
+    "outputTreeSha256": "42a2c822a6371dc68c52e8d254d98e099762835702849a49636f3c069f667a34",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

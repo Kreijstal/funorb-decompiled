@@ -33,7 +33,7 @@ final class fa extends IntrusiveNode {
         uh var7 = null;
         BitPacketBuffer var4 = null;
         if (param1 != br.field_Q) {
-          var6 = (uh) (lh.field_b.a(3661, (long)br.field_Q));
+          var6 = (uh) (lh.field_b.get(3661, (long)br.field_Q));
           var7 = var6;
           if (var7 != null) {
             var7.field_Hb = null;

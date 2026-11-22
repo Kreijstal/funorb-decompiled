@@ -119,16 +119,16 @@ final class ai extends r {
             gg.field_g = 200;
             var1 = (pd) (bk.field_d.c((byte) 47));
             while (var1 != null) {
-              if (!var1.field_n.b((byte) -54)) {
-                var1.c(param0 + 20845);
+              if (!var1.field_n.isLinked((byte) -54)) {
+                var1.unlink(param0 + 20845);
               }
               var1 = (pd) (bk.field_d.b((byte) -105));
             }
             if (jc.field_c != null) {
               var1Lifetime1 = (pd) (jc.field_c.c((byte) 47));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_n.b((byte) -54)) {
-                  var1Lifetime1.c(-1);
+                if (!var1Lifetime1.field_n.isLinked((byte) -54)) {
+                  var1Lifetime1.unlink(-1);
                 }
                 var1Lifetime1 = (pd) (jc.field_c.b((byte) -105));
               }

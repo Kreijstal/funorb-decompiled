@@ -13,7 +13,7 @@ final class bf {
 
     final void a(DualLinkNode param0, int param1) {
         if (param0.field_m != null) {
-          param0.e(67);
+          param0.unlinkSecondary(67);
         }
         if (param1 != -1089421886) {
           return;
@@ -153,7 +153,7 @@ final class bf {
         if (var2 == this.field_c) {
           return null;
         }
-        var2.e(-127);
+        var2.unlinkSecondary(-127);
         if (param0 >= -115) {
           field_f = (String) null;
         }

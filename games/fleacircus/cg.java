@@ -168,7 +168,7 @@ final class cg extends gi {
                 discarded$1 = this.a(2, 1, var4);
               }
               if (this.field_i[var4] != 0) {
-                var3.c(-1);
+                var3.unlink(-1);
               } else {
                 var2_int = 0;
               }
@@ -214,7 +214,7 @@ final class cg extends gi {
                 if (this.field_i[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.c(-1);
+                  var3Lifetime1.unlink(-1);
                 }
                 var3Lifetime1 = this.field_p.b((byte) -105);
               }
@@ -259,7 +259,7 @@ final class cg extends gi {
                 if (!var2.field_v) {
                   throw new RuntimeException();
                 }
-                var2.c(-1);
+                var2.unlink(-1);
               } else {
                 var2.field_r = true;
               }
@@ -312,7 +312,7 @@ final class cg extends gi {
           param1 == 0 &&
           !var12.field_v &&
           var12.field_q) {
-          var12.c(-1);
+          var12.unlink(-1);
           var4 = null;
         }
         if (var4 == null) {
@@ -386,7 +386,7 @@ final class cg extends gi {
                 this.field_i[param2] = (byte) 1;
               }
               if (!((dl) (var4)).field_v) {
-                ((dl) (var4)).c(-1);
+                ((dl) (var4)).unlink(-1);
               }
               stackIn_60_0 = var4;
               return (dl) (stackIn_60_0);
@@ -396,7 +396,7 @@ final class cg extends gi {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_i[param2] = (byte)-1;
-            ((dl) (var4)).c(param0 - 3);
+            ((dl) (var4)).unlink(param0 - 3);
             if (!((dl) (var4)).field_v) {
               return null;
             }
@@ -439,7 +439,7 @@ final class cg extends gi {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_f.a((byte) 88);
-          ((dl) (var4)).c(param0 ^ -3);
+          ((dl) (var4)).unlink(param0 ^ -3);
           if (!((dl) (var4)).field_v) {
             return null;
           }
@@ -460,7 +460,7 @@ final class cg extends gi {
           }
         }
         if (!((dl) (var4)).field_v) {
-          ((dl) (var4)).c(-1);
+          ((dl) (var4)).unlink(-1);
         }
         return (dl) (var4);
     }
@@ -483,13 +483,13 @@ final class cg extends gi {
         while (var2 != null) {
           var3 = (int)var2.field_c;
           if (var3 < 0) {
-            var2.c(-1);
+            var2.unlink(-1);
           } else {
             if (this.field_j.field_i <= var3) {
-              var2.c(-1);
+              var2.unlink(-1);
             } else {
               if (this.field_j.field_f[var3] == 0) {
-                var2.c(-1);
+                var2.unlink(-1);
               } else {
                 if (this.field_i[var3] == 0) {
                   discarded$0 = this.a(2, 1, var3);
@@ -498,7 +498,7 @@ final class cg extends gi {
                   discarded$1 = this.a(2, 2, var3);
                 }
                 if (this.field_i[var3] == 1) {
-                  var2.c(-1);
+                  var2.unlink(-1);
                 }
               }
             }
@@ -516,7 +516,7 @@ final class cg extends gi {
           this.field_A = 116;
         }
         byte[] var4 = var3.g(100);
-        var3.c(-1);
+        var3.unlink(-1);
         return var4;
     }
 

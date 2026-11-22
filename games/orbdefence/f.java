@@ -679,7 +679,7 @@ final class f {
                 if (this.field_f.field_m[var5Lifetime1.field_t]) {
                   this.field_f.field_m[var5Lifetime1.field_t] = false;
                 }
-                var5Lifetime1.b(57);
+                var5Lifetime1.unlink(57);
                 stackIn_507_0 = ~var5Lifetime1.field_y;
                 stackIn_507_1 = -11;
                 while (true) {
@@ -728,7 +728,7 @@ final class f {
               return;
             }
             if (200 <= var5_ref2.field_g) {
-              var5_ref2.b(57);
+              var5_ref2.unlink(57);
             }
             var5_ref2 = (oj) (this.field_b.b(10708));
           }
@@ -893,7 +893,7 @@ final class f {
                   if (decompiledFrameCompleted0) {
                     var2.c(1);
                     var2.field_C = -1;
-                    var2.b(57);
+                    var2.unlink(57);
                     var3Lifetime1 = -1 + var2.field_g;
                     while (true) {
                       stackIn_53_0 = ~var3Lifetime1;
@@ -1128,7 +1128,7 @@ final class f {
               return;
             }
             if (var2_ref.field_m == -1) {
-              var2_ref.b(57);
+              var2_ref.unlink(57);
             }
             var2_ref = (me) (this.field_h.d(853));
           }

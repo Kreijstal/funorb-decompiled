@@ -698,7 +698,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                       this.field_l.field_z = 0;
                     }
                   } else {
-                    this.field_l.e(param0 - 29166);
+                    this.field_l.unlinkSecondary(param0 - 29166);
                     this.field_l.field_w = false;
                     this.field_l = null;
                   }

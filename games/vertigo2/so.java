@@ -49,7 +49,7 @@ final class so extends TextureOperator {
           }
           mk.field_J = param6.field_M;
           mk.field_J.clear(0);
-          GameShell.field_l = new fi(param7);
+          GameShell.field_l = new SecondaryNodeHashTable(param7);
           br.field_Q = 0;
           rp.field_a = -1;
           kk.field_j = 0;
@@ -59,13 +59,13 @@ final class so extends TextureOperator {
           }
           nr.field_p = param4.field_M;
           nr.field_p.clear(0);
-          lh.field_b = new fi(param3);
+          lh.field_b = new SecondaryNodeHashTable(param3);
           if (null == param0.field_M) {
             param0.field_M = new IntrusiveDeque();
           }
           kq.field_Rb = param0.field_M;
           kq.field_Rb.clear(0);
-          ck.field_I = new fi(param9);
+          ck.field_I = new SecondaryNodeHashTable(param9);
           lp.field_D = param2;
           Archive.field_h = 0L;
           return;

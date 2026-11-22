@@ -483,7 +483,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_gamelist_avg_rating", false);
                 if (var2 != null) {
-                  fi.field_j = in.a(0, var2);
+                  SecondaryNodeHashTable.field_j = in.a(0, var2);
                 }
                 var2 = tk.a("mu_gamelist_options", false);
                 if (var2 != null) {

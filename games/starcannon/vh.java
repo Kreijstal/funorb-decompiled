@@ -823,13 +823,13 @@ final class vh extends eh {
                         if (512 == this.field_a.field_v) {
                           this.field_a.field_v = 0;
                           if (var16 != 0) {
-                            this.field_a.a(param0 - 6180);
+                            this.field_a.unlinkSecondary(param0 - 6180);
                             this.field_a.field_r = false;
                             this.field_a = null;
                           }
                         }
                       } else {
-                        this.field_a.a(param0 - 6180);
+                        this.field_a.unlinkSecondary(param0 - 6180);
                         this.field_a.field_r = false;
                         this.field_a = null;
                       }

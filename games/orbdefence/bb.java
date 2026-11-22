@@ -702,7 +702,7 @@ final class bb extends di {
           this.field_u = 0;
           this.field_r = 0;
           this.field_t = 0;
-          this.b(57);
+          this.unlink(57);
           return true;
         }
         if (this.field_t >= var1) {
@@ -852,7 +852,7 @@ final class bb extends di {
               this.field_u = 0;
               this.field_r = 0;
               this.field_t = 0;
-              this.b(57);
+              this.unlink(57);
               param0 = this.field_m;
             }
             this.field_m = 0;
@@ -870,7 +870,7 @@ final class bb extends di {
         if (this.field_k < 0) {
           if (this.field_s <= 0) {
             this.f();
-            this.b(57);
+            this.unlink(57);
             return;
           }
           this.field_k = 0;
@@ -878,7 +878,7 @@ final class bb extends di {
         if (this.field_k >= var5) {
           if (this.field_s >= 0) {
             this.f();
-            this.b(57);
+            this.unlink(57);
             return;
           }
           this.field_k = var5 - 1;
@@ -991,7 +991,7 @@ final class bb extends di {
           if (this.field_k >= var5) {
             this.field_k = var5;
             this.f();
-            this.b(57);
+            this.unlink(57);
           }
           return;
         }
@@ -1000,7 +1000,7 @@ final class bb extends di {
         }
         this.field_k = -1;
         this.f();
-        this.b(57);
+        this.unlink(57);
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
@@ -1035,7 +1035,7 @@ final class bb extends di {
         if (this.field_k < 0) {
           if (this.field_s <= 0) {
             this.f();
-            this.b(57);
+            this.unlink(57);
             return;
           }
           this.field_k = 0;
@@ -1043,7 +1043,7 @@ final class bb extends di {
         if (this.field_k >= var7) {
           if (this.field_s >= 0) {
             this.f();
-            this.b(57);
+            this.unlink(57);
             return;
           }
           this.field_k = var7 - 1;
@@ -1170,7 +1170,7 @@ final class bb extends di {
           if (this.field_k >= var7) {
             this.field_k = var7;
             this.f();
-            this.b(57);
+            this.unlink(57);
           }
           return;
         }
@@ -1180,7 +1180,7 @@ final class bb extends di {
         }
         this.field_k = -1;
         this.f();
-        this.b(57);
+        this.unlink(57);
         return;
     }
 
@@ -1243,7 +1243,7 @@ final class bb extends di {
         int var2Lifetime1;
         if (param0 == 0) {
           this.g(0);
-          this.b(57);
+          this.unlink(57);
           return;
         }
         if (this.field_r != 0) {
@@ -1303,7 +1303,7 @@ final class bb extends di {
         this.field_m = 0;
         this.field_q = 0;
         this.field_t = 0;
-        this.b(57);
+        this.unlink(57);
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, bb param8) {

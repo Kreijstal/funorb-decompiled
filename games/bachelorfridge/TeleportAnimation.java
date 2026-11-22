@@ -158,7 +158,7 @@ final class TeleportAnimation extends EventAnimation {
         try {
           fi.field_m = new IntrusiveNodeHashTable(4);
           for (var1_int = 0; SuperSpeedEvent.field_q.length > var1_int; var1_int++) {
-            fi.field_m.a((long)SuperSpeedEvent.field_q[var1_int].hashCode(), (byte) 86, new ji(var1_int + 1));
+            fi.field_m.put((long)SuperSpeedEvent.field_q[var1_int].hashCode(), (byte) 86, new ji(var1_int + 1));
           }
           int var2 = -38 % ((param0 - 43) / 46);
         } catch (RuntimeException runtimeException) {

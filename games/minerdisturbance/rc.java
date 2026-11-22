@@ -897,7 +897,7 @@ final class rc extends PcmStream {
         if (this.field_t < 0) {
           if (this.field_r <= 0) {
             this.l();
-            this.b(34);
+            this.unlink(34);
             return;
           }
           this.field_t = 0;
@@ -905,7 +905,7 @@ final class rc extends PcmStream {
         if (this.field_t >= var7) {
           if (this.field_r >= 0) {
             this.l();
-            this.b(34);
+            this.unlink(34);
             return;
           }
           this.field_t = var7 - 1;
@@ -1032,7 +1032,7 @@ final class rc extends PcmStream {
           if (this.field_t >= var7) {
             this.field_t = var7;
             this.l();
-            this.b(34);
+            this.unlink(34);
           }
           return;
         }
@@ -1042,7 +1042,7 @@ final class rc extends PcmStream {
         }
         this.field_t = -1;
         this.l();
-        this.b(34);
+        this.unlink(34);
         return;
     }
 
@@ -1248,7 +1248,7 @@ final class rc extends PcmStream {
               this.field_C = 0;
               this.field_s = 0;
               this.field_D = 0;
-              this.b(34);
+              this.unlink(34);
               param0 = this.field_z;
             }
             this.field_z = 0;
@@ -1266,7 +1266,7 @@ final class rc extends PcmStream {
         if (this.field_t < 0) {
           if (this.field_r <= 0) {
             this.l();
-            this.b(34);
+            this.unlink(34);
             return;
           }
           this.field_t = 0;
@@ -1274,7 +1274,7 @@ final class rc extends PcmStream {
         if (this.field_t >= var5) {
           if (this.field_r >= 0) {
             this.l();
-            this.b(34);
+            this.unlink(34);
             return;
           }
           this.field_t = var5 - 1;
@@ -1387,7 +1387,7 @@ final class rc extends PcmStream {
           if (this.field_t >= var5) {
             this.field_t = var5;
             this.l();
-            this.b(34);
+            this.unlink(34);
           }
           return;
         }
@@ -1396,7 +1396,7 @@ final class rc extends PcmStream {
         }
         this.field_t = -1;
         this.l();
-        this.b(34);
+        this.unlink(34);
     }
 
     final synchronized int h() {
@@ -1531,7 +1531,7 @@ final class rc extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.f(0);
-          this.b(34);
+          this.unlink(34);
           return;
         }
         if (this.field_s != 0) {
@@ -1591,7 +1591,7 @@ final class rc extends PcmStream {
         this.field_z = 0;
         this.field_w = 0;
         this.field_D = 0;
-        this.b(34);
+        this.unlink(34);
     }
 
     private final boolean f() {
@@ -1618,7 +1618,7 @@ final class rc extends PcmStream {
           this.field_C = 0;
           this.field_s = 0;
           this.field_D = 0;
-          this.b(34);
+          this.unlink(34);
           return true;
         }
         if (this.field_D >= var1) {

@@ -16,7 +16,7 @@ final class li extends lw {
           InsanoSauceAnimation.field_x = new IntrusiveNodeHashTable(256);
           var1_int = -102 / ((-53 - param0) / 51);
           for (var2 = 0; dq.field_a.length > var2; var2++) {
-            InsanoSauceAnimation.field_x.a((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, new ji(var2));
+            InsanoSauceAnimation.field_x.put((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, new ji(var2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

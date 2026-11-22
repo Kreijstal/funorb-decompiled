@@ -11,7 +11,7 @@ final class wb {
     final void a(int param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_d) {
-            param1.a(false);
+            param1.unlink(false);
           }
           param1.field_b = this.field_a.field_b;
           param1.field_d = this.field_a;
@@ -33,7 +33,7 @@ final class wb {
           if (var2 == this.field_a) {
             break;
           }
-          var2.a(false);
+          var2.unlink(false);
         }
         this.field_c = null;
         if (param0 == 22800) {
@@ -111,7 +111,7 @@ final class wb {
         int var3 = -76 % ((-55 - param0) / 57);
         IntrusiveNode var2 = this.field_a.field_d;
         if (var2 != this.field_a) {
-          var2.a(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
@@ -125,7 +125,7 @@ final class wb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.field_d != null) {
-            param1.a(false);
+            param1.unlink(false);
           }
           param1.field_d = this.field_a.field_d;
           param1.field_b = this.field_a;
@@ -179,14 +179,14 @@ final class wb {
           this.a(4, (IntrusiveNode) null);
           var2 = this.field_a.field_b;
           if (var2 != this.field_a) {
-            var2.a(false);
+            var2.unlink(false);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_a.field_b;
         if (var2Lifetime1 != this.field_a) {
-          var2Lifetime1.a(false);
+          var2Lifetime1.unlink(false);
           return var2Lifetime1;
         }
         return null;

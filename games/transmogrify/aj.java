@@ -31,7 +31,7 @@ class aj extends UiWidget implements pb {
           }
           var8 = (UiWidget) (var7.c(param3 - 90));
           while (var8 != null) {
-            if (var8.b(8)) {
+            if (var8.isLinked(8)) {
               var8.a(this.field_n + param0, param1, param2, -1, param4, this.field_p + param5);
               var8 = (UiWidget) (var7.a(405142401));
               continue;
@@ -68,7 +68,7 @@ class aj extends UiWidget implements pb {
           var5 = new tl(this.field_u);
           var6 = (UiWidget) (var5.c(-95));
           while (var6 != null) {
-            if (var6.b(8)) {
+            if (var6.isLinked(8)) {
               var6.a(param0 + this.field_n, (byte) -12, param2, param3 + this.field_p);
               var6 = (UiWidget) (var5.a(param1 ^ -405142411));
               continue;
@@ -107,7 +107,7 @@ class aj extends UiWidget implements pb {
           }
           var9 = (UiWidget) (var8.c(-108));
           while (var9 != null) {
-            if (var9.b(8)) {
+            if (var9.isLinked(8)) {
               if (!var9.b(param0, param1, param2, param3 + this.field_p, -30386, param5, this.field_n + param6)) {
                 var9 = (UiWidget) (var8.a(405142401));
                 continue;
@@ -429,7 +429,7 @@ class aj extends UiWidget implements pb {
           var10 = new tl(this.field_u);
           var9 = (UiWidget) (var10.c(-117));
           while (var9 != null) {
-            if (var9.b(8)) {
+            if (var9.isLinked(8)) {
               if (var9.b((byte) -103) &&
                 var9.a(param0, param1, (byte) 125, param3)) {
                 return true;
@@ -661,7 +661,7 @@ class aj extends UiWidget implements pb {
           var8 = new tl(this.field_u);
           var9 = (UiWidget) (var8.c(param5 ^ 114));
           while (var9 != null) {
-            if (var9.b(8)) {
+            if (var9.isLinked(8)) {
               if (var9.b((byte) -119) &&
                 var9.a(param0, param1, param2, param3, param4, -17, param6)) {
                 return true;

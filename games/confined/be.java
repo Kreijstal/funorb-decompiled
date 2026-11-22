@@ -23,7 +23,7 @@ final class be extends gf {
     }
 
     final synchronized void b(gf param0) {
-        param0.a(true);
+        param0.unlink(true);
     }
 
     final int c() {
@@ -51,7 +51,7 @@ final class be extends gf {
     }
 
     private final void c(bl param0) {
-        param0.a(true);
+        param0.unlink(true);
         param0.a();
         param0.field_n = null;
         IntrusiveNode var2 = this.field_q.field_a.field_h;

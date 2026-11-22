@@ -17,7 +17,7 @@ final class dh implements Iterator {
         if (this.field_g == null) {
           throw new IllegalStateException();
         }
-        this.field_g.c(2);
+        this.field_g.unlink(2);
         this.field_g = null;
     }
 

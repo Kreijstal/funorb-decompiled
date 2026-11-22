@@ -9,7 +9,7 @@ final class ja extends DualLinkNode implements ec {
     private static IntrusiveDeque field_u;
 
     final void b() {
-        if (!this.a((byte) 73)) {
+        if (!this.isSecondaryLinked((byte) 73)) {
           field_t.a((byte) 54, (IntrusiveNode) (this));
         }
     }

@@ -150,7 +150,7 @@ class og extends qm implements he {
           var9 = new tm(this.field_v);
           var8 = (qm) (var9.a((byte) 32));
           while (var8 != null) {
-            if (var8.b(-72)) {
+            if (var8.isLinked(-72)) {
               if (var8.e(-123) &&
                 var8.a(param0, param1 + 0, param2, param3)) {
                 return true;
@@ -299,7 +299,7 @@ class og extends qm implements he {
           var7 = -15 % ((param1 + 50) / 59);
           var6 = (qm) (var5.a((byte) 32));
           while (var6 != null) {
-            if (var6.b(120)) {
+            if (var6.isLinked(120)) {
               var6.a(param0, -124, this.field_j + param2, param3 + this.field_r);
               var6 = (qm) (var5.b(-118));
               continue;
@@ -436,7 +436,7 @@ class og extends qm implements he {
             return;
           }
           while (var8 != null) {
-            if (var8.b(-94)) {
+            if (var8.isLinked(-94)) {
               var8.a(param0, param1 + this.field_j, this.field_r + param2, param3, param4, 0);
               var8 = (qm) (var7.b(param5 ^ 3));
               continue;
@@ -475,7 +475,7 @@ class og extends qm implements he {
           var8 = new tm(this.field_v);
           var9 = (qm) (var8.a((byte) 72));
           while (var9 != null) {
-            if (var9.b(110)) {
+            if (var9.isLinked(110)) {
               if (var9.a(this.field_r + param0, param1, param2, param3, param4 + this.field_j, param5, param6)) {
                 return true;
               }
@@ -516,7 +516,7 @@ class og extends qm implements he {
           }
           var9 = (qm) (var8.a((byte) 112));
           while (var9 != null) {
-            if (var9.b(param0 - 62)) {
+            if (var9.isLinked(param0 - 62)) {
               if (var9.e(param0 ^ -128) &&
                 var9.a(1, param1, param2, param3, param4, param5, param6)) {
                 return true;

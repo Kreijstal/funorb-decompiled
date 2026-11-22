@@ -18,8 +18,8 @@ final class hk {
         }
         try {
           if (param1 != null) {
-            param1.b(34);
-            param1.a((byte) -120);
+            param1.unlink(34);
+            param1.unlinkSecondary((byte) -120);
             this.field_b = this.field_b + param1.field_y;
           }
         } catch (RuntimeException runtimeException) {
@@ -110,8 +110,8 @@ final class hk {
           field_c = (String) null;
           var8 = var7.f(-47);
           if (var8 == null) {
-            var7.b(34);
-            var7.a((byte) -95);
+            var7.unlink(34);
+            var7.unlinkSecondary((byte) -95);
             this.field_b = this.field_b + var7.field_y;
             return null;
           }
@@ -124,14 +124,14 @@ final class hk {
           this.field_g.a(var7.field_d, true, var6);
           this.field_h.a((byte) -37, var6);
           ((bl) ((Object) var6)).field_p = 0L;
-          var7.b(34);
-          var7.a((byte) -121);
+          var7.unlink(34);
+          var7.unlinkSecondary((byte) -121);
           return var8;
         }
         Object var9 = var7.f(-47);
         if (var9 == null) {
-          var7.b(34);
-          var7.a((byte) -95);
+          var7.unlink(34);
+          var7.unlinkSecondary((byte) -95);
           this.field_b = this.field_b + var7.field_y;
           return null;
         }
@@ -144,8 +144,8 @@ final class hk {
         this.field_g.a(var7.field_d, true, var6Lifetime1);
         this.field_h.a((byte) -37, var6Lifetime1);
         ((bl) ((Object) var6Lifetime1)).field_p = 0L;
-        var7.b(34);
-        var7.a((byte) -121);
+        var7.unlink(34);
+        var7.unlinkSecondary((byte) -121);
         return var9;
     }
 

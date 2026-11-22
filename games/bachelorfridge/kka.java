@@ -17,7 +17,7 @@ final class kka extends IntrusiveNode {
         var3 = var3.toLowerCase();
         if (!var3.equals("")) {
           int var4 = 53 / ((4 - param1) / 41);
-          return ((ji) (DualLinkNode.field_f.a(true, (long)var3.hashCode()))).field_h;
+          return ((ji) (DualLinkNode.field_f.get(true, (long)var3.hashCode()))).field_h;
         }
         return -1;
     }

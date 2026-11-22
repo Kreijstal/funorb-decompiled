@@ -129,7 +129,7 @@ final class ih extends ej {
                       this.field_p.field_x = 0;
                     }
                   } else {
-                    this.field_p.c(-1);
+                    this.field_p.unlinkSecondary(-1);
                     this.field_p.field_v = false;
                     this.field_p = null;
                   }

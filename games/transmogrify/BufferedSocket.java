@@ -474,7 +474,7 @@ final class BufferedSocket implements Runnable {
             var4_ref_b = (b) (le.field_C.a((byte) -95));
             if (var4_ref_b != null &&
               var4_ref_b.field_g < var2_long) {
-              var4_ref_b.c(5);
+              var4_ref_b.unlink(5);
               tg.field_a = var4_ref_b.field_h.length;
               WordLanguage.field_l.position = 0;
               for (var5_int = 0; tg.field_a > var5_int; var5_int++) {

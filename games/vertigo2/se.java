@@ -5,7 +5,7 @@ final class se extends TextureOperator {
     static Sprite field_C;
     static byte[][] field_y;
     private int field_z;
-    static fi field_A;
+    static SecondaryNodeHashTable field_A;
 
     final int[] c(int param0, int param1) {
         int[] var25 = null;
