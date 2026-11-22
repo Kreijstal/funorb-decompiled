@@ -52,10 +52,10 @@ final class p {
           var2 = var28.readUnsignedByte((byte) 114);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(17277);
-            var4 = (de) (qa.field_d.a((byte) -117));
+            var4 = (de) (qa.field_d.beginBackward((byte) -117));
             while (var4 != null) {
               if (~var3 != ~var4.field_k) {
-                var4 = (de) (qa.field_d.d((byte) 63));
+                var4 = (de) (qa.field_d.nextBackward((byte) 63));
                 continue;
               }
               break;
@@ -149,10 +149,10 @@ final class p {
           } else if (1 == var2) {
             var3 = var28.readUnsignedShort(17277);
             var4_long = var28.readLong(58);
-            var6_ref_d = (d) (wk.field_b.a((byte) -117));
+            var6_ref_d = (d) (wk.field_b.beginBackward((byte) -117));
             while (var6_ref_d != null) {
               if (~var6_ref_d.field_n != ~var3) {
-                var6_ref_d = (d) (wk.field_b.d((byte) 63));
+                var6_ref_d = (d) (wk.field_b.nextBackward((byte) 63));
                 continue;
               }
               break;

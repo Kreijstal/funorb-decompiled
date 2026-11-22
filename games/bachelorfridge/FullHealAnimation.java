@@ -48,14 +48,14 @@ final class FullHealAnimation extends EventAnimation {
           this.e((byte) 27);
         }
         if (!var6.isDown(-83)) {
-          var3_ref = (DamageEffect) (this.field_z.effects.b((byte) 90));
+          var3_ref = (DamageEffect) (this.field_z.effects.beginForward((byte) 90));
           al.a(-86, this.field_z.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var6, this.screen.field_h, 12);
             var7 = var3_ref.target.a(-27449, this.screen);
             var7.b(-1, 6);
             this.addChild(27799, new DamagePopupAnimation(this.screen, this.field_z.creature.a(-27449, this.screen), -200));
-            var3_ref = (DamageEffect) (this.field_z.effects.c(0));
+            var3_ref = (DamageEffect) (this.field_z.effects.nextForward(0));
           }
           return;
         }

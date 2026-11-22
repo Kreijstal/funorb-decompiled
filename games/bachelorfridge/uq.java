@@ -175,8 +175,8 @@ final class uq extends UiComponent {
         int var7 = 0;
         BattleState var8 = new BattleState(var1, var2, var3, var4, var5, var6);
         IntrusiveDeque var9 = mg.field_m.field_e.field_m;
-        CreatureProfile[] var10 = new CreatureProfile[var9.g(param0 + 28716)];
-        var9.a((byte) 88, var10);
+        CreatureProfile[] var10 = new CreatureProfile[var9.countWithOffset(param0 + 28716)];
+        var9.copyToArray((byte) 88, var10);
         BattleScreen var11 = new BattleScreen(var8, var7, var10, false);
         hp.field_c = 0;
         dj.field_c = var11;

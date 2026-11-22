@@ -34,19 +34,19 @@ final class ma extends jc {
           if (param0 > -88) {
             return;
           }
-          var2 = (sa) (hj.field_b.b(61));
+          var2 = (sa) (hj.field_b.beginForward(61));
           while (var2 != null) {
             if (var2.field_p.isLinked(123)) {
               var2.field_n.f(oc.field_f * var2.field_q + 128 >> 8);
             } else {
               var2.unlink(34);
             }
-            var2 = (sa) (hj.field_b.b((byte) 56));
+            var2 = (sa) (hj.field_b.nextForward((byte) 56));
           }
           if (GameAppletShell.field_c == null) {
             return;
           }
-          var2Lifetime1 = (sa) (GameAppletShell.field_c.b(80));
+          var2Lifetime1 = (sa) (GameAppletShell.field_c.beginForward(80));
           while (var2Lifetime1 != null) {
             stackIn_15_0 = var2Lifetime1.field_p.isLinked(118);
             if (!stackIn_15_0) {
@@ -54,7 +54,7 @@ final class ma extends jc {
             } else {
               var2Lifetime1.field_n.f(128 + oc.field_f * var2Lifetime1.field_q >> 8);
             }
-            var2Lifetime1 = (sa) (GameAppletShell.field_c.b((byte) 56));
+            var2Lifetime1 = (sa) (GameAppletShell.field_c.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

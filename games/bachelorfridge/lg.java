@@ -74,14 +74,14 @@ class lg {
     final int b(int param0) {
         int var4 = BachelorFridge.field_y;
         this.field_a.a(19842, true);
-        UiComponent var2 = (UiComponent) (this.field_a.children.b((byte) 90));
+        UiComponent var2 = (UiComponent) (this.field_a.children.beginForward((byte) 90));
         int var3 = param0;
         while (var2 != null) {
           var2.a(param0 ^ 19842, true);
           if (1 == var2.field_R) {
             return var3;
           }
-          var2 = (UiComponent) (this.field_a.children.c(0));
+          var2 = (UiComponent) (this.field_a.children.nextForward(0));
           var3++;
         }
         return -1;

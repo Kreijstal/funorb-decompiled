@@ -156,7 +156,7 @@ final class bn extends TileEffect {
             var9.field_o = (double)(-DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648) - 1);
             var9.field_n = 64;
             var9.field_h = -1;
-            this.field_g.a(var9, true);
+            this.field_g.addLast(var9, true);
           }
         }
         dha.a(this.field_g, this.field_f, this.field_e.field_h.field_w, 75);

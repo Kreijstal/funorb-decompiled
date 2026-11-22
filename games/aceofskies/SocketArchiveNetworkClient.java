@@ -69,17 +69,17 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_a = null;
             this.field_h.position = 0;
             while (true) {
-              NetworkArchiveRequest var4_ref = (NetworkArchiveRequest) (this.field_g.b(param0 ^ -17386));
+              NetworkArchiveRequest var4_ref = (NetworkArchiveRequest) (this.field_g.removeFirst(param0 ^ -17386));
               if (var4_ref != null) {
-                this.field_b.a(2, var4_ref);
+                this.field_b.addLast(2, var4_ref);
                 continue;
               }
               break;
             }
             while (true) {
-              NetworkArchiveRequest var4_refLifetime1 = (NetworkArchiveRequest) (this.field_n.b(-18520));
+              NetworkArchiveRequest var4_refLifetime1 = (NetworkArchiveRequest) (this.field_n.removeFirst(-18520));
               if (var4_refLifetime1 != null) {
-                this.field_d.a(2, var4_refLifetime1);
+                this.field_d.addLast(2, var4_refLifetime1);
                 continue;
               }
               break;
@@ -221,23 +221,23 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           try {
             this.field_s.b((byte) 107);
-            NetworkArchiveRequest var2 = (NetworkArchiveRequest) (this.field_b.b((byte) 123));
+            NetworkArchiveRequest var2 = (NetworkArchiveRequest) (this.field_b.beginForward((byte) 123));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(-1336879960, 1);
               this.field_l.writeLong40((byte) -106, var2.secondaryKey);
               this.field_s.a(this.field_l.payload.length, 0, -103, this.field_l.payload);
-              this.field_g.a(param0 + 2, var2);
-              var2 = (NetworkArchiveRequest) (this.field_b.e(31542));
+              this.field_g.addLast(param0 + 2, var2);
+              var2 = (NetworkArchiveRequest) (this.field_b.nextForward(31542));
             }
-            NetworkArchiveRequest var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.b((byte) 69));
+            NetworkArchiveRequest var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.beginForward((byte) 69));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(-1336879960, 0);
               this.field_l.writeLong40((byte) -59, var2Lifetime1.secondaryKey);
               this.field_s.a(this.field_l.payload.length, 0, 52, this.field_l.payload);
-              this.field_n.a(param0 + 2, var2Lifetime1);
-              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.e(31542));
+              this.field_n.addLast(param0 + 2, var2Lifetime1);
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.nextForward(31542));
             }
             for (int var2_int = param0; var2_int < 100; var2_int++) {
               int var3_int = this.field_s.b(-125);
@@ -289,24 +289,24 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       long var12 = (long)var7 + ((long)var6 << 32);
                       Object var14 = null;
                       if (var11) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_n.b((byte) 86));
+                        var14_ref = (NetworkArchiveRequest) (this.field_n.beginForward((byte) 86));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_n.e(param0 ^ 31542));
+                          var14_ref = (NetworkArchiveRequest) (this.field_n.nextForward(param0 ^ 31542));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if (decompiledFrameRemainder0 &&
                         decompiledFrameCompleted0) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_g.b((byte) 81));
+                        var14_ref = (NetworkArchiveRequest) (this.field_g.beginForward((byte) 81));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_g.e(31542));
+                          var14_ref = (NetworkArchiveRequest) (this.field_g.nextForward(31542));
                         }
                       }
                       if (var14_ref == null) {

@@ -19,7 +19,7 @@ final class ma {
         va var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (va) (ee.field_a.c(-3905));
+          var3 = (va) (ee.field_a.beginForward(-3905));
           var1 = var3;
           if (var1 == null) {
             return false;

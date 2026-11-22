@@ -10,7 +10,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque field_a;
 
     public final boolean hasNext() {
-        return this.field_a.field_e != this.field_d;
+        return this.field_a.sentinel != this.field_d;
     }
 
     public final void remove() {
@@ -190,7 +190,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           var1 = this.field_d;
-          if (var1 != this.field_a.field_e) {
+          if (var1 != this.field_a.sentinel) {
             this.field_d = ((DualLinkNode) (var1)).field_k;
             if (TrackController.field_F) {
               var1 = null;
@@ -246,7 +246,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_c = null;
         try {
           this.field_a = param0;
-          this.field_d = this.field_a.field_e.field_k;
+          this.field_d = this.field_a.sentinel.field_k;
           this.field_c = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

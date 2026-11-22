@@ -365,14 +365,14 @@ final class Level {
           this.field_g.a(0, this.a(-100, true));
           return false;
         }
-        if (0 < this.field_a.a(false)) {
+        if (0 < this.field_a.size(false)) {
           var2 = km.b(-1);
-          var4 = (lm) ((Object) this.field_a.b(0));
+          var4 = (lm) ((Object) this.field_a.beginBackward(0));
           while (var4 != null) {
             this.field_g.a(var4);
             ((IntrusiveNode) ((Object) var4)).unlink(0);
             if (50L >= -var2 + km.b(-1)) {
-              var4 = (lm) ((Object) this.field_a.f(-24059));
+              var4 = (lm) ((Object) this.field_a.nextBackward(-24059));
               continue;
             }
             break;
@@ -652,7 +652,7 @@ final class Level {
               }
               var8_ref_int__[var9Lifetime1] = (var16Lifetime1 >> 3) + (var15Lifetime1 << 3) + (ie.a(var14Lifetime1, 15) << 9);
             }
-            this.field_a.a((byte) 54, new pf(var23, var22, var24));
+            this.field_a.addFirst((byte) 54, new pf(var23, var22, var24));
           }
         }
         incrementValue$19 = var2;

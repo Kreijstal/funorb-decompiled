@@ -638,7 +638,7 @@ final class di extends PcmStream {
 
     private final void a(int param0, int param1) {
         int var4 = MinerDisturbance.field_ab;
-        cg var3 = (cg) (this.field_z.field_v.b(64));
+        cg var3 = (cg) (this.field_z.field_v.beginForward(64));
         while (var3 != null) {
           if (param0 < 0 ||
             param0 == var3.field_n) {
@@ -654,7 +654,7 @@ final class di extends PcmStream {
             }
             var3.unlink(34);
           }
-          var3 = (cg) (this.field_z.field_v.b((byte) 56));
+          var3 = (cg) (this.field_z.field_v.nextForward((byte) 56));
         }
         if (param1 != -10911) {
           this.d();
@@ -822,7 +822,7 @@ final class di extends PcmStream {
         var10 = MinerDisturbance.field_ab;
         this.a((byte) -69, param3, 64, param1);
         if ((this.field_v[param1] & 2) != 0) {
-          var5 = (cg) (this.field_z.field_v.d(59287));
+          var5 = (cg) (this.field_z.field_v.beginBackward(59287));
           while (var5 != null) {
             if (param1 == var5.field_n &&
               var5.field_G < 0) {
@@ -835,7 +835,7 @@ final class di extends PcmStream {
               var5.field_y = 4096;
               return;
             }
-            var5 = (cg) (this.field_z.field_v.a(21510));
+            var5 = (cg) (this.field_z.field_v.nextBackward(21510));
           }
         }
         var11 = (vc) (this.field_F.a((long)this.field_J[param1], -27109));
@@ -883,7 +883,7 @@ final class di extends PcmStream {
           }
           this.field_U[param1][var7.field_J] = var7;
         }
-        this.field_z.field_v.a((byte) -104, var7);
+        this.field_z.field_v.addLast((byte) -104, var7);
         this.field_gb[param1][param3] = var7;
         return;
     }
@@ -1055,12 +1055,12 @@ final class di extends PcmStream {
         cg var3 = null;
         int var4 = MinerDisturbance.field_ab;
         if (0 != (this.field_v[param0] & 4)) {
-          var3 = (cg) (this.field_z.field_v.b(122));
+          var3 = (cg) (this.field_z.field_v.beginForward(122));
           while (var3 != null) {
             if (var3.field_n == param0) {
               var3.field_B = 0;
             }
-            var3 = (cg) (this.field_z.field_v.b((byte) 56));
+            var3 = (cg) (this.field_z.field_v.nextForward((byte) 56));
           }
         }
         if (param1 != 20257) {
@@ -1071,14 +1071,14 @@ final class di extends PcmStream {
 
     private final void e(int param0, int param1) {
         int var4 = MinerDisturbance.field_ab;
-        cg var3 = (cg) (this.field_z.field_v.b(71));
+        cg var3 = (cg) (this.field_z.field_v.beginForward(71));
         while (var3 != null) {
           if ((param0 < 0 || var3.field_n == param0) &&
             !(var3.field_G >= 0)) {
             this.field_gb[var3.field_n][var3.field_F] = null;
             var3.field_G = 0;
           }
-          var3 = (cg) (this.field_z.field_v.b((byte) 56));
+          var3 = (cg) (this.field_z.field_v.nextForward((byte) 56));
         }
         if (param1 < 1) {
           wh var5 = (wh) null;
@@ -1355,7 +1355,7 @@ final class di extends PcmStream {
         }
         {
           if (0 != (2 & this.field_v[param3])) {
-            var6 = (cg) (this.field_z.field_v.b(72));
+            var6 = (cg) (this.field_z.field_v.beginForward(72));
             while (var6 != null) {
               if (var8.field_n == var6.field_n &&
                 0 > var6.field_G &&
@@ -1363,7 +1363,7 @@ final class di extends PcmStream {
                 var8.field_G = 0;
                 break;
               }
-              var6 = (cg) (this.field_z.field_v.b((byte) 56));
+              var6 = (cg) (this.field_z.field_v.nextForward((byte) 56));
             }
           } else {
             var8.field_G = 0;
@@ -1378,18 +1378,18 @@ final class di extends PcmStream {
         var5 = MinerDisturbance.field_ab;
         var3 = 125 / ((-48 - param1) / 62);
         if ((2 & this.field_v[param0]) != 0) {
-          var4 = (cg) (this.field_z.field_v.b(76));
+          var4 = (cg) (this.field_z.field_v.beginForward(76));
           while (var4 != null) {
             if (param0 == var4.field_n) {
               if (this.field_gb[param0][var4.field_F] != null) {
-                var4 = (cg) (this.field_z.field_v.b((byte) 56));
+                var4 = (cg) (this.field_z.field_v.nextForward((byte) 56));
                 continue;
               }
               if (0 > var4.field_G) {
                 var4.field_G = 0;
               }
             }
-            var4 = (cg) (this.field_z.field_v.b((byte) 56));
+            var4 = (cg) (this.field_z.field_v.nextForward((byte) 56));
           }
         }
     }

@@ -92,7 +92,7 @@ final class sj implements j {
           return;
         }
         try {
-          m.field_h.a(param1, -7044);
+          m.field_h.addFirst(param1, -7044);
           la.a(0, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "sj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

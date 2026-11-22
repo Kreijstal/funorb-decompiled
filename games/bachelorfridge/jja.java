@@ -20,13 +20,13 @@ final class jja extends PcmStream {
         var7 = BachelorFridge.field_y;
         try {
           this.field_j.a(param0, param1, param2);
-          var6 = (MidiNote) (this.field_k.b((byte) 90));
+          var6 = (MidiNote) (this.field_k.beginForward((byte) 90));
           scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             if (this.field_l.a(var6, (byte) 95)) {
-              var6 = (MidiNote) (this.field_k.c(0));
+              var6 = (MidiNote) (this.field_k.nextForward(0));
               continue;
             }
             var4_int = param1;
@@ -35,14 +35,14 @@ final class jja extends PcmStream {
               if (var6.field_r >= var5) {
                 this.a(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
                 var6.field_r = var6.field_r - var5;
-                var6 = (MidiNote) (this.field_k.c(0));
+                var6 = (MidiNote) (this.field_k.nextForward(0));
                 continue scanLoop1;
               }
               this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
               var5 = var5 - var6.field_r;
               var4_int = var4_int + var6.field_r;
             } while (!this.field_l.a(var4_int, var6, param0, var5, false));
-            var6 = (MidiNote) (this.field_k.c(0));
+            var6 = (MidiNote) (this.field_k.nextForward(0));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class jja extends PcmStream {
     }
 
     final PcmStream b() {
-        MidiNote var1 = (MidiNote) (this.field_k.b((byte) 90));
+        MidiNote var1 = (MidiNote) (this.field_k.beginForward((byte) 90));
         if (var1 == null) {
           return null;
         }
@@ -172,13 +172,13 @@ final class jja extends PcmStream {
         int var2;
         var4 = BachelorFridge.field_y;
         this.field_j.a(param0);
-        var3 = (MidiNote) (this.field_k.b((byte) 90));
+        var3 = (MidiNote) (this.field_k.beginForward((byte) 90));
         scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           if (this.field_l.a(var3, (byte) 95)) {
-            var3 = (MidiNote) (this.field_k.c(0));
+            var3 = (MidiNote) (this.field_k.nextForward(0));
             continue;
           }
           var2 = param0;
@@ -186,13 +186,13 @@ final class jja extends PcmStream {
             if (var2 <= var3.field_r) {
               this.a(var2, 53, var3);
               var3.field_r = var3.field_r - var2;
-              var3 = (MidiNote) (this.field_k.c(0));
+              var3 = (MidiNote) (this.field_k.nextForward(0));
               continue scanLoop1;
             }
             this.a(var3.field_r, 91, var3);
             var2 = var2 - var3.field_r;
           } while (!this.field_l.a(0, var3, (int[]) null, var2, false));
-          var3 = (MidiNote) (this.field_k.c(0));
+          var3 = (MidiNote) (this.field_k.nextForward(0));
         }
     }
 
@@ -223,7 +223,7 @@ final class jja extends PcmStream {
         int var2;
         var2 = BachelorFridge.field_y;
         while (true) {
-          var1 = (MidiNote) (this.field_k.c(0));
+          var1 = (MidiNote) (this.field_k.nextForward(0));
           if (var1 == null) {
             return null;
           }

@@ -20,12 +20,12 @@ final class FlirtSpecial extends SpecialOrder {
           if (var4 != null &&
             !var4.isDown(75)) {
             var5 = new FlirtEvent(this.moveId, new CreatureRef(var6), this.field_j);
-            var5.effects.a(new DamageEffect(new CreatureRef(var4), false, 1, 0, 37), true);
+            var5.effects.addLast(new DamageEffect(new CreatureRef(var4), false, 1, 0, 37), true);
             if (param1 != 3) {
               stackIn_7_0 = (CreatureEvent) null;
               return stackIn_7_0;
             }
-            var5.effects.a(new SetFriendlyEffect(new CreatureRef(var4), var6.ownerIndex), true);
+            var5.effects.addLast(new SetFriendlyEffect(new CreatureRef(var4), var6.ownerIndex), true);
             stackIn_9_0 = var5;
             return (CreatureEvent) ((Object) stackIn_9_0);
           }

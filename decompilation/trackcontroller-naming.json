@@ -1180,6 +1180,14 @@
       "renamedSymbol": "F:SecondaryNodeDeque.mouseButton:I"
     },
     {
+      "symbol": "F:rj.field_e:Lgb;",
+      "originalName": "field_e",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
+    },
+    {
       "symbol": "F:sa.field_M:I",
       "originalName": "field_M",
       "to": "pressX",
@@ -2978,6 +2986,22 @@
       "evidence": "Compares every cell of field_i against field_d at a computed offset and returns false on mismatch.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ActiveLevel.matchesTargetLayout(I)Z"
+    },
+    {
+      "symbol": "M:rj.a(I)Lgb;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Int!=65 allocates iterator via iterator() before sentinel read;take field_k successor;unlink non-sentinel with int-65 preserving overflow. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:rj.a(Lgb;I)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink secondary membership with0;append via field_k next and field_j previous;int!=8466 calls static applet helper(null,byte-6) between neighbor writes. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(LDualLinkNode;I)V"
     },
     {
       "symbol": "M:rl.b(Z)V",
@@ -24321,9 +24345,9 @@
     },
     {
       "symbol": "F:rj.field_e:Lgb;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_e:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "rj.java",
         "start": 126,
@@ -120560,7 +120584,7 @@
     },
     {
       "symbol": "L:rj.a(I)Lgb;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -120571,7 +120595,7 @@
     },
     {
       "symbol": "L:rj.a(I)Lgb;#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -120582,7 +120606,7 @@
     },
     {
       "symbol": "L:rj.a(Lgb;I)V#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(LDualLinkNode;I)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(LDualLinkNode;I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -120593,7 +120617,7 @@
     },
     {
       "symbol": "L:rj.a(Lgb;I)V#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(LDualLinkNode;I)V#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(LDualLinkNode;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -160446,9 +160470,9 @@
     },
     {
       "symbol": "M:rj.a(I)Lgb;",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "rj.java",
         "start": 258,
@@ -160457,9 +160481,9 @@
     },
     {
       "symbol": "M:rj.a(Lgb;I)V",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(LDualLinkNode;I)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(LDualLinkNode;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "rj.java",
         "start": 3281,
@@ -210166,7 +210190,7 @@
     },
     {
       "symbol": "P:rj.a(I)Lgb;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210177,7 +210201,7 @@
     },
     {
       "symbol": "P:rj.a(Lgb;I)V#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;I)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(LDualLinkNode;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210188,7 +210212,7 @@
     },
     {
       "symbol": "P:rj.a(Lgb;I)V#1",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;I)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(LDualLinkNode;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -244660,7 +244684,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "992fa967a47724b0ea5476e5a2f42e78f5cedefb77855cc04ef6120647b231b9",
-      "outputSha256": "cabbc1d86994f9877d829309e0b08a82015b924afe57ad0d51e2b8548220a2b3",
+      "outputSha256": "4ac753f8f8f65092ba4b002395bf516d01d5f64be3783ddb6bd69072c79b2d42",
       "edits": [
         {
           "start": 151,
@@ -244803,6 +244827,13 @@
           "renamed": "get"
         },
         {
+          "start": 5684,
+          "end": 5685,
+          "symbol": "M:rj.a(Lgb;I)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 5821,
           "end": 5822,
           "symbol": "M:ga.a(Lfc;JI)V",
@@ -244815,6 +244846,13 @@
           "symbol": "F:fc.field_b:J",
           "original": "field_b",
           "renamed": "key"
+        },
+        {
+          "start": 5873,
+          "end": 5874,
+          "symbol": "M:rj.a(Lgb;I)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 5954,
@@ -244887,11 +244925,25 @@
           "renamed": "get"
         },
         {
+          "start": 8065,
+          "end": 8066,
+          "symbol": "M:rj.a(I)Lgb;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 8255,
           "end": 8256,
           "symbol": "M:ga.a(Lfc;JI)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 8299,
+          "end": 8300,
+          "symbol": "M:rj.a(Lgb;I)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 8431,
@@ -246524,7 +246576,7 @@
       "original": "hh.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "dac3b6e664055fdaf685c61d5f81a3fd01c13f8c533e06a8a696e5eb58e9ed8d",
-      "outputSha256": "d4187501142fa2cc7d827d8894c8b83c9a1bd2d58bf931c9c525324fb9a25e78",
+      "outputSha256": "8ddcfde5f2e1ae22fe0b47d67bbb253850f54b2d0a67a1bf715ca4fb7f37ea1a",
       "edits": [
         {
           "start": 71,
@@ -246553,6 +246605,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 261,
+          "end": 268,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
         },
         {
           "start": 557,
@@ -246751,6 +246810,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 6301,
+          "end": 6308,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6341,
           "end": 6343,
           "symbol": "C:gb",
@@ -246840,6 +246906,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 8246,
+          "end": 8253,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
         },
         {
           "start": 8764,
@@ -282018,7 +282091,7 @@
       "original": "rj.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "d14216a6b5ba760f48678f3ef8781e3f2eed5ebd03032cc74a1df147bd77897f",
-      "outputSha256": "06f55db7478d03810c607648ac40db32bd2fd5d939c2a0fcc96bf510de61ea0f",
+      "outputSha256": "e4401e8dcbfb99665681fd02b28a70a0715941a4d0209bcd16588226f2e4a94b",
       "edits": [
         {
           "start": 71,
@@ -282042,6 +282115,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 126,
+          "end": 133,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
           "start": 174,
           "end": 181,
           "symbol": "F:rj.field_a:I",
@@ -282054,6 +282134,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 258,
+          "end": 259,
+          "symbol": "M:rj.a(I)Lgb;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 282,
@@ -282070,11 +282157,39 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 401,
+          "end": 408,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 437,
+          "end": 444,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
           "start": 473,
           "end": 474,
           "symbol": "M:gb.e(I)V",
           "original": "e",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 588,
+          "end": 595,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 622,
+          "end": 629,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
         },
         {
           "start": 674,
@@ -282112,6 +282227,13 @@
           "renamed": "SecondaryNodeDequeIterator"
         },
         {
+          "start": 3281,
+          "end": 3282,
+          "symbol": "M:rj.a(Lgb;I)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 3283,
           "end": 3285,
           "symbol": "C:gb",
@@ -282124,6 +282246,20 @@
           "symbol": "M:gb.e(I)V",
           "original": "e",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 3431,
+          "end": 3438,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3480,
+          "end": 3487,
+          "symbol": "F:rj.field_e:Lgb;",
+          "original": "field_e",
+          "renamed": "sentinel"
         },
         {
           "start": 3641,
@@ -294479,10 +294615,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "52b3a545b4d4ff1c578488c707421292c02cb793ced1262fef0c1beea015120a",
+    "rulesSha256": "8ca6ae922f58adf90c16bfe5424caf63b72e9355399cbd1d5777518266917029",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "38ef2ca14bb8cf3978b3bef3e9d0a011d86dd844ca72651247eefcf4ca0dd838",
+    "outputTreeSha256": "99c886df83aa568aae34de8a42eede92aefdf88da1799cb220d22eb0c5619345",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

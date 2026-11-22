@@ -53,8 +53,8 @@ final class ch {
         try {
           em.field_B = 480;
           fg.field_b = 0;
-          while (mb.field_e.b(127) > 0) {
-            mb.field_e.d(4011);
+          while (mb.field_e.size(127) > 0) {
+            mb.field_e.removeLast(4011);
           }
           if (param0 > -106) {
             field_j = (ad) null;

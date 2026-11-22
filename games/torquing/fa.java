@@ -13,14 +13,14 @@ final class fa {
         if (param2 == 27375) {
           var4.field_k = param1;
           var4.field_l = param3;
-          ae.field_nb.a((byte) 54, var4);
+          ae.field_nb.addFirst((byte) 54, var4);
           pd.a(var4, true, param0);
           return var4;
         }
         fa.a(5, -19, -58, -17);
         var4.field_k = param1;
         var4.field_l = param3;
-        ae.field_nb.a((byte) 54, var4);
+        ae.field_nb.addFirst((byte) 54, var4);
         pd.a(var4, true, param0);
         return var4;
     }
@@ -32,13 +32,13 @@ final class fa {
         RuntimeException var2 = null;
         var3 = Torquing.field_u;
         try {
-          var4 = (og) (bh.field_c.b(param1 + 21386));
+          var4 = (og) (bh.field_c.beginBackward(param1 + 21386));
           if (param1 != -21386) {
             return;
           }
           while (var4 != null) {
             jo.a(true, param0, var4);
-            var4 = (og) (bh.field_c.f(param1 - 2673));
+            var4 = (og) (bh.field_c.nextBackward(param1 - 2673));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

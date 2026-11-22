@@ -23,17 +23,17 @@ abstract class iha extends AnimationNode {
           if (null == this.field_h) {
             return this.field_f;
           }
-          var4 = (AnimationNode) (this.field_h.b((byte) 90));
+          var4 = (AnimationNode) (this.field_h.beginForward((byte) 90));
           while (var4 != null) {
             if (var4.update(param0 + 0)) {
               var4.unlink(false);
             }
-            var4 = (AnimationNode) (this.field_h.c(0));
+            var4 = (AnimationNode) (this.field_h.nextForward(0));
           }
           if (!this.field_f) {
             return false;
           }
-          if (!this.field_h.e(12917)) {
+          if (!this.field_h.isEmpty(12917)) {
             return false;
           }
           return true;
@@ -45,14 +45,14 @@ abstract class iha extends AnimationNode {
           if (null == this.field_h) {
             return this.field_f;
           }
-          var4Lifetime1 = (AnimationNode) (this.field_h.b((byte) 90));
+          var4Lifetime1 = (AnimationNode) (this.field_h.beginForward((byte) 90));
           while (var4Lifetime1 != null) {
             if (var4Lifetime1.update(param0 + 0)) {
               var4Lifetime1.unlink(false);
             }
-            var4Lifetime1 = (AnimationNode) (this.field_h.c(0));
+            var4Lifetime1 = (AnimationNode) (this.field_h.nextForward(0));
           }
-          stackIn_34_0 = (this.field_f) && (this.field_h.e(12917));
+          stackIn_34_0 = (this.field_f) && (this.field_h.isEmpty(12917));
           return stackIn_34_0;
         }
         this.field_f = true;
@@ -62,14 +62,14 @@ abstract class iha extends AnimationNode {
         if (null == this.field_h) {
           return this.field_f;
         }
-        var4Lifetime2 = (AnimationNode) (this.field_h.b((byte) 90));
+        var4Lifetime2 = (AnimationNode) (this.field_h.beginForward((byte) 90));
         while (var4Lifetime2 != null) {
           if (var4Lifetime2.update(param0 + 0)) {
             var4Lifetime2.unlink(false);
           }
-          var4Lifetime2 = (AnimationNode) (this.field_h.c(0));
+          var4Lifetime2 = (AnimationNode) (this.field_h.nextForward(0));
         }
-        stackIn_50_0 = (this.field_f) && (this.field_h.e(12917));
+        stackIn_50_0 = (this.field_f) && (this.field_h.isEmpty(12917));
         return stackIn_50_0;
     }
 

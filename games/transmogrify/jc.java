@@ -10,8 +10,8 @@ final class jc extends PcmStream {
     private final void a(gi param0) {
         param0.unlink(5);
         param0.a();
-        IntrusiveNode var2 = this.field_m.field_d.next;
-        if (var2 == this.field_m.field_d) {
+        IntrusiveNode var2 = this.field_m.sentinel.next;
+        if (var2 == this.field_m.sentinel) {
           this.field_k = -1;
         } else {
           this.field_k = ((gi) (var2)).field_g;
@@ -21,10 +21,10 @@ final class jc extends PcmStream {
     private final void e() {
         gi var1 = null;
         if (this.field_l > 0) {
-          var1 = (gi) (this.field_m.a((byte) -95));
+          var1 = (gi) (this.field_m.beginForward((byte) -95));
           while (var1 != null) {
             var1.field_g = var1.field_g - this.field_l;
-            var1 = (gi) (this.field_m.a(true));
+            var1 = (gi) (this.field_m.nextForward(true));
           }
           this.field_k = this.field_k - this.field_l;
           this.field_l = 0;
@@ -32,10 +32,10 @@ final class jc extends PcmStream {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_n.a((byte) -95));
+        PcmStream var4 = (PcmStream) (this.field_n.beginForward((byte) -95));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (PcmStream) (this.field_n.a(true));
+          var4 = (PcmStream) (this.field_n.nextForward(true));
         }
     }
 
@@ -60,7 +60,7 @@ final class jc extends PcmStream {
           param0 = param0 - var2;
           this.field_l = this.field_l + var2;
           this.e();
-          var3 = (gi) (this.field_m.a((byte) -95));
+          var3 = (gi) (this.field_m.beginForward((byte) -95));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -78,9 +78,9 @@ final class jc extends PcmStream {
 
     private final void a(IntrusiveNode param0, gi param1) {
         while (true) {
-          if (param0 == this.field_m.field_d) {
+          if (param0 == this.field_m.sentinel) {
             td.a(param0, (byte) 125, param1);
-            this.field_k = ((gi) (this.field_m.field_d.next)).field_g;
+            this.field_k = ((gi) (this.field_m.sentinel.next)).field_g;
             return;
           }
           if (((gi) (param0)).field_g <= param1.field_g) {
@@ -90,23 +90,23 @@ final class jc extends PcmStream {
           break;
         }
         td.a(param0, (byte) 125, param1);
-        this.field_k = ((gi) (this.field_m.field_d.next)).field_g;
+        this.field_k = ((gi) (this.field_m.sentinel.next)).field_g;
         return;
     }
 
     final PcmStream d() {
-        return (PcmStream) (this.field_n.a((byte) -95));
+        return (PcmStream) (this.field_n.beginForward((byte) -95));
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_n.a((IntrusiveNode) (param0), (byte) 33);
+        this.field_n.addFirst((IntrusiveNode) (param0), (byte) 33);
     }
 
     private final void e(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_n.a((byte) -95));
+        PcmStream var2 = (PcmStream) (this.field_n.beginForward((byte) -95));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (PcmStream) (this.field_n.a(true));
+          var2 = (PcmStream) (this.field_n.nextForward(true));
         }
     }
 
@@ -132,7 +132,7 @@ final class jc extends PcmStream {
           param2 = param2 - var4;
           this.field_l = this.field_l + var4;
           this.e();
-          var5 = (gi) (this.field_m.a((byte) -95));
+          var5 = (gi) (this.field_m.beginForward((byte) -95));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -149,7 +149,7 @@ final class jc extends PcmStream {
     }
 
     final PcmStream a() {
-        return (PcmStream) (this.field_n.a(true));
+        return (PcmStream) (this.field_n.nextForward(true));
     }
 
     final int b() {

@@ -135,13 +135,13 @@ final class HailAnimation extends EventAnimation {
         if (var2.isDown(84)) {
           return;
         }
-        EventEffect var3 = (EventEffect) (this.field_z.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_z.effects.beginForward((byte) 90));
         while (var3 != null) {
           var4 = var3.target.a(param0 - 27324, this.screen);
           var4.b(param0 + 124, 6);
           var3.apply(var2, this.screen.field_h, 12);
           this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));
-          var3 = (EventEffect) (this.field_z.effects.c(0));
+          var3 = (EventEffect) (this.field_z.effects.nextForward(0));
         }
     }
 

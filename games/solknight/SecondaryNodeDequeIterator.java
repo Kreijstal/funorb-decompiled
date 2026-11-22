@@ -32,12 +32,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_b != this.field_i.field_f;
+        return this.field_b != this.field_i.sentinel;
     }
 
     public final Object next() {
         Object var1 = this.field_b;
-        if (var1 == this.field_i.field_f) {
+        if (var1 == this.field_i.sentinel) {
           var1 = null;
           this.field_b = null;
         } else {
@@ -83,7 +83,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_a = null;
         try {
           this.field_i = param0;
-          this.field_b = this.field_i.field_f.secondaryPrevious;
+          this.field_b = this.field_i.sentinel.secondaryPrevious;
           this.field_a = null;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -131,24 +131,24 @@ final class BattleScreen extends dfa {
         tia var13;
         var12 = BachelorFridge.field_y;
         this.s(32307);
-        var13 = (tia) (this.field_fb.b((byte) 90));
+        var13 = (tia) (this.field_fb.beginForward((byte) 90));
         while (var13 != null) {
           if (!var13.a(-59)) {
             var13.unlink(false);
           }
-          var13 = (tia) (this.field_fb.c(0));
+          var13 = (tia) (this.field_fb.nextForward(0));
         }
-        var3 = (AnimationNode) (this.field_j.b((byte) 90));
+        var3 = (AnimationNode) (this.field_j.beginForward((byte) 90));
         if (var3 != null &&
           var3.update(21807)) {
           var3.unlink(false);
         }
-        var4 = (vca) (this.field_S.b((byte) 90));
+        var4 = (vca) (this.field_S.beginForward((byte) 90));
         while (var4 != null) {
           if (var4.b(false)) {
             var4.unlink(false);
           }
-          var4 = (vca) (this.field_S.c(0));
+          var4 = (vca) (this.field_S.nextForward(0));
         }
         if (null == this.field_o) {
           return;
@@ -303,7 +303,7 @@ final class BattleScreen extends dfa {
           if (param0 != 3) {
             this.field_K = 121;
           }
-          this.field_S.a(new vca(param1, 20, 30, 50), true);
+          this.field_S.addLast(new vca(param1, 20, 30, 50), true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -429,10 +429,10 @@ final class BattleScreen extends dfa {
             this.field_P.field_s.hp > 0) {
             this.field_W.a(0, -98, -10);
           }
-          var8 = (vca) (this.field_S.b((byte) 90));
+          var8 = (vca) (this.field_S.beginForward((byte) 90));
           while (var8 != null) {
             var8.a(240, 320, false);
-            var8 = (vca) (this.field_S.c(0));
+            var8 = (vca) (this.field_S.nextForward(0));
           }
           if (this.field_e.field_a) {
             ShieldAnimation.field_w.draw(0, -ShieldAnimation.field_w.field_p + i.field_a.field_rb);
@@ -797,12 +797,12 @@ final class BattleScreen extends dfa {
           if (this.field_h.field_r &&
             null != this.field_h.field_p &&
             !this.field_Q) {
-            this.field_X.a(this.field_h.field_p, true);
+            this.field_X.addLast(this.field_h.field_p, true);
             this.field_Q = true;
           }
-          if (this.field_j.e(12917) &&
-            this.field_fb.e(12917)) {
-            if (this.field_X.e(12917)) {
+          if (this.field_j.isEmpty(12917) &&
+            this.field_fb.isEmpty(12917)) {
+            if (this.field_X.isEmpty(12917)) {
               if (!this.i(108)) {
                 if (this.field_h.field_r) {
                   this.e(-122);
@@ -810,12 +810,12 @@ final class BattleScreen extends dfa {
                 this.field_e.d((byte) -16);
               }
             } else {
-              var6 = (BattleUpdate) (this.field_X.a(false));
+              var6 = (BattleUpdate) (this.field_X.removeFirst(false));
               var4_ref_at = var6.createAnimation(5, this);
               stackIn_25_0 = this.field_j;
               stackIn_25_1 = var4_ref_at;
               stackIn_26_2 = (param1) ? false : true;
-              ((IntrusiveDeque) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_26_2);
+              ((IntrusiveDeque) (Object) stackIn_25_0).addLast(stackIn_25_1, stackIn_26_2);
             }
           }
           this.field_L = this.field_L + 1;
@@ -852,8 +852,8 @@ final class BattleScreen extends dfa {
             this.field_P = null;
           }
           if (this.field_s != null &&
-            this.field_fb.e(12917) &&
-            this.field_j.e(12917)) {
+            this.field_fb.isEmpty(12917) &&
+            this.field_j.isEmpty(12917)) {
             var4 = 0;
             if (var3 != 0) {
               if (InvincibleEvent.field_q[98] ||
@@ -1303,7 +1303,7 @@ final class BattleScreen extends dfa {
     final void b(byte param0) {
         int var2 = 62 / ((param0 + 16) / 44);
         IntrusiveDeque var3 = this.field_h.field_U;
-        var3.a(this.field_X, 12632256);
+        var3.moveAllTo(this.field_X, 12632256);
     }
 
     final void b(CreatureActor param0, CreatureActor param1, boolean param2) {
@@ -1383,11 +1383,11 @@ final class BattleScreen extends dfa {
             if (var6 != 0) {
               var7 = new bn(this, param0.field_s.tileX, param0.field_s.tileY);
               var8_ref_ek = new DamagePopupAnimation(this, param0, -30);
-              this.field_j.a(var8_ref_ek, true);
+              this.field_j.addLast(var8_ref_ek, true);
             } else {
               var7 = new oia(this, param0.field_s.tileX, param0.field_s.tileY);
               var8_ref_ek = new DamagePopupAnimation(this, param0, 75);
-              this.field_j.a(var8_ref_ek, param2);
+              this.field_j.addLast(var8_ref_ek, param2);
             }
             ((TileEffect) (var7)).a(0);
           }
@@ -1504,7 +1504,7 @@ final class BattleScreen extends dfa {
     private final void a(int param0, String param1, int param2) {
         boolean discarded$0 = false;
         try {
-          this.field_S.a(new vca(ActorAnimation.field_u, param1, param0, 8192, 20, 30, 50, 80), true);
+          this.field_S.addLast(new vca(ActorAnimation.field_u, param1, param0, 8192, 20, 30, 50, 80), true);
           if (param2 != -22468) {
             CreatureActor var5 = (CreatureActor) null;
             discarded$0 = this.a((byte) -101, (CreatureActor) null);
@@ -1594,10 +1594,10 @@ final class BattleScreen extends dfa {
         var6 = BachelorFridge.field_y;
         try {
           var5 = -16 / ((param0 - 55) / 40);
-          var7 = (cia) (param1.b((byte) 90));
+          var7 = (cia) (param1.beginForward((byte) 90));
           while (var7 != null) {
             var7.b(true);
-            var7 = (cia) (param1.c(0));
+            var7 = (cia) (param1.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1662,7 +1662,7 @@ final class BattleScreen extends dfa {
             }
             var3 = -(128 * (((CreatureActor) (var2)).field_s.tileX - ((CreatureActor) (var2)).field_s.tileY) >> 1) + 256;
             var4 = 208 - ((((CreatureActor) (var2)).field_s.tileY + ((CreatureActor) (var2)).field_s.tileX) * 64 >> 1);
-            this.field_j.a(new fu(this, this.field_s.field_b, this.field_s.field_B, var3, var4), true);
+            this.field_j.addLast(new fu(this, this.field_s.field_b, this.field_s.field_B, var3, var4), true);
             break;
           }
         }
@@ -1684,10 +1684,10 @@ final class BattleScreen extends dfa {
         var4 = BachelorFridge.field_y;
         try {
           param1.unlink(false);
-          var2 = (ema) (aa.field_l.b((byte) 90));
+          var2 = (ema) (aa.field_l.beginForward((byte) 90));
           while (var2 != null) {
             if (var2.a(0, param1)) {
-              var2 = (ema) (aa.field_l.c(0));
+              var2 = (ema) (aa.field_l.nextForward(0));
               continue;
             }
             break;
@@ -1696,7 +1696,7 @@ final class BattleScreen extends dfa {
             stackIn_8_0 = -106;
             RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(stackIn_8_0, var2, param1);
           } else {
-            aa.field_l.a(param1, true);
+            aa.field_l.addLast(param1, true);
           }
           var3 = 113 % ((param0 + 10) / 47);
           return;

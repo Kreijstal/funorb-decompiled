@@ -108,7 +108,7 @@ final class le {
     }
 
     final static void b(int param0) {
-        m var1 = (m) (IntrusiveNode.field_b.a((byte) 51));
+        m var1 = (m) (IntrusiveNode.field_b.beginBackward((byte) 51));
         if (var1 == null) {
           je.a(false);
           return;

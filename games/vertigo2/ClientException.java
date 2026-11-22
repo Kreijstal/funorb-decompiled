@@ -196,7 +196,7 @@ final class ClientException extends RuntimeException {
           var12 = 58 % ((param0 + 19) / 46);
           var10 = param1.field_Nb.field_M;
           var11 = null;
-          var13 = (bs) (var10.a((byte) 100));
+          var13 = (bs) (var10.beginBackward((byte) 100));
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_M) {
@@ -377,7 +377,7 @@ final class ClientException extends RuntimeException {
             var11 = var13;
             if (var13.field_G) {
               if (var13.k(15)) {
-                var13 = (bs) (var10.b(84));
+                var13 = (bs) (var10.nextBackward(84));
                 continue;
               }
               var25Lifetime2 = null;
@@ -527,7 +527,7 @@ final class ClientException extends RuntimeException {
                 ko.field_S = (String) (var25Lifetime2);
               }
             }
-            var13 = (bs) (var10.b(84));
+            var13 = (bs) (var10.nextBackward(84));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

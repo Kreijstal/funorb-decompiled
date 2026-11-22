@@ -16,12 +16,12 @@ final class qa {
     final static sl a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         sl var8 = new sl(param2, param6, param3, param0, param7, param1);
         if (param4 == 56) {
-          tc.field_v.a((byte) -98, var8);
+          tc.field_v.addLast((byte) -98, var8);
           fg.a((byte) 5, var8, param5);
           return var8;
         }
         field_a = (PlatformTaskDispatcher) null;
-        tc.field_v.a((byte) -98, var8);
+        tc.field_v.addLast((byte) -98, var8);
         fg.a((byte) 5, var8, param5);
         return var8;
     }

@@ -59,7 +59,7 @@ final class n {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ki var5;
         float var6;
-        if (wd.field_h.b(-89) <= 0) {
+        if (wd.field_h.size(-89) <= 0) {
           if (param4 == -301) {
             return;
           }
@@ -73,14 +73,14 @@ final class n {
           n.clearStaticReferences(54);
           return;
         }
-        var5 = (ki) (wd.field_h.d(4011));
+        var5 = (ki) (wd.field_h.removeLast(4011));
         var5.field_q = (float)(-48 + param3);
         var5.field_B = (float)param2;
         var6 = (float)(10.0 / Math.sqrt((double)(param0 * param0 + param1 * param1)));
         var5.field_v = (float)param1 * var6;
         var5.field_u = 0;
         var5.field_D = var6 * (float)param0;
-        hd.field_u.a(var5, (byte) 13);
+        hd.field_u.addLast(var5, (byte) 13);
         sc.field_c = sc.field_c + 1;
         if (sc.field_c >= 300) {
           e.a(255, (byte) 40, 0);

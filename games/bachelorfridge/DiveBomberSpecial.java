@@ -55,7 +55,7 @@ final class DiveBomberSpecial extends SpecialOrder {
                   var16 = param0.tiles[var14][var15];
                   var17 = var16.occupant;
                   if (var17 != null) {
-                    var4.effects.a(new DamageEffect(new CreatureRef(var17), false, 1, 40, 0), true);
+                    var4.effects.addLast(new DamageEffect(new CreatureRef(var17), false, 1, 40, 0), true);
                   }
                 }
               }

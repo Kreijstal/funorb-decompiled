@@ -301,7 +301,7 @@ final class h {
           }
           var2 = var10.readUnsignedByte((byte) -54);
           if (0 == var2) {
-            var9 = (af) (ag.field_b.b(108));
+            var9 = (af) (ag.field_b.beginForward(108));
             if (var9 == null) {
               si.a(-37);
               return;
@@ -327,10 +327,10 @@ final class h {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt((byte) 119);
-              var4_ref_hf = (hf) (kk.field_a.b(109));
+              var4_ref_hf = (hf) (kk.field_a.beginForward(109));
               while (var4_ref_hf != null) {
                 if (var3 != var4_ref_hf.field_o) {
-                  var4_ref_hf = (hf) (kk.field_a.b((byte) 56));
+                  var4_ref_hf = (hf) (kk.field_a.nextForward((byte) 56));
                   continue;
                 }
                 break;

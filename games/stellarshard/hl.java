@@ -29,7 +29,7 @@ final class hl extends PcmStream {
           param2 = param2 - var4;
           this.field_p = this.field_p + var4;
           this.e();
-          var5 = (p) (this.field_r.b(-102));
+          var5 = (p) (this.field_r.beginForward(-102));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -46,10 +46,10 @@ final class hl extends PcmStream {
     }
 
     private final void d(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_o.b(-92));
+        PcmStream var2 = (PcmStream) (this.field_o.beginForward(-92));
         while (var2 != null) {
           var2.skip(param0);
-          var2 = (PcmStream) (this.field_o.b((byte) -57));
+          var2 = (PcmStream) (this.field_o.nextForward((byte) -57));
         }
     }
 
@@ -79,10 +79,10 @@ final class hl extends PcmStream {
     private final void e() {
         p var1 = null;
         if (this.field_p > 0) {
-          var1 = (p) (this.field_r.b(-101));
+          var1 = (p) (this.field_r.beginForward(-101));
           while (var1 != null) {
             var1.field_l = var1.field_l - this.field_p;
-            var1 = (p) (this.field_r.b((byte) 101));
+            var1 = (p) (this.field_r.nextForward((byte) 101));
           }
           this.field_q = this.field_q - this.field_p;
           this.field_p = 0;
@@ -110,7 +110,7 @@ final class hl extends PcmStream {
           param0 = param0 - var2;
           this.field_p = this.field_p + var2;
           this.e();
-          var3 = (p) (this.field_r.b(-115));
+          var3 = (p) (this.field_r.beginForward(-115));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -127,7 +127,7 @@ final class hl extends PcmStream {
     }
 
     final PcmStream c() {
-        return (PcmStream) (this.field_o.b((byte) 124));
+        return (PcmStream) (this.field_o.nextForward((byte) 124));
     }
 
     final synchronized void b(PcmStream param0) {
@@ -155,15 +155,15 @@ final class hl extends PcmStream {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_o.b(-81));
+        PcmStream var4 = (PcmStream) (this.field_o.beginForward(-81));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (PcmStream) (this.field_o.b((byte) 77));
+          var4 = (PcmStream) (this.field_o.nextForward((byte) 77));
         }
     }
 
     final PcmStream d() {
-        return (PcmStream) (this.field_o.b(-125));
+        return (PcmStream) (this.field_o.beginForward(-125));
     }
 
     private final void a(IntrusiveNode param0, p param1) {

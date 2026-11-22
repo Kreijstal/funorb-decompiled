@@ -100,7 +100,7 @@ final class uk extends ab {
         if (this.a(true) == null) {
           return;
         }
-        var2 = this.field_h.a((byte) 100);
+        var2 = this.field_h.beginBackward((byte) 100);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0 &&
@@ -118,7 +118,7 @@ final class uk extends ab {
           } else {
             var2.unlink(param0 + 96);
           }
-          var2 = this.field_h.b(27);
+          var2 = this.field_h.nextBackward(27);
         }
     }
 
@@ -145,7 +145,7 @@ final class uk extends ab {
           }
           if (this.field_m) {
             var2_int = 1;
-            var3 = this.field_j.a((byte) 100);
+            var3 = this.field_j.beginBackward((byte) 100);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_g[var4] == 0) {
@@ -156,7 +156,7 @@ final class uk extends ab {
               } else {
                 var3.unlink(2);
               }
-              var3 = this.field_j.b(27);
+              var3 = this.field_j.nextBackward(27);
             }
             while (this.field_B < this.field_x.field_h.length) {
               if (this.field_x.field_h[this.field_B] == 0) {
@@ -188,7 +188,7 @@ final class uk extends ab {
           else {
             if (this.field_n) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_j.a((byte) 100);
+              var3Lifetime1 = this.field_j.beginBackward((byte) 100);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_g[var4Lifetime1] != 1) {
@@ -199,7 +199,7 @@ final class uk extends ab {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_j.b(88);
+                var3Lifetime1 = this.field_j.nextBackward(88);
               }
               while (this.field_B < this.field_x.field_h.length) {
                 if (this.field_x.field_h[this.field_B] == 0) {

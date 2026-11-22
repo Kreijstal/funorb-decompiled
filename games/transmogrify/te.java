@@ -12,7 +12,7 @@ final class te {
 
     final static void a(AchievementNotice param0, byte param1, int param2) {
         try {
-          rh.field_r.a(param0, -101);
+          rh.field_r.addLast(param0, -101);
           ne.a((byte) 7, param0, param2);
           if (param1 != -10) {
             te.clearStaticReferences((byte) 61);

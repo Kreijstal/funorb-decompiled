@@ -19,10 +19,10 @@ final class oma {
         cia var9 = null;
         int var8 = BachelorFridge.field_y;
         try {
-          var9 = (cia) (param2.b((byte) 90));
+          var9 = (cia) (param2.beginForward((byte) 90));
           while (var9 != null) {
             var9.b(true);
-            var9 = (cia) (param2.c(0));
+            var9 = (cia) (param2.nextForward(0));
           }
           int var7 = -10 / ((param4 + 9) / 53);
         } catch (RuntimeException runtimeException) {

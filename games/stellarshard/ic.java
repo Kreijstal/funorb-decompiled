@@ -107,18 +107,18 @@ abstract class ic implements w {
         RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
-          var4 = (fk) (ib.field_c.b(-88));
+          var4 = (fk) (ib.field_c.beginForward(-88));
           while (var4 != null) {
             th.a(param0, var4, 1);
-            var4 = (fk) (ib.field_c.b((byte) 106));
+            var4 = (fk) (ib.field_c.nextForward((byte) 106));
           }
           if (param1 < 30) {
             return;
           }
-          var5 = (af) (pf.field_b.b(-110));
+          var5 = (af) (pf.field_b.beginForward(-110));
           while (var5 != null) {
             kg.a(param0, var5, false);
-            var5 = (af) (pf.field_b.b((byte) 87));
+            var5 = (af) (pf.field_b.nextForward((byte) 87));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

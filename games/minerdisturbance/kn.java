@@ -161,7 +161,7 @@ class kn extends fe implements rk {
         RuntimeException decompiledCaughtException = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          if (this.field_G.e((byte) 108)) {
+          if (this.field_G.isEmpty((byte) 108)) {
             return false;
           }
           var8 = new hh(this.field_G);
@@ -598,7 +598,7 @@ class kn extends fe implements rk {
         RuntimeException decompiledCaughtException = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          if (this.field_G.e((byte) 125)) {
+          if (this.field_G.isEmpty((byte) 125)) {
             return false;
           }
           var9 = new hh(this.field_G);
@@ -727,7 +727,7 @@ class kn extends fe implements rk {
           return;
         }
         try {
-          this.field_G.a((byte) -126, param1);
+          this.field_G.addLast((byte) -126, param1);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "kn.TB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

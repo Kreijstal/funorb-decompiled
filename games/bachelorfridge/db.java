@@ -39,7 +39,7 @@ final class db {
     }
 
     final static void b(int param0) {
-        fj var1 = (fj) (kma.field_o.a((byte) -124));
+        fj var1 = (fj) (kma.field_o.removeLast((byte) -124));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -47,12 +47,12 @@ final class db {
         SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
         if (param0 > 60) {
           var1.field_o = null;
-          CreatureEvent.field_m.a(var1, true);
+          CreatureEvent.field_m.addLast(var1, true);
           return;
         }
         db.b(-65);
         var1.field_o = null;
-        CreatureEvent.field_m.a(var1, true);
+        CreatureEvent.field_m.addLast(var1, true);
     }
 
     public static void releaseStatics(int param0) {

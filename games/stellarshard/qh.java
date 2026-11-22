@@ -209,7 +209,7 @@ final class qh {
           var22 = null;
           var12 = stellarshard.field_B;
           try {
-            var13 = (lb) (oc.field_c.b(-121));
+            var13 = (lb) (oc.field_c.beginForward(-121));
             var17 = var13;
             if (var17 == null) {
               return;

@@ -166,7 +166,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (!IntrusiveDeque.b((byte) 122)) {
             while (true) {
-              var5 = (AchievementNotice) (mc.field_c.c(-128));
+              var5 = (AchievementNotice) (mc.field_c.removeFirst(-128));
               if (var5 == null) {
                 break;
               }
@@ -440,7 +440,7 @@ public final class Transmogrify extends SessionGameApplet {
                   IntrusiveDeque.b((byte) 99)) {
                   rh.unlockedAchievementMask = 0;
                   hc.field_u = 0;
-                  mc.field_c.g(-1);
+                  mc.field_c.clear(-1);
                   SecondaryNodeDeque.field_g = 0;
                 }
                 lc.field_q = 0;

@@ -43,10 +43,10 @@ abstract class ti {
         RuntimeException decompiledCaughtException = null;
         var3 = StarCannon.field_A;
         try {
-          var4 = (rh) (a.field_f.c(-3905));
+          var4 = (rh) (a.field_f.beginForward(-3905));
           while (var4 != null) {
             ha.a(param1, 121, var4);
-            var4 = (rh) (a.field_f.a(-16913));
+            var4 = (rh) (a.field_f.nextForward(-16913));
           }
           if (param0 > 32) {
             return;

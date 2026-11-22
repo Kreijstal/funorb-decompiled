@@ -77,7 +77,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           int var12 = 0;
           var12 = Torquing.field_u;
           try {
-            var2 = (pm) (MouseInputHandler.field_e.b(param1 ^ -2933));
+            var2 = (pm) (MouseInputHandler.field_e.beginBackward(param1 ^ -2933));
             if (var2 == null) {
               return;
             }

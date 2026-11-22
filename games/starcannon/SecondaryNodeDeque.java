@@ -5,17 +5,17 @@ import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
     static mj field_b;
-    DualLinkNode field_f;
+    DualLinkNode sentinel;
     static IntrusiveDeque field_e;
     static int field_d;
     static int[] field_c;
     static int field_a;
     static boolean field_g;
 
-    final DualLinkNode b(int param0) {
-        DualLinkNode var2 = this.field_f.secondaryNext;
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
         int var3 = -14 % ((param0 - 15) / 50);
-        if (this.field_f != var2) {
+        if (this.sentinel != var2) {
           var2.unlinkSecondary(-6242);
           return var2;
         }
@@ -93,16 +93,16 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         try {
           if (param1 != 25184) {
-            this.b(-80);
+            this.removeFirst(-80);
           }
           if (null != param0.secondaryPrevious) {
             param0.unlinkSecondary(param1 - 31426);
           }
-          param0.secondaryNext = this.field_f;
-          param0.secondaryPrevious = this.field_f.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {

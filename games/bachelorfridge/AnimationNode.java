@@ -15,7 +15,7 @@ abstract class AnimationNode extends IntrusiveNode {
           if (param0 != 27799) {
             field_g = (String[]) null;
           }
-          this.field_h.a(param1, true);
+          this.field_h.addLast(param1, true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "at.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -41,15 +41,15 @@ abstract class AnimationNode extends IntrusiveNode {
           if (this.field_h == null) {
             return this.field_f;
           }
-          var2 = (AnimationNode) (this.field_h.b((byte) 90));
+          var2 = (AnimationNode) (this.field_h.beginForward((byte) 90));
           while (true) {
             if (var2 == null) {
-              stackIn_11_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
+              stackIn_11_0 = (this.field_f) && (this.field_h.isEmpty(param0 - 8890));
               return stackIn_11_0;
             }
             if (var2.update(21807)) {
               var2.unlink(false);
-              var2 = (AnimationNode) (this.field_h.c(0));
+              var2 = (AnimationNode) (this.field_h.nextForward(0));
               continue;
             }
             break;
@@ -57,7 +57,7 @@ abstract class AnimationNode extends IntrusiveNode {
           if (!this.field_f) {
             return false;
           }
-          if (this.field_h.e(param0 - 8890)) {
+          if (this.field_h.isEmpty(param0 - 8890)) {
             return true;
           }
           return false;
@@ -69,20 +69,20 @@ abstract class AnimationNode extends IntrusiveNode {
           if (this.field_h == null) {
             return this.field_f;
           }
-          var2Lifetime1 = (AnimationNode) (this.field_h.b((byte) 90));
+          var2Lifetime1 = (AnimationNode) (this.field_h.beginForward((byte) 90));
           while (true) {
             if (var2Lifetime1 == null) {
-              stackIn_61_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
+              stackIn_61_0 = (this.field_f) && (this.field_h.isEmpty(param0 - 8890));
               return stackIn_61_0;
             }
             if (var2Lifetime1.update(21807)) {
               var2Lifetime1.unlink(false);
-              var2Lifetime1 = (AnimationNode) (this.field_h.c(0));
+              var2Lifetime1 = (AnimationNode) (this.field_h.nextForward(0));
               continue;
             }
             break;
           }
-          stackIn_55_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
+          stackIn_55_0 = (this.field_f) && (this.field_h.isEmpty(param0 - 8890));
           return stackIn_55_0;
         }
         this.field_f = true;
@@ -92,20 +92,20 @@ abstract class AnimationNode extends IntrusiveNode {
         if (this.field_h == null) {
           return this.field_f;
         }
-        var2Lifetime2 = (AnimationNode) (this.field_h.b((byte) 90));
+        var2Lifetime2 = (AnimationNode) (this.field_h.beginForward((byte) 90));
         while (true) {
           if (var2Lifetime2 == null) {
-            stackIn_34_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
+            stackIn_34_0 = (this.field_f) && (this.field_h.isEmpty(param0 - 8890));
             return stackIn_34_0;
           }
           if (var2Lifetime2.update(21807)) {
             var2Lifetime2.unlink(false);
-            var2Lifetime2 = (AnimationNode) (this.field_h.c(0));
+            var2Lifetime2 = (AnimationNode) (this.field_h.nextForward(0));
             continue;
           }
           break;
         }
-        stackIn_43_0 = (this.field_f) && (this.field_h.e(param0 - 8890));
+        stackIn_43_0 = (this.field_f) && (this.field_h.isEmpty(param0 - 8890));
         return stackIn_43_0;
     }
 

@@ -41,7 +41,7 @@ final class jf extends IntrusiveNode {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(false);
             }
-            var13 = (he) (pl.field_W.b(-78));
+            var13 = (he) (pl.field_W.beginForward(-78));
             if (var13 == null) {
               IntrusiveDeque.c(-2290);
               return;
@@ -56,7 +56,7 @@ final class jf extends IntrusiveNode {
               GameEntity.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
               IntrusiveDeque.c(-2290);
             } else {
-              var15 = (he) (pl.field_W.b(-98));
+              var15 = (he) (pl.field_W.beginForward(-98));
               if (var15 == null) {
                 IntrusiveDeque.c(-2290);
                 return;
@@ -66,7 +66,7 @@ final class jf extends IntrusiveNode {
               var15.unlink(20);
             }
           } else {
-            var12 = (kl) (SocketConnector.field_e.b(-97));
+            var12 = (kl) (SocketConnector.field_e.beginForward(-97));
             if (var12 == null) {
               IntrusiveDeque.c(-2290);
               return;

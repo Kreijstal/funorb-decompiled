@@ -71,7 +71,7 @@ final class le implements uj {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new hf(param1);
-          kk.field_a.a((byte) -92, var3);
+          kk.field_a.addLast((byte) -92, var3);
           if (param0 != 0) {
             field_a = (String) null;
           }

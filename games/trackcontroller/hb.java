@@ -157,12 +157,12 @@ final class hb {
         Object var6 = var8.a((byte) 52);
         if (var6 != null) {
           if (!var8.f(-19429)) {
-            this.field_h.a(var8, 8466);
+            this.field_h.addLast(var8, 8466);
             var8.field_m = 0L;
           } else {
             var7 = new ad(var6, var8.field_o);
             this.field_e.put(var7, var8.key, -1);
-            this.field_h.a(var7, 8466);
+            this.field_h.addLast(var7, 8466);
             ((vh) ((Object) var7)).field_m = 0L;
             var8.unlink(-57);
             var8.unlinkSecondary(0);
@@ -228,7 +228,7 @@ final class hb {
         this.a(param2, -89);
         this.field_g = this.field_g - param0;
         while (this.field_g < 0) {
-          var8 = (vh) (this.field_h.a(65));
+          var8 = (vh) (this.field_h.removeFirst(65));
           this.a((byte) -103, var8);
         }
         if (param1 >= -53) {
@@ -237,7 +237,7 @@ final class hb {
         try {
           var6 = new ad(param3, param0);
           this.field_e.put(var6, param2, -1);
-          this.field_h.a(var6, 8466);
+          this.field_h.addLast(var6, 8466);
           ((vh) ((Object) var6)).field_m = 0L;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

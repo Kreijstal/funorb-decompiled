@@ -76,7 +76,7 @@ final class WeightedObjectCache {
             var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 > (long)param1) {
               SoftCacheReference var4 = new SoftCacheReference(var3.a((byte) 74), var3.field_p);
-              this.field_b.a(-1, var4, var3.key);
+              this.field_b.put(-1, var4, var3.key);
               ns.a(var4, -30575, var3);
               var3.unlink(-125);
               var3.unlinkSecondaryNode(-115);
@@ -172,7 +172,7 @@ final class WeightedObjectCache {
     }
 
     final Object a(long param0, int param1) {
-        CacheReference var7 = (CacheReference) (this.field_b.a(param0, (byte) 106));
+        CacheReference var7 = (CacheReference) (this.field_b.get(param0, (byte) 106));
         if (var7 == null) {
           return null;
         }
@@ -191,7 +191,7 @@ final class WeightedObjectCache {
             return var5;
           }
           StrongCacheReference var6 = new StrongCacheReference(var5, var7.field_p);
-          this.field_b.a(-1, var6, var7.key);
+          this.field_b.put(-1, var6, var7.key);
           this.field_h.a((DualLinkNode) (var6), (byte) -74);
           ((CacheReference) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(-128);
@@ -210,7 +210,7 @@ final class WeightedObjectCache {
           return var5;
         }
         StrongCacheReference var6Lifetime1 = new StrongCacheReference(var5, var7.field_p);
-        this.field_b.a(-1, var6Lifetime1, var7.key);
+        this.field_b.put(-1, var6Lifetime1, var7.key);
         this.field_h.a((DualLinkNode) (var6Lifetime1), (byte) -74);
         ((CacheReference) ((Object) var6Lifetime1)).secondaryKey = 0L;
         var7.unlink(-128);
@@ -280,14 +280,14 @@ final class WeightedObjectCache {
 
     final Object b(int param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        CacheReference var2 = (CacheReference) (this.field_b.a(param0 - 6533));
+        CacheReference var2 = (CacheReference) (this.field_b.next(param0 - 6533));
         while (var2 != null) {
           Object var3 = var2.a((byte) 74);
           if (var3 != null) {
             return var3;
           }
           CacheReference var4 = var2;
-          var2 = (CacheReference) (this.field_b.a(-64));
+          var2 = (CacheReference) (this.field_b.next(-64));
           var4.unlink(-125);
           var4.unlinkSecondaryNode(-127);
           this.field_g = this.field_g + var4.field_p;
@@ -313,14 +313,14 @@ final class WeightedObjectCache {
 
     final Object a(byte param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        CacheReference var2 = (CacheReference) (this.field_b.b(param0 ^ -16));
+        CacheReference var2 = (CacheReference) (this.field_b.beginIterationAtBucket(param0 ^ -16));
         while (var2 != null) {
           Object var3 = var2.a((byte) 74);
           if (var3 != null) {
             return var3;
           }
           CacheReference var4 = var2;
-          var2 = (CacheReference) (this.field_b.a(-118));
+          var2 = (CacheReference) (this.field_b.next(-118));
           var4.unlink(-126);
           var4.unlinkSecondaryNode(-116);
           this.field_g = this.field_g + var4.field_p;
@@ -332,7 +332,7 @@ final class WeightedObjectCache {
     }
 
     private final void a(int param0, long param1) {
-        CacheReference var4 = (CacheReference) (this.field_b.a(param1, (byte) 91));
+        CacheReference var4 = (CacheReference) (this.field_b.get(param1, (byte) 91));
         this.a(6646, var4);
         if (param0 > -108) {
           WeightedObjectCache.a(-85);
@@ -361,7 +361,7 @@ final class WeightedObjectCache {
           }
           StrongCacheReference var6 = new StrongCacheReference(param3, param2);
           int var7 = -16 / ((-52 - param1) / 34);
-          this.field_b.a(-1, var6, param0);
+          this.field_b.put(-1, var6, param0);
           this.field_h.a((DualLinkNode) (var6), (byte) 64);
           ((CacheReference) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {

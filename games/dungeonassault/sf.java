@@ -779,7 +779,7 @@ final class sf implements cl {
         var4 = DungeonAssault.field_K;
         try {
           oo.field_d = param1;
-          var2 = (fa) (ud.field_v.e(-24172));
+          var2 = (fa) (ud.field_v.beginBackward(-24172));
           var3 = -72 / ((param0 + 32) / 61);
           while (var2 != null) {
             stackIn_19_0 = var2.field_o.isLinked(-71);
@@ -789,7 +789,7 @@ final class sf implements cl {
                   var2.unlink(false);
                 }
                 var2.field_n.h(128 + oo.field_d * var2.field_l >> 8);
-                var2 = (fa) (oi.field_F.a(4));
+                var2 = (fa) (oi.field_F.nextBackward(4));
                 return;
               }
             }
@@ -800,14 +800,14 @@ final class sf implements cl {
               var4 != 0) {
               var2.field_n.h(oo.field_d * var2.field_l + 128 >> 8);
             }
-            var2 = (fa) (ud.field_v.a(4));
+            var2 = (fa) (ud.field_v.nextBackward(4));
             if (var4 == 0) {
               continue;
             }
             break;
           }
           if (oi.field_F != null) {
-            var2Lifetime1 = (fa) (oi.field_F.e(-24172));
+            var2Lifetime1 = (fa) (oi.field_F.beginBackward(-24172));
             while (var2Lifetime1 != null) {
               if (var4 != 0) {
                 return;
@@ -818,7 +818,7 @@ final class sf implements cl {
               } else {
                 var2Lifetime1.field_n.h(128 + oo.field_d * var2Lifetime1.field_l >> 8);
               }
-              var2Lifetime1 = (fa) (oi.field_F.a(4));
+              var2Lifetime1 = (fa) (oi.field_F.nextBackward(4));
             }
           }
           return;

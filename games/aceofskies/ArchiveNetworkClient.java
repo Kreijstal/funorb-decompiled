@@ -48,10 +48,10 @@ abstract class ArchiveNetworkClient {
 
     final int b(int param0) {
         if (param0 == -1048142560) {
-          return this.field_b.c(0) + this.field_g.c(0);
+          return this.field_b.countWithOffset(0) + this.field_g.countWithOffset(0);
         }
         this.field_b = (SecondaryNodeDeque) null;
-        return this.field_b.c(0) + this.field_g.c(0);
+        return this.field_b.countWithOffset(0) + this.field_g.countWithOffset(0);
     }
 
     final NetworkArchiveRequest a(int param0, int param1, int param2, boolean param3, byte param4) {
@@ -69,13 +69,13 @@ abstract class ArchiveNetworkClient {
           if (20 <= this.c(-116)) {
             throw new RuntimeException();
           }
-          this.field_d.a(2, var8);
+          this.field_d.addLast(2, var8);
           return var8;
         }
         if (this.b(-1048142560) >= 20) {
           throw new RuntimeException();
         }
-        this.field_b.a(2, var8);
+        this.field_b.addLast(2, var8);
         return var8;
     }
 
@@ -136,10 +136,10 @@ abstract class ArchiveNetworkClient {
 
     final int c(int param0) {
         if (param0 <= -69) {
-          return this.field_d.c(0) + this.field_n.c(0);
+          return this.field_d.countWithOffset(0) + this.field_n.countWithOffset(0);
         }
         field_c = 121;
-        return this.field_d.c(0) + this.field_n.c(0);
+        return this.field_d.countWithOffset(0) + this.field_n.countWithOffset(0);
     }
 
     ArchiveNetworkClient() {

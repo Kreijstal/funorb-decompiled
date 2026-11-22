@@ -115,7 +115,7 @@ class vk extends UiWidget implements ch {
                 decompiledFrameRemainder0 = (var8 != 0);
               }
               if (decompiledFrameRemainder0) {
-                var3 = (rj) (sd.field_d.c(-3905));
+                var3 = (rj) (sd.field_d.beginForward(-3905));
                 if (var3 == null) {
                   ec.a((byte) 27);
                   return;
@@ -128,7 +128,7 @@ class vk extends UiWidget implements ch {
               }
             }
             if (decompiledFrameRemainder0) {
-              var3_ref = (hb) (DelegatingCanvas.field_f.c(-3905));
+              var3_ref = (hb) (DelegatingCanvas.field_f.beginForward(-3905));
               if (var3_ref == null) {
                 ec.a((byte) 27);
                 return;
@@ -153,7 +153,7 @@ class vk extends UiWidget implements ch {
               }
             }
             if (decompiledFrameCompleted0) {
-              var4_ref = (rj) (sd.field_d.c(-3905));
+              var4_ref = (rj) (sd.field_d.beginForward(-3905));
               if (var4_ref == null) {
                 ec.a((byte) 27);
                 return;
@@ -624,7 +624,7 @@ class vk extends UiWidget implements ch {
         RuntimeException var3_ref = null;
         var7 = StarCannon.field_A;
         try {
-          if (this.field_u.a(true)) {
+          if (this.field_u.isEmpty(true)) {
             return false;
           }
           if (param0 != -103) {
@@ -873,7 +873,7 @@ class vk extends UiWidget implements ch {
         var8 = StarCannon.field_A;
         try {
           var3_int = 96 / ((param0 + 61) / 35);
-          if (this.field_u.a(true)) {
+          if (this.field_u.isEmpty(true)) {
             return false;
           }
           var4 = new ba(this.field_u);
@@ -1138,7 +1138,7 @@ class vk extends UiWidget implements ch {
               fieldTemp$0 = DelegatingCanvas.field_b;
               DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1;
               var6.field_hb = fieldTemp$0;
-              ma.field_c.b(122, var6);
+              ma.field_c.addLast(122, var6);
             }
             var6.field_kb = var5_ref_String;
             return;
@@ -1191,7 +1191,7 @@ class vk extends UiWidget implements ch {
             fieldTemp$1 = ec.field_b;
             ec.field_b = ec.field_b + 1;
             var7_ref.field_hb = fieldTemp$1;
-            ti.field_a.b(121, var7_ref);
+            ti.field_a.addLast(121, var7_ref);
           }
           if (null != var4Lifetime1) {
             var4Lifetime1 = ((String) (var4Lifetime1)).intern();
@@ -1199,10 +1199,10 @@ class vk extends UiWidget implements ch {
           var7_ref.field_gb = (String) (var4Lifetime1);
           var7_ref.field_kb = var5_ref_StringLifetime1;
           var7_ref.unlink(4);
-          var8_ref = (ld) (ti.field_a.c(-3905));
+          var8_ref = (ld) (ti.field_a.beginForward(-3905));
           while (var8_ref != null) {
             if (ff.a(80, var7_ref, var8_ref)) {
-              var8_ref = (ld) (ti.field_a.a(-16913));
+              var8_ref = (ld) (ti.field_a.nextForward(-16913));
               if (var9 == 0) {
                 continue;
               }
@@ -1210,7 +1210,7 @@ class vk extends UiWidget implements ch {
             break;
           }
           if (null == var8_ref) {
-            ti.field_a.b(66, var7_ref);
+            ti.field_a.addLast(66, var7_ref);
             if (var9 == 0) {
               return;
             }
@@ -1234,7 +1234,7 @@ class vk extends UiWidget implements ch {
           if (!param0) {
             field_w = (String) null;
           }
-          this.field_u.b(91, param1);
+          this.field_u.addLast(91, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

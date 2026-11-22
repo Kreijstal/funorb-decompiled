@@ -441,7 +441,7 @@ final class qd extends kn implements sh {
 
     final static void a(int param0, byte param1, sl param2) {
         try {
-          tc.field_v.a((byte) -87, param2);
+          tc.field_v.addLast((byte) -87, param2);
           if (param1 >= -18) {
             field_J = -12;
           }
@@ -459,18 +459,18 @@ final class qd extends kn implements sh {
         RuntimeException var2_ref = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          var4 = (sl) (tc.field_v.b(112));
+          var4 = (sl) (tc.field_v.beginForward(112));
           while (var4 != null) {
             fg.a((byte) 5, var4, param0);
-            var4 = (sl) (tc.field_v.b((byte) 56));
+            var4 = (sl) (tc.field_v.nextForward((byte) 56));
           }
           if (param1 >= -81) {
             qd.clearStaticReferences(false);
           }
-          var2 = on.field_v.b(99);
+          var2 = on.field_v.beginForward(99);
           while (var2 != null) {
             tc.a(1, param0);
-            var2 = on.field_v.b((byte) 56);
+            var2 = on.field_v.nextForward((byte) 56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

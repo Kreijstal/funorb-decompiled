@@ -111,10 +111,10 @@ final class eh {
           var2 = var28.readUnsignedByte(4);
           if (param0 == ~var2) {
             var3 = var28.readUnsignedShort((byte) 26);
-            var4 = (hk) (id.field_g.b(-114));
+            var4 = (hk) (id.field_g.beginForward(-114));
             while (var4 != null) {
               if (var4.field_t != var3) {
-                var4 = (hk) (id.field_g.b((byte) 80));
+                var4 = (hk) (id.field_g.nextForward((byte) 80));
                 continue;
               }
               break;
@@ -210,10 +210,10 @@ final class eh {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 83);
             var4_long = var28.readLong(0);
-            var6_ref_nf = (nf) (wb.field_f.b(-89));
+            var6_ref_nf = (nf) (wb.field_f.beginForward(-89));
             while (var6_ref_nf != null) {
               if (var6_ref_nf.field_u != var3Lifetime1) {
-                var6_ref_nf = (nf) (wb.field_f.b((byte) -22));
+                var6_ref_nf = (nf) (wb.field_f.nextForward((byte) -22));
                 continue;
               }
               break;

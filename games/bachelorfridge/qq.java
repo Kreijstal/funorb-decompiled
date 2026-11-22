@@ -73,7 +73,7 @@ final class qq extends EventEffect {
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         try {
-          var4 = (lh) (param0.b((byte) 90));
+          var4 = (lh) (param0.beginForward((byte) 90));
           param1 += 32;
           var5 = 0;
           if (param3 != -3227) {
@@ -89,7 +89,7 @@ final class qq extends EventEffect {
             }
             lw.field_b[1 + (var5 & 1)].a(param1 + (var4.field_i >> 4) - 32, -32 + (-(var4.field_h >> 5) + (param2 + (var4.field_q >> 4)) - 2), var4.field_o << 3);
             var5++;
-            var4 = (lh) (param0.c(param3 ^ -3227));
+            var4 = (lh) (param0.nextForward(param3 ^ -3227));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

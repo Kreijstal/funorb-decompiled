@@ -82,7 +82,7 @@ final class IncomingSpecial extends SpecialOrder {
                   if (var13 < ov.field_e.length) {
                     var14 = ov.field_e[var13];
                     var15 = new DamageEffect(new CreatureRef(var12), false, 1, var14, 0);
-                    var6.effects.a(var15, true);
+                    var6.effects.addLast(var15, true);
                   }
                 }
               }

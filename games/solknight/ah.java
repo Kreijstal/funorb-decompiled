@@ -22,27 +22,27 @@ final class ah {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           wc.field_a = param1;
-          var2 = (ud) (uc.field_j.a((byte) 51));
+          var2 = (ud) (uc.field_j.beginBackward((byte) 51));
           while (var2 != null) {
             if (var2.field_m.isLinked(false)) {
               var2.field_h.h(wc.field_a * var2.field_l + 128 >> 8);
             } else {
               var2.unlink(10);
             }
-            var2 = (ud) (uc.field_j.b(-78));
+            var2 = (ud) (uc.field_j.nextBackward(-78));
           }
           if (param0 >= -48) {
             ah.a(false, -78);
           }
           if (la.field_j != null) {
-            var2Lifetime1 = (ud) (la.field_j.a((byte) 51));
+            var2Lifetime1 = (ud) (la.field_j.beginBackward((byte) 51));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_m.isLinked(false)) {
                 var2Lifetime1.unlink(10);
               } else {
                 var2Lifetime1.field_h.h(wc.field_a * var2Lifetime1.field_l + 128 >> 8);
               }
-              var2Lifetime1 = (ud) (la.field_j.b(-33));
+              var2Lifetime1 = (ud) (la.field_j.nextBackward(-33));
             }
             return;
           }

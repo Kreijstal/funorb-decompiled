@@ -158,7 +158,7 @@ final class uo {
           if (param6 != 0) {
             return;
           }
-          var12 = (uh) (var8.a((byte) 100));
+          var12 = (uh) (var8.beginBackward((byte) 100));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
@@ -583,7 +583,7 @@ final class uo {
                 ve.a((byte) 117, var12, var32, param4);
               }
             }
-            var12 = (uh) (var8.b(param6 ^ 61));
+            var12 = (uh) (var8.nextBackward(param6 ^ 61));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

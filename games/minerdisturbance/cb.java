@@ -156,7 +156,7 @@ abstract class cb extends ok implements wg {
               fieldTemp$1 = wd.field_c;
               wd.field_c = wd.field_c + 1;
               var5_ref.field_tb = fieldTemp$1;
-              om.field_c.a((byte) -93, var5_ref);
+              om.field_c.addLast((byte) -93, var5_ref);
             }
             var5_ref.field_ob = var4_ref_String;
             return;
@@ -215,7 +215,7 @@ abstract class cb extends ok implements wg {
             fieldTemp$0 = r.field_c;
             r.field_c = r.field_c + 1;
             var6.field_tb = fieldTemp$0;
-            pe.field_qb.a((byte) 122, var6);
+            pe.field_qb.addLast((byte) 122, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -223,7 +223,7 @@ abstract class cb extends ok implements wg {
           var6.field_ob = var4_ref_StringLifetime1;
           var6.field_nb = (String) (var3Lifetime1);
           var6.unlink(34);
-          var7 = (pe) (pe.field_qb.b(82));
+          var7 = (pe) (pe.field_qb.beginForward(82));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
@@ -233,7 +233,7 @@ abstract class cb extends ok implements wg {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (vl.a(stackIn_63_0, stackIn_63_1, stackIn_63_2))) {
-                var7 = (pe) (pe.field_qb.b((byte) 56));
+                var7 = (pe) (pe.field_qb.nextForward((byte) 56));
                 continue;
               }
             }
@@ -251,7 +251,7 @@ abstract class cb extends ok implements wg {
             }
             break;
           }
-          pe.field_qb.a((byte) 114, var6);
+          pe.field_qb.addLast((byte) 114, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

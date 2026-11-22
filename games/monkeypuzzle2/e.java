@@ -87,25 +87,25 @@ final class e {
           fg.field_b = fg.field_b | var3;
           kg.field_c = kg.field_c | var3;
           if (param1 == 40) {
-            var4 = mb.field_e.e(11253) ? 1 : 0;
-            mb.field_e.a(param1 - 8252, new he(param2));
+            var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
+            mb.field_e.addFirst(param1 - 8252, new he(param2));
             if (var4 == 0) {
-              em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+              em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
               return;
             }
             ke.b(8192);
-            em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+            em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
             return;
           }
           field_a = (ki[]) null;
-          var4 = mb.field_e.e(11253) ? 1 : 0;
-          mb.field_e.a(param1 - 8252, new he(param2));
+          var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
+          mb.field_e.addFirst(param1 - 8252, new he(param2));
           if (var4 == 0) {
-            em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+            em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
             return;
           }
           ke.b(8192);
-          em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+          em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
           return;
         }
         hf.field_f.field_P = hf.field_f.field_P + 1;
@@ -113,24 +113,24 @@ final class e {
         kg.field_c = kg.field_c | var3;
         if (param1 != 40) {
           field_a = (ki[]) null;
-          var4 = mb.field_e.e(11253) ? 1 : 0;
-          mb.field_e.a(param1 - 8252, new he(param2));
+          var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
+          mb.field_e.addFirst(param1 - 8252, new he(param2));
           if (var4 == 0) {
-            em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+            em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
             return;
           }
           ke.b(8192);
-          em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+          em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
           return;
         }
-        var4 = mb.field_e.e(11253) ? 1 : 0;
-        mb.field_e.a(param1 - 8252, new he(param2));
+        var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
+        mb.field_e.addFirst(param1 - 8252, new he(param2));
         if (var4 == 0) {
-          em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+          em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
           return;
         }
         ke.b(8192);
-        em.field_C.a(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
+        em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
     }
 
     final static void b(byte param0) {
@@ -178,12 +178,12 @@ final class e {
             return;
           }
           UiWidget.field_f[mg.field_q].c(var2 + (-(UiWidget.field_f[mg.field_q].field_m >> 1) + 320), var6 - (UiWidget.field_f[mg.field_q].field_n - 40));
-          var7_ref_ki = (ki) (bd.field_b.a((byte) -117));
+          var7_ref_ki = (ki) (bd.field_b.beginBackward((byte) -117));
           while (var7_ref_ki != null) {
             var7_ref_ki.field_q = var7_ref_ki.field_q + (float)var1_int;
             var7_ref_ki.field_B = var7_ref_ki.field_B + (float)var2;
             var7_ref_ki.a((byte) -65);
-            var7_ref_ki = (ki) (bd.field_b.d((byte) 63));
+            var7_ref_ki = (ki) (bd.field_b.nextBackward((byte) 63));
           }
           for (var7 = 0; ii.field_E > var7; var7++) {
             if (ii.field_U[var7] >= 0) {

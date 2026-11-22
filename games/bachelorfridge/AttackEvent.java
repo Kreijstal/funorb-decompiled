@@ -35,11 +35,11 @@ class AttackEvent extends CreatureEvent {
           }
           param1.writeByte(var3_int, 0);
           param1.writeByte(this.field_p, 0);
-          param1.writeByte(this.field_o.g(0), 0);
-          var4 = (EventEffect) (this.field_o.b((byte) 90));
+          param1.writeByte(this.field_o.countWithOffset(0), 0);
+          var4 = (EventEffect) (this.field_o.beginForward((byte) 90));
           while (var4 != null) {
             var4.write(param1, (byte) -80);
-            var4 = (EventEffect) (this.field_o.c(0));
+            var4 = (EventEffect) (this.field_o.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +173,7 @@ class AttackEvent extends CreatureEvent {
             if (var4 < 0) {
               return;
             }
-            this.field_o.a(TBomberAnimation.a((byte) 102, param1), true);
+            this.field_o.addLast(TBomberAnimation.a((byte) 102, param1), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ class AttackEvent extends CreatureEvent {
           if (0 != this.field_q) {
             var10.field_s = this.field_q;
           }
-          var4 = (EventEffect) (this.field_o.b((byte) 90));
+          var4 = (EventEffect) (this.field_o.beginForward((byte) 90));
           var10.d(this.moveId, (byte) -94);
           if (!this.field_r &&
             !this.field_n) {
@@ -242,7 +242,7 @@ class AttackEvent extends CreatureEvent {
               }
               if (!(var4 instanceof DamageEffect)) {
                 var4.apply(var10, param0, 12);
-                var4 = (EventEffect) (this.field_o.c(0));
+                var4 = (EventEffect) (this.field_o.nextForward(0));
                 continue;
               }
               var6_ref_aga = var4.target.a(91, param0);
@@ -257,12 +257,12 @@ class AttackEvent extends CreatureEvent {
               }
               if (!(this instanceof hba)) {
                 ((DamageEffect) (var4)).a((byte) -66, var10, param0, this.field_q);
-                var4 = (EventEffect) (this.field_o.c(0));
+                var4 = (EventEffect) (this.field_o.nextForward(0));
                 continue;
               }
               var7 = MouseInputHandler.a(var6_ref_aga, var10, (byte) 104);
               ((DamageEffect) (var4)).a((byte) -21, var10, param0, var7);
-              var4 = (EventEffect) (this.field_o.c(0));
+              var4 = (EventEffect) (this.field_o.nextForward(0));
             }
           }
           return;

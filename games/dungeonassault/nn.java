@@ -12,7 +12,7 @@ final class nn extends IntrusiveNode {
         ie var2 = null;
         int var3 = DungeonAssault.field_K;
         if (param0 == 80) {
-          var2 = (ie) (this.field_m.e(param0 ^ -24124));
+          var2 = (ie) (this.field_m.beginBackward(param0 ^ -24124));
           while (var2 != null) {
             var2.field_m.field_p = mo.field_a;
             var2.field_m.field_m = -256 + mo.field_a;
@@ -20,7 +20,7 @@ final class nn extends IntrusiveNode {
               var2.field_m.field_L = mo.field_a;
             }
             var2.field_m.field_B = false;
-            var2 = (ie) (this.field_m.a(4));
+            var2 = (ie) (this.field_m.nextBackward(4));
           }
           this.field_l = null;
           return;
@@ -42,7 +42,7 @@ final class nn extends IntrusiveNode {
         RuntimeException var3_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          var3 = (ie) (this.field_m.e(-24172));
+          var3 = (ie) (this.field_m.beginBackward(-24172));
           if (param1 != -256) {
             this.field_l = (gd) null;
           }
@@ -54,7 +54,7 @@ final class nn extends IntrusiveNode {
               var3.field_m.field_B = false;
               var3.field_m.field_L = mo.field_a;
             }
-            var3 = (ie) (this.field_m.a(4));
+            var3 = (ie) (this.field_m.nextBackward(4));
           }
           param0.field_C = mo.field_a;
           param0.field_B = true;
@@ -84,12 +84,12 @@ final class nn extends IntrusiveNode {
           if (param1 != 29339) {
             field_k = (String) null;
           }
-          var3 = (ie) (this.field_m.e(-24172));
+          var3 = (ie) (this.field_m.beginBackward(-24172));
           while (var3 != null) {
             if (var3.field_m == param0) {
               var3.unlink(false);
             }
-            var3 = (ie) (this.field_m.a(4));
+            var3 = (ie) (this.field_m.nextBackward(4));
           }
           param0.field_M = null;
         } catch (RuntimeException runtimeException) {
@@ -111,14 +111,14 @@ final class nn extends IntrusiveNode {
             param0.field_M.b(param0, 29339);
           }
           param0.field_M = this;
-          var3 = (ie) (this.field_m.e(param1 ^ 24184));
+          var3 = (ie) (this.field_m.beginBackward(param1 ^ 24184));
           while (var3 != null) {
             if (param0 == var3.field_m) {
               return;
             }
-            var3 = (ie) (this.field_m.a(param1 + 24));
+            var3 = (ie) (this.field_m.nextBackward(param1 + 24));
           }
-          this.field_m.a(new ie(param0), false);
+          this.field_m.addFirst(new ie(param0), false);
           if (param1 == -20) {
             return;
           }
@@ -154,11 +154,11 @@ final class nn extends IntrusiveNode {
           return;
         }
         try {
-          var3 = (ie) (this.field_m.e(-24172));
+          var3 = (ie) (this.field_m.beginBackward(-24172));
           while (var3 != null) {
             var3.field_m.field_m = -256 + mo.field_a;
             var3.field_m.field_p = mo.field_a;
-            var3 = (ie) (this.field_m.a(4));
+            var3 = (ie) (this.field_m.nextBackward(4));
           }
           param1.field_L = mo.field_a;
           int var4 = 43 / ((param0 + 7) / 51);

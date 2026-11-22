@@ -63,7 +63,7 @@ final class HailSpecial extends SpecialOrder {
                   var15 = var14.occupant;
                   if (var15 != null) {
                     var16 = new DamageEffect(new CreatureRef(var15), false, 1, 75, 0);
-                    var4.effects.a(var16, true);
+                    var4.effects.addLast(var16, true);
                   }
                 }
               }

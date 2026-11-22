@@ -135,7 +135,7 @@ final class ld implements WidgetRenderer {
               fieldTemp$0 = vf.field_d;
               vf.field_d = vf.field_d + 1;
               var5.field_kb = fieldTemp$0;
-              eh.field_b.a((byte) 54, var5);
+              eh.field_b.addFirst((byte) 54, var5);
             }
             var5.field_ob = var4_ref_String;
             return;
@@ -188,7 +188,7 @@ final class ld implements WidgetRenderer {
             fieldTemp$1 = UrlRequest.field_g;
             UrlRequest.field_g = UrlRequest.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;
-            SpriteState.field_x.a((byte) 54, var6_ref);
+            SpriteState.field_x.addFirst((byte) 54, var6_ref);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -196,10 +196,10 @@ final class ld implements WidgetRenderer {
           var6_ref.field_jb = (String) (var3Lifetime1);
           var6_ref.field_ob = var4_ref_StringLifetime1;
           var6_ref.unlink(param0 - 123);
-          var7_ref = (ae) (SpriteState.field_x.b(0));
+          var7_ref = (ae) (SpriteState.field_x.beginBackward(0));
           while (null != var7_ref) {
             if (ha.a((byte) 75, var6_ref, var7_ref)) {
-              var7_ref = (ae) (SpriteState.field_x.f(-24059));
+              var7_ref = (ae) (SpriteState.field_x.nextBackward(-24059));
               if (var8 == 0) {
                 continue;
               }
@@ -212,7 +212,7 @@ final class ld implements WidgetRenderer {
               return;
             }
           }
-          SpriteState.field_x.a((byte) 54, var6_ref);
+          SpriteState.field_x.addFirst((byte) 54, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

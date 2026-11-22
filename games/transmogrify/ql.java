@@ -70,7 +70,7 @@ final class ql {
           if (param0 <= 100) {
             field_b = (int[]) null;
           }
-          lb.field_f.a(var7, -83);
+          lb.field_f.addLast(var7, -83);
           of.field_a.a(var6);
           stackIn_3_0 = var7;
           return stackIn_3_0;

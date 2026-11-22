@@ -36,7 +36,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
           }
           var3 = this.creature.a(118, param0);
           var4 = new SpiltMilkEvent(this.moveId, new CreatureRef(var3));
-          var4.effects.a(new DamageEffect(new CreatureRef(var3), false, 1, 0, 43), true);
+          var4.effects.addLast(new DamageEffect(new CreatureRef(var3), false, 1, 0, 43), true);
           stackIn_4_0 = var4;
           return (CreatureEvent) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,16 +68,16 @@ final class SpiltMilkSpecial extends SpecialOrder {
           if (param1 != 0) {
             return;
           }
-          var2 = (uha) (uma.field_M.b((byte) 90));
+          var2 = (uha) (uma.field_M.beginForward((byte) 90));
           while (var2 != null) {
             if (var2.a(param1 ^ -7, param0)) {
-              var2 = (uha) (uma.field_M.c(0));
+              var2 = (uha) (uma.field_M.nextForward(0));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            uma.field_M.a(param0, true);
+            uma.field_M.addLast(param0, true);
             return;
           }
           stackIn_10_0 = 106;

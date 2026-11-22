@@ -105,7 +105,7 @@ final class to {
           if (param2 == null) {
             return null;
           }
-          var7 = (rj) (param2.e(-24172));
+          var7 = (rj) (param2.beginBackward(-24172));
           if (param3 != 0) {
             stackIn_6_0 = (rj) null;
             return stackIn_6_0;
@@ -117,7 +117,7 @@ final class to {
             dupTemp$1 = var7.a(param3 - 115, param1, param0);
             var5 = dupTemp$1;
             if (null == dupTemp$1) {
-              var7 = (rj) (param2.a(4));
+              var7 = (rj) (param2.nextBackward(4));
               continue;
             }
             break;

@@ -162,7 +162,7 @@ final class va extends lg {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new wc(param3, param8, param2, param4, param6, param1, param7);
-          so.field_t.a((byte) 54, var9);
+          so.field_t.addFirst((byte) 54, var9);
           bp.a(var9, 1, param5);
           if (param0) {
             stackIn_4_0 = var9;

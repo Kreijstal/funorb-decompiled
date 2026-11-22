@@ -212,7 +212,7 @@ class ab extends dk {
           var7 = (UiWidget) null;
           this.a(-66, 48, (UiWidget) null, -8);
         }
-        var4 = (oi) (this.field_C.c(-3905));
+        var4 = (oi) (this.field_C.beginForward(-3905));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -224,7 +224,7 @@ class ab extends dk {
             }
             var5 = var5.field_o;
           }
-          var4 = (oi) (this.field_C.a(-16913));
+          var4 = (oi) (this.field_C.nextForward(-16913));
         }
         return null;
     }
@@ -296,7 +296,7 @@ class ab extends dk {
               ((oi) (var10)).field_o = var15;
             }
             var10 = var15;
-            this.field_C.b(110, var15);
+            this.field_C.addLast(110, var15);
           }
         }
     }

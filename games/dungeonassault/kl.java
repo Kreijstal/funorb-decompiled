@@ -24,19 +24,19 @@ class kl {
         } else {
           qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
           this.field_g.h(this.field_k, this.field_j);
-          var4 = (rj) (this.field_f.e(-24172));
+          var4 = (rj) (this.field_f.beginBackward(-24172));
           while (var4 != null) {
             var4.d(0);
-            var4 = (rj) (this.field_f.a(4));
+            var4 = (rj) (this.field_f.nextBackward(4));
           }
           return;
         }
         qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
         this.field_g.h(this.field_k, this.field_j);
-        var4Lifetime1 = (rj) (this.field_f.e(-24172));
+        var4Lifetime1 = (rj) (this.field_f.beginBackward(-24172));
         while (var4Lifetime1 != null) {
           var4Lifetime1.d(0);
-          var4Lifetime1 = (rj) (this.field_f.a(4));
+          var4Lifetime1 = (rj) (this.field_f.nextBackward(4));
         }
     }
 
@@ -114,17 +114,17 @@ class kl {
         if (param0 > -115) {
           this.field_i = -43;
         } else {
-          var4 = (rj) (this.field_f.e(-24172));
+          var4 = (rj) (this.field_f.beginBackward(-24172));
           while (var4 != null) {
             var4.b((byte) 30);
-            var4 = (rj) (this.field_f.a(4));
+            var4 = (rj) (this.field_f.nextBackward(4));
           }
           return;
         }
-        var4Lifetime1 = (rj) (this.field_f.e(-24172));
+        var4Lifetime1 = (rj) (this.field_f.beginBackward(-24172));
         while (var4Lifetime1 != null) {
           var4Lifetime1.b((byte) 30);
-          var4Lifetime1 = (rj) (this.field_f.a(4));
+          var4Lifetime1 = (rj) (this.field_f.nextBackward(4));
         }
     }
 
@@ -153,19 +153,19 @@ class kl {
           this.field_g = (ph) null;
         } else {
           this.field_l.b(0, 0);
-          var2 = (rj) (this.field_f.e(-24172));
+          var2 = (rj) (this.field_f.beginBackward(-24172));
           while (var2 != null) {
             var2.a(-this.field_k, -this.field_j, (byte) -96);
-            var2 = (rj) (this.field_f.a(4));
+            var2 = (rj) (this.field_f.nextBackward(4));
           }
           jh.b();
           return;
         }
         this.field_l.b(0, 0);
-        var2Lifetime1 = (rj) (this.field_f.e(-24172));
+        var2Lifetime1 = (rj) (this.field_f.beginBackward(-24172));
         while (var2Lifetime1 != null) {
           var2Lifetime1.a(-this.field_k, -this.field_j, (byte) -96);
-          var2Lifetime1 = (rj) (this.field_f.a(4));
+          var2Lifetime1 = (rj) (this.field_f.nextBackward(4));
         }
         jh.b();
     }

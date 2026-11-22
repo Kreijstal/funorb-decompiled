@@ -4513,9 +4513,9 @@ class PacketBuffer extends IntrusiveNode {
             field_p = -121;
           }
           var3 = new IntrusiveDeque();
-          var3.a(new a(param0), false);
-          while (!var3.a((byte) -87)) {
-            var4 = ((a) (var3.b((byte) -124))).field_j;
+          var3.addFirst(new a(param0), false);
+          while (!var3.isEmpty((byte) -87)) {
+            var4 = ((a) (var3.removeLast((byte) -124))).field_j;
             var5 = 1 + var2[var4];
             if (var4 % ib.field_j > 0) {
               dm.a(var3, var2, var5, -32, -1 + var4, var4 + (-1 - var4 / ib.field_j));

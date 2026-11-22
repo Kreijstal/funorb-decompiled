@@ -62,12 +62,12 @@ final class bk {
 
     final static hk a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = stellarshard.field_B;
-        hk var5 = (hk) (id.field_g.b(param3 - 133));
+        hk var5 = (hk) (id.field_g.beginForward(param3 - 133));
         while (var5 != null) {
           if (~var5.field_t == ~param4) {
             return var5;
           }
-          var5 = (hk) (id.field_g.b((byte) 102));
+          var5 = (hk) (id.field_g.nextForward((byte) 102));
         }
         if (param3 == 17) {
           var5 = new hk();

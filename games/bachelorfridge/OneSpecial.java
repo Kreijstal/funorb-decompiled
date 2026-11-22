@@ -147,7 +147,7 @@ final class OneSpecial extends SpecialOrder {
             var8 = (BattleState) null;
             this.createEvent((BattleState) null, 4);
           }
-          param4.effects.a(new MoveCreatureEffect(new CreatureRef(param2), param1, param0), param3);
+          param4.effects.addLast(new MoveCreatureEffect(new CreatureRef(param2), param1, param0), param3);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class OneSpecial extends SpecialOrder {
               break;
             }
             var7 = new DamageEffect(this.field_j, false, 1, 20, 0);
-            var4.effects.a(var7, true);
+            var4.effects.addLast(var7, true);
             stackIn_13_0 = var4;
             return (CreatureEvent) ((Object) stackIn_13_0);
           }

@@ -24,18 +24,18 @@ final class BoardChangeAnimation extends AnimationNode {
         RuntimeException var2 = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (nc) (tb.field_c.b((byte) 90));
+          var4 = (nc) (tb.field_c.beginForward((byte) 90));
           while (var4 != null) {
             qn.a(param0, var4, -8692);
-            var4 = (nc) (tb.field_c.c(0));
+            var4 = (nc) (tb.field_c.nextForward(0));
           }
           if (param1 != 1) {
             return;
           }
-          var5 = (mha) (wba.field_g.b((byte) 90));
+          var5 = (mha) (wba.field_g.beginForward((byte) 90));
           while (var5 != null) {
             sja.a(param0, var5, true);
-            var5 = (mha) (wba.field_g.c(param1 - 1));
+            var5 = (mha) (wba.field_g.nextForward(param1 - 1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,10 +271,10 @@ final class BoardChangeAnimation extends AnimationNode {
           return false;
         }
         this.field_o.field_h.a(23189);
-        BoardChange var5 = (BoardChange) (this.field_n.field_k.b((byte) 90));
+        BoardChange var5 = (BoardChange) (this.field_n.field_k.beginForward((byte) 90));
         while (var5 != null) {
           var5.a(this, -107);
-          var5 = (BoardChange) (this.field_n.field_k.c(0));
+          var5 = (BoardChange) (this.field_n.field_k.nextForward(0));
         }
         int var3 = 81 % ((71 - param0) / 47);
         return true;

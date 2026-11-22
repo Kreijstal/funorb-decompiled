@@ -134,10 +134,10 @@ final class ce {
           if (!param0) {
             field_b = -90;
           }
-          var2 = (uh) (nr.field_p.a((byte) 100));
+          var2 = (uh) (nr.field_p.beginBackward((byte) 100));
           while (var2 != null) {
             if (var2.a(true, param1)) {
-              var2 = (uh) (nr.field_p.b(25));
+              var2 = (uh) (nr.field_p.nextBackward(25));
               continue;
             }
             break;

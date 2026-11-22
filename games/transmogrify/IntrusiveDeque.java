@@ -3,37 +3,37 @@
  */
 final class IntrusiveDeque {
     static String[] field_a;
-    IntrusiveNode field_d;
+    IntrusiveNode sentinel;
     static String field_c;
-    private IntrusiveNode field_b;
+    private IntrusiveNode iterationCursor;
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode beginForward(byte param0) {
         if (param0 != -95) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_d.next;
-        if (this.field_d == var2) {
-          this.field_b = null;
+        IntrusiveNode var2 = this.sentinel.next;
+        if (this.sentinel == var2) {
+          this.iterationCursor = null;
           return null;
         }
-        this.field_b = var2.next;
+        this.iterationCursor = var2.next;
         return var2;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -9424) {
           IntrusiveDeque.c((byte) 97);
-          var2 = this.field_d.previous;
-          if (this.field_d != var2) {
+          var2 = this.sentinel.previous;
+          if (this.sentinel != var2) {
             var2.unlink(5);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_d.previous;
-        if (this.field_d != var2Lifetime1) {
+        var2Lifetime1 = this.sentinel.previous;
+        if (this.sentinel != var2Lifetime1) {
           var2Lifetime1.unlink(5);
           return var2Lifetime1;
         }
@@ -76,22 +76,22 @@ final class IntrusiveDeque {
         return ge.field_x;
     }
 
-    final IntrusiveNode a(boolean param0) {
-        IntrusiveNode var2 = this.field_b;
-        if (this.field_d == var2) {
-          this.field_b = null;
+    final IntrusiveNode nextForward(boolean param0) {
+        IntrusiveNode var2 = this.iterationCursor;
+        if (this.sentinel == var2) {
+          this.iterationCursor = null;
           return null;
         }
         if (param0) {
-          this.field_b = var2.next;
+          this.iterationCursor = var2.next;
           return var2;
         }
-        this.a(true);
-        this.field_b = var2.next;
+        this.nextForward(true);
+        this.iterationCursor = var2.next;
         return var2;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addLast(IntrusiveNode param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -101,14 +101,14 @@ final class IntrusiveDeque {
           if (null != param0.previous) {
             param0.unlink(5);
           }
-          param0.previous = this.field_d.previous;
-          param0.next = this.field_d;
+          param0.previous = this.sentinel.previous;
+          param0.next = this.sentinel;
           param0.previous.next = param0;
           param0.next.previous = param0;
           if (param1 <= -81) {
             return;
           }
-          this.field_d = (IntrusiveNode) null;
+          this.sentinel = (IntrusiveNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,22 +124,22 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_d.previous;
+    final IntrusiveNode beginBackward(int param0) {
+        IntrusiveNode var2 = this.sentinel.previous;
         if (param0 != -10231) {
           field_c = (String) null;
-          if (this.field_d != var2) {
-            this.field_b = var2.previous;
+          if (this.sentinel != var2) {
+            this.iterationCursor = var2.previous;
             return var2;
           }
-          this.field_b = null;
+          this.iterationCursor = null;
           return null;
         }
-        if (this.field_d != var2) {
-          this.field_b = var2.previous;
+        if (this.sentinel != var2) {
+          this.iterationCursor = var2.previous;
           return var2;
         }
-        this.field_b = null;
+        this.iterationCursor = null;
         return null;
     }
 
@@ -170,33 +170,33 @@ final class IntrusiveDeque {
         }
     }
 
-    final void g(int param0) {
+    final void clear(int param0) {
         int var3;
         IntrusiveNode var5;
         IntrusiveNode var4;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0 == -1) {
           while (true) {
-            var4 = this.field_d.next;
-            if (this.field_d != var4) {
+            var4 = this.sentinel.next;
+            if (this.sentinel != var4) {
               var4.unlink(5);
               continue;
             }
             break;
           }
-          this.field_b = null;
+          this.iterationCursor = null;
           return;
         }
         IntrusiveDeque.b((byte) 115);
         while (true) {
-          var5 = this.field_d.next;
-          if (this.field_d != var5) {
+          var5 = this.sentinel.next;
+          if (this.sentinel != var5) {
             var5.unlink(5);
             continue;
           }
           break;
         }
-        this.field_b = null;
+        this.iterationCursor = null;
         return;
     }
 
@@ -206,22 +206,22 @@ final class IntrusiveDeque {
         field_c = null;
     }
 
-    final IntrusiveNode f(int param0) {
-        IntrusiveNode var2 = this.field_b;
-        if (var2 == this.field_d) {
-          this.field_b = null;
+    final IntrusiveNode nextBackward(int param0) {
+        IntrusiveNode var2 = this.iterationCursor;
+        if (var2 == this.sentinel) {
+          this.iterationCursor = null;
           return null;
         }
         if (param0 == -33) {
-          this.field_b = var2.previous;
+          this.iterationCursor = var2.previous;
           return var2;
         }
-        this.field_d = (IntrusiveNode) null;
-        this.field_b = var2.previous;
+        this.sentinel = (IntrusiveNode) null;
+        this.iterationCursor = var2.previous;
         return var2;
     }
 
-    final void a(IntrusiveNode param0, byte param1) {
+    final void addFirst(IntrusiveNode param0, byte param1) {
         if (param0.previous != null) {
           param0.unlink(5);
         }
@@ -229,8 +229,8 @@ final class IntrusiveDeque {
           return;
         }
         try {
-          param0.next = this.field_d.next;
-          param0.previous = this.field_d;
+          param0.next = this.sentinel.next;
+          param0.previous = this.sentinel;
           param0.previous.next = param0;
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
@@ -238,16 +238,16 @@ final class IntrusiveDeque {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 != -1) {
           return true;
         }
-        return this.field_d == this.field_d.next ? true : false;
+        return this.sentinel == this.sentinel.next ? true : false;
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_d.next;
-        if (var2 == this.field_d) {
+    final IntrusiveNode removeFirst(int param0) {
+        IntrusiveNode var2 = this.sentinel.next;
+        if (var2 == this.sentinel) {
           return null;
         }
         if (param0 <= -71) {
@@ -261,9 +261,9 @@ final class IntrusiveDeque {
     }
 
     public IntrusiveDeque() {
-        this.field_d = new IntrusiveNode();
-        this.field_d.previous = this.field_d;
-        this.field_d.next = this.field_d;
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 
     final static void e(int param0) {

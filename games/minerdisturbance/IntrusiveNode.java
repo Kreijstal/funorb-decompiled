@@ -47,16 +47,16 @@ class IntrusiveNode {
         if (param1 != 2) {
           return;
         }
-        tm var4 = (tm) (ec.field_c.b(106));
+        tm var4 = (tm) (ec.field_c.beginForward(106));
         if (var4 != null) {
           var4.a(param0, (byte) 41);
           return;
         }
-        var4 = (tm) (ok.field_b.b(127));
+        var4 = (tm) (ok.field_b.beginForward(127));
         if (var4 != null) {
           var4.a(param0, (byte) 37);
           if (var4.e(3)) {
-            ok.field_b.e(63854);
+            ok.field_b.removeFirst(63854);
             return;
           }
           return;

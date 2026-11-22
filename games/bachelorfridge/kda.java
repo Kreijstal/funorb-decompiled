@@ -12,10 +12,10 @@ class kda {
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (gb) (ResetSpecial.field_s.b((byte) 90));
+          var4 = (gb) (ResetSpecial.field_s.beginForward((byte) 90));
           while (var4 != null) {
             RaiseSpecial.a(var4, true, param1);
-            var4 = (gb) (ResetSpecial.field_s.c(0));
+            var4 = (gb) (ResetSpecial.field_s.nextForward(0));
           }
           if (param0 < -16) {
             return;

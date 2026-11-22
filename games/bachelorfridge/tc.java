@@ -533,18 +533,18 @@ final class tc {
         RuntimeException var2 = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (gea) (wd.field_t.b((byte) 90));
+          var4 = (gea) (wd.field_t.beginForward((byte) 90));
           while (var4 != null) {
             JaggrabDownloader.a(var4, 5, param0);
-            var4 = (gea) (wd.field_t.c(0));
+            var4 = (gea) (wd.field_t.nextForward(0));
           }
           if (param1 != -16482) {
             return;
           }
-          var5 = (rg) (rp.field_C.b((byte) 90));
+          var5 = (rg) (rp.field_C.beginForward((byte) 90));
           while (var5 != null) {
             kr.a(93, var5, param0);
-            var5 = (rg) (rp.field_C.c(0));
+            var5 = (rg) (rp.field_C.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

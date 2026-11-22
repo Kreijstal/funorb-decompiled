@@ -103,7 +103,7 @@ final class vc {
         bs var1Lifetime1;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          var1 = (bs) (mk.field_J.a((byte) 100));
+          var1 = (bs) (mk.field_J.beginBackward((byte) 100));
           while (var1 != null) {
             if (var1.field_Ub > 0) {
               var1.field_Ub = var1.field_Ub - 1;
@@ -114,12 +114,12 @@ final class vc {
                 }
               }
             }
-            var1 = (bs) (mk.field_J.b(103));
+            var1 = (bs) (mk.field_J.nextBackward(103));
           }
           if (param0 != -59) {
             field_a = (String) null;
           }
-          var1_ref = (uh) (nr.field_p.a((byte) 100));
+          var1_ref = (uh) (nr.field_p.beginBackward((byte) 100));
           while (var1_ref != null) {
             if (var1_ref.field_ic > 0) {
               var1_ref.field_ic = var1_ref.field_ic - 1;
@@ -130,12 +130,12 @@ final class vc {
                 }
               }
             }
-            var1_ref = (uh) (nr.field_p.b(47));
+            var1_ref = (uh) (nr.field_p.nextBackward(47));
           }
-          var1Lifetime1 = (bs) (kq.field_Rb.a((byte) 100));
+          var1Lifetime1 = (bs) (kq.field_Rb.beginBackward((byte) 100));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Ub <= 0) {
-              var1Lifetime1 = (bs) (kq.field_Rb.b(38));
+              var1Lifetime1 = (bs) (kq.field_Rb.nextBackward(38));
               continue;
             }
             var1Lifetime1.field_Ub = var1Lifetime1.field_Ub - 1;
@@ -145,7 +145,7 @@ final class vc {
                 var1Lifetime1.unlink(2);
               }
             }
-            var1Lifetime1 = (bs) (kq.field_Rb.b(38));
+            var1Lifetime1 = (bs) (kq.field_Rb.nextBackward(38));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

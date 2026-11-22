@@ -223,7 +223,7 @@ final class DiveBomberAnimation extends EventAnimation {
         if (var2.isDown(127)) {
           return;
         }
-        DamageEffect var3 = (DamageEffect) (this.field_v.effects.b((byte) 90));
+        DamageEffect var3 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
         if (param0 <= 110) {
           return;
         }
@@ -233,7 +233,7 @@ final class DiveBomberAnimation extends EventAnimation {
           var4.b(-1, 6);
           var3.apply(var2, this.screen.field_h, 12);
           this.addChild(27799, new DamagePopupAnimation(this.screen, var4, 40));
-          var3 = (DamageEffect) (this.field_v.effects.c(0));
+          var3 = (DamageEffect) (this.field_v.effects.nextForward(0));
         }
     }
 

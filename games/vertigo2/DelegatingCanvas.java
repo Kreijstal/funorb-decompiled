@@ -39,14 +39,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var3 = Vertigo2.field_L ? 1 : 0;
         UiPanel var2Lifetime1;
         try {
-          var4 = (UiPanel) (param1.field_M.a((byte) 100));
+          var4 = (UiPanel) (param1.field_M.beginBackward((byte) 100));
           var2 = var4;
           while (var4 != null) {
             var4.field_kb = 0;
             var4.field_N = 0;
             var4.field_L = 0;
             var4.field_db = 0;
-            var4 = (UiPanel) (param1.field_M.b(95));
+            var4 = (UiPanel) (param1.field_M.nextBackward(95));
             var2Lifetime1 = var4;
           }
           param1.field_kb = 0;

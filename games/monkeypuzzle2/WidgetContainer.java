@@ -90,7 +90,7 @@ class WidgetContainer extends UiWidget implements ga {
           return;
         }
         try {
-          this.field_u.a(-8212, param1);
+          this.field_u.addFirst(-8212, param1);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ua.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -477,7 +477,7 @@ class WidgetContainer extends UiWidget implements ga {
           if (param1) {
             return true;
           }
-          if (this.field_u.e(11253)) {
+          if (this.field_u.isEmpty(11253)) {
             return false;
           }
           var3 = new DequeCursor(this.field_u);
@@ -568,7 +568,7 @@ class WidgetContainer extends UiWidget implements ga {
         RuntimeException decompiledCaughtException = null;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (this.field_u.e(11253)) {
+          if (this.field_u.isEmpty(11253)) {
             return false;
           }
           var3 = new DequeCursor(this.field_u);

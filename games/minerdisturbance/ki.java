@@ -39,7 +39,7 @@ final class ki extends IntrusiveNode {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 118);
             }
-            var12 = (ki) (on.field_v.b(110));
+            var12 = (ki) (on.field_v.beginForward(110));
             if (var12 == null) {
               si.a(param0 + 14967);
               return;
@@ -50,7 +50,7 @@ final class ki extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var11 = (sl) (tc.field_v.b(101));
+            var11 = (sl) (tc.field_v.beginForward(101));
             if (var11 == null) {
               si.a(param0 + 14908);
               return;
@@ -63,7 +63,7 @@ final class ki extends IntrusiveNode {
             si.a(-110);
             return;
           }
-          var14 = (ki) (on.field_v.b(64));
+          var14 = (ki) (on.field_v.beginForward(64));
           if (var14 == null) {
             si.a(-79);
             return;

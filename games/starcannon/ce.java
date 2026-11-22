@@ -53,15 +53,15 @@ final class ce {
           if (param1 >= -46) {
             ce.clearStaticReferences(55);
           }
-          var4 = (re) (s.field_e.c(-3905));
+          var4 = (re) (s.field_e.beginForward(-3905));
           while (var4 != null) {
             vh.a(param0, var4, 0);
-            var4 = (re) (s.field_e.a(-16913));
+            var4 = (re) (s.field_e.nextForward(-16913));
           }
-          var5 = (vc) (ne.field_c.c(-3905));
+          var5 = (vc) (ne.field_c.beginForward(-3905));
           while (var5 != null) {
             ea.a((byte) 66, var5, param0);
-            var5 = (vc) (ne.field_c.a(-16913));
+            var5 = (vc) (ne.field_c.nextForward(-16913));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

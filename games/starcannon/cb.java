@@ -140,10 +140,10 @@ final class cb {
           var12 = se.field_p;
           var15 = var12;
           var2 = var15.readUnsignedByte(7909);
-          var3 = (oj) (uc.field_b.c(-3905));
+          var3 = (oj) (uc.field_b.beginForward(-3905));
           while (var3 != null) {
             if (var3.field_i != var2) {
-              var3 = (oj) (uc.field_b.a(-16913));
+              var3 = (oj) (uc.field_b.nextForward(-16913));
               continue;
             }
             break;

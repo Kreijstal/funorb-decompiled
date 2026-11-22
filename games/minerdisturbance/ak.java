@@ -17,7 +17,7 @@ final class ak {
 
     final static boolean a(int param0) {
         int var1 = -65 % ((-17 - param0) / 45);
-        return !ec.field_c.e((byte) 105) ? true : false;
+        return !ec.field_c.isEmpty((byte) 105) ? true : false;
     }
 
     static {

@@ -19,7 +19,7 @@ final class kj extends jk {
             field_F = (Sprite) null;
           }
           var3 = (rh) (param1);
-          this.field_D.a(var3, (byte) 13);
+          this.field_D.addLast(var3, (byte) 13);
           var3.field_z = true;
           var3.a((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
@@ -119,7 +119,7 @@ final class kj extends jk {
         RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (i) (WidgetContainer.field_v.a((byte) -117));
+          var4 = (i) (WidgetContainer.field_v.beginBackward((byte) -117));
           var1 = var4;
           if (var1 == null) {
             return false;

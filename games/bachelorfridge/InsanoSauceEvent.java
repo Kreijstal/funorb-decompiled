@@ -22,14 +22,14 @@ final class InsanoSauceEvent extends SpecialEvent {
           while (true) {
             var2_int--;
             if (var2_int >= 0) {
-              this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+              this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
               continue;
             }
             break;
           }
           this.field_r = param0.readUnsignedByte(16711935);
           this.field_s = param0.readUnsignedByte(16711935);
-          this.field_q = new int[this.effects.g(0)];
+          this.field_q = new int[this.effects.countWithOffset(0)];
           for (var3 = 0; this.field_q.length > var3; var3++) {
             this.field_q[var3] = param0.readUnsignedByte(16711935);
           }
@@ -229,14 +229,14 @@ final class InsanoSauceEvent extends SpecialEvent {
           var3 = this.creature.a(8, param0);
           var5 = 0 / ((12 - param1) / 35);
           var4 = 0;
-          var6 = (EventEffect) (this.effects.b((byte) 90));
+          var6 = (EventEffect) (this.effects.beginForward((byte) 90));
           while (var6 != null) {
             if (!(var6 instanceof DamageEffect)) {
               var6.apply(var3, param0, 12);
             } else {
               ((DamageEffect) (var6)).a((byte) -67, var3, param0, this.field_q[var4]);
             }
-            var6 = (EventEffect) (this.effects.c(0));
+            var6 = (EventEffect) (this.effects.nextForward(0));
             var4++;
           }
           return;

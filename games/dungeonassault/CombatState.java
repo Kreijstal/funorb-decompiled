@@ -1853,12 +1853,12 @@ final class CombatState {
         var5 = DungeonAssault.field_K;
         this.field_m.a(1);
         this.field_b.a(1);
-        co.field_I.b(-4);
-        co.field_I.a(new a(param0), false);
+        co.field_I.clear(-4);
+        co.field_I.addFirst(new a(param0), false);
         this.field_m.a(param0, -63);
         var3 = 116 / ((10 - param1) / 60);
-        while (!co.field_I.a((byte) -69)) {
-          var4 = ((a) (co.field_I.b((byte) -124))).field_j;
+        while (!co.field_I.isEmpty((byte) -69)) {
+          var4 = ((a) (co.field_I.removeLast((byte) -124))).field_j;
           if (var4 % 7 > 0) {
             this.a(co.field_I, 49, var4 - 1, var4 - 1 - var4 / 7, true);
           }
@@ -2161,7 +2161,7 @@ final class CombatState {
               }
               this.field_b.a(param3, param1 - 175);
             } else {
-              param0.a(new a(param2), false);
+              param0.addFirst(new a(param2), false);
             }
             return;
           }

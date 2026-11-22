@@ -109,7 +109,7 @@ final class BananarangSpecial extends SpecialOrder {
             var17 = param0.tiles[var7][var8];
             var18 = var17.occupant;
             if (var18 != null) {
-              var4.effects.a(new DamageEffect(new CreatureRef(var18), false, 1, 50, 0), true);
+              var4.effects.addLast(new DamageEffect(new CreatureRef(var18), false, 1, 50, 0), true);
             }
             if (var11 == 0) {
               continue;

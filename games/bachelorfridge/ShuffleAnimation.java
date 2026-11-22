@@ -103,16 +103,16 @@ final class ShuffleAnimation extends EventAnimation {
         this.field_w = false;
         try {
           this.field_x = param1;
-          var3_int = this.field_x.effects.g(0);
+          var3_int = this.field_x.effects.countWithOffset(0);
           this.field_z = new CreatureActor[var3_int];
-          var4 = (PlaceCreatureEffect) (this.field_x.effects.b((byte) 90));
+          var4 = (PlaceCreatureEffect) (this.field_x.effects.beginForward((byte) 90));
           var5 = 0;
           var7 = 0;
           var5Lifetime1 = var7;
           while (var4 != null) {
             this.field_z[var7] = var4.target.a(-27449, this.screen);
             this.field_z[var7].field_p = -256;
-            var4 = (PlaceCreatureEffect) (this.field_x.effects.c(0));
+            var4 = (PlaceCreatureEffect) (this.field_x.effects.nextForward(0));
             var7++;
           }
           return;
@@ -226,13 +226,13 @@ final class ShuffleAnimation extends EventAnimation {
         if (param0 != 2147483647) {
           this.e(-47);
         }
-        PlaceCreatureEffect var3 = (PlaceCreatureEffect) (this.field_x.effects.b((byte) 90));
+        PlaceCreatureEffect var3 = (PlaceCreatureEffect) (this.field_x.effects.beginForward((byte) 90));
         while (var3 != null) {
           var4 = var3.target.a(param0 ^ -2147456200, this.screen);
           var4.field_s.tileY = var3.field_m;
           var4.field_s.tileX = var3.field_l;
           this.screen.b(var4, (CreatureActor) null, true);
-          var3 = (PlaceCreatureEffect) (this.field_x.effects.c(0));
+          var3 = (PlaceCreatureEffect) (this.field_x.effects.nextForward(0));
         }
         this.field_w = false;
         this.field_y = true;

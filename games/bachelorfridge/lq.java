@@ -207,20 +207,20 @@ abstract class lq extends UiWidget implements e {
           rq.field_f = rq.field_f - 1;
           if (0 == rq.field_f) {
             rq.field_f = 200;
-            var1 = (cq) (SocketConnector.field_d.b((byte) 90));
+            var1 = (cq) (SocketConnector.field_d.beginForward((byte) 90));
             while (var1 != null) {
               if (!var1.field_h.isLinked((byte) -106)) {
                 var1.unlink(false);
               }
-              var1 = (cq) (SocketConnector.field_d.c(0));
+              var1 = (cq) (SocketConnector.field_d.nextForward(0));
             }
             if (jha.field_i != null) {
-              var1Lifetime1 = (cq) (jha.field_i.b((byte) 90));
+              var1Lifetime1 = (cq) (jha.field_i.beginForward((byte) 90));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_h.isLinked((byte) -106)) {
                   var1Lifetime1.unlink(false);
                 }
-                var1Lifetime1 = (cq) (jha.field_i.c(0));
+                var1Lifetime1 = (cq) (jha.field_i.nextForward(0));
               }
             }
           }

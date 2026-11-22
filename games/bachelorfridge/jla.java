@@ -204,7 +204,7 @@ class jla {
           RasterBuffer.field_d.a(vc.field_a * 32, false, 32, 105);
           ug.field_q.a(19842, true);
           ug.field_q.a(vc.field_a * 32, false, 32, 121);
-          var2 = (uu) (mda.field_b.children.b((byte) 90));
+          var2 = (uu) (mda.field_b.children.beginForward((byte) 90));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2 == null))) {
             stackIn_11_0 = ~var2.field_R;
@@ -213,14 +213,14 @@ class jla {
               if (stackIn_11_0 == stackIn_11_1) {
                 if (ProxySocketConnector.field_f <= 0 &&
                   !fw.field_h[var2.field_Cb].field_e) {
-                  var2 = (uu) (mda.field_b.children.c(0));
+                  var2 = (uu) (mda.field_b.children.nextForward(0));
                   continue;
                 }
                 Crc32Table.a(32, (byte) 121);
                 RasterBuffer.a(7, param1 ^ 29576);
                 ImageProducerRasterBuffer.a(param1 - 28204, var2.field_Cb, 1);
               }
-              var2 = (uu) (mda.field_b.children.c(0));
+              var2 = (uu) (mda.field_b.children.nextForward(0));
               continue;
             }
             break;
@@ -711,7 +711,7 @@ class jla {
               if (!mg.field_m.a((byte) 122)) {
                 break regionExit2;
               }
-              if (mg.field_m.field_e.field_m.g(0) == 0) {
+              if (mg.field_m.field_e.field_m.countWithOffset(0) == 0) {
                 break regionExit2;
               }
               if (AttackUpAllAnimation.e(-29919)) {
@@ -1900,7 +1900,7 @@ class jla {
           this.field_b != 4) {
           if (1 == var4Lifetime1 &&
             null != mg.field_m && (!mg.field_m.a((byte) 103) ||
-            mg.field_m.field_e.field_m.g(0) == 0)) {
+            mg.field_m.field_e.field_m.countWithOffset(0) == 0)) {
             var12 = 5921370;
             var13 = 5921370;
             decompiledFrameRemainder0 = (var16 != 0);

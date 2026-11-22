@@ -214,7 +214,7 @@ final class hd {
           var2 = var9.readUnsignedByte(true);
           var3 = var9.readUnsignedByte(true);
           if (var2 == 0) {
-            var4_ref_kj = (kj) (cc.field_i.e(-24172));
+            var4_ref_kj = (kj) (cc.field_i.beginBackward(-24172));
             if (var4_ref_kj == null) {
               tl.a(-21);
               return;
@@ -234,11 +234,11 @@ final class hd {
           }
           if (1 == var2) {
             var4 = var9.readSignedSmart(0);
-            var5 = (mm) (m.field_a.e(-24172));
+            var5 = (mm) (m.field_a.beginBackward(-24172));
             while (var5 != null) {
               if (var3 != var5.field_p ||
                 var5.field_r != var4) {
-                var5 = (mm) (m.field_a.a(4));
+                var5 = (mm) (m.field_a.nextBackward(4));
                 continue;
               }
               break;

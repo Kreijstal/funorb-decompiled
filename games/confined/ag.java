@@ -255,12 +255,12 @@ final class ag {
           this.b(-110, param1);
           this.field_i = this.field_i - param0;
           while (this.field_i < 0) {
-            var6 = (nd) (this.field_b.a(-29870));
+            var6 = (nd) (this.field_b.removeFirst(-29870));
             this.a(param3 ^ -96, var6);
           }
           var6_ref = new oj(param2, param0);
           this.field_f.put(var6_ref, param1, ~param3);
-          this.field_b.a(var6_ref, 18425);
+          this.field_b.addLast(var6_ref, 18425);
           ((nd) ((Object) var6_ref)).field_r = (long)param3;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ag.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -283,13 +283,13 @@ final class ag {
           return null;
         }
         if (!var7.f((byte) -102)) {
-          this.field_b.a(var7, 18425);
+          this.field_b.addLast(var7, 18425);
           var7.field_r = 0L;
           return var5;
         }
         oj var6 = new oj(var5, var7.field_t);
         this.field_f.put(var6, var7.field_i, param0 - 1);
-        this.field_b.a(var6, param0 + 18425);
+        this.field_b.addLast(var6, param0 + 18425);
         ((nd) ((Object) var6)).field_r = 0L;
         var7.unlink(true);
         var7.unlinkSecondary(true);

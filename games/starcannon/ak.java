@@ -291,10 +291,10 @@ final class ak {
           var3 = var2.readUnsignedByte(7909);
           if (var3 == 0) {
             var4 = var2.readUnsignedShort(-1174051992);
-            var5 = (vc) (ne.field_c.c(-3905));
+            var5 = (vc) (ne.field_c.beginForward(-3905));
             while (var5 != null) {
               if (var4 != var5.field_i) {
-                var5 = (vc) (ne.field_c.a(-16913));
+                var5 = (vc) (ne.field_c.nextForward(-16913));
                 continue;
               }
               break;
@@ -390,10 +390,10 @@ final class ak {
           if (var3 == 1) {
             var4Lifetime1 = var2.readUnsignedShort(-1174051992);
             var5_long = var2.readLong((byte) 5);
-            var7_ref_re = (re) (s.field_e.c(-3905));
+            var7_ref_re = (re) (s.field_e.beginForward(-3905));
             while (var7_ref_re != null) {
               if (var7_ref_re.field_g != var4Lifetime1) {
-                var7_ref_re = (re) (s.field_e.a(-16913));
+                var7_ref_re = (re) (s.field_e.nextForward(-16913));
                 continue;
               }
               break;

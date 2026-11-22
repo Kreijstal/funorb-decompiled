@@ -171,7 +171,7 @@ final class eb extends WidgetContainer implements sh, ql {
         int var9 = 0;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1 = (ki) (ok.field_a.a((byte) -117));
+          var1 = (ki) (ok.field_a.beginBackward((byte) -117));
           if (param0 != -93) {
             field_A = (MouseWheelInput) null;
           }
@@ -211,7 +211,7 @@ final class eb extends WidgetContainer implements sh, ql {
                 }
               }
             }
-            var1 = (ki) (ok.field_a.d((byte) 63));
+            var1 = (ki) (ok.field_a.nextBackward((byte) 63));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -297,7 +297,7 @@ final class eb extends WidgetContainer implements sh, ql {
         var11 = null;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1 = (ki) (hd.field_u.a((byte) -117));
+          var1 = (ki) (hd.field_u.beginBackward((byte) -117));
           while (var1 != null) {
             if (var1.field_t == ok.field_a) {
               var1.c((byte) -94);
@@ -305,16 +305,16 @@ final class eb extends WidgetContainer implements sh, ql {
               var1.field_v = 0.0f;
               var1.unlink(-19822);
               var1.unlinkSecondary(7847);
-              ok.field_a.a(-8212, var1);
+              ok.field_a.addFirst(-8212, var1);
             } else {
               if (ri.field_b == var1.field_t) {
                 var1.unlink(-19822);
                 var1.unlinkSecondary(7847);
-                ri.field_b.a(-8212, var1);
+                ri.field_b.addFirst(-8212, var1);
               }
             }
             var1.field_t = null;
-            var1 = (ki) (hd.field_u.d((byte) 63));
+            var1 = (ki) (hd.field_u.nextBackward((byte) 63));
           }
           var1_int = 0;
           var2 = 0;
@@ -322,7 +322,7 @@ final class eb extends WidgetContainer implements sh, ql {
             return;
           }
           var3 = 0;
-          var4 = (ki) (ok.field_a.a((byte) -117));
+          var4 = (ki) (ok.field_a.beginBackward((byte) -117));
           while (null != var4) {
             if (var4.field_t != null) {
               boolean decompiledFrameCompleted8 = true;
@@ -370,18 +370,18 @@ final class eb extends WidgetContainer implements sh, ql {
                     for (var5_intLifetime2 = 0; var4.field_m > var5_intLifetime2; var5_intLifetime2++) {
                       var4.field_o[var5_intLifetime2].a(true, var4);
                     }
-                    var5 = (il) (rf.field_a.a((byte) -117));
+                    var5 = (il) (rf.field_a.beginBackward((byte) -117));
                     while (var5 != null) {
                       if (var5.field_j == var4 ||
                         var4 == var5.field_i) {
                         var5.unlink(-19822);
-                        aj.field_b.a(-8212, var5);
+                        aj.field_b.addFirst(-8212, var5);
                       }
-                      var5 = (il) (rf.field_a.d((byte) 63));
+                      var5 = (il) (rf.field_a.nextBackward((byte) 63));
                     }
                     var4.field_E = true;
                     var4.field_m = 0;
-                    hd.field_u.a(-8212, var4);
+                    hd.field_u.addFirst(-8212, var4);
                     var4.field_v = -1.0f + (float)(2.0 * Math.random());
                     if (0.009999999776482582f > Math.abs(var4.field_v)) {
                       var4.field_v = -1.0f;
@@ -662,11 +662,11 @@ final class eb extends WidgetContainer implements sh, ql {
               if ((decompiledFrameCompleted8) &&
                 (decompiledFrameCompleted7) &&
                 (ri.field_b == var4.field_t)) {
-                ri.field_b.a(-8212, var4);
+                ri.field_b.addFirst(-8212, var4);
               }
               var4.field_t = null;
             }
-            var4 = (ki) (ok.field_a.d((byte) 63));
+            var4 = (ki) (ok.field_a.nextBackward((byte) 63));
           }
           if (var1_int == 0) {
             if (ub.field_a) {

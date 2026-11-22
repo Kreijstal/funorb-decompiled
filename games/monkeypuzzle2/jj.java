@@ -178,7 +178,7 @@ class jj extends ButtonWidget {
               ((bl) (var10)).field_e = var15;
             }
             var10 = var15;
-            this.field_G.a(-8212, var15);
+            this.field_G.addFirst(-8212, var15);
           }
         }
     }
@@ -477,24 +477,24 @@ class jj extends ButtonWidget {
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var1_intLifetime1;
         try {
-          bd.field_b.a(-8212, new ki(1, 0, 0));
-          bd.field_b.a(-8212, new ki(1, 0, 0));
-          bd.field_b.a(-8212, new ki(1, 1, 0));
-          bd.field_b.a(-8212, new ki(1, 1, 0));
-          bd.field_b.a(-8212, new ki(1, 2, 0));
-          bd.field_b.a(-8212, new ki(1, 2, 0));
-          bd.field_b.a(-8212, new ki(1, 3, 0));
-          bd.field_b.a(-8212, new ki(1, 3, 0));
-          bd.field_b.a(-8212, new ki(1, 4, 0));
-          bd.field_b.a(-8212, new ki(1, 4, 0));
-          bd.field_b.a(-8212, new ki(1, 0, 0));
-          bd.field_b.a(-8212, new ki(1, 0, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 0, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 0, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 1, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 1, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 2, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 2, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 3, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 3, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 4, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 4, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 0, 0));
+          bd.field_b.addFirst(-8212, new ki(1, 0, 0));
           var1_int = 0;
-          var2_ref_ki = (ki) (bd.field_b.a((byte) -117));
+          var2_ref_ki = (ki) (bd.field_b.beginBackward((byte) -117));
           while (var2_ref_ki != null) {
             var2_ref_ki.field_B = rl.field_c[var1_int][0];
             var2_ref_ki.field_q = rl.field_c[var1_int][1];
-            var2_ref_ki = (ki) (bd.field_b.d((byte) 63));
+            var2_ref_ki = (ki) (bd.field_b.nextBackward((byte) 63));
           }
           var4 = 0;
           var1_intLifetime1 = var4;
@@ -519,12 +519,12 @@ class jj extends ButtonWidget {
           if (!param0) {
             field_B = (String) null;
           }
-          var1 = (ki) (hd.field_u.a((byte) -117));
+          var1 = (ki) (hd.field_u.beginBackward((byte) -117));
           while (var1 != null) {
             if (!var1.field_E) {
               return false;
             }
-            var1 = (ki) (hd.field_u.d((byte) 63));
+            var1 = (ki) (hd.field_u.nextBackward((byte) 63));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -557,7 +557,7 @@ class jj extends ButtonWidget {
     private final bl b(int param0, int param1, int param2) {
         bl var5 = null;
         int var6 = MonkeyPuzzle2.field_F ? 1 : 0;
-        bl var4 = (bl) (this.field_G.a((byte) -117));
+        bl var4 = (bl) (this.field_G.beginBackward((byte) -117));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -569,7 +569,7 @@ class jj extends ButtonWidget {
             }
             var5 = var5.field_e;
           }
-          var4 = (bl) (this.field_G.d((byte) 63));
+          var4 = (bl) (this.field_G.nextBackward((byte) 63));
         }
         if (param2 == 2) {
           return null;

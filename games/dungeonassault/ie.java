@@ -21,21 +21,21 @@ final class ie extends IntrusiveNode {
         i var1 = null;
         i var1Lifetime1;
         if (param0 >= 89) {
-          var1 = (i) (cd.field_g.c(0));
+          var1 = (i) (cd.field_g.removeFirst(0));
           if (var1 == null) {
             var1 = new i();
           }
           var1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-          SecondaryNodeDequeIterator.field_e.a(var1, false);
+          SecondaryNodeDequeIterator.field_e.addFirst(var1, false);
           return;
         }
         field_l = (cn) null;
-        var1Lifetime1 = (i) (cd.field_g.c(0));
+        var1Lifetime1 = (i) (cd.field_g.removeFirst(0));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new i();
         }
         var1Lifetime1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-        SecondaryNodeDequeIterator.field_e.a(var1Lifetime1, false);
+        SecondaryNodeDequeIterator.field_e.addFirst(var1Lifetime1, false);
     }
 
     public static void d(int param0) {

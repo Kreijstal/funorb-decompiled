@@ -25,7 +25,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
         if (var6.isDown(-118)) {
           return;
         }
-        DamageEffect var3 = (DamageEffect) (this.field_v.effects.b((byte) 90));
+        DamageEffect var3 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
         al.a(-46, this.field_v.moveId);
         while (var3 != null) {
           var3.apply(var6, this.screen.field_h, 12);
@@ -33,7 +33,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
           this.addChild(27799, new ActorAnimation(this.screen, var4));
           this.addChild(27799, new cb(var4, 7));
           this.addChild(27799, new wn(var4, kna.field_g[17], 24831));
-          var3 = (DamageEffect) (this.field_v.effects.c(0));
+          var3 = (DamageEffect) (this.field_v.effects.nextForward(0));
         }
         if (param0 == 24831) {
           return;

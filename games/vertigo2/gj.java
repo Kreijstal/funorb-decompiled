@@ -455,7 +455,7 @@ final class gj extends TextureOperator {
                   var16 = 0;
                 }
                 var17 = vd.field_d.field_Nb.field_M;
-                var18_ref = (bs) (var17.a((byte) 100));
+                var18_ref = (bs) (var17.beginBackward((byte) 100));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
@@ -498,7 +498,7 @@ final class gj extends TextureOperator {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (bs) (var17.b(35));
+                      var18_ref = (bs) (var17.nextBackward(35));
                       continue;
                     }
                   }

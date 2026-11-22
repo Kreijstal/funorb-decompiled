@@ -202,7 +202,7 @@ final class oc extends kl {
           this.field_u = stackIn_10_1;
           this.field_p = new wd(this.field_n.field_n.field_e);
           this.field_z = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, this.field_i + this.field_j - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -75, hj.field_X);
-          this.field_f.a(this.field_z, false);
+          this.field_f.addFirst(this.field_z, false);
           var5_int = this.field_a - 64;
           var6 = jn.a(this.field_D, new int[]{var5_int}, -105, la.field_b);
           var7 = var6.length * la.field_b.field_H + la.field_b.field_E;

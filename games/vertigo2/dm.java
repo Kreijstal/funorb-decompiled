@@ -98,10 +98,10 @@ final class dm extends UiPanel {
           var2 = var27.readUnsignedByte(-11);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort((byte) -11);
-            var4 = (s) (wg.field_i.a((byte) 100));
+            var4 = (s) (wg.field_i.beginBackward((byte) 100));
             while (var4 != null) {
               if (var4.field_p != var3) {
-                var4 = (s) (wg.field_i.b(param0 + 110));
+                var4 = (s) (wg.field_i.nextBackward(param0 + 110));
                 continue;
               }
               break;
@@ -197,10 +197,10 @@ final class dm extends UiPanel {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort((byte) -11);
             var4_long = var27.readLong(-31016);
-            var6_ref_vi = (vi) (mc.field_i.a((byte) 100));
+            var6_ref_vi = (vi) (mc.field_i.beginBackward((byte) 100));
             while (var6_ref_vi != null) {
               if (var3Lifetime1 != var6_ref_vi.field_u) {
-                var6_ref_vi = (vi) (mc.field_i.b(param0 + 62));
+                var6_ref_vi = (vi) (mc.field_i.nextBackward(param0 + 62));
                 continue;
               }
               break;

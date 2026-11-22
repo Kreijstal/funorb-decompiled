@@ -15,18 +15,18 @@ final class uc extends pv {
     }
 
     final static void d(int param0) {
-        fj var1 = (fj) (CreatureEvent.field_m.a((byte) -124));
+        fj var1 = (fj) (CreatureEvent.field_m.removeLast((byte) -124));
         if (var1 == null) {
           var1 = new fj();
         }
         if (param0 >= 9) {
           var1.a(SoftwareRasterizer.field_f, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h, SoftwareRasterizer.field_e, (byte) -92, SoftwareRasterizer.field_i);
-          kma.field_o.a(var1, true);
+          kma.field_o.addLast(var1, true);
           return;
         }
         uc.releaseStatics((byte) -24);
         var1.a(SoftwareRasterizer.field_f, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h, SoftwareRasterizer.field_e, (byte) -92, SoftwareRasterizer.field_i);
-        kma.field_o.a(var1, true);
+        kma.field_o.addLast(var1, true);
     }
 
     final boolean b(boolean param0) {

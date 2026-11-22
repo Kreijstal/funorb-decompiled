@@ -33,15 +33,15 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException var2_ref = null;
         var3 = Torquing.field_u;
         try {
-          var4 = (qp) (tl.field_p.b(param1 + 0));
+          var4 = (qp) (tl.field_p.beginBackward(param1 + 0));
           while (var4 != null) {
             l.a(param0, var4, param1 + 1);
-            var4 = (qp) (tl.field_p.f(param1 - 24059));
+            var4 = (qp) (tl.field_p.nextBackward(param1 - 24059));
           }
-          var2 = to.field_q.b(param1);
+          var2 = to.field_q.beginBackward(param1);
           while (var2 != null) {
             hj.a(false, param0);
-            var2 = to.field_q.f(-24059);
+            var2 = to.field_q.nextBackward(-24059);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

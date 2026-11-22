@@ -25,7 +25,7 @@ final class og {
 
     final static rj a(int param0, byte param1) {
         rj var2 = new rj();
-        sd.field_d.b(124, var2);
+        sd.field_d.addLast(124, var2);
         if (param1 == 113) {
           u.a(param0, 1);
           return var2;

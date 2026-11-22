@@ -215,7 +215,7 @@ final class ce extends AttackEvent {
           BananarangEvent.field_u = var3.field_c;
           StatusEffectInfo.field_g = new lr[BananarangEvent.field_u];
           var4 = 0;
-          var5 = (ft) (var3.field_b.b((byte) 90));
+          var5 = (ft) (var3.field_b.beginForward((byte) 90));
           while (var5 != null) {
             var6 = var5.field_g;
             var7 = var5.field_f ? 1 : 0;
@@ -230,7 +230,7 @@ final class ce extends AttackEvent {
             incrementValue$1 = var4;
             var4++;
             incrementValue$0.field_g = incrementValue$1;
-            var5 = (ft) (var3.field_b.c(0));
+            var5 = (ft) (var3.field_b.nextForward(0));
           }
           vj.field_o = new Random();
           return;

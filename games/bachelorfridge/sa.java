@@ -225,11 +225,11 @@ final class sa extends pu {
               return;
             }
             if (var2 == 7) {
-              var3_ref_ema = (ema) (aa.field_l.b((byte) 90));
+              var3_ref_ema = (ema) (aa.field_l.beginForward((byte) 90));
               while (var3_ref_ema != null) {
                 var3_ref_ema.unlink(false);
                 var3_ref_ema.unlinkSecondary(0);
-                var3_ref_ema = (ema) (aa.field_l.c(param0 + 7));
+                var3_ref_ema = (ema) (aa.field_l.nextForward(param0 + 7));
               }
               hc.field_J = 0;
               return;
@@ -261,11 +261,11 @@ final class sa extends pu {
               return;
             }
             if (var2 == 10) {
-              var15 = (uha) (uma.field_M.b((byte) 90));
+              var15 = (uha) (uma.field_M.beginForward((byte) 90));
               while (var15 != null) {
                 var15.unlink(false);
                 var15.unlinkSecondary(0);
-                var15 = (uha) (uma.field_M.c(0));
+                var15 = (uha) (uma.field_M.nextForward(0));
               }
               return;
             }
@@ -310,7 +310,7 @@ final class sa extends pu {
                     stackIn_99_0.field_zb = stackIn_100_1;
                     var7.field_Kb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
                     var7.field_xb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 16711942);
-                    bia.field_g.a(var7, true);
+                    bia.field_g.addLast(var7, true);
                     return;
                   }
                   if (19 == var2) {
@@ -404,11 +404,11 @@ final class sa extends pu {
             SpiltMilkSpecial.a(var28, 0);
             return;
           }
-          var3_ref_emaLifetime1 = (ema) (bia.field_g.b((byte) 90));
+          var3_ref_emaLifetime1 = (ema) (bia.field_g.beginForward((byte) 90));
           while (var3_ref_emaLifetime1 != null) {
             var3_ref_emaLifetime1.unlink(false);
             var3_ref_emaLifetime1.unlinkSecondary(0);
-            var3_ref_emaLifetime1 = (ema) (bia.field_g.c(0));
+            var3_ref_emaLifetime1 = (ema) (bia.field_g.nextForward(0));
           }
           var3_ref_emaLifetime2 = (ema) (iga.field_c.b((byte) -73));
           while (var3_ref_emaLifetime2 != null) {

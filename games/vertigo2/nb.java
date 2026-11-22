@@ -338,15 +338,15 @@ final class nb extends TextureOperator {
         RuntimeException var2_ref = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4 = (hn) (qo.field_B.a((byte) 100));
+          var4 = (hn) (qo.field_B.beginBackward((byte) 100));
           while (var4 != null) {
             lh.a(param0, var4, (byte) 81);
-            var4 = (hn) (qo.field_B.b(45));
+            var4 = (hn) (qo.field_B.nextBackward(45));
           }
-          var2 = vf.field_C.a((byte) 100);
+          var2 = vf.field_C.beginBackward((byte) 100);
           while (var2 != null) {
             mp.a(param0, 98);
-            var2 = vf.field_C.b(36);
+            var2 = vf.field_C.nextBackward(36);
           }
           if (param1 != -2) {
             nb.a(false, (byte) 93);

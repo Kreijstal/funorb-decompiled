@@ -34,7 +34,7 @@ final class ub implements uj {
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          var4 = (gl) (on.field_t.b(123));
+          var4 = (gl) (on.field_t.beginForward(123));
           var1 = var4;
           if (var1 == null) {
             return false;

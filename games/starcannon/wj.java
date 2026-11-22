@@ -129,19 +129,19 @@ final class wj {
     }
 
     final static void b(boolean param0) {
-        bc var1 = (bc) (va.field_h.d(77));
+        bc var1 = (bc) (va.field_h.removeLast(77));
         if (var1 == null) {
           var1 = new bc();
         }
         if (param0) {
           var1.a(ki.field_j, ki.field_g, ki.field_i, ki.field_a, ki.field_l, ki.field_e, ki.field_f, false);
-          gi.field_a.b(70, var1);
+          gi.field_a.addLast(70, var1);
           return;
         }
         Sprite[] var2 = (Sprite[]) null;
         wj.a(-47, (Sprite[]) null, 85, -18, 75);
         var1.a(ki.field_j, ki.field_g, ki.field_i, ki.field_a, ki.field_l, ki.field_e, ki.field_f, false);
-        gi.field_a.b(70, var1);
+        gi.field_a.addLast(70, var1);
     }
 
     static {

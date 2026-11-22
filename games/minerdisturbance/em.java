@@ -61,7 +61,7 @@ abstract class em extends DualLinkNode {
           var2 = var9.readUnsignedByte((byte) -54);
           var3 = var9.readUnsignedByte((byte) -54);
           if (var2 == 0) {
-            var4 = (jb) (sd.field_a.b(param0 ^ -62));
+            var4 = (jb) (sd.field_a.beginForward(param0 ^ -62));
             if (var4 == null) {
               si.a(-36);
               return;
@@ -80,11 +80,11 @@ abstract class em extends DualLinkNode {
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart((byte) 127);
-              var5_ref_il = (il) (IsaacRandom.field_h.b(119));
+              var5_ref_il = (il) (IsaacRandom.field_h.beginForward(119));
               while (var5_ref_il != null) {
                 if (~var3 != ~var5_ref_il.field_r ||
                   var4_int != var5_ref_il.field_p) {
-                  var5_ref_il = (il) (IsaacRandom.field_h.b((byte) 56));
+                  var5_ref_il = (il) (IsaacRandom.field_h.nextForward((byte) 56));
                   continue;
                 }
                 break;

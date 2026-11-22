@@ -396,7 +396,7 @@ final class p extends qe {
           p.a(488, 54, this.field_H, kc.field_V);
         }
         this.a(false, 484, 327);
-        var4 = (rj) (this.field_p.e(-24172));
+        var4 = (rj) (this.field_p.beginBackward(-24172));
         do {
           if (var4 == null) {
             ad.field_e.h(187, 48);
@@ -407,7 +407,7 @@ final class p extends qe {
             break;
           }
           var4.a(68);
-          var4 = (rj) (this.field_p.a(4));
+          var4 = (rj) (this.field_p.nextBackward(4));
         } while (var15 == 0);
         if (gl.field_Lb) {
           this.field_u.b((byte) -55);
@@ -440,11 +440,11 @@ final class p extends qe {
             PacketBuffer.a(-(im.field_e.field_v >> 1) + 265, -(im.field_e.field_y >> 1) + 354, (byte) -86, im.field_e, 16744448, 96);
           }
         }
-        var4 = (rj) (this.field_p.e(-24172));
+        var4 = (rj) (this.field_p.beginBackward(-24172));
         while (true) {
           if (var4 != null) {
             var4.d(0);
-            var4 = (rj) (this.field_p.a(4));
+            var4 = (rj) (this.field_p.nextBackward(4));
             if (var15 == 0) {
               continue;
             }
@@ -1305,14 +1305,14 @@ final class p extends qe {
         this.field_C = sj.a(86, 110, 66, jj.field_b, this.field_M);
         this.field_P = sj.a(117, 87, 66, tb.field_c, this.field_M);
         this.field_y = sj.a(148, 91, 66, kd.field_f, this.field_M);
-        this.field_p.a(hf.field_nb, false);
-        this.field_p.a(this.field_Q, false);
-        this.field_p.a(this.field_O, false);
-        this.field_p.a(this.field_A, false);
-        this.field_p.a(this.field_L, false);
-        this.field_p.a(this.field_C, false);
-        this.field_p.a(this.field_P, false);
-        this.field_p.a(this.field_y, false);
+        this.field_p.addFirst(hf.field_nb, false);
+        this.field_p.addFirst(this.field_Q, false);
+        this.field_p.addFirst(this.field_O, false);
+        this.field_p.addFirst(this.field_A, false);
+        this.field_p.addFirst(this.field_L, false);
+        this.field_p.addFirst(this.field_C, false);
+        this.field_p.addFirst(this.field_P, false);
+        this.field_p.addFirst(this.field_y, false);
         this.field_A.field_n = (en) ((Object) new e(jk.a(new String[]{tn.field_U}, tp.field_w, 30496)));
         this.field_L.field_n = (en) ((Object) new e(jk.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
         this.field_C.field_n = (en) ((Object) new e(jk.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
@@ -1327,10 +1327,10 @@ final class p extends qe {
         this.a((byte) -124, 0);
         this.field_w = this.a(ob.field_Kb, mm.field_s, 491, param0 ^ -18240, 438, dc.field_k);
         this.field_w.field_B = true;
-        this.field_p.a(this.field_w, false);
+        this.field_p.addFirst(this.field_w, false);
         this.field_t = this.a(ob.field_Kb, cf.field_d, 491, -1, 401, dc.field_k);
         this.field_t.field_B = !gl.field_Lb ? true : false;
-        this.field_p.a(this.field_t, false);
+        this.field_p.addFirst(this.field_t, false);
         if (param0 == 18239) {
           this.field_q = new sa(186, 401, 288, 71);
           this.field_q.a(true, f.field_c, (byte) 91, wh.field_c, 16777215);

@@ -226,10 +226,10 @@ final class uj implements Runnable {
     }
 
     final static void b(int param0) {
-        hd.field_u.a(ri.field_b, param0 + 0);
-        ok.field_a.a(ri.field_b, 0);
-        wd.field_h.a(ri.field_b, 0);
-        rf.field_a.a(aj.field_b, param0 + param0);
+        hd.field_u.moveAllToFront(ri.field_b, param0 + 0);
+        ok.field_a.moveAllToFront(ri.field_b, 0);
+        wd.field_h.moveAllToFront(ri.field_b, 0);
+        rf.field_a.moveAllToFront(aj.field_b, param0 + param0);
         sb.field_m.e();
         ge.d();
         ac.field_a.a((byte) 114);

@@ -422,10 +422,10 @@ final class tc extends PcmStream {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          var4 = (pm) (li.field_a.e(-24172));
+          var4 = (pm) (li.field_a.beginBackward(-24172));
           while (var4 != null) {
             ro.a(var4, param0, param1 + 236);
-            var4 = (pm) (li.field_a.a(4));
+            var4 = (pm) (li.field_a.nextBackward(4));
           }
           if (param1 != -112) {
             field_u = (String) null;

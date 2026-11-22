@@ -42,19 +42,19 @@ final class ScavengerAnimation extends EventAnimation {
         if (param0 != 94) {
           this.isFinished((byte) 60);
         } else {
-          var3 = (EventEffect) (this.field_v.effects.b((byte) 90));
+          var3 = (EventEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(99, this.field_v.moveId);
           while (var3 != null) {
             var3.apply(var2, this.screen.field_h, 12);
-            var3 = (EventEffect) (this.field_v.effects.c(0));
+            var3 = (EventEffect) (this.field_v.effects.nextForward(0));
           }
           return;
         }
-        var3Lifetime1 = (EventEffect) (this.field_v.effects.b((byte) 90));
+        var3Lifetime1 = (EventEffect) (this.field_v.effects.beginForward((byte) 90));
         al.a(99, this.field_v.moveId);
         while (var3Lifetime1 != null) {
           var3Lifetime1.apply(var2, this.screen.field_h, 12);
-          var3Lifetime1 = (EventEffect) (this.field_v.effects.c(0));
+          var3Lifetime1 = (EventEffect) (this.field_v.effects.nextForward(0));
         }
     }
 

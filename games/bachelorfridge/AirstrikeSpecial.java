@@ -183,10 +183,10 @@ final class AirstrikeSpecial extends SpecialOrder {
               var16 = var15.occupant;
               if (var16 != null) {
                 var17 = new DamageEffect(new CreatureRef(var16), false, 1, 50, 0);
-                var4.effects.a(var17, true);
+                var4.effects.addLast(var17, true);
               } else {
                 var17_ref = new bm(21, var13Lifetime2, var14Lifetime1);
-                var4.effects.a(var17_ref, true);
+                var4.effects.addLast(var17_ref, true);
               }
               fieldTemp$0 = var4.field_u;
               var4.field_u = var4.field_u + 1;

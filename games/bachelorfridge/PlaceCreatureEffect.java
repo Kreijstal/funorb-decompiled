@@ -154,7 +154,7 @@ final class PlaceCreatureEffect extends EventEffect {
 
     final static kka a(byte param0, int param1) {
         kka var2 = new kka();
-        gs.field_l.a(var2, true);
+        gs.field_l.addLast(var2, true);
         ah.a(4, param1);
         int var3 = 89 % ((66 - param0) / 56);
         return var2;

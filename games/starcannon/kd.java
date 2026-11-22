@@ -21,7 +21,7 @@ final class kd extends vk implements ga {
         RuntimeException var3 = null;
         wa var4 = null;
         try {
-          this.field_u.b(23505);
+          this.field_u.clear(23505);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

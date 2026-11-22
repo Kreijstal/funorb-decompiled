@@ -126,18 +126,18 @@ final class eh {
         if (this.field_n == null) {
           this.field_n = new IntrusiveDeque();
         }
-        var5 = (fl) (this.field_n.e(param3 ^ -24172));
+        var5 = (fl) (this.field_n.beginBackward(param3 ^ -24172));
         while (var5 != null) {
           if (var5.field_q != param0 ||
             param2 != var5.field_p) {
-            var5 = (fl) (this.field_n.a(param3 ^ 4));
+            var5 = (fl) (this.field_n.nextBackward(param3 ^ 4));
             continue;
           }
           break;
         }
         if (var5 == null) {
           var5 = new fl(param0, param2, this.field_c);
-          this.field_n.a(var5, false);
+          this.field_n.addFirst(var5, false);
         }
         var6 = null;
         if (var5.field_k[param1] != null) {

@@ -85,15 +85,15 @@ final class se extends WidgetContainer implements oi {
           if (param1 >= -67) {
             field_E = (String[]) null;
           }
-          var4 = (kl) (SocketConnector.field_e.b(-103));
+          var4 = (kl) (SocketConnector.field_e.beginForward(-103));
           while (var4 != null) {
             ca.a(param0, var4, (byte) 93);
-            var4 = (kl) (SocketConnector.field_e.b((byte) 117));
+            var4 = (kl) (SocketConnector.field_e.nextForward((byte) 117));
           }
-          var2 = pl.field_W.b(-79);
+          var2 = pl.field_W.beginForward(-79);
           while (var2 != null) {
             bf.a(param0, (byte) -106);
-            var2 = pl.field_W.b((byte) -124);
+            var2 = pl.field_W.nextForward((byte) -124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

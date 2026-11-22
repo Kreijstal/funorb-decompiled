@@ -21,17 +21,17 @@ final class FloodSpecial extends SpecialOrder {
         for (var6 = 0; var6 < BananarangEvent.field_u; var6++) {
           if (StatusEffectInfo.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581) &&
             StatusEffectInfo.field_g[var6].a(param0 + 0, param2)) {
-            var11.a(StatusEffectInfo.field_g[var6], true);
+            var11.addLast(StatusEffectInfo.field_g[var6], true);
           }
         }
-        var6Lifetime1 = var12.g(0);
+        var6Lifetime1 = var12.countWithOffset(0);
         var7 = DiveBomberAnimation.a(var6Lifetime1, vj.field_o, -2147483648);
         var8 = param0;
-        var9 = (lr) (var12.b((byte) 90));
+        var9 = (lr) (var12.beginForward((byte) 90));
         while (var9 != null) {
           if (var8 < var7) {
             var8++;
-            var9 = (lr) (var12.c(param0 ^ 0));
+            var9 = (lr) (var12.nextForward(param0 ^ 0));
             continue;
           }
           break;
@@ -54,7 +54,7 @@ final class FloodSpecial extends SpecialOrder {
           if (param1 != 3) {
             field_p = false;
           }
-          var4.effects.a(new tfa(), true);
+          var4.effects.addLast(new tfa(), true);
           stackIn_3_0 = var4;
           return (CreatureEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

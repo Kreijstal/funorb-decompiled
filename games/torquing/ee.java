@@ -204,8 +204,8 @@ final class ee extends am {
         int var1 = 108 % ((-51 - param0) / 63);
         if (lc.field_z > 0) {
           lc.field_z = lc.field_z - 1;
-          var2 = (ii) (bd.field_s.a((byte) 106));
-          bp.field_a.a((byte) 54, var2);
+          var2 = (ii) (bd.field_s.removeLast((byte) 106));
+          bp.field_a.addFirst((byte) 54, var2);
           var3 = var2.field_l;
           var2.field_l = null;
           var4 = 0;

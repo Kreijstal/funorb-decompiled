@@ -164,7 +164,7 @@ final class oa extends jk {
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var1_int = 0;
-          var2_ref = (ki) (ok.field_a.a((byte) -117));
+          var2_ref = (ki) (ok.field_a.beginBackward((byte) -117));
           while (var2_ref != null) {
             if (qb.field_b) {
               if (2 != var2_ref.field_w) {
@@ -217,24 +217,24 @@ final class oa extends jk {
                 var2_ref.field_t = hd.field_u;
               }
             }
-            var2_ref = (ki) (ok.field_a.d((byte) 63));
+            var2_ref = (ki) (ok.field_a.nextBackward((byte) 63));
           }
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            var7 = (il) (rf.field_a.a((byte) -117));
+            var7 = (il) (rf.field_a.beginBackward((byte) -117));
             while (var7 != null) {
               var7.e(5);
-              var7 = (il) (rf.field_a.d((byte) 63));
+              var7 = (il) (rf.field_a.nextBackward((byte) 63));
             }
           }
-          var2_refLifetime1 = (ki) (ok.field_a.a((byte) -117));
+          var2_refLifetime1 = (ki) (ok.field_a.beginBackward((byte) -117));
           if (param0 > -79) {
             oa.a(true);
           }
           while (var2_refLifetime1 != null) {
             var2_refLifetime1.d((byte) 116);
-            var2_refLifetime1 = (ki) (ok.field_a.d((byte) 63));
+            var2_refLifetime1 = (ki) (ok.field_a.nextBackward((byte) 63));
           }
-          var2_refLifetime2 = (ki) (ok.field_a.a((byte) -117));
+          var2_refLifetime2 = (ki) (ok.field_a.beginBackward((byte) -117));
           while (var2_refLifetime2 != null) {
             var2_refLifetime2.f(-7);
             if (var2_refLifetime2.field_q - (float)var2_refLifetime2.field_y > (float)(hf.field_f.field_k - 90)) {
@@ -253,27 +253,27 @@ final class oa extends jk {
               var3Lifetime1 = stackIn_69_0;
               var2_refLifetime2.field_x = var2_refLifetime2.field_x | var3Lifetime1 != 0;
               var2_refLifetime2.c((byte) -114);
-              var2_refLifetime2 = (ki) (ok.field_a.d((byte) 63));
+              var2_refLifetime2 = (ki) (ok.field_a.nextBackward((byte) 63));
               continue;
             }
             if (var2_refLifetime2.field_w != 3) {
               var2_refLifetime2.c((byte) -114);
-              var2_refLifetime2 = (ki) (ok.field_a.d((byte) 63));
+              var2_refLifetime2 = (ki) (ok.field_a.nextBackward((byte) 63));
               continue;
             }
             if (var2_refLifetime2.field_n != 1) {
               var2_refLifetime2.c((byte) -114);
-              var2_refLifetime2 = (ki) (ok.field_a.d((byte) 63));
+              var2_refLifetime2 = (ki) (ok.field_a.nextBackward((byte) 63));
               continue;
             }
             if (var2_refLifetime2.field_C <= 4) {
               var2_refLifetime2.c((byte) -114);
-              var2_refLifetime2 = (ki) (ok.field_a.d((byte) 63));
+              var2_refLifetime2 = (ki) (ok.field_a.nextBackward((byte) 63));
               continue;
             }
             var2_refLifetime2.field_t = ri.field_b;
             var2_refLifetime2.c((byte) -114);
-            var2_refLifetime2 = (ki) (ok.field_a.d((byte) 63));
+            var2_refLifetime2 = (ki) (ok.field_a.nextBackward((byte) 63));
           }
           vl.field_j = var1_int != 0;
           return;

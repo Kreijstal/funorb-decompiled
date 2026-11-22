@@ -169,7 +169,7 @@ final class wh extends am {
           var2 = var10.readUnsignedByte((byte) -101);
           var3 = var10.readUnsignedByte((byte) -101);
           if (var2 == 0) {
-            var4_ref_h = (h) (to.field_s.b(0));
+            var4_ref_h = (h) (to.field_s.beginBackward(0));
             if (var4_ref_h == null) {
               ih.b(true);
               return;
@@ -190,11 +190,11 @@ final class wh extends am {
           }
           if (var2 == 1) {
             var4 = var10.readSignedSmart((byte) -126);
-            var5 = (qk) (kc.field_z.b(0));
+            var5 = (qk) (kc.field_z.beginBackward(0));
             while (var5 != null) {
               if (var5.field_k != var3 ||
                 var5.field_o != var4) {
-                var5 = (qk) (kc.field_z.f(-24059));
+                var5 = (qk) (kc.field_z.nextBackward(-24059));
                 continue;
               }
               break;

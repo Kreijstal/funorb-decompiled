@@ -50,7 +50,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var2 = var9.readUnsignedByte(255);
           var3 = var9.readUnsignedByte(255);
           if (var2 == 0) {
-            var4_ref_fj = (fj) (ti.field_b.a((byte) 51));
+            var4_ref_fj = (fj) (ti.field_b.beginBackward((byte) 51));
             if (var4_ref_fj == null) {
               je.a(false);
               return;
@@ -70,11 +70,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (var2 == 1) {
             var4 = var9.readSignedSmart(-116);
-            var5 = (lc) (hc.field_a.a((byte) 51));
+            var5 = (lc) (hc.field_a.beginBackward((byte) 51));
             while (var5 != null) {
               if (var5.field_n != var3 ||
                 var4 != var5.field_o) {
-                var5 = (lc) (hc.field_a.b(-66));
+                var5 = (lc) (hc.field_a.nextBackward(-66));
                 continue;
               }
               break;

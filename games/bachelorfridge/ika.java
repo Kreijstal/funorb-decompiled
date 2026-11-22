@@ -159,7 +159,7 @@ final class ika {
         try {
           this.field_c = param0.readUnsignedShort((byte) 114);
           for (var3_int = param1; var3_int < this.field_c; var3_int++) {
-            this.field_b.a(new ft(param0), true);
+            this.field_b.addLast(new ft(param0), true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

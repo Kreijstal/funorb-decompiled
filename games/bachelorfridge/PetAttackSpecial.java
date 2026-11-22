@@ -53,7 +53,7 @@ final class PetAttackSpecial extends SpecialOrder {
             var5 = (String) null;
             PetAttackSpecial.a(89, 77, 35, (String) null, (String) null, -3);
           }
-          var4.effects.a(new dh(), true);
+          var4.effects.addLast(new dh(), true);
           stackIn_3_0 = var4;
           return (CreatureEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

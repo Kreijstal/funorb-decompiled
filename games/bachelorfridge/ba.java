@@ -428,12 +428,12 @@ final class ba extends mv {
               if ((this.field_o.moveId == 74 ||
                 this.field_o.moveId == 75 ||
                 this.field_o.moveId == 76)) {
-                this.field_p.field_fb.a(new gja(this.field_p, var7, this.field_o.field_q), true);
+                this.field_p.field_fb.addLast(new gja(this.field_p, var7, this.field_o.field_q), true);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_p.field_fb.a(new ha(this.field_p, var7), true);
+              this.field_p.field_fb.addLast(new ha(this.field_p, var7), true);
             }
           }
         }

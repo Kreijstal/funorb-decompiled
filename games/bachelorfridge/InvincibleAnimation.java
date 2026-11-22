@@ -42,14 +42,14 @@ final class InvincibleAnimation extends EventAnimation {
           if (var8.isDown(-82)) {
             return;
           }
-          var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
+          var3_ref = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
           al.a(param0 - 14993, this.field_x.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var8, this.screen.field_h, 12);
             var9 = var3_ref.target.a(-27449, this.screen);
             var9.b(-1, 6);
             var9.a(24831, 101, kna.field_g[33]);
-            var3_ref = (DamageEffect) (this.field_x.effects.c(0));
+            var3_ref = (DamageEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }
@@ -58,14 +58,14 @@ final class InvincibleAnimation extends EventAnimation {
         if (var6.isDown(-82)) {
           return;
         }
-        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         al.a(param0 - 14993, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var6, this.screen.field_h, 12);
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 6);
           var7.a(24831, 101, kna.field_g[33]);
-          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.c(0));
+          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }
         return;
     }

@@ -56,7 +56,7 @@ abstract class sh extends WidgetContainer implements mca {
             for (var8 = 0; var7 > var8; var8++) {
               var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(-61);
             }
-            var14 = (kka) (gs.field_l.b((byte) 90));
+            var14 = (kka) (gs.field_l.beginForward((byte) 90));
             if (var14 == null) {
               vc.a((byte) -70);
               return;
@@ -67,7 +67,7 @@ abstract class sh extends WidgetContainer implements mca {
             return;
           }
           if (var3 == 1) {
-            var13 = (cfa) (IntrusiveDeque.field_d.b((byte) 90));
+            var13 = (cfa) (IntrusiveDeque.field_d.beginForward((byte) 90));
             if (var13 != null) {
               var13.unlink(false);
               return;
@@ -80,7 +80,7 @@ abstract class sh extends WidgetContainer implements mca {
             vc.a((byte) -115);
             return;
           }
-          var15 = (kka) (gs.field_l.b((byte) 90));
+          var15 = (kka) (gs.field_l.beginForward((byte) 90));
           if (var15 == null) {
             vc.a((byte) -100);
             return;

@@ -76,7 +76,7 @@ final class FishRainSpecial extends SpecialOrder {
                     5 >= DiveBomberAnimation.a(10, param0.field_w, param1 + 2147483645)) {
                     if (var16 != null) {
                       var17 = new DamageEffect(new CreatureRef(var16), false, 1, 30, 12);
-                      var4.effects.a(var17, true);
+                      var4.effects.addLast(var17, true);
                     }
                     var4.field_t[var10][0] = var13;
                     var4.field_t[var10][1] = var14;
@@ -153,11 +153,11 @@ final class FishRainSpecial extends SpecialOrder {
           ug.field_q.a(true, param1 + 7766);
           if (null != qg.field_b.children) {
             SoftwareRasterizer.setClip(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
-            var2 = (kr) (qg.field_b.children.b((byte) 90));
+            var2 = (kr) (qg.field_b.children.beginForward((byte) 90));
             while (var2 != null) {
               jha.field_g.drawText(Integer.toString(var2.field_yb.field_g), ug.field_q.field_kb - (-var2.field_kb - 28), qg.field_b.field_rb + 32 + (ug.field_q.field_rb + var2.field_rb), 16777215, -1);
               WidgetWrapper.field_z.drawText(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
-              var2 = (kr) (qg.field_b.children.c(0));
+              var2 = (kr) (qg.field_b.children.nextForward(0));
             }
             SoftwareRasterizer.c();
           }

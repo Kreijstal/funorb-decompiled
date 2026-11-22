@@ -106,7 +106,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
         if (param0 != 69) {
           return;
         }
-        EventEffect var3 = (EventEffect) (this.field_z.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_z.effects.beginForward((byte) 90));
         al.a(param0 ^ 19, this.field_z.moveId);
         while (var3 != null) {
           var4 = var3.target.a(-27449, this.screen);
@@ -115,7 +115,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
           this.addChild(27799, new TileEffectAnimation(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
           this.addChild(27799, new TileEffectAnimation(new oia(this.screen, var4.field_s.tileX, var4.field_s.tileY)));
           var3.apply(var6, this.screen.field_h, 12);
-          var3 = (EventEffect) (this.field_z.effects.c(param0 - 69));
+          var3 = (EventEffect) (this.field_z.effects.nextForward(param0 - 69));
         }
     }
 

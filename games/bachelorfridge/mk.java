@@ -318,9 +318,9 @@ final class mk {
           this.field_s.a(8);
         }
         this.field_s.a(false, false, 2048, 2048, 0, -60, 256, 110, 100);
-        var4 = (ho) (BananarangEvent.field_s.field_g.field_h.b((byte) 90));
+        var4 = (ho) (BananarangEvent.field_s.field_g.field_h.beginForward((byte) 90));
         while (var4 != null) {
-          var4 = (ho) (BananarangEvent.field_s.field_g.field_h.c(0));
+          var4 = (ho) (BananarangEvent.field_s.field_g.field_h.nextForward(0));
         }
         this.a((byte) 21, this.field_d[2], dt.field_a, 154, 472, 2);
         this.a((byte) 21, this.field_d[3], DualLinkDeque.field_b, 184, 472, 3);

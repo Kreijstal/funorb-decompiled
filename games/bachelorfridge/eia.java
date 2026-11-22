@@ -27,7 +27,7 @@ final class eia {
         }
         this.field_c = (int[][][]) null;
         this.field_e = null;
-        this.field_f.d(70);
+        this.field_f.clear(70);
         this.field_f = null;
     }
 
@@ -291,7 +291,7 @@ final class eia {
             var3 = new fw(param0, this.field_g);
             this.field_g = this.field_g + 1;
           } else {
-            var4Lifetime2 = (fw) (this.field_f.a(param1 + 864));
+            var4Lifetime2 = (fw) (this.field_f.beginBackward(param1 + 864));
             var3 = new fw(param0, var4Lifetime2.field_g);
             this.field_e[var4Lifetime2.field_k] = null;
             var4Lifetime2.unlink(false);
@@ -300,7 +300,7 @@ final class eia {
         } else {
           this.field_b = false;
         }
-        this.field_f.a(-52, var3);
+        this.field_f.addFirst(-52, var3);
         return this.field_c[var3.field_g];
     }
 

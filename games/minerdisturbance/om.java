@@ -79,22 +79,22 @@ final class om {
         tm var2Lifetime2;
         tm var2Lifetime3;
         if (param0 <= -89) {
-          var2 = (tm) (ok.field_b.b(94));
+          var2 = (tm) (ok.field_b.beginForward(94));
           if (var2 != null) {
             var2.b((byte) 94);
           }
-          var2Lifetime3 = (tm) (ec.field_c.b(117));
+          var2Lifetime3 = (tm) (ec.field_c.beginForward(117));
           if (var2Lifetime3 != null) {
             var2Lifetime3.b((byte) 94);
           }
           return;
         }
         field_d = (String) null;
-        var2Lifetime1 = (tm) (ok.field_b.b(94));
+        var2Lifetime1 = (tm) (ok.field_b.beginForward(94));
         if (var2Lifetime1 != null) {
           var2Lifetime1.b((byte) 94);
         }
-        var2Lifetime2 = (tm) (ec.field_c.b(117));
+        var2Lifetime2 = (tm) (ec.field_c.beginForward(117));
         if (var2Lifetime2 != null) {
           var2Lifetime2.b((byte) 94);
         }

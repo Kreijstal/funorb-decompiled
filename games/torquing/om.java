@@ -44,14 +44,14 @@ final class om {
             var3 = new ka(param1, this.field_i);
             this.field_i = this.field_i + 1;
           } else {
-            var4 = (ka) (this.field_a.c(-6938));
+            var4 = (ka) (this.field_a.beginForward(-6938));
             var3 = new ka(param1, var4.field_k);
             this.field_j[var4.field_m] = null;
             var4.unlink(param0 - 15142);
           }
           this.field_j[param1] = var3;
         }
-        this.field_a.b((byte) 68, var3);
+        this.field_a.addLast((byte) 68, var3);
         return this.field_d[var3.field_k];
     }
 
@@ -166,7 +166,7 @@ final class om {
           return;
         }
         this.field_d = (int[][][]) null;
-        this.field_a.a(0);
+        this.field_a.clear(0);
         this.field_a = null;
     }
 

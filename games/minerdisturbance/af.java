@@ -91,7 +91,7 @@ final class af extends IntrusiveNode {
           if (param2 > -58) {
             af.a(127);
           }
-          param1.a((byte) -105, new lj(var8.toString()));
+          param1.addLast((byte) -105, new lj(var8.toString()));
           stackIn_30_0 = var5;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

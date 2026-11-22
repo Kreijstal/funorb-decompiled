@@ -82,12 +82,12 @@ final class al {
           }
           this.field_g = this.field_g - param0;
           while (0 > this.field_g) {
-            var6 = (d) (this.field_h.a(4));
+            var6 = (d) (this.field_h.removeFirst(4));
             this.a(var6, 111);
           }
           var6_ref = new en(param2, param0);
           this.field_a.put(param1, (byte) 92, var6_ref);
-          this.field_h.a(var6_ref, (byte) -60);
+          this.field_h.addLast(var6_ref, (byte) -60);
           ((d) ((Object) var6_ref)).field_l = 0L;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -119,13 +119,13 @@ final class al {
           return null;
         }
         if (!var7.c((byte) 37)) {
-          this.field_h.a(var7, (byte) -48);
+          this.field_h.addLast(var7, (byte) -48);
           var7.field_l = 0L;
           return var5;
         }
         en var6 = new en(var5, var7.field_t);
         this.field_a.put(var7.key, (byte) 75, var6);
-        this.field_h.a(var6, (byte) -66);
+        this.field_h.addLast(var6, (byte) -66);
         ((d) ((Object) var6)).field_l = 0L;
         var7.unlink(0);
         var7.unlinkSecondary(0);

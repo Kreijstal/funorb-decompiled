@@ -88,7 +88,7 @@ final class ln extends jh {
             throw new IllegalArgumentException();
           }
           var3 = (bb) (param0);
-          this.field_E.b((byte) 68, var3);
+          this.field_E.addLast((byte) 68, var3);
           var3.field_D = true;
           int var4 = 107 % ((param1 - 18) / 61);
           var3.a((UiWidget) (this), false);

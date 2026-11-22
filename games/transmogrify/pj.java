@@ -58,19 +58,19 @@ final class pj extends rh {
         int var7;
         o var5Lifetime1;
         var7 = Transmogrify.field_A ? 1 : 0;
-        var5 = (o) (mh.field_a.a((byte) -95));
+        var5 = (o) (mh.field_a.beginForward((byte) -95));
         while (var5 != null) {
           if (~param0 == ~var5.field_j) {
             return var5;
           }
-          var5 = (o) (mh.field_a.a(true));
+          var5 = (o) (mh.field_a.nextForward(true));
         }
         var5Lifetime1 = new o();
         var6 = -119 / ((32 - param1) / 36);
         var5Lifetime1.field_n = param4;
         var5Lifetime1.field_j = param0;
         var5Lifetime1.field_h = param3;
-        mh.field_a.a(var5Lifetime1, -84);
+        mh.field_a.addLast(var5Lifetime1, -84);
         nk.a(param2, var5Lifetime1, -31995);
         return var5Lifetime1;
     }

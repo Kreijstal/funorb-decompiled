@@ -131,7 +131,7 @@ final class FlirtAnimation extends EventAnimation {
         if (var7.isDown(param0 - 104)) {
           return;
         }
-        var3 = (EventEffect) (this.field_w.effects.b((byte) 90));
+        var3 = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(116, this.field_w.moveId);
         if (param0 != -1) {
           return;
@@ -144,7 +144,7 @@ final class FlirtAnimation extends EventAnimation {
             ((TileEffect) ((Object) var5)).a(0);
           }
           var3.apply(var7, this.screen.field_h, 12);
-          var3 = (EventEffect) (this.field_w.effects.c(0));
+          var3 = (EventEffect) (this.field_w.effects.nextForward(0));
         }
     }
 

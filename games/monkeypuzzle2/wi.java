@@ -16,10 +16,10 @@ final class wi implements ml {
         RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (me) (af.field_a.a((byte) -117));
+          var4 = (me) (af.field_a.beginBackward((byte) -117));
           while (var4 != null) {
             qc.a(var4, (byte) 117, param0);
-            var4 = (me) (af.field_a.d((byte) 63));
+            var4 = (me) (af.field_a.nextBackward((byte) 63));
           }
           if (param1 == 1197) {
             return;

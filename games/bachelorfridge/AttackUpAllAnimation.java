@@ -72,7 +72,7 @@ final class AttackUpAllAnimation extends EventAnimation {
           field_x = -4;
           var7 = this.field_v.creature.a(63, this.screen.field_h);
           if (!var7.isDown(-100)) {
-            var3_ref = (DamageEffect) (this.field_v.effects.b((byte) 90));
+            var3_ref = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
             al.a(106, this.field_v.moveId);
             while (var3_ref != null) {
               var3_ref.apply(var7, this.screen.field_h, 12);
@@ -83,7 +83,7 @@ final class AttackUpAllAnimation extends EventAnimation {
                 this.addChild(27799, new cb(var8, 7));
                 this.addChild(27799, new wn(var8, kna.field_g[18], 24831));
               }
-              var3_ref = (DamageEffect) (this.field_v.effects.c(0));
+              var3_ref = (DamageEffect) (this.field_v.effects.nextForward(0));
             }
             return;
           }
@@ -91,7 +91,7 @@ final class AttackUpAllAnimation extends EventAnimation {
         }
         BattleCreature var9 = this.field_v.creature.a(63, this.screen.field_h);
         if (!var9.isDown(-100)) {
-          var3_refLifetime1 = (DamageEffect) (this.field_v.effects.b((byte) 90));
+          var3_refLifetime1 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(106, this.field_v.moveId);
           while (var3_refLifetime1 != null) {
             var3_refLifetime1.apply(var9, this.screen.field_h, 12);
@@ -102,7 +102,7 @@ final class AttackUpAllAnimation extends EventAnimation {
               this.addChild(27799, new cb(var10, 7));
               this.addChild(27799, new wn(var10, kna.field_g[18], 24831));
             }
-            var3_refLifetime1 = (DamageEffect) (this.field_v.effects.c(0));
+            var3_refLifetime1 = (DamageEffect) (this.field_v.effects.nextForward(0));
           }
           return;
         }

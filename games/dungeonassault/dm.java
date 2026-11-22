@@ -58,11 +58,11 @@ final class dm {
           }
           param1[param4] = param2;
           var6 = new a(param4);
-          var7 = (a) (param0.e(-24172));
+          var7 = (a) (param0.beginBackward(-24172));
           var8 = -120 / ((74 - param3) / 46);
           while (var7 != null) {
             if (param1[var7.field_j] <= param2) {
-              var7 = (a) (param0.a(4));
+              var7 = (a) (param0.nextBackward(4));
               continue;
             }
             so.$cfr$intArgs$a$d4f67f19bfc6(60, var7, var6);
@@ -71,7 +71,7 @@ final class dm {
           if (var7 != null) {
             return;
           }
-          param0.a(var6, false);
+          param0.addFirst(var6, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

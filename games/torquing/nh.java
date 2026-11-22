@@ -132,7 +132,7 @@ final class nh extends IntrusiveNode {
                 var19.field_t[var5] = -5;
               }
             }
-            MouseInputHandler.field_e.a((byte) 54, var19);
+            MouseInputHandler.field_e.addFirst((byte) 54, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

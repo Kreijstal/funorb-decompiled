@@ -78,10 +78,10 @@ final class ui {
           var2 = var27.readUnsignedByte(true);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(param0 - 30592);
-            var4_ref = (al) (hg.field_n.e(-24172));
+            var4_ref = (al) (hg.field_n.beginBackward(-24172));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_k) {
-                var4_ref = (al) (hg.field_n.a(param0 ^ 30596));
+                var4_ref = (al) (hg.field_n.nextBackward(param0 ^ 30596));
                 continue;
               }
               break;
@@ -174,10 +174,10 @@ final class ui {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(param0 - 30592);
             var27.readLong((byte) 68);
-            var4 = (fn) (cb.field_a.e(-24172));
+            var4 = (fn) (cb.field_a.beginBackward(-24172));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_r) {
-                var4 = (fn) (cb.field_a.a(4));
+                var4 = (fn) (cb.field_a.nextBackward(4));
                 continue;
               }
               break;

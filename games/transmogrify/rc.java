@@ -72,7 +72,7 @@ final class rc {
           }
           sg.field_d = null;
           oh.field_j = 0;
-          oj.field_u.g(-1);
+          oj.field_u.clear(-1);
           hc.field_u = 0;
           da.field_C = 0;
           vh.field_n = vh.field_n + (eh.totalScore << 6);

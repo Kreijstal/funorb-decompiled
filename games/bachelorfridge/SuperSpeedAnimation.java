@@ -17,7 +17,7 @@ final class SuperSpeedAnimation extends EventAnimation {
         if (var2.isDown(-114)) {
           return;
         }
-        var3 = (DamageEffect) (this.field_w.effects.b((byte) 90));
+        var3 = (DamageEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(-84, this.field_w.moveId);
         if (!param0) {
           while (var3 != null) {
@@ -25,7 +25,7 @@ final class SuperSpeedAnimation extends EventAnimation {
             var6 = var3.target.a(-27449, this.screen);
             var6.b(-1, 7);
             var6.a(24831, 98, kna.field_g[28]);
-            var3 = (DamageEffect) (this.field_w.effects.c(0));
+            var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
           }
         } else {
           this.isFinished((byte) -57);
@@ -34,7 +34,7 @@ final class SuperSpeedAnimation extends EventAnimation {
             var7 = var3.target.a(-27449, this.screen);
             var7.b(-1, 7);
             var7.a(24831, 98, kna.field_g[28]);
-            var3 = (DamageEffect) (this.field_w.effects.c(0));
+            var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
           }
         }
     }

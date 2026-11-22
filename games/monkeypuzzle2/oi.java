@@ -170,7 +170,7 @@ final class oi {
           var1_int = 148;
           var2 = 1;
           var3 = -42 / ((param0 + 12) / 41);
-          var4_ref_ki = (ki) (wd.field_h.a((byte) -117));
+          var4_ref_ki = (ki) (wd.field_h.beginBackward((byte) -117));
           while (var4_ref_ki != null) {
             if (var2 == 0) {
               var4_ref_ki.f(-7);
@@ -185,10 +185,10 @@ final class oi {
               var4_ref_ki.field_q = -100.0f;
               var4_ref_ki.field_B = -100.0f;
             }
-            var4_ref_ki = (ki) (wd.field_h.d((byte) 63));
+            var4_ref_ki = (ki) (wd.field_h.nextBackward((byte) 63));
           }
-          if (wd.field_h.b(-113) < 6 &&
-            hd.field_u.e(11253) &&
+          if (wd.field_h.size(-113) < 6 &&
+            hd.field_u.isEmpty(11253) &&
             !ub.field_a &&
             !lc.field_f) {
             var4 = 0;
@@ -196,7 +196,7 @@ final class oi {
             var6 = 0;
             var7 = 0;
             var8 = 0;
-            var9_ref_ki = (ki) (ok.field_a.a((byte) -117));
+            var9_ref_ki = (ki) (ok.field_a.beginBackward((byte) -117));
             while (var9_ref_ki != null) {
               if (2 == var9_ref_ki.field_l) {
                 var8 = 1;
@@ -213,7 +213,7 @@ final class oi {
               if (var9_ref_ki.field_l == 3) {
                 var5 = 1;
               }
-              var9_ref_ki = (ki) (ok.field_a.d((byte) 63));
+              var9_ref_ki = (ki) (ok.field_a.nextBackward((byte) 63));
             }
             stackIn_30_0 = (var8 == 0) ? 0 : 1;
             if (var5 == 0) {
@@ -245,7 +245,7 @@ final class oi {
             var13 = 0;
             var14 = 0;
             var15 = 0;
-            var16_ref_ki = (ki) (wd.field_h.c(-1));
+            var16_ref_ki = (ki) (wd.field_h.beginForward(-1));
             while (var16_ref_ki != null) {
               if (var16_ref_ki.field_w == 6) {
                 var10++;
@@ -270,7 +270,7 @@ final class oi {
               } else {
                 var12++;
               }
-              var16_ref_ki = (ki) (wd.field_h.a(true));
+              var16_ref_ki = (ki) (wd.field_h.nextForward(true));
             }
             if (var12 > 2 &&
               var9 > 1) {
@@ -300,7 +300,7 @@ final class oi {
             if (var9 <= 0) {
               return;
             }
-            while (wd.field_h.b(-65) < 6) {
+            while (wd.field_h.size(-65) < 6) {
               boolean decompiledFrameRemainder0 = true;
               var16 = -1;
               var17Lifetime1 = pf.a((byte) 22, var9);
@@ -346,7 +346,7 @@ final class oi {
                   }
                 }
               }
-              var19_ref = (ki) (ri.field_b.d(4011));
+              var19_ref = (ki) (ri.field_b.removeLast(4011));
               if (!(Math.random() < 0.95) &&
                 IterableNodeHashTable.field_c >= 3 &&
                 var10 <= 1) {
@@ -357,7 +357,7 @@ final class oi {
               }
               var19_ref.field_q = -100.0f;
               var19_ref.field_B = -100.0f;
-              wd.field_h.a(-8212, var19_ref);
+              wd.field_h.addFirst(-8212, var19_ref);
             }
             return;
           }

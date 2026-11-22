@@ -456,7 +456,7 @@ final class lc extends PcmStream {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -124);
             }
-            var14 = (oh) (oc.field_G.a((byte) -95));
+            var14 = (oh) (oc.field_G.beginForward((byte) -95));
             if (var14 == null) {
               pc.a(1);
               return;
@@ -468,7 +468,7 @@ final class lc extends PcmStream {
             return;
           }
           if (var2 == 1) {
-            var11 = (AchievementNotice) (rh.field_r.a((byte) -95));
+            var11 = (AchievementNotice) (rh.field_r.beginForward((byte) -95));
             if (var11 == null) {
               pc.a(1);
               return;
@@ -476,7 +476,7 @@ final class lc extends PcmStream {
             var11.unlink(5);
           } else {
             if (var2 == 2) {
-              var15 = (oh) (oc.field_G.a((byte) -95));
+              var15 = (oh) (oc.field_G.beginForward((byte) -95));
               if (var15 == null) {
                 pc.a(1);
                 return;
@@ -515,12 +515,12 @@ final class lc extends PcmStream {
         kc var3 = null;
         int var4 = Transmogrify.field_A ? 1 : 0;
         if (0 != (4 & this.field_v[param0])) {
-          var3 = (kc) (this.field_m.field_q.a((byte) -95));
+          var3 = (kc) (this.field_m.field_q.beginForward((byte) -95));
           while (var3 != null) {
             if (~param0 == ~var3.field_u) {
               var3.field_n = 0;
             }
-            var3 = (kc) (this.field_m.field_q.a(true));
+            var3 = (kc) (this.field_m.field_q.nextForward(true));
           }
         }
         if (param1 < 12) {
@@ -533,7 +533,7 @@ final class lc extends PcmStream {
         int var4;
         int var5;
         var5 = Transmogrify.field_A ? 1 : 0;
-        var3 = (kc) (this.field_m.field_q.a((byte) -95));
+        var3 = (kc) (this.field_m.field_q.beginForward((byte) -95));
         var4 = -103 / ((-19 - param0) / 37);
         while (var3 != null) {
           if ((param1 < 0 ||
@@ -542,7 +542,7 @@ final class lc extends PcmStream {
             this.field_u[var3.field_u][var3.field_i] = null;
             var3.field_p = 0;
           }
-          var3 = (kc) (this.field_m.field_q.a(true));
+          var3 = (kc) (this.field_m.field_q.nextForward(true));
         }
     }
 
@@ -570,7 +570,7 @@ final class lc extends PcmStream {
         int var5;
         var5 = Transmogrify.field_A ? 1 : 0;
         var3 = -100 / ((param1 + 68) / 44);
-        var4 = (kc) (this.field_m.field_q.a((byte) -95));
+        var4 = (kc) (this.field_m.field_q.beginForward((byte) -95));
         while (var4 != null) {
           if (param0 < 0 ||
             var4.field_u == param0) {
@@ -586,7 +586,7 @@ final class lc extends PcmStream {
             }
             var4.unlink(5);
           }
-          var4 = (kc) (this.field_m.field_q.a(true));
+          var4 = (kc) (this.field_m.field_q.nextForward(true));
         }
     }
 
@@ -786,18 +786,18 @@ final class lc extends PcmStream {
           this.field_F = (int[]) null;
         }
         if (0 != (this.field_v[param1] & 2)) {
-          var3 = (kc) (this.field_m.field_q.a((byte) -95));
+          var3 = (kc) (this.field_m.field_q.beginForward((byte) -95));
           while (var3 != null) {
             if (param1 == var3.field_u) {
               if (null != this.field_u[param1][var3.field_i]) {
-                var3 = (kc) (this.field_m.field_q.a(true));
+                var3 = (kc) (this.field_m.field_q.nextForward(true));
                 continue;
               }
               if (var3.field_p < 0) {
                 var3.field_p = 0;
               }
             }
-            var3 = (kc) (this.field_m.field_q.a(true));
+            var3 = (kc) (this.field_m.field_q.nextForward(true));
           }
         }
     }
@@ -813,14 +813,14 @@ final class lc extends PcmStream {
         if (param0 == (this.field_v[param3] & 2)) {
           var8.field_p = 0;
         } else {
-          var6 = (kc) (this.field_m.field_q.a((byte) -95));
+          var6 = (kc) (this.field_m.field_q.beginForward((byte) -95));
           while (var6 != null) {
             if (var6.field_u == var8.field_u && var6.field_p < 0 &&
               var6 != var8) {
               var8.field_p = 0;
               break;
             }
-            var6 = (kc) (this.field_m.field_q.a(true));
+            var6 = (kc) (this.field_m.field_q.nextForward(true));
           }
         }
     }
@@ -934,7 +934,7 @@ final class lc extends PcmStream {
           var23 = null;
           var13 = Transmogrify.field_A ? 1 : 0;
           try {
-            var14 = (ba) (SecondaryNodeDequeIterator.field_f.a((byte) -95));
+            var14 = (ba) (SecondaryNodeDequeIterator.field_f.beginForward((byte) -95));
             var18 = var14;
             if (var18 == null) {
               return;
@@ -1120,7 +1120,7 @@ final class lc extends PcmStream {
         var9 = Transmogrify.field_A ? 1 : 0;
         this.c(0, 64, param1, param0);
         if ((2 & this.field_v[param0]) != 0) {
-          var5 = (kc) (this.field_m.field_q.b(-10231));
+          var5 = (kc) (this.field_m.field_q.beginBackward(-10231));
           while (var5 != null) {
             if (param0 == var5.field_u &&
               0 > var5.field_p) {
@@ -1133,7 +1133,7 @@ final class lc extends PcmStream {
               var5.field_i = param1;
               return;
             }
-            var5 = (kc) (this.field_m.field_q.f(-33));
+            var5 = (kc) (this.field_m.field_q.nextBackward(-33));
           }
         }
         var10 = (si) (this.field_Q.a((long)this.field_H[param0], 0));
@@ -1183,7 +1183,7 @@ final class lc extends PcmStream {
           }
           this.field_l[param0][var7.field_j] = var7;
         }
-        this.field_m.field_q.a(var7, -107);
+        this.field_m.field_q.addLast(var7, -107);
         this.field_u[param0][param1] = var7;
         return;
     }

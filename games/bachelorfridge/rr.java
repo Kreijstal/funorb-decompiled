@@ -103,14 +103,14 @@ final class rr extends AnimationNode {
         RuntimeException var4_ref = null;
         var5 = BachelorFridge.field_y;
         try {
-          var4 = (lh) (param1.b((byte) 90));
+          var4 = (lh) (param1.beginForward((byte) 90));
           while (var4 != null) {
             if (var4.b(true)) {
               DiveBomberAnimation.a(50, param3, -2147483648);
               var4.field_p = (int)((double)(128 + DiveBomberAnimation.a(80000, param3, -2147483648)) * Math.sin(var4.field_r));
               var4.field_g = (int)((double)(DiveBomberAnimation.a(40000, param3, -2147483648) + 128) * Math.cos(var4.field_r));
             }
-            var4 = (lh) (param1.c(0));
+            var4 = (lh) (param1.nextForward(0));
           }
           if (param0 >= 120) {
             return;

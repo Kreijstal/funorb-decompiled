@@ -12,7 +12,7 @@ final class lh extends PcmStream {
     static int field_s;
 
     final PcmStream a() {
-        hg var1 = (hg) (this.field_m.a((byte) 51));
+        hg var1 = (hg) (this.field_m.beginBackward((byte) 51));
         if (var1 == null) {
           return null;
         }
@@ -75,7 +75,7 @@ final class lh extends PcmStream {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           this.field_r.a(param0, param1, param2);
-          var6 = (hg) (this.field_m.a((byte) 51));
+          var6 = (hg) (this.field_m.beginBackward((byte) 51));
           while (var6 != null) {
             if (!this.field_n.b(var6, -1642423728)) {
               var5 = param2;
@@ -91,7 +91,7 @@ final class lh extends PcmStream {
                 var4_int = var4_int + var6.field_t;
               } while (!this.field_n.a(var4_int, param0, var5, 100, var6));
             }
-            var6 = (hg) (this.field_m.b(-51));
+            var6 = (hg) (this.field_m.nextBackward(-51));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,7 +262,7 @@ final class lh extends PcmStream {
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
         while (true) {
-          var1 = (hg) (this.field_m.b(-60));
+          var1 = (hg) (this.field_m.nextBackward(-60));
           if (var1 == null) {
             return null;
           }
@@ -279,7 +279,7 @@ final class lh extends PcmStream {
         boolean stackIn_4_0 = false;
         var4 = SolKnight.field_L ? 1 : 0;
         this.field_r.a(param0);
-        var3 = (hg) (this.field_m.a((byte) 51));
+        var3 = (hg) (this.field_m.beginBackward((byte) 51));
         while (var3 != null) {
           stackIn_4_0 = this.field_n.b(var3, -1642423728);
           boolean decompiledFrameCompleted0 = true;
@@ -298,7 +298,7 @@ final class lh extends PcmStream {
               var3.field_t = var3.field_t - var2;
             }
           }
-          var3 = (hg) (this.field_m.b(-126));
+          var3 = (hg) (this.field_m.nextBackward(-126));
         }
     }
 

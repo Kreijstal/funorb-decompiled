@@ -74,16 +74,16 @@ final class rg extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          var5 = (cfa) (IntrusiveDeque.field_d.b((byte) 90));
+          var5 = (cfa) (IntrusiveDeque.field_d.beginForward((byte) 90));
           while (var5 != null) {
             RageAnimation.a(param1, var5, (byte) 102);
-            var5 = (cfa) (IntrusiveDeque.field_d.c(0));
+            var5 = (cfa) (IntrusiveDeque.field_d.nextForward(0));
           }
-          var2 = gs.field_l.b((byte) 90);
+          var2 = gs.field_l.beginForward((byte) 90);
           var3 = 17 / ((-41 - param0) / 59);
           while (var2 != null) {
             ah.a(4, param1);
-            var2 = gs.field_l.c(0);
+            var2 = gs.field_l.nextForward(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

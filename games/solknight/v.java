@@ -112,12 +112,12 @@ final class v {
           this.a((byte) -6, param3);
           this.field_e = this.field_e - param0;
           while (0 > this.field_e) {
-            var6 = (pe) (this.field_c.a((byte) -115));
+            var6 = (pe) (this.field_c.removeLast((byte) -115));
             this.a(var6, (byte) 126);
           }
           var6_ref = new tk(param1, param0);
           this.field_f.put(-858993458, param3, var6_ref);
-          this.field_c.a(-114, var6_ref);
+          this.field_c.addFirst(-114, var6_ref);
           ((pe) ((Object) var6_ref)).secondaryKey = 0L;
           if (param2 < 126) {
             this.field_f = (IterableNodeHashTable) null;
@@ -204,12 +204,12 @@ final class v {
           return (Object) null;
         }
         if (!var7.g(param0 ^ 113)) {
-          this.field_c.a(-109, var7);
+          this.field_c.addFirst(-109, var7);
           var7.secondaryKey = 0L;
         } else {
           var6 = new tk(var5, var7.field_o);
           this.field_f.put(-858993458, var7.key, var6);
-          this.field_c.a(param0 - 110, var6);
+          this.field_c.addFirst(param0 - 110, var6);
           ((pe) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(10);
           var7.unlinkSecondary(97);

@@ -117,14 +117,14 @@ final class jc {
             fieldTemp$3 = param0.field_m;
             param0.field_m = param0.field_m + 1;
             param0.field_o[fieldTemp$3] = param2;
-            if (!aj.field_b.e(11253)) {
-              var6 = (il) (aj.field_b.d(4011));
+            if (!aj.field_b.isEmpty(11253)) {
+              var6 = (il) (aj.field_b.removeLast(4011));
               var3_ref = var6;
               var6.a(-1, param2, 32.0f, param0);
             } else {
               var3_ref = new il(param2, param0, 32.0f);
             }
-            rf.field_a.a(-8212, var3_ref);
+            rf.field_a.addFirst(-8212, var3_ref);
             if (param0.field_w == 0) {
               kc.b(true);
             } else {

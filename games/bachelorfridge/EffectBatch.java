@@ -38,7 +38,7 @@ final class EffectBatch extends BattleUpdate {
 
     final void a(boolean param0, EventEffect param1) {
         try {
-          this.field_m.a(param1, param0);
+          this.field_m.addLast(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rv.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -82,10 +82,10 @@ final class EffectBatch extends BattleUpdate {
           if (param1) {
             EffectBatch.a(120, 93, 90, -30, -60, 118, -97, -20);
           }
-          var5 = (EventEffect) (this.field_m.b((byte) 90));
+          var5 = (EventEffect) (this.field_m.beginForward((byte) 90));
           while (var5 != null) {
             var5.apply((BattleCreature) null, param0, 12);
-            var5 = (EventEffect) (this.field_m.c(0));
+            var5 = (EventEffect) (this.field_m.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,33 +130,33 @@ final class EffectBatch extends BattleUpdate {
             }
             var3 = param0.readUnsignedByte(16711935);
             if (var3 == 1) {
-              this.field_m.a(vo.a(-44, param0), true);
+              this.field_m.addLast(vo.a(-44, param0), true);
               continue;
             }
             if (var3 == 2) {
-              this.field_m.a(db.a(param0, 95), true);
+              this.field_m.addLast(db.a(param0, 95), true);
               continue;
             }
             if (var3 == 3) {
-              this.field_m.a(BananarangSpecial.b(16866, param0), true);
+              this.field_m.addLast(BananarangSpecial.b(16866, param0), true);
               continue;
             }
             if (var3 == 4) {
-              this.field_m.a(uha.b(param0, -7), true);
+              this.field_m.addLast(uha.b(param0, -7), true);
               continue;
             }
             if (5 == var3) {
-              this.field_m.a(k.a(false, param0), true);
+              this.field_m.addLast(k.a(false, param0), true);
               continue;
             }
             if (var3 == 6) {
-              this.field_m.a(DualLinkNode.a(param0, -4479), true);
+              this.field_m.addLast(DualLinkNode.a(param0, -4479), true);
               continue;
             }
             if (var3 != 7) {
               throw new RuntimeException();
             }
-            this.field_m.a(ClamsEvent.a(-1547040176, param0), true);
+            this.field_m.addLast(ClamsEvent.a(-1547040176, param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,11 +182,11 @@ final class EffectBatch extends BattleUpdate {
         RuntimeException var3_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.writeByte(this.field_m.g(0), 0);
+          param0.writeByte(this.field_m.countWithOffset(0), 0);
           if (param1 != -9) {
             return;
           }
-          var3 = (EventEffect) (this.field_m.b((byte) 90));
+          var3 = (EventEffect) (this.field_m.beginForward((byte) 90));
           while (var3 != null) {
             if (!(var3 instanceof lia)) {
               if (!(var3 instanceof qq)) {
@@ -217,7 +217,7 @@ final class EffectBatch extends BattleUpdate {
               param0.writeByte(1, 0);
             }
             var3.write(param0, (byte) -56);
-            var3 = (EventEffect) (this.field_m.c(param1 ^ -9));
+            var3 = (EventEffect) (this.field_m.nextForward(param1 ^ -9));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -21,7 +21,7 @@ class ph extends qj implements ga {
         if (param1) {
           ph.a(-49, false, 94);
           jg.field_H = jg.field_H | var3;
-          pk.field_a.b(90, new wf(param2));
+          pk.field_a.addLast(90, new wf(param2));
           if (a.field_a) {
             return;
           }
@@ -29,11 +29,11 @@ class ph extends qj implements ga {
             rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
             return;
           }
-          SecondaryNodeDeque.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+          SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
           return;
         }
         jg.field_H = jg.field_H | var3;
-        pk.field_a.b(90, new wf(param2));
+        pk.field_a.addLast(90, new wf(param2));
         if (a.field_a) {
           return;
         }
@@ -41,7 +41,7 @@ class ph extends qj implements ga {
           rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
           return;
         }
-        SecondaryNodeDeque.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+        SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
     }
 
     final void o(int param0) {

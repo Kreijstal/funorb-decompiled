@@ -36,7 +36,7 @@ abstract class MouseWheelInput {
           var2_long = je.a(1);
           if (0 != rh.field_i &&
             qg.field_a < 0) {
-            var4_ref_sa = (sa) (SecondaryNodeDequeIterator.field_h.a((byte) 51));
+            var4_ref_sa = (sa) (SecondaryNodeDequeIterator.field_h.beginBackward((byte) 51));
             if (var4_ref_sa != null &&
               var2_long > var4_ref_sa.field_h) {
               var4_ref_sa.unlink(10);
@@ -98,7 +98,7 @@ abstract class MouseWheelInput {
             for (var6 = 0; var6 < te.field_O; var6++) {
               var5.field_k[var6] = te.field_N.payload[var6];
             }
-            SecondaryNodeDequeIterator.field_h.a(var5, -7044);
+            SecondaryNodeDequeIterator.field_h.addFirst(var5, -7044);
             qg.field_a = -1;
             stackIn_21_0 = qg.field_a;
           }

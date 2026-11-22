@@ -167,30 +167,30 @@ final class BagpipeAnimation extends EventAnimation {
         if (var7.isDown(111)) {
           return;
         }
-        DamageEffect var3 = (DamageEffect) (this.field_v.effects.b((byte) 90));
+        DamageEffect var3 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
         al.a(param0 + 88, this.field_v.moveId);
         if (param0 != 0) {
           BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, -84, (int[]) null, true, (vr) null, (Sprite[][]) null, (String[][]) null, 83, (String[]) null, 45, (vr) null, (String[]) null, (Sprite[][]) null, (vr) null, (String[][]) null, -71);
         } else {
           var8 = this.field_v.creature.a(-27449, this.screen);
-          this.screen.field_fb.a(new vt(this.screen, var8), true);
+          this.screen.field_fb.addLast(new vt(this.screen, var8), true);
           while (var3 != null) {
             var3.apply(var7, this.screen.field_h, 12);
             var9 = var3.target.a(-27449, this.screen);
             var9.b(~param0, 6);
             var9.a(24831, 17, kna.field_g[40]);
-            var3 = (DamageEffect) (this.field_v.effects.c(param0 ^ 0));
+            var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));
           }
           return;
         }
         CreatureActor var10 = this.field_v.creature.a(-27449, this.screen);
-        this.screen.field_fb.a(new vt(this.screen, var10), true);
+        this.screen.field_fb.addLast(new vt(this.screen, var10), true);
         while (var3 != null) {
           var3.apply(var7, this.screen.field_h, 12);
           var11 = var3.target.a(-27449, this.screen);
           var11.b(~param0, 6);
           var11.a(24831, 17, kna.field_g[40]);
-          var3 = (DamageEffect) (this.field_v.effects.c(param0 ^ 0));
+          var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));
         }
     }
 

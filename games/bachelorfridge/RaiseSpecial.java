@@ -127,8 +127,8 @@ final class RaiseSpecial extends SpecialOrder {
             null == param0.tiles[var4.tileX][var4.tileY].occupant &&
             var4.field_A) {
             var5 = new RaiseEvent(this.moveId, new CreatureRef(var6), this.field_j);
-            var5.effects.a(new DamageEffect(new CreatureRef(var4), false, 1, -(var4.field_t >> 1), 0), true);
-            var5.effects.a(new PlaceCreatureEffect(new CreatureRef(var4), var4.tileX, var4.tileY), true);
+            var5.effects.addLast(new DamageEffect(new CreatureRef(var4), false, 1, -(var4.field_t >> 1), 0), true);
+            var5.effects.addLast(new PlaceCreatureEffect(new CreatureRef(var4), var4.tileX, var4.tileY), true);
             stackIn_6_0 = var5;
             return (CreatureEvent) ((Object) stackIn_6_0);
           }

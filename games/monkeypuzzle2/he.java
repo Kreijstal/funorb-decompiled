@@ -14,9 +14,9 @@ final class he extends IntrusiveNode {
         try {
           for (var1_int = param0; 1000 > var1_int; var1_int++) {
             var2 = new ki(-1, 0, var1_int);
-            ri.field_b.a(-8212, var2);
+            ri.field_b.addFirst(-8212, var2);
             e.field_a[var1_int] = var2;
-            aj.field_b.a(param0 ^ -8212, new il((ki) null, (ki) null, 32.0f));
+            aj.field_b.addFirst(param0 ^ -8212, new il((ki) null, (ki) null, 32.0f));
           }
           SecondaryNodeDequeIterator.field_b.e();
           ge.f(SecondaryNodeDequeIterator.field_b.field_m >> 1, SecondaryNodeDequeIterator.field_b.field_n >> 1, (SecondaryNodeDequeIterator.field_b.field_m >> 1) - 1, 16711680);

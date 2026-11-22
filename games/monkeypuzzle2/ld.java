@@ -29,12 +29,12 @@ final class ld {
           }
           if (vg.field_J == 0) {
             vg.field_J = 200;
-            var1 = (hk) (bd.field_c.a((byte) -117));
+            var1 = (hk) (bd.field_c.beginBackward((byte) -117));
             while (var1 != null) {
               if (!var1.field_h.isLinked(-3548)) {
                 var1.unlink(-19822);
               }
-              var1 = (hk) (bd.field_c.d((byte) 63));
+              var1 = (hk) (bd.field_c.nextBackward((byte) 63));
             }
           }
         } catch (RuntimeException runtimeException) {

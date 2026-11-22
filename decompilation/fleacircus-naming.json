@@ -604,6 +604,14 @@
       "renamedSymbol": "F:AccountNameAvailabilityValidator.nameAvailable:Z"
     },
     {
+      "symbol": "F:wf.field_a:Lpa;",
+      "originalName": "field_a",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
+    },
+    {
       "symbol": "M:aa.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2138,6 +2146,22 @@
       "evidence": "Complete factory body reviewed. Frame helper receives int param0+18316. Canvas setBounds x coordinate is param0, not a constant0. Preserve all argument expressions, focus order and null path. Preserve every original argument domain,width,allocation/alias,guard,field write,callback,loop,exception context and evaluation order. Identifier-only rename.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SecondaryNodeDeque.createFullscreenCanvas(IIILPlatformTaskDispatcher;II)LFullscreenFocusCanvas;"
+    },
+    {
+      "symbol": "M:wf.a(ILpa;)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink linked secondary node with-122 before evaluating-53%((int-9)/32);then splice before sentinel using field_p next and field_m previous. Preserve exception wrapper and partial effects. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(ILDualLinkNode;)V"
+    },
+    {
+      "symbol": "M:wf.d(I)Lpa;",
+      "originalName": "d",
+      "to": "removeFirst",
+      "evidence": "Int!=-27593 returns null. Otherwise take sentinel.field_p;non-sentinel calls node.e(123) and returns it. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
     },
     {
       "symbol": "M:wh.c(I)V",
@@ -30591,9 +30615,9 @@
     },
     {
       "symbol": "F:wf.field_a:Lpa;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_a:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "wf.java",
         "start": 130,
@@ -150524,7 +150548,7 @@
     },
     {
       "symbol": "L:wf.a(ILpa;)V#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -150535,7 +150559,7 @@
     },
     {
       "symbol": "L:wf.a(ILpa;)V#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(ILDualLinkNode;)V#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -150601,7 +150625,7 @@
     },
     {
       "symbol": "L:wf.d(I)Lpa;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.d(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -177012,9 +177036,9 @@
     },
     {
       "symbol": "M:wf.a(ILpa;)V",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(ILDualLinkNode;)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(ILDualLinkNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "wf.java",
         "start": 412,
@@ -177056,9 +177080,9 @@
     },
     {
       "symbol": "M:wf.d(I)Lpa;",
-      "renamedSymbol": "M:SecondaryNodeDeque.d(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "wf.java",
         "start": 1590,
@@ -235598,7 +235622,7 @@
     },
     {
       "symbol": "P:wf.a(ILpa;)V#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -235609,7 +235633,7 @@
     },
     {
       "symbol": "P:wf.a(ILpa;)V#1",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(ILDualLinkNode;)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -235675,7 +235699,7 @@
     },
     {
       "symbol": "P:wf.d(I)Lpa;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.d(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236410,7 +236434,7 @@
       "original": "ag.java",
       "renamed": "ag.java",
       "inputSha256": "832f24c7463ea3bddc2fea5c87a1d3d12265c777b28c14088c48c6cb3e67a29c",
-      "outputSha256": "48fa968d230a120718c0986fc16158760e6c357baa8413d03b9813a8ebdbff80",
+      "outputSha256": "9f95e27af6a9e96549d71ae91d6309ae013080b8796542ab77f20202544d8d15",
       "edits": [
         {
           "start": 86,
@@ -236427,11 +236451,25 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 1108,
+          "end": 1109,
+          "symbol": "M:wf.d(I)Lpa;",
+          "original": "d",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 1280,
           "end": 1281,
           "symbol": "M:li.a(JLlh;B)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 1331,
+          "end": 1332,
+          "symbol": "M:wf.a(ILpa;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 1770,
@@ -236469,11 +236507,25 @@
           "renamed": "get"
         },
         {
+          "start": 4180,
+          "end": 4181,
+          "symbol": "M:wf.a(ILpa;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 4317,
           "end": 4318,
           "symbol": "M:li.a(JLlh;B)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 4376,
+          "end": 4377,
+          "symbol": "M:wf.a(ILpa;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 4456,
@@ -258526,7 +258578,7 @@
       "original": "rc.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "b6bd0ab66c8cff3dc13c095a581901301eb6c215717cd5cca3a45879b3c9e23e",
-      "outputSha256": "4b4035c94b73cd7f08e6bd851170a88bc94acee1e5aa6baef59a580ae3716ecb",
+      "outputSha256": "099fed2858815434084103f830d40164d19ae7fd09e58635dfaf01a473fd18a9",
       "edits": [
         {
           "start": 71,
@@ -258592,6 +258644,13 @@
           "renamed": "deque"
         },
         {
+          "start": 409,
+          "end": 416,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 16554,
           "end": 16561,
           "symbol": "F:rc.field_b:Lpa;",
@@ -258604,6 +258663,13 @@
           "symbol": "F:rc.field_c:Lwf;",
           "original": "field_c",
           "renamed": "deque"
+        },
+        {
+          "start": 16596,
+          "end": 16603,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 16622,
@@ -258716,6 +258782,13 @@
           "symbol": "F:rc.field_c:Lwf;",
           "original": "field_c",
           "renamed": "deque"
+        },
+        {
+          "start": 17154,
+          "end": 17161,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
         }
       ]
     },
@@ -265774,7 +265847,7 @@
       "original": "wf.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "8a8d98488d2d0181c2b933b064055399fa3cacb0df14aa3f6ed4cfca847f49ea",
-      "outputSha256": "e828bc7bffc6fdd64875c471b1f4e2f0ac4c7210c99c846ffd2c59b0a8a6cbcb",
+      "outputSha256": "e5f1357853f6537bd6e2b50de7130b5432d5be614ff767585da63bb5a3c7c5b8",
       "edits": [
         {
           "start": 71,
@@ -265791,6 +265864,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 130,
+          "end": 137,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 201,
           "end": 203,
           "symbol": "C:rh",
@@ -265803,6 +265883,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 412,
+          "end": 413,
+          "symbol": "M:wf.a(ILpa;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 426,
@@ -265819,6 +265906,20 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 617,
+          "end": 624,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 658,
+          "end": 665,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1241,
           "end": 1243,
           "symbol": "C:rh",
@@ -265833,6 +265934,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1590,
+          "end": 1591,
+          "symbol": "M:wf.d(I)Lpa;",
+          "original": "d",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 1656,
           "end": 1658,
           "symbol": "C:pa",
@@ -265845,6 +265953,20 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1699,
+          "end": 1706,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1733,
+          "end": 1740,
+          "symbol": "F:wf.field_a:Lpa;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1767,
@@ -267128,10 +267250,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/fleacircus"
     },
-    "rulesSha256": "d4c455537723a1c2bfac49cafbb939a6fd5077eb6b192e0ceffd3f7a06171fdf",
+    "rulesSha256": "a5cf52cad338f017e62461e23d929446f9c02d21718f843a73c2160bda209772",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
-    "outputTreeSha256": "29cb398255b93531d234030d7683f2bb0acd45bd40b87bcdbfa0a438cc8d406a",
+    "outputTreeSha256": "0747e2c7bf19591b3a724d1714a18441a027c19d2359395256a6073e7c544a5b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

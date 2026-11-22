@@ -23,12 +23,12 @@ final class WeightedObjectCache {
           this.a(0, param3);
           this.field_e = this.field_e - param1;
           while (this.field_e < 0) {
-            var6 = (b) (this.field_g.b((byte) -86));
+            var6 = (b) (this.field_g.removeFirst((byte) -86));
             this.a(var6, 4821);
           }
           var6_ref = new la(param0, param1);
           this.field_b.put(param3, true, var6_ref);
-          this.field_g.a(12, var6_ref);
+          this.field_g.addLast(12, var6_ref);
           ((b) ((Object) var6_ref)).field_f = (long)param2;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "je.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -97,13 +97,13 @@ final class WeightedObjectCache {
           return null;
         }
         if (!var8.b((byte) 63)) {
-          this.field_g.a(12, var8);
+          this.field_g.addLast(12, var8);
           var8.field_f = 0L;
           return var6;
         }
         la var7 = new la(var6, var8.field_n);
         this.field_b.put(var8.key, true, var7);
-        this.field_g.a(12, var7);
+        this.field_g.addLast(12, var7);
         ((b) ((Object) var7)).field_f = 0L;
         var8.unlink(-19822);
         var8.unlinkSecondary(7847);
@@ -123,7 +123,7 @@ final class WeightedObjectCache {
     final static k a(int param0, int param1) {
         k var2 = new k();
         int var3 = -77 % ((-39 - param1) / 46);
-        AccountServiceResult.field_a.a(-8212, var2);
+        AccountServiceResult.field_a.addFirst(-8212, var2);
         f.a(param0, 22492);
         return var2;
     }

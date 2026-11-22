@@ -63,7 +63,7 @@ final class InsanoSauceAnimation extends EventAnimation {
         if (var7.isDown(107)) {
           return;
         }
-        EventEffect var3 = (EventEffect) (this.field_w.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
         if (param0 != 35) {
           field_v = (int[]) null;
         }
@@ -79,7 +79,7 @@ final class InsanoSauceAnimation extends EventAnimation {
           }
           this.addChild(27799, new DamagePopupAnimation(this.screen, var5, var3.field_f));
           var4++;
-          var3 = (EventEffect) (this.field_w.effects.c(0));
+          var3 = (EventEffect) (this.field_w.effects.nextForward(0));
         }
     }
 

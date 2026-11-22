@@ -41,10 +41,10 @@ final class en extends d {
         try {
           var14 = kj.field_d;
           var2 = var14.readUnsignedByte((byte) -101);
-          var3_ref = (og) (bh.field_c.b(0));
+          var3_ref = (og) (bh.field_c.beginBackward(0));
           while (var3_ref != null) {
             if (var2 != var3_ref.field_j) {
-              var3_ref = (og) (bh.field_c.f(-24059));
+              var3_ref = (og) (bh.field_c.nextBackward(-24059));
               continue;
             }
             break;

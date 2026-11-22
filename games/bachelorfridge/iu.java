@@ -48,7 +48,7 @@ final class iu extends AnimationNode {
         int var9Lifetime3Lifetime1;
         var13 = BachelorFridge.field_y;
         var4 = null;
-        AccountRequestState.field_b.field_vb.children.d(102);
+        AccountRequestState.field_b.field_vb.children.clear(102);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + qs.field_n; 0 <= var7; var7--) {

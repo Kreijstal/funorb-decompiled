@@ -360,10 +360,10 @@ final class vd {
           var2 = var28.readUnsignedByte((byte) 114);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) -97);
-            var4 = (o) (mh.field_a.a((byte) -95));
+            var4 = (o) (mh.field_a.beginForward((byte) -95));
             while (var4 != null) {
               if (~var3 != ~var4.field_j) {
-                var4 = (o) (mh.field_a.a(true));
+                var4 = (o) (mh.field_a.nextForward(true));
                 continue;
               }
               break;
@@ -457,10 +457,10 @@ final class vd {
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) -96);
             var4_long = var28.readLong((byte) 110);
-            var6_ref_am = (am) (SocketConnector.field_b.a((byte) -95));
+            var6_ref_am = (am) (SocketConnector.field_b.beginForward((byte) -95));
             while (var6_ref_am != null) {
               if (~var3 != ~var6_ref_am.field_p) {
-                var6_ref_am = (am) (SocketConnector.field_b.a(true));
+                var6_ref_am = (am) (SocketConnector.field_b.nextForward(true));
                 continue;
               }
               break;

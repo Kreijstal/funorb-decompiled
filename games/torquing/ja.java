@@ -10,7 +10,7 @@ final class ja extends DualLinkNode implements ec {
 
     final void b() {
         if (!this.isSecondaryLinked((byte) 73)) {
-          field_t.a((byte) 54, (IntrusiveNode) (this));
+          field_t.addFirst((byte) 54, (IntrusiveNode) (this));
         }
     }
 
@@ -32,7 +32,7 @@ final class ja extends DualLinkNode implements ec {
         if (var5 != null) {
           var7 = param0.a(param1) ? 64 : 128;
           var8 = var7 * var7;
-          var11 = var7 == 64 ? (ja) (field_t.a((byte) -119)) : (ja) (field_u.a((byte) 122));
+          var11 = var7 == 64 ? (ja) (field_t.removeLast((byte) -119)) : (ja) (field_u.removeLast((byte) 122));
           var4 = var11;
           if (var11 == null) {
             var4 = new ja(var6, new int[var8]);
@@ -53,7 +53,7 @@ final class ja extends DualLinkNode implements ec {
         long var8 = 0L;
         int var10 = 0;
         int var2 = be.field_a[param1];
-        ja var3 = (ja) (field_t.a((byte) -114));
+        ja var3 = (ja) (field_t.removeLast((byte) -114));
         if (var3 == null) {
           var3 = new ja(var2, new int[4096]);
         } else {
@@ -130,9 +130,9 @@ final class ja extends DualLinkNode implements ec {
         var4 = stackIn_5_0;
         var5 = var4 * var4;
         if (var4 != 64) {
-          stackIn_8_0 = field_u.a((byte) -98);
+          stackIn_8_0 = field_u.removeLast((byte) -98);
         } else {
-          stackIn_8_0 = field_t.a((byte) -123);
+          stackIn_8_0 = field_t.removeLast((byte) -123);
         }
         var6 = (ja) (stackIn_8_0);
         if (var6 != null) {

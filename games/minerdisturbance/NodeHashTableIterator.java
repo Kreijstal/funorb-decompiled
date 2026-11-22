@@ -49,20 +49,20 @@ final class NodeHashTableIterator implements Iterator {
           sa.field_s = sa.field_s - 1;
           if (sa.field_s == 0) {
             sa.field_s = 200;
-            var1 = (sa) (hj.field_b.b(114));
+            var1 = (sa) (hj.field_b.beginForward(114));
             while (var1 != null) {
               if (!var1.field_p.isLinked(121)) {
                 var1.unlink(param0 + 6163);
               }
-              var1 = (sa) (hj.field_b.b((byte) 56));
+              var1 = (sa) (hj.field_b.nextForward((byte) 56));
             }
             if (null != GameAppletShell.field_c) {
-              var1Lifetime1 = (sa) (GameAppletShell.field_c.b(114));
+              var1Lifetime1 = (sa) (GameAppletShell.field_c.beginForward(114));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_p.isLinked(122)) {
                   var1Lifetime1.unlink(34);
                 }
-                var1Lifetime1 = (sa) (GameAppletShell.field_c.b((byte) 56));
+                var1Lifetime1 = (sa) (GameAppletShell.field_c.nextForward((byte) 56));
               }
             }
           }

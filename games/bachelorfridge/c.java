@@ -18,7 +18,7 @@ final class c extends gca {
         if (param0 == 99) {
           var5 = var3 * ft.a(var2, (byte) -128) >> 16;
           var6 = new cia(var4, 0, var5, 0, 0, 0, 128, -2);
-          this.field_l.a(var6, true);
+          this.field_l.addLast(var6, true);
           return;
         }
     }
@@ -55,17 +55,17 @@ final class c extends gca {
         if (param2 != -34) {
           this.field_j = -1.2825418710708618f;
         } else {
-          var4_ref = (cia) (this.field_l.b((byte) 90));
+          var4_ref = (cia) (this.field_l.beginForward((byte) 90));
           while (var4_ref != null) {
             SoftwareRasterizer.fillCircleAlpha((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
-            var4_ref = (cia) (this.field_l.c(0));
+            var4_ref = (cia) (this.field_l.nextForward(0));
           }
           return;
         }
-        var4_refLifetime1 = (cia) (this.field_l.b((byte) 90));
+        var4_refLifetime1 = (cia) (this.field_l.beginForward((byte) 90));
         while (var4_refLifetime1 != null) {
           SoftwareRasterizer.fillCircleAlpha((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
-          var4_refLifetime1 = (cia) (this.field_l.c(0));
+          var4_refLifetime1 = (cia) (this.field_l.nextForward(0));
         }
     }
 
@@ -116,18 +116,18 @@ final class c extends gca {
         if (param1) {
           this.field_j = this.field_j + 0.019999980926513672f;
         }
-        var3 = (cia) (this.field_l.b((byte) 90));
+        var3 = (cia) (this.field_l.beginForward((byte) 90));
         while (var3 != null) {
           stackIn_9_0 = var3;
           stackIn_10_1 = !(param0);
           ((cia) (Object) stackIn_9_0).b(stackIn_10_1);
-          var3 = (cia) (this.field_l.c(0));
+          var3 = (cia) (this.field_l.nextForward(0));
         }
         var4 = this.field_j * 3.0f;
         while (BananarangAnimation.field_v.nextFloat() * (var4 + 1.0f) < var4) {
           this.e((byte) 99);
         }
-        stackIn_16_0 = !(this.field_l.e(12917));
+        stackIn_16_0 = !(this.field_l.isEmpty(12917));
         return stackIn_16_0;
     }
 

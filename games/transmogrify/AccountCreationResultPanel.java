@@ -116,20 +116,20 @@ final class AccountCreationResultPanel extends ik implements df {
           }
           if (0 == bd.field_q) {
             bd.field_q = 200;
-            var1 = (od) (lb.field_f.a((byte) -95));
+            var1 = (od) (lb.field_f.beginForward((byte) -95));
             while (var1 != null) {
               if (!var1.field_i.isLinked(8)) {
                 var1.unlink(5);
               }
-              var1 = (od) (lb.field_f.a(true));
+              var1 = (od) (lb.field_f.nextForward(true));
             }
             if (nc.field_q != null) {
-              var1Lifetime1 = (od) (nc.field_q.a((byte) -95));
+              var1Lifetime1 = (od) (nc.field_q.beginForward((byte) -95));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_i.isLinked(8)) {
                   var1Lifetime1.unlink(5);
                 }
-                var1Lifetime1 = (od) (nc.field_q.a(true));
+                var1Lifetime1 = (od) (nc.field_q.nextForward(true));
               }
             }
           }

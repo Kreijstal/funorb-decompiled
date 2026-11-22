@@ -3,15 +3,15 @@
  */
 final class SecondaryNodeDeque {
     static String field_c;
-    private DualLinkNode field_a;
-    private DualLinkNode field_b;
+    private DualLinkNode sentinel;
+    private DualLinkNode iterationCursor;
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addFirst(DualLinkNode param0, byte param1) {
         if (param0.previousSecondaryNode != null) {
           param0.unlinkSecondaryNode(-123);
         }
-        param0.previousSecondaryNode = this.field_a;
-        param0.nextSecondaryNode = this.field_a.nextSecondaryNode;
+        param0.previousSecondaryNode = this.sentinel;
+        param0.nextSecondaryNode = this.sentinel.nextSecondaryNode;
         param0.previousSecondaryNode.nextSecondaryNode = param0;
         if (param1 <= 122) {
           return;
@@ -23,12 +23,12 @@ final class SecondaryNodeDeque {
         }
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         if (param0 != -18520) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_a.nextSecondaryNode;
-        if (var2 != this.field_a) {
+        DualLinkNode var2 = this.sentinel.nextSecondaryNode;
+        if (var2 != this.sentinel) {
           var2.unlinkSecondaryNode(-121);
           return var2;
         }
@@ -124,27 +124,27 @@ final class SecondaryNodeDeque {
         }
     }
 
-    final int c(int param0) {
+    final int countWithOffset(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
-        DualLinkNode var3 = this.field_a.nextSecondaryNode;
-        while (var3 != this.field_a) {
+        DualLinkNode var3 = this.sentinel.nextSecondaryNode;
+        while (var3 != this.sentinel) {
           var3 = var3.nextSecondaryNode;
           var2++;
         }
         return var2;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         try {
           if (param1.previousSecondaryNode != null) {
             param1.unlinkSecondaryNode(-124);
           }
-          param1.previousSecondaryNode = this.field_a.previousSecondaryNode;
-          param1.nextSecondaryNode = this.field_a;
+          param1.previousSecondaryNode = this.sentinel.previousSecondaryNode;
+          param1.nextSecondaryNode = this.sentinel;
           param1.previousSecondaryNode.nextSecondaryNode = param1;
           if (param0 != 2) {
-            this.a(-73);
+            this.removeLast(-73);
           }
           param1.nextSecondaryNode.previousSecondaryNode = param1;
         } catch (RuntimeException runtimeException) {
@@ -152,13 +152,13 @@ final class SecondaryNodeDeque {
         }
     }
 
-    final DualLinkNode e(int param0) {
-        DualLinkNode var2 = this.field_b;
-        if (var2 == this.field_a) {
-          this.field_b = null;
+    final DualLinkNode nextForward(int param0) {
+        DualLinkNode var2 = this.iterationCursor;
+        if (var2 == this.sentinel) {
+          this.iterationCursor = null;
           return null;
         }
-        this.field_b = var2.nextSecondaryNode;
+        this.iterationCursor = var2.nextSecondaryNode;
         if (param0 == 31542) {
           return var2;
         }
@@ -170,18 +170,18 @@ final class SecondaryNodeDeque {
         field_c = null;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeLast(int param0) {
         if (param0 != 3) {
-          this.field_b = (DualLinkNode) null;
-          DualLinkNode var2 = this.field_a.previousSecondaryNode;
-          if (var2 != this.field_a) {
+          this.iterationCursor = (DualLinkNode) null;
+          DualLinkNode var2 = this.sentinel.previousSecondaryNode;
+          if (var2 != this.sentinel) {
             var2.unlinkSecondaryNode(-114);
             return var2;
           }
           return null;
         }
-        DualLinkNode var2Lifetime1 = this.field_a.previousSecondaryNode;
-        if (var2Lifetime1 != this.field_a) {
+        DualLinkNode var2Lifetime1 = this.sentinel.previousSecondaryNode;
+        if (var2Lifetime1 != this.sentinel) {
           var2Lifetime1.unlinkSecondaryNode(-114);
           return var2Lifetime1;
         }
@@ -189,23 +189,23 @@ final class SecondaryNodeDeque {
     }
 
     public SecondaryNodeDeque() {
-        this.field_a = new DualLinkNode();
-        this.field_a.previousSecondaryNode = this.field_a;
-        this.field_a.nextSecondaryNode = this.field_a;
+        this.sentinel = new DualLinkNode();
+        this.sentinel.previousSecondaryNode = this.sentinel;
+        this.sentinel.nextSecondaryNode = this.sentinel;
     }
 
-    final DualLinkNode b(byte param0) {
-        DualLinkNode var2 = this.field_a.nextSecondaryNode;
-        if (this.field_a == var2) {
-          this.field_b = null;
+    final DualLinkNode beginForward(byte param0) {
+        DualLinkNode var2 = this.sentinel.nextSecondaryNode;
+        if (this.sentinel == var2) {
+          this.iterationCursor = null;
           return null;
         }
         if (param0 >= 13) {
-          this.field_b = var2.nextSecondaryNode;
+          this.iterationCursor = var2.nextSecondaryNode;
           return var2;
         }
-        this.field_a = (DualLinkNode) null;
-        this.field_b = var2.nextSecondaryNode;
+        this.sentinel = (DualLinkNode) null;
+        this.iterationCursor = var2.nextSecondaryNode;
         return var2;
     }
 

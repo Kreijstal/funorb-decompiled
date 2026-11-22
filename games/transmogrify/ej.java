@@ -24,7 +24,7 @@ final class ej extends PcmStream {
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           this.field_m.b(param0, param1, param2);
-          var6 = (kc) (this.field_q.a((byte) -95));
+          var6 = (kc) (this.field_q.beginForward((byte) -95));
           while (null != var6) {
             if (var7 != 0) {
               return;
@@ -49,7 +49,7 @@ final class ej extends PcmStream {
                 var6.field_r = var6.field_r - var5;
               }
             }
-            var6 = (kc) (this.field_q.a(true));
+            var6 = (kc) (this.field_q.nextForward(true));
             continue;
           }
           return;
@@ -136,7 +136,7 @@ final class ej extends PcmStream {
         RuntimeException var1_ref = null;
         try {
           do {
-            var1 = (kc) (this.field_q.a(true));
+            var1 = (kc) (this.field_q.nextForward(true));
             if (var1 == null) {
               stackIn_4_0 = null;
               return (PcmStream) (stackIn_4_0);
@@ -344,7 +344,7 @@ final class ej extends PcmStream {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           this.field_m.d(param0);
-          var3 = (kc) (this.field_q.a((byte) -95));
+          var3 = (kc) (this.field_q.beginForward((byte) -95));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -368,7 +368,7 @@ final class ej extends PcmStream {
                 var3.field_r = var3.field_r - var2_int;
               }
             }
-            var3 = (kc) (this.field_q.a(true));
+            var3 = (kc) (this.field_q.nextForward(true));
             continue;
           }
           return;
@@ -624,7 +624,7 @@ final class ej extends PcmStream {
         PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (kc) (this.field_q.a((byte) -95));
+          var1 = (kc) (this.field_q.beginForward((byte) -95));
           if (var1 == null) {
             stackIn_2_0 = null;
             return (PcmStream) (stackIn_2_0);

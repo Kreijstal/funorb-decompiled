@@ -114,11 +114,11 @@ class UiPanel extends fh {
         int var9Lifetime1;
         if (!param3) {
           var9 = 0;
-          var10_ref_cr = (UiPanel) (this.field_M.a((byte) 100));
+          var10_ref_cr = (UiPanel) (this.field_M.beginBackward((byte) 100));
           while (var10_ref_cr != null) {
             var10_ref_cr.field_L = -var10_ref_cr.field_N + var9;
             var9 = var9 + (param2 + var10_ref_cr.field_kb + var10_ref_cr.field_db);
-            var10_ref_cr = (UiPanel) (this.field_M.b(126));
+            var10_ref_cr = (UiPanel) (this.field_M.nextBackward(126));
           }
           var8 = var9 - param2;
         }
@@ -456,10 +456,10 @@ class UiPanel extends fh {
           }
         }
         if (null != this.field_M) {
-          var24_ref = (UiPanel) (this.field_M.a((byte) 100));
+          var24_ref = (UiPanel) (this.field_M.beginBackward((byte) 100));
           while (var24_ref != null) {
             var24_ref.a(param0, this.field_Fb, param2, var20 + this.field_C, var19 + this.field_ob, param5, -102, param7, this.field_nb, this.field_db, param10);
-            var24_ref = (UiPanel) (this.field_M.b(83));
+            var24_ref = (UiPanel) (this.field_M.nextBackward(83));
           }
         }
         bi.g(var12, var13, var14, var15);
@@ -545,13 +545,13 @@ class UiPanel extends fh {
           }
         }
         if (this.field_M != null) {
-          var4 = (UiPanel) (this.field_M.a((byte) 100));
+          var4 = (UiPanel) (this.field_M.beginBackward((byte) 100));
           while (var4 != null) {
             var5 = var4.field_Fb + var4.field_wb;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (UiPanel) (this.field_M.b(param0 + 120));
+            var4 = (UiPanel) (this.field_M.nextBackward(param0 + 120));
           }
         }
         return var3;
@@ -707,10 +707,10 @@ class UiPanel extends fh {
         stackIn_40_1 = (this.field_G) && (q.field_v == this.field_xb) && (param4);
         this.field_pb = stackIn_40_1;
         if (this.field_M != null) {
-          var13 = (UiPanel) (this.field_M.c((byte) -12));
+          var13 = (UiPanel) (this.field_M.beginForward((byte) -12));
           while (var13 != null) {
             var13.a(1074455266, this.field_C, this.field_ob, this.field_db, param4, this.field_Fb);
-            var13 = (UiPanel) (this.field_M.b(false));
+            var13 = (UiPanel) (this.field_M.nextForward(false));
           }
         }
         if (var12 != 0) {
@@ -747,11 +747,11 @@ class UiPanel extends fh {
         UiPanel var4 = null;
         int var3 = Vertigo2.field_L ? 1 : 0;
         if (null != this.field_M) {
-          var4 = (UiPanel) (this.field_M.c((byte) -99));
+          var4 = (UiPanel) (this.field_M.beginForward((byte) -99));
           while (var4 != null) {
             var4.field_ib = true;
             var4.i(-2147483648);
-            var4 = (UiPanel) (this.field_M.b(false));
+            var4 = (UiPanel) (this.field_M.nextForward(false));
           }
         }
         if (param0 != -2147483648) {

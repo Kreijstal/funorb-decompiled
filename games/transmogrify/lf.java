@@ -29,7 +29,7 @@ final class lf {
           this.a((byte) -116, param3);
           this.field_a = this.field_a - param1;
           while (this.field_a < 0) {
-            var6 = (dl) (this.field_f.a(false));
+            var6 = (dl) (this.field_f.removeFirst(false));
             this.a(0, var6);
           }
           var6_ref = new hc(param0, param1);
@@ -37,7 +37,7 @@ final class lf {
             this.field_a = 94;
           }
           this.field_b.put(var6_ref, (byte) 63, param3);
-          this.field_f.a(false, var6_ref);
+          this.field_f.addLast(false, var6_ref);
           ((dl) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "lf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -124,12 +124,12 @@ final class lf {
           if (var11.d(8)) {
             var6 = new hc(var12, var11.field_o);
             this.field_b.put(var6, (byte) 93, var11.key);
-            this.field_f.a(false, var6);
+            this.field_f.addLast(false, var6);
             ((dl) ((Object) var6)).field_j = 0L;
             var11.unlink(param0 - 17694);
             var11.unlinkSecondary((byte) -69);
           } else {
-            this.field_f.a(false, var11);
+            this.field_f.addLast(false, var11);
             var11.field_j = 0L;
           }
           return var12;
@@ -150,12 +150,12 @@ final class lf {
         if (var9.d(8)) {
           var6Lifetime1 = new hc(var10, var9.field_o);
           this.field_b.put(var6Lifetime1, (byte) 93, var9.key);
-          this.field_f.a(false, var6Lifetime1);
+          this.field_f.addLast(false, var6Lifetime1);
           ((dl) ((Object) var6Lifetime1)).field_j = 0L;
           var9.unlink(param0 - 17694);
           var9.unlinkSecondary((byte) -69);
         } else {
-          this.field_f.a(false, var9);
+          this.field_f.addLast(false, var9);
           var9.field_j = 0L;
         }
         return var10;

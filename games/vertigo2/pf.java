@@ -84,7 +84,7 @@ final class pf {
             IterableNodeHashTable.field_a.field_S = Vertigo2.a(new String[]{ClientException.field_d}, pq.field_a, 0);
             h.field_D.field_Lb.field_Lb.field_S = null;
             var6 = null;
-            var7 = (tp) (var4.a((byte) 100));
+            var7 = (tp) (var4.beginBackward((byte) 100));
             while (var7 != null) {
               var8 = 0;
               stackOut_11_0 = var7;
@@ -190,7 +190,7 @@ final class pf {
               } else {
                 ko.field_S = var7.field_Ib;
               }
-              var7 = (tp) (var4.b(122));
+              var7 = (tp) (var4.nextBackward(122));
             }
             if (decompiledFrameCompleted0) {
               if (h.field_D.field_Hb.field_tb != 0) {

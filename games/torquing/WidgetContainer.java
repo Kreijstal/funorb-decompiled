@@ -132,7 +132,7 @@ class WidgetContainer extends UiWidget implements cj {
 
     final void a(UiWidget param0, int param1) {
         try {
-          this.children.a((byte) 54, param0);
+          this.children.addFirst((byte) 54, param0);
           if (param1 != -6938) {
             this.a(69, (byte) -75, 83, -7);
           }
@@ -247,7 +247,7 @@ class WidgetContainer extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var7 = Torquing.field_u;
         try {
-          if (this.children.e(-93)) {
+          if (this.children.isEmpty(-93)) {
             return false;
           }
           var8 = new re(this.children);
@@ -319,7 +319,7 @@ class WidgetContainer extends UiWidget implements cj {
         RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
         try {
-          if (this.children.e(-102)) {
+          if (this.children.isEmpty(-102)) {
             return false;
           }
           var9 = new re(this.children);

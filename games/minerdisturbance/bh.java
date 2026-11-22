@@ -180,7 +180,7 @@ final class bh extends wf implements sh {
 
     final static void a(uj param0, byte param1) {
         int var4 = 0;
-        int var2_int = ii.field_b.c((byte) 66);
+        int var2_int = ii.field_b.size((byte) 66);
         int var3 = var2_int / 12;
         if (param1 != -115) {
           PacketBuffer var5 = (PacketBuffer) null;
@@ -191,7 +191,7 @@ final class bh extends wf implements sh {
         }
         try {
           var4 = var2_int + (1 - var3 * 12);
-          ii.field_b.a((byte) -105, new tc(param0, var3, var4));
+          ii.field_b.addLast((byte) -105, new tc(param0, var3, var4));
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "bh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

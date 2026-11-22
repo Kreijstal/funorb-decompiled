@@ -360,10 +360,10 @@ class d extends UiWidget {
           var6Lifetime1.field_Mb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
           var6Lifetime1.unlink(2);
-          var7 = (tp) (tm.field_a.a((byte) 100));
+          var7 = (tp) (tm.field_a.beginBackward((byte) 100));
           while (var7 != null) {
             if (md.a(1308, var7, var6Lifetime1)) {
-              var7 = (tp) (tm.field_a.b(50));
+              var7 = (tp) (tm.field_a.nextBackward(50));
               if (var9 == 0) {
                 continue;
               }

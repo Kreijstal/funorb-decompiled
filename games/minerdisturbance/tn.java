@@ -104,7 +104,7 @@ class tn extends hc {
         if (param1 != -2) {
           tn.a(53, 94);
         }
-        var4 = (lb) (this.field_I.b(82));
+        var4 = (lb) (this.field_I.beginForward(82));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -116,7 +116,7 @@ class tn extends hc {
             }
             var5 = var5.field_v;
           }
-          var4 = (lb) (this.field_I.b((byte) 56));
+          var4 = (lb) (this.field_I.nextForward((byte) 56));
         }
         return null;
     }
@@ -238,7 +238,7 @@ class tn extends hc {
               ((lb) (var10)).field_v = var15;
             }
             var10 = var15;
-            this.field_I.a((byte) 51, var15);
+            this.field_I.addLast((byte) 51, var15);
           }
         }
     }

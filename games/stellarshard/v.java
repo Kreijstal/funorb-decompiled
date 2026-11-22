@@ -199,7 +199,7 @@ final class v implements Runnable {
           var2 = var10.readUnsignedByte(4);
           var3 = var10.readUnsignedByte(4);
           if (var2 == 0) {
-            var4 = (af) (pf.field_b.b(-79));
+            var4 = (af) (pf.field_b.beginForward(-79));
             if (var4 == null) {
               IntrusiveDeque.c(-2290);
               return;
@@ -219,11 +219,11 @@ final class v implements Runnable {
           } else {
             if (var2 == 1) {
               var4_int = var10.readSignedSmart(-64);
-              var5_ref_fk = (fk) (ib.field_c.b(-93));
+              var5_ref_fk = (fk) (ib.field_c.beginForward(-93));
               while (var5_ref_fk != null) {
                 if (var3 != var5_ref_fk.field_l ||
                   var5_ref_fk.field_p != var4_int) {
-                  var5_ref_fk = (fk) (ib.field_c.b((byte) 72));
+                  var5_ref_fk = (fk) (ib.field_c.nextForward((byte) 72));
                   continue;
                 }
                 break;

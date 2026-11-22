@@ -76,7 +76,7 @@ final class dd extends WidgetContainer implements WidgetActionListener {
         UiWidget var7 = null;
         var6 = BachelorFridge.field_y;
         try {
-          this.children.d(67);
+          this.children.clear(67);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

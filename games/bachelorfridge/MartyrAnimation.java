@@ -32,7 +32,7 @@ final class MartyrAnimation extends EventAnimation {
         if (var2.isDown(-99)) {
           return;
         }
-        var3 = (DamageEffect) (this.field_w.effects.b((byte) 90));
+        var3 = (DamageEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(-48, this.field_w.moveId);
         if (param0 <= 60) {
           return;
@@ -42,7 +42,7 @@ final class MartyrAnimation extends EventAnimation {
           var6 = var3.target.a(-27449, this.screen);
           var6.b(-1, 7);
           var6.a(24831, 41, kna.field_g[31]);
-          var3 = (DamageEffect) (this.field_w.effects.c(0));
+          var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
         }
     }
 

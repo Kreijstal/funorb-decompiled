@@ -26,7 +26,7 @@ final class CranberrySpecial extends SpecialOrder {
               var6 = (gs) null;
               CranberrySpecial.a((byte) -120, (gs) null);
             }
-            var5.effects.a(new DamageEffect(new CreatureRef(var4), false, 1, 0, 39), true);
+            var5.effects.addLast(new DamageEffect(new CreatureRef(var4), false, 1, 0, 39), true);
             stackIn_8_0 = var5;
             return (CreatureEvent) ((Object) stackIn_8_0);
           }

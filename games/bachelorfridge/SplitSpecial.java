@@ -87,7 +87,7 @@ final class SplitSpecial extends SpecialOrder {
             FullscreenFocusCanvas.field_d.field_Z = lga.a(true, new String[]{sja.field_gb}, qg.field_c);
             rba.field_a.field_xb.field_wb.field_Z = null;
             var6 = null;
-            var7 = (nea) (var4.b((byte) 90));
+            var7 = (nea) (var4.beginForward((byte) 90));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var7))) {
               var8 = 0;
@@ -193,7 +193,7 @@ final class SplitSpecial extends SpecialOrder {
                   }
                   var5 = var7;
                 }
-                var7 = (nea) (var4.c(0));
+                var7 = (nea) (var4.nextForward(0));
                 continue;
               }
               break;

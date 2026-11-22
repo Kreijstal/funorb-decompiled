@@ -244,18 +244,18 @@ abstract class vk {
         RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
-          var4 = (nf) (wb.field_f.b(-77));
+          var4 = (nf) (wb.field_f.beginForward(-77));
           while (var4 != null) {
             ea.a(param1, var4, (byte) 80);
-            var4 = (nf) (wb.field_f.b((byte) 120));
+            var4 = (nf) (wb.field_f.nextForward((byte) 120));
           }
           if (param0 >= -104) {
             vk.a((byte) -101, false);
           }
-          var5 = (hk) (id.field_g.b(-91));
+          var5 = (hk) (id.field_g.beginForward(-91));
           while (var5 != null) {
             pd.a(param1, var5, 77);
-            var5 = (hk) (id.field_g.b((byte) -121));
+            var5 = (hk) (id.field_g.nextForward((byte) -121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

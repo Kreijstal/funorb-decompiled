@@ -165,12 +165,12 @@ final class ia extends IntrusiveNode {
           nc.field_t = nc.field_t + jk.field_B;
           vh.field_n = vh.field_n + 1;
           hg.a(95);
-          if (oj.field_u.a((byte) -95) != null) {
+          if (oj.field_u.beginForward((byte) -95) != null) {
             fieldTemp$0 = da.field_C + 1;
             da.field_C = da.field_C + 1;
             if (fieldTemp$0 == 335) {
               da.field_C = 0;
-              oj.field_u.c(-94);
+              oj.field_u.removeFirst(-94);
             }
           }
           if (!mg.field_d) {

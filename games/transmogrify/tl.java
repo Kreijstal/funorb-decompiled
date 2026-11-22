@@ -22,9 +22,9 @@ final class tl {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_e.field_d.previous;
+            var3 = this.field_e.sentinel.previous;
           }
-          if (this.field_e.field_d == var3) {
+          if (this.field_e.sentinel == var3) {
             this.field_b = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -51,8 +51,8 @@ final class tl {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_e.field_d.previous;
-        if (var2 == this.field_e.field_d) {
+        IntrusiveNode var2 = this.field_e.sentinel.previous;
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -107,8 +107,8 @@ final class tl {
     }
 
     final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_e.field_d.next;
-        if (var2 == this.field_e.field_d) {
+        IntrusiveNode var2 = this.field_e.sentinel.next;
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -133,9 +133,9 @@ final class tl {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_e.field_d.next;
+            var3 = this.field_e.sentinel.next;
           }
-          if (var3 == this.field_e.field_d) {
+          if (var3 == this.field_e.sentinel) {
             this.field_b = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -267,7 +267,7 @@ final class tl {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new am(param7, param6, param8, param0, param4, param5, param2);
-          SocketConnector.field_b.a(var9, -104);
+          SocketConnector.field_b.addLast(var9, -104);
           ei.a(true, param3, var9);
           if (param1 <= 31) {
             field_a = true;
@@ -290,7 +290,7 @@ final class tl {
 
     final IntrusiveNode a(int param0) {
         IntrusiveNode var2 = this.field_b;
-        if (this.field_e.field_d == var2) {
+        if (this.field_e.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -306,7 +306,7 @@ final class tl {
           return (IntrusiveNode) null;
         }
         IntrusiveNode var2 = this.field_b;
-        if (var2 == this.field_e.field_d) {
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }

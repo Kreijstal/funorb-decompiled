@@ -19,7 +19,7 @@ final class ji extends da {
         }
         try {
           var3 = (rf) (param0);
-          this.field_I.b(var3, false);
+          this.field_I.addLast(var3, false);
           var3.field_T = true;
           var3.a(34, (lm) (this));
         } catch (RuntimeException runtimeException) {

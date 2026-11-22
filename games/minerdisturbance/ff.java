@@ -172,7 +172,7 @@ final class ff {
             if (!param3) {
               field_f = (Sprite) null;
             }
-            on.field_t.a((byte) 69, var18);
+            on.field_t.addLast((byte) 69, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

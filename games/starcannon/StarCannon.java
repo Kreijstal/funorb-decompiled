@@ -188,7 +188,7 @@ public final class StarCannon extends ag {
                     if (param1 == 7306) {
                         /* Inlined CFG state: 21. */
                         {
-                            var15 = (bf) (kh.field_y.c(-3905));
+                            var15 = (bf) (kh.field_y.beginForward(-3905));
                             statePc = 22;
                             continue scanLoop1;
                         }
@@ -211,7 +211,7 @@ public final class StarCannon extends ag {
                         /* Inlined CFG state: 23. */
                         {
                             var15.a(65535, 320 - fi.field_e.field_f);
-                            var15 = (bf) (kh.field_y.a(-16913));
+                            var15 = (bf) (kh.field_y.nextForward(-16913));
                             statePc = 22;
                             continue scanLoop1;
                         }
@@ -1204,7 +1204,7 @@ public final class StarCannon extends ag {
             var7 != 3) {
             if (4 == var7) {
               nf.field_e = var2 * 25 + 75;
-              kh.field_y.b(122, new bf(var3, -64, var4, 4));
+              kh.field_y.addLast(122, new bf(var3, -64, var4, 4));
             } else {
               if (var7 == 5) {
                 nf.field_e = 0;
@@ -1218,14 +1218,14 @@ public final class StarCannon extends ag {
                   if (var7 == 0) {
                     var5 = var8;
                   }
-                  kh.field_y.b(param0 ^ -138, var8);
+                  kh.field_y.addLast(param0 ^ -138, var8);
                 }
               } else if (9 != var7 &&
                 11 != var7) {
                 if (var7 == 6) {
                   nf.field_e = nf.field_e + 250;
                   var7_ref_bf = new bf(320, -256, var4, 11);
-                  kh.field_y.b(param0 ^ -170, var7_ref_bf);
+                  kh.field_y.addLast(param0 ^ -170, var7_ref_bf);
                   dg.field_l = 0;
                   ua.field_c = 2;
                   mj.a(255, 12, 0, 41, 100);
@@ -1239,7 +1239,7 @@ public final class StarCannon extends ag {
                 if (var7 == 10) {
                   nf.field_e = nf.field_e + 250;
                   var7_ref_bfLifetime1 = new bf(320, -256, var4, 15);
-                  kh.field_y.b(69, var7_ref_bfLifetime1);
+                  kh.field_y.addLast(69, var7_ref_bfLifetime1);
                   dg.field_l = 0;
                   ua.field_c = 6;
                   mj.a(255, 12, 0, 41, 100);
@@ -1257,7 +1257,7 @@ public final class StarCannon extends ag {
                     stackIn_63_0 = var8;
                     stackIn_64_1 = (var7 != 1) && (var7 != 4);
                     stackIn_63_0.field_p = stackIn_64_1;
-                    kh.field_y.b(101, var8);
+                    kh.field_y.addLast(101, var8);
                   }
                   break regionExit1;
                 }
@@ -1267,7 +1267,7 @@ public final class StarCannon extends ag {
                     14 != var7) {
                     if ((var7 == 15)) {
                       var6 = new bf(320, -256, var4, 16);
-                      kh.field_y.b(97, var6);
+                      kh.field_y.addLast(97, var6);
                       tj.field_C = var6.field_k;
                       ua.field_c = 1 + ue.field_c[rj.field_h];
                       dg.field_l = 0;
@@ -1281,7 +1281,7 @@ public final class StarCannon extends ag {
                     }
                   } else {
                     nf.field_e = 175;
-                    kh.field_y.b(82, new bf(var3, -64, var4, 4));
+                    kh.field_y.addLast(82, new bf(var3, -64, var4, 4));
                   }
                   break regionExit1;
                 }
@@ -1296,7 +1296,7 @@ public final class StarCannon extends ag {
                   if (var7 == 0) {
                     var5 = var8;
                   }
-                  kh.field_y.b(param0 ^ -145, var8);
+                  kh.field_y.addLast(param0 ^ -145, var8);
                 }
               } else {
                 nf.field_e = 0;
@@ -1305,7 +1305,7 @@ public final class StarCannon extends ag {
                   stackIn_53_0 = var8;
                   stackIn_54_1 = (1 != var7) && (var7 != 4);
                   stackIn_53_0.field_p = stackIn_54_1;
-                  kh.field_y.b(123, var8);
+                  kh.field_y.addLast(123, var8);
                 }
                 break regionExit1;
               }
@@ -1313,7 +1313,7 @@ public final class StarCannon extends ag {
             break regionExit1;
           }
           nf.field_e = var2 * 25 + 75;
-          kh.field_y.b(122, new bf(var3, -64, var4, 4));
+          kh.field_y.addLast(122, new bf(var3, -64, var4, 4));
         }
         if (param0 != -256) {
           field_y = (int[]) null;
@@ -1392,7 +1392,7 @@ public final class StarCannon extends ag {
                       var9 = new bf(var3, -var8_int * 64 - 64, sh.b(param0 + 76, 128) - 64, 5);
                       var9.field_h = (bf) (var7_ref);
                       var9.field_p = true;
-                      kh.field_y.b(125, var9);
+                      kh.field_y.addLast(125, var9);
                       var7_ref = var9;
                       var8_int++;
                     }
@@ -1401,7 +1401,7 @@ public final class StarCannon extends ag {
                     if (var7 == 7) {
                       nf.field_e = 0;
                       for (var7 = 0; var7 < 5; var7++) {
-                        kh.field_y.b(126, new bf(var3, -64 + 64 * -var7, var4, 1));
+                        kh.field_y.addLast(126, new bf(var3, -64 + 64 * -var7, var4, 1));
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -1412,7 +1412,7 @@ public final class StarCannon extends ag {
                           var7 != 14) {
                           if ((var7 == 15)) {
                             var6 = new bf(320, -256, var4, 11);
-                            kh.field_y.b(101, var6);
+                            kh.field_y.addLast(101, var6);
                             tj.field_C = var6.field_k;
                             ua.field_c = 1 + ue.field_c[rj.field_h];
                             AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -1426,7 +1426,7 @@ public final class StarCannon extends ag {
                           }
                         } else {
                           nf.field_e = 175;
-                          kh.field_y.b(77, new bf(var3, -64, var4, 4));
+                          kh.field_y.addLast(77, new bf(var3, -64, var4, 4));
                         }
                         decompiledFrameRemainder0 = false;
                       }
@@ -1451,7 +1451,7 @@ public final class StarCannon extends ag {
                           if (var7 == 0) {
                             var5 = var8;
                           }
-                          kh.field_y.b(param0 + 69, var8);
+                          kh.field_y.addLast(param0 + 69, var8);
                           var7++;
                         }
                       }
@@ -1463,7 +1463,7 @@ public final class StarCannon extends ag {
                   (decompiledFrameCompleted0)) {
                   nf.field_e = 0;
                   for (var7 = 0; var7 < 5; var7++) {
-                    kh.field_y.b(param0 ^ 74, new bf(var3, -var7 * 64 - 64, var3, 1));
+                    kh.field_y.addLast(param0 ^ 74, new bf(var3, -var7 * 64 - 64, var3, 1));
                   }
                 }
               } else {
@@ -1471,7 +1471,7 @@ public final class StarCannon extends ag {
                 for (var7 = -8; var7 < 8; var7++) {
                   var8Lifetime2 = new bf(var7 * 24 + 320, -Math.abs(-64 + var7 * 64), 320 + var7 * 24, 1);
                   var8Lifetime2.field_p = true;
-                  kh.field_y.b(107, var8Lifetime2);
+                  kh.field_y.addLast(107, var8Lifetime2);
                 }
               }
               if ((decompiledFrameRemainder0) &&
@@ -1498,7 +1498,7 @@ public final class StarCannon extends ag {
                 var9Lifetime1 = new bf(var3, -var8_intLifetime1 * 64 - 64, var4, 2);
                 var9Lifetime1.field_h = (bf) (var7_refLifetime1);
                 var9Lifetime1.field_p = true;
-                kh.field_y.b(param0 ^ 102, var9Lifetime1);
+                kh.field_y.addLast(param0 ^ 102, var9Lifetime1);
                 if (var8_intLifetime1 == 0) {
                   var7_refLifetime1 = var9Lifetime1;
                 }
@@ -1516,7 +1516,7 @@ public final class StarCannon extends ag {
           for (var7Lifetime1 = 0; var7Lifetime1 < 5; var7Lifetime1++) {
             var8Lifetime1 = new bf(var3, -64 + 64 * -var7Lifetime1, var4, 1);
             var8Lifetime1.field_p = true;
-            kh.field_y.b(65, var8Lifetime1);
+            kh.field_y.addLast(65, var8Lifetime1);
           }
         }
 
@@ -1618,7 +1618,7 @@ public final class StarCannon extends ag {
         }
         if (!MouseInput.a(34)) {
           while (true) {
-            var5_ref = (hb) (SecondaryNodeDeque.field_e.a((byte) 39));
+            var5_ref = (hb) (SecondaryNodeDeque.field_e.removeFirst((byte) 39));
             if (var5_ref == null) {
               break;
             }
@@ -1978,7 +1978,7 @@ public final class StarCannon extends ag {
         fi.field_e = new bf(256, 256, 256, 0);
         fi.field_e.field_r = 256;
         fi.field_e.field_k = 0;
-        kh.field_y.a(-71, fi.field_e);
+        kh.field_y.addFirst(-71, fi.field_e);
         u.field_b = 0;
         ed.field_n = 0;
         AccountServiceResult.field_h = 0;
@@ -2143,14 +2143,14 @@ public final class StarCannon extends ag {
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 4000; var2_intLifetime1++) {
               FullscreenFocusCanvas.field_c[var2_intLifetime1] = null;
             }
-            var2_ref = (bf) (kh.field_y.c(-3905));
+            var2_ref = (bf) (kh.field_y.beginForward(-3905));
             while (var2_ref != null) {
               stackIn_106_0 = fi.field_e;
               stackIn_106_1 = var2_ref;
               if (stackIn_106_0 != stackIn_106_1) {
                 var2_ref.unlink(4);
               }
-              var2_ref = (bf) (kh.field_y.a(-16913));
+              var2_ref = (bf) (kh.field_y.nextForward(-16913));
             }
           }
         } else {
@@ -2180,7 +2180,7 @@ public final class StarCannon extends ag {
                 }
               }
             }
-            var2_ref = (bf) (kh.field_y.c(-3905));
+            var2_ref = (bf) (kh.field_y.beginForward(-3905));
             while (var2_ref != null) {
               stackIn_106_0 = fi.field_e;
               stackIn_106_1 = var2_ref;
@@ -2210,7 +2210,7 @@ public final class StarCannon extends ag {
                   }
                 }
               }
-              var2_ref = (bf) (kh.field_y.a(-16913));
+              var2_ref = (bf) (kh.field_y.nextForward(-16913));
             }
           } else {
             if (ha.field_d > 0) {
@@ -2308,7 +2308,7 @@ public final class StarCannon extends ag {
             if (ua.field_c == 9) {
               var3_ref_bf = new bf(fi.field_e.field_f, -32, fi.field_e.field_f, 10);
               var3_ref_bf.field_l = 5;
-              kh.field_y.b(97, var3_ref_bf);
+              kh.field_y.addLast(97, var3_ref_bf);
             }
             if (rj.field_h == 0) {
               nf.field_e = -50;
@@ -2319,7 +2319,7 @@ public final class StarCannon extends ag {
                 for (var5_intLifetime1 = 0; var5_intLifetime1 < 5; var5_intLifetime1++) {
                   var6 = new bf(var3Lifetime1, -var5_intLifetime1 * 64 - 64, var4Lifetime1, 17);
                   var6.field_o = sh.b(-127, 32);
-                  kh.field_y.b(114, var6);
+                  kh.field_y.addLast(114, var6);
                 }
               }
             }
@@ -2345,7 +2345,7 @@ public final class StarCannon extends ag {
                 ua.field_c == 15) {
                 nf.field_e = -250;
                 for (var3Lifetime1Lifetime1Lifetime1 = 0; 25 > var3Lifetime1Lifetime1Lifetime1; var3Lifetime1Lifetime1Lifetime1++) {
-                  kh.field_y.b(99, new bf(sh.b(-128, 640), -var3Lifetime1Lifetime1Lifetime1 * 25 - 128, sh.b(60, 128) + fi.field_e.field_f - 64, 18));
+                  kh.field_y.addLast(99, new bf(sh.b(-128, 640), -var3Lifetime1Lifetime1Lifetime1 * 25 - 128, sh.b(60, 128) + fi.field_e.field_f - 64, 18));
                 }
               }
               if (4 == ua.field_c ||
@@ -2358,7 +2358,7 @@ public final class StarCannon extends ag {
                 for (var4Lifetime1Lifetime1Lifetime1 = 0; var4Lifetime1Lifetime1Lifetime1 < 5; var4Lifetime1Lifetime1Lifetime1++) {
                   var5 = new bf(var3Lifetime1Lifetime1Lifetime2, 64 * -var4Lifetime1Lifetime1Lifetime1 - 64, var3Lifetime1Lifetime1Lifetime2, 17);
                   var5.field_o = sh.b(-127, 32);
-                  kh.field_y.b(121, var5);
+                  kh.field_y.addLast(121, var5);
                 }
               }
             }
@@ -2368,14 +2368,14 @@ public final class StarCannon extends ag {
                 ua.field_c == 15) {
                 nf.field_e = -150;
                 for (var3Lifetime1Lifetime2 = 0; 25 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
-                  kh.field_y.b(119, new bf(sh.b(76, 640), -128 + -var3Lifetime1Lifetime2 * 25, -64 + sh.b(-30, 128) + fi.field_e.field_f, 18));
+                  kh.field_y.addLast(119, new bf(sh.b(76, 640), -128 + -var3Lifetime1Lifetime2 * 25, -64 + sh.b(-30, 128) + fi.field_e.field_f, 18));
                 }
               }
               if (ua.field_c == 16) {
                 for (var3Lifetime1Lifetime2Lifetime1 = 48; var3Lifetime1Lifetime2Lifetime1 < 640; var3Lifetime1Lifetime2Lifetime1 += 96) {
                   var4_ref_bf = new bf(var3Lifetime1Lifetime2Lifetime1, -64 - Math.abs(-320 + var3Lifetime1Lifetime2Lifetime1), var3Lifetime1Lifetime2Lifetime1, 21);
                   var4_ref_bf.field_o = sh.b(-127, 32);
-                  kh.field_y.b(57, var4_ref_bf);
+                  kh.field_y.addLast(57, var4_ref_bf);
                 }
               }
               if (ua.field_c >= 4 &&
@@ -2385,14 +2385,14 @@ public final class StarCannon extends ag {
                 for (var4Lifetime1Lifetime2 = 0; var4Lifetime1Lifetime2 < 5; var4Lifetime1Lifetime2++) {
                   var5Lifetime1 = new bf(var3Lifetime1Lifetime2Lifetime2, -var4Lifetime1Lifetime2 * 64 - 64, var3Lifetime1Lifetime2Lifetime2, 17);
                   var5Lifetime1.field_o = sh.b(-126, 32);
-                  kh.field_y.b(89, var5Lifetime1);
+                  kh.field_y.addLast(89, var5Lifetime1);
                 }
               }
             }
             if (3 == rj.field_h && (ua.field_c == 5 ||
               ua.field_c == 10)) {
               for (var3Lifetime1Lifetime3 = 0; var3Lifetime1Lifetime3 < 25; var3Lifetime1Lifetime3++) {
-                kh.field_y.b(115, new bf(sh.b(-126, 640), -128 + 25 * -var3Lifetime1Lifetime3, sh.b(8, 128) - (-fi.field_e.field_f + 64), 18));
+                kh.field_y.addLast(115, new bf(sh.b(-126, 640), -128 + 25 * -var3Lifetime1Lifetime3, sh.b(8, 128) - (-fi.field_e.field_f + 64), 18));
               }
             }
             if (ua.field_c == -2 &&
@@ -2568,7 +2568,7 @@ public final class StarCannon extends ag {
             if (gf.field_b == 1) {
               var3_ref_bfLifetime1.field_l = 0;
             }
-            kh.field_y.b(69, var3_ref_bfLifetime1);
+            kh.field_y.addLast(69, var3_ref_bfLifetime1);
           }
         }
         if (ia.field_k >= tg.field_y) {
@@ -2583,7 +2583,7 @@ public final class StarCannon extends ag {
           }
           var4Lifetime2 = sh.b(-128, 640);
           tg.field_y = var3Lifetime2;
-          kh.field_y.b(60, new bf(var4Lifetime2, -32, var4Lifetime2, 10));
+          kh.field_y.addLast(60, new bf(var4Lifetime2, -32, var4Lifetime2, 10));
         }
         if ((rj.field_h == 2 ||
           rj.field_h == 3) &&
@@ -2619,7 +2619,7 @@ public final class StarCannon extends ag {
         }
         dl.field_a = 0;
         var3Lifetime3 = -64 / ((38 - param0) / 48);
-        var9 = (bf) (kh.field_y.c(-3905));
+        var9 = (bf) (kh.field_y.beginForward(-3905));
         while (var9 != null) {
           stackOut_347_0 = var9.a(FullscreenFocusCanvas.field_c, this, 114);
           stackIn_353_0 = stackOut_347_0 ? 1 : 0;
@@ -2627,7 +2627,7 @@ public final class StarCannon extends ag {
           if (!stackIn_348_0) {
             var9.unlink(4);
           }
-          var9 = (bf) (kh.field_y.a(-16913));
+          var9 = (bf) (kh.field_y.nextForward(-16913));
         }
         stackIn_353_0Lifetime1 = -1;
         if (stackIn_353_0Lifetime1 > ~tj.field_G) {
@@ -2724,12 +2724,12 @@ public final class StarCannon extends ag {
                 for (var3Lifetime5 = 0; var3Lifetime5 < 4000; var3Lifetime5++) {
                   FullscreenFocusCanvas.field_c[var3Lifetime5] = null;
                 }
-                var10 = (bf) (kh.field_y.c(-3905));
+                var10 = (bf) (kh.field_y.beginForward(-3905));
                 while (var10 != null) {
                   if (fi.field_e != var10) {
                     var10.unlink(4);
                   }
-                  var10 = (bf) (kh.field_y.a(-16913));
+                  var10 = (bf) (kh.field_y.nextForward(-16913));
                 }
                 if (kd.field_C == 0 &&
                   jg.field_H == 0) {
@@ -2804,7 +2804,7 @@ public final class StarCannon extends ag {
               }
               if (hc.field_e.equalsIgnoreCase("xebeams")) {
                 hh.field_c = 1;
-                kh.field_y.b(70, new bf(0, -128, 0, 13));
+                kh.field_y.addLast(70, new bf(0, -128, 0, 13));
                 a.field_a = true;
               }
               if (hc.field_e.equalsIgnoreCase("levskip")) {
@@ -3004,7 +3004,7 @@ public final class StarCannon extends ag {
             if (var10 == 5) {
               nf.field_e = 0;
               for (var10 = 0; var10 < 5; var10++) {
-                kh.field_y.b(108, new bf(var3, 64 * -var10 - 64, var4, 1));
+                kh.field_y.addLast(108, new bf(var3, 64 * -var10 - 64, var4, 1));
               }
             } else {
               boolean decompiledFrameCompleted0 = true;
@@ -3017,7 +3017,7 @@ public final class StarCannon extends ag {
                   if (var10 == 8) {
                     nf.field_e = 0;
                     for (var10 = -8; var10 <= 8; var10++) {
-                      kh.field_y.b(86, new bf(320 + var10 * 24, -Math.abs(-64 + 64 * var10), 320 + 24 * var10, 1));
+                      kh.field_y.addLast(86, new bf(320 + var10 * 24, -Math.abs(-64 + 64 * var10), 320 + 24 * var10, 1));
                     }
                   } else {
                     if (var10 == 18) {
@@ -3035,7 +3035,7 @@ public final class StarCannon extends ag {
                         var11.field_p = true;
                         var7 = var7 + var8;
                         var6 -= 16;
-                        kh.field_y.b(param0 ^ 29, var11);
+                        kh.field_y.addLast(param0 ^ 29, var11);
                       }
                     } else {
                       if (7 != var10 &&
@@ -3056,25 +3056,25 @@ public final class StarCannon extends ag {
                               if (stackIn_106_0 >= stackIn_107_1) {
                                 break regionExit1;
                               }
-                              kh.field_y.b(70, new bf(var3, -64 + -var10 * 64, var4, 4));
+                              kh.field_y.addLast(70, new bf(var3, -64 + -var10 * 64, var4, 4));
                               var10++;
                             }
                           }
                           switch (var10) {
                             case 12:
                               nf.field_e = -50;
-                              kh.field_y.b(78, new bf(var3, -64, var3, 12));
+                              kh.field_y.addLast(78, new bf(var3, -64, var3, 12));
                               break regionExit1;
                             case 17:
                               nf.field_e = -50;
-                              kh.field_y.b(61, new bf(32, -64, 32, 12));
-                              kh.field_y.b(84, new bf(608, -64, 608, 12));
+                              kh.field_y.addLast(61, new bf(32, -64, 32, 12));
+                              kh.field_y.addLast(84, new bf(608, -64, 608, 12));
                               break regionExit1;
                             default:
                               break regionExit1;
                             case 20:
                               var9 = new bf(320, -256, var4, 15);
-                              kh.field_y.b(param0 - 7, var9);
+                              kh.field_y.addLast(param0 - 7, var9);
                               tj.field_C = var9.field_k;
                               ua.field_c = ue.field_c[rj.field_h] + 1;
                               AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -3090,12 +3090,12 @@ public final class StarCannon extends ag {
                         }
                         nf.field_e = 0;
                         for (var10 = 0; var10 < 5; var10++) {
-                          kh.field_y.b(95, new bf(var3, -64 + -var10 * 64, var4, 1));
-                          kh.field_y.b(94, new bf(-var3 + 640, 64 * -var10 - 64, -var4 + 640, 1));
+                          kh.field_y.addLast(95, new bf(var3, -64 + -var10 * 64, var4, 1));
+                          kh.field_y.addLast(94, new bf(-var3 + 640, 64 * -var10 - 64, -var4 + 640, 1));
                         }
                       } else {
                         nf.field_e = 150;
-                        kh.field_y.b(81, new bf(var3, -64, var4, 3));
+                        kh.field_y.addLast(81, new bf(var3, -64, var4, 3));
                       }
                     }
                   }
@@ -3122,7 +3122,7 @@ public final class StarCannon extends ag {
                     stackIn_82_0.field_p = stackIn_83_1;
                   }
                   var5 = var11;
-                  kh.field_y.b(59, var11);
+                  kh.field_y.addLast(59, var11);
                   var10++;
                 }
               }
@@ -3147,7 +3147,7 @@ public final class StarCannon extends ag {
                   if (!var15.field_p) {
                     var15.field_i = -64 + (var3 + sh.b(-127, 128));
                   }
-                  kh.field_y.b(param0 ^ 22, var15);
+                  kh.field_y.addLast(param0 ^ 22, var15);
                   var10++;
                 }
               }
@@ -3157,7 +3157,7 @@ public final class StarCannon extends ag {
           if (ua.field_c >= 4) {
             nf.field_e = 0;
             for (var10 = -3; var10 < 4; var10++) {
-              kh.field_y.b(param0 ^ 5, new bf(24 * var10 + 320, -Math.abs(var10 * 64 - 64), var10 * 7680, 1));
+              kh.field_y.addLast(param0 ^ 5, new bf(24 * var10 + 320, -Math.abs(var10 * 64 - 64), var10 * 7680, 1));
             }
           } else {
             var13 = new bf(var3, -64, var4, 22);
@@ -3177,7 +3177,7 @@ public final class StarCannon extends ag {
             var14.field_z = sh.b(-126, 64) + 32;
             var14.field_l = sh.b(-126, 36);
             nf.field_e = var2 * 30 - (-25 - 50 * nf.field_l);
-            kh.field_y.b(param0 + 3, new bf(128 + sh.b(11, 384), -128, fi.field_e.field_f, 1));
+            kh.field_y.addLast(param0 + 3, new bf(128 + sh.b(11, 384), -128, fi.field_e.field_f, 1));
           }
         }
     }
@@ -3549,7 +3549,7 @@ public final class StarCannon extends ag {
             fg.field_a[field_z].a(320, 100);
           }
         }
-        var3 = (wf) (pk.field_a.c(-3905));
+        var3 = (wf) (pk.field_a.beginForward(-3905));
         if (var3 != null) {
           var5 = this.field_B;
           if (80 <= var5) {
@@ -3686,12 +3686,12 @@ public final class StarCannon extends ag {
             pd.field_a = pd.field_a - 5;
           }
         }
-        if (null != pk.field_a.c(-3905)) {
+        if (null != pk.field_a.beginForward(-3905)) {
           fieldTemp$0 = this.field_B + 1;
           this.field_B = this.field_B + 1;
           if (fieldTemp$0 == 335) {
             this.field_B = 0;
-            pk.field_a.a((byte) 39);
+            pk.field_a.removeFirst((byte) 39);
           }
         }
         if (nh.field_e != 0) {
@@ -3825,7 +3825,7 @@ public final class StarCannon extends ag {
               var7 -= 16;
               var11.field_p = true;
               var8 = var8 + var9;
-              kh.field_y.b(107, var11);
+              kh.field_y.addLast(107, var11);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -3841,8 +3841,8 @@ public final class StarCannon extends ag {
                     19 != var7) {
                     if (7 == var7) {
                       nf.field_e = 0;
-                      kh.field_y.b(73, new bf(var3, -64, var4, 3));
-                      kh.field_y.b(64, new bf(640 - var3, -64, 640 - var3, 21));
+                      kh.field_y.addLast(73, new bf(var3, -64, var4, 3));
+                      kh.field_y.addLast(64, new bf(640 - var3, -64, 640 - var3, 21));
                     } else {
                       if (var7 != 8 &&
                         var7 != 14) {
@@ -3851,41 +3851,41 @@ public final class StarCannon extends ag {
                           if (13 == var7) {
                             nf.field_e = -50;
                             var7 = sh.b(-126, 180) + 32;
-                            kh.field_y.b(74, new bf(var7, -64, var7, 12));
+                            kh.field_y.addLast(74, new bf(var7, -64, var7, 12));
                             var7 = 608 - sh.b(-128, 180);
-                            kh.field_y.b(56, new bf(var7, -64, var7, 12));
+                            kh.field_y.addLast(56, new bf(var7, -64, var7, 12));
                           } else {
                             if (var7 == 17) {
                               nf.field_e = -50;
-                              kh.field_y.b(82, new bf(32, -64, 32, 21));
+                              kh.field_y.addLast(82, new bf(32, -64, 32, 21));
                               if (sh.b(34, 2) == 0) {
-                                kh.field_y.b(91, new bf(320, -32, 320, 18));
-                                kh.field_y.b(67, new bf(320, -96, 320, 18));
-                                kh.field_y.b(79, new bf(320, -160, 320, 18));
+                                kh.field_y.addLast(91, new bf(320, -32, 320, 18));
+                                kh.field_y.addLast(67, new bf(320, -96, 320, 18));
+                                kh.field_y.addLast(79, new bf(320, -160, 320, 18));
                               } else {
-                                kh.field_y.b(69, new bf(320, -96, 320, 21));
+                                kh.field_y.addLast(69, new bf(320, -96, 320, 21));
                               }
-                              kh.field_y.b(106, new bf(608, -64, 608, 21));
+                              kh.field_y.addLast(106, new bf(608, -64, 608, 21));
                             } else {
                               if (18 == var7) {
                                 nf.field_e = 150;
-                                kh.field_y.b(76, new bf(var3, -64, var4, 3));
+                                kh.field_y.addLast(76, new bf(var3, -64, var4, 3));
                                 var7 = 0;
                                 while (true) {
                                   stackIn_104_0 = (2 == nf.field_l) ? 2 : 1;
                                   if (stackIn_104_0 <= var7) {
-                                    kh.field_y.b(107, new bf(-var3 + 640, -64, 640 - var4, 3));
+                                    kh.field_y.addLast(107, new bf(-var3 + 640, -64, 640 - var4, 3));
                                     decompiledFrameCompleted2 = false;
                                     break;
                                   }
-                                  kh.field_y.b(112, new bf(320, 64 * -var7 - 128, 320, 3));
+                                  kh.field_y.addLast(112, new bf(320, 64 * -var7 - 128, 320, 3));
                                   var7++;
                                 }
                               }
                               if ((decompiledFrameCompleted2) &&
                                 ((20 == var7))) {
                                 var6 = new bf(320, -256, var4, 16);
-                                kh.field_y.b(88, var6);
+                                kh.field_y.addLast(88, var6);
                                 tj.field_C = var6.field_k;
                                 ua.field_c = 1 + ue.field_c[rj.field_h];
                                 AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -3901,7 +3901,7 @@ public final class StarCannon extends ag {
                           }
                         } else {
                           nf.field_e = 100;
-                          kh.field_y.b(75, new bf(var3, -64, -64 + sh.b(-1, 128), 5));
+                          kh.field_y.addLast(75, new bf(var3, -64, -64 + sh.b(-1, 128), 5));
                         }
                       } else {
                         nf.field_e = 0;
@@ -3918,25 +3918,25 @@ public final class StarCannon extends ag {
                           var7 -= 16;
                           var11Lifetime1.field_p = true;
                           var8Lifetime1 = var8Lifetime1 + var9Lifetime1;
-                          kh.field_y.b(100, var11Lifetime1);
+                          kh.field_y.addLast(100, var11Lifetime1);
                         }
                         var8Lifetime1Lifetime1 = 64 + sh.b(100, 512);
-                        kh.field_y.b(95, new bf(var8Lifetime1Lifetime1, -96, var8Lifetime1Lifetime1, 21));
+                        kh.field_y.addLast(95, new bf(var8Lifetime1Lifetime1, -96, var8Lifetime1Lifetime1, 21));
                       }
                     }
                   } else {
                     nf.field_e = 0;
                     for (var7 = 0; 5 > var7; var7++) {
-                      kh.field_y.b(117, new bf(var3, -64 + -var7 * 64, var4, 1));
+                      kh.field_y.addLast(117, new bf(var3, -64 + -var7 * 64, var4, 1));
                     }
-                    kh.field_y.b(122, new bf(-var3 + 640, -64, -var3 + 640, 21));
+                    kh.field_y.addLast(122, new bf(-var3 + 640, -64, -var3 + 640, 21));
                   }
                 } else {
                   nf.field_e = 0;
                   for (var7 = 0; 5 > var7; var7++) {
-                    kh.field_y.b(81, new bf(var3, -64 + -var7 * 64, var4, 1));
+                    kh.field_y.addLast(81, new bf(var3, -64 + -var7 * 64, var4, 1));
                   }
-                  kh.field_y.b(57, new bf(640 - var3, -64, -var4 + 640, 3));
+                  kh.field_y.addLast(57, new bf(640 - var3, -64, -var4 + 640, 3));
                 }
                 decompiledFrameRemainder0 = !(decompiledFrameCompleted2);
               }
@@ -3955,7 +3955,7 @@ public final class StarCannon extends ag {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  kh.field_y.b(63, new bf(var3, -64 + 64 * -var7, var4, 4));
+                  kh.field_y.addLast(63, new bf(var3, -64 + 64 * -var7, var4, 4));
                   var7++;
                 }
               }
@@ -3979,7 +3979,7 @@ public final class StarCannon extends ag {
                 }
                 var8_ref_bf = new bf(var3, -64 + 64 * -var7, var4, 2);
                 var8_ref_bf.field_h = (bf) (var5);
-                kh.field_y.b(115, var8_ref_bf);
+                kh.field_y.addLast(115, var8_ref_bf);
                 if (var7 == 0) {
                   var5 = var8_ref_bf;
                 }
@@ -3994,7 +3994,7 @@ public final class StarCannon extends ag {
           (decompiledFrameCompleted0)) {
           nf.field_e = 0;
           for (var7Lifetime1 = -8; var7Lifetime1 < 8; var7Lifetime1++) {
-            kh.field_y.b(88, new bf(320 + var7Lifetime1 * 24, -Math.abs(-64 + var7Lifetime1 * 64), 24 * var7Lifetime1 + 320, 1));
+            kh.field_y.addLast(88, new bf(320 + var7Lifetime1 * 24, -Math.abs(-64 + var7Lifetime1 * 64), 24 * var7Lifetime1 + 320, 1));
           }
         }
         if (param0 < 79) {

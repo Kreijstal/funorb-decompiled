@@ -132,13 +132,13 @@ final class ed {
         var3 = Torquing.field_u;
         try {
           var1_int = 0;
-          var2 = (ik) (qc.field_Y.b(param0));
+          var2 = (ik) (qc.field_Y.beginBackward(param0));
           while (var2 != null) {
             var2.a(-2857);
             if (!var2.isLinked(17)) {
               var1_int++;
             }
-            var2 = (ik) (qc.field_Y.f(-24059));
+            var2 = (ik) (qc.field_Y.nextBackward(-24059));
           }
           while (true) {
             incrementValue$1 = var1_int;

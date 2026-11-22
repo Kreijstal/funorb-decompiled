@@ -80,11 +80,11 @@ final class NodeHashTableIterator implements Iterator {
             var7 = (WordLanguage) null;
             NodeHashTableIterator.a((TileRack) null, -111, (WordLanguage) null, (byte) -120, '￬');
           }
-          var5 = (LetterTile) (ab.field_c.c(-126));
+          var5 = (LetterTile) (ab.field_c.removeFirst(-126));
           if (var5 == null) {
             var5 = new LetterTile();
           }
-          ch.field_e.a(var5, -112);
+          ch.field_e.addLast(var5, -112);
           var5.letter = param4;
           var5.field_n = param2;
           var5.baseValue = param2.field_p[param4 & 255];

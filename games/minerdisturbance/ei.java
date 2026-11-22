@@ -37,7 +37,7 @@ final class ei extends kn implements sh {
         int var7 = 0;
         var7 = MinerDisturbance.field_ab;
         try {
-          this.field_G.a((byte) 55);
+          this.field_G.clear((byte) 55);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

@@ -741,7 +741,7 @@ abstract class GameShell extends GameApplet {
           if (param0 != 7) {
             GameShell.a(false);
           }
-          var4 = (oc) (mg.field_N.a((byte) 100));
+          var4 = (oc) (mg.field_N.beginBackward((byte) 100));
           var1 = var4;
           if (var1 == null) {
             return false;

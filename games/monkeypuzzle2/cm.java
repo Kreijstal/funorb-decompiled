@@ -48,7 +48,7 @@ final class cm extends WidgetContainer implements ql {
         int var6 = 0;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          this.field_u.b((byte) 121);
+          this.field_u.clear((byte) 121);
           if (param0 != null &&
             0 != param0.length) {
             var3_int = param0.length;

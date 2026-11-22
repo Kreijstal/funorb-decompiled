@@ -116,12 +116,12 @@ final class og {
     final static void a(byte param0) {
         ia var1 = null;
         if (param0 > 3) {
-          var1 = (ia) (kk.field_f.a(-9424));
+          var1 = (ia) (kk.field_f.removeLast(-9424));
           if (var1 == null) {
             var1 = new ia();
           }
           var1.a(sb.field_g, sb.field_b, sb.field_f, sb.field_d, sb.field_c, sb.field_e, 6, sb.field_h);
-          AccountServiceResult.field_c.a(var1, -109);
+          AccountServiceResult.field_c.addLast(var1, -109);
           return;
         }
     }

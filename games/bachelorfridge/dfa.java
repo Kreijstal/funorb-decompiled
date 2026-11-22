@@ -41,7 +41,7 @@ class dfa {
             param9.children = new IntrusiveDeque();
           }
           aa.field_l = param9.children;
-          aa.field_l.d(99);
+          aa.field_l.clear(99);
           iga.field_c = new DualLinkNodeHashTable(param2);
           wk.field_a = -1;
           FullHealSpecial.field_q = -1;
@@ -51,13 +51,13 @@ class dfa {
             param7.children = new IntrusiveDeque();
           }
           uma.field_M = param7.children;
-          uma.field_M.d(param3 + 91);
+          uma.field_M.clear(param3 + 91);
           FridgeScreen.field_g = new DualLinkNodeHashTable(param8);
           if (null == param6.children) {
             param6.children = new IntrusiveDeque();
           }
           bia.field_g = param6.children;
-          bia.field_g.d(param3 + 92);
+          bia.field_g.clear(param3 + 92);
           wi.field_i = new DualLinkNodeHashTable(param1);
           wda.field_a = 0L;
           DiveBomberAnimation.field_x = param0;

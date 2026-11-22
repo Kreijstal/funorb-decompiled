@@ -145,7 +145,7 @@ class le extends lj {
             if (var10 != null) {
               ((nj) (var10)).field_s = var15;
             }
-            this.field_E.a(var15, -105);
+            this.field_E.addLast(var15, -105);
             var10 = var15;
           }
         }
@@ -166,7 +166,7 @@ class le extends lj {
     private final nj a(int param0, byte param1, int param2) {
         nj var5 = null;
         int var6 = Transmogrify.field_A ? 1 : 0;
-        nj var4 = (nj) (this.field_E.a((byte) -95));
+        nj var4 = (nj) (this.field_E.beginForward((byte) -95));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -176,7 +176,7 @@ class le extends lj {
             }
             var5 = var5.field_s;
           }
-          var4 = (nj) (this.field_E.a(true));
+          var4 = (nj) (this.field_E.nextForward(true));
         }
         if (param1 == -5) {
           return null;

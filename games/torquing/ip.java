@@ -39,7 +39,7 @@ final class ip {
     final static nh a(int param0, int param1) {
         int var2 = -59 / ((-69 - param1) / 43);
         nh var3 = new nh();
-        to.field_q.a((byte) 54, var3);
+        to.field_q.addFirst((byte) 54, var3);
         hj.a(false, param0);
         return var3;
     }
@@ -74,7 +74,7 @@ final class ip {
         RuntimeException var2_ref = null;
         var4 = Torquing.field_u;
         try {
-          var2 = (mc) (uj.field_a.b(0));
+          var2 = (mc) (uj.field_a.beginBackward(0));
           while (var2 != null) {
             var3 = var2.field_j;
             if (var3.e()) {
@@ -87,9 +87,9 @@ final class ip {
                 return;
               }
             }
-            var2 = (mc) (uj.field_a.f(-24059));
+            var2 = (mc) (uj.field_a.nextBackward(-24059));
           }
-          uj.field_a.a((byte) 54, new mc(param1));
+          uj.field_a.addFirst((byte) 54, new mc(param1));
           ni.a(param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

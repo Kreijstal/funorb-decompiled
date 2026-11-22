@@ -175,12 +175,12 @@ final class fl {
         if (param0 != 91) {
           fl.a(112, -6);
         }
-        al var1 = (al) (uc.field_a.e((byte) 86));
+        al var1 = (al) (uc.field_a.removeFirst((byte) 86));
         if (var1 == null) {
           var1 = new al();
         }
         var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, (byte) 86, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d);
-        cj.field_a.a(var1, param0 - 7135);
+        cj.field_a.addFirst(var1, param0 - 7135);
     }
 
     public static void a(byte param0) {

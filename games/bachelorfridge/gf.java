@@ -62,7 +62,7 @@ final class gf extends TileEffect {
         int var5 = -var3 + var2 >> 1;
         int var6 = 200;
         mia var7 = new mia(var4, var6 << 4, var5, DiveBomberAnimation.a(SauceOfFlameAnimation.field_v.length, GasCloudAnimation.field_I, -2147483648), DiveBomberAnimation.a(20, GasCloudAnimation.field_I, -2147483648) + 5);
-        this.field_j.a(var7, true);
+        this.field_j.addLast(var7, true);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -124,22 +124,22 @@ final class gf extends TileEffect {
           }
         }
         if (this.field_f == 0) {
-          var2_ref = (mia) (this.field_j.b((byte) 90));
+          var2_ref = (mia) (this.field_j.beginForward((byte) 90));
           while (var2_ref != null) {
             var2_ref.field_m = -(4 + DiveBomberAnimation.a(8, m.field_a, -2147483648));
-            var2_ref = (mia) (this.field_j.c(0));
+            var2_ref = (mia) (this.field_j.nextForward(0));
           }
         }
-        var2_refLifetime1 = (mia) (this.field_j.b((byte) 90));
+        var2_refLifetime1 = (mia) (this.field_j.beginForward((byte) 90));
         while (var2_refLifetime1 != null) {
           var2_refLifetime1.b(true);
           if (var2_refLifetime1.field_h < 0) {
             var2_refLifetime1.field_k = 0;
             var2_refLifetime1.field_h = 0;
           }
-          var2_refLifetime1 = (mia) (this.field_j.c(0));
+          var2_refLifetime1 = (mia) (this.field_j.nextForward(0));
         }
-        stackIn_41_0 = (this.field_f < 0) && (this.field_j.e(12917));
+        stackIn_41_0 = (this.field_f < 0) && (this.field_j.isEmpty(12917));
         return stackIn_41_0;
     }
 
@@ -154,7 +154,7 @@ final class gf extends TileEffect {
         if (param1 != 0) {
           this.c((byte) 63);
         }
-        mia var4 = (mia) (this.field_j.b((byte) 90));
+        mia var4 = (mia) (this.field_j.beginForward((byte) 90));
         while (var4 != null) {
           var5 = param2 + (var4.field_i >> 4);
           var6 = (var4.field_q >> 4) + (-(var4.field_h >> 4) + param0);
@@ -163,7 +163,7 @@ final class gf extends TileEffect {
           var9 = var8.field_n >> 1;
           var10 = var8.field_o >> 1;
           var8.drawScaledAlpha(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 + 30), var9, var10, var4.field_o);
-          var4 = (mia) (this.field_j.c(0));
+          var4 = (mia) (this.field_j.nextForward(0));
         }
     }
 

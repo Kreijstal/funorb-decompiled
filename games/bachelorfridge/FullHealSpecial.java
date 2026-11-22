@@ -98,7 +98,7 @@ final class FullHealSpecial extends SpecialOrder {
             stackIn_2_0 = (CreatureEvent) null;
             return stackIn_2_0;
           }
-          var4.effects.a(new DamageEffect(new CreatureRef(var3), false, 1, -var3.field_t, 0), true);
+          var4.effects.addLast(new DamageEffect(new CreatureRef(var3), false, 1, -var3.field_t, 0), true);
           stackIn_4_0 = var4;
           return (CreatureEvent) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

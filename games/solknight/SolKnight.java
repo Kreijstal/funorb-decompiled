@@ -164,7 +164,7 @@ public final class SolKnight extends ab {
           }
           if (!il.b(507)) {
             while (true) {
-              var5 = (bl) (w.field_a.a(0));
+              var5 = (bl) (w.field_a.removeLast(0));
               if (var5 == null) {
                 break;
               }
@@ -797,7 +797,7 @@ public final class SolKnight extends ab {
                   9 == ri.field_f) {
                   ah.field_f = 0;
                   SecondaryNodeDequeIterator.field_d = 0;
-                  w.field_a.a(true);
+                  w.field_a.clear(true);
                 }
                 ua.field_H = 0;
                 kd.currentScreenIndex = ri.field_f;
@@ -825,12 +825,12 @@ public final class SolKnight extends ab {
                 var4 += 2;
               }
             }
-            if (lc.field_t.a((byte) 51) != null) {
+            if (lc.field_t.beginBackward((byte) 51) != null) {
               fieldTemp$0 = DelegatingCanvas.field_e + 1;
               DelegatingCanvas.field_e = DelegatingCanvas.field_e + 1;
               if (290 == fieldTemp$0) {
                 DelegatingCanvas.field_e = 0;
-                lc.field_t.a(0);
+                lc.field_t.removeLast(0);
                 return;
               }
             }
@@ -986,7 +986,7 @@ public final class SolKnight extends ab {
               SoftwareRasterizer.a(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
             }
           }
-          var4 = (la) (lc.field_t.a((byte) 51));
+          var4 = (la) (lc.field_t.beginBackward((byte) 51));
           if (var4 != null) {
             var6Lifetime1 = DelegatingCanvas.field_e;
             if (var6Lifetime1 >= 70) {

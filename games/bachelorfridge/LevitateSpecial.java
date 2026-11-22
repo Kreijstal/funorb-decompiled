@@ -41,7 +41,7 @@ final class LevitateSpecial extends SpecialOrder {
           if (var4 != null &&
             !var4.isDown(-127)) {
             var5 = new LevitateEvent(this.moveId, new CreatureRef(var7));
-            var5.effects.a(new DamageEffect(new CreatureRef(var4), false, 1, 0, 32), true);
+            var5.effects.addLast(new DamageEffect(new CreatureRef(var4), false, 1, 0, 32), true);
             if (param1 != 3) {
               field_p = (jla[]) null;
             }

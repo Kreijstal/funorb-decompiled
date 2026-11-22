@@ -331,7 +331,7 @@ final class ro extends kl {
         this.field_n = null;
         this.field_s.b((byte) 30);
         this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -jm.field_i.field_v + this.field_i + this.field_j, IntrusiveNode.field_c, jm.field_i, -124, tf.field_g);
-        this.field_f.a(this.field_s, false);
+        this.field_f.addFirst(this.field_s, false);
         this.field_y.a((byte) -19);
         System.gc();
         this.field_o.a(ga.field_n, bo.field_Lb, -10872);
@@ -485,12 +485,12 @@ final class ro extends kl {
           this.field_o = new wd(this.field_y);
           if (this.field_p.field_Y.field_l <= 0) {
             this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
-            this.field_f.a(this.field_s, false);
-            this.field_f.a(this.field_n, false);
+            this.field_f.addFirst(this.field_s, false);
+            this.field_f.addFirst(this.field_n, false);
             this.field_t = 0;
           } else {
             this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_j + this.field_i - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -47, hj.field_X);
-            this.field_f.a(this.field_s, false);
+            this.field_f.addFirst(this.field_s, false);
             this.field_t = 5;
           }
           return;
@@ -520,13 +520,13 @@ final class ro extends kl {
         this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + (this.field_i + this.field_j), IntrusiveNode.field_c, jm.field_i, -64, tf.field_g);
         if (param0 > -86) {
           this.b((byte) -86);
-          this.field_f.a(this.field_s, false);
+          this.field_f.addFirst(this.field_s, false);
           bo.field_Lb.a((byte) -19);
           this.field_t = 3;
           this.field_s.field_w = true;
           return;
         }
-        this.field_f.a(this.field_s, false);
+        this.field_f.addFirst(this.field_s, false);
         bo.field_Lb.a((byte) -19);
         this.field_t = 3;
         this.field_s.field_w = true;
@@ -795,7 +795,7 @@ final class ro extends kl {
           return;
         }
         if (this.field_t == 5) {
-          this.field_f.a(this.field_n, param0);
+          this.field_f.addFirst(this.field_n, param0);
           mi.a(this.field_s, pe.field_n, IntrusiveNode.field_c, 13195, jm.field_i);
           this.field_t = 0;
           return;

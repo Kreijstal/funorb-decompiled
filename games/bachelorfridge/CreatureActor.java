@@ -20,7 +20,7 @@ final class CreatureActor extends IntrusiveNode {
 
     final float e(byte param0) {
         int var3 = BachelorFridge.field_y;
-        gca var2 = (gca) (this.field_n.b((byte) 90));
+        gca var2 = (gca) (this.field_n.beginForward((byte) 90));
         if (param0 != -121) {
           UiComponent var4 = (UiComponent) null;
           CreatureActor.a((UiComponent) null, (jc) null, (UiComponent) null, (UiComponent) null, false);
@@ -29,7 +29,7 @@ final class CreatureActor extends IntrusiveNode {
           if (var2 instanceof c) {
             return ((c) (var2)).field_j;
           }
-          var2 = (gca) (this.field_n.c(0));
+          var2 = (gca) (this.field_n.nextForward(0));
         }
         return 0.0f;
     }
@@ -47,7 +47,7 @@ final class CreatureActor extends IntrusiveNode {
             String var5 = (String) null;
             this.a(-38, 92, (String) null);
           }
-          this.field_t.a(new vca(ActorAnimation.field_u, param2, param0, 4096, 20, 30, 50, (-8 + ActorAnimation.field_u.field_F) * (-1 + this.field_t.g(0)) + 8), true);
+          this.field_t.addLast(new vca(ActorAnimation.field_u, param2, param0, 4096, 20, 30, 50, (-8 + ActorAnimation.field_u.field_F) * (-1 + this.field_t.countWithOffset(0)) + 8), true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ad.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -263,7 +263,7 @@ final class CreatureActor extends IntrusiveNode {
         vca var8;
         gca var4Lifetime1;
         var7 = BachelorFridge.field_y;
-        var8 = (vca) (this.field_t.b((byte) 90));
+        var8 = (vca) (this.field_t.beginForward((byte) 90));
         scanLoop1: while (true) {
           if (var8 != null) {
             if (var8.b(false)) {
@@ -273,7 +273,7 @@ final class CreatureActor extends IntrusiveNode {
                 break scanLoop1;
               }
             }
-            var8 = (vca) (this.field_t.c(0));
+            var8 = (vca) (this.field_t.nextForward(0));
             continue;
           }
           break;
@@ -289,7 +289,7 @@ final class CreatureActor extends IntrusiveNode {
           CreatureActor.releaseStatics(true);
         }
         var3 = 0;
-        var4 = (gca) (this.field_n.b((byte) 90));
+        var4 = (gca) (this.field_n.beginForward((byte) 90));
         while (var4 != null) {
           stackIn_20_0 = (~this.field_s.statusId == ~var4.field_h) ? 1 : 0;
           var5 = stackIn_20_0;
@@ -298,14 +298,14 @@ final class CreatureActor extends IntrusiveNode {
             var6 == 0) {
             var4.unlink(false);
           }
-          var4 = (gca) (this.field_n.c(0));
+          var4 = (gca) (this.field_n.nextForward(0));
           var3 = var3 | var5;
         }
         if (var3 == 0 &&
           this.field_s.statusId != 0) {
           var4Lifetime1 = nba.a(this.field_s.statusId, false);
           if (var4Lifetime1 != null) {
-            this.field_n.a(var4Lifetime1, true);
+            this.field_n.addLast(var4Lifetime1, true);
           }
         }
         return;

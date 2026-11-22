@@ -63,7 +63,7 @@ abstract class SpriteState extends DualLinkNode {
           var22 = null;
           var12 = SolKnight.field_L ? 1 : 0;
           try {
-            var13 = (di) (ga.field_E.a((byte) 51));
+            var13 = (di) (ga.field_E.beginBackward((byte) 51));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -264,7 +264,7 @@ abstract class SpriteState extends DualLinkNode {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var15 = (ib) (kh.field_a.a((byte) 51));
+            var15 = (ib) (kh.field_a.beginBackward((byte) 51));
             if (var15 == null) {
               je.a(false);
               return;
@@ -275,7 +275,7 @@ abstract class SpriteState extends DualLinkNode {
             var15.unlink(10);
           } else {
             if (1 == var2) {
-              var13 = (bl) (m.field_h.a((byte) 51));
+              var13 = (bl) (m.field_h.beginBackward((byte) 51));
               if (var13 == null) {
                 je.a(false);
                 return;
@@ -283,7 +283,7 @@ abstract class SpriteState extends DualLinkNode {
               var13.unlink(param0 ^ 10);
             } else {
               if (var2 == 2) {
-                var12 = (ib) (kh.field_a.a((byte) 51));
+                var12 = (ib) (kh.field_a.beginBackward((byte) 51));
                 if (var12 == null) {
                   je.a(false);
                   return;
@@ -332,10 +332,10 @@ abstract class SpriteState extends DualLinkNode {
           if (param0 != 36951) {
             field_o = 120;
           }
-          var4 = (dj) (sa.field_n.a((byte) 51));
+          var4 = (dj) (sa.field_n.beginBackward((byte) 51));
           while (var4 != null) {
             dc.a(var4, param1, (byte) 46);
-            var4 = (dj) (sa.field_n.b(-46));
+            var4 = (dj) (sa.field_n.nextBackward(-46));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

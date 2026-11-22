@@ -94,7 +94,7 @@ final class li {
               field_b = (ue) null;
             }
             if (param1.field_q != 22) {
-              kh.field_y.b(63, param1);
+              kh.field_y.addLast(63, param1);
               return;
             }
             var2 = fi.field_e;

@@ -254,11 +254,11 @@ final class SnowAnimation extends EventAnimation {
         }
         BattleCreature var2 = this.field_v.creature.a(81, this.screen.field_h);
         if (!var2.isDown(param0 - 93)) {
-          var3 = (EventEffect) (this.field_v.effects.b((byte) 90));
+          var3 = (EventEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(param0 - 69, this.field_v.moveId);
           while (var3 != null) {
             var3.apply(var2, this.screen.field_h, 12);
-            var3 = (EventEffect) (this.field_v.effects.c(0));
+            var3 = (EventEffect) (this.field_v.effects.nextForward(0));
           }
           return;
         }

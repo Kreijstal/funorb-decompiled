@@ -54,7 +54,7 @@ final class g {
     }
 
     final static void b(boolean param0) {
-        qn var1 = (qn) (te.field_z.a((byte) 100));
+        qn var1 = (qn) (te.field_z.beginBackward((byte) 100));
         if (var1 == null) {
           rm.b((byte) 85);
           return;

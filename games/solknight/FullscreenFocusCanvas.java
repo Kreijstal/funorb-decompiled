@@ -27,18 +27,18 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         RuntimeException var2 = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (qc) (sb.field_c.a((byte) 51));
+          var4 = (qc) (sb.field_c.beginBackward((byte) 51));
           while (var4 != null) {
             ah.a(false, param0, var4);
-            var4 = (qc) (sb.field_c.b(-121));
+            var4 = (qc) (sb.field_c.nextBackward(-121));
           }
           if (param1 >= -25) {
             field_e = -52;
           }
-          var5 = (sd) (IsaacRandom.field_b.a((byte) 51));
+          var5 = (sd) (IsaacRandom.field_b.beginBackward((byte) 51));
           while (var5 != null) {
             fi.a(var5, param0, -24045);
-            var5 = (sd) (IsaacRandom.field_b.b(-119));
+            var5 = (sd) (IsaacRandom.field_b.nextBackward(-119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

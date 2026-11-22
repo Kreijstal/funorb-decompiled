@@ -137,7 +137,7 @@ final class SlowAllSpecial extends SpecialOrder {
             for (var6 = 0; var6 < param0.height; var6++) {
               if (param0.tiles[var5][var6].occupant != null) {
                 var7 = param0.tiles[var5][var6].occupant;
-                var4.effects.a(new DamageEffect(new CreatureRef(var7), false, 1, 0, 5), true);
+                var4.effects.addLast(new DamageEffect(new CreatureRef(var7), false, 1, 0, 5), true);
               }
             }
             var5++;

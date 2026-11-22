@@ -659,10 +659,10 @@ final class vr {
           if (param0 != 75) {
             field_b = 75;
           }
-          var4 = (ne) (rg.field_f.b((byte) 90));
+          var4 = (ne) (rg.field_f.beginForward((byte) 90));
           while (var4 != null) {
             kja.a(param1, (byte) 58, var4);
-            var4 = (ne) (rg.field_f.c(0));
+            var4 = (ne) (rg.field_f.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

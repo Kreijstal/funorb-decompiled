@@ -53,14 +53,14 @@ final class hk {
         }
         var1 = null;
         var2 = 0;
-        if (!ec.field_c.e((byte) 123)) {
-          var3 = (tm) (ec.field_c.b(81));
+        if (!ec.field_c.isEmpty((byte) 123)) {
+          var3 = (tm) (ec.field_c.beginForward(81));
           if (var3.a(param0 ^ 19)) {
-            ec.field_c.e(63854);
+            ec.field_c.removeFirst(63854);
             vc.a(-8, cm.field_o, var3.field_s);
             var2 = 1;
           }
-          var5 = (tm) (ec.field_c.b(param0 + 92));
+          var5 = (tm) (ec.field_c.beginForward(param0 + 92));
           if (var5 != null &&
             var2 != 0) {
             var5.a(false);
@@ -71,14 +71,14 @@ final class hk {
           fn.a(27, 228, 3);
           return ak.a(-92);
         }
-        if (!ok.field_b.e((byte) 123)) {
-          var4 = (tm) (ok.field_b.b(120));
+        if (!ok.field_b.isEmpty((byte) 123)) {
+          var4 = (tm) (ok.field_b.beginForward(120));
           if (var4.a(param0 - 19)) {
-            ok.field_b.e(63854);
+            ok.field_b.removeFirst(63854);
             var2 = 1;
             vc.a(109, cm.field_o, var4.field_s);
           }
-          var1 = (tm) (ok.field_b.b(96));
+          var1 = (tm) (ok.field_b.beginForward(96));
         }
         if (var1 != null &&
           var2 != 0) {

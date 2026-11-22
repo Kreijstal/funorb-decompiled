@@ -206,7 +206,7 @@ final class da extends fi {
           if (param1 != -71) {
             field_C = 1;
           }
-          this.field_D.a((IntrusiveNode) (var3), (byte) 33);
+          this.field_D.addFirst((IntrusiveNode) (var3), (byte) 33);
           var3.field_A = true;
           var3.a((UiWidget) (this), param1 + 51);
         } catch (RuntimeException runtimeException) {

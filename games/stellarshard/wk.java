@@ -35,7 +35,7 @@ final class wk {
         RuntimeException decompiledCaughtException = null;
         var3 = stellarshard.field_B;
         try {
-          var4 = (lb) (oc.field_c.b(-124));
+          var4 = (lb) (oc.field_c.beginForward(-124));
           var1 = var4;
           if (var1 == null) {
             return false;

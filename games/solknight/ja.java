@@ -21,20 +21,20 @@ final class ja {
           }
           if (vg.field_M == 0) {
             vg.field_M = 200;
-            var1 = (ud) (uc.field_j.a((byte) 51));
+            var1 = (ud) (uc.field_j.beginBackward((byte) 51));
             while (var1 != null) {
               if (!var1.field_m.isLinked(false)) {
                 var1.unlink(param0 ^ 194);
               }
-              var1 = (ud) (uc.field_j.b(-105));
+              var1 = (ud) (uc.field_j.nextBackward(-105));
             }
             if (null != la.field_j) {
-              var1Lifetime1 = (ud) (la.field_j.a((byte) 51));
+              var1Lifetime1 = (ud) (la.field_j.beginBackward((byte) 51));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_m.isLinked(false)) {
                   var1Lifetime1.unlink(10);
                 }
-                var1Lifetime1 = (ud) (la.field_j.b(-46));
+                var1Lifetime1 = (ud) (la.field_j.nextBackward(-46));
               }
             }
           }

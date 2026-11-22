@@ -68,7 +68,7 @@ final class pj implements uj {
           var22 = null;
           var12 = MinerDisturbance.field_ab;
           try {
-            var13 = (gl) (on.field_t.b(105));
+            var13 = (gl) (on.field_t.beginForward(105));
             var17 = var13;
             if (param0 != 119) {
               field_e = (Sprite[]) null;

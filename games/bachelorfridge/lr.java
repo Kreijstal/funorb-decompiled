@@ -85,7 +85,7 @@ final class lr extends IntrusiveNode {
         try {
           param4 += 8;
           param1 -= 32;
-          var6 = (lh) (param3.b((byte) 90));
+          var6 = (lh) (param3.beginForward((byte) 90));
           if (param5 != -4) {
             var10 = (IntrusiveDeque) null;
             lr.a(44, -29, -91, (IntrusiveDeque) null, 24, -68);
@@ -98,7 +98,7 @@ final class lr extends IntrusiveNode {
             }
             var7++;
             ed.field_f[3 + (var7 & 3)].a(param4 + (param2 * var6.field_i >> 16) - 32, param1 + (-(param2 * var6.field_q >> 16) - 34), var6.field_o << 1);
-            var6 = (lh) (param3.c(0));
+            var6 = (lh) (param3.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ final class lr extends IntrusiveNode {
         RuntimeException var6_ref = null;
         var9 = BachelorFridge.field_y;
         try {
-          var6 = (lh) (param3.b((byte) 90));
+          var6 = (lh) (param3.beginForward((byte) 90));
           if (param4 != 265949093) {
             field_k = (String[]) null;
           }
@@ -180,7 +180,7 @@ final class lr extends IntrusiveNode {
               var8 = 256;
             }
             lw.field_b[1 + (var7 & 1)].a(-32 + param1 + (var6.field_i >> 4), -32 + (-2 + (var6.field_q >> 4) + param5) - (var6.field_h >> 5), 256 - ((var6.field_o << 2) + (var6.field_o << 1)));
-            var6 = (lh) (param3.c(0));
+            var6 = (lh) (param3.nextForward(0));
             var7++;
           }
           return;

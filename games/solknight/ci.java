@@ -468,15 +468,15 @@ class ci extends gf implements ka {
           if (param0 >= -26) {
             return;
           }
-          var4 = (ob) (he.field_d.a((byte) 51));
+          var4 = (ob) (he.field_d.beginBackward((byte) 51));
           while (var4 != null) {
             vg.a(param1, var4, 118);
-            var4 = (ob) (he.field_d.b(-84));
+            var4 = (ob) (he.field_d.nextBackward(-84));
           }
-          var2 = bc.field_J.a((byte) 51);
+          var2 = bc.field_J.beginBackward((byte) 51);
           while (var2 != null) {
             wi.c(1, param1);
-            var2 = bc.field_J.b(-104);
+            var2 = bc.field_J.nextBackward(-104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

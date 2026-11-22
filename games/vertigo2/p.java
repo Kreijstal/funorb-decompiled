@@ -41,7 +41,7 @@ final class p {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var14 = (hq) (mo.field_h.a((byte) 100));
+            var14 = (hq) (mo.field_h.beginBackward((byte) 100));
             if (var14 == null) {
               rm.b((byte) 88);
               return;
@@ -53,7 +53,7 @@ final class p {
             return;
           }
           if (1 == var2) {
-            var11 = (nf) (ki.field_a.a((byte) 100));
+            var11 = (nf) (ki.field_a.beginBackward((byte) 100));
             if (var11 == null) {
               rm.b((byte) 11);
               return;
@@ -66,7 +66,7 @@ final class p {
             rm.b((byte) 89);
             return;
           }
-          var15 = (hq) (mo.field_h.a((byte) 100));
+          var15 = (hq) (mo.field_h.beginBackward((byte) 100));
           if (var15 == null) {
             rm.b((byte) 100);
             return;

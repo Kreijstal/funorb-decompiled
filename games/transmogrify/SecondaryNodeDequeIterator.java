@@ -30,10 +30,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (var2 != 0) {
             if (1 == var2) {
               var3 = var8.readInt((byte) -122);
-              var4 = (gh) (mf.field_b.a((byte) -95));
+              var4 = (gh) (mf.field_b.beginForward((byte) -95));
               while (var4 != null) {
                 if (var4.field_j != var3) {
-                  var4 = (gh) (mf.field_b.a(true));
+                  var4 = (gh) (mf.field_b.nextForward(true));
                   continue;
                 }
                 break;
@@ -48,7 +48,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               pc.a(1);
             }
           } else {
-            var3_ref_he = (he) (pj.field_A.a((byte) -95));
+            var3_ref_he = (he) (pj.field_A.beginForward((byte) -95));
             if (var3_ref_he == null) {
               pc.a(param0 ^ 5);
               return;
@@ -89,7 +89,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.field_b;
-        if (var1 != this.field_c.field_e) {
+        if (var1 != this.field_c.sentinel) {
           this.field_b = ((DualLinkNode) (var1)).field_h;
         } else {
           this.field_b = null;
@@ -113,14 +113,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_c = param0;
           this.field_a = null;
-          this.field_b = this.field_c.field_e.field_h;
+          this.field_b = this.field_c.sentinel.field_h;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean hasNext() {
-        return this.field_c.field_e != this.field_b;
+        return this.field_c.sentinel != this.field_b;
     }
 
     static {

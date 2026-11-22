@@ -261,7 +261,7 @@ final class mf extends PcmStream {
         int var5;
         var5 = SolKnight.field_L ? 1 : 0;
         var4 = 102 / ((param1 - 22) / 56);
-        var3 = (hg) (this.field_Q.field_m.a((byte) 51));
+        var3 = (hg) (this.field_Q.field_m.beginBackward((byte) 51));
         while (var3 != null) {
           if (param0 < 0 ||
             param0 == var3.field_z) {
@@ -277,7 +277,7 @@ final class mf extends PcmStream {
             }
             var3.unlink(10);
           }
-          var3 = (hg) (this.field_Q.field_m.b(-18));
+          var3 = (hg) (this.field_Q.field_m.nextBackward(-18));
         }
     }
 
@@ -323,7 +323,7 @@ final class mf extends PcmStream {
         var9 = SolKnight.field_L ? 1 : 0;
         this.b(param1, param0, 64, 127);
         if ((this.field_U[param0] & 2) != 0) {
-          var5 = (hg) (this.field_Q.field_m.c((byte) 96));
+          var5 = (hg) (this.field_Q.field_m.beginForward((byte) 96));
           while (var5 != null) {
             if (param0 == var5.field_z &&
               0 > var5.field_k) {
@@ -336,7 +336,7 @@ final class mf extends PcmStream {
               var5.field_l = -var5.field_h + var6_int;
               return;
             }
-            var5 = (hg) (this.field_Q.field_m.b((byte) 94));
+            var5 = (hg) (this.field_Q.field_m.nextForward((byte) 94));
           }
         }
         var10 = (fc) (this.field_C.a(true, (long)this.field_v[param0]));
@@ -387,7 +387,7 @@ final class mf extends PcmStream {
           }
           this.field_O[param0][var7.field_m] = var7;
         }
-        this.field_Q.field_m.a(var7, -7044);
+        this.field_Q.field_m.addFirst(var7, -7044);
         this.field_p[param0][param1] = var7;
         return;
     }
@@ -440,7 +440,7 @@ final class mf extends PcmStream {
     }
 
     final static void e(int param0) {
-        al var1 = (al) (cj.field_a.e((byte) 86));
+        al var1 = (al) (cj.field_a.removeFirst((byte) 86));
         if (param0 != 4096) {
           mf.e(105);
         }
@@ -450,7 +450,7 @@ final class mf extends PcmStream {
         SoftwareRasterizer.a(var1.field_h, var1.field_k, var1.field_o);
         SoftwareRasterizer.f(var1.field_l, var1.field_j, var1.field_i, var1.field_m);
         var1.field_h = null;
-        uc.field_a.a(var1, -7044);
+        uc.field_a.addFirst(var1, -7044);
     }
 
     public static void g(int param0) {
@@ -683,18 +683,18 @@ final class mf extends PcmStream {
         var5 = SolKnight.field_L ? 1 : 0;
         var3 = 31 / ((param0 + 63) / 39);
         if ((this.field_U[param1] & 2) != 0) {
-          var4 = (hg) (this.field_Q.field_m.a((byte) 51));
+          var4 = (hg) (this.field_Q.field_m.beginBackward((byte) 51));
           while (var4 != null) {
             if (param1 == var4.field_z) {
               if (null != this.field_p[param1][var4.field_o]) {
-                var4 = (hg) (this.field_Q.field_m.b(-50));
+                var4 = (hg) (this.field_Q.field_m.nextBackward(-50));
                 continue;
               }
               if (0 > var4.field_k) {
                 var4.field_k = 0;
               }
             }
-            var4 = (hg) (this.field_Q.field_m.b(-50));
+            var4 = (hg) (this.field_Q.field_m.nextBackward(-50));
           }
         }
     }
@@ -974,7 +974,7 @@ final class mf extends PcmStream {
         if (param0 != -32471) {
           return;
         }
-        var3 = (hg) (this.field_Q.field_m.a((byte) 51));
+        var3 = (hg) (this.field_Q.field_m.beginBackward((byte) 51));
         while (var3 != null) {
           if ((param1 < 0 ||
             param1 == var3.field_z) &&
@@ -982,7 +982,7 @@ final class mf extends PcmStream {
             this.field_p[var3.field_z][var3.field_o] = null;
             var3.field_k = 0;
           }
-          var3 = (hg) (this.field_Q.field_m.b(-29));
+          var3 = (hg) (this.field_Q.field_m.nextBackward(-29));
         }
     }
 
@@ -1000,12 +1000,12 @@ final class mf extends PcmStream {
           return;
         }
         if ((this.field_U[param1] & 4) != 0) {
-          var3 = (hg) (this.field_Q.field_m.a((byte) 51));
+          var3 = (hg) (this.field_Q.field_m.beginBackward((byte) 51));
           while (var3 != null) {
             if (param1 == var3.field_z) {
               var3.field_C = 0;
             }
-            var3 = (hg) (this.field_Q.field_m.b(-123));
+            var3 = (hg) (this.field_Q.field_m.nextBackward(-123));
           }
         }
     }
@@ -1042,7 +1042,7 @@ final class mf extends PcmStream {
           var6 = 32 / ((58 - param3) / 60);
           this.field_p[param1][param0] = null;
           if (0 != (this.field_U[param1] & 2)) {
-            var7 = (hg) (this.field_Q.field_m.a((byte) 51));
+            var7 = (hg) (this.field_Q.field_m.beginBackward((byte) 51));
             while (var7 != null) {
               if (var7.field_z == var9.field_z &&
                 var7.field_k < 0 &&
@@ -1050,7 +1050,7 @@ final class mf extends PcmStream {
                 var9.field_k = 0;
                 break;
               }
-              var7 = (hg) (this.field_Q.field_m.b(-55));
+              var7 = (hg) (this.field_Q.field_m.nextBackward(-55));
             }
           } else {
             var9.field_k = 0;

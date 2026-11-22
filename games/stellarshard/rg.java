@@ -37,7 +37,7 @@ class rg extends ig {
     private final ja b(int param0, int param1, int param2) {
         ja var5 = null;
         int var6 = stellarshard.field_B;
-        ja var4 = (ja) (this.field_H.b(-127));
+        ja var4 = (ja) (this.field_H.beginForward(-127));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -48,7 +48,7 @@ class rg extends ig {
             }
             var5 = var5.field_p;
           }
-          var4 = (ja) (this.field_H.b((byte) -76));
+          var4 = (ja) (this.field_H.nextForward((byte) -76));
         }
         if (param1 < -122) {
           return null;

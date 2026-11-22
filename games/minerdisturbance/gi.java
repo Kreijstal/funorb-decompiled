@@ -56,18 +56,18 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2_ref = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          var4 = (hf) (kk.field_a.b(96));
+          var4 = (hf) (kk.field_a.beginForward(96));
           while (var4 != null) {
             ag.a(var4, param1, param0 - 195);
-            var4 = (hf) (kk.field_a.b((byte) 56));
+            var4 = (hf) (kk.field_a.nextForward((byte) 56));
           }
           if (param0 != 85) {
             gi.a(-40, 0);
           }
-          var2 = ag.field_b.b(param0 - 8);
+          var2 = ag.field_b.beginForward(param0 - 8);
           while (var2 != null) {
             ca.a(param1, 1);
-            var2 = ag.field_b.b((byte) 56);
+            var2 = ag.field_b.nextForward((byte) 56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

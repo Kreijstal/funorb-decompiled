@@ -85,11 +85,11 @@ final class wea extends AnimationNode {
           }
           return false;
         }
-        var2_ref_bf = (bf) (this.field_l.field_m.b((byte) 90));
+        var2_ref_bf = (bf) (this.field_l.field_m.beginForward((byte) 90));
         while (var2_ref_bf != null) {
           if (!(var2_ref_bf instanceof qja)) {
             if (!(var2_ref_bf instanceof dla)) {
-              var2_ref_bf = (bf) (this.field_l.field_m.c(0));
+              var2_ref_bf = (bf) (this.field_l.field_m.nextForward(0));
               continue;
             }
             var6 = ((dla) (var2_ref_bf)).field_n.a(-27449, this.field_j);
@@ -104,7 +104,7 @@ final class wea extends AnimationNode {
               var5.b(-1, 7);
             }
           }
-          var2_ref_bf = (bf) (this.field_l.field_m.c(0));
+          var2_ref_bf = (bf) (this.field_l.field_m.nextForward(0));
         }
         var2Lifetime1 = -45 % ((param0 - 71) / 47);
         fieldTemp$0 = this.field_k - 1;

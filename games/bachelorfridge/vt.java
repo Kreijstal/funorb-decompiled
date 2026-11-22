@@ -130,7 +130,7 @@ final class vt extends tia {
           var9Lifetime1 = stackIn_44_0;
           var10 = param0.field_vb.children;
           var11 = null;
-          var12 = (ema) (var10.b((byte) 90));
+          var12 = (ema) (var10.beginForward((byte) 90));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
@@ -457,7 +457,7 @@ final class vt extends tia {
                 jja.field_m = (String) (var24Lifetime2);
               }
             }
-            var12 = (ema) (var10.c(0));
+            var12 = (ema) (var10.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,17 +507,17 @@ final class vt extends tia {
         int fieldTemp$1 = this.field_g - 1;
         this.field_g = this.field_g - 1;
         if ((fieldTemp$1 & 31) == 0) {
-          this.field_j.a(new b(), true);
+          this.field_j.addLast(new b(), true);
         }
         if (param0 >= 0) {
           field_l = (int[]) null;
         }
-        var4 = (b) (this.field_j.b((byte) 90));
+        var4 = (b) (this.field_j.beginForward((byte) 90));
         while (var4 != null) {
           var4.b(true);
-          var4 = (b) (this.field_j.c(0));
+          var4 = (b) (this.field_j.nextForward(0));
         }
-        stackIn_12_0 = !(this.field_g <= 0) || (this.field_j.e(12917));
+        stackIn_12_0 = !(this.field_g <= 0) || (this.field_j.isEmpty(12917));
         return stackIn_12_0;
     }
 
@@ -526,10 +526,10 @@ final class vt extends tia {
         if (param1 != 25415) {
           vt.releaseStatics(-62);
         }
-        b var4 = (b) (this.field_j.b((byte) 90));
+        b var4 = (b) (this.field_j.beginForward((byte) 90));
         while (var4 != null) {
           this.field_i[var4.field_s].a(param2 + (var4.field_i >> 3), -32 + ((var4.field_q >> 3) + (var4.field_h >> 3)) + (param0 - 64), var4.field_o);
-          var4 = (b) (this.field_j.c(0));
+          var4 = (b) (this.field_j.nextForward(0));
         }
     }
 

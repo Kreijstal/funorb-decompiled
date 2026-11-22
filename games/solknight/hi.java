@@ -129,18 +129,18 @@ final class hi {
         RuntimeException var2_ref = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (bl) (m.field_h.a((byte) 51));
+          var4 = (bl) (m.field_h.beginBackward((byte) 51));
           while (var4 != null) {
             la.a(0, param0, var4);
-            var4 = (bl) (m.field_h.b(param1 ^ 5819));
+            var4 = (bl) (m.field_h.nextBackward(param1 ^ 5819));
           }
           if (param1 != -5887) {
             return;
           }
-          var2 = kh.field_a.a((byte) 51);
+          var2 = kh.field_a.beginBackward((byte) 51);
           while (var2 != null) {
             v.a(param1 ^ -5885, param0);
-            var2 = kh.field_a.b(-57);
+            var2 = kh.field_a.nextBackward(-57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

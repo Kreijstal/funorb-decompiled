@@ -369,10 +369,10 @@ final class wc {
           var14 = WordLanguage.field_l;
           var16 = var14;
           var2 = var16.readUnsignedByte((byte) 108);
-          var3 = (ng) (kf.field_o.a((byte) -95));
+          var3 = (ng) (kf.field_o.beginForward((byte) -95));
           while (var3 != null) {
             if (var2 != var3.field_m) {
-              var3 = (ng) (kf.field_o.a(true));
+              var3 = (ng) (kf.field_o.nextForward(true));
               continue;
             }
             break;

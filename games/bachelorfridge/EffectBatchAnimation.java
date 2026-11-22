@@ -19,14 +19,14 @@ final class EffectBatchAnimation extends AnimationNode {
         if (0 < fieldTemp$0) {
           return false;
         }
-        var2 = (EventEffect) (this.field_j.field_m.b((byte) 90));
+        var2 = (EventEffect) (this.field_j.field_m.beginForward((byte) 90));
         while (true) {
           if (var2 == null) {
             var3 = -99 % ((param0 - 71) / 47);
             return true;
           }
           if (null == var2.target) {
-            var2 = (EventEffect) (this.field_j.field_m.c(0));
+            var2 = (EventEffect) (this.field_j.field_m.nextForward(0));
             continue;
           }
           var3_ref_ad = var2.target.a(-27449, this.field_l);
@@ -46,7 +46,7 @@ final class EffectBatchAnimation extends AnimationNode {
                   if (0 >= var2.field_f) {
                     if (var2 instanceof lia) {
                       if (-1 == ((lia) (var2)).field_k) {
-                        var2 = (EventEffect) (this.field_j.field_m.c(0));
+                        var2 = (EventEffect) (this.field_j.field_m.nextForward(0));
                         continue;
                       }
                       var3_ref_ad.a(24831, 17, kna.field_g[((lia) (var2)).field_k]);
@@ -62,7 +62,7 @@ final class EffectBatchAnimation extends AnimationNode {
               var3_ref_ad.a(65280, 63, hs.field_c);
             }
           }
-          var2 = (EventEffect) (this.field_j.field_m.c(0));
+          var2 = (EventEffect) (this.field_j.field_m.nextForward(0));
         }
     }
 

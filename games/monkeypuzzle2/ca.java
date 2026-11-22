@@ -47,7 +47,7 @@ final class ca extends rf {
           }
           if (this.field_d) {
             var2_int = 1;
-            var3 = this.field_h.a((byte) -117);
+            var3 = this.field_h.beginBackward((byte) -117);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_s[var4] == 0) {
@@ -58,7 +58,7 @@ final class ca extends rf {
               } else {
                 var3.unlink(-19822);
               }
-              var3 = this.field_h.d((byte) 63);
+              var3 = this.field_h.nextBackward((byte) 63);
             }
             scanLoop1: while (true) {
               if (this.field_c.field_m.length > this.field_l) {
@@ -74,7 +74,7 @@ final class ca extends rf {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_l;
                     var2_int = 0;
-                    this.field_h.a(-8212, var6);
+                    this.field_h.addFirst(-8212, var6);
                   }
                 }
                 this.field_l = this.field_l + 1;
@@ -91,7 +91,7 @@ final class ca extends rf {
           else {
             if (this.field_m) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_h.a((byte) -117);
+              var3Lifetime1 = this.field_h.beginBackward((byte) -117);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_s[var4Lifetime1]) {
@@ -102,7 +102,7 @@ final class ca extends rf {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_h.d((byte) 63);
+                var3Lifetime1 = this.field_h.nextBackward((byte) 63);
               }
               while (this.field_l < this.field_c.field_m.length) {
                 if (this.field_c.field_m[this.field_l] == 0) {
@@ -117,7 +117,7 @@ final class ca extends rf {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_l;
                     var2_intLifetime1 = 0;
-                    this.field_h.a(-8212, var7);
+                    this.field_h.addFirst(-8212, var7);
                   }
                   this.field_l = this.field_l + 1;
                   continue;
@@ -642,7 +642,7 @@ final class ca extends rf {
         if (null == this.a((byte) 53)) {
           return;
         }
-        var2 = this.field_j.a((byte) -117);
+        var2 = this.field_j.beginBackward((byte) -117);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 >= 0) {
@@ -666,7 +666,7 @@ final class ca extends rf {
           } else {
             var2.unlink(-19822);
           }
-          var2 = this.field_j.d((byte) 63);
+          var2 = this.field_j.nextBackward((byte) 63);
         }
     }
 

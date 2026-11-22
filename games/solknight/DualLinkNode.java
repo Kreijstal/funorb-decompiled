@@ -105,7 +105,7 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (di) (ga.field_E.a((byte) 51));
+          var4 = (di) (ga.field_E.beginBackward((byte) 51));
           var1 = var4;
           if (var1 == null) {
             return false;

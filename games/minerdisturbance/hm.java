@@ -48,7 +48,7 @@ final class hm extends jc {
             this.n(31);
           }
           var3 = (cc) (param1);
-          this.field_K.a(var3, 27862);
+          this.field_K.addFirst(var3, 27862);
           var3.field_K = true;
           var3.a((fe) (this), 127);
         } catch (RuntimeException runtimeException) {

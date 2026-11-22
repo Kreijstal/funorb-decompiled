@@ -88,7 +88,7 @@ final class ShuffleSpecial extends SpecialOrder {
             var10Lifetime1 = var14;
             while (var14 < 7) {
               if (this.a(param0.rosters[var9Lifetime1].field_b[var14], -8, param0)) {
-                var4.effects.a(new PlaceCreatureEffect(new CreatureRef(param0.rosters[var9Lifetime1].field_b[var14]), var5[var19[var6Lifetime1]][0], var5[var19[var6Lifetime1]][1]), true);
+                var4.effects.addLast(new PlaceCreatureEffect(new CreatureRef(param0.rosters[var9Lifetime1].field_b[var14]), var5[var19[var6Lifetime1]][0], var5[var19[var6Lifetime1]][1]), true);
                 var6Lifetime1++;
               }
               var14++;

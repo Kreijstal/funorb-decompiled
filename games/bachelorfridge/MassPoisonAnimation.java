@@ -22,14 +22,14 @@ final class MassPoisonAnimation extends EventAnimation {
           this.isFinished((byte) -34);
           var7 = this.field_v.creature.a(98, this.screen.field_h);
           if (!var7.isDown(-123)) {
-            var3_ref = (DamageEffect) (this.field_v.effects.b((byte) 90));
+            var3_ref = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
             al.a(param0 + 106, this.field_v.moveId);
             while (var3_ref != null) {
               var3_ref.apply(var7, this.screen.field_h, 12);
               var8 = var3_ref.target.a(param0 - 27450, this.screen);
               var8.b(-1, 6);
               var8.a(24831, param0 ^ 98, kna.field_g[1]);
-              var3_ref = (DamageEffect) (this.field_v.effects.c(param0 ^ 1));
+              var3_ref = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 1));
             }
             return;
           }
@@ -37,14 +37,14 @@ final class MassPoisonAnimation extends EventAnimation {
         }
         BattleCreature var9 = this.field_v.creature.a(98, this.screen.field_h);
         if (!var9.isDown(-123)) {
-          var3_refLifetime1 = (DamageEffect) (this.field_v.effects.b((byte) 90));
+          var3_refLifetime1 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(param0 + 106, this.field_v.moveId);
           while (var3_refLifetime1 != null) {
             var3_refLifetime1.apply(var9, this.screen.field_h, 12);
             var10 = var3_refLifetime1.target.a(param0 - 27450, this.screen);
             var10.b(-1, 6);
             var10.a(24831, param0 ^ 98, kna.field_g[1]);
-            var3_refLifetime1 = (DamageEffect) (this.field_v.effects.c(param0 ^ 1));
+            var3_refLifetime1 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 1));
           }
           return;
         }

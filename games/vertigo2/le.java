@@ -58,7 +58,7 @@ final class le {
           var2 = var9.readUnsignedByte(-11);
           var3 = var9.readUnsignedByte(-11);
           if (var2 == 0) {
-            var4 = (be) (mb.field_v.a((byte) 100));
+            var4 = (be) (mb.field_v.beginBackward((byte) 100));
             if (var4 == null) {
               rm.b((byte) -79);
               return;
@@ -83,11 +83,11 @@ final class le {
             return;
           }
           var4_int = var9.readSignedSmart(-3084);
-          var5_ref_ub = (ub) (ob.field_Q.a((byte) 100));
+          var5_ref_ub = (ub) (ob.field_Q.beginBackward((byte) 100));
           while (var5_ref_ub != null) {
             if (var5_ref_ub.field_u != var3 ||
               var4_int != var5_ref_ub.field_q) {
-              var5_ref_ub = (ub) (ob.field_Q.b(82));
+              var5_ref_ub = (ub) (ob.field_Q.nextBackward(82));
               continue;
             }
             break;

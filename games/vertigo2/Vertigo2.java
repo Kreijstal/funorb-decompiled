@@ -1274,7 +1274,7 @@ public final class Vertigo2 extends GameShell {
             !lc.field_d) {
             ff.a(m.h(-124), 11182);
           }
-          var4 = (fa) (bg.field_b.a((byte) 100));
+          var4 = (fa) (bg.field_b.beginBackward((byte) 100));
           if (var4 != null) {
             var6 = oa.field_l;
             if (var6 < 80) {
@@ -1814,7 +1814,7 @@ public final class Vertigo2 extends GameShell {
             var7 = -(sg.field_e * sg.field_e) + var6_int;
             var8 = mk.field_E + 120 * var7 / var6_int;
             jf.c(var8, 91);
-            if (bg.field_b.a((byte) 100) != null) {
+            if (bg.field_b.beginBackward((byte) 100) != null) {
               fieldTemp$0 = oa.field_l + 1;
               oa.field_l = oa.field_l + 1;
               if (335 == fieldTemp$0) {

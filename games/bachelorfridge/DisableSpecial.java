@@ -128,7 +128,7 @@ final class DisableSpecial extends SpecialOrder {
           var5 = new DisableEvent(this.moveId, new CreatureRef(var3), this.field_j);
           var6 = var4.c(param1 ^ 119);
           var7 = DiveBomberAnimation.a(var6, param0.field_w, param1 + 2147483645);
-          var5.effects.a(new ela(new CreatureRef(var4), var7), true);
+          var5.effects.addLast(new ela(new CreatureRef(var4), var7), true);
           stackIn_7_0 = var5;
           return (CreatureEvent) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

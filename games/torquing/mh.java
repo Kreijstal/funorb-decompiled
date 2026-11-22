@@ -751,14 +751,14 @@ final class mh {
         int[] var21 = null;
         int[] var22 = null;
         var16 = Torquing.field_u;
-        var3 = (Sprite) (wk.field_a.b(0));
+        var3 = (Sprite) (wk.field_a.beginBackward(0));
         while (var3 != null) {
           if (~(-var3.field_t + var3.field_u) == ~param1) {
             var3.unlink(0);
-            wk.field_a.b((byte) 68, var3);
+            wk.field_a.addLast((byte) 68, var3);
             return var3;
           }
-          var3 = (Sprite) (wk.field_a.f(-24059));
+          var3 = (Sprite) (wk.field_a.nextBackward(-24059));
           if (var16 == 0) {
             continue;
           }
@@ -840,11 +840,11 @@ final class mh {
         var14 = 0;
         do {
           if (var20.length <= var14) {
-            if (wk.field_a.a(false) > 2) {
-              wk.field_a.b((byte) 108);
+            if (wk.field_a.size(false) > 2) {
+              wk.field_a.removeFirst((byte) 108);
             }
             var6.field_u = param1 + var6.field_t;
-            wk.field_a.b((byte) 68, var6);
+            wk.field_a.addLast((byte) 68, var6);
             SoftwareRasterizer.a(var22, var4, var5);
             SoftwareRasterizer.a();
             be.a(0, 0, param0, 480);

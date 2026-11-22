@@ -9,11 +9,11 @@ final class re {
     static String field_e;
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_a.field_b.previous;
+        IntrusiveNode var2 = this.field_a.sentinel.previous;
         if (param0 < 21) {
           field_d = (double[]) null;
         }
-        if (this.field_a.field_b == var2) {
+        if (this.field_a.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -34,12 +34,12 @@ final class re {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_a.field_b.previous;
+            var3 = this.field_a.sentinel.previous;
           }
           if (param0 != 13771) {
             this.a(-112);
           }
-          if (this.field_a.field_b != var3) {
+          if (this.field_a.sentinel != var3) {
             this.field_b = var3.previous;
             stackIn_9_0 = var3;
             return stackIn_9_0;
@@ -237,7 +237,7 @@ final class re {
           return (IntrusiveNode) null;
         }
         IntrusiveNode var2 = this.field_b;
-        if (this.field_a.field_b == var2) {
+        if (this.field_a.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -246,8 +246,8 @@ final class re {
     }
 
     final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_a.field_b.next;
-        if (this.field_a.field_b == var2) {
+        IntrusiveNode var2 = this.field_a.sentinel.next;
+        if (this.field_a.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -268,7 +268,7 @@ final class re {
 
     final IntrusiveNode b(boolean param0) {
         IntrusiveNode var2 = this.field_b;
-        if (this.field_a.field_b == var2) {
+        if (this.field_a.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -290,11 +290,11 @@ final class re {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_a.field_b.next;
+            var3 = this.field_a.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (this.field_a.field_b == var3) {
+          if (this.field_a.sentinel == var3) {
             this.field_b = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);

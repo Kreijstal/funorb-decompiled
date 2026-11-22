@@ -15,7 +15,7 @@ final class mk extends IntrusiveNode {
         int var1;
         int var2;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (mb.field_e.a((byte) -117) == null) {
+        if (mb.field_e.beginBackward((byte) -117) == null) {
           if (param0 > 125) {
             return;
           }
@@ -57,7 +57,7 @@ final class mk extends IntrusiveNode {
         fieldTemp$1 = em.field_B;
         em.field_B = em.field_B + 1;
         if (480 < fieldTemp$1) {
-          mb.field_e.d(4011);
+          mb.field_e.removeLast(4011);
           ke.b(8192);
         }
         if (param0 > 125) {

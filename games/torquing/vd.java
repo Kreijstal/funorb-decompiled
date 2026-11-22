@@ -143,7 +143,7 @@ final class vd {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -65);
             }
-            var14 = (nh) (to.field_q.b(0));
+            var14 = (nh) (to.field_q.beginBackward(0));
             if (var14 == null) {
               ih.b(true);
               return;
@@ -159,7 +159,7 @@ final class vd {
               nn.a("A1: " + ArchiveSource.a(-1), (Throwable) null, param0 - 37870);
               ih.b(true);
             } else {
-              var15 = (nh) (to.field_q.b(param0 - 27912));
+              var15 = (nh) (to.field_q.beginBackward(param0 - 27912));
               if (var15 == null) {
                 ih.b(true);
                 return;
@@ -170,7 +170,7 @@ final class vd {
               var15.unlink(0);
             }
           } else {
-            var11 = (qp) (tl.field_p.b(0));
+            var11 = (qp) (tl.field_p.beginBackward(0));
             if (var11 == null) {
               ih.b(true);
               return;

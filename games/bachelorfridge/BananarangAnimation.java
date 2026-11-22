@@ -175,12 +175,12 @@ final class BananarangAnimation extends EventAnimation {
     private final void f(int param0) {
         if (param0 > -98) {
           this.field_R = (CreatureActor) null;
-          if (!this.field_B.effects.e(12917)) {
+          if (!this.field_B.effects.isEmpty(12917)) {
             throw new IllegalStateException();
           }
           return;
         }
-        if (!this.field_B.effects.e(12917)) {
+        if (!this.field_B.effects.isEmpty(12917)) {
           throw new IllegalStateException();
         }
     }
@@ -201,7 +201,7 @@ final class BananarangAnimation extends EventAnimation {
             var9 = (IntrusiveDeque) null;
             BananarangAnimation.a((IntrusiveDeque) null, true, 50, 90, 110, 28);
           }
-          var6 = (rea) (param0.b((byte) 90));
+          var6 = (rea) (param0.beginForward((byte) 90));
           while (var6 != null) {
             var7 = (326565 * (int)var6.field_j + 8357 * (int)var6.field_m & 630) + (var6.field_n >> 1);
             param2 = var6.field_i;
@@ -210,7 +210,7 @@ final class BananarangAnimation extends EventAnimation {
             }
             SoftwareRasterizer.d(((int)var6.field_m * param5 >> 16) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 16), 5, param2);
             SoftwareRasterizer.fillCircleAlpha(param3 + (int)var6.field_m, (int)var6.field_l + param4 - 2, (-var6.field_n + 128) / 12, param2, 256 - var7 >> 3);
-            var6 = (rea) (param0.c(0));
+            var6 = (rea) (param0.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

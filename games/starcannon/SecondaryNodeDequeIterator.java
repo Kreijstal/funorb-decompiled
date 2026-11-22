@@ -89,7 +89,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_e.field_f != this.field_i;
+        return this.field_e.sentinel != this.field_i;
     }
 
     public static void d(int param0) {
@@ -121,7 +121,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.field_i;
-        if (var1 != this.field_e.field_f) {
+        if (var1 != this.field_e.sentinel) {
           this.field_i = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_i = null;
@@ -136,7 +136,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_e = param0;
           this.field_f = null;
-          this.field_i = this.field_e.field_f.secondaryNext;
+          this.field_i = this.field_e.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

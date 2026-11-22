@@ -143,7 +143,7 @@ final class wc extends IntrusiveNode {
 
     final static void a(qp param0, byte param1, int param2) {
         try {
-          tl.field_p.a((byte) 54, param0);
+          tl.field_p.addFirst((byte) 54, param0);
           if (param1 != 99) {
             field_s = (String) null;
           }

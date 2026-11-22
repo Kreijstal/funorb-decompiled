@@ -333,7 +333,7 @@ class ii extends lm implements aa {
             lm var4 = (lm) null;
             this.a((lm) null, -107, -45, -50, -10, (byte) -60, -91);
           }
-          this.field_B.a(param1, false);
+          this.field_B.addFirst(param1, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ii.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -374,7 +374,7 @@ class ii extends lm implements aa {
         RuntimeException decompiledCaughtException = null;
         var7 = DungeonAssault.field_K;
         try {
-          if (this.field_B.a((byte) -71)) {
+          if (this.field_B.isEmpty((byte) -71)) {
             return false;
           }
           var8 = new dj(this.field_B);
@@ -556,7 +556,7 @@ class ii extends lm implements aa {
         RuntimeException decompiledCaughtException = null;
         var7 = DungeonAssault.field_K;
         try {
-          if (this.field_B.a((byte) -70)) {
+          if (this.field_B.isEmpty((byte) -70)) {
             return false;
           }
           var8 = new dj(this.field_B);

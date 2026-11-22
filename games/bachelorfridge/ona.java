@@ -127,8 +127,8 @@ final class ona extends UiComponent {
           this.field_wb = param0;
           this.field_sb = 39;
           if (cc.field_b.children != null) {
-            this.field_kb = cc.field_b.children.g(0) % 4 * 39;
-            this.field_rb = 39 * (cc.field_b.children.g(0) / 4);
+            this.field_kb = cc.field_b.children.countWithOffset(0) % 4 * 39;
+            this.field_rb = 39 * (cc.field_b.children.countWithOffset(0) / 4);
           }
           this.field_zb = param2;
         } catch (RuntimeException runtimeException) {

@@ -8,17 +8,17 @@ final class au {
 
     final static ne a(int param0, int param1, int param2, int param3) {
         int var5 = BachelorFridge.field_y;
-        ne var4 = (ne) (rg.field_f.b((byte) 90));
+        ne var4 = (ne) (rg.field_f.beginForward((byte) 90));
         while (var4 != null) {
           if (~param2 == ~var4.field_o) {
             return var4;
           }
-          var4 = (ne) (rg.field_f.c(0));
+          var4 = (ne) (rg.field_f.nextForward(0));
         }
         var4 = new ne();
         var4.field_o = param2;
         var4.field_i = param3;
-        rg.field_f.a(var4, true);
+        rg.field_f.addLast(var4, true);
         kja.a(param0, (byte) 21, var4);
         if (param1 == 16757) {
           return var4;

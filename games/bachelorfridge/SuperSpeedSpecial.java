@@ -13,7 +13,7 @@ final class SuperSpeedSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (fka) (AirstrikeAnimation.field_z.b((byte) 90));
+          var4 = (fka) (AirstrikeAnimation.field_z.beginForward((byte) 90));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -54,7 +54,7 @@ final class SuperSpeedSpecial extends SpecialOrder {
           if (param1 != 3) {
             SuperSpeedSpecial.c(-1);
           }
-          var4.effects.a(new DamageEffect(new CreatureRef(var3), false, 1, 0, 28), true);
+          var4.effects.addLast(new DamageEffect(new CreatureRef(var3), false, 1, 0, 28), true);
           stackIn_3_0 = var4;
           return (CreatureEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

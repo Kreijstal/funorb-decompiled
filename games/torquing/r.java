@@ -71,7 +71,7 @@ final class r {
     }
 
     final static void a(int param0) {
-        bg var1 = (bg) (bf.field_a.b((byte) 42));
+        bg var1 = (bg) (bf.field_a.removeFirst((byte) 42));
         if (param0 <= 120) {
           field_b = (byte[]) null;
           if (var1 == null) {
@@ -80,7 +80,7 @@ final class r {
           SoftwareRasterizer.a(var1.field_p, var1.field_l, var1.field_q);
           SoftwareRasterizer.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
           var1.field_p = null;
-          rf.field_t.a((byte) 54, var1);
+          rf.field_t.addFirst((byte) 54, var1);
           return;
         }
         if (var1 == null) {
@@ -89,7 +89,7 @@ final class r {
         SoftwareRasterizer.a(var1.field_p, var1.field_l, var1.field_q);
         SoftwareRasterizer.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
         var1.field_p = null;
-        rf.field_t.a((byte) 54, var1);
+        rf.field_t.addFirst((byte) 54, var1);
     }
 
     static {

@@ -146,7 +146,7 @@ class ml extends va {
           var22 = null;
           var12 = Vertigo2.field_L ? 1 : 0;
           try {
-            var13 = (oc) (mg.field_N.a((byte) 100));
+            var13 = (oc) (mg.field_N.beginBackward((byte) 100));
             var17 = var13;
             if (var17 == null) {
               return;

@@ -909,8 +909,8 @@ final class BattleCreature extends CreatureProfile {
             param1.a(new ns(new CreatureRef(this)), (byte) 75);
             this.battle.field_R = false;
           }
-          if (var6.field_m.g(0) > 0) {
-            param2.a(var6, true);
+          if (var6.field_m.countWithOffset(0) > 0) {
+            param2.addLast(var6, true);
           }
           var6.apply(this.battle, false);
           return;
@@ -1115,7 +1115,7 @@ final class BattleCreature extends CreatureProfile {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
-          var4 = (rea) (param2.b((byte) 90));
+          var4 = (rea) (param2.beginForward((byte) 90));
           if (!param1) {
             return;
           }
@@ -1131,7 +1131,7 @@ final class BattleCreature extends CreatureProfile {
               var4.field_l = var4.field_l + var4.field_o;
               DiveBomberAnimation.a(50, param0, -2147483648);
             }
-            var4 = (rea) (param2.c(0));
+            var4 = (rea) (param2.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

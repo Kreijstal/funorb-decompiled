@@ -324,7 +324,7 @@ abstract class rj extends IntrusiveNode {
         this.field_t = param0;
         this.field_u = null;
         this.field_v = param2;
-        rl.field_h.b((IntrusiveNode) (this), false);
+        rl.field_h.addLast((IntrusiveNode) (this), false);
     }
 
     static {

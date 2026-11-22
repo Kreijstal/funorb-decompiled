@@ -61,12 +61,12 @@ abstract class EventAnimation extends AnimationNode {
           if (param3 != 0) {
             field_o = (String[]) null;
           }
-          var5 = (EventEffect) (this.event.effects.b((byte) 90));
+          var5 = (EventEffect) (this.event.effects.beginForward((byte) 90));
           while (var5 != null) {
             if (!(var5 instanceof DamageEffect)) {
               if (!(var5 instanceof DamageTileEffect)) {
                 if (!(var5 instanceof bm)) {
-                  var5 = (EventEffect) (this.event.effects.c(0));
+                  var5 = (EventEffect) (this.event.effects.nextForward(0));
                   continue;
                 }
                 var12 = (bm) (var5);
@@ -103,7 +103,7 @@ abstract class EventAnimation extends AnimationNode {
                 return;
               }
             }
-            var5 = (EventEffect) (this.event.effects.c(0));
+            var5 = (EventEffect) (this.event.effects.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

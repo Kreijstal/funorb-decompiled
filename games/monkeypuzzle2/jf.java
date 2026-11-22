@@ -25,12 +25,12 @@ final class jf extends IntrusiveNode {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var1_int = param0;
-          var2 = (ki) (ok.field_a.a((byte) -117));
+          var2 = (ki) (ok.field_a.beginBackward((byte) -117));
           while (var2 != null) {
             if (var2.field_q - (float)var2.field_y > (float)var1_int) {
               var1_int = (int)((float)(-var2.field_y) + var2.field_q);
             }
-            var2 = (ki) (ok.field_a.d((byte) 63));
+            var2 = (ki) (ok.field_a.nextBackward((byte) 63));
           }
           stackIn_7_0 = var1_int;
           return stackIn_7_0;

@@ -159,16 +159,16 @@ final class ua {
         RuntimeException var2_ref = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5 = (gh) (mf.field_b.a((byte) -95));
+          var5 = (gh) (mf.field_b.beginForward((byte) -95));
           var3 = -73 / ((param0 - 80) / 36);
           while (var5 != null) {
             nb.a(param1, var5, 0);
-            var5 = (gh) (mf.field_b.a(true));
+            var5 = (gh) (mf.field_b.nextForward(true));
           }
-          var2 = pj.field_A.a((byte) -95);
+          var2 = pj.field_A.beginForward((byte) -95);
           while (var2 != null) {
             ki.a(false, param1);
-            var2 = pj.field_A.a(true);
+            var2 = pj.field_A.nextForward(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,7 +351,7 @@ final class ua {
                 var18.field_k[var5] = -5;
               }
             }
-            SecondaryNodeDequeIterator.field_f.a(var18, param2 ^ 22577);
+            SecondaryNodeDequeIterator.field_f.addLast(var18, param2 ^ 22577);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

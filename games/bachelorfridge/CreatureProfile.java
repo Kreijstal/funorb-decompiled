@@ -79,12 +79,12 @@ class CreatureProfile extends IntrusiveNode {
 
     final boolean b(int param0, int param1) {
         int var4 = BachelorFridge.field_y;
-        ho var3 = (ho) (this.field_h.b((byte) 90));
+        ho var3 = (ho) (this.field_h.beginForward((byte) 90));
         while (var3 != null) {
           if (~param1 == ~var3.field_i) {
             return true;
           }
-          var3 = (ho) (this.field_h.c(0));
+          var3 = (ho) (this.field_h.nextForward(0));
         }
         if (param0 != 8) {
           this.field_p = (Random) null;
@@ -147,16 +147,16 @@ class CreatureProfile extends IntrusiveNode {
           param1.writeByte(this.field_o.field_b, 0);
           param1.writeInt((int)this.key, -1615464796);
           param1.writeByte(0, 0);
-          var3 = (ho) (this.field_h.b((byte) 90));
+          var3 = (ho) (this.field_h.beginForward((byte) 90));
           if (param0 >= -21) {
             var7 = (MoveDefinition) null;
             this.a((MoveDefinition) null, -19);
           }
-          param1.writeByte(this.field_h.g(0), 0);
+          param1.writeByte(this.field_h.countWithOffset(0), 0);
           while (var3 != null) {
             param1.writeByte(var3.field_h.field_b, 0);
             param1.writeByte(var3.field_i, 0);
-            var3 = (ho) (this.field_h.c(0));
+            var3 = (ho) (this.field_h.nextForward(0));
           }
           var4 = 1;
           for (var5 = 0; var5 < 13; var5++) {
@@ -271,11 +271,11 @@ class CreatureProfile extends IntrusiveNode {
           this.field_n = param0.field_n;
           this.field_q = param0.field_q;
           this.field_h = new IntrusiveDeque();
-          var2 = (ho) (param0.field_h.b((byte) 90));
+          var2 = (ho) (param0.field_h.beginForward((byte) 90));
           while (var2 != null) {
-            this.field_h.a(var2.c((byte) 68), true);
+            this.field_h.addLast(var2.c((byte) 68), true);
             this.field_g[var2.field_i * 3 - 2] = true;
-            var2 = (ho) (param0.field_h.c(0));
+            var2 = (ho) (param0.field_h.nextForward(0));
           }
           ArrayOperations.copy(param0.field_g, 0, this.field_g, 0, this.field_g.length);
           this.field_j = new int[param0.field_j.length];
@@ -355,7 +355,7 @@ class CreatureProfile extends IntrusiveNode {
           var3_int = param0.readUnsignedByte(16711935);
           this.field_h = new IntrusiveDeque();
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_h.a(new ho(fw.field_h[param0.readUnsignedByte(16711935)], param0.readUnsignedByte(16711935)), true);
+            this.field_h.addLast(new ho(fw.field_h[param0.readUnsignedByte(16711935)], param0.readUnsignedByte(16711935)), true);
           }
           var4Lifetime1 = param0.readUnsignedMedium(3);
           this.field_j = new int[rfa.a(param1, var4Lifetime1) + 1];
@@ -398,16 +398,16 @@ class CreatureProfile extends IntrusiveNode {
         int[] var7 = var8;
         int[] var2 = var7;
         ArrayOperations.a(var9, 0, 5, this.field_o.field_b);
-        int[] var3 = ug.field_l[this.field_h.g(0)];
+        int[] var3 = ug.field_l[this.field_h.countWithOffset(0)];
         if (param0 >= -8) {
           field_r = (String) null;
         }
-        ho var4 = (ho) (this.field_h.b((byte) 90));
+        ho var4 = (ho) (this.field_h.beginForward((byte) 90));
         int var5 = 1;
         while (var4 != null) {
           var7[var5] = var4.field_h.field_b;
           var5++;
-          var4 = (ho) (this.field_h.c(0));
+          var4 = (ho) (this.field_h.nextForward(0));
         }
         return new lna(var7[var3[0]], var7[var3[1]], var7[var3[2]], var7[var3[3]], var7[var3[4]], var7[var3[5]], var7[var3[6]], var7[var3[7]], var7[var3[8]], var7[var3[9]], var7[var3[10]]);
     }
@@ -437,15 +437,15 @@ class CreatureProfile extends IntrusiveNode {
               return false;
             }
             if (var4_int == 3 &&
-              this.field_h.g(0) < 1) {
+              this.field_h.countWithOffset(0) < 1) {
               return false;
             }
             if (var4_int == 4 &&
-              this.field_h.g(0) < 2) {
+              this.field_h.countWithOffset(0) < 2) {
               return false;
             }
             this.field_g[-2 + 3 * var4_int] = true;
-            this.field_h.a(new ho(param1, var4_int), true);
+            this.field_h.addLast(new ho(param1, var4_int), true);
             var5Lifetime1 = 3 * var4_int;
             this.field_i = var5Lifetime1;
           } else {

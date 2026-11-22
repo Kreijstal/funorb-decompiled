@@ -71,7 +71,7 @@ final class pk extends kl {
             for (var8 = 0; var7 > var8; var8++) {
               var10[var8] = ((PacketBuffer) ((Object) var6)).readInt(-111);
             }
-            var13 = (pe) (sf.field_c.e(-24172));
+            var13 = (pe) (sf.field_c.beginBackward(-24172));
             if (var13 != null) {
               var13.unlink(false);
               return;
@@ -80,7 +80,7 @@ final class pk extends kl {
             return;
           }
           if (1 == var2) {
-            var12 = (ak) (oh.field_j.e(-24172));
+            var12 = (ak) (oh.field_j.beginBackward(-24172));
             if (var12 != null) {
               var12.unlink(false);
               return;
@@ -93,7 +93,7 @@ final class pk extends kl {
             tl.a(-16);
             return;
           }
-          var14 = (pe) (sf.field_c.e(-24172));
+          var14 = (pe) (sf.field_c.beginBackward(-24172));
           if (var14 == null) {
             tl.a(-43);
             return;
@@ -207,8 +207,8 @@ final class pk extends kl {
           this.field_d = false;
           this.field_n = tn.a(-jm.field_i.field_y + (-10 + (this.field_a >> 1)) + this.field_k, this.field_i + (this.field_j - 16) - (jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -67, param2);
           this.field_s = tn.a(this.field_k - (-(this.field_a >> 1) - 10), -(jm.field_i.field_v >> 1) - 16 + (this.field_j + this.field_i), IntrusiveNode.field_c, jm.field_i, -93, param3);
-          this.field_f.a(this.field_n, false);
-          this.field_f.a(this.field_s, false);
+          this.field_f.addFirst(this.field_n, false);
+          this.field_f.addFirst(this.field_s, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

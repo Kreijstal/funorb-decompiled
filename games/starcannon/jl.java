@@ -911,8 +911,8 @@ final class jl {
                     DirectByteStorage.a(0, true);
                     jg.field_H = 0;
                     eb.field_c = 0;
-                    SecondaryNodeDeque.field_e.b(23505);
-                    pk.field_a.b(23505);
+                    SecondaryNodeDeque.field_e.clear(23505);
+                    pk.field_a.clear(23505);
                     mj.a(255, 12, 0, 12, 50);
                   }
                 }
@@ -980,12 +980,12 @@ final class jl {
               ie.field_C = 0;
               fi.field_e.field_u = 580;
               ha.field_d = 0;
-              var5_ref_bf = (bf) (kh.field_y.c(-3905));
+              var5_ref_bf = (bf) (kh.field_y.beginForward(-3905));
               while (var5_ref_bf != null) {
                 if (var5_ref_bf != fi.field_e) {
                   var5_ref_bf.unlink(4);
                 }
-                var5_ref_bf = (bf) (kh.field_y.a(-16913));
+                var5_ref_bf = (bf) (kh.field_y.nextForward(-16913));
               }
               for (var5 = 0; var5 < FullscreenFocusCanvas.field_c.length; var5++) {
                 FullscreenFocusCanvas.field_c[var5] = null;

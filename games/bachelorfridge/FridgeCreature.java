@@ -112,10 +112,10 @@ final class FridgeCreature extends IntrusiveNode {
         boolean discarded$1 = false;
         pv var2_ref_pv;
         int var2;
-        if (this.field_i.e(12917)) {
+        if (this.field_i.isEmpty(12917)) {
           discarded$1 = this.f(-4);
         } else {
-          var2_ref_pv = (pv) (this.field_i.b((byte) 90));
+          var2_ref_pv = (pv) (this.field_i.beginForward((byte) 90));
           if (var2_ref_pv.b(true)) {
             var2_ref_pv.unlink(false);
           }
@@ -197,12 +197,12 @@ final class FridgeCreature extends IntrusiveNode {
           return false;
         }
         if (this.field_o != null &&
-          !this.field_o.field_e.e(12917)) {
+          !this.field_o.field_e.isEmpty(12917)) {
           this.field_o.b((byte) 82);
           return true;
         }
         if (this.field_o != null && (this.field_o == null ||
-          !this.field_o.field_e.e(12917))) {
+          !this.field_o.field_e.isEmpty(12917))) {
           if (param0 != -4) {
             FridgeCreature.a(false, 33);
           }
@@ -210,12 +210,12 @@ final class FridgeCreature extends IntrusiveNode {
         }
         this.field_t = false;
         if (this.field_o != null &&
-          this.field_o.field_e.e(12917) &&
+          this.field_o.field_e.isEmpty(12917) &&
           null != this.field_m[this.field_u][this.field_l].field_f &&
           this.field_m[this.field_u][this.field_l].field_f.field_a &&
           this.field_g.a((byte) 77, this.field_m[this.field_u][this.field_l].field_f.field_d, ProxySocketConnector.field_f)) {
-          this.field_i.a(new vma(this, this.field_m[this.field_u][this.field_l].field_f), true);
-          this.field_i.a(new vu(this, true), true);
+          this.field_i.addLast(new vma(this, this.field_m[this.field_u][this.field_l].field_f), true);
+          this.field_i.addLast(new vu(this, true), true);
           this.field_y = -1;
           HailAnimation.a(this.field_m[this.field_u][this.field_l].field_f, this, 89);
           this.field_v = this.field_g.e((byte) -108);
@@ -228,9 +228,9 @@ final class FridgeCreature extends IntrusiveNode {
         if (-1 + this.field_m[0].length > this.field_l &&
           this.field_m[this.field_u][this.field_l].field_e == 0) {
           if (this.field_l < -1 + this.field_m[0].length) {
-            this.field_i.a(new laa(this, 39), true);
+            this.field_i.addLast(new laa(this, 39), true);
             if (0 != this.field_m[this.field_u][1 + this.field_l].field_e) {
-              this.field_i.a(new ni(this), true);
+              this.field_i.addLast(new ni(this), true);
             }
           }
           return true;
@@ -239,10 +239,10 @@ final class FridgeCreature extends IntrusiveNode {
           this.field_m[this.field_u][this.field_l].field_e == 2 &&
           var2 < 200) {
           if (this.field_l < -1 + this.field_m[0].length) {
-            this.field_i.a(new laa(this, 39), true);
+            this.field_i.addLast(new laa(this, 39), true);
           }
           if (0 != this.field_m[this.field_u][this.field_l + 1].field_e) {
-            this.field_i.a(new ni(this), true);
+            this.field_i.addLast(new ni(this), true);
           }
           return true;
         }
@@ -251,12 +251,12 @@ final class FridgeCreature extends IntrusiveNode {
           if (var2 < 250) {
             if (this.field_l > 2 &&
               this.field_m[this.field_u][-1 + this.field_l].field_e == 3) {
-              this.field_i.a(new qd(this, -78), true);
+              this.field_i.addLast(new qd(this, -78), true);
             }
           } else {
             if (this.field_l < this.field_m[0].length - 2 &&
               3 == this.field_m[this.field_u][1 + this.field_l].field_e) {
-              this.field_i.a(new qd(this, 78), true);
+              this.field_i.addLast(new qd(this, 78), true);
             }
           }
           return true;
@@ -264,28 +264,28 @@ final class FridgeCreature extends IntrusiveNode {
         if (this.field_u > 0 &&
           var2 < 550) {
           if (0 != this.field_m[this.field_u - 1][this.field_l].field_e) {
-            this.field_i.a(new aja(this, -56), true);
+            this.field_i.addLast(new aja(this, -56), true);
           }
           return true;
         }
         if (this.field_u < -1 + this.field_m.length &&
           800 > var2) {
           if (0 != this.field_m[this.field_u + 1][this.field_l].field_e) {
-            this.field_i.a(new aja(this, 56), true);
+            this.field_i.addLast(new aja(this, 56), true);
           }
           return true;
         }
         if (var2 >= 1200) {
           this.a(102);
           if (this.field_g.field_f != -1) {
-            this.field_i.a(new vu(this, false), true);
+            this.field_i.addLast(new vu(this, false), true);
           }
           return false;
         }
         if (var2 < 1000) {
-          this.field_i.a(new ia(this), true);
+          this.field_i.addLast(new ia(this), true);
         } else {
-          this.field_i.a(new uc(this), true);
+          this.field_i.addLast(new uc(this), true);
         }
         if (var2 < 1020) {
           this.field_y = this.b(124);
@@ -293,7 +293,7 @@ final class FridgeCreature extends IntrusiveNode {
         if (this.field_g.field_f == -1) {
           return true;
         }
-        this.field_i.a(new vu(this, false), true);
+        this.field_i.addLast(new vu(this, false), true);
         return true;
     }
 
@@ -406,8 +406,8 @@ final class FridgeCreature extends IntrusiveNode {
           DisableAnimation.field_v.draw(param1 + this.field_n + 10, this.field_k - 44);
           mq.field_b[this.field_y].draw(this.field_n + 23 + param1, this.field_k - 38);
         }
-        if (this.field_i.b((byte) 90) instanceof vu) {
-          var6 = (vu) (this.field_i.b((byte) 90));
+        if (this.field_i.beginForward((byte) 90) instanceof vu) {
+          var6 = (vu) (this.field_i.beginForward((byte) 90));
           var7 = var6;
           for (var4 = 0; var4 < var7.field_m.length; var4++) {
             if (var6.field_m[var4][2] <= 0) {

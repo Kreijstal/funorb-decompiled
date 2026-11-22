@@ -63,7 +63,7 @@ final class gd {
           var2 = var10.readUnsignedByte((byte) 114);
           var3 = var10.readUnsignedByte((byte) 114);
           if (0 == var2) {
-            var4_ref_bk = (bk) (wg.field_k.a((byte) -117));
+            var4_ref_bk = (bk) (wg.field_k.beginBackward((byte) -117));
             if (var4_ref_bk == null) {
               PacketBuffer.a(-1);
               return;
@@ -87,11 +87,11 @@ final class gd {
             return;
           }
           var4 = var10.readSignedSmart(-129);
-          var5 = (wf) (k.field_l.a((byte) -117));
+          var5 = (wf) (k.field_l.beginBackward((byte) -117));
           while (var5 != null) {
             if (var5.field_e != var3 ||
               var5.field_f != var4) {
-              var5 = (wf) (k.field_l.d((byte) 63));
+              var5 = (wf) (k.field_l.nextBackward((byte) 63));
               continue;
             }
             break;

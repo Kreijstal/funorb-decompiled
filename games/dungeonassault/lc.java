@@ -233,7 +233,7 @@ final class lc {
               return -1;
             }
             param0 = param0 + (ig.b(31131) - 94);
-            var3 = (hm) (nj.field_f.e(-24172));
+            var3 = (hm) (nj.field_f.beginBackward(-24172));
             while (var3 != null) {
               if (var3.field_o <= param0 &&
                 32 + var3.field_o >= param0 &&
@@ -242,7 +242,7 @@ final class lc {
                 stackIn_14_0 = var3.field_i;
                 return stackIn_14_0;
               }
-              var3 = (hm) (nj.field_f.a(4));
+              var3 = (hm) (nj.field_f.nextBackward(4));
             }
           }
           var3_intLifetime1 = 65 % ((47 - param1) / 58);

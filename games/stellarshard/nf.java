@@ -41,7 +41,7 @@ final class nf extends IntrusiveNode {
             return;
           }
           if (0 == var2) {
-            var3_ref_mk = (mk) (IntrusiveNode.field_b.b(-96));
+            var3_ref_mk = (mk) (IntrusiveNode.field_b.beginForward(-96));
             if (var3_ref_mk == null) {
               IntrusiveDeque.c(-2290);
               return;
@@ -67,10 +67,10 @@ final class nf extends IntrusiveNode {
             return;
           }
           var3 = var9.readInt(false);
-          var4 = (le) (fg.field_G.b(-90));
+          var4 = (le) (fg.field_G.beginForward(-90));
           while (var4 != null) {
             if (var4.field_o != var3) {
-              var4 = (le) (fg.field_G.b((byte) 81));
+              var4 = (le) (fg.field_G.nextForward((byte) 81));
               continue;
             }
             break;

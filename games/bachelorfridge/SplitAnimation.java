@@ -29,12 +29,12 @@ final class SplitAnimation extends EventAnimation {
           return;
         }
         this.screen.a(21915, this.screen.b(var2, -23990));
-        EventEffect var3 = (EventEffect) (this.field_y.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_y.effects.beginForward((byte) 90));
         al.a(88, this.field_y.moveId);
         int var4 = 96 / ((param0 + 68) / 50);
         while (var3 != null) {
           var3.apply(var2, this.screen.field_h, 12);
-          var3 = (EventEffect) (this.field_y.effects.c(0));
+          var3 = (EventEffect) (this.field_y.effects.nextForward(0));
         }
     }
 

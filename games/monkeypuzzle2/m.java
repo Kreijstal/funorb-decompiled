@@ -244,10 +244,10 @@ final class m extends IntrusiveNode {
           var13 = MonkeyPuzzle2.field_D;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) 114);
-          var3 = (m) (gi.field_l.a((byte) -117));
+          var3 = (m) (gi.field_l.beginBackward((byte) -117));
           while (var3 != null) {
             if (~var3.field_g != ~var2) {
-              var3 = (m) (gi.field_l.d((byte) 63));
+              var3 = (m) (gi.field_l.nextBackward((byte) 63));
               continue;
             }
             break;

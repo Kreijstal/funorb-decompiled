@@ -90,7 +90,7 @@ final class SnowSpecial extends SpecialOrder {
           var4 = new SnowEvent(this.moveId, new CreatureRef(var3));
           var4.field_r = this.field_k;
           var4.field_s = this.field_n;
-          var4.effects.a(new SnowEffect(), true);
+          var4.effects.addLast(new SnowEffect(), true);
           if (param1 != 3) {
             SnowSpecial.c((byte) 77);
           }
@@ -172,7 +172,7 @@ final class SnowSpecial extends SpecialOrder {
               fieldTemp$0 = bda.field_l;
               bda.field_l = bda.field_l + 1;
               var6.field_wb = fieldTemp$0;
-              HazmatAnimation.field_v.a(var6, true);
+              HazmatAnimation.field_v.addLast(var6, true);
             }
             var6.field_xb = var4_ref_String;
             var6.field_Cb = var5;
@@ -227,7 +227,7 @@ final class SnowSpecial extends SpecialOrder {
             fieldTemp$1 = SuperSpeedAnimation.field_v;
             SuperSpeedAnimation.field_v = SuperSpeedAnimation.field_v + 1;
             var6Lifetime1.field_wb = fieldTemp$1;
-            es.field_j.a(var6Lifetime1, true);
+            es.field_j.addLast(var6Lifetime1, true);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -236,7 +236,7 @@ final class SnowSpecial extends SpecialOrder {
           var6Lifetime1.field_Ab = var5Lifetime1;
           var6Lifetime1.field_xb = var4_ref_StringLifetime1;
           var6Lifetime1.unlink(false);
-          var7_ref = (nea) (es.field_j.b((byte) 90));
+          var7_ref = (nea) (es.field_j.beginForward((byte) 90));
           scanLoop1: while (true) {
             if (var7_ref != null) {
               stackOut_49_0 = re.a(param0 ^ -29797, var7_ref, var6Lifetime1);
@@ -246,12 +246,12 @@ final class SnowSpecial extends SpecialOrder {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (nea) (es.field_j.c(0));
+                var7_ref = (nea) (es.field_j.nextForward(0));
                 continue;
               }
             }
             if (var7_ref == null) {
-              es.field_j.a(var6Lifetime1, true);
+              es.field_j.addLast(var6Lifetime1, true);
               if (var9 == 0) {
                 return;
               }

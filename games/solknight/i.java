@@ -59,7 +59,7 @@ final class i extends si {
           }
           int var3_int = 63 % ((18 - param1) / 59);
           var4 = (kf) (param0);
-          this.field_L.a(-3024, var4);
+          this.field_L.addLast(-3024, var4);
           var4.field_J = true;
           var4.a(-1463, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {

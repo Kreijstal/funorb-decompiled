@@ -57,7 +57,7 @@ final class PetAttackEvent extends SpecialEvent {
             if (0 > var2_int) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_u = param0.readUnsignedByte(16711935);
           this.field_t = param0.readUnsignedByte(16711935);

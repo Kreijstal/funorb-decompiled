@@ -44,7 +44,7 @@ final class MoveInfoPanel {
         if (!this.field_m.a(var10.field_s, 2)) {
           return;
         }
-        var3 = (jj) (this.field_d.children.b((byte) 90));
+        var3 = (jj) (this.field_d.children.beginForward((byte) 90));
         var4 = 0;
         if (param0 <= 31) {
           field_n = (String) null;
@@ -105,7 +105,7 @@ final class MoveInfoPanel {
           } else {
             var3.field_vb = 0;
           }
-          var3 = (jj) (this.field_d.children.c(0));
+          var3 = (jj) (this.field_d.children.nextForward(0));
         }
         if (this.field_m.field_n != var10.field_s.ownerIndex) {
           this.field_l.field_kb = this.field_d.field_kb + 30;
@@ -253,7 +253,7 @@ final class MoveInfoPanel {
         } else {
           if (this.field_c == 0) {
             this.field_d.a(true, 7802);
-            var7 = this.field_d.children.g(0);
+            var7 = this.field_d.children.countWithOffset(0);
             if (var7 != 1) {
               switch (var7) {
                 case 2:
@@ -281,7 +281,7 @@ final class MoveInfoPanel {
               }
               CreatureActor.field_h.a(c.field_k[var25.field_s.statusId], this.field_d.field_kb + var8_int, var9 + this.field_d.field_rb, 2, -1);
             }
-            var8 = (jj) (this.field_d.children.b((byte) 90));
+            var8 = (jj) (this.field_d.children.beginForward((byte) 90));
             var9 = 0;
             var10 = this.field_m.b(var25, true);
             while (var8 != null) {
@@ -295,7 +295,7 @@ final class MoveInfoPanel {
                   if (al.a(-125, var8.field_zb).kind == 3) {
                     continue;
                   }
-                  var8 = (jj) (this.field_d.children.c(0));
+                  var8 = (jj) (this.field_d.children.nextForward(0));
                   continue;
                 }
                 var26 = al.a(116, var8.field_zb);
@@ -354,12 +354,12 @@ final class MoveInfoPanel {
                 if (al.a(-125, var8.field_zb).kind == 3) {
                   continue;
                 }
-                var8 = (jj) (this.field_d.children.c(0));
+                var8 = (jj) (this.field_d.children.nextForward(0));
                 continue;
               }
               break;
             }
-            var8 = (jj) (this.field_d.children.b((byte) 90));
+            var8 = (jj) (this.field_d.children.beginForward((byte) 90));
             while (var8 != null) {
               boolean decompiledFrameRemainder0 = true;
               var24 = al.a(-95, var8.field_zb);
@@ -496,10 +496,10 @@ final class MoveInfoPanel {
                 SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb + 6, 6 + (var8.field_rb + this.field_d.field_rb) + (var8.field_p >> 1), 65793, 4);
                 SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb + 1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 1) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
               }
-              var8 = (jj) (this.field_d.children.c(0));
+              var8 = (jj) (this.field_d.children.nextForward(0));
             }
             if (this.field_m.field_r) {
-              var8 = (jj) (this.field_d.children.b((byte) 90));
+              var8 = (jj) (this.field_d.children.beginForward((byte) 90));
               while (var8 != null) {
                 if (var8.field_T &&
                   50 < var8.field_vb) {
@@ -526,7 +526,7 @@ final class MoveInfoPanel {
                   }
                   bi.a(var13, var17 != 0, 20, var28, var14_int, var12, var15_int, var16 != 0, var25.field_s.a(var28, -5313));
                 }
-                var8 = (jj) (this.field_d.children.c(0));
+                var8 = (jj) (this.field_d.children.nextForward(0));
               }
               if (this.field_i.field_vb > 50 &&
                 this.field_i.field_T &&

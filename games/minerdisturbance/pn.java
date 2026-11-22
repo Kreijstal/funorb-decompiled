@@ -302,7 +302,7 @@ final class pn implements uj {
           wi.field_A.a("Press 'H' to close this screen", var3, var2, 16777215, -1);
           var2 = var2 + var1_int;
           var4 = var2;
-          var5 = (tc) (ii.field_b.b(80));
+          var5 = (tc) (ii.field_b.beginForward(80));
           while (var5 != null) {
             var7 = var5.field_q;
             if (var7 == 2) {
@@ -330,7 +330,7 @@ final class pn implements uj {
               var3 += 220;
               var2 = var4;
             }
-            var5 = (tc) (ii.field_b.b((byte) 56));
+            var5 = (tc) (ii.field_b.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -35,12 +35,12 @@ final class gd {
         Object var6 = var8.d((byte) 100);
         if (var6 != null) {
           if (!var8.e(1)) {
-            this.field_e.a(var8, 25184);
+            this.field_e.addLast(var8, 25184);
             var8.field_j = 0L;
           } else {
             var7 = new ej(var6, var8.field_p);
             this.field_b.put(var8.key, -1, var7);
-            this.field_e.a(var7, 25184);
+            this.field_e.addLast(var7, 25184);
             ((mi) ((Object) var7)).field_j = 0L;
             var8.unlink(4);
             var8.unlinkSecondary(-6242);
@@ -90,12 +90,12 @@ final class gd {
           }
           this.field_f = this.field_f - param3;
           while (this.field_f < 0) {
-            var6 = (mi) (this.field_e.b(-57));
+            var6 = (mi) (this.field_e.removeFirst(-57));
             this.a((byte) 23, var6);
           }
           var6_ref = new ej(param1, param3);
           this.field_b.put(param2, -1, var6_ref);
-          this.field_e.a(var6_ref, 25184);
+          this.field_e.addLast(var6_ref, 25184);
           ((mi) ((Object) var6_ref)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

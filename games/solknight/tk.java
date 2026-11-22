@@ -95,7 +95,7 @@ final class tk extends pe {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new qc(param1, param3, param0, param7, param5, param8, param2);
-          sb.field_c.a(var9, -7044);
+          sb.field_c.addFirst(var9, -7044);
           ah.a(false, param4, var9);
           if (param6 <= -89) {
             stackIn_4_0 = var9;

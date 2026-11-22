@@ -88,7 +88,7 @@ final class mh extends jk {
 
     final static void a(vl param0, int param1, int param2) {
         try {
-          ob.field_s.a(-8212, param0);
+          ob.field_s.addFirst(-8212, param0);
           pf.a((byte) -111, param0, param2);
           if (param1 != 0) {
             field_H = (String) null;

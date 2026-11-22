@@ -110,10 +110,10 @@ final class f {
         var4 = DungeonAssault.field_K;
         try {
           var2_int = -12 / ((param1 + 9) / 36);
-          var3 = (jd) (ta.field_f.e(-24172));
+          var3 = (jd) (ta.field_f.beginBackward(-24172));
           while (var3 != null) {
             o.a(param0, 62, var3);
-            var3 = (jd) (ta.field_f.a(4));
+            var3 = (jd) (ta.field_f.nextBackward(4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

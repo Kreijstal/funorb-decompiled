@@ -66,7 +66,7 @@ final class le {
           return;
         }
         try {
-          kc.field_z.a((byte) 54, param2);
+          kc.field_z.addFirst((byte) 54, param2);
           ii.a(32, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "le.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

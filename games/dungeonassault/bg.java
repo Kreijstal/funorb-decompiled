@@ -29,10 +29,10 @@ final class bg extends qe {
         gf.b();
         this.a(117, 122);
         this.a(20, 84, 117);
-        var8 = (rj) (this.field_p.e(-24172));
+        var8 = (rj) (this.field_p.beginBackward(-24172));
         while (var8 != null) {
           var8.a(126);
-          var8 = (rj) (this.field_p.a(4));
+          var8 = (rj) (this.field_p.nextBackward(4));
         }
         oe.field_m.h(24, 383);
         oe.field_m.j(560, 383);
@@ -42,10 +42,10 @@ final class bg extends qe {
         bg.e();
         this.field_r.d();
         this.field_w.d();
-        var7 = (rj) (this.field_p.e(-24172));
+        var7 = (rj) (this.field_p.beginBackward(-24172));
         while (var7 != null) {
           var7.d(0);
-          var7 = (rj) (this.field_p.a(4));
+          var7 = (rj) (this.field_p.nextBackward(4));
         }
         if (rb.field_N >= 0 &&
           ao.field_o > rb.field_N) {
@@ -257,11 +257,11 @@ final class bg extends qe {
           var2 = 0;
         }
         hi.field_c = new pd(552, 84, 0, 295, var2, vd.field_a);
-        this.field_p.a(le.field_g, false);
-        this.field_p.a(wf.field_w, false);
-        this.field_p.a(ic.field_y, false);
+        this.field_p.addFirst(le.field_g, false);
+        this.field_p.addFirst(wf.field_w, false);
+        this.field_p.addFirst(ic.field_y, false);
         int var3 = -125 / ((param0 - 48) / 56);
-        this.field_p.a(hi.field_c, false);
+        this.field_p.addFirst(hi.field_c, false);
     }
 
     private final void a(int param0, int param1, int param2) {

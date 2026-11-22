@@ -77,7 +77,7 @@ final class HomingMissileEvent extends SpecialEvent {
             if (var2_int < 0) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_q = param0.readUnsignedByte(16711935);
           this.field_r = param0.readUnsignedByte(16711935);
@@ -94,18 +94,18 @@ final class HomingMissileEvent extends SpecialEvent {
         RuntimeException var2_ref = null;
         var3 = BachelorFridge.field_y;
         try {
-          var4 = (bga) (on.field_r.b((byte) 90));
+          var4 = (bga) (on.field_r.beginForward((byte) 90));
           while (var4 != null) {
             nha.a(param1, var4, (byte) -85);
-            var4 = (bga) (on.field_r.c(0));
+            var4 = (bga) (on.field_r.nextForward(0));
           }
-          var2 = us.field_e.b((byte) 90);
+          var2 = us.field_e.beginForward((byte) 90);
           if (param0 > -12) {
             HomingMissileEvent.d((byte) -20);
           }
           while (var2 != null) {
             qna.b(param1, 0);
-            var2 = us.field_e.c(0);
+            var2 = us.field_e.nextForward(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

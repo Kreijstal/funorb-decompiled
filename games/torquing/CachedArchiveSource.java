@@ -158,7 +158,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (null == this.b((byte) -126)) {
           return;
         }
-        IntrusiveNode var2 = this.field_s.b(0);
+        IntrusiveNode var2 = this.field_s.beginBackward(0);
         if (param0 != -94) {
           this.field_m = false;
         }
@@ -185,7 +185,7 @@ final class CachedArchiveSource extends ArchiveSource {
               }
             }
           }
-          var2 = this.field_s.f(-24059);
+          var2 = this.field_s.nextBackward(-24059);
         }
     }
 
@@ -395,7 +395,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
           if (this.field_b) {
             var2_int = 1;
-            var3 = this.field_e.b(0);
+            var3 = this.field_e.beginBackward(0);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_f[var4] == 0) {
@@ -406,7 +406,7 @@ final class CachedArchiveSource extends ArchiveSource {
               } else {
                 var3.unlink(0);
               }
-              var3 = this.field_e.f(-24059);
+              var3 = this.field_e.nextBackward(-24059);
             }
             scanLoop1: while (true) {
               if (this.field_n < this.field_v.field_l.length) {
@@ -422,7 +422,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_n;
                     var2_int = 0;
-                    this.field_e.a((byte) 54, var7);
+                    this.field_e.addFirst((byte) 54, var7);
                   }
                 }
                 this.field_n = this.field_n + 1;
@@ -439,7 +439,7 @@ final class CachedArchiveSource extends ArchiveSource {
           else {
             if (this.field_l) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_e.b(0);
+              var3Lifetime1 = this.field_e.beginBackward(0);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_f[var4Lifetime1] != 1) {
@@ -450,7 +450,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_e.f(param0 ^ 24058);
+                var3Lifetime1 = this.field_e.nextBackward(param0 ^ 24058);
               }
               while (this.field_v.field_l.length > this.field_n) {
                 if (this.field_v.field_l[this.field_n] == 0) {
@@ -464,7 +464,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   if (1 != this.field_f[this.field_n]) {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_n;
-                    this.field_e.a((byte) 54, var6);
+                    this.field_e.addFirst((byte) 54, var6);
                     var2_intLifetime1 = 0;
                   }
                   this.field_n = this.field_n + 1;

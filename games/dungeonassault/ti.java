@@ -232,7 +232,7 @@ final class ti extends qa {
           }
           if (this.field_x) {
             var2_int = 1;
-            var3 = this.field_j.e(-24172);
+            var3 = this.field_j.beginBackward(-24172);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_h[var4]) {
@@ -243,7 +243,7 @@ final class ti extends qa {
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_j.a(param0 ^ -10786);
+              var3 = this.field_j.nextBackward(param0 ^ -10786);
             }
             while (this.field_y.field_k.length > this.field_z) {
               if (this.field_y.field_k[this.field_z] == 0) {
@@ -258,7 +258,7 @@ final class ti extends qa {
                   var7 = new IntrusiveNode();
                   var7.key = (long)this.field_z;
                   var2_int = 0;
-                  this.field_j.a(var7, false);
+                  this.field_j.addFirst(var7, false);
                 }
                 this.field_z = this.field_z + 1;
                 continue;
@@ -275,7 +275,7 @@ final class ti extends qa {
           else {
             if (this.field_r) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_j.e(-24172);
+              var3Lifetime1 = this.field_j.beginBackward(-24172);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_h[var4Lifetime1]) {
@@ -286,7 +286,7 @@ final class ti extends qa {
                 } else {
                   var3Lifetime1.unlink(false);
                 }
-                var3Lifetime1 = this.field_j.a(4);
+                var3Lifetime1 = this.field_j.nextBackward(4);
               }
               scanLoop1: while (true) {
                 if (this.field_z < this.field_y.field_k.length) {
@@ -301,7 +301,7 @@ final class ti extends qa {
                     if (1 != this.field_h[this.field_z]) {
                       var6 = new IntrusiveNode();
                       var6.key = (long)this.field_z;
-                      this.field_j.a(var6, false);
+                      this.field_j.addFirst(var6, false);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -461,7 +461,7 @@ final class ti extends qa {
         if (null == this.a(26538)) {
           return;
         }
-        IntrusiveNode var2 = this.field_u.e(-24172);
+        IntrusiveNode var2 = this.field_u.beginBackward(-24172);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
@@ -485,7 +485,7 @@ final class ti extends qa {
               }
             }
           }
-          var2 = this.field_u.a(4);
+          var2 = this.field_u.nextBackward(4);
         }
     }
 
@@ -504,14 +504,14 @@ final class ti extends qa {
         if (!param0) {
           return;
         }
-        i var1 = (i) (SecondaryNodeDequeIterator.field_e.c(0));
+        i var1 = (i) (SecondaryNodeDequeIterator.field_e.removeFirst(0));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         gf.a(var1.field_j, var1.field_i, var1.field_q);
         gf.e(var1.field_m, var1.field_p, var1.field_z, var1.field_k);
         var1.field_j = null;
-        cd.field_g.a(var1, !param0 ? true : false);
+        cd.field_g.addFirst(var1, !param0 ? true : false);
     }
 
     public static void clearStaticReferences(boolean param0) {

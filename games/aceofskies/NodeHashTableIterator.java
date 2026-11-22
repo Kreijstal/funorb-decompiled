@@ -5,10 +5,10 @@ import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
     static HighscoreNameEntry[] highscoreNameEntries;
-    private IterableNodeHashTable field_e;
-    private IntrusiveNode field_f;
-    private IntrusiveNode field_d;
-    private int field_a;
+    private IterableNodeHashTable table;
+    private IntrusiveNode lastReturned;
+    private IntrusiveNode nextNode;
+    private int nextBucketIndex;
     static String field_c;
     static long field_g;
 
@@ -66,29 +66,29 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    private final void a(boolean param0) {
-        this.field_d = this.field_e.field_a[0].next;
-        this.field_a = 1;
+    private final void reset(boolean param0) {
+        this.nextNode = this.table.buckets[0].next;
+        this.nextBucketIndex = 1;
         if (!param0) {
           return;
         }
-        this.field_f = null;
+        this.lastReturned = null;
     }
 
     public final boolean hasNext() {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
-        if (this.field_d != this.field_e.field_a[-1 + this.field_a]) {
+        if (this.nextNode != this.table.buckets[-1 + this.nextBucketIndex]) {
           return true;
         }
-        while (this.field_a < this.field_e.field_c) {
-          IntrusiveNode[] fieldTemp$0 = this.field_e.field_a;
-          int fieldTemp$1 = this.field_a;
-          this.field_a = this.field_a + 1;
-          if (fieldTemp$0[fieldTemp$1].next != this.field_e.field_a[this.field_a - 1]) {
-            this.field_d = this.field_e.field_a[this.field_a - 1].next;
+        while (this.nextBucketIndex < this.table.bucketCount) {
+          IntrusiveNode[] fieldTemp$0 = this.table.buckets;
+          int fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (fieldTemp$0[fieldTemp$1].next != this.table.buckets[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.buckets[this.nextBucketIndex - 1].next;
             return true;
           }
-          this.field_d = this.field_e.field_a[this.field_a - 1];
+          this.nextNode = this.table.buckets[this.nextBucketIndex - 1];
         }
         return false;
     }
@@ -154,41 +154,41 @@ final class NodeHashTableIterator implements Iterator {
     }
 
     public final void remove() {
-        if (null == this.field_f) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_f.unlink(-123);
-        this.field_f = null;
+        this.lastReturned.unlink(-123);
+        this.lastReturned = null;
     }
 
     public final Object next() {
         IntrusiveNode var1;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
-        if (this.field_d != this.field_e.field_a[-1 + this.field_a]) {
-          var1 = this.field_d;
-          this.field_f = var1;
-          this.field_d = var1.next;
+        if (this.nextNode != this.table.buckets[-1 + this.nextBucketIndex]) {
+          var1 = this.nextNode;
+          this.lastReturned = var1;
+          this.nextNode = var1.next;
           return var1;
         }
         do {
-          if (this.field_a >= this.field_e.field_c) {
+          if (this.nextBucketIndex >= this.table.bucketCount) {
             return null;
           }
-          IntrusiveNode[] fieldTemp$0 = this.field_e.field_a;
-          int fieldTemp$1 = this.field_a;
-          this.field_a = this.field_a + 1;
+          IntrusiveNode[] fieldTemp$0 = this.table.buckets;
+          int fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
           var1 = fieldTemp$0[fieldTemp$1].next;
-        } while (this.field_e.field_a[-1 + this.field_a] == var1);
-        this.field_f = var1;
-        this.field_d = var1.next;
+        } while (this.table.buckets[-1 + this.nextBucketIndex] == var1);
+        this.lastReturned = var1;
+        this.nextNode = var1.next;
         return var1;
     }
 
     NodeHashTableIterator(IterableNodeHashTable param0) {
-        this.field_f = null;
+        this.lastReturned = null;
         try {
-          this.field_e = param0;
-          this.a(true);
+          this.table = param0;
+          this.reset(true);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

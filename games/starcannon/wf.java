@@ -49,7 +49,7 @@ final class wf extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        bc var1 = (bc) (gi.field_a.d(46));
+        bc var1 = (bc) (gi.field_a.removeLast(46));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -57,14 +57,14 @@ final class wf extends IntrusiveNode {
           ki.a(var1.field_m, var1.field_o, var1.field_g);
           ki.d(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
           var1.field_m = null;
-          va.field_h.b(120, var1);
+          va.field_h.addLast(120, var1);
           return;
         }
         field_f = -72L;
         ki.a(var1.field_m, var1.field_o, var1.field_g);
         ki.d(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
         var1.field_m = null;
-        va.field_h.b(120, var1);
+        va.field_h.addLast(120, var1);
     }
 
     static {

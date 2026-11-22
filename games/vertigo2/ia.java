@@ -123,10 +123,10 @@ final class ia extends rk {
             field_I = (String) null;
           }
           param1.unlink(param0 - 75);
-          var2 = (bs) (mk.field_J.a((byte) 100));
+          var2 = (bs) (mk.field_J.beginBackward((byte) 100));
           while (var2 != null) {
             if (var2.a(param1, false)) {
-              var2 = (bs) (mk.field_J.b(param0 - 34));
+              var2 = (bs) (mk.field_J.nextBackward(param0 - 34));
               continue;
             }
             break;

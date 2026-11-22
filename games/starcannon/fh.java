@@ -81,19 +81,19 @@ class fh extends hd {
         RuntimeException var2 = null;
         var3 = StarCannon.field_A;
         try {
-          var6 = (dg) (vb.field_k.c(-3905));
+          var6 = (dg) (vb.field_k.beginForward(-3905));
           if (param1 != 8100) {
             var4 = (java.applet.Applet) null;
             fh.a((String) null, (java.applet.Applet) null, (byte) -52);
           }
           while (var6 != null) {
             tj.a((byte) 69, var6, param0);
-            var6 = (dg) (vb.field_k.a(param1 - 25013));
+            var6 = (dg) (vb.field_k.nextForward(param1 - 25013));
           }
-          var5 = (we) (ma.field_h.c(-3905));
+          var5 = (we) (ma.field_h.beginForward(-3905));
           while (var5 != null) {
             la.a(0, var5, param0);
-            var5 = (we) (ma.field_h.a(param1 - 25013));
+            var5 = (we) (ma.field_h.nextForward(param1 - 25013));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

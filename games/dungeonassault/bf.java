@@ -244,10 +244,10 @@ final class bf {
           if (param0 != 19664) {
             field_k = -97;
           }
-          var3 = (pm) (li.field_a.e(param0 ^ -4796));
+          var3 = (pm) (li.field_a.beginBackward(param0 ^ -4796));
           while (var3 != null) {
             if (var3.field_j != var2) {
-              var3 = (pm) (li.field_a.a(4));
+              var3 = (pm) (li.field_a.nextBackward(4));
               continue;
             }
             break;

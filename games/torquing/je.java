@@ -143,12 +143,12 @@ final class je implements WidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (lc.field_z < 1024) {
-            var2 = (ii) (bp.field_a.a((byte) 98));
+            var2 = (ii) (bp.field_a.removeLast((byte) 98));
             if (var2 == null) {
               var2 = new ii();
             }
             var2.field_l = param1;
-            bd.field_s.a((byte) 54, var2);
+            bd.field_s.addFirst((byte) 54, var2);
             lc.field_z = lc.field_z + 1;
           }
           if (param0 == -43) {

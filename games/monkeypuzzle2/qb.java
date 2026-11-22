@@ -24,14 +24,14 @@ final class qb {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           re.field_e = param1;
-          var2 = (hk) (bd.field_c.a((byte) -117));
+          var2 = (hk) (bd.field_c.beginBackward((byte) -117));
           while (var2 != null) {
             if (!var2.field_h.isLinked(-3548)) {
               var2.unlink(param0 - 20078);
             } else {
               var2.field_g.g(re.field_e * var2.field_j / 256);
             }
-            var2 = (hk) (bd.field_c.d((byte) 63));
+            var2 = (hk) (bd.field_c.nextBackward((byte) 63));
           }
           if (param0 != 256) {
             field_a = (am) null;

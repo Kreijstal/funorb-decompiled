@@ -127,7 +127,7 @@ final class rp extends WidgetWrapper {
           throw new IllegalArgumentException();
         }
         vf var3 = (vf) (param0);
-        this.field_D.a(-38, var3);
+        this.field_D.addFirst(-38, var3);
         var3.field_C = true;
         if (param1 <= 53) {
           return;

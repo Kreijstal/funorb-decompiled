@@ -93,16 +93,16 @@ final class in {
         RuntimeException var2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          var5 = (ub) (ob.field_Q.a((byte) 100));
+          var5 = (ub) (ob.field_Q.beginBackward((byte) 100));
           while (var5 != null) {
             he.a(param1, var5, -27011);
-            var5 = (ub) (ob.field_Q.b(113));
+            var5 = (ub) (ob.field_Q.nextBackward(113));
           }
           var3 = 52 % ((-5 - param0) / 37);
-          var6 = (be) (mb.field_v.a((byte) 100));
+          var6 = (be) (mb.field_v.beginBackward((byte) 100));
           while (var6 != null) {
             ec.a(param1, (byte) 122, var6);
-            var6 = (be) (mb.field_v.b(45));
+            var6 = (be) (mb.field_v.nextBackward(45));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,10 +213,10 @@ final class in {
         RuntimeException var2 = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4 = (qn) (te.field_z.a((byte) 100));
+          var4 = (qn) (te.field_z.beginBackward((byte) 100));
           while (var4 != null) {
             pn.a(param1, (byte) -4, var4);
-            var4 = (qn) (te.field_z.b(42));
+            var4 = (qn) (te.field_z.nextBackward(42));
           }
           if (param0 >= -97) {
             field_a = (String) null;

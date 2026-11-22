@@ -415,15 +415,15 @@ final class qi extends WidgetContainer implements vc, ql {
           if (param0) {
             return;
           }
-          var4 = (wf) (k.field_l.a((byte) -117));
+          var4 = (wf) (k.field_l.beginBackward((byte) -117));
           while (var4 != null) {
             wj.a(25533, var4, param1);
-            var4 = (wf) (k.field_l.d((byte) 63));
+            var4 = (wf) (k.field_l.nextBackward((byte) 63));
           }
-          var5 = (bk) (wg.field_k.a((byte) -117));
+          var5 = (bk) (wg.field_k.beginBackward((byte) -117));
           while (var5 != null) {
             vb.a(param1, var5, true);
-            var5 = (bk) (wg.field_k.d((byte) 63));
+            var5 = (bk) (wg.field_k.nextBackward((byte) 63));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

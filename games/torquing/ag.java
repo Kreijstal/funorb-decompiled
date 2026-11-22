@@ -39,15 +39,15 @@ final class ag {
         RuntimeException decompiledCaughtException = null;
         var3 = Torquing.field_u;
         try {
-          var4 = (wc) (so.field_t.b(0));
+          var4 = (wc) (so.field_t.beginBackward(0));
           while (var4 != null) {
             bp.a(var4, 1, param1);
-            var4 = (wc) (so.field_t.f(-24059));
+            var4 = (wc) (so.field_t.nextBackward(-24059));
           }
-          var5 = (bm) (CachedArchiveSource.field_d.b(0));
+          var5 = (bm) (CachedArchiveSource.field_d.beginBackward(0));
           while (var5 != null) {
             mc.a((byte) 85, param1, var5);
-            var5 = (bm) (CachedArchiveSource.field_d.f(-24059));
+            var5 = (bm) (CachedArchiveSource.field_d.nextBackward(-24059));
           }
           if (param0 == -45) {
             return;

@@ -37,17 +37,17 @@ final class ag {
           }
           ke.field_X[param1] = true;
           if (!fi.field_a[param1]) {
-            if (ok.field_b.e((byte) 119) &&
+            if (ok.field_b.isEmpty((byte) 119) &&
               bl.g(0) &&
               ja.field_u > 150) {
-              ok.field_b.a((byte) -93, new tm(param1, param3, param2, false));
+              ok.field_b.addLast((byte) -93, new tm(param1, param3, param2, false));
               ra.a(param1, (byte) -59);
               ja.field_u = 0;
             } else {
               ke.field_X[param1] = false;
             }
           } else {
-            ec.field_c.a((byte) -93, new tm(param1, param3, param2, true));
+            ec.field_c.addLast((byte) -93, new tm(param1, param3, param2, true));
             ra.a(param1, (byte) -59);
           }
         }

@@ -5,26 +5,26 @@ import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
     static ArchiveRequestConnection field_d;
-    DualLinkNode field_e;
+    DualLinkNode sentinel;
     static int field_b;
     static int mouseButton;
     static volatile long field_c;
     static String field_f;
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 65) {
           this.iterator();
-          var2 = this.field_e.field_k;
-          if (this.field_e != var2) {
+          var2 = this.sentinel.field_k;
+          if (this.sentinel != var2) {
             var2.unlinkSecondary(param0 - 65);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_e.field_k;
-        if (this.field_e != var2Lifetime1) {
+        var2Lifetime1 = this.sentinel.field_k;
+        if (this.sentinel != var2Lifetime1) {
           var2Lifetime1.unlinkSecondary(param0 - 65);
           return var2Lifetime1;
         }
@@ -87,13 +87,13 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         try {
           if (null != param0.field_j) {
             param0.unlinkSecondary(0);
           }
-          param0.field_j = this.field_e.field_j;
-          param0.field_k = this.field_e;
+          param0.field_j = this.sentinel.field_j;
+          param0.field_k = this.sentinel;
           param0.field_j.field_k = param0;
           if (param1 != 8466) {
             java.applet.Applet var4 = (java.applet.Applet) null;

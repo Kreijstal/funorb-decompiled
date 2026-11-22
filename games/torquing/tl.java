@@ -177,7 +177,7 @@ final class tl extends eh {
         h var4 = new h();
         var4.field_k = new int[param2];
         var4.field_m = param1;
-        to.field_s.a((byte) 54, var4);
+        to.field_s.addFirst((byte) 54, var4);
         va.a(var4, (byte) 119, param0);
         return var4;
     }
@@ -259,12 +259,12 @@ final class tl extends eh {
                   stackIn_48_3 = null;
                   stackIn_48_7 = 3;
                 }
-                ((IntrusiveDeque) (Object) stackIn_47_0).a((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
+                ((IntrusiveDeque) (Object) stackIn_47_0).addFirst((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
                 th.a(100, th.field_F[7]);
               } else {
                 if (var9 == 4) {
                   param0.c((byte) 122);
-                  param0.field_e.a((byte) 54, new sb(gi.field_b, var7, var8, 3));
+                  param0.field_e.addFirst((byte) 54, new sb(gi.field_b, var7, var8, 3));
                   th.a(100, th.field_F[9]);
                 } else {
                   if (var9 == 5) {
@@ -276,7 +276,7 @@ final class tl extends eh {
                       if (var9 != 6) {
                         if (var9 == 8) {
                           param0.a(0);
-                          param0.field_e.a((byte) 54, new sb(je.field_i, var7, var8, 3));
+                          param0.field_e.addFirst((byte) 54, new sb(je.field_i, var7, var8, 3));
                           th.a(param1 + 81, th.field_F[18]);
                         } else {
                           if (9 != var9 &&
@@ -287,7 +287,7 @@ final class tl extends eh {
                             var9 != 14 &&
                             var9 != 15) {
                             if (var9 == 16) {
-                              param0.field_e.a((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
+                              param0.field_e.addFirst((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
                               param0.a((byte) 124, 1000);
                               param0.a(-9 + this.field_r, -73);
                               return;
@@ -303,7 +303,7 @@ final class tl extends eh {
                               return;
                             }
                             param0.a((byte) 113, 1000);
-                            param0.field_e.a((byte) 54, new sb(nc.field_c, var7, var8, 3));
+                            param0.field_e.addFirst((byte) 54, new sb(nc.field_c, var7, var8, 3));
                             param0.a((byte) -68, MouseWheelInput.field_c[this.field_r], 1092, 72);
                             param0.field_i = MouseWheelInput.field_c[this.field_r];
                             param0.field_z = param0.field_z | 1 << param0.field_d.id;
@@ -311,13 +311,13 @@ final class tl extends eh {
                             jh.a(ResourceArchive.field_k[10], 0);
                             return;
                           }
-                          param0.field_e.a((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
+                          param0.field_e.addFirst((byte) 54, new sb(Integer.toString(1000), var7, var8, 2));
                           param0.a((byte) 124, 1000);
                           param0.a(-9 + this.field_r, -73);
                         }
                       } else {
                         param0.e(-7045);
-                        param0.field_e.a((byte) 54, new sb(ea.field_u, var7, var8, 3));
+                        param0.field_e.addFirst((byte) 54, new sb(ea.field_u, var7, var8, 3));
                         th.a(param1 ^ 119, th.field_F[19]);
                         th.a(100, th.field_F[10]);
                       }
@@ -346,7 +346,7 @@ final class tl extends eh {
                 stackIn_44_3 = null;
                 stackIn_44_7 = 2;
               }
-              ((IntrusiveDeque) (Object) stackIn_43_0).a((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
+              ((IntrusiveDeque) (Object) stackIn_43_0).addFirst((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
               th.a(param1 + 81, th.field_F[19]);
               th.a(100, th.field_F[6]);
             }

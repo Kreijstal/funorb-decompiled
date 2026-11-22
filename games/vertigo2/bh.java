@@ -507,7 +507,7 @@ final class bh {
           }
         }
         if (this.field_r.size(true) > 0) {
-          var3 = (fa) (this.field_r.a((byte) 100));
+          var3 = (fa) (this.field_r.beginBackward((byte) 100));
           while (var3 != null) {
             boolean decompiledFrameRemainder0 = true;
             var13 = this.field_b[var3.field_n];
@@ -538,7 +538,7 @@ final class bh {
             if (decompiledFrameRemainder0) {
               var3.unlink(2);
             }
-            var3 = (fa) (this.field_r.b(24));
+            var3 = (fa) (this.field_r.nextBackward(24));
           }
         }
         this.field_r.clear(0);

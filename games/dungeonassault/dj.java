@@ -17,7 +17,7 @@ final class dj {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.a((IntrusiveNode) null, true);
           var2 = this.field_b;
-          if (var2 != this.field_e.field_c) {
+          if (var2 != this.field_e.sentinel) {
             this.field_b = var2.previous;
             return var2;
           }
@@ -25,7 +25,7 @@ final class dj {
           return null;
         }
         var2Lifetime1 = this.field_b;
-        if (var2Lifetime1 != this.field_e.field_c) {
+        if (var2Lifetime1 != this.field_e.sentinel) {
           this.field_b = var2Lifetime1.previous;
           return var2Lifetime1;
         }
@@ -148,11 +148,11 @@ final class dj {
             field_a = 16;
           }
           if (param0 == null) {
-            var3 = this.field_e.field_c.next;
+            var3 = this.field_e.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_e.field_c) {
+          if (var3 == this.field_e.sentinel) {
             this.field_b = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -175,8 +175,8 @@ final class dj {
     }
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_e.field_c.next;
-        if (var2 == this.field_e.field_c) {
+        IntrusiveNode var2 = this.field_e.sentinel.next;
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -200,7 +200,7 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_c.previous;
+            var3 = this.field_e.sentinel.previous;
           } else {
             var3 = param1;
           }
@@ -208,7 +208,7 @@ final class dj {
             stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          if (var3 == this.field_e.field_c) {
+          if (var3 == this.field_e.sentinel) {
             this.field_b = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);
@@ -232,7 +232,7 @@ final class dj {
 
     final IntrusiveNode d(int param0) {
         IntrusiveNode var2 = this.field_b;
-        if (this.field_e.field_c == var2) {
+        if (this.field_e.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -245,8 +245,8 @@ final class dj {
     }
 
     final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_e.field_c.previous;
-        if (var2 == this.field_e.field_c) {
+        IntrusiveNode var2 = this.field_e.sentinel.previous;
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }

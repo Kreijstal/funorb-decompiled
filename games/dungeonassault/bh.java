@@ -471,7 +471,7 @@ class bh extends ck {
             if (var11 != null) {
               ((ci) (var11)).field_o = var16;
             }
-            this.field_S.a(var16, false);
+            this.field_S.addFirst(var16, false);
             var11 = var16;
           }
         }
@@ -482,7 +482,7 @@ class bh extends ck {
         ci var5;
         int var6;
         var6 = DungeonAssault.field_K;
-        var4 = (ci) (this.field_S.e(-24172));
+        var4 = (ci) (this.field_S.beginBackward(-24172));
         if (!param2) {
           return (ci) null;
         }
@@ -497,7 +497,7 @@ class bh extends ck {
             }
             var5 = var5.field_o;
           }
-          var4 = (ci) (this.field_S.a(4));
+          var4 = (ci) (this.field_S.nextBackward(4));
         }
         return null;
     }

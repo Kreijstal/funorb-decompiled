@@ -216,7 +216,7 @@ class ButtonWidget extends UiWidget {
 
     final static void i(int param0) {
         hb var3 = null;
-        me var1 = (me) (af.field_a.a((byte) -117));
+        me var1 = (me) (af.field_a.beginBackward((byte) -117));
         int var2 = -29 % ((-53 - param0) / 58);
         if (var1 != null) {
           var3 = MonkeyPuzzle2.field_D;

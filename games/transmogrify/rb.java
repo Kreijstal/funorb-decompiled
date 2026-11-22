@@ -34,10 +34,10 @@ final class rb {
         RuntimeException var2 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (ng) (kf.field_o.a((byte) -95));
+          var4 = (ng) (kf.field_o.beginForward((byte) -95));
           while (var4 != null) {
             th.a(65536, param0, var4);
-            var4 = (ng) (kf.field_o.a(true));
+            var4 = (ng) (kf.field_o.nextForward(true));
           }
           if (param1 >= -77) {
             rb.a(-91, -27);

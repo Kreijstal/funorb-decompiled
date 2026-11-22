@@ -341,7 +341,7 @@ final class BufferedSocket implements Runnable {
 
     final static void a(int param0, byte param1, hb param2) {
         try {
-          DelegatingCanvas.field_f.b(105, param2);
+          DelegatingCanvas.field_f.addLast(105, param2);
           hb.a(-114, param0, param2);
           if (param1 != -41) {
             field_o = (String) null;

@@ -40,7 +40,7 @@ final class dd {
           }
           var2 = var9.readUnsignedByte(255);
           if (0 == var2) {
-            var3_ref_wi = (wi) (bc.field_J.a((byte) 51));
+            var3_ref_wi = (wi) (bc.field_J.beginBackward((byte) 51));
             if (var3_ref_wi == null) {
               je.a(!param0);
               return;
@@ -66,10 +66,10 @@ final class dd {
             return;
           }
           var3 = var9.readInt(true);
-          var4 = (ob) (he.field_d.a((byte) 51));
+          var4 = (ob) (he.field_d.beginBackward((byte) 51));
           while (var4 != null) {
             if (var3 != var4.field_i) {
-              var4 = (ob) (he.field_d.b(-70));
+              var4 = (ob) (he.field_d.nextBackward(-70));
               continue;
             }
             break;

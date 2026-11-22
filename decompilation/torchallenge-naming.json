@@ -844,6 +844,14 @@
       "renamedSymbol": "F:aa.pressX:I"
     },
     {
+      "symbol": "F:ak.field_f:Lw;",
+      "originalName": "field_f",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
+    },
+    {
       "symbol": "F:bb.field_h:I",
       "originalName": "field_h",
       "to": "activeScreenId",
@@ -1418,6 +1426,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 7 null writes to 7 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 3b76e49b3322f3a3ee53e2adda6eb73714efde35b17ba7562ba4020e5e8d1ae1.",
       "confidence": "reviewed",
       "renamedSymbol": "M:aj.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ak.a(I)Lw;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Int!=0 clears static Sprite[][] before reading sentinel.secondaryNext;both branches unlink nonempty node with12695 and return it. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
     },
     {
       "symbol": "M:ak.a(Lw;I)V",
@@ -8367,9 +8383,9 @@
     },
     {
       "symbol": "F:ak.field_f:Lw;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_f:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "ak.java",
         "start": 180,
@@ -39244,7 +39260,7 @@
     },
     {
       "symbol": "L:ak.a(I)Lw;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -39255,7 +39271,7 @@
     },
     {
       "symbol": "L:ak.a(I)Lw;#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -199481,9 +199497,9 @@
     },
     {
       "symbol": "M:ak.a(I)Lw;",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "ak.java",
         "start": 4419,
@@ -226893,7 +226909,7 @@
     },
     {
       "symbol": "P:ak.a(I)Lw;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -298859,7 +298875,7 @@
       "original": "ag.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "cc1614c7a12457d8f214764907db72eb0c9e9615f88848182f42a2cb32cb4382",
-      "outputSha256": "884ea00929497f9e7bb87efc86dc9c17f0ddb019a68e7b4a60b4882cfee0578f",
+      "outputSha256": "4b1567314e299560a555962a0f7e235dbcdc93fc97e59762bee023fe3f300877",
       "edits": [
         {
           "start": 71,
@@ -298895,6 +298911,20 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 460,
+          "end": 467,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 586,
+          "end": 593,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 703,
@@ -298965,6 +298995,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 2249,
+          "end": 2256,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 2257,
@@ -299584,7 +299621,7 @@
       "original": "ak.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "05a41adb8e9335092ca494b52551371c9e967815fd16c99014691bd5ee1079ac",
-      "outputSha256": "cc304ae01d822499a8b7dce64f28f5e19238c42d607647b01f217e5c141f33a6",
+      "outputSha256": "32618bcd135f2652ee8f5b0c5599e3b7647283349355cb6abd295ef4316c0e24",
       "edits": [
         {
           "start": 71,
@@ -299599,6 +299636,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 180,
+          "end": 187,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 200,
@@ -299650,11 +299694,25 @@
           "renamed": "secondaryNext"
         },
         {
+          "start": 568,
+          "end": 575,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
           "start": 594,
           "end": 601,
           "symbol": "F:w.field_i:Lw;",
           "original": "field_i",
           "renamed": "secondaryPrevious"
+        },
+        {
+          "start": 609,
+          "end": 616,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 617,
@@ -299797,6 +299855,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 4419,
+          "end": 4420,
+          "symbol": "M:ak.a(I)Lw;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 4443,
           "end": 4444,
           "symbol": "C:w",
@@ -299818,11 +299883,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 4567,
+          "end": 4574,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4575,
           "end": 4582,
           "symbol": "F:w.field_k:Lw;",
           "original": "field_k",
           "renamed": "secondaryNext"
+        },
+        {
+          "start": 4603,
+          "end": 4610,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 4639,
@@ -299832,11 +299911,25 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 4748,
+          "end": 4755,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4756,
           "end": 4763,
           "symbol": "F:w.field_k:Lw;",
           "original": "field_k",
           "renamed": "secondaryNext"
+        },
+        {
+          "start": 4782,
+          "end": 4789,
+          "symbol": "F:ak.field_f:Lw;",
+          "original": "field_f",
+          "renamed": "sentinel"
         },
         {
           "start": 4834,
@@ -324108,7 +324201,7 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "09b572a332216af45f33b3433c99815e3bf444017c38fc6f0eb1cf44c7befef1",
-      "outputSha256": "a1f01e2795573d8eee091ab39ba980968f9badaaecf4549e8ce5489bcb6f531c",
+      "outputSha256": "cfef6d4ac2581dd0666923a25f6e240a5259a8557e0293c86a08eae25bdc2f27",
       "edits": [
         {
           "start": 96,
@@ -324144,6 +324237,13 @@
           "symbol": "M:je.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1144,
+          "end": 1145,
+          "symbol": "M:ak.a(I)Lw;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 1265,
@@ -386419,10 +386519,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "ccedb97d958d10f737f291818ee31315088676be1791035091247f2cd1c69502",
+    "rulesSha256": "f25806dd98a54557f2155bb0fbc2e4418b206e56b57e4d712cbcaeec6bf393db",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "42a2c822a6371dc68c52e8d254d98e099762835702849a49636f3c069f667a34",
+    "outputTreeSha256": "5a2b47277f483907f40b346d9c10bacb63cee9231ce8d606711ca93729235482",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -11,7 +11,7 @@ final class kb {
 
     final static ib a(int param0, byte param1) {
         ib var2 = new ib();
-        kh.field_a.a(var2, -7044);
+        kh.field_a.addFirst(var2, -7044);
         if (param1 >= 66) {
           v.a(2, param0);
           return var2;

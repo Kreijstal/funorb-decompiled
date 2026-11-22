@@ -35,11 +35,11 @@ final class DequeCursor {
             field_e = false;
           }
           if (param1 == null) {
-            var3 = this.field_h.field_f.previous;
+            var3 = this.field_h.sentinel.previous;
           } else {
             var3 = param1;
           }
-          if (var3 == this.field_h.field_f) {
+          if (var3 == this.field_h.sentinel) {
             this.field_c = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -74,7 +74,7 @@ final class DequeCursor {
 
     final IntrusiveNode a(boolean param0) {
         IntrusiveNode var2 = this.field_c;
-        if (var2 == this.field_h.field_f) {
+        if (var2 == this.field_h.sentinel) {
           this.field_c = null;
           return null;
         }
@@ -91,8 +91,8 @@ final class DequeCursor {
         if (param0 > -95) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_h.field_f.next;
-        if (var2 != this.field_h.field_f) {
+        IntrusiveNode var2 = this.field_h.sentinel.next;
+        if (var2 != this.field_h.sentinel) {
           this.field_c = var2.next;
           return var2;
         }
@@ -106,7 +106,7 @@ final class DequeCursor {
         if (param0 != -3703) {
           this.a(false);
           var2 = this.field_c;
-          if (var2 == this.field_h.field_f) {
+          if (var2 == this.field_h.sentinel) {
             this.field_c = null;
             return null;
           }
@@ -114,7 +114,7 @@ final class DequeCursor {
           return var2;
         }
         var2Lifetime1 = this.field_c;
-        if (var2Lifetime1 == this.field_h.field_f) {
+        if (var2Lifetime1 == this.field_h.sentinel) {
           this.field_c = null;
           return null;
         }
@@ -131,8 +131,8 @@ final class DequeCursor {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_h.field_f.previous;
-        if (var2 == this.field_h.field_f) {
+        IntrusiveNode var2 = this.field_h.sentinel.previous;
+        if (var2 == this.field_h.sentinel) {
           this.field_c = null;
           return null;
         }
@@ -159,9 +159,9 @@ final class DequeCursor {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_h.field_f.next;
+            var3 = this.field_h.sentinel.next;
           }
-          if (this.field_h.field_f == var3) {
+          if (this.field_h.sentinel == var3) {
             this.field_c = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);

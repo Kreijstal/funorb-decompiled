@@ -17,33 +17,33 @@ final class ria extends gca {
         int var4Lifetime1;
         if (param0) {
           this.a(true, false);
-          var3 = (cia) (this.field_j.b((byte) 90));
+          var3 = (cia) (this.field_j.beginForward((byte) 90));
           while (var3 != null) {
             var3.b(!param0 ? true : false);
-            var3 = (cia) (this.field_j.c(0));
+            var3 = (cia) (this.field_j.nextForward(0));
           }
           var4 = vr.field_b & 127;
           if (var4 > 32) {
-            return !this.field_j.e(12917) ? true : false;
+            return !this.field_j.isEmpty(12917) ? true : false;
           }
           if (0 != (var4 & 15)) {
-            return !this.field_j.e(12917) ? true : false;
+            return !this.field_j.isEmpty(12917) ? true : false;
           }
           this.e((byte) -104);
-          return !this.field_j.e(12917) ? true : false;
+          return !this.field_j.isEmpty(12917) ? true : false;
         }
-        var3Lifetime1 = (cia) (this.field_j.b((byte) 90));
+        var3Lifetime1 = (cia) (this.field_j.beginForward((byte) 90));
         while (var3Lifetime1 != null) {
           var3Lifetime1.b(!param0 ? true : false);
-          var3Lifetime1 = (cia) (this.field_j.c(0));
+          var3Lifetime1 = (cia) (this.field_j.nextForward(0));
         }
         var4Lifetime1 = vr.field_b & 127;
         if (var4Lifetime1 <= 32 &&
           0 == (var4Lifetime1 & 15)) {
           this.e((byte) -104);
-          return !this.field_j.e(12917) ? true : false;
+          return !this.field_j.isEmpty(12917) ? true : false;
         }
-        return !this.field_j.e(12917) ? true : false;
+        return !this.field_j.isEmpty(12917) ? true : false;
     }
 
     public ria() {
@@ -70,7 +70,7 @@ final class ria extends gca {
           var4.a(119, 128, -2);
           var4.a(0, -15, 0, 0);
           var4.a(-120, 0);
-          this.field_j.a(var4, true);
+          this.field_j.addLast(var4, true);
           return;
         }
     }
@@ -82,13 +82,13 @@ final class ria extends gca {
         int var8 = BachelorFridge.field_y;
         param0 -= 80;
         param2 += 12;
-        cia var4 = (cia) (this.field_j.b((byte) 90));
+        cia var4 = (cia) (this.field_j.beginForward((byte) 90));
         while (var4 != null) {
           var5 = 256 - (var4.field_o << 1);
           var6 = this.field_l.field_n * var5 >> 8;
           var7 = var5 * this.field_l.field_o >> 8;
           this.field_l.drawScaledAlpha((var4.field_i >> 4) + param2 - (var6 >> 1), (var4.field_h >> 9) + param0 - (-(var4.field_q >> 5) + (var7 >> 1)), var6, var7, var4.field_o);
-          var4 = (cia) (this.field_j.c(0));
+          var4 = (cia) (this.field_j.nextForward(0));
         }
         if (param1 > 7) {
           return;

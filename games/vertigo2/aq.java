@@ -83,7 +83,7 @@ final class aq {
         } else {
           this.field_i = true;
           if (this.field_h <= this.field_e) {
-            var5Lifetime2 = (fd) (this.field_j.c((byte) -127));
+            var5Lifetime2 = (fd) (this.field_j.beginForward((byte) -127));
             var4 = new fd(param0, var5Lifetime2.field_n);
             this.field_c[var5Lifetime2.field_r] = null;
             var5Lifetime2.unlink(2);

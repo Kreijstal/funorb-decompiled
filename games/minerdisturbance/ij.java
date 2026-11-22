@@ -176,7 +176,7 @@ final class ij extends ArchiveProvider {
           }
           if (this.field_g) {
             var2_int = 1;
-            var3 = this.field_x.b(72);
+            var3 = this.field_x.beginForward(72);
             while (var3 != null) {
               var4 = (int)var3.field_d;
               if (this.field_A[var4] == 0) {
@@ -187,7 +187,7 @@ final class ij extends ArchiveProvider {
               } else {
                 var3.unlink(34);
               }
-              var3 = this.field_x.b((byte) 56);
+              var3 = this.field_x.nextForward((byte) 56);
             }
             while (this.field_l < this.field_w.field_d.length) {
               if (this.field_w.field_d[this.field_l] == 0) {
@@ -202,7 +202,7 @@ final class ij extends ArchiveProvider {
                   var7 = new IntrusiveNode();
                   var7.field_d = (long)this.field_l;
                   var2_int = 0;
-                  this.field_x.a((byte) -114, var7);
+                  this.field_x.addLast((byte) -114, var7);
                 }
                 this.field_l = this.field_l + 1;
                 continue;
@@ -219,7 +219,7 @@ final class ij extends ArchiveProvider {
           else {
             if (this.field_m) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_x.b(71);
+              var3Lifetime1 = this.field_x.beginForward(71);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.field_d;
                 if (this.field_A[var4Lifetime1] != 1) {
@@ -230,7 +230,7 @@ final class ij extends ArchiveProvider {
                 } else {
                   var3Lifetime1.unlink(34);
                 }
-                var3Lifetime1 = this.field_x.b((byte) 56);
+                var3Lifetime1 = this.field_x.nextForward((byte) 56);
               }
               while (this.field_l < this.field_w.field_d.length) {
                 if (this.field_w.field_d[this.field_l] == 0) {
@@ -245,7 +245,7 @@ final class ij extends ArchiveProvider {
                     var6 = new IntrusiveNode();
                     var6.field_d = (long)this.field_l;
                     var2_intLifetime1 = 0;
-                    this.field_x.a((byte) -116, var6);
+                    this.field_x.addLast((byte) -116, var6);
                   }
                   this.field_l = this.field_l + 1;
                   continue;
@@ -361,7 +361,7 @@ final class ij extends ArchiveProvider {
         if (this.a((byte) 53) == null) {
           return;
         }
-        var2 = this.field_r.b(111);
+        var2 = this.field_r.beginForward(111);
         while (var2 != null) {
           var3 = (int)var2.field_d;
           if (var3 >= 0) {
@@ -385,7 +385,7 @@ final class ij extends ArchiveProvider {
           } else {
             var2.unlink(34);
           }
-          var2 = this.field_r.b((byte) 56);
+          var2 = this.field_r.nextForward((byte) 56);
         }
         if (param0 < 1) {
           this.field_w = (ArchiveIndex) null;

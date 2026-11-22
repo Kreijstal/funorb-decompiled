@@ -210,11 +210,11 @@ final class tq {
               return;
             }
             if (var2 == 7) {
-              var33 = (bs) (mk.field_J.a((byte) 100));
+              var33 = (bs) (mk.field_J.beginBackward((byte) 100));
               while (var33 != null) {
                 var33.unlink(2);
                 var33.unlinkSecondary(param0 - 59);
-                var33 = (bs) (mk.field_J.b(88));
+                var33 = (bs) (mk.field_J.nextBackward(88));
               }
               kk.field_j = 0;
               return;
@@ -247,11 +247,11 @@ final class tq {
               return;
             }
             if (var2 == 10) {
-              var31 = (uh) (nr.field_p.a((byte) 100));
+              var31 = (uh) (nr.field_p.beginBackward((byte) 100));
               while (var31 != null) {
                 var31.unlink(2);
                 var31.unlinkSecondary(-103);
-                var31 = (uh) (nr.field_p.b(49));
+                var31 = (uh) (nr.field_p.nextBackward(49));
               }
               return;
             }
@@ -392,11 +392,11 @@ final class tq {
             }
             return;
           }
-          var3_ref_bs = (bs) (kq.field_Rb.a((byte) 100));
+          var3_ref_bs = (bs) (kq.field_Rb.beginBackward((byte) 100));
           while (var3_ref_bs != null) {
             var3_ref_bs.unlink(2);
             var3_ref_bs.unlinkSecondary(-117);
-            var3_ref_bs = (bs) (kq.field_Rb.b(param0 + 181));
+            var3_ref_bs = (bs) (kq.field_Rb.nextBackward(param0 + 181));
           }
           var3_ref_bsLifetime1 = (bs) (GameShell.field_l.first(-128));
           while (var3_ref_bsLifetime1 != null) {

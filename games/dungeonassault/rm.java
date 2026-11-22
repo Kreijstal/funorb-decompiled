@@ -585,7 +585,7 @@ class rm extends ck {
           }
           var2 = var9.readUnsignedByte(true);
           if (var2 == 0) {
-            var8 = (ub) (bg.field_s.e(-24172));
+            var8 = (ub) (bg.field_s.beginBackward(-24172));
             if (var8 == null) {
               tl.a(-86);
               return;
@@ -606,10 +606,10 @@ class rm extends ck {
           } else {
             if (var2 == 1) {
               var3 = var9.readInt(-107);
-              var4_ref_ue = (ue) (qm.field_q.e(-24172));
+              var4_ref_ue = (ue) (qm.field_q.beginBackward(-24172));
               while (var4_ref_ue != null) {
                 if (var4_ref_ue.field_k != var3) {
-                  var4_ref_ue = (ue) (qm.field_q.a(4));
+                  var4_ref_ue = (ue) (qm.field_q.nextBackward(4));
                   continue;
                 }
                 break;

@@ -72,9 +72,9 @@ final class ck {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_b.field_e.next;
+            var3 = this.field_b.sentinel.next;
           }
-          if (this.field_b.field_e == var3) {
+          if (this.field_b.sentinel == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -98,8 +98,8 @@ final class ck {
 
     final IntrusiveNode a(byte param0) {
         int var2 = -121 % ((param0 - 30) / 44);
-        IntrusiveNode var3 = this.field_b.field_e.previous;
-        if (var3 != this.field_b.field_e) {
+        IntrusiveNode var3 = this.field_b.sentinel.previous;
+        if (var3 != this.field_b.sentinel) {
           this.field_a = var3.previous;
           return var3;
         }
@@ -109,7 +109,7 @@ final class ck {
 
     final IntrusiveNode b(int param0) {
         IntrusiveNode var2 = this.field_a;
-        if (var2 == this.field_b.field_e) {
+        if (var2 == this.field_b.sentinel) {
           this.field_a = null;
           return null;
         }
@@ -132,11 +132,11 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_b.field_e.previous;
+            var3 = this.field_b.sentinel.previous;
           } else {
             var3 = param1;
           }
-          if (var3 == this.field_b.field_e) {
+          if (var3 == this.field_b.sentinel) {
             this.field_a = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -166,16 +166,16 @@ final class ck {
         IntrusiveNode var2Lifetime1;
         if (param0 != -25119) {
           this.field_b = (IntrusiveDeque) null;
-          var2 = this.field_b.field_e.next;
-          if (this.field_b.field_e == var2) {
+          var2 = this.field_b.sentinel.next;
+          if (this.field_b.sentinel == var2) {
             this.field_a = null;
             return null;
           }
           this.field_a = var2.next;
           return var2;
         }
-        var2Lifetime1 = this.field_b.field_e.next;
-        if (this.field_b.field_e == var2Lifetime1) {
+        var2Lifetime1 = this.field_b.sentinel.next;
+        if (this.field_b.sentinel == var2Lifetime1) {
           this.field_a = null;
           return null;
         }
@@ -225,7 +225,7 @@ final class ck {
 
     final IntrusiveNode c(int param0) {
         IntrusiveNode var2 = this.field_a;
-        if (this.field_b.field_e == var2) {
+        if (this.field_b.sentinel == var2) {
           this.field_a = null;
           return null;
         }

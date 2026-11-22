@@ -14,7 +14,7 @@ final class na {
           return;
         }
         try {
-          bd.field_c.a(-8212, new hk(param1, param1));
+          bd.field_c.addFirst(-8212, new hk(param1, param1));
           qb.field_c.a(param1);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "na.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

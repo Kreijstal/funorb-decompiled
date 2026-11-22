@@ -58,7 +58,7 @@ final class fp extends tja {
           }
           if (this.field_j) {
             var2_int = 1;
-            var3 = this.field_v.b((byte) 90);
+            var3 = this.field_v.beginForward((byte) 90);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (this.field_s[var4] == 0) {
@@ -69,7 +69,7 @@ final class fp extends tja {
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_v.c(0);
+              var3 = this.field_v.nextForward(0);
             }
             scanLoop1: while (true) {
               if (this.field_d.field_e.length > this.field_u) {
@@ -85,7 +85,7 @@ final class fp extends tja {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_u;
                     var2_int = 0;
-                    this.field_v.a(var7, true);
+                    this.field_v.addLast(var7, true);
                   }
                 }
                 this.field_u = this.field_u + 1;
@@ -102,7 +102,7 @@ final class fp extends tja {
           else {
             if (this.field_e) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_v.b((byte) 90);
+              var3Lifetime1 = this.field_v.beginForward((byte) 90);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_s[var4Lifetime1] != 1) {
@@ -113,7 +113,7 @@ final class fp extends tja {
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_v.c(0);
+                var3Lifetime1 = this.field_v.nextForward(0);
               }
               scanLoop2: while (true) {
                 if (this.field_u < this.field_d.field_e.length) {
@@ -129,7 +129,7 @@ final class fp extends tja {
                       var6 = new IntrusiveNode();
                       var6.key = (long)this.field_u;
                       var2_intLifetime1 = 0;
-                      this.field_v.a(var6, true);
+                      this.field_v.addLast(var6, true);
                     }
                   }
                   this.field_u = this.field_u + 1;
@@ -466,7 +466,7 @@ final class fp extends tja {
         if (this.b(-24) == null) {
           return;
         }
-        IntrusiveNode var2 = this.field_l.b((byte) 90);
+        IntrusiveNode var2 = this.field_l.beginForward((byte) 90);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
@@ -490,7 +490,7 @@ final class fp extends tja {
               }
             }
           }
-          var2 = this.field_l.c(0);
+          var2 = this.field_l.nextForward(0);
         }
     }
 

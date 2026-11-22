@@ -7,7 +7,7 @@ final class BoardChangeBatch extends BattleUpdate {
 
     final void a(BoardChange param0, byte param1) {
         try {
-          this.field_k.a(param0, true);
+          this.field_k.addLast(param0, true);
           if (param1 <= 37) {
             BoardChange var4 = (BoardChange) null;
             this.a((BoardChange) null, (byte) -11);
@@ -28,10 +28,10 @@ final class BoardChangeBatch extends BattleUpdate {
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          var6 = (BoardChange) (this.field_k.b((byte) 90));
+          var6 = (BoardChange) (this.field_k.beginForward((byte) 90));
           while (var6 != null) {
             var6.a(param1, param0);
-            var6 = (BoardChange) (this.field_k.c(0));
+            var6 = (BoardChange) (this.field_k.nextForward(0));
           }
           if (!param1) {
             return;
@@ -90,14 +90,14 @@ final class BoardChangeBatch extends BattleUpdate {
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.writeByte(this.field_k.g(0), 0);
+          param0.writeByte(this.field_k.countWithOffset(0), 0);
           if (param1 != -9) {
             this.field_k = (IntrusiveDeque) null;
           }
-          var5 = (BoardChange) (this.field_k.b((byte) 90));
+          var5 = (BoardChange) (this.field_k.beginForward((byte) 90));
           while (var5 != null) {
             var5.a(param0, (byte) -63);
-            var5 = (BoardChange) (this.field_k.c(0));
+            var5 = (BoardChange) (this.field_k.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,45 +140,45 @@ final class BoardChangeBatch extends BattleUpdate {
             }
             var3 = param0.readUnsignedByte(16711935);
             if (var3 == 1) {
-              this.field_k.a(new oca(param0), true);
+              this.field_k.addLast(new oca(param0), true);
               continue;
             }
             if (var3 == 0) {
-              this.field_k.a(new iia(param0), true);
+              this.field_k.addLast(new iia(param0), true);
               continue;
             }
             if (var3 == 2) {
-              this.field_k.a(new tga(param0), true);
+              this.field_k.addLast(new tga(param0), true);
               continue;
             }
             if (3 == var3) {
-              this.field_k.a(new wp(param0), true);
+              this.field_k.addLast(new wp(param0), true);
               continue;
             }
             if (var3 == 4) {
-              this.field_k.a(new fi(param0), true);
+              this.field_k.addLast(new fi(param0), true);
               continue;
             }
             if (var3 == 5) {
-              this.field_k.a(new bg(param0), true);
+              this.field_k.addLast(new bg(param0), true);
               continue;
             }
             if (var3 == 6) {
-              this.field_k.a(new bja(param0), true);
+              this.field_k.addLast(new bja(param0), true);
               continue;
             }
             if (var3 == 7) {
-              this.field_k.a(new ej(param0), true);
+              this.field_k.addLast(new ej(param0), true);
               continue;
             }
             if (var3 == 8) {
-              this.field_k.a(new ns(param0), true);
+              this.field_k.addLast(new ns(param0), true);
               continue;
             }
             if (var3 != 9) {
               throw new IllegalStateException();
             }
-            this.field_k.a(new ow(param0), true);
+            this.field_k.addLast(new ow(param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

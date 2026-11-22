@@ -2212,6 +2212,22 @@
       "renamedSymbol": "F:SystemTask.requestType:I"
     },
     {
+      "symbol": "F:er.field_a:Lwt;",
+      "originalName": "field_a",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
+    },
+    {
+      "symbol": "F:er.field_b:Lwt;",
+      "originalName": "field_b",
+      "to": "iterationCursor",
+      "evidence": "Shared pending-node cursor for manual forward/backward traversal;not the last-returned node. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.iterationCursor:LDualLinkNode;"
+    },
+    {
       "symbol": "F:es.field_b:[Lpa;",
       "originalName": "field_b",
       "to": "smokeSprites",
@@ -3028,6 +3044,46 @@
       "renamedSymbol": "F:BufferElementType.achievementSpriteData:[LSpriteData;"
     },
     {
+      "symbol": "F:lc.field_a:[Lwf;",
+      "originalName": "field_a",
+      "to": "buckets",
+      "evidence": "Per-bucket circular sentinel array allocated in constructor and used by lookup,insert,manual traversal and iterator.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.buckets:[LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:lc.field_c:I",
+      "originalName": "field_c",
+      "to": "bucketCount",
+      "evidence": "Constructor stores requested array length;lookup uses count-1 mask and scans bound by count. Failed lookup with byte<=87 overwrites count=-4;preserve.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.bucketCount:I"
+    },
+    {
+      "symbol": "F:lc.field_d:I",
+      "originalName": "field_d",
+      "to": "nextBucketIndex",
+      "evidence": "Manual traversal next bucket index starts0;beginIterationAtBucket sets supplied int;next increments before reading next bucket chain.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.nextBucketIndex:I"
+    },
+    {
+      "symbol": "F:lc.field_e:Lwf;",
+      "originalName": "field_e",
+      "to": "iterationCursor",
+      "evidence": "Manual traversal pending chain node;advance next before returning node,independent of lookup cursor and JDK iterator cursor.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.iterationCursor:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:lc.field_f:Lwf;",
+      "originalName": "field_f",
+      "to": "lookupCursor",
+      "evidence": "Get scans requested key bucket,advancing cursor before returning match;failed search clears cursor. Preserve completed-success cursor state.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.lookupCursor:LIntrusiveNode;"
+    },
+    {
       "symbol": "F:lg.field_k:Lpa;",
       "originalName": "field_k",
       "to": "coinSprite",
@@ -3636,12 +3692,44 @@
       "renamedSymbol": "F:ot.musicPatchArchive:LResourceArchive;"
     },
     {
+      "symbol": "F:pe.field_a:I",
+      "originalName": "field_a",
+      "to": "nextBucketIndex",
+      "evidence": "Iterator tracks next array bucket to scan;reset writes1 after setting first pending node.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I"
+    },
+    {
       "symbol": "F:pe.field_b:[Lgl;",
       "originalName": "field_b",
       "to": "highscoreNameEntries",
       "evidence": "Reviewed query factory, client packet serialization/response decoder, acknowledgement routing and highscore result matching; same shared roles as GeoBlox.",
       "confidence": "reviewed",
       "renamedSymbol": "F:NodeHashTableIterator.highscoreNameEntries:[LHighscoreNameEntry;"
+    },
+    {
+      "symbol": "F:pe.field_d:Lwf;",
+      "originalName": "field_d",
+      "to": "nextNode",
+      "evidence": "Pending node compared to prior bucket sentinel;hasNext may advance to nonempty bucket and next consumes then follows primary next.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:pe.field_e:Llc;",
+      "originalName": "field_e",
+      "to": "table",
+      "evidence": "Owning IterableNodeHashTable saved by constructor before reset;all bucket/count access through same table reference.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIterableNodeHashTable;"
+    },
+    {
+      "symbol": "F:pe.field_f:Lwf;",
+      "originalName": "field_f",
+      "to": "lastReturned",
+      "evidence": "Last node exposed by next for remove gating;remove requires nonnull,unlinks(-123),then nulls it. Reset(false) leaves previous last-returned unchanged.. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;"
     },
     {
       "symbol": "F:ph.field_a:Lwf;",
@@ -7196,6 +7284,62 @@
       "renamedSymbol": "M:eq.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:er.a(I)Lwt;",
+      "originalName": "a",
+      "to": "removeLast",
+      "evidence": "Read sentinel.previousSecondaryNode;int!=3 clears iteration cursor before testing endpoint;unlink non-sentinel with-114. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeLast(I)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:er.a(ILwt;)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink previous membership with-124,link before sentinel;int!=2 calls removeLast(-73) between predecessor-next and successor-previous writes. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(ILDualLinkNode;)V"
+    },
+    {
+      "symbol": "M:er.a(Lwt;B)V",
+      "originalName": "a",
+      "to": "addFirst",
+      "evidence": "Unlink with-123 then link after sentinel;byte<=122 returns before final successor-previous write. Only that last write is inside RuntimeException wrapper. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addFirst(LDualLinkNode;B)V"
+    },
+    {
+      "symbol": "M:er.b(B)Lwt;",
+      "originalName": "b",
+      "to": "beginForward",
+      "evidence": "Read sentinel.nextSecondaryNode;empty clears cursor and returns null. Otherwise byte<13 nulls sentinel before saving next cursor;all nonempty paths return node. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.beginForward(B)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:er.b(I)Lwt;",
+      "originalName": "b",
+      "to": "removeFirst",
+      "evidence": "Int!=-18520 returns null before traversal. Otherwise unlink sentinel.nextSecondaryNode with-121 unless sentinel. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:er.c(I)I",
+      "originalName": "c",
+      "to": "countWithOffset",
+      "evidence": "Read global control;initialize count from supplied int,walk sentinel.nextSecondaryNode chain,increment with original Java overflow. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.countWithOffset(I)I"
+    },
+    {
+      "symbol": "M:er.e(I)Lwt;",
+      "originalName": "e",
+      "to": "nextForward",
+      "evidence": "Read shared cursor;sentinel clears cursor and returns null;otherwise advance nextSecondaryNode before checking int31542,other ints return null after advance. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.nextForward(I)LDualLinkNode;"
+    },
+    {
       "symbol": "M:es.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -8348,6 +8492,38 @@
       "renamedSymbol": "M:lb.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:lc.a(I)Lwf;",
+      "originalName": "a",
+      "to": "next",
+      "evidence": "Read global control;if bucket index>0 and cursor not prior sentinel,advance chain and return. Only scanning path evaluates35/((int-55)/60),then scans buckets and advances index before node read;null at exhaustion. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.next(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:lc.a(ILwf;J)V",
+      "originalName": "a",
+      "to": "put",
+      "evidence": "Unlink prior primary membership(-125) before computing bucket index key & (intOffset+bucketCount),preserving overflow. Append before bucket sentinel,then store key only after both reciprocal neighbor writes. Preserve wrapper/partial unlink/insertion failure states. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.put(ILIntrusiveNode;J)V"
+    },
+    {
+      "symbol": "M:lc.a(JB)Lwf;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Read global control;mask long key with bucketCount-1,scan next chain using lookupCursor;successful match advances before returning. Exhaustion clears lookupCursor,then only byte<=87 writes bucketCount=-4 before null return. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JB)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:lc.b(I)Lwf;",
+      "originalName": "b",
+      "to": "beginIterationAtBucket",
+      "evidence": "Assign nextBucketIndex directly from supplied int,then call next(-71). Preserve out-of-range/negative initial index behavior and partial assignment on arithmetic/array/cursor failure. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.beginIterationAtBucket(I)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:ld.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -9074,6 +9250,14 @@
       "evidence": "Reviewed applet run/shutdown callers, staged Ace resource loading, archive consumers, font/sprite asset literals and audio-cache construction; guards and stage ordering remain unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NodeHashTableIterator.decodeGameImagesAndFonts(LResourceArchive;BLResourceArchive;LResourceArchive;)V"
+    },
+    {
+      "symbol": "M:pe.a(Z)V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Set pending node from table.buckets[0].next,then nextBucketIndex1. False returns retaining old lastReturned;true clears it. Preserve bucket/null failures before index write and retained exhaustion state. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(Z)V"
     },
     {
       "symbol": "M:pf.b(Z)V",
@@ -34836,9 +35020,9 @@
     },
     {
       "symbol": "F:er.field_a:Lwt;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_a:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "er.java",
         "start": 97,
@@ -34847,9 +35031,9 @@
     },
     {
       "symbol": "F:er.field_b:Lwt;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_b:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.iterationCursor:LDualLinkNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "er.java",
         "start": 121,
@@ -44538,9 +44722,9 @@
     },
     {
       "symbol": "F:lc.field_a:[Lwf;",
-      "renamedSymbol": "F:IterableNodeHashTable.field_a:[LIntrusiveNode;",
+      "renamedSymbol": "F:IterableNodeHashTable.buckets:[LIntrusiveNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "buckets",
       "declaration": {
         "file": "lc.java",
         "start": 236,
@@ -44560,9 +44744,9 @@
     },
     {
       "symbol": "F:lc.field_c:I",
-      "renamedSymbol": "F:IterableNodeHashTable.field_c:I",
+      "renamedSymbol": "F:IterableNodeHashTable.bucketCount:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "bucketCount",
       "declaration": {
         "file": "lc.java",
         "start": 170,
@@ -44571,9 +44755,9 @@
     },
     {
       "symbol": "F:lc.field_d:I",
-      "renamedSymbol": "F:IterableNodeHashTable.field_d:I",
+      "renamedSymbol": "F:IterableNodeHashTable.nextBucketIndex:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "nextBucketIndex",
       "declaration": {
         "file": "lc.java",
         "start": 153,
@@ -44582,9 +44766,9 @@
     },
     {
       "symbol": "F:lc.field_e:Lwf;",
-      "renamedSymbol": "F:IterableNodeHashTable.field_e:LIntrusiveNode;",
+      "renamedSymbol": "F:IterableNodeHashTable.iterationCursor:LIntrusiveNode;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "lc.java",
         "start": 194,
@@ -44593,9 +44777,9 @@
     },
     {
       "symbol": "F:lc.field_f:Lwf;",
-      "renamedSymbol": "F:IterableNodeHashTable.field_f:LIntrusiveNode;",
+      "renamedSymbol": "F:IterableNodeHashTable.lookupCursor:LIntrusiveNode;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "lookupCursor",
       "declaration": {
         "file": "lc.java",
         "start": 218,
@@ -49015,9 +49199,9 @@
     },
     {
       "symbol": "F:pe.field_a:I",
-      "renamedSymbol": "F:NodeHashTableIterator.field_a:I",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "nextBucketIndex",
       "declaration": {
         "file": "pe.java",
         "start": 209,
@@ -49048,9 +49232,9 @@
     },
     {
       "symbol": "F:pe.field_d:Lwf;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_d:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "nextNode",
       "declaration": {
         "file": "pe.java",
         "start": 184,
@@ -49059,9 +49243,9 @@
     },
     {
       "symbol": "F:pe.field_e:Llc;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_e:LIterableNodeHashTable;",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIterableNodeHashTable;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "table",
       "declaration": {
         "file": "pe.java",
         "start": 136,
@@ -49070,9 +49254,9 @@
     },
     {
       "symbol": "F:pe.field_f:Lwf;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_f:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "lastReturned",
       "declaration": {
         "file": "pe.java",
         "start": 160,
@@ -100297,7 +100481,7 @@
     },
     {
       "symbol": "L:er.a(I)Lwt;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeLast(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100308,7 +100492,7 @@
     },
     {
       "symbol": "L:er.a(I)Lwt;#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeLast(I)LDualLinkNode;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -100319,7 +100503,7 @@
     },
     {
       "symbol": "L:er.a(ILwt;)V#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -100330,7 +100514,7 @@
     },
     {
       "symbol": "L:er.a(Lwt;B)V#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(LDualLinkNode;B)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addFirst(LDualLinkNode;B)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -100341,7 +100525,7 @@
     },
     {
       "symbol": "L:er.b(B)Lwt;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.b(B)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.beginForward(B)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100352,7 +100536,7 @@
     },
     {
       "symbol": "L:er.b(I)Lwt;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.b(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100363,7 +100547,7 @@
     },
     {
       "symbol": "L:er.c(I)I#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.c(I)I#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.countWithOffset(I)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -100374,7 +100558,7 @@
     },
     {
       "symbol": "L:er.c(I)I#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.c(I)I#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.countWithOffset(I)I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100385,7 +100569,7 @@
     },
     {
       "symbol": "L:er.c(I)I#2",
-      "renamedSymbol": "L:SecondaryNodeDeque.c(I)I#2",
+      "renamedSymbol": "L:SecondaryNodeDeque.countWithOffset(I)I#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100407,7 +100591,7 @@
     },
     {
       "symbol": "L:er.e(I)Lwt;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.e(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.nextForward(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -143043,7 +143227,7 @@
     },
     {
       "symbol": "L:lc.a(I)Lwf;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.next(I)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -143054,7 +143238,7 @@
     },
     {
       "symbol": "L:lc.a(I)Lwf;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.next(I)LIntrusiveNode;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143065,7 +143249,7 @@
     },
     {
       "symbol": "L:lc.a(I)Lwf;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(I)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.next(I)LIntrusiveNode;#2",
       "originalName": "var2_ref_wf",
       "renamedName": "var2_ref_wf",
       "declaration": {
@@ -143076,7 +143260,7 @@
     },
     {
       "symbol": "L:lc.a(I)Lwf;#3",
-      "renamedSymbol": "L:IterableNodeHashTable.a(I)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IterableNodeHashTable.next(I)LIntrusiveNode;#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -143087,7 +143271,7 @@
     },
     {
       "symbol": "L:lc.a(I)Lwf;#4",
-      "renamedSymbol": "L:IterableNodeHashTable.a(I)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IterableNodeHashTable.next(I)LIntrusiveNode;#4",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -143263,7 +143447,7 @@
     },
     {
       "symbol": "L:lc.a(ILwf;J)V#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILIntrusiveNode;J)V#0",
+      "renamedSymbol": "L:IterableNodeHashTable.put(ILIntrusiveNode;J)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -143274,7 +143458,7 @@
     },
     {
       "symbol": "L:lc.a(ILwf;J)V#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ILIntrusiveNode;J)V#1",
+      "renamedSymbol": "L:IterableNodeHashTable.put(ILIntrusiveNode;J)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -143285,7 +143469,7 @@
     },
     {
       "symbol": "L:lc.a(JB)Lwf;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -143296,7 +143480,7 @@
     },
     {
       "symbol": "L:lc.a(JB)Lwf;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -143307,7 +143491,7 @@
     },
     {
       "symbol": "L:lc.a(JB)Lwf;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JB)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(JB)LIntrusiveNode;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -249094,9 +249278,9 @@
     },
     {
       "symbol": "M:er.a(I)Lwt;",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeLast(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeLast",
       "declaration": {
         "file": "er.java",
         "start": 6050,
@@ -249105,9 +249289,9 @@
     },
     {
       "symbol": "M:er.a(ILwt;)V",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(ILDualLinkNode;)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(ILDualLinkNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "er.java",
         "start": 5060,
@@ -249116,9 +249300,9 @@
     },
     {
       "symbol": "M:er.a(Lwt;B)V",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(LDualLinkNode;B)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addFirst(LDualLinkNode;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addFirst",
       "declaration": {
         "file": "er.java",
         "start": 146,
@@ -249127,9 +249311,9 @@
     },
     {
       "symbol": "M:er.b(B)Lwt;",
-      "renamedSymbol": "M:SecondaryNodeDeque.b(B)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.beginForward(B)LDualLinkNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginForward",
       "declaration": {
         "file": "er.java",
         "start": 6663,
@@ -249138,9 +249322,9 @@
     },
     {
       "symbol": "M:er.b(I)Lwt;",
-      "renamedSymbol": "M:SecondaryNodeDeque.b(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "er.java",
         "start": 704,
@@ -249149,9 +249333,9 @@
     },
     {
       "symbol": "M:er.c(I)I",
-      "renamedSymbol": "M:SecondaryNodeDeque.c(I)I",
+      "renamedSymbol": "M:SecondaryNodeDeque.countWithOffset(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "countWithOffset",
       "declaration": {
         "file": "er.java",
         "start": 4789,
@@ -249171,9 +249355,9 @@
     },
     {
       "symbol": "M:er.e(I)Lwt;",
-      "renamedSymbol": "M:SecondaryNodeDeque.e(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.nextForward(I)LDualLinkNode;",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "nextForward",
       "declaration": {
         "file": "er.java",
         "start": 5638,
@@ -264725,9 +264909,9 @@
     },
     {
       "symbol": "M:lc.a(I)Lwf;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.next(I)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "next",
       "declaration": {
         "file": "lc.java",
         "start": 6009,
@@ -264747,9 +264931,9 @@
     },
     {
       "symbol": "M:lc.a(ILwf;J)V",
-      "renamedSymbol": "M:IterableNodeHashTable.a(ILIntrusiveNode;J)V",
+      "renamedSymbol": "M:IterableNodeHashTable.put(ILIntrusiveNode;J)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "put",
       "declaration": {
         "file": "lc.java",
         "start": 6726,
@@ -264758,9 +264942,9 @@
     },
     {
       "symbol": "M:lc.a(JB)Lwf;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JB)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(JB)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "lc.java",
         "start": 282,
@@ -264802,9 +264986,9 @@
     },
     {
       "symbol": "M:lc.b(I)Lwf;",
-      "renamedSymbol": "M:IterableNodeHashTable.b(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.beginIterationAtBucket(I)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginIterationAtBucket",
       "declaration": {
         "file": "lc.java",
         "start": 3940,
@@ -270401,9 +270585,9 @@
     },
     {
       "symbol": "M:pe.a(Z)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(Z)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "pe.java",
         "start": 2261,
@@ -306294,7 +306478,7 @@
     },
     {
       "symbol": "P:er.a(I)Lwt;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeLast(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306305,7 +306489,7 @@
     },
     {
       "symbol": "P:er.a(ILwt;)V#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306316,7 +306500,7 @@
     },
     {
       "symbol": "P:er.a(ILwt;)V#1",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(ILDualLinkNode;)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(ILDualLinkNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -306327,7 +306511,7 @@
     },
     {
       "symbol": "P:er.a(Lwt;B)V#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;B)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addFirst(LDualLinkNode;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306338,7 +306522,7 @@
     },
     {
       "symbol": "P:er.a(Lwt;B)V#1",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;B)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addFirst(LDualLinkNode;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -306349,7 +306533,7 @@
     },
     {
       "symbol": "P:er.b(B)Lwt;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.b(B)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.beginForward(B)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306360,7 +306544,7 @@
     },
     {
       "symbol": "P:er.b(I)Lwt;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.b(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306371,7 +306555,7 @@
     },
     {
       "symbol": "P:er.c(I)I#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.c(I)I#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.countWithOffset(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306393,7 +306577,7 @@
     },
     {
       "symbol": "P:er.e(I)Lwt;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.e(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.nextForward(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -342506,7 +342690,7 @@
     },
     {
       "symbol": "P:lc.a(I)Lwf;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.next(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -342539,7 +342723,7 @@
     },
     {
       "symbol": "P:lc.a(ILwf;J)V#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILIntrusiveNode;J)V#0",
+      "renamedSymbol": "P:IterableNodeHashTable.put(ILIntrusiveNode;J)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -342550,7 +342734,7 @@
     },
     {
       "symbol": "P:lc.a(ILwf;J)V#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILIntrusiveNode;J)V#1",
+      "renamedSymbol": "P:IterableNodeHashTable.put(ILIntrusiveNode;J)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -342561,7 +342745,7 @@
     },
     {
       "symbol": "P:lc.a(ILwf;J)V#2",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ILIntrusiveNode;J)V#2",
+      "renamedSymbol": "P:IterableNodeHashTable.put(ILIntrusiveNode;J)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -342572,7 +342756,7 @@
     },
     {
       "symbol": "P:lc.a(JB)Lwf;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JB)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JB)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -342583,7 +342767,7 @@
     },
     {
       "symbol": "P:lc.a(JB)Lwf;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JB)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(JB)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -342704,7 +342888,7 @@
     },
     {
       "symbol": "P:lc.b(I)Lwf;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.b(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.beginIterationAtBucket(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -358137,7 +358321,7 @@
     },
     {
       "symbol": "P:pe.a(Z)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(Z)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -418673,7 +418857,7 @@
       "original": "dk.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "7a7b5f86149dbf705d7ea9ad11d112aeefaf20314600246f2ed434a7fed595a6",
-      "outputSha256": "a3b88e9a156f2c86c1ab1f1a2569a07a6b6426f5e2d52b6f46a2fec44a610083",
+      "outputSha256": "90a8e75e84b6b7946f612ff84f78f25d4f606a8cb0c28e4e180f94b5b9cabf5e",
       "edits": [
         {
           "start": 50,
@@ -418802,6 +418986,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 2198,
+          "end": 2199,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
+        },
+        {
           "start": 2271,
           "end": 2278,
           "symbol": "F:wt.field_i:J",
@@ -418821,6 +419012,13 @@
           "symbol": "C:os",
           "original": "os",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 2593,
+          "end": 2594,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
         },
         {
           "start": 2751,
@@ -418856,6 +419054,13 @@
           "symbol": "C:os",
           "original": "os",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 4441,
+          "end": 4442,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
         },
         {
           "start": 5314,
@@ -419003,6 +419208,13 @@
           "symbol": "C:os",
           "original": "os",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9513,
+          "end": 9514,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 10589,
@@ -423112,7 +423324,7 @@
       "original": "er.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "9c1e110300b6fce872b681cd9575595a6e9cd77087f9053e73c2c58d33e7151e",
-      "outputSha256": "4b9d0581fd73de2e4953243f860ec009239d94794ba26588f30d808aae5fa055",
+      "outputSha256": "8f11887f21ce1e76f3a0662b0fdd48bd8ebd587cad5d90743ce08de712b48ceb",
       "edits": [
         {
           "start": 50,
@@ -423129,11 +423341,32 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 97,
+          "end": 104,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 118,
           "end": 120,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 121,
+          "end": 128,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 146,
+          "end": 147,
+          "symbol": "M:er.a(Lwt;B)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 148,
@@ -423164,11 +423397,25 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 278,
+          "end": 285,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 302,
           "end": 309,
           "symbol": "F:wt.field_j:Lwt;",
           "original": "field_j",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 317,
+          "end": 324,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 325,
@@ -423213,6 +423460,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 704,
+          "end": 705,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 770,
           "end": 772,
           "symbol": "C:wt",
@@ -423227,11 +423481,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 813,
+          "end": 820,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 821,
           "end": 828,
           "symbol": "F:wt.field_j:Lwt;",
           "original": "field_j",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 855,
+          "end": 862,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 881,
@@ -423283,6 +423551,13 @@
           "renamed": "ScorchMark"
         },
         {
+          "start": 4789,
+          "end": 4790,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
           "start": 4835,
           "end": 4842,
           "symbol": "F:AceOfSkies.field_G:Z",
@@ -423297,6 +423572,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 4902,
+          "end": 4909,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4910,
           "end": 4917,
           "symbol": "F:wt.field_j:Lwt;",
@@ -423304,11 +423586,25 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 4947,
+          "end": 4954,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4980,
           "end": 4987,
           "symbol": "F:wt.field_j:Lwt;",
           "original": "field_j",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 5060,
+          "end": 5061,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 5074,
@@ -423339,6 +423635,13 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 5213,
+          "end": 5220,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5221,
           "end": 5228,
           "symbol": "F:wt.field_f:Lwt;",
@@ -423353,6 +423656,13 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 5262,
+          "end": 5269,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5288,
           "end": 5295,
           "symbol": "F:wt.field_f:Lwt;",
@@ -423365,6 +423675,13 @@
           "symbol": "F:wt.field_j:Lwt;",
           "original": "field_j",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 5360,
+          "end": 5361,
+          "symbol": "M:er.a(I)Lwt;",
+          "original": "a",
+          "renamed": "removeLast"
         },
         {
           "start": 5397,
@@ -423388,11 +423705,46 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 5638,
+          "end": 5639,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
+        },
+        {
           "start": 5662,
           "end": 5664,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 5677,
+          "end": 5684,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 5711,
+          "end": 5718,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 5737,
+          "end": 5744,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 5799,
+          "end": 5806,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 5814,
@@ -423416,6 +423768,20 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 6050,
+          "end": 6051,
+          "symbol": "M:er.a(I)Lwt;",
+          "original": "a",
+          "renamed": "removeLast"
+        },
+        {
+          "start": 6108,
+          "end": 6115,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 6119,
           "end": 6121,
           "symbol": "C:wt",
@@ -423430,11 +423796,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 6154,
+          "end": 6161,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6162,
           "end": 6169,
           "symbol": "F:wt.field_f:Lwt;",
           "original": "field_f",
           "renamed": "previousSecondaryNode"
+        },
+        {
+          "start": 6198,
+          "end": 6205,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6226,
@@ -423451,11 +423831,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 6337,
+          "end": 6344,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6345,
           "end": 6352,
           "symbol": "F:wt.field_f:Lwt;",
           "original": "field_f",
           "renamed": "previousSecondaryNode"
+        },
+        {
+          "start": 6388,
+          "end": 6395,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6423,
@@ -423472,11 +423866,25 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 6533,
+          "end": 6540,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6547,
           "end": 6549,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 6566,
+          "end": 6573,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6574,
@@ -423486,11 +423894,32 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 6589,
+          "end": 6596,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 6611,
+          "end": 6618,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6619,
           "end": 6626,
           "symbol": "F:wt.field_j:Lwt;",
           "original": "field_j",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 6634,
+          "end": 6641,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6660,
@@ -423500,11 +423929,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 6663,
+          "end": 6664,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
+        },
+        {
           "start": 6688,
           "end": 6690,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 6703,
+          "end": 6710,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6711,
@@ -423514,6 +423957,27 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 6737,
+          "end": 6744,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 6771,
+          "end": 6778,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 6863,
+          "end": 6870,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 6878,
           "end": 6885,
           "symbol": "F:wt.field_j:Lwt;",
@@ -423521,11 +423985,25 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 6933,
+          "end": 6940,
+          "symbol": "F:er.field_a:Lwt;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6944,
           "end": 6946,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 6967,
+          "end": 6974,
+          "symbol": "F:er.field_b:Lwt;",
+          "original": "field_b",
+          "renamed": "iterationCursor"
         },
         {
           "start": 6982,
@@ -432026,7 +432504,7 @@
       "original": "gq.java",
       "renamed": "WeightedObjectCache.java",
       "inputSha256": "567fd7bca4828257566a1eb895ed8e15f353a10c07e9fc9a846b8c8f6f5b5f23",
-      "outputSha256": "442163f6fe5d67bb435c3e6750838651780ef70da7bd50ddf49636e9d2462bd7",
+      "outputSha256": "4e2ec3e99074d98bb8dee53bbdba774179f94ccd30010d3e6667863d5627ea08",
       "edits": [
         {
           "start": 50,
@@ -432118,6 +432596,13 @@
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "SoftCacheReference"
+        },
+        {
+          "start": 2956,
+          "end": 2957,
+          "symbol": "M:lc.a(ILwf;J)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 2973,
@@ -432463,6 +432948,13 @@
           "renamed": "CacheReference"
         },
         {
+          "start": 6513,
+          "end": 6514,
+          "symbol": "M:lc.a(JB)Lwf;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 6744,
           "end": 6745,
           "symbol": "M:wf.c(I)V",
@@ -432503,6 +432995,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "StrongCacheReference"
+        },
+        {
+          "start": 7091,
+          "end": 7092,
+          "symbol": "M:lc.a(ILwf;J)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 7108,
@@ -432587,6 +433086,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "StrongCacheReference"
+        },
+        {
+          "start": 7674,
+          "end": 7675,
+          "symbol": "M:lc.a(ILwf;J)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 7700,
@@ -432701,6 +433207,13 @@
           "renamed": "CacheReference"
         },
         {
+          "start": 9942,
+          "end": 9943,
+          "symbol": "M:lc.a(I)Lwf;",
+          "original": "a",
+          "renamed": "next"
+        },
+        {
           "start": 10112,
           "end": 10114,
           "symbol": "C:he",
@@ -432713,6 +433226,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "CacheReference"
+        },
+        {
+          "start": 10164,
+          "end": 10165,
+          "symbol": "M:lc.a(I)Lwf;",
+          "original": "a",
+          "renamed": "next"
         },
         {
           "start": 10188,
@@ -432750,6 +433270,13 @@
           "renamed": "CacheReference"
         },
         {
+          "start": 10996,
+          "end": 10997,
+          "symbol": "M:lc.b(I)Lwf;",
+          "original": "b",
+          "renamed": "beginIterationAtBucket"
+        },
+        {
           "start": 11165,
           "end": 11167,
           "symbol": "C:he",
@@ -432762,6 +433289,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "CacheReference"
+        },
+        {
+          "start": 11217,
+          "end": 11218,
+          "symbol": "M:lc.a(I)Lwf;",
+          "original": "a",
+          "renamed": "next"
         },
         {
           "start": 11242,
@@ -432790,6 +433324,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "CacheReference"
+        },
+        {
+          "start": 11527,
+          "end": 11528,
+          "symbol": "M:lc.a(JB)Lwf;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 11617,
@@ -432839,6 +433380,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "StrongCacheReference"
+        },
+        {
+          "start": 12401,
+          "end": 12402,
+          "symbol": "M:lc.a(ILwf;J)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 12448,
@@ -441187,7 +441735,7 @@
       "original": "hf.java",
       "renamed": "SocketArchiveNetworkClient.java",
       "inputSha256": "32e349da6172ac68b6f032e956d7e2c6e99016bc99f34b19046175e50b083c70",
-      "outputSha256": "701b06d0ca430c2064c8078710558506b2bb003a3c914d0130645156cc9f867c",
+      "outputSha256": "e318376a91e406d9fe4c059d22628f5d1b25e64b5279bbc409a31c967653538a",
       "edits": [
         {
           "start": 69,
@@ -441323,6 +441871,20 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 2667,
+          "end": 2668,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 2755,
+          "end": 2756,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 2889,
           "end": 2891,
           "symbol": "C:gp",
@@ -441335,6 +441897,20 @@
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 2931,
+          "end": 2932,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 3019,
+          "end": 3020,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 3207,
@@ -441421,6 +441997,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 8607,
+          "end": 8608,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
+        },
+        {
           "start": 8685,
           "end": 8692,
           "symbol": "F:rb.field_g:I",
@@ -441463,11 +442046,25 @@
           "renamed": "payload"
         },
         {
+          "start": 8918,
+          "end": 8919,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 8961,
           "end": 8963,
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 8979,
+          "end": 8980,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
         },
         {
           "start": 9016,
@@ -441482,6 +442079,13 @@
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 9054,
+          "end": 9055,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
         },
         {
           "start": 9140,
@@ -441526,11 +442130,25 @@
           "renamed": "payload"
         },
         {
+          "start": 9379,
+          "end": 9380,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 9440,
           "end": 9442,
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 9458,
+          "end": 9459,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
         },
         {
           "start": 10042,
@@ -441659,6 +442277,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 11898,
+          "end": 11899,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
+        },
+        {
           "start": 12014,
           "end": 12021,
           "symbol": "F:wt.field_i:J",
@@ -441673,11 +442298,25 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 12208,
+          "end": 12209,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
+        },
+        {
           "start": 12505,
           "end": 12507,
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 12523,
+          "end": 12524,
+          "symbol": "M:er.b(B)Lwt;",
+          "original": "b",
+          "renamed": "beginForward"
         },
         {
           "start": 12639,
@@ -441692,6 +442331,13 @@
           "symbol": "C:gp",
           "original": "gp",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 12770,
+          "end": 12771,
+          "symbol": "M:er.e(I)Lwt;",
+          "original": "e",
+          "renamed": "nextForward"
         },
         {
           "start": 13159,
@@ -460806,7 +461452,7 @@
       "original": "lc.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "b3a31aac951e48e848ee4599d354071180a2b2f5facbfd18a8f71d90c59c5342",
-      "outputSha256": "7449e7e3e211283007a97be2ca2e03b1e40ef553a8afe5e21f1fb6435229a3a2",
+      "outputSha256": "772512df6f7c9b64d7f21c0afdb9f6b976f063d67e3dc5964bce6d6dcac41c3f",
       "edits": [
         {
           "start": 89,
@@ -460816,11 +461462,32 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 153,
+          "end": 160,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 170,
+          "end": 177,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
+        },
+        {
           "start": 191,
           "end": 193,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 194,
+          "end": 201,
+          "symbol": "F:lc.field_e:Lwf;",
+          "original": "field_e",
+          "renamed": "iterationCursor"
         },
         {
           "start": 215,
@@ -460830,6 +461497,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 218,
+          "end": 225,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
           "start": 231,
           "end": 233,
           "symbol": "C:wf",
@@ -460837,11 +461511,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 236,
+          "end": 243,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
           "start": 279,
           "end": 281,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 282,
+          "end": 283,
+          "symbol": "M:lc.a(JB)Lwf;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 342,
@@ -460858,11 +461546,46 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 382,
+          "end": 389,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 408,
+          "end": 415,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
+        },
+        {
+          "start": 446,
+          "end": 453,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
           "start": 461,
           "end": 468,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 490,
+          "end": 497,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
+          "start": 528,
+          "end": 535,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
         },
         {
           "start": 536,
@@ -460879,6 +461602,27 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 584,
+          "end": 591,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
+          "start": 610,
+          "end": 617,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
+          "start": 625,
+          "end": 632,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
           "start": 633,
           "end": 640,
           "symbol": "F:wf.field_a:Lwf;",
@@ -460886,11 +461630,39 @@
           "renamed": "next"
         },
         {
+          "start": 694,
+          "end": 701,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
+          "start": 709,
+          "end": 716,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
           "start": 717,
           "end": 724,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 749,
+          "end": 756,
+          "symbol": "F:lc.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lookupCursor"
+        },
+        {
+          "start": 838,
+          "end": 845,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
         },
         {
           "start": 906,
@@ -460968,6 +461740,27 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3940,
+          "end": 3941,
+          "symbol": "M:lc.b(I)Lwf;",
+          "original": "b",
+          "renamed": "beginIterationAtBucket"
+        },
+        {
+          "start": 3969,
+          "end": 3976,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 4007,
+          "end": 4008,
+          "symbol": "M:lc.a(I)Lwf;",
+          "original": "a",
+          "renamed": "next"
         },
         {
           "start": 4039,
@@ -461117,6 +461910,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 6009,
+          "end": 6010,
+          "symbol": "M:lc.a(I)Lwf;",
+          "original": "a",
+          "renamed": "next"
+        },
+        {
           "start": 6033,
           "end": 6035,
           "symbol": "C:wf",
@@ -461131,11 +461931,53 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 6106,
+          "end": 6113,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6136,
+          "end": 6143,
+          "symbol": "F:lc.field_e:Lwf;",
+          "original": "field_e",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 6152,
+          "end": 6159,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6165,
+          "end": 6172,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
           "start": 6191,
           "end": 6193,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6213,
+          "end": 6220,
+          "symbol": "F:lc.field_e:Lwf;",
+          "original": "field_e",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 6237,
+          "end": 6244,
+          "symbol": "F:lc.field_e:Lwf;",
+          "original": "field_e",
+          "renamed": "iterationCursor"
         },
         {
           "start": 6259,
@@ -461145,6 +461987,48 @@
           "renamed": "next"
         },
         {
+          "start": 6386,
+          "end": 6393,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6402,
+          "end": 6409,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
+        },
+        {
+          "start": 6483,
+          "end": 6490,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6507,
+          "end": 6514,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6522,
+          "end": 6529,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6557,
+          "end": 6564,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
           "start": 6578,
           "end": 6585,
           "symbol": "F:wf.field_a:Lwf;",
@@ -461152,11 +462036,39 @@
           "renamed": "next"
         },
         {
+          "start": 6617,
+          "end": 6624,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6635,
+          "end": 6642,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6659,
+          "end": 6666,
+          "symbol": "F:lc.field_e:Lwf;",
+          "original": "field_e",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 6674,
           "end": 6681,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 6726,
+          "end": 6727,
+          "symbol": "M:lc.a(ILwf;J)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 6740,
@@ -461185,6 +462097,20 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6885,
+          "end": 6892,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6929,
+          "end": 6936,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
         },
         {
           "start": 6958,
@@ -461250,11 +462176,32 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 7387,
+          "end": 7394,
+          "symbol": "F:lc.field_d:I",
+          "original": "field_d",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 7413,
+          "end": 7420,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
           "start": 7427,
           "end": 7429,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 7452,
+          "end": 7459,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
         },
         {
           "start": 7532,
@@ -461276,6 +462223,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 7603,
+          "end": 7610,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
         },
         {
           "start": 7645,
@@ -487621,7 +488575,7 @@
       "original": "pe.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "cb61a3c8ae04a776a65f63df0a663ae9237500b28ef31275d18cebf9d6b44b4c",
-      "outputSha256": "7139bd1ae5df6a71b6ccfc808db3983f86b77d9e7afb8d4465bc201f2eeebe59",
+      "outputSha256": "58ccfedf519f600a91e3d8e4eee5295272ec919a90c06e476fb043aff7b3fbe9",
       "edits": [
         {
           "start": 71,
@@ -487652,11 +488606,25 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 136,
+          "end": 143,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
           "start": 157,
           "end": 159,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 160,
+          "end": 167,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
         },
         {
           "start": 181,
@@ -487666,11 +488634,67 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 184,
+          "end": 191,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 209,
+          "end": 216,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2261,
+          "end": 2262,
+          "symbol": "M:pe.a(Z)V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 2294,
+          "end": 2301,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 2309,
+          "end": 2316,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2317,
+          "end": 2324,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
           "start": 2328,
           "end": 2335,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 2350,
+          "end": 2357,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2427,
+          "end": 2434,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
         },
         {
           "start": 2517,
@@ -487680,11 +488704,95 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 2551,
+          "end": 2558,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 2567,
+          "end": 2574,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2575,
+          "end": 2582,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 2593,
+          "end": 2600,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2658,
+          "end": 2665,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2673,
+          "end": 2680,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2681,
+          "end": 2688,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
+        },
+        {
           "start": 2702,
           "end": 2704,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2726,
+          "end": 2733,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2734,
+          "end": 2741,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 2776,
+          "end": 2783,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2800,
+          "end": 2807,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2815,
+          "end": 2822,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
         },
         {
           "start": 2867,
@@ -487694,11 +488802,88 @@
           "renamed": "next"
         },
         {
+          "start": 2883,
+          "end": 2890,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2891,
+          "end": 2898,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 2904,
+          "end": 2911,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2937,
+          "end": 2944,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 2952,
+          "end": 2959,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 2960,
+          "end": 2967,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 2973,
+          "end": 2980,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
           "start": 2986,
           "end": 2993,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 3047,
+          "end": 3054,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 3062,
+          "end": 3069,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 3070,
+          "end": 3077,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 3083,
+          "end": 3090,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
         },
         {
           "start": 3158,
@@ -488989,11 +490174,32 @@
           "renamed": "gameSpriteArchive"
         },
         {
+          "start": 6537,
+          "end": 6544,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 6616,
+          "end": 6623,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 6624,
           "end": 6625,
           "symbol": "M:wf.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 6646,
+          "end": 6653,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
         },
         {
           "start": 6710,
@@ -489010,11 +490216,81 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 6783,
+          "end": 6790,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 6799,
+          "end": 6806,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 6807,
+          "end": 6814,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6825,
+          "end": 6832,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 6859,
+          "end": 6866,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 6883,
+          "end": 6890,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 6914,
+          "end": 6921,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
+        },
+        {
           "start": 6929,
           "end": 6936,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 7003,
+          "end": 7010,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 7019,
+          "end": 7026,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 7027,
+          "end": 7034,
+          "symbol": "F:lc.field_c:I",
+          "original": "field_c",
+          "renamed": "bucketCount"
         },
         {
           "start": 7085,
@@ -489024,11 +490300,81 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7109,
+          "end": 7116,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 7117,
+          "end": 7124,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 7159,
+          "end": 7166,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 7183,
+          "end": 7190,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 7198,
+          "end": 7205,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
           "start": 7253,
           "end": 7260,
           "symbol": "F:wf.field_a:Lwf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 7284,
+          "end": 7291,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 7292,
+          "end": 7299,
+          "symbol": "F:lc.field_a:[Lwf;",
+          "original": "field_a",
+          "renamed": "buckets"
+        },
+        {
+          "start": 7310,
+          "end": 7317,
+          "symbol": "F:pe.field_a:I",
+          "original": "field_a",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 7342,
+          "end": 7349,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 7371,
+          "end": 7378,
+          "symbol": "F:pe.field_d:Lwf;",
+          "original": "field_d",
+          "renamed": "nextNode"
         },
         {
           "start": 7386,
@@ -489050,6 +490396,27 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 7456,
+          "end": 7463,
+          "symbol": "F:pe.field_f:Lwf;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 7501,
+          "end": 7508,
+          "symbol": "F:pe.field_e:Llc;",
+          "original": "field_e",
+          "renamed": "table"
+        },
+        {
+          "start": 7534,
+          "end": 7535,
+          "symbol": "M:pe.a(Z)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 7758,
@@ -520469,7 +521836,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "c631bd69eb1bf290abf8a941b4527e1d3f88f39a9af86f2b1244a344cb1837e4",
-      "outputSha256": "3619f341be273452d7bd7544adf1fd514554d5ad39b2e8a2e579076ab5d13450",
+      "outputSha256": "2f2ef80a0c65cb425e3879e80a83f58b788ee53bd2b4c6b6ca788023cf9f1127",
       "edits": [
         {
           "start": 89,
@@ -520882,6 +522249,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 6219,
+          "end": 6220,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 6255,
           "end": 6256,
           "symbol": "M:wf.c(I)V",
@@ -520894,6 +522268,13 @@
           "symbol": "M:wt.d(I)V",
           "original": "d",
           "renamed": "unlinkSecondaryNode"
+        },
+        {
+          "start": 6364,
+          "end": 6365,
+          "symbol": "M:er.b(I)Lwt;",
+          "original": "b",
+          "renamed": "removeFirst"
         },
         {
           "start": 6402,
@@ -520915,6 +522296,13 @@
           "symbol": "M:ph.a(IJLwf;)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 6543,
+          "end": 6544,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 7365,
@@ -521055,6 +522443,13 @@
           "symbol": "M:ph.a(BJ)Lwf;",
           "original": "a",
           "renamed": "findByKey"
+        },
+        {
+          "start": 7882,
+          "end": 7883,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 8002,
@@ -542820,7 +544215,7 @@
       "original": "un.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "2d4ecaf9b2e8c53834399e5d23fad46abb319f80dbc9bd8efa4588ea85c37b13",
-      "outputSha256": "aedf8a6b0a16f6c2d6c8ef8a71dd11f8b0600d65d1fcaa92cb58f6582f94c7d1",
+      "outputSha256": "caa4137be71add88b1eebc0e8f7cfecb88814d9171a03dcdb8ef789c36aa1cae",
       "edits": [
         {
           "start": 53,
@@ -542907,11 +544302,39 @@
           "renamed": "ArchiveNetworkClient"
         },
         {
+          "start": 1017,
+          "end": 1018,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
+          "start": 1037,
+          "end": 1038,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
           "start": 1077,
           "end": 1079,
           "symbol": "C:er",
           "original": "er",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 1115,
+          "end": 1116,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
+          "start": 1135,
+          "end": 1136,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
         },
         {
           "start": 1158,
@@ -542954,6 +544377,20 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 1716,
+          "end": 1717,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 1873,
+          "end": 1874,
+          "symbol": "M:er.a(ILwt;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 2294,
@@ -543052,6 +544489,34 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "ClientException"
+        },
+        {
+          "start": 3740,
+          "end": 3741,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
+          "start": 3760,
+          "end": 3761,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
+          "start": 3827,
+          "end": 3828,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
+        },
+        {
+          "start": 3847,
+          "end": 3848,
+          "symbol": "M:er.c(I)I",
+          "original": "c",
+          "renamed": "countWithOffset"
         },
         {
           "start": 3864,
@@ -556015,7 +557480,7 @@
       "original": "wl.java",
       "renamed": "OpenGlRenderer.java",
       "inputSha256": "571c017239255dc25d655afbd3e8b4b990076a3133d846059817dfbb76f34a59",
-      "outputSha256": "f80347b22f0fc8f7f284377ca33030c4881d7eeedf1c936bd938334597df3398",
+      "outputSha256": "d0aa689ecd530a2fa2622ab770a342957055667eb5bfb79b8deb26d96f5a4223",
       "edits": [
         {
           "start": 89,
@@ -558083,6 +559548,13 @@
           "renamed": "getHeight"
         },
         {
+          "start": 67991,
+          "end": 67992,
+          "symbol": "M:er.a(I)Lwt;",
+          "original": "a",
+          "renamed": "removeLast"
+        },
+        {
           "start": 68055,
           "end": 68057,
           "symbol": "C:cu",
@@ -558132,6 +559604,13 @@
           "renamed": "getHeight"
         },
         {
+          "start": 68489,
+          "end": 68490,
+          "symbol": "M:er.a(Lwt;B)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
           "start": 68793,
           "end": 68794,
           "symbol": "M:ph.a(BJ)Lwf;",
@@ -558167,6 +559646,13 @@
           "renamed": "getHeight"
         },
         {
+          "start": 69150,
+          "end": 69151,
+          "symbol": "M:er.a(I)Lwt;",
+          "original": "a",
+          "renamed": "removeLast"
+        },
+        {
           "start": 69256,
           "end": 69257,
           "symbol": "M:wt.d(I)V",
@@ -558200,6 +559686,13 @@
           "symbol": "M:tm.b()I",
           "original": "b",
           "renamed": "getHeight"
+        },
+        {
+          "start": 69641,
+          "end": 69642,
+          "symbol": "M:er.a(Lwt;B)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 69768,
@@ -561289,10 +562782,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "91105701995a792fd047d87b876db948440216820092beefb4fcdb0482ce7c56",
+    "rulesSha256": "70a0475f67dca9d689a8b8a1c8eae78a7f6e92302890ebf2134bf57379c7f7a1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "f749ca01f5fdf2f7d99950dfcf87d37b09ed0c76a387dca86a3b978ac8c7a15b",
+    "outputTreeSha256": "049f65e041461405177461853166de5c3e29b9bdcdadb0e6e4f2701335b0e2c7",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

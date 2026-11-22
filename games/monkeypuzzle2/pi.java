@@ -200,7 +200,7 @@ final class pi extends DualLinkNode {
           if (102 < m.field_h) {
             var7 = 0;
             var2Lifetime1 = var7;
-            var3 = (ki) (bd.field_b.a((byte) -117));
+            var3 = (ki) (bd.field_b.beginBackward((byte) -117));
             while (var3 != null) {
               var4 = m.field_h - (102 + DequeCursor.field_g[var7]);
               stackIn_56_0 = ~var4;
@@ -221,7 +221,7 @@ final class pi extends DualLinkNode {
               } else {
                 var7++;
               }
-              var3 = (ki) (bd.field_b.d((byte) 63));
+              var3 = (ki) (bd.field_b.nextBackward((byte) 63));
             }
           }
           if (param0 < 120) {

@@ -285,7 +285,7 @@ final class BufferedSocket implements Runnable {
           var2_long = ih.a((byte) -98);
           if (hk.field_n != 0 &&
             hk.field_k < 0) {
-            var4_ref_fa = (fa) (uj.field_e.b(-103));
+            var4_ref_fa = (fa) (uj.field_e.beginForward(-103));
             if (var4_ref_fa != null &&
               var2_long > var4_ref_fa.field_m) {
               var4_ref_fa.unlink(20);

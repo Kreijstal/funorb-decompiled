@@ -22,11 +22,11 @@ final class hh {
             this.a(true);
           }
           if (param1 == null) {
-            var3 = this.field_e.field_c.field_c;
+            var3 = this.field_e.sentinel.field_c;
           } else {
             var3 = param1;
           }
-          if (var3 != this.field_e.field_c) {
+          if (var3 != this.field_e.sentinel) {
             this.field_b = var3.field_c;
             stackIn_9_0 = var3;
             return stackIn_9_0;
@@ -52,14 +52,14 @@ final class hh {
         IntrusiveNode var2 = this.field_b;
         if (param0 > -116) {
           field_a = (String[]) null;
-          if (var2 == this.field_e.field_c) {
+          if (var2 == this.field_e.sentinel) {
             this.field_b = null;
             return null;
           }
           this.field_b = var2.field_c;
           return var2;
         }
-        if (var2 == this.field_e.field_c) {
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -68,8 +68,8 @@ final class hh {
     }
 
     final IntrusiveNode d(int param0) {
-        IntrusiveNode var2 = this.field_e.field_c.field_f;
-        if (this.field_e.field_c == var2) {
+        IntrusiveNode var2 = this.field_e.sentinel.field_f;
+        if (this.field_e.sentinel == var2) {
           this.field_b = null;
           return null;
         }
@@ -103,7 +103,7 @@ final class hh {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.a(true, (IntrusiveNode) null);
           var2 = this.field_b;
-          if (this.field_e.field_c != var2) {
+          if (this.field_e.sentinel != var2) {
             this.field_b = var2.field_f;
             return var2;
           }
@@ -111,7 +111,7 @@ final class hh {
           return null;
         }
         var2Lifetime1 = this.field_b;
-        if (this.field_e.field_c != var2Lifetime1) {
+        if (this.field_e.sentinel != var2Lifetime1) {
           this.field_b = var2Lifetime1.field_f;
           return var2Lifetime1;
         }
@@ -132,11 +132,11 @@ final class hh {
         try {
           var3_int = -127 / ((param1 + 18) / 40);
           if (param0 == null) {
-            var4 = this.field_e.field_c.field_f;
+            var4 = this.field_e.sentinel.field_f;
           } else {
             var4 = param0;
           }
-          if (var4 == this.field_e.field_c) {
+          if (var4 == this.field_e.sentinel) {
             this.field_b = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -159,18 +159,18 @@ final class hh {
     }
 
     final IntrusiveNode a(boolean param0) {
-        IntrusiveNode var2 = this.field_e.field_c.field_c;
+        IntrusiveNode var2 = this.field_e.sentinel.field_c;
         if (!param0) {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.a(true, (IntrusiveNode) null);
-          if (var2 == this.field_e.field_c) {
+          if (var2 == this.field_e.sentinel) {
             this.field_b = null;
             return null;
           }
           this.field_b = var2.field_c;
           return var2;
         }
-        if (var2 == this.field_e.field_c) {
+        if (var2 == this.field_e.sentinel) {
           this.field_b = null;
           return null;
         }

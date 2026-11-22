@@ -20,14 +20,14 @@ final class ClamsAnimation extends EventAnimation {
         if (var2.isDown(-109)) {
           return;
         }
-        EventEffect var3 = (EventEffect) (this.field_w.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
         if (param0 == 6) {
           al.a(param0 ^ -103, this.field_w.moveId);
           while (var3 != null) {
             var4 = var3.target.a(param0 ^ -27455, this.screen);
             var4.b(-1, 6);
             var3.apply(var2, this.screen.field_h, 12);
-            var3 = (EventEffect) (this.field_w.effects.c(param0 - 6));
+            var3 = (EventEffect) (this.field_w.effects.nextForward(param0 - 6));
           }
           return;
         }

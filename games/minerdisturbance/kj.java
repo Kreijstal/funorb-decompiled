@@ -17,7 +17,7 @@ final class kj {
         int var3 = MinerDisturbance.field_ab;
         tm var1Lifetime1;
         while (true) {
-          dupTemp$0 = (tm) (ok.field_b.e(63854));
+          dupTemp$0 = (tm) (ok.field_b.removeFirst(63854));
           var4 = dupTemp$0;
           var1 = var4;
           if (null == dupTemp$0) {
@@ -26,7 +26,7 @@ final class kj {
           ke.field_X[var4.field_s] = false;
         }
         while (true) {
-          dupTemp$1 = (tm) (ec.field_c.e(63854));
+          dupTemp$1 = (tm) (ec.field_c.removeFirst(63854));
           var5 = dupTemp$1;
           var1Lifetime1 = var5;
           if (null == dupTemp$1) {

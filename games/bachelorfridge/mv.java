@@ -50,7 +50,7 @@ class mv extends AnimationNode {
             if (var3.isDown(87)) {
               return;
             }
-            var4_ref = (EventEffect) (this.field_k.field_o.b((byte) 90));
+            var4_ref = (EventEffect) (this.field_k.field_o.beginForward((byte) 90));
             var5_ref = (BasicMoveDefinition) (al.a(106, this.field_k.moveId));
             var6 = 0;
             while (var4_ref != null) {
@@ -175,7 +175,7 @@ class mv extends AnimationNode {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    var4_ref = (EventEffect) (this.field_k.field_o.c(0));
+                    var4_ref = (EventEffect) (this.field_k.field_o.nextForward(0));
                     continue;
                   }
                 }
@@ -190,7 +190,7 @@ class mv extends AnimationNode {
                   }
                 }
               }
-              var4_ref = (EventEffect) (this.field_k.field_o.c(0));
+              var4_ref = (EventEffect) (this.field_k.field_o.nextForward(0));
             }
             return;
           }
@@ -260,7 +260,7 @@ class mv extends AnimationNode {
           if (15 == this.field_j &&
             !this.field_k.d((byte) -112) &&
             4 == var8_ref.field_r) {
-            this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+            this.field_l.field_fb.addLast(new ha(this.field_l, var5), true);
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_j == 35 &&
@@ -269,20 +269,20 @@ class mv extends AnimationNode {
               this.field_k.moveId != 32 &&
               this.field_k.moveId != 33) {
               if (var8_ref.field_r == 6) {
-                this.field_l.field_fb.a(new jv(this.field_l, var5, this.field_k.field_q), true);
+                this.field_l.field_fb.addLast(new jv(this.field_l, var5, this.field_k.field_q), true);
               } else {
                 if (var8_ref.field_r == 8) {
-                  this.field_l.field_fb.a(new ah(this.field_l, var5, this.field_k.field_q, 2), true);
+                  this.field_l.field_fb.addLast(new ah(this.field_l, var5, this.field_k.field_q, 2), true);
                 } else {
                   if ((var8_ref.field_r == 7)) {
-                    this.field_l.field_fb.a(new gja(this.field_l, var5, this.field_k.field_q), true);
+                    this.field_l.field_fb.addLast(new gja(this.field_l, var5, this.field_k.field_q), true);
                   }
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_l.field_fb.a(new ut(this.field_l, var5, this.field_k.field_q, this.field_k.field_p), true);
+              this.field_l.field_fb.addLast(new ut(this.field_l, var5, this.field_k.field_q, this.field_k.field_p), true);
             }
           }
           if (this.field_j < 25 &&
@@ -315,7 +315,7 @@ class mv extends AnimationNode {
           if (~this.field_k.field_p == param0) {
             return;
           }
-          var2 = (EventEffect) (this.field_k.field_o.b((byte) 90));
+          var2 = (EventEffect) (this.field_k.field_o.beginForward((byte) 90));
           while (var2 != null) {
             if (var2 instanceof DamageEffect) {
               var3 = var2.target.a(-27449, this.field_l);
@@ -323,7 +323,7 @@ class mv extends AnimationNode {
                 var3.b(false);
               }
             }
-            var2 = (EventEffect) (this.field_k.field_o.c(0));
+            var2 = (EventEffect) (this.field_k.field_o.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -190,7 +190,7 @@ final class db extends PcmStream {
         if (param0) {
           return;
         }
-        pe var3 = (pe) (this.field_P.field_w.a((byte) 100));
+        pe var3 = (pe) (this.field_P.field_w.beginBackward((byte) 100));
         while (var3 != null) {
           if (param1 < 0 ||
             var3.field_q == param1) {
@@ -206,7 +206,7 @@ final class db extends PcmStream {
             }
             var3.unlink(2);
           }
-          var3 = (pe) (this.field_P.field_w.b(29));
+          var3 = (pe) (this.field_P.field_w.nextBackward(29));
         }
     }
 
@@ -495,14 +495,14 @@ final class db extends PcmStream {
         pe var3 = null;
         int var4 = Vertigo2.field_L ? 1 : 0;
         if ((param1 & this.field_N[param0]) != 0) {
-          var3 = (pe) (this.field_P.field_w.a((byte) 100));
+          var3 = (pe) (this.field_P.field_w.beginBackward((byte) 100));
           while (var3 != null) {
             if (param0 == var3.field_q &&
               this.field_u[param0][var3.field_B] == null &&
               var3.field_E < 0) {
               var3.field_E = 0;
             }
-            var3 = (pe) (this.field_P.field_w.b(77));
+            var3 = (pe) (this.field_P.field_w.nextBackward(77));
           }
         }
     }
@@ -774,7 +774,7 @@ final class db extends PcmStream {
         var9 = Vertigo2.field_L ? 1 : 0;
         this.a(param3, false, 64, param0);
         if ((this.field_N[param0] & 2) != 0) {
-          var5 = (pe) (this.field_P.field_w.c((byte) -65));
+          var5 = (pe) (this.field_P.field_w.beginForward((byte) -65));
           while (var5 != null) {
             if (param0 == var5.field_q &&
               var5.field_E < 0) {
@@ -787,7 +787,7 @@ final class db extends PcmStream {
               var5.field_B = param3;
               return;
             }
-            var5 = (pe) (this.field_P.field_w.b(false));
+            var5 = (pe) (this.field_P.field_w.nextForward(false));
           }
         }
         var10 = (al) (this.field_G.a((long)this.field_O[param0], (byte) 64));
@@ -860,7 +860,7 @@ final class db extends PcmStream {
         if ((2 & this.field_N[param3]) == 0) {
           var8.field_E = 0;
         } else {
-          var6 = (pe) (this.field_P.field_w.a((byte) 100));
+          var6 = (pe) (this.field_P.field_w.beginBackward((byte) 100));
           while (var6 != null) {
             if (var8.field_q == var6.field_q &&
               var6.field_E < 0 &&
@@ -868,7 +868,7 @@ final class db extends PcmStream {
               var8.field_E = 0;
               break;
             }
-            var6 = (pe) (this.field_P.field_w.b(76));
+            var6 = (pe) (this.field_P.field_w.nextBackward(76));
           }
         }
         if (param1) {
@@ -1061,7 +1061,7 @@ final class db extends PcmStream {
         int var4;
         int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
-        var3 = (pe) (this.field_P.field_w.a((byte) 100));
+        var3 = (pe) (this.field_P.field_w.beginBackward((byte) 100));
         var4 = -81 % ((-66 - param0) / 48);
         while (var3 != null) {
           if ((0 > param1 ||
@@ -1070,7 +1070,7 @@ final class db extends PcmStream {
             this.field_u[var3.field_q][var3.field_B] = null;
             var3.field_E = 0;
           }
-          var3 = (pe) (this.field_P.field_w.b(92));
+          var3 = (pe) (this.field_P.field_w.nextBackward(92));
         }
     }
 
@@ -1078,12 +1078,12 @@ final class db extends PcmStream {
         pe var3 = null;
         int var4 = Vertigo2.field_L ? 1 : 0;
         if ((4 & this.field_N[param1]) != 0) {
-          var3 = (pe) (this.field_P.field_w.a((byte) 100));
+          var3 = (pe) (this.field_P.field_w.beginBackward((byte) 100));
           while (var3 != null) {
             if (~param1 == ~var3.field_q) {
               var3.field_o = 0;
             }
-            var3 = (pe) (this.field_P.field_w.b(86));
+            var3 = (pe) (this.field_P.field_w.nextBackward(86));
           }
         }
         if (param0 != 70) {

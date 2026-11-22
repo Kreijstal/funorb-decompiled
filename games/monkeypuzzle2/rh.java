@@ -485,7 +485,7 @@ abstract class rh extends WidgetContainer {
               fieldTemp$1 = jj.field_F;
               jj.field_F = jj.field_F + 1;
               var6_ref.field_gb = fieldTemp$1;
-              wl.field_d.a(-8212, var6_ref);
+              wl.field_d.addFirst(-8212, var6_ref);
             }
             var6_ref.field_db = var5_ref_String;
             return;
@@ -538,7 +538,7 @@ abstract class rh extends WidgetContainer {
             fieldTemp$0 = nc.field_f;
             nc.field_f = nc.field_f + 1;
             var7.field_gb = fieldTemp$0;
-            kc.field_a.a(-8212, var7);
+            kc.field_a.addFirst(-8212, var7);
           }
           if (var4Lifetime1 != null) {
             var4Lifetime1 = ((String) (var4Lifetime1)).intern();
@@ -546,7 +546,7 @@ abstract class rh extends WidgetContainer {
           var7.field_bb = (String) (var4Lifetime1);
           var7.field_db = var5_ref_StringLifetime1;
           var7.unlink(-19822);
-          var8 = (rb) (kc.field_a.a((byte) -117));
+          var8 = (rb) (kc.field_a.beginBackward((byte) -117));
           scanLoop1: while (true) {
             if (null != var8) {
               stackIn_57_0 = var8;
@@ -554,7 +554,7 @@ abstract class rh extends WidgetContainer {
                 break scanLoop1;
               }
               if (ld.a(stackIn_57_0, -24612, var7)) {
-                var8 = (rb) (kc.field_a.d((byte) 63));
+                var8 = (rb) (kc.field_a.nextBackward((byte) 63));
                 continue;
               }
             }
@@ -562,7 +562,7 @@ abstract class rh extends WidgetContainer {
             break;
           }
           if (stackIn_57_0 == null) {
-            kc.field_a.a(-8212, var7);
+            kc.field_a.addFirst(-8212, var7);
             if (var9 == 0) {
               return;
             }

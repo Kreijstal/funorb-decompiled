@@ -141,7 +141,7 @@ final class rq extends PcmStream {
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         this.field_z.a(param0);
-        var3 = (pe) (this.field_w.a((byte) 100));
+        var3 = (pe) (this.field_w.beginBackward((byte) 100));
         while (var3 != null) {
           if (!this.field_s.a(-1, var3)) {
             var2 = param0;
@@ -155,7 +155,7 @@ final class rq extends PcmStream {
               var2 = var2 - var3.field_H;
             } while (!this.field_s.a(0, var3, var2, (int[]) null, (byte) 121));
           }
-          var3 = (pe) (this.field_w.b(43));
+          var3 = (pe) (this.field_w.nextBackward(43));
         }
     }
 
@@ -451,7 +451,7 @@ final class rq extends PcmStream {
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           this.field_z.b(param0, param1, param2);
-          var6 = (pe) (this.field_w.a((byte) 100));
+          var6 = (pe) (this.field_w.beginBackward((byte) 100));
           while (var6 != null) {
             stackIn_4_0 = this.field_s.a(-1, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -472,7 +472,7 @@ final class rq extends PcmStream {
                 var6.field_H = var6.field_H - var5;
               }
             }
-            var6 = (pe) (this.field_w.b(35));
+            var6 = (pe) (this.field_w.nextBackward(35));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -490,7 +490,7 @@ final class rq extends PcmStream {
     }
 
     final PcmStream c() {
-        pe var1 = (pe) (this.field_w.a((byte) 100));
+        pe var1 = (pe) (this.field_w.beginBackward((byte) 100));
         if (var1 == null) {
           return null;
         }
@@ -514,7 +514,7 @@ final class rq extends PcmStream {
         pe var1_ref = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
         do {
-          var1_ref = (pe) (this.field_w.b(119));
+          var1_ref = (pe) (this.field_w.nextBackward(119));
           if (var1_ref == null) {
             return null;
           }

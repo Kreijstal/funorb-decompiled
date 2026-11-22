@@ -99,10 +99,10 @@ final class ArchiveIndex {
           if (param0 != -69) {
             field_o = true;
           }
-          var4 = (mj) (nh.field_a.b(75));
+          var4 = (mj) (nh.field_a.beginForward(75));
           while (var4 != null) {
             vd.a(param1, -3450, var4);
-            var4 = (mj) (nh.field_a.b((byte) 56));
+            var4 = (mj) (nh.field_a.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

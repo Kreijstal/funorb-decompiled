@@ -36,8 +36,8 @@ final class ZombiesSpecial extends SpecialOrder {
                 if (var7.field_A &&
                   var7.isDown(68) &&
                   param0.tiles[var7.tileX][var7.tileY].occupant == null) {
-                  var4.effects.a(new DamageEffect(new CreatureRef(var7), false, 1, -10, 35), true);
-                  var4.effects.a(new PlaceCreatureEffect(new CreatureRef(var7), var7.tileX, var7.tileY), true);
+                  var4.effects.addLast(new DamageEffect(new CreatureRef(var7), false, 1, -10, 35), true);
+                  var4.effects.addLast(new PlaceCreatureEffect(new CreatureRef(var7), var7.tileX, var7.tileY), true);
                 }
               }
             }

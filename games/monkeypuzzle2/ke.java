@@ -28,7 +28,7 @@ final class ke {
         if (param0 != 8192) {
           return;
         }
-        he var3 = (he) (mb.field_e.a((byte) -117));
+        he var3 = (he) (mb.field_e.beginBackward((byte) -117));
         var3 = var3;
         if (var3 == null) {
           return;

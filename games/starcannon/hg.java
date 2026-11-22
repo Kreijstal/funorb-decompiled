@@ -93,18 +93,18 @@ final class hg extends vk implements qk, ga {
 
     final static vc b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = StarCannon.field_A;
-        vc var5 = (vc) (ne.field_c.c(-3905));
+        vc var5 = (vc) (ne.field_c.beginForward(-3905));
         while (var5 != null) {
           if (~var5.field_i == ~param1) {
             return var5;
           }
-          var5 = (vc) (ne.field_c.a(-16913));
+          var5 = (vc) (ne.field_c.nextForward(-16913));
         }
         var5 = new vc();
         var5.field_i = param1;
         var5.field_l = param2;
         var5.field_h = param4;
-        ne.field_c.b(117, var5);
+        ne.field_c.addLast(117, var5);
         if (param3 < -68) {
           ea.a((byte) 70, var5, param0);
           return var5;

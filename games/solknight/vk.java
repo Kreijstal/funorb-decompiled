@@ -247,9 +247,9 @@ final class vk extends jf {
         }
         ah.field_f = ah.field_f | var3;
         SecondaryNodeDequeIterator.field_d = SecondaryNodeDequeIterator.field_d | var3;
-        lc.field_t.a(new la(param2), -7044);
+        lc.field_t.addFirst(new la(param2), -7044);
         if (!ImageProducerRasterBuffer.field_n) {
-          w.field_a.a(new bl(param2, param0, bi.field_i, ic.field_t, lc.field_h, lk.field_e), -7044);
+          w.field_a.addFirst(new bl(param2, param0, bi.field_i, ic.field_t, lc.field_h, lk.field_e), -7044);
           if (param1 != 89) {
             vk.b((byte) 46);
             return;

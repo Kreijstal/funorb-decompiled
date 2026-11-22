@@ -17,7 +17,7 @@ final class ZombiesAnimation extends EventAnimation {
           ZombiesAnimation.releaseStatics(-41);
         }
         if (!var6.isDown(89)) {
-          var3_ref = (EventEffect) (this.field_v.effects.b((byte) 90));
+          var3_ref = (EventEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(-121, this.field_v.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var6, this.screen.field_h, 12);
@@ -28,7 +28,7 @@ final class ZombiesAnimation extends EventAnimation {
               this.addChild(27799, new cb(var7, 19));
               this.addChild(27799, new wn(var7, kna.field_g[35], 24831));
             }
-            var3_ref = (EventEffect) (this.field_v.effects.c(0));
+            var3_ref = (EventEffect) (this.field_v.effects.nextForward(0));
           }
           return;
         }

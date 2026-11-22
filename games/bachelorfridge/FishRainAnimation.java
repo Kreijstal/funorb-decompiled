@@ -21,7 +21,7 @@ final class FishRainAnimation extends EventAnimation {
           if (var8.isDown(-79)) {
             return;
           }
-          var3_ref = (EventEffect) (this.field_x.effects.b((byte) 90));
+          var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
           while (var3_ref != null) {
             var9 = var3_ref.target.a(-27449, this.screen);
             var9.b(-1, 6);
@@ -29,7 +29,7 @@ final class FishRainAnimation extends EventAnimation {
             if (var3_ref instanceof DamageEffect) {
               this.addChild(27799, new DamagePopupAnimation(this.screen, var9, var3_ref.field_f));
             }
-            var3_ref = (EventEffect) (this.field_x.effects.c(0));
+            var3_ref = (EventEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }
@@ -38,7 +38,7 @@ final class FishRainAnimation extends EventAnimation {
         if (var6.isDown(-79)) {
           return;
         }
-        var3_ref = (EventEffect) (this.field_x.effects.b((byte) 90));
+        var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
         while (var3_ref != null) {
           var7 = var3_ref.target.a(-27449, this.screen);
           var7.b(-1, 6);
@@ -46,7 +46,7 @@ final class FishRainAnimation extends EventAnimation {
           if (var3_ref instanceof DamageEffect) {
             this.addChild(27799, new DamagePopupAnimation(this.screen, var7, var3_ref.field_f));
           }
-          var3_ref = (EventEffect) (this.field_x.effects.c(0));
+          var3_ref = (EventEffect) (this.field_x.effects.nextForward(0));
         }
         return;
     }

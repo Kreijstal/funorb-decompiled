@@ -15,12 +15,12 @@ final class eg {
         RuntimeException var2 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (jl) (ll.field_T.a((byte) -95));
+          var4 = (jl) (ll.field_T.beginForward((byte) -95));
           while (var4 != null) {
             LetterTile.a(-7812, param1, var4);
-            var4 = (jl) (ll.field_T.a(true));
+            var4 = (jl) (ll.field_T.nextForward(true));
           }
-          var5 = (oi) (GzipDecompressor.field_d.a((byte) -95));
+          var5 = (oi) (GzipDecompressor.field_d.beginForward((byte) -95));
           if (param0) {
             eg.a((byte) 21);
           }
@@ -28,7 +28,7 @@ final class eg {
             de.a(var5, param1, 2);
             stackIn_9_0 = GzipDecompressor.field_d;
             stackIn_10_1 = !(param0);
-            var5 = (oi) (((IntrusiveDeque) (Object) stackIn_9_0).a(stackIn_10_1));
+            var5 = (oi) (((IntrusiveDeque) (Object) stackIn_9_0).nextForward(stackIn_10_1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

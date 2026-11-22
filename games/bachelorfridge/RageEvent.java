@@ -17,7 +17,7 @@ final class RageEvent extends SpecialEvent {
             if (var2_int < 0) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_r = qi.a(param0, (byte) 68);
         } catch (RuntimeException runtimeException) {

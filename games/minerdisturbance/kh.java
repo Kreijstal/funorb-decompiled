@@ -157,10 +157,10 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (param0 != -1) {
             kh.a(-47, -60);
           }
-          var4 = (bi) (bb.field_a.b(92));
+          var4 = (bi) (bb.field_a.beginForward(92));
           while (var4 != null) {
             tk.a(var4, param1, (byte) -102);
-            var4 = (bi) (bb.field_a.b((byte) 56));
+            var4 = (bi) (bb.field_a.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -596,6 +596,14 @@
       "renamedSymbol": "F:PacketBuffer.position:I"
     },
     {
+      "symbol": "F:lm.field_b:Ljl;",
+      "originalName": "field_b",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LDualLinkNode;"
+    },
+    {
       "symbol": "F:qg.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "to": "checkedName",
@@ -1650,6 +1658,22 @@
       "evidence": "Complete overlap-aware byte range implementation reviewed: equal-index no-op, forward8-byte blocks/tail and backward overlap8-byte blocks/tail. Preserve arithmetic, bounds/partial-write behavior and pointer order; do not replace with System.arraycopy.",
       "confidence": "reviewed",
       "renamedSymbol": "M:lj.copyByteRange([BI[BII)V"
+    },
+    {
+      "symbol": "M:lm.a(I)Ljl;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Int!=-29870 recursively calls same method(-12) before sentinel read;otherwise take secondary field_o successor and unlinkSecondary(true) unless empty. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.removeFirst(I)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:lm.a(Ljl;I)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink secondary membership(true) before guard;int!=18425 returns after unlink. Valid guard appends using field_o next and field_q previous with original wrapper. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.addLast(LDualLinkNode;I)V"
     },
     {
       "symbol": "M:ln.a(Z[BLkg;)V",
@@ -22666,9 +22690,9 @@
     },
     {
       "symbol": "F:lm.field_b:Ljl;",
-      "renamedSymbol": "F:IntrusiveDeque.field_b:LDualLinkNode;",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LDualLinkNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "lm.java",
         "start": 130,
@@ -122117,7 +122141,7 @@
     },
     {
       "symbol": "L:lm.a(I)Ljl;#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -122128,7 +122152,7 @@
     },
     {
       "symbol": "L:lm.a(I)Ljl;#1",
-      "renamedSymbol": "L:IntrusiveDeque.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:IntrusiveDeque.removeFirst(I)LDualLinkNode;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -122139,7 +122163,7 @@
     },
     {
       "symbol": "L:lm.a(Ljl;I)V#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(LDualLinkNode;I)V#0",
+      "renamedSymbol": "L:IntrusiveDeque.addLast(LDualLinkNode;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -211085,9 +211109,9 @@
     },
     {
       "symbol": "M:lm.a(I)Ljl;",
-      "renamedSymbol": "M:IntrusiveDeque.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:IntrusiveDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "lm.java",
         "start": 1213,
@@ -211096,9 +211120,9 @@
     },
     {
       "symbol": "M:lm.a(Ljl;I)V",
-      "renamedSymbol": "M:IntrusiveDeque.a(LDualLinkNode;I)V",
+      "renamedSymbol": "M:IntrusiveDeque.addLast(LDualLinkNode;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "lm.java",
         "start": 395,
@@ -261960,7 +261984,7 @@
     },
     {
       "symbol": "P:lm.a(I)Ljl;#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -261971,7 +261995,7 @@
     },
     {
       "symbol": "P:lm.a(Ljl;I)V#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(LDualLinkNode;I)V#0",
+      "renamedSymbol": "P:IntrusiveDeque.addLast(LDualLinkNode;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -261982,7 +262006,7 @@
     },
     {
       "symbol": "P:lm.a(Ljl;I)V#1",
-      "renamedSymbol": "P:IntrusiveDeque.a(LDualLinkNode;I)V#1",
+      "renamedSymbol": "P:IntrusiveDeque.addLast(LDualLinkNode;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -299142,7 +299166,7 @@
       "original": "ag.java",
       "renamed": "ag.java",
       "inputSha256": "f4f0ea7a2b2f294b3198e01bbd2c046d34088161555f35928a7fe3525061c0e3",
-      "outputSha256": "bdc4ef20f8c0f8c62d0cfbd186ea21b56c3332fb22c703b344cc2a15175e2388",
+      "outputSha256": "61d31432ad13c3e74aebb79b377de9958d09a66713a94fa0cd3c34c08b78eb5e",
       "edits": [
         {
           "start": 192,
@@ -299222,11 +299246,25 @@
           "renamed": "get"
         },
         {
+          "start": 8932,
+          "end": 8933,
+          "symbol": "M:lm.a(I)Ljl;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 9064,
           "end": 9065,
           "symbol": "M:gh.a(Lrk;JI)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 9117,
+          "end": 9118,
+          "symbol": "M:lm.a(Ljl;I)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 9513,
@@ -299250,11 +299288,25 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 9922,
+          "end": 9923,
+          "symbol": "M:lm.a(Ljl;I)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 10067,
           "end": 10068,
           "symbol": "M:gh.a(Lrk;JI)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 10123,
+          "end": 10124,
+          "symbol": "M:lm.a(Ljl;I)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 10206,
@@ -311850,7 +311902,7 @@
       "original": "lm.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "bf14c8c83a2f70cb40d10f1ac809538edc134175dc96b3132e011e5f288a82ba",
-      "outputSha256": "7735a7b3e23220c840854ec812414594ebfdcf81d88505fc98b918b5a23973d7",
+      "outputSha256": "e7636d54fb0112e4ba879ec7e0ac424089cb3b5ab96944de1d6a6993ab6ada13",
       "edits": [
         {
           "start": 71,
@@ -311865,6 +311917,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 130,
+          "end": 137,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
         },
         {
           "start": 177,
@@ -311888,6 +311947,13 @@
           "renamed": "SecondaryNodeDequeIterator"
         },
         {
+          "start": 395,
+          "end": 396,
+          "symbol": "M:lm.a(Ljl;I)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 397,
           "end": 399,
           "symbol": "C:jl",
@@ -311900,6 +311966,20 @@
           "symbol": "M:jl.b(Z)V",
           "original": "b",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 601,
+          "end": 608,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 642,
+          "end": 649,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
         },
         {
           "start": 1048,
@@ -311916,6 +311996,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1213,
+          "end": 1214,
+          "symbol": "M:lm.a(I)Ljl;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 1237,
           "end": 1239,
           "symbol": "C:jl",
@@ -311930,11 +312017,46 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1326,
+          "end": 1327,
+          "symbol": "M:lm.a(I)Ljl;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 1356,
+          "end": 1363,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1392,
+          "end": 1399,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1428,
           "end": 1429,
           "symbol": "M:jl.b(Z)V",
           "original": "b",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 1536,
+          "end": 1543,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1570,
+          "end": 1577,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
         },
         {
           "start": 1622,
@@ -319344,7 +319466,7 @@
       "original": "tm.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "3cb320d5bea7a2fbf7e3e017e16b23a748d3790242cdef579c1011778c71234e",
-      "outputSha256": "65052e9e1ef705feadd8ea1c0ee06838eac6bef038361fbdc8786a60d83901eb",
+      "outputSha256": "6cffc82d579bccc51921a98d78786b5be97daf3de9ab7b5c0b28f600eb739747",
       "edits": [
         {
           "start": 71,
@@ -319459,6 +319581,13 @@
           "renamed": "deque"
         },
         {
+          "start": 2805,
+          "end": 2812,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2831,
           "end": 2838,
           "symbol": "F:tm.field_c:Ljl;",
@@ -319529,6 +319658,13 @@
           "renamed": "deque"
         },
         {
+          "start": 5559,
+          "end": 5566,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5575,
           "end": 5582,
           "symbol": "F:tm.field_c:Ljl;",
@@ -319583,6 +319719,13 @@
           "symbol": "F:tm.field_d:Llm;",
           "original": "field_d",
           "renamed": "deque"
+        },
+        {
+          "start": 5897,
+          "end": 5904,
+          "symbol": "F:lm.field_b:Ljl;",
+          "original": "field_b",
+          "renamed": "sentinel"
         }
       ]
     },
@@ -322666,10 +322809,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/confined"
     },
-    "rulesSha256": "bc0084a31b792fc6419a16ea1b3247204c53b70143cc9bb0e50dff3c6f598fbf",
+    "rulesSha256": "c969a3596fc0dd46d3add6b7bfeb3522e76c799c91086cef6844eb4b09de35c9",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
-    "outputTreeSha256": "095e53ed09cc05cf348eae755b5b5fd1bbf5b3e924f62e5d914e0b5756a0def9",
+    "outputTreeSha256": "38e7419b901a9ffee5990034e14495724c3a89a60c541b75bfeeea5e0c9e8250",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

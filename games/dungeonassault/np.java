@@ -34,10 +34,10 @@ class np extends rj {
             gf.b(this.field_L);
             return;
           }
-          var5 = (rj) (this.field_J.e(-24172));
+          var5 = (rj) (this.field_J.beginBackward(-24172));
           while (var5 != null) {
             var5.a(param0, param1, (byte) 122);
-            var5 = (rj) (this.field_J.a(4));
+            var5 = (rj) (this.field_J.nextBackward(4));
           }
           gf.b(this.field_L);
           return;
@@ -47,10 +47,10 @@ class np extends rj {
         gf.a(param0 + this.field_t, param1 + this.field_i, this.field_q + this.field_t + param0, param1 + this.field_x + this.field_i);
         var4Lifetime1 = 56 % ((41 - param2) / 61);
         if (null != this.field_J) {
-          var5Lifetime1 = (rj) (this.field_J.e(-24172));
+          var5Lifetime1 = (rj) (this.field_J.beginBackward(-24172));
           while (var5Lifetime1 != null) {
             var5Lifetime1.a(param0, param1, (byte) 122);
-            var5Lifetime1 = (rj) (this.field_J.a(4));
+            var5Lifetime1 = (rj) (this.field_J.nextBackward(4));
           }
         }
         gf.b(this.field_L);
@@ -93,10 +93,10 @@ class np extends rj {
         rj var4;
         var3 = DungeonAssault.field_K;
         if (null != this.field_J) {
-          var4 = (rj) (this.field_J.e(param0 ^ -24182));
+          var4 = (rj) (this.field_J.beginBackward(param0 ^ -24182));
           while (var4 != null) {
             var4.b((byte) 30);
-            var4 = (rj) (this.field_J.a(4));
+            var4 = (rj) (this.field_J.nextBackward(4));
           }
         }
         super.b(param0);
@@ -121,7 +121,7 @@ class np extends rj {
           if (null == this.field_J) {
             this.field_J = new IntrusiveDeque();
           }
-          this.field_J.b(param0, false);
+          this.field_J.addLast(param0, false);
           param0.field_r = (rj) (this);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "np.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -153,10 +153,10 @@ class np extends rj {
         var5 = DungeonAssault.field_K;
         if (param1 != 0) {
           if (null != this.field_J) {
-            var6 = (rj) (this.field_J.e(-24172));
+            var6 = (rj) (this.field_J.beginBackward(-24172));
             while (var6 != null) {
               var6.e(param0, param1, 75);
-              var6 = (rj) (this.field_J.a(4));
+              var6 = (rj) (this.field_J.nextBackward(4));
             }
           }
         } else {
@@ -164,10 +164,10 @@ class np extends rj {
             return;
           }
           if (null != this.field_J) {
-            var6 = (rj) (this.field_J.e(-24172));
+            var6 = (rj) (this.field_J.beginBackward(-24172));
             while (var6 != null) {
               var6.e(param0, param1, 75);
-              var6 = (rj) (this.field_J.a(4));
+              var6 = (rj) (this.field_J.nextBackward(4));
             }
           }
         }
@@ -220,7 +220,7 @@ class np extends rj {
               var7 = stackIn_44_0;
               break regionExit1;
             }
-            var6_ref = (rj) (this.field_J.e(-24172));
+            var6_ref = (rj) (this.field_J.beginBackward(-24172));
             while (var6_ref != null) {
               if ((var6_ref.field_v & 4) != 0) {
                 var6_ref.e(0, var4, 111);
@@ -228,7 +228,7 @@ class np extends rj {
               if ((8 & var6_ref.field_v) != 0) {
                 var6_ref.e(var5, 0, 92);
               }
-              var6_ref = (rj) (this.field_J.a(4));
+              var6_ref = (rj) (this.field_J.nextBackward(4));
             }
             if (0 != (this.field_v & 1)) {
               stackIn_50_0 = -var4;
@@ -262,7 +262,7 @@ class np extends rj {
             }
             var7 = stackIn_8_0;
           } else {
-            var6_refLifetime1 = (rj) (this.field_J.e(-24172));
+            var6_refLifetime1 = (rj) (this.field_J.beginBackward(-24172));
             while (var6_refLifetime1 != null) {
               stackIn_29_0 = ~(var6_refLifetime1.field_v & 4);
               stackIn_29_1 = -1;
@@ -272,7 +272,7 @@ class np extends rj {
               if ((8 & var6_refLifetime1.field_v) != 0) {
                 var6_refLifetime1.e(var5, 0, 92);
               }
-              var6_refLifetime1 = (rj) (this.field_J.a(4));
+              var6_refLifetime1 = (rj) (this.field_J.nextBackward(4));
             }
             if (0 != (this.field_v & 1)) {
               stackIn_14_0 = -var4;
@@ -305,10 +305,10 @@ class np extends rj {
           gf.a(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
           if (param1 == 8187) {
             if (null != this.field_J) {
-              var6 = (rj) (this.field_J.e(-24172));
+              var6 = (rj) (this.field_J.beginBackward(-24172));
               while (var6 != null) {
                 var6.b(param0, 8187, param2);
-                var6 = (rj) (this.field_J.a(4));
+                var6 = (rj) (this.field_J.nextBackward(4));
               }
               gf.b(this.field_L);
               return;
@@ -316,10 +316,10 @@ class np extends rj {
           } else {
             this.a(-49, 0, 87);
             if (null != this.field_J) {
-              var6 = (rj) (this.field_J.e(-24172));
+              var6 = (rj) (this.field_J.beginBackward(-24172));
               while (var6 != null) {
                 var6.b(param0, 8187, param2);
-                var6 = (rj) (this.field_J.a(4));
+                var6 = (rj) (this.field_J.nextBackward(4));
               }
             }
           }
@@ -329,19 +329,19 @@ class np extends rj {
           gf.a(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
           if (param1 == 8187) {
             if (null != this.field_J) {
-              var6 = (rj) (this.field_J.e(-24172));
+              var6 = (rj) (this.field_J.beginBackward(-24172));
               while (var6 != null) {
                 var6.b(param0, 8187, param2);
-                var6 = (rj) (this.field_J.a(4));
+                var6 = (rj) (this.field_J.nextBackward(4));
               }
             }
           } else {
             this.a(-49, 0, 87);
             if (null != this.field_J) {
-              var6 = (rj) (this.field_J.e(-24172));
+              var6 = (rj) (this.field_J.beginBackward(-24172));
               while (var6 != null) {
                 var6.b(param0, 8187, param2);
-                var6 = (rj) (this.field_J.a(4));
+                var6 = (rj) (this.field_J.nextBackward(4));
               }
             }
           }
@@ -366,14 +366,14 @@ class np extends rj {
           if (this.field_J == null) {
             return (rj) (this);
           }
-          var8 = (rj) (this.field_J.e(-24172));
+          var8 = (rj) (this.field_J.beginBackward(-24172));
           while (var8 != null) {
             dupTemp$1 = var8.a(-31, param1, param2);
             var5 = dupTemp$1;
             if (dupTemp$1 != null) {
               return var5;
             }
-            var8 = (rj) (this.field_J.a(4));
+            var8 = (rj) (this.field_J.nextBackward(4));
           }
           return (rj) (this);
         }
@@ -382,14 +382,14 @@ class np extends rj {
         if (this.field_J == null) {
           return (rj) (this);
         }
-        var8Lifetime1 = (rj) (this.field_J.e(-24172));
+        var8Lifetime1 = (rj) (this.field_J.beginBackward(-24172));
         while (var8Lifetime1 != null) {
           dupTemp$2 = var8Lifetime1.a(-31, param1, param2);
           var5Lifetime1 = dupTemp$2;
           if (dupTemp$2 != null) {
             return var5Lifetime1;
           }
-          var8Lifetime1 = (rj) (this.field_J.a(4));
+          var8Lifetime1 = (rj) (this.field_J.nextBackward(4));
         }
         return (rj) (this);
     }

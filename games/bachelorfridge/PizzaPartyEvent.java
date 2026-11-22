@@ -183,7 +183,7 @@ final class PizzaPartyEvent extends SpecialEvent {
           while (true) {
             var2_int--;
             if (0 <= var2_int) {
-              this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+              this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
               continue;
             }
             break;

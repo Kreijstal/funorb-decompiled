@@ -285,10 +285,10 @@ class c extends v {
           if (param0 != 4) {
             return;
           }
-          var3 = (ri) (ob.field_M.a((byte) 100));
+          var3 = (ri) (ob.field_M.beginBackward((byte) 100));
           while (var3 != null) {
             if (var3.field_w != var2) {
-              var3 = (ri) (ob.field_M.b(94));
+              var3 = (ri) (ob.field_M.nextBackward(94));
               continue;
             }
             break;

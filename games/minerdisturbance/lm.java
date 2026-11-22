@@ -152,9 +152,9 @@ final class lm extends kn implements f, sh {
             param0.position = param0.position + (uf.field_q.length - 1);
             break;
           }
-          var3 = new String[var2.c((byte) -121)];
+          var3 = new String[var2.size((byte) -121)];
           for (var4 = 0; var3.length > var4; var4++) {
-            var3[var4] = ((lj) (var2.e(63854))).field_n;
+            var3[var4] = ((lj) (var2.removeFirst(63854))).field_n;
           }
           if (param1 != -101) {
             lm.f((byte) -38);

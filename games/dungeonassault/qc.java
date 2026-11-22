@@ -391,7 +391,7 @@ final class qc extends qe {
           dd.field_E = null;
         }
         if (nj.field_f != null) {
-          nj.field_f.b(-4);
+          nj.field_f.clear(-4);
           nj.field_f = null;
         }
         u.field_P = -1;
@@ -538,7 +538,7 @@ final class qc extends qe {
           gf.a(kd.field_g);
           gf.e(94, 90, 546, 184);
           var3 = ig.b(31131);
-          var4 = (hm) (nj.field_f.e(-24172));
+          var4 = (hm) (nj.field_f.beginBackward(-24172));
           while (var4 != null) {
             var5_ref_cn = f.field_a;
             if (var4.field_r) {
@@ -572,7 +572,7 @@ final class qc extends qe {
                 fj.field_f.a(var6_ref_cn, -12, 32);
               }
             }
-            var4 = (hm) (nj.field_f.a(4));
+            var4 = (hm) (nj.field_f.nextBackward(4));
           }
           gf.b(kd.field_g);
         }
@@ -856,11 +856,11 @@ final class qc extends qe {
               if (var9 != 0 ||
                 var8 != 0) {
                 var6++;
-                nj.field_f.a(new hm(var7, var8 != 0), false);
+                nj.field_f.addFirst(new hm(var7, var8 != 0), false);
               }
             } else {
               if (var8 != 0) {
-                nj.field_f.a(new hm(var7, var8 != 0), false);
+                nj.field_f.addFirst(new hm(var7, var8 != 0), false);
                 var6++;
               }
             }
@@ -885,7 +885,7 @@ final class qc extends qe {
           var11 = 100;
           var12 = 0;
           var13 = 0;
-          var14 = (hm) (nj.field_f.e(-24172));
+          var14 = (hm) (nj.field_f.beginBackward(-24172));
           while (var14 != null) {
             var14.field_o = var10;
             var14.field_p = var11;
@@ -894,7 +894,7 @@ final class qc extends qe {
             if (var13 > of.field_l) {
               of.field_l = var13;
             }
-            var14 = (hm) (nj.field_f.a(4));
+            var14 = (hm) (nj.field_f.nextBackward(4));
             var12++;
             if (var12 != var7Lifetime1) {
               continue;

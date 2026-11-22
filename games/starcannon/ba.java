@@ -26,9 +26,9 @@ final class ba {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_d.field_c.next;
+            var3 = this.field_d.sentinel.next;
           }
-          if (var3 != this.field_d.field_c) {
+          if (var3 != this.field_d.sentinel) {
             this.field_b = var3.next;
             stackIn_9_0 = var3;
             return stackIn_9_0;
@@ -51,11 +51,11 @@ final class ba {
     }
 
     final IntrusiveNode a(boolean param0) {
-        IntrusiveNode var2 = this.field_d.field_c.previous;
+        IntrusiveNode var2 = this.field_d.sentinel.previous;
         if (param0) {
           ba.a(true, false, 62);
         }
-        if (var2 == this.field_d.field_c) {
+        if (var2 == this.field_d.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -67,8 +67,8 @@ final class ba {
         if (param0 != 0) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_d.field_c.next;
-        if (var2 != this.field_d.field_c) {
+        IntrusiveNode var2 = this.field_d.sentinel.next;
+        if (var2 != this.field_d.sentinel) {
           this.field_b = var2.next;
           return var2;
         }
@@ -116,7 +116,7 @@ final class ba {
         if (param0 != -34) {
           field_a = (String) null;
         }
-        if (var2 == this.field_d.field_c) {
+        if (var2 == this.field_d.sentinel) {
           this.field_b = null;
           return null;
         }
@@ -148,14 +148,14 @@ final class ba {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_d.field_c.previous;
+            var3 = this.field_d.sentinel.previous;
           } else {
             var3 = param1;
           }
           if (param0 != 0) {
             this.field_b = (IntrusiveNode) null;
           }
-          if (var3 == this.field_d.field_c) {
+          if (var3 == this.field_d.sentinel) {
             this.field_b = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
@@ -355,7 +355,7 @@ final class ba {
           this.a(56);
         }
         IntrusiveNode var2 = this.field_b;
-        if (this.field_d.field_c == var2) {
+        if (this.field_d.sentinel == var2) {
           this.field_b = null;
           return null;
         }

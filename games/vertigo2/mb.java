@@ -17,12 +17,12 @@ final class mb extends IntrusiveNode {
 
     final static ri a(int param0, int param1, byte param2, int param3) {
         int var5 = Vertigo2.field_L ? 1 : 0;
-        ri var4 = (ri) (ob.field_M.a((byte) 100));
+        ri var4 = (ri) (ob.field_M.beginBackward((byte) 100));
         while (var4 != null) {
           if (var4.field_w == param0) {
             return var4;
           }
-          var4 = (ri) (ob.field_M.b(96));
+          var4 = (ri) (ob.field_M.nextBackward(96));
         }
         var4 = new ri();
         var4.field_n = param1;

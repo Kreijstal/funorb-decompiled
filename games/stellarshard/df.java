@@ -146,10 +146,10 @@ final class df implements uk {
           var14 = ae.field_N;
           var16 = var14;
           var2 = var16.readUnsignedByte(4);
-          var3 = (ta) (eg.field_b.b(-97));
+          var3 = (ta) (eg.field_b.beginForward(-97));
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (ta) (eg.field_b.b((byte) -48));
+              var3 = (ta) (eg.field_b.nextForward((byte) -48));
               continue;
             }
             break;

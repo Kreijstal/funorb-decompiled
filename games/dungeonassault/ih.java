@@ -149,10 +149,10 @@ final class ih extends qe {
           ih.a(339, 289, (Raider) (var2), 0);
         }
         this.b(286, 144, 476);
-        var4 = (rj) (this.field_p.e(-24172));
+        var4 = (rj) (this.field_p.beginBackward(-24172));
         while (var4 != null) {
           var4.a(93);
-          var4 = (rj) (this.field_p.a(4));
+          var4 = (rj) (this.field_p.nextBackward(4));
         }
         ad.field_e.h(188, 48);
         ad.field_e.i(188, -ad.field_e.field_b + 40);
@@ -165,10 +165,10 @@ final class ih extends qe {
         }
         ih.e();
         this.field_q.a((byte) -40);
-        var4Lifetime1 = (rj) (this.field_p.e(-24172));
+        var4Lifetime1 = (rj) (this.field_p.beginBackward(-24172));
         while (var4Lifetime1 != null) {
           var4Lifetime1.d(0);
-          var4Lifetime1 = (rj) (this.field_p.a(4));
+          var4Lifetime1 = (rj) (this.field_p.nextBackward(4));
         }
         this.g(0);
         this.field_y.d();
@@ -520,15 +520,15 @@ final class ih extends qe {
         kl.field_h = sj.a(86, 104, 65, jj.field_b, wd.field_f);
         cd.field_d = sj.a(117, 87, 65, wl.field_d, wd.field_f);
         am.field_f = sj.a(148, param0 + 54, param0, pk.field_o, wd.field_f);
-        this.field_p.a(ud.field_t, false);
-        this.field_p.a(sn.field_b, false);
-        this.field_p.a(MouseWheelInput.field_a, false);
-        this.field_p.a(NetworkGameClient.field_y, false);
-        this.field_p.a(hl.field_b, false);
-        this.field_p.a(hi.field_a, false);
-        this.field_p.a(kl.field_h, false);
-        this.field_p.a(cd.field_d, false);
-        this.field_p.a(am.field_f, false);
+        this.field_p.addFirst(ud.field_t, false);
+        this.field_p.addFirst(sn.field_b, false);
+        this.field_p.addFirst(MouseWheelInput.field_a, false);
+        this.field_p.addFirst(NetworkGameClient.field_y, false);
+        this.field_p.addFirst(hl.field_b, false);
+        this.field_p.addFirst(hi.field_a, false);
+        this.field_p.addFirst(kl.field_h, false);
+        this.field_p.addFirst(cd.field_d, false);
+        this.field_p.addFirst(am.field_f, false);
         this.a(-122);
         this.field_G = 0;
         this.field_E = false;

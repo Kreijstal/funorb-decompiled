@@ -206,7 +206,7 @@ final class ij extends gf {
           var10 = kj.field_d;
           var2 = var10.readUnsignedByte((byte) -101);
           if (var2 == 0) {
-            var9 = (qa) (qf.field_a.b(0));
+            var9 = (qa) (qf.field_a.beginBackward(0));
             if (var9 == null) {
               ih.b(true);
               return;
@@ -227,10 +227,10 @@ final class ij extends gf {
           } else {
             if (1 == var2) {
               var3 = var10.readInt((byte) -59);
-              var4_ref_ni = (ni) (vb.field_f.b(param0 ^ 10078));
+              var4_ref_ni = (ni) (vb.field_f.beginBackward(param0 ^ 10078));
               while (var4_ref_ni != null) {
                 if (var3 != var4_ref_ni.field_k) {
-                  var4_ref_ni = (ni) (vb.field_f.f(-24059));
+                  var4_ref_ni = (ni) (vb.field_f.nextBackward(-24059));
                   continue;
                 }
                 break;

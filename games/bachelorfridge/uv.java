@@ -154,7 +154,7 @@ final class uv extends k {
           }
           if (DisableEvent.field_s != 0 &&
             0 > SpecialMoveDefinition.field_m) {
-            var4_ref_bs = (bs) (mba.field_c.b((byte) 90));
+            var4_ref_bs = (bs) (mba.field_c.beginForward((byte) 90));
             if (var4_ref_bs != null &&
               var2_long > var4_ref_bs.field_f) {
               var4_ref_bs.unlink(false);
@@ -202,7 +202,7 @@ final class uv extends k {
             for (var6 = 0; var6 < dw.field_f; var6++) {
               var5.field_h[var6] = ig.field_m.payload[var6];
             }
-            mba.field_c.a(var5, true);
+            mba.field_c.addLast(var5, true);
             SpecialMoveDefinition.field_m = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

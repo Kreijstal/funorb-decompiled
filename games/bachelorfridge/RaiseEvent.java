@@ -77,7 +77,7 @@ final class RaiseEvent extends SpecialEvent {
             if (var2_int < 0) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_q = qi.a(param0, (byte) 12);
         } catch (RuntimeException runtimeException) {

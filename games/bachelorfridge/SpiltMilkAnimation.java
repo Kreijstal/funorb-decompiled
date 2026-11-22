@@ -37,25 +37,25 @@ final class SpiltMilkAnimation extends EventAnimation {
         if (!param0) {
           field_w = (String) null;
         } else {
-          var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
+          var3_ref = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
           al.a(-36, this.field_x.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var2, this.screen.field_h, 12);
             var6 = var3_ref.target.a(-27449, this.screen);
             var6.b(-1, 7);
             var6.a(24831, 53, kna.field_g[43]);
-            var3_ref = (DamageEffect) (this.field_x.effects.c(0));
+            var3_ref = (DamageEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }
-        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         al.a(-36, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var2, this.screen.field_h, 12);
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 7);
           var7.a(24831, 53, kna.field_g[43]);
-          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.c(0));
+          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }
     }
 

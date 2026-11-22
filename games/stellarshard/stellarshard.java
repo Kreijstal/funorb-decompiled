@@ -365,10 +365,10 @@ public final class stellarshard extends rb implements cf {
                 oc.field_d = false;
               }
               DelegatingCanvas.b((byte) 109);
-              var2 = (kl) (ue.field_c.b(-91));
+              var2 = (kl) (ue.field_c.beginForward(-91));
               while (var2 != null) {
                 tc.a(var2, 4, false);
-                var2 = (kl) (ue.field_c.b((byte) -128));
+                var2 = (kl) (ue.field_c.nextForward((byte) -128));
                 if (var3 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -890,7 +890,7 @@ public final class stellarshard extends rb implements cf {
             hk.field_p = hk.field_p + lh.field_d;
             ed.field_b = ed.field_b + 1;
           }
-          if (null != hf.field_i.b(-97)) {
+          if (null != hf.field_i.beginForward(-97)) {
             fieldTemp$0 = this.field_I + 1;
             this.field_I = this.field_I + 1;
             if (fieldTemp$0 == 335) {
@@ -4708,7 +4708,7 @@ public final class stellarshard extends rb implements cf {
               l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
             }
-            var6_ref = (jf) (hf.field_i.b(-119));
+            var6_ref = (jf) (hf.field_i.beginForward(-119));
             if (null != var6_ref) {
               var7Lifetime3 = this.field_I;
               if (var7Lifetime3 < 80) {

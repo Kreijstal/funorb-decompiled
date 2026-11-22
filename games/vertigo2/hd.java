@@ -20,7 +20,7 @@ final class hd {
         if (param0 != -17) {
           return -89;
         }
-        bo var3 = (bo) (this.field_e.c((byte) -30));
+        bo var3 = (bo) (this.field_e.beginForward((byte) -30));
         while (var3 != null) {
           if (param1 == var3.field_q) {
             var4 = new IntrusiveDequeCursor(this.field_e);
@@ -31,20 +31,20 @@ final class hd {
             }
             return var3.field_s;
           }
-          var3 = (bo) (this.field_e.b(false));
+          var3 = (bo) (this.field_e.nextForward(false));
         }
         return 0;
     }
 
     final int a(boolean param0, int param1) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        bo var3 = (bo) (this.field_e.a((byte) 100));
+        bo var3 = (bo) (this.field_e.beginBackward((byte) 100));
         while (var3 != null) {
           if (param1 >= var3.field_s &&
             !(10 + var3.field_s <= param1)) {
             return var3.field_o[param1 - var3.field_s];
           }
-          var3 = (bo) (this.field_e.b(39));
+          var3 = (bo) (this.field_e.nextBackward(39));
         }
         if (!param0) {
           return -20;
@@ -68,7 +68,7 @@ final class hd {
         if (param0) {
           return;
         }
-        var3 = (bo) (this.field_e.a((byte) 100));
+        var3 = (bo) (this.field_e.beginBackward((byte) 100));
         while (var3 != null &&
           -var2.position + var2.payload.length > 9) {
           if (!var3.field_n) {
@@ -81,7 +81,7 @@ final class hd {
             var3.a(0, var2);
             var3.field_n = true;
           }
-          var3 = (bo) (this.field_e.b(57));
+          var3 = (bo) (this.field_e.nextBackward(57));
         }
         return;
     }
@@ -93,7 +93,7 @@ final class hd {
         if (this.field_e.size(true) >= 254) {
           return;
         }
-        bo var4 = (bo) (this.field_e.c((byte) -125));
+        bo var4 = (bo) (this.field_e.beginForward((byte) -125));
         if (var4 == null) {
           var4 = new bo(this.field_a, param0);
           this.field_e.addFirst(var4, false);
@@ -187,7 +187,7 @@ final class hd {
         param3 = param3 - (var7 + param1);
         int var14 = -((param4 + var6) * (var8 - var10)) - var6 + (640 - param4);
         int var15 = var10;
-        bo var16_ref = (bo) (this.field_e.c((byte) -24));
+        bo var16_ref = (bo) (this.field_e.beginForward((byte) -24));
         while (var16_ref != null) {
           if (var16_ref.field_n) {
             bi.b(var14, param3, param4, param1, 8912896, 180);
@@ -210,7 +210,7 @@ final class hd {
             var15 = var8;
             var14 = -param4 + (640 - var6);
           }
-          var16_ref = (bo) (this.field_e.b(false));
+          var16_ref = (bo) (this.field_e.nextForward(false));
         }
         return param3;
     }

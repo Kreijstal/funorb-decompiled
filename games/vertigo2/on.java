@@ -99,12 +99,12 @@ final class on {
 
     final static s a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = Vertigo2.field_L ? 1 : 0;
-        s var5 = (s) (wg.field_i.a((byte) 100));
+        s var5 = (s) (wg.field_i.beginBackward((byte) 100));
         while (var5 != null) {
           if (var5.field_p == param4) {
             return var5;
           }
-          var5 = (s) (wg.field_i.b(99));
+          var5 = (s) (wg.field_i.nextBackward(99));
         }
         s var7 = new s();
         var5 = var7;

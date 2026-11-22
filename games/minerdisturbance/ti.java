@@ -17,13 +17,13 @@ final class ti extends hc {
     }
 
     final static void a(byte param0) {
-        nk var1 = (nk) (ah.field_g.c(51510));
+        nk var1 = (nk) (ah.field_g.removeLast(51510));
         if (var1 == null) {
           var1 = new nk();
         }
         var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_f);
         int var2 = -89 % ((66 - param0) / 60);
-        eb.field_f.a((byte) 121, var1);
+        eb.field_f.addLast((byte) 121, var1);
     }
 
     final static void a(byte param0, int param1, int param2) {

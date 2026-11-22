@@ -32,7 +32,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
           var3 = -49 / ((param0 + 10) / 41);
           var4 = var11.readUnsignedByte(16711935);
           if (var2 == 0) {
-            var5 = (rg) (rp.field_C.b((byte) 90));
+            var5 = (rg) (rp.field_C.beginForward((byte) 90));
             if (var5 == null) {
               vc.a((byte) -124);
               return;
@@ -52,11 +52,11 @@ final class InsanoSauceSpecial extends SpecialOrder {
           }
           if (var2 == 1) {
             var5_int = var11.readSignedSmart(-4095);
-            var6_ref_gea = (gea) (wd.field_t.b((byte) 90));
+            var6_ref_gea = (gea) (wd.field_t.beginForward((byte) 90));
             while (var6_ref_gea != null) {
               if (var6_ref_gea.field_i != var4 ||
                 var5_int != var6_ref_gea.field_m) {
-                var6_ref_gea = (gea) (wd.field_t.c(0));
+                var6_ref_gea = (gea) (wd.field_t.nextForward(0));
                 continue;
               }
               break;
@@ -231,13 +231,13 @@ final class InsanoSauceSpecial extends SpecialOrder {
                   var15 = var14.occupant;
                   if (var15 != null) {
                     var16 = new DamageEffect(new CreatureRef(var15), false, 1, 30, 15);
-                    var4.effects.a(var16, true);
+                    var4.effects.addLast(var16, true);
                   }
                 }
               }
             }
           }
-          var4.field_q = new int[var4.effects.g(param1 - 3)];
+          var4.field_q = new int[var4.effects.countWithOffset(param1 - 3)];
           for (var10Lifetime1 = 0; var10Lifetime1 < var4.field_q.length; var10Lifetime1++) {
             var4.field_q[var10Lifetime1] = 1 + DiveBomberAnimation.a(4, param0.field_w, -2147483648);
           }

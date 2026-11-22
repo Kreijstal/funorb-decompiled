@@ -41,10 +41,10 @@ final class saa {
                 this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, ProxySocketConnector.field_f);
               }
             }
-            var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.beginForward((byte) 90));
             while (var2 != null) {
               var2.field_g.a((byte) 13, ProxySocketConnector.field_f);
-              var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
+              var2 = (FridgeCreature) (this.field_d.field_c.field_m.nextForward(0));
             }
             this.field_d.field_c.field_n = mg.field_m.field_c;
             this.field_d.field_c.field_k.a(false, mg.field_m.field_f);
@@ -459,10 +459,10 @@ final class saa {
         try {
           var6 = new int[param1];
           var3 = var6;
-          var4 = (kha) (param0.b((byte) 90));
+          var4 = (kha) (param0.beginForward((byte) 90));
           while (var4 != null) {
             var6[var4.field_h] = var6[var4.field_h] + var4.field_g;
-            var4 = (kha) (param0.c(0));
+            var4 = (kha) (param0.nextForward(0));
           }
           mg.field_m.field_f = var3;
           this.field_d.field_c.field_k.a(false, mg.field_m.field_f);
@@ -522,7 +522,7 @@ final class saa {
             if (!this.field_i &&
               this.field_s == null) {
               var3_int = 0;
-              var4 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
+              var4 = (FridgeCreature) (this.field_d.field_c.field_m.beginForward((byte) 90));
               while (var4 != null) {
                 if (var4.a(gd.field_m, (byte) 116, mk.field_p)) {
                   var3_int = 1;
@@ -530,7 +530,7 @@ final class saa {
                     OneEvent.c(4 + kr.field_vb, -113);
                   }
                 }
-                var4 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
+                var4 = (FridgeCreature) (this.field_d.field_c.field_m.nextForward(0));
               }
               if (!this.field_j &&
                 !this.field_h &&
@@ -700,10 +700,10 @@ final class saa {
             var2_int++;
           }
           mg.field_m.field_e.field_m = new IntrusiveDeque();
-          var2 = (FridgeCreature) (this.field_d.field_c.field_m.b((byte) 90));
+          var2 = (FridgeCreature) (this.field_d.field_c.field_m.beginForward((byte) 90));
           while (var2 != null) {
-            mg.field_m.field_e.field_m.a(var2.field_g, true);
-            var2 = (FridgeCreature) (this.field_d.field_c.field_m.c(0));
+            mg.field_m.field_e.field_m.addLast(var2.field_g, true);
+            var2 = (FridgeCreature) (this.field_d.field_c.field_m.nextForward(0));
           }
           mg.field_m.field_i = new CreatureProfile[50];
           var5 = 0;

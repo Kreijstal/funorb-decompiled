@@ -22,21 +22,21 @@ final class uaa extends TileEffect {
         if (!param1) {
           uaa.d((byte) -65);
         } else {
-          var4_ref = (bma) (this.field_h.b((byte) 90));
+          var4_ref = (bma) (this.field_h.beginForward((byte) 90));
           while (var4_ref != null) {
             var5 = (var4_ref.field_i >> 4) + param2;
             var6 = -(var4_ref.field_h >> 4) + (param0 + (var4_ref.field_q >> 5));
             mla.field_b[var4_ref.field_v].draw(var5, var6);
-            var4_ref = (bma) (this.field_h.c(0));
+            var4_ref = (bma) (this.field_h.nextForward(0));
           }
           return;
         }
-        var4_refLifetime1 = (bma) (this.field_h.b((byte) 90));
+        var4_refLifetime1 = (bma) (this.field_h.beginForward((byte) 90));
         while (var4_refLifetime1 != null) {
           var5Lifetime1 = (var4_refLifetime1.field_i >> 4) + param2;
           var6Lifetime1 = -(var4_refLifetime1.field_h >> 4) + (param0 + (var4_refLifetime1.field_q >> 5));
           mla.field_b[var4_refLifetime1.field_v].draw(var5Lifetime1, var6Lifetime1);
-          var4_refLifetime1 = (bma) (this.field_h.c(0));
+          var4_refLifetime1 = (bma) (this.field_h.nextForward(0));
         }
     }
 
@@ -100,7 +100,7 @@ final class uaa extends TileEffect {
         var7.field_g = (var7.field_q >> 4) - 32;
         var7.field_k = var7.field_h >> 4;
         var7.field_l = -8;
-        this.field_h.a(var7, true);
+        this.field_h.addLast(var7, true);
     }
 
     final static String d(byte param0) {
@@ -138,28 +138,28 @@ final class uaa extends TileEffect {
           if (param0 <= 21) {
             return true;
           }
-          var2_ref = (bma) (this.field_h.b((byte) 90));
+          var2_ref = (bma) (this.field_h.beginForward((byte) 90));
           while (var2_ref != null) {
             var2_ref.b(true);
             if (!(var2_ref.field_h >= 0)) {
               var2_ref.unlink(false);
             }
-            var2_ref = (bma) (this.field_h.c(0));
+            var2_ref = (bma) (this.field_h.nextForward(0));
           }
-          return this.field_h.e(12917);
+          return this.field_h.isEmpty(12917);
         }
         if (param0 <= 21) {
           return true;
         }
-        var2_refLifetime1 = (bma) (this.field_h.b((byte) 90));
+        var2_refLifetime1 = (bma) (this.field_h.beginForward((byte) 90));
         while (var2_refLifetime1 != null) {
           var2_refLifetime1.b(true);
           if (!(var2_refLifetime1.field_h >= 0)) {
             var2_refLifetime1.unlink(false);
           }
-          var2_refLifetime1 = (bma) (this.field_h.c(0));
+          var2_refLifetime1 = (bma) (this.field_h.nextForward(0));
         }
-        return this.field_h.e(12917);
+        return this.field_h.isEmpty(12917);
     }
 
     final static void a(boolean param0) {

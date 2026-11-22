@@ -12,14 +12,14 @@ final class tk implements uj {
     static String field_c;
 
     final static void b(boolean param0) {
-        nk var1 = (nk) (eb.field_f.c(51510));
+        nk var1 = (nk) (eb.field_f.removeLast(51510));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.a(var1.field_y, var1.field_n, var1.field_s);
         SoftwareRasterizer.a(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
         var1.field_y = null;
-        ah.field_g.a((byte) 91, var1);
+        ah.field_g.addLast((byte) 91, var1);
         if (!param0) {
           bi var2 = (bi) null;
           tk.a((bi) null, -86, (byte) -122);

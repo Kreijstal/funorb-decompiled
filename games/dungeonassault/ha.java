@@ -31,9 +31,9 @@ final class ha extends um {
         tk.field_k = sj.a(fl.field_i, 107);
         PacketBuffer.field_n = sj.a(wm.field_h, 59);
         PacketBuffer.field_n.field_v = param0;
-        pp.field_K.a(ti.field_A, false);
-        pp.field_K.a(tk.field_k, false);
-        pp.field_K.a(PacketBuffer.field_n, false);
+        pp.field_K.addFirst(ti.field_A, false);
+        pp.field_K.addFirst(tk.field_k, false);
+        pp.field_K.addFirst(PacketBuffer.field_n, false);
         o.field_n.a(1);
     }
 

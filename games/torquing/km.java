@@ -29,16 +29,16 @@ final class km {
         RuntimeException var2 = null;
         var4 = Torquing.field_u;
         try {
-          var5 = (qk) (kc.field_z.b(0));
+          var5 = (qk) (kc.field_z.beginBackward(0));
           while (var5 != null) {
             ii.a(32, param1, var5);
-            var5 = (qk) (kc.field_z.f(-24059));
+            var5 = (qk) (kc.field_z.nextBackward(-24059));
           }
           var3 = -31 % ((-90 - param0) / 35);
-          var6 = (h) (to.field_s.b(0));
+          var6 = (h) (to.field_s.beginBackward(0));
           while (var6 != null) {
             va.a(var6, (byte) 125, param1);
-            var6 = (h) (to.field_s.f(-24059));
+            var6 = (h) (to.field_s.nextBackward(-24059));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

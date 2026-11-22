@@ -145,7 +145,7 @@ final class ee extends em {
               var1_int = 2;
             }
           }
-          var2 = (tc) (ii.field_b.b(103));
+          var2 = (tc) (ii.field_b.beginForward(103));
           while (var2 != null) {
             if (var1_int == var2.field_q &&
               var2.field_w == lj.field_t) {
@@ -153,7 +153,7 @@ final class ee extends em {
               fn.field_o = false;
               return true;
             }
-            var2 = (tc) (ii.field_b.b((byte) 56));
+            var2 = (tc) (ii.field_b.nextForward((byte) 56));
           }
           if (param0 == 75) {
             return false;

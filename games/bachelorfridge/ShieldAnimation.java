@@ -23,7 +23,7 @@ final class ShieldAnimation extends EventAnimation {
         if (var6.isDown(119)) {
           return;
         }
-        DamageEffect var3 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        DamageEffect var3 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         if (param0 >= -11) {
           field_v = (Sprite) null;
         } else {
@@ -36,7 +36,7 @@ final class ShieldAnimation extends EventAnimation {
               this.addChild(27799, new wn(var7, kna.field_g[3], 24831));
             }
             var3.apply(var6, this.screen.field_h, 12);
-            var3 = (DamageEffect) (this.field_x.effects.c(0));
+            var3 = (DamageEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }
@@ -49,7 +49,7 @@ final class ShieldAnimation extends EventAnimation {
             this.addChild(27799, new wn(var8, kna.field_g[3], 24831));
           }
           var3.apply(var6, this.screen.field_h, 12);
-          var3 = (DamageEffect) (this.field_x.effects.c(0));
+          var3 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }
     }
 

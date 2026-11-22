@@ -113,10 +113,10 @@ final class dl {
           if (param0 != -5996) {
             dl.a((byte) -91);
           }
-          var4 = (ri) (ob.field_M.a((byte) 100));
+          var4 = (ri) (ob.field_M.beginBackward((byte) 100));
           while (var4 != null) {
             DelegatingCanvas.a(param1, var4, param0 + 5996);
-            var4 = (ri) (ob.field_M.b(42));
+            var4 = (ri) (ob.field_M.nextBackward(42));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

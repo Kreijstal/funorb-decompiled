@@ -19,28 +19,28 @@ final class RaiseAnimation extends EventAnimation {
           if (var2.isDown(100)) {
             return;
           }
-          var3_ref = (EventEffect) (this.field_w.effects.b((byte) 90));
+          var3_ref = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
           al.a(87, this.field_w.moveId);
           while (var3_ref != null) {
             var6 = var3_ref.target.a(-27449, this.screen);
             var6.b(-1, 19);
             var6.a(24831, 105, gb.field_i);
             var3_ref.apply(var2, this.screen.field_h, 12);
-            var3_ref = (EventEffect) (this.field_w.effects.c(0));
+            var3_ref = (EventEffect) (this.field_w.effects.nextForward(0));
           }
           return;
         }
         if (var2.isDown(100)) {
           return;
         }
-        var3_refLifetime1 = (EventEffect) (this.field_w.effects.b((byte) 90));
+        var3_refLifetime1 = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(87, this.field_w.moveId);
         while (var3_refLifetime1 != null) {
           var7 = var3_refLifetime1.target.a(-27449, this.screen);
           var7.b(-1, 19);
           var7.a(24831, 105, gb.field_i);
           var3_refLifetime1.apply(var2, this.screen.field_h, 12);
-          var3_refLifetime1 = (EventEffect) (this.field_w.effects.c(0));
+          var3_refLifetime1 = (EventEffect) (this.field_w.effects.nextForward(0));
         }
     }
 

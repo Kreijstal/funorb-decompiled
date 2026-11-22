@@ -81,7 +81,7 @@ final class ef implements Runnable {
     }
 
     final static void b(byte param0) {
-        rh var1 = (rh) (a.field_f.c(param0 - 3848));
+        rh var1 = (rh) (a.field_f.beginForward(param0 - 3848));
         if (var1 == null) {
           ec.a((byte) 27);
           return;

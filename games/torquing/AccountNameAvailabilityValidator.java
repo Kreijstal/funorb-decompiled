@@ -192,10 +192,10 @@ final class AccountNameAvailabilityValidator extends gf {
           var2 = var27.readUnsignedByte((byte) -101);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(7088);
-            var4_ref_bm = (bm) (CachedArchiveSource.field_d.b(0));
+            var4_ref_bm = (bm) (CachedArchiveSource.field_d.beginBackward(0));
             while (var4_ref_bm != null) {
               if (var4_ref_bm.field_s != var3) {
-                var4_ref_bm = (bm) (CachedArchiveSource.field_d.f(-24059));
+                var4_ref_bm = (bm) (CachedArchiveSource.field_d.nextBackward(-24059));
                 continue;
               }
               break;
@@ -291,10 +291,10 @@ final class AccountNameAvailabilityValidator extends gf {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(param0 + 37681);
             var4 = var27.readLong(68);
-            var6 = (wc) (so.field_t.b(0));
+            var6 = (wc) (so.field_t.beginBackward(0));
             while (var6 != null) {
               if (var3Lifetime1 != var6.field_q) {
-                var6 = (wc) (so.field_t.f(param0 + 6534));
+                var6 = (wc) (so.field_t.nextBackward(param0 + 6534));
                 continue;
               }
               break;

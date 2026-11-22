@@ -90,7 +90,7 @@ final class RageSpecial extends SpecialOrder {
           if (var4 != null &&
             !var4.isDown(-77)) {
             var5 = new RageEvent(this.moveId, new CreatureRef(var3), this.field_j);
-            var5.effects.a(new DamageEffect(new CreatureRef(var4), false, 1, 0, 42), true);
+            var5.effects.addLast(new DamageEffect(new CreatureRef(var4), false, 1, 0, 42), true);
             stackIn_8_0 = var5;
             return (CreatureEvent) ((Object) stackIn_8_0);
           }

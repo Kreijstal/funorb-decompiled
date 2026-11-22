@@ -52,7 +52,7 @@ final class TermsPanel extends WidgetContainer implements pc, WidgetActionListen
           return;
         }
         try {
-          param5.effects.a(new DamageEffect(new CreatureRef(var7), false, 1, 100, 0), true);
+          param5.effects.addLast(new DamageEffect(new CreatureRef(var7), false, 1, 100, 0), true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

@@ -298,13 +298,13 @@ final class MoveEventAnimation extends MovementAnimation {
           if (param0 != 20434) {
             field_x = (PcmSample[]) null;
           }
-          var2 = (kr) (qg.field_b.children.b((byte) 90));
+          var2 = (kr) (qg.field_b.children.beginForward((byte) 90));
           while (var2 != null) {
             if (null != qg.field_b.children) {
               var2.field_kb = var1_int % 4 * 39;
               var2.field_rb = var1_int / 4 * 39;
             }
-            var2 = (kr) (qg.field_b.children.c(param0 ^ 20434));
+            var2 = (kr) (qg.field_b.children.nextForward(param0 ^ 20434));
             var1_int++;
           }
           return;

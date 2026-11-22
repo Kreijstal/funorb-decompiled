@@ -16,7 +16,7 @@ final class tc extends kf {
             throw new IllegalArgumentException();
           }
           var3 = (qd) (param1);
-          this.field_w.a(-125, var3);
+          this.field_w.addFirst(-125, var3);
           var3.field_G = true;
           var3.a(0, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {

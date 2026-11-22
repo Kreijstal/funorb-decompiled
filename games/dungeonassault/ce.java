@@ -127,8 +127,8 @@ final class ce extends kl {
           this.field_d = false;
           this.field_r = tn.a(this.field_k + 10 + (-10 + (this.field_a >> 1) - jm.field_i.field_y >> 1), this.field_i + (this.field_j - 16) - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -85, Raider.field_l);
           this.field_n = tn.a((-jm.field_i.field_y + (this.field_a >> 1) - 10 >> 1) + (this.field_a >> 1) + this.field_k, this.field_i + this.field_j + (-16 - jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -125, be.field_r);
-          this.field_f.a(this.field_r, false);
-          this.field_f.a(this.field_n, false);
+          this.field_f.addFirst(this.field_r, false);
+          this.field_f.addFirst(this.field_n, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

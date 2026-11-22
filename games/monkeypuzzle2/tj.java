@@ -9,7 +9,7 @@ final class tj {
     static int[] field_b;
 
     final static void b(int param0) {
-        jf var1 = (jf) (oa.field_J.c((byte) -66));
+        jf var1 = (jf) (oa.field_J.removeFirst((byte) -66));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -17,7 +17,7 @@ final class tj {
           ge.a(var1.field_l, var1.field_h, var1.field_m);
           ge.h(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
           var1.field_l = null;
-          de.field_n.a(-8212, var1);
+          de.field_n.addFirst(-8212, var1);
           return;
         }
         ad var2 = (ad) null;
@@ -25,7 +25,7 @@ final class tj {
         ge.a(var1.field_l, var1.field_h, var1.field_m);
         ge.h(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
         var1.field_l = null;
-        de.field_n.a(-8212, var1);
+        de.field_n.addFirst(-8212, var1);
     }
 
     final static Sprite[] a(int param0, ad param1, int param2, byte param3) {

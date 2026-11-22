@@ -155,19 +155,19 @@ final class o {
 
     final static de a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
-        de var5 = (de) (qa.field_d.a((byte) -117));
+        de var5 = (de) (qa.field_d.beginBackward((byte) -117));
         int var6 = -26 / ((11 - param4) / 54);
         while (var5 != null) {
           if (~param0 == ~var5.field_k) {
             return var5;
           }
-          var5 = (de) (qa.field_d.d((byte) 63));
+          var5 = (de) (qa.field_d.nextBackward((byte) 63));
         }
         var5 = new de();
         var5.field_e = param3;
         var5.field_h = param1;
         var5.field_k = param0;
-        qa.field_d.a(-8212, var5);
+        qa.field_d.addFirst(-8212, var5);
         w.a(-95, param2, var5);
         return var5;
     }

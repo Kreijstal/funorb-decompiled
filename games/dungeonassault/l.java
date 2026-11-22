@@ -83,7 +83,7 @@ abstract class l {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new fa(param0, param0);
-          ud.field_v.a(var2, false);
+          ud.field_v.addFirst(var2, false);
           wa.field_j.b(param0);
           if (param1 != 0) {
             var3 = (String) null;

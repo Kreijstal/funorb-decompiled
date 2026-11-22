@@ -50,14 +50,14 @@ final class tp {
             var3 = new ui(param0, this.field_j);
             this.field_j = this.field_j + 1;
           } else {
-            var4 = (ui) (this.field_d.c(-6938));
+            var4 = (ui) (this.field_d.beginForward(-6938));
             var3 = new ui(param0, var4.field_j);
             this.field_c[var4.field_m] = null;
             var4.unlink(0);
           }
           this.field_c[param0] = var3;
         }
-        this.field_d.b((byte) 68, var3);
+        this.field_d.addLast((byte) 68, var3);
         return this.field_f[var3.field_j];
     }
 
@@ -73,7 +73,7 @@ final class tp {
         }
         this.field_c = null;
         this.field_f = (int[][]) null;
-        this.field_d.a(0);
+        this.field_d.clear(0);
         this.field_d = null;
     }
 

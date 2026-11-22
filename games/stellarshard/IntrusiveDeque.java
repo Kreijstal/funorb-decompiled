@@ -5,7 +5,7 @@ final class IntrusiveDeque {
     static int field_b;
     static String field_a;
     IntrusiveNode sentinel;
-    private IntrusiveNode field_c;
+    private IntrusiveNode iterationCursor;
 
     final IntrusiveNode removeLast(byte param0) {
         IntrusiveNode var2 = this.sentinel.previous;
@@ -29,13 +29,13 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(byte param0) {
-        IntrusiveNode var2 = this.field_c;
+    final IntrusiveNode nextForward(byte param0) {
+        IntrusiveNode var2 = this.iterationCursor;
         if (var2 == this.sentinel) {
-          this.field_c = null;
+          this.iterationCursor = null;
           return null;
         }
-        this.field_c = var2.next;
+        this.iterationCursor = var2.next;
         int var3 = 68 / ((13 - param0) / 33);
         return var2;
     }
@@ -202,7 +202,7 @@ final class IntrusiveDeque {
           var4 = (IntrusiveNode) null;
           this.addFirst(95, (IntrusiveNode) null);
         }
-        this.field_c = null;
+        this.iterationCursor = null;
         return;
     }
 
@@ -229,15 +229,15 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode beginForward(int param0) {
         IntrusiveNode var2 = this.sentinel.next;
         if (var2 == this.sentinel) {
-          this.field_c = null;
+          this.iterationCursor = null;
           return null;
         }
-        this.field_c = var2.next;
+        this.iterationCursor = var2.next;
         if (param0 > -74) {
-          this.b((byte) -32);
+          this.nextForward((byte) -32);
         }
         return var2;
     }

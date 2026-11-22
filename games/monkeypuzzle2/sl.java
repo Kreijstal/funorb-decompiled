@@ -129,7 +129,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         int var4 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1 = (ki) (hd.field_u.a((byte) -117));
+          var1 = (ki) (hd.field_u.beginBackward((byte) -117));
           while (var1 != null) {
             if (var1.field_t == null) {
               var1.b((byte) -106);
@@ -153,7 +153,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                       jj.a(-32680, var1, var1.field_G + ((int)var1.field_B - 80), (int)var1.field_q + var1.field_y);
                       if (0 >= var1.field_m &&
                         !var1.field_x) {
-                        var1 = (ki) (hd.field_u.d((byte) 63));
+                        var1 = (ki) (hd.field_u.nextBackward((byte) 63));
                         continue;
                       }
                       var1.field_t = ok.field_a;
@@ -176,7 +176,7 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
                 }
               }
             }
-            var1 = (ki) (hd.field_u.d((byte) 63));
+            var1 = (ki) (hd.field_u.nextBackward((byte) 63));
           }
           if (!param0) {
             sl.a(6, (byte) 31);
@@ -225,11 +225,11 @@ final class sl extends ba implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException var2 = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5 = (m) (gi.field_l.a((byte) -117));
+          var5 = (m) (gi.field_l.beginBackward((byte) -117));
           var3 = 65 / ((param1 + 27) / 57);
           while (var5 != null) {
             oe.a(var5, param0, (byte) -95);
-            var5 = (m) (gi.field_l.d((byte) 63));
+            var5 = (m) (gi.field_l.nextBackward((byte) 63));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

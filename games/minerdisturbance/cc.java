@@ -99,7 +99,7 @@ abstract class cc extends kn {
         int var2 = 0;
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
-        cm var6 = (cm) (ce.field_a.b(94));
+        cm var6 = (cm) (ce.field_a.beginForward(94));
         cm var1 = var6;
         int var2Lifetime1;
         int var2Lifetime2;

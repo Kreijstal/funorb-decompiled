@@ -37,13 +37,13 @@ final class wda {
         try {
           var14 = ig.field_m;
           var2 = var14.readUnsignedByte(16711935);
-          var3 = (ne) (rg.field_f.b((byte) 90));
+          var3 = (ne) (rg.field_f.beginForward((byte) 90));
           if (param0 < 98) {
             return;
           }
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (ne) (rg.field_f.c(0));
+              var3 = (ne) (rg.field_f.nextForward(0));
               continue;
             }
             break;

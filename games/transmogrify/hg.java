@@ -49,10 +49,10 @@ final class hg {
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          var3 = (LetterTile) (ch.field_e.a((byte) -95));
+          var3 = (LetterTile) (ch.field_e.beginForward((byte) -95));
           while (var3 != null) {
             var3.stepTowardDestination((byte) 75);
-            var3 = (LetterTile) (ch.field_e.a(true));
+            var3 = (LetterTile) (ch.field_e.nextForward(true));
           }
           if (param0 > 40) {
             return;

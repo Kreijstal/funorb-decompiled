@@ -1052,6 +1052,14 @@
       "renamedSymbol": "F:IntrusiveNode.key:J"
     },
     {
+      "symbol": "F:nj.field_g:Lli;",
+      "originalName": "field_g",
+      "to": "iterationCursor",
+      "evidence": "Shared pending-node cursor for manual forward/backward traversal;not the last-returned node. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;"
+    },
+    {
       "symbol": "F:nj.field_h:Lli;",
       "originalName": "field_h",
       "to": "sentinel",
@@ -2668,6 +2676,14 @@
       "renamedSymbol": "M:ni.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:nj.a(B)Lli;",
+      "originalName": "a",
+      "to": "beginBackward",
+      "evidence": "Byte!=100 returns null before traversal;valid sentinel.previous empty clears cursor,otherwise save previous. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackward(B)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:nj.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2706,6 +2722,38 @@
       "evidence": "Unlinks and returns the node before the sentinel.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveDeque.removeLast(B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:nj.b(I)Lli;",
+      "originalName": "b",
+      "to": "nextBackward",
+      "evidence": "Cursor sentinel clears cursor;otherwise save previous before guard;only int>=23 returns node,other ints null after advance. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.nextBackward(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:nj.b(Lli;B)Lli;",
+      "originalName": "b",
+      "to": "beginBackwardFrom",
+      "evidence": "Choose supplied node or sentinel.previous;sentinel clears cursor. Nonempty save chosen.previous before-76/((54-byte)/55),then return chosen inside wrapper. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:nj.b(Z)Lli;",
+      "originalName": "b",
+      "to": "nextForward",
+      "evidence": "True returns null before reading cursor. False cursor sentinel clears cursor,otherwise save next and return node. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.nextForward(Z)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:nj.c(B)Lli;",
+      "originalName": "c",
+      "to": "beginForward",
+      "evidence": "Byte>=-1 returns null before traversal;valid sentinel.next empty clears cursor,otherwise save next. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.beginForward(B)LIntrusiveNode;"
     },
     {
       "symbol": "M:nj.c(I)V",
@@ -33354,9 +33402,9 @@
     },
     {
       "symbol": "F:nj.field_g:Lli;",
-      "renamedSymbol": "F:IntrusiveDeque.field_g:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.iterationCursor:LIntrusiveNode;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "nj.java",
         "start": 266,
@@ -175397,7 +175445,7 @@
     },
     {
       "symbol": "L:nj.a(B)Lli;#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackward(B)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -175628,7 +175676,7 @@
     },
     {
       "symbol": "L:nj.b(I)Lli;#0",
-      "renamedSymbol": "L:IntrusiveDeque.b(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.nextBackward(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -175639,7 +175687,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#0",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -175650,7 +175698,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#1",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -175661,7 +175709,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#2",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -175672,7 +175720,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#3",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#3",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -175683,7 +175731,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#4",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -175694,7 +175742,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#5",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#5",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#5",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -175705,7 +175753,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#6",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#6",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#6",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -175716,7 +175764,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#7",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#7",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#7",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -175727,7 +175775,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#8",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#8",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -175738,7 +175786,7 @@
     },
     {
       "symbol": "L:nj.b(Lli;B)Lli;#9",
-      "renamedSymbol": "L:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#9",
+      "renamedSymbol": "L:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -175749,7 +175797,7 @@
     },
     {
       "symbol": "L:nj.b(Z)Lli;#0",
-      "renamedSymbol": "L:IntrusiveDeque.b(Z)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.nextForward(Z)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -175760,7 +175808,7 @@
     },
     {
       "symbol": "L:nj.c(B)Lli;#0",
-      "renamedSymbol": "L:IntrusiveDeque.c(B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDeque.beginForward(B)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -272758,9 +272806,9 @@
     },
     {
       "symbol": "M:nj.a(B)Lli;",
-      "renamedSymbol": "M:IntrusiveDeque.a(B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackward(B)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginBackward",
       "declaration": {
         "file": "nj.java",
         "start": 5043,
@@ -272835,9 +272883,9 @@
     },
     {
       "symbol": "M:nj.b(I)Lli;",
-      "renamedSymbol": "M:IntrusiveDeque.b(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.nextBackward(I)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextBackward",
       "declaration": {
         "file": "nj.java",
         "start": 5594,
@@ -272846,9 +272894,9 @@
     },
     {
       "symbol": "M:nj.b(Lli;B)Lli;",
-      "renamedSymbol": "M:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginBackwardFrom",
       "declaration": {
         "file": "nj.java",
         "start": 7024,
@@ -272857,9 +272905,9 @@
     },
     {
       "symbol": "M:nj.b(Z)Lli;",
-      "renamedSymbol": "M:IntrusiveDeque.b(Z)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.nextForward(Z)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextForward",
       "declaration": {
         "file": "nj.java",
         "start": 3967,
@@ -272868,9 +272916,9 @@
     },
     {
       "symbol": "M:nj.c(B)Lli;",
-      "renamedSymbol": "M:IntrusiveDeque.c(B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDeque.beginForward(B)LIntrusiveNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "beginForward",
       "declaration": {
         "file": "nj.java",
         "start": 5886,
@@ -341651,7 +341699,7 @@
     },
     {
       "symbol": "P:nj.a(B)Lli;#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.beginBackward(B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -341772,7 +341820,7 @@
     },
     {
       "symbol": "P:nj.b(I)Lli;#0",
-      "renamedSymbol": "P:IntrusiveDeque.b(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.nextBackward(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -341783,7 +341831,7 @@
     },
     {
       "symbol": "P:nj.b(Lli;B)Lli;#0",
-      "renamedSymbol": "P:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -341794,7 +341842,7 @@
     },
     {
       "symbol": "P:nj.b(Lli;B)Lli;#1",
-      "renamedSymbol": "P:IntrusiveDeque.b(LIntrusiveNode;B)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveDeque.beginBackwardFrom(LIntrusiveNode;B)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -341805,7 +341853,7 @@
     },
     {
       "symbol": "P:nj.b(Z)Lli;#0",
-      "renamedSymbol": "P:IntrusiveDeque.b(Z)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.nextForward(Z)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -341816,7 +341864,7 @@
     },
     {
       "symbol": "P:nj.c(B)Lli;#0",
-      "renamedSymbol": "P:IntrusiveDeque.c(B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDeque.beginForward(B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377108,7 +377156,7 @@
       "original": "Vertigo2.java",
       "renamed": "Vertigo2.java",
       "inputSha256": "0e67a564a5a14b1cf55576867caa09211b25073b113329d3352d2c6864116644",
-      "outputSha256": "8afdc1087501e2ee70874e3657c62d64bb3d5f4d4f02b879b8aa5860a8f112c5",
+      "outputSha256": "3f48b2cf29bcba9aa314d6e51be1085ce6f2335a14dac7804bee3ac4073ccf4a",
       "edits": [
         {
           "start": 74,
@@ -379869,6 +379917,13 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 45161,
+          "end": 45162,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 45765,
           "end": 45767,
           "symbol": "C:hk",
@@ -380469,6 +380524,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 66899,
+          "end": 66900,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 67110,
@@ -383201,7 +383263,7 @@
       "original": "aq.java",
       "renamed": "aq.java",
       "inputSha256": "326bcc4cf71c05621804ff77d0efd2172c1c2bdad3e87ec60432094e1da00a12",
-      "outputSha256": "0427a7fd6133acab3dfdfbfb4411a3668fb28a2832ab3e9deea6e04986abc094",
+      "outputSha256": "132285204ec4d396f769ce78c24204cfc24a0838fbe8e1709bc5a5a07f02317c",
       "edits": [
         {
           "start": 277,
@@ -383251,6 +383313,13 @@
           "symbol": "M:nj.c(I)V",
           "original": "c",
           "renamed": "clear"
+        },
+        {
+          "start": 2722,
+          "end": 2723,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
         },
         {
           "start": 2879,
@@ -383996,7 +384065,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "8ed5ade93d6f3a01755779bd01ea6e5ff7b39d5aa216783edebb55270b8bc911",
-      "outputSha256": "67a98db788c8ba978aec2574d5251d8515a6ebd89f063eb75c14f701643c9e41",
+      "outputSha256": "fb2516540c5dc81f5042edbc214c4c26e54a216306a78da3adce7bbe09a754d2",
       "edits": [
         {
           "start": 378,
@@ -384237,6 +384306,13 @@
           "renamed": "size"
         },
         {
+          "start": 19362,
+          "end": 19363,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 20319,
           "end": 20320,
           "symbol": "M:li.c(I)V",
@@ -384249,6 +384325,13 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 20659,
+          "end": 20660,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 20710,
@@ -385669,7 +385752,7 @@
       "original": "c.java",
       "renamed": "c.java",
       "inputSha256": "380dc0f9699ac636f325a1a62d25fb3bf9ff9c3eeb2857ccc86b03e0e89aeeef",
-      "outputSha256": "828dedf4d1cdc48ecbfa746d16f4e85ff0279ad5c66129c662aa0832136bfffb",
+      "outputSha256": "8bd9959f597b9703f1e23bf1a42e4a6d5f2f400cc88e2d86224d0067738dc1e4",
       "edits": [
         {
           "start": 1324,
@@ -385824,6 +385907,20 @@
           "symbol": "M:ed.h(I)I",
           "original": "h",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 9611,
+          "end": 9612,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 9738,
+          "end": 9739,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 9930,
@@ -386502,7 +386599,7 @@
       "original": "ce.java",
       "renamed": "ce.java",
       "inputSha256": "b5e4b047792448cec2a57b67f987bf76c2d2a688a8c16a849eb157515efbb9c0",
-      "outputSha256": "f13fd4cc09f12caa1c20d805e53568b6c840e9e8409b7368f974d0eadf86665b",
+      "outputSha256": "382c53fc456c1cc0af0aaa6fcd414b55f8bbdacba2466a024852cdc1c733e026",
       "edits": [
         {
           "start": 204,
@@ -386545,6 +386642,20 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 4380,
+          "end": 4381,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 4507,
+          "end": 4508,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4637,
@@ -388247,7 +388358,7 @@
       "original": "cr.java",
       "renamed": "UiPanel.java",
       "inputSha256": "f3122536b671a2f5f9369da419675f1a91ccbb779575d7c4f54a80b91918b4e4",
-      "outputSha256": "4fa40d7ffb577e43f105845971d8905337d1a44bacbac1db8a26b8ade2bd88cf",
+      "outputSha256": "e3882e2af6ffff9a35c31abc6b269f186d66ce1d446aae7510293b822cd26be1",
       "edits": [
         {
           "start": 44,
@@ -388376,11 +388487,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 3307,
+          "end": 3308,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 3541,
           "end": 3543,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 3559,
+          "end": 3560,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4110,
@@ -388418,11 +388543,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 15385,
+          "end": 15386,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 15626,
           "end": 15628,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 15644,
+          "end": 15645,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 15727,
@@ -388530,11 +388669,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 18208,
+          "end": 18209,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 18399,
           "end": 18401,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 18417,
+          "end": 18418,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 18557,
@@ -388607,11 +388760,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 23686,
+          "end": 23687,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
+        },
+        {
           "start": 23857,
           "end": 23859,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 23875,
+          "end": 23876,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
         },
         {
           "start": 24246,
@@ -388635,11 +388802,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 25005,
+          "end": 25006,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
+        },
+        {
           "start": 25141,
           "end": 25143,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 25159,
+          "end": 25160,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
         },
         {
           "start": 25297,
@@ -388731,7 +388912,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "cb4933e7cdfd60debcb00a981d4a299099111b29d8cbc7cac9e975b5718fcc8e",
-      "outputSha256": "5398b377d0ccabe74263291ac7e724b44bca0a61178449dd7608cd46035ea09b",
+      "outputSha256": "4254bcfee1d997d26da465b38c962f60d5bca66d8fbdad86ac428b9aa9b431ad",
       "edits": [
         {
           "start": 75,
@@ -388909,6 +389090,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 13036,
+          "end": 13037,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 13174,
+          "end": 13175,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 13474,
           "end": 13475,
           "symbol": "M:nj.a(Lli;Z)V",
@@ -389055,7 +389250,7 @@
       "original": "db.java",
       "renamed": "db.java",
       "inputSha256": "5021ff05d3dc644f12c48b9526d573bf10757db40f595cd2cf9029bcf3ca36a7",
-      "outputSha256": "31ccac7acdbe4a77087df1bace793358679a89d75f7af93412471c6eba2cb3d0",
+      "outputSha256": "35b83859cce0b58cf560a61ae53cfd7ec8049f71d70a25cbb584bc9eada245e6",
       "edits": [
         {
           "start": 61,
@@ -389072,11 +389267,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 6643,
+          "end": 6644,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 7124,
           "end": 7125,
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 7186,
+          "end": 7187,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 7305,
@@ -389107,6 +389316,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 17680,
+          "end": 17681,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 17957,
+          "end": 17958,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 19376,
           "end": 19377,
           "symbol": "M:li.c(I)V",
@@ -389119,6 +389342,20 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 28150,
+          "end": 28151,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 28742,
+          "end": 28743,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
         },
         {
           "start": 29762,
@@ -389140,6 +389377,20 @@
           "symbol": "M:nj.a(Lli;Z)V",
           "original": "a",
           "renamed": "addFirst"
+        },
+        {
+          "start": 31238,
+          "end": 31239,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 31512,
+          "end": 31513,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 32579,
@@ -389168,6 +389419,34 @@
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 38907,
+          "end": 38908,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 39245,
+          "end": 39246,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 39482,
+          "end": 39483,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 39667,
+          "end": 39668,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 40501,
@@ -389614,7 +389893,7 @@
       "original": "dg.java",
       "renamed": "ClientException.java",
       "inputSha256": "653a07f5fa6a1500c2ed1053edf39cef8d910d23c3b51b995e3a16723a6bd527",
-      "outputSha256": "62d926c4ce49857a09d70eb6112688fbbe52db51f8c0a8cacc6a1ea63168bb5d",
+      "outputSha256": "9855222293b8d58cb1be0a6339926a4eeb77704f20fff00a90704fe273bf3305",
       "edits": [
         {
           "start": 50,
@@ -389834,6 +390113,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 6575,
+          "end": 6576,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 6724,
           "end": 6726,
           "symbol": "C:cr",
@@ -389967,6 +390253,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 14218,
+          "end": 14219,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 16168,
           "end": 16170,
           "symbol": "C:ed",
@@ -390014,6 +390307,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 21068,
+          "end": 21069,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         }
       ]
     },
@@ -390606,7 +390906,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "e39b52e2e0993dc585180cd700b2bbf42e7aeee3ed4fa8a799dc87a5a3768b2b",
-      "outputSha256": "8e15f256a08bdfee0726dc58ed560e632aa85801ac6eea15bcc487e09447fea3",
+      "outputSha256": "79b2b55375ccaaf65c565f2c6e8db709176165ecc6d44316df3b370e141b0749",
       "edits": [
         {
           "start": 952,
@@ -390651,11 +390951,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 3944,
+          "end": 3945,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 4005,
           "end": 4007,
           "symbol": "C:tg",
           "original": "tg",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 4076,
+          "end": 4077,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4638,
@@ -390691,7 +391005,7 @@
       "original": "dm.java",
       "renamed": "dm.java",
       "inputSha256": "68b4cd2e2512344575ba0edb1ce1ba32fcda7bf0c551b15ac3928ec95ce209c4",
-      "outputSha256": "ec8a2f9777e9a593becb5f5dcb3f1feb8d2d26be638e2629c0a1690f12772067",
+      "outputSha256": "7ca37300f7a90d29db474d9513f81868bac0f54baa4470f1a269e0afdf98bf17",
       "edits": [
         {
           "start": 61,
@@ -390741,6 +391055,20 @@
           "symbol": "M:ed.a(B)I",
           "original": "a",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2988,
+          "end": 2989,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 3120,
+          "end": 3121,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 3340,
@@ -390853,6 +391181,20 @@
           "symbol": "M:ed.i(I)J",
           "original": "i",
           "renamed": "readLong"
+        },
+        {
+          "start": 6835,
+          "end": 6836,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 6998,
+          "end": 6999,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 7268,
@@ -395308,7 +395650,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "63a42212ff29b6f535c06b7306d5f38e00c8579054f28ca69fd6142b193d748f",
-      "outputSha256": "36f9c7b68e2d4a312d49c3e4326849624ac0a09f41efd9ca54bf38ea63464440",
+      "outputSha256": "f8a78eb403ab8ff7b33b5b04d8785aca6f3b512c0047de5b82f3e61959ecb862",
       "edits": [
         {
           "start": 61,
@@ -395407,6 +395749,20 @@
           "symbol": "M:ed.a(B)I",
           "original": "a",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2042,
+          "end": 2043,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 2166,
+          "end": 2167,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 2378,
@@ -401423,7 +401779,7 @@
       "original": "fp.java",
       "renamed": "PcmStreamMixer.java",
       "inputSha256": "d36eaa650e79f76c207091ad2af508851a5ede8a0422bab3a0eda517a82badb0",
-      "outputSha256": "db1be63d0a57501b39e2960e163a8589fb16807b18fd6a297ff7ce9dd6c083ab",
+      "outputSha256": "6a2c3a36037ab11902a2df36d2f9567d26f372e89f7b1cacd72ed5cded07f7af",
       "edits": [
         {
           "start": 50,
@@ -401503,6 +401859,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 498,
+          "end": 499,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 543,
           "end": 545,
           "symbol": "C:sn",
@@ -401580,11 +401943,32 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 1258,
+          "end": 1259,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1365,
           "end": 1367,
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 1383,
+          "end": 1384,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 2183,
+          "end": 2184,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 2377,
@@ -401594,11 +401978,32 @@
           "renamed": "previous"
         },
         {
+          "start": 3221,
+          "end": 3222,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 3415,
           "end": 3422,
           "symbol": "F:li.field_c:Lli;",
           "original": "field_c",
           "renamed": "previous"
+        },
+        {
+          "start": 3711,
+          "end": 3712,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 3853,
+          "end": 3854,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 3982,
@@ -401615,6 +402020,13 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 4025,
+          "end": 4026,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 4140,
           "end": 4142,
           "symbol": "C:sn",
@@ -401629,11 +402041,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 4169,
+          "end": 4170,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 4260,
           "end": 4262,
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 4278,
+          "end": 4279,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4333,
@@ -401706,7 +402132,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "dd01038ccd85da91d1f5e531b22a123ebd1c848b1c2ee7c5daed98eac20975af",
-      "outputSha256": "630e7cb2889fd1f6273af622ad4fc71731566e2ffa5f2b77880722d77dabde23",
+      "outputSha256": "e310c354ea8dd9877dd50c585e788d4e112908559c5d7aaa52ead9035e5c481c",
       "edits": [
         {
           "start": 776,
@@ -401763,6 +402189,13 @@
           "symbol": "F:ed.field_u:I",
           "original": "field_u",
           "renamed": "position"
+        },
+        {
+          "start": 1737,
+          "end": 1738,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 1844,
@@ -403275,7 +403708,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "03b21442003f33e2d608c83d73dbbf994bde9a5b26255d2acb51fb907ff635cb",
-      "outputSha256": "58541a0b77afcd7ac3ac42470eeee6297a6253fdaae8ea55df025ec7c8a69c5b",
+      "outputSha256": "4e84d552cd48d0ab2b9f9ab9de174799931e0078615e3d5448815fd4fd401c20",
       "edits": [
         {
           "start": 61,
@@ -403479,6 +403912,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 16550,
+          "end": 16551,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 16582,
           "end": 16585,
           "symbol": "B:gj.a(ZIZIZ)V#2",
@@ -403493,6 +403933,13 @@
           "original": "L48",
           "renamed": "scanLoop3",
           "kind": "label"
+        },
+        {
+          "start": 18392,
+          "end": 18393,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 18623,
@@ -405730,7 +406177,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "95b11569f8be58c776889f48f7d94b3705224c2985bd1aca71804f0ca367ccc0",
-      "outputSha256": "d971be533059a0c88e2c1c8ab6e00488dc8c21c8837cc1e4079f0e8d69ddf32c",
+      "outputSha256": "7045817eecf6c8198099316096497662a5d5543043a928d62efbc0b8b4fff39a",
       "edits": [
         {
           "start": 166,
@@ -405768,6 +406215,13 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
+        },
+        {
           "start": 619,
           "end": 621,
           "symbol": "C:vp",
@@ -405780,6 +406234,27 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 893,
+          "end": 894,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
+        },
+        {
+          "start": 1067,
+          "end": 1068,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 1304,
+          "end": 1305,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 1526,
@@ -405796,6 +406271,13 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 1782,
+          "end": 1783,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1845,
           "end": 1852,
           "symbol": "F:ed.field_u:I",
@@ -405810,11 +406292,25 @@
           "renamed": "payload"
         },
         {
+          "start": 2172,
+          "end": 2173,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 2371,
           "end": 2372,
           "symbol": "M:nj.c(Z)I",
           "original": "c",
           "renamed": "size"
+        },
+        {
+          "start": 2454,
+          "end": 2455,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
         },
         {
           "start": 2569,
@@ -405850,6 +406346,20 @@
           "symbol": "M:nj.c(Z)I",
           "original": "c",
           "renamed": "size"
+        },
+        {
+          "start": 6161,
+          "end": 6162,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
+        },
+        {
+          "start": 7004,
+          "end": 7005,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
         },
         {
           "start": 7279,
@@ -407276,7 +407786,7 @@
       "original": "hr.java",
       "renamed": "hr.java",
       "inputSha256": "64e967a4a3d1ec84479396b62e5fa0b482c719629c2f3e02f70ca6b346f46cde",
-      "outputSha256": "53c91886270d5b24e656797ebaebc0243f8ef1f78795697effdd99c528671493",
+      "outputSha256": "3d6f41d712ecafe7d3f521c9d4d0e7c4047e1c00798da447c53392c2bae1a72e",
       "edits": [
         {
           "start": 61,
@@ -407293,11 +407803,39 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 1158,
+          "end": 1159,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1219,
           "end": 1221,
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 1280,
+          "end": 1281,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 1333,
+          "end": 1334,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 1461,
+          "end": 1462,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 3467,
@@ -407530,7 +408068,7 @@
       "original": "ia.java",
       "renamed": "ia.java",
       "inputSha256": "0dd750961f13b8c3eb89d3ad31cdab9d006a879928b96e25a95f660b4d186755",
-      "outputSha256": "e6e2ddb3779f90ca208c32c7253aa2bb59cbc81229e6345fd2104f15d74987fa",
+      "outputSha256": "208163dfdee93b5de4cb8d6887208be148ada1676d14bfc68ac6c6ec3402becc",
       "edits": [
         {
           "start": 124,
@@ -407643,6 +408181,20 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 4148,
+          "end": 4149,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 4276,
+          "end": 4277,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4415,
@@ -408783,7 +409335,7 @@
       "original": "in.java",
       "renamed": "in.java",
       "inputSha256": "ddb4a06a35b8df709308215c9597551add7130bc2a929c8fe770bf0b8ea9cb30",
-      "outputSha256": "d04520364f89d085fb2798d7a5921c2dc8639833ecc1e6c151e14731e016d8c0",
+      "outputSha256": "664af13b23e8ed8cc4115547297fd3f14156c50e8ba232a67af25b89c442ed25",
       "edits": [
         {
           "start": 261,
@@ -408826,6 +409378,48 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 2846,
+          "end": 2847,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 2971,
+          "end": 2972,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 3070,
+          "end": 3071,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 3199,
+          "end": 3200,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 7558,
+          "end": 7559,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 7686,
+          "end": 7687,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         }
       ]
     },
@@ -409525,7 +410119,7 @@
       "original": "j.java",
       "renamed": "j.java",
       "inputSha256": "2902dfe3d09902ef96b206a6baf214acb37d2a44928af1331ad9b90f24c5a83d",
-      "outputSha256": "61cfed383e4b0db6aa86c709e3766dc02fccec1bd75fb6a8c64293de8bbfaafe",
+      "outputSha256": "5597c036c44efafc058570edece3278701a4b2dd65e094840998d015f2563695",
       "edits": [
         {
           "start": 81,
@@ -409547,6 +410141,13 @@
           "symbol": "M:j.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1381,
+          "end": 1382,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 1511,
@@ -412502,7 +413103,7 @@
       "original": "jr.java",
       "renamed": "jr.java",
       "inputSha256": "beb1d0d57f9451a7ba67669048085adeb1ad9b776cb2f86074f9988d45fd2d13",
-      "outputSha256": "e1fde532aa66cb2eba5a422096e365f4e4dd83bc1e241dcd3c365539cff566ee",
+      "outputSha256": "f615fc8549f93c825f4aa0316153c4e91eb46a48db87b5b5a2f09e2c3ca314a6",
       "edits": [
         {
           "start": 188,
@@ -412517,6 +413118,34 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3314,
+          "end": 3315,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 3439,
+          "end": 3440,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 3487,
+          "end": 3488,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 3594,
+          "end": 3595,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4401,
@@ -412912,7 +413541,7 @@
       "original": "kd.java",
       "renamed": "GameShell.java",
       "inputSha256": "83b921cd5f93d27a77d64dfea9b9233263c723b78a7d85233d98fee8f5d8e391",
-      "outputSha256": "c5adfd987ac1e7eb062d1a64bb569f5d0a3d4157833ff6eb7ca773e9c92f0124",
+      "outputSha256": "039a605870e5f705fe0d0bb0c42c9c6c59c687456478fb9b8a9aec73cc06ea31",
       "edits": [
         {
           "start": 53,
@@ -413389,6 +414018,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "GameShell"
+        },
+        {
+          "start": 23588,
+          "end": 23589,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 23830,
@@ -414292,7 +414928,7 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "0af19f7e09680e022f220906374ba12134a3cf68f1722213cb02d9b82de9dab6",
-      "outputSha256": "393731da3c15f2c082912c22ecf078a5e25cebf29d2ad4979b2f1ed9d8b1ffbd",
+      "outputSha256": "1ed6690e6a28186357fcf0c51cbe6efb01b9fd3ef77bb0f20365149d25fdbfce",
       "edits": [
         {
           "start": 137,
@@ -414314,6 +414950,13 @@
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 1294,
+          "end": 1295,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
         },
         {
           "start": 1423,
@@ -416356,7 +416999,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "ce89eb3eb40b055ca11dfe90aa85f426dc69995c882f7f163cbaea1174b18700",
-      "outputSha256": "f4696563952b91d87b5d9e4b021d30dae80a65b0e09dd2bdbb06eff3c18d8208",
+      "outputSha256": "c208af8e65561f92f927cf449d9c1e843a1e440b9b96857b8238066987132bf4",
       "edits": [
         {
           "start": 116,
@@ -416394,6 +417037,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 1455,
+          "end": 1456,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1596,
           "end": 1603,
           "symbol": "F:ed.field_u:I",
@@ -416420,6 +417070,20 @@
           "symbol": "M:ed.j(I)I",
           "original": "j",
           "renamed": "readSignedSmart"
+        },
+        {
+          "start": 2269,
+          "end": 2270,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 2466,
+          "end": 2467,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 2663,
@@ -418238,7 +418902,7 @@
       "original": "lk.java",
       "renamed": "RasterBuffer.java",
       "inputSha256": "67e54d722ffefb7c34ec68013e6fdd19e5d42280b3b6872ba404adf837d42d47",
-      "outputSha256": "f40b71ffa9968e655dd0356c50a0f8499da6799af6b65d19ab6d893a63c2ea14",
+      "outputSha256": "c7aa92746f30ad9a3e024636af6326b44a7355e170232c4ec613edf89323e05c",
       "edits": [
         {
           "start": 53,
@@ -418260,6 +418924,20 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1516,
+          "end": 1517,
+          "symbol": "M:nj.b(Lli;B)Lli;",
+          "original": "b",
+          "renamed": "beginBackwardFrom"
+        },
+        {
+          "start": 1605,
+          "end": 1606,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 1800,
@@ -419419,7 +420097,7 @@
       "original": "mb.java",
       "renamed": "mb.java",
       "inputSha256": "79b0c0584a88042d4220e9c3d16b2002a450b11ee7b6ed9b932538aa8164fa2d",
-      "outputSha256": "155c349a79e0a54d1e6eff3f142ebb914dbd6686dbd62a0ae20ca822eecd38c5",
+      "outputSha256": "d8c0928cd1695a735788417874a0b14fd3a126796439496da900152cc30b0804",
       "edits": [
         {
           "start": 61,
@@ -419434,6 +420112,20 @@
           "symbol": "C:nj",
           "original": "nj",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 498,
+          "end": 499,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 656,
+          "end": 657,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 780,
@@ -421437,7 +422129,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "117fc6872c8279340d59524a9d62922b39aed440e1d6cc1a074c0edeeafeec47",
-      "outputSha256": "d133807f3dbddaf63515660d10ced6d63f7f7e27f2820da835b64dc4eccaf9dd",
+      "outputSha256": "f1eab6eadc2f144f8576fbbecf7dc5ad45d0cc15173331d9b02aef6c24b15b93",
       "edits": [
         {
           "start": 90,
@@ -421571,6 +422263,13 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 4806,
+          "end": 4807,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 5155,
@@ -422461,7 +423160,7 @@
       "original": "nb.java",
       "renamed": "nb.java",
       "inputSha256": "6afdb525973b8f049f605a0b87b865765031794987be17842c9c094504cdc885",
-      "outputSha256": "ff54ad2d81ca95d69ae0afca3457baf9b4567c865517b7a51e28deadcce4af53",
+      "outputSha256": "c928fa51a2c700830a03b0fd6d19e8922ed049c077d6f82f295f9a84f08d0ae7",
       "edits": [
         {
           "start": 61,
@@ -422666,6 +423365,34 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 11333,
+          "end": 11334,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 11461,
+          "end": 11462,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 11509,
+          "end": 11510,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 11617,
+          "end": 11618,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 13966,
@@ -423273,7 +424000,7 @@
       "original": "nj.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "93a4d2e77f73aa01c4ceacd718d21d62b25c3408dabdd45fb596d970f91c339b",
-      "outputSha256": "ae0bb845c56d41db23a626f20562d9a9c7af6947763a1909f2c30c47a0b86e6c",
+      "outputSha256": "0ccfb8c65f74937c7d7c04f6414c711cb4cb18a570843d4096d4e6366d22c159",
       "edits": [
         {
           "start": 50,
@@ -423302,6 +424029,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 266,
+          "end": 273,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 286,
@@ -423563,6 +424297,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 3840,
+          "end": 3847,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 3897,
+          "end": 3904,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 3908,
           "end": 3910,
           "symbol": "C:li",
@@ -423570,11 +424318,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 3931,
+          "end": 3938,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 3964,
           "end": 3966,
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3967,
+          "end": 3968,
+          "symbol": "M:nj.b(Z)Lli;",
+          "original": "b",
+          "renamed": "nextForward"
         },
         {
           "start": 4027,
@@ -423591,6 +424353,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4070,
+          "end": 4077,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 4104,
           "end": 4111,
           "symbol": "F:nj.field_h:Lli;",
@@ -423598,11 +424367,25 @@
           "renamed": "sentinel"
         },
         {
+          "start": 4130,
+          "end": 4137,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 4145,
           "end": 4152,
           "symbol": "F:li.field_a:Lli;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 4200,
+          "end": 4207,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 4267,
@@ -423675,6 +424458,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5043,
+          "end": 5044,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 5107,
           "end": 5109,
           "symbol": "C:li",
@@ -423708,6 +424498,20 @@
           "symbol": "F:nj.field_h:Lli;",
           "original": "field_h",
           "renamed": "sentinel"
+        },
+        {
+          "start": 5218,
+          "end": 5225,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 5280,
+          "end": 5287,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 5295,
@@ -423773,6 +424577,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5594,
+          "end": 5595,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 5618,
           "end": 5620,
           "symbol": "C:li",
@@ -423780,11 +424591,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5633,
+          "end": 5640,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 5659,
           "end": 5666,
           "symbol": "F:nj.field_h:Lli;",
           "original": "field_h",
           "renamed": "sentinel"
+        },
+        {
+          "start": 5693,
+          "end": 5700,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 5755,
+          "end": 5762,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 5770,
@@ -423806,6 +424638,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5886,
+          "end": 5887,
+          "symbol": "M:nj.c(B)Lli;",
+          "original": "c",
+          "renamed": "beginForward"
         },
         {
           "start": 5949,
@@ -423841,6 +424680,20 @@
           "symbol": "F:nj.field_h:Lli;",
           "original": "field_h",
           "renamed": "sentinel"
+        },
+        {
+          "start": 6060,
+          "end": 6067,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 6122,
+          "end": 6129,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 6137,
@@ -424011,6 +424864,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7024,
+          "end": 7025,
+          "symbol": "M:nj.b(Lli;B)Lli;",
+          "original": "b",
+          "renamed": "beginBackwardFrom"
+        },
+        {
           "start": 7026,
           "end": 7028,
           "symbol": "C:li",
@@ -424053,11 +424913,25 @@
           "renamed": "sentinel"
         },
         {
+          "start": 7590,
+          "end": 7597,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
+        },
+        {
           "start": 7658,
           "end": 7660,
           "symbol": "C:li",
           "original": "li",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 7704,
+          "end": 7711,
+          "symbol": "F:nj.field_g:Lli;",
+          "original": "field_g",
+          "renamed": "iterationCursor"
         },
         {
           "start": 7719,
@@ -427887,7 +428761,7 @@
       "original": "on.java",
       "renamed": "on.java",
       "inputSha256": "64a01903d52d343ae7ce800a5da2ecf45dcfe506bb516730571460744da4ea79",
-      "outputSha256": "94c1677b333b6a00ccc2d0417f0ca5adb436e154cb5e2232c4c45a77f099bce7",
+      "outputSha256": "ddf16a08476b4e53d0a6704fb85a75d74e101c94cfeb248a0e809b9d4793d443",
       "edits": [
         {
           "start": 66,
@@ -427944,6 +428818,20 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 4271,
+          "end": 4272,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 4428,
+          "end": 4429,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4638,
@@ -428245,7 +429133,7 @@
       "original": "p.java",
       "renamed": "p.java",
       "inputSha256": "bea343a7fbd825e1b4b98e0beb2405cb41c2d88f8c45395f8bb1d702f6600638",
-      "outputSha256": "72ebc19e0b0577ac5c6a195dc361e3e41526c025dbd8c10367425117e7b47336",
+      "outputSha256": "f3394aa0a1cc10f9a75dd07f528e346dc9c14eb2a241b14ae2a5ec55e485b7f7",
       "edits": [
         {
           "start": 324,
@@ -428297,6 +429185,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 1214,
+          "end": 1215,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1454,
           "end": 1455,
           "symbol": "M:li.c(I)V",
@@ -428304,11 +429199,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 1556,
+          "end": 1557,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1690,
           "end": 1691,
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 1910,
+          "end": 1911,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 2146,
@@ -428580,7 +429489,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "8cc0c6149de192dbefcd5efde3c702e456a342280849f4a4f6aef6069e0d2ccb",
-      "outputSha256": "3993e792ef20985db80e3761feaf83372dbd79033a29ced699deee738f4e9e0b",
+      "outputSha256": "6916e82e3d5e89436adc5be34bd1cca6849977b62d33990fd252190333908afe",
       "edits": [
         {
           "start": 115,
@@ -428644,6 +429553,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "ClientException"
+        },
+        {
+          "start": 3098,
+          "end": 3099,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 3506,
@@ -428728,6 +429644,13 @@
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 7496,
+          "end": 7497,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 7793,
@@ -428918,7 +429841,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "a8eab2c66b9e5baacf3bfd0accff92d83b24bd17ae05802e8b2e27fd4c4e1773",
-      "outputSha256": "7f421085b039e13778864a3f42ab138c1df77176d39a1424c9e1c494b8719107",
+      "outputSha256": "42c5d6a47cdd0acc1a789810f39fa1a616e41bfc6a3274100878c1481dfe38af",
       "edits": [
         {
           "start": 61,
@@ -428998,6 +429921,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 3071,
+          "end": 3072,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 3150,
           "end": 3151,
           "symbol": "M:li.b(I)Z",
@@ -429019,6 +429949,20 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 3323,
+          "end": 3324,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 3425,
+          "end": 3426,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 3536,
           "end": 3537,
           "symbol": "M:li.b(I)Z",
@@ -429038,6 +429982,13 @@
           "symbol": "C:tg",
           "original": "tg",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 3789,
+          "end": 3790,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         }
       ]
     },
@@ -429187,7 +430138,7 @@
       "original": "pn.java",
       "renamed": "pn.java",
       "inputSha256": "1fd45150120d9a2a105d5cc23b6478658f130e4be20753dc11528abef19ca398",
-      "outputSha256": "416da92d6da940e1516075b38a8b5803187cb13e1d44044d67fa061eef9274b0",
+      "outputSha256": "a72e5746debc29c9bacd7d9dbf3e3b4c13b41cf863c34404eaec4421fee758c5",
       "edits": [
         {
           "start": 71,
@@ -429391,6 +430342,20 @@
           "symbol": "M:ed.d(II)V",
           "original": "d",
           "renamed": "writeShort"
+        },
+        {
+          "start": 9427,
+          "end": 9428,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 9843,
+          "end": 9844,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 10058,
@@ -431720,7 +432685,7 @@
       "original": "ql.java",
       "renamed": "ql.java",
       "inputSha256": "a916e898e50c855ba7ab3757a076caa43e098ea9fe45a93ac22b589d3a99df03",
-      "outputSha256": "4380b9cfaec839c3a7e3ff388c3109583b3c0169d882e824ecc5e112dbe6d5e8",
+      "outputSha256": "3012276249b6cf6fa4a38e282949007b73738f337e28a45d00f58883c10ef47b",
       "edits": [
         {
           "start": 91,
@@ -431884,6 +432849,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 4077,
+          "end": 4078,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 4222,
           "end": 4224,
           "symbol": "C:cr",
@@ -431952,6 +432924,13 @@
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 6555,
+          "end": 6556,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 6777,
@@ -435376,7 +436355,7 @@
       "original": "rq.java",
       "renamed": "rq.java",
       "inputSha256": "d3dc272bb7bb64433ecc1b37b80acaae3dbe41c09cf7e28f12e691266e2238b3",
-      "outputSha256": "fe1c4e24979531154d575172ffc5135a4793050b195718565a9ae46875a0bc77",
+      "outputSha256": "0d3ab17e53391456afebdfddac6ba8b9fb0666d5da65667d9a03a8bc027bfa11",
       "edits": [
         {
           "start": 61,
@@ -435496,6 +436475,20 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "Sprite"
+        },
+        {
+          "start": 5311,
+          "end": 5312,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 5834,
+          "end": 5835,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 6780,
@@ -435666,11 +436659,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 17684,
+          "end": 17685,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 18605,
+          "end": 18606,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 19279,
           "end": 19281,
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 19325,
+          "end": 19326,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 19456,
@@ -435699,6 +436713,13 @@
           "symbol": "C:sn",
           "original": "sn",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 19997,
+          "end": 19998,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 20137,
@@ -440301,7 +441322,7 @@
       "original": "tg.java",
       "renamed": "DelegatingCanvas.java",
       "inputSha256": "639f09b120cff6d1f2e57bd54723efa47d11a6b97169e468df8accdcd30d0e6b",
-      "outputSha256": "a40575d7a0dd8b455fe140f880ea42e34d8b985cd97d8b316fcb409041825e8b",
+      "outputSha256": "110881504a130c79f24520c2a799266495e80e548f05ee0953b2f20edb0d2b9c",
       "edits": [
         {
           "start": 50,
@@ -440367,11 +441388,25 @@
           "renamed": "UiPanel"
         },
         {
+          "start": 1072,
+          "end": 1073,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 1286,
           "end": 1288,
           "symbol": "C:cr",
           "original": "cr",
           "renamed": "UiPanel"
+        },
+        {
+          "start": 1306,
+          "end": 1307,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 1758,
@@ -441042,7 +442077,7 @@
       "original": "to.java",
       "renamed": "to.java",
       "inputSha256": "2c8080600e8c43c992be3111b2f2a0450dbe3912e5180cab8fc7118073155b43",
-      "outputSha256": "185a856f4bc1c848ef87bd95f3e4bdea9520d0328c0e184baa29c0f8500e9dbc",
+      "outputSha256": "265ffe1284f00cd73e111418c6d7c70164e2c2dc53897d204e2f810dc51543d7",
       "edits": [
         {
           "start": 470,
@@ -441057,6 +442092,13 @@
           "symbol": "M:ed.h(I)I",
           "original": "h",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 818,
+          "end": 819,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 968,
@@ -441092,6 +442134,20 @@
           "symbol": "M:ed.b(Z)I",
           "original": "b",
           "renamed": "readInt"
+        },
+        {
+          "start": 1580,
+          "end": 1581,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 1707,
+          "end": 1708,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 1831,
@@ -441170,7 +442226,7 @@
       "original": "tq.java",
       "renamed": "tq.java",
       "inputSha256": "e857da9791b8fa7feba1553519c4c28cfd769b1f8f5ac5b67a6582bed8419cdb",
-      "outputSha256": "cb363ca324d973ad72b0738178b5c99c3efc6144495179f831b06170357933be",
+      "outputSha256": "a7c55356f87f46717c16781f8399256cc1a994c4dd1857076c464343376741ca",
       "edits": [
         {
           "start": 1561,
@@ -441397,6 +442453,13 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 7377,
+          "end": 7378,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 7453,
           "end": 7454,
           "symbol": "M:li.c(I)V",
@@ -441409,6 +442472,13 @@
           "symbol": "M:gp.a(I)V",
           "original": "a",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 7538,
+          "end": 7539,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 7680,
@@ -441488,6 +442558,13 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 8655,
+          "end": 8656,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 8731,
           "end": 8732,
           "symbol": "M:li.c(I)V",
@@ -441500,6 +442577,13 @@
           "symbol": "M:gp.a(I)V",
           "original": "a",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 8809,
+          "end": 8810,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 8993,
@@ -441810,6 +442894,13 @@
           "renamed": "get"
         },
         {
+          "start": 14532,
+          "end": 14533,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 14612,
           "end": 14613,
           "symbol": "M:li.c(I)V",
@@ -441822,6 +442913,13 @@
           "symbol": "M:gp.a(I)V",
           "original": "a",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 14695,
+          "end": 14696,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 14764,
@@ -444931,7 +446029,7 @@
       "original": "uk.java",
       "renamed": "uk.java",
       "inputSha256": "db74ee4972735e263fd3a93b80ba33495f5d5c70cfdfe1d40bca7b87df683642",
-      "outputSha256": "6403238d7a610fb13f65ed1e1e0354672a70140345eacee0eae86c85f30cac8b",
+      "outputSha256": "0876f899fbed2fc9eebf6276470ddd002f235ab55ecde121ab92a0e0c5a70bfc",
       "edits": [
         {
           "start": 130,
@@ -445011,6 +446109,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2717,
+          "end": 2718,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 2790,
           "end": 2797,
           "symbol": "F:li.field_k:J",
@@ -445030,6 +446135,13 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 3307,
+          "end": 3308,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 3533,
@@ -445060,6 +446172,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 3981,
+          "end": 3982,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 4062,
           "end": 4069,
           "symbol": "F:li.field_k:J",
@@ -445072,6 +446191,13 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 4359,
+          "end": 4360,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 4863,
@@ -445095,6 +446221,13 @@
           "renamed": "addFirst"
         },
         {
+          "start": 5478,
+          "end": 5479,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 5590,
           "end": 5597,
           "symbol": "F:li.field_k:J",
@@ -445107,6 +446240,13 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 5959,
+          "end": 5960,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 6481,
@@ -445346,7 +446486,7 @@
       "original": "um.java",
       "renamed": "um.java",
       "inputSha256": "d2c9ec5331f3a898b13eaf5f02d7e2b70c5077586c53986f4126d394121823bc",
-      "outputSha256": "3339107a69b05ec9ae77f3c5b561d49e117c7fcc48b9760cb23474f368da082f",
+      "outputSha256": "e2dbba7d405b4148e2583452273d57f787caf464ace5103b0856df3a3bac7aa3",
       "edits": [
         {
           "start": 85,
@@ -445573,6 +446713,13 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 8368,
+          "end": 8369,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 8451,
           "end": 8452,
           "symbol": "M:li.b(I)Z",
@@ -445587,6 +446734,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 8550,
+          "end": 8551,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 8658,
+          "end": 8659,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 8763,
           "end": 8764,
           "symbol": "M:li.b(I)Z",
@@ -445599,6 +446760,13 @@
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 8877,
+          "end": 8878,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 9440,
@@ -446111,7 +447279,7 @@
       "original": "uo.java",
       "renamed": "uo.java",
       "inputSha256": "2213d7de800cda6a70c5ee19cd52ce8cc0b0f5a29e0a9adb462be0e342e88494",
-      "outputSha256": "a98d519d6ef7f0f3c873f76499bf1c0e143571fb75709aaa43476be8de29c0da",
+      "outputSha256": "db6bdd126b6f9786ea506f9ecf6a43a30625c177064211be75eb5fdcc2751c1c",
       "edits": [
         {
           "start": 94,
@@ -446427,6 +447595,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "Archive"
+        },
+        {
+          "start": 4704,
+          "end": 4705,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 4892,
@@ -446826,6 +448001,13 @@
           "symbol": "C:hk",
           "original": "hk",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 23661,
+          "end": 23662,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 24586,
@@ -447524,7 +448706,7 @@
       "original": "vc.java",
       "renamed": "vc.java",
       "inputSha256": "a45adf0a83aed53599569afda9bf2ba9a1fd941f2cc450b968e5d831138f07f8",
-      "outputSha256": "5f632697fb3f98c400de5ac178f82c6e943c05a2de4d1ef03e43be8438296b55",
+      "outputSha256": "4f40c8b3f7afd22cb7e72a152c4edc88d6121b454cfc5f664e3174bbce129fa2",
       "edits": [
         {
           "start": 93,
@@ -447541,11 +448723,32 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 3675,
+          "end": 3676,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
           "start": 3942,
           "end": 3943,
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 4042,
+          "end": 4043,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 4181,
+          "end": 4182,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
         },
         {
           "start": 4492,
@@ -447555,11 +448758,39 @@
           "renamed": "unlink"
         },
         {
+          "start": 4586,
+          "end": 4587,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
+          "start": 4650,
+          "end": 4651,
+          "symbol": "M:nj.a(B)Lli;",
+          "original": "a",
+          "renamed": "beginBackward"
+        },
+        {
+          "start": 4803,
+          "end": 4804,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 5084,
           "end": 5085,
           "symbol": "M:li.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 5166,
+          "end": 5167,
+          "symbol": "M:nj.b(I)Lli;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 6957,
@@ -452074,10 +453305,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/vertigo2"
     },
-    "rulesSha256": "27a19a23b6ce5dfaf9db98bbc95055b7a029c60fd9ba4b2bae640eaad52a33ae",
+    "rulesSha256": "5b31dbe31c58417eb86641a499bfa6c84aa7d29dcff82b1515f39e24c522ff3a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
-    "outputTreeSha256": "98672649e9e064c7782c234ee6f977286c677def2675296eaf887d5add8ebd70",
+    "outputTreeSha256": "26d699fa439a194460f7d7371ee9b316ac5280216730ac9a7cc1ae240521560d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

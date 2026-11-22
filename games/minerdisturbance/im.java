@@ -47,7 +47,7 @@ final class im {
           var2_long = sf.a((byte) 116);
           if (qc.field_f != param1 &&
             qh.field_a < 0) {
-            var4_ref_jn = (jn) (mc.field_m.b(74));
+            var4_ref_jn = (jn) (mc.field_m.beginForward(74));
             if (var4_ref_jn != null &&
               var2_long > var4_ref_jn.field_o) {
               var4_ref_jn.unlink(34);
@@ -95,7 +95,7 @@ final class im {
             for (var6 = 0; rj.field_d > var6; var6++) {
               var5.field_s[var6] = kj.field_a.payload[var6];
             }
-            mc.field_m.a((byte) 50, var5);
+            mc.field_m.addLast((byte) 50, var5);
             qh.field_a = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -42,7 +42,7 @@ final class ha extends tia {
             var8.field_o = this.field_g - 10;
             var8.field_r = (double)var4;
             var8.field_l = 0;
-            this.field_j.a(var8, true);
+            this.field_j.addLast(var8, true);
           }
         }
         cla.a((byte) 11, this.field_j, this.field_g, this.field_f);

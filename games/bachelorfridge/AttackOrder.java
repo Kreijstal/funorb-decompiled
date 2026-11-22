@@ -383,26 +383,26 @@ final class AttackOrder extends CreatureOrder {
                     var21 = var20.occupant;
                     if (var20.b((byte) -113)) {
                       var22_ref_sl = new DamageTileEffect(var9, var18, var19);
-                      param1.a(var22_ref_sl, true);
+                      param1.addLast(var22_ref_sl, true);
                       if (var20.terrain == 34) {
                         var23_ref_o = new o(50);
-                        param1.a(var23_ref_o, true);
+                        param1.addLast(var23_ref_o, true);
                       }
                     }
                     if (var20.field_d) {
                       var22_ref_ro = new ClearTileFlagEffect(var18, var19);
-                      param1.a(var22_ref_ro, true);
+                      param1.addLast(var22_ref_ro, true);
                     }
                     if (var29.field_j == 80) {
                       var22_ref_bm = new bm(15, var18, var19);
                       if (param2.tiles[var18][var19].occupant == null) {
-                        param1.a(var22_ref_bm, true);
+                        param1.addLast(var22_ref_bm, true);
                       }
                     } else {
                       if (var29.field_j == 81) {
                         var22_ref_bm = new bm(14, var18, var19);
                         if (null == param2.tiles[var18][var19].occupant) {
-                          param1.a(var22_ref_bm, true);
+                          param1.addLast(var22_ref_bm, true);
                         }
                       }
                     }
@@ -442,7 +442,7 @@ final class AttackOrder extends CreatureOrder {
                           var25 = 0;
                         }
                         var26 = new DamageEffect(new CreatureRef(var21), var22 != 0, var24, var23, var25);
-                        param1.a(var26, true);
+                        param1.addLast(var26, true);
                       }
                     }
                   }
@@ -502,7 +502,7 @@ final class AttackOrder extends CreatureOrder {
               var11++;
             }
             var17_ref_iv = new DamageEffect(new CreatureRef(var13_ref_aga), var14 != 0, var16, var15, var29.field_u);
-            param1.a(var17_ref_iv, true);
+            param1.addLast(var17_ref_iv, true);
           }
           if (var11 >= 3) {
             param2.field_T.field_d[var5.ownerIndex] = true;

@@ -60,7 +60,7 @@ final class ah extends tia {
             var8.field_o = 32;
             var8.field_l = 0;
             var8.field_r = var3;
-            this.field_n.a(var8, true);
+            this.field_n.addLast(var8, true);
           }
         }
         BattleScreen.a((byte) 116, this.field_n, this.field_f, this.field_g);

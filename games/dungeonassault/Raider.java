@@ -182,7 +182,7 @@ final class Raider {
                 var18.field_r[var5] = -5;
               }
             }
-            fe.field_k.a(var18, false);
+            fe.field_k.addFirst(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

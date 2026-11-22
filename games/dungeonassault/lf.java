@@ -88,8 +88,8 @@ final class lf extends kl {
           this.field_d = false;
           this.field_o = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_i + (this.field_j - 24 - jm.field_i.field_v * 2), IntrusiveNode.field_c, jm.field_i, -81, mp.field_e);
           this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -16 + this.field_j - (-this.field_i + jm.field_i.field_v), IntrusiveNode.field_c, jm.field_i, -111, um.field_d);
-          this.field_f.a(this.field_o, false);
-          this.field_f.a(this.field_s, false);
+          this.field_f.addFirst(this.field_o, false);
+          this.field_f.addFirst(this.field_s, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class lf extends kl {
               fieldTemp$0 = kp.field_e;
               kp.field_e = kp.field_e + 1;
               var5.field_Ib = fieldTemp$0;
-              fm.field_b.a(var5, false);
+              fm.field_b.addFirst(var5, false);
             }
             var5.field_Hb = var4_ref_String;
             return;
@@ -224,7 +224,7 @@ final class lf extends kl {
             fieldTemp$1 = o.field_m;
             o.field_m = o.field_m + 1;
             var6_ref.field_Ib = fieldTemp$1;
-            jm.field_f.a(var6_ref, false);
+            jm.field_f.addFirst(var6_ref, false);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -232,7 +232,7 @@ final class lf extends kl {
           var6_ref.field_Nb = (String) (var3Lifetime1);
           var6_ref.field_Hb = var4_ref_StringLifetime1;
           var6_ref.unlink(false);
-          var7_ref = (bo) (jm.field_f.e(-24172));
+          var7_ref = (bo) (jm.field_f.beginBackward(-24172));
           scanLoop1: while (true) {
             if (var7_ref != null) {
               stackOut_56_0 = eg.a(var6_ref, param0 + 77, var7_ref);
@@ -242,12 +242,12 @@ final class lf extends kl {
                 break scanLoop1;
               }
               if (stackIn_57_0) {
-                var7_ref = (bo) (jm.field_f.a(param0 - 119));
+                var7_ref = (bo) (jm.field_f.nextBackward(param0 - 119));
                 continue;
               }
             }
             if (var7_ref == null) {
-              jm.field_f.a(var6_ref, false);
+              jm.field_f.addFirst(var6_ref, false);
               if (var8 == 0) {
                 return;
               }

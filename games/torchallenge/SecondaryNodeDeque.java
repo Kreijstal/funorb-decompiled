@@ -7,7 +7,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_d;
     static String field_e;
     static int field_h;
-    DualLinkNode field_f;
+    DualLinkNode sentinel;
     static Sprite[] field_i;
     static Sprite[][] field_a;
     static String field_b;
@@ -23,8 +23,8 @@ final class SecondaryNodeDeque implements Iterable {
           return;
         }
         try {
-          param0.secondaryNext = this.field_f;
-          param0.secondaryPrevious = this.field_f.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -130,20 +130,20 @@ final class SecondaryNodeDeque implements Iterable {
         field_g = null;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 0) {
           field_a = (Sprite[][]) null;
-          var2 = this.field_f.secondaryNext;
-          if (this.field_f != var2) {
+          var2 = this.sentinel.secondaryNext;
+          if (this.sentinel != var2) {
             var2.unlinkSecondary(12695);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_f.secondaryNext;
-        if (this.field_f != var2Lifetime1) {
+        var2Lifetime1 = this.sentinel.secondaryNext;
+        if (this.sentinel != var2Lifetime1) {
           var2Lifetime1.unlinkSecondary(12695);
           return var2Lifetime1;
         }

@@ -124,7 +124,7 @@ final class lg {
     }
 
     final static void a(int param0) {
-        jd var1 = (jd) (ta.field_f.e(-24172));
+        jd var1 = (jd) (ta.field_f.beginBackward(-24172));
         if (var1 == null) {
           tl.a(-63);
           return;

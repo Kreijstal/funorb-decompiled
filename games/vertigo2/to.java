@@ -29,7 +29,7 @@ final class to {
           var8 = id.field_f;
           var2 = var8.readUnsignedByte(-11);
           if (var2 == 0) {
-            var3_ref_j = (j) (vf.field_C.a((byte) 100));
+            var3_ref_j = (j) (vf.field_C.beginBackward((byte) 100));
             if (var3_ref_j == null) {
               rm.b((byte) -61);
               return;
@@ -55,10 +55,10 @@ final class to {
             return;
           }
           var3 = var8.readInt(true);
-          var4 = (hn) (qo.field_B.a((byte) 100));
+          var4 = (hn) (qo.field_B.beginBackward((byte) 100));
           while (var4 != null) {
             if (var3 != var4.field_q) {
-              var4 = (hn) (qo.field_B.b(29));
+              var4 = (hn) (qo.field_B.nextBackward(29));
               continue;
             }
             break;

@@ -167,12 +167,12 @@ public final class BachelorFridge extends NetworkGameClient {
             var6 = var5 - HazmatEvent.field_q * HazmatEvent.field_q;
             var7 = 360 + 120 * var6 / var5;
             bka.a(-14305, var7);
-            if (mka.field_f.b((byte) 90) != null) {
+            if (mka.field_f.beginForward((byte) 90) != null) {
               fieldTemp$0 = BasicMoveDefinition.field_v + 1;
               BasicMoveDefinition.field_v = BasicMoveDefinition.field_v + 1;
               if (fieldTemp$0 == 335) {
                 BasicMoveDefinition.field_v = 0;
-                mka.field_f.a(false);
+                mka.field_f.removeFirst(false);
               }
             }
             decompiledFrameRemainder2 = (var8 != 0);
@@ -337,7 +337,7 @@ public final class BachelorFridge extends NetworkGameClient {
               !sia.field_h) {
               ji.a(aja.e(11), 62);
             }
-            var3 = (ji) (mka.field_f.b((byte) 90));
+            var3 = (ji) (mka.field_f.beginForward((byte) 90));
             if (var3 != null) {
               var5 = BasicMoveDefinition.field_v;
               if (80 <= var5) {
@@ -1792,7 +1792,7 @@ public final class BachelorFridge extends NetworkGameClient {
             boolean decompiledFrameCompleted0 = true;
             if (!AttackUpAllAnimation.e(-29919)) {
               while (true) {
-                var3_ref_cfa = (cfa) (AirstrikeEvent.field_q.a(false));
+                var3_ref_cfa = (cfa) (AirstrikeEvent.field_q.removeFirst(false));
                 if (var3_ref_cfa == null) {
                   break;
                 }
@@ -1879,7 +1879,7 @@ public final class BachelorFridge extends NetworkGameClient {
                         while (!(EventEffect.field_g.length <= var4)) {
                           stackIn_120_0 = hp.a(var4, (byte) -66, var3_ref_int__);
                           if (stackIn_120_0) {
-                            mka.field_f.a(new ji(var4), true);
+                            mka.field_f.addLast(new ji(var4), true);
                           }
                           var4++;
                         }

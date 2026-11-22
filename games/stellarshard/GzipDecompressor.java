@@ -33,10 +33,10 @@ final class GzipDecompressor {
         ta var5 = null;
         int var4 = stellarshard.field_B;
         try {
-          var5 = (ta) (eg.field_b.b(-86));
+          var5 = (ta) (eg.field_b.beginForward(-86));
           while (var5 != null) {
             fb.a(param0, (byte) -118, var5);
-            var5 = (ta) (eg.field_b.b((byte) 55));
+            var5 = (ta) (eg.field_b.nextForward((byte) 55));
           }
           int var3 = -66 % ((param1 - 25) / 54);
         } catch (RuntimeException runtimeException) {

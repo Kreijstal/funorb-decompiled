@@ -35,14 +35,14 @@ final class SleepAnimation extends EventAnimation {
         if (param0 != -10649) {
           return;
         }
-        DamageEffect var3 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        DamageEffect var3 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         al.a(107, this.field_x.moveId);
         while (var3 != null) {
           var4 = var3.target.a(-27449, this.screen);
           var4.b(param0 + 10648, 6);
           var4.a(24831, 95, kna.field_g[29]);
           var3.apply(var2, this.screen.field_h, 12);
-          var3 = (DamageEffect) (this.field_x.effects.c(0));
+          var3 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }
     }
 

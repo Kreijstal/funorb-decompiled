@@ -84,7 +84,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         var5 = BachelorFridge.field_y;
         try {
           var3_int = 0;
-          var4 = (kha) (iea.field_d.b((byte) 90));
+          var4 = (kha) (iea.field_d.beginForward((byte) 90));
           if (param0 >= -40) {
             field_j = true;
           }
@@ -99,14 +99,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 mg.field_m.field_f[param1] + var4.field_g == 255) {
                 var3_int = 1;
               }
-              var4 = (kha) (iea.field_d.c(0));
+              var4 = (kha) (iea.field_d.nextForward(0));
               continue;
             }
             break;
           }
           if (var3_int == 0) {
-            iea.field_d.a(new kha(param1, param2), true);
-            qg.field_b.a(-1, new kr(param1, gr.field_a[param1], (kha) (iea.field_d.a(6))));
+            iea.field_d.addLast(new kha(param1, param2), true);
+            qg.field_b.a(-1, new kr(param1, gr.field_a[param1], (kha) (iea.field_d.beginBackward(6))));
           }
           MeshObject.a(-110);
           gu.field_d = gu.field_d + 1;

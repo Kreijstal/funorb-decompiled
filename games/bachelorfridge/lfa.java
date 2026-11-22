@@ -99,8 +99,8 @@ final class lfa extends k {
             }
             if (ri.field_a == 74) {
               ((BattleScreen) (var1)).field_h.a(dw.field_f, true, ig.field_m);
-              if (!((BattleScreen) (var1)).field_h.field_U.e(12917)) {
-                ((BattleScreen) (var1)).field_g = ((BattleUpdate) (((BattleScreen) (var1)).field_h.field_U.a(6))).field_j;
+              if (!((BattleScreen) (var1)).field_h.field_U.isEmpty(12917)) {
+                ((BattleScreen) (var1)).field_g = ((BattleUpdate) (((BattleScreen) (var1)).field_h.field_U.beginBackward(6))).field_j;
               }
               ((BattleScreen) (var1)).field_m = false;
               ((BattleScreen) (var1)).b((byte) -117);

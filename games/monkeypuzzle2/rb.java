@@ -126,9 +126,9 @@ final class rb extends ii {
           var5 = var3.readUnsignedShort(17277);
           if (var4 != 0) {
             for (var6_int = 0; var5 > var6_int; var6_int++) {
-              var19_ref = (ki) (ri.field_b.d(param1 + 4069));
+              var19_ref = (ki) (ri.field_b.removeLast(param1 + 4069));
               var19_ref.a((byte) 126, var3);
-              ri.field_b.a(-8212, var19_ref);
+              ri.field_b.addFirst(-8212, var19_ref);
             }
             var5 = var3.readUnsignedShort(17277);
           }
@@ -140,7 +140,7 @@ final class rb extends ii {
           var21 = var24;
           var7 = var21;
           for (var8 = 0; var5 > var8; var8++) {
-            var9_ref_ki = (ki) (ri.field_b.d(4011));
+            var9_ref_ki = (ki) (ri.field_b.removeLast(4011));
             var9_ref_ki.a((byte) 116, var3);
             if (var9_ref_ki.field_w == 2) {
               h.a(3, true);
@@ -159,7 +159,7 @@ final class rb extends ii {
             if (var9_ref_ki.field_w == 0) {
               gb.field_o = gb.field_o + 1;
             }
-            ok.field_a.a(-8212, var9_ref_ki);
+            ok.field_a.addFirst(-8212, var9_ref_ki);
           }
           if (param1 != -58) {
             field_hb = (String[]) null;

@@ -20,10 +20,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void d(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_k.c(-3905));
+        PcmStream var2 = (PcmStream) (this.field_k.beginForward(-3905));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (PcmStream) (this.field_k.a(-16913));
+          var2 = (PcmStream) (this.field_k.nextForward(-16913));
         }
     }
 
@@ -51,7 +51,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream c() {
-        return (PcmStream) (this.field_k.c(-3905));
+        return (PcmStream) (this.field_k.beginForward(-3905));
     }
 
     final synchronized void a(int param0) {
@@ -75,7 +75,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_m = this.field_m + var2;
           this.e();
-          var3 = (oa) (this.field_j.c(-3905));
+          var3 = (oa) (this.field_j.beginForward(-3905));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -92,18 +92,18 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream a() {
-        return (PcmStream) (this.field_k.a(-16913));
+        return (PcmStream) (this.field_k.nextForward(-16913));
     }
 
     final synchronized void b(PcmStream param0) {
-        this.field_k.a(-97, param0);
+        this.field_k.addFirst(-97, param0);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_k.c(-3905));
+        PcmStream var4 = (PcmStream) (this.field_k.beginForward(-3905));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (PcmStream) (this.field_k.a(-16913));
+          var4 = (PcmStream) (this.field_k.nextForward(-16913));
         }
     }
 
@@ -112,7 +112,7 @@ final class PcmStreamMixer extends PcmStream {
           this.e();
           param0.field_g = this;
           param0.b();
-          this.a(this.field_j.field_c.next, param0);
+          this.a(this.field_j.sentinel.next, param0);
           return;
         }
         throw new RuntimeException();
@@ -122,8 +122,8 @@ final class PcmStreamMixer extends PcmStream {
         param0.unlink(4);
         param0.a();
         param0.field_g = null;
-        IntrusiveNode var2 = this.field_j.field_c.next;
-        if (var2 == this.field_j.field_c) {
+        IntrusiveNode var2 = this.field_j.sentinel.next;
+        if (var2 == this.field_j.sentinel) {
           this.field_l = -1;
         } else {
           this.field_l = ((oa) (var2)).field_f;
@@ -152,7 +152,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_m = this.field_m + var4;
           this.e();
-          var5 = (oa) (this.field_j.c(-3905));
+          var5 = (oa) (this.field_j.beginForward(-3905));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -171,10 +171,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void e() {
         oa var1 = null;
         if (this.field_m > 0) {
-          var1 = (oa) (this.field_j.c(-3905));
+          var1 = (oa) (this.field_j.beginForward(-3905));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_m;
-            var1 = (oa) (this.field_j.a(-16913));
+            var1 = (oa) (this.field_j.nextForward(-16913));
           }
           this.field_l = this.field_l - this.field_m;
           this.field_m = 0;
@@ -183,9 +183,9 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void a(IntrusiveNode param0, oa param1) {
         while (true) {
-          if (param0 == this.field_j.field_c) {
+          if (param0 == this.field_j.sentinel) {
             fe.a(param0, param1, false);
-            this.field_l = ((oa) (this.field_j.field_c.next)).field_f;
+            this.field_l = ((oa) (this.field_j.sentinel.next)).field_f;
             return;
           }
           if (((oa) (param0)).field_f <= param1.field_f) {
@@ -195,7 +195,7 @@ final class PcmStreamMixer extends PcmStream {
           break;
         }
         fe.a(param0, param1, false);
-        this.field_l = ((oa) (this.field_j.field_c.next)).field_f;
+        this.field_l = ((oa) (this.field_j.sentinel.next)).field_f;
         return;
     }
 

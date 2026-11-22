@@ -109,7 +109,7 @@ final class pr {
         } else {
           this.field_m = true;
           if (this.field_b <= this.field_g) {
-            var4Lifetime2 = (rca) (this.field_d.a(param1 ^ -7));
+            var4Lifetime2 = (rca) (this.field_d.beginBackward(param1 ^ -7));
             var3 = new rca(param0, var4Lifetime2.field_f);
             this.field_k[var4Lifetime2.field_g] = null;
             var4Lifetime2.unlink(false);
@@ -119,7 +119,7 @@ final class pr {
           }
           this.field_k[param0] = var3;
         }
-        this.field_d.a(-59, var3);
+        this.field_d.addFirst(-59, var3);
         return this.field_a[var3.field_f];
     }
 
@@ -131,7 +131,7 @@ final class pr {
         }
         this.field_k = null;
         this.field_a = (int[][]) null;
-        this.field_d.d(73);
+        this.field_d.clear(73);
         this.field_d = null;
     }
 

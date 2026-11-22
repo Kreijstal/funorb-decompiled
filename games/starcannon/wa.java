@@ -166,7 +166,7 @@ final class wa implements de {
           var2 = var9.readUnsignedByte(7909);
           var3 = var9.readUnsignedByte(7909);
           if (var2 == 0) {
-            var4_ref_we = (we) (ma.field_h.c(param0 - 3804));
+            var4_ref_we = (we) (ma.field_h.beginForward(param0 - 3804));
             if (var4_ref_we == null) {
               ec.a((byte) 27);
               return;
@@ -185,11 +185,11 @@ final class wa implements de {
           } else {
             if (var2 == 1) {
               var4 = var9.readSignedSmart((byte) 43);
-              var5 = (dg) (vb.field_k.c(param0 ^ 3876));
+              var5 = (dg) (vb.field_k.beginForward(param0 ^ 3876));
               while (var5 != null) {
                 if (var5.field_k != var3 ||
                   var5.field_f != var4) {
-                  var5 = (dg) (vb.field_k.a(-16913));
+                  var5 = (dg) (vb.field_k.nextForward(-16913));
                   continue;
                 }
                 break;

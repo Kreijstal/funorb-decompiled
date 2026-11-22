@@ -215,15 +215,15 @@ final class AccountNameAvailabilityValidator extends qf {
           if (param1 != -66) {
             field_p = (ue) null;
           }
-          var4 = (of) (fi.field_c.c(param1 - 3839));
+          var4 = (of) (fi.field_c.beginForward(param1 - 3839));
           while (var4 != null) {
             bb.a(param1 + 68, param0, var4);
-            var4 = (of) (fi.field_c.a(param1 ^ 16977));
+            var4 = (of) (fi.field_c.nextForward(param1 ^ 16977));
           }
-          var2 = ab.field_H.c(param1 - 3839);
+          var2 = ab.field_H.beginForward(param1 - 3839);
           while (var2 != null) {
             sc.a(param1 ^ -32459, param0);
-            var2 = ab.field_H.a(-16913);
+            var2 = ab.field_H.nextForward(-16913);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

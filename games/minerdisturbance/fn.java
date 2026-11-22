@@ -138,10 +138,10 @@ final class fn extends IntrusiveNode {
           var2 = var27.readUnsignedByte((byte) -54);
           if (var2 == param0) {
             var3 = var27.readUnsignedShort(-78);
-            var4_ref = (lc) (sj.field_g.b(115));
+            var4_ref = (lc) (sj.field_g.beginForward(115));
             while (var4_ref != null) {
               if (~var4_ref.field_q != ~var3) {
-                var4_ref = (lc) (sj.field_g.b((byte) 56));
+                var4_ref = (lc) (sj.field_g.nextForward((byte) 56));
                 continue;
               }
               break;
@@ -235,10 +235,10 @@ final class fn extends IntrusiveNode {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(param0 - 89);
             var27.readLong(99);
-            var4 = (wb) (hj.field_k.b(71));
+            var4 = (wb) (hj.field_k.beginForward(71));
             while (var4 != null) {
               if (~var4.field_w != ~var3Lifetime1) {
-                var4 = (wb) (hj.field_k.b((byte) 56));
+                var4 = (wb) (hj.field_k.nextForward((byte) 56));
                 continue;
               }
               break;
@@ -300,14 +300,14 @@ final class fn extends IntrusiveNode {
         var3Lifetime1 = var7;
         var4Lifetime2 = param0;
         var3Lifetime1[var4Lifetime2 >> 5] = SpriteState.a(var7[var4Lifetime2 >> 5], 1 << c.a(var4Lifetime2, 31));
-        ce.field_a.a((byte) 40, new cm(param0));
+        ce.field_a.addLast((byte) 40, new cm(param0));
         if (!kj.a(false) &&
           wf.q(89)) {
           qa.a(pn.field_b, hl.field_b, param0, pe.field_sb, (byte) 56, 4, param1, aa.field_b);
           r.field_d = gk.b(4, 1);
           return;
         }
-        ArchiveProvider.field_c.a((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
+        ArchiveProvider.field_c.addLast((byte) -116, new sl(param0, param1, pe.field_sb, pn.field_b, aa.field_b, hl.field_b));
         return;
     }
 
@@ -357,7 +357,7 @@ final class fn extends IntrusiveNode {
 
     final static af a(int param0, int param1) {
         af var2 = new af();
-        ag.field_b.a((byte) 47, var2);
+        ag.field_b.addLast((byte) 47, var2);
         if (param0 != 0) {
           return (af) null;
         }

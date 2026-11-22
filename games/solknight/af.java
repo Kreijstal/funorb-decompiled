@@ -782,7 +782,7 @@ class af implements j, eg {
             if (param2 >= -94) {
               field_h = (int[]) null;
             }
-            ga.field_E.a(var18, -7044);
+            ga.field_E.addFirst(var18, -7044);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

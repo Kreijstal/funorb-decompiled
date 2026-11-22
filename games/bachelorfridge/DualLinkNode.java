@@ -92,8 +92,8 @@ class DualLinkNode extends IntrusiveNode {
           bda.field_l = 0;
           sja.field_gb = null;
           SuperSpeedAnimation.field_v = 0;
-          es.field_j.d(71);
-          HazmatAnimation.field_v.d(59);
+          es.field_j.clear(71);
+          HazmatAnimation.field_v.clear(59);
           var1 = wja.field_m.b((byte) -73);
           while (var1 != null) {
             var1.unlinkSecondary(0);

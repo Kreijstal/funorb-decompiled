@@ -26,7 +26,7 @@ final class StickyEvent extends SpecialEvent {
           while (true) {
             var2_int--;
             if (var2_int >= 0) {
-              this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+              this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
               if (var3 != 0) {
                 return;
               }

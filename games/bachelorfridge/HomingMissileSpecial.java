@@ -189,7 +189,7 @@ final class HomingMissileSpecial extends SpecialOrder {
                   if (var5 >= var12) {
                     var13 = MassPoisonSpecial.field_q[var12];
                     var14 = new DamageEffect(new CreatureRef(var11), false, 1, var13, 0);
-                    var4.effects.a(var14, true);
+                    var4.effects.addLast(var14, true);
                   }
                 }
               }

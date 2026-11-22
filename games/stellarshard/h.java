@@ -214,15 +214,15 @@ final class h {
         RuntimeException var2_ref = null;
         var3 = stellarshard.field_B;
         try {
-          var5 = (le) (fg.field_G.b(-126));
+          var5 = (le) (fg.field_G.beginForward(-126));
           while (var5 != null) {
             nh.a(var5, (byte) -30, param1);
-            var5 = (le) (fg.field_G.b((byte) -32));
+            var5 = (le) (fg.field_G.nextForward((byte) -32));
           }
-          var2 = IntrusiveNode.field_b.b(-109);
+          var2 = IntrusiveNode.field_b.beginForward(-109);
           while (var2 != null) {
             ff.a(1, param1);
-            var2 = IntrusiveNode.field_b.b((byte) 103);
+            var2 = IntrusiveNode.field_b.nextForward((byte) 103);
           }
           if (param0 > -25) {
             var4 = (String) null;

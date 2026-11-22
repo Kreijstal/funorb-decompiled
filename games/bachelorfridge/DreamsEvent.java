@@ -23,7 +23,7 @@ final class DreamsEvent extends SpecialEvent {
             if (0 > var2_int) {
               return;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

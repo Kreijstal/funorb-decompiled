@@ -156,20 +156,20 @@ final class go extends qe {
           lj.field_r = lj.field_r - 1;
           if (lj.field_r == 0) {
             lj.field_r = 200;
-            var1 = (fa) (ud.field_v.e(-24172));
+            var1 = (fa) (ud.field_v.beginBackward(-24172));
             while (var1 != null) {
               if (!var1.field_o.isLinked(-62)) {
                 var1.unlink(false);
               }
-              var1 = (fa) (ud.field_v.a(param0 ^ 10));
+              var1 = (fa) (ud.field_v.nextBackward(param0 ^ 10));
             }
             if (oi.field_F != null) {
-              var1Lifetime1 = (fa) (oi.field_F.e(-24172));
+              var1Lifetime1 = (fa) (oi.field_F.beginBackward(-24172));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_o.isLinked(-67)) {
                   var1Lifetime1.unlink(false);
                 }
-                var1Lifetime1 = (fa) (oi.field_F.a(4));
+                var1Lifetime1 = (fa) (oi.field_F.nextBackward(4));
               }
             }
           }
@@ -1989,10 +1989,10 @@ final class go extends qe {
           go.a(518, 57, (wd) null, kc.field_V);
         }
         go.a(590, 320, var16, var4Lifetime2 != 0, this.field_Y.field_i);
-        var15 = (rj) (this.field_p.e(-24172));
+        var15 = (rj) (this.field_p.beginBackward(-24172));
         while (var15 != null) {
           var15.a(65);
-          var15 = (rj) (this.field_p.a(4));
+          var15 = (rj) (this.field_p.nextBackward(4));
         }
         ad.field_e.i(172, -ad.field_e.field_b + 40);
         ad.field_e.f(468 - ad.field_e.field_d, 40 - ad.field_e.field_b);
@@ -2018,10 +2018,10 @@ final class go extends qe {
           }
           this.field_R.a(true);
         }
-        var15Lifetime1 = (rj) (this.field_p.e(-24172));
+        var15Lifetime1 = (rj) (this.field_p.beginBackward(-24172));
         while (var15Lifetime1 != null) {
           var15Lifetime1.d(0);
-          var15Lifetime1 = (rj) (this.field_p.a(4));
+          var15Lifetime1 = (rj) (this.field_p.nextBackward(4));
         }
         if (!this.field_w ||
           this.field_H == 0) {
@@ -2172,7 +2172,7 @@ final class go extends qe {
           }
           if (this.field_P[2] > 0 &&
             0 == oi.b(0, 100)) {
-            this.field_B.a(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         } else if (this.field_Y.field_q != -1) {
           var3_int = this.field_Y.field_q / 7;
@@ -2197,33 +2197,33 @@ final class go extends qe {
           }
           if (this.field_P[2] > 0 &&
             0 == oi.b(0, 100)) {
-            this.field_B.a(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         } else {
           if (this.field_P[2] > 0 &&
             0 == oi.b(0, 100)) {
-            this.field_B.a(je.a(0, sa.field_v), false);
+            this.field_B.addFirst(je.a(0, sa.field_v), false);
           }
         }
         if (this.field_P[3] > 0 &&
           oi.b(0, 100) == 0) {
-          this.field_T.a(je.a(param1 - 251569954, hp.field_c), false);
+          this.field_T.addFirst(je.a(param1 - 251569954, hp.field_c), false);
         }
         this.field_D.d(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> 8);
         this.field_L.d(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 8);
-        var3 = (o) (this.field_B.e(param1 - 251594126));
+        var3 = (o) (this.field_B.beginBackward(param1 - 251594126));
         if (param1 != 251569954) {
           var11 = (PacketBuffer) null;
           this.a(false, (PacketBuffer) null, 74);
         }
         while (var3 != null) {
           var3.field_k.a(var3.field_p * this.field_P[2] >> 2, param1 ^ 251569970);
-          var3 = (o) (this.field_B.a(4));
+          var3 = (o) (this.field_B.nextBackward(4));
         }
-        var3Lifetime1 = (o) (this.field_T.e(param1 ^ -251590986));
+        var3Lifetime1 = (o) (this.field_T.beginBackward(param1 ^ -251590986));
         while (var3Lifetime1 != null) {
           var3Lifetime1.field_k.a(var3Lifetime1.field_p * this.field_P[3] >> 2, -111);
-          var3Lifetime1 = (o) (this.field_T.a(4));
+          var3Lifetime1 = (o) (this.field_T.nextBackward(4));
         }
     }
 
@@ -2690,15 +2690,15 @@ final class go extends qe {
           if (null != this.field_Y.field_A[var4]) {
             this.field_z[var4] = new hj(this.field_Y, this.field_Y.field_A[var4], 10 + 42 * var4, var3);
             this.field_M.a((gd) (this.field_z[var4]), (byte) -20);
-            this.field_p.a(this.field_z[var4], false);
+            this.field_p.addFirst(this.field_z[var4], false);
           }
         }
-        this.field_p.a(this.field_r, false);
-        this.field_p.a(this.field_N, false);
-        this.field_p.a(this.field_t, false);
-        this.field_p.a(this.field_O, false);
-        this.field_p.a(this.field_J, false);
-        this.field_p.a(this.field_K, false);
+        this.field_p.addFirst(this.field_r, false);
+        this.field_p.addFirst(this.field_N, false);
+        this.field_p.addFirst(this.field_t, false);
+        this.field_p.addFirst(this.field_O, false);
+        this.field_p.addFirst(this.field_J, false);
+        this.field_p.addFirst(this.field_K, false);
         if (null == this.field_Y.field_f) {
           stackIn_13_1 = null;
         } else {

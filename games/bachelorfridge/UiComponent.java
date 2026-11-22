@@ -122,7 +122,7 @@ class UiComponent extends UiNode {
           if (null == this.children) {
             this.children = new IntrusiveDeque();
           }
-          this.children.a(param1, true);
+          this.children.addLast(param1, true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "sna.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -309,11 +309,11 @@ class UiComponent extends UiNode {
         var8 = var7 + this.field_hb;
         if (!param2) {
           var9 = 0;
-          var10_ref_sna = (UiComponent) (this.children.b((byte) 90));
+          var10_ref_sna = (UiComponent) (this.children.beginForward((byte) 90));
           while (var10_ref_sna != null) {
             var10_ref_sna.field_I = var9 - var10_ref_sna.field_rb;
             var9 = var9 + (param3 + var10_ref_sna.field_p + var10_ref_sna.field_hb);
-            var10_ref_sna = (UiComponent) (this.children.c(0));
+            var10_ref_sna = (UiComponent) (this.children.nextForward(0));
           }
           var8 = -param3 + var9;
         }
@@ -370,11 +370,11 @@ class UiComponent extends UiNode {
           UiComponent.e((byte) -89);
         }
         if (this.children != null) {
-          var4 = (UiComponent) (this.children.a(6));
+          var4 = (UiComponent) (this.children.beginBackward(6));
           while (var4 != null) {
             var4.field_q = true;
             var4.d((byte) 118);
-            var4 = (UiComponent) (this.children.c((byte) 116));
+            var4 = (UiComponent) (this.children.nextBackward((byte) 116));
           }
         }
     }
@@ -553,10 +553,10 @@ class UiComponent extends UiNode {
           }
         }
         if (null != this.children) {
-          var23_ref = (UiComponent) (this.children.b((byte) 90));
+          var23_ref = (UiComponent) (this.children.beginForward((byte) 90));
           while (var23_ref != null) {
             var23_ref.a(param0, this.field_tb, var20 + this.field_M, param3, -2147483648, this.field_D + var19, this.field_p, param7, this.field_sb, param9, param10);
-            var23_ref = (UiComponent) (this.children.c(0));
+            var23_ref = (UiComponent) (this.children.nextForward(0));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -584,13 +584,13 @@ class UiComponent extends UiNode {
           }
         }
         if (this.children != null) {
-          var5 = (UiComponent) (this.children.b((byte) 90));
+          var5 = (UiComponent) (this.children.beginForward((byte) 90));
           while (var5 != null) {
             var6 = var5.field_sb + var5.field_kb;
             if (var3 < var6) {
               var3 = var6;
             }
-            var5 = (UiComponent) (this.children.c(0));
+            var5 = (UiComponent) (this.children.nextForward(0));
           }
         }
         return var3;
@@ -674,10 +674,10 @@ class UiComponent extends UiNode {
         stackIn_38_1 = (this.field_E) && (this.field_ib == LevitateEvent.field_t) && (param0);
         this.field_T = stackIn_38_1;
         if (null != this.children) {
-          var13 = (UiComponent) (this.children.a(6));
+          var13 = (UiComponent) (this.children.beginBackward(6));
           while (var13 != null) {
             var13.a(param0, this.field_D, false, this.field_sb, this.field_p, this.field_M);
-            var13 = (UiComponent) (this.children.c((byte) 116));
+            var13 = (UiComponent) (this.children.nextBackward((byte) 116));
           }
         }
         if (var12 != 0) {

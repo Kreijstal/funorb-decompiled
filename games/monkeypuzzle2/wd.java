@@ -256,18 +256,18 @@ final class wd {
         RuntimeException var2_ref = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (mk) (eb.field_C.a((byte) -117));
+          var4 = (mk) (eb.field_C.beginBackward((byte) -117));
           while (var4 != null) {
             GameApplet.a(var4, (byte) 108, param0);
-            var4 = (mk) (eb.field_C.d((byte) 63));
+            var4 = (mk) (eb.field_C.nextBackward((byte) 63));
           }
           if (!param1) {
             field_i = (ud) null;
           }
-          var2 = ButtonWidget.field_v.a((byte) -117);
+          var2 = ButtonWidget.field_v.beginBackward((byte) -117);
           while (var2 != null) {
             lf.a(25197, param0);
-            var2 = ButtonWidget.field_v.d((byte) 63);
+            var2 = ButtonWidget.field_v.nextBackward((byte) 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

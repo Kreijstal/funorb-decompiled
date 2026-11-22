@@ -101,7 +101,7 @@ final class SlowAllAnimation extends EventAnimation {
           if (var9.isDown(-97)) {
             return;
           }
-          var3_ref = (DamageEffect) (this.field_x.effects.b((byte) 90));
+          var3_ref = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
           al.a(118, this.field_x.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var9, this.screen.field_h, 12);
@@ -109,7 +109,7 @@ final class SlowAllAnimation extends EventAnimation {
             this.addChild(27799, new ActorAnimation(this.screen, var10));
             this.addChild(27799, new cb(var10, 6));
             this.addChild(27799, new wn(var10, kna.field_g[5], 24831));
-            var3_ref = (DamageEffect) (this.field_x.effects.c(0));
+            var3_ref = (DamageEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }
@@ -118,7 +118,7 @@ final class SlowAllAnimation extends EventAnimation {
         if (var7.isDown(-97)) {
           return;
         }
-        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.b((byte) 90));
+        var3_refLifetime1 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         al.a(118, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var7, this.screen.field_h, 12);
@@ -126,7 +126,7 @@ final class SlowAllAnimation extends EventAnimation {
           this.addChild(27799, new ActorAnimation(this.screen, var8));
           this.addChild(27799, new cb(var8, 6));
           this.addChild(27799, new wn(var8, kna.field_g[5], 24831));
-          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.c(0));
+          var3_refLifetime1 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }
         return;
     }

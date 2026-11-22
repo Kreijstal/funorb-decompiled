@@ -67,7 +67,7 @@ final class ie {
           for (var6 = 0; var6 < 5; var6++) {
             fieldTemp$0 = this.field_b;
             this.field_b = this.field_b + 1;
-            this.field_c.a((byte) -126, new dn(fieldTemp$0, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
+            this.field_c.addLast((byte) -126, new dn(fieldTemp$0, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
           }
           return;
         }
@@ -75,7 +75,7 @@ final class ie {
         for (var6Lifetime1 = 0; var6Lifetime1 < 5; var6Lifetime1++) {
           fieldTemp$1 = this.field_b;
           this.field_b = this.field_b + 1;
-          this.field_c.a((byte) -126, new dn(fieldTemp$1, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
+          this.field_c.addLast((byte) -126, new dn(fieldTemp$1, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
         }
     }
 
@@ -87,22 +87,22 @@ final class ie {
 
     final void a(int param0) {
         int var4 = MinerDisturbance.field_ab;
-        dn var5 = (dn) (this.field_c.b(69));
+        dn var5 = (dn) (this.field_c.beginForward(69));
         while (var5 != null) {
           if (var5.a((byte) -126)) {
             var5.unlink(34);
           }
-          var5 = (dn) (this.field_c.b((byte) 56));
+          var5 = (dn) (this.field_c.nextForward((byte) 56));
         }
         int var3 = 21 % ((93 - param0) / 33);
     }
 
     final void a(byte param0) {
         int var3 = MinerDisturbance.field_ab;
-        dn var4 = (dn) (this.field_c.b(84));
+        dn var4 = (dn) (this.field_c.beginForward(84));
         while (var4 != null) {
           var4.a(110);
-          var4 = (dn) (this.field_c.b((byte) 56));
+          var4 = (dn) (this.field_c.nextForward((byte) 56));
         }
         if (param0 != -19) {
           this.a((byte) 99);
@@ -155,7 +155,7 @@ final class ie {
     }
 
     final void c(int param0) {
-        this.field_c.a((byte) 55);
+        this.field_c.clear((byte) 55);
         if (param0 != -29727) {
           this.a((byte) -30);
         }

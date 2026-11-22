@@ -258,7 +258,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                 var18.field_g[var5] = -5;
               }
             }
-            ee.field_a.b(84, var18);
+            ee.field_a.addLast(84, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

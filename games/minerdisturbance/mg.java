@@ -22,7 +22,7 @@ final class mg {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new sa(param1, param1);
-          hj.field_b.a((byte) -107, var2);
+          hj.field_b.addLast((byte) -107, var2);
           hj.field_f.b(param1);
           if (param0 != 1963987425) {
             field_c = (String) null;
@@ -59,7 +59,7 @@ final class mg {
             field_f = 8;
           }
           while (true) {
-            dupTemp$2 = (tm) (ok.field_b.e(63854));
+            dupTemp$2 = (tm) (ok.field_b.removeFirst(63854));
             var3 = dupTemp$2;
             var1 = var3;
             if (null != dupTemp$2) {
@@ -69,7 +69,7 @@ final class mg {
             break;
           }
           while (true) {
-            dupTemp$3 = (tm) (ec.field_c.e(63854));
+            dupTemp$3 = (tm) (ec.field_c.removeFirst(63854));
             var4 = dupTemp$3;
             var1Lifetime1 = var4;
             if (null == dupTemp$3) {

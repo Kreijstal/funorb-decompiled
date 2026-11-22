@@ -74,7 +74,7 @@ final class di {
         try {
           var10 = -126 % ((param8 + 23) / 61);
           var9 = new d(param5, param1, param6, param3, param0, param2, param4);
-          wk.field_b.a(-8212, var9);
+          wk.field_b.addFirst(-8212, var9);
           IntrusiveDeque.a(param7, var9, true);
           stackIn_1_0 = var9;
           return stackIn_1_0;

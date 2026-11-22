@@ -50,7 +50,7 @@ final class mla {
         ema var1Lifetime1;
         var3 = BachelorFridge.field_y;
         try {
-          var1 = (ema) (aa.field_l.b((byte) 90));
+          var1 = (ema) (aa.field_l.beginForward((byte) 90));
           while (var1 != null) {
             if (0 < var1.field_Mb) {
               var1.field_Mb = var1.field_Mb - 1;
@@ -61,9 +61,9 @@ final class mla {
                 }
               }
             }
-            var1 = (ema) (aa.field_l.c(0));
+            var1 = (ema) (aa.field_l.nextForward(0));
           }
-          var1_ref = (uha) (uma.field_M.b((byte) 90));
+          var1_ref = (uha) (uma.field_M.beginForward((byte) 90));
           while (var1_ref != null) {
             if (var1_ref.field_Mb > 0) {
               var1_ref.field_Mb = var1_ref.field_Mb - 1;
@@ -74,12 +74,12 @@ final class mla {
                 }
               }
             }
-            var1_ref = (uha) (uma.field_M.c(0));
+            var1_ref = (uha) (uma.field_M.nextForward(0));
           }
-          var1Lifetime1 = (ema) (bia.field_g.b((byte) 90));
+          var1Lifetime1 = (ema) (bia.field_g.beginForward((byte) 90));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Mb <= 0) {
-              var1Lifetime1 = (ema) (bia.field_g.c(0));
+              var1Lifetime1 = (ema) (bia.field_g.nextForward(0));
               continue;
             }
             var1Lifetime1.field_Mb = var1Lifetime1.field_Mb - 1;
@@ -89,7 +89,7 @@ final class mla {
                 var1Lifetime1.unlink(false);
               }
             }
-            var1Lifetime1 = (ema) (bia.field_g.c(0));
+            var1Lifetime1 = (ema) (bia.field_g.nextForward(0));
           }
           var2 = -100 % ((param0 + 66) / 37);
           return;

@@ -11,7 +11,7 @@ final class gh extends IntrusiveNode {
     static boolean field_i;
 
     final static void d(int param0) {
-        cf var1 = (cf) (mh.field_e.a((byte) -95));
+        cf var1 = (cf) (mh.field_e.beginForward((byte) -95));
         if (var1 == null) {
           pc.a(1);
           return;

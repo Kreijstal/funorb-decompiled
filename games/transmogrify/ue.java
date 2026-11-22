@@ -157,7 +157,7 @@ abstract class ue {
           if (param0 != 31370) {
             return;
           }
-          var1 = (LetterTile) (ch.field_e.a((byte) -95));
+          var1 = (LetterTile) (ch.field_e.beginForward((byte) -95));
           while (null != var1) {
             if (var1.rack != de.field_d &&
               var1.destinationX != -2147483648) {
@@ -172,7 +172,7 @@ abstract class ue {
                 break;
               }
               if (var2_int != 0) {
-                var1 = (LetterTile) (ch.field_e.a(true));
+                var1 = (LetterTile) (ch.field_e.nextForward(true));
                 continue;
               }
               var5 = 0;
@@ -185,7 +185,7 @@ abstract class ue {
                 var5++;
               }
             }
-            var1 = (LetterTile) (ch.field_e.a(true));
+            var1 = (LetterTile) (ch.field_e.nextForward(true));
           }
           var1_intLifetime3 = 0;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 12; var2_intLifetime1++) {
@@ -208,11 +208,11 @@ abstract class ue {
               var3Lifetime1.moveToRack(var2_intLifetime3, 28, si.newRack);
             }
           }
-          var2 = (LetterTile) (ch.field_e.a((byte) -95));
+          var2 = (LetterTile) (ch.field_e.beginForward((byte) -95));
           while (var2 != null) {
             var2.x = var2.destinationX;
             var2.y = var2.destinationY;
-            var2 = (LetterTile) (ch.field_e.a(true));
+            var2 = (LetterTile) (ch.field_e.nextForward(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

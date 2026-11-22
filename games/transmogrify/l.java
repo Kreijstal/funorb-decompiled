@@ -325,12 +325,12 @@ final class l {
     final static oh a(byte param0, int param1) {
         oh var2 = new oh();
         if (param0 == 12) {
-          oc.field_G.a(var2, -103);
+          oc.field_G.addLast(var2, -103);
           re.a(param0 - 10, param1);
           return var2;
         }
         field_a = (ci) null;
-        oc.field_G.a(var2, -103);
+        oc.field_G.addLast(var2, -103);
         re.a(param0 - 10, param1);
         return var2;
     }

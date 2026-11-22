@@ -218,14 +218,14 @@ final class ut extends tia {
             var6.field_m = -1;
             var6.field_o = 32;
             var6.field_l = 0;
-            this.field_n.a(var6, true);
+            this.field_n.addLast(var6, true);
           }
         }
         oma.a(this.field_g, this.field_f, this.field_n, this.field_j, -72, this.field_i);
         if (param0 >= 0) {
           return false;
         }
-        stackIn_13_0 = !(this.field_g < 0) || !(this.field_n.e(12917));
+        stackIn_13_0 = !(this.field_g < 0) || !(this.field_n.isEmpty(12917));
         return stackIn_13_0;
     }
 

@@ -114,7 +114,7 @@ final class ql extends um implements ij {
           ao.field_O.field_Lb.field_Lb.field_S = null;
           ao.field_O.field_lb = true;
           var5 = null;
-          var6 = (tp) (var4.a((byte) 100));
+          var6 = (tp) (var4.beginBackward((byte) 100));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_M == null) {
@@ -177,7 +177,7 @@ final class ql extends um implements ij {
               var17.field_n.c(0, var14, -1220, var13, 0);
             }
             var5 = var6;
-            var6 = (tp) (var4.b(75));
+            var6 = (tp) (var4.nextBackward(75));
           }
           if (ao.field_O.field_Hb.field_tb != 0) {
             rc.field_d = new un(ao.field_O.field_Hb.field_ob, ao.field_O.field_Hb.field_C, ao.field_O.field_Hb.field_Fb, ao.field_O.field_Hb.field_db, DualLinkNode.field_r, vf.field_B, AccountRequestState.field_b, AccountRequestState.field_b);

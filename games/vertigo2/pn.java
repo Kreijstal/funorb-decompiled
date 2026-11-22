@@ -280,7 +280,7 @@ class pn extends d {
         if (param2 != 498) {
           field_K = (int[]) null;
         }
-        var4 = (pk) (this.field_P.a((byte) 100));
+        var4 = (pk) (this.field_P.beginBackward((byte) 100));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -292,7 +292,7 @@ class pn extends d {
             }
             var5 = var5.field_n;
           }
-          var4 = (pk) (this.field_P.b(param2 - 439));
+          var4 = (pk) (this.field_P.nextBackward(param2 - 439));
         }
         return null;
     }

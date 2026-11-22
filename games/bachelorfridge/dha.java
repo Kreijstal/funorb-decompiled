@@ -80,12 +80,12 @@ final class dha {
           if (param0 > -87) {
             return true;
           }
-          var4 = (EventEffect) (param1.effects.b((byte) 90));
+          var4 = (EventEffect) (param1.effects.beginForward((byte) 90));
           while (var4 != null) {
             var5 = var4.target.a(-27449, param2);
             var5.b(-1, 6);
             var4.apply(var3, param2.field_h, 12);
-            var4 = (EventEffect) (param1.effects.c(0));
+            var4 = (EventEffect) (param1.effects.nextForward(0));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class dha {
         var6 = BachelorFridge.field_y;
         try {
           var4_int = 64 / ((param3 + 22) / 47);
-          var5 = (rea) (param0.b((byte) 90));
+          var5 = (rea) (param0.beginForward((byte) 90));
           while (var5 != null) {
             fieldTemp$0 = var5.field_n + var5.field_h;
             var5.field_n = var5.field_n + var5.field_h;
@@ -152,7 +152,7 @@ final class dha {
               var5.field_l = var5.field_l + var5.field_o;
               DiveBomberAnimation.a(50, param2, -2147483648);
             }
-            var5 = (rea) (param0.c(0));
+            var5 = (rea) (param0.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

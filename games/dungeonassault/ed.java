@@ -123,7 +123,7 @@ final class ed extends np {
         }
         int var2 = 2147483647;
         int var3 = 0;
-        rj var4 = (rj) (this.field_J.e(-24172));
+        rj var4 = (rj) (this.field_J.beginBackward(-24172));
         while (var4 != null) {
           var5 = -this.field_i + var4.field_i;
           var6 = -this.field_i + var4.field_x + var4.field_i;
@@ -133,7 +133,7 @@ final class ed extends np {
           if (var3 < var6) {
             var3 = var6;
           }
-          var4 = (rj) (this.field_J.a(4));
+          var4 = (rj) (this.field_J.nextBackward(4));
         }
         if (!param0) {
           ed.c(true);
@@ -159,20 +159,20 @@ final class ed extends np {
             this.field_T.field_w = true;
             var4 = -(this.field_T.field_z * var3 / this.field_T.field_C) + this.field_O;
             if (this.field_J != null) {
-              var5 = (rj) (this.field_J.e(-24172));
+              var5 = (rj) (this.field_J.beginBackward(-24172));
               while (var5 != null) {
                 var5.e(var4, 0, 101);
-                var5 = (rj) (this.field_J.a(4));
+                var5 = (rj) (this.field_J.nextBackward(4));
               }
             }
             this.field_O = this.field_O - var4;
           } else {
             this.field_T.field_w = false;
             if (null != this.field_J) {
-              var7 = (rj) (this.field_J.e(-24172));
+              var7 = (rj) (this.field_J.beginBackward(-24172));
               while (var7 != null) {
                 var7.e(this.field_O, 0, 77);
-                var7 = (rj) (this.field_J.a(4));
+                var7 = (rj) (this.field_J.nextBackward(4));
               }
             }
             this.field_O = 0;
@@ -348,7 +348,7 @@ final class ed extends np {
           var22 = null;
           var12 = DungeonAssault.field_K;
           try {
-            var13 = (oe) (fe.field_k.e(-24172));
+            var13 = (oe) (fe.field_k.beginBackward(-24172));
             var18 = var13;
             if (var18 == null) {
               return;

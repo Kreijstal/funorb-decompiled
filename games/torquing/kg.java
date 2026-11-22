@@ -32,7 +32,7 @@ final class kg {
           }
           if (wh.field_x != 0 &&
             im.field_E < 0) {
-            var4_ref_ai = (ai) (qe.field_c.b(param1 - 21));
+            var4_ref_ai = (ai) (qe.field_c.beginBackward(param1 - 21));
             if (var4_ref_ai != null &&
               var4_ref_ai.field_n < var2_long) {
               var4_ref_ai.unlink(0);
@@ -94,7 +94,7 @@ final class kg {
             for (var6 = 0; oo.field_a > var6; var6++) {
               var5.field_k[var6] = kj.field_d.payload[var6];
             }
-            qe.field_c.a((byte) 54, var5);
+            qe.field_c.addFirst((byte) 54, var5);
             im.field_E = -1;
             stackIn_20_0 = im.field_E;
           }

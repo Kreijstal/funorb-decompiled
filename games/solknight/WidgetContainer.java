@@ -49,7 +49,7 @@ class WidgetContainer extends UiWidget implements oh {
             Hashtable var4 = (Hashtable) null;
             this.a(24, 112, (StringBuilder) null, (Hashtable) null);
           }
-          this.field_B.a(param0, -7044);
+          this.field_B.addFirst(param0, -7044);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ki.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -241,7 +241,7 @@ class WidgetContainer extends UiWidget implements oh {
         RuntimeException decompiledCaughtException = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          if (this.field_B.c(-1)) {
+          if (this.field_B.isEmpty(-1)) {
             return false;
           }
           if (param0 <= 89) {
@@ -626,7 +626,7 @@ class WidgetContainer extends UiWidget implements oh {
         RuntimeException decompiledCaughtException = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          if (this.field_B.c(-1)) {
+          if (this.field_B.isEmpty(-1)) {
             return false;
           }
           var3 = new ck(this.field_B);

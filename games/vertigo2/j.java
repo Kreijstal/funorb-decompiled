@@ -52,7 +52,7 @@ final class j extends IntrusiveNode {
           var2_long = gk.a(109);
           if (ir.field_d != 0 &&
             m.field_A < 0) {
-            var4_ref_hl = (hl) (s.field_t.a((byte) 100));
+            var4_ref_hl = (hl) (s.field_t.beginBackward((byte) 100));
             if (var4_ref_hl != null &&
               var2_long > var4_ref_hl.field_p) {
               var4_ref_hl.unlink(2);

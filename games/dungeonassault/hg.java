@@ -403,14 +403,14 @@ final class hg extends PcmStream {
         boolean stackIn_4_0 = false;
         var4 = DungeonAssault.field_K;
         this.field_o.a(param0);
-        var3 = (lp) (this.field_q.e(-24172));
+        var3 = (lp) (this.field_q.beginBackward(-24172));
         scanLoop1: while (true) {
           if (var3 == null) {
             return;
           }
           stackIn_4_0 = this.field_m.a(var3, -16257);
           if (stackIn_4_0) {
-            var3 = (lp) (this.field_q.a(4));
+            var3 = (lp) (this.field_q.nextBackward(4));
             continue scanLoop1;
           }
           var2 = param0;
@@ -418,14 +418,14 @@ final class hg extends PcmStream {
             if (var3.field_H >= var2) {
               this.a(-84, var3, var2);
               var3.field_H = var3.field_H - var2;
-              var3 = (lp) (this.field_q.a(4));
+              var3 = (lp) (this.field_q.nextBackward(4));
               continue scanLoop1;
             }
             this.a(-72, var3, var3.field_H);
             var2 = var2 - var3.field_H;
             stackIn_4_0 = this.field_m.a(-127, 0, var2, var3, (int[]) null);
           } while (!stackIn_4_0);
-          var3 = (lp) (this.field_q.a(4));
+          var3 = (lp) (this.field_q.nextBackward(4));
         }
     }
 
@@ -433,7 +433,7 @@ final class hg extends PcmStream {
         lp var1_ref = null;
         int var2 = DungeonAssault.field_K;
         do {
-          var1_ref = (lp) (this.field_q.a(4));
+          var1_ref = (lp) (this.field_q.nextBackward(4));
           if (var1_ref == null) {
             return null;
           }
@@ -457,7 +457,7 @@ final class hg extends PcmStream {
     }
 
     final PcmStream d() {
-        lp var1 = (lp) (this.field_q.e(-24172));
+        lp var1 = (lp) (this.field_q.beginBackward(-24172));
         if (var1 == null) {
           return null;
         }
@@ -481,14 +481,14 @@ final class hg extends PcmStream {
         var7 = DungeonAssault.field_K;
         try {
           this.field_o.b(param0, param1, param2);
-          var6 = (lp) (this.field_q.e(-24172));
+          var6 = (lp) (this.field_q.beginBackward(-24172));
           scanLoop1: while (true) {
             if (var6 == null) {
               return;
             }
             stackIn_4_0 = this.field_m.a(var6, -16257);
             if (stackIn_4_0) {
-              var6 = (lp) (this.field_q.a(4));
+              var6 = (lp) (this.field_q.nextBackward(4));
               continue scanLoop1;
             }
             var5 = param2;
@@ -497,7 +497,7 @@ final class hg extends PcmStream {
               if (var5 <= var6.field_H) {
                 this.a(var6, param0, var4_int + var5, var4_int, var5, true);
                 var6.field_H = var6.field_H - var5;
-                var6 = (lp) (this.field_q.a(4));
+                var6 = (lp) (this.field_q.nextBackward(4));
                 continue scanLoop1;
               }
               this.a(var6, param0, var5 + var4_int, var4_int, var6.field_H, true);
@@ -505,7 +505,7 @@ final class hg extends PcmStream {
               var4_int = var4_int + var6.field_H;
               stackIn_4_0 = this.field_m.a(118, var4_int, var5, var6, param0);
             } while (!stackIn_4_0);
-            var6 = (lp) (this.field_q.a(4));
+            var6 = (lp) (this.field_q.nextBackward(4));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

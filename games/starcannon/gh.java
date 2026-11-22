@@ -23,18 +23,18 @@ final class gh extends dk {
         RuntimeException var2_ref = null;
         var3 = StarCannon.field_A;
         try {
-          var4 = (hb) (DelegatingCanvas.field_f.c(-3905));
+          var4 = (hb) (DelegatingCanvas.field_f.beginForward(-3905));
           while (var4 != null) {
             hb.a(107, param1, var4);
-            var4 = (hb) (DelegatingCanvas.field_f.a(-16913));
+            var4 = (hb) (DelegatingCanvas.field_f.nextForward(-16913));
           }
-          var2 = sd.field_d.c(-3905);
+          var2 = sd.field_d.beginForward(-3905);
           if (param0 >= -27) {
             field_A = (String) null;
           }
           while (var2 != null) {
             u.a(param1, 1);
-            var2 = sd.field_d.a(-16913);
+            var2 = sd.field_d.nextForward(-16913);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

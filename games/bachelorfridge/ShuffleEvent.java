@@ -61,7 +61,7 @@ final class ShuffleEvent extends SpecialEvent {
             if (0 > var2_int) {
               return;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,10 +90,10 @@ final class ShuffleEvent extends SpecialEvent {
         try {
           var3_int = 79 % ((param1 - 12) / 35);
           this.creature.a(73, param0);
-          var4 = (PlaceCreatureEffect) (this.effects.b((byte) 90));
+          var4 = (PlaceCreatureEffect) (this.effects.beginForward((byte) 90));
           while (var4 != null) {
             var4.apply((BattleCreature) null, param0, 12);
-            var4 = (PlaceCreatureEffect) (this.effects.c(0));
+            var4 = (PlaceCreatureEffect) (this.effects.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -15,7 +15,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque deque;
 
     public final boolean hasNext() {
-        return this.nextNode != this.deque.field_a;
+        return this.nextNode != this.deque.sentinel;
     }
 
     final static byte a(char param0, int param1) {
@@ -376,7 +376,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.nextNode;
-        if (var1 != this.deque.field_a) {
+        if (var1 != this.deque.sentinel) {
           this.nextNode = ((DualLinkNode) (var1)).field_p;
         } else {
           var1 = null;
@@ -399,7 +399,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.deque = param0;
           this.lastReturned = null;
-          this.nextNode = this.deque.field_a.field_p;
+          this.nextNode = this.deque.sentinel.field_p;
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

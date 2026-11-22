@@ -39,14 +39,14 @@ final class rea extends IntrusiveNode {
         var9 = BachelorFridge.field_y;
         try {
           var6_int = -35 % ((param3 + 3) / 43);
-          var7 = (rea) (param0.b((byte) 90));
+          var7 = (rea) (param0.beginForward((byte) 90));
           while (var7 != null) {
             var8 = (630 & (int)var7.field_m * 8357 + 326565 * (int)var7.field_j) + (var7.field_n >> 1);
             if (var8 > 256) {
               var8 = 256;
             }
             qna.field_l[var7.field_i].a((int)var7.field_m + param2 - 128, param5 + ((int)var7.field_l - 64 - 16), 4 * var7.field_n);
-            var7 = (rea) (param0.c(0));
+            var7 = (rea) (param0.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

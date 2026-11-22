@@ -88,16 +88,16 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException var2_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          var5 = (ak) (oh.field_j.e(-24172));
+          var5 = (ak) (oh.field_j.beginBackward(-24172));
           while (var5 != null) {
             g.a(param1, var5, (byte) 50);
-            var5 = (ak) (oh.field_j.a(4));
+            var5 = (ak) (oh.field_j.nextBackward(4));
           }
           var3 = 97 % ((param0 - 67) / 59);
-          var2 = sf.field_c.e(-24172);
+          var2 = sf.field_c.beginBackward(-24172);
           while (var2 != null) {
             bd.a(param1, (byte) 113);
-            var2 = sf.field_c.a(4);
+            var2 = sf.field_c.nextBackward(4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

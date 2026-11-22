@@ -37,7 +37,7 @@ final class OneAnimation extends EventAnimation {
         this.field_v = false;
         try {
           this.field_D = param1;
-          var4 = (MoveCreatureEffect) (this.field_D.effects.b((byte) 90));
+          var4 = (MoveCreatureEffect) (this.field_D.effects.beginForward((byte) 90));
           this.field_F = var4.target.a(-27449, this.screen);
           this.field_y = -this.field_F.field_s.tileX + var4.field_i;
           this.field_w = var4.field_l - this.field_F.field_s.tileY;
@@ -172,7 +172,7 @@ final class OneAnimation extends EventAnimation {
         if (param0 != 6) {
           return;
         }
-        var3 = (EventEffect) (this.field_D.effects.b((byte) 90));
+        var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
         while (var3 != null) {
           var4 = var3.target.a(param0 ^ -27455, this.screen);
           var4.b(-1, 6);
@@ -185,7 +185,7 @@ final class OneAnimation extends EventAnimation {
               var3.apply(var8, this.screen.field_h, param0 ^ 10);
             }
           }
-          var3 = (EventEffect) (this.field_D.effects.c(0));
+          var3 = (EventEffect) (this.field_D.effects.nextForward(0));
         }
     }
 
@@ -198,7 +198,7 @@ final class OneAnimation extends EventAnimation {
           return;
         }
         if (param0 >= 37) {
-          var3 = (EventEffect) (this.field_D.effects.b((byte) 90));
+          var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
           while (var3 != null) {
             var4 = var3.target.a(-27449, this.screen);
             var4.b(-1, 6);
@@ -206,7 +206,7 @@ final class OneAnimation extends EventAnimation {
               var3.apply(var2, this.screen.field_h, 12);
               this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));
             }
-            var3 = (EventEffect) (this.field_D.effects.c(0));
+            var3 = (EventEffect) (this.field_D.effects.nextForward(0));
           }
           return;
         }

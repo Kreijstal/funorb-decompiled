@@ -53,10 +53,10 @@ final class ab {
             }
           }
           gf.b(ib.field_a);
-          var3 = (rj) (pp.field_K.e(param0 ^ -24172));
+          var3 = (rj) (pp.field_K.beginBackward(param0 ^ -24172));
           while (var3 != null) {
             var3.d(0);
-            var3 = (rj) (pp.field_K.a(4));
+            var3 = (rj) (pp.field_K.nextBackward(4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

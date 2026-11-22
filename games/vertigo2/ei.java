@@ -68,10 +68,10 @@ final class ei extends DualLinkNode {
           var8.position = 1;
           var9 = var8.readUnsignedShort((byte) -11);
           var10 = null;
-          var11 = (mb) (var3.a((byte) 100));
+          var11 = (mb) (var3.beginBackward((byte) 100));
           while (var11 != null) {
             if (var11.field_x != var9) {
-              var11 = (mb) (var3.b(68));
+              var11 = (mb) (var3.nextBackward(68));
               continue;
             }
             var10 = var11;

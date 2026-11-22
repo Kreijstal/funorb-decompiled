@@ -171,12 +171,12 @@ final class rh {
           var2_int = sja.field_fb.position;
           sja.field_fb.position = sja.field_fb.position + 1;
           var3 = 0;
-          var4 = (kha) (param1.b((byte) 90));
+          var4 = (kha) (param1.beginForward((byte) 90));
           while (var4 != null) {
             sja.field_fb.writeByte(var4.field_h, 0);
             var3++;
             sja.field_fb.writeByte(var4.field_g, 0);
-            var4 = (kha) (param1.c(0));
+            var4 = (kha) (param1.nextForward(0));
           }
           var5 = sja.field_fb.position;
           sja.field_fb.position = var2_int;

@@ -20,13 +20,13 @@ class gk extends eg {
         ki var2Lifetime1;
         if (param1 == 1) {
           var2 = new ki();
-          on.field_v.a((byte) 103, var2);
+          on.field_v.addLast((byte) 103, var2);
           tc.a(param1 + 0, param0);
           return var2;
         }
         gk.b(-117, -125);
         var2Lifetime1 = new ki();
-        on.field_v.a((byte) 103, var2Lifetime1);
+        on.field_v.addLast((byte) 103, var2Lifetime1);
         tc.a(param1 + 0, param0);
         return var2Lifetime1;
     }
@@ -54,18 +54,18 @@ class gk extends eg {
         int var7;
         lc var5Lifetime1;
         var7 = MinerDisturbance.field_ab;
-        var5 = (lc) (sj.field_g.b(107));
+        var5 = (lc) (sj.field_g.beginForward(107));
         while (var5 != null) {
           if (~param2 == ~var5.field_q) {
             return var5;
           }
-          var5 = (lc) (sj.field_g.b((byte) 56));
+          var5 = (lc) (sj.field_g.nextForward((byte) 56));
         }
         var5Lifetime1 = new lc();
         var5Lifetime1.field_q = param2;
         var5Lifetime1.field_r = param4;
         var5Lifetime1.field_v = param1;
-        sj.field_g.a((byte) -94, var5Lifetime1);
+        sj.field_g.addLast((byte) -94, var5Lifetime1);
         var6 = 51 / ((50 - param3) / 50);
         lc.a((byte) 126, param0, var5Lifetime1);
         return var5Lifetime1;

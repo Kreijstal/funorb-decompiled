@@ -151,7 +151,7 @@ final class LetterTile extends IntrusiveNode {
     }
 
     final void d(int param0) {
-        ab.field_c.a((IntrusiveNode) (this), -127);
+        ab.field_c.addLast((IntrusiveNode) (this), -127);
         if (param0 != 1) {
           this.field_n = (WordLanguage) null;
         }

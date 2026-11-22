@@ -20,7 +20,7 @@ final class PetAttackAnimation extends EventAnimation {
         IntrusiveDeque var9 = null;
         var8 = BachelorFridge.field_y;
         try {
-          var6 = (rea) (param3.b((byte) 90));
+          var6 = (rea) (param3.beginForward((byte) 90));
           if (param5 > -104) {
             var9 = (IntrusiveDeque) null;
             PetAttackAnimation.a(6, 16, -46, (IntrusiveDeque) null, -23, (byte) 95);
@@ -32,7 +32,7 @@ final class PetAttackAnimation extends EventAnimation {
             }
             param1 = var6.field_i;
             SoftwareRasterizer.fillCircleAlpha((int)var6.field_m + param4, -2 + (param0 + (int)var6.field_l), (128 - var6.field_n) / 16, param1, 256 - var7 >> 2);
-            var6 = (rea) (param3.c(0));
+            var6 = (rea) (param3.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

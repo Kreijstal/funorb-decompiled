@@ -47,9 +47,9 @@ abstract class RasterBuffer {
             stackIn_10_0 = Vertigo2.a(new String[]{param2}, tq.field_a, 26);
             return stackIn_10_0;
           }
-          tm.field_a.b(var8, (byte) -50);
+          tm.field_a.beginBackwardFrom(var8, (byte) -50);
           while (true) {
-            var4_ref_tp = (tp) (tm.field_a.b(125));
+            var4_ref_tp = (tp) (tm.field_a.nextBackward(125));
             if (var4_ref_tp != null) {
               var4_ref_tp.field_Pb = var4_ref_tp.field_Pb - 1;
               continue;

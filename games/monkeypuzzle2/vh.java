@@ -96,7 +96,7 @@ final class vh extends ButtonWidget {
           var2_long = pf.a(0);
           if (ff.field_g != 0 &&
             sb.field_f < 0) {
-            var4_ref_nh = (nh) (cb.field_a.a((byte) -117));
+            var4_ref_nh = (nh) (cb.field_a.beginBackward((byte) -117));
             if (var4_ref_nh != null &&
               var2_long > var4_ref_nh.field_e) {
               var4_ref_nh.unlink(-19822);
@@ -147,7 +147,7 @@ final class vh extends ButtonWidget {
             for (var6 = 0; rc.field_f > var6; var6++) {
               var5.field_h[var6] = MonkeyPuzzle2.field_D.payload[var6];
             }
-            cb.field_a.a(-8212, var5);
+            cb.field_a.addFirst(-8212, var5);
             sb.field_f = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -34,13 +34,13 @@ final class ag {
           this.a(param1, (byte) 94);
           this.field_d = this.field_d - param0;
           while (this.field_d < 0) {
-            var6 = (cb) (this.field_c.d(-27593));
+            var6 = (cb) (this.field_c.removeFirst(-27593));
             this.a(var6, 28);
           }
           int var6_int = -125 % ((48 - param3) / 46);
           var7 = new pj(param2, param0);
           this.field_b.put(param1, var7, (byte) 43);
-          this.field_c.a(-99, var7);
+          this.field_c.addLast(-99, var7);
           ((cb) ((Object) var7)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -115,12 +115,12 @@ final class ag {
         Object var6 = var8.g(5);
         if (var6 != null) {
           if (!var8.c((byte) -52)) {
-            this.field_c.a(-123, var8);
+            this.field_c.addLast(-123, var8);
             var8.field_j = 0L;
           } else {
             var7 = new pj(var6, var8.field_r);
             this.field_b.put(var8.field_c, var7, (byte) 43);
-            this.field_c.a(-36, var7);
+            this.field_c.addLast(-36, var7);
             ((cb) ((Object) var7)).field_j = 0L;
             var8.unlink(-1);
             var8.unlinkSecondary(90);

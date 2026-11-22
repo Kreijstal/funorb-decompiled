@@ -429,15 +429,15 @@ public final class Torquing extends tg {
           if (!param0) {
             return;
           }
-          var4 = (qp) (jh.field_y.b(0));
+          var4 = (qp) (jh.field_y.beginBackward(0));
           while (var4 != null) {
             wc.a(var4, (byte) 99, 4);
-            var4 = (qp) (jh.field_y.f(-24059));
+            var4 = (qp) (jh.field_y.nextBackward(-24059));
           }
-          var5 = (qk) (bo.field_l.b(0));
+          var5 = (qk) (bo.field_l.beginBackward(0));
           while (var5 != null) {
             le.a((byte) 126, 5, var5);
-            var5 = (qk) (bo.field_l.f(-24059));
+            var5 = (qk) (bo.field_l.nextBackward(-24059));
           }
           kg.field_c = ip.a(4, -127);
           kb.field_f = tl.a(5, 0, 1, 0);
@@ -1327,7 +1327,7 @@ public final class Torquing extends tg {
                 }
               }
               if (oo.field_b >> 1 == GzipDecompressor.field_b) {
-                ie.field_b.field_e.a(param0 + 108);
+                ie.field_b.field_e.clear(param0 + 108);
                 bn.field_h = -1;
                 fn.field_c = GzipDecompressor.field_c;
                 vo.field_f[fn.field_c].field_i = 0;
@@ -1547,11 +1547,11 @@ public final class Torquing extends tg {
                   if (11 == GzipDecompressor.field_c &&
                     je.a((byte) 76)) {
                     ie.field_b = null;
-                    jh.field_y.a(0);
+                    jh.field_y.clear(0);
                     nh.field_k = 0;
                     fa.field_b = 0;
                     SocketConnector.field_f = 0;
-                    bo.field_l.a(param0 ^ -108);
+                    bo.field_l.clear(param0 ^ -108);
                   }
                   bn.field_h = -1;
                   fn.field_c = GzipDecompressor.field_c;
@@ -1702,7 +1702,7 @@ public final class Torquing extends tg {
               this.r(3);
             }
             if (ie.field_b != null) {
-              var3_ref_tj = (tj) (ie.field_b.field_B.b(0));
+              var3_ref_tj = (tj) (ie.field_b.field_B.beginBackward(0));
               if (var3_ref_tj != null) {
                 var5 = ie.field_b.field_n;
                 if (var5 >= 80) {
@@ -1989,12 +1989,12 @@ public final class Torquing extends tg {
             }
           }
           if (null != ie.field_b &&
-            ie.field_b.field_B.b(0) != null) {
+            ie.field_b.field_B.beginBackward(0) != null) {
             fieldTemp$4 = ie.field_b.field_n + 1;
             ie.field_b.field_n = ie.field_b.field_n + 1;
             if (fieldTemp$4 == 335) {
               ie.field_b.field_n = 0;
-              ie.field_b.field_B.a((byte) -86);
+              ie.field_b.field_B.removeLast((byte) -86);
             }
           }
           while (kg.a(nk.field_s, (byte) 21)) {

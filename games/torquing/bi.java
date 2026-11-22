@@ -156,7 +156,7 @@ final class bi {
           if (!je.a((byte) 77)) {
             le.a((byte) 83, 5, var10);
           } else {
-            bo.field_l.a((byte) 54, var10);
+            bo.field_l.addFirst((byte) 54, var10);
           }
           if (1 + this.field_L > nh.field_k) {
             nh.field_k = this.field_L + 1;
@@ -312,7 +312,7 @@ final class bi {
         int var3Lifetime1;
         var5 = Torquing.field_u;
         try {
-          this.field_e.a(0);
+          this.field_e.clear(0);
           if (null != this.field_d.field_k) {
             var6 = this.field_d.field_k;
             var2 = var6;
@@ -823,11 +823,11 @@ final class bi {
           }
           SocketConnector.field_f = SocketConnector.field_f | var4_int;
           fa.field_b = fa.field_b | var4_int;
-          this.field_B.a((byte) 54, new tj(param0));
+          this.field_B.addFirst((byte) 54, new tj(param0));
           if (!this.field_t) {
             var5 = new qp(param0, param2, this.field_N, this.field_S, this.field_F, this.field_G);
             if (je.a((byte) 61)) {
-              jh.field_y.a((byte) 54, var5);
+              jh.field_y.addFirst((byte) 54, var5);
             } else {
               wc.a(var5, (byte) 99, 4);
             }
@@ -988,10 +988,10 @@ final class bi {
             sg.a(MouseWheelInput.field_c[var3Lifetime1], 80, 1365, -1, -12, 12);
           }
           this.field_C.a(ProxySocketConnector.field_i);
-          var11 = (sb) (this.field_e.b(0));
+          var11 = (sb) (this.field_e.beginBackward(0));
           while (var11 != null) {
             var11.c(-103);
-            var11 = (sb) (this.field_e.f(-24059));
+            var11 = (sb) (this.field_e.nextBackward(-24059));
           }
           if (!ti.field_k) {
             bd.field_w.e(-bd.field_w.field_s + 640, 0, 162);
@@ -1304,10 +1304,10 @@ final class bi {
             this.field_o = this.field_o ^ var11_int << 3;
           }
           this.a(false, var7_int);
-          var39 = (sb) (this.field_e.b(0));
+          var39 = (sb) (this.field_e.beginBackward(0));
           while (var39 != null) {
             var39.a((byte) -114);
-            var39 = (sb) (this.field_e.f(-24059));
+            var39 = (sb) (this.field_e.nextBackward(-24059));
           }
           if (var2_int != 0) {
             this.field_A.a(true, 1, 2, false);

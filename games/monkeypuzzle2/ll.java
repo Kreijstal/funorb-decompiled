@@ -3090,7 +3090,7 @@ final class ll {
           if (param0 != 24733) {
             return;
           }
-          var1 = (ki) (ok.field_a.a((byte) -117));
+          var1 = (ki) (ok.field_a.beginBackward((byte) -117));
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (null != var1) {
@@ -3102,7 +3102,7 @@ final class ll {
                     var1.field_w == 3) {
                     var1.a((byte) -13);
                   }
-                  var1 = (ki) (ok.field_a.d((byte) 63));
+                  var1 = (ki) (ok.field_a.nextBackward((byte) 63));
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -3112,14 +3112,14 @@ final class ll {
                   var1.field_w != 3) {
                   var1.a((byte) -100);
                 }
-                var1 = (ki) (ok.field_a.d((byte) 63));
+                var1 = (ki) (ok.field_a.nextBackward((byte) 63));
                 if (var2 == 0) {
                   continue;
                 }
               }
             }
             if (decompiledFrameCompleted0) {
-              var1 = (ki) (ok.field_a.a((byte) -117));
+              var1 = (ki) (ok.field_a.beginBackward((byte) -117));
               while (var1 != null) {
                 stackIn_29_0 = var1;
                 if (var2 != 0) {
@@ -3131,16 +3131,16 @@ final class ll {
                   var1.field_w == 3) {
                   var1.a((byte) -13);
                 }
-                var1 = (ki) (ok.field_a.d((byte) 63));
+                var1 = (ki) (ok.field_a.nextBackward((byte) 63));
               }
             }
-            stackIn_29_0 = (ki) (hd.field_u.c(-1));
+            stackIn_29_0 = (ki) (hd.field_u.beginForward(-1));
             break;
           }
           var1Lifetime1 = stackIn_29_0;
           while (var1Lifetime1 != null) {
             var1Lifetime1.a((byte) -21);
-            var1Lifetime1 = (ki) (hd.field_u.a(true));
+            var1Lifetime1 = (ki) (hd.field_u.nextForward(true));
             if (var2 != 0) {
               return;
             }

@@ -115,17 +115,17 @@ final class di extends pu {
           if (!param0) {
             return;
           }
-          var2 = (cq) (SocketConnector.field_d.b((byte) 90));
+          var2 = (cq) (SocketConnector.field_d.beginForward((byte) 90));
           while (var2 != null) {
             if (!var2.field_h.isLinked((byte) -106)) {
               var2.unlink(false);
             } else {
               var2.field_i.f(var2.field_f * b.field_u + 128 >> 8);
             }
-            var2 = (cq) (SocketConnector.field_d.c(0));
+            var2 = (cq) (SocketConnector.field_d.nextForward(0));
           }
           if (jha.field_i != null) {
-            var2Lifetime1 = (cq) (jha.field_i.b((byte) 90));
+            var2Lifetime1 = (cq) (jha.field_i.beginForward((byte) 90));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_h.isLinked((byte) -106);
               if (stackIn_14_0) {
@@ -133,7 +133,7 @@ final class di extends pu {
               } else {
                 var2Lifetime1.unlink(false);
               }
-              var2Lifetime1 = (cq) (jha.field_i.c(0));
+              var2Lifetime1 = (cq) (jha.field_i.nextForward(0));
             }
             return;
           }

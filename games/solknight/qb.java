@@ -35,7 +35,7 @@ final class qb extends vg implements wj {
             field_ab = (int[]) null;
           }
           var2 = new ud(param1, param1);
-          uc.field_j.a(var2, -7044);
+          uc.field_j.addFirst(var2, -7044);
           ti.field_f.a(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;

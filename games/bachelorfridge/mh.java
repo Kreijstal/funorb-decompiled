@@ -364,7 +364,7 @@ final class mh extends EventEffect {
                   var16 = 0;
                 }
                 var17 = SnowEvent.field_q.field_vb.children;
-                var18_ref = (ema) (var17.b((byte) 90));
+                var18_ref = (ema) (var17.beginForward((byte) 90));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
@@ -406,7 +406,7 @@ final class mh extends EventEffect {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (ema) (var17.c(0));
+                      var18_ref = (ema) (var17.nextForward(0));
                       continue;
                     }
                   }

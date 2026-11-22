@@ -50,10 +50,10 @@ final class jn extends IntrusiveNode {
           if (param0 != -105) {
             return;
           }
-          var3 = (mj) (nh.field_a.b(100));
+          var3 = (mj) (nh.field_a.beginForward(100));
           while (var3 != null) {
             if (var3.field_r != var2) {
-              var3 = (mj) (nh.field_a.b((byte) 56));
+              var3 = (mj) (nh.field_a.nextForward((byte) 56));
               continue;
             }
             break;

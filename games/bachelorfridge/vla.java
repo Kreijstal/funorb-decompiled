@@ -33,7 +33,7 @@ final class vla extends mv {
         CreatureActor var3 = null;
         int var4 = BachelorFridge.field_y;
         if (param0 != ~this.field_k.field_p) {
-          var2 = (EventEffect) (this.field_k.field_o.b((byte) 90));
+          var2 = (EventEffect) (this.field_k.field_o.beginForward((byte) 90));
           while (var2 != null) {
             if (var2.target != null) {
               var3 = var2.target.a(-27449, this.field_l);
@@ -41,7 +41,7 @@ final class vla extends mv {
                 var3.b(false);
               }
             }
-            var2 = (EventEffect) (this.field_k.field_o.c(0));
+            var2 = (EventEffect) (this.field_k.field_o.nextForward(0));
           }
           return;
         }

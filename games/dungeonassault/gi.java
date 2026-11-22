@@ -26,7 +26,7 @@ final class gi extends ii implements vg {
         int var7 = 0;
         var7 = DungeonAssault.field_K;
         try {
-          this.field_B.b(-4);
+          this.field_B.clear(-4);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

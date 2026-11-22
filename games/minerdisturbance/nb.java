@@ -24,16 +24,16 @@ final class nb {
         RuntimeException var2 = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          var5 = (wb) (hj.field_k.b(102));
+          var5 = (wb) (hj.field_k.beginForward(102));
           while (var5 != null) {
             ab.a(-20680, param1, var5);
-            var5 = (wb) (hj.field_k.b((byte) 56));
+            var5 = (wb) (hj.field_k.nextForward((byte) 56));
           }
           var3 = -120 % ((14 - param0) / 44);
-          var6 = (lc) (sj.field_g.b(77));
+          var6 = (lc) (sj.field_g.beginForward(77));
           while (var6 != null) {
             lc.a((byte) 126, param1, var6);
-            var6 = (lc) (sj.field_g.b((byte) 56));
+            var6 = (lc) (sj.field_g.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

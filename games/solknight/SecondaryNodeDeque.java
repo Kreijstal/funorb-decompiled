@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
-    DualLinkNode field_f;
+    DualLinkNode sentinel;
     static kb field_e;
     static String field_d;
     static java.applet.Applet field_c;
@@ -80,18 +80,18 @@ final class SecondaryNodeDeque implements Iterable {
         RuntimeException var2 = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (lc) (hc.field_a.a((byte) 51));
+          var4 = (lc) (hc.field_a.beginBackward((byte) 51));
           while (var4 != null) {
             ud.a((byte) -109, var4, param0);
-            var4 = (lc) (hc.field_a.b(param1 - 18934));
+            var4 = (lc) (hc.field_a.nextBackward(param1 - 18934));
           }
           if (param1 != 18897) {
             field_c = (java.applet.Applet) null;
           }
-          var5 = (fj) (ti.field_b.a((byte) 51));
+          var5 = (fj) (ti.field_b.beginBackward((byte) 51));
           while (var5 != null) {
             h.a(param0, var5, (byte) 78);
-            var5 = (fj) (ti.field_b.b(param1 ^ -18853));
+            var5 = (fj) (ti.field_b.nextBackward(param1 ^ -18853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,14 +133,14 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addFirst(int param0, DualLinkNode param1) {
         try {
           if (null != param1.secondaryNext) {
             param1.unlinkSecondary(97);
           }
-          param1.secondaryPrevious = this.field_f;
+          param1.secondaryPrevious = this.sentinel;
           int var3_int = -27 / ((-58 - param0) / 51);
-          param1.secondaryNext = this.field_f.secondaryNext;
+          param1.secondaryNext = this.sentinel.secondaryNext;
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryPrevious.secondaryNext = param1;
         } catch (RuntimeException runtimeException) {
@@ -148,9 +148,9 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final DualLinkNode a(byte param0) {
-        DualLinkNode var2 = this.field_f.secondaryPrevious;
-        if (this.field_f == var2) {
+    final DualLinkNode removeLast(byte param0) {
+        DualLinkNode var2 = this.sentinel.secondaryPrevious;
+        if (this.sentinel == var2) {
           return null;
         }
         if (param0 <= -105) {
@@ -158,7 +158,7 @@ final class SecondaryNodeDeque implements Iterable {
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a(-40, (DualLinkNode) null);
+        this.addFirst(-40, (DualLinkNode) null);
         var2.unlinkSecondary(97);
         return var2;
     }

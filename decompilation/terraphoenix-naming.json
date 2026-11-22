@@ -1892,6 +1892,14 @@
       "renamedSymbol": "F:BattleUnit.tile:LMapTile;"
     },
     {
+      "symbol": "F:tc.field_a:Lvh;",
+      "originalName": "field_a",
+      "to": "sentinel",
+      "evidence": "Sentinel circular-endpoint role. Exact declaration and complete collection constructor/instance bodies reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;"
+    },
+    {
       "symbol": "F:te.field_c:[I",
       "originalName": "field_c",
       "to": "pixels",
@@ -3570,6 +3578,22 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 0fdd965ef963442219ab2802b6ef01f1912fe9ea0409dfce8d2b3a0787274fab.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SecondaryNodeDeque.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:tc.a(Lvh;B)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlink linked secondary node with byte13;append predecessor and node links;evaluate-73/((byte+57)/49) between predecessor-next and final successor-previous writes. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(LDualLinkNode;B)V"
+    },
+    {
+      "symbol": "M:tc.c(I)Lvh;",
+      "originalName": "c",
+      "to": "removeFirst",
+      "evidence": "Int!=0 recursively calls same method with117 before sentinel read;otherwise take secondaryNext and unlink with byte13 unless empty. Preserve recursive failure. Complete collection constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
     },
     {
       "symbol": "M:td.a(I)V",
@@ -34019,9 +34043,9 @@
     },
     {
       "symbol": "F:tc.field_a:Lvh;",
-      "renamedSymbol": "F:SecondaryNodeDeque.field_a:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDeque.sentinel:LDualLinkNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "tc.java",
         "start": 130,
@@ -172366,7 +172390,7 @@
     },
     {
       "symbol": "L:tc.a(Lvh;B)V#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(LDualLinkNode;B)V#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(LDualLinkNode;B)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -172377,7 +172401,7 @@
     },
     {
       "symbol": "L:tc.a(Lvh;B)V#1",
-      "renamedSymbol": "L:SecondaryNodeDeque.a(LDualLinkNode;B)V#1",
+      "renamedSymbol": "L:SecondaryNodeDeque.addLast(LDualLinkNode;B)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -172454,7 +172478,7 @@
     },
     {
       "symbol": "L:tc.c(I)Lvh;#0",
-      "renamedSymbol": "L:SecondaryNodeDeque.c(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -212219,9 +212243,9 @@
     },
     {
       "symbol": "M:tc.a(Lvh;B)V",
-      "renamedSymbol": "M:SecondaryNodeDeque.a(LDualLinkNode;B)V",
+      "renamedSymbol": "M:SecondaryNodeDeque.addLast(LDualLinkNode;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "tc.java",
         "start": 2266,
@@ -212252,9 +212276,9 @@
     },
     {
       "symbol": "M:tc.c(I)Lvh;",
-      "renamedSymbol": "M:SecondaryNodeDeque.c(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "tc.java",
         "start": 633,
@@ -270420,7 +270444,7 @@
     },
     {
       "symbol": "P:tc.a(Lvh;B)V#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;B)V#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(LDualLinkNode;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -270431,7 +270455,7 @@
     },
     {
       "symbol": "P:tc.a(Lvh;B)V#1",
-      "renamedSymbol": "P:SecondaryNodeDeque.a(LDualLinkNode;B)V#1",
+      "renamedSymbol": "P:SecondaryNodeDeque.addLast(LDualLinkNode;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -270508,7 +270532,7 @@
     },
     {
       "symbol": "P:tc.c(I)Lvh;#0",
-      "renamedSymbol": "P:SecondaryNodeDeque.c(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361268,7 +361292,7 @@
       "original": "ne.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "d10305733de50a28f307bc3c7ba454f3f16d0972448ca9e77a04a90dddbc700b",
-      "outputSha256": "f254d5d0d594f52e1822fda3b8b611a5abc7fa72b24f423fe40942c7b5d667b2",
+      "outputSha256": "46aeab491c0b8469746e3b73e70ae8cde0c9aefde519b8bc07ebeb522e89de8d",
       "edits": [
         {
           "start": 71,
@@ -361306,6 +361330,20 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 496,
+          "end": 503,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 606,
+          "end": 613,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 723,
           "end": 725,
           "symbol": "C:vh",
@@ -361339,6 +361377,13 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 1100,
+          "end": 1107,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1108,
@@ -367161,7 +367206,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "a0499a68f4c87d898c9450d099bb9823c876e6b61cd3d52467a695abedec14b0",
-      "outputSha256": "c04f87055fadad91e6eee67fd924c72079cf3293c13eb3b423a1b70303005d90",
+      "outputSha256": "28bc3a923158549dd588dc44347a0e59783c7a1699f1c40a7b377af265b08b08",
       "edits": [
         {
           "start": 66,
@@ -367213,6 +367258,13 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 1216,
+          "end": 1217,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 1253,
           "end": 1260,
           "symbol": "F:vh.field_m:J",
@@ -367232,6 +367284,13 @@
           "symbol": "F:uf.field_g:J",
           "original": "field_g",
           "renamed": "key"
+        },
+        {
+          "start": 1419,
+          "end": 1420,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 1474,
@@ -367255,6 +367314,13 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 1674,
+          "end": 1675,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 1709,
           "end": 1716,
           "symbol": "F:vh.field_m:J",
@@ -367274,6 +367340,13 @@
           "symbol": "F:uf.field_g:J",
           "original": "field_g",
           "renamed": "key"
+        },
+        {
+          "start": 1885,
+          "end": 1886,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 1956,
@@ -367444,11 +367517,25 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 4691,
+          "end": 4692,
+          "symbol": "M:tc.c(I)Lvh;",
+          "original": "c",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 4807,
           "end": 4808,
           "symbol": "M:ce.a(Luf;BJ)V",
           "original": "a",
           "renamed": "put"
+        },
+        {
+          "start": 4863,
+          "end": 4864,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 4924,
@@ -376209,7 +376296,7 @@
       "original": "tc.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "9f0c7bd3c0e0a27b2a0f463ae266ddd4e470432091381af1fe1b9516cc5b32db",
-      "outputSha256": "4eb3dcfc59ace8b1de5b59743b9bcba95f73de71c418f86e3fc72d61703910f3",
+      "outputSha256": "04e1cc3c64f839b4ef09fd56abd40ca7ccb7dfe29b9a712fb024f3ef72869331",
       "edits": [
         {
           "start": 71,
@@ -376224,6 +376311,13 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 130,
+          "end": 137,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 251,
@@ -376254,6 +376348,20 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 633,
+          "end": 634,
+          "symbol": "M:tc.c(I)Lvh;",
+          "original": "c",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 691,
+          "end": 692,
+          "symbol": "M:tc.c(I)Lvh;",
+          "original": "c",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 717,
           "end": 719,
           "symbol": "C:vh",
@@ -376261,11 +376369,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 732,
+          "end": 739,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 740,
           "end": 747,
           "symbol": "F:vh.field_o:Lvh;",
           "original": "field_o",
           "renamed": "secondaryNext"
+        },
+        {
+          "start": 766,
+          "end": 773,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 831,
@@ -376303,6 +376425,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 2266,
+          "end": 2267,
+          "symbol": "M:tc.a(Lvh;B)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
           "start": 2268,
           "end": 2270,
           "symbol": "C:vh",
@@ -376331,6 +376460,13 @@
           "renamed": "secondaryPrevious"
         },
         {
+          "start": 2425,
+          "end": 2432,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2433,
           "end": 2440,
           "symbol": "F:vh.field_i:Lvh;",
@@ -376343,6 +376479,13 @@
           "symbol": "F:vh.field_o:Lvh;",
           "original": "field_o",
           "renamed": "secondaryNext"
+        },
+        {
+          "start": 2474,
+          "end": 2481,
+          "symbol": "F:tc.field_a:Lvh;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 2500,
@@ -386665,10 +386808,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "7b7bcf4f73bb476fe00c216384d0bb133053be3ed3e2b81b6b97d61f81919c6f",
+    "rulesSha256": "4907052568a3b93416c11483d2632823f0cf2ffc2eaf1a12b624839ab8abf408",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "7a0c091a12359b890478860be668a590981c2ca51c74cdc20ba81a0051872bf9",
+    "outputTreeSha256": "acbd6a1d57e537510c5acdebb802b1a779f97e66d2c420bf9b1affce5bab54f6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

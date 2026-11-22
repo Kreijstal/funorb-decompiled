@@ -36,14 +36,14 @@ final class MidiPcmStream extends PcmStream {
 
     private final void d(int param0, int param1) {
         int var4 = BachelorFridge.field_y;
-        MidiNote var3 = (MidiNote) (this.field_k.field_k.b((byte) 90));
+        MidiNote var3 = (MidiNote) (this.field_k.field_k.beginForward((byte) 90));
         while (var3 != null) {
           if ((0 > param1 || param1 == var3.field_n) &&
             !(var3.field_p >= 0)) {
             this.field_H[var3.field_n][var3.field_h] = null;
             var3.field_p = 0;
           }
-          var3 = (MidiNote) (this.field_k.field_k.c(0));
+          var3 = (MidiNote) (this.field_k.field_k.nextForward(0));
         }
         if (param0 != 1) {
           this.a(-84, -53);
@@ -67,7 +67,7 @@ final class MidiPcmStream extends PcmStream {
         var9 = BachelorFridge.field_y;
         this.a(param3, 64, param2, (byte) -51);
         if ((this.field_u[param2] & 2) != 0) {
-          var5 = (MidiNote) (this.field_k.field_k.a(6));
+          var5 = (MidiNote) (this.field_k.field_k.beginBackward(6));
           while (var5 != null) {
             if (param2 == var5.field_n &&
               var5.field_p < 0) {
@@ -80,7 +80,7 @@ final class MidiPcmStream extends PcmStream {
               var5.field_y = 4096;
               return;
             }
-            var5 = (MidiNote) (this.field_k.field_k.c((byte) 116));
+            var5 = (MidiNote) (this.field_k.field_k.nextBackward((byte) 116));
           }
         }
         var11 = (MusicPatch) (this.field_m.get(true, (long)this.field_n[param2]));
@@ -138,7 +138,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.field_B[param2][var7.field_k] = var7;
         }
-        this.field_k.field_k.a(var7, true);
+        this.field_k.field_k.addLast(var7, true);
         this.field_H[param2][param3] = var7;
         return;
     }
@@ -182,7 +182,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 <= 17) {
           return;
         }
-        MidiNote var3 = (MidiNote) (this.field_k.field_k.b((byte) 90));
+        MidiNote var3 = (MidiNote) (this.field_k.field_k.beginForward((byte) 90));
         while (var3 != null) {
           if (0 > param1 ||
             param1 == var3.field_n) {
@@ -198,7 +198,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var3.unlink(false);
           }
-          var3 = (MidiNote) (this.field_k.field_k.c(0));
+          var3 = (MidiNote) (this.field_k.field_k.nextForward(0));
         }
     }
 
@@ -460,14 +460,14 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if (0 != (2 & this.field_u[param1])) {
-          var3 = (MidiNote) (this.field_k.field_k.b((byte) 90));
+          var3 = (MidiNote) (this.field_k.field_k.beginForward((byte) 90));
           while (var3 != null) {
             if (var3.field_n == param1 &&
               this.field_H[param1][var3.field_h] == null &&
               var3.field_p < 0) {
               var3.field_p = 0;
             }
-            var3 = (MidiNote) (this.field_k.field_k.c(0));
+            var3 = (MidiNote) (this.field_k.field_k.nextForward(0));
           }
         }
     }
@@ -1157,14 +1157,14 @@ final class MidiPcmStream extends PcmStream {
         if ((this.field_u[param2] & 2) == 0) {
           var8.field_p = 0;
         } else {
-          var6 = (MidiNote) (this.field_k.field_k.b((byte) 90));
+          var6 = (MidiNote) (this.field_k.field_k.beginForward((byte) 90));
           while (var6 != null) {
             if (var6.field_n == var8.field_n && var6.field_p < 0 &&
               var6 != var8) {
               var8.field_p = 0;
               break;
             }
-            var6 = (MidiNote) (this.field_k.field_k.c(param3 + 51));
+            var6 = (MidiNote) (this.field_k.field_k.nextForward(param3 + 51));
           }
         }
     }
@@ -1173,12 +1173,12 @@ final class MidiPcmStream extends PcmStream {
         MidiNote var3 = null;
         int var4 = BachelorFridge.field_y;
         if ((4 & this.field_u[param1]) != 0) {
-          var3 = (MidiNote) (this.field_k.field_k.b((byte) 90));
+          var3 = (MidiNote) (this.field_k.field_k.beginForward((byte) 90));
           while (var3 != null) {
             if (param1 == var3.field_n) {
               var3.field_t = 0;
             }
-            var3 = (MidiNote) (this.field_k.field_k.c(param0 + 28068));
+            var3 = (MidiNote) (this.field_k.field_k.nextForward(param0 + 28068));
           }
         }
         if (param0 != -28068) {

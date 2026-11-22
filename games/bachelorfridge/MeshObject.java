@@ -16,12 +16,12 @@ abstract class MeshObject {
             field_b = (String[]) null;
           }
           dea.field_n = 0;
-          var1 = (kha) (iea.field_d.b((byte) 90));
+          var1 = (kha) (iea.field_d.beginForward((byte) 90));
           while (var1 != null) {
             if (dga.field_a == 0) {
               dea.field_n = dea.field_n + fw.field_h[var1.field_h].field_f * var1.field_g;
             }
-            var1 = (kha) (iea.field_d.c(0));
+            var1 = (kha) (iea.field_d.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ abstract class MeshObject {
         var9 = BachelorFridge.field_y;
         try {
           param0 -= 8;
-          var6 = (lh) (param5.b((byte) 90));
+          var6 = (lh) (param5.beginForward((byte) 90));
           var7 = 0;
           if (param3 >= -82) {
             field_a = true;
@@ -57,7 +57,7 @@ abstract class MeshObject {
               }
               iga.field_a[2 + var7 % 7].a((var6.field_i * param1 >> 16) + (param4 - 32), param0 - (((var6.field_h - var6.field_q) * param1 >> 16) + 2 + 32), var6.field_o);
             }
-            var6 = (lh) (param5.c(0));
+            var6 = (lh) (param5.nextForward(0));
             var7++;
           }
           return;

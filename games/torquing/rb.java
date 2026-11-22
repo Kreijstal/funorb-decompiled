@@ -128,7 +128,7 @@ class rb extends lg {
         if (param1) {
           this.field_F = (tb) null;
         }
-        var4 = (tb) (this.field_D.b(0));
+        var4 = (tb) (this.field_D.beginBackward(0));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -140,7 +140,7 @@ class rb extends lg {
             }
             var5 = var5.field_k;
           }
-          var4 = (tb) (this.field_D.f(-24059));
+          var4 = (tb) (this.field_D.nextBackward(-24059));
         }
         return null;
     }
@@ -308,7 +308,7 @@ class rb extends lg {
               ((tb) (var11)).field_k = var16;
             }
             var11 = var16;
-            this.field_D.a((byte) 54, var16);
+            this.field_D.addFirst((byte) 54, var16);
           }
         }
     }

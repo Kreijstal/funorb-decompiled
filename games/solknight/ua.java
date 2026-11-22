@@ -358,7 +358,7 @@ final class ua extends WidgetContainer implements ka {
         int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
-          this.field_B.a(true);
+          this.field_B.clear(true);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

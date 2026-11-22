@@ -275,18 +275,18 @@ final class ol {
         RuntimeException var2_ref = null;
         var3 = DungeonAssault.field_K;
         try {
-          var4 = (ue) (qm.field_q.e(-24172));
+          var4 = (ue) (qm.field_q.beginBackward(-24172));
           while (var4 != null) {
             wd.a((byte) -69, param1, var4);
-            var4 = (ue) (qm.field_q.a(param0 ^ 12));
+            var4 = (ue) (qm.field_q.nextBackward(param0 ^ 12));
           }
           if (param0 != 8) {
             ol.clearStaticReferences((byte) -74);
           }
-          var2 = bg.field_s.e(param0 - 24180);
+          var2 = bg.field_s.beginBackward(param0 - 24180);
           while (var2 != null) {
             hp.a(param1, (byte) 110);
-            var2 = bg.field_s.a(param0 ^ 12);
+            var2 = bg.field_s.nextBackward(param0 ^ 12);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

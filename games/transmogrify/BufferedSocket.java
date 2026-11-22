@@ -471,7 +471,7 @@ final class BufferedSocket implements Runnable {
           var2_long = lk.a(0);
           if (aa.field_a != 0 &&
             md.field_k < 0) {
-            var4_ref_b = (b) (le.field_C.a((byte) -95));
+            var4_ref_b = (b) (le.field_C.beginForward((byte) -95));
             if (var4_ref_b != null &&
               var4_ref_b.field_g < var2_long) {
               var4_ref_b.unlink(5);
@@ -522,7 +522,7 @@ final class BufferedSocket implements Runnable {
             for (var6 = 0; tg.field_a > var6; var6++) {
               var5.field_h[var6] = WordLanguage.field_l.payload[var6];
             }
-            le.field_C.a(var5, -100);
+            le.field_C.addLast(var5, -100);
             md.field_k = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

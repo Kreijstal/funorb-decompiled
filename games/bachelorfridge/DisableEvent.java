@@ -281,7 +281,7 @@ final class DisableEvent extends SpecialEvent {
             if (0 > var2_int) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_q = qi.a(param0, (byte) 41);
         } catch (RuntimeException runtimeException) {
@@ -299,13 +299,13 @@ final class DisableEvent extends SpecialEvent {
           if (param0) {
             DisableEvent.d((byte) 75);
           }
-          var1 = (kha) (iea.field_d.b((byte) 90));
+          var1 = (kha) (iea.field_d.beginForward((byte) 90));
           while (true) {
             if (var1 == null) {
               return true;
             }
             if (mg.field_m.field_f[var1.field_h] + var1.field_g <= 255) {
-              var1 = (kha) (iea.field_d.c(0));
+              var1 = (kha) (iea.field_d.nextForward(0));
               continue;
             }
             break;

@@ -25,7 +25,7 @@ final class vp extends WidgetContainer implements ng {
         int var6 = 0;
         var6 = Torquing.field_u;
         try {
-          this.children.a(0);
+          this.children.clear(0);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

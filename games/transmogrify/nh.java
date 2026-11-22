@@ -102,7 +102,7 @@ final class nh {
     final static AchievementNotice a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         AchievementNotice var8 = new AchievementNotice(param4, param2, param3, param1, param0, param5);
         int var9 = -40 % ((param7 - 6) / 59);
-        rh.field_r.a(var8, -107);
+        rh.field_r.addLast(var8, -107);
         ne.a((byte) 7, var8, param6);
         return var8;
     }

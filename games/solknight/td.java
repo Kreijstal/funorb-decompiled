@@ -48,10 +48,10 @@ final class td implements j {
           var14 = te.field_N;
           var16 = var14;
           var2 = var16.readUnsignedByte(255);
-          var3 = (dj) (sa.field_n.a((byte) 51));
+          var3 = (dj) (sa.field_n.beginBackward((byte) 51));
           while (var3 != null) {
             if (var3.field_i != var2) {
-              var3 = (dj) (sa.field_n.b(-44));
+              var3 = (dj) (sa.field_n.nextBackward(-44));
               continue;
             }
             break;

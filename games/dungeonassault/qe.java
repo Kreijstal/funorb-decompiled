@@ -23,10 +23,10 @@ abstract class qe {
     final void b() {
         rj var1 = null;
         if (this.field_p != null) {
-          var1 = (rj) (this.field_p.e(-24172));
+          var1 = (rj) (this.field_p.beginBackward(-24172));
           while (var1 != null) {
             var1.b((byte) 30);
-            var1 = (rj) (this.field_p.a(4));
+            var1 = (rj) (this.field_p.nextBackward(4));
           }
         }
         this.field_p = new IntrusiveDeque();
@@ -246,10 +246,10 @@ abstract class qe {
           this.field_b.c(-121);
         }
         if (this.field_p != null) {
-          var1 = (rj) (this.field_p.e(-24172));
+          var1 = (rj) (this.field_p.beginBackward(-24172));
           while (var1 != null) {
             var1.b((byte) 30);
-            var1 = (rj) (this.field_p.a(4));
+            var1 = (rj) (this.field_p.nextBackward(4));
           }
         }
         this.field_b = null;

@@ -61,7 +61,7 @@ final class FridgeScreen {
             } else {
               if (this.a(this.field_j.field_c, gd.field_m, -19906, mk.field_p)) {
                 RasterBuffer.a(2, 7758);
-                this.field_m.a(this.field_j.field_c, param0);
+                this.field_m.addLast(this.field_j.field_c, param0);
                 this.field_j = null;
               } else {
                 if (this.d(74)) {
@@ -87,7 +87,7 @@ final class FridgeScreen {
             this.field_j.field_i = (float)mk.field_p;
           } else {
             if (!this.field_j.field_d) {
-              this.field_m.a(this.field_j.field_c, true);
+              this.field_m.addLast(this.field_j.field_c, true);
               this.field_j = null;
             }
           }
@@ -154,18 +154,18 @@ final class FridgeScreen {
         es var8;
         int var5Lifetime1;
         var7 = BachelorFridge.field_y;
-        var8 = (es) (this.field_q.b((byte) 90));
+        var8 = (es) (this.field_q.beginForward((byte) 90));
         while (var8 != null) {
           var8.a(128, param1);
-          var8 = (es) (this.field_q.c(0));
+          var8 = (es) (this.field_q.nextForward(0));
         }
         gba.field_xb.draw(10 + param1, 75);
         TeleportAnimation.field_v.draw(param1 + 14, 79);
         stackIn_5_0 = pja.field_b;
-        if (-1 + this.field_m.g(0) == -1) {
+        if (-1 + this.field_m.countWithOffset(0) == -1) {
           stackIn_6_1 = 9;
         } else {
-          stackIn_6_1 = -1 + this.field_m.g(0);
+          stackIn_6_1 = -1 + this.field_m.countWithOffset(0);
         }
         ((Sprite) (Object) stackIn_5_0[stackIn_6_1]).draw(28 + param1, 79);
         if (!this.field_a.field_T) {
@@ -235,11 +235,11 @@ final class FridgeScreen {
             }
           }
         }
-        var4 = (FridgeCreature) (this.field_m.b((byte) 90));
+        var4 = (FridgeCreature) (this.field_m.beginForward((byte) 90));
         while (var4 != null) {
           nk.a(qa.field_k, param1 + (var4.field_n + 22), 9 + var4.field_k, 28, 18);
           var4.a((byte) 83, param1);
-          var4 = (FridgeCreature) (this.field_m.c(0));
+          var4 = (FridgeCreature) (this.field_m.nextForward(0));
         }
         for (var5Lifetime1 = 0; var5Lifetime1 < 6; var5Lifetime1++) {
           for (var6 = 0; var6 < 10; var6++) {
@@ -330,10 +330,10 @@ final class FridgeScreen {
           var2 = var28.readUnsignedByte(16711935);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 70);
-            var4_ref = (mha) (wba.field_g.b((byte) 90));
+            var4_ref = (mha) (wba.field_g.beginForward((byte) 90));
             while (var4_ref != null) {
               if (var4_ref.field_f != var3) {
-                var4_ref = (mha) (wba.field_g.c(0));
+                var4_ref = (mha) (wba.field_g.nextForward(0));
                 continue;
               }
               break;
@@ -426,10 +426,10 @@ final class FridgeScreen {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 46);
             var28.readLong(-109);
-            var4 = (nc) (tb.field_c.b((byte) 90));
+            var4 = (nc) (tb.field_c.beginForward((byte) 90));
             while (var4 != null) {
               if (var4.field_j != var3Lifetime1) {
-                var4 = (nc) (tb.field_c.c(0));
+                var4 = (nc) (tb.field_c.nextForward(0));
                 continue;
               }
               break;
@@ -483,10 +483,10 @@ final class FridgeScreen {
           }
           return;
         }
-        var6 = (FridgeCreature) (this.field_m.b((byte) 90));
+        var6 = (FridgeCreature) (this.field_m.beginForward((byte) 90));
         while (var6 != null) {
           var6.d(108);
-          var6 = (FridgeCreature) (this.field_m.c(0));
+          var6 = (FridgeCreature) (this.field_m.nextForward(0));
         }
         for (var3 = 0; 6 > var3; var3++) {
           for (var4 = 0; var4 < 10; var4++) {
@@ -496,9 +496,9 @@ final class FridgeScreen {
               } else {
                 this.field_i[var3][var4].field_f.b(24981);
                 if (this.field_i[var3][var4].field_f.field_b <= 12 &&
-                  this.field_i[var3][var4].field_f.field_a && (this.field_m.g(0) < 7 &&
+                  this.field_i[var3][var4].field_f.field_a && (this.field_m.countWithOffset(0) < 7 &&
                   this.field_j != null ||
-                  !(this.field_m.g(0) >= 8) &&
+                  !(this.field_m.countWithOffset(0) >= 8) &&
                   null == this.field_j)) {
                   if (!this.field_i[var3][var4].field_f.field_f) {
                     this.field_i[var3][var4].field_f.field_n = 24;
@@ -507,15 +507,15 @@ final class FridgeScreen {
                 }
                 if (0 >= this.field_i[var3][var4].field_f.field_b &&
                   this.field_i[var3][var4].field_f.field_n <= 12 &&
-                  this.field_i[var3][var4].field_f.field_a && (this.field_m.g(0) < 7 &&
+                  this.field_i[var3][var4].field_f.field_a && (this.field_m.countWithOffset(0) < 7 &&
                   null != this.field_j ||
-                  !(this.field_m.g(0) >= 8) &&
+                  !(this.field_m.countWithOffset(0) >= 8) &&
                   this.field_j == null)) {
                   RasterBuffer.a(0, 7758);
-                  this.field_m.a(new FridgeCreature(new CreatureProfile(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
-                  MartyrAnimation.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (FridgeCreature) (this.field_m.a(6)), var4);
+                  this.field_m.addLast(new FridgeCreature(new CreatureProfile(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
+                  MartyrAnimation.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (FridgeCreature) (this.field_m.beginBackward(6)), var4);
                   Crc32Table.a(9, (byte) 99);
-                  this.field_q.a(new es(this.field_i[var3][var4].field_f.field_p, this.field_i[var3][var4].field_f.field_j, DiveBomberAnimation.a(6, m.field_a, -2147483648)), true);
+                  this.field_q.addLast(new es(this.field_i[var3][var4].field_f.field_p, this.field_i[var3][var4].field_f.field_j, DiveBomberAnimation.a(6, m.field_a, -2147483648)), true);
                   this.field_i[var3][var4].field_f.field_a = false;
                 }
               }
@@ -560,7 +560,7 @@ final class FridgeScreen {
         if (1 == this.field_a.field_R &&
           DirectByteStorage.field_k) {
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_m.e(12917) && (!AttackUpAllAnimation.e(-29919) ||
+          if (!this.field_m.isEmpty(12917) && (!AttackUpAllAnimation.e(-29919) ||
             AccountRequestState.field_a)) {
             qa.d(123);
             decompiledFrameRemainder0 = false;
@@ -657,7 +657,7 @@ final class FridgeScreen {
           }
           for (var5 = 0; var5 < var4Lifetime2; var5++) {
             var6 = gka.a(param1, 255);
-            this.field_m.a(var6, true);
+            this.field_m.addLast(var6, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -729,7 +729,7 @@ final class FridgeScreen {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m.g(0) == 8) {
+          if (this.field_m.countWithOffset(0) == 8) {
             return false;
           }
           var5_int = (param3 - 10) / 56;
@@ -795,10 +795,10 @@ final class FridgeScreen {
             var3_int++;
           }
           this.field_m = new IntrusiveDeque();
-          var3 = (CreatureProfile) (param1.field_m.b((byte) 90));
+          var3 = (CreatureProfile) (param1.field_m.beginForward((byte) 90));
           while (var3 != null) {
-            this.field_m.a(new FridgeCreature(var3, DiveBomberAnimation.a(6, var3.field_p, -2147483648), DiveBomberAnimation.a(10, var3.field_p, -2147483648), this.field_i), true);
-            var3 = (CreatureProfile) (param1.field_m.c(0));
+            this.field_m.addLast(new FridgeCreature(var3, DiveBomberAnimation.a(6, var3.field_p, -2147483648), DiveBomberAnimation.a(10, var3.field_p, -2147483648), this.field_i), true);
+            var3 = (CreatureProfile) (param1.field_m.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -869,12 +869,12 @@ final class FridgeScreen {
 
     final FridgeCreature a(int param0, int param1, int param2) {
         int var5 = BachelorFridge.field_y;
-        FridgeCreature var4 = (FridgeCreature) (this.field_m.b((byte) 90));
+        FridgeCreature var4 = (FridgeCreature) (this.field_m.beginForward((byte) 90));
         while (var4 != null) {
           if (var4.a(jc.field_r, (byte) 119, nfa.field_a)) {
             return var4;
           }
-          var4 = (FridgeCreature) (this.field_m.c(0));
+          var4 = (FridgeCreature) (this.field_m.nextForward(0));
         }
         if (param1 == -4456) {
           return null;
@@ -884,7 +884,7 @@ final class FridgeScreen {
     }
 
     private final boolean f(int param0) {
-        int var2 = this.field_m.g(0) - (-this.field_k.f(62) - 1);
+        int var2 = this.field_m.countWithOffset(0) - (-this.field_k.f(62) - 1);
         int var3 = -54 % ((-16 - param0) / 41);
         return var2 > 4 ? true : false;
     }

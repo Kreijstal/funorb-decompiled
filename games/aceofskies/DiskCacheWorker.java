@@ -61,7 +61,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_v = 1;
           Object var5 = this.field_f;
           synchronized (var5) {
-            DiskArchiveRequest var6 = (DiskArchiveRequest) (this.field_f.b((byte) 52));
+            DiskArchiveRequest var6 = (DiskArchiveRequest) (this.field_f.beginForward((byte) 52));
             while (var6 != null) {
               if (var6.secondaryKey == (long)param2 &&
                 param0 == var6.field_x &&
@@ -71,7 +71,7 @@ final class DiskCacheWorker implements Runnable {
                 DiskArchiveRequest stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var6 = (DiskArchiveRequest) (this.field_f.e(31542));
+              var6 = (DiskArchiveRequest) (this.field_f.nextForward(31542));
             }
           }
           var4.field_u = param0.a(param2, 255);
@@ -124,7 +124,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_j) {
             Object var2 = this.field_f;
             synchronized (var2) {
-              var7 = (DiskArchiveRequest) (this.field_f.b(-18520));
+              var7 = (DiskArchiveRequest) (this.field_f.removeFirst(-18520));
               if (var7 == null) {
                 try {
                   this.field_f.wait();
@@ -258,7 +258,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var3 = this.field_f;
           synchronized (var3) {
-            this.field_f.a(2, param1);
+            this.field_f.addLast(2, param1);
             this.field_d = this.field_d + 1;
             if (param0 > -55) {
               return;

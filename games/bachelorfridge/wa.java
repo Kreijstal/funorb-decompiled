@@ -91,7 +91,7 @@ final class wa extends lw {
             wa.d((byte) -63);
           }
           if (qg.field_b.children != null) {
-            var1 = (kr) (qg.field_b.children.b((byte) 90));
+            var1 = (kr) (qg.field_b.children.beginForward((byte) 90));
             while (var1 != null) {
               if (var1.field_R == 1) {
                 RasterBuffer.a(7, 7758);
@@ -102,7 +102,7 @@ final class wa extends lw {
                 }
                 gu.field_d = gu.field_d - 1;
               }
-              var1 = (kr) (qg.field_b.children.c(0));
+              var1 = (kr) (qg.field_b.children.nextForward(0));
             }
           }
           MoveEventAnimation.e(20434);

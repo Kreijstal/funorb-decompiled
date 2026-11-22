@@ -21,14 +21,14 @@ final class cla {
           if (param0 != 11) {
             field_a = (byte[]) null;
           }
-          var4 = (lh) (param1.b((byte) 90));
+          var4 = (lh) (param1.beginForward((byte) 90));
           while (var4 != null) {
             if (var4.b(true)) {
               var4.field_k = (int)((double)(DiveBomberAnimation.a(64, param3, -2147483648) + 176) * -Math.abs(100.0 * Math.sin((double)(108 - param2) / 300.0)));
               var4.field_p = -(int)((double)(128 + DiveBomberAnimation.a(10000, param3, -2147483648)) * Math.sin(var4.field_r));
               var4.field_g = -(int)((double)(128 + DiveBomberAnimation.a(10000, param3, -2147483648)) * Math.cos(var4.field_r));
             }
-            var4 = (lh) (param1.c(param0 ^ 11));
+            var4 = (lh) (param1.nextForward(param0 ^ 11));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

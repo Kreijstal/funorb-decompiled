@@ -18,14 +18,14 @@ final class vg extends BattleUpdate {
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          var6 = (bf) (this.field_m.b((byte) 90));
+          var6 = (bf) (this.field_m.beginForward((byte) 90));
           if (param1) {
             var5 = (BattleScreen) null;
             this.createAnimation(-71, (BattleScreen) null);
           }
           while (var6 != null) {
             var6.a(param0, -26281);
-            var6 = (bf) (this.field_m.c(0));
+            var6 = (bf) (this.field_m.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,7 +47,7 @@ final class vg extends BattleUpdate {
           if (param0 != -28) {
             field_l = (Boolean) null;
           }
-          this.field_m.a(param1, true);
+          this.field_m.addLast(param1, true);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -72,13 +72,13 @@ final class vg extends BattleUpdate {
             }
             var3 = param0.readUnsignedByte(16711935);
             if (var3 == 0) {
-              this.field_m.a(new qja(param0), true);
+              this.field_m.addLast(new qja(param0), true);
               continue;
             }
             if (var3 != 1) {
               throw new IllegalStateException();
             }
-            this.field_m.a(new dla(param0), true);
+            this.field_m.addLast(new dla(param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,8 +145,8 @@ final class vg extends BattleUpdate {
         RuntimeException var3_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.writeByte(this.field_m.g(param1 ^ param1), param1 ^ -9);
-          var3 = (bf) (this.field_m.b((byte) 90));
+          param0.writeByte(this.field_m.countWithOffset(param1 ^ param1), param1 ^ -9);
+          var3 = (bf) (this.field_m.beginForward((byte) 90));
           while (var3 != null) {
             if (var3 instanceof qja) {
               param0.writeByte(0, 0);
@@ -157,7 +157,7 @@ final class vg extends BattleUpdate {
               param0.writeByte(1, 0);
             }
             var3.a(41, param0);
-            var3 = (bf) (this.field_m.c(0));
+            var3 = (bf) (this.field_m.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

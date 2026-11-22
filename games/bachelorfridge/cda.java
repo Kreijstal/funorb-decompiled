@@ -127,7 +127,7 @@ final class cda {
                 var18.field_l[var5] = -5;
               }
             }
-            AirstrikeAnimation.field_z.a(var18, param3);
+            AirstrikeAnimation.field_z.addLast(var18, param3);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

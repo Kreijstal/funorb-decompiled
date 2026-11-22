@@ -13,7 +13,7 @@ final class pe {
     }
 
     final static void c(int param0) {
-        u var1 = (u) (ByteStorage.field_c.b(-103));
+        u var1 = (u) (ByteStorage.field_c.beginForward(-103));
         if (var1 == null) {
           IntrusiveDeque.c(-2290);
           return;

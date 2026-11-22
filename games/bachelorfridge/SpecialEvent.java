@@ -136,10 +136,10 @@ abstract class SpecialEvent extends CreatureEvent {
           return;
         }
         try {
-          var4 = (EventEffect) (this.effects.b((byte) 90));
+          var4 = (EventEffect) (this.effects.beginForward((byte) 90));
           while (var4 != null) {
             var4.apply(var3, param0, 12);
-            var4 = (EventEffect) (this.effects.c(0));
+            var4 = (EventEffect) (this.effects.nextForward(0));
           }
           this.a(var3, param1 + 121);
         } catch (RuntimeException runtimeException) {
@@ -161,11 +161,11 @@ abstract class SpecialEvent extends CreatureEvent {
           if (param0 > -12) {
             field_n = (al[][]) null;
           }
-          param1.writeByte(this.effects.g(0), 0);
-          var5 = (EventEffect) (this.effects.b((byte) 90));
+          param1.writeByte(this.effects.countWithOffset(0), 0);
+          var5 = (EventEffect) (this.effects.beginForward((byte) 90));
           while (var5 != null) {
             var5.write(param1, (byte) 92);
-            var5 = (EventEffect) (this.effects.c(0));
+            var5 = (EventEffect) (this.effects.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

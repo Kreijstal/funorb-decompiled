@@ -431,7 +431,7 @@ final class fa extends wl {
 
     final static void f(int param0) {
         int var2 = 0;
-        he var3 = (he) (mb.field_e.a((byte) -117));
+        he var3 = (he) (mb.field_e.beginBackward((byte) -117));
         he var1 = var3;
         if (var1 != null) {
           var2 = em.field_B;

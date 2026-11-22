@@ -19,7 +19,7 @@ final class tj {
             field_c = (String) null;
           }
           var9 = new wb(param6, param1, param4, param7, param2, param0, param5);
-          hj.field_k.a((byte) 91, var9);
+          hj.field_k.addLast((byte) 91, var9);
           ab.a(param3 - 20614, param8, var9);
           stackIn_3_0 = var9;
           return stackIn_3_0;

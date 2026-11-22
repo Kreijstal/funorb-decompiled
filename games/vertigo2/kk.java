@@ -44,7 +44,7 @@ final class kk {
         if (var3 == null) {
           this.field_c = true;
           if (this.field_g <= this.field_d) {
-            var4 = (mn) (this.field_i.c((byte) -45));
+            var4 = (mn) (this.field_i.beginForward((byte) -45));
             var3 = new mn(param0, var4.field_s);
             this.field_m[var4.field_r] = null;
             var4.unlink(param1 ^ -4);

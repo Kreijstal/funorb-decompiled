@@ -71,7 +71,7 @@ final class MidiPcmStream extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         this.field_u[param2][param1] = null;
         if ((this.field_G[param2] & 2) != 0) {
-          var6 = (lp) (this.field_R.field_q.e(-24172));
+          var6 = (lp) (this.field_R.field_q.beginBackward(-24172));
           while (true) {
             if (var6 != null) {
               if (var7 != 0) {
@@ -83,7 +83,7 @@ final class MidiPcmStream extends PcmStream {
                 var6 != var8) {
                 var8.field_r = 0;
               } else {
-                var6 = (lp) (this.field_R.field_q.a(4));
+                var6 = (lp) (this.field_R.field_q.nextBackward(4));
                 continue;
               }
             }
@@ -139,7 +139,7 @@ final class MidiPcmStream extends PcmStream {
         if (param1) {
           this.field_Q = (int[]) null;
         }
-        var3 = (lp) (this.field_R.field_q.e(-24172));
+        var3 = (lp) (this.field_R.field_q.beginBackward(-24172));
         while (var3 != null) {
           if (var4 == 0) {
             if (param0 < 0 ||
@@ -158,7 +158,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var3.unlink(param1);
             }
-            var3 = (lp) (this.field_R.field_q.a(4));
+            var3 = (lp) (this.field_R.field_q.nextBackward(4));
             continue;
           }
           break;
@@ -267,7 +267,7 @@ final class MidiPcmStream extends PcmStream {
           this.a(true, param2, param3, 64);
           var5 = 109 / ((57 - param1) / 44);
           if (0 != (2 & this.field_G[param3])) {
-            var6 = (lp) (this.field_R.field_q.d(-14205));
+            var6 = (lp) (this.field_R.field_q.beginForward(-14205));
             while (var6 != null) {
               stackOut_3_0 = var6;
               stackIn_9_0 = stackOut_3_0;
@@ -286,7 +286,7 @@ final class MidiPcmStream extends PcmStream {
                 var6.field_w = 4096;
                 return;
               }
-              var6 = (lp) (this.field_R.field_q.g(20));
+              var6 = (lp) (this.field_R.field_q.nextForward(20));
             }
           }
           stackIn_9_0 = this.field_W.a((long)this.field_P[param3], 8);
@@ -339,7 +339,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.field_r[param3][var8.field_D] = var8;
         }
-        this.field_R.field_q.a(var8, false);
+        this.field_R.field_q.addFirst(var8, false);
         this.field_u[param3][param2] = var8;
         return;
     }
@@ -351,7 +351,7 @@ final class MidiPcmStream extends PcmStream {
         var5 = DungeonAssault.field_K;
         var3 = 13 / ((param1 + 35) / 49);
         if ((this.field_G[param0] & 4) != 0) {
-          var4 = (lp) (this.field_R.field_q.e(-24172));
+          var4 = (lp) (this.field_R.field_q.beginBackward(-24172));
           while (var4 != null) {
             if (var5 != 0) {
               break;
@@ -359,7 +359,7 @@ final class MidiPcmStream extends PcmStream {
             if (param0 == var4.field_p) {
               var4.field_m = 0;
             }
-            var4 = (lp) (this.field_R.field_q.a(4));
+            var4 = (lp) (this.field_R.field_q.nextBackward(4));
           }
         }
     }
@@ -701,7 +701,7 @@ final class MidiPcmStream extends PcmStream {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         var4 = DungeonAssault.field_K;
-        var3 = (lp) (this.field_R.field_q.e(-24172));
+        var3 = (lp) (this.field_R.field_q.beginBackward(-24172));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_10_0 = -1;
@@ -713,7 +713,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_u[var3.field_p][var3.field_y] = null;
               var3.field_r = 0;
             }
-            var3 = (lp) (this.field_R.field_q.a(4));
+            var3 = (lp) (this.field_R.field_q.nextBackward(4));
             continue;
           }
           break;
@@ -1301,7 +1301,7 @@ final class MidiPcmStream extends PcmStream {
         int var4;
         var4 = DungeonAssault.field_K;
         if (param1 != ~(this.field_G[param0] & 2)) {
-          var3 = (lp) (this.field_R.field_q.e(-24172));
+          var3 = (lp) (this.field_R.field_q.beginBackward(-24172));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1311,7 +1311,7 @@ final class MidiPcmStream extends PcmStream {
               var3.field_r < 0) {
               var3.field_r = 0;
             }
-            var3 = (lp) (this.field_R.field_q.a(4));
+            var3 = (lp) (this.field_R.field_q.nextBackward(4));
           }
         }
     }

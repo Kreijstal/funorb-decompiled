@@ -5,12 +5,12 @@ import java.io.*;
 
 final class IntrusiveDeque {
     static int[] field_d;
-    IntrusiveNode field_c;
+    IntrusiveNode sentinel;
     static String field_f;
     static we field_b;
     static String field_a;
     static int[] field_g;
-    private IntrusiveNode field_e;
+    private IntrusiveNode iterationCursor;
 
     final static boolean a(int param0, int param1) {
         try {
@@ -52,47 +52,47 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode nextForward(byte param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 56) {
           IntrusiveDeque.a(115, -34);
-          var2 = this.field_e;
-          if (var2 != this.field_c) {
-            this.field_e = var2.field_f;
+          var2 = this.iterationCursor;
+          if (var2 != this.sentinel) {
+            this.iterationCursor = var2.field_f;
             return var2;
           }
-          this.field_e = null;
+          this.iterationCursor = null;
           return null;
         }
-        var2Lifetime1 = this.field_e;
-        if (var2Lifetime1 != this.field_c) {
-          this.field_e = var2Lifetime1.field_f;
+        var2Lifetime1 = this.iterationCursor;
+        if (var2Lifetime1 != this.sentinel) {
+          this.iterationCursor = var2Lifetime1.field_f;
           return var2Lifetime1;
         }
-        this.field_e = null;
+        this.iterationCursor = null;
         return null;
     }
 
-    final int c(byte param0) {
+    final int size(byte param0) {
         int var5 = MinerDisturbance.field_ab;
         int var2 = -19 / ((-40 - param0) / 62);
         int var3 = 0;
-        IntrusiveNode var4 = this.field_c.field_f;
-        while (this.field_c != var4) {
+        IntrusiveNode var4 = this.sentinel.field_f;
+        while (this.sentinel != var4) {
           var3++;
           var4 = var4.field_f;
         }
         return var3;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addFirst(IntrusiveNode param0, int param1) {
         try {
           if (param0.field_c != null) {
             param0.unlink(34);
           }
-          param0.field_f = this.field_c.field_f;
-          param0.field_c = this.field_c;
+          param0.field_f = this.sentinel.field_f;
+          param0.field_c = this.sentinel;
           param0.field_c.field_f = param0;
           if (param1 != 27862) {
             IntrusiveDeque.a(-86, 37);
@@ -103,82 +103,82 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_e;
-        if (var2 == this.field_c) {
-          this.field_e = null;
+    final IntrusiveNode nextBackward(int param0) {
+        IntrusiveNode var2 = this.iterationCursor;
+        if (var2 == this.sentinel) {
+          this.iterationCursor = null;
           return null;
         }
-        this.field_e = var2.field_c;
+        this.iterationCursor = var2.field_c;
         if (param0 == 21510) {
           return var2;
         }
-        this.field_c = (IntrusiveNode) null;
+        this.sentinel = (IntrusiveNode) null;
         return var2;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode beginForward(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 < 60) {
           IntrusiveDeque.a(73, -87);
-          var2 = this.field_c.field_f;
-          if (this.field_c == var2) {
-            this.field_e = null;
+          var2 = this.sentinel.field_f;
+          if (this.sentinel == var2) {
+            this.iterationCursor = null;
             return null;
           }
-          this.field_e = var2.field_f;
+          this.iterationCursor = var2.field_f;
           return var2;
         }
-        var2Lifetime1 = this.field_c.field_f;
-        if (this.field_c == var2Lifetime1) {
-          this.field_e = null;
+        var2Lifetime1 = this.sentinel.field_f;
+        if (this.sentinel == var2Lifetime1) {
+          this.iterationCursor = null;
           return null;
         }
-        this.field_e = var2Lifetime1.field_f;
+        this.iterationCursor = var2Lifetime1.field_f;
         return var2Lifetime1;
     }
 
-    final void a(byte param0) {
+    final void clear(byte param0) {
         IntrusiveNode var2 = null;
         int var3 = MinerDisturbance.field_ab;
         while (true) {
-          var2 = this.field_c.field_f;
-          if (var2 == this.field_c) {
+          var2 = this.sentinel.field_f;
+          if (var2 == this.sentinel) {
             break;
           }
           var2.unlink(34);
         }
-        this.field_e = null;
+        this.iterationCursor = null;
         if (param0 == 55) {
           return;
         }
-        this.b((byte) 87);
+        this.nextForward((byte) 87);
     }
 
-    final IntrusiveNode d(int param0) {
-        IntrusiveNode var2 = this.field_c.field_c;
-        if (var2 == this.field_c) {
-          this.field_e = null;
+    final IntrusiveNode beginBackward(int param0) {
+        IntrusiveNode var2 = this.sentinel.field_c;
+        if (var2 == this.sentinel) {
+          this.iterationCursor = null;
           return null;
         }
         if (param0 == 59287) {
-          this.field_e = var2.field_c;
+          this.iterationCursor = var2.field_c;
           return var2;
         }
-        this.field_c = (IntrusiveNode) null;
-        this.field_e = var2.field_c;
+        this.sentinel = (IntrusiveNode) null;
+        this.iterationCursor = var2.field_c;
         return var2;
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addLast(byte param0, IntrusiveNode param1) {
         try {
           if (param1.field_c != null) {
             param1.unlink(34);
           }
-          param1.field_c = this.field_c.field_c;
+          param1.field_c = this.sentinel.field_c;
           int var3_int = 7 / ((-29 - param0) / 56);
-          param1.field_f = this.field_c;
+          param1.field_f = this.sentinel;
           param1.field_c.field_f = param1;
           param1.field_f.field_c = param1;
         } catch (RuntimeException runtimeException) {
@@ -186,16 +186,16 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_c.field_c;
-        if (var2 == this.field_c) {
+    final IntrusiveNode removeLast(int param0) {
+        IntrusiveNode var2 = this.sentinel.field_c;
+        if (var2 == this.sentinel) {
           return null;
         }
         if (param0 == 51510) {
           var2.unlink(34);
           return var2;
         }
-        this.field_e = (IntrusiveNode) null;
+        this.iterationCursor = (IntrusiveNode) null;
         var2.unlink(34);
         return var2;
     }
@@ -207,17 +207,17 @@ final class IntrusiveDeque {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean isEmpty(byte param0) {
         if (param0 > 98) {
-          return this.field_c == this.field_c.field_f ? true : false;
+          return this.sentinel == this.sentinel.field_f ? true : false;
         }
-        this.field_e = (IntrusiveNode) null;
-        return this.field_c == this.field_c.field_f ? true : false;
+        this.iterationCursor = (IntrusiveNode) null;
+        return this.sentinel == this.sentinel.field_f ? true : false;
     }
 
-    final IntrusiveNode e(int param0) {
-        IntrusiveNode var2 = this.field_c.field_f;
-        if (this.field_c == var2) {
+    final IntrusiveNode removeFirst(int param0) {
+        IntrusiveNode var2 = this.sentinel.field_f;
+        if (this.sentinel == var2) {
           return null;
         }
         if (param0 == 63854) {
@@ -228,9 +228,9 @@ final class IntrusiveDeque {
     }
 
     public IntrusiveDeque() {
-        this.field_c = new IntrusiveNode();
-        this.field_c.field_f = this.field_c;
-        this.field_c.field_c = this.field_c;
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.field_f = this.sentinel;
+        this.sentinel.field_c = this.sentinel;
     }
 
     public static void d(byte param0) {

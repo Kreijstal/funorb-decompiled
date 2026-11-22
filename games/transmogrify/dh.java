@@ -59,7 +59,7 @@ final class dh extends aj implements df {
         java.net.URL var7 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_u.g(-1);
+          this.field_u.clear(-1);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

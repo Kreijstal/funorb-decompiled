@@ -46,10 +46,10 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          var3 = (sl) (ArchiveProvider.field_c.b(88));
+          var3 = (sl) (ArchiveProvider.field_c.beginForward(88));
           while (var3 != null) {
             qd.a(4, (byte) -90, var3);
-            var3 = (sl) (ArchiveProvider.field_c.b((byte) 56));
+            var3 = (sl) (ArchiveProvider.field_c.nextForward((byte) 56));
           }
           if (param0 == 4) {
             return;

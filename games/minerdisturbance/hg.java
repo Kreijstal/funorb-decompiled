@@ -10,8 +10,8 @@ final class hg extends PcmStream {
     private final void a(rl param0) {
         param0.unlink(34);
         param0.a();
-        IntrusiveNode var2 = this.field_r.field_c.field_f;
-        if (var2 == this.field_r.field_c) {
+        IntrusiveNode var2 = this.field_r.sentinel.field_f;
+        if (var2 == this.field_r.sentinel) {
           this.field_s = -1;
         } else {
           this.field_s = ((rl) (var2)).field_n;
@@ -19,14 +19,14 @@ final class hg extends PcmStream {
     }
 
     final synchronized void b(PcmStream param0) {
-        this.field_u.a(param0, 27862);
+        this.field_u.addFirst(param0, 27862);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_u.b(73));
+        PcmStream var4 = (PcmStream) (this.field_u.beginForward(73));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (PcmStream) (this.field_u.b((byte) 56));
+          var4 = (PcmStream) (this.field_u.nextForward((byte) 56));
         }
     }
 
@@ -52,7 +52,7 @@ final class hg extends PcmStream {
           param2 = param2 - var4;
           this.field_t = this.field_t + var4;
           this.e();
-          var5 = (rl) (this.field_r.b(91));
+          var5 = (rl) (this.field_r.beginForward(91));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -73,20 +73,20 @@ final class hg extends PcmStream {
     }
 
     final PcmStream b() {
-        return (PcmStream) (this.field_u.b(123));
+        return (PcmStream) (this.field_u.beginForward(123));
     }
 
     final PcmStream c() {
-        return (PcmStream) (this.field_u.b((byte) 56));
+        return (PcmStream) (this.field_u.nextForward((byte) 56));
     }
 
     private final void e() {
         rl var1 = null;
         if (this.field_t > 0) {
-          var1 = (rl) (this.field_r.b(96));
+          var1 = (rl) (this.field_r.beginForward(96));
           while (var1 != null) {
             var1.field_n = var1.field_n - this.field_t;
-            var1 = (rl) (this.field_r.b((byte) 56));
+            var1 = (rl) (this.field_r.nextForward((byte) 56));
           }
           this.field_s = this.field_s - this.field_t;
           this.field_t = 0;
@@ -95,9 +95,9 @@ final class hg extends PcmStream {
 
     private final void a(IntrusiveNode param0, rl param1) {
         while (true) {
-          if (param0 == this.field_r.field_c) {
+          if (param0 == this.field_r.sentinel) {
             oj.$cfr$intArgs$a$c5042ffd0615(param1, param0, -117);
-            this.field_s = ((rl) (this.field_r.field_c.field_f)).field_n;
+            this.field_s = ((rl) (this.field_r.sentinel.field_f)).field_n;
             return;
           }
           if (((rl) (param0)).field_n <= param1.field_n) {
@@ -107,7 +107,7 @@ final class hg extends PcmStream {
           break;
         }
         oj.$cfr$intArgs$a$c5042ffd0615(param1, param0, -117);
-        this.field_s = ((rl) (this.field_r.field_c.field_f)).field_n;
+        this.field_s = ((rl) (this.field_r.sentinel.field_f)).field_n;
         return;
     }
 
@@ -132,7 +132,7 @@ final class hg extends PcmStream {
           param0 = param0 - var2;
           this.field_t = this.field_t + var2;
           this.e();
-          var3 = (rl) (this.field_r.b(125));
+          var3 = (rl) (this.field_r.beginForward(125));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -153,10 +153,10 @@ final class hg extends PcmStream {
     }
 
     private final void e(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_u.b(111));
+        PcmStream var2 = (PcmStream) (this.field_u.beginForward(111));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (PcmStream) (this.field_u.b((byte) 56));
+          var2 = (PcmStream) (this.field_u.nextForward((byte) 56));
         }
     }
 

@@ -263,7 +263,7 @@ final class qfa extends cga {
             return;
           }
           if (0 == var2) {
-            var9 = (fm) (us.field_e.b((byte) 90));
+            var9 = (fm) (us.field_e.beginForward((byte) 90));
             if (var9 == null) {
               vc.a((byte) -118);
               return;
@@ -289,10 +289,10 @@ final class qfa extends cga {
             return;
           }
           var3 = var10.readInt(-108);
-          var4_ref_bga = (bga) (on.field_r.b((byte) 90));
+          var4_ref_bga = (bga) (on.field_r.beginForward((byte) 90));
           while (var4_ref_bga != null) {
             if (var4_ref_bga.field_i != var3) {
-              var4_ref_bga = (bga) (on.field_r.c(0));
+              var4_ref_bga = (bga) (on.field_r.nextForward(0));
               continue;
             }
             break;

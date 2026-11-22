@@ -382,7 +382,7 @@ class kj extends pj {
             if (var10 != null) {
               ((li) (var10)).field_k = var15;
             }
-            this.field_L.a(var15, -7044);
+            this.field_L.addFirst(var15, -7044);
             var10 = var15;
           }
         }
@@ -443,7 +443,7 @@ class kj extends pj {
         li var5;
         int var6;
         var6 = SolKnight.field_L ? 1 : 0;
-        var4 = (li) (this.field_L.a((byte) 51));
+        var4 = (li) (this.field_L.beginBackward((byte) 51));
         if (param1 != 22) {
           return (li) null;
         }
@@ -458,7 +458,7 @@ class kj extends pj {
             }
             var5 = var5.field_k;
           }
-          var4 = (li) (this.field_L.b(-58));
+          var4 = (li) (this.field_L.nextBackward(-58));
         }
         return null;
     }

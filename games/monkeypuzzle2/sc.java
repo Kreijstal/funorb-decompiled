@@ -88,10 +88,10 @@ final class sc {
           if (var2 != 0) {
             if (1 == var2) {
               var3 = var9.readInt(126);
-              var4 = (mk) (eb.field_C.a((byte) -117));
+              var4 = (mk) (eb.field_C.beginBackward((byte) -117));
               while (var4 != null) {
                 if (var3 != var4.field_e) {
-                  var4 = (mk) (eb.field_C.d((byte) 63));
+                  var4 = (mk) (eb.field_C.nextBackward((byte) 63));
                   continue;
                 }
                 break;
@@ -106,7 +106,7 @@ final class sc {
             kk.a("A1: " + bh.a((byte) -21), (byte) 126, (Throwable) null);
             PacketBuffer.a(-1);
           } else {
-            var3_ref_uh = (uh) (ButtonWidget.field_v.a((byte) -117));
+            var3_ref_uh = (uh) (ButtonWidget.field_v.beginBackward((byte) -117));
             if (var3_ref_uh == null) {
               PacketBuffer.a(-1);
               return;

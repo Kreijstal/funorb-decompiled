@@ -36,12 +36,12 @@ final class c {
           }
           if (param0 > -94) {
             field_c = (int[]) null;
-            if (null != ce.field_a.b(108)) {
+            if (null != ce.field_a.beginForward(108)) {
               fieldTemp$13 = tf.field_a + 1;
               tf.field_a = tf.field_a + 1;
               if (fieldTemp$13 == 370) {
                 tf.field_a = 0;
-                ce.field_a.e(63854);
+                ce.field_a.removeFirst(63854);
               }
             }
             fieldTemp$14 = ph.field_c;
@@ -65,12 +65,12 @@ final class c {
             }
             return;
           }
-          if (null != ce.field_a.b(108)) {
+          if (null != ce.field_a.beginForward(108)) {
             fieldTemp$10 = tf.field_a + 1;
             tf.field_a = tf.field_a + 1;
             if (fieldTemp$10 == 370) {
               tf.field_a = 0;
-              ce.field_a.e(63854);
+              ce.field_a.removeFirst(63854);
               fieldTemp$11 = ph.field_c;
               ph.field_c = ph.field_c + 1;
               if (0 == (fieldTemp$11 & 3)) {
@@ -135,12 +135,12 @@ final class c {
         if (hc.field_D) {
           if (param0 > -94) {
             field_c = (int[]) null;
-            if (null != ce.field_a.b(108)) {
+            if (null != ce.field_a.beginForward(108)) {
               fieldTemp$8 = tf.field_a + 1;
               tf.field_a = tf.field_a + 1;
               if (fieldTemp$8 == 370) {
                 tf.field_a = 0;
-                ce.field_a.e(63854);
+                ce.field_a.removeFirst(63854);
               }
             }
             fieldTemp$9 = ph.field_c;
@@ -164,12 +164,12 @@ final class c {
             }
             return;
           }
-          if (null != ce.field_a.b(108)) {
+          if (null != ce.field_a.beginForward(108)) {
             fieldTemp$5 = tf.field_a + 1;
             tf.field_a = tf.field_a + 1;
             if (fieldTemp$5 == 370) {
               tf.field_a = 0;
-              ce.field_a.e(63854);
+              ce.field_a.removeFirst(63854);
               fieldTemp$6 = ph.field_c;
               ph.field_c = ph.field_c + 1;
               if (0 == (fieldTemp$6 & 3)) {
@@ -241,12 +241,12 @@ final class c {
         }
         if (param0 > -94) {
           field_c = (int[]) null;
-          if (null != ce.field_a.b(108)) {
+          if (null != ce.field_a.beginForward(108)) {
             fieldTemp$3 = tf.field_a + 1;
             tf.field_a = tf.field_a + 1;
             if (fieldTemp$3 == 370) {
               tf.field_a = 0;
-              ce.field_a.e(63854);
+              ce.field_a.removeFirst(63854);
             }
           }
           fieldTemp$4 = ph.field_c;
@@ -270,12 +270,12 @@ final class c {
           }
           return;
         }
-        if (null != ce.field_a.b(108)) {
+        if (null != ce.field_a.beginForward(108)) {
           fieldTemp$0 = tf.field_a + 1;
           tf.field_a = tf.field_a + 1;
           if (fieldTemp$0 == 370) {
             tf.field_a = 0;
-            ce.field_a.e(63854);
+            ce.field_a.removeFirst(63854);
             fieldTemp$1 = ph.field_c;
             ph.field_c = ph.field_c + 1;
             if (0 == (fieldTemp$1 & 3)) {

@@ -57,7 +57,7 @@ final class SnowEvent extends SpecialEvent {
             if (0 > var2_int) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_r = param0.readUnsignedByte(16711935);
           this.field_s = param0.readUnsignedByte(16711935);

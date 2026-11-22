@@ -173,10 +173,10 @@ final class kf extends UiWidget {
         RuntimeException var2 = null;
         var3 = Torquing.field_u;
         try {
-          var5 = (cb) (ae.field_nb.b(0));
+          var5 = (cb) (ae.field_nb.beginBackward(0));
           while (var5 != null) {
             pd.a(var5, true, param0);
-            var5 = (cb) (ae.field_nb.f(-24059));
+            var5 = (cb) (ae.field_nb.nextBackward(-24059));
           }
           if (param1 != -8190) {
             var4 = (String) null;

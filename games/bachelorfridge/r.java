@@ -137,7 +137,7 @@ final class r extends pu {
         int var6 = 0;
         var6 = BachelorFridge.field_y;
         try {
-          var4 = (rea) (param3.b((byte) 90));
+          var4 = (rea) (param3.beginForward((byte) 90));
           while (var4 != null) {
             fieldTemp$0 = var4.field_n + var4.field_h;
             var4.field_n = var4.field_n + var4.field_h;
@@ -147,7 +147,7 @@ final class r extends pu {
               var4.field_l = var4.field_l + var4.field_o;
               DiveBomberAnimation.a(50, param2, -2147483648);
             }
-            var4 = (rea) (param3.c(0));
+            var4 = (rea) (param3.nextForward(0));
           }
           var5 = 47 / ((-36 - param0) / 62);
           return;

@@ -59,10 +59,10 @@ final class pg {
           var2 = var27.readUnsignedByte(255);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-109);
-            var4_ref_sd = (sd) (IsaacRandom.field_b.a((byte) 51));
+            var4_ref_sd = (sd) (IsaacRandom.field_b.beginBackward((byte) 51));
             while (var4_ref_sd != null) {
               if (var3 != var4_ref_sd.field_o) {
-                var4_ref_sd = (sd) (IsaacRandom.field_b.b(-125));
+                var4_ref_sd = (sd) (IsaacRandom.field_b.nextBackward(-125));
                 continue;
               }
               break;
@@ -158,10 +158,10 @@ final class pg {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(-4);
             var4 = var27.readLong(10526);
-            var6 = (qc) (sb.field_c.a((byte) 51));
+            var6 = (qc) (sb.field_c.beginBackward((byte) 51));
             while (var6 != null) {
               if (var6.field_u != var3Lifetime1) {
-                var6 = (qc) (sb.field_c.b(-111));
+                var6 = (qc) (sb.field_c.nextBackward(-111));
                 continue;
               }
               break;

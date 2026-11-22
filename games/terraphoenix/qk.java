@@ -47,12 +47,12 @@ final class qk {
         }
         if (param1 == -24469) {
           if (!var7.d(123)) {
-            this.field_d.a(var7, (byte) -3);
+            this.field_d.addLast(var7, (byte) -3);
             var7.secondaryKey = 0L;
           } else {
             var6 = new be(var5, var7.field_q);
             this.field_c.put(var6, (byte) -118, var7.key);
-            this.field_d.a(var6, (byte) 17);
+            this.field_d.addLast(var6, (byte) 17);
             ((wc) ((Object) var6)).secondaryKey = 0L;
             var7.unlink((byte) 12);
             var7.unlinkSecondary((byte) 13);
@@ -61,12 +61,12 @@ final class qk {
         }
         this.field_h = -10;
         if (!var7.d(123)) {
-          this.field_d.a(var7, (byte) -3);
+          this.field_d.addLast(var7, (byte) -3);
           var7.secondaryKey = 0L;
         } else {
           var6Lifetime1 = new be(var5, var7.field_q);
           this.field_c.put(var6Lifetime1, (byte) -118, var7.key);
-          this.field_d.a(var6Lifetime1, (byte) 17);
+          this.field_d.addLast(var6Lifetime1, (byte) 17);
           ((wc) ((Object) var6Lifetime1)).secondaryKey = 0L;
           var7.unlink((byte) 12);
           var7.unlinkSecondary((byte) 13);
@@ -150,12 +150,12 @@ final class qk {
           this.a((byte) -102, param1);
           this.field_h = this.field_h - param2;
           while (this.field_h < 0) {
-            var6 = (wc) (this.field_d.c(0));
+            var6 = (wc) (this.field_d.removeFirst(0));
             this.a(var6, 1);
           }
           var6_ref = new be(param0, param2);
           this.field_c.put(var6_ref, (byte) -50, param1);
-          this.field_d.a(var6_ref, (byte) 78);
+          this.field_d.addLast(var6_ref, (byte) 78);
           ((wc) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "qk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

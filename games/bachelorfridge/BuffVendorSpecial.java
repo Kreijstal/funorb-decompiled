@@ -32,7 +32,7 @@ final class BuffVendorSpecial extends SpecialOrder {
           var6 = var5.occupant;
           if (var6 != null) {
             var7 = new DamageEffect(new CreatureRef(var6), false, 1, 200, 0);
-            var4.effects.a(var7, true);
+            var4.effects.addLast(var7, true);
           }
           stackIn_6_0 = var4;
           return (CreatureEvent) ((Object) stackIn_6_0);

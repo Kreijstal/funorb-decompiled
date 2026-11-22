@@ -166,24 +166,24 @@ abstract class fi extends UiWidget implements pb {
         ia var1_refLifetime1;
         if (!param0) {
           fi.c(false);
-          var1_ref = (ia) (AccountServiceResult.field_c.a(-9424));
+          var1_ref = (ia) (AccountServiceResult.field_c.removeLast(-9424));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
           sb.a(var1_ref.field_o, var1_ref.field_h, var1_ref.field_n);
           sb.a(var1_ref.field_k, var1_ref.field_g, var1_ref.field_p, var1_ref.field_m);
           var1_ref.field_o = null;
-          kk.field_f.a(var1_ref, -128);
+          kk.field_f.addLast(var1_ref, -128);
           return;
         }
-        var1_refLifetime1 = (ia) (AccountServiceResult.field_c.a(-9424));
+        var1_refLifetime1 = (ia) (AccountServiceResult.field_c.removeLast(-9424));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
         sb.a(var1_refLifetime1.field_o, var1_refLifetime1.field_h, var1_refLifetime1.field_n);
         sb.a(var1_refLifetime1.field_k, var1_refLifetime1.field_g, var1_refLifetime1.field_p, var1_refLifetime1.field_m);
         var1_refLifetime1.field_o = null;
-        kk.field_f.a(var1_refLifetime1, -128);
+        kk.field_f.addLast(var1_refLifetime1, -128);
     }
 
     public static void h(int param0) {
@@ -447,7 +447,7 @@ abstract class fi extends UiWidget implements pb {
         }
         rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         hc.field_u = hc.field_u | var3;
-        oj.field_u.a(new AchievementUnlockEvent(param2), -99);
+        oj.field_u.addLast(new AchievementUnlockEvent(param2), -99);
         if (IntrusiveDeque.b((byte) 78)) {
           rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         }
@@ -458,7 +458,7 @@ abstract class fi extends UiWidget implements pb {
           nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
           return true;
         }
-        mc.field_c.a(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
+        mc.field_c.addLast(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
         return true;
     }
 

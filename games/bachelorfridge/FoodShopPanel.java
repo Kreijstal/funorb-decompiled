@@ -313,7 +313,7 @@ final class FoodShopPanel {
                   null != this.field_h) {
                   var3_intLifetime1 = this.g(50);
                   if (this.field_c.a(this.field_h.field_c, (int)this.field_h.field_a, -19906, (int)this.field_h.field_i)) {
-                    this.field_c.field_m.a(this.field_h.field_c, true);
+                    this.field_c.field_m.addLast(this.field_h.field_c, true);
                     tw.a(this.field_h.field_g, this.field_h.field_c, -63);
                     this.field_h = null;
                     if (var8 != 0) {
@@ -413,10 +413,10 @@ final class FoodShopPanel {
             }
             if (decompiledFrameRemainder1) {
               if (this.a(-22263)) {
-                var3Lifetime1 = (ona) (cc.field_b.children.b((byte) 90));
+                var3Lifetime1 = (ona) (cc.field_b.children.beginForward((byte) 90));
                 while (var3Lifetime1 != null) {
                   if (((ona) (var3Lifetime1)).field_R != 1) {
-                    var3Lifetime1 = (ona) (cc.field_b.children.c(0));
+                    var3Lifetime1 = (ona) (cc.field_b.children.nextForward(0));
                     continue;
                   }
                   if (!fw.field_h[((ona) (var3Lifetime1)).field_wb].field_e &&
@@ -445,7 +445,7 @@ final class FoodShopPanel {
                   this.field_o[this.field_p.field_g] = this.field_o[this.field_p.field_g] + 1;
                   var3Lifetime2 = null;
                   if (cc.field_b.children != null) {
-                    var4 = (ona) (cc.field_b.children.b((byte) 90));
+                    var4 = (ona) (cc.field_b.children.beginForward((byte) 90));
                     while (var4 != null) {
                       stackIn_109_0 = var4.field_wb;
                       stackIn_109_1 = this.field_p.field_g;
@@ -455,7 +455,7 @@ final class FoodShopPanel {
                       if (stackIn_109_0 == stackIn_109_1) {
                         var3Lifetime2 = var4;
                       }
-                      var4 = (ona) (cc.field_b.children.c(0));
+                      var4 = (ona) (cc.field_b.children.nextForward(0));
                     }
                   }
                   if (var3Lifetime2 == null) {
@@ -534,11 +534,11 @@ final class FoodShopPanel {
           ((Sprite) (Object) stackIn_14_0).e(stackIn_14_1, stackIn_14_2, stackIn_15_3);
           if (cc.field_b.children != null) {
             SoftwareRasterizer.setClip(this.field_q.field_kb, this.field_q.field_rb, this.field_q.field_kb + this.field_q.field_sb, this.field_q.field_rb + this.field_q.field_p);
-            var2 = (ona) (cc.field_b.children.b((byte) 90));
+            var2 = (ona) (cc.field_b.children.beginForward((byte) 90));
             while (var2 != null) {
               jha.field_g.drawText(Integer.toString(var2.field_zb.field_f), this.field_q.field_kb + var2.field_kb + 28, cc.field_b.field_rb + (32 + var2.field_rb + this.field_q.field_rb), 16777215, -1);
               WidgetWrapper.field_z.drawText(Integer.toString(var2.field_zb.field_f), this.field_q.field_kb + (var2.field_kb + 28), cc.field_b.field_rb + (32 + var2.field_rb + this.field_q.field_rb), 65793, -1);
-              var2 = (ona) (cc.field_b.children.c(0));
+              var2 = (ona) (cc.field_b.children.nextForward(0));
               if (var3 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;

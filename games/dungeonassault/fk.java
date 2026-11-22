@@ -457,8 +457,8 @@ final class fk extends kl {
           this.field_w = param0;
           this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, be.field_r.toUpperCase());
           this.field_o = tn.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), IntrusiveNode.field_c, jm.field_i, -73, lk.field_P);
-          this.field_f.a(this.field_p, false);
-          this.field_f.a(this.field_o, false);
+          this.field_f.addFirst(this.field_p, false);
+          this.field_f.addFirst(this.field_o, false);
           this.a((lb) null, 83);
           this.field_m = mf.a(10449103, 72, 6, 72, (byte) -102);
           this.field_n = mf.a(255, 72, 12, 72, (byte) 71);

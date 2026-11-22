@@ -310,7 +310,7 @@ final class kd implements WidgetRenderer {
             IntrusiveNode.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
             IntrusiveNode.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
           }
-          var15 = (AchievementUnlockEvent) (oj.field_u.a((byte) -95));
+          var15 = (AchievementUnlockEvent) (oj.field_u.beginForward((byte) -95));
           var8Lifetime2 = var15;
           if (var8Lifetime2 != null) {
             var10Lifetime2 = da.field_C;

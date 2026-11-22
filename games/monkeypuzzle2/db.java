@@ -64,15 +64,15 @@ final class db implements ml {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var2_int = -108 % ((param1 + 28) / 61);
-          var3 = (d) (wk.field_b.a((byte) -117));
+          var3 = (d) (wk.field_b.beginBackward((byte) -117));
           while (var3 != null) {
             IntrusiveDeque.a(param0, var3, true);
-            var3 = (d) (wk.field_b.d((byte) 63));
+            var3 = (d) (wk.field_b.nextBackward((byte) 63));
           }
-          var5 = (de) (qa.field_d.a((byte) -117));
+          var5 = (de) (qa.field_d.beginBackward((byte) -117));
           while (var5 != null) {
             w.a(-94, param0, var5);
-            var5 = (de) (qa.field_d.d((byte) 63));
+            var5 = (de) (qa.field_d.nextBackward((byte) 63));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

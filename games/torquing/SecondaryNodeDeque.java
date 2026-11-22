@@ -6,7 +6,7 @@ import java.util.*;
 final class SecondaryNodeDeque implements Iterable {
     static int[] field_c;
     static String field_b;
-    DualLinkNode field_a;
+    DualLinkNode sentinel;
     static int field_d;
 
     public static void b(int param0) {
@@ -19,13 +19,13 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_j != null) {
             param0.unlinkSecondary(0);
           }
-          param0.field_p = this.field_a;
-          param0.field_j = this.field_a.field_j;
+          param0.field_p = this.sentinel;
+          param0.field_j = this.sentinel.field_j;
           param0.field_j.field_p = param0;
           if (param1 >= -13) {
             field_b = (String) null;
@@ -72,17 +72,17 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_a.field_p;
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.sentinel.field_p;
         if (param0 != 4) {
-          this.a(121);
-          if (var2 != this.field_a) {
+          this.removeFirst(121);
+          if (var2 != this.sentinel) {
             var2.unlinkSecondary(0);
             return var2;
           }
           return null;
         }
-        if (var2 != this.field_a) {
+        if (var2 != this.sentinel) {
           var2.unlinkSecondary(0);
           return var2;
         }

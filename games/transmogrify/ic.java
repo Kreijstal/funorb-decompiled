@@ -22,7 +22,7 @@ final class ic {
             ic.a((PcmSampleStream) null, -1);
           }
           var2 = new od(param0, param0);
-          lb.field_f.a(var2, param1 ^ -112);
+          lb.field_f.addLast(var2, param1 ^ -112);
           of.field_a.a(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;

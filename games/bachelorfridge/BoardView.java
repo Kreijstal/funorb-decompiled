@@ -761,10 +761,10 @@ final class BoardView {
                   }
                 }
               }
-              var7 = (vca) (var5.field_t.b((byte) 90));
+              var7 = (vca) (var5.field_t.beginForward((byte) 90));
               while (var7 != null) {
                 var7.a(-40 + var19.field_a + 32, var19.field_c + 64, false);
-                var7 = (vca) (var5.field_t.c(0));
+                var7 = (vca) (var5.field_t.nextForward(0));
               }
             }
           }
@@ -1038,10 +1038,10 @@ final class BoardView {
           if (param0 != 16429) {
             return;
           }
-          var19 = (gca) (param1.field_n.b((byte) 90));
+          var19 = (gca) (param1.field_n.beginForward((byte) 90));
           while (var19 != null) {
             var19.a(120 + var5, 76 + var4_int, (byte) -34);
-            var19 = (gca) (param1.field_n.c(0));
+            var19 = (gca) (param1.field_n.nextForward(0));
           }
           if (0 < var6 &&
             var7 > 0) {
@@ -1071,10 +1071,10 @@ final class BoardView {
             var9.a(0, 2048, 2048, (byte) 123, false, 255, var5, var4_int);
             bd.field_i = var15;
           }
-          var19Lifetime1 = (gca) (param1.field_n.b((byte) 90));
+          var19Lifetime1 = (gca) (param1.field_n.beginForward((byte) 90));
           while (var19Lifetime1 != null) {
             var19Lifetime1.a(120 + var5, (byte) 72, 76 + var4_int);
-            var19Lifetime1 = (gca) (param1.field_n.c(0));
+            var19Lifetime1 = (gca) (param1.field_n.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2263,16 +2263,16 @@ final class BoardView {
             }
           }
         }
-        var8_ref_tia = (tia) (this.field_i.field_fb.b((byte) 90));
+        var8_ref_tia = (tia) (this.field_i.field_fb.beginForward((byte) 90));
         while (var8_ref_tia != null) {
           var50 = this.a((byte) 126, var8_ref_tia.field_h);
           var8_ref_tia.a(var50.field_a + 32, 25415, 64 + var50.field_c);
-          var8_ref_tia = (tia) (this.field_i.field_fb.c(0));
+          var8_ref_tia = (tia) (this.field_i.field_fb.nextForward(0));
         }
-        var60 = (AnimationNode) (this.field_i.field_j.b((byte) 90));
+        var60 = (AnimationNode) (this.field_i.field_j.beginForward((byte) 90));
         while (var60 != null) {
           var60.c(-59);
-          var60 = (AnimationNode) (this.field_i.field_j.c(0));
+          var60 = (AnimationNode) (this.field_i.field_j.nextForward(0));
         }
     }
 

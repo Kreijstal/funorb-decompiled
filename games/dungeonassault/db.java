@@ -448,7 +448,7 @@ final class db extends qe {
         var3 = 0;
         fo.field_d = new nn(true);
         eh.field_o = new ed(90, var2 + 7, 250, -var2 + 328);
-        this.field_p.a(eh.field_o, false);
+        this.field_p.addFirst(eh.field_o, false);
         var16 = this.a(var3, -1, -111, true);
         var3 = var3 + (var16.field_x + 3);
         var5_int = 0;
@@ -586,13 +586,13 @@ final class db extends qe {
         var5 = KeyboardInput.field_e;
         KeyboardInput.field_e.field_N = false;
         var5.field_w = false;
-        this.field_p.a(KeyboardInput.field_e, false);
+        this.field_p.addFirst(KeyboardInput.field_e, false);
         hf.field_mb = tn.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
         var6 = hf.field_mb;
         hf.field_mb.field_D = false;
         var6.field_w = false;
         var3Lifetime1 = 0;
-        this.field_p.a(hf.field_mb, false);
+        this.field_p.addFirst(hf.field_mb, false);
         var7Lifetime5 = 1;
         var8 = 0;
         while (var8 < 6) {
@@ -942,11 +942,11 @@ final class db extends qe {
         gf.b(var11);
         gf.b(80, 250, 256, 85, 1118481, 128);
         gf.e(80, 250, 256, 85, 5592405, 128);
-        var5 = (rj) (this.field_p.e(-24172));
+        var5 = (rj) (this.field_p.beginBackward(-24172));
         scanLoop1: while (true) {
           if (var5 != null) {
             var5.a(102);
-            var5 = (rj) (this.field_p.a(4));
+            var5 = (rj) (this.field_p.nextBackward(4));
             if (var7 == 0) {
               continue;
             }
@@ -988,10 +988,10 @@ final class db extends qe {
         } else {
           this.a(197376);
         }
-        var5Lifetime1 = (rj) (this.field_p.e(-24172));
+        var5Lifetime1 = (rj) (this.field_p.beginBackward(-24172));
         while (var5Lifetime1 != null) {
           var5Lifetime1.d(0);
-          var5Lifetime1 = (rj) (this.field_p.a(4));
+          var5Lifetime1 = (rj) (this.field_p.nextBackward(4));
           if (var7 != 0) {
             return;
           }

@@ -16,10 +16,10 @@ final class qf implements Runnable {
         fk var3 = null;
         int var2 = stellarshard.field_B;
         try {
-          var3 = (fk) (tf.field_a.b(-92));
+          var3 = (fk) (tf.field_a.beginForward(-92));
           while (var3 != null) {
             hf.a(var3, 58, 5);
-            var3 = (fk) (tf.field_a.b((byte) 109));
+            var3 = (fk) (tf.field_a.nextForward((byte) 109));
           }
           if (param0 != -125) {
             qf.a((byte) 102);

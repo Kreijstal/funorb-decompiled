@@ -96,15 +96,15 @@ final class jr implements Runnable {
         RuntimeException var2_ref = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4 = (nf) (ki.field_a.a((byte) 100));
+          var4 = (nf) (ki.field_a.beginBackward((byte) 100));
           while (var4 != null) {
             jc.a(-14499, param0, var4);
-            var4 = (nf) (ki.field_a.b(71));
+            var4 = (nf) (ki.field_a.nextBackward(71));
           }
-          var2 = mo.field_h.a((byte) 100);
+          var2 = mo.field_h.beginBackward((byte) 100);
           while (var2 != null) {
             hm.d(0, param0);
-            var2 = mo.field_h.b(41);
+            var2 = mo.field_h.nextBackward(41);
           }
           if (param1 != 2) {
             field_e = (wp) null;

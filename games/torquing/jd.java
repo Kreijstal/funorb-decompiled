@@ -52,7 +52,7 @@ final class jd extends jh {
         RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
-          var5 = (pm) (MouseInputHandler.field_e.b(0));
+          var5 = (pm) (MouseInputHandler.field_e.beginBackward(0));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -121,18 +121,18 @@ final class jd extends jh {
         RuntimeException var2_ref = null;
         var3 = Torquing.field_u;
         try {
-          var4 = (ni) (vb.field_f.b(0));
+          var4 = (ni) (vb.field_f.beginBackward(0));
           if (!param0) {
             jd.g((byte) -33);
           }
           while (var4 != null) {
             l.a(var4, param1, 1);
-            var4 = (ni) (vb.field_f.f(-24059));
+            var4 = (ni) (vb.field_f.nextBackward(-24059));
           }
-          var2 = qf.field_a.b(0);
+          var2 = qf.field_a.beginBackward(0);
           while (var2 != null) {
             lc.b(0, param1);
-            var2 = qf.field_a.f(-24059);
+            var2 = qf.field_a.nextBackward(-24059);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -282,7 +282,7 @@ final class TooltipPanel {
     }
 
     final static void b(int param0) {
-        cb var1 = (cb) (ae.field_nb.b(0));
+        cb var1 = (cb) (ae.field_nb.beginBackward(0));
         if (var1 == null) {
           ih.b(true);
           return;

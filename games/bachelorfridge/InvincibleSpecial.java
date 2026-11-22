@@ -64,7 +64,7 @@ final class InvincibleSpecial extends SpecialOrder {
         try {
           var3 = this.creature.a(param1 ^ 20, param0);
           var4 = new InvincibleEvent(this.moveId, new CreatureRef(var3));
-          var4.effects.a(new DamageEffect(new CreatureRef(var3), false, 1, 0, 33), true);
+          var4.effects.addLast(new DamageEffect(new CreatureRef(var3), false, 1, 0, 33), true);
           if (param1 == 3) {
             stackIn_4_0 = var4;
             return (CreatureEvent) ((Object) stackIn_4_0);

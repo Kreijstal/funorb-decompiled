@@ -226,14 +226,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     final static void a(byte param0, UiComponent param1) {
         int var3 = BachelorFridge.field_y;
-        UiComponent var4 = (UiComponent) (param1.children.b((byte) 90));
+        UiComponent var4 = (UiComponent) (param1.children.beginForward((byte) 90));
         UiComponent var2 = var4;
         while (var4 != null) {
           var4.field_hb = 0;
           var4.field_p = 0;
           var4.field_I = 0;
           var4.field_rb = 0;
-          var4 = (UiComponent) (param1.children.c(param0 ^ -126));
+          var4 = (UiComponent) (param1.children.nextForward(param0 ^ -126));
           var2 = var4;
         }
         if (param0 != -126) {

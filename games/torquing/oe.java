@@ -74,7 +74,7 @@ final class oe {
           var4.field_l = -var4.field_s[0] + param1 << 2;
           var3.field_p = -2;
         }
-        qc.field_Y.a((byte) 54, var3);
+        qc.field_Y.addFirst((byte) 54, var3);
     }
 
     static {

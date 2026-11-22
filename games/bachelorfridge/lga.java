@@ -154,7 +154,7 @@ final class lga {
         }
         try {
           da.field_d = param0;
-          fo.field_a.children.d(82);
+          fo.field_a.children.clear(82);
           fo.field_a.a(-1, da.field_d);
           MoveOrder.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -195,7 +195,7 @@ final class lga {
             var6 = new mka(param0, param1, param2, this.field_d[param1][param2]);
             var5 = var6;
             this.field_m[param1][param2] = var6;
-            this.field_e.a(-16, var5);
+            this.field_e.addFirst(-16, var5);
             return;
           }
           return;
@@ -217,22 +217,22 @@ final class lga {
         int var3;
         mc var4;
         var3 = BachelorFridge.field_y;
-        var4 = (mc) (this.field_e.b((byte) 90));
+        var4 = (mc) (this.field_e.beginForward((byte) 90));
         var4.unlink(false);
         if (var4.field_f == 8) {
-          this.field_o.field_i.a(new ug(this.field_o, var4.field_j * -56), true);
+          this.field_o.field_i.addLast(new ug(this.field_o, var4.field_j * -56), true);
         } else {
           if (1 == var4.field_f) {
-            this.field_o.field_i.a(new qd(this.field_o, -39 * var4.field_j), true);
+            this.field_o.field_i.addLast(new qd(this.field_o, -39 * var4.field_j), true);
           } else {
             if (var4.field_f != 4) {
               if (var4.field_f == 2) {
-                this.field_o.field_i.a(new ug(this.field_o, var4.field_j * 56), true);
+                this.field_o.field_i.addLast(new ug(this.field_o, var4.field_j * 56), true);
               }
             } else {
               if (this.field_o.field_m[this.field_o.field_u][this.field_o.field_l].field_e != 3) {
               }
-              this.field_o.field_i.a(new qd(this.field_o, var4.field_j * 39), true);
+              this.field_o.field_i.addLast(new qd(this.field_o, var4.field_j * 39), true);
             }
           }
         }
@@ -268,23 +268,23 @@ final class lga {
             }
             if (var9.field_k > var3 &&
               var5.field_f != 8) {
-              this.field_e.a(-21, var5);
+              this.field_e.addFirst(-21, var5);
               var5 = new mc(8, 1);
               continue;
             }
             if (var9.field_k < var3 &&
               2 != var5.field_f) {
-              this.field_e.a(-116, var5);
+              this.field_e.addFirst(-116, var5);
               var5 = new mc(2, 1);
               continue;
             }
             if (var9.field_g > var4) {
-              this.field_e.a(-57, var5);
+              this.field_e.addFirst(-57, var5);
               var5 = new mc(1, 2);
               continue;
             }
             if (var9.field_g < var4) {
-              this.field_e.a(param0 - 41, var5);
+              this.field_e.addFirst(param0 - 41, var5);
               var5 = new mc(4, 2);
               continue;
             }
@@ -312,23 +312,23 @@ final class lga {
             }
             if (var12.field_k > var3 &&
               var5.field_f != 8) {
-              this.field_e.a(-21, var5);
+              this.field_e.addFirst(-21, var5);
               var5 = new mc(8, 1);
               continue;
             }
             if (var12.field_k < var3 &&
               2 != var5.field_f) {
-              this.field_e.a(-116, var5);
+              this.field_e.addFirst(-116, var5);
               var5 = new mc(2, 1);
               continue;
             }
             if (var12.field_g > var4) {
-              this.field_e.a(-57, var5);
+              this.field_e.addFirst(-57, var5);
               var5 = new mc(1, 2);
               continue;
             }
             if (var12.field_g < var4) {
-              this.field_e.a(param0 - 41, var5);
+              this.field_e.addFirst(param0 - 41, var5);
               var5 = new mc(4, 2);
               continue;
             }
@@ -343,7 +343,7 @@ final class lga {
         if (var5 == null) {
           return;
         }
-        this.field_e.a(-57, var5);
+        this.field_e.addFirst(-57, var5);
     }
 
     final void a(byte param0) {
@@ -356,9 +356,9 @@ final class lga {
         if (param0 <= 48) {
           return;
         }
-        this.field_e.a(-79, new mka((mka) null, this.field_a, this.field_q, 0));
-        while (!this.field_e.e(12917)) {
-          var4 = (mka) (this.field_e.a(false));
+        this.field_e.addFirst(-79, new mka((mka) null, this.field_a, this.field_q, 0));
+        while (!this.field_e.isEmpty(12917)) {
+          var4 = (mka) (this.field_e.removeFirst(false));
           var5 = var4;
           if ((this.field_f[var4.field_k][var4.field_g].field_d & 2) == 2) {
             this.a(var5, 1 + var5.field_k, var5.field_g, -1);

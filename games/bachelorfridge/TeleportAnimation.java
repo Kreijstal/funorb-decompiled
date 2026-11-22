@@ -73,7 +73,7 @@ final class TeleportAnimation extends EventAnimation {
         if (var8.isDown(-118)) {
           return;
         }
-        EventEffect var3 = (EventEffect) (this.field_A.effects.b((byte) 90));
+        EventEffect var3 = (EventEffect) (this.field_A.effects.beginForward((byte) 90));
         al.a(-99, this.field_A.moveId);
         while (var3 != null) {
           var4 = var3.target.a(-27449, this.screen);
@@ -85,7 +85,7 @@ final class TeleportAnimation extends EventAnimation {
           } else {
             var3.apply(var8, this.screen.field_h, 12);
           }
-          var3 = (EventEffect) (this.field_A.effects.c(0));
+          var3 = (EventEffect) (this.field_A.effects.nextForward(0));
         }
         this.field_y = true;
     }

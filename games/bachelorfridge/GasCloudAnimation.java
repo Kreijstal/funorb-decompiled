@@ -298,7 +298,7 @@ final class GasCloudAnimation extends EventAnimation {
           var9 = p.field_n.field_vb.children;
           var10 = f.b((byte) 73);
           var12 = null;
-          var13 = (uha) (var9.b((byte) 90));
+          var13 = (uha) (var9.beginForward((byte) 90));
           while (var13 != null) {
             var14 = 0;
             if (var13.children == null) {
@@ -725,7 +725,7 @@ final class GasCloudAnimation extends EventAnimation {
                 }
               }
             }
-            var13 = (uha) (var9.c(0));
+            var13 = (uha) (var9.nextForward(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

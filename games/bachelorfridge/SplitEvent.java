@@ -11,7 +11,7 @@ final class SplitEvent extends SpecialEvent {
         try {
           var3 = this.creature.a(63, param0);
           int var4 = 99 % ((param1 - 12) / 35);
-          this.effects.b((byte) 90);
+          this.effects.beginForward((byte) 90);
           this.field_p = null == param0.a(var3, (byte) -92) ? true : false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "l.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -72,7 +72,7 @@ final class SplitEvent extends SpecialEvent {
             if (var2_int < 0) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_p = 1 == param0.readUnsignedByte(16711935) ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -88,11 +88,11 @@ final class SplitEvent extends SpecialEvent {
             SplitEvent.d((byte) -18);
           }
           param1.writeShort(this.moveId, -125);
-          param1.writeByte(this.effects.g(0), 0);
-          var5 = (EventEffect) (this.effects.b((byte) 90));
+          param1.writeByte(this.effects.countWithOffset(0), 0);
+          var5 = (EventEffect) (this.effects.beginForward((byte) 90));
           while (var5 != null) {
             var5.write(param1, (byte) -54);
-            var5 = (EventEffect) (this.effects.c(0));
+            var5 = (EventEffect) (this.effects.nextForward(0));
           }
           param1.writeByte(this.field_p ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {

@@ -226,7 +226,7 @@ final class AccountNameAvailabilityValidator extends wj {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-127);
             }
-            var16_ref = (k) (AccountServiceResult.field_a.a((byte) -117));
+            var16_ref = (k) (AccountServiceResult.field_a.beginBackward((byte) -117));
             if (var16_ref == null) {
               PacketBuffer.a(-1);
               return;
@@ -238,7 +238,7 @@ final class AccountNameAvailabilityValidator extends wj {
             return;
           }
           if (var2 == 1) {
-            var12 = (vl) (ob.field_s.a((byte) -117));
+            var12 = (vl) (ob.field_s.beginBackward((byte) -117));
             if (var12 == null) {
               PacketBuffer.a(-1);
               return;
@@ -251,7 +251,7 @@ final class AccountNameAvailabilityValidator extends wj {
             PacketBuffer.a(-1);
             return;
           }
-          var14 = (k) (AccountServiceResult.field_a.a((byte) -117));
+          var14 = (k) (AccountServiceResult.field_a.beginBackward((byte) -117));
           if (var14 == null) {
             PacketBuffer.a(-1);
             return;

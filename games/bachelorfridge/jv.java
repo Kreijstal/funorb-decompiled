@@ -70,7 +70,7 @@ final class jv extends tia {
             var9.field_m = -1;
             var9.field_r = var4;
             var9.field_l = 0;
-            this.field_l.a(var9, true);
+            this.field_l.addLast(var9, true);
           }
         }
         rr.a(121, this.field_l, this.field_g, this.field_f);

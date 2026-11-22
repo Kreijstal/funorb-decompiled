@@ -514,7 +514,7 @@ final class n {
           var6.field_pb = (String) (var3Lifetime1);
           var6.field_rb = var4_ref_StringLifetime1;
           var6.unlink(param0 ^ 16);
-          var7 = (fd) (cm.field_c.b(param0 - 95));
+          var7 = (fd) (cm.field_c.beginForward(param0 - 95));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7 != null) {
@@ -524,7 +524,7 @@ final class n {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_54_0)) {
-                var7 = (fd) (cm.field_c.b((byte) -35));
+                var7 = (fd) (cm.field_c.nextForward((byte) -35));
                 continue;
               }
             }

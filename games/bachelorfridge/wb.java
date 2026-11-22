@@ -132,7 +132,7 @@ final class wb extends lw {
           RageAnimation.field_w.field_u = true;
           RageAnimation.field_w.field_xb.field_wb.field_Z = null;
           var6 = null;
-          var7 = (nea) (var4.b((byte) 90));
+          var7 = (nea) (var4.beginForward((byte) 90));
           while (var7 != null) {
             var8 = 0;
             if (var7.children == null) {
@@ -195,7 +195,7 @@ final class wb extends lw {
               var18.field_a.a(0, false, var14, 0, var15);
             }
             var6 = var7;
-            var7 = (nea) (var4.c(0));
+            var7 = (nea) (var4.nextForward(0));
           }
           if (RageAnimation.field_w.field_Ab.field_R != 0) {
             RefreshingSpecial.field_p = new oa(RageAnimation.field_w.field_Ab.field_D, RageAnimation.field_w.field_Ab.field_M, RageAnimation.field_w.field_Ab.field_sb, RageAnimation.field_w.field_Ab.field_p, SuperSpeedAllSpecial.field_p, kha.field_i, qs.field_m, qs.field_m);

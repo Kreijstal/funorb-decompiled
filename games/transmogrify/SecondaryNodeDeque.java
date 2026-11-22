@@ -8,15 +8,15 @@ final class SecondaryNodeDeque implements Iterable {
     static int field_b;
     static Sprite[] field_h;
     static int field_g;
-    DualLinkNode field_e;
+    DualLinkNode sentinel;
     static String field_c;
     static String field_f;
     static Sprite field_d;
     static String field_i;
 
-    final DualLinkNode a(boolean param0) {
-        DualLinkNode var2 = this.field_e.field_h;
-        if (this.field_e == var2) {
+    final DualLinkNode removeFirst(boolean param0) {
+        DualLinkNode var2 = this.sentinel.field_h;
+        if (this.sentinel == var2) {
           return null;
         }
         if (!param0) {
@@ -24,7 +24,7 @@ final class SecondaryNodeDeque implements Iterable {
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a(true, (DualLinkNode) null);
+        this.addLast(true, (DualLinkNode) null);
         var2.unlinkSecondary((byte) -74);
         return var2;
     }
@@ -51,7 +51,7 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final void a(boolean param0, DualLinkNode param1) {
+    final void addLast(boolean param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -61,14 +61,14 @@ final class SecondaryNodeDeque implements Iterable {
           if (null != param1.field_g) {
             param1.unlinkSecondary((byte) -116);
           }
-          param1.field_g = this.field_e.field_g;
-          param1.field_h = this.field_e;
+          param1.field_g = this.sentinel.field_g;
+          param1.field_h = this.sentinel;
           param1.field_g.field_h = param1;
           param1.field_h.field_g = param1;
           if (!param0) {
             return;
           }
-          this.a(true);
+          this.removeFirst(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

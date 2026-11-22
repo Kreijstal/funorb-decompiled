@@ -72,7 +72,7 @@ final class TeleportSpecial extends SpecialOrder {
           var4.field_t = this.field_n;
           var4.field_q = this.field_k;
           if (param0.a(var3, this.field_n, this.field_k, (byte) 54)) {
-            var4.effects.a(new MoveCreatureEffect(new CreatureRef(var3), this.field_k, this.field_n), true);
+            var4.effects.addLast(new MoveCreatureEffect(new CreatureRef(var3), this.field_k, this.field_n), true);
           }
           stackIn_6_0 = var4;
           return (CreatureEvent) ((Object) stackIn_6_0);

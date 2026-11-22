@@ -211,10 +211,10 @@ final class kh extends vk implements dc, ga, qk {
           if (param0 != -1143) {
             kh.a(-96, 60);
           }
-          var4 = (oj) (uc.field_b.c(param0 - 2762));
+          var4 = (oj) (uc.field_b.beginForward(param0 - 2762));
           while (var4 != null) {
             mg.a(true, var4, param1);
-            var4 = (oj) (uc.field_b.a(param0 - 15770));
+            var4 = (oj) (uc.field_b.nextForward(param0 - 15770));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

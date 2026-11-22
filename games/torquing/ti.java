@@ -65,7 +65,7 @@ final class ti {
         RuntimeException var3_ref = null;
         var4 = Torquing.field_u;
         try {
-          var3 = (ud) (this.field_o.b(param1 ^ param1));
+          var3 = (ud) (this.field_o.beginBackward(param1 ^ param1));
           while (var3 != null) {
             if (param0.a(var3.field_m)) {
               var3.unlink(0);
@@ -79,7 +79,7 @@ final class ti {
               this.field_j = -1;
               this.b((byte) 62);
             }
-            var3 = (ud) (this.field_o.f(-24059));
+            var3 = (ud) (this.field_o.nextBackward(-24059));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,10 +116,10 @@ final class ti {
     final ti c(byte param0) {
         int var4 = Torquing.field_u;
         ti var2 = new ti(this.field_b, this.field_h, this.field_a, this.field_c);
-        ud var3 = (ud) (this.field_o.b(0));
+        ud var3 = (ud) (this.field_o.beginBackward(0));
         while (var3 != null) {
-          var2.field_o.a((byte) 54, var3.a(true, var2));
-          var3 = (ud) (this.field_o.f(-24059));
+          var2.field_o.addFirst((byte) 54, var3.a(true, var2));
+          var3 = (ud) (this.field_o.nextBackward(-24059));
         }
         if (param0 >= 54) {
           if (null != this.field_n) {
@@ -147,7 +147,7 @@ final class ti {
         var4 = Torquing.field_u;
         if (null == this.field_n) {
           this.field_j = -1;
-          var2_ref = (ud) (this.field_o.b(0));
+          var2_ref = (ud) (this.field_o.beginBackward(0));
           while (var2_ref != null) {
             regionExit1: {
               if (var2_ref.field_o == null) {
@@ -167,13 +167,13 @@ final class ti {
                 dk.a(var2_ref.field_o, 0, this.field_n, 0, 64);
               }
             }
-            var2_ref = (ud) (this.field_o.f(-24059));
+            var2_ref = (ud) (this.field_o.nextBackward(-24059));
           }
         } else {
           je.a((byte) -43, this.field_n);
           this.field_n = null;
           this.field_j = -1;
-          var2_ref = (ud) (this.field_o.b(0));
+          var2_ref = (ud) (this.field_o.beginBackward(0));
           while (var2_ref != null) {
             boolean decompiledFrameRemainder0 = true;
             if (var2_ref.field_o == null) {
@@ -194,7 +194,7 @@ final class ti {
                 dk.a(var2_ref.field_o, 0, this.field_n, 0, 64);
               }
             }
-            var2_ref = (ud) (this.field_o.f(-24059));
+            var2_ref = (ud) (this.field_o.nextBackward(-24059));
           }
         }
         if (param0 == 4803) {
@@ -229,18 +229,18 @@ final class ti {
     final void a(boolean param0, lm param1) {
         int var4 = Torquing.field_u;
         if (this.field_j == 2 &&
-          this.field_o.a(false) == 1 &&
-          ((ud) (this.field_o.b(0))).field_m == null) {
+          this.field_o.size(false) == 1 &&
+          ((ud) (this.field_o.beginBackward(0))).field_m == null) {
           return;
         }
-        ud var3 = (ud) (this.field_o.b(0));
+        ud var3 = (ud) (this.field_o.beginBackward(0));
         while (var3 != null) {
           if (param1.a(var3.field_m)) {
             return;
           }
-          var3 = (ud) (this.field_o.f(-24059));
+          var3 = (ud) (this.field_o.nextBackward(-24059));
         }
-        this.field_o.a((byte) 54, new ud(this, param1));
+        this.field_o.addFirst((byte) 54, new ud(this, param1));
         if (null != this.field_n) {
           je.a((byte) -43, this.field_n);
           this.field_n = null;
@@ -292,22 +292,22 @@ final class ti {
         if (param0 != -3) {
           this.b((byte) -91);
         }
-        if (1 >= this.field_o.a(false)) {
+        if (1 >= this.field_o.size(false)) {
           return false;
         }
-        var5 = ((ud) (this.field_o.b(0))).field_o;
+        var5 = ((ud) (this.field_o.beginBackward(0))).field_o;
         var2 = var5;
         dk.a(this.field_n, 0, var5, 0, 64);
-        var3_ref = (ud) (this.field_o.b(0));
+        var3_ref = (ud) (this.field_o.beginBackward(0));
         while (var3_ref != null) {
           if (null != var3_ref.field_o &&
             var3_ref.field_o != var5) {
             je.a((byte) -43, var3_ref.field_o);
           }
-          var3_ref = (ud) (this.field_o.f(-24059));
+          var3_ref = (ud) (this.field_o.nextBackward(-24059));
         }
-        this.field_o.a(0);
-        this.field_o.a((byte) 54, new ud(var5));
+        this.field_o.clear(0);
+        this.field_o.addFirst((byte) 54, new ud(var5));
         return true;
     }
 
@@ -336,7 +336,7 @@ final class ti {
         if (null == this.field_n) {
           this.c(4803);
         }
-        if (this.field_o.a(false) == 0) {
+        if (this.field_o.size(false) == 0) {
           this.field_j = 0;
           return this.field_j;
         }

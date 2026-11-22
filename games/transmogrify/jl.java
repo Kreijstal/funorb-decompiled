@@ -74,7 +74,7 @@ final class jl extends IntrusiveNode {
           var2 = var9.readUnsignedByte((byte) 78);
           var3 = var9.readUnsignedByte((byte) 106);
           if (var2 == 0) {
-            var4_ref_oi = (oi) (GzipDecompressor.field_d.a((byte) -95));
+            var4_ref_oi = (oi) (GzipDecompressor.field_d.beginForward((byte) -95));
             if (var4_ref_oi == null) {
               pc.a(1);
               return;
@@ -93,11 +93,11 @@ final class jl extends IntrusiveNode {
           } else {
             if (var2 == 1) {
               var4 = var9.readSignedSmart(128);
-              var5 = (jl) (ll.field_T.a((byte) -95));
+              var5 = (jl) (ll.field_T.beginForward((byte) -95));
               while (var5 != null) {
                 if (~var5.field_m != ~var3 ||
                   var4 != var5.field_i) {
-                  var5 = (jl) (ll.field_T.a(true));
+                  var5 = (jl) (ll.field_T.nextForward(true));
                   continue;
                 }
                 break;

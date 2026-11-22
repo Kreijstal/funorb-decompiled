@@ -71,14 +71,14 @@ final class RefreshingAnimation extends EventAnimation {
         BattleCreature var2 = this.field_w.creature.a(95, this.screen.field_h);
         int var3 = 22 % ((param0 - 16) / 42);
         if (!var2.isDown(84)) {
-          var4 = (DamageEffect) (this.field_w.effects.b((byte) 90));
+          var4 = (DamageEffect) (this.field_w.effects.beginForward((byte) 90));
           al.a(-42, this.field_w.moveId);
           while (var4 != null) {
             var4.apply(var2, this.screen.field_h, 12);
             var5 = var4.target.a(-27449, this.screen);
             var5.b(-1, 6);
             var5.a(24831, 44, kw.field_g);
-            var4 = (DamageEffect) (this.field_w.effects.c(0));
+            var4 = (DamageEffect) (this.field_w.effects.nextForward(0));
           }
           return;
         }

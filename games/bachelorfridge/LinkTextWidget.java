@@ -2610,7 +2610,7 @@ class LinkTextWidget extends InteractiveWidget {
           if (param1 != 35) {
             this.updateMouseOver(54, 48, (UiWidget) null, 89);
           }
-          var4 = (TextLinkRegion) (this.field_G.b((byte) 90));
+          var4 = (TextLinkRegion) (this.field_G.beginForward((byte) 90));
           scanLoop1: while (null != var4) {
             var5 = var4;
             while (true) {
@@ -2628,7 +2628,7 @@ class LinkTextWidget extends InteractiveWidget {
                   continue;
                 }
               } else {
-                stackIn_25_0 = (TextLinkRegion) (this.field_G.c(0));
+                stackIn_25_0 = (TextLinkRegion) (this.field_G.nextForward(0));
               }
               break;
             }
@@ -2718,7 +2718,7 @@ class LinkTextWidget extends InteractiveWidget {
                   ((TextLinkRegion) (var10)).field_i = var15;
                 }
                 var10 = var15;
-                this.field_G.a(var15, true);
+                this.field_G.addLast(var15, true);
                 var11++;
               }
               if (var16 == 0) {

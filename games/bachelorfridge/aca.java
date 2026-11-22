@@ -35,7 +35,7 @@ final class aca extends TileEffect {
         var4 = BachelorFridge.field_y;
         this.field_f = this.field_f - 1;
         if (this.field_f < 0) {
-          var2_ref = (bma) (this.field_h.b((byte) 90));
+          var2_ref = (bma) (this.field_h.beginForward((byte) 90));
           if (param0 <= 21) {
             return false;
           }
@@ -53,7 +53,7 @@ final class aca extends TileEffect {
               if (stackIn_10_0 < 0) {
                 var2_ref.unlink(false);
               }
-              var2_ref = (bma) (this.field_h.c(0));
+              var2_ref = (bma) (this.field_h.nextForward(0));
               continue;
             }
             break;
@@ -61,13 +61,13 @@ final class aca extends TileEffect {
           if (decompiledNaturalLoopExit2) {
             stackIn_10_0 = this.field_f;
           }
-          stackIn_14_0 = (stackIn_10_0 < 0) && (this.field_h.e(12917));
+          stackIn_14_0 = (stackIn_10_0 < 0) && (this.field_h.isEmpty(12917));
           return stackIn_14_0;
         }
         stackIn_19_0 = (!this.field_j) ? 3 : 7;
         var2_int = stackIn_19_0;
         if ((this.field_f & var2_int) != 0) {
-          var2_refLifetime1 = (bma) (this.field_h.b((byte) 90));
+          var2_refLifetime1 = (bma) (this.field_h.beginForward((byte) 90));
           if (param0 <= 21) {
             return false;
           }
@@ -85,7 +85,7 @@ final class aca extends TileEffect {
               if (stackIn_29_0 < 0) {
                 var2_refLifetime1.unlink(false);
               }
-              var2_refLifetime1 = (bma) (this.field_h.c(0));
+              var2_refLifetime1 = (bma) (this.field_h.nextForward(0));
               continue;
             }
             break;
@@ -93,11 +93,11 @@ final class aca extends TileEffect {
           if (decompiledNaturalLoopExit1) {
             stackIn_29_0 = this.field_f;
           }
-          stackIn_33_0 = (stackIn_29_0 < 0) && (this.field_h.e(12917));
+          stackIn_33_0 = (stackIn_29_0 < 0) && (this.field_h.isEmpty(12917));
           return stackIn_33_0;
         }
         this.c((byte) -100);
-        var2_refLifetime2 = (bma) (this.field_h.b((byte) 90));
+        var2_refLifetime2 = (bma) (this.field_h.beginForward((byte) 90));
         if (param0 <= 21) {
           return false;
         }
@@ -115,7 +115,7 @@ final class aca extends TileEffect {
             if (stackIn_43_0 < 0) {
               var2_refLifetime2.unlink(false);
             }
-            var2_refLifetime2 = (bma) (this.field_h.c(0));
+            var2_refLifetime2 = (bma) (this.field_h.nextForward(0));
             continue;
           }
           break;
@@ -123,7 +123,7 @@ final class aca extends TileEffect {
         if (decompiledNaturalLoopExit0) {
           stackIn_43_0 = this.field_f;
         }
-        stackIn_47_0 = (stackIn_43_0 < 0) && (this.field_h.e(12917));
+        stackIn_47_0 = (stackIn_43_0 < 0) && (this.field_h.isEmpty(12917));
         return stackIn_47_0;
     }
 
@@ -135,7 +135,7 @@ final class aca extends TileEffect {
         int var6 = !this.field_j ? 200 : 60;
         bma var7 = new bma(var4, var6 << 4, var5, DiveBomberAnimation.a(mla.field_b.length, GasCloudAnimation.field_I, -2147483648), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, -2147483648));
         if (param0 == -100) {
-          this.field_h.a(var7, true);
+          this.field_h.addLast(var7, true);
           return;
         }
     }
@@ -726,7 +726,7 @@ final class aca extends TileEffect {
         int var5 = 0;
         int var6 = 0;
         int var7 = BachelorFridge.field_y;
-        bma var4 = (bma) (this.field_h.b((byte) 90));
+        bma var4 = (bma) (this.field_h.beginForward((byte) 90));
         if (!param1) {
           return;
         }
@@ -737,7 +737,7 @@ final class aca extends TileEffect {
           var5 = (var4.field_i >> 4) + param2;
           var6 = (var4.field_q >> 4) + param0 - (var4.field_h >> 4);
           mla.field_b[var4.field_v].draw(var5, var6);
-          var4 = (bma) (this.field_h.c(0));
+          var4 = (bma) (this.field_h.nextForward(0));
           if (var7 != 0) {
             return;
           }

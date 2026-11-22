@@ -52,7 +52,7 @@ final class dk {
     }
 
     final static void a(int param0) {
-        bi var1 = (bi) (bb.field_a.b(param0 - 22211));
+        bi var1 = (bi) (bb.field_a.beginForward(param0 - 22211));
         if (var1 == null) {
           si.a(param0 ^ -22307);
           return;

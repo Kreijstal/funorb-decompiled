@@ -39,7 +39,7 @@ final class je {
           this.a(50, param3);
           this.field_j = this.field_j - param2;
           while (this.field_j < 0) {
-            var6 = (lb) (this.field_k.a(0));
+            var6 = (lb) (this.field_k.removeFirst(0));
             this.a(var6, -27615);
           }
           var6_ref = new re(param1, param2);

@@ -138,7 +138,7 @@ final class pi extends TileEffect {
             var9.field_o = (double)(-DiveBomberAnimation.a(2, this.field_e.field_h.field_w, -2147483648));
             var9.field_n = -DiveBomberAnimation.a(10, this.field_e.field_h.field_w, -2147483648) + 25;
             var9.field_h = -1;
-            this.field_g.a(var9, true);
+            this.field_g.addLast(var9, true);
           }
         }
         if (param0 < 21) {

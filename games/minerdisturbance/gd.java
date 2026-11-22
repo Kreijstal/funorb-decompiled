@@ -105,7 +105,7 @@ final class gd extends PcmStream {
         int var4;
         var4 = MinerDisturbance.field_ab;
         this.field_r.a(param0);
-        var3 = (cg) (this.field_v.b(73));
+        var3 = (cg) (this.field_v.beginForward(73));
         while (var3 != null) {
           if (!this.field_u.a(var3, -24)) {
             var2 = param0;
@@ -119,7 +119,7 @@ final class gd extends PcmStream {
               var2 = var2 - var3.field_M;
             } while (!this.field_u.a(var2, var3, 1387831944, (int[]) null, 0));
           }
-          var3 = (cg) (this.field_v.b((byte) 56));
+          var3 = (cg) (this.field_v.nextForward((byte) 56));
         }
     }
 
@@ -184,7 +184,7 @@ final class gd extends PcmStream {
     final PcmStream c() {
         cg var1_ref = null;
         do {
-          var1_ref = (cg) (this.field_v.b((byte) 56));
+          var1_ref = (cg) (this.field_v.nextForward((byte) 56));
           if (var1_ref == null) {
             return null;
           }
@@ -284,7 +284,7 @@ final class gd extends PcmStream {
         var7 = MinerDisturbance.field_ab;
         try {
           this.field_r.a(param0, param1, param2);
-          var6 = (cg) (this.field_v.b(90));
+          var6 = (cg) (this.field_v.beginForward(90));
           while (var6 != null) {
             if (!this.field_u.a(var6, -75)) {
               var5 = param2;
@@ -300,7 +300,7 @@ final class gd extends PcmStream {
                 var5 = var5 - var6.field_M;
               } while (!this.field_u.a(var5, var6, 1387831944, param0, var4_int));
             }
-            var6 = (cg) (this.field_v.b((byte) 56));
+            var6 = (cg) (this.field_v.nextForward((byte) 56));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ final class gd extends PcmStream {
     }
 
     final PcmStream b() {
-        cg var1 = (cg) (this.field_v.b(97));
+        cg var1 = (cg) (this.field_v.beginForward(97));
         if (var1 == null) {
           return null;
         }

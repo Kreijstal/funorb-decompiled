@@ -245,7 +245,7 @@ class WidgetContainer extends UiWidget implements e {
         RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
         try {
-          if (this.children.e(12917)) {
+          if (this.children.isEmpty(12917)) {
             return false;
           }
           var9 = new IntrusiveDequeCursor(this.children);
@@ -521,7 +521,7 @@ class WidgetContainer extends UiWidget implements e {
 
     final void c(UiWidget param0, int param1) {
         try {
-          this.children.a(param0, true);
+          this.children.addLast(param0, true);
           int var3_int = 69 % ((param1 + 70) / 50);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "vd.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -553,7 +553,7 @@ class WidgetContainer extends UiWidget implements e {
         RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
         try {
-          if (this.children.e(12917)) {
+          if (this.children.isEmpty(12917)) {
             return false;
           }
           if (param1 != 1) {

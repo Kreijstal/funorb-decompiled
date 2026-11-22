@@ -54,18 +54,18 @@ final class fl extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          var5 = (fn) (cb.field_a.e(-24172));
+          var5 = (fn) (cb.field_a.beginBackward(-24172));
           if (param0 >= -74) {
             field_i = (cn) null;
           }
           while (var5 != null) {
             ch.a((byte) -16, var5, param1);
-            var5 = (fn) (cb.field_a.a(4));
+            var5 = (fn) (cb.field_a.nextBackward(4));
           }
-          var4 = (al) (hg.field_n.e(-24172));
+          var4 = (al) (hg.field_n.beginBackward(-24172));
           while (var4 != null) {
             hl.a(param1, -124, var4);
-            var4 = (al) (hg.field_n.a(4));
+            var4 = (al) (hg.field_n.nextBackward(4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -78,13 +78,13 @@ final class RageAnimation extends EventAnimation {
         }
         this.addChild(27799, new ActorAnimation(this.screen, this.field_x.field_r.a(-27449, this.screen)));
         if (!var6.isDown(78)) {
-          var3_ref = (EventEffect) (this.field_x.effects.b((byte) 90));
+          var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
           al.a(-52, this.field_x.moveId);
           while (var3_ref != null) {
             var7 = var3_ref.target.a(-27449, this.screen);
             discarded$0 = new rq(this.screen, var7.field_s.tileX, var7.field_s.tileY);
             var3_ref.apply(var6, this.screen.field_h, 12);
-            var3_ref = (EventEffect) (this.field_x.effects.c(0));
+            var3_ref = (EventEffect) (this.field_x.effects.nextForward(0));
           }
           return;
         }

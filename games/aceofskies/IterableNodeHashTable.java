@@ -6,30 +6,30 @@ import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
     static hd field_g;
-    private int field_d;
-    int field_c;
-    private IntrusiveNode field_e;
-    private IntrusiveNode field_f;
-    IntrusiveNode[] field_a;
+    private int nextBucketIndex;
+    int bucketCount;
+    private IntrusiveNode iterationCursor;
+    private IntrusiveNode lookupCursor;
+    IntrusiveNode[] buckets;
     static ej field_b;
 
-    final IntrusiveNode a(long param0, byte param1) {
+    final IntrusiveNode get(long param0, byte param1) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
-        IntrusiveNode var4 = this.field_a[(int)((long)(this.field_c - 1) & param0)];
-        this.field_f = var4.next;
-        while (this.field_f != var4) {
-          if (this.field_f.key == param0) {
-            IntrusiveNode var5 = this.field_f;
-            this.field_f = this.field_f.next;
+        IntrusiveNode var4 = this.buckets[(int)((long)(this.bucketCount - 1) & param0)];
+        this.lookupCursor = var4.next;
+        while (this.lookupCursor != var4) {
+          if (this.lookupCursor.key == param0) {
+            IntrusiveNode var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5;
           }
-          this.field_f = this.field_f.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_f = null;
+        this.lookupCursor = null;
         if (param1 > 87) {
           return null;
         }
-        this.field_c = -4;
+        this.bucketCount = -4;
         return null;
     }
 
@@ -110,9 +110,9 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final IntrusiveNode b(int param0) {
-        this.field_d = param0;
-        return this.a(-71);
+    final IntrusiveNode beginIterationAtBucket(int param0) {
+        this.nextBucketIndex = param0;
+        return this.next(-71);
     }
 
     final static ResourceArchive a(boolean param0, boolean param1, boolean param2, byte param3, int param4, int param5) {
@@ -162,34 +162,34 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var3;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
-        if (this.field_d > 0 &&
-          this.field_e != this.field_a[this.field_d - 1]) {
-          IntrusiveNode var2_ref_wf = this.field_e;
-          this.field_e = var2_ref_wf.next;
+        if (this.nextBucketIndex > 0 &&
+          this.iterationCursor != this.buckets[this.nextBucketIndex - 1]) {
+          IntrusiveNode var2_ref_wf = this.iterationCursor;
+          this.iterationCursor = var2_ref_wf.next;
           return var2_ref_wf;
         }
         int var2 = 35 / ((param0 - 55) / 60);
         do {
-          if (this.field_d >= this.field_c) {
+          if (this.nextBucketIndex >= this.bucketCount) {
             return null;
           }
-          int fieldTemp$0 = this.field_d;
-          this.field_d = this.field_d + 1;
-          var3 = this.field_a[fieldTemp$0].next;
-        } while (var3 == this.field_a[-1 + this.field_d]);
-        this.field_e = var3.next;
+          int fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var3 = this.buckets[fieldTemp$0].next;
+        } while (var3 == this.buckets[-1 + this.nextBucketIndex]);
+        this.iterationCursor = var3.next;
         return var3;
     }
 
-    final void a(int param0, IntrusiveNode param1, long param2) {
+    final void put(int param0, IntrusiveNode param1, long param2) {
         try {
           if (param1.previous != null) {
             param1.unlink(-125);
           }
-          IntrusiveNode var5 = this.field_a[(int)(param2 & (long)(param0 + this.field_c))];
+          IntrusiveNode var5 = this.buckets[(int)(param2 & (long)(param0 + this.bucketCount))];
           param1.next = var5;
           param1.previous = var5.previous;
           param1.previous.next = param1;
@@ -201,13 +201,13 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     IterableNodeHashTable(int param0) {
-        this.field_d = 0;
-        this.field_a = new IntrusiveNode[param0];
-        this.field_c = param0;
+        this.nextBucketIndex = 0;
+        this.buckets = new IntrusiveNode[param0];
+        this.bucketCount = param0;
         for (int var2 = 0; param0 > var2; var2++) {
           IntrusiveNode dupTemp$0 = new IntrusiveNode();
           IntrusiveNode var3 = dupTemp$0;
-          this.field_a[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.next = var3;
           var3.previous = var3;
         }

@@ -115,17 +115,17 @@ final class StampedeAnimation extends EventAnimation {
         if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        var7 = (AnimationNode) (this.field_v.b((byte) 90));
+        var7 = (AnimationNode) (this.field_v.beginForward((byte) 90));
         while (var7 != null) {
           if (var7.update(21807)) {
             var7.unlink(false);
           }
-          var7 = (AnimationNode) (this.field_v.c(0));
+          var7 = (AnimationNode) (this.field_v.nextForward(0));
         }
         fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
         if (fieldTemp$0 < 0) {
-          if (!this.field_v.e(12917)) {
+          if (!this.field_v.isEmpty(12917)) {
             return false;
           }
           this.d(0);
@@ -158,7 +158,7 @@ final class StampedeAnimation extends EventAnimation {
           param1 < this.screen.field_h.height) {
           var4 = this.screen.a(param1, false, param2);
           if (var4 != null) {
-            this.field_v.a(new mg(var4), true);
+            this.field_v.addLast(new mg(var4), true);
           }
         }
         this.a(param2, param1, this.field_B, 0);

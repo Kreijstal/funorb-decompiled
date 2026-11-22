@@ -233,9 +233,9 @@ final class via implements WidgetRenderer {
             stackIn_11_0 = lga.a(true, new String[]{param1}, OneSpecial.field_q);
             return stackIn_11_0;
           }
-          es.field_j.a(var8, 0);
+          es.field_j.beginForwardFrom(var8, 0);
           while (true) {
-            var7 = (nea) (es.field_j.c(0));
+            var7 = (nea) (es.field_j.nextForward(0));
             if (var7 != null) {
               var7.field_wb = var7.field_wb - 1;
               continue;

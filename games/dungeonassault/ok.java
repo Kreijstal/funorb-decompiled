@@ -78,11 +78,11 @@ class ok extends ko {
         int var3 = DungeonAssault.field_K;
         if (param0 == 30509) {
           if (null != this.field_F) {
-            var4 = (ok) (this.field_F.d(-14205));
+            var4 = (ok) (this.field_F.beginForward(-14205));
             while (var4 != null) {
               var4.field_O = true;
               var4.e(30509);
-              var4 = (ok) (this.field_F.g(20));
+              var4 = (ok) (this.field_F.nextForward(20));
             }
           }
           return;
@@ -268,10 +268,10 @@ class ok extends ko {
           }
         }
         if (null != this.field_F) {
-          var23_ref = (ok) (this.field_F.e(-24172));
+          var23_ref = (ok) (this.field_F.beginBackward(-24172));
           while (var23_ref != null) {
             var23_ref.a(this.field_zb + var19, this.field_B, var20 + this.field_ub, param3, param4, param5, param6, param7, this.field_A, this.field_ob, 0);
-            var23_ref = (ok) (this.field_F.a(4));
+            var23_ref = (ok) (this.field_F.nextBackward(4));
           }
         }
         gf.e(var12, var13, var14, var15);
@@ -547,10 +547,10 @@ class ok extends ko {
         stackIn_38_1 = (this.field_V) && (la.field_g == this.field_I) && (param4);
         this.field_hb = stackIn_38_1;
         if (null != this.field_F) {
-          var13 = (ok) (this.field_F.d(-14205));
+          var13 = (ok) (this.field_F.beginForward(-14205));
           while (var13 != null) {
             var13.a(this.field_B, this.field_zb, 7183, this.field_ub, param4, this.field_ob);
-            var13 = (ok) (this.field_F.g(20));
+            var13 = (ok) (this.field_F.nextForward(20));
           }
         }
         if (this.field_V) {
@@ -591,7 +591,7 @@ class ok extends ko {
           if (this.field_F == null) {
             this.field_F = new IntrusiveDeque();
           }
-          this.field_F.a(param0, false);
+          this.field_F.addFirst(param0, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ok.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

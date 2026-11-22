@@ -168,17 +168,17 @@ final class qk {
             decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
-            DualLinkNode var5 = this.field_d.b(param1 - 18522);
+            DualLinkNode var5 = this.field_d.removeFirst(param1 - 18522);
             var5.unlink(-126);
             var5.unlinkSecondaryNode(-119);
             if (this.field_b == var5) {
-              var5 = this.field_d.b(param1 - 18522);
+              var5 = this.field_d.removeFirst(param1 - 18522);
               var5.unlink(-128);
               var5.unlinkSecondaryNode(param1 - 125);
             }
           }
           this.field_h.put(125, param2, param0);
-          this.field_d.a(param1, param0);
+          this.field_d.addLast(param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,7 +212,7 @@ final class qk {
         }
         DualLinkNode var4 = (DualLinkNode) (this.field_h.findByKey((byte) 106, param1));
         if (var4 != null) {
-          this.field_d.a(2, var4);
+          this.field_d.addLast(2, var4);
         }
         return var4;
     }

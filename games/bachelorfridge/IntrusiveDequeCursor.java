@@ -8,11 +8,11 @@ final class IntrusiveDequeCursor {
     private IntrusiveNode field_d;
 
     final IntrusiveNode c(byte param0) {
-        IntrusiveNode var2 = this.field_c.field_g.previous;
+        IntrusiveNode var2 = this.field_c.sentinel.previous;
         if (param0 < 118) {
           return (IntrusiveNode) null;
         }
-        if (var2 != this.field_c.field_g) {
+        if (var2 != this.field_c.sentinel) {
           this.field_d = var2.previous;
           return var2;
         }
@@ -25,7 +25,7 @@ final class IntrusiveDequeCursor {
           return (IntrusiveNode) null;
         }
         IntrusiveNode var2 = this.field_d;
-        if (this.field_c.field_g != var2) {
+        if (this.field_c.sentinel != var2) {
           this.field_d = var2.next;
           return var2;
         }
@@ -35,8 +35,8 @@ final class IntrusiveDequeCursor {
 
     final IntrusiveNode b(byte param0) {
         int var3 = 30 / ((param0 + 47) / 53);
-        IntrusiveNode var2 = this.field_c.field_g.next;
-        if (var2 != this.field_c.field_g) {
+        IntrusiveNode var2 = this.field_c.sentinel.next;
+        if (var2 != this.field_c.sentinel) {
           this.field_d = var2.next;
           return var2;
         }
@@ -93,7 +93,7 @@ final class IntrusiveDequeCursor {
         if (param0 != -124) {
           return (IntrusiveNode) null;
         }
-        if (this.field_c.field_g == var2) {
+        if (this.field_c.sentinel == var2) {
           this.field_d = null;
           return null;
         }
@@ -117,11 +117,11 @@ final class IntrusiveDequeCursor {
             return stackIn_2_0;
           }
           if (param0 == null) {
-            var3 = this.field_c.field_g.previous;
+            var3 = this.field_c.sentinel.previous;
           } else {
             var3 = param0;
           }
-          if (var3 != this.field_c.field_g) {
+          if (var3 != this.field_c.sentinel) {
             this.field_d = var3.previous;
             stackIn_10_0 = var3;
             return stackIn_10_0;
@@ -155,7 +155,7 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_c.field_g.next;
+            var3 = this.field_c.sentinel.next;
           } else {
             var3 = param1;
           }
@@ -163,7 +163,7 @@ final class IntrusiveDequeCursor {
             stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          if (var3 == this.field_c.field_g) {
+          if (var3 == this.field_c.sentinel) {
             this.field_d = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);

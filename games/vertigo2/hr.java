@@ -32,15 +32,15 @@ final class hr extends TextureOperator {
         RuntimeException var2 = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          var4 = (vi) (mc.field_i.a((byte) 100));
+          var4 = (vi) (mc.field_i.beginBackward((byte) 100));
           while (var4 != null) {
             ProxySocketConnector.a(param0, 126, var4);
-            var4 = (vi) (mc.field_i.b(40));
+            var4 = (vi) (mc.field_i.nextBackward(40));
           }
-          var5 = (s) (wg.field_i.a((byte) 100));
+          var5 = (s) (wg.field_i.beginBackward((byte) 100));
           while (var5 != null) {
             mm.a(param0, var5, (byte) 108);
-            var5 = (s) (wg.field_i.b(125));
+            var5 = (s) (wg.field_i.nextBackward(125));
           }
           if (!param1) {
             field_z = (String) null;

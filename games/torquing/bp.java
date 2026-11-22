@@ -54,7 +54,7 @@ final class bp {
     }
 
     final static void a(byte param0) {
-        bg var1 = (bg) (rf.field_t.b((byte) -77));
+        bg var1 = (bg) (rf.field_t.removeFirst((byte) -77));
         if (param0 >= -42) {
           bp.clearStaticReferences(false);
         }
@@ -62,7 +62,7 @@ final class bp {
           var1 = new bg();
         }
         var1.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, SoftwareRasterizer.field_j, SoftwareRasterizer.field_a, SoftwareRasterizer.field_k, 17830);
-        bf.field_a.a((byte) 54, var1);
+        bf.field_a.addFirst((byte) 54, var1);
     }
 
     static {

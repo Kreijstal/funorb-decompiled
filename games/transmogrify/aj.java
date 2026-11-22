@@ -258,7 +258,7 @@ class aj extends UiWidget implements pb {
 
     final void a(UiWidget param0, byte param1) {
         try {
-          this.field_u.a(param0, -111);
+          this.field_u.addLast(param0, -111);
           if (param1 >= -77) {
             field_t = (java.awt.Frame) null;
           }
@@ -489,7 +489,7 @@ class aj extends UiWidget implements pb {
         RuntimeException decompiledCaughtException = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (this.field_u.d(-1)) {
+          if (this.field_u.isEmpty(-1)) {
             return false;
           }
           var3 = new tl(this.field_u);
@@ -604,7 +604,7 @@ class aj extends UiWidget implements pb {
         RuntimeException decompiledCaughtException = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (this.field_u.d(-1)) {
+          if (this.field_u.isEmpty(-1)) {
             return false;
           }
           var8 = new tl(this.field_u);

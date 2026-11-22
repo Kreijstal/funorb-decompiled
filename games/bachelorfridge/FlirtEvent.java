@@ -30,17 +30,17 @@ final class FlirtEvent extends SpecialEvent {
           SnowAnimation.field_w = null;
           ce.field_y = false;
           if (null != aa.field_l) {
-            aa.field_l.d(116);
+            aa.field_l.clear(116);
             aa.field_l = null;
           }
           iga.field_c = null;
           if (null != uma.field_M) {
-            uma.field_M.d(112);
+            uma.field_M.clear(112);
             uma.field_M = null;
           }
           FridgeScreen.field_g = null;
           if (null != bia.field_g) {
-            bia.field_g.d(79);
+            bia.field_g.clear(79);
             bia.field_g = null;
           }
           wi.field_i = null;
@@ -134,7 +134,7 @@ final class FlirtEvent extends SpecialEvent {
             if (var2_int < 0) {
               break;
             }
-            this.effects.a(TBomberAnimation.a((byte) 102, param0), true);
+            this.effects.addLast(TBomberAnimation.a((byte) 102, param0), true);
           }
           this.field_s = qi.a(param0, (byte) 78);
         } catch (RuntimeException runtimeException) {

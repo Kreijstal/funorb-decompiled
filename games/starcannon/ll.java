@@ -25,7 +25,7 @@ final class ll {
           var2_long = dd.b(param1 + 198);
           if (jl.field_h != 0 &&
             0 > t.field_C) {
-            var4_ref_q = (q) (le.field_e.c(-3905));
+            var4_ref_q = (q) (le.field_e.beginForward(-3905));
             if (var4_ref_q != null &&
               var2_long > var4_ref_q.field_g) {
               var4_ref_q.unlink(4);
@@ -76,7 +76,7 @@ final class ll {
             for (var6 = 0; var6 < il.field_g; var6++) {
               var5.field_k[var6] = se.field_p.payload[var6];
             }
-            le.field_e.b(80, var5);
+            le.field_e.addLast(80, var5);
             t.field_C = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

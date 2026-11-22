@@ -604,7 +604,7 @@ final class hk extends IntrusiveNode {
                 var18.field_o[var5] = -5;
               }
             }
-            WidgetContainer.field_v.a(-8212, var18);
+            WidgetContainer.field_v.addFirst(-8212, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

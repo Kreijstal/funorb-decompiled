@@ -334,7 +334,7 @@ final class hj {
               if (0 > dupTemp$1) {
                 stackIn_10_0 = this.field_gb;
                 stackIn_10_1 = var2_int;
-                stackIn_11_2 = !(var2_int >= -1 + wd.field_h.b(-81));
+                stackIn_11_2 = !(var2_int >= -1 + wd.field_h.size(-81));
                 stackIn_10_0[stackIn_10_1] = stackIn_11_2;
                 if (this.field_gb[var2_int] &&
                   var2_int > 0) {
@@ -827,7 +827,7 @@ final class hj {
             if (gb.field_o == this.field_r &&
               this.field_t > 500 &&
               !ok.field_d &&
-              hd.field_u.e(11253)) {
+              hd.field_u.isEmpty(11253)) {
               SocketConnector.c((byte) -103);
               this.field_t = 0;
               this.field_r = -1;
@@ -881,7 +881,7 @@ final class hj {
                 if (var7 == fieldTemp$9) {
                   if (1 == this.field_u) {
                     var8 = 0;
-                    var9_ref_ki = (ki) (wd.field_h.a((byte) -117));
+                    var9_ref_ki = (ki) (wd.field_h.beginBackward((byte) -117));
                     scanLoop1: while (true) {
                       if (var9_ref_ki != null) {
                         if (0 != var8) {
@@ -893,7 +893,7 @@ final class hj {
                         } else {
                           var8++;
                         }
-                        var9_ref_ki = (ki) (wd.field_h.d((byte) 63));
+                        var9_ref_ki = (ki) (wd.field_h.nextBackward((byte) 63));
                         continue;
                       }
                       break;
@@ -1554,8 +1554,8 @@ final class hj {
           ll.a(24733);
           ci.a(-2865);
           DequeCursor.field_a[1].c(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
-          if (!wd.field_h.e(11253)) {
-            var22_ref = (ki) (wd.field_h.a((byte) -117));
+          if (!wd.field_h.isEmpty(11253)) {
+            var22_ref = (ki) (wd.field_h.beginBackward((byte) -117));
             if (var22_ref != null) {
               var22_ref.field_B = (float)this.field_M;
               var22_ref.field_q = (float)(-48 + this.field_k);
@@ -1563,7 +1563,7 @@ final class hj {
                 var22_ref.a((byte) -74);
               }
               for (var3Lifetime3 = 1; var3Lifetime3 < 4; var3Lifetime3++) {
-                var23_ref = (ki) (wd.field_h.d((byte) 63));
+                var23_ref = (ki) (wd.field_h.nextBackward((byte) 63));
                 if (var23_ref == null) {
                   break;
                 }
@@ -1674,7 +1674,7 @@ final class hj {
           lb.field_E[0].c(0, 0);
           lb.field_E[1].c(640 - lb.field_E[1].field_m, 0);
           var8Lifetime4 = 0;
-          var9_ref_ki = (ki) (wd.field_h.a((byte) -117));
+          var9_ref_ki = (ki) (wd.field_h.beginBackward((byte) -117));
           while (var9_ref_ki != null) {
             if (var8Lifetime4 != 0) {
               var9_ref_ki.field_q = (float)((-1 + var8Lifetime4) * 59 + 148);
@@ -1703,7 +1703,7 @@ final class hj {
             } else {
               var8Lifetime4++;
             }
-            var9_ref_ki = (ki) (wd.field_h.d((byte) 63));
+            var9_ref_ki = (ki) (wd.field_h.nextBackward((byte) 63));
           }
           if (var8Lifetime4 == 5) {
             if (this.field_lb[-1 + var8Lifetime4] < 0) {

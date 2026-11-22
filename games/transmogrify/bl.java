@@ -158,10 +158,10 @@ final class bl {
         RuntimeException decompiledCaughtException = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (cf) (mh.field_e.a((byte) -95));
+          var4 = (cf) (mh.field_e.beginForward((byte) -95));
           while (var4 != null) {
             BufferedSocket.a((byte) 83, var4, param1);
-            var4 = (cf) (mh.field_e.a(true));
+            var4 = (cf) (mh.field_e.nextForward(true));
           }
           if (!param0) {
             return;

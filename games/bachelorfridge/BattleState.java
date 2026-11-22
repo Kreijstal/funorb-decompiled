@@ -381,7 +381,7 @@ final class BattleState {
               if (!var4.field_z) {
                 var5++;
               }
-              this.field_t[var5].a(new CreatureRef(var4.ownerIndex, var4.rosterSlot), true);
+              this.field_t[var5].addLast(new CreatureRef(var4.ownerIndex, var4.rosterSlot), true);
             }
           }
         }
@@ -644,7 +644,7 @@ final class BattleState {
           if (3 <= -var5 + this.field_T.field_w[var6.ownerIndex]) {
             this.field_T.field_a[var6.ownerIndex] = true;
           }
-          this.field_U.a(var4, true);
+          this.field_U.addLast(var4, true);
           stackIn_14_0 = var4;
           return (BattleUpdate) ((Object) stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -718,24 +718,24 @@ final class BattleState {
         for (var3 = 6; var3 >= 0; var3--) {
           var4 = this.field_t[var3];
           if (var4 != null) {
-            stackIn_6_0 = ~var4.g(0);
+            stackIn_6_0 = ~var4.countWithOffset(0);
             stackIn_6_1 = -1;
             if (stackIn_6_0 != stackIn_6_1) {
-              var5 = (CreatureRef) (var4.b((byte) 90));
-              var6 = this.field_A / 2 % var4.g(0);
+              var5 = (CreatureRef) (var4.beginForward((byte) 90));
+              var6 = this.field_A / 2 % var4.countWithOffset(0);
               var7 = 0;
               var8 = 0;
-              while (var7 < var4.g(0)) {
+              while (var7 < var4.countWithOffset(0)) {
                 if (var6 > var8) {
-                  var5 = (CreatureRef) (var4.c(0));
+                  var5 = (CreatureRef) (var4.nextForward(0));
                   var8++;
                   continue;
                 }
                 this.field_n[var2] = var5;
                 var2++;
-                var5 = (CreatureRef) (var4.c(0));
+                var5 = (CreatureRef) (var4.nextForward(0));
                 if (var5 == null) {
-                  var5 = (CreatureRef) (var4.b((byte) 90));
+                  var5 = (CreatureRef) (var4.beginForward((byte) 90));
                 }
                 var7++;
               }
@@ -839,9 +839,9 @@ final class BattleState {
             }
           }
         }
-        if (!var14.field_m.e(12917)) {
+        if (!var14.field_m.isEmpty(12917)) {
           var14.apply(this, false);
-          this.field_U.a(var14, true);
+          this.field_U.addLast(var14, true);
         }
     }
 
@@ -1056,10 +1056,10 @@ final class BattleState {
           BattleCreature var4 = (BattleCreature) null;
           this.a(-25, (BattleCreature) null, 68);
         }
-        CreatureOrder var5 = (CreatureOrder) (this.field_P.b((byte) 90));
+        CreatureOrder var5 = (CreatureOrder) (this.field_P.beginForward((byte) 90));
         while (var5 != null) {
           discarded$0 = this.executeOrder(var5, (byte) 91);
-          var5 = (CreatureOrder) (this.field_P.c(param0 - 26125));
+          var5 = (CreatureOrder) (this.field_P.nextForward(param0 - 26125));
         }
     }
 
@@ -1270,22 +1270,22 @@ final class BattleState {
         for (var3 = 0; this.field_n.length > var3; var3++) {
           var4 = this.b(param0 - 112, var3);
           if (var4 != null) {
-            var7.a(var4, true);
+            var7.addLast(var4, true);
           }
         }
         for (var3Lifetime1 = 3; var3Lifetime1 >= 1; var3Lifetime1--) {
-          var4Lifetime1 = (CreatureOrder) (var7.b((byte) 90));
+          var4Lifetime1 = (CreatureOrder) (var7.beginForward((byte) 90));
           while (var4Lifetime1 != null) {
             var5 = al.a(120, var4Lifetime1.moveId);
             if (2 == var5.kind &&
               hl.a((byte) 121, var5.field_j) &&
               var5.field_l == var3Lifetime1) {
-              this.field_P.a(var4Lifetime1, true);
+              this.field_P.addLast(var4Lifetime1, true);
             }
-            var4Lifetime1 = (CreatureOrder) (var7.c(~param0));
+            var4Lifetime1 = (CreatureOrder) (var7.nextForward(~param0));
           }
         }
-        var7.a(this.field_P, 12632256);
+        var7.moveAllTo(this.field_P, 12632256);
     }
 
     final int a(int param0, int param1, int param2) {
@@ -2253,7 +2253,7 @@ final class BattleState {
                 var10 = new EffectBatch();
                 var10.a(true, new qq(new CreatureRef(var8Lifetime1), -1, var9));
                 var10.apply(this, false);
-                this.field_U.a(var10, true);
+                this.field_U.addLast(var10, true);
               }
             }
           }
@@ -2508,7 +2508,7 @@ final class BattleState {
           while (var4_int > param2.position) {
             var5 = SplitAnimation.a(param2, (byte) -50);
             var5.field_j = param2.readInt(-98);
-            this.field_U.a(var5, true);
+            this.field_U.addLast(var5, true);
           }
           if (!param1) {
             this.field_m = -104;
@@ -2722,11 +2722,11 @@ final class BattleState {
           }
           this.writeTurnOrder(param0, (byte) -116);
           param0.writeByte(this.field_O, 0);
-          var3 = (BattleUpdate) (this.field_U.b((byte) 90));
+          var3 = (BattleUpdate) (this.field_U.beginForward((byte) 90));
           while (var3 != null) {
             nca.a(101, param0, var3);
             param0.writeInt(var3.field_j, -1615464796);
-            var3 = (BattleUpdate) (this.field_U.c(~param1));
+            var3 = (BattleUpdate) (this.field_U.nextForward(~param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2908,7 +2908,7 @@ final class BattleState {
           var8.a(new bja(), (byte) 114);
         }
         var8.apply(this, false);
-        this.field_U.a(var8, true);
+        this.field_U.addLast(var8, true);
         this.a(var8, (byte) 73);
         for (var3Lifetime5 = 0; var3Lifetime5 < this.playerCount; var3Lifetime5++) {
           if (!this.rosters[var3Lifetime5].field_c &&

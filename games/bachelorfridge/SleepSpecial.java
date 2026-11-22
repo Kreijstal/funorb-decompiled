@@ -52,7 +52,7 @@ final class SleepSpecial extends SpecialOrder {
           var9 = param0.tiles[var7][var8].occupant;
           if (var9 != null &&
             !var9.isDown(107)) {
-            var4.effects.a(new DamageEffect(new CreatureRef(var9), false, 1, 0, 29), true);
+            var4.effects.addLast(new DamageEffect(new CreatureRef(var9), false, 1, 0, 29), true);
           }
           stackIn_18_0 = var4;
           return (CreatureEvent) ((Object) stackIn_18_0);

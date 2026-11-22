@@ -27,7 +27,7 @@ final class LevitateAnimation extends EventAnimation {
         if (var6.isDown(80)) {
           return;
         }
-        var3 = (DamageEffect) (this.field_w.effects.b((byte) 90));
+        var3 = (DamageEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(-44, this.field_w.moveId);
         if (param0 == -23403) {
           while (var3 != null) {
@@ -35,7 +35,7 @@ final class LevitateAnimation extends EventAnimation {
             var7 = var3.target.a(param0 - 4046, this.screen);
             var7.b(param0 ^ 23402, 7);
             var7.a(24831, 9, kna.field_g[32]);
-            var3 = (DamageEffect) (this.field_w.effects.c(0));
+            var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
           }
         } else {
           LevitateAnimation.releaseStatics(-10);
@@ -44,7 +44,7 @@ final class LevitateAnimation extends EventAnimation {
             var8 = var3.target.a(param0 - 4046, this.screen);
             var8.b(param0 ^ 23402, 7);
             var8.a(24831, 9, kna.field_g[32]);
-            var3 = (DamageEffect) (this.field_w.effects.c(0));
+            var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
           }
         }
     }
