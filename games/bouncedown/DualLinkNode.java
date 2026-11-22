@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     long field_j;
     static ph field_k;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 115) {
           field_h = (tg[]) null;

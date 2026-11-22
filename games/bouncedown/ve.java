@@ -180,7 +180,7 @@ final class ve {
         return this.field_e;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 85) {
           return;

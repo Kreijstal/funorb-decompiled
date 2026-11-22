@@ -100,7 +100,7 @@ final class gh extends lc implements ki, rc, rf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -5389) {
-            gh.b(true);
+            gh.clearStaticReferences(true);
           }
           var3 = param0.a(true);
           if (var3 == null) {
@@ -426,7 +426,7 @@ final class gh extends lc implements ki, rc, rf {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_I = (int[]) null;
           field_I = null;

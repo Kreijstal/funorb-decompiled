@@ -21,7 +21,7 @@ final class of {
         var3Lifetime1 = -128 / ((param2 - 41) / 34);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         if (!param0) {
           field_b = (bc) null;

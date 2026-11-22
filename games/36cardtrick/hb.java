@@ -7,7 +7,7 @@ final class hb {
     static kc field_c;
     static int[] field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (!param0) {
           field_c = (kc) null;

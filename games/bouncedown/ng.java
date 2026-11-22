@@ -32,7 +32,7 @@ abstract class ng {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 108) {
-          ng.b(51);
+          ng.clearStaticReferences(51);
         }
         stackIn_6_0 = (vd.field_b != null) && (vd.field_b.b((byte) 121));
         return stackIn_6_0;
@@ -85,7 +85,7 @@ abstract class ng {
 
     abstract void a(boolean param0, PacketBuffer param1);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
           return;
         }

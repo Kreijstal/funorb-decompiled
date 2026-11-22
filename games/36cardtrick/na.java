@@ -144,11 +144,11 @@ final class na extends la {
         if (!param0) {
           return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
         }
-        na.c(true);
+        na.clearStaticReferences(true);
         return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         field_p = null;
         if (param0) {

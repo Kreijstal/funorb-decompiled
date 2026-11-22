@@ -893,7 +893,7 @@ abstract class ee extends he {
         field_B = 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_H = null;
         field_F = null;
     }

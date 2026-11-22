@@ -73,7 +73,7 @@ final class jg extends ak {
         this.field_x.a(param0, param1 + this.field_i, 87, this.field_r + param3);
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         field_B = null;
         if (param0 == -32572) {

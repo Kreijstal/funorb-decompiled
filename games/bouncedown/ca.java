@@ -163,7 +163,7 @@ final class ca {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 >= -79) {
           return;

@@ -343,7 +343,7 @@ class lk extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 0) {
           return;

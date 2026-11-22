@@ -40,7 +40,7 @@ class e {
         }
     }
 
-    public static void h() {
+    public static void clearStaticReferences() {
         field_k = null;
     }
 

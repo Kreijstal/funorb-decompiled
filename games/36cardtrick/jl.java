@@ -9,7 +9,7 @@ final class jl extends ff {
     static long field_c;
     static de field_g;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 < 123) {
           return;
@@ -82,7 +82,7 @@ final class jl extends ff {
                 !tg.a((byte) -63, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 if (param0) {
-                  jl.c((byte) 94);
+                  jl.clearStaticReferences((byte) 94);
                 }
                 for (var6 = 0; var6 < param1.length(); var6++) {
                   var7 = param1.charAt(var6);

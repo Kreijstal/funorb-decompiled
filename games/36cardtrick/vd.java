@@ -122,7 +122,7 @@ final class vd extends he {
             dg.field_F = param13;
             kj.field_t = param1;
             if (param5 < 44) {
-              vd.e(65);
+              vd.clearStaticReferences(65);
             }
             if (null != td.field_b.field_x) {
               try {
@@ -218,7 +218,7 @@ final class vd extends he {
         return var2.toString();
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 <= 45) {
           return;

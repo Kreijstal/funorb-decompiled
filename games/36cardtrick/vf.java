@@ -9,7 +9,7 @@ abstract class vf {
 
     abstract byte[] a(byte param0);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 >= -88) {
           field_a = (cc) null;

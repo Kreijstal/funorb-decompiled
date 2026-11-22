@@ -138,7 +138,7 @@ final class ce extends td {
         return this.field_s;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -27) {
           return;
         }

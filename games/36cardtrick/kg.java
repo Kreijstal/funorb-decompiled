@@ -8,7 +8,7 @@ final class kg {
 
     final static void b(byte param0) {
         if (param0 <= 3) {
-          kg.a((byte) -28);
+          kg.clearStaticReferences((byte) -28);
           if (!g.j(7)) {
             return;
           }
@@ -27,7 +27,7 @@ final class kg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 < 83) {

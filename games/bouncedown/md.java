@@ -45,7 +45,7 @@ final class md extends gj {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_v = null;
         if (param0 <= -50) {

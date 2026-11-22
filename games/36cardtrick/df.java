@@ -15,7 +15,7 @@ final class df {
     private static int[] field_h;
     private int[] field_g;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_h = null;
         field_c = null;
         field_d = null;

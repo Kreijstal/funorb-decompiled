@@ -18,7 +18,7 @@ final class gh extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_i = null;
         field_k = null;
@@ -42,7 +42,7 @@ final class gh extends IntrusiveNode {
     final static void a(li param0, byte param1) {
         try {
           if (param1 > -59) {
-            gh.a(-108);
+            gh.clearStaticReferences(-108);
           }
           aj.field_s.a(new gi(param0, param0), 27362);
           bg.field_tb.b(param0);

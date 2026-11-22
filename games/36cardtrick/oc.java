@@ -97,7 +97,7 @@ final class oc {
         int var7 = 0;
         try {
           if (param3 != 88) {
-            oc.a(101);
+            oc.clearStaticReferences(101);
           }
           uk.a(this.field_f, (byte) -104, param1.field_q, param2 + param1.field_i, param1.field_h, param1.field_o + param0);
           if (null != this.field_b) {
@@ -171,7 +171,7 @@ final class oc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 > -40) {
           field_h = (int[]) null;
@@ -222,7 +222,7 @@ final class oc {
           var8 = new bg(sd.field_c, param1);
           sd.field_c.b(var8, (byte) -121);
           if (param5 != 0) {
-            oc.a(-71);
+            oc.clearStaticReferences(-71);
           }
           if (md.a((byte) -101)) {
             var8.f((byte) -42);

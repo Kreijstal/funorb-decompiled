@@ -30,7 +30,7 @@ final class pa extends dg {
               var3_ref.printStackTrace();
             }
             if (param2 >= -5) {
-              pa.f((byte) -124);
+              pa.clearStaticReferences((byte) -124);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -431,7 +431,7 @@ final class pa extends dg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -47) {
           return;
         }

@@ -250,7 +250,7 @@ abstract class tj extends DualLinkNode {
         return var11;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_z = null;
         field_n = null;
     }

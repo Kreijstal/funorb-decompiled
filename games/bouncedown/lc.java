@@ -434,7 +434,7 @@ class lc extends lk implements ik {
         this.field_w = new bc();
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 36368) {
           return;
         }

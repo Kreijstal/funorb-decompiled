@@ -10,7 +10,7 @@ final class di implements Iterator {
     private DualLinkNode field_d;
     private wh field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (!param0) {
           field_a = (String) null;

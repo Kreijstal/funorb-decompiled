@@ -54,7 +54,7 @@ final class ab extends la {
         return 100;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 >= -67) {
           return;

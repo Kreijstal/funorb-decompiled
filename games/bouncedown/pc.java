@@ -392,7 +392,7 @@ final class pc implements Runnable {
         return;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_j = null;
         field_p = null;

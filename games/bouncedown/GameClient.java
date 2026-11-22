@@ -293,7 +293,7 @@ abstract class GameClient extends AppletShell {
           qi.a(ea.field_e, kg.field_b, (byte) -125, pa.field_i) &&
           ee.a(ea.field_e, (byte) 106)) {
           qe.c(443111233);
-          pb.b(16);
+          pb.clearStaticReferences(16);
           pa.field_e = false;
           ea.field_c = dh.field_d;
           td.a(1, ea.field_e, pa.field_i, kg.field_b, ba.field_B);

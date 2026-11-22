@@ -210,7 +210,7 @@ class vc extends wd {
     final void a(int param0, byte param1, int param2, int param3) {
         this.b(((sf) ((Object) this.field_j)).a((lk) (this), 1), 80, param3, param2, param0);
         if (param1 != -65) {
-          vc.f((byte) 8);
+          vc.clearStaticReferences((byte) 8);
         }
     }
 
@@ -344,7 +344,7 @@ class vc extends wd {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_F = null;
         if (param0 != -6) {

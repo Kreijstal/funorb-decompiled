@@ -50,7 +50,7 @@ abstract class cg extends k implements pi {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != 1) {
           return;

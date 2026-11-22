@@ -12,7 +12,7 @@ final class qk {
     static int field_a;
     static int field_e;
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_i = null;
         field_c = null;

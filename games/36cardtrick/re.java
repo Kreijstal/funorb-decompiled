@@ -69,7 +69,7 @@ final class re {
           return 480;
         }
         if (param1 != 17) {
-          re.a(3);
+          re.clearStaticReferences(3);
         }
         return ia.field_c[fh.field_G[this.field_i][param0]].field_o;
     }
@@ -476,7 +476,7 @@ final class re {
         ia.field_d = null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 != -4) {
           return;

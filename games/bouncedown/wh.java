@@ -87,7 +87,7 @@ final class wh implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -46) {
           field_b = (eh) null;
           field_c = null;
@@ -107,7 +107,7 @@ final class wh implements Iterable {
           return;
         }
         if (param1 != 19406) {
-          wh.a((byte) -4);
+          wh.clearStaticReferences((byte) -4);
           if (param0 % 10L == 0L) {
             ba.a((byte) -123, -1L + param0);
             ba.a((byte) -126, 1L);

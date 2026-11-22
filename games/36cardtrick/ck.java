@@ -31,7 +31,7 @@ final class ck extends qg {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         field_I = null;
         if (param0 != 41) {

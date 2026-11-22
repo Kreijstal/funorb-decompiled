@@ -8,7 +8,7 @@ final class ub {
     static String field_e;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 == -104) {
           field_c = null;

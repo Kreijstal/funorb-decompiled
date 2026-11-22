@@ -245,7 +245,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           var2_int = param0.length();
           if (!param1) {
-            PacketBuffer.c((byte) -22);
+            PacketBuffer.clearStaticReferences((byte) -22);
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -615,7 +615,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != -127) {
           return;

@@ -311,7 +311,7 @@ final class gj implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 14) {
           field_a = (oe) null;
           field_a = null;

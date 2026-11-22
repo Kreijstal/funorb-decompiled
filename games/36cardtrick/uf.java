@@ -934,7 +934,7 @@ final class uf extends sf {
         }
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_nb = null;
         field_U = null;
     }

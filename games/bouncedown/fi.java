@@ -6,7 +6,7 @@ final class fi {
     static String field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -14935) {
           return;
         }
@@ -15,7 +15,7 @@ final class fi {
 
     final static boolean b(int param0) {
         if (param0 != 21856) {
-          fi.a(93);
+          fi.clearStaticReferences(93);
           if (null == kf.field_b) {
             return false;
           }

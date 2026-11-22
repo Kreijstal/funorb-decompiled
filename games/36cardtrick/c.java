@@ -3881,7 +3881,7 @@ abstract class c extends fj {
           jj.field_b = param4;
           eb.field_f = param1;
           this.g(90);
-          uh.b((byte) -79);
+          uh.clearStaticReferences((byte) -79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

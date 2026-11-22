@@ -80,7 +80,7 @@ final class lj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != -50) {
           field_c = (Calendar) null;
         }
@@ -90,7 +90,7 @@ final class lj {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_b = (String[]) null;

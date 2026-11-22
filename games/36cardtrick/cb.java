@@ -7,7 +7,7 @@ final class cb extends IntrusiveNode {
     static gd field_g;
     static int field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_j = null;
         if (param0 != -1962269296) {

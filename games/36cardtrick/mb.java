@@ -10,7 +10,7 @@ final class mb {
         try {
           j.j(-23687);
           if (param1 != 1024) {
-            mb.a(-72);
+            mb.clearStaticReferences(-72);
           }
           sd.field_c.k(126);
           i.field_a = new ak(ng.field_y, (String) null, ei.field_e, param2, param3);
@@ -32,7 +32,7 @@ final class mb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 1024) {
           field_a = null;
           field_b = null;

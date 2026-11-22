@@ -5,7 +5,7 @@ final class ab extends IntrusiveNode {
     static String field_g;
     int field_h;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -40) {
           return;
         }

@@ -7,7 +7,7 @@ final class gg {
     static boolean field_a;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_c = null;
         if (param0) {

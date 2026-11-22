@@ -385,7 +385,7 @@ final class mg {
         this.a(param2 ^ -6671);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         if (param0 <= 30) {
           return;

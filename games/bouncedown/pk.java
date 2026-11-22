@@ -853,7 +853,7 @@ final class pk extends wf {
         var7.field_C = -1;
         var7.field_A = 0;
         if (!param0) {
-          pk.d(-32);
+          pk.clearStaticReferences(-32);
         }
         if (this.field_s[param3] == 0) {
           var7.field_i = pi.a(var6, this.a(var7, true), this.b(var7, (byte) 68), this.a(var7, (byte) 53));
@@ -1102,7 +1102,7 @@ final class pk extends wf {
         this.a(true, var6Lifetime3 + (-128 & this.field_B[var4Lifetime4]), var4Lifetime4);
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -44) {
           return;
         }

@@ -13,7 +13,7 @@ class mi extends ff {
         return hc.field_h;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -3731) {
           return;
         }

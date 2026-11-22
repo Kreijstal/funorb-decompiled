@@ -102,7 +102,7 @@ final class ke {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -6) {
           field_c = (qa) null;
         }

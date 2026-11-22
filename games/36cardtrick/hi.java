@@ -5,7 +5,7 @@ final class hi {
     static boolean field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
         }

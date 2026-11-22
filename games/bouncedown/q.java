@@ -87,7 +87,7 @@ final class q extends lc implements rf, rc {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_N = null;
         if (param0 >= -102) {

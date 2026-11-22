@@ -10,7 +10,7 @@ final class bf extends al {
     static int[] field_j;
     static tg field_o;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_o = null;
         field_p = null;

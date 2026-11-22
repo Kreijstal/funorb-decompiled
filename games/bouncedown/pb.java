@@ -68,7 +68,7 @@ final class pb {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param1 < 108) {
-          pb.b(44);
+          pb.clearStaticReferences(44);
           var2 = param0 & 255;
           if (var2 != 0) {
             if (var2 >= 128 &&
@@ -187,7 +187,7 @@ final class pb {
         return var2;
     }
 
-    final static void b(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 16) {
           field_k = (qh) null;
         }

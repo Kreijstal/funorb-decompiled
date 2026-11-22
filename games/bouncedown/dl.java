@@ -5,7 +5,7 @@ final class dl {
     static boolean field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 10) {
           return;
         }

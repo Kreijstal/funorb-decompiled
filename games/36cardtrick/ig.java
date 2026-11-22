@@ -290,7 +290,7 @@ final class ig extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_k = null;
         field_E = null;
         field_L = null;

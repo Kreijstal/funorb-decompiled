@@ -241,7 +241,7 @@ final class ha {
               return stackIn_84_0;
             }
             if (param2 < 7) {
-              ha.a(-3);
+              ha.clearStaticReferences(-3);
             }
             if (cb.field_j == null) {
               if (lk.field_w) {
@@ -286,7 +286,7 @@ final class ha {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -98) {
           field_c = (String) null;
         }

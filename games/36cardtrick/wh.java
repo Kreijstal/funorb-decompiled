@@ -263,7 +263,7 @@ final class wh {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 115) {
           field_a = (lb) null;
         }

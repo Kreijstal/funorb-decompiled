@@ -34,7 +34,7 @@ final class kf extends IntrusiveNode {
               ed.field_c = ed.field_c + 1;
             }
             if (param0 <= 58) {
-              kf.b((byte) 115);
+              kf.clearStaticReferences((byte) 115);
             }
             if (ed.field_c == 1) {
               if (d.field_a.field_a == 2) {
@@ -148,7 +148,7 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         if (param0 <= 104) {
           field_j = (String) null;

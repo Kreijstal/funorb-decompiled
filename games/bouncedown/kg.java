@@ -461,7 +461,7 @@ final class kg {
         return this;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_j = null;
         field_g = null;

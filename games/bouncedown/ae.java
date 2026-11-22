@@ -12,7 +12,7 @@ final class ae {
     static PacketBuffer field_a;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 < -81) {
           field_g = null;

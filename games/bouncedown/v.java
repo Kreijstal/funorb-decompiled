@@ -34,7 +34,7 @@ abstract class v {
 
     final static void d(byte param0) {
         if (param0 <= 37) {
-          v.b(-27);
+          v.clearStaticReferences(-27);
         }
         if (!vc.d((byte) -96)) {
           return;
@@ -42,7 +42,7 @@ abstract class v {
         nj.a(false, -25698, 4);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -8217) {
           return;
         }
@@ -67,7 +67,7 @@ abstract class v {
         var9 = Bounce.field_N;
         try {
           if (param4 != -110) {
-            v.b(76);
+            v.clearStaticReferences(76);
           }
           var6_int = param2 - param3;
           for (var7 = 0; var7 < var6_int; var7++) {

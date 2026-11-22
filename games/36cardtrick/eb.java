@@ -147,7 +147,7 @@ final class eb {
           while (true) {
             if (var2_int <= var3) {
               if (param0 != -3124) {
-                eb.a(false);
+                eb.clearStaticReferences(false);
               }
               stackIn_13_0 = ij.field_i;
               return stackIn_13_0;
@@ -201,7 +201,7 @@ final class eb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         field_l = null;
         if (!param0) {
@@ -221,7 +221,7 @@ final class eb {
           pf.field_h = param6;
           ej.field_kb = param7;
           if (param5 > -52) {
-            eb.a(true);
+            eb.clearStaticReferences(true);
           }
           dg.field_H = (ch) ((Object) new a());
           sc.field_b = new gj(param0);

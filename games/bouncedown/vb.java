@@ -19,7 +19,7 @@ final class vb implements fc {
     private int field_e;
     private int field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_k = null;
         field_g = null;
@@ -304,7 +304,7 @@ final class vb implements fc {
         ph.field_c = (byte[][]) null;
         cl.field_n = null;
         if (param0 != 122) {
-          vb.a(75);
+          vb.clearStaticReferences(75);
         }
         he.field_k = null;
         ae.field_c = null;

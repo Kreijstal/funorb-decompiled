@@ -383,7 +383,7 @@ final class mi {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_e = null;
         if (param0 >= -71) {
@@ -419,7 +419,7 @@ final class mi {
             var7.b(param2.field_g[var5], (byte) -59);
           }
           if (param1 >= -58) {
-            mi.b((byte) -128);
+            mi.clearStaticReferences((byte) -128);
           }
           var8.b(var4, -1);
           var8.b(-var4 + var8.field_h, true);

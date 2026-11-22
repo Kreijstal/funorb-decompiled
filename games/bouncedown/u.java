@@ -10,7 +10,7 @@ final class u {
     static boolean field_g;
     private int[][] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
         }

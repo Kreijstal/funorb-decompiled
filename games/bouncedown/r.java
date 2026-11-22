@@ -110,7 +110,7 @@ final class r implements fc {
         return (rg) null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 != 51) {

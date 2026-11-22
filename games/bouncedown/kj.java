@@ -6,7 +6,7 @@ final class kj extends IntrusiveNode {
     static String field_g;
     static int field_i;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

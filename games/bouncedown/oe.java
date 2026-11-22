@@ -70,7 +70,7 @@ final class oe {
         this.field_d[param0] = this.field_d[param0] + var2;
     }
 
-    public static void g() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

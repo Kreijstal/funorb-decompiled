@@ -483,7 +483,7 @@ class ek implements ci, ne {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 61) {
           field_a = (String[]) null;
         }
@@ -663,7 +663,7 @@ class ek implements ci, ne {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 < 15) {
-          ek.a((byte) 49);
+          ek.clearStaticReferences((byte) 49);
         }
         ji.a(true);
         vj.f(param2, param0, param1, param4);

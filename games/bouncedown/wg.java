@@ -56,7 +56,7 @@ final class wg extends tc {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         field_v = null;
         if (param0 != 13922) {

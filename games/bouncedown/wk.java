@@ -17,7 +17,7 @@ abstract class wk extends ri {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         if (param0 != 38) {
           field_H = (String) null;
@@ -201,7 +201,7 @@ abstract class wk extends ri {
         }
         this.field_L = param3;
         if (param0 != 126) {
-          wk.g((byte) 74);
+          wk.clearStaticReferences((byte) 74);
         }
         this.field_F = param2;
         this.field_I = this.field_k;

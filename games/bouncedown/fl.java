@@ -5,7 +5,7 @@ final class fl {
     static int[] field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 8192) {
           field_b = (int[]) null;

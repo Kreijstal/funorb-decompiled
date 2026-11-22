@@ -7,7 +7,7 @@ final class ig {
     static eh field_b;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }

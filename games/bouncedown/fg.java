@@ -329,7 +329,7 @@ final class fg {
         return;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_g = null;
         field_i = null;
         field_h = null;

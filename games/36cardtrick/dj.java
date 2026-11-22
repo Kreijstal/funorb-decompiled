@@ -17,7 +17,7 @@ final class dj {
         return qd.field_a;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 <= 48) {
           field_f = (nc) null;

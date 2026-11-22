@@ -36,7 +36,7 @@ final class ia {
         return 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -12765) {
           field_c = null;
           field_f = null;

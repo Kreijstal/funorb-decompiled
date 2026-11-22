@@ -70,7 +70,7 @@ final class ac extends RuntimeException {
         try {
           var9 = new pb(param1);
           if (param0 > -54) {
-            ac.a((byte) -15);
+            ac.clearStaticReferences((byte) -15);
           }
           var3 = var9.f(-124);
           var4 = var9.e((byte) 126);
@@ -118,7 +118,7 @@ final class ac extends RuntimeException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != -118) {
           field_c = (String) null;

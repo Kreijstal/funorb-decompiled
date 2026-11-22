@@ -87,7 +87,7 @@ final class od {
           this.a(0, var5);
           return;
         }
-        od.a(-67);
+        od.clearStaticReferences(-67);
         var5Lifetime1 = (eg) (this.field_b.a((byte) 118, param1));
         this.a(0, var5Lifetime1);
     }
@@ -116,7 +116,7 @@ final class od {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            od.a(68);
+            od.clearStaticReferences(68);
           }
           if (param1 == null) {
             return;
@@ -139,7 +139,7 @@ final class od {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_c = null;
         if (param0 != 0) {

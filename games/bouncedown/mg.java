@@ -207,7 +207,7 @@ final class mg extends al {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         field_j = null;

@@ -6,7 +6,7 @@ final class ud {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (int[][]) null;
         if (param0 != 21316) {
           field_a = (int[][]) null;

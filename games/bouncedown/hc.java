@@ -123,7 +123,7 @@ final class hc {
             }
             var3 = param0.substring(0, var2_int);
             if (param1 != 4011) {
-              hc.a(true);
+              hc.clearStaticReferences(true);
             }
             var4 = param0.substring(1 + var2_int);
             var5 = qd.a(var3, param1 - 3915);
@@ -233,7 +233,7 @@ final class hc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_d = null;
         if (!param0) {

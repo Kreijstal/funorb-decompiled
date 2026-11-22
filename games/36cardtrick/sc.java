@@ -314,7 +314,7 @@ final class sc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 178313985) {
           field_c = (String) null;

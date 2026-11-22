@@ -102,7 +102,7 @@ final class pa {
         }
         int var3 = 0;
         if (param1 != 7) {
-          pa.b(-20);
+          pa.clearStaticReferences(-20);
         }
         long var4 = param0;
         while (0L != var4) {
@@ -126,7 +126,7 @@ final class pa {
         return var6.toString();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -173,7 +173,7 @@ final class pa {
             return;
           }
           if (param0 != -65) {
-            pa.b(110);
+            pa.clearStaticReferences(110);
           }
           kf.field_b.a(aj.field_f, true, true, kl.field_t);
           kf.field_b.d((byte) 120);

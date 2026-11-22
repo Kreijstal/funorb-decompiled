@@ -24,7 +24,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           ib.a(param1, this.field_e, (byte) 110);
           if (param0 >= -106) {
-            jb.a(true);
+            jb.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -34,7 +34,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

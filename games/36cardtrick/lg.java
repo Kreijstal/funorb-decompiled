@@ -40,7 +40,7 @@ final class lg {
     int[][] field_B;
     private static String field_K;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 18002) {
           field_c = (int[]) null;

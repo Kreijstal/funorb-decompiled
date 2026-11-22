@@ -618,7 +618,7 @@ final class Slime {
         int var1 = 28 / ((73 - param0) / 37);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_b = null;
         if (param0 != 100) {

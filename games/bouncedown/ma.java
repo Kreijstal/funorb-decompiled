@@ -20,7 +20,7 @@ abstract class ma extends DualLinkNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_u = null;
         if (param0 != 65) {

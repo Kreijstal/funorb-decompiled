@@ -22,7 +22,7 @@ final class sg {
         return ri.field_c;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_f = null;
         if (param0 == 511) {

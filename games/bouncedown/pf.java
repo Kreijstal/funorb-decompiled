@@ -23,7 +23,7 @@ final class pf extends ak {
         this.field_x = (lk) ((Object) this.a(false));
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         if (param0 != -1) {
           field_A = (int[]) null;

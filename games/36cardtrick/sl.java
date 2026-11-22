@@ -6,7 +6,7 @@ final class sl {
     static ph field_b;
     static boolean field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -3) {
           return;

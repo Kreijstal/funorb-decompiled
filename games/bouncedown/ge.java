@@ -21,7 +21,7 @@ final class ge {
         return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, hg.field_j, bf.field_p, wh.field_b, fh.field_C};
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -69) {
           return;
         }

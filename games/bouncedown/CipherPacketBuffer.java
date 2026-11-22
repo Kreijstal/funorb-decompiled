@@ -12,7 +12,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_m = this.field_h * param0;
     }
 
-    public static void l(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

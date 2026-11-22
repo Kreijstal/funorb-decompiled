@@ -9,7 +9,7 @@ final class ni {
     static Boolean field_f;
     static tk field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -38,7 +38,7 @@ final class ni {
           var6 = param2.a(param3, (byte) -115, param1);
           var5 = var6;
           if (param0 != 65) {
-            ni.a((byte) -2);
+            ni.clearStaticReferences((byte) -2);
           }
           if (var6 == null) {
             return null;

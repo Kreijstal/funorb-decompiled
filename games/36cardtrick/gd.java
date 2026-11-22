@@ -376,7 +376,7 @@ class gd {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_o = null;
     }
 

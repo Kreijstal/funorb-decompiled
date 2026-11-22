@@ -6,7 +6,7 @@ final class qg extends IntrusiveNode {
     static mf field_g;
     int field_h;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 57) {
           field_g = (mf) null;

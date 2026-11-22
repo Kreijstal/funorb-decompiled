@@ -794,7 +794,7 @@ final class jb {
         jb.a(param0, param1, param2, param3, param4, param5, jb.b(var20Lifetime1, param6), jb.b(var20Lifetime1, param7), jb.b(var20Lifetime1, param8));
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_p = null;
         field_b = null;

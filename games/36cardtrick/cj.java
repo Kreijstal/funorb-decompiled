@@ -9,7 +9,7 @@ class cj extends he {
     cj() {
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_l = null;
         if (param0 != 110) {
@@ -25,7 +25,7 @@ class cj extends he {
           ca.a(param2, param3, param0, -25188);
           we.a(0);
           if (param4 < 125) {
-            cj.b((byte) 57);
+            cj.clearStaticReferences((byte) 57);
           }
           jc.field_P = tj.field_F;
           ei.field_d = tj.field_F;

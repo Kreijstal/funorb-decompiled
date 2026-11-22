@@ -39,7 +39,7 @@ final class te extends IntrusiveNode {
     private float[] field_M;
     private static int[] field_p;
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_B = null;
         field_N = null;
         field_z = null;

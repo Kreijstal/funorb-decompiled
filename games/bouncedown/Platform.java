@@ -103,7 +103,7 @@ final class Platform {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_f = null;
         field_k = null;

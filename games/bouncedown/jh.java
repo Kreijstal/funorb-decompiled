@@ -67,7 +67,7 @@ final class jh extends jd {
         this(2188450, 2591221, 9543);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_r = (byte[][]) null;
         if (param0 != -1) {
@@ -78,7 +78,7 @@ final class jh extends jd {
 
     final static boolean b(int param0) {
         if (param0 != 767564065) {
-          jh.c(64);
+          jh.clearStaticReferences(64);
           return pg.field_c;
         }
         return pg.field_c;

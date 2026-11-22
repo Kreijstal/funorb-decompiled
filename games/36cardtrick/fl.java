@@ -41,7 +41,7 @@ final class fl {
     final static void b(int param0, int param1) {
         w var2 = na.field_r;
         if (param0 != 1) {
-          fl.a(-53);
+          fl.clearStaticReferences(-53);
         }
         var2.h(param1, 0);
         var2.b(-9469, 1);
@@ -307,7 +307,7 @@ final class fl {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 31237) {
           field_h = (int[]) null;
         }

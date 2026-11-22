@@ -23,7 +23,7 @@ final class t extends eg {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 != -32504) {
           field_r = (String[]) null;

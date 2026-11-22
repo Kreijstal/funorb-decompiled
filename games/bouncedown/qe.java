@@ -177,7 +177,7 @@ final class qe extends ng {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         field_c = null;

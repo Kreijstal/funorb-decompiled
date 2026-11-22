@@ -82,7 +82,7 @@ final class ij {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_i = null;
         if (param0 == 3) {

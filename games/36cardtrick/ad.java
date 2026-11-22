@@ -19,11 +19,11 @@ final class ad extends IntrusiveNode {
 
     final static void a(int param0) {
         if (param0 < 40) {
-          ad.d(90);
+          ad.clearStaticReferences(90);
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_q = null;
         field_i = null;

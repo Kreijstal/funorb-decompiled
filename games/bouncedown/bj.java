@@ -60,7 +60,7 @@ final class bj extends ak {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         if (param0 > -107) {
           field_E = (ng) null;
@@ -123,7 +123,7 @@ final class bj extends ak {
             var18.field_m = new byte[var18.field_j][][];
             var18.field_s = new mk[var18.field_j];
             if (param1 >= -123) {
-              bj.k(26);
+              bj.clearStaticReferences(26);
             }
             for (var5 = 0; var18.field_j > var5; var5++) {
               try {
@@ -315,7 +315,7 @@ final class bj extends ak {
 
     final static String j(int param0) {
         if (param0 != 44) {
-          bj.k(19);
+          bj.clearStaticReferences(19);
         }
         if (null == ja.field_b) {
           return "";

@@ -34,7 +34,7 @@ final class ph {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
@@ -66,7 +66,7 @@ final class ph {
               var4 = param1.getParameter("cookiehost");
               var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
               if (param2 <= 28) {
-                ph.a(-77);
+                ph.clearStaticReferences(-77);
               }
               if (param0.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";

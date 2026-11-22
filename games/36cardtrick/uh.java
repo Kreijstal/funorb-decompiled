@@ -137,13 +137,13 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    final static void b(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 > -62) {
           field_l = (Random) null;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_l = null;
         if (param0 != -12908) {

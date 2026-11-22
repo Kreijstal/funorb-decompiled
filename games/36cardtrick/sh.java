@@ -11,7 +11,7 @@ final class sh extends mh {
     static qk field_g;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_k = null;
         field_f = null;

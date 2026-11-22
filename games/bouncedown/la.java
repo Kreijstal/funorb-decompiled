@@ -10,7 +10,7 @@ final class la extends wd {
     static Random field_C;
     static tg[] field_E;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_D = null;
         if (param0 != -59) {
           return;

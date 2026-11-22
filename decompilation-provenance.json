@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
       "sources": {
         "files": 295,
-        "sha256": "fbf880a1e2cfca33323e240c802a02ecbe72001ea58bb492a7a38ce13b22c83b"
+        "sha256": "edf0adc03c002cd2d58c4dbdd74199b2c9e2a4194f4766048cbbce896bf69619"
       },
       "dictionary": {
         "path": "decompilation/36cardtrick-naming.json",
-        "sha256": "cd2ae82c2f7ab5148f0ffa913c3d3b5f40df78ea55873e586133c77aa7e020b8"
+        "sha256": "aabc6afbb86b3ff86024e252dc1813dcf6d666954289f0fa0e5d7e2949013cf9"
       },
       "readingGuide": {
         "path": "games/36cardtrick/README.md",
         "sha256": "6610c0080011456c4631164e40d40596f9c58a8f54f71ffcb0d092d2363f8017"
       },
-      "rulesSha256": "1f9b0035c5d51762796b8418d0e58cced7ae73cb657534d0b298191b3095f890",
+      "rulesSha256": "d95906d7d61b9841f53be635253eac91bf6d9707d775899fa48bd89b4698d66a",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10612,17 +10612,17 @@
       "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
       "sources": {
         "files": 289,
-        "sha256": "c93e847651694763339ee72c18113e3e40b548f0a43d92478f2c8fc6280e4389"
+        "sha256": "948ebb407fff38e03adc7c454c13867fef6a6b146f61c750d0a893f3850bb7d6"
       },
       "dictionary": {
         "path": "decompilation/bouncedown-naming.json",
-        "sha256": "848421943a2883b1952e11fef6056d6726e6790e0415a5b1182490d2290cccec"
+        "sha256": "3c7f7e5c5ed24709e45490c6012eca16ceadbde3ba0512d4bd9d48096db8379c"
       },
       "readingGuide": {
         "path": "games/bouncedown/README.md",
         "sha256": "2f1fdc010a7e9515e4e1c9012026d1ab0c8acb41a9c9c216b6c3e9fab224312c"
       },
-      "rulesSha256": "c2518623dfe2555cccdee4ef6e5fafbe7fa6538274b99d51fd54bdea6acb9a38",
+      "rulesSha256": "f4bf1fc9460ba554feedab75deeeb8f0287ee4c915018e3f61b0ff304a78df2f",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11524,7 +11524,7 @@
         },
         "publishedSources": {
           "files": 295,
-          "sha256": "fbf880a1e2cfca33323e240c802a02ecbe72001ea58bb492a7a38ce13b22c83b"
+          "sha256": "edf0adc03c002cd2d58c4dbdd74199b2c9e2a4194f4766048cbbce896bf69619"
         }
       },
       "aceofskies": {
@@ -11793,7 +11793,7 @@
         },
         "publishedSources": {
           "files": 289,
-          "sha256": "c93e847651694763339ee72c18113e3e40b548f0a43d92478f2c8fc6280e4389"
+          "sha256": "948ebb407fff38e03adc7c454c13867fef6a6b146f61c750d0a893f3850bb7d6"
         }
       },
       "brickabrac": {

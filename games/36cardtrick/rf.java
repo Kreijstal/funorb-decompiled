@@ -69,7 +69,7 @@ final class rf implements Runnable {
           ij.field_e = vd.field_s;
           d.field_s = oa.field_d;
           if (param0 > -48) {
-            rf.b(-41);
+            rf.clearStaticReferences(-41);
           }
           oa.field_d = false;
           dl.field_h = kk.field_b;
@@ -224,7 +224,7 @@ final class rf implements Runnable {
         this.field_b = null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -19749) {
           return;
         }

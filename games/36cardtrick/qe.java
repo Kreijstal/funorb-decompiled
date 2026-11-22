@@ -10,7 +10,7 @@ final class qe extends g implements cl, qh {
     static de field_H;
     static int field_I;
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 73) {
           return;
         }

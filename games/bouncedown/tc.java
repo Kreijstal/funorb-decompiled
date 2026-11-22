@@ -28,7 +28,7 @@ class tc extends jd {
             if (param1 == 6091) {
               return;
             }
-            tc.a(true);
+            tc.clearStaticReferences(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -53,7 +53,7 @@ class tc extends jd {
         this(sg.field_a, param0);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         field_s = null;
         if (param0) {

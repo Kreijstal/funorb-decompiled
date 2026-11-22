@@ -21,7 +21,7 @@ final class jk {
         db.field_a = new kl();
         vb.field_h.c(db.field_a, (byte) 48);
         if (param0) {
-          jk.a((byte) 87);
+          jk.clearStaticReferences((byte) 87);
         }
     }
 
@@ -37,7 +37,7 @@ final class jk {
         return this.field_f;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;

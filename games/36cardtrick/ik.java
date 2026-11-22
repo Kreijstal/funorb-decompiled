@@ -458,7 +458,7 @@ final class ik extends m {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_M = null;
         field_D = null;
         field_G = null;

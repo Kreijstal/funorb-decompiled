@@ -49,7 +49,7 @@ final class al {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -22) {
           field_c = (String) null;
           field_c = null;
