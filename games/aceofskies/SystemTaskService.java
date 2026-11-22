@@ -144,7 +144,7 @@ final class SystemTaskService implements Runnable {
                   case 16:
                   default:
                     if (!this.field_q) {
-                      throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw SystemTaskService.<RuntimeException>throwUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 21:
@@ -206,21 +206,21 @@ final class SystemTaskService implements Runnable {
                           Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var14[0], var14[1], new Integer(var8.field_c), new Integer(var8.field_b), var14[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw SystemTaskService.<RuntimeException>throwUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_f.startsWith("win")) {
-                              throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw SystemTaskService.<RuntimeException>throwUnchecked(new Exception());
                             }
                             String var13 = (String) (var8.field_e);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw SystemTaskService.<RuntimeException>throwUnchecked(new Exception());
                             }
                             String var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (int var5 = 0; var5 < var13.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var13.charAt(var5)) == -1) {
-                                throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw SystemTaskService.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -229,7 +229,7 @@ final class SystemTaskService implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             Exception var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var8.field_f = var3_ref3;
-                            throw SystemTaskService.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw SystemTaskService.<RuntimeException>throwUnchecked(var3_ref3);
                           }
                         }
                         break;
@@ -631,7 +631,7 @@ final class SystemTaskService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

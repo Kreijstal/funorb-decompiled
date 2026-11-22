@@ -279,7 +279,7 @@ final class PlatformService implements Runnable {
                   case 16:
                   default:
                     if (!this.booleanState0043) {
-                      throw PlatformService.<RuntimeException>computeRuntimeException0508(new Exception(""));
+                      throw PlatformService.<RuntimeException>throwUnchecked(new Exception(""));
                     }
                     switch (integerLocal5) {
                       case 21:
@@ -323,21 +323,21 @@ final class PlatformService implements Runnable {
                           Class.forName("RenderingSupport005").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.objectState0002, new Object[]{objectArrayLocal23[0], objectArrayLocal23[1], new Integer(asyncTaskLocal16.integerState0509), new Integer(asyncTaskLocal16.integerState0508), objectArrayLocal23[2]});
                         } else {
                           if (16 != integerLocal5) {
-                            throw PlatformService.<RuntimeException>computeRuntimeException0508(new Exception(""));
+                            throw PlatformService.<RuntimeException>throwUnchecked(new Exception(""));
                           }
                           try {
                             if (!stringState0171.startsWith("win")) {
-                              throw PlatformService.<RuntimeException>computeRuntimeException0508(new Exception());
+                              throw PlatformService.<RuntimeException>throwUnchecked(new Exception());
                             }
                             stringLocal25 = (String) (asyncTaskLocal16.objectState0003);
                             if (!stringLocal25.startsWith("http://") &&
                               !stringLocal25.startsWith("https://")) {
-                              throw PlatformService.<RuntimeException>computeRuntimeException0508(new Exception());
+                              throw PlatformService.<RuntimeException>throwUnchecked(new Exception());
                             }
                             stringLocal14 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (integerLocal1 = 0; stringLocal25.length() > integerLocal1; integerLocal1++) {
                               if (stringLocal14.indexOf((int) stringLocal25.charAt(integerLocal1)) == -1) {
-                                throw PlatformService.<RuntimeException>computeRuntimeException0508(new Exception());
+                                throw PlatformService.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + stringLocal25 + "\"");
@@ -346,7 +346,7 @@ final class PlatformService implements Runnable {
                             caughtExceptionLocal3 = caughtParameterLocal31;
                             exceptionLocal11 = (Exception) (Object) caughtExceptionLocal3;
                             asyncTaskLocal16.objectState0004 = exceptionLocal11;
-                            throw PlatformService.<RuntimeException>computeRuntimeException0508(exceptionLocal11);
+                            throw PlatformService.<RuntimeException>throwUnchecked(exceptionLocal11);
                           }
                         }
                         break;
@@ -627,7 +627,7 @@ final class PlatformService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException0508(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

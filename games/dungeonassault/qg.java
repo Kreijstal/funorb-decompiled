@@ -212,7 +212,7 @@ final class qg implements Runnable {
                   case 16:
                   default:
                     if (!this.field_j) {
-                      throw qg.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw qg.<RuntimeException>throwUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 5:
@@ -264,21 +264,21 @@ final class qg implements Runnable {
                           Class.forName("w").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_s, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_b), var12[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw qg.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw qg.<RuntimeException>throwUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_n.startsWith("win")) {
-                              throw qg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw qg.<RuntimeException>throwUnchecked(new Exception());
                             }
                             var13 = (String) (var8.field_d);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw qg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw qg.<RuntimeException>throwUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var13.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var13.charAt(var5)) == -1) {
-                                throw qg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw qg.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -287,7 +287,7 @@ final class qg implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var8.field_f = var3_ref3;
-                            throw qg.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw qg.<RuntimeException>throwUnchecked(var3_ref3);
                           }
                         }
                         break;
@@ -664,7 +664,7 @@ final class qg implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

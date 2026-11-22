@@ -214,7 +214,7 @@ final class df implements Runnable {
                   case 16:
                   default:
                     if (!this.field_p) {
-                      throw df.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw df.<RuntimeException>throwUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -282,21 +282,21 @@ final class df implements Runnable {
                           Class.forName("jm").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_q, new Object[]{var11[0], var11[1], new Integer(var9.field_e), new Integer(var9.field_d), var11[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw df.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw df.<RuntimeException>throwUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_f.startsWith("win")) {
-                              throw df.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw df.<RuntimeException>throwUnchecked(new Exception());
                             }
                             var8 = (String) (var9.field_c);
                             if (!var8.startsWith("http://") &&
                               !var8.startsWith("https://")) {
-                              throw df.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw df.<RuntimeException>throwUnchecked(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var8.length(); var5++) {
                               if (var4.indexOf((int) var8.charAt(var5)) == -1) {
-                                throw df.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw df.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
@@ -305,7 +305,7 @@ final class df implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var9.field_f = var3_ref2;
-                            throw df.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw df.<RuntimeException>throwUnchecked(var3_ref2);
                           }
                         }
                         break;
@@ -615,7 +615,7 @@ final class df implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

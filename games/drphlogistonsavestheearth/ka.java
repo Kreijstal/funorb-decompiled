@@ -116,7 +116,7 @@ final class ka extends hj {
         if (var7 == null) {
           return this.b(31619);
         }
-        throw ka.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ka.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
@@ -399,7 +399,7 @@ final class ka extends hj {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

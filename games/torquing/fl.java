@@ -80,7 +80,7 @@ final class fl {
             return;
           }
         }
-        throw fl.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw fl.<RuntimeException>throwUnchecked(new Exception());
     }
 
     public final int[] listmodes() {
@@ -98,7 +98,7 @@ final class fl {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

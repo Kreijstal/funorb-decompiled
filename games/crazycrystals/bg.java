@@ -85,7 +85,7 @@ final class bg {
             return;
           }
         }
-        throw bg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw bg.<RuntimeException>throwUnchecked(new Exception());
     }
 
     public final void exit() {
@@ -100,7 +100,7 @@ final class bg {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

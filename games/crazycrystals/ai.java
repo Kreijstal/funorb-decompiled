@@ -38,7 +38,7 @@ final class ai implements Runnable {
               break;
             }
             if (this.field_k.position == this.field_k.payload.length) {
-              throw ai.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_i));
+              throw ai.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_i));
             }
             var1 = this;
             synchronized (var1) {
@@ -450,7 +450,7 @@ final class ai implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

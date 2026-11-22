@@ -1868,6 +1868,14 @@
       "renamedSymbol": "M:bd.reportClientError(Ljava/lang/Throwable;Ljava/lang/String;I)V"
     },
     {
+      "symbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bh.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:bi.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2252,6 +2260,14 @@
       "renamedSymbol": "M:PacketBuffer.backpatchByteLength(II)V"
     },
     {
+      "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleState.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:ea.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2434,6 +2450,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 7 null writes to 7 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ab003988c6fab9eb1b8d11d9e54e41d65d466b368c919f6229f752f132d884e1.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hd.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:he.a(Ljava/awt/Frame;I)Lmf;",
@@ -2836,6 +2860,14 @@
       "renamedSymbol": "M:nc.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmPlayerPump.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:nf.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3018,6 +3050,14 @@
       "evidence": "Returns the ClientException, appending context to an existing one or creating a new one.",
       "confidence": "reviewed",
       "renamedSymbol": "M:qk.wrapException(Ljava/lang/Throwable;Ljava/lang/String;)LClientException;"
+    },
+    {
+      "symbol": "M:ql.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:ql.b(Z)Ljava/net/Socket;",
@@ -3218,6 +3258,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 c8a7f2ce03f151b4cdad908759e10d057bfab0931e64d394764b0245ccbc7598.",
       "confidence": "reviewed",
       "renamedSymbol": "M:th.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ti.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:tl.b()V",
@@ -192237,9 +192285,9 @@
     },
     {
       "symbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:bh.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "bh.java",
         "start": 7543,
@@ -195768,9 +195816,9 @@
     },
     {
       "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:BattleState.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:BattleState.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "e.java",
         "start": 607885,
@@ -200619,9 +200667,9 @@
     },
     {
       "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "he.java",
         "start": 26062,
@@ -206834,9 +206882,9 @@
     },
     {
       "symbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:PcmPlayerPump.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:PcmPlayerPump.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "nf.java",
         "start": 2795,
@@ -209815,9 +209863,9 @@
     },
     {
       "symbol": "M:ql.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ProxySocketConnector.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ProxySocketConnector.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ql.java",
         "start": 25207,
@@ -212224,9 +212272,9 @@
     },
     {
       "symbol": "M:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ti.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ti.java",
         "start": 3424,
@@ -221387,7 +221435,7 @@
     },
     {
       "symbol": "P:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:bh.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -230825,7 +230873,7 @@
     },
     {
       "symbol": "P:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:BattleState.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:BattleState.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -242078,7 +242126,7 @@
     },
     {
       "symbol": "P:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -257984,7 +258032,7 @@
     },
     {
       "symbol": "P:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:PcmPlayerPump.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:PcmPlayerPump.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -265145,7 +265193,7 @@
     },
     {
       "symbol": "P:ql.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ProxySocketConnector.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ProxySocketConnector.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -270931,7 +270979,7 @@
     },
     {
       "symbol": "P:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ti.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -290739,7 +290787,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "dddb5a7764ec2d19df56beea0f6ee0026050d891e5fea0d03ac92fb14d812cee",
-      "outputSha256": "075c7a40ea40111485ce5ad9379b96fb83fa0bf1551ba5fee39f6a55842add4f",
+      "outputSha256": "799d41ec7494c6dcfc5e195e11e829c0e6704f31483aa042ca31b72e8d484146",
       "edits": [
         {
           "start": 131,
@@ -291015,11 +291063,25 @@
           "renamed": "position"
         },
         {
+          "start": 5966,
+          "end": 5982,
+          "symbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 6020,
           "end": 6027,
           "symbol": "F:dh.field_i:[B",
           "original": "field_i",
           "renamed": "payload"
+        },
+        {
+          "start": 7543,
+          "end": 7559,
+          "symbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -309446,7 +309508,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "78b78cc0d5779120aaef2e9a2604c5703026755a694604f003f864b33397458d",
+      "outputSha256": "68d400a265e4024afe1cdee3a0b72ad7bc9e6c8b20910a70ff17bbba4dd0f355",
       "edits": [
         {
           "start": 50,
@@ -318429,6 +318491,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 240985,
+          "end": 241001,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 241134,
           "end": 241143,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318466,6 +318535,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 243094,
+          "end": 243110,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 243243,
@@ -318544,6 +318620,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 246420,
+          "end": 246436,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 246571,
           "end": 246580,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318565,6 +318648,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 247302,
+          "end": 247318,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 247453,
@@ -318597,6 +318687,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 248180,
+          "end": 248196,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 248331,
           "end": 248340,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318618,6 +318715,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 248773,
+          "end": 248789,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 248924,
@@ -318643,6 +318747,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 249408,
+          "end": 249424,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 249559,
           "end": 249568,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318664,6 +318775,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 250046,
+          "end": 250062,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 250197,
@@ -318689,6 +318807,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 250892,
+          "end": 250908,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 251043,
           "end": 251052,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318710,6 +318835,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 251519,
+          "end": 251535,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 251670,
@@ -318757,6 +318889,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 252649,
+          "end": 252665,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 252800,
           "end": 252809,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318800,6 +318939,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 253653,
+          "end": 253669,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 253804,
@@ -318860,6 +319006,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 254677,
+          "end": 254693,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 254828,
           "end": 254837,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318881,6 +319034,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 255336,
+          "end": 255352,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 255487,
@@ -318956,6 +319116,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 256731,
+          "end": 256747,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 256882,
           "end": 256891,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -318977,6 +319144,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 257497,
+          "end": 257513,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 257648,
@@ -319009,6 +319183,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 258217,
+          "end": 258233,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 258368,
           "end": 258377,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319039,6 +319220,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 259026,
+          "end": 259042,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 259177,
           "end": 259186,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319060,6 +319248,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 259619,
+          "end": 259635,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 259770,
@@ -319090,6 +319285,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 260274,
+          "end": 260290,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 260425,
@@ -319175,6 +319377,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 263335,
+          "end": 263351,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 263486,
           "end": 263495,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319196,6 +319405,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 263963,
+          "end": 263979,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 264114,
@@ -319264,6 +319480,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 266473,
+          "end": 266489,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 266624,
@@ -319377,6 +319600,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 270095,
+          "end": 270111,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 270246,
           "end": 270255,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319398,6 +319628,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 270900,
+          "end": 270916,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 271051,
@@ -319453,6 +319690,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 272488,
+          "end": 272504,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 272639,
           "end": 272648,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319495,6 +319739,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 273189,
+          "end": 273205,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 273340,
@@ -319556,6 +319807,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 274235,
+          "end": 274251,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 274386,
           "end": 274395,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319585,6 +319843,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 275594,
+          "end": 275610,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 275745,
@@ -319761,6 +320026,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 279251,
+          "end": 279267,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 279402,
           "end": 279411,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319799,6 +320071,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 280296,
+          "end": 280312,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 280449,
           "end": 280458,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319829,6 +320108,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 281017,
+          "end": 281033,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 281170,
           "end": 281179,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319850,6 +320136,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 281800,
+          "end": 281816,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 281953,
@@ -319875,6 +320168,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 282445,
+          "end": 282461,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 282598,
           "end": 282607,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319898,6 +320198,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 283227,
+          "end": 283243,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 283380,
           "end": 283389,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -319919,6 +320226,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 283872,
+          "end": 283888,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 284025,
@@ -320004,6 +320318,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 287551,
+          "end": 287567,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 287704,
           "end": 287713,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320027,6 +320348,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 288367,
+          "end": 288383,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 288520,
           "end": 288529,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320048,6 +320376,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 289150,
+          "end": 289166,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 289303,
@@ -320081,6 +320416,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 290368,
+          "end": 290384,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 290521,
           "end": 290530,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320102,6 +320444,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 291059,
+          "end": 291075,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 291212,
@@ -320158,6 +320507,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 293575,
+          "end": 293591,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 293728,
           "end": 293737,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320179,6 +320535,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 294369,
+          "end": 294385,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 294522,
@@ -320218,6 +320581,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 296080,
+          "end": 296096,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 296233,
@@ -320303,6 +320673,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 299756,
+          "end": 299772,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 299909,
           "end": 299918,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320348,6 +320725,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 300800,
+          "end": 300816,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 300953,
           "end": 300962,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320376,6 +320760,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 301450,
+          "end": 301466,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 301603,
@@ -320468,6 +320859,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 304988,
+          "end": 305004,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 305141,
           "end": 305150,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320491,6 +320889,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 305587,
+          "end": 305603,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 305740,
           "end": 305749,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320512,6 +320917,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 306259,
+          "end": 306275,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 306412,
@@ -320544,6 +320956,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 306909,
+          "end": 306925,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 307062,
           "end": 307071,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320565,6 +320984,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 307688,
+          "end": 307704,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 307841,
@@ -320596,6 +321022,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 308658,
+          "end": 308674,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 308811,
@@ -320688,6 +321121,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 312212,
+          "end": 312228,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 312365,
           "end": 312374,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320764,6 +321204,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 315150,
+          "end": 315166,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 315303,
           "end": 315312,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320785,6 +321232,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 315822,
+          "end": 315838,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 315975,
@@ -320823,6 +321277,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 317155,
+          "end": 317171,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 317308,
@@ -320878,6 +321339,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 318851,
+          "end": 318867,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 319004,
           "end": 319013,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320899,6 +321367,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 319523,
+          "end": 319539,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 319676,
@@ -320931,6 +321406,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 320173,
+          "end": 320189,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 320326,
           "end": 320335,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -320959,6 +321441,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 320832,
+          "end": 320848,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 320985,
@@ -321029,6 +321518,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 323523,
+          "end": 323539,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 323676,
           "end": 323685,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321052,6 +321548,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 324302,
+          "end": 324318,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 324455,
           "end": 324464,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321073,6 +321576,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 324945,
+          "end": 324961,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 325098,
@@ -321122,6 +321632,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 327530,
+          "end": 327546,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 327683,
           "end": 327692,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321161,6 +321678,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 328861,
+          "end": 328877,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 329014,
           "end": 329023,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321198,6 +321722,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 330765,
+          "end": 330781,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 330918,
@@ -321276,6 +321807,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 334260,
+          "end": 334276,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 334413,
           "end": 334422,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321314,6 +321852,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 335677,
+          "end": 335693,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 335830,
           "end": 335839,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321335,6 +321880,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 336456,
+          "end": 336472,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 336609,
@@ -321366,6 +321918,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 337602,
+          "end": 337618,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 337755,
@@ -321411,6 +321970,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 338614,
+          "end": 338630,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 338767,
@@ -321482,6 +322048,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 341824,
+          "end": 341840,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 341977,
           "end": 341986,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321503,6 +322076,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 342603,
+          "end": 342619,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 342756,
@@ -321536,6 +322116,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 343760,
+          "end": 343776,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 343913,
           "end": 343922,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321565,6 +322152,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 344906,
+          "end": 344922,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 345059,
@@ -321643,6 +322237,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 348007,
+          "end": 348023,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 348160,
           "end": 348169,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321664,6 +322265,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 348781,
+          "end": 348797,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 348934,
@@ -321689,6 +322297,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 349418,
+          "end": 349434,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 349571,
           "end": 349580,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321710,6 +322325,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 350197,
+          "end": 350213,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 350350,
@@ -321743,6 +322365,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 351414,
+          "end": 351430,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 351567,
           "end": 351576,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321772,6 +322401,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 352514,
+          "end": 352530,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 352667,
@@ -321817,6 +322453,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 353884,
+          "end": 353900,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 354037,
@@ -321895,6 +322538,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 357265,
+          "end": 357281,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 357418,
           "end": 357427,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321918,6 +322568,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 357967,
+          "end": 357983,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 358120,
           "end": 358129,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -321939,6 +322596,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 358746,
+          "end": 358762,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 358899,
@@ -321970,6 +322634,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 359720,
+          "end": 359736,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 359873,
@@ -322015,6 +322686,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 360784,
+          "end": 360800,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 360937,
@@ -322086,6 +322764,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 364411,
+          "end": 364427,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 364564,
           "end": 364573,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322107,6 +322792,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 365190,
+          "end": 365206,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 365343,
@@ -322138,6 +322830,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 366378,
+          "end": 366394,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 366531,
@@ -322216,6 +322915,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 369835,
+          "end": 369851,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 369988,
           "end": 369997,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322274,6 +322980,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 372061,
+          "end": 372077,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 372214,
@@ -322366,6 +323079,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 375774,
+          "end": 375790,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 375927,
           "end": 375936,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322387,6 +323107,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 376553,
+          "end": 376569,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 376706,
@@ -322435,6 +323162,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 378505,
+          "end": 378521,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 378658,
           "end": 378667,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322464,6 +323198,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 379567,
+          "end": 379583,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 379720,
@@ -322540,6 +323281,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 383031,
+          "end": 383047,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 383184,
@@ -322621,6 +323369,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 385562,
+          "end": 385578,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 385715,
@@ -322727,6 +323482,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 389378,
+          "end": 389394,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 389531,
           "end": 389540,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322779,6 +323541,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 390598,
+          "end": 390614,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 390751,
           "end": 390760,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322802,6 +323571,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 391231,
+          "end": 391247,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 391384,
           "end": 391393,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322823,6 +323599,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 392010,
+          "end": 392026,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 392163,
@@ -322871,6 +323654,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 393962,
+          "end": 393978,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 394115,
           "end": 394124,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -322900,6 +323690,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 395150,
+          "end": 395166,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 395303,
@@ -322976,6 +323773,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 398740,
+          "end": 398756,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 398893,
@@ -323059,6 +323863,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 403229,
+          "end": 403245,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 403382,
@@ -323151,6 +323962,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 406984,
+          "end": 407000,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 407137,
           "end": 407146,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323189,6 +324007,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 408138,
+          "end": 408154,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 408291,
           "end": 408300,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323212,6 +324037,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 408775,
+          "end": 408791,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 408928,
           "end": 408937,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323233,6 +324065,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 409554,
+          "end": 409570,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 409707,
@@ -323281,6 +324120,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 411516,
+          "end": 411532,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 411669,
           "end": 411678,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323319,6 +324165,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 412674,
+          "end": 412690,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 412827,
           "end": 412836,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323355,6 +324208,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 414027,
+          "end": 414043,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 414180,
@@ -323440,6 +324300,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 417782,
+          "end": 417798,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 417935,
           "end": 417944,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323463,6 +324330,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 418710,
+          "end": 418726,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 418863,
           "end": 418872,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323484,6 +324358,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 419489,
+          "end": 419505,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 419642,
@@ -323533,6 +324414,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 421858,
+          "end": 421874,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 422011,
           "end": 422020,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323570,6 +324458,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 423726,
+          "end": 423742,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 423879,
@@ -323625,6 +324520,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 425452,
+          "end": 425468,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 425605,
           "end": 425614,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323654,6 +324556,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 426728,
+          "end": 426744,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 426881,
@@ -323703,6 +324612,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 429227,
+          "end": 429243,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 429380,
           "end": 429389,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323750,6 +324666,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 431371,
+          "end": 431387,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 431524,
           "end": 431533,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323789,6 +324712,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 432995,
+          "end": 433011,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 433148,
           "end": 433157,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323818,6 +324748,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 434211,
+          "end": 434227,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 434364,
@@ -323851,6 +324788,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 435497,
+          "end": 435513,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 435650,
           "end": 435659,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323872,6 +324816,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 436148,
+          "end": 436164,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 436301,
@@ -323905,6 +324856,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 437142,
+          "end": 437158,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 437295,
           "end": 437304,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -323926,6 +324884,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 437809,
+          "end": 437825,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 437962,
@@ -323988,6 +324953,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 439532,
+          "end": 439548,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 439685,
           "end": 439694,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324039,6 +325011,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 441309,
+          "end": 441325,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 441462,
@@ -324124,6 +325103,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 445042,
+          "end": 445058,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 445195,
           "end": 445204,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324147,6 +325133,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 445863,
+          "end": 445879,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 446016,
           "end": 446025,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324168,6 +325161,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 446505,
+          "end": 446521,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 446658,
@@ -324225,6 +325225,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 450268,
+          "end": 450284,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 450421,
           "end": 450430,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324246,6 +325253,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 451023,
+          "end": 451039,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 451176,
@@ -324308,6 +325322,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 452656,
+          "end": 452672,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 452809,
           "end": 452818,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324344,6 +325365,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 453637,
+          "end": 453653,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 453790,
@@ -324401,6 +325429,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 456984,
+          "end": 457000,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 457137,
           "end": 457146,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324430,6 +325465,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 458366,
+          "end": 458382,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 458519,
@@ -324513,6 +325555,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 460436,
+          "end": 460452,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 460589,
           "end": 460598,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324541,6 +325590,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 461306,
+          "end": 461322,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 461459,
@@ -324603,6 +325659,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 463681,
+          "end": 463697,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 463834,
           "end": 463843,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324624,6 +325687,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 464455,
+          "end": 464471,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 464608,
@@ -324699,6 +325769,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 465930,
+          "end": 465946,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 466083,
           "end": 466092,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324727,6 +325804,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 466801,
+          "end": 466817,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 466954,
@@ -324782,6 +325866,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 468452,
+          "end": 468468,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 468605,
           "end": 468614,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324810,6 +325901,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 469107,
+          "end": 469123,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 469260,
@@ -324895,6 +325993,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 472568,
+          "end": 472584,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 472721,
           "end": 472730,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324933,6 +326038,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 473691,
+          "end": 473707,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 473844,
           "end": 473853,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -324961,6 +326073,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 474350,
+          "end": 474366,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 474503,
@@ -325108,6 +326227,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 477497,
+          "end": 477513,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 477650,
           "end": 477659,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325139,6 +326265,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 478487,
+          "end": 478503,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 478640,
           "end": 478649,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325160,6 +326293,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 479150,
+          "end": 479166,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 479303,
@@ -325299,6 +326439,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 481467,
+          "end": 481483,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 481620,
           "end": 481629,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325330,6 +326477,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 482667,
+          "end": 482683,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 482820,
           "end": 482829,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325351,6 +326505,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 483330,
+          "end": 483346,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 483483,
@@ -325532,6 +326693,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 486017,
+          "end": 486033,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 486170,
           "end": 486179,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325563,6 +326731,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 487007,
+          "end": 487023,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 487160,
           "end": 487169,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325584,6 +326759,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 487670,
+          "end": 487686,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 487823,
@@ -325765,6 +326947,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 490372,
+          "end": 490388,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 490525,
           "end": 490534,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325796,6 +326985,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 491361,
+          "end": 491377,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 491514,
           "end": 491523,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325817,6 +327013,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 492025,
+          "end": 492041,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 492178,
@@ -325928,6 +327131,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 494225,
+          "end": 494241,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 494378,
           "end": 494387,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -325972,6 +327182,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 495883,
+          "end": 495899,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 496036,
@@ -326035,6 +327252,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 498559,
+          "end": 498575,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 498712,
           "end": 498721,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326063,6 +327287,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 499252,
+          "end": 499268,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 499405,
@@ -326146,6 +327377,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 502858,
+          "end": 502874,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 503011,
@@ -326256,6 +327494,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 504841,
+          "end": 504857,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 504994,
           "end": 505003,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326343,6 +327588,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 506119,
+          "end": 506135,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 506272,
           "end": 506281,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326364,6 +327616,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 506898,
+          "end": 506914,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 507051,
@@ -326409,6 +327668,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 508213,
+          "end": 508229,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 508366,
@@ -326462,6 +327728,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 509812,
+          "end": 509828,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 509965,
@@ -326543,6 +327816,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 510774,
+          "end": 510790,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 510927,
           "end": 510936,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326564,6 +327844,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 511441,
+          "end": 511457,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 511594,
@@ -326649,6 +327936,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 515044,
+          "end": 515060,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 515197,
           "end": 515206,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326670,6 +327964,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 515818,
+          "end": 515834,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 515971,
@@ -326788,6 +328089,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 517592,
+          "end": 517608,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 517745,
           "end": 517754,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326853,6 +328161,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 519571,
+          "end": 519587,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 519724,
@@ -326942,6 +328257,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 520849,
+          "end": 520865,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 521002,
           "end": 521011,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -326963,6 +328285,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 521628,
+          "end": 521644,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 521781,
@@ -327011,6 +328340,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 522958,
+          "end": 522974,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 523111,
           "end": 523120,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327041,6 +328377,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 523617,
+          "end": 523633,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 523770,
           "end": 523779,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327064,6 +328407,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 524396,
+          "end": 524412,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 524549,
           "end": 524558,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327085,6 +328435,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 525087,
+          "end": 525103,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 525240,
@@ -327141,6 +328498,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 527766,
+          "end": 527782,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 527919,
           "end": 527928,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327170,6 +328534,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 528788,
+          "end": 528804,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 528941,
@@ -327203,6 +328574,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 529811,
+          "end": 529827,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 529964,
           "end": 529973,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327224,6 +328602,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 530478,
+          "end": 530494,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 530631,
@@ -327288,6 +328673,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 533812,
+          "end": 533828,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 533965,
           "end": 533974,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327309,6 +328701,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 534489,
+          "end": 534505,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 534642,
@@ -327334,6 +328733,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 535268,
+          "end": 535284,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 535421,
           "end": 535430,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327355,6 +328761,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 535901,
+          "end": 535917,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 536054,
@@ -327403,6 +328816,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 537359,
+          "end": 537375,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 537512,
           "end": 537521,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327438,6 +328858,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 538081,
+          "end": 538097,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 538234,
@@ -327493,6 +328920,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 539844,
+          "end": 539860,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 539997,
           "end": 540006,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327514,6 +328948,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 540623,
+          "end": 540639,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 540776,
@@ -327545,6 +328986,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 541591,
+          "end": 541607,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 541744,
@@ -327585,6 +329033,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 542704,
+          "end": 542720,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 542857,
           "end": 542866,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327614,6 +329069,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 543796,
+          "end": 543812,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 543949,
@@ -327692,6 +329154,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 547238,
+          "end": 547254,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 547391,
           "end": 547400,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327713,6 +329182,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 548017,
+          "end": 548033,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 548170,
@@ -327762,6 +329238,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 549987,
+          "end": 550003,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 550140,
           "end": 550149,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327783,6 +329266,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 550632,
+          "end": 550648,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 550785,
@@ -327829,6 +329319,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 552293,
+          "end": 552309,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 552446,
@@ -327914,6 +329411,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 556019,
+          "end": 556035,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 556172,
           "end": 556181,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327935,6 +329439,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 556618,
+          "end": 556634,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 556771,
@@ -327960,6 +329471,13 @@
           "renamed": "BattleState"
         },
         {
+          "start": 557260,
+          "end": 557276,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 557413,
           "end": 557422,
           "symbol": "B:e.b(ILTerraphoenix;)V#0",
@@ -327981,6 +329499,13 @@
           "symbol": "C:e",
           "original": "e",
           "renamed": "BattleState"
+        },
+        {
+          "start": 557903,
+          "end": 557919,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 558056,
@@ -330379,6 +331904,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 607885,
+          "end": 607901,
+          "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -340754,7 +342286,7 @@
       "original": "he.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "67207d624891c448a9a33f69f7c4cbcefb41d840f9c549b42db8d7562835261d",
-      "outputSha256": "56a1ce64a011f43b5fc9bdf638b9dd0be1d65b3274624149f378edca8d68b7c0",
+      "outputSha256": "5a1b2cd95d7339af2cbaeb8a6e1c77e66bbff7a1ab34c68b70a744d836ad4db4",
       "edits": [
         {
           "start": 69,
@@ -341051,6 +342583,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 10394,
+          "end": 10410,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 10598,
           "end": 10605,
           "symbol": "F:mf.field_e:Ljava/lang/Object;",
@@ -341093,11 +342632,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 13849,
+          "end": 13865,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 14044,
           "end": 14046,
           "symbol": "C:he",
           "original": "he",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 14065,
+          "end": 14081,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 14354,
@@ -341107,11 +342660,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 14375,
+          "end": 14391,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 14772,
           "end": 14774,
           "symbol": "C:he",
           "original": "he",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 14793,
+          "end": 14809,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 15018,
@@ -341133,6 +342700,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 15400,
+          "end": 15416,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 15580,
@@ -341357,6 +342931,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "CacheFileLocator"
+        },
+        {
+          "start": 26062,
+          "end": 26078,
+          "symbol": "M:he.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -355350,7 +356931,7 @@
       "original": "nf.java",
       "renamed": "PcmPlayerPump.java",
       "inputSha256": "fdf78386e05a102d9dbaec0f3e6f54bd330f8aa31ee2e753179bde9d6ee3faf6",
-      "outputSha256": "9111bd1437e603b7f92488102b13bd01cf12a6f6d5e3b50c4029296dfb3d6c39",
+      "outputSha256": "e00f32d38c3c6636b835df26fb4a02d653ae4fdcae633affb4e7f9fb2d51ed7d",
       "edits": [
         {
           "start": 50,
@@ -355409,6 +356990,13 @@
           "renamed": "PcmPlayerPump"
         },
         {
+          "start": 1832,
+          "end": 1848,
+          "symbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 1926,
           "end": 1927,
           "symbol": "M:nf.a(B)V",
@@ -355449,6 +357037,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "PcmPlayerService"
+        },
+        {
+          "start": 2795,
+          "end": 2811,
+          "symbol": "M:nf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -361215,7 +362810,7 @@
       "original": "ql.java",
       "renamed": "ProxySocketConnector.java",
       "inputSha256": "c9f3d7b223eb45393ca6781c79538ab4286ea52e38a130673936ea4d7deb319b",
-      "outputSha256": "b99df2a3e460fd6826493114e6565a46bcf3f119ee8f7bfa608a0f1b4b47a439",
+      "outputSha256": "fd1687642b1358f5eef3ddcf39f1c37773736687796a8fbe9e51f51ba8ec2ae5",
       "edits": [
         {
           "start": 89,
@@ -361680,11 +363275,25 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 24879,
+          "end": 24895,
+          "symbol": "M:ql.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 24945,
           "end": 24946,
           "symbol": "M:mj.a(Z)Ljava/net/Socket;",
           "original": "a",
           "renamed": "createDirectSocket"
+        },
+        {
+          "start": 25207,
+          "end": 25223,
+          "symbol": "M:ql.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -370674,8 +372283,23 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "00d3083851a146b3a9f1f60b632a27ba49e144f0222c3f029dc0a9d8251d29d4",
-      "outputSha256": "00d3083851a146b3a9f1f60b632a27ba49e144f0222c3f029dc0a9d8251d29d4",
-      "edits": []
+      "outputSha256": "f653e64bbca703808a89d4ebc41efc9a9d6a7e66cf28fe235e05b9a5a5cfa71a",
+      "edits": [
+        {
+          "start": 3289,
+          "end": 3305,
+          "symbol": "M:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 3424,
+          "end": 3440,
+          "symbol": "M:ti.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        }
+      ]
     },
     {
       "original": "tj.java",
@@ -378946,10 +380570,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "64ee784458d62d8508c8655fd6f99ac355b036d4fd3522fb42d3b4f6283d05b3",
+    "rulesSha256": "37bab4b83490979c7b9d59192c1fd07cd52612222ef51c4d8ae271b21a12e4e1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "8cdb7cd92ef0072dc67007a7efe9fb123140dbb7efbb639148ff3025161db3fd",
+    "outputTreeSha256": "09a70b1c1a5326e3a5e65a64f8cad376be3ebc8666859a7b11690d1835096dff",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

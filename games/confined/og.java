@@ -249,7 +249,7 @@ final class og extends n {
           }
         }
         if (var7 != null) {
-          throw og.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw og.<RuntimeException>throwUnchecked((Throwable) var7);
         }
         return this.c(param0 ^ 30609);
     }
@@ -684,7 +684,7 @@ final class og extends n {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

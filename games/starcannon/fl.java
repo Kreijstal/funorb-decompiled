@@ -425,7 +425,7 @@ final class fl extends oe {
           }
         }
         if (var7 != null) {
-          throw fl.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw fl.<RuntimeException>throwUnchecked((Throwable) var7);
         }
         return this.b((byte) -64);
     }
@@ -531,7 +531,7 @@ final class fl extends oe {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

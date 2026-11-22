@@ -143,7 +143,7 @@ final class dl extends PcmStream {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 12 : -1);
                         if (statePc == -1) {
-                            throw dl.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw dl.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -186,7 +186,7 @@ final class dl extends PcmStream {
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 12 : -1);
                         if (statePc == -1) {
-                            throw dl.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                            throw dl.<RuntimeException>throwUnchecked(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
                         continue scanLoop1;
@@ -3488,7 +3488,7 @@ final class dl extends PcmStream {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

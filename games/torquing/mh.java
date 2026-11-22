@@ -2915,7 +2915,7 @@ final class mh {
           if (this.field_a.field_g != -1) {
             this.a(this.d(-76, this.field_a.field_g), (byte) 109, false);
           }
-          throw mh.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw mh.<RuntimeException>throwUnchecked(var3);
         }
         if (decompiledRegionSelector0 != 0 &&
           decompiledRegionSelector0 != 1 &&
@@ -3082,7 +3082,7 @@ final class mh {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

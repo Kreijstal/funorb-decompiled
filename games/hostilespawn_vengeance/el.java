@@ -653,7 +653,7 @@ final class el extends fe {
               field_e = (long[]) null;
             }
             if (var7 != null) {
-              throw el.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+              throw el.<RuntimeException>throwUnchecked((Throwable) var7);
             }
             stackIn_42_0 = this.b(param0 - 30986);
             break;
@@ -684,7 +684,7 @@ final class el extends fe {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -540,6 +540,14 @@
       "renamedSymbol": "M:cl.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:dd.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:de.a(B[B)V",
       "originalName": "a",
       "to": "setBytes",
@@ -676,6 +684,14 @@
       "renamedSymbol": "M:gh.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ha.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:hb.e(B)V",
       "originalName": "e",
       "to": "clearStaticReferences",
@@ -698,6 +714,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 1 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 932dee0b371219901a18fe9e46cbbac4df0a454885916c4f58a7e9ffee35b9dd.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hd.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hk.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:ib.a(I[BIB)I",
@@ -1068,6 +1092,14 @@
       "renamedSymbol": "M:r.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ra.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:rd.a(B[B)[B",
       "originalName": "a",
       "to": "copyBytes",
@@ -1098,6 +1130,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 3 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 be928c72a3f107ff4f9dde69fa37975e7f1b804b021a31df4b3c1228de16f5a7.",
       "confidence": "reviewed",
       "renamedSymbol": "M:sg.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:si.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:sj.a(B)V",
@@ -138534,9 +138574,9 @@
     },
     {
       "symbol": "M:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:dd.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "dd.java",
         "start": 2672,
@@ -141867,9 +141907,9 @@
     },
     {
       "symbol": "M:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ha.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ha.java",
         "start": 9179,
@@ -142527,9 +142567,9 @@
     },
     {
       "symbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:hk.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "hk.java",
         "start": 3411,
@@ -151855,9 +151895,9 @@
     },
     {
       "symbol": "M:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ra.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ra.java",
         "start": 14306,
@@ -153098,9 +153138,9 @@
     },
     {
       "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:si.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "si.java",
         "start": 26121,
@@ -164604,7 +164644,7 @@
     },
     {
       "symbol": "P:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:dd.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -171270,7 +171310,7 @@
     },
     {
       "symbol": "P:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ha.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -172678,7 +172718,7 @@
     },
     {
       "symbol": "P:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:hk.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -195613,7 +195653,7 @@
     },
     {
       "symbol": "P:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ra.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -198330,7 +198370,7 @@
     },
     {
       "symbol": "P:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:si.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -213754,14 +213794,28 @@
       "original": "dd.java",
       "renamed": "dd.java",
       "inputSha256": "73347639a26006912cf61672c4a0e9fa37ee3bf953e17abc4d616b6ac9a2ff8f",
-      "outputSha256": "9af1f53bc72a10d12f680351d663338691449e719457edff7cf9ae4686257221",
+      "outputSha256": "cd67f0860696473b357fba6769c4e46ff7c6901e2db760bbfb96fbae67965199",
       "edits": [
+        {
+          "start": 1920,
+          "end": 1936,
+          "symbol": "M:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
         {
           "start": 2353,
           "end": 2355,
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 2672,
+          "end": 2688,
+          "symbol": "M:dd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -216372,7 +216426,7 @@
       "original": "ha.java",
       "renamed": "ha.java",
       "inputSha256": "c052fb2f4e208c483d0244a619bfb2f44e6c77844c9c6b5e3b94bbdac1d7aa80",
-      "outputSha256": "d6bb1241d3179f220df748a97580f42dfd68387a36edb321862fbb7c39ac814f",
+      "outputSha256": "d85f11bf4944f0bd58fa245754f7ccb878f5eb5d4094dadbb49c8c008e4722e0",
       "edits": [
         {
           "start": 106,
@@ -216450,6 +216504,13 @@
           "symbol": "F:wi.field_i:[B",
           "original": "field_i",
           "renamed": "payload"
+        },
+        {
+          "start": 1415,
+          "end": 1431,
+          "symbol": "M:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 1469,
@@ -216583,6 +216644,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 9179,
+          "end": 9195,
+          "symbol": "M:ha.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -217193,8 +217261,23 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "275f54d8a3e8bbdd2a8ac2df584dc6a38b2f75bc7e9fc5df732cdae124ce0f00",
-      "outputSha256": "275f54d8a3e8bbdd2a8ac2df584dc6a38b2f75bc7e9fc5df732cdae124ce0f00",
-      "edits": []
+      "outputSha256": "08c10751a99018d8204207264969dce2c5f08804145a9d9f7bcf48491420dd18",
+      "edits": [
+        {
+          "start": 1441,
+          "end": 1457,
+          "symbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 3411,
+          "end": 3427,
+          "symbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        }
+      ]
     },
     {
       "original": "hl.java",
@@ -224077,7 +224160,7 @@
       "original": "ra.java",
       "renamed": "ra.java",
       "inputSha256": "5cae2df49a6fdf1324988d1aad802f30850148d508378fef395a6b8f5482ca89",
-      "outputSha256": "882c39cc889252dbf8bc51572bc4417cbdb631bfff895efbf57d6c91a0e6f699",
+      "outputSha256": "e5a92f2da9973744204c4a1571553ce570fd0268584cf9fc003755f984c9bc8f",
       "edits": [
         {
           "start": 3887,
@@ -224085,6 +224168,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 8111,
+          "end": 8127,
+          "symbol": "M:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         },
         {
           "start": 9561,
@@ -224099,6 +224189,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 14306,
+          "end": 14322,
+          "symbol": "M:ra.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -225387,8 +225484,58 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "8be4e32620538aabb478fca6187ca6006138e15bb2c2ab9af840f99a19d0ece2",
-      "outputSha256": "8be4e32620538aabb478fca6187ca6006138e15bb2c2ab9af840f99a19d0ece2",
-      "edits": []
+      "outputSha256": "761de03bae165113fa5555a6a2c1973be755a3ea17a5f0ac14fd5d5463acd2d6",
+      "edits": [
+        {
+          "start": 3993,
+          "end": 4009,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 7980,
+          "end": 7996,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 8196,
+          "end": 8212,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 8503,
+          "end": 8519,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 8919,
+          "end": 8935,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 9543,
+          "end": 9559,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
+          "start": 26121,
+          "end": 26137,
+          "symbol": "M:si.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        }
+      ]
     },
     {
       "original": "sj.java",
@@ -231116,10 +231263,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "f103c6e744fa2d554c41ef377625b98e5faad176eab53cbb7fd41f9a6650380a",
+    "rulesSha256": "cf8bb6fbd882a9673c54330d0729a9b063a5074357920648acc4f805e83953f3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "8ca070d984b94b34454649c037ca1278954d3a28ed3a88ad1203358f4eb0c00b",
+    "outputTreeSha256": "667d3e60aeda197b62ad3b76d201a93f3e3c5e92d0a253371a08d9a2323594be",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

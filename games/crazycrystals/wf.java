@@ -211,7 +211,7 @@ final class wf extends tl {
         if (var7 == null) {
           return this.a(14);
         }
-        throw wf.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw wf.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     wf() {
@@ -312,7 +312,7 @@ final class wf extends tl {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -148,7 +148,7 @@ final class rp implements ef {
             param0[0] = var3_int;
             param0[1] = var4;
             param0[2] = var5;
-            throw rp.<RuntimeException>$cfr$sneakyThrow(var7);
+            throw rp.<RuntimeException>throwUnchecked(var7);
           }
           oo.a(var6);
           param0[0] = var3_int;
@@ -200,7 +200,7 @@ final class rp implements ef {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

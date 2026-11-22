@@ -110,7 +110,7 @@ final class pc {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -123,7 +123,7 @@ final class pc {
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
                         continue scanLoop1;
@@ -152,7 +152,7 @@ final class pc {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -180,7 +180,7 @@ final class pc {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -198,7 +198,7 @@ final class pc {
                     } catch (Throwable stateCaught_13) {
                         statePc = ((Object) stateCaught_13 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_13);
                         }
                         caughtException = stateCaught_13;
                         continue scanLoop1;
@@ -238,7 +238,7 @@ final class pc {
                     } catch (Throwable stateCaught_14) {
                         statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
                         continue scanLoop1;
@@ -256,7 +256,7 @@ final class pc {
                     } catch (Throwable stateCaught_22) {
                         statePc = ((Object) stateCaught_22 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_22);
                         }
                         caughtException = stateCaught_22;
                         continue scanLoop1;
@@ -270,7 +270,7 @@ final class pc {
                     } catch (Throwable stateCaught_23) {
                         statePc = ((Object) stateCaught_23 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_23);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_23);
                         }
                         caughtException = stateCaught_23;
                         continue scanLoop1;
@@ -290,7 +290,7 @@ final class pc {
                     } catch (Throwable stateCaught_24) {
                         statePc = ((Object) stateCaught_24 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_24);
                         }
                         caughtException = stateCaught_24;
                         continue scanLoop1;
@@ -304,7 +304,7 @@ final class pc {
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
                         continue scanLoop1;
@@ -324,7 +324,7 @@ final class pc {
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
                         continue scanLoop1;
@@ -338,7 +338,7 @@ final class pc {
                     } catch (Throwable stateCaught_27) {
                         statePc = ((Object) stateCaught_27 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_27);
                         }
                         caughtException = stateCaught_27;
                         continue scanLoop1;
@@ -363,7 +363,7 @@ final class pc {
                     } catch (Throwable stateCaught_28) {
                         statePc = ((Object) stateCaught_28 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_28);
                         }
                         caughtException = stateCaught_28;
                         continue scanLoop1;
@@ -381,7 +381,7 @@ final class pc {
                     } catch (Throwable stateCaught_32) {
                         statePc = ((Object) stateCaught_32 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_32);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_32);
                         }
                         caughtException = stateCaught_32;
                         continue scanLoop1;
@@ -394,7 +394,7 @@ final class pc {
                     } catch (Throwable stateCaught_33) {
                         statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
                         continue scanLoop1;
@@ -408,7 +408,7 @@ final class pc {
                     } catch (Throwable stateCaught_35) {
                         statePc = ((Object) stateCaught_35 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_35);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_35);
                         }
                         caughtException = stateCaught_35;
                         continue scanLoop1;
@@ -433,7 +433,7 @@ final class pc {
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
                         continue scanLoop1;
@@ -448,7 +448,7 @@ final class pc {
                     } catch (Throwable stateCaught_40) {
                         statePc = ((Object) stateCaught_40 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_40);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_40);
                         }
                         caughtException = stateCaught_40;
                         continue scanLoop1;
@@ -481,7 +481,7 @@ final class pc {
                     } catch (Throwable stateCaught_41) {
                         statePc = ((Object) stateCaught_41 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_41);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_41);
                         }
                         caughtException = stateCaught_41;
                         continue scanLoop1;
@@ -522,7 +522,7 @@ final class pc {
                     } catch (Throwable stateCaught_44) {
                         statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
                         continue scanLoop1;
@@ -536,7 +536,7 @@ final class pc {
                     } catch (Throwable stateCaught_49) {
                         statePc = ((Object) stateCaught_49 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
                         continue scanLoop1;
@@ -553,7 +553,7 @@ final class pc {
                     } catch (Throwable stateCaught_50) {
                         statePc = ((Object) stateCaught_50 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_50);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_50);
                         }
                         caughtException = stateCaught_50;
                         continue scanLoop1;
@@ -568,7 +568,7 @@ final class pc {
                     } catch (Throwable stateCaught_51) {
                         statePc = ((Object) stateCaught_51 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_51);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_51);
                         }
                         caughtException = stateCaught_51;
                         continue scanLoop1;
@@ -588,7 +588,7 @@ final class pc {
                     } catch (Throwable stateCaught_52) {
                         statePc = ((Object) stateCaught_52 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_52);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_52);
                         }
                         caughtException = stateCaught_52;
                         continue scanLoop1;
@@ -628,7 +628,7 @@ final class pc {
                     } catch (Throwable stateCaught_53) {
                         statePc = ((Object) stateCaught_53 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_53);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_53);
                         }
                         caughtException = stateCaught_53;
                         continue scanLoop1;
@@ -642,7 +642,7 @@ final class pc {
                     } catch (Throwable stateCaught_58) {
                         statePc = ((Object) stateCaught_58 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_58);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_58);
                         }
                         caughtException = stateCaught_58;
                         continue scanLoop1;
@@ -687,7 +687,7 @@ final class pc {
                     } catch (Throwable stateCaught_59) {
                         statePc = ((Object) stateCaught_59 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_59);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_59);
                         }
                         caughtException = stateCaught_59;
                         continue scanLoop1;
@@ -710,7 +710,7 @@ final class pc {
                     } catch (Throwable stateCaught_66) {
                         statePc = ((Object) stateCaught_66 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_66);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_66);
                         }
                         caughtException = stateCaught_66;
                         continue scanLoop1;
@@ -742,7 +742,7 @@ final class pc {
                     } catch (Throwable stateCaught_68) {
                         statePc = ((Object) stateCaught_68 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_68);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_68);
                         }
                         caughtException = stateCaught_68;
                         continue scanLoop1;
@@ -793,7 +793,7 @@ final class pc {
                     } catch (Throwable stateCaught_71) {
                         statePc = ((Object) stateCaught_71 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_71);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_71);
                         }
                         caughtException = stateCaught_71;
                         continue scanLoop1;
@@ -811,7 +811,7 @@ final class pc {
                     } catch (Throwable stateCaught_78) {
                         statePc = ((Object) stateCaught_78 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_78);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_78);
                         }
                         caughtException = stateCaught_78;
                         continue scanLoop1;
@@ -826,7 +826,7 @@ final class pc {
                     } catch (Throwable stateCaught_79) {
                         statePc = ((Object) stateCaught_79 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_79);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_79);
                         }
                         caughtException = stateCaught_79;
                         continue scanLoop1;
@@ -845,7 +845,7 @@ final class pc {
                     } catch (Throwable stateCaught_80) {
                         statePc = ((Object) stateCaught_80 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_80);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_80);
                         }
                         caughtException = stateCaught_80;
                         continue scanLoop1;
@@ -862,7 +862,7 @@ final class pc {
                     } catch (Throwable stateCaught_81) {
                         statePc = ((Object) stateCaught_81 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_81);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_81);
                         }
                         caughtException = stateCaught_81;
                         continue scanLoop1;
@@ -876,7 +876,7 @@ final class pc {
                     } catch (Throwable stateCaught_82) {
                         statePc = ((Object) stateCaught_82 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_82);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_82);
                         }
                         caughtException = stateCaught_82;
                         continue scanLoop1;
@@ -898,7 +898,7 @@ final class pc {
                     } catch (Throwable stateCaught_83) {
                         statePc = ((Object) stateCaught_83 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_83);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_83);
                         }
                         caughtException = stateCaught_83;
                         continue scanLoop1;
@@ -925,7 +925,7 @@ final class pc {
                     } catch (Throwable stateCaught_85) {
                         statePc = ((Object) stateCaught_85 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_85);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_85);
                         }
                         caughtException = stateCaught_85;
                         continue scanLoop1;
@@ -994,7 +994,7 @@ final class pc {
                     } catch (Throwable stateCaught_87) {
                         statePc = ((Object) stateCaught_87 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_87);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_87);
                         }
                         caughtException = stateCaught_87;
                         continue scanLoop1;
@@ -1007,7 +1007,7 @@ final class pc {
                     } catch (Throwable stateCaught_100) {
                         statePc = ((Object) stateCaught_100 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_100);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_100);
                         }
                         caughtException = stateCaught_100;
                         continue scanLoop1;
@@ -1074,7 +1074,7 @@ final class pc {
                     } catch (Throwable stateCaught_102) {
                         statePc = ((Object) stateCaught_102 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_102);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_102);
                         }
                         caughtException = stateCaught_102;
                         continue scanLoop1;
@@ -1092,7 +1092,7 @@ final class pc {
                     } catch (Throwable stateCaught_113) {
                         statePc = ((Object) stateCaught_113 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_113);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_113);
                         }
                         caughtException = stateCaught_113;
                         continue scanLoop1;
@@ -1106,7 +1106,7 @@ final class pc {
                     } catch (Throwable stateCaught_117) {
                         statePc = ((Object) stateCaught_117 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_117);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_117);
                         }
                         caughtException = stateCaught_117;
                         continue scanLoop1;
@@ -1171,7 +1171,7 @@ final class pc {
                     } catch (Throwable stateCaught_118) {
                         statePc = ((Object) stateCaught_118 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_118);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_118);
                         }
                         caughtException = stateCaught_118;
                         continue scanLoop1;
@@ -1188,7 +1188,7 @@ final class pc {
                     } catch (Throwable stateCaught_131) {
                         statePc = ((Object) stateCaught_131 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_131);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_131);
                         }
                         caughtException = stateCaught_131;
                         continue scanLoop1;
@@ -1254,7 +1254,7 @@ final class pc {
                     } catch (Throwable stateCaught_132) {
                         statePc = ((Object) stateCaught_132 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_132);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_132);
                         }
                         caughtException = stateCaught_132;
                         continue scanLoop1;
@@ -1314,7 +1314,7 @@ final class pc {
                     } catch (Throwable stateCaught_145) {
                         statePc = ((Object) stateCaught_145 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_145);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_145);
                         }
                         caughtException = stateCaught_145;
                         continue scanLoop1;
@@ -1332,7 +1332,7 @@ final class pc {
                     } catch (Throwable stateCaught_156) {
                         statePc = ((Object) stateCaught_156 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_156);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_156);
                         }
                         caughtException = stateCaught_156;
                         continue scanLoop1;
@@ -1348,7 +1348,7 @@ final class pc {
                     } catch (Throwable stateCaught_157) {
                         statePc = ((Object) stateCaught_157 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_157 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_157);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_157);
                         }
                         caughtException = stateCaught_157;
                         continue scanLoop1;
@@ -1369,7 +1369,7 @@ final class pc {
                     } catch (Throwable stateCaught_158) {
                         statePc = ((Object) stateCaught_158 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_158 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_158);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_158);
                         }
                         caughtException = stateCaught_158;
                         continue scanLoop1;
@@ -1422,7 +1422,7 @@ final class pc {
                     } catch (Throwable stateCaught_159) {
                         statePc = ((Object) stateCaught_159 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_159 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_159);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_159);
                         }
                         caughtException = stateCaught_159;
                         continue scanLoop1;
@@ -1443,7 +1443,7 @@ final class pc {
                     } catch (Throwable stateCaught_168) {
                         statePc = ((Object) stateCaught_168 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_168 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_168);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_168);
                         }
                         caughtException = stateCaught_168;
                         continue scanLoop1;
@@ -1490,7 +1490,7 @@ final class pc {
                     } catch (Throwable stateCaught_171) {
                         statePc = ((Object) stateCaught_171 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_171 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_171);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_171);
                         }
                         caughtException = stateCaught_171;
                         continue scanLoop1;
@@ -1522,7 +1522,7 @@ final class pc {
                     } catch (Throwable stateCaught_180) {
                         statePc = ((Object) stateCaught_180 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_180 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_180);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_180);
                         }
                         caughtException = stateCaught_180;
                         continue scanLoop1;
@@ -1537,7 +1537,7 @@ final class pc {
                     } catch (Throwable stateCaught_184) {
                         statePc = ((Object) stateCaught_184 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_184 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_184);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_184);
                         }
                         caughtException = stateCaught_184;
                         continue scanLoop1;
@@ -1579,7 +1579,7 @@ final class pc {
                     } catch (Throwable stateCaught_186) {
                         statePc = ((Object) stateCaught_186 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_186 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_186);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_186);
                         }
                         caughtException = stateCaught_186;
                         continue scanLoop1;
@@ -1600,7 +1600,7 @@ final class pc {
                     } catch (Throwable stateCaught_193) {
                         statePc = ((Object) stateCaught_193 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_193 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_193);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_193);
                         }
                         caughtException = stateCaught_193;
                         continue scanLoop1;
@@ -1647,7 +1647,7 @@ final class pc {
                     } catch (Throwable stateCaught_196) {
                         statePc = ((Object) stateCaught_196 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_196 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_196);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_196);
                         }
                         caughtException = stateCaught_196;
                         continue scanLoop1;
@@ -1668,7 +1668,7 @@ final class pc {
                     } catch (Throwable stateCaught_205) {
                         statePc = ((Object) stateCaught_205 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_205 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_205);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_205);
                         }
                         caughtException = stateCaught_205;
                         continue scanLoop1;
@@ -1700,7 +1700,7 @@ final class pc {
                     } catch (Throwable stateCaught_208) {
                         statePc = ((Object) stateCaught_208 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_208 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_208);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_208);
                         }
                         caughtException = stateCaught_208;
                         continue scanLoop1;
@@ -1719,7 +1719,7 @@ final class pc {
                     } catch (Throwable stateCaught_212) {
                         statePc = ((Object) stateCaught_212 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_212 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_212);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_212);
                         }
                         caughtException = stateCaught_212;
                         continue scanLoop1;
@@ -1738,7 +1738,7 @@ final class pc {
                     } catch (Throwable stateCaught_213) {
                         statePc = ((Object) stateCaught_213 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_213 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_213);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_213);
                         }
                         caughtException = stateCaught_213;
                         continue scanLoop1;
@@ -1753,7 +1753,7 @@ final class pc {
                     } catch (Throwable stateCaught_214) {
                         statePc = ((Object) stateCaught_214 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_214 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_214);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_214);
                         }
                         caughtException = stateCaught_214;
                         continue scanLoop1;
@@ -1770,7 +1770,7 @@ final class pc {
                     } catch (Throwable stateCaught_215) {
                         statePc = ((Object) stateCaught_215 instanceof ArrayIndexOutOfBoundsException ? 217 : ((Object) stateCaught_215 instanceof RuntimeException ? 341 : -1));
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_215);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_215);
                         }
                         caughtException = stateCaught_215;
                         continue scanLoop1;
@@ -1783,7 +1783,7 @@ final class pc {
                     } catch (Throwable stateCaught_216) {
                         statePc = ((Object) stateCaught_216 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_216);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_216);
                         }
                         caughtException = stateCaught_216;
                         continue scanLoop1;
@@ -1801,7 +1801,7 @@ final class pc {
                     } catch (Throwable stateCaught_217) {
                         statePc = ((Object) stateCaught_217 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_217);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_217);
                         }
                         caughtException = stateCaught_217;
                         continue scanLoop1;
@@ -1817,7 +1817,7 @@ final class pc {
                     } catch (Throwable stateCaught_218) {
                         statePc = ((Object) stateCaught_218 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_218);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_218);
                         }
                         caughtException = stateCaught_218;
                         continue scanLoop1;
@@ -1843,7 +1843,7 @@ final class pc {
                     } catch (Throwable stateCaught_220) {
                         statePc = ((Object) stateCaught_220 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_220);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_220);
                         }
                         caughtException = stateCaught_220;
                         continue scanLoop1;
@@ -1904,7 +1904,7 @@ final class pc {
                     } catch (Throwable stateCaught_224) {
                         statePc = ((Object) stateCaught_224 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_224);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_224);
                         }
                         caughtException = stateCaught_224;
                         continue scanLoop1;
@@ -1936,7 +1936,7 @@ final class pc {
                     } catch (Throwable stateCaught_232) {
                         statePc = ((Object) stateCaught_232 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_232);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_232);
                         }
                         caughtException = stateCaught_232;
                         continue scanLoop1;
@@ -1952,7 +1952,7 @@ final class pc {
                     } catch (Throwable stateCaught_238) {
                         statePc = ((Object) stateCaught_238 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_238);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_238);
                         }
                         caughtException = stateCaught_238;
                         continue scanLoop1;
@@ -1970,7 +1970,7 @@ final class pc {
                     } catch (Throwable stateCaught_239) {
                         statePc = ((Object) stateCaught_239 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_239);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_239);
                         }
                         caughtException = stateCaught_239;
                         continue scanLoop1;
@@ -1984,7 +1984,7 @@ final class pc {
                     } catch (Throwable stateCaught_240) {
                         statePc = ((Object) stateCaught_240 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_240);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_240);
                         }
                         caughtException = stateCaught_240;
                         continue scanLoop1;
@@ -2010,7 +2010,7 @@ final class pc {
                     } catch (Throwable stateCaught_241) {
                         statePc = ((Object) stateCaught_241 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_241);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_241);
                         }
                         caughtException = stateCaught_241;
                         continue scanLoop1;
@@ -2042,7 +2042,7 @@ final class pc {
                     } catch (Throwable stateCaught_245) {
                         statePc = ((Object) stateCaught_245 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_245);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_245);
                         }
                         caughtException = stateCaught_245;
                         continue scanLoop1;
@@ -2108,7 +2108,7 @@ final class pc {
                     } catch (Throwable stateCaught_248) {
                         statePc = ((Object) stateCaught_248 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_248);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_248);
                         }
                         caughtException = stateCaught_248;
                         continue scanLoop1;
@@ -2142,7 +2142,7 @@ final class pc {
                     } catch (Throwable stateCaught_259) {
                         statePc = ((Object) stateCaught_259 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_259);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_259);
                         }
                         caughtException = stateCaught_259;
                         continue scanLoop1;
@@ -2189,7 +2189,7 @@ final class pc {
                     } catch (Throwable stateCaught_265) {
                         statePc = ((Object) stateCaught_265 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_265);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_265);
                         }
                         caughtException = stateCaught_265;
                         continue scanLoop1;
@@ -2236,7 +2236,7 @@ final class pc {
                     } catch (Throwable stateCaught_274) {
                         statePc = ((Object) stateCaught_274 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_274);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_274);
                         }
                         caughtException = stateCaught_274;
                         continue scanLoop1;
@@ -2283,7 +2283,7 @@ final class pc {
                     } catch (Throwable stateCaught_283) {
                         statePc = ((Object) stateCaught_283 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_283);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_283);
                         }
                         caughtException = stateCaught_283;
                         continue scanLoop1;
@@ -2298,7 +2298,7 @@ final class pc {
                     } catch (Throwable stateCaught_292) {
                         statePc = ((Object) stateCaught_292 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_292);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_292);
                         }
                         caughtException = stateCaught_292;
                         continue scanLoop1;
@@ -2316,7 +2316,7 @@ final class pc {
                     } catch (Throwable stateCaught_294) {
                         statePc = ((Object) stateCaught_294 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_294);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_294);
                         }
                         caughtException = stateCaught_294;
                         continue scanLoop1;
@@ -2330,7 +2330,7 @@ final class pc {
                     } catch (Throwable stateCaught_295) {
                         statePc = ((Object) stateCaught_295 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_295);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_295);
                         }
                         caughtException = stateCaught_295;
                         continue scanLoop1;
@@ -2349,7 +2349,7 @@ final class pc {
                     } catch (Throwable stateCaught_296) {
                         statePc = ((Object) stateCaught_296 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_296);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_296);
                         }
                         caughtException = stateCaught_296;
                         continue scanLoop1;
@@ -2364,7 +2364,7 @@ final class pc {
                     } catch (Throwable stateCaught_297) {
                         statePc = ((Object) stateCaught_297 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_297);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_297);
                         }
                         caughtException = stateCaught_297;
                         continue scanLoop1;
@@ -2378,7 +2378,7 @@ final class pc {
                     } catch (Throwable stateCaught_298) {
                         statePc = ((Object) stateCaught_298 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_298);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_298);
                         }
                         caughtException = stateCaught_298;
                         continue scanLoop1;
@@ -2408,7 +2408,7 @@ final class pc {
                     } catch (Throwable stateCaught_299) {
                         statePc = ((Object) stateCaught_299 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_299);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_299);
                         }
                         caughtException = stateCaught_299;
                         continue scanLoop1;
@@ -2474,7 +2474,7 @@ final class pc {
                     } catch (Throwable stateCaught_302) {
                         statePc = ((Object) stateCaught_302 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_302);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_302);
                         }
                         caughtException = stateCaught_302;
                         continue scanLoop1;
@@ -2495,7 +2495,7 @@ final class pc {
                     } catch (Throwable stateCaught_313) {
                         statePc = ((Object) stateCaught_313 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_313);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_313);
                         }
                         caughtException = stateCaught_313;
                         continue scanLoop1;
@@ -2529,7 +2529,7 @@ final class pc {
                     } catch (Throwable stateCaught_316) {
                         statePc = ((Object) stateCaught_316 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_316);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_316);
                         }
                         caughtException = stateCaught_316;
                         continue scanLoop1;
@@ -2563,7 +2563,7 @@ final class pc {
                     } catch (Throwable stateCaught_322) {
                         statePc = ((Object) stateCaught_322 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_322);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_322);
                         }
                         caughtException = stateCaught_322;
                         continue scanLoop1;
@@ -2602,7 +2602,7 @@ final class pc {
                     } catch (Throwable stateCaught_328) {
                         statePc = ((Object) stateCaught_328 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_328);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_328);
                         }
                         caughtException = stateCaught_328;
                         continue scanLoop1;
@@ -2617,7 +2617,7 @@ final class pc {
                     } catch (Throwable stateCaught_336) {
                         statePc = ((Object) stateCaught_336 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_336);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_336);
                         }
                         caughtException = stateCaught_336;
                         continue scanLoop1;
@@ -2635,7 +2635,7 @@ final class pc {
                     } catch (Throwable stateCaught_337) {
                         statePc = ((Object) stateCaught_337 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_337);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_337);
                         }
                         caughtException = stateCaught_337;
                         continue scanLoop1;
@@ -2649,7 +2649,7 @@ final class pc {
                     } catch (Throwable stateCaught_338) {
                         statePc = ((Object) stateCaught_338 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_338);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_338);
                         }
                         caughtException = stateCaught_338;
                         continue scanLoop1;
@@ -2668,7 +2668,7 @@ final class pc {
                     } catch (Throwable stateCaught_339) {
                         statePc = ((Object) stateCaught_339 instanceof RuntimeException ? 341 : -1);
                         if (statePc == -1) {
-                            throw pc.<RuntimeException>$cfr$sneakyThrow(stateCaught_339);
+                            throw pc.<RuntimeException>throwUnchecked(stateCaught_339);
                         }
                         caughtException = stateCaught_339;
                         continue scanLoop1;
@@ -2953,7 +2953,7 @@ final class pc {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

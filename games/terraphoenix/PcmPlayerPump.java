@@ -52,7 +52,7 @@ final class PcmPlayerPump implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_i = false;
-          throw PcmPlayerPump.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw PcmPlayerPump.<RuntimeException>throwUnchecked(var3);
         }
         this.field_i = false;
     }
@@ -88,7 +88,7 @@ final class PcmPlayerPump implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

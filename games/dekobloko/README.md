@@ -2,7 +2,7 @@
 
 The Java in this directory is the single published version. Deko’s naming script rebuilds it from pinned Git input; the reverse dictionary is in `decompilation/dekobloko-naming.json`.
 
-Resolved declarations: 87/344 classes and 405/2468 methods have readable names; 250 constructors follow their owning class. Remaining: 257 classes and 2063 methods still need names. Numbered structural categories and type-based member labels count as unresolved; the complete naming goal remains in progress.
+Resolved declarations: 87/344 classes and 410/2468 methods have readable names; 250 constructors follow their owning class. Remaining: 257 classes and 2058 methods still need names. Numbered structural categories and type-based member labels count as unresolved; the complete naming goal remains in progress.
 
 `MouseWheelInput`, `MouseWheelHandler` and `KeyboardInputHandler` name component registration, wheel polling and key event ownership. `NodeHashTableIterator`, `SecondaryNodeDequeIterator` and `SecondaryNodeHashTable` distinguish primary buckets from independent secondary links and duplicate-key continuation.
 

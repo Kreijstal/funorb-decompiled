@@ -232,7 +232,7 @@ final class JaggrabClient implements Runnable {
               break;
             }
             if (this.field_j.position == this.field_j.payload.length) {
-              throw JaggrabClient.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_g));
+              throw JaggrabClient.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_g));
             }
             var1 = this;
             synchronized (var1) {
@@ -272,7 +272,7 @@ final class JaggrabClient implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -575,7 +575,7 @@ final class ProxySocketConnector extends SocketConnector {
           ProxySocketConnector.b(56);
         }
         if (var7 != null) {
-          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) var7);
         }
         return this.createDirectSocket(true);
     }
@@ -587,7 +587,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

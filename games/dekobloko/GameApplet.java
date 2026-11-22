@@ -692,7 +692,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean frameRemainderLocal20 = true;
                   if (MixedSupport073.longState0025 != 0L) {
-                    stackIntegerLocal4 = computeInteger0673(~MixedSupport062.computeLong0734(4), ~MixedSupport073.longState0025);
+                    stackIntegerLocal4 = compareLongs(~MixedSupport062.computeLong0734(4), ~MixedSupport073.longState0025);
                     frameRemainderLocal20 = (integerLocal14 == 0);
                     if ((frameRemainderLocal20) &&
                       (stackIntegerLocal4 <= 0)) {
@@ -903,7 +903,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         mixedSupport061State0003 = new MixedSupport061("");
     }
 
-    private static int computeInteger0673(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -118,7 +118,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -132,7 +132,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_2) {
                         statePc = ((Object) stateCaught_2 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_2);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_2);
                         }
                         caughtException = stateCaught_2;
                         continue scanLoop1;
@@ -148,7 +148,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_3) {
                         statePc = ((Object) stateCaught_3 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_3);
                         }
                         caughtException = stateCaught_3;
                         continue scanLoop1;
@@ -163,7 +163,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
                         continue scanLoop1;
@@ -189,7 +189,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -225,7 +225,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_7) {
                         statePc = ((Object) stateCaught_7 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_7);
                         }
                         caughtException = stateCaught_7;
                         continue scanLoop1;
@@ -254,7 +254,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_9) {
                         statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_9);
                         }
                         caughtException = stateCaught_9;
                         continue scanLoop1;
@@ -506,7 +506,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -584,7 +584,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_12) {
                         statePc = ((Object) stateCaught_12 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_12);
                         }
                         caughtException = stateCaught_12;
                         continue scanLoop1;
@@ -600,7 +600,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_17) {
                         statePc = ((Object) stateCaught_17 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_17);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_17);
                         }
                         caughtException = stateCaught_17;
                         continue scanLoop1;
@@ -631,7 +631,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_18) {
                         statePc = ((Object) stateCaught_18 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_18);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_18);
                         }
                         caughtException = stateCaught_18;
                         continue scanLoop1;
@@ -645,7 +645,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_21) {
                         statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
                         continue scanLoop1;
@@ -660,7 +660,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_24) {
                         statePc = ((Object) stateCaught_24 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_24);
                         }
                         caughtException = stateCaught_24;
                         continue scanLoop1;
@@ -695,7 +695,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
                         continue scanLoop1;
@@ -813,7 +813,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_27) {
                         statePc = ((Object) stateCaught_27 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_27);
                         }
                         caughtException = stateCaught_27;
                         continue scanLoop1;
@@ -826,7 +826,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_33) {
                         statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
                         continue scanLoop1;
@@ -847,7 +847,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_34) {
                         statePc = ((Object) stateCaught_34 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_34);
                         }
                         caughtException = stateCaught_34;
                         continue scanLoop1;
@@ -861,7 +861,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_35) {
                         statePc = ((Object) stateCaught_35 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_35);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_35);
                         }
                         caughtException = stateCaught_35;
                         continue scanLoop1;
@@ -915,7 +915,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_39) {
                         statePc = ((Object) stateCaught_39 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_39);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_39);
                         }
                         caughtException = stateCaught_39;
                         continue scanLoop1;
@@ -929,7 +929,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_44) {
                         statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
                         continue scanLoop1;
@@ -957,7 +957,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_45) {
                         statePc = ((Object) stateCaught_45 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_45);
                         }
                         caughtException = stateCaught_45;
                         continue scanLoop1;
@@ -971,7 +971,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_48) {
                         statePc = ((Object) stateCaught_48 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_48);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_48);
                         }
                         caughtException = stateCaught_48;
                         continue scanLoop1;
@@ -993,7 +993,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_50) {
                         statePc = ((Object) stateCaught_50 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_50);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_50);
                         }
                         caughtException = stateCaught_50;
                         continue scanLoop1;
@@ -1017,7 +1017,7 @@ final class mm extends IntrusiveNode {
                     } catch (Throwable stateCaught_52) {
                         statePc = ((Object) stateCaught_52 instanceof RuntimeException ? 55 : -1);
                         if (statePc == -1) {
-                            throw mm.<RuntimeException>$cfr$sneakyThrow(stateCaught_52);
+                            throw mm.<RuntimeException>throwUnchecked(stateCaught_52);
                         }
                         caughtException = stateCaught_52;
                         continue scanLoop1;
@@ -1077,7 +1077,7 @@ final class mm extends IntrusiveNode {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

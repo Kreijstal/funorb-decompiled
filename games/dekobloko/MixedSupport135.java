@@ -93,11 +93,11 @@ final class MixedSupport135 {
             return;
           }
         }
-        throw MixedSupport135.<RuntimeException>computeRuntimeException1703(new Exception());
+        throw MixedSupport135.<RuntimeException>throwUnchecked(new Exception());
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1703(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -117,7 +117,7 @@ final class ProxySocketFactory extends SocketFactory {
         if (var7 == null) {
           return this.openDirectSocket((byte) 15);
         }
-        throw ProxySocketFactory.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketFactory.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     public static void releaseStatics(int obfuscationGuard) {
@@ -324,7 +324,7 @@ final class ProxySocketFactory extends SocketFactory {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

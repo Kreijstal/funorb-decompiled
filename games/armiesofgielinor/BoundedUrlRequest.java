@@ -171,7 +171,7 @@ final class BoundedUrlRequest implements Runnable {
               break;
             }
             if (this.response.position == this.response.payload.length) {
-              throw BoundedUrlRequest.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.response.payload.length + " " + this.url));
+              throw BoundedUrlRequest.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.response.payload.length + " " + this.url));
             }
             completionMonitorOrFailure = this;
             synchronized (completionMonitorOrFailure) {
@@ -236,7 +236,7 @@ final class BoundedUrlRequest implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

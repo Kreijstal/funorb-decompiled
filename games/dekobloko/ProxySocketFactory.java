@@ -116,7 +116,7 @@ final class ProxySocketFactory extends SocketFactory {
         if (objectLocal24 == null) {
           return this.computeSocket1795(2);
         }
-        throw ProxySocketFactory.<RuntimeException>computeRuntimeException1474((Throwable) objectLocal24);
+        throw ProxySocketFactory.<RuntimeException>throwUnchecked((Throwable) objectLocal24);
     }
 
     private final java.net.Socket computeSocket1475(byte byteArgument1, java.net.Proxy proxyArgument2) throws IOException {
@@ -360,7 +360,7 @@ final class ProxySocketFactory extends SocketFactory {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1474(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

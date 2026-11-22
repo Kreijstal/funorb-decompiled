@@ -288,7 +288,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -328,7 +328,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_3) {
                         statePc = ((Object) stateCaught_3 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_3);
                         }
                         caughtException = stateCaught_3;
                         continue scanLoop1;
@@ -341,7 +341,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_8) {
                         statePc = ((Object) stateCaught_8 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_8);
                         }
                         caughtException = stateCaught_8;
                         continue scanLoop1;
@@ -355,7 +355,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_9) {
                         statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_9);
                         }
                         caughtException = stateCaught_9;
                         continue scanLoop1;
@@ -369,7 +369,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -403,7 +403,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -527,7 +527,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_16) {
                         statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
                         continue scanLoop1;
@@ -550,7 +550,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_23) {
                         statePc = ((Object) stateCaught_23 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_23);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_23);
                         }
                         caughtException = stateCaught_23;
                         continue scanLoop1;
@@ -564,7 +564,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_25) {
                         statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_25);
                         }
                         caughtException = stateCaught_25;
                         continue scanLoop1;
@@ -685,7 +685,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_26) {
                         statePc = ((Object) stateCaught_26 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_26);
                         }
                         caughtException = stateCaught_26;
                         continue scanLoop1;
@@ -711,7 +711,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_33) {
                         statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
                         continue scanLoop1;
@@ -725,7 +725,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_36) {
                         statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_36);
                         }
                         caughtException = stateCaught_36;
                         continue scanLoop1;
@@ -788,7 +788,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
                         continue scanLoop1;
@@ -814,7 +814,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_41) {
                         statePc = ((Object) stateCaught_41 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_41);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_41);
                         }
                         caughtException = stateCaught_41;
                         continue scanLoop1;
@@ -828,7 +828,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_44) {
                         statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_44);
                         }
                         caughtException = stateCaught_44;
                         continue scanLoop1;
@@ -868,7 +868,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_45) {
                         statePc = ((Object) stateCaught_45 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_45);
                         }
                         caughtException = stateCaught_45;
                         continue scanLoop1;
@@ -889,7 +889,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_47) {
                         statePc = ((Object) stateCaught_47 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_47);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_47);
                         }
                         caughtException = stateCaught_47;
                         continue scanLoop1;
@@ -910,7 +910,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_48) {
                         statePc = ((Object) stateCaught_48 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_48);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_48);
                         }
                         caughtException = stateCaught_48;
                         continue scanLoop1;
@@ -936,7 +936,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_49) {
                         statePc = ((Object) stateCaught_49 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_49);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_49);
                         }
                         caughtException = stateCaught_49;
                         continue scanLoop1;
@@ -950,7 +950,7 @@ final class cj extends qf implements Cloneable {
                     } catch (Throwable stateCaught_52) {
                         statePc = ((Object) stateCaught_52 instanceof RuntimeException ? 54 : -1);
                         if (statePc == -1) {
-                            throw cj.<RuntimeException>$cfr$sneakyThrow(stateCaught_52);
+                            throw cj.<RuntimeException>throwUnchecked(stateCaught_52);
                         }
                         caughtException = stateCaught_52;
                         continue scanLoop1;
@@ -1390,7 +1390,7 @@ final class cj extends qf implements Cloneable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

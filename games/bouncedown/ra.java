@@ -205,7 +205,7 @@ final class ra extends oa {
         if (var7 == null) {
           return this.a(false);
         }
-        throw ra.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ra.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     final static void c(int param0) {
@@ -357,7 +357,7 @@ final class ra extends oa {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

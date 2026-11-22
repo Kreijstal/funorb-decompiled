@@ -51,7 +51,7 @@ final class dd implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_b = false;
-            throw dd.<RuntimeException>$cfr$sneakyThrow(var3);
+            throw dd.<RuntimeException>throwUnchecked(var3);
           }
           if (decompiledRegionSelector1 == 0) {
             this.field_b = false;
@@ -77,7 +77,7 @@ final class dd implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

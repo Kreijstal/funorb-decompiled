@@ -46,7 +46,7 @@ final class UrlRequest implements Runnable {
               break;
             }
             if (this.buffer.payload.length == this.buffer.position) {
-              throw UrlRequest.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.buffer.payload.length + " " + this.url));
+              throw UrlRequest.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.buffer.payload.length + " " + this.url));
             }
             var1 = this;
             synchronized (var1) {
@@ -258,7 +258,7 @@ final class UrlRequest implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

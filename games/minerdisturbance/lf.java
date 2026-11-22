@@ -34,7 +34,7 @@ final class lf implements Runnable {
               break;
             }
             if (this.field_g.payload.length == this.field_g.position) {
-              throw lf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_h));
+              throw lf.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_h));
             }
             var1 = this;
             synchronized (var1) {
@@ -212,7 +212,7 @@ final class lf implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

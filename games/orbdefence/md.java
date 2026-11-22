@@ -367,7 +367,7 @@ final class md extends rg {
         if (var7 == null) {
           return this.a(-5942);
         }
-        throw md.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw md.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     md() {
@@ -404,7 +404,7 @@ final class md extends rg {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

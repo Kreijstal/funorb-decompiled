@@ -47,7 +47,7 @@ final class hg {
             return;
           }
         }
-        throw hg.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw hg.<RuntimeException>throwUnchecked(new Exception());
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
@@ -98,7 +98,7 @@ final class hg {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -121,7 +121,7 @@ final class mn extends wn {
         if (var7 == null) {
           return this.a(true);
         }
-        throw mn.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw mn.<RuntimeException>throwUnchecked((Throwable) var7);
     }
 
     final static sa a(String param0, int param1) {
@@ -512,7 +512,7 @@ final class mn extends wn {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

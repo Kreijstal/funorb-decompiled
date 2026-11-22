@@ -597,7 +597,7 @@ final class vb {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 16 : -1);
                         if (statePc == -1) {
-                            throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw vb.<RuntimeException>throwUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -612,7 +612,7 @@ final class vb {
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 16 : -1);
                         if (statePc == -1) {
-                            throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                            throw vb.<RuntimeException>throwUnchecked(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
                         continue scanLoop1;
@@ -639,7 +639,7 @@ final class vb {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 16 : -1);
                         if (statePc == -1) {
-                            throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw vb.<RuntimeException>throwUnchecked(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -683,7 +683,7 @@ final class vb {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 16 : -1);
                         if (statePc == -1) {
-                            throw vb.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                            throw vb.<RuntimeException>throwUnchecked(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -832,7 +832,7 @@ final class vb {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

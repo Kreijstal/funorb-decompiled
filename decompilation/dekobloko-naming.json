@@ -151950,10 +151950,10 @@
     {
       "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "to": "computeRuntimeException0508",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:PlatformService.computeRuntimeException0508(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+      "to": "throwUnchecked",
+      "evidence": "Complete private static<T extends Throwable> RuntimeException helper declaration/body and generic throw consumers reviewed: throws original(T)Throwable with throws T and SuppressWarnings unchecked. Preserve original throwable identity, null behavior, explicit type arguments and exception paths; no wrapping/conversion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformService.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:fd.a(B)Lmh;",
@@ -153638,10 +153638,10 @@
     {
       "symbol": "M:hn.$cfr$lcmp(JJ)I",
       "originalName": "$cfr$lcmp",
-      "to": "computeInteger0673",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:GameApplet.computeInteger0673(JJ)I"
+      "to": "compareLongs",
+      "evidence": "Complete private static generated long-comparison helper reviewed: return left<right?-1:(left==right?0:1). Signed64-bit comparison without subtraction overflow, allocations or side effects. Preserve full long domain and callers unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
     },
     {
       "symbol": "M:hn.a(B)Z",
@@ -159398,10 +159398,10 @@
     {
       "symbol": "M:oh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "to": "computeRuntimeException1169",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:NetworkSupport008.computeRuntimeException1169(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+      "to": "throwUnchecked",
+      "evidence": "Complete private static<T extends Throwable> RuntimeException helper declaration/body and generic throw consumers reviewed: throws original(T)Throwable with throws T and SuppressWarnings unchecked. Preserve original throwable identity, null behavior, explicit type arguments and exception paths; no wrapping/conversion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkSupport008.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:oh.a(B)V",
@@ -162534,10 +162534,10 @@
     {
       "symbol": "M:sc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "to": "computeRuntimeException1474",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ProxySocketFactory.computeRuntimeException1474(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+      "to": "throwUnchecked",
+      "evidence": "Complete private static<T extends Throwable> RuntimeException helper declaration/body and generic throw consumers reviewed: throws original(T)Throwable with throws T and SuppressWarnings unchecked. Preserve original throwable identity, null behavior, explicit type arguments and exception paths; no wrapping/conversion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketFactory.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:sc.a(BLjava/net/Proxy;)Ljava/net/Socket;",
@@ -164790,10 +164790,10 @@
     {
       "symbol": "M:vc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "to": "computeRuntimeException1703",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport135.computeRuntimeException1703(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+      "to": "throwUnchecked",
+      "evidence": "Complete private static<T extends Throwable> RuntimeException helper declaration/body and generic throw consumers reviewed: throws original(T)Throwable with throws T and SuppressWarnings unchecked. Preserve original throwable identity, null behavior, explicit type arguments and exception paths; no wrapping/conversion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MixedSupport135.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:vc.a(Ljava/awt/Frame;I)V",
@@ -437194,9 +437194,9 @@
     },
     {
       "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:PlatformService.computeRuntimeException0508(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:PlatformService.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "computeRuntimeException0508",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "fd.java",
         "start": 26221,
@@ -439834,9 +439834,9 @@
     },
     {
       "symbol": "M:hn.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.computeInteger0673(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "computeInteger0673",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "hn.java",
         "start": 34729,
@@ -448942,9 +448942,9 @@
     },
     {
       "symbol": "M:oh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:NetworkSupport008.computeRuntimeException1169(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:NetworkSupport008.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "computeRuntimeException1169",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "oh.java",
         "start": 10388,
@@ -453837,9 +453837,9 @@
     },
     {
       "symbol": "M:sc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ProxySocketFactory.computeRuntimeException1474(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ProxySocketFactory.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "computeRuntimeException1474",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "sc.java",
         "start": 14708,
@@ -457291,9 +457291,9 @@
     },
     {
       "symbol": "M:vc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:MixedSupport135.computeRuntimeException1703(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:MixedSupport135.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "computeRuntimeException1703",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "vc.java",
         "start": 3373,
@@ -480248,7 +480248,7 @@
     },
     {
       "symbol": "P:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:PlatformService.computeRuntimeException0508(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:PlatformService.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -487508,7 +487508,7 @@
     },
     {
       "symbol": "P:hn.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.computeInteger0673(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -487519,7 +487519,7 @@
     },
     {
       "symbol": "P:hn.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.computeInteger0673(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -511257,7 +511257,7 @@
     },
     {
       "symbol": "P:oh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:NetworkSupport008.computeRuntimeException1169(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:NetworkSupport008.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -524116,7 +524116,7 @@
     },
     {
       "symbol": "P:sc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ProxySocketFactory.computeRuntimeException1474(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ProxySocketFactory.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -531959,7 +531959,7 @@
     },
     {
       "symbol": "P:vc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:MixedSupport135.computeRuntimeException1703(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:MixedSupport135.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -860653,7 +860653,7 @@
       "original": "fd.java",
       "renamed": "PlatformService.java",
       "inputSha256": "d2c6cb7a094ab8958c1175566a61a75b2f12976ddc39cee426326a51eac7d8c5",
-      "outputSha256": "c93f997adeab7a4e8a15c5064955c59ed1818479b7be12fd39618a3cae1bfbb4",
+      "outputSha256": "963d22fdadf0e0b99614827fa0eb50c198fca00c8682676a3467af874f16ede6",
       "edits": [
         {
           "start": 69,
@@ -862872,7 +862872,7 @@
           "end": 10020,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 10091,
@@ -863372,7 +863372,7 @@
           "end": 12642,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 12756,
@@ -863393,7 +863393,7 @@
           "end": 12858,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 12935,
@@ -863442,7 +863442,7 @@
           "end": 13180,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 13257,
@@ -863512,7 +863512,7 @@
           "end": 13606,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 13767,
@@ -863603,7 +863603,7 @@
           "end": 14217,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 14218,
@@ -866059,7 +866059,7 @@
           "end": 26237,
           "symbol": "M:fd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException0508"
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -945149,7 +945149,7 @@
       "original": "hn.java",
       "renamed": "GameApplet.java",
       "inputSha256": "20ebb866ad508893d821a364cf5545b0c5a5699c1e100f5069ee576071d3013a",
-      "outputSha256": "5f53b385a3f3e83e133a1b6054315767494ceaa64b4778128b04001ccb37ba74",
+      "outputSha256": "cb410c214382f3ec1589c950de4b4ecf413e343d92691494c6f582848ac10bc7",
       "edits": [
         {
           "start": 60,
@@ -951421,7 +951421,7 @@
           "end": 27354,
           "symbol": "M:hn.$cfr$lcmp(JJ)I",
           "original": "$cfr$lcmp",
-          "renamed": "computeInteger0673"
+          "renamed": "compareLongs"
         },
         {
           "start": 27356,
@@ -952884,7 +952884,7 @@
           "end": 34738,
           "symbol": "M:hn.$cfr$lcmp(JJ)I",
           "original": "$cfr$lcmp",
-          "renamed": "computeInteger0673"
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -1335969,7 +1335969,7 @@
       "original": "oh.java",
       "renamed": "NetworkSupport008.java",
       "inputSha256": "5b4dd26c4e7051efc0fa78b48b942b58139197b7af147c1f3d16ccc581077678",
-      "outputSha256": "c7b0a0363468163a0b685546e17fb014c6255728e9c05eb07f5e76a913a4eb8b",
+      "outputSha256": "88469aafecd4dd0ebc72f0f1c77b399e2e46bdcf7368e8f0f30c0348b49a88fb",
       "edits": [
         {
           "start": 69,
@@ -1337243,7 +1337243,7 @@
           "end": 5380,
           "symbol": "M:oh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1169"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 5410,
@@ -1338321,7 +1338321,7 @@
           "end": 10404,
           "symbol": "M:oh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1169"
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1562386,7 +1562386,7 @@
       "original": "sc.java",
       "renamed": "ProxySocketFactory.java",
       "inputSha256": "d6c16b9de9c934908162a09bebb2c134330b5d8c322ae30d2e5c856fd5db21e5",
-      "outputSha256": "01ab3e0559e6efca9def141e8209ec618ce2fcb39d5c82f32c7d8ee46d3564db",
+      "outputSha256": "9ab1f0dd7150e2a719902409c0bd894c1fcfcf7d17ed3d879f307a8a4222d27a",
       "edits": [
         {
           "start": 89,
@@ -1563359,7 +1563359,7 @@
           "end": 4368,
           "symbol": "M:sc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1474"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 4381,
@@ -1565417,7 +1565417,7 @@
           "end": 14724,
           "symbol": "M:sc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1474"
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1696660,7 +1696660,7 @@
       "original": "vc.java",
       "renamed": "MixedSupport135.java",
       "inputSha256": "d92f493c222cf6116ed52eda592ebac8833cf45e900c66176399f8ee194db4b2",
-      "outputSha256": "ceb75aa3d03cb596f9d87b582037f4697fc403161d4feec2df6f1aa904ec1fe1",
+      "outputSha256": "212c3ce0b1f840ea9d8fb1651113460ff5edd44c03cad3ffe960e645fe4bd42c",
       "edits": [
         {
           "start": 50,
@@ -1697556,14 +1697556,14 @@
           "end": 3254,
           "symbol": "M:vc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1703"
+          "renamed": "throwUnchecked"
         },
         {
           "start": 3373,
           "end": 3389,
           "symbol": "M:vc.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
-          "renamed": "computeRuntimeException1703"
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "49435c9fc8152f8c21d995d24a8f1c5f0a4b4aa7f6be40db76954c0ddeee4206",
+    "rulesSha256": "ec5e9f84063727d0ee316f5afdc24c1be044fe3bf1e7e42c1fe892895924295c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "7ebb6b444ecfadd6b2c223858b24c135a524732ba042b214ee9dd19c423b9445",
+    "outputTreeSha256": "bb1e41f86217f8219ad865ed071eedad6f720c12ab62ce6e35d3d873feb835e0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

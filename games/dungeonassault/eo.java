@@ -94,11 +94,11 @@ final class eo {
             return;
           }
         }
-        throw eo.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw eo.<RuntimeException>throwUnchecked(new Exception());
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

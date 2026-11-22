@@ -155,7 +155,7 @@ final class NetworkSupport008 implements Runnable {
               break;
             }
             if (this.packetBufferState0006.payload.length == this.packetBufferState0006.position) {
-              throw NetworkSupport008.<RuntimeException>computeRuntimeException1169(new Exception("HG1: " + this.packetBufferState0006.payload.length + " " + this.uRLState0001));
+              throw NetworkSupport008.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.packetBufferState0006.payload.length + " " + this.uRLState0001));
             }
             objectLocal2 = this;
             synchronized (objectLocal2) {
@@ -301,7 +301,7 @@ final class NetworkSupport008 implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1169(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

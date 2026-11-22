@@ -88,7 +88,7 @@ final class hj implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_e = false;
-          throw hj.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw hj.<RuntimeException>throwUnchecked(var3);
         }
         this.field_e = false;
     }
@@ -596,7 +596,7 @@ final class hj implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

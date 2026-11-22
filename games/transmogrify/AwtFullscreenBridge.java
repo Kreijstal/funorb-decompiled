@@ -58,7 +58,7 @@ final class AwtFullscreenBridge {
             return;
           }
         }
-        throw AwtFullscreenBridge.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenBridge.<RuntimeException>throwUnchecked(new Exception());
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
@@ -98,7 +98,7 @@ final class AwtFullscreenBridge {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

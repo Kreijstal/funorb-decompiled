@@ -111,7 +111,7 @@ final class AwtFullscreenController {
               Throwable var7_ref = decompiledCaughtException;
             }
           }
-          throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(var6);
+          throw AwtFullscreenController.<RuntimeException>throwUnchecked(var6);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -135,14 +135,14 @@ final class AwtFullscreenController {
             return;
           }
         }
-        throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenController.<RuntimeException>throwUnchecked(new Exception());
     }
 
     static {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }
