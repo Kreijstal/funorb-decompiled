@@ -51,9 +51,9 @@ final class ed extends om {
         try {
           var3 = tp.field_f;
           var3.d(8, param1);
-          var3.a(true, param2.field_f);
+          var3.writeByte(true, param2.field_f);
           int var4 = -40 / ((param0 - 4) / 43);
-          var3.c(-161478600, param2.field_k);
+          var3.writeShort(-161478600, param2.field_k);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ed.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

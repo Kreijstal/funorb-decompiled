@@ -233,11 +233,11 @@ final class wl {
           if (null != KeyboardInput.field_b) {
             try {
               KeyboardInput.field_b.a((byte) 123, 0L);
-              KeyboardInput.field_b.a(24, (byte) 9, e.field_c.field_n, e.field_c.field_m);
+              KeyboardInput.field_b.a(24, (byte) 9, e.field_c.position, e.field_c.payload);
             } catch (Exception exception) {
             }
           }
-          e.field_c.field_n = e.field_c.field_n + 24;
+          e.field_c.position = e.field_c.position + 24;
           if (param0 != 1607962024) {
             field_f = (ci) null;
           }

@@ -53,7 +53,7 @@ final class f {
           if (param1) {
             field_a = (e) null;
           }
-          dk.a(param3.field_h, 0, param2, 0, param4, param0, param3.field_i);
+          dk.a(param3.position, 0, param2, 0, param4, param0, param3.payload);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "f.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

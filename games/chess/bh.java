@@ -89,15 +89,15 @@ abstract class bh extends mf implements ra {
           var5.f(param2, param1 ^ -90);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(1, (byte) -98);
-          var5.c(param0.field_j, (byte) -72);
-          var5.c((byte) -125, param0.field_l);
-          var5.d(param0.field_k, (byte) -81);
-          var5.d(param0.field_o, (byte) -81);
-          var5.d(param0.field_p, (byte) -81);
-          var5.d(param0.field_r, (byte) -81);
-          var5.b(var4, (byte) -125);
-          var5.a(-var4 + var5.position, -1);
+          var5.writeByte(1, (byte) -98);
+          var5.writeByte(param0.field_j, (byte) -72);
+          var5.writeSignedSmart((byte) -125, param0.field_l);
+          var5.writeInt(param0.field_k, (byte) -81);
+          var5.writeInt(param0.field_o, (byte) -81);
+          var5.writeInt(param0.field_p, (byte) -81);
+          var5.writeInt(param0.field_r, (byte) -81);
+          var5.appendCrc32(var4, (byte) -125);
+          var5.backpatchByteLength(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "bh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

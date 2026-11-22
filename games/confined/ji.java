@@ -43,15 +43,15 @@ final class ji {
         try {
           boolean decompiledFrameRemainder0 = true;
           var10 = e.field_c;
-          var2 = var10.c(32);
-          var3 = var10.c(32);
+          var2 = var10.readUnsignedByte(32);
+          var3 = var10.readUnsignedByte(32);
           if (var2 == 0) {
             var4_ref_ca = (ca) (dl.field_b.a(-117));
             if (var4_ref_ca == null) {
               dc.d(107);
               return;
             }
-            var5 = ai.field_i - var10.field_n;
+            var5 = ai.field_i - var10.position;
             var12 = var4_ref_ca.field_p;
             var11 = var12;
             var6 = var11;
@@ -59,12 +59,12 @@ final class ji {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.c(32) << va.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32) << va.a(768, var7 << 8));
             }
             var4_ref_ca.a(true);
           } else {
             if (var2 == 1) {
-              var4 = var10.b(1647);
+              var4 = var10.readSignedSmart(1647);
               var5_ref_om = (om) (jd.field_f.a(-116));
               while (var5_ref_om != null) {
                 if (~var3 != ~var5_ref_om.field_n ||

@@ -142,7 +142,7 @@ final class mi {
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
-            var27.a(5, param1, var27.field_m.length, (byte) 72);
+            var27.decryptXteaRange(5, param1, var27.payload.length, (byte) 72);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -173,11 +173,11 @@ final class mi {
               var33 = new PacketBuffer(var44);
               var15 = 0;
               var16 = 0;
-              var33.field_n = var12;
+              var33.position = var12;
               for (var17 = 0; var17 < var13; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var33.f((byte) 92);
+                  var18 = var18 + var33.readInt((byte) 92);
                   if (var7 == null) {
                     var20 = var19;
                   } else {
@@ -193,13 +193,13 @@ final class mi {
                 return true;
               }
               var45 = new byte[var15];
-              var33.field_n = var12;
+              var33.position = var12;
               var15Lifetime1 = 0;
               var18 = 0;
               for (var19 = 0; var19 < var13; var19++) {
                 var20 = 0;
                 for (var21 = 0; var21 < var5_int; var21++) {
-                  var20 = var20 + var33.f((byte) 51);
+                  var20 = var20 + var33.readInt((byte) 51);
                   if (var7 == null) {
                     var22 = var21;
                   } else {
@@ -222,11 +222,11 @@ final class mi {
               var39 = new int[var5_int];
               var31 = var39;
               var15_ref_int__ = var31;
-              var30.field_n = var12;
+              var30.position = var12;
               for (var16 = 0; var13 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var30.f((byte) 81);
+                  var17 = var17 + var30.readInt((byte) 81);
                   var15_ref_int__[var18] = var15_ref_int__[var18] + var17;
                 }
               }
@@ -238,12 +238,12 @@ final class mi {
                 var16_ref_byte____[var17] = array$1;
                 var39[var17] = 0;
               }
-              var30.field_n = var12;
+              var30.position = var12;
               var17 = 0;
               for (var18 = 0; var13 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var30.f((byte) 59);
+                  var19 = var19 + var30.readInt((byte) 59);
                   lj.a(var44, var17, var40[var20], var39[var20], var19);
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                   var17 = var17 + var19;

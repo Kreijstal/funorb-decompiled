@@ -404,25 +404,25 @@ final class mi {
           var7 = hh.field_p;
           var8 = var7;
           var8.a(true, param0);
-          var8.field_h = var8.field_h + 1;
-          var4 = var8.field_h;
-          var8.a(1, (byte) 126);
-          var8.e(-750655096, param2.field_j);
-          var8.e(-750655096, param2.field_m);
-          var8.e(-750655096, param2.field_r);
-          var8.b(param2.field_s, (byte) 57);
-          var8.b(param2.field_h, (byte) 49);
-          var8.b(param2.field_q, (byte) 92);
-          var8.b(param2.field_t, (byte) -50);
-          var8.a(param2.field_g.length, (byte) 50);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(1, (byte) 126);
+          var8.writeShort(-750655096, param2.field_j);
+          var8.writeShort(-750655096, param2.field_m);
+          var8.writeShort(-750655096, param2.field_r);
+          var8.writeInt(param2.field_s, (byte) 57);
+          var8.writeInt(param2.field_h, (byte) 49);
+          var8.writeInt(param2.field_q, (byte) 92);
+          var8.writeInt(param2.field_t, (byte) -50);
+          var8.writeByte(param2.field_g.length, (byte) 50);
           for (var5 = 0; param2.field_g.length > var5; var5++) {
-            var7.b(param2.field_g[var5], (byte) -59);
+            var7.writeInt(param2.field_g[var5], (byte) -59);
           }
           if (param1 >= -58) {
             mi.clearStaticReferences((byte) -128);
           }
-          var8.b(var4, -1);
-          var8.b(-var4 + var8.field_h, true);
+          var8.appendCrc32(var4, -1);
+          var8.backpatchByteLength(-var4 + var8.position, true);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

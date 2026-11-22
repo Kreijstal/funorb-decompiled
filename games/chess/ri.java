@@ -123,12 +123,12 @@ final class ri extends jb implements ha, we {
         try {
           var3 = qn.field_U;
           var3.f(param2, -106);
-          var3.c(2, (byte) -56);
-          var3.c(0, (byte) -112);
+          var3.writeByte(2, (byte) -56);
+          var3.writeByte(0, (byte) -112);
           if (param0 != -1281) {
             field_g = 45;
           }
-          var3.c(param1.field_p, (byte) 78);
+          var3.writeByte(param1.field_p, (byte) 78);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

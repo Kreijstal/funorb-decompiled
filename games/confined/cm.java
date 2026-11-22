@@ -61,19 +61,19 @@ final class cm {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.c(32);
-          var14.field_n = var14.field_n + 2;
-          var5 = var14.c(32);
+          var14.readUnsignedByte(32);
+          var14.position = var14.position + 2;
+          var5 = var14.readUnsignedByte(32);
           var6 = 0;
           var7 = -1;
           var8 = -1;
-          var4.field_n = var14.field_n + var5;
+          var4.position = var14.position + var5;
           for (var9 = 0; var9 < var5; var9++) {
             var10 = this.field_g.field_n[var9];
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.c(32);
+            var11 = var14.readUnsignedByte(32);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;
@@ -86,17 +86,17 @@ final class cm {
               if ((var11 & 1) == 0) {
                 field_j[var6] = (short)var12;
               } else {
-                field_j[var6] = (short)var4.b(1647);
+                field_j[var6] = (short)var4.readSignedSmart(1647);
               }
               if ((var11 & 2) == 0) {
                 field_b[var6] = (short)var12;
               } else {
-                field_b[var6] = (short)var4.b(1647);
+                field_b[var6] = (short)var4.readSignedSmart(1647);
               }
               if ((var11 & 4) == 0) {
                 field_f[var6] = (short)var12;
               } else {
-                field_f[var6] = (short)var4.b(1647);
+                field_f[var6] = (short)var4.readSignedSmart(1647);
               }
               field_h[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2) {
@@ -120,7 +120,7 @@ final class cm {
               var6++;
             }
           }
-          if (var4.field_n != param0.length) {
+          if (var4.position != param0.length) {
             throw new RuntimeException();
           }
           this.field_k = var6;

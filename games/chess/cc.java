@@ -17,12 +17,12 @@ final class cc extends ab {
           var2.f(param1, -118);
           var2.position = var2.position + 1;
           var3 = var2.position;
-          var2.c(2, (byte) 47);
-          var2.a(g.field_f, (byte) -45, 0, g.field_f.length);
-          var2.c(qd.field_u, (byte) -69);
-          var2.c(PacketBuffer.field_n, (byte) 107);
-          var2.a(fe.field_d, (byte) -45, 0, fe.field_d.length);
-          var2.a(var2.position - var3, -1);
+          var2.writeByte(2, (byte) 47);
+          var2.writeBytes(g.field_f, (byte) -45, 0, g.field_f.length);
+          var2.writeByte(qd.field_u, (byte) -69);
+          var2.writeByte(PacketBuffer.field_n, (byte) 107);
+          var2.writeBytes(fe.field_d, (byte) -45, 0, fe.field_d.length);
+          var2.backpatchByteLength(var2.position - var3, -1);
           return;
         }
     }

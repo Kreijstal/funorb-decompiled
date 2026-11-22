@@ -46,7 +46,7 @@ final class aj {
 
     final static void a(byte param0) {
         CharSequence var3 = null;
-        ci.field_J = tk.field_h.d(param0 ^ 49);
+        ci.field_J = tk.field_h.readString(param0 ^ 49);
         if (param0 == 49) {
           var3 = (CharSequence) ((Object) ci.field_J);
           cc.field_A = ad.a(var3, -2);

@@ -32,7 +32,7 @@ final class rc implements fe {
           if (param0 != -22889) {
             rc.a(-14);
           }
-          qc.field_m = e.field_c.d(true);
+          qc.field_m = e.field_c.readString(true);
           dc.field_J = hh.a(0, (CharSequence) ((Object) qc.field_m));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

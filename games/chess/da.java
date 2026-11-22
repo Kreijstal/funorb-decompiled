@@ -294,30 +294,30 @@ final class da extends ArchiveProvider {
               if (param6) {
                 var9 = var9 | 1;
               }
-              mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.a(true, var7);
-              mn.field_h.a(true, var8);
-              mn.field_h.a(true, q.a((CharSequence) ((Object) param2), (byte) -57));
-              mn.field_h.b(param0, 86);
-              mn.field_h.c(param4, (byte) 92);
-              mn.field_h.c(var9, (byte) -107);
-              qn.field_U.c(18, (byte) 96);
+              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              mn.field_h.writePrefixedString(true, var7);
+              mn.field_h.writePrefixedString(true, var8);
+              mn.field_h.writePrefixedString(true, q.a((CharSequence) ((Object) param2), (byte) -57));
+              mn.field_h.writeShort(param0, 86);
+              mn.field_h.writeByte(param4, (byte) 92);
+              mn.field_h.writeByte(var9, (byte) -107);
+              qn.field_U.writeByte(18, (byte) 96);
               qn.field_U.position = qn.field_U.position + 2;
               var10 = qn.field_U.position;
               var11_ref_String = m.a(bh.i(81), (byte) 87);
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
-              qn.field_U.a(-104, var11_ref_String);
+              qn.field_U.writeString(-104, var11_ref_String);
               lk.a(dk.field_k, mn.field_h, qn.field_U, 86, se.field_M);
-              qn.field_U.d(qn.field_U.position - var10, 70);
+              qn.field_U.backpatchShortLength(qn.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {
               mn.field_h.position = 0;
-              mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
-              mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
+              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+              mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
               stackIn_28_0 = mn.field_h;
               stackIn_28_1 = true;
               if (param1.a(-10585)) {
@@ -325,7 +325,7 @@ final class da extends ArchiveProvider {
               } else {
                 stackIn_29_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
+              ((PacketBuffer) (Object) stackIn_28_0).writePrefixedString(stackIn_28_1, stackIn_29_2);
               stackIn_32_0 = mn.field_h;
               stackIn_32_1 = true;
               if (!param3.a(-10585)) {
@@ -333,19 +333,19 @@ final class da extends ArchiveProvider {
               } else {
                 stackIn_33_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_32_0).a(stackIn_32_1, stackIn_33_2);
-              qn.field_U.c(16, (byte) 63);
+              ((PacketBuffer) (Object) stackIn_32_0).writePrefixedString(stackIn_32_1, stackIn_33_2);
+              qn.field_U.writeByte(16, (byte) 63);
               qn.field_U.position = qn.field_U.position + 1;
               var9 = qn.field_U.position;
               lk.a(dk.field_k, mn.field_h, qn.field_U, 55, se.field_M);
-              qn.field_U.a(qn.field_U.position - var9, -1);
+              qn.field_U.backpatchByteLength(qn.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);
             tb.field_f = dk.field_f;
           }
           if (tb.field_f == dk.field_f &&
             tk.a(82, 1)) {
-            var9 = tk.field_h.i(-115);
+            var9 = tk.field_h.readUnsignedByte(-115);
             tk.field_h.position = 0;
             if (var9 < 100 ||
               var9 > 105) {
@@ -385,7 +385,7 @@ final class da extends ArchiveProvider {
           if (vf.field_a == tb.field_f) {
             var9 = 2;
             if (tk.a(param5 + 103, var9)) {
-              var10 = tk.field_h.f(674914976);
+              var10 = tk.field_h.readUnsignedShort(674914976);
               tk.field_h.position = 0;
               if (tk.a(-122, var10)) {
                 var11 = sa.field_b.length;
@@ -396,7 +396,7 @@ final class da extends ArchiveProvider {
                     ja.field_f = false;
                     break;
                   }
-                  sa.field_b[var12] = tk.field_h.d(false);
+                  sa.field_b[var12] = tk.field_h.readPrefixedString(false);
                   var12++;
                 } while (var13 == 0);
                 stackIn_76_0 = var11 + 100;
@@ -408,11 +408,11 @@ final class da extends ArchiveProvider {
             jl.a(false)) {
             boolean decompiledSharedTail0 = (wg.field_B == 255);
             if (!decompiledSharedTail0) {
-              n.field_c = tk.field_h.d(0);
+              n.field_c = tk.field_h.readString(0);
               decompiledSharedTail0 = (var13 != 0);
             }
             if (decompiledSharedTail0) {
-              var9_ref_String = tk.field_h.b(true);
+              var9_ref_String = tk.field_h.readNullableString(true);
               if (null != var9_ref_String) {
                 aa.a(bh.i(81), -1, var9_ref_String);
               }

@@ -83,7 +83,7 @@ abstract class jf {
 
     final static void a(PacketBuffer param0, java.math.BigInteger param1, PacketBuffer param2, int param3, java.math.BigInteger param4) {
         try {
-          id.a(param2, param1, 44, param3, param0.field_m, param4, param0.field_n);
+          id.a(param2, param1, 44, param3, param0.payload, param4, param0.position);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "jf.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

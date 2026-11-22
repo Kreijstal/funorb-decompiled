@@ -122,7 +122,7 @@ final class pk implements Runnable {
             var3.write(ta.a((byte) -126, var5));
             this.field_h = new DataInputStream(var4.getInputStream());
           }
-          this.field_d.field_n = 0;
+          this.field_d.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -224,16 +224,16 @@ final class pk implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Confined.field_J ? 1 : 0;
           try {
-            while (this.field_d.field_m.length > this.field_d.field_n) {
-              var1_int = this.field_h.read(this.field_d.field_m, this.field_d.field_n, this.field_d.field_m.length - this.field_d.field_n);
+            while (this.field_d.payload.length > this.field_d.position) {
+              var1_int = this.field_h.read(this.field_d.payload, this.field_d.position, this.field_d.payload.length - this.field_d.position);
               if (var1_int >= 0) {
-                this.field_d.field_n = this.field_d.field_n + var1_int;
+                this.field_d.position = this.field_d.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_d.field_n == this.field_d.field_m.length) {
-              throw pk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_m.length + " " + this.field_g));
+            if (this.field_d.position == this.field_d.payload.length) {
+              throw pk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_g));
             }
             var1 = this;
             synchronized (var1) {

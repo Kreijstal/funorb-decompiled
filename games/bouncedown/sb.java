@@ -57,7 +57,7 @@ final class sb {
                 }
               }
             }
-            param0.a(0, true, 24, var11);
+            param0.writeBytes(0, true, 24, var11);
             if (param1 != 25) {
               var6 = (PacketBuffer) null;
               sb.a((PacketBuffer) null, (byte) -47);

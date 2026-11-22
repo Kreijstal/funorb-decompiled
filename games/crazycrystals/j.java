@@ -79,11 +79,11 @@ final class j implements Runnable {
         }
         try {
           var3.d(8, param1);
-          var3.a(true, 5);
-          var3.a(!param2 ? true : false, 0);
-          var3.c(-161478600, param0.field_g);
-          var3.a(true, param0.field_h);
-          var3.a(!param2 ? true : false, param0.field_j);
+          var3.writeByte(true, 5);
+          var3.writeByte(!param2 ? true : false, 0);
+          var3.writeShort(-161478600, param0.field_g);
+          var3.writeByte(true, param0.field_h);
+          var3.writeByte(!param2 ? true : false, param0.field_j);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "j.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -72,14 +72,14 @@ final class fk {
         int var3;
         this.field_c = new lg[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.c(32);
+          var3 = param0.readUnsignedByte(32);
           if (var3 != 0) {
-            param0.field_n = param0.field_n - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new lg();
             this.field_c[var2].a(param0);
           }
         }
-        this.field_a = param0.a((byte) 25);
-        this.field_b = param0.a((byte) 25);
+        this.field_a = param0.readUnsignedShort((byte) 25);
+        this.field_b = param0.readUnsignedShort((byte) 25);
     }
 }

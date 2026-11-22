@@ -140,8 +140,8 @@ final class ec extends dm {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(true, this.field_k);
-          param0.a(this.field_h, false);
+          param0.writePrefixedString(true, this.field_k);
+          param0.writeBase38String(this.field_h, false);
           if (param1 != 123) {
             this.field_k = (String) null;
           }

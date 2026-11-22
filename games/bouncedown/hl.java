@@ -43,19 +43,19 @@ final class hl {
 
     final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.d((byte) -110);
+        this.field_k = param0.readUnsignedByte((byte) -110);
         this.field_b = new int[this.field_k];
         this.field_i = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_b[var2] = param0.a(-1640531527);
-          this.field_i[var2] = param0.a(-1640531527);
+          this.field_b[var2] = param0.readUnsignedShort(-1640531527);
+          this.field_i[var2] = param0.readUnsignedShort(-1640531527);
         }
     }
 
     final void a(PacketBuffer param0) {
-        this.field_h = param0.d((byte) -72);
-        this.field_e = param0.j(-3);
-        this.field_a = param0.j(-3);
+        this.field_h = param0.readUnsignedByte((byte) -72);
+        this.field_e = param0.readInt(-3);
+        this.field_a = param0.readInt(-3);
         this.b(param0);
     }
 

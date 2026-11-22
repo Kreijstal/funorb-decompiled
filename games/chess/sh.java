@@ -151,8 +151,8 @@ final class sh {
               jj.field_a = new hn((java.net.Socket) (dm.field_b.field_b), ol.field_N);
               var2 = new PacketBuffer(13);
               dh.a(ue.field_e, 11, uj.field_n, tg.field_t, var2);
-              var2.c(15, (byte) 95);
-              var2.d(ln.field_oc, (byte) -81);
+              var2.writeByte(15, (byte) 95);
+              var2.writeInt(ln.field_oc, (byte) -81);
               jj.field_a.a(0, 13, (byte) -92, var2.data);
               vm.field_k = vm.field_k + 1;
               ve.field_Pb = 30000L + ud.a(2);

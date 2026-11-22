@@ -26,7 +26,7 @@ final class IsaacCipher {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 21106) {
-            stackIn_4_0 = ci.a(-82, param0, 0, param2);
+            stackIn_4_0 = ci.computeCrc32(-82, param0, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -122;
@@ -104,16 +104,16 @@ final class IsaacCipher {
         }
         try {
           var7 = var8.position;
-          var8.c(param1, (byte) 127);
+          var8.writeByte(param1, (byte) 127);
           if (param1 == 2) {
-            var8.a(param0 - 9921, param2);
+            var8.writeString(param0 - 9921, param2);
           }
           if (param5 == null) {
-            var8.b(param4, 119);
+            var8.writeShort(param4, 119);
           } else {
             rm.a(var8, param5, param0 ^ 16701600);
           }
-          var8.a(-var7 + var8.position, -1);
+          var8.backpatchByteLength(-var7 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

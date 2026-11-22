@@ -181,7 +181,7 @@ final class la extends wd {
           var1 = var7 + ":";
           for (var2 = 0; pe.field_d > var2; var2++) {
             var18 = var1 + ' ';
-            var3 = jc.field_g.field_i[var2] & 255;
+            var3 = jc.field_g.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 > var4) {
@@ -207,7 +207,7 @@ final class la extends wd {
         var1Lifetime1 = var7 + ":";
         for (var2Lifetime1 = 0; pe.field_d > var2Lifetime1; var2Lifetime1++) {
           var16 = var1Lifetime1 + ' ';
-          var3Lifetime1 = jc.field_g.field_i[var2Lifetime1] & 255;
+          var3Lifetime1 = jc.field_g.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (10 > var4Lifetime1) {

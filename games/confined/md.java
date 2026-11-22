@@ -63,9 +63,9 @@ final class md {
             field_b = (String) null;
           }
           var28 = e.field_c;
-          var2 = var28.c(32);
+          var2 = var28.readUnsignedByte(32);
           if (var2 == 0) {
-            var3 = var28.a((byte) 25);
+            var3 = var28.readUnsignedShort((byte) 25);
             var4 = (qn) (na.field_T.a(86));
             while (var4 != null) {
               if (var3 != var4.field_w) {
@@ -78,7 +78,7 @@ final class md {
               dc.d(117);
               return;
             }
-            var5 = var28.c(32);
+            var5 = var28.readUnsignedByte(32);
             if (var5 != 0) {
               var6 = var4.field_o;
               in.field_e[0].field_a = false;
@@ -86,12 +86,12 @@ final class md {
               var7 = var4.field_s;
               in.field_e[0].field_b = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                in.field_e[var8_int].field_g = var28.d(true);
+                in.field_e[var8_int].field_g = var28.readString(true);
                 in.field_e[var8_int].field_a = false;
-                if (var28.c(param0 + 10996) != 1) {
+                if (var28.readUnsignedByte(param0 + 10996) != 1) {
                   in.field_e[var8_int].field_b = null;
                 } else {
-                  in.field_e[var8_int].field_b = var28.d(true);
+                  in.field_e[var8_int].field_b = var28.readString(true);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -110,13 +110,13 @@ final class md {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.c(32);
+              var18 = var28.readUnsignedByte(32);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.c(32);
+                  var20 = var28.readUnsignedByte(32);
                   var21 = in.field_e[var20].field_g;
-                  var22 = var28.h((byte) -68);
-                  var24 = var28.field_n;
+                  var22 = var28.readLong((byte) -68);
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = in.field_e[var20].field_b;
@@ -124,7 +124,7 @@ final class md {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.f((byte) 52);
+                      var11[0][incrementValue$3] = var28.readInt((byte) 52);
                     }
                     var12++;
                   }
@@ -133,12 +133,12 @@ final class md {
                     var8[1][var13] = qc.field_m;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var28.field_n = var24;
+                    var28.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.f((byte) 37);
+                      var11[1][incrementValue$4] = var28.readInt((byte) 37);
                     }
                   }
                   if (var14 < var6 &&
@@ -148,11 +148,11 @@ final class md {
                     var9[2][var14] = in.field_e[var20].field_b;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_n = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.f((byte) 100);
+                      var11[2][incrementValue$5] = var28.readInt((byte) 100);
                     }
                   }
                 }
@@ -163,8 +163,8 @@ final class md {
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var28.a((byte) 25);
-            var4_long = var28.h((byte) -68);
+            var3Lifetime1 = var28.readUnsignedShort((byte) 25);
+            var4_long = var28.readLong((byte) -68);
             var6_ref_bj = (bj) (lf.field_k.a(82));
             while (var6_ref_bj != null) {
               if (var6_ref_bj.field_p != var3Lifetime1) {
@@ -269,8 +269,8 @@ final class md {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_n;
-            param0.d(-116, var17.field_t);
+            var4 = param0.position;
+            param0.writeInt(-116, var17.field_t);
             for (var5 = 0; var5 < var17.field_r; var5++) {
               if (0 == var17.field_u[var5]) {
                 try {
@@ -280,20 +280,20 @@ final class md {
                       var16_ref = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
                       var20 = var16_ref;
                       var20.setInt((Object) null, var17.field_v[var5]);
-                      param0.f(94, 0);
+                      param0.writeByte(94, 0);
                     } else {
                       if (var6_int == 2) {
                         var28 = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
                         var8 = var28.getModifiers();
-                        param0.f(117, 0);
-                        param0.d(-121, var8);
+                        param0.writeByte(117, 0);
+                        param0.writeInt(-121, var8);
                       }
                     }
                   } else {
                     var27 = (java.lang.reflect.Field) (var17.field_m[var5].field_f);
                     var8 = var27.getInt((Object) null);
-                    param0.f(120, 0);
-                    param0.d(-110, var8);
+                    param0.writeByte(120, 0);
+                    param0.writeInt(-110, var8);
                   }
                   if (var6_int == 3) {
                     var29 = (java.lang.reflect.Method) (var17.field_q[var5].field_f);
@@ -305,81 +305,81 @@ final class md {
                     }
                     var10 = var29.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.f(96, 0);
+                      param0.writeByte(96, 0);
                     } else if (var10 instanceof Number) {
-                      param0.f(104, 1);
-                      param0.a(((Number) (var10)).longValue(), (byte) 110);
+                      param0.writeByte(104, 1);
+                      param0.writeLong(((Number) (var10)).longValue(), (byte) 110);
                     } else if (!(var10 instanceof String)) {
-                      param0.f(94, 4);
+                      param0.writeByte(94, 4);
                     } else {
-                      param0.f(102, 2);
-                      param0.a((String) (var10), -67);
+                      param0.writeByte(102, 2);
+                      param0.writeString((String) (var10), -67);
                     }
                   } else {
                     if (4 == var6_int) {
                       var30 = (java.lang.reflect.Method) (var17.field_q[var5].field_f);
                       var8Lifetime1 = var30.getModifiers();
-                      param0.f(90, 0);
-                      param0.d(-126, var8Lifetime1);
+                      param0.writeByte(90, 0);
+                      param0.writeInt(-126, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.f(95, -10);
+                  param0.writeByte(95, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.f(100, -11);
+                  param0.writeByte(100, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.f(103, -12);
+                  param0.writeByte(103, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.f(88, -13);
+                  param0.writeByte(88, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.f(100, -14);
+                  param0.writeByte(100, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.f(103, -15);
+                  param0.writeByte(103, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.f(114, -16);
+                  param0.writeByte(114, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.f(93, -17);
+                  param0.writeByte(93, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.f(115, -18);
+                  param0.writeByte(115, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.f(106, -19);
+                  param0.writeByte(106, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.f(125, -20);
+                  param0.writeByte(125, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.f(97, -21);
+                  param0.writeByte(97, -21);
                 }
               } else {
-                param0.f(99, var17.field_u[var5]);
+                param0.writeByte(99, var17.field_u[var5]);
               }
             }
             if (param1 <= 125) {
               md.b((byte) 97);
             }
-            param0.e(26199, var4);
+            param0.appendCrc32(26199, var4);
             var17.a(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -444,7 +444,7 @@ final class md {
             field_b = (String) null;
           }
           var13 = e.field_c;
-          var2 = var13.c(32);
+          var2 = var13.readUnsignedByte(32);
           if (var2 == 0) {
             var11 = ek.c(16317);
             var17 = var11;
@@ -453,9 +453,9 @@ final class md {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).c(32);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(32);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).f((byte) 61);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 61);
             }
             var16_ref = (gd) (ra.field_d.a(-120));
             if (var16_ref == null) {

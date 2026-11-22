@@ -173,8 +173,8 @@ final class dn {
     final static void a(byte param0, int param1) {
         nk var2 = qn.field_U;
         var2.f(param1, -85);
-        var2.c(1, (byte) -73);
-        var2.c(3, (byte) 124);
+        var2.writeByte(1, (byte) -73);
+        var2.writeByte(3, (byte) 124);
         if (param0 <= 10) {
           dn.a(true);
         }

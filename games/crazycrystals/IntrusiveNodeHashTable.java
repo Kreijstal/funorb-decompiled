@@ -95,7 +95,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           var1 = var6 + ":";
           for (var2 = 0; rk.field_b > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = kd.field_n.field_h[var2] & 255;
+            var3 = kd.field_n.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

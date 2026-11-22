@@ -19,10 +19,10 @@ abstract class ef {
           return;
         }
         CipherPacketBuffer var2 = jc.field_g;
-        var2.j(-3);
-        var2.j(-3);
-        var2.j(-3);
-        var2.j(-3);
+        var2.readInt(-3);
+        var2.readInt(-3);
+        var2.readInt(-3);
+        var2.readInt(-3);
         var1.c(2);
         if (param0 >= 99) {
           return;

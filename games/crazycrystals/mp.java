@@ -102,7 +102,7 @@ final class mp extends DualLinkNode {
             field_p = 6L;
           }
           while (true) {
-            var3_int = param0.h(255);
+            var3_int = param0.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
@@ -165,27 +165,27 @@ final class mp extends DualLinkNode {
             return;
           }
           if (param0 == 1) {
-            this.field_l = ik.a(param1.i(110), (byte) -76, '<');
+            this.field_l = ik.a(param1.readString(110), (byte) -76, '<');
           } else {
             if (param0 == 2) {
-              var4_int = param1.h(255);
+              var4_int = param1.readUnsignedByte(255);
               this.field_o = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_o[var5] = param1.c((byte) -7);
+                this.field_o[var5] = param1.readUnsignedShort((byte) -7);
               }
             } else if (3 == param0) {
-              var4_int = param1.h(255);
+              var4_int = param1.readUnsignedByte(255);
               this.field_m = new int[var4_int];
               this.field_n = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param1.c((byte) -7);
+                var6 = param1.readUnsignedShort((byte) -7);
                 var7 = cf.a(var6, 123);
                 if (var7 != null) {
                   this.field_m[var5] = var6;
                   array$0 = new int[var7.field_a];
                   this.field_n[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_a; var8++) {
-                    this.field_n[var5][var8] = param1.c((byte) -7);
+                    this.field_n[var5][var8] = param1.readUnsignedShort((byte) -7);
                   }
                 }
               }

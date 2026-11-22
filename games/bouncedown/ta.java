@@ -112,19 +112,19 @@ final class ta {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var3 = var9.d((byte) -66);
-          var4 = var9.j(-3);
+          var3 = var9.readUnsignedByte((byte) -66);
+          var4 = var9.readInt(-3);
           if (var4 >= 0 && (lj.field_a == 0 ||
             !(var4 > lj.field_a))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a((byte) 126, var4, var12, 0);
+              var9.readBytes((byte) 126, var4, var12, 0);
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }
-            var5 = var9.j(param0 ^ -21128);
+            var5 = var9.readInt(param0 ^ -21128);
             if (var5 >= 0 && (lj.field_a == 0 ||
               !(lj.field_a < var5))) {
               var13 = new byte[var5];

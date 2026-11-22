@@ -314,8 +314,8 @@ final class b implements fe {
               return;
             }
             var18 = new dg();
-            var18.field_r = param2.c(32);
-            var18.field_t = param2.f((byte) 67);
+            var18.field_r = param2.readUnsignedByte(32);
+            var18.field_t = param2.readInt((byte) 67);
             var18.field_q = new bc[var18.field_r];
             var18.field_u = new int[var18.field_r];
             var18.field_o = new int[var18.field_r];
@@ -324,28 +324,28 @@ final class b implements fe {
             var18.field_v = new int[var18.field_r];
             for (var5 = 0; var5 < var18.field_r; var5++) {
               try {
-                var6_int = param2.c(32);
+                var6_int = param2.readUnsignedByte(32);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var20 = param2.d(true);
-                    var21 = param2.d(true);
-                    var9 = param2.c(32);
+                    var20 = param2.readString(true);
+                    var21 = param2.readString(true);
+                    var9 = param2.readUnsignedByte(32);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.d(true);
+                      var10[var11_int] = param2.readString(true);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (3 == var6_int) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.f((byte) 112);
+                        var13 = param2.readInt((byte) 112);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(0, (byte) 87, var13, var22[var12_int]);
+                        param2.readBytes(0, (byte) 87, var13, var22[var12_int]);
                       }
                     }
                     var18.field_o[var5] = var6_int;
@@ -360,11 +360,11 @@ final class b implements fe {
                     var18.field_s[var5] = var22;
                   }
                 } else {
-                  var15 = param2.d(true);
-                  var16 = param2.d(true);
+                  var15 = param2.readString(true);
+                  var16 = param2.readString(true);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param2.f((byte) 118);
+                    var9 = param2.readInt((byte) 118);
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_v[var5] = var9;

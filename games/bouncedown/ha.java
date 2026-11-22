@@ -34,16 +34,16 @@ final class ha implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Bounce.field_N;
           try {
-            while (this.field_a.field_i.length > this.field_a.field_h) {
-              var1_int = this.field_c.read(this.field_a.field_i, this.field_a.field_h, -this.field_a.field_h + this.field_a.field_i.length);
+            while (this.field_a.payload.length > this.field_a.position) {
+              var1_int = this.field_c.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
               if (var1_int >= 0) {
-                this.field_a.field_h = this.field_a.field_h + var1_int;
+                this.field_a.position = this.field_a.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_a.field_h == this.field_a.field_i.length) {
-              throw ha.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.field_i.length + " " + this.field_d));
+            if (this.field_a.position == this.field_a.payload.length) {
+              throw ha.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -140,10 +140,10 @@ final class ha implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_d.getFile() + "\n\n"));
-            var3.write(PacketBuffer.a(var5, true));
+            var3.write(PacketBuffer.encodeCp1252(var5, true));
             this.field_c = new DataInputStream(var4.getInputStream());
           }
-          this.field_a.field_h = 0;
+          this.field_a.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -196,11 +196,11 @@ final class ha implements Runnable {
         try {
           var3 = hh.field_p;
           var3.a(true, param2);
-          var3.a(5, (byte) 98);
-          var3.a(0, (byte) 65);
-          var3.e(param0 ^ 750670611, param1.field_n);
-          var3.a(param1.field_g, (byte) 63);
-          var3.a(param1.field_m, (byte) 98);
+          var3.writeByte(5, (byte) 98);
+          var3.writeByte(0, (byte) 65);
+          var3.writeShort(param0 ^ 750670611, param1.field_n);
+          var3.writeByte(param1.field_g, (byte) 63);
+          var3.writeByte(param1.field_m, (byte) 98);
           if (param0 == -17765) {
             return;
           }

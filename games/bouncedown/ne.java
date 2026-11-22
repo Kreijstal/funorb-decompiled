@@ -122,7 +122,7 @@ final class ne extends DualLinkNode {
         try {
           var3_int = -46 % ((-75 - param0) / 37);
           while (true) {
-            var4 = param1.d((byte) -104);
+            var4 = param1.readUnsignedByte((byte) -104);
             if (var4 == 0) {
               return;
             }
@@ -258,24 +258,24 @@ final class ne extends DualLinkNode {
           }
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param1.d((byte) -83);
+              var4_int = param1.readUnsignedByte((byte) -83);
               this.field_s = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_s[var5] = param1.a(-1640531527);
+                this.field_s[var5] = param1.readUnsignedShort(-1640531527);
               }
             } else if (3 == param2) {
-              var4_int = param1.d((byte) -69);
+              var4_int = param1.readUnsignedByte((byte) -69);
               this.field_t = new int[var4_int];
               this.field_o = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param1.a(-1640531527);
+                var6 = param1.readUnsignedShort(-1640531527);
                 var7 = jd.a(param0 + 21296, var6);
                 if (var7 != null) {
                   this.field_t[var5] = var6;
                   array$0 = new int[var7.field_c];
                   this.field_o[var5] = array$0;
                   for (var8 = 0; var7.field_c > var8; var8++) {
-                    this.field_o[var5][var8] = param1.a(-1640531527);
+                    this.field_o[var5][var8] = param1.readUnsignedShort(-1640531527);
                   }
                 }
               }
@@ -285,7 +285,7 @@ final class ne extends DualLinkNode {
               }
             }
           } else {
-            this.field_p = di.a(-121, '<', param1.b(true));
+            this.field_p = di.a(-121, '<', param1.readString(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

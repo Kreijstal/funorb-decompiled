@@ -119,7 +119,7 @@ abstract class GameClient extends AppletShell {
     }
 
     private final void i(byte param0) {
-        int var2 = jc.field_g.d((byte) -81);
+        int var2 = jc.field_g.readUnsignedByte((byte) -81);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = pe.field_d - 1;
         byte[] var5 = new byte[var4];
@@ -585,7 +585,7 @@ abstract class GameClient extends AppletShell {
               if (uj.field_v.a((byte) -53)) {
                 var12 = uj.field_v.a(11951);
                 if (var12 != null) {
-                  var7 = lh.a(0, -3789, var12.field_h, var12.field_i);
+                  var7 = lh.a(0, -3789, var12.position, var12.payload);
                   pk.a((byte) 5, var7);
                 } else {
                   var9 = (String) null;

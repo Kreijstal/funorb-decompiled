@@ -263,19 +263,19 @@ final class b {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.h(255);
-          var4 = var9.b((byte) 127);
+          var3 = var9.readUnsignedByte(255);
+          var4 = var9.readInt((byte) 127);
           if (param1 >= ~var4 && (0 == w.field_g ||
             !(w.field_g < var4))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(var4, var12, (byte) -58, 0);
+              var9.readBytes(var4, var12, (byte) -58, 0);
               stackIn_7_0 = var5_ref_byte__;
               return stackIn_7_0;
             }
-            var5 = var9.b((byte) 126);
+            var5 = var9.readInt((byte) 126);
             if (var5 >= 0 && (w.field_g == 0 ||
               !(w.field_g < var5))) {
               var13 = new byte[var5];

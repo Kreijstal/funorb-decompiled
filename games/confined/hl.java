@@ -50,10 +50,10 @@ final class hl implements de {
           return;
         }
         CipherPacketBuffer var2 = e.field_c;
-        var2.f((byte) 72);
-        var2.f((byte) 40);
-        var2.f((byte) 100);
-        var2.f((byte) 80);
+        var2.readInt((byte) 72);
+        var2.readInt((byte) 40);
+        var2.readInt((byte) 100);
+        var2.readInt((byte) 80);
         var1.a(true);
         if (param0 != -251) {
           hl.clearStaticReferences(-118);

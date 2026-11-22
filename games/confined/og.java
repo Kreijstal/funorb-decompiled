@@ -643,11 +643,11 @@ final class og extends n {
           var1 = vh.field_a;
           while (wi.a(param0)) {
             var1.b(true, 8);
-            fieldTemp$0 = var1.field_n + 1;
-            var1.field_n = var1.field_n + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             md.a(var1, (byte) 126);
-            vh.field_a.a(25859, -var2 + var1.field_n);
+            vh.field_a.backpatchByteLength(25859, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

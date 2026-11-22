@@ -13,14 +13,14 @@ final class jl {
           if (!tk.a(-121, 1)) {
             return false;
           }
-          sb.field_sb = tk.field_h.i(-117);
+          sb.field_sb = tk.field_h.readUnsignedByte(-117);
           tk.field_h.position = 0;
         }
         if (-2 == sb.field_sb) {
           if (!tk.a(60, 2)) {
             return false;
           }
-          sb.field_sb = tk.field_h.f(674914976);
+          sb.field_sb = tk.field_h.readUnsignedShort(674914976);
           tk.field_h.position = 0;
         }
         return tk.a(-121, sb.field_sb);

@@ -63,7 +63,7 @@ final class ap extends ob {
             this.d((byte) -121);
             this.a(param0, 25);
             this.field_h = null;
-            this.field_i.field_f = 0;
+            this.field_i.position = 0;
             if (param2) {
               return;
             }
@@ -97,13 +97,13 @@ final class ap extends ob {
             }
             if (this.field_d != 0) {
               try {
-                this.field_n.field_f = 0;
-                this.field_n.a(true, 4);
+                this.field_n.position = 0;
+                this.field_n.writeByte(true, 4);
                 stackIn_30_0 = this.field_n;
                 stackIn_31_1 = !(param2);
-                ((PacketBuffer) (Object) stackIn_30_0).a(stackIn_31_1, (int) this.field_d);
-                this.field_n.a(0, -16384);
-                this.field_q.a(0, 90, this.field_n.field_h, this.field_n.field_h.length);
+                ((PacketBuffer) (Object) stackIn_30_0).writeByte(stackIn_31_1, (int) this.field_d);
+                this.field_n.writeInt(0, -16384);
+                this.field_q.a(0, 90, this.field_n.payload, this.field_n.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -156,7 +156,7 @@ final class ap extends ob {
               return;
             }
             try {
-              this.field_n.field_f = 0;
+              this.field_n.position = 0;
               stackIn_5_0 = this.field_n;
               stackIn_5_1 = true;
               if (param0) {
@@ -164,9 +164,9 @@ final class ap extends ob {
               } else {
                 stackIn_6_2 = 3;
               }
-              ((PacketBuffer) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
-              this.field_n.a(0L, false);
-              this.field_q.a(0, 108, this.field_n.field_h, this.field_n.field_h.length);
+              ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
+              this.field_n.writeLong40(0L, false);
+              this.field_q.a(0, 108, this.field_n.payload, this.field_n.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (IOException) (Object) decompiledCaughtException;
@@ -206,11 +206,11 @@ final class ap extends ob {
               return;
             }
             try {
-              this.field_n.field_f = 0;
-              this.field_n.a(true, 6);
-              this.field_n.a((byte) 104, 3);
-              this.field_n.c(-161478600, 0);
-              this.field_q.a(0, 124, this.field_n.field_h, this.field_n.field_h.length);
+              this.field_n.position = 0;
+              this.field_n.writeByte(true, 6);
+              this.field_n.writeMedium((byte) 104, 3);
+              this.field_n.writeShort(-161478600, 0);
+              this.field_q.a(0, 124, this.field_n.payload, this.field_n.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
@@ -266,21 +266,21 @@ final class ap extends ob {
             ap.a(true);
           }
           var1 = kd.field_n;
-          var2 = var1.h(255);
+          var2 = var1.readUnsignedByte(255);
           if (0 == var2) {
             if (null == vl.field_d) {
               vl.field_d = new vp(128);
               hl.field_h = 0;
             }
-            stackIn_14_0 = (var1.h(255) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.i(117);
+            var4_ref_String = var1.readString(117);
             if (var3_int != 0) {
-              var1.i(110);
+              var1.readString(110);
             }
             stackIn_22_0 = !param0;
             var5 = fk.a(stackIn_22_0, var4_ref_String);
-            var6 = var1.i(122);
+            var6 = var1.readString(122);
             var7 = fe.a(60136, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
@@ -321,9 +321,9 @@ final class ap extends ob {
               return;
             }
             mh.field_h = 1;
-            var3 = var1.i(111);
+            var3 = var1.readString(111);
             nh.field_z = ((String) (var3)).intern();
-            var4 = var1.h(255);
+            var4 = var1.readUnsignedByte(255);
             wl.a(7, var4);
             return;
           }
@@ -331,12 +331,12 @@ final class ap extends ob {
             me.field_f = new vp(128);
             ob.field_g = 0;
           }
-          var3Lifetime1 = var1.i(118);
+          var3Lifetime1 = var1.readString(118);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.i(119);
-          var5_ref = var1.i(123);
+          var4_ref_StringLifetime1 = var1.readString(119);
+          var5_ref = var1.readString(123);
           var6_ref = rg.a(var4_ref_StringLifetime1, (byte) -3);
           if (null == var6_ref) {
             var6_ref = rg.a(var5_ref, (byte) -1);
@@ -455,10 +455,10 @@ final class ap extends ob {
               var2 = (ld) (this.field_m.b(120));
               scanLoop1: while (true) {
                 if (null != var2) {
-                  this.field_n.field_f = 0;
-                  this.field_n.a(true, 1);
-                  this.field_n.a(var2.field_k, false);
-                  this.field_q.a(0, 106, this.field_n.field_h, this.field_n.field_h.length);
+                  this.field_n.position = 0;
+                  this.field_n.writeByte(true, 1);
+                  this.field_n.writeLong40(var2.field_k, false);
+                  this.field_q.a(0, 106, this.field_n.payload, this.field_n.payload.length);
                   this.field_f.a((byte) 113, var2);
                   var2 = (ld) (this.field_m.a(127));
                   if (var16 != 0) {
@@ -472,10 +472,10 @@ final class ap extends ob {
                 break;
               }
               while (var2 != null) {
-                this.field_n.field_f = 0;
-                this.field_n.a(true, 0);
-                this.field_n.a(var2.field_k, false);
-                this.field_q.a(0, 116, this.field_n.field_h, this.field_n.field_h.length);
+                this.field_n.position = 0;
+                this.field_n.writeByte(true, 0);
+                this.field_n.writeLong40(var2.field_k, false);
+                this.field_q.a(0, 116, this.field_n.payload, this.field_n.payload.length);
                 this.field_a.a((byte) 111, var2);
                 var2 = (ld) (this.field_k.a(104));
                 if (var16 == 0) {
@@ -512,20 +512,20 @@ final class ap extends ob {
                     }
                     boolean decompiledFrameRemainder1 = true;
                     if (var4 <= 0) {
-                      var5 = this.field_h.field_s.field_h.length - this.field_h.field_u;
+                      var5 = this.field_h.field_s.payload.length - this.field_h.field_u;
                       var6 = -this.field_h.field_t + 512;
-                      if (var6 > var5 - this.field_h.field_s.field_f) {
-                        var6 = var5 - this.field_h.field_s.field_f;
+                      if (var6 > var5 - this.field_h.field_s.position) {
+                        var6 = var5 - this.field_h.field_s.position;
                       }
                       if (var6 > var3_int) {
                         var6 = var3_int;
                       }
                       boolean decompiledFrameCompleted4 = true;
-                      this.field_q.a(this.field_h.field_s.field_h, var6, 2034, this.field_h.field_s.field_f);
+                      this.field_q.a(this.field_h.field_s.payload, var6, 2034, this.field_h.field_s.position);
                       if (this.field_d != 0) {
                         var7 = 0;
                         while (var6 > var7) {
-                          this.field_h.field_s.field_h[var7 + this.field_h.field_s.field_f] = (byte)oe.a((int) this.field_h.field_s.field_h[var7 + this.field_h.field_s.field_f], (int) this.field_d);
+                          this.field_h.field_s.payload[var7 + this.field_h.field_s.position] = (byte)oe.a((int) this.field_h.field_s.payload[var7 + this.field_h.field_s.position], (int) this.field_d);
                           var7++;
                           if (var16 != 0) {
                             decompiledFrameCompleted4 = false;
@@ -538,10 +538,10 @@ final class ap extends ob {
                         }
                       }
                       if (decompiledFrameCompleted4) {
-                        this.field_h.field_s.field_f = this.field_h.field_s.field_f + var6;
+                        this.field_h.field_s.position = this.field_h.field_s.position + var6;
                         this.field_h.field_t = this.field_h.field_t + var6;
                       }
-                      if (var5 == this.field_h.field_s.field_f) {
+                      if (var5 == this.field_h.field_s.position) {
                         this.field_h.a(1);
                         this.field_h.field_n = false;
                         this.field_h = null;
@@ -555,16 +555,16 @@ final class ap extends ob {
                     if ((decompiledFrameRemainder1) &&
                       (!(var4 <= 0) ||
                       var16 != 0)) {
-                      var5Lifetime1 = var4 - this.field_i.field_f;
+                      var5Lifetime1 = var4 - this.field_i.position;
                       if (var5Lifetime1 > var3_int) {
                         var5Lifetime1 = var3_int;
                       }
                       boolean decompiledFrameCompleted3 = true;
-                      this.field_q.a(this.field_i.field_h, var5Lifetime1, 2034, this.field_i.field_f);
+                      this.field_q.a(this.field_i.payload, var5Lifetime1, 2034, this.field_i.position);
                       if (this.field_d != 0) {
                         var6Lifetime1 = 0;
                         while (var5Lifetime1 > var6Lifetime1) {
-                          this.field_i.field_h[this.field_i.field_f + var6Lifetime1] = (byte)oe.a((int) this.field_i.field_h[this.field_i.field_f + var6Lifetime1], (int) this.field_d);
+                          this.field_i.payload[this.field_i.position + var6Lifetime1] = (byte)oe.a((int) this.field_i.payload[this.field_i.position + var6Lifetime1], (int) this.field_d);
                           var6Lifetime1++;
                           if (var16 != 0) {
                             decompiledFrameCompleted3 = false;
@@ -577,15 +577,15 @@ final class ap extends ob {
                         }
                       }
                       if (decompiledFrameCompleted3) {
-                        this.field_i.field_f = this.field_i.field_f + var5Lifetime1;
+                        this.field_i.position = this.field_i.position + var5Lifetime1;
                       }
-                      if (var4 <= this.field_i.field_f) {
+                      if (var4 <= this.field_i.position) {
                         if (null == this.field_h) {
-                          this.field_i.field_f = 0;
-                          var6Lifetime1Lifetime1 = this.field_i.h(255);
-                          var7Lifetime1 = this.field_i.b((byte) 126);
-                          var8 = this.field_i.h(255);
-                          var9 = this.field_i.b((byte) 127);
+                          this.field_i.position = 0;
+                          var6Lifetime1Lifetime1 = this.field_i.readUnsignedByte(255);
+                          var7Lifetime1 = this.field_i.readInt((byte) 126);
+                          var8 = this.field_i.readUnsignedByte(255);
+                          var9 = this.field_i.readInt((byte) 127);
                           var10 = 127 & var8;
                           stackIn_95_0 = ((var8 & 128) == 0) ? 0 : 1;
                           boolean decompiledFrameCompleted2 = true;
@@ -644,21 +644,21 @@ final class ap extends ob {
                           var15 = stackIn_120_0;
                           this.field_h = var14_ref;
                           this.field_h.field_s = new PacketBuffer(this.field_h.field_u + (var15 + var9));
-                          this.field_h.field_s.a(true, var10);
-                          this.field_h.field_s.a(var9, -16384);
+                          this.field_h.field_s.writeByte(true, var10);
+                          this.field_h.field_s.writeInt(var9, -16384);
                           this.field_h.field_t = 10;
-                          this.field_i.field_f = 0;
+                          this.field_i.position = 0;
                           decompiledFrameRemainder1 = (var16 != 0);
                         }
                         if (decompiledFrameRemainder1) {
                           if (0 == this.field_h.field_t) {
-                            if (this.field_i.field_h[0] != -1) {
+                            if (this.field_i.payload[0] != -1) {
                               this.field_h = null;
                               decompiledFrameRemainder1 = (var16 != 0);
                             }
                             if (decompiledFrameRemainder1) {
                               this.field_h.field_t = 1;
-                              this.field_i.field_f = 0;
+                              this.field_i.position = 0;
                               decompiledFrameRemainder1 = (var16 != 0);
                             }
                           }

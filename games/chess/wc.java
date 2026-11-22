@@ -186,9 +186,9 @@ class wc extends hl {
         try {
           boolean decompiledFrameRemainder0 = true;
           var27 = tk.field_h;
-          var2 = var27.i(param0 ^ 127);
+          var2 = var27.readUnsignedByte(param0 ^ 127);
           if (var2 == 0) {
-            var3 = var27.f(674914976);
+            var3 = var27.readUnsignedShort(674914976);
             var4_ref = (fd) (fb.field_L.g(-18110));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_j) {
@@ -201,7 +201,7 @@ class wc extends hl {
               si.d(param0 ^ -65325);
               return;
             }
-            var5 = var27.i(-110);
+            var5 = var27.readUnsignedByte(-110);
             if (var5 != 0) {
               var6 = var4_ref.field_k;
               om.field_m[0].field_g = false;
@@ -209,12 +209,12 @@ class wc extends hl {
               var7 = var4_ref.field_m;
               om.field_m[0].field_h = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                om.field_m[var8_int].field_d = var27.d(0);
+                om.field_m[var8_int].field_d = var27.readString(0);
                 om.field_m[var8_int].field_g = false;
-                if (1 != var27.i(param0 - 44)) {
+                if (1 != var27.readUnsignedByte(param0 - 44)) {
                   om.field_m[var8_int].field_h = null;
                 } else {
-                  om.field_m[var8_int].field_h = var27.d(0);
+                  om.field_m[var8_int].field_h = var27.readString(0);
                 }
               }
               var8 = new String[3][var6];
@@ -227,12 +227,12 @@ class wc extends hl {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.i(param0 ^ 89);
+              var18 = var27.readUnsignedByte(param0 ^ 89);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.i(-114);
+                  var20 = var27.readUnsignedByte(-114);
                   var21 = om.field_m[var20].field_d;
-                  var22 = var27.d((byte) 127);
+                  var22 = var27.readLong((byte) 127);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -278,8 +278,8 @@ class wc extends hl {
             var4_ref.unlink(param0 ^ 2236);
           } else {
             if (var2 == 1) {
-              var3 = var27.f(674914976);
-              var27.d((byte) -13);
+              var3 = var27.readUnsignedShort(674914976);
+              var27.readLong((byte) -13);
               var4 = (ak) (nc.field_O.g(-18110));
               while (var4 != null) {
                 if (~var3 != ~var4.field_s) {

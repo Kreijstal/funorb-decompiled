@@ -26,9 +26,9 @@ abstract class te {
             if (vj.field_b.field_a == 1) {
               try {
                 oi.field_c = new j((java.net.Socket) (vj.field_b.field_b), gf.field_b);
-                tp.field_f.field_f = 0;
+                tp.field_f.position = 0;
                 CipherPacketBuffer var2 = kd.field_n;
-                var2.field_f = 0;
+                var2.position = 0;
                 int stackIn_14_0 = (!param1) ? -1 : -2;
                 fl.field_m = stackIn_14_0;
                 ea.field_n = stackIn_14_0;

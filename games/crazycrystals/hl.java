@@ -102,45 +102,45 @@ final class hl extends l {
         var7 = CrazyCrystals.field_B;
         var9 = kd.field_n;
         var2 = var9;
-        var3 = var9.h(255);
+        var3 = var9.readUnsignedByte(255);
         lj.field_b = var3 & 127;
         stackIn_3_0 = ((128 & var3) != 0);
         om.field_u = stackIn_3_0;
-        dd.field_b = var9.h(255);
-        KeyboardInputHandler.field_d = var9.d(true);
+        dd.field_b = var9.readUnsignedByte(255);
+        KeyboardInputHandler.field_d = var9.readLong(true);
         if (lj.field_b == 2) {
-          na.field_kb = var9.c((byte) -7);
-          ca.field_m = var9.b(false);
+          na.field_kb = var9.readUnsignedShort((byte) -7);
+          ca.field_m = var9.readUnsignedMedium(false);
         } else {
           na.field_kb = 0;
           ca.field_m = 0;
         }
-        stackIn_9_0 = (var9.h(255) != 1) ? 0 : 1;
+        stackIn_9_0 = (var9.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        pc.field_w = var9.i(110);
+        pc.field_w = var9.readString(110);
         if (var4 == 0) {
           CipherPacketBuffer.field_s = pc.field_w;
         } else {
-          CipherPacketBuffer.field_s = var9.i(121);
+          CipherPacketBuffer.field_s = var9.readString(121);
         }
         if (param0 != 16) {
           var8 = (java.applet.Applet) null;
           hl.a((java.applet.Applet) null, 102);
         }
         if (lj.field_b == 1) {
-          var9.c((byte) -7);
-          var9.i(111);
+          var9.readUnsignedShort((byte) -7);
+          var9.readString(111);
         } else {
           if (lj.field_b == 4) {
-            var9.c((byte) -7);
-            var9.i(111);
+            var9.readUnsignedShort((byte) -7);
+            var9.readString(111);
           }
         }
         if (!param1) {
           fb.field_b = s.a(var9, 116, 80);
           so.field_f = null;
         } else {
-          var5 = var9.c((byte) -7);
+          var5 = var9.readUnsignedShort((byte) -7);
           try {
             var10 = bn.field_g.a(127, var5);
             fb.field_b = var10.e(60);

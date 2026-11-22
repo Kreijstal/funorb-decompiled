@@ -108,8 +108,8 @@ final class ea {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = hh.field_p;
         var2.a(true, param1);
-        var2.a(1, (byte) 65);
-        var2.a(param0, (byte) 71);
+        var2.writeByte(1, (byte) 65);
+        var2.writeByte(param0, (byte) 71);
     }
 
     final IntrusiveNode c(int param0) {

@@ -407,7 +407,7 @@ public final class Chess extends gb {
             de.a(-31645);
             r.field_bc = false;
             qk.field_h = 8;
-            ad.field_d = tk.field_h.d(0);
+            ad.field_d = tk.field_h.readString(0);
             continue;
           }
           if (wg.field_B == 14) {
@@ -445,7 +445,7 @@ public final class Chess extends gb {
             continue;
           }
           if (wg.field_B == 67) {
-            var2Lifetime1Lifetime1 = tk.field_h.i(-105);
+            var2Lifetime1Lifetime1 = tk.field_h.readUnsignedByte(-105);
             var3Lifetime1 = 1 << var2Lifetime1Lifetime1;
             wc.field_w = wc.field_w | var3Lifetime1;
             vk.field_b = vk.field_b | var3Lifetime1;
@@ -482,8 +482,8 @@ public final class Chess extends gb {
             }
             if (var2_ref != null) {
               if (wg.field_B == 60) {
-                var3Lifetime2 = tk.field_h.f(674914976);
-                var4 = tk.field_h.i(-101);
+                var3Lifetime2 = tk.field_h.readUnsignedShort(674914976);
+                var4 = tk.field_h.readUnsignedByte(-101);
                 var5 = tk.field_h.readInt((byte) -120);
                 ((un) (var2_ref)).field_B.a(var4, 255, var3Lifetime2);
                 if (((un) (var2_ref)).field_B.field_k == var3Lifetime2) {
@@ -509,8 +509,8 @@ public final class Chess extends gb {
                 continue;
               }
               if (wg.field_B == 61) {
-                var3Lifetime2Lifetime1 = tk.field_h.c(true);
-                var4Lifetime1 = tk.field_h.c(true);
+                var3Lifetime2Lifetime1 = tk.field_h.readShort(true);
+                var4Lifetime1 = tk.field_h.readShort(true);
                 var5Lifetime2 = tk.field_h.readByte(0);
                 ((un) (var2_ref)).field_B.a(var3Lifetime2Lifetime1, var5Lifetime2, ((un) (var2_ref)).field_t, -65, var4Lifetime1);
                 eb.a(var5Lifetime2, ((un) (var2_ref)).field_t.field_f[var4Lifetime1] & -16773121, ((un) (var2_ref)).field_t.field_f[var3Lifetime2Lifetime1] & -16773121, 3);
@@ -527,7 +527,7 @@ public final class Chess extends gb {
                 continue;
               }
               if (wg.field_B == 63) {
-                ((un) (var2_ref)).field_B.field_m = tk.field_h.i(-118);
+                ((un) (var2_ref)).field_B.field_m = tk.field_h.readUnsignedByte(-118);
                 if (oc.field_p == null) {
                   continue;
                 }
@@ -535,11 +535,11 @@ public final class Chess extends gb {
                 continue;
               }
               if (wg.field_B == 64) {
-                ((un) (var2_ref)).field_B.field_e = tk.field_h.i(-82);
+                ((un) (var2_ref)).field_B.field_e = tk.field_h.readUnsignedByte(-82);
                 continue;
               }
               if (wg.field_B == 65) {
-                ((un) (var2_ref)).field_B.field_c = tk.field_h.i(-100);
+                ((un) (var2_ref)).field_B.field_c = tk.field_h.readUnsignedByte(-100);
                 if (null == oc.field_p) {
                   continue;
                 }
@@ -547,7 +547,7 @@ public final class Chess extends gb {
                 continue;
               }
               if (66 == wg.field_B) {
-                ((un) (var2_ref)).field_A = tk.field_h.i(-88);
+                ((un) (var2_ref)).field_A = tk.field_h.readUnsignedByte(-88);
                 continue;
               }
             }
@@ -555,18 +555,18 @@ public final class Chess extends gb {
             continue;
           }
           de.a(-31645);
-          var2Lifetime1Lifetime2 = tk.field_h.i(-81);
-          stackIn_100_0 = (tk.field_h.i(-111) != 1) ? 0 : 1;
+          var2Lifetime1Lifetime2 = tk.field_h.readUnsignedByte(-81);
+          stackIn_100_0 = (tk.field_h.readUnsignedByte(-111) != 1) ? 0 : 1;
           var3Lifetime3 = stackIn_100_0;
-          var4_ref_String__ = new String[tk.field_h.i(-106)];
+          var4_ref_String__ = new String[tk.field_h.readUnsignedByte(-106)];
           var5Lifetime1 = tk.field_h.readByte(0);
           if (var5Lifetime1 < 0) {
             var5Lifetime1 = -2;
           }
           for (var6 = 0; var6 < var4_ref_String__.length; var6++) {
-            var4_ref_String__[var6] = tk.field_h.d(false);
+            var4_ref_String__[var6] = tk.field_h.readPrefixedString(false);
           }
-          var6Lifetime1 = tk.field_h.i(-123);
+          var6Lifetime1 = tk.field_h.readUnsignedByte(-123);
           var7 = -1;
           if (var5Lifetime1 >= 0) {
             stackIn_109_0 = (var5Lifetime1 != var6Lifetime1) ? 4096 : 0;
@@ -575,7 +575,7 @@ public final class Chess extends gb {
           cb.field_e = null;
           var8 = new un(true, var2Lifetime1Lifetime2, var4_ref_String__, var5Lifetime1, var7, var3Lifetime3 != 0);
           var8.field_B.field_k = var6Lifetime1;
-          var9 = tk.field_h.i(-109);
+          var9 = tk.field_h.readUnsignedByte(-109);
           if (1 == var9) {
             var8.field_B.a(0, tk.field_h, var8.field_t, var8);
           }

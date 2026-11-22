@@ -16,11 +16,11 @@ final class sf extends IntrusiveNode {
     final static void c(int param0) {
         da.field_i = false;
         if (param0 == -52) {
-          e.field_c.c(32);
+          e.field_c.readUnsignedByte(32);
           return;
         }
         sf.a(94, (byte) -124);
-        e.field_c.c(32);
+        e.field_c.readUnsignedByte(32);
     }
 
     final static void a(boolean param0, int param1) {

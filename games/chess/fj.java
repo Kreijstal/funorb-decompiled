@@ -43,9 +43,9 @@ final class fj {
     final static void a(int param0, int param1, int param2) {
         nk var3 = qn.field_U;
         var3.f(param0, -109);
-        var3.c(param1, (byte) -79);
-        var3.c(8, (byte) -113);
-        var3.b(param2, 116);
+        var3.writeByte(param1, (byte) -79);
+        var3.writeByte(8, (byte) -113);
+        var3.writeShort(param2, 116);
     }
 
     final static void a(String param0, int param1, int param2, String param3, int param4) {

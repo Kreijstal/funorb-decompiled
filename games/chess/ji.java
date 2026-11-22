@@ -167,14 +167,14 @@ final class ji extends kn {
                 eh.field_K = l.a(false, param2, (byte) 118, (String) null, sj.field_i);
               }
               qn.field_U.position = 0;
-              qn.field_U.c(14, (byte) 61);
-              qn.field_U.c(eh.field_K.b((byte) 70).field_c, (byte) -73);
+              qn.field_U.writeByte(14, (byte) 61);
+              qn.field_U.writeByte(eh.field_K.b((byte) 70).field_c, (byte) -73);
               vh.a(-1, (byte) 83);
               tb.field_f = rm.field_J;
             }
             if (rm.field_J == tb.field_f &&
               tk.a(5, 1)) {
-              var7 = tk.field_h.i(-89);
+              var7 = tk.field_h.readUnsignedByte(-89);
               tk.field_h.position = 0;
               if (0 == var7) {
                 tb.field_f = tg.field_d;
@@ -186,7 +186,7 @@ final class ji extends kn {
             }
             if (tb.field_f == tg.field_d &&
               tk.a(120, 8)) {
-              sj.field_h = tk.field_h.d((byte) 116);
+              sj.field_h = tk.field_h.readLong((byte) 116);
               tk.field_h.position = 0;
               GzipInflater.a(param5, -27359, param1, param0, eh.field_K);
               tb.field_f = dl.field_j;
@@ -194,7 +194,7 @@ final class ji extends kn {
             boolean decompiledFrameRemainder0 = true;
             if (tb.field_f == dl.field_j &&
               tk.a(81, 1)) {
-              var7Lifetime1 = tk.field_h.i(-106);
+              var7Lifetime1 = tk.field_h.readUnsignedByte(-106);
               wg.field_B = var7Lifetime1;
               tk.field_h.position = 0;
               lf.field_N = null;
@@ -219,13 +219,13 @@ final class ji extends kn {
             }
             if (tb.field_f == gi.field_d &&
               jl.a(false)) {
-              sj.field_i = tk.field_h.d((byte) 123);
+              sj.field_i = tk.field_h.readLong((byte) 123);
               gi.field_g = param2;
-              sk.field_t = tk.field_h.i(-79);
-              sb.field_rb = tk.field_h.i(-113);
-              cl.field_d = tk.field_h.f(674914976);
-              var7_ref_String = tk.field_h.b(true);
-              var8 = tk.field_h.i(-91);
+              sk.field_t = tk.field_h.readUnsignedByte(-79);
+              sb.field_rb = tk.field_h.readUnsignedByte(-113);
+              cl.field_d = tk.field_h.readUnsignedShort(674914976);
+              var7_ref_String = tk.field_h.readNullableString(true);
+              var8 = tk.field_h.readUnsignedByte(-91);
               if ((1 & var8) != 0) {
                 bh.f((byte) -74);
               }
@@ -243,19 +243,19 @@ final class ji extends kn {
               stackIn_55_0 = ((16 & var8) != 0);
               ej.field_f = stackIn_55_0;
               if (on.field_a) {
-                tk.field_h.i(-87);
-                tk.field_h.i(-86);
+                tk.field_h.readUnsignedByte(-87);
+                tk.field_h.readUnsignedByte(-86);
                 tk.field_h.readInt((byte) -106);
-                si.field_n = tk.field_h.f(674914976);
+                si.field_n = tk.field_h.readUnsignedShort(674914976);
                 jn.field_P = new byte[si.field_n];
                 for (var9 = 0; si.field_n > var9; var9++) {
                   jn.field_P[var9] = tk.field_h.readByte(0);
                 }
               }
-              ci.field_J = tk.field_h.d(0);
+              ci.field_J = tk.field_h.readString(0);
               var12 = (CharSequence) ((Object) ci.field_J);
               cc.field_A = ad.a(var12, -2);
-              gm.field_d = tk.field_h.i(-114);
+              gm.field_d = tk.field_h.readUnsignedByte(-114);
               tb.field_f = ik.field_e;
               if (eh.field_K.b((byte) 31) == ec.field_i) {
                 ph.field_g.a(25799, bh.i(81));
@@ -307,7 +307,7 @@ final class ji extends kn {
               if (wg.field_B == 7) {
                 wg.field_B = 3;
               }
-              n.field_c = tk.field_h.d(0);
+              n.field_c = tk.field_h.readString(0);
               ja.field_f = false;
               stackIn_93_0 = wg.field_B;
               return stackIn_93_0;

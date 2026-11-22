@@ -85,63 +85,63 @@ final class vb implements fc {
           }
           if (ClientException.field_c == pj.field_a) {
             lk.field_p = null;
-            hh.field_p.field_h = 0;
+            hh.field_p.position = 0;
             if (param1 == null) {
-              lb.field_g.field_h = 0;
-              lb.field_g.b(la.field_C.nextInt(), (byte) 124);
-              lb.field_g.b(la.field_C.nextInt(), (byte) 67);
+              lb.field_g.position = 0;
+              lb.field_g.writeInt(la.field_C.nextInt(), (byte) 124);
+              lb.field_g.writeInt(la.field_C.nextInt(), (byte) 67);
               stackIn_14_0 = lb.field_g;
               if (!param4.a((byte) 56)) {
                 stackIn_15_1 = "";
               } else {
                 stackIn_15_1 = var15;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -67);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_15_1, (byte) -67);
               stackIn_17_0 = lb.field_g;
               if (!param6.a((byte) 56)) {
                 stackIn_18_1 = "";
               } else {
                 stackIn_18_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, (byte) -67);
-              hh.field_p.a(16, (byte) 94);
-              hh.field_p.field_h = hh.field_p.field_h + 1;
-              var9 = hh.field_p.field_h;
+              ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_18_1, (byte) -67);
+              hh.field_p.writeByte(16, (byte) 94);
+              hh.field_p.position = hh.field_p.position + 1;
+              var9 = hh.field_p.position;
               f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
-              hh.field_p.b(-var9 + hh.field_p.field_h, true);
+              hh.field_p.backpatchByteLength(-var9 + hh.field_p.position, true);
             } else {
               var9 = 0;
-              lb.field_g.field_h = 0;
+              lb.field_g.position = 0;
               if (param0) {
                 var9 = var9 | 1;
               }
-              lb.field_g.b(la.field_C.nextInt(), (byte) -97);
-              lb.field_g.b(la.field_C.nextInt(), (byte) -64);
-              lb.field_g.a(var15, (byte) -67);
-              lb.field_g.a(var8, (byte) -67);
+              lb.field_g.writeInt(la.field_C.nextInt(), (byte) -97);
+              lb.field_g.writeInt(la.field_C.nextInt(), (byte) -64);
+              lb.field_g.writePrefixedString(var15, (byte) -67);
+              lb.field_g.writePrefixedString(var8, (byte) -67);
               var17 = (CharSequence) ((Object) param1);
-              lb.field_g.a(ck.a(-109, var17), (byte) -67);
-              lb.field_g.e(-750655096, param3);
-              lb.field_g.a(param5, (byte) 106);
-              lb.field_g.a(var9, (byte) 100);
-              hh.field_p.a(18, (byte) 105);
-              hh.field_p.field_h = hh.field_p.field_h + 2;
-              var10 = hh.field_p.field_h;
+              lb.field_g.writePrefixedString(ck.a(-109, var17), (byte) -67);
+              lb.field_g.writeShort(-750655096, param3);
+              lb.field_g.writeByte(param5, (byte) 106);
+              lb.field_g.writeByte(var9, (byte) 100);
+              hh.field_p.writeByte(18, (byte) 105);
+              hh.field_p.position = hh.field_p.position + 2;
+              var10 = hh.field_p.position;
               var11_ref_StringLifetime4 = uj.a(true, vi.b(0));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              hh.field_p.a(-256, var11_ref_StringLifetime4);
+              hh.field_p.writeString(-256, var11_ref_StringLifetime4);
               f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
-              hh.field_p.c(-124, hh.field_p.field_h - var10);
+              hh.field_p.backpatchShortLength(-124, hh.field_p.position - var10);
             }
             jj.a(-1, true);
             pj.field_a = rj.field_q;
           }
           if (pj.field_a == rj.field_q &&
             qb.a(1, 3)) {
-            var9Lifetime1 = jc.field_g.d((byte) -84);
-            jc.field_g.field_h = 0;
+            var9Lifetime1 = jc.field_g.readUnsignedByte((byte) -84);
+            jc.field_g.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               bi.field_l = new String[-100 + var9Lifetime1];
@@ -162,7 +162,7 @@ final class vb implements fc {
               } else {
                 qb.a(jf.b(false), 3);
                 lk.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
-                jc.field_g.field_h = 0;
+                jc.field_g.position = 0;
               }
             }
           }
@@ -170,12 +170,12 @@ final class vb implements fc {
           if (pj.field_a == kb.field_b) {
             var10Lifetime1 = 2;
             if (qb.a(var10Lifetime1, 3)) {
-              var11 = jc.field_g.a(-1640531527);
-              jc.field_g.field_h = 0;
+              var11 = jc.field_g.readUnsignedShort(-1640531527);
+              jc.field_g.position = 0;
               if (qb.a(var11, 3)) {
                 var12 = bi.field_l.length;
                 for (var13 = 0; var12 > var13; var13++) {
-                  bi.field_l[var13] = jc.field_g.a(true);
+                  bi.field_l[var13] = jc.field_g.readPrefixedString(true);
                 }
                 kc.a((byte) 18);
                 fa.field_a = false;
@@ -187,9 +187,9 @@ final class vb implements fc {
           if (id.field_i == pj.field_a &&
             va.b(1)) {
             if (255 != wa.field_d) {
-              ib.field_o = jc.field_g.b(true);
+              ib.field_o = jc.field_g.readString(true);
             } else {
-              var10_ref_String = jc.field_g.g((byte) 57);
+              var10_ref_String = jc.field_g.readNullableString((byte) 57);
               if (var10_ref_String != null) {
                 jd.a(0, vi.b(0), var10_ref_String);
               }

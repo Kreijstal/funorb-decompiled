@@ -147,9 +147,9 @@ final class of {
           var5.f(param1, -123);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.c(3, (byte) -112);
-          var5.a(-120, param2);
-          var5.a(var5.position - var6, -1);
+          var5.writeByte(3, (byte) -112);
+          var5.writeString(-120, param2);
+          var5.backpatchByteLength(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

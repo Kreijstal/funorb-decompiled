@@ -55,7 +55,7 @@ final class pe extends IntrusiveNode {
         var12 = CrazyCrystals.field_B;
         try {
           var14 = kd.field_n;
-          var2 = var14.h(255);
+          var2 = var14.readUnsignedByte(255);
           var3 = (hb) (vm.field_g.g(32073));
           while (var3 != null) {
             if (var3.field_f != var2) {
@@ -68,7 +68,7 @@ final class pe extends IntrusiveNode {
             jj.a(4);
             return;
           }
-          var4 = var14.h(255);
+          var4 = var14.readUnsignedByte(255);
           if (param0 != -1) {
             return;
           }
@@ -76,7 +76,7 @@ final class pe extends IntrusiveNode {
             th.field_A[0] = je.field_g;
             var5 = var3.field_j;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              th.field_A[var6_int] = var14.i(param0 + 128);
+              th.field_A[var6_int] = var14.readString(param0 + 128);
             }
             ei.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

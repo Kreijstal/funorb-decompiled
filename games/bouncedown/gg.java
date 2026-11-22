@@ -276,43 +276,43 @@ final class gg {
         this.field_e.a(param0);
         this.field_v = new hl();
         this.field_v.a(param0);
-        int var2 = param0.d((byte) -72);
+        int var2 = param0.readUnsignedByte((byte) -72);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_h = new hl();
           this.field_h.a(param0);
           this.field_q = new hl();
           this.field_q.a(param0);
         }
-        var2 = param0.d((byte) -77);
+        var2 = param0.readUnsignedByte((byte) -77);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_s = new hl();
           this.field_s.a(param0);
           this.field_t = new hl();
           this.field_t.a(param0);
         }
-        var2 = param0.d((byte) -116);
+        var2 = param0.readUnsignedByte((byte) -116);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_r = new hl();
           this.field_r.a(param0);
           this.field_u = new hl();
           this.field_u.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.f(109);
+          var4 = param0.readUnsignedSmart(109);
           if (var4 == 0) {
             break;
           }
           this.field_b[var3] = var4;
-          this.field_w[var3] = param0.i(128);
-          this.field_p[var3] = param0.f(114);
+          this.field_w[var3] = param0.readSignedSmart(128);
+          this.field_p[var3] = param0.readUnsignedSmart(114);
         }
-        this.field_g = param0.f(95);
-        this.field_c = param0.f(97);
-        this.field_n = param0.a(-1640531527);
-        this.field_f = param0.a(-1640531527);
+        this.field_g = param0.readUnsignedSmart(95);
+        this.field_c = param0.readUnsignedSmart(97);
+        this.field_n = param0.readUnsignedShort(-1640531527);
+        this.field_f = param0.readUnsignedShort(-1640531527);
         this.field_k = new cd();
         this.field_l = new hl();
         this.field_k.a(param0, this.field_l);

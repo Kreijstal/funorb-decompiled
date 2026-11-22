@@ -31,19 +31,19 @@ final class bd {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          qg.field_h = param0.a((byte) 25) << 5;
-          var2_int = param0.c(32);
+          qg.field_h = param0.readUnsignedShort((byte) 25) << 5;
+          var2_int = param0.readUnsignedByte(32);
           eh.field_R = (7 & var2_int) << 18;
           qg.field_h = qg.field_h + (var2_int >> 3);
-          eh.field_R = eh.field_R + (param0.a((byte) 25) << 2);
-          var2_intLifetime1 = param0.c(32);
+          eh.field_R = eh.field_R + (param0.readUnsignedShort((byte) 25) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(32);
           eh.field_R = eh.field_R + (var2_intLifetime1 >> 6);
           ll.field_d = var2_intLifetime1 << 15 & 2064384;
-          ll.field_d = ll.field_d + (param0.c(32) << 7);
-          var2_intLifetime2 = param0.c(32);
+          ll.field_d = ll.field_d + (param0.readUnsignedByte(32) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte(32);
           ll.field_d = ll.field_d + (var2_intLifetime2 >> 1);
           dj.field_gb = var2_intLifetime2 << 16 & 65536;
-          dj.field_gb = dj.field_gb + param0.a((byte) 25);
+          dj.field_gb = dj.field_gb + param0.readUnsignedShort((byte) 25);
           if (param1 == -45) {
             return;
           }

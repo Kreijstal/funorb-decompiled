@@ -63,7 +63,7 @@ final class ci extends lc implements gl, rc {
         try {
           var8 = new CipherPacketBuffer(param1.b("logo.fo3d", "", -88));
           var10 = var8;
-          var3 = var10.d((byte) -124);
+          var3 = var10.readUnsignedByte((byte) -124);
           var10.o(8);
           PacketBuffer.field_g = lb.a(98, var10);
           li.field_e = new int[var3][];

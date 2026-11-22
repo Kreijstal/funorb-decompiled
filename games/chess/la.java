@@ -66,10 +66,10 @@ final class la {
     final static void a(int param0, byte param1, int param2) {
         nk var3 = qn.field_U;
         var3.f(param0, -103);
-        var3.c(3, (byte) 47);
+        var3.writeByte(3, (byte) 47);
         int var4 = 11 % ((75 - param1) / 50);
-        var3.c(10, (byte) -112);
-        var3.b(param2, 87);
+        var3.writeByte(10, (byte) -112);
+        var3.writeShort(param2, 87);
     }
 
     final static boolean a(int param0, char param1) {

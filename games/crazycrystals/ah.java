@@ -130,8 +130,8 @@ final class ah {
           var15 = CrazyCrystals.field_B;
           try {
             var19 = new pi();
-            var19.field_i = param0.h(255);
-            var19.field_l = param0.b((byte) -61);
+            var19.field_i = param0.readUnsignedByte(255);
+            var19.field_l = param0.readInt((byte) -61);
             var19.field_g = new int[var19.field_i];
             var5 = 115 % ((-71 - param2) / 52);
             var19.field_m = new gb[var19.field_i];
@@ -141,28 +141,28 @@ final class ah {
             var19.field_k = new gb[var19.field_i];
             for (var6 = 0; var6 < var19.field_i; var6++) {
               try {
-                var7_int = param0.h(255);
+                var7_int = param0.readUnsignedByte(255);
                 if (0 != var7_int &&
                   var7_int != 1 &&
                   2 != var7_int) {
                   if (var7_int == 3 ||
                     var7_int == 4) {
-                    var21 = param0.i(122);
-                    var22 = param0.i(115);
-                    var10 = param0.h(255);
+                    var21 = param0.readString(122);
+                    var22 = param0.readString(115);
+                    var10 = param0.readUnsignedByte(255);
                     var11 = new String[var10];
                     for (var12_int = 0; var12_int < var10; var12_int++) {
-                      var11[var12_int] = param0.i(116);
+                      var11[var12_int] = param0.readString(116);
                     }
                     var23 = new byte[var10][];
                     var20 = var23;
                     var12 = var20;
                     if (var7_int == 3) {
                       for (var13_int = 0; var10 > var13_int; var13_int++) {
-                        var14 = param0.b((byte) 126);
+                        var14 = param0.readInt((byte) 126);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param0.a(var14, var23[var13_int], (byte) -89, 0);
+                        param0.readBytes(var14, var23[var13_int], (byte) -89, 0);
                       }
                     }
                     var19.field_f[var6] = var7_int;
@@ -177,13 +177,13 @@ final class ah {
                     var19.field_h[var6] = var23;
                   }
                 } else {
-                  var17 = param0.i(111);
+                  var17 = param0.readString(111);
                   var8 = var17;
-                  var16 = param0.i(115);
+                  var16 = param0.readString(115);
                   var9 = var16;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param0.b((byte) 126);
+                    var10 = param0.readInt((byte) 126);
                   }
                   var19.field_f[var6] = var7_int;
                   var19.field_g[var6] = var10;

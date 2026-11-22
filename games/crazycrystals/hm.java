@@ -58,7 +58,7 @@ final class hm {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.h(255);
+          var2_int = param0.readUnsignedByte(255);
           stackIn_3_0 = (param1 != ~var2_int) ? 0 : 1;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;

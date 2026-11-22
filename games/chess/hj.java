@@ -50,7 +50,7 @@ final class hj {
             }
             var7 = this.field_e.readInt((byte) -91);
             var13 = new byte[64];
-            this.field_e.a(64, (byte) 125, var13, 0);
+            this.field_e.readBytes(64, (byte) 125, var13, 0);
             var9 = new da(param2, param4, param3, this.field_d, this.field_m, var6_int, var13, var7, param1);
             this.field_h[param2] = var9;
             stackIn_14_0 = var9;
@@ -104,12 +104,12 @@ final class hj {
         }
         var10 = new PacketBuffer(this.field_g.a(param0));
         var10.position = 5;
-        var3 = var10.i(-87);
+        var3 = var10.readUnsignedByte(-87);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[-var10.position + var10.data.length];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, (byte) 125, var13, 0);
+        var10.readBytes(var13.length, (byte) 125, var13, 0);
         if (this.field_c != null &&
           this.field_f != null) {
           var12 = new java.math.BigInteger(var13);

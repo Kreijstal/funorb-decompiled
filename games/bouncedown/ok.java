@@ -191,13 +191,13 @@ final class ok {
               dh.field_a = new pc((java.net.Socket) (ec.field_P.field_e), pj.field_c);
               var4 = jc.field_g;
               var5 = var4;
-              hh.field_p.field_h = 0;
+              hh.field_p.position = 0;
               stackIn_13_0 = (!param0) ? -1 : -2;
               ak.field_z = stackIn_13_0;
               i.field_f = stackIn_13_0;
               ck.field_b = stackIn_13_0;
               pj.field_a = ClientException.field_c;
-              var5.field_h = 0;
+              var5.position = 0;
               AppletShell.a(fi.field_b, 6, cf.field_a, hh.field_p, of.field_c);
               jj.a(-1, true);
             } catch (java.io.IOException decompiledCaughtParameter0) {

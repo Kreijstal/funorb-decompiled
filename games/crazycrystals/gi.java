@@ -17,7 +17,7 @@ final class gi extends pn implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 26009) {
-            stackIn_4_0 = pf.a(0, param1, param0, -1);
+            stackIn_4_0 = pf.computeCrc32(0, param1, param0, -1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 94;

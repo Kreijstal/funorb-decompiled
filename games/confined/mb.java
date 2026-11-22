@@ -31,12 +31,12 @@ final class mb extends ka {
               kl.field_G = new vd((java.net.Socket) (mg.field_a.field_f), ld.field_k);
               var4 = e.field_c;
               var5 = var4;
-              vh.field_a.field_n = 0;
+              vh.field_a.position = 0;
               kk.field_c = !param0 ? -1 : -2;
               pk.field_c = !param0 ? -1 : -2;
               qm.field_y = !param0 ? -1 : -2;
               lk.field_d = si.field_g;
-              var5.field_n = 0;
+              var5.position = 0;
               ql.a(kk.field_b, vh.field_a, rg.field_M, (byte) 40, qa.field_c);
               tb.a(-1, 116);
             } catch (IOException iOException) {

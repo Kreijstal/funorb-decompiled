@@ -120,9 +120,9 @@ abstract class ab extends l {
           var9.f(param0, -104);
           var9.position = var9.position + 1;
           var5 = var9.position;
-          var9.c(1, (byte) 66);
-          var9.a(param1 - 21360, param2);
-          var9.a(var9.position - var5, -1);
+          var9.writeByte(1, (byte) 66);
+          var9.writeString(param1 - 21360, param2);
+          var9.backpatchByteLength(var9.position - var5, -1);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

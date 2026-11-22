@@ -855,7 +855,7 @@ final class gk {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(85, param2, 5, var26.field_i.length);
+            var26.decryptXteaRange(85, param2, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -885,12 +885,12 @@ final class gk {
               var11 = var11 - var5_int * var12 * 4;
               var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_h = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var32.j(-3);
+                  var17 = var17 + var32.readInt(-3);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -906,13 +906,13 @@ final class gk {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_h = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var32.j(-3);
+                  var19 = var19 + var32.readInt(-3);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -935,11 +935,11 @@ final class gk {
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_h = var11;
+              var29.position = var11;
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var29.j(-3);
+                  var16 = var16 + var29.readInt(-3);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -951,12 +951,12 @@ final class gk {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_h = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var29.j(-3);
+                  var18 = var18 + var29.readInt(-3);
                   cb.a(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;

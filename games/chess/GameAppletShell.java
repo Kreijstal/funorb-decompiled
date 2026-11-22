@@ -56,18 +56,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var3.f(param2, -65);
           var3.position = var3.position + 1;
           var4 = var3.position;
-          var3.c(1, (byte) -114);
-          var3.c(param0.field_q, (byte) 124);
+          var3.writeByte(1, (byte) -114);
+          var3.writeByte(param0.field_q, (byte) 124);
           if (param1 != 15079) {
             field_d = (int[]) null;
           }
-          var3.c(param0.field_m, (byte) -90);
-          var3.d(param0.field_r, (byte) -81);
-          var3.d(param0.field_s, (byte) -81);
-          var3.d(param0.field_o, (byte) -81);
-          var3.d(param0.field_n, (byte) -81);
-          var3.b(var4, (byte) -126);
-          var3.a(var3.position - var4, -1);
+          var3.writeByte(param0.field_m, (byte) -90);
+          var3.writeInt(param0.field_r, (byte) -81);
+          var3.writeInt(param0.field_s, (byte) -81);
+          var3.writeInt(param0.field_o, (byte) -81);
+          var3.writeInt(param0.field_n, (byte) -81);
+          var3.appendCrc32(var4, (byte) -126);
+          var3.backpatchByteLength(var3.position - var4, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -317,15 +317,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         var7 = Chess.field_G;
         try {
           var2 = tk.field_h;
-          var3 = var2.i(-118);
+          var3 = var2.readUnsignedByte(-118);
           stackIn_5_0 = ((128 & var3) != 0);
           ue.field_c = stackIn_5_0;
           tk.field_b = var3 & 127;
-          fj.field_a = var2.i(-118);
-          sa.field_e = var2.d((byte) 115);
+          fj.field_a = var2.readUnsignedByte(-118);
+          sa.field_e = var2.readLong((byte) 115);
           if (tk.field_b == 2) {
-            va.field_a = var2.f(674914976);
-            ud.field_a = var2.k(1389913160);
+            va.field_a = var2.readUnsignedShort(674914976);
+            ud.field_a = var2.readUnsignedMedium(1389913160);
             if (var7 != 0) {
               va.field_a = 0;
               ud.field_a = 0;
@@ -334,27 +334,27 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             va.field_a = 0;
             ud.field_a = 0;
           }
-          stackIn_15_0 = (var2.i(-107) != 1) ? 0 : 1;
+          stackIn_15_0 = (var2.readUnsignedByte(-107) != 1) ? 0 : 1;
           var4 = stackIn_15_0;
-          an.field_a = var2.d(param0 + param0);
+          an.field_a = var2.readString(param0 + param0);
           if (var4 == 0) {
             oh.field_e = an.field_a;
           }
           if (var4 != 0 ||
             var7 != 0) {
-            oh.field_e = var2.d(0);
+            oh.field_e = var2.readString(0);
           }
           if (1 != tk.field_b &&
             tk.field_b != 4) {
             qn.field_M = 0;
             bh.field_H = null;
             if (var7 != 0) {
-              qn.field_M = var2.f(674914976);
-              bh.field_H = var2.d(0);
+              qn.field_M = var2.readUnsignedShort(674914976);
+              bh.field_H = var2.readString(0);
             }
           } else {
-            qn.field_M = var2.f(674914976);
-            bh.field_H = var2.d(0);
+            qn.field_M = var2.readUnsignedShort(674914976);
+            bh.field_H = var2.readString(0);
           }
           if (!param1) {
             sn.field_g = am.a(var2, 80, (byte) 89);
@@ -362,7 +362,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (param1 ||
             var7 != 0) {
-            var5 = var2.f(674914976);
+            var5 = var2.readUnsignedShort(674914976);
             try {
               var6 = oa.field_b.a((byte) 79, var5);
               sn.field_g = var6.e((byte) -125);

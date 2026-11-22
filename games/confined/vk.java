@@ -200,19 +200,19 @@ final class vk {
         int var4Lifetime1Lifetime4;
         try {
           this.field_h = param1;
-          this.field_B = param0.c(32) + 1;
-          param0.c(32);
-          this.field_t = param0.c(32) + 1;
-          this.field_y = 1 + param0.c(32);
-          this.field_G = param0.c(32) + 1;
-          var3_int = param0.c(32);
+          this.field_B = param0.readUnsignedByte(32) + 1;
+          param0.readUnsignedByte(32);
+          this.field_t = param0.readUnsignedByte(32) + 1;
+          this.field_y = 1 + param0.readUnsignedByte(32);
+          this.field_G = param0.readUnsignedByte(32) + 1;
+          var3_int = param0.readUnsignedByte(32);
           this.field_q = var3_int & 1;
-          this.field_D = param0.c(32);
-          this.field_i = param0.c(32);
+          this.field_D = param0.readUnsignedByte(32);
+          this.field_i = param0.readUnsignedByte(32);
           this.field_E = new int[this.field_B];
           var4 = 0;
           for (var5 = 0; this.field_B > var5; var5++) {
-            dupTemp$0 = var4 + param0.c(32);
+            dupTemp$0 = var4 + param0.readUnsignedByte(32);
             var4 = dupTemp$0;
             this.field_E[var5] = va.a(255, dupTemp$0);
           }
@@ -223,11 +223,11 @@ final class vk {
             this.field_l[var5Lifetime1] = sa.field_V;
           }
           for (var5Lifetime2 = 0; this.field_y > var5Lifetime2; var5Lifetime2++) {
-            this.field_p[var5Lifetime2] = 1 + param0.c(32);
-            var6 = param0.a((byte) 25);
+            this.field_p[var5Lifetime2] = 1 + param0.readUnsignedByte(32);
+            var6 = param0.readUnsignedShort((byte) 25);
             var16 = new byte[var6];
             if (var6 > 0) {
-              param0.a(0, (byte) 64, var6, var16);
+              param0.readBytes(0, (byte) 64, var6, var16);
               this.field_l[var5Lifetime2] = var16;
             }
           }
@@ -245,7 +245,7 @@ final class vk {
           this.field_d = new int[this.field_G];
           this.field_J = new int[this.field_G];
           this.field_k = new int[this.field_G];
-          var5Lifetime3 = param0.a((byte) 25);
+          var5Lifetime3 = param0.readUnsignedShort((byte) 25);
           this.field_m = new int[var5Lifetime3];
           this.field_C = new int[var5Lifetime3];
           this.field_c = new int[var5Lifetime3];
@@ -259,30 +259,30 @@ final class vk {
           this.field_K = new int[var5Lifetime3];
           var5Lifetime4 = 0;
           for (var6Lifetime1 = 0; var6Lifetime1 < this.field_G; var6Lifetime1++) {
-            var7 = param0.c(32);
+            var7 = param0.readUnsignedByte(32);
             if (var7 > 0) {
               var4Lifetime1 = 0;
               for (var8 = 0; var8 < 96; var8++) {
-                dupTemp$1 = var4Lifetime1 + param0.c(32);
+                dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(32);
                 var4Lifetime1 = dupTemp$1;
                 this.field_A[var6Lifetime1][var8] = va.a(255, dupTemp$1) + var5Lifetime4;
               }
-              this.field_H[var6Lifetime1] = param0.c(32);
-              var8Lifetime1 = param0.c(32);
-              this.field_g[var6Lifetime1] = param0.c(32);
-              this.field_n[var6Lifetime1] = param0.c(32);
-              this.field_z[var6Lifetime1] = this.field_n[var6Lifetime1] + param0.c(32);
-              this.field_k[var6Lifetime1] = param0.c(32);
-              var9 = param0.c(32);
-              this.field_r[var6Lifetime1] = param0.c(32);
-              this.field_J[var6Lifetime1] = param0.c(32);
-              this.field_d[var6Lifetime1] = this.field_J[var6Lifetime1] + param0.c(32);
+              this.field_H[var6Lifetime1] = param0.readUnsignedByte(32);
+              var8Lifetime1 = param0.readUnsignedByte(32);
+              this.field_g[var6Lifetime1] = param0.readUnsignedByte(32);
+              this.field_n[var6Lifetime1] = param0.readUnsignedByte(32);
+              this.field_z[var6Lifetime1] = this.field_n[var6Lifetime1] + param0.readUnsignedByte(32);
+              this.field_k[var6Lifetime1] = param0.readUnsignedByte(32);
+              var9 = param0.readUnsignedByte(32);
+              this.field_r[var6Lifetime1] = param0.readUnsignedByte(32);
+              this.field_J[var6Lifetime1] = param0.readUnsignedByte(32);
+              this.field_d[var6Lifetime1] = this.field_J[var6Lifetime1] + param0.readUnsignedByte(32);
               array$2 = new int[var8Lifetime1];
               this.field_f[var6Lifetime1] = array$2;
               var4Lifetime1Lifetime1 = 0;
               var10 = 0;
               for (var11 = 0; var8Lifetime1 > var11; var11++) {
-                dupTemp$3 = var10 + param0.b(1647);
+                dupTemp$3 = var10 + param0.readSignedSmart(1647);
                 var10 = dupTemp$3;
                 localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
                 var4Lifetime1Lifetime1 = localTemp$4;
@@ -292,7 +292,7 @@ final class vk {
               this.field_b[var6Lifetime1] = array$5;
               var4Lifetime1Lifetime2 = 0;
               for (var11Lifetime1 = 0; var8Lifetime1 > var11Lifetime1; var11Lifetime1++) {
-                dupTemp$6 = var4Lifetime1Lifetime2 + param0.c(32);
+                dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(32);
                 var4Lifetime1Lifetime2 = dupTemp$6;
                 this.field_b[var6Lifetime1][var11Lifetime1] = va.a(dupTemp$6, 255);
               }
@@ -301,7 +301,7 @@ final class vk {
               var10Lifetime1 = 0;
               var4Lifetime1Lifetime3 = 0;
               for (var11Lifetime2 = 0; var9 > var11Lifetime2; var11Lifetime2++) {
-                dupTemp$8 = var10Lifetime1 + param0.b(1647);
+                dupTemp$8 = var10Lifetime1 + param0.readSignedSmart(1647);
                 var10Lifetime1 = dupTemp$8;
                 localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
                 var4Lifetime1Lifetime3 = localTemp$9;
@@ -311,22 +311,22 @@ final class vk {
               array$10 = new int[var9];
               this.field_a[var6Lifetime1] = array$10;
               for (var11Lifetime3 = 0; var11Lifetime3 < var9; var11Lifetime3++) {
-                dupTemp$11 = var4Lifetime1Lifetime4 + param0.c(32);
+                dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(32);
                 var4Lifetime1Lifetime4 = dupTemp$11;
                 this.field_a[var6Lifetime1][var11Lifetime3] = va.a(dupTemp$11, 255);
               }
-              this.field_w[var6Lifetime1] = param0.a((byte) 25);
+              this.field_w[var6Lifetime1] = param0.readUnsignedShort((byte) 25);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {
-                this.field_s[var5Lifetime4] = param0.f(-109);
-                this.field_j[var5Lifetime4] = param0.f(-95);
-                this.field_u[var5Lifetime4] = this.field_j[var5Lifetime4] + param0.f(-54);
-                this.field_I[var5Lifetime4] = param0.c(32);
-                this.field_c[var5Lifetime4] = param0.b(true);
-                this.field_C[var5Lifetime4] = param0.c(32);
-                this.field_F[var5Lifetime4] = param0.c(32);
-                this.field_K[var5Lifetime4] = -1 + param0.b(true);
-                this.field_m[var5Lifetime4] = param0.a((byte) 25);
-                this.field_v[var5Lifetime4] = param0.a((byte) 25);
+                this.field_s[var5Lifetime4] = param0.readUnsignedMedium(-109);
+                this.field_j[var5Lifetime4] = param0.readUnsignedMedium(-95);
+                this.field_u[var5Lifetime4] = this.field_j[var5Lifetime4] + param0.readUnsignedMedium(-54);
+                this.field_I[var5Lifetime4] = param0.readUnsignedByte(32);
+                this.field_c[var5Lifetime4] = param0.readByte(true);
+                this.field_C[var5Lifetime4] = param0.readUnsignedByte(32);
+                this.field_F[var5Lifetime4] = param0.readUnsignedByte(32);
+                this.field_K[var5Lifetime4] = -1 + param0.readByte(true);
+                this.field_m[var5Lifetime4] = param0.readUnsignedShort((byte) 25);
+                this.field_v[var5Lifetime4] = param0.readUnsignedShort((byte) 25);
                 var5Lifetime4++;
               }
             }

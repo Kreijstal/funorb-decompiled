@@ -106,9 +106,9 @@ final class ob extends wm {
             if (this.field_k != 0) {
               try {
                 this.field_l.position = 0;
-                this.field_l.c(4, (byte) 83);
-                this.field_l.c((int) this.field_k, (byte) 57);
-                this.field_l.d(0, (byte) -81);
+                this.field_l.writeByte(4, (byte) 83);
+                this.field_l.writeByte((int) this.field_k, (byte) 57);
+                this.field_l.writeInt(0, (byte) -81);
                 this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -173,9 +173,9 @@ final class ob extends wm {
           }
           try {
             this.field_l.position = 0;
-            this.field_l.c(6, (byte) 51);
-            this.field_l.c(param0 ^ -68, 3);
-            this.field_l.b(0, 93);
+            this.field_l.writeByte(6, (byte) 51);
+            this.field_l.writeMedium(param0 ^ -68, 3);
+            this.field_l.writeShort(0, 93);
             if (param0 != 67) {
               return;
             }
@@ -234,11 +234,11 @@ final class ob extends wm {
             } else {
               stackIn_6_1 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_5_0).c(stackIn_6_1, (byte) -65);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, (byte) -65);
             if (!param1) {
               return;
             }
-            this.field_l.a(0L, 1392038664);
+            this.field_l.writeLong40(0L, 1392038664);
             this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -322,8 +322,8 @@ final class ob extends wm {
             }
             while (var2 != null) {
               this.field_l.position = 0;
-              this.field_l.c(1, (byte) -52);
-              this.field_l.a(var2.field_l, 1392038664);
+              this.field_l.writeByte(1, (byte) -52);
+              this.field_l.writeLong40(var2.field_l, 1392038664);
               this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_e.a(0, var2);
               var2 = (cc) (this.field_o.b((byte) -73));
@@ -331,8 +331,8 @@ final class ob extends wm {
             var2Lifetime1 = (cc) (this.field_f.b(-22585));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
-              this.field_l.c(0, (byte) -110);
-              this.field_l.a(var2Lifetime1.field_l, 1392038664);
+              this.field_l.writeByte(0, (byte) -110);
+              this.field_l.writeLong40(var2Lifetime1.field_l, 1392038664);
               this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_p.a(0, var2Lifetime1);
               var2Lifetime1 = (cc) (this.field_f.b((byte) -93));
@@ -393,9 +393,9 @@ final class ob extends wm {
                   if (var4 <= this.field_a.position) {
                     if (this.field_h == null) {
                       this.field_a.position = 0;
-                      var6 = this.field_a.i(-102);
+                      var6 = this.field_a.readUnsignedByte(-102);
                       var7 = this.field_a.readInt((byte) -99);
-                      var8 = this.field_a.i(-126);
+                      var8 = this.field_a.readUnsignedByte(-126);
                       var9 = this.field_a.readInt((byte) -110);
                       var10 = 127 & var8;
                       stackIn_51_0 = ((128 & var8) == 0) ? 0 : 1;
@@ -432,8 +432,8 @@ final class ob extends wm {
                       var15 = stackIn_66_0;
                       this.field_h = var14_ref;
                       this.field_h.field_y = new PacketBuffer(var9 + var15 + this.field_h.field_x);
-                      this.field_h.field_y.c(var10, (byte) 90);
-                      this.field_h.field_y.d(var9, (byte) -81);
+                      this.field_h.field_y.writeByte(var10, (byte) 90);
+                      this.field_h.field_y.writeInt(var9, (byte) -81);
                       this.field_a.position = 0;
                       this.field_h.field_w = 10;
                     } else {

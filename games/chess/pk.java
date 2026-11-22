@@ -28,12 +28,12 @@ abstract class pk {
         try {
           var3 = qn.field_U;
           var3.f(param0, -126);
-          var3.c(5, (byte) -108);
-          var3.c(0, (byte) -120);
+          var3.writeByte(5, (byte) -108);
+          var3.writeByte(0, (byte) -120);
           int var4 = -54 / ((-22 - param1) / 58);
-          var3.b(param2.field_j, 114);
-          var3.c(param2.field_k, (byte) -111);
-          var3.c(param2.field_m, (byte) -62);
+          var3.writeShort(param2.field_j, 114);
+          var3.writeByte(param2.field_k, (byte) -111);
+          var3.writeByte(param2.field_m, (byte) -62);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "pk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

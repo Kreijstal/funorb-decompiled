@@ -21,7 +21,7 @@ final class lb extends DualLinkNode {
         try {
           var3_int = 17 / ((-60 - param0) / 57);
           while (true) {
-            var4 = param1.c(32);
+            var4 = param1.readUnsignedByte(32);
             if (var4 == 0) {
               return;
             }
@@ -61,24 +61,24 @@ final class lb extends DualLinkNode {
           }
           if (1 != param2) {
             if (param2 == 2) {
-              var4_int = param1.c(param0 + 32);
+              var4_int = param1.readUnsignedByte(param0 + 32);
               this.field_s = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_s[var5] = param1.a((byte) 25);
+                this.field_s[var5] = param1.readUnsignedShort((byte) 25);
               }
             } else if (param2 == 3) {
-              var4_int = param1.c(32);
+              var4_int = param1.readUnsignedByte(32);
               this.field_v = new int[var4_int];
               this.field_t = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param1.a((byte) 25);
+                var6 = param1.readUnsignedShort((byte) 25);
                 var7 = jf.a((byte) 126, var6);
                 if (var7 != null) {
                   this.field_v[var5] = var6;
                   array$0 = new int[var7.field_b];
                   this.field_t[var5] = array$0;
                   for (var8 = 0; var7.field_b > var8; var8++) {
-                    this.field_t[var5][var8] = param1.a((byte) 25);
+                    this.field_t[var5][var8] = param1.readUnsignedShort((byte) 25);
                   }
                 }
               }
@@ -88,7 +88,7 @@ final class lb extends DualLinkNode {
               }
             }
           } else {
-            this.field_w = ij.a(0, '<', param1.d(true));
+            this.field_w = ij.a(0, '<', param1.readString(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -68,29 +68,29 @@ final class jl {
             var8[var9] = sl.field_s.nextInt();
           }
           if (null == ek.field_e ||
-            !(ek.field_e.field_h.length >= var7_int)) {
+            !(ek.field_e.payload.length >= var7_int)) {
             ek.field_e = new PacketBuffer(var7_int);
           }
-          ek.field_e.field_f = 0;
-          ek.field_e.a(param0, param4, 97, param2);
-          ek.field_e.b((byte) 105, var7_int);
-          ek.field_e.a(-268435456, var13);
+          ek.field_e.position = 0;
+          ek.field_e.writeBytes(param0, param4, 97, param2);
+          ek.field_e.padZerosTo((byte) 105, var7_int);
+          ek.field_e.encryptXtea(-268435456, var13);
           if (ek.field_g == null ||
-            !(ek.field_g.field_h.length >= 100)) {
+            !(ek.field_g.payload.length >= 100)) {
             ek.field_g = new PacketBuffer(100);
           }
-          ek.field_g.field_f = 0;
-          ek.field_g.a(true, 10);
+          ek.field_g.position = 0;
+          ek.field_g.writeByte(true, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ek.field_g.a(var13[var11], -16384);
+            ek.field_g.writeInt(var13[var11], -16384);
             var11++;
           }
-          ek.field_g.c(-161478600, param4);
-          ek.field_g.a(param5, param6 - 4, param3);
-          param1.a(0, ek.field_g.field_f, 90, ek.field_g.field_h);
-          param1.a(0, ek.field_e.field_f, 112, ek.field_e.field_h);
+          ek.field_g.writeShort(-161478600, param4);
+          ek.field_g.applyRsa(param5, param6 - 4, param3);
+          param1.writeBytes(0, ek.field_g.position, 90, ek.field_g.payload);
+          param1.writeBytes(0, ek.field_e.position, 112, ek.field_e.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class jl {
           if (fp.field_e != null) {
             try {
               fp.field_e.a(0L, -1);
-              fp.field_e.a(126, kd.field_n.field_h, kd.field_n.field_f, 24);
+              fp.field_e.a(126, kd.field_n.payload, kd.field_n.position, 24);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,14 +140,14 @@ final class jl {
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {
-              kd.field_n.field_f = kd.field_n.field_f + 24;
+              kd.field_n.position = kd.field_n.position + 24;
               if (param0 <= 26) {
                 field_b = (dl) null;
               }
               return;
             }
           }
-          kd.field_n.field_f = kd.field_n.field_f + 24;
+          kd.field_n.position = kd.field_n.position + 24;
           if (param0 > 26) {
             return;
           }

@@ -91,7 +91,7 @@ final class go extends ln {
 
     final static void b(int param0) {
         ne.field_b = false;
-        kd.field_n.h(param0 ^ 287);
+        kd.field_n.readUnsignedByte(param0 ^ 287);
         if (param0 != 480) {
           field_l = (ef) null;
         }

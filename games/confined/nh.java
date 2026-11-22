@@ -36,17 +36,17 @@ final class nh {
         try {
           var6 = vh.field_a;
           var6.b(true, param2);
-          var6.field_n = var6.field_n + 1;
-          var4 = var6.field_n;
-          var6.f(100, 1);
-          var6.f(117, param0.field_r);
-          var6.f(param1 ^ 119, param0.field_u);
-          var6.d(-90, param0.field_n);
-          var6.d(-99, param0.field_v);
-          var6.d(-95, param0.field_m);
-          var6.d(-120, param0.field_q);
-          var6.e(26199, var4);
-          var6.a(25859, -var4 + var6.field_n);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(100, 1);
+          var6.writeByte(117, param0.field_r);
+          var6.writeByte(param1 ^ 119, param0.field_u);
+          var6.writeInt(-90, param0.field_n);
+          var6.writeInt(-99, param0.field_v);
+          var6.writeInt(-95, param0.field_m);
+          var6.writeInt(-120, param0.field_q);
+          var6.appendCrc32(26199, var4);
+          var6.backpatchByteLength(25859, -var4 + var6.position);
           if (param1 == 0) {
             return;
           }

@@ -42,14 +42,14 @@ final class ql {
 
     final static void a(int param0, PacketBuffer param1, int param2, byte param3, int param4) {
         try {
-          param1.f(param3 ^ 119, 12);
-          param1.c(17, param3 ^ 32);
-          param1.c(param2, 8);
+          param1.writeByte(param3 ^ 119, 12);
+          param1.writeShort(17, param3 ^ 32);
+          param1.writeShort(param2, 8);
           if (param3 != 40) {
             field_u = 11;
           }
-          param1.c(param0, 8);
-          param1.f(127, param4);
+          param1.writeShort(param0, 8);
+          param1.writeByte(127, param4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ql.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

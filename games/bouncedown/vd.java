@@ -76,19 +76,19 @@ final class vd {
           if (param0 <= 35) {
             field_a = 33;
           }
-          de.field_b = param1.a(-1640531527) << 5;
-          var2_int = param1.d((byte) -104);
+          de.field_b = param1.readUnsignedShort(-1640531527) << 5;
+          var2_int = param1.readUnsignedByte((byte) -104);
           kf.field_a = (7 & var2_int) << 18;
           de.field_b = de.field_b + (var2_int >> 3);
-          kf.field_a = kf.field_a + (param1.a(-1640531527) << 2);
-          var2_intLifetime1 = param1.d((byte) -119);
+          kf.field_a = kf.field_a + (param1.readUnsignedShort(-1640531527) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) -119);
           ed.field_b = (63 & var2_intLifetime1) << 15;
           kf.field_a = kf.field_a + (var2_intLifetime1 >> 6);
-          ed.field_b = ed.field_b + (param1.d((byte) -119) << 7);
-          var2_intLifetime2 = param1.d((byte) -119);
+          ed.field_b = ed.field_b + (param1.readUnsignedByte((byte) -119) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) -119);
           qe.field_i = (1 & var2_intLifetime2) << 16;
           ed.field_b = ed.field_b + (var2_intLifetime2 >> 1);
-          qe.field_i = qe.field_i + param1.a(-1640531527);
+          qe.field_i = qe.field_i + param1.readUnsignedShort(-1640531527);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

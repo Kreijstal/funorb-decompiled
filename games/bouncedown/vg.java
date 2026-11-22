@@ -34,34 +34,34 @@ final class vg implements fc {
         }
         var8 = jc.field_g;
         var2 = var8;
-        var3 = var8.d((byte) -90);
+        var3 = var8.readUnsignedByte((byte) -90);
         stackIn_5_0 = ((128 & var3) != 0);
         ba.field_I = stackIn_5_0;
         eg.field_o = 127 & var3;
-        de.field_c = var8.d((byte) -65);
-        ek.field_f = var8.f((byte) -121);
+        de.field_c = var8.readUnsignedByte((byte) -65);
+        ek.field_f = var8.readLong((byte) -121);
         if (2 != eg.field_o) {
           ib.field_n = 0;
           ka.field_n = 0;
         } else {
-          ib.field_n = var8.a(-1640531527);
-          ka.field_n = var8.b((byte) -83);
+          ib.field_n = var8.readUnsignedShort(-1640531527);
+          ka.field_n = var8.readUnsignedMedium((byte) -83);
         }
-        stackIn_11_0 = (1 != var8.d((byte) -76)) ? 0 : 1;
+        stackIn_11_0 = (1 != var8.readUnsignedByte((byte) -76)) ? 0 : 1;
         var4 = stackIn_11_0;
-        qc.field_b = var8.b(true);
+        qc.field_b = var8.readString(true);
         if (var4 != 0) {
-          g.field_i = var8.b(true);
+          g.field_i = var8.readString(true);
         } else {
           g.field_i = qc.field_b;
         }
         if (eg.field_o == 1) {
-          var8.a(-1640531527);
-          var8.b(true);
+          var8.readUnsignedShort(-1640531527);
+          var8.readString(true);
         } else {
           if (eg.field_o == 4) {
-            var8.a(-1640531527);
-            var8.b(true);
+            var8.readUnsignedShort(-1640531527);
+            var8.readString(true);
           }
         }
         if (!param0) {
@@ -69,7 +69,7 @@ final class vg implements fc {
           uf.field_c = null;
           return new bl(param0);
         }
-        var5 = var8.a(-1640531527);
+        var5 = var8.readUnsignedShort(-1640531527);
         try {
           var9 = ag.field_a.a(var5, (byte) -127);
           jg.field_D = var9.e(99);
@@ -105,11 +105,11 @@ final class vg implements fc {
           }
           while (fb.e((byte) 102)) {
             var1.a(true, 8);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             sa.a((byte) -97, var1);
-            hh.field_p.b(-var2 + var1.field_h, true);
+            hh.field_p.backpatchByteLength(-var2 + var1.position, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

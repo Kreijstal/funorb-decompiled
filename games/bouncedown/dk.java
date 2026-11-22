@@ -39,29 +39,29 @@ final class dk {
             var8[var9] = DualLinkNode.field_g.nextInt();
           }
           if (ae.field_a == null ||
-            !(var7_int <= ae.field_a.field_i.length)) {
+            !(var7_int <= ae.field_a.payload.length)) {
             ae.field_a = new PacketBuffer(var7_int);
           }
-          ae.field_a.field_h = 0;
-          ae.field_a.a(param1, true, param0, param6);
-          ae.field_a.a(var7_int, false);
-          ae.field_a.a(var13, 4);
+          ae.field_a.position = 0;
+          ae.field_a.writeBytes(param1, true, param0, param6);
+          ae.field_a.padZerosTo(var7_int, false);
+          ae.field_a.encryptXtea(var13, 4);
           if (null == fb.field_jb ||
-            !(fb.field_jb.field_i.length >= 100)) {
+            !(fb.field_jb.payload.length >= 100)) {
             fb.field_jb = new PacketBuffer(100);
           }
-          fb.field_jb.field_h = 0;
-          fb.field_jb.a(10, (byte) 54);
+          fb.field_jb.position = 0;
+          fb.field_jb.writeByte(10, (byte) 54);
           var11 = param3;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            fb.field_jb.b(var13[var11], (byte) -46);
+            fb.field_jb.writeInt(var13[var11], (byte) -46);
             var11++;
           }
-          fb.field_jb.e(param3 ^ -750655096, param0);
-          fb.field_jb.a((byte) 50, param5, param4);
-          param2.a(0, true, fb.field_jb.field_h, fb.field_jb.field_i);
-          param2.a(0, true, ae.field_a.field_h, ae.field_a.field_i);
+          fb.field_jb.writeShort(param3 ^ -750655096, param0);
+          fb.field_jb.applyRsa((byte) 50, param5, param4);
+          param2.writeBytes(0, true, fb.field_jb.position, fb.field_jb.payload);
+          param2.writeBytes(0, true, ae.field_a.position, ae.field_a.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

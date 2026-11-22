@@ -769,7 +769,7 @@ final class aa {
           if (param0 != -8428) {
             field_f = 65;
           }
-          var3 = var9.i(param0 ^ 8372);
+          var3 = var9.readUnsignedByte(param0 ^ 8372);
           var9.m(param0 ^ 18713);
           m.field_e = cl.a(param0 ^ 13190, var9);
           ei.field_v = new em[var3];

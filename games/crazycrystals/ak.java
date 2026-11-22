@@ -27,20 +27,20 @@ final class ak extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           if (null != oi.field_c && (param0 < 0 ||
             ek.field_h == gj.field_k)) {
-            if (tp.field_f.field_f == 0 &&
+            if (tp.field_f.position == 0 &&
               (10000L + mp.field_p) < lo.a((byte) -118)) {
               tp.field_f.d(8, param0);
             }
-            if (tp.field_f.field_f > 0) {
+            if (tp.field_f.position > 0) {
               try {
-                oi.field_c.a(0, param1 ^ -116, tp.field_f.field_h, tp.field_f.field_f);
+                oi.field_c.a(0, param1 ^ -116, tp.field_f.payload, tp.field_f.position);
                 mp.field_p = lo.a((byte) 90);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 jj.a(4);
               }
-              tp.field_f.field_f = 0;
+              tp.field_f.position = 0;
             }
             if (param1 == -48) {
               return;
@@ -48,7 +48,7 @@ final class ak extends IntrusiveNode {
             ak.a((byte) -60, 78, 70, 24, -99);
             return;
           }
-          tp.field_f.field_f = 0;
+          tp.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

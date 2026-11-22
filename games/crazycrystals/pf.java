@@ -425,7 +425,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -480,18 +480,18 @@ final class pf extends pn implements Cloneable {
         var8 = CrazyCrystals.field_B;
         try {
           var9 = kd.field_n;
-          var2 = var9.h(255);
+          var2 = var9.readUnsignedByte(255);
           if (param0 < 19) {
             field_m = (String[]) null;
           }
-          var3 = var9.h(255);
+          var3 = var9.readUnsignedByte(255);
           if (0 == var2) {
             var4 = (pp) (nh.field_A.g(32073));
             if (var4 == null) {
               jj.a(4);
               return;
             }
-            var5 = -var9.field_f + rk.field_b;
+            var5 = -var9.position + rk.field_b;
             var11 = var4.field_g;
             var10 = var11;
             var6 = var10;
@@ -499,14 +499,14 @@ final class pf extends pn implements Cloneable {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.h(255) << pf.b(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << pf.b(var7 << 8, 768));
             }
             var4.field_h = true;
             var4.a(false);
             return;
           }
           if (var2 == 1) {
-            var4_int = var9.f(0);
+            var4_int = var9.readSignedSmart(0);
             var5_ref_we = (we) (tb.field_b.g(32073));
             while (var5_ref_we != null) {
               if (var5_ref_we.field_j != var3 ||

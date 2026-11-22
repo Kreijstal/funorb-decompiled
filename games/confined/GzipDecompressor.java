@@ -19,8 +19,8 @@ final class GzipDecompressor {
     final void decompress(boolean param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
-            if (31 != param2.field_m[param2.field_n] ||
-              -117 != param2.field_m[1 + param2.field_n]) {
+            if (31 != param2.payload[param2.position] ||
+              -117 != param2.payload[1 + param2.position]) {
               throw new RuntimeException("");
             }
             if (param0) {
@@ -30,7 +30,7 @@ final class GzipDecompressor {
               this.field_a = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_a.setInput(param2.field_m, param2.field_n + 10, -8 + (-param2.field_n - 10) + param2.field_m.length);
+              this.field_a.setInput(param2.payload, param2.position + 10, -8 + (-param2.position - 10) + param2.payload.length);
               this.field_a.inflate(param1);
             } catch (Exception exception) {
               this.field_a.reset();

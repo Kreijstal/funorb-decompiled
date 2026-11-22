@@ -134,34 +134,34 @@ final class ma extends IntrusiveNode {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        this.field_s = param0.a((byte) 25);
-        stackIn_3_1 = (param0.c(32) == 1);
+        this.field_s = param0.readUnsignedShort((byte) 25);
+        stackIn_3_1 = (param0.readUnsignedByte(32) == 1);
         this.field_r = stackIn_3_1;
-        var2 = param0.c(32);
+        var2 = param0.readUnsignedByte(32);
         if (var2 >= 1 &&
           var2 <= 4) {
           this.field_p = new int[var2];
           for (var3 = 0; var3 < var2; var3++) {
-            this.field_p[var3] = param0.a((byte) 25);
+            this.field_p[var3] = param0.readUnsignedShort((byte) 25);
           }
           if (var2 > 1) {
             this.field_q = new int[var2 - 1];
             for (var3Lifetime1 = 0; var3Lifetime1 < var2 - 1; var3Lifetime1++) {
-              this.field_q[var3Lifetime1] = param0.c(32);
+              this.field_q[var3Lifetime1] = param0.readUnsignedByte(32);
             }
           }
           if (var2 > 1) {
             this.field_m = new int[var2 - 1];
             for (var3Lifetime2 = 0; var3Lifetime2 < var2 - 1; var3Lifetime2++) {
-              this.field_m[var3Lifetime2] = param0.c(32);
+              this.field_m[var3Lifetime2] = param0.readUnsignedByte(32);
             }
           }
           this.field_n = new int[var2];
           for (var3Lifetime3 = 0; var3Lifetime3 < var2; var3Lifetime3++) {
-            this.field_n[var3Lifetime3] = param0.f((byte) 126);
+            this.field_n[var3Lifetime3] = param0.readInt((byte) 126);
           }
-          param0.c(32);
-          param0.c(32);
+          param0.readUnsignedByte(32);
+          param0.readUnsignedByte(32);
           this.field_t = null;
           return;
         }

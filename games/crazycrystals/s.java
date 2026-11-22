@@ -87,12 +87,12 @@ final class s extends ke {
         try {
           try {
             var4 = 36 % ((param1 - 40) / 56);
-            var3_int = param0.c(false);
+            var3_int = param0.readUnsignedSmart(false);
             if (param2 < var3_int) {
               var3_int = param2;
             }
             var5 = new byte[var3_int];
-            param0.field_f = param0.field_f + dm.field_f.a(param0.field_h, 0, -1, var3_int, param0.field_f, var5);
+            param0.position = param0.position + dm.field_f.a(param0.payload, 0, -1, var3_int, param0.position, var5);
             var6 = gd.a((byte) 61, var5, 0, var3_int);
             stackIn_3_0 = var6;
             return stackIn_3_0;

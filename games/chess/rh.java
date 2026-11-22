@@ -103,8 +103,8 @@ final class rh {
     final static void a(int param0, int param1) {
         nk var2 = qn.field_U;
         var2.f(param1, param0 ^ -117);
-        var2.c(1, (byte) 86);
-        var2.c(param0, (byte) 45);
+        var2.writeByte(1, (byte) 86);
+        var2.writeByte(param0, (byte) 45);
     }
 
     private final void a(hf param0, int param1, int param2) {

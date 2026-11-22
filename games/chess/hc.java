@@ -48,8 +48,8 @@ final class hc implements Iterator {
         nk var2 = qn.field_U;
         var2.f(param0, -95);
         int var3 = 60 / ((-20 - param1) / 47);
-        var2.c(1, (byte) 69);
-        var2.c(1, (byte) 122);
+        var2.writeByte(1, (byte) 69);
+        var2.writeByte(1, (byte) 122);
     }
 
     hc(cn param0) {

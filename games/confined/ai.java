@@ -9,11 +9,11 @@ class ai extends em {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(this.field_h, (byte) -96);
+          param0.writeLong(this.field_h, (byte) -96);
           if (param1 < 47) {
             this.field_h = -58L;
           }
-          param0.a(11404, this.field_j);
+          param0.writeBase38String(11404, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -86,64 +86,64 @@ class ai extends em {
             return stackIn_5_0;
           }
           if (lk.field_d == si.field_g) {
-            vh.field_a.field_n = 0;
+            vh.field_a.position = 0;
             ca.field_o = null;
             if (param1 == null) {
-              qf.field_c.field_n = 0;
-              qf.field_c.d(-106, hj.field_h.nextInt());
-              qf.field_c.d(-103, hj.field_h.nextInt());
+              qf.field_c.position = 0;
+              qf.field_c.writeInt(-106, hj.field_h.nextInt());
+              qf.field_c.writeInt(-103, hj.field_h.nextInt());
               stackIn_16_0 = qf.field_c;
               if (!param6.b(0)) {
                 stackIn_17_1 = "";
               } else {
                 stackIn_17_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 112);
+              ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_17_1, (byte) 112);
               stackIn_19_0 = qf.field_c;
               if (!param2.b(0)) {
                 stackIn_20_1 = "";
               } else {
                 stackIn_20_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 28);
-              vh.field_a.f(110, 16);
-              vh.field_a.field_n = vh.field_a.field_n + 1;
-              var9 = vh.field_a.field_n;
+              ((PacketBuffer) (Object) stackIn_19_0).writePrefixedString(stackIn_20_1, (byte) 28);
+              vh.field_a.writeByte(110, 16);
+              vh.field_a.position = vh.field_a.position + 1;
+              var9 = vh.field_a.position;
               jf.a(qf.field_c, hk.field_a, vh.field_a, 0, an.field_r);
-              vh.field_a.a(25859, vh.field_a.field_n - var9);
+              vh.field_a.backpatchByteLength(25859, vh.field_a.position - var9);
             } else {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              qf.field_c.field_n = 0;
-              qf.field_c.d(-98, hj.field_h.nextInt());
-              qf.field_c.d(-114, hj.field_h.nextInt());
-              qf.field_c.a(var14, (byte) 45);
-              qf.field_c.a(var8, (byte) 105);
+              qf.field_c.position = 0;
+              qf.field_c.writeInt(-98, hj.field_h.nextInt());
+              qf.field_c.writeInt(-114, hj.field_h.nextInt());
+              qf.field_c.writePrefixedString(var14, (byte) 45);
+              qf.field_c.writePrefixedString(var8, (byte) 105);
               var15 = (CharSequence) ((Object) param1);
-              qf.field_c.a(ka.a(var15, 23617), (byte) 75);
-              qf.field_c.c(param0, 8);
-              qf.field_c.f(114, param4);
-              qf.field_c.f(117, var9);
-              vh.field_a.f(101, 18);
-              vh.field_a.field_n = vh.field_a.field_n + 2;
-              var10 = vh.field_a.field_n;
+              qf.field_c.writePrefixedString(ka.a(var15, 23617), (byte) 75);
+              qf.field_c.writeShort(param0, 8);
+              qf.field_c.writeByte(114, param4);
+              qf.field_c.writeByte(117, var9);
+              vh.field_a.writeByte(101, 18);
+              vh.field_a.position = vh.field_a.position + 2;
+              var10 = vh.field_a.position;
               var11_ref_StringLifetime4 = pa.a(ii.b(false), 59);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              vh.field_a.a(var11_ref_StringLifetime4, 123);
+              vh.field_a.writeString(var11_ref_StringLifetime4, 123);
               jf.a(qf.field_c, hk.field_a, vh.field_a, 0, an.field_r);
-              vh.field_a.b(-var10 + vh.field_a.field_n, -109);
+              vh.field_a.backpatchShortLength(-var10 + vh.field_a.position, -109);
             }
             tb.a(-1, 123);
             lk.field_d = dg.field_p;
           }
           if (dg.field_p == lk.field_d &&
             jj.a(1, (byte) -119)) {
-            var9Lifetime1 = e.field_c.c(32);
-            e.field_c.field_n = 0;
+            var9Lifetime1 = e.field_c.readUnsignedByte(32);
+            e.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               lk.field_d = la.field_M;
@@ -160,7 +160,7 @@ class ai extends em {
               if (99 == var9Lifetime1) {
                 jj.a(lb.c(-30316), (byte) 16);
                 ca.field_o = new Boolean(qe.a((byte) -73, e.field_c));
-                e.field_c.field_n = 0;
+                e.field_c.position = 0;
               } else {
                 Confined.field_F = var9Lifetime1;
                 field_i = -1;
@@ -171,12 +171,12 @@ class ai extends em {
           if (lk.field_d == la.field_M) {
             var9Lifetime2 = 2;
             if (jj.a(var9Lifetime2, (byte) -126)) {
-              var10Lifetime1 = e.field_c.a((byte) 25);
-              e.field_c.field_n = 0;
+              var10Lifetime1 = e.field_c.readUnsignedShort((byte) 25);
+              e.field_c.position = 0;
               if (jj.a(var10Lifetime1, (byte) 49)) {
                 var11 = sc.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  sc.field_g[var12] = e.field_c.g((byte) 31);
+                  sc.field_g[var12] = e.field_c.readPrefixedString((byte) 31);
                 }
                 dc.d(103);
                 sg.field_y = false;
@@ -188,12 +188,12 @@ class ai extends em {
           if (lk.field_d == rf.field_c &&
             jc.a(-77)) {
             if (Confined.field_F == 255) {
-              var9_ref_String = e.field_c.e((byte) 102);
+              var9_ref_String = e.field_c.readNullableString((byte) 102);
               if (var9_ref_String != null) {
                 qc.a(var9_ref_String, ii.b(false), -1);
               }
             } else {
-              gl.field_k = e.field_c.d(true);
+              gl.field_k = e.field_c.readString(true);
             }
             dc.d(106);
             sg.field_y = false;

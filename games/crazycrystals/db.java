@@ -392,7 +392,7 @@ final class db {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(8, 5, var26.field_h.length, param1);
+            var26.decryptXteaRange(8, 5, var26.payload.length, param1);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -423,11 +423,11 @@ final class db {
               var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_f = var11;
+              var32.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.b((byte) -32);
+                  var17 = var17 + var32.readInt((byte) -32);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -443,13 +443,13 @@ final class db {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_f = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var32.b((byte) 127);
+                  var19Lifetime2 = var19Lifetime2 + var32.readInt((byte) 127);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -473,11 +473,11 @@ final class db {
             var38 = new int[var5_int];
             var30 = var38;
             var14_ref_int__ = var30;
-            var29.field_f = var11;
+            var29.position = var11;
             for (var15Lifetime1 = 0; var12Lifetime1 > var15Lifetime1; var15Lifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var5_int > var17Lifetime1; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var29.b((byte) -65);
+                var16Lifetime1 = var16Lifetime1 + var29.readInt((byte) -65);
                 var14_ref_int__[var17Lifetime1] = var14_ref_int__[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -489,12 +489,12 @@ final class db {
               var15_ref_byte____[var16Lifetime2] = array$1;
               var38[var16Lifetime2] = 0;
             }
-            var29.field_f = var11;
+            var29.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var29.b((byte) 127);
+                var18Lifetime1 = var18Lifetime1 + var29.readInt((byte) 127);
                 eg.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;

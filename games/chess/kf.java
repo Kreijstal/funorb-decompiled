@@ -328,7 +328,7 @@ final class kf extends IntrusiveNode {
             var13_int = 1;
             var12 = 2;
             for (var14 = 2; var14 < var9; var14++) {
-              var15_int = var38.i(-77);
+              var15_int = var38.readUnsignedByte(-77);
               if (var15_int != 0) {
                 if (var13_int >= var15_int) {
                   var15_int--;
@@ -350,17 +350,17 @@ final class kf extends IntrusiveNode {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.i(-94);
+            var16_int = var38.readUnsignedByte(-94);
             if (var16_int > 0) {
               var15_ref.field_a = new byte[2 * var16_int];
             }
-            var16_intLifetime1 = var38.i(-111);
+            var16_intLifetime1 = var38.readUnsignedByte(-111);
             if (0 < var16_intLifetime1) {
               var15_ref.field_k = new byte[2 * var16_intLifetime1 + 2];
               var40.field_k[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.i(-125);
+          var14Lifetime2 = var38.readUnsignedByte(-125);
           if (var14Lifetime2 <= 0) {
             stackIn_39_0 = null;
           } else {
@@ -368,7 +368,7 @@ final class kf extends IntrusiveNode {
           }
           var46 = stackIn_39_0;
           var15 = var46;
-          var14Lifetime3 = var38.i(-77);
+          var14Lifetime3 = var38.readUnsignedByte(-77);
           if (0 >= var14Lifetime3) {
             stackIn_42_0 = null;
           } else {
@@ -388,12 +388,12 @@ final class kf extends IntrusiveNode {
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.i(-78);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(-78);
             this.field_p[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.i(-98);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(-98);
             this.field_p[var20Lifetime1] = (short)(this.field_p[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -406,7 +406,7 @@ final class kf extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.c((byte) 58);
+              var22 = var38.readVarInt((byte) 58);
             }
             this.field_p[var23] = (short)(this.field_p[var23] + ce.a(32768, -1 + var22 << 14));
             this.field_o[var23] = var22;
@@ -478,13 +478,13 @@ final class kf extends IntrusiveNode {
                 var20Lifetime6 = var18[var21Lifetime4++];
               }
               if (this.field_o[var27] > 0) {
-                var26Lifetime1 = 1 + var38.i(-128);
+                var26Lifetime1 = 1 + var38.readUnsignedByte(-128);
               }
             }
             this.field_k[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_n = 1 + var38.i(-86);
+          this.field_n = 1 + var38.readUnsignedByte(-86);
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_a != null) {
@@ -513,7 +513,7 @@ final class kf extends IntrusiveNode {
             if (null != var48.field_k) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var48.field_k.length > var29Lifetime1; var29Lifetime1 += 2) {
-                var19Lifetime3 = 1 + (var19Lifetime3 + var38.i(-83));
+                var19Lifetime3 = 1 + (var19Lifetime3 + var38.readUnsignedByte(-83));
                 var48.field_k[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -523,16 +523,16 @@ final class kf extends IntrusiveNode {
             if (null != var49.field_a) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_a.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var38.i(-120) + var19Lifetime4 + 1;
+                var19Lifetime4 = var38.readUnsignedByte(-120) + var19Lifetime4 + 1;
                 var49.field_a[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.i(-109);
+            var19Lifetime5 = var38.readUnsignedByte(-109);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var46.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = var38.i(-106) + var19Lifetime5 + 1;
+              var19Lifetime5 = var38.readUnsignedByte(-106) + var19Lifetime5 + 1;
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var46[0];
@@ -558,10 +558,10 @@ final class kf extends IntrusiveNode {
             var15 = null;
           }
           if (null != var16) {
-            var19Lifetime6 = var38.i(-106);
+            var19Lifetime6 = var38.readUnsignedByte(-106);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var27Lifetime7 < var47.length; var27Lifetime7 += 2) {
-              var19Lifetime6 = 1 + (var19Lifetime6 + var38.i(-112));
+              var19Lifetime6 = 1 + (var19Lifetime6 + var38.readUnsignedByte(-112));
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7Lifetime1 = var47[0];
@@ -613,33 +613,33 @@ final class kf extends IntrusiveNode {
             }
           }
           for (var27Lifetime8 = 0; var12 > var27Lifetime8; var27Lifetime8++) {
-            var13[var27Lifetime8].field_b = var38.i(-91);
+            var13[var27Lifetime8].field_b = var38.readUnsignedByte(-91);
           }
           for (var27Lifetime9 = 0; var12 > var27Lifetime9; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
             if (null != var50.field_a) {
-              var50.field_l = var38.i(-123);
+              var50.field_l = var38.readUnsignedByte(-123);
             }
             if (var50.field_k != null) {
-              var50.field_d = var38.i(-95);
+              var50.field_d = var38.readUnsignedByte(-95);
             }
             if (var50.field_b > 0) {
-              var50.field_i = var38.i(-101);
+              var50.field_i = var38.readUnsignedByte(-101);
             }
           }
           for (var27Lifetime10 = 0; var27Lifetime10 < var12; var27Lifetime10++) {
-            var13[var27Lifetime10].field_e = var38.i(-112);
+            var13[var27Lifetime10].field_e = var38.readUnsignedByte(-112);
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
             if (0 < var51.field_e) {
-              var51.field_g = var38.i(-108);
+              var51.field_g = var38.readUnsignedByte(-108);
             }
           }
           for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
             if (var52.field_g > 0) {
-              var52.field_f = var38.i(-93);
+              var52.field_f = var38.readUnsignedByte(-93);
             }
           }
           return;

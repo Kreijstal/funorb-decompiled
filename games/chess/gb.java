@@ -800,7 +800,7 @@ abstract class gb extends GameAppletShell {
     }
 
     private final void d(int param0) {
-        int var2 = tk.field_h.i(-121);
+        int var2 = tk.field_h.readUnsignedByte(-121);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         int var4 = -1 + sb.field_sb;
         byte[] var5 = new byte[var4];

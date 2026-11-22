@@ -480,15 +480,15 @@ final class dh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
-        param4.c(12, (byte) -81);
-        param4.b(17, 91);
-        param4.b(param0, param1 + 78);
-        param4.b(param2, param1 ^ 118);
+        param4.writeByte(12, (byte) -81);
+        param4.writeShort(17, 91);
+        param4.writeShort(param0, param1 + 78);
+        param4.writeShort(param2, param1 ^ 118);
         if (param1 != 11) {
           return;
         }
         try {
-          param4.c(param3, (byte) 109);
+          param4.writeByte(param3, (byte) 109);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "dh.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -531,9 +531,9 @@ final class dh {
           } else {
             var4 = qn.field_U;
             var4.f(param1, -94);
-            var4.c(3, (byte) 82);
-            var4.c(11, (byte) 76);
-            var4.b(param2, 117);
+            var4.writeByte(3, (byte) 82);
+            var4.writeByte(11, (byte) 76);
+            var4.writeShort(param2, 117);
             if (param0 <= 107) {
               field_g = (String) null;
               return;
@@ -542,9 +542,9 @@ final class dh {
           }
           var4Lifetime1 = qn.field_U;
           var4Lifetime1.f(param1, -94);
-          var4Lifetime1.c(3, (byte) 82);
-          var4Lifetime1.c(11, (byte) 76);
-          var4Lifetime1.b(param2, 117);
+          var4Lifetime1.writeByte(3, (byte) 82);
+          var4Lifetime1.writeByte(11, (byte) 76);
+          var4Lifetime1.writeShort(param2, 117);
           if (param0 <= 107) {
             field_g = (String) null;
             return;

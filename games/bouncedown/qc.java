@@ -72,23 +72,23 @@ final class qc {
           if (null != gf.field_g) {
             try {
               gf.field_g.a((byte) 57, 0L);
-              gf.field_g.a(0, jc.field_g.field_i, 24, jc.field_g.field_h);
+              gf.field_g.a(0, jc.field_g.payload, 24, jc.field_g.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == -17184) {
-                jc.field_g.field_h = jc.field_g.field_h + 24;
+                jc.field_g.position = jc.field_g.position + 24;
                 return;
               }
               field_a = (he) null;
-              jc.field_g.field_h = jc.field_g.field_h + 24;
+              jc.field_g.position = jc.field_g.position + 24;
               return;
             }
           }
           if (param0 != -17184) {
             field_a = (he) null;
           }
-          jc.field_g.field_h = jc.field_g.field_h + 24;
+          jc.field_g.position = jc.field_g.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

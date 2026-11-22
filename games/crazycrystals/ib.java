@@ -22,7 +22,7 @@ abstract class ib extends DualLinkNode {
         int var2 = -21 / ((param0 - 61) / 40);
         if (var1 != null) {
           var3 = kd.field_n;
-          var1.field_j = new int[]{var3.b((byte) -98), var3.b((byte) 126), var3.b((byte) 126), var3.b((byte) 14)};
+          var1.field_j = new int[]{var3.readInt((byte) -98), var3.readInt((byte) 126), var3.readInt((byte) 126), var3.readInt((byte) 14)};
           var1.a(false);
           return;
         }

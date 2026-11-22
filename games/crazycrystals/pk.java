@@ -64,11 +64,11 @@ final class pk {
               stackIn_9_0 = this.field_a[param3];
               return stackIn_9_0;
             }
-            this.field_i.field_f = 72 * param3 + 6;
-            var6_int = this.field_i.b((byte) 127);
-            var7 = this.field_i.b((byte) 126);
+            this.field_i.position = 72 * param3 + 6;
+            var6_int = this.field_i.readInt((byte) 127);
+            var7 = this.field_i.readInt((byte) 126);
             var13 = new byte[param0];
-            this.field_i.a(64, var13, (byte) 94, 0);
+            this.field_i.readBytes(64, var13, (byte) 94, 0);
             var9 = new ee(param3, param4, param1, this.field_b, this.field_d, var6_int, var13, var7, param2);
             this.field_a[param3] = var9;
             stackIn_11_0 = var9;
@@ -116,9 +116,9 @@ final class pk {
         try {
           var3 = tp.field_f;
           var3.d(8, param0);
-          var3.a(true, 2);
-          var3.a(true, 0);
-          var3.a(true, param1.field_f);
+          var3.writeByte(true, 2);
+          var3.writeByte(true, 0);
+          var3.writeByte(true, param1.field_f);
           if (param2 != 113) {
             field_f = (String) null;
           }
@@ -155,29 +155,29 @@ final class pk {
             return;
           }
           var9 = kd.field_n;
-          var2 = var9.h(255);
+          var2 = var9.readUnsignedByte(255);
           if (var2 == 0) {
             var8 = (w) (je.field_a.g(32073));
             if (var8 == null) {
               jj.a(4);
               return;
             }
-            var4 = var9.h(255);
+            var4 = var9.readUnsignedByte(255);
             if (0 != var4) {
               var13 = new byte[var4];
-              var9.a(var4, var13, (byte) -120, 0);
+              var9.readBytes(var4, var13, (byte) -120, 0);
             } else {
               var5 = null;
             }
-            var9.field_f = var9.field_f + 4;
-            if (!var9.g(-99)) {
+            var9.position = var9.position + 4;
+            if (!var9.verifyCrc32(-99)) {
               jj.a(4);
               return;
             }
             var8.a(false);
           } else {
             if (var2 == 1) {
-              var3 = var9.b((byte) -114);
+              var3 = var9.readInt((byte) -114);
               var4_ref_qp = (qp) (oi.field_a.g(32073));
               while (var4_ref_qp != null) {
                 if (var3 != var4_ref_qp.field_h) {
@@ -230,13 +230,13 @@ final class pk {
           return false;
         }
         var10 = new PacketBuffer(this.field_e.e(113));
-        var10.field_f = 5;
-        var3 = var10.h(255);
-        var10.field_f = var10.field_f + var3 * 72;
-        var13 = new byte[-var10.field_f + var10.field_h.length];
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(255);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, var13, (byte) 87, 0);
+        var10.readBytes(var13.length, var13, (byte) 87, 0);
         if (this.field_g != null &&
           null != this.field_h) {
           var12 = new java.math.BigInteger(var13);
@@ -251,7 +251,7 @@ final class pk {
         if (!param0) {
           return false;
         }
-        var15 = ac.a(var10.field_h, 5, -5 + (-var13.length + var10.field_f), (byte) -127);
+        var15 = ac.a(var10.payload, 5, -5 + (-var13.length + var10.position), (byte) -127);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

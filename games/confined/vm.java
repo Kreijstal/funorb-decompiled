@@ -203,34 +203,34 @@ final class vm extends hf {
         lb var9 = null;
         var7 = Confined.field_J ? 1 : 0;
         var8 = e.field_c;
-        var3 = var8.c(32);
+        var3 = var8.readUnsignedByte(32);
         stackIn_3_0 = ((128 & var3) != 0);
         im.field_c = stackIn_3_0;
         cc.field_m = var3 & 127;
-        ve.field_h = var8.c(32);
-        rl.field_x = var8.h((byte) -68);
+        ve.field_h = var8.readUnsignedByte(32);
+        rl.field_x = var8.readLong((byte) -68);
         if (cc.field_m == 2) {
-          ha.field_e = var8.a((byte) 25);
-          qd.field_d = var8.f(-112);
+          ha.field_e = var8.readUnsignedShort((byte) 25);
+          qd.field_d = var8.readUnsignedMedium(-112);
         } else {
           qd.field_d = 0;
           ha.field_e = 0;
         }
-        stackIn_9_0 = (param0 != var8.c(32)) ? 0 : 1;
+        stackIn_9_0 = (param0 != var8.readUnsignedByte(32)) ? 0 : 1;
         var4 = stackIn_9_0;
-        CipherPacketBuffer.field_v = var8.d(true);
+        CipherPacketBuffer.field_v = var8.readString(true);
         if (var4 != 0) {
-          ej.field_d = var8.d(true);
+          ej.field_d = var8.readString(true);
         } else {
           ej.field_d = CipherPacketBuffer.field_v;
         }
         if (cc.field_m == 1 ||
           4 == cc.field_m) {
-          var8.a((byte) 25);
-          var8.d(true);
+          var8.readUnsignedShort((byte) 25);
+          var8.readString(true);
         }
         if (param1) {
-          var5 = var8.a((byte) 25);
+          var5 = var8.readUnsignedShort((byte) 25);
           try {
             var9 = wc.field_Ub.b(1, var5);
             q.field_j = var9.e((byte) -114);

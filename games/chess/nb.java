@@ -220,7 +220,7 @@ final class nb extends ci {
         var8 = Chess.field_G;
         try {
           var12 = tk.field_h;
-          var2 = var12.i(-86);
+          var2 = var12.readUnsignedByte(-86);
           if (!param0) {
             return;
           }
@@ -232,7 +232,7 @@ final class nb extends ci {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).i(-107);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-107);
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -99);
             }

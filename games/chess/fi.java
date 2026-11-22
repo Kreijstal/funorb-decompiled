@@ -59,7 +59,7 @@ final class fi {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.i(-111);
+          var2_int = param1.readUnsignedByte(-111);
           stackIn_3_0 = (~var2_int != param0) ? 0 : 1;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;

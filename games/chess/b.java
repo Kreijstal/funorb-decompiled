@@ -298,7 +298,7 @@ final class b {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          h.field_n = var17.f(674914976);
+          h.field_n = var17.readUnsignedShort(674914976);
           wm.field_b = new int[h.field_n];
           a.field_c = new int[h.field_n];
           gg.field_y = new byte[h.field_n][];
@@ -307,25 +307,25 @@ final class b {
           be.field_a = new int[h.field_n];
           field_c = new int[h.field_n];
           var17.position = -(8 * h.field_n) - 7 + param1.length;
-          cd.field_p = var17.f(674914976);
-          ek.field_a = var17.f(674914976);
-          var3 = (var17.i(-127) & 255) + 1;
+          cd.field_p = var17.readUnsignedShort(674914976);
+          ek.field_a = var17.readUnsignedShort(674914976);
+          var3 = (var17.readUnsignedByte(-127) & 255) + 1;
           for (var4 = 0; var4 < h.field_n; var4++) {
-            be.field_a[var4] = var16.f(674914976);
+            be.field_a[var4] = var16.readUnsignedShort(674914976);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < h.field_n; var4Lifetime1++) {
-            a.field_c[var4Lifetime1] = var17.f(674914976);
+            a.field_c[var4Lifetime1] = var17.readUnsignedShort(674914976);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < h.field_n; var4Lifetime2++) {
-            wm.field_b[var4Lifetime2] = var17.f(674914976);
+            wm.field_b[var4Lifetime2] = var17.readUnsignedShort(674914976);
           }
           for (var4Lifetime3 = 0; h.field_n > var4Lifetime3; var4Lifetime3++) {
-            field_c[var4Lifetime3] = var17.f(674914976);
+            field_c[var4Lifetime3] = var17.readUnsignedShort(674914976);
           }
           var17.position = -(h.field_n * 8) - 7 + (param1.length - 3 * (-1 + var3));
           uh.field_r = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            uh.field_r[var4Lifetime4] = var17.k(1389913160);
+            uh.field_r[var4Lifetime4] = var17.readUnsignedMedium(1389913160);
             if (uh.field_r[var4Lifetime4] == 0) {
               uh.field_r[var4Lifetime4] = 1;
             }
@@ -348,7 +348,7 @@ final class b {
             var9 = var19;
             gg.field_y[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.i(-104);
+            var11 = var17.readUnsignedByte(-104);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
                 var8[var12] = var17.readByte(0);

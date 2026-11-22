@@ -158,9 +158,9 @@ final class hf {
             stackIn_29_0 = (String) null;
             return stackIn_29_0;
           }
-          var5.c(0, (byte) -115);
-          var5.a(-113, param2);
-          var5.a(-var4 + var5.position, -1);
+          var5.writeByte(0, (byte) -115);
+          var5.writeString(-113, param2);
+          var5.backpatchByteLength(-var4 + var5.position, -1);
           stackIn_31_0 = null;
           return (String) (stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

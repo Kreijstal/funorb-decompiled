@@ -47,25 +47,25 @@ final class ni {
             n.field_g = new PacketBuffer(var7_int);
           }
           n.field_g.position = 0;
-          n.field_g.a(param6, (byte) -45, param0, param1);
-          n.field_g.a((byte) -54, var7_int);
-          n.field_g.a(var13, 12246);
+          n.field_g.writeBytes(param6, (byte) -45, param0, param1);
+          n.field_g.padZerosTo((byte) -54, var7_int);
+          n.field_g.encryptXtea(var13, 12246);
           if (vg.field_c == null ||
             !(vg.field_c.data.length >= 100)) {
             vg.field_c = new PacketBuffer(100);
           }
           vg.field_c.position = 0;
-          vg.field_c.c(10, (byte) 94);
+          vg.field_c.writeByte(10, (byte) 94);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            vg.field_c.d(var13[var11], (byte) -81);
+            vg.field_c.writeInt(var13[var11], (byte) -81);
             var11++;
           }
-          vg.field_c.b(param1, 94);
-          vg.field_c.a(param2, param5, (byte) 76);
-          param3.a(vg.field_c.data, (byte) -45, 0, vg.field_c.position);
-          param3.a(n.field_g.data, (byte) -45, 0, n.field_g.position);
+          vg.field_c.writeShort(param1, 94);
+          vg.field_c.applyRsa(param2, param5, (byte) 76);
+          param3.writeBytes(vg.field_c.data, (byte) -45, 0, vg.field_c.position);
+          param3.writeBytes(n.field_g.data, (byte) -45, 0, n.field_g.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

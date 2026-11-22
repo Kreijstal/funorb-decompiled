@@ -24,24 +24,24 @@ final class jj {
           }
           if (dh.field_a != null && (param0 < 0 ||
             pj.field_a == b.field_b)) {
-            if (0 == hh.field_p.field_h &&
+            if (0 == hh.field_p.position &&
               fa.a(101) > (10000L + wa.field_e)) {
               hh.field_p.a(true, param0);
             }
-            if (0 < hh.field_p.field_h) {
+            if (0 < hh.field_p.position) {
               try {
-                dh.field_a.a(hh.field_p.field_h, hh.field_p.field_i, 0, 0);
+                dh.field_a.a(hh.field_p.position, hh.field_p.payload, 0, 0);
                 wa.field_e = fa.a(-76);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 kc.a((byte) 18);
               }
-              hh.field_p.field_h = 0;
+              hh.field_p.position = 0;
             }
             return;
           }
-          hh.field_p.field_h = 0;
+          hh.field_p.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -353,9 +353,9 @@ final class jj {
     final static String a(byte param0) {
         if (param0 != -54) {
           jj.a((byte) -57);
-          return jc.field_g.b(true);
+          return jc.field_g.readString(true);
         }
-        return jc.field_g.b(true);
+        return jc.field_g.readString(true);
     }
 
     static {

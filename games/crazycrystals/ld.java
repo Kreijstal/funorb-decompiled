@@ -53,19 +53,19 @@ final class ld extends wl {
         if (param0 < 18) {
           this.b((byte) -98);
           if (null != this.field_s) {
-            return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
+            return this.field_s.position * 100 / (this.field_s.payload.length - this.field_u);
           }
           return 0;
         }
         if (null != this.field_s) {
-          return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
+          return this.field_s.position * 100 / (this.field_s.payload.length - this.field_u);
         }
         return 0;
     }
 
     final static void g(int param0) {
         CharSequence var3 = null;
-        je.field_g = kd.field_n.i(111);
+        je.field_g = kd.field_n.readString(111);
         if (param0 == -1266) {
           var3 = (CharSequence) ((Object) je.field_g);
           lk.field_b = fe.a(60136, var3);
@@ -81,8 +81,8 @@ final class ld extends wl {
         if (this.field_n) {
           throw new RuntimeException();
         }
-        if (this.field_s.field_f >= this.field_s.field_h.length - this.field_u) {
-          return this.field_s.field_h;
+        if (this.field_s.position >= this.field_s.payload.length - this.field_u) {
+          return this.field_s.payload;
         }
         throw new RuntimeException();
     }

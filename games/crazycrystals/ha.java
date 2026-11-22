@@ -72,14 +72,14 @@ final class ha {
         int var3;
         this.field_b = new nm[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.h(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
-            param0.field_f = param0.field_f - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new nm();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.c((byte) -7);
-        this.field_c = param0.c((byte) -7);
+        this.field_a = param0.readUnsignedShort((byte) -7);
+        this.field_c = param0.readUnsignedShort((byte) -7);
     }
 }

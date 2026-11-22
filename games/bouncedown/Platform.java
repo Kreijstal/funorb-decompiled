@@ -184,7 +184,7 @@ final class Platform {
         if (param0 != 16) {
           field_a = (tg[]) null;
         }
-        jc.field_g.d((byte) -72);
+        jc.field_g.readUnsignedByte((byte) -72);
     }
 
     final void a(int param0, int param1, double param2) {

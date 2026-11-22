@@ -58,20 +58,20 @@ final class sj implements jm {
           var8.f(param1, -117);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.c(1, (byte) 62);
-          var8.b(param2.field_s, param0 + 102);
-          var8.b(param2.field_t, 114);
-          var8.b(param2.field_w, 93);
-          var8.d(param2.field_v, (byte) -81);
-          var8.d(param2.field_n, (byte) -81);
-          var8.d(param2.field_p, (byte) -81);
-          var8.d(param2.field_l, (byte) -81);
-          var8.c(param2.field_o.length, (byte) 72);
+          var8.writeByte(1, (byte) 62);
+          var8.writeShort(param2.field_s, param0 + 102);
+          var8.writeShort(param2.field_t, 114);
+          var8.writeShort(param2.field_w, 93);
+          var8.writeInt(param2.field_v, (byte) -81);
+          var8.writeInt(param2.field_n, (byte) -81);
+          var8.writeInt(param2.field_p, (byte) -81);
+          var8.writeInt(param2.field_l, (byte) -81);
+          var8.writeByte(param2.field_o.length, (byte) 72);
           for (var5 = param0; var5 < param2.field_o.length; var5++) {
-            var7.d(param2.field_o[var5], (byte) -81);
+            var7.writeInt(param2.field_o[var5], (byte) -81);
           }
-          var8.b(var4, (byte) -124);
-          var8.a(-var4 + var8.position, -1);
+          var8.appendCrc32(var4, (byte) -124);
+          var8.backpatchByteLength(-var4 + var8.position, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

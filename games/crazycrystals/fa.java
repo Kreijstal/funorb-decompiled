@@ -109,8 +109,8 @@ class fa extends mg {
           if (param1 < 94) {
             field_m = (String) null;
           }
-          param0.b(this.field_j, (byte) 13);
-          param0.a(-16614, this.field_l);
+          param0.writeLong(this.field_j, (byte) 13);
+          param0.writeBase38String(-16614, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "fa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

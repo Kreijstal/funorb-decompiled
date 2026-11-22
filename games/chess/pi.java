@@ -35,7 +35,7 @@ final class pi {
         try {
           var13 = tk.field_h;
           var15 = var13;
-          var2 = var15.i(-125);
+          var2 = var15.readUnsignedByte(-125);
           if (param0 < 102) {
             field_d = (dh) null;
           }
@@ -51,12 +51,12 @@ final class pi {
             si.d(65280);
             return;
           }
-          var4 = var15.i(-89);
+          var4 = var15.readUnsignedByte(-89);
           if (var4 != 0) {
             ag.field_d[0] = ci.field_J;
             var5 = var3.field_u;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              ag.field_d[var6_int] = var13.d(0);
+              ag.field_d[var6_int] = var13.readString(0);
             }
             ek.a(var5, var4, (byte) 127);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

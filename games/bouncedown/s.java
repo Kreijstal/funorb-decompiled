@@ -108,9 +108,9 @@ final class s extends vc {
               var4_ref_j.field_h < var2_long) {
               var4_ref_j.c(2);
               pe.field_d = var4_ref_j.field_i.length;
-              jc.field_g.field_h = 0;
+              jc.field_g.position = 0;
               for (var5_int = 0; pe.field_d > var5_int; var5_int++) {
-                jc.field_g.field_i[var5_int] = var4_ref_j.field_i[var5_int];
+                jc.field_g.payload[var5_int] = var4_ref_j.field_i[var5_int];
               }
               ak.field_z = i.field_f;
               i.field_f = ck.field_b;
@@ -124,12 +124,12 @@ final class s extends vc {
           }
           while (true) {
             if (bh.field_c < 0) {
-              jc.field_g.field_h = 0;
+              jc.field_g.position = 0;
               if (!qb.a(1, 3)) {
                 return false;
               }
               bh.field_c = jc.field_g.h((byte) 43);
-              jc.field_g.field_h = 0;
+              jc.field_g.position = 0;
               pe.field_d = param1[bh.field_c];
             }
             if (!va.b(1)) {
@@ -152,7 +152,7 @@ final class s extends vc {
             }
             var5 = new j((long)var4 + var2_long, bh.field_c, new byte[pe.field_d]);
             for (var6 = 0; var6 < pe.field_d; var6++) {
-              var5.field_i[var6] = jc.field_g.field_i[var6];
+              var5.field_i[var6] = jc.field_g.payload[var6];
             }
             ih.field_w.a(1, var5);
             bh.field_c = -1;

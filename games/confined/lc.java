@@ -219,8 +219,8 @@ final class lc {
         try {
           var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_n = -2 + param1.length;
-          wc.field_hc = var17.a((byte) 25);
+          var17.position = -2 + param1.length;
+          wc.field_hc = var17.readUnsignedShort((byte) 25);
           rj.field_f = new byte[wc.field_hc][];
           un.field_i = new byte[wc.field_hc][];
           DualLinkNode.field_p = new int[wc.field_hc];
@@ -228,31 +228,31 @@ final class lc {
           sd.field_f = new int[wc.field_hc];
           rg.field_I = new int[wc.field_hc];
           pa.field_e = new boolean[wc.field_hc];
-          var17.field_n = -(8 * wc.field_hc) + param1.length - 7;
-          kb.field_a = var17.a((byte) 25);
-          em.field_e = var17.a((byte) 25);
-          var3 = 1 + (255 & var17.c(32));
+          var17.position = -(8 * wc.field_hc) + param1.length - 7;
+          kb.field_a = var17.readUnsignedShort((byte) 25);
+          em.field_e = var17.readUnsignedShort((byte) 25);
+          var3 = 1 + (255 & var17.readUnsignedByte(32));
           for (var4 = 0; wc.field_hc > var4; var4++) {
-            DualLinkNode.field_p[var4] = var16.a((byte) 25);
+            DualLinkNode.field_p[var4] = var16.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < wc.field_hc; var4Lifetime1++) {
-            ij.field_r[var4Lifetime1] = var17.a((byte) 25);
+            ij.field_r[var4Lifetime1] = var17.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime2 = 0; wc.field_hc > var4Lifetime2; var4Lifetime2++) {
-            rg.field_I[var4Lifetime2] = var17.a((byte) 25);
+            rg.field_I[var4Lifetime2] = var17.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < wc.field_hc; var4Lifetime3++) {
-            sd.field_f[var4Lifetime3] = var17.a((byte) 25);
+            sd.field_f[var4Lifetime3] = var17.readUnsignedShort((byte) 25);
           }
-          var17.field_n = 3 - (3 * var3 - (-(8 * wc.field_hc) + param1.length) + 7);
+          var17.position = 3 - (3 * var3 - (-(8 * wc.field_hc) + param1.length) + 7);
           an.field_p = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            an.field_p[var4Lifetime4] = var17.f(-48);
+            an.field_p[var4Lifetime4] = var17.readUnsignedMedium(-48);
             if (an.field_p[var4Lifetime4] == 0) {
               an.field_p[var4Lifetime4] = 1;
             }
           }
-          var17.field_n = 0;
+          var17.position = 0;
           if (param0) {
             field_l = (String[]) null;
           }
@@ -269,14 +269,14 @@ final class lc {
             var9 = var19;
             un.field_i[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.c(32);
+            var11 = var17.readUnsignedByte(32);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.b(true);
+                var8[var12] = var17.readByte(true);
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.b(true);
+                  dupTemp$1 = var17.readByte(true);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_33_0 = var10;
@@ -291,13 +291,13 @@ final class lc {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var17.b(true);
+                  var8[var13 * var5 + var12] = var17.readByte(true);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.b(true);
+                    dupTemp$0 = var17.readByte(true);
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;

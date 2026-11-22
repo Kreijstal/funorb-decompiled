@@ -152,32 +152,32 @@ abstract class id extends ee {
             var8[var9] = on.field_d.nextInt();
           }
           if (null == jf.field_b ||
-            !(var7_int <= jf.field_b.field_m.length)) {
+            !(var7_int <= jf.field_b.payload.length)) {
             jf.field_b = new PacketBuffer(var7_int);
           }
-          jf.field_b.field_n = 0;
-          jf.field_b.a(param6, param3, param4, 109);
-          jf.field_b.a(var7_int, (byte) 25);
-          jf.field_b.a(65280, var13);
+          jf.field_b.position = 0;
+          jf.field_b.writeBytes(param6, param3, param4, 109);
+          jf.field_b.padZerosTo(var7_int, (byte) 25);
+          jf.field_b.encryptXtea(65280, var13);
           if (null == pc.field_j ||
-            !(100 <= pc.field_j.field_m.length)) {
+            !(100 <= pc.field_j.payload.length)) {
             pc.field_j = new PacketBuffer(100);
           }
-          pc.field_j.field_n = 0;
-          pc.field_j.f(117, 10);
+          pc.field_j.position = 0;
+          pc.field_j.writeByte(117, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            pc.field_j.d(-126, var13[var11]);
+            pc.field_j.writeInt(-126, var13[var11]);
             var11++;
           }
-          pc.field_j.c(param6, 8);
-          pc.field_j.a(param1, 0, param5);
+          pc.field_j.writeShort(param6, 8);
+          pc.field_j.applyRsa(param1, 0, param5);
           if (param2 <= 29) {
             field_rb = 41;
           }
-          param0.a(pc.field_j.field_n, 0, pc.field_j.field_m, 93);
-          param0.a(jf.field_b.field_n, 0, jf.field_b.field_m, 127);
+          param0.writeBytes(pc.field_j.position, 0, pc.field_j.payload, 93);
+          param0.writeBytes(jf.field_b.position, 0, jf.field_b.payload, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

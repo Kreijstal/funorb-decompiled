@@ -25,8 +25,8 @@ final class ii extends em {
           return;
         }
         try {
-          param0.a(this.field_h, (byte) 46);
-          param0.a(11404, this.field_j);
+          param0.writePrefixedString(this.field_h, (byte) 46);
+          param0.writeBase38String(11404, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ii.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

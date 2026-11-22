@@ -220,20 +220,20 @@ final class d extends wd {
         var8 = Bounce.field_N;
         try {
           var1 = jc.field_g;
-          var2 = var1.d((byte) -113);
+          var2 = var1.readUnsignedByte((byte) -113);
           if (var2 == 0) {
             if (null == tk.field_b) {
               tk.field_b = new hc(128);
               bi.field_g = 0;
             }
-            stackIn_11_0 = (var1.d((byte) -128) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte((byte) -128) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.b(true);
+            var4_ref_String = var1.readString(true);
             if (var3_int != 0) {
-              var1.b(true);
+              var1.readString(true);
             }
             var5 = fl.a((byte) -128, var4_ref_String);
-            var6 = var1.b(true);
+            var6 = var1.readString(true);
             var7 = ce.a((CharSequence) ((Object) var4_ref_String), 0);
             if (null == var7) {
               var7 = var4_ref_String;
@@ -270,9 +270,9 @@ final class d extends wd {
             }
             if (var2 == 4) {
               db.field_V = 1;
-              var3 = var1.b(true);
+              var3 = var1.readString(true);
               u.field_d = ((String) (var3)).intern();
-              var4 = var1.d((byte) -117);
+              var4 = var1.readUnsignedByte((byte) -117);
               ij.a(var4, 2);
               return;
             }
@@ -287,12 +287,12 @@ final class d extends wd {
             lf.field_q = new hc(128);
             kc.field_a = 0;
           }
-          var3Lifetime1 = var1.b(true);
+          var3Lifetime1 = var1.readString(true);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.b(true);
-          var5_ref = var1.b(true);
+          var4_ref_StringLifetime1 = var1.readString(true);
+          var5_ref = var1.readString(true);
           var6_ref = hf.a(var4_ref_StringLifetime1, true);
           if (null == var6_ref) {
             var6_ref = hf.a(var5_ref, true);

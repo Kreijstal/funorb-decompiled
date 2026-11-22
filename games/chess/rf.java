@@ -11,7 +11,7 @@ final class rf {
         if (param0 != -54) {
           rf.a(-112, 99);
         }
-        return tk.field_h.d(param0 ^ -54);
+        return tk.field_h.readString(param0 ^ -54);
     }
 
     final static void b(int param0, int param1) {

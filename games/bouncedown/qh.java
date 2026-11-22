@@ -45,20 +45,20 @@ final class qh {
         try {
           var5 = hh.field_p;
           var5.a(true, param1);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
-          var5.a(1, (byte) 107);
-          var5.a(param0.field_g, (byte) 54);
-          var5.a(param0.field_i, (byte) 48);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, (byte) 107);
+          var5.writeByte(param0.field_g, (byte) 54);
+          var5.writeByte(param0.field_i, (byte) 48);
           if (param2 != -22762) {
             qh.b((byte) 16);
           }
-          var5.b(param0.field_h, (byte) 101);
-          var5.b(param0.field_k, (byte) 97);
-          var5.b(param0.field_j, (byte) 124);
-          var5.b(param0.field_o, (byte) 106);
-          var5.b(var4, param2 ^ 22761);
-          var5.b(-var4 + var5.field_h, true);
+          var5.writeInt(param0.field_h, (byte) 101);
+          var5.writeInt(param0.field_k, (byte) 97);
+          var5.writeInt(param0.field_j, (byte) 124);
+          var5.writeInt(param0.field_o, (byte) 106);
+          var5.appendCrc32(var4, param2 ^ 22761);
+          var5.backpatchByteLength(-var4 + var5.position, true);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

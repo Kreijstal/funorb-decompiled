@@ -19,14 +19,14 @@ final class kd extends jf {
             return;
           }
           try {
-            this.field_i.field_n = 0;
-            this.field_i.f(94, 6);
-            this.field_i.a((byte) 120, 3);
+            this.field_i.position = 0;
+            this.field_i.writeByte(94, 6);
+            this.field_i.writeMedium((byte) 120, 3);
             if (param0 != 22112) {
               return;
             }
-            this.field_i.c(0, 8);
-            this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
+            this.field_i.writeShort(0, 8);
+            this.field_p.a(this.field_i.payload.length, false, this.field_i.payload, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -95,7 +95,7 @@ final class kd extends jf {
             }
             this.e(22112);
             this.a(param2 + 67, param0);
-            this.field_m.field_n = 0;
+            this.field_m.position = 0;
             this.field_f = null;
             while (true) {
               var4_ref = (tn) (this.field_j.c(false));
@@ -115,11 +115,11 @@ final class kd extends jf {
             }
             if (this.field_d != 0) {
               try {
-                this.field_i.field_n = 0;
-                this.field_i.f(param2 ^ -43, 4);
-                this.field_i.f(param2 ^ -43, (int) this.field_d);
-                this.field_i.d(-104, 0);
-                this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
+                this.field_i.position = 0;
+                this.field_i.writeByte(param2 ^ -43, 4);
+                this.field_i.writeByte(param2 ^ -43, (int) this.field_d);
+                this.field_i.writeInt(-104, 0);
+                this.field_p.a(this.field_i.payload.length, false, this.field_i.payload, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -182,7 +182,7 @@ final class kd extends jf {
             return;
           }
           try {
-            this.field_i.field_n = 0;
+            this.field_i.position = 0;
             if (param0 != 2) {
               return;
             }
@@ -193,9 +193,9 @@ final class kd extends jf {
             } else {
               stackIn_7_2 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_6_0).f(stackIn_6_1, stackIn_7_2);
-            this.field_i.a(0L, param0 + 8848);
-            this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
+            ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
+            this.field_i.writeLong40(0L, param0 + 8848);
+            this.field_p.a(this.field_i.payload.length, false, this.field_i.payload, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -224,9 +224,9 @@ final class kd extends jf {
         try {
           var3 = vh.field_a;
           var3.b(true, param1);
-          var3.f(111, 2);
-          var3.f(100, 0);
-          var3.f(119, param2.field_m);
+          var3.writeByte(111, 2);
+          var3.writeByte(100, 0);
+          var3.writeByte(119, param2.field_m);
           int var4 = 2 % ((-44 - param0) / 35);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "kd.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -296,19 +296,19 @@ final class kd extends jf {
             }
             var2 = (tn) (this.field_o.d(92));
             while (var2 != null) {
-              this.field_i.field_n = 0;
-              this.field_i.f(95, 1);
-              this.field_i.a(var2.field_r, 8850);
-              this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
+              this.field_i.position = 0;
+              this.field_i.writeByte(95, 1);
+              this.field_i.writeLong40(var2.field_r, 8850);
+              this.field_p.a(this.field_i.payload.length, false, this.field_i.payload, 0);
               this.field_j.a(var2, (byte) -114);
               var2 = (tn) (this.field_o.a((byte) -113));
             }
             var2Lifetime1 = (tn) (this.field_g.d(-94));
             while (var2Lifetime1 != null) {
-              this.field_i.field_n = 0;
-              this.field_i.f(90, 0);
-              this.field_i.a(var2Lifetime1.field_r, 8850);
-              this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
+              this.field_i.position = 0;
+              this.field_i.writeByte(90, 0);
+              this.field_i.writeLong40(var2Lifetime1.field_r, 8850);
+              this.field_p.a(this.field_i.payload.length, false, this.field_i.payload, 0);
               this.field_n.a(var2Lifetime1, (byte) 117);
               var2Lifetime1 = (tn) (this.field_g.a((byte) -119));
             }
@@ -330,24 +330,24 @@ final class kd extends jf {
                 }
               }
               if (0 < var4) {
-                var5 = -this.field_m.field_n + var4;
+                var5 = -this.field_m.position + var4;
                 if (var3_int < var5) {
                   var5 = var3_int;
                 }
-                this.field_p.a(this.field_m.field_m, 49, var5, this.field_m.field_n);
+                this.field_p.a(this.field_m.payload, 49, var5, this.field_m.position);
                 if (this.field_d != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
-                    this.field_m.field_m[this.field_m.field_n + var6] = (byte)km.a((int) this.field_m.field_m[this.field_m.field_n + var6], (int) this.field_d);
+                    this.field_m.payload[this.field_m.position + var6] = (byte)km.a((int) this.field_m.payload[this.field_m.position + var6], (int) this.field_d);
                   }
                 }
-                this.field_m.field_n = this.field_m.field_n + var5;
-                if (this.field_m.field_n >= var4) {
+                this.field_m.position = this.field_m.position + var5;
+                if (this.field_m.position >= var4) {
                   if (this.field_f == null) {
-                    this.field_m.field_n = 0;
-                    var6 = this.field_m.c(32);
-                    var7 = this.field_m.f((byte) 70);
-                    var8 = this.field_m.c(32);
-                    var9 = this.field_m.f((byte) 59);
+                    this.field_m.position = 0;
+                    var6 = this.field_m.readUnsignedByte(32);
+                    var7 = this.field_m.readInt((byte) 70);
+                    var8 = this.field_m.readUnsignedByte(32);
+                    var9 = this.field_m.readInt((byte) 59);
                     var10 = var8 & 127;
                     stackIn_60_0 = (0 == (var8 & 128)) ? 0 : 1;
                     boolean decompiledFrameRemainder0 = true;
@@ -383,40 +383,40 @@ final class kd extends jf {
                     var15 = stackIn_75_0;
                     this.field_f = var14_ref;
                     this.field_f.field_A = new PacketBuffer(var9 + (var15 + this.field_f.field_z));
-                    this.field_f.field_A.f(127, var10);
-                    this.field_f.field_A.d(-86, var9);
+                    this.field_f.field_A.writeByte(127, var10);
+                    this.field_f.field_A.writeInt(-86, var9);
                     this.field_f.field_B = 10;
-                    this.field_m.field_n = 0;
+                    this.field_m.position = 0;
                   } else {
                     if (this.field_f.field_B != 0) {
                       throw new IOException();
                     }
-                    if (this.field_m.field_m[0] != -1) {
+                    if (this.field_m.payload[0] != -1) {
                       this.field_f = null;
                     } else {
-                      this.field_m.field_n = 0;
+                      this.field_m.position = 0;
                       this.field_f.field_B = 1;
                     }
                   }
                 }
               } else {
-                var5 = this.field_f.field_A.field_m.length - this.field_f.field_z;
+                var5 = this.field_f.field_A.payload.length - this.field_f.field_z;
                 var6 = -this.field_f.field_B + 512;
-                if (var6 > -this.field_f.field_A.field_n + var5) {
-                  var6 = -this.field_f.field_A.field_n + var5;
+                if (var6 > -this.field_f.field_A.position + var5) {
+                  var6 = -this.field_f.field_A.position + var5;
                 }
                 if (var3_int < var6) {
                   var6 = var3_int;
                 }
-                this.field_p.a(this.field_f.field_A.field_m, -99, var6, this.field_f.field_A.field_n);
+                this.field_p.a(this.field_f.field_A.payload, -99, var6, this.field_f.field_A.position);
                 if (this.field_d != 0) {
                   for (var7 = 0; var7 < var6; var7++) {
-                    this.field_f.field_A.field_m[this.field_f.field_A.field_n + var7] = (byte)km.a((int) this.field_f.field_A.field_m[this.field_f.field_A.field_n + var7], (int) this.field_d);
+                    this.field_f.field_A.payload[this.field_f.field_A.position + var7] = (byte)km.a((int) this.field_f.field_A.payload[this.field_f.field_A.position + var7], (int) this.field_d);
                   }
                 }
                 this.field_f.field_B = this.field_f.field_B + var6;
-                this.field_f.field_A.field_n = this.field_f.field_A.field_n + var6;
-                if (var5 != this.field_f.field_A.field_n) {
+                this.field_f.field_A.position = this.field_f.field_A.position + var6;
+                if (var5 != this.field_f.field_A.position) {
                   if (this.field_f.field_B == 512) {
                     this.field_f.field_B = 0;
                   }

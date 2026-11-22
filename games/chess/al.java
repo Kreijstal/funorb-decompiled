@@ -29,8 +29,8 @@ final class al {
         int var3Lifetime1;
         this.field_c.data = param0;
         this.field_c.position = 10;
-        int var2 = this.field_c.f(674914976);
-        this.field_h = this.field_c.f(674914976);
+        int var2 = this.field_c.readUnsignedShort(674914976);
+        this.field_h = this.field_c.readUnsignedShort(674914976);
         this.field_g = 500000;
         this.field_i = new int[var2];
         int var3 = 0;
@@ -71,7 +71,7 @@ final class al {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_c.c((byte) -50);
+        var3 = this.field_c.readVarInt((byte) -50);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_c.data[this.field_c.position] & 255;
@@ -93,7 +93,7 @@ final class al {
     }
 
     final void c(int param0) {
-        int var2 = this.field_c.c((byte) 121);
+        int var2 = this.field_c.readVarInt((byte) 121);
         this.field_d[param0] = this.field_d[param0] + var2;
     }
 
@@ -140,14 +140,14 @@ final class al {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_c.i(-115);
-          var4 = this.field_c.c((byte) -111);
+          var3 = this.field_c.readUnsignedByte(-115);
+          var4 = this.field_c.readVarInt((byte) -111);
           if (var3 == 47) {
             this.field_c.position = this.field_c.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_c.k(1389913160);
+            var5 = this.field_c.readUnsignedMedium(1389913160);
             var4 -= 3;
             var6 = this.field_d[param0];
             this.field_a = this.field_a + (long)var6 * (long)(this.field_g - var5);
@@ -161,10 +161,10 @@ final class al {
         var3Lifetime1 = field_e[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_c.i(-83) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_c.readUnsignedByte(-83) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_c.i(-122) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_c.readUnsignedByte(-122) << 16;
         }
         return var4Lifetime1;
     }

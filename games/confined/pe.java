@@ -170,9 +170,9 @@ final class pe extends IntrusiveNode {
               var4_ref_hc.field_r < var2_long) {
               var4_ref_hc.a(true);
               ai.field_i = var4_ref_hc.field_q.length;
-              e.field_c.field_n = 0;
+              e.field_c.position = 0;
               for (var5_int = 0; var5_int < ai.field_i; var5_int++) {
-                e.field_c.field_m[var5_int] = var4_ref_hc.field_q[var5_int];
+                e.field_c.payload[var5_int] = var4_ref_hc.field_q[var5_int];
               }
               kk.field_c = pk.field_c;
               pk.field_c = qm.field_y;
@@ -197,12 +197,12 @@ final class pe extends IntrusiveNode {
         try {
           while (true) {
             if (stackIn_18_0 < 0) {
-              e.field_c.field_n = 0;
+              e.field_c.position = 0;
               if (!jj.a(1, (byte) -113)) {
                 return false;
               }
               tg.field_S = e.field_c.h(-1);
-              e.field_c.field_n = 0;
+              e.field_c.position = 0;
               ai.field_i = param0[tg.field_S];
             }
             if (!jc.a(-111)) {
@@ -225,7 +225,7 @@ final class pe extends IntrusiveNode {
             }
             var5 = new hc((long)var4 + var2_long, tg.field_S, new byte[ai.field_i]);
             for (var6 = 0; var6 < ai.field_i; var6++) {
-              var5.field_q[var6] = e.field_c.field_m[var6];
+              var5.field_q[var6] = e.field_c.payload[var6];
             }
             qh.field_w.a((IntrusiveNode) (var5), (byte) -93);
             tg.field_S = -1;

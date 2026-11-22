@@ -28,13 +28,13 @@ final class va {
           if (!qb.a(1, 3)) {
             return false;
           }
-          pe.field_d = jc.field_g.d((byte) -106);
-          jc.field_g.field_h = 0;
+          pe.field_d = jc.field_g.readUnsignedByte((byte) -106);
+          jc.field_g.position = 0;
         }
         if (param0 == ~pe.field_d) {
           if (qb.a(2, param0 ^ 2)) {
-            pe.field_d = jc.field_g.a(-1640531527);
-            jc.field_g.field_h = 0;
+            pe.field_d = jc.field_g.readUnsignedShort(-1640531527);
+            jc.field_g.position = 0;
             return qb.a(pe.field_d, 3);
           }
           return false;

@@ -102,9 +102,9 @@ final class cl extends ee {
               gk.field_u = new vd((java.net.Socket) (ol.field_a.field_f), ek.field_p);
               var2 = new PacketBuffer(13);
               ql.a(hj.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
-              var2.f(93, 15);
-              var2.d(-103, pi.field_L);
-              gk.field_u.a(13, false, var2.field_m, 0);
+              var2.writeByte(93, 15);
+              var2.writeInt(-103, pi.field_L);
+              gk.field_u.a(13, false, var2.payload, 0);
               we.field_k = we.field_k + 1;
               fl.field_a = ri.a(-3) + 30000L;
             }

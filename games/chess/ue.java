@@ -18,8 +18,8 @@ final class ue {
         try {
           var3 = qn.field_U;
           var3.f(param0, -94);
-          var3.c(param1.field_l, (byte) -88);
-          var3.b(param1.field_n, 109);
+          var3.writeByte(param1.field_l, (byte) -88);
+          var3.writeShort(param1.field_n, 109);
           if (param2 >= 9) {
             return;
           }
@@ -44,15 +44,15 @@ final class ue {
         var4.f(param2, -75);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.c(6, (byte) 92);
+        var4.writeByte(6, (byte) 92);
         if (param1 == 16581) {
-          var4.a(-99, param0);
-          var4.a(var4.position - var5, -1);
+          var4.writeLong(-99, param0);
+          var4.backpatchByteLength(var4.position - var5, -1);
           return;
         }
         field_c = true;
-        var4.a(-99, param0);
-        var4.a(var4.position - var5, -1);
+        var4.writeLong(-99, param0);
+        var4.backpatchByteLength(var4.position - var5, -1);
     }
 
     public static void clearStaticReferences(int param0) {

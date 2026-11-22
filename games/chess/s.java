@@ -172,19 +172,19 @@ final class s extends ma implements wl, mj {
 
     final static void b(int param0, int param1, int param2, int param3) {
         mn.field_h.position = 0;
-        mn.field_h.c(12, (byte) 65);
-        mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
-        mn.field_h.d(ph.field_d.nextInt(), (byte) -81);
-        mn.field_h.c(param0, (byte) 71);
-        mn.field_h.c(param1, (byte) -91);
-        mn.field_h.b(param3, 115);
-        mn.field_h.a(dk.field_k, se.field_M, (byte) 86);
+        mn.field_h.writeByte(12, (byte) 65);
+        mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+        mn.field_h.writeInt(ph.field_d.nextInt(), (byte) -81);
+        mn.field_h.writeByte(param0, (byte) 71);
+        mn.field_h.writeByte(param1, (byte) -91);
+        mn.field_h.writeShort(param3, 115);
+        mn.field_h.applyRsa(dk.field_k, se.field_M, (byte) 86);
         qn.field_U.f(18, -116);
         int fieldTemp$0 = qn.field_U.position + 1;
         qn.field_U.position = qn.field_U.position + 1;
         int var4 = fieldTemp$0;
-        qn.field_U.a(mn.field_h.data, (byte) -45, param2, mn.field_h.position);
-        qn.field_U.a(qn.field_U.position - var4, -1);
+        qn.field_U.writeBytes(mn.field_h.data, (byte) -45, param2, mn.field_h.position);
+        qn.field_U.backpatchByteLength(qn.field_U.position - var4, -1);
     }
 
     public final void a(fb param0, int param1, int param2, int param3, int param4) {

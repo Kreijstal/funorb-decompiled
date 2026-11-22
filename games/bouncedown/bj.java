@@ -114,8 +114,8 @@ final class bj extends ak {
           var14 = Bounce.field_N;
           try {
             var18 = new hh();
-            var18.field_j = param0.d((byte) -109);
-            var18.field_g = param0.j(-3);
+            var18.field_j = param0.readUnsignedByte((byte) -109);
+            var18.field_g = param0.readInt(-3);
             var18.field_n = new mk[var18.field_j];
             var18.field_o = new int[var18.field_j];
             var18.field_i = new int[var18.field_j];
@@ -127,28 +127,28 @@ final class bj extends ak {
             }
             for (var5 = 0; var18.field_j > var5; var5++) {
               try {
-                var6_int = param0.d((byte) -77);
+                var6_int = param0.readUnsignedByte((byte) -77);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param0.b(true);
-                    var8 = param0.b(true);
-                    var9 = param0.d((byte) -82);
+                    var20 = param0.readString(true);
+                    var8 = param0.readString(true);
+                    var9 = param0.readUnsignedByte((byte) -82);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.b(true);
+                      var10[var11_int] = param0.readString(true);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param0.j(-3);
+                        var13 = param0.readInt(-3);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a((byte) 124, var13, var21[var12_int], 0);
+                        param0.readBytes((byte) 124, var13, var21[var12_int], 0);
                       }
                     }
                     var18.field_o[var5] = var6_int;
@@ -163,13 +163,13 @@ final class bj extends ak {
                     var18.field_m[var5] = var21;
                   }
                 } else {
-                  var16 = param0.b(true);
-                  dupTemp$1 = param0.b(true);
+                  var16 = param0.readString(true);
+                  dupTemp$1 = param0.readString(true);
                   var15 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.j(-3);
+                    var9 = param0.readInt(-3);
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_l[var5] = var9;

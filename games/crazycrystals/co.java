@@ -102,9 +102,9 @@ final class co extends qm {
               so.field_c = new j((java.net.Socket) (ci.field_k.field_b), cc.field_a);
               var2 = new PacketBuffer(13);
               hn.a(kn.field_q, pj.field_x, 12, var2, fk.field_v);
-              var2.a(true, 15);
-              var2.a(ah.field_e, -16384);
-              so.field_c.a(0, 114, var2.field_h, 13);
+              var2.writeByte(true, 15);
+              var2.writeInt(ah.field_e, -16384);
+              so.field_c.a(0, 114, var2.payload, 13);
               jh.field_e = jh.field_e + 1;
               se.field_f = lo.a((byte) 114) + 30000L;
             }

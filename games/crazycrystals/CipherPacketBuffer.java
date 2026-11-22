@@ -49,14 +49,14 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (param1 > var4) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.field_h[incrementValue$0] & kd.field_j[var4]) << param1 - var4);
+            var5 = var5 + ((this.payload[incrementValue$0] & kd.field_j[var4]) << param1 - var4);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (param1 == var4) {
-            var5 = var5 + (this.field_h[var3] & kd.field_j[var4]);
+            var5 = var5 + (this.payload[var3] & kd.field_j[var4]);
           } else {
-            var5 = var5 + (this.field_h[var3] >> -param1 + var4 & kd.field_j[param1]);
+            var5 = var5 + (this.payload[var3] >> -param1 + var4 & kd.field_j[param1]);
           }
           return var5;
         }
@@ -66,22 +66,22 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (param1 > var4Lifetime1) {
           incrementValue$1 = var3;
           var3++;
-          var5Lifetime1 = var5Lifetime1 + ((this.field_h[incrementValue$1] & kd.field_j[var4Lifetime1]) << param1 - var4Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & kd.field_j[var4Lifetime1]) << param1 - var4Lifetime1);
           param1 = param1 - var4Lifetime1;
           var4Lifetime1 = 8;
         }
         if (param1 == var4Lifetime1) {
-          var5Lifetime1 = var5Lifetime1 + (this.field_h[var3] & kd.field_j[var4Lifetime1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] & kd.field_j[var4Lifetime1]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (this.field_h[var3] >> -param1 + var4Lifetime1 & kd.field_j[param1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> -param1 + var4Lifetime1 & kd.field_j[param1]);
         }
         return var5Lifetime1;
     }
 
     final void d(int param0, int param1) {
-        int fieldTemp$0 = this.field_f;
-        this.field_f = this.field_f + 1;
-        this.field_h[fieldTemp$0] = (byte)(this.field_r.a(false) + param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_r.a(false) + param1);
         if (param0 != 8) {
           field_q = -127;
         }
@@ -150,13 +150,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         int fieldTemp$0 = 0;
         if (!param0) {
           this.e(false);
-          fieldTemp$0 = this.field_f;
-          this.field_f = this.field_f + 1;
-          return 255 & this.field_h[fieldTemp$0] - this.field_r.a(!param0 ? true : false);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_r.a(!param0 ? true : false);
         }
-        int fieldTemp$1 = this.field_f;
-        this.field_f = this.field_f + 1;
-        return 255 & this.field_h[fieldTemp$1] - this.field_r.a(!param0 ? true : false);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$1] - this.field_r.a(!param0 ? true : false);
     }
 
     final void b(int param0, int param1, int param2, byte[] param3) {
@@ -174,9 +174,9 @@ final class CipherPacketBuffer extends PacketBuffer {
             field_t = (String[]) null;
           }
           for (var5_int = 0; var5_int < param0; var5_int++) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            param3[var5_int + param1] = (byte)(this.field_h[fieldTemp$0] - this.field_r.a(false));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_r.a(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,10 +197,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 != -2321) {
           db var3 = (db) null;
           CipherPacketBuffer.a(6, -104, (db) null);
-          this.field_f = (this.field_l + 7) / 8;
+          this.position = (this.field_l + 7) / 8;
           return;
         }
-        this.field_f = (this.field_l + 7) / 8;
+        this.position = (this.field_l + 7) / 8;
     }
 
     public static void j(int param0) {
@@ -258,7 +258,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void f(byte param0) {
         int var2 = 121 % ((param0 + 48) / 50);
-        this.field_l = 8 * this.field_f;
+        this.field_l = 8 * this.position;
     }
 
     static {

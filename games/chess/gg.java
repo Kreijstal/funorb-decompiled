@@ -332,22 +332,22 @@ final class gg {
           if (param0 != 84) {
             gg.b((byte) -2);
           }
-          var2 = var9.i(param0 ^ -46);
+          var2 = var9.readUnsignedByte(param0 ^ -46);
           if (var2 == 0) {
             var8 = (uj) (vm.field_h.g(param0 ^ -18154));
             if (var8 == null) {
               si.d(65280);
               return;
             }
-            var4 = var9.i(-89);
+            var4 = var9.readUnsignedByte(-89);
             if (var4 != 0) {
               var13 = new byte[var4];
-              var9.a(var4, (byte) 123, var13, 0);
+              var9.readBytes(var4, (byte) 123, var13, 0);
             } else {
               var5 = null;
             }
             var9.position = var9.position + 4;
-            if (!var9.e(-114)) {
+            if (!var9.verifyCrc32(-114)) {
               si.d(param0 ^ 65364);
               return;
             }

@@ -16,8 +16,8 @@ final class qj {
     final void a(PacketBuffer param0, byte[] param1, byte param2) {
         try {
           try {
-            if (param0.field_i[param0.field_h] != 31 ||
-              -117 != param0.field_i[1 + param0.field_h]) {
+            if (param0.payload[param0.position] != 31 ||
+              -117 != param0.payload[1 + param0.position]) {
               throw new RuntimeException("");
             }
             if (null == this.field_b) {
@@ -25,7 +25,7 @@ final class qj {
             }
             int var4_int = 61 / ((param2 + 40) / 55);
             try {
-              this.field_b.setInput(param0.field_i, param0.field_h + 10, -10 + (-param0.field_h - 8) + param0.field_i.length);
+              this.field_b.setInput(param0.payload, param0.position + 10, -10 + (-param0.position - 8) + param0.payload.length);
               this.field_b.inflate(param1);
             } catch (Exception exception) {
               this.field_b.reset();

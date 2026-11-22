@@ -236,7 +236,7 @@ final class qe extends am {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.c(param0 + 105);
+          var2_int = param1.readUnsignedByte(param0 + 105);
           if (param0 != -73) {
             return false;
           }

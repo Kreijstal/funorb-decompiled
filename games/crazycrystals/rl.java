@@ -24,11 +24,11 @@ abstract class rl extends oh {
           var1 = tp.field_f;
           while (cn.b(114)) {
             var1.d(param0 ^ 8, 8);
-            fieldTemp$0 = var1.field_f + 1;
-            var1.field_f = var1.field_f + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ke.a(var1, -9129);
-            tp.field_f.c((byte) 47, var1.field_f - var2);
+            tp.field_f.backpatchByteLength((byte) 47, var1.position - var2);
           }
           if (param0 == 0) {
             return;

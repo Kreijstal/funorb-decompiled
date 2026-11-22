@@ -25,11 +25,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (param1 != 6) {
             field_b = -112;
           }
-          param3.a(12, (byte) 103);
-          param3.e(param1 ^ -750655090, 17);
-          param3.e(param1 ^ -750655090, param2);
-          param3.e(-750655096, param0);
-          param3.a(param4, (byte) 78);
+          param3.writeByte(12, (byte) 103);
+          param3.writeShort(param1 ^ -750655090, 17);
+          param3.writeShort(param1 ^ -750655090, param2);
+          param3.writeShort(-750655096, param0);
+          param3.writeByte(param4, (byte) 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -45,15 +45,15 @@ final class ph extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_r = var2.f((byte) 44);
-        this.field_F = var2.f((byte) 78);
-        this.field_m = var2.f((byte) 46);
-        this.field_I = var2.f((byte) 51);
+        this.field_r = var2.readInt((byte) 44);
+        this.field_F = var2.readInt((byte) 78);
+        this.field_m = var2.readInt((byte) 46);
+        this.field_I = var2.readInt((byte) 51);
         if (this.field_I < 0) {
           this.field_I = ~this.field_I;
           this.field_R = true;
         }
-        int var3 = var2.f((byte) 121);
+        int var3 = var2.readInt((byte) 121);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -61,11 +61,11 @@ final class ph extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.c(32);
+            var6_int = var2.readUnsignedByte(32);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, (byte) 74, var5, var6);
+          var2.readBytes(0, (byte) 74, var5, var6);
           this.field_N[var4] = var6;
         }
     }

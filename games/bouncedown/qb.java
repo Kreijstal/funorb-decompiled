@@ -210,7 +210,7 @@ final class qb {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param0 <= jc.field_g.field_h) {
+          if (param0 <= jc.field_g.position) {
             return true;
           }
           if (dh.field_a == null) {
@@ -219,16 +219,16 @@ final class qb {
           try {
             var2_int = dh.field_a.d(param1 ^ param1);
             if (0 < var2_int) {
-              if (-jc.field_g.field_h + param0 < var2_int) {
-                var2_int = -jc.field_g.field_h + param0;
+              if (-jc.field_g.position + param0 < var2_int) {
+                var2_int = -jc.field_g.position + param0;
               }
-              dh.field_a.a(jc.field_g.field_i, true, var2_int, jc.field_g.field_h);
+              dh.field_a.a(jc.field_g.payload, true, var2_int, jc.field_g.position);
               qe.field_k = fa.a(-96);
-              jc.field_g.field_h = jc.field_g.field_h + var2_int;
-              if (jc.field_g.field_h < param0) {
+              jc.field_g.position = jc.field_g.position + var2_int;
+              if (jc.field_g.position < param0) {
                 return false;
               }
-              jc.field_g.field_h = 0;
+              jc.field_g.position = 0;
               return true;
             }
             if (var2_int < 0) {

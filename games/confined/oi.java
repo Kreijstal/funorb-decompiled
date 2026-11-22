@@ -61,15 +61,15 @@ final class oi extends IntrusiveNode {
               } else {
                 PacketBuffer.field_o = sh.a(12831, param4, param2, false);
               }
-              vh.field_a.field_n = 0;
-              vh.field_a.f(93, 14);
-              vh.field_a.f(90, PacketBuffer.field_o.b((byte) -42).field_c);
+              vh.field_a.position = 0;
+              vh.field_a.writeByte(93, 14);
+              vh.field_a.writeByte(90, PacketBuffer.field_o.b((byte) -42).field_c);
               tb.a(-1, 111);
               lk.field_d = oe.field_U;
             }
             if (lk.field_d == oe.field_U &&
               jj.a(1, (byte) 118)) {
-              var6_int = e.field_c.c(32);
+              var6_int = e.field_c.readUnsignedByte(32);
               if (var6_int == 0) {
                 lk.field_d = tb.field_a;
               } else {
@@ -77,21 +77,21 @@ final class oi extends IntrusiveNode {
                 Confined.field_F = var6_int;
                 ai.field_i = -1;
               }
-              e.field_c.field_n = 0;
+              e.field_c.position = 0;
             }
             if (lk.field_d == tb.field_a &&
               jj.a(8, (byte) -120)) {
-              uh.field_b = e.field_c.h((byte) -68);
-              e.field_c.field_n = 0;
+              uh.field_b = e.field_c.readLong((byte) -68);
+              e.field_c.position = 0;
               wb.a(param3, PacketBuffer.field_o, param0, 25444, param1);
               lk.field_d = rh.field_ab;
             }
             boolean decompiledFrameRemainder0 = true;
             if (lk.field_d == rh.field_ab &&
               jj.a(1, (byte) 8)) {
-              var6_intLifetime1 = e.field_c.c(32);
+              var6_intLifetime1 = e.field_c.readUnsignedByte(32);
               ag.field_e = null;
-              e.field_c.field_n = 0;
+              e.field_c.position = 0;
               Confined.field_F = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -114,12 +114,12 @@ final class oi extends IntrusiveNode {
             }
             if (BoundedRandomAccessFile.field_a == lk.field_d &&
               jc.a(-72)) {
-              vb.field_d = e.field_c.h((byte) -68);
-              e.field_c.c(32);
-              e.field_c.c(32);
-              sg.field_x = e.field_c.a((byte) 25);
-              var6 = e.field_c.e((byte) 102);
-              var7 = e.field_c.c(32);
+              vb.field_d = e.field_c.readLong((byte) -68);
+              e.field_c.readUnsignedByte(32);
+              e.field_c.readUnsignedByte(32);
+              sg.field_x = e.field_c.readUnsignedShort((byte) 25);
+              var6 = e.field_c.readNullableString((byte) 102);
+              var7 = e.field_c.readUnsignedByte(32);
               if (0 != (var7 & 1)) {
                 wl.a(1607962024);
               }
@@ -132,19 +132,19 @@ final class oi extends IntrusiveNode {
                 }
               }
               if (na.field_W) {
-                e.field_c.c(32);
-                e.field_c.c(32);
-                e.field_c.f((byte) 51);
-                hd.field_b = e.field_c.a((byte) 25);
+                e.field_c.readUnsignedByte(32);
+                e.field_c.readUnsignedByte(32);
+                e.field_c.readInt((byte) 51);
+                hd.field_b = e.field_c.readUnsignedShort((byte) 25);
                 ka.field_F = new byte[hd.field_b];
                 for (var8 = 0; var8 < hd.field_b; var8++) {
-                  ka.field_F[var8] = e.field_c.b(true);
+                  ka.field_F[var8] = e.field_c.readByte(true);
                 }
               }
-              qc.field_m = e.field_c.d(true);
+              qc.field_m = e.field_c.readString(true);
               var11 = (CharSequence) ((Object) qc.field_m);
               dc.field_J = hh.a(0, var11);
-              field_q = e.field_c.c(32);
+              field_q = e.field_c.readUnsignedByte(32);
               lk.field_d = wd.field_f;
               if (PacketBuffer.field_o.b((byte) -113) != IntrusiveNodeHashTable.field_a) {
                 if (PacketBuffer.field_o.b((byte) 126) == vf.field_e) {
@@ -196,7 +196,7 @@ final class oi extends IntrusiveNode {
               if (7 == Confined.field_F) {
                 Confined.field_F = 3;
               }
-              gl.field_k = e.field_c.d(true);
+              gl.field_k = e.field_c.readString(true);
               sg.field_y = false;
               stackIn_87_0 = Confined.field_F;
               return stackIn_87_0;

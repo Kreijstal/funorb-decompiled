@@ -108,9 +108,9 @@ final class hf {
               mf.field_a = new pc((java.net.Socket) (md.field_q.field_e), vc.field_G);
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, mf.field_e, var2, fi.field_c);
-              var2.a(15, (byte) 98);
-              var2.b(uj.field_s, (byte) 40);
-              mf.field_a.a(13, var2.field_i, 0, 0);
+              var2.writeByte(15, (byte) 98);
+              var2.writeInt(uj.field_s, (byte) 40);
+              mf.field_a.a(13, var2.payload, 0, 0);
               ih.field_X = ih.field_X + 1;
               GameClient.field_B = 30000L + fa.a(76);
             }

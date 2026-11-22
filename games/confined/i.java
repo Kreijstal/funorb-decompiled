@@ -840,7 +840,7 @@ abstract class i extends GameAppletShell {
                   var9 = (String) null;
                   tk.a(13, (String) null);
                 } else {
-                  var7 = kh.a(var12.field_m, var12.field_n, 0, 0);
+                  var7 = kh.a(var12.payload, var12.position, 0, 0);
                   tk.a(13, var7);
                 }
                 cg.field_e = null;
@@ -872,7 +872,7 @@ abstract class i extends GameAppletShell {
     }
 
     private final void b(boolean param0) {
-        int var2 = e.field_c.c(32);
+        int var2 = e.field_c.readUnsignedByte(32);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = ai.field_i - 1;
         byte[] var5 = new byte[var4];

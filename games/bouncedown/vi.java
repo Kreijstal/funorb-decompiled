@@ -124,9 +124,9 @@ final class vi implements Runnable {
           if (param0 != 1) {
             return;
           }
-          var2 = var27.d((byte) -91);
+          var2 = var27.readUnsignedByte((byte) -91);
           if (var2 == 0) {
-            var3 = var27.a(-1640531527);
+            var3 = var27.readUnsignedShort(-1640531527);
             var4_ref_sa = (sa) (jl.field_f.a((byte) -113));
             while (var4_ref_sa != null) {
               if (var3 != var4_ref_sa.field_n) {
@@ -139,7 +139,7 @@ final class vi implements Runnable {
               kc.a((byte) 18);
               return;
             }
-            var5 = var27.d((byte) -105);
+            var5 = var27.readUnsignedByte((byte) -105);
             if (var5 != 0) {
               var6_int = var4_ref_sa.field_g;
               v.field_f[0].field_b = ja.field_b;
@@ -147,12 +147,12 @@ final class vi implements Runnable {
               v.field_f[0].field_a = null;
               v.field_f[0].field_e = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                v.field_f[var8_int].field_b = var27.b(true);
+                v.field_f[var8_int].field_b = var27.readString(true);
                 v.field_f[var8_int].field_e = false;
-                if (var27.d((byte) -99) != 1) {
+                if (var27.readUnsignedByte((byte) -99) != 1) {
                   v.field_f[var8_int].field_a = null;
                 } else {
-                  v.field_f[var8_int].field_a = var27.b(true);
+                  v.field_f[var8_int].field_a = var27.readString(true);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -171,13 +171,13 @@ final class vi implements Runnable {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.d((byte) -68);
+              var18 = var27.readUnsignedByte((byte) -68);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.d((byte) -74);
+                  var20 = var27.readUnsignedByte((byte) -74);
                   var21 = v.field_f[var20].field_b;
-                  var22 = var27.f((byte) -121);
-                  var24 = var27.field_h;
+                  var22 = var27.readLong((byte) -121);
+                  var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = v.field_f[var20].field_a;
@@ -186,7 +186,7 @@ final class vi implements Runnable {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.j(-3);
+                      var11[0][incrementValue$3] = var27.readInt(-3);
                     }
                   }
                   if (var21 != null &&
@@ -194,12 +194,12 @@ final class vi implements Runnable {
                     var8[1][var13] = ja.field_b;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_h = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.j(-3);
+                      var11[1][incrementValue$4] = var27.readInt(-3);
                     }
                   }
                   if (var14 < var6_int &&
@@ -208,12 +208,12 @@ final class vi implements Runnable {
                     var8[2][var14] = var21;
                     var9[2][var14] = v.field_f[var20].field_a;
                     var10[2][var14] = var22;
-                    var27.field_h = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.j(-3);
+                      var11[2][incrementValue$5] = var27.readInt(-3);
                     }
                   }
                 }
@@ -224,8 +224,8 @@ final class vi implements Runnable {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.a(-1640531527);
-            var4 = var27.f((byte) -121);
+            var3Lifetime1 = var27.readUnsignedShort(-1640531527);
+            var4 = var27.readLong((byte) -121);
             var6 = (he) (of.field_b.a((byte) -92));
             while (var6 != null) {
               if (var6.field_j != var3Lifetime1) {

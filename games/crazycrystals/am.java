@@ -218,7 +218,7 @@ final class am {
         stackIn_29_0 = mi.field_A;
         try {
           while (stackIn_29_0.length > var7) {
-            var6 = var6 + var5.f(0);
+            var6 = var6 + var5.readSignedSmart(0);
             mi.field_A[var7] = var6;
             var7++;
             stackIn_29_0 = mi.field_A;

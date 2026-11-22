@@ -206,7 +206,7 @@ abstract class ah extends ee {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2, byte param3) {
+    final static int computeCrc32(byte[] param0, int param1, int param2, byte param3) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

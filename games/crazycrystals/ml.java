@@ -15,9 +15,9 @@ final class ml {
     private int[] field_b;
 
     final void b(PacketBuffer param0) {
-        this.field_c = param0.h(255);
-        this.field_h = param0.b((byte) 127);
-        this.field_d = param0.b((byte) -7);
+        this.field_c = param0.readUnsignedByte(255);
+        this.field_h = param0.readInt((byte) 127);
+        this.field_d = param0.readInt((byte) -7);
         this.a(param0);
     }
 
@@ -50,12 +50,12 @@ final class ml {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_e = param0.h(255);
+        this.field_e = param0.readUnsignedByte(255);
         this.field_g = new int[this.field_e];
         this.field_b = new int[this.field_e];
         for (var2 = 0; var2 < this.field_e; var2++) {
-          this.field_g[var2] = param0.c((byte) -7);
-          this.field_b[var2] = param0.c((byte) -7);
+          this.field_g[var2] = param0.readUnsignedShort((byte) -7);
+          this.field_b[var2] = param0.readUnsignedShort((byte) -7);
         }
     }
 

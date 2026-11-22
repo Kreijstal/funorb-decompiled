@@ -238,17 +238,17 @@ final class nh extends og implements vd {
         try {
           var5 = tp.field_f;
           var5.d(8, param0);
-          var5.field_f = var5.field_f + 1;
-          var4 = var5.field_f;
-          var5.a(true, 1);
-          var5.a(true, param2.field_i);
-          var5.a(true, param2.field_k);
-          var5.a(param2.field_n, -16384);
-          var5.a(param2.field_h, -16384);
-          var5.a(param2.field_f, -16384);
-          var5.a(param2.field_l, -16384);
-          var5.b(var4, (byte) -79);
-          var5.c((byte) 61, -var4 + var5.field_f);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(true, 1);
+          var5.writeByte(true, param2.field_i);
+          var5.writeByte(true, param2.field_k);
+          var5.writeInt(param2.field_n, -16384);
+          var5.writeInt(param2.field_h, -16384);
+          var5.writeInt(param2.field_f, -16384);
+          var5.writeInt(param2.field_l, -16384);
+          var5.appendCrc32(var4, (byte) -79);
+          var5.backpatchByteLength((byte) 61, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "nh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

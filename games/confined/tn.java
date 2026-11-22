@@ -13,12 +13,12 @@ final class tn extends rl {
         if (param0 != 100) {
           this.e((byte) -16);
           if (null != this.field_A) {
-            return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
+            return this.field_A.position * 100 / (-this.field_z + this.field_A.payload.length);
           }
           return 0;
         }
         if (null != this.field_A) {
-          return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
+          return this.field_A.position * 100 / (-this.field_z + this.field_A.payload.length);
         }
         return 0;
     }
@@ -29,16 +29,16 @@ final class tn extends rl {
           if (this.field_v) {
             throw new RuntimeException();
           }
-          if (this.field_A.field_m.length - this.field_z <= this.field_A.field_n) {
-            return this.field_A.field_m;
+          if (this.field_A.payload.length - this.field_z <= this.field_A.position) {
+            return this.field_A.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_v) {
           throw new RuntimeException();
         }
-        if (this.field_A.field_m.length - this.field_z <= this.field_A.field_n) {
-          return this.field_A.field_m;
+        if (this.field_A.payload.length - this.field_z <= this.field_A.position) {
+          return this.field_A.payload;
         }
         throw new RuntimeException();
     }

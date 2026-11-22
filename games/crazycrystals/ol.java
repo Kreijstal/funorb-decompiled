@@ -116,8 +116,8 @@ final class ol extends om {
           if (!fq.a(1, (byte) -44)) {
             return false;
           }
-          rk.field_b = kd.field_n.h(255);
-          kd.field_n.field_f = 0;
+          rk.field_b = kd.field_n.readUnsignedByte(255);
+          kd.field_n.position = 0;
         }
         if (param0 != 60) {
           field_C = (int[]) null;
@@ -126,8 +126,8 @@ final class ol extends om {
           if (!fq.a(2, (byte) 58)) {
             return false;
           }
-          rk.field_b = kd.field_n.c((byte) -7);
-          kd.field_n.field_f = 0;
+          rk.field_b = kd.field_n.readUnsignedShort((byte) -7);
+          kd.field_n.position = 0;
         }
         return fq.a(rk.field_b, (byte) -103);
     }

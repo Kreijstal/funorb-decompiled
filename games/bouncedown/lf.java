@@ -10,9 +10,9 @@ final class lf extends gj {
 
     final byte[] d(byte param0) {
         if (!this.field_n &&
-          this.field_p.field_h >= this.field_p.field_i.length - this.field_s) {
+          this.field_p.position >= this.field_p.payload.length - this.field_s) {
           if (param0 < -106) {
-            return this.field_p.field_i;
+            return this.field_p.payload;
           }
           return (byte[]) null;
         }
@@ -194,7 +194,7 @@ final class lf extends gj {
         if (param0 >= -100) {
           return -110;
         }
-        return 100 * this.field_p.field_h / (this.field_p.field_i.length - this.field_s);
+        return 100 * this.field_p.position / (this.field_p.payload.length - this.field_s);
     }
 
     lf() {

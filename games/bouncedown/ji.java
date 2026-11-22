@@ -23,8 +23,8 @@ class ji extends ng {
           if (param0) {
             this.field_c = (String) null;
           }
-          param1.a(252186072, this.field_e);
-          param1.b(this.field_c, (byte) -118);
+          param1.writeLong(252186072, this.field_e);
+          param1.writeBase38String(this.field_c, (byte) -118);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

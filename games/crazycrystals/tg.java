@@ -241,7 +241,7 @@ final class tg {
 
     final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4) {
         try {
-          jl.a(0, param1, param0.field_h, param2, param0.field_f, param4, 4);
+          jl.a(0, param1, param0.payload, param2, param0.position, param4, 4);
           if (param3 >= -102) {
             field_d = (char[]) null;
           }

@@ -36,8 +36,8 @@ final class bq extends mg {
           if (param1 < 94) {
             bq.a((byte) -15);
           }
-          param0.a(this.field_j, (byte) -105);
-          param0.a(-16614, this.field_k);
+          param0.writePrefixedString(this.field_j, (byte) -105);
+          param0.writeBase38String(-16614, this.field_k);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "bq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

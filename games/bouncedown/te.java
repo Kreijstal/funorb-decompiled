@@ -678,15 +678,15 @@ final class te extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_j = var2.j(-3);
-        this.field_v = var2.j(-3);
-        this.field_H = var2.j(-3);
-        this.field_A = var2.j(-3);
+        this.field_j = var2.readInt(-3);
+        this.field_v = var2.readInt(-3);
+        this.field_H = var2.readInt(-3);
+        this.field_A = var2.readInt(-3);
         if (this.field_A < 0) {
           this.field_A = ~this.field_A;
           this.field_g = true;
         }
-        int var3 = var2.j(-3);
+        int var3 = var2.readInt(-3);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -694,11 +694,11 @@ final class te extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d((byte) -96);
+            var6_int = var2.readUnsignedByte((byte) -96);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a((byte) 127, var5, var6, 0);
+          var2.readBytes((byte) 127, var5, var6, 0);
           this.field_n[var4] = var6;
         }
     }

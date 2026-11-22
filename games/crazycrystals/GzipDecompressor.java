@@ -11,15 +11,15 @@ final class GzipDecompressor {
 
     final void decompress(byte[] param0, PacketBuffer param1, int param2) {
         try {
-          if (param1.field_h[param1.field_f] != 31 ||
-            -117 != param1.field_h[1 + param1.field_f]) {
+          if (param1.payload[param1.position] != 31 ||
+            -117 != param1.payload[1 + param1.position]) {
             throw new RuntimeException("");
           }
           if (null == this.field_c) {
             this.field_c = new java.util.zip.Inflater(true);
           }
           try {
-            this.field_c.setInput(param1.field_h, 10 + param1.field_f, -param1.field_f - 18 + param1.field_h.length);
+            this.field_c.setInput(param1.payload, 10 + param1.position, -param1.position - 18 + param1.payload.length);
             this.field_c.inflate(param0);
           } catch (Exception exception) {
             this.field_c.reset();

@@ -57,22 +57,22 @@ final class s extends am {
         var6 = Confined.field_J ? 1 : 0;
         try {
           var9 = e.field_c;
-          var2 = var9.c(32);
+          var2 = var9.readUnsignedByte(32);
           if (param0 == var2) {
             var3_ref_pe = (pe) (IntrusiveNodeHashTable.field_e.a(param0 + 38));
             if (var3_ref_pe == null) {
               dc.d(111);
               return;
             }
-            var4_int = var9.c(32);
+            var4_int = var9.readUnsignedByte(32);
             if (var4_int == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
-              var9.a(0, (byte) 115, var4_int, var13);
+              var9.readBytes(0, (byte) 115, var4_int, var13);
             }
-            var9.field_n = var9.field_n + 4;
-            if (var9.e(4)) {
+            var9.position = var9.position + 4;
+            if (var9.verifyCrc32(4)) {
               var3_ref_pe.a(true);
               return;
             }
@@ -84,7 +84,7 @@ final class s extends am {
             dc.d(116);
             return;
           }
-          var3 = var9.f((byte) 36);
+          var3 = var9.readInt((byte) 36);
           var4 = (gg) (GameCanvas.field_b.a(-117));
           while (var4 != null) {
             if (var4.field_o != var3) {

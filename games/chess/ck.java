@@ -64,14 +64,14 @@ final class ck {
         int var3;
         this.field_b = new og[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.i(-101);
+          var3 = param0.readUnsignedByte(-101);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new og();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.f(674914976);
-        this.field_c = param0.f(674914976);
+        this.field_a = param0.readUnsignedShort(674914976);
+        this.field_c = param0.readUnsignedShort(674914976);
     }
 }

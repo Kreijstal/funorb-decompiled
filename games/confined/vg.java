@@ -85,21 +85,21 @@ final class vg extends pm {
         try {
           var6 = vh.field_a;
           var6.b(true, param1);
-          var6.field_n = var6.field_n + 1;
-          var4 = var6.field_n;
-          var6.f(param0 - 7830, 1);
-          var6.f(113, param2.field_n);
-          var6.a(false, param2.field_v);
-          var6.d(-126, param2.field_r);
-          var6.d(-100, param2.field_t);
-          var6.d(param0 ^ -7846, param2.field_u);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(param0 - 7830, 1);
+          var6.writeByte(113, param2.field_n);
+          var6.writeSignedSmart(false, param2.field_v);
+          var6.writeInt(-126, param2.field_r);
+          var6.writeInt(-100, param2.field_t);
+          var6.writeInt(param0 ^ -7846, param2.field_u);
           if (param0 != 7932) {
             java.awt.Color var5 = (java.awt.Color) null;
             vg.a((String) null, true, 52, (java.awt.Color) null, true);
           }
-          var6.d(-105, param2.field_m);
-          var6.e(26199, var4);
-          var6.a(25859, var6.field_n - var4);
+          var6.writeInt(-105, param2.field_m);
+          var6.appendCrc32(26199, var4);
+          var6.backpatchByteLength(25859, var6.position - var4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

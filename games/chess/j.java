@@ -63,11 +63,11 @@ final class j extends l {
           }
           if (param0 != 1) {
             if (param0 == 2) {
-              var4_int = param1.i(-116);
+              var4_int = param1.readUnsignedByte(-116);
               this.field_q = new int[var4_int];
               this.field_r = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_q[var5] = param1.f(674914976);
+                this.field_q[var5] = param1.readUnsignedShort(674914976);
                 var6 = param1.readByte(0);
                 stackIn_19_0 = this.field_r;
                 stackIn_19_1 = var5;
@@ -79,11 +79,11 @@ final class j extends l {
                 stackIn_19_0[stackIn_19_1] = stackIn_20_2;
               }
             } else if (param0 == 3) {
-              var4_int = param1.i(-120);
+              var4_int = param1.readUnsignedByte(-120);
               this.field_s = new char[var4_int];
               this.field_t = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_t[var5] = param1.f(674914976);
+                this.field_t[var5] = param1.readUnsignedShort(674914976);
                 var6 = param1.readByte(0);
                 stackIn_11_0 = this.field_s;
                 stackIn_11_1 = var5;
@@ -101,7 +101,7 @@ final class j extends l {
               }
             }
           } else {
-            this.field_x = param1.d(0);
+            this.field_x = param1.readString(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class j extends l {
             j.d((byte) 71);
           }
           while (true) {
-            var3_int = param0.i(-96);
+            var3_int = param0.readUnsignedByte(-96);
             if (0 == var3_int) {
               return;
             }

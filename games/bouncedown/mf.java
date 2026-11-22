@@ -36,12 +36,12 @@ final class mf {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.f(param1 ^ -2706);
+            var3_int = param2.readUnsignedSmart(param1 ^ -2706);
             if (param0 < var3_int) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
+            param2.position = param2.position + pa.field_d.a(var4, param2.position, 0, param2.payload, param1 ^ param1, var3_int);
             var5 = lh.a(0, -3789, var3_int, var4);
             stackIn_4_0 = var5;
             return stackIn_4_0;

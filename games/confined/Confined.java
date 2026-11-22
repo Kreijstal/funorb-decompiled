@@ -31,7 +31,7 @@ public final class Confined extends i {
           ck.a((byte) 81);
           fn.a();
           mg.a((byte) -121);
-          PacketBuffer.d(param0 - 196);
+          PacketBuffer.clearBufferStatics(param0 - 196);
           ri.a((byte) 28);
           ih.a(-172274096);
           f.a(-12435);

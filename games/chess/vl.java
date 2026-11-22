@@ -1290,11 +1290,11 @@ final class vl extends PcmStream {
             return;
           }
           if (param2) {
-            param1.field_Xb = param0.i(-108);
+            param1.field_Xb = param0.readUnsignedByte(-108);
           }
-          param1.field_hc = param0.i(-111);
-          param1.field_ic = param0.i(-99);
-          var4_int = param0.i(-93);
+          param1.field_hc = param0.readUnsignedByte(-111);
+          param1.field_ic = param0.readUnsignedByte(-99);
+          var4_int = param0.readUnsignedByte(-93);
           stackIn_8_0 = (ln) (param1);
           stackIn_9_1 = ((var4_int & 128) != 0);
           stackIn_8_0.field_Yb = stackIn_9_1;
@@ -1321,22 +1321,22 @@ final class vl extends PcmStream {
           var5 = stackIn_28_0;
           stackIn_31_0 = (0 == (2 & var4_int)) ? 0 : 1;
           var6 = stackIn_31_0;
-          param0.a(param1.field_sc.length, (byte) 125, param1.field_sc, 0);
-          param1.field_Ub = param0.f(674914976);
+          param0.readBytes(param1.field_sc.length, (byte) 125, param1.field_sc, 0);
+          param1.field_Ub = param0.readUnsignedShort(674914976);
           param1.field_Jb = ud.a(2) - (long)param0.readInt((byte) -104);
           if (var5 == 0) {
             param1.field_pc = -1;
           } else {
             param1.field_pc = param0.readInt((byte) -110);
           }
-          param1.field_Fb = param0.d((byte) -50);
+          param1.field_Fb = param0.readLong((byte) -50);
           var7 = param0.position;
-          param1.field_Gb = param0.d(0);
+          param1.field_Gb = param0.readString(0);
           if (var6 != 0) {
             param0.position = var7;
             param1.field_ec = new String[param1.field_Xb];
             for (var8 = 0; param1.field_Xb > var8; var8++) {
-              param1.field_ec[var8] = param0.d(0);
+              param1.field_ec[var8] = param0.readString(0);
             }
             return;
           }

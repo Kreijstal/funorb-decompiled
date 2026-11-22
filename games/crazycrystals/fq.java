@@ -759,7 +759,7 @@ final class fq extends ea implements Cloneable {
           int var3_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var3 = null;
-          if (kd.field_n.field_f >= param0) {
+          if (kd.field_n.position >= param0) {
             return true;
           }
           if (oi.field_c == null) {
@@ -769,16 +769,16 @@ final class fq extends ea implements Cloneable {
           try {
             var3_int = oi.field_c.c(0);
             if (var3_int > 0) {
-              if (param0 - kd.field_n.field_f < var3_int) {
-                var3_int = -kd.field_n.field_f + param0;
+              if (param0 - kd.field_n.position < var3_int) {
+                var3_int = -kd.field_n.position + param0;
               }
-              oi.field_c.a(kd.field_n.field_h, var3_int, 2034, kd.field_n.field_f);
+              oi.field_c.a(kd.field_n.payload, var3_int, 2034, kd.field_n.position);
               wg.field_y = lo.a((byte) -60);
-              kd.field_n.field_f = kd.field_n.field_f + var3_int;
-              if (param0 > kd.field_n.field_f) {
+              kd.field_n.position = kd.field_n.position + var3_int;
+              if (param0 > kd.field_n.position) {
                 return false;
               }
-              kd.field_n.field_f = 0;
+              kd.field_n.position = 0;
               return true;
             }
             if (0 <= var3_int &&

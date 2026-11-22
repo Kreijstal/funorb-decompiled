@@ -106,7 +106,7 @@ final class jj extends ug {
           int var3_int = 0;
           IOException var3 = null;
           Throwable decompiledCaughtException = null;
-          if (e.field_c.field_n >= param0) {
+          if (e.field_c.position >= param0) {
             return true;
           }
           if (null == kl.field_G) {
@@ -126,16 +126,16 @@ final class jj extends ug {
               dc.d(125);
               return false;
             }
-            if (-e.field_c.field_n + param0 < var3_int) {
-              var3_int = param0 - e.field_c.field_n;
+            if (-e.field_c.position + param0 < var3_int) {
+              var3_int = param0 - e.field_c.position;
             }
-            kl.field_G.a(e.field_c.field_m, -77, var3_int, e.field_c.field_n);
+            kl.field_G.a(e.field_c.payload, -77, var3_int, e.field_c.position);
             m.field_b = ri.a(-3);
-            e.field_c.field_n = e.field_c.field_n + var3_int;
-            if (param0 > e.field_c.field_n) {
+            e.field_c.position = e.field_c.position + var3_int;
+            if (param0 > e.field_c.position) {
               return false;
             }
-            e.field_c.field_n = 0;
+            e.field_c.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

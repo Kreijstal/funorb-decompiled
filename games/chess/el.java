@@ -20,13 +20,13 @@ final class el extends cm {
         nk var2 = qn.field_U;
         var2.f(param1, -60);
         if (param0 == 4) {
-          var2.c(1, (byte) -95);
-          var2.c(2, (byte) -56);
+          var2.writeByte(1, (byte) -95);
+          var2.writeByte(2, (byte) -56);
           return;
         }
         field_y = (pf[]) null;
-        var2.c(1, (byte) -95);
-        var2.c(2, (byte) -56);
+        var2.writeByte(1, (byte) -95);
+        var2.writeByte(2, (byte) -56);
     }
 
     public static void e(byte param0) {

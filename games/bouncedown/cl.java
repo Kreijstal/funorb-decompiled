@@ -177,15 +177,15 @@ final class cl extends al {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = jc.field_g;
-          var2 = var9.d((byte) -118);
-          var3 = var9.d((byte) -113);
+          var2 = var9.readUnsignedByte((byte) -118);
+          var3 = var9.readUnsignedByte((byte) -113);
           if (0 == var2) {
             var4 = (id) (mf.field_d.a((byte) -105));
             if (var4 == null) {
               kc.a((byte) 18);
               return;
             }
-            var5 = -var9.field_h + pe.field_d;
+            var5 = -var9.position + pe.field_d;
             var11 = var4.field_h;
             var10 = var11;
             var6 = var10;
@@ -193,12 +193,12 @@ final class cl extends al {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -125) << da.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -125) << da.b(768, var7 << 8));
             }
             var4.c(2);
           } else {
             if (var2 == 1) {
-              var4_int = var9.i(128);
+              var4_int = var9.readSignedSmart(128);
               var5_ref_jc = (jc) (m.field_e.a((byte) -53));
               while (var5_ref_jc != null) {
                 if (var3 != var5_ref_jc.field_l ||

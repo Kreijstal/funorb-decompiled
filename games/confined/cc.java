@@ -33,7 +33,7 @@ final class cc extends IntrusiveNode {
         try {
           var13 = e.field_c;
           var15 = var13;
-          var2 = var15.c(32);
+          var2 = var15.readUnsignedByte(32);
           var3 = (cc) (uc.field_bb.a(77));
           while (var3 != null) {
             if (var2 != var3.field_o) {
@@ -46,12 +46,12 @@ final class cc extends IntrusiveNode {
             dc.d(122);
             return;
           }
-          var4 = var15.c(32);
+          var4 = var15.readUnsignedByte(32);
           if (param0 != var4) {
             var5 = var3.field_n;
             em.field_f[0] = qc.field_m;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              em.field_f[var6_int] = var13.d(true);
+              em.field_f[var6_int] = var13.readString(true);
             }
             fg.a(var5, var4, (byte) -63);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

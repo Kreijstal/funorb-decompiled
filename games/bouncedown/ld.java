@@ -27,22 +27,22 @@ final class ld extends IntrusiveNode {
           if (param0 <= 36) {
             return;
           }
-          var2 = var9.d((byte) -125);
+          var2 = var9.readUnsignedByte((byte) -125);
           if (0 == var2) {
             var8 = (bi) (GameClient.field_n.a((byte) -123));
             if (var8 == null) {
               kc.a((byte) 18);
               return;
             }
-            var4 = var9.d((byte) -124);
+            var4 = var9.readUnsignedByte((byte) -124);
             if (0 != var4) {
               var13 = new byte[var4];
-              var9.a((byte) 124, var4, var13, 0);
+              var9.readBytes((byte) 124, var4, var13, 0);
             } else {
               var5 = null;
             }
-            var9.field_h = var9.field_h + 4;
-            if (var9.h(-19)) {
+            var9.position = var9.position + 4;
+            if (var9.verifyCrc32(-19)) {
               var8.c(2);
               return;
             }
@@ -54,7 +54,7 @@ final class ld extends IntrusiveNode {
             kc.a((byte) 18);
             return;
           }
-          var3 = var9.j(-3);
+          var3 = var9.readInt(-3);
           var4_ref_gf = (gf) (Slime.field_k.a((byte) -92));
           while (var4_ref_gf != null) {
             if (var3 != var4_ref_gf.field_i) {

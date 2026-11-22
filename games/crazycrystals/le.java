@@ -28,7 +28,7 @@ final class le extends ln {
           if (param0 != 15295) {
             le.clearStaticReferences(115);
           }
-          var2 = var12.h(255);
+          var2 = var12.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = wl.a((byte) -93);
             var16 = var10;
@@ -37,9 +37,9 @@ final class le extends ln {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).h(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).b((byte) -75);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -75);
             }
             var15 = (dp) (pm.field_c.g(32073));
             if (var15 == null) {

@@ -75,7 +75,7 @@ final class lo {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(0, 24, 76, var2);
+                param1.writeBytes(0, 24, 76, var2);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class lo {
                 return;
               }
             }
-            param1.a(0, 24, 76, var2);
+            param1.writeBytes(0, 24, 76, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

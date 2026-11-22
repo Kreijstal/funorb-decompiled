@@ -19,26 +19,26 @@ final class lf extends mf {
           var8 = vh.field_a;
           var9 = var8;
           var9.b(true, param0);
-          var9.field_n = var9.field_n + 1;
-          var4 = var9.field_n;
-          var9.f(96, 1);
-          var9.c(param2.field_p, 8);
-          var9.c(param2.field_r, 8);
-          var9.c(param2.field_x, 8);
-          var9.d(-97, param2.field_n);
-          var9.d(-101, param2.field_u);
-          var9.d(-108, param2.field_o);
-          var9.d(-83, param2.field_t);
-          var9.f(107, param2.field_s.length);
+          var9.position = var9.position + 1;
+          var4 = var9.position;
+          var9.writeByte(96, 1);
+          var9.writeShort(param2.field_p, 8);
+          var9.writeShort(param2.field_r, 8);
+          var9.writeShort(param2.field_x, 8);
+          var9.writeInt(-97, param2.field_n);
+          var9.writeInt(-101, param2.field_u);
+          var9.writeInt(-108, param2.field_o);
+          var9.writeInt(-83, param2.field_t);
+          var9.writeByte(107, param2.field_s.length);
           if (param1 < 35) {
             bj var7 = (bj) null;
             lf.a(-61, -11, (bj) null);
           }
           for (var5 = 0; param2.field_s.length > var5; var5++) {
-            var8.d(-91, param2.field_s[var5]);
+            var8.writeInt(-91, param2.field_s[var5]);
           }
-          var9.e(26199, var4);
-          var9.a(25859, -var4 + var9.field_n);
+          var9.appendCrc32(26199, var4);
+          var9.backpatchByteLength(25859, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "lf.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

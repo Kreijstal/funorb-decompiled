@@ -38,7 +38,7 @@ abstract class lk {
           }
           var8 = new CipherPacketBuffer(param0.a(7693, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.h(255);
+          var3 = var10.readUnsignedByte(255);
           var10.f((byte) 50);
           ud.field_S = rd.a(var10, -95);
           je.field_d = new int[var3][];

@@ -27,21 +27,21 @@ final class pm {
     final static void a(int param0, we param1, byte param2) {
         CipherPacketBuffer var5 = tp.field_f;
         var5.d(8, param0);
-        var5.field_f = var5.field_f + 1;
-        int var4 = var5.field_f;
-        var5.a(true, 1);
-        var5.a(true, param1.field_j);
-        var5.a(param1.field_g, (byte) 106);
-        var5.a(param1.field_m, param2 - 16455);
-        var5.a(param1.field_i, -16384);
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
+        var5.writeByte(true, 1);
+        var5.writeByte(true, param1.field_j);
+        var5.writeSignedSmart(param1.field_g, (byte) 106);
+        var5.writeInt(param1.field_m, param2 - 16455);
+        var5.writeInt(param1.field_i, -16384);
         if (param2 != 71) {
           return;
         }
         try {
-          var5.a(param1.field_f, -16384);
-          var5.a(param1.field_k, param2 - 16455);
-          var5.b(var4, (byte) -58);
-          var5.c((byte) 48, var5.field_f - var4);
+          var5.writeInt(param1.field_f, -16384);
+          var5.writeInt(param1.field_k, param2 - 16455);
+          var5.appendCrc32(var4, (byte) -58);
+          var5.backpatchByteLength((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "pm.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

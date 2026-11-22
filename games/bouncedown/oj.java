@@ -38,11 +38,11 @@ final class oj {
             if (param4 != -18023) {
               this.field_d = (v) null;
             }
-            this.field_f.field_h = 6 + 72 * param3;
-            var6_int = this.field_f.j(-3);
-            var7 = this.field_f.j(-3);
+            this.field_f.position = 6 + 72 * param3;
+            var6_int = this.field_f.readInt(-3);
+            var7 = this.field_f.readInt(-3);
             var13 = new byte[64];
-            this.field_f.a((byte) 125, 64, var13, 0);
+            this.field_f.readBytes((byte) 125, 64, var13, 0);
             var9 = new ce(param3, param1, param2, this.field_d, this.field_a, var6_int, var13, var7, param0);
             this.field_h[param3] = var9;
             stackIn_14_0 = var9;
@@ -124,13 +124,13 @@ final class oj {
           return false;
         }
         var3 = new PacketBuffer(this.field_g.d((byte) -116));
-        var3.field_h = 5;
-        var4 = var3.d((byte) -119);
-        var3.field_h = var3.field_h + 72 * var4;
-        var13 = new byte[var3.field_i.length - var3.field_h];
+        var3.position = 5;
+        var4 = var3.readUnsignedByte((byte) -119);
+        var3.position = var3.position + 72 * var4;
+        var13 = new byte[var3.payload.length - var3.position];
         var11 = var13;
         var5 = var11;
-        var3.a((byte) 126, var13.length, var13, 0);
+        var3.readBytes((byte) 126, var13.length, var13, 0);
         if (null != this.field_e &&
           null != this.field_b) {
           var12 = new java.math.BigInteger(var13);
@@ -142,7 +142,7 @@ final class oj {
         if (var6.length != 65) {
           throw new RuntimeException();
         }
-        var15 = jd.a(var3.field_i, 5, -5 + (var3.field_h - var13.length), 0);
+        var15 = jd.a(var3.payload, 5, -5 + (var3.position - var13.length), 0);
         for (var8 = 0; var8 < 64; var8++) {
           if (var15[var8] != var6[var8 + 1]) {
             throw new RuntimeException();

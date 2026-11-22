@@ -69,11 +69,11 @@ final class qe extends ng {
 
     final void a(boolean param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_h, (byte) -67);
+          param1.writePrefixedString(this.field_h, (byte) -67);
           if (param0) {
             field_j = (String) null;
           }
-          param1.b(this.field_d, (byte) -103);
+          param1.writeBase38String(this.field_d, (byte) -103);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "qe.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

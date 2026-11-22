@@ -52,7 +52,7 @@ final class dj extends l {
             field_t = (km) null;
           }
           while (true) {
-            var3_int = param0.i(-79);
+            var3_int = param0.readUnsignedByte(-79);
             if (0 == var3_int) {
               return;
             }
@@ -95,7 +95,7 @@ final class dj extends l {
         try {
           var10 = new PacketBuffer(param0);
           var3 = 92 % ((61 - param1) / 50);
-          var4 = var10.i(-92);
+          var4 = var10.readUnsignedByte(-92);
           var5 = var10.readInt((byte) -124);
           if (var5 >= 0 && (0 == je.field_l ||
             !(var5 > je.field_l))) {
@@ -103,7 +103,7 @@ final class dj extends l {
               var13 = new byte[var5];
               var11 = var13;
               var6_ref_byte__ = var11;
-              var10.a(var5, (byte) 124, var13, 0);
+              var10.readBytes(var5, (byte) 124, var13, 0);
               stackIn_7_0 = var6_ref_byte__;
               return stackIn_7_0;
             }
@@ -323,25 +323,25 @@ final class dj extends l {
         try {
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param2.i(param1 - 193);
+              var4_int = param2.readUnsignedByte(param1 - 193);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_u[var5] = param2.f(674914976);
+                this.field_u[var5] = param2.readUnsignedShort(674914976);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.i(-103);
+                var4_int = param2.readUnsignedByte(-103);
                 this.field_r = new int[var4_int][];
                 this.field_s = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param2.f(674914976);
+                  var6 = param2.readUnsignedShort(674914976);
                   var7 = li.a(var6, 0);
                   if (var7 != null) {
                     this.field_s[var5] = var6;
                     array$0 = new int[var7.field_c];
                     this.field_r[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_c; var8++) {
-                      this.field_r[var5][var8] = param2.f(674914976);
+                      this.field_r[var5][var8] = param2.readUnsignedShort(674914976);
                     }
                   }
                 }
@@ -351,7 +351,7 @@ final class dj extends l {
               }
             }
           } else {
-            this.field_v = gl.a((byte) -118, '<', param2.d(0));
+            this.field_v = gl.a((byte) -118, '<', param2.readString(0));
           }
           if (param1 != 80) {
             var10 = (CharSequence) null;

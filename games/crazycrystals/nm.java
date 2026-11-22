@@ -56,43 +56,43 @@ final class nm {
         this.field_p.b(param0);
         this.field_q = new ml();
         this.field_q.b(param0);
-        int var2 = param0.h(255);
+        int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_f = param0.field_f - 1;
+          param0.position = param0.position - 1;
           this.field_c = new ml();
           this.field_c.b(param0);
           this.field_f = new ml();
           this.field_f.b(param0);
         }
-        var2 = param0.h(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_f = param0.field_f - 1;
+          param0.position = param0.position - 1;
           this.field_t = new ml();
           this.field_t.b(param0);
           this.field_d = new ml();
           this.field_d.b(param0);
         }
-        var2 = param0.h(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_f = param0.field_f - 1;
+          param0.position = param0.position - 1;
           this.field_h = new ml();
           this.field_h.b(param0);
           this.field_l = new ml();
           this.field_l.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.c(false);
+          var4 = param0.readUnsignedSmart(false);
           if (var4 == 0) {
             break;
           }
           this.field_u[var3] = var4;
-          this.field_r[var3] = param0.f(0);
-          this.field_y[var3] = param0.c(false);
+          this.field_r[var3] = param0.readSignedSmart(0);
+          this.field_y[var3] = param0.readUnsignedSmart(false);
         }
-        this.field_a = param0.c(false);
-        this.field_n = param0.c(false);
-        this.field_w = param0.c((byte) -7);
-        this.field_g = param0.c((byte) -7);
+        this.field_a = param0.readUnsignedSmart(false);
+        this.field_n = param0.readUnsignedSmart(false);
+        this.field_w = param0.readUnsignedShort((byte) -7);
+        this.field_g = param0.readUnsignedShort((byte) -7);
         this.field_v = new bk();
         this.field_j = new ml();
         this.field_v.a(param0, this.field_j);

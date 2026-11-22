@@ -61,7 +61,7 @@ final class pa extends IntrusiveNode {
           var14 = Chess.field_G;
           try {
             var18 = new fl();
-            var18.field_l = param2.i(-82);
+            var18.field_l = param2.readUnsignedByte(-82);
             var18.field_t = param2.readInt((byte) -102);
             var18.field_v = new int[var18.field_l];
             if (!param1) {
@@ -74,18 +74,18 @@ final class pa extends IntrusiveNode {
             var18.field_o = new int[var18.field_l];
             for (var5 = 0; var18.field_l > var5; var5++) {
               try {
-                var6_int = param2.i(-101);
+                var6_int = param2.readUnsignedByte(-101);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.d(0);
-                    var8 = param2.d(0);
-                    var9 = param2.i(-107);
+                    var20 = param2.readString(0);
+                    var8 = param2.readString(0);
+                    var9 = param2.readUnsignedByte(-107);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.d(0);
+                      var10[var11_int] = param2.readString(0);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
@@ -95,7 +95,7 @@ final class pa extends IntrusiveNode {
                         var13 = param2.readInt((byte) -108);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(var13, (byte) 121, var21[var12_int], 0);
+                        param2.readBytes(var13, (byte) 121, var21[var12_int], 0);
                       }
                     }
                     var18.field_q[var5] = var6_int;
@@ -110,8 +110,8 @@ final class pa extends IntrusiveNode {
                     var18.field_r[var5] = var21;
                   }
                 } else {
-                  var16 = param2.d(0);
-                  dupTemp$1 = param2.d(0);
+                  var16 = param2.readString(0);
+                  dupTemp$1 = param2.readString(0);
                   var15 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;

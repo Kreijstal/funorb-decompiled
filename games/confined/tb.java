@@ -81,27 +81,27 @@ final class tb {
           if (null != kl.field_G) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (wd.field_f == lk.field_d);
-              if ((decompiledFrameRemainder0) && (0 == vh.field_a.field_n &&
+              if ((decompiledFrameRemainder0) && (0 == vh.field_a.position &&
                 (pc.field_a + 10000L) < ri.a(-3))) {
                 vh.field_a.b(true, param0);
               }
             } else {
-              if (0 == vh.field_a.field_n &&
+              if (0 == vh.field_a.position &&
                 (pc.field_a + 10000L) < ri.a(-3)) {
                 vh.field_a.b(true, param0);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (vh.field_a.field_n > 0) {
+              if (vh.field_a.position > 0) {
                 try {
-                  kl.field_G.a(vh.field_a.field_n, false, vh.field_a.field_m, 0);
+                  kl.field_G.a(vh.field_a.position, false, vh.field_a.payload, 0);
                   pc.field_a = ri.a(-3);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dc.d(118);
                 }
-                vh.field_a.field_n = 0;
+                vh.field_a.position = 0;
               }
               if (param1 <= 103) {
                 var3 = (fg) null;
@@ -110,7 +110,7 @@ final class tb {
               return;
             }
           }
-          vh.field_a.field_n = 0;
+          vh.field_a.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -137,12 +137,12 @@ final class tb {
               var6 = (CharSequence) null;
               tb.a(14, (CharSequence) null, true);
             }
-            var3_int = param1.k((byte) -11);
+            var3_int = param1.readUnsignedSmart((byte) -11);
             if (var3_int > param0) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.field_n = param1.field_n + hc.field_t.a(param1.field_n, var4, 0, param1.field_m, var3_int, false);
+            param1.position = param1.position + hc.field_t.a(param1.position, var4, 0, param1.payload, var3_int, false);
             var5 = kh.a(var4, var3_int, 0, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;

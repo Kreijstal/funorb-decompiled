@@ -36,7 +36,7 @@ final class ui {
           var1Lifetime3 = var15 + ":";
           for (var2 = 0; ai.field_i > var2; var2++) {
             var16 = var1Lifetime3 + ' ';
-            var3 = 255 & e.field_c.field_m[var2];
+            var3 = 255 & e.field_c.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 > var4) {
@@ -63,7 +63,7 @@ final class ui {
         var1Lifetime2 = var9 + ":";
         for (var2Lifetime1 = 0; ai.field_i > var2Lifetime1; var2Lifetime1++) {
           var13 = var1Lifetime2 + ' ';
-          var3Lifetime1 = 255 & e.field_c.field_m[var2Lifetime1];
+          var3Lifetime1 = 255 & e.field_c.payload[var2Lifetime1];
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (10 > var4Lifetime1) {

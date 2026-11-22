@@ -183,10 +183,10 @@ final class db extends vm {
     final static void a(int param0, int param1, int param2) {
         nk var3 = qn.field_U;
         var3.f(param0, -83);
-        var3.c(3, (byte) 83);
-        var3.c(9, (byte) 103);
+        var3.writeByte(3, (byte) 83);
+        var3.writeByte(9, (byte) 103);
         if (param2 == 28113) {
-          var3.b(param1, 113);
+          var3.writeShort(param1, 113);
           return;
         }
     }

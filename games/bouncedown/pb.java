@@ -43,7 +43,7 @@ final class pb {
           if (param1 != 87) {
             field_j = 99;
           }
-          var2_int = param0.d((byte) -121);
+          var2_int = param0.readUnsignedByte((byte) -121);
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

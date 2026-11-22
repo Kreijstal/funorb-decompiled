@@ -191,7 +191,7 @@ final class hb extends ak {
           if (param0 != 1790) {
             hb.d((byte) 109);
           }
-          var2 = var12.d((byte) -92);
+          var2 = var12.readUnsignedByte((byte) -92);
           if (0 == var2) {
             var10 = eh.a(param0 ^ -1674);
             var16 = var10;
@@ -200,9 +200,9 @@ final class hb extends ak {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -77);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -77);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).j(Slime.a(param0, -1789));
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(Slime.a(param0, -1789));
             }
             var15 = (ld) (ne.field_r.a((byte) -86));
             if (var15 == null) {

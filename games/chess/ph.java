@@ -17,8 +17,8 @@ class ph extends dm {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(param1 ^ -7, this.field_i);
-          param0.a(this.field_e, false);
+          param0.writeLong(param1 ^ -7, this.field_i);
+          param0.writeBase38String(this.field_e, false);
           if (param1 != 123) {
             field_j = (vj) null;
           }

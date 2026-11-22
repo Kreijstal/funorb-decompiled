@@ -33,19 +33,19 @@ final class tm implements Iterator {
         try {
           var10 = new PacketBuffer(param1);
           var3 = 94 % ((53 - param0) / 46);
-          var4 = var10.c(32);
-          var5 = var10.f((byte) 46);
+          var4 = var10.readUnsignedByte(32);
+          var5 = var10.readInt((byte) 46);
           if (var5 >= 0 && (qk.field_a == 0 ||
             !(var5 > qk.field_a))) {
             if (var4 == 0) {
               var13 = new byte[var5];
               var11 = var13;
               var6_ref_byte__ = var11;
-              var10.a(0, (byte) 122, var5, var13);
+              var10.readBytes(0, (byte) 122, var5, var13);
               stackIn_7_0 = var6_ref_byte__;
               return stackIn_7_0;
             }
-            var6 = var10.f((byte) 51);
+            var6 = var10.readInt((byte) 51);
             if (var6 >= 0 && (qk.field_a == 0 ||
               !(qk.field_a < var6))) {
               var14 = new byte[var6];

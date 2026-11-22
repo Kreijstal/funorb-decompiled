@@ -17,16 +17,16 @@ final class jc {
           if (!jj.a(1, (byte) -78)) {
             return false;
           }
-          ai.field_i = e.field_c.c(32);
-          e.field_c.field_n = 0;
+          ai.field_i = e.field_c.readUnsignedByte(32);
+          e.field_c.position = 0;
         }
         if (ai.field_i != -2) {
           var1 = -122 / ((param0 + 9) / 57);
           return jj.a(ai.field_i, (byte) 43);
         }
         if (jj.a(2, (byte) -111)) {
-          ai.field_i = e.field_c.a((byte) 25);
-          e.field_c.field_n = 0;
+          ai.field_i = e.field_c.readUnsignedShort((byte) 25);
+          e.field_c.position = 0;
           var1Lifetime1 = -122 / ((param0 + 9) / 57);
           return jj.a(ai.field_i, (byte) 43);
         }

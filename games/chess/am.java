@@ -48,7 +48,7 @@ final class am {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.j(111);
+            var3_int = param0.readUnsignedSmart(111);
             if (param1 < var3_int) {
               var3_int = param1;
             }
@@ -200,7 +200,7 @@ final class am {
         var9 = Chess.field_G;
         try {
           var1 = tk.field_h;
-          var2 = var1.i(param0 ^ -22);
+          var2 = var1.readUnsignedByte(param0 ^ -22);
           if (param0 != 115) {
             field_a = (String) null;
           }
@@ -209,18 +209,18 @@ final class am {
               r.field_Ib = new dk(128);
               wc.field_v = 0;
             }
-            stackIn_14_0 = (var1.i(param0 ^ -40) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte(param0 ^ -40) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.d(0);
+            var4_ref_String = var1.readString(0);
             if (var3_int != 0) {
-              var5 = var1.d(0);
+              var5 = var1.readString(0);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = hh.a(param0 ^ -15069, var4_ref_String);
-            var7 = var1.d(0);
+            var7 = var1.readString(0);
             var8 = ad.a((CharSequence) ((Object) var4_ref_String), param0 ^ -115);
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -263,9 +263,9 @@ final class am {
               return;
             }
             ld.field_g = 1;
-            var3 = var1.d(0);
+            var3 = var1.readString(0);
             f.field_a = ((String) (var3)).intern();
-            var4 = var1.i(-82);
+            var4 = var1.readUnsignedByte(-82);
             mh.a(2, var4);
             return;
           }
@@ -273,12 +273,12 @@ final class am {
             bf.field_M = new dk(128);
             wg.field_w = 0;
           }
-          var3Lifetime1 = var1.d(0);
+          var3Lifetime1 = var1.readString(0);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.d(param0 ^ 115);
-          var5Lifetime1 = var1.d(param0 - 115);
+          var4_ref_StringLifetime1 = var1.readString(param0 ^ 115);
+          var5Lifetime1 = var1.readString(param0 - 115);
           var6Lifetime1 = mn.a(-1, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
             var6Lifetime1 = mn.a(-1, var5Lifetime1);

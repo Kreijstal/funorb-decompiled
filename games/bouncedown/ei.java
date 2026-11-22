@@ -72,14 +72,14 @@ final class ei {
         int var3;
         this.field_a = new gg[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.d((byte) -67);
+          var3 = param0.readUnsignedByte((byte) -67);
           if (var3 != 0) {
-            param0.field_h = param0.field_h - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new gg();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.a(-1640531527);
-        this.field_c = param0.a(-1640531527);
+        this.field_b = param0.readUnsignedShort(-1640531527);
+        this.field_c = param0.readUnsignedShort(-1640531527);
     }
 }

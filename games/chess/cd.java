@@ -259,16 +259,16 @@ final class cd extends pk {
           var6.f(param3, -82);
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.c(4, (byte) -75);
+          var6.writeByte(4, (byte) -75);
           int var8 = -76 / ((param5 + 3) / 40);
-          var6.c(param4, (byte) 83);
+          var6.writeByte(param4, (byte) 83);
           var9 = param0;
           if (param2) {
             var9 += 128;
           }
-          var6.c(var9, (byte) 81);
-          var6.a(param1, (byte) -45, 0, param1.length);
-          var6.a(var6.position - var7, -1);
+          var6.writeByte(var9, (byte) 81);
+          var6.writeBytes(param1, (byte) -45, 0, param1.length);
+          var6.backpatchByteLength(var6.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -16,19 +16,19 @@ final class nk {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_a = param0.c(32);
+        this.field_a = param0.readUnsignedByte(32);
         this.field_b = new int[this.field_a];
         this.field_e = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_b[var2] = param0.a((byte) 25);
-          this.field_e[var2] = param0.a((byte) 25);
+          this.field_b[var2] = param0.readUnsignedShort((byte) 25);
+          this.field_e[var2] = param0.readUnsignedShort((byte) 25);
         }
     }
 
     final void b(PacketBuffer param0) {
-        this.field_d = param0.c(32);
-        this.field_i = param0.f((byte) 57);
-        this.field_j = param0.f((byte) 74);
+        this.field_d = param0.readUnsignedByte(32);
+        this.field_i = param0.readInt((byte) 57);
+        this.field_j = param0.readInt((byte) 74);
         this.a(param0);
     }
 

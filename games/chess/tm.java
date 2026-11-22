@@ -20,8 +20,8 @@ final class tm {
           if (param0) {
             field_d = -61;
           }
-          var3.c(param1.field_q, (byte) -91);
-          var3.c(param1.field_u, (byte) -60);
+          var3.writeByte(param1.field_q, (byte) -91);
+          var3.writeByte(param1.field_u, (byte) -60);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "tm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

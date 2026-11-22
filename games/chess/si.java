@@ -102,12 +102,12 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
         var2.position = var2.position + 1;
         int var3 = -54 % ((param0 - 63) / 36);
         int var4 = var2.position;
-        var2.c(5, (byte) -79);
-        var2.c(pd.field_Rb.field_hc, (byte) 66);
+        var2.writeByte(5, (byte) -79);
+        var2.writeByte(pd.field_Rb.field_hc, (byte) 66);
         int var5 = (pd.field_Rb.field_Mb << 6) + pd.field_Rb.field_ic;
-        var2.c(var5, (byte) -62);
-        var2.a(pd.field_Rb.field_sc, (byte) -45, 0, pd.field_Rb.field_sc.length);
-        var2.a(var2.position - var4, -1);
+        var2.writeByte(var5, (byte) -62);
+        var2.writeBytes(pd.field_Rb.field_sc, (byte) -45, 0, pd.field_Rb.field_sc.length);
+        var2.backpatchByteLength(var2.position - var4, -1);
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
@@ -164,12 +164,12 @@ final class si extends vj implements java.awt.image.ImageProducer, java.awt.imag
     final static void a(byte param0) {
         if (param0 < -52) {
           qf.field_b = false;
-          kh.field_o = tk.field_h.i(-122) == 0 ? true : false;
+          kh.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
           return;
         }
         field_n = -122;
         qf.field_b = false;
-        kh.field_o = tk.field_h.i(-122) == 0 ? true : false;
+        kh.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {

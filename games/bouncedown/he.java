@@ -60,7 +60,7 @@ final class he extends IntrusiveNode {
         var12 = Bounce.field_N;
         try {
           var14 = jc.field_g;
-          var2 = var14.d((byte) -77);
+          var2 = var14.readUnsignedByte((byte) -77);
           var3_ref = (qg) (cf.field_b.a((byte) -60));
           while (var3_ref != null) {
             if (~var3_ref.field_h != ~var2) {
@@ -76,12 +76,12 @@ final class he extends IntrusiveNode {
           if (param0 != 1) {
             field_l = (String) null;
           }
-          var4 = var14.d((byte) -127);
+          var4 = var14.readUnsignedByte((byte) -127);
           if (var4 != 0) {
             var5 = var3_ref.field_i;
             wh.field_c[0] = ja.field_b;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              wh.field_c[var6_int] = var14.b(true);
+              wh.field_c[var6_int] = var14.readString(true);
             }
             ng.a(-15936, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

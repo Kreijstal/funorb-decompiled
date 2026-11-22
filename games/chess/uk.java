@@ -133,7 +133,7 @@ class uk {
         int var15 = 0;
         var15 = Chess.field_G;
         try {
-          var4_int = param1.i(-124);
+          var4_int = param1.readUnsignedByte(-124);
           if (3 < var4_int) {
             throw new RuntimeException("Version number too recent");
           }
@@ -148,9 +148,9 @@ class uk {
           }
           if (var4_int != 2) {
             if (var4_int == 3) {
-              var5 = param1.c(param2);
-              var6 = param1.d((byte) 118);
-              var8 = param1.d((byte) 118);
+              var5 = param1.readShort(param2);
+              var6 = param1.readLong((byte) 118);
+              var8 = param1.readLong((byte) 118);
               var10 = param1.readByte(0);
               if (param0 != null) {
                 param0.field_e = (int)(50L * (var6 / 1000L));
@@ -159,9 +159,9 @@ class uk {
               }
               var11 = 0;
               while (var11 < var5) {
-                var12 = param1.i(-123);
-                var13 = param1.i(-103);
-                var14 = param1.i(-97);
+                var12 = param1.readUnsignedByte(-123);
+                var13 = param1.readUnsignedByte(-103);
+                var14 = param1.readUnsignedByte(-97);
                 this.a((byte) 19, var14, var12, var13);
                 var11++;
                 if (var15 != 0) {

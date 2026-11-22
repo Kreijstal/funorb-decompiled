@@ -8,11 +8,11 @@ final class hn extends se {
 
     final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
-          param3.a(true, param2);
-          param3.c(-161478600, 17);
-          param3.c(-161478600, param0);
-          param3.c(-161478600, param4);
-          param3.a(true, param1);
+          param3.writeByte(true, param2);
+          param3.writeShort(-161478600, 17);
+          param3.writeShort(-161478600, param0);
+          param3.writeShort(-161478600, param4);
+          param3.writeByte(true, param1);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -91,7 +91,7 @@ final class hn extends se {
         if (param0) {
           return (String) null;
         }
-        return kd.field_n.i(114);
+        return kd.field_n.readString(114);
     }
 
     static {

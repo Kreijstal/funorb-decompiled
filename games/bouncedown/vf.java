@@ -68,27 +68,27 @@ final class vf {
           tc.field_r[1] = la.field_C.nextInt();
           tc.field_r[3] = (int)qa.field_i;
           tc.field_r[2] = (int)(qa.field_i >> 32);
-          lb.field_g.field_h = 0;
-          lb.field_g.b(tc.field_r[0], (byte) 48);
-          lb.field_g.b(tc.field_r[1], (byte) -105);
-          lb.field_g.b(tc.field_r[2], (byte) 74);
-          lb.field_g.b(tc.field_r[3], (byte) 87);
+          lb.field_g.position = 0;
+          lb.field_g.writeInt(tc.field_r[0], (byte) 48);
+          lb.field_g.writeInt(tc.field_r[1], (byte) -105);
+          lb.field_g.writeInt(tc.field_r[2], (byte) 74);
+          lb.field_g.writeInt(tc.field_r[3], (byte) 87);
           sb.a(lb.field_g, (byte) 25);
-          lb.field_g.e(-750655096, param0);
+          lb.field_g.writeShort(-750655096, param0);
           param1.a(false, lb.field_g);
-          hh.field_p.field_h = 0;
+          hh.field_p.position = 0;
           if (!param2) {
-            hh.field_p.a(16, (byte) 105);
+            hh.field_p.writeByte(16, (byte) 105);
           } else {
-            hh.field_p.a(18, (byte) 58);
+            hh.field_p.writeByte(18, (byte) 58);
           }
-          hh.field_p.field_h = hh.field_p.field_h + 2;
+          hh.field_p.position = hh.field_p.position + 2;
           if (param4 >= -1) {
             field_a = (String) null;
           }
-          var5_int = hh.field_p.field_h;
-          hh.field_p.b(nb.field_f, (byte) -128);
-          hh.field_p.a(252186072, mb.field_s);
+          var5_int = hh.field_p.position;
+          hh.field_p.writeInt(nb.field_f, (byte) -128);
+          hh.field_p.writeLong(252186072, mb.field_s);
           var6 = 0;
           if (ba.field_B) {
             var6 = var6 | 1;
@@ -102,17 +102,17 @@ final class vf {
           if (mc.field_d != null) {
             var6 = var6 | 16;
           }
-          hh.field_p.a(var6, (byte) 104);
+          hh.field_p.writeByte(var6, (byte) 104);
           var7 = uj.a(true, vi.b(0));
           if (var7 == null) {
             var7 = "";
           }
-          hh.field_p.a(-256, var7);
+          hh.field_p.writeString(-256, var7);
           if (null != mc.field_d) {
-            hh.field_p.a(mc.field_d, (byte) -67);
+            hh.field_p.writePrefixedString(mc.field_d, (byte) -67);
           }
           f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
-          hh.field_p.c(-100, -var5_int + hh.field_p.field_h);
+          hh.field_p.backpatchShortLength(-100, -var5_int + hh.field_p.position);
           jj.a(-1, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

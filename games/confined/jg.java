@@ -91,7 +91,7 @@ abstract class jg {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param0.a(24, 0, var10, param1 ^ 119);
+                param0.writeBytes(24, 0, var10, param1 ^ 119);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ abstract class jg {
                 return;
               }
             }
-            param0.a(24, 0, var10, param1 ^ 119);
+            param0.writeBytes(24, 0, var10, param1 ^ 119);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

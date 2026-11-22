@@ -417,7 +417,7 @@ abstract class ck {
         var7 = Confined.field_J ? 1 : 0;
         try {
           var2 = new CipherPacketBuffer(param1.a(param0 ^ -26592, "logo.fo3d", ""));
-          var3 = var2.c(param0 ^ 26581);
+          var3 = var2.readUnsignedByte(param0 ^ 26581);
           var2.i(8);
           im.field_a = ul.a(var2, 31662);
           Confined.field_K = new rm[var3];

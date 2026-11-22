@@ -76,15 +76,15 @@ final class fd extends IntrusiveNode {
         var4.f(param0, -87);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.c(7, (byte) -84);
+        var4.writeByte(7, (byte) -84);
         if (param1 < -41) {
-          var4.a(-74, param2);
-          var4.a(var4.position - var5, -1);
+          var4.writeLong(-74, param2);
+          var4.backpatchByteLength(var4.position - var5, -1);
           return;
         }
         field_l = (String) null;
-        var4.a(-74, param2);
-        var4.a(var4.position - var5, -1);
+        var4.writeLong(-74, param2);
+        var4.backpatchByteLength(var4.position - var5, -1);
     }
 
     static {

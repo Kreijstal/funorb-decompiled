@@ -104,15 +104,15 @@ class dh extends sj implements el {
     final static void a(int param0, qn param1, int param2) {
         CipherPacketBuffer var3 = vh.field_a;
         var3.b(true, param0);
-        var3.f(118, 5);
-        var3.f(115, 0);
-        var3.c(param1.field_w, 8);
-        var3.f(param2 ^ 21840, param1.field_o);
+        var3.writeByte(118, 5);
+        var3.writeByte(115, 0);
+        var3.writeShort(param1.field_w, 8);
+        var3.writeByte(param2 ^ 21840, param1.field_o);
         if (param2 != 21821) {
           return;
         }
         try {
-          var3.f(120, param1.field_s);
+          var3.writeByte(120, param1.field_s);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

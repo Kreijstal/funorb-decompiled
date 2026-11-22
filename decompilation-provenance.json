@@ -10612,17 +10612,17 @@
       "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
       "sources": {
         "files": 289,
-        "sha256": "948ebb407fff38e03adc7c454c13867fef6a6b146f61c750d0a893f3850bb7d6"
+        "sha256": "2a1a4bb0cf756009e69157013cb449115798a6ecdea442ff9c05ebe4804a013f"
       },
       "dictionary": {
         "path": "decompilation/bouncedown-naming.json",
-        "sha256": "3c7f7e5c5ed24709e45490c6012eca16ceadbde3ba0512d4bd9d48096db8379c"
+        "sha256": "867410d75e5e1164f63380fa7db82ac4d881edb03a62616073d20407994ed04b"
       },
       "readingGuide": {
         "path": "games/bouncedown/README.md",
         "sha256": "2f1fdc010a7e9515e4e1c9012026d1ab0c8acb41a9c9c216b6c3e9fab224312c"
       },
-      "rulesSha256": "f4bf1fc9460ba554feedab75deeeb8f0287ee4c915018e3f61b0ff304a78df2f",
+      "rulesSha256": "350dd093b354806849ab3451f022fbcf2f96b1822dcdb8be02bad080ae1c35c3",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10636,17 +10636,17 @@
       "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
       "sources": {
         "files": 346,
-        "sha256": "695e4ed6de794454332f6889f8a1c76c479b2a4e8c2b2d089f404f1679920db0"
+        "sha256": "70eb0b33d5a37c194b6fd9c048e125edcffe6280363832d14003c86d7bf38c1c"
       },
       "dictionary": {
         "path": "decompilation/chess-naming.json",
-        "sha256": "d3637299efff2dd1f2a0a8fcec8dd9443e9add1af637cab63f9b317e84c928e5"
+        "sha256": "b1388986f1e6d623666dbe15e9b3cf0764453e107f49ac987ad4546c7ebbb255"
       },
       "readingGuide": {
         "path": "games/chess/README.md",
         "sha256": "50e882374f8f243fdecd93b43e670f4872b7cb82767badfb06fa98596f83320e"
       },
-      "rulesSha256": "2ffade97c50c11fa9db8dd043b35abf56e65018abc73d8e67cdb6626af06c5b3",
+      "rulesSha256": "0add9d1f55c8c9f80f95ac6171113829159b18dd2d5d2c28b8e98f0243a09251",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10660,17 +10660,17 @@
       "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
       "sources": {
         "files": 341,
-        "sha256": "36c59dc9cc72803340bce3880be6bf3469e742233a81785b8cec209f894c0f16"
+        "sha256": "6591e859834b5e82611e21ccbb6f40fa5fe02d630239b68c3dcc2fb310ab7698"
       },
       "dictionary": {
         "path": "decompilation/confined-naming.json",
-        "sha256": "7fb2bcbbad3bee512078559deaaf39c4083bb34d92a948042177d8372ec07e7c"
+        "sha256": "05350f3a7c6857792642f68943c9e826f0689dc594434e56442f8a8e20373fe2"
       },
       "readingGuide": {
         "path": "games/confined/README.md",
         "sha256": "f462fb3ab0006489af36ffa3b215eb790f3bab06ab69205b4c4017d64c2998d3"
       },
-      "rulesSha256": "ca6424ff6b707f655153adf6cdb7cadcaa7e91b321d5622ed28ac0e406daa66c",
+      "rulesSha256": "d1b7027a01c73f94a8e059fbdaa84e26cf6895e2fffb538117e1305b7d2a3ba3",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10684,17 +10684,17 @@
       "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
       "sources": {
         "files": 394,
-        "sha256": "e5cd241ada2064581985fe9c0cb8dd3ba876a6ff4a75b59fe478958126ef0522"
+        "sha256": "f0a611a216c48888b179a3a0e4243ac690842a542ada0be05f9780a2c67dc26e"
       },
       "dictionary": {
         "path": "decompilation/crazycrystals-naming.json",
-        "sha256": "39eb0060474441c8f1972a0bd322361f1fc5b95824d29f46d1a4c740ab800082"
+        "sha256": "6954134f0a304a5be5ebd4512a6cefa3b70c0e54384047ad0cdb112e842b4afd"
       },
       "readingGuide": {
         "path": "games/crazycrystals/README.md",
         "sha256": "a676834b1563cfbed887a81cf05ef35fc3b206f4c60805d527365c226eafd8b5"
       },
-      "rulesSha256": "04b85388e4f6643163e8e45c6e7617a9da03dbd355bf4c0fc6a8c56bd4cc9cc4",
+      "rulesSha256": "9cc848eae931ea84bf4dc4a7dbd35512242a9661968183b7b6d12cb51529d390",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11793,7 +11793,7 @@
         },
         "publishedSources": {
           "files": 289,
-          "sha256": "948ebb407fff38e03adc7c454c13867fef6a6b146f61c750d0a893f3850bb7d6"
+          "sha256": "2a1a4bb0cf756009e69157013cb449115798a6ecdea442ff9c05ebe4804a013f"
         }
       },
       "brickabrac": {
@@ -11893,7 +11893,7 @@
         },
         "publishedSources": {
           "files": 346,
-          "sha256": "695e4ed6de794454332f6889f8a1c76c479b2a4e8c2b2d089f404f1679920db0"
+          "sha256": "70eb0b33d5a37c194b6fd9c048e125edcffe6280363832d14003c86d7bf38c1c"
         }
       },
       "confined": {
@@ -11943,7 +11943,7 @@
         },
         "publishedSources": {
           "files": 341,
-          "sha256": "36c59dc9cc72803340bce3880be6bf3469e742233a81785b8cec209f894c0f16"
+          "sha256": "6591e859834b5e82611e21ccbb6f40fa5fe02d630239b68c3dcc2fb310ab7698"
         }
       },
       "crazycrystals": {
@@ -11993,7 +11993,7 @@
         },
         "publishedSources": {
           "files": 394,
-          "sha256": "e5cd241ada2064581985fe9c0cb8dd3ba876a6ff4a75b59fe478958126ef0522"
+          "sha256": "f0a611a216c48888b179a3a0e4243ac690842a542ada0be05f9780a2c67dc26e"
         },
         "sourceRepairs": {
           "classes": {

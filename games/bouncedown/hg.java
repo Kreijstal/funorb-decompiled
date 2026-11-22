@@ -65,7 +65,7 @@ final class hg extends al {
     }
 
     final static void h(byte param0) {
-        ja.field_b = jc.field_g.b(true);
+        ja.field_b = jc.field_g.readString(true);
         int var1 = 89 % ((-14 - param0) / 56);
         CharSequence var2 = (CharSequence) ((Object) ja.field_b);
         qe.field_e = ce.a(var2, 0);

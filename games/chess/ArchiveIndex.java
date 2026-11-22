@@ -108,7 +108,7 @@ final class ArchiveIndex {
         var16 = Chess.field_G;
         try {
           var17 = new PacketBuffer(dj.a(param0, 119));
-          var4 = var17.i(-117);
+          var4 = var17.readUnsignedByte(-117);
           if (var4 >= 5 &&
             7 >= var4) {
             if (var4 >= 6) {
@@ -116,13 +116,13 @@ final class ArchiveIndex {
             } else {
               this.field_s = 0;
             }
-            var5 = var17.i(-114);
+            var5 = var17.readUnsignedByte(-114);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 <= var4) {
-              this.field_k = var17.h(-120);
+              this.field_k = var17.readUnsignedShortOrInt(-120);
             } else {
-              this.field_k = var17.f(674914976);
+              this.field_k = var17.readUnsignedShort(674914976);
             }
             stackIn_17_0 = (0 == (var5 & 2)) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -131,7 +131,7 @@ final class ArchiveIndex {
             var9 = -1;
             if (7 <= var4) {
               for (var10 = 0; this.field_k > var10; var10++) {
-                dupTemp$0 = var8 + var17.h(-110);
+                dupTemp$0 = var8 + var17.readUnsignedShortOrInt(-110);
                 var8 = dupTemp$0;
                 this.field_q[var10] = dupTemp$0;
                 if (this.field_q[var10] > var9) {
@@ -140,7 +140,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; var10 < this.field_k; var10++) {
-                dupTemp$1 = var8 + var17.f(674914976);
+                dupTemp$1 = var8 + var17.readUnsignedShort(674914976);
                 var8 = dupTemp$1;
                 this.field_q[var10] = dupTemp$1;
                 if (this.field_q[var10] > var9) {
@@ -180,7 +180,7 @@ final class ArchiveIndex {
             } else {
               for (var10Lifetime3 = 0; this.field_k > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, (byte) 121, var21, 0);
+                var17.readBytes(64, (byte) 121, var21, 0);
                 this.field_t[this.field_q[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_k; var10Lifetime3++) {
@@ -189,7 +189,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime4 = 0; this.field_k > var10Lifetime4; var10Lifetime4++) {
-                this.field_l[this.field_q[var10Lifetime4]] = var17.h(-110);
+                this.field_l[this.field_q[var10Lifetime4]] = var17.readUnsignedShortOrInt(-110);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_k; var10Lifetime4++) {
                 var11 = this.field_q[var10Lifetime4];
@@ -199,7 +199,7 @@ final class ArchiveIndex {
                 array$2 = new int[var12];
                 this.field_h[var11] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.h(-99);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(-99);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_h[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -215,7 +215,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime4 = 0; this.field_k > var10Lifetime4; var10Lifetime4++) {
-                this.field_l[this.field_q[var10Lifetime4]] = var17.f(674914976);
+                this.field_l[this.field_q[var10Lifetime4]] = var17.readUnsignedShort(674914976);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_k; var10Lifetime4++) {
                 var11 = this.field_q[var10Lifetime4];
@@ -225,7 +225,7 @@ final class ArchiveIndex {
                 this.field_h[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.f(674914976);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(674914976);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_h[var11];
                   dupTemp$7[var14] = dupTemp$6;

@@ -199,18 +199,18 @@ final class bn extends gf {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var4.position = param0.length - 18;
-        var9 = var4.f(674914976);
-        var10 = var4.f(674914976);
-        var11 = var4.i(-96);
-        var12 = var4.i(-102);
-        var13 = var4.i(-97);
-        var14 = var4.i(-81);
-        var15 = var4.i(-121);
-        var16 = var4.i(-100);
-        var17 = var4.f(674914976);
-        var18 = var4.f(674914976);
-        var19 = var4.f(674914976);
-        var20 = var4.f(674914976);
+        var9 = var4.readUnsignedShort(674914976);
+        var10 = var4.readUnsignedShort(674914976);
+        var11 = var4.readUnsignedByte(-96);
+        var12 = var4.readUnsignedByte(-102);
+        var13 = var4.readUnsignedByte(-97);
+        var14 = var4.readUnsignedByte(-81);
+        var15 = var4.readUnsignedByte(-121);
+        var16 = var4.readUnsignedByte(-100);
+        var17 = var4.readUnsignedShort(674914976);
+        var18 = var4.readUnsignedShort(674914976);
+        var19 = var4.readUnsignedShort(674914976);
+        var20 = var4.readUnsignedShort(674914976);
         var21 = 0;
         var22 = var21;
         var21 = var21 + var9;
@@ -292,18 +292,18 @@ final class bn extends gf {
         var36 = 0;
         var37 = 0;
         for (var38 = 0; var38 < var9; var38++) {
-          var39 = var4.i(-79);
+          var39 = var4.readUnsignedByte(-79);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.a(false);
+            var40 = var5.readSignedSmart(false);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.a(false);
+            var41 = var6.readSignedSmart(false);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.a(false);
+            var42 = var7.readSignedSmart(false);
           }
           this.field_K[var38] = var35 + var40;
           this.field_C[var38] = var36 + var41;
@@ -312,7 +312,7 @@ final class bn extends gf {
           var36 = this.field_C[var38];
           var37 = this.field_v[var38];
           if (var16 == 1) {
-            this.field_I[var38] = var8.i(-104);
+            this.field_I[var38] = var8.readUnsignedByte(-104);
           }
         }
         var4.position = var30;
@@ -321,9 +321,9 @@ final class bn extends gf {
         var7.position = var28;
         var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_j[var38Lifetime1] = (short)var4.f(674914976);
+          this.field_j[var38Lifetime1] = (short)var4.readUnsignedShort(674914976);
           if (var12 == 1) {
-            var39Lifetime1 = var5.i(-119);
+            var39Lifetime1 = var5.readUnsignedByte(-119);
             if ((var39Lifetime1 & 1) != 1) {
               this.field_G[var38Lifetime1] = (byte) 0;
             } else {
@@ -349,7 +349,7 @@ final class bn extends gf {
             this.field_D[var38Lifetime1] = var7.readByte(0);
           }
           if (var15 == 1) {
-            this.field_r[var38Lifetime1] = var8.i(-110);
+            this.field_r[var38Lifetime1] = var8.readUnsignedByte(-110);
           }
         }
         this.field_q = -1;
@@ -360,13 +360,13 @@ final class bn extends gf {
         var40Lifetime1 = 0;
         var41Lifetime1 = 0;
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
-          var43 = var5.i(-99);
+          var43 = var5.readUnsignedByte(-99);
           if (var43 == 1) {
-            var38Lifetime2 = var4.a(false) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.a(false) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.a(false) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_P[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -383,7 +383,7 @@ final class bn extends gf {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.a(false) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_P[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -394,7 +394,7 @@ final class bn extends gf {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.a(false) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_P[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -407,7 +407,7 @@ final class bn extends gf {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.a(false) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(false) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_P[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -421,9 +421,9 @@ final class bn extends gf {
         var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_l[var42Lifetime2] = (byte) 0;
-          this.field_J[var42Lifetime2] = (short)var4.f(674914976);
-          this.field_n[var42Lifetime2] = (short)var4.f(674914976);
-          this.field_x[var42Lifetime2] = (short)var4.f(674914976);
+          this.field_J[var42Lifetime2] = (short)var4.readUnsignedShort(674914976);
+          this.field_n[var42Lifetime2] = (short)var4.readUnsignedShort(674914976);
+          this.field_x[var42Lifetime2] = (short)var4.readUnsignedShort(674914976);
         }
         if (this.field_Q != null) {
           var42Lifetime3 = 0;
@@ -727,24 +727,24 @@ final class bn extends gf {
         var7 = new PacketBuffer(param0);
         var8 = new PacketBuffer(param0);
         var2.position = param0.length - 23;
-        var9 = var2.f(674914976);
-        var10 = var2.f(674914976);
-        var11 = var2.i(-77);
-        var12 = var2.i(-87);
+        var9 = var2.readUnsignedShort(674914976);
+        var10 = var2.readUnsignedShort(674914976);
+        var11 = var2.readUnsignedByte(-77);
+        var12 = var2.readUnsignedByte(-87);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
         var13 = stackIn_3_0;
         stackIn_6_0 = ((var12 & 2) != 2) ? 0 : 1;
         var14 = stackIn_6_0;
-        var15 = var2.i(-82);
-        var16 = var2.i(-123);
-        var17 = var2.i(-109);
-        var18 = var2.i(-90);
-        var19 = var2.i(-92);
-        var20 = var2.f(674914976);
-        var21 = var2.f(674914976);
-        var22 = var2.f(674914976);
-        var23 = var2.f(674914976);
-        var24 = var2.f(674914976);
+        var15 = var2.readUnsignedByte(-82);
+        var16 = var2.readUnsignedByte(-123);
+        var17 = var2.readUnsignedByte(-109);
+        var18 = var2.readUnsignedByte(-90);
+        var19 = var2.readUnsignedByte(-92);
+        var20 = var2.readUnsignedShort(674914976);
+        var21 = var2.readUnsignedShort(674914976);
+        var22 = var2.readUnsignedShort(674914976);
+        var23 = var2.readUnsignedShort(674914976);
+        var24 = var2.readUnsignedShort(674914976);
         var25 = 0;
         var26 = 0;
         var27 = 0;
@@ -881,18 +881,18 @@ final class bn extends gf {
         var51 = 0;
         var52 = 0;
         for (var53 = 0; var53 < var9; var53++) {
-          var54 = var2.i(-79);
+          var54 = var2.readUnsignedByte(-79);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.a(false);
+            var55 = var3.readSignedSmart(false);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.a(false);
+            var56 = var4.readSignedSmart(false);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.a(false);
+            var57 = var5.readSignedSmart(false);
           }
           this.field_K[var53] = var50 + var55;
           this.field_C[var53] = var51 + var56;
@@ -901,7 +901,7 @@ final class bn extends gf {
           var51 = this.field_C[var53];
           var52 = this.field_v[var53];
           if (var19 == 1) {
-            this.field_I[var53] = var6.i(-115);
+            this.field_I[var53] = var6.readUnsignedByte(-115);
           }
         }
         var2.position = var39;
@@ -912,7 +912,7 @@ final class bn extends gf {
         var7.position = var37;
         var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_j[var53Lifetime1] = (short)var2.f(674914976);
+          this.field_j[var53Lifetime1] = (short)var2.readUnsignedShort(674914976);
           if (var13 != 0) {
             this.field_G[var53Lifetime1] = var3.readByte(0);
           }
@@ -923,16 +923,16 @@ final class bn extends gf {
             this.field_D[var53Lifetime1] = var5.readByte(0);
           }
           if (var17 == 1) {
-            this.field_r[var53Lifetime1] = var6.i(-111);
+            this.field_r[var53Lifetime1] = var6.readUnsignedByte(-111);
           }
           if (var18 == 1) {
-            this.field_B[var53Lifetime1] = (short)(var7.f(674914976) - 1);
+            this.field_B[var53Lifetime1] = (short)(var7.readUnsignedShort(674914976) - 1);
           }
           if (this.field_Q != null) {
             if (this.field_B[var53Lifetime1] == -1) {
               this.field_Q[var53Lifetime1] = (byte)-1;
             } else {
-              this.field_Q[var53Lifetime1] = (byte)(var8.i(-125) - 1);
+              this.field_Q[var53Lifetime1] = (byte)(var8.readUnsignedByte(-125) - 1);
             }
           }
         }
@@ -944,13 +944,13 @@ final class bn extends gf {
         var55Lifetime1 = 0;
         var56Lifetime1 = 0;
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
-          var58 = var3.i(-101);
+          var58 = var3.readUnsignedByte(-101);
           if (var58 == 1) {
-            var53Lifetime2 = var2.a(false) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.a(false) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.a(false) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_P[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -967,7 +967,7 @@ final class bn extends gf {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.a(false) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_P[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -978,7 +978,7 @@ final class bn extends gf {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.a(false) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_P[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -991,7 +991,7 @@ final class bn extends gf {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.a(false) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(false) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_P[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -1011,28 +1011,28 @@ final class bn extends gf {
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_l[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
-            this.field_J[var57Lifetime2] = (short)var2.f(674914976);
-            this.field_n[var57Lifetime2] = (short)var2.f(674914976);
-            this.field_x[var57Lifetime2] = (short)var2.f(674914976);
+            this.field_J[var57Lifetime2] = (short)var2.readUnsignedShort(674914976);
+            this.field_n[var57Lifetime2] = (short)var2.readUnsignedShort(674914976);
+            this.field_x[var57Lifetime2] = (short)var2.readUnsignedShort(674914976);
           }
           if (var58Lifetime1 == 1) {
-            this.field_J[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_n[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_x[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_s[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_S[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_H[var57Lifetime2] = (short)var4.f(674914976);
+            this.field_J[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_n[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_x[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_s[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_H[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
             this.field_z[var57Lifetime2] = var5.readByte(0);
             this.field_k[var57Lifetime2] = var6.readByte(0);
             this.field_u[var57Lifetime2] = var7.readByte(0);
           }
           if (var58Lifetime1 == 2) {
-            this.field_J[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_n[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_x[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_s[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_S[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_H[var57Lifetime2] = (short)var4.f(674914976);
+            this.field_J[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_n[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_x[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_s[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_H[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
             this.field_z[var57Lifetime2] = var5.readByte(0);
             this.field_k[var57Lifetime2] = var6.readByte(0);
             this.field_u[var57Lifetime2] = var7.readByte(0);
@@ -1040,12 +1040,12 @@ final class bn extends gf {
             this.field_i[var57Lifetime2] = var7.readByte(0);
           }
           if (var58Lifetime1 == 3) {
-            this.field_J[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_n[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_x[var57Lifetime2] = (short)var3.f(674914976);
-            this.field_s[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_S[var57Lifetime2] = (short)var4.f(674914976);
-            this.field_H[var57Lifetime2] = (short)var4.f(674914976);
+            this.field_J[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_n[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_x[var57Lifetime2] = (short)var3.readUnsignedShort(674914976);
+            this.field_s[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_S[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
+            this.field_H[var57Lifetime2] = (short)var4.readUnsignedShort(674914976);
             this.field_z[var57Lifetime2] = var5.readByte(0);
             this.field_k[var57Lifetime2] = var6.readByte(0);
             this.field_u[var57Lifetime2] = var7.readByte(0);
@@ -1053,11 +1053,11 @@ final class bn extends gf {
         }
         if (var14 != 0) {
           var2.position = var49;
-          var57Lifetime3 = var2.i(-90);
+          var57Lifetime3 = var2.readUnsignedByte(-90);
           if (var57Lifetime3 > 0) {
             var2.position = var2.position + 4 * var57Lifetime3;
           }
-          var58Lifetime2 = var2.i(-80);
+          var58Lifetime2 = var2.readUnsignedByte(-80);
           if (var58Lifetime2 > 0) {
             var2.position = var2.position + 4 * var58Lifetime2;
           }

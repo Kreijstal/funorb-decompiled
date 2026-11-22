@@ -224,12 +224,12 @@ final class ma extends pn {
         var26 = CrazyCrystals.field_B;
         try {
           var27 = kd.field_n;
-          var2 = var27.h(255);
+          var2 = var27.readUnsignedByte(255);
           if (param0 <= 56) {
             field_p = (db) null;
           }
           if (var2 == 0) {
-            var3 = var27.c((byte) -7);
+            var3 = var27.readUnsignedShort((byte) -7);
             var4 = (ak) (hd.field_d.g(32073));
             while (var4 != null) {
               if (var3 != var4.field_g) {
@@ -242,7 +242,7 @@ final class ma extends pn {
               jj.a(4);
               return;
             }
-            var5 = var27.h(255);
+            var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6 = var4.field_h;
               var7 = var4.field_j;
@@ -250,10 +250,10 @@ final class ma extends pn {
               ub.field_d[0].field_g = je.field_g;
               ub.field_d[0].field_a = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                ub.field_d[var8_int].field_g = var27.i(123);
+                ub.field_d[var8_int].field_g = var27.readString(123);
                 ub.field_d[var8_int].field_j = false;
-                if (var27.h(255) == 1) {
-                  ub.field_d[var8_int].field_a = var27.i(109);
+                if (var27.readUnsignedByte(255) == 1) {
+                  ub.field_d[var8_int].field_a = var27.readString(109);
                 } else {
                   ub.field_d[var8_int].field_a = null;
                 }
@@ -274,13 +274,13 @@ final class ma extends pn {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.h(255);
+              var18 = var27.readUnsignedByte(255);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.h(255);
+                  var20 = var27.readUnsignedByte(255);
                   var21 = ub.field_d[var20].field_g;
-                  var22 = var27.d(true);
-                  var24 = var27.field_f;
+                  var22 = var27.readLong(true);
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = ub.field_d[var20].field_a;
@@ -289,7 +289,7 @@ final class ma extends pn {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.b((byte) -104);
+                      var11[0][incrementValue$3] = var27.readInt((byte) -104);
                     }
                   }
                   if (var21 != null &&
@@ -297,12 +297,12 @@ final class ma extends pn {
                     var8[1][var13] = je.field_g;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_f = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.b((byte) -125);
+                      var11[1][incrementValue$4] = var27.readInt((byte) -125);
                     }
                   }
                   if (var6 > var14 &&
@@ -312,11 +312,11 @@ final class ma extends pn {
                     var9[2][var14] = ub.field_d[var20].field_a;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_f = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.b((byte) -120);
+                      var11[2][incrementValue$5] = var27.readInt((byte) -120);
                     }
                   }
                 }
@@ -327,8 +327,8 @@ final class ma extends pn {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.c((byte) -7);
-            var4_long = var27.d(true);
+            var3Lifetime1 = var27.readUnsignedShort((byte) -7);
+            var4_long = var27.readLong(true);
             var6_ref_hp = (hp) (cf.field_c.g(32073));
             while (var6_ref_hp != null) {
               if (var6_ref_hp.field_n != var3Lifetime1) {

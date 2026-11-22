@@ -73,22 +73,22 @@ abstract class tb {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          mc.field_q = param1.c((byte) -7) << 5;
+          mc.field_q = param1.readUnsignedShort((byte) -7) << 5;
           if (param0 != -31416) {
             field_d = (tj) null;
           }
-          var2_int = param1.h(255);
+          var2_int = param1.readUnsignedByte(255);
           jn.field_q = (7 & var2_int) << 18;
           mc.field_q = mc.field_q + (var2_int >> 3);
-          jn.field_q = jn.field_q + (param1.c((byte) -7) << 2);
-          var2_intLifetime1 = param1.h(255);
+          jn.field_q = jn.field_q + (param1.readUnsignedShort((byte) -7) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(255);
           of.field_D = 2064384 & var2_intLifetime1 << 15;
           jn.field_q = jn.field_q + (var2_intLifetime1 >> 6);
-          of.field_D = of.field_D + (param1.h(255) << 7);
-          var2_intLifetime2 = param1.h(param0 ^ -31305);
+          of.field_D = of.field_D + (param1.readUnsignedByte(255) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(param0 ^ -31305);
           jd.field_I = var2_intLifetime2 << 16 & 65536;
           of.field_D = of.field_D + (var2_intLifetime2 >> 1);
-          jd.field_I = jd.field_I + param1.c((byte) -7);
+          jd.field_I = jd.field_I + param1.readUnsignedShort((byte) -7);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "tb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -108,22 +108,22 @@ abstract class tb {
           var8 = tp.field_f;
           var9 = var8;
           var9.d(8, param0);
-          var9.field_f = var9.field_f + 1;
-          var4 = var9.field_f;
-          var9.a(true, 1);
-          var9.c(-161478600, param1.field_n);
-          var9.c(-161478600, param1.field_k);
-          var9.c(-161478600, param1.field_j);
-          var9.a(param1.field_l, -16384);
-          var9.a(param1.field_f, -16384);
-          var9.a(param1.field_o, -16384);
-          var9.a(param1.field_h, -16384);
-          var9.a(true, param1.field_p.length);
+          var9.position = var9.position + 1;
+          var4 = var9.position;
+          var9.writeByte(true, 1);
+          var9.writeShort(-161478600, param1.field_n);
+          var9.writeShort(-161478600, param1.field_k);
+          var9.writeShort(-161478600, param1.field_j);
+          var9.writeInt(param1.field_l, -16384);
+          var9.writeInt(param1.field_f, -16384);
+          var9.writeInt(param1.field_o, -16384);
+          var9.writeInt(param1.field_h, -16384);
+          var9.writeByte(true, param1.field_p.length);
           for (var5 = 0; var5 < param1.field_p.length; var5++) {
-            var8.a(param1.field_p[var5], -16384);
+            var8.writeInt(param1.field_p[var5], -16384);
           }
-          var9.b(var4, (byte) -75);
-          var9.c((byte) 68, var9.field_f - var4);
+          var9.appendCrc32(var4, (byte) -75);
+          var9.backpatchByteLength((byte) 68, var9.position - var4);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "tb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

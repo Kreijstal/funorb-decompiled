@@ -64,16 +64,16 @@ final class jj {
               } else {
                 mk.field_c = oh.a(false, param0, param1, param2);
               }
-              tp.field_f.field_f = 0;
-              tp.field_f.a(true, 14);
-              tp.field_f.a(true, mk.field_c.a(0).field_b);
+              tp.field_f.position = 0;
+              tp.field_f.writeByte(true, 14);
+              tp.field_f.writeByte(true, mk.field_c.a(0).field_b);
               ak.a(-1, (byte) -48);
               gj.field_k = of.field_F;
             }
             if (gj.field_k == of.field_F &&
               fq.a(1, (byte) 50)) {
-              var6_int = kd.field_n.h(255);
-              kd.field_n.field_f = 0;
+              var6_int = kd.field_n.readUnsignedByte(255);
+              kd.field_n.position = 0;
               if (var6_int == 0) {
                 gj.field_k = ul.field_j;
               } else {
@@ -86,18 +86,18 @@ final class jj {
               fq.a(8, (byte) 90)) {
               stackIn_24_0 = kd.field_n;
               stackIn_25_1 = !(param1);
-              CipherPacketBuffer.field_m = ((CipherPacketBuffer) (Object) stackIn_24_0).d(stackIn_25_1);
-              kd.field_n.field_f = 0;
+              CipherPacketBuffer.field_m = ((CipherPacketBuffer) (Object) stackIn_24_0).readLong(stackIn_25_1);
+              kd.field_n.position = 0;
               tf.a(param4, (byte) 75, mk.field_c, param3, param5);
               gj.field_k = tk.field_k;
             }
             boolean decompiledFrameRemainder0 = true;
             if (tk.field_k == gj.field_k &&
               fq.a(1, (byte) -70)) {
-              var6_intLifetime1 = kd.field_n.h(255);
+              var6_intLifetime1 = kd.field_n.readUnsignedByte(255);
               bf.field_b = var6_intLifetime1;
               ld.field_r = null;
-              kd.field_n.field_f = 0;
+              kd.field_n.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -119,12 +119,12 @@ final class jj {
             }
             if (fm.field_y == gj.field_k &&
               ol.f((byte) 60)) {
-              go.field_h = kd.field_n.d(true);
-              rb.field_h = kd.field_n.h(255);
-              kd.field_n.h(255);
-              mo.field_l = kd.field_n.c((byte) -7);
-              var6 = kd.field_n.a(0);
-              var7 = kd.field_n.h(255);
+              go.field_h = kd.field_n.readLong(true);
+              rb.field_h = kd.field_n.readUnsignedByte(255);
+              kd.field_n.readUnsignedByte(255);
+              mo.field_l = kd.field_n.readUnsignedShort((byte) -7);
+              var6 = kd.field_n.readNullableString(0);
+              var7 = kd.field_n.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 jl.b(65);
               }
@@ -137,19 +137,19 @@ final class jj {
                 }
               }
               if (ag.field_b) {
-                kd.field_n.h(255);
-                kd.field_n.h(255);
-                kd.field_n.b((byte) -29);
-                um.field_f = kd.field_n.c((byte) -7);
+                kd.field_n.readUnsignedByte(255);
+                kd.field_n.readUnsignedByte(255);
+                kd.field_n.readInt((byte) -29);
+                um.field_f = kd.field_n.readUnsignedShort((byte) -7);
                 SecondaryIntrusiveDeque.field_f = new byte[um.field_f];
                 for (var8 = 0; var8 < um.field_f; var8++) {
-                  SecondaryIntrusiveDeque.field_f[var8] = kd.field_n.d((byte) 113);
+                  SecondaryIntrusiveDeque.field_f[var8] = kd.field_n.readByte((byte) 113);
                 }
               }
-              je.field_g = kd.field_n.i(119);
+              je.field_g = kd.field_n.readString(119);
               var11 = (CharSequence) ((Object) je.field_g);
               lk.field_b = fe.a(60136, var11);
-              kl.field_V = kd.field_n.h(255);
+              kl.field_V = kd.field_n.readUnsignedByte(255);
               gj.field_k = ek.field_h;
               if (mk.field_c.a(0) == of.field_C) {
                 gg.field_d.a(1, le.b((byte) -20));
@@ -201,7 +201,7 @@ final class jj {
               if (bf.field_b == 7) {
                 bf.field_b = 3;
               }
-              re.field_j = kd.field_n.i(123);
+              re.field_j = kd.field_n.readString(123);
               ec.field_g = false;
               stackIn_85_0 = bf.field_b;
               return stackIn_85_0;

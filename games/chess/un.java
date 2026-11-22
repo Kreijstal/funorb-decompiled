@@ -210,10 +210,10 @@ final class un {
           this.a(param0, true, false);
         } else {
           qn.field_U.f(58, -63);
-          qn.field_U.c(this.field_B.field_n, (byte) 98);
-          qn.field_U.b(this.field_t.b(0), 100);
-          qn.field_U.b(param0, 93);
-          qn.field_U.c(this.field_l, (byte) 111);
+          qn.field_U.writeByte(this.field_B.field_n, (byte) 98);
+          qn.field_U.writeShort(this.field_t.b(0), 100);
+          qn.field_U.writeShort(param0, 93);
+          qn.field_U.writeByte(this.field_l, (byte) 111);
           this.a(param0, true, false);
           this.field_t.a(-1, false, -1);
           this.field_l = 0;

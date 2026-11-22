@@ -63,13 +63,13 @@ final class ja {
           return false;
         }
         var10 = new PacketBuffer(this.field_i.e((byte) 118));
-        var10.field_n = 5;
-        var3 = var10.c(32);
-        var10.field_n = var10.field_n + 72 * var3;
-        var13 = new byte[var10.field_m.length - var10.field_n];
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(32);
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(0, (byte) 115, var13.length, var13);
+        var10.readBytes(0, (byte) 115, var13.length, var13);
         if (this.field_e != null &&
           this.field_h != null) {
           var12 = new java.math.BigInteger(var13);
@@ -81,7 +81,7 @@ final class ja {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = in.a(5, var10.field_m, -var13.length + var10.field_n - 5, -26879);
+        var15 = in.a(5, var10.payload, -var13.length + var10.position - 5, -26879);
         if (param0) {
           this.a(true);
         }
@@ -216,15 +216,15 @@ final class ja {
               stackIn_8_0 = this.field_a[param3];
               return stackIn_8_0;
             }
-            this.field_j.field_n = 6 + 72 * param3;
-            var6_int = this.field_j.f((byte) 91);
+            this.field_j.position = 6 + 72 * param3;
+            var6_int = this.field_j.readInt((byte) 91);
             if (param1 != -60) {
               stackIn_11_0 = (tj) null;
               return stackIn_11_0;
             }
-            var7 = this.field_j.f((byte) 115);
+            var7 = this.field_j.readInt((byte) 115);
             var13 = new byte[64];
-            this.field_j.a(0, (byte) 86, 64, var13);
+            this.field_j.readBytes(0, (byte) 86, 64, var13);
             var9 = new tj(param3, param4, param0, this.field_f, this.field_c, var6_int, var13, var7, param2);
             this.field_a[param3] = var9;
             stackIn_13_0 = var9;

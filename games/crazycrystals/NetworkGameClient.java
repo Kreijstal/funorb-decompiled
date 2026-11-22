@@ -228,7 +228,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   ag.a((String) null, 48);
                 } else {
-                  var7 = gd.a((byte) 11, var12.field_h, 0, var12.field_f);
+                  var7 = gd.a((byte) 11, var12.payload, 0, var12.position);
                   ag.a(var7, 48);
                 }
                 jl.field_e = null;
@@ -295,7 +295,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 7808) {
           this.field_n = -14L;
         }
-        int var2 = kd.field_n.h(255);
+        int var2 = kd.field_n.readUnsignedByte(255);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + rk.field_b;
         byte[] var5 = new byte[var4];

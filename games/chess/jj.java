@@ -28,7 +28,7 @@ final class jj {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             de.a(var1, (byte) 67);
-            qn.field_U.a(var1.position - var2, -1);
+            qn.field_U.backpatchByteLength(var1.position - var2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

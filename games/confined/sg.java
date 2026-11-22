@@ -59,8 +59,8 @@ final class sg extends DualLinkNode {
         while (var13 < this.field_v.length) {
           var27 = this.field_v[var13];
           var6_ref_kg = new PacketBuffer(var27);
-          var6_ref_kg.field_n = 1;
-          var7 = var6_ref_kg.a((byte) 25);
+          var6_ref_kg.position = 1;
+          var7 = var6_ref_kg.readUnsignedShort((byte) 25);
           var2 = var2 != 0 & un.field_a.a(var7, (byte) -37) ? 1 : 0;
           var13++;
         }
@@ -74,8 +74,8 @@ final class sg extends DualLinkNode {
         for (var6 = 0; var6 < var28.length; var6++) {
           var29 = this.field_v[var6];
           var8 = new PacketBuffer(var29);
-          var8.field_n = 1;
-          var9 = var8.a((byte) 25);
+          var8.position = 1;
+          var9 = var8.readUnsignedShort((byte) 25);
           var10 = null;
           var11 = (ij) (var3.a(47));
           while (var11 != null) {
