@@ -87,11 +87,11 @@ final class dda extends TileEffect {
 
     final static void c(int param0) {
         if (param0 == -31033) {
-          gaa.a(qs.field_m, vg.field_k, (byte) 55, mda.field_c, qaa.field_d);
+          gaa.a(qs.field_m, vg.field_k, (byte) 55, mda.field_c, BoundedRandomAccessFile.field_d);
           return;
         }
         dda.c(-99);
-        gaa.a(qs.field_m, vg.field_k, (byte) 55, mda.field_c, qaa.field_d);
+        gaa.a(qs.field_m, vg.field_k, (byte) 55, mda.field_c, BoundedRandomAccessFile.field_d);
     }
 
     final void c(byte param0) {

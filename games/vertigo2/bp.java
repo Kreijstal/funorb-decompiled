@@ -149,7 +149,7 @@ final class bp extends TextureOperator {
         this.field_D = 32768;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         field_A = null;
         field_E = null;

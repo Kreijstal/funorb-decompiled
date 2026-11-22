@@ -13,7 +13,7 @@ final class pk extends IntrusiveNode {
     static int field_o;
     static String field_r;
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         if (param0 != -8105) {
           return;

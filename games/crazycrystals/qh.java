@@ -69,7 +69,7 @@ final class qh extends hk {
             var4_int++;
           }
           if (param0 != 9260) {
-            qh.c((byte) 33);
+            qh.clearStaticReferences((byte) 33);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ final class qh extends hk {
         int var2 = -9 / ((param0 - 29) / 42);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 6) {
           return;
         }

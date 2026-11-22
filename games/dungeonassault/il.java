@@ -139,7 +139,7 @@ final class il {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_b = null;
         if (param0 <= 103) {

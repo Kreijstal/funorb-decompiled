@@ -222,7 +222,7 @@ final class cl extends ee {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_S = null;
         field_W = null;
         if (param0) {
@@ -318,7 +318,7 @@ final class cl extends ee {
           }
           this.field_Q = true;
           if (param0 > -70) {
-            cl.c(false);
+            cl.clearStaticReferences(false);
           }
           var4 = this.field_T;
           if (var4 != 0) {

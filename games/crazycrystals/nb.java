@@ -12,7 +12,7 @@ final class nb {
     static int[] field_a;
     static int field_b;
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_a = null;
         field_e = null;
         field_g = null;

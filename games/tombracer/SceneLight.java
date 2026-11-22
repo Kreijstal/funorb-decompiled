@@ -125,7 +125,7 @@ abstract class SceneLight extends IntrusiveNode {
           Projectile.field_n = QuickChatParamType.createToolkitSprite(RenderableNode.field_j, param0, (byte) -37);
           TripBeamBehaviour.field_y = QuickChatParamType.createToolkitSprite(ResourceArchive.field_h, param0, (byte) 127);
           haa.field_z = QuickChatParamType.createToolkitSprite(re.field_a, param0, (byte) 126);
-          aq.field_a = LoadLevelCommand.createToolkitSprites(param0, mna.field_c, -55);
+          MainRoomCatalog.field_a = LoadLevelCommand.createToolkitSprites(param0, mna.field_c, -55);
           MirrorBehaviour.field_r = QuickChatParamType.createToolkitSprite(SoundEvent.field_h, param0, (byte) 127);
           OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, haa.field_A.field_f);
           Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, du.field_c.field_f);

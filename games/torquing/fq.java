@@ -48,7 +48,7 @@ final class fq extends jh {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = (byte[][]) null;
         if (param0 > -64) {
           return;
@@ -79,7 +79,7 @@ final class fq extends jh {
             return null;
           }
           if (param1 != -25960) {
-            fq.g((byte) -70);
+            fq.clearStaticReferences((byte) -70);
           }
           stackIn_6_0 = rf.a((byte) 66);
           return stackIn_6_0;

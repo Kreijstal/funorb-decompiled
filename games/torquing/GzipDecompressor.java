@@ -108,7 +108,7 @@ final class GzipDecompressor {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1, byte[] param2) {
+    final void decompress(byte param0, PacketBuffer param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException var4 = null;

@@ -59,7 +59,7 @@ final class vl {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         brassButtonSpriteData = null;
         if (param0 != 8664) {
           return;

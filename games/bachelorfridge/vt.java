@@ -277,7 +277,7 @@ final class vt extends tia {
               }
               var19 = var19 + rg.field_h;
             }
-            var23 = vaa.a(var20, var12.field_yb, -1);
+            var23 = GzipDecompressor.a(var20, var12.field_yb, -1);
             var24 = var23;
             var30 = var24;
             var25 = var30;

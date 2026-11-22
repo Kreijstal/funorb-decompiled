@@ -21,7 +21,7 @@ class rg extends fj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 91) {
-            rg.g((byte) 85);
+            rg.clearStaticReferences((byte) 85);
           }
           if (this.field_L &&
             this.a(param1, (byte) 126, param0, param5, param3)) {
@@ -100,7 +100,7 @@ class rg extends fj {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 17) {
           return;
         }

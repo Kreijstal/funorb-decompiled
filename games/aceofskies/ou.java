@@ -64,7 +64,7 @@ class ou extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         if (param0 != 108) {
           field_n = (char[]) null;

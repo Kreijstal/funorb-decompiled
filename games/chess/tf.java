@@ -93,7 +93,7 @@ final class tf extends IntrusiveNode {
         return om.a(1, param0, param2, (byte) -87);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_k = null;
         if (param0) {
           return;

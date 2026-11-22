@@ -527,7 +527,7 @@ abstract class wm {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_j = null;
         field_i = null;

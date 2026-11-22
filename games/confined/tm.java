@@ -54,7 +54,7 @@ final class tm implements Iterator {
               if (var4 != 1) {
                 var8 = mc.field_d;
                 synchronized (var8) {
-                  mc.field_d.a(false, var14, var10);
+                  mc.field_d.decompress(false, var14, var10);
                 }
               } else {
                 oa.a(var14, var6, param1, var5, 9);

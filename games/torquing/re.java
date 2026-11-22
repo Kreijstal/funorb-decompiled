@@ -258,7 +258,7 @@ final class re {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 21007) {
           return;

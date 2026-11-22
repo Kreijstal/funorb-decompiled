@@ -13,7 +13,7 @@ final class id {
         return param0 ^ param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 != 106) {
           field_f = (AircraftDefinition) null;

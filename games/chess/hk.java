@@ -41,7 +41,7 @@ final class hk extends wc {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_N = null;
         field_J = null;
         field_L = null;

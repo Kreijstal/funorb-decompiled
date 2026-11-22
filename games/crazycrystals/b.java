@@ -43,7 +43,7 @@ final class b {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;
@@ -208,7 +208,7 @@ final class b {
         int var17;
         var17 = CrazyCrystals.field_B;
         if (param10 != 44) {
-          b.a(127);
+          b.clearStaticReferences(127);
         }
         if (param11 <= param13) {
           if (param3 <= param13) {
@@ -286,7 +286,7 @@ final class b {
               } else {
                 var7 = qg.field_s;
                 synchronized (var7) {
-                  qg.field_s.a(var13, var9, -19515);
+                  qg.field_s.decompress(var13, var9, -19515);
                 }
               }
               stackIn_21_0 = var6;

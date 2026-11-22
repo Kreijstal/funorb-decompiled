@@ -13,7 +13,7 @@ final class dc extends IntrusiveNode {
     int field_l;
     int field_p;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 5) {
           field_s = (ci) null;
         }

@@ -78,7 +78,7 @@ final class dt {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 13748) {
           return;

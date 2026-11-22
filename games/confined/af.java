@@ -31,7 +31,7 @@ final class af extends sa {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_bb = null;
         field_cb = null;
         if (param0 > -59) {

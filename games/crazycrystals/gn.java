@@ -26,7 +26,7 @@ final class gn extends en implements vd {
         lo.field_c = null;
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_U = null;
         if (param0) {
           field_U = (String) null;

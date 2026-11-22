@@ -39,7 +39,7 @@ class IntrusiveNode {
         if (param1 >= -21) {
           field_g = (int[]) null;
         }
-        var5 = k.a(-15922);
+        var5 = GzipDecompressor.a(-15922);
         var2 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
           if (var5[var3].field_e == param0) {

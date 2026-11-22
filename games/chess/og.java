@@ -307,7 +307,7 @@ final class og {
         this.field_l.a(param0, this.field_a);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_h = null;
         field_i = null;
         field_v = null;

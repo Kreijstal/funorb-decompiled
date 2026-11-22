@@ -85,7 +85,7 @@ final class sj implements jm {
         return fl.c((byte) 70);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_c = null;
         field_k = null;

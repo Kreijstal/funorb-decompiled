@@ -102,7 +102,7 @@ final class tk {
           this.field_n = new int[var8_int];
           this.field_f = new int[var8_int];
           if (param6 != 2048) {
-            tk.b((byte) -101);
+            tk.clearStaticReferences((byte) -101);
           }
           this.field_x = new int[var8_int];
           this.field_c = new int[var8_int];
@@ -179,7 +179,7 @@ final class tk {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_k = null;
         if (param0 != 10) {

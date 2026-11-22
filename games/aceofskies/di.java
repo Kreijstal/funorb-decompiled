@@ -175,7 +175,7 @@ class di extends ou {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         activeSoundPlaybacks = null;
         if (param0) {
           activeSoundPlaybacks = (IntrusiveDeque) null;

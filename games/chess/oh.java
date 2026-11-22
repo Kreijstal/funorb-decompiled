@@ -15,7 +15,7 @@ final class oh {
         return ge.field_fb.a(false);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -16534) {
           field_e = null;
           field_c = null;

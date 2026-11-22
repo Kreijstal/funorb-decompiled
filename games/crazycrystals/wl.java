@@ -118,7 +118,7 @@ abstract class wl extends DualLinkNode {
                 }
               }
               if (param3) {
-                gl.field_d[var23] = var27 >> li.field_c;
+                BoundedRandomAccessFile.field_d[var23] = var27 >> li.field_c;
                 qm.field_q[var23] = var28 >> li.field_c;
                 ff.field_b[var23] = var29;
               }

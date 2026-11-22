@@ -535,7 +535,7 @@ final class vh extends IntrusiveNode {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_P = null;
         field_o = null;
         field_E = null;

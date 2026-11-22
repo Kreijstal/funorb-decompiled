@@ -147,7 +147,7 @@ final class ej implements lm {
         return false;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_g = null;
         field_n = null;
     }

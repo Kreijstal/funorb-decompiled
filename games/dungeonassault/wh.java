@@ -28,7 +28,7 @@ final class wh {
         hm.field_n.c();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 96) {
           return;
         }
@@ -56,7 +56,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -122) {
-            wh.b(-53);
+            wh.clearStaticReferences(-53);
           }
           if (param0 == null) {
             stackIn_4_0 = null;

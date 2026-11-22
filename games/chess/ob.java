@@ -17,7 +17,7 @@ final class ob extends wm {
     static String field_x;
     static String field_A;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_z = (String) null;
         }

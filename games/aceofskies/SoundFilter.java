@@ -17,7 +17,7 @@ final class SoundFilter {
         return SoundFilter.a(var4);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = (float[][]) null;
         field_h = (int[][]) null;
     }

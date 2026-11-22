@@ -90,8 +90,8 @@ class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        bq var9 = null;
-        bq var10 = null;
+        MidiPatchEnvelope var9 = null;
+        MidiPatchEnvelope var10 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_21_0 = 0;
@@ -794,7 +794,7 @@ class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        bq var4 = null;
+        MidiPatchEnvelope var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -909,7 +909,7 @@ class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        bq var7 = null;
+        MidiPatchEnvelope var7 = null;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;

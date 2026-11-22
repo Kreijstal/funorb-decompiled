@@ -12,7 +12,7 @@ abstract class wn {
     int field_c;
     static boolean field_e;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_b = null;
         if (param0) {

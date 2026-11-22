@@ -10,7 +10,7 @@ abstract class jq {
     int field_g;
     int field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 > -87) {
           return;

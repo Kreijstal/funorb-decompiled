@@ -7,7 +7,7 @@ final class tt {
     static SpriteData[] powerBulbSpriteData;
     static boolean field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 20525) {
           return;
         }

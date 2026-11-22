@@ -14,31 +14,31 @@ final class qg implements Runnable {
     static String field_c;
     static String field_n;
     private ma field_m;
-    qp[] field_v;
+    BoundedRandomAccessFile[] field_v;
     private Thread field_f;
     private static String field_i;
     private on field_l;
     boolean field_j;
     private static int field_t;
-    qp field_h;
+    BoundedRandomAccessFile field_h;
     static java.lang.reflect.Method field_g;
     java.awt.EventQueue field_e;
     private Object field_s;
-    qp field_q;
-    qp field_x;
+    BoundedRandomAccessFile field_q;
+    BoundedRandomAccessFile field_x;
     private boolean field_d;
     private pn field_o;
 
-    private final static qp a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
         try {
-          qp stackIn_14_0 = null;
+          BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           int var6 = 0;
           String var7 = null;
-          qp var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
           if (param3 == 33) {
@@ -65,7 +65,7 @@ final class qg implements Runnable {
             }
             while (true) {
               try {
-                var8 = new qp(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_14_0 = var8;
                 return stackIn_14_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class qg implements Runnable {
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
           wl var3_ref = null;
-          qp var3_ref2 = null;
+          BoundedRandomAccessFile var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
           int var4 = 0;
@@ -427,7 +427,7 @@ final class qg implements Runnable {
           }
           if (this.field_x != null) {
             try {
-              this.field_x.a(param0 ^ -119);
+              this.field_x.close(param0 ^ -119);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -438,7 +438,7 @@ final class qg implements Runnable {
           }
           if (this.field_q != null) {
             try {
-              this.field_q.a(0);
+              this.field_q.close(0);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -448,7 +448,7 @@ final class qg implements Runnable {
             for (var2_int = 0; var2_int < this.field_v.length; var2_int++) {
               if (null != this.field_v[var2_int]) {
                 try {
-                  this.field_v[var2_int].a(0);
+                  this.field_v[var2_int].close(0);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -458,7 +458,7 @@ final class qg implements Runnable {
           }
           if (null != this.field_h) {
             try {
-              this.field_h.a(param0 ^ -119);
+              this.field_h.close(param0 ^ -119);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -488,7 +488,7 @@ final class qg implements Runnable {
 
     final pn a(java.awt.Component param0, byte param1, boolean param2) {
         if (param1 < 13) {
-          this.field_v = (qp[]) null;
+          this.field_v = (BoundedRandomAccessFile[]) null;
         }
         return this.a(!param2 ? 0 : 1, param0, 6, 15, 0);
     }
@@ -615,12 +615,12 @@ final class qg implements Runnable {
         }
         nc.a(field_t, 116, field_k);
         if (this.field_j) {
-          this.field_h = new qp(nc.a("random.dat", field_t, (String) null, -6665), "rw", 25L);
-          this.field_x = new qp(nc.a(0, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_q = new qp(nc.a(0, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_v = new qp[param2];
+          this.field_h = new BoundedRandomAccessFile(nc.a("random.dat", field_t, (String) null, -6665), "rw", 25L);
+          this.field_x = new BoundedRandomAccessFile(nc.a(0, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_q = new BoundedRandomAccessFile(nc.a(0, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_v = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_v[var5_int] = new qp(nc.a(0, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_v[var5_int] = new BoundedRandomAccessFile(nc.a(0, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_d) {
             try {

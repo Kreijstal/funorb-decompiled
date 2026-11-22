@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aq {
+final class MainRoomCatalog {
     static ToolkitSprite[] field_a;
 
     public static void releaseStatics(int param0) {
@@ -11,7 +11,7 @@ final class aq {
 
     final static int getMainRoomCount(int param0) {
         if (param0 != -5640) {
-          aq.getMainRoomCount(-88);
+          MainRoomCatalog.getMainRoomCount(-88);
           return CourseDefinition.field_a.length;
         }
         return CourseDefinition.field_a.length;

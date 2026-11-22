@@ -11,7 +11,7 @@ abstract class se extends li implements ho {
         int var3 = -117 / ((param0 + 6) / 42);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 > -23) {
           field_g = (String) null;

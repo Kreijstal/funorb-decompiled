@@ -298,16 +298,16 @@ final class AirstrikeAnimation extends EventAnimation {
                   var5Lifetime2 = var4;
                 }
                 var5Lifetime1 = null;
-                if (vaa.field_f == 0) {
+                if (GzipDecompressor.field_f == 0) {
                   var5Lifetime1 = lda.a(-26181, param1, var4);
                 }
-                if (vaa.field_f == 1) {
+                if (GzipDecompressor.field_f == 1) {
                   var5Lifetime1 = via.a(param1, var4, -75);
                 }
-                if (vaa.field_f == 2) {
+                if (GzipDecompressor.field_f == 2) {
                   var5Lifetime1 = ip.a(var4, (byte) -80, param1);
                 }
-                if (vaa.field_f == 3) {
+                if (GzipDecompressor.field_f == 3) {
                   var5Lifetime1 = DreamsSpecial.a(2, var4, var4, param1);
                 }
                 if (var5Lifetime1 != null) {
@@ -317,7 +317,7 @@ final class AirstrikeAnimation extends EventAnimation {
               }
             }
             RefreshingSpecial.field_p = null;
-            vaa.field_f = -1;
+            GzipDecompressor.field_f = -1;
           }
         }
         if (!param0) {

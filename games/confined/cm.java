@@ -17,7 +17,7 @@ final class cm {
     private static short[] field_j;
     ij field_g;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_j = null;
         field_b = null;

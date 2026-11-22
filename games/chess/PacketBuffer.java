@@ -413,7 +413,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_j = null;
         if (param0 > -116) {
@@ -718,7 +718,7 @@ class PacketBuffer extends IntrusiveNode {
           if (param0 == -16385) {
             return null;
           }
-          PacketBuffer.f((byte) 110);
+          PacketBuffer.clearStaticReferences((byte) 110);
           return null;
         }
     }

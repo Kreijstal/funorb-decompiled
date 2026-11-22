@@ -13,7 +13,7 @@ final class pl extends jq {
     static String field_j;
     private int field_k;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (!param0) {
           return;

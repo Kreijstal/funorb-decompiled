@@ -45,7 +45,7 @@ final class eb extends pk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_G = null;
         if (param0 != -29115) {
           return;
@@ -106,7 +106,7 @@ final class eb extends pk {
           this.field_f = stackIn_26_1;
           return;
         }
-        eb.a(8);
+        eb.clearStaticReferences(8);
         if (!this.field_e) {
           this.field_f = false;
           this.field_d = false;

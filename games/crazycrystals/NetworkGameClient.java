@@ -178,7 +178,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 } else {
                   wi.field_h = go.field_h;
                   MouseInputHandler.a((byte) 63);
-                  gl.field_c = false;
+                  BoundedRandomAccessFile.field_c = false;
                   hp.field_s = 10;
                 }
               }
@@ -186,7 +186,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (4 == var4) {
             if (!fj.field_d) {
-              gl.field_c = true;
+              BoundedRandomAccessFile.field_c = true;
               hp.field_s = 10;
             } else {
               kl.a((byte) -1, le.b((byte) -20));
@@ -401,7 +401,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_b) {
           return -1;
         }
-        if (!gl.c(-11)) {
+        if (!BoundedRandomAccessFile.c(-11)) {
           return -1;
         }
         if (an.field_r) {
@@ -494,7 +494,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             jj.a(4);
             tn.e((byte) -128);
             rg.a(hd.field_a, 2, -257);
-            me.a(20);
+            me.clearStaticReferences(20);
             an.field_r = true;
             ee.field_e = 15000L + lo.a((byte) 107);
           }
@@ -507,7 +507,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 != 0 &&
             ei.field_E == 0 &&
             hp.field_s == 11 &&
-            !gl.c(-11)) {
+            !BoundedRandomAccessFile.c(-11)) {
             MouseInputHandler.a((byte) 63);
           }
           if (ei.field_E != -1 &&
@@ -561,7 +561,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((ei.field_E != -1 &&
           ei.field_E != 0 ||
-          gl.c(-11)) &&
+          BoundedRandomAccessFile.c(-11)) &&
           ee.field_e <= lo.a((byte) -86)) {
           an.field_r = false;
           if (ei.field_E != -1 &&
@@ -571,7 +571,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (ei.field_E == 0 &&
-          !gl.c(param1 - 15011)) {
+          !BoundedRandomAccessFile.c(param1 - 15011)) {
           nf.field_f = false;
         }
         if (eq.field_j == 0 &&

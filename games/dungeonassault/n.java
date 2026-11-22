@@ -15,7 +15,7 @@ final class n {
         return qc.field_t;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 3554) {
           field_b = null;
           field_e = null;

@@ -90,7 +90,7 @@ final class mn extends pd {
         ec.field_k = null;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_i = (byte[][]) null;
         field_m = null;

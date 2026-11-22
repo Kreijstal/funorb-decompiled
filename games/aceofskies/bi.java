@@ -13,7 +13,7 @@ final class bi extends DualLinkNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_o = (String) null;
           field_o = null;

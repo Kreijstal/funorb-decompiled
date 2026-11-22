@@ -7,7 +7,7 @@ final class uf {
     static int field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != 0) {

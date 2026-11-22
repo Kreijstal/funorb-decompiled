@@ -281,7 +281,7 @@ class na extends rg {
               if (ij.field_q.field_i == var4) {
                 var5 = cg.field_a;
               } else {
-                var5 = ln.field_c;
+                var5 = GzipDecompressor.field_c;
               }
             }
             var6 = dl.field_c[var3];

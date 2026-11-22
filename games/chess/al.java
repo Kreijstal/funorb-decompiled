@@ -186,7 +186,7 @@ final class al {
         this.field_c.position = this.field_f[param0];
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_e = null;
     }
 

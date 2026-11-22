@@ -354,7 +354,7 @@ final class ml {
         return 1 + this.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != -122) {
           field_f = (ci) null;

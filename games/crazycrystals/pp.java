@@ -191,7 +191,7 @@ final class pp extends IntrusiveNode {
             }
           }
           if (param1 <= 66) {
-            pp.a((byte) -35);
+            pp.clearStaticReferences((byte) -35);
           }
           var12 = new uj(param3, var40, var41, var39, var38, var37, var42);
           var12.field_o = var12.field_o - 1;
@@ -229,7 +229,7 @@ final class pp extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 2) {
           field_i = (String) null;
         }

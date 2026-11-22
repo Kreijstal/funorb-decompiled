@@ -302,7 +302,7 @@ final class lc {
               } else {
                 var7 = ek.field_f;
                 synchronized (var7) {
-                  ek.field_f.a(-109, var13, var9);
+                  ek.field_f.decompress(-109, var13, var9);
                 }
               }
               stackIn_23_0 = var6;
@@ -339,7 +339,7 @@ final class lc {
           }
           var5 = new cn(param2, param3);
           if (param0 > -114) {
-            lc.a(true);
+            lc.clearStaticReferences(true);
           }
           jh.a(var5);
           if (param2 < param1.field_y &&
@@ -402,7 +402,7 @@ final class lc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_h = null;
           field_k = null;

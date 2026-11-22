@@ -515,7 +515,7 @@ class ci extends ei {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_zb = null;
         field_J = null;
         field_x = null;

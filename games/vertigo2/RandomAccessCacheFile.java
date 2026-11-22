@@ -17,12 +17,12 @@ final class RandomAccessCacheFile {
 
     final static String a(int param0, char param1) {
         if (param0 != 0) {
-          RandomAccessCacheFile.a(true);
+          RandomAccessCacheFile.clearStaticReferences(true);
         }
         return String.valueOf(param1);
     }
 
-    final void a(int param0, int param1, byte[] param2, boolean param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, boolean param3) throws IOException {
         try {
           if ((long)param0 + this.field_a > this.field_e) {
             this.field_d.seek(this.field_e);
@@ -31,7 +31,7 @@ final class RandomAccessCacheFile {
           }
           this.field_d.write(param2, param1, param0);
           if (param3) {
-            RandomAccessCacheFile.a(true);
+            RandomAccessCacheFile.clearStaticReferences(true);
           }
           this.field_a = this.field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
@@ -39,7 +39,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final long b(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 0) {
           this.field_e = 50L;
         }
@@ -49,11 +49,11 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (null != this.field_d) {
           System.out.println("");
-          this.a(0);
+          this.close(0);
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != 0) {
           field_g = (ve) null;
         }
@@ -87,7 +87,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final int a(int param0, byte param1, byte[] param2, int param3) throws IOException {
+    final int read(int param0, byte param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -118,7 +118,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_g = null;
         field_f = null;
@@ -130,7 +130,7 @@ final class RandomAccessCacheFile {
         field_j = null;
     }
 
-    final void a(long param0, boolean param1) throws IOException {
+    final void seek(long param0, boolean param1) throws IOException {
         if (param1) {
           return;
         }

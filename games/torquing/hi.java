@@ -65,7 +65,7 @@ final class hi {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_h = null;
         if (param0 != 2) {

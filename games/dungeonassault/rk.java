@@ -20,7 +20,7 @@ final class rk implements Runnable {
     private byte[] field_c;
     private int field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_a = null;
           field_k = null;
@@ -78,7 +78,7 @@ final class rk implements Runnable {
 
     final int a(int param0) throws IOException {
         if (param0 != 0) {
-          rk.a(false);
+          rk.clearStaticReferences(false);
           if (this.field_m) {
             return 0;
           }

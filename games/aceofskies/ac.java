@@ -33,7 +33,7 @@ final class ac implements gd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         keySprites = null;
         field_e = null;
         field_b = null;

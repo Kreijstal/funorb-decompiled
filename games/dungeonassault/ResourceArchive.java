@@ -111,7 +111,7 @@ final class ResourceArchive {
         return this.field_h.field_i[param0];
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         field_a = null;
         if (param0) {

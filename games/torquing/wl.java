@@ -966,7 +966,7 @@ final class wl extends sl {
         this.field_s = 1;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_E = null;
         field_T = null;
     }

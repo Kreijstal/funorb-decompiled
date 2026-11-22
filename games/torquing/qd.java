@@ -12,7 +12,7 @@ final class qd {
     static String field_i;
     static AudioOutput field_b;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_h = null;
         field_a = (int[][]) null;

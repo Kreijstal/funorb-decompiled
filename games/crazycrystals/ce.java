@@ -71,7 +71,7 @@ final class ce extends dj {
         return new double[]{var8, var10, var12};
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_eb = null;
         if (param0) {
           return;

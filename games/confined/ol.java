@@ -60,7 +60,7 @@ final class ol {
         IntrusiveNode.field_e = 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != 0) {

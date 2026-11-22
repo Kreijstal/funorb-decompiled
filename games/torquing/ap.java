@@ -211,7 +211,7 @@ final class ap {
         return Math.sqrt(var12 * var12 + var14 * var14 + var16 * var16);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

@@ -42,12 +42,12 @@ final class d {
         }
         var8 = ra.field_c;
         var3 = var8.c(true);
-        uk.field_a = 127 & var3;
+        GzipDecompressor.field_a = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         ac.field_l = stackIn_5_0;
         wd.field_j = var8.c(true);
         gg.field_d = var8.c((byte) 69);
-        if (uk.field_a != 2) {
+        if (GzipDecompressor.field_a != 2) {
           di.field_d = 0;
           ce.field_w = 0;
         } else {
@@ -62,11 +62,11 @@ final class d {
         } else {
           tk.field_v = var8.d(-96);
         }
-        if (uk.field_a == 1) {
+        if (GzipDecompressor.field_a == 1) {
           var8.k(0);
           var8.d(-101);
         } else {
-          if (uk.field_a == 4) {
+          if (GzipDecompressor.field_a == 4) {
             var8.k(0);
             var8.d(-101);
           }
@@ -105,7 +105,7 @@ final class d {
         gf.a(param0, param3, param2, param1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 == 0) {
           field_d = null;

@@ -21,7 +21,7 @@ final class af {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_a = (String) null;
@@ -48,7 +48,7 @@ final class af {
           co.field_G = null;
           bd.field_f = 0;
           if (param0 < 5) {
-            af.a(37);
+            af.clearStaticReferences(37);
           }
           if (gh.field_f) {
             ik.field_e.c();

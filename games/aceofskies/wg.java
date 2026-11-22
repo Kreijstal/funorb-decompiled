@@ -8,7 +8,7 @@ final class wg implements ir {
     private BitmapFont field_a;
     static long field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }
@@ -21,7 +21,7 @@ final class wg implements ir {
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -7592) {
-            wg.a(false);
+            wg.clearStaticReferences(false);
           }
           stackIn_7_0 = (!param3.field_g &&
             !param3.e(28660)) ? (2188450) : (3249872);

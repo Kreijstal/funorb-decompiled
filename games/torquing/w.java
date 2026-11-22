@@ -225,7 +225,7 @@ class w extends to {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_G = null;
         if (param0 != -2147483648) {
           return;
@@ -238,7 +238,7 @@ class w extends to {
         int var1 = vo.a(-14225);
         int var2 = b.g((byte) 124);
         if (param0 < 14) {
-          w.b(-77);
+          w.clearStaticReferences(-77);
         }
         p.field_x.a(v.field_a - dn.field_h, var2 + (wp.field_y << 1), (dn.field_h << 1) + var1, (byte) 79, a.field_d - wp.field_y);
         jn.b((byte) 122);

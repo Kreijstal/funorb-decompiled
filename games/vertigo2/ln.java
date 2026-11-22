@@ -10,7 +10,7 @@ final class ln {
     static GameplayScreen field_d;
     static Sprite[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_f = null;
         field_a = null;

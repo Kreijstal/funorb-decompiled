@@ -15,7 +15,7 @@ class lg extends gg {
     private int field_m;
     private int field_q;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -18) {
           return;
         }
@@ -114,7 +114,7 @@ class lg extends gg {
         if (param2 >= 107) {
           return;
         }
-        lg.c((byte) -61);
+        lg.clearStaticReferences((byte) -61);
     }
 
     final static void a(int param0, int param1) {

@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class ln {
+final class GzipDecompressor {
     static Vector field_d;
     static int field_b;
     static int field_c;
     private java.util.zip.Inflater field_a;
 
-    public ln() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    private ln(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(boolean param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(boolean param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (31 != param2.field_m[param2.field_n] ||
@@ -24,7 +24,7 @@ final class ln {
               throw new RuntimeException("");
             }
             if (param0) {
-              ln.a(50);
+              GzipDecompressor.a(50);
             }
             if (this.field_a == null) {
               this.field_a = new java.util.zip.Inflater(true);
@@ -50,7 +50,7 @@ final class ln {
     public static void a(int param0) {
         field_d = null;
         if (param0 >= -46) {
-          ln.a(-12);
+          GzipDecompressor.a(-12);
         }
     }
 

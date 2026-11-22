@@ -47,7 +47,7 @@ final class pb {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 <= 14) {
           field_e = (mi) null;

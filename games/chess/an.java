@@ -8,7 +8,7 @@ final class an {
     static hg field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 >= -103) {

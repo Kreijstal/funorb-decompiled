@@ -133,7 +133,7 @@ class np extends rj {
         this.field_N = true;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_I = null;
         field_z = null;

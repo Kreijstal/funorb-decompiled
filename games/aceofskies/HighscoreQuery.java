@@ -14,7 +14,7 @@ final class HighscoreQuery extends IntrusiveNode {
     int valuesPerEntry;
     long[][] submissionTokensByView;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         powerBulbSprites = null;
         unachievedSpriteData = null;
         field_k = null;

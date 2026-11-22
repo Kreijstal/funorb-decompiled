@@ -101,7 +101,7 @@ final class bd {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4) {
           field_d = (char[]) null;
         }

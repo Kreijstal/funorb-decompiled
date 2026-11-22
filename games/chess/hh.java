@@ -9,7 +9,7 @@ final class hh extends IntrusiveNode {
     static String field_j;
     static String field_m;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_j = null;
         field_m = null;

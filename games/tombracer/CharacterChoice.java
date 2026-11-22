@@ -33,7 +33,7 @@ final class CharacterChoice implements dv {
           }
           if (DefaultRoomObjectRenderer.field_b.isComplete(127) &&
             !param1.equals(DefaultRoomObjectRenderer.field_b.getName((byte) 106))) {
-            DefaultRoomObjectRenderer.field_b = ai.createAvailabilityQuery((byte) 120, param1);
+            DefaultRoomObjectRenderer.field_b = AvailabilityQueryFactory.createAvailabilityQuery((byte) 120, param1);
           }
           stackIn_7_0 = DefaultRoomObjectRenderer.field_b;
           return stackIn_7_0;

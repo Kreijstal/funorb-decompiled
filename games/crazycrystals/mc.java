@@ -32,13 +32,13 @@ abstract class mc extends DualLinkNode {
           }
           return null;
         }
-        if (cl.field_o < ih.field_a) {
+        if (cl.field_o < GzipDecompressor.field_a) {
           if (param0 != 6) {
             return (String) null;
           }
           return null;
         }
-        if (cl.field_o < ih.field_a + u.field_a) {
+        if (cl.field_o < GzipDecompressor.field_a + u.field_a) {
           return kf.field_f;
         }
         if (param0 != 6) {

@@ -7,13 +7,13 @@ final class oi {
 
     final static int a(int param0) {
         if (param0 > -89) {
-          oi.a((byte) -32);
+          oi.clearStaticReferences((byte) -32);
           return -sg.field_d + c.field_e;
         }
         return -sg.field_d + c.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 76) {
           return;
         }

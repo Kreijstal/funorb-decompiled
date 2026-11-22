@@ -158,7 +158,7 @@ final class lj {
     final static void a(byte param0) {
         e.a(12899, hb.field_D, TextureOperator.field_s, ee.field_b, ua.field_c);
         if (param0 >= -114) {
-          lj.d(80);
+          lj.clearStaticReferences(80);
         }
     }
 
@@ -182,7 +182,7 @@ final class lj {
         this.field_b = true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 1) {
           return;

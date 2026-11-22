@@ -45,7 +45,7 @@ final class ae {
         return this.field_d == 102 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 != -4) {
           return;
@@ -348,7 +348,7 @@ final class ae {
             to.field_c[3] = 1;
             go.field_A[3] = jg.field_d;
             n.field_g[1] = 2;
-            go.field_A[4] = qp.field_e;
+            go.field_A[4] = BoundedRandomAccessFile.field_e;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_42_0 = go.field_A;
               stackIn_42_1 = var8Lifetime2 + 6;

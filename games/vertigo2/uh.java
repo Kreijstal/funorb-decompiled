@@ -52,7 +52,7 @@ final class uh extends UiPanel {
         wq.field_K.setTime(new Date(param1));
         int var3 = wq.field_K.get(7);
         if (param0 != -66) {
-          uh.b((byte) 22);
+          uh.clearStaticReferences((byte) 22);
         }
         int var4 = wq.field_K.get(5);
         int var5 = wq.field_K.get(2);
@@ -208,7 +208,7 @@ final class uh extends UiPanel {
             return stackIn_40_0;
           }
           if (!param0) {
-            uh.b((byte) -114);
+            uh.clearStaticReferences((byte) -114);
           }
           if (!this.field_kc) {
             stackIn_47_0 = !(this.field_Pb >= param1.field_Pb);
@@ -253,7 +253,7 @@ final class uh extends UiPanel {
         return (int)this.f(113);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Wb = null;
         if (param0 != -69) {
           return;

@@ -82,7 +82,7 @@ final class rk extends bc {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         if (!param0) {
           field_d = (String) null;

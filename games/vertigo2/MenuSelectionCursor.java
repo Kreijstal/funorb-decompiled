@@ -681,7 +681,7 @@ final class MenuSelectionCursor {
         this.selectedIndex = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_j = null;
         if (param0) {

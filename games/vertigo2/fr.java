@@ -20,7 +20,7 @@ final class fr {
         fr.a(116, -22);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

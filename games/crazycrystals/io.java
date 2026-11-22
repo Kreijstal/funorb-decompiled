@@ -194,7 +194,7 @@ final class io extends rf {
                 var20.d(var9, -(var20.field_u >> 1) + var10, 256);
                 return;
               }
-              if (ih.field_b != var6) {
+              if (GzipDecompressor.field_b != var6) {
                 return;
               }
               var19 = ao.field_b[1];
@@ -230,7 +230,7 @@ final class io extends rf {
               var24.d(var9Lifetime5, -(var24.field_u >> 1) + var10Lifetime5, 256);
               return;
             }
-            if (ih.field_b != var6) {
+            if (GzipDecompressor.field_b != var6) {
               return;
             }
             var23 = ao.field_b[1];
@@ -282,7 +282,7 @@ final class io extends rf {
                 var29.d(var9Lifetime1, -(var29.field_u >> 1) + var10Lifetime1, 256);
                 return;
               }
-              if (ih.field_b != var6) {
+              if (GzipDecompressor.field_b != var6) {
                 return;
               }
               var28 = ao.field_b[1];
@@ -318,7 +318,7 @@ final class io extends rf {
               var33.d(var9Lifetime1Lifetime1, -(var33.field_u >> 1) + var10Lifetime1Lifetime1, 256);
               return;
             }
-            if (ih.field_b != var6) {
+            if (GzipDecompressor.field_b != var6) {
               return;
             }
             var32 = ao.field_b[1];
@@ -368,7 +368,7 @@ final class io extends rf {
                 var49.d(var9Lifetime2, -(var49.field_u >> 1) + var10Lifetime2, 256);
                 return;
               }
-              if (ih.field_b != var6Lifetime1) {
+              if (GzipDecompressor.field_b != var6Lifetime1) {
                 return;
               }
               var48 = ao.field_b[1];
@@ -405,7 +405,7 @@ final class io extends rf {
               var45.d(var9Lifetime2Lifetime1, -(var45.field_u >> 1) + var10Lifetime2Lifetime1, 256);
               return;
             }
-            if (ih.field_b != var6Lifetime1Lifetime1) {
+            if (GzipDecompressor.field_b != var6Lifetime1Lifetime1) {
               return;
             }
             var44 = ao.field_b[1];
@@ -445,7 +445,7 @@ final class io extends rf {
               var37.d(var9Lifetime3, -(var37.field_u >> 1) + var10Lifetime3, 256);
               return;
             }
-            if (ih.field_b != var6Lifetime2) {
+            if (GzipDecompressor.field_b != var6Lifetime2) {
               return;
             }
             var36 = ao.field_b[1];
@@ -481,7 +481,7 @@ final class io extends rf {
             var41.d(var9Lifetime4, -(var41.field_u >> 1) + var10Lifetime4, 256);
             return;
           }
-          if (ih.field_b != var6Lifetime3) {
+          if (GzipDecompressor.field_b != var6Lifetime3) {
             return;
           }
           var40 = ao.field_b[1];

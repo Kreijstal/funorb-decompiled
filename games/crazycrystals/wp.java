@@ -246,7 +246,7 @@ final class wp {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -78) {
           field_c = null;
           field_d = null;

@@ -12,7 +12,7 @@ final class hc extends IntrusiveNode {
     static fh field_t;
     long field_r;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_s = null;
         if (!param0) {
           return;

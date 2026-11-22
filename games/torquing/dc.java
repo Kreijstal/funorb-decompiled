@@ -129,7 +129,7 @@ final class dc {
         return Model.field_o == mg.field_b ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
           return;

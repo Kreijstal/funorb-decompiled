@@ -7,7 +7,7 @@ final class rn {
     static int[] field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_a = null;
         if (param0) {

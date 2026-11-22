@@ -283,7 +283,7 @@ final class jk {
           wl.a(-106, true, true);
           return;
         }
-        jk.a(54);
+        jk.clearStaticReferences(54);
         wl.a(-106, true, true);
     }
 
@@ -315,7 +315,7 @@ final class jk {
         return (nf) null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -72) {
           return;
         }

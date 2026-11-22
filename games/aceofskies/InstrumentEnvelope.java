@@ -15,7 +15,7 @@ final class InstrumentEnvelope {
     int field_b;
     byte[] field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         unachievedSprite = null;
         if (param0 >= -69) {
           return;

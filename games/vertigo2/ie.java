@@ -33,7 +33,7 @@ final class ie extends UiPanel {
         this(param0, param1.field_Lb, param1.field_Qb, param1.field_Ib, param1.field_Pb);
     }
 
-    public static void o(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_Hb = null;
         if (param0 > -14) {
           return;
@@ -355,7 +355,7 @@ final class ie extends UiPanel {
         if (param0 == 20) {
           return new qj(eb.a(-1), ln.c(132199140));
         }
-        ie.o(-87);
+        ie.clearStaticReferences(-87);
         return new qj(eb.a(-1), ln.c(132199140));
     }
 

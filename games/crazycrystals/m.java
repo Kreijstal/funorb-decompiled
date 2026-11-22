@@ -160,7 +160,7 @@ final class m extends ue {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -122) {
           return;
         }
@@ -395,7 +395,7 @@ final class m extends ue {
         int var6 = 0;
         this.field_d = new ik[5];
         if (param0 != 136) {
-          m.c((byte) -42);
+          m.clearStaticReferences((byte) -42);
         }
         if (!rc.a(param0 ^ -163)) {
           this.field_r = nl.field_g;

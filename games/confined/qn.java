@@ -15,7 +15,7 @@ final class qn extends IntrusiveNode {
     static String field_x;
     static String field_m;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1362) {
           return;
         }

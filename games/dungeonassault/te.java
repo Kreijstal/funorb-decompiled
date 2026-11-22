@@ -138,7 +138,7 @@ final class te {
         return var4;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

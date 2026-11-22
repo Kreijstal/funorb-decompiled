@@ -317,7 +317,7 @@ final class tfa extends EventEffect {
             }
             qk.field_l = stackIn_116_0 + stackIn_117_1;
           }
-          HailSpecial.field_s = qaa.field_c - (qk.field_l >> 1);
+          HailSpecial.field_s = BoundedRandomAccessFile.field_c - (qk.field_l >> 1);
           a.field_m = new int[mj.field_h.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = HailSpecial.field_s;

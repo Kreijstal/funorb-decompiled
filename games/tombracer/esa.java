@@ -141,9 +141,9 @@ final class esa {
         int var1;
         int var3;
         this.field_b = new PlayerProfile();
-        this.field_d = new BitSet(aq.getMainRoomCount(-5640));
+        this.field_d = new BitSet(MainRoomCatalog.getMainRoomCount(-5640));
         var1 = 0;
-        for (var2 = 0; aq.getMainRoomCount(-5640) > var2; var2++) {
+        for (var2 = 0; MainRoomCatalog.getMainRoomCount(-5640) > var2; var2++) {
           if (var1 < 30) {
             var3 = LoadLevelCommand.getMainRoomKey(var2, (byte) 37);
             if (!AnimatedLight.findRoomDefinition(false, var3).field_d) {

@@ -49,7 +49,7 @@ final class SynthesizedSoundInstrument {
         return 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_f = null;
         field_v = null;
         field_l = null;

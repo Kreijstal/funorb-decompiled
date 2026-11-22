@@ -12,7 +12,7 @@ abstract class qf {
 
     abstract void a(byte param0, byte[] param1);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

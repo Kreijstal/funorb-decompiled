@@ -16,7 +16,7 @@ final class dn {
         this.field_b = param0 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != 10) {
           return;

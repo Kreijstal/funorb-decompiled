@@ -333,7 +333,7 @@ final class ah extends ub {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 <= 48) {
           field_i = (ci) null;

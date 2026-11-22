@@ -136,7 +136,7 @@ final class qr extends jq {
         ng.a(this.field_a, var4, var7, var5, this.field_f, param2 - 131, var6);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_k = null;
         field_l = null;
         field_q = null;

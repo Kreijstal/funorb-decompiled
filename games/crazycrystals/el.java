@@ -8,7 +8,7 @@ class el extends fb {
 
     void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
         if (param3 > -59) {
-          el.b(126);
+          el.clearStaticReferences(126);
         }
         if (param1 != 24) {
           this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
@@ -30,7 +30,7 @@ class el extends fb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_f = null;
         if (param0 != 2) {

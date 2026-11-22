@@ -63,7 +63,7 @@ final class ena extends pu {
         OneAnimation.field_E = FullHealEvent.a("action_bg", param1, "basic", (byte) -97);
         RefreshingAnimation.field_v = FullHealEvent.a("padlock", param1, "basic", (byte) 70);
         HomingMissileEvent.field_s = FullHealEvent.a("stamina", param1, "basic", (byte) 91);
-        vaa.field_b = FullHealEvent.a("speed", param1, "basic", (byte) -30);
+        GzipDecompressor.field_b = FullHealEvent.a("speed", param1, "basic", (byte) -30);
         dt.field_a = FullHealEvent.a("fisticuffs", param1, "basic", (byte) 74);
         DualLinkDeque.field_b = FullHealEvent.a("flingstuff", param1, "basic", (byte) 84);
         FlySpecial.field_p = gw.a("basic", "category_icons", param1, -102);

@@ -26,14 +26,14 @@ final class bq extends TextureOperator {
         try {
           ql.field_L.b(param0, param1 ^ -120);
           if (param1 != -1) {
-            bq.g(-18);
+            bq.clearStaticReferences(-18);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "bq.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_G = null;
         if (param0 <= 7) {
@@ -187,7 +187,7 @@ final class bq extends TextureOperator {
           var13Lifetime1 = var8Lifetime1 - var4;
           var14 = -var5Lifetime1 + var9Lifetime1;
           if (param0 >= -97) {
-            bq.g(19);
+            bq.clearStaticReferences(19);
           }
           var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + var13Lifetime1 * var13Lifetime1 + var12Lifetime1 * var12Lifetime1));
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);

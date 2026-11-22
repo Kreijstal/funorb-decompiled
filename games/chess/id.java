@@ -58,7 +58,7 @@ final class id {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 23111) {
           return;
         }

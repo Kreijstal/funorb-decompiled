@@ -54,7 +54,7 @@ final class pc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;
@@ -89,7 +89,7 @@ final class pc {
         n.field_b.a(false, lj.field_m);
     }
 
-    final static void b(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != -111) {
           field_c = (Sprite) null;
         }

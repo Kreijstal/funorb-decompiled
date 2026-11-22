@@ -283,7 +283,7 @@ abstract class um extends UiWidget implements dq {
         this.b(!param0 ? true : false);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_D = null;
         field_C = null;
         if (param0 <= 6) {

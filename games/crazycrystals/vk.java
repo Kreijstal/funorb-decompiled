@@ -79,7 +79,7 @@ final class vk extends og implements ho, vd {
         try {
           if (this.field_M != param4) {
             if (this.field_H == param4) {
-              ih.a((byte) 63);
+              GzipDecompressor.a((byte) 63);
             } else {
               if (this.field_G == param4) {
                 if (this.field_E) {

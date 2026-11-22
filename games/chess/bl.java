@@ -37,7 +37,7 @@ final class bl implements Iterable {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_b = (String) null;
@@ -64,7 +64,7 @@ final class bl implements Iterable {
         try {
           var3 = new mn();
           if (param0 != 0) {
-            bl.a(-105);
+            bl.clearStaticReferences(-105);
           }
           ((wn) ((Object) var3)).field_c = param1;
           ((wn) ((Object) var3)).field_a = param2;
@@ -255,7 +255,7 @@ final class bl implements Iterable {
           param0.next.previous = param0;
           param0.previous.next = param0;
           if (param2 != 31313) {
-            bl.a(-20);
+            bl.clearStaticReferences(-20);
           }
           param0.key = param1;
         } catch (RuntimeException runtimeException) {

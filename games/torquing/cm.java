@@ -186,7 +186,7 @@ final class cm extends uj {
         return var2 * var4 >> 12;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_k = null;
         if (param0 != 31003) {

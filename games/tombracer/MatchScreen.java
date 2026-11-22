@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class MatchScreen extends GameScreen implements rqa {
+final class MatchScreen extends GameScreen implements FrameDrawable {
     private int[] actionHoldTicks;
     MatchState matchState;
     private MatchProtocol protocol;

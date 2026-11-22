@@ -60,7 +60,7 @@ final class hn extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         if (param0 < 10) {
           return;

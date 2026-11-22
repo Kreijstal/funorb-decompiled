@@ -102,7 +102,7 @@ final class qh {
             }
           }
           if (param0 != -13716) {
-            qh.b((byte) -92);
+            qh.clearStaticReferences((byte) -92);
           }
           if (!o.field_n.a(param2, (byte) 71)) {
             o.field_n.a(param2, param0 ^ 13772);
@@ -347,7 +347,7 @@ final class qh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 75) {
           return;
         }

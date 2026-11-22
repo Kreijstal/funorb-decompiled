@@ -20,7 +20,7 @@ final class tf {
     static mi field_k;
     static double field_e;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_a = null;
         if (param0 >= 47) {
@@ -103,7 +103,7 @@ final class tf {
         if (param0 == 16777215) {
           return new double[]{this.field_i, this.field_f, this.field_j, this.field_h, this.field_q, this.field_o};
         }
-        tf.d(111);
+        tf.clearStaticReferences(111);
         return new double[]{this.field_i, this.field_f, this.field_j, this.field_h, this.field_q, this.field_o};
     }
 

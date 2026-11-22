@@ -32,7 +32,7 @@ final class dk extends da {
           var4 = 0;
           var5 = 0;
           if (!param1) {
-            dk.c((byte) -110);
+            dk.clearStaticReferences((byte) -110);
           }
           while (true) {
             if (6 <= var5) {
@@ -84,7 +84,7 @@ final class dk extends da {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_n = null;
         field_m = null;

@@ -30,7 +30,7 @@ final class ae extends w {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_lb = null;
         field_mb = null;
         if (param0 != 112) {

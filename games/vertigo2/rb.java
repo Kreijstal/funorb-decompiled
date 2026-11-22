@@ -5,7 +5,7 @@ abstract class rb {
     static String field_b;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_b = null;
         if (!param0) {

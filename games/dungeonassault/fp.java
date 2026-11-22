@@ -8,7 +8,7 @@ final class fp {
     static String field_a;
     static tf field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         field_e = null;

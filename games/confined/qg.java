@@ -65,7 +65,7 @@ final class qg extends mf {
         this.field_j = false;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -66) {
           return;
         }

@@ -49,7 +49,7 @@ final class mq extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 == 20370) {
           field_i = null;

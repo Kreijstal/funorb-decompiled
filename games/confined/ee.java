@@ -198,7 +198,7 @@ abstract class ee extends pm {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_H = (int[][]) null;
         field_O = (int[][]) null;
@@ -595,7 +595,7 @@ abstract class ee extends pm {
           var4 = var2.field_w;
           mk.b(param1 ^ 198);
           if (param1 != 70) {
-            ee.k(-74);
+            ee.clearStaticReferences(-74);
           }
           ad.field_b = new nf(var3, var4 * 3 / 4);
           ad.field_b.d();

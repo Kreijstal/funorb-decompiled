@@ -204,7 +204,7 @@ final class um extends PcmStream {
         return (PcmStream) ((Object) var1_ref.field_e);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         if (param0 <= 82) {
           return;

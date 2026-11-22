@@ -9,7 +9,7 @@ final class of extends pc {
     static String field_G;
 
     final static void e(byte param0) {
-        if (!gl.field_c) {
+        if (!BoundedRandomAccessFile.field_c) {
           throw new IllegalStateException();
         }
         jd.field_z = true;

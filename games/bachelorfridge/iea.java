@@ -8,7 +8,7 @@ final class iea {
     static Sprite field_a;
 
     final static void a(int param0, int param1, byte param2) {
-        qaa.field_c = param0;
+        BoundedRandomAccessFile.field_c = param0;
         if (param2 > -81) {
           return;
         }

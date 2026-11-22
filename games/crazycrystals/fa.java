@@ -95,7 +95,7 @@ class fa extends mg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_k = null;
         field_i = null;
         if (!param0) {

@@ -1721,7 +1721,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
-        this.field_i = (ud) ((Object) param0);
+        this.field_i = (AudioSample) ((Object) param0);
         this.field_s = param0.field_k;
         this.field_v = param0.field_g;
         this.field_t = param0.field_h;

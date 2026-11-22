@@ -21,7 +21,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 3) {
           return;
         }

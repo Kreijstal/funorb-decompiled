@@ -12,7 +12,7 @@ final class ce {
         return param0 & param1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }
@@ -94,7 +94,7 @@ final class ce {
           pi.field_d.a(54, param0);
           var13 = pi.field_d;
           if (param1 > -71) {
-            ce.a(false);
+            ce.clearStaticReferences(false);
           }
           var3 = re.field_m;
           var4 = ag.field_f;

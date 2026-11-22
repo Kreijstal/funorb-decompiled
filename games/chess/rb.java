@@ -77,7 +77,7 @@ final class rb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -18067) {
           field_a = (String) null;
         }

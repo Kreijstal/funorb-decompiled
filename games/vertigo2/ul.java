@@ -17,7 +17,7 @@ final class ul {
     byte[] field_g;
     private static short[] field_h;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = null;
         field_m = null;
         field_j = null;

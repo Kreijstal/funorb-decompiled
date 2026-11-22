@@ -325,7 +325,7 @@ final class mk {
         this.a((byte) 21, this.field_d[2], dt.field_a, 154, 472, 2);
         this.a((byte) 21, this.field_d[3], DualLinkDeque.field_b, 184, 472, 3);
         this.a((byte) 21, this.field_d[0], HomingMissileEvent.field_s, 216, 472, 0);
-        this.a((byte) 21, this.field_d[1], vaa.field_b, 243, 472, 1);
+        this.a((byte) 21, this.field_d[1], GzipDecompressor.field_b, 243, 472, 1);
         this.c(false);
         SnowAnimation.field_y.draw(470, 320);
         stackIn_7_0 = jha.field_g;

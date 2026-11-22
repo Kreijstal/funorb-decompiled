@@ -4,7 +4,7 @@
 final class kca {
     static PalettedBitmapFont field_c;
     static int field_a;
-    static vaa field_b;
+    static GzipDecompressor field_b;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -18,6 +18,6 @@ final class kca {
     static {
         field_z = "kca.A(";
         field_a = 0;
-        field_b = new vaa();
+        field_b = new GzipDecompressor();
     }
 }

@@ -9,7 +9,7 @@ final class le {
     static String field_c;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 < -42) {
           field_c = null;

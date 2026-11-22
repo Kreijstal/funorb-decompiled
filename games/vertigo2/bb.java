@@ -181,7 +181,7 @@ final class bb extends TextureOperator {
         this.field_z = new int[3];
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_F = null;
         field_y = null;

@@ -169,7 +169,7 @@ final class nv extends UiComponent {
         if (!PlaceCreatureEffect.d((byte) 64)) {
           return false;
         }
-        int var4 = vaa.a(param3, 1, param0) ? 1 : 0;
+        int var4 = GzipDecompressor.a(param3, 1, param0) ? 1 : 0;
         if (gf.field_k == 80 ||
           gf.field_k == 84) {
           var4 = 1;

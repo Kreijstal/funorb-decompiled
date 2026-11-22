@@ -19,7 +19,7 @@ final class sb extends pc {
         if (param0 < -23) {
           return null;
         }
-        sb.e((byte) -41);
+        sb.clearStaticReferences((byte) -41);
         return null;
     }
 
@@ -111,7 +111,7 @@ final class sb extends pc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 2) {
           field_B = null;
           field_C = null;
@@ -168,7 +168,7 @@ final class sb extends pc {
               var20.d(-(var20.field_l >> 1) + var5, -(var20.field_u >> 1) + var6, 256);
               return;
             }
-            if (ih.field_b != var8) {
+            if (GzipDecompressor.field_b != var8) {
               return;
             }
             var21 = ao.field_b[1];
@@ -226,7 +226,7 @@ final class sb extends pc {
             var17.d(-(var17.field_l >> 1) + var5, -(var17.field_u >> 1) + var6, 256);
             return;
           }
-          if (ih.field_b != var8Lifetime1) {
+          if (GzipDecompressor.field_b != var8Lifetime1) {
             return;
           }
           var18 = ao.field_b[1];

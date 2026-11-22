@@ -11,7 +11,7 @@ final class mk {
     final static boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 107) {
-          mk.a((byte) -116);
+          mk.clearStaticReferences((byte) -116);
         }
         stackIn_6_0 = (null != ji.field_V) && (ji.field_V.k(-120) != null);
         return stackIn_6_0;
@@ -200,7 +200,7 @@ final class mk {
               var45.field_cb = 1;
               for (var18_int = 0; qa.field_e > var18_int; var18_int++) {
                 var12.field_Ob[var18_int] = new ci(0L, (ci) null);
-                if ((1 << eg.field_h + var18_int & var14) != 0) {
+                if ((1 << BoundedRandomAccessFile.field_h + var18_int & var14) != 0) {
                   var12.field_fc.a((byte) 125, var12.field_Ob[var18_int]);
                 }
                 var12.field_Ob[var18_int].field_cb = 1;
@@ -415,7 +415,7 @@ final class mk {
               if (null != ae.field_b) {
                 for (var36Lifetime1 = 0; qa.field_e > var36Lifetime1; var36Lifetime1++) {
                   if (ae.field_b[var36Lifetime1] != null &&
-                    (1 << eg.field_h + var36Lifetime1 & var14Lifetime1) != 0) {
+                    (1 << BoundedRandomAccessFile.field_h + var36Lifetime1 & var14Lifetime1) != 0) {
                     var42 = ae.field_b[var36Lifetime1][255 & var12.field_sc[var36Lifetime1]];
                     var54 = var42;
                     var12.field_Ob[var36Lifetime1].field_jb = var42;
@@ -578,7 +578,7 @@ final class mk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_e = null;
         if (param0 > -51) {

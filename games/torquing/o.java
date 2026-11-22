@@ -25,10 +25,10 @@ final class o {
         var7 = Torquing.field_u;
         if (this.field_e != -1L) {
           if (~this.field_e != ~this.field_h) {
-            this.field_d.a(-2, this.field_e);
+            this.field_d.seek(-2, this.field_e);
             this.field_h = this.field_e;
           }
-          this.field_d.a(this.field_b, 2, 0, this.field_g);
+          this.field_d.write(this.field_b, 2, 0, this.field_g);
           this.field_h = this.field_h + (long)this.field_b;
           if (this.field_k < this.field_h) {
             this.field_k = this.field_h;
@@ -62,7 +62,7 @@ final class o {
           this.field_e = -1L;
         }
         if (param0 <= 45) {
-          o.b(77);
+          o.clearStaticReferences(77);
         }
     }
 
@@ -75,7 +75,7 @@ final class o {
 
     final void a(boolean param0) throws IOException {
         this.c(116);
-        this.field_d.a((byte) -118);
+        this.field_d.close((byte) -118);
         if (param0) {
           this.b(false);
         }
@@ -120,10 +120,10 @@ final class o {
             }
             if (this.field_g.length < param1) {
               if (this.field_i != this.field_h) {
-                this.field_d.a(-2, this.field_i);
+                this.field_d.seek(-2, this.field_i);
                 this.field_h = this.field_i;
               }
-              this.field_d.a(param1, 2, param2, param3);
+              this.field_d.write(param1, 2, param2, param3);
               this.field_h = this.field_h + (long)param1;
               if (this.field_h > this.field_k) {
                 this.field_k = this.field_h;
@@ -191,7 +191,7 @@ final class o {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           field_c = (String) null;
         }
@@ -204,7 +204,7 @@ final class o {
         int var4 = Torquing.field_u;
         this.field_j = 0;
         if (this.field_i != this.field_h) {
-          this.field_d.a(-2, this.field_i);
+          this.field_d.seek(-2, this.field_i);
           this.field_h = this.field_i;
         }
         this.field_f = this.field_i;
@@ -216,7 +216,7 @@ final class o {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_d.a(var2, this.field_j, this.field_a, 15389);
+          var3 = this.field_d.read(var2, this.field_j, this.field_a, 15389);
           if (var3 == -1) {
             break;
           }
@@ -276,10 +276,10 @@ final class o {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_a.length < param2) {
-              this.field_d.a(-2, this.field_i);
+              this.field_d.seek(-2, this.field_i);
               this.field_h = this.field_i;
               while (param2 > 0) {
-                var10_intLifetime1 = this.field_d.a(param2, param0, param1, 15389);
+                var10_intLifetime1 = this.field_d.read(param2, param0, param1, 15389);
                 if (var10_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -379,7 +379,7 @@ final class o {
         }
         this.field_i = param1;
         if (param0) {
-          o.b(116);
+          o.clearStaticReferences(116);
         }
     }
 
@@ -401,7 +401,7 @@ final class o {
         this.field_b = 0;
         try {
           this.field_d = param0;
-          dupTemp$0 = param0.b((byte) 94);
+          dupTemp$0 = param0.length((byte) 94);
           this.field_k = dupTemp$0;
           this.field_l = dupTemp$0;
           this.field_i = 0L;

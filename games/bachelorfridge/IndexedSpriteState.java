@@ -37,7 +37,7 @@ abstract class IndexedSpriteState {
         lr.field_k[13] = dh.field_i;
         lr.field_k[24] = nla.field_c;
         lr.field_k[22] = rc.field_k;
-        lr.field_k[1] = qaa.field_a;
+        lr.field_k[1] = BoundedRandomAccessFile.field_a;
         lr.field_k[7] = nha.field_b;
         lr.field_k[9] = ul.field_o;
         lr.field_k[4] = wa.field_l;

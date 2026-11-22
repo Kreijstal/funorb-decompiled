@@ -8,7 +8,7 @@ abstract class pb {
 
     abstract pb b(byte param0);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -31237) {
           return;
         }
@@ -75,7 +75,7 @@ abstract class pb {
           param0 = param0 | param0 >>> 16;
           return 1 + param0;
         }
-        pb.a(73);
+        pb.clearStaticReferences(73);
         param0 = param0 | param0 >>> 16;
         return 1 + param0;
     }

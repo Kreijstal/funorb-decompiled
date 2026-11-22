@@ -283,7 +283,7 @@ final class pfa {
         this.a(dt.field_a, var10.field_k[2], -128, 400, 174, 2);
         this.a(DualLinkDeque.field_b, var10.field_k[3], -128, 400, 204, 3);
         this.a(HomingMissileEvent.field_s, var10.field_k[0], -128, 400, 236, 0);
-        this.a(vaa.field_b, var10.field_k[1], -128, 400, 263, 1);
+        this.a(GzipDecompressor.field_b, var10.field_k[1], -128, 400, 263, 1);
         ce.a(true, 16776960, 155, var13.field_n, 320, true);
         jha.field_g.a(DelegatingCanvas.field_a, 390, 368, 16776960, -1);
         WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 390, 368, 65793, -1);

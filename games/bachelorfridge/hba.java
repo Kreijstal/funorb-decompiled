@@ -205,7 +205,7 @@ final class hba extends AttackEvent {
           StickyAnimation.field_x = FullHealEvent.a("selected_dot", param1, "basic", (byte) 110);
           SnowAnimation.field_y = FullHealEvent.a("creatureviewer_button", param1, "basic", (byte) 103);
           HomingMissileEvent.field_s = FullHealEvent.a("stamina", param1, "basic", (byte) 66);
-          vaa.field_b = FullHealEvent.a("speed", param1, "basic", (byte) 81);
+          GzipDecompressor.field_b = FullHealEvent.a("speed", param1, "basic", (byte) 81);
           dt.field_a = FullHealEvent.a("fisticuffs", param1, "basic", (byte) 67);
           DualLinkDeque.field_b = FullHealEvent.a("flingstuff", param1, "basic", (byte) 69);
           OneAnimation.field_E = FullHealEvent.a("action_bg", param1, "basic", (byte) 117);

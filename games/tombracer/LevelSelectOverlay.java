@@ -210,7 +210,7 @@ final class LevelSelectOverlay implements ShellListener {
             if (ComponentTargetList.field_e == null) {
               return;
             }
-            var2_int = aq.getMainRoomCount(-5640);
+            var2_int = MainRoomCatalog.getMainRoomCount(-5640);
             if (null == this.field_d ||
               var2_int != this.field_d.length) {
               this.field_b = new int[var2_int];
@@ -358,7 +358,7 @@ final class LevelSelectOverlay implements ShellListener {
             var4_int = 0;
             var5 = 0;
             scanLoop1: while (true) {
-              if (var5 < aq.getMainRoomCount(-5640)) {
+              if (var5 < MainRoomCatalog.getMainRoomCount(-5640)) {
                 stackIn_45_0 = var4_int;
                 if (var7 != 0) {
                   break scanLoop1;
@@ -389,7 +389,7 @@ final class LevelSelectOverlay implements ShellListener {
           } while (var7 == 0);
           var5Lifetime1 = 0;
           scanLoop2: while (true) {
-            if (var5Lifetime1 < aq.getMainRoomCount(param0 - 5568)) {
+            if (var5Lifetime1 < MainRoomCatalog.getMainRoomCount(param0 - 5568)) {
               stackIn_32_0 = 30;
               if (var7 != 0) {
                 break scanLoop2;

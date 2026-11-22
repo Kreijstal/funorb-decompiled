@@ -153,7 +153,7 @@ final class id implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         field_c = null;
@@ -232,7 +232,7 @@ final class id implements Iterator {
         var14 = DungeonAssault.field_K;
         try {
           if (param2 <= 86) {
-            id.a((byte) -84);
+            id.clearStaticReferences((byte) -84);
           }
           for (var12 = -param3; var12 < 0; var12++) {
             for (var13 = -param7; 0 > var13; var13++) {

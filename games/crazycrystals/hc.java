@@ -23,7 +23,7 @@ final class hc {
         ue.field_c = param1 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -21017) {
           return;

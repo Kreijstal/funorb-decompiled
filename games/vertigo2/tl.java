@@ -7,7 +7,7 @@ final class tl {
     static Archive field_c;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;

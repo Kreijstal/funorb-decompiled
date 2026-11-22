@@ -100,13 +100,13 @@ final class ni {
     }
 
     final static void b(int param0) {
-        if (sl.field_a != param0 - eg.field_i &&
-          sl.field_a == -eg.field_i + 250) {
+        if (sl.field_a != param0 - BoundedRandomAccessFile.field_i &&
+          sl.field_a == -BoundedRandomAccessFile.field_i + 250) {
         }
         sl.field_a = sl.field_a + 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 0) {

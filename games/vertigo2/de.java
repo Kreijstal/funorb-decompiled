@@ -86,7 +86,7 @@ abstract class de implements of {
         return this.f(param0 ^ 27232);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 21283) {
           return;
         }

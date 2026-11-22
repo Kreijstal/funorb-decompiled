@@ -8,7 +8,7 @@ final class fb {
     static vj field_a;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         field_d = null;

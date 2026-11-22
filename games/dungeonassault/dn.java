@@ -309,7 +309,7 @@ final class dn extends ii implements jo, vg {
             }
             this.field_K = new ck(stackIn_19_3, (pg) null);
             if (this.field_P) {
-              this.field_V = new ck(qp.field_c, (pg) (this));
+              this.field_V = new ck(BoundedRandomAccessFile.field_c, (pg) (this));
             }
           } else {
             this.field_U = new ck(kn.field_a, (pg) null);

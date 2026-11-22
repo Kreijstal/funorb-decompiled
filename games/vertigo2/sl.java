@@ -86,7 +86,7 @@ final class sl extends ro {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_u = null;
         field_x = null;

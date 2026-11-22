@@ -9,7 +9,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_i;
     static tc field_b;
     static String field_a;
-    static uk field_f;
+    static GzipDecompressor field_f;
     static String[] field_h;
     static String field_d;
 
@@ -79,6 +79,6 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_a = "Only triggers once per raid.";
         field_d = "Orb of Preservation";
         field_h = new String[]{"<%0> the Warrior", "<%0> the Veteran", "<%0> the Elder", "<%0> the Venerated", "<%0> the Ancient", "<%0> the Immortal"};
-        field_f = new uk();
+        field_f = new GzipDecompressor();
     }
 }

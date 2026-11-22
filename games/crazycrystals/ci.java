@@ -34,7 +34,7 @@ final class ci extends se {
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (param1 == -122) {
-              stackIn_12_0 = ih.field_b;
+              stackIn_12_0 = GzipDecompressor.field_b;
               return stackIn_12_0;
             }
             stackIn_10_0 = (oi) null;

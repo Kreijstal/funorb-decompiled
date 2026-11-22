@@ -1669,7 +1669,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_username_unavailable", -97);
                 if (null != var2) {
-                  eg.field_g = ad.a(-29410, var2);
+                  BoundedRandomAccessFile.field_g = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_username_available", -97);
                 if (var2 != null) {
@@ -2490,7 +2490,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mp_x_hasresignedandleft", -100);
                 if (var2 != null) {
-                  eg.field_d = ad.a(-29410, var2);
+                  BoundedRandomAccessFile.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mp_x_hasresigned_rematch", -77);
                 if (null != var2) {

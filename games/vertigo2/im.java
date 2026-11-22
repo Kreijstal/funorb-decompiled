@@ -70,10 +70,10 @@ final class im {
               return;
             }
             if (this.field_n != this.field_d) {
-              this.field_f.a(this.field_d, false);
+              this.field_f.seek(this.field_d, false);
               this.field_n = this.field_d;
             }
-            this.field_f.a(param1, param2, param3, false);
+            this.field_f.write(param1, param2, param3, false);
             this.field_n = this.field_n + (long)param1;
             if (this.field_i < this.field_n) {
               this.field_i = this.field_n;
@@ -177,10 +177,10 @@ final class im {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param3 > this.field_o.length) {
-              this.field_f.a(this.field_d, false);
+              this.field_f.seek(this.field_d, false);
               this.field_n = this.field_d;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_f.a(param3, (byte) -84, param2, param1);
+                var9_intLifetime1 = this.field_f.read(param3, (byte) -84, param2, param1);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -286,7 +286,7 @@ final class im {
         if (param0 != -22473) {
           this.field_e = -20L;
         }
-        this.field_f.a(0);
+        this.field_f.close(0);
     }
 
     final void a(int param0, long param1) throws IOException {
@@ -309,12 +309,12 @@ final class im {
 
     final static boolean a(int param0) {
         if (param0 != -1) {
-          im.e(-33);
+          im.clearStaticReferences(-33);
         }
         return !hj.field_b ? true : false;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 7) {
           return;
         }
@@ -330,10 +330,10 @@ final class im {
         var7 = Vertigo2.field_L ? 1 : 0;
         if (this.field_e != -1L) {
           if (this.field_n != this.field_e) {
-            this.field_f.a(this.field_e, false);
+            this.field_f.seek(this.field_e, false);
             this.field_n = this.field_e;
           }
-          this.field_f.a(this.field_l, 0, this.field_m, false);
+          this.field_f.write(this.field_l, 0, this.field_m, false);
           this.field_n = this.field_n + (long)this.field_l;
           if (this.field_n > this.field_i) {
             this.field_i = this.field_n;
@@ -378,7 +378,7 @@ final class im {
         this.field_e = -1L;
         try {
           this.field_f = param0;
-          dupTemp$0 = param0.b(0);
+          dupTemp$0 = param0.length(0);
           this.field_i = dupTemp$0;
           this.field_a = dupTemp$0;
           this.field_m = new byte[param2];
@@ -395,7 +395,7 @@ final class im {
         int var5 = Vertigo2.field_L ? 1 : 0;
         this.field_b = 0;
         if (~this.field_n != ~this.field_d) {
-          this.field_f.a(this.field_d, false);
+          this.field_f.seek(this.field_d, false);
           this.field_n = this.field_d;
         }
         this.field_k = this.field_d;
@@ -405,7 +405,7 @@ final class im {
           if (var3 > 200000000) {
             var3 = 200000000;
           }
-          var4 = this.field_f.a(var3, (byte) -90, this.field_o, this.field_b);
+          var4 = this.field_f.read(var3, (byte) -90, this.field_o, this.field_b);
           if (var4 == -1) {
             break;
           }

@@ -6,7 +6,7 @@ final class ml {
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

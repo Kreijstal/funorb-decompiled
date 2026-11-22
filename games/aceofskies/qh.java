@@ -60,7 +60,7 @@ final class qh {
         return (param0 & 52) != 0 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -77) {
           field_b = (String) null;
         }

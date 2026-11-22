@@ -14,7 +14,7 @@ final class ch {
     static String field_f;
     static sd field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         if (param0 != -81) {

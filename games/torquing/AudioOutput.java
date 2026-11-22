@@ -259,7 +259,7 @@ class AudioOutput {
         this.field_t = param0;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_u = null;
     }
 

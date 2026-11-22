@@ -60,7 +60,7 @@ final class hm extends TextureOperator {
               if (var3 != 1) {
                 var7 = uo.field_g;
                 synchronized (var7) {
-                  uo.field_g.a(var9, (byte) 88, var12);
+                  uo.field_g.decompress(var9, (byte) 88, var12);
                 }
               } else {
                 rj.a(var12, var5_int, param1, var4, 9);

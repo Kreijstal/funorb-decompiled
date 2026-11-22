@@ -291,7 +291,7 @@ final class mj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 18641) {
           field_c = (Sprite[]) null;
         }

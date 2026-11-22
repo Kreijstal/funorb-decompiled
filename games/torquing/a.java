@@ -9,7 +9,7 @@ final class a {
     static String field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_a = null;
         field_b = null;

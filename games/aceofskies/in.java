@@ -7,7 +7,7 @@ final class in {
     static RenderSprite[] scoreDigitSprites;
     private OpenGlRenderer field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_b = (int[]) null;
         }

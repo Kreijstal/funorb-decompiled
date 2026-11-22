@@ -28,7 +28,7 @@ final class hd {
         ok.field_a.b(0, var1Lifetime1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -1246) {
           field_d = null;
           field_c = null;

@@ -10,7 +10,7 @@ final class bd extends am {
     static Sprite field_w;
     static double field_y;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -160,7 +160,7 @@ final class bd extends am {
         var5 = Torquing.field_u;
         try {
           if (param1 != 35) {
-            bd.a(true);
+            bd.clearStaticReferences(true);
           }
           var4_int = param2;
           if (var4_int != 0) {

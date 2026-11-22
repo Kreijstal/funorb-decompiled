@@ -307,12 +307,12 @@ final class ItemModel extends TrapModel {
           if (hna.field_e == null) {
             var7 = new LegacyRidgedWaterNoise();
             var19 = var7.generate(16, 128, 0, 128);
-            hna.field_e = bw.wrapByteStorage(270, var19, false);
+            hna.field_e = ByteStorageFactory.wrapByteStorage(270, var19, false);
           }
           if (null == TreasureValuesOverlay.field_l) {
             var9 = new LegacyTurbulentWaterNoise();
             var20 = var9.generate(128, 16, 123, 128);
-            TreasureValuesOverlay.field_l = bw.wrapByteStorage(270, var20, false);
+            TreasureValuesOverlay.field_l = ByteStorageFactory.wrapByteStorage(270, var20, false);
           }
           var11 = param0.field_zc;
           if (param1 < 116) {
@@ -323,7 +323,7 @@ final class ItemModel extends TrapModel {
               return;
             }
             var21 = LightSourceModel.generateNoiseTexture(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-            LegacyOpenGlTexture1D.field_m = bw.wrapByteStorage(270, var21, false);
+            LegacyOpenGlTexture1D.field_m = ByteStorageFactory.wrapByteStorage(270, var21, false);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -42,7 +42,7 @@ final class sd {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != -4) {
           field_c = (int[]) null;
         }
@@ -50,7 +50,7 @@ final class sd {
 
     final int b(int param0) {
         if (param0 < 42) {
-          sd.a((byte) 37);
+          sd.clearStaticReferences((byte) 37);
           if (this.field_e == null) {
             return 0;
           }
@@ -68,7 +68,7 @@ final class sd {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         field_c = null;

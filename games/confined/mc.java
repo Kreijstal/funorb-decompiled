@@ -4,7 +4,7 @@
 final class mc {
     static long field_a;
     static int field_c;
-    static ln field_d;
+    static GzipDecompressor field_d;
     static boolean[] field_e;
     static double[] field_b;
 
@@ -74,7 +74,7 @@ final class mc {
 
     static {
         field_e = new boolean[112];
-        field_d = new ln();
+        field_d = new GzipDecompressor();
         field_b = new double[]{16.0, -672.0, -16.0};
     }
 }

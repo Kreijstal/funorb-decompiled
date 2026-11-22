@@ -8,14 +8,14 @@ final class un implements Runnable {
     private in field_t;
     private static String field_r;
     private gb field_o;
-    gl field_g;
+    BoundedRandomAccessFile field_g;
     private gb field_b;
     private static int field_c;
     static String field_m;
     private Object field_w;
-    gl field_s;
+    BoundedRandomAccessFile field_s;
     private boolean field_q;
-    gl[] field_n;
+    BoundedRandomAccessFile[] field_n;
     static String field_u;
     static java.lang.reflect.Method field_l;
     private static volatile long field_k;
@@ -26,7 +26,7 @@ final class un implements Runnable {
     private boolean field_i;
     private static String field_f;
     boolean field_h;
-    gl field_p;
+    BoundedRandomAccessFile field_p;
     private static String field_a;
 
     final gb a(byte param0, Class param1, Class[] param2, String param3) {
@@ -54,16 +54,16 @@ final class un implements Runnable {
         return this.a(0, 9, new Object[]{param2, param1}, true, 0);
     }
 
-    private final static gl a(String param0, int param1, int param2, String param3) {
+    private final static BoundedRandomAccessFile a(String param0, int param1, int param2, String param3) {
         try {
-          gl stackIn_14_0 = null;
+          BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           int var6 = 0;
           String var7 = null;
-          gl var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           if (33 != param2) {
             if (param2 == 34) {
@@ -77,7 +77,7 @@ final class un implements Runnable {
           var5 = new String[]{"c:/rscache/", "/rscache/", field_f, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           var6 = 0;
           if (param1 >= -12) {
-            return (gl) null;
+            return (BoundedRandomAccessFile) null;
           }
           while (var6 < var5.length) {
             var7 = var5[var6];
@@ -88,7 +88,7 @@ final class un implements Runnable {
             }
             while (true) {
               try {
-                var8 = new gl(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_14_0 = var8;
                 return stackIn_14_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -204,7 +204,7 @@ final class un implements Runnable {
           }
           if (this.field_p != null) {
             try {
-              this.field_p.d(107);
+              this.field_p.close(107);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -212,7 +212,7 @@ final class un implements Runnable {
           }
           if (null != this.field_g) {
             try {
-              this.field_g.d(102);
+              this.field_g.close(102);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -222,7 +222,7 @@ final class un implements Runnable {
             for (var2_int = 0; var2_int < this.field_n.length; var2_int++) {
               if (this.field_n[var2_int] != null) {
                 try {
-                  this.field_n[var2_int].d(119);
+                  this.field_n[var2_int].close(119);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -232,7 +232,7 @@ final class un implements Runnable {
           }
           if (null != this.field_s) {
             try {
-              this.field_s.d(98);
+              this.field_s.close(98);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -263,7 +263,7 @@ final class un implements Runnable {
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
           va var3_ref = null;
-          gl var3_ref2 = null;
+          BoundedRandomAccessFile var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
           int var4_int = 0;
@@ -603,12 +603,12 @@ final class un implements Runnable {
         }
         lh.a(-98, field_a, field_c);
         if (this.field_h) {
-          this.field_s = new gl(lh.a((String) null, 6234, "random.dat", field_c), "rw", 25L);
-          this.field_p = new gl(lh.a("main_file_cache.dat2", -93), "rw", 314572800L);
-          this.field_g = new gl(lh.a("main_file_cache.idx255", -86), "rw", 1048576L);
-          this.field_n = new gl[param2];
+          this.field_s = new BoundedRandomAccessFile(lh.a((String) null, 6234, "random.dat", field_c), "rw", 25L);
+          this.field_p = new BoundedRandomAccessFile(lh.a("main_file_cache.dat2", -93), "rw", 314572800L);
+          this.field_g = new BoundedRandomAccessFile(lh.a("main_file_cache.idx255", -86), "rw", 1048576L);
+          this.field_n = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_n[var5_int] = new gl(lh.a("main_file_cache.idx" + var5_int, -95), "rw", 1048576L);
+            this.field_n[var5_int] = new BoundedRandomAccessFile(lh.a("main_file_cache.idx" + var5_int, -95), "rw", 1048576L);
           }
           if (this.field_i) {
             try {

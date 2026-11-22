@@ -59,7 +59,7 @@ class fj extends IntrusiveNode {
         this.a(-125, this.field_F, this.field_m, this.field_z, this.field_q);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_r = null;
         if (param0 != 296) {

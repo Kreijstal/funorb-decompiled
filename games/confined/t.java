@@ -220,7 +220,7 @@ final class t {
         }
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_r = null;
         field_d = null;
         field_f = null;

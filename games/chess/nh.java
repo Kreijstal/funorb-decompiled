@@ -2425,7 +2425,7 @@ final class nh {
         field_f = param1 - var3;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_p = null;
         field_d = null;
         field_q = null;

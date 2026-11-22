@@ -237,7 +237,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -123, "mu_lobby_friend_rm");
                 if (null != var2) {
-                  ai.field_d = jaa.decodeText((byte) 64, var2);
+                  AvailabilityQueryFactory.field_d = jaa.decodeText((byte) 64, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mu_lobby_name_add");
                 if (null != var2) {
@@ -769,7 +769,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_membersonly");
                 if (null != var2) {
-                  ai.field_b = jaa.decodeText((byte) 36, var2);
+                  AvailabilityQueryFactory.field_b = jaa.decodeText((byte) 36, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_1moreratedgame");
                 if (null != var2) {
@@ -927,7 +927,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 118, "rule_pillar_0");
                 if (var2 != null) {
-                  ai.field_c = jaa.decodeText((byte) 38, var2);
+                  AvailabilityQueryFactory.field_c = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 110, "rule_0_0");
                 if (var2 != null) {
@@ -1683,7 +1683,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 109, "friendlistfull");
                 if (null != var2) {
-                  bq.field_b = jaa.decodeText((byte) 41, var2);
+                  MidiPatchEnvelope.field_b = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 106, "friendlistdupe");
                 if (var2 != null) {
@@ -2751,15 +2751,15 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -54, "hs_mode_name,0");
                 if (var2 != null) {
-                  bi.field_b[0] = jaa.decodeText((byte) 60, var2);
+                  SoftwareRasterBlitter.field_b[0] = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -119, "hs_mode_name,1");
                 if (null != var2) {
-                  bi.field_b[1] = jaa.decodeText((byte) 93, var2);
+                  SoftwareRasterBlitter.field_b[1] = jaa.decodeText((byte) 93, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -32, "hs_mode_name,2");
                 if (null != var2) {
-                  bi.field_b[2] = jaa.decodeText((byte) 40, var2);
+                  SoftwareRasterBlitter.field_b[2] = jaa.decodeText((byte) 40, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -123, "rating_mode_name,0");
                 if (null != var2) {

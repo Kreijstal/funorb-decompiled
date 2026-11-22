@@ -149,7 +149,7 @@ abstract class rg extends gm {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_A = (nf) null;
         }
@@ -160,7 +160,7 @@ abstract class rg extends gm {
 
     void f(byte param0) {
         if (param0 > -28) {
-          rg.d(true);
+          rg.clearStaticReferences(true);
         }
     }
 

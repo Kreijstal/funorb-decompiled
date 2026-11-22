@@ -25,7 +25,7 @@ final class nj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 12) {
           return;
         }
@@ -77,10 +77,10 @@ final class nj {
             var22 = this.field_b.substring(var6 + 1);
             var9 = go.field_l.a(var21);
             var10 = go.field_l.a(var22);
-            ih.a((byte) -20, var9, var21, param1 + 4 + 31);
-            ih.a((byte) -20, var10, var22, 36 + param1 + 4 + 15);
+            GzipDecompressor.a((byte) -20, var9, var21, param1 + 4 + 31);
+            GzipDecompressor.a((byte) -20, var10, var22, 36 + param1 + 4 + 15);
           } else {
-            ih.a((byte) -20, var5, this.field_b, 36 + (param1 + 4 + 5));
+            GzipDecompressor.a((byte) -20, var5, this.field_b, 36 + (param1 + 4 + 5));
           }
           if (null != this.field_l) {
             param1 -= 12;
@@ -114,7 +114,7 @@ final class nj {
                 (8 & this.field_m) == 0) {
                 var7_ref_String = var19 + '_';
               }
-              ih.a((byte) -20, var9, var7_ref_String, -1 + (param1 + 36));
+              GzipDecompressor.a((byte) -20, var9, var7_ref_String, -1 + (param1 + 36));
             } else {
               var10 = go.field_l.a(var17);
               var18 = var17.substring(0, -var6 + (this.field_h - 1));
@@ -128,8 +128,8 @@ final class nj {
                 var7_ref_String = var8;
                 var7_ref_String = var8;
               }
-              ih.a((byte) -20, var9, var16, -1 + (param1 + 36));
-              ih.a((byte) -20, var10, var8, 15 + (param1 + 4 + 36));
+              GzipDecompressor.a((byte) -20, var9, var16, -1 + (param1 + 36));
+              GzipDecompressor.a((byte) -20, var10, var8, 15 + (param1 + 4 + 36));
             }
           } else {
             var14 = this.field_b;
@@ -148,7 +148,7 @@ final class nj {
               var7_ref_String = var8;
               var8 = var7_ref_String;
             }
-            ih.a((byte) -20, var5, var7_ref_String, 41 + (param1 + 4));
+            GzipDecompressor.a((byte) -20, var5, var7_ref_String, 41 + (param1 + 4));
           }
           if (this.field_l != null) {
             param1 -= 12;

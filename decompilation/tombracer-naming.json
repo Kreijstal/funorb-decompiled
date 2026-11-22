@@ -924,6 +924,14 @@
       "renamedSymbol": "C:VorbisResidue"
     },
     {
+      "symbol": "C:ai",
+      "originalName": "ai",
+      "to": "AvailabilityQueryFactory",
+      "evidence": "Owned createAvailabilityQuery method and both SequencePlayer/CharacterChoice callers create the asynchronous name availability query. Unrelated localized strings and chat flag remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AvailabilityQueryFactory"
+    },
+    {
       "symbol": "C:aia",
       "originalName": "aia",
       "to": "PitSnake",
@@ -1026,6 +1034,14 @@
       "evidence": "GamePacket writing a 4-bit character id; CharacterSelectPhase sends it through MatchProtocol.sendCharacterChoice.",
       "confidence": "reviewed",
       "renamedSymbol": "C:C2SChooseCharacterPacket"
+    },
+    {
+      "symbol": "C:aq",
+      "originalName": "aq",
+      "to": "MainRoomCatalog",
+      "evidence": "Owned getMainRoomCount method returns CourseDefinition room array length; level selection, demo generation and completion masks consume it. Unrelated tiled-frame sprites remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MainRoomCatalog"
     },
     {
       "symbol": "C:ar",
@@ -1204,6 +1220,14 @@
       "renamedSymbol": "C:FleeLocomotor"
     },
     {
+      "symbol": "C:bi",
+      "originalName": "bi",
+      "to": "SoftwareRasterBlitter",
+      "evidence": "Complete owned blitSoftwareRasterRegion body clips to UiComponent bounds, uploads the global SoftwareRasterizer pixel region via GraphicsToolkit and pops the clip; TombRacer frame caller reviewed. Unrelated statics remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SoftwareRasterBlitter"
+    },
+    {
       "symbol": "C:bia",
       "originalName": "bia",
       "to": "CauldronComponent",
@@ -1308,6 +1332,14 @@
       "renamedSymbol": "C:RoundWinnerPhase"
     },
     {
+      "symbol": "C:bq",
+      "originalName": "bq",
+      "to": "MidiPatchEnvelope",
+      "evidence": "Complete class fields reviewed. MidiPatch constructs shared per-key envelope objects with paired time/value byte arrays; MidiVoice holds one, and MidiPcmStream applies interpolated amplitude/release envelopes, exponential decay and vibrato parameters. Unrelated static raster circle helper and strings remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MidiPatchEnvelope"
+    },
+    {
       "symbol": "C:bqa",
       "originalName": "bqa",
       "to": "S2CNewRoomPacket",
@@ -1370,6 +1402,14 @@
       "evidence": "UiComponent with tab buttons and pages; processes tab presses and lays out the tabs.",
       "confidence": "reviewed",
       "renamedSymbol": "C:TabbedPanel"
+    },
+    {
+      "symbol": "C:bw",
+      "originalName": "bw",
+      "to": "ByteStorageFactory",
+      "evidence": "Complete wrapByteStorage body preserves null/guard behavior, >136 direct storage, optional small-array copy, and original array sharing. ResourceArchive and hardware-texture consumers reviewed; unrelated scratch raster globals remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ByteStorageFactory"
     },
     {
       "symbol": "C:c",
@@ -4308,6 +4348,14 @@
       "renamedSymbol": "C:AccountRegistrationPanel"
     },
     {
+      "symbol": "C:mra",
+      "originalName": "mra",
+      "to": "TimedShooter",
+      "evidence": "Complete interface reviewed: setTimingPattern and isFiring contracts implemented by both beam and weapon shooter behaviours; ShooterComponent configures timing and LightSourceModel uses firing state to enable light.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:TimedShooter"
+    },
+    {
       "symbol": "C:ms",
       "originalName": "ms",
       "to": "MessagePanel",
@@ -5644,6 +5692,14 @@
       "renamedSymbol": "C:AnimationFrame"
     },
     {
+      "symbol": "C:rqa",
+      "originalName": "rqa",
+      "to": "FrameDrawable",
+      "evidence": "Complete interface reviewed: draw(byte, boolean) callback implemented by MatchScreen and called by TombRacer.drawFrame for optional screen rendering. Preserve callback method name and all argument contracts.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FrameDrawable"
+    },
+    {
       "symbol": "C:rra",
       "originalName": "rra",
       "to": "RasterShape",
@@ -6346,6 +6402,14 @@
       "evidence": "rn.createComponent builds it for type 51, which rn's constructor labels \"Maze: Pushable Blocks\" in dsa.field_a.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PushableBlockMazeComponent"
+    },
+    {
+      "symbol": "C:ud",
+      "originalName": "ud",
+      "to": "AudioSample",
+      "evidence": "Complete base class and PcmSample constructors reviewed: IntrusiveNode with scheduler activity counter, used by PcmStream/PcmSampleStream and AudioOutput priority scheduling. PcmSample is its concrete byte-sample subclass.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AudioSample"
     },
     {
       "symbol": "C:uda",
@@ -13809,7 +13873,7 @@
       "to": "drawFrame",
       "evidence": "Draws the previous and current screens, overlays, chat, the reconnect notice and the console for one frame.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:TombRacer.drawFrame(ZLrqa;B)V"
+      "renamedSymbol": "M:TombRacer.drawFrame(ZLFrameDrawable;B)V"
     },
     {
       "symbol": "M:TombRacer.a(ZZ)V",
@@ -14777,7 +14841,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ai.releaseStatics(B)V"
+      "renamedSymbol": "M:AvailabilityQueryFactory.releaseStatics(B)V"
     },
     {
       "symbol": "M:ai.a(BLjava/lang/String;)Lus;",
@@ -14785,7 +14849,7 @@
       "to": "createAvailabilityQuery",
       "evidence": "Creates a pending availability query for the name (matches geoblox createEmailAvailabilityQuery).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;"
+      "renamedSymbol": "M:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;"
     },
     {
       "symbol": "M:aia.a(B)I",
@@ -15529,7 +15593,7 @@
       "to": "getMainRoomCount",
       "evidence": "Returns the number of non-connector room definitions.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:aq.getMainRoomCount(I)I"
+      "renamedSymbol": "M:MainRoomCatalog.getMainRoomCount(I)I"
     },
     {
       "symbol": "M:aq.b(I)V",
@@ -15537,7 +15601,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:aq.releaseStatics(I)V"
+      "renamedSymbol": "M:MainRoomCatalog.releaseStatics(I)V"
     },
     {
       "symbol": "M:aqa.a(B)V",
@@ -16492,6 +16556,14 @@
       "renamedSymbol": "M:bc.releaseStatics(I)V"
     },
     {
+      "symbol": "M:bc.a(Z)Z",
+      "originalName": "a",
+      "to": "handleNameEntryKeyInput",
+      "evidence": "Complete wrapper body: false guard/null popup returns false, otherwise delegates active NameEntryPopup key handler. PressureSwitchBehaviour event dispatcher caller reviewed. Preserve all short-circuit and return behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bc.handleNameEntryKeyInput(Z)Z"
+    },
+    {
       "symbol": "M:bca.a(B)V",
       "originalName": "a",
       "to": "init",
@@ -17057,7 +17129,7 @@
       "to": "blitSoftwareRasterRegion",
       "evidence": "Clips to a widget rectangle and copies SoftwareRasterizer.pixels into the toolkit with SA.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V"
+      "renamedSymbol": "M:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V"
     },
     {
       "symbol": "M:bi.a(Z)V",
@@ -17065,7 +17137,7 @@
       "to": "releaseStatics",
       "evidence": "Only nulls or resets static fields, like the other releaseStatics cleanup methods.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bi.releaseStatics(Z)V"
+      "renamedSymbol": "M:SoftwareRasterBlitter.releaseStatics(Z)V"
     },
     {
       "symbol": "M:bia.B(I)I",
@@ -17689,7 +17761,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bq.releaseStatics(B)V"
+      "renamedSymbol": "M:MidiPatchEnvelope.releaseStatics(B)V"
     },
     {
       "symbol": "M:bq.a(IIIBI)V",
@@ -17697,7 +17769,7 @@
       "to": "fillCircle",
       "evidence": "Midpoint circle loop filling horizontal spans with fillRange.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bq.fillCircle(IIIBI)V"
+      "renamedSymbol": "M:MidiPatchEnvelope.fillCircle(IIIBI)V"
     },
     {
       "symbol": "M:bqa.a(B)V",
@@ -18273,7 +18345,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bw.releaseStatics(I)V"
+      "renamedSymbol": "M:ByteStorageFactory.releaseStatics(I)V"
     },
     {
       "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
@@ -18281,7 +18353,7 @@
       "to": "wrapByteStorage",
       "evidence": "Wraps arrays over 136 bytes in a storage object and returns small ones directly; matches zombiedawn wrapByteStorage.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;"
+      "renamedSymbol": "M:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;"
     },
     {
       "symbol": "M:c.a(IB)I",
@@ -32761,7 +32833,7 @@
       "to": "applyTimingPattern",
       "evidence": "Gives the shooter behaviour its timing pattern, offset by the fixed or random phase (or a random weapon cooldown).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V"
+      "renamedSymbol": "M:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V"
     },
     {
       "symbol": "M:ge.a(I)Z",
@@ -38890,6 +38962,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ConstrainToRectangleLocomotor.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:is.a(Z)Z",
+      "originalName": "a",
+      "to": "handleKeyInput",
+      "evidence": "Complete body reviewed: inactive status false; otherwise processes typed letter/digit/underscore, backspace, accept/cancel keys and name text/status with twelve-character bound. Preserve canonical false guard and noncanonical static float mutation, every original branch/order and return. No algorithm edits.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NameEntryPopup.handleKeyInput(Z)Z"
     },
     {
       "symbol": "M:is.f(I)V",
@@ -50089,7 +50169,7 @@
       "to": "setTimingPattern",
       "evidence": "Replaces the shooter's TimingPattern. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:mra.setTimingPattern(ILTimingPattern;)V"
+      "renamedSymbol": "M:TimedShooter.setTimingPattern(ILTimingPattern;)V"
     },
     {
       "symbol": "M:mra.b(I)Z",
@@ -50097,7 +50177,7 @@
       "to": "isFiring",
       "evidence": "Returns whether the beam is currently on; BlockModel checks it to light the shooter. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:mra.isFiring(I)Z"
+      "renamedSymbol": "M:TimedShooter.isFiring(I)Z"
     },
     {
       "symbol": "M:ms.a(I)I",
@@ -61553,7 +61633,7 @@
       "to": "draw",
       "evidence": "Draws the current phase and then every overlay. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rqa.draw(BZ)V"
+      "renamedSymbol": "M:FrameDrawable.draw(BZ)V"
     },
     {
       "symbol": "M:rr.a(IIIIILae;I)Z",
@@ -75778,9 +75858,9 @@
     },
     {
       "symbol": "C:ai",
-      "renamedSymbol": "C:ai",
+      "renamedSymbol": "C:AvailabilityQueryFactory",
       "originalName": "ai",
-      "renamedName": "ai",
+      "renamedName": "AvailabilityQueryFactory",
       "declaration": {
         "file": "ai.java",
         "start": 50,
@@ -75954,9 +76034,9 @@
     },
     {
       "symbol": "C:aq",
-      "renamedSymbol": "C:aq",
+      "renamedSymbol": "C:MainRoomCatalog",
       "originalName": "aq",
-      "renamedName": "aq",
+      "renamedName": "MainRoomCatalog",
       "declaration": {
         "file": "aq.java",
         "start": 50,
@@ -76284,9 +76364,9 @@
     },
     {
       "symbol": "C:bi",
-      "renamedSymbol": "C:bi",
+      "renamedSymbol": "C:SoftwareRasterBlitter",
       "originalName": "bi",
-      "renamedName": "bi",
+      "renamedName": "SoftwareRasterBlitter",
       "declaration": {
         "file": "bi.java",
         "start": 50,
@@ -76460,9 +76540,9 @@
     },
     {
       "symbol": "C:bq",
-      "renamedSymbol": "C:bq",
+      "renamedSymbol": "C:MidiPatchEnvelope",
       "originalName": "bq",
-      "renamedName": "bq",
+      "renamedName": "MidiPatchEnvelope",
       "declaration": {
         "file": "bq.java",
         "start": 50,
@@ -76592,9 +76672,9 @@
     },
     {
       "symbol": "C:bw",
-      "renamedSymbol": "C:bw",
+      "renamedSymbol": "C:ByteStorageFactory",
       "originalName": "bw",
-      "renamedName": "bw",
+      "renamedName": "ByteStorageFactory",
       "declaration": {
         "file": "bw.java",
         "start": 50,
@@ -82455,9 +82535,9 @@
     },
     {
       "symbol": "C:mra",
-      "renamedSymbol": "C:mra",
+      "renamedSymbol": "C:TimedShooter",
       "originalName": "mra",
-      "renamedName": "mra",
+      "renamedName": "TimedShooter",
       "declaration": {
         "file": "mra.java",
         "start": 48,
@@ -84963,9 +85043,9 @@
     },
     {
       "symbol": "C:rqa",
-      "renamedSymbol": "C:rqa",
+      "renamedSymbol": "C:FrameDrawable",
       "originalName": "rqa",
-      "renamedName": "rqa",
+      "renamedName": "FrameDrawable",
       "declaration": {
         "file": "rqa.java",
         "start": 48,
@@ -86173,9 +86253,9 @@
     },
     {
       "symbol": "C:ud",
-      "renamedSymbol": "C:ud",
+      "renamedSymbol": "C:AudioSample",
       "originalName": "ud",
-      "renamedName": "ud",
+      "renamedName": "AudioSample",
       "declaration": {
         "file": "ud.java",
         "start": 53,
@@ -88923,7 +89003,7 @@
     },
     {
       "symbol": "F:ai.field_a:Z",
-      "renamedSymbol": "F:ai.field_a:Z",
+      "renamedSymbol": "F:AvailabilityQueryFactory.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -88934,7 +89014,7 @@
     },
     {
       "symbol": "F:ai.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:ai.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:AvailabilityQueryFactory.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -88945,7 +89025,7 @@
     },
     {
       "symbol": "F:ai.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:ai.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:AvailabilityQueryFactory.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -88956,7 +89036,7 @@
     },
     {
       "symbol": "F:ai.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:ai.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:AvailabilityQueryFactory.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -90155,7 +90235,7 @@
     },
     {
       "symbol": "F:aq.field_a:[Lnh;",
-      "renamedSymbol": "F:aq.field_a:[LToolkitSprite;",
+      "renamedSymbol": "F:MainRoomCatalog.field_a:[LToolkitSprite;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -92058,7 +92138,7 @@
     },
     {
       "symbol": "F:bi.field_a:Lfta;",
-      "renamedSymbol": "F:bi.field_a:Lfta;",
+      "renamedSymbol": "F:SoftwareRasterBlitter.field_a:Lfta;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -92069,7 +92149,7 @@
     },
     {
       "symbol": "F:bi.field_b:[Ljava/lang/String;",
-      "renamedSymbol": "F:bi.field_b:[Ljava/lang/String;",
+      "renamedSymbol": "F:SoftwareRasterBlitter.field_b:[Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -92080,7 +92160,7 @@
     },
     {
       "symbol": "F:bi.field_c:I",
-      "renamedSymbol": "F:bi.field_c:I",
+      "renamedSymbol": "F:SoftwareRasterBlitter.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -92091,7 +92171,7 @@
     },
     {
       "symbol": "F:bi.field_d:Lsu;",
-      "renamedSymbol": "F:bi.field_d:LQuickChatParamType;",
+      "renamedSymbol": "F:SoftwareRasterBlitter.field_d:LQuickChatParamType;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -92982,7 +93062,7 @@
     },
     {
       "symbol": "F:bq.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:bq.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -92993,7 +93073,7 @@
     },
     {
       "symbol": "F:bq.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:bq.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -93004,7 +93084,7 @@
     },
     {
       "symbol": "F:bq.field_c:I",
-      "renamedSymbol": "F:bq.field_c:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -93015,7 +93095,7 @@
     },
     {
       "symbol": "F:bq.field_d:I",
-      "renamedSymbol": "F:bq.field_d:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -93026,7 +93106,7 @@
     },
     {
       "symbol": "F:bq.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:bq.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -93037,7 +93117,7 @@
     },
     {
       "symbol": "F:bq.field_f:I",
-      "renamedSymbol": "F:bq.field_f:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -93048,7 +93128,7 @@
     },
     {
       "symbol": "F:bq.field_g:[B",
-      "renamedSymbol": "F:bq.field_g:[B",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_g:[B",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -93059,7 +93139,7 @@
     },
     {
       "symbol": "F:bq.field_h:[I",
-      "renamedSymbol": "F:bq.field_h:[I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_h:[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -93070,7 +93150,7 @@
     },
     {
       "symbol": "F:bq.field_i:I",
-      "renamedSymbol": "F:bq.field_i:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -93081,7 +93161,7 @@
     },
     {
       "symbol": "F:bq.field_j:I",
-      "renamedSymbol": "F:bq.field_j:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -93092,7 +93172,7 @@
     },
     {
       "symbol": "F:bq.field_k:[Ljava/lang/String;",
-      "renamedSymbol": "F:bq.field_k:[Ljava/lang/String;",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_k:[Ljava/lang/String;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -93103,7 +93183,7 @@
     },
     {
       "symbol": "F:bq.field_l:I",
-      "renamedSymbol": "F:bq.field_l:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_l:I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -93114,7 +93194,7 @@
     },
     {
       "symbol": "F:bq.field_m:[B",
-      "renamedSymbol": "F:bq.field_m:[B",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_m:[B",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -93125,7 +93205,7 @@
     },
     {
       "symbol": "F:bq.field_n:I",
-      "renamedSymbol": "F:bq.field_n:I",
+      "renamedSymbol": "F:MidiPatchEnvelope.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -94038,7 +94118,7 @@
     },
     {
       "symbol": "F:bw.field_a:Liu;",
-      "renamedSymbol": "F:bw.field_a:LSprite;",
+      "renamedSymbol": "F:ByteStorageFactory.field_a:LSprite;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -94049,7 +94129,7 @@
     },
     {
       "symbol": "F:bw.field_b:[I",
-      "renamedSymbol": "F:bw.field_b:[I",
+      "renamedSymbol": "F:ByteStorageFactory.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -95083,7 +95163,7 @@
     },
     {
       "symbol": "F:cg.field_i:Lud;",
-      "renamedSymbol": "F:PcmStream.field_i:Lud;",
+      "renamedSymbol": "F:PcmStream.field_i:LAudioSample;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -148455,7 +148535,7 @@
     },
     {
       "symbol": "F:rta.field_v:Lbq;",
-      "renamedSymbol": "F:MidiVoice.field_v:Lbq;",
+      "renamedSymbol": "F:MidiVoice.field_v:LMidiPatchEnvelope;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -153119,7 +153199,7 @@
     },
     {
       "symbol": "F:tn.field_m:[Lbq;",
-      "renamedSymbol": "F:MidiPatch.field_m:[Lbq;",
+      "renamedSymbol": "F:MidiPatch.field_m:[LMidiPatchEnvelope;",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -154879,7 +154959,7 @@
     },
     {
       "symbol": "F:ud.field_f:I",
-      "renamedSymbol": "F:ud.field_f:I",
+      "renamedSymbol": "F:AudioSample.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -164196,7 +164276,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#0",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#0",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#0",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -164207,7 +164287,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#1",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#1",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#1",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -164218,7 +164298,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#10",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#10",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -164229,7 +164309,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#11",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#11",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -164240,7 +164320,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#12",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#12",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -164251,7 +164331,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#13",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#13",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -164262,7 +164342,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#14",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#14",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -164273,7 +164353,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#15",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#15",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -164284,7 +164364,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#16",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#16",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#16",
       "originalName": "var4_intLifetime1",
       "renamedName": "var4_intLifetime1",
       "declaration": {
@@ -164295,7 +164375,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#17",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#17",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -164306,7 +164386,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#2",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#2",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#2",
       "originalName": "stackIn_47_0",
       "renamedName": "stackIn_47_0",
       "declaration": {
@@ -164317,7 +164397,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#3",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#3",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#3",
       "originalName": "stackIn_57_0",
       "renamedName": "stackIn_57_0",
       "declaration": {
@@ -164328,7 +164408,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#4",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#4",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#4",
       "originalName": "stackIn_57_1",
       "renamedName": "stackIn_57_1",
       "declaration": {
@@ -164339,7 +164419,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#5",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#5",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#5",
       "originalName": "stackIn_58_2",
       "renamedName": "stackIn_58_2",
       "declaration": {
@@ -164350,7 +164430,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#6",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#6",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -164361,7 +164441,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#7",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#7",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#7",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -164372,7 +164452,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#8",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#8",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -164383,7 +164463,7 @@
     },
     {
       "symbol": "L:TombRacer.a(ZLrqa;B)V#9",
-      "renamedSymbol": "L:TombRacer.drawFrame(ZLrqa;B)V#9",
+      "renamedSymbol": "L:TombRacer.drawFrame(ZLFrameDrawable;B)V#9",
       "originalName": "var5_ref_ssa",
       "renamedName": "var5_ref_ssa",
       "declaration": {
@@ -169674,7 +169754,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#0",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#0",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -169685,7 +169765,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#1",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#1",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -169696,7 +169776,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#2",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#2",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -169707,7 +169787,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#3",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#3",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -169718,7 +169798,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#4",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#4",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -169729,7 +169809,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#5",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#5",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169740,7 +169820,7 @@
     },
     {
       "symbol": "L:ai.a(BLjava/lang/String;)Lus;#6",
-      "renamedSymbol": "L:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#6",
+      "renamedSymbol": "L:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -174877,7 +174957,7 @@
     },
     {
       "symbol": "L:aq.b(I)V#0",
-      "renamedSymbol": "L:aq.releaseStatics(I)V#0",
+      "renamedSymbol": "L:MainRoomCatalog.releaseStatics(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -188407,7 +188487,7 @@
     },
     {
       "symbol": "L:bi.a(Lha;I)V#0",
-      "renamedSymbol": "L:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#0",
+      "renamedSymbol": "L:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -188418,7 +188498,7 @@
     },
     {
       "symbol": "L:bi.a(Lha;I)V#1",
-      "renamedSymbol": "L:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#1",
+      "renamedSymbol": "L:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -188429,7 +188509,7 @@
     },
     {
       "symbol": "L:bi.a(Lha;I)V#2",
-      "renamedSymbol": "L:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#2",
+      "renamedSymbol": "L:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -188440,7 +188520,7 @@
     },
     {
       "symbol": "L:bi.a(Z)V#0",
-      "renamedSymbol": "L:bi.releaseStatics(Z)V#0",
+      "renamedSymbol": "L:SoftwareRasterBlitter.releaseStatics(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -192169,7 +192249,7 @@
     },
     {
       "symbol": "L:bq.a(B)V#0",
-      "renamedSymbol": "L:bq.releaseStatics(B)V#0",
+      "renamedSymbol": "L:MidiPatchEnvelope.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -192180,7 +192260,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#0",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#0",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -192191,7 +192271,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#1",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#1",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192202,7 +192282,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#10",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#10",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#10",
       "originalName": "var12_int",
       "renamedName": "var12_int",
       "declaration": {
@@ -192213,7 +192293,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#11",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#11",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -192224,7 +192304,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#12",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#12",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -192235,7 +192315,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#13",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#13",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -192246,7 +192326,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#14",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#14",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -192257,7 +192337,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#15",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#15",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -192268,7 +192348,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#2",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#2",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -192279,7 +192359,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#3",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#3",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -192290,7 +192370,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#4",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#4",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#4",
       "originalName": "var9_ref_int__",
       "renamedName": "var9_ref_int__",
       "declaration": {
@@ -192301,7 +192381,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#5",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#5",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -192312,7 +192392,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#6",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#6",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#6",
       "originalName": "var10_ref_int__",
       "renamedName": "var10_ref_int__",
       "declaration": {
@@ -192323,7 +192403,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#7",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#7",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -192334,7 +192414,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#8",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#8",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#8",
       "originalName": "var11_int",
       "renamedName": "var11_int",
       "declaration": {
@@ -192345,7 +192425,7 @@
     },
     {
       "symbol": "L:bq.a(IIIBI)V#9",
-      "renamedSymbol": "L:bq.fillCircle(IIIBI)V#9",
+      "renamedSymbol": "L:MidiPatchEnvelope.fillCircle(IIIBI)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -194424,7 +194504,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#0",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#0",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -194435,7 +194515,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#1",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#1",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -194446,7 +194526,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#10",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#10",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -194457,7 +194537,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#11",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#11",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -194468,7 +194548,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#2",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#2",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -194479,7 +194559,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#3",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#3",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#3",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -194490,7 +194570,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#4",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#4",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -194501,7 +194581,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#5",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#5",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -194512,7 +194592,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#6",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#6",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#6",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -194523,7 +194603,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#7",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#7",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#7",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -194534,7 +194614,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#8",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#8",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#8",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -194545,7 +194625,7 @@
     },
     {
       "symbol": "L:bw.a(I[BZ)Ljava/lang/Object;#9",
-      "renamedSymbol": "L:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#9",
+      "renamedSymbol": "L:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#9",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -274031,7 +274111,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#0",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#0",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274042,7 +274122,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#1",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#1",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274053,7 +274133,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#10",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#10",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274064,7 +274144,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#11",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#11",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -274075,7 +274155,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#2",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#2",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274086,7 +274166,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#3",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#3",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -274097,7 +274177,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#4",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#4",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -274108,7 +274188,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#5",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#5",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#5",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -274119,7 +274199,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#6",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#6",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#6",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -274130,7 +274210,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#7",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#7",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#7",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -274141,7 +274221,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#8",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#8",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#8",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -274152,7 +274232,7 @@
     },
     {
       "symbol": "L:ge.a(BLmra;Lla;)V#9",
-      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#9",
+      "renamedSymbol": "L:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#9",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -322332,7 +322412,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#0",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#0",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#0",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -322343,7 +322423,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#1",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#1",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#1",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -322354,7 +322434,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#2",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#2",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#2",
       "originalName": "discarded$5",
       "renamedName": "discarded$5",
       "declaration": {
@@ -322365,7 +322445,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#3",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#3",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#3",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -322376,7 +322456,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#4",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#4",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#4",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -322387,7 +322467,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#5",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#5",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#5",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -322398,7 +322478,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#6",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#6",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -322409,7 +322489,7 @@
     },
     {
       "symbol": "L:is.a(Z)Z#7",
-      "renamedSymbol": "L:NameEntryPopup.a(Z)Z#7",
+      "renamedSymbol": "L:NameEntryPopup.handleKeyInput(Z)Z#7",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -583087,7 +583167,7 @@
     },
     {
       "symbol": "M:TombRacer.a(ZLrqa;B)V",
-      "renamedSymbol": "M:TombRacer.drawFrame(ZLrqa;B)V",
+      "renamedSymbol": "M:TombRacer.drawFrame(ZLFrameDrawable;B)V",
       "originalName": "a",
       "renamedName": "drawFrame",
       "declaration": {
@@ -584748,7 +584828,7 @@
     },
     {
       "symbol": "M:ai.a(B)V",
-      "renamedSymbol": "M:ai.releaseStatics(B)V",
+      "renamedSymbol": "M:AvailabilityQueryFactory.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -584759,7 +584839,7 @@
     },
     {
       "symbol": "M:ai.a(BLjava/lang/String;)Lus;",
-      "renamedSymbol": "M:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;",
+      "renamedSymbol": "M:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;",
       "originalName": "a",
       "renamedName": "createAvailabilityQuery",
       "declaration": {
@@ -586046,7 +586126,7 @@
     },
     {
       "symbol": "M:aq.a(I)I",
-      "renamedSymbol": "M:aq.getMainRoomCount(I)I",
+      "renamedSymbol": "M:MainRoomCatalog.getMainRoomCount(I)I",
       "originalName": "a",
       "renamedName": "getMainRoomCount",
       "declaration": {
@@ -586057,7 +586137,7 @@
     },
     {
       "symbol": "M:aq.b(I)V",
-      "renamedSymbol": "M:aq.releaseStatics(I)V",
+      "renamedSymbol": "M:MainRoomCatalog.releaseStatics(I)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -587674,9 +587754,9 @@
     },
     {
       "symbol": "M:bc.a(Z)Z",
-      "renamedSymbol": "M:bc.a(Z)Z",
+      "renamedSymbol": "M:bc.handleNameEntryKeyInput(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleNameEntryKeyInput",
       "declaration": {
         "file": "bc.java",
         "start": 169,
@@ -588686,7 +588766,7 @@
     },
     {
       "symbol": "M:bi.a(Lha;I)V",
-      "renamedSymbol": "M:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V",
+      "renamedSymbol": "M:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V",
       "originalName": "a",
       "renamedName": "blitSoftwareRasterRegion",
       "declaration": {
@@ -588697,7 +588777,7 @@
     },
     {
       "symbol": "M:bi.a(Z)V",
-      "renamedSymbol": "M:bi.releaseStatics(Z)V",
+      "renamedSymbol": "M:SoftwareRasterBlitter.releaseStatics(Z)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -589775,7 +589855,7 @@
     },
     {
       "symbol": "M:bq.a(B)V",
-      "renamedSymbol": "M:bq.releaseStatics(B)V",
+      "renamedSymbol": "M:MidiPatchEnvelope.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -589786,7 +589866,7 @@
     },
     {
       "symbol": "M:bq.a(IIIBI)V",
-      "renamedSymbol": "M:bq.fillCircle(IIIBI)V",
+      "renamedSymbol": "M:MidiPatchEnvelope.fillCircle(IIIBI)V",
       "originalName": "a",
       "renamedName": "fillCircle",
       "declaration": {
@@ -590754,7 +590834,7 @@
     },
     {
       "symbol": "M:bw.a(I)V",
-      "renamedSymbol": "M:bw.releaseStatics(I)V",
+      "renamedSymbol": "M:ByteStorageFactory.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -590765,7 +590845,7 @@
     },
     {
       "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
-      "renamedSymbol": "M:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;",
+      "renamedSymbol": "M:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;",
       "originalName": "a",
       "renamedName": "wrapByteStorage",
       "declaration": {
@@ -614173,7 +614253,7 @@
     },
     {
       "symbol": "M:ge.a(BLmra;Lla;)V",
-      "renamedSymbol": "M:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V",
+      "renamedSymbol": "M:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V",
       "originalName": "a",
       "renamedName": "applyTimingPattern",
       "declaration": {
@@ -625184,9 +625264,9 @@
     },
     {
       "symbol": "M:is.a(Z)Z",
-      "renamedSymbol": "M:NameEntryPopup.a(Z)Z",
+      "renamedSymbol": "M:NameEntryPopup.handleKeyInput(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyInput",
       "declaration": {
         "file": "is.java",
         "start": 590,
@@ -648449,7 +648529,7 @@
     },
     {
       "symbol": "M:mra.a(ILmg;)V",
-      "renamedSymbol": "M:mra.setTimingPattern(ILTimingPattern;)V",
+      "renamedSymbol": "M:TimedShooter.setTimingPattern(ILTimingPattern;)V",
       "originalName": "a",
       "renamedName": "setTimingPattern",
       "declaration": {
@@ -648460,7 +648540,7 @@
     },
     {
       "symbol": "M:mra.b(I)Z",
-      "renamedSymbol": "M:mra.isFiring(I)Z",
+      "renamedSymbol": "M:TimedShooter.isFiring(I)Z",
       "originalName": "b",
       "renamedName": "isFiring",
       "declaration": {
@@ -668645,7 +668725,7 @@
     },
     {
       "symbol": "M:rqa.a(BZ)V",
-      "renamedSymbol": "M:rqa.draw(BZ)V",
+      "renamedSymbol": "M:FrameDrawable.draw(BZ)V",
       "originalName": "a",
       "renamedName": "draw",
       "declaration": {
@@ -678182,9 +678262,9 @@
     },
     {
       "symbol": "M:ud.<init>()V",
-      "renamedSymbol": "M:ud.<init>()V",
+      "renamedSymbol": "M:AudioSample.<init>()V",
       "originalName": "ud",
-      "renamedName": "ud",
+      "renamedName": "AudioSample",
       "declaration": {
         "file": "ud.java",
         "start": 91,
@@ -691228,7 +691308,7 @@
     },
     {
       "symbol": "P:TombRacer.a(ZLrqa;B)V#0",
-      "renamedSymbol": "P:TombRacer.drawFrame(ZLrqa;B)V#0",
+      "renamedSymbol": "P:TombRacer.drawFrame(ZLFrameDrawable;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -691239,7 +691319,7 @@
     },
     {
       "symbol": "P:TombRacer.a(ZLrqa;B)V#1",
-      "renamedSymbol": "P:TombRacer.drawFrame(ZLrqa;B)V#1",
+      "renamedSymbol": "P:TombRacer.drawFrame(ZLFrameDrawable;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -691250,7 +691330,7 @@
     },
     {
       "symbol": "P:TombRacer.a(ZLrqa;B)V#2",
-      "renamedSymbol": "P:TombRacer.drawFrame(ZLrqa;B)V#2",
+      "renamedSymbol": "P:TombRacer.drawFrame(ZLFrameDrawable;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -695265,7 +695345,7 @@
     },
     {
       "symbol": "P:ai.a(B)V#0",
-      "renamedSymbol": "P:ai.releaseStatics(B)V#0",
+      "renamedSymbol": "P:AvailabilityQueryFactory.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -695276,7 +695356,7 @@
     },
     {
       "symbol": "P:ai.a(BLjava/lang/String;)Lus;#0",
-      "renamedSymbol": "P:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#0",
+      "renamedSymbol": "P:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -695287,7 +695367,7 @@
     },
     {
       "symbol": "P:ai.a(BLjava/lang/String;)Lus;#1",
-      "renamedSymbol": "P:ai.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#1",
+      "renamedSymbol": "P:AvailabilityQueryFactory.createAvailabilityQuery(BLjava/lang/String;)LAvailabilityQuery;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -698147,7 +698227,7 @@
     },
     {
       "symbol": "P:aq.a(I)I#0",
-      "renamedSymbol": "P:aq.getMainRoomCount(I)I#0",
+      "renamedSymbol": "P:MainRoomCatalog.getMainRoomCount(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -698158,7 +698238,7 @@
     },
     {
       "symbol": "P:aq.b(I)V#0",
-      "renamedSymbol": "P:aq.releaseStatics(I)V#0",
+      "renamedSymbol": "P:MainRoomCatalog.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702547,7 +702627,7 @@
     },
     {
       "symbol": "P:bc.a(Z)Z#0",
-      "renamedSymbol": "P:bc.a(Z)Z#0",
+      "renamedSymbol": "P:bc.handleNameEntryKeyInput(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -705077,7 +705157,7 @@
     },
     {
       "symbol": "P:bi.a(Lha;I)V#0",
-      "renamedSymbol": "P:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#0",
+      "renamedSymbol": "P:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -705088,7 +705168,7 @@
     },
     {
       "symbol": "P:bi.a(Lha;I)V#1",
-      "renamedSymbol": "P:bi.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#1",
+      "renamedSymbol": "P:SoftwareRasterBlitter.blitSoftwareRasterRegion(LGraphicsToolkit;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -705099,7 +705179,7 @@
     },
     {
       "symbol": "P:bi.a(Z)V#0",
-      "renamedSymbol": "P:bi.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:SoftwareRasterBlitter.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -707035,7 +707115,7 @@
     },
     {
       "symbol": "P:bq.a(B)V#0",
-      "renamedSymbol": "P:bq.releaseStatics(B)V#0",
+      "renamedSymbol": "P:MidiPatchEnvelope.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -707046,7 +707126,7 @@
     },
     {
       "symbol": "P:bq.a(IIIBI)V#0",
-      "renamedSymbol": "P:bq.fillCircle(IIIBI)V#0",
+      "renamedSymbol": "P:MidiPatchEnvelope.fillCircle(IIIBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -707057,7 +707137,7 @@
     },
     {
       "symbol": "P:bq.a(IIIBI)V#1",
-      "renamedSymbol": "P:bq.fillCircle(IIIBI)V#1",
+      "renamedSymbol": "P:MidiPatchEnvelope.fillCircle(IIIBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -707068,7 +707148,7 @@
     },
     {
       "symbol": "P:bq.a(IIIBI)V#2",
-      "renamedSymbol": "P:bq.fillCircle(IIIBI)V#2",
+      "renamedSymbol": "P:MidiPatchEnvelope.fillCircle(IIIBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -707079,7 +707159,7 @@
     },
     {
       "symbol": "P:bq.a(IIIBI)V#3",
-      "renamedSymbol": "P:bq.fillCircle(IIIBI)V#3",
+      "renamedSymbol": "P:MidiPatchEnvelope.fillCircle(IIIBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -707090,7 +707170,7 @@
     },
     {
       "symbol": "P:bq.a(IIIBI)V#4",
-      "renamedSymbol": "P:bq.fillCircle(IIIBI)V#4",
+      "renamedSymbol": "P:MidiPatchEnvelope.fillCircle(IIIBI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -709048,7 +709128,7 @@
     },
     {
       "symbol": "P:bw.a(I)V#0",
-      "renamedSymbol": "P:bw.releaseStatics(I)V#0",
+      "renamedSymbol": "P:ByteStorageFactory.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -709059,7 +709139,7 @@
     },
     {
       "symbol": "P:bw.a(I[BZ)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -709070,7 +709150,7 @@
     },
     {
       "symbol": "P:bw.a(I[BZ)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -709081,7 +709161,7 @@
     },
     {
       "symbol": "P:bw.a(I[BZ)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:bw.wrapByteStorage(I[BZ)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:ByteStorageFactory.wrapByteStorage(I[BZ)Ljava/lang/Object;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -758119,7 +758199,7 @@
     },
     {
       "symbol": "P:ge.a(BLmra;Lla;)V#0",
-      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#0",
+      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -758130,7 +758210,7 @@
     },
     {
       "symbol": "P:ge.a(BLmra;Lla;)V#1",
-      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#1",
+      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -758141,7 +758221,7 @@
     },
     {
       "symbol": "P:ge.a(BLmra;Lla;)V#2",
-      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLmra;LRoom;)V#2",
+      "renamedSymbol": "P:ShooterComponent.applyTimingPattern(BLTimedShooter;LRoom;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -783903,7 +783983,7 @@
     },
     {
       "symbol": "P:is.a(Z)Z#0",
-      "renamedSymbol": "P:NameEntryPopup.a(Z)Z#0",
+      "renamedSymbol": "P:NameEntryPopup.handleKeyInput(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -840806,7 +840886,7 @@
     },
     {
       "symbol": "P:mra.a(ILmg;)V#0",
-      "renamedSymbol": "P:mra.setTimingPattern(ILTimingPattern;)V#0",
+      "renamedSymbol": "P:TimedShooter.setTimingPattern(ILTimingPattern;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -840817,7 +840897,7 @@
     },
     {
       "symbol": "P:mra.a(ILmg;)V#1",
-      "renamedSymbol": "P:mra.setTimingPattern(ILTimingPattern;)V#1",
+      "renamedSymbol": "P:TimedShooter.setTimingPattern(ILTimingPattern;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -840828,7 +840908,7 @@
     },
     {
       "symbol": "P:mra.b(I)Z#0",
-      "renamedSymbol": "P:mra.isFiring(I)Z#0",
+      "renamedSymbol": "P:TimedShooter.isFiring(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888656,7 +888736,7 @@
     },
     {
       "symbol": "P:rqa.a(BZ)V#0",
-      "renamedSymbol": "P:rqa.draw(BZ)V#0",
+      "renamedSymbol": "P:FrameDrawable.draw(BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888667,7 +888747,7 @@
     },
     {
       "symbol": "P:rqa.a(BZ)V#1",
-      "renamedSymbol": "P:rqa.draw(BZ)V#1",
+      "renamedSymbol": "P:FrameDrawable.draw(BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -936147,7 +936227,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "f786f4732ce02f4ac97e3e3d14ae7eee9352e97ff09078a83d1b25e2ebbd5972",
+      "outputSha256": "a1d25ae9d46cebd2f3d1cd6f8ce31ab73d03affa4403a3d65bad2ec1f2673b38",
       "edits": [
         {
           "start": 96,
@@ -936395,6 +936475,13 @@
           "renamed": "drawFrame"
         },
         {
+          "start": 2733,
+          "end": 2736,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
+        },
+        {
           "start": 3122,
           "end": 3125,
           "symbol": "C:ssa",
@@ -936624,6 +936711,13 @@
           "symbol": "C:wma",
           "original": "wma",
           "renamed": "SpawnerBehaviour"
+        },
+        {
+          "start": 4806,
+          "end": 4808,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 4809,
@@ -937373,6 +937467,13 @@
           "symbol": "M:tk.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 7745,
+          "end": 7747,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 7748,
@@ -938845,6 +938946,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 10628,
+          "end": 10630,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 10631,
           "end": 10632,
           "symbol": "M:aq.b(I)V",
@@ -939419,6 +939527,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 11815,
+          "end": 11817,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 11818,
           "end": 11819,
           "symbol": "M:bw.a(I)V",
@@ -939641,6 +939756,13 @@
           "symbol": "M:pk.b(Z)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 12194,
+          "end": 12196,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 12197,
@@ -941398,6 +941520,13 @@
           "symbol": "M:tn.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 15469,
+          "end": 15471,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 15472,
@@ -949023,11 +949152,32 @@
           "renamed": "drawOverlay"
         },
         {
+          "start": 43553,
+          "end": 43556,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
+        },
+        {
+          "start": 43565,
+          "end": 43568,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
+        },
+        {
           "start": 43591,
           "end": 43592,
           "symbol": "M:TombRacer.a(ZLrqa;B)V",
           "original": "a",
           "renamed": "drawFrame"
+        },
+        {
+          "start": 43601,
+          "end": 43604,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
         },
         {
           "start": 43642,
@@ -956756,10 +956906,17 @@
     },
     {
       "original": "ai.java",
-      "renamed": "ai.java",
+      "renamed": "AvailabilityQueryFactory.java",
       "inputSha256": "e5410b80c1d5d48fd83cc2bf91377e9a6eb4b5b55812eb9933360bfdd567ae25",
-      "outputSha256": "593a2c3177cbf893c0a0de0ca1f206aab21fe2db04504482566072e0f06fccec",
+      "outputSha256": "cd8600af3995552bc35b1c59f753eee76c1c21af9de998ab5a313c324cba34f2",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
         {
           "start": 188,
           "end": 189,
@@ -965704,10 +965861,17 @@
     },
     {
       "original": "aq.java",
-      "renamed": "aq.java",
+      "renamed": "MainRoomCatalog.java",
       "inputSha256": "f8fb89710e3b1987123f238eead696d96519e07e44b90b1b9b3ff89ad504509c",
-      "outputSha256": "25c0b4a7b328f39026d18d5795d120013bd5e70bbe4a02e09226ae70210948ae",
+      "outputSha256": "3b964f61e12784219300d9dd7c8ae31bf4ad48c85fe77b621bc0fd143f4c5986",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
         {
           "start": 66,
           "end": 68,
@@ -965728,6 +965892,13 @@
           "symbol": "M:aq.a(I)I",
           "original": "a",
           "renamed": "getMainRoomCount"
+        },
+        {
+          "start": 275,
+          "end": 277,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 278,
@@ -975636,7 +975807,7 @@
       "original": "bc.java",
       "renamed": "bc.java",
       "inputSha256": "d406fc4331860637150cdd7be76b3db3d7c36df138d209adcd5ecc9669fec920",
-      "outputSha256": "8a83ca19fe55f8980d61132568f6732fd409c2fd131557eba62ad22958d4d842",
+      "outputSha256": "a12fb3b237f83abdba5ec8bcbabe2e081b4404704bd16d32c96aba2ac6d4ed93",
       "edits": [
         {
           "start": 93,
@@ -975646,11 +975817,32 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 169,
+          "end": 170,
+          "symbol": "M:bc.a(Z)Z",
+          "original": "a",
+          "renamed": "handleNameEntryKeyInput"
+        },
+        {
+          "start": 338,
+          "end": 339,
+          "symbol": "M:is.a(Z)Z",
+          "original": "a",
+          "renamed": "handleKeyInput"
+        },
+        {
           "start": 435,
           "end": 436,
           "symbol": "M:bc.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 540,
+          "end": 541,
+          "symbol": "M:bc.a(Z)Z",
+          "original": "a",
+          "renamed": "handleNameEntryKeyInput"
         }
       ]
     },
@@ -983815,10 +984007,17 @@
     },
     {
       "original": "bi.java",
-      "renamed": "bi.java",
+      "renamed": "SoftwareRasterBlitter.java",
       "inputSha256": "cb53fb7cc474e0164b536c95711cd75afe17153fde593f37a86e7b5c3550ef9b",
-      "outputSha256": "4aabddfe898bc2786449c0241ebefd9defb3be6019bf4be40f28456ef3321557",
+      "outputSha256": "380cc2e3fc7d3d326b670e5cc93dc37b87773b493d31a0f3965b0aa57b72f417",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
         {
           "start": 114,
           "end": 116,
@@ -983846,6 +984045,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "GraphicsToolkit"
+        },
+        {
+          "start": 310,
+          "end": 312,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 313,
@@ -988091,7 +988297,7 @@
       "original": "boa.java",
       "renamed": "BlockModel.java",
       "inputSha256": "7cc675a750a8374d987054a770e6ef49e5757bf5e3edd7ba10e5b1a93f1b484d",
-      "outputSha256": "b4f327d6ba1270e8b62e5d22235dfa9dcf8bc6c1d27823a42d184f1f71f9776a",
+      "outputSha256": "b42d77e5c063725fc220c1b03e08adbd15e3146b4bd5275281b9a6f5b0f26c01",
       "edits": [
         {
           "start": 50,
@@ -988519,6 +988725,13 @@
           "symbol": "M:dg.a(Lgma;ILgr;)V",
           "original": "a",
           "renamed": "configureFor"
+        },
+        {
+          "start": 3740,
+          "end": 3743,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 3830,
@@ -990346,16 +990559,30 @@
     },
     {
       "original": "bq.java",
-      "renamed": "bq.java",
+      "renamed": "MidiPatchEnvelope.java",
       "inputSha256": "885e15c8fb75f94155d924acf80a5eb86a7e7dd54f6c368da7e34cf69cef31ca",
-      "outputSha256": "bf0c9a9e2861c97e5b441ecdc8f9108dc0ce5f8ae8c541d355afc0c78fdf683c",
+      "outputSha256": "1091465f141d15baf7d3c7ab84a4955017b08c923a3b1f9da2104a3abff4970f",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
         {
           "start": 373,
           "end": 374,
           "symbol": "M:bq.a(IIIBI)V",
           "original": "a",
           "renamed": "fillCircle"
+        },
+        {
+          "start": 1076,
+          "end": 1078,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 1079,
@@ -995748,10 +995975,17 @@
     },
     {
       "original": "bw.java",
-      "renamed": "bw.java",
+      "renamed": "ByteStorageFactory.java",
       "inputSha256": "e6bd61a3ccafdf95c655896eef4918042abdae269b203c609734b68ad9059d3a",
-      "outputSha256": "8d9766b930abe435525d697415f7c9285a97e9a748e8c023f5e5b47e61f280fc",
+      "outputSha256": "54043b1189250c1ec89124ca91c9795a8c1c5308f598c2e3e505a46a1399a6ac",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
         {
           "start": 92,
           "end": 94,
@@ -1004234,7 +1004468,7 @@
       "original": "cg.java",
       "renamed": "PcmStream.java",
       "inputSha256": "7e390244840f4aa22d2a6b9423916820f4a301e71e185a50eaf6df34727c0f33",
-      "outputSha256": "4c33e12fa0c642375462c9b5bfe13e628618d987b5ca12a30fafa5a2635a8f13",
+      "outputSha256": "e3c4836bfca7b64dfe572acfcf24ba7b8675e5774bfc2231740bd40e6220e6a0",
       "edits": [
         {
           "start": 53,
@@ -1004256,6 +1004490,13 @@
           "symbol": "F:cg.field_f:Z",
           "original": "field_f",
           "renamed": "active"
+        },
+        {
+          "start": 120,
+          "end": 122,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "AudioSample"
         },
         {
           "start": 136,
@@ -1016130,7 +1016371,7 @@
       "original": "cl.java",
       "renamed": "BoxBlurOperator.java",
       "inputSha256": "0eec805392714e5925f55e55e68819cc6fe69ddaac830b35853fe5139536da9e",
-      "outputSha256": "497c0f7fb29b84564ad00f3e8620647b1339c362ac5582bfc6228dc87f83d657",
+      "outputSha256": "41a4eeefca1310abfce3ba4dbb21b42378e696cd47dd74296b32253b466e48cd",
       "edits": [
         {
           "start": 50,
@@ -1016539,6 +1016780,13 @@
           "renamed": "StatReportingObserverFactory"
         },
         {
+          "start": 8594,
+          "end": 8596,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 8615,
           "end": 8617,
           "symbol": "C:cu",
@@ -1016558,6 +1016806,13 @@
           "symbol": "C:cu",
           "original": "cu",
           "renamed": "DamageableBehaviour"
+        },
+        {
+          "start": 8692,
+          "end": 8694,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 8713,
@@ -1016923,7 +1017178,7 @@
       "original": "cm.java",
       "renamed": "cm.java",
       "inputSha256": "d5612b385f76a29639a022f24130241c8fba948495a68272467ae689b1a8f263",
-      "outputSha256": "fce2d6e0b4f52109b19072ef6ba684091e0c924942242e0b437d670ca247c2a6",
+      "outputSha256": "89a651969f99d1cc4742639cec9879b4fb4e55146b2f10d92cc128fc0321cec5",
       "edits": [
         {
           "start": 64,
@@ -1018165,6 +1018420,13 @@
           "renamed": "WhiteLightShooterComponent"
         },
         {
+          "start": 19563,
+          "end": 19565,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
+        {
           "start": 19674,
           "end": 19677,
           "symbol": "C:nra",
@@ -1018366,7 +1018628,7 @@
       "original": "cma.java",
       "renamed": "ColourKeyOperator.java",
       "inputSha256": "333c5d406891ae753ba6461ac84192e4740f3a690bb327b8157c11cb3714bf82",
-      "outputSha256": "27d4e04e2fff364fc782cbaa203c7a5b1923bbaf65ff514016e96c161229f760",
+      "outputSha256": "14a9a6829ddc5afab8be02852a66597bacca9a6fdc1beb9dda00ed27934fb8b7",
       "edits": [
         {
           "start": 50,
@@ -1018430,6 +1018692,13 @@
           "symbol": "C:sga",
           "original": "sga",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 390,
+          "end": 392,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 402,
@@ -1018682,7 +1018951,7 @@
       "original": "cn.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "acf8d924dab79107052eba5bed5cee5144fe892474b26c1c1a9244f071b471b8",
-      "outputSha256": "892550d665bb36ff2d72ff3f4145a00e670a3acfc7531d094d65fa4836d8bc6d",
+      "outputSha256": "70a5f91b84767c633d3bf9cd43a8b2ff90108330e341a08d879266cd007be365",
       "edits": [
         {
           "start": 71,
@@ -1019105,6 +1019374,13 @@
           "renamed": "getPackedGroup"
         },
         {
+          "start": 9335,
+          "end": 9337,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 9338,
           "end": 9339,
           "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
@@ -1019357,11 +1019633,25 @@
           "renamed": "copy"
         },
         {
+          "start": 18063,
+          "end": 18065,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 18066,
           "end": 18067,
           "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
           "original": "a",
           "renamed": "wrapByteStorage"
+        },
+        {
+          "start": 18398,
+          "end": 18400,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 18401,
@@ -1023318,7 +1023608,7 @@
       "original": "cra.java",
       "renamed": "SequencePlayer.java",
       "inputSha256": "af12ca1d026cc7527448be4f01f5353e78b3313146b082f0634a29f836ee2d5a",
-      "outputSha256": "252c3d0b6fb7be0a20c8e03adac4cb29d7b806ed8e2b0bfcfb14e11631e1f5e1",
+      "outputSha256": "77385bdee1c528e1e304a3fa4983fc536ee8dd00f9ace04bc94983b72b8c5b3b",
       "edits": [
         {
           "start": 50,
@@ -1023823,6 +1024113,13 @@
           "symbol": "C:gva",
           "original": "gva",
           "renamed": "DefaultRoomObjectRenderer"
+        },
+        {
+          "start": 2919,
+          "end": 2921,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 2922,
@@ -1039771,7 +1040068,7 @@
       "original": "dc.java",
       "renamed": "CrusherModel.java",
       "inputSha256": "3a833ecbcc6816b8c4e2b51c6762f17aa9517706224cd3943395b73d43141503",
-      "outputSha256": "eb04d3ab22cc935403279d1ab37cfe17c3003dae3898a43fa64f202957deb44a",
+      "outputSha256": "998f075665facebd76eaabf1f8ccaff6f2d32e78152059eff5a746d9a7c3a44b",
       "edits": [
         {
           "start": 50,
@@ -1040012,6 +1040309,20 @@
           "renamed": "DamageableBehaviour"
         },
         {
+          "start": 2033,
+          "end": 2035,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 2059,
+          "end": 2061,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 2109,
           "end": 2111,
           "symbol": "C:im",
@@ -1040094,6 +1040405,20 @@
           "symbol": "C:gja",
           "original": "gja",
           "renamed": "HardwareModel"
+        },
+        {
+          "start": 2750,
+          "end": 2752,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 2794,
+          "end": 2796,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 2846,
@@ -1040411,6 +1040736,20 @@
           "renamed": "DamageableBehaviour"
         },
         {
+          "start": 5613,
+          "end": 5615,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 5641,
+          "end": 5643,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 5693,
           "end": 5695,
           "symbol": "C:im",
@@ -1040493,6 +1040832,20 @@
           "symbol": "C:gja",
           "original": "gja",
           "renamed": "HardwareModel"
+        },
+        {
+          "start": 6368,
+          "end": 6370,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6414,
+          "end": 6416,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 6468,
@@ -1040810,6 +1041163,20 @@
           "renamed": "DamageableBehaviour"
         },
         {
+          "start": 9368,
+          "end": 9370,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 9396,
+          "end": 9398,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 9448,
           "end": 9450,
           "symbol": "C:im",
@@ -1040899,6 +1041266,20 @@
           "symbol": "C:gja",
           "original": "gja",
           "renamed": "HardwareModel"
+        },
+        {
+          "start": 10221,
+          "end": 10223,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 10267,
+          "end": 10269,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 10321,
@@ -1053647,7 +1054028,7 @@
       "original": "dja.java",
       "renamed": "PressureSwitchBehaviour.java",
       "inputSha256": "af0cabd8c9bcd8111bccf0b245244b75b5bdff22cd54da32c96fed1d791aea29",
-      "outputSha256": "3a8a40dcca10d9ad7be1bc30ce98dc9fcf7107047be5f5736ce6a2c922a8374c",
+      "outputSha256": "b8368967efe6d2bac68d2c4d272a23a2a0a6af5804278dfe2fa194aad9a81954",
       "edits": [
         {
           "start": 50,
@@ -1054460,6 +1054841,13 @@
           "symbol": "M:wp.a(I)V",
           "original": "a",
           "renamed": "closeContextMenu"
+        },
+        {
+          "start": 6585,
+          "end": 6586,
+          "symbol": "M:bc.a(Z)Z",
+          "original": "a",
+          "renamed": "handleNameEntryKeyInput"
         },
         {
           "start": 6641,
@@ -1062060,7 +1062448,7 @@
       "original": "dta.java",
       "renamed": "dta.java",
       "inputSha256": "80e4b18b2bbaccb57c2dadc4701d3d7b4d6cdc1a9ce73b703409644231e7f31d",
-      "outputSha256": "13593c402e30596221cca92632c48a264d1849549616d751c9798418d52bbdb6",
+      "outputSha256": "dfa9845fe1284686488269ee7c5197e3ed3bda61fb72d5a7b63dcc9830a327ab",
       "edits": [
         {
           "start": 95,
@@ -1063678,6 +1064066,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 17000,
+          "end": 17002,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 17045,
@@ -1090968,7 +1091363,7 @@
       "original": "esa.java",
       "renamed": "esa.java",
       "inputSha256": "ce7cd430787f17f6eb129f5644b3e7aab38658cc3723fe7b594f53b184f033ef",
-      "outputSha256": "30f2494ab7f1ffe497aafaf76e9f3242033a9806c9413335004add6f60a79d56",
+      "outputSha256": "225b272c4bde5fe6fbd0f2aabc8e1cdea6bab75b1f3628dfef985e424ad76f47",
       "edits": [
         {
           "start": 116,
@@ -1091251,11 +1091646,25 @@
           "renamed": "PlayerProfile"
         },
         {
+          "start": 4569,
+          "end": 4571,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 4572,
           "end": 4573,
           "symbol": "M:aq.a(I)I",
           "original": "a",
           "renamed": "getMainRoomCount"
+        },
+        {
+          "start": 4624,
+          "end": 4626,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 4627,
@@ -1105545,7 +1105954,7 @@
       "original": "fga.java",
       "renamed": "LevelSelectOverlay.java",
       "inputSha256": "3079c12e5092bdc0d7518d417646df1e570231ecadfed68e7ad2d0661359999c",
-      "outputSha256": "1fed2e2061fec302b4d76e5a22c07bf77e406330a6218f8633d05e276edf3e8b",
+      "outputSha256": "621430fa4b7c88c115b223a151705a6cec61c3ea8a2732185cb7670919468e20",
       "edits": [
         {
           "start": 96,
@@ -1105884,6 +1106293,13 @@
           "renamed": "ComponentTargetList"
         },
         {
+          "start": 7649,
+          "end": 7651,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 7652,
           "end": 7653,
           "symbol": "M:aq.a(I)I",
@@ -1106158,6 +1106574,13 @@
           "kind": "label"
         },
         {
+          "start": 13329,
+          "end": 13331,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 13332,
           "end": 13333,
           "symbol": "M:aq.a(I)I",
@@ -1106221,6 +1106644,13 @@
           "original": "L10",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 14248,
+          "end": 14250,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 14251,
@@ -1109630,7 +1110060,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "3be29af93b3ac2b8d723dfc96b5c357c3b013ca07b373e60ab715040d5bc9b18",
+      "outputSha256": "7ca1b3c4fa691834c3656cc6f5bb2ba93cd35c0c67b4ac6e0972736d2e9b5025",
       "edits": [
         {
           "start": 50,
@@ -1110333,6 +1110763,13 @@
           "renamed": "drawTiledFrame"
         },
         {
+          "start": 5424,
+          "end": 5426,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 5468,
           "end": 5470,
           "symbol": "C:be",
@@ -1110408,6 +1110845,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 6001,
+          "end": 6003,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 6045,
@@ -1110541,6 +1110985,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 6899,
+          "end": 6901,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 6912,
@@ -1118237,7 +1118688,7 @@
       "original": "fp.java",
       "renamed": "TextureCombineSource.java",
       "inputSha256": "dada9344e21332b4c14702f7b167392780563ab290e2fddbe9c93b7e79d561c7",
-      "outputSha256": "8b0d8bd654daf6b4a47c53ac0598bec04b14ba9be02772fb4abab82630021559",
+      "outputSha256": "00be212aa4d362497fda88ce09a2aaada19073bd15cd170ed2dc0449849b5c36",
       "edits": [
         {
           "start": 71,
@@ -1120303,6 +1120754,13 @@
           "symbol": "M:qh.g(I)Z",
           "original": "g",
           "renamed": "isEnded"
+        },
+        {
+          "start": 14230,
+          "end": 14232,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 14233,
@@ -1135955,7 +1136413,7 @@
       "original": "ft.java",
       "renamed": "TextureFormat.java",
       "inputSha256": "aa53059ab7495bca36529172111becec4a94daa71052677e789d2f27e748f3d2",
-      "outputSha256": "53c96688d7fa50cbcae498816e84a6a5411252ed31b1ae370810d6f0137f8c2c",
+      "outputSha256": "6de58dc1c235c723950e252fbccf5c403907848f77087c8d5c33ff082a68d58e",
       "edits": [
         {
           "start": 50,
@@ -1136202,6 +1136660,13 @@
           "symbol": "C:eq",
           "original": "eq",
           "renamed": "SimpleBlockBehaviour"
+        },
+        {
+          "start": 8933,
+          "end": 8935,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 9664,
@@ -1139627,7 +1140092,7 @@
       "original": "gaa.java",
       "renamed": "LightSourceModel.java",
       "inputSha256": "b143d053f874c6e0d6212c5a32232f53b499c72ce050649276572d6deb59bb91",
-      "outputSha256": "6485c22d3fa62cc11cd9f148fd3ce9053817cc14ac33a32453c019c385d39319",
+      "outputSha256": "27a88705858030c4f9bc207ab00c9e26464a5d7262ac8ba2faedc2ecc6795b9d",
       "edits": [
         {
           "start": 50,
@@ -1139656,6 +1140121,13 @@
           "symbol": "M:gaa.d(I)V",
           "original": "d",
           "renamed": "tick"
+        },
+        {
+          "start": 284,
+          "end": 287,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 484,
@@ -1139754,6 +1140226,20 @@
           "symbol": "F:dg.field_k:Lgr;",
           "original": "field_k",
           "renamed": "part"
+        },
+        {
+          "start": 948,
+          "end": 951,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
+        },
+        {
+          "start": 973,
+          "end": 976,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 993,
@@ -1143098,7 +1143584,7 @@
       "original": "ge.java",
       "renamed": "ShooterComponent.java",
       "inputSha256": "59fed36b3c10196139cd15de637853202058087c22e583879fe232a4bfc77874",
-      "outputSha256": "c14d67288fb46e50172082392348a62b91b360255ce4e48f91dc31b4357c6d11",
+      "outputSha256": "730b37d88b7119106accf19c60f1a7a2b62fcd23bbae3a27f7ac26e3fef4f1c3",
       "edits": [
         {
           "start": 53,
@@ -1143183,6 +1143669,13 @@
           "symbol": "M:ge.a(BLmra;Lla;)V",
           "original": "a",
           "renamed": "applyTimingPattern"
+        },
+        {
+          "start": 476,
+          "end": 479,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 488,
@@ -1143519,6 +1144012,13 @@
           "symbol": "M:ge.a(BLmra;Lla;)V",
           "original": "a",
           "renamed": "applyTimingPattern"
+        },
+        {
+          "start": 2874,
+          "end": 2877,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 2886,
@@ -1145168,7 +1145668,7 @@
       "original": "gga.java",
       "renamed": "gga.java",
       "inputSha256": "6b606fbc212d436126e4043246d4e47916273ff696fad46852affab4e277914c",
-      "outputSha256": "95bcb6d0011760173f96c29170668751659ef4d5a563716af289553265f685ac",
+      "outputSha256": "6a07b4a529052a88c752f8ecb07c477c901be557c50e0bc92d768b4c1aff0667",
       "edits": [
         {
           "start": 62,
@@ -1145493,6 +1145993,13 @@
           "renamed": "TimeSwitchBehaviour"
         },
         {
+          "start": 3241,
+          "end": 3243,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 3252,
           "end": 3253,
           "symbol": "M:iu.a(III)V",
@@ -1145500,11 +1146007,25 @@
           "renamed": "drawAdditive"
         },
         {
+          "start": 3335,
+          "end": 3337,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 3346,
           "end": 3347,
           "symbol": "M:iu.a(III)V",
           "original": "a",
           "renamed": "drawAdditive"
+        },
+        {
+          "start": 3446,
+          "end": 3448,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 3457,
@@ -1147033,7 +1147554,7 @@
       "original": "gi.java",
       "renamed": "FinishOrderOverlay.java",
       "inputSha256": "0838f4ab1385376dadca9e6889cfc674b4f2802e6fa8f5bb9183564487480776",
-      "outputSha256": "e7ac1e436fdcc9b81762915d69e7a0cd86fdc5bb313c807f4d5e4ebe99feb891",
+      "outputSha256": "9f0a143db603a4b47cba80e2cfbf47569726dfc0df244e08a55c8de2680cefb4",
       "edits": [
         {
           "start": 50,
@@ -1147160,6 +1147681,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 1072,
+          "end": 1074,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 1104,
@@ -1147728,7 +1148256,7 @@
       "original": "gj.java",
       "renamed": "VertexAttribute.java",
       "inputSha256": "ecc97c291c07c802262ec0e41e26f64ac2c48dc58e618715bf738d71e0eca37a",
-      "outputSha256": "82d3da73c3a0af3b319228290cb686f5989d7db1ebd257ca3d2699fdff288e3c",
+      "outputSha256": "e64ba715ce47942a73c4a0f85d9371778685cfc1b0916fcd065a8813cb633d8f",
       "edits": [
         {
           "start": 71,
@@ -1147897,6 +1148425,13 @@
           "symbol": "C:kea",
           "original": "kea",
           "renamed": "GraphicsQuality"
+        },
+        {
+          "start": 1258,
+          "end": 1260,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 1281,
@@ -1182978,7 +1183513,7 @@
       "original": "hk.java",
       "renamed": "HardwareWaterTextures.java",
       "inputSha256": "35b0696c0f81ae178698f15596ab655ebbc2da2f8dd83ccce0968cd9f028dd2c",
-      "outputSha256": "93be1b6cbc83c27643aa98ac10ad1211ea2c325eb265aef27ee6e02942ce8768",
+      "outputSha256": "19e99be37c6fcbaede53b6822a93e045d474f45d8cdc3c9efd41b41ecb8291f3",
       "edits": [
         {
           "start": 69,
@@ -1183056,6 +1183591,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SwitchableIdAllocator"
+        },
+        {
+          "start": 1348,
+          "end": 1350,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 1351,
@@ -1184697,7 +1185239,7 @@
       "original": "hm.java",
       "renamed": "OpenGlTexture2D.java",
       "inputSha256": "a775d71e67f2b81c58c87ad749eac2aa1bf541444ea03abea6cf07fa62bba813",
-      "outputSha256": "e2a724db9513625943c4f2dcec489f235ed29419cf2654ed2b2b30d5b11bd23f",
+      "outputSha256": "6888cbbf3cb3a9eeb661c748245a97d6226d5792470fa2be9c36288ab339dc38",
       "edits": [
         {
           "start": 50,
@@ -1185293,6 +1185835,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "WhiteLightShooterComponent"
+        },
+        {
+          "start": 5974,
+          "end": 5976,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 6001,
@@ -1195600,7 +1196149,7 @@
       "original": "ica.java",
       "renamed": "TextureCombineOperation.java",
       "inputSha256": "10c39104315be2dc11a78d33f367d38d74c96655b58cddb3053f9b0ee99a1b20",
-      "outputSha256": "7f69dd1d4c03806df78362a9269e84277058b55381ec6767c0163d15e03ffa7e",
+      "outputSha256": "1b76ed1025e0f7cc1bc3417aa6b12fb62e363df7ea496ed8ce92b4e0945719de",
       "edits": [
         {
           "start": 50,
@@ -1196028,6 +1196577,13 @@
           "symbol": "M:bea.a(IIIIII)V",
           "original": "a",
           "renamed": "blurRectangle"
+        },
+        {
+          "start": 15082,
+          "end": 15084,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 15093,
@@ -1202330,7 +1202886,7 @@
       "original": "ila.java",
       "renamed": "ChatOverlay.java",
       "inputSha256": "f3f23f7fa05c309e6e93abab067ba60c42933206972b84fa00e5c180eeb01cac",
-      "outputSha256": "b603e3f9dd129591975efb6b5d8ee89d4b036ceb543c496d18a8712480915ae2",
+      "outputSha256": "057a318f4b80871ccd214f5f37e248fdbdf1a4bdca8552559a255495c26e95fc",
       "edits": [
         {
           "start": 50,
@@ -1203201,6 +1203757,13 @@
           "renamed": "ProceduralTexture"
         },
         {
+          "start": 7186,
+          "end": 7188,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 7214,
           "end": 7217,
           "symbol": "C:oka",
@@ -1203390,6 +1203953,13 @@
           "renamed": "ProceduralTexture"
         },
         {
+          "start": 8110,
+          "end": 8112,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 8270,
           "end": 8273,
           "symbol": "C:dea",
@@ -1203577,6 +1204147,13 @@
           "symbol": "M:rra.a(I)V",
           "original": "a",
           "renamed": "persistSessionSeedBytes"
+        },
+        {
+          "start": 9178,
+          "end": 9180,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 9271,
@@ -1203915,6 +1204492,13 @@
           "renamed": "ReportAbuseDialog"
         },
         {
+          "start": 10693,
+          "end": 10695,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
+        {
           "start": 10747,
           "end": 10749,
           "symbol": "C:lb",
@@ -1204060,6 +1204644,13 @@
           "symbol": "C:oka",
           "original": "oka",
           "renamed": "MembersUpsellMenu"
+        },
+        {
+          "start": 11883,
+          "end": 11885,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 11897,
@@ -1208780,7 +1209371,7 @@
       "original": "iqa.java",
       "renamed": "ToolkitInstance.java",
       "inputSha256": "19ad2a7067f2aca92914b2b6d3fa3d4c370e56a9c135437803237192d01d44a3",
-      "outputSha256": "ba5708e0c154f7916dd7b2d7b557a5096459e252939bfaeb64cb4b03866fa26d",
+      "outputSha256": "bb214d675fdb1a84124909367e6a4ffdc87d12e27a40eaf8365166627860700d",
       "edits": [
         {
           "start": 50,
@@ -1208935,6 +1209526,13 @@
           "symbol": "M:nfa.a(IIIII)V",
           "original": "a",
           "renamed": "fillClippedCircle"
+        },
+        {
+          "start": 1415,
+          "end": 1417,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 1418,
@@ -1210162,7 +1210760,7 @@
       "original": "is.java",
       "renamed": "NameEntryPopup.java",
       "inputSha256": "39334369036ca11b2fcb08249274c4e33f061deed5b7209121d28ae1e96e1c5c",
-      "outputSha256": "06fe2b4dc74851c6e8b3c401d0524c789abe38519daf978f219a703aaf0af853",
+      "outputSha256": "bc807b966dbf0b96d19964d21ae248a7a0642ee7a9c91f8bb835a954a1ddebaa",
       "edits": [
         {
           "start": 50,
@@ -1210226,6 +1210824,13 @@
           "symbol": "C:hra",
           "original": "hra",
           "renamed": "ValidationOutcome"
+        },
+        {
+          "start": 590,
+          "end": 591,
+          "symbol": "M:is.a(Z)Z",
+          "original": "a",
+          "renamed": "handleKeyInput"
         },
         {
           "start": 987,
@@ -1221792,7 +1222397,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "23ec8930aa1b791aeb93b24b39a55c24c7a8d8188cd60d47d2a35240ca9b0b6b",
+      "outputSha256": "0a27feb2828bafe0ebf738f96134e567779277cfe7831cc4d275c85f34307522",
       "edits": [
         {
           "start": 50,
@@ -1223207,6 +1223812,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 9931,
+          "end": 9933,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 9948,
@@ -1226653,6 +1227265,13 @@
           "renamed": "loadFile"
         },
         {
+          "start": 32991,
+          "end": 32993,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
+        {
           "start": 33008,
           "end": 33009,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1227687,6 +1228306,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 39982,
+          "end": 39984,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 39999,
@@ -1232349,6 +1232975,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 71665,
+          "end": 71667,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 71682,
@@ -1238637,6 +1239270,13 @@
           "renamed": "loadFile"
         },
         {
+          "start": 115343,
+          "end": 115345,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 115363,
           "end": 115364,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1238658,6 +1239298,13 @@
           "renamed": "loadFile"
         },
         {
+          "start": 115515,
+          "end": 115517,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 115535,
           "end": 115536,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1238677,6 +1239324,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 115686,
+          "end": 115688,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 115706,
@@ -1264473,7 +1265127,7 @@
       "original": "kga.java",
       "renamed": "ItemModel.java",
       "inputSha256": "a14a095b67b5da32946b278f605e766d46fbbafd3720b307f229d372cde93008",
-      "outputSha256": "edaa5c934f3865b742792000d33df1cd48333ad6f6502bb643e98381753ff10b",
+      "outputSha256": "af7bc467274fba9aef8d6c64ec9a2931f103ff18e0808c746c35148486dc2a10",
       "edits": [
         {
           "start": 50,
@@ -1265183,6 +1265837,13 @@
           "renamed": "generate"
         },
         {
+          "start": 10304,
+          "end": 10306,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 10307,
           "end": 10308,
           "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
@@ -1265216,6 +1265877,13 @@
           "symbol": "C:gu",
           "original": "gu",
           "renamed": "TreasureValuesOverlay"
+        },
+        {
+          "start": 10479,
+          "end": 10481,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 10482,
@@ -1265272,6 +1265940,13 @@
           "symbol": "C:uga",
           "original": "uga",
           "renamed": "LegacyOpenGlTexture1D"
+        },
+        {
+          "start": 10870,
+          "end": 10872,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 10873,
@@ -1279462,7 +1280137,7 @@
       "original": "kta.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "01c7906e61c0d045d1ca62436b33b54e30592869418a5fbcc59368e8656e3112",
-      "outputSha256": "afeb95ecd3558a8457dfc445abaf91b6451496cfd75ad0a7ee0826b0ba9ae57c",
+      "outputSha256": "17a817bd73cc814d8d8a24b2e51aa11410bf4c7e322b76d857fa981eea2953fe",
       "edits": [
         {
           "start": 44,
@@ -1279519,6 +1280194,13 @@
           "symbol": "C:cg",
           "original": "cg",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 872,
+          "end": 874,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "AudioSample"
         },
         {
           "start": 909,
@@ -1284202,7 +1284884,7 @@
       "original": "l.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e56f649f2603989f3ec8b95daa188951258795ab268f822dd99ab4e664b32f84",
-      "outputSha256": "543f1f7a49c8dbaa6bf3b4f78fed44fa57b55197b2d72620bc5730bfb803df9e",
+      "outputSha256": "464a81a71aa9538bf1fe77662d9621247431e092a7175f7aaeeec18cdb5f211b",
       "edits": [
         {
           "start": 44,
@@ -1284350,6 +1285032,20 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "MidiVoice"
+        },
+        {
+          "start": 2790,
+          "end": 2792,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 2814,
+          "end": 2816,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3722,
@@ -1285586,6 +1286282,13 @@
           "renamed": "MidiVoice"
         },
         {
+          "start": 29115,
+          "end": 29117,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 29302,
           "end": 29305,
           "symbol": "C:rta",
@@ -1285724,6 +1286427,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "MidiVoice"
+        },
+        {
+          "start": 33235,
+          "end": 33237,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 33407,
@@ -1333655,10 +1334365,17 @@
     },
     {
       "original": "mra.java",
-      "renamed": "mra.java",
+      "renamed": "TimedShooter.java",
       "inputSha256": "6e18955ffc70244c7238f4d34bf45de2544d47a415c40b4b836fe559176cdc71",
-      "outputSha256": "05fefea24ba250240f3576349c480428697d99d87ffdc514ce6b99790069a4a4",
+      "outputSha256": "02f098cc745d1cbc42f30abfd065886ab4503c5b2dbcd7688402f377a87d2585",
       "edits": [
+        {
+          "start": 48,
+          "end": 51,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
+        },
         {
           "start": 79,
           "end": 80,
@@ -1346225,7 +1346942,7 @@
       "original": "no.java",
       "renamed": "no.java",
       "inputSha256": "a5526f0b9fa9846d26205191ecc9fd22f7749a9921d9f33e03da72122284641d",
-      "outputSha256": "4a8330493992fdb328122308a7ddecd5288487013aeb950bb7c7cba414806eef",
+      "outputSha256": "5b038371990a0ea231d4e02e4dad12daab1def9da475593cf8a0fcfd2aae7577",
       "edits": [
         {
           "start": 61,
@@ -1346247,6 +1346964,13 @@
           "symbol": "M:no.a(B)V",
           "original": "a",
           "renamed": "update"
+        },
+        {
+          "start": 982,
+          "end": 984,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 996,
@@ -1346373,6 +1347097,13 @@
           "symbol": "C:rba",
           "original": "rba",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 1928,
+          "end": 1930,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 1942,
@@ -1346550,6 +1347281,13 @@
           "renamed": "SoundEvent"
         },
         {
+          "start": 3023,
+          "end": 3025,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 3037,
           "end": 3038,
           "symbol": "M:nh.c()I",
@@ -1346667,6 +1347405,13 @@
           "symbol": "M:vg.p(I)V",
           "original": "p",
           "renamed": "unlink"
+        },
+        {
+          "start": 4026,
+          "end": 4028,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 4040,
@@ -1346802,11 +1347547,25 @@
           "renamed": "draw"
         },
         {
+          "start": 5306,
+          "end": 5308,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 5320,
           "end": 5321,
           "symbol": "M:nh.a()I",
           "original": "a",
           "renamed": "width"
+        },
+        {
+          "start": 5548,
+          "end": 5550,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 5562,
@@ -1346856,6 +1347615,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 6200,
+          "end": 6202,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 6229,
@@ -1346926,6 +1347692,13 @@
           "symbol": "M:qa.a(IIBI[Lnh;I)V",
           "original": "a",
           "renamed": "drawTiledFrame"
+        },
+        {
+          "start": 7081,
+          "end": 7083,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 7108,
@@ -1360065,7 +1360838,7 @@
       "original": "ob.java",
       "renamed": "SceneLight.java",
       "inputSha256": "b629303d1c78fe36313efc9b96e28402e9cb455deda78833cf7230badfbf8063",
-      "outputSha256": "3146be0938a7eea067d4c1f121626cb94b98b244b937f517d826c8f2c74c8fe9",
+      "outputSha256": "431164efe893c2272547bd5d8131a4bfd8e547ed0cafc8bc5b586e9c036c3583",
       "edits": [
         {
           "start": 53,
@@ -1361564,6 +1362337,13 @@
           "symbol": "M:su.a(Ljpa;Lha;B)Lnh;",
           "original": "a",
           "renamed": "createToolkitSprite"
+        },
+        {
+          "start": 5499,
+          "end": 5501,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 5512,
@@ -1380246,7 +1381026,7 @@
       "original": "ov.java",
       "renamed": "BeamShooterBehaviour.java",
       "inputSha256": "32d12e50f27f45d5fa638823c473481ce16ceffaad5e83472d8ebe00d8f9d32d",
-      "outputSha256": "f98103b93c22027bd6e6778a2b77d8693101b860f9d9b6e2f65f66806121b152",
+      "outputSha256": "651f04e6d16606bfc3d9a8df6cb033ba5d811fe74f94da14f5b2cf415aa9ec4c",
       "edits": [
         {
           "start": 50,
@@ -1380261,6 +1381041,13 @@
           "symbol": "C:nv",
           "original": "nv",
           "renamed": "Behaviour"
+        },
+        {
+          "start": 75,
+          "end": 78,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 93,
@@ -1388899,7 +1389686,7 @@
       "original": "pfa.java",
       "renamed": "CourseMapWalker.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "a83c43afeffe14c2e623d5ba4515c37105aafa2e9b2e6762c9347e58d2b255c8",
+      "outputSha256": "22d61ad89418e1280e3fa94b72c0aa32e52b02073f54541e307e7f2f6aa400bb",
       "edits": [
         {
           "start": 50,
@@ -1392542,6 +1393329,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 22309,
+          "end": 22311,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 22326,
           "end": 22327,
           "symbol": "M:jaa.a(B[B)Ljava/lang/String;",
@@ -1393856,6 +1394650,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 31370,
+          "end": 31372,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 31387,
@@ -1407961,7 +1408762,7 @@
       "original": "pk.java",
       "renamed": "HiscoresScreen.java",
       "inputSha256": "0a7812ef23c3ee01767a30fb5111f1ab4d4cbd3450277fd6e75298747c2bae22",
-      "outputSha256": "5e49475f873688b3e35f3706c80108f12409772e2ac800772435be1ab5b75be5",
+      "outputSha256": "fca3603c6f4491ddc369de3725bcf8346e3172eaafc5500b44f232f8981f1c49",
       "edits": [
         {
           "start": 50,
@@ -1408382,6 +1409183,13 @@
           "symbol": "M:da.a(IZLjava/lang/String;III)V",
           "original": "a",
           "renamed": "drawLeft"
+        },
+        {
+          "start": 6474,
+          "end": 6476,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 6619,
@@ -1418741,7 +1419549,7 @@
       "original": "qa.java",
       "renamed": "PlayerViewport.java",
       "inputSha256": "0ddd541c0ef09728669f83ac32fbad23bde61a4d0a1ead62aec50ea26af151d0",
-      "outputSha256": "76b6771c7730d091393a5057d496c4d2c0ee9bc66ff343bded48d748375a53e3",
+      "outputSha256": "8a032841070a435b579edbb6763e12e72e0d30f542025b0c9cb95d291f5511e2",
       "edits": [
         {
           "start": 50,
@@ -1419983,11 +1420791,25 @@
           "renamed": "ToolkitSprite"
         },
         {
+          "start": 9328,
+          "end": 9330,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 9342,
           "end": 9343,
           "symbol": "M:nh.a()I",
           "original": "a",
           "renamed": "width"
+        },
+        {
+          "start": 9430,
+          "end": 9432,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 9444,
@@ -1423508,7 +1424330,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "f35a6cd89a945463c34cb693cc53591a6982da5845e1a431ccbe57b581226b5b",
+      "outputSha256": "9484105324e759038b909c8b79d44d48503939c74e97f7f012309e4370578125",
       "edits": [
         {
           "start": 71,
@@ -1423523,6 +1424345,13 @@
           "symbol": "C:dfa",
           "original": "dfa",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 97,
+          "end": 100,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
         },
         {
           "start": 121,
@@ -1430089,7 +1430918,7 @@
       "original": "qha.java",
       "renamed": "DemoCourseGenerator.java",
       "inputSha256": "d532629ed5ed084c28350d28c4a008cc36057317f96697d5b79af206df9fed21",
-      "outputSha256": "555a55799d1c35fbeca5a00f023193b29ef5be8707c08525ebab4d5d10f45733",
+      "outputSha256": "bd28bfa44107d4a548112def3575d60cc603c6007ed88cc5af59900ecb54d021",
       "edits": [
         {
           "start": 50,
@@ -1430120,11 +1430949,25 @@
           "renamed": "DemoCourseGenerator"
         },
         {
+          "start": 157,
+          "end": 159,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
+        },
+        {
           "start": 160,
           "end": 161,
           "symbol": "M:aq.a(I)I",
           "original": "a",
           "renamed": "getMainRoomCount"
+        },
+        {
+          "start": 171,
+          "end": 173,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 174,
@@ -1430195,6 +1431038,13 @@
           "symbol": "F:ou.field_a:I",
           "original": "field_a",
           "renamed": "roomCount"
+        },
+        {
+          "start": 871,
+          "end": 873,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 874,
@@ -1430980,7 +1431830,7 @@
       "original": "qia.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "272564df7ebc4e166809b0961ff078a002ad6c336e25dc74c3c503596310b1dd",
-      "outputSha256": "ef08d7b6e3e961dad81f66cf7124a81519832d36f0158ac8e035125898f53776",
+      "outputSha256": "a6dd65f1559470dce63b67f507d2fd59220d39ce49bd23b5b096e0956941c112",
       "edits": [
         {
           "start": 50,
@@ -1432360,6 +1433210,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 63183,
+          "end": 63185,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "AudioSample"
         },
         {
           "start": 63455,
@@ -1446031,7 +1446888,7 @@
       "original": "qt.java",
       "renamed": "qt.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "2947526786e01caf3e92c90eee3c91a4a8e7ff5ef8d9cf34997b6c0d69e0617f",
+      "outputSha256": "192e560e44a6774878568a126bfed2f4eea95f78ae5a4148e2e92119d4148140",
       "edits": [
         {
           "start": 66,
@@ -1446151,6 +1447008,13 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "ContextMenu"
+        },
+        {
+          "start": 753,
+          "end": 755,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 764,
@@ -1457244,7 +1458108,7 @@
       "original": "rf.java",
       "renamed": "rf.java",
       "inputSha256": "1796d3848fdee7ce1e97eba337de377b960f8b486c6cb955346bec0f5dd865a3",
-      "outputSha256": "6acbb70485a53fcd1d2d10def8b75e39524c549538e4a1a90f1103672fd7419b",
+      "outputSha256": "a4bff56449bb0d3d67179da34bea80c11c85bf18ab2e914468047b873f395ee3",
       "edits": [
         {
           "start": 162,
@@ -1457378,6 +1458242,20 @@
           "symbol": "C:wla",
           "original": "wla",
           "renamed": "ReportAbuseDialog"
+        },
+        {
+          "start": 1903,
+          "end": 1905,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 2022,
+          "end": 2024,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 2093,
@@ -1458723,7 +1459601,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "408895d6a1e7c01473368cd929cc5d2390f955aa1990071cb20f65bf79c126f8",
-      "outputSha256": "15d3c9ba5decb7c30167ba1101fa6efd30a32f7b15061696b19ab265734e6339",
+      "outputSha256": "fc391ece7cde69abfc745560633935101d6403bd2abad37701af51a4b1f3e412",
       "edits": [
         {
           "start": 61,
@@ -1459237,6 +1460115,13 @@
           "renamed": "OpenGlSceneLight"
         },
         {
+          "start": 2245,
+          "end": 2247,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 2268,
           "end": 2271,
           "symbol": "C:wba",
@@ -1459249,6 +1460134,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 2325,
+          "end": 2327,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 2348,
@@ -1459277,6 +1460169,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 2442,
+          "end": 2444,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 2462,
@@ -1459354,6 +1460253,13 @@
           "symbol": "C:wba",
           "original": "wba",
           "renamed": "OpenGlSceneLight"
+        },
+        {
+          "start": 2715,
+          "end": 2717,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 2738,
@@ -1459496,6 +1460402,13 @@
           "renamed": "DoorwayModel"
         },
         {
+          "start": 3176,
+          "end": 3178,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3213,
           "end": 3215,
           "symbol": "C:wg",
@@ -1459510,11 +1460423,25 @@
           "renamed": "BevelOperator"
         },
         {
+          "start": 3250,
+          "end": 3252,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3266,
           "end": 3269,
           "symbol": "C:gqa",
           "original": "gqa",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 3287,
+          "end": 3289,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3303,
@@ -1459524,11 +1460451,25 @@
           "renamed": "HardwareReflectionEffect"
         },
         {
+          "start": 3323,
+          "end": 3325,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3339,
           "end": 3342,
           "symbol": "C:wta",
           "original": "wta",
           "renamed": "TrackingCrusherComponent"
+        },
+        {
+          "start": 3360,
+          "end": 3362,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3377,
@@ -1459538,11 +1460479,25 @@
           "renamed": "TextureCombineSource"
         },
         {
+          "start": 3397,
+          "end": 3399,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3413,
           "end": 3415,
           "symbol": "C:vp",
           "original": "vp",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 3433,
+          "end": 3435,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3450,
@@ -1459552,11 +1460507,32 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 3471,
+          "end": 3473,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 3508,
+          "end": 3510,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3524,
           "end": 3526,
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "HardwareModelVertexStream"
+        },
+        {
+          "start": 3544,
+          "end": 3546,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3560,
@@ -1459566,11 +1460542,25 @@
           "renamed": "S2CPlayerSyncPacket"
         },
         {
+          "start": 3580,
+          "end": 3582,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3597,
           "end": 3599,
           "symbol": "C:bf",
           "original": "bf",
           "renamed": "SoftwareRenderTarget"
+        },
+        {
+          "start": 3617,
+          "end": 3619,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3633,
@@ -1459580,11 +1460570,25 @@
           "renamed": "ItemModel"
         },
         {
+          "start": 3654,
+          "end": 3656,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 3670,
           "end": 3672,
           "symbol": "C:tv",
           "original": "tv",
           "renamed": "ContextMenuRow"
+        },
+        {
+          "start": 3691,
+          "end": 3693,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 3707,
@@ -1460448,6 +1461452,13 @@
           "renamed": "SoftwareTransform3D"
         },
         {
+          "start": 7135,
+          "end": 7137,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 7158,
           "end": 7161,
           "symbol": "C:vna",
@@ -1461195,6 +1462206,13 @@
           "symbol": "C:pna",
           "original": "pna",
           "renamed": "SoftwareTransform3D"
+        },
+        {
+          "start": 9894,
+          "end": 9896,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 9915,
@@ -1474865,10 +1475883,17 @@
     },
     {
       "original": "rqa.java",
-      "renamed": "rqa.java",
+      "renamed": "FrameDrawable.java",
       "inputSha256": "72e999f4548230453126f637a7884f2f2553d58e9814ecf495b4b7846825f8d2",
-      "outputSha256": "c3476e9c1615bfa96787e9772c2e3acdb6edab60a6c941095eb0ae4d022b88f1",
+      "outputSha256": "35271a9c9b83a007e69b5f6bd8972c4cbbad32bcc96473bf8e05ca268853b3f1",
       "edits": [
+        {
+          "start": 48,
+          "end": 51,
+          "symbol": "C:rqa",
+          "original": "rqa",
+          "renamed": "FrameDrawable"
+        },
         {
           "start": 79,
           "end": 80,
@@ -1477015,7 +1478040,7 @@
       "original": "rta.java",
       "renamed": "MidiVoice.java",
       "inputSha256": "bb3b1478f5051175bc084c0b03abdde896192997b2218d14f581319881f34470",
-      "outputSha256": "4750003a0325f27746de9aaaef86fb23f9429df072e036f2231f0f5639a10e13",
+      "outputSha256": "9d591b105ccb6172edd7ac0160a47ed57c595e35b4439913fbbee409a1c0e19b",
       "edits": [
         {
           "start": 50,
@@ -1477030,6 +1478055,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 105,
+          "end": 107,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 189,
@@ -1488631,7 +1489663,7 @@
       "original": "ska.java",
       "renamed": "WeaponShooterBehaviour.java",
       "inputSha256": "70f370fa83e118908fa2f6252544e03dbdbd349cb408d9ce7d0f0dbc6db61439",
-      "outputSha256": "75abe0b1ab6204b49446a55e8e16d651a90fd578d8725a283a92aa8bd2fecef1",
+      "outputSha256": "048a8f824be8407447784c3e9c925c613975143b82d326d22805a462cc3c3c5d",
       "edits": [
         {
           "start": 50,
@@ -1488646,6 +1489678,13 @@
           "symbol": "C:nv",
           "original": "nv",
           "renamed": "Behaviour"
+        },
+        {
+          "start": 76,
+          "end": 79,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 123,
@@ -1512279,7 +1513318,7 @@
       "original": "tn.java",
       "renamed": "MidiPatch.java",
       "inputSha256": "1fbe6d6ca7eeb84635644e09bb25dc2e7944ae06def21e1bcc686047ed04c0c2",
-      "outputSha256": "82a7f812f86152d1b4a5e72729fbaaba8ef9db7daeba5a7a88b3c184d1d949e1",
+      "outputSha256": "28e69086b841e3560ceac81ef52269220a6d51b4ef2ae6cefb91bb287d5f2aca",
       "edits": [
         {
           "start": 50,
@@ -1512294,6 +1513333,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 148,
+          "end": 150,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 173,
@@ -1512604,6 +1513650,34 @@
           "renamed": "MidiPatch"
         },
         {
+          "start": 4354,
+          "end": 4356,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 5049,
+          "end": 5051,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 5155,
+          "end": 5157,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 5532,
+          "end": 5534,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 5741,
           "end": 5744,
           "symbol": "C:uia",
@@ -1512611,11 +1513685,74 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 5796,
+          "end": 5798,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 5937,
+          "end": 5939,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6020,
+          "end": 6022,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6045,
+          "end": 6047,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6070,
+          "end": 6072,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6095,
+          "end": 6097,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6120,
+          "end": 6122,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 6319,
+          "end": 6321,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 7995,
           "end": 7996,
           "symbol": "C:u",
           "original": "u",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 8151,
+          "end": 8153,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 8223,
@@ -1512779,6 +1513916,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 10204,
+          "end": 10206,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 10329,
+          "end": 10331,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 10474,
           "end": 10475,
           "symbol": "M:uia.h(I)I",
@@ -1512889,6 +1514040,13 @@
           "symbol": "F:uia.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 14754,
+          "end": 14756,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 15242,
@@ -1516523,7 +1517681,7 @@
       "original": "tra.java",
       "renamed": "TextInputWidget.java",
       "inputSha256": "dcd842698382577899c7bed9be0ae6f7ff0390c3bdecb666c0a8896fee1437e3",
-      "outputSha256": "36ec272250ec9600ee89507bf4c35f6fabeec562d9d2048947c46baffcf50ff7",
+      "outputSha256": "a3ed86239c675ff078a3d64d0b66dbf1d2846fc96eaaaa4cdcb4c194981732b7",
       "edits": [
         {
           "start": 44,
@@ -1517513,6 +1518671,13 @@
           "renamed": "LoadLevelCommand"
         },
         {
+          "start": 16838,
+          "end": 16840,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
+        },
+        {
           "start": 16841,
           "end": 16842,
           "symbol": "M:bw.a(I[BZ)Ljava/lang/Object;",
@@ -1517546,6 +1518711,13 @@
           "symbol": "C:lt",
           "original": "lt",
           "renamed": "LoadingStep"
+        },
+        {
+          "start": 17082,
+          "end": 17084,
+          "symbol": "C:bw",
+          "original": "bw",
+          "renamed": "ByteStorageFactory"
         },
         {
           "start": 17085,
@@ -1523411,7 +1524583,7 @@
       "original": "u.java",
       "renamed": "PcmSample.java",
       "inputSha256": "fde6414ee430ff6061d11942929c8e40edacf5a00ae2bbdefe2f2047e7bf7c31",
-      "outputSha256": "f32d6bc1625eaa9e7dcd322673b2f61f6759a2db95a36513e7cd83c420da3b30",
+      "outputSha256": "18ecfb2f36a5a36191821a9939a8d3ca84f58eb860072cdcf2b10fa252fcebde",
       "edits": [
         {
           "start": 50,
@@ -1523419,6 +1524591,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 60,
+          "end": 62,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "AudioSample"
         },
         {
           "start": 162,
@@ -1526181,16 +1527360,30 @@
     },
     {
       "original": "ud.java",
-      "renamed": "ud.java",
+      "renamed": "AudioSample.java",
       "inputSha256": "3f16a048917d66a2b1e1da3c4362c79af83e150d4d5e07eb84c88c13d720528f",
-      "outputSha256": "b969f34ed7329f5556631ac9c954bd5387ffc085cdefc0a709c189ab1b14a202",
+      "outputSha256": "43743f80abbe972b4fc2a3fb5f3660597a4593fe0f0ea88819b40e3c471dccfb",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:ud",
+          "original": "ud",
+          "renamed": "AudioSample"
+        },
         {
           "start": 64,
           "end": 66,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "symbol": "M:ud.<init>()V",
+          "original": "ud",
+          "renamed": "AudioSample"
         }
       ]
     },
@@ -1529464,7 +1530657,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "b823a5a0efa1fd3b08c4120688476b667dddd3ab446f00d0f80b31469c183817",
+      "outputSha256": "d573ca18fde79a8c5d49e00f42ed142d9bac6822440625d4557ad03c9a8a41a4",
       "edits": [
         {
           "start": 53,
@@ -1531028,6 +1532221,13 @@
           "renamed": "CurveShape"
         },
         {
+          "start": 12766,
+          "end": 12768,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
+        },
+        {
           "start": 12795,
           "end": 12798,
           "symbol": "C:nga",
@@ -1531936,6 +1533136,13 @@
           "symbol": "M:sa.a(ZIZIB)Lcn;",
           "original": "a",
           "renamed": "openArchive"
+        },
+        {
+          "start": 21185,
+          "end": 21187,
+          "symbol": "C:bi",
+          "original": "bi",
+          "renamed": "SoftwareRasterBlitter"
         },
         {
           "start": 21231,
@@ -1542843,7 +1544050,7 @@
       "original": "uka.java",
       "renamed": "BoulderComponent.java",
       "inputSha256": "df4891ae407d0c2e20873082d984268ffa759902d3d4dcf1e5414412aa3cef6a",
-      "outputSha256": "82ae5d20594985a914eaeca8cb794619010c78fc69023c11141851a74cf49662",
+      "outputSha256": "4a3f4cf4b1c28aaab923a164ec91f97b259301a42d7fc1ac26e0bc1f366e3b01",
       "edits": [
         {
           "start": 50,
@@ -1542937,6 +1544144,13 @@
           "renamed": "populateItems"
         },
         {
+          "start": 870,
+          "end": 872,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
+        {
           "start": 907,
           "end": 908,
           "symbol": "M:ola.a(BILjava/lang/String;)V",
@@ -1543005,6 +1544219,13 @@
           "symbol": "M:lja.a(BZ)V",
           "original": "a",
           "renamed": "populateItems"
+        },
+        {
+          "start": 1501,
+          "end": 1503,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 1545,
@@ -1545173,7 +1546394,7 @@
       "original": "una.java",
       "renamed": "GpuDataType.java",
       "inputSha256": "1e5093484a51ce3f2e114752f0fc5a90a50e633bfd23e59ead5ebd92e7347b35",
-      "outputSha256": "21a2f2d810011f1c10434debc6ce517cb184905995102e659373077477289576",
+      "outputSha256": "7b44c31af20bbbc6a38593f35135da9a1cc058e0d908a48274facddec1d865e4",
       "edits": [
         {
           "start": 71,
@@ -1545286,6 +1546507,13 @@
           "symbol": "M:qda.a(Ljava/util/BitSet;I)I",
           "original": "a",
           "renamed": "countSetBits"
+        },
+        {
+          "start": 1291,
+          "end": 1293,
+          "symbol": "C:aq",
+          "original": "aq",
+          "renamed": "MainRoomCatalog"
         },
         {
           "start": 1294,
@@ -1564462,7 +1565690,7 @@
       "original": "vh.java",
       "renamed": "WhirlpoolDigest.java",
       "inputSha256": "7f248fcb262106d0d4b1643a1ce6b9a20ef5f4116b414501a6d4cf60282eff78",
-      "outputSha256": "912a9c3b03432f7e0bec45ea01a94a8e1dd70d8ee605fadfe3351f65b8d30c36",
+      "outputSha256": "ef1c5fcd58f1ea6831915fcbd93bf329036f3bc620e53939b34bad45d48defeb",
       "edits": [
         {
           "start": 50,
@@ -1565186,6 +1566414,13 @@
           "renamed": "DamageableBehaviour"
         },
         {
+          "start": 9926,
+          "end": 9928,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 9984,
           "end": 9986,
           "symbol": "C:im",
@@ -1565221,6 +1566456,13 @@
           "renamed": "DamageableBehaviour"
         },
         {
+          "start": 10108,
+          "end": 10110,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
+        },
+        {
           "start": 10437,
           "end": 10440,
           "symbol": "C:boa",
@@ -1565233,6 +1566475,13 @@
           "symbol": "C:cu",
           "original": "cu",
           "renamed": "DamageableBehaviour"
+        },
+        {
+          "start": 10701,
+          "end": 10703,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 10768,
@@ -1565261,6 +1566510,13 @@
           "symbol": "C:im",
           "original": "im",
           "renamed": "PortalBehaviour"
+        },
+        {
+          "start": 10915,
+          "end": 10917,
+          "symbol": "C:bq",
+          "original": "bq",
+          "renamed": "MidiPatchEnvelope"
         },
         {
           "start": 10944,
@@ -1583098,7 +1584354,7 @@
       "original": "wd.java",
       "renamed": "CharacterChoice.java",
       "inputSha256": "916060f3d8158a21c48b6d8d83e7445574eeab0e50805468d5a3b1972b072941",
-      "outputSha256": "3c515efdfc5178d1893c93773d50212ba62e3390f9197619e489a57b61de368c",
+      "outputSha256": "7b248cdc1ba4b5f473b25b7a877e66235e98c52e1eec7d2a249e34b8c77b71cc",
       "edits": [
         {
           "start": 50,
@@ -1583225,6 +1584481,13 @@
           "symbol": "C:gva",
           "original": "gva",
           "renamed": "DefaultRoomObjectRenderer"
+        },
+        {
+          "start": 1007,
+          "end": 1009,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 1010,
@@ -1592586,7 +1593849,7 @@
       "original": "wla.java",
       "renamed": "ReportAbuseDialog.java",
       "inputSha256": "c750bb1282b13d760775e034f1b7b094e03dc9040a8c0d085e2b45f2322a5eb7",
-      "outputSha256": "a8ac46a6c8403fda3bd6f94cfbb45d55178d04f5fe91d073fa85b10eacef1475",
+      "outputSha256": "bc3ec954d5eea8015fd752d55644c30d936f620bbb2c7fe7cecc8e4021f42876",
       "edits": [
         {
           "start": 50,
@@ -1593144,6 +1594407,13 @@
           "renamed": "stringWidth"
         },
         {
+          "start": 7962,
+          "end": 7964,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
+        },
+        {
           "start": 8113,
           "end": 8114,
           "symbol": "M:il.b(Ljava/lang/String;)I",
@@ -1593184,6 +1594454,13 @@
           "symbol": "M:wla.a(Ljea;Ljava/lang/String;IIILjea;)I",
           "original": "a",
           "renamed": "appendReasonHeading"
+        },
+        {
+          "start": 8991,
+          "end": 8993,
+          "symbol": "C:ai",
+          "original": "ai",
+          "renamed": "AvailabilityQueryFactory"
         },
         {
           "start": 9089,
@@ -1600179,7 +1601456,7 @@
       "original": "wu.java",
       "renamed": "ModelFactory.java",
       "inputSha256": "fbd2df9fd8e307b8c15ed94ebfbe7c2cc58719f0bfab5583b0b208a7a803037e",
-      "outputSha256": "f5d1cd8bbbdc36ea9e349e280bece30011bdea487421dd11e3745caedacff65e",
+      "outputSha256": "b54fa4f1a1c475230f5f35c78225bb3e08b2461f772f8b174ad437c98eb817dc",
       "edits": [
         {
           "start": 50,
@@ -1601692,6 +1602969,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "ItemBehaviour"
+        },
+        {
+          "start": 14627,
+          "end": 14630,
+          "symbol": "C:mra",
+          "original": "mra",
+          "renamed": "TimedShooter"
         },
         {
           "start": 14681,
@@ -1607648,10 +1608932,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "c6adaf329760818b7325fad4c0d6a629809c77caabddcb4514e20c78177874bf",
+    "rulesSha256": "1f7ff51233237dc696095f250c891a0e70c00b853a89e4211156d1e7586cbf58",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "f469e0e7fd98efb9355836e450c0df66cf455fe0b765a9c46449a9a8ef56a684",
+    "outputTreeSha256": "fa6acef930ae598372dbf5695283bc628f445a0b3677ffb8cff844cf4aa37623",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

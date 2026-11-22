@@ -469,7 +469,7 @@ final class ek {
         return !(param3 >= param1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -12) {
           field_p = null;
           field_e = null;
@@ -525,7 +525,7 @@ final class ek {
           var7 = (int)((double)this.field_o * var5_double / 16.0);
           var8 = (int)((double)this.field_a * var5_double / 16.0);
           if (param2 != 125) {
-            ek.a((byte) -7);
+            ek.clearStaticReferences((byte) -7);
           }
           if (this.field_l &&
             this.field_f) {

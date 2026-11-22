@@ -120,7 +120,7 @@ final class eg {
         throw new Error();
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -23658) {
           return;
@@ -174,7 +174,7 @@ final class eg {
               }
             }
             if (param0 <= 74) {
-              eg.d(92);
+              eg.clearStaticReferences(92);
               return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {

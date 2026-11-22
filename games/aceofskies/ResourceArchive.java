@@ -130,7 +130,7 @@ final class ResourceArchive {
         String stackIn_11_2 = null;
         try {
           if (param1 != -79) {
-            ResourceArchive.c(((byte[]) (this.packedGroups[17]))[0]);
+            ResourceArchive.clearStaticReferences(((byte[]) (this.packedGroups[17]))[0]);
           }
           if (!this.b((byte) 102)) {
             int stackIn_5_0 = 0;
@@ -230,7 +230,7 @@ final class ResourceArchive {
         return this.index.field_j.length;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != -73) {
           field_g = (nf) null;

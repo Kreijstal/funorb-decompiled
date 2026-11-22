@@ -78,7 +78,7 @@ final class hi extends IntrusiveNode {
         return var0;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_L = null;
         field_C = null;
         field_n = null;

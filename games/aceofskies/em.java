@@ -70,7 +70,7 @@ final class em {
         return this.field_e ? this.field_f != null ? true : false : null != this.field_i ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         if (!param0) {

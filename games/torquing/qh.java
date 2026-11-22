@@ -8,7 +8,7 @@ final class qh {
     static String field_a;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 39) {
           field_b = null;
           field_d = null;
@@ -67,7 +67,7 @@ final class qh {
           RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
           return;
         }
-        qh.a((byte) 30);
+        qh.clearStaticReferences((byte) 30);
         if (RasterBuffer.field_e > param2) {
           RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
         } else {

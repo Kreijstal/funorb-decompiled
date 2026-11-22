@@ -28,7 +28,7 @@ final class ag {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         if (param0 == 10) {
@@ -106,7 +106,7 @@ final class ag {
         StringWriter var15 = new StringWriter();
         PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         if (param0 != -19080) {
-          ag.a(36);
+          ag.clearStaticReferences(36);
         } else {
           param1.printStackTrace(var4);
           var4.close();

@@ -44,7 +44,7 @@ final class ko extends IOException {
         return qa.field_k[var4Lifetime1];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -97) {
           return;
         }

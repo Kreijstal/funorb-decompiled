@@ -25,13 +25,13 @@ final class NodeHashTableIterator implements Iterator {
           this.field_d = 1;
           return;
         }
-        NodeHashTableIterator.a(-107);
+        NodeHashTableIterator.clearStaticReferences(-107);
         this.field_a = null;
         this.field_b = this.field_c.field_c[0].field_b;
         this.field_d = 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -53) {
           return;
         }

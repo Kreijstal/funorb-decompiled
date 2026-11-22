@@ -29,7 +29,7 @@ final class ah {
           var5 = (-nl.field_d + 250 << 8) / 50;
         }
         if (param0) {
-          ah.a(-19);
+          ah.clearStaticReferences(-19);
         }
         lm.a(hc.field_a, (byte) -91);
         re.b();
@@ -210,7 +210,7 @@ final class ah {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

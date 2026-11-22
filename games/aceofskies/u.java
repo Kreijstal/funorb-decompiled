@@ -282,7 +282,7 @@ final class u extends RenderEffect {
         return 6144 > param1 ? -lp.field_c[-param1 + 6144] : lp.field_c[-6144 + param1];
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

@@ -44,7 +44,7 @@ final class bp {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           return;
@@ -56,7 +56,7 @@ final class bp {
     final static void a(byte param0) {
         bg var1 = (bg) (rf.field_t.b((byte) -77));
         if (param0 >= -42) {
-          bp.a(false);
+          bp.clearStaticReferences(false);
         }
         if (var1 == null) {
           var1 = new bg();

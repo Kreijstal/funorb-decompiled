@@ -254,8 +254,8 @@ final class BoxBlurOperator extends TextureOperator {
             return false;
           }
         }
-        var4 = bq.field_h[param3] + DamageableBehaviour.field_o[param3] + PortalBehaviour.field_o[param3];
-        var5 = DamageableBehaviour.field_o[param2] + bq.field_h[param2] + PortalBehaviour.field_o[param2];
+        var4 = MidiPatchEnvelope.field_h[param3] + DamageableBehaviour.field_o[param3] + PortalBehaviour.field_o[param3];
+        var5 = DamageableBehaviour.field_o[param2] + MidiPatchEnvelope.field_h[param2] + PortalBehaviour.field_o[param2];
         if (var4 < var5) {
           return true;
         }

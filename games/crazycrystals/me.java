@@ -51,7 +51,7 @@ final class me {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 20) {
           field_f = (vp) null;
         }

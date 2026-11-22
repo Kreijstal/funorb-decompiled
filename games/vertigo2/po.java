@@ -21,7 +21,7 @@ final class po {
         ja.field_f.a(20, 2, re.field_k, im.field_j.field_db - 20, 0, im.field_j.field_Fb, 3124);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

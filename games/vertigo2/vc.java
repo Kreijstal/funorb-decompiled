@@ -51,7 +51,7 @@ final class vc {
         hm.field_F = hm.field_F + 1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;

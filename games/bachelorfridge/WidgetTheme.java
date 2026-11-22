@@ -82,8 +82,8 @@ final class WidgetTheme {
           var6.field_m = 0;
           var7 = new wd(var4, true);
           var7.field_m = 0;
-          var7.a((byte) 95, qaa.a(8947848, -16));
-          var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
+          var7.a((byte) 95, BoundedRandomAccessFile.a(8947848, -16));
+          var7.a(1, (byte) 78).a(BoundedRandomAccessFile.a(11184810, -25), (byte) -40).b(2236962, -25251);
           this.field_h = (WidgetRenderer) ((Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

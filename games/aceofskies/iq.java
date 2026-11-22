@@ -7,7 +7,7 @@ final class iq extends IntrusiveNode {
     static String[] field_g;
     static ResourceArchive gameFontMetricsArchive;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         gameFontMetricsArchive = null;
         if (param0 >= -119) {
           return;

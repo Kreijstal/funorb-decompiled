@@ -628,7 +628,7 @@ final class pc extends ci {
               aa.field_g.field_db = fl.field_k.toUpperCase();
               var8 = aa.field_g;
               stackIn_19_0 = aa.field_g;
-              stackIn_20_1 = (param2) && (0L == eg.field_e);
+              stackIn_20_1 = (param2) && (0L == BoundedRandomAccessFile.field_e);
               stackIn_19_0.field_tb = stackIn_20_1;
               var10 = 2;
               if (null != hd.field_n) {
@@ -947,8 +947,8 @@ final class pc extends ci {
               tn.field_j.field_db = oc.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
               var8 = tn.field_j;
             }
-            if (eg.field_e != 0L) {
-              var9 = (int)(eg.field_e - ud.a(2));
+            if (BoundedRandomAccessFile.field_e != 0L) {
+              var9 = (int)(BoundedRandomAccessFile.field_e - ud.a(2));
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;

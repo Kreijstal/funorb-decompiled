@@ -9,7 +9,7 @@ abstract class lk {
 
     abstract byte[] a(int param0, boolean param1);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -29) {
           return;
         }

@@ -23,7 +23,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
 
     abstract void a(int param0, int param1, java.awt.Canvas param2, int param3);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 6259) {
           classicWaveMessages = (String[]) null;
           classicWaveMessages = null;

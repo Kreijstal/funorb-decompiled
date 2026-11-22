@@ -21,7 +21,7 @@ final class ki {
         bm.g(0);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -7) {
           field_b = (Sprite[]) null;

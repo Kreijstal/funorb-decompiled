@@ -31,7 +31,7 @@ final class re {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_c = null;
         field_h = null;

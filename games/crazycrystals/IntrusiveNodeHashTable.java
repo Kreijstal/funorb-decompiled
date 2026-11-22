@@ -68,7 +68,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 32) {
           field_d = (String) null;

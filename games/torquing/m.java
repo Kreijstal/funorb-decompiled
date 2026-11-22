@@ -28,7 +28,7 @@ final class m {
     static int[] field_w;
     static String[] field_n;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_w = null;
         field_y = null;

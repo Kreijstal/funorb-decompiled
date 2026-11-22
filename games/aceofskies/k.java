@@ -180,7 +180,7 @@ final class k {
         return true;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_d = null;
     }
 

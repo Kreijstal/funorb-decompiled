@@ -39,7 +39,7 @@ final class ho extends IntrusiveNode {
     private static int[] field_P;
     private float[] field_B;
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_C = null;
         field_v = null;
         field_N = null;

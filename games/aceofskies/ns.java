@@ -21,7 +21,7 @@ final class ns {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -24169) {
           field_a = (GraphicsRenderer) null;

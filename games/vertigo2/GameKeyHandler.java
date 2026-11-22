@@ -64,7 +64,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

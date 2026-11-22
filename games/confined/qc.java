@@ -138,7 +138,7 @@ final class qc extends mf {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }

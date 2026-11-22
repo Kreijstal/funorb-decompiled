@@ -6,7 +6,7 @@ final class r {
     static String field_a;
     static byte[] field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 33423361) {
           field_a = (String) null;

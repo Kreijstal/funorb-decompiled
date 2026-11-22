@@ -8,7 +8,7 @@ final class SoundPlayback extends IntrusiveNode {
     int field_h;
     static IntrusiveDeque field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_f = null;
         if (param0 != 32081) {
@@ -32,7 +32,7 @@ final class SoundPlayback extends IntrusiveNode {
           this.field_g.f(128 + param1 * gn.field_a >> 8);
           return;
         }
-        SoundPlayback.a(-71);
+        SoundPlayback.clearStaticReferences(-71);
         this.field_g.f(128 + param1 * gn.field_a >> 8);
     }
 

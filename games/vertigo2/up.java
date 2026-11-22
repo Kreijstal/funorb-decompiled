@@ -50,7 +50,7 @@ final class up extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -3144) {
           field_y = (String) null;
         }

@@ -322,7 +322,7 @@ final class uj extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_m = null;
         field_j = null;

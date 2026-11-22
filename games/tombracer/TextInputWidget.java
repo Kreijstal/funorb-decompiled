@@ -446,7 +446,7 @@ class TextInputWidget extends FocusableWidget {
           if (null == LoadLevelCommand.field_o) {
             var1_ref = new HardwareRidgedWaterNoise();
             var2 = var1_ref.generate(128, true, 16, 128);
-            LoadLevelCommand.field_o = bw.wrapByteStorage(270, var2, false);
+            LoadLevelCommand.field_o = ByteStorageFactory.wrapByteStorage(270, var2, false);
           }
           if (param0 != 12890) {
             return;
@@ -454,7 +454,7 @@ class TextInputWidget extends FocusableWidget {
           if (LoadingStep.field_f == null) {
             var1 = new HardwareTurbulentWaterNoise();
             var2Lifetime1 = var1.generate(128, 0, 16, 128);
-            LoadingStep.field_f = bw.wrapByteStorage(270, var2Lifetime1, false);
+            LoadingStep.field_f = ByteStorageFactory.wrapByteStorage(270, var2Lifetime1, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

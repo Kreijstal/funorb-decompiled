@@ -289,7 +289,7 @@ final class TooltipPanel {
         }
         IsaacPacketBuffer var2 = kj.field_d;
         if (param0 >= -104) {
-          TooltipPanel.a(45);
+          TooltipPanel.clearStaticReferences(45);
         }
         var1.field_j = new int[]{var2.c((byte) -71), var2.c((byte) -36), var2.c((byte) -100), var2.c((byte) -75)};
         var1.unlink(0);
@@ -484,7 +484,7 @@ final class TooltipPanel {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 != 3) {
           return;

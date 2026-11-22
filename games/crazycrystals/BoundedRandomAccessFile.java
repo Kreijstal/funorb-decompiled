@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gl {
+final class BoundedRandomAccessFile {
     static int field_j;
     private long field_g;
     static int[] field_d;
@@ -17,7 +17,7 @@ final class gl {
     static long field_i;
     static GameAppletShell field_h;
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 48) {
           return 29L;
         }
@@ -32,7 +32,7 @@ final class gl {
 
     final static boolean c(int param0) {
         if (param0 != -11) {
-          gl.b(-7);
+          BoundedRandomAccessFile.b(-7);
           if (hp.field_s < 10) {
             return false;
           }
@@ -50,7 +50,7 @@ final class gl {
         return false;
     }
 
-    final int a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_6_0 = 0;
@@ -82,7 +82,7 @@ final class gl {
         }
     }
 
-    gl(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -106,7 +106,7 @@ final class gl {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param1 < -86) {
           this.field_b.seek(param0);
           this.field_k = param0;
@@ -117,7 +117,7 @@ final class gl {
         this.field_k = param0;
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         try {
           if (this.field_g < (this.field_k + (long)param2)) {
             this.field_b.seek(this.field_g);
@@ -137,7 +137,7 @@ final class gl {
     protected final void finalize() throws Throwable {
         if (this.field_b != null) {
           System.out.println("");
-          this.d(89);
+          this.close(89);
         }
     }
 
@@ -151,13 +151,13 @@ final class gl {
         }
     }
 
-    final void d(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_b) {
           this.field_b.close();
           this.field_b = null;
         }
         if (param0 < 85) {
-          gl.b(-69);
+          BoundedRandomAccessFile.b(-69);
           return;
         }
     }

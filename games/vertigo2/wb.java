@@ -213,7 +213,7 @@ final class wb extends TextureOperator {
         boolean stackIn_6_0 = false;
         var4 = this.field_z * (param0 + param1) >> 12;
         if (param2 <= 85) {
-          wb.b((byte) 118);
+          wb.clearStaticReferences((byte) 118);
         }
         var5 = JaggrabClient.field_b[var4 * 255 >> 12 & 255];
         var5 = (var5 << 12) / this.field_z;
@@ -246,7 +246,7 @@ final class wb extends TextureOperator {
         uk.d((byte) 37);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -33) {
           return;
         }

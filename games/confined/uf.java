@@ -128,7 +128,7 @@ final class uf {
         return uf.a(var4);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = (float[][]) null;
         field_f = (int[][]) null;
     }

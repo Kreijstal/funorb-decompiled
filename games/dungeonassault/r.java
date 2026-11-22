@@ -101,12 +101,12 @@ final class r {
         if (2 < lm.field_k) {
           lm.field_k = 2;
         }
-        uk.field_c = param1 & 3;
+        GzipDecompressor.field_c = param1 & 3;
         if (2 < mp.field_d) {
           mp.field_d = 2;
         }
-        if (2 < uk.field_c) {
-          uk.field_c = 2;
+        if (2 < GzipDecompressor.field_c) {
+          GzipDecompressor.field_c = 2;
         }
     }
 

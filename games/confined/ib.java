@@ -20,7 +20,7 @@ final class ib extends fj {
     static bi field_J;
     static int[] field_M;
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -20) {
           field_T = (long[][]) null;
         }

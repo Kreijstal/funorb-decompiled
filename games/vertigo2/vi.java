@@ -71,7 +71,7 @@ final class vi extends IntrusiveNode {
         return eh.field_d[var4];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -67) {
           return;
         }

@@ -324,7 +324,7 @@ final class SystemTaskService implements Runnable {
           }
           if (null != this.field_n) {
             try {
-              this.field_n.a(19260);
+              this.field_n.close(19260);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -332,7 +332,7 @@ final class SystemTaskService implements Runnable {
           }
           if (null != this.field_a) {
             try {
-              this.field_a.a(19260);
+              this.field_a.close(19260);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -342,7 +342,7 @@ final class SystemTaskService implements Runnable {
             for (int var2_int = 0; this.field_r.length > var2_int; var2_int++) {
               if (this.field_r[var2_int] != null) {
                 try {
-                  this.field_r[var2_int].a(19260);
+                  this.field_r[var2_int].close(19260);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   IOException var3 = (IOException) (Object) decompiledCaughtException;
@@ -352,7 +352,7 @@ final class SystemTaskService implements Runnable {
           }
           if (null != this.field_g) {
             try {
-              this.field_g.a(19260);
+              this.field_g.close(19260);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;

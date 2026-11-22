@@ -267,7 +267,7 @@ final class hm extends am {
         this.d(255);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 12) {
           return;

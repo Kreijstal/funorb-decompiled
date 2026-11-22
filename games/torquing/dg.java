@@ -72,7 +72,7 @@ final class dg extends af {
         this.a(false, 0, 0);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         field_i = null;

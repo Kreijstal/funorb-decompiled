@@ -103,9 +103,9 @@ final class da extends ArchiveProvider {
           ji.field_N.a((byte) 123, ac.field_j);
           qj.field_e = new ci(0L, param2);
           ji.field_N.a((byte) 126, qj.field_e);
-          eg.field_f = new ci(0L, param5);
-          eg.field_f.field_xb = sc.field_a;
-          qj.field_e.a((byte) 125, eg.field_f);
+          BoundedRandomAccessFile.field_f = new ci(0L, param5);
+          BoundedRandomAccessFile.field_f.field_xb = sc.field_a;
+          qj.field_e.a((byte) 125, BoundedRandomAccessFile.field_f);
           qj.field_e.h(0);
           uc.field_c = new ci(0L, (ci) null);
           uc.field_c.field_Ab = var16;

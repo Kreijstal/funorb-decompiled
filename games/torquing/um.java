@@ -110,7 +110,7 @@ final class um extends gf {
     final static void a(uc param0, int param1, uc param2, int param3) {
         try {
           if (param3 < 13) {
-            um.c((byte) 48);
+            um.clearStaticReferences((byte) 48);
           }
           sp.field_Q = param2;
           bo.field_e = param0;
@@ -285,7 +285,7 @@ final class um extends gf {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         if (param0 >= -66) {
           return;

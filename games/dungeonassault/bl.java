@@ -25,7 +25,7 @@ final class bl {
     static String field_a;
     static ResourceArchive field_t;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_b = null;
         field_s = null;
@@ -357,11 +357,11 @@ final class bl {
           fl.field_i = fn.a(2);
           wm.field_h = fl.field_i.b();
           dh.field_a = rj.a((byte) 127);
-          sm.field_g = qp.a(true);
+          sm.field_g = BoundedRandomAccessFile.a(true);
           fo.field_a = wo.a(5, 1, 6, 5, 16744448);
-          qp.field_a = fo.field_a.d();
-          qp.field_a.g();
-          i.field_v = qp.field_a.d();
+          BoundedRandomAccessFile.field_a = fo.field_a.d();
+          BoundedRandomAccessFile.field_a.g();
+          i.field_v = BoundedRandomAccessFile.field_a.d();
           i.field_v.g();
           qi.field_i = i.field_v.d();
           qi.field_i.g();

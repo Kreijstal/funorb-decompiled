@@ -47,7 +47,7 @@ final class tm {
             var3 = param1;
           }
           if (param0 <= 36) {
-            tm.a(-1);
+            tm.clearStaticReferences(-1);
           }
           if (this.field_g.field_a == var3) {
             this.field_h = null;
@@ -124,7 +124,7 @@ final class tm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = (f[][]) null;
         field_f = null;
@@ -209,7 +209,7 @@ final class tm {
         var11 = CrazyCrystals.field_B;
         try {
           if (param5 != 89) {
-            tm.a(-52);
+            tm.clearStaticReferences(-52);
           }
           if (param3 != null &&
             param4 > 0) {

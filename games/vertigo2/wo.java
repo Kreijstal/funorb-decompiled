@@ -372,7 +372,7 @@ final class wo {
 
     final static boolean a(int param0, int param1) {
         if (param1 != -29273) {
-          wo.n(80);
+          wo.clearStaticReferences(80);
         }
         return (param0 & 1) != 0 ? true : false;
     }
@@ -1186,7 +1186,7 @@ final class wo {
         return false;
     }
 
-    public static void n(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_q = null;
         if (param0 != 511) {

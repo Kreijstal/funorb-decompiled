@@ -108,11 +108,11 @@ final class oi extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder0) {
-                lk.field_d = fm.field_a;
+                lk.field_d = BoundedRandomAccessFile.field_a;
                 ai.field_i = -1;
               }
             }
-            if (fm.field_a == lk.field_d &&
+            if (BoundedRandomAccessFile.field_a == lk.field_d &&
               jc.a(-72)) {
               vb.field_d = e.field_c.h((byte) -68);
               e.field_c.c(32);

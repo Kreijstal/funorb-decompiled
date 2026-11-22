@@ -121,7 +121,7 @@ final class cn implements Iterable {
                 var4 = 1;
               }
               if (param0 != 25) {
-                cn.b(114);
+                cn.clearStaticReferences(114);
               }
               if (param1 == 14) {
                 var4 = -1;
@@ -177,7 +177,7 @@ final class cn implements Iterable {
           var4 = 1;
         }
         if (param0 != 25) {
-          cn.b(114);
+          cn.clearStaticReferences(114);
         }
         if (param1 == 14) {
           var4 = -1;
@@ -190,7 +190,7 @@ final class cn implements Iterable {
         ArchiveProvider.field_b = mm.a(var2 * var4, -1, var5 * var2);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         if (param0 != 7043) {
@@ -202,7 +202,7 @@ final class cn implements Iterable {
 
     final static ci a(int param0) {
         if (param0 != 11520) {
-          cn.b(-30);
+          cn.clearStaticReferences(-30);
           return jg.k(110);
         }
         return jg.k(110);

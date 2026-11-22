@@ -36,7 +36,7 @@ final class ff {
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 <= 66) {
-          ff.c(89);
+          ff.clearStaticReferences(89);
         }
         int var5 = -1640531527;
         for (var2 = 0; 4 > var2; var2++) {
@@ -210,7 +210,7 @@ final class ff {
         return var4;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -72) {
           return;
         }

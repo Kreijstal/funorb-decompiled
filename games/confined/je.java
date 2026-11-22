@@ -8,7 +8,7 @@ final class je extends vf {
     private int field_x;
     private nf[] field_u;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_v = null;
         if (param0 >= -67) {
           field_v = (String) null;

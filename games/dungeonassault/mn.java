@@ -17,7 +17,7 @@ final class mn {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 < 13) {
           field_a = (String) null;

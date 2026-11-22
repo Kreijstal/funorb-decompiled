@@ -4,7 +4,7 @@
 final class wn extends am {
     static bp field_s;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 0) {
           field_s = (bp) null;

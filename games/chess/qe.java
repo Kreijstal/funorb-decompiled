@@ -573,7 +573,7 @@ final class qe extends uk {
         this.b(this.m(93), this.d(-1), (byte) 122);
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         if (param0 != 2) {
           field_R = (String) null;
@@ -827,7 +827,7 @@ final class qe extends uk {
         var8 = this.d(-1);
         var9 = this.m(71);
         if (param4 > -74) {
-          qe.k(-34);
+          qe.clearStaticReferences(-34);
         }
         var10 = 370 + param3;
         var11 = 140;

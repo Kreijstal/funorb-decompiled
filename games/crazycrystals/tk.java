@@ -337,7 +337,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
         return this.field_g == param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_i = null;
         field_l = null;

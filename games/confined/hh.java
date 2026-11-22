@@ -153,7 +153,7 @@ final class hh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -187,7 +187,7 @@ final class hh {
             return stackIn_4_0;
           }
           if (param1 <= 65) {
-            hh.a((byte) -108);
+            hh.clearStaticReferences((byte) -108);
           }
           var8 = param0.a(5);
           while (var8.field_g == 0) {

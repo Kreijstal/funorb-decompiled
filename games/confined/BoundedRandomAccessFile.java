@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-final class fm {
+final class BoundedRandomAccessFile {
     private RandomAccessFile field_e;
     static ej field_a;
     private long field_d;
     private long field_c;
     static int field_b;
 
-    final long a(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         if (param0 != -115) {
-          fm.a(-61, -87);
+          BoundedRandomAccessFile.a(-61, -87);
           return this.field_e.length();
         }
         return this.field_e.length();
@@ -26,13 +26,13 @@ final class fm {
         int var3 = 61 / ((param0 - 61) / 46);
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_e.seek(param1);
         int var4 = -33 / ((47 - param0) / 50);
         this.field_c = param1;
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         if ((this.field_c + (long)param1) > this.field_d) {
           this.field_e.seek(this.field_d);
           this.field_e.write(1);
@@ -52,11 +52,11 @@ final class fm {
     protected final void finalize() throws Throwable {
         if (null != this.field_e) {
           System.out.println("");
-          this.b(0);
+          this.close(0);
         }
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 == 0) {
           if (this.field_e != null) {
             this.field_e.close();
@@ -71,7 +71,7 @@ final class fm {
         }
     }
 
-    final int a(boolean param0, byte[] param1, int param2, int param3) throws IOException {
+    final int read(boolean param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -81,7 +81,7 @@ final class fm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            fm.a(53);
+            BoundedRandomAccessFile.clearStaticReferences(53);
           }
           var5_int = this.field_e.read(param1, param2, param3);
           if (var5_int > 0) {
@@ -103,7 +103,7 @@ final class fm {
         }
     }
 
-    fm(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -127,7 +127,7 @@ final class fm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 1) {
           field_a = (ej) null;

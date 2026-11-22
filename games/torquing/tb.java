@@ -11,7 +11,7 @@ final class tb extends IntrusiveNode {
     int field_m;
     static PcmStreamMixer field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_l = null;
         if (param0 < 55) {

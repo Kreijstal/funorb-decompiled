@@ -26,7 +26,7 @@ final class le extends ln {
         try {
           var12 = kd.field_n;
           if (param0 != 15295) {
-            le.b(115);
+            le.clearStaticReferences(115);
           }
           var2 = var12.h(255);
           if (var2 == 0) {
@@ -83,7 +83,7 @@ final class le extends ln {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = (dl[][]) null;
         if (param0 != -1) {
           field_g = (dl[][]) null;
@@ -97,7 +97,7 @@ final class le extends ln {
         if (param0 != -20) {
           le.a(-107);
         }
-        return (java.applet.Applet) ((Object) gl.field_h);
+        return (java.applet.Applet) ((Object) BoundedRandomAccessFile.field_h);
     }
 
     le(String param0, int param1, int param2, int param3) {

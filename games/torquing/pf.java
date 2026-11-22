@@ -141,7 +141,7 @@ final class pf extends IntrusiveNode implements lm {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_j = null;
         if (param0 <= 0) {
@@ -177,7 +177,7 @@ final class pf extends IntrusiveNode implements lm {
     final static boolean a(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -5) {
-          pf.a(16);
+          pf.clearStaticReferences(16);
         }
         stackIn_6_0 = (vk.field_E != null) && (ef.field_a.a(109));
         return stackIn_6_0;

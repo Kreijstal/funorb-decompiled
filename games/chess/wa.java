@@ -312,7 +312,7 @@ final class wa {
         }
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

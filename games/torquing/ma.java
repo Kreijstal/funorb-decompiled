@@ -98,7 +98,7 @@ final class ma {
         this.field_y.a(param0, this.field_u);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_w = null;
         field_v = null;
         field_n = null;

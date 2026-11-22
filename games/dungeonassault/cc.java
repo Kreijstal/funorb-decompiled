@@ -107,7 +107,7 @@ final class cc implements Runnable {
         return new String(var6);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -76) {
           return;
         }

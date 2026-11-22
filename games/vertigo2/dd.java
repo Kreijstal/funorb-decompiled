@@ -390,7 +390,7 @@ class dd {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_j = null;
     }
 

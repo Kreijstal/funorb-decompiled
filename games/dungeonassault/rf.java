@@ -106,7 +106,7 @@ abstract class rf extends ii {
         return var1;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_P = (byte[][]) null;
         field_N = null;
         field_O = null;

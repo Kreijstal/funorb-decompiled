@@ -20,7 +20,7 @@ final class IterableNodeHashTable implements Iterable {
         return (int)(1000000000L / sl.field_w);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_a = null;
         field_h = null;

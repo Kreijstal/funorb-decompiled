@@ -8,7 +8,7 @@ final class ae extends RenderEffect {
 
     final void a(boolean param0) {
         if (!param0) {
-          ae.c((byte) -120);
+          ae.clearStaticReferences((byte) -120);
         }
     }
 
@@ -40,7 +40,7 @@ final class ae extends RenderEffect {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         upgradeLabels = null;
         if (param0 != 15) {
           field_g = (String) null;

@@ -61,7 +61,7 @@ final class qm extends ip {
         return false;
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         field_m = null;
         if (param0) {

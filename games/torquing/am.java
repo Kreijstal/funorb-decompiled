@@ -23,7 +23,7 @@ abstract class am extends IntrusiveNode {
         this.field_r = null;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         if (param0 >= -104) {
           return;
@@ -65,14 +65,14 @@ abstract class am extends IntrusiveNode {
               if (-35 + SocketJs5Transport.field_r - 35 > -5) {
                 MouseWheelInput.field_d = MouseWheelInput.field_d - 4;
                 if (param0 < 53) {
-                  am.c((byte) 72);
+                  am.clearStaticReferences((byte) 72);
                   return;
                 }
                 return;
               }
               MouseWheelInput.field_d = MouseWheelInput.field_d + 4;
               if (param0 < 53) {
-                am.c((byte) 72);
+                am.clearStaticReferences((byte) 72);
                 return;
               }
               return;
@@ -81,7 +81,7 @@ abstract class am extends IntrusiveNode {
             if (param0 >= 53) {
               return;
             }
-            am.c((byte) 72);
+            am.clearStaticReferences((byte) 72);
             return;
           }
           ub.field_E = ub.field_E + ra.field_c;
@@ -89,7 +89,7 @@ abstract class am extends IntrusiveNode {
           if (param0 >= 53) {
             return;
           }
-          am.c((byte) 72);
+          am.clearStaticReferences((byte) 72);
           return;
         }
         hj.field_b = true;
@@ -102,7 +102,7 @@ abstract class am extends IntrusiveNode {
         if (param0 >= 53) {
           return;
         }
-        am.c((byte) 72);
+        am.clearStaticReferences((byte) 72);
     }
 
     void a(int param0, int param1, int param2) {

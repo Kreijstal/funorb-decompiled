@@ -123,7 +123,7 @@ final class gh extends ea implements Cloneable {
         var8 = CrazyCrystals.field_B;
         try {
           if (null == ab.field_D) {
-            gl.field_e = gl.field_e - 1;
+            BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e - 1;
             if (param2 != null) {
               var6_int = param2.a(false);
               for (var7 = 0; var7 < 3; var7++) {
@@ -141,7 +141,7 @@ final class gh extends ea implements Cloneable {
                   je.field_j = je.field_j + 3;
                   mb.field_g = mb.field_g + wd.field_j;
                   ob.field_l = ob.field_l + 1;
-                  if (gl.field_e == 0) {
+                  if (BoundedRandomAccessFile.field_e == 0) {
                     va.field_d = va.field_d | 1 << var7;
                   }
                   mb.field_g = mb.field_g + 50;
@@ -690,7 +690,7 @@ final class gh extends ea implements Cloneable {
         if (param1) {
           return;
         }
-        gl.field_e = gl.field_e + 1;
+        BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e + 1;
     }
 
     final void b(int param0, int param1, int param2, f[][] param3) {

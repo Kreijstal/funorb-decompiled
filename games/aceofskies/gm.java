@@ -10,7 +10,7 @@ abstract class gm extends ab {
     static String field_w;
     static id field_x;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_x = null;
         field_y = null;
@@ -84,7 +84,7 @@ abstract class gm extends ab {
 
     final static long g(int param0) {
         if (param0 != -1) {
-          gm.a((byte) -17);
+          gm.clearStaticReferences((byte) -17);
         }
         return -ff.field_b + kh.a(param0 - 91);
     }

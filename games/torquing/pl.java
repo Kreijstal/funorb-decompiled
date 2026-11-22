@@ -63,7 +63,7 @@ final class pl extends am {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         field_s = null;
         if (param0 > -26) {
@@ -102,7 +102,7 @@ final class pl extends am {
           MouseWheelInput.field_a = new int[param0];
         }
         if (param1 < 27) {
-          pl.c(25);
+          pl.clearStaticReferences(25);
         }
     }
 

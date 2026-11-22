@@ -32,7 +32,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_g = null;
         field_c = null;

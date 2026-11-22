@@ -12,7 +12,7 @@ final class mn extends IntrusiveNode {
     static String[] field_q;
     int field_s;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_n = null;
         field_u = null;

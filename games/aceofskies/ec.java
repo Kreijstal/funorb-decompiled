@@ -480,7 +480,7 @@ final class ec extends ao {
           this.field_u = 0.0f;
           return;
         }
-        ec.b(47);
+        ec.clearStaticReferences(47);
         this.field_s = 0.0f;
         this.field_k = param0;
         this.field_f = 1.0f;
@@ -567,7 +567,7 @@ final class ec extends ao {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         radarSprites = null;
         if (param0 != 0) {
           return;

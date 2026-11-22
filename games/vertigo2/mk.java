@@ -343,7 +343,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         om dupTemp$1 = new om(10000536);
         this.field_Q.listener = (WidgetListener) ((Object) dupTemp$1);
         this.field_U.listener = (WidgetListener) ((Object) dupTemp$1);
-        String var2 = Vertigo2.a(new String[]{this.i(23559), this.j(10000536)}, k.field_b, -125);
+        String var2 = Vertigo2.a(new String[]{this.i(23559), this.j(10000536)}, GzipDecompressor.field_b, -125);
         int var3 = 20;
         var3 = var3 + this.b(le.field_c, 48, this.field_F, 170, var3);
         var3 = var3 + (5 + this.a(27557, var3, 20, this.field_L, "", 170, re.field_f));

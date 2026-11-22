@@ -83,7 +83,7 @@ final class ej {
           if (rh.field_ab == this) {
             return true;
           }
-          if (this != fm.field_a) {
+          if (this != BoundedRandomAccessFile.field_a) {
             return wd.field_f == this ? true : false;
           }
           return true;
@@ -91,7 +91,7 @@ final class ej {
         if (rh.field_ab == this) {
           return true;
         }
-        if (this == fm.field_a) {
+        if (this == BoundedRandomAccessFile.field_a) {
           return true;
         }
         if (wd.field_f != this) {

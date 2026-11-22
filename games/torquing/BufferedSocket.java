@@ -430,7 +430,7 @@ final class BufferedSocket implements Runnable {
         return bi.field_f;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_n = null;
         if (param0 != 0) {

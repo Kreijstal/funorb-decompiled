@@ -16,7 +16,7 @@ final class qn extends IntrusiveNode {
     static String[] field_t;
     int field_x;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > 42) {
           field_t = null;
           field_o = null;

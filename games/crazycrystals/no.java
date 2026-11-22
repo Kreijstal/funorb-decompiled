@@ -128,7 +128,7 @@ final class no extends se {
           if (!this.field_j) {
             stackIn_17_0 = rk.field_c;
           } else {
-            stackIn_17_0 = ih.field_b;
+            stackIn_17_0 = GzipDecompressor.field_b;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

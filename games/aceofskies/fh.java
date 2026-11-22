@@ -81,7 +81,7 @@ final class fh extends vo {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_f = null;
         if (!param0) {

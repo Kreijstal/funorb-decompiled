@@ -7,7 +7,7 @@ final class cc {
     static sj field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -18277) {
           field_c = (sj) null;
         }

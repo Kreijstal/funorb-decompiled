@@ -35,7 +35,7 @@ final class sa extends na implements vd {
         this.a(-1, true, me.a(on.field_c, 20, 248));
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_nb = null;
         field_qb = null;
         field_rb = null;

@@ -47,7 +47,7 @@ final class gl extends ok {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Jb = null;
         field_Ib = null;
         field_Gb = null;

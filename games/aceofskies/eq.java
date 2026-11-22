@@ -47,7 +47,7 @@ abstract class eq extends IntrusiveNode {
 
     abstract void a(byte param0);
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 >= -36) {
           field_e = (BufferedRandomAccessFile) null;

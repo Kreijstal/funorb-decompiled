@@ -212,7 +212,7 @@ final class ln {
         return new cd(vl.c(param0 - 29335), pi.c(-555));
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1148357992) {
           field_c = (String) null;
         }

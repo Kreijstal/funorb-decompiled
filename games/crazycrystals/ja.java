@@ -238,7 +238,7 @@ final class ja extends ff {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != 27348) {
           field_h = (dl[]) null;

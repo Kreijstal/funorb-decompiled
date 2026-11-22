@@ -6,7 +6,7 @@ final class qa {
     static eg field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -7) {
           field_c = null;
           field_b = null;
@@ -110,7 +110,7 @@ final class qa {
             }
           }
           if (param0 > -25) {
-            qa.a(-84);
+            qa.clearStaticReferences(-84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

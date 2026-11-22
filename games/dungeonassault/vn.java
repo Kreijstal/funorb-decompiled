@@ -382,7 +382,7 @@ class vn {
     void a(java.awt.Component param0) throws Exception {
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_e = null;
     }
 

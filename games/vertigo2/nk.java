@@ -8,7 +8,7 @@ final class nk extends UiPanel {
     static String field_Kb;
     static Archive field_Hb;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -7) {
           field_Kb = null;
           field_Ib = null;
@@ -69,7 +69,7 @@ final class nk extends UiPanel {
           this.a(param2, 29138, param4);
           return;
         }
-        nk.a((byte) -127);
+        nk.clearStaticReferences((byte) -127);
         this.a(param2, 29138, param4);
     }
 

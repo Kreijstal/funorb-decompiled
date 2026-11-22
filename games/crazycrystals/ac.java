@@ -99,7 +99,7 @@ final class ac extends nf {
         return (pb) ((Object) new fg());
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 23) {
           return;
         }

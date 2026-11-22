@@ -57,7 +57,7 @@ final class lp extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_B = null;
         field_C = null;

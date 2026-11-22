@@ -72,7 +72,7 @@ final class AudioService implements Runnable {
         if (param0 == 35) {
           return lk.field_v;
         }
-        AudioService.a(true);
+        AudioService.clearStaticReferences(true);
         return lk.field_v;
     }
 
@@ -106,7 +106,7 @@ final class AudioService implements Runnable {
         this.field_e = false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

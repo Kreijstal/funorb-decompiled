@@ -35,7 +35,7 @@ final class bl extends l {
     String[] field_k;
     private int field_s;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_N = null;
         if (param0 != -50) {
           field_o = (String) null;

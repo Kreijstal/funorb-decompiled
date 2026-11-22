@@ -5,7 +5,7 @@ final class ie {
     static double[][] field_a;
     static bi field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (double[][]) null;
         if (param0 != -1674) {
           return;

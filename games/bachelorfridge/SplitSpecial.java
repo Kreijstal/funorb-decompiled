@@ -201,13 +201,13 @@ final class SplitSpecial extends SpecialOrder {
             if (decompiledNaturalLoopExit0) {
               if (rba.field_a.field_Ab.field_R != 0) {
                 RefreshingSpecial.field_p = new oa(rba.field_a.field_Ab.field_D, rba.field_a.field_Ab.field_M, rba.field_a.field_Ab.field_sb, rba.field_a.field_Ab.field_p, uea.field_g, kha.field_i, qs.field_m, qs.field_m);
-                vaa.field_f = 0;
+                GzipDecompressor.field_f = 0;
               }
               stackIn_91_0 = rba.field_a.field_yb;
             }
             if (((UiComponent) (stackIn_91_0)).field_R != 0) {
               RefreshingSpecial.field_p = new oa(rba.field_a.field_yb.field_D, rba.field_a.field_yb.field_M, rba.field_a.field_yb.field_sb, rba.field_a.field_yb.field_p, vc.field_f, kha.field_i, qs.field_m, qs.field_m);
-              vaa.field_f = 1;
+              GzipDecompressor.field_f = 1;
             }
             decompiledFrameRemainder0 = false;
           }

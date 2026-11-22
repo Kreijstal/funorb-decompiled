@@ -602,12 +602,12 @@ final class sf implements cl {
                     var15Lifetime1 == 0) {
                     if (((var14Lifetime1 != 0)) &&
                       ((var15Lifetime1 == 0))) {
-                      qi.field_i.h(var9 + (-var4_int + (-qp.field_a.field_y - 2 >> 1)), -1 + var10 + (-qp.field_a.field_v + var6 >> 1));
+                      qi.field_i.h(var9 + (-var4_int + (-BoundedRandomAccessFile.field_a.field_y - 2 >> 1)), -1 + var10 + (-BoundedRandomAccessFile.field_a.field_v + var6 >> 1));
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    qp.field_a.h((-qp.field_a.field_y - 2 >> 1) + (var9 + var4_int), var10 + (-1 + (var6 - qp.field_a.field_v >> 1)));
+                    BoundedRandomAccessFile.field_a.h((-BoundedRandomAccessFile.field_a.field_y - 2 >> 1) + (var9 + var4_int), var10 + (-1 + (var6 - BoundedRandomAccessFile.field_a.field_v >> 1)));
                   }
                 }
               }

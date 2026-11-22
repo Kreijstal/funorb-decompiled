@@ -103,13 +103,13 @@ final class gga extends ResizingDialog implements ButtonListener {
           50 > var6) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            bw.field_a.drawAdditive(var3, var4, var7);
+            ByteStorageFactory.field_a.drawAdditive(var3, var4, var7);
           } else {
             if (var6 < 30) {
-              bw.field_a.drawAdditive(var3, var4, 256);
+              ByteStorageFactory.field_a.drawAdditive(var3, var4, 256);
             } else {
               var7 = (50 - var6) * 256 / 20;
-              bw.field_a.drawAdditive(var3, var4, var7);
+              ByteStorageFactory.field_a.drawAdditive(var3, var4, var7);
             }
           }
         }

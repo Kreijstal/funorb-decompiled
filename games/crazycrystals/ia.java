@@ -52,8 +52,8 @@ final class ia extends ln {
           }
           if (decompiledFrameRemainder0) {
             if (!co.field_F) {
-              if (cl.field_o >= ih.field_a) {
-                stackIn_20_0 = (cl.field_o < ih.field_a + u.field_a) ? 1 : 0;
+              if (cl.field_o >= GzipDecompressor.field_a) {
+                stackIn_20_0 = (cl.field_o < GzipDecompressor.field_a + u.field_a) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -65,10 +65,10 @@ final class ia extends ln {
               cl.field_o = 0;
             } else {
               if (co.field_F) {
-                cl.field_o = ih.field_a;
+                cl.field_o = GzipDecompressor.field_a;
               } else {
                 if (var2_int != 0) {
-                  cl.field_o = ih.field_a;
+                  cl.field_o = GzipDecompressor.field_a;
                 } else {
                   cl.field_o = 0;
                 }
@@ -86,7 +86,7 @@ final class ia extends ln {
           }
           kf.field_f = param1;
           if (!co.field_F &&
-            cl.field_o < ih.field_a &&
+            cl.field_o < GzipDecompressor.field_a &&
             DualLinkNode.field_h) {
             rf.field_G = ce.field_gb;
             ni.field_b = pe.field_i;

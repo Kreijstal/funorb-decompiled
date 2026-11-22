@@ -168,12 +168,12 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = 16;
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
-            PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, MainRoomCatalog.field_a, var5_intLifetime1);
             SocketConnector.drawWrappedText(PitTile.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
             SocketConnector.drawWrappedText(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
-            PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, MainRoomCatalog.field_a, var5_intLifetime1);
             TooltipRenderer.field_p.drawWrapped((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, SinglePlayerCourseGenerator.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
@@ -191,7 +191,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1Lifetime1 = 40 + MatchStatistics.field_n.stringWidth(var4, (byte) 41);
             var6Lifetime1Lifetime1 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
             var7_intLifetime1Lifetime1 = SwitchLinkList.getCanvasHeight(0) / 2;
-            PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
+            PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, MainRoomCatalog.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.gameMode) {
                 MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);

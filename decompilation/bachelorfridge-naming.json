@@ -497,7 +497,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:vaa.a(III)Z#0"
+      "renamedSymbol": "B:GzipDecompressor.a(III)Z#0"
     },
     {
       "symbol": "C:ab",
@@ -2180,6 +2180,14 @@
       "renamedSymbol": "C:SnowAnimation"
     },
     {
+      "symbol": "C:qaa",
+      "originalName": "qaa",
+      "to": "BoundedRandomAccessFile",
+      "evidence": "Complete constructor, owned read/write/seek/length/close methods, private fields and finalizer reviewed: tracked RandomAccessFile position/max length, overflow sentinel write and EOFException, oversized-file deletion and unlimited-bound conversion. Preserve guard-specific handle discards, skipped position updates, helper calls, sentinels and partial failures; unrelated statics retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BoundedRandomAccessFile"
+    },
+    {
       "symbol": "C:qda",
       "originalName": "qda",
       "to": "WidgetRenderer",
@@ -2730,6 +2738,14 @@
       "evidence": "Buffers reads and writes over a file handle with separate read and write windows.",
       "confidence": "reviewed",
       "renamedSymbol": "C:BufferedCacheFile"
+    },
+    {
+      "symbol": "C:vaa",
+      "originalName": "vaa",
+      "to": "GzipDecompressor",
+      "evidence": "Complete owned inflater method, constructors and fields reviewed: gzip magic31/139, lazy raw Inflater, caller-supplied output, original input bounds and reset/error paths. Preserve caller offset/length adjustments, bad-guard calls and reset skips, exception wrappers and unrelated static helpers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:GzipDecompressor"
     },
     {
       "symbol": "C:vba",
@@ -4692,6 +4708,14 @@
       "renamedSymbol": "M:SoftwareRasterizer.setTarget([III)V"
     },
     {
+      "symbol": "M:dg.b()V",
+      "originalName": "b",
+      "to": "clearStaticReferences",
+      "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 3d167f32dc90c0bb10c4f12381b35d33bcd88952e65d8f6103bde696ee859e77.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.clearStaticReferences()V"
+    },
+    {
       "symbol": "M:dg.b(IIII)V",
       "originalName": "b",
       "to": "fillCircle",
@@ -6410,6 +6434,14 @@
       "evidence": "Runs the node and its children once and reports whether the whole node has finished. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:iha.update(I)Z"
+    },
+    {
+      "symbol": "M:iha.e(I)V",
+      "originalName": "e",
+      "to": "clearStaticReferences",
+      "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 8045367b66e10ceaf0c059eb19380d28a2c103955848de3a7e8fdad2ecd98c77.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:iha.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:ii.a(Llu;I)V",
@@ -8516,6 +8548,14 @@
       "renamedSymbol": "M:mr.releaseStatics(I)V"
     },
     {
+      "symbol": "M:ms.g(B)V",
+      "originalName": "g",
+      "to": "clearStaticReferences",
+      "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 024c8b13bafbd2b8e00d566a80f084ca9a36e2afdaf234a8b3eb51804adef680.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.clearStaticReferences(B)V"
+    },
+    {
       "symbol": "M:mt.a(Lop;I)Lii;",
       "originalName": "a",
       "to": "createEvent",
@@ -9900,12 +9940,52 @@
       "renamedSymbol": "M:qa.releaseStatics(Z)V"
     },
     {
+      "symbol": "M:qaa.a(B)J",
+      "originalName": "a",
+      "to": "length",
+      "evidence": "Complete owned file body, constructor and delegate reviewed. Preserve guard-controlled call to existing releaseStatics before returning file length; do not rename that already-readable method.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.length(B)J"
+    },
+    {
+      "symbol": "M:qaa.a(II[BB)V",
+      "originalName": "a",
+      "to": "write",
+      "evidence": "Complete owned file body, constructor and delegate reviewed. Overflow sentinel/EOF path precedes guard-controlled existing releaseStatics call, then ranged write/position update. Preserve original effects and argument order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.write(II[BB)V"
+    },
+    {
+      "symbol": "M:qaa.a(JZ)V",
+      "originalName": "a",
+      "to": "seek",
+      "evidence": "Complete owned file body, constructor and delegate reviewed. Seek then assign tracked position; preserve true-guard static array null and return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.seek(JZ)V"
+    },
+    {
+      "symbol": "M:qaa.a(Z)V",
+      "originalName": "a",
+      "to": "close",
+      "evidence": "Complete owned file body, constructor and delegate reviewed. Preserve false-guard no-op; valid close closes nonnull handle then clears it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.close(Z)V"
+    },
+    {
+      "symbol": "M:qaa.a([BIII)I",
+      "originalName": "a",
+      "to": "read",
+      "evidence": "Complete owned file body, constructor and delegate reviewed. Ranged read returns underlying count/EOF and updates tracked position only when count exceeds supplied threshold. Preserve exact original threshold and argument order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.read([BIII)I"
+    },
+    {
       "symbol": "M:qaa.b(Z)V",
       "originalName": "b",
       "to": "releaseStatics",
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qaa.releaseStatics(Z)V"
+      "renamedSymbol": "M:BoundedRandomAccessFile.releaseStatics(Z)V"
     },
     {
       "symbol": "M:qb.d(I)V",
@@ -11148,6 +11228,14 @@
       "renamedSymbol": "M:TeleportSpecial.releaseStatics(I)V"
     },
     {
+      "symbol": "M:uc.b(I)V",
+      "originalName": "b",
+      "to": "clearStaticReferences",
+      "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 692247e521d23d76b17a02fee8b4d14ae6c887042100a82cfdbf31ce00f1e15a.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:uc.clearStaticReferences(I)V"
+    },
+    {
       "symbol": "M:uc.c(B)V",
       "originalName": "c",
       "to": "releaseStatics",
@@ -11417,7 +11505,15 @@
       "to": "releaseStatics",
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:vaa.releaseStatics(I)V"
+      "renamedSymbol": "M:GzipDecompressor.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:vaa.a(Llu;[BI)V",
+      "originalName": "a",
+      "to": "decompress",
+      "evidence": "Complete gzip operation reviewed: magic check, lazy raw Inflater, input PacketBuffer and supplied output. Preserve all offset/length formulas, especially Ace caller offset and Bachelor caller length adjustment, guard helper calls, reset skips, partial state, ignored inflate count and original exception behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GzipDecompressor.decompress(LPacketBuffer;[BI)V"
     },
     {
       "symbol": "M:vb.a(I)V",
@@ -12830,7 +12926,7 @@
     },
     {
       "symbol": "B:vaa.a(III)Z#0",
-      "renamedSymbol": "B:vaa.a(III)Z#0",
+      "renamedSymbol": "B:GzipDecompressor.a(III)Z#0",
       "originalName": "L7",
       "renamedName": "regionExit1",
       "declaration": {
@@ -19518,9 +19614,9 @@
     },
     {
       "symbol": "C:qaa",
-      "renamedSymbol": "C:qaa",
+      "renamedSymbol": "C:BoundedRandomAccessFile",
       "originalName": "qaa",
-      "renamedName": "qaa",
+      "renamedName": "BoundedRandomAccessFile",
       "declaration": {
         "file": "qaa.java",
         "start": 69,
@@ -21586,9 +21682,9 @@
     },
     {
       "symbol": "C:vaa",
-      "renamedSymbol": "C:vaa",
+      "renamedSymbol": "C:GzipDecompressor",
       "originalName": "vaa",
-      "renamedName": "vaa",
+      "renamedName": "GzipDecompressor",
       "declaration": {
         "file": "vaa.java",
         "start": 71,
@@ -40066,7 +40162,7 @@
     },
     {
       "symbol": "F:ht.field_a:Lqaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_a:Lqaa;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_a:LBoundedRandomAccessFile;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -40143,7 +40239,7 @@
     },
     {
       "symbol": "F:ht.field_h:Lqaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_h:Lqaa;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_h:LBoundedRandomAccessFile;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -40209,7 +40305,7 @@
     },
     {
       "symbol": "F:ht.field_n:Lqaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_n:Lqaa;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_n:LBoundedRandomAccessFile;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -40297,7 +40393,7 @@
     },
     {
       "symbol": "F:ht.field_v:[Lqaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_v:[Lqaa;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_v:[LBoundedRandomAccessFile;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -45511,7 +45607,7 @@
     },
     {
       "symbol": "F:kca.field_b:Lvaa;",
-      "renamedSymbol": "F:kca.field_b:Lvaa;",
+      "renamedSymbol": "F:kca.field_b:LGzipDecompressor;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -59151,7 +59247,7 @@
     },
     {
       "symbol": "F:qaa.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:qaa.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -59162,7 +59258,7 @@
     },
     {
       "symbol": "F:qaa.field_b:Ljava/io/RandomAccessFile;",
-      "renamedSymbol": "F:qaa.field_b:Ljava/io/RandomAccessFile;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_b:Ljava/io/RandomAccessFile;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -59173,7 +59269,7 @@
     },
     {
       "symbol": "F:qaa.field_c:I",
-      "renamedSymbol": "F:qaa.field_c:I",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -59184,7 +59280,7 @@
     },
     {
       "symbol": "F:qaa.field_d:Lsna;",
-      "renamedSymbol": "F:qaa.field_d:LUiComponent;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_d:LUiComponent;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -59195,7 +59291,7 @@
     },
     {
       "symbol": "F:qaa.field_e:[I",
-      "renamedSymbol": "F:qaa.field_e:[I",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_e:[I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -59206,7 +59302,7 @@
     },
     {
       "symbol": "F:qaa.field_f:J",
-      "renamedSymbol": "F:qaa.field_f:J",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_f:J",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -59217,7 +59313,7 @@
     },
     {
       "symbol": "F:qaa.field_g:J",
-      "renamedSymbol": "F:qaa.field_g:J",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_g:J",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -71273,7 +71369,7 @@
     },
     {
       "symbol": "F:v.field_k:Lqaa;",
-      "renamedSymbol": "F:BufferedCacheFile.field_k:Lqaa;",
+      "renamedSymbol": "F:BufferedCacheFile.field_k:LBoundedRandomAccessFile;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -71295,7 +71391,7 @@
     },
     {
       "symbol": "F:vaa.field_a:Lsna;",
-      "renamedSymbol": "F:vaa.field_a:LUiComponent;",
+      "renamedSymbol": "F:GzipDecompressor.field_a:LUiComponent;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -71306,7 +71402,7 @@
     },
     {
       "symbol": "F:vaa.field_b:Lkv;",
-      "renamedSymbol": "F:vaa.field_b:LSprite;",
+      "renamedSymbol": "F:GzipDecompressor.field_b:LSprite;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -71317,7 +71413,7 @@
     },
     {
       "symbol": "F:vaa.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:vaa.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:GzipDecompressor.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -71328,7 +71424,7 @@
     },
     {
       "symbol": "F:vaa.field_d:I",
-      "renamedSymbol": "F:vaa.field_d:I",
+      "renamedSymbol": "F:GzipDecompressor.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -71339,7 +71435,7 @@
     },
     {
       "symbol": "F:vaa.field_e:Ljava/util/zip/Inflater;",
-      "renamedSymbol": "F:vaa.field_e:Ljava/util/zip/Inflater;",
+      "renamedSymbol": "F:GzipDecompressor.field_e:Ljava/util/zip/Inflater;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -71350,7 +71446,7 @@
     },
     {
       "symbol": "F:vaa.field_f:I",
-      "renamedSymbol": "F:vaa.field_f:I",
+      "renamedSymbol": "F:GzipDecompressor.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -172286,7 +172382,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -172297,7 +172393,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#1",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -172308,7 +172404,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#10",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#10",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -172319,7 +172415,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172330,7 +172426,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -172341,7 +172437,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#4",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#4",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -172352,7 +172448,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#5",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#5",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -172363,7 +172459,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#6",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#6",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -172374,7 +172470,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#7",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#7",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#7",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -172385,7 +172481,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#8",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#8",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -172396,7 +172492,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#9",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#9",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -290547,7 +290643,7 @@
     },
     {
       "symbol": "L:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
-      "renamedSymbol": "L:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -290558,7 +290654,7 @@
     },
     {
       "symbol": "L:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
-      "renamedSymbol": "L:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -290569,7 +290665,7 @@
     },
     {
       "symbol": "L:qaa.a(II)[Lkv;#0",
-      "renamedSymbol": "L:qaa.a(II)[LSprite;#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(II)[LSprite;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -290580,7 +290676,7 @@
     },
     {
       "symbol": "L:qaa.a(II)[Lkv;#1",
-      "renamedSymbol": "L:qaa.a(II)[LSprite;#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(II)[LSprite;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -290591,7 +290687,7 @@
     },
     {
       "symbol": "L:qaa.a(II[BB)V#0",
-      "renamedSymbol": "L:qaa.a(II[BB)V#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.write(II[BB)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -290602,7 +290698,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#0",
-      "renamedSymbol": "L:qaa.a([BIII)I#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -290613,7 +290709,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#1",
-      "renamedSymbol": "L:qaa.a([BIII)I#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -290624,7 +290720,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#2",
-      "renamedSymbol": "L:qaa.a([BIII)I#2",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -290635,7 +290731,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#3",
-      "renamedSymbol": "L:qaa.a([BIII)I#3",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -290646,7 +290742,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#4",
-      "renamedSymbol": "L:qaa.a([BIII)I#4",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -290657,7 +290753,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#5",
-      "renamedSymbol": "L:qaa.a([BIII)I#5",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -290668,7 +290764,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#6",
-      "renamedSymbol": "L:qaa.a([BIII)I#6",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -290679,7 +290775,7 @@
     },
     {
       "symbol": "L:qaa.a([BIII)I#7",
-      "renamedSymbol": "L:qaa.a([BIII)I#7",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BIII)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -345448,7 +345544,7 @@
     },
     {
       "symbol": "L:v.<init>(Lqaa;II)V#0",
-      "renamedSymbol": "L:BufferedCacheFile.<init>(Lqaa;II)V#0",
+      "renamedSymbol": "L:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -345459,7 +345555,7 @@
     },
     {
       "symbol": "L:v.<init>(Lqaa;II)V#1",
-      "renamedSymbol": "L:BufferedCacheFile.<init>(Lqaa;II)V#1",
+      "renamedSymbol": "L:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -346130,7 +346226,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#0",
-      "renamedSymbol": "L:vaa.a(III)Z#0",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -346141,7 +346237,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#1",
-      "renamedSymbol": "L:vaa.a(III)Z#1",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -346152,7 +346248,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#10",
-      "renamedSymbol": "L:vaa.a(III)Z#10",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -346163,7 +346259,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#11",
-      "renamedSymbol": "L:vaa.a(III)Z#11",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -346174,7 +346270,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#12",
-      "renamedSymbol": "L:vaa.a(III)Z#12",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -346185,7 +346281,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#13",
-      "renamedSymbol": "L:vaa.a(III)Z#13",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -346196,7 +346292,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#14",
-      "renamedSymbol": "L:vaa.a(III)Z#14",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#14",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -346207,7 +346303,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#15",
-      "renamedSymbol": "L:vaa.a(III)Z#15",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#15",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -346218,7 +346314,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#16",
-      "renamedSymbol": "L:vaa.a(III)Z#16",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#16",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -346229,7 +346325,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#17",
-      "renamedSymbol": "L:vaa.a(III)Z#17",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#17",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -346240,7 +346336,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#18",
-      "renamedSymbol": "L:vaa.a(III)Z#18",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#18",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -346251,7 +346347,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#19",
-      "renamedSymbol": "L:vaa.a(III)Z#19",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#19",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -346262,7 +346358,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#2",
-      "renamedSymbol": "L:vaa.a(III)Z#2",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#2",
       "originalName": "var4_ref_String",
       "renamedName": "var4_ref_String",
       "declaration": {
@@ -346273,7 +346369,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#20",
-      "renamedSymbol": "L:vaa.a(III)Z#20",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#20",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -346284,7 +346380,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#21",
-      "renamedSymbol": "L:vaa.a(III)Z#21",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#21",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -346295,7 +346391,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#22",
-      "renamedSymbol": "L:vaa.a(III)Z#22",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#22",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -346306,7 +346402,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#23",
-      "renamedSymbol": "L:vaa.a(III)Z#23",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#23",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -346317,7 +346413,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#24",
-      "renamedSymbol": "L:vaa.a(III)Z#24",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#24",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -346328,7 +346424,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#25",
-      "renamedSymbol": "L:vaa.a(III)Z#25",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#25",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -346339,7 +346435,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#26",
-      "renamedSymbol": "L:vaa.a(III)Z#26",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#26",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -346350,7 +346446,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#27",
-      "renamedSymbol": "L:vaa.a(III)Z#27",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#27",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -346361,7 +346457,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#28",
-      "renamedSymbol": "L:vaa.a(III)Z#28",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#28",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -346372,7 +346468,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#29",
-      "renamedSymbol": "L:vaa.a(III)Z#29",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#29",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -346383,7 +346479,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#3",
-      "renamedSymbol": "L:vaa.a(III)Z#3",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -346394,7 +346490,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#30",
-      "renamedSymbol": "L:vaa.a(III)Z#30",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#30",
       "originalName": "var42",
       "renamedName": "var42",
       "declaration": {
@@ -346405,7 +346501,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#31",
-      "renamedSymbol": "L:vaa.a(III)Z#31",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#31",
       "originalName": "var43",
       "renamedName": "var43",
       "declaration": {
@@ -346416,7 +346512,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#32",
-      "renamedSymbol": "L:vaa.a(III)Z#32",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#32",
       "originalName": "var44",
       "renamedName": "var44",
       "declaration": {
@@ -346427,7 +346523,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#33",
-      "renamedSymbol": "L:vaa.a(III)Z#33",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#33",
       "originalName": "var45",
       "renamedName": "var45",
       "declaration": {
@@ -346438,7 +346534,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#34",
-      "renamedSymbol": "L:vaa.a(III)Z#34",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#34",
       "originalName": "var46",
       "renamedName": "var46",
       "declaration": {
@@ -346449,7 +346545,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#35",
-      "renamedSymbol": "L:vaa.a(III)Z#35",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#35",
       "originalName": "var47",
       "renamedName": "var47",
       "declaration": {
@@ -346460,7 +346556,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#36",
-      "renamedSymbol": "L:vaa.a(III)Z#36",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#36",
       "originalName": "var48",
       "renamedName": "var48",
       "declaration": {
@@ -346471,7 +346567,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#37",
-      "renamedSymbol": "L:vaa.a(III)Z#37",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#37",
       "originalName": "var49",
       "renamedName": "var49",
       "declaration": {
@@ -346482,7 +346578,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#38",
-      "renamedSymbol": "L:vaa.a(III)Z#38",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#38",
       "originalName": "var50",
       "renamedName": "var50",
       "declaration": {
@@ -346493,7 +346589,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#39",
-      "renamedSymbol": "L:vaa.a(III)Z#39",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#39",
       "originalName": "var51",
       "renamedName": "var51",
       "declaration": {
@@ -346504,7 +346600,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#4",
-      "renamedSymbol": "L:vaa.a(III)Z#4",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -346515,7 +346611,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#40",
-      "renamedSymbol": "L:vaa.a(III)Z#40",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#40",
       "originalName": "var52",
       "renamedName": "var52",
       "declaration": {
@@ -346526,7 +346622,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#41",
-      "renamedSymbol": "L:vaa.a(III)Z#41",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#41",
       "originalName": "var53",
       "renamedName": "var53",
       "declaration": {
@@ -346537,7 +346633,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#42",
-      "renamedSymbol": "L:vaa.a(III)Z#42",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#42",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -346548,7 +346644,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#43",
-      "renamedSymbol": "L:vaa.a(III)Z#43",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#43",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -346559,7 +346655,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#44",
-      "renamedSymbol": "L:vaa.a(III)Z#44",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#44",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -346570,7 +346666,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#45",
-      "renamedSymbol": "L:vaa.a(III)Z#45",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#45",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -346581,7 +346677,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#46",
-      "renamedSymbol": "L:vaa.a(III)Z#46",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#46",
       "originalName": "var23Lifetime3",
       "renamedName": "var23Lifetime3",
       "declaration": {
@@ -346592,7 +346688,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#47",
-      "renamedSymbol": "L:vaa.a(III)Z#47",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#47",
       "originalName": "var26Lifetime1",
       "renamedName": "var26Lifetime1",
       "declaration": {
@@ -346603,7 +346699,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#48",
-      "renamedSymbol": "L:vaa.a(III)Z#48",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#48",
       "originalName": "var26Lifetime2",
       "renamedName": "var26Lifetime2",
       "declaration": {
@@ -346614,7 +346710,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#49",
-      "renamedSymbol": "L:vaa.a(III)Z#49",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#49",
       "originalName": "var26Lifetime3",
       "renamedName": "var26Lifetime3",
       "declaration": {
@@ -346625,7 +346721,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#5",
-      "renamedSymbol": "L:vaa.a(III)Z#5",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -346636,7 +346732,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#50",
-      "renamedSymbol": "L:vaa.a(III)Z#50",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#50",
       "originalName": "var26Lifetime4",
       "renamedName": "var26Lifetime4",
       "declaration": {
@@ -346647,7 +346743,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#51",
-      "renamedSymbol": "L:vaa.a(III)Z#51",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#51",
       "originalName": "var26Lifetime5",
       "renamedName": "var26Lifetime5",
       "declaration": {
@@ -346658,7 +346754,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#52",
-      "renamedSymbol": "L:vaa.a(III)Z#52",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#52",
       "originalName": "var26Lifetime6",
       "renamedName": "var26Lifetime6",
       "declaration": {
@@ -346669,7 +346765,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#53",
-      "renamedSymbol": "L:vaa.a(III)Z#53",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#53",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -346680,7 +346776,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#54",
-      "renamedSymbol": "L:vaa.a(III)Z#54",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#54",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -346691,7 +346787,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#55",
-      "renamedSymbol": "L:vaa.a(III)Z#55",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#55",
       "originalName": "var7Lifetime1Lifetime2",
       "renamedName": "var7Lifetime1Lifetime2",
       "declaration": {
@@ -346702,7 +346798,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#56",
-      "renamedSymbol": "L:vaa.a(III)Z#56",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#56",
       "originalName": "var7Lifetime1Lifetime3",
       "renamedName": "var7Lifetime1Lifetime3",
       "declaration": {
@@ -346713,7 +346809,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#57",
-      "renamedSymbol": "L:vaa.a(III)Z#57",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#57",
       "originalName": "var7Lifetime1Lifetime4",
       "renamedName": "var7Lifetime1Lifetime4",
       "declaration": {
@@ -346724,7 +346820,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#58",
-      "renamedSymbol": "L:vaa.a(III)Z#58",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#58",
       "originalName": "var7Lifetime1Lifetime5",
       "renamedName": "var7Lifetime1Lifetime5",
       "declaration": {
@@ -346735,7 +346831,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#59",
-      "renamedSymbol": "L:vaa.a(III)Z#59",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#59",
       "originalName": "var7Lifetime1Lifetime6",
       "renamedName": "var7Lifetime1Lifetime6",
       "declaration": {
@@ -346746,7 +346842,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#6",
-      "renamedSymbol": "L:vaa.a(III)Z#6",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -346757,7 +346853,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#60",
-      "renamedSymbol": "L:vaa.a(III)Z#60",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#60",
       "originalName": "var23Lifetime3Lifetime1",
       "renamedName": "var23Lifetime3Lifetime1",
       "declaration": {
@@ -346768,7 +346864,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#61",
-      "renamedSymbol": "L:vaa.a(III)Z#61",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#61",
       "originalName": "var23Lifetime3Lifetime2",
       "renamedName": "var23Lifetime3Lifetime2",
       "declaration": {
@@ -346779,7 +346875,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#62",
-      "renamedSymbol": "L:vaa.a(III)Z#62",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#62",
       "originalName": "var26Lifetime6Lifetime1",
       "renamedName": "var26Lifetime6Lifetime1",
       "declaration": {
@@ -346790,7 +346886,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#63",
-      "renamedSymbol": "L:vaa.a(III)Z#63",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#63",
       "originalName": "var26Lifetime6Lifetime2",
       "renamedName": "var26Lifetime6Lifetime2",
       "declaration": {
@@ -346801,7 +346897,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#64",
-      "renamedSymbol": "L:vaa.a(III)Z#64",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#64",
       "originalName": "var26Lifetime6Lifetime3",
       "renamedName": "var26Lifetime6Lifetime3",
       "declaration": {
@@ -346812,7 +346908,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#7",
-      "renamedSymbol": "L:vaa.a(III)Z#7",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -346823,7 +346919,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#8",
-      "renamedSymbol": "L:vaa.a(III)Z#8",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -346834,7 +346930,7 @@
     },
     {
       "symbol": "L:vaa.a(III)Z#9",
-      "renamedSymbol": "L:vaa.a(III)Z#9",
+      "renamedSymbol": "L:GzipDecompressor.a(III)Z#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -346845,7 +346941,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#0",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#0",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -346856,7 +346952,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#1",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#1",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -346867,7 +346963,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#10",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#10",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#10",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -346878,7 +346974,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#11",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#11",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#11",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -346889,7 +346985,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#12",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#12",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#12",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -346900,7 +346996,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#13",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#13",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#13",
       "originalName": "stackIn_43_2",
       "renamedName": "stackIn_43_2",
       "declaration": {
@@ -346911,7 +347007,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#14",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#14",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -346922,7 +347018,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#15",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#15",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#15",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -346933,7 +347029,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#16",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#16",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -346944,7 +347040,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#2",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#2",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -346955,7 +347051,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#3",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#3",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -346966,7 +347062,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#4",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#4",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#4",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -346977,7 +347073,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#5",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#5",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#5",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -346988,7 +347084,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#6",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#6",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#6",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -346999,7 +347095,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#7",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#7",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#7",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -347010,7 +347106,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#8",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#8",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#8",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -347021,7 +347117,7 @@
     },
     {
       "symbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#9",
-      "renamedSymbol": "L:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#9",
+      "renamedSymbol": "L:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#9",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -347032,7 +347128,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#0",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#0",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#0",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -347043,7 +347139,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#1",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#1",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -347054,7 +347150,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#10",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#10",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -347065,7 +347161,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#11",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#11",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -347076,7 +347172,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#2",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#2",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -347087,7 +347183,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#3",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#3",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -347098,7 +347194,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#4",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#4",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#4",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -347109,7 +347205,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#5",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#5",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#5",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -347120,7 +347216,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#6",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#6",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#6",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -347131,7 +347227,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#7",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#7",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -347142,7 +347238,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#8",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#8",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -347153,7 +347249,7 @@
     },
     {
       "symbol": "L:vaa.a(Llu;[BI)V#9",
-      "renamedSymbol": "L:vaa.a(LPacketBuffer;[BI)V#9",
+      "renamedSymbol": "L:GzipDecompressor.decompress(LPacketBuffer;[BI)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -379449,9 +379545,9 @@
     },
     {
       "symbol": "M:dg.b()V",
-      "renamedSymbol": "M:SoftwareRasterizer.b()V",
+      "renamedSymbol": "M:SoftwareRasterizer.clearStaticReferences()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "dg.java",
         "start": 57401,
@@ -390999,7 +391095,7 @@
     },
     {
       "symbol": "M:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -392176,9 +392272,9 @@
     },
     {
       "symbol": "M:iha.e(I)V",
-      "renamedSymbol": "M:iha.e(I)V",
+      "renamedSymbol": "M:iha.clearStaticReferences(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "iha.java",
         "start": 2188,
@@ -405574,9 +405670,9 @@
     },
     {
       "symbol": "M:ms.g(B)V",
-      "renamedSymbol": "M:NetworkGameClient.g(B)V",
+      "renamedSymbol": "M:NetworkGameClient.clearStaticReferences(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "ms.java",
         "start": 426,
@@ -414517,9 +414613,9 @@
     },
     {
       "symbol": "M:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V",
-      "renamedSymbol": "M:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V",
       "originalName": "qaa",
-      "renamedName": "qaa",
+      "renamedName": "BoundedRandomAccessFile",
       "declaration": {
         "file": "qaa.java",
         "start": 3544,
@@ -414528,9 +414624,9 @@
     },
     {
       "symbol": "M:qaa.a(B)J",
-      "renamedSymbol": "M:qaa.a(B)J",
+      "renamedSymbol": "M:BoundedRandomAccessFile.length(B)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "length",
       "declaration": {
         "file": "qaa.java",
         "start": 282,
@@ -414539,7 +414635,7 @@
     },
     {
       "symbol": "M:qaa.a(II)[Lkv;",
-      "renamedSymbol": "M:qaa.a(II)[LSprite;",
+      "renamedSymbol": "M:BoundedRandomAccessFile.a(II)[LSprite;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -414550,9 +414646,9 @@
     },
     {
       "symbol": "M:qaa.a(II[BB)V",
-      "renamedSymbol": "M:qaa.a(II[BB)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.write(II[BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "write",
       "declaration": {
         "file": "qaa.java",
         "start": 1959,
@@ -414561,9 +414657,9 @@
     },
     {
       "symbol": "M:qaa.a(JZ)V",
-      "renamedSymbol": "M:qaa.a(JZ)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.seek(JZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "seek",
       "declaration": {
         "file": "qaa.java",
         "start": 479,
@@ -414572,9 +414668,9 @@
     },
     {
       "symbol": "M:qaa.a(Z)V",
-      "renamedSymbol": "M:qaa.a(Z)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.close(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "close",
       "declaration": {
         "file": "qaa.java",
         "start": 3334,
@@ -414583,9 +414679,9 @@
     },
     {
       "symbol": "M:qaa.a([BIII)I",
-      "renamedSymbol": "M:qaa.a([BIII)I",
+      "renamedSymbol": "M:BoundedRandomAccessFile.read([BIII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "read",
       "declaration": {
         "file": "qaa.java",
         "start": 702,
@@ -414594,7 +414690,7 @@
     },
     {
       "symbol": "M:qaa.b(Z)V",
-      "renamedSymbol": "M:qaa.releaseStatics(Z)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.releaseStatics(Z)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -414605,7 +414701,7 @@
     },
     {
       "symbol": "M:qaa.finalize()V",
-      "renamedSymbol": "M:qaa.finalize()V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.finalize()V",
       "originalName": "finalize",
       "renamedName": "finalize",
       "declaration": {
@@ -423460,9 +423556,9 @@
     },
     {
       "symbol": "M:uc.b(I)V",
-      "renamedSymbol": "M:uc.b(I)V",
+      "renamedSymbol": "M:uc.clearStaticReferences(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "uc.java",
         "start": 1406,
@@ -425484,7 +425580,7 @@
     },
     {
       "symbol": "M:v.<init>(Lqaa;II)V",
-      "renamedSymbol": "M:BufferedCacheFile.<init>(Lqaa;II)V",
+      "renamedSymbol": "M:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V",
       "originalName": "v",
       "renamedName": "BufferedCacheFile",
       "declaration": {
@@ -425638,9 +425734,9 @@
     },
     {
       "symbol": "M:vaa.<init>()V",
-      "renamedSymbol": "M:vaa.<init>()V",
+      "renamedSymbol": "M:GzipDecompressor.<init>()V",
       "originalName": "vaa",
-      "renamedName": "vaa",
+      "renamedName": "GzipDecompressor",
       "declaration": {
         "file": "vaa.java",
         "start": 13458,
@@ -425649,9 +425745,9 @@
     },
     {
       "symbol": "M:vaa.<init>(III)V",
-      "renamedSymbol": "M:vaa.<init>(III)V",
+      "renamedSymbol": "M:GzipDecompressor.<init>(III)V",
       "originalName": "vaa",
-      "renamedName": "vaa",
+      "renamedName": "GzipDecompressor",
       "declaration": {
         "file": "vaa.java",
         "start": 13521,
@@ -425660,7 +425756,7 @@
     },
     {
       "symbol": "M:vaa.a(I)V",
-      "renamedSymbol": "M:vaa.releaseStatics(I)V",
+      "renamedSymbol": "M:GzipDecompressor.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -425671,7 +425767,7 @@
     },
     {
       "symbol": "M:vaa.a(III)Z",
-      "renamedSymbol": "M:vaa.a(III)Z",
+      "renamedSymbol": "M:GzipDecompressor.a(III)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -425682,7 +425778,7 @@
     },
     {
       "symbol": "M:vaa.a(Ljava/lang/String;II)Ljava/lang/String;",
-      "renamedSymbol": "M:vaa.a(Ljava/lang/String;II)Ljava/lang/String;",
+      "renamedSymbol": "M:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -425693,9 +425789,9 @@
     },
     {
       "symbol": "M:vaa.a(Llu;[BI)V",
-      "renamedSymbol": "M:vaa.a(LPacketBuffer;[BI)V",
+      "renamedSymbol": "M:GzipDecompressor.decompress(LPacketBuffer;[BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decompress",
       "declaration": {
         "file": "vaa.java",
         "start": 16810,
@@ -476194,7 +476290,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476205,7 +476301,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476216,7 +476312,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476227,7 +476323,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)Lqaa;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/String;II)LBoundedRandomAccessFile;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -478427,7 +478523,7 @@
     },
     {
       "symbol": "P:iha.e(I)V#0",
-      "renamedSymbol": "P:iha.e(I)V#0",
+      "renamedSymbol": "P:iha.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -510052,7 +510148,7 @@
     },
     {
       "symbol": "P:ms.g(B)V#0",
-      "renamedSymbol": "P:NetworkGameClient.g(B)V#0",
+      "renamedSymbol": "P:NetworkGameClient.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531392,7 +531488,7 @@
     },
     {
       "symbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
-      "renamedSymbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531403,7 +531499,7 @@
     },
     {
       "symbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
-      "renamedSymbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -531414,7 +531510,7 @@
     },
     {
       "symbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
-      "renamedSymbol": "P:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -531425,7 +531521,7 @@
     },
     {
       "symbol": "P:qaa.a(B)J#0",
-      "renamedSymbol": "P:qaa.a(B)J#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.length(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531436,7 +531532,7 @@
     },
     {
       "symbol": "P:qaa.a(II)[Lkv;#0",
-      "renamedSymbol": "P:qaa.a(II)[LSprite;#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(II)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531447,7 +531543,7 @@
     },
     {
       "symbol": "P:qaa.a(II)[Lkv;#1",
-      "renamedSymbol": "P:qaa.a(II)[LSprite;#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(II)[LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -531458,7 +531554,7 @@
     },
     {
       "symbol": "P:qaa.a(II[BB)V#0",
-      "renamedSymbol": "P:qaa.a(II[BB)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(II[BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531469,7 +531565,7 @@
     },
     {
       "symbol": "P:qaa.a(II[BB)V#1",
-      "renamedSymbol": "P:qaa.a(II[BB)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(II[BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -531480,7 +531576,7 @@
     },
     {
       "symbol": "P:qaa.a(II[BB)V#2",
-      "renamedSymbol": "P:qaa.a(II[BB)V#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(II[BB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -531491,7 +531587,7 @@
     },
     {
       "symbol": "P:qaa.a(II[BB)V#3",
-      "renamedSymbol": "P:qaa.a(II[BB)V#3",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(II[BB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -531502,7 +531598,7 @@
     },
     {
       "symbol": "P:qaa.a(JZ)V#0",
-      "renamedSymbol": "P:qaa.a(JZ)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.seek(JZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531513,7 +531609,7 @@
     },
     {
       "symbol": "P:qaa.a(JZ)V#1",
-      "renamedSymbol": "P:qaa.a(JZ)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.seek(JZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -531524,7 +531620,7 @@
     },
     {
       "symbol": "P:qaa.a(Z)V#0",
-      "renamedSymbol": "P:qaa.a(Z)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.close(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531535,7 +531631,7 @@
     },
     {
       "symbol": "P:qaa.a([BIII)I#0",
-      "renamedSymbol": "P:qaa.a([BIII)I#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -531546,7 +531642,7 @@
     },
     {
       "symbol": "P:qaa.a([BIII)I#1",
-      "renamedSymbol": "P:qaa.a([BIII)I#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -531557,7 +531653,7 @@
     },
     {
       "symbol": "P:qaa.a([BIII)I#2",
-      "renamedSymbol": "P:qaa.a([BIII)I#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -531568,7 +531664,7 @@
     },
     {
       "symbol": "P:qaa.a([BIII)I#3",
-      "renamedSymbol": "P:qaa.a([BIII)I#3",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -531579,7 +531675,7 @@
     },
     {
       "symbol": "P:qaa.b(Z)V#0",
-      "renamedSymbol": "P:qaa.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -551478,7 +551574,7 @@
     },
     {
       "symbol": "P:uc.b(I)V#0",
-      "renamedSymbol": "P:uc.b(I)V#0",
+      "renamedSymbol": "P:uc.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -555724,7 +555820,7 @@
     },
     {
       "symbol": "P:v.<init>(Lqaa;II)V#0",
-      "renamedSymbol": "P:BufferedCacheFile.<init>(Lqaa;II)V#0",
+      "renamedSymbol": "P:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -555735,7 +555831,7 @@
     },
     {
       "symbol": "P:v.<init>(Lqaa;II)V#1",
-      "renamedSymbol": "P:BufferedCacheFile.<init>(Lqaa;II)V#1",
+      "renamedSymbol": "P:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -555746,7 +555842,7 @@
     },
     {
       "symbol": "P:v.<init>(Lqaa;II)V#2",
-      "renamedSymbol": "P:BufferedCacheFile.<init>(Lqaa;II)V#2",
+      "renamedSymbol": "P:BufferedCacheFile.<init>(LBoundedRandomAccessFile;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -556043,7 +556139,7 @@
     },
     {
       "symbol": "P:vaa.<init>(III)V#0",
-      "renamedSymbol": "P:vaa.<init>(III)V#0",
+      "renamedSymbol": "P:GzipDecompressor.<init>(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -556054,7 +556150,7 @@
     },
     {
       "symbol": "P:vaa.<init>(III)V#1",
-      "renamedSymbol": "P:vaa.<init>(III)V#1",
+      "renamedSymbol": "P:GzipDecompressor.<init>(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -556065,7 +556161,7 @@
     },
     {
       "symbol": "P:vaa.<init>(III)V#2",
-      "renamedSymbol": "P:vaa.<init>(III)V#2",
+      "renamedSymbol": "P:GzipDecompressor.<init>(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -556076,7 +556172,7 @@
     },
     {
       "symbol": "P:vaa.a(I)V#0",
-      "renamedSymbol": "P:vaa.releaseStatics(I)V#0",
+      "renamedSymbol": "P:GzipDecompressor.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -556087,7 +556183,7 @@
     },
     {
       "symbol": "P:vaa.a(III)Z#0",
-      "renamedSymbol": "P:vaa.a(III)Z#0",
+      "renamedSymbol": "P:GzipDecompressor.a(III)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -556098,7 +556194,7 @@
     },
     {
       "symbol": "P:vaa.a(III)Z#1",
-      "renamedSymbol": "P:vaa.a(III)Z#1",
+      "renamedSymbol": "P:GzipDecompressor.a(III)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -556109,7 +556205,7 @@
     },
     {
       "symbol": "P:vaa.a(III)Z#2",
-      "renamedSymbol": "P:vaa.a(III)Z#2",
+      "renamedSymbol": "P:GzipDecompressor.a(III)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -556120,7 +556216,7 @@
     },
     {
       "symbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -556131,7 +556227,7 @@
     },
     {
       "symbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -556142,7 +556238,7 @@
     },
     {
       "symbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#2",
-      "renamedSymbol": "P:vaa.a(Ljava/lang/String;II)Ljava/lang/String;#2",
+      "renamedSymbol": "P:GzipDecompressor.a(Ljava/lang/String;II)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -556153,7 +556249,7 @@
     },
     {
       "symbol": "P:vaa.a(Llu;[BI)V#0",
-      "renamedSymbol": "P:vaa.a(LPacketBuffer;[BI)V#0",
+      "renamedSymbol": "P:GzipDecompressor.decompress(LPacketBuffer;[BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -556164,7 +556260,7 @@
     },
     {
       "symbol": "P:vaa.a(Llu;[BI)V#1",
-      "renamedSymbol": "P:vaa.a(LPacketBuffer;[BI)V#1",
+      "renamedSymbol": "P:GzipDecompressor.decompress(LPacketBuffer;[BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -556175,7 +556271,7 @@
     },
     {
       "symbol": "P:vaa.a(Llu;[BI)V#2",
-      "renamedSymbol": "P:vaa.a(LPacketBuffer;[BI)V#2",
+      "renamedSymbol": "P:GzipDecompressor.decompress(LPacketBuffer;[BI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -567894,7 +567990,7 @@
       "original": "BachelorFridge.java",
       "renamed": "BachelorFridge.java",
       "inputSha256": "391cd94920e6e97d6195a3bd3359d3980815a7177a0ef225101f995702613a8b",
-      "outputSha256": "d645f24fa8c27cdc878d09725bcda0b65cc78c0c3fba662269617c6e472dec65",
+      "outputSha256": "338d9a7d00e649580c7c343a41da8bae12aaad3c6c0670379b4f870ce3f0033c",
       "edits": [
         {
           "start": 80,
@@ -569129,6 +569225,13 @@
           "renamed": "NetworkGameClient"
         },
         {
+          "start": 22438,
+          "end": 22439,
+          "symbol": "M:ms.g(B)V",
+          "original": "g",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 22461,
           "end": 22463,
           "symbol": "C:gi",
@@ -569407,6 +569510,13 @@
           "symbol": "M:rf.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 23323,
+          "end": 23326,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 23327,
@@ -569764,6 +569874,13 @@
           "symbol": "M:lna.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 24467,
+          "end": 24470,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 24471,
@@ -574251,6 +574368,13 @@
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 39465,
+          "end": 39466,
+          "symbol": "M:iha.e(I)V",
+          "original": "e",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 39481,
@@ -600637,7 +600761,7 @@
       "original": "bla.java",
       "renamed": "RageSpecial.java",
       "inputSha256": "ccde2b951e4229ae76ac1d5fff1b65581d4bf2f5a4be8b90129a357467b0863e",
-      "outputSha256": "203d39223f5a373cfaa37a55597426994e962fa86a9c71d61542e948ed103825",
+      "outputSha256": "4c4e52220086283409377b03b6e76f5b183016c6beca82effe1598ee72d5f364",
       "edits": [
         {
           "start": 50,
@@ -600939,6 +601063,13 @@
           "symbol": "C:cu",
           "original": "cu",
           "renamed": "FloodAnimation"
+        },
+        {
+          "start": 5250,
+          "end": 5253,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 5288,
@@ -610781,7 +610912,7 @@
       "original": "dda.java",
       "renamed": "dda.java",
       "inputSha256": "8bc508a5ea3fdf1775a7e7c977b24557b6cf49d9979cf280a8a698d450e97420",
-      "outputSha256": "2434ea71cba839ad3261360044858ef5057718cf8be54435dd56fbf1d58ad7f2",
+      "outputSha256": "79804f948d67fc364924a63117fef535ecc3a70356a64696b3dcef2435894f62",
       "edits": [
         {
           "start": 62,
@@ -610810,6 +610941,20 @@
           "symbol": "M:dda.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 2388,
+          "end": 2391,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 2512,
+          "end": 2515,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2781,
@@ -612011,7 +612156,7 @@
       "original": "dg.java",
       "renamed": "SoftwareRasterizer.java",
       "inputSha256": "1df563d48ceaee885c41530cc921a58cbace703365c7152f107fedeb49a1166e",
-      "outputSha256": "5a6e8c019be89a9e9edb5381a31f152ffc28c81c40722803cc04477cc127ed31",
+      "outputSha256": "443695eb9e1a7b78683ede8e4c139cb5b51ba222d078d6e90bcdb14a200c0fba",
       "edits": [
         {
           "start": 50,
@@ -612103,6 +612248,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2202,
+          "end": 2203,
+          "symbol": "M:dg.b()V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 4194,
@@ -612236,6 +612388,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 19283,
+          "end": 19284,
+          "symbol": "M:dg.b()V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 19317,
@@ -612532,6 +612691,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 50089,
+          "end": 50090,
+          "symbol": "M:dg.b()V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 50123,
           "end": 50124,
           "symbol": "M:dg.f(IIIIII)V",
@@ -612574,11 +612740,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 56479,
+          "end": 56480,
+          "symbol": "M:dg.b()V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 56513,
           "end": 56514,
           "symbol": "M:dg.h(IIII)V",
           "original": "h",
           "renamed": "addPixel"
+        },
+        {
+          "start": 57401,
+          "end": 57402,
+          "symbol": "M:dg.b()V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 57484,
@@ -613122,7 +613302,7 @@
       "original": "dj.java",
       "renamed": "dj.java",
       "inputSha256": "f7bbc71b94cf907f62b7c46873dc2508b44d1ccd7ec2c44d004a84886c0362a9",
-      "outputSha256": "91af32835cdcc0f1e16c9705ed7252913da6c48092ef02d742a1f6b3e4926be1",
+      "outputSha256": "3d6633e4d3e9c1f99c812144a0c8b46c3a41c5306cfaaf165223324bf95eb2c6",
       "edits": [
         {
           "start": 93,
@@ -613179,6 +613359,13 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 694,
+          "end": 697,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 716,
@@ -623092,7 +623279,7 @@
       "original": "ena.java",
       "renamed": "ena.java",
       "inputSha256": "55854a444ae4be3a6cd2d9b2da169c5783eca0a9e2fafa6881dfc9b376056a07",
-      "outputSha256": "fce3aae1dc5bfd6582a4b1d0ce11af801eeb8e7aa5e3024d97d4bb2cb1ffcf31",
+      "outputSha256": "d8187b3fa760d81e3b12ac4908c2750b9b4a713736e4ee77777dd5962ab62082",
       "edits": [
         {
           "start": 107,
@@ -623331,6 +623518,13 @@
           "symbol": "C:wfa",
           "original": "wfa",
           "renamed": "FullHealEvent"
+        },
+        {
+          "start": 2825,
+          "end": 2828,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 2839,
@@ -626065,7 +626259,7 @@
       "original": "fd.java",
       "renamed": "AirstrikeAnimation.java",
       "inputSha256": "38b66b2a9edce2c484fc7b16e3647cf2e7009686b6304dab08b4d8bcf28d5fef",
-      "outputSha256": "373cc48f7c8f99bf18e63f991464a50e2236e9f1a15dbae4e296e86f471084cc",
+      "outputSha256": "d4b69ea76bb1e1121adb88cd951e0adf709e851b21e37a180c085bf0c0472895",
       "edits": [
         {
           "start": 50,
@@ -626313,6 +626507,34 @@
           "renamed": "HomingMissileSpecial"
         },
         {
+          "start": 11463,
+          "end": 11466,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 11584,
+          "end": 11587,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 11702,
+          "end": 11705,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 11826,
+          "end": 11829,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 11880,
           "end": 11883,
           "symbol": "C:tha",
@@ -626325,6 +626547,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "RefreshingSpecial"
+        },
+        {
+          "start": 12194,
+          "end": 12197,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 12326,
@@ -645271,7 +645500,7 @@
       "original": "hba.java",
       "renamed": "hba.java",
       "inputSha256": "867bad9219941d5e604cfb5ea0bc46da0aafcc832da10025ce59dc12440e6ba2",
-      "outputSha256": "21c0ce26289518460c3019c137b491f7aefa0c33f7a1685091b13919a4d2feab",
+      "outputSha256": "eb1bfc9f473b0c805f592119a63f190a11942df4d0cf60f4ba3b23c4aeaf260d",
       "edits": [
         {
           "start": 62,
@@ -646063,6 +646292,13 @@
           "symbol": "C:wfa",
           "original": "wfa",
           "renamed": "FullHealEvent"
+        },
+        {
+          "start": 9557,
+          "end": 9560,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 9571,
@@ -650787,7 +651023,7 @@
       "original": "hj.java",
       "renamed": "SplitSpecial.java",
       "inputSha256": "450e510836048b70b9681a325927933375865e6023396e445bb291ee9b91f357",
-      "outputSha256": "51944767d693e1690b963fcbf24c77a70275bac13d00280f6b5e7549acd70455",
+      "outputSha256": "9cc697ab874671d944a3dc3901331c6d7eabd3ae84f87772426c7d25fc52e8b8",
       "edits": [
         {
           "start": 50,
@@ -651007,6 +651243,13 @@
           "renamed": "RefreshingSpecial"
         },
         {
+          "start": 8236,
+          "end": 8239,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 8352,
           "end": 8355,
           "symbol": "C:sna",
@@ -651019,6 +651262,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "RefreshingSpecial"
+        },
+        {
+          "start": 8608,
+          "end": 8611,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 8727,
@@ -653168,7 +653418,7 @@
       "original": "ht.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "1e58a20ec015e968e418cd4c4a6e905344fefccbf6904ddf0556166328f80836",
-      "outputSha256": "f769eedff6c15877c7e477e6c2a0785f5bfc61b3365f54d315ad93ac7e3879f3",
+      "outputSha256": "8a524edb9fdb7a6a3dc45c8a188b0776625de2ec3ad96c578dbf3ea1c9c5de78",
       "edits": [
         {
           "start": 69,
@@ -653178,11 +653428,32 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 191,
+          "end": 194,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 290,
+          "end": 293,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 317,
           "end": 319,
           "symbol": "C:qp",
           "original": "qp",
           "renamed": "MicrosoftDisplayController"
+        },
+        {
+          "start": 497,
+          "end": 500,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 557,
@@ -653199,11 +653470,53 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 695,
+          "end": 698,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 720,
           "end": 722,
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "MicrosoftCursorController"
+        },
+        {
+          "start": 787,
+          "end": 790,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 897,
+          "end": 900,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1078,
+          "end": 1081,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1540,
+          "end": 1543,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1893,
+          "end": 1896,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2563,
@@ -653302,6 +653615,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 5424,
+          "end": 5427,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 5668,
@@ -653415,6 +653735,34 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 18432,
+          "end": 18433,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
+          "start": 18767,
+          "end": 18768,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
+          "start": 19249,
+          "end": 19250,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
+          "start": 19625,
+          "end": 19626,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
           "start": 20147,
           "end": 20149,
           "symbol": "C:eh",
@@ -653448,6 +653796,41 @@
           "symbol": "C:qp",
           "original": "qp",
           "renamed": "MicrosoftDisplayController"
+        },
+        {
+          "start": 24215,
+          "end": 24218,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24307,
+          "end": 24310,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24392,
+          "end": 24395,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24477,
+          "end": 24480,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24593,
+          "end": 24596,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 25060,
@@ -655926,7 +656309,7 @@
       "original": "iea.java",
       "renamed": "iea.java",
       "inputSha256": "de7fede3caa3b5048c917cba298862b9f7bff52908ffd635e5239fe408879ce4",
-      "outputSha256": "69a0bf34323389eabc86b200552addfbd078c72557801093bf2c0e76d92645d9",
+      "outputSha256": "f130c213296b9b367869906f5453aab636c230bead277bd537d65b000e60bf39",
       "edits": [
         {
           "start": 67,
@@ -655941,6 +656324,13 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 229,
+          "end": 232,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 366,
@@ -656659,7 +657049,7 @@
       "original": "iha.java",
       "renamed": "iha.java",
       "inputSha256": "78d9929fd78ba578bc585b9883b476b80bb2fa709df53f4c9bfacb6b95ac5c37",
-      "outputSha256": "f8ddbfca1b78f0103d195cfe0f1946715748ba931bbc9fd586b2cb70ed797e3d",
+      "outputSha256": "842cbbb0f24b93a774ad7d38034674d5e831b071371f79c8f5aafa9cffcc1ee1",
       "edits": [
         {
           "start": 65,
@@ -656786,6 +657176,13 @@
           "symbol": "C:at",
           "original": "at",
           "renamed": "AnimationNode"
+        },
+        {
+          "start": 2188,
+          "end": 2189,
+          "symbol": "M:iha.e(I)V",
+          "original": "e",
+          "renamed": "clearStaticReferences"
         }
       ]
     },
@@ -657693,7 +658090,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "d83bfaa7e8517b331703d75929f3d9d4164c9fc33172108c4e88e489f45b5016",
-      "outputSha256": "550658391ee7f77354e355d9fc001d0e408faaa7a7f99efeb6e75be211c37a74",
+      "outputSha256": "74c5c2933cf00ee53b1cdbd4ec348f69e19d40c44b5a6ac71d34d6b455a4b6e9",
       "edits": [
         {
           "start": 66,
@@ -658079,6 +658476,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 13053,
+          "end": 13056,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 13079,
@@ -675617,7 +676021,7 @@
       "original": "js.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "12865ad0120a9dba011ca2808a001dd3ef7f3116cf53c3b496de7b9ebac43f84",
-      "outputSha256": "90ec3fbb97038c04401f8111e30c3f2b579f5d4a0eb6674415b136403a888487",
+      "outputSha256": "5acfc17d83438b0ebc7b910b529c1c195428bcd75d1b7fe7dff48ee653af6370",
       "edits": [
         {
           "start": 50,
@@ -675912,6 +676316,13 @@
           "symbol": "C:bw",
           "original": "bw",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4214,
+          "end": 4217,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 4240,
@@ -678065,7 +678476,7 @@
       "original": "kca.java",
       "renamed": "kca.java",
       "inputSha256": "a38166b0ed5a82ebb386353d3befe15e682626bc0d2afbb4c19b91c156871e6a",
-      "outputSha256": "0617a411a71b4554729846789eab73d8ce773d18012db7c7ffa8cfaac8eacd9e",
+      "outputSha256": "27f857fe48712b054f6152726fbcb6d657abd5c63816b84ebcc5eafc77a46bd9",
       "edits": [
         {
           "start": 67,
@@ -678073,6 +678484,20 @@
           "symbol": "C:pia",
           "original": "pia",
           "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 115,
+          "end": 118,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 409,
+          "end": 412,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         }
       ]
     },
@@ -695341,7 +695766,7 @@
       "original": "lo.java",
       "renamed": "lo.java",
       "inputSha256": "0c9fb8b8dd7f21dc860babef3e96252d710450233a2a9c03c7fe63e9678dbcee",
-      "outputSha256": "fb3e6450def230bb255da5c1c2a333eec1bef6a009dbf0b88a72d9605b0c8cb8",
+      "outputSha256": "85cc68f1ccbabec99247cea41a85e508d54b48d35d8d4532579d91efbebe017b",
       "edits": [
         {
           "start": 87,
@@ -695358,6 +695783,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 813,
+          "end": 816,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 859,
           "end": 861,
           "symbol": "C:jm",
@@ -695365,11 +695797,95 @@
           "renamed": "BoardChange"
         },
         {
+          "start": 890,
+          "end": 893,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 995,
+          "end": 998,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 1142,
           "end": 1145,
           "symbol": "C:kla",
           "original": "kla",
           "renamed": "DiveBomberAnimation"
+        },
+        {
+          "start": 1283,
+          "end": 1286,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1327,
+          "end": 1330,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1356,
+          "end": 1359,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1391,
+          "end": 1394,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1546,
+          "end": 1549,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1637,
+          "end": 1640,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1661,
+          "end": 1664,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1707,
+          "end": 1710,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1807,
+          "end": 1810,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 2092,
+          "end": 2095,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2254,
@@ -702017,7 +702533,7 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "a7f826afb3c80193e1bd04d40ac3d2b35065263d6120104fddbabc9c1749995d",
-      "outputSha256": "4219944001d220908f2eef7f78451289a5d6344fdc8c91c184f8257651cad6e4",
+      "outputSha256": "619e20e67baf6a7777169d636d53c765396c27043e303c8c35ef02591a472d36",
       "edits": [
         {
           "start": 61,
@@ -702216,11 +702732,25 @@
           "renamed": "SnowAnimation"
         },
         {
+          "start": 3767,
+          "end": 3770,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 3832,
           "end": 3834,
           "symbol": "C:fq",
           "original": "fq",
           "renamed": "HomingMissileSpecial"
+        },
+        {
+          "start": 4204,
+          "end": 4207,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 4402,
@@ -703290,7 +703820,7 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "d39443cff699bbb6ed1e0e914ca931232fcfcd89cd80a3b05a0604c2cdef1ce3",
-      "outputSha256": "8251be372687906bf1feb8376cdf97140e9cf64ad9b06c64baf63bc2fb052773",
+      "outputSha256": "c70a1c1cedcb1de494baaa227b45d01530f3513e554a4df18b3bc27ff95fcc5a",
       "edits": [
         {
           "start": 67,
@@ -703774,6 +704304,13 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "HomingMissileEvent"
+        },
+        {
+          "start": 11634,
+          "end": 11637,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 11692,
@@ -705302,7 +705839,7 @@
       "original": "mka.java",
       "renamed": "mka.java",
       "inputSha256": "7e8d8979e76178670f2a5e09ec93a71ff4e1f99a42a0d74d2bae295c9aa1c830",
-      "outputSha256": "95cf7af245cae6c7b58bdcfc200262b08b30f1aba781d5afe5385607eba3685e",
+      "outputSha256": "6aab395e51430ce09eb1d7c6866b3e4a9122e669ed7b387ef0ec87b8efb78be6",
       "edits": [
         {
           "start": 62,
@@ -705359,6 +705896,41 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 700,
+          "end": 703,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 745,
+          "end": 748,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 791,
+          "end": 794,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 837,
+          "end": 840,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 882,
+          "end": 885,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 1017,
@@ -706972,7 +707544,7 @@
       "original": "ms.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "30ccf003e523c39337f5fc44bfea6487d91a20f1fb71b2636d64bb435a289f24",
-      "outputSha256": "296693676d761541aad1edd6e86eb2a2784af34082e25b8e0187a06319581cce",
+      "outputSha256": "090395566acd0387dc8863680a41d922eecea7b5428cbe898c929ebf30d7aaf4",
       "edits": [
         {
           "start": 53,
@@ -706987,6 +707559,13 @@
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 426,
+          "end": 427,
+          "symbol": "M:ms.g(B)V",
+          "original": "g",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 2920,
@@ -707309,6 +707888,13 @@
           "symbol": "C:rs",
           "original": "rs",
           "renamed": "StatusEffectInfo"
+        },
+        {
+          "start": 8995,
+          "end": 8998,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 9019,
@@ -708007,6 +708593,13 @@
           "symbol": "C:gq",
           "original": "gq",
           "renamed": "OneAnimation"
+        },
+        {
+          "start": 23128,
+          "end": 23131,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 23158,
@@ -717313,7 +717906,7 @@
       "original": "nv.java",
       "renamed": "nv.java",
       "inputSha256": "48ca6ca0d674b0b2b40cbf628b1883216005b5d55e0e9e7ffe9c04f00934ed16",
-      "outputSha256": "47b3e66ab2f7c5c19bd93f7e489c6d9398036a1d9fe2e3691c7480057a185cda",
+      "outputSha256": "5136e5c69d4a6c0f9691c327efa61fcb4fe7b17654d23947dbe5ab5af6dab48f",
       "edits": [
         {
           "start": 61,
@@ -717440,6 +718033,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "PlaceCreatureEffect"
+        },
+        {
+          "start": 5256,
+          "end": 5259,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 5455,
@@ -733960,7 +734560,7 @@
       "original": "pfa.java",
       "renamed": "pfa.java",
       "inputSha256": "3a53f38f11c73be7b93fa8d5cd3d60d41eb405c64362a99512e0be655079163f",
-      "outputSha256": "3d02631d1b501077330898feee067663ea8d0f2b0a0ce896a1e8bdf58473293b",
+      "outputSha256": "c4432e4f79a13e8408d9a4209208f6383ec48264ef78beca0bb16ccb1a04441d",
       "edits": [
         {
           "start": 118,
@@ -734353,6 +734953,13 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "HomingMissileEvent"
+        },
+        {
+          "start": 9480,
+          "end": 9483,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 9614,
@@ -739060,7 +739667,7 @@
       "original": "pna.java",
       "renamed": "pna.java",
       "inputSha256": "de787470f724f650bc35a153670d551c55e79faedaffd239ccf7979e2c3cf5a8",
-      "outputSha256": "8a2ca4501ae8811fe59ed06b8bf41798cabe94f1d674d3d9cda2f570c6535c9b",
+      "outputSha256": "ee111c0ae496b7f712fde34f122b85623da1d5bcef4a691414f6b70a12b78932",
       "edits": [
         {
           "start": 62,
@@ -739735,6 +740342,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 9191,
+          "end": 9194,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 9232,
           "end": 9234,
           "symbol": "C:io",
@@ -739866,6 +740480,13 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 10097,
+          "end": 10100,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 10115,
@@ -740237,6 +740858,13 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 14593,
+          "end": 14596,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 15325,
@@ -741905,7 +742533,7 @@
       "original": "pv.java",
       "renamed": "pv.java",
       "inputSha256": "ef37507e53e4a13e280c87c89ff8eac4bf126dc48f072104a0fac0f23d4bfb3e",
-      "outputSha256": "5133d521016ad8d4d865872cece89464c279fced83120ecb334ee93ccabb1bcb",
+      "outputSha256": "1622662baaa35f87ff2a9efa68b7a72ff10b860e7519d06bd27bf3d99437e4e4",
       "edits": [
         {
           "start": 55,
@@ -742025,6 +742653,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "SnowEvent"
+        },
+        {
+          "start": 3348,
+          "end": 3351,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 7680,
@@ -742431,16 +743066,37 @@
     },
     {
       "original": "qaa.java",
-      "renamed": "qaa.java",
+      "renamed": "BoundedRandomAccessFile.java",
       "inputSha256": "a59f0cc23aa7dab0fecf13117d052f78dbdcd1baf4f39aad887eacbdbb1ff76e",
-      "outputSha256": "eb476001e5345e61784d24ed506e6a4d2e47640efa9497ea89a0c695a4c67357",
+      "outputSha256": "308cc91ae8fe976ad90d5fbfb4ebb550bdca79dc9101e327134fc61ed938e39d",
       "edits": [
+        {
+          "start": 69,
+          "end": 72,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
         {
           "start": 175,
           "end": 178,
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 282,
+          "end": 283,
+          "symbol": "M:qaa.a(B)J",
+          "original": "a",
+          "renamed": "length"
+        },
+        {
+          "start": 356,
+          "end": 359,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 360,
@@ -742450,11 +743106,39 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 479,
+          "end": 480,
+          "symbol": "M:qaa.a(JZ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 702,
+          "end": 703,
+          "symbol": "M:qaa.a([BIII)I",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
           "start": 1724,
           "end": 1725,
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1959,
+          "end": 1960,
+          "symbol": "M:qaa.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 2282,
+          "end": 2285,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2286,
@@ -742476,6 +743160,13 @@
           "symbol": "M:qaa.b(Z)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 3048,
+          "end": 3049,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 3091,
@@ -742511,6 +743202,20 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3334,
+          "end": 3335,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
+          "start": 3544,
+          "end": 3547,
+          "symbol": "M:qaa.<init>(Ljava/io/File;Ljava/lang/String;J)V",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 4248,
@@ -744945,7 +745650,7 @@
       "original": "qh.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "f2133c65ef61f2355d4aaad142723cc05f5a22a8cfcf44c87d6de0b7e761db2c",
-      "outputSha256": "7c8f71b09ee92fffe8a4c638c0d6038a91a621ea77b571c4777a28bfa9e76662",
+      "outputSha256": "c4bb166297ebd1e7653aaeca1c60a29d7041e0335e584c43c1d20fd75a5016cb",
       "edits": [
         {
           "start": 50,
@@ -745135,6 +745840,20 @@
           "symbol": "C:qda",
           "original": "qda",
           "renamed": "WidgetRenderer"
+        },
+        {
+          "start": 2722,
+          "end": 2725,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 2777,
+          "end": 2780,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2857,
@@ -746564,7 +747283,7 @@
       "original": "qla.java",
       "renamed": "qla.java",
       "inputSha256": "68458e9737f600e433e78a3cc2b05f97d71516ed607008a470c46d1b16a0acd5",
-      "outputSha256": "4d6ae16d17b365ede4c14c4aa36b427d354707016cfe74e74d02f9375d9c41b4",
+      "outputSha256": "b9d2e587f690e445e761a208c02c251b7d192752753e004141e0042c0ec50276",
       "edits": [
         {
           "start": 62,
@@ -746719,6 +747438,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "StampedeAnimation"
+        },
+        {
+          "start": 3428,
+          "end": 3429,
+          "symbol": "M:uc.b(I)V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 3487,
@@ -748799,7 +749525,7 @@
       "original": "raa.java",
       "renamed": "raa.java",
       "inputSha256": "4cbf54c00e885bf8e19920256275a8c846d029b57e95676c2058396a778410e1",
-      "outputSha256": "25b208b9e7f4795bd4fd28932d455551724ac74b8f1964b9af65d008e32ed94b",
+      "outputSha256": "dce81151dd020bf5b39952c77472d15b7e3feb8a2b6564ca51ce38a261aef955",
       "edits": [
         {
           "start": 83,
@@ -748886,6 +749612,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 3517,
+          "end": 3520,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 3583,
           "end": 3586,
           "symbol": "C:jga",
@@ -748919,6 +749652,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "PizzaArenaTheme"
+        },
+        {
+          "start": 3848,
+          "end": 3851,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 3919,
@@ -750879,7 +751619,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "f491a12b5a6e38fb68eb5caf96d161fa5e7bd5c62c7338dd7b6d5ea8213babf3",
-      "outputSha256": "f97e3df6e6949e19c5ff298c7c7411a83517b65a7c084bd61a3a30d736a091e6",
+      "outputSha256": "45ed54ef4c08f430f2bc95ab2499e265a1e72553629d94f889d18a583af45f17",
       "edits": [
         {
           "start": 611,
@@ -751062,6 +751802,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 4795,
+          "end": 4798,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 4821,
@@ -763324,7 +764071,7 @@
       "original": "sr.java",
       "renamed": "sr.java",
       "inputSha256": "12a2cbe385addf626612109b4e4e8c9cb265d8d4f80974dfbdee5f8564a512d4",
-      "outputSha256": "d97d3a4d8c066b7847ad17f5dc4c6ee933d25615bc7b07eb6bd392253a4b2cd6",
+      "outputSha256": "ff609e003b9530208789265e4233794f41ae0d993bdd1ccb1e3e9b03cfd84186",
       "edits": [
         {
           "start": 216,
@@ -763416,6 +764163,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "PlaceCreatureEffect"
+        },
+        {
+          "start": 2321,
+          "end": 2324,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 2507,
@@ -765610,7 +766364,7 @@
       "original": "tc.java",
       "renamed": "tc.java",
       "inputSha256": "2d66ab62e9b8d1fdd53a2f2c41613fbb5e09f343c22eb95bfb4838190d7a402f",
-      "outputSha256": "4cca6315cbe782a7bedc7d3a89f9d4e249ed77fd45d640fd66329f4ead12ff23",
+      "outputSha256": "9da700a563aaccd5f1cb54dd2c9331c32e8e6de8d601d0cc2ba6238bd74b6e0d",
       "edits": [
         {
           "start": 84,
@@ -765632,6 +766386,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "MoveOrder"
+        },
+        {
+          "start": 760,
+          "end": 763,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 1305,
@@ -766207,7 +766968,7 @@
       "original": "td.java",
       "renamed": "SpecialOrder.java",
       "inputSha256": "60c83c4a7bde1be57ec7f5781cc18b04a0a9036d1f345a9cccf66c203950fc32",
-      "outputSha256": "8f61fe7396df32e3ca13020484dbabab41a89d68102aecacdf3f947f6a059467",
+      "outputSha256": "64018933dc0654e0a5bc661f7655b5cb382803675ee5d58a2808b6a15a61115b",
       "edits": [
         {
           "start": 44,
@@ -766348,6 +767109,13 @@
           "symbol": "C:pca",
           "original": "pca",
           "renamed": "Bzip2Decoder"
+        },
+        {
+          "start": 2762,
+          "end": 2763,
+          "symbol": "M:vaa.a(Llu;[BI)V",
+          "original": "a",
+          "renamed": "decompress"
         },
         {
           "start": 3480,
@@ -767948,7 +768716,7 @@
       "original": "tfa.java",
       "renamed": "tfa.java",
       "inputSha256": "bebc10e0641c2726761348ba30d63ffa0b5459da824ef2bceb79adb0a9c889c0",
-      "outputSha256": "59cf3fbadcd348936a581c72271a422f375e08fc0e5e76bd6e18bb28b813177b",
+      "outputSha256": "00f14977e41431a9c6c5f4847259a6021878e0e8a7922d7e791c793d3895a453",
       "edits": [
         {
           "start": 62,
@@ -768313,6 +769081,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "HailSpecial"
+        },
+        {
+          "start": 12576,
+          "end": 12579,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 12716,
@@ -768728,7 +769503,7 @@
       "original": "th.java",
       "renamed": "IndexedSpriteState.java",
       "inputSha256": "49ca9bd8ae51289872020a5bb5b8b53b28f9d5e524e88c7bd71b2f3f48bb53e7",
-      "outputSha256": "bfda8b62b00348ee1400bbdd887c680a8ba68cd09f8c09b57f66fbd020d52d4d",
+      "outputSha256": "a866fe4651ff27b4423652cdd5f76bbd15b889c88b155f5c8b0b80fed262b71b",
       "edits": [
         {
           "start": 53,
@@ -768806,6 +769581,13 @@
           "symbol": "C:hfa",
           "original": "hfa",
           "renamed": "WidgetWrapper"
+        },
+        {
+          "start": 1173,
+          "end": 1176,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 1320,
@@ -771270,7 +772052,7 @@
       "original": "u.java",
       "renamed": "StickyEvent.java",
       "inputSha256": "5617ea770c9b9ce8cb8fc4796aed60b2186951d82a64293922efc41bc4789758",
-      "outputSha256": "2b6803b8d69827ac59ed7528260c59ef1e75ebab1de6e1b314600d444dd63756",
+      "outputSha256": "864933a1757fb459274e9d7f74bb59e6f6a4c3e8ef1d9642815d37507715d0d1",
       "edits": [
         {
           "start": 50,
@@ -771938,6 +772720,13 @@
           "renamed": "PetAttackEvent"
         },
         {
+          "start": 43211,
+          "end": 43214,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 43520,
           "end": 43522,
           "symbol": "C:ql",
@@ -772265,6 +773054,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "BagpipeSpecial"
+        },
+        {
+          "start": 85657,
+          "end": 85660,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 86264,
@@ -773591,7 +774387,7 @@
       "original": "uc.java",
       "renamed": "uc.java",
       "inputSha256": "4642eaf285761034debb40349191c39b322c7d1875a354bcbb55f3c3fe8ac5e2",
-      "outputSha256": "7963238072555ca2ac914aa614e3b0179c90fc67afe32aadc57fb8e0057b15c2",
+      "outputSha256": "bbb83a3d3cba32f71c30564cb4e4f0e24f2f1bc4b3eab9da082f09416bbe67f8",
       "edits": [
         {
           "start": 77,
@@ -773725,6 +774521,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1406,
+          "end": 1407,
+          "symbol": "M:uc.b(I)V",
+          "original": "b",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 1522,
@@ -779909,7 +780712,7 @@
       "original": "v.java",
       "renamed": "BufferedCacheFile.java",
       "inputSha256": "92aa3fa6bb97c244fa00f49c1dd2d35062584d54dd94b43aa316da4deeac763c",
-      "outputSha256": "4c7907b06661899b40bfb5f3d068221951fc3bdee932f7fc73ef6437b099cb33",
+      "outputSha256": "d53e614c90893536464680c4c42f7e361c5847d32febc7f5e0e17c7c91bbbd42",
       "edits": [
         {
           "start": 69,
@@ -779917,6 +780720,13 @@
           "symbol": "C:v",
           "original": "v",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 243,
+          "end": 246,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 343,
@@ -780024,6 +780834,20 @@
           "renamed": "copy"
         },
         {
+          "start": 2913,
+          "end": 2914,
+          "symbol": "M:qaa.a(JZ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 3019,
+          "end": 3020,
+          "symbol": "M:qaa.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
           "start": 4220,
           "end": 4222,
           "symbol": "C:bl",
@@ -780043,6 +780867,20 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5721,
+          "end": 5722,
+          "symbol": "M:qaa.a(JZ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 5821,
+          "end": 5822,
+          "symbol": "M:qaa.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
         },
         {
           "start": 6985,
@@ -780085,6 +780923,27 @@
           "symbol": "C:v",
           "original": "v",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 8127,
+          "end": 8128,
+          "symbol": "M:qaa.a(JZ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 8449,
+          "end": 8450,
+          "symbol": "M:qaa.a([BIII)I",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
+          "start": 8839,
+          "end": 8840,
+          "symbol": "M:qaa.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 8957,
@@ -780134,6 +780993,20 @@
           "symbol": "M:bl.a([BI[BII)V",
           "original": "a",
           "renamed": "copy"
+        },
+        {
+          "start": 11338,
+          "end": 11339,
+          "symbol": "M:qaa.a(JZ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 11489,
+          "end": 11490,
+          "symbol": "M:qaa.a([BIII)I",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 12371,
@@ -780211,6 +781084,20 @@
           "symbol": "M:v.<init>(Lqaa;II)V",
           "original": "v",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 16260,
+          "end": 16263,
+          "symbol": "C:qaa",
+          "original": "qaa",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 16504,
+          "end": 16505,
+          "symbol": "M:qaa.a(B)J",
+          "original": "a",
+          "renamed": "length"
         },
         {
           "start": 16778,
@@ -780364,10 +781251,17 @@
     },
     {
       "original": "vaa.java",
-      "renamed": "vaa.java",
+      "renamed": "GzipDecompressor.java",
       "inputSha256": "f4f231bebdfe65cba5b6ac4fd8ebf7f019ce85e8635128b0da3a94d22b3d6541",
-      "outputSha256": "6242b58e1f0a85f71b974d3b1ecfafde66b1d7ca3d61ed78b31f44d7cf643c9e",
+      "outputSha256": "8a80af712cd5834292698e907f84e14bc3a270d6459280fd4d317acb9349dd46",
       "edits": [
+        {
+          "start": 71,
+          "end": 74,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
         {
           "start": 88,
           "end": 91,
@@ -780737,6 +781631,20 @@
           "renamed": "BoardChange"
         },
         {
+          "start": 13458,
+          "end": 13461,
+          "symbol": "M:vaa.<init>()V",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 13521,
+          "end": 13524,
+          "symbol": "M:vaa.<init>(III)V",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 14356,
           "end": 14359,
           "symbol": "C:lca",
@@ -780798,6 +781706,13 @@
           "symbol": "M:vaa.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 16810,
+          "end": 16811,
+          "symbol": "M:vaa.a(Llu;[BI)V",
+          "original": "a",
+          "renamed": "decompress"
         },
         {
           "start": 16812,
@@ -789298,7 +790213,7 @@
       "original": "vt.java",
       "renamed": "vt.java",
       "inputSha256": "7676253a89e5318db80f32ba14ae02b9d832359a7ceac7cbb966988ca63af227",
-      "outputSha256": "71307f85372b5b46b32e7895fe4fd5d3e87c915df4811dc392880900b01629a2",
+      "outputSha256": "c5a6298ad52e2eef2779924e7652a0783d63ae1bc9ec1cffcc45102c3269ec7d",
       "edits": [
         {
           "start": 156,
@@ -789586,6 +790501,13 @@
           "symbol": "C:nt",
           "original": "nt",
           "renamed": "SuperSpeedAllAnimation"
+        },
+        {
+          "start": 10493,
+          "end": 10496,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 10902,
@@ -790481,7 +791403,7 @@
       "original": "wb.java",
       "renamed": "wb.java",
       "inputSha256": "19f4cd2d8b01e94351bc142cbb088197fccfcda4334396088e26468f535a0758",
-      "outputSha256": "8564eda9ee51ff86ca0b7da189fbaa4f4186835c40fc14c27808ca745ba3b4af",
+      "outputSha256": "0ab7404dda82bdd9ec08fd68759f7acb10c4ac7d2291d2a94682dd7aa5ab17b9",
       "edits": [
         {
           "start": 191,
@@ -790792,6 +791714,13 @@
           "renamed": "SuperSpeedAllSpecial"
         },
         {
+          "start": 6820,
+          "end": 6823,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
+        },
+        {
           "start": 6863,
           "end": 6865,
           "symbol": "C:nr",
@@ -790832,6 +791761,13 @@
           "symbol": "C:nr",
           "original": "nr",
           "renamed": "RageAnimation"
+        },
+        {
+          "start": 7139,
+          "end": 7142,
+          "symbol": "C:vaa",
+          "original": "vaa",
+          "renamed": "GzipDecompressor"
         },
         {
           "start": 7377,
@@ -798290,10 +799226,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "daca270bb640a9f2c50e7a2f9475a0da68701dcfa1d5769b276b94e17832aa09",
+    "rulesSha256": "e7e09a0289e7cb92fd27bfbbbc3dec12080faa1b11cd903378162d1ff072036a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "cadcf9aa926506b9ea93e43e488d959b0e68a4018620bd11e20bbbefcde92379",
+    "outputTreeSha256": "8b7703bb46ee239bcee42fde5978bb54fb7bddb573cc225de339dba78f513be8",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

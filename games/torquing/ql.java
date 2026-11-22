@@ -6,7 +6,7 @@ final class ql extends am {
     static qd field_s;
     static boolean field_t;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 16711935) {
           return;

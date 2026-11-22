@@ -157,7 +157,7 @@ class va implements WidgetListener, qa {
 
     final static void a(int param0, byte param1) {
         if (param1 < 118) {
-          va.a(0);
+          va.clearStaticReferences(0);
           sl.field_w = 1000000000L / (long)param0;
           return;
         }
@@ -746,7 +746,7 @@ class va implements WidgetListener, qa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_b = null;
         field_r = null;

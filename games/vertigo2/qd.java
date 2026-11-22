@@ -21,7 +21,7 @@ final class qd {
         this.field_b[param0] = this.field_b[param0] + var2;
     }
 
-    public static void g() {
+    public static void clearStaticReferences() {
         field_e = null;
     }
 

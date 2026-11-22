@@ -24,7 +24,7 @@ final class od extends am {
 
     final int f(byte param0) {
         if (param0 < 22) {
-          od.b(-68);
+          od.clearStaticReferences(-68);
         }
         return this.field_x;
     }
@@ -122,7 +122,7 @@ final class od extends am {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 != 11860) {
           return;

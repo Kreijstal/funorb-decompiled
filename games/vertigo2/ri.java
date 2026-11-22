@@ -16,7 +16,7 @@ final class ri extends IntrusiveNode {
     static String field_o;
     boolean field_v;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_z = null;
         if (param0 != 7139) {

@@ -43,7 +43,7 @@ final class qn {
     int[] field_v;
     static String[] field_E;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_g = null;
         field_C = null;

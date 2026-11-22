@@ -28,7 +28,7 @@ final class pi extends mi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4096) {
           field_x = (qr) null;
         }
@@ -85,7 +85,7 @@ final class pi extends mi {
           this.field_y = this.field_y + 1;
           super.a((byte) 67, param1, param2, param3);
           if (param0 <= 13) {
-            pi.a(-28);
+            pi.clearStaticReferences(-28);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pi.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

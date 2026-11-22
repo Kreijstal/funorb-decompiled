@@ -526,7 +526,7 @@ final class cm implements GamePacket {
                   var22 = var25;
                 } else {
                   if (var10 != 0) {
-                    var21 = ai.field_b;
+                    var21 = AvailabilityQueryFactory.field_b;
                   } else {
                     if (var11 != 0) {
                       var22_int = C2SRoomResultPacket.field_g[var7][var9] - FleeLocomotor.field_z;

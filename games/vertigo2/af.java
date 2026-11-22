@@ -37,7 +37,7 @@ abstract class af extends WidgetContainer implements ik {
             return false;
           }
           if (param2 != -99) {
-            af.d(false);
+            af.clearStaticReferences(false);
           }
           var3_int = 0;
           while (true) {
@@ -69,7 +69,7 @@ abstract class af extends WidgetContainer implements ik {
 
     abstract boolean e(boolean param0);
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_G = null;
         field_H = null;
         field_F = null;

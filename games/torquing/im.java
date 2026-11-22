@@ -145,7 +145,7 @@ abstract class im extends bb {
 
     boolean a(byte param0) {
         if (param0 < 114) {
-          im.k(81);
+          im.clearStaticReferences(81);
         }
         this.j(0);
         return super.a((byte) 122);
@@ -209,7 +209,7 @@ abstract class im extends bb {
         return super.h(param0 ^ 0);
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_J = null;
         if (param0 >= -74) {
           return;

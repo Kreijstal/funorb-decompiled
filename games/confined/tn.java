@@ -43,7 +43,7 @@ final class tn extends rl {
         throw new RuntimeException();
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_C = null;
         field_D = null;
         field_y = null;

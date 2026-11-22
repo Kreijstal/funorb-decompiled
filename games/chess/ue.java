@@ -55,7 +55,7 @@ final class ue {
         var4.a(var4.position - var5, -1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

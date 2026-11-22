@@ -520,7 +520,7 @@ final class VorbisSample extends IntrusiveNode {
         field_E = true;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_q = null;
         field_D = null;

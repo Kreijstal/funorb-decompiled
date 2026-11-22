@@ -49,7 +49,7 @@ final class wq extends WidgetWrapper {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_I = null;
         field_K = null;
         if (param0 != -12477) {
@@ -63,7 +63,7 @@ final class wq extends WidgetWrapper {
     final static void i(int param0) {
         p.a(param0 - 33);
         if (param0 != 0) {
-          wq.h(-95);
+          wq.clearStaticReferences(-95);
           rh.b(-14, 4);
           return;
         }

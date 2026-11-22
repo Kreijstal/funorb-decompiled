@@ -84,7 +84,7 @@ class rf extends pc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -35) {
-            rf.e((byte) 56);
+            rf.clearStaticReferences((byte) 56);
           }
           stackIn_3_0 = nk.a(false, (byte) 66, param0);
           return stackIn_3_0;
@@ -120,7 +120,7 @@ class rf extends pc {
 
     final static void a(int param0) {
         if (param0 != 3) {
-          rf.e((byte) 124);
+          rf.clearStaticReferences((byte) 124);
         }
         qe.field_g.g((byte) -119);
         if (null == td.field_b) {
@@ -146,7 +146,7 @@ class rf extends pc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -20) {
           return;
         }

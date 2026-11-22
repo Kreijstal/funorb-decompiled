@@ -27,11 +27,11 @@ final class BoundedRandomAccessFile {
     protected final void finalize() throws Throwable {
         if (null != this.field_h) {
           System.out.println("");
-          this.a(19260);
+          this.close(19260);
         }
     }
 
-    final int a(int param0, byte param1, int param2, byte[] param3) throws IOException {
+    final int read(int param0, byte param1, int param2, byte[] param3) throws IOException {
         String stackIn_10_2 = null;
         try {
           int var5_int = this.field_h.read(param3, param2, param0);
@@ -57,7 +57,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, int param2, int param3) throws IOException {
         try {
           if ((long)param3 + this.field_b > this.field_i) {
             this.field_h.seek(this.field_i);
@@ -75,7 +75,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void a(long param0, boolean param1) throws IOException {
+    final void seek(long param0, boolean param1) throws IOException {
         this.field_h.seek(param0);
         this.field_b = param0;
         if (!param1) {
@@ -83,7 +83,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != 19260) {
           field_d = (as) null;
         }
@@ -245,7 +245,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final long a(boolean param0) throws IOException {
+    final long length(boolean param0) throws IOException {
         if (param0) {
           return 36L;
         }

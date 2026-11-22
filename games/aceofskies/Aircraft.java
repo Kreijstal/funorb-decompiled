@@ -549,7 +549,7 @@ final class Aircraft extends FlightBody {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 20) {
           field_s = (String) null;

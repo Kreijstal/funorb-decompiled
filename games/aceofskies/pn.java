@@ -40,7 +40,7 @@ final class pn implements Runnable {
               } else {
                 Object var7 = vg.field_h;
                 synchronized (var7) {
-                  vg.field_h.a(var12, 10, var9);
+                  vg.field_h.decompress(var12, 10, var9);
                 }
               }
               byte[] stackIn_22_0 = var6;

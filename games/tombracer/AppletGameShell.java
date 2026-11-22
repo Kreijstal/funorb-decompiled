@@ -420,7 +420,7 @@ abstract class AppletGameShell extends GameApplet {
         wka.patchJavaKeyCodeMap(520);
         HardCacheEntry.field_q = dka.createMouseWheelInput((byte) -86);
         fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
-        bi.field_c = param2;
+        SoftwareRasterBlitter.field_c = param2;
         MonochromeFillOperator.field_p = param3;
         VertexArrayPointer.field_c = param6;
         RoomHeader.field_g = param1;
@@ -669,7 +669,7 @@ abstract class AppletGameShell extends GameApplet {
             InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(MonochromeFillOperator.field_p, 1);
           }
           tk.field_b = FacePointLocomotor.openArchive(true, RoomHeader.field_g, false, 1, (byte) -95);
-          OpenGlTexture2D.field_n = FacePointLocomotor.openArchive(true, bi.field_c, false, 1, (byte) -109);
+          OpenGlTexture2D.field_n = FacePointLocomotor.openArchive(true, SoftwareRasterBlitter.field_c, false, 1, (byte) -109);
           WeaveOperator.field_p = FacePointLocomotor.openArchive(true, SoundEvent.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
           PitComponent.field_G = tk.field_b;

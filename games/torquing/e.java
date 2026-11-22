@@ -8,7 +8,7 @@ class e extends bc {
     static ResourceArchive field_b;
     static int field_f;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         if (!param0) {
           field_d = (String) null;
@@ -23,7 +23,7 @@ class e extends bc {
           param0.a(118, this.field_e);
           param0.a((byte) 107, this.field_c);
           if (param1 != -71) {
-            e.b(true);
+            e.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "e.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

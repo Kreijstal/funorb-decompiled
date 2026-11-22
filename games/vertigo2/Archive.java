@@ -640,7 +640,7 @@ final class Archive {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -49) {
           return;
         }
@@ -742,7 +742,7 @@ final class Archive {
 
     final synchronized boolean b(int param0) {
         if (param0 != 0) {
-          Archive.a(82);
+          Archive.clearStaticReferences(82);
         }
         if (this.field_g == null) {
           this.field_g = this.field_a.a(true);

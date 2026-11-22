@@ -9,7 +9,7 @@ final class ir {
     static String field_b;
     static int field_f;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_b = null;
         field_a = null;
@@ -135,7 +135,7 @@ final class ir {
           ui.field_b.field_Fb = param3;
           dj.field_d.field_Fb = dj.field_d.field_Fb - ui.field_b.field_Fb;
           if (param4 != 0) {
-            ir.a(true);
+            ir.clearStaticReferences(true);
           }
           ui.field_b.field_wb = ui.field_b.field_wb - ui.field_b.field_Fb;
         } catch (RuntimeException runtimeException) {

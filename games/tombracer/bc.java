@@ -6,14 +6,14 @@ final class bc {
     static UiComponent field_b;
     private static String[] field_c;
 
-    final static boolean a(boolean param0) {
+    final static boolean handleNameEntryKeyInput(boolean param0) {
         if (!param0) {
           return false;
         }
         if (bl.field_a == null) {
           return false;
         }
-        if (!bl.field_a.a(false)) {
+        if (!bl.field_a.handleKeyInput(false)) {
           return false;
         }
         return true;
@@ -23,7 +23,7 @@ final class bc {
         field_b = null;
         field_a = null;
         if (param0 <= 71) {
-          bc.a(true);
+          bc.handleNameEntryKeyInput(true);
           field_c = null;
           return;
         }

@@ -184,7 +184,7 @@ final class SecondaryKeyHashTable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 1020) {
           smokeSprites = null;
           field_g = null;

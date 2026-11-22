@@ -13,7 +13,7 @@ final class hb extends am {
 
     final static da a(boolean param0) {
         if (param0) {
-          hb.b(48);
+          hb.clearStaticReferences(48);
         }
         String var1 = ki.i(20);
         if (var1 != null &&
@@ -69,7 +69,7 @@ final class hb extends am {
             SoftwareRasterizer.b(var29);
             param2.e();
             if (param1) {
-              hb.b(-75);
+              hb.clearStaticReferences(-75);
             }
             SoftwareRasterizer.f(var29[0], var29[1], var29[2], var29[3]);
             var13 = param2.field_s * param6 + param0;
@@ -150,7 +150,7 @@ final class hb extends am {
         vg.field_o = vg.field_o + 1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -799778388) {
           return;
         }

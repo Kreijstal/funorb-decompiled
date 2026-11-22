@@ -10,7 +10,7 @@ final class rb extends ue {
     static int field_h;
     static String field_j;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_e = null;
         field_j = null;
@@ -34,7 +34,7 @@ final class rb extends ue {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 126) {
-            rb.c((byte) -62);
+            rb.clearStaticReferences((byte) -62);
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {

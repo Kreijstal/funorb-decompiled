@@ -28,7 +28,7 @@ final class cd extends ea implements Cloneable {
         return ln.field_d;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_u = null;
         field_v = null;
         field_A = null;
@@ -558,7 +558,7 @@ final class cd extends ea implements Cloneable {
         var8 = CrazyCrystals.field_B;
         try {
           if (ab.field_D == null) {
-            gl.field_e = gl.field_e - 1;
+            BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e - 1;
             if (param2 != null) {
               var6_int = param2.a(false);
               for (var7 = 0; 3 > var7; var7++) {
@@ -578,7 +578,7 @@ final class cd extends ea implements Cloneable {
                   je.field_j = je.field_j + 20;
                   fp.field_a = fp.field_a + 40;
                   b.field_a = b.field_a + 20;
-                  if (gl.field_e == 0) {
+                  if (BoundedRandomAccessFile.field_e == 0) {
                     va.field_d = va.field_d | 1 << var7;
                   }
                 }
@@ -661,7 +661,7 @@ final class cd extends ea implements Cloneable {
         if (param1) {
           return;
         }
-        gl.field_e = gl.field_e + 1;
+        BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e + 1;
     }
 
     final f a(sl param0, f[][] param1, int param2, int param3, int param4, int param5, int param6) {

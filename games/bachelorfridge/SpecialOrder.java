@@ -88,7 +88,7 @@ class SpecialOrder extends CreatureOrder {
               } else {
                 var7 = kca.field_b;
                 synchronized (var7) {
-                  kca.field_b.a(var9, var13, -10);
+                  kca.field_b.decompress(var9, var13, -10);
                 }
               }
               stackIn_24_0 = var6;

@@ -26,7 +26,7 @@ final class kk {
         return this.field_c > 0 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (f[][]) null;
         field_k = null;
         field_e = null;

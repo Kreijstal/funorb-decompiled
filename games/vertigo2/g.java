@@ -232,7 +232,7 @@ final class g {
               }
               if (sk.field_g) {
                 ki.a((byte) -107);
-                k.a(false);
+                GzipDecompressor.a(false);
                 lh.a((byte) -22);
                 sk.field_g = false;
               }
@@ -263,7 +263,7 @@ final class g {
                   return;
                 }
                 ki.a((byte) -107);
-                k.a(false);
+                GzipDecompressor.a(false);
                 lh.a((byte) -22);
                 sk.field_g = false;
                 return;
@@ -280,7 +280,7 @@ final class g {
             }
             if (sk.field_g) {
               ki.a((byte) -107);
-              k.a(false);
+              GzipDecompressor.a(false);
               lh.a((byte) -22);
               sk.field_g = false;
             }
@@ -321,7 +321,7 @@ final class g {
               }
               if (sk.field_g) {
                 ki.a((byte) -107);
-                k.a(false);
+                GzipDecompressor.a(false);
                 lh.a((byte) -22);
                 sk.field_g = false;
               }
@@ -371,7 +371,7 @@ final class g {
                 return;
               }
               ki.a((byte) -107);
-              k.a(false);
+              GzipDecompressor.a(false);
               lh.a((byte) -22);
               sk.field_g = false;
               return;
@@ -382,7 +382,7 @@ final class g {
                 return;
               }
               ki.a((byte) -107);
-              k.a(false);
+              GzipDecompressor.a(false);
               lh.a((byte) -22);
               sk.field_g = false;
               return;
@@ -400,13 +400,13 @@ final class g {
         }
         if (sk.field_g) {
           ki.a((byte) -107);
-          k.a(false);
+          GzipDecompressor.a(false);
           lh.a((byte) -22);
           sk.field_g = false;
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_f = null;
         if (param0) {

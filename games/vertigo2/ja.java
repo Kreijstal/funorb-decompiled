@@ -65,7 +65,7 @@ final class ja {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 114) {
           return;
         }

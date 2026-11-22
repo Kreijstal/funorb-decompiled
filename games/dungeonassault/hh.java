@@ -55,7 +55,7 @@ class hh implements ca, th {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_n = null;
         field_h = null;

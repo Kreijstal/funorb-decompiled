@@ -102,7 +102,7 @@ final class dd extends kk {
         }
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_V = null;
         field_v = null;
         field_M = null;

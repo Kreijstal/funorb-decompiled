@@ -257,7 +257,7 @@ final class tl implements Runnable {
         return this.field_j;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_c = null;
         field_e = null;

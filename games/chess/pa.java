@@ -11,7 +11,7 @@ final class pa extends IntrusiveNode {
     int field_p;
     int[] field_q;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         if (param0 > -115) {
           field_l = (String[]) null;

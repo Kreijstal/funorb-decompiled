@@ -709,7 +709,7 @@ final class bh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_a = null;
         field_y = null;

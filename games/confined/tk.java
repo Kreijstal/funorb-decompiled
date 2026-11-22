@@ -13,7 +13,7 @@ abstract class tk {
     final static void a(int param0, String param1) {
         try {
           if (param0 != 13) {
-            tk.a(-71);
+            tk.clearStaticReferences(-71);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "tk.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -33,7 +33,7 @@ abstract class tk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;

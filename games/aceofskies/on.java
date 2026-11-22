@@ -209,7 +209,7 @@ final class on {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

@@ -103,7 +103,7 @@ final class db extends qe {
                       if (var7 < id.field_j.length) {
                         var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                         var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                        var5 = jk.a(new String[]{var9, var8, var4}, uk.field_b, 30496);
+                        var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                       }
                     }
                   }
@@ -119,7 +119,7 @@ final class db extends qe {
                     if (var7 < id.field_j.length) {
                       var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                       var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                      var5 = jk.a(new String[]{var9, var8, var4}, uk.field_b, 30496);
+                      var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                     }
                   }
                 }
@@ -128,7 +128,7 @@ final class db extends qe {
                 if (var7 < id.field_j.length) {
                   var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                   var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
-                  var5 = jk.a(new String[]{var9, var8, var4}, uk.field_b, 30496);
+                  var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
                 }
               }
             }
@@ -149,7 +149,7 @@ final class db extends qe {
         IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         if (param1 != -121) {
-          db.c((byte) 98);
+          db.clearStaticReferences((byte) 98);
         }
         ga.field_r = rb.a(8, var7, 16760960, (byte) 109);
         co.field_F = rb.a(16, var7, 6307840, (byte) -111);
@@ -1136,7 +1136,7 @@ final class db extends qe {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         if (param0 < 87) {
           field_u = (String) null;

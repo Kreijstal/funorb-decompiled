@@ -561,7 +561,7 @@ final class ka extends IntrusiveNode {
         this.field_k = param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         if (param0 < 89) {
           field_n = (int[][]) null;

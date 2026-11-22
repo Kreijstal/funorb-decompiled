@@ -13,7 +13,7 @@ final class RandomAccessCacheFile {
     private RandomAccessFile field_a;
     static si field_g;
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -218,7 +218,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final void a(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         int var2 = 26 % ((param0 - 16) / 52);
         if (null != this.field_a) {
           this.field_a.close();
@@ -237,11 +237,11 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (null != this.field_a) {
           System.out.println("");
-          this.a((byte) -89);
+          this.close((byte) -89);
         }
     }
 
-    final int a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final int read(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
@@ -282,7 +282,7 @@ final class RandomAccessCacheFile {
         sh.b(0);
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_a.seek(param1);
         if (param0 != -2) {
           return;
@@ -290,7 +290,7 @@ final class RandomAccessCacheFile {
         this.field_d = param1;
     }
 
-    final long b(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         int var2 = 108 % ((param0 + 8) / 56);
         return this.field_a.length();
     }

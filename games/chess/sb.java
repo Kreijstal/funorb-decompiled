@@ -87,9 +87,9 @@ final class sb extends bj {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(eg.field_j));
+            decompiledFrameRemainder0 = !(param0.equals(BoundedRandomAccessFile.field_j));
           } else {
-            decompiledFrameRemainder0 = (eg.field_j == null);
+            decompiledFrameRemainder0 = (BoundedRandomAccessFile.field_j == null);
           }
           if (decompiledFrameRemainder0) {
             if (!uk.field_e) {
@@ -132,7 +132,7 @@ final class sb extends bj {
             ei.field_u = 0;
             vn.field_Db = kj.field_c;
           }
-          eg.field_j = param0;
+          BoundedRandomAccessFile.field_j = param0;
           if (uk.field_e &&
             ei.field_u == ae.field_k) {
             uk.field_e = false;

@@ -7,7 +7,7 @@ final class im {
     static long field_d;
     static he[] field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

@@ -13,7 +13,7 @@ final class qk extends IntrusiveNode {
     int field_k;
     static String[] field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_r = null;
         if (param0 < 79) {

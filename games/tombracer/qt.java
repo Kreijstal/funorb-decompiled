@@ -23,7 +23,7 @@ final class qt {
           kc.field_a = param4;
         }
         DamageableBehaviour.field_o[ContextMenu.field_Eb] = param0;
-        bq.field_h[ContextMenu.field_Eb] = param1;
+        MidiPatchEnvelope.field_h[ContextMenu.field_Eb] = param1;
         PortalBehaviour.field_o[ContextMenu.field_Eb] = param2;
         int var6 = param2 + (param1 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;

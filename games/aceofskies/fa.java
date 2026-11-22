@@ -46,7 +46,7 @@ abstract class fa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_b = (eh) null;
         }
@@ -178,7 +178,7 @@ abstract class fa {
 
     final static java.awt.Canvas a(int param0) {
         if (param0 != -8213) {
-          fa.a(false);
+          fa.clearStaticReferences(false);
         }
         return jf.field_a == null ? ci.field_f : (java.awt.Canvas) ((Object) jf.field_a);
     }

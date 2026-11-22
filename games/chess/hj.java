@@ -175,7 +175,7 @@ final class hj {
         cc.field_z = param0;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_j = null;
         field_n = null;

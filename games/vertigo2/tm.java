@@ -7,7 +7,7 @@ final class tm {
     static UiPanel field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 <= 124) {
           field_b = (UiPanel) null;

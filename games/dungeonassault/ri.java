@@ -85,7 +85,7 @@ final class ri {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_a = null;
         if (param0 < 63) {

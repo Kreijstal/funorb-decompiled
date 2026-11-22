@@ -8,7 +8,7 @@ final class hl extends IntrusiveNode {
     int field_r;
     long field_p;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_q = null;
         if (param0 != -118) {

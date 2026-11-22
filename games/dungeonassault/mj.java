@@ -10,7 +10,7 @@ final class mj {
     static String field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_c = null;
         if (param0 <= 44) {

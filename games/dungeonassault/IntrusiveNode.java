@@ -35,7 +35,7 @@ class IntrusiveNode {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 == -18880) {
           field_d = null;

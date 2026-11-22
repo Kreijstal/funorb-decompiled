@@ -66,7 +66,7 @@ final class go extends am {
         return var17;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         if (param0 <= 59) {
           field_v = (String) null;

@@ -12,7 +12,7 @@ class mo {
     static String field_a;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -39,7 +39,7 @@ class mo {
           var1_int = 55;
           var2 = 0;
           if (!param0) {
-            mo.a(38);
+            mo.clearStaticReferences(38);
           }
           while (rk.field_A.length > var2) {
             var3 = tk.field_c.c(rk.field_A[var2]);

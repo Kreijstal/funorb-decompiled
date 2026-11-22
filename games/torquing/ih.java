@@ -7,7 +7,7 @@ class ih extends qf {
     ih() {
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -45) {
           field_b = (String) null;
           field_b = null;

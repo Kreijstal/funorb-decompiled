@@ -252,7 +252,7 @@ final class pna extends UiComponent {
           RaiseSpecial.field_q.field_Y = 0;
           RaiseSpecial.field_q.field_N = 1;
           aja.field_l = new UiComponent(0L, sn.field_l, ne.field_m.toUpperCase());
-          sb.field_n = new UiComponent(0L, qaa.field_d);
+          sb.field_n = new UiComponent(0L, BoundedRandomAccessFile.field_d);
           sb.field_n.a(-1, RaiseSpecial.field_q);
           sb.field_n.a(-1, aja.field_l);
           sr.field_b = new UiComponent(0L, vg.field_k);
@@ -273,7 +273,7 @@ final class pna extends UiComponent {
           }
           nu.field_f.a(-1, SnowEvent.field_q);
           jj.field_wb = new UiComponent(0L, iw.field_a, dh.field_i.toUpperCase());
-          vaa.field_a = new UiComponent(0L, p.field_o);
+          GzipDecompressor.field_a = new UiComponent(0L, p.field_o);
           vm.field_i = new UiComponent(0L, SlowAllAnimation.field_v);
           mh.field_j = new UiComponent(0L, rda.field_a, IterableDualLinkDeque.field_c.toUpperCase());
           pka.field_b = new UiComponent[param3 + 4];
@@ -351,7 +351,7 @@ final class pna extends UiComponent {
           cw.field_yb.field_Y = 1;
           var17.field_N = 1;
           ho.field_g = new UiComponent(0L, (UiComponent) null);
-          ho.field_g.a(-1, vaa.field_a);
+          ho.field_g.a(-1, GzipDecompressor.field_a);
           ho.field_g.a(-1, vm.field_i);
           vm.field_i.a(-1, mh.field_j);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param3; var18Lifetime2++) {

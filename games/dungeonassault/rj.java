@@ -231,7 +231,7 @@ abstract class rj extends IntrusiveNode {
         this.field_q = param2;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_j = (String[]) null;
         }

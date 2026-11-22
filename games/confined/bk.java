@@ -109,7 +109,7 @@ final class bk extends mf {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_h = null;
         if (param0 != 62) {

@@ -19,7 +19,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements HardwareVertexBuf
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 != -33) {
           field_p = (qr) null;

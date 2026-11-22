@@ -85,7 +85,7 @@ abstract class RasterBuffer {
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_g = null;
         if (param0 != -18390) {
@@ -122,7 +122,7 @@ abstract class RasterBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            RasterBuffer.b(91);
+            RasterBuffer.clearStaticReferences(91);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param3 != 2 ||

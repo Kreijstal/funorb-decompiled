@@ -31,7 +31,7 @@ final class nc {
             var2 = (ik) (qc.field_Y.f(-24059));
           }
           if (!param1) {
-            nc.a(-39);
+            nc.clearStaticReferences(-39);
             return;
           }
         } catch (RuntimeException runtimeException) {
@@ -39,7 +39,7 @@ final class nc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 53) {
           return;
         }

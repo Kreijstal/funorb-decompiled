@@ -514,7 +514,7 @@ final class ti extends qa {
         cd.field_g.a(var1, !param0 ? true : false);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_v = null;
         if (!param0) {
           return;

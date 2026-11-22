@@ -8,7 +8,7 @@ abstract class ArchiveProvider {
     static String field_c;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -31,7 +31,7 @@ abstract class ArchiveProvider {
         if (param1 == 14) {
           return (param0 & -param0) == param0 ? true : false;
         }
-        ArchiveProvider.a(-87);
+        ArchiveProvider.clearStaticReferences(-87);
         return (param0 & -param0) == param0 ? true : false;
     }
 

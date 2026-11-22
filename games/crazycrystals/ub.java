@@ -14,7 +14,7 @@ final class ub extends RuntimeException {
         return ri.field_a - bf.field_c;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_d = null;
         if (!param0) {

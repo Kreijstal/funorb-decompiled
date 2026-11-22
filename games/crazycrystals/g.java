@@ -6,7 +6,7 @@ final class g {
     static String field_c;
     static wb field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 122) {
           field_c = (String) null;

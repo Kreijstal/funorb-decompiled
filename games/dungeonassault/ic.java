@@ -40,7 +40,7 @@ final class ic extends mc {
           if (cm.field_R == null) {
             var2Lifetime1 = 3;
           } else {
-            uk.a(cm.field_R, (byte) -124);
+            GzipDecompressor.a(cm.field_R, (byte) -124);
             var2Lifetime1 = 2;
           }
         } else {
@@ -49,7 +49,7 @@ final class ic extends mc {
           if (cm.field_R == null) {
             var2Lifetime1 = 3;
           } else {
-            uk.a(cm.field_R, (byte) -124);
+            GzipDecompressor.a(cm.field_R, (byte) -124);
             var2Lifetime1 = 2;
           }
         }

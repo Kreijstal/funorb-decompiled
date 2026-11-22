@@ -57,7 +57,7 @@ final class gg extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         field_o = null;
         field_n = null;

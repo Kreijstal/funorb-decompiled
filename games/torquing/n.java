@@ -11,7 +11,7 @@ final class n extends DualLinkNode {
     static volatile boolean field_x;
     static ResourceArchive field_q;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_r = null;
         if (param0 != 0) {
@@ -53,7 +53,7 @@ final class n extends DualLinkNode {
 
     final static int c(byte param0) {
         if (param0 != 57) {
-          n.a(-55);
+          n.clearStaticReferences(-55);
           return (int)(1000000000L / eg.field_u);
         }
         return (int)(1000000000L / eg.field_u);

@@ -119,7 +119,7 @@ final class tf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 >= -6) {
           field_b = (String) null;

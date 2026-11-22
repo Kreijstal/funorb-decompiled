@@ -47,7 +47,7 @@ final class uh extends vm {
             this.field_s = var4.field_h;
           }
           if (!this.field_s) {
-            stackIn_12_0 = eg.field_g;
+            stackIn_12_0 = BoundedRandomAccessFile.field_g;
             return stackIn_12_0;
           }
           if (param1 == -9316) {

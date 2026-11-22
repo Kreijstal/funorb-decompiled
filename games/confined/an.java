@@ -20,14 +20,14 @@ final class an extends IntrusiveNode {
           var2 = var2 | var2 >>> 16;
           return param1 & ~var2;
         }
-        an.b(91);
+        an.clearStaticReferences(91);
         var2 = var2 | var2 >>> 4;
         var2 = var2 | var2 >>> 8;
         var2 = var2 | var2 >>> 16;
         return param1 & ~var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_m = null;
         if (param0 != -22861) {

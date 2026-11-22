@@ -12,7 +12,7 @@ final class fk extends lb {
     static String field_y;
     private pm[] field_r;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_x = null;
         field_y = null;

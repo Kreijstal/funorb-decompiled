@@ -56,7 +56,7 @@ final class nh extends jq {
         this.field_k = param1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_m = null;
         field_i = null;

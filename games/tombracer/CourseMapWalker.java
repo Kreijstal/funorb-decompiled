@@ -519,7 +519,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pointLights", (byte) 120);
                 if (var2 != null) {
-                  bq.field_a = jaa.decodeText((byte) 95, var2);
+                  MidiPatchEnvelope.field_a = jaa.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("wallShadows", (byte) 111);
                 if (var2 != null) {
@@ -723,7 +723,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPortals", (byte) 107);
                 if (var2 != null) {
-                  bq.field_e = jaa.decodeText((byte) 75, var2);
+                  MidiPatchEnvelope.field_e = jaa.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLasers", (byte) 121);
                 if (var2 != null) {

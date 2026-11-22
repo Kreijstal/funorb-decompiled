@@ -10,7 +10,7 @@ final class BufferedCacheFile {
     private long field_l;
     private long field_i;
     private long field_g;
-    private qaa field_k;
+    private BoundedRandomAccessFile field_k;
     private int field_j;
     private int field_f;
     private long field_e;
@@ -82,10 +82,10 @@ final class BufferedCacheFile {
               return;
             }
             if (~this.field_b != ~this.field_g) {
-              this.field_k.a(this.field_g, false);
+              this.field_k.seek(this.field_g, false);
               this.field_b = this.field_g;
             }
-            this.field_k.a(param1, param3, param2, (byte) 124);
+            this.field_k.write(param1, param3, param2, (byte) 124);
             this.field_b = this.field_b + (long)param3;
             if (this.field_b > this.field_l) {
               this.field_l = this.field_b;
@@ -148,10 +148,10 @@ final class BufferedCacheFile {
         }
         if (this.field_e != -1L) {
           if (this.field_b != this.field_e) {
-            this.field_k.a(this.field_e, false);
+            this.field_k.seek(this.field_e, false);
             this.field_b = this.field_e;
           }
-          this.field_k.a(0, this.field_j, this.field_a, (byte) 115);
+          this.field_k.write(0, this.field_j, this.field_a, (byte) 115);
           this.field_b = this.field_b + (long)this.field_j;
           if (this.field_b > this.field_l) {
             this.field_l = this.field_b;
@@ -219,7 +219,7 @@ final class BufferedCacheFile {
         }
         this.field_f = 0;
         if (this.field_b != this.field_g) {
-          this.field_k.a(this.field_g, false);
+          this.field_k.seek(this.field_g, false);
           this.field_b = this.field_g;
         }
         this.field_c = this.field_g;
@@ -228,7 +228,7 @@ final class BufferedCacheFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_k.a(this.field_h, var2, this.field_f, ~param0);
+          var3 = this.field_k.read(this.field_h, var2, this.field_f, ~param0);
           if (-1 != var3) {
             this.field_f = this.field_f + var3;
             this.field_b = this.field_b + (long)var3;
@@ -241,7 +241,7 @@ final class BufferedCacheFile {
     final void d(int param0) throws IOException {
         int var2 = 108 / ((-72 - param0) / 38);
         this.b((byte) 50);
-        this.field_k.a(true);
+        this.field_k.close(true);
     }
 
     final void a(long param0, byte param1) throws IOException {
@@ -308,10 +308,10 @@ final class BufferedCacheFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_h.length < param0) {
-              this.field_k.a(this.field_g, false);
+              this.field_k.seek(this.field_g, false);
               this.field_b = this.field_g;
               while (param0 > 0) {
-                var9_intLifetime1 = this.field_k.a(param3, param0, param1, 0);
+                var9_intLifetime1 = this.field_k.read(param3, param0, param1, 0);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -420,14 +420,14 @@ final class BufferedCacheFile {
         }
     }
 
-    BufferedCacheFile(qaa param0, int param1, int param2) throws IOException {
+    BufferedCacheFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_c = -1L;
         this.field_e = -1L;
         this.field_j = 0;
         try {
           this.field_k = param0;
-          dupTemp$0 = param0.a((byte) 24);
+          dupTemp$0 = param0.length((byte) 24);
           this.field_l = dupTemp$0;
           this.field_i = dupTemp$0;
           this.field_a = new byte[param2];

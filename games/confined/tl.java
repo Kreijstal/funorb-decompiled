@@ -97,7 +97,7 @@ final class tl {
         return ci.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = (double[][]) null;
         field_e = null;
         field_d = null;

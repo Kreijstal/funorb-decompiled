@@ -16,7 +16,7 @@ final class cp {
     int field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 112) {
           field_h = null;
           field_d = null;

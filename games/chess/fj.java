@@ -50,16 +50,16 @@ final class fj {
 
     final static void a(String param0, int param1, int param2, String param3, int param4) {
         try {
-          eg.field_f.field_S = param3;
-          eg.field_f.field_ib = param4;
+          BoundedRandomAccessFile.field_f.field_S = param3;
+          BoundedRandomAccessFile.field_f.field_ib = param4;
           if (param2 != -1) {
             field_h = (String) null;
           }
-          eg.field_f.field_M = eg.field_f.field_M + uc.field_c.field_M;
-          eg.field_f.field_db = param0;
+          BoundedRandomAccessFile.field_f.field_M = BoundedRandomAccessFile.field_f.field_M + uc.field_c.field_M;
+          BoundedRandomAccessFile.field_f.field_db = param0;
           uc.field_c.field_mb = uc.field_c.field_mb + uc.field_c.field_M;
           uc.field_c.field_M = param1;
-          eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
+          BoundedRandomAccessFile.field_f.field_M = BoundedRandomAccessFile.field_f.field_M - uc.field_c.field_M;
           uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

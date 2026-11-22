@@ -73,7 +73,7 @@ final class bf {
         var9 = DungeonAssault.field_K;
         try {
           if (param4 != 15553) {
-            bf.a((byte) -113);
+            bf.clearStaticReferences((byte) -113);
           }
           var5_int = 0;
           var6 = -1;
@@ -202,7 +202,7 @@ final class bf {
         gf.a(param1 << 4, param0 << 4, 2 + param3 << 3, 192, this.field_n);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_f = null;
         if (param0 != 85) {
@@ -396,7 +396,7 @@ final class bf {
         try {
           kn.a(param2, param4 + "_defeat", param1, param0, 125, 96, param4 + "_special", param4 + "_reveal");
           if (param3 != -18228) {
-            bf.a((byte) -43);
+            bf.clearStaticReferences((byte) -43);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

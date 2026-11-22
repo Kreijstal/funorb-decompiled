@@ -64,7 +64,7 @@ final class bo {
           } else {
             this.field_d = this.field_b.field_b;
             if (!param0) {
-              bo.a(65);
+              bo.clearStaticReferences(65);
               this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
               var3 = this.field_b;
               var2 = var3;
@@ -85,7 +85,7 @@ final class bo {
           }
           this.field_d = this.field_b.field_b;
           if (!param0) {
-            bo.a(65);
+            bo.clearStaticReferences(65);
             this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
             fo var3Lifetime3 = this.field_b;
             fo var2Lifetime3 = var3Lifetime3;
@@ -114,7 +114,7 @@ final class bo {
           this.field_f = var3Lifetime1;
           return;
         }
-        bo.a(65);
+        bo.clearStaticReferences(65);
         this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
         fo var3Lifetime2 = this.field_b;
         fo var2Lifetime2 = var3Lifetime2;
@@ -141,7 +141,7 @@ final class bo {
         field_h = -21;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 != 18598) {
           field_i = (IntrusiveDeque) null;

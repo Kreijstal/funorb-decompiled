@@ -85,7 +85,7 @@ final class hg {
           pd.field_Sb = param4.field_I;
           pd.field_Sb.e(-31023);
           cm.field_v = new dk(param3);
-          eg.field_e = 0L;
+          BoundedRandomAccessFile.field_e = 0L;
           ig.field_g = param7;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class hg {
         return Math.sqrt(param1 * param1 + param2 * param2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_a = null;
         field_d = null;

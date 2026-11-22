@@ -174,7 +174,7 @@ final class sm extends rl {
         return 100;
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         field_y = null;
         if (param0 == 81) {

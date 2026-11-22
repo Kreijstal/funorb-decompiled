@@ -5,7 +5,7 @@ final class p {
     static String field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 61) {
           return;
         }

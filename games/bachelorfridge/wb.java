@@ -199,13 +199,13 @@ final class wb extends lw {
           }
           if (RageAnimation.field_w.field_Ab.field_R != 0) {
             RefreshingSpecial.field_p = new oa(RageAnimation.field_w.field_Ab.field_D, RageAnimation.field_w.field_Ab.field_M, RageAnimation.field_w.field_Ab.field_sb, RageAnimation.field_w.field_Ab.field_p, SuperSpeedAllSpecial.field_p, kha.field_i, qs.field_m, qs.field_m);
-            vaa.field_f = 2;
+            GzipDecompressor.field_f = 2;
           }
           if (RageAnimation.field_w.field_yb.field_R == 0) {
             return;
           }
           RefreshingSpecial.field_p = new oa(RageAnimation.field_w.field_yb.field_D, RageAnimation.field_w.field_yb.field_M, RageAnimation.field_w.field_yb.field_sb, RageAnimation.field_w.field_yb.field_p, kma.field_p, kha.field_i, qs.field_m, qs.field_m);
-          vaa.field_f = 3;
+          GzipDecompressor.field_f = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -458,7 +458,7 @@ final class sk extends wj {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_z = null;
         field_L = null;
         field_eb = null;

@@ -8,7 +8,7 @@ final class dk implements ca {
     static String field_a;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 > -41) {
           field_b = (cn) null;

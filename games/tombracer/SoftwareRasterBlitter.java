@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi {
+final class SoftwareRasterBlitter {
     static fta field_a;
     static int field_c;
     static QuickChatParamType field_d;
@@ -12,7 +12,7 @@ final class bi {
         field_b = null;
         if (param0) {
           GraphicsToolkit var2 = (GraphicsToolkit) null;
-          bi.blitSoftwareRasterRegion((GraphicsToolkit) null, 112);
+          SoftwareRasterBlitter.blitSoftwareRasterRegion((GraphicsToolkit) null, 112);
           field_d = null;
           return;
         }

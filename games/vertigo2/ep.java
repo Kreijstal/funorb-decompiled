@@ -75,7 +75,7 @@ final class ep {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_g = (float[][]) null;
         field_h = (int[][]) null;
     }

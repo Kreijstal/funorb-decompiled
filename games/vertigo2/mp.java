@@ -10,7 +10,7 @@ final class mp {
     static int field_d;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -122) {
           return;
         }

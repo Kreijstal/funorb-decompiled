@@ -15,7 +15,7 @@ final class ql extends ud {
     boolean field_n;
     private byte[] field_i;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         activeHighscoreQuery = null;
         field_p = (byte[][]) null;
         if (param0 >= -11) {
@@ -298,7 +298,7 @@ final class ql extends ud {
         int var2;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 < 23) {
-          ql.a((byte) 58);
+          ql.clearStaticReferences((byte) 58);
         }
         if (this.field_j > 0) {
           this.field_l = new short[this.field_s];

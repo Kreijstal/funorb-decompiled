@@ -6,7 +6,7 @@ final class hj {
     static String field_a;
     static boolean field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 <= 54) {
           return;
@@ -33,7 +33,7 @@ final class hj {
           var6.field_y[var4] = param1;
         }
         if (param0 >= -85) {
-          hj.a((byte) -13);
+          hj.clearStaticReferences((byte) -13);
         }
         return var3;
     }

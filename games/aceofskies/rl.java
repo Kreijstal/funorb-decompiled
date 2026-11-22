@@ -47,7 +47,7 @@ final class rl {
         return field_n;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_k = null;
         if (param0 == -12785) {

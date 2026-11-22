@@ -228,7 +228,7 @@ final class ChatOverlay {
               if (var6_int == 0) {
                 ProceduralTexture.field_p = ContextMenu.field_yb;
               } else {
-                ProceduralTexture.field_p = bi.field_a;
+                ProceduralTexture.field_p = SoftwareRasterBlitter.field_a;
                 MembersUpsellMenu.field_z = var6_int;
                 uca.field_d = -1;
               }
@@ -251,7 +251,7 @@ final class ChatOverlay {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
-                  ProceduralTexture.field_p = bi.field_a;
+                  ProceduralTexture.field_p = SoftwareRasterBlitter.field_a;
                   uca.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -281,7 +281,7 @@ final class ChatOverlay {
               }
               if (!param5) {
                 stackIn_43_0 = (0 != (var7 & 4));
-                ai.field_a = stackIn_43_0;
+                AvailabilityQueryFactory.field_a = stackIn_43_0;
                 stackIn_46_0 = ((2 & var7) != 0);
                 PowerDownItemBehaviour.field_s = stackIn_46_0;
                 stackIn_49_0 = ((8 & var7) != 0);
@@ -319,7 +319,7 @@ final class ChatOverlay {
                 mp.writeSettingsCookie(var6, ToolkitSelector.getApplet(41), -21407);
               }
               if (0 >= ReportAbuseDialog.field_ub &&
-                !ai.field_a) {
+                !AvailabilityQueryFactory.field_a) {
                 try {
                   JavaScriptBridge.callWindowFunction(ToolkitSelector.getApplet(26), 2864, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -345,7 +345,7 @@ final class ChatOverlay {
               stackIn_81_0 = MembersUpsellMenu.field_z;
               return stackIn_81_0;
             }
-            if (bi.field_a == ProceduralTexture.field_p &&
+            if (SoftwareRasterBlitter.field_a == ProceduralTexture.field_p &&
               PbufferEntry.ensurePacketPayload(0)) {
               DropAnimation.closeGameSocket(60);
               if (MembersUpsellMenu.field_z == 7 &&

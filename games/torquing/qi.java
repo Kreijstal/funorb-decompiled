@@ -8,7 +8,7 @@ final class qi {
     static volatile int field_b;
     static dn field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;

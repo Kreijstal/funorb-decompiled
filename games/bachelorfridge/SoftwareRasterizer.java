@@ -75,7 +75,7 @@ final class SoftwareRasterizer {
         field_j = param1;
         field_h = param2;
         field_k = param3;
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearStaticReferences();
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -560,7 +560,7 @@ final class SoftwareRasterizer {
         field_j = param0[1];
         field_h = param0[2];
         field_k = param0[3];
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearStaticReferences();
     }
 
     final static void darkenRectangle(int param0, int param1, int param2, int param3) {
@@ -1526,7 +1526,7 @@ final class SoftwareRasterizer {
         if (field_k > param3) {
           field_k = param3;
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearStaticReferences();
     }
 
     final static void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1718,7 +1718,7 @@ final class SoftwareRasterizer {
         field_j = 0;
         field_h = field_i;
         field_k = field_c;
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearStaticReferences();
     }
 
     final static void addPixel(int param0, int param1, int param2, int param3) {
@@ -1745,7 +1745,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void b() {
+    private final static void clearStaticReferences() {
         field_d = null;
         field_b = null;
     }

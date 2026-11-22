@@ -335,7 +335,7 @@ final class ah {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -455,7 +455,7 @@ final class ah {
           this.field_c[this.field_j] = (byte)hm.a((int) this.field_c[this.field_j], 128 >>> pf.b(7, this.field_i));
           this.field_j = this.field_j + 1;
           if (!param1) {
-            ah.a((byte) -28);
+            ah.clearStaticReferences((byte) -28);
           }
           if (this.field_j > 32) {
             while (64 > this.field_j) {

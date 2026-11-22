@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qaa {
+final class BoundedRandomAccessFile {
     static int field_c;
     static String field_a;
     private RandomAccessFile field_b;
@@ -12,15 +12,15 @@ final class qaa {
     private long field_f;
     private long field_g;
 
-    final long a(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         if (param0 != 24) {
-          qaa.releaseStatics(true);
+          BoundedRandomAccessFile.releaseStatics(true);
           return this.field_b.length();
         }
         return this.field_b.length();
     }
 
-    final void a(long param0, boolean param1) throws IOException {
+    final void seek(long param0, boolean param1) throws IOException {
         this.field_b.seek(param0);
         this.field_f = param0;
         if (param1) {
@@ -29,7 +29,7 @@ final class qaa {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
@@ -58,7 +58,7 @@ final class qaa {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, byte param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, byte param3) throws IOException {
         try {
           if (this.field_g < (this.field_f + (long)param1)) {
             this.field_b.seek(this.field_g);
@@ -66,7 +66,7 @@ final class qaa {
             throw new EOFException();
           }
           if (param3 <= 56) {
-            qaa.releaseStatics(false);
+            BoundedRandomAccessFile.releaseStatics(false);
           }
           this.field_b.write(param2, param0, param1);
           this.field_f = this.field_f + (long)param1;
@@ -90,7 +90,7 @@ final class qaa {
     protected final void finalize() throws Throwable {
         if (this.field_b != null) {
           System.out.println("");
-          this.a(true);
+          this.close(true);
         }
     }
 
@@ -104,7 +104,7 @@ final class qaa {
         return (Sprite[]) null;
     }
 
-    final void a(boolean param0) throws IOException {
+    final void close(boolean param0) throws IOException {
         if (!param0) {
           return;
         }
@@ -114,7 +114,7 @@ final class qaa {
         }
     }
 
-    qaa(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

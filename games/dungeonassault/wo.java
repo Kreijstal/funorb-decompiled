@@ -34,7 +34,7 @@ final class wo {
         return var7;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 < 95) {
           field_e = (dn) null;

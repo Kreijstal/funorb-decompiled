@@ -61,11 +61,11 @@ final class rf {
           }
           if (ii.field_a >= 100 &&
             ReportAbuseDialog.field_ub <= 0) {
-            stackIn_21_0 = bq.field_b;
+            stackIn_21_0 = MidiPatchEnvelope.field_b;
             return stackIn_21_0;
           }
           if (ii.field_a >= 200) {
-            stackIn_24_0 = bq.field_b;
+            stackIn_24_0 = MidiPatchEnvelope.field_b;
             return stackIn_24_0;
           }
           if (MouseWheelInput.isIgnored(2180, param1)) {

@@ -32,8 +32,8 @@ final class rn {
           ji.field_N.a(3, -6 + var6_int, -2147483648, -6 + uh.field_m.field_pb, 3);
           var7 = -5 + ji.field_N.field_pb;
           qj.field_e.a(5, 487 + (param3 + param0), -2147483648, param5, -param5 + var7);
-          eg.field_f.a(param3, -uc.field_c.field_M + (-param3 + qj.field_e.field_M), -2147483648, param5, 0);
-          uc.field_c.a(param3 + eg.field_f.field_M, uc.field_c.field_M, -2147483648, param5, 0);
+          BoundedRandomAccessFile.field_f.a(param3, -uc.field_c.field_M + (-param3 + qj.field_e.field_M), -2147483648, param5, 0);
+          uc.field_c.a(param3 + BoundedRandomAccessFile.field_f.field_M, uc.field_c.field_M, -2147483648, param5, 0);
           var7 = var7 - (param5 + 2);
           ac.field_j.a(2, -5 + var7, 5, -3, param0, 5, 2 + (param3 + 485) + param0);
           if (ol.field_O != null) {

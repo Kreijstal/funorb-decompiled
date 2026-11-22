@@ -9,7 +9,7 @@ final class Pickup extends FlightBody {
     int remainingTicks;
     static int field_j;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         powerchuteSprites = null;
         if (param0 != 256) {
           field_l = (long[]) null;
@@ -28,7 +28,7 @@ final class Pickup extends FlightBody {
           this.position.setFrom(position, true);
           this.remainingTicks = 400;
           if (obfuscationGuard > -97) {
-            Pickup.b(-119);
+            Pickup.clearStaticReferences(-119);
           }
           this.pickupCode = pickupCode;
         } catch (RuntimeException runtimeException) {

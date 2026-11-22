@@ -83,14 +83,14 @@ final class al extends IntrusiveNode {
           wa.a(param3.field_y, -1, param4, tb.field_c, param0, 18 + param1);
           wa.a(param3.field_r, -1, param4, kd.field_f, param0 + 40, 18 + param1);
           if (param2) {
-            al.a((byte) -85);
+            al.clearStaticReferences((byte) -85);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_j = null;
         field_o = null;

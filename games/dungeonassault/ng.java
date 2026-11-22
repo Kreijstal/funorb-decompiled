@@ -1457,7 +1457,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_createanaccount", 55);
                 if (null != var2) {
-                  qp.field_c = dj.a(var2, false);
+                  BoundedRandomAccessFile.field_c = dj.a(var2, false);
                 }
                 var2 = rp.a("create_username", 114);
                 if (var2 != null) {
@@ -2727,7 +2727,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("fs_accept_aftercancel", 54);
                 if (var2 != null) {
-                  qp.field_e = dj.a(var2, false);
+                  BoundedRandomAccessFile.field_e = dj.a(var2, false);
                 }
                 var2 = rp.a("fs_accept_countdown_sing", 43);
                 if (var2 != null) {

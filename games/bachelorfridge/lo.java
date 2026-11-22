@@ -33,36 +33,36 @@ final class lo {
         int var2Lifetime2;
         var5 = BachelorFridge.field_y;
         try {
-          if (qaa.field_e == null) {
+          if (BoundedRandomAccessFile.field_e == null) {
             var1_int = BoardChange.field_k.length;
-            qaa.field_e = new int[1 + var1_int];
+            BoundedRandomAccessFile.field_e = new int[1 + var1_int];
             for (var2 = 0; var2 < var1_int; var2++) {
-              qaa.field_e[var2] = var2;
+              BoundedRandomAccessFile.field_e[var2] = var2;
             }
             for (var2Lifetime1 = 0; var2Lifetime1 < -1 + var1_int; var2Lifetime1++) {
               var3 = DiveBomberAnimation.a(var1_int - var2Lifetime1, m.field_a, -2147483648) + var2Lifetime1;
               if (~var3 != ~var2Lifetime1) {
-                var4 = qaa.field_e[var2Lifetime1];
-                qaa.field_e[var2Lifetime1] = qaa.field_e[var3];
-                qaa.field_e[var3] = var4;
+                var4 = BoundedRandomAccessFile.field_e[var2Lifetime1];
+                BoundedRandomAccessFile.field_e[var2Lifetime1] = BoundedRandomAccessFile.field_e[var3];
+                BoundedRandomAccessFile.field_e[var3] = var4;
               }
             }
             for (var2Lifetime2 = 0; var2Lifetime2 < var1_int; var2Lifetime2++) {
-              if (qaa.field_e[var2Lifetime2] != 0) {
+              if (BoundedRandomAccessFile.field_e[var2Lifetime2] != 0) {
                 continue;
               }
-              qaa.field_e[var1_int] = qaa.field_e[1 + var2Lifetime2];
-              qaa.field_e[1 + var2Lifetime2] = -1;
+              BoundedRandomAccessFile.field_e[var1_int] = BoundedRandomAccessFile.field_e[1 + var2Lifetime2];
+              BoundedRandomAccessFile.field_e[1 + var2Lifetime2] = -1;
               break;
             }
-            stackIn_21_0 = (qaa.field_e[0] == -1) ? 1 : 0;
+            stackIn_21_0 = (BoundedRandomAccessFile.field_e[0] == -1) ? 1 : 0;
             rba.field_b = stackIn_21_0;
             raa.e((byte) 31);
           }
           if (f.b((byte) 73) > (3500L + cr.field_a)) {
             fieldTemp$0 = rba.field_b + 1;
             rba.field_b = rba.field_b + 1;
-            if (fieldTemp$0 == qaa.field_e.length) {
+            if (fieldTemp$0 == BoundedRandomAccessFile.field_e.length) {
               rba.field_b = 0;
             }
             raa.e((byte) 31);

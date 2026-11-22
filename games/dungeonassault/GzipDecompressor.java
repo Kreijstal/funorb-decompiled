@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class uk {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_d;
     static int field_c;
     static String field_b;
@@ -167,7 +167,7 @@ final class uk {
         }
     }
 
-    public uk() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
@@ -201,7 +201,7 @@ final class uk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = null;
         if (param0 != 0) {
@@ -209,7 +209,7 @@ final class uk {
         }
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -266,7 +266,7 @@ final class uk {
         }
     }
 
-    private uk(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {

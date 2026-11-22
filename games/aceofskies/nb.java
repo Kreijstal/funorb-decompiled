@@ -50,7 +50,7 @@ final class nb extends ka {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = (int[][]) null;
         if (param0 < 66) {
           field_c = (dq) null;

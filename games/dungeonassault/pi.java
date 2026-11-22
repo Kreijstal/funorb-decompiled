@@ -116,7 +116,7 @@ final class pi {
 
     final static boolean c(int param0) {
         if (param0 != -555) {
-          pi.a(49);
+          pi.clearStaticReferences(49);
         }
         return ql.field_f == wd.field_d ? true : false;
     }
@@ -147,7 +147,7 @@ final class pi {
           tg.field_h[param2] = param5;
           tg.field_d[param2] = param3;
           if (param6 != 0) {
-            pi.a(-9);
+            pi.clearStaticReferences(-9);
           }
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -245,7 +245,7 @@ final class pi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            pi.a(-117);
+            pi.clearStaticReferences(-117);
           }
           var3 = new q(0, 0, 0);
           var3.field_d = param1.field_d;
@@ -549,7 +549,7 @@ final class pi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_b = null;
         field_i = null;

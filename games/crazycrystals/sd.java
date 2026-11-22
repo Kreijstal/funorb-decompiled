@@ -19,7 +19,7 @@ final class sd extends ga implements lf {
         super(param0, param1, param2);
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_R = null;
         field_T = null;
         if (param0 != 54) {

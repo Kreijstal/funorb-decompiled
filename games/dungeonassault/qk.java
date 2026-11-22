@@ -17,7 +17,7 @@ final class qk {
         sn.a(-87, param1, this.field_a, param4, param0, param2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 120) {
           return;
         }

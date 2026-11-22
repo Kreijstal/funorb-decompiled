@@ -124,7 +124,7 @@ final class lb implements sm {
         var2Lifetime1.writeByte(-1336879960, 2);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 18) {
           return;
         }

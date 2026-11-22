@@ -19,7 +19,7 @@ final class SecondaryIntrusiveDeque {
         if (param0 > 82) {
           return var2;
         }
-        SecondaryIntrusiveDeque.e(44);
+        SecondaryIntrusiveDeque.clearStaticReferences(44);
         return var2;
     }
 
@@ -97,7 +97,7 @@ final class SecondaryIntrusiveDeque {
         return var2;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != 0) {
           field_f = (byte[]) null;

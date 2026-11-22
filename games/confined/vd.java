@@ -18,7 +18,7 @@ final class vd implements Runnable {
     private java.net.Socket field_e;
     static String field_l;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_l = null;
         if (param0 >= 51) {

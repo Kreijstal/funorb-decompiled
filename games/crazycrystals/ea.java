@@ -382,7 +382,7 @@ abstract class ea extends pn {
 
     abstract int a(boolean param0, int param1);
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }

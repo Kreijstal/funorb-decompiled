@@ -92,7 +92,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         return false;
     }
 
-    private final void drawFrame(boolean param0, rqa param1, byte param2) {
+    private final void drawFrame(boolean param0, FrameDrawable param1, byte param2) {
         int stackIn_19_0 = 0;
         boolean stackIn_33_0 = false;
         boolean stackIn_47_0 = false;
@@ -155,7 +155,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
               SpawnerBehaviour.a(stackIn_33_0, 0);
-              bi.blitSoftwareRasterRegion(tga.field_a, param2 ^ 17);
+              SoftwareRasterBlitter.blitSoftwareRasterRegion(tga.field_a, param2 ^ 17);
             }
           }
           if (this.field_D != null) {
@@ -235,7 +235,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ToolkitSelector.releaseStatics(param0 - 19099);
         nla.releaseStatics((byte) 119);
         tk.releaseStatics(false);
-        bi.releaseStatics(false);
+        SoftwareRasterBlitter.releaseStatics(false);
         dga.releaseStatics(-29262);
         ke.releaseStatics(3712);
         MenuScreen.releaseStatics(false);
@@ -362,7 +362,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         RoomComponentFactory.releaseStatics((byte) -114);
         PlayerSimulation.releaseStatics(param0 ^ param0);
         dva.releaseStatics((byte) 53);
-        aq.releaseStatics(-116);
+        MainRoomCatalog.releaseStatics(-116);
         CharacterChoice.releaseStatics(3);
         RaceStandings.releaseStatics((byte) -120);
         ScoreStandings.releaseStatics(-98);
@@ -413,7 +413,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         TextBlockLayout.releaseStatics(127);
         DisplaySettingsDialog.releaseStatics((byte) -102);
         dh.releaseStatics((byte) -6);
-        bw.releaseStatics(115);
+        ByteStorageFactory.releaseStatics(115);
         ResizingDialog.releaseStatics(0);
         DropdownList.releaseStatics(true);
         GridWidgetContainer.releaseStatics((byte) -124);
@@ -431,7 +431,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         DropAnimation.releaseStatics(true);
         InstructionsScreen.releaseStatics(param0 ^ -3610);
         HiscoresScreen.releaseStatics(true);
-        ai.releaseStatics((byte) 41);
+        AvailabilityQueryFactory.releaseStatics((byte) 41);
         epa.releaseStatics(2);
         RatingsScreen.releaseStatics(108);
         AchievementsScreen.releaseStatics((byte) -10);
@@ -573,7 +573,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ComponentMount.releaseStatics((byte) -111);
         tg.releaseStatics((byte) 23);
         MidiPatch.releaseStatics((byte) 94);
-        bq.releaseStatics((byte) 25);
+        MidiPatchEnvelope.releaseStatics((byte) 25);
         TextureMetadata.releaseStatics((byte) 101);
         TestModel.releaseStatics(-30362);
         LegacySwitchModel.releaseStatics(-99);
@@ -1562,8 +1562,8 @@ public final class TombRacer extends TombRacerShell implements ls {
 
     public final void drawOverlay(int param0) {
         if (param0 != 1) {
-          rqa var3 = (rqa) null;
-          this.drawFrame(false, (rqa) null, (byte) 51);
+          FrameDrawable var3 = (FrameDrawable) null;
+          this.drawFrame(false, (FrameDrawable) null, (byte) 51);
         }
         LaserShooterComponent.ensureToolkitResources(17229);
         cna.field_a = false;

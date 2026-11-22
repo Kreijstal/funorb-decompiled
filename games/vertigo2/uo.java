@@ -7,7 +7,7 @@ final class uo {
     private lo field_i;
     private Archive field_a;
     static int field_h;
-    static k field_g;
+    static GzipDecompressor field_g;
     static String field_c;
     static fe field_e;
     static byte[][] field_f;
@@ -659,7 +659,7 @@ final class uo {
 
     static {
         field_c = "(<%0> players want to join)";
-        field_g = new k();
+        field_g = new GzipDecompressor();
         field_f = new byte[50][];
         field_j = "Friends";
     }

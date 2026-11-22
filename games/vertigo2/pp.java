@@ -16,7 +16,7 @@ final class pp extends IntrusiveNode {
     private boolean[][] field_p;
     private int[][] field_u;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_v = null;
         if (param0 < 75) {
           return;

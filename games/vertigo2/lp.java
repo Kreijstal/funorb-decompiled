@@ -112,7 +112,7 @@ final class lp extends TextureOperator {
             }
           }
           if (param0 != 1) {
-            lp.g(-4);
+            lp.clearStaticReferences(-4);
           }
           stackIn_62_0 = -1;
           return stackIn_62_0;
@@ -123,7 +123,7 @@ final class lp extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_E = null;
         field_B = null;

@@ -170,7 +170,7 @@ final class br extends kp implements ik {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_W = null;
         field_Y = null;
         if (param0 != -17131) {

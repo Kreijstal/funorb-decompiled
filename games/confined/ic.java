@@ -7,7 +7,7 @@ final class ic {
     static int field_b;
     static bi[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 <= 3) {
           field_c = (bi[]) null;
@@ -67,7 +67,7 @@ final class ic {
           param0 = param0 >> 2;
         }
         if (param1 != 68) {
-          ic.a((byte) -31);
+          ic.clearStaticReferences((byte) -31);
         }
         if (-2 > param0) {
           param0 = param0 >> 1;

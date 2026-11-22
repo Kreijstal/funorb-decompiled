@@ -17,7 +17,7 @@ final class jl extends MeshGeometry {
         nn.field_c.field_k = 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_O = (double[][]) null;
         field_T = null;
         field_U = null;

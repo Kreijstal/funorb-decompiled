@@ -20,7 +20,7 @@ final class tq extends fa {
         return GzipInflater.a("hw3d", (byte) -16);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = (byte[][]) null;
         smokeSpriteData = null;
         pendingScoreSubmissions = null;

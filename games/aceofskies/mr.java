@@ -9,7 +9,7 @@ final class mr {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 2004352972) {
-            mr.a(23);
+            mr.clearStaticReferences(23);
           }
           if ((0 >= param0 ||
             128 <= param0) &&
@@ -42,7 +42,7 @@ final class mr {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
           return;

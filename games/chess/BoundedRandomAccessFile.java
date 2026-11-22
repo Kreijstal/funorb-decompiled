@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class eg {
+final class BoundedRandomAccessFile {
     static String field_d;
     private long field_b;
     private long field_a;
@@ -18,11 +18,11 @@ final class eg {
     protected final void finalize() throws Throwable {
         if (null != this.field_c) {
           System.out.println("");
-          this.a(10992);
+          this.close(10992);
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if (((long)param3 + this.field_a) > this.field_b) {
             this.field_c.seek(this.field_b);
@@ -54,12 +54,12 @@ final class eg {
         }
     }
 
-    final long a(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         int var2 = 73 / ((-1 - param0) / 50);
         return this.field_c.length();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_g = null;
         field_j = null;
@@ -69,7 +69,7 @@ final class eg {
         field_f = null;
     }
 
-    final int a(int param0, byte[] param1, int param2, byte param3) throws IOException {
+    final int read(int param0, byte[] param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -100,7 +100,7 @@ final class eg {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         this.field_c.seek(param0);
         this.field_a = param0;
         if (param1 != -11526) {
@@ -139,7 +139,7 @@ final class eg {
         int[] var17 = null;
         try {
           if (param2 > -108) {
-            eg.a((int[]) null, (String[]) null, 1, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 64, (ResourceArchive) null, (String[][]) null, (byte[]) null, -39, (km[][]) null);
+            BoundedRandomAccessFile.a((int[]) null, (String[]) null, 1, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 64, (ResourceArchive) null, (String[][]) null, (byte[]) null, -39, (km[][]) null);
           }
           var17 = (int[]) null;
           var16 = (rk[]) null;
@@ -224,7 +224,7 @@ final class eg {
           return param0;
         }
         if (param1 != 0) {
-          eg.a((int[]) null, (String[]) null, -25, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 53, (ResourceArchive) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
+          BoundedRandomAccessFile.a((int[]) null, (String[]) null, -25, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 53, (ResourceArchive) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
           if (param2 != param0) {
             return 1;
           }
@@ -236,7 +236,7 @@ final class eg {
         return 0;
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_c) {
           this.field_c.close();
           this.field_c = null;
@@ -247,7 +247,7 @@ final class eg {
         field_f = (ci) null;
     }
 
-    eg(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (-1L == param2) {

@@ -255,7 +255,7 @@ final class oj extends om {
             try {
               var4 = Class.forName("hg");
               if (param1 != 6641) {
-                oj.f((byte) -17);
+                oj.clearStaticReferences((byte) -17);
               }
               var5 = (bc) (var4.newInstance());
               var5.a(param1 ^ 6529, param0, param2, param3);
@@ -288,7 +288,7 @@ final class oj extends om {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_M = null;
         field_L = null;
         field_C = null;

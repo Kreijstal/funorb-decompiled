@@ -300,7 +300,7 @@ final class j implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_h = null;
         if (param0 == 45) {

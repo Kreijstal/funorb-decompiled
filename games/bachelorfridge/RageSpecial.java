@@ -139,7 +139,7 @@ final class RageSpecial extends SpecialOrder {
         lw.field_k[16] = PetAttackEvent.field_q;
         lw.field_k[param0] = FloodAnimation.field_y;
         lw.field_k[9] = bda.field_o;
-        lw.field_k[17] = vaa.field_c;
+        lw.field_k[17] = GzipDecompressor.field_c;
         lw.field_k[11] = RaiseSpecial.field_r;
         lw.field_k[21] = us.field_d;
         lw.field_k[20] = DisableSpecial.field_q;

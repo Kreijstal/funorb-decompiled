@@ -42,7 +42,7 @@ abstract class li implements n {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         if (param0 != 350) {

@@ -12,7 +12,7 @@ final class hd {
     private long field_a;
     private long field_c;
     private long field_b;
-    private qp field_f;
+    private BoundedRandomAccessFile field_f;
     static int[] field_j;
     private long field_i;
     private long field_p;
@@ -24,7 +24,7 @@ final class hd {
     final void c(byte param0) throws IOException {
         this.d((byte) -117);
         int var2 = 44 % ((19 - param0) / 58);
-        this.field_f.a(0);
+        this.field_f.close(0);
     }
 
     private final void d(byte param0) throws IOException {
@@ -37,10 +37,10 @@ final class hd {
         var2 = 81 % ((param0 - 50) / 55);
         if (-1L != this.field_c) {
           if (~this.field_a != ~this.field_c) {
-            this.field_f.a(this.field_c, 18);
+            this.field_f.seek(this.field_c, 18);
             this.field_a = this.field_c;
           }
-          this.field_f.a(0, 105, this.field_n, this.field_d);
+          this.field_f.write(0, 105, this.field_n, this.field_d);
           this.field_a = this.field_a + (long)this.field_d;
           if (this.field_i < this.field_a) {
             this.field_i = this.field_a;
@@ -279,7 +279,7 @@ final class hd {
         this.field_l = 0;
         var2 = -89 / ((param0 - 3) / 56);
         if (~this.field_k != ~this.field_a) {
-          this.field_f.a(this.field_k, 18);
+          this.field_f.seek(this.field_k, 18);
           this.field_a = this.field_k;
         }
         this.field_b = this.field_k;
@@ -288,7 +288,7 @@ final class hd {
           if (200000000 < var3) {
             var3 = 200000000;
           }
-          var4 = this.field_f.a(this.field_l, -11274, var3, this.field_o);
+          var4 = this.field_f.read(this.field_l, -11274, var3, this.field_o);
           if (var4 != -1) {
             this.field_l = this.field_l + var4;
             this.field_a = this.field_a + (long)var4;
@@ -347,10 +347,10 @@ final class hd {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param3 > this.field_o.length) {
-              this.field_f.a(this.field_k, param1 + 19);
+              this.field_f.seek(this.field_k, param1 + 19);
               this.field_a = this.field_k;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_f.a(param0, -11274, param3, param2);
+                var9_intLifetime1 = this.field_f.read(param0, -11274, param3, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -538,10 +538,10 @@ final class hd {
               return;
             }
             if (~this.field_k != ~this.field_a) {
-              this.field_f.a(this.field_k, 18);
+              this.field_f.seek(this.field_k, 18);
               this.field_a = this.field_k;
             }
-            this.field_f.a(param0, 102, param3, param2);
+            this.field_f.write(param0, 102, param3, param2);
             this.field_a = this.field_a + (long)param2;
             if (this.field_a > this.field_i) {
               this.field_i = this.field_a;
@@ -593,14 +593,14 @@ final class hd {
         }
     }
 
-    hd(qp param0, int param1, int param2) throws IOException {
+    hd(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_b = -1L;
         this.field_d = 0;
         this.field_c = -1L;
         try {
           this.field_f = param0;
-          dupTemp$0 = param0.a((byte) 91);
+          dupTemp$0 = param0.length((byte) 91);
           this.field_i = dupTemp$0;
           this.field_p = dupTemp$0;
           this.field_n = new byte[param2];

@@ -58,7 +58,7 @@ final class wb {
         return var2;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 1) {
           return;
         }

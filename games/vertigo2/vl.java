@@ -18,7 +18,7 @@ final class vl {
 
     final static void b(int param0) {
         if (param0 != 2147483647) {
-          vl.a((byte) 56);
+          vl.clearStaticReferences((byte) 56);
         }
     }
 
@@ -400,7 +400,7 @@ final class vl {
         f.field_y = 2147483647;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_b = null;
         field_a = (Model[][]) null;

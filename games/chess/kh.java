@@ -319,10 +319,10 @@ final class kh extends gm {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).f(param0 ^ 674914993);
                     if (var3Lifetime5 == 0) {
-                      eg.field_e = 0L;
+                      BoundedRandomAccessFile.field_e = 0L;
                       return;
                     }
-                    eg.field_e = (long)var3Lifetime5 + ud.a(2);
+                    BoundedRandomAccessFile.field_e = (long)var3Lifetime5 + ud.a(2);
                     return;
                   }
                   if (var2 == 22) {
@@ -417,7 +417,7 @@ final class kh extends gm {
             pd.field_Rb = new ln(qa.field_e);
             pd.field_Rb.a((long)var3Lifetime1, (byte) 71);
             vl.a(var1, pd.field_Rb, false, 120);
-            eg.field_e = 0L;
+            BoundedRandomAccessFile.field_e = 0L;
           }
           if (var2 != 2 &&
             3 != var2) {
@@ -493,22 +493,22 @@ final class kh extends gm {
 
     final static void a(byte param0, lb param1, int param2, ResourceArchive param3) {
         try {
-          eg.field_i = param2 * qd.d(-31137) / 1000;
+          BoundedRandomAccessFile.field_i = param2 * qd.d(-31137) / 1000;
           fd.a((byte) -103, param3);
           aa.a(-8428, param3);
           cd.a((byte) 127, param3);
           tl.a(false);
           ie.b(540);
           if (param0 > -121) {
-            kh.b(115);
+            kh.clearStaticReferences(115);
           }
-          sl.field_a = 0 - eg.field_i;
+          sl.field_a = 0 - BoundedRandomAccessFile.field_i;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "kh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 != 64) {
           return;

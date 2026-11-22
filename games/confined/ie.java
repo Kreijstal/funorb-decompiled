@@ -15,7 +15,7 @@ final class ie extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 > -56) {
           field_c = (String) null;

@@ -462,7 +462,7 @@ final class rg extends am {
 
     final void a(byte param0) {
         if (param0 < 123) {
-          rg.b(114);
+          rg.clearStaticReferences(114);
         }
     }
 
@@ -537,7 +537,7 @@ final class rg extends am {
         return tn.field_l;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         if (param0 != 31635) {
           field_C = (String) null;

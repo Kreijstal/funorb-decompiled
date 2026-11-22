@@ -290,7 +290,7 @@ final class of {
     final static void d(int param0) {
         uk.field_e = false;
         ei.field_u = 0;
-        eg.field_j = null;
+        BoundedRandomAccessFile.field_j = null;
         if (param0 != -103) {
           return;
         }
@@ -316,7 +316,7 @@ final class of {
         return stackIn_8_0;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           return;

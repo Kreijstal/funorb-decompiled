@@ -66,7 +66,7 @@ final class vo extends va {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_v = null;
         field_u = null;
         if (!param0) {
@@ -101,7 +101,7 @@ final class vo extends va {
             return null;
           }
           if (param1 != 0) {
-            vo.a(true);
+            vo.clearStaticReferences(true);
           }
           var6 = (CharSequence) ((Object) param0);
           var2 = rc.a(var6, 320);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq {
+final class MidiPatchEnvelope {
     static String field_b;
     static String field_e;
     byte[] field_m;
@@ -40,7 +40,7 @@ final class bq {
           var7 = -param4;
           var8 = -1;
           if (param3 != -13) {
-            bq.fillCircle(61, -28, 117, (byte) -18, -123);
+            MidiPatchEnvelope.fillCircle(61, -28, 117, (byte) -18, -123);
           }
           C2SRoomResultPacket.fillRange((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
           while (var6 > var5_int) {

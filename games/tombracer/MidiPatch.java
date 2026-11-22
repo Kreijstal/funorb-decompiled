@@ -6,7 +6,7 @@ final class MidiPatch extends IntrusiveNode {
     byte[] field_l;
     int field_i;
     short[] field_g;
-    bq[] field_m;
+    MidiPatchEnvelope[] field_m;
     static ScrollPanel field_n;
     PcmSample[] field_h;
     private int[] field_k;
@@ -140,7 +140,7 @@ final class MidiPatch extends IntrusiveNode {
     MidiPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        bq dupTemp$8 = null;
+        MidiPatchEnvelope dupTemp$8 = null;
         int incrementValue$5 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
@@ -162,11 +162,11 @@ final class MidiPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        bq[] var13 = null;
+        MidiPatchEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        bq var15_ref = null;
+        MidiPatchEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -181,7 +181,7 @@ final class MidiPatch extends IntrusiveNode {
         int var26 = 0;
         int var27 = 0;
         int var28_int = 0;
-        bq var28 = null;
+        MidiPatchEnvelope var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -192,26 +192,26 @@ final class MidiPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        bq var40 = null;
+        MidiPatchEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        bq var45 = null;
+        MidiPatchEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        bq var48 = null;
-        bq var49 = null;
-        bq var50 = null;
-        bq var51 = null;
-        bq var52 = null;
+        MidiPatchEnvelope var48 = null;
+        MidiPatchEnvelope var49 = null;
+        MidiPatchEnvelope var50 = null;
+        MidiPatchEnvelope var51 = null;
+        MidiPatchEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        bq var28Lifetime1;
+        MidiPatchEnvelope var28Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
         int var19Lifetime1;
@@ -272,7 +272,7 @@ final class MidiPatch extends IntrusiveNode {
           this.field_j = new byte[128];
           this.field_k = new int[128];
           this.field_f = new byte[128];
-          this.field_m = new bq[128];
+          this.field_m = new MidiPatchEnvelope[128];
           this.field_g = new short[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
@@ -333,9 +333,9 @@ final class MidiPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new bq[var12];
+          var13 = new MidiPatchEnvelope[var12];
           for (var14Lifetime1 = 0; var13.length > var14Lifetime1; var14Lifetime1++) {
-            dupTemp$8 = new bq();
+            dupTemp$8 = new MidiPatchEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -454,7 +454,7 @@ final class MidiPatch extends IntrusiveNode {
                 }
               }
               var20Lifetime5--;
-              this.field_m[var26] = (bq) (var25);
+              this.field_m[var26] = (MidiPatchEnvelope) (var25);
             }
           }
           var21Lifetime4 = 0;

@@ -59,7 +59,7 @@ final class he extends ci {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_Jb = null;
         field_Hb = null;
         field_Fb = null;

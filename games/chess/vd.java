@@ -53,7 +53,7 @@ final class vd extends vn implements mj {
           this.field_Hb = true;
           if (!param1.field_h) {
             if (param1.field_a != null) {
-              var4 = eg.field_g;
+              var4 = BoundedRandomAccessFile.field_g;
               if (null != this.field_Ib) {
                 this.field_Ib.a(120);
               }

@@ -108,7 +108,7 @@ final class vi extends qm {
         return dupTemp$0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_p = null;
         field_n = null;
         if (param0) {

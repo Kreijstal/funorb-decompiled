@@ -1978,7 +1978,7 @@ final class oo {
 
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
         field_c = null;
         field_o = null;

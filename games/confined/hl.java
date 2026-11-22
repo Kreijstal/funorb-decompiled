@@ -56,7 +56,7 @@ final class hl implements de {
         var2.f((byte) 80);
         var1.a(true);
         if (param0 != -251) {
-          hl.b(-118);
+          hl.clearStaticReferences(-118);
           return;
         }
     }
@@ -125,7 +125,7 @@ final class hl implements de {
         return 1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           field_h = null;

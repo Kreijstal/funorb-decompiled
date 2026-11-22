@@ -35,7 +35,7 @@ final class mb extends IntrusiveNode {
         return var4;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         if (param0 != -26523) {
           field_v = (IntrusiveDeque) null;

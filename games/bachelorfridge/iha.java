@@ -78,7 +78,7 @@ abstract class iha extends AnimationNode {
         int var1 = -57 / ((param0 - 43) / 45);
     }
 
-    final static void e(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 5) {
           field_k = (String) null;
         }

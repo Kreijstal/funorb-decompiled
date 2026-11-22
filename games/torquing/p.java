@@ -11,7 +11,7 @@ final class p extends DualLinkNode {
     static fn field_x;
     static int field_u;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         if (param0 != 29841) {
           field_w = (Sprite) null;

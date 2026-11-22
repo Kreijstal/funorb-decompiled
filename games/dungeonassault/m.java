@@ -59,7 +59,7 @@ abstract class m implements dp {
         return this.b(false);
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 == -1) {
           field_g = null;
@@ -80,7 +80,7 @@ abstract class m implements dp {
     public final void b(int param0) {
         this.field_b = kd.c(-2456);
         if (param0 != 2899) {
-          m.d(6);
+          m.clearStaticReferences(6);
         }
     }
 

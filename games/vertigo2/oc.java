@@ -132,7 +132,7 @@ final class oc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         field_v = null;
         field_s = null;

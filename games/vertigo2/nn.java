@@ -74,7 +74,7 @@ final class nn extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_t = null;
         if (param0 != 5) {
@@ -118,7 +118,7 @@ final class nn extends IntrusiveNode {
           try {
             try {
               if (!param2) {
-                nn.a(-77);
+                nn.clearStaticReferences(-77);
               }
               var4 = Class.forName("em");
               var5 = (RasterBuffer) (var4.newInstance());

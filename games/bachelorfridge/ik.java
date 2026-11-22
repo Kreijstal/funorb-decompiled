@@ -389,7 +389,7 @@ final class ik {
 
     private final boolean e(int param0, int param1, int param2) {
         if (param0 == 17) {
-          wt.field_n = new uq(this.field_g.field_D, this.field_g.field_M, this.field_g.field_sb, this.field_g.field_p, param1, qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, this.field_j, this.field_e);
+          wt.field_n = new uq(this.field_g.field_D, this.field_g.field_M, this.field_g.field_sb, this.field_g.field_p, param1, BoundedRandomAccessFile.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, this.field_j, this.field_e);
           return true;
         }
         if (param2 != -12211) {

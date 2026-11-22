@@ -123,7 +123,7 @@ final class ik extends IntrusiveNode {
         }
         this.field_p = param0;
         if (param1) {
-          ik.a((byte) 45);
+          ik.clearStaticReferences((byte) 45);
         }
         SoftwareRasterizer.a(var16, var8Lifetime1, var9Lifetime1);
     }
@@ -148,7 +148,7 @@ final class ik extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 59) {
           field_k = (String[]) null;
         }

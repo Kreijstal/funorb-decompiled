@@ -7,7 +7,7 @@ final class sl {
     static String field_a;
     static rh field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 < 103) {
           field_c = (cn[]) null;

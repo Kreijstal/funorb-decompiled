@@ -8,7 +8,7 @@ final class SteeringMode {
     static volatile int field_e;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_a = null;
         aircraftSpriteData = (SpriteData[][]) null;

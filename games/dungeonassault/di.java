@@ -127,7 +127,7 @@ final class di {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 != -78) {
           field_k = (String) null;

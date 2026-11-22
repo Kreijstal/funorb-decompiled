@@ -16,7 +16,7 @@ abstract class TextureOperator extends IntrusiveNode {
 
     void a(int param0) {
         if (param0 >= -98) {
-          TextureOperator.a(false);
+          TextureOperator.clearStaticReferences(false);
         }
     }
 
@@ -69,7 +69,7 @@ abstract class TextureOperator extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

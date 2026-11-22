@@ -308,7 +308,7 @@ abstract class ek {
         wb.a(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 30) {
           return;
         }

@@ -19,7 +19,7 @@ class nk extends ik {
         go.field_l.a(this.field_i, this.field_a, 15 + this.field_d, param1, -1);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         field_j = null;

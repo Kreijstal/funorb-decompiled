@@ -9,7 +9,7 @@ final class db extends vm {
     static String[] field_m;
     private String field_l;
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_m = null;
         if (!param0) {
           return;
@@ -51,7 +51,7 @@ final class db extends vm {
           fm.field_R[36] = od.field_U;
           return;
         }
-        db.d(false);
+        db.clearStaticReferences(false);
         if (oc.field_p.field_m) {
           if ((1 << oc.field_p.field_a & oc.field_p.field_B.field_c) != 0) {
             fm.field_R[36] = dj.field_w;

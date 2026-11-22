@@ -453,7 +453,7 @@ final class an {
         RuntimeException var2 = null;
         try {
           if (hn.field_w == 11) {
-            pc.b((byte) -111);
+            pc.clearStaticReferences((byte) -111);
           }
           mg.a(param0 + 1244, nq.field_E, d.field_C, IntrusiveNode.field_h);
           dh.a(0, (byte) -99, param1, 0);
@@ -594,7 +594,7 @@ final class an {
             return stackIn_27_0;
           }
           if (param2 == 11) {
-            stackIn_30_0 = Vertigo2.a(new String[]{param1}, k.field_d, param0 ^ 111);
+            stackIn_30_0 = Vertigo2.a(new String[]{param1}, GzipDecompressor.field_d, param0 ^ 111);
             return stackIn_30_0;
           }
           if (param2 == 12) {

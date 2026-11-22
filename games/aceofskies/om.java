@@ -12,7 +12,7 @@ final class om extends bn implements fq {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -21649) {
           field_c = (wq) null;
@@ -23,7 +23,7 @@ final class om extends bn implements fq {
         if (param2 == 66) {
           return param1 + "/" + param0;
         }
-        om.b(-71);
+        om.clearStaticReferences(-71);
         return param1 + "/" + param0;
     }
 

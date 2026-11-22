@@ -55,7 +55,7 @@ final class g {
         field_a[2] = var20 + var23 * var13 + var26 * var16 + var29 * var19 + 2048 >> 12;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_c = null;
         field_a = null;

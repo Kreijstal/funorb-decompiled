@@ -95,7 +95,7 @@ final class l {
               } else {
                 var7 = SecondaryNodeDequeIterator.field_d;
                 synchronized (var7) {
-                  SecondaryNodeDequeIterator.field_d.a((byte) -67, var9, var12);
+                  SecondaryNodeDequeIterator.field_d.decompress((byte) -67, var9, var12);
                 }
               }
               stackIn_19_0 = var6;

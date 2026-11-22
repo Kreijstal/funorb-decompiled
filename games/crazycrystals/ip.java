@@ -11,7 +11,7 @@ final class ip implements wo {
     private int field_g;
     private int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -81) {
           field_b = (String) null;
           field_b = null;

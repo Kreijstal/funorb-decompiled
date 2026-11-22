@@ -15,7 +15,7 @@ final class jh {
     private static int[] field_i;
     private static int[] field_k;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_l = null;
         field_d = null;
         field_f = null;

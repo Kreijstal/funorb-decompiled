@@ -2369,11 +2369,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_fireimmunity,0", false);
                 if (null != var2) {
-                  qp.field_f[0] = dj.a(var2, false);
+                  BoundedRandomAccessFile.field_f[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_fireimmunity,1", false);
                 if (var2 != null) {
-                  qp.field_f[1] = dj.a(var2, false);
+                  BoundedRandomAccessFile.field_f[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_immortal,0", false);
                 if (var2 != null) {
@@ -3853,7 +3853,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_title_requirements_external", false);
                 if (var2 != null) {
-                  uk.field_b = dj.a(var2, false);
+                  GzipDecompressor.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("text_title_requirements_unknown", false);
                 if (var2 != null) {

@@ -19,7 +19,7 @@ final class ul extends um {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            ul.b(true);
+            ul.clearStaticReferences(true);
           }
           this.field_i = this.field_i + 1;
           this.field_h = this.field_h + param3;
@@ -92,7 +92,7 @@ final class ul extends um {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          ul.b(false);
+          ul.clearStaticReferences(false);
           if (ol.field_z[0 >= mo.field_l ? 1 : 2] == null) {
             return false;
           }
@@ -132,7 +132,7 @@ final class ul extends um {
         return (pb) ((Object) new tc());
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_k = (vm) null;
           field_j = null;

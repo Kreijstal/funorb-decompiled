@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai {
+final class AvailabilityQueryFactory {
     static String field_d;
     static boolean field_a;
     static String field_b;

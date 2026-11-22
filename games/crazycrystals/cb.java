@@ -259,7 +259,7 @@ final class cb extends pn implements Cloneable {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_r = null;
         field_n = null;

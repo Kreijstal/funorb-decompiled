@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSample extends ud {
+final class PcmSample extends AudioSample {
     int field_g;
     int field_j;
     int field_k;

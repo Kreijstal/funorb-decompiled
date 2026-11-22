@@ -122,7 +122,7 @@ final class le {
             if (var6 == 2) {
               var4 = oc.a(vf.field_d, new String[]{ij.field_c}, (byte) -97);
               var8 = oc.a(sa.field_d, new String[]{var3}, (byte) -110);
-              var7 = eg.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.b(var8) + sc.field_a.b(var4));
+              var7 = BoundedRandomAccessFile.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.b(var8) + sc.field_a.b(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -169,16 +169,16 @@ final class le {
               }
               var9 = sc.field_a.b(var4);
               if (!wk.a((byte) 118)) {
-                if (eg.field_f.field_F &&
-                  var9 > (-eg.field_f.field_U + hn.field_k)) {
+                if (BoundedRandomAccessFile.field_f.field_F &&
+                  var9 > (-BoundedRandomAccessFile.field_f.field_U + hn.field_k)) {
                   if (qf.field_b) {
                     var1 = "Broken!";
                   } else {
                     var1 = cn.field_e;
                   }
                 }
-                if (eg.field_f.field_L != 0 &&
-                  eg.field_f.field_qb < var9 &&
+                if (BoundedRandomAccessFile.field_f.field_L != 0 &&
+                  BoundedRandomAccessFile.field_f.field_qb < var9 &&
                   !qf.field_b) {
                   sh.a(false);
                 }

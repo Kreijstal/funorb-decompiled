@@ -173,7 +173,7 @@ final class jo extends pn implements Cloneable {
           we.field_h = we.field_h - 16;
           b.field_a = b.field_a - 8;
           if (param4 > -87) {
-            jo.f(-96);
+            jo.clearStaticReferences(-96);
           }
           fp.field_a = fp.field_a - 16;
           je.field_j = je.field_j - 8;
@@ -223,7 +223,7 @@ final class jo extends pn implements Cloneable {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 != 6) {
           field_p = (am) null;

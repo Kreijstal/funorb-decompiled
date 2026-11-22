@@ -59,7 +59,7 @@ final class vi {
         vi.a(SoftwareRasterizer.field_e, param1.field_l, param1.field_k, 0, var7, var6, var5, var12Lifetime3, var13, var9, var8, var10, var11);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

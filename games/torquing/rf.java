@@ -82,7 +82,7 @@ final class rf extends pc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         field_q = (int[][]) null;
         field_r = null;

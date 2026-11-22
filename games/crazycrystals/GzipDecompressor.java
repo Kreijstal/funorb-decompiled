@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ih {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_c;
     static oi field_b;
     static int field_a;
     static String field_d;
 
-    final void a(byte[] param0, PacketBuffer param1, int param2) {
+    final void decompress(byte[] param0, PacketBuffer param1, int param2) {
         try {
           if (param1.field_h[param1.field_f] != 31 ||
             -117 != param1.field_h[1 + param1.field_f]) {
@@ -40,7 +40,7 @@ final class ih {
         }
     }
 
-    public ih() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
@@ -52,12 +52,12 @@ final class ih {
         }
     }
 
-    private ih(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     public static void a(int param0) {
         if (param0 <= 39) {
-          ih.a((byte) -111);
+          GzipDecompressor.a((byte) -111);
           field_b = null;
           field_d = null;
           return;

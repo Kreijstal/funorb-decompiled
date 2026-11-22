@@ -38,7 +38,7 @@ final class il extends l {
         var4 = 0;
         var5_int = 0;
         if (param0 != -2) {
-          il.a(true);
+          il.clearStaticReferences(true);
         }
         while (var5_int < pd.field_g.length) {
           var6 = 10;
@@ -186,7 +186,7 @@ final class il extends l {
         return (l) ((Object) new sm());
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         if (param0) {
           return;

@@ -14,7 +14,7 @@ final class wn {
     int field_g;
     private boolean field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 23744) {
           return;

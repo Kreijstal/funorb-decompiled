@@ -7,7 +7,7 @@ final class ac extends nk {
     PacketBuffer field_z;
     static String field_A;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         if (param0 != 0) {
           field_A = (String) null;

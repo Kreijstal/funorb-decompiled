@@ -99,7 +99,7 @@ final class wh {
         return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 == -46) {
           field_a = null;

@@ -35,7 +35,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2 = aq.field_a[0].height();
+          var2 = MainRoomCatalog.field_a[0].height();
           var3 = 60;
           var3 = var2 * (var3 / var2);
           if (this.field_t < 20) {
@@ -66,7 +66,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2Lifetime1 = aq.field_a[0].height();
+          var2Lifetime1 = MainRoomCatalog.field_a[0].height();
           var3Lifetime1 = 60;
           var3Lifetime1 = var2Lifetime1 * (var3Lifetime1 / var2Lifetime1);
           if (this.field_t < 20) {
@@ -98,7 +98,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2Lifetime2 = aq.field_a[0].height();
+          var2Lifetime2 = MainRoomCatalog.field_a[0].height();
           var3Lifetime2 = 60;
           var3Lifetime2 = var2Lifetime2 * (var3Lifetime2 / var2Lifetime2);
           if (this.field_t < 20) {
@@ -130,7 +130,7 @@ final class no extends MatchOverlay {
         if (param0 >= -107) {
           return;
         }
-        var2Lifetime3 = aq.field_a[0].height();
+        var2Lifetime3 = MainRoomCatalog.field_a[0].height();
         var3Lifetime3 = 60;
         var3Lifetime3 = var2Lifetime3 * (var3Lifetime3 / var2Lifetime3);
         if (this.field_t >= 20) {
@@ -177,7 +177,7 @@ final class no extends MatchOverlay {
         int var16 = TombRacer.field_G ? 1 : 0;
         int var2 = 300;
         int var3 = 60;
-        int var4 = aq.field_a[0].width();
+        int var4 = MainRoomCatalog.field_a[0].width();
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -185,7 +185,7 @@ final class no extends MatchOverlay {
         int var13Lifetime1;
         int var15Lifetime1;
         var2 = var4 * (var2 / var4);
-        int var5 = aq.field_a[0].height();
+        int var5 = MainRoomCatalog.field_a[0].height();
         var3 = var3 / var5 * var5;
         int var6 = this.field_j;
         int var7 = -(var3 / 2) + this.field_l;
@@ -203,7 +203,7 @@ final class no extends MatchOverlay {
             var11 = var11 + var4;
             var2 = var2 + var4;
           }
-          PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, aq.field_a, var7);
+          PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, MainRoomCatalog.field_a, var7);
           SocketConnector.drawWrappedText(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
           PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
           return;
@@ -221,7 +221,7 @@ final class no extends MatchOverlay {
           var11Lifetime1 = var11Lifetime1 + var4;
           var2 = var2 + var4;
         }
-        PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, aq.field_a, var7);
+        PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, MainRoomCatalog.field_a, var7);
         SocketConnector.drawWrappedText(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
         PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }

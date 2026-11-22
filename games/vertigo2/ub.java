@@ -11,7 +11,7 @@ final class ub extends IntrusiveNode {
     int field_n;
     static int[] field_p;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_t = null;
         if (param0) {
           return;

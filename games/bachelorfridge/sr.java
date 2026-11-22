@@ -79,7 +79,7 @@ final class sr {
             cw.field_yb.field_p = 0;
             var6 = cw.field_yb;
             var6.field_sb = 0;
-            vaa.field_a.field_Z = tw.field_d.toUpperCase();
+            GzipDecompressor.field_a.field_Z = tw.field_d.toUpperCase();
             var7 = (2 + ho.field_g.field_sb) / 2;
             cw.field_yb.a(40, 31407, var7 - 2, 0, ho.field_g.field_p - 40);
             PlaceCreatureEffect.field_j.a(40, 31407, -var7 + ho.field_g.field_sb, var7, ho.field_g.field_p - 40);

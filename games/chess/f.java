@@ -9,7 +9,7 @@ abstract class f {
 
     abstract byte[] b(int param0);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -24420) {
           return;
         }

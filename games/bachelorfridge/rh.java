@@ -135,7 +135,7 @@ final class rh {
             }
           }
           if (FullscreenFocusCanvas.field_a.field_R != 0) {
-            wt.field_n = new uq(FullscreenFocusCanvas.field_a.field_D, FullscreenFocusCanvas.field_a.field_M, FullscreenFocusCanvas.field_a.field_sb, FullscreenFocusCanvas.field_a.field_p, param3, qaa.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, (String) null, 0L);
+            wt.field_n = new uq(FullscreenFocusCanvas.field_a.field_D, FullscreenFocusCanvas.field_a.field_M, FullscreenFocusCanvas.field_a.field_sb, FullscreenFocusCanvas.field_a.field_p, param3, BoundedRandomAccessFile.field_d, mda.field_c, SlowAllEvent.field_s, qs.field_m, RageAnimation.field_v, dla.field_k, (String) null, 0L);
           }
           var10 = iu.a(param0, (byte) 114, gba.field_Bb, rg.field_h);
           if (var10 != null) {

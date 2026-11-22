@@ -442,7 +442,7 @@ abstract class ok extends DualLinkNode {
         return var13;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_s = null;
         field_P = null;
     }

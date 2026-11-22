@@ -109,7 +109,7 @@ final class ec extends TextureOperator {
 
     final void a(int param0) {
         if (param0 >= -98) {
-          ec.b((byte) 102);
+          ec.clearStaticReferences((byte) 102);
           uk.d((byte) 106);
           return;
         }
@@ -159,7 +159,7 @@ final class ec extends TextureOperator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_E = null;
         field_z = null;
         field_D = null;

@@ -4,7 +4,7 @@
 final class qg {
     int field_b;
     int[] field_g;
-    static ih field_s;
+    static GzipDecompressor field_s;
     private int[] field_k;
     v field_t;
     private int[][] field_d;
@@ -240,7 +240,7 @@ final class qg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_o = null;
         if (param0 != 51) {
@@ -274,7 +274,7 @@ final class qg {
     }
 
     static {
-        field_s = new ih();
+        field_s = new GzipDecompressor();
         field_c = new String[]{"Three's a Crowd", "Infestation Team", "Chomp", "Crystal Race", "Armageddon!"};
         field_o = "You are not currently logged in to the<nbsp>game.";
     }

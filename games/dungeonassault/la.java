@@ -70,7 +70,7 @@ final class la {
 
     la(boolean param0) {
         this.field_e = tk.field_v;
-        this.field_n = uk.field_a;
+        this.field_n = GzipDecompressor.field_a;
         this.field_o = di.field_d;
         this.field_h = wd.field_j;
         if (param0) {

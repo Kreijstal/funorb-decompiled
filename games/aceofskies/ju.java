@@ -63,7 +63,7 @@ final class ju extends rt {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 121) {
           field_k = (AircraftDefinition) null;
           field_k = null;

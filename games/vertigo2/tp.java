@@ -13,7 +13,7 @@ final class tp extends UiPanel {
     UiPanel field_Ob;
     private static String field_Qb;
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -10045) {
           return;
         }

@@ -882,7 +882,7 @@ final class sg {
         return;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_a = null;
         field_E = null;

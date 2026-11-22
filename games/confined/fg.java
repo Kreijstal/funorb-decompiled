@@ -9,7 +9,7 @@ final class fg extends eh {
     String field_kb;
     static String field_pb;
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_pb = null;
         if (param0 != 11148) {
           field_nb = (String) null;

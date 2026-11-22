@@ -49,7 +49,7 @@ final class lg {
         return 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_v = null;
         field_u = null;
         field_c = null;

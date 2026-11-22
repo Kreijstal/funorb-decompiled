@@ -7,7 +7,7 @@ final class vl {
     static int[] field_d;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = (double[][]) null;
         if (param0 != -14578) {

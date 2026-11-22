@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bw {
+final class ByteStorageFactory {
     static int[] field_b;
     static Sprite field_a;
 

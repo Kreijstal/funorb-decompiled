@@ -10,7 +10,7 @@ final class qh {
     private int[] field_f;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 > -92) {
           field_c = (wm) null;

@@ -17,7 +17,7 @@ final class tg {
     static int[] field_h;
     static String field_n;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_l = null;
         field_n = null;
@@ -137,7 +137,7 @@ final class tg {
         if (param0 <= -77) {
           return this.field_k.length - 1;
         }
-        tg.a(-90);
+        tg.clearStaticReferences(-90);
         return this.field_k.length - 1;
     }
 

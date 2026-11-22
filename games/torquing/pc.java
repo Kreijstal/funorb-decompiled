@@ -457,7 +457,7 @@ class pc implements WidgetRenderer, fe {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_n = null;
         if (param0 != 4252) {

@@ -11,7 +11,7 @@ final class NodeHashTableIterator implements Iterator {
     private IterableNodeHashTable field_e;
     private IntrusiveNode field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_d = (String) null;
           field_a = null;

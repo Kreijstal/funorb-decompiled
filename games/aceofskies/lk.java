@@ -25,7 +25,7 @@ final class lk extends fu implements fq {
         return this.field_f;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 34962) {
           field_g = (String) null;

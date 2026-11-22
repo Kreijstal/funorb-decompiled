@@ -7,7 +7,7 @@ final class hi extends to {
     static String field_x;
     static int field_w;
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -40) {
           return;
         }
@@ -46,7 +46,7 @@ final class hi extends to {
           boolean stackIn_28_1 = ((55 & param2) != 0) ? false : true;
           return stackIn_27_0 & stackIn_28_1;
         }
-        hi.k(13);
+        hi.clearStaticReferences(13);
         if (!si.a(param2, 2, param1)) {
           return false;
         }
@@ -94,7 +94,7 @@ final class hi extends to {
           MenuScreen.a((byte) -119, 4, false);
           return;
         }
-        hi.k(37);
+        hi.clearStaticReferences(37);
         MenuScreen.a((byte) -119, 4, false);
     }
 

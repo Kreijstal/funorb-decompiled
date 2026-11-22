@@ -9,7 +9,7 @@ final class vl {
     static am field_f;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 == -85) {

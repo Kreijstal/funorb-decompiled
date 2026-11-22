@@ -27,7 +27,7 @@ class mn extends aa implements ng {
         try {
           var4_int = param0.a(-1, param1);
           if (param3 <= 81) {
-            mn.h((byte) 123);
+            mn.clearStaticReferences((byte) 123);
           }
           var5 = param0.a(param2, -121, var4_int);
           stackIn_3_0 = wi.a(var5, (byte) -106, param0, var4_int);
@@ -253,7 +253,7 @@ class mn extends aa implements ng {
 
     final void b(boolean param0) {
         if (!param0) {
-          mn.h((byte) 54);
+          mn.clearStaticReferences((byte) 54);
           if (!this.field_D) {
             return;
           }
@@ -293,7 +293,7 @@ class mn extends aa implements ng {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_bb = null;
         if (param0 != 77) {
           field_bb = (int[]) null;

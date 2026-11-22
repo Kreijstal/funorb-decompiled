@@ -105,7 +105,7 @@ final class tl extends ci {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Ib = null;
         field_Gb = null;
         field_Fb = null;

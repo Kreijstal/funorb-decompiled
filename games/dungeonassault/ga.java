@@ -10,7 +10,7 @@ final class ga extends ip {
     static cn field_r;
     private boolean field_s;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         if (param0 != 75) {
           field_o = (cn[]) null;

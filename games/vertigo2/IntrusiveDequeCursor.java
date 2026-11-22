@@ -150,7 +150,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 >= -91) {
@@ -205,7 +205,7 @@ final class IntrusiveDequeCursor {
           }
           return stackIn_92_0;
         }
-        IntrusiveDequeCursor.a(72);
+        IntrusiveDequeCursor.clearStaticReferences(72);
         if (param1 >= 0) {
           if (param1 == 1) {
             return true;

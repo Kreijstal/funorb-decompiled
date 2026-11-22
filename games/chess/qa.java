@@ -75,7 +75,7 @@ final class qa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         field_f = null;

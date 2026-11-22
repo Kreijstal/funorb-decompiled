@@ -13,7 +13,7 @@ abstract class rt implements FramebufferAttachment {
     int field_f;
     static String field_g;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -30) {
           field_e = null;
           field_h = null;

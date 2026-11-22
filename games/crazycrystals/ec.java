@@ -66,7 +66,7 @@ final class ec extends ln {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 4) {
           field_k = null;
           field_l = null;

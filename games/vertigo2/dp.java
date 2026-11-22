@@ -186,7 +186,7 @@ final class dp extends TextureOperator {
                 !jq.a(var4.charAt(-1 + var4.length()), -96)) {
                 var5 = 0;
                 if (param1) {
-                  dp.h(-57);
+                  dp.clearStaticReferences(-57);
                 }
                 for (var6 = 0; param0.length() > var6; var6++) {
                   var7 = param0.charAt(var6);
@@ -229,7 +229,7 @@ final class dp extends TextureOperator {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -68) {
           return;
         }

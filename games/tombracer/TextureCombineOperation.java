@@ -360,7 +360,7 @@ final class TextureCombineOperation {
             var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          bw.field_a.makeRasterTarget();
+          ByteStorageFactory.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
           CourseMapWalker.popRasterState(1);
         } catch (RuntimeException runtimeException) {

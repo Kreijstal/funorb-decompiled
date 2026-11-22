@@ -11,7 +11,7 @@ final class kc extends am {
     static int field_v;
     private int field_w;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

@@ -14,14 +14,14 @@ class tb implements ka {
 
     public final ui e(int param0, int param1) {
         if (param1 != -1) {
-          tb.a(12);
+          tb.clearStaticReferences(12);
         }
         return this.field_g[param0];
     }
 
     public final int[] a(int param0, float param1, int param2, boolean param3, int param4, int param5) {
         if (param0 != -9718) {
-          tb.a(26);
+          tb.clearStaticReferences(26);
         }
         return this.g(param0 ^ -28760, param2).a(this.field_e, (double)param1, param3, this.field_g[param2].field_i, param5, 27127, param4, (ka) (this));
     }
@@ -61,7 +61,7 @@ class tb implements ka {
         return ha.field_a != null ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 30272) {
           return;

@@ -9,7 +9,7 @@ abstract class hr extends or {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         aircraftSprites = (RenderSprite[][]) null;
         if (!param0) {
           return;

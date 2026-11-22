@@ -33,7 +33,7 @@ final class GzipInflater {
     final static void a(int param0, java.awt.Component param1) {
         try {
           if (param0 < 95) {
-            GzipInflater.a(true);
+            GzipInflater.clearStaticReferences(true);
           }
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(OpenGlBuffer.field_d);
@@ -65,7 +65,7 @@ final class GzipInflater {
         }
     }
 
-    final void a(byte[] param0, int param1, PacketBuffer param2) {
+    final void decompress(byte[] param0, int param1, PacketBuffer param2) {
         try {
           try {
             if (31 != param2.payload[param2.position] ||
@@ -97,7 +97,7 @@ final class GzipInflater {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

@@ -141,7 +141,7 @@ final class v extends dh implements el {
     final void o(int param0) {
         this.a((byte) -96, true, gd.a(4, ClientException.field_a, 248));
         if (param0 < 107) {
-          v.j((byte) -117);
+          v.clearStaticReferences((byte) -117);
         }
     }
 
@@ -154,7 +154,7 @@ final class v extends dh implements el {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Db = null;
         field_Bb = null;
         if (param0 != -39) {

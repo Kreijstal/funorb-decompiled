@@ -838,7 +838,7 @@ abstract class vc extends DualLinkNode {
         return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_x = null;
         field_z = null;
     }

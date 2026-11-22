@@ -2027,7 +2027,7 @@ final class aa {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_g = null;
         if (param0 != 0) {
@@ -2320,7 +2320,7 @@ final class aa {
               }
               if (decompiledFrameRemainder0) {
                 if (uh.i(23156).field_B.field_d) {
-                  var4 = eg.a(uh.i(param0 ^ 7286).field_B.field_l, 0, uh.i(23156).field_B.field_k);
+                  var4 = BoundedRandomAccessFile.a(uh.i(param0 ^ 7286).field_B.field_l, 0, uh.i(23156).field_B.field_k);
                   if (var15 != 0) {
                     var4 = -1;
                     var4 = 0;

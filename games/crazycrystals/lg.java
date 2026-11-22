@@ -22,7 +22,7 @@ final class lg {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != 31039) {
           field_e = (String) null;

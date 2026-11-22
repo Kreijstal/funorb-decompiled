@@ -10,7 +10,7 @@ final class ua {
     static String field_d;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 33) {
           return;
         }

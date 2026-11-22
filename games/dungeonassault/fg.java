@@ -93,7 +93,7 @@ final class fg extends gj {
         return (this.field_l - this.field_h) / 1000000L;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 > -96) {
           return;
@@ -112,7 +112,7 @@ final class fg extends gj {
           }
           return;
         }
-        fg.d(110);
+        fg.clearStaticReferences(110);
         if (this.field_h < this.field_l) {
           this.field_h = this.field_h + (-this.field_h + this.field_l);
         }

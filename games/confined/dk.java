@@ -261,7 +261,7 @@ class dk {
         field_g = param2;
     }
 
-    public static void f() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

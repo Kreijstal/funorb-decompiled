@@ -30,7 +30,7 @@ final class ud {
         return var1 + cl.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -109) {
           return;
         }

@@ -47,7 +47,7 @@ final class HardwareWaterTextures {
         if (null == this.field_f) {
           if (null == SwitchableIdAllocator.field_c) {
             var25 = LightSourceModel.generateNoiseTexture(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-            SwitchableIdAllocator.field_c = bw.wrapByteStorage(270, var25, false);
+            SwitchableIdAllocator.field_c = ByteStorageFactory.wrapByteStorage(270, var25, false);
           }
           var22 = IntPoint.unwrapByteStorage(SwitchableIdAllocator.field_c, 13588, false);
           var19 = var22;

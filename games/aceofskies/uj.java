@@ -5,7 +5,7 @@ final class uj {
     static ResourceArchive field_b;
     static float[][] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 0) {
           return;
         }

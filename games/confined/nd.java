@@ -6,7 +6,7 @@ abstract class nd extends DualLinkNode {
     static String field_u;
     int field_t;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         if (param0 != 30661) {
           field_u = (String) null;
@@ -26,7 +26,7 @@ abstract class nd extends DualLinkNode {
         var5 = Confined.field_J ? 1 : 0;
         try {
           if (param1 != -18) {
-            nd.c(-35);
+            nd.clearStaticReferences(-35);
           }
           if ((param0 <= 0 ||
             param0 >= 128) &&

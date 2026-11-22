@@ -66,7 +66,7 @@ final class IsaacRandom {
         return this.field_f[fieldTemp$3];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_g = null;
         if (param0 != -66) {

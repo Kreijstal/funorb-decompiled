@@ -152,7 +152,7 @@ final class kh extends dc {
         this.field_R = this.field_cb + this.field_y * this.field_x;
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_fb = null;
         field_gb = null;
         if (param0 <= 13) {

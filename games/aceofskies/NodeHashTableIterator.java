@@ -194,7 +194,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         highscoreNameEntries = null;
         if (param0 != 19592) {
           return;

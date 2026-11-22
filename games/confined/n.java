@@ -27,7 +27,7 @@ abstract class n {
 
     abstract java.net.Socket b(int param0) throws IOException;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_a = null;
         if (param0 < 112) {

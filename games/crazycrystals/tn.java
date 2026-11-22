@@ -188,7 +188,7 @@ final class tn extends pn {
         return 3;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= 74) {
           field_o = null;
           field_m = null;
@@ -253,14 +253,14 @@ final class tn extends pn {
           }
         }
         if (param0 > -125) {
-          tn.f(-62);
+          tn.clearStaticReferences(-62);
         }
         nf.field_f = true;
     }
 
     final boolean b(byte param0) {
         if (param0 <= 43) {
-          tn.f(91);
+          tn.clearStaticReferences(91);
           return true;
         }
         return true;
@@ -303,7 +303,7 @@ final class tn extends pn {
           ok.a(2188450);
           return var4;
         }
-        tn.f(87);
+        tn.clearStaticReferences(87);
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = gh.field_z[pf.b(255, (int) var7[var4_intLifetime1])];
         }

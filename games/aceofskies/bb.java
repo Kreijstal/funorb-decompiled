@@ -40,7 +40,7 @@ final class bb extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 != -15388) {
           field_m = (int[]) null;

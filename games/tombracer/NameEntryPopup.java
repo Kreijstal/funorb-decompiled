@@ -24,7 +24,7 @@ final class NameEntryPopup extends UiComponent {
         field_yb = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean handleKeyInput(boolean param0) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;

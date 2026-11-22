@@ -36,7 +36,7 @@ final class ui extends IntrusiveNode {
         field_f = var8;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

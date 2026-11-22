@@ -255,10 +255,10 @@ final class WhirlpoolDigest {
               var6[0][var10] = bra.field_M[var11];
               var7[0][4 * var10] = jk.field_h[var11];
               var7[0][1 + 4 * var10] = DamageableBehaviour.field_o[var11];
-              var7[0][2 + 4 * var10] = bq.field_h[var11];
+              var7[0][2 + 4 * var10] = MidiPatchEnvelope.field_h[var11];
               var7[0][var10 * 4 + 3] = PortalBehaviour.field_o[var11];
               if (MiscItemBehaviour.isLocalPlayerName(bra.field_M[var11], 0) &&
-                PortalBehaviour.field_o[var11] + DamageableBehaviour.field_o[var11] + bq.field_h[var11] == 0) {
+                PortalBehaviour.field_o[var11] + DamageableBehaviour.field_o[var11] + MidiPatchEnvelope.field_h[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -273,10 +273,10 @@ final class WhirlpoolDigest {
               var6[1][var13] = bra.field_M[var11Lifetime1];
               var7[1][4 * var13] = jk.field_h[var11Lifetime1];
               var7[1][1 + var13 * 4] = DamageableBehaviour.field_o[var11Lifetime1];
-              var7[1][4 * var13 + 2] = bq.field_h[var11Lifetime1];
+              var7[1][4 * var13 + 2] = MidiPatchEnvelope.field_h[var11Lifetime1];
               var7[1][3 + 4 * var13] = PortalBehaviour.field_o[var11Lifetime1];
               if (MiscItemBehaviour.isLocalPlayerName(bra.field_M[var11Lifetime1], param0 + 44) &&
-                0 == PortalBehaviour.field_o[var11Lifetime1] + (bq.field_h[var11Lifetime1] + DamageableBehaviour.field_o[var11Lifetime1])) {
+                0 == PortalBehaviour.field_o[var11Lifetime1] + (MidiPatchEnvelope.field_h[var11Lifetime1] + DamageableBehaviour.field_o[var11Lifetime1])) {
                 var6[1][var13] = null;
                 var13--;
               }

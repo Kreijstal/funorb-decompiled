@@ -61,7 +61,7 @@ final class gk extends ii implements mg, vg {
           param1 = param1 | param1 >>> 16;
           return param1 + 1;
         }
-        gk.b(false);
+        gk.clearStaticReferences(false);
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;
         param1 = param1 | param1 >>> 16;
@@ -250,7 +250,7 @@ final class gk extends ii implements mg, vg {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_L = null;
         if (!param0) {
           field_Q = null;

@@ -138,7 +138,7 @@ final class ph extends IntrusiveNode {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_Q = null;
         field_s = null;
         field_L = null;

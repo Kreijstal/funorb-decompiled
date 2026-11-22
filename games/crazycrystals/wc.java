@@ -8,7 +8,7 @@ class wc extends lb {
         this(ai.field_h, param0);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -51) {
           field_q = (ko) null;
           field_q = null;

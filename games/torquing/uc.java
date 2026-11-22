@@ -31,7 +31,7 @@ abstract class uc extends DualLinkNode {
         return this.field_N[ka.a(false, param0) & 255];
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_L = null;
         field_E = null;
     }

@@ -13,7 +13,7 @@ final class qo extends TextureOperator {
         super(0, true);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -89) {
           return;
         }

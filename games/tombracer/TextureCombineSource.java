@@ -342,7 +342,7 @@ final class TextureCombineSource {
           !cs.field_c.isEnded(126)) {
           return;
         }
-        int var2 = aq.getMainRoomCount(-5640);
+        int var2 = MainRoomCatalog.getMainRoomCount(-5640);
         int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
         cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new DemoCourseGenerator(var3));
         cs.field_c.startMenuBackgroundDemo((byte) -25);

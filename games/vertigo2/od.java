@@ -11,7 +11,7 @@ final class od extends UiPanel {
     static String field_Ob;
     static mp field_Jb;
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -23936) {
           field_Ob = null;
           field_Jb = null;

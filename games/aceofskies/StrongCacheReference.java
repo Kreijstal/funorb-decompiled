@@ -7,7 +7,7 @@ final class StrongCacheReference extends CacheReference {
     static String field_s;
     private Object field_q;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_t = null;
         if (param0 > -87) {
           field_s = (String) null;

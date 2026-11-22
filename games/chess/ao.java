@@ -67,7 +67,7 @@ final class ao {
           return param2;
         }
         if (!param1) {
-          ao.a(5);
+          ao.clearStaticReferences(5);
           if (param2 - (-param3 + param0) >= 0) {
             return param2 - (-param3 + param0);
           }
@@ -109,7 +109,7 @@ final class ao {
         si.d(65280);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_j = null;
         field_i = null;

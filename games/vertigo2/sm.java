@@ -86,7 +86,7 @@ final class sm extends UiPanel {
         n.field_b.f((byte) -23);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 76) {
           return;
         }

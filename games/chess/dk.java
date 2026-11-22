@@ -134,7 +134,7 @@ final class dk {
               if (param0 == 0) {
                 return null;
               }
-              dk.b(40);
+              dk.clearStaticReferences(40);
               return null;
             }
             fieldTemp$1 = this.field_d;
@@ -155,7 +155,7 @@ final class dk {
             if (param0 == 0) {
               return null;
             }
-            dk.b(40);
+            dk.clearStaticReferences(40);
             return null;
           }
           fieldTemp$0 = this.field_d;
@@ -203,7 +203,7 @@ final class dk {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 12000) {
           field_l = null;
           field_e = null;

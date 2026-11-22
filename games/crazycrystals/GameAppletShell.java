@@ -18,7 +18,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (gl.field_h == this &&
+          if (BoundedRandomAccessFile.field_h == this &&
             !kf.field_g) {
             tc.field_j = 0L;
             return;
@@ -133,7 +133,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = gl.field_h;
+                var1 = BoundedRandomAccessFile.field_h;
                 if (null != tk.field_i) {
                   var1 = tk.field_i;
                 }
@@ -466,7 +466,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (decompiledFrameRemainder0) {
             if (null == uc.field_d) {
               if (null == tk.field_i) {
-                var2 = gl.field_h;
+                var2 = BoundedRandomAccessFile.field_h;
                 if (var4 != 0) {
                   var2 = tk.field_i;
                   var2 = uc.field_d;
@@ -514,7 +514,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void destroy() {
-        if (this != gl.field_h ||
+        if (this != BoundedRandomAccessFile.field_h ||
           kf.field_g) {
           return;
         }
@@ -539,7 +539,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (this == gl.field_h &&
+          if (this == BoundedRandomAccessFile.field_h &&
             !kf.field_g) {
             al.field_f = true;
             if (jd.field_H &&
@@ -601,7 +601,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == gl.field_h &&
+          if (this == BoundedRandomAccessFile.field_h &&
             !kf.field_g) {
             tc.field_j = lo.a((byte) -9) + 4000L;
             return;
@@ -651,7 +651,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var9 = CrazyCrystals.field_B;
           try {
             try {
-              if (gl.field_h != null) {
+              if (BoundedRandomAccessFile.field_h != null) {
                 nj.field_e = nj.field_e + 1;
                 if (3 <= nj.field_e) {
                   this.a(0, "alreadyloaded");
@@ -663,7 +663,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               me.field_e = param4;
               wm.field_e = 0;
               ui.field_a = 0;
-              gl.field_h = this;
+              BoundedRandomAccessFile.field_h = this;
               if (param0 != 118) {
                 return;
               }

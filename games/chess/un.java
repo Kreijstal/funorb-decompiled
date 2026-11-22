@@ -902,7 +902,7 @@ final class un {
                 if ((1 << var8 & this.field_B.field_e) == 0) {
                   var9 = oc.a(ej.field_a, new String[]{var20}, (byte) -97);
                 } else {
-                  var9 = oc.a(eg.field_d, new String[]{var20}, (byte) -118);
+                  var9 = oc.a(BoundedRandomAccessFile.field_d, new String[]{var20}, (byte) -118);
                 }
               }
             }

@@ -254,7 +254,7 @@ final class vm extends hf {
         return new oc(param1);
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_ab = (String) null;
         }

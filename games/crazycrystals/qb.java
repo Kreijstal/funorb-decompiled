@@ -350,7 +350,7 @@ abstract class qb {
                   } else {
                     stackIn_241_2 = 16760896;
                   }
-                  tb.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, 488, gl.field_f);
+                  tb.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, 488, BoundedRandomAccessFile.field_f);
                   stackIn_244_0 = jd.field_J;
                   stackIn_244_1 = var2;
                   if (var3_intLifetime1Lifetime3 == 0) {
@@ -2337,7 +2337,7 @@ abstract class qb {
                 }
                 var2 = ah.a("unpacking_soundeffects", 5236);
                 if (null != var2) {
-                  gl.field_l = fa.a((byte) -64, var2);
+                  BoundedRandomAccessFile.field_l = fa.a((byte) -64, var2);
                 }
                 var2 = ah.a("unpacking_music", 5236);
                 if (var2 != null) {
@@ -2759,7 +2759,7 @@ abstract class qb {
                 }
                 var2 = ah.a("orbpoints_colon", 5236);
                 if (var2 != null) {
-                  ih.field_d = fa.a((byte) -128, var2);
+                  GzipDecompressor.field_d = fa.a((byte) -128, var2);
                 }
                 var2 = ah.a("orbcoins_colon", 5236);
                 if (var2 != null) {

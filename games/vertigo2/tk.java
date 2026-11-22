@@ -181,7 +181,7 @@ abstract class tk {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         if (param0 <= 46) {
           field_n = (ba) null;
@@ -298,7 +298,7 @@ abstract class tk {
         if (param0 == 20) {
           return this.d((byte) -127) >= 20 ? true : false;
         }
-        tk.a((byte) 29);
+        tk.clearStaticReferences((byte) 29);
         return this.d((byte) -127) >= 20 ? true : false;
     }
 

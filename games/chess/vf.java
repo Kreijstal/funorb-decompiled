@@ -86,7 +86,7 @@ final class vf implements jm {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_d = null;
         field_b = null;

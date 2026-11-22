@@ -34,7 +34,7 @@ final class la {
         try {
           km.a(param1, false, true, param0);
           if (param2 != 26806) {
-            la.a(true);
+            la.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "la.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -48,7 +48,7 @@ final class la {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_d = null;
         if (!param0) {

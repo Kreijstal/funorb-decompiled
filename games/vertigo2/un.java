@@ -342,7 +342,7 @@ final class un extends UiPanel {
         return true;
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -58) {
           field_Hb = (ee) null;
           field_Hb = null;

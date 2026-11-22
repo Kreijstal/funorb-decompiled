@@ -183,7 +183,7 @@ final class th extends WidgetContainer implements ba, ng {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_C = null;
         if (param0 != 2147483647) {

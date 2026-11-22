@@ -13,7 +13,7 @@ final class fg extends sp {
     static int field_Y;
     static String field_db;
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_db = null;
         field_cb = null;
         field_eb = null;

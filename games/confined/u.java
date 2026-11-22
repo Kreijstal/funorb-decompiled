@@ -165,7 +165,7 @@ final class u extends ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 72) {
-            u.h((byte) 61);
+            u.clearStaticReferences((byte) 61);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class u extends ee {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_T = null;
         field_U = null;
         if (param0 != -118) {

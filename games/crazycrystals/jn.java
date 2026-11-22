@@ -248,7 +248,7 @@ final class jn extends se {
             return stackIn_8_0;
           }
           if (!this.a(param0, false)) {
-            stackIn_13_0 = ih.field_b;
+            stackIn_13_0 = GzipDecompressor.field_b;
             return stackIn_13_0;
           }
           stackIn_11_0 = rk.field_c;

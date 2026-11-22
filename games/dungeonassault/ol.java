@@ -169,7 +169,7 @@ final class ol {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_i = null;
         if (param0 >= -38) {
@@ -281,7 +281,7 @@ final class ol {
             var4 = (ue) (qm.field_q.a(param0 ^ 12));
           }
           if (param0 != 8) {
-            ol.a((byte) -74);
+            ol.clearStaticReferences((byte) -74);
           }
           var2 = bg.field_s.e(param0 - 24180);
           while (var2 != null) {

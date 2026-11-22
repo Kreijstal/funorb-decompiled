@@ -126,7 +126,7 @@ final class vp extends WidgetContainer implements ng {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_D = null;
         field_F = null;

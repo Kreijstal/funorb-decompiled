@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BeamShooterBehaviour extends Behaviour implements mra {
+final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
     private BeamSegment field_s;
     private HazardEffect field_r;
     private TimingPattern timingPattern;

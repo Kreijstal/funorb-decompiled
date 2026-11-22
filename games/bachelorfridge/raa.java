@@ -83,7 +83,7 @@ final class raa extends WidgetWrapper {
         int var1Lifetime1;
         if (param0 != 31) {
           raa.e((byte) 61);
-          var1 = qaa.field_e[rba.field_b];
+          var1 = BoundedRandomAccessFile.field_e[rba.field_b];
           if (var1 != -1) {
             PizzaPartyAnimation.field_v = BoardChange.field_k[var1] + "...";
             cr.field_a = f.b((byte) 73);
@@ -93,7 +93,7 @@ final class raa extends WidgetWrapper {
           cr.field_a = f.b((byte) 73);
           return;
         }
-        var1Lifetime1 = qaa.field_e[rba.field_b];
+        var1Lifetime1 = BoundedRandomAccessFile.field_e[rba.field_b];
         if (var1Lifetime1 != -1) {
           PizzaPartyAnimation.field_v = BoardChange.field_k[var1Lifetime1] + "...";
           cr.field_a = f.b((byte) 73);

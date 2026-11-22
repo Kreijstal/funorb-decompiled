@@ -5,7 +5,7 @@ final class vb {
     static String field_a;
     static String[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -50) {
           field_a = (String) null;
           field_a = null;

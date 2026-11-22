@@ -65,7 +65,7 @@ final class dd extends rj {
         return i.field_u[param0 >> 18] >> 17;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         field_C = null;
         if (param0 != -40) {

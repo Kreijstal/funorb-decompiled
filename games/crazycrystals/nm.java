@@ -307,7 +307,7 @@ final class nm {
         return field_k;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_k = null;
         field_x = null;
         field_b = null;

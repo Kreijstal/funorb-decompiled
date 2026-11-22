@@ -84,7 +84,7 @@ final class m {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
           field_a = (bn) null;

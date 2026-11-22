@@ -11,7 +11,7 @@ final class lo {
     private int[] field_f;
     private int[][][] field_c;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_d = (float[][]) null;
         field_b = (int[][]) null;
     }

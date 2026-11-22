@@ -25,10 +25,10 @@ final class BufferedRandomAccessFile {
         int var2 = -57 / ((83 - param0) / 41);
         if (this.field_e != -1L) {
           if (~this.field_d != ~this.field_e) {
-            this.field_m.a(this.field_e, true);
+            this.field_m.seek(this.field_e, true);
             this.field_d = this.field_e;
           }
-          this.field_m.a(this.field_g, 0, 66, this.field_c);
+          this.field_m.write(this.field_g, 0, 66, this.field_c);
           this.field_d = this.field_d + (long)this.field_c;
           if (this.field_d > this.field_h) {
             this.field_h = this.field_d;
@@ -64,7 +64,7 @@ final class BufferedRandomAccessFile {
           return;
         }
         this.a(param0 ^ 22);
-        this.field_m.a(19260);
+        this.field_m.close(19260);
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
@@ -103,10 +103,10 @@ final class BufferedRandomAccessFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_n.length < param1) {
-              this.field_m.a(this.field_k, true);
+              this.field_m.seek(this.field_k, true);
               this.field_d = this.field_k;
               while (param1 > 0) {
-                int var9_intLifetime1 = this.field_m.a(param1, (byte) 53, param3, param2);
+                int var9_intLifetime1 = this.field_m.read(param1, (byte) 53, param3, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -245,10 +245,10 @@ final class BufferedRandomAccessFile {
               return;
             }
             if (this.field_d != this.field_k) {
-              this.field_m.a(this.field_k, true);
+              this.field_m.seek(this.field_k, true);
               this.field_d = this.field_k;
             }
-            this.field_m.a(param1, param2, 80, param0);
+            this.field_m.write(param1, param2, 80, param0);
             this.field_d = this.field_d + (long)param0;
             if (this.field_d > this.field_h) {
               this.field_h = this.field_d;
@@ -307,7 +307,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           field_i = (ia) null;
@@ -359,7 +359,7 @@ final class BufferedRandomAccessFile {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_a = param0;
         if (this.field_k != this.field_d) {
-          this.field_m.a(this.field_k, true);
+          this.field_m.seek(this.field_k, true);
           this.field_d = this.field_k;
         }
         this.field_l = this.field_k;
@@ -368,7 +368,7 @@ final class BufferedRandomAccessFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          int var3 = this.field_m.a(var2, (byte) 53, this.field_a, this.field_n);
+          int var3 = this.field_m.read(var2, (byte) 53, this.field_a, this.field_n);
           if (var3 == -1) {
             break;
           }
@@ -383,7 +383,7 @@ final class BufferedRandomAccessFile {
         this.field_e = -1L;
         try {
           this.field_m = param0;
-          long dupTemp$0 = param0.a(false);
+          long dupTemp$0 = param0.length(false);
           this.field_h = dupTemp$0;
           this.field_b = dupTemp$0;
           this.field_n = new byte[param1];

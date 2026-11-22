@@ -73,7 +73,7 @@ final class tg {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         musicTracks = null;
         if (param0 < 61) {
           musicTracks = (MusicTrack[]) null;

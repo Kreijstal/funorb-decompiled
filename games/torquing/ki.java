@@ -411,7 +411,7 @@ final class ki extends WidgetContainer implements fp, ng, ba {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

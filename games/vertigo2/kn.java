@@ -55,7 +55,7 @@ final class kn implements WidgetListener {
             bi.a(this.field_d + var8, var9, var8, var9 + this.field_f, 1);
           }
           if (!param2) {
-            kn.a(true);
+            kn.clearStaticReferences(true);
           }
           if (null != this.field_b) {
             var10 = this.field_d + (this.field_i + this.field_n);
@@ -76,7 +76,7 @@ final class kn implements WidgetListener {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_p = null;
         field_m = null;
         field_h = (PacketBuffer[][]) null;

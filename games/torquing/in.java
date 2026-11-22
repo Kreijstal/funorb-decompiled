@@ -70,7 +70,7 @@ final class in {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -28) {

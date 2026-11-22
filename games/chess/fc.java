@@ -9,7 +9,7 @@ final class fc {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -29306) {
           return;

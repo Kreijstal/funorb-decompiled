@@ -622,7 +622,7 @@ public final class BachelorFridge extends NetworkGameClient {
         AudioOutput.releaseStatics();
         i.releaseStatics((byte) -122);
         au.a(-31824);
-        NetworkGameClient.g((byte) 109);
+        NetworkGameClient.clearStaticReferences((byte) 109);
         ClientException.releaseStatics(101);
         JaggrabDownloader.releaseStatics((byte) -84);
         MouseInputHandler.releaseStatics(0);
@@ -661,7 +661,7 @@ public final class BachelorFridge extends NetworkGameClient {
         ema.releaseStatics(0);
         eu.releaseStatics(false);
         ArchiveIndex.releaseStatics(-67);
-        vaa.releaseStatics(-1);
+        GzipDecompressor.releaseStatics(-1);
         tja.releaseStatics(8192);
         mba.releaseStatics(-90);
         DualLinkNode.releaseStatics((byte) 114);
@@ -714,7 +714,7 @@ public final class BachelorFridge extends NetworkGameClient {
         lf.b(123);
         ina.releaseStatics((byte) -101);
         lna.releaseStatics((byte) 126);
-        qaa.releaseStatics(false);
+        BoundedRandomAccessFile.releaseStatics(false);
         ec.releaseStatics(-29584);
         dma.releaseStatics(false);
         mda.releaseStatics(15);
@@ -1342,7 +1342,7 @@ public final class BachelorFridge extends NetworkGameClient {
         IndexedSprite[] var3Lifetime2;
         var7 = field_y;
         try {
-          iha.e(5);
+          iha.clearStaticReferences(5);
           IndexedSpriteState.a(25);
           if (HomingMissileAnimation.field_w != null) {
             if (ScavengerSpecial.field_p.a(0) &&

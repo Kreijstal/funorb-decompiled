@@ -425,7 +425,7 @@ final class qg extends am {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         if (param0 != -1172010644) {
           field_v = (String) null;

@@ -11,7 +11,7 @@ final class k {
     private static int[] field_d;
     private static int field_e;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_d = null;
     }
 

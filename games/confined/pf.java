@@ -13,14 +13,14 @@ final class pf {
     private long field_d;
     private long field_b;
     private int field_f;
-    private fm field_g;
+    private BoundedRandomAccessFile field_g;
     private long field_c;
     static int[] field_h;
     static String field_i;
 
     final void c(int param0) throws IOException {
         this.a(0);
-        this.field_g.b(0);
+        this.field_g.close(0);
         if (param0 >= -77) {
           this.field_a = -48L;
         }
@@ -81,10 +81,10 @@ final class pf {
               return;
             }
             if (~this.field_c != ~this.field_b) {
-              this.field_g.a(-54, this.field_c);
+              this.field_g.seek(-54, this.field_c);
               this.field_b = this.field_c;
             }
-            this.field_g.a(-20832, param0, param3, param2);
+            this.field_g.write(-20832, param0, param3, param2);
             this.field_b = this.field_b + (long)param0;
             if (this.field_k < this.field_b) {
               this.field_k = this.field_b;
@@ -207,7 +207,7 @@ final class pf {
         var14 = Confined.field_J ? 1 : 0;
         try {
           if (param2 <= 83) {
-            this.field_g = (fm) null;
+            this.field_g = (BoundedRandomAccessFile) null;
           }
           try {
             if (param1.length < param0 + param3) {
@@ -237,10 +237,10 @@ final class pf {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_e.length < param3) {
-              this.field_g.a(100, this.field_c);
+              this.field_g.seek(100, this.field_c);
               this.field_b = this.field_c;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_g.a(false, param1, param0, param3);
+                var9_intLifetime1 = this.field_g.read(false, param1, param0, param3);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -351,7 +351,7 @@ final class pf {
         int var4 = Confined.field_J ? 1 : 0;
         this.field_j = 0;
         if (this.field_c != this.field_b) {
-          this.field_g.a(-125, this.field_c);
+          this.field_g.seek(-125, this.field_c);
           this.field_b = this.field_c;
         }
         if (param0 >= -31) {
@@ -363,7 +363,7 @@ final class pf {
           if (200000000 < var2) {
             var2 = 200000000;
           }
-          var3 = this.field_g.a(false, this.field_e, this.field_j, var2);
+          var3 = this.field_g.read(false, this.field_e, this.field_j, var2);
           if (var3 == -1) {
             break;
           }
@@ -380,10 +380,10 @@ final class pf {
         var7 = Confined.field_J ? 1 : 0;
         if (-1L != this.field_a) {
           if (~this.field_b != ~this.field_a) {
-            this.field_g.a(113, this.field_a);
+            this.field_g.seek(113, this.field_a);
             this.field_b = this.field_a;
           }
-          this.field_g.a(-20832, this.field_f, this.field_l, 0);
+          this.field_g.write(-20832, this.field_f, this.field_l, 0);
           this.field_b = this.field_b + (long)this.field_f;
           if (this.field_k < this.field_b) {
             this.field_k = this.field_b;
@@ -421,7 +421,7 @@ final class pf {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -42) {
           return;
         }
@@ -429,14 +429,14 @@ final class pf {
         field_h = null;
     }
 
-    pf(fm param0, int param1, int param2) throws IOException {
+    pf(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_a = -1L;
         this.field_f = 0;
         this.field_d = -1L;
         try {
           this.field_g = param0;
-          dupTemp$0 = param0.a((byte) -115);
+          dupTemp$0 = param0.length((byte) -115);
           this.field_k = dupTemp$0;
           this.field_m = dupTemp$0;
           this.field_l = new byte[param2];

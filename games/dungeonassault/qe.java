@@ -483,7 +483,7 @@ abstract class qe {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_m = null;
         field_g = (int[][]) null;
         field_h = (int[][]) null;

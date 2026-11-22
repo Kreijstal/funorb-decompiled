@@ -183,7 +183,7 @@ final class vm {
         return 0;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

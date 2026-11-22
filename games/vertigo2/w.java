@@ -337,7 +337,7 @@ final class w extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_B = null;
         field_D = null;

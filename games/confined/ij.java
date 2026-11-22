@@ -82,7 +82,7 @@ final class ij extends IntrusiveNode {
         }
         gd var2 = new gd();
         ra.field_d.a((IntrusiveNode) (var2), (byte) 109);
-        fm.a(115, param1);
+        BoundedRandomAccessFile.a(115, param1);
         return var2;
     }
 

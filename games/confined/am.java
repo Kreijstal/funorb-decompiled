@@ -361,7 +361,7 @@ abstract class am extends fj implements hi {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }
@@ -460,7 +460,7 @@ abstract class am extends fj implements hi {
 
     final int c(int param0) {
         if (param0 <= 65) {
-          am.b(true);
+          am.clearStaticReferences(true);
         }
         return this.field_H != null ? this.field_H.c(94) : 0;
     }
@@ -468,7 +468,7 @@ abstract class am extends fj implements hi {
     final static void a(int param0, byte param1, int param2, int param3) {
         sd.field_b = param3;
         cg.field_a = param0;
-        ln.field_c = param2;
+        GzipDecompressor.field_c = param2;
         int var4 = 25 % ((77 - param1) / 33);
     }
 

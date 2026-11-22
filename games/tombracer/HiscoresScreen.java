@@ -210,7 +210,7 @@ final class HiscoresScreen extends DropInMenuScreen {
         Object var5Lifetime1;
         Object var5Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
-        SingleChildWidget.field_v.drawLeft(param1 + 63, false, vea.field_a.toUpperCase() + " - " + bi.field_b[this.field_x].toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.drawLeft(param1 + 63, false, vea.field_a.toUpperCase() + " - " + SoftwareRasterBlitter.field_b[this.field_x].toUpperCase(), 65, -14279929, -1);
         if (param2 > -9) {
           return;
         }

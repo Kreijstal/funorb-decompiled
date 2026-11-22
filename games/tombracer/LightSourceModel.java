@@ -11,7 +11,7 @@ final class LightSourceModel extends TrapModel {
     private boolean field_r;
 
     final void tick(int param0) {
-        mra var4 = null;
+        TimedShooter var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
           return;
@@ -35,8 +35,8 @@ final class LightSourceModel extends TrapModel {
           this.releaseLight(24642);
           return;
         }
-        if (this.part instanceof mra) {
-          var4 = (mra) ((Object) this.part);
+        if (this.part instanceof TimedShooter) {
+          var4 = (TimedShooter) ((Object) this.part);
           if (!var4.isFiring(-90)) {
             this.disableLight(94);
             return;

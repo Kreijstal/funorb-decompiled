@@ -11,7 +11,7 @@ final class ag {
         hk.field_e = 1000000000L / (long)param0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 16760896) {
           return;

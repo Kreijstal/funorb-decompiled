@@ -17,7 +17,7 @@ final class be {
         return jc.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;

@@ -8,7 +8,7 @@ final class gg extends IntrusiveNode {
     static nf[] field_q;
     static od[] field_n;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 <= 7) {
           return;

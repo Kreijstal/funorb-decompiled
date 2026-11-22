@@ -291,7 +291,7 @@ final class ResourceArchive {
         if (this.field_g) {
           this.field_a[param1] = this.field_d.getPackedGroup(param1, (byte) -39);
         } else {
-          this.field_a[param1] = bw.wrapByteStorage(270, this.field_d.getPackedGroup(param1, (byte) -39), false);
+          this.field_a[param1] = ByteStorageFactory.wrapByteStorage(270, this.field_d.getPackedGroup(param1, (byte) -39), false);
         }
     }
 
@@ -519,7 +519,7 @@ final class ResourceArchive {
               if (this.field_j != 0) {
                 var7[var19Lifetime2] = var40[var18Lifetime3];
               } else {
-                var7[var19Lifetime2] = bw.wrapByteStorage(270, var40[var18Lifetime3], false);
+                var7[var19Lifetime2] = ByteStorageFactory.wrapByteStorage(270, var40[var18Lifetime3], false);
               }
             }
           } else {
@@ -531,7 +531,7 @@ final class ResourceArchive {
             if (this.field_j != 0) {
               var7[var12] = var44;
             } else {
-              var7[var12] = bw.wrapByteStorage(270, var37, false);
+              var7[var12] = ByteStorageFactory.wrapByteStorage(270, var37, false);
             }
           }
           return true;

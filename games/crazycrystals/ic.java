@@ -111,7 +111,7 @@ final class ic {
         return this.field_d.field_h != null;
     }
 
-    public static void g() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

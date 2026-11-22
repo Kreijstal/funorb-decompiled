@@ -9,7 +9,7 @@ final class as {
     static MouseInputHandler field_b;
     static s field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         field_f = null;

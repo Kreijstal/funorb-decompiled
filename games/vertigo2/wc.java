@@ -395,7 +395,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_x_withdrew_request", false);
                 if (null != var2) {
-                  k.field_d = in.a(0, var2);
+                  GzipDecompressor.field_d = in.a(0, var2);
                 }
                 var2 = tk.a("mu_x_removed", false);
                 if (var2 != null) {
@@ -1669,7 +1669,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_agreeterms", false);
                 if (null != var2) {
-                  k.field_b = in.a(param0 ^ 0, var2);
+                  GzipDecompressor.field_b = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("create_u13terms", false);
                 if (null != var2) {

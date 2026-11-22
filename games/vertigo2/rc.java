@@ -128,7 +128,7 @@ final class rc {
         va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (!param0) {
           return;

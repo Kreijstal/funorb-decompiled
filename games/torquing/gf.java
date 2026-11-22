@@ -56,7 +56,7 @@ abstract class gf extends eq implements wm {
 
     abstract String a(byte param0, String param1);
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         if (param0 != 0) {
           field_j = (qd) null;

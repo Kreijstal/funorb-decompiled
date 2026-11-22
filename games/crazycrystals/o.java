@@ -36,13 +36,13 @@ final class o extends l {
 
     final l b(byte param0) {
         if (param0 != -90) {
-          o.c(-31);
+          o.clearStaticReferences(-31);
           return this.field_g;
         }
         return this.field_g;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 58) {
           return;
         }

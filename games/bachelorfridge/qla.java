@@ -79,7 +79,7 @@ final class qla extends TileEffect {
     final static void d(int param0) {
         IntrusiveDeque.f(31883);
         StampedeAnimation.f(-21522);
-        uc.b(-103);
+        uc.clearStaticReferences(-103);
         if (param0 != -64) {
           field_g = (Sprite[]) null;
         }

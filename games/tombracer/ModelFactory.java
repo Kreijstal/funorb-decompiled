@@ -399,7 +399,7 @@ final class ModelFactory implements ModelCodec {
                     var4_int = 11;
                   } else {
                     if (!(param0 instanceof ItemBehaviour)) {
-                      if (!(param0 instanceof mra)) {
+                      if (!(param0 instanceof TimedShooter)) {
                         if (param0 instanceof SimpleBlockBehaviour &&
                           ((Trap) (param1)).hasChildren(true)) {
                           var4_int = 16;

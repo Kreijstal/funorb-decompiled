@@ -116,7 +116,7 @@ final class dj extends l {
               if (var4 != 1) {
                 var8 = nc.field_N;
                 synchronized (var8) {
-                  nc.field_N.a(var14, (byte) -34, var10);
+                  nc.field_N.decompress(var14, (byte) -34, var10);
                 }
               } else {
                 en.a(var14, var6, param0, var5, 9);

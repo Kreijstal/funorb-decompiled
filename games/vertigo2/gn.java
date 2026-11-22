@@ -9,7 +9,7 @@ final class gn {
     static long field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != 37) {
           return;

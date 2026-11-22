@@ -20,7 +20,7 @@ final class tc extends PcmStream {
     private int field_t;
     private int field_v;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         if (param0 >= -12) {
           return;
@@ -292,7 +292,7 @@ final class tc extends PcmStream {
             this.field_p = param2;
           }
           if (param0 != 22199) {
-            tc.a((byte) -5);
+            tc.clearStaticReferences((byte) -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -321,7 +321,7 @@ final class tc extends PcmStream {
           this.field_B = param2;
           this.field_v = 1048576;
           if (!param0) {
-            tc.a((byte) 14);
+            tc.clearStaticReferences((byte) 14);
           }
           this.field_A = param1;
         } catch (RuntimeException runtimeException) {

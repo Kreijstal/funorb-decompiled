@@ -109,7 +109,7 @@ final class cs {
             return null;
           }
           if (param0) {
-            cs.a(true);
+            cs.clearStaticReferences(true);
           }
           if (param3 instanceof byte[]) {
             byte[] var4 = (byte[]) (param3);
@@ -176,7 +176,7 @@ final class cs {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         if (!param0) {
           field_d = (SystemTaskService) null;

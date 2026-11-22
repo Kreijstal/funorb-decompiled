@@ -12,7 +12,7 @@ final class SectorCacheStore {
     private BufferedRandomAccessFile field_d;
     static RenderSprite[] explosionSprites;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -121) {
           field_g = (String) null;
         }
@@ -178,7 +178,7 @@ final class SectorCacheStore {
 
     final static int a(int param0) {
         if (param0 <= 55) {
-          SectorCacheStore.d(54);
+          SectorCacheStore.clearStaticReferences(54);
         }
         return (int)(1000000000L / ld.field_b);
     }

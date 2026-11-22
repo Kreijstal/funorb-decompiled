@@ -20,7 +20,7 @@ final class uf {
           return 2;
         }
         if (this.field_f != 2) {
-          if (~this.field_g == ~gl.field_i) {
+          if (~this.field_g == ~BoundedRandomAccessFile.field_i) {
             return 1;
           }
           if (mh.field_h == 2 &&
@@ -35,7 +35,7 @@ final class uf {
         if (this.field_a > 0) {
           return 2;
         }
-        if (~this.field_g == ~gl.field_i) {
+        if (~this.field_g == ~BoundedRandomAccessFile.field_i) {
           return 1;
         }
         if (mh.field_h == 2 &&

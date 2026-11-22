@@ -11,7 +11,7 @@ final class dg {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 35) {
           return;
         }

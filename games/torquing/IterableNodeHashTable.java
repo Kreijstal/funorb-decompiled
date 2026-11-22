@@ -55,7 +55,7 @@ final class IterableNodeHashTable implements Iterable {
         return var6;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 93) {
           return;
         }

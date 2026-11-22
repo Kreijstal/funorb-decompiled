@@ -7,7 +7,7 @@ final class oc {
 
     final static int a(boolean param0) {
         if (param0) {
-          oc.b(true);
+          oc.clearStaticReferences(true);
         }
         return oh.field_d;
     }
@@ -131,7 +131,7 @@ final class oc {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           return;

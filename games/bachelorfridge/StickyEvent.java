@@ -1081,7 +1081,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "rule_1_1");
                 if (var2 != null) {
-                  vaa.field_c = qq.a(var2, param0);
+                  GzipDecompressor.field_c = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_1_2");
                 if (null != var2) {
@@ -2167,7 +2167,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "entermultiplayerlobby");
                 if (null != var2) {
-                  qaa.field_a = qq.a(var2, param0);
+                  BoundedRandomAccessFile.field_a = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "singleplayergame");
                 if (null != var2) {

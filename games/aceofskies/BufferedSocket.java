@@ -21,7 +21,7 @@ final class BufferedSocket implements Runnable {
         this.a(1);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 <= -123) {
           return;
@@ -261,7 +261,7 @@ final class BufferedSocket implements Runnable {
                 if (param0 == 1) {
                   return;
                 }
-                BufferedSocket.c((byte) -69);
+                BufferedSocket.clearStaticReferences((byte) -69);
                 return;
               }
             }
@@ -270,7 +270,7 @@ final class BufferedSocket implements Runnable {
           if (param0 == 1) {
             return;
           }
-          BufferedSocket.c((byte) -69);
+          BufferedSocket.clearStaticReferences((byte) -69);
           return;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

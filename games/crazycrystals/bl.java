@@ -317,7 +317,7 @@ final class bl extends IntrusiveNode {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_x = null;
         field_K = null;
         field_E = null;

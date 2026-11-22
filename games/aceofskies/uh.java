@@ -23,7 +23,7 @@ final class uh {
     boolean field_d;
     int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         upgradeSounds = null;
         if (param0 > -72) {
           upgradeSounds = (PcmSample[]) null;

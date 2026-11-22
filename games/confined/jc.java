@@ -45,7 +45,7 @@ final class jc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_f = null;
         field_a = null;

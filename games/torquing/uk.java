@@ -88,7 +88,7 @@ final class uk {
         return param1 == (-param1 & param1) ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {

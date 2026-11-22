@@ -143,7 +143,7 @@ final class kd {
         l.a(true, 10, 6, 34, 10, 2, 3, 3000, param0 + 0, new int[][]{new int[]{7}}, 70000, true, 5);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_d = null;
         field_e = null;

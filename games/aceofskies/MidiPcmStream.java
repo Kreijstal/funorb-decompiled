@@ -1243,7 +1243,7 @@ final class MidiPcmStream extends PcmStream {
         this.b(2993, param0, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 != -543142776) {
           field_i = (int[]) null;

@@ -16,7 +16,7 @@ final class kk extends PcmStream {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         if (param0 != 160) {
           return;

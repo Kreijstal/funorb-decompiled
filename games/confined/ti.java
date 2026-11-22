@@ -718,7 +718,7 @@ final class ti {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_l = null;
         field_o = null;
         field_b = null;

@@ -4,7 +4,7 @@
 final class MidiVoice extends IntrusiveNode {
     int field_w;
     int field_z;
-    bq field_v;
+    MidiPatchEnvelope field_v;
     int field_q;
     int field_s;
     int field_A;

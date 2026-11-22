@@ -1078,7 +1078,7 @@ final class dd extends bl {
         this.field_ob = param0;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_rb = null;
         field_cb = null;
     }

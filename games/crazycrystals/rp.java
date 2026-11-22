@@ -19,7 +19,7 @@ final class rp implements Runnable {
         this.field_b = false;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
           return;
         }

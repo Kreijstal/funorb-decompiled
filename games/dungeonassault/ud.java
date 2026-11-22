@@ -121,7 +121,7 @@ final class ud extends qe {
         ub.field_p = 0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         field_w = null;
         field_t = null;

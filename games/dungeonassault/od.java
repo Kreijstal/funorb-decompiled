@@ -430,7 +430,7 @@ final class od {
         return true;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 < 81) {

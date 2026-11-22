@@ -13,7 +13,7 @@ final class om extends IntrusiveNode {
     int field_n;
     static jf field_s;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_s = null;
         if (param0 != -50) {

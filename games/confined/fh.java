@@ -8,7 +8,7 @@ final class fh {
     static String field_c;
     static bi field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_b = null;
           field_c = null;

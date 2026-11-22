@@ -6,7 +6,7 @@ final class DemoCourseGenerator extends CourseGenerator {
     static IntrusiveDeque field_g;
 
     DemoCourseGenerator(int param0) {
-        super(-1 + aq.getMainRoomCount(-5640) + aq.getMainRoomCount(-5640), param0);
+        super(-1 + MainRoomCatalog.getMainRoomCount(-5640) + MainRoomCatalog.getMainRoomCount(-5640), param0);
     }
 
     public static void releaseStatics(byte param0) {
@@ -38,7 +38,7 @@ final class DemoCourseGenerator extends CourseGenerator {
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         var2 = new CourseLayout(this.roomCount);
-        var3 = aq.getMainRoomCount(-5640);
+        var3 = MainRoomCatalog.getMainRoomCount(-5640);
         var4 = RandomAccessFileHandle.getConnectorRoomCount(57);
         var5 = 0;
         var6 = 0;

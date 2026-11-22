@@ -118,7 +118,7 @@ final class kk extends bm implements mc {
         return null;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_N = (AircraftDefinition) null;
           field_J = null;

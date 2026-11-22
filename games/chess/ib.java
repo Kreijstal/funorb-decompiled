@@ -9,12 +9,12 @@ final class ib {
 
     final static int a(boolean param0) {
         if (!param0) {
-          ib.a(78);
+          ib.clearStaticReferences(78);
         }
         return qf.field_a;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -12374) {
           return;
         }

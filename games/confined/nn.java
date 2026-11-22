@@ -21,7 +21,7 @@ final class nn extends IntrusiveNode {
         return (al[]) null;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -11650) {
           field_p = null;
           field_t = null;

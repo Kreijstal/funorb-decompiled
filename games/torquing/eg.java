@@ -77,7 +77,7 @@ final class eg extends am {
         int[] var9Lifetime1;
         var8 = Torquing.field_u;
         if (param0 <= 86) {
-          eg.b(-24);
+          eg.clearStaticReferences(-24);
         }
         var11 = this.field_l.a(param1, 25657);
         var10 = var11;
@@ -150,7 +150,7 @@ final class eg extends am {
         return var9Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -17) {
           field_t = (ResourceArchive) null;
         }

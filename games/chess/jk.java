@@ -6,7 +6,7 @@ import java.io.*;
 final class jk implements Runnable {
     private ff field_h;
     static java.lang.reflect.Method field_m;
-    eg field_n;
+    BoundedRandomAccessFile field_n;
     private static volatile long field_f;
     private gj field_v;
     boolean field_k;
@@ -17,15 +17,15 @@ final class jk implements Runnable {
     private Thread field_t;
     private Object field_g;
     private static String field_e;
-    eg field_a;
+    BoundedRandomAccessFile field_a;
     private boolean field_s;
     private static String field_j;
     private Object field_u;
     java.awt.EventQueue field_x;
-    eg field_d;
+    BoundedRandomAccessFile field_d;
     private static int field_b;
     static String field_o;
-    eg[] field_r;
+    BoundedRandomAccessFile[] field_r;
     static String field_i;
     private boolean field_p;
 
@@ -78,7 +78,7 @@ final class jk implements Runnable {
           }
           if (null != this.field_a) {
             try {
-              this.field_a.a(10992);
+              this.field_a.close(10992);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -86,7 +86,7 @@ final class jk implements Runnable {
           }
           if (null != this.field_n) {
             try {
-              this.field_n.a(10992);
+              this.field_n.close(10992);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -96,7 +96,7 @@ final class jk implements Runnable {
             for (var2_int = 0; var2_int < this.field_r.length; var2_int++) {
               if (null != this.field_r[var2_int]) {
                 try {
-                  this.field_r[var2_int].a(10992);
+                  this.field_r[var2_int].close(10992);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -106,7 +106,7 @@ final class jk implements Runnable {
           }
           if (null != this.field_d) {
             try {
-              this.field_d.a(param0 ^ 10992);
+              this.field_d.close(param0 ^ 10992);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -173,15 +173,15 @@ final class jk implements Runnable {
         return this.a(1, 0, param1, 4, 0);
     }
 
-    private final static eg a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
         try {
           int var6 = 0;
-          eg stackIn_15_0 = null;
+          BoundedRandomAccessFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          eg var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           if (param2 <= 74) {
             field_j = (String) null;
@@ -201,7 +201,7 @@ final class jk implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new eg(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class jk implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          eg var3_ref = null;
+          BoundedRandomAccessFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           oa var3_ref3 = null;
@@ -580,12 +580,12 @@ final class jk implements Runnable {
         }
         ul.a(21747, field_j, field_b);
         if (this.field_k) {
-          this.field_d = new eg(ul.a((String) null, field_b, "random.dat", (byte) 86), "rw", 25L);
-          this.field_a = new eg(ul.a((byte) -103, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_n = new eg(ul.a((byte) -69, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_r = new eg[param2];
+          this.field_d = new BoundedRandomAccessFile(ul.a((String) null, field_b, "random.dat", (byte) 86), "rw", 25L);
+          this.field_a = new BoundedRandomAccessFile(ul.a((byte) -103, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_n = new BoundedRandomAccessFile(ul.a((byte) -69, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_r = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_r[var5_int] = new eg(ul.a((byte) -113, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_r[var5_int] = new BoundedRandomAccessFile(ul.a((byte) -113, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_p) {
             try {

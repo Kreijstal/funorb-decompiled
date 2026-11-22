@@ -12,7 +12,7 @@ final class bb extends qf implements Cloneable {
         int var10 = 0;
         int var11 = CrazyCrystals.field_B;
         if (param5 != 4261) {
-          bb.b(true);
+          bb.clearStaticReferences(true);
         }
         if (this.field_u) {
           var7 = param2 + param1 << 4;
@@ -37,7 +37,7 @@ final class bb extends qf implements Cloneable {
         super(param0);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_y = null;
         field_x = null;
         if (!param0) {
@@ -114,7 +114,7 @@ final class bb extends qf implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= 0) {
-            bb.b(false);
+            bb.clearStaticReferences(false);
           }
           fn.field_j = fn.field_j - 5;
           mb.field_g = mb.field_g - 5;

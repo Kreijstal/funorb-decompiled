@@ -24,7 +24,7 @@ final class jn extends fb {
     final static void a(double[] param0, int param1, int param2) {
         double var3_double = param0[param1];
         if (param2 != 16801) {
-          jn.e((byte) 65);
+          jn.clearStaticReferences((byte) 65);
         }
         double var5 = param0[param1 + 1];
         double var7 = param0[2 + param1];
@@ -361,7 +361,7 @@ final class jn extends fb {
         return of.a(bh.i(81), (byte) 95);
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_P = null;
         if (param0 != -61) {
           field_P = (byte[]) null;

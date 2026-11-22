@@ -98,7 +98,7 @@ class md {
         }
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_e = null;
     }
 

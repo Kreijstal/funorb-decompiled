@@ -439,7 +439,7 @@ class lm extends IntrusiveNode {
         this.field_o.a((byte) 34, this, param1, param3, true);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_l = (byte[][]) null;
         if (param0 > -110) {

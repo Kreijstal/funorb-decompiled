@@ -37,7 +37,7 @@ final class od extends fb {
               stackIn_3_1 = !(param0);
               u.a(stackIn_2_0, stackIn_3_1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
               if (param0) {
-                od.b(false);
+                od.clearStaticReferences(false);
               }
               u.a(param1, true, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
               u.a(param1, true, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
@@ -123,7 +123,7 @@ final class od extends fb {
         return wc.field_E;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_O = (long[][]) null;
         field_X = null;
         field_N = null;

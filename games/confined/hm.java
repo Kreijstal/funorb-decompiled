@@ -345,7 +345,7 @@ final class hm extends dc {
         return param0;
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_ib = null;
         field_gb = null;
         field_mb = null;

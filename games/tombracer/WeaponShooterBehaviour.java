@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class WeaponShooterBehaviour extends Behaviour implements mra {
+final class WeaponShooterBehaviour extends Behaviour implements TimedShooter {
     private boolean field_t;
     private TimingPattern field_n;
     private boolean field_o;

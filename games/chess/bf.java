@@ -51,11 +51,11 @@ abstract class bf extends ma implements ee {
     final static void a(boolean param0, int param1) {
         ji.field_U = 1000000000L / (long)param1;
         if (!param0) {
-          bf.d(true);
+          bf.clearStaticReferences(true);
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_M = null;
         if (param0) {
           return;
@@ -77,7 +77,7 @@ abstract class bf extends ma implements ee {
           this.field_L = param1;
           this.field_L.field_j = this;
           if (param0) {
-            bf.d(true);
+            bf.clearStaticReferences(true);
           }
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -31,7 +31,7 @@ abstract class c {
         vd.a(param1, 0, -14561, 0, param0, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -9431) {
           return;
         }

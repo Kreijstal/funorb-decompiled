@@ -12,7 +12,7 @@ final class re {
     static int field_i;
     static int field_b;
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_e = null;
         field_g = null;
         field_a = null;

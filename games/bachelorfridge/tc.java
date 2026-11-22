@@ -28,7 +28,7 @@ final class tc {
         if (sea.field_j) {
           return false;
         }
-        return vaa.a(param2, 1, param1);
+        return GzipDecompressor.a(param2, 1, param1);
     }
 
     final void a(int param0, tc param1) {

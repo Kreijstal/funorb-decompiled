@@ -138,7 +138,7 @@ final class fl implements wo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_f = null;
         field_i = null;

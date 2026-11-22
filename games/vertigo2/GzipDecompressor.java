@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class k {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_a;
     static String field_d;
     static Sprite field_c;
@@ -51,11 +51,11 @@ final class k {
         }
     }
 
-    public k() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 >= -4) {
           field_d = (String) null;
@@ -74,7 +74,7 @@ final class k {
         return new ve[]{g.field_f, dk.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, br.field_Y, bd.field_e, RandomAccessCacheFile.field_g, DelegatingCanvas.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
     }
 
-    final void a(PacketBuffer param0, byte param1, byte[] param2) {
+    final void decompress(PacketBuffer param0, byte param1, byte[] param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -131,7 +131,7 @@ final class k {
         }
     }
 
-    private k(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     static {

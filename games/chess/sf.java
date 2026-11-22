@@ -9,7 +9,7 @@ final class sf extends hl {
     private km[] field_x;
     static boolean[] field_v;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         if (param0 < 99) {
           return;
@@ -73,7 +73,7 @@ final class sf extends hl {
         int var8 = 0;
         try {
           if (param0 < 58) {
-            sf.c(95);
+            sf.clearStaticReferences(95);
           }
           if (!param4.field_w) {
             stackIn_8_0 = (param4.d((byte) -67)) ? 1 : 0;

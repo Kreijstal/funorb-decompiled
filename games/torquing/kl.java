@@ -93,7 +93,7 @@ final class kl extends PcmStream {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -113) {
           field_n = null;
           field_p = null;

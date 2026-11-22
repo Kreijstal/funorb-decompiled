@@ -99,7 +99,7 @@ final class h extends TextureOperator {
         return this.field_E;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_D = null;
         field_A = null;
         if (param0 != 1) {

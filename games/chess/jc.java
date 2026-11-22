@@ -27,7 +27,7 @@ final class jc {
 
     final IntrusiveNode a(boolean param0) {
         if (!param0) {
-          jc.d(73);
+          jc.clearStaticReferences(73);
         }
         IntrusiveNode var2 = this.field_h;
         if (this.field_a == var2) {
@@ -196,7 +196,7 @@ final class jc {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -31) {
           return;
         }
@@ -334,7 +334,7 @@ final class jc {
           return null;
         }
         if (param0 >= -90) {
-          jc.d(9);
+          jc.clearStaticReferences(9);
         }
         this.field_h = var2.previous;
         return var2;

@@ -103,7 +103,7 @@ final class od extends on {
         this.field_u = null;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_E = null;
         field_D = null;
     }

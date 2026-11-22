@@ -20,7 +20,7 @@ final class ia extends ii implements vg {
 
     public ia() {
         super(0, 0, 476, 225, (ca) null);
-        this.field_V = new ck(qp.field_c, (pg) null);
+        this.field_V = new ck(BoundedRandomAccessFile.field_c, (pg) null);
         this.field_Z = new ck(pp.field_I, (pg) null);
         this.field_T = new ck(kd.field_b, (pg) null);
         na var1 = new na();

@@ -7,7 +7,7 @@ final class td {
     static w field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != -12546) {
           return;

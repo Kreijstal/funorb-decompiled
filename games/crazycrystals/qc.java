@@ -19,7 +19,7 @@ abstract class qc extends oh {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_i = null;
         if (param0 <= 114) {

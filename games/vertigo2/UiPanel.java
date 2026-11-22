@@ -504,7 +504,7 @@ class UiPanel extends fh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_eb = null;
         field_E = null;
         field_Z = null;

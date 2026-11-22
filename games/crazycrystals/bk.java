@@ -11,7 +11,7 @@ final class bk {
     int[] field_c;
     private int[][][] field_b;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_h = (float[][]) null;
         field_g = (int[][]) null;
     }

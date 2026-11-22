@@ -107,7 +107,7 @@ final class td implements WidgetListener {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_l = null;
         if (param0 < 22) {
@@ -161,7 +161,7 @@ final class td implements WidgetListener {
           bi.c();
         }
         if (param2 != -77) {
-          td.a((byte) -93);
+          td.clearStaticReferences((byte) -93);
         }
         mh.a(param1, false);
     }

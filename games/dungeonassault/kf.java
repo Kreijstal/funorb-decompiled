@@ -43,7 +43,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
         return 30;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         if (!param0) {
           field_k = null;

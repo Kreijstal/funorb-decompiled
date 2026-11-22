@@ -881,7 +881,7 @@ abstract class se extends DualLinkNode {
         this.field_D = param1;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_J = null;
         field_A = null;
     }

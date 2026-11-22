@@ -433,7 +433,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         framebuffer = null;
         scanlineMaskStarts = null;
         scanlineMaskWidths = null;

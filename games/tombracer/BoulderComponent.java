@@ -30,7 +30,7 @@ final class BoulderComponent extends PathMoverComponent {
           if (var3 != null) {
             hka.field_b.populateItems((byte) -22, false);
             var4 = hka.field_b;
-            var5_ref_String = ai.field_d;
+            var5_ref_String = AvailabilityQueryFactory.field_d;
             var4.field_f.addItem((byte) -101, 5, var5_ref_String);
             var4Lifetime2 = hka.field_b;
             var5 = PasswordValidator.field_m;
@@ -46,7 +46,7 @@ final class BoulderComponent extends PathMoverComponent {
         if (var3Lifetime1 != null) {
           hka.field_b.populateItems((byte) -22, false);
           var4Lifetime1 = hka.field_b;
-          var5_ref_StringLifetime1 = ai.field_d;
+          var5_ref_StringLifetime1 = AvailabilityQueryFactory.field_d;
           var4Lifetime1.field_f.addItem((byte) -101, 5, var5_ref_StringLifetime1);
           var4Lifetime1Lifetime1 = hka.field_b;
           var5Lifetime1 = PasswordValidator.field_m;

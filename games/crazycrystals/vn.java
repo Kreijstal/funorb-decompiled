@@ -190,7 +190,7 @@ final class vn extends ue {
             stackIn_83_4 = 16728064;
           }
           ((ef) (Object) stackIn_79_0).b(stackIn_80_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, -1);
-          go.field_l.b(ih.field_d, 510, -5 + (64 + this.field_h), 8438015, -1);
+          go.field_l.b(GzipDecompressor.field_d, 510, -5 + (64 + this.field_h), 8438015, -1);
           stackIn_85_0 = go.field_l;
           if (var12 == 0) {
             stackIn_86_1 = Integer.toString(tm.field_a[var5]);
@@ -228,7 +228,7 @@ final class vn extends ue {
         return;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_m = null;
         if (param0 != -100) {

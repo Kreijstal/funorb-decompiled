@@ -47,7 +47,7 @@ final class jp {
     short[] field_a;
     short[] field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         field_R = null;
         field_u = null;

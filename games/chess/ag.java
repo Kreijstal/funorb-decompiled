@@ -20,7 +20,7 @@ final class ag {
     final static void a(int param0, boolean param1, float param2, String param3) {
         try {
           if (param0 != 11819) {
-            ag.a(-62);
+            ag.clearStaticReferences(-62);
           }
           if (null == mk.field_e) {
             mk.field_e = new ch(jh.field_e, qf.field_g);
@@ -38,7 +38,7 @@ final class ag {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 9604) {

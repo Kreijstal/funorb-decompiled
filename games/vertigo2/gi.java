@@ -13,7 +13,7 @@ final class gi extends ah {
     static IntrusiveDeque field_v;
     static int field_u;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         field_t = null;
         if (param0) {

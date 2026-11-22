@@ -182,7 +182,7 @@ final class oj extends WidgetContainer implements ij {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_O = (int[][]) null;
         field_H = null;

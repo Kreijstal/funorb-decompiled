@@ -28,7 +28,7 @@ final class en {
         return stackIn_2_0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

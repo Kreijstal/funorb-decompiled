@@ -75,7 +75,7 @@ final class al {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 > 9) {
           field_c = null;

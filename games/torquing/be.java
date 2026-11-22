@@ -1373,7 +1373,7 @@ final class be {
         be.a(param0, param1, param2, param3, param4, param5, be.a(var20Lifetime1, param6), be.a(var20Lifetime1, param7), be.a(var20Lifetime1, param8));
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_n = null;
         field_a = null;
         field_c = null;

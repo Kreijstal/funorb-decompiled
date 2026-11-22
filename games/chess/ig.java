@@ -12,7 +12,7 @@ final class ig {
     static int field_g;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_d = null;
         field_a = null;

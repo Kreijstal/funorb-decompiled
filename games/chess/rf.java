@@ -110,7 +110,7 @@ final class rf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 9) {
           field_a = (String) null;

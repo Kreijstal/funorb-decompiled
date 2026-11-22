@@ -7,7 +7,7 @@ final class ge {
     static String field_a;
     static db field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 > -101) {
           field_d = (dl) null;

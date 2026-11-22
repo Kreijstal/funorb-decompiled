@@ -149,7 +149,7 @@ final class qk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         brassSliderSpriteData = null;
         if (param0 != 0) {
           return;

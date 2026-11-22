@@ -8,7 +8,7 @@ final class bp {
     static int[] field_c;
     static Vector field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > 75) {
           field_a = null;
           field_c = null;

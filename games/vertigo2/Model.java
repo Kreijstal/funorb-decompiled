@@ -1002,7 +1002,7 @@ final class Model extends sb {
         this.b();
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_C = null;
         field_s = null;
     }

@@ -78,7 +78,7 @@ final class r extends ff {
         return (String) null;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 27) {
           field_i = (int[]) null;
           field_i = null;

@@ -11,7 +11,7 @@ final class jr extends DualLinkNode {
     static String field_r;
     int[] field_t;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         if (param0) {
           return;

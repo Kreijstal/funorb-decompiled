@@ -111,7 +111,7 @@ final class nb extends ci {
               if (!uh.i(param0 ^ 23156).field_B.field_d) {
                 var5 = -1;
               } else {
-                var5 = eg.a(uh.i(param0 + 23156).field_B.field_l, param0 + 0, uh.i(23156).field_B.field_k);
+                var5 = BoundedRandomAccessFile.a(uh.i(param0 + 23156).field_B.field_l, param0 + 0, uh.i(23156).field_B.field_k);
               }
             }
           } else {

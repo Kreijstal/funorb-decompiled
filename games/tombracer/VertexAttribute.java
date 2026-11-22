@@ -43,7 +43,7 @@ final class VertexAttribute {
         UiComponent var7 = null;
         try {
           ConsoleValue.field_e = MaskBlendOperator.loadSpriteByName(param0, "basic", "display_name_changed", 121);
-          TextureCoordinateGeneration.field_b = new TitledScrollPanel(0L, LegacyOpenGlWaterTextures.field_d, GraphicsQuality.field_a, ai.field_d);
+          TextureCoordinateGeneration.field_b = new TitledScrollPanel(0L, LegacyOpenGlWaterTextures.field_d, GraphicsQuality.field_a, AvailabilityQueryFactory.field_d);
           OpenGlSprite.field_j = new TitledScrollPanel(0L, LegacyOpenGlWaterTextures.field_d, ParticleEffects.field_a, uma.field_a);
           OpenGlVertexLayout.field_e = new UiComponent(0L, (UiComponent) null);
           NameEntryPopup.field_yb = new UiComponent(0L, Corpse.field_i);

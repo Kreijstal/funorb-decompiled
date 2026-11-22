@@ -47,7 +47,7 @@ final class uc extends pv {
         return false;
     }
 
-    final static void b(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 >= -4) {
           field_j = (rga) null;
         }

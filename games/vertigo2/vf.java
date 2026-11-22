@@ -230,7 +230,7 @@ final class vf extends TextureOperator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         if (param0 != 36) {
           field_B = (UiPanel) null;

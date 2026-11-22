@@ -10,7 +10,7 @@ final class rm {
     int field_b;
     static int[] field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_c = null;
         if (param0 <= 109) {

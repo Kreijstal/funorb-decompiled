@@ -28,7 +28,7 @@ final class ec extends dm {
           }
           return var1;
         }
-        ec.d((byte) 58);
+        ec.clearStaticReferences((byte) 58);
         var1Lifetime1 = "";
         if (null != ResourceArchive.field_b) {
           var1Lifetime1 = ResourceArchive.field_b.i((byte) 52);
@@ -62,7 +62,7 @@ final class ec extends dm {
         return var2Lifetime2;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_e = null;
         field_f = null;

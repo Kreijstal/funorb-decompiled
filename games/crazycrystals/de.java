@@ -7,7 +7,7 @@ final class de extends f implements Cloneable {
     ea field_j;
     private int field_i;
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 3) {
           field_k = (dl) null;
           field_k = null;

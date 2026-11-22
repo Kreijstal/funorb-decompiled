@@ -630,7 +630,7 @@ final class c extends sc {
           }
           var2Lifetime2 = wm.a("keycode_energyweapon3", (byte) 85);
           if (var2Lifetime2 != null) {
-            ln.field_b = var2Lifetime2[0] & 255;
+            GzipDecompressor.field_b = var2Lifetime2[0] & 255;
           }
           var2Lifetime3 = wm.a("keycode_energyweapon4", (byte) 84);
           if (null != var2Lifetime3) {

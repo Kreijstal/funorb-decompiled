@@ -179,7 +179,7 @@ final class gl {
         return var12Lifetime7;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_i = null;
           field_p = null;

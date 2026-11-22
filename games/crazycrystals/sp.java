@@ -203,7 +203,7 @@ final class sp {
         return "" + this.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_a = null;
         if (param0 != 113) {

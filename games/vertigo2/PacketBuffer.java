@@ -124,7 +124,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$4] = (byte)(int)param1;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 < 84) {
           return;
@@ -556,7 +556,7 @@ class PacketBuffer extends IntrusiveNode {
         wc.field_m.b(he.field_x, 118);
         wc.field_m.b(lr.field_P, 126);
         if (param1) {
-          PacketBuffer.e(-28);
+          PacketBuffer.clearStaticReferences(-28);
         }
         lr.field_P.b(im.field_j, 120);
         lr.field_P.b(Vertigo2.field_M, 120);

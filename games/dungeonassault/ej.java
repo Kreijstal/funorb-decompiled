@@ -159,7 +159,7 @@ final class ej {
         return;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

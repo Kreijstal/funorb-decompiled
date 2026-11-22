@@ -7,7 +7,7 @@ final class cj implements fe {
     static boolean field_d;
     static nf[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 > -80) {
@@ -74,7 +74,7 @@ final class cj implements fe {
         nf var8 = null;
         try {
           if (param0 >= -97) {
-            cj.a((byte) -62);
+            cj.clearStaticReferences((byte) -62);
           }
           var6_int = param3.field_q + param1;
           var7 = param4 + param3.field_m;

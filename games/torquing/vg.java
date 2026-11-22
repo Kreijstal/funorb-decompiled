@@ -477,7 +477,7 @@ final class vg extends eh {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -75) {
           return;
         }
@@ -513,7 +513,7 @@ final class vg extends eh {
 
     final lm a(byte param0) {
         if (param0 > -24) {
-          vg.d((byte) -59);
+          vg.clearStaticReferences((byte) -59);
         }
         return (lm) ((Object) new ej(this.field_g[0], this.field_g[1], this.field_g[2], 30.0));
     }

@@ -99,7 +99,7 @@ class pv extends IntrusiveNode {
           ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (nu.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
           SnowEvent.field_q.a((byte) -58, -2 + (nu.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, nu.field_f.field_sb, rj.field_j, 2);
           jj.field_wb.a(40, 31407, ela.field_i.field_sb, 0, -40 + ela.field_i.field_p);
-          vaa.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
+          GzipDecompressor.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
           vm.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);
           var2_int = 3 + ld.field_q;
           if (qha.field_c.length < 2) {

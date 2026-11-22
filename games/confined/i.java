@@ -155,7 +155,7 @@ abstract class i extends GameAppletShell {
             dc.d(param0 ^ 6);
             vh.b(-4749);
             fh.a(2, (byte) -1, ii.field_g);
-            sd.a((byte) -4);
+            sd.clearStaticReferences((byte) -4);
             eg.field_l = true;
             ClientException.field_e = ri.a(-3) + 15000L;
           }

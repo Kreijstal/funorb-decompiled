@@ -88,7 +88,7 @@ final class fk extends kl {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_v = null;
         field_r = null;

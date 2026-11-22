@@ -200,7 +200,7 @@ final class MenuInputState {
         this.selectedIndex = keyboardItemIndex;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_b = null;
         if (param0 >= -117) {

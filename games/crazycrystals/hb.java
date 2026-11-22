@@ -112,7 +112,7 @@ final class hb extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_l = null;
         field_k = null;

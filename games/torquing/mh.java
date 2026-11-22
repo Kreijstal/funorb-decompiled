@@ -2399,7 +2399,7 @@ final class mh {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 != 32) {
           return;

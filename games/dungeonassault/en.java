@@ -6,7 +6,7 @@ abstract class en {
     static cn[] field_b;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
           return;

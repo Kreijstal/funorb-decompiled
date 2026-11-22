@@ -110,7 +110,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         upgradeSprites = null;
         field_a = null;
         if (param0 != 127) {

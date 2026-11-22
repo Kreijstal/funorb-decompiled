@@ -1074,7 +1074,7 @@ final class fc extends bn {
         }
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_ab = null;
         field_h = null;
         field_m = null;

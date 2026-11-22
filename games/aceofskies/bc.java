@@ -114,7 +114,7 @@ final class bc extends to {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_v = null;
         if (param0 != 14912) {
           field_v = (String) null;

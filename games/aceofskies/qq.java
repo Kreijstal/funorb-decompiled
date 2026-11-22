@@ -20,7 +20,7 @@ final class qq {
         return GameKeyHandler.a(-1, ci.gameRandom, param1);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 < 35) {
           field_g = (AircraftDefinition) null;

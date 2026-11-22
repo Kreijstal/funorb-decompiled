@@ -15,7 +15,7 @@ final class s extends IntrusiveNode {
     static IntrusiveDeque field_t;
     static String field_v;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_t = null;
         field_r = null;

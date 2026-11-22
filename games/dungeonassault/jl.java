@@ -30,7 +30,7 @@ final class jl {
             if (!param1) {
               return;
             }
-            jl.a((byte) 127);
+            jl.clearStaticReferences((byte) 127);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -77,7 +77,7 @@ final class jl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -49) {
           field_c = null;
           field_b = null;

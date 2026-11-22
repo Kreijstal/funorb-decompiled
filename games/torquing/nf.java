@@ -317,7 +317,7 @@ final class nf {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_q = null;
         field_j = null;
         field_p = null;

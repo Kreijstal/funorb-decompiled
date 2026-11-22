@@ -49,7 +49,7 @@ final class dq extends pc {
         se.a((byte) -108, param1, 3);
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         if (param0 < -60) {
           field_H = null;
@@ -150,7 +150,7 @@ final class dq extends pc {
           var2 = new dh(param1, uo.field_k, jm.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
           ok.a(2188450);
           if (param0 != -18289) {
-            dq.f((byte) -96);
+            dq.clearStaticReferences((byte) -96);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;

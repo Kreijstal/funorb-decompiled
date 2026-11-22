@@ -23,7 +23,7 @@ final class ak extends IntrusiveNode {
         return param0 | param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = (int[][]) null;
         if (param0 == 21296) {
           field_m = null;

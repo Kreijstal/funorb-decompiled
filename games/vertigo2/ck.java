@@ -13,7 +13,7 @@ final class ck extends d {
           super.a(param0, param1, (byte) 126, param3);
           return;
         }
-        ck.b(false);
+        ck.clearStaticReferences(false);
         super.a(param0, param1, (byte) 126, param3);
     }
 
@@ -35,7 +35,7 @@ final class ck extends d {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_K = null;
         if (!param0) {
           return;

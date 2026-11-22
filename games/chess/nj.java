@@ -186,7 +186,7 @@ final class nj extends hl {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_v = null;
         field_w = null;
@@ -270,7 +270,7 @@ final class nj extends hl {
           var2_int = ph.field_j.field_e;
           var3 = ph.field_j.field_i;
           if (param0 != -101) {
-            nj.c(-5);
+            nj.clearStaticReferences(-5);
           }
           var4 = qi.field_o.field_xb.b(param1, 272, qi.field_o.field_K);
           var5 = -(var4 / 2) + 7 + (var3 / 2 - 110);

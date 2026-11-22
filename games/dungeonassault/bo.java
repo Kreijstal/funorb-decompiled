@@ -132,7 +132,7 @@ final class bo extends ok {
         be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Lb = null;
         field_Mb = null;
         field_Kb = null;

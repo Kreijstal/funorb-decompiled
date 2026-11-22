@@ -26,7 +26,7 @@ final class pd extends rj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_G = null;
         field_A = null;

@@ -492,7 +492,7 @@ final class mq extends va {
           var2_int = param0.length();
           var3 = new char[var2_int];
           if (param1) {
-            mq.a(false);
+            mq.clearStaticReferences(false);
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3[-var4 + var2_int - 1] = param0.charAt(var4);
@@ -513,7 +513,7 @@ final class mq extends va {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

@@ -38,7 +38,7 @@ final class tj extends ao {
         return InstrumentPatch.field_h;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -45) {
           return;
         }

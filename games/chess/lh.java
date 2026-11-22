@@ -375,7 +375,7 @@ abstract class lh extends l {
         return this.a(param0, new int[]{param1}, field_A);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_v = null;
         field_A = null;
     }

@@ -42,7 +42,7 @@ final class rk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 54) {
           return;
         }
@@ -53,7 +53,7 @@ final class rk {
     }
 
     final static void a(int param0) {
-        if (!gl.field_c) {
+        if (!BoundedRandomAccessFile.field_c) {
           throw new IllegalStateException();
         }
         jd.field_z = true;

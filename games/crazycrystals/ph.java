@@ -165,7 +165,7 @@ final class ph extends og implements im, vd {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_E = null;
         if (!param0) {
           field_E = (dd) null;

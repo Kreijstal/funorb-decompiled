@@ -219,7 +219,7 @@ final class ja extends DualLinkNode implements ec {
         return param0 - (8355711 & param0 >> 1);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_r = null;
         field_t = null;
         field_u = null;

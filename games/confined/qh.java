@@ -158,7 +158,7 @@ final class qh extends vf {
         return var10;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         if (param0 <= 103) {
           field_x = (fi) null;
@@ -259,7 +259,7 @@ final class qh extends vf {
           return;
         }
         if (param0 != 4) {
-          qh.d(89);
+          qh.clearStaticReferences(89);
         }
         fa.a(dn.field_d, param0 + 65);
         dn.field_d.a(-94, ki.field_d);
@@ -290,7 +290,7 @@ final class qh extends vf {
         try {
           super.a(false, param1);
           if (param0 != -29066) {
-            qh.d(-13);
+            qh.clearStaticReferences(-13);
           }
           if (param2) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {

@@ -162,7 +162,7 @@ final class hn implements Runnable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_n = null;
         if (param0) {

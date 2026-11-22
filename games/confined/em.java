@@ -17,7 +17,7 @@ abstract class em {
         return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -64) {
           field_d = null;
           field_c = null;

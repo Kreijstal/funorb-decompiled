@@ -13,7 +13,7 @@ final class mm {
         int var4 = rf.a(param0, 255);
         int var5 = GzipInflater.a(110, param2);
         if (param1 != -1) {
-          mm.a(44);
+          mm.clearStaticReferences(44);
         }
         int var6 = rf.a(param2, 255);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
@@ -218,7 +218,7 @@ final class mm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 < 118) {
           field_c = (String) null;

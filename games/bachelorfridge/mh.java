@@ -115,14 +115,14 @@ final class mh extends EventEffect {
             var7.field_sb = 0;
             if (!ZombiesEvent.d(-119)) {
               var9_ref_String = SnowAnimation.field_w.field_Jb;
-              vaa.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, HomingMissileSpecial.field_r).toUpperCase();
+              GzipDecompressor.field_a.field_Z = lga.a(true, new String[]{var9_ref_String}, HomingMissileSpecial.field_r).toUpperCase();
               cw.field_yb.a(40, 31407, ho.field_g.field_sb, 0, -40 + ho.field_g.field_p);
               cw.field_yb.field_Z = lga.a(true, new String[]{var9_ref_String}, ne.field_n);
               var8 = cw.field_yb;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              vaa.field_a.field_Z = tea.field_lb.toUpperCase();
+              GzipDecompressor.field_a.field_Z = tea.field_lb.toUpperCase();
               var9 = (2 + ho.field_g.field_sb) / 2;
               ik.field_i.a(40, 31407, -2 + var9, 0, ho.field_g.field_p - 40);
               if (SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {

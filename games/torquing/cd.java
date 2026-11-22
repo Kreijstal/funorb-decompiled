@@ -59,7 +59,7 @@ final class cd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -11) {
@@ -126,7 +126,7 @@ final class cd {
 
     final static int a(int param0, int param1) {
         if (param0 > -100) {
-          cd.a((byte) 111);
+          cd.clearStaticReferences((byte) 111);
           return be.field_l[param1 & 2047];
         }
         return be.field_l[param1 & 2047];

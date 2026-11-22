@@ -12,7 +12,7 @@ final class q extends DualLinkNode {
     static Sprite[] field_z;
     private String[] field_t;
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         if (param0 != 0) {
           field_z = (Sprite[]) null;

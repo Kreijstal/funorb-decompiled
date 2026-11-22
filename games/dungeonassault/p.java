@@ -1163,7 +1163,7 @@ final class p extends qe {
         return;
     }
 
-    public static void d(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         field_G = null;
         field_K = null;

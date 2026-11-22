@@ -73,7 +73,7 @@ final class qk extends og implements fd, vd {
             return true;
           }
           var5 = var4.c((byte) 45);
-          stackIn_6_0 = (var5 == ih.field_b);
+          stackIn_6_0 = (var5 == GzipDecompressor.field_b);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,7 +222,7 @@ final class qk extends og implements fd, vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == this.field_C) {
-            gl.b(-108);
+            BoundedRandomAccessFile.b(-108);
           } else {
             if (this.field_B == param4) {
               this.i(-25);

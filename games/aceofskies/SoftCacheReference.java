@@ -8,7 +8,7 @@ final class SoftCacheReference extends CacheReference {
     static RenderSprite[] brassButtonSprites;
     private java.lang.ref.SoftReference field_r;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 255) {
           field_t = null;
           field_s = null;

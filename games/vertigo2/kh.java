@@ -33,7 +33,7 @@ final class kh {
         um.field_F = l.field_a;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = (Sprite[][]) null;
         field_c = null;
         if (!param0) {

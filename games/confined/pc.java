@@ -90,7 +90,7 @@ final class pc implements Runnable {
         try {
           var4_int = param2.g(param3, 0);
           if (param1 != -126) {
-            pc.b((byte) 7);
+            pc.clearStaticReferences((byte) 7);
           }
           if (var4_int == 0) {
             return null;
@@ -185,7 +185,7 @@ final class pc implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_k = null;
         field_e = null;

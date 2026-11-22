@@ -11,7 +11,7 @@ final class kb implements WidgetRenderer {
     static PcmStreamMixer field_d;
     static int[][] field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_g = null;
         field_e = (int[][]) null;

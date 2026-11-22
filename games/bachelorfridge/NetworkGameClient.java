@@ -16,7 +16,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private int field_v;
     String field_r;
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_u = null;
         if (param0 <= 97) {
@@ -275,7 +275,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           bv.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
           fi.field_n = StatusEffectInfo.a(1, false, 0, true, mj.field_j);
-          em.field_T = StatusEffectInfo.a(1, false, 0, true, vaa.field_d);
+          em.field_T = StatusEffectInfo.a(1, false, 0, true, GzipDecompressor.field_d);
           SuperSpeedAllEvent.field_r = 2;
           ClamsSpecial.field_p = fi.field_n;
           ScavengerSpecial.field_p = bv.field_B;
@@ -755,7 +755,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         OneAnimation.field_z = param2;
         ov.field_c = param1;
-        vaa.field_d = param7;
+        GzipDecompressor.field_d = param7;
         OneEvent.field_q = param3;
         this.f((byte) -115);
         ih.d(15366);

@@ -15,7 +15,7 @@ class db extends vf {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         if (param0 < 68) {
           return;
@@ -31,7 +31,7 @@ class db extends vf {
             ea.a(true, param4 + param3.field_m, param1 + param3.field_q, param3.field_z, param3.field_F);
           }
           if (param0 >= -97) {
-            db.a((byte) -16);
+            db.clearStaticReferences((byte) -16);
           }
           super.a((byte) -113, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

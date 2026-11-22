@@ -44,7 +44,7 @@ final class lh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 2800) {
           field_a = (int[]) null;

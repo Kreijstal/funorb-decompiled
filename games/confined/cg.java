@@ -10,7 +10,7 @@ final class cg {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

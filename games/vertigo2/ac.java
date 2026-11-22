@@ -20,7 +20,7 @@ final class ac extends WidgetWrapper {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_M = null;
         field_K = null;

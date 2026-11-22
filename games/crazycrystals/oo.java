@@ -23,7 +23,7 @@ final class oo extends se {
           if (this.field_j instanceof lf) {
             var3 = ((lf) ((Object) this.field_j)).a(-117);
             if (var3 != null &&
-              var3.c((byte) 45) != ih.field_b) {
+              var3.c((byte) 45) != GzipDecompressor.field_b) {
               stackIn_8_0 = rk.field_c;
               return stackIn_8_0;
             }
@@ -31,7 +31,7 @@ final class oo extends se {
           if (!param0.equals(this.field_j.field_o)) {
             stackIn_12_0 = rk.field_c;
           } else {
-            stackIn_12_0 = ih.field_b;
+            stackIn_12_0 = GzipDecompressor.field_b;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class oo extends se {
           if (this.field_j instanceof lf) {
             var3 = ((lf) ((Object) this.field_j)).a(-81);
             if (var3 != null) {
-              if (var3.c((byte) 45) == ih.field_b &&
+              if (var3.c((byte) 45) == GzipDecompressor.field_b &&
                 !param0.equals(this.field_j.field_o)) {
                 stackIn_7_0 = lj.field_a;
                 return stackIn_7_0;

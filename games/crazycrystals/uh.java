@@ -7,7 +7,7 @@ final class uh extends fa {
     static String field_o;
     static boolean field_n;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 != 128) {
           return;

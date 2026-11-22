@@ -100,7 +100,7 @@ final class c extends bo implements Cloneable {
 
     final static lb b(boolean param0) {
         if (param0) {
-          c.g(83);
+          c.clearStaticReferences(83);
         }
         if (sa.field_lb == null) {
           sa.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
@@ -108,7 +108,7 @@ final class c extends bo implements Cloneable {
         return sa.field_lb;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }

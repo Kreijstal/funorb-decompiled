@@ -622,7 +622,7 @@ final class ih extends qe {
         gd.a(g.field_Hb, 0, g.field_Hb, param1);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_x = null;
         field_J = null;

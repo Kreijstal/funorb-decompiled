@@ -530,7 +530,7 @@ abstract class dc extends DualLinkNode {
         this.field_V = false;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_M = null;
         if (param0 != 12259) {
           return;
@@ -619,7 +619,7 @@ abstract class dc extends DualLinkNode {
     final void b(int param0, byte param1) {
         this.a(-9867, param0, 65536);
         if (param1 != 27) {
-          dc.e(-108);
+          dc.clearStaticReferences(-108);
         }
     }
 
@@ -661,10 +661,10 @@ abstract class dc extends DualLinkNode {
         try {
           var3_int = (int)this.field_y;
           var4 = var3_int + ah.field_U + 1;
-          if (ln.field_d.size() < var4) {
-            ln.field_d.setSize(var4);
+          if (GzipDecompressor.field_d.size() < var4) {
+            GzipDecompressor.field_d.setSize(var4);
             for (var5 = ah.field_U; var4 > var5; var5++) {
-              ln.field_d.setElementAt(new oi((pm) null), var5);
+              GzipDecompressor.field_d.setElementAt(new oi((pm) null), var5);
             }
           }
           stackIn_9_0 = (!(this.field_X > this.field_eb)) ? 0 : 1;
@@ -692,7 +692,7 @@ abstract class dc extends DualLinkNode {
           for (var22_int = 0; var3_int > var22_int; var22_int++) {
             fieldTemp$1 = ah.field_U;
             ah.field_U = ah.field_U + 1;
-            var23_ref = (oi) (ln.field_d.elementAt(fieldTemp$1));
+            var23_ref = (oi) (GzipDecompressor.field_d.elementAt(fieldTemp$1));
             var23_ref.field_p = var12;
             var23_ref.field_o = var10;
             var23_ref.field_t = var8;
@@ -733,7 +733,7 @@ abstract class dc extends DualLinkNode {
           var12 = var12 - var20 * ((-1.0 + var22) * 0.5);
           fieldTemp$0 = ah.field_U;
           ah.field_U = ah.field_U + 1;
-          var24_ref = (oi) (ln.field_d.elementAt(fieldTemp$0));
+          var24_ref = (oi) (GzipDecompressor.field_d.elementAt(fieldTemp$0));
           var24_ref.field_t = var8;
           var24_ref.field_u = var22 * this.field_B;
           var24_ref.field_p = var12;
@@ -847,7 +847,7 @@ abstract class dc extends DualLinkNode {
         double var18Lifetime2;
         double var18Lifetime3;
         if (param0 != -10603) {
-          dc.e(-43);
+          dc.clearStaticReferences(-43);
         }
         if (1.2 * var6 < -var2) {
           if (var12 * 1.1 < -var8) {

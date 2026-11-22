@@ -74,7 +74,7 @@ final class en {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -6) {
-            en.a(25);
+            en.clearStaticReferences(25);
           }
           stackIn_3_0 = po.field_e.a("", param1, 0);
           return stackIn_3_0;
@@ -92,7 +92,7 @@ final class en {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 4096) {

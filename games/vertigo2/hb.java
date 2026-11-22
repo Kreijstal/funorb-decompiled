@@ -143,7 +143,7 @@ final class hb extends bg {
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param2 <= 88) {
-            hb.c(105);
+            hb.clearStaticReferences(105);
           }
           var6_int = pk.a((byte) -14, WidgetContainer.field_D, param4, ua.field_e);
           var7 = pk.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
@@ -160,7 +160,7 @@ final class hb extends bg {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 2) {
           return;
@@ -706,7 +706,7 @@ final class hb extends bg {
         int var6 = -param1 + this.field_z;
         int var7 = -param3 + (-80 + this.field_x);
         if (param2 != 0) {
-          hb.c(123);
+          hb.clearStaticReferences(123);
         }
         int var8 = -20000 + (var6 * var6 + var5 * var5) + var7 * var7;
         return var8;

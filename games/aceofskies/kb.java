@@ -9,7 +9,7 @@ final class kb extends vq {
     private sp field_B;
     static SpriteData[] scoreDigitSpriteData;
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         if (param0 != 1927884356) {
           field_C = (ej) null;

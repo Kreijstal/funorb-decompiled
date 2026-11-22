@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vaa {
+final class GzipDecompressor {
     static UiComponent field_a;
     static String field_c;
     static int field_d;
@@ -353,11 +353,11 @@ final class vaa {
         return true;
     }
 
-    public vaa() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    private vaa(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     final static String a(String param0, int param1, int param2) {
@@ -449,7 +449,7 @@ final class vaa {
         field_a = null;
     }
 
-    final void a(PacketBuffer param0, byte[] param1, int param2) {
+    final void decompress(PacketBuffer param0, byte[] param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;

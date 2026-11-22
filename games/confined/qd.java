@@ -26,7 +26,7 @@ final class qd {
         return new String(var6);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;

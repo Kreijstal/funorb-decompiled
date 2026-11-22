@@ -17,7 +17,7 @@ final class bf {
             field_a = (dl) null;
           }
           if (param0 != null &&
-            param0.length() >= gl.field_j &&
+            param0.length() >= BoundedRandomAccessFile.field_j &&
             param0.length() <= mi.field_v) {
             return false;
           }

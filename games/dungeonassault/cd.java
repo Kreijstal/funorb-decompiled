@@ -22,13 +22,13 @@ final class cd {
 
     final String b(int param0) {
         if (param0 != -1) {
-          cd.a(96);
+          cd.clearStaticReferences(96);
           return this.field_a;
         }
         return this.field_a;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }

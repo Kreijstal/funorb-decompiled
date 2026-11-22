@@ -77,7 +77,7 @@ final class ni implements Runnable {
           while (0L != param1) {
             var7 = param1;
             param1 = param1 / 37L;
-            var9 = gl.field_a[(int)(-(param1 * 37L) + var7)];
+            var9 = BoundedRandomAccessFile.field_a[(int)(-(param1 * 37L) + var7)];
             if (var9 == 95) {
               var10 = var6.length() - 1;
               var9 = 160;

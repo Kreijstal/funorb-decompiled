@@ -263,7 +263,7 @@ final class he extends ip {
           var1[ob.field_Gb] = ja.field_d;
           var1[ob.field_pc] = hj.field_P;
           var1[ob.field_gc] = rf.field_N;
-          var1[ob.field_bc] = qp.field_f;
+          var1[ob.field_bc] = BoundedRandomAccessFile.field_f;
           var1[ob.field_ec] = pm.field_k;
           var1[ob.field_Ub] = j.field_S;
           var2 = new String[ob.field_ac][];

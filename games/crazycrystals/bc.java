@@ -217,7 +217,7 @@ abstract class bc {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -26389) {
           field_f = (jh) null;
           field_a = null;

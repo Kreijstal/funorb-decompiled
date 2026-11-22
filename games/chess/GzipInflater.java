@@ -113,7 +113,7 @@ final class GzipInflater {
         }
     }
 
-    final void a(byte[] param0, byte param1, PacketBuffer param2) {
+    final void decompress(byte[] param0, byte param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -177,7 +177,7 @@ final class GzipInflater {
     private GzipInflater(int param0, int param1, int param2) {
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = (km[][]) null;
         field_h = null;
         field_b = null;

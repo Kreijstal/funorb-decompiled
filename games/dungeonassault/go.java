@@ -2030,11 +2030,11 @@ final class go extends qe {
             var7Lifetime1 = this.field_N.field_i;
             var8 = this.field_O.field_t - (-this.field_O.field_q + var6);
             var9 = this.field_N.field_x;
-            if (null == uk.field_e) {
-              uk.field_e = mf.a(16744448, 4 + var9, 8, 4 + var8, (byte) 112);
+            if (null == GzipDecompressor.field_e) {
+              GzipDecompressor.field_e = mf.a(16744448, 4 + var9, 8, 4 + var8, (byte) 112);
             }
             if (this.field_X % 30 >= 15) {
-              PacketBuffer.a(var7Lifetime1 - 2, var6 - 2, (byte) -93, uk.field_e, 16711680, 256);
+              PacketBuffer.a(var7Lifetime1 - 2, var6 - 2, (byte) -93, GzipDecompressor.field_e, 16711680, 256);
             } else {
               if (this.field_X <= 0) {
                 stackIn_75_0 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 10.0f))) * 64.0) + 128;
@@ -2042,7 +2042,7 @@ final class go extends qe {
                 stackIn_75_0 = 256;
               }
               var10 = stackIn_75_0;
-              uk.field_e.b(-2 + var6, var7Lifetime1 - 2, var10);
+              GzipDecompressor.field_e.b(-2 + var6, var7Lifetime1 - 2, var10);
             }
           }
           if (this.field_v) {

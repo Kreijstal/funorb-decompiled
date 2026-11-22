@@ -91,10 +91,10 @@ final class ae extends og implements vd {
         var7 = CrazyCrystals.field_B;
         try {
           if (this.field_B == param4) {
-            gl.b(53);
+            BoundedRandomAccessFile.b(53);
           } else {
             if (this.field_E == param4) {
-              ih.a((byte) 63);
+              GzipDecompressor.a((byte) 63);
             } else {
               if (this.field_z != param4) {
                 var6_int = -40 % ((param0 - 83) / 36);

@@ -208,7 +208,7 @@ final class ti {
         try {
           ho.a(param0.a(-125, "", "headers.packvorbis"));
           if (param1 != 28922) {
-            ti.a(true);
+            ti.clearStaticReferences(true);
           }
           var2 = ho.a(param0, "jagex logo2.packvorbis", "");
           var2.c();
@@ -271,7 +271,7 @@ final class ti {
         this.field_d = null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_l = null;
         field_e = null;

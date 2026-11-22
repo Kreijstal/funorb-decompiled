@@ -138,7 +138,7 @@ final class lg {
         var1.unlink(false);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         field_w = null;
         field_h = null;
@@ -203,7 +203,7 @@ final class lg {
           var6_int = (-param2 + param0 << 8) / param5.field_E;
           param3 = param3 + param5.field_A;
           if (param1 != 65280) {
-            lg.a(false);
+            lg.clearStaticReferences(false);
           }
           var7 = var6_int * param5.field_w + (param2 << 8);
           param4 = param4 + param5.field_w;

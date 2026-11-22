@@ -93,7 +93,7 @@ final class dg {
         return var3;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_j = null;
         field_e = null;
         field_f = null;

@@ -13,7 +13,7 @@ final class wd extends DualLinkNode {
         return bn.field_i;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         if (param0 != 0) {
           field_r = (String) null;
@@ -157,7 +157,7 @@ final class wd extends DualLinkNode {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         if (!param4) {
-          wd.b(23);
+          wd.clearStaticReferences(23);
         }
         if (param5 == param3) {
           lc.a(param1, param2, -123, param7, param6, param5, param0);

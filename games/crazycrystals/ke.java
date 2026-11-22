@@ -59,7 +59,7 @@ abstract class ke {
 
     abstract long a(boolean param0);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;

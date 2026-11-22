@@ -68,7 +68,7 @@ final class hn extends se {
             return stackIn_6_0;
           }
           if (param1 == -122) {
-            stackIn_11_0 = ih.field_b;
+            stackIn_11_0 = GzipDecompressor.field_b;
             return stackIn_11_0;
           }
           stackIn_9_0 = (oi) null;

@@ -545,7 +545,7 @@ class hl implements jm, mg {
         return var4;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_q = null;
         field_d = null;
         field_a = null;

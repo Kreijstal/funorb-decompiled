@@ -7,7 +7,7 @@ final class kj {
     static bi field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != -30357) {
@@ -47,7 +47,7 @@ final class kj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            kj.a(13);
+            kj.clearStaticReferences(13);
           }
           if (mc.a(param2, param1, param0, (byte) 119)) {
             return Confined.g((byte) 118);

@@ -108,7 +108,7 @@ final class BlockModel extends TrapModel {
         RuntimeException var4 = null;
         try {
           super.configureFor(param0, param1, param2);
-          if (param2 instanceof mra) {
+          if (param2 instanceof TimedShooter) {
             this.field_v = 8;
           } else {
             if (4194304 == param0.getWidth(-92) &&

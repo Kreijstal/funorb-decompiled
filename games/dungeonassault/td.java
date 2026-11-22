@@ -7,7 +7,7 @@ final class td {
     static String field_d;
     static java.awt.Font field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 < 7) {
@@ -44,7 +44,7 @@ final class td {
             return false;
           }
           if (!param2) {
-            td.a(91);
+            td.clearStaticReferences(91);
           }
           var8 = new jb(lg.field_w, param4);
           lg.field_w.a(var8, -1);

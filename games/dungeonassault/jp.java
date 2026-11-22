@@ -496,7 +496,7 @@ final class jp extends IntrusiveNode {
         return true;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_s = null;
         field_x = null;
         field_q = null;

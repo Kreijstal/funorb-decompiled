@@ -60,8 +60,8 @@ final class CrusherModel extends TrapModel {
         }
         if (DamageableBehaviour.field_o == null) {
           DamageableBehaviour.field_o = new int[param0 * 2];
-          if (null == bq.field_h) {
-            bq.field_h = new int[param0 * 2];
+          if (null == MidiPatchEnvelope.field_h) {
+            MidiPatchEnvelope.field_h = new int[param0 * 2];
             if (PortalBehaviour.field_o == null ||
               !(param0 <= PortalBehaviour.field_o.length)) {
               PortalBehaviour.field_o = new int[param0 * 2];
@@ -79,8 +79,8 @@ final class CrusherModel extends TrapModel {
               HardwareModel.field_B = new boolean[2 * param0];
             }
           } else {
-            if (bq.field_h.length < param0) {
-              bq.field_h = new int[param0 * 2];
+            if (MidiPatchEnvelope.field_h.length < param0) {
+              MidiPatchEnvelope.field_h = new int[param0 * 2];
               if (PortalBehaviour.field_o == null ||
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
@@ -149,8 +149,8 @@ final class CrusherModel extends TrapModel {
           }
         } else {
           if (DamageableBehaviour.field_o.length >= param0) {
-            if (null == bq.field_h) {
-              bq.field_h = new int[param0 * 2];
+            if (null == MidiPatchEnvelope.field_h) {
+              MidiPatchEnvelope.field_h = new int[param0 * 2];
               if (PortalBehaviour.field_o == null ||
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
@@ -168,8 +168,8 @@ final class CrusherModel extends TrapModel {
                 HardwareModel.field_B = new boolean[2 * param0];
               }
             } else {
-              if (bq.field_h.length < param0) {
-                bq.field_h = new int[param0 * 2];
+              if (MidiPatchEnvelope.field_h.length < param0) {
+                MidiPatchEnvelope.field_h = new int[param0 * 2];
                 if (PortalBehaviour.field_o == null ||
                   !(param0 <= PortalBehaviour.field_o.length)) {
                   PortalBehaviour.field_o = new int[param0 * 2];
@@ -238,8 +238,8 @@ final class CrusherModel extends TrapModel {
             }
           } else {
             DamageableBehaviour.field_o = new int[param0 * 2];
-            if (null == bq.field_h) {
-              bq.field_h = new int[param0 * 2];
+            if (null == MidiPatchEnvelope.field_h) {
+              MidiPatchEnvelope.field_h = new int[param0 * 2];
               if (PortalBehaviour.field_o == null ||
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
@@ -260,8 +260,8 @@ final class CrusherModel extends TrapModel {
                 }
               }
             } else {
-              if (bq.field_h.length < param0) {
-                bq.field_h = new int[param0 * 2];
+              if (MidiPatchEnvelope.field_h.length < param0) {
+                MidiPatchEnvelope.field_h = new int[param0 * 2];
                 if (PortalBehaviour.field_o == null ||
                   !(param0 <= PortalBehaviour.field_o.length)) {
                   PortalBehaviour.field_o = new int[param0 * 2];

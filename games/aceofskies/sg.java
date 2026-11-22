@@ -9,7 +9,7 @@ final class sg {
     final static void a(int param0, byte param1, ht param2) {
         try {
           if (param1 != -92) {
-            sg.a((byte) -18);
+            sg.clearStaticReferences((byte) -18);
           }
           CipherPacketBuffer var3 = q.outgoingPacket;
           var3.writeCipheredOpcode(param1 ^ -33, param0);
@@ -22,13 +22,13 @@ final class sg {
 
     final static boolean a(int param0) {
         if (param0 <= 107) {
-          sg.a((byte) 52);
+          sg.clearStaticReferences((byte) 52);
           return om.field_c.a(117);
         }
         return om.field_c.a(117);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 102) {
           flightSession = (FlightSession) null;
           flightSession = null;

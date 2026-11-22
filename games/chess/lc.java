@@ -8,7 +8,7 @@ final class lc {
     private long field_r;
     private long field_p;
     static boolean field_q;
-    private eg field_c;
+    private BoundedRandomAccessFile field_c;
     private int field_k;
     static ResourceArchive field_m;
     private int field_j;
@@ -42,10 +42,10 @@ final class lc {
         }
         if (this.field_h != -1L) {
           if (~this.field_p != ~this.field_h) {
-            this.field_c.a(this.field_h, -11526);
+            this.field_c.seek(this.field_h, -11526);
             this.field_p = this.field_h;
           }
-          this.field_c.a(0, -1036, this.field_o, this.field_k);
+          this.field_c.write(0, -1036, this.field_o, this.field_k);
           this.field_p = this.field_p + (long)this.field_k;
           if (this.field_p > this.field_b) {
             this.field_b = this.field_p;
@@ -83,7 +83,7 @@ final class lc {
     final static String d(byte param0) {
         if (!uk.field_e && be.field_f <= ei.field_u &&
           !(ei.field_u >= be.field_f + sj.field_n)) {
-          return eg.field_j;
+          return BoundedRandomAccessFile.field_j;
         }
         if (param0 != 60) {
           lc.d((byte) 67);
@@ -144,10 +144,10 @@ final class lc {
               return;
             }
             if (~this.field_p != ~this.field_a) {
-              this.field_c.a(this.field_a, -11526);
+              this.field_c.seek(this.field_a, -11526);
               this.field_p = this.field_a;
             }
-            this.field_c.a(param0, -1036, param3, param1);
+            this.field_c.write(param0, -1036, param3, param1);
             this.field_p = this.field_p + (long)param1;
             if (this.field_p > this.field_b) {
               this.field_b = this.field_p;
@@ -271,10 +271,10 @@ final class lc {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_i.length < param3) {
-              this.field_c.a(this.field_a, -11526);
+              this.field_c.seek(this.field_a, -11526);
               this.field_p = this.field_a;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_c.a(param2, param0, param3, (byte) 104);
+                var9_intLifetime1 = this.field_c.read(param2, param0, param3, (byte) 104);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -387,7 +387,7 @@ final class lc {
         var4 = Chess.field_G;
         this.field_j = param0;
         if (~this.field_p != ~this.field_a) {
-          this.field_c.a(this.field_a, -11526);
+          this.field_c.seek(this.field_a, -11526);
           this.field_p = this.field_a;
         }
         this.field_d = this.field_a;
@@ -396,7 +396,7 @@ final class lc {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_c.a(this.field_j, this.field_i, var2, (byte) 50);
+          var3 = this.field_c.read(this.field_j, this.field_i, var2, (byte) 50);
           if (var3 != -1) {
             this.field_p = this.field_p + (long)var3;
             this.field_j = this.field_j + var3;
@@ -411,7 +411,7 @@ final class lc {
           field_m = (ResourceArchive) null;
         }
         this.b(param0 ^ -17308);
-        this.field_c.a(10992);
+        this.field_c.close(10992);
     }
 
     final void a(long param0, int param1) throws IOException {
@@ -421,14 +421,14 @@ final class lc {
         this.field_a = param0;
     }
 
-    lc(eg param0, int param1, int param2) throws IOException {
+    lc(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_d = -1L;
         this.field_k = 0;
         this.field_h = -1L;
         try {
           this.field_c = param0;
-          dupTemp$0 = param0.a((byte) -89);
+          dupTemp$0 = param0.length((byte) -89);
           this.field_b = dupTemp$0;
           this.field_r = dupTemp$0;
           this.field_o = new byte[param2];

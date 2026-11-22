@@ -19,7 +19,7 @@ final class gl extends mf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 >= -1) {
           return;

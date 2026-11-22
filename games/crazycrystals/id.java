@@ -186,7 +186,7 @@ class id {
     void e() throws Exception {
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_q = null;
     }
 

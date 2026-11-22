@@ -15,7 +15,7 @@ final class bo {
     static String field_i;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 21384) {
           field_i = (String) null;
         }

@@ -53,7 +53,7 @@ final class eb {
         eb.a((byte) -85);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 12) {
           return;
         }

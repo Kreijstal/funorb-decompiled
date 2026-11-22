@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qp {
+final class BoundedRandomAccessFile {
     static String field_c;
     private RandomAccessFile field_g;
     static String field_e;
@@ -12,7 +12,7 @@ final class qp {
     private long field_b;
     static String[] field_f;
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (this.field_g != null) {
           this.field_g.close();
           this.field_g = null;
@@ -22,7 +22,7 @@ final class qp {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if ((this.field_b + (long)param3) > this.field_d) {
             this.field_g.seek(this.field_d);
@@ -31,7 +31,7 @@ final class qp {
           }
           this.field_g.write(param2, param0, param3);
           if (param1 < 36) {
-            qp.a(true);
+            BoundedRandomAccessFile.a(true);
           }
           this.field_b = this.field_b + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -70,14 +70,14 @@ final class qp {
         return var6;
     }
 
-    final long a(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         if (param0 <= 46) {
           return -31L;
         }
         return this.field_g.length();
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param1 != 18) {
           this.field_g = (RandomAccessFile) null;
         }
@@ -85,7 +85,7 @@ final class qp {
         this.field_b = param0;
     }
 
-    final int a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final int read(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
@@ -122,7 +122,7 @@ final class qp {
     public static void b(byte param0) {
         field_a = null;
         if (param0 != 56) {
-          qp.a(false);
+          BoundedRandomAccessFile.a(false);
         }
         field_c = null;
         field_f = null;
@@ -132,7 +132,7 @@ final class qp {
     protected final void finalize() throws Throwable {
         if (null != this.field_g) {
           System.out.println("");
-          this.a(0);
+          this.close(0);
         }
     }
 
@@ -147,7 +147,7 @@ final class qp {
         }
     }
 
-    qp(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

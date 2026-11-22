@@ -72,7 +72,7 @@ abstract class jb implements vb {
         de.a(0, param1);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 350) {
           return;
         }

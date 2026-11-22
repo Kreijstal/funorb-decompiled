@@ -133,7 +133,7 @@ class mf extends IntrusiveNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_B = null;
         field_s = null;
@@ -507,7 +507,7 @@ class mf extends IntrusiveNode {
     final boolean a(int param0, int param1, int param2, byte param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param3 != -117) {
-          mf.f(-121);
+          mf.clearStaticReferences(-121);
           if (this.field_u + param2 > param4) {
             return false;
           }
@@ -694,7 +694,7 @@ class mf extends IntrusiveNode {
         }
         var5 = lc.d((byte) 60);
         if (!param0) {
-          mf.f(118);
+          mf.clearStaticReferences(118);
         }
         if (var5 == null) {
           return;

@@ -34,7 +34,7 @@ final class fl extends IntrusiveNode {
           qf.field_a = qf.field_a + 1;
           hn.field_k = IntrusiveNode.field_b;
           if (!param0) {
-            fl.b(true);
+            fl.clearStaticReferences(true);
           }
           rf.field_b = cb.field_b;
           lf.field_O = rc.field_d;
@@ -46,7 +46,7 @@ final class fl extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_s = null;
         field_m = null;
         field_k = null;

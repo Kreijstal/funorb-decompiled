@@ -504,13 +504,13 @@ final class fo {
               tk.field_c.b(var13[var16], 250, var10, 16777215, -1);
               var10 = var10 + var8Lifetime1;
             }
-            tk.field_c.b(pl.field_j + aq.field_d[var7Lifetime1], 250, -(k.field_c.field_t * 2) + var12 - tk.field_c.field_M, 16777215, -1);
+            tk.field_c.b(pl.field_j + aq.field_d[var7Lifetime1], 250, -(GzipDecompressor.field_c.field_t * 2) + var12 - tk.field_c.field_M, 16777215, -1);
             tk.field_c.b(vl.field_f, 250, -tk.field_c.field_M + var12, 16777215, -1);
             var16Lifetime1 = tk.field_c.c(vl.field_f) + 250;
-            var17 = -((k.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
+            var17 = -((GzipDecompressor.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
             for (var18 = 0; var18 < MouseInputHandler.field_d[var7Lifetime1]; var18++) {
-              k.field_c.e(var16Lifetime1, var17);
-              var16Lifetime1 = var16Lifetime1 + k.field_c.field_y / 3;
+              GzipDecompressor.field_c.e(var16Lifetime1, var17);
+              var16Lifetime1 = var16Lifetime1 + GzipDecompressor.field_c.field_y / 3;
             }
           }
         } else {

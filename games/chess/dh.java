@@ -68,7 +68,7 @@ final class dh {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -75) {
           return;
         }
@@ -470,7 +470,7 @@ final class dh {
           if (param0 > 61) {
             return;
           }
-          dh.d((byte) 5);
+          dh.clearStaticReferences((byte) 5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

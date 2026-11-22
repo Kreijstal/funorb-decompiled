@@ -116,7 +116,7 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 <= 67) {
           field_f = (String) null;

@@ -115,7 +115,7 @@ final class hr extends TextureOperator {
         return this.field_B[param0];
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 34) {
           return;
         }

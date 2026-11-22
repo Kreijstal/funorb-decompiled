@@ -8,7 +8,7 @@ abstract class ha {
     static int field_a;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 >= -127) {
           return;
@@ -44,7 +44,7 @@ abstract class ha {
             }
           }
           if (param0 <= 66) {
-            ha.a(-19);
+            ha.clearStaticReferences(-19);
           }
           if (param2.field_jb != og.field_m) {
             if (null == param2.field_jb) {

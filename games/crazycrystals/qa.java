@@ -7,7 +7,7 @@ final class qa {
     private byte[] field_a;
     private byte[] field_b;
     static int[] field_i;
-    private gl field_m;
+    private BoundedRandomAccessFile field_m;
     private long field_n;
     private int field_e;
     private long field_c;
@@ -68,10 +68,10 @@ final class qa {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_b.length < param3) {
-              this.field_m.a(this.field_g, param0 - 224);
+              this.field_m.seek(this.field_g, param0 - 224);
               this.field_l = this.field_g;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_m.a(param1, param2, param3, (byte) -68);
+                var9_intLifetime1 = this.field_m.read(param1, param2, param3, (byte) -68);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -179,10 +179,10 @@ final class qa {
         }
         if (this.field_n != -1L) {
           if (this.field_l != this.field_n) {
-            this.field_m.a(this.field_n, -88);
+            this.field_m.seek(this.field_n, -88);
             this.field_l = this.field_n;
           }
-          this.field_m.a(120, 0, this.field_e, this.field_a);
+          this.field_m.write(120, 0, this.field_e, this.field_a);
           this.field_l = this.field_l + (long)this.field_e;
           if (this.field_l > this.field_c) {
             this.field_c = this.field_l;
@@ -244,7 +244,7 @@ final class qa {
         int var4 = CrazyCrystals.field_B;
         this.field_f = 0;
         if (this.field_g != this.field_l) {
-          this.field_m.a(this.field_g, param0 - 89);
+          this.field_m.seek(this.field_g, param0 - 89);
           this.field_l = this.field_g;
         }
         if (param0 == -1) {
@@ -254,7 +254,7 @@ final class qa {
             if (var2 > 200000000) {
               var2 = 200000000;
             }
-            var3 = this.field_m.a(this.field_b, this.field_f, var2, (byte) -63);
+            var3 = this.field_m.read(this.field_b, this.field_f, var2, (byte) -63);
             if (var3 == -1) {
               break;
             }
@@ -270,7 +270,7 @@ final class qa {
           return;
         }
         this.a((byte) 88);
-        this.field_m.d(91);
+        this.field_m.close(91);
     }
 
     final long b(int param0) {
@@ -290,14 +290,14 @@ final class qa {
         return var2;
     }
 
-    qa(gl param0, int param1, int param2) throws IOException {
+    qa(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_n = -1L;
         this.field_e = 0;
         this.field_k = -1L;
         try {
           this.field_m = param0;
-          dupTemp$0 = param0.a(48);
+          dupTemp$0 = param0.length(48);
           this.field_c = dupTemp$0;
           this.field_d = dupTemp$0;
           this.field_a = new byte[param2];
@@ -357,10 +357,10 @@ final class qa {
               return;
             }
             if (~this.field_l != ~this.field_g) {
-              this.field_m.a(this.field_g, -99);
+              this.field_m.seek(this.field_g, -99);
               this.field_l = this.field_g;
             }
-            this.field_m.a(120, param2, param3, param1);
+            this.field_m.write(120, param2, param3, param1);
             this.field_l = this.field_l + (long)param3;
             if (this.field_l > this.field_c) {
               this.field_c = this.field_l;

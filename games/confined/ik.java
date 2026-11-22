@@ -36,7 +36,7 @@ final class ik extends ah {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_cb = null;
         if (!param0) {
           field_cb = (int[]) null;

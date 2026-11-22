@@ -15,7 +15,7 @@ final class tp extends bb {
     static String field_v;
     static String field_x;
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_y = null;
         field_u = null;
@@ -320,7 +320,7 @@ final class tp extends bb {
         try {
           lj.field_e = param2;
           if (param0 != 10) {
-            tp.h(-5);
+            tp.clearStaticReferences(-5);
           }
           lc.field_e = param1;
         } catch (RuntimeException runtimeException) {

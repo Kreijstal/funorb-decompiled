@@ -11,7 +11,7 @@ final class rc {
         if (param0 > -20) {
           return true;
         }
-        return gl.field_c;
+        return BoundedRandomAccessFile.field_c;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -29,7 +29,7 @@ final class rc {
         ge.field_c = ge.field_c + (1 << param5);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_a = (Vector) null;
         }

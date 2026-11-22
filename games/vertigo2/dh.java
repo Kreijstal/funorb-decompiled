@@ -29,7 +29,7 @@ abstract class dh {
 
     abstract void a(byte[] param0, boolean param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != -1) {
           return;

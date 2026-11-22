@@ -110,7 +110,7 @@ final class ll {
             ia.field_i = var8;
             pm.field_d = 0;
             to.field_c = 0;
-            gl.field_e = 0;
+            BoundedRandomAccessFile.field_e = 0;
             gm.field_c = new int[2];
             tm.field_d = CipherPacketBuffer.a(var8, false, var7, -93, var4);
             no.a(var8, -8383, var7, tm.field_d);
@@ -159,7 +159,7 @@ final class ll {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -84) {
           field_a = (String) null;
           field_a = null;

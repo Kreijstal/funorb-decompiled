@@ -211,7 +211,7 @@ final class kf {
           }
           var3 = gm.a(7554);
           if (param0 > -44) {
-            kf.a(-115);
+            kf.clearStaticReferences(-115);
           }
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
@@ -236,7 +236,7 @@ final class kf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 7) {
           return;
         }

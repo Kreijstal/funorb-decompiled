@@ -58,7 +58,7 @@ final class wi {
           }
           var2 = ra.field_d.a(107);
           while (var2 != null) {
-            fm.a(-87, param0);
+            BoundedRandomAccessFile.a(-87, param0);
             var2 = ra.field_d.d(2123);
           }
           return;
@@ -69,7 +69,7 @@ final class wi {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_q = null;
         if (param0 != 12) {

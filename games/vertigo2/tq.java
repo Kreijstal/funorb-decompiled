@@ -463,7 +463,7 @@ final class tq {
         ak.a(true, true, 3);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_d = null;

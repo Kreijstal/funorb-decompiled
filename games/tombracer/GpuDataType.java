@@ -50,7 +50,7 @@ final class GpuDataType {
           }
           var2_int = RandomAccessFileHandle.getConnectorRoomCount(41);
           var3 = ArchiveNetworkClient.countSetBits(param0, 83);
-          var4 = aq.getMainRoomCount(-5640);
+          var4 = MainRoomCatalog.getMainRoomCount(-5640);
           var5 = var3 * var2_int / var4;
           var5 = Math.min(2 + var5, var2_int);
           stackIn_4_0 = var5;

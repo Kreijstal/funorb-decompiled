@@ -180,7 +180,7 @@ final class ue extends WidgetContainer implements cm, ij {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_H = null;
         field_J = null;

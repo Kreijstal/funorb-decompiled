@@ -215,7 +215,7 @@ final class ReportAbuseDialog extends UiComponent {
               discarded$1 = this.field_vb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_H.stringWidth(ai.field_c);
+            var17 = param6.field_H.stringWidth(AvailabilityQueryFactory.field_c);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -241,7 +241,7 @@ final class ReportAbuseDialog extends UiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.appendReasonHeading(param6, ai.field_c, var16Lifetime2, var18Lifetime3, 8421504, var28[0]);
+            var18Lifetime3 = this.appendReasonHeading(param6, AvailabilityQueryFactory.field_c, var16Lifetime2, var18Lifetime3, 8421504, var28[0]);
             var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[6]);
             var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[9]);
             var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[5]);

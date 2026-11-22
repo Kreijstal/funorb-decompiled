@@ -90,7 +90,7 @@ final class kd extends se {
             this.field_q = var3.a((byte) 47);
           }
           if (this.field_q) {
-            stackIn_12_0 = ih.field_b;
+            stackIn_12_0 = GzipDecompressor.field_b;
           } else {
             stackIn_12_0 = rk.field_c;
           }

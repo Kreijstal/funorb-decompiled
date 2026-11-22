@@ -309,7 +309,7 @@ final class fm {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_l = null;
         field_d = null;
@@ -481,7 +481,7 @@ final class fm {
         rj var3 = (rj) null;
         ba.a((rj) null, (byte) 59, param1);
         if (param0 <= 30) {
-          fm.a(true);
+          fm.clearStaticReferences(true);
         }
     }
 

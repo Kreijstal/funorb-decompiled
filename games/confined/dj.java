@@ -1017,7 +1017,7 @@ final class dj extends ee {
             if (!this.field_Sb ||
               this.field_A.field_M ||
               this.field_Mb ||
-              !mc.field_e[ln.field_b]) {
+              !mc.field_e[GzipDecompressor.field_b]) {
               if (!(this.field_Q <= 0)) {
                 this.field_Q = this.field_Q - 1;
                 if (var32 != 0) {

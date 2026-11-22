@@ -19,7 +19,7 @@ abstract class ShooterComponent extends PrefabComponent {
         try {
           if (param0) {
             Room var4 = (Room) null;
-            this.applyTimingPattern((byte) -1, (mra) null, (Room) null);
+            this.applyTimingPattern((byte) -1, (TimedShooter) null, (Room) null);
           }
           super.encode(param0, param1);
           if (this.usesTimingPattern(-1)) {
@@ -92,7 +92,7 @@ abstract class ShooterComponent extends PrefabComponent {
         }
     }
 
-    final void applyTimingPattern(byte param0, mra param1, Room param2) {
+    final void applyTimingPattern(byte param0, TimedShooter param1, Room param2) {
         RuntimeException var4 = null;
         IsaacCipher var5 = null;
         Weapon var6 = null;

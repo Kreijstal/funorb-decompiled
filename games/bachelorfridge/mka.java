@@ -20,11 +20,11 @@ final class mka extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new UiComponent(0L, (UiComponent) null);
-          var8.field_eb = qaa.a(param2, -94);
-          var8.field_A = qaa.a(param5, -68);
-          var8.field_db = qaa.a(param7, -127);
-          var8.field_K = qaa.a(param1, -74);
-          var8.field_X = qaa.a(param0, -58);
+          var8.field_eb = BoundedRandomAccessFile.a(param2, -94);
+          var8.field_A = BoundedRandomAccessFile.a(param5, -68);
+          var8.field_db = BoundedRandomAccessFile.a(param7, -127);
+          var8.field_K = BoundedRandomAccessFile.a(param1, -74);
+          var8.field_X = BoundedRandomAccessFile.a(param0, -58);
           var8.field_jb = param4;
           var8.field_gb = param6;
           if (param3 > -118) {

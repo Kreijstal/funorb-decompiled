@@ -693,7 +693,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         te.b(true);
     }
 
-    public static void o(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_H = null;
         if (param0 != -12516) {
           field_t = (gu) null;

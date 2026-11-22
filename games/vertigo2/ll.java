@@ -8,7 +8,7 @@ final class ll {
     static String field_c;
     static Model[] field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         if (param0 == 3) {

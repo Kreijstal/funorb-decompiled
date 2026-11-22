@@ -189,7 +189,7 @@ abstract class tb {
         return this.field_h.length;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_f = null;
