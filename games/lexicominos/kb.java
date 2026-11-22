@@ -3070,7 +3070,7 @@ abstract class kb {
 
     abstract bj a(byte param0);
 
-    abstract void a(wf param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     final static m a(byte param0, java.applet.Applet param1) {
         String var2 = null;

@@ -108,8 +108,8 @@ final class db implements ci {
         int var14 = 0;
         int var15 = 0;
         byte[] var16 = null;
-        pb var17 = null;
-        pb var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -126,10 +126,10 @@ final class db implements ci {
         int var12Lifetime3;
         var15 = Main.field_T;
         try {
-          var17 = new pb(param1);
+          var17 = new PacketBuffer(param1);
           var18 = var17;
-          var18.field_i = -2 + param1.length;
-          cf.field_c = var18.d((byte) 72);
+          var18.position = -2 + param1.length;
+          cf.field_c = var18.readUnsignedShort((byte) 72);
           hb.field_a = new int[cf.field_c];
           kb.field_c = new int[cf.field_c];
           rd.field_k = new byte[cf.field_c][];
@@ -137,35 +137,35 @@ final class db implements ci {
           ml.field_b = new int[cf.field_c];
           hl.field_y = new boolean[cf.field_c];
           vd.field_r = new byte[cf.field_c][];
-          var18.field_i = -(8 * cf.field_c) + param1.length - 7;
-          p.field_l = var18.d((byte) 72);
+          var18.position = -(8 * cf.field_c) + param1.length - 7;
+          p.field_l = var18.readUnsignedShort((byte) 72);
           if (!param0) {
             var16 = (byte[]) null;
             db.a(false, (byte[]) null);
           }
-          gk.field_a = var18.d((byte) 72);
-          var3 = 1 + (255 & var18.f(27));
+          gk.field_a = var18.readUnsignedShort((byte) 72);
+          var3 = 1 + (255 & var18.readUnsignedByte(27));
           for (var4 = 0; var4 < cf.field_c; var4++) {
-            kb.field_c[var4] = var17.d((byte) 72);
+            kb.field_c[var4] = var17.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime1 = 0; cf.field_c > var4Lifetime1; var4Lifetime1++) {
-            ml.field_b[var4Lifetime1] = var18.d((byte) 72);
+            ml.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime2 = 0; cf.field_c > var4Lifetime2; var4Lifetime2++) {
-            na.field_q[var4Lifetime2] = var18.d((byte) 72);
+            na.field_q[var4Lifetime2] = var18.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime3 = 0; cf.field_c > var4Lifetime3; var4Lifetime3++) {
-            hb.field_a[var4Lifetime3] = var18.d((byte) 72);
+            hb.field_a[var4Lifetime3] = var18.readUnsignedShort((byte) 72);
           }
-          var18.field_i = param1.length + (-7 - cf.field_c * 8 - 3 * (var3 - 1));
+          var18.position = param1.length + (-7 - cf.field_c * 8 - 3 * (var3 - 1));
           jf.field_i = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            jf.field_i[var4Lifetime4] = var18.e(true);
+            jf.field_i[var4Lifetime4] = var18.readUnsignedMedium(true);
             if (jf.field_i[var4Lifetime4] == 0) {
               jf.field_i[var4Lifetime4] = 1;
             }
           }
-          var18.field_i = 0;
+          var18.position = 0;
           for (var4Lifetime5 = 0; cf.field_c > var4Lifetime5; var4Lifetime5++) {
             regionExit1: {
               var5 = na.field_q[var4Lifetime5];
@@ -180,14 +180,14 @@ final class db implements ci {
               var9 = var20;
               vd.field_r[var4Lifetime5] = var22;
               var10 = 0;
-              var11 = var18.f(-102);
+              var11 = var18.readUnsignedByte(-102);
               if ((var11 & 1) == 0) {
                 var12 = 0;
                 while (true) {
                   stackIn_43_0 = ~var12;
                   stackIn_43_1 = ~var7;
                   if (stackIn_43_0 > stackIn_43_1) {
-                    var8[var12] = var18.a(true);
+                    var8[var12] = var18.readByte(true);
                     var12++;
                     continue;
                   }
@@ -195,7 +195,7 @@ final class db implements ci {
                 }
                 if (((2 & var11) != 0)) {
                   for (var12Lifetime3 = 0; var12Lifetime3 < var7; var12Lifetime3++) {
-                    dupTemp$0 = var18.a(true);
+                    dupTemp$0 = var18.readByte(true);
                     var9[var12Lifetime3] = dupTemp$0;
                     var13 = dupTemp$0;
                     stackIn_51_0 = var10;
@@ -211,13 +211,13 @@ final class db implements ci {
               }
               for (var12Lifetime1 = 0; var5 > var12Lifetime1; var12Lifetime1++) {
                 for (var13Lifetime1 = 0; var6 > var13Lifetime1; var13Lifetime1++) {
-                  var8[var12Lifetime1 + var13Lifetime1 * var5] = var18.a(true);
+                  var8[var12Lifetime1 + var13Lifetime1 * var5] = var18.readByte(true);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12Lifetime2 = 0; var12Lifetime2 < var5; var12Lifetime2++) {
                   for (var13Lifetime2 = 0; var13Lifetime2 < var6; var13Lifetime2++) {
-                    dupTemp$1 = var18.a(true);
+                    dupTemp$1 = var18.readByte(true);
                     var9[var5 * var13Lifetime2 + var12Lifetime2] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;

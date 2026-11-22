@@ -55,26 +55,26 @@ final class wd {
           ue.field_a[0] = jj.field_R.nextInt();
           ue.field_a[1] = jj.field_R.nextInt();
           ue.field_a[2] = (int)(ug.field_a >> 32);
-          sd.field_i.field_i = 0;
+          sd.field_i.position = 0;
           ue.field_a[3] = (int)ug.field_a;
-          sd.field_i.a(ue.field_a[0], (byte) -23);
-          sd.field_i.a(ue.field_a[1], (byte) -100);
-          sd.field_i.a(ue.field_a[2], (byte) -96);
+          sd.field_i.writeInt(ue.field_a[0], (byte) -23);
+          sd.field_i.writeInt(ue.field_a[1], (byte) -100);
+          sd.field_i.writeInt(ue.field_a[2], (byte) -96);
           var5_int = 27 % ((-65 - param1) / 51);
-          sd.field_i.a(ue.field_a[3], (byte) -104);
+          sd.field_i.writeInt(ue.field_a[3], (byte) -104);
           lc.a(sd.field_i, (byte) -113);
-          sd.field_i.b((byte) 99, param3);
+          sd.field_i.writeShort((byte) 99, param3);
           param2.a(sd.field_i, (byte) -100);
-          ud.field_b.field_i = 0;
+          ud.field_b.position = 0;
           if (param0) {
-            ud.field_b.a(-11, 18);
+            ud.field_b.writeByte(-11, 18);
           } else {
-            ud.field_b.a(-11, 16);
+            ud.field_b.writeByte(-11, 16);
           }
-          ud.field_b.field_i = ud.field_b.field_i + 2;
-          var6 = ud.field_b.field_i;
-          ud.field_b.a(pc.field_j, (byte) -125);
-          ud.field_b.a(-108, c.field_P);
+          ud.field_b.position = ud.field_b.position + 2;
+          var6 = ud.field_b.position;
+          ud.field_b.writeInt(pc.field_j, (byte) -125);
+          ud.field_b.writeLong(-108, c.field_P);
           var7 = 0;
           if (va.field_m) {
             var7 = var7 | 1;
@@ -88,17 +88,17 @@ final class wd {
           if (wc.field_p != null) {
             var7 = var7 | 16;
           }
-          ud.field_b.a(-11, var7);
+          ud.field_b.writeByte(-11, var7);
           var8 = w.a(0, BoundedRandomAccessFile.getApplet((byte) -75));
           if (var8 == null) {
             var8 = "";
           }
-          ud.field_b.a(116, var8);
+          ud.field_b.writeString(116, var8);
           if (null != wc.field_p) {
-            ud.field_b.a(wc.field_p, (byte) -87);
+            ud.field_b.writePrefixedString(wc.field_p, (byte) -87);
           }
           cg.a(fj.field_c, -111, sd.field_i, ud.field_b, de.field_k);
-          ud.field_b.a((byte) 119, -var6 + ud.field_b.field_i);
+          ud.field_b.backpatchShortLength((byte) 119, -var6 + ud.field_b.position);
           dk.b((byte) 41, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

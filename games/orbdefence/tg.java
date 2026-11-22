@@ -68,8 +68,8 @@ final class tg {
         if (param0 < -65) {
           var2 = uk.field_b;
           var2.i(param1, 108);
-          var2.a(1, -92);
-          var2.a(2, -71);
+          var2.writeByte(1, -92);
+          var2.writeByte(2, -71);
           return;
         }
     }

@@ -22,7 +22,7 @@ abstract class ed extends ca {
         }
     }
 
-    final static void a(int param0, wf param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -30,7 +30,7 @@ abstract class ed extends ca {
           int var3_int = 0;
           Exception var3 = null;
           int var5 = 0;
-          wf var6 = null;
+          PacketBuffer var6 = null;
           byte[] var7 = null;
           byte[] var8 = null;
           byte[] var9 = null;
@@ -70,10 +70,10 @@ abstract class ed extends ca {
               }
             }
             if (param0 <= 79) {
-              var6 = (wf) null;
-              ed.a(-106, (wf) null);
+              var6 = (PacketBuffer) null;
+              ed.a(-106, (PacketBuffer) null);
             }
-            param1.a(0, var11, 255, 24);
+            param1.writeBytes(0, var11, 255, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -112,7 +112,7 @@ abstract class ed extends ca {
         int var8 = 0;
         eb[] var2 = null;
         RuntimeException var2_ref = null;
-        wf var3 = null;
+        PacketBuffer var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -129,18 +129,18 @@ abstract class ed extends ca {
           if (!param1) {
             field_q = (th) null;
           }
-          var3 = new wf(param0.a((byte) 127, "", "index"));
-          while (var3.field_j.length > var3.field_h) {
-            var4 = var3.d(true);
-            var5 = var3.b(-1698573656);
-            var6 = var3.d(true);
-            var7 = new eb(var4, var3.b(-1698573656));
+          var3 = new PacketBuffer(param0.a((byte) 127, "", "index"));
+          while (var3.payload.length > var3.position) {
+            var4 = var3.readUnsignedByte(true);
+            var5 = var3.readUnsignedShort(-1698573656);
+            var6 = var3.readUnsignedByte(true);
+            var7 = new eb(var4, var3.readUnsignedShort(-1698573656));
             var2[var7.field_g] = var7;
             for (var8 = 0; var8 < var7.field_c.length; var8++) {
-              var7.field_c[var8][0] = var3.c(false);
-              var7.field_c[var8][1] = var3.c(false);
+              var7.field_c[var8][0] = var3.readString(false);
+              var7.field_c[var8][1] = var3.readString(false);
             }
-            var7.a(new wf(param0.a(var5, -27493, var6)), (byte) 96);
+            var7.a(new PacketBuffer(param0.a(var5, -27493, var6)), (byte) 96);
           }
           stackIn_10_0 = var2;
           return stackIn_10_0;

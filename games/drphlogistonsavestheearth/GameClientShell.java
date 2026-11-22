@@ -607,7 +607,7 @@ abstract class GameClientShell extends GameAppletShell {
     }
 
     private final void k(int param0) {
-        int var2 = dh.field_N.l(31760);
+        int var2 = dh.field_N.readUnsignedByte(31760);
         if (param0 != 28586) {
           byte[] var6 = (byte[]) null;
           GameClientShell.a((byte) 74, (byte[]) null);
@@ -649,7 +649,7 @@ abstract class GameClientShell extends GameAppletShell {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          od var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -744,7 +744,7 @@ abstract class GameClientShell extends GameAppletShell {
                   var9 = (String) null;
                   cb.a((String) null, true);
                 } else {
-                  var7 = p.a(var12.field_j, (byte) 79, var12.field_h, 0);
+                  var7 = p.a(var12.position, (byte) 79, var12.payload, 0);
                   cb.a(var7, true);
                 }
                 al.field_e = null;

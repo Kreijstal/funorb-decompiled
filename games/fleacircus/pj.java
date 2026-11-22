@@ -42,7 +42,7 @@ final class pj extends cb {
         try {
           var13 = ae.field_a;
           var15 = var13;
-          var2 = var15.e(false);
+          var2 = var15.readUnsignedByte(false);
           if (param0 <= 62) {
             return;
           }
@@ -58,12 +58,12 @@ final class pj extends cb {
             k.c(-28354);
             return;
           }
-          var4 = var15.e(false);
+          var4 = var15.readUnsignedByte(false);
           if (var4 != 0) {
             hm.field_c[0] = b.field_e;
             var5 = var3.field_j;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              hm.field_c[var6_int] = var13.h(0);
+              hm.field_c[var6_int] = var13.readString(0);
             }
             kh.a(var5, var4, 26721);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

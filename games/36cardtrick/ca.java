@@ -15,8 +15,8 @@ final class ca {
             qj var4 = (qj) null;
             ca.a((qk) null, (qj) null, -27, -28);
           }
-          pc.field_a = new af(sd.field_c, vd.field_p, param0, ei.field_e, ij.field_g);
-          sd.field_c.b(pc.field_a, (byte) -98);
+          Crc32Table.field_a = new af(sd.field_c, vd.field_p, param0, ei.field_e, ij.field_g);
+          sd.field_c.b(Crc32Table.field_a, (byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -57,7 +57,7 @@ final class ca {
         try {
           se.field_G = gl.a("frame_top", param1, "commonui", -13244);
           rc.field_k = gl.a("frame_bottom", param1, "commonui", param3 + 11944);
-          pb.field_k = ce.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
+          PacketBuffer.field_k = ce.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
           eg.field_c = gl.a("button", param1, "commonui", -13244);
           gh.field_n = vc.a("validation", "commonui", 0, param1);
           me.field_c = (ee) ((Object) ec.a("commonui", param2, false, "arezzo12", param1));

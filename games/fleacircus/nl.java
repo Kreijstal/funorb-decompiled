@@ -40,7 +40,7 @@ final class nl {
         param2 = param2 * 16;
         gb.a(si.field_R);
         param0 = param0 * 16;
-        int var3 = -(ni.field_j * 2 % 16);
+        int var3 = -(PacketBuffer.field_j * 2 % 16);
         gb.a(var3 + param2, param1 + param0, var3 + param2 + 16, 16 + param0);
         gb.h(16 + (param2 + var3), param0 + 4, 8, 13421632);
         gb.b(si.field_R);

@@ -6,7 +6,7 @@ final class td {
     static String field_a;
     static kc[] field_c;
 
-    final static void a(pb param0, byte param1, int param2, le param3) {
+    final static void a(PacketBuffer param0, byte param1, int param2, le param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -48,8 +48,8 @@ final class td {
               return;
             }
             var18 = new fd();
-            var18.field_o = param0.f(38);
-            var18.field_j = param0.e((byte) 126);
+            var18.field_o = param0.readUnsignedByte(38);
+            var18.field_j = param0.readInt((byte) 126);
             var18.field_l = new byte[var18.field_o][][];
             var18.field_k = new int[var18.field_o];
             var18.field_p = new vi[var18.field_o];
@@ -58,28 +58,28 @@ final class td {
             var18.field_r = new vi[var18.field_o];
             for (var5 = 0; var18.field_o > var5; var5++) {
               try {
-                var6_int = param0.f(-95);
+                var6_int = param0.readUnsignedByte(-95);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param0.c(false);
-                    var21 = param0.c(false);
-                    var9 = param0.f(-101);
+                    var20 = param0.readString(false);
+                    var21 = param0.readString(false);
+                    var9 = param0.readUnsignedByte(-101);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param0.c(false);
+                      var10[var11_int] = param0.readString(false);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param0.e((byte) 124);
+                        var13 = param0.readInt((byte) 124);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(93, var22[var12_int], 0, var13);
+                        param0.readBytes(93, var22[var12_int], 0, var13);
                       }
                     }
                     var18.field_k[var5] = var6_int;
@@ -94,13 +94,13 @@ final class td {
                     var18.field_l[var5] = var22;
                   }
                 } else {
-                  var15 = param0.c(false);
+                  var15 = param0.readString(false);
                   var7 = var15;
-                  var16 = param0.c(false);
+                  var16 = param0.readString(false);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.e((byte) 125);
+                    var9 = param0.readInt((byte) 125);
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_m[var5] = var9;

@@ -64,7 +64,7 @@ final class ab extends la {
         field_q = null;
     }
 
-    final static String a(pb param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -79,13 +79,13 @@ final class ab extends la {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.a(0);
+            var3_int = param0.readUnsignedSmart(0);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
             var5 = 54 % ((6 - param1) / 55);
-            param0.field_i = param0.field_i + qf.field_J.a(var3_int, var4, param0.field_g, 0, 109, param0.field_i);
+            param0.position = param0.position + qf.field_J.a(var3_int, var4, param0.payload, 0, 109, param0.position);
             var6 = bd.a(255, 0, var4, var3_int);
             stackIn_4_0 = var6;
             return stackIn_4_0;

@@ -71,10 +71,10 @@ final class ce extends java.awt.Canvas {
           ce.a(-22, (String) null, (String) null, (qk) null);
           if (var1 != null) {
             var2 = rd.field_j;
-            var2.e((byte) 127);
-            var2.e((byte) 124);
-            var2.e((byte) 124);
-            var2.e((byte) 126);
+            var2.readInt((byte) 127);
+            var2.readInt((byte) 124);
+            var2.readInt((byte) 124);
+            var2.readInt((byte) 126);
             var1.unlink(96);
             return;
           }
@@ -83,10 +83,10 @@ final class ce extends java.awt.Canvas {
         }
         if (var1 != null) {
           var2Lifetime1 = rd.field_j;
-          var2Lifetime1.e((byte) 127);
-          var2Lifetime1.e((byte) 124);
-          var2Lifetime1.e((byte) 124);
-          var2Lifetime1.e((byte) 126);
+          var2Lifetime1.readInt((byte) 127);
+          var2Lifetime1.readInt((byte) 124);
+          var2Lifetime1.readInt((byte) 124);
+          var2Lifetime1.readInt((byte) 126);
           var1.unlink(96);
           return;
         }

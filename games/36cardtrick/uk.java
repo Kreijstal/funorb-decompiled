@@ -196,8 +196,8 @@ abstract class uk {
           return;
         }
         try {
-          if (pc.field_a != null) {
-            pc.field_a.s(-101);
+          if (Crc32Table.field_a != null) {
+            Crc32Table.field_a.s(-101);
           }
           i.field_a = new ak(param0, param2, false, true, true);
           vb.field_h.c(i.field_a, (byte) 106);

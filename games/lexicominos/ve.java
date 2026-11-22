@@ -112,16 +112,16 @@ abstract class ve {
               } else {
                 fa.field_b = fj.a(param0, param4, false, param1 ^ 118);
               }
-              ed.field_q.field_h = 0;
-              ed.field_q.c(14, param1 + 24);
-              ed.field_q.c(fa.field_b.a((byte) 45).field_b, -1);
+              ed.field_q.position = 0;
+              ed.field_q.writeByte(14, param1 + 24);
+              ed.field_q.writeByte(fa.field_b.a((byte) 45).field_b, -1);
               kc.a(-1, -1);
               uf.field_m = rb.field_d;
             }
             if (uf.field_m == rb.field_d &&
               a.b(1, 10343)) {
-              var6_int = ig.field_a.d(true);
-              ig.field_a.field_h = 0;
+              var6_int = ig.field_a.readUnsignedByte(true);
+              ig.field_a.position = 0;
               if (var6_int == 0) {
                 uf.field_m = kf.field_z;
               } else {
@@ -136,16 +136,16 @@ abstract class ve {
             }
             if (kf.field_z == uf.field_m &&
               a.b(8, 10343)) {
-              ti.field_M = ig.field_a.f((byte) 49);
-              ig.field_a.field_h = 0;
+              ti.field_M = ig.field_a.readLong((byte) 49);
+              ig.field_a.position = 0;
               ri.a(param2, param3, fa.field_b, (byte) -82, param5);
               uf.field_m = he.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
             if (uf.field_m == he.field_h &&
               a.b(1, 10343)) {
-              var6_intLifetime1 = ig.field_a.d(true);
-              ig.field_a.field_h = 0;
+              var6_intLifetime1 = ig.field_a.readUnsignedByte(true);
+              ig.field_a.position = 0;
               pg.field_d = var6_intLifetime1;
               og.field_b = null;
               if (0 != var6_intLifetime1 &&
@@ -169,12 +169,12 @@ abstract class ve {
             }
             if (uf.field_m == ug.field_q &&
               dc.d(param1 ^ -27)) {
-              rc.field_f = ig.field_a.f((byte) -110);
-              vb.field_i = ig.field_a.d(true);
-              ig.field_a.d(true);
-              jd.field_c = ig.field_a.b(param1 - 1698573631);
-              var6 = ig.field_a.e((byte) -90);
-              var7 = ig.field_a.d(true);
+              rc.field_f = ig.field_a.readLong((byte) -110);
+              vb.field_i = ig.field_a.readUnsignedByte(true);
+              ig.field_a.readUnsignedByte(true);
+              jd.field_c = ig.field_a.readUnsignedShort(param1 - 1698573631);
+              var6 = ig.field_a.readNullableString((byte) -90);
+              var7 = ig.field_a.readUnsignedByte(true);
               if ((1 & var7) != 0) {
                 fg.a((byte) 120);
               }
@@ -187,19 +187,19 @@ abstract class ve {
                 }
               }
               if (GameAppletShell.field_c) {
-                ig.field_a.d(true);
-                ig.field_a.d(true);
-                ig.field_a.d((byte) 19);
-                ef.field_f = ig.field_a.b(-1698573656);
+                ig.field_a.readUnsignedByte(true);
+                ig.field_a.readUnsignedByte(true);
+                ig.field_a.readInt((byte) 19);
+                ef.field_f = ig.field_a.readUnsignedShort(-1698573656);
                 kc.field_d = new byte[ef.field_f];
                 for (var8 = 0; ef.field_f > var8; var8++) {
-                  kc.field_d[var8] = ig.field_a.e(true);
+                  kc.field_d[var8] = ig.field_a.readByte(true);
                 }
               }
-              og.field_c = ig.field_a.c(false);
+              og.field_c = ig.field_a.readString(false);
               var11 = (CharSequence) ((Object) og.field_c);
               cb.field_t = ck.a(var11, (byte) -48);
-              be.field_l = ig.field_a.d(true);
+              be.field_l = ig.field_a.readUnsignedByte(true);
               uf.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == jf.field_M) {
                 bb.field_J.a(kk.c(-14047), 4096);
@@ -251,7 +251,7 @@ abstract class ve {
               if (pg.field_d == 7) {
                 pg.field_d = 3;
               }
-              wj.field_p = ig.field_a.c(false);
+              wj.field_p = ig.field_a.readString(false);
               fb.field_p = false;
               stackIn_84_0 = pg.field_d;
               return stackIn_84_0;

@@ -236,7 +236,7 @@ final class bf {
         try {
           if (this.field_e == 0 &&
             this.field_q != null) {
-            od.a(-1630758008, this.field_q);
+            PacketBuffer.a(-1630758008, this.field_q);
           }
           if (param0 < 35) {
             this.field_y = (he[]) null;

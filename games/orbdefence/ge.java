@@ -11,10 +11,10 @@ abstract class ge {
     il field_k;
     il field_f;
     int field_e;
-    mg field_l;
+    PacketBuffer field_l;
     long field_j;
     volatile int field_b;
-    mg field_m;
+    PacketBuffer field_m;
     volatile int field_n;
     byte field_h;
     cd field_a;
@@ -154,11 +154,11 @@ abstract class ge {
         this.field_p = new il();
         this.field_k = new il();
         this.field_f = new il();
-        this.field_l = new mg(6);
+        this.field_l = new PacketBuffer(6);
         this.field_b = 0;
         this.field_h = (byte) 0;
         this.field_n = 0;
-        this.field_m = new mg(10);
+        this.field_m = new PacketBuffer(10);
     }
 
     static {

@@ -33,13 +33,13 @@ final class fg {
           if (kf.field_y != null) {
             try {
               kf.field_y.a((byte) 40, 0L);
-              kf.field_y.b(ig.field_a.field_h, ig.field_a.field_j, 24, -31593);
+              kf.field_y.b(ig.field_a.position, ig.field_a.payload, 24, -31593);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          ig.field_a.field_h = ig.field_a.field_h + 24;
+          ig.field_a.position = ig.field_a.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

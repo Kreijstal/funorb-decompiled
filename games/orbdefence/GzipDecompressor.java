@@ -21,11 +21,11 @@ final class GzipDecompressor {
         }
     }
 
-    final void decompress(byte[] param0, int param1, mg param2) {
+    final void decompress(byte[] param0, int param1, PacketBuffer param2) {
         try {
           try {
-            if (param2.field_j[param2.field_i] != 31 ||
-              -117 != param2.field_j[1 + param2.field_i]) {
+            if (param2.payload[param2.position] != 31 ||
+              -117 != param2.payload[1 + param2.position]) {
               throw new RuntimeException("");
             }
             if (this.field_b == null) {
@@ -35,7 +35,7 @@ final class GzipDecompressor {
               if (param1 != 693) {
                 field_c = -106;
               }
-              this.field_b.setInput(param2.field_j, 10 + param2.field_i, -8 - (10 + (param2.field_i - param2.field_j.length)));
+              this.field_b.setInput(param2.payload, 10 + param2.position, -8 - (10 + (param2.position - param2.payload.length)));
               this.field_b.inflate(param0);
             } catch (Exception exception) {
               this.field_b.reset();

@@ -67,26 +67,26 @@ final class mk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        od var14 = null;
-        od var15 = null;
+        PacketBuffer var14 = null;
+        PacketBuffer var15 = null;
         int var7Lifetime1;
         this.field_c = new bf[8000];
         try {
-          var14 = new od(param0);
+          var14 = new PacketBuffer(param0);
           var15 = var14;
-          var4 = var15.l(31760);
+          var4 = var15.readUnsignedByte(31760);
           if (0 == var4) {
-            var5 = var15.h(-123);
-            var6 = var15.h(-91);
+            var5 = var15.readInt(-123);
+            var6 = var15.readInt(-91);
             this.field_h = new int[var5];
-            var15.n(-75);
+            var15.readByte(-75);
             for (var7 = 0; var7 < var5; var7++) {
-              this.field_h[var7] = var14.j(-788751192);
+              this.field_h[var7] = var14.readUnsignedShort(-788751192);
             }
             for (var7Lifetime1 = 0; var6 > var7Lifetime1; var7Lifetime1++) {
-              var8 = var15.n(89);
-              var9 = var15.n(118);
-              var11 = var15.h(102);
+              var8 = var15.readByte(89);
+              var9 = var15.readByte(118);
+              var11 = var15.readInt(102);
               if (param1 != 0 && (var8 == 5 ||
                 11 == var8 ||
                 var8 == 17 ||
@@ -95,7 +95,7 @@ final class mk {
                 var9 = param1;
               }
               var10 = 0;
-              var12 = var15.j(-788751192);
+              var12 = var15.readUnsignedShort(-788751192);
               if (var8 >= 0) {
                 this.field_c[var7Lifetime1] = new bf(var8, var9, var10, var11, var12, false);
               }

@@ -19,8 +19,8 @@ final class ch extends lg {
           }
           var3 = ed.field_q;
           var3.h(param1, 0);
-          var3.c(param2.field_k, param0 - 18392);
-          var3.c(param2.field_j, -1);
+          var3.writeByte(param2.field_k, param0 - 18392);
+          var3.writeByte(param2.field_j, -1);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ch.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

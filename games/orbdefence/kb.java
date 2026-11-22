@@ -254,7 +254,7 @@ final class kb extends IntrusiveNode {
         }
     }
 
-    final static void a(mg param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -323,7 +323,7 @@ final class kb extends IntrusiveNode {
                 return;
               }
             }
-            param0.a(0, 24, (byte) -11, var2);
+            param0.writeBytes(0, 24, (byte) -11, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

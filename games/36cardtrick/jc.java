@@ -60,26 +60,26 @@ abstract class jc extends qf {
           kb.field_e[0] = pg.field_a.nextInt();
           kb.field_e[1] = pg.field_a.nextInt();
           kb.field_e[3] = (int)hb.field_b;
-          gh.field_h.field_i = 0;
+          gh.field_h.position = 0;
           kb.field_e[2] = (int)(hb.field_b >> 32);
-          gh.field_h.a(-246, kb.field_e[0]);
-          gh.field_h.a(-246, kb.field_e[1]);
-          gh.field_h.a(-246, kb.field_e[2]);
-          gh.field_h.a(-246, kb.field_e[3]);
+          gh.field_h.writeInt(-246, kb.field_e[0]);
+          gh.field_h.writeInt(-246, kb.field_e[1]);
+          gh.field_h.writeInt(-246, kb.field_e[2]);
+          gh.field_h.writeInt(-246, kb.field_e[3]);
           bj.a(gh.field_h, -25);
-          gh.field_h.e(param0, 26040);
+          gh.field_h.writeShort(param0, 26040);
           param3.a(-1, gh.field_h);
-          na.field_r.field_i = 0;
+          na.field_r.position = 0;
           if (param2) {
-            na.field_r.b(-9469, 18);
+            na.field_r.writeByte(-9469, 18);
           } else {
-            na.field_r.b(-9469, 16);
+            na.field_r.writeByte(-9469, 16);
           }
           var5_int = -40 % ((param1 - 14) / 58);
-          na.field_r.field_i = na.field_r.field_i + 2;
-          var6 = na.field_r.field_i;
-          na.field_r.a(-246, nf.field_c);
-          na.field_r.a(wk.field_d, (byte) 98);
+          na.field_r.position = na.field_r.position + 2;
+          var6 = na.field_r.position;
+          na.field_r.writeInt(-246, nf.field_c);
+          na.field_r.writeLong(wk.field_d, (byte) 98);
           var7 = 0;
           if (dg.field_F) {
             var7 = var7 | 1;
@@ -93,17 +93,17 @@ abstract class jc extends qf {
           if (null != ia.field_b) {
             var7 = var7 | 16;
           }
-          na.field_r.b(-9469, var7);
+          na.field_r.writeByte(-9469, var7);
           var8 = bi.a((byte) 95, mk.g(-128));
           if (var8 == null) {
             var8 = "";
           }
-          na.field_r.a(var8, 19235);
+          na.field_r.writeString(var8, 19235);
           if (null != ia.field_b) {
-            na.field_r.a(744825352, ia.field_b);
+            na.field_r.writePrefixedString(744825352, ia.field_b);
           }
           lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-          na.field_r.d(na.field_r.field_i - var6, -27308);
+          na.field_r.backpatchShortLength(na.field_r.position - var6, -27308);
           fe.a((byte) -75, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -306,7 +306,7 @@ abstract class jc extends qf {
         if (param1 != -77) {
           field_O = (ik) null;
         }
-        pb.field_k.d(-90 + (param0 + this.field_h), 10 + param2);
+        PacketBuffer.field_k.d(-90 + (param0 + this.field_h), 10 + param2);
         cd.a(se.field_G, this.field_h - 10, (byte) -94, param0 + 5, param2 + 35);
         cd.a(rc.field_k, this.field_h, (byte) -94, param0, -22 + this.field_q + param2);
         var4Lifetime2 = this.field_q - 79;

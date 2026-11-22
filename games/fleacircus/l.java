@@ -31,8 +31,8 @@ final class l {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ni var16 = null;
-        ni var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -44,10 +44,10 @@ final class l {
         int var4Lifetime5;
         var15 = fleas.field_A ? 1 : 0;
         try {
-          var16 = new ni(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_i = param0.length - 2;
-          ef.field_l = var17.d((byte) -68);
+          var17.position = param0.length - 2;
+          ef.field_l = var17.readUnsignedShort((byte) -68);
           if (param1 != -91) {
             return;
           }
@@ -58,31 +58,31 @@ final class l {
           ij.field_H = new int[ef.field_l];
           ob.field_a = new int[ef.field_l];
           b.field_b = new int[ef.field_l];
-          var17.field_i = -(ef.field_l * 8) + (-7 + param0.length);
-          e.field_e = var17.d((byte) 75);
-          uf.field_k = var17.d((byte) -49);
-          var3 = 1 + (255 & var17.e(false));
+          var17.position = -(ef.field_l * 8) + (-7 + param0.length);
+          e.field_e = var17.readUnsignedShort((byte) 75);
+          uf.field_k = var17.readUnsignedShort((byte) -49);
+          var3 = 1 + (255 & var17.readUnsignedByte(false));
           for (var4 = 0; ef.field_l > var4; var4++) {
-            vg.field_I[var4] = var16.d((byte) 62);
+            vg.field_I[var4] = var16.readUnsignedShort((byte) 62);
           }
           for (var4Lifetime1 = 0; ef.field_l > var4Lifetime1; var4Lifetime1++) {
-            b.field_b[var4Lifetime1] = var17.d((byte) -124);
+            b.field_b[var4Lifetime1] = var17.readUnsignedShort((byte) -124);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ef.field_l; var4Lifetime2++) {
-            ij.field_H[var4Lifetime2] = var17.d((byte) 106);
+            ij.field_H[var4Lifetime2] = var17.readUnsignedShort((byte) 106);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < ef.field_l; var4Lifetime3++) {
-            ob.field_a[var4Lifetime3] = var17.d((byte) -74);
+            ob.field_a[var4Lifetime3] = var17.readUnsignedShort((byte) -74);
           }
-          var17.field_i = -(ef.field_l * 8) + param0.length - (7 + (-1 + var3) * 3);
+          var17.position = -(ef.field_l * 8) + param0.length - (7 + (-1 + var3) * 3);
           rd.field_d = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            rd.field_d[var4Lifetime4] = var17.c(true);
+            rd.field_d[var4Lifetime4] = var17.readUnsignedMedium(true);
             if (0 == rd.field_d[var4Lifetime4]) {
               rd.field_d[var4Lifetime4] = 1;
             }
           }
-          var17.field_i = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; ef.field_l > var4Lifetime5; var4Lifetime5++) {
             var5 = ij.field_H[var4Lifetime5];
             var6 = ob.field_a[var4Lifetime5];
@@ -96,14 +96,14 @@ final class l {
             var9 = var19;
             NetworkGameClient.field_t[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.e(false);
+            var11 = var17.readUnsignedByte(false);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.i(-124);
+                var8[var12] = var17.readByte(-124);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var17.i(df.a((int) param1, 31));
+                  dupTemp$0 = var17.readByte(df.a((int) param1, 31));
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_47_0 = var10;
@@ -118,13 +118,13 @@ final class l {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var12 + var5 * var13] = var17.i(-65);
+                  var8[var12 + var5 * var13] = var17.readByte(-65);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$1 = var17.i(-107);
+                    dupTemp$1 = var17.readByte(-107);
                     var9[var5 * var13 + var12] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_36_0 = var10;

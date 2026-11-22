@@ -7,7 +7,7 @@ final class gd extends kd {
     static String field_j;
     static int field_l;
     private String field_k;
-    static wf field_m;
+    static PacketBuffer field_m;
     private int field_h;
     int field_n;
 
@@ -53,7 +53,7 @@ final class gd extends kd {
           field_i = null;
           return;
         }
-        field_m = (wf) null;
+        field_m = (PacketBuffer) null;
         field_j = null;
         field_m = null;
         field_i = null;

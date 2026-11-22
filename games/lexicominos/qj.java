@@ -39,7 +39,7 @@ final class qj extends re {
           var1 = var6 + ":";
           for (var2 = 0; var2 < a.field_c; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ig.field_a.field_j[var2];
+            var3 = 255 & ig.field_a.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {

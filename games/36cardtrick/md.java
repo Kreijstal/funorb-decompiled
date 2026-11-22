@@ -44,8 +44,8 @@ final class md {
               cb.field_j = new jd((java.net.Socket) (fe.field_c.field_e), td.field_b);
               var4 = rd.field_j;
               var5 = var4;
-              na.field_r.field_i = 0;
-              var5.field_i = 0;
+              na.field_r.position = 0;
+              var5.position = 0;
               stackIn_13_0 = (param1) ? -2 : -1;
               ni.field_d = stackIn_13_0;
               hc.field_f = stackIn_13_0;

@@ -6,7 +6,7 @@ import java.io.*;
 final class rf implements Runnable {
     private vi field_k;
     private int field_i;
-    private pb field_c;
+    private PacketBuffer field_c;
     private vi field_j;
     private le field_f;
     static String field_e;
@@ -26,16 +26,16 @@ final class rf implements Runnable {
           Object var2_ref = null;
           var4 = Main.field_T;
           try {
-            while (this.field_c.field_i < this.field_c.field_g.length) {
-              var1_int = this.field_h.read(this.field_c.field_g, this.field_c.field_i, this.field_c.field_g.length - this.field_c.field_i);
+            while (this.field_c.position < this.field_c.payload.length) {
+              var1_int = this.field_h.read(this.field_c.payload, this.field_c.position, this.field_c.payload.length - this.field_c.position);
               if (var1_int >= 0) {
-                this.field_c.field_i = this.field_c.field_i + var1_int;
+                this.field_c.position = this.field_c.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_c.field_i == this.field_c.field_g.length) {
-              throw rf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_c.field_g.length + " " + this.field_a));
+            if (this.field_c.position == this.field_c.payload.length) {
+              throw rf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_c.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -128,7 +128,7 @@ final class rf implements Runnable {
               var3.write(dd.a(var5, (byte) -127));
               this.field_h = new DataInputStream(var4.getInputStream());
             }
-            this.field_c.field_i = 0;
+            this.field_c.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
@@ -259,9 +259,9 @@ final class rf implements Runnable {
         }
     }
 
-    final pb a(int param0) {
+    final PacketBuffer a(int param0) {
         if (param0 >= -31) {
-          return (pb) null;
+          return (PacketBuffer) null;
         }
         if (this.field_i != 3) {
           return null;
@@ -273,7 +273,7 @@ final class rf implements Runnable {
         try {
           this.field_a = param1;
           this.field_f = param0;
-          this.field_c = new pb(param2);
+          this.field_c = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

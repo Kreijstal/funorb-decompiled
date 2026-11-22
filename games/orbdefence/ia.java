@@ -53,9 +53,9 @@ abstract class ia {
         try {
           var3 = uk.field_b;
           var3.i(param1, 126);
-          var3.a(2, -29);
-          var3.a(0, -63);
-          var3.a(param2.field_h, -21);
+          var3.writeByte(2, -29);
+          var3.writeByte(0, -63);
+          var3.writeByte(param2.field_h, -21);
           if (param0 >= -11) {
             field_a = (ba) null;
           }

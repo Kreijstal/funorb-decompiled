@@ -36,20 +36,20 @@ final class rh extends IntrusiveNode {
             return;
           }
           var1 = rd.field_j;
-          var2 = var1.f(-102);
+          var2 = var1.readUnsignedByte(-102);
           if (var2 == 0) {
             if (sl.field_b == null) {
               sl.field_b = new ph(128);
               de.field_b = 0;
             }
-            stackIn_14_0 = (var1.f(15) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte(15) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.c(false);
+            var4_ref_String = var1.readString(false);
             if (var3_int != 0) {
-              var1.c(false);
+              var1.readString(false);
             }
             var5_ref = hb.a((byte) -118, var4_ref_String);
-            var6_ref = var1.c(false);
+            var6_ref = var1.readString(false);
             var7_ref = ff.a((byte) 116, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -90,9 +90,9 @@ final class rh extends IntrusiveNode {
               return;
             }
             ii.field_c = 1;
-            var3 = var1.c(false);
+            var3 = var1.readString(false);
             bc.field_b = ((String) (var3)).intern();
-            var4 = var1.f(121);
+            var4 = var1.readUnsignedByte(121);
             sl.a((byte) 99, var4);
             return;
           }
@@ -100,12 +100,12 @@ final class rh extends IntrusiveNode {
             rf.field_d = new ph(128);
             ok.field_b = 0;
           }
-          var3Lifetime1 = var1.c(false);
+          var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.c(false);
-          var5 = var1.c(false);
+          var4_ref_StringLifetime1 = var1.readString(false);
+          var5 = var1.readString(false);
           var6 = jf.a(0, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = jf.a(param0 + 0, var5);

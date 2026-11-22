@@ -10,7 +10,7 @@ final class oe extends DualLinkNode {
     private String[] field_n;
     static String field_m;
 
-    final void a(byte param0, mg param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         String var5 = null;
@@ -22,7 +22,7 @@ final class oe extends DualLinkNode {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           while (true) {
-            var3_int = param1.b((byte) 90);
+            var3_int = param1.readUnsignedByte((byte) 90);
             if (var3_int != 0) {
               this.a(param1, var3_int, -3);
               continue;
@@ -48,7 +48,7 @@ final class oe extends DualLinkNode {
         }
     }
 
-    private final void a(mg param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -69,27 +69,27 @@ final class oe extends DualLinkNode {
             oe.a(-30, (String) null, -63);
           }
           if (param1 == 1) {
-            this.field_n = g.a(87, '<', param0.g(2));
+            this.field_n = g.a(87, '<', param0.readString(2));
           } else {
             if (param1 == 2) {
-              var4_int = param0.b((byte) 90);
+              var4_int = param0.readUnsignedByte((byte) 90);
               this.field_o = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_o[var5] = param0.j(param2 + 98203179);
+                this.field_o[var5] = param0.readUnsignedShort(param2 + 98203179);
               }
             } else if (param1 == 3) {
-              var4_int = param0.b((byte) 90);
+              var4_int = param0.readUnsignedByte((byte) 90);
               this.field_k = new int[var4_int];
               this.field_l = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param0.j(98203176);
+                var6 = param0.readUnsignedShort(98203176);
                 var7 = wg.a(var6, -128);
                 if (var7 != null) {
                   this.field_k[var5] = var6;
                   array$0 = new int[var7.field_f];
                   this.field_l[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_f; var8++) {
-                    this.field_l[var5][var8] = param0.j(98203176);
+                    this.field_l[var5][var8] = param0.readUnsignedShort(98203176);
                   }
                 }
               }
@@ -159,24 +159,24 @@ final class oe extends DualLinkNode {
         var7 = OrbDefence.field_D ? 1 : 0;
         var8 = cd.field_t;
         var2 = var8;
-        var3 = var8.b((byte) 90);
+        var3 = var8.readUnsignedByte((byte) 90);
         stackIn_3_0 = ((128 & var3) != 0);
         ja.field_e = stackIn_3_0;
         wb.field_d = var3 & 127;
-        bh.field_c = var8.b((byte) 90);
-        GameAppletShell.field_l = var8.c((byte) -89);
+        bh.field_c = var8.readUnsignedByte((byte) 90);
+        GameAppletShell.field_l = var8.readLong((byte) -89);
         if (wb.field_d == 2) {
-          pc.field_X = var8.j(98203176);
-          gb.field_b = var8.a((byte) -30);
+          pc.field_X = var8.readUnsignedShort(98203176);
+          gb.field_b = var8.readUnsignedMedium((byte) -30);
         } else {
           pc.field_X = 0;
           gb.field_b = 0;
         }
-        stackIn_9_0 = (var8.b((byte) 90) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) 90) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        l.field_f = var8.g(2);
+        l.field_f = var8.readString(2);
         if (var4 != 0) {
-          vk.field_v = var8.g(2);
+          vk.field_v = var8.readString(2);
         } else {
           vk.field_v = l.field_f;
         }
@@ -185,11 +185,11 @@ final class oe extends DualLinkNode {
         }
         if (wb.field_d == 1 ||
           4 == wb.field_d) {
-          var8.j(98203176);
-          var8.g(2);
+          var8.readUnsignedShort(98203176);
+          var8.readString(2);
         }
         if (param0) {
-          var5 = var8.j(98203176);
+          var5 = var8.readUnsignedShort(98203176);
           try {
             var9 = aa.field_d.b(-11244, var5);
             vj.field_a = var9.e(-50);

@@ -9,7 +9,7 @@ final class fi implements Runnable {
     private DataInputStream field_a;
     private int field_g;
     static int[] field_h;
-    private od field_j;
+    private PacketBuffer field_j;
     private il field_f;
     private java.net.URL field_d;
     private il field_b;
@@ -91,7 +91,7 @@ final class fi implements Runnable {
         }
     }
 
-    final od a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 < 121) {
           this.field_c = (il) null;
         }
@@ -119,16 +119,16 @@ final class fi implements Runnable {
           Object var2_ref = null;
           var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
-            while (this.field_j.field_j < this.field_j.field_h.length) {
-              var1_int = this.field_a.read(this.field_j.field_h, this.field_j.field_j, -this.field_j.field_j + this.field_j.field_h.length);
+            while (this.field_j.position < this.field_j.payload.length) {
+              var1_int = this.field_a.read(this.field_j.payload, this.field_j.position, -this.field_j.position + this.field_j.payload.length);
               if (var1_int >= 0) {
-                this.field_j.field_j = this.field_j.field_j + var1_int;
+                this.field_j.position = this.field_j.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_j.field_j == this.field_j.field_h.length) {
-              throw fi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.field_h.length + " " + this.field_d));
+            if (this.field_j.position == this.field_j.payload.length) {
+              throw fi.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -200,7 +200,7 @@ final class fi implements Runnable {
               var3.write(b.a((byte) -120, var5));
               this.field_a = new DataInputStream(var4.getInputStream());
             }
-            this.field_j.field_j = 0;
+            this.field_j.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
@@ -255,7 +255,7 @@ final class fi implements Runnable {
         try {
           this.field_i = param0;
           this.field_d = param1;
-          this.field_j = new od(param2);
+          this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

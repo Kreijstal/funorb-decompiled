@@ -73,11 +73,11 @@ final class cd {
           if (mi.field_f != null) {
             try {
               mi.field_f.a(0L, (byte) -63);
-              mi.field_f.a(24, dh.field_N.field_j, 18017, dh.field_N.field_h);
+              mi.field_f.a(24, dh.field_N.position, 18017, dh.field_N.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              dh.field_N.field_j = dh.field_N.field_j + 24;
+              dh.field_N.position = dh.field_N.position + 24;
               if (param0 == 4) {
                 return;
               }
@@ -85,7 +85,7 @@ final class cd {
               return;
             }
           }
-          dh.field_N.field_j = dh.field_N.field_j + 24;
+          dh.field_N.position = dh.field_N.position + 24;
           if (param0 != 4) {
             cd.a(4);
           }

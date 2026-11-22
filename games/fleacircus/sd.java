@@ -3,7 +3,7 @@
  */
 final class sd {
     static bi field_e;
-    static ni field_i;
+    static PacketBuffer field_i;
     static dd field_c;
     static int field_a;
     static int field_f;
@@ -27,11 +27,11 @@ final class sd {
 
     final static void clearStaticReferences(byte param0) {
         if (param0 != -63) {
-          field_i = (ni) null;
+          field_i = (PacketBuffer) null;
         }
     }
 
-    final static boolean a(ni param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -42,7 +42,7 @@ final class sd {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.e(false);
+          var2_int = param0.readUnsignedByte(false);
           if (param1 != 16448) {
             return false;
           }
@@ -66,7 +66,7 @@ final class sd {
 
     static {
         field_a = 0;
-        field_i = new ni(256);
+        field_i = new PacketBuffer(256);
         field_g = true;
         field_b = "Names can only contain letters, numbers, spaces and underscores";
         field_d = new vc();

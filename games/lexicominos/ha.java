@@ -268,7 +268,7 @@ final class ha {
           var2 = (java.awt.Canvas) null;
           ha.a((java.awt.Canvas) null, (byte) 124);
         }
-        stackIn_6_0 = (ta.field_g >= 10) && (wf.field_i >= 13);
+        stackIn_6_0 = (ta.field_g >= 10) && (PacketBuffer.field_i >= 13);
         return stackIn_6_0;
     }
 

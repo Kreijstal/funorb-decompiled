@@ -62,29 +62,29 @@ final class ac extends RuntimeException {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        pb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new pb(param1);
+          var9 = new PacketBuffer(param1);
           if (param0 > -54) {
             ac.clearStaticReferences((byte) -15);
           }
-          var3 = var9.f(-124);
-          var4 = var9.e((byte) 126);
+          var3 = var9.readUnsignedByte(-124);
+          var4 = var9.readInt((byte) 126);
           if (0 <= var4 && (0 == rl.field_u ||
             !(rl.field_u < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(97, var13, 0, var4);
+              var9.readBytes(97, var13, 0, var4);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.e((byte) 126);
+            var5_int = var9.readInt((byte) 126);
             if (var5_int >= 0 && (rl.field_u == 0 ||
               !(rl.field_u < var5_int))) {
               var12 = new byte[var5_int];

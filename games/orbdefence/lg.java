@@ -20,29 +20,29 @@ final class lg {
           og.field_n[1] = tl.field_f.nextInt();
           og.field_n[param0] = (int)tg.field_a;
           og.field_n[2] = (int)(tg.field_a >> 32);
-          pg.field_c.field_i = 0;
-          pg.field_c.b(og.field_n[0], -1);
-          pg.field_c.b(og.field_n[1], -1);
-          pg.field_c.b(og.field_n[2], -1);
-          pg.field_c.b(og.field_n[3], -1);
+          pg.field_c.position = 0;
+          pg.field_c.writeInt(og.field_n[0], -1);
+          pg.field_c.writeInt(og.field_n[1], -1);
+          pg.field_c.writeInt(og.field_n[2], -1);
+          pg.field_c.writeInt(og.field_n[3], -1);
           kb.a(pg.field_c, false);
-          pg.field_c.b((byte) -60, param1);
+          pg.field_c.writeShort((byte) -60, param1);
           param2.a(pg.field_c, 27557);
-          uk.field_b.field_i = 0;
+          uk.field_b.position = 0;
           if (param3) {
-            uk.field_b.a(18, -55);
+            uk.field_b.writeByte(18, -55);
           } else {
-            uk.field_b.a(16, -10);
+            uk.field_b.writeByte(16, -10);
           }
-          uk.field_b.field_i = uk.field_b.field_i + 2;
-          var5_int = uk.field_b.field_i;
-          uk.field_b.b(j.field_e, -1);
-          uk.field_b.a(el.field_G, -16943);
+          uk.field_b.position = uk.field_b.position + 2;
+          var5_int = uk.field_b.position;
+          uk.field_b.writeInt(j.field_e, -1);
+          uk.field_b.writeLong(el.field_G, -16943);
           var6 = 0;
           if (jc.field_b) {
             var6 = var6 | 1;
           }
-          if (mg.field_g) {
+          if (PacketBuffer.field_g) {
             var6 = var6 | 4;
           }
           if (param4) {
@@ -51,17 +51,17 @@ final class lg {
           if (ug.field_r != null) {
             var6 = var6 | 16;
           }
-          uk.field_b.a(var6, -37);
+          uk.field_b.writeByte(var6, -37);
           var7 = tc.a((byte) -41, uj.b((byte) -120));
           if (var7 == null) {
             var7 = "";
           }
-          uk.field_b.a(var7, -6528);
+          uk.field_b.writeString(var7, -6528);
           if (null != ug.field_r) {
-            uk.field_b.a(false, ug.field_r);
+            uk.field_b.writePrefixedString(false, ug.field_r);
           }
           cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
-          uk.field_b.d(uk.field_b.field_i - var5_int, -2);
+          uk.field_b.backpatchShortLength(uk.field_b.position - var5_int, -2);
           bh.a(-1, param0 - 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,8 +97,8 @@ final class lg {
     final static void a(int param0, int param1) {
         se var2 = uk.field_b;
         var2.i(param0, -114);
-        var2.a(1, -55);
-        var2.a(0, -32);
+        var2.writeByte(1, -55);
+        var2.writeByte(0, -32);
         int var3 = 56 % ((-11 - param1) / 56);
     }
 

@@ -79,8 +79,8 @@ final class nk {
         try {
           r.field_p = false;
           cg.field_f = false;
-          if (pc.field_a != null &&
-            pc.field_a.field_E) {
+          if (Crc32Table.field_a != null &&
+            Crc32Table.field_a.field_E) {
             if (param0 == 8) {
               if (ei.field_e) {
                 param2 = rl.field_t;
@@ -102,7 +102,7 @@ final class nk {
               if (ij.field_g) {
                 param2 = ph.field_a;
               }
-              pc.field_a.a(param2, (byte) -109, param0);
+              Crc32Table.field_a.a(param2, (byte) -109, param0);
             }
             if (param0 != 256 &&
               param0 != 10 &&

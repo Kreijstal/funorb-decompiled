@@ -30,15 +30,15 @@ final class uk implements cg {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = dh.field_N;
-          var2 = var9.l(31760);
-          var3 = var9.l(31760);
+          var2 = var9.readUnsignedByte(31760);
+          var3 = var9.readUnsignedByte(31760);
           if (0 == var2) {
             var4 = (h) (eg.field_c.h(-11151));
             if (var4 == null) {
               eg.a((byte) 126);
               return;
             }
-            var5 = gf.field_C - var9.field_j;
+            var5 = gf.field_C - var9.position;
             var11 = var4.field_j;
             var10 = var11;
             var6 = var10;
@@ -46,13 +46,13 @@ final class uk implements cg {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.l(31760) << (rk.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(31760) << (rk.a(var7, 3) << 8));
             }
             var4.field_i = true;
             var4.unlink(param0 + 14939);
           } else {
             if (var2 == 1) {
-              var4_int = var9.f(param0 + 33464);
+              var4_int = var9.readSignedSmart(param0 + 33464);
               var5_ref_nl = (nl) (gf.field_A.h(-11151));
               while (var5_ref_nl != null) {
                 if (var3 != var5_ref_nl.field_j ||

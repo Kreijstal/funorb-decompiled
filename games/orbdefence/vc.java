@@ -151,20 +151,20 @@ final class vc {
         try {
           var3 = 50 / ((23 - param0) / 46);
           var1 = cd.field_t;
-          var2 = var1.b((byte) 90);
+          var2 = var1.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             if (qb.field_a == null) {
               qb.field_a = new k(128);
               rl.field_e = 0;
             }
-            stackIn_12_0 = (1 != var1.b((byte) 90)) ? 0 : 1;
+            stackIn_12_0 = (1 != var1.readUnsignedByte((byte) 90)) ? 0 : 1;
             var4_int = stackIn_12_0;
-            var5_ref_String = var1.g(2);
+            var5_ref_String = var1.readString(2);
             if (var4_int != 0) {
-              var1.g(2);
+              var1.readString(2);
             }
             var6 = tg.a(var5_ref_String, 256);
-            var7 = var1.g(2);
+            var7 = var1.readString(2);
             var8 = ua.a(-74, (CharSequence) ((Object) var5_ref_String));
             if (var8 == null) {
               var8 = var5_ref_String;
@@ -205,9 +205,9 @@ final class vc {
               return;
             }
             ob.field_H = 1;
-            var4 = var1.g(2);
+            var4 = var1.readString(2);
             uc.field_r = ((String) (var4)).intern();
-            var5 = var1.b((byte) 90);
+            var5 = var1.readUnsignedByte((byte) 90);
             lb.a(true, var5);
             return;
           }
@@ -215,12 +215,12 @@ final class vc {
             ge.field_c = new k(128);
             tl.field_a = 0;
           }
-          var4Lifetime1 = var1.g(2);
+          var4Lifetime1 = var1.readString(2);
           if (((String) (var4Lifetime1)).equals("")) {
             var4Lifetime1 = null;
           }
-          var5_ref_StringLifetime1 = var1.g(2);
-          var6_ref = var1.g(2);
+          var5_ref_StringLifetime1 = var1.readString(2);
+          var6_ref = var1.readString(2);
           var7_ref = gi.a(var5_ref_StringLifetime1, -52);
           if (null == var7_ref) {
             var7_ref = gi.a(var6_ref, -71);
@@ -490,15 +490,15 @@ final class vc {
                 var9 != 0) {
                 s.field_A = f.a(false, p.field_c, (String) null, 17470, param5);
               }
-              uk.field_b.field_i = 0;
-              uk.field_b.a(14, -111);
-              uk.field_b.a(s.field_A.a(10277).field_c, -53);
+              uk.field_b.position = 0;
+              uk.field_b.writeByte(14, -111);
+              uk.field_b.writeByte(s.field_A.a(10277).field_c, -53);
               bh.a(-1, -1);
               dh.field_bb = nh.field_c;
             }
             if (nh.field_c == dh.field_bb &&
               va.a(true, 1)) {
-              var6_intLifetime1 = cd.field_t.b((byte) 90);
+              var6_intLifetime1 = cd.field_t.readUnsignedByte((byte) 90);
               if (0 == var6_intLifetime1) {
                 dh.field_bb = wh.field_c;
               }
@@ -508,19 +508,19 @@ final class vc {
                 GameAppletShell.field_c = -1;
                 dh.field_bb = hf.field_l;
               }
-              cd.field_t.field_i = 0;
+              cd.field_t.position = 0;
             }
             if (wh.field_c == dh.field_bb &&
               va.a(true, 8)) {
-              tg.field_a = cd.field_t.c((byte) -89);
-              cd.field_t.field_i = 0;
+              tg.field_a = cd.field_t.readLong((byte) -89);
+              cd.field_t.position = 0;
               lg.a(3, param1, s.field_A, param4, param0);
               dh.field_bb = da.field_m;
             }
             if (da.field_m == dh.field_bb &&
               va.a(true, 1)) {
-              var6_intLifetime2 = cd.field_t.b((byte) 90);
-              cd.field_t.field_i = 0;
+              var6_intLifetime2 = cd.field_t.readUnsignedByte((byte) 90);
+              cd.field_t.position = 0;
               ug.field_r = null;
               ab.field_l = var6_intLifetime2;
               if (var6_intLifetime2 == 0 ||
@@ -547,12 +547,12 @@ final class vc {
             }
             if (dh.field_bb == lm.field_e &&
               ce.a(-60)) {
-              p.field_c = cd.field_t.c((byte) -89);
-              va.field_d = cd.field_t.b((byte) 90);
-              cd.field_t.b((byte) 90);
-              tc.field_b = cd.field_t.j(98203176);
-              var6 = cd.field_t.i(-1);
-              var7 = cd.field_t.b((byte) 90);
+              p.field_c = cd.field_t.readLong((byte) -89);
+              va.field_d = cd.field_t.readUnsignedByte((byte) 90);
+              cd.field_t.readUnsignedByte((byte) 90);
+              tc.field_b = cd.field_t.readUnsignedShort(98203176);
+              var6 = cd.field_t.readNullableString(-1);
+              var7 = cd.field_t.readUnsignedByte((byte) 90);
               if ((var7 & 1) != 0) {
                 gd.a((byte) 124);
               }
@@ -565,15 +565,15 @@ final class vc {
                 }
               }
               boolean decompiledFrameCompleted0 = true;
-              if (mg.field_g) {
-                cd.field_t.b((byte) 90);
-                cd.field_t.b((byte) 90);
-                cd.field_t.l(0);
-                cf.field_c = cd.field_t.j(98203176);
+              if (PacketBuffer.field_g) {
+                cd.field_t.readUnsignedByte((byte) 90);
+                cd.field_t.readUnsignedByte((byte) 90);
+                cd.field_t.readInt(0);
+                cf.field_c = cd.field_t.readUnsignedShort(98203176);
                 ImageProducerRasterBuffer.field_h = new byte[cf.field_c];
                 var8 = 0;
                 while (!(cf.field_c <= var8)) {
-                  ImageProducerRasterBuffer.field_h[var8] = cd.field_t.d(-20398);
+                  ImageProducerRasterBuffer.field_h[var8] = cd.field_t.readByte(-20398);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -582,9 +582,9 @@ final class vc {
                 }
               }
               if (decompiledFrameCompleted0) {
-                gb.field_h = cd.field_t.g(2);
+                gb.field_h = cd.field_t.readString(2);
                 sg.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
-                cb.field_j = cd.field_t.b((byte) 90);
+                cb.field_j = cd.field_t.readUnsignedByte((byte) 90);
                 dh.field_bb = da.field_r;
               }
               if (s.field_A.a(10277) != ci.field_b) {
@@ -655,7 +655,7 @@ final class vc {
               if (ab.field_l == 7) {
                 ab.field_l = 3;
               }
-              kk.field_Y = cd.field_t.g(2);
+              kk.field_Y = cd.field_t.readString(2);
               FullscreenFocusCanvas.field_a = false;
               stackIn_142_0 = ab.field_l;
               return stackIn_142_0;

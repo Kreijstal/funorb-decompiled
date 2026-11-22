@@ -205,7 +205,7 @@ final class lh extends ik {
           field_w = false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (wf.field_i >= 20 &&
+        if (PacketBuffer.field_i >= 20 &&
           ha.a(126) && (!(be.field_l > 0) ||
           ca.d(true))) {
           stackIn_9_0 = false;
@@ -262,28 +262,28 @@ final class lh extends ik {
         }
     }
 
-    final static void a(wf param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ki.field_g = param0.b(-1698573656) << 5;
-          var2_int = param0.d(true);
+          ki.field_g = param0.readUnsignedShort(-1698573656) << 5;
+          var2_int = param0.readUnsignedByte(true);
           ki.field_g = ki.field_g + (var2_int >> 3);
           sg.field_a = 1835008 & var2_int << 18;
-          sg.field_a = sg.field_a + (param0.b(-1698573656) << 2);
-          var2_intLifetime1 = param0.d(true);
+          sg.field_a = sg.field_a + (param0.readUnsignedShort(-1698573656) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(true);
           hh.field_I = (63 & var2_intLifetime1) << 15;
           sg.field_a = sg.field_a + (var2_intLifetime1 >> 6);
-          hh.field_I = hh.field_I + (param0.d(true) << 7);
+          hh.field_I = hh.field_I + (param0.readUnsignedByte(true) << 7);
           if (param1 != -95) {
-            wf var3 = (wf) null;
-            lh.a((wf) null, 6);
+            PacketBuffer var3 = (PacketBuffer) null;
+            lh.a((PacketBuffer) null, 6);
           }
-          var2_intLifetime2 = param0.d(true);
+          var2_intLifetime2 = param0.readUnsignedByte(true);
           hh.field_I = hh.field_I + (var2_intLifetime2 >> 1);
           th.field_s = var2_intLifetime2 << 16 & 65536;
-          th.field_s = th.field_s + param0.b(-1698573656);
+          th.field_s = th.field_s + param0.readUnsignedShort(-1698573656);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "lh.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

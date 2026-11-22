@@ -51,7 +51,7 @@ final class ia extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = uj.a(false, 0, param2, param1);
+            stackIn_4_0 = uj.computeCrc32(false, 0, param2, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 40;

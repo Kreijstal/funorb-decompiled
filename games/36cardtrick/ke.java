@@ -116,20 +116,20 @@ final class ke {
         try {
           var5 = na.field_r;
           var5.h(param1, 0);
-          var5.field_i = var5.field_i + 1;
-          var4 = var5.field_i;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           if (param2 != 21719) {
             field_c = (qa) null;
           }
-          var5.b(param2 ^ -28716, 1);
-          var5.b(param2 ^ -28716, param0.field_n);
-          var5.b(-9469, param0.field_l);
-          var5.a(-246, param0.field_j);
-          var5.a(-246, param0.field_i);
-          var5.a(-246, param0.field_p);
-          var5.a(-246, param0.field_h);
-          var5.b(var4, (byte) 5);
-          var5.f(-var4 + var5.field_i, param2 ^ 19366);
+          var5.writeByte(param2 ^ -28716, 1);
+          var5.writeByte(param2 ^ -28716, param0.field_n);
+          var5.writeByte(-9469, param0.field_l);
+          var5.writeInt(-246, param0.field_j);
+          var5.writeInt(-246, param0.field_i);
+          var5.writeInt(-246, param0.field_p);
+          var5.writeInt(-246, param0.field_h);
+          var5.appendCrc32(var4, (byte) 5);
+          var5.backpatchByteLength(-var4 + var5.position, param2 ^ 19366);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

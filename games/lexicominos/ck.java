@@ -94,8 +94,8 @@ final class ck extends IOException {
     final static void a(int param0, int param1) {
         th var2 = ed.field_q;
         var2.h(param0, 0);
-        var2.c(1, -1);
-        var2.c(param1, -1);
+        var2.writeByte(1, -1);
+        var2.writeByte(param1, -1);
     }
 
     final static void b(byte param0) {

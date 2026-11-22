@@ -115,37 +115,37 @@ final class sg {
         aj var9 = null;
         var7 = fleas.field_A ? 1 : 0;
         var8 = ae.field_a;
-        var3 = var8.e(false);
+        var3 = var8.readUnsignedByte(false);
         stackIn_3_0 = (0 != (var3 & 128));
         ll.field_j = stackIn_3_0;
         d.field_N = 127 & var3;
-        gm.field_ob = var8.e(false);
-        ki.field_b = var8.f(-83);
+        gm.field_ob = var8.readUnsignedByte(false);
+        ki.field_b = var8.readLong(-83);
         if (d.field_N == 2) {
-          ga.field_o = var8.d((byte) -60);
-          jd.field_t = var8.c(true);
+          ga.field_o = var8.readUnsignedShort((byte) -60);
+          jd.field_t = var8.readUnsignedMedium(true);
         } else {
           jd.field_t = 0;
           ga.field_o = 0;
         }
-        stackIn_9_0 = (var8.e(false) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(false) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        ci.field_e = var8.h(0);
+        ci.field_e = var8.readString(0);
         if (var4 == 0) {
           qi.field_d = ci.field_e;
         } else {
-          qi.field_d = var8.h(0);
+          qi.field_d = var8.readString(0);
         }
         if (d.field_N == 1 ||
           d.field_N == 4) {
-          var8.d((byte) -121);
-          var8.h(0);
+          var8.readUnsignedShort((byte) -121);
+          var8.readString(0);
         }
         if (param1 < 22) {
           field_f = (dd) null;
         }
         if (param0) {
-          var5 = var8.d((byte) 59);
+          var5 = var8.readUnsignedShort((byte) 59);
           try {
             var9 = nf.field_F.a(32768, var5);
             SecondaryNodeDeque.field_d = var9.c((byte) 103);

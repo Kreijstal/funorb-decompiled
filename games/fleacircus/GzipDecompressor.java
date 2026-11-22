@@ -34,7 +34,7 @@ final class GzipDecompressor {
     private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void decompress(byte param0, byte[] param1, ni param2) {
+    final void decompress(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -46,14 +46,14 @@ final class GzipDecompressor {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.field_k[param2.field_i] == 31 &&
-              param2.field_k[param2.field_i + 1] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[param2.position + 1] == -117) {
               if (this.field_c == null) {
                 this.field_c = new java.util.zip.Inflater(true);
               }
               var4_int = 84 % ((-67 - param0) / 59);
               try {
-                this.field_c.setInput(param2.field_k, param2.field_i + 10, param2.field_k.length - param2.field_i - 10 - 8);
+                this.field_c.setInput(param2.payload, param2.position + 10, param2.payload.length - param2.position - 10 - 8);
                 this.field_c.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,13 +20,13 @@ class mi extends ff {
         field_c = null;
     }
 
-    final void a(int param0, pb param1) {
+    final void a(int param0, PacketBuffer param1) {
         if (param0 != -1) {
           return;
         }
         try {
-          param1.a(this.field_d, (byte) 98);
-          param1.b(this.field_e, 15045);
+          param1.writeLong(this.field_d, (byte) 98);
+          param1.writeBase38String(this.field_e, 15045);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

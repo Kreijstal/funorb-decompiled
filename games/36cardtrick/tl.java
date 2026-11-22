@@ -48,34 +48,34 @@ abstract class tl {
         }
         var8 = rd.field_j;
         var2 = var8;
-        var3 = var8.f(-112);
+        var3 = var8.readUnsignedByte(-112);
         stackIn_5_0 = (0 != (var3 & 128));
         gg.field_a = stackIn_5_0;
         hg.field_b = 127 & var3;
-        be.field_a = var8.f(102);
-        ff.field_a = var8.d(true);
+        be.field_a = var8.readUnsignedByte(102);
+        ff.field_a = var8.readLong(true);
         if (hg.field_b == 2) {
-          fg.field_l = var8.d((byte) 72);
-          bi.field_a = var8.e(true);
+          fg.field_l = var8.readUnsignedShort((byte) 72);
+          bi.field_a = var8.readUnsignedMedium(true);
         } else {
           bi.field_a = 0;
           fg.field_l = 0;
         }
-        stackIn_11_0 = (var8.f(76) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(76) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        cd.field_g = var8.c(false);
+        cd.field_g = var8.readString(false);
         if (var4 != 0) {
-          fj.field_c = var8.c(false);
+          fj.field_c = var8.readString(false);
         } else {
           fj.field_c = cd.field_g;
         }
         if (hg.field_b == 1) {
-          var8.d((byte) 72);
-          var8.c(false);
+          var8.readUnsignedShort((byte) 72);
+          var8.readString(false);
         } else {
           if (hg.field_b == 4) {
-            var8.d((byte) 72);
-            var8.c(false);
+            var8.readUnsignedShort((byte) 72);
+            var8.readString(false);
           }
         }
         if (!param1) {
@@ -83,7 +83,7 @@ abstract class tl {
           bl.field_c = null;
           return new vk(param1);
         }
-        var5 = var8.d((byte) 72);
+        var5 = var8.readUnsignedShort((byte) 72);
         try {
           var9 = mh.field_d.a(var5, -32769);
           hi.field_b = var9.b((byte) 28);

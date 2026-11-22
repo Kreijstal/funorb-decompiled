@@ -9,7 +9,7 @@ final class cd extends wj {
     static String field_x;
     static se field_t;
     int field_v;
-    mg field_u;
+    PacketBuffer field_u;
 
     public static void clearStaticReferences(byte param0) {
         field_x = null;
@@ -95,16 +95,16 @@ final class cd extends wj {
           if (this.field_l) {
             throw new RuntimeException();
           }
-          if (-this.field_s + this.field_u.field_j.length <= this.field_u.field_i) {
-            return this.field_u.field_j;
+          if (-this.field_s + this.field_u.payload.length <= this.field_u.position) {
+            return this.field_u.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_l) {
           throw new RuntimeException();
         }
-        if (-this.field_s + this.field_u.field_j.length <= this.field_u.field_i) {
-          return this.field_u.field_j;
+        if (-this.field_s + this.field_u.payload.length <= this.field_u.position) {
+          return this.field_u.payload;
         }
         throw new RuntimeException();
     }
@@ -114,7 +114,7 @@ final class cd extends wj {
           return 0;
         }
         if (param0 == 100) {
-          return 100 * this.field_u.field_i / (this.field_u.field_j.length - this.field_s);
+          return 100 * this.field_u.position / (this.field_u.payload.length - this.field_s);
         }
         return -78;
     }

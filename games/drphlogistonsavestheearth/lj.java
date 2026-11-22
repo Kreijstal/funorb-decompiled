@@ -14,21 +14,21 @@ final class lj {
     private int field_g;
     int field_h;
 
-    final void a(od param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.l(31760);
+        this.field_k = param0.readUnsignedByte(31760);
         this.field_j = new int[this.field_k];
         this.field_f = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_j[var2] = param0.j(-788751192);
-          this.field_f[var2] = param0.j(-788751192);
+          this.field_j[var2] = param0.readUnsignedShort(-788751192);
+          this.field_f[var2] = param0.readUnsignedShort(-788751192);
         }
     }
 
-    final void b(od param0) {
-        this.field_e = param0.l(31760);
-        this.field_b = param0.h(-114);
-        this.field_h = param0.h(-122);
+    final void b(PacketBuffer param0) {
+        this.field_e = param0.readUnsignedByte(31760);
+        this.field_b = param0.readInt(-114);
+        this.field_h = param0.readInt(-122);
         this.a(param0);
     }
 

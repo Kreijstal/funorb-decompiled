@@ -143,7 +143,7 @@ final class ek {
         }
         if (ok.field_x != null) {
           ok.field_x.n(param0 ^ 22641);
-          var1 = ni.d(true);
+          var1 = PacketBuffer.d(true);
           lg.field_b = new ul(var1, (String) null, true, false, false);
           nb.field_a.b(ak.field_a, (byte) -35);
           if (param0 != -6) {
@@ -156,7 +156,7 @@ final class ek {
           ak.field_a.l(param0 ^ 5);
           return;
         }
-        var1Lifetime1 = ni.d(true);
+        var1Lifetime1 = PacketBuffer.d(true);
         lg.field_b = new ul(var1Lifetime1, (String) null, true, false, false);
         nb.field_a.b(ak.field_a, (byte) -35);
         if (param0 == -6) {

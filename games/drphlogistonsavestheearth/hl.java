@@ -96,18 +96,18 @@ final class hl {
         try {
           var6 = nj.field_p;
           var6.d(param2, -18392);
-          var6.field_j = var6.field_j + 1;
-          var4 = var6.field_j;
-          var6.c(1, (byte) -108);
-          var6.c(param0.field_m, (byte) -98);
-          var6.c(param0.field_l, (byte) -95);
-          var6.a(param0.field_o, (byte) -42);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, (byte) -108);
+          var6.writeByte(param0.field_m, (byte) -98);
+          var6.writeByte(param0.field_l, (byte) -95);
+          var6.writeInt(param0.field_o, (byte) -42);
           int var5 = 27 % ((40 - param1) / 62);
-          var6.a(param0.field_p, (byte) 126);
-          var6.a(param0.field_n, (byte) 123);
-          var6.a(param0.field_h, (byte) -115);
-          var6.d(var4, (byte) 48);
-          var6.b(var6.field_j - var4, (byte) 87);
+          var6.writeInt(param0.field_p, (byte) 126);
+          var6.writeInt(param0.field_n, (byte) 123);
+          var6.writeInt(param0.field_h, (byte) -115);
+          var6.appendCrc32(var4, (byte) 48);
+          var6.backpatchByteLength(var6.position - var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

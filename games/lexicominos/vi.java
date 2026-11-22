@@ -46,17 +46,17 @@ final class vi extends kd {
         try {
           var5 = ed.field_q;
           var5.h(param0, 0);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
-          var5.c(param2, param2 - 2);
-          var5.c(param1.field_n, -1);
-          var5.c(param1.field_p, -1);
-          var5.f(param1.field_j, -32287);
-          var5.f(param1.field_q, -32287);
-          var5.f(param1.field_h, -32287);
-          var5.f(param1.field_o, -32287);
-          var5.a(var4, (byte) 119);
-          var5.d(-var4 + var5.field_h, (byte) -122);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(param2, param2 - 2);
+          var5.writeByte(param1.field_n, -1);
+          var5.writeByte(param1.field_p, -1);
+          var5.writeInt(param1.field_j, -32287);
+          var5.writeInt(param1.field_q, -32287);
+          var5.writeInt(param1.field_h, -32287);
+          var5.writeInt(param1.field_o, -32287);
+          var5.appendCrc32(var4, (byte) 119);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) -122);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

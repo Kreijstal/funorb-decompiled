@@ -7,7 +7,7 @@ final class tg extends kd {
     int field_k;
     byte[] field_h;
 
-    final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, byte param3, wf param4, int param5, byte[] param6) {
+    final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, byte param3, PacketBuffer param4, int param5, byte[] param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -43,29 +43,29 @@ final class tg extends kd {
             var8[var9] = kd.field_e.nextInt();
           }
           if (null == gd.field_m ||
-            !(var7_int <= gd.field_m.field_j.length)) {
-            gd.field_m = new wf(var7_int);
+            !(var7_int <= gd.field_m.payload.length)) {
+            gd.field_m = new PacketBuffer(var7_int);
           }
-          gd.field_m.field_h = 0;
-          gd.field_m.a(param5, param6, 255, param1);
-          gd.field_m.e(var7_int, (byte) 82);
-          gd.field_m.a(-661454965, var13);
+          gd.field_m.position = 0;
+          gd.field_m.writeBytes(param5, param6, 255, param1);
+          gd.field_m.padZerosTo(var7_int, (byte) 82);
+          gd.field_m.encryptXtea(-661454965, var13);
           if (null == fc.field_z ||
-            !(fc.field_z.field_j.length >= 100)) {
-            fc.field_z = new wf(100);
+            !(fc.field_z.payload.length >= 100)) {
+            fc.field_z = new PacketBuffer(100);
           }
-          fc.field_z.field_h = 0;
-          fc.field_z.c(10, -1);
+          fc.field_z.position = 0;
+          fc.field_z.writeByte(10, -1);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            fc.field_z.f(var13[var11], -32287);
+            fc.field_z.writeInt(var13[var11], -32287);
             var11++;
           }
-          fc.field_z.e(112, param1);
-          fc.field_z.a(param3 ^ -11, param2, param0);
-          param4.a(0, fc.field_z.field_j, param3 + 171, fc.field_z.field_h);
-          param4.a(0, gd.field_m.field_j, 255, gd.field_m.field_h);
+          fc.field_z.writeShort(112, param1);
+          fc.field_z.applyRsa(param3 ^ -11, param2, param0);
+          param4.writeBytes(0, fc.field_z.payload, param3 + 171, fc.field_z.position);
+          param4.writeBytes(0, gd.field_m.payload, 255, gd.field_m.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

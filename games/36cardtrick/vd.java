@@ -18,7 +18,7 @@ final class vd extends he {
     static int field_u;
     static String field_n;
 
-    private final void a(int param0, pb param1, byte param2) {
+    private final void a(int param0, PacketBuffer param1, byte param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -37,24 +37,24 @@ final class vd extends he {
           var4_int = -30 % ((param2 - 34) / 63);
           if (1 != param0) {
             if (param0 == 2) {
-              var5 = param1.f(29);
+              var5 = param1.readUnsignedByte(29);
               this.field_m = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                this.field_m[var6] = param1.d((byte) 72);
+                this.field_m[var6] = param1.readUnsignedShort((byte) 72);
               }
             } else if (param0 == 3) {
-              var5 = param1.f(-96);
+              var5 = param1.readUnsignedByte(-96);
               this.field_v = new int[var5][];
               this.field_t = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                var7 = param1.d((byte) 72);
+                var7 = param1.readUnsignedShort((byte) 72);
                 var8 = p.a(-1, var7);
                 if (var8 != null) {
                   this.field_t[var6] = var7;
                   array$0 = new int[var8.field_d];
                   this.field_v[var6] = array$0;
                   for (var9 = 0; var8.field_d > var9; var9++) {
-                    this.field_v[var6][var9] = param1.d((byte) 72);
+                    this.field_v[var6][var9] = param1.readUnsignedShort((byte) 72);
                   }
                 }
               }
@@ -64,7 +64,7 @@ final class vd extends he {
               }
             }
           } else {
-            this.field_o = rh.a('<', param1.c(false), -124);
+            this.field_o = rh.a('<', param1.readString(false), -124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ final class vd extends he {
         }
     }
 
-    final void a(byte param0, pb param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -171,7 +171,7 @@ final class vd extends he {
         var4 = Main.field_T;
         try {
           while (true) {
-            var3_int = param1.f(91);
+            var3_int = param1.readUnsignedByte(91);
             if (0 != var3_int) {
               this.a(var3_int, param1, (byte) 117);
               continue;

@@ -24,17 +24,17 @@ final class sc {
         try {
           var5 = ud.field_b;
           var5.e(param2 + 7, param0);
-          var5.field_i = var5.field_i + 1;
-          var4 = var5.field_i;
-          var5.a(param2 ^ -12, param2);
-          var5.a(-11, param1.field_j);
-          var5.a(param2 - 12, param1.field_m);
-          var5.a(param1.field_o, (byte) -46);
-          var5.a(param1.field_i, (byte) -82);
-          var5.a(param1.field_l, (byte) -67);
-          var5.a(param1.field_n, (byte) -42);
-          var5.c(var4, param2 - 30533);
-          var5.c((byte) -81, var5.field_i - var4);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(param2 ^ -12, param2);
+          var5.writeByte(-11, param1.field_j);
+          var5.writeByte(param2 - 12, param1.field_m);
+          var5.writeInt(param1.field_o, (byte) -46);
+          var5.writeInt(param1.field_i, (byte) -82);
+          var5.writeInt(param1.field_l, (byte) -67);
+          var5.writeInt(param1.field_n, (byte) -42);
+          var5.appendCrc32(var4, param2 - 30533);
+          var5.backpatchByteLength((byte) -81, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

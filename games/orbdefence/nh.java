@@ -107,7 +107,7 @@ final class nh {
         }
         var3 = new oe();
         if (var4 != null) {
-          var3.a((byte) 67, new mg(var4));
+          var3.a((byte) 67, new PacketBuffer(var4));
         }
         if (param1 >= 32768) {
           var3.b((byte) -77);

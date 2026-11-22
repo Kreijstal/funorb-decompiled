@@ -14,7 +14,7 @@ final class eb {
     int field_g;
     String[][] field_c;
 
-    final void a(wf param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         byte[] array$2 = null;
         byte[] array$1 = null;
         byte[] array$0 = null;
@@ -34,34 +34,34 @@ final class eb {
         int var5Lifetime1;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
-          this.field_e = new byte[param0.g((byte) -122)][];
+          this.field_e = new byte[param0.readVarInt((byte) -122)][];
           for (var3_int = 0; var3_int < this.field_e.length; var3_int++) {
-            var4_int = (byte)param0.d(true);
-            var5 = param0.d((byte) 19);
+            var4_int = (byte)param0.readUnsignedByte(true);
+            var5 = param0.readInt((byte) 19);
             array$2 = new byte[var5 + 1];
             this.field_e[var3_int] = array$2;
             this.field_e[var3_int][0] = (byte)var4_int;
-            o.a(param0.field_j, param0.field_h, this.field_e[var3_int], 1, var5);
-            param0.field_h = param0.field_h + var5;
+            o.a(param0.payload, param0.position, this.field_e[var3_int], 1, var5);
+            param0.position = param0.position + var5;
           }
-          this.field_i = new byte[param0.g((byte) -104)][];
+          this.field_i = new byte[param0.readVarInt((byte) -104)][];
           if (param1 < 26) {
             this.field_g = 72;
           }
           for (var3_intLifetime1 = 0; this.field_i.length > var3_intLifetime1; var3_intLifetime1++) {
-            var4_intLifetime1 = (byte)param0.d(true);
-            var5Lifetime1 = param0.d((byte) 19);
+            var4_intLifetime1 = (byte)param0.readUnsignedByte(true);
+            var5Lifetime1 = param0.readInt((byte) 19);
             array$1 = new byte[1 + var5Lifetime1];
             this.field_i[var3_intLifetime1] = array$1;
             this.field_i[var3_intLifetime1][0] = (byte)var4_intLifetime1;
-            o.a(param0.field_j, param0.field_h, this.field_i[var3_intLifetime1], 1, var5Lifetime1);
-            param0.field_h = param0.field_h + var5Lifetime1;
+            o.a(param0.payload, param0.position, this.field_i[var3_intLifetime1], 1, var5Lifetime1);
+            param0.position = param0.position + var5Lifetime1;
           }
           for (var3_intLifetime2 = 0; this.field_h.length > var3_intLifetime2; var3_intLifetime2++) {
-            array$0 = new byte[param0.d((byte) 19)];
+            array$0 = new byte[param0.readInt((byte) 19)];
             this.field_h[var3_intLifetime2] = array$0;
             var4 = array$0;
-            param0.a(96, var4.length, 0, var4);
+            param0.readBytes(96, var4.length, 0, var4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,18 +154,18 @@ final class eb {
             stackIn_5_0 = 0;
             return stackIn_5_0;
           }
-          ne.field_a.field_j = param0[param2];
-          ne.field_a.field_h = param1;
+          ne.field_a.payload = param0[param2];
+          ne.field_a.position = param1;
           var5_int = 255 & param3;
           var6 = -1;
           var7 = -1;
           while (var6 < var5_int) {
-            var7 = ne.field_a.g((byte) -109);
+            var7 = ne.field_a.readVarInt((byte) -109);
             if (var7 != 0) {
               var6++;
               continue;
             }
-            var6 = var6 + (1 + ne.field_a.g((byte) -93));
+            var6 = var6 + (1 + ne.field_a.readVarInt((byte) -93));
           }
           stackIn_12_0 = var7;
           return stackIn_12_0;

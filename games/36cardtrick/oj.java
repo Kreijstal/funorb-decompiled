@@ -4,7 +4,7 @@
 final class oj {
     static qa field_e;
     static int field_d;
-    static pb field_a;
+    static PacketBuffer field_a;
     static int field_c;
     static String field_b;
 

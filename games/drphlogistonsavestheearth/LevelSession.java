@@ -749,7 +749,7 @@ final class LevelSession {
         }
         this.a(9, ri.field_q + (int)this.field_D, -1, (int)this.field_N + am.field_p, param0 ^ -31963);
         this.field_z.j(64);
-        od.a(param0 ^ 1630761897, this.field_z);
+        PacketBuffer.a(param0 ^ 1630761897, this.field_z);
         return;
     }
 
@@ -1749,7 +1749,7 @@ final class LevelSession {
         }
         if (decompiledFrameRemainder2) {
           if (this.field_u == 0) {
-            od.a(-1630758008, this.field_M);
+            PacketBuffer.a(-1630758008, this.field_M);
           }
           this.field_M.h(this.field_u + 196);
           this.field_M.j((int)((25.0 + (double)this.field_u / 2.0) * (double)dg.field_e / 80.0));

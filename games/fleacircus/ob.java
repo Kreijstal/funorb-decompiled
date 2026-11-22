@@ -75,14 +75,14 @@ final class ob {
         return true;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, ni param4) {
+    final static void a(int param0, int param1, byte param2, int param3, PacketBuffer param4) {
         try {
-          param4.a(-11, 12);
-          param4.b((byte) -103, 17);
+          param4.writeByte(-11, 12);
+          param4.writeShort((byte) -103, 17);
           int var5_int = 104 % ((-72 - param2) / 52);
-          param4.b((byte) 119, param1);
-          param4.b((byte) -122, param0);
-          param4.a(-11, param3);
+          param4.writeShort((byte) 119, param1);
+          param4.writeShort((byte) -122, param0);
+          param4.writeByte(-11, param3);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

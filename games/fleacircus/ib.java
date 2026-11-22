@@ -148,20 +148,20 @@ final class ib implements ComponentLayout {
         var8 = fleas.field_A ? 1 : 0;
         try {
           var1 = ae.field_a;
-          var2 = var1.e(false);
+          var2 = var1.readUnsignedByte(false);
           if (var2 == 0) {
             if (null == kc.field_c) {
               kc.field_c = new qk(128);
               ij.field_I = 0;
             }
-            stackIn_11_0 = (var1.e(false) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(false) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.h(0);
+            var4_ref_String = var1.readString(0);
             if (var3_int != 0) {
-              var1.h(0);
+              var1.readString(0);
             }
             var5_ref = vb.a(var4_ref_String, (byte) -47);
-            var6_ref = var1.h(0);
+            var6_ref = var1.readString(0);
             var7_ref = uk.a(-109, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -205,9 +205,9 @@ final class ib implements ComponentLayout {
               return;
             }
             nb.field_i = 1;
-            var3 = var1.h(0);
+            var3 = var1.readString(0);
             ul.field_F = ((String) (var3)).intern();
-            var4 = var1.e(false);
+            var4 = var1.readUnsignedByte(false);
             ul.a(18398, var4);
             return;
           }
@@ -215,12 +215,12 @@ final class ib implements ComponentLayout {
             di.field_b = new qk(128);
             gk.field_A = 0;
           }
-          var3Lifetime1 = var1.h(0);
+          var3Lifetime1 = var1.readString(0);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(0);
-          var5 = var1.h(0);
+          var4_ref_StringLifetime1 = var1.readString(0);
+          var5 = var1.readString(0);
           var6 = rg.b((byte) -59, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = rg.b((byte) -126, var5);

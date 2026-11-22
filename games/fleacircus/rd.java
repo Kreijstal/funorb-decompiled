@@ -25,9 +25,9 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (param2 >= -97) {
             field_e = (dd) null;
           }
-          var3.a(-11, 2);
-          var3.a(-11, 0);
-          var3.a(-11, param1.field_i);
+          var3.writeByte(-11, 2);
+          var3.writeByte(-11, 0);
+          var3.writeByte(-11, param1.field_i);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "rd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

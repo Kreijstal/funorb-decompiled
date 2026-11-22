@@ -627,7 +627,7 @@ final class re {
                                 if (null != gj.field_a) {
                                   ga.a(true);
                                 }
-                                pb.a((byte) -124, mk.g(-119));
+                                PacketBuffer.a((byte) -124, mk.g(-119));
                               }
                             } else {
                               if (var8 == 9) {

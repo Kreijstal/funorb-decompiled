@@ -779,21 +779,21 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(int param0, int param1, int param2, int param3, od param4) {
+    final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param4.c(12, (byte) -89);
-          param4.c(17, -17402);
-          param4.c(param0, -17402);
-          param4.c(param1, param2 - 44202);
+          param4.writeByte(12, (byte) -89);
+          param4.writeShort(17, -17402);
+          param4.writeShort(param0, -17402);
+          param4.writeShort(param1, param2 - 44202);
           if (param2 != 26800) {
             field_e = (nh) null;
           }
-          param4.c(param3, (byte) -126);
+          param4.writeByte(param3, (byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

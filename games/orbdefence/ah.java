@@ -22,21 +22,21 @@ final class ah {
         this.field_a = 0;
     }
 
-    final void a(mg param0) {
-        this.field_c = param0.b((byte) 90);
-        this.field_b = param0.l(0);
-        this.field_d = param0.l(0);
+    final void a(PacketBuffer param0) {
+        this.field_c = param0.readUnsignedByte((byte) 90);
+        this.field_b = param0.readInt(0);
+        this.field_d = param0.readInt(0);
         this.b(param0);
     }
 
-    final void b(mg param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_g = param0.b((byte) 90);
+        this.field_g = param0.readUnsignedByte((byte) 90);
         this.field_j = new int[this.field_g];
         this.field_k = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-          this.field_j[var2] = param0.j(98203176);
-          this.field_k[var2] = param0.j(98203176);
+          this.field_j[var2] = param0.readUnsignedShort(98203176);
+          this.field_k[var2] = param0.readUnsignedShort(98203176);
         }
     }
 

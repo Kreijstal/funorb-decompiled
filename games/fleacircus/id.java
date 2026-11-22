@@ -40,11 +40,11 @@ final class id {
           } else {
             try {
               sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.field_e), af.field_f);
-              ud.field_b.field_i = 0;
+              ud.field_b.position = 0;
               var4 = ae.field_a;
               var5 = var4;
               ResourceArchive.field_k = d.field_O;
-              var5.field_i = 0;
+              var5.position = 0;
               stackIn_13_0 = (!param1) ? -1 : -2;
               hc.field_j = stackIn_13_0;
               rj.field_k = stackIn_13_0;

@@ -9,7 +9,7 @@ final class qi {
     static int field_f;
     static String field_a;
 
-    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, ni param4, java.math.BigInteger param5, byte param6) {
+    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, PacketBuffer param4, java.math.BigInteger param5, byte param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -45,29 +45,29 @@ final class qi {
             var8[var9] = vk.field_N.nextInt();
           }
           if (null == ri.field_x ||
-            !(var7_int <= ri.field_x.field_k.length)) {
-            ri.field_x = new ni(var7_int);
+            !(var7_int <= ri.field_x.payload.length)) {
+            ri.field_x = new PacketBuffer(var7_int);
           }
-          ri.field_x.field_i = 0;
-          ri.field_x.a(param3, param1, param2, 0);
-          ri.field_x.d(var7_int, 0);
-          ri.field_x.a(0, var13);
+          ri.field_x.position = 0;
+          ri.field_x.writeBytes(param3, param1, param2, 0);
+          ri.field_x.padZerosTo(var7_int, 0);
+          ri.field_x.encryptXtea(0, var13);
           if (fleas.field_B == null ||
-            !(100 <= fleas.field_B.field_k.length)) {
-            fleas.field_B = new ni(100);
+            !(100 <= fleas.field_B.payload.length)) {
+            fleas.field_B = new PacketBuffer(100);
           }
-          fleas.field_B.field_i = 0;
-          fleas.field_B.a(param6 + 49, 10);
+          fleas.field_B.position = 0;
+          fleas.field_B.writeByte(param6 + 49, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            fleas.field_B.a(var13[var11], (byte) -15);
+            fleas.field_B.writeInt(var13[var11], (byte) -15);
             var11++;
           }
-          fleas.field_B.b((byte) -49, param1);
-          fleas.field_B.a(param0, param5, 127);
-          param4.a(fleas.field_B.field_k, fleas.field_B.field_i, 0, 0);
-          param4.a(ri.field_x.field_k, ri.field_x.field_i, 0, param6 + 60);
+          fleas.field_B.writeShort((byte) -49, param1);
+          fleas.field_B.applyRsa(param0, param5, 127);
+          param4.writeBytes(fleas.field_B.payload, fleas.field_B.position, 0, 0);
+          param4.writeBytes(ri.field_x.payload, ri.field_x.position, 0, param6 + 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ final class qi {
         byte[] var6 = null;
         Object var7 = null;
         byte[] var9 = null;
-        ni var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
@@ -137,20 +137,20 @@ final class qi {
             var9 = (byte[]) null;
             qi.a((byte[]) null, -34);
           }
-          var10 = new ni(param0);
-          var3 = var10.e(false);
-          var4 = var10.c((byte) 123);
+          var10 = new PacketBuffer(param0);
+          var3 = var10.readUnsignedByte(false);
+          var4 = var10.readInt((byte) 123);
           if (0 <= var4 && (0 == lj.field_b ||
             !(var4 > lj.field_b))) {
             if (var3 == 0) {
               var14 = new byte[var4];
               var12 = var14;
               var5 = var12;
-              var10.b(var14, 0, -126, var4);
+              var10.readBytes(var14, 0, -126, var4);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var10.c((byte) 126);
+            var5_int = var10.readInt((byte) 126);
             if (0 <= var5_int && (lj.field_b == 0 ||
               !(lj.field_b < var5_int))) {
               var13 = new byte[var5_int];

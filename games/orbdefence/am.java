@@ -59,10 +59,10 @@ final class am {
     }
 
     final static String b(int param0) {
-        if (qc.field_g == mg.field_m) {
+        if (qc.field_g == PacketBuffer.field_m) {
           return bh.field_e;
         }
-        if (tg.field_c == mg.field_m) {
+        if (tg.field_c == PacketBuffer.field_m) {
           return pg.field_a;
         }
         if (bd.field_u.a(false)) {

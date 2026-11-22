@@ -11,7 +11,7 @@ final class qf {
         if (var3 == null) {
           return null;
         }
-        return new qf(new ni(var3));
+        return new qf(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -64,22 +64,22 @@ final class qf {
         if (var3 == null) {
           return null;
         }
-        return new qf(new ni(var3));
+        return new qf(new PacketBuffer(var3));
     }
 
-    private qf(ni param0) {
+    private qf(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new cc[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.e(false);
+          var3 = param0.readUnsignedByte(false);
           if (var3 != 0) {
-            param0.field_i = param0.field_i - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new cc();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.d((byte) -66);
-        this.field_c = param0.d((byte) -69);
+        this.field_a = param0.readUnsignedShort((byte) -66);
+        this.field_c = param0.readUnsignedShort((byte) -69);
     }
 }

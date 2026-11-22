@@ -45,14 +45,14 @@ final class hh extends sh {
         kg.field_h.field_n = 0;
     }
 
-    final void a(mg param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(false, this.field_b);
+          param0.writePrefixedString(false, this.field_b);
           if (param1 != 27557) {
-            mg var4 = (mg) null;
-            this.a((mg) null, 15);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 15);
           }
-          param0.a((byte) -127, this.field_a);
+          param0.writeBase38String((byte) -127, this.field_a);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "hh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

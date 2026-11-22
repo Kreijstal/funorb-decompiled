@@ -148,7 +148,7 @@ class jc implements td, rj {
         }
     }
 
-    final static void a(mg param0, int param1, int param2, byte[] param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
+    final static void a(PacketBuffer param0, int param1, int param2, byte[] param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -181,32 +181,32 @@ class jc implements td, rj {
             var8[var9] = dd.field_D.nextInt();
           }
           if (s.field_C == null ||
-            !(var7_int <= s.field_C.field_j.length)) {
-            s.field_C = new mg(var7_int);
+            !(var7_int <= s.field_C.payload.length)) {
+            s.field_C = new PacketBuffer(var7_int);
           }
-          s.field_C.field_i = 0;
-          s.field_C.a(param2, param4, (byte) -11, param3);
-          s.field_C.d((byte) -115, var7_int);
-          s.field_C.a(var13, -87);
+          s.field_C.position = 0;
+          s.field_C.writeBytes(param2, param4, (byte) -11, param3);
+          s.field_C.padZerosTo((byte) -115, var7_int);
+          s.field_C.encryptXtea(var13, -87);
           if (param1 < 24) {
             return;
           }
           if (vd.field_a == null ||
-            !(vd.field_a.field_j.length >= 100)) {
-            vd.field_a = new mg(100);
+            !(vd.field_a.payload.length >= 100)) {
+            vd.field_a = new PacketBuffer(100);
           }
-          vd.field_a.field_i = 0;
-          vd.field_a.a(10, -64);
+          vd.field_a.position = 0;
+          vd.field_a.writeByte(10, -64);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            vd.field_a.b(var13[var11], -1);
+            vd.field_a.writeInt(var13[var11], -1);
             var11++;
           }
-          vd.field_a.b((byte) -60, param4);
-          vd.field_a.a(param5, param6, 27551);
-          param0.a(0, vd.field_a.field_i, (byte) -11, vd.field_a.field_j);
-          param0.a(0, s.field_C.field_i, (byte) -11, s.field_C.field_j);
+          vd.field_a.writeShort((byte) -60, param4);
+          vd.field_a.applyRsa(param5, param6, 27551);
+          param0.writeBytes(0, vd.field_a.position, (byte) -11, vd.field_a.payload);
+          param0.writeBytes(0, s.field_C.position, (byte) -11, s.field_C.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

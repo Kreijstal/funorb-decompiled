@@ -57,10 +57,10 @@ final class ql {
             var5 = (qf) (vb.field_h.d(853));
           }
           var2_int = -104 / ((param1 + 19) / 32);
-          var3 = (fb) (mg.field_l.b((byte) 122));
+          var3 = (fb) (PacketBuffer.field_l.b((byte) 122));
           while (var3 != null) {
             ia.a(-86, param0, var3);
-            var3 = (fb) (mg.field_l.d(853));
+            var3 = (fb) (PacketBuffer.field_l.d(853));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

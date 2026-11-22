@@ -468,7 +468,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -70) {
           this.field_v = false;
         }
-        int var2 = ae.field_a.e(false);
+        int var2 = ae.field_a.readUnsignedByte(false);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + pd.field_l;
         byte[] var5 = new byte[var4];
@@ -664,7 +664,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ni var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = fleas.field_A ? 1 : 0;
@@ -759,7 +759,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (IntrusiveNode.field_g.c((byte) 79)) {
                 var12 = IntrusiveNode.field_g.a(param1 + 86);
                 if (var12 != null) {
-                  var7 = pg.a(var12.field_i, 0, var12.field_k, 0);
+                  var7 = pg.a(var12.position, 0, var12.payload, 0);
                   w.a(61, var7);
                 } else {
                   var9 = (String) null;

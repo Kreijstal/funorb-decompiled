@@ -275,7 +275,7 @@ final class aj {
           var1 = var6 + ":";
           for (var2 = 0; al.field_a > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & rd.field_j.field_g[var2];
+            var3 = 255 & rd.field_j.payload[var2];
             var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;

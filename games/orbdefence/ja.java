@@ -343,7 +343,7 @@ final class ja {
           stackIn_13_0 = !(ki.d(-116));
           var2 = wd.a(stackIn_13_0, false);
           if (var2 == 3) {
-            if (mg.field_k != null) {
+            if (PacketBuffer.field_k != null) {
               lb.a(true);
             }
             tl.a((byte) -102, uj.b((byte) -120));
@@ -1033,7 +1033,7 @@ final class ja {
             if (!this.field_f.a((byte) -1)) {
               break regionExit1;
             }
-            if (null == mg.field_k) {
+            if (null == PacketBuffer.field_k) {
               var6Lifetime1 = param2 ? 1 : 0;
               ud.a(8, bk.field_d, var6Lifetime1 != 0, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
               if (var9 == 0) {
@@ -1191,7 +1191,7 @@ final class ja {
             }
           }
           if (this.field_f.a((byte) -1)) {
-            if (mg.field_k != null) {
+            if (PacketBuffer.field_k != null) {
               lb.a(!param1);
             }
             ja.a(-99, uj.b((byte) -120));
@@ -2359,7 +2359,7 @@ final class ja {
           return nb.field_o;
         }
         if (param0 == 104) {
-          return mg.field_h;
+          return PacketBuffer.field_h;
         }
         return Integer.toString(param0);
     }

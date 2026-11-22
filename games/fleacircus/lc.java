@@ -11,7 +11,7 @@ class lc extends DualLinkNode {
     static dd field_t;
     static int field_u;
 
-    final static void a(ni param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -57,7 +57,7 @@ class lc extends DualLinkNode {
                 }
               }
             }
-            param0.a(var10, 24, 0, 0);
+            param0.writeBytes(var10, 24, 0, 0);
             if (param1 != -113) {
               lc.clearStaticReferences((byte) -96);
             }

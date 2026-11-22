@@ -41,7 +41,7 @@ final class ac {
         }
         ai var5 = new ai();
         if (var4 != null) {
-          var5.a(new od(var4), param1 + 74);
+          var5.a(new PacketBuffer(var4), param1 + 74);
           if (32768 > param0) {
             if (param1 == -74) {
               this.field_i.a(var5, (long)param0, 117);

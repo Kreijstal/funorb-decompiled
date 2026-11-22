@@ -214,7 +214,7 @@ class r extends ek {
 
     final static boolean a(int param0, byte param1) {
         try {
-          if (!(param0 > rd.field_j.field_i)) {
+          if (!(param0 > rd.field_j.position)) {
             return true;
           }
           if (null == cb.field_j) {
@@ -225,16 +225,16 @@ class r extends ek {
           }
           int var2_int = cb.field_j.b(126);
           if (var2_int > 0) {
-            if (!(param0 - rd.field_j.field_i >= var2_int)) {
-              var2_int = param0 - rd.field_j.field_i;
+            if (!(param0 - rd.field_j.position >= var2_int)) {
+              var2_int = param0 - rd.field_j.position;
             }
-            cb.field_j.a((byte) 66, rd.field_j.field_g, var2_int, rd.field_j.field_i);
+            cb.field_j.a((byte) 66, rd.field_j.payload, var2_int, rd.field_j.position);
             uk.field_a = id.a(71);
-            rd.field_j.field_i = rd.field_j.field_i + var2_int;
-            if (param0 > rd.field_j.field_i) {
+            rd.field_j.position = rd.field_j.position + var2_int;
+            if (param0 > rd.field_j.position) {
               return false;
             }
-            rd.field_j.field_i = 0;
+            rd.field_j.position = 0;
             return true;
           }
           try {

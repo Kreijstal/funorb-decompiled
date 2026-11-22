@@ -74,11 +74,11 @@ final class rh {
         try {
           var3 = nj.field_p;
           var3.d(param2, -18392);
-          var3.c(param1.field_m, (byte) -113);
+          var3.writeByte(param1.field_m, (byte) -113);
           if (param0 < 53) {
             field_e = 70;
           }
-          var3.c(param1.field_h, -17402);
+          var3.writeShort(param1.field_h, -17402);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

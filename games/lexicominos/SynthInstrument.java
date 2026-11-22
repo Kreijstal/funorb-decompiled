@@ -258,50 +258,50 @@ final class SynthInstrument {
         return field_g;
     }
 
-    final void a(wf param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_l = new SoundEnvelope();
         this.field_l.b(param0);
         this.field_x = new SoundEnvelope();
         this.field_x.b(param0);
-        int var2 = param0.d(true);
+        int var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_c = new SoundEnvelope();
           this.field_c.b(param0);
           this.field_t = new SoundEnvelope();
           this.field_t.b(param0);
         }
-        var2 = param0.d(true);
+        var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_a = new SoundEnvelope();
           this.field_a.b(param0);
           this.field_u = new SoundEnvelope();
           this.field_u.b(param0);
         }
-        var2 = param0.d(true);
+        var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
-          param0.field_h = param0.field_h - 1;
+          param0.position = param0.position - 1;
           this.field_j = new SoundEnvelope();
           this.field_j.b(param0);
           this.field_d = new SoundEnvelope();
           this.field_d.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.h((byte) -89);
+          var4 = param0.readUnsignedSmart((byte) -89);
           if (var4 == 0) {
             break;
           }
           this.field_w[var3] = var4;
-          this.field_h[var3] = param0.c((byte) -10);
-          this.field_n[var3] = param0.h((byte) -112);
+          this.field_h[var3] = param0.readSignedSmart((byte) -10);
+          this.field_n[var3] = param0.readUnsignedSmart((byte) -112);
         }
-        this.field_p = param0.h((byte) -95);
-        this.field_f = param0.h((byte) -127);
-        this.field_r = param0.b(-1698573656);
-        this.field_o = param0.b(-1698573656);
+        this.field_p = param0.readUnsignedSmart((byte) -95);
+        this.field_f = param0.readUnsignedSmart((byte) -127);
+        this.field_r = param0.readUnsignedShort(-1698573656);
+        this.field_o = param0.readUnsignedShort(-1698573656);
         this.field_y = new AudioFilter();
         this.field_q = new SoundEnvelope();
         this.field_y.a(param0, this.field_q);

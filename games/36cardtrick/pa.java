@@ -70,10 +70,10 @@ final class pa extends dg {
     final static int a(String param0, jk param1, jk param2, int param3, int param4, int param5, boolean param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        pb stackIn_10_0 = null;
+        PacketBuffer stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         String stackIn_11_2 = null;
-        pb stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         String stackIn_14_2 = null;
         int stackIn_34_0 = 0;
@@ -114,36 +114,36 @@ final class pa extends dg {
           }
           if (vf.field_a == ra.field_b) {
             ni.field_f = null;
-            na.field_r.field_i = 0;
+            na.field_r.position = 0;
             if (param0 != null) {
               var9 = 0;
-              gh.field_h.field_i = 0;
+              gh.field_h.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              gh.field_h.a(-246, pg.field_a.nextInt());
-              gh.field_h.a(-246, pg.field_a.nextInt());
-              gh.field_h.a(744825352, var14);
-              gh.field_h.a(744825352, var8);
+              gh.field_h.writeInt(-246, pg.field_a.nextInt());
+              gh.field_h.writeInt(-246, pg.field_a.nextInt());
+              gh.field_h.writePrefixedString(744825352, var14);
+              gh.field_h.writePrefixedString(744825352, var8);
               var15 = (CharSequence) ((Object) param0);
-              gh.field_h.a(744825352, sh.a(var15, (byte) -128));
-              gh.field_h.e(param3, 26040);
-              gh.field_h.b(param5 ^ -9455, param4);
-              gh.field_h.b(-9469, var9);
-              na.field_r.b(-9469, 18);
-              na.field_r.field_i = na.field_r.field_i + 2;
-              var10 = na.field_r.field_i;
+              gh.field_h.writePrefixedString(744825352, sh.a(var15, (byte) -128));
+              gh.field_h.writeShort(param3, 26040);
+              gh.field_h.writeByte(param5 ^ -9455, param4);
+              gh.field_h.writeByte(-9469, var9);
+              na.field_r.writeByte(-9469, 18);
+              na.field_r.position = na.field_r.position + 2;
+              var10 = na.field_r.position;
               var11_ref_String = bi.a((byte) -27, mk.g(-119));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              na.field_r.a(var11_ref_String, 19235);
+              na.field_r.writeString(var11_ref_String, 19235);
               lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-              na.field_r.d(na.field_r.field_i - var10, -27308);
+              na.field_r.backpatchShortLength(na.field_r.position - var10, -27308);
             } else {
-              gh.field_h.field_i = 0;
-              gh.field_h.a(-246, pg.field_a.nextInt());
-              gh.field_h.a(param5 - 264, pg.field_a.nextInt());
+              gh.field_h.position = 0;
+              gh.field_h.writeInt(-246, pg.field_a.nextInt());
+              gh.field_h.writeInt(param5 - 264, pg.field_a.nextInt());
               stackIn_10_0 = gh.field_h;
               stackIn_10_1 = 744825352;
               if (!param1.b(true)) {
@@ -151,7 +151,7 @@ final class pa extends dg {
               } else {
                 stackIn_11_2 = var14;
               }
-              ((pb) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2);
+              ((PacketBuffer) (Object) stackIn_10_0).writePrefixedString(stackIn_10_1, stackIn_11_2);
               stackIn_13_0 = gh.field_h;
               stackIn_13_1 = 744825352;
               if (param2.b(true)) {
@@ -159,20 +159,20 @@ final class pa extends dg {
               } else {
                 stackIn_14_2 = "";
               }
-              ((pb) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2);
-              na.field_r.b(-9469, 16);
-              na.field_r.field_i = na.field_r.field_i + 1;
-              var9 = na.field_r.field_i;
+              ((PacketBuffer) (Object) stackIn_13_0).writePrefixedString(stackIn_13_1, stackIn_14_2);
+              na.field_r.writeByte(-9469, 16);
+              na.field_r.position = na.field_r.position + 1;
+              var9 = na.field_r.position;
               lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-              na.field_r.f(na.field_r.field_i - var9, 8049);
+              na.field_r.backpatchByteLength(na.field_r.position - var9, 8049);
             }
             fe.a((byte) -97, -1);
             ra.field_b = kg.field_c;
           }
           if (kg.field_c == ra.field_b &&
             r.a(1, (byte) 122)) {
-            var9Lifetime1 = rd.field_j.f(72);
-            rd.field_j.field_i = 0;
+            var9Lifetime1 = rd.field_j.readUnsignedByte(72);
+            rd.field_j.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               ll.field_f = new String[var9Lifetime1 - 100];
@@ -193,19 +193,19 @@ final class pa extends dg {
               } else {
                 r.a(ia.b(param5 - 23), (byte) 119);
                 ni.field_f = new Boolean(tg.a(-2, rd.field_j));
-                rd.field_j.field_i = 0;
+                rd.field_j.position = 0;
               }
             }
           }
           if (ta.field_eb == ra.field_b) {
             var9Lifetime2 = 2;
             if (r.a(var9Lifetime2, (byte) 120)) {
-              var10Lifetime1 = rd.field_j.d((byte) 72);
-              rd.field_j.field_i = 0;
+              var10Lifetime1 = rd.field_j.readUnsignedShort((byte) 72);
+              rd.field_j.position = 0;
               if (r.a(var10Lifetime1, (byte) 124)) {
                 var11 = ll.field_f.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ll.field_f[var12] = rd.field_j.d(-74);
+                  ll.field_f[var12] = rd.field_j.readPrefixedString(-74);
                 }
                 mc.a((byte) -125);
                 lk.field_w = false;
@@ -217,9 +217,9 @@ final class pa extends dg {
           if (kb.field_a == ra.field_b &&
             gl.a(false)) {
             if (255 != pd.field_l) {
-              e.field_a = rd.field_j.c(false);
+              e.field_a = rd.field_j.readString(false);
             } else {
-              var9_ref_String = rd.field_j.f((byte) 29);
+              var9_ref_String = rd.field_j.readNullableString((byte) 29);
               if (var9_ref_String != null) {
                 lk.a(mk.g(param5 - 146), 0, var9_ref_String);
               }
@@ -376,7 +376,7 @@ final class pa extends dg {
         var8 = Main.field_T;
         try {
           var11 = rd.field_j;
-          var2 = var11.f(param0 ^ -121);
+          var2 = var11.readUnsignedByte(param0 ^ -121);
           if (var2 == param0) {
             var10 = eg.a(-60);
             var16 = var10;
@@ -385,9 +385,9 @@ final class pa extends dg {
             var9 = var10;
             var4 = var9;
             var5 = var11;
-            var6 = ((pb) ((Object) var5)).f(-124);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-124);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((pb) ((Object) var5)).e((byte) 127);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 127);
             }
             var13 = (rc) (ue.field_b.a((byte) 74));
             if (var13 == null) {

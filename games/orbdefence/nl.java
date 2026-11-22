@@ -17,16 +17,16 @@ final class nl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, mg param3, int param4) {
+    final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
-          param3.a(12, -44);
-          param3.b((byte) -60, 17);
-          param3.b((byte) -60, param2);
-          param3.b((byte) -60, param1);
-          param3.a(param4, param0 ^ -21022);
+          param3.writeByte(12, -44);
+          param3.writeShort((byte) -60, 17);
+          param3.writeShort((byte) -60, param2);
+          param3.writeShort((byte) -60, param1);
+          param3.writeByte(param4, param0 ^ -21022);
           if (param0 != 20994) {
-            mg var6 = (mg) null;
-            nl.a(20, -5, -65, (mg) null, -69);
+            PacketBuffer var6 = (PacketBuffer) null;
+            nl.a(20, -5, -65, (PacketBuffer) null, -69);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

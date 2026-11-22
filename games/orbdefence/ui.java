@@ -29,10 +29,10 @@ final class ui extends RuntimeException {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          return mg.field_m == tg.field_c ? true : false;
+          return PacketBuffer.field_m == tg.field_c ? true : false;
         }
         field_b = (pf) null;
-        return mg.field_m == tg.field_c ? true : false;
+        return PacketBuffer.field_m == tg.field_c ? true : false;
     }
 
     static {

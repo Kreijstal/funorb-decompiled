@@ -180,7 +180,7 @@ final class ec extends ta implements ai {
               return;
             }
             ef.field_i = param11;
-            mg.field_g = param4;
+            PacketBuffer.field_g = param4;
             jc.field_b = param2;
             if (null == ef.field_i.field_v) {
               return;

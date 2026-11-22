@@ -133,10 +133,10 @@ final class vj {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        od var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        od var29 = null;
-        od var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -202,8 +202,8 @@ final class vj {
             var35 = ji.a(23436, this.field_h[param2], true);
             var25 = var35;
             var9 = var25;
-            var26 = new od(var35);
-            var26.a(param3, true, 5, var26.field_h.length);
+            var26 = new PacketBuffer(var35);
+            var26.decryptXteaRange(param3, true, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -231,14 +231,14 @@ final class vj {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * (var5_int * 4);
-              var29 = new od(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_j = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.h(43);
+                  var17 = var17 + var29.readInt(43);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -254,13 +254,13 @@ final class vj {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_j = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.h(-90);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt(-90);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -280,15 +280,15 @@ final class vj {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * var12Lifetime1 * var5_int;
-            var31 = new od(var43);
-            var31.field_j = var11;
+            var31 = new PacketBuffer(var43);
+            var31.position = var11;
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var5_int > var17Lifetime1; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.h(-103);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt(-103);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -300,12 +300,12 @@ final class vj {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_j = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.h(-119);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt(-119);
                 kg.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
@@ -940,7 +940,7 @@ final class vj {
           int var1_int = 0;
           IOException var1 = null;
           CharSequence var2 = null;
-          od var3 = null;
+          PacketBuffer var3 = null;
           if (4 <= p.field_a.field_c) {
             if (p.field_a.field_h == -1) {
               return 3;
@@ -966,11 +966,11 @@ final class vj {
             }
             if (hf.field_C == 2) {
               ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), oi.field_e);
-              var3 = new od(13);
+              var3 = new PacketBuffer(13);
               q.a(tb.field_a, IntrusiveNode.field_c, 26800, pk.field_q, var3);
-              var3.c(15, (byte) -92);
-              var3.a(mi.field_j, (byte) 107);
-              ea.field_a.a(13, -30537, var3.field_h, 0);
+              var3.writeByte(15, (byte) -92);
+              var3.writeInt(mi.field_j, (byte) 107);
+              ea.field_a.a(13, -30537, var3.payload, 0);
               hf.field_C = hf.field_C + 1;
               BoundedRandomAccessFile.field_a = la.a(false) + 30000L;
             }

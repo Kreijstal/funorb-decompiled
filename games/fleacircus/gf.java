@@ -176,10 +176,10 @@ final class gf {
             return;
           }
           var2 = ae.field_a;
-          var2.c((byte) -32);
-          var2.c((byte) 122);
-          var2.c((byte) 127);
-          var2.c((byte) 124);
+          var2.readInt((byte) -32);
+          var2.readInt((byte) 122);
+          var2.readInt((byte) 127);
+          var2.readInt((byte) 124);
           var1.c(-1);
           return;
         }
@@ -188,10 +188,10 @@ final class gf {
           return;
         }
         var2Lifetime1 = ae.field_a;
-        var2Lifetime1.c((byte) -32);
-        var2Lifetime1.c((byte) 122);
-        var2Lifetime1.c((byte) 127);
-        var2Lifetime1.c((byte) 124);
+        var2Lifetime1.readInt((byte) -32);
+        var2Lifetime1.readInt((byte) 122);
+        var2Lifetime1.readInt((byte) 127);
+        var2Lifetime1.readInt((byte) 124);
         var1.c(-1);
     }
 
@@ -217,13 +217,13 @@ final class gf {
           if (!gi.a(1, true)) {
             return false;
           }
-          pd.field_l = ae.field_a.e(false);
-          ae.field_a.field_i = 0;
+          pd.field_l = ae.field_a.readUnsignedByte(false);
+          ae.field_a.position = 0;
         }
         if (pd.field_l == -2) {
           if (gi.a(2, true)) {
-            pd.field_l = ae.field_a.d((byte) -65);
-            ae.field_a.field_i = 0;
+            pd.field_l = ae.field_a.readUnsignedShort((byte) -65);
+            ae.field_a.position = 0;
             var1 = -114 % ((param0 - 53) / 54);
             return gi.a(pd.field_l, true);
           }

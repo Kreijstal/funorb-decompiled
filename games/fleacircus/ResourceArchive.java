@@ -54,12 +54,12 @@ final class ResourceArchive {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ni var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ni var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        ni var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -109,8 +109,8 @@ final class ResourceArchive {
             var35 = jg.a(false, this.field_g[param1], true);
             var25 = var35;
             var9 = var25;
-            var26 = new ni(var35);
-            var26.a(param0, 5, -1, var26.field_k.length);
+            var26 = new PacketBuffer(var35);
+            var26.decryptXteaRange(param0, 5, -1, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -138,14 +138,14 @@ final class ResourceArchive {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * var5_int * 4;
-              var32 = new ni(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_i = var11;
+              var32.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.c((byte) -91);
+                  var17 = var17 + var32.readInt((byte) -91);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -162,12 +162,12 @@ final class ResourceArchive {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_i = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var32.c((byte) -70);
+                  var19 = var19 + var32.readInt((byte) -70);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -186,15 +186,15 @@ final class ResourceArchive {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var5_int * var12);
-              var29 = new ni(var43);
+              var29 = new PacketBuffer(var43);
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_i = var11;
+              var29.position = var11;
               for (var15 = 0; var12 > var15; var15++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var29.c((byte) -123);
+                  var16 = var16 + var29.readInt((byte) -123);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -206,12 +206,12 @@ final class ResourceArchive {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_i = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var29.c((byte) -35);
+                  var18 = var18 + var29.readInt((byte) -35);
                   dm.copyBytes(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;

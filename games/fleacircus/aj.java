@@ -13,7 +13,7 @@ final class aj extends DualLinkNode {
     int[] field_z;
     static String field_r;
 
-    private final void a(ni param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -33,24 +33,24 @@ final class aj extends DualLinkNode {
           }
           if (param1 != 1) {
             if (param1 == 2) {
-              var4_int = param0.e(false);
+              var4_int = param0.readUnsignedByte(false);
               this.field_z = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_z[var5] = param0.d((byte) -122);
+                this.field_z[var5] = param0.readUnsignedShort((byte) -122);
               }
             } else if (param1 == 3) {
-              var4_int = param0.e(false);
+              var4_int = param0.readUnsignedByte(false);
               this.field_s = new int[var4_int][];
               this.field_u = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param0.d((byte) -75);
+                var6 = param0.readUnsignedShort((byte) -75);
                 var7 = ql.a(param2 ^ -22467, var6);
                 if (var7 != null) {
                   this.field_u[var5] = var6;
                   array$0 = new int[var7.field_c];
                   this.field_s[var5] = array$0;
                   for (var8 = 0; var7.field_c > var8; var8++) {
-                    this.field_s[var5][var8] = param0.d((byte) -73);
+                    this.field_s[var5][var8] = param0.readUnsignedShort((byte) -73);
                   }
                 }
               }
@@ -60,7 +60,7 @@ final class aj extends DualLinkNode {
               }
             }
           } else {
-            this.field_y = m.a('<', 123, param0.h(0));
+            this.field_y = m.a('<', 123, param0.readString(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class aj extends DualLinkNode {
         }
     }
 
-    final void a(ni param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -204,7 +204,7 @@ final class aj extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.e(false);
+            var3_int = param0.readUnsignedByte(false);
             if (var3_int == 0) {
               return;
             }

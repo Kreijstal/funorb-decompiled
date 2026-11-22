@@ -304,7 +304,7 @@ abstract class si extends vg implements ba {
 
     final static void f(int param0) {
         cj.field_h = new he[8];
-        cj.field_h[4] = od.field_k;
+        cj.field_h[4] = PacketBuffer.field_k;
         cj.field_h[2] = ri.field_b;
         cj.field_h[1] = re.field_d;
         cj.field_h[0] = fa.field_o;

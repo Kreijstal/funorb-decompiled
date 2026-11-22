@@ -37,7 +37,7 @@ final class de extends RuntimeException {
         try {
           var8 = new th(param1.a((byte) 127, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.d(true);
+          var3 = var10.readUnsignedByte(true);
           var10.e(10);
           sh.field_d = cl.a(var10, -121);
           uj.field_f = new int[var3][];

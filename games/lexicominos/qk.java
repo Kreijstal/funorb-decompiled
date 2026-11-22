@@ -31,15 +31,15 @@ final class qk {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        wf var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new wf(param1);
-          var3 = var10.d(true);
-          var4 = var10.d((byte) 19);
+          var10 = new PacketBuffer(param1);
+          var3 = var10.readUnsignedByte(true);
+          var4 = var10.readInt((byte) 19);
           var5 = -48 % ((-21 - param0) / 59);
           if (var4 >= 0 && (jd.field_a == 0 ||
             !(jd.field_a < var4))) {
@@ -47,11 +47,11 @@ final class qk {
               var13 = new byte[var4];
               var11 = var13;
               var6_ref_byte__ = var11;
-              var10.a(105, var4, 0, var13);
+              var10.readBytes(105, var4, 0, var13);
               stackIn_7_0 = var6_ref_byte__;
               return stackIn_7_0;
             }
-            var6 = var10.d((byte) 19);
+            var6 = var10.readInt((byte) 19);
             if (var6 >= 0 && (jd.field_a == 0 ||
               !(jd.field_a < var6))) {
               var14 = new byte[var6];

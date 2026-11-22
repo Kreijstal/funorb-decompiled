@@ -396,7 +396,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           we.a(qa.field_O, -89, 88.0f);
           of.field_x = eh.a("", (byte) -61, kf.field_d, "poweruplife");
-          od.field_k = eh.a("", (byte) -66, kf.field_d, "poweruppoints100");
+          PacketBuffer.field_k = eh.a("", (byte) -66, kf.field_d, "poweruppoints100");
           qc.field_a = eh.a("", (byte) -56, kf.field_d, "poweruppoints1000");
           p.field_e = eh.a("", (byte) -31, kf.field_d, "poweruppoints5000");
           c.field_a[0] = eh.a("", (byte) -47, kf.field_d, "powerupx2");
@@ -443,7 +443,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           eb.field_e[4].c();
           nb.field_b.a(0, 0);
           sh.field_b.d(-715, -185);
-          od.field_i[0].a(10, 5);
+          PacketBuffer.field_i[0].a(10, 5);
           eb.field_e[5].c();
           nb.field_b.a(0, 0);
           be.a(sh.field_b, -715, -75);
@@ -499,7 +499,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           vj.clearStaticReferences(0);
           pc.a(13302);
           bc.clearStaticReferences(66);
-          od.d(4);
+          PacketBuffer.d(4);
           la.a((byte) 0);
           lf.a(-127);
           le.clearStaticReferences(param0);
@@ -1854,7 +1854,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               fa.field_n = ij.a("alienshredder", (byte) 118, kf.field_d, "");
               t.field_c = ij.a("alienassaultbot", (byte) 127, kf.field_d, "");
               cm.field_Q = ij.a("aliendropship", (byte) 58, kf.field_d, "");
-              od.field_i = ij.a("alienspacemine", (byte) 101, kf.field_d, "");
+              PacketBuffer.field_i = ij.a("alienspacemine", (byte) 101, kf.field_d, "");
               uf.field_j = ij.a("alienspacemineseeking", (byte) 89, kf.field_d, "");
               ng.field_f = ij.a("alienparamine", (byte) 112, kf.field_d, "");
               LoginMenuScreen.field_M = ij.a("alienminer", (byte) 77, kf.field_d, "");

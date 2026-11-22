@@ -10,7 +10,7 @@ final class bc {
         if (param0 != -464379825) {
           field_a = 5;
         }
-        rd.field_j.f(96);
+        rd.field_j.readUnsignedByte(96);
     }
 
     static int a(int param0, int param1) {
@@ -24,24 +24,24 @@ final class bc {
         }
     }
 
-    final static void a(boolean param0, pb param1) {
-        cg.field_h = param1.d((byte) 72) << 5;
-        int var2_int = param1.f(-128);
+    final static void a(boolean param0, PacketBuffer param1) {
+        cg.field_h = param1.readUnsignedShort((byte) 72) << 5;
+        int var2_int = param1.readUnsignedByte(-128);
         cg.field_h = cg.field_h + (var2_int >> 3);
         sa.field_a = (7 & var2_int) << 18;
-        sa.field_a = sa.field_a + (param1.d((byte) 72) << 2);
-        var2_int = param1.f(123);
-        pc.field_c = 2064384 & var2_int << 15;
+        sa.field_a = sa.field_a + (param1.readUnsignedShort((byte) 72) << 2);
+        var2_int = param1.readUnsignedByte(123);
+        Crc32Table.field_c = 2064384 & var2_int << 15;
         sa.field_a = sa.field_a + (var2_int >> 6);
-        pc.field_c = pc.field_c + (param1.f(-107) << 7);
-        var2_int = param1.f(90);
+        Crc32Table.field_c = Crc32Table.field_c + (param1.readUnsignedByte(-107) << 7);
+        var2_int = param1.readUnsignedByte(90);
         if (param0) {
           return;
         }
         try {
           nl.field_b = 65536 & var2_int << 16;
-          pc.field_c = pc.field_c + (var2_int >> 1);
-          nl.field_b = nl.field_b + param1.d((byte) 72);
+          Crc32Table.field_c = Crc32Table.field_c + (var2_int >> 1);
+          nl.field_b = nl.field_b + param1.readUnsignedShort((byte) 72);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

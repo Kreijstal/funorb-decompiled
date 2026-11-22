@@ -7,13 +7,13 @@ final class la {
     private boolean field_c;
     private boolean field_b;
 
-    final static void a(byte param0, int param1, wf param2, int param3, int param4) {
+    final static void a(byte param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
-          param2.c(12, param0 + 47);
-          param2.e(106, 17);
-          param2.e(62, param3);
-          param2.e(104, param1);
-          param2.c(param4, -1);
+          param2.writeByte(12, param0 + 47);
+          param2.writeShort(106, 17);
+          param2.writeShort(62, param3);
+          param2.writeShort(104, param1);
+          param2.writeByte(param4, -1);
           if (param0 != -48) {
             field_a = (String) null;
           }

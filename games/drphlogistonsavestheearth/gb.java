@@ -11,8 +11,8 @@ abstract class gb {
     hl field_b;
     int field_j;
     long field_k;
-    od field_l;
-    od field_g;
+    PacketBuffer field_l;
+    PacketBuffer field_g;
     volatile int field_h;
     volatile int field_c;
     byte field_a;
@@ -52,7 +52,7 @@ abstract class gb {
         if (param0 == 20) {
           return this.a(111) >= 20 ? true : false;
         }
-        this.field_l = (od) null;
+        this.field_l = (PacketBuffer) null;
         return this.a(111) >= 20 ? true : false;
     }
 
@@ -177,11 +177,11 @@ abstract class gb {
         this.field_m = new hl();
         this.field_f = new hl();
         this.field_b = new hl();
-        this.field_l = new od(6);
+        this.field_l = new PacketBuffer(6);
         this.field_c = 0;
         this.field_a = (byte) 0;
         this.field_h = 0;
-        this.field_g = new od(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

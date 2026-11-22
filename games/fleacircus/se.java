@@ -79,15 +79,15 @@ final class se {
           if (param0 > -94) {
             return;
           }
-          var2 = var10.e(false);
-          var3 = var10.e(false);
+          var2 = var10.readUnsignedByte(false);
+          var3 = var10.readUnsignedByte(false);
           if (var2 == 0) {
             var4_ref_fi = (fi) (lk.field_O.c((byte) 47));
             if (var4_ref_fi == null) {
               k.c(-28354);
               return;
             }
-            var5_int = -var10.field_i + pd.field_l;
+            var5_int = -var10.position + pd.field_l;
             var12 = var4_ref_fi.field_m;
             var11 = var12;
             var6 = var11;
@@ -95,14 +95,14 @@ final class se {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.e(false) << sc.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(false) << sc.a(768, var7 << 8));
             }
             var4_ref_fi.field_p = true;
             var4_ref_fi.c(-1);
             return;
           }
           if (var2 == 1) {
-            var4 = var10.a(255);
+            var4 = var10.readSignedSmart(255);
             var5 = (ql) (sd.field_d.c((byte) 47));
             while (var5 != null) {
               if (var5.field_i != var3 ||

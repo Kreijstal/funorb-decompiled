@@ -326,16 +326,16 @@ final class ig extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        pb var2 = new pb(param0);
-        this.field_C = var2.e((byte) 125);
-        this.field_x = var2.e((byte) 125);
-        this.field_G = var2.e((byte) 127);
-        this.field_m = var2.e((byte) 125);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_C = var2.readInt((byte) 125);
+        this.field_x = var2.readInt((byte) 125);
+        this.field_G = var2.readInt((byte) 127);
+        this.field_m = var2.readInt((byte) 125);
         if (this.field_m < 0) {
           this.field_m = ~this.field_m;
           this.field_v = true;
         }
-        int var3 = var2.e((byte) 124);
+        int var3 = var2.readInt((byte) 124);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -343,11 +343,11 @@ final class ig extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.f(79);
+            var6_int = var2.readUnsignedByte(79);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(30, var6, 0, var5);
+          var2.readBytes(30, var6, 0, var5);
           this.field_l[var4] = var6;
         }
     }

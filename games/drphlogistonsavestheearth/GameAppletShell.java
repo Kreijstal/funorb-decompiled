@@ -5,7 +5,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     static String field_d;
     static nh field_i;
     boolean field_c;
-    static od field_h;
+    static PacketBuffer field_h;
     static int field_k;
     public static int field_g;
     public static int field_e;
@@ -350,18 +350,18 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (!LoginMenuScreen.a(1, param0 + 35356)) {
               return false;
             }
-            gf.field_C = dh.field_N.l(31760);
-            dh.field_N.field_j = 0;
+            gf.field_C = dh.field_N.readUnsignedByte(31760);
+            dh.field_N.position = 0;
           }
           if (-2 == gf.field_C) {
             if (!LoginMenuScreen.a(2, 5929)) {
               return false;
             }
-            gf.field_C = dh.field_N.j(-788751192);
-            dh.field_N.field_j = 0;
+            gf.field_C = dh.field_N.readUnsignedShort(-788751192);
+            dh.field_N.position = 0;
           }
           if (param0 != -29427) {
-            field_h = (od) null;
+            field_h = (PacketBuffer) null;
           }
           stackIn_18_0 = LoginMenuScreen.a(gf.field_C, 5929);
           return stackIn_18_0;

@@ -112,9 +112,9 @@ final class uk {
             return;
           }
           var27 = cd.field_t;
-          var2 = var27.b((byte) 90);
+          var2 = var27.readUnsignedByte((byte) 90);
           if (var2 == 0) {
-            var3 = var27.j(98203176);
+            var3 = var27.readUnsignedShort(98203176);
             var4 = (gj) (cb.field_b.b((byte) -126));
             while (var4 != null) {
               if (var4.field_o != var3) {
@@ -127,7 +127,7 @@ final class uk {
               th.a(120);
               return;
             }
-            var5 = var27.b((byte) 90);
+            var5 = var27.readUnsignedByte((byte) 90);
             if (var5 != 0) {
               var6 = var4.field_m;
               ce.field_e[0].field_a = null;
@@ -135,10 +135,10 @@ final class uk {
               var7 = var4.field_n;
               ce.field_e[0].field_d = gb.field_h;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                ce.field_e[var8_int].field_d = var27.g(2);
+                ce.field_e[var8_int].field_d = var27.readString(2);
                 ce.field_e[var8_int].field_c = false;
-                if (var27.b((byte) 90) == 1) {
-                  ce.field_e[var8_int].field_a = var27.g(2);
+                if (var27.readUnsignedByte((byte) 90) == 1) {
+                  ce.field_e[var8_int].field_a = var27.readString(2);
                 } else {
                   ce.field_e[var8_int].field_a = null;
                 }
@@ -159,13 +159,13 @@ final class uk {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.b((byte) 90);
+              var18 = var27.readUnsignedByte((byte) 90);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.b((byte) 90);
+                  var20 = var27.readUnsignedByte((byte) 90);
                   var21 = ce.field_e[var20].field_d;
-                  var22 = var27.c((byte) -89);
-                  var24 = var27.field_i;
+                  var22 = var27.readLong((byte) -89);
+                  var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = ce.field_e[var20].field_a;
@@ -174,7 +174,7 @@ final class uk {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.l(0);
+                      var11[0][incrementValue$3] = var27.readInt(0);
                     }
                   }
                   if (var21 != null &&
@@ -182,12 +182,12 @@ final class uk {
                     var8[1][var13] = gb.field_h;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_i = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.l(0);
+                      var11[1][incrementValue$4] = var27.readInt(0);
                     }
                   }
                   if (var6 > var14 &&
@@ -197,11 +197,11 @@ final class uk {
                     var9[2][var14] = ce.field_e[var20].field_a;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_i = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.l(0);
+                      var11[2][incrementValue$5] = var27.readInt(0);
                     }
                   }
                 }
@@ -212,8 +212,8 @@ final class uk {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.j(98203176);
-            var4_long = var27.c((byte) -89);
+            var3Lifetime1 = var27.readUnsignedShort(98203176);
+            var4_long = var27.readLong((byte) -89);
             var6_ref_vg = (vg) (kk.field_X.b((byte) 124));
             while (var6_ref_vg != null) {
               if (~var3Lifetime1 != ~var6_ref_vg.field_t) {

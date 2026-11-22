@@ -15,8 +15,8 @@ final class fa {
           }
           var3 = uk.field_b;
           var3.i(param1, -74);
-          var3.a(param0.field_f, -12);
-          var3.a(param0.field_i, -99);
+          var3.writeByte(param0.field_f, -12);
+          var3.writeByte(param0.field_i, -99);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "fa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

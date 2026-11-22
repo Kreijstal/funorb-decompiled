@@ -11,7 +11,7 @@ final class pg {
     private wb field_i;
     private java.math.BigInteger field_h;
     static int field_d;
-    private wf field_e;
+    private PacketBuffer field_e;
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
@@ -96,22 +96,22 @@ final class pg {
             field_d = 66;
           }
           var9 = ig.field_a;
-          var2 = var9.d(true);
+          var2 = var9.readUnsignedByte(true);
           if (0 == var2) {
             var3_ref_pb = (pb) (tl.field_h.a(true));
             if (var3_ref_pb == null) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-116);
               return;
             }
-            var4_int = var9.d(true);
+            var4_int = var9.readUnsignedByte(true);
             if (var4_int == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
-              var9.a(param0 + 89, var4_int, 0, var13);
+              var9.readBytes(param0 + 89, var4_int, 0, var13);
             }
-            var9.field_h = var9.field_h + 4;
-            if (!var9.c(4)) {
+            var9.position = var9.position + 4;
+            if (!var9.verifyCrc32(4)) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-112);
               return;
             }
@@ -123,7 +123,7 @@ final class pg {
             ck.$cfr$intArgs$b$e683eeaaf5b5(-46);
             return;
           }
-          var3 = var9.d((byte) 19);
+          var3 = var9.readInt((byte) 19);
           var4 = (tg) (bg.field_c.a(true));
           while (var4 != null) {
             if (var4.field_k != var3) {
@@ -172,7 +172,7 @@ final class pg {
         int var7;
         int var8;
         int var9;
-        wf var11;
+        PacketBuffer var11;
         byte[] var12;
         byte[] var14;
         byte[] var18;
@@ -199,20 +199,20 @@ final class pg {
         if (this.field_g.field_v) {
           return false;
         }
-        var11 = new wf(this.field_g.d((byte) 76));
-        var11.field_h = 5;
-        var3 = var11.d(true);
-        var11.field_h = var11.field_h + var3 * 72;
-        var14 = new byte[var11.field_j.length - var11.field_h];
+        var11 = new PacketBuffer(this.field_g.d((byte) 76));
+        var11.position = 5;
+        var3 = var11.readUnsignedByte(true);
+        var11.position = var11.position + var3 * 72;
+        var14 = new byte[var11.payload.length - var11.position];
         var12 = var14;
         var4 = var12;
-        var11.a(107, var14.length, 0, var14);
+        var11.readBytes(107, var14.length, 0, var14);
         if (null == this.field_h) {
           var5 = var4;
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var18 = si.a(5, var11.field_j, -86, -5 + var11.field_h - var14.length);
+          var18 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
           for (var7 = 0; var7 < 64; var7++) {
             if (var5[1 + var7] != var18[var7]) {
               throw new RuntimeException();
@@ -228,7 +228,7 @@ final class pg {
           if (var5Lifetime1.length != 65) {
             throw new RuntimeException();
           }
-          var19 = si.a(5, var11.field_j, -86, -5 + var11.field_h - var14.length);
+          var19 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
           for (var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
             if (var5Lifetime1[1 + var7Lifetime1] != var19[var7Lifetime1]) {
               throw new RuntimeException();
@@ -245,7 +245,7 @@ final class pg {
         if (var5Lifetime2.length != 65) {
           throw new RuntimeException();
         }
-        var20 = si.a(5, var11.field_j, -86, -5 + var11.field_h - var14.length);
+        var20 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
         for (var7Lifetime2 = 0; var7Lifetime2 < 64; var7Lifetime2++) {
           if (var5Lifetime2[1 + var7Lifetime2] != var20[var7Lifetime2]) {
             throw new RuntimeException();
@@ -327,14 +327,14 @@ final class pg {
               stackIn_9_0 = this.field_j[param0];
               return stackIn_9_0;
             }
-            this.field_e.field_h = 6 + param0 * 72;
-            var6_int = this.field_e.d((byte) 19);
-            var7 = this.field_e.d((byte) 19);
+            this.field_e.position = 6 + param0 * 72;
+            var6_int = this.field_e.readInt((byte) 19);
+            var7 = this.field_e.readInt((byte) 19);
             if (param1 != 3510) {
               pg.a(55);
             }
             var13 = new byte[64];
-            this.field_e.a(106, 64, 0, var13);
+            this.field_e.readBytes(106, 64, 0, var13);
             var9 = new ug(param0, param2, param3, this.field_i, this.field_c, var6_int, var13, var7, param4);
             this.field_j[param0] = var9;
             stackIn_13_0 = var9;

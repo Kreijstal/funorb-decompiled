@@ -111,7 +111,7 @@ final class pc extends tj {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          wf var2 = null;
+          PacketBuffer var2 = null;
           if (kb.field_b.field_p >= 4) {
             if (kb.field_b.field_j == -1) {
               return 3;
@@ -137,11 +137,11 @@ final class pc extends tj {
             }
             if (gj.field_t == 2) {
               re.field_X = new ge((java.net.Socket) (lj.field_b.field_g), sa.field_g);
-              var2 = new wf(13);
+              var2 = new PacketBuffer(13);
               la.a((byte) -48, ni.field_e, var2, fc.field_q, qd.field_b);
-              var2.c(15, ~param0);
-              var2.f(wg.field_e, -32287);
-              re.field_X.a(var2.field_j, 13, 111, 0);
+              var2.writeByte(15, ~param0);
+              var2.writeInt(wg.field_e, -32287);
+              re.field_X.a(var2.payload, 13, 111, 0);
               gj.field_t = gj.field_t + 1;
               ta.field_f = rf.c(0) + 30000L;
             }

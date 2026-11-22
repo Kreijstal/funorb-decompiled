@@ -98,15 +98,15 @@ final class rb extends gj implements da {
                 var10 = (String) null;
                 cf.field_c = r.a(false, aj.field_w, (byte) 84, (String) null, param1);
               }
-              ud.field_b.field_i = 0;
-              ud.field_b.a(-11, 14);
-              ud.field_b.a(-11, cf.field_c.a(true).field_c);
+              ud.field_b.position = 0;
+              ud.field_b.writeByte(-11, 14);
+              ud.field_b.writeByte(-11, cf.field_c.a(true).field_c);
               dk.b((byte) 41, -1);
               ResourceArchive.field_k = je.field_P;
             }
             if (ResourceArchive.field_k == je.field_P &&
               gi.a(1, true)) {
-              var6_int = ae.field_a.e(false);
+              var6_int = ae.field_a.readUnsignedByte(false);
               if (var6_int == 0) {
                 ResourceArchive.field_k = ef.field_h;
               } else {
@@ -114,21 +114,21 @@ final class rb extends gj implements da {
                 be.field_a = var6_int;
                 pd.field_l = -1;
               }
-              ae.field_a.field_i = 0;
+              ae.field_a.position = 0;
             }
             if (ef.field_h == ResourceArchive.field_k &&
               gi.a(8, true)) {
-              ug.field_a = ae.field_a.f(-71);
-              ae.field_a.field_i = 0;
+              ug.field_a = ae.field_a.readLong(-71);
+              ae.field_a.position = 0;
               wd.a(param2, -120, cf.field_c, param4, param0);
               ResourceArchive.field_k = dl.field_w;
             }
             boolean decompiledFrameRemainder0 = true;
             if (dl.field_w == ResourceArchive.field_k &&
               gi.a(1, true)) {
-              var6_intLifetime1 = ae.field_a.e(false);
+              var6_intLifetime1 = ae.field_a.readUnsignedByte(false);
               be.field_a = var6_intLifetime1;
-              ae.field_a.field_i = 0;
+              ae.field_a.position = 0;
               wc.field_p = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -151,12 +151,12 @@ final class rb extends gj implements da {
             }
             if (ll.field_r == ResourceArchive.field_k &&
               gf.b(-128)) {
-              aj.field_w = ae.field_a.f(-109);
-              qe.field_k = ae.field_a.e(false);
-              ae.field_a.e(false);
-              wc.field_q = ae.field_a.d((byte) -116);
-              var11 = ae.field_a.a((byte) -115);
-              var7 = ae.field_a.e(false);
+              aj.field_w = ae.field_a.readLong(-109);
+              qe.field_k = ae.field_a.readUnsignedByte(false);
+              ae.field_a.readUnsignedByte(false);
+              wc.field_q = ae.field_a.readUnsignedShort((byte) -116);
+              var11 = ae.field_a.readNullableString((byte) -115);
+              var7 = ae.field_a.readUnsignedByte(false);
               if ((var7 & 1) != 0) {
                 f.d((byte) -37);
               }
@@ -169,19 +169,19 @@ final class rb extends gj implements da {
                 }
               }
               if (bk.field_e) {
-                ae.field_a.e(false);
-                ae.field_a.e(false);
-                ae.field_a.c((byte) 123);
-                ge.field_g = ae.field_a.d((byte) -117);
+                ae.field_a.readUnsignedByte(false);
+                ae.field_a.readUnsignedByte(false);
+                ae.field_a.readInt((byte) 123);
+                ge.field_g = ae.field_a.readUnsignedShort((byte) -117);
                 gi.field_c = new byte[ge.field_g];
                 for (var8 = 0; ge.field_g > var8; var8++) {
-                  gi.field_c[var8] = ae.field_a.i(-127);
+                  gi.field_c[var8] = ae.field_a.readByte(-127);
                 }
               }
-              b.field_e = ae.field_a.h(0);
+              b.field_e = ae.field_a.readString(0);
               var12 = (CharSequence) ((Object) b.field_e);
               ma.field_a = uk.a(92, var12);
-              nb.field_h = ae.field_a.e(false);
+              nb.field_h = ae.field_a.readUnsignedByte(false);
               ResourceArchive.field_k = fh.field_b;
               if (cf.field_c.a(true) == wa.field_g) {
                 ml.field_F.a(true, BoundedRandomAccessFile.getApplet((byte) -111));
@@ -237,7 +237,7 @@ final class rb extends gj implements da {
               if (be.field_a == 7) {
                 be.field_a = 3;
               }
-              fh.field_a = ae.field_a.h(0);
+              fh.field_a = ae.field_a.readString(0);
               aa.field_q = false;
               stackIn_90_0 = be.field_a;
               return stackIn_90_0;

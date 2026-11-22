@@ -162,7 +162,7 @@ abstract class ca extends bd {
         if (param0) {
           return (String) null;
         }
-        return dh.field_N.b((byte) -102);
+        return dh.field_N.readString((byte) -102);
     }
 
     public static void m(int param0) {

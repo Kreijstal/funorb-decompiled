@@ -96,8 +96,8 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         if (!ei.field_e) {
           throw new IllegalStateException();
         }
-        if (null != pc.field_a) {
-          pc.field_a.s(2);
+        if (null != Crc32Table.field_a) {
+          Crc32Table.field_a.s(2);
         }
         String var1 = hh.b((byte) 23);
         i.field_a = new ak(var1, (String) null, true, false, false);

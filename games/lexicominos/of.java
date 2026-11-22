@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class of {
-    static wf field_a;
+    static PacketBuffer field_a;
     static String field_b;
     static String field_c;
 
@@ -95,7 +95,7 @@ final class of {
     }
 
     static {
-        field_a = new wf(256);
+        field_a = new PacketBuffer(256);
         field_c = null;
         field_b = "Secret achievement";
     }

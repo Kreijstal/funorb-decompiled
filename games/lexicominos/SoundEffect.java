@@ -11,7 +11,7 @@ final class SoundEffect {
         if (var3 == null) {
           return null;
         }
-        return new SoundEffect(new wf(var3));
+        return new SoundEffect(new PacketBuffer(var3));
     }
 
     final PcmSample a() {
@@ -24,7 +24,7 @@ final class SoundEffect {
         if (var3 == null) {
           return null;
         }
-        return new SoundEffect(new wf(var3));
+        return new SoundEffect(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -67,19 +67,19 @@ final class SoundEffect {
         return var3;
     }
 
-    private SoundEffect(wf param0) {
+    private SoundEffect(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.d(true);
+          var3 = param0.readUnsignedByte(true);
           if (var3 != 0) {
-            param0.field_h = param0.field_h - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new SynthInstrument();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.b(-1698573656);
-        this.field_c = param0.b(-1698573656);
+        this.field_b = param0.readUnsignedShort(-1698573656);
+        this.field_c = param0.readUnsignedShort(-1698573656);
     }
 }

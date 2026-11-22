@@ -10,12 +10,12 @@ abstract class wb {
     ci field_k;
     ci field_d;
     ci field_f;
-    wf field_b;
+    PacketBuffer field_b;
     int field_e;
     long field_n;
     volatile int field_p;
     byte field_a;
-    wf field_h;
+    PacketBuffer field_h;
     volatile int field_j;
     dc field_o;
 
@@ -146,11 +146,11 @@ abstract class wb {
         this.field_k = new ci();
         this.field_d = new ci();
         this.field_f = new ci();
-        this.field_b = new wf(6);
+        this.field_b = new PacketBuffer(6);
         this.field_p = 0;
         this.field_a = (byte) 0;
         this.field_j = 0;
-        this.field_h = new wf(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

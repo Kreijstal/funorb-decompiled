@@ -207,7 +207,7 @@ final class kk {
         try {
           var8 = new w(param1.a((byte) 7, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.f(param0 ^ -16903);
+          var3 = var10.readUnsignedByte(param0 ^ -16903);
           var10.f(true);
           ga.field_b = hk.a(param0 + 17076, var10);
           il.field_a = new mg[var3];

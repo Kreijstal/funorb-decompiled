@@ -93,7 +93,7 @@ final class fm implements cg {
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var14 = dh.field_N;
-          var2 = var14.l(31760);
+          var2 = var14.readUnsignedByte(31760);
           var3 = (b) (u.field_f.h(-11151));
           while (var3 != null) {
             if (var2 != var3.field_j) {
@@ -106,12 +106,12 @@ final class fm implements cg {
             eg.a((byte) 126);
             return;
           }
-          var4 = var14.l(31760);
+          var4 = var14.readUnsignedByte(31760);
           if (var4 != 0) {
             gd.field_d[0] = oa.field_d;
             var5 = var3.field_n;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              gd.field_d[var6_int] = var14.b((byte) -101);
+              gd.field_d[var6_int] = var14.readString((byte) -101);
             }
             GzipDecompressor.a(var4, 83, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

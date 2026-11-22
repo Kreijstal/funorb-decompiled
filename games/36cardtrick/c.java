@@ -3563,12 +3563,12 @@ abstract class c extends fj {
             ck.field_G = gk.field_c;
             tj.field_K = false;
             cj.a(aa.field_db, dg.field_F, sg.field_a, jk.field_c, 126);
-            if (pb.field_h ||
+            if (PacketBuffer.field_h ||
               null != cj.field_k) {
               stackIn_200_0 = cj.field_k;
               stackIn_200_1 = 1024;
-              stackIn_201_2 = !(pb.field_h);
-              stackIn_205_3 = !(pb.field_h);
+              stackIn_201_2 = !(PacketBuffer.field_h);
+              stackIn_205_3 = !(PacketBuffer.field_h);
               mb.a(stackIn_200_0, stackIn_200_1, stackIn_201_2, stackIn_205_3);
             }
             if (sl.field_a) {
@@ -3779,7 +3779,7 @@ abstract class c extends fj {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = rd.field_j.f(50);
+          var2_int = rd.field_j.readUnsignedByte(50);
           stackIn_4_0 = ((1 & var2_int) == 0) ? 0 : 1;
           var3 = stackIn_4_0;
           var4 = al.field_a - 1;
@@ -3920,7 +3920,7 @@ abstract class c extends fj {
           int var5_int = 0;
           Exception var5 = null;
           Boolean var6 = null;
-          pb var6_ref = null;
+          PacketBuffer var6_ref = null;
           String var7 = null;
           int var8 = 0;
           var8 = Main.field_T;
@@ -3981,14 +3981,14 @@ abstract class c extends fj {
                 cd.field_e = 10;
                 vg.field_d = true;
                 if (var8 != 0) {
-                  pb.a(mk.g(-119), (byte) 104);
+                  PacketBuffer.a(mk.g(-119), (byte) 104);
                 }
               } else {
-                pb.a(mk.g(-119), (byte) 104);
+                PacketBuffer.a(mk.g(-119), (byte) 104);
               }
             }
             if (var4_int == 5) {
-              pb.a((byte) -124, mk.g(-126));
+              PacketBuffer.a((byte) -124, mk.g(-126));
             }
             if (var4_int == 6 &&
               tj.field_K) {
@@ -3998,7 +3998,7 @@ abstract class c extends fj {
               gg.a(mk.g(-119), 7380);
             }
             if (8 == var4_int) {
-              pb.a(mk.g(-125), (byte) 76);
+              PacketBuffer.a(mk.g(-125), (byte) 76);
             }
             if (9 == var4_int) {
               rk.a(mk.g(-127), (byte) -85);
@@ -4026,7 +4026,7 @@ abstract class c extends fj {
                     decompiledSharedTail0 = (var8 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var7 = bd.a(255, 0, var6_ref.field_g, var6_ref.field_i);
+                    var7 = bd.a(255, 0, var6_ref.payload, var6_ref.position);
                     ok.a(564, var7);
                   }
                   di.field_d = null;

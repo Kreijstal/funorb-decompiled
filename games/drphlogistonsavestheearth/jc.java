@@ -107,25 +107,25 @@ final class jc extends bh {
           var7 = nj.field_p;
           var8 = var7;
           var8.d(param0, -18392);
-          var8.field_j = var8.field_j + 1;
-          var4 = var8.field_j;
-          var8.c(1, (byte) -93);
-          var8.c(param1.field_i, -17402);
-          var8.c(param1.field_u, -17402);
-          var8.c(param1.field_m, -17402);
-          var8.a(param1.field_o, (byte) 126);
-          var8.a(param1.field_s, (byte) 107);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(1, (byte) -93);
+          var8.writeShort(param1.field_i, -17402);
+          var8.writeShort(param1.field_u, -17402);
+          var8.writeShort(param1.field_m, -17402);
+          var8.writeInt(param1.field_o, (byte) 126);
+          var8.writeInt(param1.field_s, (byte) 107);
           if (param2 >= -93) {
             jc.c((byte) -14);
           }
-          var8.a(param1.field_j, (byte) -112);
-          var8.a(param1.field_h, (byte) -16);
-          var8.c(param1.field_l.length, (byte) -111);
+          var8.writeInt(param1.field_j, (byte) -112);
+          var8.writeInt(param1.field_h, (byte) -16);
+          var8.writeByte(param1.field_l.length, (byte) -111);
           for (var5 = 0; var5 < param1.field_l.length; var5++) {
-            var7.a(param1.field_l[var5], (byte) 109);
+            var7.writeInt(param1.field_l[var5], (byte) 109);
           }
-          var8.d(var4, (byte) 123);
-          var8.b(-var4 + var8.field_j, (byte) 87);
+          var8.appendCrc32(var4, (byte) 123);
+          var8.backpatchByteLength(-var4 + var8.position, (byte) 87);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -17,11 +17,11 @@ final class ak {
           return;
         }
         try {
-          var3.a(-11, 5);
-          var3.a(-11, 0);
-          var3.b((byte) 112, param1.field_k);
-          var3.a(-11, param1.field_q);
-          var3.a(-11, param1.field_t);
+          var3.writeByte(-11, 5);
+          var3.writeByte(-11, 0);
+          var3.writeShort((byte) 112, param1.field_k);
+          var3.writeByte(-11, param1.field_q);
+          var3.writeByte(-11, param1.field_t);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -43,7 +43,7 @@ final class ak {
           var1 = var6 + ":";
           for (var2 = 0; pd.field_l > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ae.field_a.field_k[var2];
+            var3 = 255 & ae.field_a.payload[var2];
             var4 = var3 >> 4;
             if (var4 >= 10) {
               var4 += 55;
@@ -92,9 +92,9 @@ final class ak {
     final static int a(int param0, int param1, boolean param2, ad param3, int param4, String param5, ad param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        ni stackIn_18_0 = null;
+        PacketBuffer stackIn_18_0 = null;
         String stackIn_19_1 = null;
-        ni stackIn_21_0 = null;
+        PacketBuffer stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
@@ -145,63 +145,63 @@ final class ak {
           }
           if (ResourceArchive.field_k == d.field_O) {
             bb.field_A = null;
-            ud.field_b.field_i = 0;
+            ud.field_b.position = 0;
             if (param5 == null) {
-              sd.field_i.field_i = 0;
-              sd.field_i.a(jj.field_R.nextInt(), (byte) -102);
-              sd.field_i.a(jj.field_R.nextInt(), (byte) -98);
+              sd.field_i.position = 0;
+              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -102);
+              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -98);
               stackIn_18_0 = sd.field_i;
               if (!param3.a(47)) {
                 stackIn_19_1 = "";
               } else {
                 stackIn_19_1 = var14;
               }
-              ((ni) (Object) stackIn_18_0).a(stackIn_19_1, (byte) -109);
+              ((PacketBuffer) (Object) stackIn_18_0).writePrefixedString(stackIn_19_1, (byte) -109);
               stackIn_21_0 = sd.field_i;
               if (!param6.a(42)) {
                 stackIn_22_1 = "";
               } else {
                 stackIn_22_1 = var8;
               }
-              ((ni) (Object) stackIn_21_0).a(stackIn_22_1, (byte) -124);
-              ud.field_b.a(-11, 16);
-              ud.field_b.field_i = ud.field_b.field_i + 1;
-              var9 = ud.field_b.field_i;
+              ((PacketBuffer) (Object) stackIn_21_0).writePrefixedString(stackIn_22_1, (byte) -124);
+              ud.field_b.writeByte(-11, 16);
+              ud.field_b.position = ud.field_b.position + 1;
+              var9 = ud.field_b.position;
               cg.a(fj.field_c, -120, sd.field_i, ud.field_b, de.field_k);
-              ud.field_b.c((byte) -31, ud.field_b.field_i - var9);
+              ud.field_b.backpatchByteLength((byte) -31, ud.field_b.position - var9);
             } else {
               var9 = 0;
-              sd.field_i.field_i = 0;
+              sd.field_i.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
-              sd.field_i.a(jj.field_R.nextInt(), (byte) -63);
-              sd.field_i.a(jj.field_R.nextInt(), (byte) -15);
-              sd.field_i.a(var14, (byte) 61);
-              sd.field_i.a(var8, (byte) -113);
+              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -63);
+              sd.field_i.writeInt(jj.field_R.nextInt(), (byte) -15);
+              sd.field_i.writePrefixedString(var14, (byte) 61);
+              sd.field_i.writePrefixedString(var8, (byte) -113);
               var15 = (CharSequence) ((Object) param5);
-              sd.field_i.a(qb.a(var15, (byte) -76), (byte) 75);
-              sd.field_i.b((byte) 111, param4);
-              sd.field_i.a(param1 - 15032, param0);
-              sd.field_i.a(-11, var9);
-              ud.field_b.a(-11, 18);
-              ud.field_b.field_i = ud.field_b.field_i + 2;
-              var10 = ud.field_b.field_i;
+              sd.field_i.writePrefixedString(qb.a(var15, (byte) -76), (byte) 75);
+              sd.field_i.writeShort((byte) 111, param4);
+              sd.field_i.writeByte(param1 - 15032, param0);
+              sd.field_i.writeByte(-11, var9);
+              ud.field_b.writeByte(-11, 18);
+              ud.field_b.position = ud.field_b.position + 2;
+              var10 = ud.field_b.position;
               var11_ref_StringLifetime4 = w.a(0, BoundedRandomAccessFile.getApplet((byte) -62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ud.field_b.a(param1 - 15147, var11_ref_StringLifetime4);
+              ud.field_b.writeString(param1 - 15147, var11_ref_StringLifetime4);
               cg.a(fj.field_c, -126, sd.field_i, ud.field_b, de.field_k);
-              ud.field_b.a((byte) 121, -var10 + ud.field_b.field_i);
+              ud.field_b.backpatchShortLength((byte) 121, -var10 + ud.field_b.position);
             }
             dk.b((byte) 41, -1);
             ResourceArchive.field_k = ue.field_c;
           }
           if (ResourceArchive.field_k == ue.field_c &&
             gi.a(1, true)) {
-            var9Lifetime1 = ae.field_a.e(false);
-            ae.field_a.field_i = 0;
+            var9Lifetime1 = ae.field_a.readUnsignedByte(false);
+            ae.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               ResourceArchive.field_k = u.field_b;
@@ -222,19 +222,19 @@ final class ak {
               } else {
                 gi.a(cm.b(param1 ^ 15059), true);
                 bb.field_A = new Boolean(sd.a(ae.field_a, 16448));
-                ae.field_a.field_i = 0;
+                ae.field_a.position = 0;
               }
             }
           }
           if (u.field_b == ResourceArchive.field_k) {
             var9Lifetime2 = 2;
             if (gi.a(var9Lifetime2, true)) {
-              var10Lifetime1 = ae.field_a.d((byte) -111);
-              ae.field_a.field_i = 0;
+              var10Lifetime1 = ae.field_a.readUnsignedShort((byte) -111);
+              ae.field_a.position = 0;
               if (gi.a(var10Lifetime1, true)) {
                 var11 = tc.field_e.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  tc.field_e[var12] = ae.field_a.e(-84);
+                  tc.field_e[var12] = ae.field_a.readPrefixedString(-84);
                 }
                 k.c(-28354);
                 aa.field_q = false;
@@ -246,9 +246,9 @@ final class ak {
           if (ResourceArchive.field_k == gd.field_b &&
             gf.b(param1 - 14911)) {
             if (be.field_a != 255) {
-              fh.field_a = ae.field_a.h(param1 - 15021);
+              fh.field_a = ae.field_a.readString(param1 - 15021);
             } else {
-              var9_ref_String = ae.field_a.a((byte) -115);
+              var9_ref_String = ae.field_a.readNullableString((byte) -115);
               if (var9_ref_String != null) {
                 ea.a(376, BoundedRandomAccessFile.getApplet((byte) -93), var9_ref_String);
               }

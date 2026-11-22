@@ -28,7 +28,7 @@ final class ll {
           this.a(-98, 88);
         }
         if (var4 != null) {
-          var5.a(new wf(var4), 0);
+          var5.a(new PacketBuffer(var4), 0);
         }
         if (param1 >= 32768) {
           var5.d((byte) -80);

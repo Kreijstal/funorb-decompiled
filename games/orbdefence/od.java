@@ -84,11 +84,11 @@ final class od {
           var1 = uk.field_b;
           while (wl.a(-1)) {
             var1.i(8, -44);
-            fieldTemp$0 = var1.field_i + 1;
-            var1.field_i = var1.field_i + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             dk.a((byte) 15, var1);
-            uk.field_b.c((byte) 115, var1.field_i - var2);
+            uk.field_b.backpatchByteLength((byte) 115, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,5 +4,5 @@
 abstract class sh {
     abstract fk a(int param0);
 
-    abstract void a(mg param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 }

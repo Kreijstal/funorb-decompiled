@@ -9,12 +9,12 @@ final class uj implements Runnable {
     private eb field_a;
     static qd field_b;
     private int field_d;
-    private mg field_e;
+    private PacketBuffer field_e;
     private eb field_f;
     private DataInputStream field_g;
     private java.net.URL field_c;
 
-    final static void a(byte param0, mg param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -24,19 +24,19 @@ final class uj implements Runnable {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          fd.field_f = param1.j(98203176) << 5;
-          var2_int = param1.b((byte) 90);
+          fd.field_f = param1.readUnsignedShort(98203176) << 5;
+          var2_int = param1.readUnsignedByte((byte) 90);
           fd.field_f = fd.field_f + (var2_int >> 3);
           cc.field_l = (var2_int & 7) << 18;
-          cc.field_l = cc.field_l + (param1.j(98203176) << 2);
-          var2_intLifetime1 = param1.b((byte) 90);
+          cc.field_l = cc.field_l + (param1.readUnsignedShort(98203176) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) 90);
           oh.field_b = (var2_intLifetime1 & 63) << 15;
           cc.field_l = cc.field_l + (var2_intLifetime1 >> 6);
-          oh.field_b = oh.field_b + (param1.b((byte) 90) << 7);
-          var2_intLifetime2 = param1.b((byte) 90);
+          oh.field_b = oh.field_b + (param1.readUnsignedByte((byte) 90) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) 90);
           oh.field_b = oh.field_b + (var2_intLifetime2 >> 1);
           h.field_E = (var2_intLifetime2 & 1) << 16;
-          h.field_E = h.field_E + param1.j(param0 + 98203261);
+          h.field_E = h.field_E + param1.readUnsignedShort(param0 + 98203261);
           if (param0 != -85) {
             field_b = (qd) null;
           }
@@ -83,16 +83,16 @@ final class uj implements Runnable {
           Object var2_ref = null;
           var4 = OrbDefence.field_D ? 1 : 0;
           try {
-            while (this.field_e.field_j.length > this.field_e.field_i) {
-              var1_int = this.field_g.read(this.field_e.field_j, this.field_e.field_i, this.field_e.field_j.length - this.field_e.field_i);
+            while (this.field_e.payload.length > this.field_e.position) {
+              var1_int = this.field_g.read(this.field_e.payload, this.field_e.position, this.field_e.payload.length - this.field_e.position);
               if (var1_int >= 0) {
-                this.field_e.field_i = this.field_e.field_i + var1_int;
+                this.field_e.position = this.field_e.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_e.field_j.length == this.field_e.field_i) {
-              throw uj.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.field_j.length + " " + this.field_c));
+            if (this.field_e.payload.length == this.field_e.position) {
+              throw uj.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.payload.length + " " + this.field_c));
             }
             var1 = this;
             synchronized (var1) {
@@ -153,9 +153,9 @@ final class uj implements Runnable {
               var5_ref_hc.field_h < var3) {
               var5_ref_hc.b(57);
               GameAppletShell.field_c = var5_ref_hc.field_m.length;
-              cd.field_t.field_i = 0;
+              cd.field_t.position = 0;
               for (var6_int = 0; var6_int < GameAppletShell.field_c; var6_int++) {
-                cd.field_t.field_j[var6_int] = var5_ref_hc.field_m[var6_int];
+                cd.field_t.payload[var6_int] = var5_ref_hc.field_m[var6_int];
               }
               lh.field_c = fe.field_b;
               fe.field_b = ce.field_d;
@@ -166,12 +166,12 @@ final class uj implements Runnable {
           }
           while (true) {
             if (vb.field_i < 0) {
-              cd.field_t.field_i = 0;
+              cd.field_t.position = 0;
               if (!va.a(true, 1)) {
                 return false;
               }
               vb.field_i = cd.field_t.o(-75);
-              cd.field_t.field_i = 0;
+              cd.field_t.position = 0;
               GameAppletShell.field_c = param0[vb.field_i];
             }
             if (!ce.a(-106)) {
@@ -194,7 +194,7 @@ final class uj implements Runnable {
             }
             var6 = new hc(var3 + (long)var5, vb.field_i, new byte[GameAppletShell.field_c]);
             for (var7 = 0; var7 < GameAppletShell.field_c; var7++) {
-              var6.field_m[var7] = cd.field_t.field_j[var7];
+              var6.field_m[var7] = cd.field_t.payload[var7];
             }
             t.field_q.a(-97, var6);
             vb.field_i = -1;
@@ -213,14 +213,14 @@ final class uj implements Runnable {
         }
     }
 
-    final mg a(int param0) {
+    final PacketBuffer a(int param0) {
         if (this.field_d == 3) {
           return this.field_e;
         }
         if (param0 == 5) {
           return null;
         }
-        return (mg) null;
+        return (PacketBuffer) null;
     }
 
     public static void c(int param0) {
@@ -322,7 +322,7 @@ final class uj implements Runnable {
                   var3.write(oc.a(true, var5));
                   this.field_g = new DataInputStream(var4.getInputStream());
                 }
-                this.field_e.field_i = 0;
+                this.field_e.position = 0;
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (IOException) (Object) decompiledCaughtException;
@@ -350,7 +350,7 @@ final class uj implements Runnable {
         try {
           this.field_i = param0;
           this.field_c = param1;
-          this.field_e = new mg(param2);
+          this.field_e = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

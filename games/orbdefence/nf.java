@@ -51,7 +51,7 @@ abstract class nf extends DualLinkNode {
         byte[] var5_ref_byte__ = null;
         int var5 = 0;
         byte[] var6 = null;
-        mg var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -69,20 +69,20 @@ abstract class nf extends DualLinkNode {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var9 = new mg(param0);
-          var3 = var9.b((byte) 90);
-          var4 = var9.l(0);
+          var9 = new PacketBuffer(param0);
+          var3 = var9.readUnsignedByte((byte) 90);
+          var4 = var9.readInt(0);
           if (var4 >= 0 && (0 == lj.field_E ||
             !(var4 > lj.field_E))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a((byte) 114, var12, 0, var4);
+              var9.readBytes((byte) 114, var12, 0, var4);
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }
-            var5 = var9.l(0);
+            var5 = var9.readInt(0);
             if (0 <= var5 && (lj.field_E == 0 ||
               !(var5 > lj.field_E))) {
               var13 = new byte[var5];

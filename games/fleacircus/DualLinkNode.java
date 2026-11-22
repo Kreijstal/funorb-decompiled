@@ -49,7 +49,7 @@ class DualLinkNode extends IntrusiveNode {
               return;
             }
             var3 = 1;
-            var4 = (int)(32.0 * ma.a((double)ni.field_j / 50.0, 73));
+            var4 = (int)(32.0 * ma.a((double)PacketBuffer.field_j / 50.0, 73));
             if (tj.field_a == 0) {
               ej.field_a[0].field_l = 380;
               ej.field_a[0].field_a = 30;

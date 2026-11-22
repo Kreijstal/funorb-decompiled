@@ -3,7 +3,7 @@
  */
 final class am extends PcmStream {
     static int field_p;
-    static od field_n;
+    static PacketBuffer field_n;
     private ug field_s;
     vd field_q;
     static int field_l;
@@ -92,7 +92,7 @@ final class am extends PcmStream {
             }
             var7 = stackIn_14_0;
             if (param4 != 14673) {
-              field_n = (od) null;
+              field_n = (PacketBuffer) null;
             }
             if (param3[1] == null) {
               stackIn_19_0 = 0;
@@ -217,7 +217,7 @@ final class am extends PcmStream {
     }
 
     final static void g(int param0) {
-        oa.field_d = dh.field_N.b((byte) -53);
+        oa.field_d = dh.field_N.readString((byte) -53);
         CharSequence var2 = (CharSequence) ((Object) oa.field_d);
         tf.field_pb = rh.a(119, var2);
         if (param0 != 11) {
@@ -471,6 +471,6 @@ final class am extends PcmStream {
     static {
         field_l = 75;
         field_p = field_l / 2;
-        field_n = new od(256);
+        field_n = new PacketBuffer(256);
     }
 }

@@ -168,8 +168,8 @@ final class di {
     }
 
     final static void b(int param0) {
-        if (null != pc.field_a) {
-          pc.field_a.s(-94);
+        if (null != Crc32Table.field_a) {
+          Crc32Table.field_a.s(-94);
         }
         ti.field_e = new fh();
         vb.field_h.c(ti.field_e, (byte) 57);

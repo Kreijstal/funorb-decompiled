@@ -6,12 +6,12 @@ final class wc {
     static String field_b;
     static db[] field_c;
 
-    final static void a(java.math.BigInteger param0, wf param1, java.math.BigInteger param2, byte param3, wf param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, byte param3, PacketBuffer param4) {
         try {
           if (param3 != 111) {
             field_b = (String) null;
           }
-          tg.a(param0, param4.field_h, param2, (byte) 84, param1, 0, param4.field_j);
+          tg.a(param0, param4.position, param2, (byte) 84, param1, 0, param4.payload);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "wc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

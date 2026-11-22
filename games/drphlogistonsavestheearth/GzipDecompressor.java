@@ -238,7 +238,7 @@ final class GzipDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final void decompress(byte[] param0, od param1, int param2) {
+    final void decompress(byte[] param0, PacketBuffer param1, int param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -249,13 +249,13 @@ final class GzipDecompressor {
           Exception var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (param1.field_h[param1.field_j] == 31 &&
-              param1.field_h[param1.field_j + 1] == -117) {
+            if (param1.payload[param1.position] == 31 &&
+              param1.payload[param1.position + 1] == -117) {
               if (null == this.field_b) {
                 this.field_b = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_b.setInput(param1.field_h, param1.field_j + 10, -param1.field_j + (-18 + param1.field_h.length));
+                this.field_b.setInput(param1.payload, param1.position + 10, -param1.position + (-18 + param1.payload.length));
                 if (param2 != -1) {
                   return;
                 }

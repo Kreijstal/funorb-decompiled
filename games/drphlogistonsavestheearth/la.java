@@ -204,20 +204,20 @@ final class la {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var1 = dh.field_N;
-          var2 = var1.l(31760);
+          var2 = var1.readUnsignedByte(31760);
           if (var2 == 0) {
             if (vg.field_j == null) {
               vg.field_j = new hm(128);
               fg.field_j = 0;
             }
-            stackIn_12_0 = (var1.l(31760) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(31760) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.b((byte) -100);
+            var4_ref_String = var1.readString((byte) -100);
             if (var3_int != 0) {
-              var1.b((byte) -128);
+              var1.readString((byte) -128);
             }
             var5 = ad.a(var4_ref_String, -122);
-            var6 = var1.b((byte) -79);
+            var6 = var1.readString((byte) -79);
             var7 = rh.a(-77, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
@@ -258,9 +258,9 @@ final class la {
               return;
             }
             of.field_v = 1;
-            var3 = var1.b((byte) -101);
+            var3 = var1.readString((byte) -101);
             rc.field_e = ((String) (var3)).intern();
-            var4 = var1.l(31760);
+            var4 = var1.readUnsignedByte(31760);
             dh.a(var4, 57);
             return;
           }
@@ -268,12 +268,12 @@ final class la {
             gf.field_r = new hm(128);
             al.field_f = 0;
           }
-          var3Lifetime1 = var1.b((byte) -34);
+          var3Lifetime1 = var1.readString((byte) -34);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.b((byte) -29);
-          var5_ref = var1.b((byte) -118);
+          var4_ref_StringLifetime1 = var1.readString((byte) -29);
+          var5_ref = var1.readString((byte) -118);
           var6_ref = pa.a(var4_ref_StringLifetime1, (byte) 67);
           if (var6_ref == null) {
             var6_ref = pa.a(var5_ref, (byte) 67);

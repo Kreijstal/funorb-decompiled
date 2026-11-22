@@ -774,7 +774,7 @@ final class hl extends PcmStream {
           }
           var27 = ig.field_a;
           var28 = var27;
-          var2 = var28.d(true);
+          var2 = var28.readUnsignedByte(true);
           if (var2 != 0) {
             if (var2 != 1) {
               uj.a("HS1: " + qj.h(param0 - 117), (Throwable) null, 1);
@@ -783,8 +783,8 @@ final class hl extends PcmStream {
                 return;
               }
             }
-            var3 = var28.b(-1698573656);
-            var4_long = var28.f((byte) -102);
+            var3 = var28.readUnsignedShort(-1698573656);
+            var4_long = var28.readLong((byte) -102);
             var6_ref_nc = (nc) (ok.field_b.a(true));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
@@ -812,7 +812,7 @@ final class hl extends PcmStream {
               return;
             }
           }
-          var3Lifetime1 = var28.b(param0 - 1698573656);
+          var3Lifetime1 = var28.readUnsignedShort(param0 - 1698573656);
           var4 = (sj) (il.field_b.a(true));
           scanLoop1: while (true) {
             if (var4 != null) {
@@ -829,7 +829,7 @@ final class hl extends PcmStream {
             if (var4 != null) {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
-              var5 = var28.d(true);
+              var5 = var28.readUnsignedByte(true);
               if (var5 != 0) {
                 var6 = var4.field_o;
                 var7 = var4.field_m;
@@ -838,14 +838,14 @@ final class hl extends PcmStream {
                 f.field_l[0].field_d = og.field_c;
                 var8_int = 1;
                 while (var5 > var8_int) {
-                  f.field_l[var8_int].field_d = var27.c(false);
+                  f.field_l[var8_int].field_d = var27.readString(false);
                   f.field_l[var8_int].field_b = false;
                   if (var26 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  if (var28.d(true) == 1) {
-                    f.field_l[var8_int].field_f = var28.c(false);
+                  if (var28.readUnsignedByte(true) == 1) {
+                    f.field_l[var8_int].field_f = var28.readString(false);
                   } else {
                     f.field_l[var8_int].field_f = null;
                   }
@@ -868,14 +868,14 @@ final class hl extends PcmStream {
                   var15 = 0;
                   var16 = 0;
                   var17 = 0;
-                  var18 = var28.d(true);
+                  var18 = var28.readUnsignedByte(true);
                   if (var18 > 0) {
                     var19 = 0;
                     while (var19 < var18) {
-                      var20 = var27.d(true);
+                      var20 = var27.readUnsignedByte(true);
                       var21 = f.field_l[var20].field_d;
-                      var22 = var28.f((byte) -86);
-                      var24 = var28.field_h;
+                      var22 = var28.readLong((byte) -86);
+                      var24 = var28.position;
                       if (var26 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -889,7 +889,7 @@ final class hl extends PcmStream {
                         while (var7 > var25) {
                           incrementValue$3 = var15;
                           var15++;
-                          var11[0][incrementValue$3] = var27.d((byte) 19);
+                          var11[0][incrementValue$3] = var27.readInt((byte) 19);
                           var25++;
                         }
                       }
@@ -899,12 +899,12 @@ final class hl extends PcmStream {
                         var9[1][var13] = null;
                         var10[1][var13] = var22;
                         var13++;
-                        var28.field_h = var24;
+                        var28.position = var24;
                         var25Lifetime1 = 0;
                         while (var25Lifetime1 < var7) {
                           incrementValue$4 = var16;
                           var16++;
-                          var11[1][incrementValue$4] = var27.d((byte) 19);
+                          var11[1][incrementValue$4] = var27.readInt((byte) 19);
                           var25Lifetime1++;
                         }
                       }
@@ -914,13 +914,13 @@ final class hl extends PcmStream {
                         var8[2][var14] = var21;
                         var9[2][var14] = f.field_l[var20].field_f;
                         var10[2][var14] = var22;
-                        var28.field_h = var24;
+                        var28.position = var24;
                         var14++;
                         var25Lifetime2 = 0;
                         while (var25Lifetime2 < var7) {
                           incrementValue$5 = var17;
                           var17++;
-                          var11[2][incrementValue$5] = var27.d((byte) 19);
+                          var11[2][incrementValue$5] = var27.readInt((byte) 19);
                           var25Lifetime2++;
                         }
                       }

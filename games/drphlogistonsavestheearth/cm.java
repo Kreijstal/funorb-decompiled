@@ -7,7 +7,7 @@ final class cm extends lb {
     byte field_N;
     static Random field_M;
     int field_O;
-    od field_K;
+    PacketBuffer field_K;
     static nh[] field_R;
     static he[] field_Q;
     static sa field_P;
@@ -22,7 +22,7 @@ final class cm extends lb {
           return 0;
         }
         if (param0 <= -38) {
-          return this.field_K.field_j * 100 / (-this.field_N + this.field_K.field_h.length);
+          return this.field_K.position * 100 / (-this.field_N + this.field_K.payload.length);
         }
         return 97;
     }
@@ -57,16 +57,16 @@ final class cm extends lb {
           if (this.field_u) {
             throw new RuntimeException();
           }
-          if (this.field_K.field_h.length - this.field_N <= this.field_K.field_j) {
-            return this.field_K.field_h;
+          if (this.field_K.payload.length - this.field_N <= this.field_K.position) {
+            return this.field_K.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_u) {
           throw new RuntimeException();
         }
-        if (this.field_K.field_h.length - this.field_N <= this.field_K.field_j) {
-          return this.field_K.field_h;
+        if (this.field_K.payload.length - this.field_N <= this.field_K.position) {
+          return this.field_K.payload;
         }
         throw new RuntimeException();
     }

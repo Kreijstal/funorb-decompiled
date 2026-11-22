@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends mg {
+final class se extends PacketBuffer {
     private int field_p;
     private re field_o;
     static String field_n;
 
     final void m(int param0) {
-        this.field_i = (param0 + this.field_p) / 8;
+        this.position = (param0 + this.field_p) / 8;
     }
 
     final int h(int param0, int param1) {
@@ -20,14 +20,14 @@ final class se extends mg {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((sk.field_I[var4] & this.field_j[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((sk.field_I[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.field_j[var3] >> -param0 + var4 & sk.field_I[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & sk.field_I[param0]);
         } else {
-          var5 = var5 + (sk.field_I[var4] & this.field_j[var3]);
+          var5 = var5 + (sk.field_I[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -36,13 +36,13 @@ final class se extends mg {
         int fieldTemp$0 = 0;
         if (param0 >= -22) {
           this.h(69, 70);
-          fieldTemp$0 = this.field_i;
-          this.field_i = this.field_i + 1;
-          return this.field_j[fieldTemp$0] - this.field_o.a(128) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_o.a(128) & 255;
         }
-        int fieldTemp$1 = this.field_i;
-        this.field_i = this.field_i + 1;
-        return this.field_j[fieldTemp$1] - this.field_o.a(128) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$1] - this.field_o.a(128) & 255;
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
@@ -59,9 +59,9 @@ final class se extends mg {
         try {
           var5_int = 6 % ((33 - param0) / 61);
           for (var6 = 0; var6 < param3; var6++) {
-            fieldTemp$0 = this.field_i;
-            this.field_i = this.field_i + 1;
-            param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] - this.field_o.a(128));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var6 + param1] = (byte)(this.payload[fieldTemp$0] - this.field_o.a(128));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,9 +87,9 @@ final class se extends mg {
     }
 
     final void i(int param0, int param1) {
-        int fieldTemp$0 = this.field_i;
-        this.field_i = this.field_i + 1;
-        this.field_j[fieldTemp$0] = (byte)(this.field_o.a(128) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_o.a(128) + param0);
         int var3 = -34 / ((21 - param1) / 58);
     }
 
@@ -101,18 +101,18 @@ final class se extends mg {
           }
           var3 = uk.field_b;
           var3.i(param1, -116);
-          var3.a(5, -9);
-          var3.a(0, -30);
-          var3.b((byte) -60, param0.field_o);
-          var3.a(param0.field_m, -4);
-          var3.a(param0.field_n, -79);
+          var3.writeByte(5, -9);
+          var3.writeByte(0, -30);
+          var3.writeShort((byte) -60, param0.field_o);
+          var3.writeByte(param0.field_m, -4);
+          var3.writeByte(param0.field_n, -79);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "se.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void n(int param0) {
-        this.field_p = this.field_i * 8;
+        this.field_p = this.position * 8;
         if (param0 != 9471) {
           this.field_o = (re) null;
         }

@@ -460,7 +460,7 @@ final class ul extends kd {
           ra.field_c = (BitmapFont) ((Object) ee.a("commonui", "arezzo14bold", false, param1, param0));
           var18 = new db(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
-          var5 = wf.a(param0, "commonui", true, "screen_options");
+          var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");
           si.field_u = new IndexedSprite[4];
           oc.field_d = new IndexedSprite[4];
           uj.field_a = new IndexedSprite[4];

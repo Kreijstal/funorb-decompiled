@@ -25,7 +25,7 @@ class ik implements rd, ub {
     int field_m;
 
     final static String a(byte param0) {
-        if (wf.field_i < 2) {
+        if (PacketBuffer.field_i < 2) {
           return ui.field_w;
         }
         if (eh.field_d != null) {

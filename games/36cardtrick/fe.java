@@ -86,32 +86,32 @@ final class fe {
           if (cb.field_j != null) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (ra.field_b == ad.field_q);
-              if ((decompiledFrameRemainder0) && (na.field_r.field_i == 0 &&
+              if ((decompiledFrameRemainder0) && (na.field_r.position == 0 &&
                 id.a(90) > ua.field_E + 10000L)) {
                 na.field_r.h(param1, 0);
               }
             } else {
-              if (na.field_r.field_i == 0 &&
+              if (na.field_r.position == 0 &&
                 id.a(90) > ua.field_E + 10000L) {
                 na.field_r.h(param1, 0);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (na.field_r.field_i > 0) {
+              if (na.field_r.position > 0) {
                 try {
-                  cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
+                  cb.field_j.a(0, (byte) -89, na.field_r.position, na.field_r.payload);
                   ua.field_E = id.a(125);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   mc.a((byte) -126);
                 }
-                na.field_r.field_i = 0;
+                na.field_r.position = 0;
               }
               return;
             }
           }
-          na.field_r.field_i = 0;
+          na.field_r.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

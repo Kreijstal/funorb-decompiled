@@ -36,9 +36,9 @@ final class tb {
               var4_ref_ha.field_q < var2_long) {
               var4_ref_ha.c(-1);
               pd.field_l = var4_ref_ha.field_r.length;
-              ae.field_a.field_i = 0;
+              ae.field_a.position = 0;
               for (var5_int = 0; pd.field_l > var5_int; var5_int++) {
-                ae.field_a.field_k[var5_int] = var4_ref_ha.field_r[var5_int];
+                ae.field_a.payload[var5_int] = var4_ref_ha.field_r[var5_int];
               }
               hc.field_j = rj.field_k;
               rj.field_k = vi.field_a;
@@ -53,12 +53,12 @@ final class tb {
           }
           while (true) {
             if (il.field_h < 0) {
-              ae.field_a.field_i = 0;
+              ae.field_a.position = 0;
               if (!gi.a(1, true)) {
                 return false;
               }
               il.field_h = ae.field_a.f((byte) 47);
-              ae.field_a.field_i = 0;
+              ae.field_a.position = 0;
               pd.field_l = param1[il.field_h];
             }
             if (!gf.b(-9)) {
@@ -81,7 +81,7 @@ final class tb {
             }
             var5 = new ha((long)var4 + var2_long, il.field_h, new byte[pd.field_l]);
             for (var6 = 0; pd.field_l > var6; var6++) {
-              var5.field_r[var6] = ae.field_a.field_k[var6];
+              var5.field_r[var6] = ae.field_a.payload[var6];
             }
             bj.field_n.a(false, var5);
             il.field_h = -1;

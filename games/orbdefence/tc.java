@@ -71,10 +71,10 @@ final class tc {
           return;
         }
         se var2 = cd.field_t;
-        var2.l(0);
-        var2.l(0);
-        var2.l(0);
-        var2.l(0);
+        var2.readInt(0);
+        var2.readInt(0);
+        var2.readInt(0);
+        var2.readInt(0);
         var1.b(57);
         if (param0 > -35) {
           field_b = 85;

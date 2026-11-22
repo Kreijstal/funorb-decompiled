@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends od {
+final class lh extends PacketBuffer {
     static int[] field_n;
     static ok field_l;
     private ta field_o;
@@ -14,13 +14,13 @@ final class lh extends od {
         if (param0 != 121) {
           byte[] var3 = (byte[]) null;
           this.a(-86, 117, (byte[]) null, (byte) -63);
-          fieldTemp$0 = this.field_j;
-          this.field_j = this.field_j + 1;
-          return 255 & this.field_h[fieldTemp$0] - this.field_o.b((byte) -57);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return 255 & this.payload[fieldTemp$0] - this.field_o.b((byte) -57);
         }
-        int fieldTemp$1 = this.field_j;
-        this.field_j = this.field_j + 1;
-        return 255 & this.field_h[fieldTemp$1] - this.field_o.b((byte) -57);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$1] - this.field_o.b((byte) -57);
     }
 
     final void a(int param0, int param1, byte[] param2, byte param3) {
@@ -39,9 +39,9 @@ final class lh extends od {
             return;
           }
           while (var5_int < param0) {
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            param2[param1 + var5_int] = (byte)(this.field_h[fieldTemp$0] - this.field_o.b((byte) -115));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[param1 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_o.b((byte) -115));
             var5_int++;
           }
           return;
@@ -147,7 +147,7 @@ final class lh extends od {
     }
 
     final void o(int param0) {
-        this.field_j = (this.field_q + 7) / 8;
+        this.position = (this.field_q + 7) / 8;
         if (param0 <= -107) {
           return;
         }
@@ -156,21 +156,21 @@ final class lh extends od {
 
     final void d(byte param0) {
         int var2 = -98 / ((param0 + 11) / 42);
-        this.field_q = 8 * this.field_j;
+        this.field_q = 8 * this.position;
     }
 
     final void d(int param0, int param1) {
         int fieldTemp$0 = 0;
         if (param1 != -18392) {
           lh.b(2L, (byte) -21);
-          fieldTemp$0 = this.field_j;
-          this.field_j = this.field_j + 1;
-          this.field_h[fieldTemp$0] = (byte)(this.field_o.b((byte) 127) + param0);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(this.field_o.b((byte) 127) + param0);
           return;
         }
-        int fieldTemp$1 = this.field_j;
-        this.field_j = this.field_j + 1;
-        this.field_h[fieldTemp$1] = (byte)(this.field_o.b((byte) 127) + param0);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(this.field_o.b((byte) 127) + param0);
     }
 
     final int e(int param0, byte param1) {
@@ -184,14 +184,14 @@ final class lh extends od {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_h[incrementValue$0] & ji.field_a[var4]) << param0 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & ji.field_a[var4]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 == param0) {
-          var5 = var5 + (this.field_h[var3] & ji.field_a[var4]);
+          var5 = var5 + (this.payload[var3] & ji.field_a[var4]);
         } else {
-          var5 = var5 + (this.field_h[var3] >> -param0 + var4 & ji.field_a[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & ji.field_a[param0]);
         }
         return var5;
     }

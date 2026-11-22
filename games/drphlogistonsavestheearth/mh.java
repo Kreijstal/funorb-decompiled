@@ -16,11 +16,11 @@ final class mh {
           int var4 = -117 % ((-28 - param1) / 32);
           var3 = nj.field_p;
           var3.d(param0, -18392);
-          var3.c(5, (byte) -99);
-          var3.c(0, (byte) -88);
-          var3.c(param2.field_i, -17402);
-          var3.c(param2.field_h, (byte) -127);
-          var3.c(param2.field_m, (byte) -99);
+          var3.writeByte(5, (byte) -99);
+          var3.writeByte(0, (byte) -88);
+          var3.writeShort(param2.field_i, -17402);
+          var3.writeByte(param2.field_h, (byte) -127);
+          var3.writeByte(param2.field_m, (byte) -99);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "mh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

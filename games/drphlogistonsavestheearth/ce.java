@@ -201,29 +201,29 @@ final class ce {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        od var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new od(param1);
+          var9 = new PacketBuffer(param1);
           if (param0 != 1) {
             ce.a(76, 80, 93, -121, -34);
           }
-          var3 = var9.l(31760);
-          var4 = var9.h(-4);
+          var3 = var9.readUnsignedByte(31760);
+          var4 = var9.readInt(-4);
           if (var4 >= 0 && (0 == MouseInput.field_d ||
             !(MouseInput.field_d < var4))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.b(0, var4, param0 + 127, var12);
+              var9.readBytes(0, var4, param0 + 127, var12);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.h(-9);
+            var5 = var9.readInt(-9);
             if (var5 >= 0 && (MouseInput.field_d == 0 ||
               !(var5 > MouseInput.field_d))) {
               var13 = new byte[var5];

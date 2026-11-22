@@ -12,7 +12,7 @@ class s extends pj {
     static dj field_y;
     boolean field_D;
     boolean field_F;
-    static mg field_C;
+    static PacketBuffer field_C;
 
     public static void i(int param0) {
         field_y = null;

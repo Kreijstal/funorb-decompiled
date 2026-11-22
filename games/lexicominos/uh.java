@@ -83,11 +83,11 @@ final class uh extends PcmStream {
         try {
           var3 = ed.field_q;
           var3.h(param2, 0);
-          var3.c(5, -1);
-          var3.c(0, -1);
-          var3.e(91, param0.field_h);
-          var3.c(param0.field_o, -1);
-          var3.c(param0.field_m, -1);
+          var3.writeByte(5, -1);
+          var3.writeByte(0, -1);
+          var3.writeShort(91, param0.field_h);
+          var3.writeByte(param0.field_o, -1);
+          var3.writeByte(param0.field_m, -1);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "uh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

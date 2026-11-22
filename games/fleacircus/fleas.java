@@ -15,7 +15,7 @@ public final class fleas extends NetworkGameClient {
     static int field_L;
     private static int[][] field_G;
     private static ng field_K;
-    static ni field_B;
+    static PacketBuffer field_B;
     static String field_I;
     public static boolean field_A;
 
@@ -82,7 +82,7 @@ public final class fleas extends NetworkGameClient {
             fh.$cfr$intArgs$a$cb0bc10e6b69(105, ab.field_a, 100, 63);
             lj.field_c[uf.field_h] = param3;
             fb.field_e[uf.field_h] = param0;
-            nc.field_a[uf.field_h] = ni.field_j;
+            nc.field_a[uf.field_h] = PacketBuffer.field_j;
             uf.field_h = uf.field_h + 1;
             var6_int = param3 - 1;
             while (true) {
@@ -1504,7 +1504,7 @@ public final class fleas extends NetworkGameClient {
         int var3 = 0;
         var3 = field_A ? 1 : 0;
         try {
-          ni.field_j = ni.field_j + 1;
+          PacketBuffer.field_j = PacketBuffer.field_j + 1;
           ai.e(-20846);
           if (ResourceArchive.field_p != null &&
             ResourceArchive.field_p.field_c) {
@@ -1872,8 +1872,8 @@ public final class fleas extends NetworkGameClient {
           if (param2 != 2) {
             return;
           }
-          var3.a(-11, param1.field_n);
-          var3.b((byte) 76, param1.field_m);
+          var3.writeByte(-11, param1.field_n);
+          var3.writeShort((byte) 76, param1.field_m);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2225,7 +2225,7 @@ public final class fleas extends NetworkGameClient {
           if (GzipDecompressor.field_d >= 0) {
             GzipDecompressor.field_d = GzipDecompressor.field_d + 1;
           }
-          this.field_M = 1.0 + ma.a((double)ni.field_j / 10.0, 109);
+          this.field_M = 1.0 + ma.a((double)PacketBuffer.field_j / 10.0, 109);
           if (!lk.field_D.field_k) {
             if (!(GzipDecompressor.field_d < 0)) {
               si.field_y.field_a = (int)(415.0 - 2.0 * this.field_M);
@@ -2482,7 +2482,7 @@ public final class fleas extends NetworkGameClient {
               pg.field_f = pg.field_f + 1;
             }
           }
-          if ((ni.field_j & 1) != 0) {
+          if ((PacketBuffer.field_j & 1) != 0) {
             return;
           }
           kb.field_i = (kb.field_i + 1) % 8;

@@ -101,26 +101,26 @@ final class bk extends IOException {
         se var7 = uk.field_b;
         se var8 = var7;
         var8.i(param1, -41);
-        var8.field_i = var8.field_i + 1;
-        int var4 = var8.field_i;
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
         if (!param0) {
           return;
         }
         try {
-          var8.a(1, -62);
-          var8.b((byte) -60, param2.field_t);
-          var8.b((byte) -60, param2.field_g);
-          var8.b((byte) -60, param2.field_k);
-          var8.b(param2.field_n, -1);
-          var8.b(param2.field_m, -1);
-          var8.b(param2.field_f, -1);
-          var8.b(param2.field_r, -1);
-          var8.a(param2.field_o.length, -118);
+          var8.writeByte(1, -62);
+          var8.writeShort((byte) -60, param2.field_t);
+          var8.writeShort((byte) -60, param2.field_g);
+          var8.writeShort((byte) -60, param2.field_k);
+          var8.writeInt(param2.field_n, -1);
+          var8.writeInt(param2.field_m, -1);
+          var8.writeInt(param2.field_f, -1);
+          var8.writeInt(param2.field_r, -1);
+          var8.writeByte(param2.field_o.length, -118);
           for (var5 = 0; var5 < param2.field_o.length; var5++) {
-            var7.b(param2.field_o[var5], -1);
+            var7.writeInt(param2.field_o[var5], -1);
           }
-          var8.e(-18951, var4);
-          var8.c((byte) -15, var8.field_i - var4);
+          var8.appendCrc32(-18951, var4);
+          var8.backpatchByteLength((byte) -15, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

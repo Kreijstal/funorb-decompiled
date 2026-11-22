@@ -302,15 +302,15 @@ final class gl extends hl {
           if (!r.a(1, (byte) 123)) {
             return false;
           }
-          al.field_a = rd.field_j.f(-97);
-          rd.field_j.field_i = 0;
+          al.field_a = rd.field_j.readUnsignedByte(-97);
+          rd.field_j.position = 0;
         }
         if (al.field_a == -2) {
           if (!r.a(2, (byte) 127)) {
             return false;
           }
-          al.field_a = rd.field_j.d((byte) 72);
-          rd.field_j.field_i = 0;
+          al.field_a = rd.field_j.readUnsignedShort((byte) 72);
+          rd.field_j.position = 0;
         }
         if (!param0) {
           return r.a(al.field_a, (byte) 123);

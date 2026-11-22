@@ -17,13 +17,13 @@ final class jl extends ff {
         field_g = null;
     }
 
-    final void a(int param0, pb param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           if (param0 != -1) {
             field_e = (bk) null;
           }
-          param1.a(744825352, this.field_f);
-          param1.b(this.field_d, 15045);
+          param1.writePrefixedString(744825352, this.field_f);
+          param1.writeBase38String(this.field_d, 15045);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "jl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

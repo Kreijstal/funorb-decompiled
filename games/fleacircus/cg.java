@@ -270,12 +270,12 @@ final class cg extends gi {
         }
     }
 
-    final static void a(java.math.BigInteger param0, int param1, ni param2, ni param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, int param1, PacketBuffer param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           if (param1 >= -104) {
             field_v = (String) null;
           }
-          qi.a(param4, param2.field_i, 0, param2.field_k, param3, param0, (byte) -60);
+          qi.a(param4, param2.position, 0, param2.payload, param3, param0, (byte) -60);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "cg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -525,7 +525,7 @@ final class cg extends gi {
         field_v = null;
         if (param0 != 1) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          cg.a((java.math.BigInteger) null, -72, (ni) null, (ni) null, (java.math.BigInteger) null);
+          cg.a((java.math.BigInteger) null, -72, (PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
     }
 

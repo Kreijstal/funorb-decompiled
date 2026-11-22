@@ -7,7 +7,7 @@ final class vd {
     static String field_f;
     private ki field_c;
     static String[] field_e;
-    static mg field_a;
+    static PacketBuffer field_a;
     private mh field_g;
 
     final static void a(int param0) {

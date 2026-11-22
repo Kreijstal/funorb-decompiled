@@ -97,16 +97,16 @@ final class VorbisSample extends kd {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        wf var2 = new wf(param0);
-        this.field_n = var2.d((byte) 19);
-        this.field_z = var2.d((byte) 19);
-        this.field_r = var2.d((byte) 19);
-        this.field_I = var2.d((byte) 19);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_n = var2.readInt((byte) 19);
+        this.field_z = var2.readInt((byte) 19);
+        this.field_r = var2.readInt((byte) 19);
+        this.field_I = var2.readInt((byte) 19);
         if (this.field_I < 0) {
           this.field_I = ~this.field_I;
           this.field_y = true;
         }
-        int var3 = var2.d((byte) 19);
+        int var3 = var2.readInt((byte) 19);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -114,11 +114,11 @@ final class VorbisSample extends kd {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d(true);
+            var6_int = var2.readUnsignedByte(true);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(126, var5, 0, var6);
+          var2.readBytes(126, var5, 0, var6);
           this.field_G[var4] = var6;
         }
     }

@@ -167,9 +167,9 @@ class bd extends oh implements da {
         var26 = fleas.field_A ? 1 : 0;
         try {
           var28 = ae.field_a;
-          var2 = var28.e(false);
+          var2 = var28.readUnsignedByte(false);
           if (0 == var2) {
-            var3 = var28.d((byte) 108);
+            var3 = var28.readUnsignedShort((byte) 108);
             var4 = (ll) (jj.field_S.c((byte) 47));
             while (var4 != null) {
               if (~var3 != ~var4.field_k) {
@@ -182,7 +182,7 @@ class bd extends oh implements da {
               k.c(param0 ^ 13077);
               return;
             }
-            var5 = var28.e(false);
+            var5 = var28.readUnsignedByte(false);
             if (0 != var5) {
               var6 = var4.field_q;
               de.field_n[0].field_b = b.field_e;
@@ -190,10 +190,10 @@ class bd extends oh implements da {
               de.field_n[0].field_i = false;
               var7 = var4.field_t;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                de.field_n[var8_int].field_b = var28.h(0);
+                de.field_n[var8_int].field_b = var28.readString(0);
                 de.field_n[var8_int].field_i = false;
-                if (var28.e(false) == 1) {
-                  de.field_n[var8_int].field_e = var28.h(param0 + 24021);
+                if (var28.readUnsignedByte(false) == 1) {
+                  de.field_n[var8_int].field_e = var28.readString(param0 + 24021);
                 } else {
                   de.field_n[var8_int].field_e = null;
                 }
@@ -214,13 +214,13 @@ class bd extends oh implements da {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.e(false);
+              var18 = var28.readUnsignedByte(false);
               if (0 < var18) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.e(false);
+                  var20 = var28.readUnsignedByte(false);
                   var21 = de.field_n[var20].field_b;
-                  var22 = var28.f(-103);
-                  var24 = var28.field_i;
+                  var22 = var28.readLong(-103);
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = de.field_n[var20].field_e;
@@ -229,7 +229,7 @@ class bd extends oh implements da {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.c((byte) 127);
+                      var11[0][incrementValue$3] = var28.readInt((byte) 127);
                     }
                   }
                   if (var21 != null &&
@@ -238,11 +238,11 @@ class bd extends oh implements da {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_i = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.c((byte) -31);
+                      var11[1][incrementValue$4] = var28.readInt((byte) -31);
                     }
                   }
                   if (var14 < var6 &&
@@ -252,11 +252,11 @@ class bd extends oh implements da {
                     var9[2][var14] = de.field_n[var20].field_e;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_i = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.c((byte) 123);
+                      var11[2][incrementValue$5] = var28.readInt((byte) 123);
                     }
                   }
                 }
@@ -265,8 +265,8 @@ class bd extends oh implements da {
             var4.field_l = true;
             var4.c(param0 + 24020);
           } else if (var2 == 1) {
-            var3 = var28.d((byte) -53);
-            var4_long = var28.f(-102);
+            var3 = var28.readUnsignedShort((byte) -53);
+            var4_long = var28.readLong(-102);
             var6_ref_bh = (bh) (wi.field_j.c((byte) 47));
             while (var6_ref_bh != null) {
               if (~var3 != ~var6_ref_bh.field_s) {

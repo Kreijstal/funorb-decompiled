@@ -513,7 +513,7 @@ final class uc extends pe {
         }
     }
 
-    final static void a(pb param0, java.math.BigInteger param1, int param2, byte param3, int param4, java.math.BigInteger param5, byte[] param6) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, byte param3, int param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -552,32 +552,32 @@ final class uc extends pe {
             var8[var9] = bl.field_a.nextInt();
           }
           if (vc.field_b == null ||
-            !(vc.field_b.field_g.length >= var7_int)) {
-            vc.field_b = new pb(var7_int);
+            !(vc.field_b.payload.length >= var7_int)) {
+            vc.field_b = new PacketBuffer(var7_int);
           }
-          vc.field_b.field_i = 0;
-          vc.field_b.a(param2, param4, param6, (byte) -121);
-          vc.field_b.c(1442653008, var7_int);
-          vc.field_b.a(var13, 8);
+          vc.field_b.position = 0;
+          vc.field_b.writeBytes(param2, param4, param6, (byte) -121);
+          vc.field_b.padZerosTo(1442653008, var7_int);
+          vc.field_b.encryptXtea(var13, 8);
           if (null == oj.field_a ||
-            !(oj.field_a.field_g.length >= 100)) {
-            oj.field_a = new pb(100);
+            !(oj.field_a.payload.length >= 100)) {
+            oj.field_a = new PacketBuffer(100);
           }
           if (param3 != 0) {
             uc.b(57);
           }
-          oj.field_a.field_i = 0;
-          oj.field_a.b(-9469, 10);
+          oj.field_a.position = 0;
+          oj.field_a.writeByte(-9469, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            oj.field_a.a(-246, var13[var11]);
+            oj.field_a.writeInt(-246, var13[var11]);
             var11++;
           }
-          oj.field_a.e(param2, 26040);
-          oj.field_a.a(param1, param5, -15792);
-          param0.a(oj.field_a.field_i, 0, oj.field_a.field_g, (byte) -84);
-          param0.a(vc.field_b.field_i, 0, vc.field_b.field_g, (byte) -113);
+          oj.field_a.writeShort(param2, 26040);
+          oj.field_a.applyRsa(param1, param5, -15792);
+          param0.writeBytes(oj.field_a.position, 0, oj.field_a.payload, (byte) -84);
+          param0.writeBytes(vc.field_b.position, 0, vc.field_b.payload, (byte) -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -625,7 +625,7 @@ final class uc extends pe {
           field_r = null;
           field_o = null;
           if (param0 != 0) {
-            uc.a((pb) null, (java.math.BigInteger) null, 16, (byte) 108, 83, (java.math.BigInteger) null, (byte[]) null);
+            uc.a((PacketBuffer) null, (java.math.BigInteger) null, 16, (byte) 108, 83, (java.math.BigInteger) null, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "uc.I(" + param0 + ')');

@@ -93,9 +93,9 @@ final class td {
               var2_long > var4_ref_c.field_l) {
               var4_ref_c.b((byte) -119);
               a.field_c = var4_ref_c.field_h.length;
-              ig.field_a.field_h = 0;
+              ig.field_a.position = 0;
               for (var5_int = 0; a.field_c > var5_int; var5_int++) {
-                ig.field_a.field_j[var5_int] = var4_ref_c.field_h[var5_int];
+                ig.field_a.payload[var5_int] = var4_ref_c.field_h[var5_int];
               }
               vh.field_b = df.field_a;
               df.field_a = wl.field_i;
@@ -106,12 +106,12 @@ final class td {
           }
           while (true) {
             if (kk.field_r < 0) {
-              ig.field_a.field_h = 0;
+              ig.field_a.position = 0;
               if (!a.b(1, 10343)) {
                 return false;
               }
               kk.field_r = ig.field_a.i((byte) -76);
-              ig.field_a.field_h = 0;
+              ig.field_a.position = 0;
               a.field_c = param0[kk.field_r];
             }
             if (!dc.d(2)) {
@@ -134,7 +134,7 @@ final class td {
             }
             var5 = new c((long)var4 + var2_long, kk.field_r, new byte[a.field_c]);
             for (var6 = 0; a.field_c > var6; var6++) {
-              var5.field_h[var6] = ig.field_a.field_j[var6];
+              var5.field_h[var6] = ig.field_a.payload[var6];
             }
             eb.field_f.b(125, var5);
             kk.field_r = -1;

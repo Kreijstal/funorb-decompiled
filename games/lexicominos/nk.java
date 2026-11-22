@@ -93,7 +93,7 @@ abstract class nk extends GameAppletShell {
         if (ha.a(118)) {
           discarded$1 = this.a(false, 0, null != ff.field_b ? true : false);
         } else {
-          if (10 > wf.field_i) {
+          if (10 > PacketBuffer.field_i) {
           } else {
             if (!og.a(23440)) {
               ta.d(-108);
@@ -192,7 +192,7 @@ abstract class nk extends GameAppletShell {
         }
         if (nc.field_r != -1 &&
           nc.field_r != 0) {
-          if (wf.field_i < 10) {
+          if (PacketBuffer.field_i < 10) {
             if (3 == nc.field_r) {
               this.a("js5crc", 78);
             } else {
@@ -249,22 +249,22 @@ abstract class nk extends GameAppletShell {
           !d.a((byte) 112)) {
           fh.field_i = false;
         }
-        if (~wf.field_i == param1 &&
+        if (~PacketBuffer.field_i == param1 &&
           gd.d((byte) -53)) {
-          wf.field_i = 1;
+          PacketBuffer.field_i = 1;
         }
-        if (1 == wf.field_i) {
+        if (1 == PacketBuffer.field_i) {
           if (ri.field_e != 0) {
             eh.field_d = oj.a(false, th.field_m);
           }
           we.field_h = cl.a(true, (byte) -98, false, gf.field_e, 1);
           GzipDecompressor.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
           ej.field_d = cl.a(true, (byte) -37, false, ll.field_f, 1);
-          wf.field_i = 2;
+          PacketBuffer.field_i = 2;
           gg.field_d = GzipDecompressor.field_a;
           th.field_p = we.field_h;
         }
-        if (wf.field_i == 2) {
+        if (PacketBuffer.field_i == 2) {
           if (eh.field_d != null &&
             eh.field_d.c(92)) {
             if (!eh.field_d.a("", (byte) -114)) {
@@ -278,10 +278,10 @@ abstract class nk extends GameAppletShell {
             }
           }
           if (null == eh.field_d) {
-            wf.field_i = 3;
+            PacketBuffer.field_i = 3;
           }
         }
-        if (wf.field_i == 3 &&
+        if (PacketBuffer.field_i == 3 &&
           cl.a(ej.field_d, we.field_h, GzipDecompressor.field_a, (byte) 127) &&
           oh.a(ej.field_d, -109)) {
           qa.b(0);
@@ -309,31 +309,31 @@ abstract class nk extends GameAppletShell {
           ej.field_d = null;
           mc.a(-116, (java.applet.Applet) (this));
           dl.b(5);
-          wf.field_i = 10;
+          PacketBuffer.field_i = 10;
         }
-        if (wf.field_i == 10) {
+        if (PacketBuffer.field_i == 10) {
           if (ri.field_e != 0) {
             eg.field_C = oj.a(false, ea.field_d);
           }
-          wf.field_i = 11;
+          PacketBuffer.field_i = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (11 == wf.field_i) {
+        if (11 == PacketBuffer.field_i) {
           if (null != eg.field_C && (!eg.field_C.c(param1 - 104) ||
             !eg.field_C.a((byte) 60))) {
             al.a(16, ee.a((byte) 126, oh.field_a, we.field_c, eg.field_C), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
-            wf.field_i = 12;
+            PacketBuffer.field_i = 12;
             ne.field_e = true;
           }
         }
-        if (wf.field_i == 12 &&
+        if (PacketBuffer.field_i == 12 &&
           !ne.field_e) {
-          wf.field_i = 13;
+          PacketBuffer.field_i = 13;
         }
-        if (wf.field_i == 13) {
+        if (PacketBuffer.field_i == 13) {
           var3Lifetime2 = 1;
           if (gd.field_i != null) {
             stackIn_138_0 = (!gd.field_i.a(-71)) ? 0 : 1;
@@ -341,7 +341,7 @@ abstract class nk extends GameAppletShell {
             al.a(param1 + 17, gd.field_i.field_f, gd.field_i.field_c);
           }
           if (var3Lifetime2 != 0) {
-            wf.field_i = 20;
+            PacketBuffer.field_i = 20;
           }
         }
         if (!param0 &&
@@ -535,7 +535,7 @@ abstract class nk extends GameAppletShell {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          wf var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Lexicominos.field_L ? 1 : 0;
@@ -627,7 +627,7 @@ abstract class nk extends GameAppletShell {
               if (g.field_m.a(74)) {
                 var12 = g.field_m.a((byte) -65);
                 if (var12 != null) {
-                  var7 = dc.a(var12.field_h, var12.field_j, (byte) 16, 0);
+                  var7 = dc.a(var12.position, var12.payload, (byte) 16, 0);
                   hf.a(var7, (byte) 110);
                 } else {
                   var9 = (String) null;
@@ -753,7 +753,7 @@ abstract class nk extends GameAppletShell {
     private final void k(int param0) {
         int var4 = 0;
         byte[] var5 = null;
-        int var2 = ig.field_a.d(true);
+        int var2 = ig.field_a.readUnsignedByte(true);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         if (param0 > 125) {
           var4 = -1 + a.field_c;

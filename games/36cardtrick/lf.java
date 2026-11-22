@@ -47,13 +47,13 @@ final class lf {
           Object var6 = null;
           Object var7 = null;
           uc var8 = null;
-          pb var9 = null;
+          PacketBuffer var9 = null;
           qk stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param4 != -70) {
-              var9 = (pb) null;
-              lf.a((java.math.BigInteger) null, (pb) null, (java.math.BigInteger) null, (byte) -124, (pb) null);
+              var9 = (PacketBuffer) null;
+              lf.a((java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null, (byte) -124, (PacketBuffer) null);
             }
             var6 = null;
             if (null != bi.field_b.field_t) {
@@ -90,12 +90,12 @@ final class lf {
         }
     }
 
-    final static void a(java.math.BigInteger param0, pb param1, java.math.BigInteger param2, byte param3, pb param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, byte param3, PacketBuffer param4) {
         if (param3 != -75) {
           return;
         }
         try {
-          uc.a(param1, param2, param4.field_i, (byte) 0, 0, param0, param4.field_g);
+          uc.a(param1, param2, param4.position, (byte) 0, 0, param0, param4.payload);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "lf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

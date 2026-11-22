@@ -32,7 +32,7 @@ final class ej {
         }
         var3 = new aj();
         if (var4 != null) {
-          var3.a(new ni(var4), 4);
+          var3.a(new PacketBuffer(var4), 4);
           if (param1 >= param0) {
             var3.h(0);
             this.field_e.a(var3, (byte) -122, (long)param1);

@@ -290,18 +290,18 @@ final class u extends uc implements jk {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           var10 = ig.field_a;
-          var2 = var10.d(true);
+          var2 = var10.readUnsignedByte(true);
           if (param0 >= -79) {
             return;
           }
-          var3 = var10.d(true);
+          var3 = var10.readUnsignedByte(true);
           if (var2 == 0) {
             var4 = (mc) (vh.field_a.a(true));
             if (var4 == null) {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-72);
               return;
             }
-            var5 = -var10.field_h + a.field_c;
+            var5 = -var10.position + a.field_c;
             var12 = var4.field_h;
             var11 = var12;
             var6 = var11;
@@ -309,13 +309,13 @@ final class u extends uc implements jk {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.d(true) << (vg.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(true) << (vg.a(var7, 3) << 8));
             }
             var4.b((byte) -122);
             return;
           }
           if (1 == var2) {
-            var4_int = var10.c((byte) -10);
+            var4_int = var10.readSignedSmart((byte) -10);
             var5_ref_wa = (wa) (ki.field_b.a(true));
             while (var5_ref_wa != null) {
               if (var3 != var5_ref_wa.field_o ||

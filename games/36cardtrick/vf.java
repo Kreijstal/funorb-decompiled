@@ -112,7 +112,7 @@ abstract class vf {
           if (param0 != -28037) {
             vf.a(-72);
           }
-          var2 = var14.f(param0 ^ 28154);
+          var2 = var14.readUnsignedByte(param0 ^ 28154);
           var3 = (mf) (wg.field_b.a((byte) 74));
           while (var3 != null) {
             if (var3.field_k != var2) {
@@ -125,20 +125,20 @@ abstract class vf {
             mc.a((byte) -125);
             return;
           }
-          var4 = var14.f(64);
+          var4 = var14.readUnsignedByte(64);
           if (0 != var4) {
             ad.field_i[0] = ri.field_c;
             var5 = var3.field_h;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ad.field_i[var6_int] = var14.c(false);
+              ad.field_i[var6_int] = var14.readString(false);
             }
             wd.a((byte) 36, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               bc.a(false, var14);
               if (var6_intLifetime1 == 0) {
-                a.a(sa.field_a, nl.field_b, cg.field_h, -23576, var6_intLifetime1, pc.field_c);
+                a.a(sa.field_a, nl.field_b, cg.field_h, -23576, var6_intLifetime1, Crc32Table.field_c);
               } else {
-                a.a(sa.field_a, nl.field_b, cg.field_h, param0 ^ 12691, var6_intLifetime1, pc.field_c);
+                a.a(sa.field_a, nl.field_b, cg.field_h, param0 ^ 12691, var6_intLifetime1, Crc32Table.field_c);
               }
             }
             rf.a(-23243, var5);

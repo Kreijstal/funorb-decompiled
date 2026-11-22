@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends ni {
+final class ih extends PacketBuffer {
     private int field_o;
     private pc field_n;
     static sf field_l;
     static String field_m;
 
     final void k(int param0) {
-        this.field_o = param0 * this.field_i;
+        this.field_o = param0 * this.position;
     }
 
     final void m(int param0) {
-        this.field_i = (this.field_o + 7) / param0;
+        this.position = (this.field_o + 7) / param0;
     }
 
     ih(byte[] param0) {
@@ -22,14 +22,14 @@ final class ih extends ni {
     final int f(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == 47) {
-          fieldTemp$0 = this.field_i;
-          this.field_i = this.field_i + 1;
-          return this.field_k[fieldTemp$0] - this.field_n.a(995108848) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_n.a(995108848) & 255;
         }
         this.m(-38);
-        int fieldTemp$1 = this.field_i;
-        this.field_i = this.field_i + 1;
-        return this.field_k[fieldTemp$1] - this.field_n.a(995108848) & 255;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$1] - this.field_n.a(995108848) & 255;
     }
 
     public static void j(int param0) {
@@ -41,9 +41,9 @@ final class ih extends ni {
     }
 
     final void e(int param0, int param1) {
-        int fieldTemp$0 = this.field_i;
-        this.field_i = this.field_i + 1;
-        this.field_k[fieldTemp$0] = (byte)(this.field_n.a(995108848) + param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_n.a(995108848) + param1);
         if (param0 != 8) {
           this.field_n = (pc) null;
         }
@@ -67,14 +67,14 @@ final class ih extends ni {
           while (var4 < param0) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((ek.field_d[var4] & this.field_k[incrementValue$0]) << param0 - var4);
+            var5 = var5 + ((ek.field_d[var4] & this.payload[incrementValue$0]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
           }
           if (var4 != param0) {
-            var5 = var5 + (this.field_k[var3] >> var4 - param0 & ek.field_d[param0]);
+            var5 = var5 + (this.payload[var3] >> var4 - param0 & ek.field_d[param0]);
           } else {
-            var5 = var5 + (ek.field_d[var4] & this.field_k[var3]);
+            var5 = var5 + (ek.field_d[var4] & this.payload[var3]);
           }
           return var5;
         }
@@ -84,14 +84,14 @@ final class ih extends ni {
         while (var4Lifetime1 < param0) {
           incrementValue$1 = var3;
           var3++;
-          var5Lifetime1 = var5Lifetime1 + ((ek.field_d[var4Lifetime1] & this.field_k[incrementValue$1]) << param0 - var4Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + ((ek.field_d[var4Lifetime1] & this.payload[incrementValue$1]) << param0 - var4Lifetime1);
           param0 = param0 - var4Lifetime1;
           var4Lifetime1 = 8;
         }
         if (var4Lifetime1 != param0) {
-          var5Lifetime1 = var5Lifetime1 + (this.field_k[var3] >> var4Lifetime1 - param0 & ek.field_d[param0]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> var4Lifetime1 - param0 & ek.field_d[param0]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (ek.field_d[var4Lifetime1] & this.field_k[var3]);
+          var5Lifetime1 = var5Lifetime1 + (ek.field_d[var4Lifetime1] & this.payload[var3]);
         }
         return var5Lifetime1;
     }
@@ -126,9 +126,9 @@ final class ih extends ni {
             ih.j(-43);
           }
           for (var5_int = 0; param1 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_i;
-            this.field_i = this.field_i + 1;
-            param3[param2 + var5_int] = (byte)(this.field_k[fieldTemp$0] - this.field_n.a(995108848));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_n.a(995108848));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

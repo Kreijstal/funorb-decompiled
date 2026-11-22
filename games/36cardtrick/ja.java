@@ -50,7 +50,7 @@ final class ja {
         }
         var3 = new vd();
         if (var4 != null) {
-          var3.a((byte) 48, new pb(var4));
+          var3.a((byte) 48, new PacketBuffer(var4));
         }
         if (param0 < 32768) {
           this.field_f.a(param1 ^ -32889, var3, (long)param0);

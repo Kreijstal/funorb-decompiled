@@ -23,7 +23,7 @@ final class hd extends vg {
         this.field_K = (param2 & 16711422) >> 1;
         if (param0) {
           bl var5 = (bl) null;
-          hd.a((byte) 69, (od) null, (bl) null, 110);
+          hd.a((byte) 69, (PacketBuffer) null, (bl) null, 110);
         }
         this.field_N = param1;
         this.field_A = param2;
@@ -101,7 +101,7 @@ final class hd extends vg {
         }
     }
 
-    final static void a(byte param0, od param1, bl param2, int param3) {
+    final static void a(byte param0, PacketBuffer param1, bl param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -139,8 +139,8 @@ final class hd extends vg {
           var14 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
             var18 = new lc();
-            var18.field_r = param1.l(31760);
-            var18.field_l = param1.h(-108);
+            var18.field_r = param1.readUnsignedByte(31760);
+            var18.field_l = param1.readInt(-108);
             if (param0 <= 95) {
               return;
             }
@@ -152,28 +152,28 @@ final class hd extends vg {
             var18.field_o = new il[var18.field_r];
             for (var5 = 0; var5 < var18.field_r; var5++) {
               try {
-                var6_int = param1.l(31760);
+                var6_int = param1.readUnsignedByte(31760);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param1.b((byte) -93);
-                    var8 = param1.b((byte) -99);
-                    var9 = param1.l(31760);
+                    var20 = param1.readString((byte) -93);
+                    var8 = param1.readString((byte) -99);
+                    var9 = param1.readUnsignedByte(31760);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.b((byte) -119);
+                      var10[var11_int] = param1.readString((byte) -119);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param1.h(-92);
+                        var13 = param1.readInt(-92);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.b(0, var13, 128, var21[var12_int]);
+                        param1.readBytes(0, var13, 128, var21[var12_int]);
                       }
                     }
                     var18.field_j[var5] = var6_int;
@@ -188,13 +188,13 @@ final class hd extends vg {
                     var18.field_t[var5] = var21;
                   }
                 } else {
-                  var15 = param1.b((byte) -77);
-                  dupTemp$1 = param1.b((byte) -101);
+                  var15 = param1.readString((byte) -77);
+                  dupTemp$1 = param1.readString((byte) -101);
                   var16 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.h(-124);
+                    var9 = param1.readInt(-124);
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_w[var5] = var9;

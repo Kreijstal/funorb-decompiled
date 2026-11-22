@@ -17,8 +17,8 @@ abstract class dd {
         if (param0 <= 32) {
           return;
         }
-        var2.c(1, -1);
-        var2.c(0, -1);
+        var2.writeByte(1, -1);
+        var2.writeByte(0, -1);
     }
 
     final static int a(byte param0, int param1) {

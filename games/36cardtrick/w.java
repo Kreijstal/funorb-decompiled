@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends pb {
+final class w extends PacketBuffer {
     private int field_o;
     private hg field_l;
     static String field_m;
@@ -24,21 +24,21 @@ final class w extends pb {
     }
 
     final void g(int param0) {
-        this.field_i = (7 + this.field_o) / param0;
+        this.position = (7 + this.field_o) / param0;
     }
 
     final void f(boolean param0) {
         if (!param0) {
           field_m = (String) null;
         }
-        this.field_o = this.field_i * 8;
+        this.field_o = this.position * 8;
     }
 
     final int g(byte param0) {
         int var2 = 118 % ((39 - param0) / 51);
-        int fieldTemp$0 = this.field_i;
-        this.field_i = this.field_i + 1;
-        return this.field_g[fieldTemp$0] - this.field_l.b(-1427) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_l.b(-1427) & 255;
     }
 
     final void b(int param0, byte[] param1, int param2, int param3) {
@@ -53,9 +53,9 @@ final class w extends pb {
         var6 = Main.field_T;
         try {
           for (var5_int = 0; var5_int < param3; var5_int++) {
-            fieldTemp$0 = this.field_i;
-            this.field_i = this.field_i + 1;
-            param1[var5_int + param0] = (byte)(this.field_g[fieldTemp$0] - this.field_l.b(-1427));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_l.b(-1427));
           }
           if (param2 != 28040) {
             this.field_l = (hg) null;
@@ -275,9 +275,9 @@ final class w extends pb {
         if (param1 != 0) {
           return;
         }
-        int fieldTemp$0 = this.field_i;
-        this.field_i = this.field_i + 1;
-        this.field_g[fieldTemp$0] = (byte)(param0 + this.field_l.b(-1427));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_l.b(-1427));
     }
 
     public static void h(int param0) {
@@ -304,14 +304,14 @@ final class w extends pb {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_g[incrementValue$0] & sg.field_g[var4]) << param0 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & sg.field_g[var4]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 != param0) {
-          var5 = var5 + (this.field_g[var3] >> -param0 + var4 & sg.field_g[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & sg.field_g[param0]);
         } else {
-          var5 = var5 + (this.field_g[var3] & sg.field_g[var4]);
+          var5 = var5 + (this.payload[var3] & sg.field_g[var4]);
         }
         return var5;
     }

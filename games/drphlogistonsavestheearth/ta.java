@@ -34,29 +34,29 @@ final class ta {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = dh.field_N;
-          var2 = var9.l(param0 ^ 31764);
+          var2 = var9.readUnsignedByte(param0 ^ 31764);
           if (var2 == 0) {
             var8 = (uj) (md.field_e.h(param0 ^ -11147));
             if (var8 == null) {
               eg.a((byte) 126);
               return;
             }
-            var4 = var9.l(31760);
+            var4 = var9.readUnsignedByte(31760);
             if (var4 == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4];
-              var9.b(0, var4, 128, var13);
+              var9.readBytes(0, var4, 128, var13);
             }
-            var9.field_j = var9.field_j + 4;
-            if (!var9.m(0)) {
+            var9.position = var9.position + 4;
+            if (!var9.verifyCrc32(0)) {
               eg.a((byte) 126);
               return;
             }
             var8.unlink(-16175);
           } else {
             if (var2 == 1) {
-              var3 = var9.h(51);
+              var3 = var9.readInt(51);
               var4_ref_jl = (jl) (DrPhlogistonSavesTheEarth.field_F.h(-11151));
               while (var4_ref_jl != null) {
                 if (~var3 != ~var4_ref_jl.field_j) {

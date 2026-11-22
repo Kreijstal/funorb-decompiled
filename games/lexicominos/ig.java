@@ -31,10 +31,10 @@ final class ig {
         int var8 = 0;
         int var10 = 0;
         int var11 = 0;
-        wf var12 = null;
+        PacketBuffer var12 = null;
         byte[] var13 = null;
         int var14 = 0;
-        wf var15 = null;
+        PacketBuffer var15 = null;
         int[] var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
@@ -45,14 +45,14 @@ final class ig {
         int var5Lifetime1;
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
-          var12 = new wf(param0);
+          var12 = new PacketBuffer(param0);
           var15 = var12;
-          var3 = new IndexedSprite[var15.d(true)];
+          var3 = new IndexedSprite[var15.readUnsignedByte(true)];
           var20 = new int[256];
           var16 = var20;
           var4 = var16;
           for (var5 = 0; var20.length > var5; var5++) {
-            var4[var5] = var12.a(98);
+            var4[var5] = var12.readUnsignedMedium(98);
           }
           var5Lifetime1 = -1;
           for (var6 = 0; var3.length > var6; var6++) {
@@ -65,19 +65,19 @@ final class ig {
             var21 = var13;
             var17 = var21;
             var7_ref_byte__ = var17;
-            var8 = var15.d(true);
+            var8 = var15.readUnsignedByte(true);
             var10 = var8;
             if (var10 == 0) {
               var5Lifetime1 = var6;
-              var15.a(82, 307200, 0, var21);
+              var15.readBytes(82, 307200, 0, var21);
             } else {
               if (var10 != 1) {
                 if ((var10 == 2 ||
                   3 == var10)) {
                   var25 = var3[var5Lifetime1].field_i;
-                  var15.a(109, 307200, 0, var21);
+                  var15.readBytes(109, 307200, 0, var21);
                   if (var8 == 3) {
-                    dupTemp$0 = ui.a(480, var21, -29165).field_j;
+                    dupTemp$0 = ui.a(480, var21, -29165).payload;
                     var7_ref_byte__ = dupTemp$0;
                     var3[var6].field_i = dupTemp$0;
                   }
@@ -91,9 +91,9 @@ final class ig {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                var15.a(122, 307200, 0, var22);
+                var15.readBytes(122, 307200, 0, var22);
                 var5Lifetime1 = var6;
-                var3[var6].field_i = ui.a(480, var21, -29165).field_j;
+                var3[var6].field_i = ui.a(480, var21, -29165).payload;
               }
             }
           }

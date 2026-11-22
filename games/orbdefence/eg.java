@@ -169,7 +169,7 @@ final class eg extends fg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = sd.a(0, param0, param2, 0);
+            stackIn_4_0 = sd.computeCrc32(0, param0, param2, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -35;

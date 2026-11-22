@@ -242,9 +242,9 @@ final class mg {
           if (param0 >= -119) {
             field_K = (String) null;
           }
-          var2 = var27.f(-121);
+          var2 = var27.readUnsignedByte(-121);
           if (var2 == 0) {
-            var3 = var27.d((byte) 72);
+            var3 = var27.readUnsignedShort((byte) 72);
             var4_ref_uh = (uh) (tl.field_a.a((byte) 74));
             while (var4_ref_uh != null) {
               if (var3 != var4_ref_uh.field_g) {
@@ -257,7 +257,7 @@ final class mg {
               mc.a((byte) -127);
               return;
             }
-            var5 = var27.f(-120);
+            var5 = var27.readUnsignedByte(-120);
             if (var5 != 0) {
               var6_int = var4_ref_uh.field_k;
               c.field_w[0].field_d = false;
@@ -265,10 +265,10 @@ final class mg {
               var7 = var4_ref_uh.field_h;
               c.field_w[0].field_e = ri.field_c;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                c.field_w[var8_int].field_e = var27.c(false);
+                c.field_w[var8_int].field_e = var27.readString(false);
                 c.field_w[var8_int].field_d = false;
-                if (var27.f(56) == 1) {
-                  c.field_w[var8_int].field_f = var27.c(false);
+                if (var27.readUnsignedByte(56) == 1) {
+                  c.field_w[var8_int].field_f = var27.readString(false);
                 } else {
                   c.field_w[var8_int].field_f = null;
                 }
@@ -289,13 +289,13 @@ final class mg {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.f(-126);
+              var18 = var27.readUnsignedByte(-126);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.f(121);
+                  var20 = var27.readUnsignedByte(121);
                   var21 = c.field_w[var20].field_e;
-                  var22 = var27.d(true);
-                  var24 = var27.field_i;
+                  var22 = var27.readLong(true);
+                  var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = c.field_w[var20].field_f;
@@ -304,7 +304,7 @@ final class mg {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.e((byte) 126);
+                      var11[0][incrementValue$3] = var27.readInt((byte) 126);
                     }
                   }
                   if (var21 != null &&
@@ -313,11 +313,11 @@ final class mg {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var27.field_i = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.e((byte) 125);
+                      var11[1][incrementValue$4] = var27.readInt((byte) 125);
                     }
                   }
                   if (var6_int > var14 &&
@@ -327,11 +327,11 @@ final class mg {
                     var9[2][var14] = c.field_w[var20].field_f;
                     var10[2][var14] = var22;
                     var14++;
-                    var27.field_i = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.e((byte) 124);
+                      var11[2][incrementValue$5] = var27.readInt((byte) 124);
                     }
                   }
                 }
@@ -342,8 +342,8 @@ final class mg {
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var27.d((byte) 72);
-            var4 = var27.d(true);
+            var3Lifetime1 = var27.readUnsignedShort((byte) 72);
+            var4 = var27.readLong(true);
             var6 = (ad) (od.field_b.a((byte) 74));
             while (var6 != null) {
               if (var6.field_p != var3Lifetime1) {

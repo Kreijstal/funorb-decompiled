@@ -28,7 +28,7 @@ final class kf extends IntrusiveNode {
         return s.field_c[var4];
     }
 
-    final static void a(ni param0, int param1, int param2, ce param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, ce param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -66,8 +66,8 @@ final class kf extends IntrusiveNode {
           var14 = fleas.field_A ? 1 : 0;
           try {
             var18 = new fg();
-            var18.field_k = param0.e(false);
-            var18.field_v = param0.c((byte) 126);
+            var18.field_k = param0.readUnsignedByte(false);
+            var18.field_v = param0.readInt((byte) 126);
             var18.field_w = new byte[var18.field_k][][];
             var18.field_p = new int[var18.field_k];
             var18.field_o = new int[var18.field_k];
@@ -79,28 +79,28 @@ final class kf extends IntrusiveNode {
             }
             for (var5 = 0; var18.field_k > var5; var5++) {
               try {
-                var6_int = param0.e(false);
+                var6_int = param0.readUnsignedByte(false);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     4 == var6_int) {
-                    var20 = param0.h(0);
-                    var8 = param0.h(0);
-                    var9 = param0.e(false);
+                    var20 = param0.readString(0);
+                    var8 = param0.readString(0);
+                    var9 = param0.readUnsignedByte(false);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.h(df.a(param1, -3));
+                      var10[var11_int] = param0.readString(df.a(param1, -3));
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param0.c((byte) -92);
+                        var13 = param0.readInt((byte) -92);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.b(var21[var12_int], 0, param1 - 103, var13);
+                        param0.readBytes(var21[var12_int], 0, param1 - 103, var13);
                       }
                     }
                     var18.field_o[var5] = var6_int;
@@ -115,13 +115,13 @@ final class kf extends IntrusiveNode {
                     var18.field_w[var5] = var21;
                   }
                 } else {
-                  var16 = param0.h(param1 + 3);
-                  dupTemp$1 = param0.h(0);
+                  var16 = param0.readString(param1 + 3);
+                  dupTemp$1 = param0.readString(0);
                   var15 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.c((byte) -120);
+                    var9 = param0.readInt((byte) -120);
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_p[var5] = var9;

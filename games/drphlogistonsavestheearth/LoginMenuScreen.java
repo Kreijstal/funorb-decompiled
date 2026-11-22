@@ -3213,7 +3213,7 @@ final class LoginMenuScreen extends pj implements ke {
           Throwable decompiledCaughtException = null;
           IOException var2_ref = null;
           try {
-            if (param0 <= dh.field_N.field_j) {
+            if (param0 <= dh.field_N.position) {
               return true;
             }
             if (null == uj.field_j) {
@@ -3225,16 +3225,16 @@ final class LoginMenuScreen extends pj implements ke {
               }
               var2_int = uj.field_j.a((byte) -122);
               if (var2_int > 0) {
-                if (var2_int > -dh.field_N.field_j + param0) {
-                  var2_int = -dh.field_N.field_j + param0;
+                if (var2_int > -dh.field_N.position + param0) {
+                  var2_int = -dh.field_N.position + param0;
                 }
-                uj.field_j.a((byte) -14, dh.field_N.field_h, dh.field_N.field_j, var2_int);
+                uj.field_j.a((byte) -14, dh.field_N.payload, dh.field_N.position, var2_int);
                 el.field_rb = la.a(false);
-                dh.field_N.field_j = dh.field_N.field_j + var2_int;
-                if (param0 > dh.field_N.field_j) {
+                dh.field_N.position = dh.field_N.position + var2_int;
+                if (param0 > dh.field_N.position) {
                   return false;
                 }
-                dh.field_N.field_j = 0;
+                dh.field_N.position = 0;
                 return true;
               }
               if (var2_int < 0 ||

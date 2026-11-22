@@ -919,7 +919,7 @@ final class ld {
         var9 += 34;
         re.field_d.a(var9, var10);
         var9 += 102;
-        od.field_k.a(var9, var10);
+        PacketBuffer.field_k.a(var9, var10);
         var9 += 34;
         qc.field_a.a(var9, var10);
         var9 += 34;
@@ -1525,7 +1525,7 @@ final class ld {
                                                           eg.field_a.j(dg.field_e);
                                                           if (eg.field_a.m()) {
                                                             eg.field_a.i(-1);
-                                                            od.a(param1 - 1630758088, eg.field_a);
+                                                            PacketBuffer.a(param1 - 1630758088, eg.field_a);
                                                           }
                                                         }
                                                       } else {
@@ -1822,7 +1822,7 @@ final class ld {
         if (dg.field_e != param0) {
           eg.field_a.j(dg.field_e);
           eg.field_a.i(-1);
-          od.a(-1630758008, eg.field_a);
+          PacketBuffer.a(-1630758008, eg.field_a);
         }
         if (param1 >= -21) {
           this.field_g = -38;

@@ -61,20 +61,20 @@ final class pa {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           var1 = ig.field_a;
-          var2 = var1.d(true);
+          var2 = var1.readUnsignedByte(true);
           if (var2 == 0) {
             if (null == cl.field_P) {
               cl.field_P = new he(128);
               sc.field_b = 0;
             }
-            stackIn_11_0 = (var1.d(true) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(true) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.c(false);
+            var4_ref_String = var1.readString(false);
             if (var3_int != 0) {
-              var1.c(false);
+              var1.readString(false);
             }
             var5_ref = cj.a((byte) 114, var4_ref_String);
-            var6_ref = var1.c(false);
+            var6_ref = var1.readString(false);
             var7_ref = ck.a((CharSequence) ((Object) var4_ref_String), (byte) -48);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -111,9 +111,9 @@ final class pa {
             }
             if (4 == var2) {
               vl.field_b = 1;
-              var3 = var1.c(false);
+              var3 = var1.readString(false);
               ji.field_b = ((String) (var3)).intern();
-              var4 = var1.d(true);
+              var4 = var1.readUnsignedByte(true);
               wh.a(var4, (byte) 63);
               return;
             }
@@ -128,12 +128,12 @@ final class pa {
             pf.field_n = new he(128);
             ad.field_c = 0;
           }
-          var3Lifetime1 = var1.c(false);
+          var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.c(false);
-          var5 = var1.c(false);
+          var4_ref_StringLifetime1 = var1.readString(false);
+          var5 = var1.readString(false);
           var6 = sg.a((byte) 71, var4_ref_StringLifetime1);
           if (null == var6) {
             var6 = sg.a((byte) 126, var5);

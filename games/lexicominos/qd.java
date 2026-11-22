@@ -49,34 +49,34 @@ final class qd {
         var7 = Lexicominos.field_L ? 1 : 0;
         var8 = ig.field_a;
         var2 = var8;
-        var3 = var8.d(true);
+        var3 = var8.readUnsignedByte(true);
         stackIn_3_0 = ((128 & var3) != param0);
         tf.field_a = stackIn_3_0;
         kb.field_a = var3 & 127;
-        rl.field_E = var8.d(true);
-        jf.field_P = var8.f((byte) 8);
+        rl.field_E = var8.readUnsignedByte(true);
+        jf.field_P = var8.readLong((byte) 8);
         if (2 != kb.field_a) {
           kc.field_c = 0;
           fd.field_g = 0;
         } else {
-          fd.field_g = var8.b(-1698573656);
-          kc.field_c = var8.a(86);
+          fd.field_g = var8.readUnsignedShort(-1698573656);
+          kc.field_c = var8.readUnsignedMedium(86);
         }
-        stackIn_9_0 = (1 != var8.d(true)) ? 0 : 1;
+        stackIn_9_0 = (1 != var8.readUnsignedByte(true)) ? 0 : 1;
         var4 = stackIn_9_0;
-        ik.field_k = var8.c(false);
+        ik.field_k = var8.readString(false);
         if (var4 != 0) {
-          GzipDecompressor.field_c = var8.c(false);
+          GzipDecompressor.field_c = var8.readString(false);
         } else {
           GzipDecompressor.field_c = ik.field_k;
         }
         if (1 == kb.field_a) {
-          var8.b(-1698573656);
-          var8.c(false);
+          var8.readUnsignedShort(-1698573656);
+          var8.readString(false);
         } else {
           if (kb.field_a == 4) {
-            var8.b(-1698573656);
-            var8.c(false);
+            var8.readUnsignedShort(-1698573656);
+            var8.readString(false);
           }
         }
         if (!param1) {
@@ -84,7 +84,7 @@ final class qd {
           eb.field_d = null;
           return new df(param1);
         }
-        var5 = var8.b(-1698573656);
+        var5 = var8.readUnsignedShort(-1698573656);
         try {
           var9 = hi.field_d.a(param0 + 27467, var5);
           oe.field_b = var9.c(-97);

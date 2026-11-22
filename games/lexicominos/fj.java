@@ -20,13 +20,13 @@ final class fj extends si {
     final static void a(int param0, mc param1, boolean param2) {
         th var3 = ed.field_q;
         var3.h(param0, 0);
-        var3.c(2, -1);
+        var3.writeByte(2, -1);
         if (param2) {
           return;
         }
         try {
-          var3.c(0, -1);
-          var3.c(param1.field_j, -1);
+          var3.writeByte(0, -1);
+          var3.writeByte(param1.field_j, -1);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

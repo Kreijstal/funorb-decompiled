@@ -3,7 +3,7 @@
  */
 final class rl {
     private static byte[] field_g;
-    private od field_d;
+    private PacketBuffer field_d;
     private int[] field_f;
     int[] field_h;
     private int[] field_b;
@@ -27,32 +27,32 @@ final class rl {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_d.field_h[this.field_d.field_j];
+        var2 = this.field_d.payload[this.field_d.position];
         if (var2 >= 0) {
           var2 = this.field_b[param0];
         } else {
           var2 = var2 & 255;
           this.field_b[param0] = var2;
-          this.field_d.field_j = this.field_d.field_j + 1;
+          this.field_d.position = this.field_d.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_d.c((byte) 58);
+        var3 = this.field_d.readVarInt((byte) 58);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_d.field_h[this.field_d.field_j] & 255;
+          var4 = this.field_d.payload[this.field_d.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_d.field_j = this.field_d.field_j + 1;
+            this.field_d.position = this.field_d.position + 1;
             this.field_b[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_d.field_j = this.field_d.field_j + var3;
+        this.field_d.position = this.field_d.position + var3;
         return 0;
     }
 
@@ -60,21 +60,21 @@ final class rl {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_d.field_h = param0;
-        this.field_d.field_j = 10;
-        int var2 = this.field_d.j(-788751192);
-        this.field_i = this.field_d.j(-788751192);
+        this.field_d.payload = param0;
+        this.field_d.position = 10;
+        int var2 = this.field_d.readUnsignedShort(-788751192);
+        this.field_i = this.field_d.readUnsignedShort(-788751192);
         this.field_c = 500000;
         this.field_f = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_d.h(-79);
-          var5 = this.field_d.h(62);
+          var4 = this.field_d.readInt(-79);
+          var5 = this.field_d.readInt(62);
           if (var4 == 1297379947) {
-            this.field_f[var3] = this.field_d.field_j;
+            this.field_f[var3] = this.field_d.position;
             var3++;
           }
-          this.field_d.field_j = this.field_d.field_j + var5;
+          this.field_d.position = this.field_d.position + var5;
         }
         this.field_e = 0L;
         this.field_a = new int[var2];
@@ -89,7 +89,7 @@ final class rl {
     }
 
     final void b() {
-        this.field_d.field_j = -1;
+        this.field_d.position = -1;
     }
 
     final int c() {
@@ -126,9 +126,9 @@ final class rl {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_h[var4] = 0;
           this.field_b[var4] = 0;
-          this.field_d.field_j = this.field_f[var4];
+          this.field_d.position = this.field_f[var4];
           this.e(var4);
-          this.field_a[var4] = this.field_d.field_j;
+          this.field_a[var4] = this.field_d.position;
         }
     }
 
@@ -137,7 +137,7 @@ final class rl {
     }
 
     final void a() {
-        this.field_d.field_h = null;
+        this.field_d.payload = null;
         this.field_f = null;
         this.field_a = null;
         this.field_h = null;
@@ -145,7 +145,7 @@ final class rl {
     }
 
     final void f(int param0) {
-        this.field_d.field_j = this.field_a[param0];
+        this.field_d.position = this.field_a[param0];
     }
 
     final long d(int param0) {
@@ -160,54 +160,54 @@ final class rl {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_d.l(31760);
-          var4 = this.field_d.c((byte) 58);
+          var3 = this.field_d.readUnsignedByte(31760);
+          var4 = this.field_d.readVarInt((byte) 58);
           if (var3 == 47) {
-            this.field_d.field_j = this.field_d.field_j + var4;
+            this.field_d.position = this.field_d.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_d.g(-1);
+            var5 = this.field_d.readUnsignedMedium(-1);
             var4 -= 3;
             var6 = this.field_h[param0];
             this.field_e = this.field_e + (long)var6 * (long)(this.field_c - var5);
             this.field_c = var5;
-            this.field_d.field_j = this.field_d.field_j + var4;
+            this.field_d.position = this.field_d.position + var4;
             return 2;
           }
-          this.field_d.field_j = this.field_d.field_j + var4;
+          this.field_d.position = this.field_d.position + var4;
           return 3;
         }
         var3Lifetime1 = field_g[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_d.l(31760) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_d.readUnsignedByte(31760) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_d.l(31760) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_d.readUnsignedByte(31760) << 16;
         }
         return var4Lifetime1;
     }
 
     final void e(int param0) {
-        int var2 = this.field_d.c((byte) 58);
+        int var2 = this.field_d.readVarInt((byte) 58);
         this.field_h[param0] = this.field_h[param0] + var2;
     }
 
     final boolean g() {
-        return this.field_d.field_h != null;
+        return this.field_d.payload != null;
     }
 
     final void c(int param0) {
-        this.field_a[param0] = this.field_d.field_j;
+        this.field_a[param0] = this.field_d.position;
     }
 
     rl() {
-        this.field_d = new od((byte[]) null);
+        this.field_d = new PacketBuffer((byte[]) null);
     }
 
     rl(byte[] param0) {
-        this.field_d = new od((byte[]) null);
+        this.field_d = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

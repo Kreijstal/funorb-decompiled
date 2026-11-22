@@ -64,9 +64,9 @@ final class bj {
         try {
           var3 = nj.field_p;
           var3.d(param0, -18392);
-          var3.c(2, (byte) -126);
-          var3.c(0, (byte) -128);
-          var3.c(param2.field_h, (byte) -127);
+          var3.writeByte(2, (byte) -126);
+          var3.writeByte(0, (byte) -128);
+          var3.writeByte(param2.field_h, (byte) -127);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "bj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -75,8 +75,8 @@ final class bj {
     final static void a(int param0, int param1) {
         lh var2 = nj.field_p;
         var2.d(param1, -18392);
-        var2.c(1, (byte) -117);
-        var2.c(2, (byte) -115);
+        var2.writeByte(1, (byte) -117);
+        var2.writeByte(2, (byte) -115);
         if (param0 == 2591) {
           return;
         }

@@ -97,7 +97,7 @@ final class ge implements Runnable {
         try {
           var13 = ig.field_a;
           var15 = var13;
-          var2 = var15.d(true);
+          var2 = var15.readUnsignedByte(true);
           if (param0 <= 105) {
             ge.f(-123);
           }
@@ -113,12 +113,12 @@ final class ge implements Runnable {
             ck.$cfr$intArgs$b$e683eeaaf5b5(-47);
             return;
           }
-          var4 = var15.d(true);
+          var4 = var15.readUnsignedByte(true);
           if (var4 != 0) {
             var5 = var3.field_j;
             ph.field_a[0] = og.field_c;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ph.field_a[var6_int] = var13.c(false);
+              ph.field_a[var6_int] = var13.readString(false);
             }
             fb.a((byte) -107, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -180,7 +180,7 @@ final class ge implements Runnable {
         }
     }
 
-    final static void a(byte param0, int param1, wf param2, ab param3) {
+    final static void a(byte param0, int param1, PacketBuffer param2, ab param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -218,8 +218,8 @@ final class ge implements Runnable {
           var14 = Lexicominos.field_L ? 1 : 0;
           try {
             var18 = new pd();
-            var18.field_p = param2.d(true);
-            var18.field_j = param2.d((byte) 19);
+            var18.field_p = param2.readUnsignedByte(true);
+            var18.field_j = param2.readInt((byte) 19);
             var18.field_n = new int[var18.field_p];
             var18.field_h = new int[var18.field_p];
             if (param0 > -120) {
@@ -231,28 +231,28 @@ final class ge implements Runnable {
             var18.field_o = new byte[var18.field_p][][];
             for (var5 = 0; var18.field_p > var5; var5++) {
               try {
-                var6_int = param2.d(true);
+                var6_int = param2.readUnsignedByte(true);
                 if (0 != var6_int &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.c(false);
-                    var8 = param2.c(false);
-                    var9 = param2.d(true);
+                    var20 = param2.readString(false);
+                    var8 = param2.readString(false);
+                    var9 = param2.readUnsignedByte(true);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.c(false);
+                      var10[var11_int] = param2.readString(false);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.d((byte) 19);
+                        var13 = param2.readInt((byte) 19);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(116, var13, 0, var21[var12_int]);
+                        param2.readBytes(116, var13, 0, var21[var12_int]);
                       }
                     }
                     var18.field_m[var5] = var6_int;
@@ -267,13 +267,13 @@ final class ge implements Runnable {
                     var18.field_o[var5] = var21;
                   }
                 } else {
-                  var16 = param2.c(false);
+                  var16 = param2.readString(false);
                   var7 = var16;
-                  var15 = param2.c(false);
+                  var15 = param2.readString(false);
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param2.d((byte) 19);
+                    var9 = param2.readInt((byte) 19);
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_h[var5] = var9;

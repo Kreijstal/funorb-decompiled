@@ -59,22 +59,22 @@ final class q {
           if (!param0) {
             field_c = (bi) null;
           }
-          var2 = var10.e(false);
+          var2 = var10.readUnsignedByte(false);
           if (var2 == 0) {
             var9 = (kf) (hd.field_a.c((byte) 47));
             if (var9 == null) {
               k.c(-28354);
               return;
             }
-            var4 = var10.e(false);
+            var4 = var10.readUnsignedByte(false);
             if (var4 != 0) {
               var14 = new byte[var4];
-              var10.b(var14, 0, -88, var4);
+              var10.readBytes(var14, 0, -88, var4);
             } else {
               var5 = null;
             }
-            var10.field_i = var10.field_i + 4;
-            if (var10.g(-124)) {
+            var10.position = var10.position + 4;
+            if (var10.verifyCrc32(-124)) {
               var9.c(-1);
               return;
             }
@@ -86,7 +86,7 @@ final class q {
             k.c(-28354);
             return;
           }
-          var3 = var10.c((byte) 122);
+          var3 = var10.readInt((byte) 122);
           var4_ref_oa = (oa) (cf.field_d.c((byte) 47));
           while (var4_ref_oa != null) {
             if (var3 != var4_ref_oa.field_i) {

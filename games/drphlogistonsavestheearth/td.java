@@ -132,7 +132,7 @@ final class td {
         } else {
           var8Lifetime1 = e.a(104, param1);
           this.field_b = PcmSampleStream.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
-          od.a(-1630758008, this.field_b);
+          PacketBuffer.a(-1630758008, this.field_b);
         }
     }
 

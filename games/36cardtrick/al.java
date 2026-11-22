@@ -14,7 +14,7 @@ final class al {
         if (param0 < -18) {
           rk.field_ab = null;
           if (ei.field_e) {
-            pc.field_a.d(false);
+            Crc32Table.field_a.d(false);
             return;
           }
           var1 = IntrusiveNode.field_b;
@@ -26,14 +26,14 @@ final class al {
             }
             rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
           }
-          pc.field_a.s(-93);
+          Crc32Table.field_a.s(-93);
           e.a((byte) 112);
           return;
         }
         field_b = (byte[][]) null;
         rk.field_ab = null;
         if (ei.field_e) {
-          pc.field_a.d(false);
+          Crc32Table.field_a.d(false);
         } else {
           var1 = IntrusiveNode.field_b;
           if (var1 > 0) {
@@ -44,7 +44,7 @@ final class al {
             }
             rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
           }
-          pc.field_a.s(-93);
+          Crc32Table.field_a.s(-93);
           e.a((byte) 112);
         }
     }

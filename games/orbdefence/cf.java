@@ -31,8 +31,8 @@ final class cf {
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
           if (!ml.b(-107)) {
-            if (mg.field_k != null &&
-              mg.field_k.field_e) {
+            if (PacketBuffer.field_k != null &&
+              PacketBuffer.field_k.field_e) {
               lb.a(true);
               b.field_n.b((byte) 74, (pj) (new gg(b.field_n, hh.field_d)));
             }

@@ -4,7 +4,7 @@
 final class ri extends e {
     static String field_q;
     static String field_u;
-    static ni field_x;
+    static PacketBuffer field_x;
     private int field_w;
     static String field_s;
     private int field_v;

@@ -391,8 +391,8 @@ final class gf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wf var16 = null;
-        wf var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -404,10 +404,10 @@ final class gf {
         int var4Lifetime5;
         var15 = Lexicominos.field_L ? 1 : 0;
         try {
-          var16 = new wf(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_h = param1.length - 2;
-          th.field_t = var17.b(-1698573656);
+          var17.position = param1.length - 2;
+          th.field_t = var17.readUnsignedShort(-1698573656);
           mg.field_x = new int[th.field_t];
           hl.field_o = new byte[th.field_t][];
           me.field_w = new boolean[th.field_t];
@@ -415,34 +415,34 @@ final class gf {
           pb.field_h = new int[th.field_t];
           be.field_f = new byte[th.field_t][];
           bd.field_m = new int[th.field_t];
-          var17.field_h = -(8 * th.field_t) - 7 + param1.length;
-          uc.field_fb = var17.b(-1698573656);
-          eh.field_b = var17.b(-1698573656);
-          var3 = (var17.d(true) & 255) + 1;
+          var17.position = -(8 * th.field_t) - 7 + param1.length;
+          uc.field_fb = var17.readUnsignedShort(-1698573656);
+          eh.field_b = var17.readUnsignedShort(-1698573656);
+          var3 = (var17.readUnsignedByte(true) & 255) + 1;
           for (var4 = 0; th.field_t > var4; var4++) {
-            mg.field_x[var4] = var16.b(-1698573656);
+            mg.field_x[var4] = var16.readUnsignedShort(-1698573656);
           }
           for (var4Lifetime1 = 0; th.field_t > var4Lifetime1; var4Lifetime1++) {
-            rg.field_c[var4Lifetime1] = var17.b(-1698573656);
+            rg.field_c[var4Lifetime1] = var17.readUnsignedShort(-1698573656);
           }
           for (var4Lifetime2 = 0; th.field_t > var4Lifetime2; var4Lifetime2++) {
-            pb.field_h[var4Lifetime2] = var17.b(param0 - 1698573762);
+            pb.field_h[var4Lifetime2] = var17.readUnsignedShort(param0 - 1698573762);
           }
           if (param0 != 106) {
             field_q = (String) null;
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < th.field_t; var4Lifetime3++) {
-            bd.field_m[var4Lifetime3] = var17.b(-1698573656);
+            bd.field_m[var4Lifetime3] = var17.readUnsignedShort(-1698573656);
           }
-          var17.field_h = -(th.field_t * 8) - 7 + (param1.length - 3 * (var3 - 1));
+          var17.position = -(th.field_t * 8) - 7 + (param1.length - 3 * (var3 - 1));
           ci.field_b = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            ci.field_b[var4Lifetime4] = var17.a(84);
+            ci.field_b[var4Lifetime4] = var17.readUnsignedMedium(84);
             if (ci.field_b[var4Lifetime4] == 0) {
               ci.field_b[var4Lifetime4] = 1;
             }
           }
-          var17.field_h = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < th.field_t; var4Lifetime5++) {
             var5 = pb.field_h[var4Lifetime5];
             var6 = bd.field_m[var4Lifetime5];
@@ -456,14 +456,14 @@ final class gf {
             var9 = var19;
             hl.field_o[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.d(true);
+            var11 = var17.readUnsignedByte(true);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.e(true);
+                var8[var12] = var17.readByte(true);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.e(true);
+                  dupTemp$1 = var17.readByte(true);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_32_0 = var10;
@@ -478,13 +478,13 @@ final class gf {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var17.e(true);
+                  var8[var12 + var13 * var5] = var17.readByte(true);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.e(true);
+                    dupTemp$0 = var17.readByte(true);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_47_0 = var10;

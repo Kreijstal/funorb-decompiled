@@ -93,35 +93,35 @@ final class dl extends si {
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var9 = dh.field_N;
         var2 = var9;
-        var3 = var9.l(31760);
+        var3 = var9.readUnsignedByte(31760);
         stackIn_3_0 = ((128 & var3) != 0);
         td.field_f = stackIn_3_0;
         kl.field_J = 127 & var3;
-        ib.field_o = var9.l(31760);
+        ib.field_o = var9.readUnsignedByte(31760);
         var4 = -87 % ((param1 + 47) / 45);
-        fm.field_j = var9.a((byte) -53);
+        fm.field_j = var9.readLong((byte) -53);
         if (kl.field_J == 2) {
-          dj.field_K = var9.j(-788751192);
-          ob.field_a = var9.g(-1);
+          dj.field_K = var9.readUnsignedShort(-788751192);
+          ob.field_a = var9.readUnsignedMedium(-1);
         } else {
           ob.field_a = 0;
           dj.field_K = 0;
         }
-        stackIn_9_0 = (var9.l(31760) != 1) ? 0 : 1;
+        stackIn_9_0 = (var9.readUnsignedByte(31760) != 1) ? 0 : 1;
         var5 = stackIn_9_0;
-        rh.field_j = var9.b((byte) -93);
+        rh.field_j = var9.readString((byte) -93);
         if (var5 != 0) {
-          tf.field_kb = var9.b((byte) -64);
+          tf.field_kb = var9.readString((byte) -64);
         } else {
           tf.field_kb = rh.field_j;
         }
         if (1 == kl.field_J) {
-          var9.j(-788751192);
-          var9.b((byte) -57);
+          var9.readUnsignedShort(-788751192);
+          var9.readString((byte) -57);
         } else {
           if (kl.field_J == 4) {
-            var9.j(-788751192);
-            var9.b((byte) -57);
+            var9.readUnsignedShort(-788751192);
+            var9.readString((byte) -57);
           }
         }
         if (!param0) {
@@ -129,7 +129,7 @@ final class dl extends si {
           mf.field_x = null;
           return new fg(param0);
         }
-        var6 = var9.j(-788751192);
+        var6 = var9.readUnsignedShort(-788751192);
         try {
           var10 = nc.field_O.a(var6, (byte) -74);
           am.field_m = var10.i(121);

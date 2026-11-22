@@ -51,26 +51,26 @@ final class le {
         try {
           fb.field_b[0] = cm.field_M.nextInt();
           fb.field_b[1] = cm.field_M.nextInt();
-          am.field_n.field_j = 0;
+          am.field_n.position = 0;
           fb.field_b[2] = (int)(s.field_c >> 32);
           fb.field_b[3] = (int)s.field_c;
-          am.field_n.a(fb.field_b[0], (byte) -49);
-          am.field_n.a(fb.field_b[1], (byte) 119);
-          am.field_n.a(fb.field_b[2], (byte) -50);
-          am.field_n.a(fb.field_b[3], (byte) -44);
+          am.field_n.writeInt(fb.field_b[0], (byte) -49);
+          am.field_n.writeInt(fb.field_b[1], (byte) 119);
+          am.field_n.writeInt(fb.field_b[2], (byte) -50);
+          am.field_n.writeInt(fb.field_b[3], (byte) -44);
           u.a(am.field_n, (byte) -102);
-          am.field_n.c(param2, -17402);
+          am.field_n.writeShort(param2, -17402);
           param0.a(am.field_n, param4 ^ 103);
-          nj.field_p.field_j = 0;
+          nj.field_p.position = 0;
           if (param3) {
-            nj.field_p.c(18, (byte) -128);
+            nj.field_p.writeByte(18, (byte) -128);
           } else {
-            nj.field_p.c(16, (byte) -105);
+            nj.field_p.writeByte(16, (byte) -105);
           }
-          nj.field_p.field_j = nj.field_p.field_j + 2;
-          var5_int = nj.field_p.field_j;
-          nj.field_p.a(nf.field_t, (byte) 113);
-          nj.field_p.a(n.field_i, (byte) -25);
+          nj.field_p.position = nj.field_p.position + 2;
+          var5_int = nj.field_p.position;
+          nj.field_p.writeInt(nf.field_t, (byte) 113);
+          nj.field_p.writeLong(n.field_i, (byte) -25);
           var6 = 0;
           if (bd.field_N) {
             var6 = var6 | 1;
@@ -84,17 +84,17 @@ final class le {
           if (cj.field_i != null) {
             var6 = var6 | 16;
           }
-          nj.field_p.c(var6, (byte) -107);
+          nj.field_p.writeByte(var6, (byte) -107);
           var7 = ob.a((byte) 117, nb.a(-109));
           if (var7 == null) {
             var7 = "";
           }
-          nj.field_p.a(var7, -1);
+          nj.field_p.writeString(var7, -1);
           if (cj.field_i != null) {
-            nj.field_p.a(-23805, cj.field_i);
+            nj.field_p.writePrefixedString(-23805, cj.field_i);
           }
           i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
-          nj.field_p.a(-2, nj.field_p.field_j - var5_int);
+          nj.field_p.backpatchShortLength(-2, nj.field_p.position - var5_int);
           if (param4 != 16) {
             return;
           }

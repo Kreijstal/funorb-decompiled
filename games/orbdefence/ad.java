@@ -39,7 +39,7 @@ final class ad {
           }
           var13 = cd.field_t;
           var15 = var13;
-          var2 = var15.b((byte) 90);
+          var2 = var15.readUnsignedByte((byte) 90);
           var3 = (d) (md.field_h.b((byte) -66));
           while (var3 != null) {
             if (var3.field_f != var2) {
@@ -52,12 +52,12 @@ final class ad {
             th.a(122);
             return;
           }
-          var4 = var15.b((byte) 90);
+          var4 = var15.readUnsignedByte((byte) 90);
           if (var4 != 0) {
             var5 = var3.field_i;
             qd.field_c[0] = gb.field_h;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              qd.field_c[var6_int] = var13.g(2);
+              qd.field_c[var6_int] = var13.readString(2);
             }
             tl.a(var4, 12105912, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

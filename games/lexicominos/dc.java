@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dc extends si {
-    wf field_x;
+    PacketBuffer field_x;
     static db[] field_z;
     int field_w;
     byte field_A;
@@ -11,9 +11,9 @@ final class dc extends si {
     final byte[] d(byte param0) {
         int var2;
         if (!this.field_v &&
-          this.field_x.field_h >= -this.field_A + this.field_x.field_j.length) {
+          this.field_x.position >= -this.field_A + this.field_x.payload.length) {
           var2 = 37 % ((2 - param0) / 38);
-          return this.field_x.field_j;
+          return this.field_x.payload;
         }
         throw new RuntimeException();
     }
@@ -31,8 +31,8 @@ final class dc extends si {
           if (!a.b(1, 10343)) {
             return false;
           }
-          a.field_c = ig.field_a.d(true);
-          ig.field_a.field_h = 0;
+          a.field_c = ig.field_a.readUnsignedByte(true);
+          ig.field_a.position = 0;
         }
         if (param0 != 2) {
           return false;
@@ -41,8 +41,8 @@ final class dc extends si {
           if (!a.b(2, 10343)) {
             return false;
           }
-          a.field_c = ig.field_a.b(-1698573656);
-          ig.field_a.field_h = 0;
+          a.field_c = ig.field_a.readUnsignedShort(-1698573656);
+          ig.field_a.position = 0;
         }
         return a.b(a.field_c, 10343);
     }
@@ -173,7 +173,7 @@ final class dc extends si {
         if (this.field_x == null) {
           return 0;
         }
-        return 100 * this.field_x.field_h / (this.field_x.field_j.length - this.field_A);
+        return 100 * this.field_x.position / (this.field_x.payload.length - this.field_A);
     }
 
     static {

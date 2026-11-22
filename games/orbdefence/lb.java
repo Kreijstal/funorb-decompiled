@@ -14,12 +14,12 @@ final class lb {
     int field_c;
 
     final static void a(boolean param0) {
-        if (mg.field_k == null) {
+        if (PacketBuffer.field_k == null) {
           return;
         }
-        hl.a(mg.field_k, 125);
-        mg.field_k.a(wc.field_c, -128);
-        mg.field_k = null;
+        hl.a(PacketBuffer.field_k, 125);
+        PacketBuffer.field_k.a(wc.field_c, -128);
+        PacketBuffer.field_k = null;
         if (!param0) {
           return;
         }
@@ -65,7 +65,7 @@ final class lb {
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
           var12 = cd.field_t;
-          var2 = var12.b((byte) 90);
+          var2 = var12.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var10 = KeyboardListener.b(8);
             var16 = var10;
@@ -74,9 +74,9 @@ final class lb {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((mg) ((Object) var5)).b((byte) 90);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) 90);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((mg) ((Object) var5)).l(0);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
             var14 = (dc) (mj.field_m.b((byte) 117));
             if (var14 == null) {

@@ -205,11 +205,11 @@ final class uk extends ql {
           }
           while (kf.d(true)) {
             var1.h(8, 0);
-            fieldTemp$0 = var1.field_h + 1;
-            var1.field_h = var1.field_h + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ej.a(-17, var1);
-            ed.field_q.d(-var2 + var1.field_h, (byte) -125);
+            ed.field_q.backpatchByteLength(-var2 + var1.position, (byte) -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

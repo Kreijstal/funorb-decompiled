@@ -22,17 +22,17 @@ final class tl {
             field_h = (va) null;
           }
           var5.i(param2, 92);
-          var5.field_i = var5.field_i + 1;
-          var4 = var5.field_i;
-          var5.a(1, -125);
-          var5.a(param1.field_h, -85);
-          var5.a(param1.field_i, -69);
-          var5.b(param1.field_m, -1);
-          var5.b(param1.field_n, -1);
-          var5.b(param1.field_k, -1);
-          var5.b(param1.field_f, -1);
-          var5.e(-18951, var4);
-          var5.c((byte) -77, -var4 + var5.field_i);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, -125);
+          var5.writeByte(param1.field_h, -85);
+          var5.writeByte(param1.field_i, -69);
+          var5.writeInt(param1.field_m, -1);
+          var5.writeInt(param1.field_n, -1);
+          var5.writeInt(param1.field_k, -1);
+          var5.writeInt(param1.field_f, -1);
+          var5.appendCrc32(-18951, var4);
+          var5.backpatchByteLength((byte) -77, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "tl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -14,19 +14,19 @@ final class s {
           return;
         }
         try {
-          var5.field_i = var5.field_i + 1;
-          var4 = var5.field_i;
-          var5.a(-11, 1);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(-11, 1);
           if (param0.field_k == null) {
-            var5.a(-11, 0);
+            var5.writeByte(-11, 0);
           } else {
-            var5.a(-11, param0.field_k.length);
-            var5.a(param0.field_k, param0.field_k.length, 0, 0);
+            var5.writeByte(-11, param0.field_k.length);
+            var5.writeBytes(param0.field_k, param0.field_k.length, 0, 0);
           }
-          var5.c(var4, -30532);
-          var5.field_i = var5.field_i - 4;
-          param0.field_i = var5.c((byte) -3);
-          var5.c((byte) -128, -var4 + var5.field_i);
+          var5.appendCrc32(var4, -30532);
+          var5.position = var5.position - 4;
+          param0.field_i = var5.readInt((byte) -3);
+          var5.backpatchByteLength((byte) -128, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -51,26 +51,26 @@ final class s {
           var8 = ud.field_b;
           var9 = var8;
           var9.e(param0 ^ -4479, param1);
-          var9.field_i = var9.field_i + 1;
-          var4 = var9.field_i;
+          var9.position = var9.position + 1;
+          var4 = var9.position;
           if (param0 != -4471) {
             bh var7 = (bh) null;
             s.a(120, -80, (bh) null);
           }
-          var9.a(-11, 1);
-          var9.b((byte) 76, param2.field_s);
-          var9.b((byte) -49, param2.field_o);
-          var9.b((byte) 105, param2.field_i);
-          var9.a(param2.field_j, (byte) -50);
-          var9.a(param2.field_r, (byte) -35);
-          var9.a(param2.field_v, (byte) -56);
-          var9.a(param2.field_m, (byte) -15);
-          var9.a(-11, param2.field_p.length);
+          var9.writeByte(-11, 1);
+          var9.writeShort((byte) 76, param2.field_s);
+          var9.writeShort((byte) -49, param2.field_o);
+          var9.writeShort((byte) 105, param2.field_i);
+          var9.writeInt(param2.field_j, (byte) -50);
+          var9.writeInt(param2.field_r, (byte) -35);
+          var9.writeInt(param2.field_v, (byte) -56);
+          var9.writeInt(param2.field_m, (byte) -15);
+          var9.writeByte(-11, param2.field_p.length);
           for (var5 = 0; var5 < param2.field_p.length; var5++) {
-            var8.a(param2.field_p[var5], (byte) -50);
+            var8.writeInt(param2.field_p[var5], (byte) -50);
           }
-          var9.c(var4, -30532);
-          var9.c((byte) -110, var9.field_i - var4);
+          var9.appendCrc32(var4, -30532);
+          var9.backpatchByteLength((byte) -110, var9.position - var4);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "s.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

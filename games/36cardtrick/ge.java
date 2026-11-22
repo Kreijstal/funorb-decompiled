@@ -9,11 +9,11 @@ final class ge {
     static boolean[] field_c;
     private java.util.zip.Inflater field_d;
 
-    final void a(pb param0, int param1, byte[] param2) {
+    final void a(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
-            if (param0.field_g[param0.field_i] != 31 ||
-              -117 != param0.field_g[1 + param0.field_i]) {
+            if (param0.payload[param0.position] != 31 ||
+              -117 != param0.payload[1 + param0.position]) {
               throw new RuntimeException("");
             }
             if (param1 != 2) {
@@ -23,7 +23,7 @@ final class ge {
               this.field_d = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_d.setInput(param0.field_g, param0.field_i + 10, -18 - param0.field_i + param0.field_g.length);
+              this.field_d.setInput(param0.payload, param0.position + 10, -18 - param0.position + param0.payload.length);
               this.field_d.inflate(param2);
             } catch (Exception exception) {
               this.field_d.reset();

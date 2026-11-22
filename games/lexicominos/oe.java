@@ -52,7 +52,7 @@ final class oe {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -88 % ((-7 - param0) / 44);
-          stackIn_1_0 = oh.a(0, param1, false, param2);
+          stackIn_1_0 = oh.computeCrc32(0, param1, false, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

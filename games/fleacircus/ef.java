@@ -19,8 +19,8 @@ class ef extends kc {
     final static void a(int param0, int param1) {
         ih var2 = ud.field_b;
         var2.e(param0 + 8, param1);
-        var2.a(-11, 1);
-        var2.a(-11, param0);
+        var2.writeByte(-11, 1);
+        var2.writeByte(-11, param0);
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -104,11 +104,11 @@ class ef extends kc {
         }
     }
 
-    final void a(ni param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -115 % ((-62 - param1) / 38);
-          param0.a(-110, this.field_i);
-          param0.b(this.field_k, (byte) 94);
+          param0.writeLong(-110, this.field_i);
+          param0.writeBase38String(this.field_k, (byte) 94);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ef.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

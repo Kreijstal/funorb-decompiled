@@ -26,22 +26,22 @@ final class gj implements Runnable {
             return;
           }
           var9 = rd.field_j;
-          var2 = var9.f(-128);
+          var2 = var9.readUnsignedByte(-128);
           if (var2 == 0) {
             var8 = (pf) (ua.field_G.a((byte) 74));
             if (var8 == null) {
               mc.a((byte) -128);
               return;
             }
-            var4 = var9.f(24);
+            var4 = var9.readUnsignedByte(24);
             if (var4 != 0) {
               var13 = new byte[var4];
-              var9.a(121, var13, 0, var4);
+              var9.readBytes(121, var13, 0, var4);
             } else {
               var5 = null;
             }
-            var9.field_i = var9.field_i + 4;
-            if (var9.e(-1)) {
+            var9.position = var9.position + 4;
+            if (var9.verifyCrc32(-1)) {
               var8.unlink(96);
               return;
             }
@@ -53,7 +53,7 @@ final class gj implements Runnable {
             mc.a((byte) -126);
             return;
           }
-          var3 = var9.e((byte) 124);
+          var3 = var9.readInt((byte) 124);
           var4_ref_rh = (rh) (de.field_e.a((byte) 74));
           while (var4_ref_rh != null) {
             if (var4_ref_rh.field_i != var3) {

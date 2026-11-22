@@ -36,7 +36,7 @@ final class ml {
               var2 = Runtime.getRuntime();
               var4 = (Object[]) null;
               var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-              mg.field_f = (int)(var3.longValue() / 1048576L) + 1;
+              PacketBuffer.field_f = (int)(var3.longValue() / 1048576L) + 1;
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

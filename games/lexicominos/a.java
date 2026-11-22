@@ -21,7 +21,7 @@ final class a extends kb {
 
     final static boolean b(int param0, int param1) {
         try {
-          if (!(param0 > ig.field_a.field_h)) {
+          if (!(param0 > ig.field_a.position)) {
             return true;
           }
           if (null == jc.field_b) {
@@ -32,16 +32,16 @@ final class a extends kb {
             return false;
           }
           if (var2_int > 0) {
-            if (param0 - ig.field_a.field_h < var2_int) {
-              var2_int = param0 - ig.field_a.field_h;
+            if (param0 - ig.field_a.position < var2_int) {
+              var2_int = param0 - ig.field_a.position;
             }
-            jc.field_b.a(ig.field_a.field_j, (byte) -109, var2_int, ig.field_a.field_h);
+            jc.field_b.a(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
             ta.field_e = rf.c(0);
-            ig.field_a.field_h = ig.field_a.field_h + var2_int;
-            if (param0 > ig.field_a.field_h) {
+            ig.field_a.position = ig.field_a.position + var2_int;
+            if (param0 > ig.field_a.position) {
               return false;
             }
-            ig.field_a.field_h = 0;
+            ig.field_a.position = 0;
             return true;
           }
           try {
@@ -150,10 +150,10 @@ final class a extends kb {
         }
     }
 
-    final void a(wf param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a((byte) -38, this.field_d);
-          param0.a(0, this.field_g);
+          param0.writePrefixedString((byte) -38, this.field_d);
+          param0.writeBase38String(0, this.field_g);
           if (param1 != 7895) {
             field_f = (String) null;
           }

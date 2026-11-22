@@ -425,7 +425,7 @@ final class gb {
     }
 
     final static void b(int param0) {
-        field_h = cd.field_t.g(2);
+        field_h = cd.field_t.readString(2);
         CharSequence var2 = (CharSequence) ((Object) field_h);
         sg.field_E = ua.a(-88, var2);
         if (param0 > -27) {

@@ -103,7 +103,7 @@ final class vc {
         try {
           var9 = new ih(param1.a(0, "", "logo.fo3d"));
           var10 = var9;
-          var3 = var10.e(false);
+          var3 = var10.readUnsignedByte(false);
           var10.k(8);
           fc.field_a = fleas.a(var10, -6383);
           ij.field_F = new si[var3];

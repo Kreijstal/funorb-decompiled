@@ -17,11 +17,11 @@ final class f extends kd {
         }
     }
 
-    final static boolean a(wf param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        wf var4 = null;
+        PacketBuffer var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -29,10 +29,10 @@ final class f extends kd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.d(true);
+          var2_int = param0.readUnsignedByte(true);
           if (param1 != 25444) {
-            var4 = (wf) null;
-            f.a((wf) null, 110);
+            var4 = (PacketBuffer) null;
+            f.a((PacketBuffer) null, 110);
           }
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;

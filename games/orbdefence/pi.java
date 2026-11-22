@@ -4,7 +4,7 @@
 final class pi {
     static uh field_j;
     private cd field_i;
-    private mg field_f;
+    private PacketBuffer field_f;
     private ge field_h;
     private java.math.BigInteger field_a;
     private java.math.BigInteger field_e;
@@ -29,7 +29,7 @@ final class pi {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        mg var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -47,14 +47,14 @@ final class pi {
         if (this.field_i.field_l) {
           return false;
         }
-        var10 = new mg(this.field_i.f(0));
-        var10.field_i = 5;
-        var3 = var10.b((byte) 90);
-        var10.field_i = var10.field_i + var3 * 72;
-        var13 = new byte[var10.field_j.length - var10.field_i];
+        var10 = new PacketBuffer(this.field_i.f(0));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte((byte) 90);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a((byte) 126, var4, 0, var13.length);
+        var10.readBytes((byte) 126, var4, 0, var13.length);
         if (this.field_e != null &&
           this.field_a != null) {
           var12 = new java.math.BigInteger(var13);
@@ -66,7 +66,7 @@ final class pi {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ee.a(-1, -var13.length + (var10.field_i - 5), 5, var10.field_j);
+        var15 = ee.a(-1, -var13.length + (var10.position - 5), 5, var10.payload);
         for (var7 = param0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -105,14 +105,14 @@ final class pi {
               stackIn_8_0 = this.field_b[param1];
               return stackIn_8_0;
             }
-            this.field_f.field_i = 6 + param1 * 72;
-            var6_int = this.field_f.l(0);
-            var7 = this.field_f.l(0);
+            this.field_f.position = 6 + param1 * 72;
+            var6_int = this.field_f.readInt(0);
+            var7 = this.field_f.readInt(0);
             if (param2) {
-              this.field_f = (mg) null;
+              this.field_f = (PacketBuffer) null;
             }
             var13 = new byte[64];
-            this.field_f.a((byte) 123, var13, 0, 64);
+            this.field_f.readBytes((byte) 123, var13, 0, 64);
             var9 = new ak(param1, param4, param3, this.field_h, this.field_d, var6_int, var13, var7, param0);
             this.field_b[param1] = var9;
             stackIn_12_0 = var9;

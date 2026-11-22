@@ -7,7 +7,7 @@ final class hm {
     private int field_a;
     private DualLinkNode[] field_d;
     static boolean field_f;
-    static od field_e;
+    static PacketBuffer field_e;
 
     final DualLinkNode b(int param0) {
         DualLinkNode var3 = null;

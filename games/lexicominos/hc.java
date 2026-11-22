@@ -15,10 +15,10 @@ final class hc extends ui {
     final static int a(int param0, int param1, gb param2, int param3, gb param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        wf stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         String stackIn_12_2 = null;
-        wf stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
         int stackIn_33_0 = 0;
@@ -58,37 +58,37 @@ final class hc extends ui {
             return stackIn_5_0;
           }
           if (uf.field_m == ae.field_E) {
-            ed.field_q.field_h = 0;
+            ed.field_q.position = 0;
             wh.field_d = null;
             if (param5 != null) {
               var9 = 0;
-              of.field_a.field_h = 0;
+              of.field_a.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              of.field_a.f(q.field_a.nextInt(), -32287);
-              of.field_a.f(q.field_a.nextInt(), -32287);
-              of.field_a.a((byte) -38, var14);
-              of.field_a.a((byte) -38, var8);
+              of.field_a.writeInt(q.field_a.nextInt(), -32287);
+              of.field_a.writeInt(q.field_a.nextInt(), -32287);
+              of.field_a.writePrefixedString((byte) -38, var14);
+              of.field_a.writePrefixedString((byte) -38, var8);
               var15 = (CharSequence) ((Object) param5);
-              of.field_a.a((byte) -38, aa.a(var15, param3 + 30742));
-              of.field_a.e(param3 + 30884, param1);
-              of.field_a.c(param0, -1);
-              of.field_a.c(var9, param3 + 30761);
-              ed.field_q.c(18, -1);
-              ed.field_q.field_h = ed.field_q.field_h + 2;
-              var10 = ed.field_q.field_h;
+              of.field_a.writePrefixedString((byte) -38, aa.a(var15, param3 + 30742));
+              of.field_a.writeShort(param3 + 30884, param1);
+              of.field_a.writeByte(param0, -1);
+              of.field_a.writeByte(var9, param3 + 30761);
+              ed.field_q.writeByte(18, -1);
+              ed.field_q.position = ed.field_q.position + 2;
+              var10 = ed.field_q.position;
               var11_ref_String = pg.a(kk.c(param3 + 16715), (byte) -28);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              ed.field_q.a(var11_ref_String, (byte) 0);
+              ed.field_q.writeTerminatedString(var11_ref_String, (byte) 0);
               wc.a(wb.field_m, ed.field_q, re.field_T, (byte) 111, of.field_a);
-              ed.field_q.b(ed.field_q.field_h - var10, (byte) 26);
+              ed.field_q.backpatchShortLength(ed.field_q.position - var10, (byte) 26);
             } else {
-              of.field_a.field_h = 0;
-              of.field_a.f(q.field_a.nextInt(), param3 ^ 1591);
-              of.field_a.f(q.field_a.nextInt(), -32287);
+              of.field_a.position = 0;
+              of.field_a.writeInt(q.field_a.nextInt(), param3 ^ 1591);
+              of.field_a.writeInt(q.field_a.nextInt(), -32287);
               stackIn_11_0 = of.field_a;
               stackIn_11_1 = -38;
               if (!param4.a(15738)) {
@@ -96,7 +96,7 @@ final class hc extends ui {
               } else {
                 stackIn_12_2 = var14;
               }
-              ((wf) (Object) stackIn_11_0).a((byte) stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString((byte) stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = of.field_a;
               stackIn_14_1 = -38;
               if (param2.a(15738)) {
@@ -104,12 +104,12 @@ final class hc extends ui {
               } else {
                 stackIn_15_2 = "";
               }
-              ((wf) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_15_2);
-              ed.field_q.c(16, -1);
-              ed.field_q.field_h = ed.field_q.field_h + 1;
-              var9 = ed.field_q.field_h;
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString((byte) stackIn_14_1, stackIn_15_2);
+              ed.field_q.writeByte(16, -1);
+              ed.field_q.position = ed.field_q.position + 1;
+              var9 = ed.field_q.position;
               wc.a(wb.field_m, ed.field_q, re.field_T, (byte) 111, of.field_a);
-              ed.field_q.d(ed.field_q.field_h - var9, (byte) -128);
+              ed.field_q.backpatchByteLength(ed.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);
             uf.field_m = ve.field_e;
@@ -119,8 +119,8 @@ final class hc extends ui {
           }
           if (uf.field_m == ve.field_e &&
             a.b(1, 10343)) {
-            var9Lifetime1 = ig.field_a.d(true);
-            ig.field_a.field_h = 0;
+            var9Lifetime1 = ig.field_a.readUnsignedByte(true);
+            ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               fc.field_S = new String[var9Lifetime1 - 100];
@@ -141,19 +141,19 @@ final class hc extends ui {
               } else {
                 a.b(wg.b(param3 ^ -19296), 10343);
                 wh.field_d = new Boolean(f.a(ig.field_a, 25444));
-                ig.field_a.field_h = 0;
+                ig.field_a.position = 0;
               }
             }
           }
           if (uf.field_m == sg.field_l) {
             var9Lifetime2 = 2;
             if (a.b(var9Lifetime2, 10343)) {
-              var10Lifetime1 = ig.field_a.b(-1698573656);
-              ig.field_a.field_h = 0;
+              var10Lifetime1 = ig.field_a.readUnsignedShort(-1698573656);
+              ig.field_a.position = 0;
               if (a.b(var10Lifetime1, 10343)) {
                 var11 = fc.field_S.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  fc.field_S[var12] = ig.field_a.d(0);
+                  fc.field_S[var12] = ig.field_a.readPrefixedString(0);
                 }
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-36);
                 fb.field_p = false;
@@ -165,12 +165,12 @@ final class hc extends ui {
           if (bc.field_F == uf.field_m &&
             dc.d(2)) {
             if (pg.field_d == 255) {
-              var9_ref_String = ig.field_a.e((byte) -49);
+              var9_ref_String = ig.field_a.readNullableString((byte) -49);
               if (var9_ref_String != null) {
                 ee.a(var9_ref_String, -11971, kk.c(-14047));
               }
             } else {
-              wj.field_p = ig.field_a.c(false);
+              wj.field_p = ig.field_a.readString(false);
             }
             ck.$cfr$intArgs$b$e683eeaaf5b5(-85);
             fb.field_p = false;

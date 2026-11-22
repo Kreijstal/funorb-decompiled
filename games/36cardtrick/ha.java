@@ -100,15 +100,15 @@ final class ha {
               } else {
                 sh.field_k = tb.a(param1, param5, (byte) -18, false);
               }
-              na.field_r.field_i = 0;
-              na.field_r.b(-9469, 14);
-              na.field_r.b(-9469, sh.field_k.a((byte) -24).field_b);
+              na.field_r.position = 0;
+              na.field_r.writeByte(-9469, 14);
+              na.field_r.writeByte(-9469, sh.field_k.a((byte) -24).field_b);
               fe.a((byte) -118, -1);
               ra.field_b = vd.field_q;
             }
             if (ra.field_b == vd.field_q &&
               r.a(1, (byte) 122)) {
-              var6_int = rd.field_j.f(94);
+              var6_int = rd.field_j.readUnsignedByte(94);
               if (var6_int == 0) {
                 ra.field_b = ab.field_w;
               } else {
@@ -116,22 +116,22 @@ final class ha {
                 al.field_a = -1;
                 pd.field_l = var6_int;
               }
-              rd.field_j.field_i = 0;
+              rd.field_j.position = 0;
             }
             if (ab.field_w == ra.field_b &&
               r.a(8, (byte) 127)) {
-              hb.field_b = rd.field_j.d(true);
-              rd.field_j.field_i = 0;
+              hb.field_b = rd.field_j.readLong(true);
+              rd.field_j.position = 0;
               jc.a(param4, (byte) -111, param3, sh.field_k, param0);
               ra.field_b = rk.field_eb;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rk.field_eb == ra.field_b &&
               r.a(1, (byte) 121)) {
-              var6_intLifetime1 = rd.field_j.f(34);
+              var6_intLifetime1 = rd.field_j.readUnsignedByte(34);
               pd.field_l = var6_intLifetime1;
               ia.field_b = null;
-              rd.field_j.field_i = 0;
+              rd.field_j.position = 0;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -153,12 +153,12 @@ final class ha {
             }
             if (ra.field_b == vg.field_a &&
               gl.a(false)) {
-              cd.field_a = rd.field_j.d(true);
-              ec.field_f = rd.field_j.f(-109);
-              rd.field_j.f(-103);
-              d.field_c = rd.field_j.d((byte) 72);
-              var11 = rd.field_j.f((byte) 29);
-              var7 = rd.field_j.f(113);
+              cd.field_a = rd.field_j.readLong(true);
+              ec.field_f = rd.field_j.readUnsignedByte(-109);
+              rd.field_j.readUnsignedByte(-103);
+              d.field_c = rd.field_j.readUnsignedShort((byte) 72);
+              var11 = rd.field_j.readNullableString((byte) 29);
+              var7 = rd.field_j.readUnsignedByte(113);
               if (0 != (var7 & 1)) {
                 bd.d((byte) -86);
               }
@@ -171,19 +171,19 @@ final class ha {
                 }
               }
               if (bj.field_m) {
-                rd.field_j.f(124);
-                rd.field_j.f(101);
-                rd.field_j.e((byte) 125);
-                pb.field_j = rd.field_j.d((byte) 72);
-                fb.field_d = new byte[pb.field_j];
-                for (var8 = 0; var8 < pb.field_j; var8++) {
-                  fb.field_d[var8] = rd.field_j.a(true);
+                rd.field_j.readUnsignedByte(124);
+                rd.field_j.readUnsignedByte(101);
+                rd.field_j.readInt((byte) 125);
+                PacketBuffer.field_j = rd.field_j.readUnsignedShort((byte) 72);
+                fb.field_d = new byte[PacketBuffer.field_j];
+                for (var8 = 0; var8 < PacketBuffer.field_j; var8++) {
+                  fb.field_d[var8] = rd.field_j.readByte(true);
                 }
               }
-              ri.field_c = rd.field_j.c(false);
+              ri.field_c = rd.field_j.readString(false);
               var12 = (CharSequence) ((Object) ri.field_c);
               aa.field_fb = ff.a((byte) 116, var12);
-              IntrusiveNode.field_b = rd.field_j.f(-117);
+              IntrusiveNode.field_b = rd.field_j.readUnsignedByte(-117);
               ra.field_b = ad.field_q;
               if (sh.field_k.a((byte) -24) != tf.field_o) {
                 if (sh.field_k.a((byte) -24) == hc.field_h) {
@@ -235,7 +235,7 @@ final class ha {
               if (pd.field_l == 7) {
                 pd.field_l = 3;
               }
-              e.field_a = rd.field_j.c(false);
+              e.field_a = rd.field_j.readString(false);
               lk.field_w = false;
               stackIn_84_0 = pd.field_l;
               return stackIn_84_0;

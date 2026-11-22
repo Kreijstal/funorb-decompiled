@@ -280,29 +280,29 @@ final class pc extends hl {
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           var10 = cd.field_t;
-          var2 = var10.b((byte) 90);
+          var2 = var10.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var9 = (vb) (e.field_b.b((byte) -28));
             if (var9 == null) {
               th.a(119);
               return;
             }
-            var4 = var10.b((byte) 90);
+            var4 = var10.readUnsignedByte((byte) 90);
             if (var4 == 0) {
               var5 = null;
             } else {
               var14 = new byte[var4];
-              var10.a((byte) 108, var14, 0, var4);
+              var10.readBytes((byte) 108, var14, 0, var4);
             }
-            var10.field_i = var10.field_i + 4;
-            if (!var10.h(9982)) {
+            var10.position = var10.position + 4;
+            if (!var10.verifyCrc32(9982)) {
               th.a(108);
               return;
             }
             var9.b(57);
           } else {
             if (var2 == 1) {
-              var3 = var10.l(0);
+              var3 = var10.readInt(0);
               var4_ref_ef = (ef) (sd.field_a.b((byte) -113));
               while (var4_ref_ef != null) {
                 if (var4_ref_ef.field_f != var3) {

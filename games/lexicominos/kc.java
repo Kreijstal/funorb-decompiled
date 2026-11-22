@@ -24,24 +24,24 @@ final class kc {
           Throwable decompiledCaughtException = null;
           if (null != jc.field_b && (0 > param0 ||
             gg.field_b == uf.field_m)) {
-            if (ed.field_q.field_h == 0 &&
+            if (ed.field_q.position == 0 &&
               rf.c(0) > p.field_c + 10000L) {
               ed.field_q.h(param0, ~param1);
             }
-            if (~ed.field_q.field_h < param1) {
+            if (~ed.field_q.position < param1) {
               try {
-                jc.field_b.a(ed.field_q.field_j, ed.field_q.field_h, 120, 0);
+                jc.field_b.a(ed.field_q.payload, ed.field_q.position, 120, 0);
                 p.field_c = rf.c(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-37);
               }
-              ed.field_q.field_h = 0;
+              ed.field_q.position = 0;
             }
             return;
           }
-          ed.field_q.field_h = 0;
+          ed.field_q.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -108,7 +108,7 @@ final class al {
           var1 = var6 + ":";
           for (var2 = 0; var2 < gf.field_C; var2++) {
             var7 = var1 + ' ';
-            var3 = dh.field_N.field_h[var2] & 255;
+            var3 = dh.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;

@@ -100,7 +100,7 @@ final class af {
         return var3;
     }
 
-    final static boolean a(mg param0, boolean param1) {
+    final static boolean a(PacketBuffer param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -116,7 +116,7 @@ final class af {
             var4 = (CharSequence) null;
             af.a(true, (CharSequence) null, 82, -108);
           }
-          var2_int = param0.b((byte) 90);
+          var2_int = param0.readUnsignedByte((byte) 90);
           stackIn_5_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

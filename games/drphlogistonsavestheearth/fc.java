@@ -98,20 +98,20 @@ final class fc {
         try {
           var5 = nj.field_p;
           var5.d(param2, -18392);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
-          var5.c(1, (byte) -126);
-          var5.c(param1.field_j, (byte) -95);
-          var5.b((byte) -63, param1.field_l);
-          var5.a(param1.field_h, (byte) 122);
-          var5.a(param1.field_p, (byte) -2);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, (byte) -126);
+          var5.writeByte(param1.field_j, (byte) -95);
+          var5.writeSignedSmart((byte) -63, param1.field_l);
+          var5.writeInt(param1.field_h, (byte) 122);
+          var5.writeInt(param1.field_p, (byte) -2);
           if (param0 > -1) {
             fc.a(113);
           }
-          var5.a(param1.field_q, (byte) -117);
-          var5.a(param1.field_k, (byte) 104);
-          var5.d(var4, (byte) 9);
-          var5.b(var5.field_j - var4, (byte) 87);
+          var5.writeInt(param1.field_q, (byte) -117);
+          var5.writeInt(param1.field_k, (byte) 104);
+          var5.appendCrc32(var4, (byte) 9);
+          var5.backpatchByteLength(var5.position - var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

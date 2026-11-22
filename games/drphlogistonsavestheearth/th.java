@@ -16,7 +16,7 @@ final class th {
           return;
         }
         try {
-          od.a(-1630758008, PcmSampleStream.a(param3, 100, param1, param2));
+          PacketBuffer.a(-1630758008, PcmSampleStream.a(param3, 100, param1, param2));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "th.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -169,7 +169,7 @@ final class th {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 120) {
-            stackIn_4_0 = ml.a(param0, 0, param2, false);
+            stackIn_4_0 = ml.computeCrc32(param0, 0, param2, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = 87;
@@ -214,9 +214,9 @@ final class th {
               var4_ref_wk.field_k < var2_long) {
               var4_ref_wk.unlink(-16175);
               gf.field_C = var4_ref_wk.field_j.length;
-              dh.field_N.field_j = 0;
+              dh.field_N.position = 0;
               for (var5_int = 0; var5_int < gf.field_C; var5_int++) {
-                dh.field_N.field_h[var5_int] = var4_ref_wk.field_j[var5_int];
+                dh.field_N.payload[var5_int] = var4_ref_wk.field_j[var5_int];
               }
               l.field_q = gg.field_l;
               gg.field_l = ek.field_h;
@@ -227,12 +227,12 @@ final class th {
           }
           while (true) {
             if (dj.field_N < 0) {
-              dh.field_N.field_j = 0;
+              dh.field_N.position = 0;
               if (!LoginMenuScreen.a(1, 5929)) {
                 return false;
               }
               dj.field_N = dh.field_N.e((byte) 121);
-              dh.field_N.field_j = 0;
+              dh.field_N.position = 0;
               gf.field_C = param1[dj.field_N];
             }
             if (!GameAppletShell.d(-29427)) {
@@ -255,7 +255,7 @@ final class th {
             }
             var5 = new wk((long)var4 + var2_long, dj.field_N, new byte[gf.field_C]);
             for (var6 = 0; var6 < gf.field_C; var6++) {
-              var5.field_j[var6] = dh.field_N.field_h[var6];
+              var5.field_j[var6] = dh.field_N.payload[var6];
             }
             og.field_f.a(var5, 255);
             dj.field_N = -1;

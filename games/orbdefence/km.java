@@ -9,9 +9,9 @@ final class km {
     final static boolean a(boolean param0) {
         if (param0) {
           km.a(62);
-          return null != mg.field_k ? true : wg.field_o;
+          return null != PacketBuffer.field_k ? true : wg.field_o;
         }
-        return null != mg.field_k ? true : wg.field_o;
+        return null != PacketBuffer.field_k ? true : wg.field_o;
     }
 
     final static void a(int param0) {

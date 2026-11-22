@@ -260,17 +260,17 @@ final class na {
           return;
         }
         try {
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
-          var5.c(1, -1);
-          var5.c(param1.field_o, -1);
-          var5.a(108, param1.field_h);
-          var5.f(param1.field_i, -32287);
-          var5.f(param1.field_m, -32287);
-          var5.f(param1.field_n, -32287);
-          var5.f(param1.field_l, -32287);
-          var5.a(var4, (byte) 71);
-          var5.d(-var4 + var5.field_h, (byte) -124);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, -1);
+          var5.writeByte(param1.field_o, -1);
+          var5.writeSignedSmart(108, param1.field_h);
+          var5.writeInt(param1.field_i, -32287);
+          var5.writeInt(param1.field_m, -32287);
+          var5.writeInt(param1.field_n, -32287);
+          var5.writeInt(param1.field_l, -32287);
+          var5.appendCrc32(var4, (byte) 71);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "na.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

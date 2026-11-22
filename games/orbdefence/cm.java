@@ -16,7 +16,7 @@ final class cm {
         if (var3 == null) {
           return null;
         }
-        return new cm(new mg(var3));
+        return new cm(new PacketBuffer(var3));
     }
 
     final static cm a(ki param0, int param1, int param2) {
@@ -24,7 +24,7 @@ final class cm {
         if (var3 == null) {
           return null;
         }
-        return new cm(new mg(var3));
+        return new cm(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -67,19 +67,19 @@ final class cm {
         return var3;
     }
 
-    private cm(mg param0) {
+    private cm(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new kh[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.b((byte) 90);
+          var3 = param0.readUnsignedByte((byte) 90);
           if (var3 != 0) {
-            param0.field_i = param0.field_i - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new kh();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.j(98203176);
-        this.field_c = param0.j(98203176);
+        this.field_a = param0.readUnsignedShort(98203176);
+        this.field_c = param0.readUnsignedShort(98203176);
     }
 }

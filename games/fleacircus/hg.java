@@ -52,8 +52,8 @@ final class hg extends IntrusiveNode {
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;
-        vh.field_o = vh.field_o ^ ni.field_j;
-        pg.field_d = pg.field_d ^ ni.field_j;
+        vh.field_o = vh.field_o ^ PacketBuffer.field_j;
+        pg.field_d = pg.field_d ^ PacketBuffer.field_j;
         if (null != pb.field_f.c((byte) 47)) {
           fieldTemp$0 = hi.field_q + 1;
           hi.field_q = hi.field_q + 1;

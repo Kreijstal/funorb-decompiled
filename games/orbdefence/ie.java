@@ -32,7 +32,7 @@ class ie extends DualLinkNode {
           bh.field_e = param2;
           tl.field_g = null;
           of.field_H = param6;
-          qc.field_g = mg.field_m;
+          qc.field_g = PacketBuffer.field_m;
           sk.field_G = param3;
           mb.field_c = param5;
           return true;

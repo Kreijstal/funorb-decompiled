@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class fc {
-    static wf field_z;
+    static PacketBuffer field_z;
     String field_C;
     private StringBuilder field_X;
     static db[] field_e;

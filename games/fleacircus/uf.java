@@ -11,7 +11,7 @@ final class uf {
     private java.math.BigInteger field_d;
     private w field_m;
     static String field_l;
-    private ni field_c;
+    private PacketBuffer field_c;
     static int field_k;
     static int field_h;
     private fk field_j;
@@ -37,7 +37,7 @@ final class uf {
           }
         }
         if (param0 != -23608) {
-          this.field_c = (ni) null;
+          this.field_c = (PacketBuffer) null;
         }
     }
 
@@ -86,7 +86,7 @@ final class uf {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ni var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -104,17 +104,17 @@ final class uf {
         if (this.field_j.field_q) {
           return false;
         }
-        var10 = new ni(this.field_j.g(100));
-        var10.field_i = 5;
+        var10 = new PacketBuffer(this.field_j.g(100));
+        var10.position = 5;
         if (param0 >= -127) {
           field_k = 85;
         }
-        var3 = var10.e(false);
-        var10.field_i = var10.field_i + 72 * var3;
-        var13 = new byte[var10.field_k.length - var10.field_i];
+        var3 = var10.readUnsignedByte(false);
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.b(var4, 0, -65, var13.length);
+        var10.readBytes(var4, 0, -65, var13.length);
         if (null != this.field_d &&
           null != this.field_i) {
           var12 = new java.math.BigInteger(var13);
@@ -126,7 +126,7 @@ final class uf {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = kb.a(var10.field_k, -5 + var10.field_i - var13.length, (byte) 122, 5);
+        var15 = kb.a(var10.payload, -5 + var10.position - var13.length, (byte) 122, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();
@@ -162,15 +162,15 @@ final class uf {
               stackIn_9_0 = this.field_g[param4];
               return stackIn_9_0;
             }
-            this.field_c.field_i = 72 * param4 + 6;
-            var6_int = this.field_c.c((byte) 127);
-            var7 = this.field_c.c((byte) -28);
+            this.field_c.position = 72 * param4 + 6;
+            var6_int = this.field_c.readInt((byte) 127);
+            var7 = this.field_c.readInt((byte) -28);
             var13 = new byte[64];
             if (param0 != 28742) {
               stackIn_12_0 = (cg) null;
               return stackIn_12_0;
             }
-            this.field_c.b(var13, 0, -64, 64);
+            this.field_c.readBytes(var13, 0, -64, 64);
             var9 = new cg(param4, param2, param3, this.field_m, this.field_a, var6_int, var13, var7, param1);
             this.field_g[param4] = var9;
             stackIn_14_0 = var9;

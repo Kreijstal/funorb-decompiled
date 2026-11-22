@@ -204,7 +204,7 @@ class kf extends w {
         if (param0 != -1) {
           return;
         }
-        og.field_c = ig.field_a.c(false);
+        og.field_c = ig.field_a.readString(false);
         CharSequence var2 = (CharSequence) ((Object) og.field_c);
         cb.field_t = ck.a(var2, (byte) -48);
     }

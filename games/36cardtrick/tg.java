@@ -60,7 +60,7 @@ final class tg implements ci {
         }
     }
 
-    final static boolean a(int param0, pb param1) {
+    final static boolean a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -71,7 +71,7 @@ final class tg implements ci {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.f(param0 ^ 109);
+          var2_int = param1.readUnsignedByte(param0 ^ 109);
           stackIn_3_0 = (~var2_int == param0) ? 1 : 0;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;
@@ -132,15 +132,15 @@ final class tg implements ci {
         RuntimeException var6 = null;
         int var7 = 0;
         kc var8 = null;
-        pb var9 = null;
+        PacketBuffer var9 = null;
         try {
           var6_int = param1.field_o + param0;
           var7 = param1.field_i + param3;
           kl.b(param1.field_q, var7, var6_int, 48, param1.field_h);
           var8 = gh.field_n[1];
           if (param2 != 11447) {
-            var9 = (pb) null;
-            tg.a(65, (pb) null);
+            var9 = (PacketBuffer) null;
+            tg.a(65, (PacketBuffer) null);
           }
           if (param1 instanceof hl &&
             ((hl) (param1)).field_D) {

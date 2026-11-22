@@ -23,7 +23,7 @@ final class tf extends dk {
         this.field_F = 256;
     }
 
-    final static String a(ni param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -37,12 +37,12 @@ final class tf extends dk {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.d(-13583);
+            var3_int = param0.readUnsignedSmart(-13583);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, param1 - 1);
+            param0.position = param0.position + qg.field_e.a(param0.payload, param0.position, 0, var3_int, var4, param1 - 1);
             var5 = pg.a(var3_int, 0, var4, param1);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -73,8 +73,8 @@ final class tf extends dk {
         if (param0 == 0) {
           return;
         }
-        ni var2 = (ni) null;
-        tf.a((ni) null, 24, -4);
+        PacketBuffer var2 = (PacketBuffer) null;
+        tf.a((PacketBuffer) null, 24, -4);
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {

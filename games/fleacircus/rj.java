@@ -11,11 +11,11 @@ final class rj extends kc {
     static boolean field_j;
     static boolean field_n;
 
-    final void a(ni param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(this.field_l, (byte) 81);
+          param0.writePrefixedString(this.field_l, (byte) 81);
           int var3_int = 110 % ((param1 + 62) / 38);
-          param0.b(this.field_h, (byte) 94);
+          param0.writeBase38String(this.field_h, (byte) 94);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

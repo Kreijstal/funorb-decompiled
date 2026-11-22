@@ -223,27 +223,27 @@ final class qg extends kl implements ud {
         return jj.field_d;
     }
 
-    final static void a(od param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ah.field_K = param0.j(-788751192) << 5;
-          var2_int = param0.l(31760);
+          ah.field_K = param0.readUnsignedShort(-788751192) << 5;
+          var2_int = param0.readUnsignedByte(31760);
           ah.field_K = ah.field_K + (var2_int >> 3);
           d.field_b = (7 & var2_int) << 18;
-          d.field_b = d.field_b + (param0.j(-788751192) << 2);
-          var2_intLifetime1 = param0.l(31760);
+          d.field_b = d.field_b + (param0.readUnsignedShort(-788751192) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(31760);
           oh.field_d = (63 & var2_intLifetime1) << 15;
           d.field_b = d.field_b + (var2_intLifetime1 >> 6);
-          oh.field_d = oh.field_d + (param0.l(31760) << 7);
-          var2_intLifetime2 = param0.l(31760);
+          oh.field_d = oh.field_d + (param0.readUnsignedByte(31760) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte(31760);
           oh.field_d = oh.field_d + (var2_intLifetime2 >> 1);
           if (param1 <= 51) {
             field_W = (he[]) null;
           }
           LevelSession.field_e = var2_intLifetime2 << 16 & 65536;
-          LevelSession.field_e = LevelSession.field_e + param0.j(-788751192);
+          LevelSession.field_e = LevelSession.field_e + param0.readUnsignedShort(-788751192);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

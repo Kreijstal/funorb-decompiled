@@ -105,19 +105,19 @@ final class a extends ch {
             var2_int = -9 / ((-82 - param0) / 34);
             var3 = (na) (this.field_g.c((byte) -112));
             while (var3 != null) {
-              this.field_c.field_i = 0;
-              this.field_c.b(-9469, 1);
-              this.field_c.a(var3.field_j, 101);
-              this.field_m.a(0, (byte) -89, this.field_c.field_g.length, this.field_c.field_g);
+              this.field_c.position = 0;
+              this.field_c.writeByte(-9469, 1);
+              this.field_c.writeLong40(var3.field_j, 101);
+              this.field_m.a(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
               this.field_h.a((byte) -90, var3);
               var3 = (na) (this.field_g.b((byte) -122));
             }
             var2 = (na) (this.field_a.c((byte) -107));
             while (var2 != null) {
-              this.field_c.field_i = 0;
-              this.field_c.b(-9469, 0);
-              this.field_c.a(var2.field_j, 100);
-              this.field_m.a(0, (byte) -89, this.field_c.field_g.length, this.field_c.field_g);
+              this.field_c.position = 0;
+              this.field_c.writeByte(-9469, 0);
+              this.field_c.writeLong40(var2.field_j, 100);
+              this.field_m.a(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
               this.field_e.a((byte) -96, var2);
               var2 = (na) (this.field_a.b((byte) -122));
             }
@@ -137,23 +137,23 @@ final class a extends ch {
                   var4 = 10;
                 }
                 if (0 >= var4) {
-                  var5 = -this.field_j.field_u + this.field_j.field_s.field_g.length;
+                  var5 = -this.field_j.field_u + this.field_j.field_s.payload.length;
                   var6 = -this.field_j.field_t + 512;
-                  if (var6 > -this.field_j.field_s.field_i + var5) {
-                    var6 = var5 - this.field_j.field_s.field_i;
+                  if (var6 > -this.field_j.field_s.position + var5) {
+                    var6 = var5 - this.field_j.field_s.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_m.a((byte) 66, this.field_j.field_s.field_g, var6, this.field_j.field_s.field_i);
+                  this.field_m.a((byte) 66, this.field_j.field_s.payload, var6, this.field_j.field_s.position);
                   if (this.field_f != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_j.field_s.field_g[var7 + this.field_j.field_s.field_i] = (byte)hi.a((int) this.field_j.field_s.field_g[var7 + this.field_j.field_s.field_i], (int) this.field_f);
+                      this.field_j.field_s.payload[var7 + this.field_j.field_s.position] = (byte)hi.a((int) this.field_j.field_s.payload[var7 + this.field_j.field_s.position], (int) this.field_f);
                     }
                   }
                   this.field_j.field_t = this.field_j.field_t + var6;
-                  this.field_j.field_s.field_i = this.field_j.field_s.field_i + var6;
-                  if (this.field_j.field_s.field_i == var5) {
+                  this.field_j.field_s.position = this.field_j.field_s.position + var6;
+                  if (this.field_j.field_s.position == var5) {
                     this.field_j.d(12);
                     this.field_j.field_n = false;
                     this.field_j = null;
@@ -163,34 +163,34 @@ final class a extends ch {
                     }
                   }
                 } else {
-                  var5 = -this.field_i.field_i + var4;
+                  var5 = -this.field_i.position + var4;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_m.a((byte) 66, this.field_i.field_g, var5, this.field_i.field_i);
+                  this.field_m.a((byte) 66, this.field_i.payload, var5, this.field_i.position);
                   if (this.field_f != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.field_g[var6 + this.field_i.field_i] = (byte)hi.a((int) this.field_i.field_g[var6 + this.field_i.field_i], (int) this.field_f);
+                      this.field_i.payload[var6 + this.field_i.position] = (byte)hi.a((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_f);
                     }
                   }
-                  this.field_i.field_i = this.field_i.field_i + var5;
-                  if (var4 <= this.field_i.field_i) {
+                  this.field_i.position = this.field_i.position + var5;
+                  if (var4 <= this.field_i.position) {
                     if (this.field_j != null) {
                       if (this.field_j.field_t != 0) {
                         throw new IOException();
                       }
-                      if (this.field_i.field_g[0] != -1) {
+                      if (this.field_i.payload[0] != -1) {
                         this.field_j = null;
                       } else {
                         this.field_j.field_t = 1;
-                        this.field_i.field_i = 0;
+                        this.field_i.position = 0;
                       }
                     } else {
-                      this.field_i.field_i = 0;
-                      var6 = this.field_i.f(64);
-                      var7 = this.field_i.e((byte) 125);
-                      var8 = this.field_i.f(16);
-                      var9 = this.field_i.e((byte) 126);
+                      this.field_i.position = 0;
+                      var6 = this.field_i.readUnsignedByte(64);
+                      var7 = this.field_i.readInt((byte) 125);
+                      var8 = this.field_i.readUnsignedByte(16);
+                      var9 = this.field_i.readInt((byte) 126);
                       var10 = var8 & 127;
                       stackIn_46_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -225,10 +225,10 @@ final class a extends ch {
                       stackIn_61_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_61_0;
                       this.field_j = var14_ref;
-                      this.field_j.field_s = new pb(this.field_j.field_u + (var15 + var9));
-                      this.field_j.field_s.b(-9469, var10);
-                      this.field_j.field_s.a(-246, var9);
-                      this.field_i.field_i = 0;
+                      this.field_j.field_s = new PacketBuffer(this.field_j.field_u + (var15 + var9));
+                      this.field_j.field_s.writeByte(-9469, var10);
+                      this.field_j.field_s.writeInt(-246, var9);
+                      this.field_i.position = 0;
                       this.field_j.field_t = 10;
                     }
                   }
@@ -321,7 +321,7 @@ final class a extends ch {
             this.field_m = (jd) (param0);
             this.f(29034);
             this.a((byte) 85, param1);
-            this.field_i.field_i = 0;
+            this.field_i.position = 0;
             this.field_j = null;
             while (true) {
               var4_ref = (na) (this.field_h.a(-99));
@@ -341,11 +341,11 @@ final class a extends ch {
             }
             if (this.field_f != 0) {
               try {
-                this.field_c.field_i = 0;
-                this.field_c.b(-9469, 4);
-                this.field_c.b(-9469, (int) this.field_f);
-                this.field_c.a(-246, 0);
-                this.field_m.a(0, (byte) -89, this.field_c.field_g.length, this.field_c.field_g);
+                this.field_c.position = 0;
+                this.field_c.writeByte(-9469, 4);
+                this.field_c.writeByte(-9469, (int) this.field_f);
+                this.field_c.writeInt(-246, 0);
+                this.field_m.a(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -428,7 +428,7 @@ final class a extends ch {
         try {
           IOException iOException = null;
           int var3 = 0;
-          pb stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_5_1 = 0;
           int stackIn_6_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -438,7 +438,7 @@ final class a extends ch {
           }
           var3 = -115 / ((param0 + 61) / 55);
           try {
-            this.field_c.field_i = 0;
+            this.field_c.position = 0;
             stackIn_5_0 = this.field_c;
             stackIn_5_1 = -9469;
             if (!param1) {
@@ -446,9 +446,9 @@ final class a extends ch {
             } else {
               stackIn_6_2 = 2;
             }
-            ((pb) (Object) stackIn_5_0).b(stackIn_5_1, stackIn_6_2);
-            this.field_c.a(0L, 121);
-            this.field_m.a(0, (byte) -89, this.field_c.field_g.length, this.field_c.field_g);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
+            this.field_c.writeLong40(0L, 121);
+            this.field_m.a(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -525,11 +525,11 @@ final class a extends ch {
             field_n = (sg) null;
           }
           try {
-            this.field_c.field_i = 0;
-            this.field_c.b(-9469, 6);
-            this.field_c.a(3, (byte) 60);
-            this.field_c.e(0, param0 ^ 5330);
-            this.field_m.a(0, (byte) -89, this.field_c.field_g.length, this.field_c.field_g);
+            this.field_c.position = 0;
+            this.field_c.writeByte(-9469, 6);
+            this.field_c.writeMedium(3, (byte) 60);
+            this.field_c.writeShort(0, param0 ^ 5330);
+            this.field_m.a(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;

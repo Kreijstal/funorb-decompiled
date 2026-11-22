@@ -85,7 +85,7 @@ final class hb implements cg {
         field_a = null;
     }
 
-    final static void a(byte[] param0, java.math.BigInteger param1, java.math.BigInteger param2, byte param3, int param4, int param5, od param6) {
+    final static void a(byte[] param0, java.math.BigInteger param1, java.math.BigInteger param2, byte param3, int param4, int param5, PacketBuffer param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -119,33 +119,33 @@ final class hb implements cg {
             var8[var9] = wb.field_c.nextInt();
           }
           if (null == GameAppletShell.field_h ||
-            !(var7_int <= GameAppletShell.field_h.field_h.length)) {
-            GameAppletShell.field_h = new od(var7_int);
+            !(var7_int <= GameAppletShell.field_h.payload.length)) {
+            GameAppletShell.field_h = new PacketBuffer(var7_int);
           }
-          GameAppletShell.field_h.field_j = 0;
-          GameAppletShell.field_h.a(param4, param5, 29211, param0);
-          GameAppletShell.field_h.a((byte) -39, var7_int);
+          GameAppletShell.field_h.position = 0;
+          GameAppletShell.field_h.writeBytes(param4, param5, 29211, param0);
+          GameAppletShell.field_h.padZerosTo((byte) -39, var7_int);
           if (param3 > -25) {
             var11 = (java.awt.Canvas) null;
             hb.a(120, (java.awt.Canvas) null);
           }
-          GameAppletShell.field_h.a(var14, 7221);
+          GameAppletShell.field_h.encryptXtea(var14, 7221);
           if (null == hm.field_e ||
-            !(hm.field_e.field_h.length >= 100)) {
-            hm.field_e = new od(100);
+            !(hm.field_e.payload.length >= 100)) {
+            hm.field_e = new PacketBuffer(100);
           }
-          hm.field_e.field_j = 0;
-          hm.field_e.c(10, (byte) -86);
+          hm.field_e.position = 0;
+          hm.field_e.writeByte(10, (byte) -86);
           var12 = 0;
           var9Lifetime1 = var12;
           while (var12 < 4) {
-            hm.field_e.a(var14[var12], (byte) -8);
+            hm.field_e.writeInt(var14[var12], (byte) -8);
             var12++;
           }
-          hm.field_e.c(param4, -17402);
-          hm.field_e.a(param2, param1, 0);
-          param6.a(hm.field_e.field_j, 0, 29211, hm.field_e.field_h);
-          param6.a(GameAppletShell.field_h.field_j, 0, 29211, GameAppletShell.field_h.field_h);
+          hm.field_e.writeShort(param4, -17402);
+          hm.field_e.applyRsa(param2, param1, 0);
+          param6.writeBytes(hm.field_e.position, 0, 29211, hm.field_e.payload);
+          param6.writeBytes(GameAppletShell.field_h.position, 0, 29211, GameAppletShell.field_h.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

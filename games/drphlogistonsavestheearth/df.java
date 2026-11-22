@@ -10,7 +10,7 @@ final class df {
     static boolean field_o;
     static he[] field_k;
     private n field_d;
-    private od field_c;
+    private PacketBuffer field_c;
     private java.math.BigInteger field_n;
     private cm field_i;
     private gb field_j;
@@ -71,15 +71,15 @@ final class df {
               stackIn_10_0 = this.field_e[param0];
               return stackIn_10_0;
             }
-            this.field_c.field_j = param0 * 72 + 6;
+            this.field_c.position = param0 * 72 + 6;
             if (param4 < 64) {
               stackIn_13_0 = (de) null;
               return stackIn_13_0;
             }
-            var6_int = this.field_c.h(-97);
-            var7 = this.field_c.h(9);
+            var6_int = this.field_c.readInt(-97);
+            var7 = this.field_c.readInt(9);
             var13 = new byte[64];
-            this.field_c.b(0, 64, 128, var13);
+            this.field_c.readBytes(0, 64, 128, var13);
             var9 = new de(param0, param3, param2, this.field_j, this.field_d, var6_int, var13, var7, param1);
             this.field_e[param0] = var9;
             stackIn_15_0 = var9;
@@ -123,7 +123,7 @@ final class df {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        od var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -141,14 +141,14 @@ final class df {
         if (this.field_i.field_u) {
           return false;
         }
-        var10 = new od(this.field_i.i(13095));
-        var10.field_j = 5;
-        var3 = var10.l(31760);
-        var10.field_j = var10.field_j + var3 * 72;
-        var13 = new byte[-var10.field_j + var10.field_h.length];
+        var10 = new PacketBuffer(this.field_i.i(13095));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(31760);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.b(0, var13.length, 128, var13);
+        var10.readBytes(0, var13.length, 128, var13);
         if (null != this.field_n &&
           this.field_g != null) {
           var12 = new java.math.BigInteger(var13);
@@ -163,7 +163,7 @@ final class df {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = b.a(5, 51, var10.field_h, -5 + var10.field_j - var13.length);
+        var15 = b.a(5, 51, var10.payload, -5 + var10.position - var13.length);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[1 + var7]) {
             throw new RuntimeException();

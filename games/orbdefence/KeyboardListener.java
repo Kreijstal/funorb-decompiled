@@ -146,14 +146,14 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
     }
 
     final static String a(int param0) {
-        if (qc.field_g == mg.field_m) {
+        if (qc.field_g == PacketBuffer.field_m) {
           return sk.field_G;
         }
         if (!bd.field_u.a(false)) {
           return bd.field_u.a(-63);
         }
         int var1 = -5 % ((29 - param0) / 53);
-        if (tg.field_c != mg.field_m) {
+        if (tg.field_c != PacketBuffer.field_m) {
           return vh.field_k;
         }
         return bd.field_u.a(-118);

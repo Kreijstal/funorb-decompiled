@@ -43,7 +43,7 @@ final class ni {
           if (var6 == null) {
             return null;
           }
-          stackIn_6_0 = new rj(new pb(var6), param4);
+          stackIn_6_0 = new rj(new PacketBuffer(var6), param4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

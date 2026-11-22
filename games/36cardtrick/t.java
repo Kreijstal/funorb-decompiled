@@ -96,7 +96,7 @@ final class t {
         if (param0 < 84) {
           return;
         }
-        ri.field_c = rd.field_j.c(false);
+        ri.field_c = rd.field_j.readString(false);
         CharSequence var2 = (CharSequence) ((Object) ri.field_c);
         aa.field_fb = ff.a((byte) 116, var2);
     }

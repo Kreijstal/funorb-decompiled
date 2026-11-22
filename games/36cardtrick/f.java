@@ -32,15 +32,15 @@ final class f {
         var8 = Main.field_T;
         try {
           var9 = rd.field_j;
-          var2 = var9.f(-98);
-          var3 = var9.f(92);
+          var2 = var9.readUnsignedByte(-98);
+          var3 = var9.readUnsignedByte(92);
           if (param0 == ~var2) {
             var4 = (dl) (tf.field_q.a((byte) 74));
             if (var4 == null) {
               mc.a((byte) -126);
               return;
             }
-            var5 = -var9.field_i + al.field_a;
+            var5 = -var9.position + al.field_a;
             var11 = var4.field_i;
             var10 = var11;
             var6 = var10;
@@ -48,7 +48,7 @@ final class f {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.f(-126) << (bc.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(-126) << (bc.a(var7, 3) << 8));
             }
             var4.unlink(106);
             return;
@@ -58,7 +58,7 @@ final class f {
             mc.a((byte) -127);
             return;
           }
-          var4_int = var9.b((byte) 59);
+          var4_int = var9.readSignedSmart((byte) 59);
           var5_ref_gh = (gh) (sj.field_a.a((byte) 74));
           while (var5_ref_gh != null) {
             if (var3 != var5_ref_gh.field_m ||

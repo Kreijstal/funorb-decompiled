@@ -258,7 +258,7 @@ final class BufferedSocket implements Runnable {
         this.h(0);
     }
 
-    final static void a(byte param0, ni param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -268,19 +268,19 @@ final class BufferedSocket implements Runnable {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          rf.field_l = param1.d((byte) 72) << 5;
-          var2_int = param1.e(false);
+          rf.field_l = param1.readUnsignedShort((byte) 72) << 5;
+          var2_int = param1.readUnsignedByte(false);
           rf.field_l = rf.field_l + (var2_int >> 3);
           wd.field_c = var2_int << 18 & 1835008;
-          wd.field_c = wd.field_c + (param1.d((byte) -112) << 2);
-          var2_intLifetime1 = param1.e(false);
+          wd.field_c = wd.field_c + (param1.readUnsignedShort((byte) -112) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(false);
           wd.field_c = wd.field_c + (var2_intLifetime1 >> 6);
           dk.field_B = 2064384 & var2_intLifetime1 << 15;
-          dk.field_B = dk.field_B + (param1.e(false) << 7);
-          var2_intLifetime2 = param1.e(false);
+          dk.field_B = dk.field_B + (param1.readUnsignedByte(false) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(false);
           w.field_a = var2_intLifetime2 << 16 & 65536;
           dk.field_B = dk.field_B + (var2_intLifetime2 >> 1);
-          w.field_a = w.field_a + param1.d((byte) -88);
+          w.field_a = w.field_a + param1.readUnsignedShort((byte) -88);
           if (param0 != -107) {
             BufferedSocket.b(13);
           }

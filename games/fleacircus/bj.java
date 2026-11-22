@@ -69,11 +69,11 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
           var1 = ud.field_b;
           while (hd.a(-101)) {
             var1.e(8, 8);
-            fieldTemp$0 = var1.field_i + 1;
-            var1.field_i = var1.field_i + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ec.a(var1, false);
-            ud.field_b.c((byte) -80, var1.field_i - var2);
+            ud.field_b.backpatchByteLength((byte) -80, var1.position - var2);
           }
           if (param0 == -41) {
             return;

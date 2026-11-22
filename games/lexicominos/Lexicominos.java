@@ -2292,8 +2292,8 @@ public final class Lexicominos extends nk {
             field_F = (String) null;
           }
           var3.h(param2, 0);
-          var3.c(param1.field_h, -1);
-          var3.e(96, param1.field_k);
+          var3.writeByte(param1.field_h, -1);
+          var3.writeShort(96, param1.field_k);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

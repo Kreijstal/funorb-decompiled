@@ -78,8 +78,8 @@ class lk extends u {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        od var16 = null;
-        od var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -92,10 +92,10 @@ class lk extends u {
         int var5Lifetime1;
         var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var16 = new od(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_j = -2 + param0.length;
-          bd.field_M = var17.j(-788751192);
+          var17.position = -2 + param0.length;
+          bd.field_M = var17.readUnsignedShort(-788751192);
           vi.field_b = new int[bd.field_M];
           a.field_e = new byte[bd.field_M][];
           bd.field_O = new boolean[bd.field_M];
@@ -103,32 +103,32 @@ class lk extends u {
           kh.field_i = new int[bd.field_M];
           qa.field_J = new int[bd.field_M];
           gf.field_o = new int[bd.field_M];
-          var17.field_j = -(bd.field_M * 8) + (-7 + param0.length);
-          oe.field_b = var17.j(-788751192);
-          ih.field_K = var17.j(-788751192);
-          var3 = (var17.l(31760) & 255) + 1;
+          var17.position = -(bd.field_M * 8) + (-7 + param0.length);
+          oe.field_b = var17.readUnsignedShort(-788751192);
+          ih.field_K = var17.readUnsignedShort(-788751192);
+          var3 = (var17.readUnsignedByte(31760) & 255) + 1;
           for (var4 = 0; bd.field_M > var4; var4++) {
-            kh.field_i[var4] = var16.j(-788751192);
+            kh.field_i[var4] = var16.readUnsignedShort(-788751192);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < bd.field_M; var4Lifetime1++) {
-            vi.field_b[var4Lifetime1] = var17.j(-788751192);
+            vi.field_b[var4Lifetime1] = var17.readUnsignedShort(-788751192);
           }
           var5 = 35 % ((param1 + 12) / 63);
           for (var4Lifetime2 = 0; bd.field_M > var4Lifetime2; var4Lifetime2++) {
-            gf.field_o[var4Lifetime2] = var17.j(-788751192);
+            gf.field_o[var4Lifetime2] = var17.readUnsignedShort(-788751192);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < bd.field_M; var4Lifetime3++) {
-            qa.field_J[var4Lifetime3] = var17.j(-788751192);
+            qa.field_J[var4Lifetime3] = var17.readUnsignedShort(-788751192);
           }
-          var17.field_j = -(3 * var3) + (3 + (-7 + param0.length) - bd.field_M * 8);
+          var17.position = -(3 * var3) + (3 + (-7 + param0.length) - bd.field_M * 8);
           MouseInput.field_a = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            MouseInput.field_a[var4Lifetime4] = var17.g(-1);
+            MouseInput.field_a[var4Lifetime4] = var17.readUnsignedMedium(-1);
             if (MouseInput.field_a[var4Lifetime4] == 0) {
               MouseInput.field_a[var4Lifetime4] = 1;
             }
           }
-          var17.field_j = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; bd.field_M > var4Lifetime5; var4Lifetime5++) {
             var5Lifetime1 = gf.field_o[var4Lifetime5];
             var6 = qa.field_J[var4Lifetime5];
@@ -142,16 +142,16 @@ class lk extends u {
             var9 = var19;
             ll.field_o[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.l(31760);
+            var11 = var17.readUnsignedByte(31760);
             stackIn_23_0 = -1;
             stackIn_23_1 = ~(1 & var11);
             if (stackIn_23_0 == stackIn_23_1) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.n(-98);
+                var8[var12] = var17.readByte(-98);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.n(98);
+                  dupTemp$1 = var17.readByte(98);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_32_0 = var10;
@@ -166,13 +166,13 @@ class lk extends u {
             } else {
               for (var12 = 0; var5Lifetime1 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var13 * var5Lifetime1 + var12] = var17.n(-88);
+                  var8[var13 * var5Lifetime1 + var12] = var17.readByte(-88);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5Lifetime1 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.n(99);
+                    dupTemp$0 = var17.readByte(99);
                     var9[var13 * var5Lifetime1 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;
@@ -203,13 +203,13 @@ class lk extends u {
         }
     }
 
-    final void a(od param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         if (param1 <= 19) {
           return;
         }
         try {
-          param0.a(this.field_g, (byte) 127);
-          param0.b(1, this.field_h);
+          param0.writeLong(this.field_g, (byte) 127);
+          param0.writeBase38String(1, this.field_h);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -17,22 +17,22 @@ final class ga {
         }
         try {
           var8.h(param1, 0);
-          var8.field_h = var8.field_h + 1;
-          var4 = var8.field_h;
-          var8.c(1, -1);
-          var8.e(96, param0.field_j);
-          var8.e(105, param0.field_k);
-          var8.e(111, param0.field_l);
-          var8.f(param0.field_i, -32287);
-          var8.f(param0.field_q, -32287);
-          var8.f(param0.field_o, -32287);
-          var8.f(param0.field_s, -32287);
-          var8.c(param0.field_m.length, -1);
+          var8.position = var8.position + 1;
+          var4 = var8.position;
+          var8.writeByte(1, -1);
+          var8.writeShort(96, param0.field_j);
+          var8.writeShort(105, param0.field_k);
+          var8.writeShort(111, param0.field_l);
+          var8.writeInt(param0.field_i, -32287);
+          var8.writeInt(param0.field_q, -32287);
+          var8.writeInt(param0.field_o, -32287);
+          var8.writeInt(param0.field_s, -32287);
+          var8.writeByte(param0.field_m.length, -1);
           for (var5 = 0; param0.field_m.length > var5; var5++) {
-            var7.f(param0.field_m[var5], -32287);
+            var7.writeInt(param0.field_m[var5], -32287);
           }
-          var8.a(var4, (byte) 29);
-          var8.d(-var4 + var8.field_h, (byte) -124);
+          var8.appendCrc32(var4, (byte) 29);
+          var8.backpatchByteLength(-var4 + var8.position, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -48,7 +48,7 @@ final class ga {
         RuntimeException decompiledCaughtException = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (wf.field_i >= 10) {
+          if (PacketBuffer.field_i >= 10) {
             if (og.a(23440)) {
               if (ta.field_g != 0) {
                 uj.a(param0 - 126, param2);
@@ -120,7 +120,7 @@ final class ga {
         RuntimeException decompiledCaughtException = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (wf.field_i >= 10) {
+          if (PacketBuffer.field_i >= 10) {
             if (og.a(23440)) {
               if (ta.field_g != 0) {
                 uj.a(param0 - 126, param2);

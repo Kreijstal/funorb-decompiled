@@ -41,13 +41,13 @@ class fg extends jc {
               p.field_d = new cb((java.net.Socket) (ia.field_f.field_g), ef.field_i);
               var4 = cd.field_t;
               var5 = var4;
-              uk.field_b.field_i = 0;
+              uk.field_b.position = 0;
               stackIn_13_0 = (param0) ? -2 : -1;
               lh.field_c = stackIn_13_0;
               fe.field_b = stackIn_13_0;
               ce.field_d = stackIn_13_0;
               dh.field_bb = sk.field_E;
-              var5.field_i = 0;
+              var5.position = 0;
               nl.a(20994, gi.field_a, ti.field_eb, uk.field_b, dk.field_a);
               bh.a(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {

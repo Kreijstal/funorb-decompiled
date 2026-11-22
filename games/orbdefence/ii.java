@@ -9,13 +9,13 @@ class ii extends sh {
     static im field_c;
     static String field_e;
 
-    final void a(mg param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(this.field_b, -16943);
+          param0.writeLong(this.field_b, -16943);
           if (param1 != 27557) {
             field_d = (String) null;
           }
-          param0.a((byte) 113, this.field_f);
+          param0.writeBase38String((byte) 113, this.field_f);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -13,7 +13,7 @@ abstract class kc {
 
     abstract uj a(boolean param0);
 
-    abstract void a(ni param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     public static void a(int param0) {
         field_c = null;

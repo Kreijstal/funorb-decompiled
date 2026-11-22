@@ -91,16 +91,16 @@ final class af {
           return;
         }
         lh var2 = dh.field_N;
-        var2.h(23);
-        var2.h(97);
-        var2.h(-104);
+        var2.readInt(23);
+        var2.readInt(97);
+        var2.readInt(-104);
         if (param0 == 59) {
-          var2.h(param0 ^ 74);
+          var2.readInt(param0 ^ 74);
           var1.unlink(-16175);
           return;
         }
         field_c = (String) null;
-        var2.h(param0 ^ 74);
+        var2.readInt(param0 ^ 74);
         var1.unlink(-16175);
     }
 

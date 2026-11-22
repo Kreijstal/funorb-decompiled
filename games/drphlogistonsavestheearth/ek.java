@@ -65,12 +65,12 @@ final class ek extends IntrusiveNode {
               uj.field_j = new qe((java.net.Socket) (de.field_q.field_g), pi.field_I);
               var4 = dh.field_N;
               var5 = var4;
-              nj.field_p.field_j = 0;
+              nj.field_p.position = 0;
               stackIn_10_0 = (!param1) ? -1 : -2;
               l.field_q = stackIn_10_0;
               gg.field_l = stackIn_10_0;
               field_h = stackIn_10_0;
-              var5.field_j = 0;
+              var5.position = 0;
               tl.field_O = hh.field_b;
               q.a(ci.field_W, lb.field_v, 26800, dc.field_e, nj.field_p);
               qj.a(-1, 14656);

@@ -46,7 +46,7 @@ final class sd {
         wj.a(-118, true, true);
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

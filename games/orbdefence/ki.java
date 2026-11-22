@@ -488,12 +488,12 @@ final class ki {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        mg var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        mg var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        mg var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -557,8 +557,8 @@ final class ki {
             var35 = e.a(this.field_a[param2], true, 25966);
             var25 = var35;
             var9 = var25;
-            var26 = new mg(var35);
-            var26.a(5, var26.field_j.length, false, param0);
+            var26 = new PacketBuffer(var35);
+            var26.decryptXteaRange(5, var26.payload.length, false, param0);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -589,14 +589,14 @@ final class ki {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var32 = new mg(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_i = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var32.l(param1 ^ -895);
+                  var17 = var17 + var32.readInt(param1 ^ -895);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -613,12 +613,12 @@ final class ki {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_i = var11;
+              var32.position = var11;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var32.l(0);
+                  var19Lifetime2 = var19Lifetime2 + var32.readInt(0);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -638,15 +638,15 @@ final class ki {
             var11--;
             var12Lifetime1 = var23[var11] & 255;
             var11 = var11 - 4 * var12Lifetime1 * var5_int;
-            var29 = new mg(var43);
+            var29 = new PacketBuffer(var43);
             var38 = new int[var5_int];
             var30 = var38;
             var14_ref_int__ = var30;
-            var29.field_i = var11;
+            var29.position = var11;
             for (var15Lifetime1 = 0; var15Lifetime1 < var12Lifetime1; var15Lifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var5_int > var17Lifetime1; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var29.l(0);
+                var16Lifetime1 = var16Lifetime1 + var29.readInt(0);
                 var14_ref_int__[var17Lifetime1] = var14_ref_int__[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -658,12 +658,12 @@ final class ki {
               var15_ref_byte____[var16Lifetime2] = array$1;
               var38[var16Lifetime2] = 0;
             }
-            var29.field_i = var11;
+            var29.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var29.l(0);
+                var18Lifetime1 = var18Lifetime1 + var29.readInt(0);
                 mk.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;

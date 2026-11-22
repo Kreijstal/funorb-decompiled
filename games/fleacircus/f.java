@@ -13,14 +13,14 @@ final class f extends dk {
           if (ge.field_d != null) {
             try {
               ge.field_d.a(-107, 0L);
-              ge.field_d.a(ae.field_a.field_i, ae.field_a.field_k, 24, (byte) -23);
+              ge.field_d.a(ae.field_a.position, ae.field_a.payload, 24, (byte) -23);
             } catch (Exception exception) {
             }
           }
           if (param0 >= -9) {
             return;
           }
-          ae.field_a.field_i = ae.field_a.field_i + 24;
+          ae.field_a.position = ae.field_a.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

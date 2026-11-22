@@ -225,8 +225,8 @@ final class t {
     private final void a(boolean param0) {
         int discarded$0 = 0;
         int var2 = 150;
-        tl.field_p.b(bh.field_u[0], 320, var2 + 2 * tl.field_p.field_N, 0, -1, ni.field_j / 3);
-        tl.field_p.b(qh.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)tl.field_p.field_N * 3.5), 0, -1, ni.field_j / 3);
+        tl.field_p.b(bh.field_u[0], 320, var2 + 2 * tl.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
+        tl.field_p.b(qh.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)tl.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
         jj.field_P.d((640 - jj.field_P.field_w) / 2, var2 + tl.field_p.field_N * 4);
         tl.field_p.a(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         ca.field_L.a(50, 100, 0, -4575, 380);
@@ -1370,9 +1370,9 @@ final class t {
         for (var3 = 0; var3 < kb.field_k[g.field_s].length; var3++) {
           var9.a(kb.field_k[g.field_s][var3], 95 + ib.field_a[g.field_s][var3], ga.field_s[g.field_s][var3], -ib.field_a[g.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
         }
-        stackIn_6_0 = ((19 & ni.field_j) >>> 4 != 0) ? 0 : 1;
+        stackIn_6_0 = ((19 & PacketBuffer.field_j) >>> 4 != 0) ? 0 : 1;
         var3Lifetime1 = stackIn_6_0;
-        var4 = (ni.field_j >>> 5) % se.field_a.length;
+        var4 = (PacketBuffer.field_j >>> 5) % se.field_a.length;
         if (param0 > -82) {
           discarded$0 = this.a(-42, 28);
         }
@@ -1453,7 +1453,7 @@ final class t {
                 }
                 ((dd) (Object) stackIn_17_0[stackIn_18_1]).d(95, ga.field_s[g.field_s][3] + 3);
                 aj.field_t[30].d(95, ga.field_s[g.field_s][4] + 3);
-                var5 = (int)((double)ni.field_j / 2.0 % 16.0 * 2.0);
+                var5 = (int)((double)PacketBuffer.field_j / 2.0 % 16.0 * 2.0);
                 if (var5 > 16) {
                   var5 = -var5 + 32;
                 }

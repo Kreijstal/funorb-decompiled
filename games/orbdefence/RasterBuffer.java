@@ -91,7 +91,7 @@ abstract class RasterBuffer {
         try {
           var8 = new se(param0.a("", 1, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.b((byte) 90);
+          var3 = var10.readUnsignedByte((byte) 90);
           var10.n(9471);
           cg.field_c = mc.a(12, var10);
           if (param1 != -237) {

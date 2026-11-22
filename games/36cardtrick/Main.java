@@ -686,7 +686,7 @@ public final class Main extends c {
                         ga.a(true);
                       }
                       if (2 == var2_int) {
-                        pb.a((byte) -124, mk.g(-124));
+                        PacketBuffer.a((byte) -124, mk.g(-124));
                       }
                     }
                     decompiledFrameRemainder0 = (var3 != 0);
@@ -1033,7 +1033,7 @@ public final class Main extends c {
           var3_int = 96 % ((param0 + 78) / 36);
           var4 = this.field_U;
           if (4 == var4) {
-            pb.a(ve.field_c, 13427);
+            PacketBuffer.a(ve.field_c, 13427);
             decompiledFrameRemainder0 = (var6 != 0);
           } else {
             decompiledFrameRemainder0 = (var4 == 2);
@@ -1891,7 +1891,7 @@ public final class Main extends c {
           ce.a(-126, "instextra1", "", mh.field_c).d(0, 0);
           ce.a(-128, "instextra2", "", mh.field_c).d(0, 0);
           ce.a(-126, "instextra3", "", mh.field_c).d(0, 0);
-          pc.field_d = new kc[9];
+          Crc32Table.field_d = new kc[9];
           var24 = new kc(640, 480);
           var24.c();
           mg.field_j[4].b(0, 0);
@@ -1903,24 +1903,24 @@ public final class Main extends c {
           cg.field_i.d(-cg.field_i.field_p + 617, -2 + (457 - cg.field_i.field_o));
           var25 = 1 + (23 + cg.field_i.field_p);
           var26 = 1 + (25 + cg.field_i.field_o);
-          pc.field_d[0] = new kc(var25, var26);
-          pc.field_d[2] = new kc(var25, var26);
-          pc.field_d[6] = new kc(var25, var26);
-          pc.field_d[8] = new kc(var25, var26);
-          pc.field_d[1] = new kc(640 - var25 * 2, var26);
-          pc.field_d[7] = new kc(-(2 * var25) + 640, var26);
-          pc.field_d[3] = new kc(var25, 480 - 2 * var26);
-          pc.field_d[5] = new kc(var25, 480 - 2 * var26);
-          pc.field_d[4] = new kc(-(var25 * 2) + 640, -(var26 * 2) + 480);
-          kc.a(var24, pc.field_d[0], 0, 0, 0, 0, var25, var26);
-          kc.a(var24, pc.field_d[2], 640 - var25, 0, 0, 0, var25, var26);
-          kc.a(var24, pc.field_d[6], 0, -var26 + 480, 0, 0, var25, var26);
-          kc.a(var24, pc.field_d[8], -var25 + 640, -var26 + 480, 0, 0, var25, var26);
-          kc.a(var24, pc.field_d[1], var25, 0, 0, 0, 640 - 2 * var25, var26);
-          kc.a(var24, pc.field_d[7], var25, 480 - var26, 0, 0, 640 - 2 * var25, var26);
-          kc.a(var24, pc.field_d[3], 0, var26, 0, 0, var25, -(2 * var26) + 480);
-          kc.a(var24, pc.field_d[5], -var25 + 640, var26, 0, 0, var25, -(2 * var26) + 480);
-          kc.a(var24, pc.field_d[4], var25, var26, 0, 0, -(var25 * 2) + 640, 480 - var25 * 2);
+          Crc32Table.field_d[0] = new kc(var25, var26);
+          Crc32Table.field_d[2] = new kc(var25, var26);
+          Crc32Table.field_d[6] = new kc(var25, var26);
+          Crc32Table.field_d[8] = new kc(var25, var26);
+          Crc32Table.field_d[1] = new kc(640 - var25 * 2, var26);
+          Crc32Table.field_d[7] = new kc(-(2 * var25) + 640, var26);
+          Crc32Table.field_d[3] = new kc(var25, 480 - 2 * var26);
+          Crc32Table.field_d[5] = new kc(var25, 480 - 2 * var26);
+          Crc32Table.field_d[4] = new kc(-(var25 * 2) + 640, -(var26 * 2) + 480);
+          kc.a(var24, Crc32Table.field_d[0], 0, 0, 0, 0, var25, var26);
+          kc.a(var24, Crc32Table.field_d[2], 640 - var25, 0, 0, 0, var25, var26);
+          kc.a(var24, Crc32Table.field_d[6], 0, -var26 + 480, 0, 0, var25, var26);
+          kc.a(var24, Crc32Table.field_d[8], -var25 + 640, -var26 + 480, 0, 0, var25, var26);
+          kc.a(var24, Crc32Table.field_d[1], var25, 0, 0, 0, 640 - 2 * var25, var26);
+          kc.a(var24, Crc32Table.field_d[7], var25, 480 - var26, 0, 0, 640 - 2 * var25, var26);
+          kc.a(var24, Crc32Table.field_d[3], 0, var26, 0, 0, var25, -(2 * var26) + 480);
+          kc.a(var24, Crc32Table.field_d[5], -var25 + 640, var26, 0, 0, var25, -(2 * var26) + 480);
+          kc.a(var24, Crc32Table.field_d[4], var25, var26, 0, 0, -(var25 * 2) + 640, 480 - var25 * 2);
           var24_ref = null;
           d.field_u[4] = var12.b();
           d.field_u[4].c();
@@ -2081,7 +2081,7 @@ public final class Main extends c {
           ee.clearStaticReferences();
           wh.clearStaticReferences(120);
           ii.a(4308);
-          pb.c((byte) 111);
+          PacketBuffer.c((byte) 111);
           id.a(true);
           sd.clearStaticReferences((byte) 39);
           kg.clearStaticReferences((byte) 84);
@@ -2237,7 +2237,7 @@ public final class Main extends c {
           ed.a(3663);
           tf.g(-1);
           q.c(0);
-          pc.a(120);
+          Crc32Table.clearStaticReferences(120);
           il.b((byte) 38);
           cb.clearStaticReferences(-1962269296);
           nb.a(-98);
@@ -2372,7 +2372,7 @@ public final class Main extends c {
               bf.a(stackIn_48_0, (byte) -8);
               if (var6 != 0) {
                 vj.a(0, 0, vj.field_l, vj.field_g);
-                tc.a(param0 ^ -17180, pc.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
+                tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
                 if (ff.field_b == 9) {
                   var3 = hb.field_d << 3;
                   var4 = qf.m(-32749);
@@ -2385,7 +2385,7 @@ public final class Main extends c {
             }
           } else {
             vj.a(0, 0, vj.field_l, vj.field_g);
-            tc.a(param0 ^ -17180, pc.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
+            tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
             if (ff.field_b == 9) {
               var3 = hb.field_d << 3;
               var4 = qf.m(-32749);
@@ -2614,11 +2614,11 @@ public final class Main extends c {
           var1 = na.field_r;
           while (gl.b(true)) {
             var1.h(8, 0);
-            fieldTemp$0 = var1.field_i + 1;
-            var1.field_i = var1.field_i + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             fl.a(var1, false);
-            na.field_r.f(-var2 + var1.field_i, 8049);
+            na.field_r.backpatchByteLength(-var2 + var1.position, 8049);
             if (var3 != 0) {
               return;
             }
@@ -2663,7 +2663,7 @@ public final class Main extends c {
               var3 > var5_ref_kf.field_g) {
               var5_ref_kf.unlink(119);
               al.field_a = var5_ref_kf.field_i.length;
-              rd.field_j.field_i = 0;
+              rd.field_j.position = 0;
               var6_int = 0;
               do {
                 if (!(var6_int < al.field_a)) {
@@ -2673,7 +2673,7 @@ public final class Main extends c {
                   pd.field_l = var5_ref_kf.field_h;
                   break;
                 }
-                rd.field_j.field_g[var6_int] = var5_ref_kf.field_i[var6_int];
+                rd.field_j.payload[var6_int] = var5_ref_kf.field_i[var6_int];
                 var6_int++;
               } while (var8 == 0);
               return true;
@@ -2682,7 +2682,7 @@ public final class Main extends c {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (0 > vd.field_u) {
-              rd.field_j.field_i = 0;
+              rd.field_j.position = 0;
               stackIn_36_0 = r.a(1, (byte) 126);
               decompiledFrameRemainder0 = (var8 == 0);
               if (decompiledFrameRemainder0) {
@@ -2690,7 +2690,7 @@ public final class Main extends c {
                   return false;
                 }
                 vd.field_u = rd.field_j.g((byte) -35);
-                rd.field_j.field_i = 0;
+                rd.field_j.position = 0;
                 al.field_a = param1[vd.field_u];
               }
             }
@@ -2712,7 +2712,7 @@ public final class Main extends c {
               var7 = 0;
               while (true) {
                 if (al.field_a > var7) {
-                  var6.field_i[var7] = rd.field_j.field_g[var7];
+                  var6.field_i[var7] = rd.field_j.payload[var7];
                   var7++;
                   if (var8 == 0) {
                     continue;
@@ -2837,7 +2837,7 @@ public final class Main extends c {
                   vf.field_b = vf.field_b - (tk.field_c << 9);
                   rj.field_p = rj.field_p + (tk.field_c << 9);
                 } else {
-                  pb.a(ve.field_c, param0 ^ 13426);
+                  PacketBuffer.a(ve.field_c, param0 ^ 13426);
                   this.a(11246, 7, 3, false);
                 }
               } else {

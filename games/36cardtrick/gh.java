@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gh extends IntrusiveNode {
-    static pb field_h;
+    static PacketBuffer field_h;
     static boolean field_g;
     int field_m;
     static volatile boolean field_j;
@@ -55,6 +55,6 @@ final class gh extends IntrusiveNode {
         field_j = true;
         field_g = false;
         field_i = "Close";
-        field_h = new pb(256);
+        field_h = new PacketBuffer(256);
     }
 }

@@ -78,7 +78,7 @@ abstract class u {
         }
     }
 
-    abstract void a(od param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     final static ig a(vj param0, int param1, int param2) {
         byte[] var3 = null;
@@ -146,7 +146,7 @@ abstract class u {
         }
     }
 
-    final static void a(od param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -194,9 +194,9 @@ abstract class u {
                   var2[var4] = (byte)-1;
                 }
               }
-              param0.a(24, 0, 29211, var10);
+              param0.writeBytes(24, 0, 29211, var10);
             } else {
-              param0.a(24, 0, 29211, var10);
+              param0.writeBytes(24, 0, 29211, var10);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

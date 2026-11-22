@@ -62,7 +62,7 @@ final class ai extends DualLinkNode {
         return var2.toString();
     }
 
-    private final void a(od param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -75,30 +75,30 @@ final class ai extends DualLinkNode {
         int var6 = 0;
         sa var7 = null;
         int var9 = 0;
-        od var10 = null;
+        PacketBuffer var10 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param0.l(31760);
+              var4_int = param0.readUnsignedByte(31760);
               this.field_D = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_D[var5] = param0.j(-788751192);
+                this.field_D[var5] = param0.readUnsignedShort(-788751192);
               }
             } else {
               if (param2 == 3) {
-                var4_int = param0.l(31760);
+                var4_int = param0.readUnsignedByte(31760);
                 this.field_u = new int[var4_int][];
                 this.field_E = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param0.j(-788751192);
+                  var6 = param0.readUnsignedShort(-788751192);
                   var7 = m.a(var6, (byte) 46);
                   if (var7 != null) {
                     this.field_E[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_u[var5] = array$0;
                     for (var8 = 0; var7.field_a > var8; var8++) {
-                      this.field_u[var5][var8] = param0.j(-788751192);
+                      this.field_u[var5][var8] = param0.readUnsignedShort(-788751192);
                     }
                   }
                 }
@@ -108,11 +108,11 @@ final class ai extends DualLinkNode {
               }
             }
           } else {
-            this.field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
+            this.field_z = ki.a((byte) -123, '<', param0.readString((byte) -56));
           }
           if (param1 >= -6) {
-            var10 = (od) null;
-            this.a((od) null, 90);
+            var10 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class ai extends DualLinkNode {
     ai() {
     }
 
-    final void a(od param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -172,7 +172,7 @@ final class ai extends DualLinkNode {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.l(31760);
+            var3_int = param0.readUnsignedByte(31760);
             if (0 != var3_int) {
               this.a(param0, param1 ^ -61, var3_int);
               continue;

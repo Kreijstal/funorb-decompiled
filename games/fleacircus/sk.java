@@ -8,14 +8,14 @@ final class sk implements Runnable {
     private int field_g;
     private java.net.URL field_c;
     private od field_e;
-    private ni field_d;
+    private PacketBuffer field_d;
     private ce field_f;
     private od field_h;
     private od field_a;
 
-    final ni a(int param0) {
+    final PacketBuffer a(int param0) {
         if (param0 < 83) {
-          return (ni) null;
+          return (PacketBuffer) null;
         }
         if (this.field_g != 3) {
           return null;
@@ -76,7 +76,7 @@ final class sk implements Runnable {
               var3.write(ea.a(-18428, var5));
               this.field_b = new DataInputStream(var4.getInputStream());
             }
-            this.field_d.field_i = 0;
+            this.field_d.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,16 +167,16 @@ final class sk implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = fleas.field_A ? 1 : 0;
           try {
-            while (this.field_d.field_i < this.field_d.field_k.length) {
-              var1_int = this.field_b.read(this.field_d.field_k, this.field_d.field_i, -this.field_d.field_i + this.field_d.field_k.length);
+            while (this.field_d.position < this.field_d.payload.length) {
+              var1_int = this.field_b.read(this.field_d.payload, this.field_d.position, -this.field_d.position + this.field_d.payload.length);
               if (0 <= var1_int) {
-                this.field_d.field_i = this.field_d.field_i + var1_int;
+                this.field_d.position = this.field_d.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_d.field_i == this.field_d.field_k.length) {
-              throw sk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_k.length + " " + this.field_c));
+            if (this.field_d.position == this.field_d.payload.length) {
+              throw sk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.payload.length + " " + this.field_c));
             }
             var1 = this;
             synchronized (var1) {
@@ -215,7 +215,7 @@ final class sk implements Runnable {
         try {
           this.field_f = param0;
           this.field_c = param1;
-          this.field_d = new ni(param2);
+          this.field_d = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

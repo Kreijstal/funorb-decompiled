@@ -89,27 +89,27 @@ abstract class dk extends UiComponent implements wg {
           if (sg.field_h != null) {
             if (0 <= param1) {
               decompiledFrameRemainder0 = (ResourceArchive.field_k == fh.field_b);
-              if ((decompiledFrameRemainder0) && (ud.field_b.field_i == 0 &&
+              if ((decompiledFrameRemainder0) && (ud.field_b.position == 0 &&
                 lj.a((byte) -116) > jd.field_n + 10000L)) {
                 ud.field_b.e(8, param1);
               }
             } else {
-              if (ud.field_b.field_i == 0 &&
+              if (ud.field_b.position == 0 &&
                 lj.a((byte) -116) > jd.field_n + 10000L) {
                 ud.field_b.e(8, param1);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ud.field_b.field_i > 0) {
+              if (ud.field_b.position > 0) {
                 try {
-                  sg.field_h.a((byte) -97, ud.field_b.field_i, 0, ud.field_b.field_k);
+                  sg.field_h.a((byte) -97, ud.field_b.position, 0, ud.field_b.payload);
                   jd.field_n = lj.a((byte) -82);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   k.c(-28354);
                 }
-                ud.field_b.field_i = 0;
+                ud.field_b.position = 0;
               }
               if (param0 != 41) {
                 field_C = (vg) null;
@@ -117,7 +117,7 @@ abstract class dk extends UiComponent implements wg {
               return;
             }
           }
-          ud.field_b.field_i = 0;
+          ud.field_b.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

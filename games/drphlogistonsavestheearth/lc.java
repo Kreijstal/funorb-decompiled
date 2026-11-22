@@ -304,7 +304,7 @@ final class lc extends IntrusiveNode {
     final static void a(byte param0) {
         fl.field_i = false;
         int var1 = 51 % ((-60 - param0) / 37);
-        dh.field_N.l(31760);
+        dh.field_N.readUnsignedByte(31760);
     }
 
     lc() {

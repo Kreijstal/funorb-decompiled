@@ -74,7 +74,7 @@ final class va {
           Throwable decompiledCaughtException = null;
           IOException var2_ref = null;
           try {
-            if (cd.field_t.field_i >= param1) {
+            if (cd.field_t.position >= param1) {
               return true;
             }
             if (null == p.field_d) {
@@ -86,16 +86,16 @@ final class va {
               }
               var2_int = p.field_d.b((byte) 101);
               if (0 < var2_int) {
-                if (var2_int > -cd.field_t.field_i + param1) {
-                  var2_int = param1 - cd.field_t.field_i;
+                if (var2_int > -cd.field_t.position + param1) {
+                  var2_int = param1 - cd.field_t.position;
                 }
-                p.field_d.a(cd.field_t.field_i, var2_int, -24, cd.field_t.field_j);
+                p.field_d.a(cd.field_t.position, var2_int, -24, cd.field_t.payload);
                 of.field_L = ji.b(-19);
-                cd.field_t.field_i = cd.field_t.field_i + var2_int;
-                if (cd.field_t.field_i < param1) {
+                cd.field_t.position = cd.field_t.position + var2_int;
+                if (cd.field_t.position < param1) {
                   return false;
                 }
-                cd.field_t.field_i = 0;
+                cd.field_t.position = 0;
                 return true;
               }
               if (var2_int < 0 ||
@@ -653,7 +653,7 @@ final class va {
           }
           var2Lifetime83 = jk.a(1, "awesomewin");
           if (var2Lifetime83 != null) {
-            mg.field_h = bk.a(var2Lifetime83, -12465);
+            PacketBuffer.field_h = bk.a(var2Lifetime83, -12465);
           }
           var2Lifetime84 = jk.a(1, "blambolicouswin");
           if (null != var2Lifetime84) {

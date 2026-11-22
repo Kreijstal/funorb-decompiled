@@ -11,7 +11,7 @@ final class kb {
         if (var3 == null) {
           return null;
         }
-        return new kb(new od(var3));
+        return new kb(new PacketBuffer(var3));
     }
 
     final vk a() {
@@ -24,7 +24,7 @@ final class kb {
         if (var3 == null) {
           return null;
         }
-        return new kb(new od(var3));
+        return new kb(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -67,19 +67,19 @@ final class kb {
         return var3;
     }
 
-    private kb(od param0) {
+    private kb(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new nk[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.l(31760);
+          var3 = param0.readUnsignedByte(31760);
           if (var3 != 0) {
-            param0.field_j = param0.field_j - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new nk();
             this.field_c[var2].a(param0);
           }
         }
-        this.field_b = param0.j(-788751192);
-        this.field_a = param0.j(-788751192);
+        this.field_b = param0.readUnsignedShort(-788751192);
+        this.field_a = param0.readUnsignedShort(-788751192);
     }
 }

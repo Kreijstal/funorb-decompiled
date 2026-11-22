@@ -53,11 +53,11 @@ final class gd {
           if (s.field_y != null) {
             try {
               s.field_y.a(0L, -1);
-              s.field_y.a(false, cd.field_t.field_j, 24, cd.field_t.field_i);
+              s.field_y.a(false, cd.field_t.payload, 24, cd.field_t.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              cd.field_t.field_i = cd.field_t.field_i + 24;
+              cd.field_t.position = cd.field_t.position + 24;
               if (param0 > 38) {
                 return;
               }
@@ -65,7 +65,7 @@ final class gd {
               return;
             }
           }
-          cd.field_t.field_i = cd.field_t.field_i + 24;
+          cd.field_t.position = cd.field_t.position + 24;
           if (param0 <= 38) {
             field_b = (hj[]) null;
           }

@@ -14,16 +14,16 @@ final class nf {
         }
     }
 
-    final static void a(pb param0, boolean param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, boolean param1, int param2, int param3, int param4) {
         try {
-          param0.b(-9469, 12);
-          param0.e(17, 26040);
+          param0.writeByte(-9469, 12);
+          param0.writeShort(17, 26040);
           if (param1) {
             field_d = (de) null;
           }
-          param0.e(param3, 26040);
-          param0.e(param2, 26040);
-          param0.b(-9469, param4);
+          param0.writeShort(param3, 26040);
+          param0.writeShort(param2, 26040);
+          param0.writeByte(-9469, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "nf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

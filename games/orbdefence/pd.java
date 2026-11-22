@@ -132,7 +132,7 @@ final class pd extends IntrusiveNode {
         if (11 == this.field_y) {
           var7 += 100;
         }
-        var8 = mg.a(this.field_y, (byte) -86);
+        var8 = PacketBuffer.a(this.field_y, (byte) -86);
         var9 = wh.field_a[var8];
         var10 = 12 * var8;
         var11 = var10 + this.field_A / 2 % var9;

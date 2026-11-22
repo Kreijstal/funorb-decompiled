@@ -39,7 +39,7 @@ final class mh extends aa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 21) {
-            stackIn_4_0 = ni.a(param1.field_i.length(), '*', (byte) 78);
+            stackIn_4_0 = PacketBuffer.a(param1.field_i.length(), '*', (byte) 78);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

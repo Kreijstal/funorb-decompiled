@@ -18,7 +18,7 @@ final class kf extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          pb var2 = null;
+          PacketBuffer var2 = null;
           if (dg.field_H.field_b >= 4) {
             if (dg.field_H.field_l == -1) {
               return 3;
@@ -47,11 +47,11 @@ final class kf extends IntrusiveNode {
             }
             if (2 == ed.field_c) {
               tf.field_r = new jd((java.net.Socket) (d.field_a.field_e), bi.field_b);
-              var2 = new pb(13);
+              var2 = new PacketBuffer(13);
               nf.a(var2, false, cc.field_c, eh.field_l, pf.field_h);
-              var2.b(-9469, 15);
-              var2.a(-246, oj.field_d);
-              tf.field_r.a(0, (byte) -89, 13, var2.field_g);
+              var2.writeByte(-9469, 15);
+              var2.writeInt(-246, oj.field_d);
+              tf.field_r.a(0, (byte) -89, 13, var2.payload);
               ed.field_c = ed.field_c + 1;
               lc.field_b = id.a(70) + 30000L;
             }

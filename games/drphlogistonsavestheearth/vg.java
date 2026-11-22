@@ -677,11 +677,11 @@ class vg extends IntrusiveNode {
           stackIn_5_0 = 99;
           while (ck.b(stackIn_5_0)) {
             var1.d(8, -18392);
-            fieldTemp$0 = var1.field_j + 1;
-            var1.field_j = var1.field_j + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             nc.a((byte) -95, var1);
-            nj.field_p.b(-var2 + var1.field_j, (byte) 87);
+            nj.field_p.backpatchByteLength(-var2 + var1.position, (byte) 87);
             if (var3 != 0) {
               return;
             }
@@ -920,7 +920,7 @@ class vg extends IntrusiveNode {
           }
           var8 = new lh(param0.a("logo.fo3d", "", 24874));
           var9 = var8;
-          var3 = var9.l(31760);
+          var3 = var9.readUnsignedByte(31760);
           var9.d((byte) 65);
           dm.field_B = m.a(103, var9);
           q.field_b = new int[var3][];

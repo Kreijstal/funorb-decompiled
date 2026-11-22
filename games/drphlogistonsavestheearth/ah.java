@@ -342,7 +342,7 @@ final class ah extends pj implements fh, ke {
           return;
         }
         try {
-          od.a(-1630758008, PcmSampleStream.a(param0, 100, 96, param1));
+          PacketBuffer.a(-1630758008, PcmSampleStream.a(param0, 100, 96, param1));
           if (param2 != -1321705304) {
             field_L = (he[]) null;
           }

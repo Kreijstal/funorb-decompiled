@@ -34,7 +34,7 @@ final class cl {
           if (param0 != -36) {
             field_c = (String) null;
           }
-          var2 = var13.e(false);
+          var2 = var13.readUnsignedByte(false);
           if (var2 == 0) {
             var11 = ContextualRuntimeException.a((byte) -112);
             var17 = var11;
@@ -43,9 +43,9 @@ final class cl {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((ni) ((Object) var5)).e(false);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(false);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((ni) ((Object) var5)).c((byte) -114);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -114);
             }
             var16_ref = (ia) (rj.field_i.c((byte) 47));
             if (var16_ref == null) {

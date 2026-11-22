@@ -30,7 +30,7 @@ final class lf {
             stackIn_2_0 = (qj) null;
             return stackIn_2_0;
           }
-          if (tg.field_c == mg.field_m) {
+          if (tg.field_c == PacketBuffer.field_m) {
             stackIn_5_0 = null;
             return (qj) (stackIn_5_0);
           }
@@ -42,7 +42,7 @@ final class lf {
           }
           uc.field_q = null;
           pg.field_a = param0;
-          tg.field_c = mg.field_m;
+          tg.field_c = PacketBuffer.field_m;
           stackIn_11_0 = null;
           return (qj) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

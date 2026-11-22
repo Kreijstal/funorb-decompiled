@@ -47,10 +47,10 @@ final class qk {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        pb var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        pb var29 = null;
-        pb var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -116,8 +116,8 @@ final class qk {
             var35 = ce.a(true, 0, this.field_g[param1]);
             var25 = var35;
             var9 = var25;
-            var26 = new pb(var35);
-            var26.a(5, var26.field_g.length, -115, param2);
+            var26 = new PacketBuffer(var35);
+            var26.decryptXteaRange(5, var26.payload.length, -115, param2);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -148,14 +148,14 @@ final class qk {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var5_int * (var12 * 4);
-              var29 = new pb(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_i = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var29.e((byte) 125);
+                  var17 = var17 + var29.readInt((byte) 125);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -171,13 +171,13 @@ final class qk {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_i = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.e((byte) 127);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt((byte) 127);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -197,15 +197,15 @@ final class qk {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * var5_int * var12Lifetime1;
-            var31 = new pb(var43);
-            var31.field_i = var11;
+            var31 = new PacketBuffer(var43);
+            var31.position = var11;
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
             for (var15_intLifetime1 = 0; var15_intLifetime1 < var12Lifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.e((byte) 124);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt((byte) 124);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -217,12 +217,12 @@ final class qk {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_i = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.e((byte) 126);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) 126);
                 og.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;

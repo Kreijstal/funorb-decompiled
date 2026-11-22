@@ -57,7 +57,7 @@ final class eb {
         }
     }
 
-    final static boolean a(od param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -68,7 +68,7 @@ final class eb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.l(31760);
+          var2_int = param0.readUnsignedByte(31760);
           if (param1 < 6) {
             return true;
           }

@@ -7,21 +7,21 @@ final class qb {
     final static void a(int param0, byte param1, ql param2) {
         ih var5 = ud.field_b;
         var5.e(8, param0);
-        var5.field_i = var5.field_i + 1;
-        int var4 = var5.field_i;
-        var5.a(-11, 1);
-        var5.a(-11, param2.field_i);
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
+        var5.writeByte(-11, 1);
+        var5.writeByte(-11, param2.field_i);
         if (param1 < 43) {
           return;
         }
         try {
-          var5.b(-24213, param2.field_m);
-          var5.a(param2.field_r, (byte) -24);
-          var5.a(param2.field_n, (byte) -120);
-          var5.a(param2.field_p, (byte) -18);
-          var5.a(param2.field_q, (byte) -60);
-          var5.c(var4, -30532);
-          var5.c((byte) -111, -var4 + var5.field_i);
+          var5.writeSignedSmart(-24213, param2.field_m);
+          var5.writeInt(param2.field_r, (byte) -24);
+          var5.writeInt(param2.field_n, (byte) -120);
+          var5.writeInt(param2.field_p, (byte) -18);
+          var5.writeInt(param2.field_q, (byte) -60);
+          var5.appendCrc32(var4, -30532);
+          var5.backpatchByteLength((byte) -111, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "qb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

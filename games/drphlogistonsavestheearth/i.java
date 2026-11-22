@@ -15,9 +15,9 @@ final class i {
         field_b = (bb) null;
     }
 
-    final static void a(od param0, od param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
+    final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
         try {
-          hb.a(param1.field_h, param3, param2, (byte) -41, param1.field_j, param4, param0);
+          hb.a(param1.payload, param3, param2, (byte) -41, param1.position, param4, param0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -91,7 +91,7 @@ final class i {
           }
           if (param0 != -32512) {
             var3 = (java.math.BigInteger) null;
-            i.a((od) null, (od) null, (java.math.BigInteger) null, (java.math.BigInteger) null, -76);
+            i.a((PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (java.math.BigInteger) null, -76);
           }
           if (param1.equals("F")) {
             stackIn_22_0 = Float.TYPE;

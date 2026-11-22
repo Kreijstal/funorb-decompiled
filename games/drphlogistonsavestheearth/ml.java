@@ -143,7 +143,7 @@ final class ml extends IntrusiveNode {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2, boolean param3) {
+    final static int computeCrc32(byte[] param0, int param1, int param2, boolean param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

@@ -84,7 +84,7 @@ final class kg extends nb implements ue, jk {
         if (param0 != 0) {
           return (String) null;
         }
-        return ig.field_a.c(false);
+        return ig.field_a.readString(false);
     }
 
     public final void a(int param0, bc param1, int param2, int param3) {

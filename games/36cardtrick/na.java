@@ -7,7 +7,7 @@ final class na extends la {
     int field_t;
     static String field_p;
     static w field_r;
-    pb field_s;
+    PacketBuffer field_s;
 
     final byte[] b(boolean param0) {
         if (!param0) {
@@ -16,8 +16,8 @@ final class na extends la {
         if (this.field_n) {
           throw new RuntimeException();
         }
-        if (this.field_s.field_i >= -this.field_u + this.field_s.field_g.length) {
-          return this.field_s.field_g;
+        if (this.field_s.position >= -this.field_u + this.field_s.payload.length) {
+          return this.field_s.payload;
         }
         throw new RuntimeException();
     }
@@ -142,10 +142,10 @@ final class na extends la {
           return 0;
         }
         if (!param0) {
-          return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
+          return 100 * this.field_s.position / (this.field_s.payload.length - this.field_u);
         }
         na.clearStaticReferences(true);
-        return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
+        return 100 * this.field_s.position / (this.field_s.payload.length - this.field_u);
     }
 
     public static void clearStaticReferences(boolean param0) {

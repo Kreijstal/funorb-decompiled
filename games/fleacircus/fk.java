@@ -4,7 +4,7 @@
 final class fk extends dl {
     static vc field_z;
     static String field_B;
-    ni field_A;
+    PacketBuffer field_A;
     static boolean field_D;
     byte field_E;
     static int field_C;
@@ -87,7 +87,7 @@ final class fk extends dl {
           return 45;
         }
         if (this.field_A != null) {
-          return 100 * this.field_A.field_i / (this.field_A.field_k.length - this.field_E);
+          return 100 * this.field_A.position / (this.field_A.payload.length - this.field_E);
         }
         return 0;
     }
@@ -96,14 +96,14 @@ final class fk extends dl {
         if (this.field_q) {
           throw new RuntimeException();
         }
-        if (this.field_A.field_i < -this.field_E + this.field_A.field_k.length) {
+        if (this.field_A.position < -this.field_E + this.field_A.payload.length) {
           throw new RuntimeException();
         }
         if (param0 == 100) {
-          return this.field_A.field_k;
+          return this.field_A.payload;
         }
         field_D = false;
-        return this.field_A.field_k;
+        return this.field_A.payload;
     }
 
     fk() {

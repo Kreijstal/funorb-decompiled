@@ -5,7 +5,7 @@ import java.io.*;
 
 final class vc extends IOException {
     static uf field_a;
-    static pb field_b;
+    static PacketBuffer field_b;
 
     final static wb b(int param0) {
         wb var1 = new wb(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[param0], na.field_q[0], hb.field_a[0], rd.field_k[0], jf.field_i);

@@ -49,7 +49,7 @@ final class wa {
         if (param0) {
           wa.a(false, false, -70);
         }
-        String var2 = 0 == (1 & ni.field_j * 2 / 50) ? ":" : "<col=<%0>>:</col>";
+        String var2 = 0 == (1 & PacketBuffer.field_j * 2 / 50) ? ":" : "<col=<%0>>:</col>";
         String var3 = var2;
         var3 = var2;
         var3 = Integer.toString(var1 % 60);

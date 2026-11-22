@@ -56,7 +56,7 @@ final class uj {
         if (var3 == null) {
           return null;
         }
-        return new uj(new pb(var3));
+        return new uj(new PacketBuffer(var3));
     }
 
     final static uj a(qk param0, String param1, String param2) {
@@ -64,22 +64,22 @@ final class uj {
         if (var3 == null) {
           return null;
         }
-        return new uj(new pb(var3));
+        return new uj(new PacketBuffer(var3));
     }
 
-    private uj(pb param0) {
+    private uj(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new hd[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.f(36);
+          var3 = param0.readUnsignedByte(36);
           if (var3 != 0) {
-            param0.field_i = param0.field_i - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new hd();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.d((byte) 72);
-        this.field_c = param0.d((byte) 72);
+        this.field_b = param0.readUnsignedShort((byte) 72);
+        this.field_c = param0.readUnsignedShort((byte) 72);
     }
 }

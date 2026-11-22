@@ -38,7 +38,7 @@ final class ml {
         throw new IllegalStateException();
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
+    final static int computeCrc32(byte[] param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -52,7 +52,7 @@ final class ml {
         try {
           var4_int = -1;
           for (var5 = param1; param2 > var5; var5++) {
-            var4_int = pc.field_b[(param0[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
+            var4_int = Crc32Table.lookupTable[(param0[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
           }
           if (param3 != 12011) {
             field_a = 58;

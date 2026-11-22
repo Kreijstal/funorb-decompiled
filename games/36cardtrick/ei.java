@@ -64,11 +64,11 @@ final class ei extends vf {
           }
           var3 = na.field_r;
           var3.h(param2, 0);
-          var3.b(-9469, 5);
-          var3.b(-9469, 0);
-          var3.e(param1.field_g, 26040);
-          var3.b(-9469, param1.field_k);
-          var3.b(-9469, param1.field_h);
+          var3.writeByte(-9469, 5);
+          var3.writeByte(-9469, 0);
+          var3.writeShort(param1.field_g, 26040);
+          var3.writeByte(-9469, param1.field_k);
+          var3.writeByte(-9469, param1.field_h);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ei.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

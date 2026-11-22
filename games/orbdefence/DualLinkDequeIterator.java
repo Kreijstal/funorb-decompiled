@@ -37,21 +37,21 @@ final class DualLinkDequeIterator implements Iterator {
         try {
           var6 = uk.field_b;
           var6.i(param2, 112);
-          var6.field_i = var6.field_i + 1;
-          var4 = var6.field_i;
-          var6.a(1, param0 ^ 30243);
-          var6.a(param1.field_j, -8);
-          var6.f(-1, param1.field_i);
-          var6.b(param1.field_g, -1);
-          var6.b(param1.field_l, param0 + 30328);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, param0 ^ 30243);
+          var6.writeByte(param1.field_j, -8);
+          var6.writeSignedSmart(-1, param1.field_i);
+          var6.writeInt(param1.field_g, -1);
+          var6.writeInt(param1.field_l, param0 + 30328);
           if (param0 != -30329) {
             String var5 = (String) null;
             DualLinkDequeIterator.a((String) null, -82);
           }
-          var6.b(param1.field_f, -1);
-          var6.b(param1.field_n, -1);
-          var6.e(-18951, var4);
-          var6.c((byte) -69, -var4 + var6.field_i);
+          var6.writeInt(param1.field_f, -1);
+          var6.writeInt(param1.field_n, -1);
+          var6.appendCrc32(-18951, var4);
+          var6.backpatchByteLength((byte) -69, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "ol.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

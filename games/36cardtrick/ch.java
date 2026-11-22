@@ -6,13 +6,13 @@ abstract class ch {
     cd field_h;
     cd field_a;
     cd field_e;
-    pb field_c;
+    PacketBuffer field_c;
     long field_d;
     int field_k;
     volatile int field_l;
     volatile int field_b;
     byte field_f;
-    pb field_i;
+    PacketBuffer field_i;
     na field_j;
 
     abstract void c(byte param0);
@@ -90,11 +90,11 @@ abstract class ch {
         this.field_h = new cd();
         this.field_a = new cd();
         this.field_e = new cd();
-        this.field_c = new pb(6);
+        this.field_c = new PacketBuffer(6);
         this.field_b = 0;
         this.field_l = 0;
         this.field_f = (byte) 0;
-        this.field_i = new pb(10);
+        this.field_i = new PacketBuffer(10);
     }
 
     static {

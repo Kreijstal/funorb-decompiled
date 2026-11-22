@@ -18,13 +18,13 @@ public final class OrbDefence extends NetworkGameClient {
         int var2Lifetime1;
         var4 = field_D ? 1 : 0;
         lj.c(false);
-        if (null != mg.field_k &&
-          mg.field_k.field_e) {
+        if (null != PacketBuffer.field_k &&
+          PacketBuffer.field_k.field_e) {
           lb.a(true);
           ee.a(4);
         }
         stackIn_5_1 = 123;
-        stackIn_6_2 = (mg.field_k != null);
+        stackIn_6_2 = (PacketBuffer.field_k != null);
         this.b(stackIn_5_1, stackIn_6_2);
         if (gi.field_b) {
           this.g((byte) -123);
@@ -63,11 +63,11 @@ public final class OrbDefence extends NetworkGameClient {
           } else {
             if (!rl.a((byte) 106)) {
               if (ec.k(783)) {
-                stackIn_31_1 = (null != mg.field_k);
+                stackIn_31_1 = (null != PacketBuffer.field_k);
                 var2 = this.a(stackIn_31_1, false);
                 if (var2 == 1 ||
                   var2 == 2) {
-                  if (null != mg.field_k) {
+                  if (null != PacketBuffer.field_k) {
                     lb.a(true);
                   }
                   if (2 == var2) {
@@ -200,8 +200,8 @@ public final class OrbDefence extends NetworkGameClient {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        mg var17 = null;
-        mg var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -224,10 +224,10 @@ public final class OrbDefence extends NetworkGameClient {
         int stackIn_21_1Lifetime1Lifetime1;
         var16 = field_D ? 1 : 0;
         try {
-          var17 = new mg(param0);
+          var17 = new PacketBuffer(param0);
           var18 = var17;
-          var18.field_i = param0.length - 2;
-          ec.field_K = var18.j(98203176);
+          var18.position = param0.length - 2;
+          ec.field_K = var18.readUnsignedShort(98203176);
           ha.field_g = new boolean[ec.field_K];
           jd.field_g = new int[ec.field_K];
           m.field_a = new int[ec.field_K];
@@ -235,28 +235,28 @@ public final class OrbDefence extends NetworkGameClient {
           md.field_i = new byte[ec.field_K][];
           fl.field_a = new byte[ec.field_K][];
           wc.field_a = new int[ec.field_K];
-          var18.field_i = param0.length - (7 + 8 * ec.field_K);
-          sg.field_B = var18.j(98203176);
+          var18.position = param0.length - (7 + 8 * ec.field_K);
+          sg.field_B = var18.readUnsignedShort(98203176);
           var3 = -1 % ((-4 - param1) / 62);
-          he.field_r = var18.j(98203176);
-          var4 = (var18.b((byte) 90) & 255) + 1;
+          he.field_r = var18.readUnsignedShort(98203176);
+          var4 = (var18.readUnsignedByte((byte) 90) & 255) + 1;
           for (var5 = 0; ec.field_K > var5; var5++) {
-            jd.field_g[var5] = var17.j(98203176);
+            jd.field_g[var5] = var17.readUnsignedShort(98203176);
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < ec.field_K; var5Lifetime1++) {
-            wc.field_a[var5Lifetime1] = var18.j(98203176);
+            wc.field_a[var5Lifetime1] = var18.readUnsignedShort(98203176);
           }
           for (var5Lifetime2 = 0; ec.field_K > var5Lifetime2; var5Lifetime2++) {
-            wh.field_b[var5Lifetime2] = var18.j(98203176);
+            wh.field_b[var5Lifetime2] = var18.readUnsignedShort(98203176);
           }
           for (var5Lifetime3 = 0; ec.field_K > var5Lifetime3; var5Lifetime3++) {
-            m.field_a[var5Lifetime3] = var18.j(98203176);
+            m.field_a[var5Lifetime3] = var18.readUnsignedShort(98203176);
           }
-          var18.field_i = -(3 * (-1 + var4)) - 8 * ec.field_K + param0.length - 7;
+          var18.position = -(3 * (-1 + var4)) - 8 * ec.field_K + param0.length - 7;
           vc.field_g = new int[var4];
           var5Lifetime4 = 1;
           while (var5Lifetime4 < var4) {
-            vc.field_g[var5Lifetime4] = var18.a((byte) -30);
+            vc.field_g[var5Lifetime4] = var18.readUnsignedMedium((byte) -30);
             stackIn_21_0 = ~vc.field_g[var5Lifetime4];
             stackIn_21_1 = -1;
             if (stackIn_21_0 == stackIn_21_1) {
@@ -264,7 +264,7 @@ public final class OrbDefence extends NetworkGameClient {
             }
             var5Lifetime4++;
           }
-          var18.field_i = 0;
+          var18.position = 0;
           var5Lifetime5 = 0;
           while (true) {
             stackIn_21_0Lifetime1 = ~var5Lifetime5;
@@ -285,14 +285,14 @@ public final class OrbDefence extends NetworkGameClient {
               var10 = var20;
               md.field_i[var5Lifetime5] = var22;
               var11 = 0;
-              var12 = var18.b((byte) 90);
+              var12 = var18.readUnsignedByte((byte) 90);
               if ((1 & var12) == 0) {
                 for (var13 = 0; var8 > var13; var13++) {
-                  var9[var13] = var18.d(-20398);
+                  var9[var13] = var18.readByte(-20398);
                 }
                 if (((var12 & 2) != 0)) {
                   for (var13Lifetime3 = 0; var13Lifetime3 < var8; var13Lifetime3++) {
-                    dupTemp$0 = var18.d(-20398);
+                    dupTemp$0 = var18.readByte(-20398);
                     var10[var13Lifetime3] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_21_0Lifetime1Lifetime1 = var11;
@@ -308,7 +308,7 @@ public final class OrbDefence extends NetworkGameClient {
               } else {
                 for (var13Lifetime1 = 0; var6 > var13Lifetime1; var13Lifetime1++) {
                   for (var14Lifetime1 = 0; var7 > var14Lifetime1; var14Lifetime1++) {
-                    var9[var13Lifetime1 + var14Lifetime1 * var6] = var18.d(-20398);
+                    var9[var13Lifetime1 + var14Lifetime1 * var6] = var18.readByte(-20398);
                   }
                 }
                 if ((2 & var12) != 0) {
@@ -320,7 +320,7 @@ public final class OrbDefence extends NetworkGameClient {
                       break;
                     }
                     for (var14Lifetime2 = 0; var14Lifetime2 < var7; var14Lifetime2++) {
-                      dupTemp$1 = var18.d(-20398);
+                      dupTemp$1 = var18.readByte(-20398);
                       var10[var14Lifetime2 * var6 + var13Lifetime2] = dupTemp$1;
                       var15 = dupTemp$1;
                       stackIn_32_0Lifetime1 = var11;
@@ -362,7 +362,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (param0 != 176400) {
           field_E = (String) null;
         }
-        if (mg.field_k != null) {
+        if (PacketBuffer.field_k != null) {
           lb.a(true);
         }
         uj.c((byte) 63);
@@ -388,7 +388,7 @@ public final class OrbDefence extends NetworkGameClient {
         kc.clearStaticReferences();
         tc.a(true);
         n.c((byte) -87);
-        mg.c(10);
+        PacketBuffer.c(10);
         ji.a(-5046);
         nl.a((byte) -77);
         ce.clearStaticReferences(true);
@@ -691,7 +691,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (ec.k(783) &&
           !rl.a((byte) 101)) {
           stackIn_39_0 = 82;
-          if (null == mg.field_k) {
+          if (null == PacketBuffer.field_k) {
             stackIn_40_1 = wg.field_o;
           } else {
             stackIn_40_1 = true;

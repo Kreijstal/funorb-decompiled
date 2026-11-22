@@ -38,7 +38,7 @@ final class uh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 97) {
-            stackIn_4_0 = ml.a(param2, 0, param1, 12011);
+            stackIn_4_0 = ml.computeCrc32(param2, 0, param1, 12011);
             return stackIn_4_0;
           }
           stackIn_2_0 = 53;

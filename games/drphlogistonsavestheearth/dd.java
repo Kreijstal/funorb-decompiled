@@ -30,13 +30,13 @@ final class dd extends u {
         field_o = null;
     }
 
-    final void a(od param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(-23805, this.field_m);
+          param0.writePrefixedString(-23805, this.field_m);
           if (param1 < 19) {
             dd.clearStaticReferences(true);
           }
-          param0.b(1, this.field_i);
+          param0.writeBase38String(1, this.field_i);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

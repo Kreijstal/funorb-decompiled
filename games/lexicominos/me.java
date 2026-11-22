@@ -11,7 +11,7 @@ final class me extends ca {
     static String field_u;
     static boolean[] field_w;
 
-    private final void a(int param0, wf param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -28,25 +28,25 @@ final class me extends ca {
         try {
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param1.d(true);
+              var4_int = param1.readUnsignedByte(true);
               this.field_r = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_r[var5] = param1.b(-1698573656);
+                this.field_r[var5] = param1.readUnsignedShort(-1698573656);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param1.d(true);
+                var4_int = param1.readUnsignedByte(true);
                 this.field_s = new int[var4_int];
                 this.field_q = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param1.b(param2 - 1698584257);
+                  var6 = param1.readUnsignedShort(param2 - 1698584257);
                   var7 = gb.a(var6, 2121865922);
                   if (var7 != null) {
                     this.field_s[var5] = var6;
                     array$0 = new int[var7.field_b];
                     this.field_q[var5] = array$0;
                     for (var8 = 0; var7.field_b > var8; var8++) {
-                      this.field_q[var5][var8] = param1.b(-1698573656);
+                      this.field_q[var5][var8] = param1.readUnsignedShort(-1698573656);
                     }
                   }
                 }
@@ -56,7 +56,7 @@ final class me extends ca {
               }
             }
           } else {
-            this.field_p = dc.a(param1.c(false), '<', (byte) -125);
+            this.field_p = dc.a(param1.readString(false), '<', (byte) -125);
           }
           if (param2 != 10601) {
             field_w = (boolean[]) null;
@@ -101,7 +101,7 @@ final class me extends ca {
           var1 = ig.field_a;
           stackIn_3_0 = var1;
           stackIn_4_1 = !(param0);
-          var2 = ((th) (Object) stackIn_3_0).d(stackIn_4_1);
+          var2 = ((th) (Object) stackIn_3_0).readUnsignedByte(stackIn_4_1);
           if (var2 == 0) {
             var11 = wj.b(26770);
             var16 = var11;
@@ -110,9 +110,9 @@ final class me extends ca {
             var10 = var11;
             var4 = var10;
             var5 = var1;
-            var6 = ((wf) ((Object) var5)).d(true);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(true);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((wf) ((Object) var5)).d((byte) 19);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 19);
             }
             var15 = (vi) (ci.field_f.a(true));
             if (var15 == null) {
@@ -192,7 +192,7 @@ final class me extends ca {
         return var2.toString();
     }
 
-    final void a(wf param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -203,7 +203,7 @@ final class me extends ca {
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.d(true);
+            var3_int = param0.readUnsignedByte(true);
             if (0 != var3_int) {
               this.a(var3_int, param0, 10601);
               continue;

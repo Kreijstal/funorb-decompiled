@@ -14,21 +14,21 @@ final class ih {
     int field_k;
     private int field_i;
 
-    final void a(pb param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_d = param0.f(-127);
+        this.field_d = param0.readUnsignedByte(-127);
         this.field_g = new int[this.field_d];
         this.field_f = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
-          this.field_g[var2] = param0.d((byte) 72);
-          this.field_f[var2] = param0.d((byte) 72);
+          this.field_g[var2] = param0.readUnsignedShort((byte) 72);
+          this.field_f[var2] = param0.readUnsignedShort((byte) 72);
         }
     }
 
-    final void b(pb param0) {
-        this.field_k = param0.f(-112);
-        this.field_c = param0.e((byte) 127);
-        this.field_b = param0.e((byte) 125);
+    final void b(PacketBuffer param0) {
+        this.field_k = param0.readUnsignedByte(-112);
+        this.field_c = param0.readInt((byte) 127);
+        this.field_b = param0.readInt((byte) 125);
         this.a(param0);
     }
 

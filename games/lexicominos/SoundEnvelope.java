@@ -33,10 +33,10 @@ final class SoundEnvelope {
         return this.field_k - this.field_d >> 15;
     }
 
-    final void b(wf param0) {
-        this.field_a = param0.d(true);
-        this.field_e = param0.d((byte) 19);
-        this.field_c = param0.d((byte) 19);
+    final void b(PacketBuffer param0) {
+        this.field_a = param0.readUnsignedByte(true);
+        this.field_e = param0.readInt((byte) 19);
+        this.field_c = param0.readInt((byte) 19);
         this.a(param0);
     }
 
@@ -48,14 +48,14 @@ final class SoundEnvelope {
         this.field_i = 0;
     }
 
-    final void a(wf param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_b = param0.d(true);
+        this.field_b = param0.readUnsignedByte(true);
         this.field_f = new int[this.field_b];
         this.field_j = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
-          this.field_f[var2] = param0.b(-1698573656);
-          this.field_j[var2] = param0.b(-1698573656);
+          this.field_f[var2] = param0.readUnsignedShort(-1698573656);
+          this.field_j[var2] = param0.readUnsignedShort(-1698573656);
         }
     }
 

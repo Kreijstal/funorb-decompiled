@@ -43,7 +43,7 @@ final class gm extends hf {
 
     final boolean a(boolean param0, vg param1) {
         RuntimeException var3 = null;
-        od var4 = null;
+        PacketBuffer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -52,8 +52,8 @@ final class gm extends hf {
           if (!param0) {
             return false;
           }
-          var4 = (od) null;
-          gm.a((byte) -17, (od) null, 126);
+          var4 = (PacketBuffer) null;
+          gm.a((byte) -17, (PacketBuffer) null, 126);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class gm extends hf {
         }
     }
 
-    final static String a(byte param0, od param1, int param2) {
+    final static String a(byte param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -84,12 +84,12 @@ final class gm extends hf {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param1.k(7021);
+            var3_int = param1.readUnsignedSmart(7021);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param1.field_j = param1.field_j + pa.field_e.a(var3_int, param1.field_h, 0, param1.field_j, 0, var4);
+            param1.position = param1.position + pa.field_e.a(var3_int, param1.payload, 0, param1.position, 0, var4);
             var6 = 88 / ((param0 - 18) / 39);
             var5 = p.a(var3_int, (byte) 79, var4, 0);
             stackIn_3_0 = var5;

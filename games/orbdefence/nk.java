@@ -950,7 +950,7 @@ final class nk {
           ul.e(8, 363, 172, 473);
           if (0 <= this.field_a &&
             this.field_a <= 11) {
-            var15 = mg.a(this.field_a, (byte) -114);
+            var15 = PacketBuffer.a(this.field_a, (byte) -114);
             ab.field_g[var15 * 12 + da.field_b / 10 % wh.field_a[var15]].c(hi.field_m + 43, 363);
           }
           var15_ref = null;
@@ -3055,8 +3055,8 @@ final class nk {
           if (param2 != 14) {
             field_r = (char[]) null;
           }
-          var3.a(param1.field_g, -68);
-          var3.b((byte) -60, param1.field_h);
+          var3.writeByte(param1.field_g, -68);
+          var3.writeShort((byte) -60, param1.field_h);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -3121,7 +3121,7 @@ final class nk {
             stackIn_14_0 = 3;
             return stackIn_14_0;
           }
-          if (mg.field_m == tg.field_c) {
+          if (PacketBuffer.field_m == tg.field_c) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
@@ -3129,7 +3129,7 @@ final class nk {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (mg.field_m != qc.field_g) {
+          if (PacketBuffer.field_m != qc.field_g) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

@@ -188,7 +188,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 < 73) {
           return 125;
         }
-        if (wf.field_i < 2) {
+        if (PacketBuffer.field_i < 2) {
           return 0;
         }
         if (ri.field_e != 0) {

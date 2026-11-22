@@ -459,16 +459,16 @@ final class tk extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        od var2 = new od(param0);
-        this.field_i = var2.h(-126);
-        this.field_j = var2.h(105);
-        this.field_m = var2.h(4);
-        this.field_r = var2.h(-88);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_i = var2.readInt(-126);
+        this.field_j = var2.readInt(105);
+        this.field_m = var2.readInt(4);
+        this.field_r = var2.readInt(-88);
         if (this.field_r < 0) {
           this.field_r = ~this.field_r;
           this.field_H = true;
         }
-        int var3 = var2.h(33);
+        int var3 = var2.readInt(33);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -476,11 +476,11 @@ final class tk extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.l(31760);
+            var6_int = var2.readUnsignedByte(31760);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.b(0, var5, 128, var6);
+          var2.readBytes(0, var5, 128, var6);
           this.field_y[var4] = var6;
         }
     }

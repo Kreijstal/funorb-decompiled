@@ -178,7 +178,7 @@ final class vk implements Iterator {
 
     final static void a(byte param0) {
         ul.field_k = false;
-        ig.field_a.d(true);
+        ig.field_a.readUnsignedByte(true);
         int var1 = -124 % ((param0 - 77) / 38);
     }
 

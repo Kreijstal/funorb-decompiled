@@ -239,13 +239,13 @@ final class fc {
                 var7Lifetime2 == 31) {
                 aj.field_t[var7Lifetime2 + 36].d(16 * var3Lifetime2 - 4, 16 * var4Lifetime2 - 4);
                 if (fl.field_f) {
-                  var9Lifetime2 = 64 - ni.field_j % 64;
+                  var9Lifetime2 = 64 - PacketBuffer.field_j % 64;
                   gb.a(-2 + (var3Lifetime2 * 16 + 8), 16 * var4Lifetime2 + 6, var9Lifetime2 / 4, 16777215, 256 - 4 * var9Lifetime2);
                 }
               }
               if (var7Lifetime2 == 1 &&
                 fl.field_f) {
-                var9Lifetime2Lifetime1 = ni.field_j % 64;
+                var9Lifetime2Lifetime1 = PacketBuffer.field_j % 64;
                 gb.a(7 + var3Lifetime2 * 16, 8 + (-1 + 16 * var4Lifetime2), var9Lifetime2Lifetime1 / 4, 16777215, 256 - var9Lifetime2Lifetime1 * 4);
               }
             }
@@ -277,10 +277,10 @@ final class fc {
             }
           }
           for (var9Lifetime5 = 0; uf.field_h > var9Lifetime5; var9Lifetime5++) {
-            var10_intLifetime1 = -(4 * (ni.field_j - nc.field_a[var9Lifetime5])) + 256;
+            var10_intLifetime1 = -(4 * (PacketBuffer.field_j - nc.field_a[var9Lifetime5])) + 256;
             if (0 <= var10_intLifetime1 &&
               var10_intLifetime1 <= 255) {
-              var11Lifetime1 = 10 + (ni.field_j - nc.field_a[var9Lifetime5]) * 2;
+              var11Lifetime1 = 10 + (PacketBuffer.field_j - nc.field_a[var9Lifetime5]) * 2;
               var12_intLifetime1 = lj.field_c[var9Lifetime5] * 16;
               var12_intLifetime1 = var12_intLifetime1 - var11Lifetime1 / 2;
               var13_intLifetime1 = 16 * fb.field_e[var9Lifetime5];
@@ -398,8 +398,8 @@ final class fc {
             }
             stackIn_123_0.field_F = stackIn_127_1;
             lk.field_D.e(-1);
-            var23 = (int)(ma.a((double)ni.field_j / 25.0, 116) * 64.0 + 64.0);
-            var24_int = (int)(64.0 + nb.a((double)ni.field_j / 25.0, -128) * 64.0);
+            var23 = (int)(ma.a((double)PacketBuffer.field_j / 25.0, 116) * 64.0 + 64.0);
+            var24_int = (int)(64.0 + nb.a((double)PacketBuffer.field_j / 25.0, -128) * 64.0);
             gb.b(4 + lk.field_D.field_l, lk.field_D.field_a + 1, lk.field_D.field_n - 7, lk.field_D.field_d - 2, 65793 * var23, var24_int * 65793);
             if (qh.field_z == 0) {
               gb.a(si.field_R);
@@ -409,7 +409,7 @@ final class fc {
                 var26 = var25 - 120;
                 var25 = var25 - 2 * var26;
               }
-              tl.field_p.b(fi.field_l, 320, var25, 0, 0, ni.field_j / 3);
+              tl.field_p.b(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
               var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
               tl.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + tl.field_p.field_N, 0, 0);
               gb.b(si.field_R);
@@ -439,8 +439,8 @@ final class fc {
             stackIn_146_0.field_F = stackIn_150_1;
             si.field_y.e(-1);
             if (0 < GzipDecompressor.field_d) {
-              var23Lifetime1 = (int)(64.0 + ma.a((double)ni.field_j / 25.0, 123) * 64.0);
-              var24_intLifetime1 = (int)(64.0 + 64.0 * nb.a((double)ni.field_j / 25.0, -122));
+              var23Lifetime1 = (int)(64.0 + ma.a((double)PacketBuffer.field_j / 25.0, 123) * 64.0);
+              var24_intLifetime1 = (int)(64.0 + 64.0 * nb.a((double)PacketBuffer.field_j / 25.0, -122));
               gb.b(4 + si.field_y.field_l, 1 + si.field_y.field_a, si.field_y.field_n - 7, si.field_y.field_d - 2, 65793 * var23Lifetime1, var24_intLifetime1 * 65793);
             }
           }

@@ -615,12 +615,12 @@ final class sh {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        wf var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        wf var30 = null;
+        PacketBuffer var30 = null;
         int[] var31 = null;
         byte[][] var32 = null;
-        wf var33 = null;
+        PacketBuffer var33 = null;
         int[] var35 = null;
         byte[] var36 = null;
         byte[] var37 = null;
@@ -671,8 +671,8 @@ final class sh {
             var36 = nl.a(this.field_j[param0], (byte) -74, true);
             var26 = var36;
             var10 = var26;
-            var27 = new wf(var36);
-            var27.a(4, var27.field_j.length, 5, param2);
+            var27 = new PacketBuffer(var36);
+            var27.decryptXteaRange(4, var27.payload.length, 5, param2);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -700,14 +700,14 @@ final class sh {
               var12--;
               var13 = var24[var12] & 255;
               var12 = var12 - var5_int * var13 * 4;
-              var33 = new wf(var44);
+              var33 = new PacketBuffer(var44);
               var15 = 0;
               var16 = 0;
-              var33.field_h = var12;
+              var33.position = var12;
               for (var17 = 0; var13 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var33.d((byte) 19);
+                  var18 = var18 + var33.readInt((byte) 19);
                   if (var6 == null) {
                     var20 = var19;
                   } else {
@@ -724,12 +724,12 @@ final class sh {
               }
               var45 = new byte[var15];
               var15Lifetime1 = 0;
-              var33.field_h = var12;
+              var33.position = var12;
               var18 = 0;
               for (var19 = 0; var19 < var13; var19++) {
                 var20 = 0;
                 for (var21 = 0; var21 < var5_int; var21++) {
-                  var20 = var20 + var33.d((byte) 19);
+                  var20 = var20 + var33.readInt((byte) 19);
                   if (var6 != null) {
                     var22 = var35[var21];
                   } else {
@@ -748,15 +748,15 @@ final class sh {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - 4 * (var13 * var5_int);
-              var30 = new wf(var44);
-              var30.field_h = var12;
+              var30 = new PacketBuffer(var44);
+              var30.position = var12;
               var39 = new int[var5_int];
               var31 = var39;
               var15_ref_int__ = var31;
               for (var16 = 0; var13 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var30.d((byte) 19);
+                  var17 = var17 + var30.readInt((byte) 19);
                   var15_ref_int__[var18] = var15_ref_int__[var18] + var17;
                 }
               }
@@ -768,12 +768,12 @@ final class sh {
                 var16_ref_byte____[var17] = array$1;
                 var39[var17] = 0;
               }
-              var30.field_h = var12;
+              var30.position = var12;
               var17 = 0;
               for (var18 = 0; var18 < var13; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var30.d((byte) 19);
+                  var19 = var19 + var30.readInt((byte) 19);
                   o.a(var44, var17, var40[var20], var39[var20], var19);
                   var17 = var17 + var19;
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;

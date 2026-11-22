@@ -14,8 +14,8 @@ abstract class w {
     bf field_h;
     int field_k;
     long field_m;
-    ni field_d;
-    ni field_f;
+    PacketBuffer field_d;
+    PacketBuffer field_f;
     byte field_g;
     volatile int field_b;
     volatile int field_c;
@@ -116,7 +116,7 @@ abstract class w {
         if (param0 <= -52) {
           return this.field_n.a((byte) 67) + this.field_h.a((byte) 20);
         }
-        this.field_d = (ni) null;
+        this.field_d = (PacketBuffer) null;
         return this.field_n.a((byte) 67) + this.field_h.a((byte) 20);
     }
 
@@ -200,11 +200,11 @@ abstract class w {
         this.field_q = new bf();
         this.field_n = new bf();
         this.field_h = new bf();
-        this.field_d = new ni(6);
+        this.field_d = new PacketBuffer(6);
         this.field_c = 0;
         this.field_g = (byte) 0;
         this.field_b = 0;
-        this.field_f = new ni(10);
+        this.field_f = new PacketBuffer(10);
     }
 
     static {

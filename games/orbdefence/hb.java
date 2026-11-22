@@ -15,14 +15,14 @@ final class hb {
           var2 = (n.b((byte) 127)) ? 0 : 1;
         } else {
           if (null != ne.field_b) {
-            mg.field_k = ne.field_b.c(126);
+            PacketBuffer.field_k = ne.field_b.c(126);
             RasterBuffer.a(17489, 2);
           } else {
-            mg.field_k = wd.a(480, (byte) 109, 0, 0, wc.field_c, 640);
+            PacketBuffer.field_k = wd.a(480, (byte) 109, 0, 0, wc.field_c, 640);
           }
-          if (mg.field_k != null) {
+          if (PacketBuffer.field_k != null) {
             var2 = 2;
-            l.a(mg.field_k, -80);
+            l.a(PacketBuffer.field_k, -80);
           } else {
             var2 = 3;
           }
@@ -57,15 +57,15 @@ final class hb {
           if (param0 != 554553416) {
             field_b = (String) null;
           }
-          var2 = var9.b((byte) 90);
-          var3 = var9.b((byte) 90);
+          var2 = var9.readUnsignedByte((byte) 90);
+          var3 = var9.readUnsignedByte((byte) 90);
           if (var2 == 0) {
-            var4 = (fb) (mg.field_l.b((byte) -41));
+            var4 = (fb) (PacketBuffer.field_l.b((byte) -41));
             if (var4 == null) {
               th.a(113);
               return;
             }
-            var5 = GameAppletShell.field_c - var9.field_i;
+            var5 = GameAppletShell.field_c - var9.position;
             var11 = var4.field_g;
             var10 = var11;
             var6 = var10;
@@ -73,13 +73,13 @@ final class hb {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.b((byte) 90) << (vi.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 90) << (vi.a(3, var7) << 8));
             }
             var4.b(57);
             return;
           }
           if (1 == var2) {
-            var4_int = var9.c(true);
+            var4_int = var9.readSignedSmart(true);
             var5_ref_qf = (qf) (vb.field_h.b((byte) -124));
             while (var5_ref_qf != null) {
               if (var5_ref_qf.field_j != var3 ||

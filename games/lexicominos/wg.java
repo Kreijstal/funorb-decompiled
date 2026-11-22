@@ -6,7 +6,7 @@ import java.io.*;
 final class wg implements Runnable {
     static int[] field_j;
     private DataInputStream field_g;
-    private wf field_i;
+    private PacketBuffer field_i;
     private ei field_f;
     private int field_d;
     private ei field_h;
@@ -61,9 +61,9 @@ final class wg implements Runnable {
         field_j = null;
     }
 
-    final wf a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 != -65) {
-          return (wf) null;
+          return (PacketBuffer) null;
         }
         if (this.field_d == 3) {
           return this.field_i;
@@ -136,7 +136,7 @@ final class wg implements Runnable {
             var3.write(cl.a((byte) -98, var5));
             this.field_g = new DataInputStream(var4.getInputStream());
           }
-          this.field_i.field_h = 0;
+          this.field_i.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -178,16 +178,16 @@ final class wg implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Lexicominos.field_L ? 1 : 0;
           try {
-            while (this.field_i.field_h < this.field_i.field_j.length) {
-              var1_int = this.field_g.read(this.field_i.field_j, this.field_i.field_h, -this.field_i.field_h + this.field_i.field_j.length);
+            while (this.field_i.position < this.field_i.payload.length) {
+              var1_int = this.field_g.read(this.field_i.payload, this.field_i.position, -this.field_i.position + this.field_i.payload.length);
               if (var1_int >= 0) {
-                this.field_i.field_h = this.field_i.field_h + var1_int;
+                this.field_i.position = this.field_i.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_i.field_h == this.field_i.field_j.length) {
-              throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_j.length + " " + this.field_c));
+            if (this.field_i.position == this.field_i.payload.length) {
+              throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_c));
             }
             var1 = this;
             synchronized (var1) {
@@ -216,7 +216,7 @@ final class wg implements Runnable {
         try {
           this.field_a = param0;
           this.field_c = param1;
-          this.field_i = new wf(param2);
+          this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

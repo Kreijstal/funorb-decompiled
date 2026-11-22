@@ -5,7 +5,7 @@ abstract class ff {
     static int field_b;
     static long field_a;
 
-    abstract void a(int param0, pb param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     abstract fe a(byte param0);
 

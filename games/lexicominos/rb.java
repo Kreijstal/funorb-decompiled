@@ -169,10 +169,10 @@ final class rb {
           String var3 = (String) null;
           rb.a((byte) -12, (String) null);
         }
-        var2.d((byte) 19);
-        var2.d((byte) 19);
-        var2.d((byte) 19);
-        var2.d((byte) 19);
+        var2.readInt((byte) 19);
+        var2.readInt((byte) 19);
+        var2.readInt((byte) 19);
+        var2.readInt((byte) 19);
         var1.b((byte) -121);
     }
 

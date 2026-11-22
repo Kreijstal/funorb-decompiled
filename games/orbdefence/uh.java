@@ -41,7 +41,7 @@ final class uh {
     }
 
     final static String b(int param0) {
-        if (mg.field_m == qc.field_g) {
+        if (PacketBuffer.field_m == qc.field_g) {
           return of.field_H;
         }
         if (param0 != 4) {

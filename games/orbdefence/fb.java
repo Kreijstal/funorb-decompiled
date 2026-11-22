@@ -19,7 +19,7 @@ final class fb extends IntrusiveNode {
         if (param0 > -44) {
           field_i = (ba) null;
         }
-        return cd.field_t.g(2);
+        return cd.field_t.readString(2);
     }
 
     final static v c(boolean param0) {
@@ -29,7 +29,7 @@ final class fb extends IntrusiveNode {
         return vb.field_f;
     }
 
-    final static void a(mg param0, int param1, int param2, be param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, be param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -68,8 +68,8 @@ final class fb extends IntrusiveNode {
           var15 = OrbDefence.field_D ? 1 : 0;
           try {
             var19 = new ud();
-            var19.field_o = param0.b((byte) 90);
-            var19.field_k = param0.l(0);
+            var19.field_o = param0.readUnsignedByte((byte) 90);
+            var19.field_k = param0.readInt(0);
             var19.field_m = new int[var19.field_o];
             var19.field_n = new int[var19.field_o];
             var19.field_i = new eb[var19.field_o];
@@ -79,28 +79,28 @@ final class fb extends IntrusiveNode {
             var19.field_h = new eb[var19.field_o];
             for (var6 = 0; var19.field_o > var6; var6++) {
               try {
-                var7_int = param0.b((byte) 90);
+                var7_int = param0.readUnsignedByte((byte) 90);
                 if (0 != var7_int &&
                   var7_int != 1 &&
                   var7_int != 2) {
                   if (3 == var7_int ||
                     4 == var7_int) {
-                    var21 = param0.g(2);
-                    var9 = param0.g(2);
-                    var10 = param0.b((byte) 90);
+                    var21 = param0.readString(2);
+                    var9 = param0.readString(2);
+                    var10 = param0.readUnsignedByte((byte) 90);
                     var11 = new String[var10];
                     for (var12_int = 0; var12_int < var10; var12_int++) {
-                      var11[var12_int] = param0.g(2);
+                      var11[var12_int] = param0.readString(2);
                     }
                     var22 = new byte[var10][];
                     var20 = var22;
                     var12 = var20;
                     if (var7_int == 3) {
                       for (var13_int = 0; var13_int < var10; var13_int++) {
-                        var14 = param0.l(0);
+                        var14 = param0.readInt(0);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param0.a((byte) 115, var22[var13_int], 0, var14);
+                        param0.readBytes((byte) 115, var22[var13_int], 0, var14);
                       }
                     }
                     var19.field_l[var6] = var7_int;
@@ -115,13 +115,13 @@ final class fb extends IntrusiveNode {
                     var19.field_g[var6] = var22;
                   }
                 } else {
-                  var16 = param0.g(2);
-                  dupTemp$1 = param0.g(2);
+                  var16 = param0.readString(2);
+                  dupTemp$1 = param0.readString(2);
                   var17 = dupTemp$1;
                   var9 = dupTemp$1;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param0.l(0);
+                    var10 = param0.readInt(0);
                   }
                   var19.field_l[var6] = var7_int;
                   var19.field_n[var6] = var10;

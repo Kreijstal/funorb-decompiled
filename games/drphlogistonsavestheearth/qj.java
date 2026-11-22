@@ -65,24 +65,24 @@ final class qj {
             if (param1 != 14656) {
               field_b = (sa) null;
             }
-            if (nj.field_p.field_j == 0 &&
+            if (nj.field_p.position == 0 &&
               la.a(false) > 10000L + ck.field_e) {
               nj.field_p.d(param0, param1 ^ -32408);
             }
-            if (nj.field_p.field_j > 0) {
+            if (nj.field_p.position > 0) {
               try {
-                uj.field_j.a(nj.field_p.field_j, -30537, nj.field_p.field_h, 0);
+                uj.field_j.a(nj.field_p.position, -30537, nj.field_p.payload, 0);
                 ck.field_e = la.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 eg.a((byte) 126);
               }
-              nj.field_p.field_j = 0;
+              nj.field_p.position = 0;
             }
             return;
           }
-          nj.field_p.field_j = 0;
+          nj.field_p.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

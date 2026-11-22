@@ -136,7 +136,7 @@ abstract class hi extends wb implements jb {
         return this.a(-11300, this.field_j.field_l);
     }
 
-    final static String a(int param0, int param1, mg param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -151,12 +151,12 @@ abstract class hi extends wb implements jb {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.e(125);
+            var3_int = param2.readUnsignedSmart(125);
             if (param0 < var3_int) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_i = param2.field_i + cc.field_k.a(param2.field_i, var4, -1, 0, param2.field_j, var3_int);
+            param2.position = param2.position + cc.field_k.a(param2.position, var4, -1, 0, param2.payload, var3_int);
             var5 = tj.a(var3_int, 0, 0, var4);
             var6 = 44 / ((-38 - param1) / 47);
             stackIn_3_0 = var5;

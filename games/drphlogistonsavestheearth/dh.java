@@ -116,7 +116,7 @@ final class dh extends si {
             field_J = (String) null;
           }
           var12 = field_N;
-          var2 = var12.l(param0 ^ -31763);
+          var2 = var12.readUnsignedByte(param0 ^ -31763);
           if (var2 == 0) {
             var10 = lk.c((byte) 8);
             var16 = var10;
@@ -125,9 +125,9 @@ final class dh extends si {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((od) ((Object) var5)).l(31760);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(31760);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((od) ((Object) var5)).h(qk.a(param0, -2));
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(qk.a(param0, -2));
             }
             var15 = (f) (ql.field_i.h(param0 - 11148));
             if (var15 == null) {

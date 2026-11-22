@@ -145,33 +145,33 @@ class ui extends cf {
         }
     }
 
-    final static wf a(int param0, byte[] param1, int param2) {
+    final static PacketBuffer a(int param0, byte[] param1, int param2) {
         int var5 = 0;
         int var6 = 0;
-        wf var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var7 = 0;
-        wf stackIn_3_0 = null;
-        wf stackIn_11_0 = null;
+        PacketBuffer stackIn_3_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          var3 = new wf(param1.length);
+          var3 = new PacketBuffer(param1.length);
           var4 = param1.length / param0;
           if (param2 != -29165) {
-            stackIn_3_0 = (wf) null;
+            stackIn_3_0 = (PacketBuffer) null;
             return stackIn_3_0;
           }
           for (var5 = 0; var4 > var5; var5++) {
             for (var6 = 0; param0 > var6; var6++) {
-              var3.field_j[var6 * var4 + var5] = param1[param0 * var5 + var6];
+              var3.payload[var6 * var4 + var5] = param1[param0 * var5 + var6];
             }
           }
-          var3.field_h = param1.length;
+          var3.position = param1.length;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -66,7 +66,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void l(int param0) {
-        int var2 = cd.field_t.b((byte) 90);
+        int var2 = cd.field_t.readUnsignedByte((byte) 90);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 >= -108) {
           this.i(-72);
@@ -96,7 +96,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var8 = 0;
           String var9 = null;
           Boolean var11 = null;
-          mg var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = OrbDefence.field_D ? 1 : 0;
@@ -194,7 +194,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var9 = (String) null;
                   li.a(-1, (String) null);
                 } else {
-                  var7 = tj.a(var12.field_i, 0, 0, var12.field_j);
+                  var7 = tj.a(var12.position, 0, 0, var12.payload);
                   li.a(param1 + 0, var7);
                 }
                 ml.field_e = null;
@@ -447,7 +447,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime2;
         var5 = OrbDefence.field_D ? 1 : 0;
         if (null != ne.field_b) {
-          if (mg.field_k == null) {
+          if (PacketBuffer.field_k == null) {
             var6 = ob.l(4);
             var4_ref_java_awt_Dimension = var6.getSize();
             ne.field_b.a(14592, var4_ref_java_awt_Dimension.height, var4_ref_java_awt_Dimension.width);
@@ -455,7 +455,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ne.field_b.d((byte) 112);
         }
         ab.a(-128);
-        mg.d((byte) -107);
+        PacketBuffer.d((byte) -107);
         if (!eg.c((byte) -126) &&
           11 != hi.field_k) {
           cf.a((byte) 109);
@@ -728,7 +728,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (fe.c((byte) -123)) {
           stackIn_11_1 = false;
           stackIn_11_2 = -1;
-          if (mg.field_k == null) {
+          if (PacketBuffer.field_k == null) {
             stackIn_12_0 = this;
             stackIn_12_3 = false;
           } else {

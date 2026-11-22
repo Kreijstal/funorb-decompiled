@@ -259,10 +259,10 @@ class pj extends vg implements ba {
     final static int a(String param0, int param1, a param2, a param3, int param4, int param5, boolean param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        od stackIn_12_0 = null;
+        PacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         String stackIn_13_2 = null;
-        od stackIn_15_0 = null;
+        PacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         String stackIn_16_2 = null;
         int stackIn_31_0 = 0;
@@ -308,36 +308,36 @@ class pj extends vg implements ba {
           }
           if (hh.field_b == tl.field_O) {
             oe.field_a = null;
-            nj.field_p.field_j = 0;
+            nj.field_p.position = 0;
             if (param0 != null) {
               var9 = 0;
-              am.field_n.field_j = 0;
+              am.field_n.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              am.field_n.a(cm.field_M.nextInt(), (byte) -30);
-              am.field_n.a(cm.field_M.nextInt(), (byte) 119);
-              am.field_n.a(-23805, var14);
-              am.field_n.a(param4 ^ -23805, var8);
+              am.field_n.writeInt(cm.field_M.nextInt(), (byte) -30);
+              am.field_n.writeInt(cm.field_M.nextInt(), (byte) 119);
+              am.field_n.writePrefixedString(-23805, var14);
+              am.field_n.writePrefixedString(param4 ^ -23805, var8);
               var15 = (CharSequence) ((Object) param0);
-              am.field_n.a(param4 ^ -23805, fg.a(var15, 90));
-              am.field_n.c(param5, param4 - 17402);
-              am.field_n.c(param1, (byte) -88);
-              am.field_n.c(var9, (byte) -98);
-              nj.field_p.c(18, (byte) -101);
-              nj.field_p.field_j = nj.field_p.field_j + 2;
-              var10 = nj.field_p.field_j;
+              am.field_n.writePrefixedString(param4 ^ -23805, fg.a(var15, 90));
+              am.field_n.writeShort(param5, param4 - 17402);
+              am.field_n.writeByte(param1, (byte) -88);
+              am.field_n.writeByte(var9, (byte) -98);
+              nj.field_p.writeByte(18, (byte) -101);
+              nj.field_p.position = nj.field_p.position + 2;
+              var10 = nj.field_p.position;
               var11_ref_StringLifetime1 = ob.a((byte) 97, nb.a(param4 + 67));
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
-              nj.field_p.a(var11_ref_StringLifetime1, -1);
+              nj.field_p.writeString(var11_ref_StringLifetime1, -1);
               i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
-              nj.field_p.a(-2, -var10 + nj.field_p.field_j);
+              nj.field_p.backpatchShortLength(-2, -var10 + nj.field_p.position);
             } else {
-              am.field_n.field_j = 0;
-              am.field_n.a(cm.field_M.nextInt(), (byte) -77);
-              am.field_n.a(cm.field_M.nextInt(), (byte) 126);
+              am.field_n.position = 0;
+              am.field_n.writeInt(cm.field_M.nextInt(), (byte) -77);
+              am.field_n.writeInt(cm.field_M.nextInt(), (byte) 126);
               stackIn_12_0 = am.field_n;
               stackIn_12_1 = -23805;
               if (!param3.a((byte) -128)) {
@@ -345,7 +345,7 @@ class pj extends vg implements ba {
               } else {
                 stackIn_13_2 = var14;
               }
-              ((od) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).writePrefixedString(stackIn_12_1, stackIn_13_2);
               stackIn_15_0 = am.field_n;
               stackIn_15_1 = param4 - 23805;
               if (!param2.a((byte) -108)) {
@@ -353,20 +353,20 @@ class pj extends vg implements ba {
               } else {
                 stackIn_16_2 = var8;
               }
-              ((od) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
-              nj.field_p.c(16, (byte) -102);
-              nj.field_p.field_j = nj.field_p.field_j + 1;
-              var9 = nj.field_p.field_j;
+              ((PacketBuffer) (Object) stackIn_15_0).writePrefixedString(stackIn_15_1, stackIn_16_2);
+              nj.field_p.writeByte(16, (byte) -102);
+              nj.field_p.position = nj.field_p.position + 1;
+              var9 = nj.field_p.position;
               i.a(nj.field_p, am.field_n, a.field_b, d.field_a, 0);
-              nj.field_p.b(nj.field_p.field_j - var9, (byte) 87);
+              nj.field_p.backpatchByteLength(nj.field_p.position - var9, (byte) 87);
             }
             qj.a(-1, param4 + 14656);
             tl.field_O = eg.field_h;
           }
           if (tl.field_O == eg.field_h &&
             LoginMenuScreen.a(1, param4 ^ 5929)) {
-            var9Lifetime1 = dh.field_N.l(31760);
-            dh.field_N.field_j = 0;
+            var9Lifetime1 = dh.field_N.readUnsignedByte(31760);
+            dh.field_N.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               td.field_m = new String[-100 + var9Lifetime1];
@@ -383,7 +383,7 @@ class pj extends vg implements ba {
               if (var9Lifetime1 == 99) {
                 LoginMenuScreen.a(ab.a(39), 5929);
                 oe.field_a = new Boolean(eb.a(dh.field_N, param4 + 126));
-                dh.field_N.field_j = 0;
+                dh.field_N.position = 0;
               } else {
                 tl.field_O = dl.field_L;
                 t.field_b = var9Lifetime1;
@@ -394,12 +394,12 @@ class pj extends vg implements ba {
           if (tl.field_O == kc.field_n) {
             var9Lifetime2 = 2;
             if (LoginMenuScreen.a(var9Lifetime2, 5929)) {
-              var10Lifetime1 = dh.field_N.j(-788751192);
-              dh.field_N.field_j = 0;
+              var10Lifetime1 = dh.field_N.readUnsignedShort(-788751192);
+              dh.field_N.position = 0;
               if (LoginMenuScreen.a(var10Lifetime1, 5929)) {
                 var11 = td.field_m.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  td.field_m[var12] = dh.field_N.e(-75);
+                  td.field_m[var12] = dh.field_N.readPrefixedString(-75);
                 }
                 eg.a((byte) 126);
                 dk.field_b = false;
@@ -411,9 +411,9 @@ class pj extends vg implements ba {
           if (dl.field_L == tl.field_O &&
             GameAppletShell.d(-29427)) {
             if (t.field_b != 255) {
-              cc.field_p = dh.field_N.b((byte) -63);
+              cc.field_p = dh.field_N.readString((byte) -63);
             } else {
-              var9_ref_String = dh.field_N.i(715718304);
+              var9_ref_String = dh.field_N.readNullableString(715718304);
               if (var9_ref_String != null) {
                 MouseInput.a(nb.a(-113), param4 + 77, var9_ref_String);
               }

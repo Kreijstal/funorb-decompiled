@@ -20,7 +20,7 @@ final class ij extends kd {
         int var2_int = 0;
         df var3 = null;
         int var4 = 0;
-        wf var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -43,8 +43,8 @@ final class ij extends kd {
             }
           }
           if (param1 <= 106) {
-            var5 = (wf) null;
-            ij.a(5, 11, (wf) null);
+            var5 = (PacketBuffer) null;
+            ij.a(5, 11, (PacketBuffer) null);
           }
           if (null == param0.field_b) {
           }
@@ -169,7 +169,7 @@ final class ij extends kd {
         }
     }
 
-    final static String a(int param0, int param1, wf param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -184,7 +184,7 @@ final class ij extends kd {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.h((byte) -124);
+            var3_int = param2.readUnsignedSmart((byte) -124);
             if (var3_int > param0) {
               var3_int = param0;
             }
@@ -193,7 +193,7 @@ final class ij extends kd {
               ij.a(-74, (byte) 99, (sh) null, 63);
             }
             var4 = new byte[var3_int];
-            param2.field_h = param2.field_h + aa.field_g.a(var3_int, -1, param2.field_j, 0, param2.field_h, var4);
+            param2.position = param2.position + aa.field_g.a(var3_int, -1, param2.payload, 0, param2.position, var4);
             var5 = dc.a(var3_int, var4, (byte) 16, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;

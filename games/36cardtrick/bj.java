@@ -159,7 +159,7 @@ final class bj {
         throw new Error();
     }
 
-    final static void a(pb param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -207,9 +207,9 @@ final class bj {
                   var2[var4] = (byte)-1;
                 }
               }
-              param0.a(24, 0, var10, (byte) -106);
+              param0.writeBytes(24, 0, var10, (byte) -106);
             } else {
-              param0.a(24, 0, var10, (byte) -106);
+              param0.writeBytes(24, 0, var10, (byte) -106);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

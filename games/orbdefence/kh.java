@@ -30,50 +30,50 @@ final class kh {
     private static int[] field_d;
     private static int[] field_w;
 
-    final void a(mg param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_t = new ah();
         this.field_t.a(param0);
         this.field_c = new ah();
         this.field_c.a(param0);
-        int var2 = param0.b((byte) 90);
+        int var2 = param0.readUnsignedByte((byte) 90);
         if (var2 != 0) {
-          param0.field_i = param0.field_i - 1;
+          param0.position = param0.position - 1;
           this.field_y = new ah();
           this.field_y.a(param0);
           this.field_f = new ah();
           this.field_f.a(param0);
         }
-        var2 = param0.b((byte) 90);
+        var2 = param0.readUnsignedByte((byte) 90);
         if (var2 != 0) {
-          param0.field_i = param0.field_i - 1;
+          param0.position = param0.position - 1;
           this.field_r = new ah();
           this.field_r.a(param0);
           this.field_o = new ah();
           this.field_o.a(param0);
         }
-        var2 = param0.b((byte) 90);
+        var2 = param0.readUnsignedByte((byte) 90);
         if (var2 != 0) {
-          param0.field_i = param0.field_i - 1;
+          param0.position = param0.position - 1;
           this.field_q = new ah();
           this.field_q.a(param0);
           this.field_u = new ah();
           this.field_u.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.e(123);
+          var4 = param0.readUnsignedSmart(123);
           if (var4 == 0) {
             break;
           }
           this.field_v[var3] = var4;
-          this.field_a[var3] = param0.c(true);
-          this.field_k[var3] = param0.e(124);
+          this.field_a[var3] = param0.readSignedSmart(true);
+          this.field_k[var3] = param0.readUnsignedSmart(124);
         }
-        this.field_b = param0.e(120);
-        this.field_s = param0.e(119);
-        this.field_i = param0.j(98203176);
-        this.field_p = param0.j(98203176);
+        this.field_b = param0.readUnsignedSmart(120);
+        this.field_s = param0.readUnsignedSmart(119);
+        this.field_i = param0.readUnsignedShort(98203176);
+        this.field_p = param0.readUnsignedShort(98203176);
         this.field_n = new lk();
         this.field_x = new ah();
         this.field_n.a(param0, this.field_x);
