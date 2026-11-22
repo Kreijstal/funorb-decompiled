@@ -134,7 +134,7 @@ public final class TombRacer extends TombRacerShell implements ls {
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   wm.field_a.draw((byte) -28, false);
-                  tga.field_a.SA(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
+                  tga.field_a.blitPixels(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
                 }
               }
             }
@@ -180,12 +180,12 @@ public final class TombRacer extends TombRacerShell implements ls {
               stackIn_47_0 = true;
             }
             S2CNewRoomPacket.a(stackIn_47_0, 106);
-            tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+            tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             var5_ref_ssa.popClip(param2 + 84);
           }
           if (var4_intLifetime1 != 0) {
             if (!SnakePitTile.hasVisibleDialog(false)) {
-              tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+              tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
               tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
               var5 = ComponentTargetList.getTopDialogId(false);
@@ -194,7 +194,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               var8 = rs.getTopDialogHeight((byte) 124);
               var9 = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
               var9.pushIntersectClip(var5 + var7, var6, (byte) -12, var6 + var8, var5);
-              tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+              tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
               var9.popClip(99);
             }
             this.finishFrame(-28581);
@@ -1003,9 +1003,9 @@ public final class TombRacer extends TombRacerShell implements ls {
         }
         int var4 = 106 / ((param0 + 73) / 46);
         tga.field_a.clear(0);
-        tga.field_a.ya();
-        tga.field_a.DA(var2 / 2, var3 / 2, 512, 512);
-        tga.field_a.f(8, 16384);
+        tga.field_a.clearDepthBuffer();
+        tga.field_a.setProjectionParameters(var2 / 2, var3 / 2, 512, 512);
+        tga.field_a.setDepthRange(8, 16384);
         Transform3D var5 = tga.field_a.createTransform();
         var5.setCamera(0, 0, -1600, 0, 0, 0);
         tga.field_a.setTransform(var5);
@@ -1425,7 +1425,7 @@ public final class TombRacer extends TombRacerShell implements ls {
           tga.field_a.setLights(0, (SceneLight[]) null);
           if (HelloCommand.field_o != null &&
             HelloCommand.field_o.isModal(param0 + 28579)) {
-            tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+            tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
           }
           if (param0 != -28581) {
             return;

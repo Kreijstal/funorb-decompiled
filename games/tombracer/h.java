@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends GameFont implements e {
+final class h extends GameFont implements NativeResource {
     long field_nativeid;
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
         }
     }
 
@@ -14,7 +14,7 @@ final class h extends GameFont implements e {
         this.NA(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    h(NativeSoftwareGraphicsToolkit param0, ya param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    h(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
@@ -32,9 +32,9 @@ final class h extends GameFont implements e {
         this.JA(param0, param1, var6, var7, var8, var9, var10);
     }
 
-    public final native void w(boolean param0);
+    public final native void releaseNative(boolean param0);
 
-    private final native void JA(NativeSoftwareGraphicsToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void JA(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 
     private final native void NA(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 

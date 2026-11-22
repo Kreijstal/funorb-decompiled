@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NativeTransform3D extends Transform3D implements e {
+final class NativeTransform3D extends Transform3D implements NativeResource {
     long field_nativeid;
 
     private final native void P(long param0, int param1, int param2, int param3, int param4, int param5, int param6);
@@ -10,8 +10,8 @@ final class NativeTransform3D extends Transform3D implements e {
         this.J(this.field_nativeid, param0);
     }
 
-    public final void w(boolean param0) {
-        this.AA(this.field_nativeid, param0);
+    public final void releaseNative(boolean param0) {
+        this.releaseNativeHandle(this.field_nativeid, param0);
     }
 
     private final native void la();
@@ -26,11 +26,11 @@ final class NativeTransform3D extends Transform3D implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
         }
     }
 
-    private final native void AA(long param0, boolean param1);
+    private final native void releaseNativeHandle(long param0, boolean param1);
 
     final void rotateZ(int param0) {
         this.za(this.field_nativeid, param0);

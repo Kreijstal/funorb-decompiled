@@ -448,7 +448,7 @@ final class PlayPhase extends MatchPhase {
         if (param2 < 122) {
           return;
         }
-        tga.field_a.za(param0, param5, param4, jg.withAlpha(param3, (byte) -115, param1), 2);
+        tga.field_a.fillCircle(param0, param5, param4, jg.withAlpha(param3, (byte) -115, param1), 2);
     }
 
     final static int a(goa param0, String param1, boolean param2, int param3, goa param4, int param5, int param6) {

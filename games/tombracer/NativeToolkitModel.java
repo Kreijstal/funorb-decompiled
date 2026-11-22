@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ToolkitModel implements e {
-    private ya field_g;
+final class NativeToolkitModel extends ToolkitModel implements NativeResource {
+    private NativeSoftwareGraphicsHeap field_g;
     private NativeSoftwareGraphicsToolkit field_f;
     long field_nativeid;
     rga[] field_d;
@@ -19,7 +19,7 @@ final class i extends ToolkitModel implements e {
 
     final native void wa();
 
-    private final native void l(long param0, int param1, int[] param2, int param3, int param4, int param5, int param6, boolean param7);
+    private final native void applyTransformNative(long param0, int param1, int[] param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final void unlockForUpdate() {
         Throwable decompiledCaughtException = null;
@@ -41,14 +41,14 @@ final class i extends ToolkitModel implements e {
     }
 
     final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
-        this.l(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6);
+        this.applyTransformNative(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final native void ZA(i param0, i param1, int param2, boolean param3, boolean param4);
+    final native void copyInto(NativeToolkitModel param0, NativeToolkitModel param1, int param2, boolean param3, boolean param4);
 
     final native void O(int param0, int param1, int param2);
 
-    private final native void R(NativeSoftwareGraphicsToolkit param0, ya param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
+    private final native void initializeNativeModel(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
 
     final native boolean NA();
 
@@ -80,7 +80,7 @@ final class i extends ToolkitModel implements e {
         }
     }
 
-    private final native void oa(NativeSoftwareGraphicsToolkit param0);
+    private final native void initializeEmptyNativeModel(NativeSoftwareGraphicsToolkit param0);
 
     final native void FA(int param0);
 
@@ -97,11 +97,11 @@ final class i extends ToolkitModel implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
         }
     }
 
-    i(NativeSoftwareGraphicsToolkit param0, ya param1, ModelData param2, int param3, int param4, int param5, int param6) {
+    NativeToolkitModel(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, ModelData param2, int param3, int param4, int param5, int param6) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -189,14 +189,14 @@ final class i extends ToolkitModel implements e {
           var13[incrementValue$11] = var19.field_b;
           var20++;
         }
-        this.R(this.field_f, this.field_g, param2.field_E, param2.field_L, param2.field_b, param2.field_I, param2.field_p, param2.field_l, param2.field_y, param2.field_o, param2.field_a, param2.field_t, param2.field_J, param2.field_G, param2.field_C, param2.field_n, param2.field_g, param2.field_A, param2.field_r, param2.field_D, param2.field_k, param2.field_h, param2.field_F, param2.field_u, param2.field_s, param2.field_q, param2.field_K, param2.field_j, param2.field_f, param2.field_x, param2.field_i, param2.field_z, param2.field_d, param2.field_v, param2.field_c, var24, var8, var9, param3, param4, param5, param6, var25);
+        this.initializeNativeModel(this.field_f, this.field_g, param2.field_E, param2.field_L, param2.field_b, param2.field_I, param2.field_p, param2.field_l, param2.field_y, param2.field_o, param2.field_a, param2.field_t, param2.field_J, param2.field_G, param2.field_C, param2.field_n, param2.field_g, param2.field_A, param2.field_r, param2.field_D, param2.field_k, param2.field_h, param2.field_F, param2.field_u, param2.field_s, param2.field_q, param2.field_K, param2.field_j, param2.field_f, param2.field_x, param2.field_i, param2.field_z, param2.field_d, param2.field_v, param2.field_c, var24, var8, var9, param3, param4, param5, param6, var25);
     }
 
-    i(NativeSoftwareGraphicsToolkit param0) {
+    NativeToolkitModel(NativeSoftwareGraphicsToolkit param0) {
         this.field_f = param0;
         this.field_g = null;
-        this.oa(param0);
+        this.initializeEmptyNativeModel(param0);
     }
 
-    public final native void w(boolean param0);
+    public final native void releaseNative(boolean param0);
 }

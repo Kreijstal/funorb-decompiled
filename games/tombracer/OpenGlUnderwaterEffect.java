@@ -143,8 +143,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         float var5Lifetime1;
         if (param0) {
           if (this.field_g) {
-            var2 = this.owner.XA();
-            var3 = this.owner.i();
+            var2 = this.owner.farClipDistance();
+            var3 = this.owner.nearClipDistance();
             var4 = (float)var2 - (float)(var2 - var3) * 0.125f;
             var5 = (float)var2 - (float)(-var3 + var2) * 0.25f;
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.owner.underwaterFogDivisor(false), (float)this.owner.underwaterFogIntensity(-2903) / 255.0f);
@@ -156,8 +156,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         this.onFogChanged(false);
         if (this.field_g) {
-          var2Lifetime1 = this.owner.XA();
-          var3Lifetime1 = this.owner.i();
+          var2Lifetime1 = this.owner.farClipDistance();
+          var3Lifetime1 = this.owner.nearClipDistance();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(var2Lifetime1 - var3Lifetime1) * 0.125f;
           var5Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.25f;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.owner.underwaterFogDivisor(false), (float)this.owner.underwaterFogIntensity(-2903) / 255.0f);

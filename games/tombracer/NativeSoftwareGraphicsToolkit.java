@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
+final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements NativeResource {
     private boolean field_s;
     long field_nativeid;
-    private ya field_p;
+    private NativeSoftwareGraphicsHeap field_p;
     private IntrusiveDeque field_o;
     private Transform3D field_i;
     private int field_k;
@@ -15,13 +15,13 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private static int[] field_m;
     private static float[] field_e;
     private static float[] field_d;
-    private a[] field_q;
+    private NativeModelRenderContext[] field_q;
     static int[] field_t;
     private static int[] field_g;
     private boolean field_h;
     int field_l;
 
-    final native void za(int param0, int param1, int param2, int param3, int param4);
+    final native void fillCircle(int param0, int param1, int param2, int param3, int param4);
 
     public NativeSoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         super(param1);
@@ -59,7 +59,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         }
     }
 
-    public final native void w(boolean param0);
+    public final native void releaseNative(boolean param0);
 
     private final native void va(GraphicsHeap param0);
 
@@ -69,12 +69,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final RenderBuffer createRenderBuffer(int param0, int param1) {
-        return (RenderBuffer) ((Object) new xa(param0, param1));
+        return (RenderBuffer) ((Object) new NativeRenderBuffer(param0, param1));
     }
 
-    final native void f(int param0, int param1);
+    final native void setDepthRange(int param0, int param1);
 
-    final native void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
+    final native void drawWorldLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
     final void setLights(int param0, SceneLight[] param1) {
         int var4 = 0;
@@ -108,9 +108,9 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
     }
 
-    final native void xa(float param0);
+    final native void setAmbientLightIntensity(float param0);
 
-    final native void la();
+    final native void resetClip();
 
     private final native void wa(int param0, int param1, int param2, int param3, int param4, int param5);
 
@@ -143,9 +143,9 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }
 
-    final native void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    final native void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
 
-    final a contextForThread() {
+    final NativeModelRenderContext contextForThread() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_l; var1++) {
           if (this.field_q[var1].field_h == Thread.currentThread()) {
@@ -161,11 +161,11 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.bindCanvasSurface(this.field_f.field_f);
     }
 
-    final native int XA();
+    final native int farClipDistance();
 
     private final native void ma(long param0);
 
-    final native void L(int param0, int param1, int param2);
+    final native void setFogParameters(int param0, int param1, int param2);
 
     private final boolean WA(short param0) {
         Object var2 = null;
@@ -206,12 +206,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
-        return (RenderTarget) ((Object) new NativeRenderTarget(this, (j) (param0), (xa) (param1)));
+        return (RenderTarget) ((Object) new NativeRenderTarget(this, (NativeToolkitSprite) (param0), (NativeRenderBuffer) (param1)));
     }
 
     private final native void t(NativeCanvasSurface param0);
 
-    final native void ya();
+    final native void clearDepthBuffer();
 
     final void applyPostProcessing() {
     }
@@ -231,7 +231,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4) {
-        return (ToolkitModel) ((Object) new i(this, this.field_p, param0, param1, param2, param3, param4));
+        return (ToolkitModel) ((Object) new NativeToolkitModel(this, this.field_p, param0, param1, param2, param3, param4));
     }
 
     final native void setClip(int param0, int param1, int param2, int param3);
@@ -284,9 +284,9 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         }
     }
 
-    final native void ZA(int param0, float param1, float param2, float param3, float param4, float param5);
+    final native void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5);
 
-    final native void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
+    final native void drawWorldLineAtDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
     private final native void P(int param0, int param1, int param2, int param3, int param4);
 
@@ -315,16 +315,16 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native int[] projectionParameters();
 
-    final native void da(int param0, int param1, int param2, int[] param3);
+    final native void projectPoint(int param0, int param1, int param2, int[] param3);
 
     final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (ToolkitSprite) ((Object) new j(this, param0, param1, param2, param3, param4, false));
+        return (ToolkitSprite) ((Object) new NativeToolkitSprite(this, param0, param1, param2, param3, param4, false));
     }
 
     protected final synchronized void finalize() {
         this.close(true);
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
         }
     }
 
@@ -337,14 +337,14 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private final void createRenderContexts(int param0) {
         int var2 = 0;
         this.field_l = param0;
-        this.field_q = new a[this.field_l];
+        this.field_q = new NativeModelRenderContext[this.field_l];
         for (var2 = 0; var2 < this.field_l; var2++) {
-          this.field_q[var2] = new a(this, this.field_n, this.field_k);
+          this.field_q[var2] = new NativeModelRenderContext(this, this.field_n, this.field_k);
         }
     }
 
     final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
-        j var3 = new j(this, param0.field_g, param0.field_f, param0.field_h, 0, param0.field_i, param0.field_i, param0.field_a);
+        NativeToolkitSprite var3 = new NativeToolkitSprite(this, param0.field_g, param0.field_f, param0.field_h, 0, param0.field_i, param0.field_i, param0.field_a);
         ((ToolkitSprite) ((Object) var3)).setInsets(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
         return (ToolkitSprite) ((Object) var3);
     }
@@ -358,7 +358,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final GraphicsHeap createHeap(int param0) {
-        ya var2 = new ya(this, param0);
+        NativeSoftwareGraphicsHeap var2 = new NativeSoftwareGraphicsHeap(this, param0);
         this.field_o.addLast((byte) -97, var2);
         return (GraphicsHeap) ((Object) var2);
     }
@@ -375,10 +375,10 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final void updateTime(int param0) {
         NativeReleaseQueue.flush(true);
         this.d(param0);
-        ya var2 = (ya) (this.field_o.first(-80));
+        NativeSoftwareGraphicsHeap var2 = (NativeSoftwareGraphicsHeap) (this.field_o.first(-80));
         while (var2 != null) {
-          var2.r();
-          var2 = (ya) (this.field_o.next(111));
+          var2.onToolkitTimeUpdate();
+          var2 = (NativeSoftwareGraphicsHeap) (this.field_o.next(111));
         }
     }
 
@@ -386,7 +386,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         return new ba(this);
     }
 
-    final native void DA(int param0, int param1, int param2, int param3);
+    final native void setProjectionParameters(int param0, int param1, int param2, int param3);
 
     final void dispose() {
         if (this.field_s) {
@@ -397,10 +397,10 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.field_p = null;
         this.field_i = null;
         this.field_r.clear(-67);
-        ya var1 = (ya) (this.field_o.first(-80));
+        NativeSoftwareGraphicsHeap var1 = (NativeSoftwareGraphicsHeap) (this.field_o.first(-80));
         while (var1 != null) {
-          var1.ga();
-          var1 = (ya) (this.field_o.next(108));
+          var1.onToolkitDispose();
+          var1 = (NativeSoftwareGraphicsHeap) (this.field_o.next(108));
         }
         this.field_o.clear(8);
         this.FA();
@@ -422,7 +422,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         return (SceneLight) ((Object) new NativeSceneLight(param0, param1, param2, param3, param4, param5));
     }
 
-    final native int i();
+    final native int nearClipDistance();
 
     private final void bindContextToCurrentThread(int param0) {
         this.field_q[param0].bindToCurrentThread();
@@ -439,7 +439,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final native void clear(int param0);
 
     final void bindSpriteTarget(ToolkitSprite param0, boolean param1) {
-        this.n(((j) (param0)).field_nativeid, 0L);
+        this.n(((NativeToolkitSprite) (param0)).field_nativeid, 0L);
     }
 
     final void copyFrontToBack() {
@@ -450,13 +450,13 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final void useHeap(GraphicsHeap param0) {
-        this.field_p = (ya) (param0);
+        this.field_p = (NativeSoftwareGraphicsHeap) (param0);
         this.va(param0);
     }
 
     private final native void d(int param0);
 
-    final native void HA(int param0, int param1, int param2, int param3, int[] param4);
+    final native void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4);
 
     final void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         throw new IllegalStateException();

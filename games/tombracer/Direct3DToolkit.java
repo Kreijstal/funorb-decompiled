@@ -396,7 +396,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void ya() {
+    final void clearDepthBuffer() {
         this.setDepthWriteEnabled(true, (byte) 81);
         this.field_jd.Clear(2, 0, 1.0f, 0);
     }
@@ -1136,7 +1136,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         int var11 = 0;
         jagdx.IDirect3DSurface var9;
         int var10;

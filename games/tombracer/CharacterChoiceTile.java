@@ -144,7 +144,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         tga.field_a.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
         if (this.isEmpty(-64)) {
           nc.field_e.draw(this.field_k, this.field_g);
-          tga.field_a.la();
+          tga.field_a.resetClip();
           var3 = 2431750;
           if (param1) {
             var3 = 10309393;
@@ -155,7 +155,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           return;
         }
         fa.field_a[this.field_f].draw(this.field_k, this.field_g);
-        tga.field_a.la();
+        tga.field_a.resetClip();
         var3Lifetime1 = 2431750;
         if (param1) {
           var3Lifetime1 = 10309393;

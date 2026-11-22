@@ -113,9 +113,9 @@ final class SneakHintPanel implements MessagePanel {
           SneakHintPanel.releaseStatics((byte) -91);
         }
         if (TextureCombineOperation.field_a) {
-          tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
+          tga.field_a.drawWorldLine(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
         } else {
-          tga.field_a.ea(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.withAlpha(param1, (byte) -107, param3), 1);
+          tga.field_a.drawWorldLineAtDepth(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.withAlpha(param1, (byte) -107, param3), 1);
         }
     }
 

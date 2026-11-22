@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NativeCanvasSurface extends IntrusiveNode implements e {
+final class NativeCanvasSurface extends IntrusiveNode implements NativeResource {
     java.awt.Canvas field_f;
     private static boolean field_g;
     int field_i;
@@ -11,7 +11,7 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
 
     private final native void oa(java.awt.Canvas param0, int param1, int param2);
 
-    public final native void w(boolean param0);
+    public final native void releaseNative(boolean param0);
 
     private final void handlePresentationFailure(Exception param0) {
         if (!field_g) {
@@ -44,7 +44,7 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
           return;
         }
     }

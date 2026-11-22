@@ -128,7 +128,7 @@ final class dta {
                 Room.field_j.draw(0, 0);
                 SocketConnector.drawWrappedText(CharacterChoiceTile.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
                 SocketConnector.drawWrappedText(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
-                tga.field_a.la();
+                tga.field_a.resetClip();
                 return;
               }
               if (var15 < 0) {
@@ -209,10 +209,10 @@ final class dta {
                 if (var28_double < 80.0) {
                   TextureCoordinateGeneration.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
                 }
-                tga.field_a.la();
+                tga.field_a.resetClip();
                 tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
                 MirrorBehaviour.field_r.draw(var24 + (-30 + param1), var31);
-                tga.field_a.la();
+                tga.field_a.resetClip();
                 CachedTextLayout.field_l.draw(-1 + param1 - CachedTextLayout.field_l.width() + var24, -CachedTextLayout.field_l.height() + var18Lifetime2);
               }
               if (var24 > 30) {
@@ -372,7 +372,7 @@ final class dta {
           if (!param4.isSendWindowFull(99)) {
             tga.field_a.setClip(param0, param5, param1, param6);
             Room.field_j.draw(0, 0);
-            tga.field_a.la();
+            tga.field_a.resetClip();
           }
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);

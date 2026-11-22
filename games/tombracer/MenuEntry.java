@@ -338,7 +338,7 @@ final class MenuEntry {
           var24 != 0) {
           Projectile.field_n.draw(-34 + this.field_b, -16 + var9);
         }
-        tga.field_a.la();
+        tga.field_a.resetClip();
         if (this.field_g != 6) {
           stackIn_89_0 = haa.field_z;
         } else {

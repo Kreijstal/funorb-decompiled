@@ -221,8 +221,8 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         float var4 = 0.0f;
         float var5 = 0.0f;
         if (this.field_i) {
-          var2 = this.toolkit.XA();
-          var3 = this.toolkit.i();
+          var2 = this.toolkit.farClipDistance();
+          var3 = this.toolkit.nearClipDistance();
           var4 = -(0.125f * (float)(var2 - var3)) + (float)var2;
           var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.field_vb, (float)this.toolkit.field_nb / 255.0f);

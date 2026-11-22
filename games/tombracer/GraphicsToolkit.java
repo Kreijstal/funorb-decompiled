@@ -20,7 +20,7 @@ abstract class GraphicsToolkit {
 
     abstract Transform3D createTransform();
 
-    abstract void la();
+    abstract void resetClip();
 
     final void drawHorizontalLineAt(int param0, int param1, int param2, int param3, int param4) {
         this.drawHorizontalLine(param3, param2, param1, param4, param0);
@@ -53,11 +53,11 @@ abstract class GraphicsToolkit {
 
     abstract void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9);
 
-    abstract void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
+    abstract void drawWorldLineAtDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
     abstract int[] projectionParameters();
 
-    abstract void ZA(int param0, float param1, float param2, float param3, float param4, float param5);
+    abstract void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5);
 
     abstract void intersectClip(int param0, int param1, int param2, int param3);
 
@@ -76,7 +76,7 @@ abstract class GraphicsToolkit {
 
     abstract GameFont createFont(GameFontMetrics param0, SpriteData[] param1, boolean param2);
 
-    abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
+    abstract void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4);
 
     final synchronized static GraphicsToolkit createToolkit(TextureProvider param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
@@ -148,27 +148,27 @@ abstract class GraphicsToolkit {
 
     abstract void setPostProcessBounds(int param0, int param1, int param2, int param3);
 
-    abstract void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
+    abstract void drawWorldLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
     abstract void copyFrontToBack();
 
     abstract void applyPostProcessing();
 
-    abstract void za(int param0, int param1, int param2, int param3, int param4);
+    abstract void fillCircle(int param0, int param1, int param2, int param3, int param4);
 
-    abstract void f(int param0, int param1);
+    abstract void setDepthRange(int param0, int param1);
 
-    abstract void L(int param0, int param1, int param2);
+    abstract void setFogParameters(int param0, int param1, int param2);
 
-    abstract void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    abstract void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
 
-    abstract void ya();
+    abstract void clearDepthBuffer();
 
-    abstract int i();
+    abstract int nearClipDistance();
 
     abstract void clear(int param0);
 
-    abstract void xa(float param0);
+    abstract void setAmbientLightIntensity(float param0);
 
     abstract void restoreCanvasTarget();
 
@@ -188,15 +188,15 @@ abstract class GraphicsToolkit {
 
     abstract void useHeap(GraphicsHeap param0);
 
-    abstract void da(int param0, int param1, int param2, int[] param3);
+    abstract void projectPoint(int param0, int param1, int param2, int[] param3);
 
     abstract void setClip(int param0, int param1, int param2, int param3);
 
     abstract GraphicsHeap createHeap(int param0);
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void fillCircleAlpha(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 30 / ((88 - param1) / 33);
-        this.za(param4, param0, param2, param3, 1);
+        this.fillCircle(param4, param0, param2, param3, 1);
     }
 
     GraphicsToolkit(TextureProvider param0) {
@@ -267,7 +267,7 @@ abstract class GraphicsToolkit {
     final void drawCircleAlpha(int param0, int param1, int param2, int param3, int param4) {
         this.drawCircle(param0, param4, param2, param3, 1);
         if (param1 != -11185) {
-          this.L(-114, 43, -49);
+          this.setFogParameters(-114, 43, -49);
         }
     }
 
@@ -277,11 +277,11 @@ abstract class GraphicsToolkit {
 
     abstract void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract int XA();
+    abstract int farClipDistance();
 
     abstract void bindRenderTarget(RenderTarget param0);
 
-    abstract void DA(int param0, int param1, int param2, int param3);
+    abstract void setProjectionParameters(int param0, int param1, int param2, int param3);
 
     abstract RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1);
 

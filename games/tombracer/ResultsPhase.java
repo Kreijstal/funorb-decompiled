@@ -404,7 +404,7 @@ final class ResultsPhase extends MatchPhase {
           tga.field_a.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
-          tga.field_a.la();
+          tga.field_a.resetClip();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, TooltipRenderer.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&

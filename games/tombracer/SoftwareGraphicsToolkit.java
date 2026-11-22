@@ -64,7 +64,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_c.metadata((byte) -56, param0).field_b || this.field_c.metadata((byte) 125, param0).field_n;
     }
 
-    final void ya() {
+    final void clearDepthBuffer() {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -173,7 +173,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void da(int param0, int param1, int param2, int[] param3) {
+    final void projectPoint(int param0, int param1, int param2, int[] param3) {
         float var5;
         int[] var6_ref_int__;
         int var6;
@@ -209,7 +209,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         var6_ref_int__[0] = -1;
     }
 
-    final void f(int param0, int param1) {
+    final void setDepthRange(int param0, int param1) {
         SoftwareRenderContext var3 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         this.field_g = param0;
         this.field_U = param1;
@@ -353,7 +353,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_A = (SoftwareTransform3D) (param0);
     }
 
-    final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawWorldLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         float var15 = 0.0f;
         float var9 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
         float var10 = this.field_A.field_m + (this.field_A.field_r * (float)param3 + this.field_A.field_o * (float)param4 + this.field_A.field_f * (float)param5);
@@ -415,7 +415,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     final void setBloomParameters(float param0, float param1, float param2) {
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
+    final void setProjectionParameters(int param0, int param1, int param2, int param3) {
         this.field_L = param0;
         this.field_w = param1;
         this.field_Q = param2;
@@ -727,7 +727,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     }
 
-    final void HA(int param0, int param1, int param2, int param3, int[] param4) {
+    final void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4) {
         float var6;
         int[] var7_ref_int__;
         int var7;
@@ -1157,7 +1157,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (RenderBuffer) ((Object) new SoftwareDepthBuffer(param0, param1));
     }
 
-    final void la() {
+    final void resetClip() {
         this.field_J = 0;
         this.field_d = 0;
         this.field_W = this.field_K;
@@ -1169,11 +1169,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (Transform3D) ((Object) new SoftwareTransform3D());
     }
 
-    final void xa(float param0) {
+    final void setAmbientLightIntensity(float param0) {
         this.field_f = (int)(param0 * 65535.0f);
     }
 
-    final int i() {
+    final int nearClipDistance() {
         return this.field_g;
     }
 
@@ -1189,7 +1189,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.refreshContexts();
     }
 
-    final void L(int param0, int param1, int param2) {
+    final void setFogParameters(int param0, int param1, int param2) {
         int var4 = 0;
         SoftwareRenderContext var5;
         int var6;
@@ -1232,7 +1232,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         for (var1 = 0; var1 < this.field_u; var1++) {
           this.field_Y[var1].recreateRasterizer(-39);
         }
-        this.la();
+        this.resetClip();
     }
 
     final void intersectClip(int param0, int param1, int param2, int param3) {
@@ -1404,7 +1404,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void drawWorldLineAtDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         float var16 = 0.0f;
         float var10 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
         float var11 = this.field_A.field_m + (this.field_A.field_r * (float)param3 + this.field_A.field_o * (float)param4 + this.field_A.field_f * (float)param5);
@@ -1443,7 +1443,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         param0[3] = this.field_P;
     }
 
-    final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+    final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
         this.field_q = (int)(param1 * 65535.0f);
         this.field_M = (int)(param2 * 65535.0f);
         float var7 = (float)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
@@ -1507,7 +1507,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int XA() {
+    final int farClipDistance() {
         return this.field_U;
     }
 
@@ -1564,7 +1564,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (GameFont) ((Object) new SoftwareAlphaFont(this, param0, param1, var4, var5));
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2648,7 +2648,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void za(int param0, int param1, int param2, int param3, int param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

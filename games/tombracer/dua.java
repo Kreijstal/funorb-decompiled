@@ -142,7 +142,7 @@ final class dua extends MatchOverlay {
             }
             var19++;
           }
-          tga.field_a.la();
+          tga.field_a.resetClip();
           return;
         }
         field_j = (String) null;
@@ -207,7 +207,7 @@ final class dua extends MatchOverlay {
           }
           var19Lifetime1++;
         }
-        tga.field_a.la();
+        tga.field_a.resetClip();
         return;
     }
 

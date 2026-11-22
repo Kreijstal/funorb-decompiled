@@ -15,9 +15,9 @@ final class ToolkitState {
           var5 = param1.field_d;
           var3 = var5;
           var5.setClip(this.field_d[0], this.field_d[1], this.field_d[2], this.field_d[3]);
-          var5.DA(this.field_a[0], this.field_a[1], this.field_a[2], this.field_a[3]);
+          var5.setProjectionParameters(this.field_a[0], this.field_a[1], this.field_a[2], this.field_a[3]);
           int var4 = -13 / ((31 - param0) / 35);
-          var3.f(this.field_b, this.field_e);
+          var3.setDepthRange(this.field_b, this.field_e);
           param1.field_f = this.field_c;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "soa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -30,8 +30,8 @@ final class ToolkitState {
           var3 = param1.field_d;
           var3.getClip(this.field_d);
           this.field_a = var3.projectionParameters();
-          this.field_b = var3.i();
-          this.field_e = var3.XA();
+          this.field_b = var3.nearClipDistance();
+          this.field_e = var3.farClipDistance();
           if (param0 <= 118) {
             this.field_d = (int[]) null;
           }

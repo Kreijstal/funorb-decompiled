@@ -285,7 +285,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Y = this.field_R;
         this.invalidateProjectionMode(3682);
         this.applyViewport((byte) 114);
-        this.la();
+        this.resetClip();
     }
 
     final void intersectClip(int param0, int param1, int param2, int param3) {
@@ -494,7 +494,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2 = this.field_B;
           var3 = this.field_f;
           var4 = this.field_kc;
-          this.la();
+          this.resetClip();
           jaggl.OpenGL.glReadBuffer(1028);
           jaggl.OpenGL.glDrawBuffer(1029);
           this.invalidateProjectionMode(3682);
@@ -894,7 +894,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void setDepthRange(int param0, int param1) {
         if (this.field_Gc != param0 ||
           param1 != this.field_ob) {
           this.field_Gc = param0;
@@ -1140,7 +1140,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int[] var4;
         if (param0 != 1) {
           var4 = (int[]) null;
-          this.da(-3, -46, 112, (int[]) null);
+          this.projectPoint(-3, -46, 112, (int[]) null);
         }
         if (param1 == 1) {
           return 7681;
@@ -1242,7 +1242,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void la() {
+    final void resetClip() {
         this.field_Ib = 0;
         this.field_kc = this.field_I;
         this.field_B = this.field_Y;
@@ -1469,7 +1469,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDisable(2912);
         }
         if (param0 != -87) {
-          this.DA(90, 39, -12, 39);
+          this.setProjectionParameters(90, 39, -12, 39);
         }
     }
 
@@ -1529,10 +1529,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glHint(3156, 4353);
         this.field_gc = -1;
         this.field_ac = -1;
-        this.la();
+        this.resetClip();
     }
 
-    final void xa(float param0) {
+    final void setAmbientLightIntensity(float param0) {
         if (this.field_tc != param0) {
           this.field_tc = param0;
           this.applyAmbientLightColor(16);
@@ -1552,7 +1552,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glEnd();
     }
 
-    final int i() {
+    final int nearClipDistance() {
         return this.field_Gc;
     }
 
@@ -2279,7 +2279,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void popMatrix(byte param0) {
         if (param0 > -58) {
           int[] var3 = (int[]) null;
-          this.HA(1, -122, 13, 3, (int[]) null);
+          this.projectPointAtDepth(1, -122, 13, 3, (int[]) null);
         }
         jaggl.OpenGL.glPopMatrix();
     }
@@ -2300,7 +2300,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glLightModelfv(2899, gp.field_d, 0);
     }
 
-    final void HA(int param0, int param1, int param2, int param3, int[] param4) {
+    final void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -2437,7 +2437,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+    final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
         int stackIn_3_0 = 0;
         int var7;
         float var8;
@@ -2477,7 +2477,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void da(int param0, int param1, int param2, int[] param3) {
+    final void projectPoint(int param0, int param1, int param2, int[] param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -2715,7 +2715,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void drawWorldLineAtDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.setOrthographicScale((byte) 88, (float)param6);
         this.useOrthographicProjection((byte) -71);
         this.setFogEnabled(16363, false);
@@ -2845,7 +2845,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_I = param0.height();
           this.invalidateProjectionMode(3682);
           this.applyViewport((byte) 115);
-          this.la();
+          this.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2861,7 +2861,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final int XA() {
+    final int farClipDistance() {
         return this.field_ob;
     }
 
@@ -2920,7 +2920,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glFogfv(2918, gp.field_d, 0);
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
+    final void setProjectionParameters(int param0, int param1, int param2, int param3) {
         this.field_o = param0;
         this.field_W = param2;
         this.field_db = param1;
@@ -2936,7 +2936,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ya() {
+    final void clearDepthBuffer() {
         this.setDepthWriteEnabled(true, 0);
         jaggl.OpenGL.glClear(256);
     }
@@ -2945,7 +2945,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_L.apply((byte) -112);
     }
 
-    final void za(int param0, int param1, int param2, int param3, int param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         float var6;
         float var7;
@@ -3068,7 +3068,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawWorldLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.usePerspectiveProjection((byte) -10);
         this.setFogEnabled(16363, false);
         this.setLightingEnabled(52, false);
@@ -3092,7 +3092,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void L(int param0, int param1, int param2) {
+    final void setFogParameters(int param0, int param1, int param2) {
         if (this.field_gc != param0 ||
           param1 != this.field_Kb ||
           param2 != this.field_Xc) {
@@ -3112,7 +3112,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_y = this.field_y & -8;
         }
         if (param0 != -10) {
-          this.i();
+          this.nearClipDistance();
         }
     }
 
@@ -3210,7 +3210,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (param0 > -68) {
           return;
         }
-        this.la();
+        this.resetClip();
     }
 
     final LegacyOpenGlCubeTexture environmentCubeTexture(int param0) {
@@ -3262,7 +3262,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.usePixelProjection(0);
           this.bindTexture(true, (LegacyOpenGlTexture) null);

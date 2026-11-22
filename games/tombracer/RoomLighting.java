@@ -66,9 +66,9 @@ final class RoomLighting implements RenderListener {
           }
           var10Lifetime1 = 0;
           var11 = 16384;
-          tga.field_a.L(var10Lifetime1, var11, 0);
-          tga.field_a.xa(var5);
-          tga.field_a.ZA(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
+          tga.field_a.setFogParameters(var10Lifetime1, var11, 0);
+          tga.field_a.setAmbientLightIntensity(var5);
+          tga.field_a.setDirectionalLighting(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
           if (LightSource.a((byte) -7)) {
             var12 = (LightSource) (this.lightSources.first(-80));
             while (var12 != null) {

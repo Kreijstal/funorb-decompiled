@@ -75,14 +75,14 @@ abstract class RasterBuffer {
     final static void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           param2.setClip(param0, param4, param0 + param3, param3 + param4);
-          param2.za(param0 + param3, param3 + param4, param3, param6, param7);
+          param2.fillCircle(param0 + param3, param3 + param4, param3, param6, param7);
           param2.setClip(-param3 + param5 + param0, param4, param0 + param5, param4 + param3);
-          param2.za(param0 + param5 - param3, param3 + param4, param3, param6, param7);
+          param2.fillCircle(param0 + param5 - param3, param3 + param4, param3, param6, param7);
           param2.setClip(param5 + (param0 - param3), -param3 + param4 + param8, param5 + param0, param4 + param8);
-          param2.za(-param3 + (param0 + param5), param8 + param4 - param3, param3, param6, param7);
+          param2.fillCircle(-param3 + (param0 + param5), param8 + param4 - param3, param3, param6, param7);
           param2.setClip(param0, param8 + (param4 - param3), param3 + param0, param8 + param4);
-          param2.za(param0 + param3, param8 + param4 - param3, param3, param6, param7);
-          param2.la();
+          param2.fillCircle(param0 + param3, param8 + param4 - param3, param3, param6, param7);
+          param2.resetClip();
           param2.fillRectangle(param3 + param0, param4, param5 - param3 * 2, param3, param6, param7);
           param2.fillRectangle(param3 + param0, param4 + param8 - param3, -(2 * param3) + param5, param3, param6, param7);
           param2.fillRectangle(param0, param4 + param3, param3, param8 - param3 * 2, param6, param7);

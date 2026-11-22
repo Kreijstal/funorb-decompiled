@@ -110,7 +110,7 @@ final class TextureTransformMode {
           var6 = -24;
           var2 = 0.05000000074505806f;
           var3 = 0.6499999761581421f;
-          tga.field_a.ZA(var4, var1, var2, (float)var5, (float)var6, (float)var7);
+          tga.field_a.setDirectionalLighting(var4, var1, var2, (float)var5, (float)var6, (float)var7);
         } else {
           var3 = 1.15234375f;
           var5 = -50;
@@ -121,10 +121,10 @@ final class TextureTransformMode {
           var6 = -60;
         }
         int var8 = 0;
-        tga.field_a.xa(var3);
+        tga.field_a.setAmbientLightIntensity(var3);
         int var9 = 16384;
-        tga.field_a.L(var8, var9, 0);
-        tga.field_a.f(-16384, 16384);
+        tga.field_a.setFogParameters(var8, var9, 0);
+        tga.field_a.setDepthRange(-16384, 16384);
         Transform3D var10 = tga.field_a.createTransform();
         var10.setIdentity();
         tga.field_a.setTransform(var10);

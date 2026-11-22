@@ -302,7 +302,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int var2 = this.field_C;
         int var3 = this.field_K;
         int var4 = this.field_jb;
-        this.la();
+        this.resetClip();
         jaggl.OpenGL.glReadBuffer(1028);
         jaggl.OpenGL.glDrawBuffer(1029);
         this.useIdentityProjection(256);
@@ -729,7 +729,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     final void restoreCanvasTarget() {
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void blitPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.usePixelProjection(19822);
           this.bindTexture(true, (GpuTexture) null);
@@ -937,7 +937,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void ya() {
+    final void clearDepthBuffer() {
         this.setDepthWriteEnabled(true, (byte) 81);
         jaggl.OpenGL.glClear(256);
     }

@@ -90,11 +90,11 @@ final class RoomViewRenderer {
           var17 = (var12 + var11) / 2;
           var18 = var17 * 2048 / 512;
           var16_ref.setViewportScale(var18, (byte) -88);
-          tga.field_a.ya();
+          tga.field_a.clearDepthBuffer();
           if (TextureCombineOperation.field_a) {
-            tga.field_a.DA(var13, var14, var17, var17);
+            tga.field_a.setProjectionParameters(var13, var14, var17, var17);
           } else {
-            tga.field_a.DA(var13, var14, 10 * var17 / 8, var17 * 10 / 8);
+            tga.field_a.setProjectionParameters(var13, var14, 10 * var17 / 8, var17 * 10 / 8);
           }
           var19 = tga.field_a.createTransform();
           var20 = 0;

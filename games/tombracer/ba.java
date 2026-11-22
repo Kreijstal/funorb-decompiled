@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends r implements e {
+final class ba extends r implements NativeResource {
     long field_nativeid;
 
     ba(NativeSoftwareGraphicsToolkit param0) {
@@ -9,9 +9,9 @@ final class ba extends r implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          NativeReleaseQueue.queueRelease(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (NativeResource) (this));
         }
     }
 
-    public final native void w(boolean param0);
+    public final native void releaseNative(boolean param0);
 }

@@ -74,10 +74,10 @@ final class ConsoleTokenStream {
             field_b = (String) null;
           }
           if (TextureCombineOperation.field_a) {
-            tga.field_a.da(param2 >> 14, -param1 >> 14, -param3 >> 14, param0);
+            tga.field_a.projectPoint(param2 >> 14, -param1 >> 14, -param3 >> 14, param0);
             return;
           }
-          tga.field_a.HA(param2 >> 14, -param1 >> 14, -param3 >> 14, 2048, param0);
+          tga.field_a.projectPointAtDepth(param2 >> 14, -param1 >> 14, -param3 >> 14, 2048, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

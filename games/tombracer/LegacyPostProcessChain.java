@@ -261,7 +261,7 @@ final class LegacyPostProcessChain {
         this.field_t.prepareSpriteRendering(2);
         this.field_t.setBlendMode((byte) 66, 0);
         this.field_t.setTextureCombineMode(1, 1);
-        this.field_t.la();
+        this.field_t.resetClip();
         var2Lifetime1 = 0;
         var3 = 1;
         var4 = (LegacyOpenGlPostProcessEffect) (this.field_j.first(-80));

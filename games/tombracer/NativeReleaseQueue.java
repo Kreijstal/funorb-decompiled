@@ -22,11 +22,11 @@ final class NativeReleaseQueue {
         field_c = field_c + 1;
     }
 
-    final synchronized static void queueRelease(int param0, e param1) {
+    final synchronized static void queueRelease(int param0, NativeResource param1) {
         NativeReleaseNode var2 = null;
         if (!field_b) {
           if (param0 <= ~field_c) {
-            param1.w(false);
+            param1.releaseNative(false);
           } else {
             var2 = new NativeReleaseNode();
             var2.field_f = param1;
@@ -42,7 +42,7 @@ final class NativeReleaseQueue {
         while (true) {
           var1 = (NativeReleaseNode) (field_a.removeFirst(-113));
           if (var1 != null) {
-            var1.field_f.w(true);
+            var1.field_f.releaseNative(true);
             var1.unlink(120);
             continue;
           }

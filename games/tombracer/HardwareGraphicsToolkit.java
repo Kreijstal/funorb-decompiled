@@ -145,7 +145,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private mna field_Z;
     boolean field_Wb;
 
-    final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+    final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
         int stackIn_3_0 = 0;
         int var7;
         float var8;
@@ -601,7 +601,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         if (param0 != 83) {
           var9 = (int[]) null;
-          this.da(-58, 96, -43, (int[]) null);
+          this.projectPoint(-58, 96, -43, (int[]) null);
         }
     }
 
@@ -609,7 +609,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Cb = (float)this.field_k;
         if (param0 != 10) {
           int[] var3 = (int[]) null;
-          this.da(-108, 67, -5, (int[]) null);
+          this.projectPoint(-108, 67, -5, (int[]) null);
         }
     }
 
@@ -658,7 +658,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_eb.getCubeTexture(68);
     }
 
-    final void xa(float param0) {
+    final void setAmbientLightIntensity(float param0) {
         if (this.field_fc != param0) {
           this.field_fc = param0;
           this.field_P.setAmbient(param0);
@@ -1097,12 +1097,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final int estimatedResourceBytes(int param0) {
         if (param0 != 10) {
-          this.xa(-0.16009120643138885f);
+          this.setAmbientLightIntensity(-0.16009120643138885f);
         }
         return this.field_X + this.field_Xb + this.field_Fb;
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
+    final void setProjectionParameters(int param0, int param1, int param2, int param3) {
         this.field_kc = param1;
         this.field_Ic = param2;
         this.field_Q = param0;
@@ -1113,7 +1113,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.clipChanged((byte) -115);
     }
 
-    final void HA(int param0, int param1, int param2, int param3, int[] param4) {
+    final void projectPointAtDepth(int param0, int param1, int param2, int param3, int[] param4) {
         RuntimeException runtimeException = null;
         float var6_float = 0.0f;
         int[] var7_ref_int__ = null;
@@ -1440,7 +1440,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.drawPrimitives(1, io.field_c, 0, param0 + 70);
     }
 
-    final void da(int param0, int param1, int param2, int[] param3) {
+    final void projectPoint(int param0, int param1, int param2, int[] param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -1610,7 +1610,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final void L(int param0, int param1, int param2) {
+    final void setFogParameters(int param0, int param1, int param2) {
         if (this.field_g != param0 ||
           this.field_J != param1 ||
           param2 != this.field_Ac) {
@@ -1701,7 +1701,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract CubeTexture createCubeTexture(byte param0, int[][] param1, boolean param2, int param3);
 
-    final void za(int param0, int param1, int param2, int param3, int param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         this.prepareSolidRendering(118);
         this.setTextureConstantColor(3625, param3);
         this.setColorCombineSource(LruNodeCache.field_c, 0, -74);
@@ -1734,7 +1734,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void setDepthRange(int param0, int param1) {
         if (this.field_D != param0 ||
           param1 != this.field_k) {
           this.field_D = param0;
@@ -1812,7 +1812,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_sb[9] = this.field_sb[8];
         }
         this.resetDriverState(-29040);
-        this.la();
+        this.resetClip();
         this.copyFrontToBack();
     }
 
@@ -2084,7 +2084,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void drawWorldLineAtDepth(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (!this.writeLineVertices((float)param1, (float)param2, (float)param3, (float)param4, (float)param5, (float)param0, (byte) -70)) {
           return;
         }
@@ -2185,7 +2185,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, TextureFormat param6, int param7);
 
-    final void la() {
+    final void resetClip() {
         this.field_K = 0;
         this.field_A = 0;
         this.field_C = this.field_Hb;
@@ -2204,7 +2204,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void setClip(int param0, int param1, int param2, int param3) {
         if (param0 <= 0 && -1 + this.field_Hb <= param2 && param1 <= 0 &&
           this.field_jc - 1 <= param3) {
-          this.la();
+          this.resetClip();
           return;
         }
         this.field_C = param2 <= this.field_Hb ? param2 : 0;
@@ -2372,7 +2372,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void drawPrimitives(int param0, GpuPrimitiveType param1, int param2, int param3);
 
-    final int i() {
+    final int nearClipDistance() {
         return this.field_D;
     }
 
@@ -2400,7 +2400,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void drawWorldLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (!this.writeLineVertices((float)param1, (float)param2, (float)param3, (float)param4, (float)param5, (float)param0, (byte) -40)) {
           return;
         }
@@ -2481,7 +2481,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.applyViewMatrix(false);
         if (param0 != 94) {
-          this.i();
+          this.nearClipDistance();
         }
     }
 
@@ -2657,7 +2657,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyScissor(int param0);
 
-    final int XA() {
+    final int farClipDistance() {
         return this.field_k;
     }
 

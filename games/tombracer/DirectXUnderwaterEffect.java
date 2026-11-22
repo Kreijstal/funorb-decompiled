@@ -221,8 +221,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         if (null != this.field_j) {
           var2 = this.field_i.field_jd;
-          var3 = this.owner.XA();
-          var4 = this.owner.i();
+          var3 = this.owner.farClipDistance();
+          var4 = this.owner.nearClipDistance();
           var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
           var6 = -((float)(-var4 + var3) * 0.25f) + (float)var3;
           var2.setVertexShaderConstantF(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));

@@ -32,8 +32,8 @@ final class hp {
           return;
         }
         try {
-          tga.field_a.ya();
-          tga.field_a.DA(param6, param5, 32, 32);
+          tga.field_a.clearDepthBuffer();
+          tga.field_a.setProjectionParameters(param6, param5, 32, 32);
           var7 = tga.field_a.getTransform();
           var7.setIdentity();
           var7.rotateY(param1 << 3);
