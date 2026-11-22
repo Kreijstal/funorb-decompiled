@@ -21,14 +21,14 @@ final class MixedSupport056 {
     String stringState0244;
     long longState0021;
 
-    final int computeInteger0682(byte byteArgument1) {
+    final int computeInteger0678(byte byteArgument1) {
         if (!this.booleanState0070 && (2 != this.integerState0290 ||
           this.integerState0288 <= 0)) {
           if (~MixedSupport134.longState0050 == ~this.longState0021) {
             return 1;
           }
           if (2 == ThemeTips.integerState0351 &&
-            RenderingSupport013.computeBoolean1378(this.stringState0238, 3)) {
+            RenderingSupport013.computeBoolean1372(this.stringState0238, 3)) {
             return 1;
           }
           if (byteArgument1 == 94) {
@@ -40,14 +40,14 @@ final class MixedSupport056 {
         return 2;
     }
 
-    final static boolean computeBoolean0679(byte byteArgument1) {
+    final static boolean computeBoolean0675(byte byteArgument1) {
         if (byteArgument1 != -53) {
           return false;
         }
-        return InputAdapter003.computeBoolean1536(TextLayout.stringState0081, 113, MixedSupport043.longState0017);
+        return InputAdapter003.computeBoolean1517(TextLayout.stringState0081, 113, MixedSupport043.longState0017);
     }
 
-    final static void performAction0681(java.awt.Canvas canvasArgument1, byte byteArgument2) {
+    final static void performAction0677(java.awt.Canvas canvasArgument1, byte byteArgument2) {
         java.awt.Canvas canvasLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -55,10 +55,10 @@ final class MixedSupport056 {
         RuntimeException caughtExceptionLocal5 = null;
         RuntimeException runtimeExceptionLocal6 = null;
         try {
-          DiagnosticSupport001.performAction0335((java.awt.Component) ((Object) canvasArgument1), false);
+          DiagnosticSupport001.performAction0334((java.awt.Component) ((Object) canvasArgument1), false);
           if (byteArgument2 >= -29) {
             canvasLocal1 = (java.awt.Canvas) null;
-            MixedSupport056.performAction0681((java.awt.Canvas) null, (byte) -79);
+            MixedSupport056.performAction0677((java.awt.Canvas) null, (byte) -79);
           }
           InputAdapter001.performAction0069(-2204, (java.awt.Component) ((Object) canvasArgument1));
           if (MixedSupport134.mouseWheelInputState0001 != null) {
@@ -75,14 +75,14 @@ final class MixedSupport056 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    public static void performAction0680(int integerArgument1) {
+    public static void performAction0676(int integerArgument1) {
         stringState0240 = null;
         if (integerArgument1 != -21128) {
-          MixedSupport056.performAction0680(-128);
+          MixedSupport056.performAction0676(-128);
         }
         integerArrayState0064 = null;
         stringState0242 = null;
@@ -123,7 +123,7 @@ final class MixedSupport056 {
           this.booleanState0070 = true;
           this.stringState0243 = stringArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hl.<init>(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + (stringArgument5 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hl.<init>(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + (stringArgument5 != null ? "{...}" : "null") + ')');
         }
     }
 

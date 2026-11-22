@@ -14,7 +14,7 @@ final class MixedSupport119 {
     private int integerState0740;
     int integerState0741;
 
-    final int computeInteger1525(int integerArgument1) {
+    final int computeInteger1507(int integerArgument1) {
         int integerLocal1 = 0;
         if (this.integerState0734 >= this.integerState0733) {
           integerLocal1 = this.integerState0738;
@@ -33,7 +33,7 @@ final class MixedSupport119 {
         return this.integerState0736 - this.integerState0740 >> 15;
     }
 
-    final void performAction1524() {
+    final void performAction1506() {
         this.integerState0733 = 0;
         this.integerState0738 = 0;
         this.integerState0740 = 0;
@@ -41,21 +41,21 @@ final class MixedSupport119 {
         this.integerState0734 = 0;
     }
 
-    final void performAction1527(PacketBuffer packetBufferArgument1) {
-        this.integerState0739 = packetBufferArgument1.computeInteger1904((byte) -28);
-        this.integerState0737 = packetBufferArgument1.computeInteger1914(7553);
-        this.integerState0741 = packetBufferArgument1.computeInteger1914(7553);
-        this.performAction1526(packetBufferArgument1);
+    final void performAction1509(PacketBuffer packetBufferArgument1) {
+        this.integerState0739 = packetBufferArgument1.readUnsignedByte((byte) -28);
+        this.integerState0737 = packetBufferArgument1.readInt(7553);
+        this.integerState0741 = packetBufferArgument1.readInt(7553);
+        this.performAction1508(packetBufferArgument1);
     }
 
-    final void performAction1526(PacketBuffer packetBufferArgument1) {
+    final void performAction1508(PacketBuffer packetBufferArgument1) {
         int integerLocal1 = 0;
-        this.integerState0735 = packetBufferArgument1.computeInteger1904((byte) -69);
+        this.integerState0735 = packetBufferArgument1.readUnsignedByte((byte) -69);
         this.integerArrayState0203 = new int[this.integerState0735];
         this.integerArrayState0204 = new int[this.integerState0735];
         for (integerLocal1 = 0; integerLocal1 < this.integerState0735; integerLocal1++) {
-          this.integerArrayState0203[integerLocal1] = packetBufferArgument1.computeInteger1907(3);
-          this.integerArrayState0204[integerLocal1] = packetBufferArgument1.computeInteger1907(3);
+          this.integerArrayState0203[integerLocal1] = packetBufferArgument1.readUnsignedShort(3);
+          this.integerArrayState0204[integerLocal1] = packetBufferArgument1.readUnsignedShort(3);
         }
     }
 

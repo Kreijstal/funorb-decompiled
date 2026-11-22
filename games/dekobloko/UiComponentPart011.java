@@ -48,14 +48,14 @@ final class UiComponentPart011 extends InteractiveComponent {
             if (MixedSupport075.rgbSpriteState0027 != null &&
               integerLocal4 <= MixedSupport075.rgbSpriteState0027.integerState0258 &&
               integerLocal5 <= MixedSupport075.rgbSpriteState0027.integerState0255) {
-              ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
-              SoftwareRaster.performAction0661();
+              ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
+              SoftwareRaster.performAction0657();
             } else {
               MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal4, integerLocal5);
-              ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+              ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
             }
             rgbSpriteLocal8.performAction0259(112, 144, rgbSpriteLocal8.integerState0254 << 4, rgbSpriteLocal8.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-            MixedSupport086.performAction1084((byte) -5);
+            MixedSupport086.performAction1079((byte) -5);
             MixedSupport075.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal8.integerState0254, -rgbSpriteLocal8.integerState0260 + integerLocal2, 256);
             return;
           }
@@ -78,23 +78,23 @@ final class UiComponentPart011 extends InteractiveComponent {
           integerLocal18 = rgbSpriteLocal9.integerState0260 << 1;
           if (MixedSupport075.rgbSpriteState0027 == null) {
             MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal17, integerLocal18);
-            ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+            ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
           } else {
             if (integerLocal17 > MixedSupport075.rgbSpriteState0027.integerState0258) {
               MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal17, integerLocal18);
-              ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+              ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
             } else {
               if (integerLocal18 <= MixedSupport075.rgbSpriteState0027.integerState0255) {
-                ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
-                SoftwareRaster.performAction0661();
+                ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
+                SoftwareRaster.performAction0657();
               } else {
                 MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal17, integerLocal18);
-                ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+                ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
               }
             }
           }
           rgbSpriteLocal9.performAction0259(112, 144, rgbSpriteLocal9.integerState0254 << 4, rgbSpriteLocal9.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-          MixedSupport086.performAction1084((byte) -5);
+          MixedSupport086.performAction1079((byte) -5);
           MixedSupport075.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal9.integerState0254, -rgbSpriteLocal9.integerState0260 + integerLocal2, 256);
           return;
         }
@@ -118,23 +118,23 @@ final class UiComponentPart011 extends InteractiveComponent {
         integerLocal16 = rgbSpriteLocal14.integerState0260 << 1;
         if (MixedSupport075.rgbSpriteState0027 == null) {
           MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal15, integerLocal16);
-          ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+          ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
         } else {
           if (integerLocal15 > MixedSupport075.rgbSpriteState0027.integerState0258) {
             MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal15, integerLocal16);
-            ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+            ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
           } else {
             if (integerLocal16 <= MixedSupport075.rgbSpriteState0027.integerState0255) {
-              ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
-              SoftwareRaster.performAction0661();
+              ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
+              SoftwareRaster.performAction0657();
             } else {
               MixedSupport075.rgbSpriteState0027 = new RgbSprite(integerLocal15, integerLocal16);
-              ValidationStatus.performAction1616(true, MixedSupport075.rgbSpriteState0027);
+              ValidationStatus.performAction1597(true, MixedSupport075.rgbSpriteState0027);
             }
           }
         }
         rgbSpriteLocal14.performAction0259(112, 144, rgbSpriteLocal14.integerState0254 << 4, rgbSpriteLocal14.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-        MixedSupport086.performAction1084((byte) -5);
+        MixedSupport086.performAction1079((byte) -5);
         MixedSupport075.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal14.integerState0254, -rgbSpriteLocal14.integerState0260 + integerLocal2, 256);
     }
 
@@ -146,11 +146,11 @@ final class UiComponentPart011 extends InteractiveComponent {
           this.integerState0239 = this.integerState0239 + 1;
           super.performAction0218(uiComponentArgument1, 89, integerArgument3, integerArgument4);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "g.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "g.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    final static SceneWidgetPart014 computeSceneWidgetPart0140558(int integerArgument1, String stringArgument2) {
+    final static SceneWidgetPart014 computeSceneWidgetPart0140554(int integerArgument1, String stringArgument2) {
         String stringLocal1 = null;
         SceneWidgetPart014 sceneWidgetPart014Local2 = null;
         String stringLocal3 = null;
@@ -169,7 +169,7 @@ final class UiComponentPart011 extends InteractiveComponent {
             return null;
           }
           charSequenceLocal5 = (CharSequence) ((Object) stringArgument2);
-          stringLocal1 = ComponentContainer.computeString0918(charSequenceLocal5, (byte) 2);
+          stringLocal1 = ComponentContainer.computeString0913(charSequenceLocal5, (byte) 2);
           if (stringLocal1 == null) {
             stringLocal1 = stringArgument2;
           }
@@ -179,7 +179,7 @@ final class UiComponentPart011 extends InteractiveComponent {
           sceneWidgetPart014Local2 = (SceneWidgetPart014) (MixedSupport054.secondaryNodeHashTableState0001.get(24710, (long)stringLocal1.hashCode()));
           while (sceneWidgetPart014Local2 != null) {
             charSequenceLocal6 = (CharSequence) ((Object) sceneWidgetPart014Local2.stringState0606);
-            stringLocal3 = ComponentContainer.computeString0918(charSequenceLocal6, (byte) 2);
+            stringLocal3 = ComponentContainer.computeString0913(charSequenceLocal6, (byte) 2);
             if (stringLocal3 == null) {
               stringLocal3 = sceneWidgetPart014Local2.stringState0606;
             }
@@ -200,7 +200,7 @@ final class UiComponentPart011 extends InteractiveComponent {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class UiComponentPart011 extends InteractiveComponent {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         try {
           this.callbackContract011State0001 = callbackContract011Argument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "g.<init>(" + (callbackContract011Argument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "g.<init>(" + (callbackContract011Argument1 != null ? "{...}" : "null") + ')');
         }
     }
 

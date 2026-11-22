@@ -49,7 +49,7 @@ final class MixedSupport010 {
         int integerLocal7;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport109.performAction1390();
+          MixedSupport109.performAction1384();
           MixedSupport017.integerArrayState0023 = new int[260];
           if (integerArgument1 > -113) {
             MixedSupport010.performAction0141(-59);
@@ -69,7 +69,7 @@ final class MixedSupport010 {
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal5 = caughtParameterLocal8;
           runtimeExceptionLocal6 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal6), "bg.A(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal6), "bg.A(" + integerArgument1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class MixedSupport010 {
         RuntimeException caughtExceptionLocal24 = null;
         RuntimeException runtimeExceptionLocal25 = null;
         try {
-          SceneWidgetPart010.performAction1508(integerArgument9 ^ 25206, integerArgument5, rgbSpriteArrayArrayArgument12, byteArrayArgument4, rgbSpriteArrayArrayArgument11, integerArgument8, booleanArgument13, stringArrayArrayArgument15, integerArrayArgument2, byteArrayArgument1, resourceArchiveArgument7, (int[]) null, resourceArchiveArgument10, (IndexedSprite[]) null, stringArrayArgument3, stringArrayArrayArgument6, resourceArchiveArgument14);
+          SceneWidgetPart010.performAction1490(integerArgument9 ^ 25206, integerArgument5, rgbSpriteArrayArrayArgument12, byteArrayArgument4, rgbSpriteArrayArrayArgument11, integerArgument8, booleanArgument13, stringArrayArrayArgument15, integerArrayArgument2, byteArrayArgument1, resourceArchiveArgument7, (int[]) null, resourceArchiveArgument10, (IndexedSprite[]) null, stringArrayArgument3, stringArrayArrayArgument6, resourceArchiveArgument14);
           if (integerArgument9 != 25150) {
             MixedSupport010.performAction0140((byte) 118);
           }
@@ -175,7 +175,7 @@ final class MixedSupport010 {
           } else {
             stackStringLocal23 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal22).append(stackStringLocal23).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal22).append(stackStringLocal23).append(')').toString());
         }
     }
 

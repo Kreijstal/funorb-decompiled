@@ -12,7 +12,7 @@ final class MixedSupport102 {
     static MixedSupport056[] mixedSupport056ArrayState0001;
     static SceneWidgetPart007 sceneWidgetPart007State0001;
 
-    public static void performAction1246(byte byteArgument1) {
+    public static void performAction1241(byte byteArgument1) {
         byteArrayArrayState0007 = (byte[][]) null;
         sceneWidgetPart007State0001 = null;
         integerArrayState0180 = null;
@@ -24,21 +24,21 @@ final class MixedSupport102 {
         stringState0412 = null;
     }
 
-    final static void performAction1247(int integerArgument1, byte byteArgument2) {
+    final static void performAction1242(int integerArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
         RuntimeException caughtExceptionLocal4 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport064.performAction0766((byte) -33, true, UiComponentPart021.integerState0556, MixedSupport010.integerState0066, integerArgument1, RenderingSupport003.integerState0252, 0);
+          MixedSupport064.performAction0762((byte) -33, true, UiComponentPart021.integerState0556, MixedSupport010.integerState0066, integerArgument1, RenderingSupport003.integerState0252, 0);
           for (integerLocal1 = 0; UiComponentPart021.integerState0556 > integerLocal1; integerLocal1++) {
             MixedSupport017.integerArrayState0022[integerLocal1 + integerArgument1] = integerLocal1;
           }
           if (byteArgument2 != 6) {
             byteArrayArrayState0007 = (byte[][]) null;
           }
-          MixedSupport064.performAction0766((byte) -33, false, integerArgument1 + UiComponentPart021.integerState0556, ReturnedShape.integerState0695, integerArgument1 + integerArgument1, UiComponentPart019.integerState0504, integerArgument1);
+          MixedSupport064.performAction0762((byte) -33, false, integerArgument1 + UiComponentPart021.integerState0556, ReturnedShape.integerState0695, integerArgument1 + integerArgument1, UiComponentPart019.integerState0504, integerArgument1);
           if (UiComponentPart021.integerState0556 <= integerArgument1) {
             return;
           }
@@ -47,7 +47,7 @@ final class MixedSupport102 {
         } catch (java.lang.RuntimeException caughtParameterLocal5) {
           caughtExceptionLocal4 = caughtParameterLocal5;
           runtimeExceptionLocal2 = caughtExceptionLocal4;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal2), "pd.A(" + integerArgument1 + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "pd.A(" + integerArgument1 + ',' + byteArgument2 + ')');
         }
     }
 

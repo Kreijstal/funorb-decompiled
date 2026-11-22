@@ -16,7 +16,7 @@ final class MixedSupport053 extends HashNode {
         throw new Error();
     }
 
-    final static void performAction0629(int integerArgument1, boolean booleanArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, String stringArgument4) {
+    final static void performAction0625(int integerArgument1, boolean booleanArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, String stringArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -34,29 +34,29 @@ final class MixedSupport053 extends HashNode {
         String stringLocal15 = null;
         MixedSupport104 mixedSupport104Local16 = null;
         try {
-          MixedSupport122.performAction1572((String) null, (int[]) null, 105, MixedSupport047.sceneWidgetPart008State0003, sceneWidgetPart013Argument3, (String) null, 0L, -1, sceneWidgetPart013Argument3.computeInteger1761(-88));
+          MixedSupport122.performAction1553((String) null, (int[]) null, 105, MixedSupport047.sceneWidgetPart008State0003, sceneWidgetPart013Argument3, (String) null, 0L, -1, sceneWidgetPart013Argument3.computeInteger1741(-88));
           if (sceneWidgetPart013Argument3.booleanState0204 && (2 == sceneWidgetPart013Argument3.integerState0845 ||
             !(MixedSupport126.integerState0776 < 2))) {
             mixedSupport104Local10 = SceneWidget.mixedSupport104State0001;
             stringLocal11 = NodeHashTableIterator.substituteIndexedPlaceholders(86, GameDomainSupport002.stringState0145, new String[]{stringArgument4});
-            mixedSupport104Local10.sceneWidgetPart002State0002.performAction0567(stringLocal11, 10, 126);
+            mixedSupport104Local10.sceneWidgetPart002State0002.performAction0563(stringLocal11, 10, 126);
           }
-          SceneWidget.mixedSupport104State0001.performAction1266(-119);
+          SceneWidget.mixedSupport104State0001.performAction1260(-119);
           if (booleanArgument2) {
             if (SceneWidget.mixedSupport104State0001.integerState0581 != MixedSupport124.integerState0772) {
               mixedSupport104Local14 = SceneWidget.mixedSupport104State0001;
               stringLocal15 = NodeHashTableIterator.substituteIndexedPlaceholders(86, MixedSupport118.stringState0492, new String[]{stringArgument4});
-              mixedSupport104Local14.sceneWidgetPart002State0002.performAction0567(stringLocal15, 15, integerArgument1 ^ 91);
+              mixedSupport104Local14.sceneWidgetPart002State0002.performAction0563(stringLocal15, 15, integerArgument1 ^ 91);
             } else {
               mixedSupport104Local12 = SceneWidget.mixedSupport104State0001;
               stringLocal13 = NodeHashTableIterator.substituteIndexedPlaceholders(94, MixedSupport035.stringState0166, new String[]{stringArgument4});
-              mixedSupport104Local12.sceneWidgetPart002State0002.performAction0567(stringLocal13, 16, integerArgument1 + 87);
+              mixedSupport104Local12.sceneWidgetPart002State0002.performAction0563(stringLocal13, 16, integerArgument1 + 87);
             }
           }
           mixedSupport104Local16 = SceneWidget.mixedSupport104State0001;
           integerLocal8 = UiComponentPart013.integerState0276;
           integerLocal9 = TextLineMetrics.integerState0535;
-          mixedSupport104Local16.sceneWidgetPart002State0002.performAction0568(integerLocal9, integerLocal8, 123, integerArgument1, 0);
+          mixedSupport104Local16.sceneWidgetPart002State0002.performAction0564(integerLocal9, integerLocal8, 123, integerArgument1, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal17) {
           caughtExceptionLocal6 = caughtParameterLocal17;
@@ -74,11 +74,11 @@ final class MixedSupport053 extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    public static void performAction0628(int integerArgument1) {
+    public static void performAction0624(int integerArgument1) {
         if (integerArgument1 == 22771) {
           stringState0221 = null;
           sceneWidgetState0047 = null;

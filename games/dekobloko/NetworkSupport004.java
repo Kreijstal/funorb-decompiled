@@ -18,7 +18,7 @@ final class NetworkSupport004 {
         stringState0209 = null;
     }
 
-    final static java.net.URL computeURL0606(java.net.URL uRLArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
+    final static java.net.URL computeURL0602(java.net.URL uRLArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
         Object objectLocal1 = null;
         Object objectLocal2 = null;
         java.net.URL stackURLLocal3 = null;
@@ -48,7 +48,7 @@ final class NetworkSupport004 {
             !MixedSupport131.stringState0543.equals(appletArgument3.getParameter("session"))) {
             objectLocal11 = MixedSupport131.stringState0543;
           }
-          stackURLLocal4 = NetworkSupport011.computeURL1296((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
+          stackURLLocal4 = NetworkSupport011.computeURL1290((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
           return stackURLLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal10 = caughtParameterLocal13;
@@ -66,16 +66,16 @@ final class NetworkSupport004 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) (stackObjectLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) (stackObjectLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
-    final static void performAction0607(int integerArgument1) {
+    final static void performAction0603(int integerArgument1) {
         if (integerArgument1 != -29550) {
           return;
         }
-        UiComponentPart010.performAction0419((byte) 53);
-        CipherPacketBuffer.performAction1698(-4840);
+        UiComponentPart010.performAction0418((byte) 53);
+        CipherPacketBuffer.performAction1679(-4840);
     }
 
     static {

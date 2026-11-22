@@ -13,20 +13,20 @@ abstract class Sprite {
     int integerState0428;
     static ResourceArchive resourceArchiveState0010;
 
-    abstract void performAction0956(int integerArgument1, int integerArgument2);
+    abstract void performAction0951(int integerArgument1, int integerArgument2);
 
-    final static ReturnedShape computeReturnedShape0959(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static ReturnedShape computeReturnedShape0954(int integerArgument1, int integerArgument2, int integerArgument3) {
         ReturnedShape returnedShapeLocal1 = new ReturnedShape(integerArgument1);
         returnedShapeLocal1.packedCells = new byte[2];
         returnedShapeLocal1.width = 2;
         returnedShapeLocal1.height = 1;
-        returnedShapeLocal1.packedCells[integerArgument2] = (byte)((MixedSupport079.computeInteger0954(8, integerArgument3) != 0 ? 24 : 16) + MixedSupport079.computeInteger0954(integerArgument3, 7));
+        returnedShapeLocal1.packedCells[integerArgument2] = (byte)((MixedSupport079.computeInteger0949(8, integerArgument3) != 0 ? 24 : 16) + MixedSupport079.computeInteger0949(integerArgument3, 7));
         integerArgument3 = integerArgument3 >> 4;
-        returnedShapeLocal1.packedCells[1] = (byte)(MixedSupport079.computeInteger0954(7, integerArgument3) + (MixedSupport079.computeInteger0954(8, integerArgument3) == 0 ? 16 : 24));
+        returnedShapeLocal1.packedCells[1] = (byte)(MixedSupport079.computeInteger0949(7, integerArgument3) + (MixedSupport079.computeInteger0949(8, integerArgument3) == 0 ? 16 : 24));
         return returnedShapeLocal1;
     }
 
-    final static void performAction0958(int integerArgument1, boolean booleanArgument2) {
+    final static void performAction0953(int integerArgument1, boolean booleanArgument2) {
         if (!booleanArgument2) {
           return;
         }
@@ -35,13 +35,13 @@ abstract class Sprite {
         MixedSupport028.stringState0137 = GameSession.stringArrayState0033[integerArgument1];
     }
 
-    abstract void performAction0957(int integerArgument1, int integerArgument2, int integerArgument3);
+    abstract void performAction0952(int integerArgument1, int integerArgument2, int integerArgument3);
 
-    public static void performAction0955(int integerArgument1) {
+    public static void performAction0950(int integerArgument1) {
         resourceArchiveState0010 = null;
         stringArrayArrayState0005 = (String[][]) null;
         if (integerArgument1 != -27983) {
-          Sprite.performAction0958(40, false);
+          Sprite.performAction0953(40, false);
         }
     }
 

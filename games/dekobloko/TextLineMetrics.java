@@ -32,9 +32,9 @@ final class TextLineMetrics {
         return 0;
     }
 
-    final static void performAction1128(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
-        MixedSupport042.performAction0544(integerArgument4 + 20, 256, 16777215, MixedSupport093.stringState0371, integerArgument2, SceneWidget.renderingSupport010State0007);
-        UiComponentPart029.renderingSupport010State0005.computeInteger1095(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
+    final static void performAction1123(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
+        MixedSupport042.performAction0540(integerArgument4 + 20, 256, 16777215, MixedSupport093.stringState0371, integerArgument2, SceneWidget.renderingSupport010State0007);
+        UiComponentPart029.renderingSupport010State0005.computeInteger1090(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
         if (integerArgument1 == 0) {
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].performAction0280(30 + integerArgument2, integerArgument4 + 101, 18, 18);
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].performAction0280(48 + integerArgument2, 101 + integerArgument4, 18, 18);
@@ -84,7 +84,7 @@ final class TextLineMetrics {
         MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][4].performAction0280(66 + integerArgument2, integerArgument4 + 83, 18, 18);
     }
 
-    public static void performAction1127(int integerArgument1) {
+    public static void performAction1122(int integerArgument1) {
         integerArrayState0167 = null;
         renderingSupport010State0004 = null;
         mixedSupport015State0003 = null;
@@ -109,13 +109,13 @@ final class TextLineMetrics {
         if (integerArgument2 > 103) {
           return -1 + this.characterXPositions.length;
         }
-        TextLineMetrics.performAction1127(-11);
+        TextLineMetrics.performAction1122(-11);
         return -1 + this.characterXPositions.length;
     }
 
-    final static boolean computeBoolean1129(int integerArgument1) {
+    final static boolean computeBoolean1124(int integerArgument1) {
         if (integerArgument1 != 48) {
-          TextLineMetrics.performAction1128(-116, 95, (byte) -90, 127, 46);
+          TextLineMetrics.performAction1123(-116, 95, (byte) -90, 127, 46);
           return ProxySocketFactory.js5ArchiveManagerState0001.pollMasterIndex(true);
         }
         return ProxySocketFactory.js5ArchiveManagerState0001.pollMasterIndex(true);

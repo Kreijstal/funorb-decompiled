@@ -22,11 +22,11 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static int computeInteger1122(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4) {
+    final static int computeInteger1117(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4) {
         if (integerArgument1 != 255) {
           return -17;
         }
-        return MixedSupport111.computeInteger1419((byte) 57);
+        return MixedSupport111.computeInteger1410((byte) 57);
     }
 
     final boolean pollMasterIndex(boolean booleanArgument1) {
@@ -46,22 +46,22 @@ final class Js5ArchiveManager {
           return true;
         }
         if (null == this.resourceSupport004State0002) {
-          if (this.networkSupport003State0002.computeBoolean0348(true)) {
+          if (this.networkSupport003State0002.computeBoolean0347(true)) {
             return false;
           }
-          this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040349(true, (byte) 0, booleanArgument1, 255, 255);
+          this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040348(true, (byte) 0, booleanArgument1, 255, 255);
         }
         if (this.resourceSupport004State0002.booleanState0173) {
           return false;
         }
-        packetBufferLocal7 = new PacketBuffer(this.resourceSupport004State0002.computeByteArray0472((byte) 113));
+        packetBufferLocal7 = new PacketBuffer(this.resourceSupport004State0002.computeByteArray0471((byte) 113));
         packetBufferLocal7.position = 5;
-        integerLocal2 = packetBufferLocal7.computeInteger1904((byte) -69);
+        integerLocal2 = packetBufferLocal7.readUnsignedByte((byte) -69);
         packetBufferLocal7.position = packetBufferLocal7.position + integerLocal2 * 72;
         byteArrayLocal10 = new byte[-packetBufferLocal7.position + packetBufferLocal7.payload.length];
         byteArrayLocal8 = byteArrayLocal10;
         byteArrayLocal3 = byteArrayLocal8;
-        packetBufferLocal7.performAction1894(byteArrayLocal3, 0, (byte) 125, byteArrayLocal10.length);
+        packetBufferLocal7.readBytes(byteArrayLocal3, 0, (byte) 125, byteArrayLocal10.length);
         if (!booleanArgument1) {
           return true;
         }
@@ -76,7 +76,7 @@ final class Js5ArchiveManager {
         if (byteArrayLocal4.length != 65) {
           throw new RuntimeException();
         }
-        byteArrayLocal11 = MixedSupport139.computeByteArray1725(0, packetBufferLocal7.payload, 5, packetBufferLocal7.position - (byteArrayLocal10.length + 5));
+        byteArrayLocal11 = MixedSupport139.computeByteArray1706(0, packetBufferLocal7.payload, 5, packetBufferLocal7.position - (byteArrayLocal10.length + 5));
         for (integerLocal1 = 0; integerLocal1 < 64; integerLocal1++) {
           if (byteArrayLocal11[integerLocal1] != byteArrayLocal4[integerLocal1 + 1]) {
             throw new RuntimeException();
@@ -114,10 +114,10 @@ final class Js5ArchiveManager {
             }
             this.packetBufferState0005.position = integerArgument2 * 72 + 6;
             integerLocal3 = 10 / ((-41 - byteArgument1) / 42);
-            integerLocal1 = this.packetBufferState0005.computeInteger1914(7553);
-            integerLocal4 = this.packetBufferState0005.computeInteger1914(7553);
+            integerLocal1 = this.packetBufferState0005.readInt(7553);
+            integerLocal4 = this.packetBufferState0005.readInt(7553);
             byteArrayLocal6 = new byte[64];
-            this.packetBufferState0005.performAction1894(byteArrayLocal6, 0, (byte) 127, 64);
+            this.packetBufferState0005.readBytes(byteArrayLocal6, 0, (byte) 127, 64);
             mixedSupport080Local5 = new MixedSupport080(integerArgument2, mixedSupport073Argument3, mixedSupport073Argument4, this.networkSupport003State0002, this.cacheWorkQueueState0002, integerLocal1, byteArrayLocal6, integerLocal4, booleanArgument5);
             this.mixedSupport080ArrayState0001[integerArgument2] = mixedSupport080Local5;
             stackMixedSupport080Local8 = mixedSupport080Local5;
@@ -140,33 +140,33 @@ final class Js5ArchiveManager {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(',').append(booleanArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(',').append(booleanArgument5).append(')').toString());
         }
     }
 
-    final static void performAction1126(int integerArgument1) {
-        UiComponentPart033.performAction1872(114);
+    final static void performAction1121(int integerArgument1) {
+        UiComponentPart033.performAction1851(114);
         if (integerArgument1 != -5) {
           byteArrayState0017 = (byte[]) null;
         }
         UiComponentPart032.booleanState0198 = true;
         SceneWidgetPart012.booleanState0188 = true;
-        MixedSupport005.uiComponentPart016State0001.performAction0856(true);
-        MixedSupport154.performAction1863(false, integerArgument1 ^ 49, MixedSupport006.stringState0027);
+        MixedSupport005.uiComponentPart016State0001.performAction0851(true);
+        MixedSupport154.performAction1843(false, integerArgument1 ^ 49, MixedSupport006.stringState0027);
     }
 
     final static java.awt.Canvas getActiveCanvas(int integerArgument1) {
         if (integerArgument1 > -25) {
           Js5ArchiveManager.clearStaticReferences((byte) 18);
         }
-        return null != MixedSupport020.platformSupport006State0001 ? (java.awt.Canvas) ((Object) MixedSupport020.platformSupport006State0001) : GameDomainSupport004.canvasState0001;
+        return null != MixedSupport020.fullscreenCanvasState0001 ? (java.awt.Canvas) ((Object) MixedSupport020.fullscreenCanvasState0001) : GameDomainSupport004.canvasState0001;
     }
 
     Js5ArchiveManager(NetworkSupport003 networkSupport003Argument1, CacheWorkQueue cacheWorkQueueArgument2) {
         this(networkSupport003Argument1, cacheWorkQueueArgument2, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static boolean computeBoolean1124(int integerArgument1) {
+    final static boolean computeBoolean1119(int integerArgument1) {
         if (integerArgument1 != -18163) {
           return true;
         }
@@ -179,9 +179,9 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    final static int computeInteger1123(byte byteArgument1) {
+    final static int computeInteger1118(byte byteArgument1) {
         if (byteArgument1 != -40) {
-          Js5ArchiveManager.computeBoolean1124(-2);
+          Js5ArchiveManager.computeBoolean1119(-2);
         }
         return MixedSupport104.integerState0579;
     }
@@ -196,7 +196,7 @@ final class Js5ArchiveManager {
         }
         for (integerLocal1 = 0; integerLocal1 < this.mixedSupport080ArrayState0001.length; integerLocal1++) {
           if (this.mixedSupport080ArrayState0001[integerLocal1] != null) {
-            this.mixedSupport080ArrayState0001[integerLocal1].performAction0975(16322);
+            this.mixedSupport080ArrayState0001[integerLocal1].performAction0970(16322);
           }
         }
         integerLocal3 = 0;
@@ -205,15 +205,15 @@ final class Js5ArchiveManager {
         }
         while (integerLocal3 < this.mixedSupport080ArrayState0001.length) {
           if (null != this.mixedSupport080ArrayState0001[integerLocal3]) {
-            this.mixedSupport080ArrayState0001[integerLocal3].performAction0977(true);
+            this.mixedSupport080ArrayState0001[integerLocal3].performAction0972(true);
           }
           integerLocal3++;
         }
     }
 
-    final static void performAction1125(int integerArgument1) {
+    final static void performAction1120(int integerArgument1) {
         MixedSupport151.booleanState0221 = false;
-        PacketBuffer.booleanState0228 = 0 == UiComponentPart006.cipherPacketBufferState0001.computeInteger1904((byte) -96) ? true : false;
+        PacketBuffer.booleanState0228 = 0 == UiComponentPart006.cipherPacketBufferState0001.readUnsignedByte((byte) -96) ? true : false;
         if (integerArgument1 != 27721) {
           Js5ArchiveManager.clearStaticReferences((byte) 94);
         }
@@ -236,8 +236,8 @@ final class Js5ArchiveManager {
           this.bigIntegerState0003 = bigIntegerArgument3;
           this.bigIntegerState0002 = bigIntegerArgument4;
           this.networkSupport003State0002 = networkSupport003Argument1;
-          if (!this.networkSupport003State0002.computeBoolean0348(true)) {
-            this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040349(true, (byte) 0, true, 255, 255);
+          if (!this.networkSupport003State0002.computeBoolean0347(true)) {
+            this.resourceSupport004State0002 = this.networkSupport003State0002.computeResourceSupport0040348(true, (byte) 0, true, 255, 255);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
@@ -268,7 +268,7 @@ final class Js5ArchiveManager {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 

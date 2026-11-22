@@ -11,54 +11,54 @@ final class MixedSupport095 extends MixedSupport043 {
     static boolean booleanState0124;
     static SecondaryNodeHashTable secondaryNodeHashTableState0004;
 
-    final static LoginCredentials computeLoginCredentials1177(byte byteArgument1) {
+    final static LoginCredentials computeLoginCredentials1172(byte byteArgument1) {
         int integerLocal1 = 82 % ((byteArgument1 + 59) / 56);
-        return new LoginCredentials(MixedSupport033.computeString0496(116), MixedSupport032.computeBoolean0479((byte) -126));
+        return new LoginCredentials(MixedSupport033.computeString0495(116), MixedSupport032.computeBoolean0478((byte) -126));
     }
 
-    final void performAction0552(PacketBuffer packetBufferArgument1, byte byteArgument2) {
+    final void performAction0548(PacketBuffer packetBufferArgument1, byte byteArgument2) {
         try {
-          packetBufferArgument1.performAction1897(8, this.stringState0377);
+          packetBufferArgument1.writeNullCircumfixedString(8, this.stringState0377);
           if (byteArgument2 < 34) {
-            MixedSupport095.computeSceneWidgetPart0131174(-10, 21);
+            MixedSupport095.computeSceneWidgetPart0131169(-10, 21);
           }
-          packetBufferArgument1.performAction1889(this.stringState0375, true);
+          packetBufferArgument1.writeBase38String(this.stringState0375, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ob.D(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ob.D(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
-    final static SceneWidgetPart013 computeSceneWidgetPart0131174(int integerArgument1, int integerArgument2) {
+    final static SceneWidgetPart013 computeSceneWidgetPart0131169(int integerArgument1, int integerArgument2) {
         if (integerArgument2 != 8) {
           stringState0376 = (String) null;
         }
         return MixedSupport127.secondaryNodeHashTableState0005 != null ? (SceneWidgetPart013) (MixedSupport127.secondaryNodeHashTableState0005.get(integerArgument2 ^ 24718, (long)integerArgument1)) : null;
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1175(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RgbSprite[] computeRgbSpriteArray1170(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         RgbSprite[] rgbSpriteArrayLocal3 = new RgbSprite[9];
         RgbSprite[] rgbSpriteArrayLocal4 = rgbSpriteArrayLocal3;
-        rgbSpriteArrayLocal3[0] = NetworkSupport012.computeRgbSprite1578((byte) -99, integerArgument4, integerArgument1);
+        rgbSpriteArrayLocal3[0] = NetworkSupport012.computeRgbSprite1559((byte) -99, integerArgument4, integerArgument1);
         for (integerLocal1 = 1; integerLocal1 < 9; integerLocal1++) {
           rgbSpriteArrayLocal3[integerLocal1] = rgbSpriteArrayLocal3[0];
         }
         if (integerArgument3 != -3932) {
-          MixedSupport095.performAction1173((byte) 72);
+          MixedSupport095.performAction1168((byte) 72);
         }
-        rgbSpriteArrayLocal4[4] = NetworkSupport012.computeRgbSprite1578((byte) -122, 64, integerArgument2);
+        rgbSpriteArrayLocal4[4] = NetworkSupport012.computeRgbSprite1559((byte) -122, 64, integerArgument2);
         return rgbSpriteArrayLocal4;
     }
 
-    final MixedSupport048 computeMixedSupport0480550(int integerArgument1) {
+    final MixedSupport048 computeMixedSupport0480546(int integerArgument1) {
         if (integerArgument1 != 18) {
           return (MixedSupport048) null;
         }
         return GameDomainSupport005.mixedSupport048State0002;
     }
 
-    final static void performAction1176(int integerArgument1, MusicTrack musicTrackArgument2, byte byteArgument3) {
+    final static void performAction1171(int integerArgument1, MusicTrack musicTrackArgument2, byte byteArgument3) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -70,14 +70,14 @@ final class MixedSupport095 extends MixedSupport043 {
           if (PcmPlayerService.musicTrackState0005 != musicTrackArgument2) {
             if (PcmPlayerService.musicTrackState0005 != null &&
               musicTrackArgument2 != null) {
-              UiComponentPart033.midiSynthesizerState0001.performAction0702(musicTrackArgument2, 0, 0, 16);
+              UiComponentPart033.midiSynthesizerState0001.performAction0698(musicTrackArgument2, 0, 0, 16);
               PcmPlayerService.musicTrackState0005 = musicTrackArgument2;
-              UiComponentPart033.midiSynthesizerState0001.performAction0705(integerArgument1);
+              UiComponentPart033.midiSynthesizerState0001.performAction0701(integerArgument1);
             } else {
-              MixedSupport092.performAction1166(integerArgument1, musicTrackArgument2, true);
+              MixedSupport092.performAction1161(integerArgument1, musicTrackArgument2, true);
             }
           } else {
-            UiComponentPart033.midiSynthesizerState0001.performAction0705(integerArgument1);
+            UiComponentPart033.midiSynthesizerState0001.performAction0701(integerArgument1);
           }
           if (byteArgument3 < 45) {
             integerState0548 = 64;
@@ -93,28 +93,28 @@ final class MixedSupport095 extends MixedSupport043 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(byteArgument3).append(')').toString());
         }
     }
 
-    public static void performAction1173(byte byteArgument1) {
+    public static void performAction1168(byte byteArgument1) {
         secondaryNodeHashTableState0004 = null;
         rgbSpriteArrayArrayArrayState0001 = (RgbSprite[][][]) null;
         stringState0376 = null;
         if (byteArgument1 < 86) {
-          MixedSupport095.computeRgbSpriteArray1175(-105, -21, 61, -11);
+          MixedSupport095.computeRgbSpriteArray1170(-105, -21, 61, -11);
         }
         rawSoundState0015 = null;
     }
 
-    final static void performAction1178(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction1173(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (256 == integerArgument3) {
           MixedSupport105.rgbSpriteState0042.performAction0295(integerArgument1, integerArgument4, 64);
         } else {
           MixedSupport105.rgbSpriteState0042.performAction0295(integerArgument1, integerArgument4, integerArgument3 >> 2);
         }
         if (integerArgument2 != -299374302) {
-          MixedSupport095.performAction1173((byte) 0);
+          MixedSupport095.performAction1168((byte) 0);
         }
     }
 
@@ -123,7 +123,7 @@ final class MixedSupport095 extends MixedSupport043 {
           this.stringState0377 = stringArgument1;
           this.stringState0375 = stringArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ob.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ob.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 

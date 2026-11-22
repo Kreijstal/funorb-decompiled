@@ -33,8 +33,8 @@ final class MixedSupport021 {
           UiComponentPart018.integerState0502 = 0;
           MixedSupport033.stringState0159 = null;
           MixedSupport029.integerState0182 = 0;
-          UiComponentPart025.nodeDequeState0027.performAction1793(111);
-          CipherPacketBuffer.nodeDequeState0033.performAction1793(117);
+          UiComponentPart025.nodeDequeState0027.performAction1773(111);
+          CipherPacketBuffer.nodeDequeState0033.performAction1773(117);
           if (!booleanArgument1) {
             MixedSupport021.performAction0326(true);
           }
@@ -50,7 +50,7 @@ final class MixedSupport021 {
           }
           ThemeTips.integerState0351 = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "d.A(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "d.A(" + booleanArgument1 + ')');
         }
     }
 

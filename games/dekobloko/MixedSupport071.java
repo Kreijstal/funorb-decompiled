@@ -12,7 +12,7 @@ final class MixedSupport071 {
     static int[] integerArrayState0120;
     static java.applet.Applet appletState0001;
 
-    final static byte[] computeByteArray0862(int integerArgument1, String stringArgument2) {
+    final static byte[] computeByteArray0857(int integerArgument1, String stringArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         byte[] stackByteArrayLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -21,9 +21,9 @@ final class MixedSupport071 {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (integerArgument1 >= -14) {
-            MixedSupport071.performAction0861(95);
+            MixedSupport071.performAction0856(95);
           }
-          stackByteArrayLocal2 = MixedSupport101.resourceArchiveState0014.computeByteArray0827(0, stringArgument2, "");
+          stackByteArrayLocal2 = MixedSupport101.resourceArchiveState0014.computeByteArray0822(0, stringArgument2, "");
           return stackByteArrayLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -35,11 +35,11 @@ final class MixedSupport071 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    public static void performAction0861(int integerArgument1) {
+    public static void performAction0856(int integerArgument1) {
         if (integerArgument1 <= -85) {
           stringState0298 = null;
           stringState0299 = null;

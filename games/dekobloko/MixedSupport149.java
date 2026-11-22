@@ -15,7 +15,7 @@ final class MixedSupport149 extends HashNode {
     static int integerState0883;
     ReturnedShape returnedShapeState0001;
 
-    final static boolean computeBoolean1810(int[] integerArrayArgument1, long longArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
+    final static boolean computeBoolean1790(int[] integerArrayArgument1, long longArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         SceneWidgetPart005 sceneWidgetPart005Local3 = null;
@@ -27,7 +27,7 @@ final class MixedSupport149 extends HashNode {
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         try {
-          if (!MixedSupport101.computeBoolean1245(integerArgument5, 2, longArgument2, stringArgument3, integerArrayArgument1)) {
+          if (!MixedSupport101.computeBoolean1240(integerArgument5, 2, longArgument2, stringArgument3, integerArrayArgument1)) {
             return false;
           }
           if (integerArgument5 == 1) {
@@ -37,9 +37,9 @@ final class MixedSupport149 extends HashNode {
           NetworkSupport010.integerState0585 = integerArgument5;
           integerLocal1 = -49 / ((-60 - integerArgument4) / 43);
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
-          TextLayout.stringState0081 = ComponentContainer.computeString0918(charSequenceLocal4, (byte) 2);
+          TextLayout.stringState0081 = ComponentContainer.computeString0913(charSequenceLocal4, (byte) 2);
           MixedSupport043.longState0017 = longArgument2;
-          sceneWidgetPart005Local3 = MixedSupport150.computeSceneWidgetPart0051831(integerArrayArgument1, ResourceSupport001.sceneWidgetState0001, (byte) -127, MixedSupport040.sceneWidgetState0031, MixedSupport113.sceneWidgetState0103);
+          sceneWidgetPart005Local3 = MixedSupport150.computeSceneWidgetPart0051811(integerArrayArgument1, ResourceSupport001.sceneWidgetState0001, (byte) -127, MixedSupport040.sceneWidgetState0031, MixedSupport113.sceneWidgetState0103);
           DualNode.performAction0127((byte) 120, sceneWidgetPart005Local3);
           return true;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -58,21 +58,21 @@ final class MixedSupport149 extends HashNode {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    final static void performAction1809(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction1789(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         try {
           if (integerArgument4 != -11) {
             integerState0877 = -57;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "vm.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "vm.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    final static boolean computeBoolean1807(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static boolean computeBoolean1787(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
         int integerLocal2;
         int stackIntegerLocal3 = 0;
@@ -85,18 +85,18 @@ final class MixedSupport149 extends HashNode {
               MixedSupport153.integerState0931 != 10 &&
               MixedSupport153.integerState0931 != 11) {
               if (MixedSupport153.integerState0931 == 80 &&
-                PlatformSupport006.computeBoolean1413(2)) {
+                FullscreenCanvas.computeBoolean1407(2)) {
                 LoginCredentials.booleanState0085 = true;
                 return true;
               }
               return false;
             }
-            return MixedSupport129.computeBoolean1663(integerArgument2, 102, integerArgument4);
+            return MixedSupport129.computeBoolean1644(integerArgument2, 102, integerArgument4);
           }
-          if (!PlatformSupport006.computeBoolean1413(2)) {
+          if (!FullscreenCanvas.computeBoolean1407(2)) {
             return false;
           }
-          stackIntegerLocal4 = (!SceneWidgetPart008.computeBoolean1153(integerArgument3, 1, integerArgument4)) ? 0 : 1;
+          stackIntegerLocal4 = (!SceneWidgetPart008.computeBoolean1148(integerArgument3, 1, integerArgument4)) ? 0 : 1;
           integerLocal2 = stackIntegerLocal4;
           if (MixedSupport153.integerState0931 == 80 ||
             MixedSupport153.integerState0931 == 84) {
@@ -110,26 +110,26 @@ final class MixedSupport149 extends HashNode {
           }
           if (!LoginCredentials.booleanState0085) {
             if (GameDomainSupport004.booleanState0087) {
-              return MixedSupport129.computeBoolean1663(integerArgument2, 102, integerArgument4);
+              return MixedSupport129.computeBoolean1644(integerArgument2, 102, integerArgument4);
             }
             if (MixedSupport153.integerState0931 == 9) {
-              return MixedSupport129.computeBoolean1663(integerArgument2, 102, integerArgument4);
+              return MixedSupport129.computeBoolean1644(integerArgument2, 102, integerArgument4);
             }
             if (MixedSupport153.integerState0931 != 10 &&
               MixedSupport153.integerState0931 != 11) {
               if (MixedSupport153.integerState0931 == 80 &&
-                PlatformSupport006.computeBoolean1413(2)) {
+                FullscreenCanvas.computeBoolean1407(2)) {
                 LoginCredentials.booleanState0085 = true;
                 return true;
               }
               return false;
             }
-            return MixedSupport129.computeBoolean1663(integerArgument2, 102, integerArgument4);
+            return MixedSupport129.computeBoolean1644(integerArgument2, 102, integerArgument4);
           }
-          if (!PlatformSupport006.computeBoolean1413(2)) {
+          if (!FullscreenCanvas.computeBoolean1407(2)) {
             return false;
           }
-          stackIntegerLocal3 = (!SceneWidgetPart008.computeBoolean1153(integerArgument3, 1, integerArgument4)) ? 0 : 1;
+          stackIntegerLocal3 = (!SceneWidgetPart008.computeBoolean1148(integerArgument3, 1, integerArgument4)) ? 0 : 1;
           integerLocal2 = stackIntegerLocal3;
           if (MixedSupport153.integerState0931 == 80) {
             LoginCredentials.booleanState0085 = false;
@@ -142,14 +142,14 @@ final class MixedSupport149 extends HashNode {
           }
         }
         if (13 == MixedSupport153.integerState0931) {
-          BufferedSocket.performAction1404((byte) 94);
+          BufferedSocket.performAction1398((byte) 94);
           LoginCredentials.booleanState0085 = false;
           integerLocal2 = 1;
         }
         return integerLocal2 != 0;
     }
 
-    public static void performAction1806(int integerArgument1) {
+    public static void performAction1786(int integerArgument1) {
         validationStatusState0005 = null;
         stringState0596 = null;
         if (integerArgument1 < 120) {
@@ -160,16 +160,16 @@ final class MixedSupport149 extends HashNode {
         stringState0597 = null;
     }
 
-    final static void performAction1808(int integerArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
+    final static void performAction1788(int integerArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
         try {
-          MixedSupport059.sceneWidgetState0055.performAction1819(sceneWidgetPart005Argument2, -16834);
+          MixedSupport059.sceneWidgetState0055.performAction1799(sceneWidgetPart005Argument2, -16834);
           int integerLocal1 = 14 / ((55 - integerArgument1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "vm.B(" + integerArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "vm.B(" + integerArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String computeString1811(int integerArgument1) {
+    final static String computeString1791(int integerArgument1) {
         if (integerArgument1 != -30185) {
           integerState0877 = 3;
           return MixedSupport056.stringState0242;

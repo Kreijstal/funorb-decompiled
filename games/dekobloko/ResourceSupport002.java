@@ -15,7 +15,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         if (byteArgument1 != -51) {
           this.longState0001 = -32L;
         }
-        this.longState0001 = MixedSupport063.computeLong0749(byteArgument1 + 55);
+        this.longState0001 = MixedSupport063.computeLong0745(byteArgument1 + 55);
     }
 
     final static boolean computeBoolean0087(ResourceArchive resourceArchiveArgument1, int integerArgument2) {
@@ -29,7 +29,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           if (integerArgument2 != -2147483648) {
             mixedSupport139State0001 = (MixedSupport139) null;
           }
-          stackBooleanLocal2 = resourceArchiveArgument1.computeBoolean0832(false);
+          stackBooleanLocal2 = resourceArchiveArgument1.computeBoolean0827(false);
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -41,7 +41,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
@@ -57,13 +57,13 @@ abstract class ResourceSupport002 implements CallbackContract011 {
     }
 
     public final String computeString0088(byte byteArgument1) {
-        if (this.computeBoolean1117((byte) -101)) {
+        if (this.computeBoolean1112((byte) -101)) {
           return null;
         }
         if (byteArgument1 < 52) {
           return (String) null;
         }
-        if (MixedSupport063.computeLong0749(4) < (350L + this.longState0001)) {
+        if (MixedSupport063.computeLong0745(4) < (350L + this.longState0001)) {
           return null;
         }
         return this.computeString0091((byte) 49);
@@ -120,7 +120,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           objectLocal36 = null;
           integerLocal27 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
-            mixedSupport075Local28 = (MixedSupport075) (MixedSupport002.nodeDequeState0001.computeHashNode1792((byte) -54));
+            mixedSupport075Local28 = (MixedSupport075) (MixedSupport002.nodeDequeState0001.computeHashNode1772((byte) -54));
             mixedSupport075Local32 = mixedSupport075Local28;
             if (mixedSupport075Local32 == null) {
               return;
@@ -151,7 +151,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
               return;
             }
             integerLocal9 = cipherPacketBufferArgument2.position;
-            cipherPacketBufferArgument2.performAction1886(mixedSupport075Local32.integerState0406, false);
+            cipherPacketBufferArgument2.writeInt(mixedSupport075Local32.integerState0406, false);
             for (integerLocal1 = 0; integerLocal1 < mixedSupport075Local32.integerState0407; integerLocal1++) {
               if (0 == mixedSupport075Local32.integerArrayState0135[integerLocal1]) {
                 try {
@@ -159,20 +159,20 @@ abstract class ResourceSupport002 implements CallbackContract011 {
                   if (integerLocal10 == 0) {
                     fieldLocal29 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                     integerLocal23 = fieldLocal29.getInt((Object) null);
-                    cipherPacketBufferArgument2.performAction1892(true, 0);
-                    cipherPacketBufferArgument2.performAction1886(integerLocal23, false);
+                    cipherPacketBufferArgument2.writeByte(true, 0);
+                    cipherPacketBufferArgument2.writeInt(integerLocal23, false);
                   } else {
                     if (integerLocal10 == 1) {
                       fieldLocal31 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                       fieldLocal34 = fieldLocal31;
                       fieldLocal34.setInt((Object) null, mixedSupport075Local32.integerArrayState0136[integerLocal1]);
-                      cipherPacketBufferArgument2.performAction1892(true, 0);
+                      cipherPacketBufferArgument2.writeByte(true, 0);
                     } else {
                       if (integerLocal10 == 2) {
                         fieldLocal38 = (java.lang.reflect.Field) (mixedSupport075Local32.asyncTaskArrayState0002[integerLocal1].objectState0004);
                         integerLocal23 = fieldLocal38.getModifiers();
-                        cipherPacketBufferArgument2.performAction1892(true, 0);
-                        cipherPacketBufferArgument2.performAction1886(integerLocal23, false);
+                        cipherPacketBufferArgument2.writeByte(true, 0);
+                        cipherPacketBufferArgument2.writeInt(integerLocal23, false);
                       }
                     }
                   }
@@ -186,78 +186,78 @@ abstract class ResourceSupport002 implements CallbackContract011 {
                     }
                     objectLocal25 = methodLocal39.invoke((Object) null, objectArrayLocal24);
                     if (objectLocal25 == null) {
-                      cipherPacketBufferArgument2.performAction1892(true, 0);
+                      cipherPacketBufferArgument2.writeByte(true, 0);
                     } else if (objectLocal25 instanceof Number) {
-                      cipherPacketBufferArgument2.performAction1892(true, 1);
-                      cipherPacketBufferArgument2.performAction1887(((Number) (objectLocal25)).longValue(), (byte) 0);
+                      cipherPacketBufferArgument2.writeByte(true, 1);
+                      cipherPacketBufferArgument2.writeLong(((Number) (objectLocal25)).longValue(), (byte) 0);
                     } else if (!(objectLocal25 instanceof String)) {
-                      cipherPacketBufferArgument2.performAction1892(true, 4);
+                      cipherPacketBufferArgument2.writeByte(true, 4);
                     } else {
-                      cipherPacketBufferArgument2.performAction1892(true, 2);
-                      cipherPacketBufferArgument2.performAction1885(0, (String) (objectLocal25));
+                      cipherPacketBufferArgument2.writeByte(true, 2);
+                      cipherPacketBufferArgument2.writeNullTerminatedString(0, (String) (objectLocal25));
                     }
                   } else {
                     if (4 == integerLocal10) {
                       methodLocal40 = (java.lang.reflect.Method) (mixedSupport075Local32.asyncTaskArrayState0001[integerLocal1].objectState0004);
                       integerLocal41 = methodLocal40.getModifiers();
-                      cipherPacketBufferArgument2.performAction1892(true, 0);
-                      cipherPacketBufferArgument2.performAction1886(integerLocal41, false);
+                      cipherPacketBufferArgument2.writeByte(true, 0);
+                      cipherPacketBufferArgument2.writeInt(integerLocal41, false);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException caughtParameterLocal42) {
                   caughtExceptionLocal6 = caughtParameterLocal42;
                   classNotFoundExceptionLocal11 = (ClassNotFoundException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -10);
+                  cipherPacketBufferArgument2.writeByte(true, -10);
                 } catch (java.io.InvalidClassException caughtParameterLocal43) {
                   caughtExceptionLocal6 = caughtParameterLocal43;
                   invalidClassExceptionLocal12 = (InvalidClassException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -11);
+                  cipherPacketBufferArgument2.writeByte(true, -11);
                 } catch (java.io.StreamCorruptedException caughtParameterLocal44) {
                   caughtExceptionLocal6 = caughtParameterLocal44;
                   streamCorruptedExceptionLocal13 = (StreamCorruptedException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -12);
+                  cipherPacketBufferArgument2.writeByte(true, -12);
                 } catch (java.io.OptionalDataException caughtParameterLocal45) {
                   caughtExceptionLocal6 = caughtParameterLocal45;
                   optionalDataExceptionLocal14 = (OptionalDataException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -13);
+                  cipherPacketBufferArgument2.writeByte(true, -13);
                 } catch (java.lang.IllegalAccessException caughtParameterLocal46) {
                   caughtExceptionLocal6 = caughtParameterLocal46;
                   illegalAccessExceptionLocal15 = (IllegalAccessException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -14);
+                  cipherPacketBufferArgument2.writeByte(true, -14);
                 } catch (java.lang.IllegalArgumentException caughtParameterLocal47) {
                   caughtExceptionLocal6 = caughtParameterLocal47;
                   illegalArgumentExceptionLocal16 = (IllegalArgumentException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -15);
+                  cipherPacketBufferArgument2.writeByte(true, -15);
                 } catch (java.lang.reflect.InvocationTargetException caughtParameterLocal48) {
                   caughtExceptionLocal6 = caughtParameterLocal48;
                   invocationTargetExceptionLocal17 = (java.lang.reflect.InvocationTargetException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -16);
+                  cipherPacketBufferArgument2.writeByte(true, -16);
                 } catch (java.lang.SecurityException caughtParameterLocal49) {
                   caughtExceptionLocal6 = caughtParameterLocal49;
                   securityExceptionLocal18 = (SecurityException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -17);
+                  cipherPacketBufferArgument2.writeByte(true, -17);
                 } catch (java.io.IOException caughtParameterLocal50) {
                   caughtExceptionLocal6 = caughtParameterLocal50;
                   iOExceptionLocal19 = (IOException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -18);
+                  cipherPacketBufferArgument2.writeByte(true, -18);
                 } catch (java.lang.NullPointerException caughtParameterLocal51) {
                   caughtExceptionLocal6 = caughtParameterLocal51;
                   nullPointerExceptionLocal20 = (NullPointerException) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -19);
+                  cipherPacketBufferArgument2.writeByte(true, -19);
                 } catch (java.lang.Exception caughtParameterLocal52) {
                   caughtExceptionLocal6 = caughtParameterLocal52;
                   exceptionLocal21 = (Exception) (Object) caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -20);
+                  cipherPacketBufferArgument2.writeByte(true, -20);
                 } catch (java.lang.Throwable caughtParameterLocal53) {
                   caughtExceptionLocal6 = caughtParameterLocal53;
                   throwableLocal22 = caughtExceptionLocal6;
-                  cipherPacketBufferArgument2.performAction1892(true, -21);
+                  cipherPacketBufferArgument2.writeByte(true, -21);
                 }
               } else {
-                cipherPacketBufferArgument2.performAction1892(true, mixedSupport075Local32.integerArrayState0135[integerLocal1]);
+                cipherPacketBufferArgument2.writeByte(true, mixedSupport075Local32.integerArrayState0135[integerLocal1]);
               }
             }
-            cipherPacketBufferArgument2.computeInteger1880((byte) -15, integerLocal9);
+            cipherPacketBufferArgument2.appendCrc32((byte) -15, integerLocal9);
             mixedSupport075Local32.performAction0149((byte) 103);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal54) {
@@ -270,7 +270,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
             } else {
               stackStringLocal5 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal55) {
           throw uncheckedExceptionLocal55;
@@ -280,13 +280,13 @@ abstract class ResourceSupport002 implements CallbackContract011 {
     }
 
     public final ValidationStatus computeValidationStatus0084(int integerArgument1) {
-        if (this.computeBoolean1117((byte) 119)) {
+        if (this.computeBoolean1112((byte) 119)) {
           return NetworkSupport005.validationStatusState0003;
         }
         if (integerArgument1 != 20350) {
           ResourceSupport002.performAction0085(-21, -85, -33);
         }
-        if (!(MixedSupport063.computeLong0749(4) >= this.longState0001 + 350L)) {
+        if (!(MixedSupport063.computeLong0745(4) >= this.longState0001 + 350L)) {
           return MixedSupport080.validationStatusState0004;
         }
         return this.computeValidationStatus0089(integerArgument1 - 25870);

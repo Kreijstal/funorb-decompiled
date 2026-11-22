@@ -54,7 +54,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(booleanArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(booleanArgument4).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(booleanArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(booleanArgument7).append(')').toString());
         }
     }
 
@@ -231,25 +231,25 @@ class UiComponent extends HashNode {
         RuntimeException runtimeExceptionLocal9 = null;
         try {
           cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal2.performAction1691(integerArgument1, -4);
+          cipherPacketBufferLocal2.performAction1672(integerArgument1, -4);
           cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
           integerLocal1 = cipherPacketBufferLocal2.position;
-          cipherPacketBufferLocal2.performAction1892(true, integerArgument3);
+          cipherPacketBufferLocal2.writeByte(true, integerArgument3);
           if (byteArgument2 != -85) {
             UiComponent.performAction0227(9);
           }
           if (2 == integerArgument3) {
-            cipherPacketBufferLocal2.performAction1885(0, stringArgument4);
+            cipherPacketBufferLocal2.writeNullTerminatedString(0, stringArgument4);
           }
           if (stringArgument6 != null) {
-            MixedSupport062.computeInteger0745(-20539, cipherPacketBufferLocal2, stringArgument6);
+            MixedSupport062.computeInteger0741(-20539, cipherPacketBufferLocal2, stringArgument6);
           } else {
-            cipherPacketBufferLocal2.performAction1905(-1, integerArgument5);
+            cipherPacketBufferLocal2.writeShort(-1, integerArgument5);
             if (DekoBlokoClient.obfuscationControl) {
-              MixedSupport062.computeInteger0745(-20539, cipherPacketBufferLocal2, stringArgument6);
+              MixedSupport062.computeInteger0741(-20539, cipherPacketBufferLocal2, stringArgument6);
             }
           }
-          cipherPacketBufferLocal2.performAction1898(cipherPacketBufferLocal2.position - integerLocal1, true);
+          cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal1, true);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal8 = caughtParameterLocal10;
@@ -267,7 +267,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
@@ -276,10 +276,10 @@ class UiComponent extends HashNode {
           return;
         }
         try {
-          RenderingSupport002.nodeDequeState0004.performAction1786(networkSupport005Argument2, 2777);
-          MixedSupport074.performAction0936(integerArgument1, -15016, networkSupport005Argument2);
+          RenderingSupport002.nodeDequeState0004.performAction1766(networkSupport005Argument2, 2777);
+          MixedSupport074.performAction0931(integerArgument1, -15016, networkSupport005Argument2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ce.GC(" + integerArgument1 + ',' + (networkSupport005Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ce.GC(" + integerArgument1 + ',' + (networkSupport005Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ class UiComponent extends HashNode {
           NetworkArchiveRequestManager.cacheWorkQueueState0003 = new CacheWorkQueue(platformServiceArgument7);
           ProxySocketFactory.js5ArchiveManagerState0001 = new Js5ArchiveManager(MixedSupport124.networkSupport003State0003, NetworkArchiveRequestManager.cacheWorkQueueState0003);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ce.SB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + (platformServiceArgument7 != null ? "{...}" : "null") + ',' + integerArgument8 + ',' + integerArgument9 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ce.SB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + (platformServiceArgument7 != null ? "{...}" : "null") + ',' + integerArgument8 + ',' + integerArgument9 + ')');
         }
     }
 
@@ -325,7 +325,7 @@ class UiComponent extends HashNode {
         if (null != MixedSupport133.stringState0552) {
           stringLocal1 = MixedSupport133.stringState0552;
           String stringLocal2 = stringLocal1;
-          DiagnosticSupport002.performAction0779((byte) 107, NodeHashTableIterator.substituteIndexedPlaceholders(117, MixedSupport122.stringState0517, new String[]{stringLocal1}));
+          DiagnosticSupport002.performAction0775((byte) 107, NodeHashTableIterator.substituteIndexedPlaceholders(117, MixedSupport122.stringState0517, new String[]{stringLocal1}));
           MixedSupport133.stringState0552 = null;
         }
         if (integerArgument1 <= 99) {
@@ -359,7 +359,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ class UiComponent extends HashNode {
             this.booleanState0018 = stackBooleanLocal3;
             if (this.callbackContract006State0001 != null &&
               this.callbackContract006State0001 instanceof CallbackContract003) {
-              ((CallbackContract003) (this.callbackContract006State0001)).performAction0595(integerLocal1 != 0, this, true);
+              ((CallbackContract003) (this.callbackContract006State0001)).performAction0591(integerLocal1 != 0, this, true);
             }
           }
           if (integerArgument2 < 38) {
@@ -397,7 +397,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ class UiComponent extends HashNode {
             }
             break;
           }
-          stringLocal4 = RichTextLayout.computeString0400(true);
+          stringLocal4 = RichTextLayout.computeString0399(true);
           if (stringLocal4 != null) {
             RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal4, byteArgument3 + 71, ClientException.integerState0142, UiComponentPart022.integerState0573);
           }
@@ -441,7 +441,7 @@ class UiComponent extends HashNode {
           }
           break;
         }
-        stringLocal5 = RichTextLayout.computeString0400(true);
+        stringLocal5 = RichTextLayout.computeString0399(true);
         if (stringLocal5 != null) {
           RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal5, byteArgument3 + 71, ClientException.integerState0142, UiComponentPart022.integerState0573);
         }
@@ -454,7 +454,7 @@ class UiComponent extends HashNode {
             this.toString();
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ce.IB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ce.IB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport130.integerState0787 = DualNode.integerState0062;
-          MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+          MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
           return booleanArgument2;
         }
         if (MixedSupport068.integerState0353 == 0) {
@@ -498,7 +498,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport130.integerState0787 = DualNode.integerState0062;
-            MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+            MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
             return booleanArgument2;
           }
           if (MixedSupport130.integerState0787 == 0) {
@@ -506,14 +506,14 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport130.integerState0787 = DualNode.integerState0062;
-            MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+            MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
             return booleanArgument2;
           }
           this.performAction0213(MixedSupport106.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
           uiComponentPart029Local3 = UiComponentPart017.uiComponentPart029State0001;
           if (uiComponentPart029Local3 != null) {
             if (uiComponentPart029Local3.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (uiComponentPart029Local3.callbackContract006State0001)).performAction1116(uiComponentPart029Local3, (UiComponentPart015) null, (byte) -128);
+              ((CallbackContract010) (uiComponentPart029Local3.callbackContract006State0001)).performAction1111(uiComponentPart029Local3, (UiComponentPart015) null, (byte) -128);
             }
             UiComponentPart017.uiComponentPart029State0001 = null;
           }
@@ -526,7 +526,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport130.integerState0787 = DualNode.integerState0062;
-          MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+          MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
           return booleanArgument2;
         }
         if (integerLocal1 == 0) {
@@ -541,7 +541,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport130.integerState0787 = DualNode.integerState0062;
-            MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+            MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
             return booleanArgument2;
           }
           if (MixedSupport130.integerState0787 == 0) {
@@ -549,14 +549,14 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport130.integerState0787 = DualNode.integerState0062;
-            MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+            MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
             return booleanArgument2;
           }
           this.performAction0213(MixedSupport106.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
           uiComponentPart029Local4 = UiComponentPart017.uiComponentPart029State0001;
           if (uiComponentPart029Local4 != null) {
             if (uiComponentPart029Local4.callbackContract006State0001 instanceof CallbackContract010) {
-              ((CallbackContract010) (uiComponentPart029Local4.callbackContract006State0001)).performAction1116(uiComponentPart029Local4, (UiComponentPart015) null, (byte) -128);
+              ((CallbackContract010) (uiComponentPart029Local4.callbackContract006State0001)).performAction1111(uiComponentPart029Local4, (UiComponentPart015) null, (byte) -128);
             }
             UiComponentPart017.uiComponentPart029State0001 = null;
           }
@@ -569,7 +569,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport130.integerState0787 = DualNode.integerState0062;
-          MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+          MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
           return booleanArgument2;
         }
         this.computeBoolean0214(MixedSupport106.integerState0590, integerArgument1, HashNode.integerState0069, this, MixedSupport068.integerState0353, integerArgument3, false);
@@ -588,7 +588,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport130.integerState0787 = DualNode.integerState0062;
-          MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+          MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
           return booleanArgument2;
         }
         if (MixedSupport130.integerState0787 == 0) {
@@ -596,14 +596,14 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport130.integerState0787 = DualNode.integerState0062;
-          MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+          MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
           return booleanArgument2;
         }
         this.performAction0213(MixedSupport106.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
         uiComponentPart029Local5 = UiComponentPart017.uiComponentPart029State0001;
         if (uiComponentPart029Local5 != null) {
           if (uiComponentPart029Local5.callbackContract006State0001 instanceof CallbackContract010) {
-            ((CallbackContract010) (uiComponentPart029Local5.callbackContract006State0001)).performAction1116(uiComponentPart029Local5, (UiComponentPart015) null, (byte) -128);
+            ((CallbackContract010) (uiComponentPart029Local5.callbackContract006State0001)).performAction1111(uiComponentPart029Local5, (UiComponentPart015) null, (byte) -128);
           }
           UiComponentPart017.uiComponentPart029State0001 = null;
         }
@@ -616,7 +616,7 @@ class UiComponent extends HashNode {
           this.integerState0104 = 110;
         }
         MixedSupport130.integerState0787 = DualNode.integerState0062;
-        MixedSupport117.performAction1515(this.computeString0223((byte) 113), -1);
+        MixedSupport117.performAction1497(this.computeString0223((byte) 113), -1);
         return booleanArgument2;
     }
 
@@ -672,7 +672,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(characterArgument4).append(')').toString());
         }
     }
 
@@ -758,7 +758,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
@@ -776,34 +776,34 @@ class UiComponent extends HashNode {
         RgbSprite[] rgbSpriteArrayLocal3 = new RgbSprite[9];
         RgbSprite[] rgbSpriteArrayLocal4 = rgbSpriteArrayLocal3;
         if (integerArgument2 < -10) {
-          cachedRgbSpriteLocal1 = NetworkSupport012.computeRgbSprite1578((byte) -125, integerArgument1, integerArgument4);
+          cachedRgbSpriteLocal1 = NetworkSupport012.computeRgbSprite1559((byte) -125, integerArgument1, integerArgument4);
           rgbSpriteArrayLocal3[6] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[3] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[2] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[1] = cachedRgbSpriteLocal1;
           rgbSpriteArrayLocal4[0] = cachedRgbSpriteLocal1;
-          cachedRgbSpriteLocal2 = NetworkSupport012.computeRgbSprite1578((byte) -109, integerArgument1, integerArgument3);
+          cachedRgbSpriteLocal2 = NetworkSupport012.computeRgbSprite1559((byte) -109, integerArgument1, integerArgument3);
           rgbSpriteArrayLocal3[8] = cachedRgbSpriteLocal2;
           rgbSpriteArrayLocal4[7] = cachedRgbSpriteLocal2;
           rgbSpriteArrayLocal4[5] = cachedRgbSpriteLocal2;
           if (0 != integerArgument5) {
-            rgbSpriteArrayLocal3[4] = NetworkSupport012.computeRgbSprite1578((byte) -121, 64, integerArgument5);
+            rgbSpriteArrayLocal3[4] = NetworkSupport012.computeRgbSprite1559((byte) -121, 64, integerArgument5);
           }
           return rgbSpriteArrayLocal4;
         }
         stringState0079 = (String) null;
-        RgbSprite cachedRgbSpriteLocal5 = NetworkSupport012.computeRgbSprite1578((byte) -125, integerArgument1, integerArgument4);
+        RgbSprite cachedRgbSpriteLocal5 = NetworkSupport012.computeRgbSprite1559((byte) -125, integerArgument1, integerArgument4);
         rgbSpriteArrayLocal3[6] = cachedRgbSpriteLocal5;
         rgbSpriteArrayLocal4[3] = cachedRgbSpriteLocal5;
         rgbSpriteArrayLocal4[2] = cachedRgbSpriteLocal5;
         rgbSpriteArrayLocal4[1] = cachedRgbSpriteLocal5;
         rgbSpriteArrayLocal4[0] = cachedRgbSpriteLocal5;
-        RgbSprite cachedRgbSpriteLocal6 = NetworkSupport012.computeRgbSprite1578((byte) -109, integerArgument1, integerArgument3);
+        RgbSprite cachedRgbSpriteLocal6 = NetworkSupport012.computeRgbSprite1559((byte) -109, integerArgument1, integerArgument3);
         rgbSpriteArrayLocal3[8] = cachedRgbSpriteLocal6;
         rgbSpriteArrayLocal4[7] = cachedRgbSpriteLocal6;
         rgbSpriteArrayLocal4[5] = cachedRgbSpriteLocal6;
         if (0 != integerArgument5) {
-          rgbSpriteArrayLocal3[4] = NetworkSupport012.computeRgbSprite1578((byte) -121, 64, integerArgument5);
+          rgbSpriteArrayLocal3[4] = NetworkSupport012.computeRgbSprite1559((byte) -121, 64, integerArgument5);
         }
         return rgbSpriteArrayLocal4;
     }
@@ -858,7 +858,7 @@ class UiComponent extends HashNode {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ class UiComponent extends HashNode {
           this.callbackContract004State0006 = callbackContract004Argument5;
           this.callbackContract006State0001 = callbackContract006Argument6;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ce.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (callbackContract004Argument5 != null ? "{...}" : "null") + ',' + (callbackContract006Argument6 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ce.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + (callbackContract004Argument5 != null ? "{...}" : "null") + ',' + (callbackContract006Argument6 != null ? "{...}" : "null") + ')');
         }
     }
 

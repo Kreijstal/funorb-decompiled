@@ -36,7 +36,7 @@ final class GzipDecompressor {
             }
             this.inflaterState0001.reset();
           } catch (RuntimeException runtimeException) {
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "lf.B(" + byteArgument1 + ',' + (packetBufferArgument2 != null ? "{...}" : "null") + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "lf.B(" + byteArgument1 + ',' + (packetBufferArgument2 != null ? "{...}" : "null") + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal3) {
           throw uncheckedExceptionLocal3;

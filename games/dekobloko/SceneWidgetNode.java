@@ -9,7 +9,7 @@ class SceneWidgetNode extends DualNode {
     static String stringState0319;
     static byte[] byteArrayState0012;
 
-    final static boolean computeBoolean0940(int integerArgument1, int integerArgument2) {
+    final static boolean computeBoolean0935(int integerArgument1, int integerArgument2) {
         if (integerArgument2 != -8222) {
           return false;
         }
@@ -30,7 +30,7 @@ class SceneWidgetNode extends DualNode {
         pcmPlayerState0002 = null;
     }
 
-    final static byte[] computeByteArray0939(int integerArgument1, CharSequence charSequenceArgument2) {
+    final static byte[] computeByteArray0934(int integerArgument1, CharSequence charSequenceArgument2) {
         int integerLocal1 = 0;
         byte[] stackByteArrayLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -158,7 +158,7 @@ class SceneWidgetNode extends DualNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 

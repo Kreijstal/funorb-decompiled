@@ -11,7 +11,7 @@ final class MixedSupport066 {
     static String stringState0274;
     static SceneWidget sceneWidgetState0060;
 
-    final static void performAction0787(String[] args, int integerArgument2, String stringArgument3, int integerArgument4) {
+    final static void performAction0783(String[] args, int integerArgument2, String stringArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         boolean stackBooleanLocal2 = false;
         boolean stackBooleanLocal3 = false;
@@ -32,12 +32,12 @@ final class MixedSupport066 {
             RichTextLayout.mixedSupport016State0001 = MixedSupport013.computeMixedSupport0160173(stackBooleanLocal2, stackBooleanLocal3);
           } else {
             if (100 > integerArgument2) {
-              RichTextLayout.mixedSupport016State0001 = MixedSupport140.computeMixedSupport0161730(integerArgument2, stringArgument3, 127);
+              RichTextLayout.mixedSupport016State0001 = MixedSupport140.computeMixedSupport0161711(integerArgument2, stringArgument3, 127);
             } else {
               if (integerArgument2 > 105) {
-                RichTextLayout.mixedSupport016State0001 = MixedSupport140.computeMixedSupport0161730(integerArgument2, stringArgument3, 127);
+                RichTextLayout.mixedSupport016State0001 = MixedSupport140.computeMixedSupport0161711(integerArgument2, stringArgument3, 127);
               } else {
-                RichTextLayout.mixedSupport016State0001 = MixedSupport154.computeMixedSupport0161864(args, -3);
+                RichTextLayout.mixedSupport016State0001 = MixedSupport154.computeMixedSupport0161844(args, -3);
               }
             }
           }
@@ -45,7 +45,7 @@ final class MixedSupport066 {
             return;
           }
           stringLocal11 = (String) null;
-          MixedSupport066.performAction0787((String[]) null, -25, (String) null, -72);
+          MixedSupport066.performAction0783((String[]) null, -25, (String) null, -72);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal9 = caughtParameterLocal12;
@@ -63,11 +63,11 @@ final class MixedSupport066 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    public static void performAction0786(boolean booleanArgument1) {
+    public static void performAction0782(boolean booleanArgument1) {
         sceneWidgetState0058 = null;
         stringState0274 = null;
         sceneWidgetState0059 = null;
@@ -79,7 +79,7 @@ final class MixedSupport066 {
           return;
         }
         MixedSupport003 mixedSupport003Local1 = (MixedSupport003) null;
-        MixedSupport066.performAction0785((MixedSupport003) null, -72);
+        MixedSupport066.performAction0781((MixedSupport003) null, -72);
         rgbSpriteState0023 = null;
         stringState0272 = null;
         stringState0273 = null;
@@ -92,12 +92,12 @@ final class MixedSupport066 {
         }
     }
 
-    final static void performAction0785(MixedSupport003 mixedSupport003Argument1, int integerArgument2) {
+    final static void performAction0781(MixedSupport003 mixedSupport003Argument1, int integerArgument2) {
         try {
           mixedSupport003Argument1.integerArrayState0005 = new int[]{integerArgument2};
           mixedSupport003Argument1.characterArrayState0002 = new char[]{(char)63};
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "jc.B(" + (mixedSupport003Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "jc.B(" + (mixedSupport003Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class MixedSupport066 {
         throw new IllegalStateException();
     }
 
-    final static void performAction0784(byte byteArgument1) {
+    final static void performAction0780(byte byteArgument1) {
         MouseWheelInput.sceneWidgetState0050 = null;
         RenderingSupport001.sceneWidgetState0004 = null;
         SceneWidgetPart013.sceneWidgetState0139 = null;

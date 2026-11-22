@@ -13,8 +13,8 @@ final class MixedSupport015 {
 
     final static MixedSupport033 computeMixedSupport0330201(int integerArgument1, byte byteArgument2) {
         MixedSupport033 mixedSupport033Local1 = new MixedSupport033();
-        PcmPlayerService.nodeDequeState0028.performAction1786(mixedSupport033Local1, 2777);
-        MixedSupport050.performAction0604(integerArgument1, 65);
+        PcmPlayerService.nodeDequeState0028.performAction1766(mixedSupport033Local1, 2777);
+        MixedSupport050.performAction0600(integerArgument1, 65);
         if (byteArgument2 <= -81) {
           return mixedSupport033Local1;
         }
@@ -47,13 +47,13 @@ final class MixedSupport015 {
         try {
           this.rgbSpriteArrayState0004 = rgbSpriteArrayArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void performAction0202(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = -29 / ((integerArgument2 + 69) / 54);
-        GameplayControls.performAction1800(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
+        GameplayControls.performAction1780(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
     }
 
     static {

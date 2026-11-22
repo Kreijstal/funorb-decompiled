@@ -9,7 +9,7 @@ final class NetworkSupport012 {
     static MixedSupport001 mixedSupport001State0001;
     static int integerState0759;
 
-    final static int computeInteger1582(LoginCredentials loginCredentialsArgument1, LoginCredentials loginCredentialsArgument2, int integerArgument3) {
+    final static int computeInteger1563(LoginCredentials loginCredentialsArgument1, LoginCredentials loginCredentialsArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -23,7 +23,7 @@ final class NetworkSupport012 {
         try {
           integerLocal1 = -118 / ((-48 - integerArgument3) / 32);
           stringLocal3 = (String) null;
-          stackIntegerLocal4 = NetworkArchiveRequestManager.computeInteger1323(false, 0, loginCredentialsArgument1, 100, 0, loginCredentialsArgument2, (String) null);
+          stackIntegerLocal4 = NetworkArchiveRequestManager.computeInteger1317(false, 0, loginCredentialsArgument1, 100, 0, loginCredentialsArgument2, (String) null);
           return stackIntegerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal10 = caughtParameterLocal11;
@@ -41,11 +41,11 @@ final class NetworkSupport012 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static RgbSprite computeRgbSprite1578(byte byteArgument1, int integerArgument2, int integerArgument3) {
+    final static RgbSprite computeRgbSprite1559(byte byteArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         RgbSprite rgbSpriteLocal2 = new RgbSprite(integerArgument2, integerArgument2);
         int integerLocal3 = 0;
@@ -64,7 +64,7 @@ final class NetworkSupport012 {
         return rgbSpriteLocal2;
     }
 
-    public static void performAction1580(int integerArgument1) {
+    public static void performAction1561(int integerArgument1) {
         if (integerArgument1 != 30553) {
           integerState0759 = 92;
           mixedSupport001State0001 = null;
@@ -73,7 +73,7 @@ final class NetworkSupport012 {
         mixedSupport001State0001 = null;
     }
 
-    final static void performAction1579(byte byteArgument1, java.applet.Applet appletArgument2) {
+    final static void performAction1560(byte byteArgument1, java.applet.Applet appletArgument2) {
         try {
           java.net.URL uRLLocal1 = null;
           Exception exceptionLocal2 = null;
@@ -88,7 +88,7 @@ final class NetworkSupport012 {
             }
             try {
               uRLLocal1 = new java.net.URL(appletArgument2.getCodeBase(), "subscribe.ws");
-              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0606(uRLLocal1, -1, appletArgument2), "_top");
+              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0602(uRLLocal1, -1, appletArgument2), "_top");
               return;
             } catch (java.lang.Exception caughtParameterLocal8) {
               caughtExceptionLocal7 = caughtParameterLocal8;
@@ -106,7 +106,7 @@ final class NetworkSupport012 {
             } else {
               stackStringLocal6 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal10) {
           throw uncheckedExceptionLocal10;
@@ -115,7 +115,7 @@ final class NetworkSupport012 {
         }
     }
 
-    final static int computeInteger1577(byte byteArgument1) {
+    final static int computeInteger1558(byte byteArgument1) {
         if (byteArgument1 > -63) {
           integerState0759 = 90;
           return MixedSupport068.integerState0352;
@@ -123,7 +123,7 @@ final class NetworkSupport012 {
         return MixedSupport068.integerState0352;
     }
 
-    final static boolean computeBoolean1583(int integerArgument1) {
+    final static boolean computeBoolean1564(int integerArgument1) {
         if (integerArgument1 != 1) {
           return false;
         }
@@ -145,12 +145,12 @@ final class NetworkSupport012 {
           this.resourceArchiveState0022 = resourceArchiveArgument2;
           this.resourceArchiveState0023 = resourceArchiveArgument3;
           if (null != this.resourceArchiveState0022) {
-            this.resourceArchiveState0022.computeInteger0836(-5228, 1);
+            this.resourceArchiveState0022.computeInteger0831(-5228, 1);
           }
           if (null == this.resourceArchiveState0023) {
             return;
           }
-          this.resourceArchiveState0023.computeInteger0836(-5228, 1);
+          this.resourceArchiveState0023.computeInteger0831(-5228, 1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;
@@ -174,39 +174,39 @@ final class NetworkSupport012 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 
-    final NetworkSupport007 computeNetworkSupport0071581(int integerArgument1, int integerArgument2) {
+    final NetworkSupport007 computeNetworkSupport0071562(int integerArgument1, int integerArgument2) {
         byte[] byteArrayLocal1 = null;
-        NetworkSupport007 networkSupport007Local2 = (NetworkSupport007) (this.mixedSupport078State0002.computeObject0949((long)integerArgument2, (byte) -63));
+        NetworkSupport007 networkSupport007Local2 = (NetworkSupport007) (this.mixedSupport078State0002.computeObject0944((long)integerArgument2, (byte) -63));
         if (networkSupport007Local2 != null) {
           return networkSupport007Local2;
         }
         if (integerArgument2 < 32768) {
-          byteArrayLocal1 = this.resourceArchiveState0022.computeByteArray0823(integerArgument2, 88, 1);
+          byteArrayLocal1 = this.resourceArchiveState0022.computeByteArray0818(integerArgument2, 88, 1);
         } else {
-          byteArrayLocal1 = this.resourceArchiveState0023.computeByteArray0823(32767 & integerArgument2, -112, 1);
+          byteArrayLocal1 = this.resourceArchiveState0023.computeByteArray0818(32767 & integerArgument2, -112, 1);
         }
         networkSupport007Local2 = new NetworkSupport007();
         if (byteArrayLocal1 != null) {
-          networkSupport007Local2.performAction1062((byte) 80, new PacketBuffer(byteArrayLocal1));
+          networkSupport007Local2.performAction1057((byte) 80, new PacketBuffer(byteArrayLocal1));
         }
         if (32768 <= integerArgument2) {
-          networkSupport007Local2.performAction1066(19423);
-          this.mixedSupport078State0002.performAction0951(networkSupport007Local2, (long)integerArgument2, 125);
+          networkSupport007Local2.performAction1061(19423);
+          this.mixedSupport078State0002.performAction0946(networkSupport007Local2, (long)integerArgument2, 125);
           if (integerArgument1 < 123) {
-            NetworkSupport012.computeInteger1577((byte) 69);
+            NetworkSupport012.computeInteger1558((byte) 69);
             return networkSupport007Local2;
           }
           return networkSupport007Local2;
         }
-        this.mixedSupport078State0002.performAction0951(networkSupport007Local2, (long)integerArgument2, 125);
+        this.mixedSupport078State0002.performAction0946(networkSupport007Local2, (long)integerArgument2, 125);
         if (integerArgument1 >= 123) {
           return networkSupport007Local2;
         }
-        NetworkSupport012.computeInteger1577((byte) 69);
+        NetworkSupport012.computeInteger1558((byte) 69);
         return networkSupport007Local2;
     }
 

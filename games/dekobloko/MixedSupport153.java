@@ -10,11 +10,11 @@ final class MixedSupport153 {
     static int integerState0932;
     private static String stringState0621;
 
-    public static void performAction1859(boolean booleanArgument1) {
+    public static void performAction1839(boolean booleanArgument1) {
         rgbSpriteState0074 = null;
         stringState0620 = null;
         if (!booleanArgument1) {
-          MixedSupport153.performAction1859(true);
+          MixedSupport153.performAction1839(true);
         }
     }
 

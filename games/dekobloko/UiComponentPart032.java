@@ -11,39 +11,39 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
     static String stringState0580;
     static String stringState0581;
 
-    abstract int computeInteger1313(int integerArgument1);
+    abstract int computeInteger1307(int integerArgument1);
 
-    public static void performAction1753(int integerArgument1) {
+    public static void performAction1733(int integerArgument1) {
         integerArrayState0238 = null;
         stringArrayState0051 = null;
         resourceArchiveState0024 = null;
         if (integerArgument1 > -17) {
-          UiComponentPart032.performAction1753(-12);
+          UiComponentPart032.performAction1733(-12);
         }
         stringState0580 = null;
         stringState0581 = null;
     }
 
-    abstract boolean computeBoolean1314(int integerArgument1);
+    abstract boolean computeBoolean1308(int integerArgument1);
 
-    final static void performAction1752(byte byteArgument1) {
+    final static void performAction1732(byte byteArgument1) {
         if (byteArgument1 != 105) {
           booleanState0198 = true;
         }
         String stringLocal1 = (String) null;
-        InputAdapter002.performAction1385("", -99, (String) null);
+        InputAdapter002.performAction1379("", -99, (String) null);
     }
 
-    public final CallbackContract011 computeCallbackContract0110845(int integerArgument1) {
+    public final CallbackContract011 computeCallbackContract0110840(int integerArgument1) {
         if (integerArgument1 > -86) {
-          UiComponentPart032.performAction1753(-30);
+          UiComponentPart032.performAction1733(-30);
         }
         return (CallbackContract011) ((Object) this.inputAdapter002State0001);
     }
 
-    abstract int computeInteger1312(byte byteArgument1);
+    abstract int computeInteger1306(byte byteArgument1);
 
-    void performAction1303(byte byteArgument1, InputAdapter002 inputAdapter002Argument2) {
+    void performAction1297(byte byteArgument1, InputAdapter002 inputAdapter002Argument2) {
         try {
           if (byteArgument1 < 74) {
             resourceArchiveState0024 = (ResourceArchive) null;
@@ -51,11 +51,11 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
           this.inputAdapter002State0001 = inputAdapter002Argument2;
           this.inputAdapter002State0001.uiComponentPart032State0001 = this;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "vb.H(" + byteArgument1 + ',' + (inputAdapter002Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "vb.H(" + byteArgument1 + ',' + (inputAdapter002Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction1751(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction1731(boolean booleanArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -89,9 +89,9 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
           } else {
             stackIntegerLocal3 = RenderingSupport001.integerState0064;
           }
-          InputAdapter002.performAction1383(stackIntegerLocal3, 97);
+          InputAdapter002.performAction1377(stackIntegerLocal3, 97);
           PcmResampler.mixedSupport006State0002.performAction0066(-42 + MixedSupport030.sceneWidgetState0023.integerState0915, MixedSupport030.sceneWidgetState0023.integerState0896, 0, integerArgument2 + 117, 0);
-          UiComponentPart013.sceneWidgetState0048.performAction1815(RenderingSupport006.sceneWidgetState0056.integerState0896, integerArgument2 ^ -2, 0, ComponentContainer.integerState0377, 0);
+          UiComponentPart013.sceneWidgetState0048.performAction1795(RenderingSupport006.sceneWidgetState0056.integerState0896, integerArgument2 ^ -2, 0, ComponentContainer.integerState0377, 0);
           stackSceneWidgetLocal4 = MixedSupport075.sceneWidgetState0070;
           stackIntegerLocal5 = RenderingSupport006.sceneWidgetState0056.integerState0896;
           if (!MixedSupport102.booleanState0133) {
@@ -99,12 +99,12 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
           } else {
             stackIntegerLocal6 = 2 + (40 + MixedSupport146.integerState0855 + 2);
           }
-          ((SceneWidget) (Object) stackSceneWidgetLocal4).performAction1815(stackIntegerLocal5 - stackIntegerLocal6, 0, 2 + ComponentContainer.integerState0377, 18, 0);
-          RichTextLayout.sceneWidgetState0020.performAction1815(42 + MixedSupport146.integerState0855, 0, ComponentContainer.integerState0377 - integerArgument2, 18, -40 + (-2 + RenderingSupport006.sceneWidgetState0056.integerState0896 - MixedSupport146.integerState0855));
-          ValidationStatus.sceneWidgetPart008State0006.performAction1154(6, ComponentContainer.integerState0377 + 22, MixedSupport146.integerState0855, 0, -2 + (-ComponentContainer.integerState0377 + RenderingSupport006.sceneWidgetState0056.integerState0915) - 20, RenderingSupport006.sceneWidgetState0056.integerState0896, 2);
-          ComponentDecorator.sceneWidgetState0078.performAction1815(MixedSupport030.sceneWidgetState0023.integerState0896, 0, -40 + MixedSupport030.sceneWidgetState0023.integerState0915, 40, 0);
-          MixedSupport042.sceneWidgetState0033.performAction1815(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 0, 30, 0);
-          MixedSupport111.sceneWidgetState0102.performAction1815(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 30, -2 + NetworkSupport008.sceneWidgetState0093.integerState0915 - 70, 0);
+          ((SceneWidget) (Object) stackSceneWidgetLocal4).performAction1795(stackIntegerLocal5 - stackIntegerLocal6, 0, 2 + ComponentContainer.integerState0377, 18, 0);
+          RichTextLayout.sceneWidgetState0020.performAction1795(42 + MixedSupport146.integerState0855, 0, ComponentContainer.integerState0377 - integerArgument2, 18, -40 + (-2 + RenderingSupport006.sceneWidgetState0056.integerState0896 - MixedSupport146.integerState0855));
+          ValidationStatus.sceneWidgetPart008State0006.performAction1149(6, ComponentContainer.integerState0377 + 22, MixedSupport146.integerState0855, 0, -2 + (-ComponentContainer.integerState0377 + RenderingSupport006.sceneWidgetState0056.integerState0915) - 20, RenderingSupport006.sceneWidgetState0056.integerState0896, 2);
+          ComponentDecorator.sceneWidgetState0078.performAction1795(MixedSupport030.sceneWidgetState0023.integerState0896, 0, -40 + MixedSupport030.sceneWidgetState0023.integerState0915, 40, 0);
+          MixedSupport042.sceneWidgetState0033.performAction1795(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 0, 30, 0);
+          MixedSupport111.sceneWidgetState0102.performAction1795(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 30, -2 + NetworkSupport008.sceneWidgetState0093.integerState0915 - 70, 0);
           integerLocal9 = MixedSupport064.integerState0336 + 3;
           if (UiComponentPart002.integerArrayState0014.length < 2) {
             integerLocal9--;
@@ -120,7 +120,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
           if (integerLocal12 > 40) {
             integerLocal12 = 40;
           }
-          MixedSupport081.sceneWidgetState0075.performAction1815(-5 + MixedSupport111.sceneWidgetState0102.integerState0896 - 5, 0, 5, integerLocal12, 5);
+          MixedSupport081.sceneWidgetState0075.performAction1795(-5 + MixedSupport111.sceneWidgetState0102.integerState0896 - 5, 0, 5, integerLocal12, 5);
           integerLocal13 = integerLocal12 + 5 + 2;
           for (integerLocal1 = 0; integerLocal1 < 4 + MixedSupport064.integerState0336; integerLocal1++) {
             if ((1 != integerLocal1 ||
@@ -177,7 +177,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
                     }
                   }
                 } else {
-                  MixedSupport139.sceneWidgetArrayState0008[integerLocal1].performAction1815(103, 0, integerLocal13, integerLocal11, 5);
+                  MixedSupport139.sceneWidgetArrayState0008[integerLocal1].performAction1795(103, 0, integerLocal13, integerLocal11, 5);
                   integerLocal15 = 110;
                   if (!booleanArgument1) {
                     if (MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1][0] != null) {
@@ -186,32 +186,32 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
                       sceneWidgetPart009Local17.integerState0896 = 0;
                     }
                   } else {
-                    MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1][0].performAction1369(integerLocal11, 2, integerLocal15, integerLocal13, 38, MixedSupport064.integerState0335, 500);
+                    MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1][0].performAction1363(integerLocal11, 2, integerLocal15, integerLocal13, 38, MixedSupport064.integerState0335, 500);
                     integerLocal15 += 40;
                   }
                   integerLocal18 = 2 + (-integerLocal15 - 5) + NetworkSupport008.sceneWidgetState0093.integerState0896;
                   integerLocal19 = MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1].length - 1;
                   for (integerLocal2 = 0; integerLocal19 > integerLocal2; integerLocal2++) {
                     integerLocal21 = integerLocal18 * integerLocal2 / integerLocal19;
-                    MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1][integerLocal2 + 1].performAction1369(integerLocal11, 2, integerLocal15 + integerLocal21, integerLocal13, -integerLocal21 + ((1 + integerLocal2) * integerLocal18 / integerLocal19 - 2), MixedSupport064.integerState0335, integerArgument2 + 502);
+                    MixedSupport108.sceneWidgetPart009ArrayArrayState0001[integerLocal1][integerLocal2 + 1].performAction1363(integerLocal11, 2, integerLocal15 + integerLocal21, integerLocal13, -integerLocal21 + ((1 + integerLocal2) * integerLocal18 / integerLocal19 - 2), MixedSupport064.integerState0335, integerArgument2 + 502);
                   }
                   integerLocal13 = integerLocal13 + (2 + integerLocal11);
                 }
               }
             }
           }
-          MixedSupport087.sceneWidgetState0087.performAction1815(360, integerArgument2 ^ -2, 10, -10 + (-120 + SoftwareRaster.integerState0284 - 14), SoftwareRaster.integerState0285 - 360 >> 1);
-          MixedSupport059.sceneWidgetState0054.performAction1815(MixedSupport087.sceneWidgetState0087.integerState0896, 0, 0, 24, 0);
-          MixedSupport020.sceneWidgetState0013.performAction1815(MixedSupport087.sceneWidgetState0087.integerState0896, 0, 24, MixedSupport087.sceneWidgetState0087.integerState0915 - 24, 0);
-          MixedSupport020.sceneWidgetState0013.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0393(1, -20982, 3, MixedSupport020.sceneWidgetState0013.integerState0915, 8421504, 11579568);
-          RenderingSupport004.sceneWidgetState0039.performAction1815(-10 + MixedSupport020.sceneWidgetState0013.integerState0896, 0, 5, -10 + MixedSupport020.sceneWidgetState0013.integerState0915 - 24 - 2, 5);
-          GameSession.sceneWidgetState0099.performAction1815(80, 0, -29 + MixedSupport020.sceneWidgetState0013.integerState0915, 24, (-80 + MixedSupport020.sceneWidgetState0013.integerState0896) / 2);
+          MixedSupport087.sceneWidgetState0087.performAction1795(360, integerArgument2 ^ -2, 10, -10 + (-120 + SoftwareRaster.integerState0284 - 14), SoftwareRaster.integerState0285 - 360 >> 1);
+          MixedSupport059.sceneWidgetState0054.performAction1795(MixedSupport087.sceneWidgetState0087.integerState0896, 0, 0, 24, 0);
+          MixedSupport020.sceneWidgetState0013.performAction1795(MixedSupport087.sceneWidgetState0087.integerState0896, 0, 24, MixedSupport087.sceneWidgetState0087.integerState0915 - 24, 0);
+          MixedSupport020.sceneWidgetState0013.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0392(1, -20982, 3, MixedSupport020.sceneWidgetState0013.integerState0915, 8421504, 11579568);
+          RenderingSupport004.sceneWidgetState0039.performAction1795(-10 + MixedSupport020.sceneWidgetState0013.integerState0896, 0, 5, -10 + MixedSupport020.sceneWidgetState0013.integerState0915 - 24 - 2, 5);
+          GameSession.sceneWidgetState0099.performAction1795(80, 0, -29 + MixedSupport020.sceneWidgetState0013.integerState0915, 24, (-80 + MixedSupport020.sceneWidgetState0013.integerState0896) / 2);
           RenderingSupport001.performAction0139((byte) -81);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal25) {
           caughtExceptionLocal8 = caughtParameterLocal25;
           runtimeExceptionLocal10 = caughtExceptionLocal8;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal10), "vb.G(" + booleanArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal10), "vb.G(" + booleanArgument1 + ',' + integerArgument2 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, callbackContract004Argument5);
     }
 
-    final static int computeInteger1750(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
+    final static int computeInteger1730(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -248,11 +248,11 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
           runtimeExceptionLocal2 = caughtExceptionLocal6;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal2), "vb.E(" + integerArgument1 + ',' + integerArgument2 + ',' + booleanArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "vb.E(" + integerArgument1 + ',' + integerArgument2 + ',' + booleanArgument3 + ')');
         }
     }
 
-    final static String computeString1749(char characterArgument1, int integerArgument2, int integerArgument3) {
+    final static String computeString1729(char characterArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         char[] characterArrayLocal3 = new char[integerArgument2];
@@ -266,7 +266,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
         return new String(characterArrayLocal3);
     }
 
-    abstract int computeInteger1311(boolean booleanArgument1);
+    abstract int computeInteger1305(boolean booleanArgument1);
 
     static {
         stringState0581 = "Show tutorial again";

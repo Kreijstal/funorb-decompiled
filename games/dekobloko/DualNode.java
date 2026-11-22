@@ -33,7 +33,7 @@ class DualNode extends HashNode {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument1 == 98) {
-            stackBooleanLocal2 = MixedSupport121.computeBoolean1565(true, charSequenceArgument2, true, 10);
+            stackBooleanLocal2 = MixedSupport121.computeBoolean1546(true, charSequenceArgument2, true, 10);
             return stackBooleanLocal2;
           }
           return false;
@@ -47,7 +47,7 @@ class DualNode extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -67,10 +67,10 @@ class DualNode extends HashNode {
           return;
         }
         try {
-          MixedSupport094.performAction1171(appletArgument1, -1, "");
-          SceneWidgetPart014.performAction1833(appletArgument1, 30307);
+          MixedSupport094.performAction1166(appletArgument1, -1, "");
+          SceneWidgetPart014.performAction1813(appletArgument1, 30307);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
@@ -92,11 +92,11 @@ class DualNode extends HashNode {
             DualNode.performAction0127((byte) 85, (SceneWidgetPart005) null);
           }
           SceneWidgetPart007.sceneWidgetPart005State0002 = sceneWidgetPart005Argument2;
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1793(110);
-          MixedSupport059.sceneWidgetState0055.performAction1819(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
+          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1773(110);
+          MixedSupport059.sceneWidgetState0055.performAction1799(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
           GameDomainSupport004.booleanState0087 = true;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 

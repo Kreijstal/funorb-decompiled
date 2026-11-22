@@ -10,7 +10,7 @@ final class NetworkSupport011 {
     private ResourceArchive resourceArchiveState0018;
     private MixedSupport090 mixedSupport090State0003;
 
-    final RawSound computeRawSound1295(String stringArgument1, String stringArgument2, int integerArgument3) {
+    final RawSound computeRawSound1289(String stringArgument1, String stringArgument2, int integerArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         RawSound stackRawSoundLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -23,7 +23,7 @@ final class NetworkSupport011 {
           if (integerArgument3 != 0) {
             this.mixedSupport090State0002 = (MixedSupport090) null;
           }
-          stackRawSoundLocal2 = this.computeRawSound1298(stringArgument1, (int[]) null, stringArgument2, true);
+          stackRawSoundLocal2 = this.computeRawSound1292(stringArgument1, (int[]) null, stringArgument2, true);
           return stackRawSoundLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -41,25 +41,25 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static void performAction1291(int integerArgument1) {
+    final static void performAction1285(int integerArgument1) {
         if (integerArgument1 != 3970) {
           stringState0430 = (String) null;
-          MixedSupport066.performAction0784((byte) 103);
+          MixedSupport066.performAction0780((byte) 103);
           return;
         }
-        MixedSupport066.performAction0784((byte) 103);
+        MixedSupport066.performAction0780((byte) 103);
     }
 
-    final RawSound computeRawSound1292(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final RawSound computeRawSound1286(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = -17 % ((-2 - integerArgument1) / 57);
-        return this.computeRawSound1293(121, integerArgument3, (int[]) null, integerArgument2);
+        return this.computeRawSound1287(121, integerArgument3, (int[]) null, integerArgument2);
     }
 
-    final static java.net.URL computeURL1296(String stringArgument1, String stringArgument2, boolean booleanArgument3, java.net.URL uRLArgument4, int integerArgument5) {
+    final static java.net.URL computeURL1290(String stringArgument1, String stringArgument2, boolean booleanArgument3, java.net.URL uRLArgument4, int integerArgument5) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -192,7 +192,7 @@ final class NetworkSupport011 {
             } else {
               stackStringLocal19 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal13), ((StringBuilder) (Object) stackStringBuilderLocal18).append(stackStringLocal19).append(',').append(integerArgument5).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal13), ((StringBuilder) (Object) stackStringBuilderLocal18).append(stackStringLocal19).append(',').append(integerArgument5).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal31) {
           throw uncheckedExceptionLocal31;
@@ -201,7 +201,7 @@ final class NetworkSupport011 {
         }
     }
 
-    private final RawSound computeRawSound1297(String stringArgument1, int[] integerArrayArgument2, String stringArgument3, byte byteArgument4) {
+    private final RawSound computeRawSound1291(String stringArgument1, int[] integerArrayArgument2, String stringArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -218,17 +218,17 @@ final class NetworkSupport011 {
         try {
           if (byteArgument4 > -17) {
             stringLocal4 = (String) null;
-            this.computeRawSound1295((String) null, (String) null, 126);
+            this.computeRawSound1289((String) null, (String) null, 126);
           }
-          integerLocal1 = this.resourceArchiveState0018.computeInteger0837(-1, stringArgument3);
+          integerLocal1 = this.resourceArchiveState0018.computeInteger0832(-1, stringArgument3);
           if (0 > integerLocal1) {
             return null;
           }
-          integerLocal3 = this.resourceArchiveState0018.computeInteger0824(integerLocal1, 13030, stringArgument1);
+          integerLocal3 = this.resourceArchiveState0018.computeInteger0819(integerLocal1, 13030, stringArgument1);
           if (integerLocal3 < 0) {
             return null;
           }
-          stackRawSoundLocal5 = this.computeRawSound1294(integerLocal3, integerArrayArgument2, integerLocal1, -15027);
+          stackRawSoundLocal5 = this.computeRawSound1288(integerLocal3, integerArrayArgument2, integerLocal1, -15027);
           return stackRawSoundLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
           caughtExceptionLocal13 = caughtParameterLocal14;
@@ -252,11 +252,11 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final RawSound computeRawSound1290(byte byteArgument1, String stringArgument2, String stringArgument3) {
+    final RawSound computeRawSound1284(byte byteArgument1, String stringArgument2, String stringArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         RawSound stackRawSoundLocal2 = null;
         RawSound stackRawSoundLocal3 = null;
@@ -268,7 +268,7 @@ final class NetworkSupport011 {
         RuntimeException caughtExceptionLocal9 = null;
         try {
           if (byteArgument1 == 101) {
-            stackRawSoundLocal3 = this.computeRawSound1297(stringArgument3, (int[]) null, stringArgument2, (byte) -75);
+            stackRawSoundLocal3 = this.computeRawSound1291(stringArgument3, (int[]) null, stringArgument2, (byte) -75);
             return stackRawSoundLocal3;
           }
           stackRawSoundLocal2 = (RawSound) null;
@@ -289,18 +289,18 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 
-    public static void performAction1299(int integerArgument1) {
+    public static void performAction1293(int integerArgument1) {
         stringState0431 = null;
         stringState0430 = null;
         int integerLocal1 = 81 % ((integerArgument1 + 78) / 33);
         stringState0432 = null;
     }
 
-    private final RawSound computeRawSound1298(String stringArgument1, int[] integerArrayArgument2, String stringArgument3, boolean booleanArgument4) {
+    private final RawSound computeRawSound1292(String stringArgument1, int[] integerArrayArgument2, String stringArgument3, boolean booleanArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -315,16 +315,16 @@ final class NetworkSupport011 {
         String stackStringLocal12 = null;
         RuntimeException caughtExceptionLocal13 = null;
         try {
-          integerLocal1 = this.resourceArchiveState0017.computeInteger0837(-1, stringArgument1);
+          integerLocal1 = this.resourceArchiveState0017.computeInteger0832(-1, stringArgument1);
           if (!booleanArgument4) {
             this.mixedSupport090State0002 = (MixedSupport090) null;
           }
           if (0 > integerLocal1) {
             return null;
           }
-          integerLocal3 = this.resourceArchiveState0017.computeInteger0824(integerLocal1, 13030, stringArgument3);
+          integerLocal3 = this.resourceArchiveState0017.computeInteger0819(integerLocal1, 13030, stringArgument3);
           if (integerLocal3 >= 0) {
-            stackRawSoundLocal5 = this.computeRawSound1293(119, integerLocal1, integerArrayArgument2, integerLocal3);
+            stackRawSoundLocal5 = this.computeRawSound1287(119, integerLocal1, integerArrayArgument2, integerLocal3);
             return stackRawSoundLocal5;
           }
           stackObjectLocal4 = null;
@@ -351,11 +351,11 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(booleanArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(booleanArgument4).append(')').toString());
         }
     }
 
-    private final RawSound computeRawSound1294(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4) {
+    private final RawSound computeRawSound1288(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4) {
         VorbisSample cachedVorbisSampleLocal1 = null;
         RawSound stackRawSoundLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -378,7 +378,7 @@ final class NetworkSupport011 {
           integerLocal12 = integerArgument1 ^ (65532 & integerArgument3 << 4 | integerArgument3 >>> 12);
           integerLocal12 = integerLocal12 | integerArgument3 << 16;
           longLocal14 = 4294967296L ^ (long)integerLocal12;
-          rawSoundLocal15 = (RawSound) (this.mixedSupport090State0003.computeHashNode1132(longLocal14, 126));
+          rawSoundLocal15 = (RawSound) (this.mixedSupport090State0003.computeHashNode1127(longLocal14, 126));
           if (rawSoundLocal15 != null) {
             stackRawSoundLocal2 = rawSoundLocal15;
             return stackRawSoundLocal2;
@@ -388,28 +388,28 @@ final class NetworkSupport011 {
             stackObjectLocal3 = null;
             return (RawSound) (stackObjectLocal3);
           }
-          cachedVorbisSampleLocal1 = (VorbisSample) (this.mixedSupport090State0002.computeHashNode1132(longLocal14, 55));
+          cachedVorbisSampleLocal1 = (VorbisSample) (this.mixedSupport090State0002.computeHashNode1127(longLocal14, 55));
           vorbisSampleLocal17 = cachedVorbisSampleLocal1;
           vorbisSampleLocal16 = cachedVorbisSampleLocal1;
           if (vorbisSampleLocal17 == null) {
-            vorbisSampleLocal16 = VorbisSample.computeVorbisSample1740(this.resourceArchiveState0018, integerArgument3, integerArgument1);
+            vorbisSampleLocal16 = VorbisSample.computeVorbisSample1720(this.resourceArchiveState0018, integerArgument3, integerArgument1);
             if (vorbisSampleLocal16 == null) {
               stackObjectLocal4 = null;
               return (RawSound) (stackObjectLocal4);
             }
-            this.mixedSupport090State0002.performAction1133(longLocal14, integerArgument4 ^ 15026, vorbisSampleLocal16);
+            this.mixedSupport090State0002.performAction1128(longLocal14, integerArgument4 ^ 15026, vorbisSampleLocal16);
           }
           if (integerArgument4 != -15027) {
             stackRawSoundLocal5 = (RawSound) null;
             return stackRawSoundLocal5;
           }
-          rawSoundLocal18 = vorbisSampleLocal16.computeRawSound1744(integerArrayArgument2);
+          rawSoundLocal18 = vorbisSampleLocal16.computeRawSound1724(integerArrayArgument2);
           if (rawSoundLocal18 == null) {
             stackObjectLocal6 = null;
             return (RawSound) (stackObjectLocal6);
           }
           vorbisSampleLocal16.performAction0149((byte) 101);
-          this.mixedSupport090State0003.performAction1133(longLocal14, -1, rawSoundLocal18);
+          this.mixedSupport090State0003.performAction1128(longLocal14, -1, rawSoundLocal18);
           stackRawSoundLocal7 = rawSoundLocal18;
           return stackRawSoundLocal7;
         } catch (java.lang.RuntimeException caughtParameterLocal19) {
@@ -422,11 +422,11 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    private final RawSound computeRawSound1293(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4) {
+    private final RawSound computeRawSound1287(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4) {
         RawSound cachedRawSoundLocal1 = null;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -450,7 +450,7 @@ final class NetworkSupport011 {
             stringState0432 = (String) null;
           }
           longLocal4 = (long)integerLocal2;
-          cachedRawSoundLocal1 = (RawSound) (this.mixedSupport090State0003.computeHashNode1132(longLocal4, 106));
+          cachedRawSoundLocal1 = (RawSound) (this.mixedSupport090State0003.computeHashNode1127(longLocal4, 106));
           rawSoundLocal8 = cachedRawSoundLocal1;
           rawSoundLocal5 = cachedRawSoundLocal1;
           if (rawSoundLocal8 != null) {
@@ -468,7 +468,7 @@ final class NetworkSupport011 {
           }
           rawSoundLocal7 = soundEffectLocal6.computeRawSound0153();
           rawSoundLocal16 = rawSoundLocal7;
-          this.mixedSupport090State0003.performAction1133(longLocal4, -1, rawSoundLocal16);
+          this.mixedSupport090State0003.performAction1128(longLocal4, -1, rawSoundLocal16);
           if (integerArrayArgument3 != null) {
             integerArrayArgument3[0] = integerArrayArgument3[0] - rawSoundLocal7.byteArrayState0028.length;
           }
@@ -484,15 +484,15 @@ final class NetworkSupport011 {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final RawSound computeRawSound1300(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final RawSound computeRawSound1294(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument3 != -1) {
           return (RawSound) null;
         }
-        return this.computeRawSound1294(integerArgument1, (int[]) null, integerArgument2, -15027);
+        return this.computeRawSound1288(integerArgument1, (int[]) null, integerArgument2, -15027);
     }
 
     NetworkSupport011(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2) {
@@ -502,7 +502,7 @@ final class NetworkSupport011 {
           this.resourceArchiveState0018 = resourceArchiveArgument2;
           this.resourceArchiveState0017 = resourceArchiveArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "pl.<init>(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "pl.<init>(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 

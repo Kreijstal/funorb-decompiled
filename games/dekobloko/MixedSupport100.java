@@ -20,16 +20,16 @@ final class MixedSupport100 {
         stringState0398 = null;
     }
 
-    final static void performAction1236(int integerArgument1, byte byteArgument2) {
+    final static void performAction1231(int integerArgument1, byte byteArgument2) {
         try {
           try {
-            MixedSupport088.computeObject1119("resizing", byteArgument2 - 14511, UiComponentPart029.computeApplet1530(byteArgument2 ^ -25126), new Object[]{new Integer(integerArgument1)});
+            MixedSupport088.computeObject1114("resizing", byteArgument2 - 14511, UiComponentPart029.computeApplet1512(byteArgument2 ^ -25126), new Object[]{new Integer(integerArgument1)});
           } catch (Throwable throwable) {
           }
           if (byteArgument2 == -30) {
             return;
           }
-          MixedSupport100.performAction1236(72, (byte) -105);
+          MixedSupport100.performAction1231(72, (byte) -105);
         } catch (RuntimeException | Error uncheckedExceptionLocal2) {
           throw uncheckedExceptionLocal2;
         } catch (Throwable checkedExceptionLocal3) {

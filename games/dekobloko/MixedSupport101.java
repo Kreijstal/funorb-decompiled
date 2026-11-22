@@ -9,7 +9,7 @@ final class MixedSupport101 {
     static String stringState0410;
     static String stringState0411;
 
-    final static String computeString1244(int integerArgument1) {
+    final static String computeString1239(int integerArgument1) {
         if (GameAssets.mixedSupport004State0004 == UiComponentPart022.mixedSupport004State0003) {
           return SceneWidgetPart013.stringState0586;
         }
@@ -31,7 +31,7 @@ final class MixedSupport101 {
         stringState0411 = null;
     }
 
-    final static boolean computeBoolean1245(int integerArgument1, int integerArgument2, long longArgument3, String stringArgument4, int[] integerArrayArgument5) {
+    final static boolean computeBoolean1240(int integerArgument1, int integerArgument2, long longArgument3, String stringArgument4, int[] integerArrayArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -46,7 +46,7 @@ final class MixedSupport101 {
           }
           boolean frameRemainderLocal9 = true;
           if (integerArrayArgument5 != null && (integerArgument1 != 2 ||
-            InputAdapter003.computeBoolean1536(stringArgument4, 120, longArgument3))) {
+            InputAdapter003.computeBoolean1517(stringArgument4, 120, longArgument3))) {
             stackBooleanLocal2 = true;
             frameRemainderLocal9 = false;
           }
@@ -70,7 +70,7 @@ final class MixedSupport101 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 

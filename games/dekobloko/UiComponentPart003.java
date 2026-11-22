@@ -16,7 +16,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
         if (integerArgument1 != -10604) {
           return -74;
         }
-        return !this.booleanState0011 ? 0 : this.uiComponentPart016State0002.computeUiComponentPart0030858((byte) -83) == this ? 256 : 0;
+        return !this.booleanState0011 ? 0 : this.uiComponentPart016State0002.computeUiComponentPart0030853((byte) -83) == this ? 256 : 0;
     }
 
     final void performAction0161(int integerArgument1, int integerArgument2, int integerArgument3) {
@@ -43,11 +43,11 @@ abstract class UiComponentPart003 extends ComponentContainer {
           !(this.integerState0108 <= NodeHashTable.rgbSpriteState0055.integerState0255)) {
           NodeHashTable.rgbSpriteState0055 = new RgbSprite(this.integerState0107, this.integerState0108);
         }
-        ValidationStatus.performAction1616(true, NodeHashTable.rgbSpriteState0055);
-        SoftwareRaster.performAction0661();
+        ValidationStatus.performAction1597(true, NodeHashTable.rgbSpriteState0055);
+        SoftwareRaster.performAction0657();
         this.performAction0165(-128, 0, 0);
         super.performAction0162(-this.integerState0110 - integerArgument1, -116, integerArgument3, -integerArgument4 - this.integerState0104);
-        MixedSupport086.performAction1084((byte) -5);
+        MixedSupport086.performAction1079((byte) -5);
         NodeHashTable.rgbSpriteState0055.performAction0279(this.integerState0110 + integerArgument1, this.integerState0104 + integerArgument4, this.integerState0074);
         if (integerArgument2 >= -103) {
           this.integerState0074 = -41;
@@ -61,7 +61,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           this.integerState0074 = 0;
           this.uiComponentPart016State0002 = uiComponentPart016Argument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "bl.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "bl.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           MixedSupport040.booleanState0046 = true;
           MixedSupport009.integerState0054 = integerArgument2;
           if (MixedSupport009.integerState0054 == 0) {
-            integerLocal15 = MixedSupport126.computeInteger1630(UiComponentPart007.stringState0112, 124, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+            integerLocal15 = MixedSupport126.computeInteger1611(UiComponentPart007.stringState0112, 124, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
             integerLocal17 = 3 + integerLocal15;
             UiComponentPart028.stringArrayState0039 = new String[integerLocal17];
             MixedSupport070.integerArrayState0119 = new int[integerLocal17];
@@ -140,7 +140,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
             MixedSupport070.integerArrayState0119[-1 + integerLocal17] = 1;
             InputAdapter002.integerArrayState0192[1] = 5;
           } else if (MixedSupport009.integerState0054 == 1) {
-            integerLocal15 = MixedSupport126.computeInteger1630(UiComponentPart007.stringState0112, 96, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+            integerLocal15 = MixedSupport126.computeInteger1611(UiComponentPart007.stringState0112, 96, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
             integerLocal17 = integerLocal15 + 2;
             MixedSupport070.integerArrayState0119 = new int[integerLocal17];
             UiComponentPart028.stringArrayState0039 = new String[integerLocal17];
@@ -158,9 +158,9 @@ abstract class UiComponentPart003 extends ComponentContainer {
           } else if (MixedSupport009.integerState0054 != 2) {
             if (MixedSupport009.integerState0054 == 3) {
               if (!GzipDecompressor.platformServiceState0003.booleanState0043) {
-                integerLocal15 = MixedSupport126.computeInteger1630(NodeHashTable.stringState0507, 81, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+                integerLocal15 = MixedSupport126.computeInteger1611(NodeHashTable.stringState0507, 81, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
               } else {
-                integerLocal15 = MixedSupport126.computeInteger1630(MixedSupport112.stringState0465, 99, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+                integerLocal15 = MixedSupport126.computeInteger1611(MixedSupport112.stringState0465, 99, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
               }
               integerLocal17 = 2 + integerLocal15;
               UiComponentPart028.stringArrayState0039 = new String[integerLocal17];
@@ -177,7 +177,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
               MixedSupport070.integerArrayState0119[-1 + integerLocal17] = 0;
               InputAdapter002.integerArrayState0192[0] = 5;
             } else if (MixedSupport009.integerState0054 == 4) {
-              integerLocal15 = MixedSupport126.computeInteger1630(MixedSupport023.stringState0103, 117, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+              integerLocal15 = MixedSupport126.computeInteger1611(MixedSupport023.stringState0103, 117, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
               integerLocal17 = 2 + integerLocal15;
               MixedSupport070.integerArrayState0119 = new int[integerLocal17];
               UiComponentPart028.stringArrayState0039 = new String[integerLocal17];
@@ -196,7 +196,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
               if (MixedSupport009.integerState0054 != 5) {
                 throw new IllegalArgumentException();
               }
-              integerLocal15 = MixedSupport126.computeInteger1630(MixedSupport046.stringState0197, 76, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+              integerLocal15 = MixedSupport126.computeInteger1611(MixedSupport046.stringState0197, 76, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
               integerLocal17 = 3 + integerLocal15;
               UiComponentPart028.stringArrayState0039 = new String[integerLocal17];
               MixedSupport070.integerArrayState0119 = new int[integerLocal17];
@@ -216,7 +216,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
               InputAdapter002.integerArrayState0192[1] = 5;
             }
           } else {
-            integerLocal15 = MixedSupport126.computeInteger1630(NodeHashTableIterator.substituteIndexedPlaceholders(91, UiComponentPart006.stringState0108, new String[]{"<br><%0><br>"}), 86, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+            integerLocal15 = MixedSupport126.computeInteger1611(NodeHashTableIterator.substituteIndexedPlaceholders(91, UiComponentPart006.stringState0108, new String[]{"<br><%0><br>"}), 86, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
             integerLocal17 = -1;
             for (integerLocal19 = 0; integerLocal19 < integerLocal15; integerLocal19++) {
               if (!"<%0>".equals(MixedSupport145.stringArrayState0053[integerLocal19])) {
@@ -233,7 +233,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
             ClientException.stringArrayState0006 = new String[-1 + (integerLocal15 - integerLocal17)];
             MixedSupport008.performAction0077(MixedSupport145.stringArrayState0053, 1 + integerLocal17, ClientException.stringArrayState0006, 0, -integerLocal17 + integerLocal15 - 1);
             integerLocal17 = -1;
-            integerLocal15 = MixedSupport126.computeInteger1630(NodeHashTableIterator.substituteIndexedPlaceholders(86, MixedSupport045.stringState0189, new String[]{"<br><%0><br>"}), 112, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
+            integerLocal15 = MixedSupport126.computeInteger1611(NodeHashTableIterator.substituteIndexedPlaceholders(86, MixedSupport045.stringState0189, new String[]{"<br><%0><br>"}), 112, MixedSupport098.integerState0568, MixedSupport145.stringArrayState0053, UiComponentPart028.bitmapFontState0019);
             for (integerLocal19 = 0; integerLocal19 < integerLocal15; integerLocal19++) {
               if (!"<%0>".equals(MixedSupport145.stringArrayState0053[integerLocal19])) {
                 continue;
@@ -299,7 +299,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
               }
               stackStringArrayLocal6[stackIntegerLocal7] = stackStringLocal8;
             }
-            MixedSupport024.longState0007 = MixedSupport063.computeLong0749(4);
+            MixedSupport024.longState0007 = MixedSupport063.computeLong0745(4);
           }
           if (integerArgument1 > -8) {
             platformServiceState0001 = (PlatformService) null;
@@ -310,7 +310,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
             stackBooleanLocal9 = false;
             stackStringLocal10 = UiComponentPart028.stringArrayState0039[integerLocal34];
             stackBooleanLocal11 = !(MixedSupport070.integerArrayState0119[integerLocal34] < 0);
-            integerLocal28 = NodeHashTable.computeInteger1550(stackBooleanLocal9, stackStringLocal10, stackBooleanLocal11);
+            integerLocal28 = NodeHashTable.computeInteger1531(stackBooleanLocal9, stackStringLocal10, stackBooleanLocal11);
             if (integerLocal28 > integerLocal33) {
               integerLocal33 = integerLocal28;
             }
@@ -320,7 +320,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
             stringArrayLocal18 = stringArrayLocal24;
             for (integerLocal29 = 0; stringArrayLocal24.length > integerLocal29; integerLocal29++) {
               stringLocal25 = stringArrayLocal24[integerLocal29];
-              integerLocal37 = NodeHashTable.computeInteger1550(false, stringLocal25, false);
+              integerLocal37 = NodeHashTable.computeInteger1531(false, stringLocal25, false);
               if (integerLocal37 > integerLocal33) {
                 integerLocal33 = integerLocal37;
               }
@@ -328,14 +328,14 @@ abstract class UiComponentPart003 extends ComponentContainer {
             stringArrayLocal27 = ClientException.stringArrayState0006;
             for (integerLocal41 = 0; integerLocal41 < stringArrayLocal27.length; integerLocal41++) {
               stringLocal26 = stringArrayLocal27[integerLocal41];
-              integerLocal42 = NodeHashTable.computeInteger1550(false, stringLocal26, false);
+              integerLocal42 = NodeHashTable.computeInteger1531(false, stringLocal26, false);
               if (integerLocal33 < integerLocal42) {
                 integerLocal33 = integerLocal42;
               }
             }
           }
           SceneWidgetPart005.integerState0330 = (BufferedSocket.integerState0665 + UiComponentPart022.integerState0575 << 1) * MixedSupport070.mixedSupport121State0001.integerState0756;
-          CodecSupport001.integerState0700 = -(integerLocal33 >> 1) + (integerLocal33 + BufferedSocket.integerState0661);
+          DisplayModeController.integerState0700 = -(integerLocal33 >> 1) + (integerLocal33 + BufferedSocket.integerState0661);
           RenderingSupport003.integerState0251 = BufferedSocket.integerState0661 - (integerLocal33 >> 1);
           for (integerLocal35 = 0; UiComponentPart028.stringArrayState0039.length > integerLocal35; integerLocal35++) {
             stackIntegerLocal12 = SceneWidgetPart005.integerState0330;
@@ -353,7 +353,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           while (UiComponentPart028.stringArrayState0039.length > integerLocal36) {
             integerLocal31 = MixedSupport070.integerArrayState0119[integerLocal36];
             if (integerLocal31 >= 0) {
-              integerLocal38 = NodeHashTable.computeInteger1550(false, UiComponentPart028.stringArrayState0039[integerLocal36], true);
+              integerLocal38 = NodeHashTable.computeInteger1531(false, UiComponentPart028.stringArrayState0039[integerLocal36], true);
               integerLocal30 = integerLocal30 + BufferedSocket.integerState0665;
               integerLocal32 = BufferedSocket.integerState0661 - (integerLocal38 >> 1);
               SceneWidgetPart012.integerArrayArrayState0020[integerLocal36] = new int[4];
@@ -368,40 +368,40 @@ abstract class UiComponentPart003 extends ComponentContainer {
             integerLocal36++;
           }
           if (MixedSupport009.integerState0054 != 2) {
-            MixedSupport070.mixedSupport121State0001.performAction1562(0, 0, MixedSupport133.computeInteger1677(HashNode.integerState0069, (byte) -81, MixedSupport106.integerState0590), booleanArgument3);
+            MixedSupport070.mixedSupport121State0001.performAction1543(0, 0, MixedSupport133.computeInteger1658(HashNode.integerState0069, (byte) -81, MixedSupport106.integerState0590), booleanArgument3);
           } else {
-            MixedSupport070.mixedSupport121State0001.performAction1562(-1, 0, -1, booleanArgument3);
+            MixedSupport070.mixedSupport121State0001.performAction1543(-1, 0, -1, booleanArgument3);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal43) {
           caughtExceptionLocal14 = caughtParameterLocal43;
           runtimeExceptionLocal16 = caughtExceptionLocal14;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal16), "bl.IC(" + integerArgument1 + ',' + integerArgument2 + ',' + booleanArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal16), "bl.IC(" + integerArgument1 + ',' + integerArgument2 + ',' + booleanArgument3 + ')');
         }
     }
 
     final static void performAction0164(int integerArgument1, int integerArgument2) {
         int integerLocal1;
-        MixedSupport042.performAction0544(130, integerArgument2 ^ 12362, 16694016, NetworkSupport006.stringState0339, 80 + integerArgument1, SceneWidget.renderingSupport010State0007);
+        MixedSupport042.performAction0540(130, integerArgument2 ^ 12362, 16694016, NetworkSupport006.stringState0339, 80 + integerArgument1, SceneWidget.renderingSupport010State0007);
         int integerLocal2 = 145;
         RenderingSupport007.rgbSpriteState0026.performAction0280(integerArgument1 + 82, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0559(188, 0, integerLocal2, SecondaryNodeHashTable.stringState0367, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
-        MixedSupport127.computeRgbSprite1650(true, 2).performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + ((RenderingSupport007.integerState0360 == 0 ? 16 : 0) + MixedSupport045.computeInteger0559(188, 0, integerLocal2, MixedSupport071.stringState0301, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
-        GameplayControls.performAction1801(TextLineMetrics.integerState0534, integerArgument1 + 190, 3, MixedSupport049.integerState0264, MixedSupport074.integerState0396, integerLocal2, -22981);
-        SoftwareRaster.performAction0678(309 + integerArgument1, 117, 242, 263172);
-        SoftwareRaster.performAction0678(310 + integerArgument1, 117, 242, 6316128);
-        MixedSupport042.performAction0544(130, integerArgument2 ^ 12362, 16694016, MixedSupport054.stringState0233, 320 + integerArgument1, SceneWidget.renderingSupport010State0007);
+        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0555(188, 0, integerLocal2, SecondaryNodeHashTable.stringState0367, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
+        MixedSupport127.computeRgbSprite1631(true, 2).performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
+        integerLocal2 = integerLocal2 + ((RenderingSupport007.integerState0360 == 0 ? 16 : 0) + MixedSupport045.computeInteger0555(188, 0, integerLocal2, MixedSupport071.stringState0301, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
+        GameplayControls.performAction1781(TextLineMetrics.integerState0534, integerArgument1 + 190, 3, MixedSupport049.integerState0264, MixedSupport074.integerState0396, integerLocal2, -22981);
+        SoftwareRaster.performAction0674(309 + integerArgument1, 117, 242, 263172);
+        SoftwareRaster.performAction0674(310 + integerArgument1, 117, 242, 6316128);
+        MixedSupport042.performAction0540(130, integerArgument2 ^ 12362, 16694016, MixedSupport054.stringState0233, 320 + integerArgument1, SceneWidget.renderingSupport010State0007);
         integerLocal1 = 145;
-        MixedSupport127.computeRgbSprite1650(true, 0).performAction0280(320 + integerArgument1, integerLocal1, 18, 18);
-        integerLocal1 = integerLocal1 + (16 * MixedSupport045.computeInteger0559(212, 0, integerLocal1, PlatformSupport002.stringState0123, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -128, 0, 348 + integerArgument1) + 16);
+        MixedSupport127.computeRgbSprite1631(true, 0).performAction0280(320 + integerArgument1, integerLocal1, 18, 18);
+        integerLocal1 = integerLocal1 + (16 * MixedSupport045.computeInteger0555(212, 0, integerLocal1, PlatformSupport002.stringState0123, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -128, 0, 348 + integerArgument1) + 16);
         if (integerArgument2 != 12618) {
           UiComponentPart003.performAction0163(105, 85, false);
         }
-        MixedSupport042.performAction0544(integerLocal1 + 14, 256, 16694016, MixedSupport072.stringState0303, integerArgument1 + 320, SceneWidget.renderingSupport010State0007);
+        MixedSupport042.performAction0540(integerLocal1 + 14, 256, 16694016, MixedSupport072.stringState0303, integerArgument1 + 320, SceneWidget.renderingSupport010State0007);
         integerLocal1 += 29;
-        MixedSupport127.computeRgbSprite1650(true, 3).performAction0280(integerArgument1 + 320, integerLocal1, 18, 18);
-        integerLocal1 = integerLocal1 + (16 + MixedSupport045.computeInteger0559(212, 0, integerLocal1, NetworkSupport005.stringState0313, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -128, 0, 348 + integerArgument1) * 16);
+        MixedSupport127.computeRgbSprite1631(true, 3).performAction0280(integerArgument1 + 320, integerLocal1, 18, 18);
+        integerLocal1 = integerLocal1 + (16 + MixedSupport045.computeInteger0555(212, 0, integerLocal1, NetworkSupport005.stringState0313, 16, 64, 16777215, UiComponentPart029.renderingSupport010State0005, (byte) -128, 0, 348 + integerArgument1) * 16);
     }
 
     boolean computeBoolean0167(byte byteArgument1) {
@@ -441,7 +441,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           characterArrayState0003 = (char[]) null;
         }
         MixedSupport005.uiComponentPart016State0001 = new UiComponentPart016();
-        NetworkSupport003.performAction0350(true, true, (byte) 66);
+        NetworkSupport003.performAction0349(true, true, (byte) 66);
     }
 
     public static void clearStaticReferences(int integerArgument1) {

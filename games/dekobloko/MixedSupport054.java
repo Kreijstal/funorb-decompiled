@@ -8,7 +8,7 @@ final class MixedSupport054 {
     static String stringState0233;
     static RgbSprite rgbSpriteState0019;
 
-    final static void performAction0649(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction0645(boolean booleanArgument1, int integerArgument2) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -42,7 +42,7 @@ final class MixedSupport054 {
                   } else {
                     if (UiComponentPart009.integerState0149 > UiComponentPart017.integerState0437) {
                       if (UiComponentPart017.integerState0437 == 0) {
-                        SceneWidgetPart012.performAction1661((byte) -40);
+                        SceneWidgetPart012.performAction1642((byte) -40);
                       }
                       UiComponentPart017.integerState0437 = UiComponentPart017.integerState0437 + 1;
                     }
@@ -57,7 +57,7 @@ final class MixedSupport054 {
                   } else {
                     if (UiComponentPart009.integerState0149 > RenderingSupport001.integerState0064) {
                       if (0 == RenderingSupport001.integerState0064) {
-                        SceneWidgetPart007.performAction1077(integerArgument2 + 1843, true);
+                        SceneWidgetPart007.performAction1072(integerArgument2 + 1843, true);
                       }
                       RenderingSupport001.integerState0064 = RenderingSupport001.integerState0064 + 1;
                     }
@@ -73,7 +73,7 @@ final class MixedSupport054 {
                 } else {
                   if (MixedSupport127.integerState0778 < UiComponentPart009.integerState0149) {
                     if (MixedSupport127.integerState0778 == 0) {
-                      SceneWidgetPart007.performAction1077(0, false);
+                      SceneWidgetPart007.performAction1072(0, false);
                     }
                     MixedSupport127.integerState0778 = MixedSupport127.integerState0778 + 1;
                   }
@@ -89,11 +89,11 @@ final class MixedSupport054 {
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal1 = caughtParameterLocal4;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal2), "hg.B(" + booleanArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "hg.B(" + booleanArgument1 + ',' + integerArgument2 + ')');
         }
     }
 
-    final static void performAction0648(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction0644(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -108,7 +108,7 @@ final class MixedSupport054 {
         integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (integerArgument1 < 59) {
-            MixedSupport054.performAction0649(true, -112);
+            MixedSupport054.performAction0645(true, -112);
           }
           if (null == NetworkSupport004.integerArrayState0052 ||
             !(NetworkSupport004.integerArrayState0052.length > MixedSupport126.integerState0774)) {
@@ -141,11 +141,11 @@ final class MixedSupport054 {
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal7 = caughtParameterLocal12;
           runtimeExceptionLocal9 = caughtExceptionLocal7;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal9), "hg.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal9), "hg.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
-    public static void performAction0647(byte byteArgument1) {
+    public static void performAction0643(byte byteArgument1) {
         secondaryNodeHashTableState0001 = null;
         if (byteArgument1 <= 87) {
           return;
@@ -155,7 +155,7 @@ final class MixedSupport054 {
           frameState0001 = null;
           rgbSpriteState0019 = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hg.A(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hg.A(" + byteArgument1 + ')');
         }
     }
 

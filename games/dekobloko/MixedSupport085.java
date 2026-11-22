@@ -9,25 +9,25 @@ final class MixedSupport085 {
     static String stringState0341;
     static String stringState0342;
 
-    final static void performAction1055(boolean booleanArgument1, MixedSupport038 mixedSupport038Argument2, int integerArgument3) {
+    final static void performAction1050(boolean booleanArgument1, MixedSupport038 mixedSupport038Argument2, int integerArgument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         int integerLocal2 = 0;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1691(integerArgument3, -4);
+          cipherPacketBufferLocal1.performAction1672(integerArgument3, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
-          cipherPacketBufferLocal1.performAction1892(true, 1);
-          cipherPacketBufferLocal1.performAction1892(booleanArgument1, mixedSupport038Argument2.integerState0230);
-          cipherPacketBufferLocal1.performAction1896(17, mixedSupport038Argument2.integerState0227);
-          cipherPacketBufferLocal1.performAction1886(mixedSupport038Argument2.integerState0228, false);
-          cipherPacketBufferLocal1.performAction1886(mixedSupport038Argument2.integerState0226, false);
-          cipherPacketBufferLocal1.performAction1886(mixedSupport038Argument2.integerState0229, false);
-          cipherPacketBufferLocal1.performAction1886(mixedSupport038Argument2.integerState0225, false);
-          cipherPacketBufferLocal1.computeInteger1880((byte) -15, integerLocal2);
-          cipherPacketBufferLocal1.performAction1898(cipherPacketBufferLocal1.position - integerLocal2, true);
+          cipherPacketBufferLocal1.writeByte(true, 1);
+          cipherPacketBufferLocal1.writeByte(booleanArgument1, mixedSupport038Argument2.integerState0230);
+          cipherPacketBufferLocal1.writeSignedSmart(17, mixedSupport038Argument2.integerState0227);
+          cipherPacketBufferLocal1.writeInt(mixedSupport038Argument2.integerState0228, false);
+          cipherPacketBufferLocal1.writeInt(mixedSupport038Argument2.integerState0226, false);
+          cipherPacketBufferLocal1.writeInt(mixedSupport038Argument2.integerState0229, false);
+          cipherPacketBufferLocal1.writeInt(mixedSupport038Argument2.integerState0225, false);
+          cipherPacketBufferLocal1.appendCrc32((byte) -15, integerLocal2);
+          cipherPacketBufferLocal1.writeLengthByte(cipherPacketBufferLocal1.position - integerLocal2, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "mc.B(" + booleanArgument1 + ',' + (mixedSupport038Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "mc.B(" + booleanArgument1 + ',' + (mixedSupport038Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class MixedSupport085 {
         secondaryNodeHashTableState0003 = null;
     }
 
-    final static void performAction1054(SceneWidgetPart013 sceneWidgetPart013Argument1, boolean booleanArgument2, int integerArgument3, byte byteArgument4) {
+    final static void performAction1049(SceneWidgetPart013 sceneWidgetPart013Argument1, boolean booleanArgument2, int integerArgument3, byte byteArgument4) {
         SceneWidgetPart009 cachedSceneWidgetPart009Local1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -152,7 +152,7 @@ final class MixedSupport085 {
             stackIntegerLocal5 = (MixedSupport040.booleanState0047) ? 0 : 1;
             integerLocal59 = stackIntegerLocal5;
           } else {
-            if (SceneWidgetPart005.computeBoolean0729(true)) {
+            if (SceneWidgetPart005.computeBoolean0725(true)) {
               stackIntegerLocal4 = (!sceneWidgetPart013Argument1.booleanState0204) ? 1 : 0;
             } else {
               stackIntegerLocal4 = 0;
@@ -199,7 +199,7 @@ final class MixedSupport085 {
               stackSceneWidgetPart009Local9.booleanState0217 = stackBooleanLocal10;
             }
             if (MixedSupport108.sceneWidgetPart009ArrayArrayState0001[0][2].booleanState0211) {
-              if (!SceneWidgetPart005.computeBoolean0729(true)) {
+              if (!SceneWidgetPart005.computeBoolean0725(true)) {
                 MixedSupport122.stringState0515 = NodeHashTableIterator.substituteIndexedPlaceholders(82, HashNode.stringState0050, new String[]{MixedSupport016.sceneWidgetPart013State0001.stringState0585});
               } else {
                 MixedSupport122.stringState0515 = ComponentContainer.stringState0309;
@@ -224,7 +224,7 @@ final class MixedSupport085 {
           }
           if ((frameRemainderLocal104) &&
             (frameRemainderLocal105)) {
-            MixedSupport074.byteArrayState0011[integerLocal63 / 8] = (byte)UiComponentPart006.computeInteger0358((int) MixedSupport074.byteArrayState0011[integerLocal63 / 8], 1 << integerLocal63 % 8);
+            MixedSupport074.byteArrayState0011[integerLocal63 / 8] = (byte)UiComponentPart006.computeInteger0357((int) MixedSupport074.byteArrayState0011[integerLocal63 / 8], 1 << integerLocal63 % 8);
           }
           if (frameRemainderLocal104) {
             stackIntegerLocal12 = (!booleanArgument2) ? 0 : -1;
@@ -244,7 +244,7 @@ final class MixedSupport085 {
                         MixedSupport074.byteArrayState0011[integerLocal67] = (byte) 0;
                       }
                     } else {
-                      MixedSupport074.byteArrayState0011[integerLocal63 / 8] = (byte)MixedSupport111.computeInteger1423((int) MixedSupport074.byteArrayState0011[integerLocal63 / 8], 1 << MixedSupport079.computeInteger0954(integerLocal63, 7));
+                      MixedSupport074.byteArrayState0011[integerLocal63 / 8] = (byte)MixedSupport111.computeInteger1414((int) MixedSupport074.byteArrayState0011[integerLocal63 / 8], 1 << MixedSupport079.computeInteger0949(integerLocal63, 7));
                     }
                   }
                 } else {
@@ -286,7 +286,7 @@ final class MixedSupport085 {
           }
           if (byteArgument4 >= -121) {
             sceneWidgetPart013Local87 = (SceneWidgetPart013) null;
-            MixedSupport085.performAction1054((SceneWidgetPart013) null, false, -56, (byte) 50);
+            MixedSupport085.performAction1049((SceneWidgetPart013) null, false, -56, (byte) 50);
           }
           stackIntegerLocal26 = (!booleanArgument2) ? 1 : 0;
           for (integerLocal97 = stackIntegerLocal26; integerLocal97 < 3; integerLocal97++) {
@@ -370,7 +370,7 @@ final class MixedSupport085 {
                 if (MixedSupport004.integerArrayArrayState0003 != null &&
                   null != MixedSupport004.integerArrayArrayState0003[integerLocal63] &&
                   0 < (MixedSupport004.integerArrayArrayState0003[integerLocal63][integerLocal67] & ~MixedSupport134.integerState0793)) {
-                  integerLocal73 = SceneWidgetPart014.computeInteger1835((byte) -93, ~MixedSupport134.integerState0793 & MixedSupport004.integerArrayArrayState0003[integerLocal63][integerLocal67]);
+                  integerLocal73 = SceneWidgetPart014.computeInteger1815((byte) -93, ~MixedSupport134.integerState0793 & MixedSupport004.integerArrayArrayState0003[integerLocal63][integerLocal67]);
                   integerLocal72 = 1;
                 }
                 if (null != MixedSupport014.booleanArrayArrayState0001 &&
@@ -452,7 +452,7 @@ final class MixedSupport085 {
                 for (integerLocal2 = 0; integerLocal63 > integerLocal2; integerLocal2++) {
                   MixedSupport113.booleanArrayState0009[integerLocal2] = false;
                 }
-                MixedSupport134.performAction1679(-1, booleanArgument2, -1, 0, integerLocal67, integerLocal63, sceneWidgetPart013Argument1, false);
+                MixedSupport134.performAction1660(-1, booleanArgument2, -1, 0, integerLocal67, integerLocal63, sceneWidgetPart013Argument1, false);
                 if (2 <= MixedSupport126.integerState0776 &&
                   MixedSupport011.booleanArrayState0002[12]) {
                   SceneWidgetPart013.booleanState0207 = true;
@@ -473,16 +473,16 @@ final class MixedSupport085 {
                 } else {
                   if (integerLocal67 == -1) {
                     for (integerLocal76 = integerLocal99; integerLocal76 < sceneWidgetPart009ArrayLocal91.length + integerLocal99 - 1; integerLocal76++) {
-                      MixedSupport141.byteArrayState0029[integerLocal76 / 8] = (byte)MixedSupport079.computeInteger0954((int) MixedSupport141.byteArrayState0029[integerLocal76 / 8], ~(1 << MixedSupport079.computeInteger0954(integerLocal76, 7)));
+                      MixedSupport141.byteArrayState0029[integerLocal76 / 8] = (byte)MixedSupport079.computeInteger0949((int) MixedSupport141.byteArrayState0029[integerLocal76 / 8], ~(1 << MixedSupport079.computeInteger0949(integerLocal76, 7)));
                     }
                   } else {
-                    MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport111.computeInteger1423((int) MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], 1 << MixedSupport079.computeInteger0954(integerLocal67 + integerLocal99, 7));
+                    MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport111.computeInteger1414((int) MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], 1 << MixedSupport079.computeInteger0949(integerLocal67 + integerLocal99, 7));
                   }
                 }
               }
               if (booleanArgument2 &&
                 integerLocal101 != 0) {
-                MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport079.computeInteger0954((int) MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], ~(1 << MixedSupport079.computeInteger0954(integerLocal67 + integerLocal99, 7)));
+                MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8] = (byte)MixedSupport079.computeInteger0949((int) MixedSupport141.byteArrayState0029[(integerLocal99 + integerLocal67) / 8], ~(1 << MixedSupport079.computeInteger0949(integerLocal67 + integerLocal99, 7)));
               }
               if (integerLocal67 >= 0 &&
                 sceneWidgetPart009Local75.booleanState0211) {
@@ -600,7 +600,7 @@ final class MixedSupport085 {
                 }
                 if (objectLocal80 != null) {
                   objectLocal80 = "<col=A00000>" + (String) (objectLocal80);
-                  stringLocal93 = MixedSupport064.computeString0771("<br>", (String) (objectLocal80), "<br><col=A00000>", 0);
+                  stringLocal93 = MixedSupport064.computeString0767("<br>", (String) (objectLocal80), "<br><col=A00000>", 0);
                   if (objectLocal79 != null) {
                     objectLocal79 = (String) (objectLocal79) + "<br>" + stringLocal93;
                   } else {
@@ -644,7 +644,7 @@ final class MixedSupport085 {
           }
           if (integerLocal61 != 0 &&
             !booleanArgument2) {
-            MixedSupport108.performAction1316(integerArgument3, 1850462342);
+            MixedSupport108.performAction1310(integerArgument3, 1850462342);
             return;
           }
           return;
@@ -658,11 +658,11 @@ final class MixedSupport085 {
           } else {
             stackStringLocal57 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal55), ((StringBuilder) (Object) stackStringBuilderLocal56).append(stackStringLocal57).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal55), ((StringBuilder) (Object) stackStringBuilderLocal56).append(stackStringLocal57).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1053(String stringArgument1, byte byteArgument2) {
+    final static boolean computeBoolean1048(String stringArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -678,7 +678,7 @@ final class MixedSupport085 {
           integerLocal3 = 1;
           if (byteArgument2 >= -99) {
             sceneWidgetPart013Local5 = (SceneWidgetPart013) null;
-            MixedSupport085.performAction1054((SceneWidgetPart013) null, false, -98, (byte) -9);
+            MixedSupport085.performAction1049((SceneWidgetPart013) null, false, -98, (byte) -9);
           }
           while (true) {
             if (stringArgument1.length() <= integerLocal3) {
@@ -701,7 +701,7 @@ final class MixedSupport085 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
         }
     }
 

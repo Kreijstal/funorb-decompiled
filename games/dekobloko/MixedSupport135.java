@@ -7,7 +7,7 @@ final class MixedSupport135 {
     static String stringState0556;
     static String stringState0557;
 
-    final static boolean computeBoolean1685(int integerArgument1, String stringArgument2) {
+    final static boolean computeBoolean1666(int integerArgument1, String stringArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         String stringLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -21,7 +21,7 @@ final class MixedSupport135 {
           }
           if (integerArgument1 != 2048) {
             stringLocal2 = (String) null;
-            MixedSupport135.computeBoolean1685(-5, (String) null);
+            MixedSupport135.computeBoolean1666(-5, (String) null);
           }
           stackBooleanLocal3 = !(stringArgument2.toLowerCase().indexOf(MixedSupport068.stringState0288.toLowerCase()) < 0);
           return stackBooleanLocal3;
@@ -35,11 +35,11 @@ final class MixedSupport135 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    public static void performAction1683(byte byteArgument1) {
+    public static void performAction1664(byte byteArgument1) {
         rgbSpriteState0060 = null;
         stringState0556 = null;
         stringState0555 = null;
@@ -47,11 +47,11 @@ final class MixedSupport135 {
           stringState0557 = null;
           return;
         }
-        MixedSupport135.computeInteger1684(-36, 12);
+        MixedSupport135.computeInteger1665(-36, 12);
         stringState0557 = null;
     }
 
-    final static int computeInteger1684(int integerArgument1, int integerArgument2) {
+    final static int computeInteger1665(int integerArgument1, int integerArgument2) {
         integerArgument1 = integerArgument1 & 8191;
         int integerLocal1 = -44 % ((integerArgument2 + 3) / 44);
         if (integerArgument1 >= 4096) {

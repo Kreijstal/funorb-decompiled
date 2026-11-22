@@ -29,7 +29,7 @@ final class MixedSupport091 {
         mixedSupport111State0005 = null;
     }
 
-    final void performAction1139(long longArgument1, byte byteArgument2) throws IOException {
+    final void performAction1134(long longArgument1, byte byteArgument2) throws IOException {
         if (longArgument1 >= 0L) {
           this.longState0036 = longArgument1;
           if (byteArgument2 != -109) {
@@ -40,7 +40,7 @@ final class MixedSupport091 {
         throw new IOException();
     }
 
-    private final void performAction1142(byte byteArgument1) throws IOException {
+    private final void performAction1137(byte byteArgument1) throws IOException {
         int integerLocal1;
         long longLocal2;
         long longLocal3;
@@ -50,10 +50,10 @@ final class MixedSupport091 {
         integerLocal1 = 75 / ((byteArgument1 + 55) / 40);
         if (this.longState0037 != -1L) {
           if (~this.longState0037 != ~this.longState0033) {
-            this.platformSupport004State0004.performAction0644(this.longState0037, 80);
+            this.platformSupport004State0004.performAction0640(this.longState0037, 80);
             this.longState0033 = this.longState0037;
           }
-          this.platformSupport004State0004.performAction0646(this.byteArrayState0019, 117, 0, this.integerState0539);
+          this.platformSupport004State0004.performAction0642(this.byteArrayState0019, 117, 0, this.integerState0539);
           this.longState0033 = this.longState0033 + (long)this.integerState0539;
           if (this.longState0034 < this.longState0033) {
             this.longState0034 = this.longState0033;
@@ -88,18 +88,18 @@ final class MixedSupport091 {
         }
     }
 
-    final long computeLong1143(int integerArgument1) {
+    final long computeLong1138(int integerArgument1) {
         int integerLocal1 = 93 / ((-25 - integerArgument1) / 62);
         return this.longState0035;
     }
 
-    private final void performAction1137(int integerArgument1) throws IOException {
+    private final void performAction1132(int integerArgument1) throws IOException {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         this.integerState0538 = integerArgument1;
         if (this.longState0033 != this.longState0036) {
-          this.platformSupport004State0004.performAction0644(this.longState0036, 123);
+          this.platformSupport004State0004.performAction0640(this.longState0036, 123);
           this.longState0033 = this.longState0036;
         }
         this.longState0038 = this.longState0036;
@@ -108,7 +108,7 @@ final class MixedSupport091 {
           if (integerLocal1 > 200000000) {
             integerLocal1 = 200000000;
           }
-          integerLocal2 = this.platformSupport004State0004.computeInteger0645(this.byteArrayState0018, (byte) -103, this.integerState0538, integerLocal1);
+          integerLocal2 = this.platformSupport004State0004.computeInteger0641(this.byteArrayState0018, (byte) -103, this.integerState0538, integerLocal1);
           if (-1 == integerLocal2) {
             break;
           }
@@ -117,7 +117,7 @@ final class MixedSupport091 {
         }
     }
 
-    final void performAction1138(int integerArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4) throws IOException {
+    final void performAction1133(int integerArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4) throws IOException {
         int previousIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -140,7 +140,7 @@ final class MixedSupport091 {
         try {
           try {
             if (integerArgument3 != 741) {
-              MixedSupport091.performAction1136((byte) 18, 18);
+              MixedSupport091.performAction1131((byte) 18, 18);
             }
             if (byteArrayArgument2.length < integerArgument1 + integerArgument4) {
               throw new ArrayIndexOutOfBoundsException(-byteArrayArgument2.length + (integerArgument1 + integerArgument4));
@@ -169,10 +169,10 @@ final class MixedSupport091 {
             boolean frameRemainderLocal19 = true;
             boolean frameCompletedLocal20 = true;
             if (integerArgument4 > this.byteArrayState0018.length) {
-              this.platformSupport004State0004.performAction0644(this.longState0036, 23);
+              this.platformSupport004State0004.performAction0640(this.longState0036, 23);
               this.longState0033 = this.longState0036;
               while (0 < integerArgument4) {
-                integerLocal16 = this.platformSupport004State0004.computeInteger0645(byteArrayArgument2, (byte) -38, integerArgument1, integerArgument4);
+                integerLocal16 = this.platformSupport004State0004.computeInteger0641(byteArrayArgument2, (byte) -38, integerArgument1, integerArgument4);
                 if (integerLocal16 == -1) {
                   frameCompletedLocal20 = false;
                   break;
@@ -187,7 +187,7 @@ final class MixedSupport091 {
             if ((frameRemainderLocal19) &&
               (frameCompletedLocal20) &&
               (integerArgument4 > 0)) {
-              this.performAction1137(0);
+              this.performAction1132(0);
               integerLocal18 = integerArgument4;
               if (this.integerState0538 < integerLocal18) {
                 integerLocal18 = this.integerState0538;
@@ -262,19 +262,19 @@ final class MixedSupport091 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final void performAction1144(byte byteArgument1) throws IOException {
-        this.performAction1142((byte) -99);
-        this.platformSupport004State0004.performAction0642(-82);
+    final void performAction1139(byte byteArgument1) throws IOException {
+        this.performAction1137((byte) -99);
+        this.platformSupport004State0004.performAction0638(-82);
         if (byteArgument1 < 113) {
           characterArrayState0006 = (char[]) null;
         }
     }
 
-    final void performAction1141(byte[] byteArrayArgument1, byte byteArgument2, int integerArgument3, int integerArgument4) throws IOException {
+    final void performAction1136(byte[] byteArrayArgument1, byte byteArgument2, int integerArgument3, int integerArgument4) throws IOException {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -294,7 +294,7 @@ final class MixedSupport091 {
             }
             if (-1L != this.longState0037 && (this.longState0036 < this.longState0037 ||
               this.longState0036 > (this.longState0037 + (long)this.integerState0539))) {
-              this.performAction1142((byte) -120);
+              this.performAction1137((byte) -120);
             }
             if (this.longState0037 != -1L &&
               this.longState0036 + (long)integerArgument4 > this.longState0037 + (long)this.byteArrayState0019.length) {
@@ -304,7 +304,7 @@ final class MixedSupport091 {
               integerArgument4 = integerArgument4 - integerLocal5;
               this.longState0036 = this.longState0036 + (long)integerLocal5;
               this.integerState0539 = this.byteArrayState0019.length;
-              this.performAction1142((byte) -15);
+              this.performAction1137((byte) -15);
             }
             if (this.byteArrayState0019.length >= integerArgument4) {
               if (byteArgument2 <= 91) {
@@ -324,10 +324,10 @@ final class MixedSupport091 {
               return;
             }
             if (~this.longState0036 != ~this.longState0033) {
-              this.platformSupport004State0004.performAction0644(this.longState0036, 47);
+              this.platformSupport004State0004.performAction0640(this.longState0036, 47);
               this.longState0033 = this.longState0036;
             }
-            this.platformSupport004State0004.performAction0646(byteArrayArgument1, 83, integerArgument3, integerArgument4);
+            this.platformSupport004State0004.performAction0642(byteArrayArgument1, 83, integerArgument3, integerArgument4);
             this.longState0033 = this.longState0033 + (long)integerArgument4;
             if (this.longState0033 > this.longState0034) {
               this.longState0034 = this.longState0033;
@@ -375,11 +375,11 @@ final class MixedSupport091 {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(byteArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(byteArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final static void performAction1136(byte byteArgument1, int integerArgument2) {
+    final static void performAction1131(byte byteArgument1, int integerArgument2) {
         if (byteArgument1 == 12) {
           BufferedSocket.integerState0667 = 3 & integerArgument2 >> 4;
           MixedSupport153.integerState0932 = (13 & integerArgument2) >> 2;
@@ -404,23 +404,23 @@ final class MixedSupport091 {
         this.integerState0539 = 0;
         try {
           this.platformSupport004State0004 = platformSupport004Argument1;
-          cachedLongLocal1 = platformSupport004Argument1.computeLong0641((byte) -50);
+          cachedLongLocal1 = platformSupport004Argument1.computeLong0637((byte) -50);
           this.longState0034 = cachedLongLocal1;
           this.longState0035 = cachedLongLocal1;
           this.byteArrayState0018 = new byte[integerArgument2];
           this.longState0036 = 0L;
           this.byteArrayState0019 = new byte[integerArgument3];
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "nh.<init>(" + (platformSupport004Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "nh.<init>(" + (platformSupport004Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
-    final void performAction1140(byte[] byteArrayArgument1, byte byteArgument2) throws IOException {
+    final void performAction1135(byte[] byteArrayArgument1, byte byteArgument2) throws IOException {
         try {
-          this.performAction1138(0, byteArrayArgument1, 741, byteArrayArgument1.length);
+          this.performAction1133(0, byteArrayArgument1, 741, byteArrayArgument1.length);
           int integerLocal1 = 38 / ((byteArgument2 - 70) / 44);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "nh.D(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "nh.D(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 

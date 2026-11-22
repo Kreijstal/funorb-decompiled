@@ -8,21 +8,21 @@ final class NodeDeque {
     HashNode hashNodeState0009;
     private HashNode hashNodeState0010;
 
-    final boolean computeBoolean1789(int integerArgument1) {
+    final boolean computeBoolean1769(int integerArgument1) {
         if (integerArgument1 >= -1) {
           integerArrayState0250 = (int[]) null;
         }
         return this.hashNodeState0009.previous == this.hashNodeState0009 ? true : false;
     }
 
-    final void performAction1793(int integerArgument1) {
+    final void performAction1773(int integerArgument1) {
         HashNode hashNodeLocal1;
         int integerLocal2;
         HashNode hashNodeLocal3;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 < 104) {
           hashNodeLocal3 = (HashNode) null;
-          this.performAction1786((HashNode) null, 114);
+          this.performAction1766((HashNode) null, 114);
         }
         while (true) {
           hashNodeLocal1 = this.hashNodeState0009.previous;
@@ -36,7 +36,7 @@ final class NodeDeque {
         return;
     }
 
-    final HashNode computeHashNode1795(int integerArgument1) {
+    final HashNode computeHashNode1775(int integerArgument1) {
         if (integerArgument1 >= -23) {
           return (HashNode) null;
         }
@@ -48,7 +48,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final void performAction1785(int integerArgument1, HashNode hashNodeArgument2, NodeDeque nodeDequeArgument3) {
+    final void performAction1765(int integerArgument1, HashNode hashNodeArgument2, NodeDeque nodeDequeArgument3) {
         HashNode hashNodeLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -87,11 +87,11 @@ final class NodeDeque {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final HashNode computeHashNode1784(int integerArgument1, HashNode hashNodeArgument2) {
+    final HashNode computeHashNode1764(int integerArgument1, HashNode hashNodeArgument2) {
         HashNode hashNodeLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -102,7 +102,7 @@ final class NodeDeque {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           if (integerArgument1 <= 1) {
-            this.computeBoolean1789(-55);
+            this.computeBoolean1769(-55);
           }
           if (hashNodeArgument2 != null) {
             hashNodeLocal1 = hashNodeArgument2;
@@ -127,11 +127,11 @@ final class NodeDeque {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
-    final static void performAction1788(boolean booleanArgument1) {
+    final static void performAction1768(boolean booleanArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RgbSprite rgbSpriteLocal3 = null;
@@ -140,7 +140,7 @@ final class NodeDeque {
         int integerLocal6;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          NodeHashTableIterator.mixedSupport059State0001.performAction0387(-30693);
+          NodeHashTableIterator.mixedSupport059State0001.performAction0386(-30693);
           for (integerLocal1 = 0; integerLocal1 < 32; integerLocal1++) {
             MixedSupport120.longArrayState0009[integerLocal1] = 0L;
           }
@@ -150,17 +150,17 @@ final class NodeDeque {
           MixedSupport149.integerState0883 = 0;
           if (!booleanArgument1) {
             rgbSpriteLocal3 = (RgbSprite) null;
-            NodeDeque.computeRgbSpriteArray1787((RgbSprite) null, -91);
+            NodeDeque.computeRgbSpriteArray1767((RgbSprite) null, -91);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal4 = caughtParameterLocal7;
           runtimeExceptionLocal5 = caughtExceptionLocal4;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal5), "vj.H(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal5), "vj.H(" + booleanArgument1 + ')');
         }
     }
 
-    final HashNode computeHashNode1794(boolean booleanArgument1) {
+    final HashNode computeHashNode1774(boolean booleanArgument1) {
         if (!booleanArgument1) {
           integerArrayState0250 = (int[]) null;
         }
@@ -182,7 +182,7 @@ final class NodeDeque {
         integerArrayState0250 = null;
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1787(RgbSprite rgbSpriteArgument1, int integerArgument2) {
+    final static RgbSprite[] computeRgbSpriteArray1767(RgbSprite rgbSpriteArgument1, int integerArgument2) {
         RgbSprite[] rgbSpriteArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         RgbSprite[] rgbSpriteArrayLocal3 = null;
@@ -193,7 +193,7 @@ final class NodeDeque {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           if (integerArgument2 != 32169) {
-            NodeDeque.computeMixedSupport111Array1797(-16);
+            NodeDeque.computeMixedSupport111Array1777(-16);
           }
           rgbSpriteArrayLocal3 = new RgbSprite[9];
           rgbSpriteArrayLocal1 = rgbSpriteArrayLocal3;
@@ -210,11 +210,11 @@ final class NodeDeque {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final HashNode computeHashNode1792(byte byteArgument1) {
+    final HashNode computeHashNode1772(byte byteArgument1) {
         int integerLocal1 = -55 / ((byteArgument1 + 17) / 35);
         HashNode hashNodeLocal2 = this.hashNodeState0009.previous;
         if (hashNodeLocal2 == this.hashNodeState0009) {
@@ -225,7 +225,7 @@ final class NodeDeque {
         return hashNodeLocal2;
     }
 
-    final void performAction1786(HashNode hashNodeArgument1, int integerArgument2) {
+    final void performAction1766(HashNode hashNodeArgument1, int integerArgument2) {
         if (hashNodeArgument1.next != null) {
           hashNodeArgument1.performAction0149((byte) 124);
         }
@@ -238,11 +238,11 @@ final class NodeDeque {
           hashNodeArgument1.next.previous = hashNodeArgument1;
           hashNodeArgument1.previous.next = hashNodeArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "vj.B(" + (hashNodeArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "vj.B(" + (hashNodeArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    final HashNode computeHashNode1796(boolean booleanArgument1) {
+    final HashNode computeHashNode1776(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return (HashNode) null;
         }
@@ -255,7 +255,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final HashNode computeHashNode1791(boolean booleanArgument1) {
+    final HashNode computeHashNode1771(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return (HashNode) null;
         }
@@ -268,7 +268,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final void performAction1790(HashNode hashNodeArgument1, int integerArgument2) {
+    final void performAction1770(HashNode hashNodeArgument1, int integerArgument2) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -283,7 +283,7 @@ final class NodeDeque {
           hashNodeArgument1.next.previous = hashNodeArgument1;
           hashNodeArgument1.previous.next = hashNodeArgument1;
           if (integerArgument2 != 7143) {
-            this.computeHashNode1796(false);
+            this.computeHashNode1776(false);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -296,11 +296,11 @@ final class NodeDeque {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final HashNode computeHashNode1783(int integerArgument1) {
+    final HashNode computeHashNode1763(int integerArgument1) {
         HashNode hashNodeLocal1 = this.hashNodeState0009.previous;
         if (this.hashNodeState0009 == hashNodeLocal1) {
           return null;
@@ -312,7 +312,7 @@ final class NodeDeque {
         return hashNodeLocal1;
     }
 
-    final int computeInteger1782(byte byteArgument1) {
+    final int computeInteger1762(byte byteArgument1) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal2 = 0;
         int integerLocal3 = 60 % ((byteArgument1 - 13) / 50);
@@ -330,9 +330,9 @@ final class NodeDeque {
         this.hashNodeState0009.previous = this.hashNodeState0009;
     }
 
-    final static MixedSupport111[] computeMixedSupport111Array1797(int integerArgument1) {
+    final static MixedSupport111[] computeMixedSupport111Array1777(int integerArgument1) {
         if (integerArgument1 != -23521) {
-          NodeDeque.performAction1788(false);
+          NodeDeque.performAction1768(false);
         }
         return new MixedSupport111[]{MixedSupport091.mixedSupport111State0005, MixedSupport124.mixedSupport111State0011, MixedSupport059.mixedSupport111State0004, MixedSupport047.mixedSupport111State0002, MixedSupport138.mixedSupport111State0012, ReturnedShapeCache.mixedSupport111State0007, SecondaryNodeHashTable.mixedSupport111State0006, GameplayControls.mixedSupport111State0013, MixedSupport114.mixedSupport111State0010, MouseInput.mixedSupport111State0014, UiComponentPart006.mixedSupport111State0001, MixedSupport111.mixedSupport111State0008, ReturnedShape.mixedSupport111State0009, MixedSupport048.mixedSupport111State0003};
     }

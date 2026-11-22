@@ -17,7 +17,7 @@ final class MixedSupport026 extends MixedSupport059 {
     private int integerState0154;
     private int integerState0155;
 
-    final int computeInteger0384(byte byteArgument1, long longArgument2) {
+    final int computeInteger0383(byte byteArgument1, long longArgument2) {
         int integerLocal1;
         int integerLocal2;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -42,7 +42,7 @@ final class MixedSupport026 extends MixedSupport059 {
         return integerLocal1;
     }
 
-    final void performAction0387(int integerArgument1) {
+    final void performAction0386(int integerArgument1) {
         if (integerArgument1 != -30693) {
           return;
         }
@@ -52,19 +52,19 @@ final class MixedSupport026 extends MixedSupport059 {
         }
     }
 
-    public static void performAction0389(int integerArgument1) {
+    public static void performAction0388(int integerArgument1) {
         stringState0128 = null;
         stringState0129 = null;
         sceneWidgetPart008State0001 = null;
         stringState0127 = null;
         rgbSpriteArrayState0009 = null;
         if (integerArgument1 <= 65) {
-          MixedSupport026.computeMixedSupport0030386((byte) 101);
+          MixedSupport026.computeMixedSupport0030385((byte) 101);
         }
     }
 
-    final long computeLong0385(int integerArgument1) {
-        this.longState0008 = this.longState0008 + this.computeLong0388(-8325);
+    final long computeLong0384(int integerArgument1) {
+        this.longState0008 = this.longState0008 + this.computeLong0387(-8325);
         if (integerArgument1 != -22962) {
           this.integerState0155 = 53;
         }
@@ -74,7 +74,7 @@ final class MixedSupport026 extends MixedSupport059 {
         return 0L;
     }
 
-    final static MixedSupport003 computeMixedSupport0030386(byte byteArgument1) {
+    final static MixedSupport003 computeMixedSupport0030385(byte byteArgument1) {
         int integerLocal1 = 0;
         MixedSupport003 mixedSupport003Local2 = null;
         int integerLocal3 = 0;
@@ -88,7 +88,7 @@ final class MixedSupport026 extends MixedSupport059 {
           }
           integerLocal1 = 0;
           while (true) {
-            mixedSupport003Local2 = ReturnedShapeCache.mixedSupport032State0001.computeMixedSupport0030476(-39, integerLocal1);
+            mixedSupport003Local2 = ReturnedShapeCache.mixedSupport032State0001.computeMixedSupport0030475(-39, integerLocal1);
             if (!mixedSupport003Local2.booleanState0002) {
               integerLocal1++;
               continue;
@@ -104,13 +104,13 @@ final class MixedSupport026 extends MixedSupport059 {
         }
     }
 
-    private final long computeLong0388(int integerArgument1) {
+    private final long computeLong0387(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         long longLocal3 = System.nanoTime();
         long longLocal4 = longLocal3 - this.longState0010;
         if (integerArgument1 != -8325) {
-          this.computeLong0385(110);
+          this.computeLong0384(110);
         }
         this.longState0010 = longLocal3;
         if (longLocal4 > -5000000000L &&

@@ -40,9 +40,9 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         return super.computeBoolean0169((byte) 90);
     }
 
-    final void performAction1601(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction1582(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument4 != 194) {
-          this.performAction1601(35, 121, -128, 19);
+          this.performAction1582(35, 121, -128, 19);
         }
         if (integerArgument2 <= 0) {
           this.performAction0161(121, integerArgument1, integerArgument3);
@@ -56,7 +56,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         this.integerState0767 = 0;
     }
 
-    final static void performAction1603(byte byteArgument1) {
+    final static void performAction1584(byte byteArgument1) {
         if (byteArgument1 != -73) {
           return;
         }
@@ -73,7 +73,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         int integerLocal1 = 40 % ((integerArgument1 + 15) / 49);
     }
 
-    final static boolean computeBoolean1602(byte byteArgument1) {
+    final static boolean computeBoolean1583(byte byteArgument1) {
         boolean stackBooleanLocal1 = false;
         if (byteArgument1 != 124) {
           stringState0519 = (String) null;
@@ -100,11 +100,11 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         int integerLocal1 = -128 % ((byteArgument1 - 30) / 39);
     }
 
-    final static void performAction1599(int integerArgument1, boolean booleanArgument2) {
+    final static void performAction1580(int integerArgument1, boolean booleanArgument2) {
         if (integerArgument1 < 104) {
           return;
         }
-        MixedSupport134.performAction1681(true, booleanArgument2, 54);
+        MixedSupport134.performAction1662(true, booleanArgument2, 54);
     }
 
     void performAction0165(int integerArgument1, int integerArgument2, int integerArgument3) {
@@ -139,7 +139,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         if (integerArgument1 > -127) {
           return;
         }
-        SoftwareRaster.performAction0673(6 + integerArgument3, 35 + integerArgument2, -12 + this.integerState0107, this.integerState0108 - 40, 2105376, 0);
+        SoftwareRaster.performAction0669(6 + integerArgument3, 35 + integerArgument2, -12 + this.integerState0107, this.integerState0108 - 40, 2105376, 0);
         integerLocal2 = 211;
         integerLocal1 = 35;
         integerLocal3 = 194;
@@ -188,7 +188,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
               integerLocal8 = integerLocal26;
             }
             integerLocal6 = integerLocal6 | (integerLocal6 << 16 | integerLocal6 << 8);
-            SoftwareRaster.performAction0652(integerLocal7 + integerArgument3, integerLocal5, -integerLocal7 + integerLocal8, integerLocal6);
+            SoftwareRaster.performAction0648(integerLocal7 + integerArgument3, integerLocal5, -integerLocal7 + integerLocal8, integerLocal6);
           }
           integerLocal4++;
           integerLocal5++;
@@ -201,14 +201,14 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         while (integerLocal20 < integerLocal14) {
           integerLocal24 = (-integerLocal16 + integerLocal18) * integerLocal20 / integerLocal14 + integerLocal16;
           integerLocal24 = integerLocal24 | (integerLocal24 << 16 | integerLocal24 << 8);
-          SoftwareRaster.performAction0652(integerArgument3, integerLocal22, 6, integerLocal24);
-          SoftwareRaster.performAction0652(integerArgument3 + this.integerState0107 - 6, integerLocal22, 6, integerLocal24);
+          SoftwareRaster.performAction0648(integerArgument3, integerLocal22, 6, integerLocal24);
+          SoftwareRaster.performAction0648(integerArgument3 + this.integerState0107 - 6, integerLocal22, 6, integerLocal24);
           integerLocal20++;
           integerLocal22++;
         }
         MixedSupport069.rgbSpriteState0025.performAction0278(-90 + (integerArgument3 + this.integerState0107), 10 + integerArgument2);
-        MixedSupport090.performAction1134(NetworkSupport002.rgbSpriteArrayState0003, -10 + this.integerState0107, integerArgument2 + 35, -1, 5 + integerArgument3);
-        MixedSupport090.performAction1134(UiComponentPart011.rgbSpriteArrayState0013, this.integerState0107, integerArgument2 + (this.integerState0108 - 22), -1, integerArgument3);
+        MixedSupport090.performAction1129(NetworkSupport002.rgbSpriteArrayState0003, -10 + this.integerState0107, integerArgument2 + 35, -1, 5 + integerArgument3);
+        MixedSupport090.performAction1129(UiComponentPart011.rgbSpriteArrayState0013, this.integerState0107, integerArgument2 + (this.integerState0108 - 22), -1, integerArgument3);
         integerLocal15 = this.integerState0108 - 79;
         integerLocal17 = 169;
         integerLocal19 = 127;
@@ -217,15 +217,15 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         while (integerLocal21 < integerLocal15) {
           integerLocal25 = integerLocal17 + integerLocal21 * (integerLocal19 - integerLocal17) / integerLocal15;
           integerLocal25 = integerLocal25 | (integerLocal25 << 16 | integerLocal25 << 8);
-          SoftwareRaster.performAction0652(integerArgument3, integerLocal23, 6, integerLocal25);
-          SoftwareRaster.performAction0652(-6 + (this.integerState0107 + integerArgument3), integerLocal23, 6, integerLocal25);
+          SoftwareRaster.performAction0648(integerArgument3, integerLocal23, 6, integerLocal25);
+          SoftwareRaster.performAction0648(-6 + (this.integerState0107 + integerArgument3), integerLocal23, 6, integerLocal25);
           integerLocal23++;
           integerLocal21++;
         }
         return;
     }
 
-    final static IndexedSprite[] computeIndexedSpriteArray1600(String stringArgument1, ResourceArchive resourceArchiveArgument2, boolean booleanArgument3, String stringArgument4) {
+    final static IndexedSprite[] computeIndexedSpriteArray1581(String stringArgument1, ResourceArchive resourceArchiveArgument2, boolean booleanArgument3, String stringArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -244,9 +244,9 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
             stackIndexedSpriteArrayLocal4 = (IndexedSprite[]) null;
             return stackIndexedSpriteArrayLocal4;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0837(-1, stringArgument4);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0824(integerLocal1, 13030, stringArgument1);
-          stackIndexedSpriteArrayLocal5 = MixedSupport099.computeIndexedSpriteArray1231(integerLocal3, (byte) 37, integerLocal1, resourceArchiveArgument2);
+          integerLocal1 = resourceArchiveArgument2.computeInteger0832(-1, stringArgument4);
+          integerLocal3 = resourceArchiveArgument2.computeInteger0819(integerLocal1, 13030, stringArgument1);
+          stackIndexedSpriteArrayLocal5 = MixedSupport099.computeIndexedSpriteArray1226(integerLocal3, (byte) 37, integerLocal1, resourceArchiveArgument2);
           return stackIndexedSpriteArrayLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
           caughtExceptionLocal13 = caughtParameterLocal14;
@@ -270,21 +270,21 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
         }
     }
 
-    public static void performAction1605(byte byteArgument1) {
+    public static void performAction1586(byte byteArgument1) {
         stringState0519 = null;
         stringState0520 = null;
         if (byteArgument1 != 94) {
           String stringLocal1 = (String) null;
-          UiComponentPart030.computeIndexedSpriteArray1600((String) null, (ResourceArchive) null, true, (String) null);
+          UiComponentPart030.computeIndexedSpriteArray1581((String) null, (ResourceArchive) null, true, (String) null);
         }
         stringArrayState0046 = null;
     }
 
-    final static MouseWheelInput computeMouseWheelInput1604(int integerArgument1) {
+    final static MouseWheelInput computeMouseWheelInput1585(int integerArgument1) {
         try {
           Throwable throwableLocal1 = null;
           MouseWheelInput stackMouseWheelInputLocal2 = null;

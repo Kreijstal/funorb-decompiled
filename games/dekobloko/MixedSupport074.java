@@ -22,7 +22,7 @@ final class MixedSupport074 implements CallbackContract004 {
     static String stringState0315;
     static byte[] byteArrayState0011;
 
-    final static String computeString0937(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
+    final static String computeString0932(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4) {
         int integerLocal1 = 0;
         int integerLocal2;
         if (booleanArgument4) {
@@ -52,26 +52,26 @@ final class MixedSupport074 implements CallbackContract004 {
         return BufferedSocket.stringArrayState0036[integerLocal2];
     }
 
-    final static void performAction0936(int integerArgument1, int integerArgument2, NetworkSupport005 networkSupport005Argument3) {
+    final static void performAction0931(int integerArgument1, int integerArgument2, NetworkSupport005 networkSupport005Argument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal1.performAction1691(integerArgument1, -4);
+        cipherPacketBufferLocal1.performAction1672(integerArgument1, -4);
         cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
         int integerLocal2 = cipherPacketBufferLocal1.position;
-        cipherPacketBufferLocal1.performAction1892(true, 1);
-        cipherPacketBufferLocal1.performAction1892(true, networkSupport005Argument3.integerState0385);
+        cipherPacketBufferLocal1.writeByte(true, 1);
+        cipherPacketBufferLocal1.writeByte(true, networkSupport005Argument3.integerState0385);
         if (integerArgument2 != -15016) {
           return;
         }
         try {
-          cipherPacketBufferLocal1.performAction1892(true, networkSupport005Argument3.integerState0383);
-          cipherPacketBufferLocal1.performAction1886(networkSupport005Argument3.integerState0382, false);
-          cipherPacketBufferLocal1.performAction1886(networkSupport005Argument3.integerState0386, false);
-          cipherPacketBufferLocal1.performAction1886(networkSupport005Argument3.integerState0387, false);
-          cipherPacketBufferLocal1.performAction1886(networkSupport005Argument3.integerState0384, false);
-          cipherPacketBufferLocal1.computeInteger1880((byte) -15, integerLocal2);
-          cipherPacketBufferLocal1.performAction1898(cipherPacketBufferLocal1.position - integerLocal2, true);
+          cipherPacketBufferLocal1.writeByte(true, networkSupport005Argument3.integerState0383);
+          cipherPacketBufferLocal1.writeInt(networkSupport005Argument3.integerState0382, false);
+          cipherPacketBufferLocal1.writeInt(networkSupport005Argument3.integerState0386, false);
+          cipherPacketBufferLocal1.writeInt(networkSupport005Argument3.integerState0387, false);
+          cipherPacketBufferLocal1.writeInt(networkSupport005Argument3.integerState0384, false);
+          cipherPacketBufferLocal1.appendCrc32((byte) -15, integerLocal2);
+          cipherPacketBufferLocal1.writeLengthByte(cipherPacketBufferLocal1.position - integerLocal2, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "kk.C(" + integerArgument1 + ',' + integerArgument2 + ',' + (networkSupport005Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "kk.C(" + integerArgument1 + ',' + integerArgument2 + ',' + (networkSupport005Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,23 +116,23 @@ final class MixedSupport074 implements CallbackContract004 {
             booleanArgument1 = booleanArgument1 & uiComponentPart009Local11.booleanState0035;
           }
           integerLocal7 = 5592405;
-          SoftwareRaster.performAction0653(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0394);
+          SoftwareRaster.performAction0649(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0394);
           if (booleanArgument1) {
             integerLocal7 = 16777215;
           }
           integerLocal8 = integerArgument2 + uiComponentArgument5.integerState0110 + this.integerState0401;
           integerLocal9 = uiComponentArgument5.integerState0104 + integerArgument3 + this.integerState0393;
-          SoftwareRaster.performAction0672(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, 5592405);
-          SoftwareRaster.performAction0653(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, integerLocal7);
+          SoftwareRaster.performAction0668(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, 5592405);
+          SoftwareRaster.performAction0649(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, integerLocal7);
           if (uiComponentPart009Local11.booleanState0034) {
-            SoftwareRaster.performAction0663(integerLocal8, integerLocal9, this.integerState0404 + integerLocal8, integerLocal9 + this.integerState0392, 1);
-            SoftwareRaster.performAction0663(integerLocal8 + this.integerState0404, integerLocal9, integerLocal8, this.integerState0392 + integerLocal9, 1);
+            SoftwareRaster.performAction0659(integerLocal8, integerLocal9, this.integerState0404 + integerLocal8, integerLocal9 + this.integerState0392, 1);
+            SoftwareRaster.performAction0659(integerLocal8 + this.integerState0404, integerLocal9, integerLocal8, this.integerState0392 + integerLocal9, 1);
           }
           if (this.bitmapFontState0016 == null) {
             return;
           }
           integerLocal10 = this.integerState0404 + this.integerState0401 + this.integerState0400;
-          this.bitmapFontState0016.computeInteger1095(uiComponentArgument5.stringState0078, integerArgument2 + uiComponentArgument5.integerState0110 + integerLocal10, this.integerState0399 + integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107 - (this.integerState0400 + integerLocal10), -(this.integerState0400 << 1) + uiComponentArgument5.integerState0108, this.integerState0397, this.integerState0405, this.integerState0403, this.integerState0398, 0);
+          this.bitmapFontState0016.computeInteger1090(uiComponentArgument5.stringState0078, integerArgument2 + uiComponentArgument5.integerState0110 + integerLocal10, this.integerState0399 + integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107 - (this.integerState0400 + integerLocal10), -(this.integerState0400 << 1) + uiComponentArgument5.integerState0108, this.integerState0397, this.integerState0405, this.integerState0403, this.integerState0398, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal5 = caughtParameterLocal12;
@@ -144,7 +144,7 @@ final class MixedSupport074 implements CallbackContract004 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class MixedSupport074 implements CallbackContract004 {
           this.bitmapFontState0016 = bitmapFontArgument1;
           this.integerState0401 = integerArgument6;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "kk.<init>(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ',' + integerArgument9 + ',' + integerArgument10 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "kk.<init>(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ',' + integerArgument9 + ',' + integerArgument10 + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class SceneWidgetPart009 extends SceneWidget {
     static boolean booleanState0151;
     private SceneWidget sceneWidgetState0101;
 
-    private final void performAction1368(int integerArgument1, int integerArgument2, int integerArgument3) {
+    private final void performAction1362(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -20,11 +20,11 @@ final class SceneWidgetPart009 extends SceneWidget {
         if (integerArgument2 == 9328) {
           integerLocal1 = -integerArgument1;
           if (null != this.sceneWidgetState0101) {
-            integerLocal1 = this.sceneWidgetState0101.computeInteger1821(true);
+            integerLocal1 = this.sceneWidgetState0101.computeInteger1801(true);
           }
           integerLocal2 = -integerArgument1;
           if (null != this.sceneWidgetState0100) {
-            integerLocal2 = this.sceneWidgetState0100.computeInteger1812((byte) 84, -integerLocal1 - integerArgument3 + this.integerState0896 - (integerArgument1 + integerArgument3));
+            integerLocal2 = this.sceneWidgetState0100.computeInteger1792((byte) 84, -integerLocal1 - integerArgument3 + this.integerState0896 - (integerArgument1 + integerArgument3));
           }
           integerLocal3 = integerArgument3 + (integerLocal2 + integerArgument1) + (integerArgument3 + integerLocal1);
           if (integerLocal3 > this.integerState0896) {
@@ -38,13 +38,13 @@ final class SceneWidgetPart009 extends SceneWidget {
             integerArgument3 = integerArgument3 + (-integerLocal3 + this.integerState0896);
           }
           if (this.sceneWidgetState0101 != null) {
-            this.sceneWidgetState0101.performAction1815(integerLocal1, 0, 0, this.integerState0915, integerArgument3);
+            this.sceneWidgetState0101.performAction1795(integerLocal1, 0, 0, this.integerState0915, integerArgument3);
             this.sceneWidgetState0101.integerState0885 = this.integerState0885;
           }
           if (null == this.sceneWidgetState0100) {
             return;
           }
-          this.sceneWidgetState0100.performAction1815(integerLocal2, 0, 0, this.integerState0915, integerArgument3 - (-integerLocal1 - integerArgument1));
+          this.sceneWidgetState0100.performAction1795(integerLocal2, 0, 0, this.integerState0915, integerArgument3 - (-integerLocal1 - integerArgument1));
           if (this.sceneWidgetState0101 != null) {
             this.sceneWidgetState0100.integerState0916 = 0;
           } else {
@@ -56,11 +56,11 @@ final class SceneWidgetPart009 extends SceneWidget {
         stringArrayArrayState0007 = (String[][]) null;
         integerLocal4 = -integerArgument1;
         if (null != this.sceneWidgetState0101) {
-          integerLocal4 = this.sceneWidgetState0101.computeInteger1821(true);
+          integerLocal4 = this.sceneWidgetState0101.computeInteger1801(true);
         }
         integerLocal5 = -integerArgument1;
         if (null != this.sceneWidgetState0100) {
-          integerLocal5 = this.sceneWidgetState0100.computeInteger1812((byte) 84, -integerLocal4 - integerArgument3 + this.integerState0896 - (integerArgument1 + integerArgument3));
+          integerLocal5 = this.sceneWidgetState0100.computeInteger1792((byte) 84, -integerLocal4 - integerArgument3 + this.integerState0896 - (integerArgument1 + integerArgument3));
         }
         integerLocal6 = integerArgument3 + (integerLocal5 + integerArgument1) + (integerArgument3 + integerLocal4);
         if (integerLocal6 > this.integerState0896) {
@@ -74,13 +74,13 @@ final class SceneWidgetPart009 extends SceneWidget {
           integerArgument3 = integerArgument3 + (-integerLocal6 + this.integerState0896);
         }
         if (this.sceneWidgetState0101 != null) {
-          this.sceneWidgetState0101.performAction1815(integerLocal4, 0, 0, this.integerState0915, integerArgument3);
+          this.sceneWidgetState0101.performAction1795(integerLocal4, 0, 0, this.integerState0915, integerArgument3);
           this.sceneWidgetState0101.integerState0885 = this.integerState0885;
         }
         if (null == this.sceneWidgetState0100) {
           return;
         }
-        this.sceneWidgetState0100.performAction1815(integerLocal5, 0, 0, this.integerState0915, integerArgument3 - (-integerLocal4 - integerArgument1));
+        this.sceneWidgetState0100.performAction1795(integerLocal5, 0, 0, this.integerState0915, integerArgument3 - (-integerLocal4 - integerArgument1));
         if (this.sceneWidgetState0101 != null) {
           this.sceneWidgetState0100.integerState0916 = 0;
         } else {
@@ -89,48 +89,48 @@ final class SceneWidgetPart009 extends SceneWidget {
         this.sceneWidgetState0100.integerState0885 = this.integerState0885;
     }
 
-    final int computeInteger1371(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final int computeInteger1365(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = -integerArgument2;
         int integerLocal3;
         if (integerArgument3 == 1940) {
           integerLocal1 = -integerArgument2;
           if (this.sceneWidgetState0101 != null) {
-            integerLocal2 = this.sceneWidgetState0101.computeInteger1821(true);
+            integerLocal2 = this.sceneWidgetState0101.computeInteger1801(true);
           }
           if (this.sceneWidgetState0100 != null) {
-            integerLocal1 = this.sceneWidgetState0100.computeInteger1821(true);
+            integerLocal1 = this.sceneWidgetState0100.computeInteger1801(true);
           }
           return integerArgument1 + integerLocal2 + integerArgument1 + integerArgument2 + integerLocal1;
         }
         String stringLocal4 = (String) null;
-        SceneWidgetPart009.performAction1370((String) null, -28);
+        SceneWidgetPart009.performAction1364((String) null, -28);
         integerLocal3 = -integerArgument2;
         if (this.sceneWidgetState0101 != null) {
-          integerLocal2 = this.sceneWidgetState0101.computeInteger1821(true);
+          integerLocal2 = this.sceneWidgetState0101.computeInteger1801(true);
         }
         if (this.sceneWidgetState0100 != null) {
-          integerLocal3 = this.sceneWidgetState0100.computeInteger1821(true);
+          integerLocal3 = this.sceneWidgetState0100.computeInteger1801(true);
         }
         return integerArgument1 + integerLocal2 + integerArgument1 + integerArgument2 + integerLocal3;
     }
 
-    final void performAction1369(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
-        this.performAction1815(integerArgument5, 0, integerArgument4, integerArgument1, integerArgument3);
-        this.performAction1368(integerArgument6, 9328, integerArgument2);
+    final void performAction1363(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+        this.performAction1795(integerArgument5, 0, integerArgument4, integerArgument1, integerArgument3);
+        this.performAction1362(integerArgument6, 9328, integerArgument2);
         if (integerArgument7 != 500) {
-          SceneWidgetPart009.computeBoolean1372(84);
+          SceneWidgetPart009.computeBoolean1366(84);
         }
     }
 
-    public static void performAction1373(int integerArgument1) {
+    public static void performAction1367(int integerArgument1) {
         stringArrayArrayState0007 = (String[][]) null;
         if (integerArgument1 < 67) {
-          SceneWidgetPart009.computeBoolean1372(-21);
+          SceneWidgetPart009.computeBoolean1366(-21);
         }
     }
 
-    final static void performAction1370(String stringArgument1, int integerArgument2) {
+    final static void performAction1364(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -141,20 +141,20 @@ final class SceneWidgetPart009 extends SceneWidget {
         try {
           integerLocal1 = HashNode.integerState0069;
           integerLocal2 = MixedSupport106.integerState0590;
-          integerLocal3 = MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1091(stringArgument1, 500);
-          integerLocal4 = MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1104(stringArgument1, 500) + 6;
+          integerLocal3 = MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1086(stringArgument1, 500);
+          integerLocal4 = MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1099(stringArgument1, 500) + 6;
           integerLocal5 = ComponentContainer.integerState0377 * integerLocal3 + 2;
-          integerLocal6 = MixedSupport146.computeInteger1777(12, -18265, integerLocal4, integerLocal1);
-          integerLocal7 = MixedSupport093.computeInteger1168(20, integerArgument2 + 2, integerLocal5, integerLocal2);
-          SoftwareRaster.performAction0677(integerLocal6, integerLocal7, integerLocal4, integerLocal5, 0);
-          SoftwareRaster.performAction0653(1 + integerLocal6, integerLocal7 + 1, integerLocal4 - 2, integerLocal5 + integerArgument2, 16777088);
-          MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1095(stringArgument1, 3 + integerLocal6, -MixedSupport132.sceneWidgetState0125.bitmapFontState0020.integerState0518 + (MouseInput.integerState0928 + (integerLocal7 + 1)), 500, 1000, 0, -1, 0, 0, ComponentContainer.integerState0377);
+          integerLocal6 = MixedSupport146.computeInteger1757(12, -18265, integerLocal4, integerLocal1);
+          integerLocal7 = MixedSupport093.computeInteger1163(20, integerArgument2 + 2, integerLocal5, integerLocal2);
+          SoftwareRaster.performAction0673(integerLocal6, integerLocal7, integerLocal4, integerLocal5, 0);
+          SoftwareRaster.performAction0649(1 + integerLocal6, integerLocal7 + 1, integerLocal4 - 2, integerLocal5 + integerArgument2, 16777088);
+          MixedSupport132.sceneWidgetState0125.bitmapFontState0020.computeInteger1090(stringArgument1, 3 + integerLocal6, -MixedSupport132.sceneWidgetState0125.bitmapFontState0020.integerState0518 + (MouseInput.integerState0928 + (integerLocal7 + 1)), 500, 1000, 0, -1, 0, 0, ComponentContainer.integerState0377);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "qd.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "qd.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    final static boolean computeBoolean1372(int integerArgument1) {
+    final static boolean computeBoolean1366(int integerArgument1) {
         int integerLocal1 = 63 % ((79 - integerArgument1) / 37);
         return null != MixedSupport146.sceneWidgetPart004State0001 ? true : false;
     }
@@ -178,14 +178,14 @@ final class SceneWidgetPart009 extends SceneWidget {
           if (rgbSpriteArgument5 != null) {
             this.sceneWidgetState0101 = new SceneWidget(0L, sceneWidgetArgument3);
             this.sceneWidgetState0101.rgbSpriteState0070 = rgbSpriteArgument5;
-            this.performAction1819(this.sceneWidgetState0101, -16834);
+            this.performAction1799(this.sceneWidgetState0101, -16834);
           }
           if (stringArgument6 != null) {
             this.sceneWidgetState0100 = new SceneWidget(0L, sceneWidgetArgument4, stringArgument6);
-            this.performAction1819(this.sceneWidgetState0100, -16834);
-            this.performAction1825(-65);
+            this.performAction1799(this.sceneWidgetState0100, -16834);
+            this.performAction1805(-65);
           } else {
-            this.performAction1825(-65);
+            this.performAction1805(-65);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
@@ -222,7 +222,7 @@ final class SceneWidgetPart009 extends SceneWidget {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
         }
     }
 

@@ -11,7 +11,7 @@ final class MixedSupport093 {
     static int integerState0546;
     static String stringState0371;
 
-    public static void performAction1169(boolean booleanArgument1) {
+    public static void performAction1164(boolean booleanArgument1) {
         if (!booleanArgument1) {
           stringState0370 = null;
           integerArrayState0172 = null;
@@ -30,7 +30,7 @@ final class MixedSupport093 {
         platformServiceState0004 = null;
     }
 
-    final static int computeInteger1168(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static int computeInteger1163(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (!(SoftwareRaster.integerState0284 < integerArgument1 + (integerArgument4 + integerArgument3))) {
           return integerArgument4 + integerArgument1;
         }

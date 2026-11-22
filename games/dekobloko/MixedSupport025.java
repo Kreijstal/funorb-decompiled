@@ -7,15 +7,15 @@ final class MixedSupport025 {
     static int integerState0151;
     static int integerState0152;
 
-    final static SceneWidget computeSceneWidget0382(byte byteArgument1) {
+    final static SceneWidget computeSceneWidget0381(byte byteArgument1) {
         if (byteArgument1 <= 95) {
-          MixedSupport025.performAction0383(-23);
+          MixedSupport025.performAction0382(-23);
           return RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108;
         }
         return RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108;
     }
 
-    public static void performAction0383(int integerArgument1) {
+    public static void performAction0382(int integerArgument1) {
         mixedSupport033State0001 = null;
         uiComponentPart013State0001 = null;
         int integerLocal1 = -77 / ((69 - integerArgument1) / 33);

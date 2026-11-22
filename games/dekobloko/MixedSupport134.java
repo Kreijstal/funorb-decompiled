@@ -20,11 +20,11 @@ final class MixedSupport134 {
         stringState0553 = null;
     }
 
-    final static void performAction1681(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3) {
+    final static void performAction1662(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3) {
         if (!booleanArgument1) {
-          SoftwareRaster.performAction0661();
+          SoftwareRaster.performAction0657();
         } else {
-          SoftwareRaster.performAction0654(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 192);
+          SoftwareRaster.performAction0650(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 192);
         }
         if (integerArgument3 <= 39) {
           return;
@@ -32,14 +32,14 @@ final class MixedSupport134 {
         RenderingSupport002.performAction0248(booleanArgument1, 91);
     }
 
-    final static void performAction1680(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, int integerArgument4) {
+    final static void performAction1661(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, int integerArgument4) {
         if (!booleanArgument2) {
           stringState0554 = (String) null;
         }
-        NodeHashTable.performAction1546(ComponentContainer.integerState0377, booleanArgument3, SecondaryNodeHashTable.integerState0540, GameApplet.integerState0292, integerArgument1, (byte) -41, integerArgument4);
+        NodeHashTable.performAction1527(ComponentContainer.integerState0377, booleanArgument3, SecondaryNodeHashTable.integerState0540, GameApplet.integerState0292, integerArgument1, (byte) -41, integerArgument4);
     }
 
-    final static void performAction1679(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, SceneWidgetPart013 sceneWidgetPart013Argument7, boolean booleanArgument8) {
+    final static void performAction1660(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, SceneWidgetPart013 sceneWidgetPart013Argument7, boolean booleanArgument8) {
         SceneWidgetPart009[][] stackSceneWidgetPart009ArrayArrayLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -188,7 +188,7 @@ final class MixedSupport134 {
                   } else {
                     SceneWidgetNode.byteArrayState0012[integerArgument3] = (byte)integerLocal17;
                   }
-                  MixedSupport134.performAction1679(integerArgument1, booleanArgument2, 1 + integerArgument3, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
+                  MixedSupport134.performAction1660(integerArgument1, booleanArgument2, 1 + integerArgument3, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
                   if (SceneWidgetPart013.booleanState0207) {
                     return;
                   }
@@ -226,7 +226,7 @@ final class MixedSupport134 {
                 }
               }
               if (integerLocal18 != 0) {
-                MixedSupport134.performAction1679(integerArgument1, booleanArgument2, integerArgument3 + 1, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
+                MixedSupport134.performAction1660(integerArgument1, booleanArgument2, integerArgument3 + 1, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
                 integerLocal27 = 1;
               }
               if (SceneWidgetPart013.booleanState0207) {
@@ -249,7 +249,7 @@ final class MixedSupport134 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(booleanArgument8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(booleanArgument8).append(')').toString());
         }
     }
 

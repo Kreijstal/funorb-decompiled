@@ -15,7 +15,7 @@ final class MixedSupport096 {
         nodeDequeState0021 = null;
     }
 
-    final int computeInteger1180(byte byteArgument1, int integerArgument2) {
+    final int computeInteger1175(byte byteArgument1, int integerArgument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -38,7 +38,7 @@ final class MixedSupport096 {
         }
     }
 
-    final static MixedSupport062[] computeMixedSupport062Array1179(byte byteArgument1) {
+    final static MixedSupport062[] computeMixedSupport062Array1174(byte byteArgument1) {
         if (byteArgument1 != 27) {
           MixedSupport096.clearStaticReferences(false);
         }
@@ -83,7 +83,7 @@ final class MixedSupport096 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

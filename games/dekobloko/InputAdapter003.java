@@ -13,7 +13,7 @@ final class InputAdapter003 {
     static String[] stringArrayState0044;
     static RgbSprite rgbSpriteState0054;
 
-    final static String computeString1537(String stringArgument1, String stringArgument2, int integerArgument3, byte byteArgument4) {
+    final static String computeString1518(String stringArgument1, String stringArgument2, int integerArgument3, byte byteArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         CipherPacketBuffer cipherPacketBufferLocal2 = null;
         int integerLocal3 = 0;
@@ -36,7 +36,7 @@ final class InputAdapter003 {
             return stackStringLocal6;
           }
           charSequenceLocal5 = (CharSequence) ((Object) stringArgument1);
-          if (!MixedSupport023.computeBoolean0342(charSequenceLocal5, (byte) -70)) {
+          if (!MixedSupport023.computeBoolean0341(charSequenceLocal5, (byte) -70)) {
             stackStringLocal7 = RenderingSupport003.stringState0199;
             return stackStringLocal7;
           }
@@ -44,7 +44,7 @@ final class InputAdapter003 {
             stackStringLocal8 = DualNode.stringState0043;
             return stackStringLocal8;
           }
-          sceneWidgetPart014Local4 = UiComponentPart011.computeSceneWidgetPart0140558(-3805, stringArgument2);
+          sceneWidgetPart014Local4 = UiComponentPart011.computeSceneWidgetPart0140554(-3805, stringArgument2);
           if (sceneWidgetPart014Local4 == null) {
             stackStringLocal9 = NodeHashTableIterator.substituteIndexedPlaceholders(97, MixedSupport061.stringState0258, new String[]{stringArgument2});
             return stackStringLocal9;
@@ -53,12 +53,12 @@ final class InputAdapter003 {
           sceneWidgetPart014Local4.performAction0134((byte) 74);
           MixedSupport029.integerState0182 = MixedSupport029.integerState0182 - 1;
           cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal2.performAction1691(integerArgument3, -4);
+          cipherPacketBufferLocal2.performAction1672(integerArgument3, -4);
           cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
           integerLocal3 = cipherPacketBufferLocal2.position;
-          cipherPacketBufferLocal2.performAction1892(true, 3);
-          cipherPacketBufferLocal2.performAction1885(0, stringArgument1);
-          cipherPacketBufferLocal2.performAction1898(cipherPacketBufferLocal2.position - integerLocal3, true);
+          cipherPacketBufferLocal2.writeByte(true, 3);
+          cipherPacketBufferLocal2.writeNullTerminatedString(0, stringArgument1);
+          cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal3, true);
           stackObjectLocal10 = null;
           return (String) (stackObjectLocal10);
         } catch (java.lang.RuntimeException caughtParameterLocal17) {
@@ -77,11 +77,11 @@ final class InputAdapter003 {
           } else {
             stackStringLocal15 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal14).append(stackStringLocal15).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal11), ((StringBuilder) (Object) stackStringBuilderLocal14).append(stackStringLocal15).append(',').append(integerArgument3).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    public static void performAction1534(int integerArgument1) {
+    public static void performAction1516(int integerArgument1) {
         sceneWidgetState0110 = null;
         rgbSpriteState0054 = null;
         if (integerArgument1 == 3) {
@@ -93,7 +93,7 @@ final class InputAdapter003 {
           return;
         }
         String stringLocal1 = (String) null;
-        InputAdapter003.computeString1537((String) null, (String) null, 114, (byte) 124);
+        InputAdapter003.computeString1518((String) null, (String) null, 114, (byte) 124);
         stringArrayState0042 = null;
         stringArrayState0044 = null;
         stringArrayState0043 = null;
@@ -101,13 +101,13 @@ final class InputAdapter003 {
         integerArrayState0206 = null;
     }
 
-    final static PlatformSupport006 computePlatformSupport0061535(int integerArgument1, PlatformService platformServiceArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static FullscreenCanvas createFullscreenCanvas(int integerArgument1, PlatformService platformServiceArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         java.awt.Frame frameLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
-        PlatformSupport006 platformSupport006Local3 = null;
+        FullscreenCanvas fullscreenCanvasLocal3 = null;
         PlatformService platformServiceLocal4 = null;
         java.awt.Frame frameLocal5 = null;
-        PlatformSupport006 stackPlatformSupport006Local6 = null;
+        FullscreenCanvas stackFullscreenCanvasLocal6 = null;
         RuntimeException stackRuntimeExceptionLocal7 = null;
         StringBuilder stackStringBuilderLocal8 = null;
         String stackStringLocal9 = null;
@@ -115,21 +115,21 @@ final class InputAdapter003 {
         try {
           if (integerArgument5 < 54) {
             platformServiceLocal4 = (PlatformService) null;
-            InputAdapter003.computePlatformSupport0061535(-76, (PlatformService) null, 0, 22, 26, 93);
+            InputAdapter003.createFullscreenCanvas(-76, (PlatformService) null, 0, 22, 26, 93);
           }
-          frameLocal5 = GameDomainSupport004.computeFrame0814(integerArgument6, platformServiceArgument2, integerArgument1, integerArgument3, false, integerArgument4);
+          frameLocal5 = GameDomainSupport004.createFullscreenFrame(integerArgument6, platformServiceArgument2, integerArgument1, integerArgument3, false, integerArgument4);
           frameLocal1 = frameLocal5;
           if (frameLocal5 == null) {
             return null;
           }
-          platformSupport006Local3 = new PlatformSupport006();
-          platformSupport006Local3.frameState0003 = frameLocal5;
-          platformSupport006Local3.frameState0003.add((java.awt.Component) ((Object) platformSupport006Local3));
-          platformSupport006Local3.setBounds(0, 0, integerArgument1, integerArgument6);
-          platformSupport006Local3.addFocusListener(platformSupport006Local3);
-          platformSupport006Local3.requestFocus();
-          stackPlatformSupport006Local6 = platformSupport006Local3;
-          return stackPlatformSupport006Local6;
+          fullscreenCanvasLocal3 = new FullscreenCanvas();
+          fullscreenCanvasLocal3.frameState0003 = frameLocal5;
+          fullscreenCanvasLocal3.frameState0003.add((java.awt.Component) ((Object) fullscreenCanvasLocal3));
+          fullscreenCanvasLocal3.setBounds(0, 0, integerArgument1, integerArgument6);
+          fullscreenCanvasLocal3.addFocusListener(fullscreenCanvasLocal3);
+          fullscreenCanvasLocal3.requestFocus();
+          stackFullscreenCanvasLocal6 = fullscreenCanvasLocal3;
+          return stackFullscreenCanvasLocal6;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal10 = caughtParameterLocal11;
           runtimeExceptionLocal2 = caughtExceptionLocal10;
@@ -140,11 +140,11 @@ final class InputAdapter003 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
-    final static void performAction1538(String[][] stringArrayArrayArgument1, boolean booleanArgument2, byte[] byteArrayArgument3, ResourceArchive resourceArchiveArgument4, int[] integerArrayArgument5, byte byteArgument6, String[][] stringArrayArrayArgument7, String[] stringArrayArgument8, int integerArgument9, byte[] byteArrayArgument10, IndexedSprite[] indexedSpriteArrayArgument11, int[] integerArrayArgument12, int integerArgument13, ResourceArchive resourceArchiveArgument14, String[] stringArrayArgument15, ResourceArchive resourceArchiveArgument16, RgbSprite[][] rgbSpriteArrayArrayArgument17, RgbSprite[][] rgbSpriteArrayArrayArgument18, int integerArgument19) {
+    final static void performAction1519(String[][] stringArrayArrayArgument1, boolean booleanArgument2, byte[] byteArrayArgument3, ResourceArchive resourceArchiveArgument4, int[] integerArrayArgument5, byte byteArgument6, String[][] stringArrayArrayArgument7, String[] stringArrayArgument8, int integerArgument9, byte[] byteArrayArgument10, IndexedSprite[] indexedSpriteArrayArgument11, int[] integerArrayArgument12, int integerArgument13, ResourceArchive resourceArchiveArgument14, String[] stringArrayArgument15, ResourceArchive resourceArchiveArgument16, RgbSprite[][] rgbSpriteArrayArrayArgument17, RgbSprite[][] rgbSpriteArrayArrayArgument18, int integerArgument19) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -179,10 +179,10 @@ final class InputAdapter003 {
         String[] stringArrayLocal32 = null;
         try {
           if (byteArgument6 > -2) {
-            InputAdapter003.computeBoolean1536((String) null, 4, -122L);
+            InputAdapter003.computeBoolean1517((String) null, 4, -122L);
           }
           stringArrayLocal32 = (String[]) null;
-          SceneWidgetPart004.performAction0622(byteArrayArgument10, 1, indexedSpriteArrayArgument11, resourceArchiveArgument4, stringArrayArgument8, 3, integerArgument13, resourceArchiveArgument14, stringArrayArrayArgument7, rgbSpriteArrayArrayArgument18, booleanArgument2, integerArrayArgument5, rgbSpriteArrayArrayArgument17, byteArrayArgument3, stringArrayArrayArgument1, resourceArchiveArgument16, integerArgument19, stringArrayArgument15, integerArrayArgument12, (String[]) null);
+          SceneWidgetPart004.performAction0618(byteArrayArgument10, 1, indexedSpriteArrayArgument11, resourceArchiveArgument4, stringArrayArgument8, 3, integerArgument13, resourceArchiveArgument14, stringArrayArrayArgument7, rgbSpriteArrayArrayArgument18, booleanArgument2, integerArrayArgument5, rgbSpriteArrayArrayArgument17, byteArrayArgument3, stringArrayArrayArgument1, resourceArchiveArgument16, integerArgument19, stringArrayArgument15, integerArrayArgument12, (String[]) null);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal33) {
           caughtExceptionLocal30 = caughtParameterLocal33;
@@ -272,11 +272,11 @@ final class InputAdapter003 {
           } else {
             stackStringLocal29 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal28).append(stackStringLocal29).append(',').append(integerArgument19).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal28).append(stackStringLocal29).append(',').append(integerArgument19).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1536(String stringArgument1, int integerArgument2, long longArgument3) {
+    final static boolean computeBoolean1517(String stringArgument1, int integerArgument2, long longArgument3) {
         SceneWidgetPart014 sceneWidgetPart014Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -285,7 +285,7 @@ final class InputAdapter003 {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          sceneWidgetPart014Local1 = MixedSupport029.computeSceneWidgetPart0140411(stringArgument1, (byte) 16);
+          sceneWidgetPart014Local1 = MixedSupport029.computeSceneWidgetPart0140410(stringArgument1, (byte) 16);
           if (integerArgument2 <= 111) {
             sceneWidgetState0110 = (SceneWidget) null;
           }
@@ -305,7 +305,7 @@ final class InputAdapter003 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
         }
     }
 

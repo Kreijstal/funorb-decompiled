@@ -13,7 +13,7 @@ final class MixedSupport099 implements CallbackContract004 {
     static String stringState0397;
     static int[] integerArrayState0178;
 
-    final static RenderingSupport012 computeRenderingSupport0121233(byte[] byteArrayArgument1, byte byteArgument2) {
+    final static RenderingSupport012 computeRenderingSupport0121228(byte[] byteArrayArgument1, byte byteArgument2) {
         RenderingSupport012 renderingSupport012Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -33,7 +33,7 @@ final class MixedSupport099 implements CallbackContract004 {
             return stackRenderingSupport012Local4;
           }
           renderingSupport012Local1 = new RenderingSupport012(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport130.integerArrayState0208, MixedSupport052.integerArrayState0054, NetworkSupport006.integerArrayState0152, SceneWidgetPart011.byteArrayArrayState0008);
-          MixedSupport094.performAction1170(126);
+          MixedSupport094.performAction1165(126);
           stackRenderingSupport012Local5 = renderingSupport012Local1;
           return stackRenderingSupport012Local5;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
@@ -46,11 +46,11 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static void performAction1232(boolean booleanArgument1, int[] integerArrayArgument2, boolean booleanArgument3, int[] integerArrayArgument4, boolean booleanArgument5, boolean booleanArgument6, MixedSupport145 mixedSupport145Argument7) {
+    final static void performAction1227(boolean booleanArgument1, int[] integerArrayArgument2, boolean booleanArgument3, int[] integerArrayArgument4, boolean booleanArgument5, boolean booleanArgument6, MixedSupport145 mixedSupport145Argument7) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -233,7 +233,7 @@ final class MixedSupport099 implements CallbackContract004 {
             }
             break;
           }
-          MixedSupport032.performAction0478(mixedSupport145Argument7, booleanArgument3, integerLocal13, (byte) 103, integerLocal11);
+          MixedSupport032.performAction0477(mixedSupport145Argument7, booleanArgument3, integerLocal13, (byte) 103, integerLocal11);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal36) {
           caughtExceptionLocal10 = caughtParameterLocal36;
@@ -257,7 +257,7 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
@@ -286,9 +286,9 @@ final class MixedSupport099 implements CallbackContract004 {
           if (byteArgument4 > -60) {
             return;
           }
-          this.bitmapFontState0017.computeInteger1095("<u=" + Integer.toString(integerLocal6, 16) + ">" + uiComponentArgument5.stringState0078 + "</u>", uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0104 + integerArgument3, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal6, -1, this.integerState0570, this.integerState0571, this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518);
+          this.bitmapFontState0017.computeInteger1090("<u=" + Integer.toString(integerLocal6, 16) + ">" + uiComponentArgument5.stringState0078 + "</u>", uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0104 + integerArgument3, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal6, -1, this.integerState0570, this.integerState0571, this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518);
           if (uiComponentArgument5.computeBoolean0220(true)) {
-            integerLocal8 = this.bitmapFontState0017.computeInteger1090(uiComponentArgument5.stringState0078);
+            integerLocal8 = this.bitmapFontState0017.computeInteger1085(uiComponentArgument5.stringState0078);
             integerLocal9 = this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518;
             integerLocal10 = uiComponentArgument5.integerState0110 + integerArgument2;
             if (2 != this.integerState0570) {
@@ -312,7 +312,7 @@ final class MixedSupport099 implements CallbackContract004 {
             } else {
               integerLocal11 = integerLocal11 + (uiComponentArgument5.integerState0108 - integerLocal9);
             }
-            RenderingSupport007.performAction0865(4 + integerLocal8, -2 + integerLocal10, (byte) -96, integerLocal11 + 2, integerLocal9);
+            RenderingSupport007.performAction0860(4 + integerLocal8, -2 + integerLocal10, (byte) -96, integerLocal11 + 2, integerLocal9);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
@@ -325,11 +325,11 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final static void performAction1235(byte byteArgument1) {
+    final static void performAction1230(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
@@ -339,10 +339,10 @@ final class MixedSupport099 implements CallbackContract004 {
         try {
           integerLocal1 = integerLocal3 - UiComponentPart003.integerState0073 * UiComponentPart003.integerState0073;
           integerLocal2 = GameSession.integerState0618 + (MixedSupport003.integerState0017 - GameSession.integerState0618) * integerLocal1 / integerLocal3;
-          RichTextLayout.sceneWidgetState0021.performAction1815(640, byteArgument1 + 100, integerLocal2, 120, MixedSupport146.integerState0857);
-          MixedSupport049.performAction0592(MixedSupport003.integerState0017 - 24, MixedSupport064.integerState0335, 640, SecondaryNodeHashTable.integerState0540, 0, 5, (byte) -107);
+          RichTextLayout.sceneWidgetState0021.performAction1795(640, byteArgument1 + 100, integerLocal2, 120, MixedSupport146.integerState0857);
+          MixedSupport049.performAction0588(MixedSupport003.integerState0017 - 24, MixedSupport064.integerState0335, 640, SecondaryNodeHashTable.integerState0540, 0, 5, (byte) -107);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "on.C(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "on.C(" + byteArgument1 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ final class MixedSupport099 implements CallbackContract004 {
           this.integerState0571 = 1;
           this.integerState0570 = 1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "on.<init>()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "on.<init>()");
         }
     }
 
@@ -377,11 +377,11 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static IndexedSprite[] computeIndexedSpriteArray1231(int integerArgument1, byte byteArgument2, int integerArgument3, ResourceArchive resourceArchiveArgument4) {
+    final static IndexedSprite[] computeIndexedSpriteArray1226(int integerArgument1, byte byteArgument2, int integerArgument3, ResourceArchive resourceArchiveArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         Object stackObjectLocal2 = null;
         IndexedSprite[] stackIndexedSpriteArrayLocal3 = null;
@@ -390,12 +390,12 @@ final class MixedSupport099 implements CallbackContract004 {
         String stackStringLocal6 = null;
         RuntimeException caughtExceptionLocal7 = null;
         try {
-          if (!SceneWidgetPart002.computeBoolean0565(integerArgument3, resourceArchiveArgument4, integerArgument1, 38)) {
+          if (!SceneWidgetPart002.computeBoolean0561(integerArgument3, resourceArchiveArgument4, integerArgument1, 38)) {
             stackObjectLocal2 = null;
             return (IndexedSprite[]) (stackObjectLocal2);
           }
           if (byteArgument2 != 37) {
-            MixedSupport099.performAction1235((byte) 98);
+            MixedSupport099.performAction1230((byte) 98);
           }
           stackIndexedSpriteArrayLocal3 = MixedSupport018.computeIndexedSpriteArray0254(-112);
           return stackIndexedSpriteArrayLocal3;
@@ -409,11 +409,11 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    public static void performAction1230(byte byteArgument1) {
+    public static void performAction1225(byte byteArgument1) {
         stringState0395 = null;
         rgbSpriteArrayState0020 = null;
         stringState0394 = null;
@@ -425,11 +425,11 @@ final class MixedSupport099 implements CallbackContract004 {
           stringState0397 = null;
           integerArrayState0178 = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "on.D(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "on.D(" + byteArgument1 + ')');
         }
     }
 
-    final static void performAction1234(RgbSprite[] rgbSpriteArrayArgument1, int integerArgument2) {
+    final static void performAction1229(RgbSprite[] rgbSpriteArrayArgument1, int integerArgument2) {
         RuntimeException runtimeException = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -463,7 +463,7 @@ final class MixedSupport099 implements CallbackContract004 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
         }
     }
 

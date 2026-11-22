@@ -38,7 +38,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void performAction0306(int integerArgument1);
 
-    final static IndexedSprite computeIndexedSprite0689(String stringArgument1, ResourceArchive resourceArchiveArgument2, String stringArgument3, byte byteArgument4) {
+    final static IndexedSprite computeIndexedSprite0685(String stringArgument1, ResourceArchive resourceArchiveArgument2, String stringArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -64,9 +64,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (byteArgument4 <= 26) {
             mixedSupport062State0003 = (MixedSupport062) null;
           }
-          integerLocal1 = resourceArchiveArgument2.computeInteger0837(-1, stringArgument3);
-          integerLocal3 = resourceArchiveArgument2.computeInteger0824(integerLocal1, 13030, stringArgument1);
-          stackIndexedSpriteLocal4 = ComponentDecorator.computeIndexedSprite1039(resourceArchiveArgument2, integerLocal1, integerLocal3, 21828);
+          integerLocal1 = resourceArchiveArgument2.computeInteger0832(-1, stringArgument3);
+          integerLocal3 = resourceArchiveArgument2.computeInteger0819(integerLocal1, 13030, stringArgument1);
+          stackIndexedSpriteLocal4 = ComponentDecorator.computeIndexedSprite1034(resourceArchiveArgument2, integerLocal1, integerLocal3, 21828);
           return stackIndexedSpriteLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal12 = caughtParameterLocal13;
@@ -90,7 +90,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
@@ -150,11 +150,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
           runtimeExceptionLocal1 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal1), "hn.getAppletContext()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal1), "hn.getAppletContext()");
         }
     }
 
-    final void performAction0688(String stringArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final void performAction0684(String stringArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         try {
           PlatformService cachedPlatformServiceLocal1 = null;
           AsyncTask asyncTaskLocal2 = null;
@@ -174,7 +174,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.performAction0692(true, "alreadyloaded");
+                this.performAction0688(true, "alreadyloaded");
                 return;
               }
               UiComponentPart024.integerState0592 = 0;
@@ -185,14 +185,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               GzipDecompressor.integerState0436 = integerArgument5;
               MixedSupport124.gameAppletState0001 = this;
               SceneWidgetPart014.integerState0919 = integerArgument7;
-              MixedSupport128.appletState0002 = UiComponentPart029.computeApplet1530(25144);
+              MixedSupport128.appletState0002 = UiComponentPart029.computeApplet1512(25144);
               cachedPlatformServiceLocal1 = new PlatformService(integerArgument2, stringArgument1, integerArgument3, booleanArgument4);
               GzipDecompressor.platformServiceState0003 = cachedPlatformServiceLocal1;
               MixedSupport093.platformServiceState0004 = cachedPlatformServiceLocal1;
-              asyncTaskLocal2 = GzipDecompressor.platformServiceState0003.computeAsyncTask0515((byte) -126, 1, (Runnable) (this));
+              asyncTaskLocal2 = GzipDecompressor.platformServiceState0003.computeAsyncTask0513((byte) -126, 1, (Runnable) (this));
               while (true) {
                 if (0 == asyncTaskLocal2.integerState0510) {
-                  MixedSupport132.performAction1670(10L, -128);
+                  MixedSupport132.performAction1651(10L, -128);
                   if (integerLocal3 == 0) {
                     continue;
                   }
@@ -202,8 +202,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable caughtParameterLocal10) {
               caughtExceptionLocal7 = caughtParameterLocal10;
               throwableLocal8 = caughtExceptionLocal7;
-              NetworkArchiveRequestManager.performAction1322(throwableLocal8, 16408, (String) null);
-              this.performAction0692(true, "crash");
+              NetworkArchiveRequestManager.performAction1316(throwableLocal8, 16408, (String) null);
+              this.performAction0688(true, "crash");
             }
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -216,7 +216,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackStringLocal6 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(booleanArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(booleanArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(integerArgument7).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal12) {
           throw uncheckedExceptionLocal12;
@@ -225,7 +225,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final boolean computeBoolean0687(byte byteArgument1) {
+    final boolean computeBoolean0683(byte byteArgument1) {
         return true;
     }
 
@@ -248,7 +248,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -261,21 +261,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (MixedSupport124.gameAppletState0001 == this &&
             !MixedSupport031.booleanState0032) {
-            MixedSupport077.longState0025 = MixedSupport063.computeLong0749(4);
-            MixedSupport132.performAction1670(5000L, -128);
+            MixedSupport077.longState0025 = MixedSupport063.computeLong0745(4);
+            MixedSupport132.performAction1651(5000L, -128);
             MixedSupport093.platformServiceState0004 = null;
-            this.performAction0691(false, -124);
+            this.performAction0687(false, -124);
             return;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal2 = caughtParameterLocal3;
           runtimeException = caughtExceptionLocal2;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.destroy()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.destroy()");
         }
     }
 
-    private final void performAction0690(boolean booleanArgument1) {
+    private final void performAction0686(boolean booleanArgument1) {
         int integerLocal1 = 0;
         long longLocal2 = 0L;
         long longLocal3 = 0L;
@@ -284,7 +284,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeExceptionLocal6 = null;
         int integerLocal7 = 0;
         try {
-          longLocal2 = MixedSupport063.computeLong0749(4);
+          longLocal2 = MixedSupport063.computeLong0745(4);
           longLocal3 = MixedSupport120.longArrayState0009[GameDomainSupport002.integerState0180];
           MixedSupport120.longArrayState0009[GameDomainSupport002.integerState0180] = longLocal2;
           if (longLocal3 != 0L &&
@@ -319,11 +319,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal5 = caughtParameterLocal9;
           runtimeExceptionLocal6 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal6), "hn.H(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal6), "hn.H(" + booleanArgument1 + ')');
         }
     }
 
-    final synchronized void performAction0693(byte byteArgument1) {
+    final synchronized void performAction0689(byte byteArgument1) {
         int integerLocal1 = 0;
         Object objectLocal2 = null;
         java.awt.Insets insetsLocal3 = null;
@@ -381,16 +381,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           GameSession.booleanState0141 = true;
           MixedSupport016.booleanState0016 = true;
           LoginCredentials.booleanState0086 = false;
-          NetworkSupport004.longState0018 = MixedSupport063.computeLong0749(4);
+          NetworkSupport004.longState0018 = MixedSupport063.computeLong0745(4);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal5 = caughtParameterLocal8;
           runtimeExceptionLocal6 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal6), "hn.K(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal6), "hn.K(" + byteArgument1 + ')');
         }
     }
 
-    private final void performAction0691(boolean booleanArgument1, int integerArgument2) {
+    private final void performAction0687(boolean booleanArgument1, int integerArgument2) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -425,7 +425,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null != GzipDecompressor.platformServiceState0003) {
             try {
-              GzipDecompressor.platformServiceState0003.performAction0517(0);
+              GzipDecompressor.platformServiceState0003.performAction0515(0);
             } catch (java.lang.Exception caughtParameterLocal9) {
               caughtExceptionLocal6 = caughtParameterLocal9;
               exception = (Exception) (Object) caughtExceptionLocal6;
@@ -446,7 +446,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal6 = caughtParameterLocal11;
           runtimeException = (RuntimeException) (Object) caughtExceptionLocal6;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.C(" + booleanArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.C(" + booleanArgument1 + ',' + integerArgument2 + ')');
         }
     }
 
@@ -463,14 +463,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           MixedSupport077.longState0025 = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.start()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.start()");
         }
     }
 
     public final void windowIconified(java.awt.event.WindowEvent windowEventArgument1) {
     }
 
-    final void performAction0692(boolean booleanArgument1, String stringArgument2) {
+    final void performAction0688(boolean booleanArgument1, String stringArgument2) {
         try {
           RuntimeException stackRuntimeExceptionLocal1 = null;
           StringBuilder stackStringBuilderLocal2 = null;
@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.booleanState0071 = true;
             System.out.println("error_game_" + stringArgument2);
             try {
-              MixedSupport088.computeObject1120(booleanArgument1, "loggedout", UiComponentPart029.computeApplet1530(25144));
+              MixedSupport088.computeObject1115(booleanArgument1, "loggedout", UiComponentPart029.computeApplet1512(25144));
             } catch (java.lang.Throwable caughtParameterLocal8) {
               caughtExceptionLocal4 = caughtParameterLocal8;
               throwableLocal5 = caughtExceptionLocal4;
@@ -508,7 +508,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackStringLocal3 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal11) {
           throw uncheckedExceptionLocal11;
@@ -536,11 +536,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    private final void performAction0695(int integerArgument1) {
+    private final void performAction0691(int integerArgument1) {
         RuntimeException runtimeException = null;
         long longLocal2 = 0L;
         long longLocal3 = 0L;
@@ -548,7 +548,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable caughtExceptionLocal5 = null;
         Object objectLocal6 = null;
         try {
-          longLocal2 = MixedSupport063.computeLong0749(4);
+          longLocal2 = MixedSupport063.computeLong0745(4);
           longLocal3 = SceneWidgetPart006.longArrayState0003[MixedSupport080.integerState0435];
           SceneWidgetPart006.longArrayState0003[MixedSupport080.integerState0435] = longLocal2;
           MixedSupport080.integerState0435 = 31 & 1 + MixedSupport080.integerState0435;
@@ -565,7 +565,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal5 = caughtParameterLocal7;
           runtimeException = (RuntimeException) (Object) caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.N(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.N(" + integerArgument1 + ')');
         }
     }
 
@@ -607,14 +607,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     stringLocal8.equals("1.5") ||
                     stringLocal8.startsWith("1.5.") ||
                     stringLocal8.equals("1.6.0")) {
-                    this.performAction0692(true, "wrongjava");
+                    this.performAction0688(true, "wrongjava");
                     frameRemainderLocal15 = (integerLocal14 != 0);
                   }
                   if ((frameRemainderLocal15) &&
                     (stringLocal8.startsWith("1.6.0_"))) {
                     integerLocal11 = 6;
                     while (stringLocal8.length() > integerLocal11) {
-                      stackBooleanLocal1 = MixedSupport042.computeBoolean0541(stringLocal8.charAt(integerLocal11), (byte) 23);
+                      stackBooleanLocal1 = MixedSupport042.computeBoolean0537(stringLocal8.charAt(integerLocal11), (byte) 23);
                       if (integerLocal14 != 0) {
                         frameCompletedLocal17 = false;
                         break;
@@ -629,7 +629,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       stringLocal13 = stringLocal8.substring(6, integerLocal11);
                       if (DualNode.computeBoolean0128((byte) 98, (CharSequence) ((Object) stringLocal13)) &&
                         !(MixedSupport014.computeInteger0191((byte) 51, (CharSequence) ((Object) stringLocal13)) >= 10)) {
-                        this.performAction0692(true, "wrongjava");
+                        this.performAction0688(true, "wrongjava");
                         frameRemainderLocal15 = (integerLocal14 != 0);
                       }
                     }
@@ -684,15 +684,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     throwableLocal12 = caughtExceptionLocal5;
                   }
                 }
-                NodeHashTable.performAction1551(1);
-                this.performAction0693((byte) 125);
-                MixedSupport080.framebufferState0001 = ArchiveRequestManager.computeFramebuffer0469(MixedSupport095.integerState0548, (byte) 120, UiComponentPart006.integerState0133, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+                NodeHashTable.performAction1532(1);
+                this.performAction0689((byte) 125);
+                MixedSupport080.framebufferState0001 = ArchiveRequestManager.computeFramebuffer0468(MixedSupport095.integerState0548, (byte) 120, UiComponentPart006.integerState0133, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
                 this.performAction0305(false);
-                NodeHashTableIterator.mixedSupport059State0001 = MixedSupport031.computeMixedSupport0590420((byte) 63);
+                NodeHashTableIterator.mixedSupport059State0001 = MixedSupport031.computeMixedSupport0590419((byte) 63);
                 do {
                   boolean frameRemainderLocal20 = true;
                   if (MixedSupport077.longState0025 != 0L) {
-                    stackIntegerLocal4 = computeInteger0686(~MixedSupport063.computeLong0749(4), ~MixedSupport077.longState0025);
+                    stackIntegerLocal4 = computeInteger0682(~MixedSupport063.computeLong0745(4), ~MixedSupport077.longState0025);
                     frameRemainderLocal20 = (integerLocal14 == 0);
                     if ((frameRemainderLocal20) &&
                       (stackIntegerLocal4 <= 0)) {
@@ -700,17 +700,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (frameRemainderLocal20) {
-                    MixedSupport149.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.computeInteger0721(MixedSupport138.longState0051, 4);
+                    MixedSupport149.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.computeInteger0717(MixedSupport138.longState0051, 4);
                     stackIntegerLocal4 = 0;
                   }
                   integerLocal11 = stackIntegerLocal4;
                   do {
                     if (!(integerLocal11 < MixedSupport149.integerState0883)) {
-                      this.performAction0690(false);
-                      DiagnosticSupport001.performAction0333(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
+                      this.performAction0686(false);
+                      DiagnosticSupport001.performAction0332(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
                       break;
                     }
-                    this.performAction0695(121);
+                    this.performAction0691(121);
                     integerLocal11++;
                   } while (integerLocal14 == 0);
                 } while (integerLocal14 == 0);
@@ -718,15 +718,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable caughtParameterLocal21) {
               caughtExceptionLocal5 = caughtParameterLocal21;
               objectLocal6 = caughtExceptionLocal5;
-              NetworkArchiveRequestManager.performAction1322((Throwable) (objectLocal6), 16408, (String) null);
-              this.performAction0692(true, "crash");
+              NetworkArchiveRequestManager.performAction1316((Throwable) (objectLocal6), 16408, (String) null);
+              this.performAction0688(true, "crash");
             }
-            this.performAction0691(true, -128);
+            this.performAction0687(true, -128);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal22) {
             caughtExceptionLocal5 = caughtParameterLocal22;
             objectLocal6 = (RuntimeException) (Object) caughtExceptionLocal5;
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) (objectLocal6), "hn.run()");
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) (objectLocal6), "hn.run()");
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal23) {
           throw uncheckedExceptionLocal23;
@@ -756,11 +756,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    public static void performAction0694(int integerArgument1) {
+    public static void performAction0690(int integerArgument1) {
         secondaryNodeHashTableState0002 = null;
         mixedSupport062State0003 = null;
         if (integerArgument1 != 6) {
@@ -769,7 +769,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           renderingSupport010State0002 = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.E(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.E(" + integerArgument1 + ')');
         }
     }
 
@@ -797,7 +797,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !MixedSupport031.booleanState0032) {
             MixedSupport016.booleanState0016 = true;
             if (NetworkSupport008.booleanState0129 &&
-              -NetworkSupport004.longState0018 + MixedSupport063.computeLong0749(4) > 1000L) {
+              -NetworkSupport004.longState0018 + MixedSupport063.computeLong0745(4) > 1000L) {
               rectangleLocal5 = graphicsArgument1.getClipBounds();
               if (null != rectangleLocal5) {
                 if (UiComponentPart020.integerState0551 > rectangleLocal5.width) {
@@ -822,7 +822,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
         }
     }
 
@@ -834,9 +834,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          MixedSupport077.longState0025 = MixedSupport063.computeLong0749(4) + 4000L;
+          MixedSupport077.longState0025 = MixedSupport063.computeLong0745(4) + 4000L;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "hn.stop()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "hn.stop()");
         }
     }
 
@@ -861,7 +861,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
           runtimeExceptionLocal1 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal1), "hn.getDocumentBase()");
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal1), "hn.getDocumentBase()");
         }
     }
 
@@ -890,7 +890,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -903,7 +903,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         mixedSupport062State0003 = new MixedSupport062("");
     }
 
-    private static int computeInteger0686(long left, long right) {
+    private static int computeInteger0682(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -13,7 +13,7 @@ final class NetworkSupport005 extends HashNode {
     int integerState0386;
     int integerState0387;
 
-    final static MixedSupport056 computeMixedSupport0560931(int integerArgument1, boolean booleanArgument2) {
+    final static MixedSupport056 computeMixedSupport0560926(int integerArgument1, boolean booleanArgument2) {
         boolean stackBooleanLocal1 = false;
         int stackIntegerLocal2 = 0;
         int[] stackIntegerArrayLocal3 = null;
@@ -30,48 +30,48 @@ final class NetworkSupport005 extends HashNode {
           return (MixedSupport056) null;
         }
         cipherPacketBufferLocal10 = UiComponentPart006.cipherPacketBufferState0001;
-        integerLocal5 = cipherPacketBufferLocal10.computeInteger1904((byte) -99);
+        integerLocal5 = cipherPacketBufferLocal10.readUnsignedByte((byte) -99);
         UiComponentPart019.integerState0505 = 127 & integerLocal5;
         stackBooleanLocal1 = ((integerLocal5 & 128) != 0);
         MixedSupport043.booleanState0050 = stackBooleanLocal1;
-        MixedSupport127.integerState0777 = cipherPacketBufferLocal10.computeInteger1904((byte) -71);
-        MixedSupport036.longState0015 = cipherPacketBufferLocal10.computeLong1909((byte) -108);
+        MixedSupport127.integerState0777 = cipherPacketBufferLocal10.readUnsignedByte((byte) -71);
+        MixedSupport036.longState0015 = cipherPacketBufferLocal10.readLong((byte) -108);
         if (UiComponentPart019.integerState0505 != 2) {
           MixedSupport148.integerState0873 = 0;
           MixedSupport058.integerState0318 = 0;
         } else {
-          MixedSupport148.integerState0873 = cipherPacketBufferLocal10.computeInteger1907(integerArgument1 + 3);
-          MixedSupport058.integerState0318 = cipherPacketBufferLocal10.computeInteger1913(integerArgument1 + 65280);
+          MixedSupport148.integerState0873 = cipherPacketBufferLocal10.readUnsignedShort(integerArgument1 + 3);
+          MixedSupport058.integerState0318 = cipherPacketBufferLocal10.readUnsignedMedium(integerArgument1 + 65280);
         }
-        stackIntegerLocal2 = (1 != cipherPacketBufferLocal10.computeInteger1904((byte) -32)) ? 0 : 1;
+        stackIntegerLocal2 = (1 != cipherPacketBufferLocal10.readUnsignedByte((byte) -32)) ? 0 : 1;
         integerLocal6 = stackIntegerLocal2;
-        ResourceSupport001.stringState0012 = cipherPacketBufferLocal10.computeString1901((byte) -38);
+        ResourceSupport001.stringState0012 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
         if (integerLocal6 == 0) {
           MixedSupport117.stringState0489 = ResourceSupport001.stringState0012;
         } else {
-          MixedSupport117.stringState0489 = cipherPacketBufferLocal10.computeString1901((byte) -38);
+          MixedSupport117.stringState0489 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
         }
         if (UiComponentPart019.integerState0505 == 1) {
-          ClientException.integerState0141 = cipherPacketBufferLocal10.computeInteger1907(3);
-          MixedSupport111.stringState0456 = cipherPacketBufferLocal10.computeString1901((byte) -38);
+          ClientException.integerState0141 = cipherPacketBufferLocal10.readUnsignedShort(3);
+          MixedSupport111.stringState0456 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
         } else {
           if (UiComponentPart019.integerState0505 != 4) {
             MixedSupport111.stringState0456 = null;
             ClientException.integerState0141 = 0;
           } else {
-            ClientException.integerState0141 = cipherPacketBufferLocal10.computeInteger1907(3);
-            MixedSupport111.stringState0456 = cipherPacketBufferLocal10.computeString1901((byte) -38);
+            ClientException.integerState0141 = cipherPacketBufferLocal10.readUnsignedShort(3);
+            MixedSupport111.stringState0456 = cipherPacketBufferLocal10.readNullTerminatedString((byte) -38);
           }
         }
         if (!booleanArgument2) {
-          UiComponentPart014.stringState0248 = MixedSupport081.computeString0982(80, 0, cipherPacketBufferLocal10);
+          UiComponentPart014.stringState0248 = MixedSupport081.computeString0977(80, 0, cipherPacketBufferLocal10);
           MixedSupport034.integerArrayState0043 = null;
           return new MixedSupport056(booleanArgument2);
         }
-        integerLocal7 = cipherPacketBufferLocal10.computeInteger1907(3);
+        integerLocal7 = cipherPacketBufferLocal10.readUnsignedShort(3);
         try {
-          networkSupport007Local11 = UiComponentPart033.networkSupport012State0001.computeNetworkSupport0071581(127, integerLocal7);
-          UiComponentPart014.stringState0248 = networkSupport007Local11.computeString1067((byte) -61);
+          networkSupport007Local11 = UiComponentPart033.networkSupport012State0001.computeNetworkSupport0071562(127, integerLocal7);
+          UiComponentPart014.stringState0248 = networkSupport007Local11.computeString1062((byte) -61);
           if (MixedSupport117.stringState0489.equals(MixedSupport094.stringState0372)) {
             stackIntegerArrayLocal3 = null;
           } else {
@@ -81,7 +81,7 @@ final class NetworkSupport005 extends HashNode {
         } catch (java.lang.Exception caughtParameterLocal12) {
           caughtExceptionLocal4 = caughtParameterLocal12;
           exceptionLocal8 = (Exception) (Object) caughtExceptionLocal4;
-          NetworkArchiveRequestManager.performAction1322((Throwable) ((Object) exceptionLocal8), 16408, "CC1");
+          NetworkArchiveRequestManager.performAction1316((Throwable) ((Object) exceptionLocal8), 16408, "CC1");
           UiComponentPart014.stringState0248 = null;
           MixedSupport034.integerArrayState0043 = null;
           return new MixedSupport056(booleanArgument2);
@@ -89,7 +89,7 @@ final class NetworkSupport005 extends HashNode {
         return new MixedSupport056(booleanArgument2);
     }
 
-    final static void performAction0930(byte byteArgument1, java.applet.Applet appletArgument2) {
+    final static void performAction0925(byte byteArgument1, java.applet.Applet appletArgument2) {
         try {
           java.net.URL uRLLocal1 = null;
           Exception exceptionLocal2 = null;
@@ -102,9 +102,9 @@ final class NetworkSupport005 extends HashNode {
             try {
               uRLLocal1 = new java.net.URL(appletArgument2.getCodeBase(), "toserverlist.ws");
               if (byteArgument1 != 96) {
-                NetworkSupport005.performAction0932((byte) 42);
+                NetworkSupport005.performAction0927((byte) 42);
               }
-              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0606(uRLLocal1, byteArgument1 ^ -97, appletArgument2), "_top");
+              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0602(uRLLocal1, byteArgument1 ^ -97, appletArgument2), "_top");
               return;
             } catch (java.lang.Exception caughtParameterLocal8) {
               caughtExceptionLocal7 = caughtParameterLocal8;
@@ -122,7 +122,7 @@ final class NetworkSupport005 extends HashNode {
             } else {
               stackStringLocal6 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal10) {
           throw uncheckedExceptionLocal10;
@@ -131,7 +131,7 @@ final class NetworkSupport005 extends HashNode {
         }
     }
 
-    public static void performAction0932(byte byteArgument1) {
+    public static void performAction0927(byte byteArgument1) {
         validationStatusState0003 = null;
         sceneWidgetPart008State0004 = null;
         stringState0313 = null;
@@ -140,7 +140,7 @@ final class NetworkSupport005 extends HashNode {
           return;
         }
         java.applet.Applet appletLocal1 = (java.applet.Applet) null;
-        NetworkSupport005.performAction0930((byte) 121, (java.applet.Applet) null);
+        NetworkSupport005.performAction0925((byte) 121, (java.applet.Applet) null);
         stringArrayState0019 = null;
     }
 

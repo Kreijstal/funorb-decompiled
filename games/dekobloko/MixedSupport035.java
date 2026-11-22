@@ -10,7 +10,7 @@ final class MixedSupport035 {
     static RgbSprite[][] rgbSpriteArrayArrayState0006;
     static int integerState0220;
 
-    public static void performAction0505(byte byteArgument1) {
+    public static void performAction0504(byte byteArgument1) {
         stringState0165 = null;
         sceneWidgetState0026 = null;
         colorState0001 = null;
@@ -20,12 +20,12 @@ final class MixedSupport035 {
           return;
         }
         int[] integerArrayLocal1 = (int[]) null;
-        MixedSupport035.computeBoolean0506(-7, 19, (int[]) null);
+        MixedSupport035.computeBoolean0505(-7, 19, (int[]) null);
         stringState0166 = null;
         rgbSpriteArrayArrayState0006 = (RgbSprite[][]) null;
     }
 
-    final static boolean computeBoolean0506(int integerArgument1, int integerArgument2, int[] integerArrayArgument3) {
+    final static boolean computeBoolean0505(int integerArgument1, int integerArgument2, int[] integerArrayArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         int[] integerArrayLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -36,7 +36,7 @@ final class MixedSupport035 {
         try {
           if (integerArgument2 != 10040319) {
             integerArrayLocal2 = (int[]) null;
-            MixedSupport035.computeBoolean0506(1, 103, (int[]) null);
+            MixedSupport035.computeBoolean0505(1, 103, (int[]) null);
           }
           stackBooleanLocal3 = ((integerArrayArgument3[integerArgument1 >> 5] & 1 << (31 & integerArgument1)) == 0);
           return stackBooleanLocal3;
@@ -50,7 +50,7 @@ final class MixedSupport035 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

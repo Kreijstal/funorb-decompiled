@@ -27,20 +27,20 @@ abstract class BitmapFont extends DualNode {
     private static int integerState0529;
     private static String[] stringArrayState0023;
 
-    final static String computeString1098(BitmapFont bitmapFontArgument1, String stringArgument2, int integerArgument3) {
+    final static String computeString1093(BitmapFont bitmapFontArgument1, String stringArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
         int integerLocal4;
         int integerLocal5;
-        if (bitmapFontArgument1.computeInteger1090(stringArgument2) <= integerArgument3) {
+        if (bitmapFontArgument1.computeInteger1085(stringArgument2) <= integerArgument3) {
           return stringArgument2;
         }
-        integerLocal2 = bitmapFontArgument1.computeInteger1090("...");
+        integerLocal2 = bitmapFontArgument1.computeInteger1085("...");
         integerLocal3 = integerArgument3 - integerLocal2;
         integerLocal4 = 0;
         for (integerLocal1 = 0; integerLocal1 < stringArgument2.length(); integerLocal1++) {
-          integerLocal5 = bitmapFontArgument1.computeInteger1088(stringArgument2.charAt(integerLocal1));
+          integerLocal5 = bitmapFontArgument1.computeInteger1083(stringArgument2.charAt(integerLocal1));
           if (integerLocal4 + integerLocal5 > integerLocal3) {
             return stringArgument2.substring(0, integerLocal1 - 1) + "...";
           }
@@ -49,7 +49,7 @@ abstract class BitmapFont extends DualNode {
         return null;
     }
 
-    private final static int computeInteger1101(byte[][] byteArrayArrayArgument1, byte[][] byteArrayArrayArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7) {
+    private final static int computeInteger1096(byte[][] byteArrayArrayArgument1, byte[][] byteArrayArrayArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -98,7 +98,7 @@ abstract class BitmapFont extends DualNode {
         return -integerLocal10;
     }
 
-    final int computeInteger1096(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11) {
+    final int computeInteger1091(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11) {
         int[] integerArrayLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -107,7 +107,7 @@ abstract class BitmapFont extends DualNode {
         if (stringArgument1 == null) {
           return 0;
         }
-        this.performAction1089(integerArgument6, integerArgument7, integerArgument8);
+        this.performAction1084(integerArgument6, integerArgument7, integerArgument8);
         if (integerArgument11 == 0) {
           integerArgument11 = this.integerState0516;
         }
@@ -116,7 +116,7 @@ abstract class BitmapFont extends DualNode {
           integerArgument5 < integerArgument11 + integerArgument11) {
           integerArrayLocal1 = null;
         }
-        integerLocal2 = this.computeInteger1097(stringArgument1, integerArrayLocal1, stringArrayState0023);
+        integerLocal2 = this.computeInteger1092(stringArgument1, integerArrayLocal1, stringArrayState0023);
         if (integerArgument10 == 3 &&
           integerLocal2 == 1) {
           integerArgument10 = 1;
@@ -144,30 +144,30 @@ abstract class BitmapFont extends DualNode {
             if (integerArgument9 != 1) {
               if (integerArgument9 != 2) {
                 if (integerLocal5 != integerLocal2 - 1) {
-                  this.performAction1109(stringArrayState0023[integerLocal5], integerArgument4);
-                  this.performAction1092(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
+                  this.performAction1104(stringArrayState0023[integerLocal5], integerArgument4);
+                  this.performAction1087(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
                   integerState0528 = 0;
                 } else {
-                  this.performAction1092(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
+                  this.performAction1087(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
                 }
                 integerLocal3 = integerLocal3 + integerArgument11;
               } else {
-                this.performAction1092(stringArrayState0023[integerLocal5], integerArgument2 + integerArgument4 - this.computeInteger1090(stringArrayState0023[integerLocal5]), integerLocal3);
+                this.performAction1087(stringArrayState0023[integerLocal5], integerArgument2 + integerArgument4 - this.computeInteger1085(stringArrayState0023[integerLocal5]), integerLocal3);
                 integerLocal3 = integerLocal3 + integerArgument11;
               }
             } else {
-              this.performAction1092(stringArrayState0023[integerLocal5], integerArgument2 + (integerArgument4 - this.computeInteger1090(stringArrayState0023[integerLocal5])) / 2, integerLocal3);
+              this.performAction1087(stringArrayState0023[integerLocal5], integerArgument2 + (integerArgument4 - this.computeInteger1085(stringArrayState0023[integerLocal5])) / 2, integerLocal3);
               integerLocal3 = integerLocal3 + integerArgument11;
             }
           } else {
-            this.performAction1092(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
+            this.performAction1087(stringArrayState0023[integerLocal5], integerArgument2, integerLocal3);
             integerLocal3 = integerLocal3 + integerArgument11;
           }
         }
         return integerLocal2;
     }
 
-    private final void performAction1089(int integerArgument1, int integerArgument2, int integerArgument3) {
+    private final void performAction1084(int integerArgument1, int integerArgument2, int integerArgument3) {
         integerState0525 = -1;
         integerState0520 = -1;
         integerState0522 = integerArgument2;
@@ -180,15 +180,15 @@ abstract class BitmapFont extends DualNode {
         integerState0521 = 0;
     }
 
-    final int computeInteger1104(String stringArgument1, int integerArgument2) {
+    final int computeInteger1099(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
         int integerLocal4;
-        integerLocal2 = this.computeInteger1097(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
+        integerLocal2 = this.computeInteger1092(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
         integerLocal3 = 0;
         for (integerLocal1 = 0; integerLocal1 < integerLocal2; integerLocal1++) {
-          integerLocal4 = this.computeInteger1090(stringArrayState0023[integerLocal1]);
+          integerLocal4 = this.computeInteger1085(stringArrayState0023[integerLocal1]);
           if (integerLocal4 > integerLocal3) {
             integerLocal3 = integerLocal4;
           }
@@ -196,7 +196,7 @@ abstract class BitmapFont extends DualNode {
         return integerLocal3;
     }
 
-    final int computeInteger1097(String stringArgument1, int[] integerArrayArgument2, String[] stringArrayArgument3) {
+    final int computeInteger1092(String stringArgument1, int[] integerArrayArgument2, String[] stringArrayArgument3) {
         int integerLocal1 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -225,7 +225,7 @@ abstract class BitmapFont extends DualNode {
         if (stringArgument1 == null) {
           return 0;
         }
-        MixedSupport144.computeStringBuilder1766(stringBuilderState0005, -23510, 0, ' ');
+        MixedSupport144.computeStringBuilder1746(stringBuilderState0005, -23510, 0, ' ');
         integerLocal10 = 0;
         integerLocal11 = 0;
         integerLocal12 = -1;
@@ -266,7 +266,7 @@ abstract class BitmapFont extends DualNode {
                                   }
                                 }
                               } else {
-                                integerLocal10 = integerLocal10 + this.computeInteger1088('®');
+                                integerLocal10 = integerLocal10 + this.computeInteger1083('®');
                                 if (this.byteArrayState0016 != null &&
                                   integerLocal16 != 0) {
                                   integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 174];
@@ -274,7 +274,7 @@ abstract class BitmapFont extends DualNode {
                                 integerLocal16 = 174;
                               }
                             } else {
-                              integerLocal10 = integerLocal10 + this.computeInteger1088('©');
+                              integerLocal10 = integerLocal10 + this.computeInteger1083('©');
                               if (this.byteArrayState0016 != null &&
                                 integerLocal16 != 0) {
                                 integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 169];
@@ -282,7 +282,7 @@ abstract class BitmapFont extends DualNode {
                               integerLocal16 = 169;
                             }
                           } else {
-                            integerLocal10 = integerLocal10 + this.computeInteger1088('€');
+                            integerLocal10 = integerLocal10 + this.computeInteger1083('€');
                             if (this.byteArrayState0016 != null &&
                               integerLocal16 != 0) {
                               integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 128];
@@ -290,7 +290,7 @@ abstract class BitmapFont extends DualNode {
                             integerLocal16 = 8364;
                           }
                         } else {
-                          integerLocal10 = integerLocal10 + this.computeInteger1088('×');
+                          integerLocal10 = integerLocal10 + this.computeInteger1083('×');
                           if (this.byteArrayState0016 != null &&
                             integerLocal16 != 0) {
                             integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 215];
@@ -298,7 +298,7 @@ abstract class BitmapFont extends DualNode {
                           integerLocal16 = 215;
                         }
                       } else {
-                        integerLocal10 = integerLocal10 + this.computeInteger1088('­');
+                        integerLocal10 = integerLocal10 + this.computeInteger1083('­');
                         if (this.byteArrayState0016 != null &&
                           integerLocal16 != 0) {
                           integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 173];
@@ -306,7 +306,7 @@ abstract class BitmapFont extends DualNode {
                         integerLocal16 = 173;
                       }
                     } else {
-                      integerLocal10 = integerLocal10 + this.computeInteger1088(' ');
+                      integerLocal10 = integerLocal10 + this.computeInteger1083(' ');
                       if (this.byteArrayState0016 != null &&
                         integerLocal16 != 0) {
                         integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 160];
@@ -314,7 +314,7 @@ abstract class BitmapFont extends DualNode {
                       integerLocal16 = 160;
                     }
                   } else {
-                    integerLocal10 = integerLocal10 + this.computeInteger1088('>');
+                    integerLocal10 = integerLocal10 + this.computeInteger1083('>');
                     if (this.byteArrayState0016 != null &&
                       integerLocal16 != 0) {
                       integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 62];
@@ -322,7 +322,7 @@ abstract class BitmapFont extends DualNode {
                     integerLocal16 = 62;
                   }
                 } else {
-                  integerLocal10 = integerLocal10 + this.computeInteger1088('<');
+                  integerLocal10 = integerLocal10 + this.computeInteger1083('<');
                   if (this.byteArrayState0016 != null &&
                     integerLocal16 != 0) {
                     integerLocal10 = integerLocal10 + this.byteArrayState0016[(integerLocal16 << 8) + 60];
@@ -342,7 +342,7 @@ abstract class BitmapFont extends DualNode {
             if (integerLocal15 == -1) {
               if (integerLocal19 != 0) {
                 discarded$3 = stringBuilderState0005.append((char) integerLocal19);
-                integerLocal19 = (char)(MixedSupport064.computeByte0767((char) integerLocal19, (byte) 28) & 255);
+                integerLocal19 = (char)(MixedSupport064.computeByte0763((char) integerLocal19, (byte) 28) & 255);
                 integerLocal10 = integerLocal10 + this.integerArrayState0160[integerLocal19];
                 if (this.byteArrayState0016 != null &&
                   integerLocal16 != 0) {
@@ -390,7 +390,7 @@ abstract class BitmapFont extends DualNode {
         return integerLocal17;
     }
 
-    private final void performAction1092(String stringArgument1, int integerArgument2, int integerArgument3) {
+    private final void performAction1087(String stringArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         Throwable caughtExceptionLocal3 = null;
@@ -427,7 +427,7 @@ abstract class BitmapFont extends DualNode {
                           if (!stringLocal8.equals("copy")) {
                             if (!stringLocal8.equals("reg")) {
                               if (!stringLocal8.startsWith("img=")) {
-                                this.performAction1103(stringLocal8);
+                                this.performAction1098(stringLocal8);
                               } else {
                                 try {
                                   charSequenceLocal15 = (CharSequence) ((Object) stringLocal8.substring(4));
@@ -440,9 +440,9 @@ abstract class BitmapFont extends DualNode {
                                   }
                                   integerLocal14 = stackIntegerLocal2;
                                   if (integerState0527 != 256) {
-                                    spriteLocal12.performAction0957(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14, integerState0527);
+                                    spriteLocal12.performAction0952(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14, integerState0527);
                                   } else {
-                                    spriteLocal12.performAction0956(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14);
+                                    spriteLocal12.performAction0951(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14);
                                   }
                                   integerArgument2 = integerArgument2 + spriteLocal12.integerState0422;
                                   integerLocal5 = 0;
@@ -480,7 +480,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((frameRemainderLocal16) &&
               (integerLocal4 == -1)) {
-              integerLocal7 = (char)(MixedSupport064.computeByte0767((char) integerLocal7, (byte) 28) & 255);
+              integerLocal7 = (char)(MixedSupport064.computeByte0763((char) integerLocal7, (byte) 28) & 255);
               if (this.byteArrayState0016 != null &&
                 integerLocal5 != 0) {
                 integerArgument2 = integerArgument2 + this.byteArrayState0016[(integerLocal5 << 8) + integerLocal7];
@@ -497,22 +497,22 @@ abstract class BitmapFont extends DualNode {
               } else {
                 if (integerState0527 != 256) {
                   if (integerState0519 != -1) {
-                    this.performAction1027(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7] + 1, integerArgument3 + this.integerArrayState0161[integerLocal7] + 1, integerLocal9, integerLocal10, integerState0519, integerState0527, true);
+                    this.performAction1022(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7] + 1, integerArgument3 + this.integerArrayState0161[integerLocal7] + 1, integerLocal9, integerLocal10, integerState0519, integerState0527, true);
                   }
-                  this.performAction1027(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7], integerArgument3 + this.integerArrayState0161[integerLocal7], integerLocal9, integerLocal10, integerState0526, integerState0527, false);
+                  this.performAction1022(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7], integerArgument3 + this.integerArrayState0161[integerLocal7], integerLocal9, integerLocal10, integerState0526, integerState0527, false);
                 } else {
                   if (integerState0519 != -1) {
-                    this.performAction1028(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7] + 1, integerArgument3 + this.integerArrayState0161[integerLocal7] + 1, integerLocal9, integerLocal10, integerState0519, true);
+                    this.performAction1023(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7] + 1, integerArgument3 + this.integerArrayState0161[integerLocal7] + 1, integerLocal9, integerLocal10, integerState0519, true);
                   }
-                  this.performAction1028(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7], integerArgument3 + this.integerArrayState0161[integerLocal7], integerLocal9, integerLocal10, integerState0526, false);
+                  this.performAction1023(integerLocal7, integerArgument2 + this.integerArrayState0164[integerLocal7], integerArgument3 + this.integerArrayState0161[integerLocal7], integerLocal9, integerLocal10, integerState0526, false);
                 }
               }
               integerArgument2 = integerArgument2 + this.integerArrayState0160[integerLocal7];
               if (integerState0525 != -1) {
-                SoftwareRaster.performAction0652(integerLocal13, integerArgument3 + (int)((double)this.integerState0516 * 0.7), integerArgument2 - integerLocal13, integerState0525);
+                SoftwareRaster.performAction0648(integerLocal13, integerArgument3 + (int)((double)this.integerState0516 * 0.7), integerArgument2 - integerLocal13, integerState0525);
               }
               if (integerState0520 != -1) {
-                SoftwareRaster.performAction0652(integerLocal13, integerArgument3 + this.integerState0516 + 1, integerArgument2 - integerLocal13, integerState0520);
+                SoftwareRaster.performAction0648(integerLocal13, integerArgument3 + this.integerState0516 + 1, integerArgument2 - integerLocal13, integerState0520);
               }
               integerLocal5 = integerLocal7;
             }
@@ -522,11 +522,11 @@ abstract class BitmapFont extends DualNode {
         }
     }
 
-    final int computeInteger1088(char characterArgument1) {
-        return this.integerArrayState0160[MixedSupport064.computeByte0767(characterArgument1, (byte) 28) & 255];
+    final int computeInteger1083(char characterArgument1) {
+        return this.integerArrayState0160[MixedSupport064.computeByte0763(characterArgument1, (byte) 28) & 255];
     }
 
-    final int computeInteger1090(String stringArgument1) {
+    final int computeInteger1085(String stringArgument1) {
         int integerLocal1 = 0;
         Throwable caughtExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -601,7 +601,7 @@ abstract class BitmapFont extends DualNode {
             }
             if ((frameRemainderLocal12) &&
               (integerLocal3 == -1)) {
-              integerLocal7 = (char)(MixedSupport064.computeByte0767((char) integerLocal7, (byte) 28) & 255);
+              integerLocal7 = (char)(MixedSupport064.computeByte0763((char) integerLocal7, (byte) 28) & 255);
               integerLocal5 = integerLocal5 + this.integerArrayState0160[integerLocal7];
               if (this.byteArrayState0016 != null &&
                 integerLocal4 != 0) {
@@ -616,7 +616,7 @@ abstract class BitmapFont extends DualNode {
         return integerLocal5;
     }
 
-    final void performAction1100(Sprite[] spriteArrayArgument1, int[] integerArrayArgument2) {
+    final void performAction1095(Sprite[] spriteArrayArgument1, int[] integerArrayArgument2) {
         if (integerArrayArgument2 != null &&
           integerArrayArgument2.length != spriteArrayArgument1.length) {
           throw new IllegalArgumentException();
@@ -625,7 +625,7 @@ abstract class BitmapFont extends DualNode {
         this.integerArrayState0162 = integerArrayArgument2;
     }
 
-    private final void performAction1103(String stringArgument1) {
+    private final void performAction1098(String stringArgument1) {
         Throwable caughtExceptionLocal1 = null;
         Exception exceptionLocal2 = null;
         CharSequence charSequenceLocal3 = null;
@@ -648,7 +648,7 @@ abstract class BitmapFont extends DualNode {
                                 if (!stringArgument1.equals("shad")) {
                                   if (!stringArgument1.equals("/shad")) {
                                     if (stringArgument1.equals("br")) {
-                                      this.performAction1089(integerState0529, integerState0522, integerState0524);
+                                      this.performAction1084(integerState0529, integerState0522, integerState0524);
                                     }
                                   } else {
                                     integerState0519 = integerState0522;
@@ -700,17 +700,17 @@ abstract class BitmapFont extends DualNode {
         }
     }
 
-    final void performAction1106(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction1101(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1102(integerArgument4, integerArgument5);
-        this.performAction1092(stringArgument1, integerArgument2 - this.computeInteger1090(stringArgument1) / 2, integerArgument3);
+        this.performAction1097(integerArgument4, integerArgument5);
+        this.performAction1087(stringArgument1, integerArgument2 - this.computeInteger1085(stringArgument1) / 2, integerArgument3);
     }
 
-    abstract void performAction1027(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8);
+    abstract void performAction1022(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8);
 
-    private final void performAction1102(int integerArgument1, int integerArgument2) {
+    private final void performAction1097(int integerArgument1, int integerArgument2) {
         integerState0525 = -1;
         integerState0520 = -1;
         integerState0522 = integerArgument2;
@@ -723,15 +723,15 @@ abstract class BitmapFont extends DualNode {
         integerState0521 = 0;
     }
 
-    final void performAction1093(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction1088(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1102(integerArgument4, integerArgument5);
-        this.performAction1092(stringArgument1, integerArgument2, integerArgument3);
+        this.performAction1097(integerArgument4, integerArgument5);
+        this.performAction1087(stringArgument1, integerArgument2, integerArgument3);
     }
 
-    private final void performAction1099(byte[] byteArrayArgument1) {
+    private final void performAction1094(byte[] byteArrayArgument1) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -827,7 +827,7 @@ abstract class BitmapFont extends DualNode {
               for (integerLocal29 = 0; integerLocal29 < 256; integerLocal29++) {
                 if (integerLocal29 != 32 &&
                   integerLocal29 != 160) {
-                  this.byteArrayState0016[(integerLocal31 << 8) + integerLocal29] = (byte)BitmapFont.computeInteger1101(byteArrayArrayLocal24, byteArrayArrayLocal25, integerArrayLocal26, this.integerArrayState0160, integerArrayLocal23, integerLocal31, integerLocal29);
+                  this.byteArrayState0016[(integerLocal31 << 8) + integerLocal29] = (byte)BitmapFont.computeInteger1096(byteArrayArrayLocal24, byteArrayArrayLocal25, integerArrayLocal26, this.integerArrayState0160, integerArrayLocal23, integerLocal31, integerLocal29);
                 }
               }
             }
@@ -836,43 +836,43 @@ abstract class BitmapFont extends DualNode {
         }
     }
 
-    abstract void performAction1028(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7);
+    abstract void performAction1023(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7);
 
-    final int computeInteger1095(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
-        return this.computeInteger1096(stringArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6, integerArgument7, 256, integerArgument8, integerArgument9, integerArgument10);
+    final int computeInteger1090(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+        return this.computeInteger1091(stringArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6, integerArgument7, 256, integerArgument8, integerArgument9, integerArgument10);
     }
 
-    final void performAction1107(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final void performAction1102(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1089(integerArgument4, integerArgument5, integerArgument6);
-        this.performAction1092(stringArgument1, integerArgument2 - this.computeInteger1090(stringArgument1) / 2, integerArgument3);
+        this.performAction1084(integerArgument4, integerArgument5, integerArgument6);
+        this.performAction1087(stringArgument1, integerArgument2 - this.computeInteger1085(stringArgument1) / 2, integerArgument3);
     }
 
-    final void performAction1094(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final void performAction1089(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1089(integerArgument4, integerArgument5, integerArgument6);
-        this.performAction1092(stringArgument1, integerArgument2 - this.computeInteger1090(stringArgument1), integerArgument3);
+        this.performAction1084(integerArgument4, integerArgument5, integerArgument6);
+        this.performAction1087(stringArgument1, integerArgument2 - this.computeInteger1085(stringArgument1), integerArgument3);
     }
 
-    final int computeInteger1105(String stringArgument1, int integerArgument2, int integerArgument3) {
+    final int computeInteger1100(String stringArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument3 == 0) {
           integerArgument3 = this.integerState0516;
         }
-        int integerLocal1 = this.computeInteger1097(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
+        int integerLocal1 = this.computeInteger1092(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
         int integerLocal2 = (integerLocal1 - 1) * integerArgument3;
         return this.integerState0518 + integerLocal2 + this.integerState0523;
     }
 
-    final void performAction1110(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction1105(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1102(integerArgument4, integerArgument5);
-        this.performAction1092(stringArgument1, integerArgument2 - this.computeInteger1090(stringArgument1), integerArgument3);
+        this.performAction1097(integerArgument4, integerArgument5);
+        this.performAction1087(stringArgument1, integerArgument2 - this.computeInteger1085(stringArgument1), integerArgument3);
     }
 
     public static void clearStaticReferences() {
@@ -880,19 +880,19 @@ abstract class BitmapFont extends DualNode {
         stringArrayState0023 = null;
     }
 
-    final int computeInteger1091(String stringArgument1, int integerArgument2) {
-        return this.computeInteger1097(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
+    final int computeInteger1086(String stringArgument1, int integerArgument2) {
+        return this.computeInteger1092(stringArgument1, new int[]{integerArgument2}, stringArrayState0023);
     }
 
-    final void performAction1111(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final void performAction1106(String stringArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         if (stringArgument1 == null) {
           return;
         }
-        this.performAction1089(integerArgument4, integerArgument5, integerArgument6);
-        this.performAction1092(stringArgument1, integerArgument2, integerArgument3);
+        this.performAction1084(integerArgument4, integerArgument5, integerArgument6);
+        this.performAction1087(stringArgument1, integerArgument2, integerArgument3);
     }
 
-    private final void performAction1109(String stringArgument1, int integerArgument2) {
+    private final void performAction1104(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -917,11 +917,11 @@ abstract class BitmapFont extends DualNode {
           }
         }
         if (integerLocal2 > 0) {
-          integerState0528 = (integerArgument2 - this.computeInteger1090(stringArgument1) << 8) / integerLocal2;
+          integerState0528 = (integerArgument2 - this.computeInteger1085(stringArgument1) << 8) / integerLocal2;
         }
     }
 
-    final static String computeString1108(String stringArgument1) {
+    final static String computeString1103(String stringArgument1) {
         int integerLocal1 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -969,7 +969,7 @@ abstract class BitmapFont extends DualNode {
         this.integerArrayState0161 = integerArrayArgument3;
         this.integerArrayState0163 = integerArrayArgument4;
         this.integerArrayState0159 = integerArrayArgument5;
-        this.performAction1099(byteArrayArgument1);
+        this.performAction1094(byteArrayArgument1);
         integerLocal2 = 2147483647;
         integerLocal3 = -2147483648;
         for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {

@@ -18,7 +18,7 @@ abstract class NetworkSupport003 {
     byte byteState0001;
     ResourceSupport004 resourceSupport004State0001;
 
-    final static String computeString0353(String stringArgument1, int integerArgument2, int integerArgument3) {
+    final static String computeString0352(String stringArgument1, int integerArgument2, int integerArgument3) {
         String stackStringLocal1 = null;
         String stackStringLocal2 = null;
         String stackStringLocal3 = null;
@@ -37,11 +37,11 @@ abstract class NetworkSupport003 {
         CharSequence charSequenceLocal16 = null;
         try {
           charSequenceLocal16 = (CharSequence) ((Object) stringArgument1);
-          if (!MixedSupport023.computeBoolean0342(charSequenceLocal16, (byte) -70)) {
+          if (!MixedSupport023.computeBoolean0341(charSequenceLocal16, (byte) -70)) {
             stackStringLocal1 = RenderingSupport003.stringState0199;
             return stackStringLocal1;
           }
-          if (MixedSupport070.computeBoolean0851(stringArgument1, true)) {
+          if (MixedSupport070.computeBoolean0846(stringArgument1, true)) {
             stackStringLocal2 = NodeHashTable.stringState0506;
             return stackStringLocal2;
           }
@@ -49,7 +49,7 @@ abstract class NetworkSupport003 {
             stackStringLocal3 = RenderingSupport013.stringState0441;
             return stackStringLocal3;
           }
-          if (MixedSupport063.computeBoolean0752(stringArgument1, (byte) -118)) {
+          if (MixedSupport063.computeBoolean0748(stringArgument1, (byte) -118)) {
             stackStringLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(114, UiComponentPart023.stringState0422, new String[]{stringArgument1});
             return stackStringLocal4;
           }
@@ -57,18 +57,18 @@ abstract class NetworkSupport003 {
             stackStringLocal5 = UiComponentPart004.stringState0065;
             return stackStringLocal5;
           }
-          if (RenderingSupport013.computeBoolean1378(stringArgument1, 3)) {
+          if (RenderingSupport013.computeBoolean1372(stringArgument1, 3)) {
             stackStringLocal6 = NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport092.stringState0369, new String[]{stringArgument1});
             return stackStringLocal6;
           }
           cipherPacketBufferLocal15 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal15.performAction1691(integerArgument3, -4);
+          cipherPacketBufferLocal15.performAction1672(integerArgument3, -4);
           cipherPacketBufferLocal15.position = cipherPacketBufferLocal15.position + 1;
           integerLocal13 = -88 % ((integerArgument2 - 84) / 41);
           integerLocal14 = cipherPacketBufferLocal15.position;
-          cipherPacketBufferLocal15.performAction1892(true, 2);
-          cipherPacketBufferLocal15.performAction1885(0, stringArgument1);
-          cipherPacketBufferLocal15.performAction1898(cipherPacketBufferLocal15.position - integerLocal14, true);
+          cipherPacketBufferLocal15.writeByte(true, 2);
+          cipherPacketBufferLocal15.writeNullTerminatedString(0, stringArgument1);
+          cipherPacketBufferLocal15.writeLengthByte(cipherPacketBufferLocal15.position - integerLocal14, true);
           stackObjectLocal7 = null;
           return (String) (stackObjectLocal7);
         } catch (java.lang.RuntimeException caughtParameterLocal17) {
@@ -81,13 +81,13 @@ abstract class NetworkSupport003 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    abstract void performAction0346(Object objectArgument1, byte byteArgument2, boolean booleanArgument3);
+    abstract void performAction0345(Object objectArgument1, byte byteArgument2, boolean booleanArgument3);
 
-    final int computeInteger0354(byte byteArgument1) {
+    final int computeInteger0353(byte byteArgument1) {
         if (byteArgument1 < -73) {
           return this.dualNodeDequeState0001.computeInteger0029(0) + this.dualNodeDequeState0002.computeInteger0029(0);
         }
@@ -95,7 +95,7 @@ abstract class NetworkSupport003 {
         return this.dualNodeDequeState0001.computeInteger0029(0) + this.dualNodeDequeState0002.computeInteger0029(0);
     }
 
-    final static void performAction0347(String stringArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction0346(String stringArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -116,11 +116,11 @@ abstract class NetworkSupport003 {
               } else {
                 stringArgument1 = MixedSupport024.stringState0115;
               }
-              MixedSupport025.uiComponentPart013State0001.performAction0635(SceneWidgetPart004.stringState0217, 30534);
+              MixedSupport025.uiComponentPart013State0001.performAction0631(SceneWidgetPart004.stringState0217, 30534);
             }
             if (integerArgument3 == 10) {
               integerLocal1 = 0;
-              NodeHashTable.performAction1553(-31842);
+              NodeHashTable.performAction1534(-31842);
             }
             if (integerLocal1 != 0) {
               if (SceneWidgetPart012.booleanState0188) {
@@ -129,19 +129,19 @@ abstract class NetworkSupport003 {
               if (MixedSupport023.booleanState0025) {
                 stringArgument1 = MixedSupport114.stringState0477;
               }
-              MixedSupport020.uiComponentPart012State0001.performAction0596((byte) 48, stringArgument1, integerArgument3);
+              MixedSupport020.uiComponentPart012State0001.performAction0592((byte) 48, stringArgument1, integerArgument3);
             }
             if (integerArgument3 != 256 &&
               integerArgument3 != 10 &&
               !UiComponentPart032.booleanState0198) {
-              MixedSupport025.uiComponentPart013State0001.performAction0631(51);
+              MixedSupport025.uiComponentPart013State0001.performAction0627(51);
             }
           }
           if (integerArgument2 == 0) {
             return;
           }
           stringLocal3 = (String) null;
-          NetworkSupport003.computeString0353((String) null, 52, 86);
+          NetworkSupport003.computeString0352((String) null, 52, 86);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -153,21 +153,21 @@ abstract class NetworkSupport003 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    abstract void performAction0356(byte byteArgument1);
+    abstract void performAction0355(byte byteArgument1);
 
-    final boolean computeBoolean0352(int integerArgument1) {
+    final boolean computeBoolean0351(int integerArgument1) {
         if (integerArgument1 == 0) {
-          return this.computeInteger0355(0) >= 20 ? true : false;
+          return this.computeInteger0354(0) >= 20 ? true : false;
         }
         this.integerState0132 = -70;
-        return this.computeInteger0355(0) >= 20 ? true : false;
+        return this.computeInteger0354(0) >= 20 ? true : false;
     }
 
-    final ResourceSupport004 computeResourceSupport0040349(boolean booleanArgument1, byte byteArgument2, boolean booleanArgument3, int integerArgument4, int integerArgument5) {
+    final ResourceSupport004 computeResourceSupport0040348(boolean booleanArgument1, byte byteArgument2, boolean booleanArgument3, int integerArgument4, int integerArgument5) {
         long longLocal1 = ((long)integerArgument4 << 32) + (long)integerArgument5;
         if (!booleanArgument3) {
           return (ResourceSupport004) null;
@@ -177,12 +177,12 @@ abstract class NetworkSupport003 {
         resourceSupport004Local2.booleanState0172 = booleanArgument1 ? true : false;
         resourceSupport004Local2.byteState0003 = byteArgument2;
         if (booleanArgument1) {
-          if (!(this.computeInteger0354((byte) -109) < 20)) {
+          if (!(this.computeInteger0353((byte) -109) < 20)) {
             throw new RuntimeException();
           }
           this.dualNodeDequeState0001.performAction0031(resourceSupport004Local2, -7267);
         } else {
-          if (!(20 > this.computeInteger0355(0))) {
+          if (!(20 > this.computeInteger0354(0))) {
             throw new RuntimeException();
           }
           this.dualNodeDequeState0003.performAction0031(resourceSupport004Local2, -7267);
@@ -190,9 +190,9 @@ abstract class NetworkSupport003 {
         return resourceSupport004Local2;
     }
 
-    abstract boolean computeBoolean0344(byte byteArgument1);
+    abstract boolean computeBoolean0343(byte byteArgument1);
 
-    final int computeInteger0355(int integerArgument1) {
+    final int computeInteger0354(int integerArgument1) {
         if (integerArgument1 == 0) {
           return this.dualNodeDequeState0003.computeInteger0029(0) + this.dualNodeDequeState0004.computeInteger0029(0);
         }
@@ -200,35 +200,35 @@ abstract class NetworkSupport003 {
         return this.dualNodeDequeState0003.computeInteger0029(0) + this.dualNodeDequeState0004.computeInteger0029(0);
     }
 
-    final static void performAction0350(boolean booleanArgument1, boolean booleanArgument2, byte byteArgument3) {
+    final static void performAction0349(boolean booleanArgument1, boolean booleanArgument2, byte byteArgument3) {
         String stringLocal1 = null;
         String stringLocal2;
         if (byteArgument3 == 66) {
           stringLocal1 = (String) null;
-          MixedSupport112.performAction1438(booleanArgument1, -85, (String) null, booleanArgument2);
+          MixedSupport112.performAction1429(booleanArgument1, -85, (String) null, booleanArgument2);
           return;
         }
         sceneWidgetState0018 = (SceneWidget) null;
         stringLocal2 = (String) null;
-        MixedSupport112.performAction1438(booleanArgument1, -85, (String) null, booleanArgument2);
+        MixedSupport112.performAction1429(booleanArgument1, -85, (String) null, booleanArgument2);
     }
 
-    public static void performAction0351(byte byteArgument1) {
+    public static void performAction0350(byte byteArgument1) {
         sceneWidgetState0018 = null;
         stringState0107 = null;
         integerArrayState0031 = null;
         int integerLocal1 = -6 % ((-1 - byteArgument1) / 47);
     }
 
-    final boolean computeBoolean0348(boolean booleanArgument1) {
+    final boolean computeBoolean0347(boolean booleanArgument1) {
         if (booleanArgument1) {
-          return this.computeInteger0354((byte) -95) >= 20 ? true : false;
+          return this.computeInteger0353((byte) -95) >= 20 ? true : false;
         }
         this.packetBufferState0002 = (PacketBuffer) null;
-        return this.computeInteger0354((byte) -95) >= 20 ? true : false;
+        return this.computeInteger0353((byte) -95) >= 20 ? true : false;
     }
 
-    abstract void performAction0345(int integerArgument1);
+    abstract void performAction0344(int integerArgument1);
 
     NetworkSupport003() {
         this.dualNodeDequeState0001 = new DualNodeDeque();

@@ -61,12 +61,12 @@ final class NodeHashTableIterator implements Iterator {
           if (byteArgument1 != 53) {
             NodeHashTableIterator.clearStaticReferences(20);
           }
-          integerLocal4 = cipherPacketBufferLocal12.computeInteger1904((byte) -44);
-          integerLocal5 = cipherPacketBufferLocal12.computeInteger1904((byte) -117);
+          integerLocal4 = cipherPacketBufferLocal12.readUnsignedByte((byte) -44);
+          integerLocal5 = cipherPacketBufferLocal12.readUnsignedByte((byte) -117);
           if (integerLocal4 == 0) {
-            mixedSupport118Local7 = (MixedSupport118) (UiComponentPart010.nodeDequeState0008.computeHashNode1792((byte) -68));
+            mixedSupport118Local7 = (MixedSupport118) (UiComponentPart010.nodeDequeState0008.computeHashNode1772((byte) -68));
             if (mixedSupport118Local7 == null) {
-              NodeHashTable.performAction1544(78);
+              NodeHashTable.performAction1525(78);
               return;
             }
             integerLocal9 = NetworkSupport012.integerState0759 - cipherPacketBufferLocal12.position;
@@ -77,37 +77,37 @@ final class NodeHashTableIterator implements Iterator {
               integerLocal9 = integerArrayLocal14.length << 2;
             }
             for (integerLocal1 = 0; integerLocal1 < integerLocal9; integerLocal1++) {
-              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.computeInteger1904((byte) -108) << (MixedSupport079.computeInteger0954(3, integerLocal1) << 8));
+              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.readUnsignedByte((byte) -108) << (MixedSupport079.computeInteger0949(3, integerLocal1) << 8));
             }
             mixedSupport118Local7.booleanState0168 = true;
             mixedSupport118Local7.performAction0149((byte) 118);
             return;
           }
           if (integerLocal4 == 1) {
-            integerLocal6 = cipherPacketBufferLocal12.computeInteger1906((byte) -2);
-            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1792((byte) -124));
+            integerLocal6 = cipherPacketBufferLocal12.readSignedSmart((byte) -2);
+            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1772((byte) -124));
             while (mixedSupport038Local8 != null) {
               if (integerLocal5 != mixedSupport038Local8.integerState0230 ||
                 integerLocal6 != mixedSupport038Local8.integerState0227) {
-                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1796(true));
+                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1776(true));
                 continue;
               }
               break;
             }
             if (mixedSupport038Local8 == null) {
-              NodeHashTable.performAction1544(71);
+              NodeHashTable.performAction1525(71);
               return;
             }
             mixedSupport038Local8.performAction0149((byte) 124);
             return;
           }
-          NetworkArchiveRequestManager.performAction1322((Throwable) null, 16408, "LR1: " + BufferedSocket.computeString1412((byte) 74));
-          NodeHashTable.performAction1544(100);
+          NetworkArchiveRequestManager.performAction1316((Throwable) null, 16408, "LR1: " + BufferedSocket.computeString1406((byte) 74));
+          NodeHashTable.performAction1525(100);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal2 = caughtParameterLocal15;
           runtimeExceptionLocal3 = caughtExceptionLocal2;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal3), "cm.A(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal3), "cm.A(" + byteArgument1 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class NodeHashTableIterator implements Iterator {
             integerLocal15 = stringArgument2.indexOf("<%", integerLocal14);
             if (integerLocal15 >= 0) {
               for (integerLocal14 = 2 + integerLocal15; integerLocal14 < integerLocal11; integerLocal14++) {
-                if (MixedSupport042.computeBoolean0541(stringArgument2.charAt(integerLocal14), (byte) 23)) {
+                if (MixedSupport042.computeBoolean0537(stringArgument2.charAt(integerLocal14), (byte) 23)) {
                   continue;
                 }
                 break;
@@ -232,7 +232,7 @@ final class NodeHashTableIterator implements Iterator {
               return stackStringLocal4;
             }
             for (integerLocal23 = integerLocal24 + 2; integerLocal11 > integerLocal23; integerLocal23++) {
-              if (MixedSupport042.computeBoolean0541(stringArgument2.charAt(integerLocal23), (byte) 23)) {
+              if (MixedSupport042.computeBoolean0537(stringArgument2.charAt(integerLocal23), (byte) 23)) {
                 continue;
               }
               break;
@@ -269,7 +269,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class NodeHashTableIterator implements Iterator {
           this.nodeHashTableState0001 = nodeHashTableArgument1;
           this.reset((byte) -117);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "cm.<init>(" + (nodeHashTableArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "cm.<init>(" + (nodeHashTableArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -297,23 +297,23 @@ final class NodeHashTableIterator implements Iterator {
         for (integerLocal1 = 0; integerLocal1 < 15; integerLocal1++) {
           integerArrayLocal2 = integerArrayState0025;
           integerLocal3 = integerLocal1;
-          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.computeInteger0358(integerArrayLocal2[integerLocal3 >> 5], 1 << MixedSupport079.computeInteger0954(integerLocal3, 31));
+          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.computeInteger0357(integerArrayLocal2[integerLocal3 >> 5], 1 << MixedSupport079.computeInteger0949(integerLocal3, 31));
         }
         for (integerLocal5 = 15; 31 > integerLocal5; integerLocal5++) {
           integerArrayLocal4 = integerArrayState0026;
           integerLocal6 = integerLocal5;
-          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.computeInteger0358(integerArrayLocal4[integerLocal6 >> 5], 1 << MixedSupport079.computeInteger0954(31, integerLocal6));
+          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.computeInteger0357(integerArrayLocal4[integerLocal6 >> 5], 1 << MixedSupport079.computeInteger0949(31, integerLocal6));
         }
         int[] integerArrayLocal7 = integerArrayState0027;
-        integerArrayLocal7[0] = UiComponentPart006.computeInteger0358(integerArrayLocal7[0], 8);
+        integerArrayLocal7[0] = UiComponentPart006.computeInteger0357(integerArrayLocal7[0], 8);
         int[] integerArrayLocal8 = integerArrayState0027;
-        integerArrayLocal8[0] = UiComponentPart006.computeInteger0358(integerArrayLocal8[0], 128);
+        integerArrayLocal8[0] = UiComponentPart006.computeInteger0357(integerArrayLocal8[0], 128);
         int[] integerArrayLocal9 = integerArrayState0027;
-        integerArrayLocal9[0] = UiComponentPart006.computeInteger0358(integerArrayLocal9[0], 4194304);
+        integerArrayLocal9[0] = UiComponentPart006.computeInteger0357(integerArrayLocal9[0], 4194304);
         int[] integerArrayLocal10 = integerArrayState0028;
-        integerArrayLocal10[0] = UiComponentPart006.computeInteger0358(integerArrayLocal10[0], 1);
+        integerArrayLocal10[0] = UiComponentPart006.computeInteger0357(integerArrayLocal10[0], 1);
         int[] integerArrayLocal11 = integerArrayState0028;
-        integerArrayLocal11[0] = UiComponentPart006.computeInteger0358(integerArrayLocal11[0], 2048);
+        integerArrayLocal11[0] = UiComponentPart006.computeInteger0357(integerArrayLocal11[0], 2048);
         stringState0098 = "Creating your account";
         stringState0099 = "Connection lost. <%0>";
     }
@@ -353,7 +353,7 @@ final class NodeHashTableIterator implements Iterator {
             integerLocal15 = stringArgument2.indexOf("<%", integerLocal14);
             if (integerLocal15 >= 0) {
               for (integerLocal14 = 2 + integerLocal15; integerLocal14 < integerLocal11; integerLocal14++) {
-                if (MixedSupport042.computeBoolean0541(stringArgument2.charAt(integerLocal14), (byte) 23)) {
+                if (MixedSupport042.computeBoolean0537(stringArgument2.charAt(integerLocal14), (byte) 23)) {
                   continue;
                 }
                 break;
@@ -389,7 +389,7 @@ final class NodeHashTableIterator implements Iterator {
               return stackStringLocal4;
             }
             for (integerLocal23 = integerLocal24 + 2; integerLocal11 > integerLocal23; integerLocal23++) {
-              if (MixedSupport042.computeBoolean0541(stringArgument2.charAt(integerLocal23), (byte) 23)) {
+              if (MixedSupport042.computeBoolean0537(stringArgument2.charAt(integerLocal23), (byte) 23)) {
                 continue;
               }
               break;
@@ -426,7 +426,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 }

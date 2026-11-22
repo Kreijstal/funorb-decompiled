@@ -30,15 +30,15 @@ final class MixedSupport069 extends TextFieldValidator {
         try {
           if (byteArgument2 != -40) {
             stringLocal3 = (String) null;
-            MixedSupport069.computeString0846('�', (String) null, (String) null, 32);
+            MixedSupport069.computeString0841('�', (String) null, (String) null, 32);
           }
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
-          if (!MixedSupport113.computeBoolean1454(charSequenceLocal4, byteArgument2 ^ 27418)) {
+          if (!MixedSupport113.computeBoolean1445(charSequenceLocal4, byteArgument2 ^ 27418)) {
             stackValidationStatusLocal5 = MixedSupport149.validationStatusState0005;
             return stackValidationStatusLocal5;
           }
           if (!stringArgument1.equals(this.stringState0290)) {
-            mixedSupport016Local1 = MixedSupport033.computeMixedSupport0160497(byteArgument2 - 11039, stringArgument1);
+            mixedSupport016Local1 = MixedSupport033.computeMixedSupport0160496(byteArgument2 - 11039, stringArgument1);
             if (mixedSupport016Local1 != null &&
               null == mixedSupport016Local1.stringState0075) {
               this.booleanState0089 = mixedSupport016Local1.booleanState0014;
@@ -64,11 +64,11 @@ final class MixedSupport069 extends TextFieldValidator {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final void performAction0848(boolean booleanArgument1) {
+    final void performAction0843(boolean booleanArgument1) {
         if (!booleanArgument1) {
           this.booleanState0089 = true;
           this.stringState0290 = null;
@@ -77,26 +77,26 @@ final class MixedSupport069 extends TextFieldValidator {
         this.stringState0290 = null;
     }
 
-    final static void performAction0847(int integerArgument1, boolean booleanArgument2) {
+    final static void performAction0842(int integerArgument1, boolean booleanArgument2) {
         if (integerArgument1 != 0) {
           String stringLocal1 = (String) null;
-          MixedSupport069.computeString0846('_', (String) null, (String) null, -55);
-          if (!UiComponentPart023.computeBoolean1275(-30146)) {
-            SocketFactory.cipherPacketBufferState0002.performAction1691(9, -4);
+          MixedSupport069.computeString0841('_', (String) null, (String) null, -55);
+          if (!UiComponentPart023.computeBoolean1269(-30146)) {
+            SocketFactory.cipherPacketBufferState0002.performAction1672(9, -4);
             MixedSupport087.booleanState0118 = true;
             UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
             return;
           }
-          UiComponentPart033.performAction1866(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
+          UiComponentPart033.performAction1846(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
           return;
         }
-        if (!UiComponentPart023.computeBoolean1275(-30146)) {
-          SocketFactory.cipherPacketBufferState0002.performAction1691(9, -4);
+        if (!UiComponentPart023.computeBoolean1269(-30146)) {
+          SocketFactory.cipherPacketBufferState0002.performAction1672(9, -4);
           MixedSupport087.booleanState0118 = true;
           UiComponentPart010.integerState0188 = UiComponentPart009.integerState0149;
           return;
         }
-        UiComponentPart033.performAction1866(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
+        UiComponentPart033.performAction1846(0, -80, true, 2, booleanArgument2, MixedSupport009.stringState0041);
     }
 
     final String getValidationMessage(String stringArgument1, byte byteArgument2) {
@@ -113,13 +113,13 @@ final class MixedSupport069 extends TextFieldValidator {
         RuntimeException caughtExceptionLocal11 = null;
         try {
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
-          stringLocal1 = MixedSupport062.computeString0744(5, charSequenceLocal4);
+          stringLocal1 = MixedSupport062.computeString0740(5, charSequenceLocal4);
           if (stringLocal1 != null) {
             stackStringLocal5 = stringLocal1;
             return stackStringLocal5;
           }
           if (!stringArgument1.equals(this.stringState0290)) {
-            mixedSupport016Local3 = MixedSupport033.computeMixedSupport0160497(byteArgument2 - 11068, stringArgument1);
+            mixedSupport016Local3 = MixedSupport033.computeMixedSupport0160496(byteArgument2 - 11068, stringArgument1);
             if (mixedSupport016Local3 == null) {
               return null;
             }
@@ -130,7 +130,7 @@ final class MixedSupport069 extends TextFieldValidator {
             this.booleanState0089 = mixedSupport016Local3.booleanState0014;
           }
           if (byteArgument2 != -11) {
-            MixedSupport069.performAction0847(109, false);
+            MixedSupport069.performAction0842(109, false);
           }
           if (this.booleanState0089) {
             stackStringLocal7 = MixedSupport029.stringState0147;
@@ -148,7 +148,7 @@ final class MixedSupport069 extends TextFieldValidator {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class MixedSupport069 extends TextFieldValidator {
         rawSoundArrayState0002 = null;
     }
 
-    final static String computeString0846(char characterArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
+    final static String computeString0841(char characterArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
@@ -231,11 +231,11 @@ final class MixedSupport069 extends TextFieldValidator {
           } else {
             stackStringLocal19 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal15), ((StringBuilder) (Object) stackStringBuilderLocal18).append(stackStringLocal19).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal15), ((StringBuilder) (Object) stackStringBuilderLocal18).append(stackStringLocal19).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final static void performAction0849(boolean booleanArgument1, MixedSupport043 mixedSupport043Argument2, int integerArgument3, byte byteArgument4, boolean booleanArgument5) {
+    final static void performAction0844(boolean booleanArgument1, MixedSupport043 mixedSupport043Argument2, int integerArgument3, byte byteArgument4, boolean booleanArgument5) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -250,26 +250,26 @@ final class MixedSupport069 extends TextFieldValidator {
           MixedSupport102.integerArrayState0179[2] = (int)(Sprite.longState0027 >> 32);
           MixedSupport147.packetBufferState0008.position = 0;
           MixedSupport102.integerArrayState0179[3] = (int)Sprite.longState0027;
-          MixedSupport147.packetBufferState0008.performAction1886(MixedSupport102.integerArrayState0179[0], false);
-          MixedSupport147.packetBufferState0008.performAction1886(MixedSupport102.integerArrayState0179[1], false);
+          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[0], false);
+          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[1], false);
           if (byteArgument4 < 123) {
             MixedSupport069.clearStaticReferences(2);
           }
-          MixedSupport147.packetBufferState0008.performAction1886(MixedSupport102.integerArrayState0179[2], false);
-          MixedSupport147.packetBufferState0008.performAction1886(MixedSupport102.integerArrayState0179[3], false);
-          MixedSupport057.performAction0697(MixedSupport147.packetBufferState0008, 0);
-          MixedSupport147.packetBufferState0008.performAction1905(-1, integerArgument3);
-          mixedSupport043Argument2.performAction0552(MixedSupport147.packetBufferState0008, (byte) 124);
+          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[2], false);
+          MixedSupport147.packetBufferState0008.writeInt(MixedSupport102.integerArrayState0179[3], false);
+          MixedSupport057.performAction0693(MixedSupport147.packetBufferState0008, 0);
+          MixedSupport147.packetBufferState0008.writeShort(-1, integerArgument3);
+          mixedSupport043Argument2.performAction0548(MixedSupport147.packetBufferState0008, (byte) 124);
           SocketFactory.cipherPacketBufferState0002.position = 0;
           if (!booleanArgument1) {
-            SocketFactory.cipherPacketBufferState0002.performAction1892(true, 16);
+            SocketFactory.cipherPacketBufferState0002.writeByte(true, 16);
           } else {
-            SocketFactory.cipherPacketBufferState0002.performAction1892(true, 18);
+            SocketFactory.cipherPacketBufferState0002.writeByte(true, 18);
           }
           SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 2;
           integerLocal5 = SocketFactory.cipherPacketBufferState0002.position;
-          SocketFactory.cipherPacketBufferState0002.performAction1886(MatchingFieldValidator.integerState0686, false);
-          SocketFactory.cipherPacketBufferState0002.performAction1887(MixedSupport115.longState0045, (byte) 0);
+          SocketFactory.cipherPacketBufferState0002.writeInt(MatchingFieldValidator.integerState0686, false);
+          SocketFactory.cipherPacketBufferState0002.writeLong(MixedSupport115.longState0045, (byte) 0);
           integerLocal7 = 0;
           if (UiComponent.booleanState0017) {
             integerLocal7 = integerLocal7 | 1;
@@ -283,18 +283,18 @@ final class MixedSupport069 extends TextFieldValidator {
           if (null != MixedSupport146.stringState0594) {
             integerLocal7 = integerLocal7 | 16;
           }
-          SocketFactory.cipherPacketBufferState0002.performAction1892(true, integerLocal7);
-          stringLocal8 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1530(25144), (byte) 114);
+          SocketFactory.cipherPacketBufferState0002.writeByte(true, integerLocal7);
+          stringLocal8 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1512(25144), (byte) 114);
           if (stringLocal8 == null) {
             stringLocal8 = "";
           }
-          SocketFactory.cipherPacketBufferState0002.performAction1885(0, stringLocal8);
+          SocketFactory.cipherPacketBufferState0002.writeNullTerminatedString(0, stringLocal8);
           if (MixedSupport146.stringState0594 != null) {
-            SocketFactory.cipherPacketBufferState0002.performAction1897(8, MixedSupport146.stringState0594);
+            SocketFactory.cipherPacketBufferState0002.writeNullCircumfixedString(8, MixedSupport146.stringState0594);
           }
-          MatchingFieldValidator.performAction1462(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport147.packetBufferState0008, 0);
-          SocketFactory.cipherPacketBufferState0002.performAction1900(true, SocketFactory.cipherPacketBufferState0002.position - integerLocal5);
-          UiComponentPart033.performAction1871(4792, -1);
+          MatchingFieldValidator.writeEncryptedBuffer(AnimatedTileRegion.bigIntegerState0004, RichTextLayout.bigIntegerState0001, SocketFactory.cipherPacketBufferState0002, MixedSupport147.packetBufferState0008, 0);
+          SocketFactory.cipherPacketBufferState0002.writeLengthShort(true, SocketFactory.cipherPacketBufferState0002.position - integerLocal5);
+          UiComponentPart033.performAction1850(4792, -1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal4 = caughtParameterLocal9;
@@ -306,7 +306,7 @@ final class MixedSupport069 extends TextFieldValidator {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',').append(booleanArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',').append(booleanArgument5).append(')').toString());
         }
     }
 

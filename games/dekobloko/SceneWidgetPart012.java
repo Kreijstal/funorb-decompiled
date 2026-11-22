@@ -26,7 +26,7 @@ final class SceneWidgetPart012 extends SceneWidget {
     String stringState0534;
     int integerState0786;
 
-    final static int computeInteger1655(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3) {
+    final static int computeInteger1636(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -36,7 +36,7 @@ final class SceneWidgetPart012 extends SceneWidget {
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (integerArgument2 == 0) {
-            stackIntegerLocal3 = MixedSupport103.computeInteger1250(byteArrayArgument3, integerArgument1, integerArgument2 - 112, 0);
+            stackIntegerLocal3 = MixedSupport103.computeCrc32(byteArrayArgument3, integerArgument1, integerArgument2 - 112, 0);
             return stackIntegerLocal3;
           }
           stackIntegerLocal2 = -27;
@@ -51,11 +51,11 @@ final class SceneWidgetPart012 extends SceneWidget {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final boolean computeBoolean1656(int integerArgument1, SceneWidgetPart012 sceneWidgetPart012Argument2) {
+    final boolean computeBoolean1637(int integerArgument1, SceneWidgetPart012 sceneWidgetPart012Argument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         boolean stackBooleanLocal3 = false;
@@ -98,29 +98,29 @@ final class SceneWidgetPart012 extends SceneWidget {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    final static void performAction1657(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction1638(boolean booleanArgument1, int integerArgument2) {
         ProxySocketFactory.integerState0732 = 0;
         if (integerArgument2 >= 97) {
           MixedSupport112.integerState0682 = 0;
           MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
           MixedSupport153.integerState0930 = 0;
           MixedSupport114.mixedSupport121State0003 = new MixedSupport121(2);
-          MixedSupport114.mixedSupport121State0003.performAction1562(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), booleanArgument1);
+          MixedSupport114.mixedSupport121State0003.performAction1543(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), booleanArgument1);
           return;
         }
-        SceneWidgetPart012.performAction1659(-61);
+        SceneWidgetPart012.performAction1640(-61);
         MixedSupport112.integerState0682 = 0;
         MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
         MixedSupport153.integerState0930 = 0;
         MixedSupport114.mixedSupport121State0003 = new MixedSupport121(2);
-        MixedSupport114.mixedSupport121State0003.performAction1562(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), booleanArgument1);
+        MixedSupport114.mixedSupport121State0003.performAction1543(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), booleanArgument1);
     }
 
-    final boolean computeBoolean1660(byte byteArgument1) {
+    final boolean computeBoolean1641(byte byteArgument1) {
         if (byteArgument1 > 29) {
           return !this.computeBoolean0133((byte) -68) ? true : false;
         }
@@ -128,22 +128,22 @@ final class SceneWidgetPart012 extends SceneWidget {
         return !this.computeBoolean0133((byte) -68) ? true : false;
     }
 
-    final static void performAction1658(boolean booleanArgument1, java.awt.Canvas canvasArgument2) {
-        ReturnedShape.performAction1467(12, (java.awt.Component) ((Object) canvasArgument2));
+    final static void performAction1639(boolean booleanArgument1, java.awt.Canvas canvasArgument2) {
+        ReturnedShape.performAction1457(12, (java.awt.Component) ((Object) canvasArgument2));
         if (booleanArgument1) {
           return;
         }
         try {
-          InputAdapter002.performAction1382((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
+          InputAdapter002.performAction1376((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
           if (MixedSupport134.mouseWheelInputState0001 != null) {
             MixedSupport134.mouseWheelInputState0001.detachFromComponent(68, (java.awt.Component) ((Object) canvasArgument2));
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "tj.C(" + booleanArgument1 + ',' + (canvasArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "tj.C(" + booleanArgument1 + ',' + (canvasArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction1659(int integerArgument1) {
+    public static void performAction1640(int integerArgument1) {
         integerArrayArrayState0020 = (int[][]) null;
         if (integerArgument1 != -18263) {
           return;
@@ -152,27 +152,27 @@ final class SceneWidgetPart012 extends SceneWidget {
         stringState0531 = null;
     }
 
-    final static void performAction1661(byte byteArgument1) {
+    final static void performAction1642(byte byteArgument1) {
         if (byteArgument1 > -22) {
           return;
         }
         NetworkSupport001.sceneWidgetState0003 = new SceneWidget(0L, (SceneWidget) null);
         if (!MixedSupport102.booleanState0133) {
-          NetworkSupport001.sceneWidgetState0003.performAction1819(RenderingSupport004.sceneWidgetState0039, -16834);
+          NetworkSupport001.sceneWidgetState0003.performAction1799(RenderingSupport004.sceneWidgetState0039, -16834);
           MixedSupport023.mixedSupport006State0001 = new MixedSupport006(MixedSupport134.stringState0554, NetworkSupport001.sceneWidgetState0003);
           UiComponentPart011.sceneWidgetState0035 = new SceneWidget(0L, (SceneWidget) null);
-          UiComponentPart011.sceneWidgetState0035.performAction1819(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
-          UiComponentPart011.sceneWidgetState0035.performAction1819(IterableNodeCollection.sceneWidgetState0126, -16834);
-          UiComponentPart019.performAction1072(5);
+          UiComponentPart011.sceneWidgetState0035.performAction1799(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
+          UiComponentPart011.sceneWidgetState0035.performAction1799(IterableNodeCollection.sceneWidgetState0126, -16834);
+          UiComponentPart019.performAction1067(5);
           return;
         }
-        NetworkSupport001.sceneWidgetState0003.performAction1819(MixedSupport044.sceneWidgetState0034, -16834);
-        NetworkSupport001.sceneWidgetState0003.performAction1819(RenderingSupport004.sceneWidgetState0039, -16834);
+        NetworkSupport001.sceneWidgetState0003.performAction1799(MixedSupport044.sceneWidgetState0034, -16834);
+        NetworkSupport001.sceneWidgetState0003.performAction1799(RenderingSupport004.sceneWidgetState0039, -16834);
         MixedSupport023.mixedSupport006State0001 = new MixedSupport006(MixedSupport134.stringState0554, NetworkSupport001.sceneWidgetState0003);
         UiComponentPart011.sceneWidgetState0035 = new SceneWidget(0L, (SceneWidget) null);
-        UiComponentPart011.sceneWidgetState0035.performAction1819(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
-        UiComponentPart011.sceneWidgetState0035.performAction1819(IterableNodeCollection.sceneWidgetState0126, -16834);
-        UiComponentPart019.performAction1072(5);
+        UiComponentPart011.sceneWidgetState0035.performAction1799(MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001, -16834);
+        UiComponentPart011.sceneWidgetState0035.performAction1799(IterableNodeCollection.sceneWidgetState0126, -16834);
+        UiComponentPart019.performAction1067(5);
     }
 
     SceneWidgetPart012(String stringArgument1, String stringArgument2, long longArgument3) {
@@ -183,13 +183,13 @@ final class SceneWidgetPart012 extends SceneWidget {
           this.stringState0534 = stringArgument2;
           this.longState0048 = longArgument3;
           charSequenceLocal1 = (CharSequence) ((Object) this.stringState0532);
-          ComponentContainer.computeString0918(charSequenceLocal1, (byte) 2);
+          ComponentContainer.computeString0913(charSequenceLocal1, (byte) 2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "tj.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "tj.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
         }
     }
 
-    final void performAction1654(byte byteArgument1, String stringArgument2, String stringArgument3) {
+    final void performAction1635(byte byteArgument1, String stringArgument2, String stringArgument3) {
         CharSequence charSequenceLocal1 = null;
         try {
           this.stringState0532 = stringArgument3;
@@ -198,9 +198,9 @@ final class SceneWidgetPart012 extends SceneWidget {
           }
           this.stringState0534 = stringArgument2;
           charSequenceLocal1 = (CharSequence) ((Object) this.stringState0532);
-          ComponentContainer.computeString0918(charSequenceLocal1, (byte) 2);
+          ComponentContainer.computeString0913(charSequenceLocal1, (byte) 2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "tj.K(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "tj.K(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,37 +11,37 @@ final class MixedSupport108 extends GameDomainSupport006 {
     static volatile int integerState0597;
     static float[] floatArrayState0002;
 
-    final static SceneWidget computeSceneWidget1317(int integerArgument1) {
+    final static SceneWidget computeSceneWidget1311(int integerArgument1) {
         if (integerArgument1 != 5) {
           return (SceneWidget) null;
         }
         return ValidationStatus.sceneWidgetPart008State0006.sceneWidgetState0090;
     }
 
-    final static void performAction1316(int integerArgument1, int integerArgument2) {
+    final static void performAction1310(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         CipherPacketBuffer cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
         int integerLocal3;
-        cipherPacketBufferLocal2.performAction1691(integerArgument1, -4);
+        cipherPacketBufferLocal2.performAction1672(integerArgument1, -4);
         cipherPacketBufferLocal2.position = cipherPacketBufferLocal2.position + 1;
         int integerLocal4 = cipherPacketBufferLocal2.position;
-        cipherPacketBufferLocal2.performAction1892(true, 5);
-        cipherPacketBufferLocal2.performAction1892(true, MixedSupport016.sceneWidgetPart013State0001.integerState0840);
+        cipherPacketBufferLocal2.writeByte(true, 5);
+        cipherPacketBufferLocal2.writeByte(true, MixedSupport016.sceneWidgetPart013State0001.integerState0840);
         if (integerArgument2 == 1850462342) {
           integerLocal1 = (MixedSupport016.sceneWidgetPart013State0001.integerState0845 << 6) + MixedSupport016.sceneWidgetPart013State0001.integerState0842;
-          cipherPacketBufferLocal2.performAction1892(true, integerLocal1);
-          cipherPacketBufferLocal2.performAction1893(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
-          cipherPacketBufferLocal2.performAction1898(cipherPacketBufferLocal2.position - integerLocal4, true);
+          cipherPacketBufferLocal2.writeByte(true, integerLocal1);
+          cipherPacketBufferLocal2.writeBytes(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
+          cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal4, true);
           return;
         }
-        MixedSupport108.performAction1318(-25);
+        MixedSupport108.performAction1312(-25);
         integerLocal3 = (MixedSupport016.sceneWidgetPart013State0001.integerState0845 << 6) + MixedSupport016.sceneWidgetPart013State0001.integerState0842;
-        cipherPacketBufferLocal2.performAction1892(true, integerLocal3);
-        cipherPacketBufferLocal2.performAction1893(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
-        cipherPacketBufferLocal2.performAction1898(cipherPacketBufferLocal2.position - integerLocal4, true);
+        cipherPacketBufferLocal2.writeByte(true, integerLocal3);
+        cipherPacketBufferLocal2.writeBytes(false, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032.length, MixedSupport016.sceneWidgetPart013State0001.byteArrayState0032, 0);
+        cipherPacketBufferLocal2.writeLengthByte(cipherPacketBufferLocal2.position - integerLocal4, true);
     }
 
-    public static void performAction1318(int integerArgument1) {
+    public static void performAction1312(int integerArgument1) {
         if (integerArgument1 == -30349) {
           stringState0437 = null;
           rawSoundState0018 = null;
@@ -50,7 +50,7 @@ final class MixedSupport108 extends GameDomainSupport006 {
           sceneWidgetPart009ArrayArrayState0001 = (SceneWidgetPart009[][]) null;
           return;
         }
-        MixedSupport108.performAction1316(99, -109);
+        MixedSupport108.performAction1310(99, -109);
         stringState0437 = null;
         rawSoundState0018 = null;
         floatArrayState0002 = null;
@@ -62,7 +62,7 @@ final class MixedSupport108 extends GameDomainSupport006 {
         super(longArgument1, stringArgument2);
     }
 
-    final MixedSupport048 computeMixedSupport0480550(int integerArgument1) {
+    final MixedSupport048 computeMixedSupport0480546(int integerArgument1) {
         if (integerArgument1 != 18) {
           return (MixedSupport048) null;
         }

@@ -26,17 +26,17 @@ final class AudioFilter {
         int[] integerArrayLocal6;
         int integerLocal7;
         int integerLocal8;
-        integerLocal1 = packetBufferArgument1.computeInteger1904((byte) -53);
+        integerLocal1 = packetBufferArgument1.readUnsignedByte((byte) -53);
         this.integerArrayState0057[0] = integerLocal1 >> 4;
         this.integerArrayState0057[1] = integerLocal1 & 15;
         if (integerLocal1 != 0) {
-          this.integerArrayState0056[0] = packetBufferArgument1.computeInteger1907(3);
-          this.integerArrayState0056[1] = packetBufferArgument1.computeInteger1907(3);
-          integerLocal2 = packetBufferArgument1.computeInteger1904((byte) -21);
+          this.integerArrayState0056[0] = packetBufferArgument1.readUnsignedShort(3);
+          this.integerArrayState0056[1] = packetBufferArgument1.readUnsignedShort(3);
+          integerLocal2 = packetBufferArgument1.readUnsignedByte((byte) -21);
           for (integerLocal3 = 0; integerLocal3 < 2; integerLocal3++) {
             for (integerLocal4 = 0; integerLocal4 < this.integerArrayState0057[integerLocal3]; integerLocal4++) {
-              this.integerArrayArrayArrayState0002[integerLocal3][0][integerLocal4] = packetBufferArgument1.computeInteger1907(3);
-              this.integerArrayArrayArrayState0001[integerLocal3][0][integerLocal4] = packetBufferArgument1.computeInteger1907(3);
+              this.integerArrayArrayArrayState0002[integerLocal3][0][integerLocal4] = packetBufferArgument1.readUnsignedShort(3);
+              this.integerArrayArrayArrayState0001[integerLocal3][0][integerLocal4] = packetBufferArgument1.readUnsignedShort(3);
             }
           }
           for (integerLocal7 = 0; integerLocal7 < 2; integerLocal7++) {
@@ -47,15 +47,15 @@ final class AudioFilter {
                 this.integerArrayArrayArrayState0002[integerLocal7][1][integerLocal5] = this.integerArrayArrayArrayState0002[integerLocal7][0][integerLocal5];
                 this.integerArrayArrayArrayState0001[integerLocal7][1][integerLocal5] = this.integerArrayArrayArrayState0001[integerLocal7][0][integerLocal5];
               } else {
-                this.integerArrayArrayArrayState0002[integerLocal7][1][integerLocal5] = packetBufferArgument1.computeInteger1907(3);
-                this.integerArrayArrayArrayState0001[integerLocal7][1][integerLocal5] = packetBufferArgument1.computeInteger1907(3);
+                this.integerArrayArrayArrayState0002[integerLocal7][1][integerLocal5] = packetBufferArgument1.readUnsignedShort(3);
+                this.integerArrayArrayArrayState0001[integerLocal7][1][integerLocal5] = packetBufferArgument1.readUnsignedShort(3);
               }
               integerLocal5++;
             }
           }
           if (integerLocal2 != 0 ||
             this.integerArrayState0056[1] != this.integerArrayState0056[0]) {
-            mixedSupport119Argument2.performAction1526(packetBufferArgument1);
+            mixedSupport119Argument2.performAction1508(packetBufferArgument1);
           }
         } else {
           integerArrayLocal6 = this.integerArrayState0056;

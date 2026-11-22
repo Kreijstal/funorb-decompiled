@@ -18,16 +18,16 @@ final class UiComponentPart023 extends UiComponentPart004 {
         try {
           super.performAction0185(uiComponentArgument1, (byte) 31);
           if (byteArgument2 < 10) {
-            UiComponentPart023.computeBoolean1275(39);
+            UiComponentPart023.computeBoolean1269(39);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ph.T(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "ph.T(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
-    final static boolean computeBoolean1275(int integerArgument1) {
+    final static boolean computeBoolean1269(int integerArgument1) {
         if (integerArgument1 != -30146) {
-          UiComponentPart023.performAction1273(false, -84, 71, true, false, false, false, -53, -127, 124);
+          UiComponentPart023.performAction1267(false, -84, 71, true, false, false, false, -53, -127, 124);
           return MixedSupport141.booleanState0194;
         }
         return MixedSupport141.booleanState0194;
@@ -37,7 +37,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
         super(uiComponentPart016Argument1, uiComponentArgument2, 33, 20, 30);
     }
 
-    public static void performAction1274(byte byteArgument1) {
+    public static void performAction1268(byte byteArgument1) {
         stringState0422 = null;
         resourceArchiveState0015 = null;
         stringState0426 = null;
@@ -51,35 +51,35 @@ final class UiComponentPart023 extends UiComponentPart004 {
         stringState0424 = null;
     }
 
-    final static void performAction1272(int integerArgument1, int integerArgument2, boolean booleanArgument3, boolean booleanArgument4) {
-        MixedSupport134.performAction1680(integerArgument1, true, booleanArgument4, integerArgument2);
+    final static void performAction1266(int integerArgument1, int integerArgument2, boolean booleanArgument3, boolean booleanArgument4) {
+        MixedSupport134.performAction1661(integerArgument1, true, booleanArgument4, integerArgument2);
         if (booleanArgument3) {
           stringState0425 = (String) null;
         }
     }
 
-    final static void performAction1273(boolean booleanArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6, boolean booleanArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    final static void performAction1267(boolean booleanArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6, boolean booleanArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1;
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (booleanArgument6) {
           MixedSupport146.integerState0857 = RichTextLayout.integerState0162;
-          MixedSupport054.performAction0649(booleanArgument6, -1843);
+          MixedSupport054.performAction0645(booleanArgument6, -1843);
           if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-            MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+            MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
           }
           MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
           MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
           if (RenderingSupport001.integerState0064 > 0) {
-            MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+            MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
           }
           if (0 < MixedSupport127.integerState0778) {
-            MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+            MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
           }
           if (MixedSupport026.booleanState0028 &&
             MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
             RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
             GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-            UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+            UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
           } else {
             RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
             GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -90,23 +90,23 @@ final class UiComponentPart023 extends UiComponentPart004 {
             GameplayControls.integerState0859 == SoftwareRaster.integerState0284) {
             if (!booleanArgument6) {
               MixedSupport146.integerState0857 = (-640 + UiComponentPart033.integerState0934) / 2;
-              MixedSupport054.performAction0649(booleanArgument6, -1843);
+              MixedSupport054.performAction0645(booleanArgument6, -1843);
               if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-                MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+                MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
               }
               MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
               MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
               if (RenderingSupport001.integerState0064 > 0) {
-                MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+                MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
               }
               if (0 < MixedSupport127.integerState0778) {
-                MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+                MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
               if (MixedSupport026.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-                UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+                UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
               } else {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -114,23 +114,23 @@ final class UiComponentPart023 extends UiComponentPart004 {
               }
             } else {
               MixedSupport146.integerState0857 = RichTextLayout.integerState0162;
-              MixedSupport054.performAction0649(booleanArgument6, -1843);
+              MixedSupport054.performAction0645(booleanArgument6, -1843);
               if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-                MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+                MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
               }
               MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
               MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
               if (RenderingSupport001.integerState0064 > 0) {
-                MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+                MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
               }
               if (0 < MixedSupport127.integerState0778) {
-                MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+                MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
               if (MixedSupport026.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-                UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+                UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
               } else {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -146,29 +146,29 @@ final class UiComponentPart023 extends UiComponentPart004 {
             MixedSupport080.framebufferState0001.integerState0190 == SoftwareRaster.integerState0285) {
             if (MixedSupport016.sceneWidgetPart013State0001 == null) {
               if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
-                UiComponentPart032.performAction1751(true, -2);
+                UiComponentPart032.performAction1731(true, -2);
                 if (booleanArgument6) {
                   MixedSupport146.integerState0857 = RichTextLayout.integerState0162;
                 } else {
                   MixedSupport146.integerState0857 = (-640 + UiComponentPart033.integerState0934) / 2;
                 }
-                MixedSupport054.performAction0649(booleanArgument6, -1843);
+                MixedSupport054.performAction0645(booleanArgument6, -1843);
                 if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-                  MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+                  MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
                 }
                 MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
                 MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
                 if (RenderingSupport001.integerState0064 > 0) {
-                  MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+                  MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
                 }
                 if (0 < MixedSupport127.integerState0778) {
-                  MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+                  MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
                 }
                 if (MixedSupport026.booleanState0028 &&
                   MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                   RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-                  UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+                  UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
                 } else {
                   RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -179,30 +179,30 @@ final class UiComponentPart023 extends UiComponentPart004 {
                 UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
                 return;
               }
-              UiComponentPart019.performAction1072(5);
+              UiComponentPart019.performAction1067(5);
             } else {
-              UiComponentPart032.performAction1751(false, -2);
+              UiComponentPart032.performAction1731(false, -2);
             }
           }
           if (!booleanArgument6) {
             MixedSupport146.integerState0857 = (-640 + UiComponentPart033.integerState0934) / 2;
-            MixedSupport054.performAction0649(booleanArgument6, -1843);
+            MixedSupport054.performAction0645(booleanArgument6, -1843);
             if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-              MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+              MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
             }
             MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
             MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
             if (RenderingSupport001.integerState0064 > 0) {
-              MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+              MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
             }
             if (0 < MixedSupport127.integerState0778) {
-              MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+              MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
             }
             if (MixedSupport026.booleanState0028 &&
               MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
               RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
               GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-              UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+              UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
             } else {
               RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
               GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -210,22 +210,22 @@ final class UiComponentPart023 extends UiComponentPart004 {
             }
           } else {
             MixedSupport146.integerState0857 = RichTextLayout.integerState0162;
-            MixedSupport054.performAction0649(booleanArgument6, -1843);
+            MixedSupport054.performAction0645(booleanArgument6, -1843);
             if (integerArgument8 > ~UiComponentPart017.integerState0437) {
-              MixedSupport111.performAction1422(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
+              MixedSupport111.performAction1413(booleanArgument5, integerArgument10, booleanArgument6, (byte) -8);
               MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
               MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
               if (RenderingSupport001.integerState0064 > 0) {
-                MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+                MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
               }
               if (0 < MixedSupport127.integerState0778) {
-                MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+                MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
               if (MixedSupport026.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-                UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+                UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
               } else {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
@@ -235,10 +235,10 @@ final class UiComponentPart023 extends UiComponentPart004 {
               MixedSupport127.sceneWidgetState0117.integerState0916 = 1;
               MixedSupport127.sceneWidgetState0117.integerState0893 = MixedSupport036.sceneWidgetState0028.integerState0893;
               if (RenderingSupport001.integerState0064 > 0) {
-                MixedSupport145.performAction1773(integerArgument10, booleanArgument5, booleanArgument6, 48);
+                MixedSupport145.performAction1753(integerArgument10, booleanArgument5, booleanArgument6, 48);
               }
               if (0 < MixedSupport127.integerState0778) {
-                MixedSupport087.performAction1112(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
+                MixedSupport087.performAction1107(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
               if (!MixedSupport026.booleanState0028) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
@@ -248,7 +248,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
                 if (MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                   RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
-                  UiComponentPart012.performAction0598(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
+                  UiComponentPart012.performAction0594(GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0090, true);
                 } else {
                   RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;

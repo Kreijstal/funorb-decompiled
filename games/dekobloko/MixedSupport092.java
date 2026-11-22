@@ -6,7 +6,7 @@ final class MixedSupport092 {
     static String stringState0369;
     static SceneWidget sceneWidgetState0091;
 
-    final static void performAction1166(int integerArgument1, MusicTrack musicTrackArgument2, boolean booleanArgument3) {
+    final static void performAction1161(int integerArgument1, MusicTrack musicTrackArgument2, boolean booleanArgument3) {
         Object objectLocal1 = null;
         Throwable throwableLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -25,11 +25,11 @@ final class MixedSupport092 {
             }
             if (musicTrackArgument2 != null) {
               UiComponentPart033.midiSynthesizerState0001 = new MidiSynthesizer(musicTrackArgument2);
-              UiComponentPart033.midiSynthesizerState0001.performAction0699(MixedSupport001.integerState0011 * 50 / 128);
-              UiComponentPart033.midiSynthesizerState0001.performAction0705(integerArgument1);
+              UiComponentPart033.midiSynthesizerState0001.performAction0695(MixedSupport001.integerState0011 * 50 / 128);
+              UiComponentPart033.midiSynthesizerState0001.performAction0701(integerArgument1);
               GameAssets.pcmStreamMixerState0004.addListener(UiComponentPart033.midiSynthesizerState0001);
             }
-            SceneWidgetNode.pcmPlayerState0002.performAction0480();
+            SceneWidgetNode.pcmPlayerState0002.performAction0479();
             PcmPlayerService.musicTrackState0005 = musicTrackArgument2;
           }
           return;
@@ -43,20 +43,20 @@ final class MixedSupport092 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) (stackObjectLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) (stackObjectLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument3).append(')').toString());
         }
     }
 
-    public static void performAction1165(int integerArgument1) {
+    public static void performAction1160(int integerArgument1) {
         mixedSupport139State0007 = null;
         stringState0369 = null;
         sceneWidgetState0091 = null;
         if (integerArgument1 != 14925) {
-          MixedSupport092.performAction1165(-43);
+          MixedSupport092.performAction1160(-43);
         }
     }
 
-    final static boolean computeBoolean1167(boolean booleanArgument1, String stringArgument2, String stringArgument3) {
+    final static boolean computeBoolean1162(boolean booleanArgument1, String stringArgument2, String stringArgument3) {
         String stringLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -67,7 +67,7 @@ final class MixedSupport092 {
         RuntimeException caughtExceptionLocal8 = null;
         RuntimeException runtimeExceptionLocal9 = null;
         try {
-          stringLocal1 = MixedSupport094.computeString1172(stringArgument2, -1);
+          stringLocal1 = MixedSupport094.computeString1167(stringArgument2, -1);
           if (booleanArgument1) {
             mixedSupport139State0007 = (MixedSupport139) null;
           }
@@ -93,7 +93,7 @@ final class MixedSupport092 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 

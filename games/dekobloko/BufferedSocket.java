@@ -24,7 +24,7 @@ final class BufferedSocket implements Runnable {
     static String[] stringArrayState0036;
     private int integerState0669;
 
-    final void performAction1407(int integerArgument1, int integerArgument2, int integerArgument3, byte[] byteArrayArgument4) throws IOException {
+    final void performAction1401(int integerArgument1, int integerArgument2, int integerArgument3, byte[] byteArrayArgument4) throws IOException {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -58,7 +58,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.asyncTaskState0009) {
-              this.asyncTaskState0009 = this.platformServiceState0006.computeAsyncTask0515((byte) -45, 3, (Runnable) (this));
+              this.asyncTaskState0009 = this.platformServiceState0006.computeAsyncTask0513((byte) -45, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -73,11 +73,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final int computeInteger1411(byte byteArgument1) throws IOException {
+    final int computeInteger1405(byte byteArgument1) throws IOException {
         if (this.booleanState0154) {
           return 0;
         }
@@ -85,7 +85,7 @@ final class BufferedSocket implements Runnable {
         return this.inputStreamState0001.read();
     }
 
-    final static String computeString1412(byte byteArgument1) {
+    final static String computeString1406(byte byteArgument1) {
         int integerLocal1 = 0;
         String stringLocal2;
         int integerLocal3;
@@ -124,7 +124,7 @@ final class BufferedSocket implements Runnable {
         return stringLocal2;
     }
 
-    final void performAction1405(int integerArgument1) {
+    final void performAction1399(int integerArgument1) {
         try {
           int integerLocal1 = 0;
           integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -140,7 +140,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.asyncTaskState0009) {
             while (this.asyncTaskState0009.integerState0510 == 0) {
-              MixedSupport132.performAction1670(1L, integerArgument1 ^ -128);
+              MixedSupport132.performAction1651(1L, integerArgument1 ^ -128);
             }
             if (1 == this.asyncTaskState0009.integerState0510) {
               try {
@@ -243,7 +243,7 @@ final class BufferedSocket implements Runnable {
             caughtExceptionLocal2 = caughtParameterLocal17;
             exceptionLocal5 = (Exception) (Object) caughtExceptionLocal2;
             stringLocal11 = (String) null;
-            NetworkArchiveRequestManager.performAction1322((Throwable) ((Object) exceptionLocal5), 16408, (String) null);
+            NetworkArchiveRequestManager.performAction1316((Throwable) ((Object) exceptionLocal5), 16408, (String) null);
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal18) {
           throw uncheckedExceptionLocal18;
@@ -253,10 +253,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.performAction1405(0);
+        this.performAction1399(0);
     }
 
-    final static Object computeObject1408(byte[] byteArrayArgument1, int integerArgument2, boolean booleanArgument3) {
+    final static Object computeObject1402(byte[] byteArrayArgument1, int integerArgument2, boolean booleanArgument3) {
         MixedSupport044 mixedSupport044Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         MixedSupport044 stackMixedSupport044Local3 = null;
@@ -272,7 +272,7 @@ final class BufferedSocket implements Runnable {
           }
           if (136 < byteArrayArgument1.length) {
             mixedSupport044Local1 = new MixedSupport044();
-            ((MixedSupport086) ((Object) mixedSupport044Local1)).performAction0556(byteArrayArgument1, true);
+            ((MixedSupport086) ((Object) mixedSupport044Local1)).performAction0552(byteArrayArgument1, true);
             stackMixedSupport044Local3 = mixedSupport044Local1;
             return stackMixedSupport044Local3;
           }
@@ -283,7 +283,7 @@ final class BufferedSocket implements Runnable {
             stackByteArrayLocal5 = (byte[]) (byteArrayArgument1);
             return stackByteArrayLocal5;
           }
-          stackByteArrayLocal4 = SceneWidgetPart006.computeByteArray0790(0, byteArrayArgument1);
+          stackByteArrayLocal4 = SceneWidgetPart006.computeByteArray0786(0, byteArrayArgument1);
           return stackByteArrayLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;
@@ -295,11 +295,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(booleanArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(booleanArgument3).append(')').toString());
         }
     }
 
-    final int computeInteger1410(int integerArgument1) throws IOException {
+    final int computeInteger1404(int integerArgument1) throws IOException {
         if (this.booleanState0154) {
           return 0;
         }
@@ -317,7 +317,7 @@ final class BufferedSocket implements Runnable {
         stringArrayState0035 = null;
     }
 
-    final void performAction1406(int integerArgument1, int integerArgument2, byte byteArgument3, byte[] byteArrayArgument4) throws IOException {
+    final void performAction1400(int integerArgument1, int integerArgument2, byte byteArgument3, byte[] byteArrayArgument4) throws IOException {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -339,7 +339,7 @@ final class BufferedSocket implements Runnable {
             integerArgument1 = integerArgument1 - integerLocal1;
           }
           if (byteArgument3 != 17) {
-            this.performAction1405(31);
+            this.performAction1399(31);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -352,11 +352,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final void performAction1409(byte byteArgument1) throws IOException {
+    final void performAction1403(byte byteArgument1) throws IOException {
         if (this.booleanState0154) {
           return;
         }
@@ -373,7 +373,7 @@ final class BufferedSocket implements Runnable {
         this(socketArgument1, platformServiceArgument2, 5000);
     }
 
-    final static void performAction1404(byte byteArgument1) {
+    final static void performAction1398(byte byteArgument1) {
         UiComponentPart008.stringBuilderState0001.setLength(0);
         NetworkSupport010.integerState0585 = 0;
         if (byteArgument1 != 94) {
@@ -395,7 +395,7 @@ final class BufferedSocket implements Runnable {
           this.outputStreamState0001 = this.socketState0001.getOutputStream();
           this.integerState0663 = integerArgument3;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "qk.<init>(" + (socketArgument1 != null ? "{...}" : "null") + ',' + (platformServiceArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "qk.<init>(" + (socketArgument1 != null ? "{...}" : "null") + ',' + (platformServiceArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
     }
 

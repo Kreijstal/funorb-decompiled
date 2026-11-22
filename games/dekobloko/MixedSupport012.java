@@ -50,7 +50,7 @@ final class MixedSupport012 {
           integerLocal9 = 0;
           while (integerLocal9 < integerLocal7) {
             if (integerLocal1 == 0) {
-              integerLocal10 = VorbisSample.mixedSupport065ArrayState0001[this.integerState0078].computeInteger0773();
+              integerLocal10 = VorbisSample.mixedSupport065ArrayState0001[this.integerState0078].computeInteger0769();
               for (integerLocal11 = integerLocal20 - 1; integerLocal11 >= 0; integerLocal11--) {
                 if (integerLocal9 + integerLocal11 < integerLocal7) {
                   integerArrayLocal8[integerLocal9 + integerLocal11] = integerLocal10 % this.integerState0075;
@@ -69,7 +69,7 @@ final class MixedSupport012 {
                 if (this.integerState0079 != 0) {
                   integerLocal15 = 0;
                   while (integerLocal15 < this.integerState0076) {
-                    floatArrayLocal19 = mixedSupport065Local14.computeFloatArray0775();
+                    floatArrayLocal19 = mixedSupport065Local14.computeFloatArray0771();
                     for (integerLocal2 = 0; integerLocal2 < mixedSupport065Local14.integerState0338; integerLocal2++) {
                       floatArrayArgument1[integerLocal13 + integerLocal15] = floatArrayArgument1[integerLocal13 + integerLocal15] + floatArrayLocal19[integerLocal2];
                       integerLocal15++;
@@ -78,7 +78,7 @@ final class MixedSupport012 {
                 } else {
                   integerLocal15 = this.integerState0076 / mixedSupport065Local14.integerState0338;
                   for (integerLocal3 = 0; integerLocal3 < integerLocal15; integerLocal3++) {
-                    floatArrayLocal18 = mixedSupport065Local14.computeFloatArray0775();
+                    floatArrayLocal18 = mixedSupport065Local14.computeFloatArray0771();
                     for (integerLocal4 = 0; integerLocal4 < mixedSupport065Local14.integerState0338; integerLocal4++) {
                       floatArrayArgument1[integerLocal13 + integerLocal3 + integerLocal4 * integerLocal15] = floatArrayArgument1[integerLocal13 + integerLocal3 + integerLocal4 * integerLocal15] + floatArrayLocal18[integerLocal4];
                     }
@@ -102,19 +102,19 @@ final class MixedSupport012 {
         int integerLocal3 = 0;
         int integerLocal4 = 0;
         int integerLocal5;
-        this.integerState0079 = VorbisSample.computeInteger1747(16);
-        this.integerState0080 = VorbisSample.computeInteger1747(24);
-        this.integerState0077 = VorbisSample.computeInteger1747(24);
-        this.integerState0076 = VorbisSample.computeInteger1747(24) + 1;
-        this.integerState0075 = VorbisSample.computeInteger1747(6) + 1;
-        this.integerState0078 = VorbisSample.computeInteger1747(8);
+        this.integerState0079 = VorbisSample.computeInteger1727(16);
+        this.integerState0080 = VorbisSample.computeInteger1727(24);
+        this.integerState0077 = VorbisSample.computeInteger1727(24);
+        this.integerState0076 = VorbisSample.computeInteger1727(24) + 1;
+        this.integerState0075 = VorbisSample.computeInteger1727(6) + 1;
+        this.integerState0078 = VorbisSample.computeInteger1727(8);
         int[] integerArrayLocal6 = new int[this.integerState0075];
         for (integerLocal4 = 0; integerLocal4 < this.integerState0075; integerLocal4++) {
           integerLocal1 = 0;
-          integerLocal2 = VorbisSample.computeInteger1747(3);
-          integerLocal3 = VorbisSample.computeInteger1745() != 0 ? 1 : 0;
+          integerLocal2 = VorbisSample.computeInteger1727(3);
+          integerLocal3 = VorbisSample.computeInteger1725() != 0 ? 1 : 0;
           if (integerLocal3 != 0) {
-            integerLocal1 = VorbisSample.computeInteger1747(5);
+            integerLocal1 = VorbisSample.computeInteger1727(5);
           }
           integerArrayLocal6[integerLocal4] = integerLocal1 << 3 | integerLocal2;
         }
@@ -122,7 +122,7 @@ final class MixedSupport012 {
         int integerLocal7 = 0;
         integerLocal5 = integerLocal7;
         while (integerLocal7 < this.integerState0075 * 8) {
-          this.integerArrayState0019[integerLocal7] = (integerArrayLocal6[integerLocal7 >> 3] & 1 << (integerLocal7 & 7)) != 0 ? VorbisSample.computeInteger1747(8) : -1;
+          this.integerArrayState0019[integerLocal7] = (integerArrayLocal6[integerLocal7 >> 3] & 1 << (integerLocal7 & 7)) != 0 ? VorbisSample.computeInteger1727(8) : -1;
           integerLocal7++;
         }
     }

@@ -20,7 +20,7 @@ final class NetworkSupport008 implements Runnable {
     static int[] integerArrayState0176;
     private AsyncTask asyncTaskState0008;
 
-    final PacketBuffer computePacketBuffer1206(boolean booleanArgument1) {
+    final PacketBuffer computePacketBuffer1201(boolean booleanArgument1) {
         if (3 == this.integerState0559) {
           return this.packetBufferState0006;
         }
@@ -31,7 +31,7 @@ final class NetworkSupport008 implements Runnable {
         return null;
     }
 
-    final synchronized boolean computeBoolean1203(int integerArgument1) {
+    final synchronized boolean computeBoolean1198(int integerArgument1) {
         Throwable caughtExceptionLocal1 = null;
         IOException iOExceptionLocal2 = null;
         OutputStream outputStreamLocal3 = null;
@@ -43,7 +43,7 @@ final class NetworkSupport008 implements Runnable {
         boolean frameRemainderLocal6 = true;
         if (this.integerState0559 == 0) {
           if (null == this.asyncTaskState0008) {
-            this.asyncTaskState0008 = this.platformServiceState0005.computeAsyncTask0523(this.uRLState0001, (byte) 66);
+            this.asyncTaskState0008 = this.platformServiceState0005.computeAsyncTask0520(this.uRLState0001, (byte) 66);
           }
           if (this.asyncTaskState0008.integerState0510 == 0) {
             return false;
@@ -56,7 +56,7 @@ final class NetworkSupport008 implements Runnable {
         if (frameRemainderLocal6) {
           if (this.integerState0559 == 1) {
             if (this.asyncTaskState0006 == null) {
-              this.asyncTaskState0006 = this.platformServiceState0005.computeAsyncTask0520(100, this.uRLState0001.getHost(), 443);
+              this.asyncTaskState0006 = this.platformServiceState0005.computeAsyncTask0517(100, this.uRLState0001.getHost(), 443);
             }
             if (this.asyncTaskState0006.integerState0510 == 0) {
               return false;
@@ -78,7 +78,7 @@ final class NetworkSupport008 implements Runnable {
                 outputStreamLocal3 = socketLocal4.getOutputStream();
                 outputStreamLocal3.write(17);
                 charSequenceLocal5 = (CharSequence) ((Object) ("JAGGRAB " + this.uRLState0001.getFile() + "\n\n"));
-                outputStreamLocal3.write(SceneWidgetNode.computeByteArray0939(6216, charSequenceLocal5));
+                outputStreamLocal3.write(SceneWidgetNode.computeByteArray0934(6216, charSequenceLocal5));
                 this.dataInputStreamState0001 = new DataInputStream(socketLocal4.getInputStream());
               }
               this.packetBufferState0006.position = 0;
@@ -90,10 +90,10 @@ final class NetworkSupport008 implements Runnable {
             }
           }
           if (integerArgument1 >= -89) {
-            this.computePacketBuffer1206(true);
+            this.computePacketBuffer1201(true);
           }
           if (null == this.asyncTaskState0007) {
-            this.asyncTaskState0007 = this.platformServiceState0005.computeAsyncTask0515((byte) 121, 5, (Runnable) (this));
+            this.asyncTaskState0007 = this.platformServiceState0005.computeAsyncTask0513((byte) 121, 5, (Runnable) (this));
           }
           if (0 == this.asyncTaskState0007.integerState0510) {
             return false;
@@ -107,7 +107,7 @@ final class NetworkSupport008 implements Runnable {
         return false;
     }
 
-    final static byte[] computeByteArray1204(String stringArgument1, int integerArgument2) {
+    final static byte[] computeByteArray1199(String stringArgument1, int integerArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         String stringLocal2 = null;
         byte[] stackByteArrayLocal3 = null;
@@ -118,9 +118,9 @@ final class NetworkSupport008 implements Runnable {
         try {
           if (integerArgument2 != -15192) {
             stringLocal2 = (String) null;
-            NetworkSupport008.computeMusicTrack1205((ResourceArchive) null, -55, (String) null, (NetworkSupport011) null, (String) null);
+            NetworkSupport008.computeMusicTrack1200((ResourceArchive) null, -55, (String) null, (NetworkSupport011) null, (String) null);
           }
-          stackByteArrayLocal3 = Sprite.resourceArchiveState0010.computeByteArray0827(0, stringArgument1, "");
+          stackByteArrayLocal3 = Sprite.resourceArchiveState0010.computeByteArray0822(0, stringArgument1, "");
           return stackByteArrayLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -132,7 +132,7 @@ final class NetworkSupport008 implements Runnable {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class NetworkSupport008 implements Runnable {
               break;
             }
             if (this.packetBufferState0006.payload.length == this.packetBufferState0006.position) {
-              throw NetworkSupport008.<RuntimeException>computeRuntimeException1201(new Exception("HG1: " + this.packetBufferState0006.payload.length + " " + this.uRLState0001));
+              throw NetworkSupport008.<RuntimeException>computeRuntimeException1196(new Exception("HG1: " + this.packetBufferState0006.payload.length + " " + this.uRLState0001));
             }
             objectLocal2 = this;
             synchronized (objectLocal2) {
@@ -191,10 +191,10 @@ final class NetworkSupport008 implements Runnable {
         sceneWidgetState0094 = null;
     }
 
-    final static void performAction1202(byte byteArgument1) {
+    final static void performAction1197(byte byteArgument1) {
         if (byteArgument1 != 13) {
           String stringLocal1 = (String) null;
-          NetworkSupport008.computeByteArray1204((String) null, -97);
+          NetworkSupport008.computeByteArray1199((String) null, -97);
         }
     }
 
@@ -227,7 +227,7 @@ final class NetworkSupport008 implements Runnable {
         this.asyncTaskState0007 = null;
     }
 
-    final static MusicTrack computeMusicTrack1205(ResourceArchive resourceArchiveArgument1, int integerArgument2, String stringArgument3, NetworkSupport011 networkSupport011Argument4, String stringArgument5) {
+    final static MusicTrack computeMusicTrack1200(ResourceArchive resourceArchiveArgument1, int integerArgument2, String stringArgument3, NetworkSupport011 networkSupport011Argument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -248,9 +248,9 @@ final class NetworkSupport008 implements Runnable {
             stackMusicTrackLocal4 = (MusicTrack) null;
             return stackMusicTrackLocal4;
           }
-          integerLocal1 = resourceArchiveArgument1.computeInteger0837(integerArgument2 - 92, stringArgument3);
-          integerLocal3 = resourceArchiveArgument1.computeInteger0824(integerLocal1, integerArgument2 + 12939, stringArgument5);
-          stackMusicTrackLocal5 = LoginCredentials.computeMusicTrack0810(true, networkSupport011Argument4, integerLocal3, integerLocal1, resourceArchiveArgument1);
+          integerLocal1 = resourceArchiveArgument1.computeInteger0832(integerArgument2 - 92, stringArgument3);
+          integerLocal3 = resourceArchiveArgument1.computeInteger0819(integerLocal1, integerArgument2 + 12939, stringArgument5);
+          stackMusicTrackLocal5 = LoginCredentials.computeMusicTrack0806(true, networkSupport011Argument4, integerLocal3, integerLocal1, resourceArchiveArgument1);
           return stackMusicTrackLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal16) {
           caughtExceptionLocal15 = caughtParameterLocal16;
@@ -280,7 +280,7 @@ final class NetworkSupport008 implements Runnable {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class NetworkSupport008 implements Runnable {
           this.platformServiceState0005 = platformServiceArgument1;
           this.packetBufferState0006 = new PacketBuffer(integerArgument3);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "oh.<init>(" + (platformServiceArgument1 != null ? "{...}" : "null") + ',' + (uRLArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "oh.<init>(" + (platformServiceArgument1 != null ? "{...}" : "null") + ',' + (uRLArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class NetworkSupport008 implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1201(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException computeRuntimeException1196(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

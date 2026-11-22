@@ -10,7 +10,7 @@ final class MixedSupport114 {
     static boolean booleanState0162;
     static MixedSupport121 mixedSupport121State0003;
 
-    final static boolean computeBoolean1473(java.applet.Applet appletArgument1, byte byteArgument2) {
+    final static boolean computeBoolean1463(java.applet.Applet appletArgument1, byte byteArgument2) {
         try {
           int integerLocal1 = 0;
           String stringLocal2 = null;
@@ -32,10 +32,10 @@ final class MixedSupport114 {
             }
             try {
               stringLocal2 = "tuhstatbut";
-              stringLocal3 = (String) (MixedSupport088.computeObject1120(true, "getcookies", appletArgument1));
-              stringArrayLocal4 = ResourceArchive.computeStringArray0819(';', (byte) 66, stringLocal3);
+              stringLocal3 = (String) (MixedSupport088.computeObject1115(true, "getcookies", appletArgument1));
+              stringArrayLocal4 = ResourceArchive.computeStringArray0814(';', (byte) 66, stringLocal3);
               if (byteArgument2 >= -55) {
-                MixedSupport114.performAction1472(-124);
+                MixedSupport114.performAction1462(-124);
               }
               for (integerLocal1 = 0; integerLocal1 < stringArrayLocal4.length; integerLocal1++) {
                 integerLocal5 = stringArrayLocal4[integerLocal1].indexOf('=');
@@ -60,7 +60,7 @@ final class MixedSupport114 {
             } else {
               stackStringLocal10 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal16) {
           throw uncheckedExceptionLocal16;
@@ -69,7 +69,7 @@ final class MixedSupport114 {
         }
     }
 
-    public static void performAction1472(int integerArgument1) {
+    public static void performAction1462(int integerArgument1) {
         stringState0477 = null;
         stringState0475 = null;
         stringState0476 = null;

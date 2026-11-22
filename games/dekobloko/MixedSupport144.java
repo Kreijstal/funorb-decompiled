@@ -8,7 +8,7 @@ final class MixedSupport144 {
     static int integerState0848;
     static String stringState0590;
 
-    public static void performAction1765(int integerArgument1) {
+    public static void performAction1745(int integerArgument1) {
         if (integerArgument1 == 27067) {
           stringState0589 = null;
           stringState0590 = null;
@@ -21,7 +21,7 @@ final class MixedSupport144 {
         stringState0588 = null;
     }
 
-    final static StringBuilder computeStringBuilder1766(StringBuilder stringBuilderArgument1, int integerArgument2, int integerArgument3, char characterArgument4) {
+    final static StringBuilder computeStringBuilder1746(StringBuilder stringBuilderArgument1, int integerArgument2, int integerArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -53,7 +53,7 @@ final class MixedSupport144 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(characterArgument4).append(')').toString());
         }
     }
 

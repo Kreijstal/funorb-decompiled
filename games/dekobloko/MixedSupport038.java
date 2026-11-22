@@ -17,7 +17,7 @@ final class MixedSupport038 extends HashNode {
         bitmapFontState0013 = null;
     }
 
-    final static void performAction0527(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction0523(boolean booleanArgument1, int integerArgument2) {
         if (null != MixedSupport071.sceneWidgetPart001State0001) {
           if (!MixedSupport071.sceneWidgetPart001State0001.computeBoolean0158(-1, booleanArgument1)) {
             if (integerArgument2 != 10891) {

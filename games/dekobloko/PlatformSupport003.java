@@ -6,7 +6,7 @@ final class PlatformSupport003 implements com.ms.directX.IEnumModesCallback {
     private com.ms.directX.DirectDraw directDrawState0001;
     private static int integerState0231;
 
-    final void performAction0529(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, java.awt.Frame frameArgument6) {
+    final void performAction0525(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, java.awt.Frame frameArgument6) {
         int integerLocal1 = 0;
         int integerLocal2;
         frameArgument6.setVisible(true);
@@ -33,14 +33,14 @@ final class PlatformSupport003 implements com.ms.directX.IEnumModesCallback {
         frameArgument6.requestFocus();
     }
 
-    final void performAction0530(java.awt.Frame frameArgument1, byte byteArgument2) {
+    final void performAction0526(java.awt.Frame frameArgument1, byte byteArgument2) {
         this.directDrawState0001.restoreDisplayMode();
         if (byteArgument2 >= 121) {
           this.directDrawState0001.setCooperativeLevel((java.awt.Component) ((Object) frameArgument1), 8);
           return;
         }
         java.awt.Frame frameLocal1 = (java.awt.Frame) null;
-        this.performAction0530((java.awt.Frame) null, (byte) 18);
+        this.performAction0526((java.awt.Frame) null, (byte) 18);
         this.directDrawState0001.setCooperativeLevel((java.awt.Component) ((Object) frameArgument1), 8);
     }
 
@@ -72,7 +72,7 @@ final class PlatformSupport003 implements com.ms.directX.IEnumModesCallback {
         this.directDrawState0001.initialize((com.ms.com._Guid) null);
     }
 
-    final int[] computeIntegerArray0528(int integerArgument1) {
+    final int[] computeIntegerArray0524(int integerArgument1) {
         this.directDrawState0001.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         integerArrayState0046 = new int[integerState0231];
         integerState0231 = 0;

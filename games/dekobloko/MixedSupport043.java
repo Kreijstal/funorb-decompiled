@@ -9,7 +9,7 @@ abstract class MixedSupport043 {
     static boolean booleanState0050;
     static String stringState0186;
 
-    final static void performAction0549(byte byteArgument1, HashNode hashNodeArgument2, HashNode hashNodeArgument3) {
+    final static void performAction0545(byte byteArgument1, HashNode hashNodeArgument2, HashNode hashNodeArgument3) {
         try {
           int integerLocal1 = 32 % ((byteArgument1 - 60) / 49);
           if (null != hashNodeArgument2.next) {
@@ -20,11 +20,11 @@ abstract class MixedSupport043 {
           hashNodeArgument2.next.previous = hashNodeArgument2;
           hashNodeArgument2.previous.next = hashNodeArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "fm.J(" + byteArgument1 + ',' + (hashNodeArgument2 != null ? "{...}" : "null") + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "fm.J(" + byteArgument1 + ',' + (hashNodeArgument2 != null ? "{...}" : "null") + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction0548(byte byteArgument1, int integerArgument2, MixedSupport076 mixedSupport076Argument3) {
+    final static void performAction0544(byte byteArgument1, int integerArgument2, MixedSupport076 mixedSupport076Argument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -39,23 +39,23 @@ abstract class MixedSupport043 {
         try {
           cipherPacketBufferLocal4 = SocketFactory.cipherPacketBufferState0002;
           cipherPacketBufferLocal5 = cipherPacketBufferLocal4;
-          cipherPacketBufferLocal5.performAction1691(integerArgument2, -4);
+          cipherPacketBufferLocal5.performAction1672(integerArgument2, -4);
           cipherPacketBufferLocal5.position = cipherPacketBufferLocal5.position + 1;
           integerLocal2 = cipherPacketBufferLocal5.position;
-          cipherPacketBufferLocal5.performAction1892(true, 1);
-          cipherPacketBufferLocal5.performAction1905(-1, mixedSupport076Argument3.integerState0411);
-          cipherPacketBufferLocal5.performAction1905(-1, mixedSupport076Argument3.integerState0414);
-          cipherPacketBufferLocal5.performAction1905(-1, mixedSupport076Argument3.integerState0410);
-          cipherPacketBufferLocal5.performAction1886(mixedSupport076Argument3.integerState0413, false);
-          cipherPacketBufferLocal5.performAction1886(mixedSupport076Argument3.integerState0412, false);
-          cipherPacketBufferLocal5.performAction1886(mixedSupport076Argument3.integerState0408, false);
-          cipherPacketBufferLocal5.performAction1886(mixedSupport076Argument3.integerState0409, false);
-          cipherPacketBufferLocal5.performAction1892(true, mixedSupport076Argument3.integerArrayState0139.length);
+          cipherPacketBufferLocal5.writeByte(true, 1);
+          cipherPacketBufferLocal5.writeShort(-1, mixedSupport076Argument3.integerState0411);
+          cipherPacketBufferLocal5.writeShort(-1, mixedSupport076Argument3.integerState0414);
+          cipherPacketBufferLocal5.writeShort(-1, mixedSupport076Argument3.integerState0410);
+          cipherPacketBufferLocal5.writeInt(mixedSupport076Argument3.integerState0413, false);
+          cipherPacketBufferLocal5.writeInt(mixedSupport076Argument3.integerState0412, false);
+          cipherPacketBufferLocal5.writeInt(mixedSupport076Argument3.integerState0408, false);
+          cipherPacketBufferLocal5.writeInt(mixedSupport076Argument3.integerState0409, false);
+          cipherPacketBufferLocal5.writeByte(true, mixedSupport076Argument3.integerArrayState0139.length);
           for (integerLocal1 = 0; integerLocal1 < mixedSupport076Argument3.integerArrayState0139.length; integerLocal1++) {
-            cipherPacketBufferLocal4.performAction1886(mixedSupport076Argument3.integerArrayState0139[integerLocal1], false);
+            cipherPacketBufferLocal4.writeInt(mixedSupport076Argument3.integerArrayState0139[integerLocal1], false);
           }
-          cipherPacketBufferLocal5.computeInteger1880((byte) -15, integerLocal2);
-          cipherPacketBufferLocal5.performAction1898(cipherPacketBufferLocal5.position - integerLocal2, true);
+          cipherPacketBufferLocal5.appendCrc32((byte) -15, integerLocal2);
+          cipherPacketBufferLocal5.writeLengthByte(cipherPacketBufferLocal5.position - integerLocal2, true);
           if (byteArgument1 > -90) {
             booleanState0049 = true;
           }
@@ -70,24 +70,24 @@ abstract class MixedSupport043 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 
-    abstract void performAction0552(PacketBuffer packetBufferArgument1, byte byteArgument2);
+    abstract void performAction0548(PacketBuffer packetBufferArgument1, byte byteArgument2);
 
-    public static void performAction0553(boolean booleanArgument1) {
+    public static void performAction0549(boolean booleanArgument1) {
         stringState0186 = null;
         stringState0185 = null;
         if (!booleanArgument1) {
           MixedSupport076 mixedSupport076Local1 = (MixedSupport076) null;
-          MixedSupport043.performAction0548((byte) 8, -15, (MixedSupport076) null);
+          MixedSupport043.performAction0544((byte) 8, -15, (MixedSupport076) null);
         }
     }
 
-    abstract MixedSupport048 computeMixedSupport0480550(int integerArgument1);
+    abstract MixedSupport048 computeMixedSupport0480546(int integerArgument1);
 
-    final static void performAction0551(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final static void performAction0547(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -103,16 +103,16 @@ abstract class MixedSupport043 {
         integerLocal2 = 0;
         if (60 <= integerArgument5) {
           if (integerArgument5 < 80) {
-            integerLocal1 = integerLocal1 + MixedSupport148.computeInteger1805(23841, 80, integerArgument7 * 18 + 40);
+            integerLocal1 = integerLocal1 + MixedSupport148.computeInteger1785(23841, 80, integerArgument7 * 18 + 40);
           } else {
             if (integerArgument5 < 93) {
-              integerLocal2 = MixedSupport148.computeInteger1805(23841, 80, 18 * SceneWidgetPart013.integerArrayState0239[1 + integerArgument5 - 80] + 40);
+              integerLocal2 = MixedSupport148.computeInteger1785(23841, 80, 18 * SceneWidgetPart013.integerArrayState0239[1 + integerArgument5 - 80] + 40);
             } else {
-              SoftwareRaster.performAction0655(integerArgument2 - 36 - 3, integerArgument3 + 36 - 3, 78, 60, 4, 65280, 100);
+              SoftwareRaster.performAction0651(integerArgument2 - 36 - 3, integerArgument3 + 36 - 3, 78, 60, 4, 65280, 100);
             }
           }
         } else {
-          integerLocal1 = integerLocal1 + MixedSupport148.computeInteger1805(23841, 80, integerArgument4 * 18 + 40);
+          integerLocal1 = integerLocal1 + MixedSupport148.computeInteger1785(23841, 80, integerArgument4 * 18 + 40);
         }
         RenderingSupport002.performAction0243(integerArgument1, 2, 5, integerArgument2 + 18, integerArgument3 + 73, -2, -2);
         RenderingSupport002.performAction0243(integerArgument1, 2, 12, 18 + integerArgument2, integerArgument3 + 55, -2, -1);
@@ -131,7 +131,7 @@ abstract class MixedSupport043 {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void performAction0547(int integerArgument1, HashNode hashNodeArgument2, HashNode hashNodeArgument3) {
+    final static void performAction0543(int integerArgument1, HashNode hashNodeArgument2, HashNode hashNodeArgument3) {
         try {
           int integerLocal1 = 32 % ((integerArgument1 - 60) / 49);
           if (null != hashNodeArgument2.next) {
@@ -142,7 +142,7 @@ abstract class MixedSupport043 {
           hashNodeArgument2.next.previous = hashNodeArgument2;
           hashNodeArgument2.previous.next = hashNodeArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "fm.J(" + integerArgument1 + ',' + (hashNodeArgument2 != null ? "{...}" : "null") + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "fm.J(" + integerArgument1 + ',' + (hashNodeArgument2 != null ? "{...}" : "null") + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 }

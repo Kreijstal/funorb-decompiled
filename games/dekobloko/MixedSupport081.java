@@ -6,13 +6,13 @@ final class MixedSupport081 {
     static String stringState0331;
     static SceneWidget sceneWidgetState0074;
     static String stringState0332;
-    static CodecSupport001 codecSupport001State0001;
+    static DisplayModeController displayModeControllerState0001;
     static RgbSprite rgbSpriteState0032;
     static SceneWidget sceneWidgetState0075;
     static long longState0029;
     static String stringState0333;
 
-    final static String computeString0982(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
+    final static String computeString0977(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
         int integerLocal1 = 0;
         Exception exceptionLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -26,13 +26,13 @@ final class MixedSupport081 {
         Throwable caughtExceptionLocal11 = null;
         try {
           try {
-            integerLocal1 = packetBufferArgument3.computeInteger1891(false);
+            integerLocal1 = packetBufferArgument3.readUnsignedSmart(false);
             if (integerLocal1 > integerArgument1) {
               integerLocal1 = integerArgument1;
             }
             byteArrayLocal4 = new byte[integerLocal1];
-            packetBufferArgument3.position = packetBufferArgument3.position + NetworkSupport007.mixedSupport068State0001.computeInteger0842(packetBufferArgument3.position, (byte) 91, integerArgument2, byteArrayLocal4, packetBufferArgument3.payload, integerLocal1);
-            stringLocal5 = MixedSupport140.computeString1732(byteArrayLocal4, 0, 0, integerLocal1);
+            packetBufferArgument3.position = packetBufferArgument3.position + NetworkSupport007.mixedSupport068State0001.computeInteger0837(packetBufferArgument3.position, (byte) 91, integerArgument2, byteArrayLocal4, packetBufferArgument3.payload, integerLocal1);
+            stringLocal5 = MixedSupport140.decodeCp1252(byteArrayLocal4, 0, 0, integerLocal1);
             stackStringLocal6 = stringLocal5;
             return stackStringLocal6;
           } catch (java.lang.Exception caughtParameterLocal12) {
@@ -51,12 +51,12 @@ final class MixedSupport081 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    public static void performAction0981(int integerArgument1) {
-        codecSupport001State0001 = null;
+    public static void performAction0976(int integerArgument1) {
+        displayModeControllerState0001 = null;
         rgbSpriteState0032 = null;
         stringState0332 = null;
         sceneWidgetState0074 = null;
@@ -71,7 +71,7 @@ final class MixedSupport081 {
         stringState0331 = "Email is valid";
         stringState0332 = "Report <%0> for abuse";
         stringState0333 = "Status";
-        codecSupport001State0001 = null;
+        displayModeControllerState0001 = null;
         stringState0330 = "You are invited to <%0>'s game.";
     }
 }

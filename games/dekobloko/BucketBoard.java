@@ -86,7 +86,7 @@ final class BucketBoard {
     int pieceWidth;
     int integerState0496;
 
-    final int computeInteger1012(int integerArgument1) {
+    final int computeInteger1007(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -96,7 +96,7 @@ final class BucketBoard {
         integerLocal2 = -1;
         integerLocal3 = this.pieceWidth * this.pieceHeight;
         if (integerArgument1 > -36) {
-          this.performAction1014(5);
+          this.performAction1009(5);
         }
         for (integerLocal1 = 0; integerLocal1 < integerLocal3; integerLocal1++) {
           integerLocal4 = this.activePieceCells[integerLocal1];
@@ -110,7 +110,7 @@ final class BucketBoard {
         return integerLocal2;
     }
 
-    private final boolean computeBoolean1019(int integerArgument1) {
+    private final boolean computeBoolean1014(int integerArgument1) {
         int[] integerArrayLocal1 = null;
         int previousIntegerLocal2 = 0;
         int integerLocal3 = 0;
@@ -185,11 +185,11 @@ final class BucketBoard {
             integerLocal15++;
           }
         }
-        RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
+        RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
         return true;
     }
 
-    private final void performAction0995(int integerArgument1, boolean booleanArgument2, int integerArgument3) {
+    private final void performAction0990(int integerArgument1, boolean booleanArgument2, int integerArgument3) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -206,7 +206,7 @@ final class BucketBoard {
         for (integerLocal3 = 0; this.boardHeight * this.boardWidth > integerLocal3; integerLocal3++) {
           integerLocal4 = this.settledCells[integerLocal3];
           if ((1879048192 & integerLocal4) == 0) {
-            this.settledCells[integerLocal3] = MixedSupport079.computeInteger0954(2147483647, integerLocal4);
+            this.settledCells[integerLocal3] = MixedSupport079.computeInteger0949(2147483647, integerLocal4);
           } else {
             if (8 == (integerLocal4 & 24)) {
               integerLocal2++;
@@ -227,7 +227,7 @@ final class BucketBoard {
             if (booleanArgument2) {
               this.settledCells[integerLocal3] = 56;
             } else {
-              this.settledCells[integerLocal3] = UiComponentPart006.computeInteger0358(32, MixedSupport079.computeInteger0954(integerLocal4, 268435455));
+              this.settledCells[integerLocal3] = UiComponentPart006.computeInteger0357(32, MixedSupport079.computeInteger0949(integerLocal4, 268435455));
             }
           }
         }
@@ -236,32 +236,32 @@ final class BucketBoard {
           if (this.integerState0446 < integerLocal7) {
             integerLocal7 = this.integerState0446;
           }
-          RenderingSupport003.performAction0578(this.integerState0458, integerLocal7, (byte) 127, MixedSupport030.rawSoundState0006);
+          RenderingSupport003.performAction0574(this.integerState0458, integerLocal7, (byte) 127, MixedSupport030.rawSoundState0006);
         } else {
           if (integerLocal1 > 0) {
             integerLocal7 = ((int)((double)this.integerState0446 * Math.sqrt((double)integerLocal1)) + 1) / 2;
             if (this.integerState0446 < integerLocal7) {
               integerLocal7 = this.integerState0446;
             }
-            RenderingSupport003.performAction0578(this.integerState0458, integerLocal7, (byte) 127, MixedSupport152.rawSoundState0023);
+            RenderingSupport003.performAction0574(this.integerState0458, integerLocal7, (byte) 127, MixedSupport152.rawSoundState0023);
           }
           if (0 < integerLocal2) {
             integerLocal7 = (2 + (int)((double)this.integerState0446 * Math.sqrt((double)integerLocal2))) / 4;
             if (integerLocal7 > this.integerState0446) {
               integerLocal7 = this.integerState0446;
             }
-            RenderingSupport003.performAction0578(this.integerState0458, integerLocal7, (byte) 127, MixedSupport117.rawSoundState0020);
+            RenderingSupport003.performAction0574(this.integerState0458, integerLocal7, (byte) 127, MixedSupport117.rawSoundState0020);
           }
         }
         return;
     }
 
-    private final int computeInteger1015(int integerArgument1) {
+    private final int computeInteger1010(int integerArgument1) {
         int integerLocal1 = 95 % ((integerArgument1 - 43) / 54);
         return 80 + this.dropIntervalTicks * this.boardHeight;
     }
 
-    final int computeInteger0990(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final int computeInteger0985(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -292,10 +292,10 @@ final class BucketBoard {
         return integerLocal1;
     }
 
-    final static void performAction0996(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7, int integerArgument8, boolean booleanArgument9, boolean booleanArgument10, boolean booleanArgument11, boolean booleanArgument12) {
-        MixedSupport128.performAction1651(16777215, integerArgument3, booleanArgument7, integerArgument8, booleanArgument11, booleanArgument12, booleanArgument2, 16777215, integerArgument1, integerArgument5, integerArgument4, (byte) 103, integerArgument6, booleanArgument9);
+    final static void performAction0991(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7, int integerArgument8, boolean booleanArgument9, boolean booleanArgument10, boolean booleanArgument11, boolean booleanArgument12) {
+        MixedSupport128.performAction1632(16777215, integerArgument3, booleanArgument7, integerArgument8, booleanArgument11, booleanArgument12, booleanArgument2, 16777215, integerArgument1, integerArgument5, integerArgument4, (byte) 103, integerArgument6, booleanArgument9);
         if (!booleanArgument10) {
-          BucketBoard.performAction1013(-50);
+          BucketBoard.performAction1008(-50);
         }
     }
 
@@ -314,7 +314,7 @@ final class BucketBoard {
         }
     }
 
-    private final int computeInteger1002(boolean booleanArgument1, int integerArgument2, int integerArgument3, BucketBoard bucketBoardArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7, int integerArgument8, ReturnedShapeCache returnedShapeCacheArgument9, boolean booleanArgument10, byte byteArgument11) {
+    private final int computeInteger0997(boolean booleanArgument1, int integerArgument2, int integerArgument3, BucketBoard bucketBoardArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7, int integerArgument8, ReturnedShapeCache returnedShapeCacheArgument9, boolean booleanArgument10, byte byteArgument11) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -360,7 +360,7 @@ final class BucketBoard {
             (integerLocal19 & -1879048193) == 23) {
             if (-2 == integerArgument6) {
               for (integerLocal22 = 0; integerLocal22 < 7; integerLocal22++) {
-                integerLocal21 = integerLocal21 + this.computeInteger1002(booleanArgument1, integerArgument2, integerArgument3, bucketBoardArgument4, booleanArgument5, integerLocal22, integerArgument7, integerArgument8, returnedShapeCacheArgument9, booleanArgument10, (byte) 111);
+                integerLocal21 = integerLocal21 + this.computeInteger0997(booleanArgument1, integerArgument2, integerArgument3, bucketBoardArgument4, booleanArgument5, integerLocal22, integerArgument7, integerArgument8, returnedShapeCacheArgument9, booleanArgument10, (byte) 111);
               }
             }
             stackIntegerLocal4 = integerLocal21;
@@ -372,7 +372,7 @@ final class BucketBoard {
           integerLocal31 = 0;
           this.selectedCellIndices[0] = integerArgument7;
           integerLocal23 = 1;
-          this.settledCells[integerArgument7] = UiComponentPart006.computeInteger0358(-2147483648, integerLocal19);
+          this.settledCells[integerArgument7] = UiComponentPart006.computeInteger0357(-2147483648, integerLocal19);
           integerLocal24 = 0;
           if (integerArgument6 >= 0) {
             integerLocal24 = 1;
@@ -409,18 +409,18 @@ final class BucketBoard {
                 integerLocal24 = 0;
               }
               if (0 < integerLocal26 % this.boardWidth) {
-                integerLocal23 = this.computeInteger0991(-1 + integerLocal26, 124, integerLocal25, integerLocal23, integerLocal19);
+                integerLocal23 = this.computeInteger0986(-1 + integerLocal26, 124, integerLocal25, integerLocal23, integerLocal19);
               }
               if (this.boardWidth - 1 > integerLocal26 % this.boardWidth) {
-                integerLocal23 = this.computeInteger0991(1 + integerLocal26, 126, integerLocal25, integerLocal23, integerLocal19);
+                integerLocal23 = this.computeInteger0986(1 + integerLocal26, 126, integerLocal25, integerLocal23, integerLocal19);
               }
               if (integerLocal26 >= this.boardWidth) {
-                integerLocal23 = this.computeInteger0991(-this.boardWidth + integerLocal26, 126, integerLocal25, integerLocal23, integerLocal19);
+                integerLocal23 = this.computeInteger0986(-this.boardWidth + integerLocal26, 126, integerLocal25, integerLocal23, integerLocal19);
               }
               if ((-1 + this.boardHeight) * this.boardWidth <= integerLocal26) {
                 continue;
               }
-              integerLocal23 = this.computeInteger0991(integerLocal26 + this.boardWidth, 125, integerLocal25, integerLocal23, integerLocal19);
+              integerLocal23 = this.computeInteger0986(integerLocal26 + this.boardWidth, 125, integerLocal25, integerLocal23, integerLocal19);
             }
             integerLocal25 = -119 / ((byteArgument11 - 7) / 60);
             frameRemainderLocal34 = (integerLocal24 == 0);
@@ -445,34 +445,34 @@ final class BucketBoard {
                 integerLocal31++;
                 integerLocal27 = this.selectedCellIndices[previousIntegerLocal2];
                 if (integerLocal27 % this.boardWidth > 0) {
-                  integerLocal23 = this.computeInteger0989(integerLocal23, integerLocal27 - 1, (byte) -44, integerLocal19);
+                  integerLocal23 = this.computeInteger0984(integerLocal23, integerLocal27 - 1, (byte) -44, integerLocal19);
                 }
                 if (integerLocal27 % this.boardWidth < -1 + this.boardWidth) {
-                  integerLocal23 = this.computeInteger0989(integerLocal23, integerLocal27 + 1, (byte) -44, integerLocal19);
+                  integerLocal23 = this.computeInteger0984(integerLocal23, integerLocal27 + 1, (byte) -44, integerLocal19);
                 }
                 if (this.boardWidth <= integerLocal27) {
-                  integerLocal23 = this.computeInteger0989(integerLocal23, -this.boardWidth + integerLocal27, (byte) -44, integerLocal19);
+                  integerLocal23 = this.computeInteger0984(integerLocal23, -this.boardWidth + integerLocal27, (byte) -44, integerLocal19);
                 }
                 if (integerLocal27 >= (this.boardHeight - 1) * this.boardWidth) {
                   continue;
                 }
-                integerLocal23 = this.computeInteger0989(integerLocal23, this.boardWidth + integerLocal27, (byte) -44, integerLocal19);
+                integerLocal23 = this.computeInteger0984(integerLocal23, this.boardWidth + integerLocal27, (byte) -44, integerLocal19);
               }
             }
             if (!booleanArgument10 &&
               null != this.nodeDequeState0018) {
               if (integerArgument8 == 3 &&
                 null != this.nodeDequeState0018) {
-                integerLocal27 = RenderingSupport004.computeInteger0588(integerLocal23, 27935);
+                integerLocal27 = RenderingSupport004.computeInteger0584(integerLocal23, 27935);
                 integerLocal28 = integerLocal27;
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal28;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal28;
                 this.integerState0475 = this.integerState0475 + integerLocal27;
-                this.nodeDequeState0018.performAction1786(new MixedSupport117(false, this.computeInteger1006(0, integerLocal23, 81), this.computeInteger1001(true, integerLocal23, 0), integerLocal27, MixedSupport001.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
+                this.nodeDequeState0018.performAction1766(new MixedSupport117(false, this.computeInteger1001(0, integerLocal23, 81), this.computeInteger0996(true, integerLocal23, 0), integerLocal27, MixedSupport001.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
               } else {
                 if (this.nodeDequeState0018 != null) {
-                  integerLocal27 = UiComponentPart022.computeInteger1237(integerLocal26, 65);
-                  integerLocal28 = RenderingSupport004.computeInteger0588(integerLocal23 - integerLocal26, 27935);
+                  integerLocal27 = UiComponentPart022.computeInteger1232(integerLocal26, 65);
+                  integerLocal28 = RenderingSupport004.computeInteger0584(integerLocal23 - integerLocal26, 27935);
                   this.integerState0464 = this.integerState0464 + integerLocal27;
                   integerLocal29 = integerLocal27;
                   UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal29;
@@ -482,9 +482,9 @@ final class BucketBoard {
                   MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal33;
                   UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal33;
                   if (0 < integerLocal28) {
-                    this.nodeDequeState0018.performAction1786(new MixedSupport117(false, this.computeInteger1006(integerLocal26, integerLocal23, 65), this.computeInteger1001(true, integerLocal23, integerLocal26), integerLocal28, MixedSupport001.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
+                    this.nodeDequeState0018.performAction1766(new MixedSupport117(false, this.computeInteger1001(integerLocal26, integerLocal23, 65), this.computeInteger0996(true, integerLocal23, integerLocal26), integerLocal28, MixedSupport001.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
                   }
-                  this.nodeDequeState0018.performAction1786(new MixedSupport117(false, this.computeInteger1006(0, integerLocal26, 112), this.computeInteger1001(true, integerLocal26, 0), integerLocal27, MixedSupport009.integerArrayState0015, -4 + integerLocal26, 16 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal26), " = <b>", Integer.toString(integerLocal27)}), 2777);
+                  this.nodeDequeState0018.performAction1766(new MixedSupport117(false, this.computeInteger1001(0, integerLocal26, 112), this.computeInteger0996(true, integerLocal26, 0), integerLocal27, MixedSupport009.integerArrayState0015, -4 + integerLocal26, 16 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal26), " = <b>", Integer.toString(integerLocal27)}), 2777);
                 }
               }
             }
@@ -535,7 +535,7 @@ final class BucketBoard {
           } else {
             stackStringLocal17 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal13), ((StringBuilder) (Object) stackStringBuilderLocal16).append(stackStringLocal17).append(',').append(booleanArgument10).append(',').append(byteArgument11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal13), ((StringBuilder) (Object) stackStringBuilderLocal16).append(stackStringLocal17).append(',').append(booleanArgument10).append(',').append(byteArgument11).append(')').toString());
         }
     }
 
@@ -601,7 +601,7 @@ final class BucketBoard {
           }
         }
         if (obfuscationGuard != -1674843007) {
-          BucketBoard.computeBoolean0992(50, -101, 127, 94, false, 20, 66);
+          BucketBoard.computeBoolean0987(50, -101, 127, 94, false, 20, 66);
         }
         if (forceDrop != 0) {
           if (0 != this.forcedDropCountdown &&
@@ -628,12 +628,12 @@ final class BucketBoard {
         return;
     }
 
-    final ReturnedShape computeReturnedShape1003(int integerArgument1) {
+    final ReturnedShape computeReturnedShape0998(int integerArgument1) {
         int integerLocal1;
         ReturnedShape returnedShapeLocal2;
         int integerLocal3;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        this.performAction1009(0);
+        this.performAction1004(0);
         for (integerLocal1 = 0; this.integerState0465 > integerLocal1; integerLocal1++) {
           if (this.returnedShapeArrayState0001[integerLocal1].integerState0692 != 0) {
             continue;
@@ -651,7 +651,7 @@ final class BucketBoard {
         return returnedShapeLocal2;
     }
 
-    final void performAction0993(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6) {
+    final void performAction0988(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6) {
         int[] integerArrayLocal1 = null;
         int[] integerArrayLocal2 = null;
         int[] integerArrayLocal3 = null;
@@ -696,7 +696,7 @@ final class BucketBoard {
         this.finalizePiecePlacement(integerArgument2, (byte) 126, booleanArgument4);
     }
 
-    final void performAction0994(int integerArgument1, int integerArgument2, ReturnedShape returnedShapeArgument3) {
+    final void performAction0989(int integerArgument1, int integerArgument2, ReturnedShape returnedShapeArgument3) {
         int stackIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -722,11 +722,11 @@ final class BucketBoard {
           this.integerArrayState0144 = new int[this.pieceWidth * this.pieceHeight];
           this.activePieceCells = new int[this.pieceWidth * this.pieceHeight];
           if (integerArgument1 <= 73) {
-            this.performAction1000(false);
+            this.performAction0995(false);
           }
           this.integerArrayState0147 = new int[this.pieceWidth * this.pieceHeight];
           for (integerLocal6 = 0; this.pieceHeight * this.pieceWidth > integerLocal6; integerLocal6++) {
-            this.activePieceCells[integerLocal6] = MixedSupport079.computeInteger0954(255, (int) returnedShapeArgument3.packedCells[integerLocal6]);
+            this.activePieceCells[integerLocal6] = MixedSupport079.computeInteger0949(255, (int) returnedShapeArgument3.packedCells[integerLocal6]);
           }
           for (integerLocal14 = 0; this.pieceWidth * this.pieceHeight > integerLocal14; integerLocal14++) {
             this.integerArrayState0144[integerLocal14] = 8;
@@ -779,7 +779,7 @@ final class BucketBoard {
           }
           this.dropCountdown = stackIntegerLocal1;
           this.grounded = false;
-          this.forcedDropCountdown = this.computeInteger1015(123);
+          this.forcedDropCountdown = this.computeInteger1010(123);
           this.deepestPieceCenterY2 = this.getPieceCenterY2(32);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
@@ -792,11 +792,11 @@ final class BucketBoard {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final void performAction0999(ReturnedShape returnedShapeArgument1, byte byteArgument2) {
+    final void performAction0994(ReturnedShape returnedShapeArgument1, byte byteArgument2) {
         ReturnedShape[] returnedShapeArrayLocal1 = null;
         ReturnedShape[] returnedShapeArrayLocal2 = null;
         int integerLocal3 = 0;
@@ -821,11 +821,11 @@ final class BucketBoard {
           this.integerState0465 = this.integerState0465 + 1;
           this.returnedShapeArrayState0001[integerLocal4] = returnedShapeArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "lk.O(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "lk.O(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
-    private final boolean computeBoolean1010(int integerArgument1, int integerArgument2) {
+    private final boolean computeBoolean1005(int integerArgument1, int integerArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int integerLocal3;
@@ -919,7 +919,7 @@ final class BucketBoard {
         }
     }
 
-    final void performAction1014(int integerArgument1) {
+    final void performAction1009(int integerArgument1) {
         if (integerArgument1 != -9897) {
           this.integerState0460 = 92;
         }
@@ -931,7 +931,7 @@ final class BucketBoard {
           this.integerState0490 = this.pieceHeight;
           this.integerState0479 = this.pieceX;
           this.integerArrayState0145 = this.activePieceCells;
-          RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 2, (byte) 127, MixedSupport138.rawSoundState0021);
+          RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 2, (byte) 127, MixedSupport138.rawSoundState0021);
           this.booleanState0106 = true;
           this.integerState0454 = 0;
           this.integerState0445 = 0;
@@ -941,8 +941,8 @@ final class BucketBoard {
         this.pieceWidth = 0;
     }
 
-    private final void performAction1008(boolean booleanArgument1) {
-        int integerLocal1 = -300 + UiComponentPart016.computeInteger0852((byte) 122, 601, UiComponentPart031.randomState0003);
+    private final void performAction1003(boolean booleanArgument1) {
+        int integerLocal1 = -300 + UiComponentPart016.computeInteger0847((byte) 122, 601, UiComponentPart031.randomState0003);
         integerLocal1 = integerLocal1 * (integerLocal1 * integerLocal1) / 90000;
         MixedSupport001.performAction0007(integerLocal1, this.integerState0474 / 4, MixedSupport006.rawSoundState0001, this.integerState0462, 256);
         if (booleanArgument1) {
@@ -951,13 +951,13 @@ final class BucketBoard {
     }
 
     private final void rotateClockwise(int integerArgument1) {
-        if (this.computeBoolean1019(21200)) {
+        if (this.computeBoolean1014(21200)) {
           return;
         }
         if ((this.horizontalParity | this.verticalParity) != integerArgument1) {
           this.verticalParity = -this.verticalParity;
           this.horizontalParity = -this.horizontalParity;
-          if (this.computeBoolean1019(integerArgument1 ^ 21200)) {
+          if (this.computeBoolean1014(integerArgument1 ^ 21200)) {
             return;
           }
           this.verticalParity = -this.verticalParity;
@@ -965,7 +965,7 @@ final class BucketBoard {
         }
     }
 
-    private final int computeInteger0985(byte byteArgument1) {
+    private final int computeInteger0980(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -983,7 +983,7 @@ final class BucketBoard {
         return 0;
     }
 
-    final boolean computeBoolean1017(int integerArgument1) {
+    final boolean computeBoolean1012(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -1003,28 +1003,28 @@ final class BucketBoard {
         }
         if (integerArgument1 != -22477) {
           bucketBoardLocal5 = (BucketBoard) null;
-          this.performAction0998((ReturnedShapeCache) null, 112, true, (BucketBoard) null);
+          this.performAction0993((ReturnedShapeCache) null, 112, true, (BucketBoard) null);
         }
         return false;
     }
 
-    final static boolean computeBoolean0992(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7) {
+    final static boolean computeBoolean0987(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, boolean booleanArgument5, int integerArgument6, int integerArgument7) {
         int integerLocal1 = -122 / ((integerArgument2 + 36) / 55);
-        if (RichTextLayout.computeBoolean0402((byte) 69)) {
-          CacheWorkQueue.performAction0756(-93, integerArgument7, booleanArgument5, integerArgument6);
+        if (RichTextLayout.computeBoolean0401((byte) 69)) {
+          CacheWorkQueue.performAction0752(-93, integerArgument7, booleanArgument5, integerArgument6);
           if (SceneWidget.mixedSupport104State0001 != null &&
-            SceneWidget.mixedSupport104State0001.computeBoolean1265(booleanArgument5, integerArgument4, integerArgument1, 0, integerArgument6)) {
+            SceneWidget.mixedSupport104State0001.computeBoolean1259(booleanArgument5, integerArgument4, integerArgument1, 0, integerArgument6)) {
             booleanArgument5 = false;
-            UiComponentPart031.performAction1647((byte) -78);
+            UiComponentPart031.performAction1628((byte) -78);
           }
-          MixedSupport083.performAction1026(booleanArgument5, 0, integerArgument6);
-          ResourceArchive.performAction0825(integerArgument3, 0, booleanArgument5);
+          MixedSupport083.performAction1021(booleanArgument5, 0, integerArgument6);
+          ResourceArchive.performAction0820(integerArgument3, 0, booleanArgument5);
           booleanArgument5 = false;
         }
         return booleanArgument5;
     }
 
-    final void performAction1000(boolean booleanArgument1) {
+    final void performAction0995(boolean booleanArgument1) {
         if (booleanArgument1) {
           return;
         }
@@ -1034,7 +1034,7 @@ final class BucketBoard {
         this.integerState0454 = 0;
     }
 
-    final void performAction0998(ReturnedShapeCache returnedShapeCacheArgument1, int integerArgument2, boolean booleanArgument3, BucketBoard bucketBoardArgument4) {
+    final void performAction0993(ReturnedShapeCache returnedShapeCacheArgument1, int integerArgument2, boolean booleanArgument3, BucketBoard bucketBoardArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int discarded$4 = 0;
@@ -1128,16 +1128,16 @@ final class BucketBoard {
                 MixedSupport049.integerState0263 = 0;
                 integerLocal16 = 0;
                 for (integerLocal17 = 0; integerLocal17 < this.boardHeight * this.boardWidth; integerLocal17++) {
-                  integerLocal18 = this.computeInteger1002(true, 2, 4, bucketBoardArgument4, true, -1, integerLocal17, 1, returnedShapeCacheArgument1, false, (byte) 71);
+                  integerLocal18 = this.computeInteger0997(true, 2, 4, bucketBoardArgument4, true, -1, integerLocal17, 1, returnedShapeCacheArgument1, false, (byte) 71);
                   if (integerLocal18 > 0) {
                     if (this.booleanState0108) {
-                      if (this.computeBoolean0988(-101, integerLocal18)) {
+                      if (this.computeBoolean0983(-101, integerLocal18)) {
                         MixedSupport011.booleanState0010 = true;
                       }
-                      if (this.computeBoolean1010(integerLocal18, -15303)) {
+                      if (this.computeBoolean1005(integerLocal18, -15303)) {
                         MixedSupport026.booleanState0029 = true;
                       }
-                      if (this.computeBoolean1005(integerLocal18, -1)) {
+                      if (this.computeBoolean1000(integerLocal18, -1)) {
                         UiComponentPart024.booleanState0137 = true;
                       }
                     }
@@ -1163,7 +1163,7 @@ final class BucketBoard {
                   if (!booleanArgument3 && (16 == (integerLocal24 & 24) ||
                     (integerLocal24 & 24) == 24) && (integerLocal19 < -1 + this.boardHeight &&
                     this.settledCells[integerLocal18 + this.boardWidth] == 0)) {
-                    this.settledCells[integerLocal18 + this.boardWidth] = UiComponentPart006.computeInteger0358(MixedSupport079.computeInteger0954(integerLocal24, 31), 32);
+                    this.settledCells[integerLocal18 + this.boardWidth] = UiComponentPart006.computeInteger0357(MixedSupport079.computeInteger0949(integerLocal24, 31), 32);
                     this.settledCells[integerLocal18] = 0;
                     integerLocal16++;
                     integerLocal14 = 1;
@@ -1176,7 +1176,7 @@ final class BucketBoard {
                       integerLocal21 + this.integerState0481 < this.boardWidth &&
                       this.settledCells[this.integerState0481 + integerLocal18] == 0 &&
                       this.settledCells[this.boardWidth + integerLocal18 + this.integerState0481] == 0)) {
-                      this.settledCells[this.integerState0481 + integerLocal18] = UiComponentPart006.computeInteger0358(MixedSupport079.computeInteger0954(31, integerLocal24), 32);
+                      this.settledCells[this.integerState0481 + integerLocal18] = UiComponentPart006.computeInteger0357(MixedSupport079.computeInteger0949(31, integerLocal24), 32);
                       this.settledCells[integerLocal18] = 0;
                       integerLocal14 = 1;
                       integerLocal16++;
@@ -1189,7 +1189,7 @@ final class BucketBoard {
                         this.boardWidth > -this.integerState0481 + integerLocal21 &&
                         this.settledCells[-this.integerState0481 + integerLocal18] == 0 &&
                         this.settledCells[-this.integerState0481 + (integerLocal18 + this.boardWidth)] == 0)) {
-                        this.settledCells[-this.integerState0481 + integerLocal18] = UiComponentPart006.computeInteger0358(MixedSupport079.computeInteger0954(31, integerLocal24), 32);
+                        this.settledCells[-this.integerState0481 + integerLocal18] = UiComponentPart006.computeInteger0357(MixedSupport079.computeInteger0949(31, integerLocal24), 32);
                         integerLocal14 = 1;
                         this.settledCells[integerLocal18] = 0;
                         integerLocal16++;
@@ -1234,26 +1234,26 @@ final class BucketBoard {
               rawPcmStreamLocal29 = SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453];
               rawPcmStreamLocal23 = rawPcmStreamLocal29;
               if (rawPcmStreamLocal23 != null) {
-                rawPcmStreamLocal29.performAction0461(-1);
+                rawPcmStreamLocal29.performAction0460(-1);
               }
               if (rawPcmStreamLocal23 != null &&
                 rawPcmStreamLocal29.computeBoolean0144((byte) 93) &&
                 rawPcmStreamLocal29.abstractAudioSampleState0001 == rawSoundLocal20) {
-                rawPcmStreamLocal23.performAction0440(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal23.performAction0439(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               } else {
                 if (rawPcmStreamLocal23 != null) {
-                  rawPcmStreamLocal29.performAction0464(PcmPlayer.integerState0209 / 50);
+                  rawPcmStreamLocal29.performAction0463(PcmPlayer.integerState0209 / 50);
                 }
-                rawPcmStreamLocal30 = RawPcmStream.computeRawPcmStream0453(rawSoundLocal20, 100, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal30 = RawPcmStream.computeRawPcmStream0452(rawSoundLocal20, 100, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
                 rawPcmStreamLocal23 = rawPcmStreamLocal30;
-                rawPcmStreamLocal30.performAction0461(-1);
+                rawPcmStreamLocal30.performAction0460(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal30);
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453] = rawPcmStreamLocal30;
               }
             } else {
               rawPcmStreamLocal22 = SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453];
               if (rawPcmStreamLocal22 != null) {
-                rawPcmStreamLocal22.performAction0464(PcmPlayer.integerState0209 / 50);
+                rawPcmStreamLocal22.performAction0463(PcmPlayer.integerState0209 / 50);
                 SoftwareFramebuffer.rawPcmStreamArrayState0003[this.integerState0453] = null;
               }
             }
@@ -1262,7 +1262,7 @@ final class BucketBoard {
               if (this.integerState0446 < integerLocal44) {
                 integerLocal44 = this.integerState0446;
               }
-              RenderingSupport003.performAction0578(this.integerState0458, integerLocal44, (byte) 127, MixedSupport011.rawSoundState0004);
+              RenderingSupport003.performAction0574(this.integerState0458, integerLocal44, (byte) 127, MixedSupport011.rawSoundState0004);
             }
             if (integerLocal14 != 0) {
               this.integerState0481 = -this.integerState0481;
@@ -1279,16 +1279,16 @@ final class BucketBoard {
             MixedSupport049.integerState0263 = 0;
             integerLocal16 = 0;
             for (integerLocal17 = 0; integerLocal17 < this.boardHeight * this.boardWidth; integerLocal17++) {
-              integerLocal18 = this.computeInteger1002(true, 2, 4, bucketBoardArgument4, true, -1, integerLocal17, 1, returnedShapeCacheArgument1, false, (byte) 71);
+              integerLocal18 = this.computeInteger0997(true, 2, 4, bucketBoardArgument4, true, -1, integerLocal17, 1, returnedShapeCacheArgument1, false, (byte) 71);
               if (integerLocal18 > 0) {
                 if (this.booleanState0108) {
-                  if (this.computeBoolean0988(-101, integerLocal18)) {
+                  if (this.computeBoolean0983(-101, integerLocal18)) {
                     MixedSupport011.booleanState0010 = true;
                   }
-                  if (this.computeBoolean1010(integerLocal18, -15303)) {
+                  if (this.computeBoolean1005(integerLocal18, -15303)) {
                     MixedSupport026.booleanState0029 = true;
                   }
-                  if (this.computeBoolean1005(integerLocal18, -1)) {
+                  if (this.computeBoolean1000(integerLocal18, -1)) {
                     UiComponentPart024.booleanState0137 = true;
                   }
                 }
@@ -1297,7 +1297,7 @@ final class BucketBoard {
             }
           }
           if (frameRemainderLocal52) {
-            this.performAction0995(-99, false, 1);
+            this.performAction0990(-99, false, 1);
             if (integerLocal16 > 0) {
               this.integerState0454 = this.integerState0454 + integerLocal16;
               if (integerLocal16 >= 2) {
@@ -1305,7 +1305,7 @@ final class BucketBoard {
                 if (this.integerState0446 < integerLocal17) {
                   integerLocal17 = this.integerState0446;
                 }
-                RenderingSupport003.performAction0578(this.integerState0458, integerLocal17, (byte) 127, RenderingSupport001.rawSoundState0002);
+                RenderingSupport003.performAction0574(this.integerState0458, integerLocal17, (byte) 127, RenderingSupport001.rawSoundState0002);
               }
               this.integerState0491 = this.integerState0491 + 1;
               if (this.integerState0491 >= 2) {
@@ -1317,7 +1317,7 @@ final class BucketBoard {
                 UiComponentPart001.performAction0057(62, integerLocal18, MixedSupport069.rawSoundArrayState0002[integerLocal17], this.integerState0458, this.integerState0446);
               }
               if (null != this.nodeDequeState0018) {
-                integerLocal17 = MixedSupport063.computeInteger0748((byte) 126, integerLocal16);
+                integerLocal17 = MixedSupport063.computeInteger0744((byte) 126, integerLocal16);
                 integerLocal18 = integerLocal17;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal18;
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal18;
@@ -1325,9 +1325,9 @@ final class BucketBoard {
                 if (0 < integerLocal17) {
                   integerLocal1 = RenderingSupport004.integerState0257;
                   RenderingSupport004.integerState0257 = RenderingSupport004.integerState0257 - 1;
-                  this.nodeDequeState0018.performAction1786(new MixedSupport117(true, this.boardWidth * 128, -384 + integerLocal1 * 256, integerLocal17, LoginCredentials.integerArrayState0115, -2 + integerLocal16, 0, new String[]{NodeHashTableIterator.substituteIndexedPlaceholders(85, MixedSupport099.stringState0395, new String[]{Integer.toString(integerLocal16)}), " = <b>", Integer.toString(integerLocal17)}), 2777);
+                  this.nodeDequeState0018.performAction1766(new MixedSupport117(true, this.boardWidth * 128, -384 + integerLocal1 * 256, integerLocal17, LoginCredentials.integerArrayState0115, -2 + integerLocal16, 0, new String[]{NodeHashTableIterator.substituteIndexedPlaceholders(85, MixedSupport099.stringState0395, new String[]{Integer.toString(integerLocal16)}), " = <b>", Integer.toString(integerLocal17)}), 2777);
                 }
-                integerLocal18 = MixedSupport080.computeInteger0976(32085, this.integerState0491);
+                integerLocal18 = MixedSupport080.computeInteger0971(32085, this.integerState0491);
                 if (0 < integerLocal18) {
                   integerLocal2 = RenderingSupport004.integerState0257;
                   RenderingSupport004.integerState0257 = RenderingSupport004.integerState0257 - 1;
@@ -1362,12 +1362,12 @@ final class BucketBoard {
               for (integerLocal35 = -1 + this.boardWidth; integerLocal35 >= 0; integerLocal35--) {
                 integerLocal37 = this.settledCells[integerLocal17];
                 if (integerLocal37 == 25) {
-                  discarded$4 = this.computeInteger1002(false, 2, 1, bucketBoardArgument4, false, -2, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) 109);
-                  this.performAction1007(-1, this.boardWidth + integerLocal17, false);
+                  discarded$4 = this.computeInteger0997(false, 2, 1, bucketBoardArgument4, false, -2, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) 109);
+                  this.performAction1002(-1, this.boardWidth + integerLocal17, false);
                 }
                 if (27 == integerLocal37) {
-                  discarded$5 = this.computeInteger1002(true, 2, 1, bucketBoardArgument4, true, -2, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) -99);
-                  this.performAction1007(-1, integerLocal17 + this.boardWidth, false);
+                  discarded$5 = this.computeInteger0997(true, 2, 1, bucketBoardArgument4, true, -2, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) -99);
+                  this.performAction1002(-1, integerLocal17 + this.boardWidth, false);
                 }
                 integerLocal17--;
               }
@@ -1378,16 +1378,16 @@ final class BucketBoard {
                 integerLocal48 = this.settledCells[integerLocal17];
                 if (integerLocal48 == 25 &&
                   (this.settledCells[integerLocal17 + this.boardWidth] & 1879048192) == 0) {
-                  discarded$2 = this.computeInteger1002(false, 1, 1, bucketBoardArgument4, false, -1, integerLocal17 + this.boardWidth, 3, returnedShapeCacheArgument1, false, (byte) 123);
+                  discarded$2 = this.computeInteger0997(false, 1, 1, bucketBoardArgument4, false, -1, integerLocal17 + this.boardWidth, 3, returnedShapeCacheArgument1, false, (byte) 123);
                 }
                 if (integerLocal48 == 27 &&
                   0 == (this.settledCells[this.boardWidth + integerLocal17] & 1879048192)) {
-                  discarded$3 = this.computeInteger1002(false, 1, 1, bucketBoardArgument4, true, -1, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) 72);
+                  discarded$3 = this.computeInteger0997(false, 1, 1, bucketBoardArgument4, true, -1, this.boardWidth + integerLocal17, 3, returnedShapeCacheArgument1, false, (byte) 72);
                 }
                 integerLocal17--;
               }
             }
-            this.performAction0995(-121, false, 2);
+            this.performAction0990(-121, false, 2);
             integerLocal18 = 0;
             integerLocal17 = -1 + this.boardWidth * this.boardHeight;
             integerLocal46 = 0;
@@ -1434,12 +1434,12 @@ final class BucketBoard {
               RenderingSupport007.integerArrayArrayState0015[0][this.integerState0453] = integerLocal41;
               rawPcmStreamLocal27 = rawPcmStreamArrayLocal25[this.integerState0453];
               if (rawPcmStreamLocal27 == null) {
-                rawPcmStreamLocal31 = RawPcmStream.computeRawPcmStream0453(MixedSupport095.rawSoundState0015, 100, GameDomainSupport005.integerState0578 * integerLocal41, this.integerState0458 << 6);
-                rawPcmStreamLocal31.performAction0461(-1);
+                rawPcmStreamLocal31 = RawPcmStream.computeRawPcmStream0452(MixedSupport095.rawSoundState0015, 100, GameDomainSupport005.integerState0578 * integerLocal41, this.integerState0458 << 6);
+                rawPcmStreamLocal31.performAction0460(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal31);
                 rawPcmStreamArrayLocal25[this.integerState0453] = rawPcmStreamLocal31;
               } else {
-                rawPcmStreamLocal27.performAction0440(PcmPlayer.integerState0209 / 50, integerLocal41 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal27.performAction0439(PcmPlayer.integerState0209 / 50, integerLocal41 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               }
             }
             if (0 < integerLocal46) {
@@ -1455,12 +1455,12 @@ final class BucketBoard {
               RenderingSupport007.integerArrayArrayState0015[1][this.integerState0453] = integerLocal42;
               rawPcmStreamLocal34 = rawPcmStreamArrayLocal33[this.integerState0453];
               if (rawPcmStreamLocal34 == null) {
-                rawPcmStreamLocal32 = RawPcmStream.computeRawPcmStream0453(MixedSupport095.rawSoundState0015, 120, integerLocal42 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
-                rawPcmStreamLocal32.performAction0461(-1);
+                rawPcmStreamLocal32 = RawPcmStream.computeRawPcmStream0452(MixedSupport095.rawSoundState0015, 120, integerLocal42 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal32.performAction0460(-1);
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal32);
                 rawPcmStreamArrayLocal33[this.integerState0453] = rawPcmStreamLocal32;
               } else {
-                rawPcmStreamLocal34.performAction0440(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal42, this.integerState0458 << 6);
+                rawPcmStreamLocal34.performAction0439(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal42, this.integerState0458 << 6);
               }
             }
             if (integerLocal14 != 0 &&
@@ -1481,20 +1481,20 @@ final class BucketBoard {
                 integerLocal38 == 1) {
                 integerLocal40 = 1 << (7 & integerLocal36);
                 if (0 != (integerLocal16 & integerLocal40)) {
-                  integerLocal17 = integerLocal17 + this.computeInteger1002(true, integerLocal38, 1, bucketBoardArgument4, false, -1, integerLocal18, 3, returnedShapeCacheArgument1, true, (byte) -72);
+                  integerLocal17 = integerLocal17 + this.computeInteger0997(true, integerLocal38, 1, bucketBoardArgument4, false, -1, integerLocal18, 3, returnedShapeCacheArgument1, true, (byte) -72);
                 }
               }
             }
-            this.performAction0995(-107, true, this.integerState0467);
+            this.performAction0990(-107, true, this.integerState0467);
             if (integerLocal17 > 0) {
               integerLocal14 = 1;
               if (null != this.nodeDequeState0018) {
-                integerLocal18 = RenderingSupport004.computeInteger0588(integerLocal17, 27935);
+                integerLocal18 = RenderingSupport004.computeInteger0584(integerLocal17, 27935);
                 integerLocal47 = integerLocal18;
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal47;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal47;
                 this.integerState0475 = this.integerState0475 + integerLocal18;
-                this.nodeDequeState0018.performAction1786(new MixedSupport117(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.computeInteger0611(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
+                this.nodeDequeState0018.performAction1766(new MixedSupport117(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.computeInteger0607(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
               }
             }
           }
@@ -1506,15 +1506,15 @@ final class BucketBoard {
                 integerLocal17 >> 3 == 1 ||
                 this.booleanState0105 &&
                 integerLocal17 >> 3 == 2)) {
-                this.settledCells[integerLocal16] = MixedSupport111.computeInteger1423(24, integerLocal17);
+                this.settledCells[integerLocal16] = MixedSupport111.computeInteger1414(24, integerLocal17);
               }
             }
             if (this.booleanState0103) {
               this.booleanState0110 = true;
-              RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446, (byte) 127, MixedSupport040.rawSoundState0008);
+              RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446, (byte) 127, MixedSupport040.rawSoundState0008);
             }
             if (this.booleanState0105) {
-              RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446, (byte) 127, SceneWidget.rawSoundState0022);
+              RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446, (byte) 127, SceneWidget.rawSoundState0022);
             }
             this.booleanState0105 = false;
             this.booleanState0103 = false;
@@ -1530,7 +1530,7 @@ final class BucketBoard {
             null == this.integerArrayState0145 &&
             this.livesRemaining > 0 &&
             this.integerState0484 != this.integerState0473) {
-            RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446, (byte) 127, MixedSupport108.rawSoundState0018);
+            RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446, (byte) 127, MixedSupport108.rawSoundState0018);
             for (integerLocal16 = this.integerState0473; integerLocal16 < this.integerState0484; integerLocal16++) {
               for (integerLocal17 = 0; integerLocal17 < this.boardWidth; integerLocal17++) {
                 integerLocal18 = this.settledCells[integerLocal16 * this.boardWidth + integerLocal17];
@@ -1559,7 +1559,7 @@ final class BucketBoard {
               integerLocal16 = this.mixedSupport117State0001.integerState0730;
               MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal16;
               UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal16;
-              this.nodeDequeState0018.performAction1786(this.mixedSupport117State0001, 2777);
+              this.nodeDequeState0018.performAction1766(this.mixedSupport117State0001, 2777);
               this.mixedSupport117State0001 = null;
             }
             if (this.pieceCollides((byte) -117)) {
@@ -1584,14 +1584,14 @@ final class BucketBoard {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
         }
     }
 
-    public static void performAction1013(int integerArgument1) {
+    public static void performAction1008(int integerArgument1) {
         if (integerArgument1 < 35) {
           BitmapFont bitmapFontLocal1 = (BitmapFont) null;
-          BucketBoard.performAction0997((BitmapFont) null, true, (BitmapFont) null, -73);
+          BucketBoard.performAction0992((BitmapFont) null, true, (BitmapFont) null, -73);
         }
         stringState0336 = null;
     }
@@ -1602,21 +1602,21 @@ final class BucketBoard {
           this.pieceX = this.pieceX + 1;
         } else {
           this.updateGroundedAfterMovement(byteArgument1 + 115);
-          RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 4, (byte) 127, MouseWheelInput.rawSoundState0009);
+          RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 4, (byte) 127, MouseWheelInput.rawSoundState0009);
         }
         if (byteArgument1 != -116) {
           this.integerState0450 = 63;
         }
     }
 
-    private final void performAction1009(int integerArgument1) {
+    private final void performAction1004(int integerArgument1) {
         if (integerArgument1 != 0) {
           this.integerState0496 = -32;
         }
-        RenderingSupport003.performAction0578(this.integerState0462, this.integerState0474 / 8, (byte) 127, MixedSupport138.rawSoundState0021);
+        RenderingSupport003.performAction0574(this.integerState0462, this.integerState0474 / 8, (byte) 127, MixedSupport138.rawSoundState0021);
     }
 
-    private final ReturnedShape computeReturnedShape1018(int integerArgument1) {
+    private final ReturnedShape computeReturnedShape1013(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (this.integerState0465 <= 0) {
@@ -1652,7 +1652,7 @@ final class BucketBoard {
         int integerLocal15;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal7 = packet.computeInteger1907(3);
+          integerLocal7 = packet.readUnsignedShort(3);
           stackBooleanLocal1 = ((integerLocal7 & 256) != 0);
           this.booleanState0106 = stackBooleanLocal1;
           this.integerState0485 = (1616 & integerLocal7) >> 9;
@@ -1665,7 +1665,7 @@ final class BucketBoard {
             this.integerState0467 = 0;
           }
           this.horizontalParity = (-1073741824 & integerLocal7 << 29) >> 30;
-          this.livesRemaining = packet.computeInteger1904((byte) -74);
+          this.livesRemaining = packet.readUnsignedByte((byte) -74);
           if (booleanArgument1) {
             for (integerLocal9 = this.livesRemaining; 3 > integerLocal9; integerLocal9++) {
               UiComponentPart028.integerState0716 = UiComponentPart028.integerState0716 + 30000;
@@ -1673,37 +1673,37 @@ final class BucketBoard {
             }
           }
           for (integerLocal13 = 0; this.boardHeight * this.boardWidth > integerLocal13; integerLocal13++) {
-            integerLocal10 = packet.computeInteger1904((byte) -40);
+            integerLocal10 = packet.readUnsignedByte((byte) -40);
             if (integerLocal10 >= 128) {
-              integerLocal11 = packet.computeInteger1904((byte) -102);
+              integerLocal11 = packet.readUnsignedByte((byte) -102);
               integerLocal10 = 127 & integerLocal10 | integerLocal11 << 7;
             }
             this.settledCells[integerLocal13] = integerLocal10;
           }
-          this.pieceAcknowledgement = packet.computeInteger1904((byte) -71);
-          this.pieceWidth = packet.computeInteger1904((byte) -38);
-          this.pieceHeight = packet.computeInteger1904((byte) -39);
+          this.pieceAcknowledgement = packet.readUnsignedByte((byte) -71);
+          this.pieceWidth = packet.readUnsignedByte((byte) -38);
+          this.pieceHeight = packet.readUnsignedByte((byte) -39);
           this.activePieceCells = new int[this.pieceWidth * this.pieceHeight];
           this.integerArrayState0144 = new int[this.pieceWidth * this.pieceHeight];
           this.integerArrayState0147 = new int[this.pieceHeight * this.pieceWidth];
           for (integerLocal14 = 0; integerLocal14 < this.pieceWidth * this.pieceHeight; integerLocal14++) {
-            this.activePieceCells[integerLocal14] = packet.computeInteger1904((byte) -42);
+            this.activePieceCells[integerLocal14] = packet.readUnsignedByte((byte) -42);
           }
           for (integerLocal15 = 0; this.pieceWidth * this.pieceHeight > integerLocal15; integerLocal15++) {
             this.integerArrayState0144[integerLocal15] = 8;
           }
-          this.pieceX = packet.computeByte1911((byte) -123);
-          this.pieceY = packet.computeByte1911((byte) -84);
-          this.dropCountdown = packet.computeInteger1904((byte) -45);
-          this.forcedDropCountdown = packet.computeInteger1907(3);
-          this.previousControls = packet.computeInteger1904((byte) -104);
-          this.horizontalRepeatTicks = packet.computeByte1911((byte) -122);
-          this.dominoDescriptor = packet.computeInteger1904((byte) -102);
+          this.pieceX = packet.readByte((byte) -123);
+          this.pieceY = packet.readByte((byte) -84);
+          this.dropCountdown = packet.readUnsignedByte((byte) -45);
+          this.forcedDropCountdown = packet.readUnsignedShort(3);
+          this.previousControls = packet.readUnsignedByte((byte) -104);
+          this.horizontalRepeatTicks = packet.readByte((byte) -122);
+          this.dominoDescriptor = packet.readUnsignedByte((byte) -102);
           if (byteArgument3 < 116) {
-            this.performAction0995(84, false, 99);
+            this.performAction0990(84, false, 99);
           }
-          this.integerState0454 = packet.computeInteger1904((byte) -52);
-          this.integerState0473 = packet.computeInteger1904((byte) -100);
+          this.integerState0454 = packet.readUnsignedByte((byte) -52);
+          this.integerState0473 = packet.readUnsignedByte((byte) -100);
           this.landed = false;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal16) {
@@ -1716,7 +1716,7 @@ final class BucketBoard {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(byteArgument3).append(')').toString());
         }
     }
 
@@ -1734,11 +1734,11 @@ final class BucketBoard {
         }
         if (integerArgument1 != 30968) {
           BucketBoard bucketBoardLocal2 = (BucketBoard) null;
-          this.performAction0998((ReturnedShapeCache) null, -76, false, (BucketBoard) null);
+          this.performAction0993((ReturnedShapeCache) null, -76, false, (BucketBoard) null);
         }
     }
 
-    private final int computeInteger0991(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final int computeInteger0986(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int previousIntegerLocal1 = 0;
         if (integerArgument2 <= 123) {
           this.integerState0496 = -105;
@@ -1754,7 +1754,7 @@ final class BucketBoard {
         return integerArgument4;
     }
 
-    private final void performAction1007(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
+    private final void performAction1002(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
         int integerLocal1;
         integerLocal1 = this.settledCells[integerArgument2];
         if (booleanArgument3) {
@@ -1770,7 +1770,7 @@ final class BucketBoard {
           if ((integerLocal1 & -1879048193) == 24 &&
             0 == this.integerState0481) {
             this.integerState0481 = 1;
-            RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 2, (byte) 127, NetworkSupport010.rawSoundState0017);
+            RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 2, (byte) 127, NetworkSupport010.rawSoundState0017);
           }
           if ((integerLocal1 & -1879048193) == 29) {
             this.booleanState0105 = true;
@@ -1788,13 +1788,13 @@ final class BucketBoard {
               UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + 2000;
               MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + 2000;
               this.integerState0494 = this.integerState0494 + 2000;
-              this.nodeDequeState0018.performAction1786(new MixedSupport117(true, 128 + 256 * (integerArgument2 % this.boardWidth), integerArgument2 / this.boardWidth * 256 + 128, 2000, (int[]) null, 13684944, integerLocal1, new String[]{" = <b>", Integer.toString(2000)}), 2777);
+              this.nodeDequeState0018.performAction1766(new MixedSupport117(true, 128 + 256 * (integerArgument2 % this.boardWidth), integerArgument2 / this.boardWidth * 256 + 128, 2000, (int[]) null, 13684944, integerLocal1, new String[]{" = <b>", Integer.toString(2000)}), 2777);
             }
           }
         }
     }
 
-    private final boolean computeBoolean1022(int integerArgument1) {
+    private final boolean computeBoolean1017(int integerArgument1) {
         int[] integerArrayLocal1 = null;
         int previousIntegerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1866,11 +1866,11 @@ final class BucketBoard {
             integerLocal15++;
           }
         }
-        RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
+        RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 4, (byte) 127, UiComponentPart014.rawSoundState0010);
         return true;
     }
 
-    final int computeInteger0987(int integerArgument1, byte byteArgument2, int integerArgument3) {
+    final int computeInteger0982(int integerArgument1, byte byteArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1896,7 +1896,7 @@ final class BucketBoard {
         return 0;
     }
 
-    private final int computeInteger1006(int integerArgument1, int integerArgument2, int integerArgument3) {
+    private final int computeInteger1001(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int discarded$0 = 0;
@@ -1907,12 +1907,12 @@ final class BucketBoard {
           integerLocal5 = integerLocal5 + integerLocal2 % this.boardWidth;
         }
         if (integerArgument3 <= 49) {
-          discarded$0 = this.computeInteger0985((byte) -117);
+          discarded$0 = this.computeInteger0980((byte) -117);
         }
         return 128 + integerLocal5 * 256 / (-integerArgument1 + integerArgument2);
     }
 
-    final int computeInteger1020(int integerArgument1) {
+    final int computeInteger1015(int integerArgument1) {
         if (integerArgument1 != 3837) {
           return -4;
         }
@@ -1933,11 +1933,11 @@ final class BucketBoard {
         }
         this.recordDeepestPiecePosition(30968);
         if (booleanArgument2) {
-          integerLocal1 = this.computeInteger0985((byte) 103);
+          integerLocal1 = this.computeInteger0980((byte) 103);
           if (integerLocal1 != 1) {
-            RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 4, (byte) 127, MixedSupport105.rawSoundState0016);
+            RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 4, (byte) 127, MixedSupport105.rawSoundState0016);
           } else {
-            RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 8, (byte) 127, DekoBlokoClient.rawSoundState0005);
+            RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 8, (byte) 127, DekoBlokoClient.rawSoundState0005);
           }
         }
         int integerLocal4 = 0;
@@ -1992,7 +1992,7 @@ final class BucketBoard {
         return true;
     }
 
-    final int computeInteger1004(int integerArgument1, byte byteArgument2, int integerArgument3) {
+    final int computeInteger0999(int integerArgument1, byte byteArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -2070,7 +2070,7 @@ final class BucketBoard {
             if (integerLocal4 > this.integerState0446) {
               integerLocal4 = this.integerState0446;
             }
-            RenderingSupport003.performAction0578(this.integerState0458, integerLocal4, (byte) 127, MixedSupport039.rawSoundState0007);
+            RenderingSupport003.performAction0574(this.integerState0458, integerLocal4, (byte) 127, MixedSupport039.rawSoundState0007);
           }
         } else {
           this.livesRemaining = this.livesRemaining - 1;
@@ -2079,7 +2079,7 @@ final class BucketBoard {
             UiComponentPart028.integerState0716 = UiComponentPart028.integerState0716 + 30000;
           }
           if (this.livesRemaining <= 0) {
-            this.performAction1014(-9897);
+            this.performAction1009(-9897);
             return;
           }
           this.integerState0448 = this.pieceY;
@@ -2117,7 +2117,7 @@ final class BucketBoard {
             }
           }
           this.integerState0459 = 1;
-          RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 2, (byte) 127, MixedSupport138.rawSoundState0021);
+          RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 2, (byte) 127, MixedSupport138.rawSoundState0021);
         }
         this.integerState0445 = 0;
         this.booleanState0106 = true;
@@ -2127,22 +2127,22 @@ final class BucketBoard {
         this.pieceWidth = 0;
     }
 
-    final static void performAction0997(BitmapFont bitmapFontArgument1, boolean booleanArgument2, BitmapFont bitmapFontArgument3, int integerArgument4) {
+    final static void performAction0992(BitmapFont bitmapFontArgument1, boolean booleanArgument2, BitmapFont bitmapFontArgument3, int integerArgument4) {
         try {
           UiComponentPart028.bitmapFontState0019 = bitmapFontArgument3;
           MixedSupport098.integerState0568 = integerArgument4;
           MixedSupport010.bitmapFontState0005 = bitmapFontArgument1;
-          ResourceSupport004.performAction1280(31004, SoftwareRaster.integerState0285 / 2, SoftwareRaster.integerState0284 / 2);
-          SceneWidgetPart010.performAction1505(bitmapFontArgument3.integerState0517, bitmapFontArgument1.integerState0523 + bitmapFontArgument1.integerState0517, (byte) -91, bitmapFontArgument1.integerState0517, bitmapFontArgument3.integerState0517 + bitmapFontArgument3.integerState0523);
+          ResourceSupport004.performAction1274(31004, SoftwareRaster.integerState0285 / 2, SoftwareRaster.integerState0284 / 2);
+          SceneWidgetPart010.performAction1487(bitmapFontArgument3.integerState0517, bitmapFontArgument1.integerState0523 + bitmapFontArgument1.integerState0517, (byte) -91, bitmapFontArgument1.integerState0517, bitmapFontArgument3.integerState0517 + bitmapFontArgument3.integerState0523);
           if (!booleanArgument2) {
             stringState0336 = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "lk.HA(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ',' + (bitmapFontArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "lk.HA(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ',' + (bitmapFontArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
         }
     }
 
-    private final boolean computeBoolean1005(int integerArgument1, int integerArgument2) {
+    private final boolean computeBoolean1000(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -2201,11 +2201,11 @@ final class BucketBoard {
           if (integerLocal4 > this.integerState0446) {
             integerLocal4 = this.integerState0446;
           }
-          RenderingSupport003.performAction0578(this.integerState0458, integerLocal4, (byte) 127, MixedSupport039.rawSoundState0007);
+          RenderingSupport003.performAction0574(this.integerState0458, integerLocal4, (byte) 127, MixedSupport039.rawSoundState0007);
         }
     }
 
-    final boolean computeBoolean1011(int integerArgument1) {
+    final boolean computeBoolean1006(int integerArgument1) {
         int integerLocal1 = -106 % ((integerArgument1 + 22) / 51);
         if (this.integerState0465 > 0 &&
           this.returnedShapeArrayState0001[0].integerState0691 == 0) {
@@ -2217,7 +2217,7 @@ final class BucketBoard {
         return false;
     }
 
-    private final boolean computeBoolean0988(int integerArgument1, int integerArgument2) {
+    private final boolean computeBoolean0983(int integerArgument1, int integerArgument2) {
         int discarded$1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -2233,7 +2233,7 @@ final class BucketBoard {
           return false;
         }
         if (integerArgument1 >= -45) {
-          discarded$1 = this.computeInteger0989(-31, -66, (byte) 71, -102);
+          discarded$1 = this.computeInteger0984(-31, -66, (byte) 71, -102);
         }
         integerLocal2 = 0;
         scanLoop1: while (true) {
@@ -2334,7 +2334,7 @@ final class BucketBoard {
           integerLocal28 = integerLocal1;
           objectLocal18 = null;
           if (shapeCache != null) {
-            objectLocal18 = shapeCache.computeReturnedShape1212(false, integerLocal28);
+            objectLocal18 = shapeCache.computeReturnedShape1207(false, integerLocal28);
           }
           if (objectLocal18 == null) {
             returnedShapeLocal25 = new ReturnedShape(integerLocal28);
@@ -2343,7 +2343,7 @@ final class BucketBoard {
             this.integerState0445 = this.integerState0445 + 1;
             returnedShapeLocal25.integerState0687 = integerLocal2;
             if (shapeCache != null) {
-              shapeCache.performAction1211(returnedShapeLocal25, 0);
+              shapeCache.performAction1206(returnedShapeLocal25, 0);
             }
           }
           ((ReturnedShape) (objectLocal18)).width = integerLocal26;
@@ -2362,7 +2362,7 @@ final class BucketBoard {
             integerLocal24++;
           }
           if (destinationBucket != null) {
-            destinationBucket.performAction0999((ReturnedShape) (objectLocal18), (byte) -128);
+            destinationBucket.performAction0994((ReturnedShape) (objectLocal18), (byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal31) {
@@ -2381,14 +2381,14 @@ final class BucketBoard {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(packedColour).append(',').append(selectedOffset).append(',').append(selectedCount).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(packedColour).append(',').append(selectedOffset).append(',').append(selectedCount).append(')').toString());
         }
     }
 
     final void selectDropSpeed(int speedLevel, int obfuscationGuard, boolean alternateSpeedTable) {
         int discarded$0 = 0;
         if (obfuscationGuard != 2113050941) {
-          discarded$0 = this.computeInteger0989(80, 86, (byte) -26, -11);
+          discarded$0 = this.computeInteger0984(80, 86, (byte) -26, -11);
         }
         if (!alternateSpeedTable) {
           this.dropIntervalTicks = MixedSupport087.integerArrayState0165[speedLevel];
@@ -2399,16 +2399,16 @@ final class BucketBoard {
 
     private final void rotateCounterClockwise(boolean booleanArgument1) {
         boolean discarded$0 = false;
-        if (this.computeBoolean1022(0)) {
+        if (this.computeBoolean1017(0)) {
           return;
         }
         if (booleanArgument1) {
-          discarded$0 = this.computeBoolean1010(61, 75);
+          discarded$0 = this.computeBoolean1005(61, 75);
         }
         if ((this.horizontalParity | this.verticalParity) != 0) {
           this.horizontalParity = -this.horizontalParity;
           this.verticalParity = -this.verticalParity;
-          if (this.computeBoolean1022(0)) {
+          if (this.computeBoolean1017(0)) {
             return;
           }
           this.horizontalParity = -this.horizontalParity;
@@ -2416,12 +2416,12 @@ final class BucketBoard {
         }
     }
 
-    private final int computeInteger0989(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
+    private final int computeInteger0984(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         int previousIntegerLocal1 = 0;
         int discarded$1 = 0;
         int integerLocal3 = this.settledCells[integerArgument2];
         if (integerArgument4 != (-1879048193 & integerLocal3)) {
-          this.performAction1007(7 & integerArgument4, integerArgument2, false);
+          this.performAction1002(7 & integerArgument4, integerArgument2, false);
         } else {
           if ((integerLocal3 & 1879048192) < 1879048192) {
             integerLocal3 = integerLocal3 + 268435456;
@@ -2433,7 +2433,7 @@ final class BucketBoard {
         }
         if (byteArgument3 != -44) {
           ReturnedShapeCache returnedShapeCacheLocal4 = (ReturnedShapeCache) null;
-          discarded$1 = this.computeInteger1002(true, 26, -7, (BucketBoard) null, true, 84, -39, 24, (ReturnedShapeCache) null, false, (byte) -94);
+          discarded$1 = this.computeInteger0997(true, 26, -7, (BucketBoard) null, true, 84, -39, 24, (ReturnedShapeCache) null, false, (byte) -94);
         }
         return integerArgument1;
     }
@@ -2442,7 +2442,7 @@ final class BucketBoard {
         this.pieceX = this.pieceX + 1;
         if (!this.pieceCollides((byte) -117)) {
           this.updateGroundedAfterMovement(-1);
-          RenderingSupport003.performAction0578(this.integerState0458, this.integerState0446 / 4, (byte) 127, MouseWheelInput.rawSoundState0009);
+          RenderingSupport003.performAction0574(this.integerState0458, this.integerState0446 / 4, (byte) 127, MouseWheelInput.rawSoundState0009);
         } else {
           this.pieceX = this.pieceX - 1;
         }
@@ -2451,7 +2451,7 @@ final class BucketBoard {
         }
     }
 
-    private final int computeInteger1001(boolean booleanArgument1, int integerArgument2, int integerArgument3) {
+    private final int computeInteger0996(boolean booleanArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -2475,20 +2475,20 @@ final class BucketBoard {
         return 128 + integerLocal4 * 256 / (integerArgument2 - integerArgument3);
     }
 
-    final int computeInteger0986(int integerArgument1) {
+    final int computeInteger0981(int integerArgument1) {
         if (integerArgument1 != 0) {
           this.previousControls = -70;
         }
         return this.integerState0450 + (this.integerState0488 + this.integerState0475) + (this.integerState0493 + this.integerState0466) - (-this.integerState0494 - this.integerState0464);
     }
 
-    final int computeInteger1016(int integerArgument1) {
+    final int computeInteger1011(int integerArgument1) {
         int integerLocal1 = 0;
         if (1 <= this.integerState0471) {
           integerLocal1++;
         }
-        int integerLocal2 = this.mixedSupport030State0001.computeInteger0416(79, integerLocal1 + this.integerState0477);
-        int integerLocal3 = this.mixedSupport030State0001.computeInteger0416(107, this.integerState0477 + integerLocal1);
+        int integerLocal2 = this.mixedSupport030State0001.computeInteger0415(79, integerLocal1 + this.integerState0477);
+        int integerLocal3 = this.mixedSupport030State0001.computeInteger0415(107, this.integerState0477 + integerLocal1);
         if (integerArgument1 != 26580) {
           return -69;
         }
@@ -2501,7 +2501,7 @@ final class BucketBoard {
         return integerLocal3 + (integerLocal2 << 4);
     }
 
-    final void performAction1021(int integerArgument1) {
+    final void performAction1016(int integerArgument1) {
         ReturnedShape discarded$0 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -2653,15 +2653,15 @@ final class BucketBoard {
           if (integerLocal20 != 0 &&
             0 < returnedShapeLocal9.integerState0691) {
             if (18 == returnedShapeLocal9.integerState0691) {
-              this.performAction1008(false);
+              this.performAction1003(false);
             }
             returnedShapeLocal9.integerState0691 = returnedShapeLocal9.integerState0691 - 1;
             integerLocal10 = returnedShapeLocal9.integerState0687 + 1;
             if (returnedShapeLocal9.integerState0691 == 12 &&
               integerLocal10 >= 5) {
               this.stringState0335 = NodeHashTableIterator.substituteIndexedPlaceholders(105, MixedSupport137.stringState0564, new String[]{Integer.toString(integerLocal10)});
-              this.integerState0451 = UiComponentPart016.computeInteger0852((byte) 62, 7, UiComponentPart031.randomState0003) - 3;
-              this.integerState0457 = UiComponentPart016.computeInteger0852((byte) 126, 7, UiComponentPart031.randomState0003) - 3;
+              this.integerState0451 = UiComponentPart016.computeInteger0847((byte) 62, 7, UiComponentPart031.randomState0003) - 3;
+              this.integerState0457 = UiComponentPart016.computeInteger0847((byte) 126, 7, UiComponentPart031.randomState0003) - 3;
               this.integerState0472 = 0;
               integerArrayLocal19 = MixedSupport148.integerArrayState0252;
               integerLocal25 = integerLocal10 / 10;
@@ -2678,32 +2678,32 @@ final class BucketBoard {
         if (integerArgument1 != -21142) {
           this.updateGroundedAfterMovement(13);
         }
-        stackIntegerLocal2 = (!this.computeBoolean1011(-124)) ? 0 : 1;
+        stackIntegerLocal2 = (!this.computeBoolean1006(-124)) ? 0 : 1;
         integerLocal22 = stackIntegerLocal2;
         while (this.integerState0465 > 0) {
           if (this.returnedShapeArrayState0001[0].integerState0692 >= 13) {
-            discarded$0 = this.computeReturnedShape1018(127);
+            discarded$0 = this.computeReturnedShape1013(127);
             continue;
           }
           break;
         }
         if (this.nodeDequeState0017 != null &&
-          this.nodeDequeState0017.computeHashNode1792((byte) 70) != null) {
+          this.nodeDequeState0017.computeHashNode1772((byte) 70) != null) {
           stackIntegerLocal3 = -1;
           stackIntegerLocal4 = ~this.integerState0496;
           if (stackIntegerLocal3 == stackIntegerLocal4) {
-            this.performAction1008(false);
+            this.performAction1003(false);
           }
           if (this.integerState0496 == 322) {
-            this.performAction1009(0);
+            this.performAction1004(0);
           }
           this.integerState0496 = this.integerState0496 + 1;
           if (335 == this.integerState0496) {
             this.integerState0496 = 0;
-            this.nodeDequeState0017.computeHashNode1783(integerArgument1 + 21146);
+            this.nodeDequeState0017.computeHashNode1763(integerArgument1 + 21146);
           }
         }
-        stackIntegerLocal5 = (!this.computeBoolean1011(integerArgument1 ^ 21190)) ? 0 : 1;
+        stackIntegerLocal5 = (!this.computeBoolean1006(integerArgument1 ^ 21190)) ? 0 : 1;
         integerLocal23 = stackIntegerLocal5;
         if (integerLocal20 != 0 &&
           18 < this.integerState0442) {
@@ -2711,20 +2711,20 @@ final class BucketBoard {
         }
         if (integerLocal22 != 0 &&
           integerLocal23 == 0) {
-          RenderingSupport003.performAction0578(this.integerState0462, this.integerState0474 / 8, (byte) 127, SceneWidgetPart005.rawSoundState0012);
+          RenderingSupport003.performAction0574(this.integerState0462, this.integerState0474 / 8, (byte) 127, SceneWidgetPart005.rawSoundState0012);
         }
         if (integerLocal23 != 0) {
           MixedSupport005.booleanArrayState0001[this.integerState0453] = true;
           rawPcmStreamLocal11 = MixedSupport063.rawPcmStreamArrayState0002[this.integerState0453];
           if (rawPcmStreamLocal11 == null) {
-            integerLocal24 = 100 + MixedSupport113.computeInteger1449((byte) 16, 4, this.integerState0453);
-            rawPcmStreamLocal17 = RawPcmStream.computeRawPcmStream0453(ComponentContainer.rawSoundState0014, integerLocal24, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
+            integerLocal24 = 100 + MixedSupport113.computeInteger1440((byte) 16, 4, this.integerState0453);
+            rawPcmStreamLocal17 = RawPcmStream.computeRawPcmStream0452(ComponentContainer.rawSoundState0014, integerLocal24, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
             rawPcmStreamLocal18 = rawPcmStreamLocal17;
-            rawPcmStreamLocal18.performAction0461(-1);
+            rawPcmStreamLocal18.performAction0460(-1);
             SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal17);
             MixedSupport063.rawPcmStreamArrayState0002[this.integerState0453] = rawPcmStreamLocal17;
           } else {
-            rawPcmStreamLocal11.performAction0440(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
+            rawPcmStreamLocal11.performAction0439(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
           }
         }
     }

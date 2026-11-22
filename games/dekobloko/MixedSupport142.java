@@ -5,7 +5,7 @@ final class MixedSupport142 {
     private java.awt.GraphicsDevice graphicsDeviceState0001;
     private java.awt.DisplayMode displayModeState0001;
 
-    private final void performAction1755(java.awt.Frame frameArgument1, int integerArgument2) {
+    private final void performAction1735(java.awt.Frame frameArgument1, int integerArgument2) {
         int integerLocal1;
         integerLocal1 = -31 % ((1 - integerArgument2) / 51);
         this.graphicsDeviceState0001.setFullScreenWindow((java.awt.Window) ((Object) frameArgument1));
@@ -37,7 +37,7 @@ final class MixedSupport142 {
         }
         frameArgument1.setUndecorated(true);
         frameArgument1.enableInputMethods(false);
-        this.performAction1755(frameArgument1, 127);
+        this.performAction1735(frameArgument1, 127);
         if (integerArgument5 == 0) {
           integerLocal2 = this.displayModeState0001.getRefreshRate();
           displayModeArrayLocal3 = this.graphicsDeviceState0001.getDisplayModes();
@@ -69,7 +69,7 @@ final class MixedSupport142 {
           }
           this.displayModeState0001 = null;
         }
-        this.performAction1755((java.awt.Frame) null, 121);
+        this.performAction1735((java.awt.Frame) null, 121);
     }
 
     public MixedSupport142() throws Exception {
@@ -93,11 +93,11 @@ final class MixedSupport142 {
             return;
           }
         }
-        throw MixedSupport142.<RuntimeException>computeRuntimeException1754(new Exception());
+        throw MixedSupport142.<RuntimeException>computeRuntimeException1734(new Exception());
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException1754(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException computeRuntimeException1734(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -9,13 +9,13 @@ final class MixedSupport048 {
     static MixedSupport076 mixedSupport076State0001;
     static String stringState0204;
 
-    final static void performAction0590(boolean booleanArgument1) {
+    final static void performAction0586(boolean booleanArgument1) {
         if (MixedSupport052.integerState0269 == 10) {
-          Js5ArchiveManager.performAction1126(-5);
+          Js5ArchiveManager.performAction1121(-5);
           MixedSupport052.integerState0269 = 11;
         } else {
           if (!FunOrbClient.computeBoolean0115((byte) -124)) {
-            Js5ArchiveManager.performAction1126(-5);
+            Js5ArchiveManager.performAction1121(-5);
             MixedSupport052.integerState0269 = 11;
           }
         }

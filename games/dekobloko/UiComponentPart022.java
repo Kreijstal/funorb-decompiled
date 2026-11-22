@@ -17,13 +17,13 @@ final class UiComponentPart022 extends UiComponentPart025 {
     static String stringState0401;
 
     UiComponentPart022(CallbackContract011 callbackContract011Argument1, String stringArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
-        super(stringArgument2, MixedSupport146.computeMixedSupport0011776(1424));
+        super(stringArgument2, MixedSupport146.computeMixedSupport0011756(1424));
         try {
           this.stringState0400 = stringArgument2;
           this.callbackContract011State0003 = callbackContract011Argument1;
           this.performAction0222(integerArgument6, integerArgument5, integerArgument3, integerArgument4, -16555);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "pa.<init>(" + (callbackContract011Argument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "pa.<init>(" + (callbackContract011Argument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
           stringLocal6 = UiComponentPart025.stringState0451;
           if (!stringLocal6.equals(this.stringState0078)) {
             this.stringState0078 = stringLocal6;
-            this.performAction1393(2874);
+            this.performAction1387(2874);
           }
           super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
           validationStatusLocal1 = this.callbackContract011State0003.computeValidationStatus0084(20350);
@@ -122,14 +122,14 @@ final class UiComponentPart022 extends UiComponentPart025 {
             if (this.rgbSpriteState0039 != null &&
               integerLocal14 <= this.rgbSpriteState0039.integerState0258 &&
               integerLocal15 <= this.rgbSpriteState0039.integerState0255) {
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0661();
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+              SoftwareRaster.performAction0657();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal14, integerLocal15);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             }
             rgbSpriteLocal17.performAction0259(112, 144, rgbSpriteLocal17.integerState0254 << 4, rgbSpriteLocal17.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-            MixedSupport086.performAction1084((byte) -5);
+            MixedSupport086.performAction1079((byte) -5);
             this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal17.integerState0254 >> 1), integerLocal3 - rgbSpriteLocal17.integerState0260, 256);
             return;
           }
@@ -153,23 +153,23 @@ final class UiComponentPart022 extends UiComponentPart025 {
           integerLocal48 = rgbSpriteLocal20.integerState0260 << 1;
           if (this.rgbSpriteState0039 == null) {
             this.rgbSpriteState0039 = new RgbSprite(integerLocal47, integerLocal48);
-            ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+            ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
           } else {
             if (integerLocal47 > this.rgbSpriteState0039.integerState0258) {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal47, integerLocal48);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             } else {
               if (integerLocal48 > this.rgbSpriteState0039.integerState0255) {
                 this.rgbSpriteState0039 = new RgbSprite(integerLocal47, integerLocal48);
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
               } else {
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0661();
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+                SoftwareRaster.performAction0657();
               }
             }
           }
           rgbSpriteLocal20.performAction0259(112, 144, rgbSpriteLocal20.integerState0254 << 4, rgbSpriteLocal20.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport086.performAction1084((byte) -5);
+          MixedSupport086.performAction1079((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal20.integerState0254 >> 1), integerLocal46 - rgbSpriteLocal20.integerState0260, 256);
           return;
         }
@@ -210,14 +210,14 @@ final class UiComponentPart022 extends UiComponentPart025 {
             if (this.rgbSpriteState0039 != null &&
               integerLocal40 <= this.rgbSpriteState0039.integerState0258 &&
               integerLocal43 <= this.rgbSpriteState0039.integerState0255) {
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0661();
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+              SoftwareRaster.performAction0657();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal40, integerLocal43);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             }
             rgbSpriteLocal23.performAction0259(112, 144, rgbSpriteLocal23.integerState0254 << 4, rgbSpriteLocal23.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-            MixedSupport086.performAction1084((byte) -5);
+            MixedSupport086.performAction1079((byte) -5);
             this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal23.integerState0254 >> 1), integerLocal37 - rgbSpriteLocal23.integerState0260, 256);
             return;
           }
@@ -241,28 +241,28 @@ final class UiComponentPart022 extends UiComponentPart025 {
           integerLocal51 = rgbSpriteLocal26.integerState0260 << 1;
           if (this.rgbSpriteState0039 == null) {
             this.rgbSpriteState0039 = new RgbSprite(integerLocal50, integerLocal51);
-            ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+            ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
           } else {
             if (integerLocal50 > this.rgbSpriteState0039.integerState0258) {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal50, integerLocal51);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             } else {
               if (integerLocal51 > this.rgbSpriteState0039.integerState0255) {
                 this.rgbSpriteState0039 = new RgbSprite(integerLocal50, integerLocal51);
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
               } else {
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0661();
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+                SoftwareRaster.performAction0657();
               }
             }
           }
           rgbSpriteLocal26.performAction0259(112, 144, rgbSpriteLocal26.integerState0254 << 4, rgbSpriteLocal26.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport086.performAction1084((byte) -5);
+          MixedSupport086.performAction1079((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal26.integerState0254 >> 1), integerLocal49 - rgbSpriteLocal26.integerState0260, 256);
           return;
         }
         this.stringState0078 = stringLocal13;
-        this.performAction1393(2874);
+        this.performAction1387(2874);
         super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
         validationStatusLocal53 = this.callbackContract011State0003.computeValidationStatus0084(20350);
         callbackContract012Local34 = (CallbackContract012) ((Object) this.callbackContract004State0006);
@@ -288,23 +288,23 @@ final class UiComponentPart022 extends UiComponentPart025 {
           integerLocal44 = rgbSpriteLocal32.integerState0260 << 1;
           if (this.rgbSpriteState0039 == null) {
             this.rgbSpriteState0039 = new RgbSprite(integerLocal41, integerLocal44);
-            ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+            ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
           } else {
             if (integerLocal41 > this.rgbSpriteState0039.integerState0258) {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal41, integerLocal44);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             } else {
               if (integerLocal44 <= this.rgbSpriteState0039.integerState0255) {
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0661();
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+                SoftwareRaster.performAction0657();
               } else {
                 this.rgbSpriteState0039 = new RgbSprite(integerLocal41, integerLocal44);
-                ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+                ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
               }
             }
           }
           rgbSpriteLocal32.performAction0259(112, 144, rgbSpriteLocal32.integerState0254 << 4, rgbSpriteLocal32.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport086.performAction1084((byte) -5);
+          MixedSupport086.performAction1079((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal32.integerState0254 >> 1), integerLocal38 - rgbSpriteLocal32.integerState0260, 256);
           return;
         }
@@ -331,28 +331,28 @@ final class UiComponentPart022 extends UiComponentPart025 {
         integerLocal45 = rgbSpriteLocal29.integerState0260 << 1;
         if (this.rgbSpriteState0039 == null) {
           this.rgbSpriteState0039 = new RgbSprite(integerLocal42, integerLocal45);
-          ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+          ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
         } else {
           if (integerLocal42 > this.rgbSpriteState0039.integerState0258) {
             this.rgbSpriteState0039 = new RgbSprite(integerLocal42, integerLocal45);
-            ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+            ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
           } else {
             if (integerLocal45 <= this.rgbSpriteState0039.integerState0255) {
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0661();
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
+              SoftwareRaster.performAction0657();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal42, integerLocal45);
-              ValidationStatus.performAction1616(true, this.rgbSpriteState0039);
+              ValidationStatus.performAction1597(true, this.rgbSpriteState0039);
             }
           }
         }
         rgbSpriteLocal29.performAction0259(112, 144, rgbSpriteLocal29.integerState0254 << 4, rgbSpriteLocal29.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-        MixedSupport086.performAction1084((byte) -5);
+        MixedSupport086.performAction1079((byte) -5);
         this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal29.integerState0254 >> 1), integerLocal39 - rgbSpriteLocal29.integerState0260, 256);
         return;
     }
 
-    public static void performAction1239(byte byteArgument1) {
+    public static void performAction1234(byte byteArgument1) {
         rgbSpriteState0038 = null;
         stringArrayState0026 = null;
         stringArrayState0027 = null;
@@ -366,7 +366,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
         stringState0401 = null;
     }
 
-    final static int computeInteger1237(int integerArgument1, int integerArgument2) {
+    final static int computeInteger1232(int integerArgument1, int integerArgument2) {
         if (integerArgument1 < 4) {
           throw new IllegalArgumentException();
         }
@@ -398,7 +398,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
@@ -411,13 +411,13 @@ final class UiComponentPart022 extends UiComponentPart025 {
         return null;
     }
 
-    final static void performAction1238(byte byteArgument1) {
+    final static void performAction1233(byte byteArgument1) {
         int integerLocal1 = (-640 + UiComponentPart033.integerState0934) / 2;
         int integerLocal2 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
         int integerLocal3 = integerLocal2 - UiComponentPart017.integerState0437 * UiComponentPart017.integerState0437;
         int integerLocal4 = 50 / ((byteArgument1 - 51) / 46);
-        UiComponentPart011.sceneWidgetState0035.performAction1815(199, 0, 90, -90 + (-120 + SoftwareRaster.integerState0284) - 4, -(integerLocal3 * 199 / integerLocal2) + integerLocal1);
-        TextFieldValidator.sceneWidgetState0151.performAction1815(438, 0, 0, -4 + (SoftwareRaster.integerState0284 - 120), 202 + (integerLocal1 + 438 * integerLocal3 / integerLocal2));
+        UiComponentPart011.sceneWidgetState0035.performAction1795(199, 0, 90, -90 + (-120 + SoftwareRaster.integerState0284) - 4, -(integerLocal3 * 199 / integerLocal2) + integerLocal1);
+        TextFieldValidator.sceneWidgetState0151.performAction1795(438, 0, 0, -4 + (SoftwareRaster.integerState0284 - 120), 202 + (integerLocal1 + 438 * integerLocal3 / integerLocal2));
     }
 
     final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
@@ -428,7 +428,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
           }
           super.performAction0218(uiComponentArgument1, 109, integerArgument3, integerArgument4);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "pa.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "pa.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 

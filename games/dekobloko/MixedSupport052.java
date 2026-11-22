@@ -9,7 +9,7 @@ final class MixedSupport052 {
     static int integerState0270;
     static int[] integerArrayState0054;
 
-    final static void performAction0626(int integerArgument1) {
+    final static void performAction0622(int integerArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -26,11 +26,11 @@ final class MixedSupport052 {
         int integerLocal14;
         integerLocal7 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          SoftwareRaster.performAction0677(243, 197, 369, 143, 16777215);
-          SoftwareRaster.performAction0653(244, 198, 367, 141, 0);
+          SoftwareRaster.performAction0673(243, 197, 369, 143, 16777215);
+          SoftwareRaster.performAction0649(244, 198, 367, 141, 0);
           if (null == MixedSupport021.rgbSpriteArrayState0008) {
             if (null != MixedSupport013.bitmapFontState0007) {
-              MixedSupport013.bitmapFontState0007.computeInteger1095(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.computeInteger1090(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -41,7 +41,7 @@ final class MixedSupport052 {
             rgbSpriteLocal9.performAction0278(245, 199);
           } else {
             if (null != MixedSupport013.bitmapFontState0007) {
-              MixedSupport013.bitmapFontState0007.computeInteger1095(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.computeInteger1090(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           integerLocal3 = -96 / ((integerArgument1 + 79) / 41);
@@ -74,7 +74,7 @@ final class MixedSupport052 {
               integerLocal8++;
             }
             if (objectLocal5 != null) {
-              MixedSupport013.bitmapFontState0007.computeInteger1095("Screenshot(s) " + (String) (objectLocal5) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.computeInteger1090("Screenshot(s) " + (String) (objectLocal5) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
               return;
             }
           }
@@ -82,18 +82,18 @@ final class MixedSupport052 {
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal1 = caughtParameterLocal15;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal2), "hc.B(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal2), "hc.B(" + integerArgument1 + ')');
         }
     }
 
-    public static void performAction0625(byte byteArgument1) {
+    public static void performAction0621(byte byteArgument1) {
         stringState0218 = null;
         integerArrayState0054 = null;
         int integerLocal1 = -68 / ((16 - byteArgument1) / 39);
         stringState0219 = null;
     }
 
-    final static IndexedSprite computeIndexedSprite0627(int integerArgument1, int[] integerArrayArgument2, IndexedSprite indexedSpriteArgument3) {
+    final static IndexedSprite computeIndexedSprite0623(int integerArgument1, int[] integerArrayArgument2, IndexedSprite indexedSpriteArgument3) {
         IndexedSprite indexedSpriteLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         IndexedSprite stackIndexedSpriteLocal3 = null;
@@ -131,7 +131,7 @@ final class MixedSupport052 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 

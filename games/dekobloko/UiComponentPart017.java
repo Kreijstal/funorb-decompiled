@@ -30,9 +30,9 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         this.interactiveComponentState0009.stringState0080 = MixedSupport130.stringState0541;
         this.interactiveComponentState0007.callbackContract006State0001 = (CallbackContract006) (this);
         this.interactiveComponentState0007.stringState0080 = MixedSupport073.stringState0312;
-        this.performAction0919(this.interactiveComponentState0008, (byte) -55);
-        this.performAction0919(this.interactiveComponentState0009, (byte) -55);
-        this.performAction0919(this.interactiveComponentState0007, (byte) -55);
+        this.performAction0914(this.interactiveComponentState0008, (byte) -55);
+        this.performAction0914(this.interactiveComponentState0009, (byte) -55);
+        this.performAction0914(this.interactiveComponentState0007, (byte) -55);
     }
 
     public static void clearStaticReferences(byte byteArgument1) {
@@ -46,7 +46,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         uiComponentPart029State0001 = null;
     }
 
-    final static int computeInteger0979(int integerArgument1, boolean booleanArgument2) {
+    final static int computeInteger0974(int integerArgument1, boolean booleanArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -64,7 +64,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           ProxySocketFactory.integerState0732 = ProxySocketFactory.integerState0732 + 65536;
-          while (MixedSupport139.computeInteger1724(PlatformSupport002.integerState0148, ProxySocketFactory.integerState0732, integerArgument1 + 11469) >= 65536) {
+          while (MixedSupport139.computeInteger1705(PlatformSupport002.integerState0148, ProxySocketFactory.integerState0732, integerArgument1 + 11469) >= 65536) {
             ProxySocketFactory.integerState0732 = ProxySocketFactory.integerState0732 - PlatformSupport002.integerState0148;
             MixedSupport112.integerState0682 = MixedSupport112.integerState0682 + 1;
           }
@@ -149,8 +149,8 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             return stackIntegerLocal1;
           }
           if (booleanArgument2) {
-            MixedSupport114.mixedSupport121State0003.performAction1561(MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), -20563, MixedSupport006.computeInteger0065(UiComponentPart013.integerState0276, TextLineMetrics.integerState0535, (byte) 7));
-            if (MixedSupport114.mixedSupport121State0003.computeBoolean1566((byte) 114)) {
+            MixedSupport114.mixedSupport121State0003.performAction1542(MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport106.integerState0590, (byte) 7), -20563, MixedSupport006.computeInteger0065(UiComponentPart013.integerState0276, TextLineMetrics.integerState0535, (byte) 7));
+            if (MixedSupport114.mixedSupport121State0003.computeBoolean1547((byte) 114)) {
               if (MixedSupport114.mixedSupport121State0003.integerState0754 == 0) {
                 stackIntegerLocal2 = 3;
                 return stackIntegerLocal2;
@@ -162,8 +162,8 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             }
             stackIntegerLocal4 = -125;
             while (DualNodeDeque.computeBoolean0027(stackIntegerLocal4)) {
-              MixedSupport114.mixedSupport121State0003.performAction1557((byte) 58, 0);
-              if (MixedSupport114.mixedSupport121State0003.computeBoolean1566((byte) 114)) {
+              MixedSupport114.mixedSupport121State0003.performAction1538((byte) 58, 0);
+              if (MixedSupport114.mixedSupport121State0003.computeBoolean1547((byte) 114)) {
                 if (MixedSupport114.mixedSupport121State0003.integerState0754 == 0) {
                   stackIntegerLocal5 = 3;
                   return stackIntegerLocal5;
@@ -186,26 +186,26 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         } catch (java.lang.RuntimeException caughtParameterLocal16) {
           caughtExceptionLocal9 = caughtParameterLocal16;
           runtimeExceptionLocal11 = caughtExceptionLocal9;
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal11), "lg.F(" + integerArgument1 + ',' + booleanArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeExceptionLocal11), "lg.F(" + integerArgument1 + ',' + booleanArgument2 + ')');
         }
     }
 
-    final static void performAction0978(int integerArgument1) {
+    final static void performAction0973(int integerArgument1) {
         if (integerArgument1 != 8927) {
           uiComponentPart029State0001 = (UiComponentPart029) null;
-          MouseWheelInput.performAction0683(4, (byte) -111);
+          MouseWheelInput.performAction0679(4, (byte) -111);
           return;
         }
-        MouseWheelInput.performAction0683(4, (byte) -111);
+        MouseWheelInput.performAction0679(4, (byte) -111);
     }
 
-    final static void performAction0980(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction0975(boolean booleanArgument1, int integerArgument2) {
         if (integerArgument2 > -101) {
           return;
         }
         if (null != MixedSupport071.sceneWidgetPart001State0001) {
-          SoftwareRaster.performAction0671(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
-          MixedSupport071.sceneWidgetPart001State0001.performAction1818(1141039778, booleanArgument1);
+          SoftwareRaster.performAction0667(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
+          MixedSupport071.sceneWidgetPart001State0001.performAction1798(1141039778, booleanArgument1);
           return;
         }
     }
@@ -218,14 +218,14 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         if (integerArgument2 < -103) {
           integerLocal1 = integerArgument1 + this.integerState0110;
           integerLocal2 = this.integerState0104 + integerArgument4;
-          GameDomainSupport003.bitmapFontState0015.computeInteger1095(GameDomainSupport003.stringState0234, integerLocal1 + 20, integerLocal2 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
+          GameDomainSupport003.bitmapFontState0015.computeInteger1090(GameDomainSupport003.stringState0234, integerLocal1 + 20, integerLocal2 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
           super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
           return;
         }
         integerState0437 = 48;
         integerLocal3 = integerArgument1 + this.integerState0110;
         integerLocal4 = this.integerState0104 + integerArgument4;
-        GameDomainSupport003.bitmapFontState0015.computeInteger1095(GameDomainSupport003.stringState0234, integerLocal3 + 20, integerLocal4 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
+        GameDomainSupport003.bitmapFontState0015.computeInteger1090(GameDomainSupport003.stringState0234, integerLocal3 + 20, integerLocal4 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
         super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
     }
 
@@ -239,14 +239,14 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (this.interactiveComponentState0008 == interactiveComponentArgument3) {
-            UiComponentPart032.performAction1752((byte) 105);
+            UiComponentPart032.performAction1732((byte) 105);
           } else {
             if (interactiveComponentArgument3 != this.interactiveComponentState0009) {
               if (this.interactiveComponentState0007 == interactiveComponentArgument3) {
-                UiComponentPart028.performAction1490(false);
+                UiComponentPart028.performAction1472(false);
               }
             } else {
-              SceneWidgetPart003.performAction0619(0);
+              SceneWidgetPart003.performAction0615(0);
             }
           }
           if (byteArgument1 == 67) {
@@ -264,7 +264,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
@@ -282,11 +282,11 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             return true;
           }
           if (integerArgument2 == 98) {
-            stackBooleanLocal3 = this.computeBoolean0917(uiComponentArgument3, (byte) -74);
+            stackBooleanLocal3 = this.computeBoolean0912(uiComponentArgument3, (byte) -74);
             return stackBooleanLocal3;
           }
           if (integerArgument2 == 99) {
-            stackBooleanLocal4 = this.computeBoolean0916(32, uiComponentArgument3);
+            stackBooleanLocal4 = this.computeBoolean0911(32, uiComponentArgument3);
             return stackBooleanLocal4;
           }
           integerLocal1 = 86 / ((integerArgument1 + 22) / 49);
@@ -301,7 +301,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(characterArgument4).append(')').toString());
         }
     }
 

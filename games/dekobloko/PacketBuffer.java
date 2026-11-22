@@ -9,33 +9,33 @@ class PacketBuffer extends HashNode {
     static int integerState0936;
     static String stringState0632;
 
-    final int computeInteger1913(int integerArgument1) {
+    final int readUnsignedMedium(int integerArgument1) {
         if (integerArgument1 != 65280) {
-          this.computeBoolean1912(20);
+          this.checkCrc32(20);
         }
         this.position = this.position + 3;
         return ((this.payload[this.position - 3] & 255) << 16) + ((65280 & this.payload[this.position - 2] << 8) + (255 & this.payload[this.position - 1]));
     }
 
-    final int computeInteger1906(byte byteArgument1) {
+    final int readSignedSmart(byte byteArgument1) {
         int integerLocal1 = -108 % ((byteArgument1 - 71) / 55);
         int integerLocal2 = this.payload[this.position] & 255;
         if (integerLocal2 < 128) {
-          return -64 + this.computeInteger1904((byte) -78);
+          return -64 + this.readUnsignedByte((byte) -78);
         }
-        return this.computeInteger1907(3) - 49152;
+        return this.readUnsignedShort(3) - 49152;
     }
 
-    final long computeLong1909(byte byteArgument1) {
-        long longLocal1 = (long)this.computeInteger1914(7553) & 4294967295L;
+    final long readLong(byte byteArgument1) {
+        long longLocal1 = (long)this.readInt(7553) & 4294967295L;
         if (byteArgument1 != -108) {
           return 17L;
         }
-        long longLocal2 = (long)this.computeInteger1914(byteArgument1 ^ -7659) & 4294967295L;
+        long longLocal2 = (long)this.readInt(byteArgument1 ^ -7659) & 4294967295L;
         return longLocal2 + (longLocal1 << 32);
     }
 
-    final void performAction1885(int integerArgument1, String stringArgument2) {
+    final void writeNullTerminatedString(int integerArgument1, String stringArgument2) {
         int integerLocal1 = 0;
         CharSequence charSequenceLocal2 = null;
         int integerLocal3 = 0;
@@ -45,23 +45,23 @@ class PacketBuffer extends HashNode {
             throw new IllegalArgumentException("");
           }
           charSequenceLocal2 = (CharSequence) ((Object) stringArgument2);
-          this.position = this.position + MixedSupport022.computeInteger0328(stringArgument2.length(), this.position, -8218, charSequenceLocal2, this.payload, integerArgument1);
+          this.position = this.position + MixedSupport022.encodeCp1252(stringArgument2.length(), this.position, -8218, charSequenceLocal2, this.payload, integerArgument1);
           integerLocal3 = this.position;
           this.position = this.position + 1;
           this.payload[integerLocal3] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wl.N(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wl.N(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction1898(int integerArgument1, boolean booleanArgument2) {
+    final void writeLengthByte(int integerArgument1, boolean booleanArgument2) {
         if (!booleanArgument2) {
-          this.computeInteger1910(22);
+          this.readUnsignedShortOrInt(22);
         }
         this.payload[this.position - (integerArgument1 + 1)] = (byte)integerArgument1;
     }
 
-    final void performAction1894(byte[] byteArrayArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
+    final void readBytes(byte[] byteArrayArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -91,11 +91,11 @@ class PacketBuffer extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(',').append(byteArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument2).append(',').append(byteArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final void performAction1887(long longArgument1, byte byteArgument2) {
+    final void writeLong(long longArgument1, byte byteArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(int)(longArgument1 >> 56);
@@ -125,7 +125,7 @@ class PacketBuffer extends HashNode {
         this.payload[integerLocal8] = (byte)(int)longArgument1;
     }
 
-    final int computeInteger1914(int integerArgument1) {
+    final int readInt(int integerArgument1) {
         this.position = this.position + 4;
         if (integerArgument1 != 7553) {
           integerState0936 = -83;
@@ -133,24 +133,24 @@ class PacketBuffer extends HashNode {
         return (65280 & this.payload[this.position - 2] << 8) + (this.payload[-3 + this.position] << 16 & 16711680) + (((this.payload[-4 + this.position] & 255) << 24) + (255 & this.payload[-1 + this.position]));
     }
 
-    final int computeInteger1907(int integerArgument1) {
+    final int readUnsignedShort(int integerArgument1) {
         if (integerArgument1 != 3) {
-          this.computeInteger1891(false);
+          this.readUnsignedSmart(false);
         }
         this.position = this.position + 2;
         return (255 & this.payload[this.position - 1]) + ((255 & this.payload[this.position - 2]) << 8);
     }
 
-    final int computeInteger1880(byte byteArgument1, int integerArgument2) {
+    final int appendCrc32(byte byteArgument1, int integerArgument2) {
         if (byteArgument1 != -15) {
           return 11;
         }
-        int integerLocal1 = MixedSupport103.computeInteger1250(this.payload, this.position, -109, integerArgument2);
-        this.performAction1886(integerLocal1, false);
+        int integerLocal1 = MixedSupport103.computeCrc32(this.payload, this.position, -109, integerArgument2);
+        this.writeInt(integerLocal1, false);
         return integerLocal1;
     }
 
-    final String computeString1901(byte byteArgument1) {
+    final String readNullTerminatedString(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -164,12 +164,12 @@ class PacketBuffer extends HashNode {
         } while (this.payload[integerLocal1] != 0);
         integerLocal3 = -1 - integerLocal2 + this.position;
         if (integerLocal3 != 0) {
-          return MixedSupport140.computeString1732(this.payload, 0, integerLocal2, integerLocal3);
+          return MixedSupport140.decodeCp1252(this.payload, 0, integerLocal2, integerLocal3);
         }
         return "";
     }
 
-    final String computeString1902(int integerArgument1) {
+    final String readNullableString(int integerArgument1) {
         if (integerArgument1 != -16829) {
           this.payload = (byte[]) null;
         }
@@ -177,20 +177,20 @@ class PacketBuffer extends HashNode {
           this.position = this.position + 1;
           return null;
         }
-        return this.computeString1901((byte) -38);
+        return this.readNullTerminatedString((byte) -38);
     }
 
-    final boolean computeBoolean1912(int integerArgument1) {
+    final boolean checkCrc32(int integerArgument1) {
         this.position = this.position - 4;
-        int integerLocal1 = MixedSupport103.computeInteger1250(this.payload, this.position, -112, integerArgument1);
-        int integerLocal2 = this.computeInteger1914(7553);
+        int integerLocal1 = MixedSupport103.computeCrc32(this.payload, this.position, -112, integerArgument1);
+        int integerLocal2 = this.readInt(7553);
         if (integerLocal1 != integerLocal2) {
           return false;
         }
         return true;
     }
 
-    final void performAction1905(int integerArgument1, int integerArgument2) {
+    final void writeShort(int integerArgument1, int integerArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(integerArgument2 >> 8);
@@ -198,11 +198,11 @@ class PacketBuffer extends HashNode {
         this.position = this.position + 1;
         this.payload[integerLocal2] = (byte)integerArgument2;
         if (integerArgument1 != -1) {
-          this.computeString1901((byte) -104);
+          this.readNullTerminatedString((byte) -104);
         }
     }
 
-    final int computeInteger1883(int integerArgument1) {
+    final int readVarInt(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -223,7 +223,7 @@ class PacketBuffer extends HashNode {
         return integerLocal3 | integerLocal2;
     }
 
-    final void performAction1900(boolean booleanArgument1, int integerArgument2) {
+    final void writeLengthShort(boolean booleanArgument1, int integerArgument2) {
         this.payload[-2 + (-integerArgument2 + this.position)] = (byte)(integerArgument2 >> 8);
         if (!booleanArgument1) {
           booleanState0228 = false;
@@ -231,7 +231,7 @@ class PacketBuffer extends HashNode {
         this.payload[-1 + this.position - integerArgument2] = (byte)integerArgument2;
     }
 
-    final void performAction1884(int integerArgument1, long longArgument2) {
+    final void writeLong40(int integerArgument1, long longArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(int)(longArgument2 >> 32);
@@ -252,7 +252,7 @@ class PacketBuffer extends HashNode {
         this.payload[integerLocal5] = (byte)(int)longArgument2;
     }
 
-    final void performAction1893(boolean booleanArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4) {
+    final void writeBytes(boolean booleanArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -264,7 +264,7 @@ class PacketBuffer extends HashNode {
         integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (booleanArgument1) {
-            this.computeInteger1910(50);
+            this.readUnsignedShortOrInt(50);
           }
           for (integerLocal1 = integerArgument4; integerLocal1 < integerArgument2 + integerArgument4; integerLocal1++) {
             integerLocal2 = this.position;
@@ -282,11 +282,11 @@ class PacketBuffer extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final void performAction1886(int integerArgument1, boolean booleanArgument2) {
+    final void writeInt(int integerArgument1, boolean booleanArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(integerArgument1 >> 24);
@@ -304,7 +304,7 @@ class PacketBuffer extends HashNode {
         this.payload[integerLocal4] = (byte)integerArgument1;
     }
 
-    private final void performAction1888(long longArgument1, int integerArgument2) {
+    private final void writeLong56(long longArgument1, int integerArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)(int)(longArgument1 >> 48);
@@ -331,7 +331,7 @@ class PacketBuffer extends HashNode {
         this.payload[integerLocal7] = (byte)(int)longArgument1;
     }
 
-    final void performAction1890(java.math.BigInteger bigIntegerArgument1, java.math.BigInteger bigIntegerArgument2, boolean booleanArgument3) {
+    final void rsaEncrypt(java.math.BigInteger bigIntegerArgument1, java.math.BigInteger bigIntegerArgument2, boolean booleanArgument3) {
         int integerLocal1 = 0;
         byte[] byteArrayLocal2 = null;
         java.math.BigInteger bigIntegerLocal3 = null;
@@ -344,19 +344,19 @@ class PacketBuffer extends HashNode {
           integerLocal1 = this.position;
           this.position = 0;
           byteArrayLocal2 = new byte[integerLocal1];
-          this.performAction1894(byteArrayLocal2, 0, (byte) 125, integerLocal1);
+          this.readBytes(byteArrayLocal2, 0, (byte) 125, integerLocal1);
           bigIntegerLocal3 = new java.math.BigInteger(byteArrayLocal2);
           bigIntegerLocal4 = bigIntegerLocal3.modPow(bigIntegerArgument1, bigIntegerArgument2);
           byteArrayLocal5 = bigIntegerLocal4.toByteArray();
           this.position = 0;
-          this.performAction1905(-1, byteArrayLocal5.length);
-          this.performAction1893(false, byteArrayLocal5.length, byteArrayLocal5, 0);
+          this.writeShort(-1, byteArrayLocal5.length);
+          this.writeBytes(false, byteArrayLocal5.length, byteArrayLocal5, 0);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wl.T(" + (bigIntegerArgument1 != null ? "{...}" : "null") + ',' + (bigIntegerArgument2 != null ? "{...}" : "null") + ',' + booleanArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wl.T(" + (bigIntegerArgument1 != null ? "{...}" : "null") + ',' + (bigIntegerArgument2 != null ? "{...}" : "null") + ',' + booleanArgument3 + ')');
         }
     }
 
-    final void performAction1908(int integerArgument1, int integerArgument2) {
+    final void padToLength(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -370,7 +370,7 @@ class PacketBuffer extends HashNode {
         }
     }
 
-    final int computeInteger1904(byte byteArgument1) {
+    final int readUnsignedByte(byte byteArgument1) {
         if (byteArgument1 >= -18) {
           return 39;
         }
@@ -379,22 +379,22 @@ class PacketBuffer extends HashNode {
         return 255 & this.payload[integerLocal1];
     }
 
-    final void performAction1896(int integerArgument1, int integerArgument2) {
+    final void writeSignedSmart(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 24 % ((-42 - integerArgument1) / 34);
         if (integerArgument2 < 64 &&
           -64 <= integerArgument2) {
-          this.performAction1892(true, integerArgument2 + 64);
+          this.writeByte(true, integerArgument2 + 64);
           return;
         }
         if (integerArgument2 < 16384 &&
           -16384 <= integerArgument2) {
-          this.performAction1905(-1, 49152 + integerArgument2);
+          this.writeShort(-1, 49152 + integerArgument2);
           return;
         }
         throw new IllegalArgumentException();
     }
 
-    final void performAction1882(byte byteArgument1, int[] integerArrayArgument2) {
+    final void xteaEncrypt(byte byteArgument1, int[] integerArrayArgument2) {
         int previousIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -421,8 +421,8 @@ class PacketBuffer extends HashNode {
               }
               return;
             }
-            integerLocal9 = this.computeInteger1914(7553);
-            integerLocal10 = this.computeInteger1914(7553);
+            integerLocal9 = this.readInt(7553);
+            integerLocal10 = this.readInt(7553);
             integerLocal11 = 0;
             integerLocal12 = -1640531527;
             integerLocal13 = 32;
@@ -438,8 +438,8 @@ class PacketBuffer extends HashNode {
               break;
             }
             this.position = this.position - 8;
-            this.performAction1886(integerLocal9, false);
-            this.performAction1886(integerLocal10, false);
+            this.writeInt(integerLocal9, false);
+            this.writeInt(integerLocal10, false);
             integerLocal8++;
           }
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
@@ -452,11 +452,11 @@ class PacketBuffer extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final String computeString1899(boolean booleanArgument1) {
+    final String readNullCircumfixedString(boolean booleanArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -477,20 +477,20 @@ class PacketBuffer extends HashNode {
           booleanState0228 = true;
         }
         if (integerLocal4 != 0) {
-          return MixedSupport140.computeString1732(this.payload, 0, integerLocal3, integerLocal4);
+          return MixedSupport140.decodeCp1252(this.payload, 0, integerLocal3, integerLocal4);
         }
         return "";
     }
 
-    final void performAction1903(int integerArgument1, int integerArgument2) {
+    final void writeUnsignedSmart(int integerArgument1, int integerArgument2) {
         if (0 <= integerArgument1 &&
           integerArgument1 < 128) {
-          this.performAction1892(true, integerArgument1);
+          this.writeByte(true, integerArgument1);
           return;
         }
         if (integerArgument1 >= 0 &&
           32768 > integerArgument1) {
-          this.performAction1905(-1, integerArgument1 + 32768);
+          this.writeShort(-1, integerArgument1 + 32768);
           return;
         }
         if (integerArgument2 != 57) {
@@ -499,7 +499,7 @@ class PacketBuffer extends HashNode {
         throw new IllegalArgumentException();
     }
 
-    final void performAction1895(byte byteArgument1, int integerArgument2) {
+    final void writeMedium(byte byteArgument1, int integerArgument2) {
         if (byteArgument1 != 46) {
           stringState0632 = (String) null;
         }
@@ -514,7 +514,7 @@ class PacketBuffer extends HashNode {
         this.payload[integerLocal3] = (byte)integerArgument2;
     }
 
-    final void performAction1889(String stringArgument1, boolean booleanArgument2) {
+    final void writeBase38String(String stringArgument1, boolean booleanArgument2) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -558,10 +558,10 @@ class PacketBuffer extends HashNode {
             }
           }
           if (!booleanArgument2) {
-            this.computeInteger1891(false);
+            this.readUnsignedSmart(false);
           }
-          this.performAction1888(longLocal6, -34637912);
-          this.performAction1888(longLocal8, -34637912);
+          this.writeLong56(longLocal6, -34637912);
+          this.writeLong56(longLocal8, -34637912);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal5 = caughtParameterLocal12;
@@ -573,7 +573,7 @@ class PacketBuffer extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 
@@ -585,20 +585,20 @@ class PacketBuffer extends HashNode {
         stringState0631 = null;
     }
 
-    final int computeInteger1891(boolean booleanArgument1) {
+    final int readUnsignedSmart(boolean booleanArgument1) {
         if (booleanArgument1) {
           return -54;
         }
         int integerLocal1 = 255 & this.payload[this.position];
         if (integerLocal1 >= 128) {
-          return this.computeInteger1907(3) - 32768;
+          return this.readUnsignedShort(3) - 32768;
         }
-        return this.computeInteger1904((byte) -32);
+        return this.readUnsignedByte((byte) -32);
     }
 
-    final byte computeByte1911(byte byteArgument1) {
+    final byte readByte(byte byteArgument1) {
         if (byteArgument1 > -83) {
-          this.computeInteger1891(false);
+          this.readUnsignedSmart(false);
         }
         int integerLocal1 = this.position;
         this.position = this.position + 1;
@@ -607,20 +607,20 @@ class PacketBuffer extends HashNode {
 
     PacketBuffer(int integerArgument1) {
         this.position = 0;
-        this.payload = MixedSupport137.computeByteArray1714(5, integerArgument1);
+        this.payload = MixedSupport137.computeByteArray1695(5, integerArgument1);
     }
 
-    final int computeInteger1910(int integerArgument1) {
+    final int readUnsignedShortOrInt(int integerArgument1) {
         if (integerArgument1 != 21663) {
-          this.computeInteger1914(-114);
+          this.readInt(-114);
         }
         if (this.payload[this.position] < 0) {
-          return 2147483647 & this.computeInteger1914(7553);
+          return 2147483647 & this.readInt(7553);
         }
-        return this.computeInteger1907(3);
+        return this.readUnsignedShort(3);
     }
 
-    final void performAction1892(boolean booleanArgument1, int integerArgument2) {
+    final void writeByte(boolean booleanArgument1, int integerArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
         this.payload[integerLocal1] = (byte)integerArgument2;
@@ -634,18 +634,18 @@ class PacketBuffer extends HashNode {
           this.position = 0;
           this.payload = byteArrayArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wl.<init>(" + (byteArrayArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wl.<init>(" + (byteArrayArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction1897(int integerArgument1, String stringArgument2) {
+    final void writeNullCircumfixedString(int integerArgument1, String stringArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         CharSequence charSequenceLocal3 = null;
         int integerLocal4 = 0;
         try {
           if (integerArgument1 != 8) {
-            this.computeInteger1910(-80);
+            this.readUnsignedShortOrInt(-80);
           }
           integerLocal1 = stringArgument2.indexOf('\0');
           if (integerLocal1 >= 0) {
@@ -655,16 +655,16 @@ class PacketBuffer extends HashNode {
           this.position = this.position + 1;
           this.payload[integerLocal2] = (byte) 0;
           charSequenceLocal3 = (CharSequence) ((Object) stringArgument2);
-          this.position = this.position + MixedSupport022.computeInteger0328(stringArgument2.length(), this.position, -8218, charSequenceLocal3, this.payload, 0);
+          this.position = this.position + MixedSupport022.encodeCp1252(stringArgument2.length(), this.position, -8218, charSequenceLocal3, this.payload, 0);
           integerLocal4 = this.position;
           this.position = this.position + 1;
           this.payload[integerLocal4] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wl.G(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) runtimeException), "wl.G(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction1881(byte byteArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4) {
+    final void xteaDecrypt(byte byteArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4) {
         int previousIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -694,8 +694,8 @@ class PacketBuffer extends HashNode {
               this.position = integerLocal6;
               return;
             }
-            integerLocal10 = this.computeInteger1914(7553);
-            integerLocal11 = this.computeInteger1914(7553);
+            integerLocal10 = this.readInt(7553);
+            integerLocal11 = this.readInt(7553);
             integerLocal12 = -957401312;
             integerLocal13 = -1640531527;
             integerLocal14 = 32;
@@ -711,8 +711,8 @@ class PacketBuffer extends HashNode {
               break;
             }
             this.position = this.position - 8;
-            this.performAction1886(integerLocal10, false);
-            this.performAction1886(integerLocal11, false);
+            this.writeInt(integerLocal10, false);
+            this.writeInt(integerLocal11, false);
             integerLocal9++;
           }
         } catch (java.lang.RuntimeException caughtParameterLocal16) {
@@ -725,7 +725,7 @@ class PacketBuffer extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(')').toString());
         }
     }
 

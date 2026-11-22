@@ -38,7 +38,7 @@ final class MixedSupport148 {
     int[][] integerArrayArrayState0028;
     boolean[] booleanArrayState0013;
 
-    final static int computeInteger1805(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static int computeInteger1785(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = integerArgument3 >>> 31;
         if (integerArgument1 == 23841) {
           return (integerArgument3 + integerLocal1) / integerArgument2 - integerLocal1;

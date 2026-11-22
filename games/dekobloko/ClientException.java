@@ -9,7 +9,7 @@ final class ClientException {
     static String[] stringArrayState0006;
     static SceneWidget[] sceneWidgetArrayState0001;
 
-    final static void performAction0369(BitmapFont bitmapFontArgument1, int integerArgument2, int integerArgument3, MixedSupport015 mixedSupport015Argument4, MixedSupport015 mixedSupport015Argument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, int integerArgument8, BitmapFont bitmapFontArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, boolean booleanArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20) {
+    final static void performAction0368(BitmapFont bitmapFontArgument1, int integerArgument2, int integerArgument3, MixedSupport015 mixedSupport015Argument4, MixedSupport015 mixedSupport015Argument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, int integerArgument8, BitmapFont bitmapFontArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, boolean booleanArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -26,14 +26,14 @@ final class ClientException {
         try {
           SoftwareFramebuffer.bitmapFontState0021 = bitmapFontArgument1;
           if (booleanArgument14) {
-            ClientException.performAction0369((BitmapFont) null, 99, -109, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, 54, -67, (BitmapFont) null, 70, -37, -96, -83, true, 8, 108, -4, 38, -94, -69);
+            ClientException.performAction0368((BitmapFont) null, 99, -109, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, 54, -67, (BitmapFont) null, 70, -37, -96, -83, true, 8, 108, -4, 38, -94, -69);
           }
           NetworkSupport001.bitmapFontState0003 = bitmapFontArgument9;
-          MixedSupport042.performAction0546(integerArgument15, integerArgument18, integerArgument20, 0, integerArgument11);
-          MixedSupport149.performAction1809(mixedSupport015Argument5, integerArgument12, integerArgument2, -11);
-          MixedSupport086.performAction1085(integerArgument10, integerArgument16, (byte) -118, mixedSupport015Argument6, integerArgument3, mixedSupport015Argument4);
-          ValidationStatus.performAction1614(integerArgument8, -25073, integerArgument19);
-          MixedSupport111.performAction1421(integerArgument17, -115, integerArgument7, integerArgument13);
+          MixedSupport042.performAction0542(integerArgument15, integerArgument18, integerArgument20, 0, integerArgument11);
+          MixedSupport149.performAction1789(mixedSupport015Argument5, integerArgument12, integerArgument2, -11);
+          MixedSupport086.performAction1080(integerArgument10, integerArgument16, (byte) -118, mixedSupport015Argument6, integerArgument3, mixedSupport015Argument4);
+          ValidationStatus.performAction1595(integerArgument8, -25073, integerArgument19);
+          MixedSupport111.performAction1412(integerArgument17, -115, integerArgument7, integerArgument13);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
           caughtExceptionLocal12 = caughtParameterLocal14;
@@ -69,19 +69,19 @@ final class ClientException {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument10).append(',').append(integerArgument11).append(',').append(integerArgument12).append(',').append(integerArgument13).append(',').append(booleanArgument14).append(',').append(integerArgument15).append(',').append(integerArgument16).append(',').append(integerArgument17).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020367((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument10).append(',').append(integerArgument11).append(',').append(integerArgument12).append(',').append(integerArgument13).append(',').append(booleanArgument14).append(',').append(integerArgument15).append(',').append(integerArgument16).append(',').append(integerArgument17).append(',').append(integerArgument18).append(',').append(integerArgument19).append(',').append(integerArgument20).append(')').toString());
         }
     }
 
-    public static void performAction0367(byte byteArgument1) {
+    public static void performAction0366(byte byteArgument1) {
         sceneWidgetArrayState0001 = null;
         stringArrayState0006 = null;
         if (byteArgument1 != -68) {
-          ClientException.performAction0369((BitmapFont) null, -53, 78, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, -74, -100, (BitmapFont) null, 108, -57, 96, -30, true, 2, 34, -16, -53, -123, 32);
+          ClientException.performAction0368((BitmapFont) null, -53, 78, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, -74, -100, (BitmapFont) null, 108, -57, 96, -30, true, 2, 34, -16, -53, -123, 32);
         }
     }
 
-    final static DiagnosticSupport002 computeDiagnosticSupport0020368(Throwable throwableArgument1, String stringArgument2) {
+    final static DiagnosticSupport002 computeDiagnosticSupport0020367(Throwable throwableArgument1, String stringArgument2) {
         DiagnosticSupport002 diagnosticSupport002Local1 = null;
         if (throwableArgument1 instanceof DiagnosticSupport002) {
           diagnosticSupport002Local1 = (DiagnosticSupport002) ((Object) throwableArgument1);
