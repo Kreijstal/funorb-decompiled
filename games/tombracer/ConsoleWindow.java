@@ -248,7 +248,7 @@ abstract class ConsoleWindow implements ShellListener {
           SoftwareRasterizer.fillRectangleAlpha(this.field_i.field_q, this.field_i.field_t + this.field_i.field_A, this.field_i.field_G, -this.field_i.field_t + FloatPacketBuffer.field_i - this.field_i.field_A, 0, var2 >> 1);
           var3 = this.field_i.field_t + (this.field_i.field_T + 5);
           for (var4 = 0; 6 > var4; var4++) {
-            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, mma.field_a, 0, var4 << 5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, TripBeamVisual.field_a, 0, var4 << 5);
             var3--;
           }
           this.field_i.drawFullScreen(100, (this.field_h & 8) == 0 ? true : false);
@@ -572,7 +572,7 @@ abstract class ConsoleWindow implements ShellListener {
           var11 = this.createSelectionStyle(-91, 2263074);
           var12 = this.createColouredPanel(2236962, (byte) -125, 65793);
           this.field_i = new UiComponent(0L, var5);
-          this.field_i.setBounds(mma.field_a, 200, -23776, -200, 0);
+          this.field_i.setBounds(TripBeamVisual.field_a, 200, -23776, -200, 0);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiComponent();
           var14.field_J = new IntrusiveDeque();

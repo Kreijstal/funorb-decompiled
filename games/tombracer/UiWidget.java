@@ -134,14 +134,14 @@ class UiWidget extends IntrusiveNode {
             if (param0 < -23) {
               var11 = TooltipVisibility.getVisibleTooltipText(1);
               if (var11 != null) {
-                afa.field_c.drawTooltip(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
+                OpenGlIndexBufferReference.field_c.drawTooltip(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
               }
               return;
             }
             this.field_m = -42;
             var10 = TooltipVisibility.getVisibleTooltipText(1);
             if (var10 != null) {
-              afa.field_c.drawTooltip(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
+              OpenGlIndexBufferReference.field_c.drawTooltip(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
             return;
           }
@@ -150,7 +150,7 @@ class UiWidget extends IntrusiveNode {
           if (var6 != 0) {
             var7 = TooltipVisibility.getVisibleTooltipText(1);
             if (var7 != null) {
-              afa.field_c.drawTooltip(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
+              OpenGlIndexBufferReference.field_c.drawTooltip(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
             return;
           }
@@ -273,7 +273,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, afa.field_c.field_k, param1);
+        this(param0, OpenGlIndexBufferReference.field_c.field_k, param1);
     }
 
     boolean requestKeyboardFocus(UiWidget param0, boolean param1) {

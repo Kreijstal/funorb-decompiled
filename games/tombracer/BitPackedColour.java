@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jaa implements noa {
-    private int field_g;
-    private int field_c;
-    private int field_d;
-    private int field_h;
+final class BitPackedColour implements noa {
+    private int red;
+    private int channelBits;
+    private int blue;
+    private int alpha;
     static apa field_b;
-    private boolean field_e;
-    private int field_f;
+    private boolean includesAlpha;
+    private int green;
     static String field_a;
 
     final int getColour(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == -43946608) {
-          var2 = this.field_d | (this.field_g << 16 | this.field_f << 8);
-          if (this.field_e) {
-            var2 = this.field_h << 24 | var2;
+          var2 = this.blue | (this.red << 16 | this.green << 8);
+          if (this.includesAlpha) {
+            var2 = this.alpha << 24 | var2;
           }
           return var2;
         }
         BitPacketBuffer var3 = (BitPacketBuffer) null;
         this.encode(8, (BitPacketBuffer) null);
-        var2Lifetime1 = this.field_d | (this.field_g << 16 | this.field_f << 8);
-        if (this.field_e) {
-          var2Lifetime1 = this.field_h << 24 | var2Lifetime1;
+        var2Lifetime1 = this.blue | (this.red << 16 | this.green << 8);
+        if (this.includesAlpha) {
+          var2Lifetime1 = this.alpha << 24 | var2Lifetime1;
         }
         return var2Lifetime1;
     }
@@ -39,30 +39,30 @@ final class jaa implements noa {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          var4_int = 1 << 8 - this.field_c;
+          var4_int = 1 << 8 - this.channelBits;
           var5 = -1 + var4_int;
-          this.field_g = var4_int * param2.readBits((byte) 44, this.field_c);
-          if (0 < this.field_g) {
-            this.field_g = this.field_g + var5;
+          this.red = var4_int * param2.readBits((byte) 44, this.channelBits);
+          if (0 < this.red) {
+            this.red = this.red + var5;
           }
-          this.field_f = var4_int * param2.readBits((byte) 44, this.field_c);
-          if (this.field_f > 0) {
-            this.field_f = this.field_f + var5;
+          this.green = var4_int * param2.readBits((byte) 44, this.channelBits);
+          if (this.green > 0) {
+            this.green = this.green + var5;
           }
-          this.field_d = param2.readBits((byte) 44, this.field_c) * var4_int;
-          if (0 < this.field_d) {
-            this.field_d = this.field_d + var5;
+          this.blue = param2.readBits((byte) 44, this.channelBits) * var4_int;
+          if (0 < this.blue) {
+            this.blue = this.blue + var5;
           }
-          if (this.field_e) {
-            this.field_h = param2.readBits((byte) 44, this.field_c) * var4_int;
+          if (this.includesAlpha) {
+            this.alpha = param2.readBits((byte) 44, this.channelBits) * var4_int;
           }
           if (param0 != 8) {
             field_b = (apa) null;
           }
-          if (0 >= this.field_h) {
+          if (0 >= this.alpha) {
             return;
           }
-          this.field_h = this.field_h + var5;
+          this.alpha = this.alpha + var5;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,18 +87,18 @@ final class jaa implements noa {
     }
 
     final void setColour(boolean param0, int param1) {
-        this.field_g = param1 >> 16 ^ 255;
-        this.field_d = 255 ^ param1;
-        this.field_h = param1 >> 24 ^ 255;
+        this.red = param1 >> 16 ^ 255;
+        this.blue = 255 ^ param1;
+        this.alpha = param1 >> 24 ^ 255;
         if (!param0) {
-          this.field_f = (65398 ^ param1) >> 8;
+          this.green = (65398 ^ param1) >> 8;
           return;
         }
     }
 
-    jaa(boolean param0, int param1) {
-        this.field_c = param1;
-        this.field_e = param0 ? true : false;
+    BitPackedColour(boolean param0, int param1) {
+        this.channelBits = param1;
+        this.includesAlpha = param0 ? true : false;
     }
 
     final void encode(int param0, BitPacketBuffer param1) {
@@ -110,15 +110,15 @@ final class jaa implements noa {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 1 << -this.field_c + 8;
+          var3_int = 1 << -this.channelBits + 8;
           var4 = var3_int - 1;
-          param1.writeBits((byte) -128, RandomBrickOperator.max(param0, -var4 + this.field_g, param0 ^ 2) / var3_int, this.field_c);
-          param1.writeBits((byte) 61, RandomBrickOperator.max(0, -var4 + this.field_f, 2) / var3_int, this.field_c);
-          param1.writeBits((byte) -128, RandomBrickOperator.max(0, -var4 + this.field_d, 2) / var3_int, this.field_c);
-          if (!this.field_e) {
+          param1.writeBits((byte) -128, RandomBrickOperator.max(param0, -var4 + this.red, param0 ^ 2) / var3_int, this.channelBits);
+          param1.writeBits((byte) 61, RandomBrickOperator.max(0, -var4 + this.green, 2) / var3_int, this.channelBits);
+          param1.writeBits((byte) -128, RandomBrickOperator.max(0, -var4 + this.blue, 2) / var3_int, this.channelBits);
+          if (!this.includesAlpha) {
             return;
           }
-          param1.writeBits((byte) -127, RandomBrickOperator.max(0, this.field_h - var4, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -127, RandomBrickOperator.max(0, this.alpha - var4, 2) / var3_int, this.channelBits);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,10 +163,10 @@ final class jaa implements noa {
         }
     }
 
-    jaa(boolean param0, int param1, int param2, BitPacketBuffer param3) {
+    BitPackedColour(boolean param0, int param1, int param2, BitPacketBuffer param3) {
         try {
-          this.field_e = param0 ? true : false;
-          this.field_c = param1;
+          this.includesAlpha = param0 ? true : false;
+          this.channelBits = param1;
           this.decode(8, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jaa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

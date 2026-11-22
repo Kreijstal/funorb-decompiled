@@ -765,16 +765,16 @@ final class ScrollContainer extends ArrayWidgetGroup {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ResourceArchive var7;
         if (param5 < pka.field_b) {
-          GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
+          GameKeyHandler.fillClippedRectangle(param1, param5, param3, param2, 10, param0);
         } else {
           if (DiskCacheWorker.field_c < param1) {
-            GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
+            GameKeyHandler.fillClippedRectangle(param1, param5, param3, param2, 10, param0);
           } else {
             if (param3 < HardwareModelBillboardState.field_d) {
-              GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
+              GameKeyHandler.fillClippedRectangle(param1, param5, param3, param2, 10, param0);
             } else {
               if (LineShape.field_h < param0) {
-                GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
+                GameKeyHandler.fillClippedRectangle(param1, param5, param3, param2, 10, param0);
               } else {
                 UrlDownloadRequest.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
               }

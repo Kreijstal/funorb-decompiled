@@ -141,7 +141,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
           if (CollisionGridEntry.isAlphanumeric(param1, 11955)) {
             return true;
           }
-          var6 = aba.field_c;
+          var6 = OpenGlVertexNormalData.field_c;
           var2 = var6;
           var3 = 0;
           while (var3 < var6.length) {

@@ -91,7 +91,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return stackIn_11_0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawWorldModel(int param0, int param1, int param2, int param3) {
         int stackIn_34_0 = 0;
         int stackIn_37_0 = 0;
         int var5;
@@ -815,7 +815,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           return;
         }
         try {
-          this.a(125, this.getRenderX((byte) -122), this.getRenderZ((byte) -114), this.getRenderY((byte) 95));
+          this.drawWorldModel(125, this.getRenderX((byte) -122), this.getRenderZ((byte) -114), this.getRenderY((byte) 95));
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

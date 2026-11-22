@@ -63,7 +63,7 @@ final class WaypointPath {
           param1.field_j = 0;
           param1.field_g = false;
           UnlockEntry.field_g = new nc(var3_int, param1, param1);
-          ByteStorage.field_a = new QuickChatPhraseSource(var3_int, param1, param1, new gha());
+          ByteStorage.field_a = new QuickChatPhraseSource(var3_int, param1, param1, new DecodableArrayReader());
           var4 = BlendModeOperator.findRootQuickChatCategory((byte) 86);
           if (var4 == null) {
             var11 = (Throwable) null;

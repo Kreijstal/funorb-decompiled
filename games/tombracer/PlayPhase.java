@@ -154,7 +154,7 @@ final class PlayPhase extends MatchPhase {
                 var8 = this.matchState.standings.order[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
-                  this.viewports[var8].applyLayout(var7_int, mma.field_c, -20186);
+                  this.viewports[var8].applyLayout(var7_int, TripBeamVisual.field_c, -20186);
                   this.viewports[var8].draw(23479);
                 }
               }

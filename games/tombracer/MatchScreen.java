@@ -587,7 +587,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           param1.endBitAccess((byte) 98);
           this.initPlayers((byte) -115);
           if (!this.matchState.isAwaitingFirstTick(0)) {
-            this.protocol.a((byte) 126);
+            this.protocol.disablePlayerInputReplay((byte) 126);
           }
           if (param0 < 92) {
             this.cycleViewedPlayer(-34, -99);
@@ -691,7 +691,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         if (param0 != -12963) {
           return true;
         }
-        return this.protocol.a(param1, param0 ^ -13022);
+        return this.protocol.isPlayerInputCaughtUp(param1, param0 ^ -13022);
     }
 
     final void clearPlayerInputs(int param0, int param1) {

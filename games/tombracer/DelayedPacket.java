@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rha extends IntrusiveNode {
+final class DelayedPacket extends IntrusiveNode {
     static String field_h;
-    byte[] field_g;
+    byte[] payload;
     int field_i;
-    long field_f;
+    long releaseAtMillis;
 
     public static void releaseStatics(int param0) {
         field_h = null;
@@ -14,11 +14,11 @@ final class rha extends IntrusiveNode {
         }
     }
 
-    rha(long param0, int param1, byte[] param2) {
+    DelayedPacket(long param0, int param1, byte[] param2) {
         try {
           this.field_i = param1;
-          this.field_f = param0;
-          this.field_g = param2;
+          this.releaseAtMillis = param0;
+          this.payload = param2;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rha.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

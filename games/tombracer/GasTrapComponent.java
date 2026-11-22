@@ -110,8 +110,8 @@ final class GasTrapComponent extends PrefabComponent {
           var7.setWeight((byte) -3, 0);
           var7.setFloating((byte) 17, true);
           var10 = new SimpleBlockBehaviour(param2, true);
-          var10.b((byte) -106, true);
-          var10.a(16, (byte) -22);
+          var10.setKillsOnTouch((byte) -106, true);
+          var10.setDeathCause(16, (byte) -22);
           var7.addBehaviour((byte) 83, (Behaviour) (var10));
           var7.toggle(-45);
           param2.addTrap(var7, (byte) 32);

@@ -21,7 +21,7 @@ final class S2CNewRoomPacket implements GamePacket {
         }
         try {
           if (this.force ||
-            !param0.a(this.playerId, 54) ||
+            !param0.isPlayerInputCaughtUp(this.playerId, 54) ||
             param2.matchState.isOutOfStepWithRoom(false, this.playerId, this.roomId)) {
             this.resyncPlayer(param2.matchState, (byte) -98);
             var7 = param2.matchState.players[this.playerId];
@@ -33,7 +33,7 @@ final class S2CNewRoomPacket implements GamePacket {
               param0.resetForNextRound(10);
             } else {
               param2.clearPlayerInputs(this.playerId, 51);
-              param0.a(this.disregard, (byte) 125, this.playerId);
+              param0.setPlayerInputSkipCount(this.disregard, (byte) 125, this.playerId);
             }
           }
           param2.roundDeadlineTick = this.field_i;

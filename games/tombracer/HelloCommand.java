@@ -26,12 +26,12 @@ final class HelloCommand extends ConsoleMethod {
         if (param3 < 119) {
           field_q = 'ﾶ';
           if (param2) {
-            return mma.field_b[param1];
+            return TripBeamVisual.field_b[param1];
           }
           return SwitchState.field_a[param1];
         }
         if (param2) {
-          return mma.field_b[param1];
+          return TripBeamVisual.field_b[param1];
         }
         return SwitchState.field_a[param1];
     }

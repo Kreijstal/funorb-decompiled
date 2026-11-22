@@ -91,7 +91,7 @@ final class TermsLinksPanel extends WidgetContainer implements HotspotListener, 
           if (this.field_B != param2) {
             return;
           }
-          SingleChildWidget.d(-7694);
+          SingleChildWidget.startLoginWithStoredCredentials(-7694);
           this.field_w.dismiss((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

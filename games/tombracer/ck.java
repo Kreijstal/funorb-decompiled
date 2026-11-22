@@ -177,12 +177,12 @@ final class ck {
           var16 = HazardModel.field_t;
           var16.field_z = 1;
           RoomRegion.field_l = new UiComponent(0L, (UiComponent) null);
-          cea.field_a = new UiComponent(0L, Corpse.field_i);
-          cea.field_a.field_z = 1;
+          PlayerCountDisplay.widget = new UiComponent(0L, Corpse.field_i);
+          PlayerCountDisplay.widget.field_z = 1;
           uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           MidiPatch.field_n = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
-          RoomRegion.field_l.addChild(param11 ^ -25371, cea.field_a);
+          RoomRegion.field_l.addChild(param11 ^ -25371, PlayerCountDisplay.widget);
           RoomRegion.field_l.addChild(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {
             RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);

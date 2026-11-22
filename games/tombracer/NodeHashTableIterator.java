@@ -51,13 +51,13 @@ final class NodeHashTableIterator implements Iterator {
         this.field_b = 1;
     }
 
-    final static void a(byte param0) {
+    final static void shutdownAudioOutputs(byte param0) {
         if (param0 != 55) {
-          NodeHashTableIterator.a((byte) -67);
-          GameKeyHandler.a((byte) 46);
+          NodeHashTableIterator.shutdownAudioOutputs((byte) -67);
+          GameKeyHandler.shutdownAudioOutputs((byte) 46);
           return;
         }
-        GameKeyHandler.a((byte) 46);
+        GameKeyHandler.shutdownAudioOutputs((byte) 46);
     }
 
     final static void a(String param0, int param1) {

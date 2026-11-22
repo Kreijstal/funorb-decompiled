@@ -65,7 +65,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         byte[] var5 = new byte[var4];
         WeaveOperator.field_q.readCipheredBytes(0, param0 - 103, var5, var4);
-        SimpleBlockBehaviour.openUrl(param0 ^ -16, ToolkitSelector.getApplet(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
+        SimpleBlockBehaviour.openUrl(param0 ^ -16, ToolkitSelector.getApplet(param0 + 82), BitPackedColour.decodeText((byte) 64, var5), var3 != 0);
     }
 
     final static boolean isFreeChatAllowed(int param0) {

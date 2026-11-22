@@ -11,7 +11,7 @@ final class MatchProtocol {
     private int field_d;
     private IntrusiveDeque unacknowledged;
     private boolean sendWindowFull;
-    private int[] field_b;
+    private int[] inputTicksToSkip;
     private ActionPacketQueue field_c;
 
     private final void handleStartRoundPacket(byte param0, BitPacketBuffer param1, MatchScreen param2) {
@@ -52,7 +52,7 @@ final class MatchProtocol {
     final void reset(boolean param0) {
         this.localInputs.clear(-79);
         if (!param0) {
-          this.a((byte) -48);
+          this.disablePlayerInputReplay((byte) -48);
         }
         this.unacknowledged.clear(8);
         this.field_c.clear(0);
@@ -220,11 +220,11 @@ final class MatchProtocol {
               if (this.field_d != var5 &&
                 var4.hasOrdersFor(false, var5)) {
                 for (var6 = 0; var6 < 8; var6++) {
-                  if (this.field_b[var5] == -1) {
+                  if (this.inputTicksToSkip[var5] == -1) {
                     break;
                   }
-                  if (this.field_b[var5] > 0) {
-                    this.field_b[var5] = this.field_b[var5] - 1;
+                  if (this.inputTicksToSkip[var5] > 0) {
+                    this.inputTicksToSkip[var5] = this.inputTicksToSkip[var5] - 1;
                   } else {
                     param0.queuePlayerInput(var4.getOrder(false, var5, var6), var5, false);
                   }
@@ -456,7 +456,7 @@ final class MatchProtocol {
         try {
           var4 = new S2CNextRoundPacket();
           if (param0 != 30) {
-            this.a((byte) -120);
+            this.disablePlayerInputReplay((byte) -120);
           }
           this.decodePacket(var4, param0 - 129, param2);
           var4.apply(2, this, param1);
@@ -465,9 +465,9 @@ final class MatchProtocol {
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isPlayerInputCaughtUp(int param0, int param1) {
         int var3 = 97 % ((param1 + 33) / 49);
-        return this.field_b[param0] == 0 ? true : false;
+        return this.inputTicksToSkip[param0] == 0 ? true : false;
     }
 
     private final S2CActionPacket pollReceivedAction(int param0) {
@@ -477,10 +477,10 @@ final class MatchProtocol {
         return this.field_c.poll(true);
     }
 
-    final void a(int param0, byte param1, int param2) {
-        this.field_b[param2] = param0;
+    final void setPlayerInputSkipCount(int param0, byte param1, int param2) {
+        this.inputTicksToSkip[param2] = param0;
         int var4 = -75 % ((param1 + 73) / 32);
-        this.field_b[param2] = this.field_b[param2] + 8 * this.field_c.countWithOrdersFor((byte) 25, param2);
+        this.inputTicksToSkip[param2] = this.inputTicksToSkip[param2] + 8 * this.field_c.countWithOrdersFor((byte) 25, param2);
     }
 
     final static void updatePageLinks(byte param0, java.applet.Applet param1) {
@@ -547,7 +547,7 @@ final class MatchProtocol {
     final void resetForNextRound(int param0) {
         this.unacknowledged.clear(8);
         this.localInputs.clear(param0 - 134);
-        this.field_b[this.field_d] = 0;
+        this.inputTicksToSkip[this.field_d] = 0;
         if (param0 != 10) {
           field_i = (UiComponent) null;
         }
@@ -645,14 +645,14 @@ final class MatchProtocol {
         hw.sendGamePacket((byte) -111, 0, 71, var6);
     }
 
-    final void a(byte param0) {
+    final void disablePlayerInputReplay(byte param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 125) {
           return;
         }
-        for (var2 = 0; var2 < this.field_b.length; var2++) {
-          this.field_b[var2] = -1;
+        for (var2 = 0; var2 < this.inputTicksToSkip.length; var2++) {
+          this.inputTicksToSkip[var2] = -1;
         }
     }
 
@@ -662,7 +662,7 @@ final class MatchProtocol {
         this.field_d = param0;
         this.field_e = param1;
         this.field_c = new ActionPacketQueue();
-        this.field_b = new int[param1];
+        this.inputTicksToSkip = new int[param1];
     }
 
     static {

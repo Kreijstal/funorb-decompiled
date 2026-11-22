@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class afa {
+final class OpenGlIndexBufferReference {
     static TooltipRenderer field_c;
     static String field_b;
-    IndexArray field_a;
+    IndexArray indexBuffer;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
         if (param0 != 58) {
-          afa.releaseStatics((byte) 121);
+          OpenGlIndexBufferReference.releaseStatics((byte) 121);
           field_b = null;
           field_c = null;
           return;

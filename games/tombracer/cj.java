@@ -27,9 +27,9 @@ final class cj implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        rha var4_ref_rha = null;
+        DelayedPacket var4_ref_rha = null;
         int var4 = 0;
-        rha var5 = null;
+        DelayedPacket var5 = null;
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
@@ -42,14 +42,14 @@ final class cj implements WidgetPainter {
           var2_long = AdjustedWallClock.currentTimeMillis((byte) -107);
           if (WallCrusherComponent.field_H != 0 &&
             GameKeyHandler.field_b < 0) {
-            var4_ref_rha = (rha) (MessageDialogs.field_a.first(-80));
+            var4_ref_rha = (DelayedPacket) (MessageDialogs.field_a.first(-80));
             if (var4_ref_rha != null &&
-              var2_long > var4_ref_rha.field_f) {
+              var2_long > var4_ref_rha.releaseAtMillis) {
               var4_ref_rha.unlink(115);
-              uca.field_d = var4_ref_rha.field_g.length;
+              uca.field_d = var4_ref_rha.payload.length;
               WeaveOperator.field_q.position = 0;
               for (var5_int = 0; var5_int < uca.field_d; var5_int++) {
-                WeaveOperator.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
+                WeaveOperator.field_q.payload[var5_int] = var4_ref_rha.payload[var5_int];
               }
               vua.field_B = TitledScrollPanel.field_xb;
               TitledScrollPanel.field_xb = PlayerProfile.field_c;
@@ -86,9 +86,9 @@ final class cj implements WidgetPainter {
                 var4 = 0;
               }
             }
-            var5 = new rha(var2_long + (long)var4, GameKeyHandler.field_b, new byte[uca.field_d]);
+            var5 = new DelayedPacket(var2_long + (long)var4, GameKeyHandler.field_b, new byte[uca.field_d]);
             for (var6 = 0; var6 < uca.field_d; var6++) {
-              var5.field_g[var6] = WeaveOperator.field_q.payload[var6];
+              var5.payload[var6] = WeaveOperator.field_q.payload[var6];
             }
             MessageDialogs.field_a.addLast((byte) -98, var5);
             GameKeyHandler.field_b = -1;

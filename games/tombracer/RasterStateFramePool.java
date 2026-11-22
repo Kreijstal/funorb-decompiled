@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vt {
-    static IntrusiveDeque field_a;
+final class RasterStateFramePool {
+    static IntrusiveDeque freeFrames;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
-        field_a = null;
+        freeFrames = null;
         if (param0 <= 51) {
-          vt.releaseStatics((byte) -125);
+          RasterStateFramePool.releaseStatics((byte) -125);
         }
     }
 
-    public vt() {
+    public RasterStateFramePool() {
         TooltipVisibility discarded$0 = new TooltipVisibility();
     }
 
     static {
         field_z = "vt.A(";
-        field_a = new IntrusiveDeque();
+        freeFrames = new IntrusiveDeque();
     }
 }

@@ -21,7 +21,7 @@ final class LoadingStepList {
         try {
           SwitchState.field_a = IdChatTarget.createModels(SoftReferenceCache.field_b, -8829, param0);
           ContextMenu.field_Ib = IdChatTarget.createModels(OpenGlBuffer.field_c, -8829, param0);
-          mma.field_b = IdChatTarget.createModels(DoorwayComponent.field_K, -8829, param0);
+          TripBeamVisual.field_b = IdChatTarget.createModels(DoorwayComponent.field_K, -8829, param0);
           RevolverItemComponent.field_J = IdChatTarget.createModels(C2SActionPacket.field_l, param1 - 8829, param0);
           LabelledRow.field_ub = IdChatTarget.createModels(CourseLayoutFactory.field_e, -8829, param0);
           PowerUpItemBehaviour.field_t = IdChatTarget.createModels(ColourRowCacheEntry.field_h, -8829, param0);

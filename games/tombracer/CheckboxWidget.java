@@ -17,7 +17,7 @@ final class CheckboxWidget extends FocusableWidget {
     private CheckboxWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_r = afa.field_c.field_d;
+          this.field_r = OpenGlIndexBufferReference.field_c.field_d;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -42,9 +42,9 @@ final class CheckboxWidget extends FocusableWidget {
     }
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, afa.field_c.field_u, param1);
+        this(param0, OpenGlIndexBufferReference.field_c.field_u, param1);
         try {
-          this.field_r = afa.field_c.field_d;
+          this.field_r = OpenGlIndexBufferReference.field_c.field_d;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

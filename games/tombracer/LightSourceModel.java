@@ -4,7 +4,7 @@
 final class LightSourceModel extends TrapModel {
     private int field_q;
     static int field_p;
-    private jaa field_n;
+    private BitPackedColour field_n;
     private int field_m;
     private int field_o;
     private LightSource field_s;
@@ -386,7 +386,7 @@ final class LightSourceModel extends TrapModel {
           param1.writeBits((byte) -127, this.field_r ? 1 : 0, 1);
           param1.writeBits((byte) 74, this.field_m / 8, 8);
           if (this.field_n == null) {
-            this.field_n = new jaa(false, Obstacle.field_l);
+            this.field_n = new BitPackedColour(false, Obstacle.field_l);
           }
           this.field_n.encode(0, param1);
         } catch (RuntimeException runtimeException) {
@@ -415,7 +415,7 @@ final class LightSourceModel extends TrapModel {
         try {
           this.field_r = true;
           this.field_m = param2.readBits((byte) 44, 8) * 8;
-          this.field_n = new jaa(false, Obstacle.field_l, param1.formatVersion, param2);
+          this.field_n = new BitPackedColour(false, Obstacle.field_l, param1.formatVersion, param2);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gaa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -457,7 +457,7 @@ final class LightSourceModel extends TrapModel {
 
     LightSourceModel(int param0) {
         super(param0);
-        this.field_n = new jaa(false, Obstacle.field_l);
+        this.field_n = new BitPackedColour(false, Obstacle.field_l);
         this.field_r = true;
         this.field_m = 128;
     }

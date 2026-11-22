@@ -7,8 +7,8 @@ final class SimpleBlockBehaviour extends Behaviour {
     private boolean field_u;
     static int[] field_p;
     private boolean passesBeams;
-    private boolean field_q;
-    private int field_s;
+    private boolean killsOnTouch;
+    private int deathCause;
     private boolean passesProjectiles;
 
     final void setPassesBeams(int param0, boolean param1) {
@@ -91,7 +91,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           }
           param1.setObstructionLevel(3, 0);
           param1.setCollisionLevel(3, (byte) -12, false);
-          this.field_q = true;
+          this.killsOnTouch = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,11 +107,11 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void setKillsOnTouch(byte param0, boolean param1) {
         if (param0 > -53) {
           return;
         }
-        this.field_q = param1 ? true : false;
+        this.killsOnTouch = param1 ? true : false;
     }
 
     SimpleBlockBehaviour(Room param0, boolean param1) {
@@ -171,7 +171,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         super(param0, param1, param2);
         try {
           if (param0.formatVersion >= 4) {
-            this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
+            this.killsOnTouch = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
           if (param0.formatVersion >= 6) {
             this.field_u = 1 == param1.readBits((byte) 44, 1) ? true : false;
@@ -239,7 +239,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         Collidable var3Lifetime2;
         Collidable var3Lifetime3;
         Collidable var3Lifetime4;
-        if (!this.field_q) {
+        if (!this.killsOnTouch) {
           if (!this.field_u) {
             if (param0 != 5418) {
               var3 = (Collidable) null;
@@ -265,7 +265,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           return;
         }
         if (this.isTouchingPlayer(8031)) {
-          this.getPlayer((byte) 19).kill(2, (byte) -123, this.field_s);
+          this.getPlayer((byte) 19).kill(2, (byte) -123, this.deathCause);
           if (param0 == 5418) {
             return;
           }
@@ -283,7 +283,7 @@ final class SimpleBlockBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) 56, this.field_q ? 1 : 0, 1);
+          param1.writeBits((byte) 56, this.killsOnTouch ? 1 : 0, 1);
           param1.writeBits((byte) -125, this.field_u ? 1 : 0, 1);
           param1.writeBits((byte) 69, this.passesBeams ? 1 : 0, 1);
           param1.writeBits((byte) -125, this.passesProjectiles ? 1 : 0, 1);
@@ -292,8 +292,8 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final void a(int param0, byte param1) {
-        this.field_s = param0;
+    final void setDeathCause(int param0, byte param1) {
+        this.deathCause = param0;
         if (param1 != -22) {
           Collidable var4 = (Collidable) null;
           this.blocksOverlap(-37, 114, -50, -103, 24, 15, (Collidable) null);

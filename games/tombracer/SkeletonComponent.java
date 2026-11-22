@@ -91,8 +91,8 @@ final class SkeletonComponent extends dna {
           var6.a(256, (byte) 124);
           var12.addLocomotor(var6, 0);
           var7 = new SimpleBlockBehaviour(param2, param0);
-          var7.b((byte) -114, true);
-          var7.a(8, (byte) -22);
+          var7.setKillsOnTouch((byte) -114, true);
+          var7.setDeathCause(8, (byte) -22);
           var12.addBehaviour((byte) 83, (Behaviour) (var7));
           var8 = new DamageableBehaviour(param2, param0);
           var8.setHealthParameters(0, 5, param1 - 3);

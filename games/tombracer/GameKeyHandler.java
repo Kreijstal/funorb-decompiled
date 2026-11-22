@@ -7,7 +7,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static float[] field_c;
     static int field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillClippedRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -20,7 +20,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         try {
           var6_int = CharacterPreview.clamp(LineShape.field_h, param4 - 16236, HardwareModelBillboardState.field_d, param2);
           if (param4 != 10) {
-            GameKeyHandler.a((byte) 101);
+            GameKeyHandler.shutdownAudioOutputs((byte) 101);
           }
           var7 = CharacterPreview.clamp(LineShape.field_h, param4 ^ -16236, HardwareModelBillboardState.field_d, param5);
           var8 = CharacterPreview.clamp(DiskCacheWorker.field_c, param4 - 16236, pka.field_b, param1);
@@ -36,7 +36,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(byte param0) {
+    final static void shutdownAudioOutputs(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (WheeledMountComponent.field_P != null) {
@@ -192,7 +192,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         field_c = null;
         field_d = null;
         if (param0 != 127) {
-          GameKeyHandler.a((byte) 34);
+          GameKeyHandler.shutdownAudioOutputs((byte) 34);
         }
     }
 

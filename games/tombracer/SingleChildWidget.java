@@ -468,7 +468,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         return var2;
     }
 
-    final static void d(int param0) {
+    final static void startLoginWithStoredCredentials(int param0) {
         if (param0 != -7694) {
           field_w = (TextureFormat) null;
         }

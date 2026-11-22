@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gha implements pp {
+final class DecodableArrayReader implements pp {
     private static String[] effectPresetNames;
     static char[] cp1252HighChars;
 

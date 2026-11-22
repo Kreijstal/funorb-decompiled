@@ -467,7 +467,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.random = null;
         this.obstacles.clear(8);
         if (param1 <= 95) {
-          Room.l(-107);
+          Room.closeQuickChatMenuIfOpen(-107);
         }
         this.traps.clear(8);
         this.components.clear(8);
@@ -949,7 +949,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         field_R = null;
         field_k = null;
         if (param0 != -128) {
-          Room.l(-58);
+          Room.closeQuickChatMenuIfOpen(-58);
         }
         field_p = (ToolkitSprite[][]) null;
     }
@@ -1638,12 +1638,12 @@ final class Room implements SwitchableScope, Renderable, noa {
         return -param0 - (-(this.width / 2) - this.width / 2);
     }
 
-    final static void l(int param0) {
+    final static void closeQuickChatMenuIfOpen(int param0) {
         if (OpenGlBufferObject.field_b) {
           ComponentTargetList.closeQuickChatMenu(120);
         }
         if (param0 != 2097152) {
-          Room.l(104);
+          Room.closeQuickChatMenuIfOpen(104);
         }
     }
 

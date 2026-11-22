@@ -803,7 +803,7 @@ final class EditableTextField extends UiComponent {
         try {
           LabelledRow.field_ub = null;
           HardwareModelBillboardState.field_g = null;
-          mma.field_b = null;
+          TripBeamVisual.field_b = null;
           PowerUpItemBehaviour.field_t = null;
           RevolverItemComponent.field_J = null;
           ContextMenu.field_Ib = null;

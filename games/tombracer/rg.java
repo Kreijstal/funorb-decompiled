@@ -116,7 +116,7 @@ final class rg extends SingleChildWidget {
         sla.field_b[3] = HardCacheEntry.field_p;
         Room.field_m[1] = HardwareSprite.field_e;
         Room.field_m[10] = LobbyPlayerEntry.field_Ib;
-        Room.field_m[9] = rha.field_h;
+        Room.field_m[9] = DelayedPacket.field_h;
         Room.field_m[8] = sda.field_k;
         Room.field_m[4] = DebouncedValidationSource.field_d;
         Room.field_m[5] = GameScreen.field_a;

@@ -404,7 +404,7 @@ final class MenuEntry {
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = mma.field_d;
+          stackIn_4_0 = TripBeamVisual.field_d;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

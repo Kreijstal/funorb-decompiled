@@ -61,7 +61,7 @@ final class tia {
         return WeaponShooterBehaviour.atan2FirstQuadrant(120, -param0, -param1) - 4096;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void drawSinglePixelRectangleBorder(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6_int = 0;

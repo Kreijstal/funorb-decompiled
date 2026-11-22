@@ -193,10 +193,10 @@ final class S2CNextRoundPacket implements GamePacket {
         RuntimeException var2_ref = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (cga) (aba.field_a.first(-80));
+          var4 = (cga) (OpenGlVertexNormalData.field_a.first(-80));
           while (var4 != null) {
             wj.writeQueuedRequest(var4, param0, -121);
-            var4 = (cga) (aba.field_a.next(114));
+            var4 = (cga) (OpenGlVertexNormalData.field_a.next(114));
           }
           if (param1 != 2) {
             return;

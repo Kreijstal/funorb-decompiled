@@ -11,7 +11,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     private boolean field_v;
     private BeamSegment field_u;
     private int field_x;
-    private mma field_p;
+    private TripBeamVisual field_p;
     private int field_s;
     private HazardEffect field_z;
     private int field_E;
@@ -84,26 +84,26 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         Room stackIn_28_0 = null;
         int stackIn_29_1 = 0;
         boolean stackIn_38_1 = false;
-        mma stackIn_58_0 = null;
+        TripBeamVisual stackIn_58_0 = null;
         int stackIn_58_1 = 0;
         int stackIn_59_2 = 0;
         int stackIn_61_0 = 0;
-        mma stackIn_68_0 = null;
+        TripBeamVisual stackIn_68_0 = null;
         int stackIn_68_1 = 0;
         int stackIn_69_2 = 0;
-        mma stackIn_74_0 = null;
+        TripBeamVisual stackIn_74_0 = null;
         int stackIn_74_1 = 0;
         int stackIn_75_2 = 0;
-        mma stackIn_84_0 = null;
+        TripBeamVisual stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
-        mma stackIn_89_0 = null;
+        TripBeamVisual stackIn_89_0 = null;
         int stackIn_89_1 = 0;
         int stackIn_90_2 = 0;
-        mma stackIn_96_0 = null;
+        TripBeamVisual stackIn_96_0 = null;
         int stackIn_96_1 = 0;
         int stackIn_97_2 = 0;
-        mma stackIn_102_0 = null;
+        TripBeamVisual stackIn_102_0 = null;
         int stackIn_102_1 = 0;
         int stackIn_103_2 = 0;
         int var4;
@@ -218,7 +218,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_58_0 = this.field_p;
             stackIn_58_1 = -978;
             stackIn_59_2 = (!this.field_r) ? 65280 : 16720384;
-            ((mma) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_59_2);
+            ((TripBeamVisual) (Object) stackIn_58_0).setColour(stackIn_58_1, stackIn_59_2);
             this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
@@ -233,7 +233,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_89_0 = this.field_p;
             stackIn_89_1 = -978;
             stackIn_90_2 = (!this.field_r) ? 65280 : 16720384;
-            ((mma) (Object) stackIn_89_0).a(stackIn_89_1, stackIn_90_2);
+            ((TripBeamVisual) (Object) stackIn_89_0).setColour(stackIn_89_1, stackIn_90_2);
             this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
@@ -248,7 +248,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
               } else {
                 stackIn_97_2 = 16720384;
               }
-              ((mma) (Object) stackIn_96_0).a(stackIn_96_1, stackIn_97_2);
+              ((TripBeamVisual) (Object) stackIn_96_0).setColour(stackIn_96_1, stackIn_97_2);
               this.field_C.setInput((byte) -14, this.field_r);
               return;
             }
@@ -272,7 +272,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_103_2 = 16720384;
           }
-          ((mma) (Object) stackIn_102_0).a(stackIn_102_1, stackIn_103_2);
+          ((TripBeamVisual) (Object) stackIn_102_0).setColour(stackIn_102_1, stackIn_103_2);
           this.field_C.setInput((byte) -14, this.field_r);
           return;
         }
@@ -281,7 +281,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           stackIn_84_0 = this.field_p;
           stackIn_84_1 = -978;
           stackIn_85_2 = (!this.field_r) ? 65280 : 16720384;
-          ((mma) (Object) stackIn_84_0).a(stackIn_84_1, stackIn_85_2);
+          ((TripBeamVisual) (Object) stackIn_84_0).setColour(stackIn_84_1, stackIn_85_2);
           this.field_C.setInput((byte) -14, this.field_r);
           return;
         }
@@ -296,7 +296,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             } else {
               stackIn_69_2 = 16720384;
             }
-            ((mma) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
+            ((TripBeamVisual) (Object) stackIn_68_0).setColour(stackIn_68_1, stackIn_69_2);
             this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
@@ -320,7 +320,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         } else {
           stackIn_75_2 = 16720384;
         }
-        ((mma) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_75_2);
+        ((TripBeamVisual) (Object) stackIn_74_0).setColour(stackIn_74_1, stackIn_75_2);
         this.field_C.setInput((byte) -14, this.field_r);
         return;
     }
@@ -442,7 +442,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.field_p = new mma(0, 16777215, this.field_u, param1.getTopElevation(0));
+          this.field_p = new TripBeamVisual(0, 16777215, this.field_u, param1.getTopElevation(0));
           if (!param0) {
             this.field_u = (BeamSegment) null;
           }

@@ -19,7 +19,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonListene
           return;
         }
         try {
-          SingleChildWidget.d(-7694);
+          SingleChildWidget.startLoginWithStoredCredentials(-7694);
           this.dismiss((byte) 13);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

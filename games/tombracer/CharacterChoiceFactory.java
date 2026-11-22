@@ -92,7 +92,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
     }
 
     final static void initializeDialogStack(int param0) {
-        afa.field_c = LegacyOpenGlSpriteTexture.getTooltipStyle(-57);
+        OpenGlIndexBufferReference.field_c = LegacyOpenGlSpriteTexture.getTooltipStyle(-57);
         ej.field_a = new DialogStack();
         if (param0 <= 112) {
           return;

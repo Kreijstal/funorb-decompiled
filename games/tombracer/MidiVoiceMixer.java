@@ -30,11 +30,11 @@ final class MidiVoiceMixer extends PcmStream {
             var2 = param0;
             do {
               if (var3.field_B >= var2) {
-                this.a(943, var2, var3);
+                this.skipVoiceSamples(943, var2, var3);
                 var3.field_B = var3.field_B - var2;
                 break;
               }
-              this.a(943, var3.field_B, var3);
+              this.skipVoiceSamples(943, var3.field_B, var3);
               var2 = var2 - var3.field_B;
             } while (!this.field_k.updateNote(var3, (int[]) null, 0, (byte) 6, var2));
           }
@@ -80,7 +80,7 @@ final class MidiVoiceMixer extends PcmStream {
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, mma.field_a, FloatPacketBuffer.field_i);
+              var9.fillRect(0, 0, TripBeamVisual.field_a, FloatPacketBuffer.field_i);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -99,11 +99,11 @@ final class MidiVoiceMixer extends PcmStream {
               var10.setFont(UsernameSuggestionsPanel.field_y);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(6 * param1.length()) + 304) / 2, 22);
-              var9.drawImage(OpenGlModel.field_x, -152 + mma.field_a / 2, FloatPacketBuffer.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(OpenGlModel.field_x, -152 + TripBeamVisual.field_a / 2, FloatPacketBuffer.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + mma.field_a / 2;
+              var7 = -152 + TripBeamVisual.field_a / 2;
               var8 = -18 + FloatPacketBuffer.field_i / 2;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
@@ -118,7 +118,7 @@ final class MidiVoiceMixer extends PcmStream {
             if (SecondaryNodeDeque.field_e != null) {
               var9.setFont(UsernameSuggestionsPanel.field_y);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(SecondaryNodeDeque.field_e, mma.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, FloatPacketBuffer.field_i / 2 - 26);
+              var9.drawString(SecondaryNodeDeque.field_e, TripBeamVisual.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, FloatPacketBuffer.field_i / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -150,7 +150,7 @@ final class MidiVoiceMixer extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, MidiVoice param2) {
+    private final void skipVoiceSamples(int param0, int param1, MidiVoice param2) {
         MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         MidiVoice stackIn_8_2 = null;

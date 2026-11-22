@@ -42,420 +42,420 @@ final class CourseMapWalker {
                 CurveOperator.textArchive = param0;
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,0", (byte) 108);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[0] = jaa.decodeText((byte) 77, var2);
+                  ShowLevelSetCommand.achievementNames[0] = BitPackedColour.decodeText((byte) 77, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,1", (byte) 121);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[1] = jaa.decodeText((byte) 97, var2);
+                  ShowLevelSetCommand.achievementNames[1] = BitPackedColour.decodeText((byte) 97, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,2", (byte) 115);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[2] = jaa.decodeText((byte) 73, var2);
+                  ShowLevelSetCommand.achievementNames[2] = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,3", (byte) 123);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[3] = jaa.decodeText((byte) 69, var2);
+                  ShowLevelSetCommand.achievementNames[3] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,4", (byte) 108);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[4] = jaa.decodeText((byte) 125, var2);
+                  ShowLevelSetCommand.achievementNames[4] = BitPackedColour.decodeText((byte) 125, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,5", (byte) 121);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[5] = jaa.decodeText((byte) 81, var2);
+                  ShowLevelSetCommand.achievementNames[5] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,6", (byte) 118);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[6] = jaa.decodeText((byte) 56, var2);
+                  ShowLevelSetCommand.achievementNames[6] = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,7", (byte) 124);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[7] = jaa.decodeText((byte) 30, var2);
+                  ShowLevelSetCommand.achievementNames[7] = BitPackedColour.decodeText((byte) 30, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,8", (byte) 102);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[8] = jaa.decodeText((byte) 77, var2);
+                  ShowLevelSetCommand.achievementNames[8] = BitPackedColour.decodeText((byte) 77, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,9", (byte) 111);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[9] = jaa.decodeText((byte) 26, var2);
+                  ShowLevelSetCommand.achievementNames[9] = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,10", (byte) 110);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[10] = jaa.decodeText((byte) 102, var2);
+                  ShowLevelSetCommand.achievementNames[10] = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,11", (byte) 121);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[11] = jaa.decodeText((byte) 59, var2);
+                  ShowLevelSetCommand.achievementNames[11] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,12", (byte) 112);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[12] = jaa.decodeText((byte) 28, var2);
+                  ShowLevelSetCommand.achievementNames[12] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,13", (byte) 127);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[13] = jaa.decodeText((byte) 50, var2);
+                  ShowLevelSetCommand.achievementNames[13] = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,14", (byte) 116);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[14] = jaa.decodeText((byte) 113, var2);
+                  ShowLevelSetCommand.achievementNames[14] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,15", (byte) 119);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[15] = jaa.decodeText((byte) 122, var2);
+                  ShowLevelSetCommand.achievementNames[15] = BitPackedColour.decodeText((byte) 122, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,16", (byte) 123);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[16] = jaa.decodeText((byte) 37, var2);
+                  ShowLevelSetCommand.achievementNames[16] = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,17", (byte) 102);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[17] = jaa.decodeText((byte) 84, var2);
+                  ShowLevelSetCommand.achievementNames[17] = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,18", (byte) 120);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[18] = jaa.decodeText((byte) 121, var2);
+                  ShowLevelSetCommand.achievementNames[18] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,19", (byte) 121);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[19] = jaa.decodeText((byte) 75, var2);
+                  ShowLevelSetCommand.achievementNames[19] = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,20", (byte) 124);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[20] = jaa.decodeText((byte) 25, var2);
+                  ShowLevelSetCommand.achievementNames[20] = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,21", (byte) 104);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[21] = jaa.decodeText((byte) 64, var2);
+                  ShowLevelSetCommand.achievementNames[21] = BitPackedColour.decodeText((byte) 64, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,22", (byte) 125);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[22] = jaa.decodeText((byte) 106, var2);
+                  ShowLevelSetCommand.achievementNames[22] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,23", (byte) 102);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[23] = jaa.decodeText((byte) 28, var2);
+                  ShowLevelSetCommand.achievementNames[23] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,24", (byte) 104);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[24] = jaa.decodeText((byte) 67, var2);
+                  ShowLevelSetCommand.achievementNames[24] = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,25", (byte) 116);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[25] = jaa.decodeText((byte) 96, var2);
+                  ShowLevelSetCommand.achievementNames[25] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,26", (byte) 112);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[26] = jaa.decodeText((byte) 86, var2);
+                  ShowLevelSetCommand.achievementNames[26] = BitPackedColour.decodeText((byte) 86, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,27", (byte) 102);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[27] = jaa.decodeText((byte) 76, var2);
+                  ShowLevelSetCommand.achievementNames[27] = BitPackedColour.decodeText((byte) 76, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,28", (byte) 113);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[28] = jaa.decodeText((byte) 60, var2);
+                  ShowLevelSetCommand.achievementNames[28] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,29", (byte) 118);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[29] = jaa.decodeText((byte) 66, var2);
+                  ShowLevelSetCommand.achievementNames[29] = BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,30", (byte) 101);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[30] = jaa.decodeText((byte) 101, var2);
+                  ShowLevelSetCommand.achievementNames[30] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,31", (byte) 125);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[31] = jaa.decodeText((byte) 67, var2);
+                  ShowLevelSetCommand.achievementNames[31] = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,32", (byte) 115);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[32] = jaa.decodeText((byte) 64, var2);
+                  ShowLevelSetCommand.achievementNames[32] = BitPackedColour.decodeText((byte) 64, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,33", (byte) 100);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[33] = jaa.decodeText((byte) 79, var2);
+                  ShowLevelSetCommand.achievementNames[33] = BitPackedColour.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,34", (byte) 125);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[34] = jaa.decodeText((byte) 55, var2);
+                  ShowLevelSetCommand.achievementNames[34] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,35", (byte) 109);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[35] = jaa.decodeText((byte) 56, var2);
+                  ShowLevelSetCommand.achievementNames[35] = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,36", (byte) 116);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[36] = jaa.decodeText((byte) 69, var2);
+                  ShowLevelSetCommand.achievementNames[36] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,37", (byte) 125);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[37] = jaa.decodeText((byte) 40, var2);
+                  ShowLevelSetCommand.achievementNames[37] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,38", (byte) 122);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[38] = jaa.decodeText((byte) 116, var2);
+                  ShowLevelSetCommand.achievementNames[38] = BitPackedColour.decodeText((byte) 116, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,39", (byte) 123);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[39] = jaa.decodeText((byte) 38, var2);
+                  ShowLevelSetCommand.achievementNames[39] = BitPackedColour.decodeText((byte) 38, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,40", (byte) 100);
                 if (null != var2) {
-                  ShowLevelSetCommand.achievementNames[40] = jaa.decodeText((byte) 125, var2);
+                  ShowLevelSetCommand.achievementNames[40] = BitPackedColour.decodeText((byte) 125, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_names,41", (byte) 113);
                 if (var2 != null) {
-                  ShowLevelSetCommand.achievementNames[41] = jaa.decodeText((byte) 116, var2);
+                  ShowLevelSetCommand.achievementNames[41] = BitPackedColour.decodeText((byte) 116, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,0", (byte) 105);
                 if (var2 != null) {
-                  kv.achievementDescriptions[0] = jaa.decodeText((byte) 61, var2);
+                  kv.achievementDescriptions[0] = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,1", (byte) 114);
                 if (var2 != null) {
-                  kv.achievementDescriptions[1] = jaa.decodeText((byte) 60, var2);
+                  kv.achievementDescriptions[1] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,2", (byte) 110);
                 if (null != var2) {
-                  kv.achievementDescriptions[2] = jaa.decodeText((byte) 111, var2);
+                  kv.achievementDescriptions[2] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,3", (byte) 104);
                 if (var2 != null) {
-                  kv.achievementDescriptions[3] = jaa.decodeText((byte) 69, var2);
+                  kv.achievementDescriptions[3] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,4", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[4] = jaa.decodeText((byte) 54, var2);
+                  kv.achievementDescriptions[4] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,5", (byte) 111);
                 if (null != var2) {
-                  kv.achievementDescriptions[5] = jaa.decodeText((byte) 83, var2);
+                  kv.achievementDescriptions[5] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,6", (byte) 113);
                 if (var2 != null) {
-                  kv.achievementDescriptions[6] = jaa.decodeText((byte) 44, var2);
+                  kv.achievementDescriptions[6] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,7", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[7] = jaa.decodeText((byte) 80, var2);
+                  kv.achievementDescriptions[7] = BitPackedColour.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,8", (byte) 113);
                 if (var2 != null) {
-                  kv.achievementDescriptions[8] = jaa.decodeText((byte) 98, var2);
+                  kv.achievementDescriptions[8] = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,9", (byte) 110);
                 if (null != var2) {
-                  kv.achievementDescriptions[9] = jaa.decodeText((byte) 45, var2);
+                  kv.achievementDescriptions[9] = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,10", (byte) 104);
                 if (var2 != null) {
-                  kv.achievementDescriptions[10] = jaa.decodeText((byte) 44, var2);
+                  kv.achievementDescriptions[10] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,11", (byte) 117);
                 if (null != var2) {
-                  kv.achievementDescriptions[11] = jaa.decodeText((byte) 90, var2);
+                  kv.achievementDescriptions[11] = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,12", (byte) 104);
                 if (null != var2) {
-                  kv.achievementDescriptions[12] = jaa.decodeText((byte) 47, var2);
+                  kv.achievementDescriptions[12] = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,13", (byte) 120);
                 if (var2 != null) {
-                  kv.achievementDescriptions[13] = jaa.decodeText((byte) 88, var2);
+                  kv.achievementDescriptions[13] = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,14", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[14] = jaa.decodeText((byte) 54, var2);
+                  kv.achievementDescriptions[14] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,15", (byte) 110);
                 if (var2 != null) {
-                  kv.achievementDescriptions[15] = jaa.decodeText((byte) 43, var2);
+                  kv.achievementDescriptions[15] = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,16", (byte) 105);
                 if (null != var2) {
-                  kv.achievementDescriptions[16] = jaa.decodeText((byte) 81, var2);
+                  kv.achievementDescriptions[16] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,17", (byte) 123);
                 if (var2 != null) {
-                  kv.achievementDescriptions[17] = jaa.decodeText((byte) 115, var2);
+                  kv.achievementDescriptions[17] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,18", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[18] = jaa.decodeText((byte) 49, var2);
+                  kv.achievementDescriptions[18] = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,19", (byte) 120);
                 if (var2 != null) {
-                  kv.achievementDescriptions[19] = jaa.decodeText((byte) 113, var2);
+                  kv.achievementDescriptions[19] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,20", (byte) 110);
                 if (var2 != null) {
-                  kv.achievementDescriptions[20] = jaa.decodeText((byte) 48, var2);
+                  kv.achievementDescriptions[20] = BitPackedColour.decodeText((byte) 48, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,21", (byte) 117);
                 if (null != var2) {
-                  kv.achievementDescriptions[21] = jaa.decodeText((byte) 86, var2);
+                  kv.achievementDescriptions[21] = BitPackedColour.decodeText((byte) 86, var2);
                 }
                 var3 = -99 % ((param1 - 40) / 63);
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,22", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[22] = jaa.decodeText((byte) 108, var2);
+                  kv.achievementDescriptions[22] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,23", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[23] = jaa.decodeText((byte) 115, var2);
+                  kv.achievementDescriptions[23] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,24", (byte) 103);
                 if (null != var2) {
-                  kv.achievementDescriptions[24] = jaa.decodeText((byte) 72, var2);
+                  kv.achievementDescriptions[24] = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,25", (byte) 125);
                 if (var2 != null) {
-                  kv.achievementDescriptions[25] = jaa.decodeText((byte) 114, var2);
+                  kv.achievementDescriptions[25] = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,26", (byte) 112);
                 if (null != var2) {
-                  kv.achievementDescriptions[26] = jaa.decodeText((byte) 56, var2);
+                  kv.achievementDescriptions[26] = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,27", (byte) 127);
                 if (null != var2) {
-                  kv.achievementDescriptions[27] = jaa.decodeText((byte) 61, var2);
+                  kv.achievementDescriptions[27] = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,28", (byte) 126);
                 if (null != var2) {
-                  kv.achievementDescriptions[28] = jaa.decodeText((byte) 107, var2);
+                  kv.achievementDescriptions[28] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,29", (byte) 116);
                 if (var2 != null) {
-                  kv.achievementDescriptions[29] = jaa.decodeText((byte) 69, var2);
+                  kv.achievementDescriptions[29] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,30", (byte) 107);
                 if (var2 != null) {
-                  kv.achievementDescriptions[30] = jaa.decodeText((byte) 121, var2);
+                  kv.achievementDescriptions[30] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,31", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[31] = jaa.decodeText((byte) 89, var2);
+                  kv.achievementDescriptions[31] = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,32", (byte) 108);
                 if (var2 != null) {
-                  kv.achievementDescriptions[32] = jaa.decodeText((byte) 83, var2);
+                  kv.achievementDescriptions[32] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,33", (byte) 105);
                 if (var2 != null) {
-                  kv.achievementDescriptions[33] = jaa.decodeText((byte) 34, var2);
+                  kv.achievementDescriptions[33] = BitPackedColour.decodeText((byte) 34, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,34", (byte) 124);
                 if (var2 != null) {
-                  kv.achievementDescriptions[34] = jaa.decodeText((byte) 127, var2);
+                  kv.achievementDescriptions[34] = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,35", (byte) 123);
                 if (null != var2) {
-                  kv.achievementDescriptions[35] = jaa.decodeText((byte) 71, var2);
+                  kv.achievementDescriptions[35] = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,36", (byte) 122);
                 if (null != var2) {
-                  kv.achievementDescriptions[36] = jaa.decodeText((byte) 63, var2);
+                  kv.achievementDescriptions[36] = BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,37", (byte) 122);
                 if (var2 != null) {
-                  kv.achievementDescriptions[37] = jaa.decodeText((byte) 108, var2);
+                  kv.achievementDescriptions[37] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,38", (byte) 116);
                 if (null != var2) {
-                  kv.achievementDescriptions[38] = jaa.decodeText((byte) 83, var2);
+                  kv.achievementDescriptions[38] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,39", (byte) 121);
                 if (var2 != null) {
-                  kv.achievementDescriptions[39] = jaa.decodeText((byte) 43, var2);
+                  kv.achievementDescriptions[39] = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,40", (byte) 117);
                 if (var2 != null) {
-                  kv.achievementDescriptions[40] = jaa.decodeText((byte) 73, var2);
+                  kv.achievementDescriptions[40] = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievement_criteria,41", (byte) 101);
                 if (var2 != null) {
-                  kv.achievementDescriptions[41] = jaa.decodeText((byte) 31, var2);
+                  kv.achievementDescriptions[41] = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("no_textures", (byte) 108);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 114, var2);
+                  BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructions_title", (byte) 112);
                 if (var2 != null) {
-                  SnakePitBehaviour.field_q = jaa.decodeText((byte) 46, var2);
+                  SnakePitBehaviour.field_q = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("highscores_title", (byte) 114);
                 if (null != var2) {
-                  jaa.decodeText((byte) 60, var2);
+                  BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("achievements_title", (byte) 120);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 84, var2);
+                  BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("rankings_title", (byte) 121);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 94, var2);
+                  BitPackedColour.decodeText((byte) 94, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("character_select_title", (byte) 120);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 67, var2);
+                  BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,0", (byte) 110);
                 if (null != var2) {
-                  DebouncedValidationSource.defaultPlayerNames[0] = jaa.decodeText((byte) 37, var2);
+                  DebouncedValidationSource.defaultPlayerNames[0] = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,1", (byte) 105);
                 if (null != var2) {
-                  DebouncedValidationSource.defaultPlayerNames[1] = jaa.decodeText((byte) 92, var2);
+                  DebouncedValidationSource.defaultPlayerNames[1] = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,2", (byte) 102);
                 if (null != var2) {
-                  DebouncedValidationSource.defaultPlayerNames[2] = jaa.decodeText((byte) 64, var2);
+                  DebouncedValidationSource.defaultPlayerNames[2] = BitPackedColour.decodeText((byte) 64, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,3", (byte) 124);
                 if (null != var2) {
-                  DebouncedValidationSource.defaultPlayerNames[3] = jaa.decodeText((byte) 124, var2);
+                  DebouncedValidationSource.defaultPlayerNames[3] = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("positions,0", (byte) 119);
                 if (var2 != null) {
-                  TextureMetadata.ordinals[0] = jaa.decodeText((byte) 102, var2);
+                  TextureMetadata.ordinals[0] = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("positions,1", (byte) 114);
                 if (var2 != null) {
-                  TextureMetadata.ordinals[1] = jaa.decodeText((byte) 30, var2);
+                  TextureMetadata.ordinals[1] = BitPackedColour.decodeText((byte) 30, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("positions,2", (byte) 108);
                 if (var2 != null) {
-                  TextureMetadata.ordinals[2] = jaa.decodeText((byte) 96, var2);
+                  TextureMetadata.ordinals[2] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("positions,3", (byte) 121);
                 if (var2 != null) {
-                  TextureMetadata.ordinals[3] = jaa.decodeText((byte) 97, var2);
+                  TextureMetadata.ordinals[3] = BitPackedColour.decodeText((byte) 97, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("roundWinner", (byte) 126);
                 if (var2 != null) {
-                  RasterBuffer.field_h = jaa.decodeText((byte) 40, var2);
+                  RasterBuffer.field_h = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameWinner", (byte) 123);
                 if (var2 != null) {
-                  FallbackShaderEffect.field_d = jaa.decodeText((byte) 41, var2);
+                  FallbackShaderEffect.field_d = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("roundWinner_draw", (byte) 113);
                 if (var2 != null) {
-                  CharacterSelectPhase.field_o = jaa.decodeText((byte) 43, var2);
+                  CharacterSelectPhase.field_o = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("milliseconds", (byte) 111);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 28, var2);
+                  BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("arr", (byte) 127);
                 if (var2 != null) {
-                  PerlinNoise2D.field_y = jaa.decodeText((byte) 72, var2);
+                  PerlinNoise2D.field_y = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keys", (byte) 107);
                 if (null != var2) {
-                  waa.field_b = jaa.decodeText((byte) 115, var2);
+                  waa.field_b = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1left", (byte) 122);
                 if (null != var2) {
@@ -495,1639 +495,1639 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("oneplayer_timed", (byte) 113);
                 if (var2 != null) {
-                  StandingsPhase.field_s = jaa.decodeText((byte) 70, var2);
+                  StandingsPhase.field_s = BitPackedColour.decodeText((byte) 70, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("oneplayer_puzzle", (byte) 114);
                 if (null != var2) {
-                  FuseBehaviour.field_t = jaa.decodeText((byte) 121, var2);
+                  FuseBehaviour.field_t = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("startroom_colon", (byte) 109);
                 if (var2 != null) {
-                  PrimMazeGenerator.field_b = jaa.decodeText((byte) 122, var2);
+                  PrimMazeGenerator.field_b = BitPackedColour.decodeText((byte) 122, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("difficulty_colon", (byte) 114);
                 if (null != var2) {
-                  MovementHintPanel.field_d = jaa.decodeText((byte) 85, var2);
+                  MovementHintPanel.field_d = BitPackedColour.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bloom", (byte) 110);
                 if (var2 != null) {
-                  SweeperMountComponent.field_F = jaa.decodeText((byte) 51, var2);
+                  SweeperMountComponent.field_F = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("textures", (byte) 123);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 101, var2);
+                  BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pointLights", (byte) 120);
                 if (var2 != null) {
-                  MidiPatchEnvelope.field_a = jaa.decodeText((byte) 95, var2);
+                  MidiPatchEnvelope.field_a = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("wallShadows", (byte) 111);
                 if (var2 != null) {
-                  IntPoint.field_b = jaa.decodeText((byte) 76, var2);
+                  IntPoint.field_b = BitPackedColour.decodeText((byte) 76, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("textures_all", (byte) 104);
                 if (null != var2) {
-                  jaa.decodeText((byte) 46, var2);
+                  BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("textures_some", (byte) 118);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 51, var2);
+                  BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("textures_none", (byte) 108);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 108, var2);
+                  BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_title", (byte) 119);
                 if (var2 != null) {
-                  tea.field_a = jaa.decodeText((byte) 25, var2);
+                  tea.field_a = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_firetocontinue", (byte) 100);
                 if (var2 != null) {
-                  ColouriseOperator.field_n = jaa.decodeText((byte) 127, var2);
+                  ColouriseOperator.field_n = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_room0", (byte) 116);
                 if (var2 != null) {
-                  ColourRowCache.field_j = jaa.decodeText((byte) 90, var2);
+                  ColourRowCache.field_j = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_death", (byte) 106);
                 if (var2 != null) {
-                  tha.field_A = jaa.decodeText((byte) 62, var2);
+                  tha.field_A = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_treasure", (byte) 123);
                 if (var2 != null) {
-                  RenderScene.field_b = jaa.decodeText((byte) 90, var2);
+                  RenderScene.field_b = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_treasureslow", (byte) 117);
                 if (null != var2) {
-                  PlayerContextMenu.field_a = jaa.decodeText((byte) 41, var2);
+                  PlayerContextMenu.field_a = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_key", (byte) 102);
                 if (var2 != null) {
-                  S2CPlayerSyncPacket.field_f = jaa.decodeText((byte) 65, var2);
+                  S2CPlayerSyncPacket.field_f = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_pushable", (byte) 114);
                 if (var2 != null) {
-                  WhirlpoolDigest.field_c = jaa.decodeText((byte) 99, var2);
+                  WhirlpoolDigest.field_c = BitPackedColour.decodeText((byte) 99, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_snakes", (byte) 113);
                 if (var2 != null) {
-                  GasTrapComponent.field_F = jaa.decodeText((byte) 62, var2);
+                  GasTrapComponent.field_F = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_gun", (byte) 117);
                 if (var2 != null) {
-                  HardwareModelBillboardState.field_l = jaa.decodeText((byte) 80, var2);
+                  HardwareModelBillboardState.field_l = BitPackedColour.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_restart", (byte) 106);
                 if (null != var2) {
-                  CharacterChoice.field_a = jaa.decodeText((byte) 67, var2);
+                  CharacterChoice.field_a = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCoins", (byte) 112);
                 if (var2 != null) {
-                  ct.field_c = jaa.decodeText((byte) 83, var2);
+                  ct.field_c = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCoins", (byte) 123);
                 if (null != var2) {
-                  AnimationSequence.field_k = jaa.decodeText((byte) 119, var2);
+                  AnimationSequence.field_k = BitPackedColour.decodeText((byte) 119, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBagsOLoot", (byte) 109);
                 if (var2 != null) {
-                  HardwareTurbulentWaterNoise.field_o = jaa.decodeText((byte) 104, var2);
+                  HardwareTurbulentWaterNoise.field_o = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextBagsOLoot", (byte) 103);
                 if (var2 != null) {
-                  BitPacketBuffer.field_m = jaa.decodeText((byte) 39, var2);
+                  BitPacketBuffer.field_m = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleIcons", (byte) 114);
                 if (null != var2) {
-                  MouseWheelFactory.field_c = jaa.decodeText((byte) 50, var2);
+                  MouseWheelFactory.field_c = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextIcons", (byte) 105);
                 if (var2 != null) {
-                  VertexStreamLayout.field_e = jaa.decodeText((byte) 84, var2);
+                  VertexStreamLayout.field_e = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBottomlessPits", (byte) 127);
                 if (var2 != null) {
-                  GraphicsQuality.field_b = jaa.decodeText((byte) 51, var2);
+                  GraphicsQuality.field_b = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextBottomlessPits", (byte) 109);
                 if (null != var2) {
-                  BottomlessPitHintText.text = jaa.decodeText((byte) 61, var2);
+                  BottomlessPitHintText.text = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleSnakePits", (byte) 119);
                 if (null != var2) {
-                  baa.field_a = jaa.decodeText((byte) 93, var2);
+                  baa.field_a = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSnakePits", (byte) 111);
                 if (null != var2) {
-                  du.field_f = jaa.decodeText((byte) 88, var2);
+                  du.field_f = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLagoonsOfLava", (byte) 119);
                 if (null != var2) {
-                  AnimationSequence.field_a = jaa.decodeText((byte) 82, var2);
+                  AnimationSequence.field_a = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLagoonsOfLava", (byte) 101);
                 if (null != var2) {
-                  vua.field_C = jaa.decodeText((byte) 36, var2);
+                  vua.field_C = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrushers", (byte) 114);
                 if (var2 != null) {
-                  qba.field_d = jaa.decodeText((byte) 82, var2);
+                  qba.field_d = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCrushers", (byte) 116);
                 if (var2 != null) {
-                  IntPoint.field_c = jaa.decodeText((byte) 99, var2);
+                  IntPoint.field_c = BitPackedColour.decodeText((byte) 99, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLindemannTotems", (byte) 117);
                 if (null != var2) {
-                  QuickChatMenu.field_Ab = jaa.decodeText((byte) 25, var2);
+                  QuickChatMenu.field_Ab = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLindemannTotems", (byte) 123);
                 if (var2 != null) {
-                  InvertOperator.field_o = jaa.decodeText((byte) 29, var2);
+                  InvertOperator.field_o = BitPackedColour.decodeText((byte) 29, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMobileLindemannTotems", (byte) 102);
                 if (var2 != null) {
-                  AccountCreationDialog.field_hb = jaa.decodeText((byte) 122, var2);
+                  AccountCreationDialog.field_hb = BitPackedColour.decodeText((byte) 122, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMobileLindemannTotems", (byte) 120);
                 if (var2 != null) {
-                  CourseLayoutFactory.field_a = jaa.decodeText((byte) 27, var2);
+                  CourseLayoutFactory.field_a = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBobbyGeorgeTotems", (byte) 114);
                 if (var2 != null) {
-                  Player.field_s = jaa.decodeText((byte) 59, var2);
+                  Player.field_s = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextBobbyGeorgeTotems", (byte) 103);
                 if (null != var2) {
-                  SwitchLinkList.field_d = jaa.decodeText((byte) 102, var2);
+                  SwitchLinkList.field_d = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMirrors", (byte) 116);
                 if (null != var2) {
-                  LegacyOpenGlBloomEffect.field_u = jaa.decodeText((byte) 98, var2);
+                  LegacyOpenGlBloomEffect.field_u = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMirrors", (byte) 127);
                 if (null != var2) {
-                  ThresholdOperator.field_o = jaa.decodeText((byte) 89, var2);
+                  ThresholdOperator.field_o = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMobileMirrors", (byte) 126);
                 if (var2 != null) {
-                  OpenGlTexture3D.field_m = jaa.decodeText((byte) 63, var2);
+                  OpenGlTexture3D.field_m = BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMobileMirrors", (byte) 119);
                 if (var2 != null) {
-                  StaticCrusherComponent.field_G = jaa.decodeText((byte) 28, var2);
+                  StaticCrusherComponent.field_G = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePrecariousPlatforms", (byte) 127);
                 if (null != var2) {
-                  RewardChoiceSlot.field_b = jaa.decodeText((byte) 114, var2);
+                  RewardChoiceSlot.field_b = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPrecariousPlatforms", (byte) 120);
                 if (null != var2) {
-                  FadingDialog.field_y = jaa.decodeText((byte) 82, var2);
+                  FadingDialog.field_y = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrumblyBlocks", (byte) 103);
                 if (null != var2) {
-                  DialogButtonPainter.field_u = jaa.decodeText((byte) 108, var2);
+                  DialogButtonPainter.field_u = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCrumblyBlocks", (byte) 108);
                 if (null != var2) {
-                  MazeComponent.field_G = jaa.decodeText((byte) 78, var2);
+                  MazeComponent.field_G = BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCauldronsOfGreenSoup", (byte) 115);
                 if (var2 != null) {
-                  LegacyOpenGlCubeTexture.field_n = jaa.decodeText((byte) 25, var2);
+                  LegacyOpenGlCubeTexture.field_n = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCauldronsOfGreenSoup", (byte) 112);
                 if (var2 != null) {
-                  ClientException.field_e = jaa.decodeText((byte) 43, var2);
+                  ClientException.field_e = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleSkeletons", (byte) 113);
                 if (null != var2) {
-                  DialogButtonPainter.field_n = jaa.decodeText((byte) 92, var2);
+                  DialogButtonPainter.field_n = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSkeletons", (byte) 101);
                 if (var2 != null) {
-                  qna.field_a = jaa.decodeText((byte) 27, var2);
+                  qna.field_a = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLocksAndKeys", (byte) 101);
                 if (null != var2) {
-                  ConstrainToCircleLocomotor.field_v = jaa.decodeText((byte) 83, var2);
+                  ConstrainToCircleLocomotor.field_v = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLocksAndKeys", (byte) 120);
                 if (var2 != null) {
-                  apa.field_b = jaa.decodeText((byte) 62, var2);
+                  apa.field_b = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePortals", (byte) 125);
                 if (var2 != null) {
-                  PowerUpItemBehaviour.field_s = jaa.decodeText((byte) 36, var2);
+                  PowerUpItemBehaviour.field_s = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPortals", (byte) 107);
                 if (var2 != null) {
-                  MidiPatchEnvelope.field_e = jaa.decodeText((byte) 75, var2);
+                  MidiPatchEnvelope.field_e = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLasers", (byte) 121);
                 if (var2 != null) {
-                  TouchSwitchBehaviour.field_q = jaa.decodeText((byte) 90, var2);
+                  TouchSwitchBehaviour.field_q = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLasers", (byte) 122);
                 if (var2 != null) {
-                  ProceduralTexture.field_n = jaa.decodeText((byte) 91, var2);
+                  ProceduralTexture.field_n = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMovingPlatforms", (byte) 106);
                 if (var2 != null) {
-                  RopeBridgeComponent.field_G = jaa.decodeText((byte) 114, var2);
+                  RopeBridgeComponent.field_G = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMovingPlatforms", (byte) 102);
                 if (var2 != null) {
-                  QuickChatPhraseSource.field_d = jaa.decodeText((byte) 107, var2);
+                  QuickChatPhraseSource.field_d = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePressurePads", (byte) 101);
                 if (var2 != null) {
-                  ConstrainToCircleLocomotor.field_t = jaa.decodeText((byte) 84, var2);
+                  ConstrainToCircleLocomotor.field_t = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPressurePads", (byte) 113);
                 if (null != var2) {
-                  DisplaySettingsDialog.field_R = jaa.decodeText((byte) 54, var2);
+                  DisplaySettingsDialog.field_R = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleRollingJonesboulders", (byte) 115);
                 if (var2 != null) {
-                  kd.field_z = jaa.decodeText((byte) 57, var2);
+                  kd.field_z = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextRollingJonesboulders", (byte) 127);
                 if (null != var2) {
-                  ViewportManager.field_a = jaa.decodeText((byte) 118, var2);
+                  ViewportManager.field_a = BitPackedColour.decodeText((byte) 118, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleDiscOfDeathVendingMachines", (byte) 123);
                 if (null != var2) {
-                  nea.field_b = jaa.decodeText((byte) 124, var2);
+                  nea.field_b = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextDiscOfDeathVendingMachines", (byte) 116);
                 if (var2 != null) {
-                  MenuScreen.field_h = jaa.decodeText((byte) 96, var2);
+                  MenuScreen.field_h = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePerpetuallySpinningDiscs", (byte) 111);
                 if (var2 != null) {
-                  gga.field_L = jaa.decodeText((byte) 36, var2);
+                  gga.field_L = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPerpetuallySpinningDiscs", (byte) 120);
                 if (var2 != null) {
-                  PrefabComponent.field_D = jaa.decodeText((byte) 40, var2);
+                  PrefabComponent.field_D = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleWhiteLightBeams", (byte) 123);
                 if (var2 != null) {
-                  MatchScoringObserver.field_d = jaa.decodeText((byte) 33, var2);
+                  MatchScoringObserver.field_d = BitPackedColour.decodeText((byte) 33, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextWhiteLightBeams", (byte) 111);
                 if (var2 != null) {
-                  ld.field_d = jaa.decodeText((byte) 37, var2);
+                  ld.field_d = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleWanderingWalls", (byte) 103);
                 if (var2 != null) {
-                  PitModel.field_r = jaa.decodeText((byte) 106, var2);
+                  PitModel.field_r = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextWanderingWalls", (byte) 117);
                 if (var2 != null) {
-                  du.field_b = jaa.decodeText((byte) 28, var2);
+                  du.field_b = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMazes", (byte) 118);
                 if (null != var2) {
-                  GridWidgetContainer.field_H = jaa.decodeText((byte) 66, var2);
+                  GridWidgetContainer.field_H = BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMazes", (byte) 105);
                 if (var2 != null) {
-                  LargeByteArrayPoolStorage.field_b = jaa.decodeText((byte) 31, var2);
+                  LargeByteArrayPoolStorage.field_b = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMoveableBlocks", (byte) 127);
                 if (null != var2) {
-                  TripBeamComponent.field_J = jaa.decodeText((byte) 42, var2);
+                  TripBeamComponent.field_J = BitPackedColour.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMoveableBlocks", (byte) 123);
                 if (var2 != null) {
-                  TreasureValuesOverlay.field_k = jaa.decodeText((byte) 113, var2);
+                  TreasureValuesOverlay.field_k = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePistols", (byte) 104);
                 if (var2 != null) {
-                  VortexBehaviour.field_o = jaa.decodeText((byte) 98, var2);
+                  VortexBehaviour.field_o = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPistols", (byte) 119);
                 if (var2 != null) {
-                  SoftwareTransform3D.field_k = jaa.decodeText((byte) 104, var2);
+                  SoftwareTransform3D.field_k = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title1", (byte) 117);
                 if (var2 != null) {
-                  ConsoleMethod.field_m = jaa.decodeText((byte) 39, var2);
+                  ConsoleMethod.field_m = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title2", (byte) 116);
                 if (var2 != null) {
-                  fr.field_a = jaa.decodeText((byte) 101, var2);
+                  fr.field_a = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Title3", (byte) 127);
                 if (var2 != null) {
-                  qfa.field_a = jaa.decodeText((byte) 51, var2);
+                  qfa.field_a = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text1", (byte) 108);
                 if (var2 != null) {
-                  CharacterSelection.field_f = jaa.decodeText((byte) 31, var2);
+                  CharacterSelection.field_f = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text2", (byte) 125);
                 if (var2 != null) {
-                  LegacySwitchModel.field_o = jaa.decodeText((byte) 93, var2);
+                  LegacySwitchModel.field_o = BitPackedColour.decodeText((byte) 93, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text3", (byte) 113);
                 if (var2 != null) {
-                  AccountRegistrationPanel.field_H = jaa.decodeText((byte) 36, var2);
+                  AccountRegistrationPanel.field_H = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text4", (byte) 126);
                 if (var2 != null) {
-                  PushableBlockMazeComponent.field_K = jaa.decodeText((byte) 97, var2);
+                  PushableBlockMazeComponent.field_K = BitPackedColour.decodeText((byte) 97, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text5", (byte) 123);
                 if (null != var2) {
-                  SmootherStepTable.field_c = jaa.decodeText((byte) 90, var2);
+                  SmootherStepTable.field_c = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text6", (byte) 116);
                 if (var2 != null) {
-                  LegacyTextureCache.field_c = jaa.decodeText((byte) 100, var2);
+                  LegacyTextureCache.field_c = BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,0", (byte) 100);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[0] = jaa.decodeText((byte) 72, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[0] = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,1", (byte) 107);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[1] = jaa.decodeText((byte) 50, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[1] = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,2", (byte) 125);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[2] = jaa.decodeText((byte) 106, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[2] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,3", (byte) 105);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[3] = jaa.decodeText((byte) 92, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[3] = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,4", (byte) 110);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[4] = jaa.decodeText((byte) 46, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[4] = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,5", (byte) 101);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[5] = jaa.decodeText((byte) 101, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[5] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,6", (byte) 124);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[6] = jaa.decodeText((byte) 81, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[6] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,7", (byte) 126);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[7] = jaa.decodeText((byte) 27, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[7] = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,8", (byte) 125);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[8] = jaa.decodeText((byte) 59, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[8] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,9", (byte) 111);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[9] = jaa.decodeText((byte) 60, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[9] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,10", (byte) 104);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[10] = jaa.decodeText((byte) 93, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[10] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,11", (byte) 120);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[11] = jaa.decodeText((byte) 84, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[11] = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,12", (byte) 119);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[12] = jaa.decodeText((byte) 93, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[12] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,13", (byte) 127);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[13] = jaa.decodeText((byte) 28, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[13] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,14", (byte) 106);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[14] = jaa.decodeText((byte) 75, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[14] = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,15", (byte) 127);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[15] = jaa.decodeText((byte) 39, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[15] = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,16", (byte) 121);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[16] = jaa.decodeText((byte) 65, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[16] = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,17", (byte) 120);
                 if (var2 != null) {
-                  RewardChoiceSlot.loadingQuipsAlternate[17] = jaa.decodeText((byte) 114, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[17] = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,18", (byte) 124);
                 if (null != var2) {
-                  RewardChoiceSlot.loadingQuipsAlternate[18] = jaa.decodeText((byte) 67, var2);
+                  RewardChoiceSlot.loadingQuipsAlternate[18] = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,0", (byte) 108);
                 if (var2 != null) {
-                  Player.loadingQuips[0] = jaa.decodeText((byte) 69, var2);
+                  Player.loadingQuips[0] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,1", (byte) 117);
                 if (null != var2) {
-                  Player.loadingQuips[1] = jaa.decodeText((byte) 94, var2);
+                  Player.loadingQuips[1] = BitPackedColour.decodeText((byte) 94, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,2", (byte) 124);
                 if (null != var2) {
-                  Player.loadingQuips[2] = jaa.decodeText((byte) 117, var2);
+                  Player.loadingQuips[2] = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,3", (byte) 107);
                 if (var2 != null) {
-                  Player.loadingQuips[3] = jaa.decodeText((byte) 118, var2);
+                  Player.loadingQuips[3] = BitPackedColour.decodeText((byte) 118, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,4", (byte) 114);
                 if (var2 != null) {
-                  Player.loadingQuips[4] = jaa.decodeText((byte) 40, var2);
+                  Player.loadingQuips[4] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,5", (byte) 117);
                 if (var2 != null) {
-                  Player.loadingQuips[5] = jaa.decodeText((byte) 53, var2);
+                  Player.loadingQuips[5] = BitPackedColour.decodeText((byte) 53, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,6", (byte) 107);
                 if (var2 != null) {
-                  Player.loadingQuips[6] = jaa.decodeText((byte) 87, var2);
+                  Player.loadingQuips[6] = BitPackedColour.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,7", (byte) 105);
                 if (var2 != null) {
-                  Player.loadingQuips[7] = jaa.decodeText((byte) 127, var2);
+                  Player.loadingQuips[7] = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,8", (byte) 112);
                 if (var2 != null) {
-                  Player.loadingQuips[8] = jaa.decodeText((byte) 101, var2);
+                  Player.loadingQuips[8] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,9", (byte) 110);
                 if (null != var2) {
-                  Player.loadingQuips[9] = jaa.decodeText((byte) 55, var2);
+                  Player.loadingQuips[9] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,10", (byte) 126);
                 if (null != var2) {
-                  Player.loadingQuips[10] = jaa.decodeText((byte) 96, var2);
+                  Player.loadingQuips[10] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,11", (byte) 103);
                 if (var2 != null) {
-                  Player.loadingQuips[11] = jaa.decodeText((byte) 100, var2);
+                  Player.loadingQuips[11] = BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,12", (byte) 122);
                 if (null != var2) {
-                  Player.loadingQuips[12] = jaa.decodeText((byte) 116, var2);
+                  Player.loadingQuips[12] = BitPackedColour.decodeText((byte) 116, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,13", (byte) 110);
                 if (var2 != null) {
-                  Player.loadingQuips[13] = jaa.decodeText((byte) 40, var2);
+                  Player.loadingQuips[13] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,14", (byte) 100);
                 if (var2 != null) {
-                  Player.loadingQuips[14] = jaa.decodeText((byte) 57, var2);
+                  Player.loadingQuips[14] = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,15", (byte) 104);
                 if (var2 != null) {
-                  Player.loadingQuips[15] = jaa.decodeText((byte) 84, var2);
+                  Player.loadingQuips[15] = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,16", (byte) 107);
                 if (var2 != null) {
-                  Player.loadingQuips[16] = jaa.decodeText((byte) 57, var2);
+                  Player.loadingQuips[16] = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,17", (byte) 102);
                 if (null != var2) {
-                  Player.loadingQuips[17] = jaa.decodeText((byte) 82, var2);
+                  Player.loadingQuips[17] = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waitingStrings,18", (byte) 117);
                 if (var2 != null) {
-                  Player.loadingQuips[18] = jaa.decodeText((byte) 91, var2);
+                  Player.loadingQuips[18] = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,0", (byte) 108);
                 if (null != var2) {
-                  DateValidationSource.loadingQuipsShort[0] = jaa.decodeText((byte) 28, var2);
+                  DateValidationSource.loadingQuipsShort[0] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,1", (byte) 109);
                 if (null != var2) {
-                  DateValidationSource.loadingQuipsShort[1] = jaa.decodeText((byte) 44, var2);
+                  DateValidationSource.loadingQuipsShort[1] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,2", (byte) 112);
                 if (null != var2) {
-                  DateValidationSource.loadingQuipsShort[2] = jaa.decodeText((byte) 81, var2);
+                  DateValidationSource.loadingQuipsShort[2] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,3", (byte) 126);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[3] = jaa.decodeText((byte) 67, var2);
+                  DateValidationSource.loadingQuipsShort[3] = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,4", (byte) 118);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[4] = jaa.decodeText((byte) 26, var2);
+                  DateValidationSource.loadingQuipsShort[4] = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,5", (byte) 101);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[5] = jaa.decodeText((byte) 84, var2);
+                  DateValidationSource.loadingQuipsShort[5] = BitPackedColour.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,6", (byte) 123);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[6] = jaa.decodeText((byte) 49, var2);
+                  DateValidationSource.loadingQuipsShort[6] = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,7", (byte) 127);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[7] = jaa.decodeText((byte) 42, var2);
+                  DateValidationSource.loadingQuipsShort[7] = BitPackedColour.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,8", (byte) 107);
                 if (null != var2) {
-                  DateValidationSource.loadingQuipsShort[8] = jaa.decodeText((byte) 106, var2);
+                  DateValidationSource.loadingQuipsShort[8] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,9", (byte) 115);
                 if (var2 != null) {
-                  DateValidationSource.loadingQuipsShort[9] = jaa.decodeText((byte) 46, var2);
+                  DateValidationSource.loadingQuipsShort[9] = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,10", (byte) 118);
                 if (null != var2) {
-                  DateValidationSource.loadingQuipsShort[10] = jaa.decodeText((byte) 105, var2);
+                  DateValidationSource.loadingQuipsShort[10] = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("error", (byte) 113);
                 if (var2 != null) {
-                  ValidatedTextInputWidget.field_L = jaa.decodeText((byte) 73, var2);
+                  ValidatedTextInputWidget.field_L = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pleaselogin", (byte) 105);
                 if (null != var2) {
-                  ClampOperator.field_o = jaa.decodeText((byte) 79, var2);
+                  ClampOperator.field_o = BitPackedColour.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_drag", (byte) 115);
                 if (null != var2) {
-                  MazeSearchNode.field_k = jaa.decodeText((byte) 26, var2);
+                  MazeSearchNode.field_k = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_drop", (byte) 112);
                 if (null != var2) {
-                  hda.field_h = jaa.decodeText((byte) 52, var2);
+                  hda.field_h = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_sneak", (byte) 112);
                 if (null != var2) {
-                  aca.field_g = jaa.decodeText((byte) 65, var2);
+                  aca.field_g = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_fire", (byte) 108);
                 if (null != var2) {
-                  HiscoreTable.field_l = jaa.decodeText((byte) 66, var2);
+                  HiscoreTable.field_l = BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("item_keys", (byte) 107);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 78, var2);
+                  BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("item_coins", (byte) 107);
                 if (null != var2) {
-                  DoorwayModel.field_m = jaa.decodeText((byte) 91, var2);
+                  DoorwayModel.field_m = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("item_bags", (byte) 121);
                 if (var2 != null) {
-                  CircleMovementLocomotor.field_s = jaa.decodeText((byte) 49, var2);
+                  CircleMovementLocomotor.field_s = BitPackedColour.decodeText((byte) 49, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("item_idols", (byte) 100);
                 if (var2 != null) {
-                  BevelOperator.field_o = jaa.decodeText((byte) 96, var2);
+                  BevelOperator.field_o = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_dartgun", (byte) 103);
                 if (null != var2) {
-                  DraggableWidget.field_B = jaa.decodeText((byte) 83, var2);
+                  DraggableWidget.field_B = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_machinegun", (byte) 104);
                 if (var2 != null) {
-                  tha.field_y = jaa.decodeText((byte) 95, var2);
+                  tha.field_y = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_shotgun", (byte) 125);
                 if (var2 != null) {
-                  ChatMessage.field_a = jaa.decodeText((byte) 62, var2);
+                  ChatMessage.field_a = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flaregun", (byte) 117);
                 if (null != var2) {
-                  ConsoleValue.field_b = jaa.decodeText((byte) 70, var2);
+                  ConsoleValue.field_b = BitPackedColour.decodeText((byte) 70, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flamer", (byte) 119);
                 if (var2 != null) {
-                  HardwareReflectionEffect.field_d = jaa.decodeText((byte) 103, var2);
+                  HardwareReflectionEffect.field_d = BitPackedColour.decodeText((byte) 103, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flamershort", (byte) 101);
                 if (var2 != null) {
-                  TrackingCrusherComponent.field_H = jaa.decodeText((byte) 61, var2);
+                  TrackingCrusherComponent.field_H = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flamerblue", (byte) 113);
                 if (var2 != null) {
-                  ContextMenuRow.field_ub = jaa.decodeText((byte) 96, var2);
+                  ContextMenuRow.field_ub = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_waterspray", (byte) 101);
                 if (null != var2) {
-                  SoftwareRenderTarget.field_f = jaa.decodeText((byte) 96, var2);
+                  SoftwareRenderTarget.field_f = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_bladelauncher", (byte) 116);
                 if (null != var2) {
-                  MonsterModel.field_A = jaa.decodeText((byte) 47, var2);
+                  MonsterModel.field_A = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_fireball", (byte) 112);
                 if (var2 != null) {
-                  HardwareModelVertexStream.field_d = jaa.decodeText((byte) 72, var2);
+                  HardwareModelVertexStream.field_d = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_bouncingfireball", (byte) 124);
                 if (var2 != null) {
-                  ItemModel.field_q = jaa.decodeText((byte) 106, var2);
+                  ItemModel.field_q = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_freezer", (byte) 114);
                 if (null != var2) {
-                  TextureCombineSource.field_b = jaa.decodeText((byte) 89, var2);
+                  TextureCombineSource.field_b = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_revolver", (byte) 127);
                 if (var2 != null) {
-                  S2CPlayerSyncPacket.field_e = jaa.decodeText((byte) 37, var2);
+                  S2CPlayerSyncPacket.field_e = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_1st", (byte) 113);
                 if (var2 != null) {
-                  ArchiveManager.field_d = jaa.decodeText((byte) 39, var2);
+                  ArchiveManager.field_d = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_2nd", (byte) 101);
                 if (var2 != null) {
-                  S2CNewRoomPacket.field_g = jaa.decodeText((byte) 45, var2);
+                  S2CNewRoomPacket.field_g = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_3rd", (byte) 118);
                 if (var2 != null) {
-                  WhirlpoolDigest.field_b = jaa.decodeText((byte) 58, var2);
+                  WhirlpoolDigest.field_b = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_4th", (byte) 105);
                 if (null != var2) {
-                  tda.field_b = jaa.decodeText((byte) 59, var2);
+                  tda.field_b = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_resigned", (byte) 116);
                 if (null != var2) {
-                  IntArrayRequest.field_j = jaa.decodeText((byte) 46, var2);
+                  IntArrayRequest.field_j = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_completed", (byte) 117);
                 if (var2 != null) {
-                  CharacterChoiceTile.field_i = jaa.decodeText((byte) 91, var2);
+                  CharacterChoiceTile.field_i = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_dnf", (byte) 117);
                 if (var2 != null) {
-                  re.field_b = jaa.decodeText((byte) 25, var2);
+                  re.field_b = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("resigned", (byte) 106);
                 if (null != var2) {
-                  SinglePlayerCourseGenerator.field_i = jaa.decodeText((byte) 102, var2);
+                  SinglePlayerCourseGenerator.field_i = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("won_x_rounds", (byte) 112);
                 if (var2 != null) {
-                  WallCrusherComponent.field_K = jaa.decodeText((byte) 119, var2);
+                  WallCrusherComponent.field_K = BitPackedColour.decodeText((byte) 119, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("offering_rematch", (byte) 105);
                 if (null != var2) {
-                  SoundEventPlayer.field_d = jaa.decodeText((byte) 33, var2);
+                  SoundEventPlayer.field_d = BitPackedColour.decodeText((byte) 33, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("rank", (byte) 122);
                 if (var2 != null) {
-                  OpenGlBuffer.field_a = jaa.decodeText((byte) 65, var2);
+                  OpenGlBuffer.field_a = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("fivehunderedplus", (byte) 118);
                 if (null != var2) {
-                  TextLineLayout.field_a = jaa.decodeText((byte) 105, var2);
+                  TextLineLayout.field_a = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsmode", (byte) 101);
                 if (null != var2) {
-                  dna.field_I = jaa.decodeText((byte) 45, var2);
+                  dna.field_I = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsquality", (byte) 110);
                 if (var2 != null) {
-                  bc.field_a = jaa.decodeText((byte) 46, var2);
+                  bc.field_a = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmoveshift", (byte) 110);
                 if (var2 != null) {
-                  TermsLinksPanel.field_A = jaa.decodeText((byte) 103, var2);
+                  TermsLinksPanel.field_A = BitPackedColour.decodeText((byte) 103, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmovegood", (byte) 119);
                 if (var2 != null) {
-                  ConsoleHistoryEntry.field_f = jaa.decodeText((byte) 32, var2);
+                  ConsoleHistoryEntry.field_f = BitPackedColour.decodeText((byte) 32, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmovemove", (byte) 127);
                 if (null != var2) {
-                  NetworkArchiveRequest.field_p = jaa.decodeText((byte) 102, var2);
+                  NetworkArchiveRequest.field_p = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_X_of_Y", (byte) 116);
                 if (null != var2) {
-                  TimingPattern.field_k = jaa.decodeText((byte) 71, var2);
+                  TimingPattern.field_k = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("completed", (byte) 104);
                 if (var2 != null) {
-                  CompletedStatusText.text = jaa.decodeText((byte) 50, var2);
+                  CompletedStatusText.text = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("failed", (byte) 108);
                 if (var2 != null) {
-                  ArrowShooterComponent.field_K = jaa.decodeText((byte) 43, var2);
+                  ArrowShooterComponent.field_K = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("out_of_time", (byte) 112);
                 if (null != var2) {
-                  SafeZoneBehaviour.field_n = jaa.decodeText((byte) 117, var2);
+                  SafeZoneBehaviour.field_n = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("finish_time_colon", (byte) 104);
                 if (var2 != null) {
-                  CourseMapPath.field_l = jaa.decodeText((byte) 107, var2);
+                  CourseMapPath.field_l = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_finished", (byte) 119);
                 if (null != var2) {
-                  ara.field_yb = jaa.decodeText((byte) 102, var2);
+                  ara.field_yb = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_failedtofinish", (byte) 107);
                 if (var2 != null) {
-                  DisplaySettingsDialog.field_Q = jaa.decodeText((byte) 115, var2);
+                  DisplaySettingsDialog.field_Q = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_timeup", (byte) 114);
                 if (var2 != null) {
-                  FloatTrigTables.field_a = jaa.decodeText((byte) 126, var2);
+                  FloatTrigTables.field_a = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_chosen_character", (byte) 117);
                 if (var2 != null) {
-                  SpriteSampleOperator.field_n = jaa.decodeText((byte) 112, var2);
+                  SpriteSampleOperator.field_n = BitPackedColour.decodeText((byte) 112, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_chosen_reward", (byte) 112);
                 if (null != var2) {
-                  RecursiveBacktrackerMazeGenerator.field_b = jaa.decodeText((byte) 109, var2);
+                  RecursiveBacktrackerMazeGenerator.field_b = BitPackedColour.decodeText((byte) 109, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_didnt_choose_reward", (byte) 125);
                 if (var2 != null) {
-                  OpenGlTransform3D.field_n = jaa.decodeText((byte) 43, var2);
+                  OpenGlTransform3D.field_n = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("roundover_winner", (byte) 123);
                 if (null != var2) {
-                  RoundWinnerText.text = jaa.decodeText((byte) 47, var2);
+                  RoundWinnerText.text = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameover", (byte) 106);
                 if (null != var2) {
-                  jaa.decodeText((byte) 89, var2);
+                  BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameover_aborted", (byte) 125);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 66, var2);
+                  BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameover_winner", (byte) 117);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 119, var2);
+                  BitPackedColour.decodeText((byte) 119, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameover_completed", (byte) 107);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 125, var2);
+                  BitPackedColour.decodeText((byte) 125, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_character", (byte) 110);
                 if (var2 != null) {
-                  gta.field_a = jaa.decodeText((byte) 107, var2);
+                  gta.field_a = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward", (byte) 106);
                 if (null != var2) {
-                  AvailabilityQuery.field_c = jaa.decodeText((byte) 102, var2);
+                  AvailabilityQuery.field_c = BitPackedColour.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward_timeleft", (byte) 124);
                 if (var2 != null) {
-                  OpenGlDisplayLists.field_h = jaa.decodeText((byte) 35, var2);
+                  OpenGlDisplayLists.field_h = BitPackedColour.decodeText((byte) 35, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for_others", (byte) 126);
                 if (var2 != null) {
-                  FormFieldRow.field_F = jaa.decodeText((byte) 67, var2);
+                  FormFieldRow.field_F = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for", (byte) 127);
                 if (var2 != null) {
-                  EllipseShapeDecoder.field_c = jaa.decodeText((byte) 28, var2);
+                  EllipseShapeDecoder.field_c = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("time_remaining", (byte) 100);
                 if (null != var2) {
-                  jaa.decodeText((byte) 44, var2);
+                  BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("finish_order", (byte) 112);
                 if (null != var2) {
-                  PowerUpItemBehaviour.field_v = jaa.decodeText((byte) 78, var2);
+                  PowerUpItemBehaviour.field_v = BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("spectator", (byte) 124);
                 if (null != var2) {
-                  PitTile.field_c = jaa.decodeText((byte) 78, var2);
+                  PitTile.field_c = BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("watching", (byte) 113);
                 if (null != var2) {
-                  CrossedSineBandsOperator.field_q = jaa.decodeText((byte) 71, var2);
+                  CrossedSineBandsOperator.field_q = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("round", (byte) 125);
                 if (var2 != null) {
-                  ConstrainToCircleLocomotor.field_z = jaa.decodeText((byte) 57, var2);
+                  ConstrainToCircleLocomotor.field_z = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("get_ready", (byte) 104);
                 if (var2 != null) {
-                  MouseInputHandler.field_b = jaa.decodeText((byte) 67, var2);
+                  MouseInputHandler.field_b = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gogogo", (byte) 106);
                 if (var2 != null) {
-                  FlameShooterComponent.field_J = jaa.decodeText((byte) 73, var2);
+                  FlameShooterComponent.field_J = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for_sync", (byte) 104);
                 if (var2 != null) {
-                  FloatTrigTables.field_d = jaa.decodeText((byte) 87, var2);
+                  FloatTrigTables.field_d = BitPackedColour.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("treasure_values", (byte) 102);
                 if (null != var2) {
-                  wj.field_b = jaa.decodeText((byte) 56, var2);
+                  wj.field_b = BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("treasure_total", (byte) 126);
                 if (null != var2) {
-                  PrimMazeGenerator.field_c = jaa.decodeText((byte) 42, var2);
+                  PrimMazeGenerator.field_c = BitPackedColour.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("points", (byte) 123);
                 if (null != var2) {
-                  SoftwareModelBillboardState.field_f = jaa.decodeText((byte) 93, var2);
+                  SoftwareModelBillboardState.field_f = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_points", (byte) 101);
                 if (var2 != null) {
-                  VariantMask.field_c = jaa.decodeText((byte) 43, var2);
+                  VariantMask.field_c = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_complete_points", (byte) 121);
                 if (null != var2) {
-                  BevelOperator.field_q = jaa.decodeText((byte) 107, var2);
+                  BevelOperator.field_q = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_complete_points_with_bonus", (byte) 121);
                 if (null != var2) {
-                  ArrowShooterComponent.field_J = jaa.decodeText((byte) 72, var2);
+                  ArrowShooterComponent.field_J = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("penalty_death", (byte) 125);
                 if (null != var2) {
-                  ConsoleWindow.field_n = jaa.decodeText((byte) 59, var2);
+                  ConsoleWindow.field_n = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("penalty_reset", (byte) 117);
                 if (null != var2) {
-                  rf.field_a = jaa.decodeText((byte) 92, var2);
+                  rf.field_a = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("final_score_colon", (byte) 107);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 66, var2);
+                  BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("powerdown_from", (byte) 103);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 100, var2);
+                  BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("powerdown_pending", (byte) 116);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 115, var2);
+                  BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_coin15", (byte) 120);
                 if (var2 != null) {
-                  SnakePitBehaviour.field_p = jaa.decodeText((byte) 92, var2);
+                  SnakePitBehaviour.field_p = BitPackedColour.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_coin10", (byte) 115);
                 if (var2 != null) {
-                  ContactListEntry.field_wb = jaa.decodeText((byte) 124, var2);
+                  ContactListEntry.field_wb = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_coin5", (byte) 108);
                 if (null != var2) {
-                  ValidatedTextInputWidget.field_J = jaa.decodeText((byte) 27, var2);
+                  ValidatedTextInputWidget.field_J = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_bag2", (byte) 103);
                 if (null != var2) {
-                  HardCacheEntry.field_p = jaa.decodeText((byte) 72, var2);
+                  HardCacheEntry.field_p = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_bagx2", (byte) 124);
                 if (null != var2) {
-                  sda.field_h = jaa.decodeText((byte) 115, var2);
+                  sda.field_h = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_idol1", (byte) 101);
                 if (var2 != null) {
-                  MatchStatistics.field_k = jaa.decodeText((byte) 123, var2);
+                  MatchStatistics.field_k = BitPackedColour.decodeText((byte) 123, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_idolx2", (byte) 105);
                 if (null != var2) {
-                  FleeLocomotor.field_x = jaa.decodeText((byte) 46, var2);
+                  FleeLocomotor.field_x = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none", (byte) 127);
                 if (null != var2) {
-                  jaa.decodeText((byte) 63, var2);
+                  BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_taken", (byte) 119);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 83, var2);
+                  BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_waiting", (byte) 116);
                 if (var2 != null) {
-                  RoomDefinition.field_i = jaa.decodeText((byte) 35, var2);
+                  RoomDefinition.field_i = BitPackedColour.decodeText((byte) 35, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_dnf", (byte) 123);
                 if (null != var2) {
-                  cs.field_b = jaa.decodeText((byte) 104, var2);
+                  cs.field_b = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_timeout", (byte) 121);
                 if (var2 != null) {
-                  cga.field_l = jaa.decodeText((byte) 67, var2);
+                  cga.field_l = BitPackedColour.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_none_choosing", (byte) 113);
                 if (var2 != null) {
-                  RoundWinnerPhase.field_o = jaa.decodeText((byte) 79, var2);
+                  RoundWinnerPhase.field_o = BitPackedColour.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unlock_character", (byte) 100);
                 if (var2 != null) {
-                  SocketArchiveNetworkClient.field_v = jaa.decodeText((byte) 86, var2);
+                  SocketArchiveNetworkClient.field_v = BitPackedColour.decodeText((byte) 86, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unlock_tier", (byte) 109);
                 if (var2 != null) {
-                  r.field_k = jaa.decodeText((byte) 94, var2);
+                  r.field_k = BitPackedColour.decodeText((byte) 94, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_ace", (byte) 124);
                 if (null != var2) {
-                  HardwareSprite.field_e = jaa.decodeText((byte) 126, var2);
+                  HardwareSprite.field_e = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_angelio", (byte) 103);
                 if (null != var2) {
-                  ValidationOutcome.field_a = jaa.decodeText((byte) 71, var2);
+                  ValidationOutcome.field_a = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_baroness", (byte) 109);
                 if (var2 != null) {
-                  PasswordInputPainter.field_p = jaa.decodeText((byte) 52, var2);
+                  PasswordInputPainter.field_p = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_borees", (byte) 125);
                 if (var2 != null) {
-                  DebouncedValidationSource.field_d = jaa.decodeText((byte) 45, var2);
+                  DebouncedValidationSource.field_d = BitPackedColour.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_bruce", (byte) 109);
                 if (var2 != null) {
-                  GameScreen.field_a = jaa.decodeText((byte) 62, var2);
+                  GameScreen.field_a = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_feng", (byte) 121);
                 if (null != var2) {
-                  IntrusiveNode.field_b = jaa.decodeText((byte) 90, var2);
+                  IntrusiveNode.field_b = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_hans", (byte) 126);
                 if (var2 != null) {
-                  FacePlayerLocomotor.field_q = jaa.decodeText((byte) 31, var2);
+                  FacePlayerLocomotor.field_q = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_henryj", (byte) 124);
                 if (null != var2) {
-                  ClipFrame.field_e = jaa.decodeText((byte) 126, var2);
+                  ClipFrame.field_e = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_jamille", (byte) 113);
                 if (var2 != null) {
-                  sda.field_k = jaa.decodeText((byte) 71, var2);
+                  sda.field_k = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_johnsson", (byte) 113);
                 if (null != var2) {
-                  rha.field_h = jaa.decodeText((byte) 34, var2);
+                  DelayedPacket.field_h = BitPackedColour.decodeText((byte) 34, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_piles", (byte) 119);
                 if (var2 != null) {
-                  LobbyPlayerEntry.field_Ib = jaa.decodeText((byte) 106, var2);
+                  LobbyPlayerEntry.field_Ib = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_scarlett", (byte) 117);
                 if (null != var2) {
-                  msa.field_b = jaa.decodeText((byte) 126, var2);
+                  msa.field_b = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_wilbur", (byte) 119);
                 if (null != var2) {
-                  QuickChatPhraseSource.field_e = jaa.decodeText((byte) 98, var2);
+                  QuickChatPhraseSource.field_e = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,0", (byte) 102);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[0] = jaa.decodeText((byte) 59, var2);
+                  kla.unknownDeathMessages[0] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,1", (byte) 104);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[1] = jaa.decodeText((byte) 116, var2);
+                  kla.unknownDeathMessages[1] = BitPackedColour.decodeText((byte) 116, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,2", (byte) 118);
                 if (var2 != null) {
-                  kla.unknownDeathMessages[2] = jaa.decodeText((byte) 121, var2);
+                  kla.unknownDeathMessages[2] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,0", (byte) 100);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[0] = jaa.decodeText((byte) 127, var2);
+                  BlockComponent.restartMessages[0] = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,1", (byte) 102);
                 if (null != var2) {
-                  BlockComponent.restartMessages[1] = jaa.decodeText((byte) 61, var2);
+                  BlockComponent.restartMessages[1] = BitPackedColour.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,2", (byte) 108);
                 if (null != var2) {
-                  BlockComponent.restartMessages[2] = jaa.decodeText((byte) 89, var2);
+                  BlockComponent.restartMessages[2] = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,3", (byte) 107);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[3] = jaa.decodeText((byte) 37, var2);
+                  BlockComponent.restartMessages[3] = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,4", (byte) 120);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[4] = jaa.decodeText((byte) 79, var2);
+                  BlockComponent.restartMessages[4] = BitPackedColour.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,5", (byte) 105);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[5] = jaa.decodeText((byte) 108, var2);
+                  BlockComponent.restartMessages[5] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,6", (byte) 110);
                 if (null != var2) {
-                  BlockComponent.restartMessages[6] = jaa.decodeText((byte) 90, var2);
+                  BlockComponent.restartMessages[6] = BitPackedColour.decodeText((byte) 90, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,7", (byte) 121);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[7] = jaa.decodeText((byte) 25, var2);
+                  BlockComponent.restartMessages[7] = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_reset,8", (byte) 123);
                 if (var2 != null) {
-                  BlockComponent.restartMessages[8] = jaa.decodeText((byte) 88, var2);
+                  BlockComponent.restartMessages[8] = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,0", (byte) 107);
                 if (null != var2) {
-                  MonsterRemains.crushDeathMessages[0] = jaa.decodeText((byte) 127, var2);
+                  MonsterRemains.crushDeathMessages[0] = BitPackedColour.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,1", (byte) 119);
                 if (var2 != null) {
-                  MonsterRemains.crushDeathMessages[1] = jaa.decodeText((byte) 121, var2);
+                  MonsterRemains.crushDeathMessages[1] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,2", (byte) 117);
                 if (null != var2) {
-                  MonsterRemains.crushDeathMessages[2] = jaa.decodeText((byte) 42, var2);
+                  MonsterRemains.crushDeathMessages[2] = BitPackedColour.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,3", (byte) 126);
                 if (var2 != null) {
-                  MonsterRemains.crushDeathMessages[3] = jaa.decodeText((byte) 32, var2);
+                  MonsterRemains.crushDeathMessages[3] = BitPackedColour.decodeText((byte) 32, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,4", (byte) 109);
                 if (null != var2) {
-                  MonsterRemains.crushDeathMessages[4] = jaa.decodeText((byte) 115, var2);
+                  MonsterRemains.crushDeathMessages[4] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,5", (byte) 118);
                 if (var2 != null) {
-                  MonsterRemains.crushDeathMessages[5] = jaa.decodeText((byte) 85, var2);
+                  MonsterRemains.crushDeathMessages[5] = BitPackedColour.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,6", (byte) 126);
                 if (var2 != null) {
-                  MonsterRemains.crushDeathMessages[6] = jaa.decodeText((byte) 100, var2);
+                  MonsterRemains.crushDeathMessages[6] = BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,7", (byte) 118);
                 if (var2 != null) {
-                  MonsterRemains.crushDeathMessages[7] = jaa.decodeText((byte) 27, var2);
+                  MonsterRemains.crushDeathMessages[7] = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,0", (byte) 125);
                 if (null != var2) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[0] = jaa.decodeText((byte) 98, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[0] = BitPackedColour.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,1", (byte) 103);
                 if (var2 != null) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[1] = jaa.decodeText((byte) 36, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[1] = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,2", (byte) 110);
                 if (var2 != null) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[2] = jaa.decodeText((byte) 87, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[2] = BitPackedColour.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,3", (byte) 117);
                 if (var2 != null) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[3] = jaa.decodeText((byte) 113, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[3] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,4", (byte) 102);
                 if (null != var2) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[4] = jaa.decodeText((byte) 120, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[4] = BitPackedColour.decodeText((byte) 120, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,5", (byte) 104);
                 if (var2 != null) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[5] = jaa.decodeText((byte) 99, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[5] = BitPackedColour.decodeText((byte) 99, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,6", (byte) 109);
                 if (null != var2) {
-                  TurbulenceNoise3D.fallingObjectDeathMessages[6] = jaa.decodeText((byte) 96, var2);
+                  TurbulenceNoise3D.fallingObjectDeathMessages[6] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,0", (byte) 121);
                 if (var2 != null) {
-                  tia.fallDeathMessages[0] = jaa.decodeText((byte) 113, var2);
+                  tia.fallDeathMessages[0] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,1", (byte) 101);
                 if (null != var2) {
-                  tia.fallDeathMessages[1] = jaa.decodeText((byte) 59, var2);
+                  tia.fallDeathMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,2", (byte) 103);
                 if (null != var2) {
-                  tia.fallDeathMessages[2] = jaa.decodeText((byte) 65, var2);
+                  tia.fallDeathMessages[2] = BitPackedColour.decodeText((byte) 65, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,3", (byte) 117);
                 if (null != var2) {
-                  tia.fallDeathMessages[3] = jaa.decodeText((byte) 101, var2);
+                  tia.fallDeathMessages[3] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,4", (byte) 122);
                 if (null != var2) {
-                  tia.fallDeathMessages[4] = jaa.decodeText((byte) 26, var2);
+                  tia.fallDeathMessages[4] = BitPackedColour.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,5", (byte) 122);
                 if (null != var2) {
-                  tia.fallDeathMessages[5] = jaa.decodeText((byte) 75, var2);
+                  tia.fallDeathMessages[5] = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,6", (byte) 118);
                 if (null != var2) {
-                  tia.fallDeathMessages[6] = jaa.decodeText((byte) 114, var2);
+                  tia.fallDeathMessages[6] = BitPackedColour.decodeText((byte) 114, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_fell,7", (byte) 112);
                 if (null != var2) {
-                  tia.fallDeathMessages[7] = jaa.decodeText((byte) 38, var2);
+                  tia.fallDeathMessages[7] = BitPackedColour.decodeText((byte) 38, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,0", (byte) 100);
                 if (var2 != null) {
-                  HazardEffect.lavaDeathMessages[0] = jaa.decodeText((byte) 51, var2);
+                  HazardEffect.lavaDeathMessages[0] = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,1", (byte) 124);
                 if (null != var2) {
-                  HazardEffect.lavaDeathMessages[1] = jaa.decodeText((byte) 81, var2);
+                  HazardEffect.lavaDeathMessages[1] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,2", (byte) 110);
                 if (null != var2) {
-                  HazardEffect.lavaDeathMessages[2] = jaa.decodeText((byte) 74, var2);
+                  HazardEffect.lavaDeathMessages[2] = BitPackedColour.decodeText((byte) 74, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,3", (byte) 121);
                 if (var2 != null) {
-                  HazardEffect.lavaDeathMessages[3] = jaa.decodeText((byte) 115, var2);
+                  HazardEffect.lavaDeathMessages[3] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,4", (byte) 123);
                 if (null != var2) {
-                  HazardEffect.lavaDeathMessages[4] = jaa.decodeText((byte) 51, var2);
+                  HazardEffect.lavaDeathMessages[4] = BitPackedColour.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,5", (byte) 113);
                 if (var2 != null) {
-                  HazardEffect.lavaDeathMessages[5] = jaa.decodeText((byte) 110, var2);
+                  HazardEffect.lavaDeathMessages[5] = BitPackedColour.decodeText((byte) 110, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,0", (byte) 101);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[0] = jaa.decodeText((byte) 109, var2);
+                  fpa.snakeDeathMessages[0] = BitPackedColour.decodeText((byte) 109, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,1", (byte) 116);
                 if (null != var2) {
-                  fpa.snakeDeathMessages[1] = jaa.decodeText((byte) 89, var2);
+                  fpa.snakeDeathMessages[1] = BitPackedColour.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,2", (byte) 101);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[2] = jaa.decodeText((byte) 30, var2);
+                  fpa.snakeDeathMessages[2] = BitPackedColour.decodeText((byte) 30, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,3", (byte) 111);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[3] = jaa.decodeText((byte) 121, var2);
+                  fpa.snakeDeathMessages[3] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,4", (byte) 107);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[4] = jaa.decodeText((byte) 93, var2);
+                  fpa.snakeDeathMessages[4] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,5", (byte) 126);
                 if (var2 != null) {
-                  fpa.snakeDeathMessages[5] = jaa.decodeText((byte) 126, var2);
+                  fpa.snakeDeathMessages[5] = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,6", (byte) 116);
                 if (null != var2) {
-                  fpa.snakeDeathMessages[6] = jaa.decodeText((byte) 31, var2);
+                  fpa.snakeDeathMessages[6] = BitPackedColour.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,0", (byte) 117);
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  HardwareModelBillboardState.skeletonDeathMessages[0] = jaa.decodeText((byte) 69, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[0] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,1", (byte) 101);
                 if (null != var2) {
-                  HardwareModelBillboardState.skeletonDeathMessages[1] = jaa.decodeText((byte) 113, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[1] = BitPackedColour.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,2", (byte) 106);
                 if (null != var2) {
-                  HardwareModelBillboardState.skeletonDeathMessages[2] = jaa.decodeText((byte) 79, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[2] = BitPackedColour.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,3", (byte) 109);
                 if (var2 != null) {
-                  HardwareModelBillboardState.skeletonDeathMessages[3] = jaa.decodeText((byte) 60, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[3] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,4", (byte) 107);
                 if (var2 != null) {
-                  HardwareModelBillboardState.skeletonDeathMessages[4] = jaa.decodeText((byte) 69, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[4] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,5", (byte) 121);
                 if (null != var2) {
-                  HardwareModelBillboardState.skeletonDeathMessages[5] = jaa.decodeText((byte) 120, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[5] = BitPackedColour.decodeText((byte) 120, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,6", (byte) 118);
                 if (null != var2) {
-                  HardwareModelBillboardState.skeletonDeathMessages[6] = jaa.decodeText((byte) 37, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[6] = BitPackedColour.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,7", (byte) 102);
                 if (var2 != null) {
-                  HardwareModelBillboardState.skeletonDeathMessages[7] = jaa.decodeText((byte) 87, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[7] = BitPackedColour.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,8", (byte) 113);
                 if (var2 != null) {
-                  HardwareModelBillboardState.skeletonDeathMessages[8] = jaa.decodeText((byte) 71, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[8] = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,0", (byte) 100);
                 if (null != var2) {
-                  vua.dartDeathMessages[0] = jaa.decodeText((byte) 54, var2);
+                  vua.dartDeathMessages[0] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,1", (byte) 102);
                 if (var2 != null) {
-                  vua.dartDeathMessages[1] = jaa.decodeText((byte) 124, var2);
+                  vua.dartDeathMessages[1] = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,2", (byte) 117);
                 if (var2 != null) {
-                  vua.dartDeathMessages[2] = jaa.decodeText((byte) 96, var2);
+                  vua.dartDeathMessages[2] = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,3", (byte) 112);
                 if (var2 != null) {
-                  vua.dartDeathMessages[3] = jaa.decodeText((byte) 100, var2);
+                  vua.dartDeathMessages[3] = BitPackedColour.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,4", (byte) 116);
                 if (var2 != null) {
-                  vua.dartDeathMessages[4] = jaa.decodeText((byte) 63, var2);
+                  vua.dartDeathMessages[4] = BitPackedColour.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,0", (byte) 127);
                 if (null != var2) {
-                  HardwareModelVertexStream.bladeDeathMessages[0] = jaa.decodeText((byte) 104, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[0] = BitPackedColour.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,1", (byte) 123);
                 if (var2 != null) {
-                  HardwareModelVertexStream.bladeDeathMessages[1] = jaa.decodeText((byte) 53, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[1] = BitPackedColour.decodeText((byte) 53, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,2", (byte) 110);
                 if (null != var2) {
-                  HardwareModelVertexStream.bladeDeathMessages[2] = jaa.decodeText((byte) 108, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[2] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,3", (byte) 126);
                 if (var2 != null) {
-                  HardwareModelVertexStream.bladeDeathMessages[3] = jaa.decodeText((byte) 54, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[3] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,4", (byte) 110);
                 if (null != var2) {
-                  HardwareModelVertexStream.bladeDeathMessages[4] = jaa.decodeText((byte) 117, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[4] = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,5", (byte) 114);
                 if (var2 != null) {
-                  HardwareModelVertexStream.bladeDeathMessages[5] = jaa.decodeText((byte) 120, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[5] = BitPackedColour.decodeText((byte) 120, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,0", (byte) 109);
                 if (var2 != null) {
-                  jr.gunshotDeathMessages[0] = jaa.decodeText((byte) 106, var2);
+                  jr.gunshotDeathMessages[0] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,1", (byte) 101);
                 if (var2 != null) {
-                  jr.gunshotDeathMessages[1] = jaa.decodeText((byte) 36, var2);
+                  jr.gunshotDeathMessages[1] = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,2", (byte) 107);
                 if (null != var2) {
-                  jr.gunshotDeathMessages[2] = jaa.decodeText((byte) 108, var2);
+                  jr.gunshotDeathMessages[2] = BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,3", (byte) 127);
                 if (null != var2) {
-                  jr.gunshotDeathMessages[3] = jaa.decodeText((byte) 74, var2);
+                  jr.gunshotDeathMessages[3] = BitPackedColour.decodeText((byte) 74, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,0", (byte) 112);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[0] = jaa.decodeText((byte) 55, var2);
+                  SwitchComponent.fireDeathMessages[0] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,1", (byte) 105);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[1] = jaa.decodeText((byte) 105, var2);
+                  SwitchComponent.fireDeathMessages[1] = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,2", (byte) 111);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[2] = jaa.decodeText((byte) 121, var2);
+                  SwitchComponent.fireDeathMessages[2] = BitPackedColour.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,3", (byte) 100);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[3] = jaa.decodeText((byte) 103, var2);
+                  SwitchComponent.fireDeathMessages[3] = BitPackedColour.decodeText((byte) 103, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,4", (byte) 101);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[4] = jaa.decodeText((byte) 78, var2);
+                  SwitchComponent.fireDeathMessages[4] = BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,5", (byte) 117);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[5] = jaa.decodeText((byte) 115, var2);
+                  SwitchComponent.fireDeathMessages[5] = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,6", (byte) 118);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[6] = jaa.decodeText((byte) 32, var2);
+                  SwitchComponent.fireDeathMessages[6] = BitPackedColour.decodeText((byte) 32, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,7", (byte) 119);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[7] = jaa.decodeText((byte) 107, var2);
+                  SwitchComponent.fireDeathMessages[7] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,8", (byte) 124);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[8] = jaa.decodeText((byte) 77, var2);
+                  SwitchComponent.fireDeathMessages[8] = BitPackedColour.decodeText((byte) 77, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,9", (byte) 109);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[9] = jaa.decodeText((byte) 72, var2);
+                  SwitchComponent.fireDeathMessages[9] = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,10", (byte) 125);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[10] = jaa.decodeText((byte) 40, var2);
+                  SwitchComponent.fireDeathMessages[10] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,11", (byte) 118);
                 if (var2 != null) {
-                  SwitchComponent.fireDeathMessages[11] = jaa.decodeText((byte) 93, var2);
+                  SwitchComponent.fireDeathMessages[11] = BitPackedColour.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,12", (byte) 123);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[12] = jaa.decodeText((byte) 110, var2);
+                  SwitchComponent.fireDeathMessages[12] = BitPackedColour.decodeText((byte) 110, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_flame,13", (byte) 105);
                 if (null != var2) {
-                  SwitchComponent.fireDeathMessages[13] = jaa.decodeText((byte) 50, var2);
+                  SwitchComponent.fireDeathMessages[13] = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,0", (byte) 117);
                 if (var2 != null) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[0] = jaa.decodeText((byte) 47, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[0] = BitPackedColour.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,1", (byte) 109);
                 if (null != var2) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[1] = jaa.decodeText((byte) 55, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[1] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,2", (byte) 108);
                 if (var2 != null) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[2] = jaa.decodeText((byte) 95, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[2] = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,3", (byte) 124);
                 if (null != var2) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[3] = jaa.decodeText((byte) 111, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[3] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,4", (byte) 114);
                 if (null != var2) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[4] = jaa.decodeText((byte) 81, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[4] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,5", (byte) 119);
                 if (null != var2) {
-                  SinglePlayerCourseGenerator.laserDeathMessages[5] = jaa.decodeText((byte) 54, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[5] = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,0", (byte) 111);
                 if (var2 != null) {
-                  CourseLayoutFactory.boulderDeathMessages[0] = jaa.decodeText((byte) 72, var2);
+                  CourseLayoutFactory.boulderDeathMessages[0] = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,1", (byte) 102);
                 if (null != var2) {
-                  CourseLayoutFactory.boulderDeathMessages[1] = jaa.decodeText((byte) 122, var2);
+                  CourseLayoutFactory.boulderDeathMessages[1] = BitPackedColour.decodeText((byte) 122, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,2", (byte) 113);
                 if (var2 != null) {
-                  CourseLayoutFactory.boulderDeathMessages[2] = jaa.decodeText((byte) 111, var2);
+                  CourseLayoutFactory.boulderDeathMessages[2] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,3", (byte) 121);
                 if (null != var2) {
-                  CourseLayoutFactory.boulderDeathMessages[3] = jaa.decodeText((byte) 85, var2);
+                  CourseLayoutFactory.boulderDeathMessages[3] = BitPackedColour.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,4", (byte) 109);
                 if (var2 != null) {
-                  CourseLayoutFactory.boulderDeathMessages[4] = jaa.decodeText((byte) 101, var2);
+                  CourseLayoutFactory.boulderDeathMessages[4] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,5", (byte) 123);
                 if (var2 != null) {
-                  CourseLayoutFactory.boulderDeathMessages[5] = jaa.decodeText((byte) 55, var2);
+                  CourseLayoutFactory.boulderDeathMessages[5] = BitPackedColour.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,6", (byte) 111);
                 if (var2 != null) {
-                  CourseLayoutFactory.boulderDeathMessages[6] = jaa.decodeText((byte) 69, var2);
+                  CourseLayoutFactory.boulderDeathMessages[6] = BitPackedColour.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,0", (byte) 113);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[0] = jaa.decodeText((byte) 107, var2);
+                  SingleChildWidget.sawDeathMessages[0] = BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,1", (byte) 105);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[1] = jaa.decodeText((byte) 118, var2);
+                  SingleChildWidget.sawDeathMessages[1] = BitPackedColour.decodeText((byte) 118, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,2", (byte) 102);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[2] = jaa.decodeText((byte) 103, var2);
+                  SingleChildWidget.sawDeathMessages[2] = BitPackedColour.decodeText((byte) 103, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,3", (byte) 108);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[3] = jaa.decodeText((byte) 41, var2);
+                  SingleChildWidget.sawDeathMessages[3] = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,4", (byte) 116);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[4] = jaa.decodeText((byte) 62, var2);
+                  SingleChildWidget.sawDeathMessages[4] = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,5", (byte) 126);
                 if (null != var2) {
-                  SingleChildWidget.sawDeathMessages[5] = jaa.decodeText((byte) 80, var2);
+                  SingleChildWidget.sawDeathMessages[5] = BitPackedColour.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,6", (byte) 102);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[6] = jaa.decodeText((byte) 60, var2);
+                  SingleChildWidget.sawDeathMessages[6] = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bigsaw,7", (byte) 116);
                 if (var2 != null) {
-                  SingleChildWidget.sawDeathMessages[7] = jaa.decodeText((byte) 75, var2);
+                  SingleChildWidget.sawDeathMessages[7] = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,0", (byte) 117);
                 if (var2 != null) {
-                  dta.skipRoomMessages[0] = jaa.decodeText((byte) 111, var2);
+                  dta.skipRoomMessages[0] = BitPackedColour.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,1", (byte) 107);
                 if (var2 != null) {
-                  dta.skipRoomMessages[1] = jaa.decodeText((byte) 59, var2);
+                  dta.skipRoomMessages[1] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,2", (byte) 112);
                 if (var2 != null) {
-                  dta.skipRoomMessages[2] = jaa.decodeText((byte) 105, var2);
+                  dta.skipRoomMessages[2] = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,3", (byte) 101);
                 if (var2 != null) {
-                  dta.skipRoomMessages[3] = jaa.decodeText((byte) 28, var2);
+                  dta.skipRoomMessages[3] = BitPackedColour.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skiproom,4", (byte) 100);
                 if (null != var2) {
-                  dta.skipRoomMessages[4] = jaa.decodeText((byte) 58, var2);
+                  dta.skipRoomMessages[4] = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_gas,0", (byte) 115);
                 if (var2 != null) {
-                  DateFieldsWidget.gasDeathMessages[0] = jaa.decodeText((byte) 85, var2);
+                  DateFieldsWidget.gasDeathMessages[0] = BitPackedColour.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_gas,1", (byte) 107);
                 if (var2 != null) {
-                  DateFieldsWidget.gasDeathMessages[1] = jaa.decodeText((byte) 91, var2);
+                  DateFieldsWidget.gasDeathMessages[1] = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_gas,2", (byte) 115);
                 if (null != var2) {
-                  DateFieldsWidget.gasDeathMessages[2] = jaa.decodeText((byte) 40, var2);
+                  DateFieldsWidget.gasDeathMessages[2] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_gas,3", (byte) 119);
                 if (var2 != null) {
-                  DateFieldsWidget.gasDeathMessages[3] = jaa.decodeText((byte) 48, var2);
+                  DateFieldsWidget.gasDeathMessages[3] = BitPackedColour.decodeText((byte) 48, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("next_round", (byte) 127);
                 if (null != var2) {
-                  jaa.decodeText((byte) 105, var2);
+                  BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptlabels,0", (byte) 122);
                 if (var2 != null) {
-                  QueuedHint.field_f[0] = jaa.decodeText((byte) 101, var2);
+                  QueuedHint.field_f[0] = BitPackedColour.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptlabels,1", (byte) 103);
                 if (var2 != null) {
-                  QueuedHint.field_f[1] = jaa.decodeText((byte) 44, var2);
+                  QueuedHint.field_f[1] = BitPackedColour.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,0", (byte) 109);
                 if (null != var2) {
-                  FullscreenCanvas.field_c[0][0] = jaa.decodeText((byte) 78, var2);
+                  FullscreenCanvas.field_c[0][0] = BitPackedColour.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,1", (byte) 118);
                 if (var2 != null) {
-                  FullscreenCanvas.field_c[0][1] = jaa.decodeText((byte) 83, var2);
+                  FullscreenCanvas.field_c[0][1] = BitPackedColour.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,2", (byte) 102);
                 if (null != var2) {
-                  FullscreenCanvas.field_c[0][2] = jaa.decodeText((byte) 88, var2);
+                  FullscreenCanvas.field_c[0][2] = BitPackedColour.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,3", (byte) 109);
                 if (null != var2) {
-                  FullscreenCanvas.field_c[0][3] = jaa.decodeText((byte) 81, var2);
+                  FullscreenCanvas.field_c[0][3] = BitPackedColour.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,1,0", (byte) 122);
                 if (null != var2) {
-                  FullscreenCanvas.field_c[1][0] = jaa.decodeText((byte) 117, var2);
+                  FullscreenCanvas.field_c[1][0] = BitPackedColour.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,1,1", (byte) 120);
                 if (null != var2) {
-                  FullscreenCanvas.field_c[1][1] = jaa.decodeText((byte) 41, var2);
+                  FullscreenCanvas.field_c[1][1] = BitPackedColour.decodeText((byte) 41, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,0,0", (byte) 110);
                 if (null != var2) {
-                  MouseWheelInput.field_a[0][0] = jaa.decodeText((byte) 68, var2);
+                  MouseWheelInput.field_a[0][0] = BitPackedColour.decodeText((byte) 68, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,0,1", (byte) 106);
                 if (var2 != null) {
-                  MouseWheelInput.field_a[0][1] = jaa.decodeText((byte) 58, var2);
+                  MouseWheelInput.field_a[0][1] = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,0,2", (byte) 112);
                 if (var2 != null) {
-                  MouseWheelInput.field_a[0][2] = jaa.decodeText((byte) 66, var2);
+                  MouseWheelInput.field_a[0][2] = BitPackedColour.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,0,3", (byte) 111);
                 if (var2 != null) {
-                  MouseWheelInput.field_a[0][3] = jaa.decodeText((byte) 46, var2);
+                  MouseWheelInput.field_a[0][3] = BitPackedColour.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,1,0", (byte) 105);
                 if (null != var2) {
-                  MouseWheelInput.field_a[1][0] = jaa.decodeText((byte) 52, var2);
+                  MouseWheelInput.field_a[1][0] = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,1,1", (byte) 111);
                 if (null != var2) {
-                  MouseWheelInput.field_a[1][1] = jaa.decodeText((byte) 57, var2);
+                  MouseWheelInput.field_a[1][1] = BitPackedColour.decodeText((byte) 57, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,0", (byte) 117);
                 if (var2 != null) {
-                  SecondaryLinkQueue.worldNames[0] = jaa.decodeText((byte) 95, var2);
+                  SecondaryLinkQueue.worldNames[0] = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,1", (byte) 124);
                 if (null != var2) {
-                  SecondaryLinkQueue.worldNames[1] = jaa.decodeText((byte) 50, var2);
+                  SecondaryLinkQueue.worldNames[1] = BitPackedColour.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,2", (byte) 107);
                 if (var2 != null) {
-                  SecondaryLinkQueue.worldNames[2] = jaa.decodeText((byte) 87, var2);
+                  SecondaryLinkQueue.worldNames[2] = BitPackedColour.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,3", (byte) 120);
                 if (var2 != null) {
-                  SecondaryLinkQueue.worldNames[3] = jaa.decodeText((byte) 59, var2);
+                  SecondaryLinkQueue.worldNames[3] = BitPackedColour.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,4", (byte) 111);
                 if (null != var2) {
-                  SecondaryLinkQueue.worldNames[4] = jaa.decodeText((byte) 106, var2);
+                  SecondaryLinkQueue.worldNames[4] = BitPackedColour.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,5", (byte) 116);
                 if (null != var2) {
-                  SecondaryLinkQueue.worldNames[5] = jaa.decodeText((byte) 36, var2);
+                  SecondaryLinkQueue.worldNames[5] = BitPackedColour.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,6", (byte) 100);
                 if (null != var2) {
-                  SecondaryLinkQueue.worldNames[6] = jaa.decodeText((byte) 40, var2);
+                  SecondaryLinkQueue.worldNames[6] = BitPackedColour.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,7", (byte) 125);
                 if (null != var2) {
-                  SecondaryLinkQueue.worldNames[7] = jaa.decodeText((byte) 80, var2);
+                  SecondaryLinkQueue.worldNames[7] = BitPackedColour.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,8", (byte) 118);
                 if (var2 != null) {
-                  SecondaryLinkQueue.worldNames[8] = jaa.decodeText((byte) 73, var2);
+                  SecondaryLinkQueue.worldNames[8] = BitPackedColour.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("multiplayer_lobby", (byte) 125);
                 if (null != var2) {
-                  ol.field_a = jaa.decodeText((byte) 58, var2);
+                  ol.field_a = BitPackedColour.decodeText((byte) 58, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("options", (byte) 100);
                 if (var2 != null) {
-                  NamedChatTarget.field_d = jaa.decodeText((byte) 126, var2);
+                  NamedChatTarget.field_d = BitPackedColour.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("enter_tomb", (byte) 108);
                 if (null != var2) {
-                  MiscItemBehaviour.field_t = jaa.decodeText((byte) 91, var2);
+                  MiscItemBehaviour.field_t = BitPackedColour.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bonus", (byte) 102);
                 if (var2 != null) {
-                  RasterStateFrame.field_j = jaa.decodeText((byte) 71, var2);
+                  RasterStateFrame.field_j = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("no_medal", (byte) 116);
                 if (null != var2) {
-                  SpriteTileOperator.field_v = jaa.decodeText((byte) 96, var2);
+                  SpriteTileOperator.field_v = BitPackedColour.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gold_medal", (byte) 101);
                 if (null != var2) {
-                  uaa.field_d = jaa.decodeText((byte) 39, var2);
+                  uaa.field_d = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("silver_medal", (byte) 117);
                 if (null != var2) {
-                  qna.field_c = jaa.decodeText((byte) 72, var2);
+                  qna.field_c = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bronze_medal", (byte) 118);
                 if (var2 != null) {
-                  MovingPlatformComponent.field_P = jaa.decodeText((byte) 109, var2);
+                  MovingPlatformComponent.field_P = BitPackedColour.decodeText((byte) 109, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("previous_member", (byte) 102);
                 if (null != var2) {
-                  ByteStorage.field_c = jaa.decodeText((byte) 25, var2);
+                  ByteStorage.field_c = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("freecontent_compelted", (byte) 125);
                 if (null != var2) {
-                  DivisionMazeGenerator.field_d = jaa.decodeText((byte) 119, var2);
+                  DivisionMazeGenerator.field_d = BitPackedColour.decodeText((byte) 119, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("justplay", (byte) 109);
                 if (null != var2) {
-                  IdChatTarget.field_f = jaa.decodeText((byte) 54, var2);
+                  IdChatTarget.field_f = BitPackedColour.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("adding_coins", (byte) 102);
                 if (null != var2) {
-                  jaa.decodeText((byte) 56, var2);
+                  BitPackedColour.decodeText((byte) 56, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("adding_lootbags", (byte) 112);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 53, var2);
+                  BitPackedColour.decodeText((byte) 53, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("adding_idols", (byte) 125);
                 if (null != var2) {
-                  jaa.decodeText((byte) 125, var2);
+                  BitPackedColour.decodeText((byte) 125, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("points_coins", (byte) 108);
                 if (var2 != null) {
-                  jaa.decodeText((byte) 108, var2);
+                  BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("points_lootbags", (byte) 106);
                 if (null != var2) {
-                  jaa.decodeText((byte) 107, var2);
+                  BitPackedColour.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("points_idols", (byte) 101);
                 if (null != var2) {
-                  jaa.decodeText((byte) 108, var2);
+                  BitPackedColour.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("restart_world", (byte) 102);
                 if (null != var2) {
-                  WidgetStyleLayer.field_e = jaa.decodeText((byte) 52, var2);
+                  WidgetStyleLayer.field_e = BitPackedColour.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("spectator_controls", (byte) 111);
                 if (var2 != null) {
-                  WhiteLightShooterComponent.field_J = jaa.decodeText((byte) 71, var2);
+                  WhiteLightShooterComponent.field_J = BitPackedColour.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("game_end_iminent", (byte) 121);
                 if (var2 != null) {
-                  TextureMetadata.field_j = jaa.decodeText((byte) 105, var2);
+                  TextureMetadata.field_j = BitPackedColour.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("phaseEnd_mybest", (byte) 104);
                 if (null != var2) {
-                  ItemComponent.field_F = jaa.decodeText((byte) 43, var2);
+                  ItemComponent.field_F = BitPackedColour.decodeText((byte) 43, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("phaseEnd_friendsbest", (byte) 116);
                 if (null != var2) {
-                  PenaltyNotice.field_g = jaa.decodeText((byte) 39, var2);
+                  PenaltyNotice.field_g = BitPackedColour.decodeText((byte) 39, var2);
                 }
                 CurveOperator.textArchive = null;
             }
@@ -2321,7 +2321,7 @@ final class CourseMapWalker {
           SoftwareRasterizer.setTarget(var1.field_g, var1.field_m, var1.field_l);
           SoftwareRasterizer.setClip(var1.field_n, var1.field_k, var1.field_h, var1.field_f);
           var1.field_g = null;
-          vt.field_a.addLast((byte) -67, var1);
+          RasterStateFramePool.freeFrames.addLast((byte) -67, var1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

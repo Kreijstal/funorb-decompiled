@@ -45,9 +45,9 @@ final class vua extends SingleChildWidget {
             return;
           }
           if (this.field_p != 0) {
-            afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+            OpenGlIndexBufferReference.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
             this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
-            afa.field_c.a((byte) 38);
+            OpenGlIndexBufferReference.field_c.a((byte) 38);
             return;
           }
           return;
@@ -62,9 +62,9 @@ final class vua extends SingleChildWidget {
           if (this.field_p == 0) {
             return;
           }
-          afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+          OpenGlIndexBufferReference.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
           this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
-          afa.field_c.a((byte) 38);
+          OpenGlIndexBufferReference.field_c.a((byte) 38);
           return;
         }
         this.field_r.paintWidget((UiWidget) (this), param0, 16777215, param1, true);
@@ -77,9 +77,9 @@ final class vua extends SingleChildWidget {
         if (this.field_p == 0) {
           return;
         }
-        afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+        OpenGlIndexBufferReference.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
         this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
-        afa.field_c.a((byte) 38);
+        OpenGlIndexBufferReference.field_c.a((byte) 38);
     }
 
     public static void releaseStatics(byte param0) {

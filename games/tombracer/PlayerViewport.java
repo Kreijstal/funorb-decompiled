@@ -167,7 +167,7 @@ final class PlayerViewport {
             this.setEdges(var4_int, 0, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), var5 << 1);
             return;
           }
-          if (param1 != mma.field_c) {
+          if (param1 != TripBeamVisual.field_c) {
             return;
           }
           this.setEdges(var4_int, param0 * var5, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), (param0 + 1) * var5);

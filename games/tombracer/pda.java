@@ -21,7 +21,7 @@ final class pda {
     }
 
     pda(boolean param0) {
-        vt discarded$0 = new vt();
+        RasterStateFramePool discarded$0 = new RasterStateFramePool();
     }
 
     public static void releaseStatics(byte param0) {

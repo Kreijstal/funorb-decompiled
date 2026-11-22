@@ -40,7 +40,7 @@ final class LoginMethod {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawClippedSinglePixelRectangleBorder(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -55,7 +55,7 @@ final class LoginMethod {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           if (param5 != 14375) {
-            LoginMethod.a(-36, -84, -86, 3, 107, 83);
+            LoginMethod.drawClippedSinglePixelRectangleBorder(-36, -84, -86, 3, 107, 83);
           }
           if (LineShape.field_h >= param2) {
             if (HardwareModelBillboardState.field_d > param3) {
@@ -157,7 +157,7 @@ final class LoginMethod {
 
     public static void releaseStatics(byte param0) {
         if (param0 > -35) {
-          LoginMethod.a(55, 84, -11, -72, -118, -51);
+          LoginMethod.drawClippedSinglePixelRectangleBorder(55, 84, -11, -72, -118, -51);
         }
         field_c = null;
         loadingTextTranslations = null;

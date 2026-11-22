@@ -456,7 +456,7 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               var8.field_r = LegacyOpenGlFlowingWaterEffect.formatText(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
-            cea.field_a.field_r = LegacyOpenGlFlowingWaterEffect.formatText(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
+            PlayerCountDisplay.widget.field_r = LegacyOpenGlFlowingWaterEffect.formatText(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
           }
           stackIn_168_0 = C2SRoomResultPacket.field_c;
           stackIn_168_1 = -98;

@@ -308,7 +308,7 @@ final class TextureCombineSource {
               if (var4 == FacePointLocomotor.field_r.selectedIndex) {
                 stackIn_45_0 = mpa.field_V;
               } else {
-                stackIn_45_0 = jaa.field_b;
+                stackIn_45_0 = BitPackedColour.field_b;
               }
               var9 = stackIn_45_0;
               var1_int = var1_int + ValidationStatusIcon.field_C;

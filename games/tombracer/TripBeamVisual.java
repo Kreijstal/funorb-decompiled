@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mma {
+final class TripBeamVisual {
     static wm field_c;
     static int field_a;
     static ValidationOutcome field_d;
@@ -16,10 +16,10 @@ final class mma {
         field_d = null;
     }
 
-    mma(int param0, int param1, BeamSegment param2, int param3) {
+    TripBeamVisual(int param0, int param1, BeamSegment param2, int param3) {
     }
 
-    final void a(int param0, int param1) {
+    final void setColour(int param0, int param1) {
         if (param0 != -978) {
           field_b = (ToolkitModel[]) null;
         }

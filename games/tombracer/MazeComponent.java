@@ -292,7 +292,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           dga.layoutBottomPanels(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
-          cea.field_a.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
+          PlayerCountDisplay.widget.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;
           if (!UnlockOverlay.field_p) {

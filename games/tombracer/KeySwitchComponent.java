@@ -202,7 +202,7 @@ final class KeySwitchComponent extends SwitchComponent {
         if (param0 != 2097152) {
           field_M = (String) null;
           if (MenuEntry.field_h == 13) {
-            Room.l(param0 + 0);
+            Room.closeQuickChatMenuIfOpen(param0 + 0);
             return true;
           }
           if (MenuEntry.field_h == 102) {
@@ -218,7 +218,7 @@ final class KeySwitchComponent extends SwitchComponent {
           return false;
         }
         if (MenuEntry.field_h == 13) {
-          Room.l(param0 + 0);
+          Room.closeQuickChatMenuIfOpen(param0 + 0);
           return true;
         }
         if (MenuEntry.field_h == 102) {

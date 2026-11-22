@@ -97,7 +97,7 @@ class FocusableWidget extends UiWidget {
     }
 
     FocusableWidget(String param0, WidgetListener param1) {
-        this(param0, afa.field_c.field_u, param1);
+        this(param0, OpenGlIndexBufferReference.field_c.field_u, param1);
     }
 
     void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
@@ -260,7 +260,7 @@ class FocusableWidget extends UiWidget {
         this.field_x = 0;
         this.field_v = true;
         this.field_y = true;
-        this.field_r = afa.field_c.field_v;
+        this.field_r = OpenGlIndexBufferReference.field_c.field_v;
     }
 
     final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, byte param3) {

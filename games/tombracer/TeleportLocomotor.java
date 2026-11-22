@@ -203,45 +203,45 @@ final class TeleportLocomotor extends Locomotor {
         this.field_q.mirror(true);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final static void drawRectangleBorder(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
         if (pka.field_b > param3) {
           if (1 == param1) {
-            LoginMethod.a(param6, param3, param4, param2, param0, 14375);
+            LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
           } else {
-            pua.a(-78, param3, param4, param2, param1, param6, param0);
+            pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
           }
           if (!param5) {
-            TeleportLocomotor.a(69, -19, 4, 24, 126, false, -104);
+            TeleportLocomotor.drawRectangleBorder(69, -19, 4, 24, 126, false, -104);
           }
           return;
         }
         if (DiskCacheWorker.field_c < param0) {
           if (1 != param1) {
-            pua.a(-78, param3, param4, param2, param1, param6, param0);
+            pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
           } else {
-            LoginMethod.a(param6, param3, param4, param2, param0, 14375);
+            LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
           }
         } else {
           if (param4 < HardwareModelBillboardState.field_d) {
             if (1 != param1) {
-              pua.a(-78, param3, param4, param2, param1, param6, param0);
+              pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
             } else {
-              LoginMethod.a(param6, param3, param4, param2, param0, 14375);
+              LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
             }
           } else {
             if (LineShape.field_h < param2) {
               if (1 != param1) {
-                pua.a(-78, param3, param4, param2, param1, param6, param0);
+                pua.drawClippedThickRectangleBorder(-78, param3, param4, param2, param1, param6, param0);
               } else {
-                LoginMethod.a(param6, param3, param4, param2, param0, 14375);
+                LoginMethod.drawClippedSinglePixelRectangleBorder(param6, param3, param4, param2, param0, 14375);
               }
             } else {
               if (1 == param1) {
-                tia.a(param2, param4, param0, param6, param3, false);
+                tia.drawSinglePixelRectangleBorder(param2, param4, param0, param6, param3, false);
               } else {
-                CharacterChoice.a(param1, param0, param6, param4, param3, (byte) 27, param2);
+                CharacterChoice.drawThickRectangleBorder(param1, param0, param6, param4, param3, (byte) 27, param2);
               }
             }
           }
@@ -249,7 +249,7 @@ final class TeleportLocomotor extends Locomotor {
         if (param5) {
           return;
         }
-        TeleportLocomotor.a(69, -19, 4, 24, 126, false, -104);
+        TeleportLocomotor.drawRectangleBorder(69, -19, 4, 24, 126, false, -104);
     }
 
     final int getTypeId(int param0) {

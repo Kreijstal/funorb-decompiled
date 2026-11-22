@@ -308,7 +308,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 stackIn_21_0 = var18.getCaretX((byte) -59, var9);
               }
               var15 = stackIn_21_0;
-              afa.field_c.fillRectangleAlpha(param1.field_j + (param2 + (param1.field_n + this.field_g + var13.field_d)), var13.field_b, this.field_d, this.field_d >>> 24, (byte) 118, -var14 + var15, this.textX(param1, var14, param3, -3));
+              OpenGlIndexBufferReference.field_c.fillRectangleAlpha(param1.field_j + (param2 + (param1.field_n + this.field_g + var13.field_d)), var13.field_b, this.field_d, this.field_d >>> 24, (byte) 118, -var14 + var15, this.textX(param1, var14, param3, -3));
             }
             CourseMapWalker.popRasterState(param0 ^ -2);
             return;
@@ -614,7 +614,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var11 = this.textTop(param1, param4, (byte) -110) + Math.max(0, var8.field_d);
             var12 = this.textTop(param1, param4, (byte) -44) + Math.min(this.contentWidth(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
             CurrentGraphicsToolkit.intersectClip(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
-            afa.field_c.drawLine(var11, this.field_k, 8947848, var10, var10, var12);
+            OpenGlIndexBufferReference.field_c.drawLine(var11, this.field_k, 8947848, var10, var10, var12);
             CourseMapWalker.popRasterState(1);
           }
         } catch (RuntimeException runtimeException) {

@@ -40,10 +40,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static ScrollControlWidget createVerticalScrollControl(int param0) {
         if (param0 == -5412) {
-          return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (WidgetPainter) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+          return new ScrollControlWidget(0, 0, OpenGlIndexBufferReference.field_c.field_m, 0, (WidgetPainter) null, OpenGlIndexBufferReference.field_c.field_r, OpenGlIndexBufferReference.field_c.field_h, OpenGlIndexBufferReference.field_c.field_m, OpenGlIndexBufferReference.field_c.field_m, OpenGlIndexBufferReference.field_c.field_g, OpenGlIndexBufferReference.field_c.field_l, false, true, 32768, 0);
         }
         ImageProducerRasterBuffer.releaseStatics(-97);
-        return new ScrollControlWidget(0, 0, afa.field_c.field_m, 0, (WidgetPainter) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
+        return new ScrollControlWidget(0, 0, OpenGlIndexBufferReference.field_c.field_m, 0, (WidgetPainter) null, OpenGlIndexBufferReference.field_c.field_r, OpenGlIndexBufferReference.field_c.field_h, OpenGlIndexBufferReference.field_c.field_m, OpenGlIndexBufferReference.field_c.field_m, OpenGlIndexBufferReference.field_c.field_g, OpenGlIndexBufferReference.field_c.field_l, false, true, 32768, 0);
     }
 
     public static void releaseStatics(int param0) {

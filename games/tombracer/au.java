@@ -92,7 +92,7 @@ final class au extends aa {
             var12.unlink(83);
           } else {
             if (var2 == 1) {
-              var13 = (cga) (aba.field_a.first(-80));
+              var13 = (cga) (OpenGlVertexNormalData.field_a.first(-80));
               if (var13 == null) {
                 DropAnimation.closeGameSocket(60);
                 return;

@@ -86,7 +86,7 @@ final class CharacterChoice implements dv {
                   param4.setObstructionLevel(3, 0);
                   var8 = new SimpleBlockBehaviour(param3, param5);
                   param4.setCollisionLevel(3, (byte) -12, true);
-                  var8.b((byte) -107, true);
+                  var8.setKillsOnTouch((byte) -107, true);
                   param4.addBehaviour((byte) 83, (Behaviour) (var8));
                   param4.addLocomotor(new SimpleMoveLocomotor(param3, 131072, 0, 0, param5), 0);
                   param4.setFloating((byte) 17, false);
@@ -300,7 +300,7 @@ final class CharacterChoice implements dv {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void drawThickRectangleBorder(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -358,7 +358,7 @@ final class CharacterChoice implements dv {
     final void setCharacter(int param0, byte param1) {
         this.characterId = param0;
         if (param1 != 37) {
-          CharacterChoice.a(-67, 85, 11, -69, 5, (byte) -38, -52);
+          CharacterChoice.drawThickRectangleBorder(-67, 85, 11, -69, 5, (byte) -38, -52);
           if (null == this.player) {
             return;
           }

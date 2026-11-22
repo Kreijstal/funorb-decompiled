@@ -161,7 +161,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           return (char)var2;
         }
         if (160 > var2) {
-          var3 = gha.cp1252HighChars[var2 - 128];
+          var3 = DecodableArrayReader.cp1252HighChars[var2 - 128];
           if (var3 == 0) {
             var3 = 63;
           }

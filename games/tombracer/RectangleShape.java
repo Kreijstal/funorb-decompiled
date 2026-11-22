@@ -24,7 +24,7 @@ final class RectangleShape extends RasterShape {
         }
         int var6 = param1 * this.field_h >> 12;
         int var7 = this.field_g * param1 >> 12;
-        TeleportLocomotor.a(var5, this.outlineWidth, var7, var4, var6, param2, this.outlineColour);
+        TeleportLocomotor.drawRectangleBorder(var5, this.outlineWidth, var7, var4, var6, param2, this.outlineColour);
     }
 
     RectangleShape(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

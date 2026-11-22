@@ -13,7 +13,7 @@ final class OpenGlModel extends ToolkitModel {
     private int field_N;
     private short[] field_X;
     private VertexArrayPointer field_ab;
-    private aba field_i;
+    private OpenGlVertexNormalData field_i;
     private LegacyVertexArray field_Q;
     private short[] field_z;
     private short[] field_cb;
@@ -51,7 +51,7 @@ final class OpenGlModel extends ToolkitModel {
     private OpenGlToolkit field_R;
     private OpenGlModelBillboard[] field_r;
     private int field_lb;
-    private afa field_w;
+    private OpenGlIndexBufferReference field_w;
     private int field_ib;
     private int[][] field_d;
     private int[] field_e;
@@ -395,7 +395,7 @@ final class OpenGlModel extends ToolkitModel {
         short[] array$5 = null;
         short[] array$6 = null;
         short[] array$7 = null;
-        aba fieldTemp$8 = null;
+        OpenGlVertexNormalData fieldTemp$8 = null;
         float[] array$9 = null;
         float[] array$10 = null;
         short[] array$11 = null;
@@ -417,7 +417,7 @@ final class OpenGlModel extends ToolkitModel {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        aba var11_ref_aba = null;
+        OpenGlVertexNormalData var11_ref_aba = null;
         int var12 = 0;
         int var13 = 0;
         int var11Lifetime1;
@@ -449,7 +449,7 @@ final class OpenGlModel extends ToolkitModel {
           param5.field_lb = this.field_lb;
           var7_int = ConsoleParseException.hasAnyMask33(this.field_u, param1, -32842) ? 1 : 0;
           var8 = TimingPattern.hasAnyMask34((byte) -53, this.field_u, param1) ? 1 : 0;
-          var9 = gha.hasAnyMask52(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
+          var9 = DecodableArrayReader.hasAnyMask52(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (param3 != -22857) {
             this.field_q = (short[]) null;
@@ -726,28 +726,28 @@ final class OpenGlModel extends ToolkitModel {
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameCompleted6)) {
               if (null == param4.field_i) {
-                param4.field_i = new aba();
+                param4.field_i = new OpenGlVertexNormalData();
               }
               fieldTemp$8 = param4.field_i;
               param5.field_i = param4.field_i;
               var11_ref_aba = fieldTemp$8;
-              if (var11_ref_aba.field_d == null ||
-                !(this.field_L <= var11_ref_aba.field_d.length)) {
+              if (var11_ref_aba.normalX == null ||
+                !(this.field_L <= var11_ref_aba.normalX.length)) {
                 var12 = this.field_L;
-                var11_ref_aba.field_f = new short[var12];
-                var11_ref_aba.field_e = new byte[var12];
-                var11_ref_aba.field_d = new short[var12];
-                var11_ref_aba.field_b = new short[var12];
+                var11_ref_aba.normalZ = new short[var12];
+                var11_ref_aba.normalWeights = new byte[var12];
+                var11_ref_aba.normalX = new short[var12];
+                var11_ref_aba.normalY = new short[var12];
               }
               var12 = 0;
               while (this.field_L > var12) {
                 param5.field_E[var12] = this.field_E[var12];
                 param5.field_Y[var12] = this.field_Y[var12];
                 param5.field_cb[var12] = this.field_cb[var12];
-                var11_ref_aba.field_d[var12] = this.field_i.field_d[var12];
-                var11_ref_aba.field_b[var12] = this.field_i.field_b[var12];
-                var11_ref_aba.field_f[var12] = this.field_i.field_f[var12];
-                var11_ref_aba.field_e[var12] = this.field_i.field_e[var12];
+                var11_ref_aba.normalX[var12] = this.field_i.normalX[var12];
+                var11_ref_aba.normalY[var12] = this.field_i.normalY[var12];
+                var11_ref_aba.normalZ[var12] = this.field_i.normalZ[var12];
+                var11_ref_aba.normalWeights[var12] = this.field_i.normalWeights[var12];
                 var12++;
                 if (var13 != 0) {
                   decompiledFrameCompleted5 = false;
@@ -904,7 +904,7 @@ final class OpenGlModel extends ToolkitModel {
                   param5.field_Z = (byte)(param5.field_Z | 16);
                 }
                 param5.field_w = param4.field_w;
-                param5.field_w.field_a = this.field_w.field_a;
+                param5.field_w.indexBuffer = this.field_w.indexBuffer;
               }
             } else {
               param5.field_w = this.field_w;
@@ -913,7 +913,7 @@ final class OpenGlModel extends ToolkitModel {
                   param5.field_Z = (byte)(param5.field_Z | 16);
                 }
                 param5.field_w = param4.field_w;
-                param5.field_w.field_a = this.field_w.field_a;
+                param5.field_w.indexBuffer = this.field_w.indexBuffer;
               }
             }
           } else {
@@ -921,7 +921,7 @@ final class OpenGlModel extends ToolkitModel {
               param5.field_Z = (byte)(param5.field_Z | 16);
             }
             param5.field_w = param4.field_w;
-            param5.field_w.field_a = this.field_w.field_a;
+            param5.field_w.indexBuffer = this.field_w.indexBuffer;
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -1109,11 +1109,11 @@ final class OpenGlModel extends ToolkitModel {
               } else {
                 this.field_jb.setIndices(var3.position, -11783, var3.payload, 5123);
               }
-              this.field_w.field_a = this.field_jb;
+              this.field_w.indexBuffer = this.field_jb;
             }
             if (!param1 ||
               var5 != 0) {
-              this.field_w.field_a = this.field_R.createVertexBuffer(-56, var3.position, 5123, false, var3.payload);
+              this.field_w.indexBuffer = this.field_R.createVertexBuffer(-56, var3.position, 5123, false, var3.payload);
             }
             if (!param1) {
               this.field_gb = true;
@@ -2921,10 +2921,10 @@ final class OpenGlModel extends ToolkitModel {
               (decompiledFrameCompleted5)) {
               boolean decompiledSharedTail1 = (this.field_i == null);
               if (!decompiledSharedTail1) {
-                var16 = this.field_i.field_e;
-                var13 = this.field_i.field_d;
-                var14 = this.field_i.field_b;
-                var15 = this.field_i.field_f;
+                var16 = this.field_i.normalWeights;
+                var13 = this.field_i.normalX;
+                var14 = this.field_i.normalY;
+                var15 = this.field_i.normalZ;
                 decompiledSharedTail1 = (var35 != 0);
               }
               if (decompiledSharedTail1) {
@@ -3082,10 +3082,10 @@ final class OpenGlModel extends ToolkitModel {
           regionExit1: {
             if (stackIn_215_0 != 0) {
               if (null != this.field_i) {
-                var13Lifetime1 = this.field_i.field_d;
-                var16Lifetime1 = this.field_i.field_e;
-                var15Lifetime1 = this.field_i.field_f;
-                var14Lifetime1 = this.field_i.field_b;
+                var13Lifetime1 = this.field_i.normalX;
+                var16Lifetime1 = this.field_i.normalWeights;
+                var15Lifetime1 = this.field_i.normalZ;
+                var14Lifetime1 = this.field_i.normalY;
                 if (var35 != 0) {
                   var15Lifetime1 = this.field_cb;
                   var14Lifetime1 = this.field_Y;
@@ -3268,12 +3268,12 @@ final class OpenGlModel extends ToolkitModel {
           }
           this.uploadVertexBuffers(0, param0);
           if (this.field_w != null) {
-            if (null == this.field_w.field_a) {
+            if (null == this.field_w.indexBuffer) {
               stackIn_16_1 = -24;
               stackIn_17_2 = (0 != (this.field_Z & 16));
               this.uploadIndexBuffer((byte) stackIn_16_1, stackIn_17_2);
             }
-            if (this.field_w.field_a != null) {
+            if (this.field_w.indexBuffer != null) {
               stackIn_24_0 = this.field_R;
               stackIn_24_1 = 96;
               stackIn_25_2 = (this.field_F != null);
@@ -3295,7 +3295,7 @@ final class OpenGlModel extends ToolkitModel {
                 stackIn_37_1 = 70;
                 stackIn_38_2 = (null != this.field_F);
                 ((OpenGlToolkit) (Object) stackIn_37_0).bindMaterial((byte) stackIn_37_1, stackIn_38_2, var6);
-                this.field_R.drawIndexedElements(3 * var4, 4, -513, this.field_w.field_a, 3 * (var5 - var4));
+                this.field_R.drawIndexedElements(3 * var4, 4, -513, this.field_w.indexBuffer, 3 * (var5 - var4));
                 var3++;
               }
             }
@@ -4187,7 +4187,7 @@ final class OpenGlModel extends ToolkitModel {
           if (this.field_H != null &&
             !UiWidget.a(this.field_bb, this.field_u, 6100)) {
             if ((this.field_w == null ||
-              this.field_w.field_a != null) &&
+              this.field_w.indexBuffer != null) &&
               (null == this.field_kb ||
               this.field_kb.field_d != null)) {
               this.field_z = null;
@@ -4247,7 +4247,7 @@ final class OpenGlModel extends ToolkitModel {
           this.field_ab = new VertexArrayPointer((LegacyVertexArray) null, 5126, 2, 0);
           this.field_F = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
           this.field_kb = new VertexArrayPointer((LegacyVertexArray) null, 5121, 4, 0);
-          this.field_w = new afa();
+          this.field_w = new OpenGlIndexBufferReference();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4420,7 +4420,7 @@ final class OpenGlModel extends ToolkitModel {
             this.field_kb = new VertexArrayPointer((LegacyVertexArray) null, 5121, 4, 0);
           }
           if (mm.hasFlag2048(-122, param2, param5)) {
-            this.field_w = new afa();
+            this.field_w = new OpenGlIndexBufferReference();
           }
           var7 = param0.field_c;
           var8 = new int[param1.field_o];

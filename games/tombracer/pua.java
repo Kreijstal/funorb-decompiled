@@ -13,7 +13,7 @@ final class pua extends hq {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawClippedThickRectangleBorder(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aba {
+final class OpenGlVertexNormalData {
     static IntrusiveDeque field_a;
-    byte[] field_e;
-    short[] field_b;
-    short[] field_f;
-    short[] field_d;
+    byte[] normalWeights;
+    short[] normalY;
+    short[] normalZ;
+    short[] normalX;
     static char[] field_c;
     private static String field_z;
 

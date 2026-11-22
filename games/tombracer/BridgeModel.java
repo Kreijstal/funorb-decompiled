@@ -601,13 +601,13 @@ final class BridgeModel extends TrapModel {
         RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
-        rha var6_ref_rha = null;
+        DelayedPacket var6_ref_rha = null;
         int var7 = 0;
         byte[] var8 = null;
-        rha var9 = null;
+        DelayedPacket var9 = null;
         int var10 = 0;
         byte[] var11 = null;
-        rha var13 = null;
+        DelayedPacket var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
         int var6Lifetime1;
@@ -633,19 +633,19 @@ final class BridgeModel extends TrapModel {
               for (var6 = 0; var14.length > var6; var6++) {
                 var8[var6] = ql.field_k.payload[var6];
               }
-              var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.position, var17);
+              var6_ref_rha = new DelayedPacket(var2_long + (long)var4, ql.field_k.position, var17);
               CheckboxWidget.field_z.addLast((byte) -71, var6_ref_rha);
               ql.field_k.position = 0;
             }
-            var9 = (rha) (CheckboxWidget.field_z.first(-80));
+            var9 = (DelayedPacket) (CheckboxWidget.field_z.first(-80));
             var13 = var9;
             if (var13 != null &&
-              var13.field_f < var2_long) {
+              var13.releaseAtMillis < var2_long) {
               var13.unlink(117);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_i > var10) {
-                ql.field_k.payload[var10] = var9.field_g[var10];
+                ql.field_k.payload[var10] = var9.payload[var10];
                 var10++;
               }
               ql.field_k.position = var13.field_i;

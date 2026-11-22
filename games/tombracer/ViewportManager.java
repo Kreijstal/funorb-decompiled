@@ -76,7 +76,7 @@ final class ViewportManager {
             if (param0 > -31) {
               this.field_k = -11;
             }
-            if (mma.field_a != var2) {
+            if (TripBeamVisual.field_a != var2) {
               this.field_l.onViewportResized(var2, -117, var3);
             } else {
               if (var3 != FloatPacketBuffer.field_i) {
@@ -84,7 +84,7 @@ final class ViewportManager {
               }
             }
             if (this.field_d > 0) {
-              BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+              BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
             }
             return;
           }
@@ -92,20 +92,20 @@ final class ViewportManager {
             if (param0 > -31) {
               this.field_k = -11;
             }
-            if (mma.field_a != var2 ||
+            if (TripBeamVisual.field_a != var2 ||
               var3 != FloatPacketBuffer.field_i) {
               this.field_l.onViewportResized(var2, -117, var3);
             }
             if (this.field_d <= 0) {
               return;
             }
-            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+            BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
             return;
           }
           var2 = var4;
         }
         if (param0 <= -31) {
-          if (mma.field_a != var2) {
+          if (TripBeamVisual.field_a != var2) {
             this.field_l.onViewportResized(var2, -117, var3);
           } else {
             if (var3 != FloatPacketBuffer.field_i) {
@@ -114,10 +114,10 @@ final class ViewportManager {
           }
         } else {
           this.field_k = -11;
-          if (mma.field_a != var2) {
+          if (TripBeamVisual.field_a != var2) {
             this.field_l.onViewportResized(var2, -117, var3);
             if (this.field_d > 0) {
-              BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+              BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
             }
             return;
           }
@@ -128,7 +128,7 @@ final class ViewportManager {
         if (this.field_d <= 0) {
           return;
         }
-        BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+        BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
     }
 
     public static void releaseStatics(int param0) {
@@ -164,14 +164,14 @@ final class ViewportManager {
             }
             return;
           }
-          if (this.field_d > mma.field_a) {
-            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+          if (this.field_d > TripBeamVisual.field_a) {
+            BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
           } else {
             if (this.field_d > 0) {
               BillboardDefinition.field_g = 0;
             }
           }
-          if (this.field_b != mma.field_a) {
+          if (this.field_b != TripBeamVisual.field_a) {
             this.field_l.onViewportResized(this.field_b, -124, this.field_g);
           } else {
             if (this.field_g != FloatPacketBuffer.field_i) {
@@ -199,14 +199,14 @@ final class ViewportManager {
             }
             return;
           }
-          if (this.field_d > mma.field_a) {
-            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+          if (this.field_d > TripBeamVisual.field_a) {
+            BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
           } else {
             if (this.field_d > 0) {
               BillboardDefinition.field_g = 0;
             }
           }
-          if (this.field_b != mma.field_a) {
+          if (this.field_b != TripBeamVisual.field_a) {
             this.field_l.onViewportResized(this.field_b, -124, this.field_g);
           } else {
             if (this.field_g != FloatPacketBuffer.field_i) {
@@ -230,11 +230,11 @@ final class ViewportManager {
           }
           return;
         }
-        if (this.field_d > mma.field_a) {
-          BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
+        if (this.field_d > TripBeamVisual.field_a) {
+          BillboardDefinition.field_g = (this.field_d - TripBeamVisual.field_a) / 2;
         } else {
           if (this.field_d <= 0) {
-            if (this.field_b != mma.field_a) {
+            if (this.field_b != TripBeamVisual.field_a) {
               this.field_l.onViewportResized(this.field_b, -124, this.field_g);
             } else {
               if (this.field_g != FloatPacketBuffer.field_i) {
@@ -245,7 +245,7 @@ final class ViewportManager {
           }
           BillboardDefinition.field_g = 0;
         }
-        if (this.field_b == mma.field_a &&
+        if (this.field_b == TripBeamVisual.field_a &&
           this.field_g == FloatPacketBuffer.field_i) {
           return;
         }
@@ -273,7 +273,7 @@ final class ViewportManager {
         this.field_j = FloatPacketBuffer.field_i;
         if (param0 != 27013) {
           this.field_s = -44;
-          this.field_c = mma.field_a;
+          this.field_c = TripBeamVisual.field_a;
           this.field_l.onViewportResized(this.field_s, -123, this.field_p);
           ReportAbuseDialog.field_Cb = false;
           var2 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, ComponentTypeNames.field_c, this.field_s, 0);
@@ -283,7 +283,7 @@ final class ViewportManager {
           }
           return var2;
         }
-        this.field_c = mma.field_a;
+        this.field_c = TripBeamVisual.field_a;
         this.field_l.onViewportResized(this.field_s, -123, this.field_p);
         ReportAbuseDialog.field_Cb = false;
         var2Lifetime1 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, ComponentTypeNames.field_c, this.field_s, 0);

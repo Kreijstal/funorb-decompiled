@@ -60,7 +60,7 @@ final class fa {
             }
             if (OpenGlBufferObject.field_b) {
               TreasureValuesOverlay.addChatMessage(0, true, (String) null, (String) (var2), (String) null, 2);
-              Room.l(2097152);
+              Room.closeQuickChatMenuIfOpen(2097152);
             }
           }
           if (null == var2 &&

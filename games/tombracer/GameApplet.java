@@ -172,7 +172,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             bsa.field_k = true;
             SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d - 50;
-            CurveShape.field_l.setSize(mma.field_a, FloatPacketBuffer.field_i);
+            CurveShape.field_l.setSize(TripBeamVisual.field_a, FloatPacketBuffer.field_i);
             CurveShape.field_l.setVisible(true);
             boolean decompiledSharedTail0 = (null != DropdownList.field_x &&
               null == nb.field_d);
@@ -526,7 +526,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 MapWaypoint.refreshReportedHeapLimit((byte) -84);
                 this.recreateCanvas((byte) 68);
-                FadingDialog.field_C = LegacyOpenGlTurbulentTextureEffect.createRasterBuffer(117, mma.field_a, (java.awt.Component) ((Object) CurveShape.field_l), FloatPacketBuffer.field_i);
+                FadingDialog.field_C = LegacyOpenGlTurbulentTextureEffect.createRasterBuffer(117, TripBeamVisual.field_a, (java.awt.Component) ((Object) CurveShape.field_l), FloatPacketBuffer.field_i);
                 this.initializeGame(-71);
                 cq.field_a = VariantMask.createClock(0);
                 do {
@@ -756,7 +756,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               FloatPacketBuffer.field_i = param1;
               eca.field_a = param1;
               FallbackShaderEffect.field_f = 0;
-              mma.field_a = param2;
+              TripBeamVisual.field_a = param2;
               ConsoleEvaluationException.field_a = param2;
               RotaterMountComponent.field_L = param4;
               BillboardDefinition.field_g = 0;
@@ -866,7 +866,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           CurveShape.field_l = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CurveShape.field_l));
-          CurveShape.field_l.setSize(mma.field_a, FloatPacketBuffer.field_i);
+          CurveShape.field_l.setSize(TripBeamVisual.field_a, FloatPacketBuffer.field_i);
           CurveShape.field_l.setVisible(true);
           if (param0 <= 9) {
             return;

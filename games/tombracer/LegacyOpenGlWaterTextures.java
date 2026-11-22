@@ -21,9 +21,9 @@ final class LegacyOpenGlWaterTextures {
     final static int getCanvasWidth(boolean param0) {
         if (param0) {
           field_d = (TitledScrollPanel) null;
-          return mma.field_a;
+          return TripBeamVisual.field_a;
         }
-        return mma.field_a;
+        return TripBeamVisual.field_a;
     }
 
     LegacyOpenGlWaterTextures(OpenGlToolkit param0) {

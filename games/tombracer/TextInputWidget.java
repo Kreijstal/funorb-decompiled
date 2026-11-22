@@ -947,7 +947,7 @@ class TextInputWidget extends FocusableWidget {
         this.field_E = false;
         this.field_G = 0L;
         try {
-          this.field_r = afa.field_c.field_e;
+          this.field_r = OpenGlIndexBufferReference.field_c.field_e;
           this.maxLength = param2;
           this.setText(true, -16719, param0);
           this.field_D = true;

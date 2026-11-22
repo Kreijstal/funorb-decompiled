@@ -8,7 +8,7 @@ final class gb {
         RasterStateFrame var1 = null;
         RasterStateFrame var1Lifetime1;
         if (param0 == -29711) {
-          var1 = (RasterStateFrame) (vt.field_a.pollLast((byte) 22));
+          var1 = (RasterStateFrame) (RasterStateFramePool.freeFrames.pollLast((byte) 22));
           if (var1 == null) {
             var1 = new RasterStateFrame();
           }
@@ -18,7 +18,7 @@ final class gb {
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
         gb.createModel((ModelData) null, -85, (GraphicsToolkit) null);
-        var1Lifetime1 = (RasterStateFrame) (vt.field_a.pollLast((byte) 22));
+        var1Lifetime1 = (RasterStateFrame) (RasterStateFramePool.freeFrames.pollLast((byte) 22));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new RasterStateFrame();
         }
