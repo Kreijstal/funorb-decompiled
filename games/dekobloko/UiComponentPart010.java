@@ -44,7 +44,7 @@ final class UiComponentPart010 extends ComponentDecorator {
           rgbSpriteLocal2 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
           ValidationStatus.performAction1570(true, rgbSpriteLocal2);
           this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           rgbSpriteLocal2.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
           return;
         }
@@ -65,7 +65,7 @@ final class UiComponentPart010 extends ComponentDecorator {
         rgbSpriteLocal1 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
         ValidationStatus.performAction1570(true, rgbSpriteLocal1);
         this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         rgbSpriteLocal1.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
         return;
     }

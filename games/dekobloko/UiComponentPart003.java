@@ -47,7 +47,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
         SoftwareRaster.performAction0648();
         this.performAction0165(-128, 0, 0);
         super.performAction0162(-this.integerState0110 - integerArgument1, -116, integerArgument3, -integerArgument4 - this.integerState0104);
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         NodeHashTable.rgbSpriteState0055.performAction0279(this.integerState0110 + integerArgument1, this.integerState0104 + integerArgument4, this.integerState0074);
         if (integerArgument2 >= -103) {
           this.integerState0074 = -41;

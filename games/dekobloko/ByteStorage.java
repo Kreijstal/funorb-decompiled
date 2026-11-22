@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class MixedSupport082 {
+abstract class ByteStorage {
     static int integerState0514;
     static int[] integerArrayState0157;
     static BufferedFile bufferedFileState0004;
@@ -18,12 +18,12 @@ abstract class MixedSupport082 {
         }
     }
 
-    abstract byte[] computeByteArray0547(int integerArgument1);
+    abstract byte[] getBytes(int integerArgument1);
 
     final static void performAction1061(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
         try {
           if (byteArgument3 >= 0) {
-            MixedSupport082.performAction1060((byte) 1);
+            ByteStorage.performAction1060((byte) 1);
           }
           MixedSupport076.integerState0433 = integerArgument1;
           PcmResampler.integerState0344 = integerArgument2;
@@ -39,7 +39,7 @@ abstract class MixedSupport082 {
         MixedSupport144 mixedSupport144Local1 = null;
         if (byteArgument1 != -5) {
           MixedSupport015 mixedSupport015Local2 = (MixedSupport015) null;
-          MixedSupport082.performAction1061(-94, -9, (byte) -115, (MixedSupport015) null, -10, (MixedSupport015) null);
+          ByteStorage.performAction1061(-94, -9, (byte) -115, (MixedSupport015) null, -10, (MixedSupport015) null);
           mixedSupport144Local1 = (MixedSupport144) (MixedSupport018.nodeDequeState0005.computeHashNode1744(byteArgument1 ^ 113));
           if (mixedSupport144Local1 == null) {
             throw new IllegalStateException();
@@ -60,7 +60,7 @@ abstract class MixedSupport082 {
         MixedSupport118.nodeDequeState0032.performAction1735(mixedSupport144Local3, byteArgument1 ^ -2782);
     }
 
-    abstract void performAction0549(byte[] byteArrayArgument1, boolean booleanArgument2);
+    abstract void setBytes(byte[] byteArrayArgument1, boolean booleanArgument2);
 
     static {
         stringState0351 = "Match by...";

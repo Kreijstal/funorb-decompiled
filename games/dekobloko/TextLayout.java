@@ -54,7 +54,7 @@ abstract class TextLayout {
     final static byte[] computeByteArray0237(boolean booleanArgument1, int integerArgument2, Object objectArgument3) {
         byte[] byteArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
-        MixedSupport082 mixedSupport082Local3 = null;
+        ByteStorage mixedSupport082Local3 = null;
         byte[] stackByteArrayLocal4 = null;
         byte[] stackByteArrayLocal5 = null;
         byte[] stackByteArrayLocal6 = null;
@@ -75,9 +75,9 @@ abstract class TextLayout {
             stackByteArrayLocal4 = SceneWidgetPart006.computeByteArray0773(0, byteArrayLocal1);
             return stackByteArrayLocal4;
           }
-          if (objectArgument3 instanceof MixedSupport082) {
-            mixedSupport082Local3 = (MixedSupport082) (objectArgument3);
-            stackByteArrayLocal6 = mixedSupport082Local3.computeByteArray0547(256);
+          if (objectArgument3 instanceof ByteStorage) {
+            mixedSupport082Local3 = (ByteStorage) (objectArgument3);
+            stackByteArrayLocal6 = mixedSupport082Local3.getBytes(256);
             return stackByteArrayLocal6;
           }
           if (integerArgument2 <= 18) {

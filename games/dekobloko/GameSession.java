@@ -537,10 +537,10 @@ final class GameSession {
                     if (MixedSupport041.integerState0234 >= 7) {
                       this.performAction1326(3, 63, 252);
                     }
-                    if (MixedSupport082.integerState0514 >= 2) {
+                    if (ByteStorage.integerState0514 >= 2) {
                       this.performAction1326(4, -84, 251);
                     }
-                    if (MixedSupport082.integerState0514 >= 3) {
+                    if (ByteStorage.integerState0514 >= 3) {
                       this.performAction1326(5, -93, 250);
                     }
                     if (bucketBoardLocal30.integerState0491 >= 5) {
@@ -1237,7 +1237,7 @@ final class GameSession {
         if (256 > integerLocal3) {
           SoftwareRaster.performAction0641(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 256 - integerLocal3);
         }
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         if (MixedSupport046.integerState0250 >= 150) {
           MatchingFieldValidator.rgbSpriteState0051.performAction0279(15 + integerLocal1, 10 + integerLocal2, integerLocal3);
         } else {

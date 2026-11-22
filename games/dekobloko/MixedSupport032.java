@@ -306,7 +306,7 @@ final class MixedSupport032 {
             MixedSupport032.computeIntegerArray0474(16, 35, (byte) 0);
           }
           MixedSupport105.rgbSpriteState0046.integerState0256 = MatchingFieldValidator.rgbSpriteState0051.integerState0255;
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

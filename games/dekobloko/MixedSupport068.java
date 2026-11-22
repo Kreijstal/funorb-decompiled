@@ -206,11 +206,11 @@ final class MixedSupport068 extends HashNode {
             objectLocal1 = null;
             objectLocal2 = null;
             if (UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001 != null) {
-              MixedSupport082.bufferedFileState0004 = new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001, 5200, 0);
+              ByteStorage.bufferedFileState0004 = new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001, 5200, 0);
               UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0001 = null;
-              objectLocal1 = new MixedSupport069(255, MixedSupport082.bufferedFileState0004, new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0003, 12000, 0), 2097152);
+              objectLocal1 = new MixedSupport069(255, ByteStorage.bufferedFileState0004, new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileState0003, 12000, 0), 2097152);
             }
-            if (MixedSupport082.bufferedFileState0004 != null) {
+            if (ByteStorage.bufferedFileState0004 != null) {
               if (SceneWidgetPart005.bufferedFileArrayState0001 == null) {
                 SceneWidgetPart005.bufferedFileArrayState0001 = new BufferedFile[UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001.length];
               }
@@ -218,7 +218,7 @@ final class MixedSupport068 extends HashNode {
                 SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3] = new BufferedFile(UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3], 12000, 0);
                 UiComponentPart003.platformServiceState0001.boundedRandomAccessFileArrayState0001[integerArgument3] = null;
               }
-              objectLocal2 = new MixedSupport069(integerArgument3, MixedSupport082.bufferedFileState0004, SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3], 2097152);
+              objectLocal2 = new MixedSupport069(integerArgument3, ByteStorage.bufferedFileState0004, SceneWidgetPart005.bufferedFileArrayState0001[integerArgument3], 2097152);
             }
             mixedSupport076Local3 = ProxySocketFactory.js5ArchiveManagerState0001.getArchiveProvider((byte) -86, integerArgument3, (MixedSupport069) (objectLocal2), (MixedSupport069) (objectLocal1), booleanArgument4);
             if (booleanArgument6) {

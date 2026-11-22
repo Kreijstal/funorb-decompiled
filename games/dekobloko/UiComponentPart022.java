@@ -129,7 +129,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
             }
             rgbSpriteLocal17.performAction0259(112, 144, rgbSpriteLocal17.integerState0254 << 4, rgbSpriteLocal17.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal17.integerState0254 >> 1), integerLocal3 - rgbSpriteLocal17.integerState0260, 256);
             return;
           }
@@ -169,7 +169,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
             }
           }
           rgbSpriteLocal20.performAction0259(112, 144, rgbSpriteLocal20.integerState0254 << 4, rgbSpriteLocal20.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal20.integerState0254 >> 1), integerLocal46 - rgbSpriteLocal20.integerState0260, 256);
           return;
         }
@@ -217,7 +217,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
             }
             rgbSpriteLocal23.performAction0259(112, 144, rgbSpriteLocal23.integerState0254 << 4, rgbSpriteLocal23.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal23.integerState0254 >> 1), integerLocal37 - rgbSpriteLocal23.integerState0260, 256);
             return;
           }
@@ -257,7 +257,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
             }
           }
           rgbSpriteLocal26.performAction0259(112, 144, rgbSpriteLocal26.integerState0254 << 4, rgbSpriteLocal26.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal26.integerState0254 >> 1), integerLocal49 - rgbSpriteLocal26.integerState0260, 256);
           return;
         }
@@ -304,7 +304,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
             }
           }
           rgbSpriteLocal32.performAction0259(112, 144, rgbSpriteLocal32.integerState0254 << 4, rgbSpriteLocal32.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal32.integerState0254 >> 1), integerLocal38 - rgbSpriteLocal32.integerState0260, 256);
           return;
         }
@@ -347,7 +347,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
           }
         }
         rgbSpriteLocal29.performAction0259(112, 144, rgbSpriteLocal29.integerState0254 << 4, rgbSpriteLocal29.integerState0260 << 4, -this.integerState0574 << 10, 4096);
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal29.integerState0254 >> 1), integerLocal39 - rgbSpriteLocal29.integerState0260, 256);
         return;
     }

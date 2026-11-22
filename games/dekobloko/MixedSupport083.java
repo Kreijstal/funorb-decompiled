@@ -263,7 +263,7 @@ final class MixedSupport083 {
                       sharedTailLocal62 = (integerLocal49 != 0);
                     }
                     if (sharedTailLocal62) {
-                      stringLocal41 = NodeHashTableIterator.substituteIndexedPlaceholders(119, MixedSupport044.stringState0187, new String[]{(String) (objectLocal35)});
+                      stringLocal41 = NodeHashTableIterator.substituteIndexedPlaceholders(119, DirectByteStorage.stringState0187, new String[]{(String) (objectLocal35)});
                     }
                   } else {
                     stringLocal39 = GameDomainSupport003.stringState0235;

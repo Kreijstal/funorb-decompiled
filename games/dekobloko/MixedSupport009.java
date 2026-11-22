@@ -229,7 +229,7 @@ final class MixedSupport009 extends MixedSupport001 {
             }
           }
           this.mixedSupport118State0001.performAction1541(-2, uiComponentArgument5, integerArgument2, this, integerArgument3);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           if (byteArgument4 > -60) {
             uiComponentLocal9 = (UiComponent) null;
             this.performAction0017(true, -61, 21, (byte) -12, (UiComponent) null);

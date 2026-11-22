@@ -197,9 +197,9 @@ final class MixedSupport036 {
             if (NetworkArchiveRequestManager.cacheWorkQueueState0003 != null) {
               NetworkArchiveRequestManager.cacheWorkQueueState0003.performAction0738((byte) -98);
             }
-            if (null != MixedSupport082.bufferedFileState0004) {
+            if (null != ByteStorage.bufferedFileState0004) {
               try {
-                MixedSupport082.bufferedFileState0004.close((byte) 124);
+                ByteStorage.bufferedFileState0004.close((byte) 124);
               } catch (java.io.IOException caughtParameterLocal8) {
                 caughtExceptionLocal6 = caughtParameterLocal8;
                 iOException = (IOException) (Object) caughtExceptionLocal6;

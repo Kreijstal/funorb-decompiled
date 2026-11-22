@@ -189,7 +189,7 @@ final class UiComponentPart029 extends ComponentDecorator {
         try {
           ThemeTips.mixedSupport119State0001 = MusicTrack.computeMixedSupport1191663(0, "");
           ThemeTips.mixedSupport119State0001.performAction1562(-21, false);
-          MixedSupport044.performAction0548(resourceArchiveArgument1, resourceArchiveArgument2, resourceArchiveArgument5, 0);
+          DirectByteStorage.performAction0548(resourceArchiveArgument1, resourceArchiveArgument2, resourceArchiveArgument5, 0);
           UiComponentPart003.performAction0168((byte) -121);
           GameAssets.mixedSupport004State0004 = MixedSupport127.mixedSupport004State0005;
           if (byteArgument3 != 76) {

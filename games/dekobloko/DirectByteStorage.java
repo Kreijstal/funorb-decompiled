@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport044 extends MixedSupport082 {
+final class DirectByteStorage extends ByteStorage {
     static String stringState0187;
     static SceneWidget sceneWidgetState0034;
-    private java.nio.ByteBuffer byteBufferState0001;
+    private java.nio.ByteBuffer buffer;
 
-    final byte[] computeByteArray0547(int integerArgument1) {
+    final byte[] getBytes(int integerArgument1) {
         if (integerArgument1 != 256) {
           return (byte[]) null;
         }
-        byte[] byteArrayLocal1 = new byte[this.byteBufferState0001.capacity()];
+        byte[] byteArrayLocal1 = new byte[this.buffer.capacity()];
         byte[] byteArrayLocal2 = byteArrayLocal1;
-        this.byteBufferState0001.position(0);
-        this.byteBufferState0001.get(byteArrayLocal1);
+        this.buffer.position(0);
+        this.buffer.get(byteArrayLocal1);
         return byteArrayLocal1;
     }
 
@@ -83,33 +83,33 @@ final class MixedSupport044 extends MixedSupport082 {
           rgbSpriteLocal12 = new RgbSprite(rgbSpriteLocal1.integerState0258 - 2 * integerLocal17, integerLocal17);
           rgbSpriteLocal12.performAction0256();
           rgbSpriteLocal1.performAction0290(-integerLocal17, 0);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           MixedSupport110.rgbSpriteArrayState0024 = new RgbSprite[]{rgbSpriteLocal9, rgbSpriteLocal12, rgbSpriteLocal11};
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "fn.F(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument2 != null ? "{...}" : "null") + ',' + (resourceArchiveArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ')');
         }
     }
 
-    MixedSupport044() {
+    DirectByteStorage() {
     }
 
     public static void performAction0550(int integerArgument1) {
         if (integerArgument1 != 0) {
           ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-          MixedSupport044.performAction0548((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 51);
+          DirectByteStorage.performAction0548((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 51);
         }
         sceneWidgetState0034 = null;
         stringState0187 = null;
     }
 
-    final void performAction0549(byte[] byteArrayArgument1, boolean booleanArgument2) {
-        this.byteBufferState0001 = java.nio.ByteBuffer.allocateDirect(byteArrayArgument1.length);
-        this.byteBufferState0001.position(0);
+    final void setBytes(byte[] byteArrayArgument1, boolean booleanArgument2) {
+        this.buffer = java.nio.ByteBuffer.allocateDirect(byteArrayArgument1.length);
+        this.buffer.position(0);
         if (!booleanArgument2) {
           return;
         }
         try {
-          this.byteBufferState0001.put(byteArrayArgument1);
+          this.buffer.put(byteArrayArgument1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "fn.A(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
         }

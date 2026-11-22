@@ -117,17 +117,17 @@
       "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
       "sources": {
         "files": 343,
-        "sha256": "4c78a75ea6cd89fa669b33545e255e82a8bd598e15530f98737ef6a591a5908a"
+        "sha256": "7ebb6b444ecfadd6b2c223858b24c135a524732ba042b214ee9dd19c423b9445"
       },
       "dictionary": {
         "path": "decompilation/dekobloko-naming.json",
-        "sha256": "04e7cb5447a2b41ee5867bd83d5824d41768c601be03ebb49734267d86e367fe"
+        "sha256": "903832ac04dc6a7e5247ee4c2a9928e7cfd41aee67aff45b03bd4c86f86ce97a"
       },
       "readingGuide": {
         "path": "games/dekobloko/README.md",
-        "sha256": "e3ba06c5450e0cdd0c1c93efba5f5353902741c2749c6affb46b9188941a2a77"
+        "sha256": "1e951527c400be3a041fa0a1ca381a97edc18bd404f73965c35190a5e413c4a0"
       },
-      "rulesSha256": "6a79f6e6cfdaa1ef0a1515c05ba95419c19aa2c4cbe1d85dcd5ed8363a08e474",
+      "rulesSha256": "49435c9fc8152f8c21d995d24a8f1c5f0a4b4aa7f6be40db76954c0ddeee4206",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
@@ -12086,7 +12086,7 @@
         },
         "publishedSources": {
           "files": 343,
-          "sha256": "4c78a75ea6cd89fa669b33545e255e82a8bd598e15530f98737ef6a591a5908a"
+          "sha256": "7ebb6b444ecfadd6b2c223858b24c135a524732ba042b214ee9dd19c423b9445"
         }
       },
       "drphlogistonsavestheearth": {

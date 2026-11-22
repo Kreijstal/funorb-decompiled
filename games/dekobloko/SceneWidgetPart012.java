@@ -166,7 +166,7 @@ final class SceneWidgetPart012 extends SceneWidget {
           UiComponentPart019.performAction1048(5);
           return;
         }
-        NetworkSupport001.sceneWidgetState0003.performAction1768(MixedSupport044.sceneWidgetState0034, -16834);
+        NetworkSupport001.sceneWidgetState0003.performAction1768(DirectByteStorage.sceneWidgetState0034, -16834);
         NetworkSupport001.sceneWidgetState0003.performAction1768(RenderingSupport004.sceneWidgetState0039, -16834);
         MixedSupport023.mixedSupport006State0001 = new MixedSupport006(MixedSupport127.stringState0554, NetworkSupport001.sceneWidgetState0003);
         UiComponentPart011.sceneWidgetState0035 = new SceneWidget(0L, (SceneWidget) null);

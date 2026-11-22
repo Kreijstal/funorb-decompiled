@@ -28,7 +28,7 @@ final class GameDomainSupport001 {
           }
           UiComponentPart025.rgbSpriteState0045.performAction0256();
           rgbSpriteLocal1.performAction0285(0, 0);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "bb.E(" + booleanArgument1 + ')');
         }

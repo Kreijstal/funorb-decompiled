@@ -194,7 +194,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
             integerLocal6 = stackIntegerLocal9 + Math.min(stackIntegerLocal10, Math.min(stackIntegerLocal11, stackIntegerLocal12));
             RenderingSupport004.performAction0579(integerArgument5 + uiComponentArgument1.integerState0104, 20763, uiComponentArgument1.integerState0110 + (integerArgument4 + uiComponentArgument1.integerState0107), uiComponentArgument1.integerState0110 + integerArgument4, uiComponentArgument1.integerState0104 + integerArgument5 + uiComponentArgument1.integerState0108);
             RenderingSupport001.networkSupport002State0001.performAction0176(integerLocal4, integerLocal5, integerLocal4, this.integerState0012, (byte) 64, integerLocal6);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
           }
           if (integerArgument3 != 1) {
             this.integerState0007 = -31;
@@ -464,7 +464,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
               integerLocal15 = stackIntegerLocal3;
               RenderingSupport001.networkSupport002State0001.performAction0174((byte) -115, textLineMetricsLocal13.topY + uiComponentArgument6.integerState0105 + (integerArgument3 - (-uiComponentArgument6.integerState0104 - this.integerState0003)), this.integerState0007 >>> 24, -integerLocal14 + integerLocal15, textLineMetricsLocal13.bottomY, this.integerState0007, this.computeInteger0022(uiComponentArgument6, integerLocal14, 96, integerArgument4));
             }
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
           }
           if (integerArgument5 > -89) {
             this.integerState0001 = -114;
@@ -665,7 +665,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
               this.bitmapFontState0001.performAction1069(this.computeString0020(uiComponentArgument5, (byte) -50), this.computeInteger0022(uiComponentArgument5, integerArgument1, 81, integerArgument4), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
             }
           }
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal4 = caughtParameterLocal13;

@@ -31,7 +31,7 @@ final class ClientException {
           NetworkSupport001.bitmapFontState0003 = bitmapFontArgument9;
           MixedSupport042.performAction0539(integerArgument15, integerArgument18, integerArgument20, 0, integerArgument11);
           MixedSupport142.performAction1758(mixedSupport015Argument5, integerArgument12, integerArgument2, -11);
-          MixedSupport082.performAction1061(integerArgument10, integerArgument16, (byte) -118, mixedSupport015Argument6, integerArgument3, mixedSupport015Argument4);
+          ByteStorage.performAction1061(integerArgument10, integerArgument16, (byte) -118, mixedSupport015Argument6, integerArgument3, mixedSupport015Argument4);
           ValidationStatus.performAction1568(integerArgument8, -25073, integerArgument19);
           MixedSupport106.performAction1385(integerArgument17, -115, integerArgument7, integerArgument13);
           return;

@@ -216,8 +216,8 @@ final class BucketBoard {
             }
             integerLocal5 = (1879048192 & integerLocal4) / 268435456;
             if (8 == (integerLocal4 & 24) &&
-              integerLocal5 > MixedSupport082.integerState0514) {
-              MixedSupport082.integerState0514 = integerLocal5;
+              integerLocal5 > ByteStorage.integerState0514) {
+              ByteStorage.integerState0514 = integerLocal5;
             }
             this.integerState0467 = integerArgument3;
             if ((-1879048193 & integerLocal4) == 23 &&
@@ -1088,7 +1088,7 @@ final class BucketBoard {
         int integerLocal51;
         integerLocal28 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport082.integerState0514 = 0;
+          ByteStorage.integerState0514 = 0;
           if (integerArgument2 <= 124) {
             return;
           }

@@ -257,9 +257,9 @@ final class BufferedSocket implements Runnable {
     }
 
     final static Object computeObject1375(byte[] byteArrayArgument1, int integerArgument2, boolean booleanArgument3) {
-        MixedSupport044 mixedSupport044Local1 = null;
+        DirectByteStorage mixedSupport044Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
-        MixedSupport044 stackMixedSupport044Local3 = null;
+        DirectByteStorage stackMixedSupport044Local3 = null;
         byte[] stackByteArrayLocal4 = null;
         byte[] stackByteArrayLocal5 = null;
         RuntimeException stackRuntimeExceptionLocal6 = null;
@@ -271,8 +271,8 @@ final class BufferedSocket implements Runnable {
             return null;
           }
           if (136 < byteArrayArgument1.length) {
-            mixedSupport044Local1 = new MixedSupport044();
-            ((MixedSupport082) ((Object) mixedSupport044Local1)).performAction0549(byteArrayArgument1, true);
+            mixedSupport044Local1 = new DirectByteStorage();
+            ((ByteStorage) ((Object) mixedSupport044Local1)).setBytes(byteArrayArgument1, true);
             stackMixedSupport044Local3 = mixedSupport044Local1;
             return stackMixedSupport044Local3;
           }

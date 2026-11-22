@@ -309,9 +309,9 @@ abstract class ResourceSupport002 implements CallbackContract011 {
           !(integerArgument2 <= MixedSupport080.integerArrayState0150.length)) {
           MixedSupport080.integerArrayState0150 = new int[2 * integerArgument2];
         }
-        if (null == MixedSupport082.integerArrayState0157 ||
-          !(integerArgument2 <= MixedSupport082.integerArrayState0157.length)) {
-          MixedSupport082.integerArrayState0157 = new int[2 * integerArgument2];
+        if (null == ByteStorage.integerArrayState0157 ||
+          !(integerArgument2 <= ByteStorage.integerArrayState0157.length)) {
+          ByteStorage.integerArrayState0157 = new int[2 * integerArgument2];
         }
         if (null == MixedSupport015.integerArrayState0020 ||
           !(MixedSupport015.integerArrayState0020.length >= integerArgument2)) {

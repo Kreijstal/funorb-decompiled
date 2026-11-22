@@ -134,7 +134,7 @@ final class MixedSupport017 {
                 }
               }
             }
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             return;
           }
           stackSceneWidgetLocal31 = UiComponentPart011.sceneWidgetState0035;
@@ -191,7 +191,7 @@ final class MixedSupport017 {
             }
           }
         }
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
     }
 
     static {

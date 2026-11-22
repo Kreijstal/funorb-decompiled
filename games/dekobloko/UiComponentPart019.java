@@ -79,7 +79,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
         UiComponentPart033.integerState0934 = SoftwareRaster.integerState0285;
         UiComponentPart022.performAction1206((byte) 115);
         MixedSupport023.mixedSupport006State0001.performAction0066(UiComponentPart011.sceneWidgetState0035.integerState0915 - 42, UiComponentPart011.sceneWidgetState0035.integerState0896, 0, 107, 0);
-        MixedSupport044.sceneWidgetState0034.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
+        DirectByteStorage.sceneWidgetState0034.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
         int integerLocal1 = ComponentContainer.integerState0377 + 2;
         RenderingSupport004.sceneWidgetState0039.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, integerArgument1 ^ 5, !MixedSupport097.booleanState0133 ? 0 : integerLocal1, -(!MixedSupport097.booleanState0133 ? 0 : integerLocal1) + NetworkSupport001.sceneWidgetState0003.integerState0915, 0);
         RenderingSupport001.performAction0139((byte) -103);
@@ -192,8 +192,8 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           sceneWidgetLocal45 = sceneWidgetLocal44;
           GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.integerState0885 = 1;
           sceneWidgetLocal45.integerState0916 = 1;
-          MixedSupport044.sceneWidgetState0034 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
-          MixedSupport044.sceneWidgetState0034.integerState0916 = 1;
+          DirectByteStorage.sceneWidgetState0034 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
+          DirectByteStorage.sceneWidgetState0034.integerState0916 = 1;
           IterableNodeCollection.sceneWidgetState0126 = new SceneWidget(0L, MixedSupport053.sceneWidgetState0047, MixedSupport096.stringState0411.toUpperCase());
           MixedSupport095.sceneWidgetState0095 = new SceneWidget(0L, TranslatedUiText.sceneWidgetState0086, RenderingSupport006.stringState0267.toUpperCase());
           MixedSupport077.sceneWidgetState0074 = new SceneWidget(0L, RenderingSupport001.sceneWidgetState0005);
@@ -286,7 +286,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           MixedSupport132.sceneWidgetArrayState0008[2] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport009.stringState0040);
           MixedSupport103.sceneWidgetPart009ArrayArrayState0001[2] = new SceneWidgetPart009[]{new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220), new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[0], GameDomainSupport004.stringState0284), new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[1], MixedSupport051.stringState0214)};
           if (SceneWidgetPart007.integerState0506 > 1) {
-            MixedSupport132.sceneWidgetArrayState0008[3] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport082.stringState0351);
+            MixedSupport132.sceneWidgetArrayState0008[3] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, ByteStorage.stringState0351);
             sceneWidgetPart009ArrayLocal2 = new SceneWidgetPart009[SceneWidgetPart007.integerState0506 + 1];
             MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3] = sceneWidgetPart009ArrayLocal2;
             MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][0] = new SceneWidgetPart009(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);

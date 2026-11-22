@@ -55,7 +55,7 @@ final class UiComponentPart011 extends InteractiveComponent {
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
             }
             rgbSpriteLocal8.performAction0259(112, 144, rgbSpriteLocal8.integerState0254 << 4, rgbSpriteLocal8.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal8.integerState0254, -rgbSpriteLocal8.integerState0260 + integerLocal2, 256);
             return;
           }
@@ -94,7 +94,7 @@ final class UiComponentPart011 extends InteractiveComponent {
             }
           }
           rgbSpriteLocal9.performAction0259(112, 144, rgbSpriteLocal9.integerState0254 << 4, rgbSpriteLocal9.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal9.integerState0254, -rgbSpriteLocal9.integerState0260 + integerLocal2, 256);
           return;
         }
@@ -134,7 +134,7 @@ final class UiComponentPart011 extends InteractiveComponent {
           }
         }
         rgbSpriteLocal14.performAction0259(112, 144, rgbSpriteLocal14.integerState0254 << 4, rgbSpriteLocal14.integerState0260 << 4, -this.integerState0239 << 10, 4096);
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal14.integerState0254, -rgbSpriteLocal14.integerState0260 + integerLocal2, 256);
     }
 

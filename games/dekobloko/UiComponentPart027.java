@@ -57,7 +57,7 @@ final class UiComponentPart027 extends UiComponent {
         if (65536 > this.integerState0680) {
           RenderingSupport004.performAction0579(integerLocal2, 20763, integerLocal1 + this.integerState0107, integerLocal1 + (this.integerState0680 * this.integerState0107 >> 16), this.integerState0108 + integerLocal2);
           this.performAction1397(-2044, integerLocal2, integerLocal1, this.rgbSpriteArrayState0023[1]);
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
         }
     }
 
@@ -81,7 +81,7 @@ final class UiComponentPart027 extends UiComponent {
             SoftwareRaster.performAction0638(integerLocal2, integerLocal1, integerLocal4 << 8 | integerLocal4 | integerLocal4 << 16);
           }
         }
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         if (byteArgument1 > -73) {
           this.integerState0676 = -48;
         }
@@ -121,7 +121,7 @@ final class UiComponentPart027 extends UiComponent {
           SoftwareRaster.performAction0639(integerLocal2 + this.integerState0675, integerLocal1, this.integerState0675, integerLocal11);
           SoftwareRaster.performAction0639(-this.integerState0675 + integerLocal2, integerLocal1, this.integerState0675, integerLocal11);
         }
-        MixedSupport082.performAction1060((byte) -5);
+        ByteStorage.performAction1060((byte) -5);
         return rgbSpriteLocal12;
     }
 
@@ -189,13 +189,13 @@ final class UiComponentPart027 extends UiComponent {
           for (integerLocal1 = integerArgument3 - this.integerState0679; integerLocal6 > integerLocal1; integerLocal1 = integerLocal1 + rgbSpriteArgument4.integerState0258) {
             rgbSpriteArgument4.performAction0278(integerLocal1, integerArgument2);
           }
-          MixedSupport082.performAction1060((byte) -5);
+          ByteStorage.performAction1060((byte) -5);
           if (integerArgument3 + this.rgbSpriteState0048.integerState0258 >= SoftwareRaster.integerState0282) {
             ValidationStatus.performAction1570(true, this.rgbSpriteState0050);
             rgbSpriteArgument4.performAction0278(-this.integerState0679, 0);
             rgbSpriteArgument4.performAction0278(-this.integerState0679 + this.integerState0675 * 2, 0);
             this.rgbSpriteState0049.performAction0294(0, 0);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             this.rgbSpriteState0050.performAction0278(integerArgument3, integerArgument2);
           }
           if (-this.rgbSpriteState0048.integerState0258 + integerLocal6 <= SoftwareRaster.integerState0281) {
@@ -205,7 +205,7 @@ final class UiComponentPart027 extends UiComponent {
             rgbSpriteArgument4.performAction0278(-integerLocal8, 0);
             rgbSpriteArgument4.performAction0278(2 * this.integerState0675 - integerLocal8, 0);
             this.rgbSpriteState0048.performAction0294(0, 0);
-            MixedSupport082.performAction1060((byte) -5);
+            ByteStorage.performAction1060((byte) -5);
             this.rgbSpriteState0050.performAction0278(integerLocal6 - this.rgbSpriteState0048.integerState0258, integerArgument2);
             return;
           }

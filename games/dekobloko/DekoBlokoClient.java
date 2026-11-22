@@ -324,7 +324,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             }
           }
           scanLoop2: while (true) {
-            stackBooleanLocal4 = MixedSupport140.computeBoolean1728(MixedSupport082.integerArrayState0158, 0);
+            stackBooleanLocal4 = MixedSupport140.computeBoolean1728(ByteStorage.integerArrayState0158, 0);
             while (true) {
               if (stackBooleanLocal4) {
                 stackIntegerLocal19 = ~HashNode.integerState0070;
@@ -1458,7 +1458,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         PlatformSupport002.clearStaticReferences(16057);
         MixedSupport133.clearStaticReferences((byte) 86);
         MixedSupport091.clearStaticReferences(true);
-        MixedSupport082.clearStaticReferences(false);
+        ByteStorage.clearStaticReferences(false);
         if (integerArgument1 < 75) {
           return;
         }
@@ -1528,7 +1528,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           UiComponentPart020.performAction1162(true);
           UiComponentPart032.performAction1702(-20);
           RichTextLayout.performAction0396((byte) -37);
-          MixedSupport044.performAction0550(0);
+          DirectByteStorage.performAction0550(0);
           NetworkSupport006.clearStaticReferences(false);
           UiComponentPart029.performAction1484(11344);
           UiComponentPart015.performAction0705(true);
@@ -1871,30 +1871,30 @@ public final class DekoBlokoClient extends FunOrbClient {
           GameAssets.pcmStreamMixerState0004 = new PcmStreamMixer();
           SceneWidgetNode.pcmPlayerState0002.performAction0487(GameAssets.pcmStreamMixerState0004);
           this.performAction0111(false, true, true, false, true, true, false);
-          MixedSupport082.integerArrayState0158[66] = 2;
-          MixedSupport082.integerArrayState0158[74] = 1;
-          MixedSupport082.integerArrayState0158[64] = -2;
-          MixedSupport082.integerArrayState0158[68] = 1;
-          MixedSupport082.integerArrayState0158[10] = -1;
-          MixedSupport082.integerArrayState0158[70] = 1;
-          MixedSupport082.integerArrayState0158[73] = 1;
-          MixedSupport082.integerArrayState0158[58] = -2;
-          MixedSupport082.integerArrayState0158[9] = -1;
-          MixedSupport082.integerArrayState0158[62] = 2;
-          MixedSupport082.integerArrayState0158[72] = 1;
+          ByteStorage.integerArrayState0158[66] = 2;
+          ByteStorage.integerArrayState0158[74] = 1;
+          ByteStorage.integerArrayState0158[64] = -2;
+          ByteStorage.integerArrayState0158[68] = 1;
+          ByteStorage.integerArrayState0158[10] = -1;
+          ByteStorage.integerArrayState0158[70] = 1;
+          ByteStorage.integerArrayState0158[73] = 1;
+          ByteStorage.integerArrayState0158[58] = -2;
+          ByteStorage.integerArrayState0158[9] = -1;
+          ByteStorage.integerArrayState0158[62] = 2;
+          ByteStorage.integerArrayState0158[72] = 1;
           MixedSupport009.integerArrayArrayState0004 = MouseWheelInput.integerArrayArrayState0010;
-          MixedSupport082.integerArrayState0158[71] = 1;
-          MixedSupport082.integerArrayState0158[63] = -1;
-          MixedSupport082.integerArrayState0158[59] = -2;
-          MixedSupport082.integerArrayState0158[65] = 1;
-          MixedSupport082.integerArrayState0158[75] = -1;
-          MixedSupport082.integerArrayState0158[76] = 1;
-          MixedSupport082.integerArrayState0158[69] = 1;
+          ByteStorage.integerArrayState0158[71] = 1;
+          ByteStorage.integerArrayState0158[63] = -1;
+          ByteStorage.integerArrayState0158[59] = -2;
+          ByteStorage.integerArrayState0158[65] = 1;
+          ByteStorage.integerArrayState0158[75] = -1;
+          ByteStorage.integerArrayState0158[76] = 1;
+          ByteStorage.integerArrayState0158[69] = 1;
           MixedSupport062.integerArrayArrayState0012 = UiComponentPart008.integerArrayArrayState0007;
           MixedSupport127.booleanState0191 = true;
           SceneWidgetPart007.integerArrayArrayState0017 = MixedSupport042.integerArrayArrayState0008;
-          MixedSupport082.integerArrayState0158[61] = -2;
-          MixedSupport082.integerArrayState0158[67] = -1;
+          ByteStorage.integerArrayState0158[61] = -2;
+          ByteStorage.integerArrayState0158[67] = -1;
           UiComponentPart022.rgbSpriteState0038 = new RgbSprite(640, 480);
           InputAdapter003.rgbSpriteState0054 = new RgbSprite(640, 480);
           MixedSupport006.integerState0039 = 1;

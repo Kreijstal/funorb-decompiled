@@ -1166,10 +1166,10 @@
     {
       "symbol": "C:fn",
       "originalName": "fn",
-      "to": "MixedSupport044",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport044"
+      "to": "DirectByteStorage",
+      "evidence": "Complete instance field shape/empty constructor and both concrete bytes bodies plus abstract get/set declarations reviewed. Direct ByteBuffer allocation/capacity-length copying establish storage roles. Preserve unrelated statics and all guard/partial-state behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectByteStorage"
     },
     {
       "symbol": "C:g",
@@ -1966,10 +1966,10 @@
     {
       "symbol": "C:mk",
       "originalName": "mk",
-      "to": "MixedSupport082",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport082"
+      "to": "ByteStorage",
+      "evidence": "Complete instance field shape/empty constructor and both concrete bytes bodies plus abstract get/set declarations reviewed. Direct ByteBuffer allocation/capacity-length copying establish storage roles. Preserve unrelated statics and all guard/partial-state behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ByteStorage"
     },
     {
       "symbol": "C:ml",
@@ -9705,7 +9705,7 @@
       "to": "stringState0187",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport044.stringState0187:Ljava/lang/String;"
+      "renamedSymbol": "F:DirectByteStorage.stringState0187:Ljava/lang/String;"
     },
     {
       "symbol": "F:fn.field_g:Lw;",
@@ -9713,15 +9713,15 @@
       "to": "sceneWidgetState0034",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport044.sceneWidgetState0034:LSceneWidget;"
+      "renamedSymbol": "F:DirectByteStorage.sceneWidgetState0034:LSceneWidget;"
     },
     {
       "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
       "originalName": "field_h",
-      "to": "byteBufferState0001",
-      "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport044.byteBufferState0001:Ljava/nio/ByteBuffer;"
+      "to": "buffer",
+      "evidence": "Sole instance ByteBuffer allocated directly and read/written by bytes operations; preserve nullable/guard states.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;"
     },
     {
       "symbol": "F:g.field_K:Ljava/lang/String;",
@@ -17113,7 +17113,7 @@
       "to": "stringState0351",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport082.stringState0351:Ljava/lang/String;"
+      "renamedSymbol": "F:ByteStorage.stringState0351:Ljava/lang/String;"
     },
     {
       "symbol": "F:mk.field_b:[I",
@@ -17121,7 +17121,7 @@
       "to": "integerArrayState0157",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport082.integerArrayState0157:[I"
+      "renamedSymbol": "F:ByteStorage.integerArrayState0157:[I"
     },
     {
       "symbol": "F:mk.field_c:[I",
@@ -17129,7 +17129,7 @@
       "to": "integerArrayState0158",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport082.integerArrayState0158:[I"
+      "renamedSymbol": "F:ByteStorage.integerArrayState0158:[I"
     },
     {
       "symbol": "F:mk.field_d:Lnh;",
@@ -17137,7 +17137,7 @@
       "to": "bufferedFileState0004",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport082.bufferedFileState0004:LBufferedFile;"
+      "renamedSymbol": "F:ByteStorage.bufferedFileState0004:LBufferedFile;"
     },
     {
       "symbol": "F:mk.field_e:I",
@@ -17145,7 +17145,7 @@
       "to": "integerState0514",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport082.integerState0514:I"
+      "renamedSymbol": "F:ByteStorage.integerState0514:I"
     },
     {
       "symbol": "F:ml$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
@@ -58961,7 +58961,7 @@
       "to": "byteArrayLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.computeByteArray0547(I)[B#0"
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#0"
     },
     {
       "symbol": "L:fn.a(I)[B#1",
@@ -58969,7 +58969,7 @@
       "to": "byteArrayLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.computeByteArray0547(I)[B#1"
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#1"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#0",
@@ -58977,7 +58977,7 @@
       "to": "rgbSpriteLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#1",
@@ -58985,7 +58985,7 @@
       "to": "indexedSpriteArrayLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#10",
@@ -58993,7 +58993,7 @@
       "to": "rgbSpriteLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#10"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#10"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#11",
@@ -59001,7 +59001,7 @@
       "to": "rgbSpriteLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#11"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#11"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#12",
@@ -59009,7 +59009,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#12"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#12"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#13",
@@ -59017,7 +59017,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#13"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#13"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#14",
@@ -59025,7 +59025,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#14"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#14"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#15",
@@ -59033,7 +59033,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#15"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#15"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#16",
@@ -59041,7 +59041,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#16"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#16"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#17",
@@ -59049,7 +59049,7 @@
       "to": "indexedSpriteArrayLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#17"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#17"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#2",
@@ -59057,7 +59057,7 @@
       "to": "indexedSpriteArrayArrayLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#3",
@@ -59065,7 +59065,7 @@
       "to": "integerArrayArrayLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#4",
@@ -59073,7 +59073,7 @@
       "to": "integerArrayArrayLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#4"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#4"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#5",
@@ -59081,7 +59081,7 @@
       "to": "integerArrayArrayLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#5"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#5"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#6",
@@ -59089,7 +59089,7 @@
       "to": "indexedSpriteArrayLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#6"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#6"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#7",
@@ -59097,7 +59097,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#7"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#7"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#8",
@@ -59105,7 +59105,7 @@
       "to": "rgbSpriteLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#8"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#8"
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#9",
@@ -59113,7 +59113,7 @@
       "to": "rgbSpriteLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#9"
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#9"
     },
     {
       "symbol": "L:fn.b(I)V#0",
@@ -59121,7 +59121,7 @@
       "to": "resourceArchiveLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport044.performAction0550(I)V#0"
+      "renamedSymbol": "L:DirectByteStorage.performAction0550(I)V#0"
     },
     {
       "symbol": "L:g.a(IIII)V#0",
@@ -95585,7 +95585,7 @@
       "to": "mixedSupport144Local1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#0"
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#0"
     },
     {
       "symbol": "L:mk.a(B)V#1",
@@ -95593,7 +95593,7 @@
       "to": "mixedSupport015Local2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#1"
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#1"
     },
     {
       "symbol": "L:mk.a(B)V#2",
@@ -95601,7 +95601,7 @@
       "to": "mixedSupport144Local3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#2"
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#2"
     },
     {
       "symbol": "L:ml$1$CfrPartitionedBody.run()V#0",
@@ -152334,10 +152334,10 @@
     {
       "symbol": "M:fn.a(I)[B",
       "originalName": "a",
-      "to": "computeByteArray0547",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport044.computeByteArray0547(I)[B"
+      "to": "getBytes",
+      "evidence": "Complete concrete body and abstract declaration reviewed. Getter valid256 allocates capacity-length array, positions0 and gets bytes; invalid returns null before allocation. Setter allocates/positions before false guard early return, true writes input in wrapped try. Preserve all ordering, null input failures and exception context.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectByteStorage.getBytes(I)[B"
     },
     {
       "symbol": "M:fn.a(Lji;Lji;Lji;I)V",
@@ -152345,15 +152345,15 @@
       "to": "performAction0548",
       "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V"
+      "renamedSymbol": "M:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V"
     },
     {
       "symbol": "M:fn.a([BZ)V",
       "originalName": "a",
-      "to": "performAction0549",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport044.performAction0549([BZ)V"
+      "to": "setBytes",
+      "evidence": "Complete concrete body and abstract declaration reviewed. Getter valid256 allocates capacity-length array, positions0 and gets bytes; invalid returns null before allocation. Setter allocates/positions before false guard early return, true writes input in wrapped try. Preserve all ordering, null input failures and exception context.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectByteStorage.setBytes([BZ)V"
     },
     {
       "symbol": "M:fn.b(I)V",
@@ -152361,7 +152361,7 @@
       "to": "performAction0550",
       "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport044.performAction0550(I)V"
+      "renamedSymbol": "M:DirectByteStorage.performAction0550(I)V"
     },
     {
       "symbol": "M:g.a(I)V",
@@ -157921,15 +157921,15 @@
       "to": "performAction1060",
       "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport082.performAction1060(B)V"
+      "renamedSymbol": "M:ByteStorage.performAction1060(B)V"
     },
     {
       "symbol": "M:mk.a(I)[B",
       "originalName": "a",
-      "to": "computeByteArray0547",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport082.computeByteArray0547(I)[B"
+      "to": "getBytes",
+      "evidence": "Complete concrete body and abstract declaration reviewed. Getter valid256 allocates capacity-length array, positions0 and gets bytes; invalid returns null before allocation. Setter allocates/positions before false guard early return, true writes input in wrapped try. Preserve all ordering, null input failures and exception context.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteStorage.getBytes(I)[B"
     },
     {
       "symbol": "M:mk.a(IIBLcc;ILcc;)V",
@@ -157937,7 +157937,7 @@
       "to": "performAction1061",
       "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V"
+      "renamedSymbol": "M:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V"
     },
     {
       "symbol": "M:mk.a(Z)V",
@@ -157945,15 +157945,15 @@
       "to": "clearStaticReferences",
       "evidence": "Reviewed complete statement classification and resolved field bindings: 5 null writes to 4 own static reference fields; only parameter guards, returns and braces otherwise. Preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 a24f8e32ec720c0751bd0669f5062d90e6d25f9c89a1bbdba8e3ffa8e16c31ac.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport082.clearStaticReferences(Z)V"
+      "renamedSymbol": "M:ByteStorage.clearStaticReferences(Z)V"
     },
     {
       "symbol": "M:mk.a([BZ)V",
       "originalName": "a",
-      "to": "performAction0549",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport082.performAction0549([BZ)V"
+      "to": "setBytes",
+      "evidence": "Complete concrete body and abstract declaration reviewed. Getter valid256 allocates capacity-length array, positions0 and gets bytes; invalid returns null before allocation. Setter allocates/positions before false guard early return, true writes input in wrapped try. Preserve all ordering, null input failures and exception context.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteStorage.setBytes([BZ)V"
     },
     {
       "symbol": "M:ml.a(B)V",
@@ -182345,7 +182345,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.computeByteArray0547(I)[B#0"
+      "renamedSymbol": "P:DirectByteStorage.getBytes(I)[B#0"
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#0",
@@ -182353,7 +182353,7 @@
       "to": "resourceArchiveArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0"
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0"
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#1",
@@ -182361,7 +182361,7 @@
       "to": "resourceArchiveArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1"
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1"
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#2",
@@ -182369,7 +182369,7 @@
       "to": "resourceArchiveArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2"
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2"
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#3",
@@ -182377,7 +182377,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3"
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3"
     },
     {
       "symbol": "P:fn.a([BZ)V#0",
@@ -182385,7 +182385,7 @@
       "to": "byteArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0549([BZ)V#0"
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BZ)V#0"
     },
     {
       "symbol": "P:fn.a([BZ)V#1",
@@ -182393,7 +182393,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0549([BZ)V#1"
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BZ)V#1"
     },
     {
       "symbol": "P:fn.b(I)V#0",
@@ -182401,7 +182401,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport044.performAction0550(I)V#0"
+      "renamedSymbol": "P:DirectByteStorage.performAction0550(I)V#0"
     },
     {
       "symbol": "P:g.<init>(Lnb;)V#0",
@@ -198785,7 +198785,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1060(B)V#0"
+      "renamedSymbol": "P:ByteStorage.performAction1060(B)V#0"
     },
     {
       "symbol": "P:mk.a(I)[B#0",
@@ -198793,7 +198793,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.computeByteArray0547(I)[B#0"
+      "renamedSymbol": "P:ByteStorage.getBytes(I)[B#0"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#0",
@@ -198801,7 +198801,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#1",
@@ -198809,7 +198809,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#1"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#1"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#2",
@@ -198817,7 +198817,7 @@
       "to": "byteArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#2"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#2"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#3",
@@ -198825,7 +198825,7 @@
       "to": "mixedSupport015Argument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#3"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#3"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#4",
@@ -198833,7 +198833,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#4"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#4"
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#5",
@@ -198841,7 +198841,7 @@
       "to": "mixedSupport015Argument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#5"
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#5"
     },
     {
       "symbol": "P:mk.a(Z)V#0",
@@ -198849,7 +198849,7 @@
       "to": "booleanArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.clearStaticReferences(Z)V#0"
+      "renamedSymbol": "P:ByteStorage.clearStaticReferences(Z)V#0"
     },
     {
       "symbol": "P:mk.a([BZ)V#0",
@@ -198857,7 +198857,7 @@
       "to": "byteArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction0549([BZ)V#0"
+      "renamedSymbol": "P:ByteStorage.setBytes([BZ)V#0"
     },
     {
       "symbol": "P:mk.a([BZ)V#1",
@@ -198865,7 +198865,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport082.performAction0549([BZ)V#1"
+      "renamedSymbol": "P:ByteStorage.setBytes([BZ)V#1"
     },
     {
       "symbol": "P:ml.a(B)V#0",
@@ -224146,9 +224146,9 @@
     },
     {
       "symbol": "C:fn",
-      "renamedSymbol": "C:MixedSupport044",
+      "renamedSymbol": "C:DirectByteStorage",
       "originalName": "fn",
-      "renamedName": "MixedSupport044",
+      "renamedName": "DirectByteStorage",
       "declaration": {
         "file": "fn.java",
         "start": 50,
@@ -225246,9 +225246,9 @@
     },
     {
       "symbol": "C:mk",
-      "renamedSymbol": "C:MixedSupport082",
+      "renamedSymbol": "C:ByteStorage",
       "originalName": "mk",
-      "renamedName": "MixedSupport082",
+      "renamedName": "ByteStorage",
       "declaration": {
         "file": "mk.java",
         "start": 53,
@@ -235894,7 +235894,7 @@
     },
     {
       "symbol": "F:fn.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:MixedSupport044.stringState0187:Ljava/lang/String;",
+      "renamedSymbol": "F:DirectByteStorage.stringState0187:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "stringState0187",
       "declaration": {
@@ -235905,7 +235905,7 @@
     },
     {
       "symbol": "F:fn.field_g:Lw;",
-      "renamedSymbol": "F:MixedSupport044.sceneWidgetState0034:LSceneWidget;",
+      "renamedSymbol": "F:DirectByteStorage.sceneWidgetState0034:LSceneWidget;",
       "originalName": "field_g",
       "renamedName": "sceneWidgetState0034",
       "declaration": {
@@ -235916,9 +235916,9 @@
     },
     {
       "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
-      "renamedSymbol": "F:MixedSupport044.byteBufferState0001:Ljava/nio/ByteBuffer;",
+      "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;",
       "originalName": "field_h",
-      "renamedName": "byteBufferState0001",
+      "renamedName": "buffer",
       "declaration": {
         "file": "fn.java",
         "start": 147,
@@ -246080,7 +246080,7 @@
     },
     {
       "symbol": "F:mk.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:MixedSupport082.stringState0351:Ljava/lang/String;",
+      "renamedSymbol": "F:ByteStorage.stringState0351:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "stringState0351",
       "declaration": {
@@ -246091,7 +246091,7 @@
     },
     {
       "symbol": "F:mk.field_b:[I",
-      "renamedSymbol": "F:MixedSupport082.integerArrayState0157:[I",
+      "renamedSymbol": "F:ByteStorage.integerArrayState0157:[I",
       "originalName": "field_b",
       "renamedName": "integerArrayState0157",
       "declaration": {
@@ -246102,7 +246102,7 @@
     },
     {
       "symbol": "F:mk.field_c:[I",
-      "renamedSymbol": "F:MixedSupport082.integerArrayState0158:[I",
+      "renamedSymbol": "F:ByteStorage.integerArrayState0158:[I",
       "originalName": "field_c",
       "renamedName": "integerArrayState0158",
       "declaration": {
@@ -246113,7 +246113,7 @@
     },
     {
       "symbol": "F:mk.field_d:Lnh;",
-      "renamedSymbol": "F:MixedSupport082.bufferedFileState0004:LBufferedFile;",
+      "renamedSymbol": "F:ByteStorage.bufferedFileState0004:LBufferedFile;",
       "originalName": "field_d",
       "renamedName": "bufferedFileState0004",
       "declaration": {
@@ -246124,7 +246124,7 @@
     },
     {
       "symbol": "F:mk.field_e:I",
-      "renamedSymbol": "F:MixedSupport082.integerState0514:I",
+      "renamedSymbol": "F:ByteStorage.integerState0514:I",
       "originalName": "field_e",
       "renamedName": "integerState0514",
       "declaration": {
@@ -304974,7 +304974,7 @@
     },
     {
       "symbol": "L:fn.a(I)[B#0",
-      "renamedSymbol": "L:MixedSupport044.computeByteArray0547(I)[B#0",
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#0",
       "originalName": "var3",
       "renamedName": "byteArrayLocal1",
       "declaration": {
@@ -304985,7 +304985,7 @@
     },
     {
       "symbol": "L:fn.a(I)[B#1",
-      "renamedSymbol": "L:MixedSupport044.computeByteArray0547(I)[B#1",
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#1",
       "originalName": "var2",
       "renamedName": "byteArrayLocal2",
       "declaration": {
@@ -304996,7 +304996,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#0",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0",
       "originalName": "var17",
       "renamedName": "rgbSpriteLocal1",
       "declaration": {
@@ -305007,7 +305007,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#1",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1",
       "originalName": "var5",
       "renamedName": "indexedSpriteArrayLocal2",
       "declaration": {
@@ -305018,7 +305018,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#10",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#10",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#10",
       "originalName": "var11",
       "renamedName": "rgbSpriteLocal11",
       "declaration": {
@@ -305029,7 +305029,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#11",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#11",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#11",
       "originalName": "var12",
       "renamedName": "rgbSpriteLocal12",
       "declaration": {
@@ -305040,7 +305040,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#12",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#12",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#12",
       "originalName": "var8",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -305051,7 +305051,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#13",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#13",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#13",
       "originalName": "var9",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -305062,7 +305062,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#14",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#14",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#14",
       "originalName": "var13",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -305073,7 +305073,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#15",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#15",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#15",
       "originalName": "var8Lifetime1",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -305084,7 +305084,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#16",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#16",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#16",
       "originalName": "var9Lifetime1",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -305095,7 +305095,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#17",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#17",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#17",
       "originalName": "var10",
       "renamedName": "indexedSpriteArrayLocal18",
       "declaration": {
@@ -305106,7 +305106,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#18",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#18",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#18",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -305117,7 +305117,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#2",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2",
       "originalName": "var6",
       "renamedName": "indexedSpriteArrayArrayLocal3",
       "declaration": {
@@ -305128,7 +305128,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#3",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3",
       "originalName": "var19",
       "renamedName": "integerArrayArrayLocal4",
       "declaration": {
@@ -305139,7 +305139,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#4",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#4",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#4",
       "originalName": "var16",
       "renamedName": "integerArrayArrayLocal5",
       "declaration": {
@@ -305150,7 +305150,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#5",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#5",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#5",
       "originalName": "var7",
       "renamedName": "integerArrayArrayLocal6",
       "declaration": {
@@ -305161,7 +305161,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#6",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#6",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#6",
       "originalName": "var14",
       "renamedName": "indexedSpriteArrayLocal7",
       "declaration": {
@@ -305172,7 +305172,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#7",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#7",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#7",
       "originalName": "var11_int",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -305183,7 +305183,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#8",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#8",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#8",
       "originalName": "var15",
       "renamedName": "rgbSpriteLocal9",
       "declaration": {
@@ -305194,7 +305194,7 @@
     },
     {
       "symbol": "L:fn.a(Lji;Lji;Lji;I)V#9",
-      "renamedSymbol": "L:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#9",
+      "renamedSymbol": "L:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#9",
       "originalName": "var18",
       "renamedName": "rgbSpriteLocal10",
       "declaration": {
@@ -305205,7 +305205,7 @@
     },
     {
       "symbol": "L:fn.a([BZ)V#0",
-      "renamedSymbol": "L:MixedSupport044.performAction0549([BZ)V#0",
+      "renamedSymbol": "L:DirectByteStorage.setBytes([BZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -305216,7 +305216,7 @@
     },
     {
       "symbol": "L:fn.b(I)V#0",
-      "renamedSymbol": "L:MixedSupport044.performAction0550(I)V#0",
+      "renamedSymbol": "L:DirectByteStorage.performAction0550(I)V#0",
       "originalName": "var2",
       "renamedName": "resourceArchiveLocal1",
       "declaration": {
@@ -356861,7 +356861,7 @@
     },
     {
       "symbol": "L:mk.a(B)V#0",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#0",
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#0",
       "originalName": "var3",
       "renamedName": "mixedSupport144Local1",
       "declaration": {
@@ -356872,7 +356872,7 @@
     },
     {
       "symbol": "L:mk.a(B)V#1",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#1",
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#1",
       "originalName": "var2",
       "renamedName": "mixedSupport015Local2",
       "declaration": {
@@ -356883,7 +356883,7 @@
     },
     {
       "symbol": "L:mk.a(B)V#2",
-      "renamedSymbol": "L:MixedSupport082.performAction1060(B)V#2",
+      "renamedSymbol": "L:ByteStorage.performAction1060(B)V#2",
       "originalName": "var4",
       "renamedName": "mixedSupport144Local3",
       "declaration": {
@@ -356894,7 +356894,7 @@
     },
     {
       "symbol": "L:mk.a(IIBLcc;ILcc;)V#0",
-      "renamedSymbol": "L:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0",
+      "renamedSymbol": "L:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -437799,9 +437799,9 @@
     },
     {
       "symbol": "M:fn.<init>()V",
-      "renamedSymbol": "M:MixedSupport044.<init>()V",
+      "renamedSymbol": "M:DirectByteStorage.<init>()V",
       "originalName": "fn",
-      "renamedName": "MixedSupport044",
+      "renamedName": "DirectByteStorage",
       "declaration": {
         "file": "fn.java",
         "start": 3630,
@@ -437810,9 +437810,9 @@
     },
     {
       "symbol": "M:fn.a(I)[B",
-      "renamedSymbol": "M:MixedSupport044.computeByteArray0547(I)[B",
+      "renamedSymbol": "M:DirectByteStorage.getBytes(I)[B",
       "originalName": "a",
-      "renamedName": "computeByteArray0547",
+      "renamedName": "getBytes",
       "declaration": {
         "file": "fn.java",
         "start": 174,
@@ -437821,7 +437821,7 @@
     },
     {
       "symbol": "M:fn.a(Lji;Lji;Lji;I)V",
-      "renamedSymbol": "M:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V",
+      "renamedSymbol": "M:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V",
       "originalName": "a",
       "renamedName": "performAction0548",
       "declaration": {
@@ -437832,9 +437832,9 @@
     },
     {
       "symbol": "M:fn.a([BZ)V",
-      "renamedSymbol": "M:MixedSupport044.performAction0549([BZ)V",
+      "renamedSymbol": "M:DirectByteStorage.setBytes([BZ)V",
       "originalName": "a",
-      "renamedName": "performAction0549",
+      "renamedName": "setBytes",
       "declaration": {
         "file": "fn.java",
         "start": 3874,
@@ -437843,7 +437843,7 @@
     },
     {
       "symbol": "M:fn.b(I)V",
-      "renamedSymbol": "M:MixedSupport044.performAction0550(I)V",
+      "renamedSymbol": "M:DirectByteStorage.performAction0550(I)V",
       "originalName": "b",
       "renamedName": "performAction0550",
       "declaration": {
@@ -446621,7 +446621,7 @@
     },
     {
       "symbol": "M:mk.a(B)V",
-      "renamedSymbol": "M:MixedSupport082.performAction1060(B)V",
+      "renamedSymbol": "M:ByteStorage.performAction1060(B)V",
       "originalName": "a",
       "renamedName": "performAction1060",
       "declaration": {
@@ -446632,9 +446632,9 @@
     },
     {
       "symbol": "M:mk.a(I)[B",
-      "renamedSymbol": "M:MixedSupport082.computeByteArray0547(I)[B",
+      "renamedSymbol": "M:ByteStorage.getBytes(I)[B",
       "originalName": "a",
-      "renamedName": "computeByteArray0547",
+      "renamedName": "getBytes",
       "declaration": {
         "file": "mk.java",
         "start": 418,
@@ -446643,7 +446643,7 @@
     },
     {
       "symbol": "M:mk.a(IIBLcc;ILcc;)V",
-      "renamedSymbol": "M:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V",
+      "renamedSymbol": "M:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V",
       "originalName": "a",
       "renamedName": "performAction1061",
       "declaration": {
@@ -446654,7 +446654,7 @@
     },
     {
       "symbol": "M:mk.a(Z)V",
-      "renamedSymbol": "M:MixedSupport082.clearStaticReferences(Z)V",
+      "renamedSymbol": "M:ByteStorage.clearStaticReferences(Z)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -446665,9 +446665,9 @@
     },
     {
       "symbol": "M:mk.a([BZ)V",
-      "renamedSymbol": "M:MixedSupport082.performAction0549([BZ)V",
+      "renamedSymbol": "M:ByteStorage.setBytes([BZ)V",
       "originalName": "a",
-      "renamedName": "performAction0549",
+      "renamedName": "setBytes",
       "declaration": {
         "file": "mk.java",
         "start": 1983,
@@ -481854,7 +481854,7 @@
     },
     {
       "symbol": "P:fn.a(I)[B#0",
-      "renamedSymbol": "P:MixedSupport044.computeByteArray0547(I)[B#0",
+      "renamedSymbol": "P:DirectByteStorage.getBytes(I)[B#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -481865,7 +481865,7 @@
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#0",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0",
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#0",
       "originalName": "param0",
       "renamedName": "resourceArchiveArgument1",
       "declaration": {
@@ -481876,7 +481876,7 @@
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#1",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1",
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#1",
       "originalName": "param1",
       "renamedName": "resourceArchiveArgument2",
       "declaration": {
@@ -481887,7 +481887,7 @@
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#2",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2",
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#2",
       "originalName": "param2",
       "renamedName": "resourceArchiveArgument3",
       "declaration": {
@@ -481898,7 +481898,7 @@
     },
     {
       "symbol": "P:fn.a(Lji;Lji;Lji;I)V#3",
-      "renamedSymbol": "P:MixedSupport044.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3",
+      "renamedSymbol": "P:DirectByteStorage.performAction0548(LResourceArchive;LResourceArchive;LResourceArchive;I)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -481909,7 +481909,7 @@
     },
     {
       "symbol": "P:fn.a([BZ)V#0",
-      "renamedSymbol": "P:MixedSupport044.performAction0549([BZ)V#0",
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BZ)V#0",
       "originalName": "param0",
       "renamedName": "byteArrayArgument1",
       "declaration": {
@@ -481920,7 +481920,7 @@
     },
     {
       "symbol": "P:fn.a([BZ)V#1",
-      "renamedSymbol": "P:MixedSupport044.performAction0549([BZ)V#1",
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BZ)V#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -481931,7 +481931,7 @@
     },
     {
       "symbol": "P:fn.b(I)V#0",
-      "renamedSymbol": "P:MixedSupport044.performAction0550(I)V#0",
+      "renamedSymbol": "P:DirectByteStorage.performAction0550(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -504503,7 +504503,7 @@
     },
     {
       "symbol": "P:mk.a(B)V#0",
-      "renamedSymbol": "P:MixedSupport082.performAction1060(B)V#0",
+      "renamedSymbol": "P:ByteStorage.performAction1060(B)V#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -504514,7 +504514,7 @@
     },
     {
       "symbol": "P:mk.a(I)[B#0",
-      "renamedSymbol": "P:MixedSupport082.computeByteArray0547(I)[B#0",
+      "renamedSymbol": "P:ByteStorage.getBytes(I)[B#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -504525,7 +504525,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#0",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -504536,7 +504536,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#1",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#1",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -504547,7 +504547,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#2",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#2",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#2",
       "originalName": "param2",
       "renamedName": "byteArgument3",
       "declaration": {
@@ -504558,7 +504558,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#3",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#3",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#3",
       "originalName": "param3",
       "renamedName": "mixedSupport015Argument4",
       "declaration": {
@@ -504569,7 +504569,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#4",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#4",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -504580,7 +504580,7 @@
     },
     {
       "symbol": "P:mk.a(IIBLcc;ILcc;)V#5",
-      "renamedSymbol": "P:MixedSupport082.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#5",
+      "renamedSymbol": "P:ByteStorage.performAction1061(IIBLMixedSupport015;ILMixedSupport015;)V#5",
       "originalName": "param5",
       "renamedName": "mixedSupport015Argument6",
       "declaration": {
@@ -504591,7 +504591,7 @@
     },
     {
       "symbol": "P:mk.a(Z)V#0",
-      "renamedSymbol": "P:MixedSupport082.clearStaticReferences(Z)V#0",
+      "renamedSymbol": "P:ByteStorage.clearStaticReferences(Z)V#0",
       "originalName": "param0",
       "renamedName": "booleanArgument1",
       "declaration": {
@@ -504602,7 +504602,7 @@
     },
     {
       "symbol": "P:mk.a([BZ)V#0",
-      "renamedSymbol": "P:MixedSupport082.performAction0549([BZ)V#0",
+      "renamedSymbol": "P:ByteStorage.setBytes([BZ)V#0",
       "originalName": "param0",
       "renamedName": "byteArrayArgument1",
       "declaration": {
@@ -504613,7 +504613,7 @@
     },
     {
       "symbol": "P:mk.a([BZ)V#1",
-      "renamedSymbol": "P:MixedSupport082.performAction0549([BZ)V#1",
+      "renamedSymbol": "P:ByteStorage.setBytes([BZ)V#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -537265,7 +537265,7 @@
       "original": "a.java",
       "renamed": "MixedSupport001.java",
       "inputSha256": "8a2878feda6b80acacf6a2ef30d74f85ab85e52af30e16498630be694d5e9c83",
-      "outputSha256": "ad2fcdc841c057860d098a9c438f73cca044382dd7f8280dff7fe7883368a6e9",
+      "outputSha256": "5088cda4ac8931c6095322249f03b381c31841ab35a3eb57ff800e8cfa6f6534",
       "edits": [
         {
           "start": 44,
@@ -539715,7 +539715,7 @@
           "end": 7612,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7613,
@@ -542802,7 +542802,7 @@
           "end": 18404,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 18405,
@@ -545343,7 +545343,7 @@
           "end": 26669,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 26670,
@@ -576117,7 +576117,7 @@
       "original": "ba.java",
       "renamed": "ResourceSupport002.java",
       "inputSha256": "eef164b20e76fdb163ae7b1c1734355580de61197ba9460f4b4a2df21097fe9d",
-      "outputSha256": "9d62d83b0c5d767c304042ae14a5b0c22728ae946a4fc4518c8d9df7bbf9ca9f",
+      "outputSha256": "5b8cf30b392ae23b0604a46012960c6467cc13f7a9a5e95ee1b4f723eb5f08b6",
       "edits": [
         {
           "start": 72,
@@ -579288,7 +579288,7 @@
           "end": 12914,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12915,
@@ -579309,7 +579309,7 @@
           "end": 12950,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12951,
@@ -579323,7 +579323,7 @@
           "end": 12982,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12983,
@@ -579625,7 +579625,7 @@
       "original": "bb.java",
       "renamed": "GameDomainSupport001.java",
       "inputSha256": "5c58737a183299e590931a3f1be71b783ec47465ed8957412377c4793778205d",
-      "outputSha256": "e3d893b2b3a2cb661cc3ad994b7a8bf3b74f4f2f6e7b1a98d2bdab438ada83d3",
+      "outputSha256": "27ec73326fac367ac404f285f02c38f05ce2813d17a5df8bc61c22ead81c479f",
       "edits": [
         {
           "start": 50,
@@ -579975,7 +579975,7 @@
           "end": 743,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 744,
@@ -588579,7 +588579,7 @@
       "original": "bc.java",
       "renamed": "MixedSupport009.java",
       "inputSha256": "a78e191313c2aad0edae9959c9cf820e5c14b0b78fee6b54166a4d4ac84d60e5",
-      "outputSha256": "5b91f0b6a7e5d5cb5980f42e1df8c66904b2991cddef49e1c1997c9bc7f04dc2",
+      "outputSha256": "24df6d1f313c639902ad2d6f4dfbcf43e24cdfcdf58234ecbd215265e7cb3650",
       "edits": [
         {
           "start": 50,
@@ -591190,7 +591190,7 @@
           "end": 7987,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7988,
@@ -592234,7 +592234,7 @@
       "original": "bd.java",
       "renamed": "FunOrbClient.java",
       "inputSha256": "358bafbd0819303ebe572e323a1f53f866e3668a85faa63c2e4a806f5f391336",
-      "outputSha256": "494594ad25aa7f9dddd8e15037ac4871a3d6495e613a61c99b5b65a169cce5d7",
+      "outputSha256": "3baa4afe96e72db9cf05e30e165ee85bd3a3912ac93c72856543e9a69f335e27",
       "edits": [
         {
           "start": 53,
@@ -602433,7 +602433,7 @@
           "end": 34338,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34339,
@@ -602447,7 +602447,7 @@
           "end": 34366,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34367,
@@ -602461,7 +602461,7 @@
           "end": 34394,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34395,
@@ -602475,7 +602475,7 @@
           "end": 34423,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34424,
@@ -602489,7 +602489,7 @@
           "end": 34451,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34452,
@@ -602503,7 +602503,7 @@
           "end": 34479,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34480,
@@ -602524,7 +602524,7 @@
           "end": 34574,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34575,
@@ -602538,7 +602538,7 @@
           "end": 34605,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34606,
@@ -602552,7 +602552,7 @@
           "end": 34635,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34636,
@@ -602566,7 +602566,7 @@
           "end": 34665,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34666,
@@ -602580,7 +602580,7 @@
           "end": 34695,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34696,
@@ -602594,7 +602594,7 @@
           "end": 34725,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34726,
@@ -602608,7 +602608,7 @@
           "end": 34755,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34756,
@@ -602622,7 +602622,7 @@
           "end": 34786,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34787,
@@ -602636,7 +602636,7 @@
           "end": 34817,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34818,
@@ -602650,7 +602650,7 @@
           "end": 34848,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 34849,
@@ -614446,7 +614446,7 @@
       "original": "bl.java",
       "renamed": "UiComponentPart003.java",
       "inputSha256": "4e886e5f1b9b1da58de6e6000df1061100b1b30ebcdf97322485b54f6725c3f6",
-      "outputSha256": "4eb607e8587b59599b883e32708da1a7c9d55e337c473679299b36101efa940d",
+      "outputSha256": "bdf171225942e34bd733831cb641bca8e1e39dfa97043ad91a81a8670b9ee7c9",
       "edits": [
         {
           "start": 53,
@@ -615013,7 +615013,7 @@
           "end": 1446,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1447,
@@ -652427,7 +652427,7 @@
       "original": "cf.java",
       "renamed": "TextLayout.java",
       "inputSha256": "139f2a4cea4bcc406002679f50f461a2b2119344f1c8beb7f89f72c221436d8e",
-      "outputSha256": "3e5ea2259bfec8461a56bf787ccb7d3a309119effd915e0e520807950bc18032",
+      "outputSha256": "fb01700a55c73935630a32d09bfd42e0ed8444b54eecd6fd82b0a782d1434f15",
       "edits": [
         {
           "start": 53,
@@ -652896,7 +652896,7 @@
           "end": 1591,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1592,
@@ -653057,7 +653057,7 @@
           "end": 2286,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 2302,
@@ -653071,7 +653071,7 @@
           "end": 2312,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 2315,
@@ -653099,7 +653099,7 @@
           "end": 2357,
           "symbol": "M:mk.a(I)[B",
           "original": "a",
-          "renamed": "computeByteArray0547"
+          "renamed": "getBytes"
         },
         {
           "start": 2383,
@@ -661620,7 +661620,7 @@
       "original": "ch.java",
       "renamed": "MixedSupport017.java",
       "inputSha256": "f7be6ce0109e37f15df35f92d25c0d9ba6c81766d3314bd1eecd4fe4487c2b01",
-      "outputSha256": "d6600d60284f2bc8b55e2806dfa0afb59a964d531b003ccf36800526d7b821a8",
+      "outputSha256": "ad7ee7a1ca956cf6061112e672ea522313ef402fb758862b656d139c7b574e3a",
       "edits": [
         {
           "start": 50,
@@ -663531,7 +663531,7 @@
           "end": 5248,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5249,
@@ -664665,7 +664665,7 @@
           "end": 7801,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7802,
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "2c0406c51dc2cb5672f44de49bda7f51570de024318e96da5068e04544bc4b8a",
+      "outputSha256": "ab3129fb67d5e7ed6e6d0f9878124b6c74bf77d93c3605325b30f76bfb7d97e1",
       "edits": [
         {
           "start": 57,
@@ -712352,7 +712352,7 @@
           "end": 11350,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 11351,
@@ -727406,7 +727406,7 @@
           "end": 53806,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 53807,
@@ -728337,7 +728337,7 @@
           "end": 55456,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 55457,
@@ -733153,7 +733153,7 @@
           "end": 66706,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66707,
@@ -733167,7 +733167,7 @@
           "end": 66736,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66737,
@@ -733181,7 +733181,7 @@
           "end": 66766,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66767,
@@ -733195,7 +733195,7 @@
           "end": 66797,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66798,
@@ -733209,7 +733209,7 @@
           "end": 66827,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66828,
@@ -733223,7 +733223,7 @@
           "end": 66858,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66859,
@@ -733237,7 +733237,7 @@
           "end": 66888,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66889,
@@ -733251,7 +733251,7 @@
           "end": 66918,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66919,
@@ -733265,7 +733265,7 @@
           "end": 66949,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66950,
@@ -733279,7 +733279,7 @@
           "end": 66979,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 66980,
@@ -733293,7 +733293,7 @@
           "end": 67009,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67010,
@@ -733335,7 +733335,7 @@
           "end": 67074,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67075,
@@ -733349,7 +733349,7 @@
           "end": 67104,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67105,
@@ -733363,7 +733363,7 @@
           "end": 67135,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67136,
@@ -733377,7 +733377,7 @@
           "end": 67166,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67167,
@@ -733391,7 +733391,7 @@
           "end": 67196,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67197,
@@ -733405,7 +733405,7 @@
           "end": 67227,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67228,
@@ -733419,7 +733419,7 @@
           "end": 67257,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67258,
@@ -733503,7 +733503,7 @@
           "end": 67387,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67388,
@@ -733517,7 +733517,7 @@
           "end": 67418,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 67419,
@@ -787341,7 +787341,7 @@
       "original": "dh.java",
       "renamed": "ClientException.java",
       "inputSha256": "32b89262d89071447954951d586131e29ccd261d97e8eeaf95095966d4664fee",
-      "outputSha256": "773de72af4c3bcb95b358542999fe931e1512792ddc9b0492bdf2557ef70d7bd",
+      "outputSha256": "6408fa3a682393073eddfe63dac75cb341d1465ba3dd2fad49b9ea29148184a9",
       "edits": [
         {
           "start": 50,
@@ -787852,7 +787852,7 @@
           "end": 1377,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1378,
@@ -805007,7 +805007,7 @@
       "original": "ee.java",
       "renamed": "MixedSupport030.java",
       "inputSha256": "55fc1aec733ec501e65824ce09bf688bf295012a362edc3d70dbcaf9374be0a6",
-      "outputSha256": "b012e1e5cf773f792bbbb1a84f0e72c32aefae07e7db42be5944c7af631de751",
+      "outputSha256": "b75c4a03d233a95062b7e3c07ea89cb8f3180c96dcb50731c13b4eb92c7842b1",
       "edits": [
         {
           "start": 50,
@@ -808801,7 +808801,7 @@
           "end": 8435,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 8436,
@@ -808829,7 +808829,7 @@
           "end": 8471,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 8472,
@@ -809082,7 +809082,7 @@
       "original": "ef.java",
       "renamed": "UiComponentPart010.java",
       "inputSha256": "e919a903f7d3d77d9385c860a02a97faba6aced709293a591b0b99655e9b5d32",
-      "outputSha256": "8423f0c99c763dffed7fd1fb0e1b7a0bc539acea5aee1209fac4a5db6fd8cc6e",
+      "outputSha256": "9d31659ddcc42fc0481bbdbf80cf6adcb440b1565fa7ea04decce7cac3cff57a",
       "edits": [
         {
           "start": 50,
@@ -809481,7 +809481,7 @@
           "end": 1171,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1172,
@@ -809719,7 +809719,7 @@
           "end": 1794,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1795,
@@ -844510,7 +844510,7 @@
       "original": "em.java",
       "renamed": "MixedSupport032.java",
       "inputSha256": "b80ba9ad5f27351207c926c4dc5c0ec7ba2c074cf867a163c7b6107b04d7d4fb",
-      "outputSha256": "536c5b3f7c0349f2cf41432d1d2afb5e60dfa75635741bb29b8b11cee27bfe5d",
+      "outputSha256": "c340819429763ecfc64ea450a713ed10ea4ff9d30b1b9ae76d2d68e17811fd97",
       "edits": [
         {
           "start": 50,
@@ -848129,7 +848129,7 @@
           "end": 11367,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 11368,
@@ -857950,7 +857950,7 @@
       "original": "fc.java",
       "renamed": "MixedSupport036.java",
       "inputSha256": "12608ae44b5095a652a645e110c08715aa5aac09804b3707e814c5c7aa324882",
-      "outputSha256": "514bb25ad88581b39f99e92adc0474d89095ba0f4622b96898269b4efeacbc6e",
+      "outputSha256": "8b865034bdbeffe0a10a468b113e80c2328e3ebdeef6228dface7653ae8873fb",
       "edits": [
         {
           "start": 69,
@@ -860330,7 +860330,7 @@
           "end": 7032,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7033,
@@ -860344,7 +860344,7 @@
           "end": 7082,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7083,
@@ -875405,23 +875405,23 @@
     },
     {
       "original": "fn.java",
-      "renamed": "MixedSupport044.java",
+      "renamed": "DirectByteStorage.java",
       "inputSha256": "9949d6c22d0db5d9abd3976245a190405d9c0c2d435c8fc868a0e39c9021020c",
-      "outputSha256": "895f42b37108a081aebe5fcd8169c30e040c5ca85ee9a84d542dc0d608ef1775",
+      "outputSha256": "c00ea0a2ef1ab2a62d66e4012e9041b1b1aa1594f311f8bcfbf1d05e2a6f9506",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 61,
           "end": 63,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 84,
@@ -875449,14 +875449,14 @@
           "end": 154,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 174,
           "end": 175,
           "symbol": "M:fn.a(I)[B",
           "original": "a",
-          "renamed": "computeByteArray0547"
+          "renamed": "getBytes"
         },
         {
           "start": 180,
@@ -875484,7 +875484,7 @@
           "end": 304,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 333,
@@ -875505,14 +875505,14 @@
           "end": 366,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 393,
           "end": 400,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 405,
@@ -876947,7 +876947,7 @@
           "end": 3267,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 3268,
@@ -877045,7 +877045,7 @@
           "end": 3632,
           "symbol": "M:fn.<init>()V",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 3667,
@@ -877094,7 +877094,7 @@
           "end": 3753,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 3754,
@@ -877143,7 +877143,7 @@
           "end": 3875,
           "symbol": "M:fn.a([BZ)V",
           "original": "a",
-          "renamed": "performAction0549"
+          "renamed": "setBytes"
         },
         {
           "start": 3883,
@@ -877164,7 +877164,7 @@
           "end": 3929,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 3967,
@@ -877178,7 +877178,7 @@
           "end": 4003,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 4030,
@@ -877192,7 +877192,7 @@
           "end": 4104,
           "symbol": "F:fn.field_h:Ljava/nio/ByteBuffer;",
           "original": "field_h",
-          "renamed": "byteBufferState0001"
+          "renamed": "buffer"
         },
         {
           "start": 4109,
@@ -877242,7 +877242,7 @@
       "original": "g.java",
       "renamed": "UiComponentPart011.java",
       "inputSha256": "a54cdaeafd2e9b5f9f51c06d421916ec92c632ca15abffe2f7ea1ecbe319832e",
-      "outputSha256": "6e060a3ffd74c546ce145af9f58cff3f4b9bfb3154d28979bc6c0afb6d439d40",
+      "outputSha256": "98a02871ceea31b3efaf513f005b5fce0fc67f94e7e76f4ed9d2ba695aaa4448",
       "edits": [
         {
           "start": 50,
@@ -878040,7 +878040,7 @@
           "end": 1652,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1653,
@@ -878761,7 +878761,7 @@
           "end": 3122,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 3123,
@@ -879510,7 +879510,7 @@
           "end": 4606,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 4607,
@@ -1048367,7 +1048367,7 @@
       "original": "kc.java",
       "renamed": "MixedSupport068.java",
       "inputSha256": "7fc53175bf961ab6d66b132960985076fb16ab613a32b6cb2443718d0b1e51fb",
-      "outputSha256": "2c9245a9e8ba59017a803495f8ee0979a58c2810ddbfd2f51d93c1ad67b73996",
+      "outputSha256": "c09829b8601991ed00ef2236bd50bd2a8469cdba9b7aab23a80ac8d9e3f64dcf",
       "edits": [
         {
           "start": 69,
@@ -1049753,7 +1049753,7 @@
           "end": 5173,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5174,
@@ -1049830,7 +1049830,7 @@
           "end": 5297,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5298,
@@ -1049872,7 +1049872,7 @@
           "end": 5387,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5388,
@@ -1050068,7 +1050068,7 @@
           "end": 5767,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5768,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "b423c16b2d0074d84aaa2e12097cf425f11bf4dfa2b8d84d26b1a18d2cf9ab1e",
+      "outputSha256": "3b470ea3772db82cf6952718861ec34511d3563eb3c5995e2e413924ccb09d5e",
       "edits": [
         {
           "start": 71,
@@ -1141070,7 +1141070,7 @@
           "end": 5872,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5873,
@@ -1141084,7 +1141084,7 @@
           "end": 5900,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5901,
@@ -1150397,7 +1150397,7 @@
           "end": 35736,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 35737,
@@ -1203333,7 +1203333,7 @@
       "original": "mf.java",
       "renamed": "UiComponentPart019.java",
       "inputSha256": "f19ee1a1f806de130db6d839486057fd508879e5cdd2c3a69233da24d2ac694a",
-      "outputSha256": "dfce606a0596fea01ff3eaa75cf0e24050b0403d848f6c0ae4f6578c2db7bd0b",
+      "outputSha256": "512df2904984a4b82ba6f66df773bb2ecec23f30f400d68edf049c2e58843e5a",
       "edits": [
         {
           "start": 50,
@@ -1204320,7 +1204320,7 @@
           "end": 3225,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 3226,
@@ -1206735,7 +1206735,7 @@
           "end": 7962,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 7963,
@@ -1206770,7 +1206770,7 @@
           "end": 8008,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 8009,
@@ -1209815,7 +1209815,7 @@
           "end": 12595,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12596,
@@ -1224506,16 +1224506,16 @@
     },
     {
       "original": "mk.java",
-      "renamed": "MixedSupport082.java",
+      "renamed": "ByteStorage.java",
       "inputSha256": "4f8c0a4253c0b6703a0022c82a541f0411d7e5e7d11861331d25621449d4b850",
-      "outputSha256": "b184cd8a7263440405b7c81bd0807b010e290d3ae90bb38d2110b9f4f8eb4434",
+      "outputSha256": "a630be9c88342ae6645f9a8eba7e7ccf4986208a5445a31c5aa592c2b59ab8ad",
       "edits": [
         {
           "start": 53,
           "end": 55,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 73,
@@ -1224620,7 +1224620,7 @@
           "end": 419,
           "symbol": "M:mk.a(I)[B",
           "original": "a",
-          "renamed": "computeByteArray0547"
+          "renamed": "getBytes"
         },
         {
           "start": 424,
@@ -1224704,7 +1224704,7 @@
           "end": 588,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 589,
@@ -1224935,7 +1224935,7 @@
           "end": 1194,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1195,
@@ -1225418,7 +1225418,7 @@
           "end": 1984,
           "symbol": "M:mk.a([BZ)V",
           "original": "a",
-          "renamed": "performAction0549"
+          "renamed": "setBytes"
         },
         {
           "start": 1992,
@@ -1225454,7 +1225454,7 @@
       "original": "ml.java",
       "renamed": "TranslatedUiText.java",
       "inputSha256": "a7ca5fb816ee398e28630d1801b6e2c83764f87ecc6107ebae287cac9a090756",
-      "outputSha256": "6d20b5f3c58ecbb2f55e2d897f65d4de417dc70fede05c22a576bf270aa125d6",
+      "outputSha256": "b3ee3fde068e1265a5ec8e316fc8a71e93b44daf6687427a3cf98ad9063a0209",
       "edits": [
         {
           "start": 50,
@@ -1230123,7 +1230123,7 @@
           "end": 12772,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12773,
@@ -1239167,7 +1239167,7 @@
           "end": 35897,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 35898,
@@ -1280175,7 +1280175,7 @@
       "original": "mn.java",
       "renamed": "MixedSupport083.java",
       "inputSha256": "f1ed6c42bd00b42456928fb7e9368caae56ccd10023b5a97b57d2a73e159ecaa",
-      "outputSha256": "c8140f0101d388cb965b9121d6cfae6a3e9d0d6beb698a9490f68e9d9600376f",
+      "outputSha256": "0286056c31120b6b33356e6670f8794f3e3bd4ce577ef708b65068bdba354086",
       "edits": [
         {
           "start": 50,
@@ -1283148,7 +1283148,7 @@
           "end": 10277,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 10278,
@@ -1359536,7 +1359536,7 @@
       "original": "pa.java",
       "renamed": "UiComponentPart022.java",
       "inputSha256": "850109ca3b905d97c4296c8cec5444b80a36a396f0a7752a457051e617036fcd",
-      "outputSha256": "fbea88ddac3e124113e425256b804ec17fb668c3af9d865d6a7829b4e8964811",
+      "outputSha256": "54dbd53e9a8a12d0f66eb8c7a397b6689e4f469bdb1e22bf9115b4e1ac5e56fe",
       "edits": [
         {
           "start": 50,
@@ -1361272,7 +1361272,7 @@
           "end": 4006,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 4007,
@@ -1361958,7 +1361958,7 @@
           "end": 5610,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 5611,
@@ -1362770,7 +1362770,7 @@
           "end": 7569,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7570,
@@ -1363456,7 +1363456,7 @@
           "end": 9362,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 9363,
@@ -1364261,7 +1364261,7 @@
           "end": 11309,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 11310,
@@ -1364989,7 +1364989,7 @@
           "end": 12998,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12999,
@@ -1415588,7 +1415588,7 @@
       "original": "qc.java",
       "renamed": "GameSession.java",
       "inputSha256": "7a5446e9a9f769263f0e6ae2c0a4efa579defbcdd10bccd04e1a0259a23203ab",
-      "outputSha256": "490beba3fa60f3d4b16eb65a27381158bd75e0bbff472f76b1561e6fd457b36a",
+      "outputSha256": "fe67b4b2c7b1707ca9a001c283fea7b85e27602f63ddbb2bf2716b5760307869",
       "edits": [
         {
           "start": 71,
@@ -1420748,7 +1420748,7 @@
           "end": 18557,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 18558,
@@ -1420769,7 +1420769,7 @@
           "end": 18665,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 18666,
@@ -1428709,7 +1428709,7 @@
           "end": 44477,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 44478,
@@ -1508546,7 +1508546,7 @@
       "original": "qk.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "c263e2d064e0ef0ab29023a5138bca23cf7048a22257c7c5370ccdf25c07e65e",
-      "outputSha256": "a6c98d0d83410ad44b1e120a4595cce4df7d2fd62b43fc64be48ddfd02a9f4e9",
+      "outputSha256": "af9bb05f7e59a7d9ddb621a9ca023dd514f4e2a32f727aa2bee245d9f9923558",
       "edits": [
         {
           "start": 69,
@@ -1510436,7 +1510436,7 @@
           "end": 8939,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 8940,
@@ -1510457,7 +1510457,7 @@
           "end": 9005,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 9006,
@@ -1510534,14 +1510534,14 @@
           "end": 9427,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 9445,
           "end": 9447,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 9459,
@@ -1510555,7 +1510555,7 @@
           "end": 9467,
           "symbol": "M:mk.a([BZ)V",
           "original": "a",
-          "renamed": "performAction0549"
+          "renamed": "setBytes"
         },
         {
           "start": 9468,
@@ -1513429,7 +1513429,7 @@
       "original": "qm.java",
       "renamed": "MixedSupport106.java",
       "inputSha256": "cd5f6793436ae381023a522940dfcd51e0b7168b50f6f9aeb903dfe67242009d",
-      "outputSha256": "439c1ae3c59f48910622aabd4de220276d4ecf6b3e111bffeb3e5b3843746de5",
+      "outputSha256": "122089c8b6146c4543e37221fd1a1fc17ae29463e0822f93c980a4d766f8de92",
       "edits": [
         {
           "start": 50,
@@ -1513772,7 +1513772,7 @@
           "end": 1059,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 1060,
@@ -1514367,7 +1514367,7 @@
           "end": 2466,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 2467,
@@ -1520494,7 +1520494,7 @@
       "original": "r.java",
       "renamed": "UiComponentPart027.java",
       "inputSha256": "074b78284eeb01ad6e0051167e6426b181c598b6abce8fea32c057c28f85c87f",
-      "outputSha256": "cb3a139b9310fed5e9cfea526b5c3496a20730a7eb6565d27243e83060a9f5ae",
+      "outputSha256": "4db6bc69e8496604550ea8bda3274c9aedbf5d3b2bf23192303d31ac58fcaa2a",
       "edits": [
         {
           "start": 50,
@@ -1521306,7 +1521306,7 @@
           "end": 1920,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 1921,
@@ -1521656,7 +1521656,7 @@
           "end": 2694,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 2695,
@@ -1522384,7 +1522384,7 @@
           "end": 4319,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 4320,
@@ -1523133,7 +1523133,7 @@
           "end": 6819,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 6820,
@@ -1523266,7 +1523266,7 @@
           "end": 7080,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7081,
@@ -1523497,7 +1523497,7 @@
           "end": 7535,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 7536,
@@ -1542854,7 +1542854,7 @@
       "original": "ri.java",
       "renamed": "DisplayModeController.java",
       "inputSha256": "f45193cb9c46933ca1f1a43d5916c38f30b82e2713dbcfd8ceafc8951b3dbaa3",
-      "outputSha256": "6a56c5212a37189157f87d2aa73ea76db9654277a9fbc25b77138e2fb043bd50",
+      "outputSha256": "c99160992c6b4734ba6b7872745d53502383ddfc98bcf1546fd7e9445d0cfdf2",
       "edits": [
         {
           "start": 50,
@@ -1547117,7 +1547117,7 @@
           "end": 12129,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12130,
@@ -1547474,7 +1547474,7 @@
           "end": 12789,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 12790,
@@ -1566119,7 +1566119,7 @@
       "original": "se.java",
       "renamed": "UiComponentPart029.java",
       "inputSha256": "5326d4dbdf65f2669a12a1f3c8e7937db9bf6996d5ec5a70212d113ddd8d3368",
-      "outputSha256": "67049df983c3e463943f86ea42ef4acc75bfe540ebffac61753fc4f5d7224738",
+      "outputSha256": "2244bc4aba0b94dcb4b5483d57474e3e5bb43fc4f4859584964562e323534649",
       "edits": [
         {
           "start": 71,
@@ -1567960,7 +1567960,7 @@
           "end": 6518,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 6519,
@@ -1640759,7 +1640759,7 @@
       "original": "tj.java",
       "renamed": "SceneWidgetPart012.java",
       "inputSha256": "bf0785fd2d666de98c938efaa681505405775a157fe42d6251ccc35a16c68d47",
-      "outputSha256": "f59445b5ae1cfe3a5f3b61012abdb6f99364abb01c0b22853c5eb03463267a0b",
+      "outputSha256": "f1419035b143ab016c3303ca8dfda5cb7133871e4c7797689dfea644f26e5eb4",
       "edits": [
         {
           "start": 50,
@@ -1642516,7 +1642516,7 @@
           "end": 5469,
           "symbol": "C:fn",
           "original": "fn",
-          "renamed": "MixedSupport044"
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 5470,
@@ -1675381,7 +1675381,7 @@
       "original": "ul.java",
       "renamed": "MixedSupport131.java",
       "inputSha256": "1798cfc0b793834f65890a20932215eed0a294c317a649c62a06473392135c4e",
-      "outputSha256": "eb9f2491efb5c590bd8298e478f82091791cc753c1af0b9191b67b3960446f11",
+      "outputSha256": "5a0a9f5eb5fc1ec7df4723cf495076029abe1332297ee4d9b9d1515cc103106e",
       "edits": [
         {
           "start": 50,
@@ -1676676,7 +1676676,7 @@
           "end": 2955,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 2956,
@@ -1676774,7 +1676774,7 @@
           "end": 3081,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 3082,
@@ -1677061,7 +1677061,7 @@
           "end": 3740,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 3741,
@@ -1677159,7 +1677159,7 @@
           "end": 3901,
           "symbol": "C:mk",
           "original": "mk",
-          "renamed": "MixedSupport082"
+          "renamed": "ByteStorage"
         },
         {
           "start": 3902,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "6a79f6e6cfdaa1ef0a1515c05ba95419c19aa2c4cbe1d85dcd5ed8363a08e474",
+    "rulesSha256": "49435c9fc8152f8c21d995d24a8f1c5f0a4b4aa7f6be40db76954c0ddeee4206",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "4c78a75ea6cd89fa669b33545e255e82a8bd598e15530f98737ef6a591a5908a",
+    "outputTreeSha256": "7ebb6b444ecfadd6b2c223858b24c135a524732ba042b214ee9dd19c423b9445",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -33,7 +33,7 @@ final class MixedSupport106 {
         integerLocal19 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         UiComponentPart022.performAction1206((byte) 104);
         if (UiComponentPart006.integerState0137 < 0) {
-          MixedSupport044.sceneWidgetState0034.stringState0598 = null;
+          DirectByteStorage.sceneWidgetState0034.stringState0598 = null;
           stackSceneWidgetLocal10 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal11 = false;
           stackBooleanLocal12 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
@@ -70,7 +70,7 @@ final class MixedSupport106 {
             }
           }
         } else {
-          MixedSupport044.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(UiComponentPart006.integerState0137)});
+          DirectByteStorage.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(UiComponentPart006.integerState0137)});
           stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal2 = false;
           stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);

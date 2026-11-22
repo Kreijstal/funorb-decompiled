@@ -330,7 +330,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_options_ratedgametype", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport082.stringState0351 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ByteStorage.stringState0351 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("yes", -15192);
                 if (byteArrayState0015 != null) {
@@ -906,7 +906,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_inviteplayers_or_trychanging1", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport044.stringState0187 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DirectByteStorage.stringState0187 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_inviteplayers_or_trychanging2", -15192);
                 if (byteArrayState0015 != null) {

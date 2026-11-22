@@ -981,26 +981,26 @@ abstract class FunOrbClient extends GameApplet {
     }
 
     private final void performAction0114(boolean booleanArgument1) {
-        MixedSupport082.integerArrayState0158[18] = 1;
-        MixedSupport082.integerArrayState0158[4] = -1;
-        MixedSupport082.integerArrayState0158[13] = -1;
-        MixedSupport082.integerArrayState0158[8] = -2;
-        MixedSupport082.integerArrayState0158[2] = -2;
-        MixedSupport082.integerArrayState0158[1] = 16;
+        ByteStorage.integerArrayState0158[18] = 1;
+        ByteStorage.integerArrayState0158[4] = -1;
+        ByteStorage.integerArrayState0158[13] = -1;
+        ByteStorage.integerArrayState0158[8] = -2;
+        ByteStorage.integerArrayState0158[2] = -2;
+        ByteStorage.integerArrayState0158[1] = 16;
         if (!booleanArgument1) {
           return;
         }
         try {
-          MixedSupport082.integerArrayState0158[11] = -1;
-          MixedSupport082.integerArrayState0158[7] = -1;
-          MixedSupport082.integerArrayState0158[3] = -1;
-          MixedSupport082.integerArrayState0158[6] = -2;
-          MixedSupport082.integerArrayState0158[9] = -1;
-          MixedSupport082.integerArrayState0158[5] = -1;
-          MixedSupport082.integerArrayState0158[17] = -1;
-          MixedSupport082.integerArrayState0158[12] = -1;
-          MixedSupport082.integerArrayState0158[10] = -1;
-          MixedSupport082.integerArrayState0158[16] = -1;
+          ByteStorage.integerArrayState0158[11] = -1;
+          ByteStorage.integerArrayState0158[7] = -1;
+          ByteStorage.integerArrayState0158[3] = -1;
+          ByteStorage.integerArrayState0158[6] = -2;
+          ByteStorage.integerArrayState0158[9] = -1;
+          ByteStorage.integerArrayState0158[5] = -1;
+          ByteStorage.integerArrayState0158[17] = -1;
+          ByteStorage.integerArrayState0158[12] = -1;
+          ByteStorage.integerArrayState0158[10] = -1;
+          ByteStorage.integerArrayState0158[16] = -1;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "bd.LA(" + booleanArgument1 + ')');
         }

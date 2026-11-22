@@ -375,7 +375,7 @@ final class DisplayModeController {
         if (integerArgument4 <= MixedSupport010.integerState0066) {
           MixedSupport089.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
           MixedSupport080.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
-          MixedSupport082.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
+          ByteStorage.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
           integerLocal3 = integerArgument6 + (integerArgument5 + integerArgument2);
           if (~integerLocal3 == integerArgument3) {
             stackIntegerLocal2 = 0;
@@ -397,7 +397,7 @@ final class DisplayModeController {
         ReturnedShape.integerState0695 = integerArgument4;
         MixedSupport089.integerArrayState0173[UiComponentPart021.integerState0556] = integerArgument2;
         MixedSupport080.integerArrayState0150[UiComponentPart021.integerState0556] = integerArgument5;
-        MixedSupport082.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
+        ByteStorage.integerArrayState0157[UiComponentPart021.integerState0556] = integerArgument6;
         integerLocal5 = integerArgument6 + (integerArgument5 + integerArgument2);
         if (~integerLocal5 == integerArgument3) {
           stackIntegerLocal1 = 0;
