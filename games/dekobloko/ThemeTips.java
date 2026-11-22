@@ -11,16 +11,16 @@ final class ThemeTips {
     static IndexedSprite[] indexedSpriteArrayState0004;
     static int integerState0351;
 
-    static long computeLong0900(long longArgument1, long longArgument2) {
+    static long computeLong0840(long longArgument1, long longArgument2) {
         return longArgument1 | longArgument2;
     }
 
-    final static int computeInteger0899(int integerArgument1) {
+    final static int computeInteger0839(int integerArgument1) {
         int integerLocal1 = -122 / ((integerArgument1 + 40) / 55);
         return new Date().getYear() + 1900;
     }
 
-    public static void performAction0901(boolean booleanArgument1) {
+    public static void clearStaticReferences(boolean booleanArgument1) {
         resourceArchiveState0009 = null;
         indexedSpriteArrayState0004 = null;
         if (!booleanArgument1) {

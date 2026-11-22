@@ -9,7 +9,7 @@ final class MixedSupport133 {
     static int integerState0792;
     static String stringState0552;
 
-    final static int computeInteger1795(int integerArgument1, byte byteArgument2, int integerArgument3) {
+    final static int computeInteger1677(int integerArgument1, byte byteArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -28,10 +28,10 @@ final class MixedSupport133 {
           while (UiComponentPart028.stringArrayState0039.length > integerLocal1) {
             integerLocal3 = MixedSupport070.integerArrayState0119[integerLocal1];
             if (integerLocal3 >= 0) {
-              integerLocal4 = NodeHashTable.computeInteger1659(false, UiComponentPart028.stringArrayState0039[integerLocal1], true);
+              integerLocal4 = NodeHashTable.computeInteger1550(false, UiComponentPart028.stringArrayState0039[integerLocal1], true);
               integerLocal5 = BufferedSocket.integerState0661 - (integerLocal4 >> 1);
               integerLocal2 = integerLocal2 + BufferedSocket.integerState0665;
-              if (MixedSupport049.computeBoolean0634(17, integerArgument3, integerArgument1, integerLocal4 + (NetworkSupport006.integerState0499 << 1), integerLocal2, (UiComponentPart022.integerState0575 << 1) + MixedSupport015.integerState0100, integerLocal5 - NetworkSupport006.integerState0499)) {
+              if (MixedSupport049.computeBoolean0593(17, integerArgument3, integerArgument1, integerLocal4 + (NetworkSupport006.integerState0499 << 1), integerLocal2, (UiComponentPart022.integerState0575 << 1) + MixedSupport015.integerState0100, integerLocal5 - NetworkSupport006.integerState0499)) {
                 stackIntegerLocal7 = integerLocal3;
                 return stackIntegerLocal7;
               }
@@ -50,16 +50,16 @@ final class MixedSupport133 {
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal10 = caughtParameterLocal12;
           runtimeExceptionLocal11 = caughtExceptionLocal10;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal11), "ub.C(" + integerArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal11), "ub.C(" + integerArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
-    final static void performAction1794(byte byteArgument1) {
+    final static void performAction1676(byte byteArgument1) {
         if (GameDomainSupport004.booleanState0087) {
-          SoftwareRaster.performAction0717(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
-          MixedSupport059.sceneWidgetState0055.performAction1947(1141039778, false);
+          SoftwareRaster.performAction0671(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
+          MixedSupport059.sceneWidgetState0055.performAction1818(1141039778, false);
           if (byteArgument1 != 54) {
-            MixedSupport133.computeInteger1795(-56, (byte) 45, 35);
+            MixedSupport133.computeInteger1677(-56, (byte) 45, 35);
             return;
           }
           return;
@@ -67,27 +67,27 @@ final class MixedSupport133 {
         if (byteArgument1 == 54) {
           return;
         }
-        MixedSupport133.computeInteger1795(-56, (byte) 45, 35);
+        MixedSupport133.computeInteger1677(-56, (byte) 45, 35);
     }
 
-    final static MixedSupport118 computeMixedSupport1181796(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static MixedSupport118 computeMixedSupport1181678(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         MixedSupport118 mixedSupport118Local1 = new MixedSupport118();
         if (integerArgument4 > 95) {
           mixedSupport118Local1.integerArrayState0202 = new int[integerArgument1];
           mixedSupport118Local1.integerState0731 = integerArgument3;
-          UiComponentPart010.nodeDequeState0008.performAction1913(mixedSupport118Local1, 2777);
-          ReturnedShapeCache.performAction1302(-102, integerArgument2, mixedSupport118Local1);
+          UiComponentPart010.nodeDequeState0008.performAction1786(mixedSupport118Local1, 2777);
+          ReturnedShapeCache.performAction1209(-102, integerArgument2, mixedSupport118Local1);
           return mixedSupport118Local1;
         }
         stringState0549 = (String) null;
         mixedSupport118Local1.integerArrayState0202 = new int[integerArgument1];
         mixedSupport118Local1.integerState0731 = integerArgument3;
-        UiComponentPart010.nodeDequeState0008.performAction1913(mixedSupport118Local1, 2777);
-        ReturnedShapeCache.performAction1302(-102, integerArgument2, mixedSupport118Local1);
+        UiComponentPart010.nodeDequeState0008.performAction1786(mixedSupport118Local1, 2777);
+        ReturnedShapeCache.performAction1209(-102, integerArgument2, mixedSupport118Local1);
         return mixedSupport118Local1;
     }
 
-    public static void performAction1797(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         if (byteArgument1 <= -17) {
           stringState0549 = null;
           stringState0550 = null;

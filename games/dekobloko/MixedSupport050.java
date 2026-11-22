@@ -6,7 +6,7 @@ final class MixedSupport050 extends MixedSupport024 {
     static int integerState0265;
     static boolean booleanState0064;
 
-    final static void performAction0644(int integerArgument1, int integerArgument2) {
+    final static void performAction0603(int integerArgument1, int integerArgument2) {
         PlatformSupport006.integerArrayState0198 = new int[3];
         ComponentContainer.integerState0376 = integerArgument2;
         MixedSupport102.mixedSupport056ArrayState0001 = new MixedSupport056[integerArgument2 * 15];
@@ -26,12 +26,12 @@ final class MixedSupport050 extends MixedSupport024 {
         this(GameDomainSupport003.bitmapFontState0015, integerArgument1);
     }
 
-    public static void performAction0646(int integerArgument1) {
+    public static void performAction0605(int integerArgument1) {
         int integerLocal1 = 85 / ((-16 - integerArgument1) / 51);
         stringState0208 = null;
     }
 
-    final String computeString0021(UiComponent uiComponentArgument1, byte byteArgument2) {
+    final String computeString0020(UiComponent uiComponentArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         String stackStringLocal3 = null;
@@ -41,7 +41,7 @@ final class MixedSupport050 extends MixedSupport024 {
         RuntimeException caughtExceptionLocal7 = null;
         try {
           integerLocal1 = 61 / ((byteArgument2 - 59) / 53);
-          stackStringLocal3 = UiComponentPart032.computeString1875('*', uiComponentArgument1.stringState0078.length(), -12681);
+          stackStringLocal3 = UiComponentPart032.computeString1749('*', uiComponentArgument1.stringState0078.length(), -12681);
           return stackStringLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -53,25 +53,25 @@ final class MixedSupport050 extends MixedSupport024 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static void performAction0645(int integerArgument1, int integerArgument2) {
+    final static void performAction0604(int integerArgument1, int integerArgument2) {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         CipherPacketBuffer cipherPacketBufferLocal2;
         if (integerArgument2 > 35) {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1811(integerArgument1, -4);
-          cipherPacketBufferLocal1.performAction2023(true, 1);
-          cipherPacketBufferLocal1.performAction2023(true, 2);
+          cipherPacketBufferLocal1.performAction1691(integerArgument1, -4);
+          cipherPacketBufferLocal1.performAction1892(true, 1);
+          cipherPacketBufferLocal1.performAction1892(true, 2);
           return;
         }
         stringState0208 = (String) null;
         cipherPacketBufferLocal2 = SocketFactory.cipherPacketBufferState0002;
-        cipherPacketBufferLocal2.performAction1811(integerArgument1, -4);
-        cipherPacketBufferLocal2.performAction2023(true, 1);
-        cipherPacketBufferLocal2.performAction2023(true, 2);
+        cipherPacketBufferLocal2.performAction1691(integerArgument1, -4);
+        cipherPacketBufferLocal2.performAction1892(true, 1);
+        cipherPacketBufferLocal2.performAction1892(true, 2);
     }
 
     static {

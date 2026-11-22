@@ -9,7 +9,7 @@ final class PcmResampler {
     private int integerState0346;
     private int[][] integerArrayArrayState0013;
 
-    final static MixedSupport111 computeMixedSupport1110858(int integerArgument1, int integerArgument2) {
+    final static MixedSupport111 computeMixedSupport1110800(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         MixedSupport111[] mixedSupport111ArrayLocal2;
         int integerLocal3;
@@ -17,7 +17,7 @@ final class PcmResampler {
         MixedSupport111[] mixedSupport111ArrayLocal5;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         integerLocal3 = -128 / ((integerArgument1 + 53) / 58);
-        mixedSupport111ArrayLocal5 = NodeDeque.computeMixedSupport111Array1925(-23521);
+        mixedSupport111ArrayLocal5 = NodeDeque.computeMixedSupport111Array1797(-23521);
         mixedSupport111ArrayLocal2 = mixedSupport111ArrayLocal5;
         for (integerLocal1 = 0; integerLocal1 < mixedSupport111ArrayLocal5.length; integerLocal1++) {
           if (mixedSupport111ArrayLocal5[integerLocal1].integerState0671 == integerArgument2) {
@@ -101,11 +101,11 @@ final class PcmResampler {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final static MixedSupport016 computeMixedSupport0160857(int integerArgument1) {
+    final static MixedSupport016 computeMixedSupport0160799(int integerArgument1) {
         if (GameAssets.mixedSupport004State0004 == MixedSupport134.mixedSupport004State0005) {
           throw new IllegalStateException();
         }
@@ -116,7 +116,7 @@ final class PcmResampler {
         if (integerArgument1 == 13) {
           return null;
         }
-        PcmResampler.computeMixedSupport0160857(-1);
+        PcmResampler.computeMixedSupport0160799(-1);
         return null;
     }
 
@@ -130,7 +130,7 @@ final class PcmResampler {
         return integerArgument1;
     }
 
-    final static String computeString0859(String stringArgument1, int integerArgument2, byte byteArgument3) {
+    final static String computeString0801(String stringArgument1, int integerArgument2, byte byteArgument3) {
         String stackStringLocal1 = null;
         String stackStringLocal2 = null;
         String stackStringLocal3 = null;
@@ -159,7 +159,7 @@ final class PcmResampler {
           }
           if (byteArgument3 != -128) {
             stringLocal17 = (String) null;
-            PcmResampler.computeString0859((String) null, 71, (byte) -56);
+            PcmResampler.computeString0801((String) null, 71, (byte) -56);
           }
           if (3 == integerArgument2) {
             stackStringLocal3 = NodeHashTableIterator.substituteIndexedPlaceholders(83, MixedSupport010.stringState0046, new String[]{stringArgument1});
@@ -208,7 +208,7 @@ final class PcmResampler {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(',').append(byteArgument3).append(')').toString());
         }
     }
 

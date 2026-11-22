@@ -49,7 +49,7 @@ final class MixedSupport145 {
     short[] shortArrayState0018;
     int integerState0854;
 
-    final void performAction1895(int integerArgument1) {
+    final void performAction1769(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -70,7 +70,7 @@ final class MixedSupport145 {
         integerLocal3 = 32767;
         integerLocal4 = 32767;
         if (integerArgument1 != -14200) {
-          this.performAction1897(70, 90, (byte) -86, 59, -78);
+          this.performAction1771(70, 90, (byte) -86, 59, -78);
         }
         integerLocal5 = -32768;
         integerLocal6 = -32768;
@@ -106,7 +106,7 @@ final class MixedSupport145 {
         this.integerState0852 = integerLocal3;
     }
 
-    final static void performAction1898(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction1772(int integerArgument1, int integerArgument2, int integerArgument3) {
         SceneWidgetPart013 sceneWidgetPart013Local1 = null;
         SceneWidgetPart013 sceneWidgetPart013Local2 = null;
         CipherPacketBuffer cipherPacketBufferLocal3 = null;
@@ -121,14 +121,14 @@ final class MixedSupport145 {
           }
           MixedSupport124.integerState0772 = integerArgument3;
           cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal3.performAction1811(integerArgument2, -4);
-          cipherPacketBufferLocal3.performAction2023(true, 3);
-          cipherPacketBufferLocal3.performAction2023(true, 11);
-          cipherPacketBufferLocal3.performAction2037(-1, integerArgument3);
+          cipherPacketBufferLocal3.performAction1691(integerArgument2, -4);
+          cipherPacketBufferLocal3.performAction1892(true, 3);
+          cipherPacketBufferLocal3.performAction1892(true, 11);
+          cipherPacketBufferLocal3.performAction1905(-1, integerArgument3);
         }
     }
 
-    final static void performAction1899(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, int integerArgument4) {
+    final static void performAction1773(int integerArgument1, boolean booleanArgument2, boolean booleanArgument3, int integerArgument4) {
         int stackIntegerLocal1 = 0;
         SceneWidget stackSceneWidgetLocal2 = null;
         String stackStringLocal3 = null;
@@ -167,7 +167,7 @@ final class MixedSupport145 {
         int integerLocal36;
         integerLocal29 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          InputAdapter002.performAction1481(RenderingSupport001.integerState0064, 109);
+          InputAdapter002.performAction1383(RenderingSupport001.integerState0064, 109);
           if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
             MixedSupport039.sceneWidgetState0030.integerState0915 = 0;
             sceneWidgetLocal31 = MixedSupport039.sceneWidgetState0030;
@@ -181,8 +181,8 @@ final class MixedSupport145 {
             sceneWidgetLocal20.integerState0896 = 0;
             MixedSupport042.sceneWidgetState0033.stringState0598 = MixedSupport020.stringState0094.toUpperCase();
             integerLocal21 = (2 + NetworkSupport008.sceneWidgetState0093.integerState0896) / 2;
-            MixedSupport127.sceneWidgetState0117.performAction1944(-2 + integerLocal21, integerArgument4 ^ 48, -40 + NetworkSupport008.sceneWidgetState0093.integerState0915, 40, 0);
-            MixedSupport092.sceneWidgetState0091.performAction1944(NetworkSupport008.sceneWidgetState0093.integerState0896 - integerLocal21, integerArgument4 - 48, -40 + NetworkSupport008.sceneWidgetState0093.integerState0915, 40, integerLocal21);
+            MixedSupport127.sceneWidgetState0117.performAction1815(-2 + integerLocal21, integerArgument4 ^ 48, -40 + NetworkSupport008.sceneWidgetState0093.integerState0915, 40, 0);
+            MixedSupport092.sceneWidgetState0091.performAction1815(NetworkSupport008.sceneWidgetState0093.integerState0896 - integerLocal21, integerArgument4 - 48, -40 + NetworkSupport008.sceneWidgetState0093.integerState0915, 40, integerLocal21);
             if (UiComponentPart002.integerArrayState0014.length == 1 &&
               UiComponentPart002.integerArrayState0014[0] == 2) {
               integerLocal22 = 0;
@@ -225,7 +225,7 @@ final class MixedSupport145 {
               objectLocal24 = stringLocal32;
               objectLocal24 = stringLocal32;
               objectLocal24 = stringLocal32;
-              integerLocal36 = MixedSupport127.sceneWidgetState0117.bitmapFontState0020.computeInteger1169(stringLocal32) + 3 * MixedSupport127.sceneWidgetState0117.bitmapFontState0020.computeInteger1167('.');
+              integerLocal36 = MixedSupport127.sceneWidgetState0117.bitmapFontState0020.computeInteger1090(stringLocal32) + 3 * MixedSupport127.sceneWidgetState0117.bitmapFontState0020.computeInteger1088('.');
               MixedSupport127.sceneWidgetState0117.integerState0916 = 0;
               MixedSupport127.sceneWidgetState0117.integerState0893 = (-integerLocal36 + MixedSupport127.sceneWidgetState0117.integerState0896) / 2;
               if ((48 & UiComponentPart020.integerState0552) == 16) {
@@ -271,7 +271,7 @@ final class MixedSupport145 {
                   MixedSupport113.booleanArrayState0009[integerLocal30] = false;
                   integerLocal30++;
                 }
-                MixedSupport134.performAction1798(-1, true, -1, 0, -1, MixedSupport064.integerState0336, UiComponentPart011.sceneWidgetPart013State0002, false);
+                MixedSupport134.performAction1679(-1, true, -1, 0, -1, MixedSupport064.integerState0336, UiComponentPart011.sceneWidgetPart013State0002, false);
                 if (!(2 > MixedSupport126.integerState0776) &&
                   MixedSupport011.booleanArrayState0002[12]) {
                   SceneWidgetPart013.booleanState0207 = true;
@@ -308,52 +308,52 @@ final class MixedSupport145 {
           stackSceneWidgetLocal8 = MixedSupport030.sceneWidgetState0023;
           stackBooleanLocal9 = false;
           stackBooleanLocal10 = (booleanArgument2) && (!booleanArgument3) && (!MixedSupport026.booleanState0028);
-          ((SceneWidget) (Object) stackSceneWidgetLocal8).performAction1952(stackBooleanLocal9, stackBooleanLocal10);
+          ((SceneWidget) (Object) stackSceneWidgetLocal8).performAction1823(stackBooleanLocal9, stackBooleanLocal10);
           stackSceneWidgetLocal11 = NetworkSupport008.sceneWidgetState0093;
           stackBooleanLocal12 = false;
           stackBooleanLocal13 = (booleanArgument2) && (!booleanArgument3) && (!MixedSupport026.booleanState0028);
-          ((SceneWidget) (Object) stackSceneWidgetLocal11).performAction1952(stackBooleanLocal12, stackBooleanLocal13);
+          ((SceneWidget) (Object) stackSceneWidgetLocal11).performAction1823(stackBooleanLocal12, stackBooleanLocal13);
           stackSceneWidgetLocal14 = MixedSupport087.sceneWidgetState0087;
           stackBooleanLocal15 = false;
           stackBooleanLocal16 = (booleanArgument2) && (!booleanArgument3) && (MixedSupport026.booleanState0028);
-          ((SceneWidget) (Object) stackSceneWidgetLocal14).performAction1952(stackBooleanLocal15, stackBooleanLocal16);
-          PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1732(false);
+          ((SceneWidget) (Object) stackSceneWidgetLocal14).performAction1823(stackBooleanLocal15, stackBooleanLocal16);
+          PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1620(false);
           if (integerArgument4 != 48) {
-            MixedSupport145.performAction1898(49, 2, 67);
+            MixedSupport145.performAction1772(49, 2, 67);
           }
           if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
             if (ComponentDecorator.sceneWidgetState0078.integerState0891 != 0) {
-              MixedSupport138.performAction1844(integerArgument1, integerArgument4 ^ 52);
+              MixedSupport138.performAction1721(integerArgument1, integerArgument4 ^ 52);
             }
             if (MixedSupport092.sceneWidgetState0091.integerState0891 != 0) {
               if (MixedSupport040.booleanState0047) {
-                ResourceArchive.performAction0898(integerArgument1, 1);
+                ResourceArchive.performAction0838(integerArgument1, 1);
               } else {
-                MixedSupport128.performAction1768(integerArgument1, true);
+                MixedSupport128.performAction1652(integerArgument1, true);
               }
             }
-            MixedSupport085.performAction1129(UiComponentPart011.sceneWidgetPart013State0002, true, integerArgument1, (byte) -127);
+            MixedSupport085.performAction1054(UiComponentPart011.sceneWidgetPart013State0002, true, integerArgument1, (byte) -127);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal37) {
           caughtExceptionLocal17 = caughtParameterLocal37;
           runtimeExceptionLocal18 = caughtExceptionLocal17;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal18), "vg.A(" + integerArgument1 + ',' + booleanArgument2 + ',' + booleanArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal18), "vg.A(" + integerArgument1 + ',' + booleanArgument2 + ',' + booleanArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    private final void performAction1900(boolean booleanArgument1) {
+    private final void performAction1774(boolean booleanArgument1) {
         this.booleanState0210 = booleanArgument1 ? true : false;
     }
 
-    final static ResourceArchive computeResourceArchive1896(int integerArgument1, int integerArgument2) {
+    final static ResourceArchive computeResourceArchive1770(int integerArgument1, int integerArgument2) {
         if (integerArgument2 <= 20) {
           integerArrayState0248 = (int[]) null;
         }
-        return MixedSupport072.computeResourceArchive0927(true, 1, integerArgument1, false, false, false);
+        return MixedSupport072.computeResourceArchive0863(true, 1, integerArgument1, false, false, false);
     }
 
-    final void performAction1894(byte byteArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction1768(byte byteArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         for (integerLocal1 = 0; this.shortState0003 > integerLocal1; integerLocal1++) {
@@ -364,10 +364,10 @@ final class MixedSupport145 {
         if (byteArgument1 > -62) {
           this.byteState0004 = (byte) 59;
         }
-        this.performAction1900(false);
+        this.performAction1774(false);
     }
 
-    final void performAction1897(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction1771(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal3 = 19 % ((68 - byteArgument3) / 34);
@@ -376,10 +376,10 @@ final class MixedSupport145 {
           this.shortArrayState0004[integerLocal1] = (short)(integerArgument1 * this.shortArrayState0004[integerLocal1] / integerArgument5);
           this.shortArrayState0009[integerLocal1] = (short)(this.shortArrayState0009[integerLocal1] * integerArgument4 / integerArgument5);
         }
-        this.performAction1900(false);
+        this.performAction1774(false);
     }
 
-    public static void performAction1893(byte byteArgument1) {
+    public static void performAction1767(byte byteArgument1) {
         stringArrayState0053 = null;
         int integerLocal1 = 0 / ((10 - byteArgument1) / 39);
         stringState0591 = null;

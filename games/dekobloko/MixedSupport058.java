@@ -8,7 +8,7 @@ final class MixedSupport058 {
     static String stringState0250;
     private static String stringState0251;
 
-    public static void performAction0764(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0250 = null;
         stringState0249 = null;
         if (integerArgument1 != -18551) {

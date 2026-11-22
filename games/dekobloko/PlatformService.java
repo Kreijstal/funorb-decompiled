@@ -29,23 +29,23 @@ final class PlatformService implements Runnable {
     private PlatformSupport003 platformSupport003State0001;
     PlatformSupport004 platformSupport004State0003;
 
-    final AsyncTask computeAsyncTask0548(byte byteArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final AsyncTask computeAsyncTask0514(byte byteArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (byteArgument1 <= 39) {
           this.platformSupport001State0001 = (PlatformSupport001) null;
         }
-        return this.computeAsyncTask0552(integerArgument5 + (integerArgument3 << 16), 1, (Object) null, 6, (integerArgument4 << 16) + integerArgument2);
+        return this.computeAsyncTask0518(integerArgument5 + (integerArgument3 << 16), 1, (Object) null, 6, (integerArgument4 << 16) + integerArgument2);
     }
 
-    final AsyncTask computeAsyncTask0554(int integerArgument1, String stringArgument2, int integerArgument3) {
+    final AsyncTask computeAsyncTask0520(int integerArgument1, String stringArgument2, int integerArgument3) {
         AsyncTask discarded$0 = null;
         if (integerArgument1 <= 98) {
           String stringLocal2 = (String) null;
-          discarded$0 = this.computeAsyncTask0556(12, true, -60, (String) null);
+          discarded$0 = this.computeAsyncTask0522(12, true, -60, (String) null);
         }
-        return this.computeAsyncTask0556(integerArgument3, false, -10742, stringArgument2);
+        return this.computeAsyncTask0522(integerArgument3, false, -10742, stringArgument2);
     }
 
-    final void performAction0551(int integerArgument1) {
+    final void performAction0517(int integerArgument1) {
         try {
           int integerLocal1 = 0;
           Throwable caughtExceptionLocal2 = null;
@@ -61,7 +61,7 @@ final class PlatformService implements Runnable {
           try {
             this.threadState0001.join();
             if (integerArgument1 != 0) {
-              this.performAction0551(-106);
+              this.performAction0517(-106);
             }
           } catch (java.lang.InterruptedException caughtParameterLocal7) {
             caughtExceptionLocal2 = caughtParameterLocal7;
@@ -69,7 +69,7 @@ final class PlatformService implements Runnable {
           }
           if (this.platformSupport004State0001 != null) {
             try {
-              this.platformSupport004State0001.performAction0686(-72);
+              this.platformSupport004State0001.performAction0642(-72);
             } catch (java.io.IOException caughtParameterLocal8) {
               caughtExceptionLocal2 = caughtParameterLocal8;
               iOExceptionLocal5 = (IOException) (Object) caughtExceptionLocal2;
@@ -77,7 +77,7 @@ final class PlatformService implements Runnable {
           }
           if (null != this.platformSupport004State0003) {
             try {
-              this.platformSupport004State0003.performAction0686(integerArgument1 - 55);
+              this.platformSupport004State0003.performAction0642(integerArgument1 - 55);
             } catch (java.io.IOException caughtParameterLocal9) {
               caughtExceptionLocal2 = caughtParameterLocal9;
               iOExceptionLocal5 = (IOException) (Object) caughtExceptionLocal2;
@@ -87,7 +87,7 @@ final class PlatformService implements Runnable {
             for (integerLocal1 = 0; integerLocal1 < this.platformSupport004ArrayState0001.length; integerLocal1++) {
               if (null != this.platformSupport004ArrayState0001[integerLocal1]) {
                 try {
-                  this.platformSupport004ArrayState0001[integerLocal1].performAction0686(integerArgument1 ^ -71);
+                  this.platformSupport004ArrayState0001[integerLocal1].performAction0642(integerArgument1 ^ -71);
                 } catch (java.io.IOException caughtParameterLocal10) {
                   caughtExceptionLocal2 = caughtParameterLocal10;
                   iOExceptionLocal6 = (IOException) (Object) caughtExceptionLocal2;
@@ -97,7 +97,7 @@ final class PlatformService implements Runnable {
           }
           if (this.platformSupport004State0002 != null) {
             try {
-              this.platformSupport004State0002.performAction0686(-72);
+              this.platformSupport004State0002.performAction0642(-72);
             } catch (java.io.IOException caughtParameterLocal11) {
               caughtExceptionLocal2 = caughtParameterLocal11;
               iOExceptionLocal5 = (IOException) (Object) caughtExceptionLocal2;
@@ -110,21 +110,21 @@ final class PlatformService implements Runnable {
         }
     }
 
-    final AsyncTask computeAsyncTask0558(boolean booleanArgument1, String stringArgument2, Class classArgument3) {
+    final AsyncTask computeAsyncTask0524(boolean booleanArgument1, String stringArgument2, Class classArgument3) {
         if (booleanArgument1) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0552(0, 1, new Object[]{classArgument3, stringArgument2}, 9, 0);
+        return this.computeAsyncTask0518(0, 1, new Object[]{classArgument3, stringArgument2}, 9, 0);
     }
 
-    private final AsyncTask computeAsyncTask0556(int integerArgument1, boolean booleanArgument2, int integerArgument3, String stringArgument4) {
+    private final AsyncTask computeAsyncTask0522(int integerArgument1, boolean booleanArgument2, int integerArgument3, String stringArgument4) {
         if (integerArgument3 != -10742) {
           this.asyncTaskState0002 = (AsyncTask) null;
         }
-        return this.computeAsyncTask0552(0, 1, stringArgument4, booleanArgument2 ? 22 : 1, integerArgument1);
+        return this.computeAsyncTask0518(0, 1, stringArgument4, booleanArgument2 ? 22 : 1, integerArgument1);
     }
 
-    final boolean computeBoolean0559(int integerArgument1) {
+    final boolean computeBoolean0525(int integerArgument1) {
         if (integerArgument1 != -86) {
           return false;
         }
@@ -137,14 +137,14 @@ final class PlatformService implements Runnable {
         return this.objectState0001 != null ? true : false;
     }
 
-    final AsyncTask computeAsyncTask0555(int integerArgument1, String stringArgument2, Class classArgument3, Class[] classArrayArgument4) {
+    final AsyncTask computeAsyncTask0521(int integerArgument1, String stringArgument2, Class classArgument3, Class[] classArrayArgument4) {
         if (integerArgument1 != -10962) {
           methodState0001 = (java.lang.reflect.Method) null;
         }
-        return this.computeAsyncTask0552(0, integerArgument1 ^ -10961, new Object[]{classArgument3, stringArgument2, classArrayArgument4}, 8, 0);
+        return this.computeAsyncTask0518(0, integerArgument1 ^ -10961, new Object[]{classArgument3, stringArgument2, classArrayArgument4}, 8, 0);
     }
 
-    private final static PlatformSupport004 computePlatformSupport0040550(byte byteArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
+    private final static PlatformSupport004 computePlatformSupport0040516(byte byteArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
         try {
           int integerLocal1 = 0;
           PlatformSupport004 stackPlatformSupport004Local2 = null;
@@ -189,11 +189,11 @@ final class PlatformService implements Runnable {
         }
     }
 
-    final AsyncTask computeAsyncTask0553(int integerArgument1, java.awt.Frame frameArgument2) {
+    final AsyncTask computeAsyncTask0519(int integerArgument1, java.awt.Frame frameArgument2) {
         if (integerArgument1 != 75254128) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0552(0, 1, frameArgument2, 7, 0);
+        return this.computeAsyncTask0518(0, 1, frameArgument2, 7, 0);
     }
 
     public final void run() {
@@ -258,7 +258,7 @@ final class PlatformService implements Runnable {
                 integerLocal5 = asyncTaskLocal16.integerState0511;
                 switch (integerLocal5) {
                   case 1:
-                    if (MixedSupport063.computeLong0802(4) < longState0016) {
+                    if (MixedSupport063.computeLong0749(4) < longState0016) {
                       throw new IOException();
                     }
                     asyncTaskLocal16.objectState0004 = new java.net.Socket(java.net.InetAddress.getByName((String) (asyncTaskLocal16.objectState0003)), asyncTaskLocal16.integerState0509);
@@ -271,7 +271,7 @@ final class PlatformService implements Runnable {
                     asyncTaskLocal16.objectState0004 = threadLocal28;
                     break;
                   case 4:
-                    if (longState0016 > MixedSupport063.computeLong0802(4)) {
+                    if (longState0016 > MixedSupport063.computeLong0749(4)) {
                       throw new IOException();
                     }
                     asyncTaskLocal16.objectState0004 = new DataInputStream(((java.net.URL) (asyncTaskLocal16.objectState0003)).openStream());
@@ -279,17 +279,17 @@ final class PlatformService implements Runnable {
                   case 16:
                   default:
                     if (!this.booleanState0043) {
-                      throw PlatformService.<RuntimeException>computeRuntimeException0546(new Exception(""));
+                      throw PlatformService.<RuntimeException>computeRuntimeException0512(new Exception(""));
                     }
                     switch (integerLocal5) {
                       case 21:
-                        if (longState0016 > MixedSupport063.computeLong0802(4)) {
+                        if (longState0016 > MixedSupport063.computeLong0749(4)) {
                           throw new IOException();
                         }
                         asyncTaskLocal16.objectState0004 = java.net.InetAddress.getByName((String) (asyncTaskLocal16.objectState0003)).getAddress();
                         break;
                       case 12:
-                        platformSupport004Local9 = PlatformService.computePlatformSupport0040550((byte) -32, stringState0173, (String) (asyncTaskLocal16.objectState0003), integerState0223);
+                        platformSupport004Local9 = PlatformService.computePlatformSupport0040516((byte) -32, stringState0173, (String) (asyncTaskLocal16.objectState0003), integerState0223);
                         asyncTaskLocal16.objectState0004 = platformSupport004Local9;
                         break;
                       case 16:
@@ -299,7 +299,7 @@ final class PlatformService implements Runnable {
                           integerLocal10 = asyncTaskLocal16.integerState0509;
                           integerLocal13 = asyncTaskLocal16.integerState0508;
                           if (this.booleanState0044) {
-                            this.platformSupport001State0001.performAction0050(integerLocal10, integerLocal13, (byte) -98);
+                            this.platformSupport001State0001.performAction0048(integerLocal10, integerLocal13, (byte) -98);
                           } else {
                             Class.forName("RenderingSupport005").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.objectState0002, new Object[]{new Integer(integerLocal10), new Integer(integerLocal13)});
                           }
@@ -311,7 +311,7 @@ final class PlatformService implements Runnable {
                           integerLocal10 = stackIntegerLocal2;
                           componentLocal27 = (java.awt.Component) (asyncTaskLocal16.objectState0003);
                           if (this.booleanState0044) {
-                            this.platformSupport001State0001.performAction0051(integerLocal10 != 0, componentLocal27, (byte) 111);
+                            this.platformSupport001State0001.performAction0049(integerLocal10 != 0, componentLocal27, (byte) 111);
                           } else {
                             Class.forName("RenderingSupport005").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.objectState0002, new Object[]{componentLocal27, new Boolean(integerLocal10 != 0)});
                           }
@@ -323,21 +323,21 @@ final class PlatformService implements Runnable {
                           Class.forName("RenderingSupport005").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.objectState0002, new Object[]{objectArrayLocal23[0], objectArrayLocal23[1], new Integer(asyncTaskLocal16.integerState0509), new Integer(asyncTaskLocal16.integerState0508), objectArrayLocal23[2]});
                         } else {
                           if (16 != integerLocal5) {
-                            throw PlatformService.<RuntimeException>computeRuntimeException0546(new Exception(""));
+                            throw PlatformService.<RuntimeException>computeRuntimeException0512(new Exception(""));
                           }
                           try {
                             if (!stringState0171.startsWith("win")) {
-                              throw PlatformService.<RuntimeException>computeRuntimeException0546(new Exception());
+                              throw PlatformService.<RuntimeException>computeRuntimeException0512(new Exception());
                             }
                             stringLocal25 = (String) (asyncTaskLocal16.objectState0003);
                             if (!stringLocal25.startsWith("http://") &&
                               !stringLocal25.startsWith("https://")) {
-                              throw PlatformService.<RuntimeException>computeRuntimeException0546(new Exception());
+                              throw PlatformService.<RuntimeException>computeRuntimeException0512(new Exception());
                             }
                             stringLocal14 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (integerLocal1 = 0; stringLocal25.length() > integerLocal1; integerLocal1++) {
                               if (stringLocal14.indexOf((int) stringLocal25.charAt(integerLocal1)) == -1) {
-                                throw PlatformService.<RuntimeException>computeRuntimeException0546(new Exception());
+                                throw PlatformService.<RuntimeException>computeRuntimeException0512(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + stringLocal25 + "\"");
@@ -346,17 +346,17 @@ final class PlatformService implements Runnable {
                             caughtExceptionLocal3 = caughtParameterLocal31;
                             exceptionLocal11 = (Exception) (Object) caughtExceptionLocal3;
                             asyncTaskLocal16.objectState0004 = exceptionLocal11;
-                            throw PlatformService.<RuntimeException>computeRuntimeException0546(exceptionLocal11);
+                            throw PlatformService.<RuntimeException>computeRuntimeException0512(exceptionLocal11);
                           }
                         }
                         break;
                       case 13:
-                        platformSupport004Local9 = PlatformService.computePlatformSupport0040550((byte) -32, "", (String) (asyncTaskLocal16.objectState0003), integerState0223);
+                        platformSupport004Local9 = PlatformService.computePlatformSupport0040516((byte) -32, "", (String) (asyncTaskLocal16.objectState0003), integerState0223);
                         asyncTaskLocal16.objectState0004 = platformSupport004Local9;
                         break;
                       case 7:
                         if (this.booleanState0044) {
-                          this.platformSupport003State0001.performAction0565((java.awt.Frame) (asyncTaskLocal16.objectState0003), (byte) 122);
+                          this.platformSupport003State0001.performAction0530((java.awt.Frame) (asyncTaskLocal16.objectState0003), (byte) 122);
                         } else {
                           Class.forName("MixedSupport142").getMethod("exit", new Class[]{}).invoke(this.objectState0001, new Object[]{});
                         }
@@ -368,18 +368,18 @@ final class PlatformService implements Runnable {
                         if (!this.booleanState0044) {
                           Class.forName("MixedSupport142").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.objectState0001, new Object[]{frameLocal22, new Integer(asyncTaskLocal16.integerState0509 >>> 16), new Integer(asyncTaskLocal16.integerState0509 & 65535), new Integer(asyncTaskLocal16.integerState0508 >> 16), new Integer(asyncTaskLocal16.integerState0508 & 65535)});
                         } else {
-                          this.platformSupport003State0001.performAction0564(asyncTaskLocal16.integerState0508 >> 16, false, asyncTaskLocal16.integerState0509 >>> 16, asyncTaskLocal16.integerState0509 & 65535, asyncTaskLocal16.integerState0508 & 65535, frameLocal22);
+                          this.platformSupport003State0001.performAction0529(asyncTaskLocal16.integerState0508 >> 16, false, asyncTaskLocal16.integerState0509 >>> 16, asyncTaskLocal16.integerState0509 & 65535, asyncTaskLocal16.integerState0508 & 65535, frameLocal22);
                         }
                         break;
                       case 5:
                         if (!this.booleanState0044) {
                           asyncTaskLocal16.objectState0004 = Class.forName("MixedSupport142").getMethod("listmodes", new Class[]{}).invoke(this.objectState0001, new Object[]{});
                         } else {
-                          asyncTaskLocal16.objectState0004 = this.platformSupport003State0001.computeIntegerArray0563(0);
+                          asyncTaskLocal16.objectState0004 = this.platformSupport003State0001.computeIntegerArray0528(0);
                         }
                         break;
                       case 3:
-                        if (longState0016 > MixedSupport063.computeLong0802(4)) {
+                        if (longState0016 > MixedSupport063.computeLong0749(4)) {
                           throw new IOException();
                         }
                         stringLocal21 = (asyncTaskLocal16.integerState0509 >> 24 & 255) + "." + (255 & asyncTaskLocal16.integerState0509 >> 16) + "." + ((asyncTaskLocal16.integerState0509 & 65502) >> 8) + "." + (255 & asyncTaskLocal16.integerState0509);
@@ -413,12 +413,12 @@ final class PlatformService implements Runnable {
                     asyncTaskLocal16.objectState0004 = ((Class) (objectArrayLocal17[0])).getDeclaredMethod((String) (objectArrayLocal17[1]), (Class[]) (objectArrayLocal17[2]));
                     break;
                   case 22:
-                    if (MixedSupport063.computeLong0802(4) < longState0016) {
+                    if (MixedSupport063.computeLong0749(4) < longState0016) {
                       throw new IOException();
                     }
                     try {
                       if (false) throw (DiagnosticSupport001) null;
-                      asyncTaskLocal16.objectState0004 = UiComponentPart024.computeSocketFactory1405((String) (asyncTaskLocal16.objectState0003), asyncTaskLocal16.integerState0509, 23155).computeSocket1629(-7);
+                      asyncTaskLocal16.objectState0004 = UiComponentPart024.computeSocketFactory1308((String) (asyncTaskLocal16.objectState0003), asyncTaskLocal16.integerState0509, 23155).computeSocket1521(-7);
                     } catch (DiagnosticSupport001 caughtParameterLocal32) {
                       caughtExceptionLocal3 = caughtParameterLocal32;
                       diagnosticSupport001Local12 = (DiagnosticSupport001) (Object) caughtExceptionLocal3;
@@ -450,19 +450,19 @@ final class PlatformService implements Runnable {
         }
     }
 
-    final AsyncTask computeAsyncTask0557(java.net.URL uRLArgument1, byte byteArgument2) {
+    final AsyncTask computeAsyncTask0523(java.net.URL uRLArgument1, byte byteArgument2) {
         int integerLocal1 = -74 % ((-9 - byteArgument2) / 45);
-        return this.computeAsyncTask0552(0, 1, uRLArgument1, 4, 0);
+        return this.computeAsyncTask0518(0, 1, uRLArgument1, 4, 0);
     }
 
-    final AsyncTask computeAsyncTask0547(byte byteArgument1) {
+    final AsyncTask computeAsyncTask0513(byte byteArgument1) {
         if (byteArgument1 <= 121) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0552(0, 1, (Object) null, 5, 0);
+        return this.computeAsyncTask0518(0, 1, (Object) null, 5, 0);
     }
 
-    private final AsyncTask computeAsyncTask0552(int integerArgument1, int integerArgument2, Object objectArgument3, int integerArgument4, int integerArgument5) {
+    private final AsyncTask computeAsyncTask0518(int integerArgument1, int integerArgument2, Object objectArgument3, int integerArgument4, int integerArgument5) {
         AsyncTask asyncTaskLocal1 = null;
         Throwable caughtExceptionLocal2 = null;
         Object objectLocal3 = null;
@@ -488,9 +488,9 @@ final class PlatformService implements Runnable {
         return asyncTaskLocal1;
     }
 
-    final AsyncTask computeAsyncTask0549(byte byteArgument1, int integerArgument2, Runnable runnableArgument3) {
+    final AsyncTask computeAsyncTask0515(byte byteArgument1, int integerArgument2, Runnable runnableArgument3) {
         int integerLocal1 = -20 / ((byteArgument1 - 80) / 41);
-        return this.computeAsyncTask0552(0, 1, runnableArgument3, 2, integerArgument2);
+        return this.computeAsyncTask0518(0, 1, runnableArgument3, 2, integerArgument2);
     }
 
     PlatformService(int integerArgument1, String stringArgument2, int integerArgument3, boolean booleanArgument4) throws Exception {
@@ -576,14 +576,14 @@ final class PlatformService implements Runnable {
             exception = (Exception) (Object) caughtExceptionLocal5;
           }
         }
-        PlatformSupport005.performAction1271(integerState0223, stringState0173, 7154);
+        PlatformSupport005.performAction1182(integerState0223, stringState0173, 7154);
         if (this.booleanState0043) {
-          this.platformSupport004State0002 = new PlatformSupport004(PlatformSupport005.computeFile1272((String) null, 30869, "random.dat", integerState0223), "rw", 25L);
-          this.platformSupport004State0001 = new PlatformSupport004(PlatformSupport005.computeFile1270(0, "main_file_cache.dat2"), "rw", 314572800L);
-          this.platformSupport004State0003 = new PlatformSupport004(PlatformSupport005.computeFile1270(0, "main_file_cache.idx255"), "rw", 1048576L);
+          this.platformSupport004State0002 = new PlatformSupport004(PlatformSupport005.computeFile1183((String) null, 30869, "random.dat", integerState0223), "rw", 25L);
+          this.platformSupport004State0001 = new PlatformSupport004(PlatformSupport005.computeFile1181(0, "main_file_cache.dat2"), "rw", 314572800L);
+          this.platformSupport004State0003 = new PlatformSupport004(PlatformSupport005.computeFile1181(0, "main_file_cache.idx255"), "rw", 1048576L);
           this.platformSupport004ArrayState0001 = new PlatformSupport004[integerArgument3];
           for (integerLocal1 = 0; integerArgument3 > integerLocal1; integerLocal1++) {
-            this.platformSupport004ArrayState0001[integerLocal1] = new PlatformSupport004(PlatformSupport005.computeFile1270(0, "main_file_cache.idx" + integerLocal1), "rw", 1048576L);
+            this.platformSupport004ArrayState0001[integerLocal1] = new PlatformSupport004(PlatformSupport005.computeFile1181(0, "main_file_cache.idx" + integerLocal1), "rw", 1048576L);
           }
           if (this.booleanState0044) {
             try {
@@ -627,7 +627,7 @@ final class PlatformService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException computeRuntimeException0546(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException computeRuntimeException0512(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

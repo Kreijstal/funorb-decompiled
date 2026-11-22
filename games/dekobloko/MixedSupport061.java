@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport061 extends MixedSupport155 {
+final class MixedSupport061 extends TextFieldValidator {
     static String stringState0256;
     static ResourceArchive resourceArchiveState0008;
     static String stringState0257;
     static String stringState0258;
     static boolean booleanState0077;
 
-    public static void performAction0793(int integerArgument1) {
+    public static void performAction0740(int integerArgument1) {
         stringState0256 = null;
         stringState0258 = null;
         if (integerArgument1 == 9369) {
@@ -16,12 +16,12 @@ final class MixedSupport061 extends MixedSupport155 {
           stringState0257 = null;
           return;
         }
-        MixedSupport061.performAction0793(6);
+        MixedSupport061.performAction0740(6);
         resourceArchiveState0008 = null;
         stringState0257 = null;
     }
 
-    final String computeString0791(String stringArgument1, byte byteArgument2) {
+    final String getValidationMessage(String stringArgument1, byte byteArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         String stringLocal2 = null;
         String stackStringLocal3 = null;
@@ -32,9 +32,9 @@ final class MixedSupport061 extends MixedSupport155 {
         try {
           if (byteArgument2 != -11) {
             stringLocal2 = (String) null;
-            this.computeRenderingSupport0150792((String) null, (byte) -35);
+            this.getValidationStatus((String) null, (byte) -35);
           }
-          if (this.computeRenderingSupport0150792(stringArgument1, (byte) -40) != MixedSupport149.renderingSupport015State0005) {
+          if (this.getValidationStatus(stringArgument1, (byte) -40) != MixedSupport149.validationStatusState0005) {
             return MixedSupport081.stringState0331;
           }
           stackStringLocal3 = MixedSupport090.stringState0363;
@@ -49,34 +49,34 @@ final class MixedSupport061 extends MixedSupport155 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final RenderingSupport015 computeRenderingSupport0150792(String stringArgument1, byte byteArgument2) {
+    final ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
-        RenderingSupport015 stackRenderingSupport015Local4 = null;
-        RenderingSupport015 stackRenderingSupport015Local5 = null;
-        RenderingSupport015 stackRenderingSupport015Local6 = null;
+        ValidationStatus stackValidationStatusLocal4 = null;
+        ValidationStatus stackValidationStatusLocal5 = null;
+        ValidationStatus stackValidationStatusLocal6 = null;
         RuntimeException stackRuntimeExceptionLocal7 = null;
         StringBuilder stackStringBuilderLocal8 = null;
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         try {
-          stackIntegerLocal3 = (null != DekoBlokoClient.computeMixedSupport0660323(stringArgument1, -12828)) ? 0 : 1;
+          stackIntegerLocal3 = (null != DekoBlokoClient.computeMixedSupport0660303(stringArgument1, -12828)) ? 0 : 1;
           integerLocal1 = stackIntegerLocal3;
           if (integerLocal1 == 0) {
-            stackRenderingSupport015Local4 = MixedSupport149.renderingSupport015State0005;
-            return stackRenderingSupport015Local4;
+            stackValidationStatusLocal4 = MixedSupport149.validationStatusState0005;
+            return stackValidationStatusLocal4;
           }
           if (byteArgument2 == -40) {
-            stackRenderingSupport015Local6 = MixedSupport023.renderingSupport015State0001;
-            return stackRenderingSupport015Local6;
+            stackValidationStatusLocal6 = MixedSupport023.validationStatusState0001;
+            return stackValidationStatusLocal6;
           }
-          stackRenderingSupport015Local5 = (RenderingSupport015) null;
-          return stackRenderingSupport015Local5;
+          stackValidationStatusLocal5 = (ValidationStatus) null;
+          return stackValidationStatusLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal10 = caughtParameterLocal11;
           runtimeExceptionLocal2 = caughtExceptionLocal10;
@@ -87,7 +87,7 @@ final class MixedSupport061 extends MixedSupport155 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument2).append(')').toString());
         }
     }
 

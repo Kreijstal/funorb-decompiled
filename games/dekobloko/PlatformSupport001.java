@@ -62,7 +62,7 @@ final class PlatformSupport001 extends com.ms.dll.Callback {
         return 0;
     }
 
-    final void performAction0051(boolean booleanArgument1, java.awt.Component componentArgument2, byte byteArgument3) {
+    final void performAction0049(boolean booleanArgument1, java.awt.Component componentArgument2, byte byteArgument3) {
         boolean stackBooleanLocal1 = false;
         int stackIntegerLocal2 = 0;
         boolean stackBooleanLocal3 = false;
@@ -113,11 +113,11 @@ final class PlatformSupport001 extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(integerLocal6, 101024, 0, 0);
     }
 
-    final void performAction0050(int integerArgument1, int integerArgument2, byte byteArgument3) {
+    final void performAction0048(int integerArgument1, int integerArgument2, byte byteArgument3) {
         com.ms.win32.User32.SetCursorPos(integerArgument1, integerArgument2);
         if (byteArgument3 != -98) {
           java.awt.Component componentLocal1 = (java.awt.Component) null;
-          this.performAction0051(false, (java.awt.Component) null, (byte) -80);
+          this.performAction0049(false, (java.awt.Component) null, (byte) -80);
         }
     }
 

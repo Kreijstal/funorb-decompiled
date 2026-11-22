@@ -4,7 +4,7 @@
 class RgbSprite extends RenderingSupport004 {
     int[] integerArrayState0024;
 
-    private final void performAction0311(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final void performAction0292(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -118,15 +118,15 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final void performAction0306(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction0287(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = this.integerState0254 << 3;
         int integerLocal2 = this.integerState0260 << 3;
         integerArgument1 = (integerArgument1 << 4) + (integerLocal1 & 15);
         integerArgument2 = (integerArgument2 << 4) + (integerLocal2 & 15);
-        this.performAction0278(integerLocal1, integerLocal2, integerArgument1, integerArgument2, integerArgument3, integerArgument4);
+        this.performAction0259(integerLocal1, integerLocal2, integerArgument1, integerArgument2, integerArgument3, integerArgument4);
     }
 
-    final void performAction0312() {
+    final void performAction0293() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -218,7 +218,7 @@ class RgbSprite extends RenderingSupport004 {
         return;
     }
 
-    void performAction0309(int integerArgument1, int integerArgument2) {
+    void performAction0290(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -259,12 +259,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0283(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+          RgbSprite.performAction0264(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
           return;
         }
     }
 
-    private final static void performAction0292(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
+    private final static void performAction0273(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -311,7 +311,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    private final static void performAction0279(int integerArgument1, int integerArgument2, int integerArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
+    private final static void performAction0260(int integerArgument1, int integerArgument2, int integerArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
         int previousIntegerLocal1 = 0;
         for (integerArgument9 = -integerArgument11; integerArgument9 < 0; integerArgument9++) {
           for (integerArgument7 = -integerArgument10; integerArgument7 < 0; integerArgument7++) {
@@ -333,7 +333,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final void performAction0300(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction0281(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -355,7 +355,7 @@ class RgbSprite extends RenderingSupport004 {
           }
           if (integerArgument3 == this.integerState0258 &&
             integerArgument4 == this.integerState0255) {
-            this.performAction0305(integerArgument1, integerArgument2, integerArgument5);
+            this.performAction0286(integerArgument1, integerArgument2, integerArgument5);
             return;
           }
           integerLocal1 = this.integerState0258;
@@ -405,16 +405,16 @@ class RgbSprite extends RenderingSupport004 {
             integerLocal3 = integerLocal3 + integerLocal7 * integerLocal15;
             integerLocal9 = integerLocal9 + integerLocal15;
           }
-          RgbSprite.performAction0302(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
+          RgbSprite.performAction0283(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
           return;
         }
     }
 
-    final void performAction0275() {
-        SoftwareRaster.performAction0704(this.integerArrayState0024, this.integerState0258, this.integerState0255);
+    final void performAction0256() {
+        SoftwareRaster.performAction0658(this.integerArrayState0024, this.integerState0258, this.integerState0255);
     }
 
-    private final static void performAction0302(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
+    private final static void performAction0283(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -436,7 +436,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final RgbSprite computeRgbSprite0308() {
+    final RgbSprite computeRgbSprite0289() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RgbSprite rgbSpriteLocal3 = new RgbSprite(this.integerState0258, this.integerState0255);
@@ -452,7 +452,7 @@ class RgbSprite extends RenderingSupport004 {
         return rgbSpriteLocal3;
     }
 
-    private final static void performAction0282(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    private final static void performAction0263(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int cachedIntegerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int cachedIntegerLocal3 = 0;
@@ -524,7 +524,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    void performAction0297(int integerArgument1, int integerArgument2) {
+    void performAction0278(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -565,12 +565,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0292(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+          RgbSprite.performAction0273(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
           return;
         }
     }
 
-    final void performAction0290(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction0271(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -715,7 +715,7 @@ class RgbSprite extends RenderingSupport004 {
         throw new IllegalArgumentException();
     }
 
-    void performAction0314(int integerArgument1, int integerArgument2, int integerArgument3) {
+    void performAction0295(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -757,15 +757,15 @@ class RgbSprite extends RenderingSupport004 {
             return;
           }
           if (integerArgument3 == 256) {
-            RgbSprite.performAction0279(0, 0, 0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, 0, integerLocal4, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+            RgbSprite.performAction0260(0, 0, 0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, 0, integerLocal4, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
           } else {
-            RgbSprite.performAction0280(0, 0, 0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, 0, integerLocal4, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+            RgbSprite.performAction0261(0, 0, 0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerLocal5, 0, integerLocal4, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
           }
           return;
         }
     }
 
-    private final static void performAction0284(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
+    private final static void performAction0265(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -807,7 +807,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final void performAction0313(int integerArgument1, int integerArgument2) {
+    final void performAction0294(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -848,12 +848,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0281(0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+          RgbSprite.performAction0262(0, SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
           return;
         }
     }
 
-    private final static void performAction0286(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12) {
+    private final static void performAction0267(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -875,17 +875,17 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    void performAction0304(int integerArgument1, int integerArgument2) {
+    void performAction0285(int integerArgument1, int integerArgument2) {
         integerArgument1 = integerArgument1 + (this.integerState0259 >> 1);
         integerArgument2 = integerArgument2 + (this.integerState0256 >> 1);
         int integerLocal1 = integerArgument1 < SoftwareRaster.integerState0282 ? SoftwareRaster.integerState0282 - integerArgument1 << 1 : 0;
         int integerLocal2 = integerArgument1 + (this.integerState0258 >> 1) > SoftwareRaster.integerState0281 ? SoftwareRaster.integerState0281 - integerArgument1 << 1 : this.integerState0258;
         int integerLocal3 = integerArgument2 < SoftwareRaster.integerState0280 ? SoftwareRaster.integerState0280 - integerArgument2 << 1 : 0;
         int integerLocal4 = integerArgument2 + (this.integerState0255 >> 1) > SoftwareRaster.integerState0283 ? SoftwareRaster.integerState0283 - integerArgument2 << 1 : this.integerState0255;
-        RgbSprite.performAction0282(this.integerArrayState0024, integerLocal3 * this.integerState0258 + integerLocal1, (integerArgument2 + (integerLocal3 >> 1)) * SoftwareRaster.integerState0285 + (integerArgument1 + (integerLocal1 >> 1)), (this.integerState0258 << 1) - (integerLocal2 - integerLocal1) + (this.integerState0258 & 1), SoftwareRaster.integerState0285 - (integerLocal2 - integerLocal1 >> 1), this.integerState0258, integerLocal2 - integerLocal1 >> 1, integerLocal4 - integerLocal3 >> 1);
+        RgbSprite.performAction0263(this.integerArrayState0024, integerLocal3 * this.integerState0258 + integerLocal1, (integerArgument2 + (integerLocal3 >> 1)) * SoftwareRaster.integerState0285 + (integerArgument1 + (integerLocal1 >> 1)), (this.integerState0258 << 1) - (integerLocal2 - integerLocal1) + (this.integerState0258 & 1), SoftwareRaster.integerState0285 - (integerLocal2 - integerLocal1 >> 1), this.integerState0258, integerLocal2 - integerLocal1 >> 1, integerLocal4 - integerLocal3 >> 1);
     }
 
-    final RgbSprite computeRgbSprite0296() {
+    final RgbSprite computeRgbSprite0277() {
         int integerLocal1 = 0;
         RgbSprite rgbSpriteLocal2 = new RgbSprite(this.integerState0258, this.integerState0255);
         rgbSpriteLocal2.integerState0254 = this.integerState0254;
@@ -899,7 +899,7 @@ class RgbSprite extends RenderingSupport004 {
         return rgbSpriteLocal2;
     }
 
-    private final static void performAction0301(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction0282(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -923,7 +923,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final void performAction0288() {
+    final void performAction0269() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (this.integerState0258 == this.integerState0254 &&
@@ -943,7 +943,7 @@ class RgbSprite extends RenderingSupport004 {
         this.integerState0256 = 0;
     }
 
-    private final static void performAction0295(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
+    private final static void performAction0276(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -971,12 +971,12 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    void performAction0310(int integerArgument1, int integerArgument2, int integerArgument3) {
+    void performAction0291(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
         if (integerArgument3 == 256) {
-          this.performAction0297(integerArgument1, integerArgument2);
+          this.performAction0278(integerArgument1, integerArgument2);
           return;
         }
         integerArgument1 = integerArgument1 + this.integerState0259;
@@ -1016,12 +1016,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0301(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+          RgbSprite.performAction0282(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
           return;
         }
     }
 
-    private final static void performAction0294(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12) {
+    private final static void performAction0275(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12) {
         int previousIntegerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -1048,7 +1048,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    final void performAction0305(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void performAction0286(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -1089,12 +1089,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0284(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerArgument3, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+          RgbSprite.performAction0265(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, integerArgument3, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
           return;
         }
     }
 
-    final void performAction0303() {
+    final void performAction0284() {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1122,7 +1122,7 @@ class RgbSprite extends RenderingSupport004 {
         this.integerState0254 = integerLocal8;
     }
 
-    void performAction0289(int integerArgument1, int integerArgument2, int integerArgument3) {
+    void performAction0270(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -1163,12 +1163,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0294(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, 0, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+          RgbSprite.performAction0275(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, 0, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
           return;
         }
     }
 
-    final void performAction0278(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final void performAction0259(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         double doubleLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -1370,7 +1370,7 @@ class RgbSprite extends RenderingSupport004 {
                     if (integerLocal29 >> 12 < this.integerState0258) {
                       integerLocal26 = integerLocal30 >> 12;
                       if (integerLocal30 >> 12 < this.integerState0255) {
-                        this.performAction0311(integerLocal16, integerLocal25, integerLocal26, integerLocal29, integerLocal30);
+                        this.performAction0292(integerLocal16, integerLocal25, integerLocal26, integerLocal29, integerLocal30);
                         integerLocal31++;
                         integerLocal29 = integerLocal29 + integerLocal20;
                         integerLocal30 = integerLocal30 + integerLocal19;
@@ -1434,7 +1434,7 @@ class RgbSprite extends RenderingSupport004 {
                     integerLocal49 = integerLocal53 >> 12;
                     if (integerLocal53 >> 12 < this.integerState0258) {
                       integerLocal50 = integerLocal54 >> 12;
-                      this.performAction0311(integerLocal16, integerLocal49, integerLocal50, integerLocal53, integerLocal54);
+                      this.performAction0292(integerLocal16, integerLocal49, integerLocal50, integerLocal53, integerLocal54);
                       integerLocal55++;
                       integerLocal53 = integerLocal53 + integerLocal20;
                       integerLocal54 = integerLocal54 + integerLocal19;
@@ -1499,7 +1499,7 @@ class RgbSprite extends RenderingSupport004 {
                     integerLocal35 = integerLocal43 >> 12;
                     if (integerLocal43 >> 12 < this.integerState0255) {
                       integerLocal33 = integerLocal41 >> 12;
-                      this.performAction0311(integerLocal16, integerLocal33, integerLocal35, integerLocal41, integerLocal43);
+                      this.performAction0292(integerLocal16, integerLocal33, integerLocal35, integerLocal41, integerLocal43);
                       integerLocal45++;
                       integerLocal41 = integerLocal41 + integerLocal20;
                       integerLocal43 = integerLocal43 + integerLocal19;
@@ -1563,7 +1563,7 @@ class RgbSprite extends RenderingSupport004 {
                   integerLocal44 >= -4096) {
                   integerLocal34 = integerLocal42 >> 12;
                   integerLocal36 = integerLocal44 >> 12;
-                  this.performAction0311(integerLocal16, integerLocal34, integerLocal36, integerLocal42, integerLocal44);
+                  this.performAction0292(integerLocal16, integerLocal34, integerLocal36, integerLocal42, integerLocal44);
                   integerLocal46++;
                   integerLocal42 = integerLocal42 + integerLocal20;
                   integerLocal44 = integerLocal44 + integerLocal19;
@@ -1583,7 +1583,7 @@ class RgbSprite extends RenderingSupport004 {
         return;
     }
 
-    private final static void performAction0293(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction0274(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1635,7 +1635,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    private final static void performAction0280(int integerArgument1, int integerArgument2, int integerArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, int integerArgument14) {
+    private final static void performAction0261(int integerArgument1, int integerArgument2, int integerArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         for (integerArgument9 = -integerArgument11; integerArgument9 < 0; integerArgument9++) {
           for (integerArgument7 = -integerArgument10; integerArgument7 < 0; integerArgument7++) {
@@ -1659,7 +1659,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    private final static void performAction0283(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    private final static void performAction0264(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         for (integerLocal1 = -integerArgument6; integerLocal1 < 0; integerLocal1++) {
@@ -1679,7 +1679,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    private final static void performAction0281(int integerArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction0262(int integerArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1710,7 +1710,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    void performAction0276(int integerArgument1, int integerArgument2, int integerArgument3) {
+    void performAction0257(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -1751,12 +1751,12 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0293(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+          RgbSprite.performAction0274(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
           return;
         }
     }
 
-    final void performAction0277(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction0258(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1893,7 +1893,7 @@ class RgbSprite extends RenderingSupport004 {
         throw new IllegalArgumentException();
     }
 
-    void performAction0291(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    void performAction0272(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1960,12 +1960,12 @@ class RgbSprite extends RenderingSupport004 {
             integerLocal3 = integerLocal3 + integerLocal7 * integerLocal15;
             integerLocal9 = integerLocal9 + integerLocal15;
           }
-          RgbSprite.performAction0295(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
+          RgbSprite.performAction0276(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
           return;
         }
     }
 
-    private final static void performAction0287(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
+    private final static void performAction0268(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -2004,7 +2004,7 @@ class RgbSprite extends RenderingSupport004 {
         this.integerArrayState0024 = integerArrayArgument7;
     }
 
-    private final static void performAction0285(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction0266(int[] integerArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -2038,7 +2038,7 @@ class RgbSprite extends RenderingSupport004 {
         this.integerState0259 = 0;
     }
 
-    void performAction0298(int integerArgument1, int integerArgument2, int integerArgument3) {
+    void performAction0279(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -2079,7 +2079,7 @@ class RgbSprite extends RenderingSupport004 {
           if (integerLocal6 <= 0) {
             return;
           }
-          RgbSprite.performAction0285(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+          RgbSprite.performAction0266(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
           return;
         }
     }
@@ -2110,7 +2110,7 @@ class RgbSprite extends RenderingSupport004 {
         }
     }
 
-    void performAction0307(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    void performAction0288(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -2131,7 +2131,7 @@ class RgbSprite extends RenderingSupport004 {
             return;
           }
           if (integerArgument5 == 256) {
-            this.performAction0299(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
+            this.performAction0280(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
             return;
           }
           integerLocal1 = this.integerState0258;
@@ -2181,12 +2181,12 @@ class RgbSprite extends RenderingSupport004 {
             integerLocal3 = integerLocal3 + integerLocal7 * integerLocal15;
             integerLocal9 = integerLocal9 + integerLocal15;
           }
-          RgbSprite.performAction0287(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
+          RgbSprite.performAction0268(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1, integerArgument5);
           return;
         }
     }
 
-    void performAction0299(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void performAction0280(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -2253,7 +2253,7 @@ class RgbSprite extends RenderingSupport004 {
             integerLocal3 = integerLocal3 + integerLocal7 * integerLocal15;
             integerLocal9 = integerLocal9 + integerLocal15;
           }
-          RgbSprite.performAction0286(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1);
+          RgbSprite.performAction0267(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal3, integerLocal4, integerLocal13, integerLocal9, integerArgument3, integerArgument4, integerLocal7, integerLocal8, integerLocal1);
           return;
         }
     }

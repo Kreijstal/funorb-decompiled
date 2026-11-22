@@ -51,7 +51,7 @@ final class SceneWidgetPart013 extends SceneWidget {
     SceneWidget sceneWidgetState0145;
     static int integerState0847;
 
-    public static void performAction1889(byte byteArgument1) {
+    public static void performAction1763(byte byteArgument1) {
         rgbSpriteArrayArrayState0013 = (RgbSprite[][]) null;
         if (byteArgument1 == 116) {
           stringState0587 = null;
@@ -61,7 +61,7 @@ final class SceneWidgetPart013 extends SceneWidget {
           integerArrayState0239 = null;
           return;
         }
-        SceneWidgetPart013.computeBoolean1888((byte) 54);
+        SceneWidgetPart013.computeBoolean1762((byte) 54);
         stringState0587 = null;
         stringState0586 = null;
         sceneWidgetState0139 = null;
@@ -69,31 +69,31 @@ final class SceneWidgetPart013 extends SceneWidget {
         integerArrayState0239 = null;
     }
 
-    final static boolean computeBoolean1888(byte byteArgument1) {
+    final static boolean computeBoolean1762(byte byteArgument1) {
         int integerLocal1 = -89 % ((76 - byteArgument1) / 36);
         if (MixedSupport146.sceneWidgetPart004State0001 == null) {
           return false;
         }
-        if (MixedSupport146.sceneWidgetPart004State0001.computeBoolean0667(261)) {
+        if (MixedSupport146.sceneWidgetPart004State0001.computeBoolean0624(261)) {
           return true;
         }
         return false;
     }
 
-    final boolean computeBoolean1890(byte byteArgument1) {
+    final boolean computeBoolean1764(byte byteArgument1) {
         if (byteArgument1 > 98) {
-          return !this.computeBoolean0141((byte) -68) ? true : false;
+          return !this.computeBoolean0133((byte) -68) ? true : false;
         }
-        SceneWidgetPart013.computeBoolean1888((byte) 106);
-        return !this.computeBoolean0141((byte) -68) ? true : false;
+        SceneWidgetPart013.computeBoolean1762((byte) 106);
+        return !this.computeBoolean0133((byte) -68) ? true : false;
     }
 
-    final int computeInteger1887(int integerArgument1) {
+    final int computeInteger1761(int integerArgument1) {
         int integerLocal1 = 113 / ((integerArgument1 - 24) / 54);
-        return (int)this.computeLong0140((byte) 57);
+        return (int)this.computeLong0132((byte) 57);
     }
 
-    final static void performAction1884(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int[] integerArrayArgument8, int integerArgument9, int integerArgument10) {
+    final static void performAction1758(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int[] integerArrayArgument8, int integerArgument9, int integerArgument10) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -110,7 +110,7 @@ final class SceneWidgetPart013 extends SceneWidget {
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (integerArgument7 != 9) {
-            SceneWidgetPart013.performAction1889((byte) 90);
+            SceneWidgetPart013.performAction1763((byte) 90);
           }
           integerArgument6--;
           while (integerArgument6 >= 0) {
@@ -121,7 +121,7 @@ final class SceneWidgetPart013 extends SceneWidget {
             integerLocal9 = integerArgument1;
             integerLocal10 = integerArgument9;
             integerLocal11 = 8355711 & integerArrayLocal13[integerLocal7] >> 1;
-            integerArrayLocal5[integerLocal7] = integerLocal11 + MixedSupport079.computeInteger1022(65280, integerLocal9 >> 9) + (MixedSupport079.computeInteger1022(integerLocal8 >> 1, 16711680) + MixedSupport079.computeInteger1022(integerLocal10 >> 17, 255));
+            integerArrayLocal5[integerLocal7] = integerLocal11 + MixedSupport079.computeInteger0954(65280, integerLocal9 >> 9) + (MixedSupport079.computeInteger0954(integerLocal8 >> 1, 16711680) + MixedSupport079.computeInteger0954(integerLocal10 >> 17, 255));
             integerArgument5 = integerArgument5 + integerArgument4;
             integerArgument2++;
             integerArgument9 = integerArgument9 + integerArgument10;
@@ -139,7 +139,7 @@ final class SceneWidgetPart013 extends SceneWidget {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
         }
     }
 
@@ -148,14 +148,14 @@ final class SceneWidgetPart013 extends SceneWidget {
         this.byteArrayState0032 = new byte[integerArgument1];
     }
 
-    final static String computeString1886(int integerArgument1, int integerArgument2) {
+    final static String computeString1760(int integerArgument1, int integerArgument2) {
         if (integerArgument2 == 26135) {
           return integerArgument1 + 1 + "/" + 4;
         }
         return (String) null;
     }
 
-    final boolean computeBoolean1885(SceneWidgetPart013 sceneWidgetPart013Argument1, boolean booleanArgument2) {
+    final boolean computeBoolean1759(SceneWidgetPart013 sceneWidgetPart013Argument1, boolean booleanArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -255,7 +255,7 @@ final class SceneWidgetPart013 extends SceneWidget {
           } else {
             stackStringLocal18 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal17).append(stackStringLocal18).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal17).append(stackStringLocal18).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 

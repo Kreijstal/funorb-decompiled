@@ -44,7 +44,7 @@ final class MusicTrack {
     private NetworkSupport011 networkSupport011State0002;
     static String stringState0561;
 
-    final static MixedSupport124 computeMixedSupport1241833(int integerArgument1, String stringArgument2) {
+    final static MixedSupport124 computeMixedSupport1241713(int integerArgument1, String stringArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         MixedSupport124 stackMixedSupport124Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -67,18 +67,18 @@ final class MusicTrack {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static String computeString1832(int integerArgument1) {
+    final static String computeString1712(int integerArgument1) {
         if (integerArgument1 != -12040) {
           return (String) null;
         }
-        return UiComponentPart006.cipherPacketBufferState0001.computeString2032((byte) -38);
+        return UiComponentPart006.cipherPacketBufferState0001.computeString1901((byte) -38);
     }
 
-    public static void performAction1834(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0560 = null;
         mixedSupport048State0003 = null;
         stringState0561 = null;
@@ -89,7 +89,7 @@ final class MusicTrack {
         }
     }
 
-    private final void performAction1831(byte byteArgument1) {
+    private final void performAction1711(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -100,17 +100,17 @@ final class MusicTrack {
         }
         integerLocal2 = 1;
         if (byteArgument1 != 103) {
-          MusicTrack.computeString1832(-5);
+          MusicTrack.computeString1712(-5);
         }
         for (integerLocal1 = 0; integerLocal1 < this.rawSoundArrayState0003.length; integerLocal1++) {
           if (this.rawSoundArrayState0003[integerLocal1] == null) {
             if (this.integerArrayState0213[integerLocal1] >> 4 == 0) {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1389(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
+              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1292(-62, this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1]);
             } else {
-              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1397(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
+              rawSoundLocal4 = this.networkSupport011State0002.computeRawSound1300(this.integerArrayState0224[integerLocal1], this.integerArrayState0221[integerLocal1], -1);
             }
             if (rawSoundLocal4 != null) {
-              this.integerArrayState0213[integerLocal1] = MixedSupport079.computeInteger1022(this.integerArrayState0213[integerLocal1], 15);
+              this.integerArrayState0213[integerLocal1] = MixedSupport079.computeInteger0954(this.integerArrayState0213[integerLocal1], 15);
               this.rawSoundArrayState0003[integerLocal1] = rawSoundLocal4;
             } else {
               integerLocal2 = 0;
@@ -165,34 +165,34 @@ final class MusicTrack {
         int integerLocal38;
         try {
           this.networkSupport011State0002 = networkSupport011Argument2;
-          this.integerState0809 = 1 + packetBufferArgument1.computeInteger2035((byte) -58);
-          packetBufferArgument1.computeInteger2035((byte) -61);
-          this.integerState0807 = 1 + packetBufferArgument1.computeInteger2035((byte) -112);
-          this.integerState0806 = 1 + packetBufferArgument1.computeInteger2035((byte) -84);
-          this.integerState0805 = packetBufferArgument1.computeInteger2035((byte) -122) + 1;
-          integerLocal1 = packetBufferArgument1.computeInteger2035((byte) -98);
+          this.integerState0809 = 1 + packetBufferArgument1.computeInteger1904((byte) -58);
+          packetBufferArgument1.computeInteger1904((byte) -61);
+          this.integerState0807 = 1 + packetBufferArgument1.computeInteger1904((byte) -112);
+          this.integerState0806 = 1 + packetBufferArgument1.computeInteger1904((byte) -84);
+          this.integerState0805 = packetBufferArgument1.computeInteger1904((byte) -122) + 1;
+          integerLocal1 = packetBufferArgument1.computeInteger1904((byte) -98);
           this.integerState0803 = 1 & integerLocal1;
-          this.integerState0808 = packetBufferArgument1.computeInteger2035((byte) -27);
-          this.integerState0804 = packetBufferArgument1.computeInteger2035((byte) -30);
+          this.integerState0808 = packetBufferArgument1.computeInteger1904((byte) -27);
+          this.integerState0804 = packetBufferArgument1.computeInteger1904((byte) -30);
           this.integerArrayState0220 = new int[this.integerState0809];
           integerLocal2 = 0;
           for (integerLocal19 = 0; integerLocal19 < this.integerState0809; integerLocal19++) {
-            cachedIntegerLocal3 = integerLocal2 + packetBufferArgument1.computeInteger2035((byte) -126);
+            cachedIntegerLocal3 = integerLocal2 + packetBufferArgument1.computeInteger1904((byte) -126);
             integerLocal2 = cachedIntegerLocal3;
-            this.integerArrayState0220[integerLocal19] = MixedSupport079.computeInteger1022(255, cachedIntegerLocal3);
+            this.integerArrayState0220[integerLocal19] = MixedSupport079.computeInteger0954(255, cachedIntegerLocal3);
           }
           this.byteArrayArrayState0009 = new byte[256][];
           this.integerArrayState0212 = new int[256];
-          MixedSupport008.performAction0081(this.integerArrayState0212, 0, 256, 64);
+          MixedSupport008.performAction0075(this.integerArrayState0212, 0, 256, 64);
           for (integerLocal29 = 0; integerLocal29 < 256; integerLocal29++) {
             this.byteArrayArrayState0009[integerLocal29] = DekoBlokoClient.byteArrayState0004;
           }
           for (integerLocal30 = 0; integerLocal30 < this.integerState0806; integerLocal30++) {
-            this.integerArrayState0212[integerLocal30] = 1 + packetBufferArgument1.computeInteger2035((byte) -103);
-            integerLocal20 = packetBufferArgument1.computeInteger2039(3);
+            this.integerArrayState0212[integerLocal30] = 1 + packetBufferArgument1.computeInteger1904((byte) -103);
+            integerLocal20 = packetBufferArgument1.computeInteger1907(3);
             byteArrayLocal4 = new byte[integerLocal20];
             if (0 < integerLocal20) {
-              packetBufferArgument1.performAction2025(byteArrayLocal4, 0, (byte) 127, integerLocal20);
+              packetBufferArgument1.performAction1894(byteArrayLocal4, 0, (byte) 127, integerLocal20);
               this.byteArrayArrayState0009[integerLocal30] = byteArrayLocal4;
             }
           }
@@ -210,7 +210,7 @@ final class MusicTrack {
           this.integerArrayState0222 = new int[this.integerState0805];
           this.integerArrayState0231 = new int[this.integerState0805];
           this.integerArrayArrayState0021 = new int[this.integerState0805][];
-          integerLocal31 = packetBufferArgument1.computeInteger2039(3);
+          integerLocal31 = packetBufferArgument1.computeInteger1907(3);
           this.integerArrayState0213 = new int[integerLocal31];
           this.integerArrayState0221 = new int[integerLocal31];
           this.integerArrayState0223 = new int[integerLocal31];
@@ -224,30 +224,30 @@ final class MusicTrack {
           this.integerArrayState0214 = new int[integerLocal31];
           integerLocal32 = 0;
           for (integerLocal33 = 0; this.integerState0805 > integerLocal33; integerLocal33++) {
-            integerLocal5 = packetBufferArgument1.computeInteger2035((byte) -33);
+            integerLocal5 = packetBufferArgument1.computeInteger1904((byte) -33);
             if (integerLocal5 > 0) {
               integerLocal23 = 0;
               for (integerLocal21 = 0; 96 > integerLocal21; integerLocal21++) {
-                cachedIntegerLocal6 = integerLocal23 + packetBufferArgument1.computeInteger2035((byte) -79);
+                cachedIntegerLocal6 = integerLocal23 + packetBufferArgument1.computeInteger1904((byte) -79);
                 integerLocal23 = cachedIntegerLocal6;
-                this.integerArrayArrayState0025[integerLocal33][integerLocal21] = integerLocal32 + MixedSupport079.computeInteger1022(cachedIntegerLocal6, 255);
+                this.integerArrayArrayState0025[integerLocal33][integerLocal21] = integerLocal32 + MixedSupport079.computeInteger0954(cachedIntegerLocal6, 255);
               }
-              this.integerArrayState0226[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -64);
-              integerLocal34 = packetBufferArgument1.computeInteger2035((byte) -99);
-              this.integerArrayState0231[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -19);
-              this.integerArrayState0217[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -110);
-              this.integerArrayState0228[integerLocal33] = this.integerArrayState0217[integerLocal33] + packetBufferArgument1.computeInteger2035((byte) -66);
-              this.integerArrayState0222[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -110);
-              integerLocal7 = packetBufferArgument1.computeInteger2035((byte) -78);
-              this.integerArrayState0218[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -64);
-              this.integerArrayState0230[integerLocal33] = packetBufferArgument1.computeInteger2035((byte) -46);
-              this.integerArrayState0215[integerLocal33] = this.integerArrayState0230[integerLocal33] + packetBufferArgument1.computeInteger2035((byte) -58);
+              this.integerArrayState0226[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -64);
+              integerLocal34 = packetBufferArgument1.computeInteger1904((byte) -99);
+              this.integerArrayState0231[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -19);
+              this.integerArrayState0217[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -110);
+              this.integerArrayState0228[integerLocal33] = this.integerArrayState0217[integerLocal33] + packetBufferArgument1.computeInteger1904((byte) -66);
+              this.integerArrayState0222[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -110);
+              integerLocal7 = packetBufferArgument1.computeInteger1904((byte) -78);
+              this.integerArrayState0218[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -64);
+              this.integerArrayState0230[integerLocal33] = packetBufferArgument1.computeInteger1904((byte) -46);
+              this.integerArrayState0215[integerLocal33] = this.integerArrayState0230[integerLocal33] + packetBufferArgument1.computeInteger1904((byte) -58);
               integerArrayLocal8 = new int[integerLocal34];
               this.integerArrayArrayState0021[integerLocal33] = integerArrayLocal8;
               integerLocal35 = 0;
               integerLocal9 = 0;
               for (integerLocal22 = 0; integerLocal34 > integerLocal22; integerLocal22++) {
-                cachedIntegerLocal10 = integerLocal9 + packetBufferArgument1.computeInteger2038((byte) 126);
+                cachedIntegerLocal10 = integerLocal9 + packetBufferArgument1.computeInteger1906((byte) 126);
                 integerLocal9 = cachedIntegerLocal10;
                 localTemp$4 = integerLocal35 + cachedIntegerLocal10;
                 integerLocal35 = localTemp$4;
@@ -257,16 +257,16 @@ final class MusicTrack {
               integerArrayLocal12 = new int[integerLocal34];
               this.integerArrayArrayState0023[integerLocal33] = integerArrayLocal12;
               for (integerLocal25 = 0; integerLocal25 < integerLocal34; integerLocal25++) {
-                cachedIntegerLocal13 = integerLocal36 + packetBufferArgument1.computeInteger2035((byte) -27);
+                cachedIntegerLocal13 = integerLocal36 + packetBufferArgument1.computeInteger1904((byte) -27);
                 integerLocal36 = cachedIntegerLocal13;
-                this.integerArrayArrayState0023[integerLocal33][integerLocal25] = MixedSupport079.computeInteger1022(255, cachedIntegerLocal13);
+                this.integerArrayArrayState0023[integerLocal33][integerLocal25] = MixedSupport079.computeInteger0954(255, cachedIntegerLocal13);
               }
               integerLocal24 = 0;
               integerArrayLocal14 = new int[integerLocal7];
               this.integerArrayArrayState0024[integerLocal33] = integerArrayLocal14;
               integerLocal37 = 0;
               for (integerLocal26 = 0; integerLocal7 > integerLocal26; integerLocal26++) {
-                cachedIntegerLocal15 = integerLocal24 + packetBufferArgument1.computeInteger2038((byte) -2);
+                cachedIntegerLocal15 = integerLocal24 + packetBufferArgument1.computeInteger1906((byte) -2);
                 integerLocal24 = cachedIntegerLocal15;
                 localTemp$9 = integerLocal37 + cachedIntegerLocal15;
                 integerLocal37 = localTemp$9;
@@ -276,29 +276,29 @@ final class MusicTrack {
               integerArrayLocal17 = new int[integerLocal7];
               this.integerArrayArrayState0022[integerLocal33] = integerArrayLocal17;
               for (integerLocal27 = 0; integerLocal7 > integerLocal27; integerLocal27++) {
-                cachedIntegerLocal18 = integerLocal38 + packetBufferArgument1.computeInteger2035((byte) -110);
+                cachedIntegerLocal18 = integerLocal38 + packetBufferArgument1.computeInteger1904((byte) -110);
                 integerLocal38 = cachedIntegerLocal18;
-                this.integerArrayArrayState0022[integerLocal33][integerLocal27] = MixedSupport079.computeInteger1022(255, cachedIntegerLocal18);
+                this.integerArrayArrayState0022[integerLocal33][integerLocal27] = MixedSupport079.computeInteger0954(255, cachedIntegerLocal18);
               }
-              this.integerArrayState0232[integerLocal33] = packetBufferArgument1.computeInteger2039(3);
+              this.integerArrayState0232[integerLocal33] = packetBufferArgument1.computeInteger1907(3);
               for (integerLocal28 = 0; integerLocal5 > integerLocal28; integerLocal28++) {
-                this.integerArrayState0214[integerLocal32] = packetBufferArgument1.computeInteger2045(65280);
-                this.integerArrayState0227[integerLocal32] = packetBufferArgument1.computeInteger2045(65280);
-                this.integerArrayState0223[integerLocal32] = this.integerArrayState0227[integerLocal32] + packetBufferArgument1.computeInteger2045(65280);
-                this.integerArrayState0216[integerLocal32] = packetBufferArgument1.computeInteger2035((byte) -112);
-                this.integerArrayState0219[integerLocal32] = packetBufferArgument1.computeByte2043((byte) -104);
-                this.integerArrayState0213[integerLocal32] = packetBufferArgument1.computeInteger2035((byte) -65);
-                this.integerArrayState0229[integerLocal32] = packetBufferArgument1.computeInteger2035((byte) -54);
-                this.integerArrayState0225[integerLocal32] = -1 + packetBufferArgument1.computeByte2043((byte) -108);
-                this.integerArrayState0221[integerLocal32] = packetBufferArgument1.computeInteger2039(3);
-                this.integerArrayState0224[integerLocal32] = packetBufferArgument1.computeInteger2039(3);
+                this.integerArrayState0214[integerLocal32] = packetBufferArgument1.computeInteger1913(65280);
+                this.integerArrayState0227[integerLocal32] = packetBufferArgument1.computeInteger1913(65280);
+                this.integerArrayState0223[integerLocal32] = this.integerArrayState0227[integerLocal32] + packetBufferArgument1.computeInteger1913(65280);
+                this.integerArrayState0216[integerLocal32] = packetBufferArgument1.computeInteger1904((byte) -112);
+                this.integerArrayState0219[integerLocal32] = packetBufferArgument1.computeByte1911((byte) -104);
+                this.integerArrayState0213[integerLocal32] = packetBufferArgument1.computeInteger1904((byte) -65);
+                this.integerArrayState0229[integerLocal32] = packetBufferArgument1.computeInteger1904((byte) -54);
+                this.integerArrayState0225[integerLocal32] = -1 + packetBufferArgument1.computeByte1911((byte) -108);
+                this.integerArrayState0221[integerLocal32] = packetBufferArgument1.computeInteger1907(3);
+                this.integerArrayState0224[integerLocal32] = packetBufferArgument1.computeInteger1907(3);
                 integerLocal32++;
               }
             }
           }
-          this.performAction1831((byte) 103);
+          this.performAction1711((byte) 103);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ui.<init>(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + (networkSupport011Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ui.<init>(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + (networkSupport011Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 

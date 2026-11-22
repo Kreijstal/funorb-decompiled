@@ -7,7 +7,7 @@ final class MixedSupport007 {
     static String stringState0036;
     static boolean booleanState0005;
 
-    final static MixedSupport072 computeMixedSupport0720076(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static MixedSupport072 computeMixedSupport0720070(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         NodeDeque stackNodeDequeLocal1 = null;
         boolean stackBooleanLocal2 = false;
         NodeDeque stackNodeDequeLocal3 = null;
@@ -21,51 +21,51 @@ final class MixedSupport007 {
         objectLocal5 = null;
         integerLocal7 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (!booleanArgument2) {
-          mixedSupport072Local6 = (MixedSupport072) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1920((byte) 49));
+          mixedSupport072Local6 = (MixedSupport072) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1792((byte) 49));
           while (mixedSupport072Local6 != null) {
             if (integerArgument4 == mixedSupport072Local6.integerState0358) {
               return mixedSupport072Local6;
             }
             stackNodeDequeLocal3 = SecondaryNodeDequeIterator.nodeDequeState0007;
             stackBooleanLocal4 = !(booleanArgument2);
-            mixedSupport072Local6 = (MixedSupport072) (((NodeDeque) (Object) stackNodeDequeLocal3).computeHashNode1924(stackBooleanLocal4));
+            mixedSupport072Local6 = (MixedSupport072) (((NodeDeque) (Object) stackNodeDequeLocal3).computeHashNode1796(stackBooleanLocal4));
           }
           mixedSupport072Local9 = new MixedSupport072();
           mixedSupport072Local9.integerState0358 = integerArgument4;
           mixedSupport072Local9.integerState0359 = integerArgument5;
           mixedSupport072Local9.integerState0357 = integerArgument3;
-          SecondaryNodeDequeIterator.nodeDequeState0007.performAction1913(mixedSupport072Local9, 2777);
-          SceneWidgetPart014.performAction1963(mixedSupport072Local9, integerArgument1, 60);
+          SecondaryNodeDequeIterator.nodeDequeState0007.performAction1786(mixedSupport072Local9, 2777);
+          SceneWidgetPart014.performAction1834(mixedSupport072Local9, integerArgument1, 60);
           return mixedSupport072Local9;
         }
-        MixedSupport007.computeMixedSupport0720076(9, false, 66, -99, 40);
-        mixedSupport072Local10 = (MixedSupport072) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1920((byte) 49));
+        MixedSupport007.computeMixedSupport0720070(9, false, 66, -99, 40);
+        mixedSupport072Local10 = (MixedSupport072) (SecondaryNodeDequeIterator.nodeDequeState0007.computeHashNode1792((byte) 49));
         while (mixedSupport072Local10 != null) {
           if (integerArgument4 == mixedSupport072Local10.integerState0358) {
             return mixedSupport072Local10;
           }
           stackNodeDequeLocal1 = SecondaryNodeDequeIterator.nodeDequeState0007;
           stackBooleanLocal2 = !(booleanArgument2);
-          mixedSupport072Local10 = (MixedSupport072) (((NodeDeque) (Object) stackNodeDequeLocal1).computeHashNode1924(stackBooleanLocal2));
+          mixedSupport072Local10 = (MixedSupport072) (((NodeDeque) (Object) stackNodeDequeLocal1).computeHashNode1796(stackBooleanLocal2));
         }
         mixedSupport072Local8 = new MixedSupport072();
         mixedSupport072Local8.integerState0358 = integerArgument4;
         mixedSupport072Local8.integerState0359 = integerArgument5;
         mixedSupport072Local8.integerState0357 = integerArgument3;
-        SecondaryNodeDequeIterator.nodeDequeState0007.performAction1913(mixedSupport072Local8, 2777);
-        SceneWidgetPart014.performAction1963(mixedSupport072Local8, integerArgument1, 60);
+        SecondaryNodeDequeIterator.nodeDequeState0007.performAction1786(mixedSupport072Local8, 2777);
+        SceneWidgetPart014.performAction1834(mixedSupport072Local8, integerArgument1, 60);
         return mixedSupport072Local8;
     }
 
-    final static int computeInteger0077(int integerArgument1) {
+    final static int computeInteger0071(int integerArgument1) {
         if (integerArgument1 > 69) {
           return PacketBuffer.integerState0936 + (MixedSupport153.integerState0932 << 2) + (BufferedSocket.integerState0667 << 4);
         }
-        MixedSupport007.computeInteger0077(-17);
+        MixedSupport007.computeInteger0071(-17);
         return PacketBuffer.integerState0936 + (MixedSupport153.integerState0932 << 2) + (BufferedSocket.integerState0667 << 4);
     }
 
-    public static void performAction0075(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         if (integerArgument1 < 77) {
           return;
         }

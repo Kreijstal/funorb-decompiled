@@ -18,18 +18,18 @@ final class RawPcmStream extends PcmStream {
     private int integerState0205;
     private int integerState0206;
 
-    private final synchronized int computeInteger0497() {
+    private final synchronized int computeInteger0465() {
         return this.integerState0205 < 0 ? -1 : this.integerState0205;
     }
 
-    private final synchronized void performAction0471(int integerArgument1, int integerArgument2) {
+    private final synchronized void performAction0439(int integerArgument1, int integerArgument2) {
         this.integerState0197 = integerArgument1;
         this.integerState0205 = integerArgument2;
         this.integerState0200 = 0;
-        this.performAction0492();
+        this.performAction0460();
     }
 
-    final static RawPcmStream computeRawPcmStream0485(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream computeRawPcmStream0453(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -39,7 +39,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0463(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
+    private final static int computeInteger0431(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         if (integerArgument12 != 0) {
@@ -76,7 +76,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    private final static int computeInteger0475(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
+    private final static int computeInteger0443(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         if (integerArgument12 != 0) {
@@ -113,7 +113,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    private final static int computeInteger0484(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int computeInteger0452(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         rawPcmStreamArgument12.integerState0206 = rawPcmStreamArgument12.integerState0206 - rawPcmStreamArgument12.integerState0202 * integerArgument6;
@@ -188,16 +188,16 @@ final class RawPcmStream extends PcmStream {
         integerArgument3 = integerArgument3 + integerArgument2;
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
-            this.performAction0489();
-            this.performAction0158((byte) 121);
+            this.performAction0457();
+            this.performAction0149((byte) 121);
             return;
           }
           this.integerState0203 = 0;
         }
         if (this.integerState0203 >= integerLocal9) {
           if (this.integerState0199 >= 0) {
-            this.performAction0489();
-            this.performAction0158((byte) 113);
+            this.performAction0457();
+            this.performAction0149((byte) 113);
             return;
           }
           this.integerState0203 = integerLocal9 - 1;
@@ -206,7 +206,7 @@ final class RawPcmStream extends PcmStream {
           if (!this.booleanState0033) {
             if (this.integerState0199 >= 0) {
               while (true) {
-                integerLocal11 = this.computeInteger0481(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.computeInteger0449(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -214,7 +214,7 @@ final class RawPcmStream extends PcmStream {
               }
             }
             while (true) {
-              integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+              integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
               if (this.integerState0203 >= integerLocal7) {
                 return;
               }
@@ -222,7 +222,7 @@ final class RawPcmStream extends PcmStream {
             }
           }
           if (this.integerState0199 < 0) {
-            integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+            integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
             if (this.integerState0203 >= integerLocal7) {
               return;
             }
@@ -230,13 +230,13 @@ final class RawPcmStream extends PcmStream {
             this.integerState0199 = -this.integerState0199;
           }
           while (true) {
-            integerLocal11 = this.computeInteger0481(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+            integerLocal11 = this.computeInteger0449(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
             if (this.integerState0203 < integerLocal8) {
               return;
             }
             this.integerState0203 = integerLocal8 + integerLocal8 - 1 - this.integerState0203;
             this.integerState0199 = -this.integerState0199;
-            integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+            integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
             if (this.integerState0203 >= integerLocal7) {
               return;
             }
@@ -249,7 +249,7 @@ final class RawPcmStream extends PcmStream {
           if (!this.booleanState0033) {
             if (this.integerState0199 < 0) {
               while (true) {
-                integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+                integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
                 if (this.integerState0203 >= integerLocal7) {
                   return;
                 }
@@ -265,7 +265,7 @@ final class RawPcmStream extends PcmStream {
               this.integerState0201 = 0;
             } else {
               while (true) {
-                integerLocal11 = this.computeInteger0481(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.computeInteger0449(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -284,7 +284,7 @@ final class RawPcmStream extends PcmStream {
           }
           else {
             if (this.integerState0199 < 0) {
-              integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+              integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
               if (this.integerState0203 >= integerLocal7) {
                 return;
               }
@@ -296,7 +296,7 @@ final class RawPcmStream extends PcmStream {
             }
             if (frameRemainderLocal14) {
               do {
-                integerLocal11 = this.computeInteger0481(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
+                integerLocal11 = this.computeInteger0449(integerArrayArgument1, integerLocal11, integerLocal8, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0194 - 1]);
                 if (this.integerState0203 < integerLocal8) {
                   return;
                 }
@@ -307,7 +307,7 @@ final class RawPcmStream extends PcmStream {
                 if (integerLocal2 == 0) {
                   break;
                 }
-                integerLocal11 = this.computeInteger0470(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
+                integerLocal11 = this.computeInteger0438(integerArrayArgument1, integerLocal11, integerLocal7, integerArgument3, (int) rawSoundLocal6.byteArrayState0028[this.integerState0193]);
                 if (this.integerState0203 >= integerLocal7) {
                   return;
                 }
@@ -320,25 +320,25 @@ final class RawPcmStream extends PcmStream {
           }
         }
         if (this.integerState0199 >= 0) {
-          discarded$4 = this.computeInteger0481(integerArrayArgument1, integerLocal11, integerLocal9, integerArgument3, 0);
+          discarded$4 = this.computeInteger0449(integerArrayArgument1, integerLocal11, integerLocal9, integerArgument3, 0);
           if (this.integerState0203 >= integerLocal9) {
             this.integerState0203 = integerLocal9;
-            this.performAction0489();
-            this.performAction0158((byte) 123);
+            this.performAction0457();
+            this.performAction0149((byte) 123);
           }
           return;
         }
-        discarded$3 = this.computeInteger0470(integerArrayArgument1, integerLocal11, 0, integerArgument3, 0);
+        discarded$3 = this.computeInteger0438(integerArrayArgument1, integerLocal11, 0, integerArgument3, 0);
         if (this.integerState0203 >= 0) {
           return;
         }
         this.integerState0203 = -1;
-        this.performAction0489();
-        this.performAction0158((byte) 124);
+        this.performAction0457();
+        this.performAction0149((byte) 124);
         return;
     }
 
-    final synchronized void performAction0467(boolean booleanArgument1) {
+    final synchronized void performAction0435(boolean booleanArgument1) {
         this.booleanState0033 = booleanArgument1 ? true : false;
     }
 
@@ -346,21 +346,21 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final int computeInteger0470(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final int computeInteger0438(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         do {
           if (this.integerState0200 <= 0) {
             if (this.integerState0199 == -256 &&
               (this.integerState0203 & 255) == 0) {
               if (PcmPlayer.booleanState0038) {
-                return RawPcmStream.computeInteger0465(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
+                return RawPcmStream.computeInteger0433(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
               }
-              return RawPcmStream.computeInteger0480(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
+              return RawPcmStream.computeInteger0448(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
             }
             if (PcmPlayer.booleanState0038) {
-              return RawPcmStream.computeInteger0488(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+              return RawPcmStream.computeInteger0456(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
             }
-            return RawPcmStream.computeInteger0463(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+            return RawPcmStream.computeInteger0431(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
           }
           integerLocal1 = integerArgument2 + this.integerState0200;
           if (integerLocal1 > integerArgument4) {
@@ -370,26 +370,26 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0199 == -256 &&
             (this.integerState0203 & 255) == 0) {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0468(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.computeInteger0436(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0476(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.computeInteger0444(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
             }
           } else {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0474(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.computeInteger0442(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0473(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.computeInteger0441(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             }
           }
           this.integerState0200 = this.integerState0200 - integerArgument2;
           if (this.integerState0200 != 0) {
             return integerArgument2;
           }
-        } while (!this.computeBoolean0495());
+        } while (!this.computeBoolean0463());
         return integerArgument4;
     }
 
-    final static RawPcmStream computeRawPcmStream0466(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream computeRawPcmStream0434(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -399,7 +399,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0476(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
+    private final static int computeInteger0444(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -480,14 +480,14 @@ final class RawPcmStream extends PcmStream {
         return integerArgument5 >> 1;
     }
 
-    private final boolean computeBoolean0495() {
+    private final boolean computeBoolean0463() {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
         integerLocal1 = this.integerState0197;
         if (integerLocal1 != -2147483648) {
-          integerLocal2 = RawPcmStream.computeInteger0487(integerLocal1, this.integerState0205);
-          integerLocal3 = RawPcmStream.computeInteger0483(integerLocal1, this.integerState0205);
+          integerLocal2 = RawPcmStream.computeInteger0455(integerLocal1, this.integerState0205);
+          integerLocal3 = RawPcmStream.computeInteger0451(integerLocal1, this.integerState0205);
         } else {
           integerLocal3 = 0;
           integerLocal2 = 0;
@@ -497,14 +497,14 @@ final class RawPcmStream extends PcmStream {
           this.integerState0206 == integerLocal2 &&
           this.integerState0204 == integerLocal3) {
           if (this.integerState0197 != -2147483648) {
-            this.performAction0492();
+            this.performAction0460();
             return false;
           }
           this.integerState0197 = 0;
           this.integerState0204 = 0;
           this.integerState0206 = 0;
           this.integerState0195 = 0;
-          this.performAction0158((byte) 101);
+          this.performAction0149((byte) 101);
           return true;
         }
         if (this.integerState0195 >= integerLocal1) {
@@ -556,12 +556,12 @@ final class RawPcmStream extends PcmStream {
         return false;
     }
 
-    final synchronized void performAction0494(int integerArgument1, int integerArgument2) {
+    final synchronized void performAction0462(int integerArgument1, int integerArgument2) {
         this.integerState0193 = integerArgument1;
         this.integerState0194 = integerArgument2;
     }
 
-    private final static int computeInteger0468(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
+    private final static int computeInteger0436(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -623,7 +623,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    private final static int computeInteger0462(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int computeInteger0430(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -673,7 +673,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6 >> 1;
     }
 
-    private final static int computeInteger0479(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
+    private final static int computeInteger0447(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -735,15 +735,15 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    final synchronized void performAction0460(int integerArgument1, int integerArgument2, int integerArgument3) {
-        this.performAction0472(integerArgument1, integerArgument2 << 6, integerArgument3 << 6);
+    final synchronized void performAction0428(int integerArgument1, int integerArgument2, int integerArgument3) {
+        this.performAction0440(integerArgument1, integerArgument2 << 6, integerArgument3 << 6);
     }
 
-    private final static int computeInteger0483(int integerArgument1, int integerArgument2) {
+    private final static int computeInteger0451(int integerArgument1, int integerArgument2) {
         return integerArgument2 < 0 ? -integerArgument1 : (int)((double)integerArgument1 * Math.sqrt((double)integerArgument2 * 0.0001220703125) + 0.5);
     }
 
-    final static RawPcmStream computeRawPcmStream0478(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream computeRawPcmStream0446(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -753,7 +753,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0469(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
+    private final static int computeInteger0437(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -806,13 +806,13 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    private final void performAction0492() {
+    private final void performAction0460() {
         this.integerState0195 = this.integerState0197;
-        this.integerState0206 = RawPcmStream.computeInteger0487(this.integerState0197, this.integerState0205);
-        this.integerState0204 = RawPcmStream.computeInteger0483(this.integerState0197, this.integerState0205);
+        this.integerState0206 = RawPcmStream.computeInteger0455(this.integerState0197, this.integerState0205);
+        this.integerState0204 = RawPcmStream.computeInteger0451(this.integerState0197, this.integerState0205);
     }
 
-    private final static int computeInteger0465(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
+    private final static int computeInteger0433(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -878,7 +878,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument5 >> 1;
     }
 
-    private final static int computeInteger0461(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
+    private final static int computeInteger0429(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -937,7 +937,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0486(int integerArgument1) {
+    final synchronized void performAction0454(int integerArgument1) {
         if (this.integerState0199 < 0) {
           this.integerState0199 = -integerArgument1;
         } else {
@@ -945,19 +945,19 @@ final class RawPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void performAction0482(int integerArgument1) {
-        this.performAction0471(integerArgument1, this.computeInteger0497());
+    private final synchronized void performAction0450(int integerArgument1) {
+        this.performAction0439(integerArgument1, this.computeInteger0465());
     }
 
-    final synchronized void performAction0472(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final synchronized void performAction0440(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         if (integerArgument1 == 0) {
-          this.performAction0471(integerArgument2, integerArgument3);
+          this.performAction0439(integerArgument2, integerArgument3);
           return;
         }
-        int integerLocal3 = RawPcmStream.computeInteger0487(integerArgument2, integerArgument3);
-        int integerLocal4 = RawPcmStream.computeInteger0483(integerArgument2, integerArgument3);
+        int integerLocal3 = RawPcmStream.computeInteger0455(integerArgument2, integerArgument3);
+        int integerLocal4 = RawPcmStream.computeInteger0451(integerArgument2, integerArgument3);
         if (this.integerState0206 != integerLocal3) {
           integerLocal1 = integerArgument2 - this.integerState0195;
           if (this.integerState0195 - integerArgument2 > integerLocal1) {
@@ -1017,7 +1017,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0200 = 0;
     }
 
-    private final static int computeInteger0474(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int computeInteger0442(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         rawPcmStreamArgument12.integerState0206 = rawPcmStreamArgument12.integerState0206 - rawPcmStreamArgument12.integerState0202 * integerArgument6;
@@ -1061,8 +1061,8 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0491(int integerArgument1, int integerArgument2) {
-        this.performAction0472(integerArgument1, integerArgument2, this.computeInteger0497());
+    final synchronized void performAction0459(int integerArgument1, int integerArgument2) {
+        this.performAction0440(integerArgument1, integerArgument2, this.computeInteger0465());
     }
 
     final int getStreamCost() {
@@ -1073,7 +1073,7 @@ final class RawPcmStream extends PcmStream {
         return 1;
     }
 
-    private final static int computeInteger0488(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int computeInteger0456(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1122,7 +1122,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6 >> 1;
     }
 
-    private final static int computeInteger0487(int integerArgument1, int integerArgument2) {
+    private final static int computeInteger0455(int integerArgument1, int integerArgument2) {
         return integerArgument2 < 0 ? integerArgument1 : (int)((double)integerArgument1 * Math.sqrt((double)(16384 - integerArgument2) * 0.0001220703125) + 0.5);
     }
 
@@ -1139,21 +1139,21 @@ final class RawPcmStream extends PcmStream {
         return integerLocal1 > 255 ? 255 : integerLocal1;
     }
 
-    private final int computeInteger0481(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final int computeInteger0449(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         do {
           if (this.integerState0200 <= 0) {
             if (this.integerState0199 == 256 &&
               (this.integerState0203 & 255) == 0) {
               if (PcmPlayer.booleanState0038) {
-                return RawPcmStream.computeInteger0477(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
+                return RawPcmStream.computeInteger0445(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
               }
-              return RawPcmStream.computeInteger0469(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
+              return RawPcmStream.computeInteger0437(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
             }
             if (PcmPlayer.booleanState0038) {
-              return RawPcmStream.computeInteger0462(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+              return RawPcmStream.computeInteger0430(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
             }
-            return RawPcmStream.computeInteger0475(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+            return RawPcmStream.computeInteger0443(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
           }
           integerLocal1 = integerArgument2 + this.integerState0200;
           if (integerLocal1 > integerArgument4) {
@@ -1163,31 +1163,31 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0199 == 256 &&
             (this.integerState0203 & 255) == 0) {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0479(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.computeInteger0447(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0464(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.computeInteger0432(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
             }
           } else {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0484(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.computeInteger0452(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0461(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.computeInteger0429(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             }
           }
           this.integerState0200 = this.integerState0200 - integerArgument2;
           if (this.integerState0200 != 0) {
             return integerArgument2;
           }
-        } while (!this.computeBoolean0495());
+        } while (!this.computeBoolean0463());
         return integerArgument4;
     }
 
-    final synchronized void performAction0496(int integerArgument1) {
+    final synchronized void performAction0464(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         if (integerArgument1 == 0) {
-          this.performAction0482(0);
-          this.performAction0158((byte) 102);
+          this.performAction0450(0);
+          this.performAction0149((byte) 102);
           return;
         }
         if (this.integerState0206 != 0) {
@@ -1247,10 +1247,10 @@ final class RawPcmStream extends PcmStream {
         this.integerState0200 = 0;
         this.integerState0197 = 0;
         this.integerState0195 = 0;
-        this.performAction0158((byte) 127);
+        this.performAction0149((byte) 127);
     }
 
-    private final static int computeInteger0477(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
+    private final static int computeInteger0445(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1320,11 +1320,11 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    final synchronized void performAction0493(int integerArgument1) {
+    final synchronized void performAction0461(int integerArgument1) {
         this.integerState0201 = integerArgument1;
     }
 
-    private final static int computeInteger0473(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
+    private final static int computeInteger0441(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1382,7 +1382,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0490(int integerArgument1) {
+    final synchronized void performAction0458(int integerArgument1) {
         integerArgument1 = integerArgument1 << 8;
         int integerLocal1 = ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028.length << 8;
         if (integerArgument1 < -1) {
@@ -1394,18 +1394,18 @@ final class RawPcmStream extends PcmStream {
         this.integerState0203 = integerArgument1;
     }
 
-    private final void performAction0489() {
+    private final void performAction0457() {
         if (this.integerState0200 != 0) {
           if (this.integerState0197 == -2147483648) {
             this.integerState0197 = 0;
           }
           this.integerState0200 = 0;
-          this.performAction0492();
+          this.performAction0460();
           return;
         }
     }
 
-    private final static int computeInteger0480(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
+    private final static int computeInteger0448(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1480,11 +1480,11 @@ final class RawPcmStream extends PcmStream {
               this.integerState0204 = 0;
               this.integerState0206 = 0;
               this.integerState0195 = 0;
-              this.performAction0158((byte) 125);
+              this.performAction0149((byte) 125);
               integerArgument1 = this.integerState0200;
             }
             this.integerState0200 = 0;
-            this.performAction0492();
+            this.performAction0460();
           }
         }
         rawSoundLocal4 = (RawSound) (this.abstractAudioSampleState0001);
@@ -1497,16 +1497,16 @@ final class RawPcmStream extends PcmStream {
         }
         if (this.integerState0203 < 0) {
           if (this.integerState0199 <= 0) {
-            this.performAction0489();
-            this.performAction0158((byte) 123);
+            this.performAction0457();
+            this.performAction0149((byte) 123);
             return;
           }
           this.integerState0203 = 0;
         }
         if (this.integerState0203 >= integerLocal7) {
           if (this.integerState0199 >= 0) {
-            this.performAction0489();
-            this.performAction0158((byte) 119);
+            this.performAction0457();
+            this.performAction0149((byte) 119);
             return;
           }
           this.integerState0203 = integerLocal7 - 1;
@@ -1618,8 +1618,8 @@ final class RawPcmStream extends PcmStream {
         if (this.integerState0199 >= 0) {
           if (this.integerState0203 >= integerLocal7) {
             this.integerState0203 = integerLocal7;
-            this.performAction0489();
-            this.performAction0158((byte) 122);
+            this.performAction0457();
+            this.performAction0149((byte) 122);
           }
           return;
         }
@@ -1627,11 +1627,11 @@ final class RawPcmStream extends PcmStream {
           return;
         }
         this.integerState0203 = -1;
-        this.performAction0489();
-        this.performAction0158((byte) 105);
+        this.performAction0457();
+        this.performAction0149((byte) 105);
     }
 
-    private final static int computeInteger0464(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
+    private final static int computeInteger0432(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1721,6 +1721,6 @@ final class RawPcmStream extends PcmStream {
         this.integerState0197 = integerArgument3;
         this.integerState0205 = integerArgument4;
         this.integerState0203 = 0;
-        this.performAction0492();
+        this.performAction0460();
     }
 }

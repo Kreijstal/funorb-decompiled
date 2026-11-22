@@ -11,7 +11,7 @@ final class MixedSupport018 {
     static NodeDeque nodeDequeState0006;
     static String stringState0092;
 
-    public static void performAction0271(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         if (integerArgument1 != -27513) {
           return;
         }
@@ -24,7 +24,7 @@ final class MixedSupport018 {
         nodeDequeState0005 = null;
     }
 
-    final static IndexedSprite[] computeIndexedSpriteArray0273(int integerArgument1) {
+    final static IndexedSprite[] computeIndexedSpriteArray0254(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         IndexedSprite[] indexedSpriteArrayLocal3 = new IndexedSprite[GameDomainSupport002.integerState0177];
@@ -34,11 +34,11 @@ final class MixedSupport018 {
         for (integerLocal1 = 0; integerLocal1 < GameDomainSupport002.integerState0177; integerLocal1++) {
           indexedSpriteArrayLocal3[integerLocal1] = new IndexedSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport130.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], SceneWidgetPart011.byteArrayArrayState0008[integerLocal1], NetworkSupport006.integerArrayState0152);
         }
-        MixedSupport094.performAction1257(126);
+        MixedSupport094.performAction1170(126);
         return indexedSpriteArrayLocal3;
     }
 
-    final static void performAction0269(byte byteArgument1) {
+    final static void performAction0251(byte byteArgument1) {
         int[] integerArrayLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -68,11 +68,11 @@ final class MixedSupport018 {
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal7 = caughtParameterLocal9;
           runtimeExceptionLocal8 = caughtExceptionLocal7;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal8), "ci.A(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal8), "ci.A(" + byteArgument1 + ')');
         }
     }
 
-    final static void performAction0272(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, byte byteArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
+    final static void performAction0253(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, byte byteArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
         try {
           if (byteArgument4 >= -62) {
             stringState0092 = (String) null;
@@ -83,18 +83,18 @@ final class MixedSupport018 {
           BufferedSocket.integerState0665 = integerArgument5;
           UiComponentPart022.integerState0575 = integerArgument3;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ci.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ci.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean computeBoolean0270(char characterArgument1, byte byteArgument2) {
+    final static boolean computeBoolean0252(char characterArgument1, byte byteArgument2) {
         if (byteArgument2 < 66) {
-          MixedSupport018.performAction0269((byte) -16);
+          MixedSupport018.performAction0251((byte) -16);
         }
         if (Character.isISOControl(characterArgument1)) {
           return false;
         }
-        if (MixedSupport064.computeBoolean0825(-8241, characterArgument1)) {
+        if (MixedSupport064.computeBoolean0769(-8241, characterArgument1)) {
           return true;
         }
         if (45 != characterArgument1 &&

@@ -11,7 +11,7 @@ final class MixedSupport118 extends HashNode {
     static String stringState0491;
     static String stringState0492;
 
-    public static void performAction1624(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         musicTrackArrayArrayState0001 = (MusicTrack[][]) null;
         stringState0492 = null;
         stringState0490 = null;
@@ -22,7 +22,7 @@ final class MixedSupport118 extends HashNode {
         }
     }
 
-    final static void performAction1626(byte byteArgument1) {
+    final static void performAction1518(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         SceneWidgetPart012 sceneWidgetPart012Local2 = null;
         SceneWidgetPart013 sceneWidgetPart013Local3 = null;
@@ -32,59 +32,59 @@ final class MixedSupport118 extends HashNode {
         SceneWidgetPart012 sceneWidgetPart012Local7;
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1920((byte) -53));
+          sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1792((byte) -53));
           while (sceneWidgetPart012Local2 != null) {
             if (sceneWidgetPart012Local2.integerState0785 > 0) {
               sceneWidgetPart012Local2.integerState0785 = sceneWidgetPart012Local2.integerState0785 - 1;
               if (sceneWidgetPart012Local2.integerState0785 == 0) {
                 sceneWidgetPart012Local2.integerState0786 = 0;
-                if (sceneWidgetPart012Local2.computeBoolean1776((byte) 111)) {
-                  sceneWidgetPart012Local2.performAction0158((byte) 112);
+                if (sceneWidgetPart012Local2.computeBoolean1660((byte) 111)) {
+                  sceneWidgetPart012Local2.performAction0149((byte) 112);
                 }
               }
             }
-            sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1924(true));
+            sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1796(true));
           }
-          sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1920((byte) 26));
+          sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1792((byte) 26));
           while (sceneWidgetPart013Local3 != null) {
             if (sceneWidgetPart013Local3.integerState0846 > 0) {
               sceneWidgetPart013Local3.integerState0846 = sceneWidgetPart013Local3.integerState0846 - 1;
               if (sceneWidgetPart013Local3.integerState0846 == 0) {
                 sceneWidgetPart013Local3.integerState0844 = 0;
-                if (sceneWidgetPart013Local3.computeBoolean1890((byte) 115)) {
-                  sceneWidgetPart013Local3.performAction0158((byte) 113);
+                if (sceneWidgetPart013Local3.computeBoolean1764((byte) 115)) {
+                  sceneWidgetPart013Local3.performAction0149((byte) 113);
                 }
               }
             }
-            sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1924(true));
+            sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1796(true));
           }
-          sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport096.nodeDequeState0021.computeHashNode1920((byte) 50));
+          sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport096.nodeDequeState0021.computeHashNode1792((byte) 50));
           while (sceneWidgetPart012Local7 != null) {
             if (0 < sceneWidgetPart012Local7.integerState0785) {
               sceneWidgetPart012Local7.integerState0785 = sceneWidgetPart012Local7.integerState0785 - 1;
               if (sceneWidgetPart012Local7.integerState0785 == 0) {
                 sceneWidgetPart012Local7.integerState0786 = 0;
-                if (sceneWidgetPart012Local7.computeBoolean1776((byte) 59)) {
-                  sceneWidgetPart012Local7.performAction0158((byte) 101);
+                if (sceneWidgetPart012Local7.computeBoolean1660((byte) 59)) {
+                  sceneWidgetPart012Local7.performAction0149((byte) 101);
                 }
               }
             }
-            sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport096.nodeDequeState0021.computeHashNode1924(true));
+            sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport096.nodeDequeState0021.computeHashNode1796(true));
           }
           if (byteArgument1 == 123) {
             return;
           }
           stringLocal6 = (String) null;
-          MixedSupport118.computeMixedSupport0431625(-113L, (String) null, false, (String) null, 29);
+          MixedSupport118.computeMixedSupport0431517(-113L, (String) null, false, (String) null, 29);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal1 = caughtParameterLocal8;
           runtimeExceptionLocal4 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal4), "sb.B(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal4), "sb.B(" + byteArgument1 + ')');
         }
     }
 
-    final static MixedSupport043 computeMixedSupport0431625(long longArgument1, String stringArgument2, boolean booleanArgument3, String stringArgument4, int integerArgument5) {
+    final static MixedSupport043 computeMixedSupport0431517(long longArgument1, String stringArgument2, boolean booleanArgument3, String stringArgument4, int integerArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         MixedSupport108 stackMixedSupport108Local2 = null;
         MixedSupport095 stackMixedSupport095Local3 = null;
@@ -123,7 +123,7 @@ final class MixedSupport118 extends HashNode {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument5).append(')').toString());
         }
     }
 

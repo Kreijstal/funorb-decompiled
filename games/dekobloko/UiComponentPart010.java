@@ -12,7 +12,7 @@ final class UiComponentPart010 extends ComponentDecorator {
     static String stringState0150;
     static int integerState0189;
 
-    public static void performAction0450(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringArrayState0012 = null;
         stringState0150 = null;
         integerArrayState0039 = null;
@@ -24,7 +24,7 @@ final class UiComponentPart010 extends ComponentDecorator {
         packetBufferState0004 = null;
     }
 
-    final void performAction0172(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RgbSprite rgbSpriteLocal1;
         RgbSprite rgbSpriteLocal2;
         if (integerArgument2 <= -103) {
@@ -38,17 +38,17 @@ final class UiComponentPart010 extends ComponentDecorator {
             return;
           }
           if (this.integerState0187 == 256) {
-            this.uiComponentState0002.performAction0172(integerArgument1 + this.integerState0110, -128, integerArgument3, this.integerState0104 + integerArgument4);
+            this.uiComponentState0002.performAction0162(integerArgument1 + this.integerState0110, -128, integerArgument3, this.integerState0104 + integerArgument4);
             return;
           }
           rgbSpriteLocal2 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
-          RenderingSupport015.performAction1728(true, rgbSpriteLocal2);
-          this.uiComponentState0002.performAction0172(0, -107, integerArgument3, 0);
-          MixedSupport086.performAction1161((byte) -5);
-          rgbSpriteLocal2.performAction0298(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
+          ValidationStatus.performAction1616(true, rgbSpriteLocal2);
+          this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
+          MixedSupport086.performAction1084((byte) -5);
+          rgbSpriteLocal2.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
           return;
         }
-        UiComponentPart010.performAction0449((byte) -51);
+        UiComponentPart010.performAction0419((byte) -51);
         if (0 != integerArgument3) {
           return;
         }
@@ -59,25 +59,25 @@ final class UiComponentPart010 extends ComponentDecorator {
           return;
         }
         if (this.integerState0187 == 256) {
-          this.uiComponentState0002.performAction0172(integerArgument1 + this.integerState0110, -128, integerArgument3, this.integerState0104 + integerArgument4);
+          this.uiComponentState0002.performAction0162(integerArgument1 + this.integerState0110, -128, integerArgument3, this.integerState0104 + integerArgument4);
           return;
         }
         rgbSpriteLocal1 = new RgbSprite(this.uiComponentState0002.integerState0107, this.uiComponentState0002.integerState0108);
-        RenderingSupport015.performAction1728(true, rgbSpriteLocal1);
-        this.uiComponentState0002.performAction0172(0, -107, integerArgument3, 0);
-        MixedSupport086.performAction1161((byte) -5);
-        rgbSpriteLocal1.performAction0298(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
+        ValidationStatus.performAction1616(true, rgbSpriteLocal1);
+        this.uiComponentState0002.performAction0162(0, -107, integerArgument3, 0);
+        MixedSupport086.performAction1084((byte) -5);
+        rgbSpriteLocal1.performAction0279(integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0187);
         return;
     }
 
     UiComponentPart010(UiComponent uiComponentArgument1) {
         super(uiComponentArgument1.integerState0110, uiComponentArgument1.integerState0104, uiComponentArgument1.integerState0107, uiComponentArgument1.integerState0108, (CallbackContract004) null, (CallbackContract006) null);
         try {
-          uiComponentArgument1.performAction0238(this.integerState0108, this.integerState0107, 0, 0, -16555);
+          uiComponentArgument1.performAction0222(this.integerState0108, this.integerState0107, 0, 0, -16555);
           this.integerState0187 = 256;
           this.uiComponentState0002 = uiComponentArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ef.<init>(" + (uiComponentArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ef.<init>(" + (uiComponentArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class UiComponentPart010 extends ComponentDecorator {
         this.integerState0187 = 256;
     }
 
-    final static void performAction0449(byte byteArgument1) {
+    final static void performAction0419(byte byteArgument1) {
         if (MixedSupport003.integerState0017 != MixedSupport080.framebufferState0001.integerState0191) {
           GameSession.integerState0618 = GameSession.integerState0618 + (MixedSupport080.framebufferState0001.integerState0191 - MixedSupport003.integerState0017);
           MixedSupport003.integerState0017 = MixedSupport080.framebufferState0001.integerState0191;
@@ -94,10 +94,10 @@ final class UiComponentPart010 extends ComponentDecorator {
             UiComponentPart003.integerState0073 = UiComponentPart003.integerState0073 - 1;
           }
           if (!(UiComponentPart003.integerState0073 <= 0)) {
-            MixedSupport099.performAction1330((byte) -100);
+            MixedSupport099.performAction1235((byte) -100);
           }
           if (byteArgument1 < 51) {
-            UiComponentPart010.performAction0450(-58);
+            UiComponentPart010.clearStaticReferences(-58);
             return;
           }
           return;
@@ -106,12 +106,12 @@ final class UiComponentPart010 extends ComponentDecorator {
           UiComponentPart003.integerState0073 = UiComponentPart003.integerState0073 - 1;
         }
         if (!(UiComponentPart003.integerState0073 <= 0)) {
-          MixedSupport099.performAction1330((byte) -100);
+          MixedSupport099.performAction1235((byte) -100);
         }
         if (byteArgument1 >= 51) {
           return;
         }
-        UiComponentPart010.performAction0450(-58);
+        UiComponentPart010.clearStaticReferences(-58);
     }
 
     static {

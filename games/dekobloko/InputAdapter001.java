@@ -14,7 +14,7 @@ final class InputAdapter001 implements CallbackContract004 {
     static SceneWidgetPart003 sceneWidgetPart003State0001;
     private int integerState0046;
 
-    public static void performAction0072(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0033 = null;
         if (byteArgument1 != -100) {
           stringState0034 = (String) null;
@@ -26,20 +26,20 @@ final class InputAdapter001 implements CallbackContract004 {
         stringState0034 = null;
     }
 
-    final static void performAction0074(int integerArgument1, java.awt.Component componentArgument2) {
+    final static void performAction0069(int integerArgument1, java.awt.Component componentArgument2) {
         try {
           if (integerArgument1 != -2204) {
-            InputAdapter001.performAction0072((byte) 21);
+            InputAdapter001.clearStaticReferences((byte) 21);
           }
           componentArgument2.addMouseListener(MixedSupport063.mouseInputState0001);
           componentArgument2.addMouseMotionListener(MixedSupport063.mouseInputState0001);
           componentArgument2.addFocusListener(MixedSupport063.mouseInputState0001);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "al.D(" + integerArgument1 + ',' + (componentArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "al.D(" + integerArgument1 + ',' + (componentArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void performAction0018(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
+    public final void performAction0017(boolean booleanArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, UiComponent uiComponentArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -65,24 +65,24 @@ final class InputAdapter001 implements CallbackContract004 {
           uiComponentPart001Local8 = (UiComponentPart001) (stackUiComponentLocal9);
           if (uiComponentPart001Local8 == null) {
           }
-          SoftwareRaster.performAction0699(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0042);
+          SoftwareRaster.performAction0653(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0042);
           integerLocal2 = integerArgument2 - (-uiComponentArgument5.integerState0110 - uiComponentPart001Local8.integerState0032);
           integerLocal3 = integerArgument3 + uiComponentArgument5.integerState0104 + uiComponentPart001Local8.integerState0037;
-          SoftwareRaster.performAction0720(integerLocal2, integerLocal3, uiComponentPart001Local8.integerState0035, this.integerState0041);
+          SoftwareRaster.performAction0674(integerLocal2, integerLocal3, uiComponentPart001Local8.integerState0035, this.integerState0041);
           if (uiComponentPart001Local8.integerState0036 != -1) {
             doubleLocal4 = 3.141592653589793 * (double)uiComponentPart001Local8.integerState0036 * 2.0 / (double)uiComponentPart001Local8.integerState0038;
             integerLocal5 = (int)(-Math.sin(doubleLocal4) * (double)uiComponentPart001Local8.integerState0035);
             integerLocal6 = (int)(Math.cos(doubleLocal4) * (double)uiComponentPart001Local8.integerState0035);
-            SoftwareRaster.performAction0720(integerLocal5 + integerLocal2, integerLocal3 + integerLocal6, 1, this.integerState0045);
+            SoftwareRaster.performAction0674(integerLocal5 + integerLocal2, integerLocal3 + integerLocal6, 1, this.integerState0045);
           }
-          SoftwareRaster.performAction0720(integerLocal2, integerLocal3, 2, 1);
+          SoftwareRaster.performAction0674(integerLocal2, integerLocal3, 2, 1);
           doubleLocal14 = 3.141592653589793 * (double)uiComponentPart001Local8.integerState0033 * 2.0 / (double)uiComponentPart001Local8.integerState0038;
           integerLocal15 = (int)(-Math.sin(doubleLocal14) * (double)uiComponentPart001Local8.integerState0035);
           integerLocal16 = (int)(Math.cos(doubleLocal14) * (double)uiComponentPart001Local8.integerState0035);
-          SoftwareRaster.performAction0709(integerLocal2, integerLocal3, integerLocal15 + integerLocal2, integerLocal3 + integerLocal16, 1);
+          SoftwareRaster.performAction0663(integerLocal2, integerLocal3, integerLocal15 + integerLocal2, integerLocal3 + integerLocal16, 1);
           if (this.bitmapFontState0004 != null) {
             integerLocal7 = this.integerState0046 + (uiComponentPart001Local8.integerState0035 + uiComponentPart001Local8.integerState0032);
-            this.bitmapFontState0004.computeInteger1174(uiComponentArgument5.stringState0078, integerArgument2 - (-uiComponentArgument5.integerState0110 - integerLocal7), uiComponentArgument5.integerState0104 + (integerArgument3 + this.integerState0044), -this.integerState0046 - (integerLocal7 - uiComponentArgument5.integerState0107), uiComponentArgument5.integerState0108 - (this.integerState0046 << 1), this.integerState0043, this.integerState0040, 1, 1, 0);
+            this.bitmapFontState0004.computeInteger1095(uiComponentArgument5.stringState0078, integerArgument2 - (-uiComponentArgument5.integerState0110 - integerLocal7), uiComponentArgument5.integerState0104 + (integerArgument3 + this.integerState0044), -this.integerState0046 - (integerLocal7 - uiComponentArgument5.integerState0107), uiComponentArgument5.integerState0108 - (this.integerState0046 << 1), this.integerState0043, this.integerState0040, 1, 1, 0);
           }
           if (byteArgument4 <= -60) {
             return;
@@ -99,11 +99,11 @@ final class InputAdapter001 implements CallbackContract004 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal10), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal10), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(')').toString());
         }
     }
 
-    final static int computeInteger0073(int integerArgument1, int integerArgument2) {
+    final static int computeInteger0068(int integerArgument1, int integerArgument2) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         MixedSupport021.asyncTaskState0001 = null;
         MixedSupport053.integerState0273 = integerArgument1;
@@ -209,7 +209,7 @@ final class InputAdapter001 implements CallbackContract004 {
           this.integerState0044 = integerArgument3;
           this.integerState0046 = integerArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "al.<init>(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "al.<init>(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ')');
         }
     }
 

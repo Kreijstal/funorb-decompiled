@@ -8,17 +8,17 @@ final class ReturnedShapeCache {
     static MixedSupport032 mixedSupport032State0001;
     static String stringState0386;
 
-    final static int computeInteger1301(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static int computeInteger1208(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = integerArgument1 - 1 & integerArgument3 >> 31;
         if (integerArgument2 >= 76) {
           return integerLocal1 + (integerArgument3 + (integerArgument3 >>> 31)) % integerArgument1;
         }
         MixedSupport118 mixedSupport118Local2 = (MixedSupport118) null;
-        ReturnedShapeCache.performAction1302(106, 18, (MixedSupport118) null);
+        ReturnedShapeCache.performAction1209(106, 18, (MixedSupport118) null);
         return integerLocal1 + (integerArgument3 + (integerArgument3 >>> 31)) % integerArgument1;
     }
 
-    private final void performAction1299(byte byteArgument1) {
+    private final void performAction1207(byte byteArgument1) {
         int integerLocal1 = 0;
         ReturnedShape[] returnedShapeArrayLocal2;
         ReturnedShape returnedShapeLocal3;
@@ -39,7 +39,7 @@ final class ReturnedShapeCache {
         this.returnedShapeArrayState0002 = returnedShapeArrayLocal2;
     }
 
-    final ReturnedShape computeReturnedShape1306(boolean booleanArgument1, boolean booleanArgument2, CipherPacketBuffer cipherPacketBufferArgument3) {
+    final ReturnedShape computeReturnedShape1213(boolean booleanArgument1, boolean booleanArgument2, CipherPacketBuffer cipherPacketBufferArgument3) {
         int integerLocal1 = 0;
         ReturnedShape stackReturnedShapeLocal2 = null;
         ReturnedShape stackReturnedShapeLocal3 = null;
@@ -57,7 +57,7 @@ final class ReturnedShapeCache {
           if (!booleanArgument1) {
             mixedSupport032State0001 = (MixedSupport032) null;
           }
-          integerLocal8 = cipherPacketBufferArgument3.computeInteger2014(118);
+          integerLocal8 = cipherPacketBufferArgument3.computeInteger1883(118);
           returnedShapeLocal12 = this.returnedShapeArrayState0002[integerLocal8 % this.returnedShapeArrayState0002.length];
           returnedShapeLocal10 = returnedShapeLocal12;
           if (returnedShapeLocal10 != null &&
@@ -70,20 +70,20 @@ final class ReturnedShapeCache {
           }
           while (booleanArgument2) {
             if (this.returnedShapeArrayState0002[integerLocal8 % this.returnedShapeArrayState0002.length] != null) {
-              this.performAction1299((byte) 115);
+              this.performAction1207((byte) 115);
               continue;
             }
             break;
           }
           returnedShapeLocal10 = new ReturnedShape(integerLocal8);
-          returnedShapeLocal10.width = cipherPacketBufferArgument3.computeInteger2035((byte) -102);
-          returnedShapeLocal10.height = cipherPacketBufferArgument3.computeInteger2035((byte) -79);
+          returnedShapeLocal10.width = cipherPacketBufferArgument3.computeInteger1904((byte) -102);
+          returnedShapeLocal10.height = cipherPacketBufferArgument3.computeInteger1904((byte) -79);
           returnedShapeLocal10.packedCells = new byte[returnedShapeLocal10.width * returnedShapeLocal10.height];
-          cipherPacketBufferArgument3.performAction1815((byte) -108);
+          cipherPacketBufferArgument3.performAction1695((byte) -108);
           for (integerLocal1 = 0; returnedShapeLocal10.packedCells.length > integerLocal1; integerLocal1++) {
-            returnedShapeLocal10.packedCells[integerLocal1] = (byte)cipherPacketBufferArgument3.computeInteger1807(5, (byte) 75);
+            returnedShapeLocal10.packedCells[integerLocal1] = (byte)cipherPacketBufferArgument3.computeInteger1687(5, (byte) 75);
           }
-          cipherPacketBufferArgument3.performAction1817((byte) -128);
+          cipherPacketBufferArgument3.performAction1697((byte) -128);
           if (booleanArgument2) {
             this.returnedShapeArrayState0002[integerLocal8 % this.returnedShapeArrayState0002.length] = returnedShapeLocal10;
           }
@@ -99,16 +99,16 @@ final class ReturnedShapeCache {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final ReturnedShape computeReturnedShape1305(boolean booleanArgument1, int integerArgument2) {
+    final ReturnedShape computeReturnedShape1212(boolean booleanArgument1, int integerArgument2) {
         ReturnedShape returnedShapeLocal1 = null;
         ReturnedShape returnedShapeLocal2;
         if (booleanArgument1) {
           ReturnedShape returnedShapeLocal3 = (ReturnedShape) null;
-          this.performAction1303((ReturnedShape) null, (byte) -73);
+          this.performAction1210((ReturnedShape) null, (byte) -73);
           returnedShapeLocal1 = this.returnedShapeArrayState0002[integerArgument2 % this.returnedShapeArrayState0002.length];
           if (returnedShapeLocal1 == null) {
             return null;
@@ -128,7 +128,7 @@ final class ReturnedShapeCache {
         return null;
     }
 
-    final void performAction1303(ReturnedShape returnedShapeArgument1, byte byteArgument2) {
+    final void performAction1210(ReturnedShape returnedShapeArgument1, byte byteArgument2) {
         int integerLocal1 = returnedShapeArgument1.integerState0688;
         if (returnedShapeArgument1 != this.returnedShapeArrayState0002[integerLocal1 % this.returnedShapeArrayState0002.length]) {
           throw new IllegalArgumentException();
@@ -139,7 +139,7 @@ final class ReturnedShapeCache {
         try {
           this.returnedShapeArrayState0002[integerLocal1 % this.returnedShapeArrayState0002.length] = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "oi.A(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "oi.A(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class ReturnedShapeCache {
         this.returnedShapeArrayState0002 = new ReturnedShape[integerArgument1];
     }
 
-    public static void performAction1300(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         mixedSupport111State0007 = null;
         mixedSupport032State0001 = null;
         stringState0386 = null;
@@ -158,7 +158,7 @@ final class ReturnedShapeCache {
         stringState0385 = (String) null;
     }
 
-    final void performAction1304(ReturnedShape returnedShapeArgument1, int integerArgument2) {
+    final void performAction1211(ReturnedShape returnedShapeArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
@@ -168,30 +168,30 @@ final class ReturnedShapeCache {
             throw new IllegalArgumentException();
           }
           while (null != this.returnedShapeArrayState0002[integerLocal1 % this.returnedShapeArrayState0002.length]) {
-            this.performAction1299((byte) 116);
+            this.performAction1207((byte) 116);
           }
           if (integerArgument2 != 0) {
-            ReturnedShapeCache.computeInteger1301(93, 98, -46);
+            ReturnedShapeCache.computeInteger1208(93, 98, -46);
           }
           this.returnedShapeArrayState0002[integerLocal1 % this.returnedShapeArrayState0002.length] = returnedShapeArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "oi.G(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "oi.G(" + (returnedShapeArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    final static void performAction1302(int integerArgument1, int integerArgument2, MixedSupport118 mixedSupport118Argument3) {
+    final static void performAction1209(int integerArgument1, int integerArgument2, MixedSupport118 mixedSupport118Argument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1811(integerArgument2, -4);
-          cipherPacketBufferLocal1.performAction2023(true, 2);
-          cipherPacketBufferLocal1.performAction2023(true, 0);
+          cipherPacketBufferLocal1.performAction1691(integerArgument2, -4);
+          cipherPacketBufferLocal1.performAction1892(true, 2);
+          cipherPacketBufferLocal1.performAction1892(true, 0);
           if (integerArgument1 > -57) {
-            ReturnedShapeCache.computeInteger1301(-93, 111, -125);
+            ReturnedShapeCache.computeInteger1208(-93, 111, -125);
           }
-          cipherPacketBufferLocal1.performAction2023(true, mixedSupport118Argument3.integerState0731);
+          cipherPacketBufferLocal1.performAction1892(true, mixedSupport118Argument3.integerState0731);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "oi.E(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport118Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "oi.E(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport118Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 

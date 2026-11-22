@@ -17,7 +17,7 @@ final class MixedSupport016 {
     static String stringState0077;
     static volatile boolean booleanState0016;
 
-    final static RenderingSupport010 computeRenderingSupport0100220(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
+    final static RenderingSupport010 computeRenderingSupport0100204(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -36,9 +36,9 @@ final class MixedSupport016 {
           if (byteArgument4 <= 86) {
             integerArrayState0021 = (int[]) null;
           }
-          integerLocal1 = resourceArchiveArgument3.computeInteger0897(-1, stringArgument5);
-          integerLocal3 = resourceArchiveArgument3.computeInteger0884(integerLocal1, 13030, stringArgument1);
-          stackRenderingSupport010Local4 = PlatformSupport006.computeRenderingSupport0101518(resourceArchiveArgument3, (byte) 41, integerLocal3, integerLocal1, resourceArchiveArgument2);
+          integerLocal1 = resourceArchiveArgument3.computeInteger0837(-1, stringArgument5);
+          integerLocal3 = resourceArchiveArgument3.computeInteger0824(integerLocal1, 13030, stringArgument1);
+          stackRenderingSupport010Local4 = PlatformSupport006.computeRenderingSupport0101416(resourceArchiveArgument3, (byte) 41, integerLocal3, integerLocal1, resourceArchiveArgument2);
           return stackRenderingSupport010Local4;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal14 = caughtParameterLocal15;
@@ -68,11 +68,11 @@ final class MixedSupport016 {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean0219(int integerArgument1) {
+    final static boolean computeBoolean0203(int integerArgument1) {
         if (integerArgument1 != 8192) {
           nodeDequeState0003 = (NodeDeque) null;
           return MixedSupport020.platformSupport006State0001 != null ? true : GameSession.booleanState0141;
@@ -80,7 +80,7 @@ final class MixedSupport016 {
         return MixedSupport020.platformSupport006State0001 != null ? true : GameSession.booleanState0141;
     }
 
-    final static void performAction0221(boolean booleanArgument1) {
+    final static void performAction0205(boolean booleanArgument1) {
         MixedSupport007.renderingSupport008State0001 = null;
         SecondaryNodeHashTable.booleanState0121 = false;
         MixedSupport051.renderingSupport008State0005 = null;
@@ -94,7 +94,7 @@ final class MixedSupport016 {
         }
     }
 
-    public static void performAction0218(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0077 = null;
         nodeDequeState0003 = null;
         sceneWidgetPart013State0001 = null;

@@ -12,7 +12,7 @@ final class MixedSupport084 {
         throw new IllegalStateException();
     }
 
-    public static void performAction1105(byte byteArgument1) {
+    public static void performAction1032(byte byteArgument1) {
         stringState0337 = null;
         rgbSpriteState0033 = null;
         stringState0338 = null;

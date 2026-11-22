@@ -8,7 +8,7 @@ final class NetworkSupport001 {
     static BitmapFont bitmapFontState0002;
     static BitmapFont bitmapFontState0003;
 
-    public static void performAction0066(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0026 = null;
         bitmapFontState0003 = null;
         bitmapFontState0002 = null;
@@ -19,7 +19,7 @@ final class NetworkSupport001 {
         rgbSpriteState0005 = null;
     }
 
-    final static void performAction0065(String stringArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
+    final static void performAction0062(String stringArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
         try {
           java.net.URL uRLLocal1 = null;
           int integerLocal2 = 0;
@@ -34,8 +34,8 @@ final class NetworkSupport001 {
           try {
             try {
               uRLLocal1 = new java.net.URL(appletArgument3.getCodeBase(), stringArgument1);
-              uRLLocal1 = NetworkSupport004.computeURL0648(uRLLocal1, -1, appletArgument3);
-              NetworkSupport002.performAction0187((byte) 92, uRLLocal1.toString(), true, appletArgument3);
+              uRLLocal1 = NetworkSupport004.computeURL0606(uRLLocal1, -1, appletArgument3);
+              NetworkSupport002.performAction0175((byte) 92, uRLLocal1.toString(), true, appletArgument3);
             } catch (java.lang.Exception caughtParameterLocal11) {
               caughtExceptionLocal8 = caughtParameterLocal11;
               exceptionLocal9 = (Exception) (Object) caughtExceptionLocal8;
@@ -59,7 +59,7 @@ final class NetworkSupport001 {
             } else {
               stackStringLocal7 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal13) {
           throw uncheckedExceptionLocal13;
@@ -68,12 +68,12 @@ final class NetworkSupport001 {
         }
     }
 
-    final static void performAction0064(int integerArgument1) {
+    final static void performAction0061(int integerArgument1) {
         NetworkSupport010.integerState0585 = 0;
         if (integerArgument1 != -1045) {
           return;
         }
-        MixedSupport141.performAction1861(0);
+        MixedSupport141.performAction1736(0);
     }
 
     static {

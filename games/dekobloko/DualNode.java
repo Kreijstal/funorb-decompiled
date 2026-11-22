@@ -14,7 +14,7 @@ class DualNode extends HashNode {
     long longState0003;
     static RgbSprite[][] rgbSpriteArrayArrayState0003;
 
-    public static void performAction0137(int integerArgument1) {
+    public static void performAction0129(int integerArgument1) {
         stringState0043 = null;
         integerArrayState0018 = null;
         stringState0044 = null;
@@ -24,7 +24,7 @@ class DualNode extends HashNode {
         mixedSupport066State0001 = null;
     }
 
-    final static boolean computeBoolean0136(byte byteArgument1, CharSequence charSequenceArgument2) {
+    final static boolean computeBoolean0128(byte byteArgument1, CharSequence charSequenceArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -33,7 +33,7 @@ class DualNode extends HashNode {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument1 == 98) {
-            stackBooleanLocal2 = MixedSupport121.computeBoolean1675(true, charSequenceArgument2, true, 10);
+            stackBooleanLocal2 = MixedSupport121.computeBoolean1565(true, charSequenceArgument2, true, 10);
             return stackBooleanLocal2;
           }
           return false;
@@ -47,11 +47,11 @@ class DualNode extends HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final void performAction0138(long longArgument1, byte byteArgument2) {
+    final void performAction0130(long longArgument1, byte byteArgument2) {
         if (this.dualNodeState0004 != null) {
           throw new RuntimeException();
         }
@@ -62,45 +62,45 @@ class DualNode extends HashNode {
         }
     }
 
-    final static void performAction0139(java.applet.Applet appletArgument1, byte byteArgument2) {
+    final static void performAction0131(java.applet.Applet appletArgument1, byte byteArgument2) {
         if (byteArgument2 != -57) {
           return;
         }
         try {
-          MixedSupport094.performAction1258(appletArgument1, -1, "");
-          SceneWidgetPart014.performAction1962(appletArgument1, 30307);
+          MixedSupport094.performAction1171(appletArgument1, -1, "");
+          SceneWidgetPart014.performAction1833(appletArgument1, 30307);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "be.V(" + (appletArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
-    final long computeLong0140(byte byteArgument1) {
+    final long computeLong0132(byte byteArgument1) {
         if (byteArgument1 != 57) {
-          this.computeLong0140((byte) 121);
+          this.computeLong0132((byte) 121);
           return this.longState0003;
         }
         return this.longState0003;
     }
 
-    final static void performAction0135(byte byteArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
+    final static void performAction0127(byte byteArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
         if (sceneWidgetPart005Argument2 == null) {
           return;
         }
         try {
           if (byteArgument1 <= 117) {
             SceneWidgetPart005 sceneWidgetPart005Local1 = (SceneWidgetPart005) null;
-            DualNode.performAction0135((byte) 85, (SceneWidgetPart005) null);
+            DualNode.performAction0127((byte) 85, (SceneWidgetPart005) null);
           }
           SceneWidgetPart007.sceneWidgetPart005State0002 = sceneWidgetPart005Argument2;
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1921(110);
-          MixedSupport059.sceneWidgetState0055.performAction1948(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
+          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.performAction1793(110);
+          MixedSupport059.sceneWidgetState0055.performAction1819(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
           GameDomainSupport004.booleanState0087 = true;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction0142(byte byteArgument1) {
+    final void performAction0134(byte byteArgument1) {
         if (null == this.dualNodeState0004) {
           return;
         }
@@ -119,7 +119,7 @@ class DualNode extends HashNode {
     protected DualNode() {
     }
 
-    final boolean computeBoolean0141(byte byteArgument1) {
+    final boolean computeBoolean0133(byte byteArgument1) {
         if (byteArgument1 == -68) {
           return this.dualNodeState0004 != null ? true : false;
         }

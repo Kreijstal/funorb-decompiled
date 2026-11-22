@@ -12,7 +12,7 @@ final class MixedSupport131 {
     static String stringState0545;
     static int integerState0791;
 
-    public static void performAction1785(int integerArgument1) {
+    public static void performAction1668(int integerArgument1) {
         stringState0542 = null;
         stringState0543 = null;
         rgbSpriteState0059 = null;
@@ -28,18 +28,18 @@ final class MixedSupport131 {
         stringState0545 = null;
     }
 
-    final static void performAction1784(byte byteArgument1, String stringArgument2, long longArgument3) {
+    final static void performAction1667(byte byteArgument1, String stringArgument2, long longArgument3) {
         CharSequence charSequenceLocal1 = null;
         try {
           MixedSupport029.stringState0149 = stringArgument2;
           int integerLocal2 = -67 % ((73 - byteArgument1) / 38);
           NetworkSupport010.integerState0585 = 2;
           charSequenceLocal1 = (CharSequence) ((Object) stringArgument2);
-          TextLayout.stringState0081 = ComponentContainer.computeString0982(charSequenceLocal1, (byte) 2);
+          TextLayout.stringState0081 = ComponentContainer.computeString0918(charSequenceLocal1, (byte) 2);
           LoginCredentials.booleanState0085 = true;
           MixedSupport043.longState0017 = longArgument3;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "u.A(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "u.A(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
         }
     }
 

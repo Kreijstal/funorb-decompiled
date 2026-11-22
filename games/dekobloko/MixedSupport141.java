@@ -10,10 +10,10 @@ final class MixedSupport141 {
     static String stringState0579;
     static byte[] byteArrayState0029;
 
-    final static boolean computeBoolean1858(char characterArgument1, int integerArgument2) {
+    final static boolean computeBoolean1733(char characterArgument1, int integerArgument2) {
         if (integerArgument2 != -24380) {
           short[] shortArrayLocal1 = (short[]) null;
-          MixedSupport141.computeShortArray1860((CipherPacketBuffer) null, true, (short[]) null, -23);
+          MixedSupport141.computeShortArray1735((CipherPacketBuffer) null, true, (short[]) null, -23);
           if (characterArgument1 < 65) {
             if (characterArgument1 < 97) {
               return false;
@@ -55,16 +55,16 @@ final class MixedSupport141 {
         return false;
     }
 
-    final static void performAction1861(int integerArgument1) {
+    final static void performAction1736(int integerArgument1) {
         if (integerArgument1 != 0) {
-          MixedSupport141.performAction1861(118);
-          DualNode.performAction0135((byte) 123, GameplayControls.sceneWidgetPart005State0003);
+          MixedSupport141.performAction1736(118);
+          DualNode.performAction0127((byte) 123, GameplayControls.sceneWidgetPart005State0003);
           return;
         }
-        DualNode.performAction0135((byte) 123, GameplayControls.sceneWidgetPart005State0003);
+        DualNode.performAction0127((byte) 123, GameplayControls.sceneWidgetPart005State0003);
     }
 
-    public static void performAction1859(int integerArgument1) {
+    public static void performAction1734(int integerArgument1) {
         stringState0576 = null;
         stringState0577 = null;
         byteArrayState0029 = null;
@@ -78,7 +78,7 @@ final class MixedSupport141 {
         stringState0579 = null;
     }
 
-    final static short[] computeShortArray1860(CipherPacketBuffer cipherPacketBufferArgument1, boolean booleanArgument2, short[] shortArrayArgument3, int integerArgument4) {
+    final static short[] computeShortArray1735(CipherPacketBuffer cipherPacketBufferArgument1, boolean booleanArgument2, short[] shortArrayArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -96,9 +96,9 @@ final class MixedSupport141 {
         integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (!booleanArgument2) {
-            MixedSupport141.computeBoolean1858('\016', -20);
+            MixedSupport141.computeBoolean1733('\016', -20);
           }
-          integerLocal1 = cipherPacketBufferArgument1.computeInteger1807(integerArgument4, (byte) 110);
+          integerLocal1 = cipherPacketBufferArgument1.computeInteger1687(integerArgument4, (byte) 110);
           if (integerLocal1 == 0) {
             stackObjectLocal6 = null;
             return (short[]) (stackObjectLocal6);
@@ -107,11 +107,11 @@ final class MixedSupport141 {
             shortArrayArgument3.length != integerLocal1) {
             shortArrayArgument3 = new short[integerLocal1];
           }
-          integerLocal2 = cipherPacketBufferArgument1.computeInteger1807(4, (byte) 123);
-          integerLocal3 = (short)cipherPacketBufferArgument1.computeInteger1807(16, (byte) 46);
+          integerLocal2 = cipherPacketBufferArgument1.computeInteger1687(4, (byte) 123);
+          integerLocal3 = (short)cipherPacketBufferArgument1.computeInteger1687(16, (byte) 46);
           if (integerLocal2 > 0) {
             for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
-              shortArrayArgument3[integerLocal4] = (short)(cipherPacketBufferArgument1.computeInteger1807(integerLocal2, (byte) 99) + integerLocal3);
+              shortArrayArgument3[integerLocal4] = (short)(cipherPacketBufferArgument1.computeInteger1687(integerLocal2, (byte) 99) + integerLocal3);
             }
           } else {
             for (integerLocal4 = 0; integerLocal1 > integerLocal4; integerLocal4++) {
@@ -136,7 +136,7 @@ final class MixedSupport141 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(integerArgument4).append(')').toString());
         }
     }
 

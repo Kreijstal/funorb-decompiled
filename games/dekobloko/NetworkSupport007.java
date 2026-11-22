@@ -15,7 +15,7 @@ final class NetworkSupport007 extends DualNode {
     static MixedSupport068 mixedSupport068State0001;
     static int[] integerArrayState0156;
 
-    final void performAction1138(byte byteArgument1, PacketBuffer packetBufferArgument2) {
+    final void performAction1062(byte byteArgument1, PacketBuffer packetBufferArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -27,16 +27,16 @@ final class NetworkSupport007 extends DualNode {
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            integerLocal1 = packetBufferArgument2.computeInteger2035((byte) -88);
+            integerLocal1 = packetBufferArgument2.computeInteger1904((byte) -88);
             if (integerLocal1 != 0) {
-              this.performAction1139(integerLocal1, byteArgument1 ^ 2598, packetBufferArgument2);
+              this.performAction1063(integerLocal1, byteArgument1 ^ 2598, packetBufferArgument2);
               continue;
             }
             break;
           }
           if (byteArgument1 != 80) {
             packetBufferLocal8 = (PacketBuffer) null;
-            this.performAction1138((byte) 71, (PacketBuffer) null);
+            this.performAction1062((byte) 71, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
@@ -49,11 +49,11 @@ final class NetworkSupport007 extends DualNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final String computeString1143(byte byteArgument1) {
+    final String computeString1067(byte byteArgument1) {
         int integerLocal1 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -62,7 +62,7 @@ final class NetworkSupport007 extends DualNode {
         StringBuilder stringBuilderLocal6 = stringBuilderLocal5;
         if (byteArgument1 > -57) {
           PacketBuffer packetBufferLocal7 = (PacketBuffer) null;
-          this.performAction1138((byte) 104, (PacketBuffer) null);
+          this.performAction1062((byte) 104, (PacketBuffer) null);
         }
         if (null == this.stringArrayState0022) {
           return "";
@@ -75,20 +75,20 @@ final class NetworkSupport007 extends DualNode {
         return stringBuilderLocal6.toString();
     }
 
-    final void performAction1142(int integerArgument1) {
+    final void performAction1066(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 != 19423) {
-          NetworkSupport007.performAction1141(-120);
+          NetworkSupport007.performAction1065(-120);
         }
         if (this.integerArrayState0154 != null) {
           for (integerLocal1 = 0; integerLocal1 < this.integerArrayState0154.length; integerLocal1++) {
-            this.integerArrayState0154[integerLocal1] = UiComponentPart006.computeInteger0381(this.integerArrayState0154[integerLocal1], 32768);
+            this.integerArrayState0154[integerLocal1] = UiComponentPart006.computeInteger0358(this.integerArrayState0154[integerLocal1], 32768);
           }
         }
     }
 
-    public static void performAction1141(int integerArgument1) {
+    public static void performAction1065(int integerArgument1) {
         mixedSupport068State0001 = null;
         stringState0347 = null;
         stringState0346 = null;
@@ -100,7 +100,7 @@ final class NetworkSupport007 extends DualNode {
         }
     }
 
-    private final void performAction1139(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
+    private final void performAction1063(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
         int[] integerArrayLocal1 = null;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -119,27 +119,27 @@ final class NetworkSupport007 extends DualNode {
             return;
           }
           if (integerArgument1 == 1) {
-            this.stringArrayState0022 = ResourceArchive.computeStringArray0878('<', (byte) 66, packetBufferArgument3.computeString2032((byte) -38));
+            this.stringArrayState0022 = ResourceArchive.computeStringArray0819('<', (byte) 66, packetBufferArgument3.computeString1901((byte) -38));
           } else {
             if (integerArgument1 == 2) {
-              integerLocal7 = packetBufferArgument3.computeInteger2035((byte) -86);
+              integerLocal7 = packetBufferArgument3.computeInteger1904((byte) -86);
               this.integerArrayState0154 = new int[integerLocal7];
               for (integerLocal9 = 0; integerLocal9 < integerLocal7; integerLocal9++) {
-                this.integerArrayState0154[integerLocal9] = packetBufferArgument3.computeInteger2039(3);
+                this.integerArrayState0154[integerLocal9] = packetBufferArgument3.computeInteger1907(3);
               }
             } else if (integerArgument1 == 3) {
-              integerLocal7 = packetBufferArgument3.computeInteger2035((byte) -89);
+              integerLocal7 = packetBufferArgument3.computeInteger1904((byte) -89);
               this.integerArrayArrayState0016 = new int[integerLocal7][];
               this.integerArrayState0155 = new int[integerLocal7];
               for (integerLocal9 = 0; integerLocal7 > integerLocal9; integerLocal9++) {
-                integerLocal10 = packetBufferArgument3.computeInteger2039(3);
-                mixedSupport111Local11 = PcmResampler.computeMixedSupport1110858(-121, integerLocal10);
+                integerLocal10 = packetBufferArgument3.computeInteger1907(3);
+                mixedSupport111Local11 = PcmResampler.computeMixedSupport1110800(-121, integerLocal10);
                 if (mixedSupport111Local11 != null) {
                   this.integerArrayState0155[integerLocal9] = integerLocal10;
                   integerArrayLocal1 = new int[mixedSupport111Local11.integerState0672];
                   this.integerArrayArrayState0016[integerLocal9] = integerArrayLocal1;
                   for (integerLocal2 = 0; integerLocal2 < mixedSupport111Local11.integerState0672; integerLocal2++) {
-                    this.integerArrayArrayState0016[integerLocal9][integerLocal2] = packetBufferArgument3.computeInteger2039(MixedSupport111.computeInteger1527(integerArgument2, 2677));
+                    this.integerArrayArrayState0016[integerLocal9][integerLocal2] = packetBufferArgument3.computeInteger1907(MixedSupport111.computeInteger1423(integerArgument2, 2677));
                   }
                 }
               }
@@ -160,11 +160,11 @@ final class NetworkSupport007 extends DualNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static void performAction1137(byte byteArgument1, java.applet.Applet appletArgument2) {
+    final static void performAction1061(byte byteArgument1, java.applet.Applet appletArgument2) {
         try {
           RuntimeException stackRuntimeExceptionLocal1 = null;
           StringBuilder stackStringBuilderLocal2 = null;
@@ -178,14 +178,14 @@ final class NetworkSupport007 extends DualNode {
           try {
             try {
               uRLLocal9 = appletArgument2.getCodeBase();
-              stringLocal7 = NetworkSupport004.computeURL0648(uRLLocal9, -1, appletArgument2).getFile();
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"home", stringLocal7 + "home.ws"});
+              stringLocal7 = NetworkSupport004.computeURL0606(uRLLocal9, -1, appletArgument2).getFile();
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"home", stringLocal7 + "home.ws"});
               integerLocal8 = -128 / ((byteArgument1 - 10) / 61);
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"gamelist", stringLocal7 + "togamelist.ws"});
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"serverlist", stringLocal7 + "toserverlist.ws"});
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"options", stringLocal7 + "options.ws"});
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"terms", stringLocal7 + "terms.ws"});
-              MixedSupport088.computeObject1199("updatelinks", -14541, appletArgument2, new Object[]{"privacy", stringLocal7 + "privacy.ws"});
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"gamelist", stringLocal7 + "togamelist.ws"});
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"serverlist", stringLocal7 + "toserverlist.ws"});
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"options", stringLocal7 + "options.ws"});
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"terms", stringLocal7 + "terms.ws"});
+              MixedSupport088.computeObject1119("updatelinks", -14541, appletArgument2, new Object[]{"privacy", stringLocal7 + "privacy.ws"});
             } catch (java.lang.Throwable caughtParameterLocal10) {
               caughtExceptionLocal4 = caughtParameterLocal10;
               throwableLocal5 = caughtExceptionLocal4;
@@ -201,7 +201,7 @@ final class NetworkSupport007 extends DualNode {
             } else {
               stackStringLocal3 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal12) {
           throw uncheckedExceptionLocal12;
@@ -213,7 +213,7 @@ final class NetworkSupport007 extends DualNode {
     NetworkSupport007() {
     }
 
-    final static RgbSprite computeRgbSprite1140(RgbSprite rgbSpriteArgument1, boolean booleanArgument2, byte byteArgument3, boolean booleanArgument4) {
+    final static RgbSprite computeRgbSprite1064(RgbSprite rgbSpriteArgument1, boolean booleanArgument2, byte byteArgument3, boolean booleanArgument4) {
         RgbSprite stackRgbSpriteLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -248,7 +248,7 @@ final class NetworkSupport007 extends DualNode {
         int integerLocal32;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          rgbSpriteArgument1.performAction0288();
+          rgbSpriteArgument1.performAction0269();
           rgbSpriteLocal13 = new RgbSprite(36, 36);
           rgbSpriteLocal14 = rgbSpriteLocal13;
           for (integerLocal7 = 0; integerLocal7 < 18; integerLocal7++) {
@@ -344,7 +344,7 @@ final class NetworkSupport007 extends DualNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(',').append(byteArgument3).append(',').append(booleanArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(booleanArgument2).append(',').append(byteArgument3).append(',').append(booleanArgument4).append(')').toString());
         }
     }
 

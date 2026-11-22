@@ -17,7 +17,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001.update(graphicsArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "dk.update(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "dk.update(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,11 +25,11 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001 = componentArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "dk.<init>(" + (componentArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "dk.<init>(" + (componentArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction0402(int integerArgument1) {
+    final static void performAction0377(int integerArgument1) {
         int integerLocal1 = 0;
         MixedSupport033 cachedMixedSupport033Local2 = null;
         RuntimeException caughtExceptionLocal3 = null;
@@ -50,47 +50,47 @@ final class PlatformSupport002 extends java.awt.Canvas {
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           cipherPacketBufferLocal17 = UiComponentPart006.cipherPacketBufferState0001;
-          integerLocal5 = cipherPacketBufferLocal17.computeInteger2035((byte) -36);
+          integerLocal5 = cipherPacketBufferLocal17.computeInteger1904((byte) -36);
           if (integerLocal5 == 0) {
-            integerArrayLocal7 = UiComponentPart002.computeIntegerArray0088(56);
+            integerArrayLocal7 = UiComponentPart002.computeIntegerArray0082(56);
             integerArrayLocal13 = integerArrayLocal7;
             integerArrayLocal9 = integerArrayLocal13;
             cipherPacketBufferLocal10 = cipherPacketBufferLocal17;
-            integerLocal11 = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).computeInteger2035((byte) -116);
+            integerLocal11 = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).computeInteger1904((byte) -116);
             for (integerLocal1 = 0; integerLocal11 > integerLocal1; integerLocal1++) {
-              integerArrayLocal13[integerLocal1] = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).computeInteger2046(7553);
+              integerArrayLocal13[integerLocal1] = ((PacketBuffer) ((Object) cipherPacketBufferLocal10)).computeInteger1914(7553);
             }
-            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1920((byte) 92));
+            mixedSupport033Local15 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1792((byte) 92));
             if (mixedSupport033Local15 == null) {
-              NodeHashTable.performAction1653(95);
+              NodeHashTable.performAction1544(95);
               return;
             }
             mixedSupport033Local15.booleanState0041 = true;
             mixedSupport033Local15.integerArrayState0042 = integerArrayLocal7;
-            mixedSupport033Local15.performAction0158((byte) 112);
+            mixedSupport033Local15.performAction0149((byte) 112);
           } else {
             if (integerLocal5 == 1) {
-              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1920((byte) -66));
+              networkSupport005Local16 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1792((byte) -66));
               if (networkSupport005Local16 == null) {
-                NodeHashTable.performAction1653(127);
+                NodeHashTable.performAction1544(127);
                 return;
               }
-              networkSupport005Local16.performAction0158((byte) 106);
+              networkSupport005Local16.performAction0149((byte) 106);
             } else {
               if (integerLocal5 == 2) {
-                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1920((byte) -64));
+                cachedMixedSupport033Local2 = (MixedSupport033) (PcmPlayerService.nodeDequeState0028.computeHashNode1792((byte) -64));
                 mixedSupport033Local14 = cachedMixedSupport033Local2;
                 mixedSupport033Local6 = cachedMixedSupport033Local2;
                 if (mixedSupport033Local14 == null) {
-                  NodeHashTable.performAction1653(115);
+                  NodeHashTable.performAction1544(115);
                   return;
                 }
-                mixedSupport033Local14.integerArrayState0042 = UiComponentPart002.computeIntegerArray0088(109);
+                mixedSupport033Local14.integerArrayState0042 = UiComponentPart002.computeIntegerArray0082(109);
                 mixedSupport033Local14.booleanState0041 = true;
-                mixedSupport033Local14.performAction0158((byte) 119);
+                mixedSupport033Local14.performAction0149((byte) 119);
               } else {
-                NetworkArchiveRequestManager.performAction1419((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1514((byte) 89));
-                NodeHashTable.performAction1653(90);
+                NetworkArchiveRequestManager.performAction1322((Throwable) null, 16408, "A1: " + BufferedSocket.computeString1412((byte) 89));
+                NodeHashTable.performAction1544(90);
               }
             }
           }
@@ -99,11 +99,11 @@ final class PlatformSupport002 extends java.awt.Canvas {
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
           caughtExceptionLocal3 = caughtParameterLocal18;
           runtimeExceptionLocal4 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal4), "dk.B(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal4), "dk.B(" + integerArgument1 + ')');
         }
     }
 
-    public static void performAction0403(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         if (integerArgument1 != 16057) {
           return;
         }
@@ -118,7 +118,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         try {
           this.componentState0001.paint(graphicsArgument1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "dk.paint(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "dk.paint(" + (graphicsArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class PlatformSupport002 extends java.awt.Canvas {
         stringState0123 = "Some special items will sit in your bucket until you activate them. To activate one, pop a shape next to it.";
         stringState0124 = "Invite only";
         stringArrayState0007 = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-        MixedSupport080.performAction1037((byte) 125, 50);
+        MixedSupport080.performAction0969((byte) 125, 50);
         stringState0125 = "Hide game chat";
     }
 }

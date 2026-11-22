@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class MixedSupport155 extends ResourceSupport002 implements CallbackContract013 {
+abstract class TextFieldValidator extends ResourceSupport002 implements CallbackContract013 {
     private UiComponentPart028 uiComponentPart028State0009;
     static int integerState0937;
     static RgbSprite rgbSpriteState0076;
@@ -12,68 +12,68 @@ abstract class MixedSupport155 extends ResourceSupport002 implements CallbackCon
     static String stringState0636;
     static SceneWidget sceneWidgetState0151;
 
-    abstract RenderingSupport015 computeRenderingSupport0150792(String stringArgument1, byte byteArgument2);
+    abstract ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2);
 
-    final String computeString0098(byte byteArgument1) {
+    final String computeString0091(byte byteArgument1) {
         if (byteArgument1 > 2) {
-          return this.computeString0791(this.uiComponentPart028State0009.stringState0078, (byte) -11);
+          return this.getValidationMessage(this.uiComponentPart028State0009.stringState0078, (byte) -11);
         }
         rgbSpriteState0076 = (RgbSprite) null;
-        return this.computeString0791(this.uiComponentPart028State0009.stringState0078, (byte) -11);
+        return this.getValidationMessage(this.uiComponentPart028State0009.stringState0078, (byte) -11);
     }
 
-    final static void performAction2048(int integerArgument1) {
-        MixedSupport094.stringState0372 = UiComponentPart006.cipherPacketBufferState0001.computeString2032((byte) -38);
+    final static void performAction1916(int integerArgument1) {
+        MixedSupport094.stringState0372 = UiComponentPart006.cipherPacketBufferState0001.computeString1901((byte) -38);
         CharSequence charSequenceLocal1 = (CharSequence) ((Object) MixedSupport094.stringState0372);
-        MixedSupport051.stringState0212 = ComponentContainer.computeString0982(charSequenceLocal1, (byte) 2);
+        MixedSupport051.stringState0212 = ComponentContainer.computeString0918(charSequenceLocal1, (byte) 2);
         if (integerArgument1 != 140) {
-          MixedSupport155.computeContainer2049((byte) 98);
+          TextFieldValidator.computeContainer1917((byte) 98);
         }
     }
 
-    final RenderingSupport015 computeRenderingSupport0150095(int integerArgument1) {
+    final ValidationStatus computeValidationStatus0089(int integerArgument1) {
         if (integerArgument1 == -5520) {
-          return this.computeRenderingSupport0150792(this.uiComponentPart028State0009.stringState0078, (byte) -40);
+          return this.getValidationStatus(this.uiComponentPart028State0009.stringState0078, (byte) -40);
         }
         this.uiComponentPart028State0009 = (UiComponentPart028) null;
-        return this.computeRenderingSupport0150792(this.uiComponentPart028State0009.stringState0078, (byte) -40);
+        return this.getValidationStatus(this.uiComponentPart028State0009.stringState0078, (byte) -40);
     }
 
-    abstract String computeString0791(String stringArgument1, byte byteArgument2);
+    abstract String getValidationMessage(String stringArgument1, byte byteArgument2);
 
-    public final void performAction0676(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
+    public final void performAction0633(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
         if (integerArgument1 != 16737894) {
           return;
         }
         try {
-          this.performAction0096((byte) -51);
+          this.performAction0090((byte) -51);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wm.N(" + integerArgument1 + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wm.N(" + integerArgument1 + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static java.awt.Container computeContainer2049(byte byteArgument1) {
+    final static java.awt.Container computeContainer1917(byte byteArgument1) {
         if (MixedSupport054.frameState0001 != null) {
           return (java.awt.Container) ((Object) MixedSupport054.frameState0001);
         }
         if (byteArgument1 <= 123) {
-          MixedSupport155.performAction2048(74);
-          return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1639(25144));
+          TextFieldValidator.performAction1916(74);
+          return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1530(25144));
         }
-        return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1639(25144));
+        return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1530(25144));
     }
 
-    public final void performAction0681(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
+    public final void performAction0638(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
         try {
           if (integerArgument1 != -2569) {
             rgbSpriteState0076 = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wm.K(" + integerArgument1 + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wm.K(" + integerArgument1 + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final boolean computeBoolean1197(byte byteArgument1) {
+    public final boolean computeBoolean1117(byte byteArgument1) {
         int integerLocal1 = 112 / ((byteArgument1 - 72) / 40);
         if (null == this.uiComponentPart028State0009.stringState0078) {
           return true;
@@ -84,15 +84,15 @@ abstract class MixedSupport155 extends ResourceSupport002 implements CallbackCon
         return true;
     }
 
-    MixedSupport155(UiComponentPart028 uiComponentPart028Argument1) {
+    TextFieldValidator(UiComponentPart028 uiComponentPart028Argument1) {
         try {
           this.uiComponentPart028State0009 = uiComponentPart028Argument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wm.<init>(" + (uiComponentPart028Argument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wm.<init>(" + (uiComponentPart028Argument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction2047(int integerArgument1) {
+    public static void performAction1915(int integerArgument1) {
         stringState0633 = null;
         sceneWidgetState0151 = null;
         stringState0636 = null;
@@ -103,7 +103,7 @@ abstract class MixedSupport155 extends ResourceSupport002 implements CallbackCon
           stringState0634 = null;
           return;
         }
-        MixedSupport155.computeContainer2049((byte) 42);
+        TextFieldValidator.computeContainer1917((byte) 42);
         rgbSpriteState0076 = null;
         rgbSpriteState0077 = null;
         stringState0635 = null;

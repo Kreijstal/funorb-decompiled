@@ -19,7 +19,7 @@ final class MixedSupport075 extends HashNode {
     static SceneWidget sceneWidgetState0070;
     static String stringState0317;
 
-    public static void performAction1005(boolean booleanArgument1) {
+    public static void clearStaticReferences(boolean booleanArgument1) {
         if (booleanArgument1) {
           mixedSupport139State0005 = null;
           sceneWidgetState0070 = null;
@@ -33,9 +33,9 @@ final class MixedSupport075 extends HashNode {
         }
     }
 
-    final static void performAction1004(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction0938(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument1 != 11024) {
-          MixedSupport075.performAction1004(-96, 40, 17);
+          MixedSupport075.performAction0938(-96, 40, 17);
           MixedSupport131.integerState0790 = integerArgument3;
           MixedSupport117.integerState0726 = integerArgument2;
           return;

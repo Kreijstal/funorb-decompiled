@@ -15,7 +15,7 @@ final class LoginCredentials {
     static volatile boolean booleanState0086;
     static MusicTrack musicTrackState0004;
 
-    public static void performAction0869(byte byteArgument1) {
+    public static void performAction0811(byte byteArgument1) {
         tutorialTips = null;
         integerArrayState0115 = null;
         integerArrayState0116 = null;
@@ -26,7 +26,7 @@ final class LoginCredentials {
         stringState0282 = null;
     }
 
-    final static void performAction0865(java.applet.Applet appletArgument1, int integerArgument2) {
+    final static void performAction0807(java.applet.Applet appletArgument1, int integerArgument2) {
         String stringLocal1 = null;
         String stringLocal2 = null;
         long longLocal3 = 0L;
@@ -38,33 +38,33 @@ final class LoginCredentials {
           stringLocal1 = "tuhstatbut";
           stringLocal2 = "rvnadlm";
           longLocal3 = -1L;
-          MixedSupport104.performAction1359(appletArgument1, stringLocal1, longLocal3, (byte) 89, stringLocal2);
+          MixedSupport104.performAction1262(appletArgument1, stringLocal1, longLocal3, (byte) 89, stringLocal2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "jg.C(" + (appletArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "jg.C(" + (appletArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    final boolean computeBoolean0866(boolean booleanArgument1) {
+    final boolean computeBoolean0808(boolean booleanArgument1) {
         if (!booleanArgument1) {
-          LoginCredentials.performAction0863(-65);
+          LoginCredentials.performAction0805(-65);
           return this.booleanState0084;
         }
         return this.booleanState0084;
     }
 
-    final static void performAction0867(boolean booleanArgument1, String stringArgument2) {
+    final static void performAction0809(boolean booleanArgument1, String stringArgument2) {
         MixedSupport056.stringState0242 = stringArgument2;
         if (!booleanArgument1) {
           return;
         }
         try {
-          MouseWheelInput.performAction0729(12, (byte) -111);
+          MouseWheelInput.performAction0683(12, (byte) -111);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "jg.G(" + booleanArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "jg.G(" + booleanArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static MusicTrack computeMusicTrack0868(boolean booleanArgument1, NetworkSupport011 networkSupport011Argument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static MusicTrack computeMusicTrack0810(boolean booleanArgument1, NetworkSupport011 networkSupport011Argument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
         byte[] byteArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -77,11 +77,11 @@ final class LoginCredentials {
         String stackStringLocal10 = null;
         RuntimeException caughtExceptionLocal11 = null;
         try {
-          byteArrayLocal4 = resourceArchiveArgument5.computeByteArray0883(integerArgument3, 108, integerArgument4);
+          byteArrayLocal4 = resourceArchiveArgument5.computeByteArray0823(integerArgument3, 108, integerArgument4);
           byteArrayLocal1 = byteArrayLocal4;
           if (!booleanArgument1) {
             stringLocal3 = (String) null;
-            LoginCredentials.performAction0867(false, (String) null);
+            LoginCredentials.performAction0809(false, (String) null);
           }
           if (byteArrayLocal4 == null) {
             return null;
@@ -104,20 +104,20 @@ final class LoginCredentials {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    final static SceneWidget computeSceneWidget0870(boolean booleanArgument1) {
+    final static SceneWidget computeSceneWidget0812(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return MixedSupport047.sceneWidgetPart008State0003.sceneWidgetState0090;
         }
         ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-        LoginCredentials.computeMusicTrack0868(true, (NetworkSupport011) null, 58, 53, (ResourceArchive) null);
+        LoginCredentials.computeMusicTrack0810(true, (NetworkSupport011) null, 58, 53, (ResourceArchive) null);
         return MixedSupport047.sceneWidgetPart008State0003.sceneWidgetState0090;
     }
 
-    static long computeLong0864(long longArgument1, long longArgument2) {
+    static long computeLong0806(long longArgument1, long longArgument2) {
         return longArgument1 & longArgument2;
     }
 
@@ -150,16 +150,16 @@ final class LoginCredentials {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 
-    final String computeString0862(byte byteArgument1) {
+    final String computeString0804(byte byteArgument1) {
         if (byteArgument1 == 56) {
           return this.stringState0281;
         }
         ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-        LoginCredentials.computeMusicTrack0868(true, (NetworkSupport011) null, -94, -75, (ResourceArchive) null);
+        LoginCredentials.computeMusicTrack0810(true, (NetworkSupport011) null, -94, -75, (ResourceArchive) null);
         return this.stringState0281;
     }
 
@@ -167,8 +167,8 @@ final class LoginCredentials {
         this(stringArgument1, false);
     }
 
-    final static void performAction0863(int integerArgument1) {
-        NetworkSupport011.performAction1388(3970);
+    final static void performAction0805(int integerArgument1) {
+        NetworkSupport011.performAction1291(3970);
         if (integerArgument1 >= -38) {
           integerArrayState0116 = (int[]) null;
         }

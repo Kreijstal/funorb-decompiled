@@ -7,7 +7,7 @@ final class MixedSupport027 {
     static String stringState0132;
     static RgbSprite rgbSpriteState0014;
 
-    public static void performAction0417(int integerArgument1) {
+    public static void performAction0390(int integerArgument1) {
         stringState0131 = null;
         if (integerArgument1 == -22811) {
           stringState0130 = null;
@@ -15,13 +15,13 @@ final class MixedSupport027 {
           stringState0132 = null;
           return;
         }
-        MixedSupport027.performAction0419(91);
+        MixedSupport027.performAction0392(91);
         stringState0130 = null;
         rgbSpriteState0014 = null;
         stringState0132 = null;
     }
 
-    final static void performAction0419(int integerArgument1) {
+    final static void performAction0392(int integerArgument1) {
         MixedSupport082.imageState0002 = null;
         SoftwareFramebuffer.fontState0001 = null;
         if (integerArgument1 != -8621) {
@@ -29,7 +29,7 @@ final class MixedSupport027 {
         }
     }
 
-    final static RenderingSupport012 computeRenderingSupport0120418(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static RenderingSupport012 computeRenderingSupport0120391(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, ResourceArchive resourceArchiveArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         RenderingSupport012 stackRenderingSupport012Local2 = null;
         RenderingSupport012 stackRenderingSupport012Local3 = null;
@@ -40,11 +40,11 @@ final class MixedSupport027 {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (!SceneWidgetPart002.computeBoolean0604(integerArgument2, resourceArchiveArgument5, integerArgument3, 102)) {
+          if (!SceneWidgetPart002.computeBoolean0565(integerArgument2, resourceArchiveArgument5, integerArgument3, 102)) {
             return null;
           }
           if (byteArgument4 == -75) {
-            stackRenderingSupport012Local3 = MixedSupport099.computeRenderingSupport0121328(resourceArchiveArgument1.computeByteArray0883(integerArgument3, 75, integerArgument2), (byte) 25);
+            stackRenderingSupport012Local3 = MixedSupport099.computeRenderingSupport0121233(resourceArchiveArgument1.computeByteArray0823(integerArgument3, 75, integerArgument2), (byte) 25);
             return stackRenderingSupport012Local3;
           }
           stackRenderingSupport012Local2 = (RenderingSupport012) null;
@@ -65,7 +65,7 @@ final class MixedSupport027 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class SceneWidgetPart001 extends SceneWidget {
     static String stringState0057;
     static String stringState0058;
 
-    public static void performAction0169(int integerArgument1) {
+    public static void performAction0159(int integerArgument1) {
         if (integerArgument1 != 15338) {
           stringState0056 = (String) null;
         }
@@ -56,27 +56,27 @@ final class SceneWidgetPart001 extends SceneWidget {
           for (integerLocal1 = 0; integerLocal1 < PlatformSupport002.stringArrayState0007.length; integerLocal1++) {
             sceneWidgetLocal21 = new SceneWidget(0L, sceneWidgetArgument4, CipherPacketBuffer.stringArrayState0049[integerLocal1]);
             sceneWidgetLocal22 = new SceneWidget(0L, sceneWidgetArgument4, PlatformSupport002.stringArrayState0007[integerLocal1]);
-            integerLocal23 = sceneWidgetArgument4.bitmapFontState0020.computeInteger1169(PlatformSupport002.stringArrayState0007[integerLocal1]);
+            integerLocal23 = sceneWidgetArgument4.bitmapFontState0020.computeInteger1090(PlatformSupport002.stringArrayState0007[integerLocal1]);
             if (integerLocal23 > integerLocal20) {
               integerLocal20 = integerLocal23;
             }
-            sceneWidgetLocal21.performAction1944(65, 0, integerLocal19, 15, 20);
-            sceneWidgetLocal22.performAction1944(640, 0, integerLocal19, 15, 90);
-            sceneWidgetLocal17.performAction1948(sceneWidgetLocal21, -16834);
-            sceneWidgetLocal17.performAction1948(sceneWidgetLocal22, -16834);
+            sceneWidgetLocal21.performAction1815(65, 0, integerLocal19, 15, 20);
+            sceneWidgetLocal22.performAction1815(640, 0, integerLocal19, 15, 90);
+            sceneWidgetLocal17.performAction1819(sceneWidgetLocal21, -16834);
+            sceneWidgetLocal17.performAction1819(sceneWidgetLocal22, -16834);
             integerLocal19 += 30;
           }
-          sceneWidgetLocal24.performAction1944(20 + integerLocal20 + 90, 0, 0, 24, 0);
+          sceneWidgetLocal24.performAction1815(20 + integerLocal20 + 90, 0, 0, 24, 0);
           integerLocal19 += 15;
-          this.performAction1944(sceneWidgetLocal24.integerState0896, 0, 100, integerLocal19 + sceneWidgetLocal24.integerState0915, 100);
-          this.sceneWidgetState0007.performAction1944(15, 0, 5, 15, sceneWidgetLocal24.integerState0896 - 20);
-          sceneWidgetLocal17.performAction1944(this.integerState0896, 0, sceneWidgetLocal24.integerState0915, this.integerState0915 - sceneWidgetLocal24.integerState0915, 0);
-          sceneWidgetLocal18.performAction1944(this.integerState0896, 0, 20, 15, 0);
-          sceneWidgetLocal17.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0420(2105376, -20982, 3, sceneWidgetLocal17.integerState0915, 8421504, 11579568);
-          sceneWidgetLocal24.performAction1948(this.sceneWidgetState0007, -16834);
-          sceneWidgetLocal17.performAction1948(sceneWidgetLocal18, -16834);
-          this.performAction1948(sceneWidgetLocal24, -16834);
-          this.performAction1948(sceneWidgetLocal17, -16834);
+          this.performAction1815(sceneWidgetLocal24.integerState0896, 0, 100, integerLocal19 + sceneWidgetLocal24.integerState0915, 100);
+          this.sceneWidgetState0007.performAction1815(15, 0, 5, 15, sceneWidgetLocal24.integerState0896 - 20);
+          sceneWidgetLocal17.performAction1815(this.integerState0896, 0, sceneWidgetLocal24.integerState0915, this.integerState0915 - sceneWidgetLocal24.integerState0915, 0);
+          sceneWidgetLocal18.performAction1815(this.integerState0896, 0, 20, 15, 0);
+          sceneWidgetLocal17.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0393(2105376, -20982, 3, sceneWidgetLocal17.integerState0915, 8421504, 11579568);
+          sceneWidgetLocal24.performAction1819(this.sceneWidgetState0007, -16834);
+          sceneWidgetLocal17.performAction1819(sceneWidgetLocal18, -16834);
+          this.performAction1819(sceneWidgetLocal24, -16834);
+          this.performAction1819(sceneWidgetLocal17, -16834);
           this.integerState0890 = -(this.integerState0896 >> 1) + 320;
           integerLocal25 = -(this.integerState0915 >> 1) + 240;
           return;
@@ -120,19 +120,19 @@ final class SceneWidgetPart001 extends SceneWidget {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(')').toString());
         }
     }
 
-    final boolean computeBoolean0168(int integerArgument1, boolean booleanArgument2) {
+    final boolean computeBoolean0158(int integerArgument1, boolean booleanArgument2) {
         NodeDeque nodeDequeLocal1;
         boolean stackBooleanLocal2 = false;
         if (integerArgument1 != -1) {
           nodeDequeLocal1 = (NodeDeque) null;
-          SceneWidgetPart001.performAction0167((byte) 4, 96, (NodeDeque) null);
+          SceneWidgetPart001.performAction0157((byte) 4, 96, (NodeDeque) null);
         }
         boolean frameRemainderLocal3 = true;
-        this.performAction1952(false, true);
+        this.performAction1823(false, true);
         if ((SceneWidgetPart005.integerState0328 == 0 ||
           this.integerState0891 != 0) && this.sceneWidgetState0007.integerState0891 == 0) {
           stackBooleanLocal2 = false;
@@ -144,7 +144,7 @@ final class SceneWidgetPart001 extends SceneWidget {
         return stackBooleanLocal2;
     }
 
-    final static void performAction0167(byte byteArgument1, int integerArgument2, NodeDeque nodeDequeArgument3) {
+    final static void performAction0157(byte byteArgument1, int integerArgument2, NodeDeque nodeDequeArgument3) {
         int integerLocal1 = 0;
         AnimatedTileRegion animatedTileRegionLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -155,12 +155,12 @@ final class SceneWidgetPart001 extends SceneWidget {
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (byteArgument1 != -93) {
-            SceneWidgetPart001.performAction0169(40);
+            SceneWidgetPart001.performAction0159(40);
           }
-          animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1920((byte) -119));
+          animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1792((byte) -119));
           while (animatedTileRegionLocal2 != null) {
-            animatedTileRegionLocal2.performAction1839(11976, integerArgument2);
-            animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1924(true));
+            animatedTileRegionLocal2.performAction1717(11976, integerArgument2);
+            animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.computeHashNode1796(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -173,7 +173,7 @@ final class SceneWidgetPart001 extends SceneWidget {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 

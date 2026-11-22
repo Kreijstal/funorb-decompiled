@@ -12,7 +12,7 @@ final class DualNodeDeque {
     private DualNode dualNodeState0002;
     static String stringState0007;
 
-    final static int computeInteger0038(int integerArgument1) {
+    final static int computeInteger0037(int integerArgument1) {
         int integerLocal1 = 0;
         if (!(UiComponentPart017.integerState0437 <= integerLocal1)) {
           integerLocal1 = UiComponentPart017.integerState0437;
@@ -29,7 +29,7 @@ final class DualNodeDeque {
         return integerLocal1;
     }
 
-    final DualNode computeDualNode0033(byte byteArgument1) {
+    final DualNode computeDualNode0032(byte byteArgument1) {
         DualNode dualNodeLocal1 = this.dualNodeState0002;
         if (dualNodeLocal1 == this.dualNodeState0001) {
           this.dualNodeState0002 = null;
@@ -42,7 +42,7 @@ final class DualNodeDeque {
         return dualNodeLocal1;
     }
 
-    final void performAction0032(DualNode dualNodeArgument1, int integerArgument2) {
+    final void performAction0031(DualNode dualNodeArgument1, int integerArgument2) {
         DualNode dualNodeLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -51,7 +51,7 @@ final class DualNodeDeque {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (dualNodeArgument1.dualNodeState0004 != null) {
-            dualNodeArgument1.performAction0142((byte) 101);
+            dualNodeArgument1.performAction0134((byte) 101);
           }
           dualNodeArgument1.dualNodeState0003 = this.dualNodeState0001;
           dualNodeArgument1.dualNodeState0004 = this.dualNodeState0001.dualNodeState0004;
@@ -59,7 +59,7 @@ final class DualNodeDeque {
           dualNodeArgument1.dualNodeState0003.dualNodeState0004 = dualNodeArgument1;
           if (integerArgument2 != -7267) {
             dualNodeLocal1 = (DualNode) null;
-            this.performAction0032((DualNode) null, 54);
+            this.performAction0031((DualNode) null, 54);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -72,23 +72,23 @@ final class DualNodeDeque {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final DualNode computeDualNode0029(byte byteArgument1) {
+    final DualNode computeDualNode0028(byte byteArgument1) {
         DualNode dualNodeLocal1 = this.dualNodeState0001.dualNodeState0003;
         if (this.dualNodeState0001 == dualNodeLocal1) {
           return null;
         }
-        dualNodeLocal1.performAction0142((byte) 94);
+        dualNodeLocal1.performAction0134((byte) 94);
         int integerLocal2 = 27 / ((1 - byteArgument1) / 39);
         return dualNodeLocal1;
     }
 
-    final DualNode computeDualNode0034(int integerArgument1) {
+    final DualNode computeDualNode0033(int integerArgument1) {
         if (integerArgument1 != -2198) {
-          this.computeDualNode0034(61);
+          this.computeDualNode0033(61);
         }
         DualNode dualNodeLocal1 = this.dualNodeState0001.dualNodeState0003;
         if (this.dualNodeState0001 == dualNodeLocal1) {
@@ -99,7 +99,7 @@ final class DualNodeDeque {
         return dualNodeLocal1;
     }
 
-    final static long computeLong0031(int integerArgument1, CharSequence charSequenceArgument2) {
+    final static long computeLong0030(int integerArgument1, CharSequence charSequenceArgument2) {
         int integerLocal1 = 0;
         long stackLongLocal2 = 0L;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -157,11 +157,11 @@ final class DualNodeDeque {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean0035(byte byteArgument1) {
+    final static boolean computeBoolean0034(byte byteArgument1) {
         int integerLocal1 = 0;
         Object objectLocal2 = null;
         Object objectLocal3 = null;
@@ -182,16 +182,16 @@ final class DualNodeDeque {
         return stackBooleanLocal5;
     }
 
-    public static void performAction0037(int integerArgument1) {
+    public static void performAction0036(int integerArgument1) {
         cRC32State0001 = null;
         stringState0006 = null;
         if (integerArgument1 != 1) {
-          DualNodeDeque.computeInteger0038(-99);
+          DualNodeDeque.computeInteger0037(-99);
         }
         stringState0007 = null;
     }
 
-    final int computeInteger0030(int integerArgument1) {
+    final int computeInteger0029(int integerArgument1) {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal2 = integerArgument1;
         DualNode dualNodeLocal3 = this.dualNodeState0001.dualNodeState0003;
@@ -202,10 +202,10 @@ final class DualNodeDeque {
         return integerLocal2;
     }
 
-    final static boolean computeBoolean0036(int integerArgument1) {
+    final static boolean computeBoolean0035(int integerArgument1) {
         boolean stackBooleanLocal1 = false;
         if (integerArgument1 != 48) {
-          DualNodeDeque.computeBoolean0028(45);
+          DualNodeDeque.computeBoolean0027(45);
         }
         stackBooleanLocal1 = (null != MixedSupport071.sceneWidgetPart001State0001) || (GameDomainSupport004.booleanState0087);
         return stackBooleanLocal1;
@@ -225,7 +225,7 @@ final class DualNodeDeque {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean computeBoolean0028(int integerArgument1) {
+    final static boolean computeBoolean0027(int integerArgument1) {
         int integerLocal1 = 0;
         Object objectLocal2 = null;
         Object objectLocal3 = null;

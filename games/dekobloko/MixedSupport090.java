@@ -15,7 +15,7 @@ final class MixedSupport090 {
     private HashNode hashNodeState0005;
     private HashNode hashNodeState0006;
 
-    final static void performAction1220(RgbSprite[] rgbSpriteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction1134(RgbSprite[] rgbSpriteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -37,16 +37,16 @@ final class MixedSupport090 {
               stringState0362 = (String) null;
             }
             integerLocal8 = rgbSpriteArrayArgument1[1].integerState0254;
-            rgbSpriteArrayArgument1[0].performAction0297(integerArgument5, integerArgument3);
-            rgbSpriteArrayArgument1[2].performAction0297(integerArgument5 + integerArgument2 - integerLocal7, integerArgument3);
-            SoftwareRaster.performAction0711(MixedSupport073.integerArrayState0123);
-            SoftwareRaster.performAction0722(integerLocal5 + integerArgument5, integerArgument3, integerArgument5 + (integerArgument2 - integerLocal7), integerArgument3 + rgbSpriteArrayArgument1[1].integerState0260);
+            rgbSpriteArrayArgument1[0].performAction0278(integerArgument5, integerArgument3);
+            rgbSpriteArrayArgument1[2].performAction0278(integerArgument5 + integerArgument2 - integerLocal7, integerArgument3);
+            SoftwareRaster.performAction0665(MixedSupport073.integerArrayState0123);
+            SoftwareRaster.performAction0676(integerLocal5 + integerArgument5, integerArgument3, integerArgument5 + (integerArgument2 - integerLocal7), integerArgument3 + rgbSpriteArrayArgument1[1].integerState0260);
             integerLocal9 = integerLocal5 + integerArgument5;
             integerLocal10 = -integerLocal7 + integerArgument5 + integerArgument2;
             for (integerArgument5 = integerLocal9; integerArgument5 < integerLocal10; integerArgument5 = integerArgument5 + integerLocal8) {
-              rgbSpriteArrayArgument1[1].performAction0297(integerArgument5, integerArgument3);
+              rgbSpriteArrayArgument1[1].performAction0278(integerArgument5, integerArgument3);
             }
-            SoftwareRaster.performAction0703(MixedSupport073.integerArrayState0123);
+            SoftwareRaster.performAction0657(MixedSupport073.integerArrayState0123);
             return;
           }
           return;
@@ -60,11 +60,11 @@ final class MixedSupport090 {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    public static void performAction1216(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         sceneWidgetState0088 = null;
         stringState0362 = null;
         if (integerArgument1 > -26) {
@@ -76,11 +76,11 @@ final class MixedSupport090 {
         stringState0363 = null;
     }
 
-    final void performAction1219(long longArgument1, int integerArgument2, HashNode hashNodeArgument3) {
+    final void performAction1133(long longArgument1, int integerArgument2, HashNode hashNodeArgument3) {
         HashNode hashNodeLocal1 = null;
         try {
           if (null != hashNodeArgument3.next) {
-            hashNodeArgument3.performAction0158((byte) 116);
+            hashNodeArgument3.performAction0149((byte) 116);
           }
           hashNodeLocal1 = this.hashNodeArrayState0001[(int)((long)(this.integerState0537 + integerArgument2) & longArgument1)];
           hashNodeArgument3.next = hashNodeLocal1.next;
@@ -89,11 +89,11 @@ final class MixedSupport090 {
           hashNodeArgument3.previous.next = hashNodeArgument3;
           hashNodeArgument3.key = longArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ng.E(" + longArgument1 + ',' + integerArgument2 + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ng.E(" + longArgument1 + ',' + integerArgument2 + ',' + (hashNodeArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final HashNode computeHashNode1218(long longArgument1, int integerArgument2) {
+    final HashNode computeHashNode1132(long longArgument1, int integerArgument2) {
         HashNode hashNodeLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         HashNode hashNodeLocal3 = this.hashNodeArrayState0001[(int)((long)(this.integerState0537 - 1) & longArgument1)];
@@ -113,7 +113,7 @@ final class MixedSupport090 {
         return null;
     }
 
-    final static MixedSupport066 computeMixedSupport0661217(int integerArgument1, String stringArgument2) {
+    final static MixedSupport066 computeMixedSupport0661131(int integerArgument1, String stringArgument2) {
         MixedSupport066 stackMixedSupport066Local1 = null;
         MixedSupport066 stackMixedSupport066Local2 = null;
         MixedSupport066 stackMixedSupport066Local3 = null;
@@ -148,7 +148,7 @@ final class MixedSupport090 {
           }
           if (integerArgument1 != -1) {
             rgbSpriteArrayLocal18 = (RgbSprite[]) null;
-            MixedSupport090.performAction1220((RgbSprite[]) null, 38, -12, 7, -118);
+            MixedSupport090.performAction1134((RgbSprite[]) null, 38, -12, 7, -118);
           }
           if (stringArgument2.charAt(0) == 34) {
             if (stringArgument2.charAt(integerLocal12 - 1) != 34) {
@@ -207,20 +207,20 @@ final class MixedSupport090 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    final HashNode computeHashNode1215(byte byteArgument1) {
+    final HashNode computeHashNode1130(byte byteArgument1) {
         this.integerState0536 = 0;
         if (byteArgument1 != 126) {
-          this.computeHashNode1221((byte) 112);
-          return this.computeHashNode1221((byte) 49);
+          this.computeHashNode1135((byte) 112);
+          return this.computeHashNode1135((byte) 49);
         }
-        return this.computeHashNode1221((byte) 49);
+        return this.computeHashNode1135((byte) 49);
     }
 
-    final HashNode computeHashNode1221(byte byteArgument1) {
+    final HashNode computeHashNode1135(byte byteArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;

@@ -38,7 +38,7 @@ final class MixedSupport148 {
     int[][] integerArrayArrayState0028;
     boolean[] booleanArrayState0013;
 
-    final static int computeInteger1933(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static int computeInteger1805(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = integerArgument3 >>> 31;
         if (integerArgument1 == 23841) {
           return (integerArgument3 + integerLocal1) / integerArgument2 - integerLocal1;
@@ -47,7 +47,7 @@ final class MixedSupport148 {
         return (integerArgument3 + integerLocal1) / integerArgument2 - integerLocal1;
     }
 
-    public static void performAction1934(boolean booleanArgument1) {
+    public static void clearStaticReferences(boolean booleanArgument1) {
         byteArrayState0040 = null;
         integerArrayState0252 = null;
         if (!booleanArgument1) {

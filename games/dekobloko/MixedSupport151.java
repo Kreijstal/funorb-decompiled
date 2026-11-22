@@ -13,12 +13,12 @@ final class MixedSupport151 extends HashNode {
     int integerState0925;
     int integerState0926;
 
-    final void performAction1966(byte byteArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final void performAction1837(byte byteArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         try {
           this.integerState0924 = integerArgument2;
           if (byteArgument1 != 37) {
             CharSequence charSequenceLocal1 = (CharSequence) null;
-            MixedSupport151.computeString1969(false, (CharSequence) null, -40);
+            MixedSupport151.computeString1840(false, (CharSequence) null, -40);
           }
           this.integerState0922 = integerArgument6;
           this.integerArrayState0258 = integerArrayArgument3;
@@ -27,21 +27,21 @@ final class MixedSupport151 extends HashNode {
           this.integerState0921 = integerArgument7;
           this.integerState0925 = integerArgument5;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wc.D(" + byteArgument1 + ',' + integerArgument2 + ',' + (integerArrayArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "wc.D(" + byteArgument1 + ',' + integerArgument2 + ',' + (integerArrayArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + integerArgument8 + ')');
         }
     }
 
-    public static void performAction1967(int integerArgument1) {
+    public static void performAction1838(int integerArgument1) {
         stringState0607 = null;
         if (integerArgument1 != 2) {
-          MixedSupport151.performAction1968(64, -36, -122);
+          MixedSupport151.performAction1839(64, -36, -122);
           rgbSpriteState0071 = null;
           return;
         }
         rgbSpriteState0071 = null;
     }
 
-    final static String computeString1969(boolean booleanArgument1, CharSequence charSequenceArgument2, int integerArgument3) {
+    final static String computeString1840(boolean booleanArgument1, CharSequence charSequenceArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         String stringLocal2 = null;
         int integerLocal3 = 0;
@@ -54,13 +54,13 @@ final class MixedSupport151 extends HashNode {
         RuntimeException runtimeExceptionLocal10 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          stringLocal2 = MixedSupport112.computeString1548(booleanArgument1, (byte) 19, charSequenceArgument2);
+          stringLocal2 = MixedSupport112.computeString1443(booleanArgument1, (byte) 19, charSequenceArgument2);
           if (stringLocal2 != null) {
             stackStringLocal4 = stringLocal2;
             return stackStringLocal4;
           }
           for (integerLocal1 = integerArgument3; charSequenceArgument2.length() > integerLocal1; integerLocal1++) {
-            if (!MixedSupport018.computeBoolean0270(charSequenceArgument2.charAt(integerLocal1), (byte) 90)) {
+            if (!MixedSupport018.computeBoolean0252(charSequenceArgument2.charAt(integerLocal1), (byte) 90)) {
               stackStringLocal5 = MixedSupport068.stringState0289;
               return stackStringLocal5;
             }
@@ -76,11 +76,11 @@ final class MixedSupport151 extends HashNode {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static void performAction1968(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction1839(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -124,13 +124,13 @@ final class MixedSupport151 extends HashNode {
           NetworkSupport004.integerArrayState0052[integerLocal2 + 2] = integerLocal5;
           NetworkSupport004.integerArrayState0052[integerLocal2 + 3] = integerLocal6;
           NetworkSupport004.integerArrayState0052[4 + integerLocal2] = integerLocal7;
-          MixedSupport151.performAction1968(integerLocal2, integerArgument2, integerArgument3);
-          MixedSupport151.performAction1968(integerArgument1, 5 + integerLocal2, integerArgument3 + 0);
+          MixedSupport151.performAction1839(integerLocal2, integerArgument2, integerArgument3);
+          MixedSupport151.performAction1839(integerArgument1, 5 + integerLocal2, integerArgument3 + 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal10 = caughtParameterLocal12;
           runtimeExceptionLocal11 = caughtExceptionLocal10;
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal11), "wc.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeExceptionLocal11), "wc.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ')');
         }
     }
 

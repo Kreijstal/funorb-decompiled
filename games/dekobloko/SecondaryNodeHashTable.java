@@ -25,7 +25,7 @@ final class SecondaryNodeHashTable {
         mixedSupport111State0006 = null;
         if (integerArgument1 > -31) {
           byte[] byteArrayLocal1 = (byte[]) null;
-          SecondaryNodeHashTable.performAction1238((SceneWidget) null, (SceneWidget) null, 83, -100, -58, (SceneWidget) null, (byte[]) null, 7, 17, -108);
+          SecondaryNodeHashTable.performAction1151((SceneWidget) null, (SceneWidget) null, 83, -100, -58, (SceneWidget) null, (byte[]) null, 7, 17, -108);
         }
     }
 
@@ -87,7 +87,7 @@ final class SecondaryNodeHashTable {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (null != dualNodeArgument1.dualNodeState0004) {
-            dualNodeArgument1.performAction0142((byte) 75);
+            dualNodeArgument1.performAction0134((byte) 75);
           }
           dualNodeLocal1 = this.dualNodeArrayState0001[(int)((long)(this.integerState0541 - 1) & longArgument3)];
           dualNodeArgument1.dualNodeState0003 = dualNodeLocal1;
@@ -109,7 +109,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(',').append(longArgument3).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class SecondaryNodeHashTable {
         return this.next(-81);
     }
 
-    final static void performAction1238(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4, int integerArgument5, SceneWidget sceneWidgetArgument6, byte[] byteArrayArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    final static void performAction1151(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4, int integerArgument5, SceneWidget sceneWidgetArgument6, byte[] byteArrayArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -156,7 +156,7 @@ final class SecondaryNodeHashTable {
             sceneWidgetArgument2.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport057.nodeDequeState0010 = sceneWidgetArgument2.nodeDequeState0034;
-          MixedSupport057.nodeDequeState0010.performAction1921(118);
+          MixedSupport057.nodeDequeState0010.performAction1793(118);
           MixedSupport095.secondaryNodeHashTableState0004 = new SecondaryNodeHashTable(integerArgument5);
           ReturnedShape.integerState0693 = -1;
           UiComponentPart006.integerState0137 = -1;
@@ -166,13 +166,13 @@ final class SecondaryNodeHashTable {
             sceneWidgetArgument1.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport051.nodeDequeState0009 = sceneWidgetArgument1.nodeDequeState0034;
-          MixedSupport051.nodeDequeState0009.performAction1921(integerArgument3 ^ 105);
+          MixedSupport051.nodeDequeState0009.performAction1793(integerArgument3 ^ 105);
           MixedSupport127.secondaryNodeHashTableState0005 = new SecondaryNodeHashTable(integerArgument10);
           if (sceneWidgetArgument6.nodeDequeState0034 == null) {
             sceneWidgetArgument6.nodeDequeState0034 = new NodeDeque();
           }
           MixedSupport096.nodeDequeState0021 = sceneWidgetArgument6.nodeDequeState0034;
-          MixedSupport096.nodeDequeState0021.performAction1921(121);
+          MixedSupport096.nodeDequeState0021.performAction1793(121);
           GameApplet.secondaryNodeHashTableState0002 = new SecondaryNodeHashTable(integerArgument9);
           MixedSupport094.integerState0547 = integerArgument8;
           SceneWidgetNode.longState0023 = 0L;
@@ -205,11 +205,11 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument8).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument8).append(',').append(integerArgument9).append(',').append(integerArgument10).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1237(String stringArgument1, byte byteArgument2, UiComponentPart031 uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
+    final static boolean computeBoolean1150(String stringArgument1, byte byteArgument2, UiComponentPart031 uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponentPart033 uiComponentPart033Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -227,8 +227,8 @@ final class SecondaryNodeHashTable {
             return false;
           }
           uiComponentPart033Local2 = new UiComponentPart033(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
-          MixedSupport005.uiComponentPart016State0001.performAction0916((byte) -123, uiComponentPart033Local2);
-          if (!SecondaryNodeDequeIterator.computeBoolean0390(-40)) {
+          MixedSupport005.uiComponentPart016State0001.performAction0853((byte) -123, uiComponentPart033Local2);
+          if (!SecondaryNodeDequeIterator.computeBoolean0366(-40)) {
             SceneWidgetPart013.stringState0586 = stringArgument1;
             RichTextLayout.mixedSupport016State0001 = null;
             MixedSupport126.stringState0527 = stringArgument7;
@@ -237,7 +237,7 @@ final class SecondaryNodeHashTable {
             MixedSupport068.integerState0352 = integerArgument5;
             TextLayout.booleanState0019 = booleanArgument4;
           } else {
-            uiComponentPart033Local2.performAction2001(true);
+            uiComponentPart033Local2.performAction1870(true);
           }
           if (byteArgument2 > 120) {
             return true;
@@ -271,7 +271,7 @@ final class SecondaryNodeHashTable {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class SecondaryNodeHashTable {
         }
         if (integerArgument1 != 24710) {
           String stringLocal4 = (String) null;
-          SecondaryNodeHashTable.computeBoolean1237((String) null, (byte) 91, (UiComponentPart031) null, false, 64, (String) null, (String) null);
+          SecondaryNodeHashTable.computeBoolean1150((String) null, (byte) 91, (UiComponentPart031) null, false, 64, (String) null, (String) null);
         }
         this.dualNodeState0008 = null;
         return null;

@@ -12,31 +12,31 @@ final class NetworkSupport010 extends HashNode {
     int integerState0587;
     int integerState0588;
 
-    public static void performAction1385(int integerArgument1) {
+    public static void performAction1288(int integerArgument1) {
         int integerLocal1 = 86 % ((52 - integerArgument1) / 35);
         uiComponentPart026State0001 = null;
         rawSoundState0017 = null;
     }
 
-    final static boolean computeBoolean1386(int integerArgument1) {
-        CodecSupport001.booleanState0102 = true;
+    final static boolean computeBoolean1289(int integerArgument1) {
+        GzipDecompressor.booleanState0102 = true;
         if (integerArgument1 >= 55) {
-          MixedSupport079.longState0026 = 15000L + MixedSupport063.computeLong0802(4);
+          MixedSupport079.longState0026 = 15000L + MixedSupport063.computeLong0749(4);
           return MixedSupport052.integerState0269 == 11 ? true : false;
         }
-        NetworkSupport010.performAction1384(false, true);
-        MixedSupport079.longState0026 = 15000L + MixedSupport063.computeLong0802(4);
+        NetworkSupport010.performAction1287(false, true);
+        MixedSupport079.longState0026 = 15000L + MixedSupport063.computeLong0749(4);
         return MixedSupport052.integerState0269 == 11 ? true : false;
     }
 
-    final static void performAction1384(boolean booleanArgument1, boolean booleanArgument2) {
+    final static void performAction1287(boolean booleanArgument1, boolean booleanArgument2) {
         if (booleanArgument2) {
           return;
         }
-        ThemeTips.mixedSupport124State0001.performAction1718(-21, booleanArgument1);
+        ThemeTips.mixedSupport124State0001.performAction1608(-21, booleanArgument1);
     }
 
-    final static void performAction1382(byte byteArgument1, java.applet.Applet appletArgument2) {
+    final static void performAction1285(byte byteArgument1, java.applet.Applet appletArgument2) {
         try {
           java.net.URL uRLLocal1 = null;
           Exception exceptionLocal2 = null;
@@ -49,9 +49,9 @@ final class NetworkSupport010 extends HashNode {
             try {
               uRLLocal1 = new java.net.URL(appletArgument2.getCodeBase(), "quit.ws");
               if (byteArgument1 != -17) {
-                NetworkSupport010.computePcmStreamMixer1383(-74);
+                NetworkSupport010.computePcmStreamMixer1286(-74);
               }
-              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0648(uRLLocal1, -1, appletArgument2), "_top");
+              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0606(uRLLocal1, -1, appletArgument2), "_top");
               return;
             } catch (java.lang.Exception caughtParameterLocal8) {
               caughtExceptionLocal7 = caughtParameterLocal8;
@@ -69,7 +69,7 @@ final class NetworkSupport010 extends HashNode {
             } else {
               stackStringLocal6 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal10) {
           throw uncheckedExceptionLocal10;
@@ -78,7 +78,7 @@ final class NetworkSupport010 extends HashNode {
         }
     }
 
-    final static PcmStreamMixer computePcmStreamMixer1383(int integerArgument1) {
+    final static PcmStreamMixer computePcmStreamMixer1286(int integerArgument1) {
         if (integerArgument1 != 15000) {
           return (PcmStreamMixer) null;
         }

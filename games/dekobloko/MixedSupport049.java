@@ -8,7 +8,7 @@ final class MixedSupport049 {
     static int integerState0264;
     static String stringState0205;
 
-    final static boolean computeBoolean0634(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final static boolean computeBoolean0593(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         if (integerArgument1 != 17) {
           integerState0264 = -63;
           if (integerArgument7 > integerArgument3) {
@@ -40,15 +40,15 @@ final class MixedSupport049 {
         return false;
     }
 
-    public static void performAction0632(int integerArgument1) {
+    public static void performAction0591(int integerArgument1) {
         int integerLocal1 = -114 % ((integerArgument1 + 21) / 55);
         stringState0205 = null;
     }
 
-    final static void performAction0633(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
-        MixedSupport059.sceneWidgetState0055.performAction1944(integerArgument3, 0, integerArgument5, integerArgument1, integerArgument6);
+    final static void performAction0592(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+        MixedSupport059.sceneWidgetState0055.performAction1815(integerArgument3, 0, integerArgument5, integerArgument1, integerArgument6);
         if (null != SceneWidgetPart007.sceneWidgetPart005State0002) {
-          SceneWidgetPart007.sceneWidgetPart005State0002.performAction0775(integerArgument4, -MixedSupport077.integerState0416 + integerArgument4, integerArgument1, integerArgument2, (byte) -18, integerArgument1);
+          SceneWidgetPart007.sceneWidgetPart005State0002.performAction0726(integerArgument4, -MixedSupport077.integerState0416 + integerArgument4, integerArgument1, integerArgument2, (byte) -18, integerArgument1);
           if (byteArgument7 >= -83) {
             integerState0262 = -12;
             return;
@@ -61,15 +61,15 @@ final class MixedSupport049 {
         integerState0262 = -12;
     }
 
-    final static void performAction0635(int integerArgument1, int integerArgument2, int integerArgument3, PacketBuffer packetBufferArgument4, int integerArgument5) {
+    final static void performAction0594(int integerArgument1, int integerArgument2, int integerArgument3, PacketBuffer packetBufferArgument4, int integerArgument5) {
         try {
-          packetBufferArgument4.performAction2023(true, 12);
-          packetBufferArgument4.performAction2037(-1, integerArgument3);
-          packetBufferArgument4.performAction2037(-1, integerArgument5);
-          packetBufferArgument4.performAction2037(-1, integerArgument1);
-          packetBufferArgument4.performAction2023(true, integerArgument2);
+          packetBufferArgument4.performAction1892(true, 12);
+          packetBufferArgument4.performAction1905(-1, integerArgument3);
+          packetBufferArgument4.performAction1905(-1, integerArgument5);
+          packetBufferArgument4.performAction1905(-1, integerArgument1);
+          packetBufferArgument4.performAction1892(true, integerArgument2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "gi.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (packetBufferArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "gi.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (packetBufferArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');
         }
     }
 

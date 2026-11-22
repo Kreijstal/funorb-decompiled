@@ -11,7 +11,7 @@ final class MixedSupport021 {
     static IndexedSprite indexedSpriteState0001;
     static int integerState0124;
 
-    public static void performAction0346(int integerArgument1) {
+    public static void performAction0325(int integerArgument1) {
         integerArrayState0029 = null;
         sceneWidgetState0015 = null;
         sceneWidgetState0016 = null;
@@ -21,11 +21,11 @@ final class MixedSupport021 {
           rgbSpriteArrayState0008 = null;
           return;
         }
-        MixedSupport021.performAction0347(false);
+        MixedSupport021.performAction0326(false);
         rgbSpriteArrayState0008 = null;
     }
 
-    final static void performAction0347(boolean booleanArgument1) {
+    final static void performAction0326(boolean booleanArgument1) {
         DualNode dualNodeLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         DualNode dualNodeLocal3;
@@ -33,24 +33,24 @@ final class MixedSupport021 {
           UiComponentPart018.integerState0502 = 0;
           MixedSupport033.stringState0159 = null;
           MixedSupport029.integerState0182 = 0;
-          UiComponentPart025.nodeDequeState0027.performAction1921(111);
-          CipherPacketBuffer.nodeDequeState0033.performAction1921(117);
+          UiComponentPart025.nodeDequeState0027.performAction1793(111);
+          CipherPacketBuffer.nodeDequeState0033.performAction1793(117);
           if (!booleanArgument1) {
-            MixedSupport021.performAction0347(true);
+            MixedSupport021.performAction0326(true);
           }
           dualNodeLocal1 = MixedSupport085.secondaryNodeHashTableState0003.first(-9443);
           while (dualNodeLocal1 != null) {
-            dualNodeLocal1.performAction0142((byte) 105);
+            dualNodeLocal1.performAction0134((byte) 105);
             dualNodeLocal1 = MixedSupport085.secondaryNodeHashTableState0003.next(-112);
           }
           dualNodeLocal3 = MixedSupport054.secondaryNodeHashTableState0001.first(-9443);
           while (dualNodeLocal3 != null) {
-            dualNodeLocal3.performAction0142((byte) 100);
+            dualNodeLocal3.performAction0134((byte) 100);
             dualNodeLocal3 = MixedSupport054.secondaryNodeHashTableState0001.next(104);
           }
           ThemeTips.integerState0351 = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "d.A(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "d.A(" + booleanArgument1 + ')');
         }
     }
 

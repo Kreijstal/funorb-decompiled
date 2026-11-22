@@ -15,18 +15,18 @@ final class MixedSupport076 extends HashNode {
     int integerState0414;
     static SceneWidget sceneWidgetState0072;
 
-    public static void performAction1009(int integerArgument1) {
+    public static void performAction0941(int integerArgument1) {
         sceneWidgetState0071 = null;
         sceneWidgetState0072 = null;
         if (integerArgument1 != -1) {
-          MixedSupport076.performAction1009(11);
+          MixedSupport076.performAction0941(11);
           stringState0320 = null;
           return;
         }
         stringState0320 = null;
     }
 
-    final static void performAction1010(BitmapFont bitmapFontArgument1, byte byteArgument2, int integerArgument3, String stringArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction0942(BitmapFont bitmapFontArgument1, byte byteArgument2, int integerArgument3, String stringArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         if (byteArgument2 != -39) {
           return;
@@ -36,27 +36,27 @@ final class MixedSupport076 extends HashNode {
           if (UiComponentPart029.renderingSupport010State0005 == bitmapFontArgument1) {
             integerLocal1 = 1;
           }
-          bitmapFontArgument1.performAction1189(stringArgument4, -integerLocal1 + integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, integerArgument6, integerArgument3 + integerLocal1, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, integerArgument6 + integerLocal1, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, integerLocal1 + integerArgument6, integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1189(stringArgument4, integerLocal1 + integerArgument6, integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, -integerLocal1 + integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerArgument6 + integerLocal1, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerLocal1 + integerArgument6, integerArgument3, 0, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerLocal1 + integerArgument6, integerLocal1 + integerArgument3, 0, -1);
           if (SceneWidget.renderingSupport010State0007 == bitmapFontArgument1) {
-            bitmapFontArgument1.performAction1189(stringArgument4, 1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, -1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, -integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, integerLocal1 + integerArgument6, integerArgument3 + 1, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, -integerLocal1 + integerArgument6, 1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, integerArgument6 + 1, integerLocal1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1189(stringArgument4, -1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, 1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, -1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, -integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, integerLocal1 + integerArgument6, integerArgument3 + 1, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, -integerLocal1 + integerArgument6, 1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, integerArgument6 + 1, integerLocal1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.performAction1110(stringArgument4, -1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
           }
-          bitmapFontArgument1.performAction1189(stringArgument4, integerArgument6, integerArgument3, integerArgument5, -1);
+          bitmapFontArgument1.performAction1110(stringArgument4, integerArgument6, integerArgument3, integerArgument5, -1);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "kn.B(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "kn.B(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class MixedSupport076 extends HashNode {
           this.integerState0408 = integerArgument5;
           this.integerState0414 = integerArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "kn.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + (integerArrayArgument7 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "kn.<init>(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + (integerArrayArgument7 != null ? "{...}" : "null") + ')');
         }
     }
 

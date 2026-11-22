@@ -13,7 +13,7 @@ final class CacheWorkQueue implements Runnable {
     private boolean booleanState0080;
     static String stringState0266;
 
-    final void performAction0808(byte byteArgument1) {
+    final void performAction0754(byte byteArgument1) {
         try {
           int integerLocal1 = 0;
           integerLocal1 = 53 % ((byteArgument1 + 50) / 38);
@@ -33,7 +33,7 @@ final class CacheWorkQueue implements Runnable {
         }
     }
 
-    public static void performAction0810(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0265 = null;
         if (integerArgument1 != 0) {
           return;
@@ -44,14 +44,14 @@ final class CacheWorkQueue implements Runnable {
         stringState0266 = null;
     }
 
-    final static void performAction0811(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4) {
-        MixedSupport038.performAction0562(booleanArgument3, 10891);
+    final static void performAction0756(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4) {
+        MixedSupport038.performAction0527(booleanArgument3, 10891);
         if (integerArgument1 < -87) {
-          SceneWidgetPart002.performAction0605(integerArgument4, booleanArgument3, (byte) -126, integerArgument2);
+          SceneWidgetPart002.performAction0566(integerArgument4, booleanArgument3, (byte) -126, integerArgument2);
           return;
         }
         stringState0266 = (String) null;
-        SceneWidgetPart002.performAction0605(integerArgument4, booleanArgument3, (byte) -126, integerArgument2);
+        SceneWidgetPart002.performAction0566(integerArgument4, booleanArgument3, (byte) -126, integerArgument2);
     }
 
     public final void run() {
@@ -68,7 +68,7 @@ final class CacheWorkQueue implements Runnable {
           while (!this.booleanState0080) {
             objectLocal6 = this.dualNodeDequeState0005;
             synchronized (objectLocal6) {
-              archiveRequestManagerLocal3 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0029((byte) 79));
+              archiveRequestManagerLocal3 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0028((byte) 79));
               if (archiveRequestManagerLocal3 != null) {
                 this.integerState0333 = this.integerState0333 - 1;
                 regionSelectorLocal4 = 1;
@@ -87,11 +87,11 @@ final class CacheWorkQueue implements Runnable {
             }
             try {
               if (2 == archiveRequestManagerLocal3.integerState0207) {
-                archiveRequestManagerLocal3.mixedSupport073State0001.computeBoolean0986((byte) 43, archiveRequestManagerLocal3.byteArrayState0006, (int)archiveRequestManagerLocal3.longState0003, archiveRequestManagerLocal3.byteArrayState0006.length);
+                archiveRequestManagerLocal3.mixedSupport073State0001.computeBoolean0922((byte) 43, archiveRequestManagerLocal3.byteArrayState0006, (int)archiveRequestManagerLocal3.longState0003, archiveRequestManagerLocal3.byteArrayState0006.length);
                 archiveRequestManagerLocal3.booleanState0173 = false;
               } else {
                 if (3 == archiveRequestManagerLocal3.integerState0207) {
-                  archiveRequestManagerLocal3.byteArrayState0006 = archiveRequestManagerLocal3.mixedSupport073State0001.computeByteArray0989((int)archiveRequestManagerLocal3.longState0003, (byte) 117);
+                  archiveRequestManagerLocal3.byteArrayState0006 = archiveRequestManagerLocal3.mixedSupport073State0001.computeByteArray0925((int)archiveRequestManagerLocal3.longState0003, (byte) 117);
                   archiveRequestManagerLocal3.booleanState0173 = false;
                 } else {
                   archiveRequestManagerLocal3.booleanState0173 = false;
@@ -101,7 +101,7 @@ final class CacheWorkQueue implements Runnable {
               caughtExceptionLocal5 = caughtParameterLocal10;
               exceptionLocal7 = (Exception) (Object) caughtExceptionLocal5;
               stringLocal8 = (String) null;
-              NetworkArchiveRequestManager.performAction1419((Throwable) ((Object) exceptionLocal7), 16408, (String) null);
+              NetworkArchiveRequestManager.performAction1322((Throwable) ((Object) exceptionLocal7), 16408, (String) null);
               archiveRequestManagerLocal3.booleanState0173 = false;
             }
           }
@@ -112,23 +112,23 @@ final class CacheWorkQueue implements Runnable {
         }
     }
 
-    private final void performAction0809(byte byteArgument1, ArchiveRequestManager archiveRequestManagerArgument2) {
+    private final void performAction0755(byte byteArgument1, ArchiveRequestManager archiveRequestManagerArgument2) {
         synchronized (this.dualNodeDequeState0005) {
           int integerLocal1 = 78 % ((byteArgument1 + 34) / 50);
-          this.dualNodeDequeState0005.performAction0032(archiveRequestManagerArgument2, -7267);
+          this.dualNodeDequeState0005.performAction0031(archiveRequestManagerArgument2, -7267);
           this.integerState0333 = this.integerState0333 + 1;
           this.dualNodeDequeState0005.notifyAll();
         }
     }
 
-    final static void performAction0812(int integerArgument1, String stringArgument2) {
-        System.out.println("Error: " + HashNode.computeString0156(0, stringArgument2, "\n", "%0a"));
+    final static void performAction0757(int integerArgument1, String stringArgument2) {
+        System.out.println("Error: " + HashNode.computeString0147(0, stringArgument2, "\n", "%0a"));
         if (integerArgument1 != 18239) {
-          CacheWorkQueue.performAction0811(56, -121, true, -33);
+          CacheWorkQueue.performAction0756(56, -121, true, -33);
         }
     }
 
-    final ArchiveRequestManager computeArchiveRequestManager0813(int integerArgument1, MixedSupport073 mixedSupport073Argument2, byte byteArgument3) {
+    final ArchiveRequestManager computeArchiveRequestManager0758(int integerArgument1, MixedSupport073 mixedSupport073Argument2, byte byteArgument3) {
         ArchiveRequestManager archiveRequestManagerLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -143,11 +143,11 @@ final class CacheWorkQueue implements Runnable {
           archiveRequestManagerLocal1.integerState0207 = 3;
           if (byteArgument3 != 61) {
             stringLocal3 = (String) null;
-            CacheWorkQueue.performAction0812(109, (String) null);
+            CacheWorkQueue.performAction0757(109, (String) null);
           }
           archiveRequestManagerLocal1.mixedSupport073State0001 = mixedSupport073Argument2;
           archiveRequestManagerLocal1.longState0003 = (long)integerArgument1;
-          this.performAction0809((byte) -115, archiveRequestManagerLocal1);
+          this.performAction0755((byte) -115, archiveRequestManagerLocal1);
           stackArchiveRequestManagerLocal4 = archiveRequestManagerLocal1;
           return stackArchiveRequestManagerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
@@ -160,11 +160,11 @@ final class CacheWorkQueue implements Runnable {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument3).append(')').toString());
         }
     }
 
-    final ArchiveRequestManager computeArchiveRequestManager0815(int integerArgument1, MixedSupport073 mixedSupport073Argument2, byte[] byteArrayArgument3, byte byteArgument4) {
+    final ArchiveRequestManager computeArchiveRequestManager0760(int integerArgument1, MixedSupport073 mixedSupport073Argument2, byte[] byteArrayArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         ArchiveRequestManager archiveRequestManagerLocal3 = null;
@@ -183,7 +183,7 @@ final class CacheWorkQueue implements Runnable {
           archiveRequestManagerLocal3.longState0003 = (long)integerArgument1;
           archiveRequestManagerLocal3.mixedSupport073State0001 = mixedSupport073Argument2;
           archiveRequestManagerLocal3.byteArrayState0006 = byteArrayArgument3;
-          this.performAction0809((byte) -121, archiveRequestManagerLocal3);
+          this.performAction0755((byte) -121, archiveRequestManagerLocal3);
           stackArchiveRequestManagerLocal4 = archiveRequestManagerLocal3;
           return stackArchiveRequestManagerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -202,11 +202,11 @@ final class CacheWorkQueue implements Runnable {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final ArchiveRequestManager computeArchiveRequestManager0814(int integerArgument1, MixedSupport073 mixedSupport073Argument2, int integerArgument3) {
+    final ArchiveRequestManager computeArchiveRequestManager0759(int integerArgument1, MixedSupport073 mixedSupport073Argument2, int integerArgument3) {
         ArchiveRequestManager archiveRequestManagerLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         Object objectLocal3 = null;
@@ -225,7 +225,7 @@ final class CacheWorkQueue implements Runnable {
           archiveRequestManagerLocal1.integerState0207 = 1;
           objectLocal3 = this.dualNodeDequeState0005;
           synchronized (objectLocal3) {
-            archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0034(-2198));
+            archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0033(-2198));
             while (archiveRequestManagerLocal5 != null) {
               if (archiveRequestManagerLocal5.longState0003 == (long)integerArgument1 &&
                 mixedSupport073Argument2 == archiveRequestManagerLocal5.mixedSupport073State0001 &&
@@ -235,11 +235,11 @@ final class CacheWorkQueue implements Runnable {
                 stackArchiveRequestManagerLocal7 = archiveRequestManagerLocal1;
                 return stackArchiveRequestManagerLocal7;
               }
-              archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0033((byte) 20));
+              archiveRequestManagerLocal5 = (ArchiveRequestManager) (this.dualNodeDequeState0005.computeDualNode0032((byte) 20));
             }
           }
           integerLocal4 = 84 % ((integerArgument3 - 77) / 46);
-          archiveRequestManagerLocal1.byteArrayState0006 = mixedSupport073Argument2.computeByteArray0989(integerArgument1, (byte) 49);
+          archiveRequestManagerLocal1.byteArrayState0006 = mixedSupport073Argument2.computeByteArray0925(integerArgument1, (byte) 49);
           archiveRequestManagerLocal1.booleanState0173 = false;
           archiveRequestManagerLocal1.booleanState0172 = true;
           stackArchiveRequestManagerLocal8 = archiveRequestManagerLocal1;
@@ -254,7 +254,7 @@ final class CacheWorkQueue implements Runnable {
           } else {
             stackStringLocal11 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
@@ -264,16 +264,16 @@ final class CacheWorkQueue implements Runnable {
         this.integerState0333 = 0;
         this.booleanState0080 = false;
         try {
-          asyncTaskLocal1 = platformServiceArgument1.computeAsyncTask0549((byte) -104, 5, (Runnable) (this));
+          asyncTaskLocal1 = platformServiceArgument1.computeAsyncTask0515((byte) -104, 5, (Runnable) (this));
           while (0 == asyncTaskLocal1.integerState0510) {
-            MixedSupport132.performAction1787(10L, -128);
+            MixedSupport132.performAction1670(10L, -128);
           }
           if (asyncTaskLocal1.integerState0510 == 2) {
             throw new RuntimeException();
           }
           this.threadState0002 = (Thread) (asyncTaskLocal1.objectState0004);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "im.<init>(" + (platformServiceArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "im.<init>(" + (platformServiceArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 

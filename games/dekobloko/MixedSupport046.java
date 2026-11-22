@@ -12,12 +12,12 @@ final class MixedSupport046 {
     static String stringState0198;
     static boolean booleanState0053;
 
-    final static boolean computeBoolean0612(int integerArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
+    final static boolean computeBoolean0573(int integerArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
         int integerLocal1 = -42 / ((-5 - byteArgument4) / 35);
-        return MixedSupport149.computeBoolean1936(-89, integerArgument3, integerArgument2, integerArgument1);
+        return MixedSupport149.computeBoolean1807(-89, integerArgument3, integerArgument2, integerArgument1);
     }
 
-    final static String computeString0613(boolean booleanArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static String computeString0574(boolean booleanArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -27,7 +27,7 @@ final class MixedSupport046 {
           throw new IllegalArgumentException("Can only get ordinal for positive numbers");
         }
         if (booleanArgument1) {
-          MixedSupport046.computeString0613(false, 12, -120, -73);
+          MixedSupport046.computeString0574(false, 12, -120, -73);
           if (integerArgument2 == 0) {
             integerLocal1 = integerArgument4 % 100;
             if (integerLocal1 >= 11 &&
@@ -123,7 +123,7 @@ final class MixedSupport046 {
         return integerArgument4 + "th";
     }
 
-    public static void performAction0611(byte byteArgument1) {
+    public static void performAction0572(byte byteArgument1) {
         mixedSupport084State0001 = null;
         if (byteArgument1 == -118) {
           stringState0197 = null;
@@ -133,7 +133,7 @@ final class MixedSupport046 {
           stringState0195 = null;
           return;
         }
-        MixedSupport046.computeBoolean0612(90, -20, -14, (byte) 115);
+        MixedSupport046.computeBoolean0573(90, -20, -14, (byte) 115);
         stringState0197 = null;
         rgbSpriteArrayState0015 = null;
         stringState0198 = null;

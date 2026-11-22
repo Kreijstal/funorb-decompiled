@@ -10,7 +10,7 @@ final class MixedSupport105 {
     static String stringState0421;
     static double doubleState0002;
 
-    final static Boolean computeBoolean1368(int integerArgument1) {
+    final static Boolean computeBoolean1271(int integerArgument1) {
         Boolean booleanLocal1 = null;
         Boolean booleanLocal2;
         if (integerArgument1 != 24994) {
@@ -24,7 +24,7 @@ final class MixedSupport105 {
         return booleanLocal2;
     }
 
-    public static void performAction1367(byte byteArgument1) {
+    public static void performAction1270(byte byteArgument1) {
         stringState0421 = null;
         booleanArrayState0008 = null;
         stringState0420 = null;
@@ -32,7 +32,7 @@ final class MixedSupport105 {
         rgbSpriteState0041 = null;
         rawSoundState0016 = null;
         if (byteArgument1 != 126) {
-          MixedSupport105.performAction1367((byte) 95);
+          MixedSupport105.performAction1270((byte) 95);
         }
     }
 

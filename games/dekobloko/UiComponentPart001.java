@@ -15,7 +15,7 @@ final class UiComponentPart001 extends InteractiveComponent {
     static String stringState0025;
     int integerState0038;
 
-    final boolean computeBoolean0059(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    final boolean computeBoolean0056(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -27,7 +27,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         int integerLocal9 = 0;
         integerLocal9 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (!super.computeBoolean0059(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
+          if (!super.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
             return false;
           }
           integerLocal5 = -this.integerState0032 - (integerArgument6 + this.integerState0110) + integerArgument2;
@@ -61,11 +61,11 @@ final class UiComponentPart001 extends InteractiveComponent {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
         }
     }
 
-    public static void performAction0057(int integerArgument1) {
+    public static void performAction0054(int integerArgument1) {
         if (integerArgument1 <= -7) {
           stringState0024 = null;
           byteArrayState0002 = null;
@@ -74,7 +74,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           stringState0025 = null;
           return;
         }
-        UiComponentPart001.performAction0061((byte) -48);
+        UiComponentPart001.performAction0058((byte) -48);
         stringState0024 = null;
         byteArrayState0002 = null;
         stringState0023 = null;
@@ -82,7 +82,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         stringState0025 = null;
     }
 
-    final static void performAction0060(int integerArgument1, int integerArgument2, RawSound rawSoundArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0057(int integerArgument1, int integerArgument2, RawSound rawSoundArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         try {
           if (integerArgument1 <= 56) {
@@ -91,11 +91,11 @@ final class UiComponentPart001 extends InteractiveComponent {
           integerLocal1 = (int)(0.5 + (double)(rawSoundArgument3.integerState0794 * 256) * Math.pow(2.0, (double)integerArgument2 * 0.08333333333333333) / (double)PcmPlayer.integerState0209);
           SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSampleStream(rawSoundArgument3, integerLocal1, integerArgument5 * GameDomainSupport005.integerState0578, integerArgument4 << 6);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ai.G(" + integerArgument1 + ',' + integerArgument2 + ',' + (rawSoundArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "ai.G(" + integerArgument1 + ',' + integerArgument2 + ',' + (rawSoundArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
-    final static void performAction0061(byte byteArgument1) {
+    final static void performAction0058(byte byteArgument1) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -128,25 +128,25 @@ final class UiComponentPart001 extends InteractiveComponent {
           integerLocal8 = 0;
           integerLocal7 = 0;
         }
-        SoftwareRaster.performAction0708(0, 0, 640, 160 - integerLocal9);
+        SoftwareRaster.performAction0662(0, 0, 640, 160 - integerLocal9);
         integerLocal10 = 128 * integerLocal9 / 320 + 128;
-        UiComponentPart009.performAction0404((byte) 93, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0708(0, 160 - integerLocal9, 213, 320 - integerLocal9);
-        UiComponentPart009.performAction0404((byte) 123, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0708(427, 160 - integerLocal9, 640, 320 - integerLocal9);
-        UiComponentPart009.performAction0404((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0708(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
-        UiComponentPart009.performAction0404((byte) 92, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0708(213, 160 - integerLocal9, 427, integerLocal9 + 160);
-        UiComponentPart009.performAction0404((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0708(427, 320 - integerLocal9, 640, 320 + integerLocal9);
-        UiComponentPart009.performAction0404((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        UiComponentPart009.performAction0378((byte) 93, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0662(0, 160 - integerLocal9, 213, 320 - integerLocal9);
+        UiComponentPart009.performAction0378((byte) 123, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0662(427, 160 - integerLocal9, 640, 320 - integerLocal9);
+        UiComponentPart009.performAction0378((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
+        SoftwareRaster.performAction0662(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
+        UiComponentPart009.performAction0378((byte) 92, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        SoftwareRaster.performAction0662(213, 160 - integerLocal9, 427, integerLocal9 + 160);
+        UiComponentPart009.performAction0378((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
+        SoftwareRaster.performAction0662(427, 320 - integerLocal9, 640, 320 + integerLocal9);
+        UiComponentPart009.performAction0378((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
         if (byteArgument1 == 84) {
-          SoftwareRaster.performAction0708(213, 160 + integerLocal9, 427, 320 + integerLocal9);
-          UiComponentPart009.performAction0404((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0708(0, integerLocal9 + 320, 640, 480);
-          UiComponentPart009.performAction0404((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0716();
+          SoftwareRaster.performAction0662(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+          UiComponentPart009.performAction0378((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+          SoftwareRaster.performAction0662(0, integerLocal9 + 320, 640, 480);
+          UiComponentPart009.performAction0378((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+          SoftwareRaster.performAction0670();
           if (!SceneWidgetPart009.booleanState0151) {
             return;
           }
@@ -156,15 +156,15 @@ final class UiComponentPart001 extends InteractiveComponent {
           if (MixedSupport049.booleanState0058) {
             return;
           }
-          MixedSupport040.performAction0574(0, 256, -71, 0);
+          MixedSupport040.performAction0538(0, 256, -71, 0);
           return;
         }
         stringState0025 = (String) null;
-        SoftwareRaster.performAction0708(213, 160 + integerLocal9, 427, 320 + integerLocal9);
-        UiComponentPart009.performAction0404((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0708(0, integerLocal9 + 320, 640, 480);
-        UiComponentPart009.performAction0404((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0716();
+        SoftwareRaster.performAction0662(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+        UiComponentPart009.performAction0378((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+        SoftwareRaster.performAction0662(0, integerLocal9 + 320, 640, 480);
+        UiComponentPart009.performAction0378((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
+        SoftwareRaster.performAction0670();
         if (!SceneWidgetPart009.booleanState0151) {
           return;
         }
@@ -172,21 +172,21 @@ final class UiComponentPart001 extends InteractiveComponent {
           return;
         }
         if (!MixedSupport049.booleanState0058) {
-          MixedSupport040.performAction0574(0, 256, -71, 0);
+          MixedSupport040.performAction0538(0, 256, -71, 0);
         }
     }
 
-    final static boolean computeBoolean0062(byte byteArgument1) {
+    final static boolean computeBoolean0059(byte byteArgument1) {
         int integerLocal1 = -28 % ((byteArgument1 + 57) / 39);
         return MixedSupport040.booleanState0046;
     }
 
-    final static void performAction0063(int integerArgument1) {
+    final static void performAction0060(int integerArgument1) {
         String stringLocal1 = (String) null;
-        InputAdapter002.performAction1483(MixedSupport126.stringState0527, -128, (String) null);
+        InputAdapter002.performAction1385(MixedSupport126.stringState0527, -128, (String) null);
         if (integerArgument1 >= -6) {
           RawSound rawSoundLocal2 = (RawSound) null;
-          UiComponentPart001.performAction0060(-10, 44, (RawSound) null, 29, -93);
+          UiComponentPart001.performAction0057(-10, 44, (RawSound) null, 29, -93);
           return;
         }
     }
@@ -195,30 +195,30 @@ final class UiComponentPart001 extends InteractiveComponent {
         throw new Error();
     }
 
-    final static MixedSupport020 computeMixedSupport0200058(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
+    final static MixedSupport020 computeMixedSupport0200055(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4) {
         MixedSupport020 mixedSupport020Local1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1920((byte) 19));
+        MixedSupport020 mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1792((byte) 19));
         while (mixedSupport020Local3 != null) {
           if (integerArgument4 == mixedSupport020Local3.integerState0115) {
             return mixedSupport020Local3;
           }
-          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1924(true));
+          mixedSupport020Local3 = (MixedSupport020) (UiComponentPart020.nodeDequeState0022.computeHashNode1796(true));
         }
         if (byteArgument3 == -111) {
           mixedSupport020Local1 = new MixedSupport020();
           mixedSupport020Local1.integerState0116 = integerArgument2;
           mixedSupport020Local1.integerState0115 = integerArgument4;
-          UiComponentPart020.nodeDequeState0022.performAction1913(mixedSupport020Local1, byteArgument3 + 2888);
-          MixedSupport039.performAction0567((byte) 8, mixedSupport020Local1, integerArgument1);
+          UiComponentPart020.nodeDequeState0022.performAction1786(mixedSupport020Local1, byteArgument3 + 2888);
+          MixedSupport039.performAction0532((byte) 8, mixedSupport020Local1, integerArgument1);
           return mixedSupport020Local1;
         }
         stringState0024 = (String) null;
         MixedSupport020 mixedSupport020Local4 = new MixedSupport020();
         mixedSupport020Local4.integerState0116 = integerArgument2;
         mixedSupport020Local4.integerState0115 = integerArgument4;
-        UiComponentPart020.nodeDequeState0022.performAction1913(mixedSupport020Local4, byteArgument3 + 2888);
-        MixedSupport039.performAction0567((byte) 8, mixedSupport020Local4, integerArgument1);
+        UiComponentPart020.nodeDequeState0022.performAction1786(mixedSupport020Local4, byteArgument3 + 2888);
+        MixedSupport039.performAction0532((byte) 8, mixedSupport020Local4, integerArgument1);
         return mixedSupport020Local4;
     }
 

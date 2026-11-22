@@ -14,7 +14,7 @@ final class MixedSupport072 extends HashNode {
     static String stringState0302;
     static String stringState0303;
 
-    final static void performAction0928(int integerArgument1, int integerArgument2) {
+    final static void performAction0864(int integerArgument1, int integerArgument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -80,7 +80,7 @@ final class MixedSupport072 extends HashNode {
             integerLocal3 = 1;
             integerLocal4 = 1;
           }
-          MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0509(integerLocal4 * integerLocal1, integerLocal1 * integerLocal3, (byte) 90);
+          MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0477(integerLocal4 * integerLocal1, integerLocal1 * integerLocal3, (byte) 90);
           return;
         }
         if (integerLocal2 < 105) {
@@ -132,7 +132,7 @@ final class MixedSupport072 extends HashNode {
             integerLocal6 = 1;
             integerLocal8 = 1;
           }
-          MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0509(integerLocal8 * integerLocal1, integerLocal1 * integerLocal6, (byte) 90);
+          MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0477(integerLocal8 * integerLocal1, integerLocal1 * integerLocal6, (byte) 90);
           return;
         }
         if (120 > integerLocal2) {
@@ -186,11 +186,11 @@ final class MixedSupport072 extends HashNode {
           integerLocal7 = 1;
           integerLocal9 = 1;
         }
-        MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0509(integerLocal9 * integerLocal1, integerLocal1 * integerLocal7, (byte) 90);
+        MixedSupport093.integerArrayState0171 = MixedSupport032.computeIntegerArray0477(integerLocal9 * integerLocal1, integerLocal1 * integerLocal7, (byte) 90);
         return;
     }
 
-    final static ResourceArchive computeResourceArchive0927(boolean booleanArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6) {
+    final static ResourceArchive computeResourceArchive0863(boolean booleanArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6) {
         try {
           Object objectLocal1 = null;
           Object objectLocal2 = null;
@@ -220,9 +220,9 @@ final class MixedSupport072 extends HashNode {
               }
               objectLocal2 = new MixedSupport073(integerArgument3, MixedSupport086.mixedSupport091State0004, SceneWidgetPart005.mixedSupport091ArrayState0001[integerArgument3], 2097152);
             }
-            mixedSupport080Local3 = ProxySocketFactory.codecSupport002State0001.computeMixedSupport0801203((byte) -86, integerArgument3, (MixedSupport073) (objectLocal2), (MixedSupport073) (objectLocal1), booleanArgument4);
+            mixedSupport080Local3 = ProxySocketFactory.js5ArchiveManagerState0001.getArchiveProvider((byte) -86, integerArgument3, (MixedSupport073) (objectLocal2), (MixedSupport073) (objectLocal1), booleanArgument4);
             if (booleanArgument6) {
-              mixedSupport080Local3.performAction1042((byte) 0);
+              mixedSupport080Local3.performAction0974((byte) 0);
             }
             stackResourceArchiveLocal5 = new ResourceArchive(mixedSupport080Local3, booleanArgument1, integerArgument2);
             return stackResourceArchiveLocal5;
@@ -241,7 +241,7 @@ final class MixedSupport072 extends HashNode {
     MixedSupport072() {
     }
 
-    public static void performAction0926(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0303 = null;
         stringState0302 = null;
         if (integerArgument1 < 40) {

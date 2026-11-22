@@ -11,7 +11,7 @@ final class MixedSupport070 {
     static AsyncTask asyncTaskState0004;
     static SceneWidgetPart010 sceneWidgetPart010State0003;
 
-    public static void performAction0913(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0293 = null;
         if (integerArgument1 == -5161) {
           integerArrayState0119 = null;
@@ -33,7 +33,7 @@ final class MixedSupport070 {
         mixedSupport121State0001 = null;
     }
 
-    final static boolean computeBoolean0914(String stringArgument1, boolean booleanArgument2) {
+    final static boolean computeBoolean0851(String stringArgument1, boolean booleanArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         CharSequence charSequenceLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -46,7 +46,7 @@ final class MixedSupport070 {
             return false;
           }
           charSequenceLocal2 = (CharSequence) ((Object) stringArgument1);
-          stackBooleanLocal3 = MixedSupport051.stringState0212.equals(ComponentContainer.computeString0982(charSequenceLocal2, (byte) 2));
+          stackBooleanLocal3 = MixedSupport051.stringState0212.equals(ComponentContainer.computeString0918(charSequenceLocal2, (byte) 2));
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -58,17 +58,17 @@ final class MixedSupport070 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(booleanArgument2).append(')').toString());
         }
     }
 
-    final static void performAction0912(byte byteArgument1) {
+    final static void performAction0850(byte byteArgument1) {
         if (byteArgument1 != -36) {
           asyncTaskState0004 = (AsyncTask) null;
-          LoginCredentials.performAction0865(UiComponentPart029.computeApplet1639(25144), 0);
+          LoginCredentials.performAction0807(UiComponentPart029.computeApplet1530(25144), 0);
           return;
         }
-        LoginCredentials.performAction0865(UiComponentPart029.computeApplet1639(25144), 0);
+        LoginCredentials.performAction0807(UiComponentPart029.computeApplet1530(25144), 0);
     }
 
     static {

@@ -15,7 +15,7 @@ final class SoftwareRaster {
     static int[] integerArrayState0063;
     static int integerState0285;
 
-    final static void performAction0697(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction0651(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument1 >= integerState0282) {
           if (integerArgument2 < integerState0280 ||
             integerArgument1 >= integerState0281 ||
@@ -27,22 +27,22 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0716() {
+    final static void performAction0670() {
         integerState0282 = 0;
         integerState0280 = 0;
         integerState0281 = integerState0285;
         integerState0283 = integerState0284;
-        SoftwareRaster.performAction0712();
+        SoftwareRaster.performAction0666();
     }
 
-    final static void performAction0704(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction0658(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         integerArrayState0063 = integerArrayArgument1;
         integerState0285 = integerArgument2;
         integerState0284 = integerArgument3;
-        SoftwareRaster.performAction0708(0, 0, integerArgument2, integerArgument3);
+        SoftwareRaster.performAction0662(0, 0, integerArgument2, integerArgument3);
     }
 
-    final static void performAction0707() {
+    final static void performAction0661() {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -88,12 +88,12 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0710(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
-        SoftwareRaster.performAction0705(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument1, integerArgument3, integerArgument5, integerState0285 - integerArgument5, integerArgument6);
-        SoftwareRaster.performAction0706(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument2, integerArgument4, integerArgument6, integerState0285 - integerArgument5, integerArgument3, integerArgument5);
+    final static void performAction0664(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+        SoftwareRaster.performAction0659(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument1, integerArgument3, integerArgument5, integerState0285 - integerArgument5, integerArgument6);
+        SoftwareRaster.performAction0660(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument2, integerArgument4, integerArgument6, integerState0285 - integerArgument5, integerArgument3, integerArgument5);
     }
 
-    final static void performAction0724(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0678(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (integerArgument1 >= integerState0282) {
@@ -118,14 +118,14 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0723(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        SoftwareRaster.performAction0698(integerArgument1, integerArgument2, integerArgument3, integerArgument5);
-        SoftwareRaster.performAction0698(integerArgument1, integerArgument2 + integerArgument4 - 1, integerArgument3, integerArgument5);
-        SoftwareRaster.performAction0724(integerArgument1, integerArgument2, integerArgument4, integerArgument5);
-        SoftwareRaster.performAction0724(integerArgument1 + integerArgument3 - 1, integerArgument2, integerArgument4, integerArgument5);
+    final static void performAction0677(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        SoftwareRaster.performAction0652(integerArgument1, integerArgument2, integerArgument3, integerArgument5);
+        SoftwareRaster.performAction0652(integerArgument1, integerArgument2 + integerArgument4 - 1, integerArgument3, integerArgument5);
+        SoftwareRaster.performAction0678(integerArgument1, integerArgument2, integerArgument4, integerArgument5);
+        SoftwareRaster.performAction0678(integerArgument1 + integerArgument3 - 1, integerArgument2, integerArgument4, integerArgument5);
     }
 
-    final static void performAction0699(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0653(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -155,7 +155,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0722(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0676(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerState0282 < integerArgument1) {
           integerState0282 = integerArgument1;
         }
@@ -168,10 +168,10 @@ final class SoftwareRaster {
         if (integerState0283 > integerArgument4) {
           integerState0283 = integerArgument4;
         }
-        SoftwareRaster.performAction0712();
+        SoftwareRaster.performAction0666();
     }
 
-    private final static void performAction0702(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    private final static void performAction0656(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         while (integerArgument5 < 0) {
           integerArgument3 = integerArgument1 + integerArgument4 - 7;
           while (integerArgument1 < integerArgument3) {
@@ -202,7 +202,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0705(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    private final static void performAction0659(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -363,7 +363,7 @@ final class SoftwareRaster {
         }
     }
 
-    public static void performAction0696() {
+    public static void performAction0650() {
         integerArrayState0063 = null;
         integerArrayState0061 = null;
         integerArrayState0062 = null;
@@ -372,7 +372,7 @@ final class SoftwareRaster {
         integerArrayState0058 = null;
     }
 
-    final static void performAction0714(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0668(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -413,7 +413,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0721(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final static void performAction0675(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -452,12 +452,12 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0712() {
+    private final static void performAction0666() {
         integerArrayState0061 = null;
         integerArrayState0062 = null;
     }
 
-    final static void performAction0717(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0671(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument1 < integerState0282) {
           integerArgument3 = integerArgument3 - (integerState0282 - integerArgument1);
           integerArgument1 = integerState0282;
@@ -474,10 +474,10 @@ final class SoftwareRaster {
         }
         int integerLocal1 = integerState0285 - integerArgument3;
         int integerLocal2 = integerArgument1 + integerArgument2 * integerState0285;
-        SoftwareRaster.performAction0702(integerLocal2, integerArrayState0063, 0, integerArgument3, -integerArgument4, integerLocal1);
+        SoftwareRaster.performAction0656(integerLocal2, integerArrayState0063, 0, integerArgument3, -integerArgument4, integerLocal1);
     }
 
-    final static void performAction0715(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction0669(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -516,7 +516,7 @@ final class SoftwareRaster {
         int integerLocal36;
         int integerLocal37;
         if (integerArgument5 == 0) {
-          SoftwareRaster.performAction0699(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6);
+          SoftwareRaster.performAction0653(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6);
           return;
         }
         if (integerArgument5 < 0) {
@@ -636,7 +636,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0719(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction0673(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -680,7 +680,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0706(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
+    private final static void performAction0660(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -749,9 +749,9 @@ final class SoftwareRaster {
         integerArrayLocal34 = integerArrayState0058;
         integerArrayLocal31 = integerArrayLocal34;
         integerArrayLocal16 = integerArrayLocal31;
-        MixedSupport008.performAction0080(integerArrayLocal32, 0, integerArgument9);
-        MixedSupport008.performAction0080(integerArrayLocal33, 0, integerArgument9);
-        MixedSupport008.performAction0080(integerArrayLocal34, 0, integerArgument9);
+        MixedSupport008.performAction0074(integerArrayLocal32, 0, integerArgument9);
+        MixedSupport008.performAction0074(integerArrayLocal33, 0, integerArgument9);
+        MixedSupport008.performAction0074(integerArrayLocal34, 0, integerArgument9);
         integerLocal17 = 16384 / (2 * integerArgument4 + 1);
         integerLocal18 = integerArgument5 - integerArgument4;
         if (integerLocal18 < 0) {
@@ -921,7 +921,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0700(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void performAction0654(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -959,7 +959,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0701(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final static void performAction0655(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1002,11 +1002,11 @@ final class SoftwareRaster {
         int integerLocal40;
         int integerLocal41;
         if (integerArgument7 == 256) {
-          SoftwareRaster.performAction0715(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6);
+          SoftwareRaster.performAction0669(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6);
           return;
         }
         if (integerArgument5 == 0) {
-          SoftwareRaster.performAction0700(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6, integerArgument7);
+          SoftwareRaster.performAction0654(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6, integerArgument7);
           return;
         }
         integerLocal9 = 256 - integerArgument7;
@@ -1134,7 +1134,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0720(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0674(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1162,7 +1162,7 @@ final class SoftwareRaster {
         int integerLocal25;
         int integerLocal26;
         if (integerArgument3 == 0) {
-          SoftwareRaster.performAction0697(integerArgument1, integerArgument2, integerArgument4);
+          SoftwareRaster.performAction0651(integerArgument1, integerArgument2, integerArgument4);
           return;
         }
         if (integerArgument3 < 0) {
@@ -1255,14 +1255,14 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0711(int[] integerArrayArgument1) {
+    final static void performAction0665(int[] integerArrayArgument1) {
         integerArrayArgument1[0] = integerState0282;
         integerArrayArgument1[1] = integerState0280;
         integerArrayArgument1[2] = integerState0281;
         integerArrayArgument1[3] = integerState0283;
     }
 
-    final static void performAction0713(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0667(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1307,15 +1307,15 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0703(int[] integerArrayArgument1) {
+    final static void performAction0657(int[] integerArrayArgument1) {
         integerState0282 = integerArrayArgument1[0];
         integerState0280 = integerArrayArgument1[1];
         integerState0281 = integerArrayArgument1[2];
         integerState0283 = integerArrayArgument1[3];
-        SoftwareRaster.performAction0712();
+        SoftwareRaster.performAction0666();
     }
 
-    final static void performAction0709(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0663(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -1324,17 +1324,17 @@ final class SoftwareRaster {
         integerArgument4 = integerArgument4 - integerArgument2;
         if (integerArgument4 == 0) {
           if (integerArgument3 < 0) {
-            SoftwareRaster.performAction0698(integerArgument1 + integerArgument3, integerArgument2, -integerArgument3 + 1, integerArgument5);
+            SoftwareRaster.performAction0652(integerArgument1 + integerArgument3, integerArgument2, -integerArgument3 + 1, integerArgument5);
           } else {
-            SoftwareRaster.performAction0698(integerArgument1, integerArgument2, integerArgument3 + 1, integerArgument5);
+            SoftwareRaster.performAction0652(integerArgument1, integerArgument2, integerArgument3 + 1, integerArgument5);
           }
           return;
         }
         if (integerArgument3 == 0) {
           if (integerArgument4 < 0) {
-            SoftwareRaster.performAction0724(integerArgument1, integerArgument2 + integerArgument4, -integerArgument4 + 1, integerArgument5);
+            SoftwareRaster.performAction0678(integerArgument1, integerArgument2 + integerArgument4, -integerArgument4 + 1, integerArgument5);
           } else {
-            SoftwareRaster.performAction0724(integerArgument1, integerArgument2, integerArgument4 + 1, integerArgument5);
+            SoftwareRaster.performAction0678(integerArgument1, integerArgument2, integerArgument4 + 1, integerArgument5);
           }
           return;
         }
@@ -1391,17 +1391,17 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0718(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0672(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         for (integerLocal1 = 0; integerLocal1 < 4; integerLocal1++) {
           integerLocal2 = 128 - (integerLocal1 << 5);
-          SoftwareRaster.performAction0714(integerArgument1 + integerLocal1, integerArgument2 + integerArgument4 + integerLocal1, integerArgument3, integerArgument5, integerLocal2);
-          SoftwareRaster.performAction0721(integerArgument1 + integerArgument3 + integerLocal1, integerArgument2 + integerLocal1, integerArgument4 + 1, integerArgument5, integerLocal2);
+          SoftwareRaster.performAction0668(integerArgument1 + integerLocal1, integerArgument2 + integerArgument4 + integerLocal1, integerArgument3, integerArgument5, integerLocal2);
+          SoftwareRaster.performAction0675(integerArgument1 + integerArgument3 + integerLocal1, integerArgument2 + integerLocal1, integerArgument4 + 1, integerArgument5, integerLocal2);
         }
     }
 
-    final static void performAction0708(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0662(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument1 < 0) {
           integerArgument1 = 0;
         }
@@ -1418,10 +1418,10 @@ final class SoftwareRaster {
         integerState0280 = integerArgument2;
         integerState0281 = integerArgument3;
         integerState0283 = integerArgument4;
-        SoftwareRaster.performAction0712();
+        SoftwareRaster.performAction0666();
     }
 
-    final static void performAction0698(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0652(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (integerArgument2 >= integerState0280) {

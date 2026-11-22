@@ -6,7 +6,7 @@ final class SoundEffect {
     private int integerState0071;
     private int integerState0072;
 
-    private final byte[] computeByteArray0160() {
+    private final byte[] computeByteArray0151() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -33,7 +33,7 @@ final class SoundEffect {
           if (this.audioSupport001ArrayState0001[integerLocal1] != null) {
             integerLocal6 = this.audioSupport001ArrayState0001[integerLocal1].integerState0388 * 22050 / 1000;
             integerLocal7 = this.audioSupport001ArrayState0001[integerLocal1].integerState0389 * 22050 / 1000;
-            integerArrayLocal9 = this.audioSupport001ArrayState0001[integerLocal1].computeIntegerArray0998(integerLocal6, this.audioSupport001ArrayState0001[integerLocal1].integerState0388);
+            integerArrayLocal9 = this.audioSupport001ArrayState0001[integerLocal1].computeIntegerArray0933(integerLocal6, this.audioSupport001ArrayState0001[integerLocal1].integerState0388);
             for (integerLocal2 = 0; integerLocal2 < integerLocal6; integerLocal2++) {
               integerLocal8 = byteArrayLocal5[integerLocal2 + integerLocal7] + (integerArrayLocal9[integerLocal2] >> 8);
               if ((integerLocal8 + 128 & -256) != 0) {
@@ -46,8 +46,8 @@ final class SoundEffect {
         return byteArrayLocal5;
     }
 
-    final RawSound computeRawSound0162() {
-        byte[] byteArrayLocal1 = this.computeByteArray0160();
+    final RawSound computeRawSound0153() {
+        byte[] byteArrayLocal1 = this.computeByteArray0151();
         return new RawSound(22050, byteArrayLocal1, 22050 * this.integerState0071 / 1000, 22050 * this.integerState0072 / 1000);
     }
 
@@ -56,19 +56,19 @@ final class SoundEffect {
         int integerLocal2;
         this.audioSupport001ArrayState0001 = new AudioSupport001[10];
         for (integerLocal1 = 0; integerLocal1 < 10; integerLocal1++) {
-          integerLocal2 = packetBufferArgument1.computeInteger2035((byte) -82);
+          integerLocal2 = packetBufferArgument1.computeInteger1904((byte) -82);
           if (integerLocal2 != 0) {
             packetBufferArgument1.position = packetBufferArgument1.position - 1;
             this.audioSupport001ArrayState0001[integerLocal1] = new AudioSupport001();
-            this.audioSupport001ArrayState0001[integerLocal1].performAction1000(packetBufferArgument1);
+            this.audioSupport001ArrayState0001[integerLocal1].performAction0935(packetBufferArgument1);
           }
         }
-        this.integerState0071 = packetBufferArgument1.computeInteger2039(3);
-        this.integerState0072 = packetBufferArgument1.computeInteger2039(3);
+        this.integerState0071 = packetBufferArgument1.computeInteger1907(3);
+        this.integerState0072 = packetBufferArgument1.computeInteger1907(3);
     }
 
-    final static SoundEffect computeSoundEffect0161(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
-        byte[] byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0883(integerArgument3, 76, integerArgument2);
+    final static SoundEffect computeSoundEffect0152(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3) {
+        byte[] byteArrayLocal1 = resourceArchiveArgument1.computeByteArray0823(integerArgument3, 76, integerArgument2);
         if (byteArrayLocal1 == null) {
           return null;
         }

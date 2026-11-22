@@ -12,7 +12,7 @@ final class MixedSupport079 {
     int integerState0421;
     static long longState0026;
 
-    public static void performAction1021(int integerArgument1) {
+    public static void performAction0953(int integerArgument1) {
         stringState0323 = null;
         stringState0324 = null;
         if (integerArgument1 == -19893) {
@@ -20,12 +20,12 @@ final class MixedSupport079 {
           stringState0325 = null;
           return;
         }
-        MixedSupport079.performAction1021(101);
+        MixedSupport079.performAction0953(101);
         rgbSpriteState0030 = null;
         stringState0325 = null;
     }
 
-    static int computeInteger1022(int integerArgument1, int integerArgument2) {
+    static int computeInteger0954(int integerArgument1, int integerArgument2) {
         return integerArgument1 & integerArgument2;
     }
 

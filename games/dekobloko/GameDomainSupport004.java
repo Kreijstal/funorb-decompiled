@@ -11,7 +11,7 @@ final class GameDomainSupport004 {
     static String stringState0285;
     static boolean booleanState0087;
 
-    public static void performAction0873(boolean booleanArgument1) {
+    public static void clearStaticReferences(boolean booleanArgument1) {
         stringState0285 = null;
         canvasState0001 = null;
         stringState0283 = null;
@@ -23,7 +23,7 @@ final class GameDomainSupport004 {
         rgbSpriteState0024 = null;
     }
 
-    final static java.awt.Frame computeFrame0872(int integerArgument1, PlatformService platformServiceArgument2, int integerArgument3, int integerArgument4, boolean booleanArgument5, int integerArgument6) {
+    final static java.awt.Frame computeFrame0814(int integerArgument1, PlatformService platformServiceArgument2, int integerArgument3, int integerArgument4, boolean booleanArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         Object stackObjectLocal2 = null;
         Object stackObjectLocal3 = null;
@@ -40,11 +40,11 @@ final class GameDomainSupport004 {
         AsyncTask asyncTaskLocal14 = null;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          if (!platformServiceArgument2.computeBoolean0559(-86)) {
+          if (!platformServiceArgument2.computeBoolean0525(-86)) {
             return null;
           }
           if (integerArgument4 == 0) {
-            mixedSupport023ArrayLocal13 = MixedSupport006.computeMixedSupport023Array0068((byte) -109, platformServiceArgument2);
+            mixedSupport023ArrayLocal13 = MixedSupport006.computeMixedSupport023Array0064((byte) -109, platformServiceArgument2);
             mixedSupport023ArrayLocal8 = mixedSupport023ArrayLocal13;
             if (mixedSupport023ArrayLocal8 == null) {
               stackObjectLocal2 = null;
@@ -68,9 +68,9 @@ final class GameDomainSupport004 {
           if (booleanArgument5) {
             booleanState0087 = true;
           }
-          asyncTaskLocal14 = platformServiceArgument2.computeAsyncTask0548((byte) 107, integerArgument1, integerArgument4, integerArgument3, integerArgument6);
+          asyncTaskLocal14 = platformServiceArgument2.computeAsyncTask0514((byte) 107, integerArgument1, integerArgument4, integerArgument3, integerArgument6);
           while (0 == asyncTaskLocal14.integerState0510) {
-            MixedSupport132.performAction1787(10L, -128);
+            MixedSupport132.performAction1670(10L, -128);
           }
           frameLocal11 = (java.awt.Frame) (asyncTaskLocal14.objectState0004);
           if (frameLocal11 == null) {
@@ -79,7 +79,7 @@ final class GameDomainSupport004 {
           if (asyncTaskLocal14.integerState0510 != 2) {
             return frameLocal11;
           }
-          UiComponentPart033.performAction2000(true, frameLocal11, platformServiceArgument2);
+          UiComponentPart033.performAction1869(true, frameLocal11, platformServiceArgument2);
           stackObjectLocal3 = null;
           return (java.awt.Frame) (stackObjectLocal3);
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
@@ -92,11 +92,11 @@ final class GameDomainSupport004 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(booleanArgument5).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument3).append(',').append(integerArgument4).append(',').append(booleanArgument5).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
-    final static void performAction0871(byte byteArgument1, BitmapFont bitmapFontArgument2, ResourceArchive resourceArchiveArgument3) {
+    final static void performAction0813(byte byteArgument1, BitmapFont bitmapFontArgument2, ResourceArchive resourceArchiveArgument3) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -120,34 +120,34 @@ final class GameDomainSupport004 {
           MixedSupport059.sceneWidgetState0055 = new SceneWidget(0L, (SceneWidget) null);
           if (resourceArchiveArgument3 == null) {
             throwableLocal14 = (Throwable) null;
-            NetworkArchiveRequestManager.performAction1419((Throwable) null, 16408, "QC1");
+            NetworkArchiveRequestManager.performAction1322((Throwable) null, 16408, "QC1");
             return;
           }
           resourceArchiveArgument3.booleanState0088 = false;
           resourceArchiveArgument3.integerState0350 = 0;
           ReturnedShapeCache.mixedSupport032State0001 = new MixedSupport032(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3);
           UiComponentPart033.networkSupport012State0001 = new NetworkSupport012(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3, new MixedSupport045());
-          mixedSupport003Local10 = MixedSupport026.computeMixedSupport0030413((byte) 124);
+          mixedSupport003Local10 = MixedSupport026.computeMixedSupport0030386((byte) 124);
           if (mixedSupport003Local10 == null) {
             throwableLocal15 = (Throwable) null;
-            NetworkArchiveRequestManager.performAction1419((Throwable) null, 16408, "QC2");
+            NetworkArchiveRequestManager.performAction1322((Throwable) null, 16408, "QC2");
             return;
           }
-          MixedSupport066.performAction0842(mixedSupport003Local10, -1);
+          MixedSupport066.performAction0785(mixedSupport003Local10, -1);
           bitmapFontLocal16 = (BitmapFont) null;
-          MixedSupport040.sceneWidgetState0031 = MixedSupport150.computeSceneWidget1959(2245737, 1513239, 0, 8947848, 5138823, 1127256, 65793, 65793, 4020342, 1513239, 65793, -24447, (BitmapFont) null);
-          MixedSupport113.sceneWidgetState0103 = MixedSupport150.computeSceneWidget1959(0, 0, 16764006, 0, 0, 0, 0, 0, 0, 0, 0, -24447, bitmapFontArgument2);
-          ResourceSupport001.sceneWidgetState0001 = MixedSupport150.computeSceneWidget1959(0, 0, 16777215, 0, 0, 0, 0, 0, 0, 0, 0, -24447, bitmapFontArgument2);
+          MixedSupport040.sceneWidgetState0031 = MixedSupport150.computeSceneWidget1830(2245737, 1513239, 0, 8947848, 5138823, 1127256, 65793, 65793, 4020342, 1513239, 65793, -24447, (BitmapFont) null);
+          MixedSupport113.sceneWidgetState0103 = MixedSupport150.computeSceneWidget1830(0, 0, 16764006, 0, 0, 0, 0, 0, 0, 0, 0, -24447, bitmapFontArgument2);
+          ResourceSupport001.sceneWidgetState0001 = MixedSupport150.computeSceneWidget1830(0, 0, 16777215, 0, 0, 0, 0, 0, 0, 0, 0, -24447, bitmapFontArgument2);
           integerLocal11 = SoftwareRaster.integerState0285;
           integerLocal12 = SoftwareRaster.integerState0284;
           integerArrayLocal17 = SoftwareRaster.integerArrayState0063;
           NetworkArchiveRequestManager.rgbSpriteState0044 = new RgbSprite(10, 14);
-          NetworkArchiveRequestManager.rgbSpriteState0044.performAction0275();
+          NetworkArchiveRequestManager.rgbSpriteState0044.performAction0256();
           for (integerLocal1 = 2; integerLocal1 < 7; integerLocal1++) {
-            SoftwareRaster.performAction0724(integerLocal1, integerLocal1 + 1, 14 - (integerLocal1 << 1), 16777215);
+            SoftwareRaster.performAction0678(integerLocal1, integerLocal1 + 1, 14 - (integerLocal1 << 1), 16777215);
           }
-          SoftwareRaster.performAction0704(integerArrayLocal17, integerLocal11, integerLocal12);
-          GameplayControls.sceneWidgetPart005State0003 = MixedSupport083.computeSceneWidgetPart0051098(ResourceSupport001.sceneWidgetState0001, MixedSupport113.sceneWidgetState0103, mixedSupport003Local10, MixedSupport040.sceneWidgetState0031, 0);
+          SoftwareRaster.performAction0658(integerArrayLocal17, integerLocal11, integerLocal12);
+          GameplayControls.sceneWidgetPart005State0003 = MixedSupport083.computeSceneWidgetPart0051025(ResourceSupport001.sceneWidgetState0001, MixedSupport113.sceneWidgetState0103, mixedSupport003Local10, MixedSupport040.sceneWidgetState0031, 0);
           if (byteArgument1 <= 61) {
             return;
           }
@@ -169,11 +169,11 @@ final class GameDomainSupport004 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final static int computeInteger0874(int[] integerArrayArgument1, int integerArgument2) {
+    final static int computeInteger0815(int[] integerArrayArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -188,11 +188,11 @@ final class GameDomainSupport004 {
         try {
           integerLocal2 = 0;
           for (integerLocal1 = 0; integerArrayArgument1.length > integerLocal1; integerLocal1++) {
-            integerLocal2 = integerLocal2 + MixedSupport051.computeInteger0653(integerArrayArgument1[integerLocal1], -127);
+            integerLocal2 = integerLocal2 + MixedSupport051.computeInteger0611(integerArrayArgument1[integerLocal1], -127);
           }
           if (integerArgument2 < 94) {
             integerArrayLocal5 = (int[]) null;
-            GameDomainSupport004.computeInteger0874((int[]) null, 120);
+            GameDomainSupport004.computeInteger0815((int[]) null, 120);
           }
           stackIntegerLocal6 = integerLocal2;
           return stackIntegerLocal6;
@@ -206,7 +206,7 @@ final class GameDomainSupport004 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
         }
     }
 

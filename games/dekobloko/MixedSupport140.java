@@ -6,13 +6,13 @@ final class MixedSupport140 {
     static String stringState0573;
     static String stringState0574;
 
-    final static void performAction1851(byte byteArgument1) {
+    final static void performAction1727(byte byteArgument1) {
         ComponentContainer.gameSessionState0002 = null;
         int integerLocal1 = -59 / ((-91 - byteArgument1) / 32);
         UiComponent.gameSessionState0001 = null;
     }
 
-    final static MixedSupport016 computeMixedSupport0161854(int integerArgument1, String stringArgument2, int integerArgument3) {
+    final static MixedSupport016 computeMixedSupport0161730(int integerArgument1, String stringArgument2, int integerArgument3) {
         MixedSupport016 mixedSupport016Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -38,11 +38,11 @@ final class MixedSupport140 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static char computeCharacter1852(int integerArgument1, char characterArgument2) {
+    final static char computeCharacter1728(int integerArgument1, char characterArgument2) {
         int integerLocal1;
         int integerLocal2;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -131,7 +131,7 @@ final class MixedSupport140 {
         return '_';
     }
 
-    final static String computeString1856(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static String computeString1732(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         char[] characterArrayLocal3 = null;
@@ -177,18 +177,18 @@ final class MixedSupport140 {
           } else {
             stackStringLocal12 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal10), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal10), ((StringBuilder) (Object) stackStringBuilderLocal11).append(stackStringLocal12).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1853(int integerArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
+    final static boolean computeBoolean1729(int integerArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
         if (byteArgument4 != 52) {
           stringState0574 = (String) null;
         }
         if (0 <= integerArgument2 &&
           integerArgument2 <= 11) {
           if (integerArgument3 >= 1 &&
-            integerArgument3 <= UiComponentPart012.computeInteger0640(integerArgument1, 1, integerArgument2)) {
+            integerArgument3 <= UiComponentPart012.computeInteger0599(integerArgument1, 1, integerArgument2)) {
             return true;
           }
           return false;
@@ -196,7 +196,7 @@ final class MixedSupport140 {
         return false;
     }
 
-    final static MixedSupport145 computeMixedSupport1451855(int integerArgument1, CipherPacketBuffer cipherPacketBufferArgument2) {
+    final static MixedSupport145 computeMixedSupport1451731(int integerArgument1, CipherPacketBuffer cipherPacketBufferArgument2) {
         int integerLocal1 = 0;
         MixedSupport145 stackMixedSupport145Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -213,47 +213,47 @@ final class MixedSupport140 {
         CipherPacketBuffer cipherPacketBufferLocal14 = null;
         integerLocal13 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal7 = cipherPacketBufferArgument2.computeInteger1807(8, (byte) 87);
+          integerLocal7 = cipherPacketBufferArgument2.computeInteger1687(8, (byte) 87);
           if (integerLocal7 > 0) {
             throw new IllegalStateException("" + integerLocal7);
           }
-          integerLocal9 = MouseInput.computeBoolean1986(cipherPacketBufferArgument2, (byte) -127) ? 1 : 0;
+          integerLocal9 = MouseInput.computeBoolean1856(cipherPacketBufferArgument2, (byte) -127) ? 1 : 0;
           if (integerArgument1 != -128) {
             cipherPacketBufferLocal14 = (CipherPacketBuffer) null;
-            MixedSupport140.computeMixedSupport1451855(36, (CipherPacketBuffer) null);
+            MixedSupport140.computeMixedSupport1451731(36, (CipherPacketBuffer) null);
           }
-          integerLocal10 = MouseInput.computeBoolean1986(cipherPacketBufferArgument2, (byte) -112) ? 1 : 0;
+          integerLocal10 = MouseInput.computeBoolean1856(cipherPacketBufferArgument2, (byte) -112) ? 1 : 0;
           mixedSupport145Local11 = new MixedSupport145();
-          mixedSupport145Local11.shortState0003 = (short)cipherPacketBufferArgument2.computeInteger1807(16, (byte) 103);
-          mixedSupport145Local11.shortArrayState0001 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0001, 16);
-          mixedSupport145Local11.shortArrayState0004 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0004, 16);
-          mixedSupport145Local11.shortArrayState0009 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0009, 16);
-          mixedSupport145Local11.shortState0001 = (short)cipherPacketBufferArgument2.computeInteger1807(16, (byte) 55);
-          mixedSupport145Local11.shortArrayState0002 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0002, 16);
-          mixedSupport145Local11.shortArrayState0015 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0015, 16);
-          mixedSupport145Local11.shortArrayState0008 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0008, 16);
+          mixedSupport145Local11.shortState0003 = (short)cipherPacketBufferArgument2.computeInteger1687(16, (byte) 103);
+          mixedSupport145Local11.shortArrayState0001 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0001, 16);
+          mixedSupport145Local11.shortArrayState0004 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0004, 16);
+          mixedSupport145Local11.shortArrayState0009 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0009, 16);
+          mixedSupport145Local11.shortState0001 = (short)cipherPacketBufferArgument2.computeInteger1687(16, (byte) 55);
+          mixedSupport145Local11.shortArrayState0002 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0002, 16);
+          mixedSupport145Local11.shortArrayState0015 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0015, 16);
+          mixedSupport145Local11.shortArrayState0008 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0008, 16);
           if (integerLocal9 != 0) {
-            mixedSupport145Local11.shortState0002 = (short)cipherPacketBufferArgument2.computeInteger1807(16, (byte) 90);
-            mixedSupport145Local11.shortArrayState0013 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0013, 16);
-            mixedSupport145Local11.shortArrayState0011 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0011, 16);
-            mixedSupport145Local11.shortArrayState0007 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0007, 16);
-            mixedSupport145Local11.shortArrayState0005 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0005, 16);
-            mixedSupport145Local11.shortArrayState0014 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0014, 16);
-            mixedSupport145Local11.shortArrayState0006 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0006, 16);
+            mixedSupport145Local11.shortState0002 = (short)cipherPacketBufferArgument2.computeInteger1687(16, (byte) 90);
+            mixedSupport145Local11.shortArrayState0013 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0013, 16);
+            mixedSupport145Local11.shortArrayState0011 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0011, 16);
+            mixedSupport145Local11.shortArrayState0007 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0007, 16);
+            mixedSupport145Local11.shortArrayState0005 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0005, 16);
+            mixedSupport145Local11.shortArrayState0014 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0014, 16);
+            mixedSupport145Local11.shortArrayState0006 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0006, 16);
           }
           if (integerLocal10 != 0) {
-            cipherPacketBufferArgument2.computeInteger1807(16, (byte) 125);
-            mixedSupport145Local11.shortArrayState0018 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0018, 16);
-            mixedSupport145Local11.shortArrayState0010 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0010, 16);
-            mixedSupport145Local11.shortArrayState0017 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0017, 16);
-            mixedSupport145Local11.shortArrayState0003 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0003, 16);
-            mixedSupport145Local11.shortArrayState0016 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0016, 16);
+            cipherPacketBufferArgument2.computeInteger1687(16, (byte) 125);
+            mixedSupport145Local11.shortArrayState0018 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0018, 16);
+            mixedSupport145Local11.shortArrayState0010 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0010, 16);
+            mixedSupport145Local11.shortArrayState0017 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0017, 16);
+            mixedSupport145Local11.shortArrayState0003 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0003, 16);
+            mixedSupport145Local11.shortArrayState0016 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0016, 16);
           }
-          if (MouseInput.computeBoolean1986(cipherPacketBufferArgument2, (byte) -123)) {
-            mixedSupport145Local11.shortArrayState0012 = MixedSupport141.computeShortArray1860(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0012, 16);
+          if (MouseInput.computeBoolean1856(cipherPacketBufferArgument2, (byte) -123)) {
+            mixedSupport145Local11.shortArrayState0012 = MixedSupport141.computeShortArray1735(cipherPacketBufferArgument2, true, mixedSupport145Local11.shortArrayState0012, 16);
           }
-          if (MouseInput.computeBoolean1986(cipherPacketBufferArgument2, (byte) -115)) {
-            mixedSupport145Local11.byteArrayState0033 = UiComponentPart013.computeByteArray0673((byte) 5, mixedSupport145Local11.byteArrayState0033, 16, cipherPacketBufferArgument2);
+          if (MouseInput.computeBoolean1856(cipherPacketBufferArgument2, (byte) -115)) {
+            mixedSupport145Local11.byteArrayState0033 = UiComponentPart013.computeByteArray0630((byte) 5, mixedSupport145Local11.byteArrayState0033, 16, cipherPacketBufferArgument2);
             integerLocal12 = 0;
             for (integerLocal1 = 0; mixedSupport145Local11.byteArrayState0033.length > integerLocal1; integerLocal1++) {
               if (integerLocal12 < (mixedSupport145Local11.byteArrayState0033[integerLocal1] & 255)) {
@@ -278,11 +278,11 @@ final class MixedSupport140 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    public static void performAction1857(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0572 = null;
         if (byteArgument1 < 84) {
           return;

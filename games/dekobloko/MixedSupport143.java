@@ -9,14 +9,14 @@ final class MixedSupport143 extends HashNode {
     static String stringState0584;
     int integerState0837;
 
-    final static int computeInteger1882(int integerArgument1) {
+    final static int computeInteger1756(int integerArgument1) {
         if (integerArgument1 != 480) {
           return 53;
         }
-        return CodecSupport004.integerState0700 - RenderingSupport003.integerState0251;
+        return CodecSupport001.integerState0700 - RenderingSupport003.integerState0251;
     }
 
-    public static void performAction1883(byte byteArgument1) {
+    public static void performAction1757(byte byteArgument1) {
         int integerLocal1 = 9 % ((byteArgument1 - 10) / 59);
         stringState0584 = null;
         stringState0583 = null;

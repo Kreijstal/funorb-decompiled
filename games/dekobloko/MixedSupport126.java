@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport126 extends MixedSupport155 {
+final class MixedSupport126 extends TextFieldValidator {
     private UiComponentPart028 uiComponentPart028State0007;
     private UiComponentPart028 uiComponentPart028State0008;
     static String stringState0526;
@@ -11,7 +11,7 @@ final class MixedSupport126 extends MixedSupport155 {
     static boolean[] booleanArrayState0010;
     static String stringState0527;
 
-    final String computeString0791(String stringArgument1, byte byteArgument2) {
+    final String getValidationMessage(String stringArgument1, byte byteArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         String stringLocal2 = null;
         String stringLocal3 = null;
@@ -39,39 +39,39 @@ final class MixedSupport126 extends MixedSupport155 {
             return (String) (stackObjectLocal6);
           }
           stringLocal3 = stringLocal2;
-          if (DekoBlokoClient.computeBoolean0322(byteArgument2 + 111, stringLocal3)) {
+          if (DekoBlokoClient.computeBoolean0302(byteArgument2 + 111, stringLocal3)) {
             stackStringLocal7 = MixedSupport103.stringState0415;
             return stackStringLocal7;
           }
-          if (InputAdapter002.computeBoolean1482(stringLocal3, 0)) {
+          if (InputAdapter002.computeBoolean1384(stringLocal3, 0)) {
             stackStringLocal8 = AnimatedTileRegion.stringState0566;
             return stackStringLocal8;
           }
-          if (MixedSupport085.computeBoolean1128(stringLocal3, (byte) -121)) {
-            stackStringLocal9 = CodecSupport001.stringState0328;
+          if (MixedSupport085.computeBoolean1053(stringLocal3, (byte) -121)) {
+            stackStringLocal9 = GzipDecompressor.stringState0328;
             return stackStringLocal9;
           }
-          if (this.computeBoolean1745(stringArgument1, (byte) 14)) {
+          if (this.computeBoolean1631(stringArgument1, (byte) 14)) {
             stackStringLocal10 = MixedSupport010.stringState0049;
             return stackStringLocal10;
           }
           if (byteArgument2 != -11) {
             stringLocal4 = (String) null;
-            this.computeString0791((String) null, (byte) -103);
+            this.getValidationMessage((String) null, (byte) -103);
           }
           if (stringLocal5.length() <= 0) {
             stackStringLocal15 = MixedSupport027.stringState0130;
             return stackStringLocal15;
           }
-          if (MixedSupport092.computeBoolean1254(false, stringLocal5, stringLocal3)) {
+          if (MixedSupport092.computeBoolean1167(false, stringLocal5, stringLocal3)) {
             stackStringLocal11 = MixedSupport112.stringState0463;
             return stackStringLocal11;
           }
-          if (MixedSupport062.computeBoolean0800(stringLocal3, stringLocal5, (byte) -126)) {
+          if (MixedSupport062.computeBoolean0747(stringLocal3, stringLocal5, (byte) -126)) {
             stackStringLocal12 = MixedSupport090.stringState0364;
             return stackStringLocal12;
           }
-          if (!UiComponentPart013.computeBoolean0677(stringLocal5, (byte) -11, stringLocal3)) {
+          if (!UiComponentPart013.computeBoolean0634(stringLocal5, (byte) -11, stringLocal3)) {
             stackStringLocal14 = MixedSupport103.stringState0415;
             return stackStringLocal14;
           }
@@ -87,7 +87,7 @@ final class MixedSupport126 extends MixedSupport155 {
           } else {
             stackStringLocal18 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal17).append(stackStringLocal18).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal16), ((StringBuilder) (Object) stackStringBuilderLocal17).append(stackStringLocal18).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
@@ -97,21 +97,21 @@ final class MixedSupport126 extends MixedSupport155 {
           this.uiComponentPart028State0008 = uiComponentPart028Argument3;
           this.uiComponentPart028State0007 = uiComponentPart028Argument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "te.<init>(" + (uiComponentPart028Argument1 != null ? "{...}" : "null") + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ',' + (uiComponentPart028Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) runtimeException), "te.<init>(" + (uiComponentPart028Argument1 != null ? "{...}" : "null") + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ',' + (uiComponentPart028Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void performAction1746(int integerArgument1) {
+    public static void performAction1632(int integerArgument1) {
         stringState0527 = null;
         if (integerArgument1 != 0) {
           BitmapFont bitmapFontLocal1 = (BitmapFont) null;
-          MixedSupport126.computeInteger1744((String) null, 15, -79, (String[]) null, (BitmapFont) null);
+          MixedSupport126.computeInteger1630((String) null, 15, -79, (String[]) null, (BitmapFont) null);
         }
         booleanArrayState0010 = null;
         stringState0526 = null;
     }
 
-    private final boolean computeBoolean1745(String stringArgument1, byte byteArgument2) {
+    private final boolean computeBoolean1631(String stringArgument1, byte byteArgument2) {
         String stringLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -124,7 +124,7 @@ final class MixedSupport126 extends MixedSupport155 {
         RuntimeException caughtExceptionLocal10 = null;
         try {
           if (byteArgument2 != 14) {
-            MixedSupport126.performAction1746(-108);
+            MixedSupport126.performAction1632(-108);
           }
           stringLocal1 = this.uiComponentPart028State0008.stringState0078.toLowerCase();
           stringLocal3 = stringArgument1.toLowerCase();
@@ -154,11 +154,11 @@ final class MixedSupport126 extends MixedSupport155 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static int computeInteger1744(String stringArgument1, int integerArgument2, int integerArgument3, String[] stringArrayArgument4, BitmapFont bitmapFontArgument5) {
+    final static int computeInteger1630(String stringArgument1, int integerArgument2, int integerArgument3, String[] stringArrayArgument4, BitmapFont bitmapFontArgument5) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -185,7 +185,7 @@ final class MixedSupport126 extends MixedSupport155 {
         int integerLocal24;
         integerLocal23 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal15 = bitmapFontArgument5.computeInteger1169(stringArgument1);
+          integerLocal15 = bitmapFontArgument5.computeInteger1090(stringArgument1);
           if (integerLocal15 <= integerArgument3 &&
             stringArgument1.indexOf("<br>") == -1) {
             stringArrayArgument4[0] = stringArgument1;
@@ -202,7 +202,7 @@ final class MixedSupport126 extends MixedSupport155 {
             if (32 == integerLocal20 ||
               45 == integerLocal20) {
               stringLocal21 = stringArgument1.substring(integerLocal18, integerLocal1 + 1).trim();
-              integerLocal22 = bitmapFontArgument5.computeInteger1169(stringLocal21);
+              integerLocal22 = bitmapFontArgument5.computeInteger1090(stringLocal21);
               if (integerArgument3 <= integerLocal22) {
                 integerLocal18 = integerLocal1 + 1;
                 previousIntegerLocal2 = integerLocal24;
@@ -250,18 +250,18 @@ final class MixedSupport126 extends MixedSupport155 {
           } else {
             stackStringLocal13 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal12).append(stackStringLocal13).append(')').toString());
         }
     }
 
-    final RenderingSupport015 computeRenderingSupport0150792(String stringArgument1, byte byteArgument2) {
+    final ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2) {
         String stringLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
-        RenderingSupport015 stackRenderingSupport015Local4 = null;
-        RenderingSupport015 stackRenderingSupport015Local5 = null;
-        RenderingSupport015 stackRenderingSupport015Local6 = null;
-        RenderingSupport015 stackRenderingSupport015Local7 = null;
+        ValidationStatus stackValidationStatusLocal4 = null;
+        ValidationStatus stackValidationStatusLocal5 = null;
+        ValidationStatus stackValidationStatusLocal6 = null;
+        ValidationStatus stackValidationStatusLocal7 = null;
         RuntimeException stackRuntimeExceptionLocal8 = null;
         StringBuilder stackStringBuilderLocal9 = null;
         String stackStringLocal10 = null;
@@ -270,22 +270,22 @@ final class MixedSupport126 extends MixedSupport155 {
           stringLocal1 = this.uiComponentPart028State0007.stringState0078.toLowerCase();
           stringLocal3 = stringArgument1.toLowerCase();
           if (0 == stringLocal3.length()) {
-            stackRenderingSupport015Local4 = MixedSupport149.renderingSupport015State0005;
-            return stackRenderingSupport015Local4;
+            stackValidationStatusLocal4 = MixedSupport149.validationStatusState0005;
+            return stackValidationStatusLocal4;
           }
-          if (!MixedSupport047.computeBoolean0623(-118, stringLocal1, stringLocal3)) {
-            stackRenderingSupport015Local5 = MixedSupport149.renderingSupport015State0005;
-            return stackRenderingSupport015Local5;
+          if (!MixedSupport047.computeBoolean0583(-118, stringLocal1, stringLocal3)) {
+            stackValidationStatusLocal5 = MixedSupport149.validationStatusState0005;
+            return stackValidationStatusLocal5;
           }
           if (byteArgument2 != -40) {
             integerState0774 = -71;
           }
-          if (!this.computeBoolean1745(stringArgument1, (byte) 14)) {
-            stackRenderingSupport015Local7 = MixedSupport023.renderingSupport015State0001;
-            return stackRenderingSupport015Local7;
+          if (!this.computeBoolean1631(stringArgument1, (byte) 14)) {
+            stackValidationStatusLocal7 = MixedSupport023.validationStatusState0001;
+            return stackValidationStatusLocal7;
           }
-          stackRenderingSupport015Local6 = MixedSupport149.renderingSupport015State0005;
-          return stackRenderingSupport015Local6;
+          stackValidationStatusLocal6 = MixedSupport149.validationStatusState0005;
+          return stackValidationStatusLocal6;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal11 = caughtParameterLocal12;
           runtimeExceptionLocal2 = caughtExceptionLocal11;
@@ -296,7 +296,7 @@ final class MixedSupport126 extends MixedSupport155 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020368((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument2).append(')').toString());
         }
     }
 

@@ -9,7 +9,7 @@ final class MixedSupport002 {
     static String stringState0005;
     static RgbSprite rgbSpriteState0002;
 
-    public static void performAction0027(boolean booleanArgument1) {
+    public static void performAction0026(boolean booleanArgument1) {
         nodeDequeState0001 = null;
         stringState0004 = null;
         if (booleanArgument1) {
@@ -18,13 +18,13 @@ final class MixedSupport002 {
           rgbSpriteState0002 = null;
           return;
         }
-        MixedSupport002.computeString0026(73);
+        MixedSupport002.computeString0025(73);
         indexedSpriteArrayState0001 = null;
         stringState0005 = null;
         rgbSpriteState0002 = null;
     }
 
-    final static String computeString0026(int integerArgument1) {
+    final static String computeString0025(int integerArgument1) {
         if (UiComponentPart022.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
           return NetworkArchiveRequestManager.stringState0438;
         }
@@ -33,7 +33,7 @@ final class MixedSupport002 {
           if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
             return UiComponentPart024.stringState0435;
           }
-          if (!ThemeTips.mixedSupport124State0001.computeBoolean1717(92)) {
+          if (!ThemeTips.mixedSupport124State0001.computeBoolean1607(92)) {
             return UiComponentPart024.stringState0435;
           }
           return SceneWidgetPart004.stringState0217;
@@ -41,7 +41,7 @@ final class MixedSupport002 {
         if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
           return UiComponentPart024.stringState0435;
         }
-        if (!ThemeTips.mixedSupport124State0001.computeBoolean1717(92)) {
+        if (!ThemeTips.mixedSupport124State0001.computeBoolean1607(92)) {
           return UiComponentPart024.stringState0435;
         }
         return SceneWidgetPart004.stringState0217;
