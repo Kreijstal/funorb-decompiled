@@ -20,7 +20,7 @@ abstract class PathMoverComponent extends PrefabComponent {
     }
 
     final static void drawRectOutline(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        tga.field_a.drawRectOutlineAlpha(param2, param5, param3, param0, SoundEvent.withFullAlpha(param4, param1), (byte) -128);
+        CurrentGraphicsToolkit.toolkit.drawRectOutlineAlpha(param2, param5, param3, param0, SoundEvent.withFullAlpha(param4, param1), (byte) -128);
     }
 
     abstract boolean storesSpeed(int param0);

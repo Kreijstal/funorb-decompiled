@@ -209,7 +209,7 @@ final class LaserShooterComponent extends ShooterComponent {
           MaskBlendOperator.initToolkitResources(-25405);
           return;
         }
-        if (tga.field_a != null) {
+        if (CurrentGraphicsToolkit.toolkit != null) {
           return;
         }
         if (null == baa.field_d.field_i) {

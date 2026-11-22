@@ -101,12 +101,12 @@ abstract class MenuScreen extends GameScreen {
               var11 == 0 || var11 != 0) {
               var6 = 0;
               if (this.field_k.isHomePressed(0) &&
-                tk.a(-22636) > 0) {
+                MusicVolumeControl.getMusicVolume(-22636) > 0) {
                 qfa.applyMusicVolume(0, 20815);
                 var6 = 1;
               }
               if (this.field_k.isEndPressed(75) &&
-                tk.a(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 71)) {
+                MusicVolumeControl.getMusicVolume(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 71)) {
                 var6 = 1;
                 qfa.applyMusicVolume(CircleMovementLocomotor.getMaxVolume((byte) 126), 20815);
               }
@@ -124,17 +124,17 @@ abstract class MenuScreen extends GameScreen {
                 } else {
                   var10 = 0;
                 }
-                stackIn_44_0 = (~tk.a(-22636) == ~var10) ? 0 : 1;
+                stackIn_44_0 = (~MusicVolumeControl.getMusicVolume(-22636) == ~var10) ? 0 : 1;
                 var6 = stackIn_44_0;
                 qfa.applyMusicVolume(var10, 20815);
               }
               if (this.field_k.isLeftPressed(96) &&
-                0 < tk.a(-22636)) {
+                0 < MusicVolumeControl.getMusicVolume(-22636)) {
                 var6 = 1;
                 HardwareGraphicsHeap.lowerMusicVolume(11);
               }
               if (this.field_k.isRightPressed(94) &&
-                tk.a(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 87)) {
+                MusicVolumeControl.getMusicVolume(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 87)) {
                 var6 = 1;
                 EventFactory.a((byte) -117);
               }

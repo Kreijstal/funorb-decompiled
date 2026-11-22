@@ -73,7 +73,7 @@ final class epa extends MenuScreen {
             }
             if (var3_int != 0) {
               if (VertexAttribute.field_r) {
-                param2 = LegacyOpenGlFlowingWaterEffect.formatText(94, nka.field_a, new String[]{param2});
+                param2 = LegacyOpenGlFlowingWaterEffect.formatText(94, ConnectionLostText.text, new String[]{param2});
               }
               if (S2CProfileUpdatePacket.field_d) {
                 param2 = KeySwitchComponent.field_K;

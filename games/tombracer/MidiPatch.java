@@ -116,11 +116,11 @@ final class MidiPatch extends IntrusiveNode {
           }
           return CrossedSineBandsOperator.field_s;
         }
-        if (!tk.field_b.ensureIndex(-97)) {
+        if (!MusicVolumeControl.field_b.ensureIndex(-97)) {
           return SwitchModel.field_r;
         }
-        if (!tk.field_b.isGroupAvailableByName("commonui", param0 ^ 10971)) {
-          return CollisionGridEntry.field_o + " - " + tk.field_b.getGroupProgressByName("commonui", true) + "%";
+        if (!MusicVolumeControl.field_b.isGroupAvailableByName("commonui", param0 ^ 10971)) {
+          return CollisionGridEntry.field_o + " - " + MusicVolumeControl.field_b.getGroupProgressByName("commonui", true) + "%";
         }
         if (!OpenGlTexture2D.field_n.ensureIndex(-99)) {
           return MouseInputHandler.field_a;

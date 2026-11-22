@@ -611,7 +611,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextBottomlessPits", (byte) 109);
                 if (null != var2) {
-                  bpa.field_a = jaa.decodeText((byte) 61, var2);
+                  BottomlessPitHintText.text = jaa.decodeText((byte) 61, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleSnakePits", (byte) 119);
                 if (null != var2) {
@@ -1213,7 +1213,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("completed", (byte) 104);
                 if (var2 != null) {
-                  iaa.field_a = jaa.decodeText((byte) 50, var2);
+                  CompletedStatusText.text = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("failed", (byte) 108);
                 if (var2 != null) {

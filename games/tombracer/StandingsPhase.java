@@ -189,10 +189,10 @@ final class StandingsPhase extends MatchPhase {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].draw(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].width() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
-            RasterBuffer.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
+            RasterBuffer.a(-60 + var11, 2, CurrentGraphicsToolkit.toolkit, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
             MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], TooltipRenderer.field_p, -1, var10 - 230, var11, 0);
             try {
-              tga.field_a.fillShadedTriangle(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
+              CurrentGraphicsToolkit.toolkit.fillShadedTriangle(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var13_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -235,7 +235,7 @@ final class StandingsPhase extends MatchPhase {
             MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
             MembersUpsellMenu.drawCentredTextWithShadow(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, TooltipRenderer.field_p, -1, 45 + var4, var3, -1);
           } else {
-            MembersUpsellMenu.drawCentredTextWithShadow(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(CompletedStatusText.text.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
             if (var9 == uca.field_a) {
               var12_ref = null;
               var13_ref_String = SpriteTileOperator.field_v;

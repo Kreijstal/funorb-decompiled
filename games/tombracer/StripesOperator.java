@@ -8,7 +8,7 @@ final class StripesOperator extends TextureOperator {
     private int field_r;
     private int[] field_m;
     private int field_n;
-    static ti[] field_s;
+    static HiscorePlayerEntry[] field_s;
 
     public StripesOperator() {
         super(0, true);
@@ -186,9 +186,9 @@ final class StripesOperator extends TextureOperator {
     static {
         int var0 = 0;
         field_p = new sla();
-        field_s = new ti[255];
+        field_s = new HiscorePlayerEntry[255];
         for (var0 = 0; var0 < field_s.length; var0++) {
-          field_s[var0] = new ti();
+          field_s[var0] = new HiscorePlayerEntry();
         }
     }
 }

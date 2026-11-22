@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ClientMemoryVertexArray extends ora implements LegacyVertexArray {
+final class ClientMemoryVertexArray extends ClientMemoryBuffer implements LegacyVertexArray {
     static String[] field_c;
     static long field_f;
     static UiComponent field_e;
@@ -32,7 +32,7 @@ final class ClientMemoryVertexArray extends ora implements LegacyVertexArray {
 
     public final long getPointer(int param0) {
         int var2 = 54 % ((30 - param0) / 32);
-        return this.field_b.getAddress();
+        return this.buffer.getAddress();
     }
 
     public final int getBufferId(boolean param0) {

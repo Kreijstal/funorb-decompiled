@@ -28,7 +28,7 @@ final class RewardChoiceSlot {
         int var3 = 0;
         ToolkitSprite var4 = null;
         int var2 = this.phase.getRewardChoice((byte) -75).getReward(param0 ^ 28, this.field_f);
-        GraphicsToolkit var3_ref_ha = tga.field_a;
+        GraphicsToolkit var3_ref_ha = CurrentGraphicsToolkit.toolkit;
         int var4_int = this.field_g;
         int var5 = this.field_c;
         int var6 = this.field_j;

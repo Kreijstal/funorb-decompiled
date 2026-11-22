@@ -243,10 +243,10 @@ final class ArchiveIndex {
           return 0;
         }
         if (ApproachPlayerLocomotor.field_t == 0) {
-          if (!tk.field_b.ensureIndex(-100)) {
+          if (!MusicVolumeControl.field_b.ensureIndex(-100)) {
             return 20;
           }
-          if (!tk.field_b.isGroupAvailableByName("commonui", param0 ^ -122)) {
+          if (!MusicVolumeControl.field_b.isGroupAvailableByName("commonui", param0 ^ -122)) {
             return 40;
           }
           if (!OpenGlTexture2D.field_n.ensureIndex(param0 - 100)) {
@@ -273,10 +273,10 @@ final class ArchiveIndex {
               return 29;
             }
           }
-          if (!tk.field_b.ensureIndex(param0 - 130)) {
+          if (!MusicVolumeControl.field_b.ensureIndex(param0 - 130)) {
             return 43;
           }
-          if (!tk.field_b.isGroupAvailableByName("commonui", -128)) {
+          if (!MusicVolumeControl.field_b.isGroupAvailableByName("commonui", -128)) {
             return 57;
           }
           if (!OpenGlTexture2D.field_n.ensureIndex(param0 - 42)) {

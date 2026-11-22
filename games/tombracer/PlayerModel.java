@@ -890,7 +890,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           this.field_p = param0;
           this.field_i = param1;
           this.setCharacter(param1, 1);
-          var3 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
+          var3 = new AnimatedLight(CurrentGraphicsToolkit.toolkit, 0, 0, 0, 0, 0, 0, 0);
           this.field_l = new LightSource(var3);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

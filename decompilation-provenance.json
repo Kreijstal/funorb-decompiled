@@ -11092,17 +11092,17 @@
       "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
       "sources": {
         "files": 1090,
-        "sha256": "8765a7a18b35e1df894522a1fc2766d965d7f347088a6676b95b56fb715ee6c8"
+        "sha256": "a6a6898adcfb698ac10ab330b122c5c7210e767f3d9f23d6a85c3f4537353863"
       },
       "dictionary": {
         "path": "decompilation/tombracer-naming.json",
-        "sha256": "d108ce4fbf79d9cf78bd3d1837cd6797084a536ac9cf73240b9e813fae9ff2ec"
+        "sha256": "6a32a270e52fe1cce1fb2310a5c6b9ba51fd194c2ad5d4e414e0d55f21e22673"
       },
       "readingGuide": {
         "path": "games/tombracer/README.md",
-        "sha256": "c328f2edb265d38e11190dde78bebdf000cbf66a06ef113f55bba8072b141266"
+        "sha256": "1e4e4c69c7f0b96d9dcb9c997639f26f718187b45765f253b5a333453966f7df"
       },
-      "rulesSha256": "a12b71077e20a37bd37a8f1d649303a212b88cc2c41adffd2275318ef9611760",
+      "rulesSha256": "0d198e36c3b4c558c59e7f0072416e8d0bd602b325e6d31a4940f1341dae4963",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13347,7 +13347,7 @@
         },
         "publishedSources": {
           "files": 1090,
-          "sha256": "8765a7a18b35e1df894522a1fc2766d965d7f347088a6676b95b56fb715ee6c8"
+          "sha256": "a6a6898adcfb698ac10ab330b122c5c7210e767f3d9f23d6a85c3f4537353863"
         }
       },
       "torchallenge": {

@@ -668,11 +668,11 @@ abstract class AppletGameShell extends GameApplet {
           if (0 != ApproachPlayerLocomotor.field_t) {
             InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(MonochromeFillOperator.field_p, 1);
           }
-          tk.field_b = FacePointLocomotor.openArchive(true, RoomHeader.field_g, false, 1, (byte) -95);
+          MusicVolumeControl.field_b = FacePointLocomotor.openArchive(true, RoomHeader.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.openArchive(true, SoftwareRasterBlitter.field_c, false, 1, (byte) -109);
           WeaveOperator.field_p = FacePointLocomotor.openArchive(true, SoundEvent.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
-          PitComponent.field_G = tk.field_b;
+          PitComponent.field_G = MusicVolumeControl.field_b;
           ota.field_b = OpenGlTexture2D.field_n;
         }
         if (cga.field_f == 2) {
@@ -693,13 +693,13 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (cga.field_f == 3 &&
-          esa.areCommonUiArchivesReady(WeaveOperator.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
+          esa.areCommonUiArchivesReady(WeaveOperator.field_p, MusicVolumeControl.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.isArchiveComplete(WeaveOperator.field_p, (byte) -53)) {
           CheckboxPainter.releaseStatics(-1);
           SimulationObserver.composeAgreementText((byte) -27);
           TextureTransformMode.field_b = LoginMethod.field_c;
           GameAssetLoader.field_t = false;
-          SequencePlayer.a(tk.field_b, OpenGlTexture2D.field_n, 1, TextureFormat.field_a, WeaveOperator.field_p);
+          SequencePlayer.a(MusicVolumeControl.field_b, OpenGlTexture2D.field_n, 1, TextureFormat.field_a, WeaveOperator.field_p);
           if (ResizingDialog.field_I ||
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ResizingDialog.field_I);
@@ -715,7 +715,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;
-          tk.field_b = null;
+          MusicVolumeControl.field_b = null;
           WeaveOperator.field_p = null;
           StatefulWidgetPainter.checkAppletUsername((java.applet.Applet) (this), (byte) -128);
           C2SActionPacket.resetFrameTiming(-33);

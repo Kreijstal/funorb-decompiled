@@ -205,7 +205,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           }
         } else {
           if (TextWidgetPainter.a(80)) {
-            GameClock.field_b = qca.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
+            GameClock.field_b = OpenGlShaderProgram.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
             stackIn_8_0 = !(this.getTrackedScore((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
             SoftwareTransform3D.field_p = stackIn_8_0;
@@ -391,7 +391,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           uca.field_a = -1;
           ListTracksCommand.field_o = 617;
           Transform3D.field_b = 9170;
-          ti.field_b = 8768;
+          HiscorePlayerEntry.field_b = 8768;
           ChatTarget.field_a = 5180;
           CommonChooseReward.field_b = 1180282300L;
           MidiVoiceMixer.field_j = 17219L;
@@ -1217,7 +1217,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
               if (1 != var5) {
                 if (var5 != 2) {
                   if (var5 == 3) {
-                    ti.field_b = ti.field_b - Transform3D.field_b;
+                    HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b - Transform3D.field_b;
                     ChatTarget.field_a = ChatTarget.field_a + 1;
                   } else {
                     if (var5 != 4) {
@@ -1242,14 +1242,14 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
                   }
                 } else {
                   Transform3D.field_b = Transform3D.field_b + 1;
-                  ti.field_b = ti.field_b - ChatTarget.field_a;
+                  HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b - ChatTarget.field_a;
                 }
               } else {
                 ChatTarget.field_a = ChatTarget.field_a - 1;
-                ti.field_b = ti.field_b + Transform3D.field_b;
+                HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + Transform3D.field_b;
               }
             } else {
-              ti.field_b = ti.field_b + ChatTarget.field_a;
+              HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + ChatTarget.field_a;
               Transform3D.field_b = Transform3D.field_b - 1;
             }
           }
@@ -1298,7 +1298,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
         RuntimeException decompiledCaughtException = null;
         String var6Lifetime1;
         try {
-          var8 = tk.field_a[param2];
+          var8 = MusicVolumeControl.field_a[param2];
           var4 = var8;
           if (param1 != -9) {
             this.viewedPlayerIndex = -6;
@@ -1461,7 +1461,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           this.field_j > 0 &&
           !this.isScoreInvalidated((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, ChatTarget.field_a, Transform3D.field_b, new int[]{this.field_j});
+          MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, HiscorePlayerEntry.field_b, ListTracksCommand.field_o, ChatTarget.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
             QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
           }
@@ -1497,10 +1497,10 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
               } else {
                 var5 = var3 / 3;
                 ListTracksCommand.field_o = ListTracksCommand.field_o - (-var5 + var3);
-                ti.field_b = ti.field_b + var5;
+                HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + var5;
               }
             } else {
-              ti.field_b = ti.field_b + var3;
+              HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + var3;
             }
           }
         } else {
@@ -1537,18 +1537,18 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
                     }
                   } else {
                     ChatTarget.field_a = ChatTarget.field_a + 1;
-                    ti.field_b = ti.field_b - Transform3D.field_b;
+                    HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b - Transform3D.field_b;
                   }
                 } else {
-                  ti.field_b = ti.field_b - ChatTarget.field_a;
+                  HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b - ChatTarget.field_a;
                   Transform3D.field_b = Transform3D.field_b + 1;
                 }
               } else {
-                ti.field_b = ti.field_b + Transform3D.field_b;
+                HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + Transform3D.field_b;
                 ChatTarget.field_a = ChatTarget.field_a - 1;
               }
             } else {
-              ti.field_b = ti.field_b + ChatTarget.field_a;
+              HiscorePlayerEntry.field_b = HiscorePlayerEntry.field_b + ChatTarget.field_a;
               Transform3D.field_b = Transform3D.field_b - 1;
             }
           }

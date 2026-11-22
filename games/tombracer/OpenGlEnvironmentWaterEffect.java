@@ -4,7 +4,7 @@
 final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_e;
     private HardwareWaterTextures field_f;
-    private qca field_k;
+    private OpenGlShaderProgram field_k;
     private boolean field_h;
     static wm field_j;
     static ToolkitSprite field_d;
@@ -84,7 +84,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           var5 = (float)(1 << (param1 >> 3 & 7)) / 32.0f;
           var6 = 65535 & param2;
           var7 = (float)(3 & param2 >> 16) / 8.0f;
-          var8 = this.field_k.field_b;
+          var8 = this.field_k.handle;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(this.owner.field_Dc * var4 % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
@@ -149,7 +149,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           this.owner.bindTexture(true, var3);
           this.owner.setActiveTextureUnit(0, false);
           this.owner.bindTexture(true, this.field_f.field_f);
-          var5 = this.field_k.field_b;
+          var5 = this.field_k.handle;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "envMapSampler"), 1);

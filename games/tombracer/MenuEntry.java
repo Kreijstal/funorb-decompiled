@@ -238,7 +238,7 @@ final class MenuEntry {
               WidgetStyleLayer.field_k[4].drawScaled(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
               MembersUpsellMenu.drawCentredTextWithShadow(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
-            var26 = tga.field_a;
+            var26 = CurrentGraphicsToolkit.toolkit;
             var21_int = this.field_b - 8;
             var22_int = var9 - 8 - 16;
             var25 = ArchiveSource.field_a;
@@ -276,7 +276,7 @@ final class MenuEntry {
             WidgetStyleLayer.field_k[5].drawScaled(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
             MembersUpsellMenu.drawCentredTextWithShadow(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
-          var29 = tga.field_a;
+          var29 = CurrentGraphicsToolkit.toolkit;
           var21_intLifetime1 = this.field_b - 8;
           var22_intLifetime1 = var9 - 8 - 16;
           var28 = ArchiveSource.field_a;
@@ -320,7 +320,7 @@ final class MenuEntry {
         if (this.field_g != 5) {
           stackIn_78_0 = jg.getSoundVolume((byte) -103);
         } else {
-          stackIn_78_0 = tk.a(param2 ^ -22635);
+          stackIn_78_0 = MusicVolumeControl.getMusicVolume(param2 ^ -22635);
         }
         var20 = stackIn_78_0;
         if (!param3) {
@@ -330,7 +330,7 @@ final class MenuEntry {
           var24 != 0) {
           tka.field_p.draw(this.field_b - 34, -16 + var9);
         }
-        tga.field_a.setClip(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
+        CurrentGraphicsToolkit.toolkit.setClip(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
         if (!param3) {
           Projectile.field_n.draw(this.field_b - 34, -16 + var9, 0, -4144960, 1);
         }
@@ -338,7 +338,7 @@ final class MenuEntry {
           var24 != 0) {
           Projectile.field_n.draw(-34 + this.field_b, -16 + var9);
         }
-        tga.field_a.resetClip();
+        CurrentGraphicsToolkit.toolkit.resetClip();
         if (this.field_g != 6) {
           stackIn_89_0 = haa.field_z;
         } else {

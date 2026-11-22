@@ -74,10 +74,10 @@ final class MovementHintPanel implements MessagePanel {
     }
 
     public final void draw(int param0, int param1, int param2) {
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0, 55, 40, 40, 4, param2 + this.getHeight(false) / 2 - 20);
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, -40 + (param0 + this.getWidth(-8660)), 101, 40, 40, 4, this.getHeight(false) / 2 + (param2 - 20));
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 - (-(this.getWidth(-8660) / 2) + 20), 127, 40, 40, 4, param2);
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 + this.getWidth(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.getHeight(false)));
+        LegacyOpenGlSpriteTexture.a(1073807617, CurrentGraphicsToolkit.toolkit, param0, 55, 40, 40, 4, param2 + this.getHeight(false) / 2 - 20);
+        LegacyOpenGlSpriteTexture.a(1073807617, CurrentGraphicsToolkit.toolkit, -40 + (param0 + this.getWidth(-8660)), 101, 40, 40, 4, this.getHeight(false) / 2 + (param2 - 20));
+        LegacyOpenGlSpriteTexture.a(1073807617, CurrentGraphicsToolkit.toolkit, param0 - (-(this.getWidth(-8660) / 2) + 20), 127, 40, 40, 4, param2);
+        LegacyOpenGlSpriteTexture.a(1073807617, CurrentGraphicsToolkit.toolkit, param0 + this.getWidth(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.getHeight(false)));
         if (param1 != 20726) {
           return;
         }
@@ -92,19 +92,19 @@ final class MovementHintPanel implements MessagePanel {
           return;
         }
         if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
-          RasterBuffer.a(param2, param1 - 20724, tga.field_a, 4, -20 + (param0 + this.getWidth(-8660) / 2), 40, 1080057857, 2, 40);
-          RasterBuffer.a(param2, 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2, param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, -20 + (param0 + this.getWidth(-8660) / 2), 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2, 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
           if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-            RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
-            RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+            RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
+            RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
           }
           if (VerticalScrollbar.field_tb[mf.field_a]) {
-            RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
-            RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, CurrentGraphicsToolkit.toolkit, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           }
           if (VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
-            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
-            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, CurrentGraphicsToolkit.toolkit, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
           }
           if (!this.field_c) {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
@@ -116,15 +116,15 @@ final class MovementHintPanel implements MessagePanel {
           return;
         }
         if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-          RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
-          RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+          RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
         }
         if (VerticalScrollbar.field_tb[mf.field_a]) {
-          RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
-          RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
+          RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+          RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, CurrentGraphicsToolkit.toolkit, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           if (VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
-            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
-            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, CurrentGraphicsToolkit.toolkit, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
             if (!this.field_c) {
               SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
               SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
@@ -153,8 +153,8 @@ final class MovementHintPanel implements MessagePanel {
           }
           return;
         }
-        RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
-        RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+        RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, CurrentGraphicsToolkit.toolkit, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+        RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
         if (!this.field_c) {
           SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
           SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);

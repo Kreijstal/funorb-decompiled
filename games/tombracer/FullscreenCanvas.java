@@ -105,7 +105,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           if (param0 == null) {
             return;
           }
-          var11 = tga.field_a.getTransform();
+          var11 = CurrentGraphicsToolkit.toolkit.getTransform();
           var11.setIdentity();
           if (param2 != 0) {
             var11.rotateX(param2 << 3);

@@ -151,7 +151,7 @@ final class TooltipRenderer {
     }
 
     final void setClip(byte param0, int param1, int param2, int param3, int param4) {
-        tga.intersectClip(-21953, param2, param4, param3, param1);
+        CurrentGraphicsToolkit.intersectClip(-21953, param2, param4, param3, param1);
         if (param0 <= 25) {
           String var7 = (String) null;
           this.drawWrappedTooltip(97, (String) null, -120, -122);

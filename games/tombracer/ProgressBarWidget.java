@@ -117,7 +117,7 @@ final class ProgressBarWidget extends UiWidget {
         int var6 = param1 + this.field_n;
         this.drawRoundedStripes(var6, this.field_w[param2], var5, 93);
         if (this.field_B < 65536) {
-          tga.intersectClip(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
+          CurrentGraphicsToolkit.intersectClip(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
           this.drawRoundedStripes(var6, this.field_w[1], var5, 115);
           CourseMapWalker.popRasterState(param2 + 1);
         }
@@ -193,7 +193,7 @@ final class ProgressBarWidget extends UiWidget {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var5_int = param2 + this.field_m;
-          tga.intersectClip(-21953, this.field_A.field_m + param2, var5_int - this.field_A.field_m, param0, this.field_p + param0);
+          CurrentGraphicsToolkit.intersectClip(-21953, this.field_A.field_m + param2, var5_int - this.field_A.field_m, param0, this.field_p + param0);
           if (param3 <= 86) {
             this.setColors(true, -45, -128);
           }

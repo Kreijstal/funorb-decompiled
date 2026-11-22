@@ -237,7 +237,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           }
           if (null != WaveformOperator.field_n) {
             if (bc.field_b.field_y != 0) {
-              gk.a(param3, (byte) 28);
+              ReturnToLobbyPacketWriter.sendReturnToLobby(param3, (byte) 28);
             }
             if (hw.field_a.field_y != 0) {
               if (PlayerViewport.field_o) {

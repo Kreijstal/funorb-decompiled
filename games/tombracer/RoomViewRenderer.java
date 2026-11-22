@@ -90,13 +90,13 @@ final class RoomViewRenderer {
           var17 = (var12 + var11) / 2;
           var18 = var17 * 2048 / 512;
           var16_ref.setViewportScale(var18, (byte) -88);
-          tga.field_a.clearDepthBuffer();
+          CurrentGraphicsToolkit.toolkit.clearDepthBuffer();
           if (TextureCombineOperation.field_a) {
-            tga.field_a.setProjectionParameters(var13, var14, var17, var17);
+            CurrentGraphicsToolkit.toolkit.setProjectionParameters(var13, var14, var17, var17);
           } else {
-            tga.field_a.setProjectionParameters(var13, var14, 10 * var17 / 8, var17 * 10 / 8);
+            CurrentGraphicsToolkit.toolkit.setProjectionParameters(var13, var14, 10 * var17 / 8, var17 * 10 / 8);
           }
-          var19 = tga.field_a.createTransform();
+          var19 = CurrentGraphicsToolkit.toolkit.createTransform();
           var20 = 0;
           if (this.field_d != -1) {
             var20 = this.field_d;
@@ -171,7 +171,7 @@ final class RoomViewRenderer {
           var16_ref.a(false, var24 >> 2, var23 >> 2, var22 >> 2);
           var30 = 0;
           var19.setCamera(var22, -var24, -var23, -var25, -var30, 0);
-          tga.field_a.setTransform(var19);
+          CurrentGraphicsToolkit.toolkit.setTransform(var19);
           MovingPlatformComponent.field_N = param3;
           RenderScene.field_e = param1;
           ImageProducerCanvasImageBuffer.field_o.pushIntersectClip(param2, param3, (byte) -12, param4, param1);

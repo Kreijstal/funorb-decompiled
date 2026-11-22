@@ -1107,7 +1107,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -116, "connectionlost_withreason");
                 if (var2 != null) {
-                  nka.field_a = jaa.decodeText((byte) 103, var2);
+                  ConnectionLostText.text = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -36, "passwordverificationrequired");
                 if (null != var2) {
@@ -1535,7 +1535,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  ju.field_a = jaa.decodeText((byte) 121, var2);
+                  EmailConfirmationHintText.text = jaa.decodeText((byte) 121, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "create_age_tooltip");
                 if (null != var2) {

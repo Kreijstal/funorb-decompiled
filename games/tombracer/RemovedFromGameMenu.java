@@ -7,7 +7,7 @@ final class RemovedFromGameMenu extends MenuScreen {
     static String field_q;
 
     final static void resetDepthRange(byte param0) {
-        tga.field_a.setDepthRange(8, 16384);
+        CurrentGraphicsToolkit.toolkit.setDepthRange(8, 16384);
         if (param0 != -6) {
           field_r = (String) null;
         }

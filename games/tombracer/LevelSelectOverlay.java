@@ -234,7 +234,7 @@ final class LevelSelectOverlay implements ShellListener {
                 break;
               }
             }
-            var3 = tga.field_a;
+            var3 = CurrentGraphicsToolkit.toolkit;
             var3.clear(0);
             stackIn_18_0 = 22;
             stackIn_18_1 = ComponentTargetList.field_e;

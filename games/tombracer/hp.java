@@ -32,9 +32,9 @@ final class hp {
           return;
         }
         try {
-          tga.field_a.clearDepthBuffer();
-          tga.field_a.setProjectionParameters(param6, param5, 32, 32);
-          var7 = tga.field_a.getTransform();
+          CurrentGraphicsToolkit.toolkit.clearDepthBuffer();
+          CurrentGraphicsToolkit.toolkit.setProjectionParameters(param6, param5, 32, 32);
+          var7 = CurrentGraphicsToolkit.toolkit.getTransform();
           var7.setIdentity();
           var7.rotateY(param1 << 3);
           var7.rotateX(-param2 << 3);

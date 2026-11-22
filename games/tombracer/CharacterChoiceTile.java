@@ -134,17 +134,17 @@ final class CharacterChoiceTile extends IntrusiveNode {
         int var3 = 0;
         String var4 = null;
         int var5 = -38 / ((32 - param0) / 33);
-        GraphicsToolkit var8 = tga.field_a;
+        GraphicsToolkit var8 = CurrentGraphicsToolkit.toolkit;
         int var4_int = this.field_k;
         int var6 = this.field_g;
         ToolkitSprite[] var7 = ArchiveSource.field_a;
         String var4Lifetime1;
         int var3Lifetime1;
         TextInputWidget.paintNineSliceFrame(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
-        tga.field_a.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
+        CurrentGraphicsToolkit.toolkit.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
         if (this.isEmpty(-64)) {
           nc.field_e.draw(this.field_k, this.field_g);
-          tga.field_a.resetClip();
+          CurrentGraphicsToolkit.toolkit.resetClip();
           var3 = 2431750;
           if (param1) {
             var3 = 10309393;
@@ -155,7 +155,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           return;
         }
         fa.field_a[this.field_f].draw(this.field_k, this.field_g);
-        tga.field_a.resetClip();
+        CurrentGraphicsToolkit.toolkit.resetClip();
         var3Lifetime1 = 2431750;
         if (param1) {
           var3Lifetime1 = 10309393;

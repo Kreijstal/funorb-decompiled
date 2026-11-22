@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qca {
-    private HardwareOpenGlToolkit field_a;
-    long field_b;
+final class OpenGlShaderProgram {
+    private HardwareOpenGlToolkit toolkit;
+    long handle;
 
     protected final void finalize() throws Throwable {
-        this.field_a.queueShaderObjectDeletion(this.field_b, -6115);
+        this.toolkit.queueShaderObjectDeletion(this.handle, -6115);
         super.finalize();
     }
 
@@ -49,10 +49,10 @@ final class qca {
         }
     }
 
-    qca(HardwareOpenGlToolkit param0, long param1, pr[] param2) {
+    OpenGlShaderProgram(HardwareOpenGlToolkit param0, long param1, pr[] param2) {
         try {
-          this.field_a = param0;
-          this.field_b = param1;
+          this.toolkit = param0;
+          this.handle = param1;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

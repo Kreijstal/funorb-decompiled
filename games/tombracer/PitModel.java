@@ -816,7 +816,7 @@ final class PitModel extends TrapModel {
             this.buildEdgeGrid(9859);
           }
           if (this.style == 1) {
-            var6 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
+            var6 = new AnimatedLight(CurrentGraphicsToolkit.toolkit, 0, 0, 0, 0, 16720418, 200, 8);
             this.field_u = new LightSource(var6);
             this.field_u.setPosition(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
             var4 = param1.getListener((byte) 59);

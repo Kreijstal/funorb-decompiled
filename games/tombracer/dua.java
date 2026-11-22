@@ -106,7 +106,7 @@ final class dua extends MatchOverlay {
           }
           var10 = -stackIn_52_0 + var8 - var4 * (var7 >> 1);
           var11 = var9;
-          tga.field_a.setClip(10, -6 + var10, var3 + 16 + 6, var10 + var7 * var4 + 4);
+          CurrentGraphicsToolkit.toolkit.setClip(10, -6 + var10, var3 + 16 + 6, var10 + var7 * var4 + 4);
           for (var12 = var6; var7 > var12; var12++) {
             var24 = var23.getRoomAt(true, var12);
             if (var24 != null &&
@@ -142,7 +142,7 @@ final class dua extends MatchOverlay {
             }
             var19++;
           }
-          tga.field_a.resetClip();
+          CurrentGraphicsToolkit.toolkit.resetClip();
           return;
         }
         field_j = (String) null;
@@ -171,7 +171,7 @@ final class dua extends MatchOverlay {
         }
         var10Lifetime1 = -stackIn_12_0 + var8Lifetime1 - var4Lifetime1 * (var7Lifetime1 >> 1);
         var11Lifetime1 = var9Lifetime1;
-        tga.field_a.setClip(10, -6 + var10Lifetime1, var3Lifetime1 + 16 + 6, var10Lifetime1 + var7Lifetime1 * var4Lifetime1 + 4);
+        CurrentGraphicsToolkit.toolkit.setClip(10, -6 + var10Lifetime1, var3Lifetime1 + 16 + 6, var10Lifetime1 + var7Lifetime1 * var4Lifetime1 + 4);
         for (var12Lifetime1 = var6Lifetime1; var7Lifetime1 > var12Lifetime1; var12Lifetime1++) {
           var21 = var20.getRoomAt(true, var12Lifetime1);
           if (var21 != null &&
@@ -207,7 +207,7 @@ final class dua extends MatchOverlay {
           }
           var19Lifetime1++;
         }
-        tga.field_a.resetClip();
+        CurrentGraphicsToolkit.toolkit.resetClip();
         return;
     }
 

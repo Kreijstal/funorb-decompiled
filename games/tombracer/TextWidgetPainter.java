@@ -162,7 +162,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          tga.intersectClip(param5 - 34542, param4 + param2.field_i, param2.field_i + (param4 + param2.field_m), param6 + param2.field_n, param6 + param2.field_n + param2.field_p);
+          CurrentGraphicsToolkit.intersectClip(param5 - 34542, param4 + param2.field_i, param2.field_i + (param4 + param2.field_m), param6 + param2.field_n, param6 + param2.field_n + param2.field_p);
           if (param5 != 12589) {
             return;
           }
@@ -289,7 +289,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.findLineIndex(var8, 0);
             var11 = var18.findLineIndex(var9, 0);
-            tga.intersectClip(-21953, param3 + param1.field_i, param3 - (-param1.field_i - param1.field_m), param2 + param1.field_n, param1.field_p + (param2 + param1.field_n));
+            CurrentGraphicsToolkit.intersectClip(-21953, param3 + param1.field_i, param3 - (-param1.field_i - param1.field_m), param2 + param1.field_n, param1.field_p + (param2 + param1.field_n));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
               if (var10 != var12) {
@@ -613,7 +613,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var10 = this.textX(param4, var9, param3, param2 ^ 22503);
             var11 = this.textTop(param1, param4, (byte) -110) + Math.max(0, var8.field_d);
             var12 = this.textTop(param1, param4, (byte) -44) + Math.min(this.contentWidth(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
-            tga.intersectClip(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
+            CurrentGraphicsToolkit.intersectClip(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
             afa.field_c.drawLine(var11, this.field_k, 8947848, var10, var10, var12);
             CourseMapWalker.popRasterState(1);
           }

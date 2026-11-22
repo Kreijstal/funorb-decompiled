@@ -60,7 +60,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
                 return (jaclib.memory.Buffer) ((Object) stackIn_12_0);
               }
             }
-            if (param0.b()) {
+            if (param0.isMapped()) {
               return null;
             }
             if (param0.map(this.field_k, this.field_g, 35001)) {

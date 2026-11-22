@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ju {
-    static String field_a;
+final class EmailConfirmationHintText {
+    static String text;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
-        field_a = null;
+        text = null;
         if (param0 <= 63) {
-          field_a = (String) null;
+          text = (String) null;
         }
     }
 
     static {
         field_z = "ju.A(";
-        field_a = "Type your email address again to make sure it's correct";
+        text = "Type your email address again to make sure it's correct";
     }
 }

@@ -112,7 +112,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         int var4_intLifetime1;
         var10 = field_G ? 1 : 0;
         try {
-          if (null == tga.field_a) {
+          if (null == CurrentGraphicsToolkit.toolkit) {
             return;
           }
           this.beginFrame(91);
@@ -134,7 +134,7 @@ public final class TombRacer extends TombRacerShell implements ls {
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   wm.field_a.draw((byte) -28, false);
-                  tga.field_a.blitPixels(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
+                  CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
                 }
               }
             }
@@ -155,7 +155,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
               SpawnerBehaviour.a(stackIn_33_0, 0);
-              SoftwareRasterBlitter.blitSoftwareRasterRegion(tga.field_a, param2 ^ 17);
+              SoftwareRasterBlitter.blitSoftwareRasterRegion(CurrentGraphicsToolkit.toolkit, param2 ^ 17);
             }
           }
           if (this.field_D != null) {
@@ -171,8 +171,8 @@ public final class TombRacer extends TombRacerShell implements ls {
           }
           if (PlayPhase.beginReconnectGracePeriod(param2 ^ 110) &&
             !SnakePitTile.hasVisibleDialog(false)) {
-            tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, param2 ^ -22956, SwitchLinkList.getCanvasHeight(0));
-            var5_ref_ssa = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
+            CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, param2 ^ -22956, SwitchLinkList.getCanvasHeight(0));
+            var5_ref_ssa = IntrusiveDequeCursor.getClipStack((byte) 65, CurrentGraphicsToolkit.toolkit);
             var5_ref_ssa.pushIntersectClip(LegacyOpenGlWaterTextures.getCanvasWidth(false) + mp.maxDialogWidth((byte) -112) >> 1, SwitchLinkList.getCanvasHeight(0) - MatchPhase.maxDialogHeight(96) >> 1, (byte) -12, SwitchLinkList.getCanvasHeight(0) + MatchPhase.maxDialogHeight(96) >> 1, LegacyOpenGlWaterTextures.getCanvasWidth(false) - mp.maxDialogWidth((byte) -125) >> 1);
             if (ColourRowCacheEntry.field_f == null) {
               stackIn_47_0 = VortexBehaviour.field_n;
@@ -180,21 +180,21 @@ public final class TombRacer extends TombRacerShell implements ls {
               stackIn_47_0 = true;
             }
             S2CNewRoomPacket.a(stackIn_47_0, 106);
-            tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+            CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             var5_ref_ssa.popClip(param2 + 84);
           }
           if (var4_intLifetime1 != 0) {
             if (!SnakePitTile.hasVisibleDialog(false)) {
-              tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+              CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
-              tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
+              CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
               var5 = ComponentTargetList.getTopDialogId(false);
               var6 = PlantComponent.A(-1);
               var7 = PillarComponent.getTopDialogWidth(param2 - 7128);
               var8 = ConsoleCloseParenthesisKind.getTopDialogHeight((byte) 124);
-              var9 = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
+              var9 = IntrusiveDequeCursor.getClipStack((byte) 65, CurrentGraphicsToolkit.toolkit);
               var9.pushIntersectClip(var5 + var7, var6, (byte) -12, var6 + var8, var5);
-              tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+              CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
               var9.popClip(99);
             }
             this.finishFrame(-28581);
@@ -229,12 +229,12 @@ public final class TombRacer extends TombRacerShell implements ls {
         fa.releaseStatics(-23172);
         BitPacketBuffer.releaseStatics((byte) 0);
         mua.releaseStatics(0);
-        bpa.releaseStatics((byte) -57);
+        BottomlessPitHintText.releaseStatics((byte) -57);
         rma.releaseStatics(13902);
         hp.releaseStatics(32);
         ToolkitSelector.releaseStatics(param0 - 19099);
         nla.releaseStatics((byte) 119);
-        tk.releaseStatics(false);
+        MusicVolumeControl.releaseStatics(false);
         SoftwareRasterBlitter.releaseStatics(false);
         dga.releaseStatics(-29262);
         ke.releaseStatics(3712);
@@ -282,7 +282,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         FunOrbConsole.releaseConsoleStatics(39);
         ej.releaseStatics(-1);
         uaa.releaseStatics(5193);
-        iaa.releaseStatics(-124);
+        CompletedStatusText.releaseStatics(-124);
         nb.releaseStatics((byte) -95);
         eu.releaseStatics(114);
         vn.releaseStatics((byte) 0);
@@ -481,7 +481,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         cm.releaseStatics(true);
         qpa.releaseStatics(false);
         C2SSubmitSettingsPacket.releaseStatics((byte) -121);
-        ju.releaseStatics((byte) 120);
+        EmailConfirmationHintText.releaseStatics((byte) 120);
         gha.releaseStatics(param0 + 3542);
         cea.releaseStatics(-118);
         QuickChatMenu.releaseStatics(58);
@@ -667,7 +667,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         rga.releaseStatics((byte) 99);
         LruNodeCache.releaseStatics((byte) -100);
         ProceduralTexture.releaseStatics(-98);
-        nka.releaseStatics((byte) -75);
+        ConnectionLostText.releaseStatics((byte) -75);
         CheckboxWidget.releaseStatics(-23884);
         rr.releaseStatics(param0 + 3666);
         kd.releaseStatics((byte) -121);
@@ -773,7 +773,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         DivisionMazeGenerator.releaseStatics(true);
         SpriteSampleOperator.releaseStatics(16711680);
         TextureSampleOperator.releaseStatics(-26382);
-        tga.releaseStatics(61);
+        CurrentGraphicsToolkit.releaseStatics(61);
         MonochromeFillOperator.releaseStatics((byte) -119);
         ColourFillOperator.releaseStatics(7438);
         BrickOperator.releaseStatics(-21771);
@@ -995,20 +995,20 @@ public final class TombRacer extends TombRacerShell implements ls {
         int var2 = LegacyOpenGlWaterTextures.getCanvasWidth(false);
         int var3 = SwitchLinkList.getCanvasHeight(0);
         if (DefaultTileRenderable.e(-22766)) {
-          tga.field_a.enableBloom();
-          tga.field_a.setBloomParameters(0.8999999761581421f, 1.0f, 1.0f);
-          if (tga.field_a.isBloomEnabled()) {
-            tga.field_a.setPostProcessBounds(0, 0, var2, var3);
+          CurrentGraphicsToolkit.toolkit.enableBloom();
+          CurrentGraphicsToolkit.toolkit.setBloomParameters(0.8999999761581421f, 1.0f, 1.0f);
+          if (CurrentGraphicsToolkit.toolkit.isBloomEnabled()) {
+            CurrentGraphicsToolkit.toolkit.setPostProcessBounds(0, 0, var2, var3);
           }
         }
         int var4 = 106 / ((param0 + 73) / 46);
-        tga.field_a.clear(0);
-        tga.field_a.clearDepthBuffer();
-        tga.field_a.setProjectionParameters(var2 / 2, var3 / 2, 512, 512);
-        tga.field_a.setDepthRange(8, 16384);
-        Transform3D var5 = tga.field_a.createTransform();
+        CurrentGraphicsToolkit.toolkit.clear(0);
+        CurrentGraphicsToolkit.toolkit.clearDepthBuffer();
+        CurrentGraphicsToolkit.toolkit.setProjectionParameters(var2 / 2, var3 / 2, 512, 512);
+        CurrentGraphicsToolkit.toolkit.setDepthRange(8, 16384);
+        Transform3D var5 = CurrentGraphicsToolkit.toolkit.createTransform();
         var5.setCamera(0, 0, -1600, 0, 0, 0);
-        tga.field_a.setTransform(var5);
+        CurrentGraphicsToolkit.toolkit.setTransform(var5);
     }
 
     final boolean isConnectionBusy(byte param0) {
@@ -1419,19 +1419,19 @@ public final class TombRacer extends TombRacerShell implements ls {
           DeviceLostException qva = null;
           Throwable decompiledCaughtException = null;
           if (DefaultTileRenderable.e(-22766) &&
-            tga.field_a.isBloomEnabled()) {
-            tga.field_a.applyPostProcessing();
+            CurrentGraphicsToolkit.toolkit.isBloomEnabled()) {
+            CurrentGraphicsToolkit.toolkit.applyPostProcessing();
           }
-          tga.field_a.setLights(0, (SceneLight[]) null);
+          CurrentGraphicsToolkit.toolkit.setLights(0, (SceneLight[]) null);
           if (HelloCommand.field_o != null &&
             HelloCommand.field_o.isModal(param0 + 28579)) {
-            tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
+            CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
           }
           if (param0 != -28581) {
             return;
           }
           try {
-            tga.field_a.presentFrame(param0 + 28581);
+            CurrentGraphicsToolkit.toolkit.presentFrame(param0 + 28581);
           } catch (DeviceLostException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             qva = (DeviceLostException) (Object) decompiledCaughtException;

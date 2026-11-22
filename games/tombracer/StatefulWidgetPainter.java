@@ -182,7 +182,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             stackIn_3_0 = (UiWidget) (param0);
           }
           var10 = (FocusableWidget) (stackIn_3_0);
-          tga.intersectClip(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
+          CurrentGraphicsToolkit.intersectClip(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
           if (var10 != null) {
             param4 = param4 & var10.field_y;
           }

@@ -226,7 +226,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         var3 = 26;
         var4 = -180 + LegacyOpenGlWaterTextures.getCanvasWidth(false) - 40;
         var5 = 9 + (80 + param0);
-        var6_ref_ha = tga.field_a;
+        var6_ref_ha = CurrentGraphicsToolkit.toolkit;
         if (param1 != -22) {
           this.field_w = (int[]) null;
         }

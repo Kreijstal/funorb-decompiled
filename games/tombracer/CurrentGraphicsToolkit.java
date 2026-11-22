@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tga {
-    static GraphicsToolkit field_a;
+final class CurrentGraphicsToolkit {
+    static GraphicsToolkit toolkit;
 
     final static void intersectClip(int param0, int param1, int param2, int param3, int param4) {
         gb.pushRasterState(-29711);
@@ -13,9 +13,9 @@ final class tga {
     }
 
     public static void releaseStatics(int param0) {
-        field_a = null;
+        toolkit = null;
         if (param0 < 40) {
-          field_a = (GraphicsToolkit) null;
+          toolkit = (GraphicsToolkit) null;
         }
     }
 

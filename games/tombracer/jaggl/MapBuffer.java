@@ -33,7 +33,7 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
         return true;
     }
 
-    public final boolean b() {
+    public final boolean isMapped() {
         return 0 != this.c;
     }
 

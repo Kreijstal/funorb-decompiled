@@ -240,12 +240,12 @@ final class CrossedSineBandsOperator extends TextureOperator {
             var5 = var28.readUnsignedByte(255);
             if (var5 != 0) {
               var6 = var4.field_j;
-              StripesOperator.field_s[0].field_a = MenuEntry.field_k;
+              StripesOperator.field_s[0].name = MenuEntry.field_k;
               StripesOperator.field_s[0].field_c = null;
               StripesOperator.field_s[0].field_d = false;
               var7 = var4.field_i;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                StripesOperator.field_s[var8_int].field_a = var28.readString((byte) -76);
+                StripesOperator.field_s[var8_int].name = var28.readString((byte) -76);
                 StripesOperator.field_s[var8_int].field_d = false;
                 if (var28.readUnsignedByte(255) == 1) {
                   StripesOperator.field_s[var8_int].field_c = var28.readString((byte) -76);
@@ -273,7 +273,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte(255);
-                  var21 = StripesOperator.field_s[var20].field_a;
+                  var21 = StripesOperator.field_s[var20].name;
                   var22 = var28.readLong(290646880);
                   var24 = var28.position;
                   if (var19 < var6) {

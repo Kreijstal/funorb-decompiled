@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class HeapIndexArray extends ora implements IndexArray {
+final class HeapIndexArray extends ClientMemoryBuffer implements IndexArray {
     private int field_c;
     static BinaryBitmapFont field_d;
 
     public final long getPointer(int param0) {
         if (param0 != 19135) {
           this.field_c = 80;
-          return this.field_b.getAddress();
+          return this.buffer.getAddress();
         }
-        return this.field_b.getAddress();
+        return this.buffer.getAddress();
     }
 
     public final void setIndices(int param0, int param1, byte[] param2, int param3) {

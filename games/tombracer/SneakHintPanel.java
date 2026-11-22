@@ -32,7 +32,7 @@ final class SneakHintPanel implements MessagePanel {
         } else {
           stackIn_8_0 = (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) ? 1627324416 : 805371648;
         }
-        LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
+        LegacyOpenGlSpriteTexture.a(stackIn_8_0, CurrentGraphicsToolkit.toolkit, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, TermsLinksPanel.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
@@ -113,9 +113,9 @@ final class SneakHintPanel implements MessagePanel {
           SneakHintPanel.releaseStatics((byte) -91);
         }
         if (TextureCombineOperation.field_a) {
-          tga.field_a.drawWorldLine(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
+          CurrentGraphicsToolkit.toolkit.drawWorldLine(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
         } else {
-          tga.field_a.drawWorldLineAtDepth(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.withAlpha(param1, (byte) -107, param3), 1);
+          CurrentGraphicsToolkit.toolkit.drawWorldLineAtDepth(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.withAlpha(param1, (byte) -107, param3), 1);
         }
     }
 

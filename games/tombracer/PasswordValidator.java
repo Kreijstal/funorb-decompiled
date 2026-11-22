@@ -10,20 +10,20 @@ final class PasswordValidator extends TextFieldValidator {
     static String[] field_k;
 
     final static void releaseGraphicsToolkit(byte param0) {
-        if (tga.field_a == null) {
+        if (CurrentGraphicsToolkit.toolkit == null) {
           return;
         }
-        tga.field_a.close(true);
+        CurrentGraphicsToolkit.toolkit.close(true);
         if (param0 < 91) {
           return;
         }
-        tga.field_a = null;
+        CurrentGraphicsToolkit.toolkit = null;
     }
 
-    final static qca linkShaderProgram(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
+    final static OpenGlShaderProgram linkShaderProgram(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
-        qca stackIn_27_0 = null;
+        OpenGlShaderProgram stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -75,10 +75,10 @@ final class PasswordValidator extends TextFieldValidator {
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
               stackIn_25_0 = null;
-              return (qca) (stackIn_25_0);
+              return (OpenGlShaderProgram) (stackIn_25_0);
             }
           }
-          stackIn_27_0 = new qca(param1, var3_long, param0);
+          stackIn_27_0 = new OpenGlShaderProgram(param1, var3_long, param0);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

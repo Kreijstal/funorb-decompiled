@@ -66,9 +66,9 @@ final class RoomLighting implements RenderListener {
           }
           var10Lifetime1 = 0;
           var11 = 16384;
-          tga.field_a.setFogParameters(var10Lifetime1, var11, 0);
-          tga.field_a.setAmbientLightIntensity(var5);
-          tga.field_a.setDirectionalLighting(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
+          CurrentGraphicsToolkit.toolkit.setFogParameters(var10Lifetime1, var11, 0);
+          CurrentGraphicsToolkit.toolkit.setAmbientLightIntensity(var5);
+          CurrentGraphicsToolkit.toolkit.setDirectionalLighting(var6, var3_float, var4, (float)var7, (float)var8, (float)var9);
           if (LightSource.a((byte) -7)) {
             var12 = (LightSource) (this.lightSources.first(-80));
             while (var12 != null) {
@@ -79,7 +79,7 @@ final class RoomLighting implements RenderListener {
               }
               var12 = (LightSource) (this.lightSources.next(116));
             }
-            tga.field_a.setLights(0, (SceneLight[]) null);
+            CurrentGraphicsToolkit.toolkit.setLights(0, (SceneLight[]) null);
           }
           if (param1 != -15530) {
             var14 = (Camera) null;
@@ -108,7 +108,7 @@ final class RoomLighting implements RenderListener {
         RuntimeException var3 = null;
         try {
           if (LightSource.a((byte) -7)) {
-            tga.field_a.setLights(0, (SceneLight[]) null);
+            CurrentGraphicsToolkit.toolkit.setLights(0, (SceneLight[]) null);
           }
           if (param0 != -16188) {
             this.lightSources = (IntrusiveDeque) null;
@@ -195,7 +195,7 @@ final class RoomLighting implements RenderListener {
           if (LightSource.a((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
-            var6 = MidiVoiceMixer.min(this.activeLights.length, tga.field_a.getMaxLights(), -97);
+            var6 = MidiVoiceMixer.min(this.activeLights.length, CurrentGraphicsToolkit.toolkit.getMaxLights(), -97);
             var7 = null;
             if (param1 instanceof SelectivelyLitRenderable) {
               var7 = (SelectivelyLitRenderable) (param1);
@@ -205,7 +205,7 @@ final class RoomLighting implements RenderListener {
             if (var4_int == 0) {
               if (var7 != null &&
                 ((SelectivelyLitRenderable) (var7)).isUnlit(true)) {
-                tga.field_a.setLights(var5, this.activeLights);
+                CurrentGraphicsToolkit.toolkit.setLights(var5, this.activeLights);
                 return;
               }
               var11 = (LightSource) (this.lightSources.first(-80));
@@ -240,7 +240,7 @@ final class RoomLighting implements RenderListener {
                 var5++;
               }
             }
-            tga.field_a.setLights(var5, this.activeLights);
+            CurrentGraphicsToolkit.toolkit.setLights(var5, this.activeLights);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

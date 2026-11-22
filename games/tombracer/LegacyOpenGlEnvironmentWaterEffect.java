@@ -178,11 +178,11 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
-          tga.field_a.fillCircleAlpha(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
+          CurrentGraphicsToolkit.toolkit.fillCircleAlpha(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
           return;
         }
         field_g = (String) null;
-        tga.field_a.fillCircleAlpha(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
+        CurrentGraphicsToolkit.toolkit.fillCircleAlpha(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
     }
 
     final void disable(boolean param0) {
