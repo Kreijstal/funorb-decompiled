@@ -275,7 +275,7 @@ final class rb {
                           uf.field_p[var17].field_g = 0;
                           uf.field_p[var17].field_b = 250;
                         }
-                        if (!oe.field_b) {
+                        if (!MouseWheelInput.field_b) {
                           this.field_m[var9] = false;
                         }
                         for (var17Lifetime1 = var14Lifetime1 / 4 - 1; var14Lifetime1 / 4 + 1 >= var17Lifetime1; var17Lifetime1++) {
@@ -949,7 +949,7 @@ final class rb {
                   this.field_p[var10Lifetime1] = 64;
                   if (!this.field_m[-this.field_k + var10Lifetime1] &&
                     !je.i(var9Lifetime1, var8Lifetime1 - 1) &&
-                    !oe.field_b) {
+                    !MouseWheelInput.field_b) {
                     this.field_m[var10Lifetime1] = false;
                     this.field_m[var10Lifetime1 - this.field_k] = true;
                   } else {
@@ -1251,7 +1251,7 @@ final class rb {
                         }
                         break;
                       }
-                      if (!oe.field_b &&
+                      if (!MouseWheelInput.field_b &&
                         this.field_m[var13]) {
                         this.a(var12 >> 2, -4, var9Lifetime1 >> 2);
                         uf.field_p[jf.b((byte) 56)] = new gf(var12 >> 2, var9Lifetime1 >> 2, 16);

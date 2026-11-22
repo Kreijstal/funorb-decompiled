@@ -74,19 +74,19 @@ final class ed {
             sg.field_f = kl.a(252, ub.field_b, "benefits", "signup_text");
             sd.field_c = kl.a(252, ub.field_b, "benefits", "menu_text");
             df.field_b = kl.a(252, ub.field_b, "benefits", "button_frame");
-            jg.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
+            MouseWheelInput.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
             ql.field_k = (fa) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
             qj.field_H = (fa) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
             var27 = gb.field_a;
             var2 = gb.field_d;
             var3 = gb.field_k;
             gb.a(ab.field_c);
-            var11 = new dd(4 + jg.field_f.field_w, 4 + jg.field_f.field_t);
+            var11 = new dd(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
             var11.f();
-            jg.field_f.d(2, 2, rc.field_e);
+            MouseWheelInput.field_f.d(2, 2, rc.field_e);
             rg.a(0, var11, var11.field_w, var11.field_t, 1, -122, 2, 0);
-            jg.field_f = var11;
-            mi.field_o = jg.field_f.b();
+            MouseWheelInput.field_f = var11;
+            mi.field_o = MouseWheelInput.field_f.b();
             var12 = new dd(195, 221);
             var6 = var12.field_w / 2;
             var12.f();
@@ -281,23 +281,23 @@ final class ed {
             stackIn_62_3 = (ul.field_G.field_k == 1);
             k.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_62_3);
           }
-          if (jg.field_f != null) {
-            var1_int = 357 - jg.field_f.field_r / 2;
-            jg.field_f.d(-jg.field_f.field_x + 269, var1_int);
+          if (MouseWheelInput.field_f != null) {
+            var1_int = 357 - MouseWheelInput.field_f.field_r / 2;
+            MouseWheelInput.field_f.d(-MouseWheelInput.field_f.field_x + 269, var1_int);
             mi.field_o.d(586, var1_int);
             if (kc.field_b > var1_int &&
-              kc.field_b < jg.field_f.field_t + var1_int) {
+              kc.field_b < MouseWheelInput.field_f.field_t + var1_int) {
               var2Lifetime5 = (40 * jd.a(false, bf.field_b << 4) >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (269 - jg.field_f.field_w < ag.field_f &&
+                if (269 - MouseWheelInput.field_f.field_w < ag.field_f &&
                   ag.field_f < 269) {
-                  jg.field_f.a(269 - (jg.field_f.field_x + 1), var1_int - 1, var2Lifetime5);
-                  jg.field_f.a(1 + (-jg.field_f.field_x + 269), -1 + var1_int, var2Lifetime5);
-                  jg.field_f.a(-jg.field_f.field_x + 268, 1 + var1_int, var2Lifetime5);
-                  jg.field_f.a(1 + (-jg.field_f.field_x + 269), var1_int + 1, var2Lifetime5);
+                  MouseWheelInput.field_f.a(269 - (MouseWheelInput.field_f.field_x + 1), var1_int - 1, var2Lifetime5);
+                  MouseWheelInput.field_f.a(1 + (-MouseWheelInput.field_f.field_x + 269), -1 + var1_int, var2Lifetime5);
+                  MouseWheelInput.field_f.a(-MouseWheelInput.field_f.field_x + 268, 1 + var1_int, var2Lifetime5);
+                  MouseWheelInput.field_f.a(1 + (-MouseWheelInput.field_f.field_x + 269), var1_int + 1, var2Lifetime5);
                 } else {
                   if (ag.field_f > 586 &&
-                    ag.field_f < 586 + jg.field_f.field_w) {
+                    ag.field_f < 586 + MouseWheelInput.field_f.field_w) {
                     mi.field_o.a(585, var1_int - 1, var2Lifetime5);
                     mi.field_o.a(587, var1_int - 1, var2Lifetime5);
                     mi.field_o.a(585, 1 + var1_int, var2Lifetime5);

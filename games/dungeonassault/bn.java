@@ -11,7 +11,7 @@ final class bn {
     private int field_l;
     private int field_u;
     private int field_r;
-    static nl field_j;
+    static MouseWheelInput field_j;
     private int field_e;
     static String field_i;
     static String[] field_m;
@@ -127,7 +127,7 @@ final class bn {
         this.field_a = param0;
         this.field_x = param2;
         if (!param1) {
-          field_j = (nl) null;
+          field_j = (MouseWheelInput) null;
         }
     }
 

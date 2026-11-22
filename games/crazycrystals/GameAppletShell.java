@@ -150,7 +150,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.b(-42);
                 dk.field_o = oj.a(ap.field_r, 6641, (java.awt.Component) ((Object) jd.field_D), rh.field_f);
                 this.a((byte) -82);
-                jm.field_h = sn.a(27801);
+                MouseWheelInput.field_h = sn.a(27801);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != tc.field_j) {
@@ -162,7 +162,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    hf.field_a = jm.field_h.b(s.field_k, -1);
+                    hf.field_a = MouseWheelInput.field_h.b(s.field_k, -1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -546,7 +546,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               -bd.field_m + lo.a((byte) -23) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (jm.field_c > var2.width) {
+                if (MouseWheelInput.field_c > var2.width) {
                   return;
                 }
                 if (var2.height < wk.field_b) {
@@ -670,7 +670,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               rh.field_f = param5;
               wk.field_b = param5;
               ap.field_r = param6;
-              jm.field_c = param6;
+              MouseWheelInput.field_c = param6;
               pj.field_w = le.b((byte) -20);
               dupTemp$0 = new un(param1, param3, param2, true);
               te.field_a = dupTemp$0;

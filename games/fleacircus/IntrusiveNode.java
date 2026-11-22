@@ -88,7 +88,7 @@ class IntrusiveNode {
           if (ui.field_pb == null) {
             return;
           }
-          ui.field_pb.a((byte) 103, (java.awt.Component) ((Object) param1));
+          ui.field_pb.detach((byte) 103, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

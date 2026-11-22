@@ -201,7 +201,7 @@ final class ab {
           }
           dl.a((java.awt.Component) ((Object) param1), (byte) 73);
           if (null != pf.field_e) {
-            pf.field_e.a((java.awt.Component) ((Object) param1), 0);
+            pf.field_e.attach((java.awt.Component) ((Object) param1), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

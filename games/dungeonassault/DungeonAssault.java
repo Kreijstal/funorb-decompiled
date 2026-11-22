@@ -639,7 +639,7 @@ public final class DungeonAssault extends NetworkGameClient {
           GameAppletShell.a(false);
           tl.clearStaticReferences((byte) 50);
           MouseInput.clearStaticReferences(16);
-          nl.a((byte) -109);
+          MouseWheelInput.a((byte) -109);
           gf.c();
           ResourceArchive.clearStaticReferences(param0);
           se.clearStaticReferences();

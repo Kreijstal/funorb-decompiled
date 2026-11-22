@@ -64,7 +64,7 @@ final class wd {
             return stackIn_4_0;
           }
           for (var5 = 0; param1.length() > var5; var5++) {
-            if (!ee.a(37, param1.charAt(var5))) {
+            if (!MouseWheelInput.a(37, param1.charAt(var5))) {
               stackIn_11_0 = wh.field_c;
               return stackIn_11_0;
             }

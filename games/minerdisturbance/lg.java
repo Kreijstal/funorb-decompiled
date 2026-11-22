@@ -1381,7 +1381,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "danger");
                 if (null != var2) {
-                  oe.field_f = bh.a(var2, -128);
+                  MouseWheelInput.field_f = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "enterToContinue");
                 if (var2 != null) {

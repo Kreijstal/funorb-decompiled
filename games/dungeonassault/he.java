@@ -1041,7 +1041,7 @@ final class he extends ip {
             tl.field_i = oh.a(jb.field_Qb, "benefits", 11091, "button");
             ep.field_g = oh.a(jb.field_Qb, "benefits", 11091, "signup_text");
             lg.field_u = oh.a(jb.field_Qb, "benefits", 11091, "menu_text");
-            nl.field_g = oh.a(jb.field_Qb, "benefits", 11091, "button_frame");
+            MouseWheelInput.field_g = oh.a(jb.field_Qb, "benefits", 11091, "button_frame");
             ql.field_c = oh.a(jb.field_Qb, "benefits", 11091, "arrow");
             dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", jb.field_Qb));
             tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", jb.field_Qb));
@@ -1079,10 +1079,10 @@ final class he extends ip {
             gf.a(var27, var2, var3);
             gf.b(rp.field_e);
             jb.field_Qb = null;
-            mi.field_f = 390 + (tl.field_i.field_v - nl.field_g.field_v) / 2;
-            rm.field_T = 434 + (tl.field_i.field_y - nl.field_g.field_y) / 2;
-            fo.field_b = (tl.field_i.field_v - nl.field_g.field_v) / 2 + 390;
-            wk.field_h = (tl.field_i.field_y - nl.field_g.field_y) / 2 + 231;
+            mi.field_f = 390 + (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2;
+            rm.field_T = 434 + (tl.field_i.field_y - MouseWheelInput.field_g.field_y) / 2;
+            fo.field_b = (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2 + 390;
+            wk.field_h = (tl.field_i.field_y - MouseWheelInput.field_g.field_y) / 2 + 231;
           }
           if (rf.field_Q == null) {
             return;
@@ -1204,7 +1204,7 @@ final class he extends ip {
             ud.field_r.h(0, 0);
           }
           if (tl.field_i != null &&
-            nl.field_g != null) {
+            MouseWheelInput.field_g != null) {
             tl.field_i.h(231, 390);
             var2_ref_cn = ep.field_g;
             if (o.field_i.field_b == 0) {
@@ -1232,7 +1232,7 @@ final class he extends ip {
             cf.a(stackIn_57_0, wk.field_h, 127, fo.field_b);
           }
           if (tl.field_i != null &&
-            null != nl.field_g) {
+            null != MouseWheelInput.field_g) {
             tl.field_i.h(434, 390);
             lg.field_u.h(0, 0);
             if (1 == o.field_i.field_b) {

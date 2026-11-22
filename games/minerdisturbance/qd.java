@@ -288,8 +288,8 @@ final class qd extends kn implements sh {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            oe.field_g = new String[var4];
-            ai.a(fd.field_J, 0, oe.field_g, 0, var4);
+            MouseWheelInput.field_g = new String[var4];
+            ai.a(fd.field_J, 0, MouseWheelInput.field_g, 0, var4);
             om.field_f = new String[-1 + (-var4 + var3_int)];
             ai.a(fd.field_J, 1 + var4, om.field_f, 0, var3_int - var4 - 1);
             var4 = -1;
@@ -308,8 +308,8 @@ final class qd extends kn implements sh {
             ai.a(fd.field_J, 0, ce.field_c, 0, var4);
             ik.field_N = new String[-1 + (var3_int - var4)];
             ai.a(fd.field_J, 1 + var4, ik.field_N, 0, -1 - var4 + var3_int);
-            if (ce.field_c.length <= oe.field_g.length) {
-              stackIn_23_0 = oe.field_g.length;
+            if (ce.field_c.length <= MouseWheelInput.field_g.length) {
+              stackIn_23_0 = MouseWheelInput.field_g.length;
             } else {
               stackIn_23_0 = ce.field_c.length;
             }
@@ -374,7 +374,7 @@ final class qd extends kn implements sh {
             }
           }
           if (ti.field_M == 2) {
-            var11 = oe.field_g;
+            var11 = MouseWheelInput.field_g;
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var5Lifetime2 < var11.length; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];

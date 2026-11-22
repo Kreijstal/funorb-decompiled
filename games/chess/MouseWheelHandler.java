@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends ek implements java.awt.event.MouseWheelListener {
-    private int field_g;
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
+    private int rotation;
 
-    final synchronized int a(byte param0) {
+    final synchronized int pollRotation(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 <= -63) {
-          var2 = this.field_g;
-          this.field_g = 0;
+          var2 = this.rotation;
+          this.rotation = 0;
           return var2;
         }
         java.awt.Component var3 = (java.awt.Component) null;
-        this.a((byte) 89, (java.awt.Component) null);
-        var2Lifetime1 = this.field_g;
-        this.field_g = 0;
+        this.attach((byte) 89, (java.awt.Component) null);
+        var2Lifetime1 = this.rotation;
+        this.rotation = 0;
         return var2Lifetime1;
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void detach(java.awt.Component param0, int param1) {
         if (param1 != 2) {
-          this.field_g = 28;
+          this.rotation = 28;
           param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
           return;
         }
@@ -29,17 +29,17 @@ final class oe extends ek implements java.awt.event.MouseWheelListener {
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        this.field_g = this.field_g + param0.getWheelRotation();
+        this.rotation = this.rotation + param0.getWheelRotation();
         param0.consume();
     }
 
-    oe() {
-        this.field_g = 0;
+    MouseWheelHandler() {
+        this.rotation = 0;
     }
 
-    final void a(byte param0, java.awt.Component param1) {
+    final void attach(byte param0, java.awt.Component param1) {
         if (param0 < 22) {
-          this.field_g = 58;
+          this.rotation = 58;
           param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
           return;
         }

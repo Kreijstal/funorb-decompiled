@@ -147,7 +147,7 @@ final class dq extends pc {
             stackIn_2_0 = null;
             return (dh) (stackIn_2_0);
           }
-          var2 = new dh(param1, uo.field_k, jm.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
+          var2 = new dh(param1, uo.field_k, MouseWheelInput.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
           ok.a(2188450);
           if (param0 != -18289) {
             dq.clearStaticReferences((byte) -96);

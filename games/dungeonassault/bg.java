@@ -436,7 +436,7 @@ final class bg extends qe {
               la.field_b.c("-", s.field_b[3] + s.field_b[4] >> 1, param0, 16777215, -1);
             }
           } else {
-            la.field_b.c(nl.field_c, s.field_b[1] + s.field_b[2] >> 1, param0, 16777215, -1);
+            la.field_b.c(MouseWheelInput.field_c, s.field_b[1] + s.field_b[2] >> 1, param0, 16777215, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -738,7 +738,7 @@ final class bg extends qe {
           }
           if (param2 == null) {
             la.field_b.c(Integer.toString(1 + param0), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
-            la.field_b.c(nl.field_c, s.field_b[2] + s.field_b[1] >> 1, param3, var5_int, -1);
+            la.field_b.c(MouseWheelInput.field_c, s.field_b[2] + s.field_b[1] >> 1, param3, var5_int, -1);
           } else {
             la.field_b.c(Integer.toString(1 + param2.field_b), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
             var7 = -5 + (-s.field_b[1] + s.field_b[2]);

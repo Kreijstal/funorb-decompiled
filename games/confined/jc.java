@@ -6,7 +6,7 @@ final class jc {
     static int[] field_f;
     static String field_a;
     static String[] field_d;
-    static ck field_c;
+    static MouseWheelInput field_c;
     static boolean field_g;
     static String field_b;
 

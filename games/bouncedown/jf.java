@@ -126,7 +126,7 @@ final class jf {
             var6_int = param0.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (kf.a(-49, param0.charAt(var5))) {
+                if (MouseWheelInput.a(-49, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -162,7 +162,7 @@ final class jf {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (kf.a(-49, param0.charAt(var5Lifetime1))) {
+              if (MouseWheelInput.a(-49, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

@@ -69,23 +69,23 @@ final class dh implements Iterable {
     }
 
     final static void b(int param0) {
-        if (0 - hh.field_b == nl.field_d) {
-          nl.field_d = nl.field_d + 1;
+        if (0 - hh.field_b == MouseWheelInput.field_d) {
+          MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
           if (param0 <= -123) {
             return;
           }
           dh.a(true);
           return;
         }
-        if (nl.field_d != -hh.field_b + 250) {
-          nl.field_d = nl.field_d + 1;
+        if (MouseWheelInput.field_d != -hh.field_b + 250) {
+          MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
           if (param0 <= -123) {
             return;
           }
           dh.a(true);
           return;
         }
-        nl.field_d = nl.field_d + 1;
+        MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
         if (param0 <= -123) {
           return;
         }

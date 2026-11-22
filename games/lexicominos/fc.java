@@ -731,14 +731,14 @@ final class fc {
                 if ((438 <= this.field_n) &&
                   (decompiledFrameRemainder1 = (-1 == this.field_b))) {
                   if (ki.a((byte) -112)) {
-                    stackIn_218_0 = ((ee.field_a | this.field_J) == 0) ? 0 : 6;
+                    stackIn_218_0 = ((MouseWheelInput.field_a | this.field_J) == 0) ? 0 : 6;
                     var5 = stackIn_218_0;
                     this.field_u.a((byte) 88, false, var5, var5);
                   } else {
                     stackIn_213_0 = this.field_u;
                     stackIn_213_1 = 83;
                     stackIn_213_2 = false;
-                    if (ee.field_a > 0) {
+                    if (MouseWheelInput.field_a > 0) {
                       stackIn_214_3 = 7;
                     } else {
                       stackIn_214_3 = 1;
@@ -884,7 +884,7 @@ final class fc {
           return;
         }
         sc.field_g = sc.field_g | var4;
-        ee.field_a = ee.field_a | var4;
+        MouseWheelInput.field_a = MouseWheelInput.field_a | var4;
         this.field_G.b(127, new bd(param2));
         if (this.field_h) {
           return;
@@ -1581,7 +1581,7 @@ final class fc {
           if (vb.field_i >= 2) {
             this.a(true);
           }
-          ee.field_a = 0;
+          MouseWheelInput.field_a = 0;
           fg.field_b = false;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

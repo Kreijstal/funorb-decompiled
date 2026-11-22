@@ -173,7 +173,7 @@ final class ii {
         var2 = fleas.field_A ? 1 : 0;
         ResourceArchive.field_e = null;
         ah.field_c = false;
-        if (!jg.field_d) {
+        if (!MouseWheelInput.field_d) {
           var1 = nb.field_h;
           if (var1 > 0) {
             if (var1 == 1) {

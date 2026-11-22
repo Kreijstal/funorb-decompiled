@@ -581,7 +581,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   var26Lifetime1Lifetime1 = param5.field_t[var23Lifetime2];
                   kd.field_g[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 + var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18 >> 16);
                   kc.field_l[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16) + var10;
-                  ee.field_f[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var20) >> 16);
+                  MouseWheelInput.field_f[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -620,7 +620,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   var20 = param5.field_b[var18];
                   var21Lifetime2 = param5.field_c[var18];
                   qf.field_q[var18] = var21Lifetime2 * var15 + (var9 * var19 + var12 * var20) >> 16;
-                  ee.field_b[var18] = var21Lifetime2 * var16 + (var10 * var19 + var20 * var13) >> 16;
+                  MouseWheelInput.field_b[var18] = var21Lifetime2 * var16 + (var10 * var19 + var20 * var13) >> 16;
                   wh.field_e[var18] = var21Lifetime2 * var17 + (var19 * var11 + var14 * var20) >> 16;
                   var18++;
                 }

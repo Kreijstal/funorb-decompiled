@@ -664,7 +664,7 @@ final class og extends n {
           return;
         }
         try {
-          ck.a(26613, param1);
+          MouseWheelInput.a(26613, param1);
           ee.a(param1, (byte) 70);
           pb.b(126);
           im.b((byte) -85);

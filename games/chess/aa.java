@@ -165,7 +165,7 @@ final class aa {
           (this.field_c == 1 ||
           2 == this.field_c ||
           this.field_c == 11)) {
-          ek.a(16777215, ak.field_m[this.field_c] - 50, -100 + (var2 + 320), 10, ak.field_m[this.field_c] - 25, 0, (byte) 63, 100 + var2 + 320);
+          MouseWheelInput.a(16777215, ak.field_m[this.field_c] - 50, -100 + (var2 + 320), 10, ak.field_m[this.field_c] - 25, 0, (byte) 63, 100 + var2 + 320);
           stackIn_51_0 = 16777215;
           stackIn_51_1 = pg.field_v;
           stackIn_51_2 = 320 + (var2 - 90);
@@ -252,7 +252,7 @@ final class aa {
                 if (this.field_c != 8) {
                   break scanLoop1;
                 }
-                ek.a(16777215, 155, 50 + var2, 10, ak.field_m[this.field_c] - 30, 0, (byte) 63, var2 + 590);
+                MouseWheelInput.a(16777215, 155, 50 + var2, 10, ak.field_m[this.field_c] - 30, 0, (byte) 63, var2 + 590);
                 v.field_j.a(ad.field_d, var2 + 50, 155, 540, 480, 16444375, -1, 0, 0, v.field_j.field_q);
                 if (var10 == 0) {
                   break scanLoop1;
@@ -374,15 +374,15 @@ final class aa {
         var10 = this.field_e.field_f * ak.field_y[this.field_c] + (var7 + var9);
         if (this.field_c == 5) {
           var10 = var9 + (var7 + ak.field_y[this.field_c] * (-3 + this.field_e.field_f));
-          ek.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
+          MouseWheelInput.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
           var7 = 2 * ak.field_y[this.field_c] + var10 - var9;
           var10 = var7 + (var9 + ak.field_y[this.field_c]);
-          ek.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
+          MouseWheelInput.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
           if (Chess.field_G != 0) {
-            ek.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
+            MouseWheelInput.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
           }
         } else {
-          ek.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
+          MouseWheelInput.a(var5, var7, var6, var3, var10, var4, (byte) 63, var8);
         }
     }
 

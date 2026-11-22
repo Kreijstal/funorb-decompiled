@@ -90,7 +90,7 @@ final class ba extends ln {
     }
 
     final static void c(byte param0) {
-        jm.field_d.a((qm) (new ae()), (byte) -50);
+        MouseWheelInput.field_d.a((qm) (new ae()), (byte) -50);
         if (param0 == 93) {
           return;
         }

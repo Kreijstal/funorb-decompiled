@@ -150,7 +150,7 @@ final class jn extends fb {
             ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
             return;
           }
-          if (var8 != ek.field_d) {
+          if (var8 != MouseWheelInput.field_d) {
             if (qk.field_b == var8) {
               var18 = uh.field_p[2];
               var18.d(var5 - (var18.field_w >> 1), -(var18.field_t >> 1) + var6, 256);
@@ -214,7 +214,7 @@ final class jn extends fb {
           ca.field_a.d(var5Lifetime1 - var20.field_v, var6Lifetime1 - var20.field_u, 256);
           return;
         }
-        if (var8Lifetime1 != ek.field_d) {
+        if (var8Lifetime1 != MouseWheelInput.field_d) {
           if (qk.field_b == var8Lifetime1) {
             var22 = uh.field_p[2];
             var22.d(var5Lifetime1 - (var22.field_w >> 1), -(var22.field_t >> 1) + var6Lifetime1, 256);

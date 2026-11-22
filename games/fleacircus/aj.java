@@ -85,7 +85,7 @@ final class aj extends DualLinkNode {
           ea.a(120, (java.awt.Component) ((Object) param1));
           il.a(false, (java.awt.Component) ((Object) param1));
           if (null != ui.field_pb) {
-            ui.field_pb.a(0, (java.awt.Component) ((Object) param1));
+            ui.field_pb.attach(0, (java.awt.Component) ((Object) param1));
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "aj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

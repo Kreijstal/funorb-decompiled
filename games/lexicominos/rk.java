@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rk extends tb {
-    static ee field_c;
+    static MouseWheelInput field_c;
     private int field_e;
     static volatile boolean field_m;
     static int field_g;
@@ -18,7 +18,7 @@ final class rk extends tb {
     final void a(byte param0) {
         this.field_i = 0L;
         if (param0 != 50) {
-          field_c = (ee) null;
+          field_c = (MouseWheelInput) null;
           if (this.field_h < this.field_j) {
             this.field_h = this.field_h + (this.field_j - this.field_h);
             return;

@@ -106,7 +106,7 @@ final class ResourceArchive {
             param0[1] != 0 ||
             param0[2] != 0 ||
             param0[3] != 0)) {
-            var35 = jg.a(false, this.field_g[param1], true);
+            var35 = MouseWheelInput.a(false, this.field_g[param1], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -114,7 +114,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = jg.a(false, this.field_g[param1], false);
+            var9 = MouseWheelInput.a(false, this.field_g[param1], false);
           }
           try {
             var36 = qi.a(var9, -22518);
@@ -751,7 +751,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_l[param3][param0] != null) {
-            var7 = jg.a(false, this.field_l[param3][param0], false);
+            var7 = MouseWheelInput.a(false, this.field_l[param3][param0], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

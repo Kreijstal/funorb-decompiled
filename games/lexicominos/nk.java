@@ -27,7 +27,7 @@ abstract class nk extends GameAppletShell {
         sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, ri.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
         uk.a(this.field_D, this.field_s, ri.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
         li.g(false);
-        rk.field_c = bl.a(115);
+        rk.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
         th.field_m = param6;
         ea.field_d = param0;
@@ -158,7 +158,7 @@ abstract class nk extends GameAppletShell {
           kj.a((byte) 22);
         }
         if (null != rk.field_c) {
-          gd.field_l = rk.field_c.c(82);
+          gd.field_l = rk.field_c.pollRotation(82);
         }
         if (bd.c(false)) {
           var3 = cl.p(param1 - 127) * 1200;
@@ -321,7 +321,7 @@ abstract class nk extends GameAppletShell {
         if (11 == PacketBuffer.field_i) {
           if (null != eg.field_C && (!eg.field_C.c(param1 - 104) ||
             !eg.field_C.a((byte) 60))) {
-            al.a(16, ee.a((byte) 126, oh.field_a, we.field_c, eg.field_C), 0.0f);
+            al.a(16, MouseWheelInput.a((byte) 126, oh.field_a, we.field_c, eg.field_C), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

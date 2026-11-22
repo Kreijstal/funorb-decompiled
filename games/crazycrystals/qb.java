@@ -523,7 +523,7 @@ abstract class qb {
                 ci.field_i = param0;
                 var2 = ah.a("loginm3", 5236);
                 if (var2 != null) {
-                  jm.field_f = fa.a((byte) -72, var2);
+                  MouseWheelInput.field_f = fa.a((byte) -72, var2);
                 }
                 var2 = ah.a("loginm2", 5236);
                 if (null != var2) {

@@ -54,7 +54,7 @@ final class BoundedRandomAccessFile {
             }
             var3_int = 1;
             if (8 == param1) {
-              if (!jg.field_d) {
+              if (!MouseWheelInput.field_d) {
                 param0 = o.field_g;
               } else {
                 param0 = me.field_c;
@@ -79,7 +79,7 @@ final class BoundedRandomAccessFile {
               if (param1 == 10) {
                 return;
               }
-              if (!jg.field_d) {
+              if (!MouseWheelInput.field_d) {
                 lg.field_b.a(-41);
                 return;
               }

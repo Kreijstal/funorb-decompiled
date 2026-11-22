@@ -115,7 +115,7 @@ final class l {
           eb.a((java.awt.Component) ((Object) param1), (byte) -105);
           fb.a((java.awt.Component) ((Object) param1), (byte) -42);
           if (null != hg.field_k) {
-            hg.field_k.a((java.awt.Component) ((Object) param1), false);
+            hg.field_k.attach((java.awt.Component) ((Object) param1), false);
           }
           if (param0 != 0) {
             var3 = (java.awt.Canvas) null;

@@ -95,7 +95,7 @@ final class ResourceArchive {
           return;
         }
         try {
-          nl.field_d = -hh.field_b + 0;
+          MouseWheelInput.field_d = -hh.field_b + 0;
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

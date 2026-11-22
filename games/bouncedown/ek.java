@@ -349,16 +349,16 @@ final class ek extends ji {
         return og.field_b;
     }
 
-    final static kf c(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          kf stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 0) {
-              ek.c(25);
+              ek.createMouseWheelInput(25);
             }
-            stackIn_3_0 = (kf) (Class.forName("af").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

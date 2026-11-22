@@ -16,18 +16,18 @@ final class fi {
     final static boolean b(int param0) {
         if (param0 != 21856) {
           fi.clearStaticReferences(93);
-          if (null == kf.field_b) {
+          if (null == MouseWheelInput.field_b) {
             return false;
           }
-          if (kf.field_b.a(false) != null) {
+          if (MouseWheelInput.field_b.a(false) != null) {
             return true;
           }
           return false;
         }
-        if (null == kf.field_b) {
+        if (null == MouseWheelInput.field_b) {
           return false;
         }
-        if (kf.field_b.a(false) != null) {
+        if (MouseWheelInput.field_b.a(false) != null) {
           return true;
         }
         return false;

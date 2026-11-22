@@ -184,7 +184,7 @@ final class GzipDecompressor {
           }
           im.a((java.awt.Component) ((Object) param0), (byte) 94);
           if (bn.field_j != null) {
-            bn.field_j.a((byte) 123, (java.awt.Component) ((Object) param0));
+            bn.field_j.attach((byte) 123, (java.awt.Component) ((Object) param0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -685,8 +685,8 @@ final class ResourceArchive {
             stackIn_9_3 = null;
             stackIn_9_4 = 24 * var1_int + ak.field_k[3];
             stackIn_9_5 = ak.field_m[3] - 28;
-            stackIn_9_6 = ek.field_c[var1_int];
-            stackIn_9_7 = ek.field_c[5 + var1_int];
+            stackIn_9_6 = MouseWheelInput.field_c[var1_int];
+            stackIn_9_7 = MouseWheelInput.field_c[5 + var1_int];
             stackIn_9_8 = null;
             if (var1_int != 2) {
               stackIn_10_2 = null;

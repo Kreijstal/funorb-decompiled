@@ -91,7 +91,7 @@ final class pd extends rj {
             field_B = (String) null;
           }
           if (bn.field_j != null) {
-            bn.field_j.a(false, (java.awt.Component) ((Object) param0));
+            bn.field_j.detach(false, (java.awt.Component) ((Object) param0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

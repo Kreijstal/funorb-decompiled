@@ -41,7 +41,7 @@ final class di {
           var2_long = kd.c(-2456);
           if (pm.field_p != 0 &&
             0 > pp.field_J) {
-            var4_ref_ao = (ao) (nl.field_e.e(-24172));
+            var4_ref_ao = (ao) (MouseWheelInput.field_e.e(-24172));
             if (var4_ref_ao != null &&
               var2_long > var4_ref_ao.field_l) {
               var4_ref_ao.unlink(false);
@@ -89,7 +89,7 @@ final class di {
             for (var6 = 0; nj.field_b > var6; var6++) {
               var5.field_m[var6] = ra.field_c.payload[var6];
             }
-            nl.field_e.a(var5, false);
+            MouseWheelInput.field_e.a(var5, false);
             pp.field_J = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

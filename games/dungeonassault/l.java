@@ -359,7 +359,7 @@ abstract class l {
         if (!param0) {
           return false;
         }
-        return nl.field_d > 250 ? true : false;
+        return MouseWheelInput.field_d > 250 ? true : false;
     }
 
     static {

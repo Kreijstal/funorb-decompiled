@@ -552,7 +552,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           GameAppletShell.e(5);
           ai.clearStaticReferences(8076);
           MouseInputHandler.a(true);
-          jm.clearStaticReferences(-122);
+          MouseWheelInput.clearStaticReferences(-122);
           kh.d();
           db.b((byte) 127);
           dg.clearStaticReferences((byte) 64);
@@ -1153,7 +1153,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                             if (!param0) {
                               return;
                             }
-                            IsaacRandom.field_e = new int[][]{new int[]{jm.field_g, vp.field_b, kp.field_j, tg.field_b}, new int[]{rk.field_d, pa.field_E, oo.field_i, ji.field_t}, new int[]{96, 97, 98, 99}};
+                            IsaacRandom.field_e = new int[][]{new int[]{MouseWheelInput.field_g, vp.field_b, kp.field_j, tg.field_b}, new int[]{rk.field_d, pa.field_E, oo.field_i, ji.field_t}, new int[]{96, 97, 98, 99}};
                             fq.field_x = new wg();
                             fq.field_x.a(128, 9, (byte) -103);
                             gf.field_c.b(fq.field_x);
@@ -1357,7 +1357,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             this.a(-124);
             s.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
             qb.field_b = wl.a("fgtiles_laserhub", l.field_d, 10, "");
-            jm.field_i = wl.a("sprites_rock", l.field_d, 10, "");
+            MouseWheelInput.field_i = wl.a("sprites_rock", l.field_d, 10, "");
             vp.field_i = new dl[2][];
             vp.field_i[0] = bf.a(-1, "sprites_crystal1", "", l.field_d);
             vp.field_i[1] = bf.a(-1, "sprites_crystal2", "", l.field_d);
@@ -1588,7 +1588,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             jc.field_a = bl.a(ma.field_p, "initialset", "safes-open").a();
             oa.field_e = bl.a(ma.field_p, "initialset", "key").a();
             gk.field_j = bl.a(ma.field_p, "initialset", "break-ledge").a();
-            jm.field_k = ha.a(vm.field_k, "initialset", "bomb-explode").b();
+            MouseWheelInput.field_k = ha.a(vm.field_k, "initialset", "bomb-explode").b();
             lb.field_d = ha.a(vm.field_k, "initialset", "tile-explode").b();
             vp.a(119);
             return;

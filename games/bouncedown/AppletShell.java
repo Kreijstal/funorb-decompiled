@@ -631,7 +631,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_66_0 = kf.a(-49, var2.charAt(var3));
+                      stackIn_66_0 = MouseWheelInput.a(-49, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

@@ -104,19 +104,19 @@ final class ta {
           if (param0 != 250) {
             ta.f(34);
           }
-          if (ca.field_i == ee.field_c) {
+          if (ca.field_i == MouseWheelInput.field_c) {
             stackIn_4_0 = null;
             return (mb) (stackIn_4_0);
           }
-          if (c.field_o == ee.field_c &&
+          if (c.field_o == MouseWheelInput.field_c &&
             param1.equals(ef.field_b)) {
-            ee.field_c = c.field_m;
+            MouseWheelInput.field_c = c.field_m;
             stackIn_8_0 = n.field_k;
             return stackIn_8_0;
           }
           ef.field_b = param1;
           n.field_k = null;
-          ee.field_c = ca.field_i;
+          MouseWheelInput.field_c = ca.field_i;
           stackIn_10_0 = null;
           return (mb) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

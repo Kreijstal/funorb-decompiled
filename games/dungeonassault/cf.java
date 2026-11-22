@@ -24,25 +24,25 @@ final class cf {
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4;
-        nl.field_g.h(param1, param3);
+        MouseWheelInput.field_g.h(param1, param3);
         if (param2 < 125) {
           return;
         }
         if (!param0) {
           return;
         }
-        var4 = jc.field_e % nl.field_g.field_y * 2;
-        if (var4 >= nl.field_g.field_y) {
-          var4 = nl.field_g.field_y - (var4 - nl.field_g.field_y);
+        var4 = jc.field_e % MouseWheelInput.field_g.field_y * 2;
+        if (var4 >= MouseWheelInput.field_g.field_y) {
+          var4 = MouseWheelInput.field_g.field_y - (var4 - MouseWheelInput.field_g.field_y);
         }
         if (10 <= var4) {
-          if (nl.field_g.field_y - 40 < var4) {
-            var4 = -40 + nl.field_g.field_y;
+          if (MouseWheelInput.field_g.field_y - 40 < var4) {
+            var4 = -40 + MouseWheelInput.field_g.field_y;
           }
         } else {
           var4 = 10;
         }
-        rk.a(30, 80, var4, 0, param3, param1, 0, 116, nl.field_g);
+        rk.a(30, 80, var4, 0, param3, param1, 0, 116, MouseWheelInput.field_g);
     }
 
     cf(PcmSample param0, int param1) {

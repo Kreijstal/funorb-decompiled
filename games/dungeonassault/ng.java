@@ -2971,31 +2971,31 @@ final class ng extends ck {
                 }
                 var2 = rp.a("mustlogin4,1", 83);
                 if (var2 != null) {
-                  nl.field_b[1] = dj.a(var2, false);
+                  MouseWheelInput.field_b[1] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,2", 103);
                 if (var2 != null) {
-                  nl.field_b[2] = dj.a(var2, false);
+                  MouseWheelInput.field_b[2] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,3", param0 ^ -27046);
                 if (null != var2) {
-                  nl.field_b[3] = dj.a(var2, false);
+                  MouseWheelInput.field_b[3] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,4", param0 ^ -27128);
                 if (null != var2) {
-                  nl.field_b[4] = dj.a(var2, false);
+                  MouseWheelInput.field_b[4] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,5", 108);
                 if (var2 != null) {
-                  nl.field_b[5] = dj.a(var2, false);
+                  MouseWheelInput.field_b[5] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,6", 49);
                 if (null != var2) {
-                  nl.field_b[6] = dj.a(var2, false);
+                  MouseWheelInput.field_b[6] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin4,7", 71);
                 if (var2 != null) {
-                  nl.field_b[7] = dj.a(var2, false);
+                  MouseWheelInput.field_b[7] = dj.a(var2, false);
                 }
                 var2 = rp.a("mustlogin_notloggedin", 66);
                 if (var2 != null) {

@@ -202,16 +202,16 @@ class qm extends IntrusiveNode {
         }
     }
 
-    final static jm d(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          jm stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 1) {
               field_q = (int[]) null;
             }
-            stackIn_3_0 = (jm) (Class.forName("sf").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,7 +318,7 @@ class qm extends IntrusiveNode {
 
     public static void g(int param0) {
         if (param0 != 1) {
-          qm.d(38);
+          qm.createMouseWheelInput(38);
           field_q = null;
           return;
         }

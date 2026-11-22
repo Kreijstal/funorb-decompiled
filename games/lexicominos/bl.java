@@ -33,7 +33,7 @@ class bl {
             var3_int += 200;
           }
           if (param0 <= 108) {
-            bl.a(75);
+            bl.createMouseWheelInput(75);
           }
           return !(0 >= var3_int);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,16 +128,16 @@ class bl {
         id.a(var2, param0, (byte) 116);
     }
 
-    final static ee a(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          ee stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 < 87) {
-              bl.a(65);
+              bl.createMouseWheelInput(65);
             }
-            stackIn_3_0 = (ee) (Class.forName("ie").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

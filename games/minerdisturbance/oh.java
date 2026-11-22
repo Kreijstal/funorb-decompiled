@@ -10,7 +10,7 @@ final class oh extends bl {
 
     final boolean h(int param0) {
         if (param0 != 0) {
-          oh.c((byte) 92);
+          oh.createMouseWheelInput((byte) 92);
           return false;
         }
         return false;
@@ -116,16 +116,16 @@ final class oh extends bl {
         }
     }
 
-    final static oe c(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
-          oe stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 <= 53) {
-            return (oe) null;
+            return (MouseWheelInput) null;
           }
           try {
-            stackIn_3_0 = (oe) (Class.forName("na").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

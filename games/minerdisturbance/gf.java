@@ -1430,7 +1430,7 @@ final class gf {
             if (0 == this.field_g &&
               this.field_b > 250) {
               ne.a(8, -74);
-              oe.field_b = true;
+              MouseWheelInput.field_b = true;
               if (this.field_h == 16) {
                 this.field_h = 6;
               }

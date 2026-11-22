@@ -1042,7 +1042,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime182 = tf.a(0, "INSTRUCTIONS_BODIES_5_1");
           if (var2Lifetime182 != null) {
-            jg.field_c = ab.a(0, var2Lifetime182);
+            MouseWheelInput.field_c = ab.a(0, var2Lifetime182);
           }
           var2Lifetime183 = tf.a(0, "INSTRUCTIONS_BODIES_5_2");
           if (null != var2Lifetime183) {

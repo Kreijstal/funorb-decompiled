@@ -102,7 +102,7 @@ final class ea extends se {
           var9 = param3 + this.field_u;
           var10 = var43.a(0, param0, (mf) (this)) + (var43.a((mf) (this), -23159).a((byte) 34) >> 1);
           if (in.field_g != var6 &&
-            var6 != ek.field_d) {
+            var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
               var19 = uh.field_p[2];
               var19.d(var9, -(var19.field_t >> 1) + var10, 256);
@@ -140,7 +140,7 @@ final class ea extends se {
           this.field_T.d(-(var21.field_v >> 1) + var9, -var21.field_u + var10, 256);
           return;
         }
-        if (var6 == ek.field_d) {
+        if (var6 == MouseWheelInput.field_d) {
           var22 = cc.field_v;
           if (!var22.equals(this.field_v)) {
             this.field_v = var22;
@@ -152,7 +152,7 @@ final class ea extends se {
           var9Lifetime1 = param3 + this.field_u;
           var10Lifetime1 = var44.a(0, param0, (mf) (this)) + (var44.a((mf) (this), -23159).a((byte) 34) >> 1);
           if (in.field_g != var6 &&
-            var6 != ek.field_d) {
+            var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
               var24 = uh.field_p[2];
               var24.d(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
@@ -202,7 +202,7 @@ final class ea extends se {
           var9Lifetime2 = param3 + this.field_u;
           var10Lifetime2 = var46.a(0, param0, (mf) (this)) + (var46.a((mf) (this), -23159).a((byte) 34) >> 1);
           if (in.field_g != var6Lifetime1 &&
-            var6Lifetime1 != ek.field_d) {
+            var6Lifetime1 != MouseWheelInput.field_d) {
             if (var6Lifetime1 == qk.field_b) {
               var40 = uh.field_p[2];
               var40.d(var9Lifetime2, -(var40.field_t >> 1) + var10Lifetime2, 256);
@@ -274,7 +274,7 @@ final class ea extends se {
           this.field_T.d(-(var29.field_v >> 1) + var9Lifetime3, -var29.field_u + var10Lifetime3, 256);
           return;
         }
-        if (var6Lifetime2 != ek.field_d) {
+        if (var6Lifetime2 != MouseWheelInput.field_d) {
           if (var6Lifetime2 == qk.field_b) {
             var37 = uh.field_p[2];
             var37.d(var9Lifetime3, -(var37.field_t >> 1) + var10Lifetime3, 256);

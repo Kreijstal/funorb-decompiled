@@ -251,7 +251,7 @@ final class sg {
           if (!param0) {
             stackIn_5_0 = sc.field_g;
           } else {
-            stackIn_5_0 = ee.field_a;
+            stackIn_5_0 = MouseWheelInput.field_a;
           }
           var3_int = stackIn_5_0;
           var4 = -50 / ((param1 + 36) / 58);
@@ -596,14 +596,14 @@ final class sg {
                                           stackIn_191_0 = this.field_k;
                                           stackIn_191_1 = -52;
                                           stackIn_191_2 = param1;
-                                          if (0 >= ee.field_a) {
+                                          if (0 >= MouseWheelInput.field_a) {
                                             stackIn_192_3 = 1;
                                           } else {
                                             stackIn_192_3 = 7;
                                           }
                                           ((Lexicominos) (Object) stackIn_191_0).a((byte) stackIn_191_1, stackIn_191_2, stackIn_192_3, 0);
                                         } else {
-                                          stackIn_187_0 = ((ee.field_a | el.field_c.field_J) != 0) ? 6 : 0;
+                                          stackIn_187_0 = ((MouseWheelInput.field_a | el.field_c.field_J) != 0) ? 6 : 0;
                                           var4_int = stackIn_187_0;
                                           this.field_k.a((byte) -47, param1, var4_int, var4_int);
                                         }
@@ -859,11 +859,11 @@ final class sg {
           if (!param0) {
             stackIn_19_0 = sc.field_g;
           } else {
-            stackIn_19_0 = ee.field_a;
+            stackIn_19_0 = MouseWheelInput.field_a;
           }
           var8 = stackIn_19_0;
           var9 = 0;
-          var10 = -1 + jf.a((byte) 108, ee.field_a);
+          var10 = -1 + jf.a((byte) 108, MouseWheelInput.field_a);
           this.field_e = -1;
           if (param1 != 640) {
             field_a = 35;
@@ -1470,7 +1470,7 @@ final class sg {
                   var2_intLifetime1 = var2_intLifetime1 + var3 * bi.field_a.a(me.field_u, 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3);
                   stackIn_50_0 = var2_intLifetime1;
                   stackIn_50_1 = bi.field_a;
-                  if (ee.field_a == 0) {
+                  if (MouseWheelInput.field_a == 0) {
                     stackIn_51_2 = 0;
                   } else {
                     stackIn_51_2 = 1;
@@ -1497,7 +1497,7 @@ final class sg {
                   stackIn_58_1 = bi.field_a;
                   stackIn_58_2 = 0;
                   stackIn_58_3 = param0 - 102;
-                  if (ee.field_a == 0) {
+                  if (MouseWheelInput.field_a == 0) {
                     stackIn_59_4 = 0;
                   } else {
                     stackIn_59_4 = 1;
@@ -1536,7 +1536,7 @@ final class sg {
                   stackIn_70_1 = stackIn_66_1;
                   stackIn_70_2 = stackIn_66_2;
                   stackIn_70_3 = stackIn_67_3;
-                  if (ee.field_a == 0) {
+                  if (MouseWheelInput.field_a == 0) {
                     stackIn_71_0 = stackIn_70_0;
                     stackIn_71_1 = stackIn_70_1;
                     stackIn_71_2 = stackIn_70_2;

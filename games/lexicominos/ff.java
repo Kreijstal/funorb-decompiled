@@ -91,7 +91,7 @@ final class ff {
           var8 = var41;
           var65 = new int[param7.field_A];
           var63 = qf.field_q;
-          var62 = ee.field_b;
+          var62 = MouseWheelInput.field_b;
           var64 = wh.field_e;
           for (var13 = 0; var13 < param7.field_A; var13++) {
             var14 = param2 * var62[var13] + (var63[var13] * param1 + var64[var13] * param5) >> 8;

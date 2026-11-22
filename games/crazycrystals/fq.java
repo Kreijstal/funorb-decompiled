@@ -29,7 +29,7 @@ final class fq extends ea implements Cloneable {
         }
         try {
           if (ok.field_g != null) {
-            ok.field_g.a((byte) 55, (java.awt.Component) ((Object) param1));
+            ok.field_g.detach((byte) 55, (java.awt.Component) ((Object) param1));
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "fq.TC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -1370,13 +1370,13 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameRemainder10 = true;
           boolean decompiledFrameRemainder9 = true;
           var3 = this.v(-1);
-          if (!oe.field_b) {
+          if (!MouseWheelInput.field_b) {
             fieldTemp$0 = jh.field_a;
             jh.field_a = jh.field_a + 1;
             decompiledFrameRemainder9 = !(7 < fieldTemp$0);
           }
           if (decompiledFrameRemainder9) {
-            if (oe.field_b) {
+            if (MouseWheelInput.field_b) {
               jh.field_a = 0;
             }
             var3++;
@@ -1390,7 +1390,7 @@ public final class MinerDisturbance extends ob {
             var3 = 0;
           }
           this.a((byte) -123, var3);
-          oe.field_b = false;
+          MouseWheelInput.field_b = false;
           var4Lifetime1 = 0;
           scanLoop1: while (true) {
             if (var4Lifetime1 < 1000) {
@@ -4722,7 +4722,7 @@ public final class MinerDisturbance extends ob {
           PacketBuffer.clearStaticReferences(109);
           ClientException.a((byte) 84);
           lf.a(false);
-          oe.clearStaticReferences((byte) 124);
+          MouseWheelInput.clearStaticReferences((byte) 124);
           de.clearStaticReferences((byte) 34);
           fi.clearStaticReferences((byte) 125);
           sf.a(param0 + 8191);
@@ -6431,9 +6431,9 @@ public final class MinerDisturbance extends ob {
           var2_int = 111 % ((param0 - 7) / 42);
           stackIn_5_1 = (kf.field_d != null);
           this.a(stackIn_5_1, 18808);
-          if (oe.field_a) {
+          if (MouseWheelInput.field_a) {
             this.j((byte) 22);
-            oe.field_a = false;
+            MouseWheelInput.field_a = false;
           }
           if (kf.field_d != null &&
             kf.field_d.field_b) {

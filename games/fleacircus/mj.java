@@ -131,7 +131,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var24Lifetime1 = param1.field_L[var23Lifetime2];
                   var25Lifetime1 = param1.field_G[var23Lifetime2];
                   var26Lifetime1 = param1.field_O[var23Lifetime2];
-                  jg.field_b[var23Lifetime2] = var9 + (var15 * var25Lifetime1 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
+                  MouseWheelInput.field_b[var23Lifetime2] = var9 + (var15 * var25Lifetime1 + var24Lifetime1 * var12 + var18 * var26Lifetime1 >> 16);
                   lj.field_d[var23Lifetime2] = (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var13 * var24Lifetime1 >> 16) + var10;
                   ol.field_c[var23Lifetime2] = var11 + (var20 * var26Lifetime1 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16);
                   var24Lifetime1 = param1.field_c[var23Lifetime2];

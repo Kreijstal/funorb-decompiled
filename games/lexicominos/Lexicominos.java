@@ -135,7 +135,7 @@ public final class Lexicominos extends nk {
                               al.a(16, rh.a(ci.field_a, (byte) 97, "index", fg.field_a, sg.field_f), 86.0f);
                               return false;
                             }
-                            al.a(16, rh.a(hh.field_L, (byte) 119, "", ia.field_F, ee.field_e), (float)(10 + hh.field_L.b("", (byte) 112) * 76 / 100));
+                            al.a(16, rh.a(hh.field_L, (byte) 119, "", ia.field_F, MouseWheelInput.field_e), (float)(10 + hh.field_L.b("", (byte) 112) * 76 / 100));
                             return false;
                           }
                           al.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
@@ -417,12 +417,12 @@ public final class Lexicominos extends nk {
           var7_int = stackIn_150_0;
           do {
             if (!(ef.field_d.length > var7_int)) {
-              ee.a((byte) -102, e.field_u);
+              MouseWheelInput.a((byte) -102, e.field_u);
               fc.field_e = new db[ef.field_d.length];
               md.field_A = new db[ef.field_d.length];
               break;
             }
-            ee.a((byte) -102, ef.field_d[var7_int]);
+            MouseWheelInput.a((byte) -102, ef.field_d[var7_int]);
             var7_int++;
           } while (var17 == 0);
           var7_int = 0;
@@ -929,7 +929,7 @@ public final class Lexicominos extends nk {
           GameAppletShell.e(439);
           wg.c(param0 + 37);
           da.a((byte) 123);
-          ee.a(param0 + 35);
+          MouseWheelInput.a(param0 + 35);
           SoftwareRasterizer.c();
           sh.clearStaticReferences(1);
           BitmapFont.clearStaticReferences();
@@ -1560,13 +1560,13 @@ public final class Lexicominos extends nk {
                 vc.field_D.field_h) {
                 this.field_K = true;
                 sc.field_g = sc.field_g | vc.field_D.field_i;
-                ee.field_a = ee.field_a & ~vc.field_D.field_i;
+                MouseWheelInput.field_a = MouseWheelInput.field_a & ~vc.field_D.field_i;
                 vc.field_D = null;
                 kj.c(!param0);
                 qf.a(this, 117);
                 decompiledFrameRemainder0 = (aa.field_j == 7);
                 if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = (ee.field_a == 0))) {
+                  (decompiledFrameRemainder0 = (MouseWheelInput.field_a == 0))) {
                   aa.field_j = 1;
                   th.field_r = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -1702,7 +1702,7 @@ public final class Lexicominos extends nk {
                   hh.field_N = ud.a(1, -118, 10, 3, 9);
                   aa.field_j = hf.field_a;
                   if (7 == aa.field_j &&
-                    ee.field_a == 0) {
+                    MouseWheelInput.field_a == 0) {
                     aa.field_j = 1;
                   }
                   al.a(16, ef.field_c, 100.0f);
@@ -1861,7 +1861,7 @@ public final class Lexicominos extends nk {
                 if (6 == aa.field_j &&
                   th.field_r == 0) {
                   sc.field_g = 0;
-                  ee.field_a = 0;
+                  MouseWheelInput.field_a = 0;
                   rb.field_b.g(-105);
                 }
                 aa.field_j = th.field_r;
@@ -2247,7 +2247,7 @@ public final class Lexicominos extends nk {
               var6Lifetime1 = var6Lifetime1 + bi.field_a.a(me.field_u, 254) * var7;
               stackIn_42_0 = var6Lifetime1;
               stackIn_42_1 = bi.field_a;
-              stackIn_43_2 = (0 != ee.field_a);
+              stackIn_43_2 = (0 != MouseWheelInput.field_a);
               stackIn_46_3 = false;
               stackIn_46_4 = 52;
               stackIn_47_5 = (el.field_c.field_J != 0);
@@ -2260,7 +2260,7 @@ public final class Lexicominos extends nk {
               stackIn_50_4 = bi.field_a;
               stackIn_50_5 = false;
               stackIn_50_6 = -95;
-              stackIn_51_7 = (ee.field_a != 0);
+              stackIn_51_7 = (MouseWheelInput.field_a != 0);
               stackIn_55_8 = (0 != el.field_c.field_J);
               stackIn_50_0[stackIn_50_1] = stackIn_50_2 + (stackIn_50_3 + ((BinaryBitmapFont) (Object) stackIn_50_4).a(ac.a(stackIn_50_5, stackIn_50_6, stackIn_51_7, stackIn_55_8), 254) * var7);
             }

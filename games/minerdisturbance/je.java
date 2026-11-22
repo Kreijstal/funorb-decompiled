@@ -2901,7 +2901,7 @@ final class je {
               if (field_I[var3_intLifetime2][var2Lifetime2].field_a) {
                 field_I[var3_intLifetime2][var2Lifetime2].field_s = -3;
               }
-              if (!oe.field_b &&
+              if (!MouseWheelInput.field_b &&
                 field_I[var3_intLifetime2][var2Lifetime2].field_U == 3) {
                 field_O.b(7, 0, var2Lifetime2, var3_intLifetime2);
               } else {

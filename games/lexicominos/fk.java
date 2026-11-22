@@ -51,7 +51,7 @@ class fk extends kb {
           }
           kf.f(1);
           bk.field_c = c.field_m;
-          ee.field_c = c.field_m;
+          MouseWheelInput.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "fk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

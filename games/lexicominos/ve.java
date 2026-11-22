@@ -210,7 +210,7 @@ abstract class ve {
               }
               fb.field_p = false;
               if (var6 != null) {
-                ee.a(var6, -11971, kk.c(-14047));
+                MouseWheelInput.a(var6, -11971, kk.c(-14047));
               }
               if (0 >= jd.field_c &&
                 !jl.field_c) {
@@ -421,7 +421,7 @@ abstract class ve {
         if (param0 != 25594) {
           return (String) null;
         }
-        if (ca.field_i == ee.field_c) {
+        if (ca.field_i == MouseWheelInput.field_c) {
           return qa.field_c.a(false);
         }
         return dd.field_d;

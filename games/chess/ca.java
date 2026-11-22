@@ -46,7 +46,7 @@ final class ca {
           }
           he.a(-108, (java.awt.Component) ((Object) param1));
           if (null != ii.field_L) {
-            ii.field_L.a((byte) 123, (java.awt.Component) ((Object) param1));
+            ii.field_L.attach((byte) 123, (java.awt.Component) ((Object) param1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

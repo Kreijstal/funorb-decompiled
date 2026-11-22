@@ -209,7 +209,7 @@ final class jj {
             if (oi.field_c == null) {
               if (ec.field_g) {
                 if (30000L < wd.d(-1322)) {
-                  re.field_j = jm.field_f;
+                  re.field_j = MouseWheelInput.field_f;
                 } else {
                   re.field_j = re.field_k;
                 }

@@ -68,7 +68,7 @@ final class wh implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 1) {
-            stackIn_4_0 = kf.a(param2, param1, true, 48);
+            stackIn_4_0 = MouseWheelInput.a(param2, param1, true, 48);
             return stackIn_4_0;
           }
           stackIn_2_0 = 61;

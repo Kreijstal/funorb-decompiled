@@ -55,7 +55,7 @@ final class ll {
               return stackIn_18_0;
             }
           }
-          stackIn_21_0 = ck.a(var3[var3.length - 1], (byte) 127);
+          stackIn_21_0 = MouseWheelInput.a(var3[var3.length - 1], (byte) 127);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -32,70 +32,70 @@ final class f {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (null == nl.field_g) {
+        if (null == MouseWheelInput.field_g) {
           return -1;
         }
         if (param2 == 1) {
           if (wk.field_h <= param0 &&
-            param0 < wk.field_h + nl.field_g.field_y &&
+            param0 < wk.field_h + MouseWheelInput.field_g.field_y &&
             param1 >= fo.field_b) {
-            if (fo.field_b + nl.field_g.field_v > param1) {
+            if (fo.field_b + MouseWheelInput.field_g.field_v > param1) {
               return 0;
             }
             if (param0 < rm.field_T) {
               return -1;
             }
-            if (param0 >= nl.field_g.field_y + rm.field_T) {
+            if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
               return -1;
             }
             if (param1 < mi.field_f) {
               return -1;
             }
-            if (nl.field_g.field_v + mi.field_f <= param1) {
+            if (MouseWheelInput.field_g.field_v + mi.field_f <= param1) {
               return -1;
             }
             return 1;
           }
           if (param0 >= rm.field_T &&
-            param0 < nl.field_g.field_y + rm.field_T &&
+            param0 < MouseWheelInput.field_g.field_y + rm.field_T &&
             param1 >= mi.field_f &&
-            nl.field_g.field_v + mi.field_f > param1) {
+            MouseWheelInput.field_g.field_v + mi.field_f > param1) {
             return 1;
           }
           return -1;
         }
         field_f = (cn) null;
         if (wk.field_h <= param0) {
-          if (param0 >= wk.field_h + nl.field_g.field_y) {
+          if (param0 >= wk.field_h + MouseWheelInput.field_g.field_y) {
             if (param0 < rm.field_T) {
               return -1;
             }
-            if (param0 >= nl.field_g.field_y + rm.field_T) {
+            if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
               return -1;
             }
             if (param1 < mi.field_f) {
               return -1;
             }
-            if (nl.field_g.field_v + mi.field_f > param1) {
+            if (MouseWheelInput.field_g.field_v + mi.field_f > param1) {
               return 1;
             }
             return -1;
           }
           if (param1 >= fo.field_b &&
-            fo.field_b + nl.field_g.field_v > param1) {
+            fo.field_b + MouseWheelInput.field_g.field_v > param1) {
             return 0;
           }
         }
         if (param0 < rm.field_T) {
           return -1;
         }
-        if (param0 >= nl.field_g.field_y + rm.field_T) {
+        if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
           return -1;
         }
         if (param1 < mi.field_f) {
           return -1;
         }
-        if (nl.field_g.field_v + mi.field_f <= param1) {
+        if (MouseWheelInput.field_g.field_v + mi.field_f <= param1) {
           return -1;
         }
         return 1;

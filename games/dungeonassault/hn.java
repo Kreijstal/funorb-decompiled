@@ -40,7 +40,7 @@ final class hn extends kl {
             field_t = -63;
           }
           gf.a();
-          nl.field_d = 0;
+          MouseWheelInput.field_d = 0;
           id.a(param0 ^ -439027613);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ek {
+abstract class MouseWheelInput {
     static int field_b;
     static mk field_d;
     static rk[] field_c;
@@ -9,7 +9,7 @@ abstract class ek {
     static String[] field_f;
     static String field_e;
 
-    abstract int a(byte param0);
+    abstract int pollRotation(byte param0);
 
     final static void a(int param0, int param1, byte param2) {
         if (gb.field_A == null ||
@@ -239,7 +239,7 @@ abstract class ek {
         eb.field_y = -2147483648;
     }
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
     final static boolean a(String param0, boolean param1) {
         String var2 = null;
@@ -303,7 +303,7 @@ abstract class ek {
           wb.a(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
           return;
         }
-        ek.a(90, -50, (byte) -48);
+        MouseWheelInput.a(90, -50, (byte) -48);
         wb.a(-param3 + param2, param1 - param3, param3 * 2 + param7 - param2, -param1 + param4 + param3 * 2, param3, param5, 170);
         wb.a(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
     }
@@ -318,7 +318,7 @@ abstract class ek {
         field_d = null;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
     static {
         field_d = new mk();

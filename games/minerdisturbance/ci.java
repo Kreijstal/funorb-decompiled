@@ -24,7 +24,7 @@ abstract class ci {
           gj.a(param1 ^ 2670, (java.awt.Component) ((Object) param0));
           vd.a((byte) -106, (java.awt.Component) ((Object) param0));
           if (null != pf.field_e) {
-            pf.field_e.a(1000, (java.awt.Component) ((Object) param0));
+            pf.field_e.detach(1000, (java.awt.Component) ((Object) param0));
           }
           if (param1 == 0) {
             return;

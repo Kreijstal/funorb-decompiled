@@ -87,9 +87,9 @@ final class he extends IntrusiveNode {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               vd.a((byte) 72, var14);
               if (var6_intLifetime1 != 0) {
-                ij.a(de.field_b, var6_intLifetime1, qe.field_i, 0, ed.field_b, kf.field_a);
+                ij.a(de.field_b, var6_intLifetime1, qe.field_i, 0, ed.field_b, MouseWheelInput.field_a);
               } else {
-                ij.a(de.field_b, var6_intLifetime1, qe.field_i, param0 ^ 1, ed.field_b, kf.field_a);
+                ij.a(de.field_b, var6_intLifetime1, qe.field_i, param0 ^ 1, ed.field_b, MouseWheelInput.field_a);
               }
             }
             bj.a((byte) -125, var5);

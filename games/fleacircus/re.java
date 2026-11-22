@@ -10,7 +10,7 @@ final class re {
         if (param0 != -17634) {
           return;
         }
-        jg.field_d = true;
+        MouseWheelInput.field_d = true;
         fk.field_D = true;
         nb.field_a.i(-106);
         SecondaryNodeDeque.a(dh.field_c, false, false);

@@ -90,7 +90,7 @@ final class bh extends nl {
             return false;
           }
           for (var3_int = 0; param1.length() > var3_int; var3_int++) {
-            if (!ee.a(-125, param1.charAt(var3_int))) {
+            if (!MouseWheelInput.a(-125, param1.charAt(var3_int))) {
               return false;
             }
           }

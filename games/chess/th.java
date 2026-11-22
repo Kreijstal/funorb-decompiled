@@ -27,7 +27,7 @@ final class th implements ui {
     }
 
     final static rk b(int param0) {
-        rk var1 = new rk(cd.field_p, ek.field_a, be.field_a[0], a.field_c[param0], wm.field_b[0], b.field_c[0], vk.field_d[0], uh.field_r);
+        rk var1 = new rk(cd.field_p, MouseWheelInput.field_a, be.field_a[0], a.field_c[param0], wm.field_b[0], b.field_c[0], vk.field_d[0], uh.field_r);
         ch.k(4210752);
         return var1;
     }

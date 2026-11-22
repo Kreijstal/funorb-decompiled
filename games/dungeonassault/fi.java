@@ -60,7 +60,7 @@ final class fi extends qe {
         var6 = DungeonAssault.field_K;
         for (var4 = 0; var4 < nk.field_Fb.length; var4++) {
           var5 = this.a(false, var4);
-          if (nl.a(var4, (byte) -124) &&
+          if (MouseWheelInput.a(var4, (byte) -124) &&
             param2 >= this.a((byte) -4, var4) &&
             param2 < this.a(var4, (byte) -93) &&
             param0 >= var5 &&
@@ -216,7 +216,7 @@ final class fi extends qe {
         this.field_e.b(0, 0);
         am.field_a.h(320 - am.field_a.field_E / 2, 48);
         for (var2 = 0; var2 < -1 + nk.field_Jb.field_i; var2++) {
-          if (nl.a(var2, (byte) -124)) {
+          if (MouseWheelInput.a(var2, (byte) -124)) {
             stackIn_9_1 = (var2 == nk.field_Jb.field_b) && (!kn.field_e);
             this.c(stackIn_9_1, -33, var2);
           }
@@ -227,7 +227,7 @@ final class fi extends qe {
           fi.e();
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < -1 + nk.field_Jb.field_i; var2Lifetime1++) {
-          if (nl.a(var2Lifetime1, (byte) -124)) {
+          if (MouseWheelInput.a(var2Lifetime1, (byte) -124)) {
             stackIn_22_1 = 1;
             stackIn_22_2 = var2Lifetime1;
             if (nk.field_Jb.field_b == var2Lifetime1 &&
@@ -393,7 +393,7 @@ final class fi extends qe {
               if (var1 < 0) {
                 var1 = nk.field_Jb.field_i - 1;
               }
-              if (!nl.a(var1, (byte) -124)) {
+              if (!MouseWheelInput.a(var1, (byte) -124)) {
                 continue;
               }
               break;
@@ -407,7 +407,7 @@ final class fi extends qe {
               if (nk.field_Jb.field_i <= var1Lifetime1) {
                 var1Lifetime1 = 0;
               }
-              if (!nl.a(var1Lifetime1, (byte) -124)) {
+              if (!MouseWheelInput.a(var1Lifetime1, (byte) -124)) {
                 continue;
               }
               break;
@@ -422,7 +422,7 @@ final class fi extends qe {
                 if (var1Lifetime2 < 0) {
                   var1Lifetime2 = -1 + nk.field_Jb.field_i + var1Lifetime2;
                 }
-                if (!nl.a(var1Lifetime2, (byte) -124)) {
+                if (!MouseWheelInput.a(var1Lifetime2, (byte) -124)) {
                   continue;
                 }
                 break;
@@ -439,7 +439,7 @@ final class fi extends qe {
                 if (var1Lifetime2Lifetime1 >= nk.field_Jb.field_i) {
                   var1Lifetime2Lifetime1 = var1Lifetime2Lifetime1 - (-1 + nk.field_Jb.field_i);
                 }
-                if (!nl.a(var1Lifetime2Lifetime1, (byte) -124)) {
+                if (!MouseWheelInput.a(var1Lifetime2Lifetime1, (byte) -124)) {
                   continue;
                 }
                 break;
@@ -520,7 +520,7 @@ final class fi extends qe {
         }
         var4 = nk.field_Fb[param2];
         if (nk.field_Jb.c(param1 ^ 176) &&
-          nl.a(param2, (byte) -124)) {
+          MouseWheelInput.a(param2, (byte) -124)) {
           if (var4 == 27) {
             kn.field_e = false;
           }

@@ -79,7 +79,7 @@ final class IntrusiveDeque {
           }
           return;
         }
-        if (nl.a(nk.field_Jb.field_b, (byte) -124)) {
+        if (MouseWheelInput.a(nk.field_Jb.field_b, (byte) -124)) {
           if (param0 != 20631) {
             field_b = 78;
             return;

@@ -1269,7 +1269,7 @@ final class c extends sc {
           }
           var2Lifetime161 = wm.a("howToFireChargeCannon", (byte) 30);
           if (var2Lifetime161 != null) {
-            ck.field_b = va.a(0, var2Lifetime161);
+            MouseWheelInput.field_b = va.a(0, var2Lifetime161);
           }
           var2Lifetime162 = wm.a("youAlreadyHaveChargeCannon", (byte) 50);
           if (null != var2Lifetime162) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ee {
+abstract class MouseWheelInput {
     static int[] field_b;
     static String[] field_g;
     static ki field_c;
@@ -67,12 +67,12 @@ abstract class ee {
         }
     }
 
-    abstract int c(int param0);
+    abstract int pollRotation(int param0);
 
     final static void b(int param0) {
         if (param0 != 95) {
           db var2 = (db) null;
-          ee.a((byte) -44, (db) null);
+          MouseWheelInput.a((byte) -44, (db) null);
         }
     }
 
@@ -111,7 +111,7 @@ abstract class ee {
               var5Lifetime5 = var8;
               if (param1 != -11971) {
                 var6 = (db) null;
-                ee.a((byte) -4, (db) null);
+                MouseWheelInput.a((byte) -4, (db) null);
               }
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
@@ -181,7 +181,7 @@ abstract class ee {
             return;
           }
           if (param0 != -102) {
-            ee.a(31, '\177');
+            MouseWheelInput.a(31, '\177');
           }
           var2_int = (3 & param1.field_s) + param1.field_p;
           var3 = (param1.field_w & 3) + param1.field_u;
@@ -220,9 +220,9 @@ abstract class ee {
         }
     }
 
-    abstract void a(boolean param0, java.awt.Component param1);
+    abstract void attach(boolean param0, java.awt.Component param1);
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
     final static String a(byte param0, String param1, String param2, sh param3) {
         RuntimeException var4 = null;
@@ -244,7 +244,7 @@ abstract class ee {
           }
           if (param0 < 123) {
             var5 = (java.applet.Applet) null;
-            ee.a((String) null, 36, (java.applet.Applet) null);
+            MouseWheelInput.a((String) null, 36, (java.applet.Applet) null);
           }
           stackIn_7_0 = param2 + " - " + param3.a(false) + "%";
           return stackIn_7_0;

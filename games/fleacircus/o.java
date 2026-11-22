@@ -90,7 +90,7 @@ final class o extends wj {
         if (param0 != 39) {
           field_m = 21;
         }
-        return jg.field_d;
+        return MouseWheelInput.field_d;
     }
 
     final static boolean a(boolean param0, String param1) {

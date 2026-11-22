@@ -1050,7 +1050,7 @@ final class da extends ue {
           return;
         }
         try {
-          jm.field_d.a((qm) (mk.field_b), (byte) -50);
+          MouseWheelInput.field_d.a((qm) (mk.field_b), (byte) -50);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "da.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

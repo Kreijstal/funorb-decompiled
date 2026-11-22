@@ -6,7 +6,7 @@ final class ui extends oh {
     static boolean[] field_mb;
     static ae field_kb;
     static String field_lb;
-    static jg field_pb;
+    static MouseWheelInput field_pb;
     static uj field_nb;
 
     public static void e(boolean param0) {

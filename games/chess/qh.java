@@ -283,7 +283,7 @@ final class qh {
           }
           ca.field_j = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ob.field_C);
           ai.field_j = ob.field_C - (var3_intLifetime1 >> 1);
-          in.field_i = (kl.field_i + ek.field_b << 1) * ol.field_R.field_f;
+          in.field_i = (kl.field_i + MouseWheelInput.field_b << 1) * ol.field_R.field_f;
           for (var4Lifetime2 = 0; ka.field_g.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = in.field_i;
             if (cb.field_k[var4Lifetime2] < 0) {
@@ -301,13 +301,13 @@ final class qh {
             var6Lifetime1 = cb.field_k[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = kn.a(true, param0, ka.field_g[var4Lifetime3]);
-              var5Lifetime3 = var5Lifetime3 + ek.field_b;
+              var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_b;
               var8Lifetime1 = ob.field_C - (var7Lifetime2 >> 1);
               cb.field_h[var4Lifetime3] = new int[4];
               cb.field_h[var4Lifetime3][0] = -m.field_d + var8Lifetime1;
               cb.field_h[var4Lifetime3][1] = var5Lifetime3;
               cb.field_h[var4Lifetime3][2] = (m.field_d << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + ((kl.field_i << 1) - (-ek.field_b - vh.field_c));
+              var5Lifetime3 = var5Lifetime3 + ((kl.field_i << 1) - (-MouseWheelInput.field_b - vh.field_c));
               cb.field_h[var4Lifetime3][3] = vh.field_c + (kl.field_i << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + fd.field_n;

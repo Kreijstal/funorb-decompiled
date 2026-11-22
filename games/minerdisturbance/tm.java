@@ -530,7 +530,7 @@ final class tm extends IntrusiveNode {
           var12Lifetime2 = 0;
           if (this.field_B) {
             var12Lifetime2 = mm.field_a.field_I + mm.field_a.field_E;
-            mm.field_a.a(oe.field_f, var10Lifetime2, var11Lifetime2, 1, 8063303);
+            mm.field_a.a(MouseWheelInput.field_f, var10Lifetime2, var11Lifetime2, 1, 8063303);
           }
           var13Lifetime1 = 0;
           if (param0 != 94) {

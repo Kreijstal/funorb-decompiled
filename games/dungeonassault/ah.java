@@ -16,17 +16,17 @@ final class ah {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = DungeonAssault.field_K;
-        if (nl.field_d < 0) {
+        if (MouseWheelInput.field_d < 0) {
           return;
         }
         var3 = param1 - 135;
         var4 = -35 + param2;
         var5 = 256;
-        if (nl.field_d < 75) {
-          var5 = (nl.field_d << 8) / 75;
+        if (MouseWheelInput.field_d < 75) {
+          var5 = (MouseWheelInput.field_d << 8) / 75;
         }
-        if (nl.field_d > 200) {
-          var5 = (-nl.field_d + 250 << 8) / 50;
+        if (MouseWheelInput.field_d > 200) {
+          var5 = (-MouseWheelInput.field_d + 250 << 8) / 50;
         }
         if (param0) {
           ah.clearStaticReferences(-19);
@@ -39,12 +39,12 @@ final class ah {
           gf.b(0, 0, gf.field_i, gf.field_c, 0, 256 - var5);
         }
         ti.c(true);
-        if (nl.field_d < 150) {
+        if (MouseWheelInput.field_d < 150) {
           hc.field_a.a(var3, var4);
         } else {
           dm.field_g.d(15 + var3, var4 + 10, var5);
         }
-        var6 = -125 + nl.field_d;
+        var6 = -125 + MouseWheelInput.field_d;
         if (var6 > 0 &&
           var6 < 50) {
           if (20 <= var6) {
@@ -59,7 +59,7 @@ final class ah {
             ie.field_l.b(var3, var4, var7);
           }
         }
-        var6Lifetime1 = -140 + nl.field_d;
+        var6Lifetime1 = -140 + MouseWheelInput.field_d;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {

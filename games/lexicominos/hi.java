@@ -105,7 +105,7 @@ final class hi {
               var2 = 0;
             }
           }
-          for (var3 = 0; ee.field_g.length > var3; var3++) {
+          for (var3 = 0; MouseWheelInput.field_g.length > var3; var3++) {
             var4 = ni.field_a[var3];
             if (var4 >= 0) {
               if (bc.field_H.field_d == var4) {
@@ -116,7 +116,7 @@ final class hi {
             } else {
               var5 = ea.field_b;
             }
-            var6 = ee.field_g[var3];
+            var6 = MouseWheelInput.field_g[var3];
             if (sh.field_a == 2 &&
               var2 == 1) {
               if (hf.field_b.length > ed.field_t.length) {

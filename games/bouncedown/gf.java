@@ -16,7 +16,7 @@ final class gf extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 10) {
-            stackIn_4_0 = kf.a(10, param1, true, 48);
+            stackIn_4_0 = MouseWheelInput.a(10, param1, true, 48);
             return stackIn_4_0;
           }
           stackIn_2_0 = 107;

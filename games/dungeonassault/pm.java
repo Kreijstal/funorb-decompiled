@@ -21,16 +21,16 @@ final class pm extends IntrusiveNode {
         field_o = null;
     }
 
-    final static nl a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
-          nl stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 <= 83) {
             field_l = (ad) null;
           }
           try {
-            stackIn_3_0 = (nl) (Class.forName("sk").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

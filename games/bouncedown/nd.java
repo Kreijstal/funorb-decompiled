@@ -60,7 +60,7 @@ final class nd extends lc implements rc {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!j.a((char) var3, (byte) 56) &&
-              !kf.a(-49, (char) var3)) {
+              !MouseWheelInput.a(-49, (char) var3)) {
               return true;
             }
           }

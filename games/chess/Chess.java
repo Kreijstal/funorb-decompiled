@@ -984,7 +984,7 @@ public final class Chess extends gb {
         bg.field_Z.e();
         wb.h(0, 0, wb.field_h, wb.field_c, -1 + wb.field_c / 2, 1449732);
         ph.field_j.b(48);
-        ek.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
+        MouseWheelInput.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
         IsaacCipher.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
     }
 
@@ -1561,7 +1561,7 @@ public final class Chess extends gb {
         GameAppletShell.a((byte) -53);
         qk.a(true);
         rl.b(1);
-        ek.clearStaticReferences((byte) 30);
+        MouseWheelInput.clearStaticReferences((byte) 30);
         wb.d();
         ResourceArchive.d((byte) 73);
         lh.clearStaticReferences();
@@ -1931,7 +1931,7 @@ public final class Chess extends gb {
             mm.field_d = null;
           }
           var6 = (km[][]) null;
-          BoundedRandomAccessFile.a(rl.field_a, ek.field_f, -109, true, f.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
+          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, f.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
           ig.field_h = wf.field_Q;
           tk.b(200, 93);
           hm.field_e = null;

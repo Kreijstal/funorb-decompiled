@@ -104,7 +104,7 @@ final class id implements Iterator {
           var3Lifetime1 = sd.field_F[9] >> 8;
           var4 = sd.field_F[10] >> 8;
           var5Lifetime1 = sd.field_F[11] >> 8;
-          var6Lifetime1 = nl.field_d << 4;
+          var6Lifetime1 = MouseWheelInput.field_d << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = oj.a(var6Lifetime1, (byte) 51) >> 8;
           var9Lifetime1 = jg.a(8191, var6Lifetime1) >> 8;

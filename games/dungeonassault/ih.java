@@ -332,7 +332,7 @@ final class ih extends qe {
         }
         regionExit1: {
           if (hh.field_s != sn.field_b) {
-            if (hh.field_s == nl.field_a) {
+            if (hh.field_s == MouseWheelInput.field_a) {
               this.d(param0 + 26693);
               this.a((byte) -125, true);
             } else {
@@ -513,7 +513,7 @@ final class ih extends qe {
         wd.field_f = new nn(false);
         ud.field_t = new ed(8, 90, 180, 382);
         sn.field_b = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
-        nl.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, be.field_r.toUpperCase());
+        MouseWheelInput.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, be.field_r.toUpperCase());
         NetworkGameClient.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
         hl.field_b = sj.a(22, param0 ^ 38, 65, uj.field_c, wd.field_f);
         hi.field_a = sj.a(55, 109, 65, gd.field_E, wd.field_f);
@@ -522,7 +522,7 @@ final class ih extends qe {
         am.field_f = sj.a(148, param0 + 54, param0, pk.field_o, wd.field_f);
         this.field_p.a(ud.field_t, false);
         this.field_p.a(sn.field_b, false);
-        this.field_p.a(nl.field_a, false);
+        this.field_p.a(MouseWheelInput.field_a, false);
         this.field_p.a(NetworkGameClient.field_y, false);
         this.field_p.a(hl.field_b, false);
         this.field_p.a(hi.field_a, false);
@@ -541,7 +541,7 @@ final class ih extends qe {
         kl.field_h.field_n = (en) ((Object) new e(jk.a(new String[]{dj.field_c}, ib.field_c, param0 ^ 30561)));
         cd.field_d.field_n = (en) ((Object) new e(jk.a(new String[]{pm.field_n}, ib.field_c, 30496)));
         am.field_f.field_n = (en) ((Object) new e(jk.a(new String[]{nf.field_x}, ib.field_c, 30496)));
-        nl.field_a.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
+        MouseWheelInput.field_a.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
         sn.field_b.field_n = (en) ((Object) new e((String) null, ud.field_u, oi.field_M));
         this.a((byte) -112, -1);
     }

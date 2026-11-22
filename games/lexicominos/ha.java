@@ -280,7 +280,7 @@ final class ha {
           sg.a((java.awt.Component) ((Object) param0), 2);
           bi.a((byte) 104, (java.awt.Component) ((Object) param0));
           if (null != rk.field_c) {
-            rk.field_c.a(true, (java.awt.Component) ((Object) param0));
+            rk.field_c.attach(true, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

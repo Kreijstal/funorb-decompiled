@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jg {
+abstract class MouseWheelInput {
     static int[] field_b;
     static String field_a;
     static int field_e;
@@ -9,19 +9,19 @@ abstract class jg {
     static dd field_f;
     static String field_c;
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
     final static int c(int param0) {
         if (param0 != 24178) {
-          jg.c(61);
+          MouseWheelInput.c(61);
           return em.field_d;
         }
         return em.field_d;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void detach(byte param0, java.awt.Component param1);
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
     final static byte[] a(boolean param0, Object param1, boolean param2) {
         byte[] var3 = null;
@@ -50,7 +50,7 @@ abstract class jg {
             return stackIn_6_0;
           }
           if (param0) {
-            jg.a(-40);
+            MouseWheelInput.a(-40);
           }
           if (!(param1 instanceof hd)) {
             throw new IllegalArgumentException();
@@ -80,7 +80,7 @@ abstract class jg {
           field_b = null;
           return;
         }
-        jg.a(-122);
+        MouseWheelInput.a(-122);
         field_a = null;
         field_f = null;
         field_b = null;

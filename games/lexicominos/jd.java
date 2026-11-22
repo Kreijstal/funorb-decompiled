@@ -25,7 +25,7 @@ final class jd {
           r.a((java.awt.Component) ((Object) param0), 20);
           ph.a((java.awt.Component) ((Object) param0), 123);
           if (null != rk.field_c) {
-            rk.field_c.a(3, (java.awt.Component) ((Object) param0));
+            rk.field_c.detach(3, (java.awt.Component) ((Object) param0));
           }
           if (param1 == 160) {
             return;

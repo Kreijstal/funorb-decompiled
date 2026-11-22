@@ -234,7 +234,7 @@ final class kl extends pm {
         var7 = Math.pow(0.5, (double)var2);
         for (var9 = 0; var4 > var9; var9++) {
           if (this.field_P[var9] > 0) {
-            ck.a(-1942300510, this.field_Q[var9], this.field_T[var9], this.field_S[var9]);
+            MouseWheelInput.a(-1942300510, this.field_Q[var9], this.field_T[var9], this.field_S[var9]);
             var10 = this.field_O[var9];
             var12 = this.field_I[var9];
             var14 = this.field_M[var9];

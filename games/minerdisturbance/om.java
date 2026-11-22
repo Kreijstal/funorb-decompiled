@@ -37,12 +37,12 @@ final class om {
         cg.field_C = false;
         ce.field_c = null;
         if (param0 == -22126) {
-          oe.field_g = null;
+          MouseWheelInput.field_g = null;
           field_f = null;
           return;
         }
         field_g = 40;
-        oe.field_g = null;
+        MouseWheelInput.field_g = null;
         field_f = null;
     }
 

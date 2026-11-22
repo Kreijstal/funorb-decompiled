@@ -19,18 +19,18 @@ final class bb extends qf implements Cloneable {
           var8 = (param4 << 4) + (param3 << 3);
           var9 = param2 * 4096 / 24;
           var10 = (int)(1024.0 * Math.random() - 512.0);
-          jm.field_i.a(384, 576, var7, var8, var10, var9);
+          MouseWheelInput.field_i.a(384, 576, var7, var8, var10, var9);
           return;
         }
         if (24 != param2) {
-          jm.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
+          MouseWheelInput.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
           return;
         }
         if (param3 == 24) {
-          jm.field_i.a(param1, -param3 + param4);
+          MouseWheelInput.field_i.a(param1, -param3 + param4);
           return;
         }
-        jm.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
+        MouseWheelInput.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
     }
 
     bb(f param0) {

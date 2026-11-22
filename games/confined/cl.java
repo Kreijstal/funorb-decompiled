@@ -352,7 +352,7 @@ final class cl extends ee {
                     param1.field_cb = true;
                     kc.a(ah.field_Z, (pm) (this), 119, param1.field_nb);
                     if (param1.field_nb) {
-                      pk.a((byte) 105, b.a(new String[]{ek.field_k}, ck.field_b, 1177));
+                      pk.a((byte) 105, b.a(new String[]{ek.field_k}, MouseWheelInput.field_b, 1177));
                       param1.field_nb = false;
                       this.d(10797);
                     } else {

@@ -49,7 +49,7 @@ final class h {
           var17 = var16;
           var17.position = -2 + param0.length;
           mg.field_a = var17.readUnsignedShort((byte) -7);
-          jm.field_a = new int[mg.field_a];
+          MouseWheelInput.field_a = new int[mg.field_a];
           uo.field_k = new int[mg.field_a];
           PacketBuffer.field_g = new byte[mg.field_a][];
           rh.field_a = new boolean[mg.field_a];
@@ -67,7 +67,7 @@ final class h {
             uo.field_k[var4] = var16.readUnsignedShort((byte) -7);
           }
           for (var4Lifetime1 = 0; mg.field_a > var4Lifetime1; var4Lifetime1++) {
-            jm.field_a[var4Lifetime1] = var17.readUnsignedShort((byte) -7);
+            MouseWheelInput.field_a[var4Lifetime1] = var17.readUnsignedShort((byte) -7);
           }
           for (var4Lifetime2 = 0; mg.field_a > var4Lifetime2; var4Lifetime2++) {
             uo.field_l[var4Lifetime2] = var17.readUnsignedShort((byte) -7);

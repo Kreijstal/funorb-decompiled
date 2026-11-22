@@ -3,14 +3,14 @@
  */
 final class hg extends al {
     static int field_l;
-    static kf field_k;
+    static MouseWheelInput field_k;
     static eh field_j;
 
     final static void a(String param0, int param1, float param2) {
         try {
           q.field_I = param2;
           if (param1 >= -6) {
-            field_k = (kf) null;
+            field_k = (MouseWheelInput) null;
           }
           ea.field_c = param0;
         } catch (RuntimeException runtimeException) {

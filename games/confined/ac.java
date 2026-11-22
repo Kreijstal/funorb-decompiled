@@ -43,7 +43,7 @@ final class ac {
           if (null == jc.field_c) {
             return;
           }
-          jc.field_c.a((java.awt.Component) ((Object) param0), 4);
+          jc.field_c.attach((java.awt.Component) ((Object) param0), 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

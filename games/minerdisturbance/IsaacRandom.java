@@ -37,7 +37,7 @@ final class IsaacRandom {
           if (11 == fh.field_b) {
             pk.b(114);
           }
-          mn.a((byte) -63, oe.field_d, ul.field_a, ResourceArchive.field_c);
+          mn.a((byte) -63, MouseWheelInput.field_d, ul.field_a, ResourceArchive.field_c);
           cl.a(param1, 0, 0, 310);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

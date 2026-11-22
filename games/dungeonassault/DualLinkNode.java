@@ -93,7 +93,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[4] = lc.a(-27711, new String[][]{eg.field_b, lp.field_q, lb.field_d, le.field_c});
         le.field_b[5] = lc.a(-27711, new String[][]{bn.field_m, lp.field_q, ka.field_d});
         le.field_b[6] = lc.a(-27711, new String[][]{rl.field_i, lb.field_d, le.field_c});
-        le.field_b[7] = lc.a(-27711, new String[][]{tp.field_C, lp.field_F, nl.field_f, field_j});
+        le.field_b[7] = lc.a(-27711, new String[][]{tp.field_C, lp.field_F, MouseWheelInput.field_f, field_j});
         le.field_b[8] = lc.a(-27711, new String[][]{bb.field_t, ka.field_d});
         le.field_b[9] = lc.a(-27711, new String[][]{eh.field_e, bk.field_f});
         le.field_b[10] = lc.a(-27711, new String[][]{hj.field_O});

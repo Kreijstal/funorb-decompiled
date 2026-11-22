@@ -21,7 +21,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         if (c.field_j != this ||
-          ee.field_d) {
+          MouseWheelInput.field_d) {
           return;
         }
         try {
@@ -145,7 +145,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (c.field_j == this &&
-            !ee.field_d) {
+            !MouseWheelInput.field_d) {
             rf.field_a = 4000L + rf.c(0);
             return;
           }
@@ -247,10 +247,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (ee.field_d) {
+            if (MouseWheelInput.field_d) {
               return;
             }
-            ee.field_d = true;
+            MouseWheelInput.field_d = true;
           }
           if (pg.field_b != null) {
             pg.field_b.destroy();
@@ -308,7 +308,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (this == c.field_j &&
-            !ee.field_d) {
+            !MouseWheelInput.field_d) {
             dl.field_b = true;
             if (eh.field_a &&
               -mk.field_j + rf.c(0) > 1000L) {
@@ -444,7 +444,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == c.field_j &&
-            !ee.field_d) {
+            !MouseWheelInput.field_d) {
             rf.field_a = rf.c(0);
             ge.a(0, 5000L);
             TriangleMesh.field_n = null;

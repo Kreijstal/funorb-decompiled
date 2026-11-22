@@ -60,7 +60,7 @@ final class ka {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (ee.field_c == ca.field_i) {
+          if (MouseWheelInput.field_c == ca.field_i) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }

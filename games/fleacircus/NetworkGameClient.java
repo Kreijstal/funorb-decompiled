@@ -96,7 +96,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ah.a(-1);
         }
         if (ui.field_pb != null) {
-          al.field_f = ui.field_pb.b(0);
+          al.field_f = ui.field_pb.pollRotation(0);
         }
         if (qh.j(32391)) {
           var3 = bm.f((byte) 85) * 1200;
@@ -224,7 +224,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           BoundedRandomAccessFile.a(kc.field_d, 0)) {
           l.a((byte) -56);
           sd.clearStaticReferences((byte) -63);
-          qj.field_I = jg.field_a;
+          qj.field_I = MouseWheelInput.field_a;
           tb.field_c = false;
           oh.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, BoundedRandomAccessFile.field_d);
           if (of.field_i ||
@@ -581,7 +581,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         wc.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
         ResourceArchive.a(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
         vg.b((byte) 32);
-        ui.field_pb = of.a(-21814);
+        ui.field_pb = of.createMouseWheelInput(-21814);
         aj.a(0, ol.field_e);
         bm.field_M = param5;
         ll.field_s = param1;

@@ -168,17 +168,17 @@ final class pa {
             if (sj.field_f != null &&
               sj.field_f.field_f) {
               eh.a(true);
-              kf.field_b.b(new nh(kf.field_b, jb.field_c), false);
+              MouseWheelInput.field_b.b(new nh(MouseWheelInput.field_b, jb.field_c), false);
             }
             return;
           }
           if (param0 != -65) {
             pa.clearStaticReferences(110);
           }
-          kf.field_b.a(aj.field_f, true, true, kl.field_t);
-          kf.field_b.d((byte) 120);
+          MouseWheelInput.field_b.a(aj.field_f, true, true, kl.field_t);
+          MouseWheelInput.field_b.d((byte) 120);
           while (q.g((byte) -15)) {
-            kf.field_b.a((byte) -90, lh.field_f, gk.field_d);
+            MouseWheelInput.field_b.a((byte) -90, lh.field_f, gk.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

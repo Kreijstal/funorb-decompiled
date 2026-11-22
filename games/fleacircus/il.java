@@ -30,14 +30,14 @@ final class il {
           gb.e(244, param0, 367, 141, 0);
           if (null == wa.field_k) {
             if (qj.field_H != null) {
-              qj.field_H.a(jg.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              qj.field_H.a(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = wa.field_k[ql.field_o];
           if (var6 == null) {
             if (qj.field_H != null) {
-              qj.field_H.a(jg.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              qj.field_H.a(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.d(245, 199);

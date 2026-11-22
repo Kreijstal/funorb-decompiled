@@ -505,18 +505,18 @@ final class ik extends kn implements be, sh, f {
             var6 = ne.field_K[var3];
             if (ti.field_M == 2 &&
               var2 == 1) {
-              if (oe.field_g.length >= ce.field_c.length) {
-                stackIn_19_0 = oe.field_g.length;
+              if (MouseWheelInput.field_g.length >= ce.field_c.length) {
+                stackIn_19_0 = MouseWheelInput.field_g.length;
               } else {
                 stackIn_19_0 = ce.field_c.length;
               }
               var7 = stackIn_19_0;
               if (var3 >= 6 &&
                 var7 + 6 > var3) {
-                if (-var7 + oe.field_g.length + (var3 - 6) < 0) {
+                if (-var7 + MouseWheelInput.field_g.length + (var3 - 6) < 0) {
                   stackIn_25_0 = "";
                 } else {
-                  stackIn_25_0 = oe.field_g[oe.field_g.length - 6 + var3 - var7];
+                  stackIn_25_0 = MouseWheelInput.field_g[MouseWheelInput.field_g.length - 6 + var3 - var7];
                 }
                 var6 = stackIn_25_0;
               }

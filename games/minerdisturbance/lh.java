@@ -108,11 +108,11 @@ final class lh {
           return new byte[param1];
         }
         if (qh.field_e > 0) {
-          fieldTemp$24 = oe.field_e;
+          fieldTemp$24 = MouseWheelInput.field_e;
           fieldTemp$25 = qh.field_e - 1;
           qh.field_e = qh.field_e - 1;
           var2_ref_byte__Lifetime1 = fieldTemp$24[fieldTemp$25];
-          oe.field_e[qh.field_e] = null;
+          MouseWheelInput.field_e[qh.field_e] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 != 5000) {

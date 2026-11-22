@@ -240,7 +240,7 @@ final class h extends ee {
           oi var3 = (oi) null;
           this.a((mn) null, -0.7945570901746162, -12, (vg) null, (oi) null);
         }
-        ka var2 = this.a((byte) -116, ck.field_a, 2.0);
+        ka var2 = this.a((byte) -116, MouseWheelInput.field_a, 2.0);
         var2.field_M.field_w = this.field_C * 4.0;
         this.field_A.field_B.field_Nb[this.field_bb] = null;
         kc.a(db.field_u, (pm) (this), param0 - 26281, false);

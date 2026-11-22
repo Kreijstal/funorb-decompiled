@@ -46,7 +46,7 @@ final class GzipDecompressor {
 
     final static void a(byte param0) {
         uo.field_i = new dc();
-        jm.field_d.a((qm) (uo.field_i), (byte) -50);
+        MouseWheelInput.field_d.a((qm) (uo.field_i), (byte) -50);
         if (param0 != 63) {
           field_d = (String) null;
         }

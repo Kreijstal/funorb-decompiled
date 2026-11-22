@@ -167,7 +167,7 @@ abstract class GameClient extends AppletShell {
           pa.a((byte) -65);
         }
         if (hg.field_k != null) {
-          va.field_a = hg.field_k.a(-83);
+          va.field_a = hg.field_k.pollRotation(-83);
         }
         if (ej.b(-4)) {
           var3 = 1200 * mg.f(-118);
@@ -439,7 +439,7 @@ abstract class GameClient extends AppletShell {
         pa.a(this.field_r, this.field_v, param6, this.field_D, this.field_u, this.field_m, 25342, 5000, this.field_x, this.field_q, param3, ck.field_e, 5000, Slime.field_a);
         rk.a(param3, this.field_q, this.field_r, 0, this.field_v, Slime.field_a, ck.field_e, this.field_u, this.field_x);
         PacketBuffer.g(param5 - 8717);
-        hg.field_k = ek.c(0);
+        hg.field_k = ek.createMouseWheelInput(0);
         l.a(0, ch.field_h);
         lg.field_a = param0;
         ne.field_n = param1;

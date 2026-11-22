@@ -176,7 +176,7 @@ final class of {
             for (var18 = 0; 3 > var18; var18++) {
               gd.field_m[var18] = gd.field_m[var18] + in.field_b[var15][var18];
             }
-            ck.a(qj.field_c, 109, false, gd.field_m, false, true, var17Lifetime1);
+            MouseWheelInput.a(qj.field_c, 109, false, gd.field_m, false, true, var17Lifetime1);
             wl.a(var8Lifetime1, 126, var14, var12Lifetime1, var9Lifetime1, var17Lifetime1, var7Lifetime1, var13Lifetime1);
           }
           return;

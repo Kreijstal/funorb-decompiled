@@ -11,7 +11,7 @@ final class dg {
         if (bk.field_c == ca.field_i) {
           return ce.field_d;
         }
-        if (ee.field_c == ca.field_i) {
+        if (MouseWheelInput.field_c == ca.field_i) {
           return ef.field_b;
         }
         if (!qa.field_c.b(12)) {

@@ -186,9 +186,9 @@ final class jo extends pn implements Cloneable {
           if (null == ab.field_D) {
             dupTemp$0 = q.field_a[var10.field_u].field_e;
             dupTemp$0[this.field_n] = dupTemp$0[this.field_n] + 1;
-            if (tm.field_e > jm.field_b) {
+            if (tm.field_e > MouseWheelInput.field_b) {
               rl.field_h = 1 << var11.field_u;
-              jm.field_b = tm.field_e;
+              MouseWheelInput.field_b = tm.field_e;
             } else {
               rl.field_h = rl.field_h | 1 << var11.field_u;
             }

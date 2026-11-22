@@ -118,7 +118,7 @@ final class kp extends f implements Cloneable {
         if (0 > var7) {
           var7 = this.field_o;
         } else {
-          if (!jm.field_j) {
+          if (!MouseWheelInput.field_j) {
             var7 = this.field_o;
           }
         }

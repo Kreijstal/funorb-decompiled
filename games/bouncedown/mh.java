@@ -259,7 +259,7 @@ abstract class mh extends wk {
           le.a(-1, (java.awt.Component) ((Object) param0));
           ka.a((java.awt.Component) ((Object) param0), (byte) -80);
           if (null != hg.field_k) {
-            hg.field_k.a(55, (java.awt.Component) ((Object) param0));
+            hg.field_k.detach(55, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "mh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

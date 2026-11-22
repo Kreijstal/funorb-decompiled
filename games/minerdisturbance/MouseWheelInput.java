@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oe {
+abstract class MouseWheelInput {
     static boolean field_a;
     static String field_c;
     static byte[][] field_e;
@@ -10,7 +10,7 @@ abstract class oe {
     static float field_d;
     static String[] field_g;
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
     final static void a(boolean param0) {
         ef.field_a = 0;
@@ -19,7 +19,7 @@ abstract class oe {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
     public static void clearStaticReferences(byte param0) {
         if (param0 <= 103) {
@@ -31,7 +31,7 @@ abstract class oe {
         field_f = null;
     }
 
-    abstract int a(byte param0);
+    abstract int pollRotation(byte param0);
 
     static {
         field_c = "Login: ";

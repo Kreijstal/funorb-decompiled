@@ -119,7 +119,7 @@ final class wj extends kd {
         gb.field_d = false;
         ca.field_k = false;
         ni.a(param0 ^ -6357, -1);
-        ee.field_c = c.field_m;
+        MouseWheelInput.field_c = c.field_m;
         bk.field_c = c.field_m;
         if (param0 != -6399) {
           field_p = (String) null;

@@ -77,35 +77,35 @@ class id extends ik {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
             var4 = 3 + var3_int;
             ni.field_a = new int[var4];
-            ee.field_g = new String[var4];
+            MouseWheelInput.field_g = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               ni.field_a[var5] = -1;
             }
             ik.field_g = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              ee.field_g[var5] = ug.field_r[var5];
+              MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
-            ee.field_g[var4 - 3] = "";
-            ee.field_g[-2 + var4] = l.field_E;
+            MouseWheelInput.field_g[var4 - 3] = "";
+            MouseWheelInput.field_g[-2 + var4] = l.field_E;
             ni.field_a[-2 + var4] = 0;
             ik.field_g[0] = 4;
-            ee.field_g[var4 - 1] = vk.field_d;
+            MouseWheelInput.field_g[var4 - 1] = vk.field_d;
             ni.field_a[-1 + var4] = 1;
             ik.field_g[1] = 5;
           } else if (sh.field_a == 1) {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
             var4 = var3_int + 2;
             ni.field_a = new int[var4];
-            ee.field_g = new String[var4];
+            MouseWheelInput.field_g = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               ni.field_a[var5] = -1;
             }
             ik.field_g = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              ee.field_g[var5] = ug.field_r[var5];
+              MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
-            ee.field_g[-2 + var4] = "";
-            ee.field_g[-1 + var4] = vk.field_d;
+            MouseWheelInput.field_g[-2 + var4] = "";
+            MouseWheelInput.field_g[-1 + var4] = vk.field_d;
             ni.field_a[-1 + var4] = 0;
             ik.field_g[0] = 5;
           } else if (sh.field_a != 2) {
@@ -117,32 +117,32 @@ class id extends ik {
               }
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
-              ee.field_g = new String[var4];
+              MouseWheelInput.field_g = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 ni.field_a[var5] = -1;
               }
               ik.field_g = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ee.field_g[var5] = ug.field_r[var5];
+                MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
-              ee.field_g[-2 + var4] = "";
-              ee.field_g[-1 + var4] = vk.field_d;
+              MouseWheelInput.field_g[-2 + var4] = "";
+              MouseWheelInput.field_g[-1 + var4] = vk.field_d;
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else if (sh.field_a == 4) {
               var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pj.field_B, nb.field_x);
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
-              ee.field_g = new String[var4];
+              MouseWheelInput.field_g = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 ni.field_a[var5] = -1;
               }
               ik.field_g = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                ee.field_g[var5] = ug.field_r[var5];
+                MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
-              ee.field_g[-2 + var4] = "";
-              ee.field_g[var4 - 1] = vk.field_d;
+              MouseWheelInput.field_g[-2 + var4] = "";
+              MouseWheelInput.field_g[var4 - 1] = vk.field_d;
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else {
@@ -152,19 +152,19 @@ class id extends ik {
               var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qj.field_db, nb.field_x);
               var4 = 3 + var3_int;
               ni.field_a = new int[var4];
-              ee.field_g = new String[var4];
+              MouseWheelInput.field_g = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 ni.field_a[var5] = -1;
               }
               ik.field_g = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ee.field_g[var5] = ug.field_r[var5];
+                MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
-              ee.field_g[-3 + var4] = "";
-              ee.field_g[var4 - 2] = hl.field_p;
+              MouseWheelInput.field_g[-3 + var4] = "";
+              MouseWheelInput.field_g[var4 - 2] = hl.field_p;
               ni.field_a[-2 + var4] = 0;
               ik.field_g[0] = 3;
-              ee.field_g[var4 - 1] = vk.field_d;
+              MouseWheelInput.field_g[var4 - 1] = vk.field_d;
               ni.field_a[-1 + var4] = 1;
               ik.field_g[1] = 5;
             }
@@ -215,23 +215,23 @@ class id extends ik {
             var6 = stackIn_32_0;
             var7 = var6 + 7 + var5;
             ni.field_a = new int[var7];
-            ee.field_g = new String[var7];
+            MouseWheelInput.field_g = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
               ni.field_a[var8] = -1;
             }
-            ee.field_g[1] = pf.field_l;
-            ee.field_g[0] = n.field_c;
+            MouseWheelInput.field_g[1] = pf.field_l;
+            MouseWheelInput.field_g[0] = n.field_c;
             ik.field_g = new int[2];
             ni.field_a[1] = 0;
             ik.field_g[1] = 2;
-            ee.field_g[5] = "";
-            ee.field_g[3] = pa.field_c;
+            MouseWheelInput.field_g[5] = "";
+            MouseWheelInput.field_g[3] = pa.field_c;
             ik.field_g[0] = 5;
-            ee.field_g[4] = sb.field_b;
+            MouseWheelInput.field_g[4] = sb.field_b;
             ni.field_a[3] = 1;
-            ee.field_g[2] = eg.field_F;
+            MouseWheelInput.field_g[2] = eg.field_F;
             for (var8Lifetime3 = 0; var5 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_39_0 = ee.field_g;
+              stackIn_39_0 = MouseWheelInput.field_g;
               stackIn_39_1 = 6 + var8Lifetime3;
               if (-var5 + var8Lifetime3 + hf.field_b.length < 0) {
                 stackIn_40_2 = "";
@@ -240,10 +240,10 @@ class id extends ik {
               }
               stackIn_39_0[stackIn_39_1] = stackIn_40_2;
             }
-            ee.field_g[6 + var5] = null;
+            MouseWheelInput.field_g[6 + var5] = null;
             ni.field_a[6 + var5] = -2;
             for (var8Lifetime4 = 0; var6 > var8Lifetime4; var8Lifetime4++) {
-              stackIn_45_0 = ee.field_g;
+              stackIn_45_0 = MouseWheelInput.field_g;
               stackIn_45_1 = var5 + (7 + var8Lifetime4);
               if (var8Lifetime4 >= nl.field_a.length) {
                 stackIn_46_2 = "";
@@ -257,8 +257,8 @@ class id extends ik {
           bc.field_H.field_h = ik.field_g.length;
           var3_intLifetime1 = 0;
           var4Lifetime1 = 114 / ((81 - param2) / 34);
-          for (var5Lifetime1 = 0; var5Lifetime1 < ee.field_g.length; var5Lifetime1++) {
-            stackIn_87_0 = ee.field_g[var5Lifetime1];
+          for (var5Lifetime1 = 0; var5Lifetime1 < MouseWheelInput.field_g.length; var5Lifetime1++) {
+            stackIn_87_0 = MouseWheelInput.field_g[var5Lifetime1];
             stackIn_88_1 = !(ni.field_a[var5Lifetime1] < 0);
             var6Lifetime1 = ii.a(stackIn_87_0, stackIn_88_1, 0);
             if (var6Lifetime1 > var3_intLifetime1) {
@@ -287,7 +287,7 @@ class id extends ik {
           me.field_v = -(var3_intLifetime1 >> 1) + uh.field_D;
           gd.field_o = -(var3_intLifetime1 >> 1) + uh.field_D + var3_intLifetime1;
           ph.field_b = (oh.field_b + we.field_l << 1) * bc.field_H.field_h;
-          for (var5Lifetime2 = 0; var5Lifetime2 < ee.field_g.length; var5Lifetime2++) {
+          for (var5Lifetime2 = 0; var5Lifetime2 < MouseWheelInput.field_g.length; var5Lifetime2++) {
             stackIn_112_0 = ph.field_b;
             if (ni.field_a[var5Lifetime2] < 0) {
               stackIn_113_1 = hc.field_fb;
@@ -297,15 +297,15 @@ class id extends ik {
             ph.field_b = stackIn_112_0 + stackIn_113_1;
           }
           rf.field_c = ij.field_p - (ph.field_b >> 1);
-          wd.field_a = new int[ee.field_g.length][];
+          wd.field_a = new int[MouseWheelInput.field_g.length][];
           var5Lifetime3 = 0;
           var6Lifetime3 = rf.field_c;
-          while (ee.field_g.length > var5Lifetime3) {
+          while (MouseWheelInput.field_g.length > var5Lifetime3) {
             var7Lifetime1 = ni.field_a[var5Lifetime3];
             if (var7Lifetime1 < 0) {
               var6Lifetime3 = var6Lifetime3 + hc.field_fb;
             } else {
-              var8Lifetime2 = ii.a(ee.field_g[var5Lifetime3], true, 0);
+              var8Lifetime2 = ii.a(MouseWheelInput.field_g[var5Lifetime3], true, 0);
               var9 = -(var8Lifetime2 >> 1) + uh.field_D;
               var6Lifetime3 = var6Lifetime3 + we.field_l;
               wd.field_a[var5Lifetime3] = new int[4];

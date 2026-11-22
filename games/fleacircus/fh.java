@@ -12,7 +12,7 @@ final class fh {
 
     final static void a(int param0) {
         ah.field_c = false;
-        jg.field_d = false;
+        MouseWheelInput.field_d = false;
         cg.a((byte) -105, -1);
         if (param0 == -55) {
           cb.field_v = ql.field_l;

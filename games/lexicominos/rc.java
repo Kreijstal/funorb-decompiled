@@ -33,10 +33,10 @@ final class rc {
             field_a = (sc) null;
           }
           var4 = rf.field_c;
-          while (ee.field_g.length > var3_int) {
+          while (MouseWheelInput.field_g.length > var3_int) {
             var5 = ni.field_a[var3_int];
             if (var5 >= 0) {
-              var6 = ii.a(ee.field_g[var3_int], true, 0);
+              var6 = ii.a(MouseWheelInput.field_g[var3_int], true, 0);
               var4 = var4 + we.field_l;
               var7 = -(var6 >> 1) + uh.field_D;
               if (sj.a(param2, (oh.field_b << 1) + fb.field_g, var4, var6 + (jh.field_e << 1), param0, true, -jh.field_e + var7)) {

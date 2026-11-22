@@ -138,7 +138,7 @@ final class ek {
     final static void a(byte param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!jg.field_d) {
+        if (!MouseWheelInput.field_d) {
           throw new IllegalStateException();
         }
         if (ok.field_x != null) {

@@ -28,7 +28,7 @@ public final class Confined extends i {
           ClientException.a(3);
           GameAppletShell.b(32575);
           pk.c(param0 - 13733);
-          ck.a((byte) 81);
+          MouseWheelInput.a((byte) 81);
           fn.a();
           mg.a((byte) -121);
           PacketBuffer.clearBufferStatics(param0 - 196);
@@ -1120,7 +1120,7 @@ public final class Confined extends i {
             di.field_a = fk.a(jd.field_b, "", "player-ambient").a();
             d.field_b = fk.a(jd.field_b, "", "wing-pod-ambient").a();
             ri.field_b = fk.a(jd.field_b, "", "player-explode").a();
-            ck.field_a = fk.a(jd.field_b, "", "wing-pod-explode").a();
+            MouseWheelInput.field_a = fk.a(jd.field_b, "", "wing-pod-explode").a();
             ne.field_b = fk.a(jd.field_b, "", "boss-on-fire").a();
             GameCanvas.field_d = fk.a(jd.field_b, "", "power-up-collected").a();
             tl.field_b = fk.a(jd.field_b, "", "friend-shield-fizzle").a();

@@ -42,7 +42,7 @@ final class gi {
 
     final static void a(int param0, le param1, int param2, boolean param3, le param4, int param5) {
         try {
-          ek.field_b = param5;
+          MouseWheelInput.field_b = param5;
           if (param3) {
             le var7 = (le) null;
             gi.a(-26, (le) null, 18, false, (le) null, 96);

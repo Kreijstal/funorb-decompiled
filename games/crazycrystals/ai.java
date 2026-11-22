@@ -393,7 +393,7 @@ final class ai implements Runnable {
               if (30000L >= wd.d(-1322)) {
                 re.field_j = re.field_k;
               } else {
-                re.field_j = jm.field_f;
+                re.field_j = MouseWheelInput.field_f;
               }
               ec.field_g = false;
               stackIn_64_0 = 249;

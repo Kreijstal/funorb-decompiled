@@ -540,7 +540,7 @@ class hl implements jm, mg {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = uh.field_r[ce.a((int) var2[var4_int], 255)];
         }
-        km var4 = new km(cd.field_p, ek.field_a, be.field_a[0], a.field_c[param0], wm.field_b[0], b.field_c[0], var3);
+        km var4 = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[0], a.field_c[param0], wm.field_b[0], b.field_c[0], var3);
         ch.k(4210752);
         return var4;
     }

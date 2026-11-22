@@ -131,7 +131,7 @@ abstract class ab extends og {
               ab.a((java.applet.Applet) null, -12L, (String) null, -98, (String) null);
             }
             var4 = param0.substring(var2_int + 1);
-            var5 = jm.a(var3, true);
+            var5 = MouseWheelInput.a(var3, true);
             if (var5 == null) {
               stackIn_15_0 = rd.a(true, var4);
               return stackIn_15_0;

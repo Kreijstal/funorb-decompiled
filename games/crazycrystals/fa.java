@@ -125,8 +125,8 @@ class fa extends mg {
           pl.e(-125);
           qe.field_g.g((byte) -100);
           mk.field_b = new vk(jd.field_G, (String) null, ne.field_d, param1, param0);
-          jm.field_d = new ck(qe.field_g, mk.field_b);
-          qe.field_g.b(-3264, jm.field_d);
+          MouseWheelInput.field_d = new ck(qe.field_g, mk.field_b);
+          qe.field_g.b(-3264, MouseWheelInput.field_d);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "fa.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -91,7 +91,7 @@ final class ll {
             var10 = (kb) (rc.field_a.elementAt(uo.field_o));
             qg.field_q = 0;
             va.field_d = 0;
-            jm.field_b = 0;
+            MouseWheelInput.field_b = 0;
             var4 = var10.field_b;
             oe.field_a = new fq[3];
             ol.field_B = 0;

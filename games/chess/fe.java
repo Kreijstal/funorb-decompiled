@@ -113,13 +113,13 @@ final class fe {
             var5 = cb.field_k[var3_int];
             if (var5 >= 0) {
               var6 = kn.a(true, false, ka.field_g[var3_int]);
-              var4 = var4 + ek.field_b;
+              var4 = var4 + MouseWheelInput.field_b;
               var7 = ob.field_C - (var6 >> 1);
               if (ve.a(var4, -m.field_d + var7, var6 + (m.field_d << 1), param2, (kl.field_i << 1) + vh.field_c, param1 ^ 3, param0)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (vh.field_c + (kl.field_i << 1) + ek.field_b);
+              var4 = var4 + (vh.field_c + (kl.field_i << 1) + MouseWheelInput.field_b);
             } else {
               var4 = var4 + fd.field_n;
             }
@@ -204,7 +204,7 @@ final class fe {
           RuntimeException var4_ref = null;
           try {
             if (jk.field_c.startsWith("win") &&
-              ek.a(param0, false)) {
+              MouseWheelInput.a(param0, false)) {
               return;
             }
             try {

@@ -69,10 +69,10 @@ class ca extends kd {
 
     final static boolean a(byte param0) {
         if (param0 == 81) {
-          return ee.field_c == field_i ? true : false;
+          return MouseWheelInput.field_c == field_i ? true : false;
         }
         field_n = (ng) null;
-        return ee.field_c == field_i ? true : false;
+        return MouseWheelInput.field_c == field_i ? true : false;
     }
 
     final static void a(ab param0, int param1, java.awt.Frame param2) {

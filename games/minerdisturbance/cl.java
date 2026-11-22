@@ -199,7 +199,7 @@ final class cl extends kn implements wg, sh {
           if (null != this.field_R) {
             this.field_t = this.field_t + (5 + var7.b(this.field_R, this.field_v - 40, var7.field_I));
           }
-          var8 = oe.field_c;
+          var8 = MouseWheelInput.field_c;
           var9 = hm.a(28, bm.c(-83));
           if (var9 != ak.field_b) {
             if (var9 == hj.field_e) {

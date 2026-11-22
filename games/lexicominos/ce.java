@@ -150,7 +150,7 @@ final class ce {
           }
           var2Lifetime1 = e.a("waitingfor_animations", true);
           if (null != var2Lifetime1) {
-            ee.field_e = ni.a((byte) -55, var2Lifetime1);
+            MouseWheelInput.field_e = ni.a((byte) -55, var2Lifetime1);
           }
           var2Lifetime2 = e.a("loading_animations", true);
           if (null != var2Lifetime2) {

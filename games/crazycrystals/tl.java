@@ -330,7 +330,7 @@ abstract class tl {
           }
           var2Lifetime3 = we.a("keycode_p1left", 1);
           if (var2Lifetime3 != null) {
-            jm.field_g = 255 & var2Lifetime3[0];
+            MouseWheelInput.field_g = 255 & var2Lifetime3[0];
           }
           var2Lifetime4 = we.a("keycode_p1right", 1);
           if (var2Lifetime4 != null) {
@@ -925,71 +925,71 @@ abstract class tl {
           }
           var2Lifetime151 = we.a("achievementnames,0", 1);
           if (null != var2Lifetime151) {
-            jm.field_e[0] = fa.a((byte) -85, var2Lifetime151);
+            MouseWheelInput.field_e[0] = fa.a((byte) -85, var2Lifetime151);
           }
           var2Lifetime152 = we.a("achievementnames,1", 1);
           if (var2Lifetime152 != null) {
-            jm.field_e[1] = fa.a((byte) -122, var2Lifetime152);
+            MouseWheelInput.field_e[1] = fa.a((byte) -122, var2Lifetime152);
           }
           var2Lifetime153 = we.a("achievementnames,2", 1);
           if (var2Lifetime153 != null) {
-            jm.field_e[2] = fa.a((byte) -89, var2Lifetime153);
+            MouseWheelInput.field_e[2] = fa.a((byte) -89, var2Lifetime153);
           }
           var2Lifetime154 = we.a("achievementnames,3", 1);
           if (var2Lifetime154 != null) {
-            jm.field_e[3] = fa.a((byte) -73, var2Lifetime154);
+            MouseWheelInput.field_e[3] = fa.a((byte) -73, var2Lifetime154);
           }
           var2Lifetime155 = we.a("achievementnames,4", 1);
           if (var2Lifetime155 != null) {
-            jm.field_e[4] = fa.a((byte) -66, var2Lifetime155);
+            MouseWheelInput.field_e[4] = fa.a((byte) -66, var2Lifetime155);
           }
           var2Lifetime156 = we.a("achievementnames,5", 1);
           if (null != var2Lifetime156) {
-            jm.field_e[5] = fa.a((byte) -75, var2Lifetime156);
+            MouseWheelInput.field_e[5] = fa.a((byte) -75, var2Lifetime156);
           }
           var2Lifetime157 = we.a("achievementnames,6", 1);
           if (var2Lifetime157 != null) {
-            jm.field_e[6] = fa.a((byte) -89, var2Lifetime157);
+            MouseWheelInput.field_e[6] = fa.a((byte) -89, var2Lifetime157);
           }
           var2Lifetime158 = we.a("achievementnames,7", 1);
           if (var2Lifetime158 != null) {
-            jm.field_e[7] = fa.a((byte) -124, var2Lifetime158);
+            MouseWheelInput.field_e[7] = fa.a((byte) -124, var2Lifetime158);
           }
           var2Lifetime159 = we.a("achievementnames,8", 1);
           if (null != var2Lifetime159) {
-            jm.field_e[8] = fa.a((byte) -99, var2Lifetime159);
+            MouseWheelInput.field_e[8] = fa.a((byte) -99, var2Lifetime159);
           }
           var2Lifetime160 = we.a("achievementnames,9", 1);
           if (null != var2Lifetime160) {
-            jm.field_e[9] = fa.a((byte) -112, var2Lifetime160);
+            MouseWheelInput.field_e[9] = fa.a((byte) -112, var2Lifetime160);
           }
           var2Lifetime161 = we.a("achievementnames,10", 1);
           if (var2Lifetime161 != null) {
-            jm.field_e[10] = fa.a((byte) -121, var2Lifetime161);
+            MouseWheelInput.field_e[10] = fa.a((byte) -121, var2Lifetime161);
           }
           var2Lifetime162 = we.a("achievementnames,11", 1);
           if (var2Lifetime162 != null) {
-            jm.field_e[11] = fa.a((byte) -106, var2Lifetime162);
+            MouseWheelInput.field_e[11] = fa.a((byte) -106, var2Lifetime162);
           }
           var2Lifetime163 = we.a("achievementnames,12", 1);
           if (null != var2Lifetime163) {
-            jm.field_e[12] = fa.a((byte) -65, var2Lifetime163);
+            MouseWheelInput.field_e[12] = fa.a((byte) -65, var2Lifetime163);
           }
           var2Lifetime164 = we.a("achievementnames,13", 1);
           if (var2Lifetime164 != null) {
-            jm.field_e[13] = fa.a((byte) -125, var2Lifetime164);
+            MouseWheelInput.field_e[13] = fa.a((byte) -125, var2Lifetime164);
           }
           var2Lifetime165 = we.a("achievementnames,14", 1);
           if (null != var2Lifetime165) {
-            jm.field_e[14] = fa.a((byte) -71, var2Lifetime165);
+            MouseWheelInput.field_e[14] = fa.a((byte) -71, var2Lifetime165);
           }
           var2Lifetime166 = we.a("achievementnames,15", 1);
           if (null != var2Lifetime166) {
-            jm.field_e[15] = fa.a((byte) -100, var2Lifetime166);
+            MouseWheelInput.field_e[15] = fa.a((byte) -100, var2Lifetime166);
           }
           var2Lifetime167 = we.a("achievementnames,16", 1);
           if (var2Lifetime167 != null) {
-            jm.field_e[16] = fa.a((byte) -64, var2Lifetime167);
+            MouseWheelInput.field_e[16] = fa.a((byte) -64, var2Lifetime167);
           }
           var2Lifetime168 = we.a("achievementdescriptions,0", 1);
           if (null != var2Lifetime168) {

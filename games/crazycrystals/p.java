@@ -85,7 +85,7 @@ final class p extends uc {
                       var13 = 240 + (var10 - var11) / 2;
                       gj.field_m.b(q.field_d, var13, 17 + param1, var9, -1);
                       stackIn_34_0 = gj.field_m;
-                      if (jm.field_j) {
+                      if (MouseWheelInput.field_j) {
                         stackIn_35_1 = fk.field_t;
                       } else {
                         stackIn_35_1 = vk.field_D;
@@ -227,8 +227,8 @@ final class p extends uc {
           }
           if (rk.field_g == this.field_e.field_c &&
             this.field_e.a(true)) {
-            stackIn_87_0 = !(jm.field_j);
-            jm.field_j = stackIn_87_0;
+            stackIn_87_0 = !(MouseWheelInput.field_j);
+            MouseWheelInput.field_j = stackIn_87_0;
           }
           if (sj.field_c != this.field_e.field_c) {
             return false;

@@ -9,7 +9,7 @@ final class di {
 
     final static void b(int param0) {
         int var1 = ef.a((byte) 30);
-        int var2 = jg.c(param0 + 44845);
+        int var2 = MouseWheelInput.c(param0 + 44845);
         if (param0 == -20667) {
           mk.field_d.a(-q.field_d + ei.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (bb.field_C << 1), -bb.field_C + rb.field_H);
           gh.e(-46);

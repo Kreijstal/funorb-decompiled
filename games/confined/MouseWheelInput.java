@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ck {
+abstract class MouseWheelInput {
     static String field_b;
     static bi field_a;
 
@@ -280,9 +280,9 @@ abstract class ck {
         }
     }
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
     final static boolean a(boolean param0, CharSequence param1, boolean param2) {
         int var3_int = 0;
@@ -315,7 +315,7 @@ abstract class ck {
             stackIn_17_0 = param2;
           }
           if (stackIn_17_0) {
-            ck.a((String) null, (byte) -10);
+            MouseWheelInput.a((String) null, (byte) -10);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -372,7 +372,7 @@ abstract class ck {
             break;
           }
           if (stackIn_14_0 < stackIn_14_1) {
-            ck.a(35, (mi) null);
+            MouseWheelInput.a(35, (mi) null);
           }
           stackIn_18_0 = ql.field_k;
           return stackIn_18_0;
@@ -390,7 +390,7 @@ abstract class ck {
         }
     }
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void detach(java.awt.Component param0, byte param1);
 
     public static void a(byte param0) {
         try {

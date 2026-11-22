@@ -145,7 +145,7 @@ final class gd extends qc {
     }
 
     final void a(byte param0) {
-        tb.field_d.a(jm.field_k, (int)(Math.random() * 11.0) + 95, 12 * (gi.field_m * this.field_j), this.field_k / this.field_j);
+        tb.field_d.a(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 12 * (gi.field_m * this.field_j), this.field_k / this.field_j);
         int var2 = 14 / ((param0 - 29) / 42);
         this.field_j = 0;
         this.field_k = 0;

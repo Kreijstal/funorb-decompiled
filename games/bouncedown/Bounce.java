@@ -106,7 +106,7 @@ public final class Bounce extends GameClient {
           ClientException.a((byte) 72);
           AppletShell.e((byte) 118);
           ha.a(false);
-          kf.a((byte) 53);
+          MouseWheelInput.a((byte) 53);
           na.c();
           gk.b(false);
           ob.clearStaticReferences(640);

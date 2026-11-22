@@ -154,7 +154,7 @@ final class db extends vm {
           if (!param1.equals(this.field_l)) {
             var4 = va.a(26447, param1);
             if (!var4.b((byte) 123)) {
-              stackIn_8_0 = ek.field_d;
+              stackIn_8_0 = MouseWheelInput.field_d;
               return stackIn_8_0;
             }
             this.field_l = param1;

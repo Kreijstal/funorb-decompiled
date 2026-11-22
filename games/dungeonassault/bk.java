@@ -131,7 +131,7 @@ final class bk implements Runnable {
         int var6;
         var6 = DungeonAssault.field_K;
         var2 = 0;
-        var3 = nl.field_d;
+        var3 = MouseWheelInput.field_d;
         if (var3 < 5) {
           var2 = 8192 * (var3 * var3) / 1100;
         } else {

@@ -90,7 +90,7 @@ final class vp {
         int var1_int = 0;
         int var2 = CrazyCrystals.field_B;
         int var1_intLifetime1;
-        jm.field_h.a(15834);
+        MouseWheelInput.field_h.a(15834);
         for (var1_int = 0; var1_int < 32; var1_int++) {
           mc.field_p[var1_int] = 0L;
         }

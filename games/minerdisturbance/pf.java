@@ -6,7 +6,7 @@ final class pf {
     static String[] field_f;
     static String[][] field_g;
     static Sprite[] field_a;
-    static oe field_e;
+    static MouseWheelInput field_e;
     private boolean field_h;
     static int field_c;
     private String field_b;

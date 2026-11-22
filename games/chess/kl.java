@@ -129,7 +129,7 @@ final class kl {
           }
           uj.a(param1 + 114, (java.awt.Component) ((Object) param0));
           if (ii.field_L != null) {
-            ii.field_L.a((java.awt.Component) ((Object) param0), param1 + 116);
+            ii.field_L.detach((java.awt.Component) ((Object) param0), param1 + 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

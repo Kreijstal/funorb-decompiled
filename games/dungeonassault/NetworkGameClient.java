@@ -159,7 +159,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         dj.a(param1, 5000, this.field_A, this.field_z, this.field_p, this.field_w, hc.field_d, this.field_F, this.field_r, this.field_s, param6, param0, (byte) -27, i.field_A);
         an.a(this.field_r, this.field_F, -69, this.field_z, this.field_p, hc.field_d, this.field_w, param1, i.field_A);
         uf.a(param6 ^ 5031);
-        bn.field_j = pm.a((byte) 109);
+        bn.field_j = pm.createMouseWheelInput((byte) 109);
         GzipDecompressor.a(c.field_h, (byte) -126);
         MouseInput.field_a = param5;
         s.field_a = param7;
@@ -633,7 +633,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           cp.f(-30208);
         }
         if (bn.field_j != null) {
-          CombatState.field_r = bn.field_j.a(6);
+          CombatState.field_r = bn.field_j.pollRotation(6);
         }
         if (dh.a((byte) -120)) {
           var3 = 1200 * eg.c(1);

@@ -166,7 +166,7 @@ final class fe extends l {
           pm.field_b = new am(kg.a(jc.field_a, 100, 0));
           so.field_g = new am(kg.a(oa.field_e, 100, 0));
           fn.field_h = new am(kg.a(gk.field_j, 100, 0));
-          dd.field_c = new am(kg.a(jm.field_k, (int)(Math.random() * 11.0) + 95, 0));
+          dd.field_c = new am(kg.a(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
           cn.field_e = new am(kg.a(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
           jj.field_c = new am(kg.a(an.field_s, 100, 0));
           m.field_n = new am(kg.a(cl.field_m, 100, 0));

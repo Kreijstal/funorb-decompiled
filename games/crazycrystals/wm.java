@@ -15,7 +15,7 @@ final class wm {
         int var3 = CrazyCrystals.field_B;
         wj[] var1 = new wj[mg.field_a];
         for (var2 = 0; var2 < mg.field_a; var2++) {
-          var1[var2] = new wj(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
+          var1[var2] = new wj(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
         }
         if (param0 >= -44) {
           wm.b(97);
@@ -33,12 +33,12 @@ final class wm {
         }
         String var1 = vg.c((byte) 104);
         mk.field_b = new vk(var1, (String) null, true, false, false);
-        qe.field_g.b(-3264, jm.field_d);
+        qe.field_g.b(-3264, MouseWheelInput.field_d);
         if (param0 != -12) {
           field_d = -98L;
         }
-        jm.field_d.a((qm) (mk.field_b), (byte) -50);
-        jm.field_d.j(param0 + 11);
+        MouseWheelInput.field_d.a((qm) (mk.field_b), (byte) -50);
+        MouseWheelInput.field_d.j(param0 + 11);
     }
 
     final void a(byte param0) {

@@ -418,7 +418,7 @@ abstract class gb extends GameAppletShell {
           e.i((byte) 114);
         }
         if (ii.field_L != null) {
-          fl.field_p = ii.field_L.a((byte) -91);
+          fl.field_p = ii.field_L.pollRotation((byte) -91);
         }
         if (ub.a(21549)) {
           var3 = qd.d(-31137) * 1200;
@@ -638,7 +638,7 @@ abstract class gb extends GameAppletShell {
         jn.a(this.field_u, oc.field_l, this.field_w, se.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
         jb.a(350, this.field_w, se.field_V, param4, this.field_r, oc.field_l, this.field_q, this.field_x, this.field_m);
         bf.g((byte) 69);
-        ii.field_L = sa.b(param6 + 28);
+        ii.field_L = sa.createMouseWheelInput(param6 + 28);
         ca.a(13369344, ja.field_h);
         nk.field_q = param2;
         kf.field_u = param0;

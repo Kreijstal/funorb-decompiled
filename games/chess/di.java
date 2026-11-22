@@ -132,7 +132,7 @@ final class di extends ci {
                 stackIn_45_0 = in.field_d;
               }
               var9 = stackIn_45_0;
-              var1_int = var1_int + ek.field_b;
+              var1_int = var1_int + MouseWheelInput.field_b;
               if (var9 != null) {
                 var9.a(-m.field_d + var8Lifetime1, var7Lifetime1 + (m.field_d << 1), (kl.field_i << 1) + vh.field_c, true, var1_int);
               }
@@ -140,7 +140,7 @@ final class di extends ci {
             }
             if (var4 >= 0) {
               ce.field_a.a(var6, var8Lifetime1, var1_int + rm.field_S, var5, -1);
-              var1_int = var1_int + (vh.field_c + kl.field_i + ek.field_b);
+              var1_int = var1_int + (vh.field_c + kl.field_i + MouseWheelInput.field_b);
             } else {
               vj.field_d.a(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
               var1_int = var1_int + fd.field_n;

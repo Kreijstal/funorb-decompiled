@@ -255,7 +255,7 @@ final class q {
           }
           var2Lifetime38 = vh.a((byte) 46, "gameoptlabels,0");
           if (var2Lifetime38 != null) {
-            ek.field_f[0] = ad.a(-29410, var2Lifetime38);
+            MouseWheelInput.field_f[0] = ad.a(-29410, var2Lifetime38);
           }
           var2Lifetime39 = vh.a((byte) 106, "gameoptnames,0,0");
           if (var2Lifetime39 != null) {

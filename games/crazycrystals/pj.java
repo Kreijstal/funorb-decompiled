@@ -104,7 +104,7 @@ final class pj extends bo implements Cloneable {
         if (this.field_u >= 0) {
           var7 = this.field_t;
           if (0 > var7 ||
-            !jm.field_j) {
+            !MouseWheelInput.field_j) {
             var7 = this.field_s;
           }
           if (24 == param1 &&

@@ -29,7 +29,7 @@ final class uj implements rd {
         try {
           int var2_int = 25 % ((param0 - 3) / 42);
           if (11 == ta.field_g) {
-            ee.b(95);
+            MouseWheelInput.b(95);
           }
           de.a(fh.field_i, tl.field_g, pb.field_j, true);
           lj.a(0, param1, 0, (byte) -128);

@@ -48,7 +48,7 @@ final class je extends vm {
             return stackIn_16_0;
           }
           if (this.b((byte) -108, param0)) {
-            stackIn_20_0 = ek.field_e;
+            stackIn_20_0 = MouseWheelInput.field_e;
             return stackIn_20_0;
           }
           if (0 >= var6.length()) {

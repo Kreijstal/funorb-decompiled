@@ -308,7 +308,7 @@ final class b {
           field_c = new int[h.field_n];
           var17.position = -(8 * h.field_n) - 7 + param1.length;
           cd.field_p = var17.readUnsignedShort(674914976);
-          ek.field_a = var17.readUnsignedShort(674914976);
+          MouseWheelInput.field_a = var17.readUnsignedShort(674914976);
           var3 = (var17.readUnsignedByte(-127) & 255) + 1;
           for (var4 = 0; var4 < h.field_n; var4++) {
             be.field_a[var4] = var16.readUnsignedShort(674914976);

@@ -159,7 +159,7 @@ final class uh extends vm {
               this.field_t = param1;
               this.field_s = var4.field_h;
             } else {
-              stackIn_10_0 = ek.field_d;
+              stackIn_10_0 = MouseWheelInput.field_d;
               return stackIn_10_0;
             }
           }

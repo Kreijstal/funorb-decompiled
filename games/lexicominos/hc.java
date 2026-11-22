@@ -167,7 +167,7 @@ final class hc extends ui {
             if (pg.field_d == 255) {
               var9_ref_String = ig.field_a.readNullableString((byte) -49);
               if (var9_ref_String != null) {
-                ee.a(var9_ref_String, -11971, kk.c(-14047));
+                MouseWheelInput.a(var9_ref_String, -11971, kk.c(-14047));
               }
             } else {
               wj.field_p = ig.field_a.readString(false);

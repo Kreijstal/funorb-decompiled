@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends ck implements java.awt.event.MouseWheelListener {
-    private int field_c;
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
+    private int rotation;
 
-    final void a(java.awt.Component param0, byte param1) {
+    final void detach(java.awt.Component param0, byte param1) {
         if (param1 != -30) {
-          this.field_c = 66;
+          this.rotation = 66;
           param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
           return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void attach(java.awt.Component param0, int param1) {
         if (param1 != 4) {
-          this.field_c = 97;
+          this.rotation = 97;
           param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
           return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int pollRotation(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 8) {
-          var2 = this.field_c;
-          this.field_c = 0;
+          var2 = this.rotation;
+          this.rotation = 0;
           return var2;
         }
         java.awt.Component var3 = (java.awt.Component) null;
-        this.a((java.awt.Component) null, (byte) 25);
-        var2Lifetime1 = this.field_c;
-        this.field_c = 0;
+        this.detach((java.awt.Component) null, (byte) 25);
+        var2Lifetime1 = this.rotation;
+        this.rotation = 0;
         return var2Lifetime1;
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        this.field_c = this.field_c + param0.getWheelRotation();
+        this.rotation = this.rotation + param0.getWheelRotation();
         param0.consume();
     }
 
-    tc() {
-        this.field_c = 0;
+    MouseWheelHandler() {
+        this.rotation = 0;
     }
 }

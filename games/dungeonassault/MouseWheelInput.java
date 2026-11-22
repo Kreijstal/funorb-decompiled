@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nl {
+abstract class MouseWheelInput {
     static cn field_g;
     static pp field_a;
     static String[] field_f;
@@ -20,11 +20,11 @@ abstract class nl {
           field_e = null;
           return;
         }
-        nl.a((byte) -115);
+        MouseWheelInput.a((byte) -115);
         field_e = null;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
     final static boolean a(int param0, byte param1) {
         int var2 = nk.field_Fb[param0];
@@ -59,9 +59,9 @@ abstract class nl {
         return true;
     }
 
-    abstract void a(boolean param0, java.awt.Component param1);
+    abstract void detach(boolean param0, java.awt.Component param1);
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     static {
         field_f = new String[]{null, "Also, there are different strategies that can be employed in combat. All <%raiders> can either <%advance>, <%charge>, or attempt to <%flee>.<br><br><%advance> orders your raider to enter a room normally.<br><br><%col_charge>Charging</col> is a more aggressive attack: one point of the raider's <%defence> is transferred to <%attack>."};

@@ -963,7 +963,7 @@ public final class fleas extends NetworkGameClient {
           ContextualRuntimeException.c(param0 ^ 55);
           GameAppletShell.c(true);
           rd.a((byte) -19);
-          jg.a(param0 ^ 107);
+          MouseWheelInput.a(param0 ^ 107);
           gb.a();
           ResourceArchive.clearStaticReferences((byte) -110);
           fa.clearStaticReferences();
@@ -2288,7 +2288,7 @@ public final class fleas extends NetworkGameClient {
             return;
           }
           qh.field_z = 0;
-          jg.field_e = 0;
+          MouseWheelInput.field_e = 0;
           var3Lifetime1 = 0;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (!(var3Lifetime1 < nb.field_b)))) {
@@ -2297,7 +2297,7 @@ public final class fleas extends NetworkGameClient {
               if (stackIn_61_0 == 0) {
                 qh.field_z = qh.field_z + 1;
               } else {
-                jg.field_e = jg.field_e + 1;
+                MouseWheelInput.field_e = MouseWheelInput.field_e + 1;
               }
               var3Lifetime1++;
               continue;
@@ -2305,7 +2305,7 @@ public final class fleas extends NetworkGameClient {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            jg.field_e = jg.field_e - pl.field_f;
+            MouseWheelInput.field_e = MouseWheelInput.field_e - pl.field_f;
             stackIn_61_0 = ~qh.field_z;
           }
           if (stackIn_61_0 != -1) {
@@ -2342,7 +2342,7 @@ public final class fleas extends NetworkGameClient {
             stackIn_100_0 = 1;
           }
           var17 = stackIn_100_0;
-          stackIn_104_0 = (var16.field_e <= (var16.field_f - jg.field_e)) ? 0 : 1;
+          stackIn_104_0 = (var16.field_e <= (var16.field_f - MouseWheelInput.field_e)) ? 0 : 1;
           var18 = stackIn_104_0;
           if (var18 != 0 &&
             0 > GzipDecompressor.field_d) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kf {
+abstract class MouseWheelInput {
     static pf field_b;
     static int field_a;
 
@@ -10,7 +10,7 @@ abstract class kf {
         boolean stackIn_6_0 = false;
         if (param0 != -49) {
           var3 = (CharSequence) null;
-          kf.a(-21, (CharSequence) null, true, -109);
+          MouseWheelInput.a(-21, (CharSequence) null, true, -109);
         }
         stackIn_6_0 = (param1 >= 48) && (param1 <= 57);
         return stackIn_6_0;
@@ -46,18 +46,18 @@ abstract class kf {
         }
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attach(java.awt.Component param0, boolean param1);
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 53) {
-          kf.a(126, 'ﾑ');
+          MouseWheelInput.a(126, 'ﾑ');
         }
     }
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     final static int a(int param0, CharSequence param1, boolean param2, int param3) {
         int var8 = 0;
@@ -81,7 +81,7 @@ abstract class kf {
             param0 <= 36) {
             if (param3 != 48) {
               var12 = (CharSequence) null;
-              kf.a(40, (CharSequence) null, false, -22);
+              MouseWheelInput.a(40, (CharSequence) null, false, -22);
             }
             var4_int = 0;
             var5 = 0;

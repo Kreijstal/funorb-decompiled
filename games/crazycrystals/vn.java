@@ -149,7 +149,7 @@ final class vn extends ue {
         } else {
           stackIn_63_0 = ((var6 & 1 << var5) == 0) ? 0 : 1;
           var10Lifetime1 = stackIn_63_0;
-          go.field_l.c(jm.field_e[var5], 320, -5 + this.field_h, 16760896, -1);
+          go.field_l.c(MouseWheelInput.field_e[var5], 320, -5 + this.field_h, 16760896, -1);
           var11Lifetime1 = ro.field_q;
           if (mo.field_l <= 0 &&
             (1 << var5 & 769) == 0) {

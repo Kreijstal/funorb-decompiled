@@ -54,7 +54,7 @@ final class af {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = uh.field_r[ce.a(255, (int) var4[var6])];
           }
-          var1[var2] = new km(cd.field_p, ek.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
+          var1[var2] = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
         }
         ch.k(4210752);
         return var1;

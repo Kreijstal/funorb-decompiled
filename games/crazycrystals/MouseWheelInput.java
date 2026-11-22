@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jm {
+abstract class MouseWheelInput {
     static ko field_k;
     static int[] field_a;
     static boolean field_j;
@@ -129,11 +129,11 @@ abstract class jm {
         field_h = null;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void detach(byte param0, java.awt.Component param1);
 
-    abstract int a(boolean param0);
+    abstract int pollRotation(boolean param0);
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
     static {
         field_g = 48;

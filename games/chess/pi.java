@@ -58,7 +58,7 @@ final class pi {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               ag.field_d[var6_int] = var13.readString(0);
             }
-            ek.a(var5, var4, (byte) 127);
+            MouseWheelInput.a(var5, var4, (byte) 127);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               nj.a((byte) 20, var15);
               if (var6_intLifetime1 != 0) {

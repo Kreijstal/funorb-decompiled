@@ -125,7 +125,7 @@ final class lc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 13684) {
-            stackIn_4_0 = ck.a(false, param0, false);
+            stackIn_4_0 = MouseWheelInput.a(false, param0, false);
             return stackIn_4_0;
           }
           return true;

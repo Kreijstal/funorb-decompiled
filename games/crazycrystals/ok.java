@@ -8,12 +8,12 @@ final class ok implements wo {
     private int field_f;
     static oj field_e;
     private vc field_h;
-    static jm field_g;
+    static MouseWheelInput field_g;
     static db field_c;
     static wb field_a;
 
     final static void a(int param0) {
-        jm.field_a = null;
+        MouseWheelInput.field_a = null;
         ui.field_c = (byte[][]) null;
         if (param0 != 2188450) {
           return;

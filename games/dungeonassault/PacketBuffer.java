@@ -1399,7 +1399,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_strategies3,1", false);
                 if (null != var2) {
-                  nl.field_f[1] = dj.a(var2, false);
+                  MouseWheelInput.field_f[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_strategies4,1", false);
                 if (null != var2) {
@@ -3271,7 +3271,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_please_wait", false);
                 if (null != var2) {
-                  nl.field_c = dj.a(var2, false);
+                  MouseWheelInput.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_gold_stolen", param1);
                 if (null != var2) {

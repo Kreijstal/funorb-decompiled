@@ -130,7 +130,7 @@ final class fa extends rg {
           dl.a((java.awt.Component) ((Object) param0), (byte) -112);
           ak.a(0, (java.awt.Component) ((Object) param0));
           if (null != jc.field_c) {
-            jc.field_c.a((java.awt.Component) ((Object) param0), (byte) -30);
+            jc.field_c.detach((java.awt.Component) ((Object) param0), (byte) -30);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

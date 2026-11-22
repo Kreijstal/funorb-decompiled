@@ -348,7 +348,7 @@ final class gh extends ea implements Cloneable {
           for (var3 = 0; var3 < 17; var3++) {
             if ((ge.field_c & 1 << var3) != 0) {
               var4 = KeyboardInputHandler.field_b[var3];
-              var5 = jm.field_e[var3];
+              var5 = MouseWheelInput.field_e[var3];
               var6 = ci.a(new String[]{an.field_o[var3]}, wn.field_a, 3);
               var7 = new nj(var4, var5, var6);
               if (var2 != null) {
@@ -891,7 +891,7 @@ final class gh extends ea implements Cloneable {
           sp.field_a.i((byte) -45);
         }
         oh.field_d = new qk();
-        jm.field_d.a((qm) (oh.field_d), (byte) -50);
+        MouseWheelInput.field_d.a((qm) (oh.field_d), (byte) -50);
         if (param0 != -10) {
           field_F = (vc) null;
         }

@@ -108,16 +108,16 @@ final class sa {
         }
     }
 
-    final static ek b(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          ek stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 24) {
-              sa.b(-8);
+              sa.createMouseWheelInput(-8);
             }
-            stackIn_3_0 = (ek) (Class.forName("oe").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

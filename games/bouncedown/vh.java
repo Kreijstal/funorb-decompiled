@@ -429,7 +429,7 @@ final class vh {
           var6 = 122 % ((param2 - 59) / 46);
           var4_int = param0.a(param1, false);
           var5 = param0.a(var4_int, param3, 95);
-          stackIn_1_0 = kf.a(var4_int, var5, param0, false);
+          stackIn_1_0 = MouseWheelInput.a(var4_int, var5, param0, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

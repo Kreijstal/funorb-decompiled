@@ -138,7 +138,7 @@ abstract class ob extends GameAppletShell {
           hm.d((byte) 22);
         }
         if (null != pf.field_e) {
-          ki.field_n = pf.field_e.a((byte) -124);
+          ki.field_n = pf.field_e.pollRotation((byte) -124);
         }
         if (gd.b((byte) -110)) {
           var3 = pl.getTickRate((byte) -116) * 1200;
@@ -309,12 +309,12 @@ abstract class ob extends GameAppletShell {
             decompiledFrameRemainder0 = false;
           }
           else {
-            oe.field_a = true;
+            MouseWheelInput.field_a = true;
             af.field_u = 12;
           }
         }
         if (af.field_u == 12 &&
-          !oe.field_a) {
+          !MouseWheelInput.field_a) {
           af.field_u = 13;
         }
         if (af.field_u == 13) {
@@ -548,7 +548,7 @@ abstract class ob extends GameAppletShell {
         qg.a(qa.field_a, this.field_t, this.field_B, param1, this.field_y, this.field_u, this.field_o, this.field_s, this.field_x, 5000, true, param0, 5000, kb.field_c);
         q.a(this.field_t, qa.field_a, kb.field_c, this.field_s, this.field_o, param1, 20, this.field_B, this.field_y);
         km.b((byte) 109);
-        pf.field_e = oh.c((byte) 119);
+        pf.field_e = oh.createMouseWheelInput((byte) 119);
         ab.a((byte) -13, ef.field_c);
         se.field_N = param5;
         da.field_c = param7;
@@ -556,7 +556,7 @@ abstract class ob extends GameAppletShell {
         mg.field_f = param6;
         s.field_Q = param3;
         this.c(false);
-        oe.a(true);
+        MouseWheelInput.a(true);
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {

@@ -55,7 +55,7 @@ final class mb {
             var6 = (String[]) null;
             mb.a(58, 95, (String) null, (String[]) null);
           }
-          ee.field_c = c.field_o;
+          MouseWheelInput.field_c = c.field_o;
           if (param1 == 255) {
             stackIn_7_0 = !(cg.field_l >= 13);
             n.field_k = mc.b(stackIn_7_0, 102);

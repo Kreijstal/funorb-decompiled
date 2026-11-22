@@ -209,20 +209,20 @@ final class si {
               rc.field_i = true;
             }
           }
-          if (null != jg.field_f) {
-            var3 = -(jg.field_f.field_r / 2) + 357;
+          if (null != MouseWheelInput.field_f) {
+            var3 = -(MouseWheelInput.field_f.field_r / 2) + 357;
             var4 = 0;
             if (jk.field_r != 0 &&
               var3 < ob.field_e &&
-              var3 + jg.field_f.field_t > ob.field_e) {
-              if (269 - jg.field_f.field_w < pb.field_d &&
+              var3 + MouseWheelInput.field_f.field_t > ob.field_e) {
+              if (269 - MouseWheelInput.field_f.field_w < pb.field_d &&
                 pb.field_d < 269) {
                 BufferedSocket.field_i = hd.field_g;
                 var4 = 1;
                 rc.field_i = false;
               }
               if (pb.field_d > 586 &&
-                pb.field_d < jg.field_f.field_w + 586) {
+                pb.field_d < MouseWheelInput.field_f.field_w + 586) {
                 rc.field_i = true;
                 var4 = 1;
                 BufferedSocket.field_i = hd.field_g;
@@ -231,13 +231,13 @@ final class si {
             if (var4 == 0 &&
               hd.field_c < BufferedSocket.field_i &&
               var3 < kc.field_b &&
-              kc.field_b < jg.field_f.field_t + var3) {
-              if (ag.field_f > 269 - jg.field_f.field_w &&
+              kc.field_b < MouseWheelInput.field_f.field_t + var3) {
+              if (ag.field_f > 269 - MouseWheelInput.field_f.field_w &&
                 ag.field_f < 269) {
                 BufferedSocket.field_i = hd.field_c;
               }
               if (ag.field_f > 586 &&
-                ag.field_f < jg.field_f.field_w + 586) {
+                ag.field_f < MouseWheelInput.field_f.field_w + 586) {
                 BufferedSocket.field_i = hd.field_c;
               }
             }
