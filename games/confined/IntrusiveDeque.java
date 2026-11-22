@@ -7,7 +7,7 @@ final class IntrusiveDeque implements Iterable {
     static double field_a;
     DualLinkNode field_b;
     static String field_d;
-    static in field_e;
+    static AccountServiceResult field_e;
     static nf field_c;
 
     private IntrusiveDeque() throws Throwable {

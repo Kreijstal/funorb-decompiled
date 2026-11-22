@@ -13,7 +13,7 @@ final class r {
 
     final static void a(byte param0) {
         String var2 = (String) null;
-        ed.a((String) null, km.field_b, -1);
+        AccountServiceResult.a((String) null, km.field_b, -1);
         if (param0 >= -93) {
           field_c = 16;
         }
@@ -179,7 +179,7 @@ final class r {
           return;
         }
         jb.field_q = true;
-        ed.a((byte) -101, false);
+        AccountServiceResult.a((byte) -101, false);
         fh.field_b = 0;
     }
 

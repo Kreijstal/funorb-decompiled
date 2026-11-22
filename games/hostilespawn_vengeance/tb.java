@@ -103,7 +103,7 @@ final class tb extends ph {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class tb extends ph {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
         }
     }
 

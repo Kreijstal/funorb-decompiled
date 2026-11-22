@@ -34,7 +34,7 @@ abstract class aj {
             field_d = -102;
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "aj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "aj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

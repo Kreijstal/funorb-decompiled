@@ -74,7 +74,7 @@ final class bi {
                   var6 += 10;
                   var5 += 10;
                   if (var8.field_e >= 240) {
-                    var9 = wg.field_zb;
+                    var9 = AccountCreationResultPanel.field_zb;
                   }
                 }
                 if (var8.field_e < 0) {
@@ -96,7 +96,7 @@ final class bi {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class bi {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -25,7 +25,7 @@ final class db implements ml {
           oe.field_d = oh.field_b;
           oh.field_b = false;
           kc.field_d = ke.field_g;
-          qg.field_c = cj.field_d;
+          qg.field_c = AccountServiceResult.field_d;
           DirectByteStorage.field_e = ek.field_a;
           ke.field_g = param0;
         }

@@ -24,7 +24,7 @@ final class il extends gf {
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        dn var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
         Object stackIn_11_0 = null;
@@ -48,11 +48,11 @@ final class il extends gf {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_e != null) {
+            if (var4.message != null) {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_n = var4.field_b;
+            this.field_n = var4.success;
             this.field_r = param1;
           }
           if (this.field_n) {
@@ -318,7 +318,7 @@ final class il extends gf {
     }
 
     final cd a(int param0, String param1) {
-        dn var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         cd stackIn_3_0 = null;
@@ -342,8 +342,8 @@ final class il extends gf {
           if (!param1.equals(this.field_r)) {
             var3 = he.a(1, param1);
             if (var3 != null &&
-              null == var3.field_e) {
-              this.field_n = var3.field_b;
+              null == var3.message) {
+              this.field_n = var3.success;
               this.field_r = param1;
             } else {
               stackIn_13_0 = IsaacCipher.field_h;

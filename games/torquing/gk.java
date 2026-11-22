@@ -24,19 +24,19 @@ final class gk {
           bh.field_a = ag.field_c;
           if (255 != param3) {
             if (param3 < 100) {
-              ua.field_b = pg.a(param3, param1, -1);
+              ua.field_b = pg.createAccountErrorResult(param3, param1, -1);
               return;
             }
             if (param3 <= 105) {
-              ua.field_b = di.a(0, param2);
+              ua.field_b = di.createAccountSuggestionsResult(0, param2);
               return;
             }
-            ua.field_b = pg.a(param3, param1, -1);
+            ua.field_b = pg.createAccountErrorResult(param3, param1, -1);
             return;
           }
           stackIn_12_0 = 90;
           stackIn_13_1 = !(13 <= oh.field_d);
-          ua.field_b = pa.b(stackIn_12_0, stackIn_13_1);
+          ua.field_b = pa.createAccountSuccessResult(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class ed {
     static double field_c;
-    static ml field_d;
+    static AccountServiceResult field_d;
     static Sprite[] field_a;
     static int field_b;
 

@@ -49,7 +49,7 @@ final class QuickChatPhraseSource {
         return var3Lifetime1;
     }
 
-    QuickChatPhraseSource(int param0, ResourceArchive param1, ResourceArchive param2, pp param3) {
+    QuickChatPhraseSource(int param0, ResourceArchive param1, ResourceArchive param2, DecodableArrayReaderMarker param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

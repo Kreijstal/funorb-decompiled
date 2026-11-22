@@ -211,7 +211,7 @@ final class wu extends InteractiveWidget {
         }
     }
 
-    final static AccountServiceResult a(int param0, byte param1, String param2) {
+    final static AccountServiceResult createAccountErrorResult(int param0, byte param1, String param2) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -223,8 +223,8 @@ final class wu extends InteractiveWidget {
         try {
           var3 = new AccountServiceResult(false);
           var4 = -117 / ((35 - param1) / 41);
-          var3.field_d = param0;
-          var3.field_g = param2;
+          var3.statusCode = param0;
+          var3.message = param2;
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

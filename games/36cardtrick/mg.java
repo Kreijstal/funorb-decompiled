@@ -151,7 +151,7 @@ final class mg {
         int var4Lifetime1;
         try {
           cj.field_l = new int[]{105, 151, 380, 418, 411, 373, 368, 368, 368, 368, 368};
-          nk.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
+          AccountServiceResult.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
           fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
           kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
           ia.field_c = new kc[22];

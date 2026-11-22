@@ -31,7 +31,7 @@ final class qk {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

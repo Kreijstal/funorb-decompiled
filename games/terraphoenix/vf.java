@@ -7,9 +7,9 @@ final class vf {
     static int field_a;
 
     final static boolean a(pl param0, String param1, boolean param2, int param3, boolean param4, String param5, String param6) {
-        tj var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
-        tj var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -24,7 +24,7 @@ final class vf {
           if (og.field_a != IsaacCipher.field_f) {
             return false;
           }
-          var8 = new tj(jl.field_I, param0);
+          var8 = new AccountCreationResultPanel(jl.field_I, param0);
           var7 = var8;
           jl.field_I.a((UiWidget) (var8), (byte) -1);
           if (param4) {

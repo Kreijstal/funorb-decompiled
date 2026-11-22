@@ -15,7 +15,7 @@ final class vf extends r {
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        mk var4_ref_mk = null;
+        AccountServiceResult var4_ref_mk = null;
         int var4 = 0;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
@@ -38,11 +38,11 @@ final class vf extends r {
             if (var4_ref_mk == null) {
               return null;
             }
-            if (null != var4_ref_mk.field_b) {
+            if (null != var4_ref_mk.message) {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_q = var4_ref_mk.field_k;
+            this.field_q = var4_ref_mk.success;
             this.field_o = param1;
           }
           var4 = 47 % ((24 - param0) / 46);
@@ -147,7 +147,7 @@ final class vf extends r {
     }
 
     final wd a(int param0, String param1) {
-        mk var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         wd stackIn_5_0 = null;
@@ -169,8 +169,8 @@ final class vf extends r {
           if (!param1.equals(this.field_o)) {
             var3 = jd.a(param1, 8947848);
             if (var3 != null &&
-              null == var3.field_b) {
-              this.field_q = var3.field_k;
+              null == var3.message) {
+              this.field_q = var3.success;
               this.field_o = param1;
             } else {
               stackIn_12_0 = w.field_e;

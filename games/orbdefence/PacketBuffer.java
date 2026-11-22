@@ -254,7 +254,7 @@ class PacketBuffer extends IntrusiveNode {
           kd.field_d = GameAppletShell.field_m;
           GameAppletShell.field_m = false;
           gi.field_e = eh.field_c;
-          ig.field_fb = vg.field_p;
+          AccountCreationResultPanel.field_fb = vg.field_p;
           bg.field_c = id.field_b;
           eh.field_c = 0;
           lg.field_a = sd.field_c;

@@ -630,7 +630,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ag.a(19266);
           bp.clearStaticReferences((byte) 76);
           ol.i(param0 ^ 89);
-          sa.clearStaticReferences(false);
+          AccountCreationResultPanel.clearStaticReferences(false);
           kl.h((byte) -1);
           ck.l(param0 ^ 29);
           na.m(-18883);
@@ -804,7 +804,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ik.a((byte) 105);
           nk.clearStaticReferences(-2);
           mh.c(-70);
-          si.a(param0 ^ 14362);
+          AccountServiceResult.a(param0 ^ 14362);
           e.a(false);
           mk.clearStaticReferences(-27838);
           mo.a(-60);
@@ -1407,7 +1407,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ag.field_c = new dl[12];
             al.field_h = new dl[12];
             cp.field_d = new dl[12];
-            sa.field_qb = new dl[12];
+            AccountCreationResultPanel.field_qb = new dl[12];
             var3_array = bf.a(-1, "sprites_spider", "", l.field_d);
             var4 = 0;
             do {
@@ -1415,7 +1415,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 var4 = 0;
                 break;
               }
-              sa.field_qb[var4] = var3_array[var4];
+              AccountCreationResultPanel.field_qb[var4] = var3_array[var4];
               var4++;
             } while (var13 == 0);
             do {
@@ -1599,7 +1599,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             an.field_s = bl.a(ma.field_p, "initialset", "mirror-start-bending").a();
             cl.field_m = bl.a(ma.field_p, "initialset", "mirror-ping").a();
             ab.field_z = ha.a(vm.field_k, "initialset", "teleport").b();
-            sa.field_nb = bl.a(ma.field_p, "initialset", "player-push-upwards").a();
+            AccountCreationResultPanel.field_nb = bl.a(ma.field_p, "initialset", "player-push-upwards").a();
             tg.field_c = bl.a(ma.field_p, "initialset", "player-sticky-feet").a();
             va.field_b = bl.a(ma.field_p, "initialset", "player-prod-spider").a();
             ga.field_H = bl.a(ma.field_p, "initialset", "player-taunt-spider").a();
@@ -1932,7 +1932,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               var2_intLifetime1 == 1) {
               ue.a(2, -109);
               fo.a(3, (byte) -98);
-              si.a(4, false);
+              AccountServiceResult.a(4, false);
               hk.a((byte) 5, 5);
             }
             if (var2_intLifetime1 == 2) {

@@ -10,7 +10,7 @@ final class wd {
 
     final static boolean a(int param0, boolean param1, int param2, String param3, String param4, String param5, mj param6) {
         RuntimeException var7 = null;
-        jg var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -25,7 +25,7 @@ final class wd {
           if (ok.field_a != o.field_l) {
             return false;
           }
-          var8 = new jg(na.field_d, param6);
+          var8 = new AccountCreationResultPanel(na.field_d, param6);
           na.field_d.a((byte) 84, (UiWidget) (var8));
           if (param2 != 5) {
             field_d = -43;

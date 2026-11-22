@@ -177,7 +177,7 @@ final class nk {
                         if (u.field_g) {
                           stackIn_104_1 = wj.field_c;
                         } else {
-                          stackIn_104_1 = sd.field_mb;
+                          stackIn_104_1 = AccountCreationResultPanel.field_mb;
                         }
                         ((pk) (Object) stackIn_103_0).a(stackIn_104_1, true, 123);
                       }

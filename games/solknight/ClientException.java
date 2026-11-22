@@ -26,7 +26,7 @@ final class ClientException extends RuntimeException {
             ClientException.a((byte) -74);
           }
           var5 = param0.a(param2, -1, var4_int);
-          stackIn_3_0 = wg.a((byte) 47, param0, var4_int, var5);
+          stackIn_3_0 = AccountServiceResult.a((byte) 47, param0, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -27,11 +27,11 @@ final class tb {
           }
           return dh.field_J;
         }
-        if (!qd.field_Jb.a(0)) {
+        if (!AccountCreationResultPanel.field_Jb.a(0)) {
           return td.field_o;
         }
-        if (!qd.field_Jb.a(255, "commonui")) {
-          return sa.field_b + " - " + qd.field_Jb.b(10461, "commonui") + "%";
+        if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
+          return sa.field_b + " - " + AccountCreationResultPanel.field_Jb.b(10461, "commonui") + "%";
         }
         if (!sb.field_i.a(0)) {
           return ByteStorage.field_d;

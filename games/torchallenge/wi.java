@@ -51,11 +51,11 @@ final class wi {
         }
     }
 
-    final static ef a(String param0, byte param1) {
+    final static AccountServiceResult a(String param0, byte param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_9_0 = null;
-        ef stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -63,22 +63,22 @@ final class wi {
         try {
           if (qc.field_i == eh.field_p) {
             stackIn_2_0 = null;
-            return (ef) (stackIn_2_0);
+            return (AccountServiceResult) (stackIn_2_0);
           }
           if (param1 <= 90) {
             wi.a(2);
           }
           if (hf.field_b == eh.field_p &&
-            param0.equals(ta.field_zb)) {
+            param0.equals(AccountCreationResultPanel.field_zb)) {
             eh.field_p = mg.field_c;
             stackIn_11_0 = gf.field_w;
             return stackIn_11_0;
           }
-          ta.field_zb = param0;
+          AccountCreationResultPanel.field_zb = param0;
           eh.field_p = qc.field_i;
           gf.field_w = null;
           stackIn_9_0 = null;
-          return (ef) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -152,7 +152,7 @@ final class wi {
         if (bk.field_p < cf.field_a) {
           return null;
         }
-        if (!(cf.field_a + ef.field_e <= bk.field_p)) {
+        if (!(cf.field_a + AccountServiceResult.field_e <= bk.field_p)) {
           return ie.field_g;
         }
         return null;

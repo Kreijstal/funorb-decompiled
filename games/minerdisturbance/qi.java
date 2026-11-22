@@ -29,7 +29,7 @@ final class qi extends cb {
 
     final static boolean a(String param0, int param1, ik param2, boolean param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
-        uk var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -47,7 +47,7 @@ final class qi extends cb {
           if (param4 > -81) {
             return false;
           }
-          var8 = new uk(mb.field_b, param2);
+          var8 = new AccountCreationResultPanel(mb.field_b, param2);
           mb.field_b.b(1, var8);
           if (cm.a(true)) {
             var8.t(23101);
@@ -99,7 +99,7 @@ final class qi extends cb {
     }
 
     final ag a(String param0, int param1) {
-        ed var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ag stackIn_2_0 = null;
@@ -119,9 +119,9 @@ final class qi extends cb {
           if (!param0.equals(this.field_i)) {
             var3 = rf.a((byte) -75, param0);
             if (var3 != null &&
-              var3.field_h == null) {
+              var3.message == null) {
               this.field_i = param0;
-              this.field_k = var3.field_c;
+              this.field_k = var3.success;
             } else {
               stackIn_9_0 = bm.field_o;
               return stackIn_9_0;
@@ -164,7 +164,7 @@ final class qi extends cb {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ed var5 = null;
+        AccountServiceResult var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         Object stackIn_8_0 = null;
@@ -186,11 +186,11 @@ final class qi extends cb {
             if (var5 == null) {
               return null;
             }
-            if (var5.field_h != null) {
+            if (var5.message != null) {
               stackIn_8_0 = null;
               return (String) (stackIn_8_0);
             }
-            this.field_k = var5.field_c;
+            this.field_k = var5.success;
             this.field_i = param1;
           }
           if (this.field_k) {

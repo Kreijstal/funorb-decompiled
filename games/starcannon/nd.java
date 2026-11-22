@@ -26,7 +26,7 @@ final class nd extends qf {
     }
 
     final p a(String param0, int param1) {
-        ig var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         p stackIn_2_0 = null;
@@ -48,8 +48,8 @@ final class nd extends qf {
           if (!param0.equals(this.field_n)) {
             var3 = tg.a(param1 + 26118, param0);
             if (var3 != null &&
-              null == var3.field_d) {
-              this.field_o = var3.field_f;
+              null == var3.message) {
+              this.field_o = var3.success;
               this.field_n = param0;
             } else {
               stackIn_11_0 = cd.field_a;
@@ -120,7 +120,7 @@ final class nd extends qf {
     final String a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        ig var4 = null;
+        AccountServiceResult var4 = null;
         String var5 = null;
         CharSequence var6 = null;
         String stackIn_5_0 = null;
@@ -146,11 +146,11 @@ final class nd extends qf {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_d) {
+            if (null != var4.message) {
               return null;
             }
             this.field_n = param0;
-            this.field_o = var4.field_f;
+            this.field_o = var4.success;
           }
           if (this.field_o) {
             stackIn_17_0 = ll.field_a;

@@ -275,7 +275,7 @@ class PacketBuffer extends IntrusiveNode {
             java.applet.Applet var3 = (java.applet.Applet) null;
             PacketBuffer.a((java.applet.Applet) null, (byte) -39);
           }
-          bg.field_tb.a(param0);
+          AccountCreationResultPanel.field_tb.a(param0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "pb.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -62,7 +62,7 @@ final class ea {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1_ref), "ea.C(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "ea.C(" + param0 + ')');
         }
     }
 

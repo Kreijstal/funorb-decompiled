@@ -1173,7 +1173,7 @@ final class bf {
                 var6 = new Random((long)(this.field_V / this.b((byte) -120, this.field_Q)));
                 var7Lifetime1 = hi.a(3, 4, var6);
                 if (var7Lifetime1 == 0) {
-                  var8 = og.field_e;
+                  var8 = AccountServiceResult.field_e;
                   if (var13 != 0) {
                     if (var7Lifetime1 == 1) {
                       var8 = MouseWheelInput.field_a;

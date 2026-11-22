@@ -49,15 +49,15 @@ final class lk {
           if (param1 != param2) {
             if (100 <= param2 &&
               param2 <= 105) {
-              lg.field_a = a.a(args, param1 ^ -183);
+              lg.field_a = a.createAccountSuggestionsResult(args, param1 ^ -183);
               return;
             }
-            lg.field_a = sc.a(param3, param2, (byte) 90);
+            lg.field_a = sc.createAccountErrorResult(param3, param2, (byte) 90);
             return;
           }
           stackIn_4_0 = 18621;
           stackIn_5_1 = !(cn.field_f >= 13);
-          lg.field_a = cf.b(stackIn_4_0, stackIn_5_1);
+          lg.field_a = cf.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

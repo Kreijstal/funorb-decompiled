@@ -19,7 +19,7 @@ final class aa {
         ul.field_U = cc.a(12, -14245);
         oj.field_C = cc.a(6, -14245);
         jd.field_b = cc.a(7, -14245);
-        v.field_Bb = cc.a(8, -14245);
+        AccountCreationResultPanel.field_Bb = cc.a(8, -14245);
         mn.field_b = cc.a(9, -14245);
         dg.field_n = new ad(50);
         dg.field_n.a(param0, fi.field_b, dl.field_a, pb.field_e, "basic");
@@ -31,7 +31,7 @@ final class aa {
         dg.field_n.a((byte) -6, ul.field_U, pb.field_a, ByteStorage.field_d);
         dg.field_n.a((byte) -6, oj.field_C, mn.field_g, vk.field_x);
         dg.field_n.a((byte) -6, jd.field_b, sd.field_g, af.field_U);
-        dg.field_n.a((byte) -6, v.field_Bb, sd.field_g, af.field_U);
+        dg.field_n.a((byte) -6, AccountCreationResultPanel.field_Bb, sd.field_g, af.field_U);
         dg.field_n.a((byte) -6, mn.field_b, uc.field_cb, ug.field_bb);
     }
 

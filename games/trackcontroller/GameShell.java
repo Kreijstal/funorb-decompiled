@@ -64,7 +64,7 @@ abstract class GameShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                og.f((byte) -83);
+                                AccountCreationResultPanel.f((byte) -83);
                                 return;
                               }
                               hb.reportClientError((Throwable) null, 0, "MGS1: " + jc.b(100));
@@ -239,7 +239,7 @@ abstract class GameShell extends GameApplet {
         if (ic.a(1)) {
           stackIn_11_1 = true;
           stackIn_11_2 = false;
-          if (og.field_rb == null) {
+          if (AccountCreationResultPanel.field_rb == null) {
             stackIn_12_0 = this;
             stackIn_12_3 = false;
           } else {
@@ -551,7 +551,7 @@ abstract class GameShell extends GameApplet {
         var6 = TrackController.field_F ? 1 : 0;
         var3 = 110 % ((param0 + 46) / 32);
         if (AsyncRequest.field_u != null) {
-          if (og.field_rb == null) {
+          if (AccountCreationResultPanel.field_rb == null) {
             var4_ref_java_awt_Container = PacketBuffer.c((byte) -128);
             var5 = var4_ref_java_awt_Container.getSize();
             AsyncRequest.field_u.a(0, var5.width, var5.height);
@@ -691,7 +691,7 @@ abstract class GameShell extends GameApplet {
         if (gl.field_I == 3 &&
           l.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
           RasterBuffer.a(-25, ok.field_G)) {
-          nj.b((byte) -98);
+          AccountServiceResult.b((byte) -98);
           LevelGrid.b((byte) -51);
           qi.field_k = gj.field_a;
           BufferedSocket.field_d = false;

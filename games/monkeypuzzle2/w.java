@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class w {
-    static cj field_c;
+    static AccountServiceResult field_c;
     static Sprite[] field_b;
     static String field_a;
 
@@ -81,7 +81,7 @@ final class w {
               if (param4) {
                 stackIn_26_0 = gi.field_e[var12];
               } else {
-                stackIn_26_0 = cj.field_c[var12];
+                stackIn_26_0 = AccountServiceResult.field_c[var12];
               }
               var13 = stackIn_26_0;
               if (var13 > var7_int) {

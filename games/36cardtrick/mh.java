@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class mh {
-    static nk field_a;
+    static AccountServiceResult field_a;
     static qk field_c;
     static ja field_d;
     static volatile int field_b;
@@ -140,10 +140,10 @@ class mh {
         }
     }
 
-    final static nk a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
-        nk stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -155,7 +155,7 @@ class mh {
           }
           if (DirectByteArrayStore.field_d == hh.field_g) {
             stackIn_4_0 = null;
-            return (nk) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (DirectByteArrayStore.field_d == gg.field_b &&
             param1.equals(dj.field_e)) {
@@ -167,7 +167,7 @@ class mh {
           tf.field_s = null;
           dj.field_e = param1;
           stackIn_10_0 = null;
-          return (nk) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

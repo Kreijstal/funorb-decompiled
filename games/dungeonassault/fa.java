@@ -99,7 +99,7 @@ final class fa extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class fa extends IntrusiveNode {
           this.field_o = param1;
           this.field_n.h(oo.field_d * this.field_l + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

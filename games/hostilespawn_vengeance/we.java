@@ -151,7 +151,7 @@ final class we {
           this.field_f = this.field_c;
           this.field_a = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

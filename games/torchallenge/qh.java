@@ -4,7 +4,7 @@
 final class qh extends kj implements tl, sg {
     static int field_J;
     static int field_P;
-    private ta field_Q;
+    private AccountCreationResultPanel field_Q;
     private df field_N;
     private ng field_K;
     static boolean[][][] field_O;
@@ -13,7 +13,7 @@ final class qh extends kj implements tl, sg {
 
     private final String a(int param0) {
         if (param0 <= 27) {
-          this.field_Q = (ta) null;
+          this.field_Q = (AccountCreationResultPanel) null;
         }
         return "</col></u>";
     }
@@ -397,7 +397,7 @@ final class qh extends kj implements tl, sg {
         return "<u=2164A2><col=2164A2>";
     }
 
-    qh(ta param0) {
+    qh(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (j) null);
         String var7 = null;
         int var3 = 0;

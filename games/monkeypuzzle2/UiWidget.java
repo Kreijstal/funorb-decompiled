@@ -143,11 +143,11 @@ class UiWidget extends IntrusiveNode {
         this.a(this.field_p, param0 + 13362, this.field_r, this.field_l, this.field_e);
     }
 
-    final static cj b(String param0, int param1) {
+    final static AccountServiceResult b(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;
-        cj stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -158,7 +158,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (ed.field_c == cf.field_b) {
             stackIn_4_0 = null;
-            return (cj) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (f.field_i == ed.field_c &&
             param0.equals(pi.field_p)) {
@@ -170,7 +170,7 @@ class UiWidget extends IntrusiveNode {
           pi.field_p = param0;
           w.field_c = null;
           stackIn_9_0 = null;
-          return (cj) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

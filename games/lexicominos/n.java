@@ -7,7 +7,7 @@ final class n {
     private int field_d;
     static char[] field_l;
     private int field_g;
-    static mb field_k;
+    static AccountServiceResult field_k;
     private int field_a;
     static String field_c;
     private int field_i;
@@ -112,7 +112,7 @@ final class n {
         int var7 = 0;
         try {
           if (param3 >= -94) {
-            field_k = (mb) null;
+            field_k = (AccountServiceResult) null;
           }
           gf.a(param1.field_t + param2, param1.field_v, this.field_f, param1.field_j, param1.field_o + param4, (byte) 91);
           if (null != this.field_j) {
@@ -190,7 +190,7 @@ final class n {
     final n a(int param0, byte param1) {
         this.field_d = param0;
         if (param1 > -72) {
-          field_k = (mb) null;
+          field_k = (AccountServiceResult) null;
           return this;
         }
         return this;

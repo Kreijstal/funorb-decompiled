@@ -6,7 +6,7 @@ final class uc extends wj {
     eh field_s;
     static String field_r;
     int field_t;
-    static qj field_q;
+    static AccountServiceResult field_q;
 
     final static qg a(boolean param0, String param1, ki param2, String param3) {
         int var4_int = 0;

@@ -195,7 +195,7 @@ final class hg {
           }
           if (wh.field_a.a(640) &&
             !param0.equals(wh.field_a.d(640))) {
-            wh.field_a = nk.a(false, param0);
+            wh.field_a = AccountServiceResult.a(false, param0);
           }
           stackIn_8_0 = wh.field_a;
           return stackIn_8_0;

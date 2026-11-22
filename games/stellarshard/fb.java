@@ -32,18 +32,18 @@ abstract class fb {
 
     abstract boolean f(int param0);
 
-    final static ml a(int param0, boolean param1, String param2) {
-        ml var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, boolean param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        ml stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ml(false);
-          var3.field_g = param0;
-          var3.field_e = param2;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param0;
+          var3.message = param2;
           if (!param1) {
             field_f = -59;
           }

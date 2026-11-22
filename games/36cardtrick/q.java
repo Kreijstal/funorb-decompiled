@@ -33,7 +33,7 @@ final class q extends tl {
           if (255 == param1) {
             stackIn_11_0 = -1;
             stackIn_12_1 = !(ok.field_c >= 13);
-            tf.field_s = il.a(stackIn_11_0, stackIn_12_1);
+            tf.field_s = il.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
             var6 = (String[]) null;
             wh.a((String[]) null, 61);
           } else {
@@ -41,10 +41,10 @@ final class q extends tl {
               param1 <= 105) {
               var4 = args;
               wh.a(var4, param2 + 167);
-              tf.field_s = pf.a(param2 ^ 28, args);
+              tf.field_s = pf.createAccountSuggestionsResult(param2 ^ 28, args);
               return;
             }
-            tf.field_s = nc.a(param1, 0, param3);
+            tf.field_s = nc.createAccountErrorResult(param1, 0, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

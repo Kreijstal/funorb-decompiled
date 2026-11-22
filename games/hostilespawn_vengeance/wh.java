@@ -87,7 +87,7 @@ final class wh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "wh.A(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "wh.A(" + param0 + ',' + param1 + ')');
         }
     }
 

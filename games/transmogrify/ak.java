@@ -53,12 +53,12 @@ final class ak {
                 return null;
               }
               this.field_d.a((long)(param1 * 6), (byte) -127);
-              this.field_d.a(0, 6, sf.field_kb, (byte) 0);
+              this.field_d.a(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
               if (param0 >= -35) {
                 this.field_b = 73;
               }
-              var4_int = (sf.field_kb[2] & 255) + (16711680 & sf.field_kb[0] << 16) + (sf.field_kb[1] << 8 & 65280);
-              var5 = (255 & sf.field_kb[5]) + (sf.field_kb[4] << 8 & 65280) + (sf.field_kb[3] << 16 & 16711680);
+              var4_int = (AccountCreationResultPanel.field_kb[2] & 255) + (16711680 & AccountCreationResultPanel.field_kb[0] << 16) + (AccountCreationResultPanel.field_kb[1] << 8 & 65280);
+              var5 = (255 & AccountCreationResultPanel.field_kb[5]) + (AccountCreationResultPanel.field_kb[4] << 8 & 65280) + (AccountCreationResultPanel.field_kb[3] << 16 & 16711680);
               if (var4_int < 0) {
                 return null;
               }
@@ -87,21 +87,21 @@ final class ak {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_e.a(0, var9 + var14, sf.field_kb, (byte) 0);
-                  var13 = 255 & sf.field_kb[9];
-                  var12 = (255 & sf.field_kb[8]) + (((sf.field_kb[6] & 255) << 16) + (sf.field_kb[7] << 8 & 65280));
-                  var10 = ((sf.field_kb[1] & 255) << 16) + ((sf.field_kb[0] & 255) << 24) + ((sf.field_kb[2] << 8 & 65280) + (255 & sf.field_kb[3]));
-                  var11 = (65280 & sf.field_kb[4] << 8) + (sf.field_kb[5] & 255);
+                  this.field_e.a(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
+                  var13 = 255 & AccountCreationResultPanel.field_kb[9];
+                  var12 = (255 & AccountCreationResultPanel.field_kb[8]) + (((AccountCreationResultPanel.field_kb[6] & 255) << 16) + (AccountCreationResultPanel.field_kb[7] << 8 & 65280));
+                  var10 = ((AccountCreationResultPanel.field_kb[1] & 255) << 16) + ((AccountCreationResultPanel.field_kb[0] & 255) << 24) + ((AccountCreationResultPanel.field_kb[2] << 8 & 65280) + (255 & AccountCreationResultPanel.field_kb[3]));
+                  var11 = (65280 & AccountCreationResultPanel.field_kb[4] << 8) + (AccountCreationResultPanel.field_kb[5] & 255);
                 } else {
                   if (var9 > 512) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_e.a(0, var9 + var14, sf.field_kb, (byte) 0);
-                  var13 = 255 & sf.field_kb[7];
-                  var11 = (255 & sf.field_kb[3]) + (sf.field_kb[2] << 8 & 65280);
-                  var12 = ((sf.field_kb[4] & 255) << 16) - (-(65280 & sf.field_kb[5] << 8) - (sf.field_kb[6] & 255));
-                  var10 = (255 & sf.field_kb[1]) + ((255 & sf.field_kb[0]) << 8);
+                  this.field_e.a(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
+                  var13 = 255 & AccountCreationResultPanel.field_kb[7];
+                  var11 = (255 & AccountCreationResultPanel.field_kb[3]) + (AccountCreationResultPanel.field_kb[2] << 8 & 65280);
+                  var12 = ((AccountCreationResultPanel.field_kb[4] & 255) << 16) - (-(65280 & AccountCreationResultPanel.field_kb[5] << 8) - (AccountCreationResultPanel.field_kb[6] & 255));
+                  var10 = (255 & AccountCreationResultPanel.field_kb[1]) + ((255 & AccountCreationResultPanel.field_kb[0]) << 8);
                 }
                 if (var10 != param1) {
                   return null;
@@ -123,7 +123,7 @@ final class ak {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = sf.field_kb[var16];
+                  var6[incrementValue$2] = AccountCreationResultPanel.field_kb[var16];
                 }
                 var5 = var12;
                 var8++;
@@ -219,8 +219,8 @@ final class ak {
                     return false;
                   }
                   this.field_d.a((long)(6 * param4), (byte) -122);
-                  this.field_d.a(0, 6, sf.field_kb, (byte) 0);
-                  var7_int = (sf.field_kb[5] & 255) + ((sf.field_kb[4] & 255) << 8) + (sf.field_kb[3] << 16 & 16711680);
+                  this.field_d.a(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
+                  var7_int = (AccountCreationResultPanel.field_kb[5] & 255) + ((AccountCreationResultPanel.field_kb[4] & 255) << 8) + (AccountCreationResultPanel.field_kb[3] << 16 & 16711680);
                   if (var7_int <= 0 ||
                     !((this.field_e.b((byte) 36) / 520L) >= (long)var7_int)) {
                     return false;
@@ -231,18 +231,18 @@ final class ak {
                     var7_int = 1;
                   }
                 }
-                sf.field_kb[4] = (byte)(var7_int >> 8);
-                sf.field_kb[0] = (byte)(param1 >> 16);
-                sf.field_kb[5] = (byte)var7_int;
-                sf.field_kb[1] = (byte)(param1 >> 8);
-                sf.field_kb[3] = (byte)(var7_int >> 16);
-                sf.field_kb[2] = (byte)param1;
+                AccountCreationResultPanel.field_kb[4] = (byte)(var7_int >> 8);
+                AccountCreationResultPanel.field_kb[0] = (byte)(param1 >> 16);
+                AccountCreationResultPanel.field_kb[5] = (byte)var7_int;
+                AccountCreationResultPanel.field_kb[1] = (byte)(param1 >> 8);
+                AccountCreationResultPanel.field_kb[3] = (byte)(var7_int >> 16);
+                AccountCreationResultPanel.field_kb[2] = (byte)param1;
                 this.field_d.a((long)(param4 * 6), (byte) -122);
                 if (!param3) {
                   var17 = (byte[]) null;
                   discarded$0 = this.a((byte[]) null, -23, true, false, 106);
                 }
-                this.field_d.a(sf.field_kb, 6, (byte) 110, 0);
+                this.field_d.a(AccountCreationResultPanel.field_kb, 6, (byte) 110, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -253,7 +253,7 @@ final class ak {
                       this.field_e.a((long)(var7_int * 520), (byte) -122);
                       if (param4 > 65535) {
                         try {
-                          this.field_e.a(0, 10, sf.field_kb, (byte) 0);
+                          this.field_e.a(0, 10, AccountCreationResultPanel.field_kb, (byte) 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,13 +263,13 @@ final class ak {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = ((sf.field_kb[4] & 255) << 8) + (sf.field_kb[5] & 255);
-                        var11 = ((sf.field_kb[2] & 255) << 8) + (((255 & sf.field_kb[1]) << 16) + (((sf.field_kb[0] & 255) << 24) + (255 & sf.field_kb[3])));
-                        var13 = sf.field_kb[9] & 255;
-                        var10 = ((255 & sf.field_kb[6]) << 16) + ((sf.field_kb[7] & 255) << 8) + (255 & sf.field_kb[8]);
+                        var12 = ((AccountCreationResultPanel.field_kb[4] & 255) << 8) + (AccountCreationResultPanel.field_kb[5] & 255);
+                        var11 = ((AccountCreationResultPanel.field_kb[2] & 255) << 8) + (((255 & AccountCreationResultPanel.field_kb[1]) << 16) + (((AccountCreationResultPanel.field_kb[0] & 255) << 24) + (255 & AccountCreationResultPanel.field_kb[3])));
+                        var13 = AccountCreationResultPanel.field_kb[9] & 255;
+                        var10 = ((255 & AccountCreationResultPanel.field_kb[6]) << 16) + ((AccountCreationResultPanel.field_kb[7] & 255) << 8) + (255 & AccountCreationResultPanel.field_kb[8]);
                       } else {
                         try {
-                          this.field_e.a(0, 8, sf.field_kb, (byte) 0);
+                          this.field_e.a(0, 8, AccountCreationResultPanel.field_kb, (byte) 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -279,10 +279,10 @@ final class ak {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (255 & sf.field_kb[1]) + (65280 & sf.field_kb[0] << 8);
-                        var13 = 255 & sf.field_kb[7];
-                        var12 = (sf.field_kb[3] & 255) + (65280 & sf.field_kb[2] << 8);
-                        var10 = (sf.field_kb[6] & 255) + ((sf.field_kb[4] & 255) << 16) + ((sf.field_kb[5] & 255) << 8);
+                        var11 = (255 & AccountCreationResultPanel.field_kb[1]) + (65280 & AccountCreationResultPanel.field_kb[0] << 8);
+                        var13 = 255 & AccountCreationResultPanel.field_kb[7];
+                        var12 = (AccountCreationResultPanel.field_kb[3] & 255) + (65280 & AccountCreationResultPanel.field_kb[2] << 8);
+                        var10 = (AccountCreationResultPanel.field_kb[6] & 255) + ((AccountCreationResultPanel.field_kb[4] & 255) << 16) + ((AccountCreationResultPanel.field_kb[5] & 255) << 8);
                       }
                       if ((var11 == param4 &&
                         var12 == var9 &&
@@ -309,16 +309,16 @@ final class ak {
                       var10 = 0;
                     }
                     if (param4 <= 65535) {
-                      sf.field_kb[5] = (byte)(var10 >> 8);
-                      sf.field_kb[4] = (byte)(var10 >> 16);
-                      sf.field_kb[7] = (byte)this.field_b;
-                      sf.field_kb[1] = (byte)param4;
-                      sf.field_kb[2] = (byte)(var9 >> 8);
-                      sf.field_kb[3] = (byte)var9;
-                      sf.field_kb[6] = (byte)var10;
-                      sf.field_kb[0] = (byte)(param4 >> 8);
+                      AccountCreationResultPanel.field_kb[5] = (byte)(var10 >> 8);
+                      AccountCreationResultPanel.field_kb[4] = (byte)(var10 >> 16);
+                      AccountCreationResultPanel.field_kb[7] = (byte)this.field_b;
+                      AccountCreationResultPanel.field_kb[1] = (byte)param4;
+                      AccountCreationResultPanel.field_kb[2] = (byte)(var9 >> 8);
+                      AccountCreationResultPanel.field_kb[3] = (byte)var9;
+                      AccountCreationResultPanel.field_kb[6] = (byte)var10;
+                      AccountCreationResultPanel.field_kb[0] = (byte)(param4 >> 8);
                       this.field_e.a((long)(520 * var7_int), (byte) -120);
-                      this.field_e.a(sf.field_kb, 8, (byte) 76, 0);
+                      this.field_e.a(AccountCreationResultPanel.field_kb, 8, (byte) 76, 0);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
@@ -326,18 +326,18 @@ final class ak {
                       this.field_e.a(param0, var11, (byte) 116, var8);
                       var8 = var8 + var11;
                     } else {
-                      sf.field_kb[0] = (byte)(param4 >> 24);
-                      sf.field_kb[7] = (byte)(var10 >> 8);
-                      sf.field_kb[5] = (byte)var9;
-                      sf.field_kb[6] = (byte)(var10 >> 16);
-                      sf.field_kb[8] = (byte)var10;
-                      sf.field_kb[1] = (byte)(param4 >> 16);
-                      sf.field_kb[3] = (byte)param4;
-                      sf.field_kb[9] = (byte)this.field_b;
-                      sf.field_kb[2] = (byte)(param4 >> 8);
-                      sf.field_kb[4] = (byte)(var9 >> 8);
+                      AccountCreationResultPanel.field_kb[0] = (byte)(param4 >> 24);
+                      AccountCreationResultPanel.field_kb[7] = (byte)(var10 >> 8);
+                      AccountCreationResultPanel.field_kb[5] = (byte)var9;
+                      AccountCreationResultPanel.field_kb[6] = (byte)(var10 >> 16);
+                      AccountCreationResultPanel.field_kb[8] = (byte)var10;
+                      AccountCreationResultPanel.field_kb[1] = (byte)(param4 >> 16);
+                      AccountCreationResultPanel.field_kb[3] = (byte)param4;
+                      AccountCreationResultPanel.field_kb[9] = (byte)this.field_b;
+                      AccountCreationResultPanel.field_kb[2] = (byte)(param4 >> 8);
+                      AccountCreationResultPanel.field_kb[4] = (byte)(var9 >> 8);
                       this.field_e.a((long)(520 * var7_int), (byte) -128);
-                      this.field_e.a(sf.field_kb, 10, (byte) 90, 0);
+                      this.field_e.a(AccountCreationResultPanel.field_kb, 10, (byte) 90, 0);
                       var11 = -var8 + param1;
                       if (510 < var11) {
                         var11 = 510;

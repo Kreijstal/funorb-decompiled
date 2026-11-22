@@ -22,7 +22,7 @@ final class pl {
         if (!qg.field_d) {
           throw new IllegalStateException();
         }
-        u.field_tb = true;
+        AccountCreationResultPanel.field_tb = true;
         if (param0 <= -73) {
           q.a((byte) 110, false);
           ta.field_g = 0;

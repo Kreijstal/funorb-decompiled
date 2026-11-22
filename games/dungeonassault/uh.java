@@ -24,7 +24,7 @@ final class uh extends rm implements qn {
             this.a((dp) null, -106);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "uh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "uh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class uh extends rm implements qn {
             this.field_U = 28;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "uh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "uh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

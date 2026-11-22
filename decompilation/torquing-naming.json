@@ -404,6 +404,14 @@
       "renamedSymbol": "C:MouseWheelHandler"
     },
     {
+      "symbol": "C:dn",
+      "originalName": "dn",
+      "to": "AccountServiceResult",
+      "evidence": "Complete five-field DTO instance contract and sole boolean constructor reviewed with success/error/suggestion factories, consuming account-creation poller, full result panel and exact success label. Success/status/message/String[] suggestions plus untouched secondary flag; mixed unrelated statics preserved. No other instance operations. All owned/result-type method declarations non-native; exact quoted owned class names absent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountServiceResult"
+    },
+    {
       "symbol": "C:dp",
       "originalName": "dp",
       "to": "ByteStorage",
@@ -636,6 +644,14 @@
       "renamedSymbol": "C:PcmSampleStream"
     },
     {
+      "symbol": "C:nm",
+      "originalName": "nm",
+      "to": "AccountCreationResultPanel",
+      "evidence": "Complete instance contract source-reviewed: one constructor, three fields and four methods for pending result polling, private success/error/status/suggestion display, callback navigation and248 fallback handling. Full DTO/factory/poller and success-label context establishes role. Preserve all superclass/interface overrides, guard failures, allocation/write/call ordering and unrelated statics. All owned/type-use declarations non-native; exact quoted owned class names absent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountCreationResultPanel"
+    },
+    {
       "symbol": "C:no",
       "originalName": "no",
       "to": "BufferedSocket",
@@ -834,6 +850,38 @@
       "evidence": "Accumulator updated by getWheelRotation and read/reset/replaced by synchronized poll. Preserve per-game guards and side effects.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MouseWheelHandler.rotation:I"
+    },
+    {
+      "symbol": "F:dn.field_a:I",
+      "originalName": "field_a",
+      "to": "statusCode",
+      "evidence": "Exact instance declaration, boolean constructor, three complete factories, result poller and complete result-panel consumer source-reviewed. Role statusCode; preserve defaults, all assignments, caller identity/aliasing and unrelated statics. Secondary flag remains unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountServiceResult.statusCode:I"
+    },
+    {
+      "symbol": "F:dn.field_b:Z",
+      "originalName": "field_b",
+      "to": "success",
+      "evidence": "Exact instance declaration, boolean constructor, three complete factories, result poller and complete result-panel consumer source-reviewed. Role success; preserve defaults, all assignments, caller identity/aliasing and unrelated statics. Secondary flag remains unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountServiceResult.success:Z"
+    },
+    {
+      "symbol": "F:dn.field_d:[Ljava/lang/String;",
+      "originalName": "field_d",
+      "to": "suggestions",
+      "evidence": "Exact instance declaration, boolean constructor, three complete factories, result poller and complete result-panel consumer source-reviewed. Role suggestions; preserve defaults, all assignments, caller identity/aliasing and unrelated statics. Secondary flag remains unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountServiceResult.suggestions:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:dn.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "to": "message",
+      "evidence": "Exact instance declaration, boolean constructor, three complete factories, result poller and complete result-panel consumer source-reviewed. Role message; preserve defaults, all assignments, caller identity/aliasing and unrelated statics. Secondary flag remains unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountServiceResult.message:Ljava/lang/String;"
     },
     {
       "symbol": "F:fj.field_j:[B",
@@ -1284,6 +1332,14 @@
       "renamedSymbol": "M:NodeHashTableIterator.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
+      "originalName": "a",
+      "to": "createAccountSuggestionsResult",
+      "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success int<6 clears unrelated String before allocation. Error allocates false and writes status/message before int!=-1 null return. Suggestion allocates and aliases array before int!=0 String cleanup. Poller throws for idle before true-guard null return and consumes ready only after guard. UI byte>=-102 clears related form reference after result processing/message-panel allocation and before button handling; retain callback order, handled flag,248 transition, secondary action, all guard paths and exception wrapping. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;"
+    },
+    {
       "symbol": "M:dj.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1329,7 +1385,7 @@
       "to": "clearStaticReferences",
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:dn.clearStaticReferences(B)V"
+      "renamedSymbol": "M:AccountServiceResult.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:dp.a(B[B)V",
@@ -1876,6 +1932,14 @@
       "renamedSymbol": "M:jf.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ji.a(Z)Ldn;",
+      "originalName": "a",
+      "to": "pollAccountCreationResult",
+      "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success int<6 clears unrelated String before allocation. Error allocates false and writes status/message before int!=-1 null return. Suggestion allocates and aliases array before int!=0 String cleanup. Poller throws for idle before true-guard null return and consumes ready only after guard. UI byte>=-102 clears related form reference after result processing/message-panel allocation and before button handling; retain callback order, handled flag,248 transition, secondary action, all guard paths and exception wrapping. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ji.pollAccountCreationResult(Z)LAccountServiceResult;"
+    },
+    {
       "symbol": "M:jl.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -2108,6 +2172,14 @@
       "renamedSymbol": "M:ni.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:nm.a(ZLdn;B)V",
+      "originalName": "a",
+      "to": "showAccountCreationResult",
+      "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success int<6 clears unrelated String before allocation. Error allocates false and writes status/message before int!=-1 null return. Suggestion allocates and aliases array before int!=0 String cleanup. Poller throws for idle before true-guard null return and consumes ready only after guard. UI byte>=-102 clears related form reference after result processing/message-panel allocation and before button handling; retain callback order, handled flag,248 transition, secondary action, all guard paths and exception wrapping. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V"
+    },
+    {
       "symbol": "M:nn.a(I[BII)I",
       "originalName": "a",
       "to": "computeCrc32",
@@ -2204,6 +2276,14 @@
       "renamedSymbol": "M:pa.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:pa.b(IZ)Ldn;",
+      "originalName": "b",
+      "to": "createAccountSuccessResult",
+      "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success int<6 clears unrelated String before allocation. Error allocates false and writes status/message before int!=-1 null return. Suggestion allocates and aliases array before int!=0 String cleanup. Poller throws for idle before true-guard null return and consumes ready only after guard. UI byte>=-102 clears related form reference after result processing/message-panel allocation and before button handling; retain callback order, handled flag,248 transition, secondary action, all guard paths and exception wrapping. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pa.createAccountSuccessResult(IZ)LAccountServiceResult;"
+    },
+    {
       "symbol": "M:pb.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2226,6 +2306,14 @@
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
       "renamedSymbol": "M:pf.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+      "originalName": "a",
+      "to": "createAccountErrorResult",
+      "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success int<6 clears unrelated String before allocation. Error allocates false and writes status/message before int!=-1 null return. Suggestion allocates and aliases array before int!=0 String cleanup. Poller throws for idle before true-guard null return and consumes ready only after guard. UI byte>=-102 clears related form reference after result processing/message-panel allocation and before button handling; retain callback order, handled flag,248 transition, secondary action, all guard paths and exception wrapping. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;"
     },
     {
       "symbol": "M:pi.d()V",
@@ -4128,9 +4216,9 @@
     },
     {
       "symbol": "C:dn",
-      "renamedSymbol": "C:dn",
+      "renamedSymbol": "C:AccountServiceResult",
       "originalName": "dn",
-      "renamedName": "dn",
+      "renamedName": "AccountServiceResult",
       "declaration": {
         "file": "dn.java",
         "start": 50,
@@ -6009,9 +6097,9 @@
     },
     {
       "symbol": "C:nm",
-      "renamedSymbol": "C:nm",
+      "renamedSymbol": "C:AccountCreationResultPanel",
       "originalName": "nm",
-      "renamedName": "nm",
+      "renamedName": "AccountCreationResultPanel",
       "declaration": {
         "file": "nm.java",
         "start": 50,
@@ -12004,9 +12092,9 @@
     },
     {
       "symbol": "F:dn.field_a:I",
-      "renamedSymbol": "F:dn.field_a:I",
+      "renamedSymbol": "F:AccountServiceResult.statusCode:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "statusCode",
       "declaration": {
         "file": "dn.java",
         "start": 108,
@@ -12015,9 +12103,9 @@
     },
     {
       "symbol": "F:dn.field_b:Z",
-      "renamedSymbol": "F:dn.field_b:Z",
+      "renamedSymbol": "F:AccountServiceResult.success:Z",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "success",
       "declaration": {
         "file": "dn.java",
         "start": 206,
@@ -12026,7 +12114,7 @@
     },
     {
       "symbol": "F:dn.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:dn.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountServiceResult.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -12037,9 +12125,9 @@
     },
     {
       "symbol": "F:dn.field_d:[Ljava/lang/String;",
-      "renamedSymbol": "F:dn.field_d:[Ljava/lang/String;",
+      "renamedSymbol": "F:AccountServiceResult.suggestions:[Ljava/lang/String;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "suggestions",
       "declaration": {
         "file": "dn.java",
         "start": 91,
@@ -12048,9 +12136,9 @@
     },
     {
       "symbol": "F:dn.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:dn.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountServiceResult.message:Ljava/lang/String;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "message",
       "declaration": {
         "file": "dn.java",
         "start": 250,
@@ -12059,7 +12147,7 @@
     },
     {
       "symbol": "F:dn.field_f:[Ljava/lang/String;",
-      "renamedSymbol": "F:dn.field_f:[Ljava/lang/String;",
+      "renamedSymbol": "F:AccountServiceResult.field_f:[Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -12070,7 +12158,7 @@
     },
     {
       "symbol": "F:dn.field_g:Z",
-      "renamedSymbol": "F:dn.field_g:Z",
+      "renamedSymbol": "F:AccountServiceResult.field_g:Z",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -12081,7 +12169,7 @@
     },
     {
       "symbol": "F:dn.field_h:I",
-      "renamedSymbol": "F:dn.field_h:I",
+      "renamedSymbol": "F:AccountServiceResult.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -12092,7 +12180,7 @@
     },
     {
       "symbol": "F:dn.field_i:Lla;",
-      "renamedSymbol": "F:dn.field_i:LResourceArchive;",
+      "renamedSymbol": "F:AccountServiceResult.field_i:LResourceArchive;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -23983,7 +24071,7 @@
     },
     {
       "symbol": "F:nm.field_gb:Z",
-      "renamedSymbol": "F:nm.field_gb:Z",
+      "renamedSymbol": "F:AccountCreationResultPanel.field_gb:Z",
       "originalName": "field_gb",
       "renamedName": "field_gb",
       "declaration": {
@@ -23994,7 +24082,7 @@
     },
     {
       "symbol": "F:nm.field_hb:Z",
-      "renamedSymbol": "F:nm.field_hb:Z",
+      "renamedSymbol": "F:AccountCreationResultPanel.field_hb:Z",
       "originalName": "field_hb",
       "renamedName": "field_hb",
       "declaration": {
@@ -24005,7 +24093,7 @@
     },
     {
       "symbol": "F:nm.field_ib:Lki;",
-      "renamedSymbol": "F:nm.field_ib:Lki;",
+      "renamedSymbol": "F:AccountCreationResultPanel.field_ib:Lki;",
       "originalName": "field_ib",
       "renamedName": "field_ib",
       "declaration": {
@@ -28218,7 +28306,7 @@
     },
     {
       "symbol": "F:qi.field_d:Ldn;",
-      "renamedSymbol": "F:qi.field_d:Ldn;",
+      "renamedSymbol": "F:qi.field_d:LAccountServiceResult;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -30583,7 +30671,7 @@
     },
     {
       "symbol": "F:sc.field_C:Lnm;",
-      "renamedSymbol": "F:sc.field_C:Lnm;",
+      "renamedSymbol": "F:sc.field_C:LAccountCreationResultPanel;",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -32761,7 +32849,7 @@
     },
     {
       "symbol": "F:ua.field_b:Ldn;",
-      "renamedSymbol": "F:ua.field_b:Ldn;",
+      "renamedSymbol": "F:ua.field_b:LAccountServiceResult;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -56521,7 +56609,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#0",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#0",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -56532,7 +56620,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#1",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#1",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -56543,7 +56631,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#2",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#2",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -56554,7 +56642,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#3",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#3",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -56565,7 +56653,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#4",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#4",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -56576,7 +56664,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#5",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#5",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -56587,7 +56675,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#6",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#6",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -56598,7 +56686,7 @@
     },
     {
       "symbol": "L:di.a(I[Ljava/lang/String;)Ldn;#7",
-      "renamedSymbol": "L:di.a(I[Ljava/lang/String;)Ldn;#7",
+      "renamedSymbol": "L:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84076,7 +84164,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#0",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#0",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -84087,7 +84175,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#1",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#1",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -84098,7 +84186,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#2",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#2",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -84109,7 +84197,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#3",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#3",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -84120,7 +84208,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#4",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#4",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -84131,7 +84219,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#5",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#5",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -84142,7 +84230,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#6",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#6",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84153,7 +84241,7 @@
     },
     {
       "symbol": "L:he.a(ILjava/lang/String;)Ldn;#7",
-      "renamedSymbol": "L:he.a(ILjava/lang/String;)Ldn;#7",
+      "renamedSymbol": "L:he.a(ILjava/lang/String;)LAccountServiceResult;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -134995,7 +135083,7 @@
     },
     {
       "symbol": "L:nm.<init>(Lln;Lki;)V#0",
-      "renamedSymbol": "L:nm.<init>(Lln;Lki;)V#0",
+      "renamedSymbol": "L:AccountCreationResultPanel.<init>(Lln;Lki;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -135006,7 +135094,7 @@
     },
     {
       "symbol": "L:nm.a(BLlg;III)V#0",
-      "renamedSymbol": "L:nm.a(BLlg;III)V#0",
+      "renamedSymbol": "L:AccountCreationResultPanel.a(BLlg;III)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -135017,7 +135105,7 @@
     },
     {
       "symbol": "L:nm.a(BLlg;III)V#1",
-      "renamedSymbol": "L:nm.a(BLlg;III)V#1",
+      "renamedSymbol": "L:AccountCreationResultPanel.a(BLlg;III)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -135028,7 +135116,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#0",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#0",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#0",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -135039,7 +135127,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#1",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#1",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#1",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -135050,7 +135138,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#2",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#2",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#2",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -135061,7 +135149,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#3",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#3",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -135072,7 +135160,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#4",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#4",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -135083,7 +135171,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#5",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#5",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#5",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -135094,7 +135182,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#6",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#6",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -135105,7 +135193,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#7",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#7",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -135116,7 +135204,7 @@
     },
     {
       "symbol": "L:nm.a(ZLdn;B)V#8",
-      "renamedSymbol": "L:nm.a(ZLdn;B)V#8",
+      "renamedSymbol": "L:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -135127,7 +135215,7 @@
     },
     {
       "symbol": "L:nm.h(I)Z#0",
-      "renamedSymbol": "L:nm.h(I)Z#0",
+      "renamedSymbol": "L:AccountCreationResultPanel.h(I)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -135138,7 +135226,7 @@
     },
     {
       "symbol": "L:nm.h(I)Z#1",
-      "renamedSymbol": "L:nm.h(I)Z#1",
+      "renamedSymbol": "L:AccountCreationResultPanel.h(I)Z#1",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -135149,7 +135237,7 @@
     },
     {
       "symbol": "L:nm.h(I)Z#2",
-      "renamedSymbol": "L:nm.h(I)Z#2",
+      "renamedSymbol": "L:AccountCreationResultPanel.h(I)Z#2",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -135160,7 +135248,7 @@
     },
     {
       "symbol": "L:nm.h(I)Z#3",
-      "renamedSymbol": "L:nm.h(I)Z#3",
+      "renamedSymbol": "L:AccountCreationResultPanel.h(I)Z#3",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -135171,7 +135259,7 @@
     },
     {
       "symbol": "L:nm.h(I)Z#4",
-      "renamedSymbol": "L:nm.h(I)Z#4",
+      "renamedSymbol": "L:AccountCreationResultPanel.h(I)Z#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -141584,7 +141672,7 @@
     },
     {
       "symbol": "L:pa.b(IZ)Ldn;#0",
-      "renamedSymbol": "L:pa.b(IZ)Ldn;#0",
+      "renamedSymbol": "L:pa.createAccountSuccessResult(IZ)LAccountServiceResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -141595,7 +141683,7 @@
     },
     {
       "symbol": "L:pa.b(IZ)Ldn;#1",
-      "renamedSymbol": "L:pa.b(IZ)Ldn;#1",
+      "renamedSymbol": "L:pa.createAccountSuccessResult(IZ)LAccountServiceResult;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -146138,7 +146226,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#0",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#0",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146149,7 +146237,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#1",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#1",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -146160,7 +146248,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#2",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#2",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -146171,7 +146259,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#3",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#3",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -146182,7 +146270,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#4",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#4",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -146193,7 +146281,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#5",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#5",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#5",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -146204,7 +146292,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#6",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#6",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#6",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -146215,7 +146303,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#7",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#7",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -146226,7 +146314,7 @@
     },
     {
       "symbol": "L:pg.a(ILjava/lang/String;I)Ldn;#8",
-      "renamedSymbol": "L:pg.a(ILjava/lang/String;I)Ldn;#8",
+      "renamedSymbol": "L:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167060,7 +167148,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#0",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#0",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -167071,7 +167159,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#1",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#1",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167082,7 +167170,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#2",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#2",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -167093,7 +167181,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#3",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#3",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -167104,7 +167192,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#4",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#4",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -167115,7 +167203,7 @@
     },
     {
       "symbol": "L:sc.<init>(Lnm;)V#5",
-      "renamedSymbol": "L:sc.<init>(Lnm;)V#5",
+      "renamedSymbol": "L:sc.<init>(LAccountCreationResultPanel;)V#5",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -213150,9 +213238,9 @@
     },
     {
       "symbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
-      "renamedSymbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
+      "renamedSymbol": "M:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountSuggestionsResult",
       "declaration": {
         "file": "di.java",
         "start": 2455,
@@ -213381,9 +213469,9 @@
     },
     {
       "symbol": "M:dn.<init>(Z)V",
-      "renamedSymbol": "M:dn.<init>(Z)V",
+      "renamedSymbol": "M:AccountServiceResult.<init>(Z)V",
       "originalName": "dn",
-      "renamedName": "dn",
+      "renamedName": "AccountServiceResult",
       "declaration": {
         "file": "dn.java",
         "start": 264,
@@ -213392,7 +213480,7 @@
     },
     {
       "symbol": "M:dn.a(B)V",
-      "renamedSymbol": "M:dn.clearStaticReferences(B)V",
+      "renamedSymbol": "M:AccountServiceResult.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -217990,7 +218078,7 @@
     },
     {
       "symbol": "M:he.a(ILjava/lang/String;)Ldn;",
-      "renamedSymbol": "M:he.a(ILjava/lang/String;)Ldn;",
+      "renamedSymbol": "M:he.a(ILjava/lang/String;)LAccountServiceResult;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -220949,9 +221037,9 @@
     },
     {
       "symbol": "M:ji.a(Z)Ldn;",
-      "renamedSymbol": "M:ji.a(Z)Ldn;",
+      "renamedSymbol": "M:ji.pollAccountCreationResult(Z)LAccountServiceResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountCreationResult",
       "declaration": {
         "file": "ji.java",
         "start": 11189,
@@ -226680,9 +226768,9 @@
     },
     {
       "symbol": "M:nm.<init>(Lln;Lki;)V",
-      "renamedSymbol": "M:nm.<init>(Lln;Lki;)V",
+      "renamedSymbol": "M:AccountCreationResultPanel.<init>(Lln;Lki;)V",
       "originalName": "nm",
-      "renamedName": "nm",
+      "renamedName": "AccountCreationResultPanel",
       "declaration": {
         "file": "nm.java",
         "start": 170,
@@ -226691,7 +226779,7 @@
     },
     {
       "symbol": "M:nm.a(BLlg;III)V",
-      "renamedSymbol": "M:nm.a(BLlg;III)V",
+      "renamedSymbol": "M:AccountCreationResultPanel.a(BLlg;III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226702,9 +226790,9 @@
     },
     {
       "symbol": "M:nm.a(ZLdn;B)V",
-      "renamedSymbol": "M:nm.a(ZLdn;B)V",
+      "renamedSymbol": "M:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showAccountCreationResult",
       "declaration": {
         "file": "nm.java",
         "start": 2397,
@@ -226713,7 +226801,7 @@
     },
     {
       "symbol": "M:nm.h(I)Z",
-      "renamedSymbol": "M:nm.h(I)Z",
+      "renamedSymbol": "M:AccountCreationResultPanel.h(I)Z",
       "originalName": "h",
       "renamedName": "h",
       "declaration": {
@@ -226724,7 +226812,7 @@
     },
     {
       "symbol": "M:nm.o(I)V",
-      "renamedSymbol": "M:nm.o(I)V",
+      "renamedSymbol": "M:AccountCreationResultPanel.o(I)V",
       "originalName": "o",
       "renamedName": "o",
       "declaration": {
@@ -228143,9 +228231,9 @@
     },
     {
       "symbol": "M:pa.b(IZ)Ldn;",
-      "renamedSymbol": "M:pa.b(IZ)Ldn;",
+      "renamedSymbol": "M:pa.createAccountSuccessResult(IZ)LAccountServiceResult;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "createAccountSuccessResult",
       "declaration": {
         "file": "pa.java",
         "start": 2687,
@@ -228858,9 +228946,9 @@
     },
     {
       "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
-      "renamedSymbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+      "renamedSymbol": "M:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountErrorResult",
       "declaration": {
         "file": "pg.java",
         "start": 6620,
@@ -232114,7 +232202,7 @@
     },
     {
       "symbol": "M:sc.<init>(Lnm;)V",
-      "renamedSymbol": "M:sc.<init>(Lnm;)V",
+      "renamedSymbol": "M:sc.<init>(LAccountCreationResultPanel;)V",
       "originalName": "sc",
       "renamedName": "sc",
       "declaration": {
@@ -248944,7 +249032,7 @@
     },
     {
       "symbol": "P:di.a(I[Ljava/lang/String;)Ldn;#0",
-      "renamedSymbol": "P:di.a(I[Ljava/lang/String;)Ldn;#0",
+      "renamedSymbol": "P:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248955,7 +249043,7 @@
     },
     {
       "symbol": "P:di.a(I[Ljava/lang/String;)Ldn;#1",
-      "renamedSymbol": "P:di.a(I[Ljava/lang/String;)Ldn;#1",
+      "renamedSymbol": "P:di.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -249714,7 +249802,7 @@
     },
     {
       "symbol": "P:dn.<init>(Z)V#0",
-      "renamedSymbol": "P:dn.<init>(Z)V#0",
+      "renamedSymbol": "P:AccountServiceResult.<init>(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -249725,7 +249813,7 @@
     },
     {
       "symbol": "P:dn.a(B)V#0",
-      "renamedSymbol": "P:dn.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:AccountServiceResult.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260395,7 +260483,7 @@
     },
     {
       "symbol": "P:he.a(ILjava/lang/String;)Ldn;#0",
-      "renamedSymbol": "P:he.a(ILjava/lang/String;)Ldn;#0",
+      "renamedSymbol": "P:he.a(ILjava/lang/String;)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260406,7 +260494,7 @@
     },
     {
       "symbol": "P:he.a(ILjava/lang/String;)Ldn;#1",
-      "renamedSymbol": "P:he.a(ILjava/lang/String;)Ldn;#1",
+      "renamedSymbol": "P:he.a(ILjava/lang/String;)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -266929,7 +267017,7 @@
     },
     {
       "symbol": "P:ji.a(Z)Ldn;#0",
-      "renamedSymbol": "P:ji.a(Z)Ldn;#0",
+      "renamedSymbol": "P:ji.pollAccountCreationResult(Z)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281834,7 +281922,7 @@
     },
     {
       "symbol": "P:nm.<init>(Lln;Lki;)V#0",
-      "renamedSymbol": "P:nm.<init>(Lln;Lki;)V#0",
+      "renamedSymbol": "P:AccountCreationResultPanel.<init>(Lln;Lki;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281845,7 +281933,7 @@
     },
     {
       "symbol": "P:nm.<init>(Lln;Lki;)V#1",
-      "renamedSymbol": "P:nm.<init>(Lln;Lki;)V#1",
+      "renamedSymbol": "P:AccountCreationResultPanel.<init>(Lln;Lki;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281856,7 +281944,7 @@
     },
     {
       "symbol": "P:nm.a(BLlg;III)V#0",
-      "renamedSymbol": "P:nm.a(BLlg;III)V#0",
+      "renamedSymbol": "P:AccountCreationResultPanel.a(BLlg;III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281867,7 +281955,7 @@
     },
     {
       "symbol": "P:nm.a(BLlg;III)V#1",
-      "renamedSymbol": "P:nm.a(BLlg;III)V#1",
+      "renamedSymbol": "P:AccountCreationResultPanel.a(BLlg;III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281878,7 +281966,7 @@
     },
     {
       "symbol": "P:nm.a(BLlg;III)V#2",
-      "renamedSymbol": "P:nm.a(BLlg;III)V#2",
+      "renamedSymbol": "P:AccountCreationResultPanel.a(BLlg;III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281889,7 +281977,7 @@
     },
     {
       "symbol": "P:nm.a(BLlg;III)V#3",
-      "renamedSymbol": "P:nm.a(BLlg;III)V#3",
+      "renamedSymbol": "P:AccountCreationResultPanel.a(BLlg;III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281900,7 +281988,7 @@
     },
     {
       "symbol": "P:nm.a(BLlg;III)V#4",
-      "renamedSymbol": "P:nm.a(BLlg;III)V#4",
+      "renamedSymbol": "P:AccountCreationResultPanel.a(BLlg;III)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -281911,7 +281999,7 @@
     },
     {
       "symbol": "P:nm.a(ZLdn;B)V#0",
-      "renamedSymbol": "P:nm.a(ZLdn;B)V#0",
+      "renamedSymbol": "P:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281922,7 +282010,7 @@
     },
     {
       "symbol": "P:nm.a(ZLdn;B)V#1",
-      "renamedSymbol": "P:nm.a(ZLdn;B)V#1",
+      "renamedSymbol": "P:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281933,7 +282021,7 @@
     },
     {
       "symbol": "P:nm.a(ZLdn;B)V#2",
-      "renamedSymbol": "P:nm.a(ZLdn;B)V#2",
+      "renamedSymbol": "P:AccountCreationResultPanel.showAccountCreationResult(ZLAccountServiceResult;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281944,7 +282032,7 @@
     },
     {
       "symbol": "P:nm.h(I)Z#0",
-      "renamedSymbol": "P:nm.h(I)Z#0",
+      "renamedSymbol": "P:AccountCreationResultPanel.h(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281955,7 +282043,7 @@
     },
     {
       "symbol": "P:nm.o(I)V#0",
-      "renamedSymbol": "P:nm.o(I)V#0",
+      "renamedSymbol": "P:AccountCreationResultPanel.o(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -284958,7 +285046,7 @@
     },
     {
       "symbol": "P:pa.b(IZ)Ldn;#0",
-      "renamedSymbol": "P:pa.b(IZ)Ldn;#0",
+      "renamedSymbol": "P:pa.createAccountSuccessResult(IZ)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -284969,7 +285057,7 @@
     },
     {
       "symbol": "P:pa.b(IZ)Ldn;#1",
-      "renamedSymbol": "P:pa.b(IZ)Ldn;#1",
+      "renamedSymbol": "P:pa.createAccountSuccessResult(IZ)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287147,7 +287235,7 @@
     },
     {
       "symbol": "P:pg.a(ILjava/lang/String;I)Ldn;#0",
-      "renamedSymbol": "P:pg.a(ILjava/lang/String;I)Ldn;#0",
+      "renamedSymbol": "P:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287158,7 +287246,7 @@
     },
     {
       "symbol": "P:pg.a(ILjava/lang/String;I)Ldn;#1",
-      "renamedSymbol": "P:pg.a(ILjava/lang/String;I)Ldn;#1",
+      "renamedSymbol": "P:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287169,7 +287257,7 @@
     },
     {
       "symbol": "P:pg.a(ILjava/lang/String;I)Ldn;#2",
-      "renamedSymbol": "P:pg.a(ILjava/lang/String;I)Ldn;#2",
+      "renamedSymbol": "P:pg.createAccountErrorResult(ILjava/lang/String;I)LAccountServiceResult;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -295067,7 +295155,7 @@
     },
     {
       "symbol": "P:sc.<init>(Lnm;)V#0",
-      "renamedSymbol": "P:sc.<init>(Lnm;)V#0",
+      "renamedSymbol": "P:sc.<init>(LAccountCreationResultPanel;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -313496,7 +313584,7 @@
       "original": "Torquing.java",
       "renamed": "Torquing.java",
       "inputSha256": "742b6d0e1c2e9f63f2a936a53bef0afab5a0766ce8f580bc98ea4a0992d727f5",
-      "outputSha256": "8083feaa449ee71694a705f9b9ffc5e5d4e350350fc0ba6a205bf1b7f161f88f",
+      "outputSha256": "4b5dd13c42a20f9370622756a5912878e40b304e07a602dbf119808aaa5bf99b",
       "edits": [
         {
           "start": 91,
@@ -314652,6 +314740,13 @@
           "symbol": "M:rk.b(Z)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 10495,
+          "end": 10497,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 10498,
@@ -323478,8 +323573,15 @@
       "original": "da.java",
       "renamed": "da.java",
       "inputSha256": "cf9187a31c7613b26dcedc4a4d76c1d35bc9b8ffda978cac5a22c7fdd9112a68",
-      "outputSha256": "359d9c9153a155a18fe292f470dd781ad2838b07cd32d6746130eec212ca3b07",
+      "outputSha256": "1edc96569a94e26aed7d0cd8ce89b051917f4767ee0d8dfc1516fe6ecff1017d",
       "edits": [
+        {
+          "start": 655,
+          "end": 657,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 1170,
           "end": 1171,
@@ -324284,7 +324386,7 @@
       "original": "di.java",
       "renamed": "di.java",
       "inputSha256": "6b12e8f2b88a7ea69a7a905c6741a5135cbe14ab37ee56bc167c91fe0c24123f",
-      "outputSha256": "41f1fd28e7770e06b5b93da295df7d012ba8c2184d5d7c317a0a51421df3734d",
+      "outputSha256": "5aaf2391f99974ef59e6e2aedee7020e4746d0a5e3e15dda7c6c0d07904a64ab",
       "edits": [
         {
           "start": 1849,
@@ -324292,6 +324394,48 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2452,
+          "end": 2454,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2455,
+          "end": 2456,
+          "symbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
+          "start": 2496,
+          "end": 2498,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2562,
+          "end": 2564,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2801,
+          "end": 2803,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2827,
+          "end": 2834,
+          "symbol": "F:dn.field_d:[Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "suggestions"
         },
         {
           "start": 3444,
@@ -324524,16 +324668,65 @@
     },
     {
       "original": "dn.java",
-      "renamed": "dn.java",
+      "renamed": "AccountServiceResult.java",
       "inputSha256": "045358042675f25dac3626b82eee969e2b9c3204713f1d73cb310739cadb934c",
-      "outputSha256": "7b307d2e86a287a9c5987d7f80959597a4753e80a380d0be56e4d93b8457d2a1",
+      "outputSha256": "8314fab5f3827cad0580e0d75eb3ec9e517e93b79f5e5199bf46a3b51da99093",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 66,
           "end": 68,
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 91,
+          "end": 98,
+          "symbol": "F:dn.field_d:[Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "suggestions"
+        },
+        {
+          "start": 108,
+          "end": 115,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
+        },
+        {
+          "start": 206,
+          "end": 213,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
+        },
+        {
+          "start": 250,
+          "end": 257,
+          "symbol": "F:dn.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "message"
+        },
+        {
+          "start": 264,
+          "end": 266,
+          "symbol": "M:dn.<init>(Z)V",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 298,
+          "end": 305,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
         },
         {
           "start": 361,
@@ -328236,7 +328429,7 @@
       "original": "fh.java",
       "renamed": "SocketJs5Transport.java",
       "inputSha256": "752bd57c070592db8c24c714f62eeccb9ca7e7c92728cf9acfea10717232a908",
-      "outputSha256": "e8c624517861d1da77735b9582b1c7eeeb060fbb24f51b701a79ba0a12889652",
+      "outputSha256": "cc2954eddf4475cd9298d7e0a91a54eb46d3a9f88cbfd9010c93d77dcac59582",
       "edits": [
         {
           "start": 69,
@@ -333502,6 +333695,13 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 127887,
+          "end": 127889,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 127900,
           "end": 127902,
           "symbol": "C:lj",
@@ -333859,11 +334059,25 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 136289,
+          "end": 136291,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 136305,
           "end": 136307,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 136453,
+          "end": 136455,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 136469,
@@ -333873,11 +334087,25 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 136617,
+          "end": 136619,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 136633,
           "end": 136635,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 136781,
+          "end": 136783,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 136797,
@@ -333887,6 +334115,13 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 136945,
+          "end": 136947,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 136961,
           "end": 136963,
           "symbol": "C:lj",
@@ -333894,11 +334129,25 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 137109,
+          "end": 137111,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 137125,
           "end": 137127,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 137273,
+          "end": 137275,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 137289,
@@ -338542,8 +338791,36 @@
       "original": "gk.java",
       "renamed": "gk.java",
       "inputSha256": "c9a25cf46f972aad4e97a8b9739e23202aa300508bef84dc668e4629d16205f8",
-      "outputSha256": "6321a2e631dc719dbe7e33dd4723ac4a0d2830bbd2752d7d137fea00448ad2cc",
+      "outputSha256": "8aa1cb3c20e2ee13c02d07a4d60ee5cc3fdc36166beb2e98b8aa5be2a67cfafb",
       "edits": [
+        {
+          "start": 846,
+          "end": 847,
+          "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
+          "start": 968,
+          "end": 969,
+          "symbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
+          "start": 1046,
+          "end": 1047,
+          "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
+          "start": 1202,
+          "end": 1203,
+          "symbol": "M:pa.b(IZ)Ldn;",
+          "original": "b",
+          "renamed": "createAccountSuccessResult"
+        },
         {
           "start": 1941,
           "end": 1942,
@@ -340788,7 +341065,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "c39de15db143345dc9c18b9b7b3aea9608b109b3cf092f09e74520be74d6723c",
-      "outputSha256": "ded7e311c6a457867f07901de916264aebf315483c42c93f45a233ec11098cb1",
+      "outputSha256": "45987fa62544e6c23da61488afcaa5bc28518f6ca69e013706cfec76f3e67f32",
       "edits": [
         {
           "start": 122,
@@ -341022,6 +341299,20 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 7985,
+          "end": 7987,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 8065,
+          "end": 8067,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 8401,
           "end": 8403,
           "symbol": "C:kh",
@@ -341048,6 +341339,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 8812,
+          "end": 8814,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 9289,
@@ -341091,7 +341389,7 @@
       "original": "hg.java",
       "renamed": "hg.java",
       "inputSha256": "df4f0a9d9d29f80b903fe554f1bfa485fa28822fd218c437f2a5c57d3634fd73",
-      "outputSha256": "f8d22b1428c21fb7e17027e8ca7245a2396f33a437c3c0dc47246b44c54595d5",
+      "outputSha256": "7684ad03ebe5fcd0f02552654c6a03d2ff010923ede787356727fd66f04b88bb",
       "edits": [
         {
           "start": 164,
@@ -341106,6 +341404,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3643,
+          "end": 3645,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 3766,
@@ -341876,6 +342181,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 21010,
+          "end": 21012,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 21516,
@@ -344174,7 +344486,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "20d6193c7454964e1c0a6f1bf0ad7a5d2ca413ab0a8a2fc6bccbe5a03863314b",
-      "outputSha256": "97575674df8cafafd0afed9d2c38520d199c790a3f4605519082c628dd0d3c98",
+      "outputSha256": "4231fd143735c79f32e798fcd963d784d9d960ded6842a4f91725592985b86b4",
       "edits": [
         {
           "start": 755,
@@ -344210,6 +344522,13 @@
           "symbol": "F:gm.field_o:I",
           "original": "field_o",
           "renamed": "height"
+        },
+        {
+          "start": 1236,
+          "end": 1238,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 1269,
@@ -345296,7 +345615,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "9c4838296c709e17d77b46078ad25a55576c1029cec2ae9247a1676bf59323dd",
-      "outputSha256": "69f5f59ffc716514c91b81647230e94249e9a8650cad2d9712c91da47e036b5a",
+      "outputSha256": "e92856c92b53421a6c3e6f8b6f023b8a92fc00211abea78e511b23c25d76dfa0",
       "edits": [
         {
           "start": 426,
@@ -345306,11 +345625,32 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 689,
+          "end": 691,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
           "start": 1112,
           "end": 1114,
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 1495,
+          "end": 1502,
+          "symbol": "F:dn.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "message"
+        },
+        {
+          "start": 1641,
+          "end": 1648,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
         },
         {
           "start": 2302,
@@ -345521,6 +345861,27 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 11130,
+          "end": 11132,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 11968,
+          "end": 11975,
+          "symbol": "F:dn.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "message"
+        },
+        {
+          "start": 12013,
+          "end": 12020,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
         },
         {
           "start": 12109,
@@ -347085,7 +347446,7 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "6b4325d1423ef8ac5dd056ca39af28ffd3d78834ffa7185ed82fd35c640b7512",
-      "outputSha256": "d35479a4b583b8e8f5f1a45819d46cb2f98fad2ab4b84ddca25aa100f4f96578",
+      "outputSha256": "fe80bb058da59d764a0a363ca133bd92e4168a56bef6d4954d64b3ebe180de9f",
       "edits": [
         {
           "start": 679,
@@ -347359,6 +347720,27 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 11186,
+          "end": 11188,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 11189,
+          "end": 11190,
+          "symbol": "M:ji.a(Z)Ldn;",
+          "original": "a",
+          "renamed": "pollAccountCreationResult"
+        },
+        {
+          "start": 11344,
+          "end": 11346,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         }
       ]
     },
@@ -348181,7 +348563,7 @@
       "original": "ka.java",
       "renamed": "ka.java",
       "inputSha256": "079c48ab18c6f5ce09d8b709690f5e45541e327fb064f8ce119c644b4b00bbf0",
-      "outputSha256": "59e6984886ce44df62dfe40816bad08757c6a94d768d78071899a8fa5bb6646e",
+      "outputSha256": "47a8b57d3562bf44e4d6e32748d0320888ef9e7a7afa4fe47399f29684d23f8a",
       "edits": [
         {
           "start": 82,
@@ -348189,6 +348571,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4757,
+          "end": 4759,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 5941,
@@ -359830,10 +360219,24 @@
     },
     {
       "original": "nm.java",
-      "renamed": "nm.java",
+      "renamed": "AccountCreationResultPanel.java",
       "inputSha256": "9d85dfb745c1c67ef2825e565b01f1d0aabd98cb6b40ffc4f5f697cc214a0b34",
-      "outputSha256": "7e2fb71057bfaafb6b6e46516221651185becaf6d49c2cf140bf36d176c9f553",
+      "outputSha256": "8fda82160c0dc4cbc2efa3a4622d180067533ef5800b265b4f837b7caf3cb67c",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 170,
+          "end": 172,
+          "symbol": "M:nm.<init>(Lln;Lki;)V",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
+        },
         {
           "start": 379,
           "end": 380,
@@ -359847,6 +360250,223 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1256,
+          "end": 1257,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 1267,
+          "end": 1268,
+          "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
+          "start": 1353,
+          "end": 1355,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1377,
+          "end": 1379,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1403,
+          "end": 1405,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1429,
+          "end": 1431,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1568,
+          "end": 1570,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1593,
+          "end": 1594,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 1602,
+          "end": 1604,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1795,
+          "end": 1797,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1820,
+          "end": 1821,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 1829,
+          "end": 1831,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1900,
+          "end": 1902,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1913,
+          "end": 1914,
+          "symbol": "M:ji.a(Z)Ldn;",
+          "original": "a",
+          "renamed": "pollAccountCreationResult"
+        },
+        {
+          "start": 2052,
+          "end": 2054,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2077,
+          "end": 2078,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 2086,
+          "end": 2088,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2162,
+          "end": 2163,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 2284,
+          "end": 2286,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2307,
+          "end": 2308,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 2316,
+          "end": 2318,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2397,
+          "end": 2398,
+          "symbol": "M:nm.a(ZLdn;B)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
+          "start": 2415,
+          "end": 2417,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2841,
+          "end": 2848,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
+        },
+        {
+          "start": 2932,
+          "end": 2939,
+          "symbol": "F:dn.field_d:[Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "suggestions"
+        },
+        {
+          "start": 3128,
+          "end": 3135,
+          "symbol": "F:dn.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "message"
+        },
+        {
+          "start": 3162,
+          "end": 3169,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
+        },
+        {
+          "start": 3642,
+          "end": 3649,
+          "symbol": "F:dn.field_b:Z",
+          "original": "field_b",
+          "renamed": "success"
+        },
+        {
+          "start": 3889,
+          "end": 3896,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
+        },
+        {
+          "start": 4190,
+          "end": 4197,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
+        },
+        {
+          "start": 4231,
+          "end": 4238,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
         },
         {
           "start": 4910,
@@ -361704,8 +362324,15 @@
       "original": "on.java",
       "renamed": "on.java",
       "inputSha256": "56c5769a2daa5399f21b6a6a0457946b6d03bacf48de9aa134979637e206b532",
-      "outputSha256": "45aeca9b729f227f9a389b9e92eed6f2b416d722f6a6d18d6c713f03c1dd345e",
+      "outputSha256": "5930c4a6a0b5025e38a795eb575afbe6173f73d144e24abe213898bd6bf3c3ce",
       "edits": [
+        {
+          "start": 573,
+          "end": 575,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 808,
           "end": 809,
@@ -362169,7 +362796,7 @@
       "original": "pa.java",
       "renamed": "pa.java",
       "inputSha256": "4fc87c4455ebbe87b5b8285a562d1f3ce2266e512bc48fc58c024819f81afaea",
-      "outputSha256": "cf1bc0e3eaed08213ddbdc85d99359202ca90a83b5577c60c9cd595e7f96f765",
+      "outputSha256": "e3cc902319d4e8dd4c2adb87455166759cd42dbf641f01e8a3336c32faf05a95",
       "edits": [
         {
           "start": 514,
@@ -362303,6 +362930,48 @@
           "symbol": "M:pa.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2684,
+          "end": 2686,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2687,
+          "end": 2688,
+          "symbol": "M:pa.b(IZ)Ldn;",
+          "original": "b",
+          "renamed": "createAccountSuccessResult"
+        },
+        {
+          "start": 2727,
+          "end": 2729,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2751,
+          "end": 2753,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2817,
+          "end": 2819,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2969,
+          "end": 2971,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         }
       ]
     },
@@ -363655,7 +364324,7 @@
       "original": "pg.java",
       "renamed": "pg.java",
       "inputSha256": "f691e43f00a05c8d51aa38e47e7acb55c0f928d4f38f34260a1b655f9de1ee92",
-      "outputSha256": "6e916b3dfca53926c73850a1b2e96afe976407a05dcf2c15180fdc33408e8d20",
+      "outputSha256": "2b5a1e2d66d5e77012504838c0dfefb13eb1ea1c57a2ec11306f63683b4a989e",
       "edits": [
         {
           "start": 6203,
@@ -363663,6 +364332,69 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 6617,
+          "end": 6619,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 6620,
+          "end": 6621,
+          "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
+          "start": 6671,
+          "end": 6673,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 6737,
+          "end": 6739,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 6768,
+          "end": 6770,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 7007,
+          "end": 7009,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 7033,
+          "end": 7040,
+          "symbol": "F:dn.field_a:I",
+          "original": "field_a",
+          "renamed": "statusCode"
+        },
+        {
+          "start": 7066,
+          "end": 7073,
+          "symbol": "F:dn.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "message"
+        },
+        {
+          "start": 7215,
+          "end": 7217,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 7716,
@@ -365830,14 +366562,28 @@
       "original": "qi.java",
       "renamed": "qi.java",
       "inputSha256": "a8072190de45ba2287b01d24d82cde063e7a6b5f0a93d3baff828efc8e027c13",
-      "outputSha256": "2c41986582934f3809a596ff507aab0bc991e219b331850414674276d69e25d5",
+      "outputSha256": "85bada5381205522cc095e155570d53b6da9a3142577085e7c46d66c0ee71d2a",
       "edits": [
+        {
+          "start": 179,
+          "end": 181,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 215,
           "end": 216,
           "symbol": "M:qi.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 351,
+          "end": 353,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 1555,
@@ -366595,7 +367341,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "90790ba98fe6555640df2ddf1887df2c95867fad044350aec24c726c2e332fc3",
-      "outputSha256": "56eb79fed95a8871a674cf97c3b1073539a32034dd1b46773c435dabf79a8fd0",
+      "outputSha256": "40bb2b768418564b306ce22e301d2a100ce923c0b9239f20741eb08946bc7187",
       "edits": [
         {
           "start": 61,
@@ -366624,6 +367370,13 @@
           "symbol": "C:t",
           "original": "t",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1195,
+          "end": 1197,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 1347,
@@ -366864,8 +367617,15 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "fb1c25cc3a038c236a4e9bd38ee1ca975918364595201a66531e963c11af1bea",
-      "outputSha256": "c3de71f36d9f24e5acaff7bdc50e6ab111472233c5067c0c34916363299cecbb",
+      "outputSha256": "4fd8852fa5c5150b1d0d26b1365670126160adeff1d33023fc5fe25540f6a73f",
       "edits": [
+        {
+          "start": 815,
+          "end": 817,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 3162,
           "end": 3164,
@@ -371761,7 +372521,7 @@
       "original": "sc.java",
       "renamed": "sc.java",
       "inputSha256": "5500fb0d031312f7d85aeb0b6c8aa6b6feb23815db9b6fbbe0c10814b5c5b49b",
-      "outputSha256": "d14d0f910d568fd0f7fdf7bfdde7ca169a1a4456f11f5cd9ec326395c9bac1a1",
+      "outputSha256": "a733035b163fa5bb353555553593506e0707fdb2df507ed0ed8776970ce5a2f6",
       "edits": [
         {
           "start": 61,
@@ -371769,6 +372529,20 @@
           "symbol": "C:hn",
           "original": "hn",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 96,
+          "end": 98,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 427,
+          "end": 429,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
         },
         {
           "start": 469,
@@ -371930,6 +372704,13 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 7852,
+          "end": 7854,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
         },
         {
           "start": 8471,
@@ -377895,8 +378676,15 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "365dfea358457b052574b00aec2c401cf674c1286b1566ac50eaf4b85f004f2d",
-      "outputSha256": "aac25b93129853f466360e9b60f8298524456ee76ddd612f53ec535e84d218c6",
+      "outputSha256": "494ff0a03101657a3c1c0e21ca00646355705430bf939afd79aa52e3f1378bfb",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
         {
           "start": 2133,
           "end": 2134,
@@ -381019,7 +381807,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "da18191bf80b68b460246292f4717e8cd37fe7da87b604459bbf742ba96c07bf",
-      "outputSha256": "22848b52d5d2384eb406deed34424cd637711f4244f6d81912256a2585b63610",
+      "outputSha256": "16856820799ed04e21a7e6ccfc93309744e424c734f38e4cf025c9f6c6d7f7ca",
       "edits": [
         {
           "start": 262,
@@ -381111,6 +381899,20 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 11911,
+          "end": 11913,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 12575,
+          "end": 12577,
+          "symbol": "C:nm",
+          "original": "nm",
+          "renamed": "AccountCreationResultPanel"
         },
         {
           "start": 14358,
@@ -383039,7 +383841,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "5c54996f25518b32ca38e8e51cebee28ec20ba2d8ffbebd7f941620b1cf74518",
-      "outputSha256": "72eab61741214f9595971a6acef90b2555ae091d22f18d8887ad31028ab5c1ab",
+      "outputSha256": "725bb6479073b722ceb55aced970b44b8795e2c0a2b740a12edc73b7d8025f62",
       "edits": [
         {
           "start": 384,
@@ -383138,6 +383940,20 @@
           "symbol": "M:w.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 8018,
+          "end": 8020,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 8057,
+          "end": 8059,
+          "symbol": "C:dn",
+          "original": "dn",
+          "renamed": "AccountServiceResult"
         },
         {
           "start": 8695,
@@ -383500,7 +384316,7 @@
       "original": "wb.java",
       "renamed": "wb.java",
       "inputSha256": "0cd5a29f6be9212227a9873d62c5d05ba532bc4e798af1ef5ac28bffe29cef20",
-      "outputSha256": "42c9ba3d4686516f961a6b5f837a9a6d5729e4fa548341efa77a5dcb472e3493",
+      "outputSha256": "42d0ace9124eedb78d41a55b86025dc952dc82e04af68ed2c5bf2cbe2ddc5ba5",
       "edits": [
         {
           "start": 102,
@@ -383515,6 +384331,27 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 979,
+          "end": 980,
+          "symbol": "M:di.a(I[Ljava/lang/String;)Ldn;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
+          "start": 1044,
+          "end": 1045,
+          "symbol": "M:pg.a(ILjava/lang/String;I)Ldn;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
+          "start": 1205,
+          "end": 1206,
+          "symbol": "M:pa.b(IZ)Ldn;",
+          "original": "b",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 2128,
@@ -385450,10 +386287,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torquing"
     },
-    "rulesSha256": "c8651361353a14d6d9550f6127dd39c7c5331ecbf7ae5e0ce58e2e1eedf1a0cc",
+    "rulesSha256": "60cafdc0e1acb4667004f5b86e4414303f991ec55c86a0cc6a87005f0b12d974",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
-    "outputTreeSha256": "b1b5587e540f045f76af8dfd1b0ce74ed542ee1a4ddf58378161750aee43814d",
+    "outputTreeSha256": "2d2ed27234722cee9a600e5c1981b5e263be6969737829c097da9cfc76c87903",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

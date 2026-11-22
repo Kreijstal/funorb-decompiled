@@ -5,7 +5,7 @@ final class cm extends ii implements pf, vg {
     private ck field_N;
     static int field_P;
     private bh field_L;
-    private jb field_O;
+    private AccountCreationResultPanel field_O;
     static ad field_T;
     static boolean field_Q;
     static String field_S;
@@ -47,7 +47,7 @@ final class cm extends ii implements pf, vg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class cm extends ii implements pf, vg {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class cm extends ii implements pf, vg {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -233,11 +233,11 @@ final class cm extends ii implements pf, vg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    cm(jb param0) {
+    cm(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ca) null);
         String var7 = null;
         int var3 = 0;
@@ -267,7 +267,7 @@ final class cm extends ii implements pf, vg {
           this.b((byte) -95, this.field_N);
           this.b(0, 300, 0, 0, var5 + 55 + var3);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

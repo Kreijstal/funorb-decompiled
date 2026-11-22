@@ -129,7 +129,7 @@ abstract class ro {
         sl.field_q[2] = gb.field_a;
         sl.field_q[11] = fn.field_B;
         sl.field_q[3] = ClientException.field_c;
-        sl.field_q[5] = oe.field_vb;
+        sl.field_q[5] = AccountCreationResultPanel.field_vb;
         sl.field_q[6] = mo.field_b;
         sl.field_q[13] = pb.field_a;
         sl.field_q[1] = no.field_a;
@@ -163,7 +163,7 @@ abstract class ro {
         sl.field_q[28] = gm.field_a;
         sl.field_q[36] = ja.a(ek.field_C, (byte) -44);
         mb.field_q = new String[23];
-        mb.field_q[7] = oe.field_vb.toLowerCase();
+        mb.field_q[7] = AccountCreationResultPanel.field_vb.toLowerCase();
         mb.field_q[17] = sl.field_q[29].toLowerCase();
         mb.field_q[18] = sl.field_q[29].toLowerCase();
         mb.field_q[8] = rb.field_a.toLowerCase();

@@ -10,7 +10,7 @@ final class qg extends mf {
     final String a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        in var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_14_0 = null;
@@ -31,11 +31,11 @@ final class qg extends mf {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_f != null) {
+            if (var4.message != null) {
               return null;
             }
             this.field_i = param0;
-            this.field_j = var4.field_a;
+            this.field_j = var4.success;
           }
           if (!this.field_j) {
             stackIn_14_0 = fh.field_c;
@@ -97,7 +97,7 @@ final class qg extends mf {
     }
 
     final fi a(byte param0, String param1) {
-        in var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         dj var4 = null;
         CharSequence var5 = null;
@@ -121,8 +121,8 @@ final class qg extends mf {
           if (!param1.equals(this.field_i)) {
             var3 = c.a(param1, 117);
             if (var3 != null &&
-              var3.field_f == null) {
-              this.field_j = var3.field_a;
+              var3.message == null) {
+              this.field_j = var3.success;
               this.field_i = param1;
             } else {
               stackIn_11_0 = qh.field_x;

@@ -53,11 +53,11 @@ final class pg {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (null == mb.field_a) {
+            if (null == AccountServiceResult.field_a) {
               stackIn_16_0 = param0.getParameter("settings");
               return stackIn_16_0;
             }
-            stackIn_14_0 = mb.field_a;
+            stackIn_14_0 = AccountServiceResult.field_a;
             return stackIn_14_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

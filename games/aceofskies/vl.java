@@ -18,7 +18,7 @@ final class vl {
           SectorCacheStore.c(-18535);
           if (je.a(false)) {
             q.outgoingPacket.writeCipheredOpcode(54, 1);
-            fr.a(param0 + 26270, 0);
+            AccountServiceResult.a(param0 + 26270, 0);
             te.b(true);
             return;
           }
@@ -33,7 +33,7 @@ final class vl {
           return;
         }
         q.outgoingPacket.writeCipheredOpcode(54, 1);
-        fr.a(param0 + 26270, 0);
+        AccountServiceResult.a(param0 + 26270, 0);
         te.b(true);
     }
 

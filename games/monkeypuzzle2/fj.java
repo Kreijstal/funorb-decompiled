@@ -78,18 +78,18 @@ final class fj extends ButtonWidget {
           ch.field_d = f.field_i;
           if (255 != param3) {
             if (100 > param3) {
-              cg.field_a = lh.a(true, param1, param3);
+              cg.field_a = lh.createAccountErrorResult(true, param1, param3);
             } else {
               if (param3 > 105) {
-                cg.field_a = lh.a(true, param1, param3);
+                cg.field_a = lh.createAccountErrorResult(true, param1, param3);
               } else {
-                cg.field_a = jj.a(args, true);
+                cg.field_a = jj.createAccountSuggestionsResult(args, true);
               }
             }
           } else {
             stackIn_4_0 = -89;
             stackIn_5_1 = !(ClientException.field_d >= 13);
-            cg.field_a = hj.$cfr$intArgs$a$ae8766b723be(stackIn_4_0, stackIn_5_1);
+            cg.field_a = hj.createAccountSuccessResultWithIntGuard(stackIn_4_0, stackIn_5_1);
           }
           if (param2 == -27967) {
             return;

@@ -58,10 +58,10 @@ abstract class bg {
     }
 
     final static boolean a(String param0, int param1, String param2, boolean param3, String param4, byte param5, mk param6) {
-        oe var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        oe var9 = null;
+        AccountCreationResultPanel var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -77,9 +77,9 @@ abstract class bg {
             return false;
           }
           var8 = -4 % ((3 - param5) / 42);
-          var9 = new oe(ch.field_e, param6);
+          var9 = new AccountCreationResultPanel(AccountServiceResult.field_e, param6);
           var7 = var9;
-          ch.field_e.b(var9, 0);
+          AccountServiceResult.field_e.b(var9, 0);
           if (ko.e((byte) -94)) {
             var9.o(16614);
             return true;

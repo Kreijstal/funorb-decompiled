@@ -45,7 +45,7 @@ final class ej extends mi {
         var3 = StarCannon.field_A;
         bj.field_d = null;
         KeyboardInput.field_a = 0;
-        ok.field_sb = null;
+        AccountCreationResultPanel.field_sb = null;
         var2 = va.field_s;
         va.field_s = SecondaryNodeDequeIterator.field_b;
         if (param1 == 51) {

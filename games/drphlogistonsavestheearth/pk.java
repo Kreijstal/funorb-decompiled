@@ -22,7 +22,7 @@ final class pk extends ei {
     }
 
     final vh a(int param0, String param1) {
-        og var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         vh stackIn_2_0 = null;
@@ -44,8 +44,8 @@ final class pk extends ei {
           if (!param1.equals(this.field_r)) {
             var3 = ng.a(param1, param0 ^ 11774);
             if (var3 != null &&
-              null == var3.field_g) {
-              this.field_p = var3.field_b;
+              null == var3.message) {
+              this.field_p = var3.success;
               this.field_r = param1;
             } else {
               stackIn_11_0 = nd.field_P;
@@ -82,7 +82,7 @@ final class pk extends ei {
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        og var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         Object stackIn_11_0 = null;
@@ -106,12 +106,12 @@ final class pk extends ei {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_g != null) {
+            if (var4.message != null) {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
             this.field_r = param1;
-            this.field_p = var4.field_b;
+            this.field_p = var4.success;
           }
           if (this.field_p) {
             return fk.field_r;

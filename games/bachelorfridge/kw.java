@@ -20,7 +20,7 @@ final class kw extends TileEffect {
         lna.field_q = param0 ? true : false;
     }
 
-    final static AccountServiceResult a(boolean param0, String[] param1) {
+    final static AccountServiceResult createAccountSuggestionsResult(boolean param0, String[] param1) {
         AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         AccountServiceResult stackIn_1_0 = null;
@@ -30,7 +30,7 @@ final class kw extends TileEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new AccountServiceResult(param0);
-          var2.field_a = param1;
+          var2.suggestions = param1;
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

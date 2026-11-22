@@ -216,12 +216,12 @@ public final class HostileSpawn extends NetworkGameClient {
               ia.field_l[13] = fg.a("", "barrel", vd.field_C, false);
               jd.a((byte) 33, "", vd.field_C, "spawneyes0");
               ia.field_l[23] = MouseInput.a("", -32, "doorgfx", vd.field_C);
-              wg.field_zb = fg.a("", "hatching", vd.field_C, false);
+              AccountCreationResultPanel.field_zb = fg.a("", "hatching", vd.field_C, false);
               gj.a(param0 + 133, ig.field_H, 91.0f);
               this.a((byte) -51);
               qa.field_g = ei.a(vd.field_C, 101, "", "guns");
               di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
-              jj.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
+              AccountServiceResult.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
               sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
               ue.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
               df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
@@ -275,7 +275,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.W(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.W(" + param0 + ')');
         }
     }
 
@@ -482,7 +482,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.WA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.WA(" + param0 + ')');
         }
     }
 
@@ -743,7 +743,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var3), "HostileSpawn.TA(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "HostileSpawn.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -763,7 +763,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "HostileSpawn.CA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "HostileSpawn.CA(" + param0 + ')');
         }
     }
 
@@ -885,7 +885,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.KA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.KA(" + param0 + ')');
         }
     }
 
@@ -894,7 +894,7 @@ public final class HostileSpawn extends NetworkGameClient {
           lk.a(4, 16776960, 4, mk.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (bd[]) null, (bd[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
           this.j((byte) -91);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
         }
     }
 
@@ -1013,7 +1013,7 @@ public final class HostileSpawn extends NetworkGameClient {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1033,7 +1033,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "HostileSpawn.UA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "HostileSpawn.UA(" + param0 + ')');
         }
     }
 
@@ -1068,7 +1068,7 @@ public final class HostileSpawn extends NetworkGameClient {
           nd.field_e = null;
           ej.field_h = null;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.DA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.DA(" + param0 + ')');
         }
     }
 
@@ -1076,7 +1076,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           this.a("hostilespawn", 480, 14);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.init()");
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.init()");
         }
     }
 
@@ -1178,7 +1178,7 @@ public final class HostileSpawn extends NetworkGameClient {
           pc.b(1);
           bb.clearStaticReferences((byte) -85);
           gg.a(false);
-          wg.b(true);
+          AccountCreationResultPanel.b(true);
           pe.q(8421504);
           ta.g((byte) 24);
           dg.q(param0 ^ -285);
@@ -1345,7 +1345,7 @@ public final class HostileSpawn extends NetworkGameClient {
           la.clearStaticReferences((byte) -62);
           hk.c(-20150);
           fk.b((byte) -125);
-          jj.a(47);
+          AccountServiceResult.a(47);
           qi.j(66);
           jf.clearStaticReferences((byte) -99);
           gm.a(0);
@@ -1364,7 +1364,7 @@ public final class HostileSpawn extends NetworkGameClient {
           this.field_G = null;
           this.field_o = null;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.PA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.PA(" + param0 + ')');
         }
     }
 
@@ -1396,7 +1396,7 @@ public final class HostileSpawn extends NetworkGameClient {
               field_K = (int[]) null;
             }
           } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.U(" + param0 + ')');
+            throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.U(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1487,7 +1487,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.IA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.IA(" + param0 + ')');
         }
     }
 
@@ -1530,7 +1530,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.AA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.AA(" + param0 + ')');
         }
     }
 
@@ -1696,7 +1696,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.HA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.HA(" + param0 + ')');
         }
     }
 
@@ -1727,7 +1727,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "HostileSpawn.SA(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "HostileSpawn.SA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1736,7 +1736,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           ni.field_g = (java.applet.Applet) (this);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.<init>()");
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.<init>()");
         }
     }
 
@@ -1943,7 +1943,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref2), "HostileSpawn.VA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref2), "HostileSpawn.VA(" + param0 + ')');
         }
     }
 
@@ -1965,7 +1965,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var3), "HostileSpawn.RA(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "HostileSpawn.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2008,7 +2008,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.OA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.OA(" + param0 + ')');
         }
     }
 
@@ -2085,7 +2085,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.MA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.MA(" + param0 + ')');
         }
     }
 
@@ -2144,7 +2144,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.V(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2_ref), "HostileSpawn.V(" + param0 + ')');
         }
     }
 
@@ -2162,7 +2162,7 @@ public final class HostileSpawn extends NetworkGameClient {
           oc.field_h[1][9] = IsaacGenerator.field_h.a("level_10.dat", "", 0);
           IsaacGenerator.field_h = null;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
         }
     }
 
@@ -2281,7 +2281,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "HostileSpawn.BA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "HostileSpawn.BA(" + param0 + ')');
         }
     }
 
@@ -2322,7 +2322,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.GA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.GA(" + param0 + ')');
         }
     }
 
@@ -2396,7 +2396,7 @@ public final class HostileSpawn extends NetworkGameClient {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2665,7 +2665,7 @@ public final class HostileSpawn extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.NA(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "HostileSpawn.NA(" + param0 + ')');
         }
     }
 

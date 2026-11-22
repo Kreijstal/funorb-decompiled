@@ -62,7 +62,7 @@ final class di extends TextureOperator {
             var5.field_J = ee.a(param0, -42, 16, var5.field_J);
           }
           if (id.a(param0, -31980)) {
-            var5.field_x = oe.a(12635, var5.field_x, 16, param0);
+            var5.field_x = AccountCreationResultPanel.a(12635, var5.field_x, 16, param0);
             var6 = 0;
             for (var7 = 0; var5.field_x.length > var7; var7++) {
               if (var6 < (255 & var5.field_x[var7])) {

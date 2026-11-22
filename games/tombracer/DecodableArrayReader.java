@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DecodableArrayReader implements pp {
+final class DecodableArrayReader implements DecodableArrayReaderMarker {
     private static String[] effectPresetNames;
     static char[] cp1252HighChars;
 

@@ -316,7 +316,7 @@ final class bl {
         }
         jg.field_n[20] = gb.field_g[1];
         jg.field_n[23] = gb.field_g[4];
-        jg.field_n[18] = qj.field_g;
+        jg.field_n[18] = AccountServiceResult.field_g;
         jg.field_n[21] = gb.field_g[2];
         jg.field_n[10] = eg.field_w[2];
         jg.field_n[8] = eg.field_w[0];

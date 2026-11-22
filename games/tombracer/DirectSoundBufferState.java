@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DirectSoundBufferState implements pga {
+final class DirectSoundBufferState implements DirectSoundBufferStateMarker {
     private com.ms.directX.DSCursors[] field_a;
     private com.ms.directX.DSBufferDesc[] field_b;
 

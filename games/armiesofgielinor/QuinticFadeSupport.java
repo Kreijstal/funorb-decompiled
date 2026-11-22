@@ -9,7 +9,7 @@ final class QuinticFadeSupport {
     static String field_a;
     static String[][] field_d;
 
-    final static AccountRequestResult a(int param0) {
+    final static AccountRequestResult pollAccountCreationResult(int param0) {
         if (SpriteScrollBar.nameCheckResultConsumed == ChannelBaseVolumeConsoleCommand.field_L) {
           throw new IllegalStateException();
         }

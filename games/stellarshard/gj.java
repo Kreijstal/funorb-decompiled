@@ -16,11 +16,11 @@ abstract class gj extends DualLinkNode {
         field_s = null;
     }
 
-    final static ml a(boolean param0, String[] param1) {
-        ml var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(boolean param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
-        ml stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -28,10 +28,10 @@ abstract class gj extends DualLinkNode {
         try {
           if (!param0) {
             var3 = (String[]) null;
-            gj.a(false, (String[]) null);
+            gj.createAccountSuggestionsResult(false, (String[]) null);
           }
-          var2 = new ml(false);
-          var2.field_d = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

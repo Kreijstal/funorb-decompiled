@@ -15,8 +15,8 @@ final class di extends IntrusiveNode {
     static ff field_i;
     private static long[] field_n;
 
-    final static wg a(boolean param0, boolean param1) {
-        wg var2 = new wg(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_f = param1 ? true : false;
         if (param0) {
           java.applet.Applet var3 = (java.applet.Applet) null;

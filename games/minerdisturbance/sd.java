@@ -8,7 +8,7 @@ final class sd implements Iterable {
     static int[] field_g;
     int field_f;
     static String field_e;
-    static ed field_d;
+    static AccountServiceResult field_d;
     IntrusiveNode[] field_b;
     static int[] field_c;
     static IntrusiveDeque field_a;

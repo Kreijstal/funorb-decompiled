@@ -63,7 +63,7 @@ final class vg {
         int var10Lifetime1;
         var12 = Chess.field_G;
         try {
-          ByteStorage.a(aj.field_c, true);
+          ByteStorage.a(AccountServiceResult.field_c, true);
           if (ib.field_d != null) {
             var15 = uj.field_j;
             var17 = var15;

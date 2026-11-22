@@ -2709,7 +2709,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-115, "fs_button_close");
                 if (var2 != null) {
-                  ed.field_f = bh.a(var2, -123);
+                  AccountServiceResult.field_f = bh.a(var2, -123);
                 }
                 var2 = e.a(38, "fs_button_members");
                 if (var2 != null) {

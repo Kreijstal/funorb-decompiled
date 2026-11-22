@@ -15,11 +15,11 @@ final class lf {
         int var1 = -2 % ((param0 - 29) / 52);
     }
 
-    final static qj a(String param0, boolean param1) {
+    final static AccountServiceResult a(String param0, boolean param1) {
         RuntimeException var2 = null;
-        qj stackIn_2_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        qj stackIn_9_0 = null;
+        AccountServiceResult stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -27,12 +27,12 @@ final class lf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (qj) null;
+            stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
           if (tg.field_c == PacketBuffer.field_m) {
             stackIn_5_0 = null;
-            return (qj) (stackIn_5_0);
+            return (AccountServiceResult) (stackIn_5_0);
           }
           if (kf.field_d == tg.field_c &&
             param0.equals(pg.field_a)) {
@@ -44,7 +44,7 @@ final class lf {
           pg.field_a = param0;
           tg.field_c = PacketBuffer.field_m;
           stackIn_11_0 = null;
-          return (qj) (stackIn_11_0);
+          return (AccountServiceResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

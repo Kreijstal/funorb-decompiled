@@ -746,7 +746,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime108 = tf.a(0, "SHADOW_CLOSE");
           if (null != var2Lifetime108) {
-            ua.field_xb = ab.a(0, var2Lifetime108);
+            AccountCreationResultPanel.field_xb = ab.a(0, var2Lifetime108);
           }
           var2Lifetime109 = tf.a(0, "START_LEVEL_BUTTON_CAPTION");
           if (null != var2Lifetime109) {

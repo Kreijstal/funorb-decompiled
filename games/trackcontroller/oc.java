@@ -21,16 +21,16 @@ final class oc extends IntrusiveNode {
         }
     }
 
-    final static nj a(boolean param0, int param1) {
-        nj var2 = null;
-        nj var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, int param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (param1 == -21017) {
-          var2 = new nj(true);
+          var2 = new AccountServiceResult(true);
           var2.field_f = param0 ? true : false;
           return var2;
         }
         oc.clearStaticReferences((byte) -68);
-        var2Lifetime1 = new nj(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_f = param0 ? true : false;
         return var2Lifetime1;
     }

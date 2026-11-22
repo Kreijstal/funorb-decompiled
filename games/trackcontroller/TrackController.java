@@ -164,7 +164,7 @@ public final class TrackController extends GameShell {
         if (param0 != -24452) {
           this.shutdown(-78);
         }
-        if (null != og.field_rb) {
+        if (null != AccountCreationResultPanel.field_rb) {
           oj.a(-111);
         }
         ei.d(-18601);
@@ -186,16 +186,16 @@ public final class TrackController extends GameShell {
         int var3Lifetime3;
         int var4Lifetime1;
         var6 = field_F ? 1 : 0;
-        if (null == og.field_rb) {
+        if (null == AccountCreationResultPanel.field_rb) {
           stackIn_3_0 = ki.field_f;
         } else {
-          stackIn_3_0 = og.field_rb;
+          stackIn_3_0 = AccountCreationResultPanel.field_rb;
         }
         var7 = stackIn_3_0;
         var2 = var7;
         if (IterableNodeHashTable.a(-122)) {
           stackIn_6_0 = -128;
-          if (og.field_rb == null) {
+          if (AccountCreationResultPanel.field_rb == null) {
             stackIn_7_1 = lb.field_M;
           } else {
             stackIn_7_1 = true;
@@ -274,7 +274,7 @@ public final class TrackController extends GameShell {
           }
           if (ob.g(-26998) &&
             !ag.b(18)) {
-            if (og.field_rb != null) {
+            if (AccountCreationResultPanel.field_rb != null) {
               stackIn_54_0 = true;
             } else {
               stackIn_54_0 = lb.field_M;
@@ -362,7 +362,7 @@ public final class TrackController extends GameShell {
         bb.a(true);
         ld.clearStaticReferences(-16723);
         vl.e((byte) 9);
-        og.v(-106);
+        AccountCreationResultPanel.v(-106);
         rk.t(4210752);
         jj.e((byte) 105);
         vd.b(false);
@@ -501,7 +501,7 @@ public final class TrackController extends GameShell {
         th.e(0);
         cf.clearStaticReferences(29211);
         le.b(-128);
-        nj.b(71);
+        AccountServiceResult.b(71);
         j.clearStaticReferences(-75);
         ba.a((byte) 113);
         wa.d(param0 - 202);
@@ -550,13 +550,13 @@ public final class TrackController extends GameShell {
         int var2Lifetime1;
         var3 = field_F ? 1 : 0;
         ii.a((byte) -62);
-        if (og.field_rb != null &&
-          og.field_rb.field_b) {
+        if (AccountCreationResultPanel.field_rb != null &&
+          AccountCreationResultPanel.field_rb.field_b) {
           oj.a(-78);
           ed.a((byte) -94);
         }
         stackIn_5_1 = 103;
-        stackIn_6_2 = (null != og.field_rb);
+        stackIn_6_2 = (null != AccountCreationResultPanel.field_rb);
         this.a((byte) stackIn_5_1, stackIn_6_2);
         if (ag.field_e) {
           this.r(-23);
@@ -583,15 +583,15 @@ public final class TrackController extends GameShell {
                 if (!ob.g(-26998)) {
                   this.s(0);
                 } else {
-                  stackIn_47_1 = (null != og.field_rb);
+                  stackIn_47_1 = (null != AccountCreationResultPanel.field_rb);
                   var2 = this.b(stackIn_47_1, 119);
                   if (var2 == 1) {
-                    if (og.field_rb != null) {
+                    if (AccountCreationResultPanel.field_rb != null) {
                       oj.a(-108);
                     }
                   } else {
                     if (var2 == 2) {
-                      if (null != og.field_rb) {
+                      if (null != AccountCreationResultPanel.field_rb) {
                         oj.a(-84);
                       }
                       af.a(CachedArchiveSource.b((byte) 77), (byte) -9);

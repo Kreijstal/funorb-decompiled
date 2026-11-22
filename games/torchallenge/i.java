@@ -19,7 +19,7 @@ final class i extends ma {
     }
 
     final rj a(byte param0, String param1) {
-        ef var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         rj stackIn_2_0 = null;
@@ -43,8 +43,8 @@ final class i extends ma {
           if (!param1.equals(this.field_o)) {
             var3 = wi.a(param1, (byte) 123);
             if (var3 != null &&
-              var3.field_g == null) {
-              this.field_n = var3.field_m;
+              var3.message == null) {
+              this.field_n = var3.success;
               this.field_o = param1;
             } else {
               stackIn_12_0 = jh.field_c;
@@ -89,7 +89,7 @@ final class i extends ma {
     final String a(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        ef var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -114,10 +114,10 @@ final class i extends ma {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_g) {
+            if (null != var4.message) {
               return null;
             }
-            this.field_n = var4.field_m;
+            this.field_n = var4.success;
             this.field_o = param0;
           }
           if (this.field_n) {

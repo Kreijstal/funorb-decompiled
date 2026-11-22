@@ -3,7 +3,7 @@
  */
 abstract class h {
     static Archive field_j;
-    static pd field_c;
+    static AccountServiceResult field_c;
     static String field_d;
     hl field_b;
     hl field_m;
@@ -79,7 +79,7 @@ abstract class h {
         field_c = null;
         field_j = null;
         if (!param0) {
-          field_c = (pd) null;
+          field_c = (AccountServiceResult) null;
         }
     }
 

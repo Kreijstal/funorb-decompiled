@@ -16,11 +16,11 @@ final class be {
         ji.field_k.a((byte) 80, param0);
     }
 
-    final static ef a(int param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
         if (param0 > -111) {
           field_e = (TorChallenge) null;
         }
-        ef var2 = new ef(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_c = param1 ? true : false;
         return var2;
     }

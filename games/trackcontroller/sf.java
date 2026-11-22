@@ -1693,7 +1693,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "create_email_tooltip");
                 if (var2 != null) {
-                  og.field_nb = ta.a(32200, var2);
+                  AccountCreationResultPanel.field_nb = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_email_confirm_tooltip");
                 if (var2 != null) {

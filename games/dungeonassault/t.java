@@ -19,7 +19,7 @@ final class t {
         try {
           lo.a(86, param2, param1.field_b, param0, param1.field_f);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

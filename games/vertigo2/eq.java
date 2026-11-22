@@ -239,20 +239,20 @@ final class eq extends TextureOperator {
         RuntimeException var4_ref = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
-          um.field_F = oe.field_qb;
+          um.field_F = AccountCreationResultPanel.field_qb;
           if (param2 != 255) {
             if (100 <= param2 &&
               param2 <= 105) {
               var4 = args;
               vj.a((byte) -76, var4);
-              rf.field_p = oq.a(param3 - 11, args);
+              rf.field_p = oq.createAccountSuggestionsResult(param3 - 11, args);
             } else {
-              rf.field_p = fn.a(param2, true, param1);
+              rf.field_p = fn.createAccountErrorResult(param2, true, param1);
             }
           } else {
             stackIn_4_0 = -2956;
             stackIn_5_1 = !(ea.field_e >= 13);
-            rf.field_p = gi.a(stackIn_4_0, stackIn_5_1);
+            rf.field_p = gi.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             vj.a((byte) -107, (String[]) null);
           }

@@ -4,7 +4,7 @@
 final class gf extends ma {
     static int field_u;
     private dj field_r;
-    static ef field_w;
+    static AccountServiceResult field_w;
     static Sprite field_n;
     static ResourceArchive field_p;
     static int[][] field_m;

@@ -44,11 +44,11 @@ final class mg {
         }
     }
 
-    final static ef a(byte param0, String param1, int param2) {
-        ef var3 = null;
+    final static AccountServiceResult createAccountErrorResult(byte param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         rd var4 = null;
-        ef stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -58,9 +58,9 @@ final class mg {
             var4 = (rd) null;
             mg.a(34, (rd) null, -58);
           }
-          var3 = new ef(false);
-          var3.field_g = param1;
-          var3.field_n = param2;
+          var3 = new AccountServiceResult(false);
+          var3.message = param1;
+          var3.statusCode = param2;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -158,7 +158,7 @@ abstract class jg {
         }
         tf.field_d = null;
         jc.field_d = null;
-        in.field_h = false;
+        AccountServiceResult.field_h = false;
     }
 
     abstract int a(int param0, long param1);

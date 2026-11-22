@@ -50,7 +50,7 @@ final class ba extends ag {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class ba extends ag {
           ba.a((byte) 13);
         }
         if (li.field_o) {
-          jj.field_d.p(-108);
+          AccountServiceResult.field_d.p(-108);
         } else {
           var1 = ca.field_a;
           if (0 < var1) {
@@ -119,9 +119,9 @@ final class ba extends ag {
             } else {
               GameAppletShell.field_g = vj.field_u;
             }
-            GameAppletShell.field_g = wg.a((byte) -21, new CharSequence[]{(CharSequence) ((Object) GameAppletShell.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) di.field_a)});
+            GameAppletShell.field_g = AccountCreationResultPanel.a((byte) -21, new CharSequence[]{(CharSequence) ((Object) GameAppletShell.field_g), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) di.field_a)});
           }
-          jj.field_d.g((byte) 64);
+          AccountServiceResult.field_d.g((byte) 64);
           dc.a((byte) -116);
         }
     }
@@ -177,7 +177,7 @@ final class ba extends ag {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

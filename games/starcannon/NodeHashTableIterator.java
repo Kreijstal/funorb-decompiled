@@ -92,7 +92,7 @@ final class NodeHashTableIterator implements Iterator {
             !vk.field_v.equals(param2.getParameter("session"))) {
             var4 = vk.field_v;
           }
-          stackIn_11_0 = ig.a((String) (var3), -1, (String) (var4), param1, 1);
+          stackIn_11_0 = AccountServiceResult.a((String) (var3), -1, (String) (var4), param1, 1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

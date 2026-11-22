@@ -3,7 +3,7 @@
  */
 final class rf extends da {
     static int field_l;
-    static ch field_p;
+    static AccountServiceResult field_p;
     static si field_o;
     private kp field_r;
     static tq field_n;

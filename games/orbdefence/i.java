@@ -26,22 +26,22 @@ final class i {
           tg.field_c = kf.field_d;
           if (param3 == 255) {
             stackIn_7_0 = !(13 <= ae.field_a);
-            uc.field_q = fk.a(stackIn_7_0, (byte) -68);
+            uc.field_q = fk.createAccountSuccessResult(stackIn_7_0, (byte) -68);
             var7 = (String[]) null;
             gi.a((String[]) null, (byte) -73);
             return;
           }
           if (100 > param3) {
-            uc.field_q = oe.a(param3, param1, -3);
+            uc.field_q = oe.createAccountErrorResult(param3, param1, -3);
             return;
           }
           if (param3 > 105) {
-            uc.field_q = oe.a(param3, param1, -3);
+            uc.field_q = oe.createAccountErrorResult(param3, param1, -3);
             return;
           }
           var8 = param2;
           gi.a(var8, (byte) -66);
-          uc.field_q = hi.a(2, param2);
+          uc.field_q = hi.createAccountSuggestionsResult(2, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

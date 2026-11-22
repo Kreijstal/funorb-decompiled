@@ -22,7 +22,7 @@ final class ic extends IntrusiveNode {
             field_n = -58;
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ic.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ic.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ic extends IntrusiveNode {
             } else {
               stackIn_13_2 = null;
               stackIn_13_3 = null;
-              stackIn_13_6 = "" + wg.field_yb;
+              stackIn_13_6 = "" + AccountCreationResultPanel.field_yb;
             }
             var4 = ((fd) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(fd.field_u).append("&v2=").append(fd.field_h).append("&e=").append(var10).toString()));
             while (var4.field_f == 0) {
@@ -163,7 +163,7 @@ final class ic extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

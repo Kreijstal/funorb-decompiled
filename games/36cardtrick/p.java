@@ -15,7 +15,7 @@ final class p extends cg {
         int var4;
         de[] var5;
         var4 = Main.field_T;
-        var5 = bg.v(113);
+        var5 = AccountCreationResultPanel.v(113);
         var2 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
           if (~param1 == ~var5[var3].field_a) {

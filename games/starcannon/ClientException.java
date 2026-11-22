@@ -6,7 +6,7 @@ final class ClientException extends RuntimeException {
     Throwable field_a;
     String field_b;
 
-    final static ig a(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (cl.field_k == DualLinkNode.field_k) {
           throw new IllegalStateException();
         }
@@ -15,7 +15,7 @@ final class ClientException extends RuntimeException {
           return MouseWheelSource.field_a;
         }
         if (param0 != -92) {
-          return (ig) null;
+          return (AccountServiceResult) null;
         }
         return null;
     }

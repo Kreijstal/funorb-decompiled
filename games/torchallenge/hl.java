@@ -192,14 +192,14 @@ final class hl {
           if (255 == param1) {
             stackIn_10_0 = -114;
             stackIn_11_1 = !(13 <= cf.field_f);
-            GameScreen.field_h = be.a(stackIn_10_0, stackIn_11_1);
+            GameScreen.field_h = be.createAccountSuccessResult(stackIn_10_0, stackIn_11_1);
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              GameScreen.field_h = wk.a(param2, param0 - 1);
+              GameScreen.field_h = wk.createAccountSuggestionsResult(param2, param0 - 1);
               return;
             }
-            GameScreen.field_h = mg.a((byte) 81, param3, param1);
+            GameScreen.field_h = mg.createAccountErrorResult((byte) 81, param3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

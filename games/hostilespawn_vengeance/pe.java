@@ -82,7 +82,7 @@ final class pe extends wb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class pe extends wb {
           this.field_ib.field_E = true;
           this.a(51448, this.field_ib);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

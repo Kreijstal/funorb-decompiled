@@ -216,7 +216,7 @@ final class IsaacGenerator {
           }
           this.a(-7);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

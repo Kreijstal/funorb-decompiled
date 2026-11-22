@@ -55,23 +55,23 @@ final class ai {
         RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (null != ef.field_h) {
-            for (var1_int = 0; ef.field_h.length > var1_int; var1_int++) {
-              if (ef.field_h[var1_int] != null) {
-                for (var2 = 0; ef.field_h[var1_int].length > var2; var2++) {
-                  if (ef.field_h[var1_int][var2] != null) {
-                    ef.field_h[var1_int][var2].pixels = null;
+          if (null != AccountServiceResult.field_h) {
+            for (var1_int = 0; AccountServiceResult.field_h.length > var1_int; var1_int++) {
+              if (AccountServiceResult.field_h[var1_int] != null) {
+                for (var2 = 0; AccountServiceResult.field_h[var1_int].length > var2; var2++) {
+                  if (AccountServiceResult.field_h[var1_int][var2] != null) {
+                    AccountServiceResult.field_h[var1_int][var2].pixels = null;
                   }
-                  ef.field_h[var1_int][var2] = null;
+                  AccountServiceResult.field_h[var1_int][var2] = null;
                 }
-                ef.field_h[var1_int] = null;
+                AccountServiceResult.field_h[var1_int] = null;
               }
             }
           }
           if (param0 != 0) {
             ai.a(68);
           }
-          ef.field_h = (Sprite[][]) null;
+          AccountServiceResult.field_h = (Sprite[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

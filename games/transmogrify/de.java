@@ -5,7 +5,7 @@ final class de {
     static TileRack field_d;
     static int[] field_b;
     static String[] field_c;
-    static uj field_a;
+    static AccountServiceResult field_a;
 
     public static void a(byte param0) {
         field_c = null;
@@ -34,8 +34,8 @@ final class de {
         }
     }
 
-    final static uj a(boolean param0, byte param1) {
-        uj var2 = new uj(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, byte param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         if (param1 == -116) {
           var2.field_a = param0 ? true : false;
           return var2;

@@ -36,7 +36,7 @@ final class CombatState {
         try {
           this.a(111, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class CombatState {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -409,7 +409,7 @@ final class CombatState {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class CombatState {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -710,7 +710,7 @@ final class CombatState {
           } else {
             stackIn_98_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -825,7 +825,7 @@ final class CombatState {
           }
           this.a(param1, 6);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "pj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "pj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1018,7 +1018,7 @@ final class CombatState {
           } else {
             stackIn_127_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_126_1).append(stackIn_127_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_126_1).append(stackIn_127_2).append(')').toString());
         }
     }
 
@@ -1220,7 +1220,7 @@ final class CombatState {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1532,7 +1532,7 @@ final class CombatState {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1695,7 +1695,7 @@ final class CombatState {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1755,7 +1755,7 @@ final class CombatState {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1794,7 +1794,7 @@ final class CombatState {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -2136,7 +2136,7 @@ final class CombatState {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2176,7 +2176,7 @@ final class CombatState {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -102,10 +102,10 @@ final class c extends bo implements Cloneable {
         if (param0) {
           c.clearStaticReferences(83);
         }
-        if (sa.field_lb == null) {
-          sa.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
+        if (AccountCreationResultPanel.field_lb == null) {
+          AccountCreationResultPanel.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
         }
-        return sa.field_lb;
+        return AccountCreationResultPanel.field_lb;
     }
 
     public static void clearStaticReferences(int param0) {

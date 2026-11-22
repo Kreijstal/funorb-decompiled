@@ -157,20 +157,20 @@ final class sc {
         }
     }
 
-    final static aj a(String param0, int param1, byte param2) {
-        aj var3 = null;
+    final static AccountServiceResult createAccountErrorResult(String param0, int param1, byte param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        aj stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new aj(false);
+          var3 = new AccountServiceResult(false);
           var4 = -56 % ((param2 - 42) / 46);
-          var3.field_g = param1;
-          var3.field_e = param0;
+          var3.statusCode = param1;
+          var3.message = param0;
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

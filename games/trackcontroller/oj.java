@@ -251,12 +251,12 @@ final class oj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (null == og.field_rb) {
+          if (null == AccountCreationResultPanel.field_rb) {
             return;
           }
-          r.a(-32652, og.field_rb);
-          og.field_rb.a(rg.field_c, 5474);
-          og.field_rb = null;
+          r.a(-32652, AccountCreationResultPanel.field_rb);
+          AccountCreationResultPanel.field_rb.a(rg.field_c, 5474);
+          AccountCreationResultPanel.field_rb = null;
           if (param0 > -74) {
             field_b = (java.security.SecureRandom) null;
           }

@@ -1476,7 +1476,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -43, "keycode_dynamite");
                 if (null != var2) {
-                  ch.field_k = var2[0] & 255;
+                  AccountServiceResult.field_k = var2[0] & 255;
                 }
                 var2 = en.a((byte) -102, "keycode_backwards_classic");
                 if (null != var2) {

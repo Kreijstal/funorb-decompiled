@@ -19,18 +19,18 @@ final class cf extends ci {
     private int field_Eb;
     private tl[] field_Gb;
 
-    final static aj b(int param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
         if (param0 != 18621) {
-          return (aj) null;
+          return (AccountServiceResult) null;
         }
-        aj var2 = new aj(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_f = param1 ? true : false;
         return var2;
     }
 
     final boolean l(int param0) {
         if (param0 != 3) {
-          cf.b(55, true);
+          cf.createAccountSuccessResult(55, true);
         }
         if (this.field_Pb != -2) {
           return false;
@@ -75,7 +75,7 @@ final class cf extends ci {
           vi.field_d = wb.field_h;
           fn.field_c = wb.field_c;
           if (param1) {
-            stackIn_4_0 = aj.field_c;
+            stackIn_4_0 = AccountServiceResult.field_c;
           } else {
             stackIn_4_0 = ed.field_c;
           }
@@ -371,7 +371,7 @@ final class cf extends ci {
         r.k(param3 + 2949);
         wb.e(param4, param2, param1, param0);
         if (param3 != 80) {
-          cf.b(77, false);
+          cf.createAccountSuccessResult(77, false);
         }
     }
 

@@ -44,7 +44,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_g = true;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
             this.focusGained((java.awt.event.FocusEvent) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

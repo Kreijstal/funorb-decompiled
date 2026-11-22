@@ -47,7 +47,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -333,7 +333,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var5.f(var4, -84);
           var5.a(var5.field_i - var4, param1 - 19722);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -420,7 +420,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

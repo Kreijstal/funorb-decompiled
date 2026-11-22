@@ -4,7 +4,7 @@
 final class DelegatingCanvas extends java.awt.Canvas {
     static uf[] field_e;
     private java.awt.Component field_b;
-    static ml field_d;
+    static AccountServiceResult field_d;
     static String field_c;
     static volatile boolean field_a;
 

@@ -1797,7 +1797,7 @@ public final class Main extends c {
           var10 = var8_array.length >> 2;
           var11_int = -1 + vj.field_j.length;
           while (var11_int >= 0) {
-            vj.field_j[var11_int] = var8_array[var8_array.length + (-1 - bg.a(var10, -2147483648, var9))];
+            vj.field_j[var11_int] = var8_array[var8_array.length + (-1 - AccountCreationResultPanel.a(var10, -2147483648, var9))];
             var11_int--;
             if (var46 == 0) {
               continue;
@@ -1810,16 +1810,16 @@ public final class Main extends c {
             var13_int = 0;
             while (true) {
               if (10 > var13_int) {
-                var14 = bg.a(vj.field_g, -2147483648, var9);
-                var15_int = 5 + bg.a(12, -2147483648, var9);
-                var16_int = var8_array[(var8_array.length >> 1) + bg.a(var8_array.length >> 1, -2147483648, var9)];
+                var14 = AccountCreationResultPanel.a(vj.field_g, -2147483648, var9);
+                var15_int = 5 + AccountCreationResultPanel.a(12, -2147483648, var9);
+                var16_int = var8_array[(var8_array.length >> 1) + AccountCreationResultPanel.a(var8_array.length >> 1, -2147483648, var9)];
                 var17_int = var8_array[var10];
                 var11.c();
                 vj.d();
                 vj.b(0, 20 - var15_int, 1, var15_int, var16_int, var17_int);
                 vj.b(0, 20, 1, var15_int, var17_int, var16_int);
                 mg.field_j[4].c();
-                var11.e(var12_int, var14 - 20, bg.a(56, -2147483648, var9) + 200);
+                var11.e(var12_int, var14 - 20, AccountCreationResultPanel.a(56, -2147483648, var9) + 200);
                 var13_int++;
                 if (var46 == 0) {
                   continue;
@@ -2121,7 +2121,7 @@ public final class Main extends c {
           al.clearStaticReferences((byte) -70);
           hk.a(121);
           j.m(param0 + 46);
-          bg.u(-2113);
+          AccountCreationResultPanel.u(-2113);
           rk.e((byte) -30);
           kl.m(-23573);
           tj.l(0);
@@ -2252,7 +2252,7 @@ public final class Main extends c {
           rc.b((byte) 112);
           dh.b((byte) -36);
           sc.clearStaticReferences(178313985);
-          nk.a(2);
+          AccountServiceResult.a(2);
           lb.c(640);
           cc.a((byte) 107);
           kf.clearStaticReferences((byte) 110);

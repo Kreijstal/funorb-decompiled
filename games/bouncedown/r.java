@@ -101,13 +101,13 @@ final class r implements fc {
         }
     }
 
-    final static rg a(int param0, boolean param1) {
-        rg var2 = new rg(true);
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         if (param0 == 5579) {
           var2.field_a = param1 ? true : false;
           return var2;
         }
-        return (rg) null;
+        return (AccountServiceResult) null;
     }
 
     public static void clearStaticReferences(byte param0) {

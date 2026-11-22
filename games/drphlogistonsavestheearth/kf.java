@@ -5,7 +5,7 @@ final class kf {
     static he[] field_e;
     static int[] field_c;
     static vj field_d;
-    static og field_a;
+    static AccountServiceResult field_a;
     static String[] field_b;
 
     final static void a(boolean param0, boolean param1, byte param2) {
@@ -31,7 +31,7 @@ final class kf {
 
     final static int a(boolean param0) {
         if (param0) {
-          field_a = (og) null;
+          field_a = (AccountServiceResult) null;
           return hi.field_a;
         }
         return hi.field_a;

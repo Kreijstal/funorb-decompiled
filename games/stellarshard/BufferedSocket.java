@@ -31,10 +31,10 @@ final class BufferedSocket implements Runnable {
         int var9 = 0;
         int var13 = stellarshard.field_B;
         int var8Lifetime1;
-        qh.field_a = ml.a("commonui", (byte) -123, param2, "frame_top");
-        DirectByteStorage.field_g = ml.a("commonui", (byte) 122, param2, "frame_bottom");
+        qh.field_a = AccountServiceResult.a("commonui", (byte) -123, param2, "frame_top");
+        DirectByteStorage.field_g = AccountServiceResult.a("commonui", (byte) 122, param2, "frame_bottom");
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
-        ImageProducerRasterBuffer.field_i = ml.a("commonui", (byte) 85, param2, "button");
+        ImageProducerRasterBuffer.field_i = AccountServiceResult.a("commonui", (byte) 85, param2, "button");
         DualLinkNode.field_p = pf.a("commonui", (byte) -98, "validation", param2);
         de.field_c = (BitmapFont) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
         si.field_V = (BitmapFont) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));

@@ -20,8 +20,8 @@ final class in {
         super.finalize();
     }
 
-    final static fr a(byte param0, boolean param1) {
-        fr var2 = new fr(true);
+    final static AccountServiceResult createAccountSuccessResult(byte param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_d = param1 ? true : false;
         if (param0 != 111) {
           field_b = (int[]) null;
@@ -89,8 +89,8 @@ final class in {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static fr $cfr$intArgs$a$1ded6534de63(int param0, boolean param1) {
-        fr var2 = new fr(true);
+    final static AccountServiceResult createAccountSuccessResultWithIntGuard(int param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_d = param1 ? true : false;
         if (param0 != 111) {
           field_b = (int[]) null;

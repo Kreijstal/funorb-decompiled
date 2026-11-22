@@ -37,8 +37,8 @@ final class fe {
     final static String b(byte param0) {
         String var1 = "";
         int var2 = 31 % ((-45 - param0) / 46);
-        if (ig.field_ib != null) {
-          var1 = ig.field_ib.a((byte) 85);
+        if (AccountCreationResultPanel.field_ib != null) {
+          var1 = AccountCreationResultPanel.field_ib.a((byte) 85);
         }
         if (var1.length() == 0) {
           var1 = jj.l(-112);

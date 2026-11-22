@@ -386,7 +386,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_f.a(this.a(bg.field_c, -21016, ig.field_fb), -1, this.a(vl.field_d, -21016, ua.field_a));
+          this.field_f.a(this.a(bg.field_c, -21016, AccountCreationResultPanel.field_fb), -1, this.a(vl.field_d, -21016, ua.field_a));
           stackIn_37_0 = this.field_f.field_h;
           stackIn_37_1 = -1;
         }
@@ -394,7 +394,7 @@ final class ja {
           this.a(this.field_f.field_h, param0, true);
         }
         if (0 != gi.field_e) {
-          this.field_i = ig.field_fb;
+          this.field_i = AccountCreationResultPanel.field_fb;
           this.field_c = bg.field_c;
         }
         return;

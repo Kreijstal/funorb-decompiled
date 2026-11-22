@@ -255,7 +255,7 @@ abstract class rh extends WidgetContainer {
           }
           var2Lifetime9 = o.a((byte) 76, "youHaveSeen");
           if (null != var2Lifetime9) {
-            jg.field_kb = be.a(var2Lifetime9, (byte) -44);
+            AccountCreationResultPanel.field_kb = be.a(var2Lifetime9, (byte) -44);
           }
           var2Lifetime10 = o.a((byte) 76, "wellDone");
           if (null != var2Lifetime10) {

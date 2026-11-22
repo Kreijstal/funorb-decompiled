@@ -28,14 +28,14 @@ final class wb extends am {
               param0 <= 105) {
               var4 = param1;
               ci.a(123, var4);
-              qi.field_d = di.a(0, param1);
+              qi.field_d = di.createAccountSuggestionsResult(0, param1);
             } else {
-              qi.field_d = pg.a(param0, param3, -1);
+              qi.field_d = pg.createAccountErrorResult(param0, param3, -1);
             }
           } else {
             stackIn_4_0 = 74;
             stackIn_5_1 = !(oh.field_d >= 13);
-            qi.field_d = pa.b(stackIn_4_0, stackIn_5_1);
+            qi.field_d = pa.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             ci.a(102, (String[]) null);
           }

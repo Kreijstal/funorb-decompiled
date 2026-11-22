@@ -110,7 +110,7 @@ abstract class dl extends DualLinkNode {
         byte[] var2Lifetime66;
         byte[] var2Lifetime67;
         try {
-          uj.field_h = param0;
+          AccountServiceResult.field_h = param0;
           var2 = GzipDecompressor.a(10, "defaultlang");
           if (var2 != null) {
             hi.field_d = eg.a(104, var2);
@@ -384,7 +384,7 @@ abstract class dl extends DualLinkNode {
           if (var2Lifetime67 != null) {
             mc.countdownLabels[2] = eg.a(83, var2Lifetime67);
           }
-          uj.field_h = null;
+          AccountServiceResult.field_h = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

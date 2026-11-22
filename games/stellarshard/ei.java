@@ -166,7 +166,7 @@ final class ei extends dg {
     }
 
     public ei() {
-        super(0, 0, ml.field_b, vf.field_F, (uk) null, (lf) null);
+        super(0, 0, AccountServiceResult.field_b, vf.field_F, (uk) null, (lf) null);
         this.field_C = new IntrusiveDeque();
     }
 

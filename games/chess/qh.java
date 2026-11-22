@@ -143,7 +143,7 @@ final class qh {
               if (gm.field_f != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = vm.a(vd.field_Gb, -9224, vj.field_d, n.field_d, mk.field_a);
+              var3_int = vm.a(AccountCreationResultPanel.field_Gb, -9224, vj.field_d, n.field_d, mk.field_a);
               var4 = 3 + var3_int;
               cb.field_k = new int[var4];
               ka.field_g = new String[var4];

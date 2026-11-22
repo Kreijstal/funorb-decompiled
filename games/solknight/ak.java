@@ -119,10 +119,10 @@ final class ak {
           if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 60;
           }
-          if (!jk.field_ub.c((byte) -121)) {
+          if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
             return 70;
           }
-          if (!jk.field_ub.b(true)) {
+          if (!AccountCreationResultPanel.field_ub.b(true)) {
             return 80;
           }
         } else {
@@ -149,10 +149,10 @@ final class ak {
           if (!DelegatingCanvas.field_c.a(2, "commonui")) {
             return 80;
           }
-          if (!jk.field_ub.c((byte) -121)) {
+          if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
             return 82;
           }
-          if (!jk.field_ub.b(param0)) {
+          if (!AccountCreationResultPanel.field_ub.b(param0)) {
             return 86;
           }
         }

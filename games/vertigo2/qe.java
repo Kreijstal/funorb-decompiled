@@ -330,11 +330,11 @@ final class qe extends pn {
         }
     }
 
-    final static ch a(String param0, byte param1) {
+    final static AccountServiceResult a(String param0, byte param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_9_0 = null;
-        ch stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -342,12 +342,12 @@ final class qe extends pn {
         try {
           if (bf.field_b == um.field_F) {
             stackIn_2_0 = null;
-            return (ch) (stackIn_2_0);
+            return (AccountServiceResult) (stackIn_2_0);
           }
           if (param1 < 42) {
             field_Z = 3;
           }
-          if (oe.field_qb == um.field_F &&
+          if (AccountCreationResultPanel.field_qb == um.field_F &&
             param0.equals(uk.field_u)) {
             um.field_F = l.field_a;
             stackIn_11_0 = rf.field_p;
@@ -357,7 +357,7 @@ final class qe extends pn {
           rf.field_p = null;
           um.field_F = bf.field_b;
           stackIn_9_0 = null;
-          return (ch) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

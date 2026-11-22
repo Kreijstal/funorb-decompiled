@@ -50,7 +50,7 @@ final class wk extends hh {
           if (ht.field_k != DiskCacheWorker.field_h) {
             return false;
           }
-          jq var8 = new jq(vn.field_f, param4);
+          AccountCreationResultPanel var8 = new AccountCreationResultPanel(vn.field_f, param4);
           vn.field_f.a(var8, 0);
           if (AircraftDefinition.a(param5)) {
             var8.n(126);
@@ -61,7 +61,7 @@ final class wk extends hh {
           ld.field_c = null;
           rt.field_e = param3;
           BoundedRandomAccessFile.field_g = param0;
-          ht.field_k = jq.field_fb;
+          ht.field_k = AccountCreationResultPanel.field_fb;
           nh.field_b = param2;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

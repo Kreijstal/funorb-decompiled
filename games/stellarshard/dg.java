@@ -143,8 +143,8 @@ abstract class dg extends UiWidget implements f {
         }
     }
 
-    final static ml a(boolean param0, int param1) {
-        ml var2 = new ml(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, int param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         if (param1 != 0) {
           field_z = (ei) null;
         }

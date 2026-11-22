@@ -47,21 +47,21 @@ final class ri {
           wd.field_d = dh.field_b;
           if (param2 != 255) {
             if (param2 < 100) {
-              DualLinkNode.field_p = p.a(param2, param0, -28323);
+              DualLinkNode.field_p = p.createAccountErrorResult(param2, param0, -28323);
               return;
             }
             if (param2 > 105) {
-              DualLinkNode.field_p = p.a(param2, param0, -28323);
+              DualLinkNode.field_p = p.createAccountErrorResult(param2, param0, -28323);
               return;
             }
             var4 = param1;
             ok.a(2, var4);
-            DualLinkNode.field_p = em.a(param1, 8082);
+            DualLinkNode.field_p = em.createAccountSuggestionsResult(param1, 8082);
             return;
           }
           stackIn_11_0 = -49;
           stackIn_12_1 = !(wk.field_g >= 13);
-          DualLinkNode.field_p = l.$cfr$intArgs$a$fb458fdecc21(stackIn_11_0, stackIn_12_1);
+          DualLinkNode.field_p = l.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           ok.a(2, (String[]) null);
           return;
@@ -81,7 +81,7 @@ final class ri {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ri {
           }
           jm.a(-17573);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ri.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ri.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class ri {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

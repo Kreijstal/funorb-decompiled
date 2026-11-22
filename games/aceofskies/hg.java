@@ -50,26 +50,26 @@ final class hg extends to {
         }
     }
 
-    final static fr a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         String stackIn_14_2 = null;
         try {
           if (param0 != 2147483647) {
             hg.j(-34);
           }
-          if (nb.field_c == jq.field_fb) {
+          if (nb.field_c == AccountCreationResultPanel.field_fb) {
             return null;
           }
           if (uk.field_j == nb.field_c &&
             param1.equals(OpenGlBuffer.field_j)) {
             nb.field_c = DiskCacheWorker.field_h;
-            fr stackIn_8_0 = GameAppletShell.field_l;
+            AccountServiceResult stackIn_8_0 = GameAppletShell.field_l;
             return stackIn_8_0;
           }
           GameAppletShell.field_l = null;
           OpenGlBuffer.field_j = param1;
-          nb.field_c = jq.field_fb;
+          nb.field_c = AccountCreationResultPanel.field_fb;
           Object stackIn_10_0 = null;
-          return (fr) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;

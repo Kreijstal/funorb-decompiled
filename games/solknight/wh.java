@@ -23,7 +23,7 @@ final class wh {
             field_a = (ff) null;
           }
           for (var3_int = 0; param1.length() > var3_int; var3_int++) {
-            if (!wg.a(param1.charAt(var3_int), (byte) -128)) {
+            if (!AccountServiceResult.a(param1.charAt(var3_int), (byte) -128)) {
               return false;
             }
           }

@@ -257,7 +257,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, param4 + 12313);
           q.outgoingPacket.backpatchShortLength(false, q.outgoingPacket.position - var5_int);
-          fr.a(param4 + 12171, -1);
+          AccountServiceResult.a(param4 + 12171, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -474,7 +474,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ks.clearStaticReferences((byte) 109);
           se.a((byte) 123);
           lt.k(110);
-          jq.m(85);
+          AccountCreationResultPanel.m(85);
           ng.j(11617);
           ad.e(false);
           oo.g((byte) 105);
@@ -1118,7 +1118,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           do {
             if (!ka.a((byte) 93, ho.field_d)) {
-              fr.a(-100, 0);
+              AccountServiceResult.a(-100, 0);
               break;
             }
             this.f((byte) -106);

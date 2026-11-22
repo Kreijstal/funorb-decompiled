@@ -85,7 +85,7 @@ final class uk {
           field_a = (String[]) null;
         }
         lj.field_e = true;
-        ua.field_sb = 15000L + lj.a((byte) -68);
+        AccountCreationResultPanel.field_sb = 15000L + lj.a((byte) -68);
         return bh.field_t == 11 ? true : false;
     }
 

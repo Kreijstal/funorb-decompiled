@@ -29,22 +29,22 @@ final class dl {
           if (param0 != -14) {
             field_a = (String) null;
           }
-          un.field_Hb = oe.field_qb;
+          un.field_Hb = AccountCreationResultPanel.field_qb;
           if (param3 != 255) {
             if (param3 < 100) {
-              mp.field_f = fn.a(param3, true, param2);
+              mp.field_f = fn.createAccountErrorResult(param3, true, param2);
               return;
             }
             if (param3 <= 105) {
-              mp.field_f = oq.a(param0 ^ 7, param1);
+              mp.field_f = oq.createAccountSuggestionsResult(param0 ^ 7, param1);
               return;
             }
-            mp.field_f = fn.a(param3, true, param2);
+            mp.field_f = fn.createAccountErrorResult(param3, true, param2);
             return;
           }
           stackIn_6_0 = -2956;
           stackIn_7_1 = !(ea.field_e >= 13);
-          mp.field_f = gi.a(stackIn_6_0, stackIn_7_1);
+          mp.field_f = gi.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -123,7 +123,7 @@ final class q extends jg {
         var9 = Confined.field_J ? 1 : 0;
         try {
           ea.field_a = param0;
-          in.field_h = true;
+          AccountServiceResult.field_h = true;
           if (ea.field_a == 0) {
             var3_int = ri.a(cf.field_cb, 69, hd.field_c, rn.field_e, wg.field_a);
             var4 = 3 + var3_int;
@@ -270,7 +270,7 @@ final class q extends jg {
             for (var8 = 0; var7 > var8; var8++) {
               la.field_T[var8] = -1;
             }
-            dl.field_c[1] = in.field_d;
+            dl.field_c[1] = AccountServiceResult.field_d;
             uc.field_ab = new int[2];
             la.field_T[1] = 0;
             dl.field_c[0] = qa.field_d;
@@ -335,7 +335,7 @@ final class q extends jg {
               }
             }
           }
-          v.field_Eb = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ef.field_vb);
+          AccountCreationResultPanel.field_Eb = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ef.field_vb);
           if (param2 >= -94) {
             return;
           }

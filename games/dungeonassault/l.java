@@ -101,12 +101,12 @@ abstract class l {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static vk a(byte param0, boolean param1) {
-        vk var2 = new vk(true);
+    final static AccountServiceResult createAccountSuccessResult(byte param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_f = param1 ? true : false;
         if (param0 != -49) {
           field_f = (String) null;
@@ -164,7 +164,7 @@ abstract class l {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ abstract class l {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ abstract class l {
             0 <= h.field_h.field_b) {
             var2 = op.field_c[h.field_h.field_b];
             if (var2 == 2) {
-              vk.a((byte) -31);
+              AccountServiceResult.a((byte) -31);
             }
           }
           stackIn_18_0 = var2;
@@ -326,7 +326,7 @@ abstract class l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "l.I(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "l.I(" + param0 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ abstract class l {
         try {
           gh.field_i[param3] = new ac(param3, param5, param7, param10, param6, param1, param2, param12, param4, param0, param11, param9);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "l.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "l.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
@@ -370,8 +370,8 @@ abstract class l {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static vk $cfr$intArgs$a$fb458fdecc21(int param0, boolean param1) {
-        vk var2 = new vk(true);
+    final static AccountServiceResult createAccountSuccessResultWithIntGuard(int param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_f = param1 ? true : false;
         if (param0 != -49) {
           field_f = (String) null;

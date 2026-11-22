@@ -4508,6 +4508,14 @@
       "renamedSymbol": "C:ClientMemoryVertexArray"
     },
     {
+      "symbol": "C:ls",
+      "originalName": "ls",
+      "to": "TombRacerClientMarker",
+      "evidence": "Complete empty package-private marker interface reviewed with all bound source references and its sole implementation TombRacer.java. It declares no fields/methods or superinterfaces; no other source uses exist. Names marker identity by the concrete client/reader/audio-state role; no operational contract added or implementation changed. All descriptor uses non-native and exact quoted owned class-name literals absent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:TombRacerClientMarker"
+    },
+    {
       "symbol": "C:lt",
       "originalName": "lt",
       "to": "LoadingStep",
@@ -5548,6 +5556,14 @@
       "renamedSymbol": "C:TermsLinksPanel"
     },
     {
+      "symbol": "C:pga",
+      "originalName": "pga",
+      "to": "DirectSoundBufferStateMarker",
+      "evidence": "Complete empty package-private marker interface reviewed with all bound source references and its sole implementation DirectSoundBufferState.java. It declares no fields/methods or superinterfaces; no other source uses exist. Names marker identity by the concrete client/reader/audio-state role; no operational contract added or implementation changed. All descriptor uses non-native and exact quoted owned class-name literals absent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectSoundBufferStateMarker"
+    },
+    {
       "symbol": "C:ph",
       "originalName": "ph",
       "to": "BufferedCacheFile",
@@ -5666,6 +5682,14 @@
       "evidence": "InputFieldPainter subclass installed on the LoginForm password field that submitLogin reads.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PasswordInputPainter"
+    },
+    {
+      "symbol": "C:pp",
+      "originalName": "pp",
+      "to": "DecodableArrayReaderMarker",
+      "evidence": "Complete empty package-private marker interface reviewed with all bound source references and its sole implementation DecodableArrayReader.java. It declares no fields/methods or superinterfaces; the only additional use is an unused QuickChatPhraseSource constructor parameter preserved in exception-context logging. Names marker identity by the concrete client/reader/audio-state role; no operational contract added or implementation changed. All descriptor uses non-native and exact quoted owned class-name literals absent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DecodableArrayReaderMarker"
     },
     {
       "symbol": "C:ppa",
@@ -85152,9 +85176,9 @@
     },
     {
       "symbol": "C:ls",
-      "renamedSymbol": "C:ls",
+      "renamedSymbol": "C:TombRacerClientMarker",
       "originalName": "ls",
-      "renamedName": "ls",
+      "renamedName": "TombRacerClientMarker",
       "declaration": {
         "file": "ls.java",
         "start": 48,
@@ -86923,9 +86947,9 @@
     },
     {
       "symbol": "C:pga",
-      "renamedSymbol": "C:pga",
+      "renamedSymbol": "C:DirectSoundBufferStateMarker",
       "originalName": "pga",
-      "renamedName": "pga",
+      "renamedName": "DirectSoundBufferStateMarker",
       "declaration": {
         "file": "pga.java",
         "start": 48,
@@ -87110,9 +87134,9 @@
     },
     {
       "symbol": "C:pp",
-      "renamedSymbol": "C:pp",
+      "renamedSymbol": "C:DecodableArrayReaderMarker",
       "originalName": "pp",
-      "renamedName": "pp",
+      "renamedName": "DecodableArrayReaderMarker",
       "declaration": {
         "file": "pp.java",
         "start": 48,
@@ -519850,7 +519874,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#0",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#0",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -519861,7 +519885,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#1",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#1",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -519872,7 +519896,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#2",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#2",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#2",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -519883,7 +519907,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#3",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#3",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#3",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -519894,7 +519918,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#4",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#4",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#4",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -519905,7 +519929,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#5",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#5",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#5",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -519916,7 +519940,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#6",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#6",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#6",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -519927,7 +519951,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#7",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#7",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#7",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -519938,7 +519962,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#8",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#8",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -519949,7 +519973,7 @@
     },
     {
       "symbol": "L:tr.<init>(ILcn;Lcn;Lpp;)V#9",
-      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#9",
+      "renamedSymbol": "L:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -679922,7 +679946,7 @@
     },
     {
       "symbol": "M:tr.<init>(ILcn;Lcn;Lpp;)V",
-      "renamedSymbol": "M:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V",
+      "renamedSymbol": "M:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V",
       "originalName": "tr",
       "renamedName": "QuickChatPhraseSource",
       "declaration": {
@@ -910350,7 +910374,7 @@
     },
     {
       "symbol": "P:tr.<init>(ILcn;Lcn;Lpp;)V#0",
-      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#0",
+      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910361,7 +910385,7 @@
     },
     {
       "symbol": "P:tr.<init>(ILcn;Lcn;Lpp;)V#1",
-      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#1",
+      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -910372,7 +910396,7 @@
     },
     {
       "symbol": "P:tr.<init>(ILcn;Lcn;Lpp;)V#2",
-      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#2",
+      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -910383,7 +910407,7 @@
     },
     {
       "symbol": "P:tr.<init>(ILcn;Lcn;Lpp;)V#3",
-      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;Lpp;)V#3",
+      "renamedSymbol": "P:QuickChatPhraseSource.<init>(ILResourceArchive;LResourceArchive;LDecodableArrayReaderMarker;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -939339,7 +939363,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "09556eb49fc20b9b8c12d2ccb93a983edfae356c09b0bd2c62aa00ed7d3be4d3",
+      "outputSha256": "926216780dc7d3a15aaa5c84e8c283cb232f8d09f7dfaaafd2e372a88f7ea834",
       "edits": [
         {
           "start": 96,
@@ -939347,6 +939371,13 @@
           "symbol": "C:rfa",
           "original": "rfa",
           "renamed": "TombRacerShell"
+        },
+        {
+          "start": 111,
+          "end": 113,
+          "symbol": "C:ls",
+          "original": "ls",
+          "renamed": "TombRacerClientMarker"
         },
         {
           "start": 180,
@@ -1157766,7 +1157797,7 @@
       "original": "gha.java",
       "renamed": "DecodableArrayReader.java",
       "inputSha256": "212fefec16eb089d64b0db8c158cacc79a523601311fb9a01b5f4406d4c31221",
-      "outputSha256": "3e060749475d8715fead9a860d99ca000efbed22330d27fa35772342dd4ef561",
+      "outputSha256": "7b49bc0e55d36657b54479b8fe69fc6340c8e6de5f9710223573ef4c756f325b",
       "edits": [
         {
           "start": 50,
@@ -1157774,6 +1157805,13 @@
           "symbol": "C:gha",
           "original": "gha",
           "renamed": "DecodableArrayReader"
+        },
+        {
+          "start": 65,
+          "end": 67,
+          "symbol": "C:pp",
+          "original": "pp",
+          "renamed": "DecodableArrayReaderMarker"
         },
         {
           "start": 98,
@@ -1334561,10 +1334599,18 @@
     },
     {
       "original": "ls.java",
-      "renamed": "ls.java",
+      "renamed": "TombRacerClientMarker.java",
       "inputSha256": "9310551df133dd5ecda95ba44d3647412871e2557da21ff98c2e8c14fe914ea9",
-      "outputSha256": "9310551df133dd5ecda95ba44d3647412871e2557da21ff98c2e8c14fe914ea9",
-      "edits": []
+      "outputSha256": "48ac636a7ab240de765cec05d424821964d530a84415c89b7ee33043654bfdfe",
+      "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:ls",
+          "original": "ls",
+          "renamed": "TombRacerClientMarker"
+        }
+      ]
     },
     {
       "original": "lsa.java",
@@ -1382235,7 +1382281,7 @@
       "original": "nva.java",
       "renamed": "DirectSoundBufferState.java",
       "inputSha256": "14f83780576854d51684302df4e7ff3374d054c29be5c9f411ab272c814975dd",
-      "outputSha256": "c363e1eca2c3d74babd5a3a264d4e8a30cc710edac8d03e245b8a86725adc7d3",
+      "outputSha256": "154494250db8201fce6d6d08930612e17519d63cb1edb17277b9e3049ea1e04c",
       "edits": [
         {
           "start": 50,
@@ -1382243,6 +1382289,13 @@
           "symbol": "C:nva",
           "original": "nva",
           "renamed": "DirectSoundBufferState"
+        },
+        {
+          "start": 65,
+          "end": 68,
+          "symbol": "C:pga",
+          "original": "pga",
+          "renamed": "DirectSoundBufferStateMarker"
         },
         {
           "start": 182,
@@ -1435379,10 +1435432,18 @@
     },
     {
       "original": "pga.java",
-      "renamed": "pga.java",
+      "renamed": "DirectSoundBufferStateMarker.java",
       "inputSha256": "261a26e2700217961c3b64a2c91a708cea21fd4f017acd85d7e9a3ecf516c030",
-      "outputSha256": "261a26e2700217961c3b64a2c91a708cea21fd4f017acd85d7e9a3ecf516c030",
-      "edits": []
+      "outputSha256": "e679c57bfb8b4e5a8ea444b97ff1f91292e86770790ce404e12f3bb9665bf93b",
+      "edits": [
+        {
+          "start": 48,
+          "end": 51,
+          "symbol": "C:pga",
+          "original": "pga",
+          "renamed": "DirectSoundBufferStateMarker"
+        }
+      ]
     },
     {
       "original": "ph.java",
@@ -1441184,10 +1441245,18 @@
     },
     {
       "original": "pp.java",
-      "renamed": "pp.java",
+      "renamed": "DecodableArrayReaderMarker.java",
       "inputSha256": "f1cb26d0e7348498bb5dc582fc7c515e99bac7ba0d7921fb843b5fd4ab0d0baa",
-      "outputSha256": "f1cb26d0e7348498bb5dc582fc7c515e99bac7ba0d7921fb843b5fd4ab0d0baa",
-      "edits": []
+      "outputSha256": "75f25f49931c6b3a2b26cde668e3c13a4bf5028f579a7038a58018f30434a11a",
+      "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:pp",
+          "original": "pp",
+          "renamed": "DecodableArrayReaderMarker"
+        }
+      ]
     },
     {
       "original": "ppa.java",
@@ -1550411,7 +1550480,7 @@
       "original": "tr.java",
       "renamed": "QuickChatPhraseSource.java",
       "inputSha256": "9d66406bbb7626f4b880cfc562eede4a8e1e41dfe5ed602a18d3b81076620efc",
-      "outputSha256": "6762e43b3f0dced0dd0db82b94e2e618896927a02206289ad66cb478d1a2281f",
+      "outputSha256": "a527d0a119b2c3c35181b0aeaef5475e19f59f258729d6a2036be186917ac602",
       "edits": [
         {
           "start": 50,
@@ -1550559,6 +1550628,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1300,
+          "end": 1302,
+          "symbol": "C:pp",
+          "original": "pp",
+          "renamed": "DecodableArrayReaderMarker"
         },
         {
           "start": 1718,
@@ -1647536,10 +1647612,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "d33006ed5cde7e1db313d2e61250b0c86b0d3a479d8522d488994b5bccbde3e1",
+    "rulesSha256": "cd294f2ccbb9fe5fbe2dca812d8ce02b74e4a856974f5a937337f74a7ed55937",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "9cd0eec8ab968b1c9448494b6c2f227928050130e16ffa43bec577e9efd9dc85",
+    "outputTreeSha256": "b4bc372faf47bcab8c994d9857e627fa0e4c4b4144c14ff3604154b6405d59ca",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

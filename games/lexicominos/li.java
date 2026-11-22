@@ -4,7 +4,7 @@
 final class li extends bc {
     static aj field_R;
     private ma field_N;
-    static mb field_T;
+    static AccountServiceResult field_T;
     static int field_S;
     private int field_M;
     private String field_O;

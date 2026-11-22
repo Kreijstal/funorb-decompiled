@@ -5,10 +5,10 @@ final class cl extends WidgetContainer implements jf, n {
     private eb field_G;
     static d field_J;
     static String field_I;
-    private tj field_H;
+    private AccountCreationResultPanel field_H;
     private vj field_F;
 
-    cl(tj param0) {
+    cl(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;

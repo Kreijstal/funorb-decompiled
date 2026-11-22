@@ -667,7 +667,7 @@ public final class BachelorFridge extends NetworkGameClient {
         DualLinkNode.releaseStatics((byte) 114);
         st.releaseStatics((byte) 120);
         rp.releaseStatics((byte) 104);
-        tea.releaseStatics(10462);
+        AccountCreationResultPanel.releaseStatics(10462);
         hga.releaseStatics(8405024);
         sja.releaseStatics(33);
         ReportAbusePanel.a(26727);

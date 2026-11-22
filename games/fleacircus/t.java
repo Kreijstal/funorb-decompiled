@@ -197,7 +197,7 @@ final class t {
           ByteStorage.field_h[var2] = dupTemp$2;
           if (dupTemp$2 < -400) {
             ByteStorage.field_h[var2] = 1040;
-            ua.field_tb[var2] = je.field_O[this.b(df.a(param0, 399))];
+            AccountCreationResultPanel.field_tb[var2] = je.field_O[this.b(df.a(param0, 399))];
           }
         }
         if (param0 != -400) {
@@ -468,7 +468,7 @@ final class t {
           qi.field_c.f(0, 0);
           for (var2_int = 0; var2_int < ContextualRuntimeException.field_g.length; var2_int++) {
             ContextualRuntimeException.field_g[var2_int].d(b.field_d[var2_int], 200 + var2_int * 5);
-            ua.field_tb[var2_int].g(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
+            AccountCreationResultPanel.field_tb[var2_int].g(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
           }
         } else {
           fc.c(param0 ^ 124);
@@ -697,8 +697,8 @@ final class t {
           if (var2 > 0 &&
             ContextualRuntimeException.field_g[0] != je.field_O[var2] &&
             ContextualRuntimeException.field_g[1] != je.field_O[var2] &&
-            ua.field_tb[0] != je.field_O[var2] &&
-            ua.field_tb[1] != je.field_O[var2]) {
+            AccountCreationResultPanel.field_tb[0] != je.field_O[var2] &&
+            AccountCreationResultPanel.field_tb[1] != je.field_O[var2]) {
             return var2;
           }
           var2 = db.a((byte) -115, fleas.field_F, je.field_O.length);

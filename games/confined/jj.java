@@ -15,7 +15,7 @@ final class jj extends ug {
     public static void h(byte param0) {
         field_lb = null;
         if (param0 >= -64) {
-          jj.$cfr$intArgs$a$81305413f30a(-108, true);
+          jj.createAccountSuccessResultWithIntGuard(-108, true);
           field_hb = null;
           return;
         }
@@ -41,9 +41,9 @@ final class jj extends ug {
         }
     }
 
-    final static in a(byte param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResult(byte param0, boolean param1) {
         int var2 = -100 / ((param0 - 80) / 42);
-        in var3 = new in(true);
+        AccountServiceResult var3 = new AccountServiceResult(true);
         var3.field_i = param1 ? true : false;
         return var3;
     }
@@ -178,9 +178,9 @@ final class jj extends ug {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static in $cfr$intArgs$a$81305413f30a(int param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResultWithIntGuard(int param0, boolean param1) {
         int var2 = -100 / ((param0 - 80) / 42);
-        in var3 = new in(true);
+        AccountServiceResult var3 = new AccountServiceResult(true);
         var3.field_i = param1 ? true : false;
         return var3;
     }

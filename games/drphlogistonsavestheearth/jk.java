@@ -76,7 +76,7 @@ final class jk extends si {
             stackIn_12_0 = (byte[]) (param1);
             return stackIn_12_0;
           }
-          stackIn_10_0 = qd.copyBytes((byte) 111, param1);
+          stackIn_10_0 = AccountCreationResultPanel.copyBytes((byte) 111, param1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -152,7 +152,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class ClientException extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "b.D(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "b.D(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

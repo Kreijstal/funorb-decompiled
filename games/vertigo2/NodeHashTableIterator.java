@@ -207,7 +207,7 @@ final class NodeHashTableIterator implements Iterator {
                 ByteStorage.a((byte) -123, pd.field_b, 2, (String) null, 0, (String) null);
                 var15 = (String) null;
                 var14 = (String) null;
-                ByteStorage.a((byte) -7, ch.field_f, 2, (String) null, 0, (String) null);
+                ByteStorage.a((byte) -7, AccountServiceResult.field_f, 2, (String) null, 0, (String) null);
                 SpriteState.h(0);
               }
             }

@@ -4,7 +4,7 @@
 final class rs extends ab implements ue, dn {
     static int rendererStrikethroughColor;
     static int[] field_B;
-    private jq field_y;
+    private AccountCreationResultPanel field_y;
     private vq field_A;
     static int field_v;
     static int[] field_w;
@@ -107,7 +107,7 @@ final class rs extends ab implements ue, dn {
         }
     }
 
-    rs(jq param0) {
+    rs(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ir) null);
         try {
           this.field_y = param0;

@@ -404,7 +404,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (UiWidget.field_n != null) {
             mg.field_s = 0;
-            cj.field_d = param0.getX();
+            AccountServiceResult.field_d = param0.getX();
             ek.field_a = param0.getY();
             pf.a(0);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {

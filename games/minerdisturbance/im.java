@@ -8,7 +8,7 @@ final class im {
 
     final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         try {
-          uk.field_xb = param2;
+          AccountCreationResultPanel.field_xb = param2;
           if (param1 <= 68) {
             im.clearStaticReferences(-65);
           }

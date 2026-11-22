@@ -664,7 +664,7 @@ public final class stellarshard extends rb implements cf {
             ke.field_a = 16777215;
             kg.field_D = 255;
             al.field_c = 0;
-            jg.field_pb = 512;
+            AccountCreationResultPanel.field_pb = 512;
             ll.a(16);
             tc.field_r = 0;
             qi.level = 0;
@@ -718,7 +718,7 @@ public final class stellarshard extends rb implements cf {
           if (qi.level > 40) {
             e.field_e = 3;
           }
-          ml.field_h = 0;
+          AccountServiceResult.field_h = 0;
           q.field_a = qi.level;
           ag.field_a = 0;
           hk.field_p = hk.field_p - ed.field_b;
@@ -1199,38 +1199,38 @@ public final class stellarshard extends rb implements cf {
             ig.field_D = ig.field_D - 6;
           }
           if (0 == wh.field_c) {
-            jg.field_pb = jg.field_pb - 8;
-            if (jg.field_pb <= 0) {
+            AccountCreationResultPanel.field_pb = AccountCreationResultPanel.field_pb - 8;
+            if (AccountCreationResultPanel.field_pb <= 0) {
               wh.field_c = 1;
-              jg.field_pb = 0;
+              AccountCreationResultPanel.field_pb = 0;
               if (MouseWheelInput.field_e) {
                 ll.field_c.a(sb.field_e[36], 100, pk.field_h * 2);
               }
             }
           }
           if (wh.field_c == 1) {
-            jg.field_pb = jg.field_pb + 1;
-            if (jg.field_pb >= 36) {
-              jg.field_pb = 0;
+            AccountCreationResultPanel.field_pb = AccountCreationResultPanel.field_pb + 1;
+            if (AccountCreationResultPanel.field_pb >= 36) {
+              AccountCreationResultPanel.field_pb = 0;
               wh.field_c = 2;
             }
           }
           if (2 == wh.field_c) {
-            jg.field_pb = jg.field_pb + 1;
-            if (jg.field_pb >= 30) {
+            AccountCreationResultPanel.field_pb = AccountCreationResultPanel.field_pb + 1;
+            if (AccountCreationResultPanel.field_pb >= 30) {
               wh.field_c = 3;
-              jg.field_pb = 0;
+              AccountCreationResultPanel.field_pb = 0;
             }
           }
           if (wh.field_c == 3) {
-            jg.field_pb = jg.field_pb + 1;
-            if (1 == jg.field_pb &&
+            AccountCreationResultPanel.field_pb = AccountCreationResultPanel.field_pb + 1;
+            if (1 == AccountCreationResultPanel.field_pb &&
               MouseWheelInput.field_e &&
               !DualLinkDequeIterator.field_i) {
               ll.field_c.a(sb.field_e[37], 100, pk.field_h * 2);
             }
-            if (jg.field_pb > 250) {
-              jg.field_pb = 0;
+            if (AccountCreationResultPanel.field_pb > 250) {
+              AccountCreationResultPanel.field_pb = 0;
               wh.field_c = 2;
             }
           }
@@ -2907,7 +2907,7 @@ public final class stellarshard extends rb implements cf {
           k.a((byte) 98);
           h.a((byte) 45);
           ei.g((byte) 77);
-          jg.clearStaticReferences(true);
+          AccountCreationResultPanel.clearStaticReferences(true);
           pg.m(7694);
           ck.m(-121);
           mj.l(120);
@@ -3053,7 +3053,7 @@ public final class stellarshard extends rb implements cf {
           af.a(54);
           fk.clearStaticReferences(param0 ^ -24024);
           uc.a(-8749);
-          ml.a((byte) -102);
+          AccountServiceResult.a((byte) -102);
           bk.a(-127);
           th.clearStaticReferences(-116);
           fa.a(false);
@@ -3297,14 +3297,14 @@ public final class stellarshard extends rb implements cf {
             this.d(-20880);
             qd.a(bh.field_a, "space", "", (byte) 42);
             qd.a(bh.field_a, "nebula", "", (byte) 73);
-            wh.field_e = ml.a("", (byte) 83, bh.field_a, "achievements_lrg");
-            pg.field_hb = ml.a("", (byte) -88, bh.field_a, "explosion");
-            hk.field_l = ml.a("", (byte) 107, bh.field_a, "titlepics");
+            wh.field_e = AccountServiceResult.a("", (byte) 83, bh.field_a, "achievements_lrg");
+            pg.field_hb = AccountServiceResult.a("", (byte) -88, bh.field_a, "explosion");
+            hk.field_l = AccountServiceResult.a("", (byte) 107, bh.field_a, "titlepics");
             uf.field_g = qd.a(fc.field_a, "unachieved", "basic", (byte) 106);
             ce.field_a = qd.a(fc.field_a, "locked", "basic", (byte) 60);
             af.field_n = qd.a(fc.field_a, "orbcoin", "basic", (byte) 111);
             var4 = new Sprite[16];
-            var4 = ml.a("", (byte) 85, bh.field_a, "powerups");
+            var4 = AccountServiceResult.a("", (byte) 85, bh.field_a, "powerups");
             var5 = 0;
             do {
               if (16 <= var5) {
@@ -3472,7 +3472,7 @@ public final class stellarshard extends rb implements cf {
               stackIn_177_1 = -16;
             }
             if (stackIn_177_0 == stackIn_177_1) {
-              jf.field_n = ml.a("", (byte) 87, bh.field_a, "bar");
+              jf.field_n = AccountServiceResult.a("", (byte) 87, bh.field_a, "bar");
               jf.field_m = null;
             }
             cg.field_c = cg.field_c + 1;
@@ -3482,13 +3482,13 @@ public final class stellarshard extends rb implements cf {
           if (null == l.field_f) {
             rd.a((byte) -53, 98.0f, ua.field_g);
             this.d(-20880);
-            BufferedSocket.field_k = ml.a("", (byte) 98, bh.field_a, "slider");
-            fg.field_P = ml.a("", (byte) 124, bh.field_a, "frame");
+            BufferedSocket.field_k = AccountServiceResult.a("", (byte) 98, bh.field_a, "slider");
+            fg.field_P = AccountServiceResult.a("", (byte) 124, bh.field_a, "frame");
             fg.field_P[4] = null;
             wc.field_s = qd.a(bh.field_a, "stel", "", (byte) 107);
             pl.field_R = qd.a(bh.field_a, "lar", "", (byte) 93);
             aa.field_b = qd.a(bh.field_a, "central_iceblock", "", (byte) 81);
-            ml.a("", (byte) -32, bh.field_a, "menu");
+            AccountServiceResult.a("", (byte) -32, bh.field_a, "menu");
             rh.field_a = new Sprite[12];
             var3 = null;
             var4_intLifetime1 = 0;
@@ -3497,16 +3497,16 @@ public final class stellarshard extends rb implements cf {
               stackIn_202_0 = var4_intLifetime1;
               if (var11 == 0) {
                 if (stackIn_202_0 == 0) {
-                  var3 = ml.a("", (byte) 94, bh.field_a, "anim_shatter");
+                  var3 = AccountServiceResult.a("", (byte) 94, bh.field_a, "anim_shatter");
                 }
                 if (3 == var4_intLifetime1) {
-                  var3 = ml.a("", (byte) 103, bh.field_a, "anim_shatter2");
+                  var3 = AccountServiceResult.a("", (byte) 103, bh.field_a, "anim_shatter2");
                 }
                 if (var4_intLifetime1 == 6) {
-                  var3 = ml.a("", (byte) -72, bh.field_a, "anim_shatter3");
+                  var3 = AccountServiceResult.a("", (byte) -72, bh.field_a, "anim_shatter3");
                 }
                 if (var4_intLifetime1 == 9) {
-                  var3 = ml.a("", (byte) 119, bh.field_a, "anim_shatter4");
+                  var3 = AccountServiceResult.a("", (byte) 119, bh.field_a, "anim_shatter4");
                 }
                 rh.field_a[var4_intLifetime1 - 0] = (Sprite) (((Object[]) (var3))[0]);
                 rh.field_a[var4_intLifetime1 + 1] = (Sprite) (((Object[]) (var3))[1]);
@@ -3529,19 +3529,19 @@ public final class stellarshard extends rb implements cf {
               stackIn_226_0 = var4_intLifetime1Lifetime1;
               if (var11 == 0) {
                 if (stackIn_226_0 == 0) {
-                  var3 = ml.a("", (byte) 121, bh.field_a, "anim_shine");
+                  var3 = AccountServiceResult.a("", (byte) 121, bh.field_a, "anim_shine");
                 }
                 if (var4_intLifetime1Lifetime1 == 3) {
-                  var3 = ml.a("", (byte) 118, bh.field_a, "anim_shine2");
+                  var3 = AccountServiceResult.a("", (byte) 118, bh.field_a, "anim_shine2");
                 }
                 if (6 == var4_intLifetime1Lifetime1) {
-                  var3 = ml.a("", (byte) 110, bh.field_a, "anim_shine3");
+                  var3 = AccountServiceResult.a("", (byte) 110, bh.field_a, "anim_shine3");
                 }
                 if (9 == var4_intLifetime1Lifetime1) {
-                  var3 = ml.a("", (byte) 83, bh.field_a, "anim_shine4");
+                  var3 = AccountServiceResult.a("", (byte) 83, bh.field_a, "anim_shine4");
                 }
                 if (var4_intLifetime1Lifetime1 == 12) {
-                  var3 = ml.a("", (byte) -25, bh.field_a, "anim_shine5");
+                  var3 = AccountServiceResult.a("", (byte) -25, bh.field_a, "anim_shine5");
                 }
                 fa.field_k[var4_intLifetime1Lifetime1 + 0] = (Sprite) (((Object[]) (var3))[0]);
                 fa.field_k[1 + var4_intLifetime1Lifetime1] = (Sprite) (((Object[]) (var3))[1]);
@@ -3583,7 +3583,7 @@ public final class stellarshard extends rb implements cf {
           }
           rd.a((byte) -65, 99.0f, ua.field_g);
           this.d(-20880);
-          var3 = ml.a("", (byte) 80, bh.field_a, "screenshots");
+          var3 = AccountServiceResult.a("", (byte) 80, bh.field_a, "screenshots");
           ScorePopup.a(qd.a(bh.field_a, "mbfg", "", (byte) 104), (byte) 60, "Stellar Shard");
           NodeHashTableIterator.a(-8039, qd.a(bh.field_a, "smalllogo", "", (byte) 124));
           te.a(8, 129, 1500, 0, qd.a(bh.field_a, "mbpb", "", (byte) 124), 40, 134, 97, 0);
@@ -4307,7 +4307,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   var5_int = gf.field_c;
                   var6_intLifetime1 = 100;
-                  if (ml.field_h > 0 &&
+                  if (AccountServiceResult.field_h > 0 &&
                     var6_intLifetime1 >= var5_int) {
                     var7Lifetime1 = 32;
                     var8Lifetime1 = var7Lifetime1 >> 1;
@@ -4413,22 +4413,22 @@ public final class stellarshard extends rb implements cf {
                 rh.field_a == null) {
                 pl.field_R = null;
                 wh.field_c = 2;
-                jg.field_pb = 0;
+                AccountCreationResultPanel.field_pb = 0;
                 aa.field_b = null;
                 wc.field_s = null;
               }
               if (0 == wh.field_c) {
                 aa.field_b.a(0, 128, 310, (byte) -120, 90);
-                wc.field_s.a(0, 128, -jg.field_pb + 320 - 10, (byte) -124, 90);
-                pl.field_R.a(0, 128, 310 + jg.field_pb, (byte) -119, 90);
+                wc.field_s.a(0, 128, -AccountCreationResultPanel.field_pb + 320 - 10, (byte) -124, 90);
+                pl.field_R.a(0, 128, 310 + AccountCreationResultPanel.field_pb, (byte) -119, 90);
               }
               if (wh.field_c == 1) {
-                rh.field_a[jg.field_pb / 3].a(0, 128, 310, (byte) 82, 90);
+                rh.field_a[AccountCreationResultPanel.field_pb / 3].a(0, 128, 310, (byte) 82, 90);
               }
               if (wh.field_c == 2) {
                 rh.field_a = null;
                 fa.field_k[0].a(0, 128, 310, (byte) -120, 90);
-                fa.field_k[jg.field_pb / 2].a(0, 128, 310, (byte) 37, 90);
+                fa.field_k[AccountCreationResultPanel.field_pb / 2].a(0, 128, 310, (byte) 37, 90);
               }
               if (wh.field_c == 3) {
                 fa.field_k[0].a(0, 128, 310, (byte) 54, 90);
@@ -4829,7 +4829,7 @@ public final class stellarshard extends rb implements cf {
           PacketBuffer.field_n = wl.a(1, 4);
           MouseHandler.field_d = wl.a(1, 5);
           jf.field_m = wl.a(1, 7);
-          jg.a(SpriteState.field_u, fc.field_a, (byte) 118);
+          AccountCreationResultPanel.a(SpriteState.field_u, fc.field_a, (byte) 118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

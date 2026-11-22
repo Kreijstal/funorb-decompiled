@@ -129,7 +129,7 @@ final class e {
           gg.field_o.b(dj.field_d, 125);
           ui.field_b = new UiPanel(0L, gj.field_z);
           gg.field_o.b(ui.field_b, 125);
-          kk.field_a = new UiPanel(0L, np.field_Ib, oe.field_rb);
+          kk.field_a = new UiPanel(0L, np.field_Ib, AccountCreationResultPanel.field_rb);
           oa.field_s = new UiPanel(0L, np.field_Ib);
           gk.field_c.b(hb.field_j, 127);
           gk.field_c.b(lm.field_F, 123);

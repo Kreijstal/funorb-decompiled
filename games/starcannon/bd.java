@@ -101,7 +101,7 @@ abstract class bd {
             var4 = -af.field_x + dd.b(125);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
-              ig.a((byte) 63, 5, true);
+              AccountServiceResult.a((byte) 63, 5, true);
               var3 = 2;
             }
           }

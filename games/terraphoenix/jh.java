@@ -45,10 +45,10 @@ final class jh extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (vi) (pd.field_g.beginBackward(9272));
+          var4 = (vi) (AccountServiceResult.field_g.beginBackward(9272));
           while (var4 != null) {
             qd.a(param0, param1 ^ 24621, var4);
-            var4 = (vi) (pd.field_g.nextBackward((byte) -119));
+            var4 = (vi) (AccountServiceResult.field_g.nextBackward((byte) -119));
           }
           if (param1 != -31890) {
             field_l = (String[]) null;

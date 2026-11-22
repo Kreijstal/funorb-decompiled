@@ -161,11 +161,11 @@ final class rj {
           }
           if (var2 == 1) {
             var4_int = var10.readSignedSmart((byte) 118);
-            var5_ref_vi = (vi) (pd.field_g.beginBackward(9272));
+            var5_ref_vi = (vi) (AccountServiceResult.field_g.beginBackward(9272));
             while (var5_ref_vi != null) {
               if (var3 != var5_ref_vi.field_l ||
                 var5_ref_vi.field_s != var4_int) {
-                var5_ref_vi = (vi) (pd.field_g.nextBackward((byte) -119));
+                var5_ref_vi = (vi) (AccountServiceResult.field_g.nextBackward((byte) -119));
                 continue;
               }
               break;

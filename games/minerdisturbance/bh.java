@@ -266,7 +266,7 @@ final class bh extends wf implements sh {
           var4.field_q = 80;
           var4.field_A = (ad) ((Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-1, var4);
-          this.field_eb = this.a(ed.field_f, (byte) 62, (rm) (this));
+          this.field_eb = this.a(AccountServiceResult.field_f, (byte) 62, (rm) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

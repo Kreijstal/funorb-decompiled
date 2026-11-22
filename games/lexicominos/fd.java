@@ -12,7 +12,7 @@ final class fd implements Runnable {
 
     final static boolean a(String param0, int param1, int param2, String param3, pj param4, String param5, boolean param6) {
         RuntimeException var7 = null;
-        u var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -27,7 +27,7 @@ final class fd implements Runnable {
           if (bk.field_c != c.field_m) {
             return false;
           }
-          var8 = new u(ug.field_A, param4);
+          var8 = new AccountCreationResultPanel(ug.field_A, param4);
           if (param1 != 0) {
             field_a = (String) null;
           }

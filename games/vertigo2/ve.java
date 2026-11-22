@@ -78,7 +78,7 @@ final class ve {
           if (param1.field_kc && (param1.field_xc == 2 ||
             !(fn.field_z < 2))) {
             var8 = un.field_Lb;
-            var9 = Vertigo2.a(new String[]{param2}, ch.field_g, param0 - 243);
+            var9 = Vertigo2.a(new String[]{param2}, AccountServiceResult.field_g, param0 - 243);
             var8.field_n.a(var9, 10, param0 - 117);
           }
           un.field_Lb.a(param0 ^ 119);

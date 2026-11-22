@@ -667,7 +667,7 @@ public final class StarCannon extends ag {
                     if (rj.field_h == 1) {
                         /* Inlined CFG state: 100. */
                         {
-                            var10_ref_String = ig.field_c;
+                            var10_ref_String = AccountServiceResult.field_c;
                             statePc = 101;
                             continue scanLoop1;
                         }
@@ -1981,7 +1981,7 @@ public final class StarCannon extends ag {
         kh.field_y.a(-71, fi.field_e);
         u.field_b = 0;
         ed.field_n = 0;
-        ig.field_h = 0;
+        AccountServiceResult.field_h = 0;
         hc.field_c = 0;
         nf.field_e = 0;
         eg.field_f = new wd(fb.field_t);
@@ -2239,8 +2239,8 @@ public final class StarCannon extends ag {
                 var6_int = (var2_intLifetime1 + ha.field_d - 1) / var2_intLifetime1;
                 var7 = -300 + (var6_int * 20 - (var11.field_i.length - var3) * 1000 / var11.field_j);
                 if (var7 > 0) {
-                  ok.field_tb = eg.a(29723, var7, ah.field_a);
-                  jk.field_k.b(ok.field_tb);
+                  AccountCreationResultPanel.field_tb = eg.a(29723, var7, ah.field_a);
+                  jk.field_k.b(AccountCreationResultPanel.field_tb);
                 } else {
                   jk.field_k.b(ah.field_a);
                 }
@@ -2250,7 +2250,7 @@ public final class StarCannon extends ag {
                 dg.field_l = 0;
                 mj.a(255, 12, 0, 34, 100);
                 mj.a(96, 12, 0, 26, 100);
-                ok.field_tb = null;
+                AccountCreationResultPanel.field_tb = null;
                 ah.field_a = null;
               }
             }
@@ -2284,8 +2284,8 @@ public final class StarCannon extends ag {
           var2_refLifetime1.field_z = -50;
           var2_refLifetime1.field_u = 448;
         }
-        if (ig.field_h > 8) {
-          ig.field_h = sh.b(-6, 4);
+        if (AccountServiceResult.field_h > 8) {
+          AccountServiceResult.field_h = sh.b(-6, 4);
         }
         vd.field_j = vd.field_j + 3;
         hc.field_c = hc.field_c + 1;
@@ -3249,7 +3249,7 @@ public final class StarCannon extends ag {
         wg.a((byte) -117);
         be.a(20342);
         tc.g(-14528);
-        ok.clearStaticReferences((byte) -90);
+        AccountCreationResultPanel.clearStaticReferences((byte) -90);
         lf.clearStaticReferences(false);
         lc.m(-11147);
         ph.m(-1);
@@ -3387,7 +3387,7 @@ public final class StarCannon extends ag {
         rj.a(-1);
         hb.a(9681);
         pf.a(true);
-        ig.a(-1);
+        AccountServiceResult.a(-1);
         qb.a(-115);
         ge.a(45);
         q.b((byte) 119);
@@ -3598,7 +3598,7 @@ public final class StarCannon extends ag {
         var2Lifetime1 = 60 % ((param0 + 23) / 47);
         BufferedSocket.field_m = 33023;
         hh.field_b[4] = null;
-        ig.field_b = 16777215;
+        AccountServiceResult.field_b = 16777215;
         sd.field_a = 33023;
         df.a(22050, false, 10);
         nb.field_f = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);

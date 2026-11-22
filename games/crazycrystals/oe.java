@@ -7,11 +7,11 @@ final class oe {
     static int[] field_c;
     static fq[] field_a;
 
-    final static si a(boolean param0, byte param1) {
-        si var2 = new si(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, byte param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_f = param0 ? true : false;
         if (param1 <= 93) {
-          return (si) null;
+          return (AccountServiceResult) null;
         }
         return var2;
     }

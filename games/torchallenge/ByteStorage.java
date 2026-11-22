@@ -245,9 +245,9 @@ abstract class ByteStorage {
           }
           else {
             if (!param3) {
-              var14 = ef.field_k % 300;
+              var14 = AccountServiceResult.field_k % 300;
               var14 = var14 / 50;
-              var17 = ef.field_k % 50;
+              var17 = AccountServiceResult.field_k % 50;
               var15 = 1;
             }
           }
@@ -298,8 +298,8 @@ abstract class ByteStorage {
               }
             } else {
               var21Lifetime3 = 5;
-              var20Lifetime2Lifetime1 = ef.field_k % 250 / 50;
-              var22Lifetime3 = ef.field_k % 300 / 50;
+              var20Lifetime2Lifetime1 = AccountServiceResult.field_k % 250 / 50;
+              var22Lifetime3 = AccountServiceResult.field_k % 300 / 50;
               var20Lifetime2Lifetime1 = var21Lifetime3 - var20Lifetime2Lifetime1;
             }
             var10Lifetime1 = 10 + ob.field_b[0];
@@ -418,7 +418,7 @@ abstract class ByteStorage {
           var18Lifetime1 = 24;
           var20Lifetime5 = 0;
           if (!param3) {
-            var20Lifetime6 = ef.field_k % 300;
+            var20Lifetime6 = AccountServiceResult.field_k % 300;
             var20Lifetime6 = var20Lifetime6 / 100;
             var20Lifetime6 = 3 - var20Lifetime6;
           } else {
@@ -439,8 +439,8 @@ abstract class ByteStorage {
             var21Lifetime2 = 0;
             var22Lifetime2 = 0;
             if (!param3) {
-              var21Lifetime2Lifetime1 = 100 * (ef.field_k % 1000);
-              var22Lifetime2Lifetime1 = ef.field_k % 500 / 200;
+              var21Lifetime2Lifetime1 = 100 * (AccountServiceResult.field_k % 1000);
+              var22Lifetime2Lifetime1 = AccountServiceResult.field_k % 500 / 200;
             } else {
               var21Lifetime2Lifetime1 = tf.field_o;
               var22Lifetime2Lifetime1 = ab.field_d;

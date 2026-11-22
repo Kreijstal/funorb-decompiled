@@ -7,7 +7,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
     int field_h;
     int field_g;
 
-    final static fr d(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (DiskCacheWorker.field_h == ht.field_k) {
           throw new IllegalStateException();
         }

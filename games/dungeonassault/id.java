@@ -149,7 +149,7 @@ final class id implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "id.A(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "id.A(" + param0 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class id implements Iterator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class id implements Iterator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class id implements Iterator {
           this.field_h = this.field_d.field_d.field_n;
           this.field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

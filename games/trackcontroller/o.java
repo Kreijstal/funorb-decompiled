@@ -32,7 +32,7 @@ final class o {
           IntrusiveDeque.field_c[27] = dj.field_a;
           IntrusiveDeque.field_c[10] = nh.field_d;
           IntrusiveDeque.field_c[0] = jd.field_h;
-          IntrusiveDeque.field_c[24] = og.field_qb;
+          IntrusiveDeque.field_c[24] = AccountCreationResultPanel.field_qb;
           IntrusiveDeque.field_c[23] = mj.field_f;
           IntrusiveDeque.field_c[16] = oi.field_c;
           NodeHashTable.field_i = ka.field_e;
@@ -51,7 +51,7 @@ final class o {
         IntrusiveDeque.field_c[27] = dj.field_a;
         IntrusiveDeque.field_c[10] = nh.field_d;
         IntrusiveDeque.field_c[0] = jd.field_h;
-        IntrusiveDeque.field_c[24] = og.field_qb;
+        IntrusiveDeque.field_c[24] = AccountCreationResultPanel.field_qb;
         IntrusiveDeque.field_c[23] = mj.field_f;
         IntrusiveDeque.field_c[16] = oi.field_c;
         NodeHashTable.field_i = ka.field_e;

@@ -20,10 +20,10 @@ final class e {
           if (gi.field_e[param1] < gi.field_e[param2]) {
             return false;
           }
-          if (cj.field_c[param1] > cj.field_c[param2]) {
+          if (AccountServiceResult.field_c[param1] > AccountServiceResult.field_c[param2]) {
             return true;
           }
-          if (cj.field_c[param1] < cj.field_c[param2]) {
+          if (AccountServiceResult.field_c[param1] < AccountServiceResult.field_c[param2]) {
             return false;
           }
           var4 = rb.field_fb[param2] + jc.field_a[param2] + hf.field_c[param2];
@@ -37,10 +37,10 @@ final class e {
           }
           return !(param2 >= param1);
         }
-        if (cj.field_c[param1] > cj.field_c[param2]) {
+        if (AccountServiceResult.field_c[param1] > AccountServiceResult.field_c[param2]) {
           return true;
         }
-        if (cj.field_c[param1] < cj.field_c[param2]) {
+        if (AccountServiceResult.field_c[param1] < AccountServiceResult.field_c[param2]) {
           return false;
         }
         if (gi.field_e[param1] > gi.field_e[param2]) {

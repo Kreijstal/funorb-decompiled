@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob extends ta implements ff, ai {
-    private ig field_B;
+    private AccountCreationResultPanel field_B;
     static String field_E;
     static int field_K;
     static boolean field_F;
@@ -78,7 +78,7 @@ final class ob extends ta implements ff, ai {
         }
     }
 
-    ob(ig param0) {
+    ob(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (td) null);
         String var7 = null;
         int var3 = 0;

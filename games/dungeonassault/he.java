@@ -500,7 +500,7 @@ final class he extends ip {
             hp.field_b[32].field_F = var3_ref_StringLifetime31;
           }
           var3_ref_StringLifetime32 = sg.field_f;
-          var4Lifetime32 = vk.field_b;
+          var4Lifetime32 = AccountServiceResult.field_b;
           if (null != hp.field_b[33]) {
             hp.field_b[33].field_G = var4Lifetime32;
             hp.field_b[33].field_F = var3_ref_StringLifetime32;
@@ -650,7 +650,7 @@ final class he extends ip {
             gh.field_i[16].field_z = var3_ref_StringLifetime50;
             gh.field_i[16].field_t = var4Lifetime50;
           }
-          var3_ref_StringLifetime51 = jb.field_Ub;
+          var3_ref_StringLifetime51 = AccountCreationResultPanel.field_Ub;
           var4Lifetime51 = rn.field_f;
           var5Lifetime17 = (String) null;
           if (null != gh.field_i[17]) {
@@ -714,7 +714,7 @@ final class he extends ip {
             gh.field_i[24].field_z = var3_ref_StringLifetime58;
             gh.field_i[24].field_t = var4Lifetime58;
           }
-          var3_ref_StringLifetime59 = jb.field_Vb;
+          var3_ref_StringLifetime59 = AccountCreationResultPanel.field_Vb;
           var4Lifetime59 = ti.field_n;
           var5Lifetime25 = (String) null;
           if (null != gh.field_i[25]) {
@@ -795,7 +795,7 @@ final class he extends ip {
             gh.field_i[34].field_t = var4Lifetime68;
           }
           var3_ref_StringLifetime69 = mi.field_b;
-          var4Lifetime69 = jb.field_Nb;
+          var4Lifetime69 = AccountCreationResultPanel.field_Nb;
           var5Lifetime35 = hl.field_d;
           if (null != gh.field_i[35]) {
             gh.field_i[35].field_t = var4Lifetime69;
@@ -882,7 +882,7 @@ final class he extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1_ref), "he.A(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "he.A(" + param0 + ')');
         }
     }
 
@@ -903,7 +903,7 @@ final class he extends ip {
           lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (cn[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
           ic.a(param14, -31425);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -944,7 +944,7 @@ final class he extends ip {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -978,7 +978,7 @@ final class he extends ip {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1030,21 +1030,21 @@ final class he extends ip {
         int var9_intLifetime3;
         var10 = DungeonAssault.field_K;
         try {
-          if (null != jb.field_Qb &&
-            jb.field_Qb.a(-14354) &&
-            jb.field_Qb.a(false, "benefits") &&
+          if (null != AccountCreationResultPanel.field_Qb &&
+            AccountCreationResultPanel.field_Qb.a(-14354) &&
+            AccountCreationResultPanel.field_Qb.a(false, "benefits") &&
             null != hf.field_pb &&
             hf.field_pb.a(-14354) &&
             hf.field_pb.a(false, "benefits")) {
-            ia.field_Q = oh.a(jb.field_Qb, "benefits", 11091, "headline");
-            gn.field_c = oh.a(jb.field_Qb, "benefits", 11091, "blurbpane");
-            tl.field_i = oh.a(jb.field_Qb, "benefits", 11091, "button");
-            DirectByteStorage.field_g = oh.a(jb.field_Qb, "benefits", 11091, "signup_text");
-            lg.field_u = oh.a(jb.field_Qb, "benefits", 11091, "menu_text");
-            MouseWheelInput.field_g = oh.a(jb.field_Qb, "benefits", 11091, "button_frame");
-            ql.field_c = oh.a(jb.field_Qb, "benefits", 11091, "arrow");
-            dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", jb.field_Qb));
-            tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", jb.field_Qb));
+            ia.field_Q = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "headline");
+            gn.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "blurbpane");
+            tl.field_i = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button");
+            DirectByteStorage.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "signup_text");
+            lg.field_u = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "menu_text");
+            MouseWheelInput.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button_frame");
+            ql.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
+            dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
+            tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
             var27 = gf.field_b;
             var2 = gf.field_i;
             var3 = gf.field_c;
@@ -1078,7 +1078,7 @@ final class he extends ip {
             jj.a(64, -971598481, 0, 0, 2 * gf.field_c / 3, gf.field_i);
             gf.a(var27, var2, var3);
             gf.b(rp.field_e);
-            jb.field_Qb = null;
+            AccountCreationResultPanel.field_Qb = null;
             mi.field_f = 390 + (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2;
             rm.field_T = 434 + (tl.field_i.field_y - MouseWheelInput.field_g.field_y) / 2;
             fo.field_b = (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2 + 390;
@@ -1276,7 +1276,7 @@ final class he extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "he.G(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "he.G(" + param0 + ')');
         }
     }
 
@@ -1336,7 +1336,7 @@ final class he extends ip {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -42,7 +42,7 @@ final class qk extends IntrusiveNode {
           if (param3 != -4) {
             field_l = (String[]) null;
           }
-          dn.field_h = param0;
+          AccountServiceResult.field_h = param0;
           wp.field_y = param1;
           w.c((byte) 109);
         } catch (RuntimeException runtimeException) {

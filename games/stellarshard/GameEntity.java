@@ -1192,7 +1192,7 @@ final class GameEntity {
             if (50 < this.field_i) {
               var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
-              ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, ml.field_c);
+              ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, AccountServiceResult.field_c);
             }
             if (qi.level == 5 &&
               null == na.field_j) {

@@ -89,7 +89,7 @@ final class ca {
         if (param1 != -16237) {
           return;
         }
-        if (null == oe.field_pb) {
+        if (null == AccountCreationResultPanel.field_pb) {
           va.field_s.b(119);
           if (qh.field_g) {
             if (!lc.field_d) {
@@ -112,7 +112,7 @@ final class ca {
           }
           return;
         }
-        oe.field_pb.a(param0, (byte) -28);
+        AccountCreationResultPanel.field_pb.a(param0, (byte) -28);
         va.field_s.b(119);
         if (!qh.field_g) {
           return;

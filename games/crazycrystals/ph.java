@@ -3,7 +3,7 @@
  */
 final class ph extends og implements im, vd {
     static dd field_E;
-    private sa field_z;
+    private AccountCreationResultPanel field_z;
     private rf field_B;
     private pc field_C;
 
@@ -89,7 +89,7 @@ final class ph extends og implements im, vd {
         }
     }
 
-    ph(sa param0) {
+    ph(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (wo) null);
         String var7 = null;
         int var3 = 0;

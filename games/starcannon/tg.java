@@ -48,10 +48,10 @@ final class tg extends ik {
         return 0;
     }
 
-    final static ig a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
-        ig stackIn_5_0 = null;
-        ig stackIn_9_0 = null;
+        AccountServiceResult stackIn_5_0 = null;
+        AccountServiceResult stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -62,7 +62,7 @@ final class tg extends ik {
             return null;
           }
           if (param0 > -27) {
-            stackIn_5_0 = (ig) null;
+            stackIn_5_0 = (AccountServiceResult) null;
             return stackIn_5_0;
           }
           if (ie.field_x == s.field_f &&
@@ -75,7 +75,7 @@ final class tg extends ik {
           ie.field_x = jl.field_a;
           te.field_a = param1;
           stackIn_11_0 = null;
-          return (ig) (stackIn_11_0);
+          return (AccountServiceResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

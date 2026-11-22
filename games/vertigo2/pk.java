@@ -51,14 +51,14 @@ final class pk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          ch.field_e.a(qj.field_c, true, (byte) -71, qe.field_Z);
+          AccountServiceResult.field_e.a(qj.field_c, true, (byte) -71, qe.field_Z);
           if (param0 != 1) {
             stackIn_3_0 = 16;
             return stackIn_3_0;
           }
-          ch.field_e.l(0);
+          AccountServiceResult.field_e.l(0);
           while (NodeHashTableIterator.a(false)) {
-            ch.field_e.a(param0 - 93, de.field_f, TextureOperator.field_r);
+            AccountServiceResult.field_e.a(param0 - 93, de.field_f, TextureOperator.field_r);
           }
           if (nm.field_F != -1) {
             var1_int = nm.field_F;

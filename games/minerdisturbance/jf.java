@@ -20,7 +20,7 @@ final class jf {
         v.field_d = td.a("frame_bottom", param0, "commonui", (byte) 118);
         fh.field_a = jn.a("jagex_logo_grey", param2 - 29571, "commonui", param0);
         r.field_a = td.a("button", param0, "commonui", (byte) 109);
-        ed.field_g = md.a("validation", param0, 10, "commonui");
+        AccountServiceResult.field_g = md.a("validation", param0, 10, "commonui");
         sl.field_q = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
         bn.field_d = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
         cn.field_g = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));

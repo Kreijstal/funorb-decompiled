@@ -122,7 +122,7 @@ final class hj extends gd {
           this.field_Y = true;
           this.field_n = (en) ((Object) new fc(this.field_R, this.field_V));
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "hj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -267,7 +267,7 @@ final class hj extends gd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 

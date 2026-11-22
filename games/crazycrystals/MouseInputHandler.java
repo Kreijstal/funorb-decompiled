@@ -508,7 +508,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             for (var8 = 0; var8 < var7; var8++) {
               ub.field_b[var8] = -1;
             }
-            je.field_i[0] = sa.field_rb;
+            je.field_i[0] = AccountCreationResultPanel.field_rb;
             ub.field_b[1] = 0;
             je.field_i[1] = qc.field_h;
             sn.field_a = new int[2];

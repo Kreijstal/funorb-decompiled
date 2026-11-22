@@ -37,24 +37,24 @@ final class nc {
         }
     }
 
-    final static nk a(int param0, int param1, String param2) {
-        nk var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, int param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        nk stackIn_2_0 = null;
-        nk stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new nk(false);
-          var3.field_g = param0;
-          var3.field_d = param2;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param0;
+          var3.message = param2;
           if (param1 == 0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nk) null;
+          stackIn_2_0 = (AccountServiceResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class nc {
           return;
         }
         String var2 = (String) null;
-        nc.a(14, -121, (String) null);
+        nc.createAccountErrorResult(14, -121, (String) null);
         field_a = null;
         field_c = null;
         field_b = null;

@@ -126,7 +126,7 @@ public final class MonkeyPuzzle2 extends bi {
           fi.clearStaticReferences(-128);
           ld.a(-82);
           kj.d((byte) 121);
-          jg.r(-249);
+          AccountCreationResultPanel.r(-249);
           ul.q(-105);
           ra.clearStaticReferences((byte) -96);
           ha.f((byte) -128);
@@ -272,7 +272,7 @@ public final class MonkeyPuzzle2 extends bi {
           m.a(49);
           rk.a(10);
           lk.clearStaticReferences(true);
-          cj.a(50);
+          AccountServiceResult.a(50);
           h.a((byte) 85);
           ib.a(55);
           nh.a(-19931);
@@ -482,7 +482,7 @@ public final class MonkeyPuzzle2 extends bi {
                     l.field_f == -1)) {
                     if (-1 == l.field_f) {
                       if (ej.field_b == 50) {
-                        cj.a((byte) -28, ke.field_h[13]);
+                        AccountServiceResult.a((byte) -28, ke.field_h[13]);
                       }
                       ej.field_b = ej.field_b - 1;
                       if ((ej.field_b == 0)) {
@@ -491,7 +491,7 @@ public final class MonkeyPuzzle2 extends bi {
                       }
                     } else {
                       if (ej.field_b == 0) {
-                        cj.a((byte) 119, ke.field_h[12]);
+                        AccountServiceResult.a((byte) 119, ke.field_h[12]);
                       }
                       ej.field_b = ej.field_b + 1;
                       if ((ej.field_b == 50)) {

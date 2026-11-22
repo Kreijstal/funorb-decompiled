@@ -298,7 +298,7 @@ final class we {
     we(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_s = in.a(param0.length, param0, -127);
+          this.field_s = AccountServiceResult.a(param0.length, param0, -127);
           if (this.field_s != param1) {
             throw new RuntimeException();
           }
@@ -306,7 +306,7 @@ final class we {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_n = in.a(0, param0, param0.length, -26879);
+            this.field_n = AccountServiceResult.a(0, param0, param0.length, -26879);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_n[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

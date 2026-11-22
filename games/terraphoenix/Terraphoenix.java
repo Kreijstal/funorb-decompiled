@@ -1453,26 +1453,26 @@ public final class Terraphoenix extends GameShell {
           }
           if (~var5 == ~var2_int) {
             if (var3 == 0) {
-              if (ef.field_j <= 320 + (tj.field_sb * 100 / 128 + 8)) {
-                stackIn_218_0 = (ef.field_j >= 312 + 100 * tj.field_sb / 128) ? 0 : -1;
+              if (ef.field_j <= 320 + (AccountCreationResultPanel.field_sb * 100 / 128 + 8)) {
+                stackIn_218_0 = (ef.field_j >= 312 + 100 * AccountCreationResultPanel.field_sb / 128) ? 0 : -1;
               } else {
                 stackIn_218_0 = 1;
               }
               var3 = stackIn_218_0;
             }
             if (-1 == var3) {
-              tj.field_sb = tj.field_sb - 16;
+              AccountCreationResultPanel.field_sb = AccountCreationResultPanel.field_sb - 16;
             }
             if (1 == var3) {
-              tj.field_sb = tj.field_sb + 16;
+              AccountCreationResultPanel.field_sb = AccountCreationResultPanel.field_sb + 16;
             }
-            if (0 > tj.field_sb) {
-              tj.field_sb = 0;
+            if (0 > AccountCreationResultPanel.field_sb) {
+              AccountCreationResultPanel.field_sb = 0;
             }
-            if (tj.field_sb > 128) {
-              tj.field_sb = 128;
+            if (AccountCreationResultPanel.field_sb > 128) {
+              AccountCreationResultPanel.field_sb = 128;
             }
-            uk.field_b.e(2 * tj.field_sb, -103);
+            uk.field_b.e(2 * AccountCreationResultPanel.field_sb, -103);
           }
           var5++;
           if (~var5 == ~var2_int &&
@@ -2432,7 +2432,7 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameRemainder2 = true;
             vc.field_f.a(qb.field_d, 320, var9, var8Lifetime5, 1);
             vc.field_f.b("--------------", 320, var9, var8Lifetime5, 1);
-            this.a("|", 320 + tj.field_sb * 100 / 128, var8Lifetime5, var9, 106);
+            this.a("|", 320 + AccountCreationResultPanel.field_sb * 100 / 128, var8Lifetime5, var9, 106);
             var11++;
             var9 = var9 + var10;
             if (var11 != this.field_xb && (!(4 - var10 + var9 <= MouseWheelInput.field_b) ||
@@ -3842,7 +3842,7 @@ public final class Terraphoenix extends GameShell {
             }
             vc.field_f.a(qb.field_d, 320, var9, var8Lifetime2, 1);
             vc.field_f.b("--------------", 320, var9, var8Lifetime2, 1);
-            this.a("|", 320 + 100 * tj.field_sb / 128, var8Lifetime2, var9, 111);
+            this.a("|", 320 + 100 * AccountCreationResultPanel.field_sb / 128, var8Lifetime2, var9, 111);
             var9 = var9 + var10;
             if (me.field_o > 0) {
               boolean decompiledFrameRemainder2 = true;
@@ -4334,7 +4334,7 @@ public final class Terraphoenix extends GameShell {
           sj.a(0);
           rb.clearStaticReferences(-61);
           d.g((byte) -57);
-          tj.p(38);
+          AccountCreationResultPanel.p(38);
           na.d(true);
           jg.d(true);
           si.n(8);
@@ -4477,7 +4477,7 @@ public final class Terraphoenix extends GameShell {
           cc.clearStaticReferences((byte) -17);
           th.clearStaticReferences(102);
           og.clearStaticReferences(8934);
-          pd.a((byte) 122);
+          AccountServiceResult.a((byte) 122);
           ec.a((byte) -82);
           o.a(0);
           ra.clearStaticReferences(7876);
@@ -7772,26 +7772,26 @@ public final class Terraphoenix extends GameShell {
           }
           if (~var2_int == ~var5) {
             if (var3 == 0) {
-              if ((8 + tj.field_sb * 100 / 128 + 320) < ef.field_j) {
+              if ((8 + AccountCreationResultPanel.field_sb * 100 / 128 + 320) < ef.field_j) {
                 stackIn_95_0 = 1;
               } else {
-                stackIn_95_0 = ((100 * tj.field_sb / 128 + 320 - 8) > ef.field_j) ? -1 : 0;
+                stackIn_95_0 = ((100 * AccountCreationResultPanel.field_sb / 128 + 320 - 8) > ef.field_j) ? -1 : 0;
               }
               var3 = stackIn_95_0;
             }
             if (var3 == -1) {
-              tj.field_sb = tj.field_sb - 16;
+              AccountCreationResultPanel.field_sb = AccountCreationResultPanel.field_sb - 16;
             }
             if (var3 == 1) {
-              tj.field_sb = tj.field_sb + 16;
+              AccountCreationResultPanel.field_sb = AccountCreationResultPanel.field_sb + 16;
             }
-            if (tj.field_sb < 0) {
-              tj.field_sb = 0;
+            if (AccountCreationResultPanel.field_sb < 0) {
+              AccountCreationResultPanel.field_sb = 0;
             }
-            if (tj.field_sb > 128) {
-              tj.field_sb = 128;
+            if (AccountCreationResultPanel.field_sb > 128) {
+              AccountCreationResultPanel.field_sb = 128;
             }
-            uk.field_b.e(tj.field_sb * 2, -119);
+            uk.field_b.e(AccountCreationResultPanel.field_sb * 2, -119);
           }
           var5++;
           if (me.field_o > 0) {
@@ -8402,12 +8402,12 @@ public final class Terraphoenix extends GameShell {
                 vc.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 if (!(Archive.field_a >= 2)) {
-                  vc.field_f.c(pd.field_f, 320, 200, 0, -1);
+                  vc.field_f.c(AccountServiceResult.field_f, 320, 200, 0, -1);
                   if (var10 != 0) {
                     vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
                     vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                     if (2 > Archive.field_a) {
-                      vc.field_f.c(pd.field_f, 320, 200, 16776960, -1);
+                      vc.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                     }
                   }
                 }
@@ -8415,7 +8415,7 @@ public final class Terraphoenix extends GameShell {
                 vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
                 vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 if (2 > Archive.field_a) {
-                  vc.field_f.c(pd.field_f, 320, 200, 16776960, -1);
+                  vc.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                 }
               }
             }
@@ -8936,7 +8936,7 @@ public final class Terraphoenix extends GameShell {
                           break;
                       }
                       if (var3 != 0) {
-                        var2_int = pd.a(false);
+                        var2_int = AccountServiceResult.a(false);
                         if (var2_int == 2 &&
                           null != a.field_b) {
                           ga.b((byte) 121);
@@ -8952,7 +8952,7 @@ public final class Terraphoenix extends GameShell {
                       }
                     }
                   } else {
-                    var2_int = pd.a(false);
+                    var2_int = AccountServiceResult.a(false);
                     if (var2_int == 2 &&
                       null != a.field_b) {
                       ga.b((byte) 121);

@@ -253,7 +253,7 @@ abstract class nf extends rh {
           return;
         }
         int var1 = pf.a((byte) 97, 3);
-        cj.a((byte) 105, ke.field_h[28 + var1]);
+        AccountServiceResult.a((byte) 105, ke.field_h[28 + var1]);
     }
 
     final static int a(int param0, boolean param1) {

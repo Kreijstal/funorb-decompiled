@@ -40,7 +40,7 @@ final class vf extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "vf.N(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "vf.N(" + param0 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class vf extends ph {
         try {
           this.field_A = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class vf extends ph {
         try {
           this.field_h = gf.field_e.field_n;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class vf extends ph {
         try {
           this.field_h = gf.field_e.field_n;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,15 +167,15 @@ final class vf extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var7), "vf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var7), "vf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final static jj a(String[] args, boolean param1) {
-        jj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, boolean param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
-        jj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -183,10 +183,10 @@ final class vf extends ph {
         try {
           if (!param1) {
             var3 = (String[]) null;
-            vf.a((String[]) null, false);
+            vf.createAccountSuggestionsResult((String[]) null, false);
           }
-          var2 = new jj(false);
-          var2.field_e = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class vf extends ph {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -281,13 +281,13 @@ final class vf extends ph {
           nh.field_L = cj.a(6, 5);
           if (param0 != -8255) {
             var3 = (String[]) null;
-            vf.a((String[]) null, false);
+            vf.createAccountSuggestionsResult((String[]) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "vf.P(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "vf.P(" + param0 + ')');
         }
     }
 

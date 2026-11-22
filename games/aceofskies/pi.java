@@ -126,7 +126,7 @@ final class pi extends mi {
               q.outgoingPacket.position = 0;
               q.outgoingPacket.writeByte(param2 - 1336879960, 14);
               q.outgoingPacket.writeByte(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
-              fr.a(param2 - 21, -1);
+              AccountServiceResult.a(param2 - 21, -1);
               ca.field_f = pg.field_a;
             }
             if (ca.field_f == pg.field_a &&

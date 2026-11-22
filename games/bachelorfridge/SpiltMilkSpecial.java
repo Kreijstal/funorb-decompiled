@@ -104,7 +104,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
     final static boolean a(int param0, boolean param1, AccountCreationPanel param2, int param3, String param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
-        tea var9 = null;
+        AccountCreationResultPanel var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -119,7 +119,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
           if (GameClock.field_a != FridgeScreen.field_p) {
             return false;
           }
-          var9 = new tea(gja.field_m, param2);
+          var9 = new AccountCreationResultPanel(gja.field_m, param2);
           var8 = -49 / ((-8 - param3) / 56);
           gja.field_m.a((UiWidget) (var9), (byte) 86);
           if (AttackUpAllEvent.d((byte) 77)) {

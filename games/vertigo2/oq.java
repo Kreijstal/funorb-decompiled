@@ -39,20 +39,20 @@ final class oq extends qc {
         }
     }
 
-    final static ch a(int param0, String[] param1) {
-        ch var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        ch stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ch(false);
+          var2 = new AccountServiceResult(false);
           if (param0 != -11) {
             field_H = (String) null;
           }
-          var2.field_b = param1;
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

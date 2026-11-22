@@ -165,7 +165,7 @@ final class vh {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class vh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -231,14 +231,14 @@ final class vh {
           var2_int = 109 / ((param0 + 73) / 52);
           var3 = ei.field_h.g(-79);
           while (var3 != null) {
-            wg.d(-9420, param1);
+            AccountCreationResultPanel.d(-9420, param1);
             var3 = ei.field_h.a(12684);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "vh.C(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "vh.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class vh {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -26,7 +26,7 @@ final class be extends pj {
         var2 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
         if (ClientException.field_b >= 0) {
           var3 = -var1 - ArchiveSource.field_c + ((sk.field_o >> 4) + 320);
-          var4 = -var2 - si.field_E + (wg.field_e >> 4);
+          var4 = -var2 - si.field_E + (AccountServiceResult.field_e >> 4);
         } else {
           var4 = -var2 + BufferedSocket.field_m;
           var3 = PacketBuffer.field_j - var1;

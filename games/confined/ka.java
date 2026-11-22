@@ -201,7 +201,7 @@ class ka extends pm {
         if (param0 != -58) {
           return true;
         }
-        return in.field_h;
+        return AccountServiceResult.field_h;
     }
 
     final static String a(CharSequence param0, int param1) {

@@ -19,7 +19,7 @@ final class pk {
         try {
           param1.removeKeyListener(sj.field_d);
           param1.removeFocusListener(sj.field_d);
-          bg.field_rb = -1;
+          AccountCreationResultPanel.field_rb = -1;
           if (param0 > -87) {
             field_a = (String) null;
           }

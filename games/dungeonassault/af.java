@@ -17,7 +17,7 @@ final class af {
           ek.field_b.a(ql.field_d, 256);
           ub.field_n.a(ek.field_b);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class af {
             wa.field_a = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
         }
     }
 

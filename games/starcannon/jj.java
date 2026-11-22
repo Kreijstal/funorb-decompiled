@@ -5,7 +5,7 @@ final class jj extends vk implements dc, ga {
     private ab field_H;
     static String field_C;
     static volatile boolean field_E;
-    private ok field_z;
+    private AccountCreationResultPanel field_z;
     private dk field_y;
     static int field_D;
     static Sprite field_A;
@@ -210,7 +210,7 @@ final class jj extends vk implements dc, ga {
         field_A = null;
     }
 
-    jj(ok param0) {
+    jj(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (de) null);
         String var7 = null;
         int var3 = 0;

@@ -133,7 +133,7 @@ final class g extends ok {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class g extends ok {
           kj.a(lj.field_e, u.field_O, -2958, lc.field_e);
           ob.a(0, -102, param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "g.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "g.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class g extends ok {
           var5.appendCrc32((byte) -106, var4);
           var5.backpatchByteLength(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

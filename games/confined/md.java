@@ -81,17 +81,17 @@ final class md {
             var5 = var28.readUnsignedByte(32);
             if (var5 != 0) {
               var6 = var4.field_o;
-              in.field_e[0].field_a = false;
-              in.field_e[0].field_g = qc.field_m;
+              AccountServiceResult.field_e[0].field_a = false;
+              AccountServiceResult.field_e[0].field_g = qc.field_m;
               var7 = var4.field_s;
-              in.field_e[0].field_b = null;
+              AccountServiceResult.field_e[0].field_b = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                in.field_e[var8_int].field_g = var28.readString(true);
-                in.field_e[var8_int].field_a = false;
+                AccountServiceResult.field_e[var8_int].field_g = var28.readString(true);
+                AccountServiceResult.field_e[var8_int].field_a = false;
                 if (var28.readUnsignedByte(param0 + 10996) != 1) {
-                  in.field_e[var8_int].field_b = null;
+                  AccountServiceResult.field_e[var8_int].field_b = null;
                 } else {
-                  in.field_e[var8_int].field_b = var28.readString(true);
+                  AccountServiceResult.field_e[var8_int].field_b = var28.readString(true);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -114,12 +114,12 @@ final class md {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte(32);
-                  var21 = in.field_e[var20].field_g;
+                  var21 = AccountServiceResult.field_e[var20].field_g;
                   var22 = var28.readLong((byte) -68);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = in.field_e[var20].field_b;
+                    var9[0][var12] = AccountServiceResult.field_e[var20].field_b;
                     var10[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
@@ -142,10 +142,10 @@ final class md {
                     }
                   }
                   if (var14 < var6 &&
-                    !in.field_e[var20].field_a) {
-                    in.field_e[var20].field_a = true;
+                    !AccountServiceResult.field_e[var20].field_a) {
+                    AccountServiceResult.field_e[var20].field_a = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = in.field_e[var20].field_b;
+                    var9[2][var14] = AccountServiceResult.field_e[var20].field_b;
                     var10[2][var14] = var22;
                     var14++;
                     var28.position = var24;

@@ -296,12 +296,12 @@ final class ji {
         }
     }
 
-    final static dn a(boolean param0) {
+    final static AccountServiceResult pollAccountCreationResult(boolean param0) {
         if (bh.field_a == tp.field_h) {
           throw new IllegalStateException();
         }
         if (param0) {
-          return (dn) null;
+          return (AccountServiceResult) null;
         }
         if (ag.field_c != bh.field_a) {
           return null;

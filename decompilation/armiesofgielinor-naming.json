@@ -73588,6 +73588,14 @@
       "renamedSymbol": "M:dc.detachPointerInput(Ljava/awt/Component;I)V"
     },
     {
+      "symbol": "M:dc.a(ZZ)Lwd;",
+      "originalName": "a",
+      "to": "createAccountSuccessResult",
+      "evidence": "dc.java: Both complete branches reviewed with named AccountRequestResult constructor/fields and registration dialog. False second boolean allocates accepted=true and copies first boolean into requiresAgreement. True guard recursively invokes dc.a(false,false), allocating a discarded extra result before allocating returned result and assigning flag. Preserve extra allocation, caller booleans, order, identity and all failures; no simplification.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;"
+    },
+    {
       "symbol": "M:dd.a(B)Z",
       "originalName": "a",
       "to": "pollMasterIndex",
@@ -74882,6 +74890,14 @@
       "evidence": "ei.java: Reads a slice and advances position by the positive byte count.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BoundedFile.read(II[BI)I"
+    },
+    {
+      "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
+      "originalName": "a",
+      "to": "createAccountSuggestionsResult",
+      "evidence": "ei.java: Complete method/constructor/registration UI reviewed. Allocates accepted=false, aliases caller array into suggestedNames, then int!=2 calls BoundedFile.a(33,true,false,true). Preserve exact extra call after allocation/array write and all propagated/wrapped failures; no array copy or guard normalization.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;"
     },
     {
       "symbol": "M:ei.a(JI)V",
@@ -79844,6 +79860,14 @@
       "renamedSymbol": "M:Spell.releaseStatics(I)V"
     },
     {
+      "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+      "originalName": "a",
+      "to": "createAccountErrorResult",
+      "evidence": "il.java: Complete method, named boolean constructor and registration UI reviewed. First int!=-1 returns null before allocation; valid guard allocates accepted=false then sets status from second int and errorText from caller String. Preserve all ordering, String identity, null behavior and RuntimeException context wrapping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;"
+    },
+    {
       "symbol": "M:il.a(ILha;)V",
       "originalName": "a",
       "to": "applyToBattlefield",
@@ -81922,6 +81946,14 @@
       "evidence": "ki.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
       "renamedSymbol": "M:QuinticFadeSupport.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ki.a(I)Lwd;",
+      "originalName": "a",
+      "to": "pollAccountCreationResult",
+      "evidence": "ki.java: Complete method and named AccountRegistrationDialog advanceDialogAnimation caller reviewed. Checks shared consumed-state singleton against registration state and throws if idle; consumes completed registration state before returning SoundCache.field_a. Pending returns null, with int!=-61440 additionally clearing contentFadeInStage. Preserve shared singleton identity/order, cached object, wrong-guard cleanup and failure behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:QuinticFadeSupport.pollAccountCreationResult(I)LAccountRequestResult;"
     },
     {
       "symbol": "M:ki.a(II)I",
@@ -260740,7 +260772,7 @@
     },
     {
       "symbol": "L:dc.a(ZZ)Lwd;#0",
-      "renamedSymbol": "L:dc.a(ZZ)LAccountRequestResult;#0",
+      "renamedSymbol": "L:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -260751,7 +260783,7 @@
     },
     {
       "symbol": "L:dc.a(ZZ)Lwd;#1",
-      "renamedSymbol": "L:dc.a(ZZ)LAccountRequestResult;#1",
+      "renamedSymbol": "L:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -274226,7 +274258,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#0",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#0",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -274237,7 +274269,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#1",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#1",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -274248,7 +274280,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#2",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#2",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -274259,7 +274291,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#3",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#3",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -274270,7 +274302,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#4",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#4",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -274281,7 +274313,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#5",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#5",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -274292,7 +274324,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#6",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#6",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274303,7 +274335,7 @@
     },
     {
       "symbol": "L:ei.a(I[Ljava/lang/String;)Lwd;#7",
-      "renamedSymbol": "L:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#7",
+      "renamedSymbol": "L:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -355186,7 +355218,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#0",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#0",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -355197,7 +355229,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#1",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#1",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -355208,7 +355240,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#2",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#2",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -355219,7 +355251,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#3",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#3",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -355230,7 +355262,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#4",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#4",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -355241,7 +355273,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#5",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#5",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#5",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -355252,7 +355284,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#6",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#6",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#6",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -355263,7 +355295,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#7",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#7",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -355274,7 +355306,7 @@
     },
     {
       "symbol": "L:il.a(IILjava/lang/String;)Lwd;#8",
-      "renamedSymbol": "L:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#8",
+      "renamedSymbol": "L:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -531329,9 +531361,9 @@
     },
     {
       "symbol": "M:dc.a(ZZ)Lwd;",
-      "renamedSymbol": "M:dc.a(ZZ)LAccountRequestResult;",
+      "renamedSymbol": "M:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountSuccessResult",
       "declaration": {
         "file": "dc.java",
         "start": 877,
@@ -534200,9 +534232,9 @@
     },
     {
       "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
-      "renamedSymbol": "M:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;",
+      "renamedSymbol": "M:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountSuggestionsResult",
       "declaration": {
         "file": "ei.java",
         "start": 1750,
@@ -545772,9 +545804,9 @@
     },
     {
       "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
-      "renamedSymbol": "M:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;",
+      "renamedSymbol": "M:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountErrorResult",
       "declaration": {
         "file": "il.java",
         "start": 1023,
@@ -550447,9 +550479,9 @@
     },
     {
       "symbol": "M:ki.a(I)Lwd;",
-      "renamedSymbol": "M:QuinticFadeSupport.a(I)LAccountRequestResult;",
+      "renamedSymbol": "M:QuinticFadeSupport.pollAccountCreationResult(I)LAccountRequestResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountCreationResult",
       "declaration": {
         "file": "ki.java",
         "start": 234,
@@ -593974,7 +594006,7 @@
     },
     {
       "symbol": "P:dc.a(ZZ)Lwd;#0",
-      "renamedSymbol": "P:dc.a(ZZ)LAccountRequestResult;#0",
+      "renamedSymbol": "P:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -593985,7 +594017,7 @@
     },
     {
       "symbol": "P:dc.a(ZZ)Lwd;#1",
-      "renamedSymbol": "P:dc.a(ZZ)LAccountRequestResult;#1",
+      "renamedSymbol": "P:dc.createAccountSuccessResult(ZZ)LAccountRequestResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -600288,7 +600320,7 @@
     },
     {
       "symbol": "P:ei.a(I[Ljava/lang/String;)Lwd;#0",
-      "renamedSymbol": "P:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#0",
+      "renamedSymbol": "P:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -600299,7 +600331,7 @@
     },
     {
       "symbol": "P:ei.a(I[Ljava/lang/String;)Lwd;#1",
-      "renamedSymbol": "P:BoundedFile.a(I[Ljava/lang/String;)LAccountRequestResult;#1",
+      "renamedSymbol": "P:BoundedFile.createAccountSuggestionsResult(I[Ljava/lang/String;)LAccountRequestResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -629548,7 +629580,7 @@
     },
     {
       "symbol": "P:il.a(IILjava/lang/String;)Lwd;#0",
-      "renamedSymbol": "P:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#0",
+      "renamedSymbol": "P:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -629559,7 +629591,7 @@
     },
     {
       "symbol": "P:il.a(IILjava/lang/String;)Lwd;#1",
-      "renamedSymbol": "P:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#1",
+      "renamedSymbol": "P:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -629570,7 +629602,7 @@
     },
     {
       "symbol": "P:il.a(IILjava/lang/String;)Lwd;#2",
-      "renamedSymbol": "P:DisplacedUnitMarker.a(IILjava/lang/String;)LAccountRequestResult;#2",
+      "renamedSymbol": "P:DisplacedUnitMarker.createAccountErrorResult(IILjava/lang/String;)LAccountRequestResult;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -640339,7 +640371,7 @@
     },
     {
       "symbol": "P:ki.a(I)Lwd;#0",
-      "renamedSymbol": "P:QuinticFadeSupport.a(I)LAccountRequestResult;#0",
+      "renamedSymbol": "P:QuinticFadeSupport.pollAccountCreationResult(I)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -870006,7 +870038,7 @@
       "original": "cq.java",
       "renamed": "CampaignMenuEntry.java",
       "inputSha256": "92be2bc7feeb25bfc9b8895e011677e7ebfbaf9d9e46628cb7b0ca13d6b63c21",
-      "outputSha256": "c08502dc4d781b41ef2bb9b1f7fc0383ee9a1143691999d21dcd43c46a623ad2",
+      "outputSha256": "d7b62b2be3d7accb74f3ab29498cee88f7e6fd94d93f99a1188e5f9116d6f4cd",
       "edits": [
         {
           "start": 50,
@@ -870373,6 +870405,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 3856,
+          "end": 3857,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
+        },
+        {
           "start": 3977,
           "end": 3978,
           "symbol": "C:p",
@@ -870387,6 +870426,13 @@
           "renamed": "BoundedFile"
         },
         {
+          "start": 3992,
+          "end": 3993,
+          "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
           "start": 4054,
           "end": 4055,
           "symbol": "C:p",
@@ -870399,6 +870445,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "DisplacedUnitMarker"
+        },
+        {
+          "start": 4069,
+          "end": 4070,
+          "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
         },
         {
           "start": 4809,
@@ -894441,7 +894494,7 @@
       "original": "dc.java",
       "renamed": "dc.java",
       "inputSha256": "9918224a57383e02a3d879ec0fd5d8e984144bf6fe8d765cfbcdbf0dfd256b06",
-      "outputSha256": "53ed52e241cbe1df975cb0db9c75369d5491c70b8204915f2a3b4dee62a94beb",
+      "outputSha256": "9355a1f737b17c2b3d5f25a961cd66cd5dcc2dedc191f4936ddd3b1b787b9965",
       "edits": [
         {
           "start": 61,
@@ -894477,6 +894530,13 @@
           "symbol": "M:dc.a(Ljava/awt/Component;I)V",
           "original": "a",
           "renamed": "detachPointerInput"
+        },
+        {
+          "start": 444,
+          "end": 445,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 510,
@@ -894556,6 +894616,13 @@
           "renamed": "AccountRequestResult"
         },
         {
+          "start": 877,
+          "end": 878,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
+        },
+        {
           "start": 921,
           "end": 923,
           "symbol": "C:wd",
@@ -894582,6 +894649,13 @@
           "symbol": "F:wd.field_h:Z",
           "original": "field_h",
           "renamed": "requiresAgreement"
+        },
+        {
+          "start": 1109,
+          "end": 1110,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 1154,
@@ -948445,7 +948519,7 @@
       "original": "ei.java",
       "renamed": "BoundedFile.java",
       "inputSha256": "d568e3b3e3d529fc979305e676612939a03b1d1bc6f4fb77d55261721411c94f",
-      "outputSha256": "24f8dbbcd95e14686beb60d7fcec2b1c7baaf8e469fafe95875ca81fb6212cd9",
+      "outputSha256": "77f60c31d822869a676aa59afee5ed2ae88452996bc3c891fc2aa171f52f3201",
       "edits": [
         {
           "start": 69,
@@ -948574,6 +948648,13 @@
           "renamed": "BoundedFile"
         },
         {
+          "start": 980,
+          "end": 981,
+          "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
           "start": 1362,
           "end": 1368,
           "symbol": "P:ei.a(II[BI)I#0",
@@ -948621,6 +948702,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "AccountRequestResult"
+        },
+        {
+          "start": 1750,
+          "end": 1751,
+          "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
         },
         {
           "start": 1791,
@@ -1229396,7 +1229484,7 @@
       "original": "il.java",
       "renamed": "DisplacedUnitMarker.java",
       "inputSha256": "f6f4f39e77933ab8ed6b23233a89eccbed7933aa1e0ec6fc9f404f789f594c6e",
-      "outputSha256": "ac57cfe62888710ffdd868473484e9c826a7475076351d05a8f3a858ab44da09",
+      "outputSha256": "1c51df373f1137d9d905a7c2ae1209b226fd5c72b5dad8e34e24c72b5fb2005c",
       "edits": [
         {
           "start": 50,
@@ -1229628,6 +1229716,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "AccountRequestResult"
+        },
+        {
+          "start": 1023,
+          "end": 1024,
+          "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
         },
         {
           "start": 1074,
@@ -1321044,7 +1321139,7 @@
       "original": "ki.java",
       "renamed": "QuinticFadeSupport.java",
       "inputSha256": "d6ee028e523157d3195a2e16ca8bce9a2e48f707432ff47891d45350ed1b6347",
-      "outputSha256": "4c128c11b6b2da060664b29bb951afe7cc3b0a1873d2a6902fa2f90073c1b56f",
+      "outputSha256": "6515aa0c71893fe9b9e1c2e1fa29adc394484e3258c47b308c52463bcd90651e",
       "edits": [
         {
           "start": 50,
@@ -1321073,6 +1321168,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "AccountRequestResult"
+        },
+        {
+          "start": 234,
+          "end": 235,
+          "symbol": "M:ki.a(I)Lwd;",
+          "original": "a",
+          "renamed": "pollAccountCreationResult"
         },
         {
           "start": 262,
@@ -1484449,7 +1484551,7 @@
       "original": "oe.java",
       "renamed": "AccountRegistrationDialog.java",
       "inputSha256": "2e2c91dc6ccdf7f92a62a42dff8ee5c9ce484149a50b72245ddb31834a535350",
-      "outputSha256": "9da919217d5dc6ffd7f0f2fa4d625be8696649d28aeb12e77038e57431e2ac4d",
+      "outputSha256": "5b822ae940f30e3ae7e559b955936baa3908fc0c681bd03eb1248baf5ad3a1e2",
       "edits": [
         {
           "start": 50,
@@ -1484592,6 +1484694,13 @@
           "renamed": "QuinticFadeSupport"
         },
         {
+          "start": 549,
+          "end": 550,
+          "symbol": "M:ki.a(I)Lwd;",
+          "original": "a",
+          "renamed": "pollAccountCreationResult"
+        },
+        {
           "start": 615,
           "end": 616,
           "symbol": "M:pt.a(B)Z",
@@ -1484669,6 +1484778,13 @@
           "renamed": "QuinticFadeSupport"
         },
         {
+          "start": 980,
+          "end": 981,
+          "symbol": "M:ki.a(I)Lwd;",
+          "original": "a",
+          "renamed": "pollAccountCreationResult"
+        },
+        {
           "start": 1043,
           "end": 1044,
           "symbol": "M:oe.a(ZBLwd;)V",
@@ -1484730,6 +1484846,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "DisplacedUnitMarker"
+        },
+        {
+          "start": 1370,
+          "end": 1371,
+          "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
         },
         {
           "start": 1381,
@@ -1654149,7 +1654272,7 @@
       "original": "sm.java",
       "renamed": "AiPlanningStrategy.java",
       "inputSha256": "ae6733ddcad3f4ccbb2ea62fb1b1e23793aaeca1fa2850df783ba4263ee85b8d",
-      "outputSha256": "33d57ab608766f23a6db520c29ba45e6f5723f002421071a4a8dad0b48b0a204",
+      "outputSha256": "b4b60ab9e0eea5d58879aeeb4844a2dd986db76d1f2d4e141e9f271598e8653d",
       "edits": [
         {
           "start": 53,
@@ -1656532,6 +1656655,13 @@
           "renamed": "BoundedFile"
         },
         {
+          "start": 12802,
+          "end": 12803,
+          "symbol": "M:ei.a(I[Ljava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuggestionsResult"
+        },
+        {
           "start": 12863,
           "end": 12865,
           "symbol": "C:vl",
@@ -1656553,6 +1656683,13 @@
           "renamed": "DisplacedUnitMarker"
         },
         {
+          "start": 12879,
+          "end": 12880,
+          "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
           "start": 12935,
           "end": 12937,
           "symbol": "C:nm",
@@ -1656572,6 +1656709,13 @@
           "symbol": "F:vl.field_k:Lwd;",
           "original": "field_k",
           "renamed": "accountNameCheckResult"
+        },
+        {
+          "start": 12986,
+          "end": 12987,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 13026,
@@ -1656602,6 +1656746,13 @@
           "renamed": "DisplacedUnitMarker"
         },
         {
+          "start": 13120,
+          "end": 13121,
+          "symbol": "M:il.a(IILjava/lang/String;)Lwd;",
+          "original": "a",
+          "renamed": "createAccountErrorResult"
+        },
+        {
           "start": 13207,
           "end": 13209,
           "symbol": "C:nm",
@@ -1656621,6 +1656772,13 @@
           "symbol": "F:vl.field_k:Lwd;",
           "original": "field_k",
           "renamed": "accountNameCheckResult"
+        },
+        {
+          "start": 13258,
+          "end": 13259,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 13298,
@@ -1656649,6 +1656807,13 @@
           "symbol": "F:vl.field_k:Lwd;",
           "original": "field_k",
           "renamed": "accountNameCheckResult"
+        },
+        {
+          "start": 13450,
+          "end": 13451,
+          "symbol": "M:dc.a(ZZ)Lwd;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
         },
         {
           "start": 13486,
@@ -1843479,10 +1843644,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "957433b7e384740de256b743500ded0a9f00a100b8cbbff6513a0ad318518c4a",
+    "rulesSha256": "76afbf0aa9c47ec6ca80f7568ce4a1d9840e86b795ae1bd6e02df127c82572c7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "8cfd6fbc648c4467554de8bac8fd2457cd764d16a3f1bea0b672f6b1739df4c1",
+    "outputTreeSha256": "38357175219849227b51c0d3e2a33951c827f4b3e6d87ee62ecbeabedd837e71",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -9,7 +9,7 @@ final class tl {
     static ba field_c;
     static String field_e;
     static va field_h;
-    static qj field_g;
+    static AccountServiceResult field_g;
     static int[] field_d;
     static int[] field_b;
 
@@ -215,7 +215,7 @@ final class tl {
     final static void b(int param0) {
         ql.field_e = 0;
         if (param0 < 93) {
-          field_g = (qj) null;
+          field_g = (AccountServiceResult) null;
         }
     }
 

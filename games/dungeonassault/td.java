@@ -28,7 +28,7 @@ final class td {
 
     final static boolean a(String param0, boolean param1, boolean param2, String param3, rg param4, int param5, String param6) {
         RuntimeException var7 = null;
-        jb var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -46,7 +46,7 @@ final class td {
           if (!param2) {
             td.clearStaticReferences(91);
           }
-          var8 = new jb(lg.field_w, param4);
+          var8 = new AccountCreationResultPanel(lg.field_w, param4);
           lg.field_w.a(var8, -1);
           if (rg.i((byte) -125)) {
             var8.r(102);
@@ -88,7 +88,7 @@ final class td {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -27,21 +27,21 @@ final class gf {
 
     final void b(boolean param0) {
         int fieldTemp$0 = 0;
-        if (null != og.field_rb) {
+        if (null != AccountCreationResultPanel.field_rb) {
           return;
         }
         if (SocketConnector.field_d <= 0) {
           this.field_d = false;
         }
         if (!this.field_d) {
-          if (this.field_j > og.field_pb) {
-            DualLinkNode.field_i = (-og.field_pb + this.field_j) / 2;
+          if (this.field_j > AccountCreationResultPanel.field_pb) {
+            DualLinkNode.field_i = (-AccountCreationResultPanel.field_pb + this.field_j) / 2;
           } else {
             if (0 < this.field_j) {
               DualLinkNode.field_i = 0;
             }
           }
-          if (this.field_s == og.field_pb &&
+          if (this.field_s == AccountCreationResultPanel.field_pb &&
             wf.field_b == this.field_h) {
             return;
           }
@@ -114,7 +114,7 @@ final class gf {
               if (param0) {
                 this.a(-92);
               }
-              if (og.field_pb != var2) {
+              if (AccountCreationResultPanel.field_pb != var2) {
                 this.field_b.a(var2, var3, (byte) 4);
               } else {
                 if (var3 != wf.field_b) {
@@ -122,7 +122,7 @@ final class gf {
                 }
               }
               if (0 < this.field_j) {
-                DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+                DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
               }
               return;
             }
@@ -136,7 +136,7 @@ final class gf {
                 if (param0) {
                   this.a(-92);
                 }
-                if (og.field_pb != var2) {
+                if (AccountCreationResultPanel.field_pb != var2) {
                   this.field_b.a(var2, var3, (byte) 4);
                 } else {
                   if (var3 != wf.field_b) {
@@ -149,7 +149,7 @@ final class gf {
             if (decompiledFrameRemainder1) {
               if (param0) {
                 this.a(-92);
-                if (og.field_pb != var2) {
+                if (AccountCreationResultPanel.field_pb != var2) {
                   this.field_b.a(var2, var3, (byte) 4);
                 } else {
                   if (var3 != wf.field_b) {
@@ -157,19 +157,19 @@ final class gf {
                   }
                 }
               } else {
-                if (og.field_pb == var2 &&
+                if (AccountCreationResultPanel.field_pb == var2 &&
                   var3 == wf.field_b) {
                   if (0 >= this.field_j) {
                     return;
                   }
-                  DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+                  DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
                   return;
                 }
                 this.field_b.a(var2, var3, (byte) 4);
               }
             }
             if (0 < this.field_j) {
-              DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+              DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
             }
             return;
           }
@@ -179,7 +179,7 @@ final class gf {
           if (param0) {
             this.a(-92);
           }
-          if (og.field_pb != var2) {
+          if (AccountCreationResultPanel.field_pb != var2) {
             this.field_b.a(var2, var3, (byte) 4);
           } else {
             if (var3 != wf.field_b) {
@@ -187,7 +187,7 @@ final class gf {
             }
           }
           if (0 < this.field_j) {
-            DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+            DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
           }
           return;
         }
@@ -201,7 +201,7 @@ final class gf {
             if (param0) {
               this.a(-92);
             }
-            if (og.field_pb != var2 ||
+            if (AccountCreationResultPanel.field_pb != var2 ||
               var3 != wf.field_b) {
               this.field_b.a(var2, var3, (byte) 4);
             }
@@ -210,7 +210,7 @@ final class gf {
         }
         if (decompiledFrameRemainder0) {
           if (!param0) {
-            if (og.field_pb != var2) {
+            if (AccountCreationResultPanel.field_pb != var2) {
               this.field_b.a(var2, var3, (byte) 4);
             } else {
               if (var3 != wf.field_b) {
@@ -219,10 +219,10 @@ final class gf {
             }
           } else {
             this.a(-92);
-            if (og.field_pb != var2) {
+            if (AccountCreationResultPanel.field_pb != var2) {
               this.field_b.a(var2, var3, (byte) 4);
               if (0 < this.field_j) {
-                DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+                DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
               }
               return;
             }
@@ -234,7 +234,7 @@ final class gf {
         if (0 >= this.field_j) {
           return;
         }
-        DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
+        DualLinkNode.field_i = (this.field_j - AccountCreationResultPanel.field_pb) / 2;
     }
 
     final boolean a(int param0) {
@@ -259,7 +259,7 @@ final class gf {
 
     final FullscreenFocusCanvas c(int param0) {
         this.field_p = wf.field_b;
-        this.field_n = og.field_pb;
+        this.field_n = AccountCreationResultPanel.field_pb;
         this.field_b.a(this.field_f, this.field_v, (byte) 4);
         mj.field_c = false;
         FullscreenFocusCanvas var2 = dj.a(param0, this.field_v, this.field_f, (byte) 28, rg.field_c, 0);

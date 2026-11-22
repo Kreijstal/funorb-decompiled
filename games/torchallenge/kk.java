@@ -15,7 +15,7 @@ final class kk extends t {
         if (!param0) {
           return (am) null;
         }
-        return ta.field_Db;
+        return AccountCreationResultPanel.field_Db;
     }
 
     final static void e(int param0) {

@@ -196,7 +196,7 @@ final class qd extends kn implements sh {
             ne.field_K[var4 - 2] = ud.field_b;
             IsaacRandom.field_m[-2 + var4] = 0;
             wf.field_P[0] = 4;
-            ne.field_K[-1 + var4] = ed.field_f;
+            ne.field_K[-1 + var4] = AccountServiceResult.field_f;
             IsaacRandom.field_m[-1 + var4] = 1;
             wf.field_P[1] = 5;
           } else if (ti.field_M == 1) {
@@ -212,7 +212,7 @@ final class qd extends kn implements sh {
               ne.field_K[var5] = fd.field_J[var5];
             }
             ne.field_K[var4 - 2] = "";
-            ne.field_K[var4 - 1] = ed.field_f;
+            ne.field_K[var4 - 1] = AccountServiceResult.field_f;
             IsaacRandom.field_m[var4 - 1] = 0;
             wf.field_P[0] = 5;
           } else if (ti.field_M != 2) {
@@ -233,7 +233,7 @@ final class qd extends kn implements sh {
                 ne.field_K[var5] = fd.field_J[var5];
               }
               ne.field_K[-2 + var4] = "";
-              ne.field_K[var4 - 1] = ed.field_f;
+              ne.field_K[var4 - 1] = AccountServiceResult.field_f;
               IsaacRandom.field_m[-1 + var4] = 0;
               wf.field_P[0] = 5;
             } else if (ti.field_M == 4) {
@@ -249,7 +249,7 @@ final class qd extends kn implements sh {
                 ne.field_K[var5] = fd.field_J[var5];
               }
               ne.field_K[-2 + var4] = "";
-              ne.field_K[var4 - 1] = ed.field_f;
+              ne.field_K[var4 - 1] = AccountServiceResult.field_f;
               IsaacRandom.field_m[var4 - 1] = 0;
               wf.field_P[0] = 5;
             } else {
@@ -271,7 +271,7 @@ final class qd extends kn implements sh {
               ne.field_K[-2 + var4] = li.field_b;
               IsaacRandom.field_m[-2 + var4] = 0;
               wf.field_P[0] = 3;
-              ne.field_K[-1 + var4] = ed.field_f;
+              ne.field_K[-1 + var4] = AccountServiceResult.field_f;
               IsaacRandom.field_m[var4 - 1] = 1;
               wf.field_P[1] = 5;
             }
@@ -406,7 +406,7 @@ final class qd extends kn implements sh {
           }
           var4Lifetime3 = 86 % ((72 - param0) / 52);
           lj.field_p = aa.field_d - (hn.field_b >> 1);
-          ed.field_a = new int[ne.field_K.length][];
+          AccountServiceResult.field_a = new int[ne.field_K.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = lj.field_p;
           while (ne.field_K.length > var5Lifetime3) {
@@ -417,12 +417,12 @@ final class qd extends kn implements sh {
               var8Lifetime1 = hl.a(ne.field_K[var5Lifetime3], true, -15388);
               var9 = -(var8Lifetime1 >> 1) + rj.field_e;
               var6Lifetime1 = var6Lifetime1 + SpriteState.field_z;
-              ed.field_a[var5Lifetime3] = new int[4];
-              ed.field_a[var5Lifetime3][0] = -ka.field_a + var9;
-              ed.field_a[var5Lifetime3][1] = var6Lifetime1;
-              ed.field_a[var5Lifetime3][2] = (ka.field_a << 1) + var8Lifetime1;
+              AccountServiceResult.field_a[var5Lifetime3] = new int[4];
+              AccountServiceResult.field_a[var5Lifetime3][0] = -ka.field_a + var9;
+              AccountServiceResult.field_a[var5Lifetime3][1] = var6Lifetime1;
+              AccountServiceResult.field_a[var5Lifetime3][2] = (ka.field_a << 1) + var8Lifetime1;
               var6Lifetime1 = var6Lifetime1 + (nk.field_u + SpriteState.field_z + (sn.field_d << 1));
-              ed.field_a[var5Lifetime3][3] = (sn.field_d << 1) + nk.field_u;
+              AccountServiceResult.field_a[var5Lifetime3][3] = (sn.field_d << 1) + nk.field_u;
             }
             var5Lifetime3++;
           }
@@ -539,7 +539,7 @@ final class qd extends kn implements sh {
         e.field_i[8] = kn.field_D;
         e.field_i[17] = tl.field_n;
         e.field_i[5] = lf.field_i;
-        e.field_i[1] = ed.field_b;
+        e.field_i[1] = AccountServiceResult.field_b;
         e.field_i[3] = vi.field_c;
         e.field_i[param0] = cg.field_K;
         e.field_i[19] = af.field_n;

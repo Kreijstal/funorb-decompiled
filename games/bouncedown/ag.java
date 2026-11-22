@@ -19,7 +19,7 @@ final class ag {
           }
           return null;
         }
-        if (ge.field_c < sd.field_lb + ea.field_b) {
+        if (ge.field_c < AccountCreationResultPanel.field_lb + ea.field_b) {
           return oc.field_b;
         }
         if (param0 != -1) {

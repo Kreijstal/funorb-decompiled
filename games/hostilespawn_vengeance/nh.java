@@ -55,7 +55,7 @@ final class nh extends fc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class nh extends fc {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class nh extends fc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

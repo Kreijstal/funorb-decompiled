@@ -70,7 +70,7 @@ final class ga {
             if (hm.field_N == 2) {
               gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.result), mc.field_b);
               var2 = new PacketBuffer(13);
-              ej.a(ng.field_y, -25563, var2, tj.field_wb, ai.field_c);
+              ej.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
               var2.writeByte(15, -121);
               var2.writeInt(rf.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);

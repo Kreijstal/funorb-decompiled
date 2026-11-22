@@ -144,7 +144,7 @@ final class hj extends cg {
     }
 
     final sg a(String param0, int param1) {
-        nk var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         sg stackIn_3_0 = null;
@@ -166,8 +166,8 @@ final class hj extends cg {
           if (!param0.equals(this.field_p)) {
             var3 = mh.a(-63, param0);
             if (var3 != null &&
-              null == var3.field_d) {
-              this.field_m = var3.field_b;
+              null == var3.message) {
+              this.field_m = var3.success;
               this.field_p = param0;
             } else {
               stackIn_12_0 = a.field_n;
@@ -197,7 +197,7 @@ final class hj extends cg {
     final String a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        nk var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_5_0 = null;
         String stackIn_15_0 = null;
@@ -221,10 +221,10 @@ final class hj extends cg {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_d) {
+            if (null != var4.message) {
               return null;
             }
-            this.field_m = var4.field_b;
+            this.field_m = var4.success;
             this.field_p = param0;
           }
           if (this.field_m) {

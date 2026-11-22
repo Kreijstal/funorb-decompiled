@@ -31,10 +31,10 @@ final class d extends IntrusiveNode {
           if (param1 != 5) {
             field_e = 54;
           }
-          var2 = cj.field_a.a((byte) -117);
+          var2 = AccountServiceResult.field_a.a((byte) -117);
           while (var2 != null) {
             f.a(param0, 22492);
-            var2 = cj.field_a.d((byte) 63);
+            var2 = AccountServiceResult.field_a.d((byte) 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

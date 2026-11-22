@@ -45,13 +45,13 @@ final class or {
         tk.field_e = true;
         if (param0 == 4) {
           un.field_Ib = true;
-          ch.field_e.i(0);
+          AccountServiceResult.field_e.i(0);
           fi.a(param0 + 31816, false, wp.field_c);
           return;
         }
         field_l = (String) null;
         un.field_Ib = true;
-        ch.field_e.i(0);
+        AccountServiceResult.field_e.i(0);
         fi.a(param0 + 31816, false, wp.field_c);
     }
 
@@ -173,10 +173,10 @@ final class or {
             or.a((String) null, false, -70, false);
           }
           kh.a((byte) -32);
-          ch.field_e.i(param2 - 65536);
+          AccountServiceResult.field_e.i(param2 - 65536);
           eb.field_d = new ob(ff.field_u, (String) null, tk.field_e, param3, param1);
-          n.field_b = new ga(ch.field_e, eb.field_d);
-          ch.field_e.b(n.field_b, 0);
+          n.field_b = new ga(AccountServiceResult.field_e, eb.field_d);
+          AccountServiceResult.field_e.b(n.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "or.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

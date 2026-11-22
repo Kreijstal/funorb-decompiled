@@ -14,7 +14,7 @@ final class IsaacRandom {
     static char[] field_g;
     static String field_e;
 
-    final static wg b(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (ma.field_o == el.field_p) {
           throw new IllegalStateException();
         }

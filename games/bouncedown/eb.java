@@ -5,7 +5,7 @@ final class eb extends lc implements ki, rc {
     private wd field_H;
     static String field_D;
     static String field_z;
-    private sd field_A;
+    private AccountCreationResultPanel field_A;
     private vc field_B;
     static String field_F;
     static String[] field_E;
@@ -158,7 +158,7 @@ final class eb extends lc implements ki, rc {
         }
     }
 
-    eb(sd param0) {
+    eb(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (fc) null);
         String var7 = null;
         int var3 = 0;

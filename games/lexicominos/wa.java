@@ -46,8 +46,8 @@ final class wa extends kd {
             if (param0 > 0) {
               field_k = (String) null;
             }
-            if (null != u.field_pb) {
-              u.field_pb.a((byte) -114);
+            if (null != AccountCreationResultPanel.field_pb) {
+              AccountCreationResultPanel.field_pb.a((byte) -114);
             }
             if (wj.field_s != null) {
               try {

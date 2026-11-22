@@ -121,14 +121,14 @@ abstract class pp {
           if (param1 == 255) {
             int stackIn_11_0 = 111;
             boolean stackIn_12_1 = !(sd.field_h >= 13);
-            ld.field_c = in.$cfr$intArgs$a$1ded6534de63(stackIn_11_0, stackIn_12_1);
+            ld.field_c = in.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              ld.field_c = oq.a((byte) -63, args);
+              ld.field_c = oq.createAccountSuggestionsResult((byte) -63, args);
               return;
             }
-            ld.field_c = dq.a(param1, 32, param2);
+            ld.field_c = dq.createAccountErrorResult(param1, 32, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

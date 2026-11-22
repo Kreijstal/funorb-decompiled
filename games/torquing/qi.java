@@ -6,14 +6,14 @@ final class qi {
     static String[] field_e;
     static boolean field_c;
     static volatile int field_b;
-    static dn field_d;
+    static AccountServiceResult field_d;
 
     public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         field_a = null;
         if (param0 < 35) {
-          field_d = (dn) null;
+          field_d = (AccountServiceResult) null;
         }
     }
 

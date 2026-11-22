@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qe extends g implements cl, qh {
-    private bg field_K;
+    private AccountCreationResultPanel field_K;
     private hl field_F;
     private dg field_D;
     static de field_J;
@@ -56,7 +56,7 @@ final class qe extends g implements cl, qh {
         }
     }
 
-    qe(bg param0) {
+    qe(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ci) null);
         String var7 = null;
         int var3 = 0;

@@ -28,12 +28,12 @@ class dd extends ic {
         return ij.field_d.a(-119);
     }
 
-    final static nj d(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (DiskArchiveStore.field_f == fd.field_h) {
           throw new IllegalStateException();
         }
         if (param0 <= 82) {
-          return (nj) null;
+          return (AccountServiceResult) null;
         }
         if (fd.field_h == cj.field_e) {
           fd.field_h = DiskArchiveStore.field_f;

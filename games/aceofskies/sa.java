@@ -272,7 +272,7 @@ final class sa {
         if (param0 != -25752) {
           field_h = (int[]) null;
         }
-        if (jq.field_fb == ht.field_k) {
+        if (AccountCreationResultPanel.field_fb == ht.field_k) {
           return nh.field_b;
         }
         return ImageProducerRasterBuffer.field_i;

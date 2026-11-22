@@ -125,7 +125,7 @@ final class gk {
           if (decompiledFrameRemainder0) {
             if (!nh.field_P) {
               if (ea.field_b <= ge.field_c) {
-                stackIn_16_0 = (ge.field_c < ea.field_b + sd.field_lb) ? 1 : 0;
+                stackIn_16_0 = (ge.field_c < ea.field_b + AccountCreationResultPanel.field_lb) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }

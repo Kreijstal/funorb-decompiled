@@ -122,7 +122,7 @@ final class tb implements ci {
           } else {
             var6 = param1;
           }
-          stackIn_7_0 = nk.a(-116, param3, var4_long, (String) (var6), param0);
+          stackIn_7_0 = AccountServiceResult.a(-116, param3, var4_long, (String) (var6), param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

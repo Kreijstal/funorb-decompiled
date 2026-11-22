@@ -211,7 +211,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                ef.a((byte) 88);
+                AccountServiceResult.a((byte) 88);
                 this.e(-87);
                 SectorCacheStore.field_f = dk.a(fl.field_v, (java.awt.Component) ((Object) bg.field_P), -124, sd.field_c);
                 this.initializeGame(-117);

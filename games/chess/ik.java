@@ -87,7 +87,7 @@ final class ik implements Iterator {
         return true;
     }
 
-    final static aj b(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (g.field_a == ji.field_T) {
           throw new IllegalStateException();
         }

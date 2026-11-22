@@ -588,7 +588,7 @@ final class LevelMap {
         var6 = Terraphoenix.field_V;
         try {
           var2_int = aa.field_m;
-          var3 = -(eg.field_p * 2) + pd.field_h;
+          var3 = -(eg.field_p * 2) + AccountServiceResult.field_h;
           if (param0 != -96) {
             this.a(29, 74, -97, 18, 98, 87, true);
           }

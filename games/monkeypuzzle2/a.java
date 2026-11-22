@@ -89,11 +89,11 @@ class a implements ml, ui {
     final static void b(int param0) {
         int var1 = pf.a((byte) 31, 5);
         if (param0 > 21) {
-          cj.a((byte) 108, ke.field_h[20 + var1]);
+          AccountServiceResult.a((byte) 108, ke.field_h[20 + var1]);
           return;
         }
         field_j = (String) null;
-        cj.a((byte) 108, ke.field_h[20 + var1]);
+        AccountServiceResult.a((byte) 108, ke.field_h[20 + var1]);
     }
 
     private final void a(int param0, int param1, UiWidget param2, int param3) {

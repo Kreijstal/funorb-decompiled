@@ -31,7 +31,7 @@ final class jh extends wb implements qk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "jh.O(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "jh.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class jh extends wb implements qk {
           int var3_int = -116 / ((param0 - 59) / 53);
           MouseInput.a(param1, 2, param2);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "jh.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "jh.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class jh extends wb implements qk {
           }
           int var6_int = 64 % ((-63 - param4) / 52);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wg.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -425,7 +425,7 @@ final class jh extends wb implements qk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

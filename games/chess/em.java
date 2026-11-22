@@ -140,7 +140,7 @@ final class em {
         }
         tn.field_j.field_fb = 1;
         tn.field_j.field_z = ic.field_c.field_z;
-        if (aj.field_c > 0) {
+        if (AccountServiceResult.field_c > 0) {
           vg.a(param2, param7, (byte) -84, param5);
         }
         if (0 < ed.field_c) {

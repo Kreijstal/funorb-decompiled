@@ -37,7 +37,7 @@ final class nf extends DualLinkNode {
           }
           nk.field_Kb = param0;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "nf.M(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "nf.M(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class nf extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class nf extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class nf extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class nf extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class nf extends DualLinkNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

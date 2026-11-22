@@ -56,8 +56,8 @@ final class ge extends k implements mj {
               an.field_e = an.field_e - 1;
               return;
             }
-            if (aj.field_c > 0) {
-              aj.field_c = aj.field_c - 1;
+            if (AccountServiceResult.field_c > 0) {
+              AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
               return;
             }
             if (ed.field_c <= 0) {
@@ -71,13 +71,13 @@ final class ge extends k implements mj {
               an.field_e = an.field_e - 1;
               return;
             }
-            if (aj.field_c > 0) {
-              aj.field_c = aj.field_c - 1;
+            if (AccountServiceResult.field_c > 0) {
+              AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
               return;
             }
             if (ug.field_b > ed.field_c) {
               if (0 == ed.field_c) {
-                aj.a(false, true);
+                AccountServiceResult.a(false, true);
               }
               ed.field_c = ed.field_c + 1;
               return;
@@ -92,17 +92,17 @@ final class ge extends k implements mj {
                 ed.field_c = ed.field_c - 1;
                 return;
               }
-              if (aj.field_c < ug.field_b) {
-                if (aj.field_c == 0) {
-                  aj.a(true, true);
+              if (AccountServiceResult.field_c < ug.field_b) {
+                if (AccountServiceResult.field_c == 0) {
+                  AccountServiceResult.a(true, true);
                 }
-                aj.field_c = aj.field_c + 1;
+                AccountServiceResult.field_c = AccountServiceResult.field_c + 1;
                 return;
               }
             } else {
               jh.field_a = false;
-              if (aj.field_c > 0) {
-                aj.field_c = aj.field_c - 1;
+              if (AccountServiceResult.field_c > 0) {
+                AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
                 return;
               }
               if (0 < ed.field_c) {
@@ -279,7 +279,7 @@ final class ge extends k implements mj {
             } else {
               if (cm.field_t == param1) {
                 this.field_C = this.field_C + 30;
-                var3 = vd.field_Gb;
+                var3 = AccountCreationResultPanel.field_Gb;
               }
             }
           }

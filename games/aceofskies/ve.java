@@ -6,7 +6,7 @@ final class ve {
     static String field_a;
 
     final static String a(boolean param0) {
-        if (jq.field_fb == ht.field_k) {
+        if (AccountCreationResultPanel.field_fb == ht.field_k) {
           return rt.field_e;
         }
         if (!gm.field_x.a(false)) {
@@ -14,12 +14,12 @@ final class ve {
         }
         if (!param0) {
           ve.a((byte) -55, 101);
-          if (jq.field_fb == nb.field_c) {
+          if (AccountCreationResultPanel.field_fb == nb.field_c) {
             return gm.field_x.b(2);
           }
           return se.field_a;
         }
-        if (jq.field_fb == nb.field_c) {
+        if (AccountCreationResultPanel.field_fb == nb.field_c) {
           return gm.field_x.b(2);
         }
         return se.field_a;

@@ -325,24 +325,24 @@ abstract class AiPlanningStrategy {
               param3 <= 105) {
               var4 = param1;
               InteractiveWidget.a(-1, var4);
-              EmailValidator.accountNameCheckResult = BoundedFile.a(2, param1);
+              EmailValidator.accountNameCheckResult = BoundedFile.createAccountSuggestionsResult(2, param1);
               if (var5 != 0) {
-                EmailValidator.accountNameCheckResult = DisplacedUnitMarker.a(-1, param3, param2);
+                EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             } else {
-              EmailValidator.accountNameCheckResult = DisplacedUnitMarker.a(-1, param3, param2);
+              EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
               if (var5 != 0) {
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             }
           } else {
             stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-            EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
+            EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
             InteractiveWidget.a(-1, (String[]) null);
           }
           if (param0 <= 28) {

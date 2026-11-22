@@ -2761,7 +2761,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_button_accept", (byte) 32);
                 if (var2 != null) {
-                  in.field_d = va.a(0, var2);
+                  AccountServiceResult.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("fs_accept_afteraccept", (byte) 123);
                 if (null != var2) {
@@ -2809,7 +2809,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_focus_or_resolution", (byte) 126);
                 if (null != var2) {
-                  v.field_Cb = va.a(param0 ^ 6, var2);
+                  AccountCreationResultPanel.field_Cb = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("fs_timeout", (byte) 17);
                 if (var2 != null) {

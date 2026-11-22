@@ -368,7 +368,7 @@ final class vb extends qf {
           }
           var2Lifetime41 = cb.a("lev2a", (byte) -124);
           if (null != var2Lifetime41) {
-            ig.field_c = DualLinkNode.a(123, var2Lifetime41);
+            AccountServiceResult.field_c = DualLinkNode.a(123, var2Lifetime41);
           }
           var2Lifetime42 = cb.a("lev1", (byte) -124);
           if (null != var2Lifetime42) {

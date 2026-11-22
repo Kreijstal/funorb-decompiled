@@ -6,7 +6,7 @@ import java.io.*;
 abstract class oa {
     static bc field_b;
     int field_e;
-    static rg field_c;
+    static AccountServiceResult field_c;
     String field_d;
     static int field_a;
 

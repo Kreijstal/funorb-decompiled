@@ -61,22 +61,22 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
           }
           if (param2 == 255) {
             stackIn_7_0 = !(me.field_j >= 13);
-            sd.field_d = hn.a(stackIn_7_0, (byte) 105);
+            sd.field_d = hn.createAccountSuccessResult(stackIn_7_0, (byte) 105);
             var6 = (String[]) null;
             en.a((String[]) null, 18423);
             return;
           }
           if (param2 < 100) {
-            sd.field_d = ij.a(param2, param1, true);
+            sd.field_d = ij.createAccountErrorResult(param2, param1, true);
             return;
           }
           if (param2 > 105) {
-            sd.field_d = ij.a(param2, param1, true);
+            sd.field_d = ij.createAccountErrorResult(param2, param1, true);
             return;
           }
           var7 = param3;
           en.a(var7, 18423);
-          sd.field_d = rh.a(param0 + 21734, param3);
+          sd.field_d = rh.createAccountSuggestionsResult(param0 + 21734, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

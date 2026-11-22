@@ -389,7 +389,7 @@ abstract class GameShell extends GameApplet {
                   k.a(256, lb.field_a, false);
                 }
               } else {
-                k.a(256, tj.field_ub, false);
+                k.a(256, AccountCreationResultPanel.field_ub, false);
               }
               q.field_Gb = true;
             }

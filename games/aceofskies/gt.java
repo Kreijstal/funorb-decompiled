@@ -91,21 +91,21 @@ final class gt extends DualLinkNode {
           }
           if (param2 != 255) {
             if (param2 < 100) {
-              GameAppletShell.field_l = dq.a(param2, 32, param1);
+              GameAppletShell.field_l = dq.createAccountErrorResult(param2, 32, param1);
               return;
             }
             if (param2 > 105) {
-              GameAppletShell.field_l = dq.a(param2, 32, param1);
+              GameAppletShell.field_l = dq.createAccountErrorResult(param2, 32, param1);
               return;
             }
             String[] var7 = param3;
             ArchiveIndex.a(var7, (byte) -17);
-            GameAppletShell.field_l = oq.a((byte) -93, param3);
+            GameAppletShell.field_l = oq.createAccountSuggestionsResult((byte) -93, param3);
             return;
           }
           int stackIn_6_0 = 111;
           boolean stackIn_7_1 = !(sd.field_h >= 13);
-          GameAppletShell.field_l = in.$cfr$intArgs$a$1ded6534de63(stackIn_6_0, stackIn_7_1);
+          GameAppletShell.field_l = in.createAccountSuccessResultWithIntGuard(stackIn_6_0, stackIn_7_1);
           String[] var6 = (String[]) null;
           ArchiveIndex.a((String[]) null, (byte) -120);
           return;

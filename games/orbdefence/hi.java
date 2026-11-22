@@ -84,17 +84,17 @@ abstract class hi extends wb implements jb {
         }
     }
 
-    final static qj a(int param0, String[] param1) {
-        qj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        qj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new qj(false);
-          var2.field_c = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           if (param0 != 2) {
             field_h = (String) null;
           }
@@ -223,7 +223,7 @@ abstract class hi extends wb implements jb {
             }
             var2 = 1;
           }
-          ab.field_j.a(jc.a(ig.field_fb, (byte) 81, bg.field_c), ~param0, jc.a(ua.field_a, (byte) 37, vl.field_d));
+          ab.field_j.a(jc.a(AccountCreationResultPanel.field_fb, (byte) 81, bg.field_c), ~param0, jc.a(ua.field_a, (byte) 37, vl.field_d));
           if (ab.field_j.a((byte) -1)) {
             var1_int = 1;
           }
@@ -279,7 +279,7 @@ abstract class hi extends wb implements jb {
           return !bd.field_u.a(false) ? true : false;
         }
         String[] var2 = (String[]) null;
-        hi.a(-29, (String[]) null);
+        hi.createAccountSuggestionsResult(-29, (String[]) null);
         return !bd.field_u.a(false) ? true : false;
     }
 

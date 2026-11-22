@@ -233,11 +233,11 @@ final class gh extends lc implements ki, rc, rf {
         int var1 = 1;
         this.field_G = new ff("", (sk) null, var1 != 0);
         this.field_D = new wd(vg.field_l, (sk) null);
-        this.field_K = new wd(rg.field_e, (sk) null);
+        this.field_K = new wd(AccountServiceResult.field_e, (sk) null);
         this.field_F.field_q = ej.field_e;
         this.field_B.field_q = ta.field_d;
         this.field_C.field_q = pc.field_c;
-        this.field_A.field_q = rg.field_b;
+        this.field_A.field_q = AccountServiceResult.field_b;
         this.field_E.field_q = fd.field_o;
         this.field_J.field_q = jb.field_b;
         this.field_G.field_q = pb.field_g;

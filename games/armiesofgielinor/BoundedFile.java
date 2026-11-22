@@ -30,7 +30,7 @@ final class BoundedFile {
           }
           if (obfuscationGuard >= -43) {
             var6 = (String[]) null;
-            BoundedFile.a(-65, (String[]) null);
+            BoundedFile.createAccountSuggestionsResult(-65, (String[]) null);
           }
           stackIn_6_0 = var5_int;
           return stackIn_6_0;
@@ -48,7 +48,7 @@ final class BoundedFile {
         }
     }
 
-    final static AccountRequestResult a(int param0, String[] param1) {
+    final static AccountRequestResult createAccountSuggestionsResult(int param0, String[] param1) {
         AccountRequestResult var2 = null;
         RuntimeException var2_ref = null;
         AccountRequestResult stackIn_3_0 = null;

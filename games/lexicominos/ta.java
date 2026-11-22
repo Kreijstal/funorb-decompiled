@@ -91,10 +91,10 @@ final class ta {
         return var2;
     }
 
-    final static mb a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
-        mb stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -106,7 +106,7 @@ final class ta {
           }
           if (ca.field_i == MouseWheelInput.field_c) {
             stackIn_4_0 = null;
-            return (mb) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (c.field_o == MouseWheelInput.field_c &&
             param1.equals(ef.field_b)) {
@@ -118,7 +118,7 @@ final class ta {
           n.field_k = null;
           MouseWheelInput.field_c = ca.field_i;
           stackIn_10_0 = null;
-          return (mb) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

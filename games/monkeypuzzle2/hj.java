@@ -354,7 +354,7 @@ final class hj {
     public static void c(int param0) {
         try {
           if (param0 != 1903697041) {
-            hj.$cfr$intArgs$a$ae8766b723be(-29, false);
+            hj.createAccountSuccessResultWithIntGuard(-29, false);
           }
           field_D = null;
         } catch (RuntimeException runtimeException) {
@@ -362,18 +362,18 @@ final class hj {
         }
     }
 
-    final static cj a(byte param0, boolean param1) {
-        cj var2 = null;
+    final static AccountServiceResult createAccountSuccessResult(byte param0, boolean param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        cj stackIn_4_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        cj stackIn_6_0 = null;
+        AccountServiceResult stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -89) {
             field_db = 6L;
           }
-          var2 = new cj(true);
+          var2 = new AccountServiceResult(true);
           stackIn_4_0 = var2;
           stackIn_5_1 = (param1);
           stackIn_4_0.field_f = stackIn_5_1;
@@ -744,7 +744,7 @@ final class hj {
               this.field_u = 1;
               this.field_Y = 0;
               this.field_T = 1;
-              cj.a((byte) -18, ke.field_h[1]);
+              AccountServiceResult.a((byte) -18, ke.field_h[1]);
             }
             if (ec.field_d >= 2) {
               if (oa.field_H == 26 &&
@@ -761,7 +761,7 @@ final class hj {
                 this.field_jb = 1;
                 this.field_o = true;
                 this.field_d = 0;
-                cj.a((byte) 124, ke.field_h[31]);
+                AccountServiceResult.a((byte) 124, ke.field_h[31]);
               }
               if (oa.field_H == 39) {
                 stackIn_124_0 = !(ok.field_e);
@@ -913,7 +913,7 @@ final class hj {
               if (gb.field_o == 0) {
                 this.field_jb = 1;
                 this.field_d = 0;
-                cj.a((byte) 112, ke.field_h[31]);
+                AccountServiceResult.a((byte) 112, ke.field_h[31]);
               } else {
                 this.field_d = this.field_d + 2;
               }
@@ -1130,7 +1130,7 @@ final class hj {
                       }
                       this.field_mb = 0.0f;
                       this.field_s = 1 + (-13 + this.field_k - ba.field_a[0][0].field_n) / 30;
-                      cj.a((byte) -33, ke.field_h[18]);
+                      AccountServiceResult.a((byte) -33, ke.field_h[18]);
                     }
                     if (0 == (this.field_d & 15)) {
                       var7 = ba.field_a[this.field_u].length;
@@ -1152,7 +1152,7 @@ final class hj {
                     if (this.field_u != 2 &&
                       hl.a(1, -ba.field_a[0][0].field_n + (-13 + this.field_k), this.field_M - 100) < 100) {
                       this.field_u = 2;
-                      cj.a((byte) -116, ke.field_h[19]);
+                      AccountServiceResult.a((byte) -116, ke.field_h[19]);
                     }
                     rc.a(this.field_mb, this.field_s, (byte) -111);
                     if (0 > mh.field_D &&
@@ -2025,18 +2025,18 @@ final class hj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static cj $cfr$intArgs$a$ae8766b723be(int param0, boolean param1) {
-        cj var2 = null;
+    final static AccountServiceResult createAccountSuccessResultWithIntGuard(int param0, boolean param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        cj stackIn_4_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        cj stackIn_6_0 = null;
+        AccountServiceResult stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -89) {
             field_db = 6L;
           }
-          var2 = new cj(true);
+          var2 = new AccountServiceResult(true);
           stackIn_4_0 = var2;
           stackIn_5_1 = (param1);
           stackIn_4_0.field_f = stackIn_5_1;

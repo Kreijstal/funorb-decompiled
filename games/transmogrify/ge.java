@@ -6,7 +6,7 @@ final class ge extends aj implements hl, df {
     static sh field_A;
     static boolean field_x;
     private lj field_y;
-    private sf field_w;
+    private AccountCreationResultPanel field_w;
 
     final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
@@ -86,7 +86,7 @@ final class ge extends aj implements hl, df {
 
     private final String m(int param0) {
         if (param0 >= -51) {
-          this.field_w = (sf) null;
+          this.field_w = (AccountCreationResultPanel) null;
           return "</col></u>";
         }
         return "</col></u>";
@@ -100,7 +100,7 @@ final class ge extends aj implements hl, df {
         return "<u=2164A2><col=2164A2>";
     }
 
-    ge(sf param0) {
+    ge(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;

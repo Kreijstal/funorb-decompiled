@@ -560,7 +560,7 @@ abstract class ag extends GameApplet {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = ok.a((byte) -49, tg.d((byte) 10), ig.b(-1006263007));
+            var5_int = AccountCreationResultPanel.a((byte) -49, tg.d((byte) 10), AccountServiceResult.b(-1006263007));
             if (var5_int != -1) {
               ie.a(-111, UiWidget.field_r, ph.field_nb, var5_int);
               UiWidget.field_r = null;

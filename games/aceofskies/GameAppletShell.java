@@ -3,7 +3,7 @@
  */
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static pt field_o;
-    static fr field_l;
+    static AccountServiceResult field_l;
     boolean field_e;
     public static int field_a;
     public static boolean field_i;
@@ -404,7 +404,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             System.out.println("error_game_" + param1);
             try {
               if (param0 >= -102) {
-                field_l = (fr) null;
+                field_l = (AccountServiceResult) null;
               }
               JavaScriptBridge.a("loggedout", (byte) -108, bm.m(107));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

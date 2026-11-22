@@ -219,11 +219,11 @@ final class vl extends fi {
         }
     }
 
-    final static uj a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;
-        uj stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -234,7 +234,7 @@ final class vl extends fi {
           }
           if (of.field_d == db.field_a) {
             stackIn_4_0 = null;
-            return (uj) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (db.field_a == AchievementNotice.field_l &&
             param1.equals(jh.field_g)) {
@@ -246,7 +246,7 @@ final class vl extends fi {
           db.field_a = of.field_d;
           de.field_a = null;
           stackIn_9_0 = null;
-          return (uj) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

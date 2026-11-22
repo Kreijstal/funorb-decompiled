@@ -476,7 +476,7 @@ final class dd extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "dd.B(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "dd.B(" + param0 + ')');
         }
     }
 

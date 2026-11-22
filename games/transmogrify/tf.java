@@ -96,17 +96,17 @@ final class tf {
             for (var5 = 0; var5 < var4; var5++) {
               GameKeyHandler.field_a[var5] = -1;
             }
-            uj.field_d = new int[2];
+            AccountServiceResult.field_d = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               qb.field_f[var5] = nc.field_r[var5];
             }
             qb.field_f[-3 + var4] = "";
             qb.field_f[var4 - 2] = vg.field_g;
             GameKeyHandler.field_a[var4 - 2] = 0;
-            uj.field_d[0] = 4;
+            AccountServiceResult.field_d[0] = 4;
             qb.field_f[var4 - 1] = oe.field_a;
             GameKeyHandler.field_a[-1 + var4] = 1;
-            uj.field_d[1] = 5;
+            AccountServiceResult.field_d[1] = 5;
           } else if (1 == q.field_a) {
             var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) -103);
             var4 = var3_int + 2;
@@ -115,14 +115,14 @@ final class tf {
             for (var5 = 0; var4 > var5; var5++) {
               GameKeyHandler.field_a[var5] = -1;
             }
-            uj.field_d = new int[1];
+            AccountServiceResult.field_d = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               qb.field_f[var5] = nc.field_r[var5];
             }
             qb.field_f[-2 + var4] = "";
             qb.field_f[var4 - 1] = oe.field_a;
             GameKeyHandler.field_a[-1 + var4] = 0;
-            uj.field_d[0] = 5;
+            AccountServiceResult.field_d[0] = 5;
           } else if (q.field_a != 2) {
             if (q.field_a == 3) {
               if (!lk.field_b.field_e) {
@@ -136,14 +136,14 @@ final class tf {
               for (var5 = 0; var4 > var5; var5++) {
                 GameKeyHandler.field_a[var5] = -1;
               }
-              uj.field_d = new int[1];
+              AccountServiceResult.field_d = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 qb.field_f[var5] = nc.field_r[var5];
               }
               qb.field_f[-2 + var4] = "";
               qb.field_f[-1 + var4] = oe.field_a;
               GameKeyHandler.field_a[-1 + var4] = 0;
-              uj.field_d[0] = 5;
+              AccountServiceResult.field_d[0] = 5;
             } else if (4 == q.field_a) {
               var3_int = vd.a(nc.field_r, AchievementNotice.field_m, n.field_b, GameKeyHandler.field_b, (byte) -111);
               var4 = 2 + var3_int;
@@ -152,14 +152,14 @@ final class tf {
               for (var5 = 0; var5 < var4; var5++) {
                 GameKeyHandler.field_a[var5] = -1;
               }
-              uj.field_d = new int[1];
+              AccountServiceResult.field_d = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 qb.field_f[var5] = nc.field_r[var5];
               }
               qb.field_f[-2 + var4] = "";
               qb.field_f[-1 + var4] = oe.field_a;
               GameKeyHandler.field_a[-1 + var4] = 0;
-              uj.field_d[0] = 5;
+              AccountServiceResult.field_d[0] = 5;
             } else {
               if (5 != q.field_a) {
                 throw new IllegalArgumentException();
@@ -171,17 +171,17 @@ final class tf {
               for (var5 = 0; var4 > var5; var5++) {
                 GameKeyHandler.field_a[var5] = -1;
               }
-              uj.field_d = new int[2];
+              AccountServiceResult.field_d = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 qb.field_f[var5] = nc.field_r[var5];
               }
               qb.field_f[-3 + var4] = "";
               qb.field_f[var4 - 2] = pe.field_a;
               GameKeyHandler.field_a[var4 - 2] = 0;
-              uj.field_d[0] = 3;
+              AccountServiceResult.field_d[0] = 3;
               qb.field_f[-1 + var4] = oe.field_a;
               GameKeyHandler.field_a[var4 - 1] = 1;
-              uj.field_d[1] = 5;
+              AccountServiceResult.field_d[1] = 5;
             }
           } else {
             var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
@@ -234,15 +234,15 @@ final class tf {
             for (var8 = 0; var7 > var8; var8++) {
               GameKeyHandler.field_a[var8] = -1;
             }
-            uj.field_d = new int[2];
+            AccountServiceResult.field_d = new int[2];
             qb.field_f[0] = ab.field_a;
             qb.field_f[1] = wd.field_i;
             GameKeyHandler.field_a[1] = 0;
             GameKeyHandler.field_a[3] = 1;
             qb.field_f[3] = ac.field_h;
-            uj.field_d[0] = 5;
+            AccountServiceResult.field_d[0] = 5;
             qb.field_f[5] = "";
-            uj.field_d[1] = 2;
+            AccountServiceResult.field_d[1] = 2;
             qb.field_f[4] = oi.field_j;
             qb.field_f[2] = nj.field_l;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -271,7 +271,7 @@ final class tf {
             }
             c.field_c = lk.a(0);
           }
-          bk.field_c.field_a = uj.field_d.length;
+          bk.field_c.field_a = AccountServiceResult.field_d.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < qb.field_f.length; var4Lifetime1++) {
             stackIn_89_0 = qb.field_f[var4Lifetime1];

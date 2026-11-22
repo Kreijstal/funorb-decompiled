@@ -31,22 +31,22 @@ final class fk extends dl {
           ui.field_kb = ui.field_ob;
           if (param1 == 255) {
             stackIn_12_0 = !(ug.field_c >= 13);
-            kh.field_a = ld.a(stackIn_12_0, (byte) 42);
+            kh.field_a = ld.createAccountSuccessResult(stackIn_12_0, (byte) 42);
             var6 = (String[]) null;
             m.a(-44, (String[]) null);
             return;
           }
           if (param1 < 100) {
-            kh.field_a = af.a((byte) 36, param1, param0);
+            kh.field_a = af.createAccountErrorResult((byte) 36, param1, param0);
             return;
           }
           if (105 < param1) {
-            kh.field_a = af.a((byte) 36, param1, param0);
+            kh.field_a = af.createAccountErrorResult((byte) 36, param1, param0);
             return;
           }
           var4 = param3;
           m.a(-100, var4);
-          kh.field_a = ha.a(param3, -21916);
+          kh.field_a = ha.createAccountSuggestionsResult(param3, -21916);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

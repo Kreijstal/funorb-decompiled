@@ -92,7 +92,7 @@ abstract class gb extends GameAppletShell {
                           pa.a(sb.field_sb, true, tk.field_h, oc.field_l);
                         } else {
                           if (16 == var2) {
-                            aj.a((byte) 49);
+                            AccountServiceResult.a((byte) 49);
                           } else {
                             if (var2 != 11 &&
                               12 != var2) {
@@ -219,7 +219,7 @@ abstract class gb extends GameAppletShell {
         int var2Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var3 = Chess.field_G;
-        if (vd.p(-60)) {
+        if (AccountCreationResultPanel.p(-60)) {
           stackIn_10_1 = 103;
           stackIn_11_2 = (null != rm.field_R);
           discarded$1 = this.a((byte) stackIn_10_1, stackIn_11_2, false);

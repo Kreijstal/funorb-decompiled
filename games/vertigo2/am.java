@@ -887,9 +887,9 @@ final class am {
               dc.field_J.length != this.field_c.length) {
               dc.field_J = new Model[this.field_c.length];
             }
-            if (null == oe.field_ob ||
-              this.field_c.length != oe.field_ob.length) {
-              oe.field_ob = new int[this.field_c.length][3];
+            if (null == AccountCreationResultPanel.field_ob ||
+              this.field_c.length != AccountCreationResultPanel.field_ob.length) {
+              AccountCreationResultPanel.field_ob = new int[this.field_c.length][3];
             }
             if (null == va.field_b) {
               va.field_b = new int[]{0, 0, 0, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535};
@@ -897,9 +897,9 @@ final class am {
             for (var22Lifetime4 = 0; this.field_c.length > var22Lifetime4; var22Lifetime4++) {
               this.field_c[var22Lifetime4].b(true);
               dc.field_J[var22Lifetime4] = this.field_c[var22Lifetime4].c((byte) 4);
-              oe.field_ob[var22Lifetime4][0] = this.field_c[var22Lifetime4].field_w;
-              oe.field_ob[var22Lifetime4][1] = this.field_c[var22Lifetime4].field_z;
-              oe.field_ob[var22Lifetime4][2] = this.field_c[var22Lifetime4].field_x;
+              AccountCreationResultPanel.field_ob[var22Lifetime4][0] = this.field_c[var22Lifetime4].field_w;
+              AccountCreationResultPanel.field_ob[var22Lifetime4][1] = this.field_c[var22Lifetime4].field_z;
+              AccountCreationResultPanel.field_ob[var22Lifetime4][2] = this.field_c[var22Lifetime4].field_x;
             }
           }
           var22Lifetime5 = param4.field_n;
@@ -976,15 +976,15 @@ final class am {
                 for (var25 = 0; var25 < this.field_c.length; var25++) {
                   if (dc.field_J[var25] != null &&
                     (var25 + 1 & this.field_a[var24].field_d) != 0) {
-                    va.field_b[0] = oe.field_ob[var25][0];
-                    va.field_b[2] = oe.field_ob[var25][1];
+                    va.field_b[0] = AccountCreationResultPanel.field_ob[var25][0];
+                    va.field_b[2] = AccountCreationResultPanel.field_ob[var25][1];
                     va.field_b[1] = this.field_a[var24].a(true);
-                    var26Lifetime1Lifetime1 = -(128 * (va.field_b[1] - oe.field_ob[var25][2]) / 960) + 128;
+                    var26Lifetime1Lifetime1 = -(128 * (va.field_b[1] - AccountCreationResultPanel.field_ob[var25][2]) / 960) + 128;
                     if (var26Lifetime1Lifetime1 > 10 &&
                       var26Lifetime1Lifetime1 <= 128) {
                       var35 = new Model(dc.field_J[var25], false, true, true, true);
                       var35.b(var26Lifetime1Lifetime1, 128, var26Lifetime1Lifetime1);
-                      var36 = this.field_a[var24].a(var35, oe.field_ob[var25][0], oe.field_ob[var25][1], (byte) -101);
+                      var36 = this.field_a[var24].a(var35, AccountCreationResultPanel.field_ob[var25][0], AccountCreationResultPanel.field_ob[var25][1], (byte) -101);
                       if (var36 != null &&
                         var36.field_T < 4096 &&
                         var36.field_w < 4096) {

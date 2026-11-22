@@ -70,7 +70,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             n.field_g.setSize(fg.field_h, ByteStorage.field_a);
             n.field_g.setVisible(true);
             if (bb.field_a != null &&
-              null == qd.field_Gb) {
+              null == AccountCreationResultPanel.field_Gb) {
               var6 = bb.field_a.getInsets();
               n.field_g.setLocation(tg.field_b + var6.left, hg.field_pb + var6.top);
               if (DrPhlogistonSavesTheEarth.field_D) {
@@ -672,7 +672,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             n.field_g.getParent().remove((java.awt.Component) ((Object) n.field_g));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (qd.field_Gb == null) {
+          if (AccountCreationResultPanel.field_Gb == null) {
             if (bb.field_a != null) {
               var2 = bb.field_a;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -682,17 +682,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2 = wi.field_d;
                 if (var4 != 0) {
                   var2 = hh.field_e;
-                  var2 = qd.field_Gb;
+                  var2 = AccountCreationResultPanel.field_Gb;
                 }
               } else {
                 var2 = hh.field_e;
                 if (var4 != 0) {
-                  var2 = qd.field_Gb;
+                  var2 = AccountCreationResultPanel.field_Gb;
                 }
               }
             }
           } else {
-            var2 = qd.field_Gb;
+            var2 = AccountCreationResultPanel.field_Gb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           n.field_g = (java.awt.Canvas) ((Object) new ua((java.awt.Component) (this)));

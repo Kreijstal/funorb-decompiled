@@ -14,7 +14,7 @@ final class ol extends tj {
     }
 
     final sc a(int param0, String param1) {
-        mb var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         sc stackIn_2_0 = null;
@@ -33,9 +33,9 @@ final class ol extends tj {
           if (!param1.equals(this.field_m)) {
             var3 = ta.a(250, param1);
             if (var3 != null &&
-              null == var3.field_e) {
+              null == var3.message) {
               this.field_m = param1;
-              this.field_o = var3.field_c;
+              this.field_o = var3.success;
             } else {
               stackIn_8_0 = be.field_q;
               return stackIn_8_0;
@@ -67,7 +67,7 @@ final class ol extends tj {
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        mb var4 = null;
+        AccountServiceResult var4 = null;
         String var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
@@ -90,12 +90,12 @@ final class ol extends tj {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_e != null) {
+            if (var4.message != null) {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
             this.field_m = param1;
-            this.field_o = var4.field_c;
+            this.field_o = var4.success;
           }
           if (!this.field_o) {
             stackIn_15_0 = nh.field_b;

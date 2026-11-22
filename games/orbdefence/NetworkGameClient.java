@@ -410,7 +410,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ImageProducerRasterBuffer.a((byte) -34, 2);
           }
           if (vk.field_w[2]) {
-            qj.a(3, 7287);
+            AccountServiceResult.a(3, 7287);
           }
           if (vk.field_w[3]) {
             am.a(4, 113);

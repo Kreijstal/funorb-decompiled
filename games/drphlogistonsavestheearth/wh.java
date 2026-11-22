@@ -232,18 +232,18 @@ abstract class wh extends DualLinkNode {
           if (255 != param0) {
             if (param0 >= 100 &&
               param0 <= 105) {
-              jj.field_d = sa.a((byte) 3, param3);
+              jj.field_d = sa.createAccountSuggestionsResult((byte) 3, param3);
               if (var5 == 0) {
                 return;
               }
             }
-            jj.field_d = kj.a(param0, 4, param1);
+            jj.field_d = kj.createAccountErrorResult(param0, 4, param1);
             if (var5 == 0) {
               return;
             }
           }
           stackIn_23_0 = !(13 <= rd.field_z);
-          jj.field_d = b.a(stackIn_23_0, 77);
+          jj.field_d = b.createAccountSuccessResult(stackIn_23_0, 77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

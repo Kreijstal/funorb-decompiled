@@ -29,11 +29,11 @@ final class mc {
         if (!DelegatingCanvas.field_c.a(2, "commonui")) {
           return qb.field_bb + " - " + DelegatingCanvas.field_c.d(-1, "commonui") + "%";
         }
-        if (!jk.field_ub.c((byte) -121)) {
+        if (!AccountCreationResultPanel.field_ub.c((byte) -121)) {
           return bg.field_t;
         }
-        if (!jk.field_ub.b(true)) {
-          return li.field_j + " - " + jk.field_ub.b((byte) -66) + "%";
+        if (!AccountCreationResultPanel.field_ub.b(true)) {
+          return li.field_j + " - " + AccountCreationResultPanel.field_ub.b((byte) -66) + "%";
         }
         return qf.field_g;
     }

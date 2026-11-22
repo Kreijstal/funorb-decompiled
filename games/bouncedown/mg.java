@@ -15,7 +15,7 @@ final class mg extends al {
     }
 
     final vf b(String param0, byte param1) {
-        rg var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         vf stackIn_5_0 = null;
@@ -37,8 +37,8 @@ final class mg extends al {
           if (!param0.equals(this.field_m)) {
             var3 = pd.a(1059, param0);
             if (var3 != null &&
-              var3.field_c == null) {
-              this.field_o = var3.field_f;
+              var3.message == null) {
+              this.field_o = var3.success;
               this.field_m = param0;
             } else {
               stackIn_12_0 = mi.field_c;
@@ -157,7 +157,7 @@ final class mg extends al {
     final String a(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        rg var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_13_0 = null;
@@ -178,11 +178,11 @@ final class mg extends al {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_c) {
+            if (null != var4.message) {
               return null;
             }
             this.field_m = param0;
-            this.field_o = var4.field_f;
+            this.field_o = var4.success;
           }
           if (!this.field_o) {
             stackIn_13_0 = ma.field_n;

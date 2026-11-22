@@ -628,7 +628,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 100, "shortrecruit");
                 if (var2 != null) {
-                  pd.field_e = ll.a(param0 - 96, var2);
+                  AccountServiceResult.field_e = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 90, "warningencum");
                 if (null != var2) {
@@ -2200,7 +2200,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 115, "hardmodeunlocked");
                 if (var2 != null) {
-                  pd.field_f = ll.a(0, var2);
+                  AccountServiceResult.field_f = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "openhelp");
                 if (null != var2) {

@@ -30,7 +30,7 @@ final class no extends se {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
-        si var5 = null;
+        AccountServiceResult var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_12_0 = null;
@@ -52,11 +52,11 @@ final class no extends se {
             if (var5 == null) {
               return null;
             }
-            if (var5.field_h != null) {
+            if (var5.message != null) {
               return null;
             }
             this.field_l = param0;
-            this.field_j = var5.field_b;
+            this.field_j = var5.success;
           }
           if (this.field_j) {
             stackIn_14_0 = ao.field_c;
@@ -95,7 +95,7 @@ final class no extends se {
     }
 
     final oi a(String param0, byte param1) {
-        si var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         oi stackIn_5_0 = null;
@@ -117,8 +117,8 @@ final class no extends se {
           if (!param0.equals(this.field_l)) {
             var3 = aj.a(-114, param0);
             if (var3 != null &&
-              null == var3.field_h) {
-              this.field_j = var3.field_b;
+              null == var3.message) {
+              this.field_j = var3.success;
               this.field_l = param0;
             } else {
               stackIn_12_0 = ec.field_h;

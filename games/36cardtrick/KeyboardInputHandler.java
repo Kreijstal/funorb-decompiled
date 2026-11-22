@@ -27,12 +27,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (bg.field_rb >= 0 &&
+            if (AccountCreationResultPanel.field_rb >= 0 &&
               var2_int >= 0) {
-              oc.field_h[bg.field_rb] = var2_int;
-              bg.field_rb = 1 + bg.field_rb & 127;
-              if (field_b == bg.field_rb) {
-                bg.field_rb = -1;
+              oc.field_h[AccountCreationResultPanel.field_rb] = var2_int;
+              AccountCreationResultPanel.field_rb = 1 + AccountCreationResultPanel.field_rb & 127;
+              if (field_b == AccountCreationResultPanel.field_rb) {
+                AccountCreationResultPanel.field_rb = -1;
               }
             }
             if (var2_int >= 0) {
@@ -82,7 +82,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (sj.field_d == null) {
             return;
           }
-          bg.field_rb = -1;
+          AccountCreationResultPanel.field_rb = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,12 +115,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (bg.field_rb >= 0 &&
+            if (AccountCreationResultPanel.field_rb >= 0 &&
               var2_int >= 0) {
-              oc.field_h[bg.field_rb] = ~var2_int;
-              bg.field_rb = bg.field_rb + 1 & 127;
-              if (field_b == bg.field_rb) {
-                bg.field_rb = -1;
+              oc.field_h[AccountCreationResultPanel.field_rb] = ~var2_int;
+              AccountCreationResultPanel.field_rb = AccountCreationResultPanel.field_rb + 1 & 127;
+              if (field_b == AccountCreationResultPanel.field_rb) {
+                AccountCreationResultPanel.field_rb = -1;
               }
             }
           }

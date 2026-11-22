@@ -23,9 +23,9 @@ final class sb extends bj {
         return false;
     }
 
-    final static aj b(String param0, boolean param1) {
+    final static AccountServiceResult b(String param0, boolean param1) {
         RuntimeException var2 = null;
-        aj stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -48,7 +48,7 @@ final class sb extends bj {
           kf.field_j = null;
           vl.field_A = ci.field_ub;
           stackIn_10_0 = null;
-          return (aj) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

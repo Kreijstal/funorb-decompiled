@@ -135,8 +135,8 @@ final class SpriteLoader {
         try {
           FullscreenFocusCanvas.a((java.awt.Component) ((Object) param0), 0);
           kj.a((byte) 54, (java.awt.Component) ((Object) param0));
-          if (null != ef.field_l) {
-            ef.field_l.attach((java.awt.Component) ((Object) param0), (byte) 112);
+          if (null != AccountServiceResult.field_l) {
+            AccountServiceResult.field_l.attach((java.awt.Component) ((Object) param0), (byte) 112);
           }
           if (!param1) {
             return;

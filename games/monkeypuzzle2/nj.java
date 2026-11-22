@@ -38,11 +38,11 @@ final class nj {
           return var2_ref_byte__Lifetime1;
         }
         if (param1 == 30000 &&
-          0 < jg.field_lb) {
-          fieldTemp$5 = jg.field_lb - 1;
-          jg.field_lb = jg.field_lb - 1;
+          0 < AccountCreationResultPanel.field_lb) {
+          fieldTemp$5 = AccountCreationResultPanel.field_lb - 1;
+          AccountCreationResultPanel.field_lb = AccountCreationResultPanel.field_lb - 1;
           var2_ref_byte__Lifetime2 = bl.field_k[fieldTemp$5];
-          bl.field_k[jg.field_lb] = null;
+          bl.field_k[AccountCreationResultPanel.field_lb] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (me.field_g != null) {

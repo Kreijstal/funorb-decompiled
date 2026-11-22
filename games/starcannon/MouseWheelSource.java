@@ -6,7 +6,7 @@ abstract class MouseWheelSource {
     static int[] field_f;
     static char[] field_d;
     static String field_b;
-    static ig field_a;
+    static AccountServiceResult field_a;
     static int field_c;
     private static String field_z;
 

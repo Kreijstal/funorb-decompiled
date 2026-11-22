@@ -115,10 +115,10 @@ abstract class mk extends aj {
         }
     }
 
-    final static uj a(int param0, String param1, int param2) {
-        uj var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        uj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -127,9 +127,9 @@ abstract class mk extends aj {
           if (param0 != 242763393) {
             field_C = (String) null;
           }
-          var3 = new uj(false);
-          var3.field_g = param2;
-          var3.field_b = param1;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param2;
+          var3.message = param1;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

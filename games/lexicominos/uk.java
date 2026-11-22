@@ -24,8 +24,8 @@ final class uk extends ql {
           fl.field_d = param8;
           rc.field_i = param0;
           kb.field_b = (wb) ((Object) new qf());
-          u.field_pb = new kl(param3);
-          nh.field_a = new pg(kb.field_b, u.field_pb);
+          AccountCreationResultPanel.field_pb = new kl(param3);
+          nh.field_a = new pg(kb.field_b, AccountCreationResultPanel.field_pb);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "uk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

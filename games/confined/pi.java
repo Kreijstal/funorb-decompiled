@@ -4,7 +4,7 @@
 final class pi extends ga implements ge, el {
     private rg field_Q;
     private na field_R;
-    private v field_O;
+    private AccountCreationResultPanel field_O;
     static al field_T;
     static int field_H;
     static int[] field_U;
@@ -251,7 +251,7 @@ final class pi extends ga implements ge, el {
         }
     }
 
-    pi(v param0) {
+    pi(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (fe) null);
         String var7 = null;
         int var3 = 0;

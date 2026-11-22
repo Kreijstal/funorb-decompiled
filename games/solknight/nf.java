@@ -112,9 +112,9 @@ final class nf extends ld implements ka {
     }
 
     final static boolean a(int param0, boolean param1, String param2, String param3, rf param4, String param5, byte param6) {
-        jk var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
-        jk var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -132,7 +132,7 @@ final class nf extends ld implements ka {
           if (param6 <= 110) {
             nf.n(118);
           }
-          var8 = new jk(u.field_b, param4);
+          var8 = new AccountCreationResultPanel(u.field_b, param4);
           var7 = var8;
           u.field_b.b(var8, -113);
           if (Asteroid.a(-1)) {

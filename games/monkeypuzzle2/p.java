@@ -200,7 +200,7 @@ final class p {
           if (255 == param2) {
             stackIn_11_0 = -89;
             stackIn_12_1 = !(ClientException.field_d >= 13);
-            w.field_c = hj.$cfr$intArgs$a$ae8766b723be(stackIn_11_0, stackIn_12_1);
+            w.field_c = hj.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
             var6 = (String[]) null;
             wh.a((String[]) null, true);
           } else {
@@ -208,10 +208,10 @@ final class p {
               105 >= param2) {
               var4 = param3;
               wh.a(var4, true);
-              w.field_c = jj.a(param3, true);
+              w.field_c = jj.createAccountSuggestionsResult(param3, true);
               return;
             }
-            w.field_c = lh.a(true, param0, param2);
+            w.field_c = lh.createAccountErrorResult(true, param0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

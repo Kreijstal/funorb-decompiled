@@ -982,7 +982,7 @@ public final class Lexicominos extends nk {
           fl.a(false);
           jj.clearStaticReferences(100);
           eg.clearStaticReferences(-102);
-          u.j((byte) -50);
+          AccountCreationResultPanel.j((byte) -50);
           uk.i(78);
           qj.clearStaticReferences(true);
           uc.clearStaticReferences(param0 + 11252);
@@ -1115,7 +1115,7 @@ public final class Lexicominos extends nk {
           vi.a(112);
           vb.clearStaticReferences(109);
           ki.a(-119);
-          mb.b(-26);
+          AccountServiceResult.b(-26);
           la.clearStaticReferences((byte) 122);
           c.clearStaticReferences(117);
           vc.clearStaticReferences(-16531);

@@ -18,7 +18,7 @@ final class ad {
           }
           DualLinkDeque.a(0, param0, (byte) 90, 0);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ad.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ad.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class ad {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1_ref), "ad.D(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "ad.D(" + param0 + ')');
         }
     }
 

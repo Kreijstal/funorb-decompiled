@@ -80,7 +80,7 @@ final class jc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class jc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,11 +136,11 @@ final class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "jc.A(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "jc.A(" + param0 + ')');
         }
     }
 
-    final static jj a(boolean param0) {
+    final static AccountServiceResult pollAccountCreationResult(boolean param0) {
         if (od.field_I == e.field_q) {
           throw new IllegalStateException();
         }

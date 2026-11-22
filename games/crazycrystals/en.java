@@ -53,22 +53,22 @@ abstract class en extends ab {
         }
     }
 
-    final static si a(String[] args, int param1) {
-        si var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        si stackIn_2_0 = null;
-        si stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 169) {
-            stackIn_2_0 = (si) null;
+            stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          var2 = new si(false);
-          var2.field_d = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

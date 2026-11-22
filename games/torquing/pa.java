@@ -92,16 +92,16 @@ abstract class pa {
         field_a = null;
     }
 
-    final static dn b(int param0, boolean param1) {
-        dn var2 = null;
-        dn var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (param0 >= 6) {
-          var2 = new dn(true);
+          var2 = new AccountServiceResult(true);
           var2.field_g = param1 ? true : false;
           return var2;
         }
         field_a = (String) null;
-        var2Lifetime1 = new dn(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_g = param1 ? true : false;
         return var2Lifetime1;
     }

@@ -46,7 +46,7 @@ final class lf {
 
     final static void a(dd[] param0, int param1, int param2, byte param3) {
         try {
-          mk.field_d = new qc(param0);
+          AccountServiceResult.field_d = new qc(param0);
           q.field_d = param1;
           bb.field_C = param2;
           if (param3 <= 64) {

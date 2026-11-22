@@ -89,7 +89,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               wl.field_m = param3;
               c.field_j = this;
               ef.field_e = 0;
-              u.field_sb = param2;
+              AccountCreationResultPanel.field_sb = param2;
               fi.field_j = param2;
               ki.field_f = param0;
               tg.field_i = kk.c(-14047);
@@ -410,7 +410,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           ug.field_y = (java.awt.Canvas) ((Object) new jc((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ug.field_y));
-          ug.field_y.setSize(u.field_sb, bk.field_d);
+          ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
           ug.field_y.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == ck.field_d);
           if (!decompiledSharedTail0) {
@@ -676,7 +676,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 na.b((byte) 114);
                 this.f(467);
-                v.field_B = pj.a(bk.field_d, (byte) 99, u.field_sb, (java.awt.Component) ((Object) ug.field_y));
+                v.field_B = pj.a(bk.field_d, (byte) 99, AccountCreationResultPanel.field_sb, (java.awt.Component) ((Object) ug.field_y));
                 this.b(false);
                 bg.field_a = v.c(65476);
                 do {
@@ -784,7 +784,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             dl.field_b = true;
             wj.field_o = wj.field_o - 50;
-            ug.field_y.setSize(u.field_sb, bk.field_d);
+            ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
             ug.field_y.setVisible(true);
             boolean decompiledSharedTail0 = (null != ck.field_d &&
               hh.field_G == null);

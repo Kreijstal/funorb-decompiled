@@ -63,7 +63,7 @@ final class GameplayScreen {
           var5 = param1;
           if (ln.field_d != null &&
             ln.field_d.field_B >= 0 &&
-            null == oe.field_pb) {
+            null == AccountCreationResultPanel.field_pb) {
             stackIn_17_0 = ((1 << var5 & qr.field_j) == 0) ? 0 : 1;
             var6 = stackIn_17_0;
             if (var6 == 0) {
@@ -1484,7 +1484,7 @@ final class GameplayScreen {
           if (param0 != 115) {
             return;
           }
-          if (ch.field_k == de.field_f ||
+          if (AccountServiceResult.field_k == de.field_f ||
             ~na.field_n == ~de.field_f) {
             this.field_C = this.field_C | 2;
           }

@@ -83,7 +83,7 @@ final class kj implements Iterator {
           this.field_i = this.field_h.field_a.field_j;
           this.field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

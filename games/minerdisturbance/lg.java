@@ -1401,7 +1401,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialMonster,0,0");
                 if (null != var2) {
-                  ed.field_b[0][0] = bh.a(var2, -120);
+                  AccountServiceResult.field_b[0][0] = bh.a(var2, -120);
                 }
                 var2 = lh.b(-1, "tutorialPinniped,1,0");
                 if (null != var2) {

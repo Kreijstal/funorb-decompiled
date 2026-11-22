@@ -134,7 +134,7 @@ final class kj {
           return this;
         }
         String var4 = (String) null;
-        kj.a(13, 21, (String) null);
+        kj.createAccountErrorResult(13, 21, (String) null);
         this.field_j = param1 ? true : false;
         return this;
     }
@@ -206,23 +206,23 @@ final class kj {
         }
     }
 
-    final static og a(int param0, int param1, String param2) {
-        og var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, int param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        og stackIn_2_0 = null;
-        og stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4) {
-            stackIn_2_0 = (og) null;
+            stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          var3 = new og(false);
-          var3.field_g = param2;
-          var3.field_a = param0;
+          var3 = new AccountServiceResult(false);
+          var3.message = param2;
+          var3.statusCode = param0;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

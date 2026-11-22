@@ -64,12 +64,12 @@ final class mj extends WidgetContainer implements md, oi, rf {
         }
     }
 
-    final static ml i(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (ok.field_a == o.field_l) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
-          return (ml) null;
+          return (AccountServiceResult) null;
         }
         if (ta.field_m == o.field_l) {
           o.field_l = ok.field_a;

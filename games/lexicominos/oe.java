@@ -5,19 +5,19 @@ final class oe {
     static String field_b;
     static int field_a;
 
-    final static mb a(int param0, String[] param1) {
-        mb var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mb stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new mb(false);
+          var2 = new AccountServiceResult(false);
           var3 = -62 / ((param0 + 3) / 59);
-          var2.field_d = param1;
+          var2.suggestions = param1;
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,7 +38,7 @@ final class oe {
         field_b = null;
         if (param0 != 32113) {
           String[] var2 = (String[]) null;
-          oe.a(65, (String[]) null);
+          oe.createAccountSuggestionsResult(65, (String[]) null);
         }
     }
 

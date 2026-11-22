@@ -22,7 +22,7 @@ final class ih {
             ih.a(-65, (java.awt.Canvas) null);
           }
           if (fj.field_i == 11) {
-            wg.a((byte) -128);
+            AccountServiceResult.a((byte) -128);
           }
           uj.a(SecondaryNodeDequeIterator.field_e, pe.field_m, ib.field_o, (byte) -77);
           uf.a((byte) 99, 0, 0, param1);

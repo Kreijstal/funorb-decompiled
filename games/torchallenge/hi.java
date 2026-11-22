@@ -211,7 +211,7 @@ final class hi extends ic {
               ll.a(var27, var30, var10, var7Lifetime1, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
               return;
             }
-            var29 = -(ef.field_k >> 8 << 8) + ef.field_k;
+            var29 = -(AccountServiceResult.field_k >> 8 << 8) + AccountServiceResult.field_k;
             var30 = 2;
             var29 = var29 - 128;
             stackIn_95_0 = (0 <= var29) ? 1 : -1;

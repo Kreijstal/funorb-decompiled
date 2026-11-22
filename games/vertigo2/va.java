@@ -171,7 +171,7 @@ class va implements WidgetListener, qa {
             return false;
           }
           if (!sq.field_c) {
-            return !oe.q(95) ? true : false;
+            return !AccountCreationResultPanel.q(95) ? true : false;
           }
           return false;
         }
@@ -179,7 +179,7 @@ class va implements WidgetListener, qa {
           return false;
         }
         if (!sq.field_c) {
-          return !oe.q(95) ? true : false;
+          return !AccountCreationResultPanel.q(95) ? true : false;
         }
         return false;
     }

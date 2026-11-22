@@ -46,9 +46,9 @@ final class jk {
           }
           int var2 = -45 / ((26 - param0) / 52);
           var1 = fe.b((byte) -127);
-          ig.field_ib = new pk(var1, (String) null, true, false, false);
+          AccountCreationResultPanel.field_ib = new pk(var1, (String) null, true, false, false);
           bm.field_d.b((byte) 74, (pj) (kg.field_j));
-          kg.field_j.a(false, ig.field_ib);
+          kg.field_j.a(false, AccountCreationResultPanel.field_ib);
           kg.field_j.m(0);
           return;
         }

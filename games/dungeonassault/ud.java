@@ -44,7 +44,7 @@ final class ud extends qe {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class ud extends qe {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -303,7 +303,7 @@ final class ud extends qe {
           param0.removeFocusListener(NetworkGameClient.field_C);
           ia.field_M = param1;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

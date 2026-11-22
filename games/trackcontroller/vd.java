@@ -57,7 +57,7 @@ final class vd extends td implements jg, ButtonListener, a {
         this.field_C = new ButtonWidget(dh.field_i, (tg) null);
         this.field_H = new ButtonWidget(UiWidget.field_v, (tg) null);
         this.field_F.field_n = ak.field_c;
-        this.field_M.field_n = og.field_nb;
+        this.field_M.field_n = AccountCreationResultPanel.field_nb;
         this.field_I.field_n = qh.field_c;
         this.field_J.field_n = jd.field_f;
         this.field_E.field_n = hb.field_d;
@@ -296,8 +296,8 @@ final class vd extends td implements jg, ButtonListener, a {
         var2 = TrackController.field_F ? 1 : 0;
         try {
           if (!pb.a((byte) -88)) {
-            if (null != og.field_rb &&
-              og.field_rb.field_b) {
+            if (null != AccountCreationResultPanel.field_rb &&
+              AccountCreationResultPanel.field_rb.field_b) {
               oj.a(-93);
               GameScreen.field_b.d((byte) -84, new w(GameScreen.field_b, DelegatingCanvas.field_b));
             }

@@ -272,7 +272,7 @@ final class om {
           }
           bl.a(1, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "om.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

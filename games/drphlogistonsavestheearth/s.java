@@ -378,7 +378,7 @@ final class s {
         hg.field_ob[3] = q.field_d;
         hg.field_ob[10] = sh.field_d;
         hg.field_ob[7] = hd.field_L;
-        hg.field_ob[13] = qd.field_Db;
+        hg.field_ob[13] = AccountCreationResultPanel.field_Db;
         hg.field_ob[2] = bg.field_p;
         hg.field_ob[0] = gf.field_s;
         hg.field_ob[4] = ij.field_c;

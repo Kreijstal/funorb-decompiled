@@ -20,7 +20,7 @@ class cj extends he {
 
     final static void a(qk param0, boolean param1, qk param2, qk param3, int param4) {
         try {
-          wh.field_a = nk.a(false, "");
+          wh.field_a = AccountServiceResult.a(false, "");
           wh.field_a.a(16511, false);
           ca.a(param2, param3, param0, -25188);
           we.a(0);

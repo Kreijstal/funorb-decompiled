@@ -222,7 +222,7 @@ final class je {
           if (decompiledFrameRemainder0) {
             if (!sj.field_R) {
               if (bk.field_p >= cf.field_a) {
-                stackIn_19_0 = (ef.field_e + cf.field_a > bk.field_p) ? 1 : 0;
+                stackIn_19_0 = (AccountServiceResult.field_e + cf.field_a > bk.field_p) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }

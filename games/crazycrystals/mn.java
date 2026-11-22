@@ -82,8 +82,8 @@ final class mn extends pd {
         tl.field_a = null;
         jo.field_p.a((byte) -96);
         jo.field_p = null;
-        sa.field_mb.a((byte) -54);
-        sa.field_mb = null;
+        AccountCreationResultPanel.field_mb.a((byte) -54);
+        AccountCreationResultPanel.field_mb = null;
         io.field_M.a((byte) -98);
         io.field_M = null;
         ec.field_k.a((byte) -43);

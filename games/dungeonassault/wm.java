@@ -65,7 +65,7 @@ final class wm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw vk.a((Throwable) (stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) (stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class wm {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class wm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

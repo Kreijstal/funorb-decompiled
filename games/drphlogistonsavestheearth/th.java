@@ -209,7 +209,7 @@ final class th {
           var2_long = la.a(param0);
           if (lc.field_v != 0 &&
             dj.field_N < 0) {
-            var4_ref_wk = (wk) (og.field_f.h(-11151));
+            var4_ref_wk = (wk) (AccountServiceResult.field_f.h(-11151));
             if (var4_ref_wk != null &&
               var4_ref_wk.field_k < var2_long) {
               var4_ref_wk.unlink(-16175);
@@ -257,7 +257,7 @@ final class th {
             for (var6 = 0; var6 < gf.field_C; var6++) {
               var5.field_j[var6] = dh.field_N.payload[var6];
             }
-            og.field_f.a(var5, 255);
+            AccountServiceResult.field_f.a(var5, 255);
             dj.field_N = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

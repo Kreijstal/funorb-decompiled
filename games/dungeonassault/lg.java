@@ -169,7 +169,7 @@ final class lg {
           var4.field_a = dupTemp$0;
           var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "lg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "lg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class lg {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

@@ -121,7 +121,7 @@ abstract class rb extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameEntity.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), jg.i((byte) 113));
+            var5_intLifetime1 = GameEntity.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), AccountCreationResultPanel.i((byte) 113));
             if (var5_intLifetime1 != -1) {
               pk.a(NodeHashTableIterator.field_a, fc.field_b, var5_intLifetime1, (byte) 125);
               NodeHashTableIterator.field_a = null;

@@ -18,7 +18,7 @@ final class ta extends me {
         try {
           super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ta.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ta.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class ta extends me {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "ta.G(" + param0 + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "ta.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class ta extends me {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

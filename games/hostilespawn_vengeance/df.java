@@ -257,7 +257,7 @@ final class df {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param9).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param9).append(')').toString());
         }
     }
 

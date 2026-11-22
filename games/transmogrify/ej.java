@@ -397,7 +397,7 @@ final class ej extends PcmStream {
     }
 
     final static boolean a(wl param0, String param1, String param2, boolean param3, boolean param4, String param5, int param6) {
-        sf var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -416,7 +416,7 @@ final class ej extends PcmStream {
           if (jh.field_n != rh.field_v) {
             return false;
           }
-          var7 = new sf(ci.field_f, param0);
+          var7 = new AccountCreationResultPanel(ci.field_f, param0);
           ci.field_f.b((UiWidget) (var7), (byte) -71);
           if (!PacketBuffer.f((byte) 105)) {
             rh.field_v = of.field_d;

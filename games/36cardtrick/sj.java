@@ -319,14 +319,14 @@ final class sj {
           if (255 != param3) {
             if (param3 >= 100 &&
               param3 <= 105) {
-              mh.field_a = pf.a(-109, param2);
+              mh.field_a = pf.createAccountSuggestionsResult(-109, param2);
               return;
             }
-            mh.field_a = nc.a(param3, 0, param1);
+            mh.field_a = nc.createAccountErrorResult(param3, 0, param1);
           } else {
             stackIn_6_0 = -1;
             stackIn_7_1 = !(13 <= ok.field_c);
-            mh.field_a = il.a(stackIn_6_0, stackIn_7_1);
+            mh.field_a = il.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

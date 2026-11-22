@@ -58,7 +58,7 @@ abstract class GameShell extends GameApplet {
         if (null != th.field_g) {
           uo.field_h = th.field_g.pollRotation(100);
         }
-        if (oe.q(param1 + 85)) {
+        if (AccountCreationResultPanel.q(param1 + 85)) {
           var3 = 1200 * IterableNodeHashTable.b(true);
           if (this.field_t ||
             !(jq.a((byte) 29) <= var3) &&

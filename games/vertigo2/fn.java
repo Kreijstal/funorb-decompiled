@@ -7,21 +7,21 @@ final class fn extends TextureOperator {
     static String field_B;
     static String field_A;
 
-    final static ch a(int param0, boolean param1, String param2) {
-        ch var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, boolean param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        ch stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ch(false);
-          var3.field_j = param2;
+          var3 = new AccountServiceResult(false);
+          var3.message = param2;
           if (!param1) {
             fn.g(-82);
           }
-          var3.field_h = param0;
+          var3.statusCode = param0;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,7 +42,7 @@ final class fn extends TextureOperator {
         ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 <= 84) {
           String var13 = (String) null;
-          fn.a(113, true, (String) null);
+          fn.createAccountErrorResult(113, true, (String) null);
           return;
         }
     }
@@ -145,7 +145,7 @@ final class fn extends TextureOperator {
         ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 <= 84) {
           String var13 = (String) null;
-          fn.a(113, true, (String) null);
+          fn.createAccountErrorResult(113, true, (String) null);
           return;
         }
     }

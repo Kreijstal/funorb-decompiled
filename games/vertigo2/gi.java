@@ -67,17 +67,17 @@ final class gi extends ah {
         }
     }
 
-    final static ch a(int param0, boolean param1) {
-        ch var2 = null;
-        ch var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (param0 == -2956) {
-          var2 = new ch(true);
+          var2 = new AccountServiceResult(true);
           var2.field_i = param1 ? true : false;
           return var2;
         }
         CharSequence var3 = (CharSequence) null;
         gi.a((CharSequence) null, '￸', (byte) -37);
-        var2Lifetime1 = new ch(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_i = param1 ? true : false;
         return var2Lifetime1;
     }

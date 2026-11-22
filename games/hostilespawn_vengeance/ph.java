@@ -13,11 +13,11 @@ class ph extends ag {
     static String field_B;
     private boolean field_E;
 
-    final static jj a(String param0, int param1) {
+    final static AccountServiceResult a(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;
-        jj stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -28,7 +28,7 @@ class ph extends ag {
           }
           if (ti.field_b == ki.field_f) {
             stackIn_4_0 = null;
-            return (jj) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (ee.field_b == ki.field_f &&
             param0.equals(uh.field_g)) {
@@ -40,7 +40,7 @@ class ph extends ag {
           ki.field_f = ti.field_b;
           uh.field_g = param0;
           stackIn_9_0 = null;
-          return (jj) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -51,7 +51,7 @@ class ph extends ag {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ class ph extends ag {
           }
           this.field_r = param5;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ph.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ph.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ class ph extends ag {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ class ph extends ag {
             this.a(j.field_c, param1, param3, rb.field_m, param0, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ph.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ph.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ class ph extends ag {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ class ph extends ag {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ class ph extends ag {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

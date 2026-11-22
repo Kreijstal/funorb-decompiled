@@ -85,7 +85,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 2) {
           return;
         }
-        if (!vk.a(22084)) {
+        if (!AccountServiceResult.a(22084)) {
           if (dk.field_c >= 10) {
             if (!l.a(true)) {
               dh.b(-128);
@@ -334,7 +334,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var5), "in.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var5), "in.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         try {
           this.a(param1, 640, true, param0, 480);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "in.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "in.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

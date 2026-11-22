@@ -13,7 +13,7 @@ final class rd extends IntrusiveNode {
     int field_o;
 
     final static void a(int param0, byte param1) {
-        ta.field_Ab = ob.field_a[param0];
+        AccountCreationResultPanel.field_Ab = ob.field_a[param0];
         ol.field_f = ik.field_c[param0];
         sd.field_g = DelegatingCanvas.field_c[param0];
         if (param1 < 85) {

@@ -100,11 +100,11 @@ final class ng {
         return param0;
     }
 
-    final static og a(String param0, int param1) {
+    final static AccountServiceResult a(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
-        og stackIn_5_0 = null;
-        og stackIn_9_0 = null;
+        AccountServiceResult stackIn_5_0 = null;
+        AccountServiceResult stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -113,10 +113,10 @@ final class ng {
         try {
           if (hg.field_ub == lc.field_h) {
             stackIn_2_0 = null;
-            return (og) (stackIn_2_0);
+            return (AccountServiceResult) (stackIn_2_0);
           }
           if (param1 != 3582) {
-            stackIn_5_0 = (og) null;
+            stackIn_5_0 = (AccountServiceResult) null;
             return stackIn_5_0;
           }
           if (wg.field_u == lc.field_h &&
@@ -129,7 +129,7 @@ final class ng {
           cm.field_I = param0;
           lc.field_h = hg.field_ub;
           stackIn_11_0 = null;
-          return (og) (stackIn_11_0);
+          return (AccountServiceResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

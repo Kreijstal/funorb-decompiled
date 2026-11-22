@@ -43,7 +43,7 @@ final class tg extends pj {
             if (var4 >= param2.length()) {
               return null;
             }
-            if (wg.a(param2.charAt(var4), (byte) -127)) {
+            if (AccountServiceResult.a(param2.charAt(var4), (byte) -127)) {
               var4++;
               continue;
             }

@@ -317,7 +317,7 @@ final class vf {
     }
 
     final static boolean a(ki param0, String param1, int param2, boolean param3, int param4, String param5, String param6) {
-        nm var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -336,7 +336,7 @@ final class vf {
           if (param4 != 7013) {
             return false;
           }
-          var7 = new nm(dc.field_a, param0);
+          var7 = new AccountCreationResultPanel(dc.field_a, param0);
           dc.field_a.a(var7, (byte) 91);
           boolean decompiledSharedTail0 = !(mc.b(120));
           if (!decompiledSharedTail0) {

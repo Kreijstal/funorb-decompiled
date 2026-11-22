@@ -78,18 +78,18 @@ final class ee extends em {
           ic.field_l = kd.field_p;
           if (param3 == 255) {
             stackIn_7_0 = !(me.field_j >= 13);
-            vk.field_g = hn.a(stackIn_7_0, (byte) 105);
+            vk.field_g = hn.createAccountSuccessResult(stackIn_7_0, (byte) 105);
             return;
           }
           if (100 > param3) {
-            vk.field_g = ij.a(param3, param0, true);
+            vk.field_g = ij.createAccountErrorResult(param3, param0, true);
             return;
           }
           if (param3 <= 105) {
-            vk.field_g = rh.a(124, param1);
+            vk.field_g = rh.createAccountSuggestionsResult(124, param1);
             return;
           }
-          vk.field_g = ij.a(param3, param0, true);
+          vk.field_g = ij.createAccountErrorResult(param3, param0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

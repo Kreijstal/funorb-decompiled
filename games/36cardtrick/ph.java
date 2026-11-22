@@ -61,7 +61,7 @@ final class ph {
     final static void c(int param0) {
         ga.a(true);
         if (tb.field_c != null) {
-          bg.a(tb.field_c, (byte) -76);
+          AccountCreationResultPanel.a(tb.field_c, (byte) -76);
           r.b((byte) 123);
           kf.d(param0 ^ param0);
           ui.d((byte) -122);

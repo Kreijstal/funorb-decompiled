@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   la.a(var5_intLifetime2, km.field_x, (byte) 51);
                   km.field_x = null;
                 } else {
-                  wg.field_yb = ib.field_d;
+                  AccountCreationResultPanel.field_yb = ib.field_d;
                   ba.e((byte) -86);
                   DirectByteStorage.field_k = false;
                   fa.field_c = 10;
@@ -761,7 +761,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         try {
           this.a(param2, param0, 640, param1, (byte) -55);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

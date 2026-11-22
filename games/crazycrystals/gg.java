@@ -69,7 +69,7 @@ final class gg {
             stackIn_16_0 = new jk(param0);
             return (fb) ((Object) stackIn_16_0);
           }
-          sa.field_mb.a(128, param0.field_o * param0.field_m + param0.field_A * 12, param0.field_s * param0.field_m + param0.field_t * 12, 0, (byte) -111);
+          AccountCreationResultPanel.field_mb.a(128, param0.field_o * param0.field_m + param0.field_A * 12, param0.field_s * param0.field_m + param0.field_t * 12, 0, (byte) -111);
           stackIn_18_0 = new em(param0);
           return (fb) ((Object) stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -22,10 +22,10 @@ final class mp extends vo {
             this.a((String) null, (byte) -114);
           }
           if (!param0.equals(this.field_i)) {
-            fr var3 = hg.a(param1 ^ 2147475455, param0);
+            AccountServiceResult var3 = hg.a(param1 ^ 2147475455, param0);
             if (var3 != null &&
-              var3.field_f == null) {
-              this.field_f = var3.field_b;
+              var3.message == null) {
+              this.field_f = var3.success;
               this.field_i = param0;
             } else {
               pt stackIn_12_0 = ce.field_t;
@@ -89,15 +89,15 @@ final class mp extends vo {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_i)) {
-            fr var4 = hg.a(2147483647, param0);
+            AccountServiceResult var4 = hg.a(2147483647, param0);
             if (var4 == null) {
               return null;
             }
-            if (var4.field_f != null) {
+            if (var4.message != null) {
               Object stackIn_12_0 = null;
               return (String) (stackIn_12_0);
             }
-            this.field_f = var4.field_b;
+            this.field_f = var4.success;
             this.field_i = param0;
           }
           if (this.field_f) {

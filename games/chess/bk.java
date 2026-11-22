@@ -28,9 +28,9 @@ final class bk extends IntrusiveNode {
     }
 
     final static boolean a(byte param0, boolean param1, String param2, ol param3, String param4, int param5, String param6) {
-        vd var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
-        vd var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -45,7 +45,7 @@ final class bk extends IntrusiveNode {
           if (ji.field_T != g.field_a) {
             return false;
           }
-          var8 = new vd(jh.field_e, param3);
+          var8 = new AccountCreationResultPanel(jh.field_e, param3);
           var7 = var8;
           jh.field_e.b(var8, (byte) -93);
           if (jn.a(32359)) {

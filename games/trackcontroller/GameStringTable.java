@@ -176,7 +176,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime18 = DualLinkNode.a("score_colon", -523);
           if (null != var2Lifetime18) {
-            nj.field_d = ta.a(32200, var2Lifetime18);
+            AccountServiceResult.field_d = ta.a(32200, var2Lifetime18);
           }
           var2Lifetime19 = DualLinkNode.a("level_value_colon", -523);
           if (null != var2Lifetime19) {
@@ -388,7 +388,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime71 = DualLinkNode.a("mine", -523);
           if (null != var2Lifetime71) {
-            og.field_qb = ta.a(32200, var2Lifetime71);
+            AccountCreationResultPanel.field_qb = ta.a(32200, var2Lifetime71);
           }
           var2Lifetime72 = DualLinkNode.a("besteach", -523);
           if (var2Lifetime72 != null) {

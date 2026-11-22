@@ -52,17 +52,17 @@ final class qj {
     private qj(int param0, int param1, int param2) {
     }
 
-    final static rg a(boolean param0, String[] param1) {
-        rg var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(boolean param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        rg stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new rg(param0);
-          var2.field_d = param1;
+          var2 = new AccountServiceResult(param0);
+          var2.suggestions = param1;
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

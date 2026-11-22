@@ -4,7 +4,7 @@
 final class og extends gj implements dc, da {
     private ja field_H;
     private bb field_G;
-    private ua field_F;
+    private AccountCreationResultPanel field_F;
 
     private final String j(int param0) {
         String discarded$0 = null;
@@ -235,7 +235,7 @@ final class og extends gj implements dc, da {
         }
     }
 
-    og(ua param0) {
+    og(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ComponentLayout) null);
         String var7 = null;
         int var3 = 0;

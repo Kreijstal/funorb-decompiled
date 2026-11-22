@@ -25,8 +25,8 @@ final class ne {
         int var16 = 0;
         int var17 = 0;
         try {
-          var14_int = ef.field_j[0];
-          var15 = ef.field_j[1];
+          var14_int = AccountServiceResult.field_j[0];
+          var15 = AccountServiceResult.field_j[1];
           var16 = var14_int - param0 >> 1;
           if (null == de.field_a) {
             de.field_a = new Sprite(var14_int, var15);

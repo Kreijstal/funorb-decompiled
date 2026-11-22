@@ -80,8 +80,8 @@ final class ld extends java.awt.Canvas {
         }
     }
 
-    final static mk a(boolean param0, byte param1) {
-        mk var2 = new mk(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, byte param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_g = param0 ? true : false;
         if (param1 != 42) {
           field_c = (String) null;

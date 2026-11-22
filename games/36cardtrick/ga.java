@@ -107,7 +107,7 @@ final class ga implements Runnable {
         if (gj.field_a == null) {
           return;
         }
-        bg.a(gj.field_a, (byte) -111);
+        AccountCreationResultPanel.a(gj.field_a, (byte) -111);
         gj.field_a.a((byte) -81, jk.field_a);
         gj.field_a = null;
         if (null != wc.field_A) {

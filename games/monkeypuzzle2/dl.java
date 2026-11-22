@@ -181,9 +181,9 @@ final class dl {
         }
     }
 
-    final static cj b(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (param0 != 0) {
-          return (cj) null;
+          return (AccountServiceResult) null;
         }
         if (di.field_a == ch.field_d) {
           throw new IllegalStateException();

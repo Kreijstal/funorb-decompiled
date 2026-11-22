@@ -10,7 +10,7 @@ final class wj extends ph {
     static ub field_N;
     static pf[] field_J;
     static bd field_L;
-    static jj field_H;
+    static AccountServiceResult field_H;
 
     final String e(int param0) {
         if (this.field_u) {
@@ -29,7 +29,7 @@ final class wj extends ph {
             wj.e((byte) -71);
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "wj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class wj extends ph {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class wj extends ph {
           this.field_M = this.field_M + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "wj.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -790,7 +790,7 @@ final class wj extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "wj.G(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "wj.G(" + param0 + ')');
         }
     }
 
@@ -798,7 +798,7 @@ final class wj extends ph {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -70,16 +70,16 @@ class vb extends DualLinkNode {
           var1_double = Math.random();
           if (var1_double > 0.95) {
             if (var1_double > 0.975) {
-              cj.a((byte) 127, ke.field_h[16]);
+              AccountServiceResult.a((byte) 127, ke.field_h[16]);
             } else {
-              cj.a((byte) -23, ke.field_h[17]);
+              AccountServiceResult.a((byte) -23, ke.field_h[17]);
             }
           }
           if (0 == (ah.field_d & 3)) {
             if (ah.field_d > 1300 &&
               ah.field_d < 1800) {
               if (ah.field_d < 1305) {
-                cj.a((byte) 124, ke.field_h[15]);
+                AccountServiceResult.a((byte) 124, ke.field_h[15]);
               }
               if (!(dk.field_j >= 200)) {
                 ve.field_x[dk.field_j][0] = pf.a((byte) 104, 640);

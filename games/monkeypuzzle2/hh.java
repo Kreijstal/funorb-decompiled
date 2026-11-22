@@ -26,7 +26,7 @@ final class hh extends wj {
     }
 
     final na a(String param0, int param1) {
-        cj var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         na stackIn_2_0 = null;
@@ -48,9 +48,9 @@ final class hh extends wj {
           if (!param0.equals(this.field_q)) {
             var3 = UiWidget.b(param0, -84);
             if (var3 != null &&
-              null == var3.field_h) {
+              null == var3.message) {
               this.field_q = param0;
-              this.field_s = var3.field_b;
+              this.field_s = var3.success;
             } else {
               stackIn_10_0 = f.field_g;
               return stackIn_10_0;
@@ -133,7 +133,7 @@ final class hh extends wj {
     final String a(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        cj var4 = null;
+        AccountServiceResult var4 = null;
         String var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
@@ -156,11 +156,11 @@ final class hh extends wj {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_h != null) {
+            if (var4.message != null) {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
-            this.field_s = var4.field_b;
+            this.field_s = var4.success;
             this.field_q = param1;
           }
           if (param0 != 1) {
@@ -215,7 +215,7 @@ final class hh extends wj {
             return;
           }
           if (0 == var2) {
-            var11 = cj.a((byte) 108);
+            var11 = AccountServiceResult.a((byte) 108);
             var17 = var11;
             var15 = var17;
             var3 = var15;
@@ -226,7 +226,7 @@ final class hh extends wj {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-127);
             }
-            var16_ref = (k) (cj.field_a.a((byte) -117));
+            var16_ref = (k) (AccountServiceResult.field_a.a((byte) -117));
             if (var16_ref == null) {
               PacketBuffer.a(-1);
               return;
@@ -251,12 +251,12 @@ final class hh extends wj {
             PacketBuffer.a(-1);
             return;
           }
-          var14 = (k) (cj.field_a.a((byte) -117));
+          var14 = (k) (AccountServiceResult.field_a.a((byte) -117));
           if (var14 == null) {
             PacketBuffer.a(-1);
             return;
           }
-          var14.field_h = cj.a((byte) 120);
+          var14.field_h = AccountServiceResult.a((byte) 120);
           var14.field_e = var14.field_h[0];
           var14.field_j = true;
           var14.unlink(-19822);

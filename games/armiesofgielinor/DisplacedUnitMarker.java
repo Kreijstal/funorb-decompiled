@@ -36,7 +36,7 @@ final class DisplacedUnitMarker extends PreparedAction {
         }
     }
 
-    final static AccountRequestResult a(int param0, int param1, String param2) {
+    final static AccountRequestResult createAccountErrorResult(int param0, int param1, String param2) {
         AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         AccountRequestResult stackIn_2_0 = null;

@@ -79,7 +79,7 @@ final class ie extends kf {
           }
           if (param3 == 255) {
             stackIn_6_0 = !(qb.field_a >= 13);
-            mf.field_a = cf.a(stackIn_6_0, false);
+            mf.field_a = cf.createAccountSuccessResult(stackIn_6_0, false);
             var5 = (String[]) null;
             dl.a((byte) -12, (String[]) null);
             return;
@@ -88,10 +88,10 @@ final class ie extends kf {
             param3 <= 105) {
             var4 = param2;
             dl.a((byte) -12, var4);
-            mf.field_a = hc.a(param2, 0);
+            mf.field_a = hc.createAccountSuggestionsResult(param2, 0);
             return;
           }
-          mf.field_a = fb.a(param1, param3, 0);
+          mf.field_a = fb.createAccountErrorResult(param1, param3, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

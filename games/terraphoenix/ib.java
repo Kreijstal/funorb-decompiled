@@ -96,10 +96,10 @@ final class ib extends ej implements v {
         return dg.field_d;
     }
 
-    final static pd a(boolean param0, String[] param1) {
-        pd var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(boolean param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        pd stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -108,8 +108,8 @@ final class ib extends ej implements v {
           if (!param0) {
             field_cb = 75;
           }
-          var2 = new pd(false);
-          var2.field_d = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

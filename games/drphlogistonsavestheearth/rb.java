@@ -95,22 +95,22 @@ final class rb {
           lc.field_h = wg.field_u;
           if (param0 == 255) {
             stackIn_7_0 = !(13 <= rd.field_z);
-            kf.field_a = b.a(stackIn_7_0, 93);
+            kf.field_a = b.createAccountSuccessResult(stackIn_7_0, 93);
             var6 = (String[]) null;
             pi.a(true, (String[]) null);
             return;
           }
           if (100 > param0) {
-            kf.field_a = kj.a(param0, 4, param2);
+            kf.field_a = kj.createAccountErrorResult(param0, 4, param2);
             return;
           }
           if (param0 > 105) {
-            kf.field_a = kj.a(param0, 4, param2);
+            kf.field_a = kj.createAccountErrorResult(param0, 4, param2);
             return;
           }
           var4 = param1;
           pi.a(true, var4);
-          kf.field_a = sa.a((byte) 3, param1);
+          kf.field_a = sa.createAccountSuggestionsResult((byte) 3, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

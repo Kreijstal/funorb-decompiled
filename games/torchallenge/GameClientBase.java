@@ -86,8 +86,8 @@ abstract class GameClientBase extends GameApplet {
           11 != gj.field_c) {
           SecondaryNodeDeque.a(false);
         }
-        if (ef.field_l != null) {
-          bl.field_X = ef.field_l.pollRotation((byte) 29);
+        if (AccountServiceResult.field_l != null) {
+          bl.field_X = AccountServiceResult.field_l.pollRotation((byte) 29);
         }
         if (hf.a(4)) {
           var3 = ol.b(-118) * 1200;
@@ -422,7 +422,7 @@ abstract class GameClientBase extends GameApplet {
         rj.a(this.field_u, 5000, this.field_B, this.field_C, param4, 5000, this.field_D, this.field_x, this.field_w, kf.field_b, this.field_q, param0, param7, sh.field_u);
         GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, sh.field_u);
         kk.e(-79);
-        ef.field_l = dj.createMouseWheelInput((byte) 96);
+        AccountServiceResult.field_l = dj.createMouseWheelInput((byte) 96);
         SpriteLoader.a(bg.field_P, param0);
         kk.field_j = param3;
         gh.field_w = param1;
@@ -561,7 +561,7 @@ abstract class GameClientBase extends GameApplet {
             }
           }
           if (var4 == 5) {
-            ef.a((byte) -93, gi.b(param1 ^ -12438));
+            AccountServiceResult.a((byte) -93, gi.b(param1 ^ -12438));
           }
           if (var4 == 6 &&
             fh.field_g) {

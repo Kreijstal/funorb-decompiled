@@ -649,7 +649,7 @@ final class va {
           }
           var2Lifetime82 = jk.a(1, "normoname");
           if (null != var2Lifetime82) {
-            ig.field_gb = bk.a(var2Lifetime82, -12465);
+            AccountCreationResultPanel.field_gb = bk.a(var2Lifetime82, -12465);
           }
           var2Lifetime83 = jk.a(1, "awesomewin");
           if (var2Lifetime83 != null) {

@@ -115,7 +115,7 @@ final class kh extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "kh.E(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "kh.E(" + param0 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class kh extends ip {
     }
 
     final od a(String param0, int param1) {
-        vk var3 = null;
+        AccountServiceResult var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -168,10 +168,10 @@ final class kh extends ip {
             return stackIn_3_0;
           }
           if (!param0.equals(this.field_o)) {
-            var3 = vk.a((byte) -126, param0);
+            var3 = AccountServiceResult.a((byte) -126, param0);
             if (var3 != null &&
-              null == var3.field_g) {
-              this.field_p = var3.field_a;
+              null == var3.message) {
+              this.field_p = var3.success;
               this.field_o = param0;
             } else {
               stackIn_9_0 = oc.field_A;
@@ -195,14 +195,14 @@ final class kh extends ip {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        vk var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_14_0 = null;
@@ -220,14 +220,14 @@ final class kh extends ip {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_o)) {
-            var4 = vk.a((byte) -126, param1);
+            var4 = AccountServiceResult.a((byte) -126, param1);
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_g) {
+            if (null != var4.message) {
               return null;
             }
-            this.field_p = var4.field_a;
+            this.field_p = var4.success;
             this.field_o = param1;
           }
           if (!this.field_p) {
@@ -250,7 +250,7 @@ final class kh extends ip {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

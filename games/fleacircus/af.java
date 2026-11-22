@@ -11,24 +11,24 @@ final class af implements Runnable {
     private Thread field_h;
     int field_d;
 
-    final static mk a(byte param0, int param1, String param2) {
-        mk var3 = null;
+    final static AccountServiceResult createAccountErrorResult(byte param0, int param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        mk stackIn_2_0 = null;
-        mk stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new mk(false);
-          var3.field_f = param1;
-          var3.field_b = param2;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param1;
+          var3.message = param2;
           if (param0 == 36) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (mk) null;
+          stackIn_2_0 = (AccountServiceResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -452,7 +452,7 @@ final class af implements Runnable {
           var4.field_A = param2;
           if (param0 < 111) {
             var5 = (String) null;
-            af.a((byte) 74, 43, (String) null);
+            af.createAccountErrorResult((byte) 74, 43, (String) null);
           }
           var4.field_j = (long)param1;
           var4.field_B = 3;

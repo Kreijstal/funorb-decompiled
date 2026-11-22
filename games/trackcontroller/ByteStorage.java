@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class ByteStorage {
-    static nj field_c;
+    static AccountServiceResult field_c;
     static oi field_e;
     static byte[] field_a;
     static String field_d;

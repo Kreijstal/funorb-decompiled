@@ -17,21 +17,21 @@ final class rh extends jk {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static ed a(int param0, String[] param1) {
-        ed var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
-        ed stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ed(false);
-          var2.field_d = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           if (param0 < 118) {
             var3 = (String[]) null;
-            rh.a(17, (String[]) null);
+            rh.createAccountSuggestionsResult(17, (String[]) null);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;

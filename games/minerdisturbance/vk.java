@@ -6,7 +6,7 @@ final class vk {
     static int field_a;
     int field_b;
     static Sprite[] field_e;
-    static ed field_g;
+    static AccountServiceResult field_g;
     static String field_d;
     int field_h;
     int field_f;
@@ -25,7 +25,7 @@ final class vk {
             var3 = (CharSequence) ((Object) var2);
             if (ah.a(-97, var3) != 0L) {
               if (!param0) {
-                field_g = (ed) null;
+                field_g = (AccountServiceResult) null;
               }
               return;
             }

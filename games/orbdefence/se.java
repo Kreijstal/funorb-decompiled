@@ -139,7 +139,7 @@ final class se extends PacketBuffer {
                 param0 = ii.field_e;
               }
               param2 = 2;
-              ig.field_ib.a(127, vh.field_k);
+              AccountCreationResultPanel.field_ib.a(127, vh.field_k);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -161,7 +161,7 @@ final class se extends PacketBuffer {
                 return;
               }
               if (!vh.field_j) {
-                ig.field_ib.m(-114);
+                AccountCreationResultPanel.field_ib.m(-114);
               }
             }
           }

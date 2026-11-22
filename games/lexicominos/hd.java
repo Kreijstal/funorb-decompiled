@@ -75,7 +75,7 @@ final class hd {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, u.field_sb, bk.field_d);
+              var9.fillRect(0, 0, AccountCreationResultPanel.field_sb, bk.field_d);
             }
             if (param4 == null) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -97,11 +97,11 @@ final class hd {
               }
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(wb.field_g, -152 + u.field_sb / 2, bk.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(wb.field_g, -152 + AccountCreationResultPanel.field_sb / 2, bk.field_d / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = u.field_sb / 2 - 152;
+              var7 = AccountCreationResultPanel.field_sb / 2 - 152;
               var8 = bk.field_d / 2 - 18;
               var9.setColor(param4);
               var9.drawRect(var7, var8, 303, 33);
@@ -116,7 +116,7 @@ final class hd {
             if (null != of.field_c) {
               var9.setFont(af.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(of.field_c, u.field_sb / 2 - 6 * of.field_c.length() / 2, bk.field_d / 2 - 26);
+              var9.drawString(of.field_c, AccountCreationResultPanel.field_sb / 2 - 6 * of.field_c.length() / 2, bk.field_d / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

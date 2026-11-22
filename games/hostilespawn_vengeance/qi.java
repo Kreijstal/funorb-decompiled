@@ -27,7 +27,7 @@ final class qi extends vd implements qk {
             return (pg[]) (stackIn_2_0);
           }
           if (param1 <= 112) {
-            qi.a(true, true);
+            qi.createAccountSuccessResult(true, true);
           }
           stackIn_6_0 = he.c(-123);
           return stackIn_6_0;
@@ -41,7 +41,7 @@ final class qi extends vd implements qk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class qi extends vd implements qk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class qi extends vd implements qk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -180,16 +180,16 @@ final class qi extends vd implements qk {
         this.field_L.a(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
     }
 
-    final static jj a(boolean param0, boolean param1) {
-        jj var2 = null;
-        jj var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, boolean param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (!param1) {
-          var2 = new jj(true);
+          var2 = new AccountServiceResult(true);
           var2.field_c = param0 ? true : false;
           return var2;
         }
         field_G = (String) null;
-        var2Lifetime1 = new jj(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_c = param0 ? true : false;
         return var2Lifetime1;
     }
@@ -221,7 +221,7 @@ final class qi extends vd implements qk {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class qi extends vd implements qk {
           var4_int = null == this.field_I ? 0 : this.field_L.b(this.field_I, 260, this.field_L.field_y);
           this.a(288, 0, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

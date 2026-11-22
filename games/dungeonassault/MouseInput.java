@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static vk field_b;
+    static AccountServiceResult field_b;
     static ef field_c;
     static int field_g;
     static int field_a;
@@ -57,7 +57,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             ua.field_a = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "mh.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "mh.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             lj.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "mh.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "mh.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             lj.field_g = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "mh.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "mh.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

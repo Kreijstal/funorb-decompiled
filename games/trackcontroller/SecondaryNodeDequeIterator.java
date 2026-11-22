@@ -80,14 +80,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
             if (var3_int != 0) {
               var1.readString(0);
             }
-            var5_ref = nj.a((byte) 125, var4_ref_String);
+            var5_ref = AccountServiceResult.a((byte) 125, var4_ref_String);
             var6_ref = var1.readString(0);
             var7_ref = r.a((CharSequence) ((Object) var4_ref_String), -11133);
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = nj.a((byte) 124, var6_ref);
+              var5_ref = AccountServiceResult.a((byte) 124, var6_ref);
               if (var5_ref != null) {
                 ug.field_cb.a(var5_ref, (long)var7_ref.hashCode(), param0 ^ -182);
               }
@@ -269,7 +269,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           if (rl.field_N == 10 ||
             !ij.b(1)) {
-            nj.a(-27958);
+            AccountServiceResult.a(-27958);
             rl.field_N = 11;
           }
           qh.field_i = true;

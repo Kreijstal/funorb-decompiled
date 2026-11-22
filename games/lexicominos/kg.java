@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kg extends nb implements ue, jk {
-    private u field_F;
+    private AccountCreationResultPanel field_F;
     private bc field_B;
     static PcmStreamMixer field_G;
     private kf field_E;
@@ -39,7 +39,7 @@ final class kg extends nb implements ue, jk {
         }
     }
 
-    kg(u param0) {
+    kg(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (rd) null);
         String var7 = null;
         int var3 = 0;

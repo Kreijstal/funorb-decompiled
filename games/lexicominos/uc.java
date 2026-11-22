@@ -125,7 +125,7 @@ class uc extends re implements jk {
         if (!param0) {
           field_hb = (db[]) null;
           if (this.field_ib) {
-            u.h(!param0 ? true : false);
+            AccountCreationResultPanel.h(!param0 ? true : false);
             return;
           }
           if (!this.field_db) {
@@ -135,7 +135,7 @@ class uc extends re implements jk {
           return;
         }
         if (this.field_ib) {
-          u.h(!param0 ? true : false);
+          AccountCreationResultPanel.h(!param0 ? true : false);
           return;
         }
         if (!this.field_db) {

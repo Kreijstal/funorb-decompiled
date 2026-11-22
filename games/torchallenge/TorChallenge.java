@@ -125,7 +125,7 @@ public final class TorChallenge extends GameClientBase {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 5))) {
             array$0 = new Sprite[s.field_l[var2_int]];
-            ef.field_h[var2_int] = array$0;
+            AccountServiceResult.field_h[var2_int] = array$0;
             var3_int = var2_int;
             stackIn_51_0 = var3_int;
             if (var12 == 0) {
@@ -134,7 +134,7 @@ public final class TorChallenge extends GameClientBase {
                   regionExit3: {
                     regionExit4: {
                       if (stackIn_51_0 == 0) {
-                        ef.field_h[var2_int][0] = qk.a("", "intro1", ic.field_C, 0);
+                        AccountServiceResult.field_h[var2_int][0] = qk.a("", "intro1", ic.field_C, 0);
                         break regionExit1;
                       } else if (var3_int != 1) {
                         switch (var3_int) {
@@ -148,17 +148,17 @@ public final class TorChallenge extends GameClientBase {
                             break regionExit1;
                         }
                       }
-                      ef.field_h[var2_int][0] = qk.a("", "intro2", ic.field_C, param0 - 1);
+                      AccountServiceResult.field_h[var2_int][0] = qk.a("", "intro2", ic.field_C, param0 - 1);
                       break regionExit1;
                     }
-                    ef.field_h[var2_int][0] = qk.a("", "intro3", ic.field_C, param0 - 1);
+                    AccountServiceResult.field_h[var2_int][0] = qk.a("", "intro3", ic.field_C, param0 - 1);
                     break regionExit1;
                   }
-                  ef.field_h[var2_int][0] = null;
-                  ef.field_h[var2_int][1] = qk.a("", "intro4_enemies", ic.field_C, 0);
+                  AccountServiceResult.field_h[var2_int][0] = null;
+                  AccountServiceResult.field_h[var2_int][1] = qk.a("", "intro4_enemies", ic.field_C, 0);
                   break regionExit1;
                 }
-                ef.field_h[var2_int][0] = qk.a("", "intro5", ic.field_C, 0);
+                AccountServiceResult.field_h[var2_int][0] = qk.a("", "intro5", ic.field_C, 0);
               }
               var2_int++;
               continue;
@@ -166,7 +166,7 @@ public final class TorChallenge extends GameClientBase {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            ef.field_h[3][0] = wa.field_xb.a();
+            AccountServiceResult.field_h[3][0] = wa.field_xb.a();
             wa.field_xb = null;
             we.field_m = new Sprite[4];
             we.field_m[0] = null;
@@ -996,7 +996,7 @@ public final class TorChallenge extends GameClientBase {
                       ij.c((byte) -120);
                     }
                     if (2 == var3) {
-                      ef.a((byte) -93, gi.b(12476));
+                      AccountServiceResult.a((byte) -93, gi.b(12476));
                     }
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -1914,7 +1914,7 @@ public final class TorChallenge extends GameClientBase {
           mg.a((byte) 113);
           vj.clearStaticReferences((byte) 95);
           si.d((byte) 69);
-          ta.p(255);
+          AccountCreationResultPanel.p(255);
           pe.m(4210752);
           jf.n(-118);
           wa.n(104);
@@ -2066,7 +2066,7 @@ public final class TorChallenge extends GameClientBase {
           eb.clearStaticReferences(237);
           eh.c((byte) 121);
           ne.clearStaticReferences((byte) -116);
-          ef.b(-124);
+          AccountServiceResult.b(-124);
           vh.clearStaticReferences(-44);
           cf.a(-113);
           lc.b((byte) -75);

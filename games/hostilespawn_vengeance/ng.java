@@ -20,7 +20,7 @@ final class ng extends IntrusiveNode {
 
     final static boolean a(mk param0, int param1, boolean param2, String param3, String param4, int param5, String param6) {
         RuntimeException var7 = null;
-        wg var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,7 +38,7 @@ final class ng extends IntrusiveNode {
           if (od.field_I != e.field_q) {
             return false;
           }
-          var8 = new wg(im.field_e, param0);
+          var8 = new AccountCreationResultPanel(im.field_e, param0);
           im.field_e.c(var8, param5 ^ -8686);
           if (fc.i(-1)) {
             var8.r(-104);
@@ -80,7 +80,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_94_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_93_1).append(stackIn_94_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_93_1).append(stackIn_94_2).append(')').toString());
         }
     }
 

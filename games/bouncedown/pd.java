@@ -35,10 +35,10 @@ final class pd {
         CipherPacketBuffer.field_l = nl.field_b[param1];
     }
 
-    final static rg a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_9_0 = null;
-        rg stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -60,7 +60,7 @@ final class pd {
           oa.field_c = null;
           t.field_t = param1;
           stackIn_9_0 = null;
-          return (rg) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

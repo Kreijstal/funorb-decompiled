@@ -329,14 +329,14 @@ final class m {
               param0 <= 105) {
               var4 = param3;
               ae.a((byte) 61, var4);
-              gf.field_w = wk.a(param3, -1);
+              gf.field_w = wk.createAccountSuggestionsResult(param3, -1);
               return;
             }
-            gf.field_w = mg.a((byte) 15, param1, param0);
+            gf.field_w = mg.createAccountErrorResult((byte) 15, param1, param0);
           } else {
             stackIn_6_0 = -115;
             stackIn_7_1 = !(cf.field_f >= 13);
-            gf.field_w = be.a(stackIn_6_0, stackIn_7_1);
+            gf.field_w = be.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
             var7 = (String[]) null;
             ae.a((byte) 73, (String[]) null);
           }

@@ -309,14 +309,14 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var3), "hh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "hh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, int param1, fd param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         try {
           hn.field_a = param6;
-          jj.field_k = param2;
+          AccountServiceResult.field_k = param2;
           fk.field_a = param4;
           if (param8 != -1) {
             hh.clearStaticReferences(114);
@@ -330,7 +330,7 @@ final class hh {
           GameCanvas.field_c = new dh(param2);
           sj.field_a = new sg(ig.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -554,7 +554,7 @@ final class hh {
           } else {
             stackIn_119_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(')').toString());
         }
     }
 

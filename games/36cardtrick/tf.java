@@ -8,7 +8,7 @@ final class tf extends pd {
     static String field_m;
     static String[] field_p;
     static jd field_r;
-    static nk field_s;
+    static AccountServiceResult field_s;
 
     final boolean f(int param0) {
         RuntimeException var2 = null;

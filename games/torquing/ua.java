@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ua {
-    static dn field_b;
+    static AccountServiceResult field_b;
     static java.math.BigInteger field_a;
 
     public static void a(int param0) {

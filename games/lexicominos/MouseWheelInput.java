@@ -98,7 +98,7 @@ abstract class MouseWheelInput {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            mb.field_a = param0;
+            AccountServiceResult.field_a = param0;
             try {
               var7 = param2.getParameter("cookieprefix");
               var5 = var7;

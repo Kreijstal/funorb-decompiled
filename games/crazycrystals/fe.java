@@ -157,7 +157,7 @@ final class fe extends l {
           return;
         }
         try {
-          si.field_e = new am(kg.a(rn.field_p, 100, 0));
+          AccountServiceResult.field_e = new am(kg.a(rn.field_p, 100, 0));
           td.field_e = new am(kg.a(ti.field_l, 100, 0));
           bc.field_a = new am(kg.a(mg.field_d, 100, 0));
           dn.field_d = new am(kg.a(io.field_H, 100, 0));
@@ -171,7 +171,7 @@ final class fe extends l {
           jj.field_c = new am(kg.a(an.field_s, 100, 0));
           m.field_n = new am(kg.a(cl.field_m, 100, 0));
           MouseInputHandler.field_d = new am(kg.a(ab.field_z, 100, 0));
-          rb.field_g = new am(kg.a(sa.field_nb, 100, 0));
+          rb.field_g = new am(kg.a(AccountCreationResultPanel.field_nb, 100, 0));
           ln.field_f = new am(kg.a(tg.field_c, 100, 0));
           oj.field_E = new am(kg.a(va.field_b, 100, 0));
           c.field_q = new am(kg.a(ga.field_H, 100, 0));

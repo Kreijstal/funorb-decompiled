@@ -4,7 +4,7 @@
 final class te extends vd implements nk, qk {
     static GameAppletShell field_E;
     static bd[] field_G;
-    private wg field_H;
+    private AccountCreationResultPanel field_H;
     private cj field_L;
     static ij field_M;
     static ResourceArchive field_J;
@@ -20,7 +20,7 @@ final class te extends vd implements nk, qk {
           param0.removeFocusListener(jc.field_b);
           mk.field_I = 0;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "te.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "te.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class te extends vd implements nk, qk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class te extends vd implements nk, qk {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,11 +154,11 @@ final class te extends vd implements nk, qk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    te(wg param0) {
+    te(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (nn) null);
         String var7 = null;
         int var3 = 0;
@@ -188,7 +188,7 @@ final class te extends vd implements nk, qk {
           this.a(51448, this.field_I);
           this.a(300, 0, 0, 0, var3 - (-55 - var5));
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

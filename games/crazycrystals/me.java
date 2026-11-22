@@ -9,18 +9,18 @@ final class me {
     static String field_a;
     static vp field_f;
 
-    final static si a(String param0, int param1, int param2) {
-        si var3 = null;
+    final static AccountServiceResult createAccountErrorResult(String param0, int param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        si stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new si(false);
-          var3.field_h = param0;
-          var3.field_g = param2;
+          var3 = new AccountServiceResult(false);
+          var3.message = param0;
+          var3.statusCode = param2;
           if (param1 != 20) {
             field_a = (String) null;
           }

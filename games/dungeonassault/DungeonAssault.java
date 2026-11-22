@@ -20,7 +20,7 @@ public final class DungeonAssault extends NetworkGameClient {
           field_I = null;
           field_H = null;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "DungeonAssault.E(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "DungeonAssault.E(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 }
               } else {
                 if (!ed.c(true)) {
-                  vk.a((byte) -31);
+                  AccountServiceResult.a((byte) -31);
                   gd.a(g.field_Hb, 0, sa.field_f, false);
                   stackIn_16_0 = DualLinkNode.field_k;
                   stackIn_17_1 = !(ResourceArchive.field_k < 2);
@@ -191,7 +191,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var3), "DungeonAssault.H(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var3), "DungeonAssault.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -552,7 +552,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2_ref), "DungeonAssault.C(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2_ref), "DungeonAssault.C(" + param0 + ')');
         }
     }
 
@@ -602,7 +602,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "DungeonAssault.A(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.A(" + param0 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ public final class DungeonAssault extends NetworkGameClient {
         try {
           this.a(32, "dungeonassault", 0);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "DungeonAssault.init()");
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "DungeonAssault.init()");
         }
     }
 
@@ -737,7 +737,7 @@ public final class DungeonAssault extends NetworkGameClient {
           BoundedRandomAccessFile.b((byte) 56);
           qd.a(true);
           ji.f((byte) -98);
-          jb.p(-71);
+          AccountCreationResultPanel.p(-71);
           wi.i((byte) -97);
           jk.n(-18554);
           nk.n(2121792);
@@ -901,7 +901,7 @@ public final class DungeonAssault extends NetworkGameClient {
           h.a((byte) 16);
           ac.clearStaticReferences(19757);
           af.clearStaticReferences(0);
-          vk.clearStaticReferences((byte) 75);
+          AccountServiceResult.clearStaticReferences((byte) 75);
           wd.a(115);
           fl.a((byte) 63);
           gn.a(194);
@@ -953,7 +953,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "DungeonAssault.B(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.B(" + param0 + ')');
         }
     }
 
@@ -1027,7 +1027,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "DungeonAssault.G(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.G(" + param0 + ')');
         }
     }
 
@@ -1047,7 +1047,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "DungeonAssault.F(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.F(" + param0 + ')');
         }
     }
 
@@ -1199,7 +1199,7 @@ public final class DungeonAssault extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "DungeonAssault.D(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "DungeonAssault.D(" + param0 + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class mk extends kd {
           throw new IllegalStateException();
         }
         if (param0 == 14891) {
-          u.field_tb = true;
+          AccountCreationResultPanel.field_tb = true;
           q.a((byte) -69, true);
           ta.field_g = 0;
           return;

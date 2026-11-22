@@ -349,7 +349,7 @@ class hl implements jm, mg {
           stackIn_14_2 = (param1) && (!fm.field_V);
           ((ci) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2);
         }
-        if (aj.field_c > 0) {
+        if (AccountServiceResult.field_c > 0) {
           if (ig.field_h != null) {
             ig.field_h.d(fm.field_T.field_mb, 0);
           }

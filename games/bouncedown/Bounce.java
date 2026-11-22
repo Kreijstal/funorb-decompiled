@@ -18,9 +18,9 @@ public final class Bounce extends GameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (sd.field_pb != null) {
-            ij.a(sd.field_pb, (byte) -123);
-            sd.field_pb = null;
+          if (AccountCreationResultPanel.field_pb != null) {
+            ij.a(AccountCreationResultPanel.field_pb, (byte) -123);
+            AccountCreationResultPanel.field_pb = null;
             vc.e((byte) -44);
           }
           pa.field_c = fa.a((byte) -76, 1);
@@ -152,7 +152,7 @@ public final class Bounce extends GameClient {
           c.clearStaticReferences((byte) 56);
           l.a(3);
           pf.clearStaticReferences(-1);
-          sd.b(false);
+          AccountCreationResultPanel.b(false);
           db.n(260);
           ec.n(101);
           sh.o(5);
@@ -290,7 +290,7 @@ public final class Bounce extends GameClient {
           ld.a(false);
           ke.a(-196);
           mf.a((byte) -114);
-          rg.a((byte) -75);
+          AccountServiceResult.a((byte) -75);
           qh.b((byte) -101);
           uf.a(32578);
           j.clearStaticReferences((byte) -87);
@@ -603,7 +603,7 @@ public final class Bounce extends GameClient {
                 if (decompiledSharedTail0) {
                   stackIn_241_0 = ld.field_l;
                   if (!u.field_g) {
-                    stackIn_242_1 = sd.field_mb;
+                    stackIn_242_1 = AccountCreationResultPanel.field_mb;
                   } else {
                     stackIn_242_1 = wj.field_c;
                   }
@@ -712,7 +712,7 @@ public final class Bounce extends GameClient {
             if (rd.field_a) {
               var2_ref = jl.field_d;
               synchronized (var2_ref) {
-                ld.field_l.a(sd.field_mb, true, 124);
+                ld.field_l.a(AccountCreationResultPanel.field_mb, true, 124);
                 jl.field_d.d();
               }
             }
@@ -1254,7 +1254,7 @@ public final class Bounce extends GameClient {
             hg.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.e(4);
-            sd.field_mb = be.a(ca.field_e, "", "bounce down title screen");
+            AccountCreationResultPanel.field_mb = be.a(ca.field_e, "", "bounce down title screen");
             wj.field_c = be.a(ca.field_e, "", "bounce");
             ca.field_e = null;
             cf.field_d = new i(pa.field_c, IntrusiveNode.field_e);
@@ -1264,7 +1264,7 @@ public final class Bounce extends GameClient {
             return;
           }
           if (pk.field_D != null) {
-            if (!ld.field_l.a((byte) -122, cf.field_d, pk.field_D, sd.field_mb, 176400)) {
+            if (!ld.field_l.a((byte) -122, cf.field_d, pk.field_D, AccountCreationResultPanel.field_mb, 176400)) {
               return;
             }
             if (!ld.field_l.a((byte) -124, cf.field_d, pk.field_D, wj.field_c, 176400)) {
@@ -1315,7 +1315,7 @@ public final class Bounce extends GameClient {
             var3_ref2 = jl.field_d;
             synchronized (var3_ref2) {
               ld.field_l.g(jd.field_a / 2, 100);
-              ld.field_l.a(sd.field_mb, true, 85);
+              ld.field_l.a(AccountCreationResultPanel.field_mb, true, 85);
               jl.field_d.d();
             }
             if (!jh.b(767564065)) {
@@ -1731,7 +1731,7 @@ public final class Bounce extends GameClient {
                 if (rd.field_a) {
                   var5 = jl.field_d;
                   synchronized (var5) {
-                    ld.field_l.a(sd.field_mb, true, param0 ^ 98);
+                    ld.field_l.a(AccountCreationResultPanel.field_mb, true, param0 ^ 98);
                     jl.field_d.d();
                   }
                 }

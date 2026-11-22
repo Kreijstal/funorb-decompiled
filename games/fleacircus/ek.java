@@ -175,7 +175,7 @@ final class ek {
           return;
         }
         sg.field_a = hg.field_p[param1];
-        mk.field_a = sa.field_c[param1];
+        AccountServiceResult.field_a = sa.field_c[param1];
     }
 
     static {

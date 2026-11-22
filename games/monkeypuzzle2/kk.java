@@ -344,7 +344,7 @@ final class kk {
             } else {
               var6 = hb.a(false);
               if (qb.field_b) {
-                stackIn_12_0 = gg.a(new String[]{Integer.toString(var6), Integer.toString(5)}, jg.field_kb, true);
+                stackIn_12_0 = gg.a(new String[]{Integer.toString(var6), Integer.toString(5)}, AccountCreationResultPanel.field_kb, true);
               } else {
                 stackIn_12_0 = lg.field_I;
               }
@@ -998,7 +998,7 @@ final class kk {
         int var8;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (this.field_c.c((byte) -104)) {
-          cj.a((byte) -47, ke.field_h[0]);
+          AccountServiceResult.a((byte) -47, ke.field_h[0]);
         }
         if (param2 < 15) {
           field_b = 52;
@@ -1109,11 +1109,11 @@ final class kk {
               }
             case 11:
               if (this.field_c.c(102)) {
-                cj.a((byte) -37, ke.field_h[0]);
+                AccountServiceResult.a((byte) -37, ke.field_h[0]);
                 qb.a(256, 0);
               }
               if (this.field_c.b(-29996)) {
-                cj.a((byte) 102, ke.field_h[0]);
+                AccountServiceResult.a((byte) 102, ke.field_h[0]);
                 qb.a(256, 256);
               }
               if (this.field_c.a((byte) 10)) {
@@ -1144,17 +1144,17 @@ final class kk {
                 UiWidget.field_j = UiWidget.field_j + 1;
                 if (fieldTemp$0 > 25) {
                   UiWidget.field_j = 0;
-                  cj.a((byte) 109, ke.field_h[0]);
+                  AccountServiceResult.a((byte) 109, ke.field_h[0]);
                 }
               }
               if (this.field_c.f(0)) {
-                cj.a((byte) -126, ke.field_h[0]);
+                AccountServiceResult.a((byte) -126, ke.field_h[0]);
                 jc.b(-42);
               }
               if (!this.field_c.d(25149)) {
                 break;
               }
-              cj.a((byte) -18, ke.field_h[0]);
+              AccountServiceResult.a((byte) -18, ke.field_h[0]);
               NodeHashTableIterator.a(-17076);
               if (var8 == 0) {
                 break;
@@ -1194,13 +1194,13 @@ final class kk {
                 }
               }
               if (this.field_c.f(0)) {
-                cj.a((byte) 103, ke.field_h[0]);
+                AccountServiceResult.a((byte) 103, ke.field_h[0]);
                 vg.a(124);
               }
               if (!this.field_c.d(25149)) {
                 break;
               }
-              cj.a((byte) -51, ke.field_h[0]);
+              AccountServiceResult.a((byte) -51, ke.field_h[0]);
               fl.a(-225);
               if (var8 == 0) {
                 break;

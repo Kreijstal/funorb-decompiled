@@ -106,7 +106,7 @@ final class MidiPcmStream extends PcmStream {
             MidiPcmStream.a(false, 34, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ug.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ug.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -541,7 +541,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -629,7 +629,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -687,7 +687,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1011,7 +1011,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -1292,7 +1292,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1445,7 +1445,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -1516,7 +1516,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1561,7 +1561,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1621,7 +1621,7 @@ final class MidiPcmStream extends PcmStream {
           this.a(256, -1, (byte) -63);
           this.d(true, 16);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -32,7 +32,7 @@ final class c {
             sj.field_d = i.a(-111, i.field_c, sj.field_d);
             di.field_x = me.a(8, di.field_x, i.field_c);
             hc.field_D = true;
-            ed.b(4);
+            AccountServiceResult.b(4);
           }
           if (param0 > -94) {
             field_c = (int[]) null;
@@ -237,7 +237,7 @@ final class c {
           sj.field_d = i.a(-111, i.field_c, sj.field_d);
           di.field_x = me.a(8, di.field_x, i.field_c);
           hc.field_D = true;
-          ed.b(4);
+          AccountServiceResult.b(4);
         }
         if (param0 > -94) {
           field_c = (int[]) null;

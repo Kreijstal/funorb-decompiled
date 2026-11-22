@@ -27,7 +27,7 @@ final class li extends me {
     final String b(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        uj var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         Object stackIn_10_0 = null;
@@ -52,11 +52,11 @@ final class li extends me {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_b != null) {
+            if (var4.message != null) {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_l = var4.field_f;
+            this.field_l = var4.success;
             this.field_m = param1;
           }
           if (this.field_l) {
@@ -118,7 +118,7 @@ final class li extends me {
     }
 
     final rc a(int param0, String param1) {
-        uj var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         rc stackIn_3_0 = null;
@@ -140,8 +140,8 @@ final class li extends me {
           if (!param1.equals(this.field_m)) {
             var3 = vl.a(param0 - 53, param1);
             if (var3 != null &&
-              var3.field_b == null) {
-              this.field_l = var3.field_f;
+              var3.message == null) {
+              this.field_l = var3.success;
               this.field_m = param1;
             } else {
               stackIn_11_0 = fi.field_u;

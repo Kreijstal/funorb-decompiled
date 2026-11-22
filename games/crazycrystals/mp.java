@@ -23,7 +23,7 @@ final class mp extends DualLinkNode {
 
     final static boolean a(int param0, String param1, dc param2, String param3, String param4, boolean param5, int param6) {
         RuntimeException var7 = null;
-        sa var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -38,7 +38,7 @@ final class mp extends DualLinkNode {
           if (lc.field_c != tl.field_e) {
             return false;
           }
-          var8 = new sa(qe.field_g, param2);
+          var8 = new AccountCreationResultPanel(qe.field_g, param2);
           qe.field_g.b(-3264, var8);
           if (!il.b(-120)) {
             ro.field_n = param6;

@@ -24,7 +24,7 @@ final class on extends qf {
 
     final static void a(int param0, int param1, fn param2, byte param3) {
         try {
-          dn.field_h = param0;
+          AccountServiceResult.field_h = param0;
           p.field_x = param2;
           wp.field_y = param1;
           if (param3 != -58) {

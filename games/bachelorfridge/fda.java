@@ -38,7 +38,7 @@ final class fda extends EventEffect {
             fda.b(-55);
           }
           var10 = (CharSequence) ((Object) param2);
-          var3_int = tea.a(var10, param1, 50);
+          var3_int = AccountCreationResultPanel.a(var10, param1, 50);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

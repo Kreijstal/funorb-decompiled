@@ -93,7 +93,7 @@ final class qn extends hc {
         int var6 = (this.field_q >> 1) + (this.field_t + param2);
         ag var8 = this.field_I.b(24595);
         if (nn.field_f == var8) {
-          var15 = ed.field_g[0];
+          var15 = AccountServiceResult.field_g[0];
           var9 = var15.field_x << 1;
           var10 = var15.field_A << 1;
           if (ha.field_d == null) {
@@ -128,7 +128,7 @@ final class qn extends hc {
           return;
         }
         if (bm.field_o == var8) {
-          var16 = ed.field_g[0];
+          var16 = AccountServiceResult.field_g[0];
           var9Lifetime1 = var16.field_x << 1;
           var10Lifetime1 = var16.field_A << 1;
           if (ha.field_d == null) {
@@ -163,14 +163,14 @@ final class qn extends hc {
           return;
         }
         if (var8 == fg.field_d) {
-          var13 = ed.field_g[2];
+          var13 = AccountServiceResult.field_g[2];
           var13.g(-(var13.field_y >> 1) + var5, -(var13.field_C >> 1) + var6, 256);
           return;
         }
         if (var8 != sc.field_a) {
           return;
         }
-        Sprite var12 = ed.field_g[1];
+        Sprite var12 = AccountServiceResult.field_g[1];
         var12.g(-(var12.field_y >> 1) + var5, var6 - (var12.field_C >> 1), 256);
     }
 

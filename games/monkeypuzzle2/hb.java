@@ -48,7 +48,7 @@ final class hb extends PacketBuffer {
         rb.field_fb[fd.field_n] = param5;
         int var6 = param0 + (param2 + param5);
         int var7 = var6 == 0 ? 0 : param2 * 1000 / var6;
-        cj.field_c[fd.field_n] = var7;
+        AccountServiceResult.field_c[fd.field_n] = var7;
         if (param4 != 1000) {
           field_k = (int[]) null;
         }

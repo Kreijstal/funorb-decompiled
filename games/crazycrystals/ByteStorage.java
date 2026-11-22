@@ -1889,7 +1889,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_password_confirm", 5236);
                 if (null != var2) {
-                  si.field_c = fa.a((byte) -89, var2);
+                  AccountServiceResult.field_c = fa.a((byte) -89, var2);
                 }
                 var2 = ah.a("create_email", 5236);
                 if (null != var2) {
@@ -2417,7 +2417,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("login_createaccount", 5236);
                 if (var2 != null) {
-                  si.field_a = fa.a((byte) -82, var2);
+                  AccountServiceResult.field_a = fa.a((byte) -82, var2);
                 }
                 var2 = ah.a("tohighscores", 5236);
                 if (var2 != null) {
@@ -3127,7 +3127,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("fs_accept_beforeaccept", 5236);
                 if (null != var2) {
-                  sa.field_rb = fa.a((byte) -113, var2);
+                  AccountCreationResultPanel.field_rb = fa.a((byte) -113, var2);
                 }
                 var2 = ah.a("fs_button_accept", 5236);
                 if (var2 != null) {

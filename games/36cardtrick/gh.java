@@ -45,7 +45,7 @@ final class gh extends IntrusiveNode {
             gh.clearStaticReferences(-108);
           }
           aj.field_s.a(new gi(param0, param0), 27362);
-          bg.field_tb.b(param0);
+          AccountCreationResultPanel.field_tb.b(param0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "gh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

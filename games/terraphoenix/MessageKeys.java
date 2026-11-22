@@ -221,7 +221,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("error_js5crc", false);
                 if (null != var2) {
-                  tj.field_ub = ll.a(0, var2);
+                  AccountCreationResultPanel.field_ub = ll.a(0, var2);
                 }
                 var2 = bc.a("error_js5io", false);
                 if (var2 != null) {

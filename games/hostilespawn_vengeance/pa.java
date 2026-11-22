@@ -339,7 +339,7 @@ final class pa extends ql {
           } else {
             stackIn_141_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(',').append(param3).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class pa extends ql {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ final class pa extends ql {
         nh.field_E.a(-1, 8360, -1);
         this.field_j = new v(re.field_B, 0, 0, 200, false);
         this.field_j.field_l = 0;
-        this.field_k = new v(jj.field_h, 0, 0, 200, false);
+        this.field_k = new v(AccountServiceResult.field_h, 0, 0, 200, false);
         this.field_k.field_l = 0;
         this.field_f = new v(ta.field_lb, 0, 0, 200, false);
         this.field_f.field_l = ih.field_y[0].field_e * 24 - 100;
@@ -723,7 +723,7 @@ final class pa extends ql {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ final class pa extends ql {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -319,10 +319,10 @@ final class c extends sc {
         }
     }
 
-    final static in a(String param0, int param1) {
+    final static AccountServiceResult a(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_7_0 = null;
-        in stackIn_13_0 = null;
+        AccountServiceResult stackIn_13_0 = null;
         Object stackIn_15_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -334,7 +334,7 @@ final class c extends sc {
           }
           if (na.field_S == wh.field_fb) {
             stackIn_7_0 = null;
-            return (in) (stackIn_7_0);
+            return (AccountServiceResult) (stackIn_7_0);
           }
           if (na.field_S == b.field_a &&
             param0.equals(ee.field_F)) {
@@ -346,7 +346,7 @@ final class c extends sc {
           ee.field_F = param0;
           na.field_S = wh.field_fb;
           stackIn_15_0 = null;
-          return (in) (stackIn_15_0);
+          return (AccountServiceResult) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

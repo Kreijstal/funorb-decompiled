@@ -110,7 +110,7 @@ public final class Confined extends i {
           tb.a((byte) 116);
           di.a(0);
           ui.a((byte) 110);
-          v.clearStaticReferences((byte) -39);
+          AccountCreationResultPanel.clearStaticReferences((byte) -39);
           jj.h((byte) -87);
           ef.n(111);
           dh.c(false);
@@ -274,7 +274,7 @@ public final class Confined extends i {
           gd.a((byte) -3);
           sf.b(92);
           ve.a(-340);
-          in.a(-116);
+          AccountServiceResult.a(-116);
           vj.a((byte) 125);
           ej.a(true);
           hc.clearStaticReferences(true);
@@ -1181,15 +1181,15 @@ public final class Confined extends i {
             jc.a(jb.field_r, 10265, 90.0f);
             this.h(51200);
             mi.field_b[0] = fk.a(jd.field_b, "", "boss-sphere-ambient").a();
-            mi.field_b[1] = ph.a(v.field_Bb, "", "boss-cube-ambient").b();
+            mi.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").b();
             mi.field_b[2] = fk.a(jd.field_b, "", "boss-bird-ambient").a();
             mi.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-ambient").a();
-            ja.field_b[0] = ph.a(v.field_Bb, "", "boss-sphere-breakdown").b();
-            ja.field_b[1] = ph.a(v.field_Bb, "", "boss-cube-breakdown").b();
+            ja.field_b[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-breakdown").b();
+            ja.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-breakdown").b();
             ja.field_b[2] = fk.a(jd.field_b, "", "boss-bird-breakdown").a();
             ja.field_b[3] = fk.a(jd.field_b, "", "boss-humanoid-breakdown").a();
             lk.field_e[0] = fk.a(jd.field_b, "", "boss-sphere-explode").a();
-            lk.field_e[1] = ph.a(v.field_Bb, "", "boss-cube-explode").b();
+            lk.field_e[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-explode").b();
             lk.field_e[2] = fk.a(jd.field_b, "", "boss-bird-explode").a();
             lk.field_e[3] = fk.a(jd.field_b, "", "boss-humanoid-explode").a();
             jc.a(jb.field_r, 10265, 93.0f);
@@ -1197,7 +1197,7 @@ public final class Confined extends i {
             bk.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
             bk.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
             bk.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
-            sc.field_h[0] = ph.a(v.field_Bb, "", "boss-sphere-armed-ambient").b();
+            sc.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
             ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
             gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
             am.g(param0 - 4163);
@@ -1206,8 +1206,8 @@ public final class Confined extends i {
           if (GameAppletShell.field_c == null) {
             jc.a(qh.field_u, 10265, 96.0f);
             this.h(51200);
-            var2 = new m(jd.field_b, v.field_Bb);
-            v.field_Bb = null;
+            var2 = new m(jd.field_b, AccountCreationResultPanel.field_Bb);
+            AccountCreationResultPanel.field_Bb = null;
             jd.field_b = null;
             GameAppletShell.field_c = gi.a(var2, (byte) -65, mn.field_b, "music/music", "");
             mn.field_b = null;

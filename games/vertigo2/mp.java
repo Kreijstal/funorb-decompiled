@@ -6,7 +6,7 @@ final class mp {
     static String field_c;
     static fe field_a;
     static UiPanel field_g;
-    static ch field_f;
+    static AccountServiceResult field_f;
     static int field_d;
     static int field_b;
 

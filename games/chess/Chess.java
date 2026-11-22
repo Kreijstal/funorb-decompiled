@@ -269,7 +269,7 @@ public final class Chess extends gb {
         if (je.h(30065)) {
           this.m(-122);
           if (je.h(30065)) {
-            if (vd.p(-77)) {
+            if (AccountCreationResultPanel.p(-77)) {
               discarded$2 = this.b(19763, false);
             }
             return;
@@ -412,7 +412,7 @@ public final class Chess extends gb {
           }
           if (wg.field_B == 14) {
             de.a(-31645);
-            hg.a(rl.field_a.length, 1024, aj.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
+            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, cn.a(11520), ai.field_h);
             il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
             wn.field_f = true;
             qk.field_h = -2;
@@ -1632,7 +1632,7 @@ public final class Chess extends gb {
         rd.clearStaticReferences(32286);
         ie.a(-1962602524);
         fm.l(-9);
-        vd.l((byte) -106);
+        AccountCreationResultPanel.l((byte) -106);
         ch.m(30);
         vn.j((byte) 5);
         ol.h(106);
@@ -1806,7 +1806,7 @@ public final class Chess extends gb {
         tk.b((byte) 77);
         tf.clearStaticReferences(false);
         ed.a((byte) -31);
-        aj.a(0);
+        AccountServiceResult.a(0);
         e.a(99);
         h.a(1187598372);
         jd.clearStaticReferences(false);

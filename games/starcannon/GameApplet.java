@@ -80,7 +80,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               cg.field_b = param5;
               ic.field_b = this;
               ef.field_d = param4;
-              ig.field_i = param4;
+              AccountServiceResult.field_i = param4;
               IterableNodeHashTable.field_b = ll.b(125);
               if (param0 <= 125) {
                 this.paint((java.awt.Graphics) null);
@@ -393,7 +393,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (var2.width < cg.field_b) {
                   return;
                 }
-                if (var2.height < ig.field_i) {
+                if (var2.height < AccountServiceResult.field_i) {
                   return;
                 }
               }

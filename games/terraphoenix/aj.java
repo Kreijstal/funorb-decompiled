@@ -6,20 +6,20 @@ final class aj {
     static Sprite[] field_a;
     static Archive field_b;
 
-    final static pd a(int param0, byte param1, String param2) {
-        pd var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, byte param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        pd stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new pd(false);
-          var3.field_b = param2;
+          var3 = new AccountServiceResult(false);
+          var3.message = param2;
           var4 = -32 % ((param1 - 37) / 49);
-          var3.field_c = param0;
+          var3.statusCode = param0;
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

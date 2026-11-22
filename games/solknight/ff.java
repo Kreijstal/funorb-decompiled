@@ -42,19 +42,19 @@ final class ff {
           ma.field_o = Archive.field_d;
           if (255 != param0) {
             if (param0 < 100) {
-              vb.field_j = mh.a(param0, true, param3);
+              vb.field_j = mh.createAccountErrorResult(param0, true, param3);
               return;
             }
             if (param0 > 105) {
-              vb.field_j = mh.a(param0, true, param3);
+              vb.field_j = mh.createAccountErrorResult(param0, true, param3);
               return;
             }
-            vb.field_j = DelegatingCanvas.a((byte) 17, param2);
+            vb.field_j = DelegatingCanvas.createAccountSuggestionsResult((byte) 17, param2);
             return;
           }
           stackIn_11_0 = false;
           stackIn_12_1 = !(uh.field_d >= 13);
-          vb.field_j = di.a(stackIn_11_0, stackIn_12_1);
+          vb.field_j = di.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

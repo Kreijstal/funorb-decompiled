@@ -65,7 +65,7 @@ final class SoftCacheReference extends CacheReference {
             return;
           }
           while (ek.a((byte) -127)) {
-            hr.field_e.a(108, fr.field_e, bk.lastKeyCode);
+            hr.field_e.a(108, AccountServiceResult.field_e, bk.lastKeyCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

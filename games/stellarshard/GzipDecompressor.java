@@ -136,22 +136,22 @@ final class GzipDecompressor {
           }
           if (param1 == 255) {
             stackIn_13_0 = !(u.field_k >= 13);
-            ed.field_d = dg.a(stackIn_13_0, 0);
+            ed.field_d = dg.createAccountSuccessResult(stackIn_13_0, 0);
             var6 = (String[]) null;
             mk.a((String[]) null, true);
             return;
           }
           if (param1 < 100) {
-            ed.field_d = fb.a(param1, true, param0);
+            ed.field_d = fb.createAccountErrorResult(param1, true, param0);
             return;
           }
           if (param1 > 105) {
-            ed.field_d = fb.a(param1, true, param0);
+            ed.field_d = fb.createAccountErrorResult(param1, true, param0);
             return;
           }
           var4 = param3;
           mk.a(var4, true);
-          ed.field_d = gj.a(true, param3);
+          ed.field_d = gj.createAccountSuggestionsResult(true, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

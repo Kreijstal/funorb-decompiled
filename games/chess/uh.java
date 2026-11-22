@@ -18,7 +18,7 @@ final class uh extends vm {
     final String a(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        aj var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_12_0 = null;
@@ -40,11 +40,11 @@ final class uh extends vm {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_e) {
+            if (null != var4.message) {
               return null;
             }
             this.field_t = param0;
-            this.field_s = var4.field_h;
+            this.field_s = var4.success;
           }
           if (!this.field_s) {
             stackIn_12_0 = BoundedRandomAccessFile.field_g;
@@ -136,7 +136,7 @@ final class uh extends vm {
     final mk a(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        aj var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         mk stackIn_3_0 = null;
         mk stackIn_10_0 = null;
@@ -155,9 +155,9 @@ final class uh extends vm {
           if (!param1.equals(this.field_t)) {
             var4 = sb.b(param1, true);
             if (var4 != null &&
-              null == var4.field_e) {
+              null == var4.message) {
               this.field_t = param1;
-              this.field_s = var4.field_h;
+              this.field_s = var4.success;
             } else {
               stackIn_10_0 = MouseWheelInput.field_d;
               return stackIn_10_0;

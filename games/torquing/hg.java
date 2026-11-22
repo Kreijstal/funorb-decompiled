@@ -119,7 +119,7 @@ final class hg {
         byte[] var2Lifetime98;
         byte[] var2Lifetime99;
         try {
-          dn.field_i = param1;
+          AccountServiceResult.field_i = param1;
           var2 = da.a((byte) 115, "gamename");
           if (var2 != null) {
             cp.field_i = SecondaryNodeDeque.a(var2, false);
@@ -521,7 +521,7 @@ final class hg {
           if (var2Lifetime99 != null) {
             qa.field_k[7] = SecondaryNodeDeque.a(var2Lifetime99, false);
           }
-          dn.field_i = null;
+          AccountServiceResult.field_i = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

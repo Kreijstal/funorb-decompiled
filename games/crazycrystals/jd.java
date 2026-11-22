@@ -26,7 +26,7 @@ final class jd extends og implements vd {
           field_D = null;
           return;
         }
-        jd.f((byte) 41);
+        jd.pollAccountCreationResult((byte) 41);
         field_G = null;
         field_A = null;
         field_J = null;
@@ -34,7 +34,7 @@ final class jd extends og implements vd {
         field_D = null;
     }
 
-    final static si f(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (lc.field_c == tl.field_e) {
           throw new IllegalStateException();
         }

@@ -15,10 +15,10 @@ final class GzipDecompressor {
           return 0;
         }
         if (ob.field_c == 0) {
-          if (!qd.field_Jb.a(0)) {
+          if (!AccountCreationResultPanel.field_Jb.a(0)) {
             return 20;
           }
-          if (!qd.field_Jb.a(255, "commonui")) {
+          if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
             return 40;
           }
           if (!sb.field_i.a(0)) {
@@ -45,10 +45,10 @@ final class GzipDecompressor {
               return 29;
             }
           }
-          if (!qd.field_Jb.a(0)) {
+          if (!AccountCreationResultPanel.field_Jb.a(0)) {
             return 43;
           }
-          if (!qd.field_Jb.a(255, "commonui")) {
+          if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
             return 57;
           }
           if (!sb.field_i.a(0)) {

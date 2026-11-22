@@ -47,12 +47,12 @@ final class kj extends IntrusiveNode {
         fb.field_a = fb.field_a + 1;
     }
 
-    final static nj a(String param0, int param1) {
+    final static AccountServiceResult a(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Object stackIn_2_0 = null;
         Object stackIn_9_0 = null;
-        nj stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -60,7 +60,7 @@ final class kj extends IntrusiveNode {
         try {
           if (rk.field_X == oe.field_b) {
             stackIn_2_0 = null;
-            return (nj) (stackIn_2_0);
+            return (AccountServiceResult) (stackIn_2_0);
           }
           if (param1 != 63) {
             var3 = (String) null;
@@ -76,7 +76,7 @@ final class kj extends IntrusiveNode {
           ByteStorage.field_c = null;
           rk.field_X = oe.field_b;
           stackIn_9_0 = null;
-          return (nj) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

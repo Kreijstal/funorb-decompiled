@@ -366,9 +366,9 @@ final class bf extends IntrusiveNode {
               ah.field_a.h(6000);
               ah.field_a = null;
             }
-            if (null != ok.field_tb) {
-              param0.a(ok.field_tb);
-              ok.field_tb = null;
+            if (null != AccountCreationResultPanel.field_tb) {
+              param0.a(AccountCreationResultPanel.field_tb);
+              AccountCreationResultPanel.field_tb = null;
             }
             this.field_z = this.field_z + 10;
           }

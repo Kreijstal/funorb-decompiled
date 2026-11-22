@@ -3,7 +3,7 @@
  */
 final class ja extends WidgetContainer implements u, ql {
     private jj field_z;
-    private jg field_C;
+    private AccountCreationResultPanel field_C;
     static te field_B;
     private ButtonWidget field_D;
     static boolean field_F;
@@ -153,7 +153,7 @@ final class ja extends WidgetContainer implements u, ql {
         }
     }
 
-    ja(jg param0) {
+    ja(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ml) null);
         String var7 = null;
         int var3 = 0;

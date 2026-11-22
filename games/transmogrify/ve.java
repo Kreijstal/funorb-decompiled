@@ -162,10 +162,10 @@ final class ve extends lj {
         }
     }
 
-    final static uj a(String[] args, byte param1) {
-        uj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, byte param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        uj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -174,8 +174,8 @@ final class ve extends lj {
           if (param1 > -98) {
             field_D = (String) null;
           }
-          var2 = new uj(false);
-          var2.field_j = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,7 +204,7 @@ final class ve extends lj {
             return false;
           }
           var4 = (String[]) null;
-          ve.a((String[]) null, (byte) -44);
+          ve.createAccountSuggestionsResult((String[]) null, (byte) -44);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

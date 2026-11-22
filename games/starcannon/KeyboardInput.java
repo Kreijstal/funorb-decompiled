@@ -201,7 +201,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var4 = eg.field_a[var3];
             if (var4 >= 0) {
               if (ja.field_c.field_k == var4) {
-                var5 = ig.field_b;
+                var5 = AccountServiceResult.field_b;
               } else {
                 var5 = sd.field_a;
               }

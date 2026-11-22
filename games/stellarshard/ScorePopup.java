@@ -189,7 +189,7 @@ final class ScorePopup {
             var4 = rd.field_b;
           }
           if (-16 == this.value) {
-            var4 = Integer.toString(ml.field_h);
+            var4 = Integer.toString(AccountServiceResult.field_h);
           }
           qj.field_a.c(var4, var2 - 1, var3, 0, -1);
           qj.field_a.c(var4, 1 + var2, var3, 0, -1);

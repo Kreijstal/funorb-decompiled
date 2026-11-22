@@ -36,19 +36,19 @@ final class he extends IntrusiveNode {
           db.field_a = AchievementNotice.field_l;
           if (255 == param3) {
             stackIn_12_0 = !(ab.field_j >= 13);
-            de.field_a = de.a(stackIn_12_0, (byte) -116);
+            de.field_a = de.createAccountSuccessResult(stackIn_12_0, (byte) -116);
             var6 = (String[]) null;
             ByteStorage.a(false, (String[]) null);
           } else {
             if (param3 < 100) {
-              de.field_a = mk.a(242763393, param2, param3);
+              de.field_a = mk.createAccountErrorResult(242763393, param2, param3);
             } else {
               if (param3 > 105) {
-                de.field_a = mk.a(242763393, param2, param3);
+                de.field_a = mk.createAccountErrorResult(242763393, param2, param3);
               } else {
                 var4 = args;
                 ByteStorage.a(false, var4);
-                de.field_a = ve.a(args, (byte) -128);
+                de.field_a = ve.createAccountSuggestionsResult(args, (byte) -128);
               }
             }
           }

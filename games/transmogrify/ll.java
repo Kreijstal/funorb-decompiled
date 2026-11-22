@@ -84,7 +84,7 @@ final class ll extends bi implements df {
           var3 = 0;
           if (var1_int != 0 &&
             bk.field_c.field_d >= 0) {
-            var3 = uj.field_d[bk.field_c.field_d];
+            var3 = AccountServiceResult.field_d[bk.field_c.field_d];
             if (var3 == 2) {
               i.a(false);
             } else if (var3 == 5) {

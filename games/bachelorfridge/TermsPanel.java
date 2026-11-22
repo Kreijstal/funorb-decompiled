@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TermsPanel extends WidgetContainer implements pc, WidgetActionListener {
-    private tea field_F;
+    private AccountCreationResultPanel field_F;
     private InteractiveWidget field_E;
     private LinkTextWidget field_D;
 
@@ -81,7 +81,7 @@ final class TermsPanel extends WidgetContainer implements pc, WidgetActionListen
           if (param3 >= 12) {
             return;
           }
-          this.field_F = (tea) null;
+          this.field_F = (AccountCreationResultPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class TermsPanel extends WidgetContainer implements pc, WidgetActionListen
         return "</col></u>";
     }
 
-    TermsPanel(tea param0) {
+    TermsPanel(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;

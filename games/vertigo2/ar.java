@@ -310,19 +310,19 @@ final class ar {
         throw new Error();
     }
 
-    final static ch b(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (un.field_Hb == l.field_a) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
           ar.a(117, (byte) 91, 7, 99, -65);
-          if (un.field_Hb == oe.field_qb) {
+          if (un.field_Hb == AccountCreationResultPanel.field_qb) {
             un.field_Hb = l.field_a;
             return mp.field_f;
           }
           return null;
         }
-        if (un.field_Hb == oe.field_qb) {
+        if (un.field_Hb == AccountCreationResultPanel.field_qb) {
           un.field_Hb = l.field_a;
           return mp.field_f;
         }

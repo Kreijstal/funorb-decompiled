@@ -173,21 +173,21 @@ final class an extends ql {
         return;
     }
 
-    final static jj a(int param0, int param1, String param2) {
-        jj var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, int param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        jj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new jj(false);
+          var3 = new AccountServiceResult(false);
           if (param1 != -10) {
             field_n = -0.3971230387687683f;
           }
-          var3.field_l = param2;
-          var3.field_a = param0;
+          var3.message = param2;
+          var3.statusCode = param0;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class an extends ql {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class an extends ql {
         }
         if (param0 != 0) {
           String var3 = (String) null;
-          an.a(84, -101, (String) null);
+          an.createAccountErrorResult(84, -101, (String) null);
         }
     }
 
@@ -300,7 +300,7 @@ final class an extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var3), "an.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var3), "an.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

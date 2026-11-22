@@ -21,8 +21,8 @@ final class vi extends IntrusiveNode {
     static String field_B;
 
     final static void b(byte param0) {
-        if (null != ch.field_e) {
-          ch.field_e.h(0);
+        if (null != AccountServiceResult.field_e) {
+          AccountServiceResult.field_e.h(0);
         }
         if (null != bb.field_F) {
           bb.field_F.c(true);

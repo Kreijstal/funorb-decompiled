@@ -309,7 +309,7 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
           iu discarded$0 = new iu();
           this.f(1);
           this.d(0);
-          fr.a(true, 0, true);
+          AccountServiceResult.a(true, 0, true);
           this.field_h = true;
           this.field_B = (int)kh.a(-61);
         } catch (Throwable throwable) {

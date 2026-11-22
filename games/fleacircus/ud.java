@@ -208,15 +208,15 @@ final class ud {
             sd.field_f = var2;
           }
           ContextualRuntimeException.field_g = new dd[b.field_d.length];
-          ua.field_tb = new dd[b.field_d.length];
+          AccountCreationResultPanel.field_tb = new dd[b.field_d.length];
           var3 = -15 % ((-48 - param0) / 60);
           var4 = 0;
           while (var4 < ContextualRuntimeException.field_g.length) {
             ContextualRuntimeException.field_g[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
             {
-              while ((null == ua.field_tb[var4] ||
-                ua.field_tb[var4] == ContextualRuntimeException.field_g[var4])) {
-                ua.field_tb[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
+              while ((null == AccountCreationResultPanel.field_tb[var4] ||
+                AccountCreationResultPanel.field_tb[var4] == ContextualRuntimeException.field_g[var4])) {
+                AccountCreationResultPanel.field_tb[var4] = je.field_O[db.a((byte) -115, new Random(), je.field_O.length)];
               }
               {
                 var4++;

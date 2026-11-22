@@ -209,12 +209,12 @@ final class qg extends kl implements ud {
         }
     }
 
-    final static og l(int param0) {
+    final static AccountServiceResult pollAccountCreationResult(int param0) {
         if (fk.field_q == pj.field_D) {
           throw new IllegalStateException();
         }
         if (param0 != 19860) {
-          return (og) null;
+          return (AccountServiceResult) null;
         }
         if (fk.field_q != wg.field_u) {
           return null;

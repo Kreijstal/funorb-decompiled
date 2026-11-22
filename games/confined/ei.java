@@ -88,7 +88,7 @@ final class ei extends ug implements el {
               var3 = sf.field_s;
               this.field_z = this.field_z + 10;
               if (kj.a((byte) -14)) {
-                var3 = v.field_Cb;
+                var3 = AccountCreationResultPanel.field_Cb;
                 this.field_z = this.field_z + 20;
               }
             } else {

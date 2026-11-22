@@ -28,23 +28,23 @@ final class ij extends ArchiveProvider {
     private long field_s;
     private boolean field_f;
 
-    final static ed a(int param0, String param1, boolean param2) {
-        ed var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, boolean param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        ed stackIn_2_0 = null;
-        ed stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ed(false);
+          var3 = new AccountServiceResult(false);
           if (!param2) {
-            stackIn_2_0 = (ed) null;
+            stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          var3.field_h = param1;
-          var3.field_e = param0;
+          var3.message = param1;
+          var3.statusCode = param0;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

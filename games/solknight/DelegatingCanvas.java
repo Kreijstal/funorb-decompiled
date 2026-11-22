@@ -18,10 +18,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static wg a(byte param0, String[] param1) {
-        wg var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(byte param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        wg stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,8 +30,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (param0 != 17) {
             field_e = 88;
           }
-          var2 = new wg(false);
-          var2.field_a = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,7 +71,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           el.field_n = lb.field_V[pf.field_a];
           if (param0 != -56) {
             var3 = (String[]) null;
-            DelegatingCanvas.a((byte) -108, (String[]) null);
+            DelegatingCanvas.createAccountSuggestionsResult((byte) -108, (String[]) null);
           }
           ta.field_d = IsaacRandom.field_g[pf.field_a];
           pf.field_a = pf.field_a + 1 & 127;

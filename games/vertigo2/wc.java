@@ -619,7 +619,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("unable_to_send_message_password_b", false);
                 if (var2 != null) {
-                  ch.field_f = in.a(0, var2);
+                  AccountServiceResult.field_f = in.a(0, var2);
                 }
                 var2 = tk.a("mu_chat_lobby_show_all", false);
                 if (null != var2) {
@@ -859,7 +859,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("spectate_xs_game", false);
                 if (var2 != null) {
-                  ch.field_g = in.a(0, var2);
+                  AccountServiceResult.field_g = in.a(0, var2);
                 }
                 var2 = tk.a("hide_players_in_xs_game", false);
                 if (var2 != null) {
@@ -927,7 +927,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("tab_hidechattemporarily", false);
                 if (var2 != null) {
-                  oe.field_rb = in.a(param0 ^ 0, var2);
+                  AccountCreationResultPanel.field_rb = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("esc_cancelprivatemessage", false);
                 if (null != var2) {
@@ -2061,7 +2061,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("unpacking_soundeffects", false);
                 if (var2 != null) {
-                  oe.field_sb = in.a(0, var2);
+                  AccountCreationResultPanel.field_sb = in.a(0, var2);
                 }
                 var2 = tk.a("unpacking_music", false);
                 if (var2 != null) {
@@ -2085,7 +2085,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("instructions", false);
                 if (var2 != null) {
-                  oe.field_vb = in.a(0, var2);
+                  AccountCreationResultPanel.field_vb = in.a(0, var2);
                 }
                 var2 = tk.a("tutorial", false);
                 if (var2 != null) {

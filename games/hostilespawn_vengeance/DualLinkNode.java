@@ -58,7 +58,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           var3.a((byte) -120, param0.field_n);
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

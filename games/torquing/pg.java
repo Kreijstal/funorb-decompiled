@@ -172,24 +172,24 @@ final class pg {
         }
     }
 
-    final static dn a(int param0, String param1, int param2) {
-        dn var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        dn stackIn_2_0 = null;
-        dn stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dn(false);
-          var3.field_a = param0;
-          var3.field_e = param1;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param0;
+          var3.message = param1;
           if (param2 == -1) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dn) null;
+          stackIn_2_0 = (AccountServiceResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

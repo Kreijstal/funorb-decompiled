@@ -122,7 +122,7 @@ final class mh extends EventEffect {
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              GzipDecompressor.field_a.field_Z = tea.field_lb.toUpperCase();
+              GzipDecompressor.field_a.field_Z = AccountCreationResultPanel.field_lb.toUpperCase();
               var9 = (2 + ho.field_g.field_sb) / 2;
               ik.field_i.a(40, 31407, -2 + var9, 0, ho.field_g.field_p - 40);
               if (SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {

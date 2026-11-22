@@ -173,10 +173,10 @@ final class hc {
         }
     }
 
-    final static ig a(String[] args, int param1) {
-        ig var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        ig stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -185,8 +185,8 @@ final class hc {
           if (param1 != 0) {
             field_e = (String) null;
           }
-          var2 = new ig(false);
-          var2.field_a = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

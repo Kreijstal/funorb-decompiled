@@ -454,7 +454,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
                 throw new RuntimeException("");
               }
             }
-            fr.a(false, 0, true);
+            AccountServiceResult.a(false, 0, true);
             this.field_S = true;
             this.field_X = new eb(this, this.field_a);
             this.x(-26394);

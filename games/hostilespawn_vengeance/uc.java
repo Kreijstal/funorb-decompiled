@@ -63,7 +63,7 @@ final class uc {
           for (var4 = 0; var4 < var2; var4++) {
             var5_ref_pf = wj.field_J[var4];
             var5_ref_pf.c(-103);
-            wg.c(var4, -5878);
+            AccountCreationResultPanel.c(var4, -5878);
             var6 = var5_ref_pf.field_J + var5_ref_pf.field_d >> 1;
             var7 = var5_ref_pf.field_C + var5_ref_pf.field_a >> 1;
             var8 = var5_ref_pf.field_D + var5_ref_pf.field_t >> 1;
@@ -108,7 +108,7 @@ final class uc {
             }
             var22[var17] = -2147483648;
             var18 = wj.field_J[var17];
-            wg.c(var17, -5878);
+            AccountCreationResultPanel.c(var17, -5878);
             for (var19 = 0; 3 > var19; var19++) {
               vg.field_a[var19] = vg.field_a[var19] + of.field_f[var16][var19];
             }
@@ -119,7 +119,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "uc.B(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "uc.B(" + param0 + ')');
         }
     }
 

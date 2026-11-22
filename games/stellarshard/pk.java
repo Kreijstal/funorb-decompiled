@@ -41,18 +41,18 @@ final class pk {
           var4_int = 63 / ((-39 - param3) / 62);
           if (255 == param2) {
             stackIn_5_0 = !(u.field_k >= 13);
-            DelegatingCanvas.field_d = dg.a(stackIn_5_0, 0);
+            DelegatingCanvas.field_d = dg.createAccountSuccessResult(stackIn_5_0, 0);
             return;
           }
           if (param2 < 100) {
-            DelegatingCanvas.field_d = fb.a(param2, true, param0);
+            DelegatingCanvas.field_d = fb.createAccountErrorResult(param2, true, param0);
             return;
           }
           if (105 >= param2) {
-            DelegatingCanvas.field_d = gj.a(true, param1);
+            DelegatingCanvas.field_d = gj.createAccountSuggestionsResult(true, param1);
             return;
           }
-          DelegatingCanvas.field_d = fb.a(param2, true, param0);
+          DelegatingCanvas.field_d = fb.createAccountErrorResult(param2, true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

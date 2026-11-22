@@ -197,7 +197,7 @@ final class je extends vm {
         if (il.field_a < 20) {
           return true;
         }
-        if (!vd.p(-101)) {
+        if (!AccountCreationResultPanel.p(-101)) {
           return true;
         }
         if (gm.field_d <= 0) {

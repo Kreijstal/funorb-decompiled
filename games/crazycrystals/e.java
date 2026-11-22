@@ -29,7 +29,7 @@ final class e {
         }
         tl.field_a = new am(kg.a(mo.field_i, 100, 0));
         jo.field_p = new am(kg.a(pl.field_h, 100, 0));
-        sa.field_mb = new am(kg.a(sj.field_d, 100, 0));
+        AccountCreationResultPanel.field_mb = new am(kg.a(sj.field_d, 100, 0));
         io.field_M = new am(kg.a(jn.field_m, 100, 0));
         ec.field_k = new am(kg.a(bb.field_x, 100, 0));
     }

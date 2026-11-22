@@ -204,7 +204,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           ki.field_f = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ki.field_f));
-          ki.field_f.setSize(og.field_pb, wf.field_b);
+          ki.field_f.setSize(AccountCreationResultPanel.field_pb, wf.field_b);
           ki.field_f.setVisible(true);
           if (param0 >= -54) {
             return;
@@ -575,7 +575,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 RandomAccessCacheFile.c((byte) 46);
                 this.f(-121);
-                ia.field_b = tf.a(og.field_pb, true, wf.field_b, (java.awt.Component) ((Object) ki.field_f));
+                ia.field_b = tf.a(AccountCreationResultPanel.field_pb, true, wf.field_b, (java.awt.Component) ((Object) ki.field_f));
                 this.initialise((byte) 122);
                 wl.field_i = qk.j(-17514);
                 do {
@@ -780,7 +780,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.run();
               }
               f.field_c = this;
-              og.field_pb = param4;
+              AccountCreationResultPanel.field_pb = param4;
               kb.field_b = param4;
               GameKeyHandler.field_a = param2;
               ActiveLevel.field_P = 0;
@@ -865,7 +865,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (50 < fieldTemp$1) {
             vh.field_q = true;
             gf.field_g = gf.field_g - 50;
-            ki.field_f.setSize(og.field_pb, wf.field_b);
+            ki.field_f.setSize(AccountCreationResultPanel.field_pb, wf.field_b);
             ki.field_f.setVisible(true);
             if (null != ii.field_s &&
               sf.field_H == null) {

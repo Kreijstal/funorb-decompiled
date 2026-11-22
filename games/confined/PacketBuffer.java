@@ -164,8 +164,8 @@ class PacketBuffer extends IntrusiveNode {
             dc.d(111);
             return;
           }
-          if (v.field_Db == null) {
-            v.field_Db = new pb(128);
+          if (AccountCreationResultPanel.field_Db == null) {
+            AccountCreationResultPanel.field_Db = new pb(128);
             c.field_k = 0;
           }
           var3Lifetime1 = var1.readString(true);
@@ -178,12 +178,12 @@ class PacketBuffer extends IntrusiveNode {
           if (var6 == null) {
             var6 = pm.a(var5, true);
             if (var6 != null) {
-              v.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 123);
+              AccountCreationResultPanel.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 123);
             }
           }
           if (var6 == null) {
             var6 = new fg();
-            v.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 117);
+            AccountCreationResultPanel.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 117);
             fieldTemp$0 = c.field_k;
             c.field_k = c.field_k + 1;
             var6.field_lb = fieldTemp$0;

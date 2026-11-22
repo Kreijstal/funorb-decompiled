@@ -39,16 +39,16 @@ final class dq {
         rt.b(-var1Lifetime1 + (32 + gn.field_a), (byte) -116);
     }
 
-    final static fr a(int param0, int param1, String param2) {
+    final static AccountServiceResult createAccountErrorResult(int param0, int param1, String param2) {
         String stackIn_7_2 = null;
         try {
           if (param1 != 32) {
             dq.a((byte) 54);
           }
-          fr var3 = new fr(false);
-          var3.field_a = param0;
-          var3.field_f = param2;
-          fr stackIn_3_0 = var3;
+          AccountServiceResult var3 = new AccountServiceResult(false);
+          var3.statusCode = param0;
+          var3.message = param2;
+          AccountServiceResult stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class dq {
         field_c = null;
         if (param0 < 119) {
           String var2 = (String) null;
-          dq.a(-37, 70, (String) null);
+          dq.createAccountErrorResult(-37, 70, (String) null);
         }
     }
 

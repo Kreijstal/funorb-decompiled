@@ -512,7 +512,7 @@ abstract class ob extends GameAppletShell {
         } else {
           if (10 <= af.field_u) {
             if (!fe.j(param0 ^ -94)) {
-              ed.a(127);
+              AccountServiceResult.a(127);
             } else {
               if (fh.field_b != 0) {
                 il.a(ki.field_n, (byte) -109);

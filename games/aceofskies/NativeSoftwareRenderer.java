@@ -36,7 +36,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
           }
           vk.b(false);
           this.MA(this.field_a, 0, 0);
-          fr.a(false, 0, true);
+          AccountServiceResult.a(false, 0, true);
           this.field_g = true;
           ja discarded$1 = new ja();
           this.a(new ja());

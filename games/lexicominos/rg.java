@@ -90,7 +90,7 @@ final class rg {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_pk = ae.field_J[var3];
             var4_ref_pk.a((byte) -50);
-            u.b(var3, -119);
+            AccountCreationResultPanel.b(var3, -119);
             var5 = var4_ref_pk.field_v + var4_ref_pk.field_m >> 1;
             var6 = var4_ref_pk.field_G + var4_ref_pk.field_M >> 1;
             var7 = var4_ref_pk.field_O + var4_ref_pk.field_F >> 1;
@@ -135,7 +135,7 @@ final class rg {
             }
             var21[var16] = -2147483648;
             var17 = ae.field_J[var16];
-            u.b(var16, -114);
+            AccountCreationResultPanel.b(var16, -114);
             for (var18 = 0; var18 < 3; var18++) {
               oj.field_l[var18] = oj.field_l[var18] + uj.field_f[var15][var18];
             }

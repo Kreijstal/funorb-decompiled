@@ -74,7 +74,7 @@ final class ho implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "ho.C(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "ho.C(" + param0 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class ho implements Iterator {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class ho implements Iterator {
           this.field_h = param0;
           this.a((byte) 67);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

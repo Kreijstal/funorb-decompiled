@@ -41,7 +41,7 @@ final class me {
         if (al.field_o.a(param1, (byte) 118)) {
           return;
         }
-        jb.field_Sb[param1] = param0;
+        AccountCreationResultPanel.field_Sb[param1] = param0;
         al.field_o.a(param1, -128);
         if (param2 > 65) {
           hf.field_ob.a(new a(param1), false);
@@ -72,7 +72,7 @@ final class me {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

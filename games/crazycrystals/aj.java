@@ -83,10 +83,10 @@ final class aj extends ig {
         field_s = null;
     }
 
-    final static si a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        si stackIn_6_0 = null;
+        AccountServiceResult stackIn_6_0 = null;
         Object stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -107,7 +107,7 @@ final class aj extends ig {
           nn.field_a = null;
           sg.field_b = l.field_b;
           stackIn_8_0 = null;
-          return (si) (stackIn_8_0);
+          return (AccountServiceResult) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -7,11 +7,11 @@ final class rf {
     static int field_b;
     static String field_a;
 
-    final static ed a(byte param0, String param1) {
+    final static AccountServiceResult a(byte param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;
-        ed stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -22,7 +22,7 @@ final class rf {
           }
           if (bd.field_h == ci.field_e) {
             stackIn_4_0 = null;
-            return (ed) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (bd.field_h == kd.field_p &&
             param1.equals(ic.field_m)) {
@@ -34,7 +34,7 @@ final class rf {
           sd.field_d = null;
           bd.field_h = ci.field_e;
           stackIn_9_0 = null;
-          return (ed) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -201,7 +201,7 @@ final class vk extends jf {
             bi.field_i = bi.field_i - var4;
             ud.field_k = GameKeyHandler.field_a[7];
           }
-          wg.field_e = (wg.field_e * 9 + var2) / 10;
+          AccountServiceResult.field_e = (AccountServiceResult.field_e * 9 + var2) / 10;
           sk.field_o = (sk.field_o * 9 + var1_int) / 10;
           if (1 * GameKeyHandler.field_a[7] / 10 > var3 &&
             ud.field_k >= GameKeyHandler.field_a[7] * 1 / 10) {

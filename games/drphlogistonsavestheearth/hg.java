@@ -13,9 +13,9 @@ final class hg extends hc {
     static int field_rb;
 
     final static boolean a(String param0, boolean param1, int param2, byte param3, String param4, String param5, v param6) {
-        qd var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
-        qd var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -33,7 +33,7 @@ final class hg extends hc {
           if (fk.field_q != pj.field_D) {
             return false;
           }
-          var8 = new qd(ng.field_c, param6);
+          var8 = new AccountCreationResultPanel(ng.field_c, param6);
           var7 = var8;
           ng.field_c.a((byte) -109, (vg) (var8));
           if (wh.a(false)) {

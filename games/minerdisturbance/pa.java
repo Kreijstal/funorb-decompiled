@@ -7,12 +7,12 @@ final class pa {
     static rc[] field_a;
     static int[][] field_b;
 
-    final static ed a(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (ic.field_l == mc.field_t) {
           throw new IllegalStateException();
         }
         if (param0 >= -19) {
-          return (ed) null;
+          return (AccountServiceResult) null;
         }
         if (kd.field_p == ic.field_l) {
           ic.field_l = mc.field_t;

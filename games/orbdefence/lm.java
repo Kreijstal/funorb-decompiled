@@ -2076,7 +2076,7 @@ final class lm {
                 }
                 var2 = t.a(param0 ^ 15188, "next");
                 if (var2 != null) {
-                  qj.field_g = bk.a(var2, -12465);
+                  AccountServiceResult.field_g = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "graphics_colon");
                 if (var2 != null) {
@@ -2752,7 +2752,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "mb_full_access_1");
                 if (var2 != null) {
-                  qj.field_a = bk.a(var2, -12465);
+                  AccountServiceResult.field_a = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "mb_full_access_2");
                 if (var2 != null) {

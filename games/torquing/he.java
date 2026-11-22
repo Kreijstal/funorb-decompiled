@@ -231,9 +231,9 @@ final class he {
         }
     }
 
-    final static dn a(int param0, String param1) {
+    final static AccountServiceResult a(int param0, String param1) {
         RuntimeException var2 = null;
-        dn stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -256,7 +256,7 @@ final class he {
           qi.field_d = null;
           on.field_b = param1;
           stackIn_10_0 = null;
-          return (dn) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -6,7 +6,7 @@ import java.io.*;
 final class BoundedRandomAccessFile {
     private long field_f;
     static sf field_g;
-    static mk field_b;
+    static AccountServiceResult field_b;
     static int[] field_e;
     static ResourceArchive field_d;
     private long field_a;

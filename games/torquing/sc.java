@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sc extends WidgetContainer implements fp, ng {
-    private nm field_C;
+    private AccountCreationResultPanel field_C;
     private rb field_D;
     private lg field_E;
 
@@ -15,7 +15,7 @@ final class sc extends WidgetContainer implements fp, ng {
         return "<u=2164A2><col=2164A2>";
     }
 
-    sc(nm param0) {
+    sc(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
@@ -187,7 +187,7 @@ final class sc extends WidgetContainer implements fp, ng {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -85) {
-            this.field_C = (nm) null;
+            this.field_C = (AccountCreationResultPanel) null;
           }
           if (param1 != this.field_E) {
             return;

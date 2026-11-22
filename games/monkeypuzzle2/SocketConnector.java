@@ -126,7 +126,7 @@ abstract class SocketConnector {
 
     final static void c(byte param0) {
         int var1 = pf.a((byte) -92, 3);
-        cj.a((byte) 108, ke.field_h[25 + var1]);
+        AccountServiceResult.a((byte) 108, ke.field_h[25 + var1]);
         if (param0 > -80) {
           return;
         }

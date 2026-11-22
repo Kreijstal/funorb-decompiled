@@ -166,7 +166,7 @@ abstract class fi extends UiWidget implements pb {
         ia var1_refLifetime1;
         if (!param0) {
           fi.c(false);
-          var1_ref = (ia) (uj.field_c.a(-9424));
+          var1_ref = (ia) (AccountServiceResult.field_c.a(-9424));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
@@ -176,7 +176,7 @@ abstract class fi extends UiWidget implements pb {
           kk.field_f.a(var1_ref, -128);
           return;
         }
-        var1_refLifetime1 = (ia) (uj.field_c.a(-9424));
+        var1_refLifetime1 = (ia) (AccountServiceResult.field_c.a(-9424));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }

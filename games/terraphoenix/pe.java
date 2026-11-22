@@ -17,7 +17,7 @@ final class pe {
           ng.field_y = param2;
           ai.field_c = param8;
           eb.field_B = param1;
-          tj.field_wb = param5;
+          AccountCreationResultPanel.field_wb = param5;
           lg.field_h = param4;
           if (param6 != 128) {
             field_d = (long[]) null;

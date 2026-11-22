@@ -67,7 +67,7 @@ final class GzipDecompressor {
           if (param0 != 10) {
             field_c = (String) null;
           }
-          stackIn_3_0 = uj.field_h.a(param1, (byte) 102, "");
+          stackIn_3_0 = AccountServiceResult.field_h.a(param1, (byte) 102, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

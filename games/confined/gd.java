@@ -12,18 +12,18 @@ final class gd extends IntrusiveNode {
     static int field_u;
     boolean field_o;
 
-    final static in a(int param0, String param1, int param2) {
-        in var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        in stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new in(false);
-          var3.field_f = param1;
-          var3.field_g = param2;
+          var3 = new AccountServiceResult(false);
+          var3.message = param1;
+          var3.statusCode = param2;
           if (param0 != 4) {
             gd.a((byte) 14);
           }

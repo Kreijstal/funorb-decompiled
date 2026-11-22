@@ -11,7 +11,7 @@ final class bc extends hi {
     static int field_r;
 
     final qd a(String param0, byte param1) {
-        qj var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         qd stackIn_3_0 = null;
@@ -30,8 +30,8 @@ final class bc extends hi {
           if (!param0.equals(this.field_p)) {
             var3 = lf.a(param0, true);
             if (var3 != null &&
-              var3.field_e == null) {
-              this.field_n = var3.field_f;
+              var3.message == null) {
+              this.field_n = var3.success;
               this.field_p = param0;
             } else {
               stackIn_9_0 = uj.field_b;
@@ -64,7 +64,7 @@ final class bc extends hi {
     final String a(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        qj var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         String stackIn_15_0 = null;
@@ -87,10 +87,10 @@ final class bc extends hi {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_e != null) {
+            if (var4.message != null) {
               return null;
             }
-            this.field_n = var4.field_f;
+            this.field_n = var4.success;
             this.field_p = param1;
           }
           if (this.field_n) {

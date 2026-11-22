@@ -204,7 +204,7 @@ final class oc {
 
     final static boolean a(String param0, kl param1, String param2, String param3, boolean param4, int param5, int param6) {
         RuntimeException var7 = null;
-        bg var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -219,7 +219,7 @@ final class oc {
           if (tj.field_F != jc.field_P) {
             return false;
           }
-          var8 = new bg(sd.field_c, param1);
+          var8 = new AccountCreationResultPanel(sd.field_c, param1);
           sd.field_c.b(var8, (byte) -121);
           if (param5 != 0) {
             oc.clearStaticReferences(-71);

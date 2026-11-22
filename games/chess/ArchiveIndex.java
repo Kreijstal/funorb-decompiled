@@ -27,8 +27,8 @@ final class ArchiveIndex {
         int var2;
         var2 = Chess.field_G;
         if (an.field_e <= 0) {
-          if (aj.field_c > 0) {
-            aj.field_c = aj.field_c - 1;
+          if (AccountServiceResult.field_c > 0) {
+            AccountServiceResult.field_c = AccountServiceResult.field_c - 1;
           } else {
             if (0 < ed.field_c) {
               ed.field_c = ed.field_c - 1;
@@ -40,8 +40,8 @@ final class ArchiveIndex {
         if (an.field_e > 0) {
           tf.a(90);
         }
-        if (aj.field_c > 0) {
-          ByteStorage.a(aj.field_c, true);
+        if (AccountServiceResult.field_c > 0) {
+          ByteStorage.a(AccountServiceResult.field_c, true);
         }
         if (ed.field_c > 0) {
           ByteStorage.a(ed.field_c, true);

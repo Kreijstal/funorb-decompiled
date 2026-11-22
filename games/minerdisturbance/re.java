@@ -143,7 +143,7 @@ final class re implements uj {
           var9 = MinerDisturbance.field_ab;
           try {
             if (null == ci.field_i &&
-              !ed.a(param4, (byte) -126)) {
+              !AccountServiceResult.a(param4, (byte) -126)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }

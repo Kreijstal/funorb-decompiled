@@ -45,14 +45,14 @@ final class gf {
           }
           return;
         }
-        if (u.field_sb < this.field_f) {
-          ef.field_e = (this.field_f - u.field_sb) / 2;
+        if (AccountCreationResultPanel.field_sb < this.field_f) {
+          ef.field_e = (this.field_f - AccountCreationResultPanel.field_sb) / 2;
         } else {
           if (this.field_f > 0) {
             ef.field_e = 0;
           }
         }
-        if (u.field_sb == this.field_s &&
+        if (AccountCreationResultPanel.field_sb == this.field_s &&
           bk.field_d == this.field_c) {
           return;
         }
@@ -127,7 +127,7 @@ final class gf {
           this.c(-88);
         }
         this.field_b = bk.field_d;
-        this.field_k = u.field_sb;
+        this.field_k = AccountCreationResultPanel.field_sb;
         this.field_g.a(-26278, this.field_i, this.field_a);
         rl.field_O = false;
         ra var2 = sg.a(0, this.field_i, this.field_a, 0, 0, jh.field_a);
@@ -176,12 +176,12 @@ final class gf {
             }
           }
         }
-        if (var2 != u.field_sb ||
+        if (var2 != AccountCreationResultPanel.field_sb ||
           var3 != bk.field_d) {
           this.field_g.a(-26278, var2, var3);
         }
         if (this.field_f > 0) {
-          ef.field_e = (this.field_f - u.field_sb) / 2;
+          ef.field_e = (this.field_f - AccountCreationResultPanel.field_sb) / 2;
         }
     }
 
@@ -559,9 +559,9 @@ final class gf {
           if (param0 != 3) {
             field_e = 14;
           }
-          if (mb.field_a != null &&
-            !mb.field_a.equals(param2.getParameter("settings"))) {
-            var3 = mb.field_a;
+          if (AccountServiceResult.field_a != null &&
+            !AccountServiceResult.field_a.equals(param2.getParameter("settings"))) {
+            var3 = AccountServiceResult.field_a;
             var4 = var3;
             var4Lifetime2 = var3;
           }

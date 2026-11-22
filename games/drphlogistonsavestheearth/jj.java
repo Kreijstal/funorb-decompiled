@@ -5,7 +5,7 @@ final class jj {
     static nh field_c;
     static int field_b;
     static he[] field_a;
-    static og field_d;
+    static AccountServiceResult field_d;
 
     public static void a(int param0) {
         if (param0 >= 109) {

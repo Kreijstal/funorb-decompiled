@@ -41,7 +41,7 @@ final class ek extends ab implements dn {
             ek.a((byte) 107);
           }
           bk.lastKeyCode = ArchiveIndex.field_e[ch.field_a];
-          fr.field_e = qb.field_o[ch.field_a];
+          AccountServiceResult.field_e = qb.field_o[ch.field_a];
           ch.field_a = ch.field_a + 1 & 127;
           stackIn_8_0 = true;
         }

@@ -191,7 +191,7 @@ abstract class v extends b {
         FullscreenFocusCanvas.a(123, bd.field_t);
         oc.c();
         SoftwareRasterizer.b();
-        ef.a(3);
+        AccountServiceResult.a(3);
         if (256 > var5) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }

@@ -15,10 +15,10 @@ final class eb extends IntrusiveNode {
     static boolean field_m;
 
     final static boolean a(String param0, boolean param1, String param2, int param3, dg param4, int param5, String param6) {
-        ta var7 = null;
+        AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         String var8 = null;
-        ta var9 = null;
+        AccountCreationResultPanel var9 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -37,7 +37,7 @@ final class eb extends IntrusiveNode {
             var8 = (String) null;
             eb.a((String) null, false, (String) null, -40, (dg) null, -123, (String) null);
           }
-          var9 = new ta(t.field_b, param4);
+          var9 = new AccountCreationResultPanel(t.field_b, param4);
           var7 = var9;
           t.field_b.a((byte) 125, (UiComponent) (var9));
           if (wi.a(0)) {

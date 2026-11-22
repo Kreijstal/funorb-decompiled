@@ -34,7 +34,7 @@ final class tc extends PcmStream {
           param0.a(param1, param3, (byte) -82);
           param0.b(param2, 0);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class tc extends PcmStream {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class tc extends PcmStream {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class tc extends PcmStream {
           }
           this.field_A = param1;
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "tc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "tc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -434,7 +434,7 @@ final class tc extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2), "tc.L(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2), "tc.L(" + param0 + ',' + param1 + ')');
         }
     }
 

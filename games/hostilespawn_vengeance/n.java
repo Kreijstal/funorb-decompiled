@@ -12,7 +12,7 @@ final class n extends hi {
     static String[] field_p;
 
     final bm a(String param0, byte param1) {
-        jj var3 = null;
+        AccountServiceResult var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -32,9 +32,9 @@ final class n extends hi {
           if (!param0.equals(this.field_u)) {
             var3 = ph.a(param0, -79);
             if (var3 != null &&
-              null == var3.field_l) {
+              null == var3.message) {
               this.field_u = param0;
-              this.field_r = var3.field_b;
+              this.field_r = var3.success;
             } else {
               stackIn_9_0 = m.field_n;
               return stackIn_9_0;
@@ -57,7 +57,7 @@ final class n extends hi {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class n extends hi {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        jj var5 = null;
+        AccountServiceResult var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         Object stackIn_10_0 = null;
@@ -105,12 +105,12 @@ final class n extends hi {
             if (var5 == null) {
               return null;
             }
-            if (null != var5.field_l) {
+            if (null != var5.message) {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
             this.field_u = param1;
-            this.field_r = var5.field_b;
+            this.field_r = var5.success;
           }
           if (this.field_r) {
             stackIn_16_0 = kj.field_a;
@@ -128,7 +128,7 @@ final class n extends hi {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

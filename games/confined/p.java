@@ -13,20 +13,20 @@ final class p {
         field_b = null;
     }
 
-    final static in a(int param0, String[] param1) {
-        in var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        in stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new in(false);
+          var2 = new AccountServiceResult(false);
           if (param0 != 26663) {
             field_b = (String) null;
           }
-          var2.field_c = param1;
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

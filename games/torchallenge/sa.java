@@ -14,7 +14,7 @@ final class sa {
 
     final static String a(boolean param0) {
         if (li.field_K < 2) {
-          return ta.field_Ab;
+          return AccountCreationResultPanel.field_Ab;
         }
         if (null != rj.field_f) {
           if (!rj.field_f.b(-7957)) {

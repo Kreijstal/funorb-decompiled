@@ -16,14 +16,14 @@ final class mc extends kd {
         }
     }
 
-    final static mb b(boolean param0, int param1) {
-        mb var2 = null;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, int param1) {
+        AccountServiceResult var2 = null;
         if (param1 > 82) {
-          var2 = new mb(true);
+          var2 = new AccountServiceResult(true);
           var2.field_b = param0 ? true : false;
           return var2;
         }
-        return (mb) null;
+        return (AccountServiceResult) null;
     }
 
     public static void a(int param0) {

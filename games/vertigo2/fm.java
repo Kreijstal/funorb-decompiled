@@ -157,7 +157,7 @@ final class fm {
             ea.field_c = new UiPanel(0L, param10);
             ea.field_c.field_S = ad.field_c;
             td.field_c.b(ea.field_c, param4 - 12774);
-            stackIn_34_0 = oe.q(76) ? 1 : 0;
+            stackIn_34_0 = AccountCreationResultPanel.q(76) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
             !pe.field_r) {

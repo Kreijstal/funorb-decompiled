@@ -627,7 +627,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "your_game");
                 if (var2 != null) {
-                  tea.field_lb = qq.a(var2, param0);
+                  AccountCreationResultPanel.field_lb = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "game_full");
                 if (null != var2) {

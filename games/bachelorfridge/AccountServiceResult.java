@@ -3,14 +3,14 @@
  */
 final class AccountServiceResult {
     static Sprite[] field_b;
-    String[] field_a;
-    String field_g;
+    String[] suggestions;
+    String message;
     static String field_i;
     static String field_f;
     boolean field_h;
-    int field_d;
+    int statusCode;
     static int[] field_c;
-    boolean field_e;
+    boolean success;
 
     public static void releaseStatics(int param0) {
         field_f = null;
@@ -116,7 +116,7 @@ final class AccountServiceResult {
     }
 
     AccountServiceResult(boolean param0) {
-        this.field_e = param0 ? true : false;
+        this.success = param0 ? true : false;
     }
 
     static {

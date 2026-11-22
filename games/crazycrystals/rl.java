@@ -118,7 +118,7 @@ abstract class rl extends oh {
           fp.field_a = ei.field_F;
           var3 = param2;
           mb.field_g = mb.field_g + var3;
-          sa.n(-26);
+          AccountCreationResultPanel.n(-26);
           MouseInputHandler.field_b = null;
           qn.field_n = 0;
           gh.field_C = 0;

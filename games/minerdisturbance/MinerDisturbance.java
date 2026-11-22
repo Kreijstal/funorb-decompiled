@@ -4769,7 +4769,7 @@ public final class MinerDisturbance extends ob {
           nn.a(true);
           ig.b(119);
           hm.clearStaticReferences((byte) 112);
-          uk.j((byte) -42);
+          AccountCreationResultPanel.j((byte) -42);
           jl.h((byte) 126);
           rg.r(param0 ^ 28777);
           ik.p(120);
@@ -4910,7 +4910,7 @@ public final class MinerDisturbance extends ob {
           af.a(param0 - 12708);
           hf.a(-16935);
           bd.a((byte) 126);
-          ed.c(-20613);
+          AccountServiceResult.c(-20613);
           lc.a(param0 - 52);
           wb.a(param0 ^ 1);
           fg.a(-114);
@@ -6465,7 +6465,7 @@ public final class MinerDisturbance extends ob {
                     vc.a(true)) {
                     if (tm.field_v != 4 ||
                       !oc.d(63)) {
-                      ed.a(true);
+                      AccountServiceResult.a(true);
                       if (var4 != 0) {
                         r.a(-14475);
                       }

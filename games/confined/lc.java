@@ -42,7 +42,7 @@ final class lc {
     public static void a(byte param0) {
         field_J = null;
         if (param0 != 83) {
-          lc.b((byte) 64);
+          lc.pollAccountCreationResult((byte) 64);
         }
         field_l = null;
     }
@@ -155,7 +155,7 @@ final class lc {
         var4 = Confined.field_J ? 1 : 0;
         try {
           if (!param0) {
-            lc.b((byte) -58);
+            lc.pollAccountCreationResult((byte) -58);
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
@@ -449,7 +449,7 @@ final class lc {
         fa.field_R = this.field_G + var10 * var18 + var20 * var14;
     }
 
-    final static in b(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (param0 > -36) {
           field_l = (String[]) null;
         }

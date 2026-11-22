@@ -53,7 +53,7 @@ final class lp extends IntrusiveNode {
             field_q = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "lp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "lp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class lp extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class lp extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var3), "lp.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var3), "lp.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

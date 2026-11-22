@@ -3,7 +3,7 @@
  */
 final class q {
     static String field_g;
-    static uj field_h;
+    static AccountServiceResult field_h;
     static java.math.BigInteger field_f;
     static String field_e;
     static int[] field_i;

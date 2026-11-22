@@ -20,7 +20,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
           if (this.resultReceived) {
             return super.advanceDialogAnimation((byte) -1);
           }
-          var2 = QuinticFadeSupport.a(-61440);
+          var2 = QuinticFadeSupport.pollAccountCreationResult(-61440);
           if (var2 == null) {
             return super.advanceDialogAnimation((byte) -1);
           }
@@ -35,7 +35,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         if (this.resultReceived) {
           return super.advanceDialogAnimation((byte) -1);
         }
-        var2Lifetime1 = QuinticFadeSupport.a(-61440);
+        var2Lifetime1 = QuinticFadeSupport.pollAccountCreationResult(-61440);
         if (var2Lifetime1 != null) {
           this.handleRegistrationResult(false, (byte) -53, var2Lifetime1);
         }
@@ -50,7 +50,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
     }
 
     final void showUnavailable(byte obfuscationGuard) {
-        this.handleRegistrationResult(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, ResourceProtocolClient.field_m));
+        this.handleRegistrationResult(true, (byte) -103, DisplacedUnitMarker.createAccountErrorResult(-1, 248, ResourceProtocolClient.field_m));
         if (obfuscationGuard >= -81) {
           this.resultReceived = false;
         }

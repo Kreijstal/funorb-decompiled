@@ -141,7 +141,7 @@ final class tj extends tk {
               if (null != this.field_h.field_d &&
                 this.field_h.field_d[param2] != null) {
                 var29 = this.field_h.field_d[param2];
-                var30 = in.a(0, var5, var18.length - 2, -26879);
+                var30 = AccountServiceResult.a(0, var5, var18.length - 2, -26879);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -194,7 +194,7 @@ final class tj extends tk {
             if (null != this.field_h.field_d &&
               null != this.field_h.field_d[param2]) {
               var27 = this.field_h.field_d[param2];
-              var28 = in.a(0, var5, var18.length - 2, -26879);
+              var28 = AccountServiceResult.a(0, var5, var18.length - 2, -26879);
               for (var9 = 0; var9 < 64; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();

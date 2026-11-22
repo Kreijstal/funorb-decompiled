@@ -161,7 +161,7 @@ final class am extends WidgetContainer implements n {
             var3_int = param1.length;
             this.field_I = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_I[var4_int] = tj.a((CharSequence) ((Object) param1[var4_int]), sl.a(param0, -11664)).replace(' ', ' ');
+              this.field_I[var4_int] = AccountCreationResultPanel.a((CharSequence) ((Object) param1[var4_int]), sl.a(param0, -11664)).replace(' ', ' ');
             }
             if (param0 != -11678) {
               field_F = (IntrusiveDeque) null;

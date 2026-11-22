@@ -31,7 +31,7 @@ final class kh {
 
     final static boolean a(String param0, int param1, boolean param2, String param3, int param4, bg param5, String param6) {
         RuntimeException var7 = null;
-        jg var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -46,7 +46,7 @@ final class kh {
           if (di.field_a != ch.field_d) {
             return false;
           }
-          var8 = new jg(wg.field_j, param5);
+          var8 = new AccountCreationResultPanel(wg.field_j, param5);
           wg.field_j.b((byte) -33, var8);
           if (!ad.c(false)) {
             cg.field_a = null;

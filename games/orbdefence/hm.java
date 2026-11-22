@@ -52,8 +52,8 @@ final class hm extends ta implements ai {
         try {
           bg.a(false);
           bm.field_d.n(7920);
-          ig.field_ib = new pk(vh.field_k, (String) null, vh.field_j, param3, param2);
-          kg.field_j = new pc(bm.field_d, ig.field_ib);
+          AccountCreationResultPanel.field_ib = new pk(vh.field_k, (String) null, vh.field_j, param3, param2);
+          kg.field_j = new pc(bm.field_d, AccountCreationResultPanel.field_ib);
           if (param1 != 33) {
             hm.a(-114, false, true, 50, -56);
           }
@@ -173,8 +173,8 @@ final class hm extends ta implements ai {
         try {
           bg.a(false);
           bm.field_d.n(7920);
-          ig.field_ib = new pk(vh.field_k, (String) null, vh.field_j, param3, param2);
-          kg.field_j = new pc(bm.field_d, ig.field_ib);
+          AccountCreationResultPanel.field_ib = new pk(vh.field_k, (String) null, vh.field_j, param3, param2);
+          kg.field_j = new pc(bm.field_d, AccountCreationResultPanel.field_ib);
           if (param1 != 33) {
             hm.a(-114, false, true, 50, -56);
           }

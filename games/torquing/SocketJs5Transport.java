@@ -3204,7 +3204,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_timeout");
                 if (null != var2) {
-                  dn.field_c = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_button_tryagain");
                 if (null != var2) {
@@ -3410,31 +3410,31 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "mustlogin4,1");
                 if (var2 != null) {
-                  dn.field_f[1] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,2");
                 if (var2 != null) {
-                  dn.field_f[2] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,3");
                 if (null != var2) {
-                  dn.field_f[3] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[3] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,4");
                 if (var2 != null) {
-                  dn.field_f[4] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[4] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,5");
                 if (null != var2) {
-                  dn.field_f[5] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[5] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,6");
                 if (null != var2) {
-                  dn.field_f[6] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[6] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,7");
                 if (var2 != null) {
-                  dn.field_f[7] = SecondaryNodeDeque.a(var2, false);
+                  AccountServiceResult.field_f[7] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_notloggedin");
                 if (null != var2) {

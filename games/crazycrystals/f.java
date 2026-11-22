@@ -137,7 +137,7 @@ abstract class f {
           sg.field_b = io.field_P;
           if (param3 == 255) {
             stackIn_9_0 = !(ro.field_n >= 13);
-            nn.field_a = oe.a(stackIn_9_0, (byte) 119);
+            nn.field_a = oe.createAccountSuccessResult(stackIn_9_0, (byte) 119);
             var6 = (String[]) null;
             rk.a((String[]) null, 3928);
           } else {
@@ -145,9 +145,9 @@ abstract class f {
               param3 <= 105) {
               var4 = param1;
               rk.a(var4, 3928);
-              nn.field_a = en.a(param1, 169);
+              nn.field_a = en.createAccountSuggestionsResult(param1, 169);
             } else {
-              nn.field_a = me.a(param2, 20, param3);
+              nn.field_a = me.createAccountErrorResult(param2, 20, param3);
             }
           }
           if (param0 <= 119) {

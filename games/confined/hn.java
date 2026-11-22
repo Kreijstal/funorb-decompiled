@@ -456,7 +456,7 @@ final class hn {
         if (param0 != 24860) {
           return 50;
         }
-        return v.field_Eb - ef.field_sb;
+        return AccountCreationResultPanel.field_Eb - ef.field_sb;
     }
 
     private final void i(int param0) {

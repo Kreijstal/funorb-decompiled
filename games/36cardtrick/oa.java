@@ -83,12 +83,12 @@ final class oa {
         gd.a(param1, param4, 10);
         wd.field_e = gd.a(param3, param0, 0, 22050);
         cb.field_g = gd.a(param3, param0, 1, 1024);
-        bg.field_tb = new qj();
+        AccountCreationResultPanel.field_tb = new qj();
         if (param2 <= 66) {
           return;
         }
         try {
-          cb.field_g.b(bg.field_tb);
+          cb.field_g.b(AccountCreationResultPanel.field_tb);
           sh.field_e = new qj();
           wd.field_e.b(sh.field_e);
         } catch (RuntimeException runtimeException) {

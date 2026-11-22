@@ -79,10 +79,10 @@ final class ha extends IntrusiveNode {
         }
     }
 
-    final static mk a(String[] args, int param1) {
-        mk var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        mk stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,8 +91,8 @@ final class ha extends IntrusiveNode {
           if (param1 != -21916) {
             ha.clearStaticReferences(false);
           }
-          var2 = new mk(false);
-          var2.field_j = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

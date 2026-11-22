@@ -5,7 +5,7 @@ final class ue extends WidgetContainer implements cm, ij {
     static s field_J;
     private pn field_L;
     private d field_P;
-    private oe field_E;
+    private AccountCreationResultPanel field_E;
     static int[] field_G;
     static String field_K;
     static String[] field_F;
@@ -65,7 +65,7 @@ final class ue extends WidgetContainer implements cm, ij {
         rg.a(640, Archive.field_j, 0, -24 + ce.field_b, param0 - 4880, ia.field_G, 5);
     }
 
-    ue(oe param0) {
+    ue(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetListener) null);
         String var7 = null;
         int var3 = 0;

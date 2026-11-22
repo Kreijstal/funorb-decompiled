@@ -4,7 +4,7 @@
 class ie extends DualLinkNode {
     final static boolean a(int param0, int param1, String param2, String param3, rf param4, boolean param5, String param6) {
         RuntimeException var7 = null;
-        ig var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -19,7 +19,7 @@ class ie extends DualLinkNode {
           if (qc.field_g != tl.field_h) {
             return false;
           }
-          var8 = new ig(bm.field_d, param4);
+          var8 = new AccountCreationResultPanel(bm.field_d, param4);
           bm.field_d.b((byte) 74, (pj) (var8));
           if (param1 != -10031) {
             return false;

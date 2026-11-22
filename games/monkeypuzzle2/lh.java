@@ -82,18 +82,18 @@ final class lh {
         }
     }
 
-    final static cj a(boolean param0, String param1, int param2) {
-        cj var3 = null;
+    final static AccountServiceResult createAccountErrorResult(boolean param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        cj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new cj(false);
-          var3.field_i = param2;
-          var3.field_h = param1;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param2;
+          var3.message = param1;
           if (!param0) {
             field_e = false;
           }

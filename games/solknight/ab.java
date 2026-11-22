@@ -739,7 +739,7 @@ abstract class ab extends GameApplet {
           }
           lh.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
           DelegatingCanvas.field_c = pj.a(ef.field_g, (byte) -126, 1, false, true);
-          jk.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
+          AccountCreationResultPanel.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
           pl.field_d = lh.field_o;
           ai.field_b = DelegatingCanvas.field_c;
           kj.field_R = 2;
@@ -762,13 +762,13 @@ abstract class ab extends GameApplet {
           }
         }
         if (3 == kj.field_R &&
-          pj.a(DelegatingCanvas.field_c, -16925, lh.field_o, jk.field_ub) &&
-          td.a(-3, jk.field_ub)) {
+          pj.a(DelegatingCanvas.field_c, -16925, lh.field_o, AccountCreationResultPanel.field_ub) &&
+          td.a(-3, AccountCreationResultPanel.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
           GzipDecompressor.a(-15617);
           pe.field_m = te.field_J;
           kk.field_c = false;
-          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, jk.field_ub, lh.field_o);
+          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, AccountCreationResultPanel.field_ub, lh.field_o);
           if (bl.field_p ||
             null != s.field_hb) {
             stackIn_101_0 = !(bl.field_p);
@@ -781,11 +781,11 @@ abstract class ab extends GameApplet {
           }
           if (ce.field_c == null) {
             ce.field_c = rh.a(0);
-            GameKeyHandler.field_c = jk.i((byte) 123);
+            GameKeyHandler.field_c = AccountCreationResultPanel.i((byte) 123);
           }
-          IsaacRandom.a(jk.field_ub, GameKeyHandler.field_c, param0 ^ -4, ce.field_c);
+          IsaacRandom.a(AccountCreationResultPanel.field_ub, GameKeyHandler.field_c, param0 ^ -4, ce.field_c);
           DelegatingCanvas.field_c = null;
-          jk.field_ub = null;
+          AccountCreationResultPanel.field_ub = null;
           lh.field_o = null;
           de.a((java.applet.Applet) (this), param0 + 3);
           mh.a(8192);

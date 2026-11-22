@@ -44,7 +44,7 @@ final class ta {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class ta {
           var3.writeByte(6, 0);
           var3.writeByte(param0 ^ 13, param2.field_j);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ta.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ta.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1_ref), "ta.B(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1_ref), "ta.B(" + param0 + ')');
         }
     }
 

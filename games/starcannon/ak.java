@@ -306,17 +306,17 @@ final class ak {
             var6 = var2.readUnsignedByte(7909);
             if (var6 != 0) {
               var7 = var5.field_h;
-              ok.field_rb[0].field_f = null;
-              ok.field_rb[0].field_a = we.field_i;
+              AccountCreationResultPanel.field_rb[0].field_f = null;
+              AccountCreationResultPanel.field_rb[0].field_a = we.field_i;
               var8 = var5.field_l;
-              ok.field_rb[0].field_e = false;
+              AccountCreationResultPanel.field_rb[0].field_e = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                ok.field_rb[var9_int].field_a = var2.readString(-24);
-                ok.field_rb[var9_int].field_e = false;
+                AccountCreationResultPanel.field_rb[var9_int].field_a = var2.readString(-24);
+                AccountCreationResultPanel.field_rb[var9_int].field_e = false;
                 if (1 != var2.readUnsignedByte(7909)) {
-                  ok.field_rb[var9_int].field_f = null;
+                  AccountCreationResultPanel.field_rb[var9_int].field_f = null;
                 } else {
-                  ok.field_rb[var9_int].field_f = var2.readString(-33);
+                  AccountCreationResultPanel.field_rb[var9_int].field_f = var2.readString(-33);
                 }
               }
               dupTemp$0 = new String[3][var7];
@@ -339,12 +339,12 @@ final class ak {
               if (var19 > 0) {
                 for (var20 = 0; var19 > var20; var20++) {
                   var21 = var2.readUnsignedByte(7909);
-                  var22 = ok.field_rb[var21].field_a;
+                  var22 = AccountCreationResultPanel.field_rb[var21].field_a;
                   var23 = var2.readLong((byte) 5);
                   var25 = var2.position;
                   if (var7 > var20) {
                     var9[0][var13] = var22;
-                    var10[0][var13] = ok.field_rb[var21].field_f;
+                    var10[0][var13] = AccountCreationResultPanel.field_rb[var21].field_f;
                     var11[0][var13] = var23;
                     var13++;
                     for (var26 = 0; var8 > var26; var26++) {
@@ -367,10 +367,10 @@ final class ak {
                     }
                   }
                   if (var15 < var7 &&
-                    !ok.field_rb[var21].field_e) {
-                    ok.field_rb[var21].field_e = true;
+                    !AccountCreationResultPanel.field_rb[var21].field_e) {
+                    AccountCreationResultPanel.field_rb[var21].field_e = true;
                     var9[2][var15] = var22;
-                    var10[2][var15] = ok.field_rb[var21].field_f;
+                    var10[2][var15] = AccountCreationResultPanel.field_rb[var21].field_f;
                     var11[2][var15] = var23;
                     var15++;
                     var2.position = var25;

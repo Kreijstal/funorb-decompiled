@@ -48,18 +48,18 @@ abstract class gj {
           ol.field_i = dh.field_b;
           if (param0 != 255) {
             if (100 > param0) {
-              MouseInput.field_b = p.a(param0, param3, -28323);
+              MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
             } else {
               if (105 >= param0) {
-                MouseInput.field_b = em.a(param2, 8082);
+                MouseInput.field_b = em.createAccountSuggestionsResult(param2, 8082);
               } else {
-                MouseInput.field_b = p.a(param0, param3, -28323);
+                MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
               }
             }
           } else {
             stackIn_4_0 = -49;
             stackIn_5_1 = !(13 <= wk.field_g);
-            MouseInput.field_b = l.$cfr$intArgs$a$fb458fdecc21(stackIn_4_0, stackIn_5_1);
+            MouseInput.field_b = l.createAccountSuccessResultWithIntGuard(stackIn_4_0, stackIn_5_1);
           }
           if (param1 == 29120) {
             return;
@@ -82,7 +82,7 @@ abstract class gj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ abstract class gj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ abstract class gj {
             gj.a(86, 102, (String[]) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "gj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "gj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 

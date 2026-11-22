@@ -56,7 +56,7 @@ final class j implements Runnable {
           }
           var8 = param4.a((byte) 80);
           if (null == ci.field_i &&
-            !ed.a(false, (byte) 38)) {
+            !AccountServiceResult.a(false, (byte) 38)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }

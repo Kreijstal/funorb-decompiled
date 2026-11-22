@@ -337,7 +337,7 @@ public final class Vertigo2 extends GameShell {
                 var3_ref = ln.field_d;
               } else {
                 if (PacketBuffer.field_q) {
-                  var3_ref = oe.field_pb;
+                  var3_ref = AccountCreationResultPanel.field_pb;
                 }
               }
               if (var3_ref != null) {
@@ -421,7 +421,7 @@ public final class Vertigo2 extends GameShell {
             }
             if (an.field_c) {
               ln.field_d = null;
-              oe.field_pb = null;
+              AccountCreationResultPanel.field_pb = null;
               an.field_c = false;
             }
             if (lc.field_f == 57) {
@@ -431,7 +431,7 @@ public final class Vertigo2 extends GameShell {
               mq.b(true);
               mb.b((byte) -110);
             } else {
-              oe.field_pb = var12;
+              AccountCreationResultPanel.field_pb = var12;
               PacketBuffer.field_q = true;
             }
             lc.field_d = true;
@@ -887,7 +887,7 @@ public final class Vertigo2 extends GameShell {
           ab.a(0);
           pd.clearStaticReferences(1000000);
           sd.j(-25849);
-          oe.p(12705);
+          AccountCreationResultPanel.p(12705);
           fg.clearStaticReferences(-15691);
           ga.m(11840);
           fj.n(-74);
@@ -1117,7 +1117,7 @@ public final class Vertigo2 extends GameShell {
           be.a(-1);
           ub.clearStaticReferences(false);
           ee.b(0);
-          ch.clearStaticReferences(-81);
+          AccountServiceResult.clearStaticReferences(-81);
           s.clearStaticReferences((byte) -118);
           if (param0 <= 103) {
             field_J = (int[][]) null;
@@ -1496,7 +1496,7 @@ public final class Vertigo2 extends GameShell {
             if (null != gi.field_p) {
               ProxySocketConnector.a(false, 98.0f, fa.field_v);
               this.d(-17);
-              ch.a(new ke(gi.field_p.a("", "huffman", 0)), (byte) 98);
+              AccountServiceResult.a(new ke(gi.field_p.a("", "huffman", 0)), (byte) 98);
               gi.field_p = null;
               di.b((byte) 126);
               return false;
@@ -1575,7 +1575,7 @@ public final class Vertigo2 extends GameShell {
                                                   nn.field_y.c("", 0)) {
                                                   if (m.field_z.b(param0 ^ 16777215) &&
                                                     m.field_z.a((byte) -112)) {
-                                                    ProxySocketConnector.a(false, 78.0f, oe.field_sb);
+                                                    ProxySocketConnector.a(false, 78.0f, AccountCreationResultPanel.field_sb);
                                                     if (!param1) {
                                                       return false;
                                                     }
@@ -1771,7 +1771,7 @@ public final class Vertigo2 extends GameShell {
               }
               hj.a(1726, var4 != 0);
               if (PacketBuffer.field_q) {
-                oe.field_pb.a(var5 != 0, true);
+                AccountCreationResultPanel.field_pb.a(var5 != 0, true);
                 var3_int = 1;
               }
               if (am.field_b) {
@@ -1790,7 +1790,7 @@ public final class Vertigo2 extends GameShell {
                   }
                 }
                 if (PacketBuffer.field_q) {
-                  oe.field_pb.a((byte) 115);
+                  AccountCreationResultPanel.field_pb.a((byte) 115);
                 }
                 if (!am.field_b) {
                   continue;
@@ -1855,7 +1855,7 @@ public final class Vertigo2 extends GameShell {
                 var7Lifetime2 = var6_intLifetime1;
                 if (null != ln.field_d &&
                   ln.field_d.field_B >= 0 &&
-                  null == oe.field_pb) {
+                  null == AccountCreationResultPanel.field_pb) {
                   var8Lifetime1 = ln.field_d.field_s % 3;
                   if (0 == var8Lifetime1) {
                     gi.field_u = gi.field_u + var7Lifetime2;

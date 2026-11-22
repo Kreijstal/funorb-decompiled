@@ -27,7 +27,7 @@ final class of {
             field_k = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "of.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "of.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class of {
           gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
           jh.b();
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "of.B(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "of.B(" + param0 + ')');
         }
     }
 

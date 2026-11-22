@@ -279,7 +279,7 @@ final class Asteroid {
                           var7 = BufferedSocket.field_m - var5;
                           if (ClientException.field_b >= 0) {
                             var6 = -var4 + (sk.field_o >> 4) - ArchiveSource.field_c + 320;
-                            var7 = -var5 + ((wg.field_e >> 4) - si.field_E);
+                            var7 = -var5 + ((AccountServiceResult.field_e >> 4) - si.field_E);
                           }
                           var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
                           if (var8 > 8) {
@@ -786,7 +786,7 @@ final class Asteroid {
                   var6 = -var4 + PacketBuffer.field_j;
                   var7 = -var5 + BufferedSocket.field_m;
                   if (ClientException.field_b >= 0) {
-                    var7 = -si.field_E + (wg.field_e >> 4) - var5;
+                    var7 = -si.field_E + (AccountServiceResult.field_e >> 4) - var5;
                     var6 = -var4 + 320 + (-ArchiveSource.field_c + (sk.field_o >> 4));
                   }
                   var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));

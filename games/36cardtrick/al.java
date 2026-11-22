@@ -24,7 +24,7 @@ final class al {
             } else {
               rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
             }
-            rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
+            rk.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
           }
           Crc32Table.field_a.s(-93);
           e.a((byte) 112);
@@ -42,7 +42,7 @@ final class al {
             } else {
               rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
             }
-            rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
+            rk.field_ab = AccountCreationResultPanel.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
           }
           Crc32Table.field_a.s(-93);
           e.a((byte) 112);

@@ -459,9 +459,9 @@ final class sb extends aa {
                 !(param2 <= rb.field_fb.length)) {
                 rb.field_fb = new int[param2 * 2];
               }
-              if (cj.field_c == null ||
-                !(param2 <= cj.field_c.length)) {
-                cj.field_c = new int[param2 * 2];
+              if (AccountServiceResult.field_c == null ||
+                !(param2 <= AccountServiceResult.field_c.length)) {
+                AccountServiceResult.field_c = new int[param2 * 2];
               }
               if (hl.field_f == null ||
                 !(hl.field_f.length >= param1 + param2)) {
@@ -489,9 +489,9 @@ final class sb extends aa {
                   !(param2 <= rb.field_fb.length)) {
                   rb.field_fb = new int[param2 * 2];
                 }
-                if (cj.field_c == null ||
-                  !(param2 <= cj.field_c.length)) {
-                  cj.field_c = new int[param2 * 2];
+                if (AccountServiceResult.field_c == null ||
+                  !(param2 <= AccountServiceResult.field_c.length)) {
+                  AccountServiceResult.field_c = new int[param2 * 2];
                 }
                 if (hl.field_f == null ||
                   !(hl.field_f.length >= param1 + param2)) {
@@ -519,9 +519,9 @@ final class sb extends aa {
                   !(param2 <= rb.field_fb.length)) {
                   rb.field_fb = new int[param2 * 2];
                 }
-                if (cj.field_c == null ||
-                  !(param2 <= cj.field_c.length)) {
-                  cj.field_c = new int[param2 * 2];
+                if (AccountServiceResult.field_c == null ||
+                  !(param2 <= AccountServiceResult.field_c.length)) {
+                  AccountServiceResult.field_c = new int[param2 * 2];
                 }
                 if (hl.field_f == null ||
                   !(hl.field_f.length >= param1 + param2)) {
@@ -560,9 +560,9 @@ final class sb extends aa {
             !(param2 <= rb.field_fb.length)) {
             rb.field_fb = new int[param2 * 2];
           }
-          if (cj.field_c == null ||
-            !(param2 <= cj.field_c.length)) {
-            cj.field_c = new int[param2 * 2];
+          if (AccountServiceResult.field_c == null ||
+            !(param2 <= AccountServiceResult.field_c.length)) {
+            AccountServiceResult.field_c = new int[param2 * 2];
           }
           if (hl.field_f == null) {
             hl.field_f = new int[(param2 + param1) * 2];
@@ -597,8 +597,8 @@ final class sb extends aa {
             !(param2 <= rb.field_fb.length)) {
             rb.field_fb = new int[param2 * 2];
           }
-          if (cj.field_c == null) {
-            cj.field_c = new int[param2 * 2];
+          if (AccountServiceResult.field_c == null) {
+            AccountServiceResult.field_c = new int[param2 * 2];
             if (hl.field_f == null) {
               hl.field_f = new int[(param2 + param1) * 2];
               if (null == gb.field_h ||
@@ -620,7 +620,7 @@ final class sb extends aa {
               }
             }
           } else {
-            if (param2 <= cj.field_c.length) {
+            if (param2 <= AccountServiceResult.field_c.length) {
               if (hl.field_f == null) {
                 hl.field_f = new int[(param2 + param1) * 2];
                 if (null == gb.field_h ||
@@ -642,7 +642,7 @@ final class sb extends aa {
                 }
               }
             } else {
-              cj.field_c = new int[param2 * 2];
+              AccountServiceResult.field_c = new int[param2 * 2];
               if (hl.field_f == null) {
                 hl.field_f = new int[(param2 + param1) * 2];
                 if (null == gb.field_h ||

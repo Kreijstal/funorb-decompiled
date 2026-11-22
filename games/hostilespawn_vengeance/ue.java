@@ -18,7 +18,7 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_g = true;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
             field_h = (bd) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

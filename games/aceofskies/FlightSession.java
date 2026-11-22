@@ -3703,7 +3703,7 @@ final class FlightSession {
     final static boolean d(int param0) {
         try {
           if (param0 <= -56) {
-            boolean stackIn_7_0 = (nb.field_c == jq.field_fb);
+            boolean stackIn_7_0 = (nb.field_c == AccountCreationResultPanel.field_fb);
             return stackIn_7_0;
           }
           return false;

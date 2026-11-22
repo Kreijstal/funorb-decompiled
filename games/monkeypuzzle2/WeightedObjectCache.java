@@ -123,7 +123,7 @@ final class WeightedObjectCache {
     final static k a(int param0, int param1) {
         k var2 = new k();
         int var3 = -77 % ((-39 - param1) / 46);
-        cj.field_a.a(-8212, var2);
+        AccountServiceResult.field_a.a(-8212, var2);
         f.a(param0, 22492);
         return var2;
     }

@@ -10,7 +10,7 @@ final class gh extends r {
     final static boolean a(String param0, int param1, String param2, boolean param3, ca param4, int param5, String param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
-        ua var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -26,7 +26,7 @@ final class gh extends r {
           if (ql.field_l != cb.field_v) {
             return false;
           }
-          var8 = new ua(nb.field_a, param4);
+          var8 = new AccountCreationResultPanel(nb.field_a, param4);
           nb.field_a.b(var8, (byte) -35);
           if (ti.b(10618)) {
             var8.h((byte) -114);

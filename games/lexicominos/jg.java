@@ -55,9 +55,9 @@ final class jg extends tj {
         }
     }
 
-    final static mb c(boolean param0) {
+    final static AccountServiceResult pollAccountCreationResult(boolean param0) {
         if (param0) {
-          return (mb) null;
+          return (AccountServiceResult) null;
         }
         if (bk.field_c == c.field_m) {
           throw new IllegalStateException();

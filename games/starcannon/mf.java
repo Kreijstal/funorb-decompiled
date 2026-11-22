@@ -4,7 +4,7 @@
 final class mf {
     static String field_b;
     static String field_e;
-    static ig field_a;
+    static AccountServiceResult field_a;
     static int field_d;
     static td field_c;
 

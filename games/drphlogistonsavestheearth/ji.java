@@ -51,7 +51,7 @@ final class ji {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = qd.copyBytes((byte) 111, var3);
+            stackIn_6_0 = AccountCreationResultPanel.copyBytes((byte) 111, var3);
             return stackIn_6_0;
           }
           if (param1 instanceof ByteStorage) {

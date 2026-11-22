@@ -17,7 +17,7 @@ final class df extends a {
     final String a(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        wg var4 = null;
+        AccountServiceResult var4 = null;
         String var5 = null;
         CharSequence var6 = null;
         String stackIn_5_0 = null;
@@ -44,11 +44,11 @@ final class df extends a {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_d) {
+            if (null != var4.message) {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_k = var4.field_c;
+            this.field_k = var4.success;
             this.field_j = param0;
           }
           if (this.field_k) {
@@ -88,7 +88,7 @@ final class df extends a {
     }
 
     final qf a(String param0, byte param1) {
-        wg var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         CharSequence var5 = null;
@@ -108,9 +108,9 @@ final class df extends a {
           if (!param0.equals(this.field_j)) {
             var3 = PacketBuffer.a(param0, (byte) 100);
             if (var3 != null &&
-              var3.field_d == null) {
+              var3.message == null) {
               this.field_j = param0;
-              this.field_k = var3.field_c;
+              this.field_k = var3.success;
             } else {
               stackIn_8_0 = SpriteState.field_u;
               return stackIn_8_0;

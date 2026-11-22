@@ -25,16 +25,16 @@ final class cf extends qf {
         field_m = null;
     }
 
-    final static ig a(boolean param0, boolean param1) {
-        ig var2 = null;
-        ig var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, boolean param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (!param1) {
-          var2 = new ig(true);
+          var2 = new AccountServiceResult(true);
           var2.field_g = param0 ? true : false;
           return var2;
         }
         field_q = (Sprite) null;
-        var2Lifetime1 = new ig(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_g = param0 ? true : false;
         return var2Lifetime1;
     }

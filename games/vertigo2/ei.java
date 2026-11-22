@@ -259,8 +259,8 @@ final class ei extends DualLinkNode {
           vl.field_a[4][1] = Model.a(param0, "", "character/vertigo_char_jetp_paint_P2");
           vl.field_a[5][1] = Model.a(param0, "", "character/vertigo_char_jetp_paint_blue_P2");
           qo.field_A = Model.a(param0, "", "character/dynamite");
-          ch.field_d[0] = Model.a(param0, "", "character/vertigo_blobs");
-          ch.field_d[1] = Model.a(param0, "", "character/vertigo_blobs_blue");
+          AccountServiceResult.field_d[0] = Model.a(param0, "", "character/vertigo_blobs");
+          AccountServiceResult.field_d[1] = Model.a(param0, "", "character/vertigo_blobs_blue");
           rp.field_c = Model.a(param0, "", "character/flame");
           Model.a(param0, "", "character/death_block");
           ui.field_e = Model.a(param0, "", "character/death_block_electric");

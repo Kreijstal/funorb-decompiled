@@ -41,7 +41,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (hi.field_e != null) {
             BufferedSocket.field_l = 0;
             fc.field_g = -1;
-            uj.field_i = -1;
+            AccountServiceResult.field_i = -1;
             li.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -128,7 +128,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (hi.field_e != null) {
             BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
-            uj.field_i = param0.getY();
+            AccountServiceResult.field_i = param0.getY();
             li.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -141,7 +141,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hi.field_e) {
             BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
-            uj.field_i = param0.getY();
+            AccountServiceResult.field_i = param0.getY();
             li.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -161,7 +161,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           BufferedSocket.field_l = 0;
           fc.field_g = param0.getX();
-          uj.field_i = param0.getY();
+          AccountServiceResult.field_i = param0.getY();
           li.field_j = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

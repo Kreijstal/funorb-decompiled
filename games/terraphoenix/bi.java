@@ -79,19 +79,19 @@ final class bi {
           IsaacCipher.field_f = k.field_b;
           if (param0 != 255) {
             if (param0 < 100) {
-              wl.field_Q = aj.a(param0, (byte) 113, param1);
+              wl.field_Q = aj.createAccountErrorResult(param0, (byte) 113, param1);
               return;
             }
             if (param0 > 105) {
-              wl.field_Q = aj.a(param0, (byte) 113, param1);
+              wl.field_Q = aj.createAccountErrorResult(param0, (byte) 113, param1);
               return;
             }
-            wl.field_Q = ib.a(true, param2);
+            wl.field_Q = ib.createAccountSuggestionsResult(true, param2);
             return;
           }
           stackIn_6_0 = param3 ^ -10;
           stackIn_7_1 = !(wf.field_q >= 13);
-          wl.field_Q = ia.a(stackIn_6_0, stackIn_7_1);
+          wl.field_Q = ia.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1949,7 +1949,7 @@ final class oj {
                 }
                 var2 = dl.a("login_createaccount", false);
                 if (var2 != null) {
-                  ef.field_f = re.a(18990, var2);
+                  AccountServiceResult.field_f = re.a(18990, var2);
                 }
                 var2 = dl.a("tohighscores", false);
                 if (var2 != null) {

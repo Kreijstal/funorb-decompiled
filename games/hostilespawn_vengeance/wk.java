@@ -104,11 +104,11 @@ final class wk {
         ri var2 = new ri();
         ei.field_h.a(var2, 88);
         if (param1 == -2178) {
-          wg.d(param1 ^ 11338, param0);
+          AccountCreationResultPanel.d(param1 ^ 11338, param0);
           return var2;
         }
         field_e = (String) null;
-        wg.d(param1 ^ 11338, param0);
+        AccountCreationResultPanel.d(param1 ^ 11338, param0);
         return var2;
     }
 
@@ -144,7 +144,7 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "wk.B(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "wk.B(" + param0 + ')');
         }
     }
 

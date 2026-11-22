@@ -21,7 +21,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "ib.D(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "ib.D(" + param0 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1152,7 +1152,7 @@ final class ib {
                 }
                 var2 = mk.b("V2_lift_fixed", (byte) -123);
                 if (null != var2) {
-                  jj.field_h = nm.a(126, var2);
+                  AccountServiceResult.field_h = nm.a(126, var2);
                 }
                 var2 = mk.b("oV2_reachconsoles", (byte) -121);
                 if (var2 != null) {
@@ -1188,7 +1188,7 @@ final class ib {
                 }
                 var2 = mk.b("V4_notice_guard", (byte) -123);
                 if (null != var2) {
-                  jj.field_f = nm.a(124, var2);
+                  AccountServiceResult.field_f = nm.a(124, var2);
                 }
                 var2 = mk.b("V4_notice_launcher", (byte) -120);
                 if (null != var2) {
@@ -1629,7 +1629,7 @@ final class ib {
                   } else {
                     stackIn_1325_2 = "{...}";
                   }
-                  throw wg.a((Throwable) ((Object) stackIn_1324_0), ((StringBuilder) (Object) stackIn_1324_1).append(stackIn_1325_2).append(',').append(param1).append(')').toString());
+                  throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_1324_0), ((StringBuilder) (Object) stackIn_1324_1).append(stackIn_1325_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameAppletShell.field_f) {
                   HostileSpawn.field_I = (var3 == 0);
@@ -1654,7 +1654,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
         }
     }
 

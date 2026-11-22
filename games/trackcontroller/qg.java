@@ -41,23 +41,23 @@ final class qg {
         return pa.field_b + var1;
     }
 
-    final static nj a(String[] args, int param1) {
-        nj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        nj stackIn_2_0 = null;
-        nj stackIn_4_0 = null;
+        AccountServiceResult stackIn_2_0 = null;
+        AccountServiceResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new nj(false);
-          var2.field_a = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           if (param1 >= 61) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nj) null;
+          stackIn_2_0 = (AccountServiceResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class qg {
           }
           if (null == param0.field_i) {
           }
-          nj.a(param0, (byte) 94);
+          AccountServiceResult.a(param0, (byte) 94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

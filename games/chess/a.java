@@ -98,19 +98,19 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static aj a(String[] args, int param1) {
-        aj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        aj stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new aj(false);
+          var2 = new AccountServiceResult(false);
           var3 = -37 / ((-21 - param1) / 51);
-          var2.field_a = args;
+          var2.suggestions = args;
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
             return null;
           }
           var4 = (String[]) null;
-          a.a((String[]) null, -18);
+          a.createAccountSuggestionsResult((String[]) null, -18);
           stackIn_32_0 = null;
           return (String) (stackIn_32_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

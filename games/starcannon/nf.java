@@ -214,7 +214,7 @@ final class nf {
 
     final static boolean a(boolean param0, String param1, String param2, int param3, String param4, int param5, kh param6) {
         RuntimeException var7 = null;
-        ok var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -232,7 +232,7 @@ final class nf {
           if (param5 != 0) {
             nf.clearStaticReferences(124);
           }
-          var8 = new ok(ti.field_b, param6);
+          var8 = new AccountCreationResultPanel(ti.field_b, param6);
           ti.field_b.a((byte) 72, (UiWidget) (var8));
           if (dd.a((byte) 77)) {
             var8.p(10341);

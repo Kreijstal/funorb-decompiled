@@ -121,14 +121,14 @@ final class wd {
             if (gi.field_e != 0 &&
               bg.field_c > var3 &&
               bg.field_c < fm.field_b.field_k + var3) {
-              if (269 - fm.field_b.field_o < ig.field_fb &&
-                ig.field_fb < 269) {
+              if (269 - fm.field_b.field_o < AccountCreationResultPanel.field_fb &&
+                AccountCreationResultPanel.field_fb < 269) {
                 h.field_A = og.field_o;
                 bh.field_b = false;
                 var4 = 1;
               }
-              if (ig.field_fb > 586 &&
-                fm.field_b.field_o + 586 > ig.field_fb) {
+              if (AccountCreationResultPanel.field_fb > 586 &&
+                fm.field_b.field_o + 586 > AccountCreationResultPanel.field_fb) {
                 h.field_A = og.field_o;
                 bh.field_b = true;
                 var4 = 1;
@@ -149,7 +149,7 @@ final class wd {
             }
           }
           if (param0) {
-            wj.field_k.a(ka.a(24316, ig.field_fb, bg.field_c), -1, ka.a(24316, ua.field_a, vl.field_d));
+            wj.field_k.a(ka.a(24316, AccountCreationResultPanel.field_fb, bg.field_c), -1, ka.a(24316, ua.field_a, vl.field_d));
             if (wj.field_k.a((byte) -1)) {
               if (wj.field_k.field_h == 0) {
                 stackIn_60_0 = 3;

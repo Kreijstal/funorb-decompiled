@@ -28,10 +28,10 @@ final class ta {
         field_b = null;
     }
 
-    final static pd a(boolean param0, String param1) {
+    final static AccountServiceResult a(boolean param0, String param1) {
         RuntimeException var2 = null;
-        pd stackIn_5_0 = null;
-        pd stackIn_9_0 = null;
+        AccountServiceResult stackIn_5_0 = null;
+        AccountServiceResult stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -42,7 +42,7 @@ final class ta {
             return null;
           }
           if (!param0) {
-            stackIn_5_0 = (pd) null;
+            stackIn_5_0 = (AccountServiceResult) null;
             return stackIn_5_0;
           }
           if (pe.field_a == k.field_b &&
@@ -55,7 +55,7 @@ final class ta {
           DualLinkNode.field_l = param1;
           pe.field_a = ua.field_d;
           stackIn_11_0 = null;
-          return (pd) (stackIn_11_0);
+          return (AccountServiceResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

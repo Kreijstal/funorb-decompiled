@@ -114,10 +114,10 @@ final class fb {
         }
     }
 
-    final static ig a(String param0, int param1, int param2) {
-        ig var3 = null;
+    final static AccountServiceResult createAccountErrorResult(String param0, int param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        ig stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -126,9 +126,9 @@ final class fb {
           if (param2 != 0) {
             field_r = -91;
           }
-          var3 = new ig(false);
-          var3.field_e = param1;
-          var3.field_d = param0;
+          var3 = new AccountServiceResult(false);
+          var3.statusCode = param1;
+          var3.message = param0;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

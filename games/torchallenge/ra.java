@@ -961,9 +961,9 @@ final class ra {
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < 2; var3Lifetime2++) {
           for (var4Lifetime2 = 0; 64 > var4Lifetime2; var4Lifetime2++) {
-            nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, ef.field_a[var3Lifetime2].fullHeight);
+            nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, AccountServiceResult.field_a[var3Lifetime2].fullHeight);
             nj.field_e[var3Lifetime2][var4Lifetime2].d();
-            od.c(ef.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
+            od.c(AccountServiceResult.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
           }
         }
         SectorCacheStore.field_f.bindAsTarget(102);
@@ -1111,7 +1111,7 @@ final class ra {
         rj.field_b[0] = af.field_a[param1 * 2];
         rj.field_b[1] = af.field_a[1 + 2 * param1];
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
-          ef.field_a[var3_intLifetime1] = be.field_f[param1 * 4 + var3_intLifetime1];
+          AccountServiceResult.field_a[var3_intLifetime1] = be.field_f[param1 * 4 + var3_intLifetime1];
         }
         this.field_r = new int[64][this.field_a];
         for (var3_intLifetime2 = 0; var3_intLifetime2 < 64; var3_intLifetime2++) {

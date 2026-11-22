@@ -151,7 +151,7 @@ abstract class nk extends GameAppletShell {
           }
           da.field_a.d(-1);
         }
-        u.j(param1 ^ 6);
+        AccountCreationResultPanel.j(param1 ^ 6);
         bf.b((byte) -21);
         if (!lh.b(param1 ^ 24920) &&
           ta.field_g != 11) {
@@ -286,7 +286,7 @@ abstract class nk extends GameAppletShell {
           oh.a(ej.field_d, -109)) {
           qa.b(0);
           mg.e(0);
-          u.field_tb = false;
+          AccountCreationResultPanel.field_tb = false;
           pb.field_j = qk.field_a;
           fk.a(hl.field_F, we.field_h, (byte) 40, ej.field_d, GzipDecompressor.field_a);
           if (ki.field_e ||
@@ -546,7 +546,7 @@ abstract class nk extends GameAppletShell {
           if (1 == var4) {
             var5_int = mg.a(0, fk.a(85), qd.a(false));
             if (var5_int != -1) {
-              mb.a(105, var5_int, wj.field_p, fc.field_S);
+              AccountServiceResult.a(105, var5_int, wj.field_p, fc.field_S);
               wj.field_p = null;
               fc.field_S = null;
             }
@@ -598,7 +598,7 @@ abstract class nk extends GameAppletShell {
             ge.a(0, kk.c(param1 ^ -14047));
           }
           if (var4 == 6 &&
-            u.field_tb) {
+            AccountCreationResultPanel.field_tb) {
             ta.field_g = 10;
           }
           if (7 == var4) {
@@ -738,7 +738,7 @@ abstract class nk extends GameAppletShell {
                     }
                   }
                 } else {
-                  u.l((byte) -124);
+                  AccountCreationResultPanel.l((byte) -124);
                 }
               }
             }

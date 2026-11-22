@@ -40,17 +40,17 @@ final class em extends vf {
         return 0;
     }
 
-    final static vk a(String[] args, int param1) {
-        vk var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        vk stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new vk(false);
-          var2.field_c = args;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
           if (param1 != 8082) {
             em.e(7);
           }
@@ -66,7 +66,7 @@ final class em extends vf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -7,7 +7,7 @@ final class cg {
     static kg field_c;
     private IntrusiveNode[] field_e;
     private IntrusiveNode field_f;
-    static cj field_a;
+    static AccountServiceResult field_a;
     static int field_g;
     static int[] field_d;
     static int field_h;

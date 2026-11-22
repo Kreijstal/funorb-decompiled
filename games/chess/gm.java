@@ -1205,7 +1205,7 @@ abstract class gm {
                 }
                 var2 = cd.a("connectionlost_withreason", -108);
                 if (var2 != null) {
-                  aj.field_b = ad.a(-29410, var2);
+                  AccountServiceResult.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("passwordverificationrequired", -125);
                 if (var2 != null) {
@@ -1421,7 +1421,7 @@ abstract class gm {
                 }
                 var2 = cd.a("year", -115);
                 if (null != var2) {
-                  aj.field_d = ad.a(-29410, var2);
+                  AccountServiceResult.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,0", -83);
                 if (null != var2) {
@@ -2794,7 +2794,7 @@ abstract class gm {
                 }
                 var2 = cd.a("fs_timeout", -77);
                 if (null != var2) {
-                  vd.field_Gb = ad.a(-29410, var2);
+                  AccountCreationResultPanel.field_Gb = ad.a(-29410, var2);
                 }
                 var2 = cd.a("fs_button_tryagain", -88);
                 if (null != var2) {

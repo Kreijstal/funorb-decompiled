@@ -349,7 +349,7 @@ final class vn extends ue {
         }
         this.field_d = new ik[3];
         if (rc.a(-29)) {
-          this.field_d[0] = (ik) ((Object) new mh(200, var4, 240, si.field_a, 2));
+          this.field_d[0] = (ik) ((Object) new mh(200, var4, 240, AccountServiceResult.field_a, 2));
         }
         if (null != this.field_t) {
           this.field_d[1] = (ik) ((Object) new mh(200, var5, 240, gm.field_b, 2));

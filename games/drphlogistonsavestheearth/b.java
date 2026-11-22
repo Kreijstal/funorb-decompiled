@@ -13,7 +13,7 @@ final class b extends IntrusiveNode {
     public static void d(int param0) {
         field_i = null;
         if (param0 != -382) {
-          b.a(true, 23);
+          b.createAccountSuccessResult(true, 23);
           field_k = null;
           return;
         }
@@ -199,16 +199,16 @@ final class b extends IntrusiveNode {
         }
     }
 
-    final static og a(boolean param0, int param1) {
-        og var2 = null;
-        og var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, int param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (param1 >= 24) {
-          var2 = new og(true);
+          var2 = new AccountServiceResult(true);
           var2.field_d = param0 ? true : false;
           return var2;
         }
         field_i = (sa) null;
-        var2Lifetime1 = new og(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_d = param0 ? true : false;
         return var2Lifetime1;
     }

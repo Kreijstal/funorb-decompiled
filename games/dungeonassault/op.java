@@ -205,7 +205,7 @@ final class op {
             } else {
               var9_ref_String = ra.field_c.readNullableString(true);
               if (var9_ref_String != null) {
-                jb.a(true, var9_ref_String, m.c(true));
+                AccountCreationResultPanel.a(true, var9_ref_String, m.c(true));
               }
             }
             tl.a(-59);
@@ -253,7 +253,7 @@ final class op {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

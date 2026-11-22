@@ -123,9 +123,9 @@ abstract class dm {
           }
           dh.a(121, var4);
           var12 = (lh) null;
-          vj.field_g = aj.a(1513239, 65793, 2245737, 65793, 0, 5138823, (lh) null, 4020342, 65793, (byte) 116, param2, 8947848, 1127256);
-          wk.field_c = aj.a(0, 0, 0, 0, 16764006, 0, param0, 0, 0, (byte) -95, 0, 0, 0);
-          va.field_d = aj.a(0, 0, 0, 0, 16777215, 0, param0, 0, 0, (byte) -28, 0, 0, 0);
+          vj.field_g = AccountServiceResult.a(1513239, 65793, 2245737, 65793, 0, 5138823, (lh) null, 4020342, 65793, (byte) 116, param2, 8947848, 1127256);
+          wk.field_c = AccountServiceResult.a(0, 0, 0, 0, 16764006, 0, param0, 0, 0, (byte) -95, 0, 0, 0);
+          va.field_d = AccountServiceResult.a(0, 0, 0, 0, 16777215, 0, param0, 0, 0, (byte) -28, 0, 0, 0);
           var5 = wb.field_h;
           var6 = wb.field_c;
           var16 = wb.field_d;

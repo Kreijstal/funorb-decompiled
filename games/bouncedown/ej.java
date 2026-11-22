@@ -36,15 +36,15 @@ final class ej {
               param0 <= 105) {
               var4 = param1;
               oh.a((byte) -29, var4);
-              oa.field_c = qj.a(false, param1);
+              oa.field_c = qj.createAccountSuggestionsResult(false, param1);
               return;
             }
-            oa.field_c = wb.a(param0, param3 - 254, param2);
+            oa.field_c = wb.createAccountErrorResult(param0, param3 - 254, param2);
             return;
           }
           stackIn_8_0 = 5579;
           stackIn_9_1 = !(13 <= cg.field_a);
-          oa.field_c = r.a(stackIn_8_0, stackIn_9_1);
+          oa.field_c = r.createAccountSuccessResult(stackIn_8_0, stackIn_9_1);
           var6 = (String[]) null;
           oh.a((byte) -29, (String[]) null);
           return;

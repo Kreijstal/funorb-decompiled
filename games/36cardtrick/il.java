@@ -12,8 +12,8 @@ final class il implements Iterator {
     static mg[] field_a;
     static char[] field_f;
 
-    final static nk a(int param0, boolean param1) {
-        nk var2 = new nk(true);
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_e = param1 ? true : false;
         if (param0 == -1) {
           return var2;
@@ -29,7 +29,7 @@ final class il implements Iterator {
           this.field_d = null;
           return;
         }
-        il.a(-8, false);
+        il.createAccountSuccessResult(-8, false);
         this.field_b = 1;
         this.field_c = this.field_g.field_b[0].next;
         this.field_d = null;

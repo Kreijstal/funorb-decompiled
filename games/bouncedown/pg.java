@@ -33,7 +33,7 @@ final class pg {
 
     final static boolean a(int param0, gh param1, String param2, int param3, String param4, String param5, boolean param6) {
         RuntimeException var7 = null;
-        sd var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -48,7 +48,7 @@ final class pg {
           if (wj.field_a != fh.field_B) {
             return false;
           }
-          var8 = new sd(q.field_N, param1);
+          var8 = new AccountCreationResultPanel(q.field_N, param1);
           q.field_N.b(var8, false);
           if (param0 != 2) {
             pg.a(103);

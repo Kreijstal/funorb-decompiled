@@ -328,14 +328,14 @@ final class jf {
           if (param2 == 255) {
             stackIn_11_0 = 5579;
             stackIn_12_1 = !(13 <= cg.field_a);
-            ci.field_L = r.a(stackIn_11_0, stackIn_12_1);
+            ci.field_L = r.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           } else {
             if (param2 >= 100 &&
               param2 <= 105) {
-              ci.field_L = qj.a(false, param1);
+              ci.field_L = qj.createAccountSuggestionsResult(false, param1);
               return;
             }
-            ci.field_L = wb.a(param2, 1, param3);
+            ci.field_L = wb.createAccountErrorResult(param2, 1, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,7 +507,7 @@ final class jf {
         }
     }
 
-    final static rg a(boolean param0) {
+    final static AccountServiceResult pollAccountCreationResult(boolean param0) {
         if (!param0) {
           field_g = (String) null;
         }
@@ -527,7 +527,7 @@ final class jf {
         }
         this.field_b = param1;
         if (param0 != 57) {
-          jf.a(true);
+          jf.pollAccountCreationResult(true);
         }
     }
 

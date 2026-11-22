@@ -92,7 +92,7 @@ final class p extends qe {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class p extends qe {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class p extends qe {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class p extends qe {
         if (var6 != 0) {
           this.a(param1, 124, param3, -dm.field_a[var6].field_v + 56 + param0, dm.field_a[var6]);
           if (gh.field_i[var6].field_g == 2) {
-            var7_ref_cn = jb.a((byte) -70, var6);
+            var7_ref_cn = AccountCreationResultPanel.a((byte) -70, var6);
             if (var7_ref_cn != null) {
               var8 = var7_ref_cn.field_E * 5 >> 3;
               var9 = var7_ref_cn.field_G * 5 >> 3;
@@ -662,25 +662,25 @@ final class p extends qe {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
-    final static vk a(int param0, String param1, int param2) {
-        vk var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        vk stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new vk(false);
-          var3.field_g = param1;
+          var3 = new AccountServiceResult(false);
+          var3.message = param1;
           if (param2 != -28323) {
             field_G = (cn[]) null;
           }
-          var3.field_d = param0;
+          var3.statusCode = param0;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -693,7 +693,7 @@ final class p extends qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1533,7 +1533,7 @@ final class p extends qe {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

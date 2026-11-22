@@ -7,8 +7,8 @@ final class fk {
     static String field_a;
     int field_c;
 
-    final static qj a(boolean param0, byte param1) {
-        qj var2 = new qj(true);
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, byte param1) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
         if (param1 == -68) {
           var2.field_d = param0 ? true : false;
           return var2;

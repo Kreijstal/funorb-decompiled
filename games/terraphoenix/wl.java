@@ -9,7 +9,7 @@ final class wl extends PcmStream {
     private fk field_G;
     private int[] field_I;
     private il field_z;
-    static pd field_Q;
+    static AccountServiceResult field_Q;
     private int[] field_o;
     private int[] field_s;
     int[] field_S;

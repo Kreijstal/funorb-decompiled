@@ -104,7 +104,7 @@ final class ll implements uk {
     }
 
     final static void a(int param0) {
-        jg.field_pb = 512;
+        AccountCreationResultPanel.field_pb = 512;
         if (param0 != 16) {
           field_d = 114;
           wh.field_c = 0;

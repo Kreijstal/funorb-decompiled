@@ -53,7 +53,7 @@ public final class Transmogrify extends SessionGameApplet {
         AchievementNotice var5 = null;
         var4 = field_A ? 1 : 0;
         try {
-          sf.v(107);
+          AccountCreationResultPanel.v(107);
           if (null != ub.field_c &&
             ub.field_c.field_c) {
             GzipDecompressor.b(5);
@@ -875,7 +875,7 @@ public final class Transmogrify extends SessionGameApplet {
             a.field_R = pc.a("", "logo_highscores", oi.field_g, param0 ^ 118);
             mk.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
             SpriteState.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
-            uj.field_e = cf.a((byte) -122);
+            AccountServiceResult.field_e = cf.a((byte) -122);
             kk.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "frame_trans");
             ck.field_C = ContextualRuntimeException.a(oi.field_g, (byte) 123, "", "frame_trans_inner");
             SecondaryNodeDeque.field_d = pc.a("", "banner", oi.field_g, 71);
@@ -890,7 +890,7 @@ public final class Transmogrify extends SessionGameApplet {
               }
             }
             rk.field_r[4].e();
-            uj.field_e.f(0, 0);
+            AccountServiceResult.field_e.f(0, 0);
             if (!wl.a(false, 0)) {
               pc.a("", "achievementsbg_nobox", oi.field_g, -126).c(0, 0);
             } else {
@@ -902,7 +902,7 @@ public final class Transmogrify extends SessionGameApplet {
             rk.field_r[6] = rk.field_r[4];
             rk.field_r[1] = new Sprite(640, 480);
             rk.field_r[1].e();
-            uj.field_e.f(0, 0);
+            AccountServiceResult.field_e.f(0, 0);
             if (!wl.a(false, 0)) {
               pc.a("", "pausemenu_nobox", oi.field_g, ~param0).c(0, 0);
             } else {
@@ -931,7 +931,7 @@ public final class Transmogrify extends SessionGameApplet {
             DirectByteStorage.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkle_array");
             jh.field_h = new Sprite(640, 480);
             jh.field_h.e();
-            uj.field_e.f(0, 0);
+            AccountServiceResult.field_e.f(0, 0);
             pc.a("", "spikes", oi.field_g, 45).c(0, 0);
             rk.field_r[2] = new Sprite(640, 480);
             rk.field_r[2].e();
@@ -954,7 +954,7 @@ public final class Transmogrify extends SessionGameApplet {
             kk.field_d = null;
             ck.field_C = null;
             SecondaryNodeDeque.field_d = null;
-            uj.field_e = null;
+            AccountServiceResult.field_e = null;
             fc.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 126, "", "achievements");
             var13 = fc.field_h;
             for (var4Lifetime3 = 0; var13.length > var4Lifetime3; var4Lifetime3++) {
@@ -1198,7 +1198,7 @@ public final class Transmogrify extends SessionGameApplet {
           lb.clearStaticReferences((byte) 103);
           il.a((byte) -24);
           da.clearStaticReferences(param0 ^ param0);
-          sf.clearStaticReferences(true);
+          AccountCreationResultPanel.clearStaticReferences(true);
           sd.e((byte) 4);
           rf.r(param0 - 2394);
           ik.s(param0 ^ 107);
@@ -1340,7 +1340,7 @@ public final class Transmogrify extends SessionGameApplet {
           oh.a((byte) 104);
           AchievementNotice.clearStaticReferences(111);
           pd.clearStaticReferences((byte) -74);
-          uj.clearStaticReferences(-1);
+          AccountServiceResult.clearStaticReferences(-1);
           fc.a(false);
           hi.a(false);
           b.clearStaticReferences(-22826);

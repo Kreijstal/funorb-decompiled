@@ -81,7 +81,7 @@ final class ja {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = in.a(5, var10.payload, -var13.length + var10.position - 5, -26879);
+        var15 = AccountServiceResult.a(5, var10.payload, -var13.length + var10.position - 5, -26879);
         if (param0) {
           this.a(true);
         }

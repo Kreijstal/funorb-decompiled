@@ -1022,7 +1022,7 @@ public final class fleas extends NetworkGameClient {
           jl.clearStaticReferences(32768);
           nl.clearStaticReferences((byte) -33);
           f.j(-7409);
-          ua.i((byte) 124);
+          AccountCreationResultPanel.i((byte) 124);
           ui.e(false);
           bd.g((byte) 127);
           ca.j(100);
@@ -1167,7 +1167,7 @@ public final class fleas extends NetworkGameClient {
           fi.a(param0 + param0);
           ql.clearStaticReferences((byte) -92);
           ae.a((byte) -114);
-          mk.clearStaticReferences(122);
+          AccountServiceResult.clearStaticReferences(122);
           ve.a((byte) 84);
           ed.a(20760);
           ha.clearStaticReferences(false);

@@ -2789,7 +2789,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(121, "achieved");
                 if (var2 != null) {
-                  jg.field_ob = se.a(0, var2);
+                  AccountCreationResultPanel.field_ob = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 109, "orbpoints");
                 if (null != var2) {

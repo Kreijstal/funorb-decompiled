@@ -9,7 +9,7 @@ final class wf {
 
     final static boolean a(byte param0, String param1, String param2, String param3, vd param4, boolean param5, int param6) {
         RuntimeException var7 = null;
-        og var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -24,7 +24,7 @@ final class wf {
           if (DiskArchiveStore.field_f != fd.field_h) {
             return false;
           }
-          var8 = new og(gl.field_E, param4);
+          var8 = new AccountCreationResultPanel(gl.field_E, param4);
           if (param0 != 29) {
             return false;
           }

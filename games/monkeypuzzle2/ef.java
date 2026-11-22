@@ -30,8 +30,8 @@ final class ef {
           }
           if (decompiledFrameRemainder0) {
             if (!ac.field_b) {
-              if (cj.field_e <= ByteStorage.field_a) {
-                stackIn_17_0 = (ByteStorage.field_a < cj.field_e + BufferedSocket.field_a) ? 1 : 0;
+              if (AccountServiceResult.field_e <= ByteStorage.field_a) {
+                stackIn_17_0 = (ByteStorage.field_a < AccountServiceResult.field_e + BufferedSocket.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -43,12 +43,12 @@ final class ef {
               ByteStorage.field_a = 0;
             } else {
               if (ac.field_b) {
-                ByteStorage.field_a = cj.field_e;
+                ByteStorage.field_a = AccountServiceResult.field_e;
               } else {
                 if (var2_int == 0) {
                   ByteStorage.field_a = 0;
                 } else {
-                  ByteStorage.field_a = cj.field_e;
+                  ByteStorage.field_a = AccountServiceResult.field_e;
                 }
               }
             }
@@ -63,7 +63,7 @@ final class ef {
             nj.field_a = oi.field_f;
           }
           if (!ac.field_b &&
-            cj.field_e > ByteStorage.field_a &&
+            AccountServiceResult.field_e > ByteStorage.field_a &&
             oe.field_d) {
             ByteStorage.field_a = 0;
             nj.field_a = oi.field_f;

@@ -31,7 +31,7 @@ final class pf {
 
     final static int a(byte param0, int param1) {
         int var2 = -52 % ((-34 - param0) / 53);
-        return jg.a((byte) 80, param1, pb.field_n);
+        return AccountCreationResultPanel.a((byte) 80, param1, pb.field_n);
     }
 
     final static void a(byte param0, vl param1, int param2) {

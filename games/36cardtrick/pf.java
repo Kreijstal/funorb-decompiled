@@ -127,17 +127,17 @@ final class pf extends IntrusiveNode {
         }
     }
 
-    final static nk a(int param0, String[] param1) {
-        nk var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(int param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        nk stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new nk(false);
-          var2.field_c = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           if (param0 > -95) {
             field_h = -16;
           }

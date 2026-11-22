@@ -186,7 +186,7 @@ final class rb extends gj implements da {
               if (cf.field_c.a(true) == wa.field_g) {
                 ml.field_F.a(true, BoundedRandomAccessFile.getApplet((byte) -111));
               } else {
-                if (cf.field_c.a(true) == mk.field_i) {
+                if (cf.field_c.a(true) == AccountServiceResult.field_i) {
                   wd.field_b.a(true, BoundedRandomAccessFile.getApplet((byte) -116));
                 }
               }

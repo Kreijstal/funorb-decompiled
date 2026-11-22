@@ -43,20 +43,20 @@ class jj extends ButtonWidget {
         }
     }
 
-    final static cj a(String[] args, boolean param1) {
-        cj var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, boolean param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        cj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new cj(false);
+          var2 = new AccountServiceResult(false);
           if (!param1) {
             jj.d((byte) -44);
           }
-          var2.field_g = args;
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

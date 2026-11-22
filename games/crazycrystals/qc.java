@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qc extends oh {
-    static si field_i;
+    static AccountServiceResult field_i;
     static String[] field_g;
     static String field_h;
     static dl[] field_f;
@@ -76,7 +76,7 @@ abstract class qc extends oh {
 
     int a(byte param0, boolean param1) {
         if (param0 > -53) {
-          field_i = (si) null;
+          field_i = (AccountServiceResult) null;
         }
         return param1 ? 16 : 2;
     }

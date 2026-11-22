@@ -5,7 +5,7 @@ final class nl {
     static int field_d;
     static int field_b;
     static pg[] field_e;
-    static jj field_a;
+    static AccountServiceResult field_a;
     static String field_f;
     static int field_c;
 

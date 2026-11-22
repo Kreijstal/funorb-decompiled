@@ -34,7 +34,7 @@ final class dl extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1_ref), "dl.C()");
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "dl.C()");
         }
     }
 
@@ -48,7 +48,7 @@ final class dl extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "dl.E()");
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "dl.E()");
         }
     }
 
@@ -101,7 +101,7 @@ final class dl extends PcmStream {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class dl extends PcmStream {
                 }
                 case 12: {
                     var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw wg.a((Throwable) ((Object) var1_ref), "dl.B()");
+                    throw AccountCreationResultPanel.a((Throwable) ((Object) var1_ref), "dl.B()");
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -1284,7 +1284,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("logging_in", 24);
                 if (var2 != null) {
-                  jj.field_i = nm.a(123, var2);
+                  AccountServiceResult.field_i = nm.a(123, var2);
                 }
                 var2 = vj.a("reconnect", 24);
                 if (var2 != null) {
@@ -3235,7 +3235,7 @@ final class dl extends PcmStream {
                   } else {
                     stackIn_2620_2 = "{...}";
                   }
-                  throw wg.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
+                  throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2628_0 = (!GameAppletShell.field_f);
@@ -3334,7 +3334,7 @@ final class dl extends PcmStream {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3378,7 +3378,7 @@ final class dl extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "dl.D(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var2), "dl.D(" + param0 + ')');
         }
     }
 
@@ -3398,7 +3398,7 @@ final class dl extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var1), "dl.P(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) var1), "dl.P(" + param0 + ')');
         }
     }
 
@@ -3452,7 +3452,7 @@ final class dl extends PcmStream {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3477,7 +3477,7 @@ final class dl extends PcmStream {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

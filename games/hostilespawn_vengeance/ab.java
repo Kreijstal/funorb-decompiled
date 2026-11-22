@@ -364,7 +364,7 @@ final class ab extends IOException {
           } else {
             stackIn_153_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_143_0), ((StringBuilder) (Object) stackIn_152_1).append(stackIn_153_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_143_0), ((StringBuilder) (Object) stackIn_152_1).append(stackIn_153_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -445,7 +445,7 @@ final class ab extends IOException {
           eh.b(false);
           km.field_y = new bd[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -94,7 +94,7 @@ final class cb {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -322,15 +322,15 @@ abstract class GameClient extends AppletShell {
         }
         if (sa.field_k == 10) {
           if (0 != Slime.field_a) {
-            sd.field_pb = fa.a((byte) -76, lg.field_a);
+            AccountCreationResultPanel.field_pb = fa.a((byte) -76, lg.field_a);
           }
           sa.field_k = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (sa.field_k == 11) {
-          if (null != sd.field_pb && (!sd.field_pb.c(-121) ||
-            !sd.field_pb.a((byte) -62))) {
-            hg.a(hg.a(pc.field_p, sd.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
+          if (null != AccountCreationResultPanel.field_pb && (!AccountCreationResultPanel.field_pb.c(-121) ||
+            !AccountCreationResultPanel.field_pb.a((byte) -62))) {
+            hg.a(hg.a(pc.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -13,12 +13,12 @@ final class l {
     private ad[] field_e;
     static int field_c;
 
-    final static qj a(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (qc.field_g == tl.field_h) {
           throw new IllegalStateException();
         }
         if (param0 != -20) {
-          return (qj) null;
+          return (AccountServiceResult) null;
         }
         if (kf.field_d == qc.field_g) {
           qc.field_g = tl.field_h;
@@ -93,7 +93,7 @@ final class l {
           mf.field_c = param2;
           return;
         }
-        l.a((byte) 0);
+        l.pollAccountCreationResult((byte) 0);
         lf.field_e = param3;
         he.field_C = param1;
         mf.field_c = param2;

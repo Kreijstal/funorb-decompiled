@@ -153,7 +153,7 @@ abstract class ui extends WidgetContainer {
     }
 
     ui(ei param0, int param1, int param2) {
-        super(ml.field_b - param1 >> 1, -param2 + vf.field_F >> 1, param1, param2, (uk) null);
+        super(AccountServiceResult.field_b - param1 >> 1, -param2 + vf.field_F >> 1, param1, param2, (uk) null);
         try {
           this.field_E = 0;
           this.field_H = param0;
@@ -164,7 +164,7 @@ abstract class ui extends WidgetContainer {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.b(param0, ml.field_b - param0 >> 1, vf.field_F - param2 >> 1, param2, 23987);
+        this.b(param0, AccountServiceResult.field_b - param0 >> 1, vf.field_F - param2 >> 1, param2, 23987);
         if (param1 > -4) {
           field_B = (String) null;
         }

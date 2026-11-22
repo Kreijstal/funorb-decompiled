@@ -188,7 +188,7 @@ final class wl {
         var2 = stackIn_6_0;
         sf.a(16);
         ch.b(false);
-        ef.field_k = ef.field_k + 1;
+        AccountServiceResult.field_k = AccountServiceResult.field_k + 1;
         qa.field_h = qa.field_h + 1;
         if (!(dk.field_a <= 4) ||
           qa.field_h % 200 == 0 &&
@@ -620,7 +620,7 @@ final class wl {
         ui.field_b = param2;
         tf.field_o = 0;
         ac.field_d = 8;
-        ef.field_k = 0;
+        AccountServiceResult.field_k = 0;
         GameScreen.field_c = -1089027477;
         vj.field_c = param1;
         ab.field_d = 1;

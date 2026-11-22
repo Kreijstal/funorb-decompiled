@@ -109,7 +109,7 @@ final class wa extends pj implements kd, ke {
               wa.a((byte) 5);
             }
             if (bl.field_r.startsWith("win") &&
-              og.a(param0, 0)) {
+              AccountServiceResult.a(param0, 0)) {
               return;
             }
             try {

@@ -1049,7 +1049,7 @@ abstract class pm extends DualLinkNode {
         RuntimeException var2_ref = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          if (v.field_Db == null) {
+          if (AccountCreationResultPanel.field_Db == null) {
             return null;
           }
           if (param0 == null) {
@@ -1065,7 +1065,7 @@ abstract class pm extends DualLinkNode {
             stackIn_10_0 = null;
             return (fg) (stackIn_10_0);
           }
-          var3 = (fg) (v.field_Db.a((long)var2.hashCode(), -1));
+          var3 = (fg) (AccountCreationResultPanel.field_Db.a((long)var2.hashCode(), -1));
           if (!param1) {
             field_x = (bi) null;
           }
@@ -1076,7 +1076,7 @@ abstract class pm extends DualLinkNode {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (fg) (v.field_Db.a(-11));
+            var3 = (fg) (AccountCreationResultPanel.field_Db.a(-11));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

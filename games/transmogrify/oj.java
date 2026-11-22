@@ -185,7 +185,7 @@ final class oj extends PcmStream {
         try {
           og.a((byte) 92);
           if (param1 != 256) {
-            oj.a((byte) 117);
+            oj.pollAccountCreationResult((byte) 117);
           }
           sb.a(param0.field_w, param0.field_r, param0.field_s);
         } catch (RuntimeException runtimeException) {
@@ -304,7 +304,7 @@ final class oj extends PcmStream {
         return null;
     }
 
-    final static uj a(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (jh.field_n == rh.field_v) {
           throw new IllegalStateException();
         }

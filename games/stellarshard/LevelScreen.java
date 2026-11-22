@@ -1809,7 +1809,7 @@ final class LevelScreen extends ib {
                         qj.field_a.c(NanoFrameTimer.field_e[var7Lifetime2], 320, 230, 16777215, -1);
                         var6Lifetime2 = 0;
                         if ((1 << var7Lifetime2 & var4Lifetime2) != 0) {
-                          qj.field_a.c(jg.field_ob, 320, qj.field_a.field_N + 234, 16777215, -1);
+                          qj.field_a.c(AccountCreationResultPanel.field_ob, 320, qj.field_a.field_N + 234, 16777215, -1);
                         } else {
                           qj.field_a.c(tf.field_c, 320, 234 + qj.field_a.field_N, 16711680, -1);
                         }

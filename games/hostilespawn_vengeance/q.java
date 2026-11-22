@@ -54,7 +54,7 @@ final class q {
             id.field_t = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
         }
     }
 

@@ -61,9 +61,9 @@ final class tt extends aba {
           if (!param0.equals(this.field_g)) {
             var3 = du.a(param0, (byte) -43);
             if (var3 != null &&
-              var3.field_g == null) {
+              var3.message == null) {
               this.field_g = param0;
-              this.field_i = var3.field_e;
+              this.field_i = var3.success;
             } else {
               stackIn_10_0 = ji.field_f;
               return stackIn_10_0;
@@ -117,10 +117,10 @@ final class tt extends aba {
             if (var4_ref_eq == null) {
               return null;
             }
-            if (null != var4_ref_eq.field_g) {
+            if (null != var4_ref_eq.message) {
               return null;
             }
-            this.field_i = var4_ref_eq.field_e;
+            this.field_i = var4_ref_eq.success;
             this.field_g = param1;
           }
           if (!this.field_i) {

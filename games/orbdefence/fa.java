@@ -47,18 +47,18 @@ final class fa {
           }
           if (param1 == 255) {
             stackIn_7_0 = !(ae.field_a >= 13);
-            tl.field_g = fk.a(stackIn_7_0, (byte) -68);
+            tl.field_g = fk.createAccountSuccessResult(stackIn_7_0, (byte) -68);
             return;
           }
           if (param1 < 100) {
-            tl.field_g = oe.a(param1, param3, -3);
+            tl.field_g = oe.createAccountErrorResult(param1, param3, -3);
             return;
           }
           if (param1 <= 105) {
-            tl.field_g = hi.a(2, param2);
+            tl.field_g = hi.createAccountSuggestionsResult(2, param2);
             return;
           }
-          tl.field_g = oe.a(param1, param3, -3);
+          tl.field_g = oe.createAccountErrorResult(param1, param3, -3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

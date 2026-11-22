@@ -5,7 +5,7 @@ final class GameScreen {
     private int field_j;
     static int field_c;
     private int field_g;
-    static ef field_h;
+    static AccountServiceResult field_h;
     static String field_a;
     static Sprite field_i;
     private int screenId;
@@ -301,7 +301,7 @@ final class GameScreen {
           var6 = 200;
           var7 = hl.field_c;
           var8 = 0;
-          var9 = (ef.field_k + param3) % param1;
+          var9 = (AccountServiceResult.field_k + param3) % param1;
           var10 = 0;
           if (param2 != -27) {
             stackIn_3_0 = -5;
@@ -551,7 +551,7 @@ final class GameScreen {
           if (this.screenId == 3 ||
             this.screenId == 8 ||
             this.screenId == 10) {
-            ef.field_k = ef.field_k + 1;
+            AccountServiceResult.field_k = AccountServiceResult.field_k + 1;
           }
           stackIn_230_0 = (bc.field_o == bb.activeScreenId) ? 0 : 1;
           var3 = stackIn_230_0;
@@ -2099,7 +2099,7 @@ final class GameScreen {
         int var3Lifetime1;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          var2_int = ef.field_k % 1050;
+          var2_int = AccountServiceResult.field_k % 1050;
           var3 = var2_int / 350;
           cj.field_j = -var3 + a.field_c;
           if (cj.field_j < 0) {
@@ -3119,7 +3119,7 @@ final class GameScreen {
         int var6Lifetime1;
         var13 = TorChallenge.field_F ? 1 : 0;
         try {
-          var3_int = ef.field_k % param0;
+          var3_int = AccountServiceResult.field_k % param0;
           var4 = -1;
           var5 = param0 >> 1;
           if (var5 > var3_int) {
@@ -4085,7 +4085,7 @@ final class GameScreen {
                                               if (gi.field_d != null) {
                                                 ij.c((byte) -98);
                                               }
-                                              ef.a((byte) -93, gi.b(param2 + 12473));
+                                              AccountServiceResult.a((byte) -93, gi.b(param2 + 12473));
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -4436,7 +4436,7 @@ final class GameScreen {
         var24 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param12 > -35) {
-            field_h = (ef) null;
+            field_h = (AccountServiceResult) null;
           }
           var21 = 0;
           var18 = -param1[1];
@@ -4637,7 +4637,7 @@ final class GameScreen {
             var11 = pl.field_e[ResourceArchive.field_n[param4].field_L];
             var12 = a.field_d[param4][var11][ResourceArchive.field_n[param4].field_kb][0];
             var13 = 2 * ae.field_u[param4][var11][ResourceArchive.field_n[param4].field_kb] - 1;
-            stackIn_25_0 = (var13 > -ResourceArchive.field_n[param4].field_p + ef.field_k) ? 0 : 1;
+            stackIn_25_0 = (var13 > -ResourceArchive.field_n[param4].field_p + AccountServiceResult.field_k) ? 0 : 1;
             var14 = stackIn_25_0;
             var15 = ll.field_j[param4][var11][ResourceArchive.field_n[param4].field_kb] ? 1 : 0;
             if (var14 != 0 &&
@@ -4648,7 +4648,7 @@ final class GameScreen {
                   var12 != 17) {
                   dupTemp$0 = ResourceArchive.field_n[param4];
                   dupTemp$0.field_kb = dupTemp$0.field_kb + 1;
-                  ResourceArchive.field_n[param4].field_p = ef.field_k;
+                  ResourceArchive.field_n[param4].field_p = AccountServiceResult.field_k;
                   decompiledFrameRemainder0 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -4662,7 +4662,7 @@ final class GameScreen {
                   if (var16 != 0) {
                     dupTemp$2 = ResourceArchive.field_n[param4];
                     dupTemp$2.field_kb = dupTemp$2.field_kb + 1;
-                    ResourceArchive.field_n[param4].field_p = ef.field_k;
+                    ResourceArchive.field_n[param4].field_p = AccountServiceResult.field_k;
                     if (var14 != 0) {
                       dupTemp$3 = ResourceArchive.field_n[param4];
                       dupTemp$3.field_kb = dupTemp$3.field_kb + 1;
@@ -4674,7 +4674,7 @@ final class GameScreen {
               } else {
                 dupTemp$2 = ResourceArchive.field_n[param4];
                 dupTemp$2.field_kb = dupTemp$2.field_kb + 1;
-                ResourceArchive.field_n[param4].field_p = ef.field_k;
+                ResourceArchive.field_n[param4].field_p = AccountServiceResult.field_k;
                 if ((var16 != 0) &&
                   (var14 != 0)) {
                   dupTemp$3 = ResourceArchive.field_n[param4];
@@ -4701,7 +4701,7 @@ final class GameScreen {
           var11Lifetime1 = jj.field_a[param4].fullWidth;
           var12Lifetime1 = jj.field_a[param4].fullHeight;
           if (param0 != 42) {
-            field_h = (ef) null;
+            field_h = (AccountServiceResult) null;
           }
           var13Lifetime1 = param3 - var12Lifetime1 >> 1;
           var14Lifetime1 = param1 - var11Lifetime1 >> 1;
@@ -4917,12 +4917,12 @@ final class GameScreen {
               }
               od.a(var11, var2_int, var3);
               SoftwareRasterizer.b(pf.field_g);
-              var14 = ef.field_j[0];
+              var14 = AccountServiceResult.field_j[0];
               var2_int = lg.field_d[8][1] + (lg.field_d[8][7] + lg.field_d[8][5]) * var13;
               var3 = lg.field_d[8][3];
               var4 = lg.field_d[8][7];
               var5 = lg.field_d[8][8];
-              var15 = ef.field_j[1];
+              var15 = AccountServiceResult.field_j[1];
               var2_int = -(-var4 + var14 >> 1) + var2_int;
               var3 = var3 - (-var5 + var15 >> 1);
               SoftwareRasterizer.a(pf.field_g);
@@ -4990,10 +4990,10 @@ final class GameScreen {
                 oj.field_d = new Sprite(640, 480);
               }
               GzipDecoder.drawNineSlice(var12, var5, var4, (byte) 69, var3, var2_int);
-              var14 = ef.field_j[0];
+              var14 = AccountServiceResult.field_j[0];
               var3 = lg.field_d[8][3];
               var5 = lg.field_d[8][8];
-              var15 = ef.field_j[1];
+              var15 = AccountServiceResult.field_j[1];
               var2_int = lg.field_d[8][1] + var13 * (lg.field_d[8][5] + lg.field_d[8][7]);
               var4 = lg.field_d[8][7];
               var2_int = var2_int - (-var4 + var14 >> 1);
@@ -5338,7 +5338,7 @@ final class GameScreen {
           var2_int = 0;
           while (var2_int < 3) {
             ResourceArchive.field_n[var2_int].field_L = 0;
-            ResourceArchive.field_n[var2_int].field_p = ef.field_k;
+            ResourceArchive.field_n[var2_int].field_p = AccountServiceResult.field_k;
             ResourceArchive.field_n[var2_int].field_kb = 0;
             var2_int++;
             if (var3 == 0) {
@@ -5528,8 +5528,8 @@ final class GameScreen {
             }
             if (decompiledFrameRemainder0) {
               if (ma.field_j == 2) {
-                var12Lifetime1 = ef.field_k % 800 / 200;
-                var13Lifetime1 = ef.field_k % 2400 / 800;
+                var12Lifetime1 = AccountServiceResult.field_k % 800 / 200;
+                var13Lifetime1 = AccountServiceResult.field_k % 2400 / 800;
                 var14Lifetime1 = nh.field_hb[ma.field_j];
                 var13Lifetime1 = (cj.field_j + var13Lifetime1) % var14Lifetime1;
                 var16_int = 0;
@@ -5567,7 +5567,7 @@ final class GameScreen {
                     var3 = ui.field_i[0].fullHeight + SecondaryNodeDequeIterator.field_e.field_x + 169;
                     vj.field_c = var13Lifetime1;
                     var2_intLifetime1 = -var9 + (-ui.field_i[0].fullWidth + 604) + (-64 + var9 >> 1);
-                    stackIn_48_0 = ef.field_k;
+                    stackIn_48_0 = AccountServiceResult.field_k;
                     stackIn_48_1 = 200;
                   }
                   break;
@@ -5612,7 +5612,7 @@ final class GameScreen {
               if (decompiledFrameRemainder0) {
                 if (ma.field_j != 3) {
                   if (ma.field_j == 4) {
-                    var11Lifetime2 = ef.field_k % 1050;
+                    var11Lifetime2 = AccountServiceResult.field_k % 1050;
                     var12Lifetime1Lifetime1 = var11Lifetime2 % 350;
                     var13Lifetime1Lifetime1 = var11Lifetime2 / 350;
                     var13Lifetime1Lifetime1 = var13Lifetime1Lifetime1 + cj.field_j;
@@ -5776,7 +5776,7 @@ final class GameScreen {
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].fullWidth / 2;
                             var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].fullHeight + SecondaryNodeDequeIterator.field_e.field_x);
                             ProxySocketConnector.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
-                            var11Lifetime2Lifetime4 = ef.field_k % 240;
+                            var11Lifetime2Lifetime4 = AccountServiceResult.field_k % 240;
                             if (119 <= var11Lifetime2Lifetime4) {
                               var6Lifetime1Lifetime2 = var4 / 2 + var2_intLifetime1;
                               var7Lifetime1Lifetime2 = var3 + ph.field_m[1].fullHeight;
@@ -5927,8 +5927,8 @@ final class GameScreen {
         try {
           var5_int = this.a(param1, (byte) -109);
           var6 = this.a(-111, param1);
-          var7 = ef.field_j[0];
-          var8 = ef.field_j[1];
+          var7 = AccountServiceResult.field_j[0];
+          var8 = AccountServiceResult.field_j[1];
           var9 = lg.field_d;
           if (kf.field_b == 1 &&
             null != fl.field_t[this.screenId]) {
@@ -6404,7 +6404,7 @@ final class GameScreen {
             return;
           }
           this.c(false);
-          var9_int = ef.field_k % param0;
+          var9_int = AccountServiceResult.field_k % param0;
           var10 = ja.a((byte) 107, param3) ? 1 : 0;
           stackIn_7_0 = (ResourceArchive.field_n[param7].field_L != 17) ? 0 : 1;
           var11 = stackIn_7_0;
@@ -6414,7 +6414,7 @@ final class GameScreen {
           if (var11 != 0 &&
             var9_int < 15) {
             var11 = 0;
-            ResourceArchive.field_n[param7].field_p = ef.field_k;
+            ResourceArchive.field_n[param7].field_p = AccountServiceResult.field_k;
           }
           if (param3 == 10 &&
             var11 == 0) {
@@ -6543,7 +6543,7 @@ final class GameScreen {
         int var10 = 0;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          var7_int = ef.field_k % param4;
+          var7_int = AccountServiceResult.field_k % param4;
           if (param3) {
             return;
           }

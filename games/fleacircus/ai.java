@@ -54,7 +54,7 @@ final class ai extends r {
 
     final static void a(int param0, int param1, qc param2, boolean param3) {
         try {
-          mk.field_d = param2;
+          AccountServiceResult.field_d = param2;
           bb.field_C = param0;
           q.field_d = param1;
           if (param3) {

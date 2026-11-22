@@ -3,7 +3,7 @@
  */
 abstract class a extends wf implements pi {
     private vg field_f;
-    static wg field_h;
+    static AccountServiceResult field_h;
     static Sprite field_e;
     static String field_g;
     static int[] field_d;
@@ -73,7 +73,7 @@ abstract class a extends wf implements pi {
           field_d = null;
           return;
         }
-        field_h = (wg) null;
+        field_h = (AccountServiceResult) null;
         field_e = null;
         field_d = null;
     }

@@ -38,7 +38,7 @@ final class Raider {
         int var2 = param1;
         int var3 = 0;
         while (true) {
-          dupTemp$0 = jb.field_Sb[var2];
+          dupTemp$0 = AccountCreationResultPanel.field_Sb[var2];
           var2 = dupTemp$0;
           if (-1 == dupTemp$0) {
             break;
@@ -47,10 +47,10 @@ final class Raider {
         }
         int[] var4 = new int[var3];
         var2 = param1;
-        while (-1 != jb.field_Sb[var2]) {
+        while (-1 != AccountCreationResultPanel.field_Sb[var2]) {
           var3--;
           var4[var3] = var2;
-          var2 = jb.field_Sb[var2];
+          var2 = AccountCreationResultPanel.field_Sb[var2];
         }
         return var4;
     }
@@ -200,7 +200,7 @@ final class Raider {
             } else {
               stackIn_41_2 = "{...}";
             }
-            throw vk.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param3).append(')').toString());
+            throw AccountServiceResult.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

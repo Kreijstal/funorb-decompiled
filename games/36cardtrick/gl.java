@@ -330,7 +330,7 @@ final class gl extends hl {
           var4 = li.a(param1, 100, param2);
           var5 = ug.a(var4, param3 - 803, param0);
           aj.field_s.a(new gi(var4, var5), 27362);
-          bg.field_tb.b(var5);
+          AccountCreationResultPanel.field_tb.b(var5);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "gl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

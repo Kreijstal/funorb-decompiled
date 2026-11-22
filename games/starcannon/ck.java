@@ -75,23 +75,23 @@ final class ck implements Runnable {
               }
             }
             if (KeyboardInput.field_a == 2) {
-              ok.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.field_f), DirectByteStorage.field_f);
+              AccountCreationResultPanel.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.field_f), DirectByteStorage.field_f);
               var2 = new PacketBuffer(13);
               oe.a(wj.field_b, 32, var2, kc.field_M, ld.field_fb);
               var2.writeByte(15, -122);
               var2.writeInt((byte) -113, ac.field_e);
-              ok.field_sb.a(0, var2.payload, (byte) 87, 13);
+              AccountCreationResultPanel.field_sb.a(0, var2.payload, (byte) 87, 13);
               KeyboardInput.field_a = KeyboardInput.field_a + 1;
               wf.field_f = dd.b(69) + 30000L;
             }
             if (KeyboardInput.field_a == 3) {
-              if (0 >= ok.field_sb.c(122)) {
+              if (0 >= AccountCreationResultPanel.field_sb.c(122)) {
                 if (wf.field_f < dd.b(63)) {
                   stackIn_33_0 = ej.a(2, -2);
                   return stackIn_33_0;
                 }
               } else {
-                var1_int = ok.field_sb.a(488852616);
+                var1_int = AccountCreationResultPanel.field_sb.a(488852616);
                 if (var1_int != 0) {
                   stackIn_28_0 = ej.a(2, var1_int);
                   return stackIn_28_0;
@@ -103,10 +103,10 @@ final class ck implements Runnable {
               stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            jh.field_b.a(ok.field_sb, 65, SecondaryNodeDeque.field_g);
+            jh.field_b.a(AccountCreationResultPanel.field_sb, 65, SecondaryNodeDeque.field_g);
             KeyboardInput.field_a = 0;
             bj.field_d = null;
-            ok.field_sb = null;
+            AccountCreationResultPanel.field_sb = null;
             stackIn_36_0 = 0;
             return stackIn_36_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

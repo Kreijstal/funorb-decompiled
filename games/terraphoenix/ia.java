@@ -15,7 +15,7 @@ final class ia extends di {
     }
 
     final im b(String param0, int param1) {
-        pd var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         im stackIn_5_0 = null;
@@ -37,9 +37,9 @@ final class ia extends di {
           if (!param0.equals(this.field_o)) {
             var3 = ta.a(true, param0);
             if (var3 != null &&
-              var3.field_b == null) {
+              var3.message == null) {
               this.field_o = param0;
-              this.field_m = var3.field_i;
+              this.field_m = var3.success;
             } else {
               stackIn_12_0 = oh.field_b;
               return stackIn_12_0;
@@ -69,7 +69,7 @@ final class ia extends di {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
-        pd var5 = null;
+        AccountServiceResult var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_13_0 = null;
@@ -91,11 +91,11 @@ final class ia extends di {
             if (var5 == null) {
               return null;
             }
-            if (var5.field_b != null) {
+            if (var5.message != null) {
               return null;
             }
             this.field_o = param0;
-            this.field_m = var5.field_i;
+            this.field_m = var5.success;
           }
           if (this.field_m) {
             stackIn_15_0 = lk.field_e;
@@ -290,16 +290,16 @@ final class ia extends di {
         }
     }
 
-    final static pd a(int param0, boolean param1) {
-        pd var2 = null;
-        pd var2Lifetime1;
+    final static AccountServiceResult createAccountSuccessResult(int param0, boolean param1) {
+        AccountServiceResult var2 = null;
+        AccountServiceResult var2Lifetime1;
         if (param0 == 4) {
-          var2 = new pd(true);
+          var2 = new AccountServiceResult(true);
           var2.field_a = param1 ? true : false;
           return var2;
         }
         field_r = (String[]) null;
-        var2Lifetime1 = new pd(true);
+        var2Lifetime1 = new AccountServiceResult(true);
         var2Lifetime1.field_a = param1 ? true : false;
         return var2Lifetime1;
     }

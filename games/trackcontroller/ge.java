@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ge extends td implements jg, ButtonListener {
-    private og field_C;
+    private AccountCreationResultPanel field_C;
     static boolean field_D;
     private ButtonWidget field_E;
     static int field_G;
@@ -56,7 +56,7 @@ final class ge extends td implements jg, ButtonListener {
         }
     }
 
-    ge(og param0) {
+    ge(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (t) null);
         String var7 = null;
         int var3 = 0;

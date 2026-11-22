@@ -148,7 +148,7 @@ final class ue extends IntrusiveNode {
               param1.e(12, param0 + 8311);
               var4[var5] = var6;
             } else {
-              var6_int = param1.e(ta.b(var5 - 1, 0), 95);
+              var6_int = param1.e(AccountCreationResultPanel.b(var5 - 1, 0), 95);
               var4[var5] = var4[var6_int];
             }
           }

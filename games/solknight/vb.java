@@ -5,7 +5,7 @@ final class vb extends il {
     static IntrusiveDeque field_h;
     static String field_i;
     static String field_f;
-    static wg field_j;
+    static AccountServiceResult field_j;
     static int field_g;
 
     final wb a(int param0) {

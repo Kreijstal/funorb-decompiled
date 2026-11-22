@@ -10,11 +10,11 @@ final class sa {
     static String field_b;
     int field_a;
 
-    final static og a(byte param0, String[] param1) {
-        og var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(byte param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
-        og stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,10 +22,10 @@ final class sa {
         try {
           if (param0 != 3) {
             var3 = (String[]) null;
-            sa.a((byte) -13, (String[]) null);
+            sa.createAccountSuggestionsResult((byte) -13, (String[]) null);
           }
-          var2 = new og(false);
-          var2.field_h = param1;
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

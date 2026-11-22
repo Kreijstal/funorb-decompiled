@@ -21,7 +21,7 @@ abstract class hn {
           }
           return var1;
         }
-        hn.a(true, (byte) 38);
+        hn.createAccountSuccessResult(true, (byte) 38);
         if (var1.length() == 0) {
           var1 = cb.a((byte) -98);
         }
@@ -43,14 +43,14 @@ abstract class hn {
 
     abstract void a(PacketBuffer param0, byte param1);
 
-    final static ed a(boolean param0, byte param1) {
-        ed var2 = null;
+    final static AccountServiceResult createAccountSuccessResult(boolean param0, byte param1) {
+        AccountServiceResult var2 = null;
         if (param1 == 105) {
-          var2 = new ed(true);
+          var2 = new AccountServiceResult(true);
           var2.field_i = param0 ? true : false;
           return var2;
         }
-        return (ed) null;
+        return (AccountServiceResult) null;
     }
 
     final static void a(byte param0) {
@@ -58,7 +58,7 @@ abstract class hn {
         CharSequence var2 = (CharSequence) ((Object) ti.field_J);
         in.field_b = cl.a(-95, var2);
         if (param0 > -22) {
-          hn.a(true, (byte) 100);
+          hn.createAccountSuccessResult(true, (byte) 100);
         }
     }
 

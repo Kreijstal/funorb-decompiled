@@ -165,7 +165,7 @@ public final class OrbDefence extends NetworkGameClient {
         bh.field_d = qk.a(4, -32585);
         pd.field_r = qk.a(5, -32585);
         kd.field_q = qk.a(6, -32585);
-        ig.field_hb = qk.a(7, -32585);
+        AccountCreationResultPanel.field_hb = qk.a(7, -32585);
         int var2 = 13 / ((-73 - param0) / 49);
         hl.field_N = qk.a(8, -32585);
         lg.field_c = qk.a(9, -32585);
@@ -437,7 +437,7 @@ public final class OrbDefence extends NetworkGameClient {
         bg.a((byte) -107);
         ke.a((byte) -80);
         sk.m(-79);
-        ig.r(11285);
+        AccountCreationResultPanel.r(11285);
         ve.clearStaticReferences(false);
         pc.q(-1);
         dh.e((byte) -94);
@@ -588,7 +588,7 @@ public final class OrbDefence extends NetworkGameClient {
         dc.clearStaticReferences(!param0 ? true : false);
         ha.clearStaticReferences((byte) 99);
         va.a(8);
-        qj.clearStaticReferences(-28342);
+        AccountServiceResult.clearStaticReferences(-28342);
         mi.clearStaticReferences((byte) -67);
         tl.clearStaticReferences(-127);
         hc.c(31);
@@ -780,8 +780,8 @@ public final class OrbDefence extends NetworkGameClient {
                 GameAppletShell.field_d.b((byte) -84, "arial13")) {
                 if (kd.field_q.b(-1) &&
                   kd.field_q.c(7715)) {
-                  if (ig.field_hb.b(-1) &&
-                    ig.field_hb.c(7715)) {
+                  if (AccountCreationResultPanel.field_hb.b(-1) &&
+                    AccountCreationResultPanel.field_hb.c(7715)) {
                     if (hl.field_N.b(-1) &&
                       hl.field_N.c(param1 + 7618)) {
                       if (lg.field_c.b(-1) &&
@@ -797,7 +797,7 @@ public final class OrbDefence extends NetworkGameClient {
                             }
                             mh.field_a = new dl[60];
                             bg.a(param1 - 2027485875);
-                            cj.field_b = new vd(kd.field_q, ig.field_hb);
+                            cj.field_b = new vd(kd.field_q, AccountCreationResultPanel.field_hb);
                             mh.field_a[0] = cm.a(kd.field_q, "", "Orb_defence_select_menu_item").a();
                             mh.field_a[30] = cm.a(kd.field_q, "", "Orb_defence_mouseover_options").a();
                             mh.field_a[1] = cm.a(kd.field_q, "", "Orb_defence_place_turret_2").a();
@@ -857,7 +857,7 @@ public final class OrbDefence extends NetworkGameClient {
                     j.a(30.0f, mc.a(hl.field_N, ii.field_d, ld.field_c, 0, -93), (byte) 113);
                     return false;
                   }
-                  j.a(20.0f, ed.a(hb.field_b, ig.field_hb, -14416, vg.field_u, ""), (byte) 111);
+                  j.a(20.0f, ed.a(hb.field_b, AccountCreationResultPanel.field_hb, -14416, vg.field_u, ""), (byte) 111);
                   return false;
                 }
                 j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
@@ -872,23 +872,23 @@ public final class OrbDefence extends NetworkGameClient {
           j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
           return false;
         }
-        if (null != ig.field_hb) {
+        if (null != AccountCreationResultPanel.field_hb) {
           j.a(70.0f, me.field_i, (byte) 120);
           this.d((byte) -82);
-          mh.field_a[31] = nj.a(ig.field_hb, "", "orb_defence_normo_boss_arrive").a();
-          mh.field_a[32] = nj.a(ig.field_hb, "", "orb_defence_swarmo_boss_arrive").a();
-          mh.field_a[33] = nj.a(ig.field_hb, "", "orb_defence_zoomo_boss_arrive").a();
-          mh.field_a[34] = nj.a(ig.field_hb, "", "orb_defence_tougho_boss_arrive").a();
-          mh.field_a[35] = nj.a(ig.field_hb, "", "orb_defence_flybo_boss_arrive").a();
-          mh.field_a[36] = nj.a(ig.field_hb, "", "orb_defence_bombo_boss_arrive").a();
-          mh.field_a[37] = nj.a(ig.field_hb, "", "orb_defence_blambo_boss_arrive").a();
-          mh.field_a[38] = nj.a(ig.field_hb, "", "orb_defence_irono_boss_arrive").a();
-          mh.field_a[39] = nj.a(ig.field_hb, "", "orb_defence_awesomeo_boss_arrive").a();
-          mh.field_a[40] = nj.a(ig.field_hb, "", "orb_defence_sneako_boss_arrive").a();
-          mh.field_a[41] = nj.a(ig.field_hb, "", "orb_defence_splitto_boss_arrive").a();
-          mh.field_a[57] = nj.a(ig.field_hb, "", "orb_defence_Barrier_Norb_Electrocute").a();
-          mh.field_a[58] = nj.a(ig.field_hb, "", "orb_defence_Electro_Turret_shoot").a();
-          ig.field_hb = null;
+          mh.field_a[31] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_normo_boss_arrive").a();
+          mh.field_a[32] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_swarmo_boss_arrive").a();
+          mh.field_a[33] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_zoomo_boss_arrive").a();
+          mh.field_a[34] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_tougho_boss_arrive").a();
+          mh.field_a[35] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_flybo_boss_arrive").a();
+          mh.field_a[36] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_bombo_boss_arrive").a();
+          mh.field_a[37] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_blambo_boss_arrive").a();
+          mh.field_a[38] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_irono_boss_arrive").a();
+          mh.field_a[39] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_awesomeo_boss_arrive").a();
+          mh.field_a[40] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_sneako_boss_arrive").a();
+          mh.field_a[41] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_splitto_boss_arrive").a();
+          mh.field_a[57] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_Barrier_Norb_Electrocute").a();
+          mh.field_a[58] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_Electro_Turret_shoot").a();
+          AccountCreationResultPanel.field_hb = null;
           vd.a(param1 - 8);
           return false;
         }

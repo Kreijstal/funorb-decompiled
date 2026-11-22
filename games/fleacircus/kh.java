@@ -4,7 +4,7 @@
 final class kh {
     char[][] field_c;
     byte field_e;
-    static mk field_a;
+    static AccountServiceResult field_a;
     byte field_f;
     static int field_d;
     static int field_g;

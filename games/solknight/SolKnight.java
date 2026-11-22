@@ -37,7 +37,7 @@ public final class SolKnight extends ab {
             mh.a(param0 + 8191);
           }
           fh.field_c = IsaacRandom.a(param0, 89);
-          wg.field_g = IsaacRandom.a(2, 74);
+          AccountServiceResult.field_g = IsaacRandom.a(2, 74);
           ProxySocketConnector.field_h = IsaacRandom.a(3, 125);
           ic.field_u = IsaacRandom.a(4, 109);
           qb.field_cb = IsaacRandom.a(5, 90);
@@ -260,7 +260,7 @@ public final class SolKnight extends ab {
           he.a(false);
           jc.a(1731);
           i.a((byte) 30);
-          jk.n(6);
+          AccountCreationResultPanel.n(6);
           lb.m(121);
           s.m(-1);
           ci.g((byte) -107);
@@ -398,7 +398,7 @@ public final class SolKnight extends ab {
           ib.a(0);
           bl.a(0);
           ef.clearStaticReferences(11051);
-          wg.a(true);
+          AccountServiceResult.a(true);
           ce.b(true);
           kb.clearStaticReferences((byte) 15);
           sa.a((byte) -116);
@@ -482,11 +482,11 @@ public final class SolKnight extends ab {
         var16 = field_L ? 1 : 0;
         try {
           kb.b((byte) -128);
-          if (null != wg.field_g) {
+          if (null != AccountServiceResult.field_g) {
             if (pl.field_d.c((byte) -121) &&
               pl.field_d.a(2, "basic")) {
-              if (wg.field_g.c((byte) -121) &&
-                wg.field_g.b(true)) {
+              if (AccountServiceResult.field_g.c((byte) -121) &&
+                AccountServiceResult.field_g.b(true)) {
                 if (ProxySocketConnector.field_h.c((byte) -121) &&
                   ProxySocketConnector.field_h.b(true)) {
                   if (ic.field_u.c((byte) -121) &&
@@ -504,44 +504,44 @@ public final class SolKnight extends ab {
                             return stackIn_44_0;
                           }
                           FullscreenFocusCanvas.a((byte) 81);
-                          qc.field_s = new me(wg.field_g, ProxySocketConnector.field_h);
+                          qc.field_s = new me(AccountServiceResult.field_g, ProxySocketConnector.field_h);
                           bf.field_b[0] = sl.a(ProxySocketConnector.field_h, "", "combo_power").c();
                           bf.field_b[1] = sl.a(ProxySocketConnector.field_h, "", "mega_power").c();
-                          bf.field_b[2] = ra.a(wg.field_g, "", "load_weapon").b();
-                          bf.field_b[3] = ra.a(wg.field_g, "", "rocket_launcher").b();
-                          bf.field_b[4] = ra.a(wg.field_g, "", "explosion").b();
-                          bf.field_b[5] = ra.a(wg.field_g, "", "laser").b();
-                          bf.field_b[6] = ra.a(wg.field_g, "", "asteroid_proximity").b();
-                          bf.field_b[7] = ra.a(wg.field_g, "", "scatter_separates").b();
-                          bf.field_b[8] = ra.a(wg.field_g, "", "homing_missile_launch").b();
-                          bf.field_b[9] = ra.a(wg.field_g, "", "nuke_explode").b();
-                          bf.field_b[10] = ra.a(wg.field_g, "", "nuke_load").b();
-                          bf.field_b[11] = ra.a(wg.field_g, "", "railgun_fire_and_load").b();
-                          bf.field_b[12] = ra.a(wg.field_g, "", "planet_explode").b();
-                          bf.field_b[13] = ra.a(wg.field_g, "", "menu_mouseover").b();
-                          bf.field_b[14] = ra.a(wg.field_g, "", "menu_select").b();
-                          bf.field_b[15] = ra.a(wg.field_g, "", "scatter_launcher").b();
-                          bf.field_b[16] = ra.a(wg.field_g, "", "laser_impact_burn").b();
-                          bf.field_b[17] = ra.a(wg.field_g, "", "plasma_fire").b();
-                          bf.field_b[18] = ra.a(wg.field_g, "", "plasma_charge").b();
-                          bf.field_b[19] = ra.a(wg.field_g, "", "fusion_charge").b();
-                          bf.field_b[20] = ra.a(wg.field_g, "", "fusion_fire").b();
-                          bf.field_b[21] = ra.a(wg.field_g, "", "asteroid_tiny_rotate").b();
-                          bf.field_b[22] = ra.a(wg.field_g, "", "asteroid_small_rotate").b();
-                          bf.field_b[23] = ra.a(wg.field_g, "", "asteroid_medium_rotate").b();
-                          bf.field_b[24] = ra.a(wg.field_g, "", "asteroid_large_rotate").b();
-                          bf.field_b[25] = ra.a(wg.field_g, "", "asteroid_huge_rotate").b();
-                          bf.field_b[26] = ra.a(wg.field_g, "", "explosion_huge").b();
-                          bf.field_b[27] = ra.a(wg.field_g, "", "explosion_large").b();
-                          bf.field_b[28] = ra.a(wg.field_g, "", "explosion_medium").b();
-                          bf.field_b[29] = ra.a(wg.field_g, "", "explosion_small").b();
-                          bf.field_b[30] = ra.a(wg.field_g, "", "explosion_tiny").b();
-                          bf.field_b[31] = ra.a(wg.field_g, "", "railgun_impact").b();
-                          bf.field_b[32] = ra.a(wg.field_g, "", "plasma_impact").b();
-                          bf.field_b[33] = ra.a(wg.field_g, "", "plasma_impact_upgraded").b();
-                          bf.field_b[34] = ra.a(wg.field_g, "", "nuke_explode_upgraded").b();
-                          bf.field_b[35] = ra.a(wg.field_g, "", "sol_sword").b();
-                          wg.field_g = null;
+                          bf.field_b[2] = ra.a(AccountServiceResult.field_g, "", "load_weapon").b();
+                          bf.field_b[3] = ra.a(AccountServiceResult.field_g, "", "rocket_launcher").b();
+                          bf.field_b[4] = ra.a(AccountServiceResult.field_g, "", "explosion").b();
+                          bf.field_b[5] = ra.a(AccountServiceResult.field_g, "", "laser").b();
+                          bf.field_b[6] = ra.a(AccountServiceResult.field_g, "", "asteroid_proximity").b();
+                          bf.field_b[7] = ra.a(AccountServiceResult.field_g, "", "scatter_separates").b();
+                          bf.field_b[8] = ra.a(AccountServiceResult.field_g, "", "homing_missile_launch").b();
+                          bf.field_b[9] = ra.a(AccountServiceResult.field_g, "", "nuke_explode").b();
+                          bf.field_b[10] = ra.a(AccountServiceResult.field_g, "", "nuke_load").b();
+                          bf.field_b[11] = ra.a(AccountServiceResult.field_g, "", "railgun_fire_and_load").b();
+                          bf.field_b[12] = ra.a(AccountServiceResult.field_g, "", "planet_explode").b();
+                          bf.field_b[13] = ra.a(AccountServiceResult.field_g, "", "menu_mouseover").b();
+                          bf.field_b[14] = ra.a(AccountServiceResult.field_g, "", "menu_select").b();
+                          bf.field_b[15] = ra.a(AccountServiceResult.field_g, "", "scatter_launcher").b();
+                          bf.field_b[16] = ra.a(AccountServiceResult.field_g, "", "laser_impact_burn").b();
+                          bf.field_b[17] = ra.a(AccountServiceResult.field_g, "", "plasma_fire").b();
+                          bf.field_b[18] = ra.a(AccountServiceResult.field_g, "", "plasma_charge").b();
+                          bf.field_b[19] = ra.a(AccountServiceResult.field_g, "", "fusion_charge").b();
+                          bf.field_b[20] = ra.a(AccountServiceResult.field_g, "", "fusion_fire").b();
+                          bf.field_b[21] = ra.a(AccountServiceResult.field_g, "", "asteroid_tiny_rotate").b();
+                          bf.field_b[22] = ra.a(AccountServiceResult.field_g, "", "asteroid_small_rotate").b();
+                          bf.field_b[23] = ra.a(AccountServiceResult.field_g, "", "asteroid_medium_rotate").b();
+                          bf.field_b[24] = ra.a(AccountServiceResult.field_g, "", "asteroid_large_rotate").b();
+                          bf.field_b[25] = ra.a(AccountServiceResult.field_g, "", "asteroid_huge_rotate").b();
+                          bf.field_b[26] = ra.a(AccountServiceResult.field_g, "", "explosion_huge").b();
+                          bf.field_b[27] = ra.a(AccountServiceResult.field_g, "", "explosion_large").b();
+                          bf.field_b[28] = ra.a(AccountServiceResult.field_g, "", "explosion_medium").b();
+                          bf.field_b[29] = ra.a(AccountServiceResult.field_g, "", "explosion_small").b();
+                          bf.field_b[30] = ra.a(AccountServiceResult.field_g, "", "explosion_tiny").b();
+                          bf.field_b[31] = ra.a(AccountServiceResult.field_g, "", "railgun_impact").b();
+                          bf.field_b[32] = ra.a(AccountServiceResult.field_g, "", "plasma_impact").b();
+                          bf.field_b[33] = ra.a(AccountServiceResult.field_g, "", "plasma_impact_upgraded").b();
+                          bf.field_b[34] = ra.a(AccountServiceResult.field_g, "", "nuke_explode_upgraded").b();
+                          bf.field_b[35] = ra.a(AccountServiceResult.field_g, "", "sol_sword").b();
+                          AccountServiceResult.field_g = null;
                           ProxySocketConnector.field_h = null;
                           stackIn_46_0 = fc.field_o;
                           return stackIn_46_0;
@@ -566,7 +566,7 @@ public final class SolKnight extends ab {
                 stackIn_19_0 = pb.field_c;
                 return stackIn_19_0;
               }
-              a.a((byte) 102, ab.a(wg.field_g, l.field_b, rd.field_a, "", false), 10.0f);
+              a.a((byte) 102, ab.a(AccountServiceResult.field_g, l.field_b, rd.field_a, "", false), 10.0f);
               stackIn_13_0 = pb.field_c;
               return stackIn_13_0;
             }

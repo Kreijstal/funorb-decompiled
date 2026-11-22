@@ -559,7 +559,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           eg.clearStaticReferences(-1);
           qj.a((byte) -126);
           k.clearStaticReferences((byte) 52);
-          qd.o(9791);
+          AccountCreationResultPanel.o(9791);
           tf.c(false);
           el.n(20);
           ma.n(19678);
@@ -708,7 +708,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           bb.clearStaticReferences(param0);
           wk.d(80);
           qb.clearStaticReferences(false);
-          og.clearStaticReferences(120);
+          AccountServiceResult.clearStaticReferences(120);
           sd.a(2);
           lk.clearStaticReferences(-27996);
           ll.d((byte) 104);
@@ -1066,10 +1066,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if (!BoundedRandomAccessFile.a((byte) 97)) {
               cj.b(8227);
               if (var3 != 0) {
-                og.a((byte) 78);
+                AccountServiceResult.a((byte) 78);
               }
             } else {
-              og.a((byte) 78);
+              AccountServiceResult.a((byte) 78);
             }
             ul.field_a = 2;
             if (var3 == 0) {
@@ -2013,7 +2013,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(98, eg.field_f);
           MouseWheelInput.field_a = ij.a("human_abductee_male", (byte) 67, kf.field_d, "");
           cc.field_y = ij.a("human_abductee_female", (byte) 87, kf.field_d, "");
-          og.field_e = ij.a("human_abductee_baby", (byte) 95, kf.field_d, "");
+          AccountServiceResult.field_e = ij.a("human_abductee_baby", (byte) 95, kf.field_d, "");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2079,10 +2079,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                     we.a(qg.a(td.field_o, sa.field_b, 34, "", kf.field_d), -118, 18.0f);
                     return false;
                   }
-                  we.a(qg.a(qd.field_Fb, r.field_a, 34, "", df.field_a), -105, 13.0f);
+                  we.a(qg.a(AccountCreationResultPanel.field_Fb, r.field_a, 34, "", df.field_a), -105, 13.0f);
                   return false;
                 }
-                we.a(hj.a(qd.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
+                we.a(hj.a(AccountCreationResultPanel.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
                 return false;
               }
               we.a(qg.a(wi.field_h, ig.field_o, 34, "", ua.field_b), -105, 8.0f);
@@ -2326,7 +2326,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           tb.field_b = this.a(eh.a("", (byte) -78, kf.field_d, "scenery_tile_earth_3_rubble"), (byte) -20);
           qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
           dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
-          qd.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
+          AccountCreationResultPanel.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
           gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
           rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
           sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
@@ -2379,8 +2379,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           GameClientShell.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
           GameClientShell.field_x[0].c();
           qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
-          og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
-          og.field_c[0].c();
+          AccountServiceResult.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
+          AccountServiceResult.field_c[0].c();
           ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
           field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
           qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");

@@ -520,7 +520,7 @@ final class wo {
                                         var8 = -var7 + this.field_W;
                                         if (null != ln.field_d &&
                                           ln.field_d.field_B >= 0 &&
-                                          null == oe.field_pb) {
+                                          null == AccountCreationResultPanel.field_pb) {
                                           var9 = ln.field_d.field_s % 3;
                                           if (var9 != 0) {
                                             if (var9 == 1) {
@@ -567,7 +567,7 @@ final class wo {
                             var8Lifetime2 = this.field_W - var7;
                             if (ln.field_d != null &&
                               ln.field_d.field_B >= 0 &&
-                              oe.field_pb == null) {
+                              AccountCreationResultPanel.field_pb == null) {
                               var9Lifetime2 = ln.field_d.field_s % 3;
                               if (var9Lifetime2 != 0) {
                                 if (var9Lifetime2 == 1) {
@@ -613,7 +613,7 @@ final class wo {
                         var8Lifetime1 = this.field_W - var7;
                         if (ln.field_d != null &&
                           ln.field_d.field_B >= 0 &&
-                          null == oe.field_pb) {
+                          null == AccountCreationResultPanel.field_pb) {
                           var9Lifetime1 = ln.field_d.field_s % 3;
                           if (0 == var9Lifetime1) {
                             gi.field_u = gi.field_u + var8Lifetime1;

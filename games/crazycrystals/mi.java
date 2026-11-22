@@ -337,7 +337,7 @@ final class mi extends ea implements Cloneable {
               if (0 < param5) {
                 this.field_y = ag.field_c;
               } else {
-                this.field_y = sa.field_qb;
+                this.field_y = AccountCreationResultPanel.field_qb;
               }
             }
           } else {

@@ -17,7 +17,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class DirectByteStorage extends ByteStorage {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class DirectByteStorage extends ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var2_ref), "ep.H(" + param0 + ',' + param1 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var2_ref), "ep.H(" + param0 + ',' + param1 + ')');
         }
     }
 

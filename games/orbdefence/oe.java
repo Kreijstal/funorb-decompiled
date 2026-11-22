@@ -31,7 +31,7 @@ final class oe extends DualLinkNode {
           }
           if (param0 != 67) {
             var5 = (String) null;
-            oe.a(-111, (String) null, -88);
+            oe.createAccountErrorResult(-111, (String) null, -88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class oe extends DualLinkNode {
         try {
           if (param2 != -3) {
             var10 = (String) null;
-            oe.a(-30, (String) null, -63);
+            oe.createAccountErrorResult(-30, (String) null, -63);
           }
           if (param1 == 1) {
             this.field_n = g.a(87, '<', param0.readString(2));
@@ -216,10 +216,10 @@ final class oe extends DualLinkNode {
     oe() {
     }
 
-    final static qj a(int param0, String param1, int param2) {
-        qj var3 = null;
+    final static AccountServiceResult createAccountErrorResult(int param0, String param1, int param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        qj stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -228,9 +228,9 @@ final class oe extends DualLinkNode {
           if (param2 != -3) {
             field_q = (String) null;
           }
-          var3 = new qj(false);
-          var3.field_e = param1;
-          var3.field_b = param0;
+          var3 = new AccountServiceResult(false);
+          var3.message = param1;
+          var3.statusCode = param0;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

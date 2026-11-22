@@ -38,7 +38,7 @@ final class df {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "df.A(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "df.A(" + param0 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class df {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw AccountServiceResult.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class df {
             df.a(true, (CipherPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw vk.a((Throwable) ((Object) runtimeException), "df.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "df.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

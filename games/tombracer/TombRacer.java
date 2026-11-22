@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class TombRacer extends TombRacerShell implements ls {
+public final class TombRacer extends TombRacerShell implements TombRacerClientMarker {
     static String field_F;
     private int field_E;
     private MatchOverlayQueue field_H;

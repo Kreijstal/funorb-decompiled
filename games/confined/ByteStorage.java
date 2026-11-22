@@ -26,7 +26,7 @@ abstract class ByteStorage {
 
     final static boolean a(int param0, String param1, boolean param2, ke param3, String param4, String param5, int param6) {
         RuntimeException var7 = null;
-        v var8 = null;
+        AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -44,7 +44,7 @@ abstract class ByteStorage {
           if (param0 != 30692) {
             return true;
           }
-          var8 = new v(vg.field_Z, param3);
+          var8 = new AccountCreationResultPanel(vg.field_Z, param3);
           vg.field_Z.c(var8, 0);
           if (mf.c(109)) {
             var8.o(param0 - 30583);

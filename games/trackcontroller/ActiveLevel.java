@@ -1275,7 +1275,7 @@ final class ActiveLevel extends LevelGrid {
 
     final void a(boolean param0) {
         cl.a(nd.field_L, 457, 124, 10, 176, 4);
-        bk.font.c(nj.field_d, 471, 40, 5, -1);
+        bk.font.c(AccountServiceResult.field_d, 471, 40, 5, -1);
         bk.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
         bk.font.c(ba.field_e, 471, 66, 5, -1);
         bk.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);

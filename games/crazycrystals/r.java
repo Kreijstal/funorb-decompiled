@@ -31,18 +31,18 @@ final class r extends ff {
           lc.field_c = io.field_P;
           if (param2 == 255) {
             stackIn_13_0 = !(ro.field_n >= 13);
-            qc.field_i = oe.a(stackIn_13_0, (byte) 119);
+            qc.field_i = oe.createAccountSuccessResult(stackIn_13_0, (byte) 119);
             return;
           }
           if (param2 < 100) {
-            qc.field_i = me.a(param3, 20, param2);
+            qc.field_i = me.createAccountErrorResult(param3, 20, param2);
             return;
           }
           if (param2 <= 105) {
-            qc.field_i = en.a(param1, 169);
+            qc.field_i = en.createAccountSuggestionsResult(param1, 169);
             return;
           }
-          qc.field_i = me.a(param3, 20, param2);
+          qc.field_i = me.createAccountErrorResult(param3, 20, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

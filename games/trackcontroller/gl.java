@@ -57,17 +57,17 @@ final class gl extends ok {
           fd.field_h = cj.field_e;
           if (param2 != 255) {
             if (param2 < 100) {
-              MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
+              MouseWheelInput.field_c = wg.createAccountErrorResult((byte) 54, param2, param0);
             } else {
               if (param2 > 105) {
-                MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
+                MouseWheelInput.field_c = wg.createAccountErrorResult((byte) 54, param2, param0);
               } else {
-                MouseWheelInput.field_c = qg.a(param1, 91);
+                MouseWheelInput.field_c = qg.createAccountSuggestionsResult(param1, 91);
               }
             }
           } else {
             stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
-            MouseWheelInput.field_c = oc.a(stackIn_5_0, -21017);
+            MouseWheelInput.field_c = oc.createAccountSuccessResult(stackIn_5_0, -21017);
           }
           if (param3 >= 93) {
             return;

@@ -1777,7 +1777,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("waitingfor_music", 0);
                 if (var2 != null) {
-                  qd.field_Fb = mj.a((byte) 119, var2);
+                  AccountCreationResultPanel.field_Fb = mj.a((byte) 119, var2);
                 }
                 var2 = wg.a("waitingfor_instruments", 0);
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("login_createaccount", param0 - 7);
                 if (var2 != null) {
-                  qd.field_Db = mj.a((byte) -103, var2);
+                  AccountCreationResultPanel.field_Db = mj.a((byte) -103, var2);
                 }
                 var2 = wg.a("tohighscores", 0);
                 if (var2 != null) {

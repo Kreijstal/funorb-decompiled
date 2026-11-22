@@ -1339,7 +1339,7 @@ final class GameScreen {
             if (13 == var6) {
               if (!(!this.field_e.b(false))) {
                 si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                if (og.field_rb != null) {
+                if (AccountCreationResultPanel.field_rb != null) {
                   oj.a(-127);
                 } else {
                   var6 = param1 ? 1 : 0;
@@ -1427,7 +1427,7 @@ final class GameScreen {
                                               if (var6 == 28) {
                                                 if (!(!this.field_e.b(false))) {
                                                   si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                  if (og.field_rb != null) {
+                                                  if (AccountCreationResultPanel.field_rb != null) {
                                                     oj.a(param3 ^ -499);
                                                   }
                                                   of.a(-80, CachedArchiveSource.b((byte) 77));

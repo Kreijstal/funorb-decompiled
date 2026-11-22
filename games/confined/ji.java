@@ -3,7 +3,7 @@
  */
 final class ji {
     private nf[] field_c;
-    static in field_d;
+    static AccountServiceResult field_d;
     static String field_b;
     static jb field_e;
     static bi field_a;

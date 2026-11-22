@@ -39,7 +39,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var1), "hi.A(" + param0 + ')');
+          throw AccountServiceResult.a((Throwable) ((Object) var1), "hi.A(" + param0 + ')');
         }
     }
 

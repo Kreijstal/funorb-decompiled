@@ -161,14 +161,14 @@ abstract class ByteStorage {
           }
           if (param0 == 255) {
             stackIn_11_0 = !(cg.field_l >= 13);
-            li.field_T = mc.b(stackIn_11_0, param1 ^ -6168);
+            li.field_T = mc.createAccountSuccessResult(stackIn_11_0, param1 ^ -6168);
           } else {
             if (param0 >= 100 &&
               param0 <= 105) {
-              li.field_T = oe.a(124, param3);
+              li.field_T = oe.createAccountSuggestionsResult(124, param3);
               return;
             }
-            li.field_T = wi.a(param0, (byte) -65, param2);
+            li.field_T = wi.createAccountErrorResult(param0, (byte) -65, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

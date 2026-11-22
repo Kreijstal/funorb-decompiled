@@ -98,14 +98,14 @@ class MoveDefinition {
             wr.a((String[]) null, (byte) -38);
           } else {
             if (param1 < 100) {
-              vo.field_d = wu.a(param1, (byte) -56, param3);
+              vo.field_d = wu.createAccountErrorResult(param1, (byte) -56, param3);
             } else {
               if (param1 > 105) {
-                vo.field_d = wu.a(param1, (byte) -56, param3);
+                vo.field_d = wu.createAccountErrorResult(param1, (byte) -56, param3);
               } else {
                 var4 = args;
                 wr.a(var4, (byte) -38);
-                vo.field_d = kw.a(false, args);
+                vo.field_d = kw.createAccountSuggestionsResult(false, args);
               }
             }
           }

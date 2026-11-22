@@ -1240,7 +1240,7 @@ final class da extends ue {
         }
         if (rc.a(-98)) {
           this.field_d[this.field_m] = (ik) ((Object) new mh(380, 398, 240, mh.field_m, 2));
-          this.field_d[1 + this.field_m] = (ik) ((Object) new mh(380, 424, 240, si.field_a, 2));
+          this.field_d[1 + this.field_m] = (ik) ((Object) new mh(380, 424, 240, AccountServiceResult.field_a, 2));
         } else {
           this.field_d[this.field_m] = (ik) ((Object) new mh(380, 424, 240, mh.field_m, 2));
         }

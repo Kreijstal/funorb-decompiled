@@ -13,7 +13,7 @@ final class ci extends lc implements gl, rc {
     static bc field_F;
     static tg[] field_G;
     private boolean field_C;
-    static rg field_L;
+    static AccountServiceResult field_L;
 
     final void b(int param0, String param1) {
         ba var3 = null;
@@ -372,7 +372,7 @@ final class ci extends lc implements gl, rc {
         if (td.a(1) ||
           !(this.field_I.field_h.length() <= 0) &&
           !(0 >= this.field_z.field_h.length())) {
-          rg.a(-8742, this.field_I.field_h, this.field_z.field_h);
+          AccountServiceResult.a(-8742, this.field_I.field_h, this.field_z.field_h);
         }
         if (param0) {
           this.field_J = true;

@@ -68,20 +68,20 @@ abstract class wj {
           return;
         }
         if (null == AsyncRequest.field_u) {
-          og.field_rb = dj.a(0, 480, 640, (byte) 96, rg.field_c, 0);
-          if (og.field_rb == null) {
+          AccountCreationResultPanel.field_rb = dj.a(0, 480, 640, (byte) 96, rg.field_c, 0);
+          if (AccountCreationResultPanel.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            DelegatingCanvas.a(true, og.field_rb);
+            DelegatingCanvas.a(true, AccountCreationResultPanel.field_rb);
             var3Lifetime1 = 2;
           }
         } else {
-          og.field_rb = AsyncRequest.field_u.c(0);
+          AccountCreationResultPanel.field_rb = AsyncRequest.field_u.c(0);
           ni.a(-127, 2);
-          if (og.field_rb == null) {
+          if (AccountCreationResultPanel.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            DelegatingCanvas.a(true, og.field_rb);
+            DelegatingCanvas.a(true, AccountCreationResultPanel.field_rb);
             var3Lifetime1 = 2;
           }
         }

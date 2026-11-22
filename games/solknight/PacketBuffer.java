@@ -33,11 +33,11 @@ class PacketBuffer extends IntrusiveNode {
         return ((this.payload[this.position - 2] & 255) << 8) + ((-16777216 & this.payload[-4 + this.position] << 24) + ((255 & this.payload[-3 + this.position]) << 16) + (255 & this.payload[this.position - 1]));
     }
 
-    final static wg a(String param0, byte param1) {
+    final static AccountServiceResult a(String param0, byte param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;
-        wg stackIn_11_0 = null;
+        AccountServiceResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -48,7 +48,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           if (gf.field_Z == field_i) {
             stackIn_4_0 = null;
-            return (wg) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (field_i == Archive.field_d &&
             param0.equals(uh.field_r)) {
@@ -60,7 +60,7 @@ class PacketBuffer extends IntrusiveNode {
           a.field_h = null;
           field_i = gf.field_Z;
           stackIn_9_0 = null;
-          return (wg) (stackIn_9_0);
+          return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

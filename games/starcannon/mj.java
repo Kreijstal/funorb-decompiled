@@ -31,7 +31,7 @@ final class mj {
           }
           for (var4 = 0; var4 < param2.length(); var4++) {
             if (!sa.a((byte) -121, param2.charAt(var4))) {
-              stackIn_13_0 = ok.field_qb;
+              stackIn_13_0 = AccountCreationResultPanel.field_qb;
               return stackIn_13_0;
             }
           }

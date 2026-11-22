@@ -18,7 +18,7 @@ final class dc extends IntrusiveNode {
     final static void detachPointerInput(java.awt.Component param0, int param1) {
         try {
           if (param1 > -25) {
-            dc.a(false, false);
+            dc.createAccountSuccessResult(false, false);
           }
           param0.removeMouseListener(BattleCharacter.pointerInputHandler);
           param0.removeMouseMotionListener(BattleCharacter.pointerInputHandler);
@@ -29,7 +29,7 @@ final class dc extends IntrusiveNode {
         }
     }
 
-    final static AccountRequestResult a(boolean param0, boolean param1) {
+    final static AccountRequestResult createAccountSuccessResult(boolean param0, boolean param1) {
         AccountRequestResult var2 = null;
         AccountRequestResult var2Lifetime1;
         if (!param1) {
@@ -37,7 +37,7 @@ final class dc extends IntrusiveNode {
           var2.requiresAgreement = param0 ? true : false;
           return var2;
         }
-        dc.a(false, false);
+        dc.createAccountSuccessResult(false, false);
         var2Lifetime1 = new AccountRequestResult(true);
         var2Lifetime1.requiresAgreement = param0 ? true : false;
         return var2Lifetime1;

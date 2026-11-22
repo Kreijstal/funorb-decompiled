@@ -52,7 +52,7 @@ final class k {
           if (param2 != 0) {
             field_k = (String) null;
           }
-          stackIn_3_0 = ef.computeCrc32(47, param0, 0, param1);
+          stackIn_3_0 = AccountServiceResult.computeCrc32(47, param0, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

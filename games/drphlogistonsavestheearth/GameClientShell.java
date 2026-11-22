@@ -149,12 +149,12 @@ abstract class GameClientShell extends GameAppletShell {
           if (0 != ob.field_c) {
             bi.field_I = al.a(3, md.field_d);
           }
-          qd.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
+          AccountCreationResultPanel.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
           ig.field_t = lk.a(false, true, LoginMenuScreen.field_O, 1, 8);
           si.field_E = sb.field_i;
           hj.field_f = 2;
-          ph.field_b = qd.field_Jb;
+          ph.field_b = AccountCreationResultPanel.field_Jb;
         }
         if (hj.field_f == 2) {
           if (null != bi.field_I &&
@@ -174,13 +174,13 @@ abstract class GameClientShell extends GameAppletShell {
           }
         }
         if (hj.field_f == 3 &&
-          ad.a(ig.field_t, (byte) -91, sb.field_i, qd.field_Jb) &&
+          ad.a(ig.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
           pa.a((byte) 64, ig.field_t)) {
           dm.c((byte) 94);
           ue.a(false);
           rh.field_d = ha.field_e;
           gm.field_M = false;
-          wh.a(-80, sb.field_i, ig.field_t, qd.field_Jb, bd.field_N);
+          wh.a(-80, sb.field_i, ig.field_t, AccountCreationResultPanel.field_Jb, bd.field_N);
           if (fm.field_l ||
             null != hb.field_b) {
             stackIn_101_0 = hb.field_b;
@@ -198,7 +198,7 @@ abstract class GameClientShell extends GameAppletShell {
           ui.a(ac.field_b, (byte) -88, pe.field_j, ig.field_t);
           sb.field_i = null;
           ig.field_t = null;
-          qd.field_Jb = null;
+          AccountCreationResultPanel.field_Jb = null;
           DirectByteStorage.a(79, (java.applet.Applet) (this));
           tc.a((byte) 86);
           hj.field_f = 10;

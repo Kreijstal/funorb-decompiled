@@ -68,19 +68,19 @@ final class ud extends IntrusiveNode {
           }
           if (param1 != 255) {
             if (param1 < 100) {
-              ji.field_d = gd.a(4, param2, param1);
+              ji.field_d = gd.createAccountErrorResult(4, param2, param1);
               return;
             }
             if (param1 > 105) {
-              ji.field_d = gd.a(4, param2, param1);
+              ji.field_d = gd.createAccountErrorResult(4, param2, param1);
               return;
             }
-            ji.field_d = p.a(26663, param3);
+            ji.field_d = p.createAccountSuggestionsResult(26663, param3);
             return;
           }
           stackIn_6_0 = 125;
           stackIn_7_1 = !(13 <= wc.field_Ob);
-          ji.field_d = jj.$cfr$intArgs$a$81305413f30a(stackIn_6_0, stackIn_7_1);
+          ji.field_d = jj.createAccountSuccessResultWithIntGuard(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

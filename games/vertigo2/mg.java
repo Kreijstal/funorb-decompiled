@@ -97,8 +97,8 @@ final class mg extends WidgetWrapper {
 
     final static void a(int param0, boolean param1, float param2, String param3) {
         if (null == bb.field_F) {
-          bb.field_F = new fg(ch.field_e, eg.field_t);
-          ch.field_e.b(bb.field_F, 0);
+          bb.field_F = new fg(AccountServiceResult.field_e, eg.field_t);
+          AccountServiceResult.field_e.b(bb.field_F, 0);
         }
         bb.field_F.a(param2, 4210752, param1, param3);
         if (param0 != 1) {

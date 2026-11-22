@@ -1696,7 +1696,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_alert_namechars", -87);
                 if (var2 != null) {
-                  ok.field_qb = DualLinkNode.a(122, var2);
+                  AccountCreationResultPanel.field_qb = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("create_alert_nameleadingspace", -71);
                 if (var2 != null) {

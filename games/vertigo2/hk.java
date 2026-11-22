@@ -11,7 +11,7 @@ final class hk extends da {
     static int field_n;
 
     final ba a(int param0, String param1) {
-        ch var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         CharSequence var5 = null;
@@ -35,8 +35,8 @@ final class hk extends da {
           if (!param1.equals(this.field_l)) {
             var3 = qe.a(param1, (byte) 54);
             if (var3 != null &&
-              var3.field_j == null) {
-              this.field_p = var3.field_a;
+              var3.message == null) {
+              this.field_p = var3.success;
               this.field_l = param1;
             } else {
               stackIn_10_0 = dj.field_c;
@@ -81,7 +81,7 @@ final class hk extends da {
     final String b(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        ch var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         Object stackIn_11_0 = null;
@@ -106,11 +106,11 @@ final class hk extends da {
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_j) {
+            if (null != var4.message) {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_p = var4.field_a;
+            this.field_p = var4.success;
             this.field_l = param1;
           }
           if (this.field_p) {

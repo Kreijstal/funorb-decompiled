@@ -5,7 +5,7 @@ final class qe extends WidgetContainer implements re, ka {
     private pj field_H;
     static int[] field_G;
     static String field_F;
-    private jk field_D;
+    private AccountCreationResultPanel field_D;
     private kj field_E;
 
     public final void a(int param0, int param1, int param2, kj param3) {
@@ -77,7 +77,7 @@ final class qe extends WidgetContainer implements re, ka {
         }
     }
 
-    qe(jk param0) {
+    qe(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (j) null);
         String var7 = null;
         int var3 = 0;

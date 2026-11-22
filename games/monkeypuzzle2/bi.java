@@ -629,7 +629,7 @@ abstract class bi extends GameApplet {
           this.field_x = -97;
         }
         fe.field_h = this.field_o;
-        jg.a(3860, fe.field_h);
+        AccountCreationResultPanel.a(3860, fe.field_h);
         kj.a(fe.field_h, this.field_x, this.field_t, 5000, param0, this.field_p, this.field_u, this.field_w, param5, 5000, this.field_v, (byte) -111, this.field_r, rc.field_k);
         ii.a(rc.field_k, this.field_u, this.field_x, fe.field_h, this.field_r, param0, this.field_p, this.field_v, -2045);
         sj.a(92);

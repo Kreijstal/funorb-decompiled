@@ -10,7 +10,7 @@ final class kf extends IntrusiveNode {
     short[] field_p;
     byte[] field_k;
     byte[] field_q;
-    static aj field_j;
+    static AccountServiceResult field_j;
     static String field_m;
     static ci field_t;
     static int field_u;

@@ -1078,7 +1078,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 108, "goback");
                 if (var2 != null) {
-                  rg.field_e = c.a(0, var2);
+                  AccountServiceResult.field_e = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 115, "otheroptions");
                 if (null != var2) {
@@ -1534,7 +1534,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 122, "create_password_tooltip");
                 if (var2 != null) {
-                  rg.field_b = c.a(0, var2);
+                  AccountServiceResult.field_b = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 124, "create_password_hint");
                 if (var2 != null) {

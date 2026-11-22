@@ -56,10 +56,10 @@ final class BufferElementType {
     }
 
     final static String a(int param0) {
-        if (jq.field_fb == ht.field_k) {
+        if (AccountCreationResultPanel.field_fb == ht.field_k) {
           return BoundedRandomAccessFile.field_g;
         }
-        if (nb.field_c == jq.field_fb) {
+        if (nb.field_c == AccountCreationResultPanel.field_fb) {
           return OpenGlBuffer.field_j;
         }
         if (param0 != 4) {

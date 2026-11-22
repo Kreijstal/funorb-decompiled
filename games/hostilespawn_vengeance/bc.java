@@ -150,7 +150,7 @@ final class bc extends IntrusiveNode {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param11).append(')').toString());
+          throw AccountCreationResultPanel.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ final class bc extends IntrusiveNode {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw wg.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -49,7 +49,7 @@ final class bf {
           if (2 != oj.field_f) {
             return 0;
           }
-          if (ta.a(-93, this.field_a)) {
+          if (AccountCreationResultPanel.a(-93, this.field_a)) {
             return 1;
           }
           return 0;

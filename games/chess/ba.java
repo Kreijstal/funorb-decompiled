@@ -7,7 +7,7 @@ final class ba extends ma implements nn, mj {
     static java.applet.Applet field_L;
     static on field_O;
     private fb field_T;
-    private vd field_K;
+    private AccountCreationResultPanel field_K;
     static byte[] field_Q;
     static String field_N;
     static String field_R;
@@ -248,7 +248,7 @@ final class ba extends ma implements nn, mj {
         return true;
     }
 
-    ba(vd param0) {
+    ba(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (jm) null);
         String var7 = null;
         int var3 = 0;

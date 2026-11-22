@@ -81,7 +81,7 @@ final class fl implements ad {
     final static void a(byte param0) {
         int var1 = -104 % ((param0 + 15) / 41);
         String var2 = (String) null;
-        ed.a((String) null, "", -1);
+        AccountServiceResult.a((String) null, "", -1);
     }
 
     final static String a(byte param0, CharSequence param1, boolean param2) {

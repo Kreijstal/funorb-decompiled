@@ -241,7 +241,7 @@ final class fo {
         if (param0 != 380) {
           field_d = false;
         }
-        lj var5 = am.field_b ? ln.field_d.field_D : oe.field_pb.field_D;
+        lj var5 = am.field_b ? ln.field_d.field_D : AccountCreationResultPanel.field_pb.field_D;
         lj var2 = var5;
         int var3 = am.field_b ? ln.field_d.field_B : -1;
         if (var5.b((byte) 115) < 0) {
@@ -980,7 +980,7 @@ final class fo {
         if (am.field_b) {
           stackIn_6_0 = ln.field_d.field_D;
         } else {
-          stackIn_6_0 = oe.field_pb.field_D;
+          stackIn_6_0 = AccountCreationResultPanel.field_pb.field_D;
         }
         var7 = stackIn_6_0;
         var2 = var7;
@@ -1536,7 +1536,7 @@ final class fo {
                               if (this.field_a.a(84) ||
                                 param0) {
                                 if (null == ln.field_d) {
-                                  stackIn_201_0 = oe.field_pb;
+                                  stackIn_201_0 = AccountCreationResultPanel.field_pb;
                                 } else {
                                   stackIn_201_0 = ln.field_d;
                                 }

@@ -10,12 +10,12 @@ final class sj extends WidgetContainer implements md, oi {
     static java.awt.Font field_F;
     static int[] field_J;
     static String field_C;
-    private jg field_H;
+    private AccountCreationResultPanel field_H;
     static String field_E;
 
     private final String d(boolean param0) {
         if (param0) {
-          this.field_H = (jg) null;
+          this.field_H = (AccountCreationResultPanel) null;
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -62,7 +62,7 @@ final class sj extends WidgetContainer implements md, oi {
         }
     }
 
-    sj(jg param0) {
+    sj(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (uk) null);
         String var7 = null;
         int var3 = 0;

@@ -17,13 +17,13 @@ final class i {
           synchronized (var1) {
             ab.field_t = DelegatingCanvas.field_b;
             mh.field_b = mh.field_b + 1;
-            if (bg.field_rb < 0) {
+            if (AccountCreationResultPanel.field_rb < 0) {
               for (var2 = 0; 112 > var2; var2++) {
                 GzipInflater.field_c[var2] = false;
               }
-              bg.field_rb = KeyboardInputHandler.field_b;
+              AccountCreationResultPanel.field_rb = KeyboardInputHandler.field_b;
             } else {
-              while (bg.field_rb != KeyboardInputHandler.field_b) {
+              while (AccountCreationResultPanel.field_rb != KeyboardInputHandler.field_b) {
                 var2 = oc.field_h[KeyboardInputHandler.field_b];
                 KeyboardInputHandler.field_b = 127 & KeyboardInputHandler.field_b + 1;
                 if (0 <= var2) {

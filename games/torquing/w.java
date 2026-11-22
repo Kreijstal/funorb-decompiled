@@ -240,7 +240,7 @@ class w extends to {
         if (param0 < 14) {
           w.clearStaticReferences(-77);
         }
-        p.field_x.a(v.field_a - dn.field_h, var2 + (wp.field_y << 1), (dn.field_h << 1) + var1, (byte) 79, a.field_d - wp.field_y);
+        p.field_x.a(v.field_a - AccountServiceResult.field_h, var2 + (wp.field_y << 1), (AccountServiceResult.field_h << 1) + var1, (byte) 79, a.field_d - wp.field_y);
         jn.b((byte) 122);
     }
 

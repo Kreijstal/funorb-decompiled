@@ -1939,7 +1939,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("fullscreen", 0);
                 if (null != var2) {
-                  mk.field_c = ab.a(0, var2);
+                  AccountServiceResult.field_c = ab.a(0, var2);
                 }
                 var2 = ad.a("screensize", 0);
                 if (null != var2) {

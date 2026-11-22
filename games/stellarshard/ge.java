@@ -110,7 +110,7 @@ final class ge extends lk {
     }
 
     final cg a(byte param0, String param1) {
-        ml var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         cg stackIn_2_0 = null;
@@ -132,8 +132,8 @@ final class ge extends lk {
           if (!param1.equals(this.field_k)) {
             var3 = sg.a((byte) -127, param1);
             if (var3 != null &&
-              var3.field_e == null) {
-              this.field_o = var3.field_f;
+              var3.message == null) {
+              this.field_o = var3.success;
               this.field_k = param1;
             } else {
               stackIn_10_0 = vk.field_d;
@@ -163,7 +163,7 @@ final class ge extends lk {
     final String b(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        ml var4_ref_ml = null;
+        AccountServiceResult var4_ref_ml = null;
         int var4 = 0;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
@@ -185,11 +185,11 @@ final class ge extends lk {
             if (var4_ref_ml == null) {
               return null;
             }
-            if (null != var4_ref_ml.field_e) {
+            if (null != var4_ref_ml.message) {
               return null;
             }
             this.field_k = param1;
-            this.field_o = var4_ref_ml.field_f;
+            this.field_o = var4_ref_ml.success;
           }
           if (!this.field_o) {
             stackIn_14_0 = jb.field_p;

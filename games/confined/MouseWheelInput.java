@@ -421,7 +421,7 @@ abstract class MouseWheelInput {
           var2.i(8);
           im.field_a = ul.a(var2, 31662);
           Confined.field_K = new rm[var3];
-          in.field_b = new int[var3][];
+          AccountServiceResult.field_b = new int[var3][];
           var4 = 0;
           do {
             if (var4 >= var3) {
@@ -440,7 +440,7 @@ abstract class MouseWheelInput {
             var5.a(6, 1, 6, (byte) 56, 6);
             var5.b(27915);
             var6 = new int[]{var5.field_I + var5.field_O >> 1, var5.field_L + var5.field_e >> 1, var5.field_t + var5.field_s >> 1};
-            in.field_b[var4] = var6;
+            AccountServiceResult.field_b[var4] = var6;
             var5.a(-var6[1], -var6[2], 117, -var6[0]);
             var4++;
             if (var7 != 0) {

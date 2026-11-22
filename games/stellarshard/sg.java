@@ -21,12 +21,12 @@ final class sg {
         return gk.field_a;
     }
 
-    final static ml a(byte param0, String param1) {
+    final static AccountServiceResult a(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        ml stackIn_9_0 = null;
+        AccountServiceResult stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -35,7 +35,7 @@ final class sg {
           var2_int = -9 / ((-76 - param0) / 46);
           if (dj.field_a == el.field_E) {
             stackIn_2_0 = null;
-            return (ml) (stackIn_2_0);
+            return (AccountServiceResult) (stackIn_2_0);
           }
           if (ta.field_m == el.field_E &&
             param1.equals(gk.field_c)) {
@@ -47,7 +47,7 @@ final class sg {
           gk.field_c = param1;
           ed.field_d = null;
           stackIn_7_0 = null;
-          return (ml) (stackIn_7_0);
+          return (AccountServiceResult) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -109,7 +109,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             BoundedRandomAccessFile.a(wi.field_m, 2, 109);
             ji.a((byte) -69);
             rj.field_j = true;
-            ua.field_sb = lj.a((byte) -95) + 15000L;
+            AccountCreationResultPanel.field_sb = lj.a((byte) -95) + 15000L;
           }
         }
         if (oa.field_j == -1 ||
@@ -125,7 +125,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (oa.field_j != -1 &&
             oa.field_j != 0) {
-            ua.field_sb = 15000L + lj.a((byte) -125);
+            AccountCreationResultPanel.field_sb = 15000L + lj.a((byte) -125);
           }
         }
         if (-1 != oa.field_j &&
@@ -175,7 +175,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((oa.field_j != -1 &&
           oa.field_j != 0 ||
           lk.i(10)) &&
-          ua.field_sb <= lj.a((byte) -47)) {
+          AccountCreationResultPanel.field_sb <= lj.a((byte) -47)) {
           rj.field_j = false;
           if (oa.field_j != -1 &&
             oa.field_j != 0) {
@@ -258,7 +258,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (ib.field_k == 11) {
           if (null != ne.field_a && (!ne.field_a.b((byte) -113) ||
             !ne.field_a.a(-18))) {
-            jj.a(0.0f, cb.a(sg.field_a, mk.field_a, ne.field_a, (byte) 13), true);
+            jj.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, ne.field_a, (byte) 13), true);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -320,7 +320,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           id.a(false);
           BoundedRandomAccessFile.a(fh.field_a, var2, param0 ^ 5115);
           rj.field_j = true;
-          ua.field_sb = lj.a((byte) -53) + 15000L;
+          AccountCreationResultPanel.field_sb = lj.a((byte) -53) + 15000L;
           return var2;
         }
         if (11 == bh.field_t &&

@@ -46,20 +46,20 @@ final class wk extends ic {
         }
     }
 
-    final static ef a(String[] args, int param1) {
-        ef var2 = null;
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        ef stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ef(false);
+          var2 = new AccountServiceResult(false);
           if (param1 != -1) {
             wk.c(false);
           }
-          var2.field_b = args;
+          var2.suggestions = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class wk extends ic {
           var7Lifetime5 = var16;
           if (!param0) {
             var11 = (String[]) null;
-            wk.a((String[]) null, -30);
+            wk.createAccountSuggestionsResult((String[]) null, -30);
           }
           if (var5Lifetime1 >= 0) {
             var16.g(var1_intLifetime1, var2Lifetime1);

@@ -19,7 +19,7 @@ final class af extends di {
     }
 
     final ud a(int param0, String param1) {
-        nj var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ud stackIn_3_0 = null;
@@ -43,9 +43,9 @@ final class af extends di {
           if (!param1.equals(this.field_m)) {
             var3 = kj.a(param1, 63);
             if (var3 != null &&
-              null == var3.field_c) {
+              null == var3.message) {
               this.field_m = param1;
-              this.field_p = var3.field_e;
+              this.field_p = var3.success;
             } else {
               stackIn_13_0 = AsyncRequest.field_t;
               return stackIn_13_0;
@@ -174,7 +174,7 @@ final class af extends di {
     final String a(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        nj var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_15_0 = null;
@@ -195,11 +195,11 @@ final class af extends di {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_c != null) {
+            if (var4.message != null) {
               return null;
             }
             this.field_m = param0;
-            this.field_p = var4.field_e;
+            this.field_p = var4.success;
           }
           if (param1 != 426) {
             this.field_m = (String) null;

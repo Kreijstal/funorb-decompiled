@@ -501,7 +501,7 @@ class pj extends IntrusiveNode {
             fg.a(101, this.g(-8235));
             return param2;
           }
-          if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, ig.field_fb, param0)) {
+          if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
             param2 = false;
           } else {
             if (var5 != 0) {
@@ -585,7 +585,7 @@ class pj extends IntrusiveNode {
             fg.a(101, this.g(-8235));
             return param2;
           }
-          if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, ig.field_fb, param0)) {
+          if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
             param2 = false;
           } else {
             this.h(0);
@@ -666,7 +666,7 @@ class pj extends IntrusiveNode {
           fg.a(101, this.g(-8235));
           return param2;
         }
-        if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, ig.field_fb, param0)) {
+        if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
           param2 = false;
         } else {
         }

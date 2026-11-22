@@ -109,16 +109,16 @@ final class oq extends rg implements dn {
         }
     }
 
-    final static fr a(byte param0, String[] param1) {
+    final static AccountServiceResult createAccountSuggestionsResult(byte param0, String[] param1) {
         String stackIn_8_2 = null;
         try {
           if (param0 >= -37) {
-            fr stackIn_2_0 = (fr) null;
+            AccountServiceResult stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          fr var2 = new fr(false);
-          var2.field_c = param1;
-          fr stackIn_4_0 = var2;
+          AccountServiceResult var2 = new AccountServiceResult(false);
+          var2.suggestions = param1;
+          AccountServiceResult stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

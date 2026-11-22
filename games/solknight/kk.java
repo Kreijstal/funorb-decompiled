@@ -38,7 +38,7 @@ final class kk {
             !bf.field_i.equals(param2.getParameter("session"))) {
             var4Lifetime1 = bf.field_i;
           }
-          stackIn_10_0 = wg.a((String) (var3), -7362, (String) (var4Lifetime1), -1, param1);
+          stackIn_10_0 = AccountServiceResult.a((String) (var3), -7362, (String) (var4Lifetime1), -1, param1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static char[] field_e;
     static String field_a;
-    static nj field_c;
+    static AccountServiceResult field_c;
     static String[] field_b;
     static long field_d;
 
@@ -323,7 +323,7 @@ abstract class MouseWheelInput {
             }
           }
           if (param0 != -8) {
-            field_c = (nj) null;
+            field_c = (AccountServiceResult) null;
           }
           if (var7 < var8) {
             incrementValue$0 = var6Lifetime1;

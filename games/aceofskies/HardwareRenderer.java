@@ -813,7 +813,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
             this.field_Z = var11.width;
             this.field_jb = var11.height;
             this.field_m = param5;
-            fr.a(false, 0, true);
+            AccountServiceResult.a(false, 0, true);
             if (null != this.field_a) {
               this.field_z = new sb(this, this.field_a);
               this.field_i = new jagex3.graphics2.hw.NativeInterface(this.field_a.a(28060), this.field_m);

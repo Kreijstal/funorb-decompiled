@@ -3,7 +3,7 @@
  */
 final class ih extends pj implements ra, ke {
     static String field_N;
-    private qd field_M;
+    private AccountCreationResultPanel field_M;
     static int[] field_O;
     static String field_P;
     static String field_J;
@@ -64,7 +64,7 @@ final class ih extends pj implements ra, ke {
         }
     }
 
-    ih(qd param0) {
+    ih(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (cg) null);
         String var7 = null;
         int var3 = 0;
@@ -110,7 +110,7 @@ final class ih extends pj implements ra, ke {
             this.field_M.d(true);
           }
           if (!param2) {
-            this.field_M = (qd) null;
+            this.field_M = (AccountCreationResultPanel) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class ih extends pj implements ra, ke {
 
     private final String j(int param0) {
         if (param0 >= -57) {
-          this.field_M = (qd) null;
+          this.field_M = (AccountCreationResultPanel) null;
         }
         return "</col></u>";
     }

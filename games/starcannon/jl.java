@@ -816,9 +816,9 @@ final class jl {
                                     ah.field_a.h(6000);
                                     ah.field_a = null;
                                   }
-                                  if (ok.field_tb != null) {
-                                    jk.field_k.a(ok.field_tb);
-                                    ok.field_tb = null;
+                                  if (AccountCreationResultPanel.field_tb != null) {
+                                    jk.field_k.a(AccountCreationResultPanel.field_tb);
+                                    AccountCreationResultPanel.field_tb = null;
                                   }
                                   mj.a(dg.field_l, 12, 0, 12, 50);
                                 }

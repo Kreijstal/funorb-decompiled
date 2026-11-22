@@ -86,7 +86,7 @@ final class bg {
         field_b = null;
         field_a = null;
         if (param0 != -120) {
-          bg.a((byte) 91);
+          bg.pollAccountCreationResult((byte) 91);
         }
     }
 
@@ -139,7 +139,7 @@ final class bg {
         }
     }
 
-    final static mk a(byte param0) {
+    final static AccountServiceResult pollAccountCreationResult(byte param0) {
         if (cb.field_v == ql.field_l) {
           throw new IllegalStateException();
         }

@@ -3,12 +3,12 @@
  */
 final class ba extends kn implements be, sh {
     static ln field_K;
-    private uk field_J;
+    private AccountCreationResultPanel field_J;
     static boolean field_M;
     private tn field_L;
     private hc field_I;
 
-    ba(uk param0) {
+    ba(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ad) null);
         String var7 = null;
         int var3 = 0;

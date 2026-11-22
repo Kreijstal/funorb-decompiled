@@ -178,21 +178,21 @@ final class v {
           }
           if (param1 != 255) {
             if (100 > param1) {
-              kf.field_j = sc.a(param2, param1, (byte) 113);
+              kf.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
               return;
             }
             if (param1 > 105) {
-              kf.field_j = sc.a(param2, param1, (byte) 113);
+              kf.field_j = sc.createAccountErrorResult(param2, param1, (byte) 113);
               return;
             }
             var7 = param3;
             jc.a((byte) 111, var7);
-            kf.field_j = a.a(param3, -101);
+            kf.field_j = a.createAccountSuggestionsResult(param3, -101);
             return;
           }
           stackIn_11_0 = param0 ^ 13172;
           stackIn_12_1 = !(cn.field_f >= 13);
-          kf.field_j = cf.b(stackIn_11_0, stackIn_12_1);
+          kf.field_j = cf.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           jc.a((byte) 98, (String[]) null);
           return;

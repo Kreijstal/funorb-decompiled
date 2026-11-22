@@ -276,19 +276,19 @@ final class kd {
           wk.field_c.a(false, "members_expansion_screen") &&
           wk.field_c.a(false, "arialish12") &&
           wk.field_c.a(false, "pump32") &&
-          null != uk.field_xb &&
-          uk.field_xb.a((byte) 95) &&
-          uk.field_xb.a(false, "arialish12") &&
-          uk.field_xb.a(false, "pump32")) {
+          null != AccountCreationResultPanel.field_xb &&
+          AccountCreationResultPanel.field_xb.a((byte) 95) &&
+          AccountCreationResultPanel.field_xb.a(false, "arialish12") &&
+          AccountCreationResultPanel.field_xb.a(false, "pump32")) {
           ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
           ah.field_d = jn.a("arrow", -29553, "members_expansion_screen", wk.field_c);
-          ql.field_m = rd.a("arialish12", -102, uk.field_xb, wk.field_c, "");
-          DualLinkNode.field_r = oc.a(uk.field_xb, (byte) 125, "pump32", "", wk.field_c);
+          ql.field_m = rd.a("arialish12", -102, AccountCreationResultPanel.field_xb, wk.field_c, "");
+          DualLinkNode.field_r = oc.a(AccountCreationResultPanel.field_xb, (byte) 125, "pump32", "", wk.field_c);
           pk.field_c = bb.a("benefit_orbs", wk.field_c, -115, "members_expansion_screen");
           ClientException.field_f = bb.a("button_text", wk.field_c, param0 - 235, "members_expansion_screen");
           wm.field_g = md.a("button_highlights", wk.field_c, 10, "members_expansion_screen");
           wk.field_c = null;
-          uk.field_xb = null;
+          AccountCreationResultPanel.field_xb = null;
         }
         this.a(param0 ^ -27);
         if (null == ba.field_K) {

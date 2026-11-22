@@ -682,12 +682,12 @@ final class re {
                                         wf.a(var9, -28);
                                       }
                                       if (mf.field_i == var6) {
-                                        var8_ref_Object = bg.field_tb;
+                                        var8_ref_Object = AccountCreationResultPanel.field_tb;
                                         synchronized (var8_ref_Object) {
                                           lh.field_d.e(0);
                                         }
                                       } else {
-                                        var8_ref_Object = bg.field_tb;
+                                        var8_ref_Object = AccountCreationResultPanel.field_tb;
                                         synchronized (var8_ref_Object) {
                                           lh.field_d.e(-1);
                                           if (!lh.field_d.isLinked(66)) {
@@ -1427,19 +1427,19 @@ final class re {
         var4 = -7 % ((param1 - 31) / 37);
         if (this.field_i != 5) {
           if (this.field_i == 10) {
-            var3 = param0 * 172 + nk.field_a[this.field_i];
+            var3 = param0 * 172 + AccountServiceResult.field_a[this.field_i];
           } else {
-            var3 = nk.field_a[this.field_i];
+            var3 = AccountServiceResult.field_a[this.field_i];
           }
         } else {
           if (!dl.d(0)) {
             if (3 > param0) {
-              var3 = nk.field_a[this.field_i] + (-1 + param0) * 136;
+              var3 = AccountServiceResult.field_a[this.field_i] + (-1 + param0) * 136;
             } else {
-              var3 = nk.field_a[this.field_i];
+              var3 = AccountServiceResult.field_a[this.field_i];
             }
           } else {
-            var3 = 136 * param0 + (-136 + (68 + nk.field_a[this.field_i]));
+            var3 = 136 * param0 + (-136 + (68 + AccountServiceResult.field_a[this.field_i]));
           }
         }
         if (h.field_E[this.field_i]) {

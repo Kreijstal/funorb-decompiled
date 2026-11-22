@@ -302,7 +302,7 @@ class PacketBuffer extends IntrusiveNode {
               td.field_i = il.a(var12, (byte) 21);
               uk.field_H = id.field_b.readUnsignedByte(-89);
               aj.field_c = qc.field_d;
-              if (qi.field_c.a(true) == ta.field_Db) {
+              if (qi.field_c.a(true) == AccountCreationResultPanel.field_Db) {
                 sd.field_e.a(gi.b(12476), param5);
               } else {
                 if (qi.field_c.a(true) == ja.field_g) {
@@ -409,7 +409,7 @@ class PacketBuffer extends IntrusiveNode {
         return (255 & this.payload[this.position - 1]) + ((-16777216 & this.payload[-4 + this.position] << 24) + ((255 & this.payload[-3 + this.position]) << 16) + ((255 & this.payload[-2 + this.position]) << 8));
     }
 
-    final static ef d(boolean param0) {
+    final static AccountServiceResult pollAccountCreationResult(boolean param0) {
         if (mg.field_c == gj.field_a) {
           throw new IllegalStateException();
         }
@@ -488,7 +488,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int param0) {
         this.position = this.position - 4;
-        int var2 = ef.computeCrc32(104, this.payload, param0, this.position);
+        int var2 = AccountServiceResult.computeCrc32(104, this.payload, param0, this.position);
         int var3 = this.readInt(86);
         if (var3 == var2) {
           return true;
@@ -974,7 +974,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 != 14430) {
           this.readInt(-60);
         }
-        int var3 = ef.computeCrc32(111, this.payload, param0, this.position);
+        int var3 = AccountServiceResult.computeCrc32(111, this.payload, param0, this.position);
         this.writeInt(var3, false);
         return var3;
     }

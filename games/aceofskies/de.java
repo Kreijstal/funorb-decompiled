@@ -74,7 +74,7 @@ final class de implements ir {
           vn.field_f.a(pd.field_b, true, qe.field_k, true);
           vn.field_f.f((byte) -117);
           while (ek.a((byte) -127)) {
-            vn.field_f.a(param0 - 42, fr.field_e, bk.lastKeyCode);
+            vn.field_f.a(param0 - 42, AccountServiceResult.field_e, bk.lastKeyCode);
           }
           if (-1 != InstrumentEnvelope.field_c) {
             int var1_int = InstrumentEnvelope.field_c;
@@ -86,7 +86,7 @@ final class de implements ir {
             int stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (jq.field_fb == nb.field_c) {
+          if (AccountCreationResultPanel.field_fb == nb.field_c) {
             int stackIn_17_0 = 1;
             return stackIn_17_0;
           }
@@ -94,7 +94,7 @@ final class de implements ir {
             int stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (jq.field_fb != ht.field_k) {
+          if (AccountCreationResultPanel.field_fb != ht.field_k) {
             int stackIn_25_0 = -1;
             return stackIn_25_0;
           }
