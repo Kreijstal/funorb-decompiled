@@ -71,7 +71,7 @@ final class jb {
               var12_int = 0;
               while (true) {
                 if (var12_int < ia.field_i) {
-                  stackIn_16_0 = $cfr$dcmpl(((double[]) (var10))[var12_int], -(1.5 * vf.field_e[var12_int]) + 5.0 / param4);
+                  stackIn_16_0 = compareDoublesNaNResultNegative(((double[]) (var10))[var12_int], -(1.5 * vf.field_e[var12_int]) + 5.0 / param4);
                   if (var17 == 0) {
                     if (stackIn_16_0 > 0) {
                       var11_int = 1;
@@ -114,7 +114,7 @@ final class jb {
             var14 = 0;
             while (true) {
               if (var14 < ia.field_i) {
-                stackIn_48_0 = $cfr$dcmpl(0.0, vf.field_e[var14]);
+                stackIn_48_0 = compareDoublesNaNResultNegative(0.0, vf.field_e[var14]);
                 if (var17 == 0) {
                   if (stackIn_48_0 != 0 &&
                     vf.field_e[var14] > var12) {
@@ -266,7 +266,7 @@ final class jb {
         field_d = -1;
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

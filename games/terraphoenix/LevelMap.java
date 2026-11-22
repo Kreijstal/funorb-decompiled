@@ -1002,7 +1002,7 @@ final class LevelMap {
                     }
                     scanLoop4: while (true) {
                       if (null != var38Lifetime1.field_C) {
-                        stackIn_366_0 = $cfr$dcmpg(100.0, var35);
+                        stackIn_366_0 = compareDoublesNaNResultPositive(100.0, var35);
                         if (var41 != 0) {
                           break scanLoop4;
                         }
@@ -1015,7 +1015,7 @@ final class LevelMap {
                           }
                         }
                       }
-                      stackIn_366_0 = $cfr$dcmpl(var19, 50.0);
+                      stackIn_366_0 = compareDoublesNaNResultNegative(var19, 50.0);
                       break;
                     }
                     if (stackIn_366_0 > 0) {
@@ -1061,7 +1061,7 @@ final class LevelMap {
                         }
                         if (decompiledFrameRemainder1) {
                           while (null != var38Lifetime1Lifetime1.field_C) {
-                            stackIn_446_0 = $cfr$dcmpl(var35, 100.0);
+                            stackIn_446_0 = compareDoublesNaNResultNegative(var35, 100.0);
                             if (var41 != 0) {
                               break scanLoop5;
                             }
@@ -1284,7 +1284,7 @@ final class LevelMap {
                           while (var5 + var4 > var8) {
                             this.tiles[var7Lifetime1][var8].field_b = 0;
                             this.tiles[var7Lifetime1][var8].field_B = true;
-                            stackIn_74_0 = $cfr$dcmpg(Math.random() * 100.0, 20.0);
+                            stackIn_74_0 = compareDoublesNaNResultPositive(Math.random() * 100.0, 20.0);
                             if (stackIn_74_0 < 0) {
                               this.tiles[var7Lifetime1][var8].field_j = 0;
                             }
@@ -1338,7 +1338,7 @@ final class LevelMap {
                           while (var8Lifetime1 < var5 + var4) {
                             this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_b = 0;
                             this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_B = true;
-                            stackIn_173_0 = $cfr$dcmpl(30.0, Math.random() * 100.0);
+                            stackIn_173_0 = compareDoublesNaNResultNegative(30.0, Math.random() * 100.0);
                             if (stackIn_173_0 > 0) {
                               this.tiles[var7Lifetime1Lifetime1][var8Lifetime1].field_j = 0;
                             }
@@ -4868,11 +4868,11 @@ final class LevelMap {
         field_c = new int[128];
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNaNResultPositive(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

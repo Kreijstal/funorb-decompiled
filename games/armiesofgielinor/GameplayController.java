@@ -11512,7 +11512,7 @@ final class GameplayController {
             var9 = 0;
             while (!(var9 >= PrivateTextRecipientSupport.field_b.length)) {
               var10_float = PrivateTextRecipientSupport.field_b[var9];
-              stackIn_73_0 = $cfr$fcmpl(var8, var10_float);
+              stackIn_73_0 = compareFloatsNaNResultNegative(var8, var10_float);
               if (var16 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -12636,7 +12636,7 @@ final class GameplayController {
         field_A = "Asking to join <%0>'s game...";
     }
 
-    private static int $cfr$fcmpl(float left, float right) {
+    private static int compareFloatsNaNResultNegative(float left, float right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

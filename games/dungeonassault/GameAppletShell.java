@@ -244,7 +244,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (nj.field_e != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(nj.field_e, kd.c(-2456));
+                    stackIn_100_0 = compareLongs(nj.field_e, kd.c(-2456));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -882,7 +882,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_m = "Dead";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

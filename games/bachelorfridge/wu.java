@@ -211,17 +211,17 @@ final class wu extends InteractiveWidget {
         }
     }
 
-    final static eq a(int param0, byte param1, String param2) {
-        eq var3 = null;
+    final static AccountServiceResult a(int param0, byte param1, String param2) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        eq stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new eq(false);
+          var3 = new AccountServiceResult(false);
           var4 = -117 / ((35 - param1) / 41);
           var3.field_d = param0;
           var3.field_g = param2;

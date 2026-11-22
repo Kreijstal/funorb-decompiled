@@ -372,6 +372,14 @@
       "renamedSymbol": "F:PacketBuffer.payload:[B"
     },
     {
+      "symbol": "M:Bounce.$cfr$dcmpl(DD)I",
+      "originalName": "$cfr$dcmpl",
+      "to": "compareDoublesNaNResultNegative",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Double comparisons return-1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bounce.compareDoublesNaNResultNegative(DD)I"
+    },
+    {
       "symbol": "M:ab.b(B)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -642,6 +650,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 9640eb65bba82e3460e455b69ebfbc0043c483c2ad2b1818e3b997ff66cd360a.",
       "confidence": "reviewed",
       "renamedSymbol": "M:fi.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:fj.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletShell.compareLongs(JJ)I"
     },
     {
       "symbol": "M:fl.a(I)V",
@@ -135505,9 +135521,9 @@
     },
     {
       "symbol": "M:Bounce.$cfr$dcmpl(DD)I",
-      "renamedSymbol": "M:Bounce.$cfr$dcmpl(DD)I",
+      "renamedSymbol": "M:Bounce.compareDoublesNaNResultNegative(DD)I",
       "originalName": "$cfr$dcmpl",
-      "renamedName": "$cfr$dcmpl",
+      "renamedName": "compareDoublesNaNResultNegative",
       "declaration": {
         "file": "Bounce.java",
         "start": 70014,
@@ -140543,9 +140559,9 @@
     },
     {
       "symbol": "M:fj.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:AppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:AppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "fj.java",
         "start": 37220,
@@ -157351,7 +157367,7 @@
     },
     {
       "symbol": "P:Bounce.$cfr$dcmpl(DD)I#0",
-      "renamedSymbol": "P:Bounce.$cfr$dcmpl(DD)I#0",
+      "renamedSymbol": "P:Bounce.compareDoublesNaNResultNegative(DD)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -157362,7 +157378,7 @@
     },
     {
       "symbol": "P:Bounce.$cfr$dcmpl(DD)I#1",
-      "renamedSymbol": "P:Bounce.$cfr$dcmpl(DD)I#1",
+      "renamedSymbol": "P:Bounce.compareDoublesNaNResultNegative(DD)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -168802,7 +168818,7 @@
     },
     {
       "symbol": "P:fj.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:AppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:AppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -168813,7 +168829,7 @@
     },
     {
       "symbol": "P:fj.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:AppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:AppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -209110,7 +209126,7 @@
       "original": "Bounce.java",
       "renamed": "Bounce.java",
       "inputSha256": "78b98fbd6e8da86bcfe3fd55e0345ca4608cafab1c08ef61f8c859b7341c4eee",
-      "outputSha256": "01b76c4118203d976a65723bf26c0d1d14bbdeba42528b7acb5c5d5ee09d59db",
+      "outputSha256": "08f06a47fee73ad8c4e9dcc737e8d6dfa52c12cd29e856e71c95143eade1068f",
       "edits": [
         {
           "start": 72,
@@ -210003,12 +210019,26 @@
           "kind": "label"
         },
         {
+          "start": 24991,
+          "end": 25001,
+          "symbol": "M:Bounce.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
+        },
+        {
           "start": 25064,
           "end": 25067,
           "symbol": "B:Bounce.l(I)V#0",
           "original": "L84",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 26959,
+          "end": 26969,
+          "symbol": "M:Bounce.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         },
         {
           "start": 27066,
@@ -210392,6 +210422,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 70014,
+          "end": 70024,
+          "symbol": "M:Bounce.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         }
       ]
     },
@@ -215309,7 +215346,7 @@
       "original": "fj.java",
       "renamed": "AppletShell.java",
       "inputSha256": "be277cacf97a6899ef495bdabd68bc33bc6a81e54543087a0bf4a2d4d3bb6077",
-      "outputSha256": "e0ebbb09c0197839c48c88e7490c9eea9661e463d206e81769dd331397a82b5d",
+      "outputSha256": "4a219c403705e9619ccf4a880d8c15ae95f11b9c5c4ca855326e957c5da5d6df",
       "edits": [
         {
           "start": 60,
@@ -215494,6 +215531,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 27679,
+          "end": 27688,
+          "symbol": "M:fj.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 29139,
           "end": 29141,
           "symbol": "C:ii",
@@ -215555,6 +215599,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 37220,
+          "end": 37229,
+          "symbol": "M:fj.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -231263,10 +231314,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "cf8bb6fbd882a9673c54330d0729a9b063a5074357920648acc4f805e83953f3",
+    "rulesSha256": "07a32a1d1c75b5e4079f3af8ae2a23685f1f4f821868025770561eb9e5b6494d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "667d3e60aeda197b62ad3b76d201a93f3e3c5e92d0a253371a08d9a2323594be",
+    "outputTreeSha256": "cc3b0f5813d6c98acb6d149a610334df748d807b1f2fe85d3b6dbb0ed6f5ae92",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

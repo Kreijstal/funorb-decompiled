@@ -1220,6 +1220,14 @@
       "renamedSymbol": "M:f.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:fa.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:fa.a(I)V",
       "originalName": "a",
       "to": "initializeGame",
@@ -151878,9 +151886,9 @@
     },
     {
       "symbol": "M:fa.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "fa.java",
         "start": 34604,
@@ -183217,7 +183225,7 @@
     },
     {
       "symbol": "P:fa.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -183228,7 +183236,7 @@
     },
     {
       "symbol": "P:fa.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -234213,7 +234221,7 @@
       "original": "fa.java",
       "renamed": "GameApplet.java",
       "inputSha256": "bb194551946dfb75c3a12d73dec3134991e8f4a9940f2e3b3e0d1e7aa832b4f7",
-      "outputSha256": "01162212b230a0ba0dbff8087dcfdab4ee5b277d6ac8d66ec2f77134f6bda338",
+      "outputSha256": "5550c7baf050caa55ced24c7f4da7c7e4fdc03b34ed649b34a65b6fc09dccd21",
       "edits": [
         {
           "start": 60,
@@ -234594,6 +234602,13 @@
           "renamed": "initializeGame"
         },
         {
+          "start": 24385,
+          "end": 24394,
+          "symbol": "M:fa.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 24762,
           "end": 24764,
           "symbol": "C:fg",
@@ -234641,6 +234656,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 34604,
+          "end": 34613,
+          "symbol": "M:fa.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -265665,10 +265687,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "fd93e3040084758858cb1309bd70fd6b1c7ae4a6d5b771a4c9bfcf3f7202efc7",
+    "rulesSha256": "64d28c7a02185f054e430967e8b23bba4646322a58ef033f70de68b81b5981b2",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "66b92b38e16fd44804ed01f4563c7ded9396ef2fe8f88111ca1328025d035417",
+    "outputTreeSha256": "e6d6021786a33f06f8b2e70a699e64e31c87feb3bf4a1e45a2e803652b9afb8e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

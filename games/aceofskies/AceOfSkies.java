@@ -819,7 +819,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                int stackIn_38_0Lifetime1 = $cfr$lcmp(0L, var2_long % 37L);
+                int stackIn_38_0Lifetime1 = compareLongs(0L, var2_long % 37L);
                 if (stackIn_38_0Lifetime1 != 0) {
                   break;
                 }
@@ -1162,7 +1162,7 @@ public final class AceOfSkies extends NetworkGameClient {
         field_J = true;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

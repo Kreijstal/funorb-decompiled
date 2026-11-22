@@ -2604,6 +2604,14 @@
       "renamedSymbol": "M:rb.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:re.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:re.a(I)V",
       "originalName": "a",
       "to": "drawFrame",
@@ -158984,9 +158992,9 @@
     },
     {
       "symbol": "M:re.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "re.java",
         "start": 36671,
@@ -207945,7 +207953,7 @@
     },
     {
       "symbol": "P:re.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -207956,7 +207964,7 @@
     },
     {
       "symbol": "P:re.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -274327,7 +274335,7 @@
       "original": "re.java",
       "renamed": "GameApplet.java",
       "inputSha256": "f0e397977ac1a0f4a9efefe99bd28839a0a5341e0a41ba14154d28437d7222fa",
-      "outputSha256": "6261fff13fd73ff59d36fcc28912c84e4b1283f26b532cf76a3edeb30b412695",
+      "outputSha256": "2fdde12be1494bb6c83ec7da3afae5f14c6766a5a4b55ec713727342f8fe6b93",
       "edits": [
         {
           "start": 60,
@@ -274778,6 +274786,13 @@
           "renamed": "initialise"
         },
         {
+          "start": 22573,
+          "end": 22582,
+          "symbol": "M:re.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 23637,
           "end": 23638,
           "symbol": "M:hb.a(Ljava/lang/Throwable;ILjava/lang/String;)V",
@@ -275042,6 +275057,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 36671,
+          "end": 36680,
+          "symbol": "M:re.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -290684,10 +290706,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "15e4cb1546928206ea00819bb17705f2fdd0b6eb42eaa19aa0473e84114d0e4f",
+    "rulesSha256": "f6407a40ecd70744a1efbe6b208d39a09892a06e53edb347a2c9dd8d0e667588",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "8f98fe2e2ca54e446d63ac460f742f0f9991603996c45908f6f5d02bb1e3f898",
+    "outputTreeSha256": "0038a1a9fb0164e52bfe2c9ef04c537b0354c60b4db7b2d14a37c200edd79261",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

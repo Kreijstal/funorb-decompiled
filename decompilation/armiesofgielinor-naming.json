@@ -79268,6 +79268,14 @@
       "renamedSymbol": "M:PasswordValidator.containsEmailComponent(Ljava/lang/String;I)Z"
     },
     {
+      "symbol": "M:ic.$cfr$fcmpl(FF)I",
+      "originalName": "$cfr$fcmpl",
+      "to": "compareFloatsNaNResultNegative",
+      "evidence": "ic.java: Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Float comparisons return-1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayController.compareFloatsNaNResultNegative(FF)I"
+    },
+    {
       "symbol": "M:ic.a(BLsl;Lom;)V",
       "originalName": "a",
       "to": "restoreCampaignQuicksave",
@@ -80194,6 +80202,14 @@
       "evidence": "iu.java: Draws the animated tutorial panel, controls and message.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleTutorial.draw(B)V"
+    },
+    {
+      "symbol": "M:iv.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "iv.java: Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
     },
     {
       "symbol": "M:iv.a(B)V",
@@ -543556,9 +543572,9 @@
     },
     {
       "symbol": "M:ic.$cfr$fcmpl(FF)I",
-      "renamedSymbol": "M:GameplayController.$cfr$fcmpl(FF)I",
+      "renamedSymbol": "M:GameplayController.compareFloatsNaNResultNegative(FF)I",
       "originalName": "$cfr$fcmpl",
-      "renamedName": "$cfr$fcmpl",
+      "renamedName": "compareFloatsNaNResultNegative",
       "declaration": {
         "file": "ic.java",
         "start": 506419,
@@ -546746,9 +546762,9 @@
     },
     {
       "symbol": "M:iv.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "iv.java",
         "start": 36047,
@@ -624714,7 +624730,7 @@
     },
     {
       "symbol": "P:ic.$cfr$fcmpl(FF)I#0",
-      "renamedSymbol": "P:GameplayController.$cfr$fcmpl(FF)I#0",
+      "renamedSymbol": "P:GameplayController.compareFloatsNaNResultNegative(FF)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -624725,7 +624741,7 @@
     },
     {
       "symbol": "P:ic.$cfr$fcmpl(FF)I#1",
-      "renamedSymbol": "P:GameplayController.$cfr$fcmpl(FF)I#1",
+      "renamedSymbol": "P:GameplayController.compareFloatsNaNResultNegative(FF)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -631776,7 +631792,7 @@
     },
     {
       "symbol": "P:iv.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -631787,7 +631803,7 @@
     },
     {
       "symbol": "P:iv.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -1144060,7 +1144076,7 @@
       "original": "ic.java",
       "renamed": "GameplayController.java",
       "inputSha256": "807c18d2e3ff729e80e0e5158ab16fc972b965707919ee846c6d5759e02a1ab6",
-      "outputSha256": "bc6dc34a903ab8109263d89143ad78293b822f0e2ff0a9d182949dcee6dc9ac7",
+      "outputSha256": "d57aa2d129f0c03c5d29f03f9b76574a14b080ec2d31d0a932475c8cba6307ef",
       "edits": [
         {
           "start": 71,
@@ -1193096,6 +1193112,13 @@
           "renamed": "PrivateTextRecipientSupport"
         },
         {
+          "start": 462189,
+          "end": 462199,
+          "symbol": "M:ic.$cfr$fcmpl(FF)I",
+          "original": "$cfr$fcmpl",
+          "renamed": "compareFloatsNaNResultNegative"
+        },
+        {
           "start": 462784,
           "end": 462792,
           "symbol": "F:ic.field_xb:Lha;",
@@ -1197345,6 +1197368,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 506419,
+          "end": 506429,
+          "symbol": "M:ic.$cfr$fcmpl(FF)I",
+          "original": "$cfr$fcmpl",
+          "renamed": "compareFloatsNaNResultNegative"
         }
       ]
     },
@@ -1251605,7 +1251635,7 @@
       "original": "iv.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "5850148490d49e948990a4a87bbc705a46823765ad7153b9a6ab07abf33c8a91",
-      "outputSha256": "53b059a14ed89fcc5c214c2e30f1962de0e85f7ae1e095bb0c82946d80e10602",
+      "outputSha256": "d340d9b8c1cca6c476616fcbb4054b4146454935574f6376f78b4039245f7430",
       "edits": [
         {
           "start": 60,
@@ -1253848,6 +1253878,13 @@
           "renamed": "shutdownDeadlineMillis"
         },
         {
+          "start": 23735,
+          "end": 23744,
+          "symbol": "M:iv.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 23745,
           "end": 23747,
           "symbol": "C:mn",
@@ -1255260,6 +1255297,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 36047,
+          "end": 36056,
+          "symbol": "M:iv.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -1843435,10 +1843479,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "1f4ec05db8d77abc045cff94e527457acc7134aac38b48a411ad60b4b712a44e",
+    "rulesSha256": "957433b7e384740de256b743500ded0a9f00a100b8cbbff6513a0ad318518c4a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "f10018f69560dba8c1f974cad503e83348ef2d699364e23b7043df06b9de0924",
+    "outputTreeSha256": "8cfd6fbc648c4467554de8bac8fd2457cd764d16a3f1bea0b672f6b1739df4c1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -20,7 +20,7 @@ final class tea extends mf implements WidgetActionListener {
           }
           return false;
         }
-        eq var2 = nea.f((byte) 94);
+        AccountServiceResult var2 = nea.f((byte) 94);
         if (var2 != null) {
           this.a(-12331, false, var2);
           if (param0 <= -32) {
@@ -34,7 +34,7 @@ final class tea extends mf implements WidgetActionListener {
         return false;
     }
 
-    private final void a(int param0, boolean param1, eq param2) {
+    private final void a(int param0, boolean param1, AccountServiceResult param2) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;

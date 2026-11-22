@@ -68,10 +68,10 @@ final class vb extends vo {
     }
 
     static {
-        $cfr$clinit();
+        initializeSoftReferenceReflection();
     }
 
-    private static void $cfr$clinit() {
+    private static void initializeSoftReferenceReflection() {
         Throwable decompiledCaughtException = null;
         Class var0 = null;
         ClassNotFoundException var0_ref = null;

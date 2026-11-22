@@ -273,7 +273,7 @@ final class SocketJs5Transport extends Js5Transport {
                           if (var11 != 0) {
                             var14_ref = (ac) (this.field_b.a((byte) -127));
                             while (null != var14_ref) {
-                              stackIn_125_0 = $cfr$lcmp(var14_ref.field_l, var12);
+                              stackIn_125_0 = compareLongs(var14_ref.field_l, var12);
                               if (var16 != 0) {
                                 decompiledFrameCompleted2 = false;
                                 break;
@@ -294,7 +294,7 @@ final class SocketJs5Transport extends Js5Transport {
                             (decompiledFrameCompleted1)) {
                             var14_ref = (ac) (this.field_h.a((byte) -63));
                             while (null != var14_ref) {
-                              stackIn_125_0 = $cfr$lcmp(var14_ref.field_l, var12);
+                              stackIn_125_0 = compareLongs(var14_ref.field_l, var12);
                               if (var16 != 0) {
                                 decompiledFrameCompleted0 = false;
                                 break;
@@ -3814,7 +3814,7 @@ final class SocketJs5Transport extends Js5Transport {
         field_t = new k(0, 2, 2, 1);
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

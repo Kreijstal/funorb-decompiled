@@ -1244,6 +1244,14 @@
       "renamedSymbol": "M:q.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:qb.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:qc.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -165402,9 +165410,9 @@
     },
     {
       "symbol": "M:qb.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "qb.java",
         "start": 36576,
@@ -212845,7 +212853,7 @@
     },
     {
       "symbol": "P:qb.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -212856,7 +212864,7 @@
     },
     {
       "symbol": "P:qb.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -246732,7 +246740,7 @@
       "original": "qb.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "ba15cff955f6034f3b6c358f6420bd9ec4b2340193104dee7c7a92178c262212",
-      "outputSha256": "7060cf455c16d10d27d7b3a5da58226512b408ed695aa9e478e9a19fc12196cf",
+      "outputSha256": "e0c3e4d753ea4644758b3c6e6a7c7fa7441c4b6ebfee975f15e606cbbc0b7293",
       "edits": [
         {
           "start": 60,
@@ -246798,6 +246806,13 @@
           "renamed": "TriangleMesh"
         },
         {
+          "start": 26439,
+          "end": 26448,
+          "symbol": "M:qb.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 32557,
           "end": 32559,
           "symbol": "C:qb",
@@ -246810,6 +246825,13 @@
           "symbol": "M:qb.<init>()V",
           "original": "qb",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 36576,
+          "end": 36585,
+          "symbol": "M:qb.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -254986,10 +255008,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/lexicominos"
     },
-    "rulesSha256": "40bfbcf2562c8eef562ed2720dd596012590f78ade36939bfbe3176a7f0c389b",
+    "rulesSha256": "afa4954c9e05c5e8876d0496405ef1d73b57815ebdd5fcc5bcd2604094c28c6c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
-    "outputTreeSha256": "91cb73eea1665baf7928ade53fe893d58a45d6cbbddd99283fce648c8cfecb1c",
+    "outputTreeSha256": "2878e430d881f2826bf1c89ed8f98df40531a6c5529037ff3c5f9eafc13c0632",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

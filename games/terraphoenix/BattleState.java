@@ -3635,7 +3635,7 @@ final class BattleState {
                     }
                     var11 = 0;
                     while (var11 < this.units[var6].field_Z.field_h) {
-                      stackIn_476_0 = $cfr$dcmpl(100.0 * Math.random(), (double)this.units[var6].field_Z.field_t);
+                      stackIn_476_0 = compareDoublesNaNResultNegative(100.0 * Math.random(), (double)this.units[var6].field_Z.field_t);
                       if (stackIn_476_0 > 0) {
                         dupTemp$6 = this.units[var6].field_Z;
                         dupTemp$6.field_t = dupTemp$6.field_t + 1;
@@ -13189,7 +13189,7 @@ final class BattleState {
         throw (T) throwable;
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

@@ -1140,6 +1140,14 @@
       "renamedSymbol": "M:lf.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:m.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:mb.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -187421,9 +187429,9 @@
     },
     {
       "symbol": "M:m.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "m.java",
         "start": 33632,
@@ -232301,7 +232309,7 @@
     },
     {
       "symbol": "P:m.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -232312,7 +232320,7 @@
     },
     {
       "symbol": "P:m.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -283374,7 +283382,7 @@
       "original": "m.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "7f185ae59da80ce194601c58e2b3f895d8bf1bdb84133eddcec39a68daa19a26",
-      "outputSha256": "348c12c27fd2bc0821b58c27350d6db21adb38310db6c40d0edcd120616f0bb9",
+      "outputSha256": "3c3a4bae73f90ade1591515f04b35d4b6a61a81fee23bde508b83fb13e46a5bb",
       "edits": [
         {
           "start": 60,
@@ -283447,6 +283455,13 @@
           "renamed": "IsaacRandom"
         },
         {
+          "start": 13837,
+          "end": 13846,
+          "symbol": "M:m.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 13847,
           "end": 13849,
           "symbol": "C:mf",
@@ -283487,6 +283502,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 33632,
+          "end": 33641,
+          "symbol": "M:m.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -300988,10 +301010,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/minerdisturbance"
     },
-    "rulesSha256": "70f382e56e2a80976fc585e0aab87e7748cbc3d57e49462f72f92cd97047dd6c",
+    "rulesSha256": "c2ff6ddce21982d418966b0ea376bae4d24543afe266e59ad4b060634fc61a04",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
-    "outputTreeSha256": "97261c19301fab7bcf961c04254844eb827d911829c17420c28aaedf21bdf067",
+    "outputTreeSha256": "6bea02a48b4d01f8cc56c80f0427adbb94f204c5b995881e43d8233995db140c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

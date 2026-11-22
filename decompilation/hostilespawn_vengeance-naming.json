@@ -1516,6 +1516,14 @@
       "renamedSymbol": "M:sc.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:se.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:sj.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1706,6 +1714,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 42e817d4f004c2ae7e4a2858204672364bd04c407d1caa2846269134d5c27a0c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:wh.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:wj.$cfr$dcmpl(DD)I",
+      "originalName": "$cfr$dcmpl",
+      "to": "compareDoublesNaNResultNegative",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Double comparisons return-1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wj.compareDoublesNaNResultNegative(DD)I"
     },
     {
       "symbol": "M:wk.a(I)V",
@@ -222214,9 +222230,9 @@
     },
     {
       "symbol": "M:se.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "se.java",
         "start": 37673,
@@ -228429,9 +228445,9 @@
     },
     {
       "symbol": "M:wj.$cfr$dcmpl(DD)I",
-      "renamedSymbol": "M:wj.$cfr$dcmpl(DD)I",
+      "renamedSymbol": "M:wj.compareDoublesNaNResultNegative(DD)I",
       "originalName": "$cfr$dcmpl",
-      "renamedName": "$cfr$dcmpl",
+      "renamedName": "compareDoublesNaNResultNegative",
       "declaration": {
         "file": "wj.java",
         "start": 28813,
@@ -283088,7 +283104,7 @@
     },
     {
       "symbol": "P:se.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -283099,7 +283115,7 @@
     },
     {
       "symbol": "P:se.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -296937,7 +296953,7 @@
     },
     {
       "symbol": "P:wj.$cfr$dcmpl(DD)I#0",
-      "renamedSymbol": "P:wj.$cfr$dcmpl(DD)I#0",
+      "renamedSymbol": "P:wj.compareDoublesNaNResultNegative(DD)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -296948,7 +296964,7 @@
     },
     {
       "symbol": "P:wj.$cfr$dcmpl(DD)I#1",
-      "renamedSymbol": "P:wj.$cfr$dcmpl(DD)I#1",
+      "renamedSymbol": "P:wj.compareDoublesNaNResultNegative(DD)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -315607,7 +315623,7 @@
       "original": "se.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "195ef57a474e2badfb624fae51ccb35ee318c752d4ee0d76877b6f4d691770a4",
-      "outputSha256": "4cf4ec3a0198fe9867673165560a60d877418da5f6a12667127d3bc7382ed6f4",
+      "outputSha256": "d86960e8c121839a5c042387ae7b45c2764783cf02471769f07060eb690c514c",
       "edits": [
         {
           "start": 60,
@@ -315708,6 +315724,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 31250,
+          "end": 31259,
+          "symbol": "M:se.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 33104,
           "end": 33106,
           "symbol": "C:md",
@@ -315720,6 +315743,13 @@
           "symbol": "M:se.<init>()V",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 37673,
+          "end": 37682,
+          "symbol": "M:se.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -318443,7 +318473,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "446521b20edcd033dab4d5f42e85bec8436e981cee505d1554c82e8583f89fd8",
-      "outputSha256": "e95d5989ef7694c5f1fffbe145a91b77202ad432936c8dcedb927177bf7b5096",
+      "outputSha256": "41dd58ff0387e89a930e456d358a307eadf6ea1bcc1a7062503b644069d64eb3",
       "edits": [
         {
           "start": 8749,
@@ -318490,6 +318520,13 @@
           "kind": "label"
         },
         {
+          "start": 17798,
+          "end": 17808,
+          "symbol": "M:wj.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
+        },
+        {
           "start": 25045,
           "end": 25047,
           "symbol": "C:uk",
@@ -318509,6 +318546,13 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 28813,
+          "end": 28823,
+          "symbol": "M:wj.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         }
       ]
     },
@@ -318698,10 +318742,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "e027b4d27faf331ebae27a3b80f13cdb0a6e4694815f48a65a2e3e4b3edc471f",
+    "rulesSha256": "39e8203e2487f856fe03bd9f9d4da71b0f873cdf799eca26c03e88f801c6a350",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "ca52719224c462242682be1fde4a1d997312a7f2c5f225c0d6ffee4ac066f4d6",
+    "outputTreeSha256": "d0282836ce678110305e395697414eeb64da7b5725e53e6de7584b0c4ccf9e5d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

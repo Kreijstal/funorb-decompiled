@@ -1788,6 +1788,14 @@
       "renamedSymbol": "M:in.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:iq.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:iq.a(ZIIII)V",
       "originalName": "a",
       "to": "setBounds",
@@ -2402,6 +2410,14 @@
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
       "renamedSymbol": "M:od.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:og.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
     },
     {
       "symbol": "M:oh.a(ZIIII)V",
@@ -265285,9 +265301,9 @@
     },
     {
       "symbol": "M:iq.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:UiWidget.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:UiWidget.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "iq.java",
         "start": 25188,
@@ -273579,9 +273595,9 @@
     },
     {
       "symbol": "M:og.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "og.java",
         "start": 43523,
@@ -324179,7 +324195,7 @@
     },
     {
       "symbol": "P:iq.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:UiWidget.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:UiWidget.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -324190,7 +324206,7 @@
     },
     {
       "symbol": "P:iq.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:UiWidget.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:UiWidget.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -344606,7 +344622,7 @@
     },
     {
       "symbol": "P:og.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -344617,7 +344633,7 @@
     },
     {
       "symbol": "P:og.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -406250,7 +406266,7 @@
       "original": "iq.java",
       "renamed": "UiWidget.java",
       "inputSha256": "0048428a0d4418b41b0486e33f4988574a11fb12bc98de97153164e4ad0434d4",
-      "outputSha256": "51f6a82a449dc33138e9621bacb46f87c8116dd6afa47dd2e72c578b529ba0e3",
+      "outputSha256": "a8dd3237f7dd7406d45a8bbf4954dcaca1c70d746c6bb9326b2da61ace81d902",
       "edits": [
         {
           "start": 65,
@@ -406655,6 +406671,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 20507,
+          "end": 20516,
+          "symbol": "M:iq.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 22581,
           "end": 22583,
           "symbol": "C:iq",
@@ -406779,6 +406802,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 25188,
+          "end": 25197,
+          "symbol": "M:iq.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -422727,7 +422757,7 @@
       "original": "og.java",
       "renamed": "GameApplet.java",
       "inputSha256": "97e5206ade0cd60ca51bc9a28386646b80aacd2c3ef494e6ff28f2ebd318eb4c",
-      "outputSha256": "b1e7bda43ee0092e6bff4002df16a7f1325be8b4e3105e9b3a4ad12437a19114",
+      "outputSha256": "2963eb94fcd9a52ccb8ef8192369268baf86c975632cd456511c4262a103c9be",
       "edits": [
         {
           "start": 60,
@@ -422989,11 +423019,25 @@
           "renamed": "IsaacCipher"
         },
         {
+          "start": 40314,
+          "end": 40323,
+          "symbol": "M:og.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 40666,
           "end": 40668,
           "symbol": "C:wa",
           "original": "wa",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 43523,
+          "end": 43532,
+          "symbol": "M:og.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -447054,10 +447098,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/vertigo2"
     },
-    "rulesSha256": "f4267bea17956761aebd3a2eac99f75a39a6c85a15e1e468b0964901c5735298",
+    "rulesSha256": "89c61b109b95b4a62ad6c5513969053456a072c65429603949566da283645528",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
-    "outputTreeSha256": "394474320c0fb99dee5273a14fa1cd4e65430adda17c528f310de32d8c5a3fab",
+    "outputTreeSha256": "54eb2b53822371a5eb7b349298cf6f4b00cba25a28f440dd4377d0877c9a4e3d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

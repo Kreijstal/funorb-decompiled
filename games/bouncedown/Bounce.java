@@ -792,7 +792,7 @@ public final class Bounce extends GameClient {
                 if (stackIn_464_0 < stackIn_464_1) {
                   dupTemp$13 = ua.field_c[var2_int];
                   dupTemp$13.field_h = dupTemp$13.field_h - ta.field_c;
-                  stackIn_478_0 = $cfr$dcmpl(-16.0, ua.field_c[var2_int].field_h);
+                  stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, ua.field_c[var2_int].field_h);
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -837,7 +837,7 @@ public final class Bounce extends GameClient {
                 }
                 dupTemp$13Lifetime1 = ua.field_c[var2_int];
                 dupTemp$13Lifetime1.field_h = dupTemp$13Lifetime1.field_h - ta.field_c;
-                stackIn_478_0 = $cfr$dcmpl(-16.0, ua.field_c[var2_int].field_h);
+                stackIn_478_0 = compareDoublesNaNResultNegative(-16.0, ua.field_c[var2_int].field_h);
                 if (var10 != 0) {
                   break scanLoop1;
                 }
@@ -1925,7 +1925,7 @@ public final class Bounce extends GameClient {
         field_F = 0;
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

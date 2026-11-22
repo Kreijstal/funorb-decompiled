@@ -6324,6 +6324,14 @@
       "renamedSymbol": "L:vo.requestHighscores(BIIII)LHighscoreQuery;#3"
     },
     {
+      "symbol": "M:AceOfSkies.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AceOfSkies.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:AceOfSkies.a(BZ)Z",
       "originalName": "a",
       "to": "advanceResourceLoading",
@@ -10154,6 +10162,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 0019b20ee216e1b12a0e0cf72c99fe2ce730219d55420316b1670db45312ca1d.",
       "confidence": "reviewed",
       "renamedSymbol": "M:v.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:vb.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
     },
     {
       "symbol": "M:vb.a(I)V",
@@ -239709,9 +239725,9 @@
     },
     {
       "symbol": "M:AceOfSkies.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:AceOfSkies.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:AceOfSkies.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "AceOfSkies.java",
         "start": 38464,
@@ -280112,9 +280128,9 @@
     },
     {
       "symbol": "M:vb.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "vb.java",
         "start": 31099,
@@ -284468,7 +284484,7 @@
     },
     {
       "symbol": "P:AceOfSkies.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:AceOfSkies.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:AceOfSkies.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -284479,7 +284495,7 @@
     },
     {
       "symbol": "P:AceOfSkies.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:AceOfSkies.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:AceOfSkies.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -382115,7 +382131,7 @@
     },
     {
       "symbol": "P:vb.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -382126,7 +382142,7 @@
     },
     {
       "symbol": "P:vb.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -392360,7 +392376,7 @@
       "original": "AceOfSkies.java",
       "renamed": "AceOfSkies.java",
       "inputSha256": "843b1799447306ff633f2556b6e692205e6ab2c0d56d07fed1685e9c1006df3a",
-      "outputSha256": "3716cac9833b8b4e59d9060d406da34369ae3469801d4e6ea9b498ef12b55a7a",
+      "outputSha256": "35001efb812ae507f9ea8ce9d26837aef13f5416eb3f3853e83722243d8d6695",
       "edits": [
         {
           "start": 97,
@@ -396033,6 +396049,13 @@
           "kind": "label"
         },
         {
+          "start": 25883,
+          "end": 25892,
+          "symbol": "M:AceOfSkies.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 26102,
           "end": 26104,
           "symbol": "B:AceOfSkies.a(Ljava/lang/CharSequence;I)J#0",
@@ -396837,6 +396860,13 @@
           "symbol": "P:AceOfSkies.f(I)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 38464,
+          "end": 38473,
+          "symbol": "M:AceOfSkies.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -540716,7 +540746,7 @@
       "original": "vb.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "2b4045ae92bc624d62c8702b831722c9811a5c004f969bcf7fd24184a6b4a51f",
-      "outputSha256": "8c1fd2ab30cb31559449bc28f59d71a157bb506770bec04945d825c8a887315f",
+      "outputSha256": "a055dfb7abba8179b3894029152b7358a12ebf5c3538a92bc36581bb9b874801",
       "edits": [
         {
           "start": 60,
@@ -541090,6 +541120,13 @@
           "renamed": "initializeClient"
         },
         {
+          "start": 23686,
+          "end": 23695,
+          "symbol": "M:vb.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 24021,
           "end": 24023,
           "symbol": "C:eu",
@@ -541228,6 +541265,13 @@
           "symbol": "M:vb.<init>()V",
           "original": "vb",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 31099,
+          "end": 31108,
+          "symbol": "M:vb.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -558099,10 +558143,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "61acb8442b612de91610c3dbc1ffcb8694429d1bb9e0e894ea1a6543b674cef8",
+    "rulesSha256": "d53c22f965c4d2275e7d4cc0acddfff322846a179b3f1885d164817807c4c24b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "989f8115176ec9c95fa62248961cc82ebd2e05af18b765e7ecb4dd74f0a36526",
+    "outputTreeSha256": "f0d2a38614d4a9b5701d2b39d567e77765ec24d6ef91cfb7ef88154be57480ac",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

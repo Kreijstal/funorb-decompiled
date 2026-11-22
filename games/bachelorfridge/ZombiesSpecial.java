@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ZombiesSpecial extends SpecialOrder {
-    static eq field_p;
+    static AccountServiceResult field_p;
     static int[] field_q;
     static boolean field_r;
 

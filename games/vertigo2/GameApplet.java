@@ -1022,7 +1022,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lf.field_B != 0L) {
-                    stackIn_101_0 = $cfr$lcmp(~gk.a(73), ~lf.field_B);
+                    stackIn_101_0 = compareLongs(~gk.a(73), ~lf.field_B);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_101_0 <= 0)) {
@@ -1096,7 +1096,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_k = "Use this alternative as your account name";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

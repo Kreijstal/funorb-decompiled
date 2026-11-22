@@ -2788,6 +2788,14 @@
       "renamedSymbol": "M:PacketBuffer.readLong(I)J"
     },
     {
+      "symbol": "M:ug.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:ug.a(BLjava/lang/String;)V",
       "originalName": "a",
       "to": "redirectToErrorPage",
@@ -222463,9 +222471,9 @@
     },
     {
       "symbol": "M:ug.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "ug.java",
         "start": 41011,
@@ -287176,7 +287184,7 @@
     },
     {
       "symbol": "P:ug.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -287187,7 +287195,7 @@
     },
     {
       "symbol": "P:ug.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -376895,7 +376903,7 @@
       "original": "ug.java",
       "renamed": "GameApplet.java",
       "inputSha256": "5f5c429dde965ab96783b40625cc09cf14a04614b8eaec61214a9f3be0603f29",
-      "outputSha256": "15aa17ce277188bab767a2420f83dc9ae01df60a26cb85afd5c0bb98c947937c",
+      "outputSha256": "665b9871c607b6d927bc1fe1be8c700aa3db173862474c561372d5d6edc52c88",
       "edits": [
         {
           "start": 60,
@@ -377057,6 +377065,13 @@
           "symbol": "M:ug.d(I)V",
           "original": "d",
           "renamed": "initializeGame"
+        },
+        {
+          "start": 8713,
+          "end": 8722,
+          "symbol": "M:ug.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         },
         {
           "start": 9299,
@@ -377512,6 +377527,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 41011,
+          "end": 41020,
+          "symbol": "M:ug.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -383088,10 +383110,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "622056fe02975ca67b0d2585475246b4f9a5087cf7928acedaa4f741c7dc260d",
+    "rulesSha256": "bf1bcf253f18078e60ae9523e77ad752ded3fbf7daf5cbb9fb287881baf603a5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "bd81f03649b3c97fcfd5aafe346a589b896b6369b729d393ecafe09f0bbc1252",
+    "outputTreeSha256": "0e89e6e339122b8f026cd82f304047a5ca083a3f70c326b70985bc5de3654e85",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

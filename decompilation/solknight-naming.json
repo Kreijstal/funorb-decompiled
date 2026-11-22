@@ -780,6 +780,14 @@
       "renamedSymbol": "M:dc.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:dh.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:dk.e(I)V",
       "originalName": "e",
       "to": "clearStaticReferences",
@@ -148042,9 +148050,9 @@
     },
     {
       "symbol": "M:dh.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "dh.java",
         "start": 36445,
@@ -176257,7 +176265,7 @@
     },
     {
       "symbol": "P:dh.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -176268,7 +176276,7 @@
     },
     {
       "symbol": "P:dh.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -231274,7 +231282,7 @@
       "original": "dh.java",
       "renamed": "GameApplet.java",
       "inputSha256": "91bb799927325f9b03c4cf94ddd21d7af8744b70615c5cb9318564ab43030f41",
-      "outputSha256": "3ef3c00442f1f77de7a0bc90233983c36a8c3ab0b24abb8d55c0ee9202f43724",
+      "outputSha256": "d2a6954c91d81ead6cf1b62ce86b118af6227fac3c63e8bad43db12b55c4831b",
       "edits": [
         {
           "start": 60,
@@ -231431,6 +231439,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 17792,
+          "end": 17801,
+          "symbol": "M:dh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 21542,
           "end": 21544,
           "symbol": "C:rc",
@@ -231583,6 +231598,13 @@
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 36445,
+          "end": 36454,
+          "symbol": "M:dh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -273416,10 +273438,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/solknight"
     },
-    "rulesSha256": "cdb64670f458b3b081ab747118ad48f32c4deddf2513280d9132f7a8db46b4fa",
+    "rulesSha256": "bb328d1374a58a96d85e92cb335cfe9a3f1895e766c862076402c377176467a6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
-    "outputTreeSha256": "787866604aec46ef83796e72e7c849827ea94657a7bed2f99c3820ee9e99b1c5",
+    "outputTreeSha256": "09c5b0fe15ab8b31ec8e3cee1ea6c4e925eebdd60f52baa5c3bdfbd7b559f951",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

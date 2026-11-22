@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq {
+final class AccountServiceResult {
     static Sprite[] field_b;
     String[] field_a;
     String field_g;
@@ -51,7 +51,7 @@ final class eq {
           rga.field_a = pu.field_j.field_G;
           if (param2 != -111) {
             var8 = (BattleScreen) null;
-            eq.a((Sprite) null, (BattleScreen) null, (byte) 68);
+            AccountServiceResult.a((Sprite) null, (BattleScreen) null, (byte) 68);
           }
           var3_int = pu.field_j.field_h.field_b;
           stackIn_6_0 = (var3_int == pu.field_j.field_n);
@@ -115,7 +115,7 @@ final class eq {
         }
     }
 
-    eq(boolean param0) {
+    AccountServiceResult(boolean param0) {
         this.field_e = param0 ? true : false;
     }
 

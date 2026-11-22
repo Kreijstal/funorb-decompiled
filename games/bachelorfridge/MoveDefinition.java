@@ -93,7 +93,7 @@ class MoveDefinition {
           if (param1 == 255) {
             stackIn_9_0 = 120;
             stackIn_10_1 = !(13 <= fga.field_f);
-            vo.field_d = ShieldAnimation.$cfr$intArgs$a$262119530e06(stackIn_9_0, stackIn_10_1);
+            vo.field_d = ShieldAnimation.createAccountSuccessResultWithIntGuard(stackIn_9_0, stackIn_10_1);
             var6 = (String[]) null;
             wr.a((String[]) null, (byte) -38);
           } else {

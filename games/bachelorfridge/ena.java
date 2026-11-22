@@ -85,7 +85,7 @@ final class ena extends pu {
         BagpipeSpecial.a(param1, -1, "basic", "button_add_to_cart");
         fba.field_a = BagpipeSpecial.a(param1, -1, "basic", "icon_buy");
         bn.field_h = BagpipeSpecial.a(param1, -1, "basic", "icon_buy_hover");
-        eq.field_b = hk.a("scroll_green", param1, -76, "basic");
+        AccountServiceResult.field_b = hk.a("scroll_green", param1, -76, "basic");
         tq.field_g = hk.a("scroll_yellow", param1, -94, "basic");
         og.field_b = hk.a("scroll_brown", param1, 43, "basic");
         jf.field_l = BagpipeSpecial.a(param1, -1, "basic", "tab_shop");

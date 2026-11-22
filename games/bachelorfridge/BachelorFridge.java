@@ -981,7 +981,7 @@ public final class BachelorFridge extends NetworkGameClient {
           qia.releaseStatics(-127);
           bs.a(122);
           af.releaseStatics(9680);
-          eq.releaseStatics(0);
+          AccountServiceResult.releaseStatics(0);
           ft.releaseStatics((byte) -73);
           ika.releaseStatics(true);
           si.releaseStatics(-28415);

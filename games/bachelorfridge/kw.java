@@ -20,16 +20,16 @@ final class kw extends TileEffect {
         lna.field_q = param0 ? true : false;
     }
 
-    final static eq a(boolean param0, String[] param1) {
-        eq var2 = null;
+    final static AccountServiceResult a(boolean param0, String[] param1) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        eq stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new eq(param0);
+          var2 = new AccountServiceResult(param0);
           var2.field_a = param1;
           stackIn_1_0 = var2;
           return stackIn_1_0;

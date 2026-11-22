@@ -892,6 +892,14 @@
       "renamedSymbol": "M:ByteStorage.getBytes(I)[B"
     },
     {
+      "symbol": "M:fa.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:fc.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -205947,9 +205955,9 @@
     },
     {
       "symbol": "M:fa.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameAppletShell.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameAppletShell.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "fa.java",
         "start": 38296,
@@ -245041,7 +245049,7 @@
     },
     {
       "symbol": "P:fa.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -245052,7 +245060,7 @@
     },
     {
       "symbol": "P:fa.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameAppletShell.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameAppletShell.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -309790,7 +309798,7 @@
       "original": "fa.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "a899826fd87de8982df18c9bac310f4a6ab735691ecf6d669b8d5769cbe10474",
-      "outputSha256": "e0b845ea900df6971720af74359355a2d0be10d00d7ee83088a663af47badbb8",
+      "outputSha256": "c6bc4906c508b50686023a50e07b72c22056f3acfb247ede0a86dc8f6ba474eb",
       "edits": [
         {
           "start": 60,
@@ -310003,6 +310011,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 19619,
+          "end": 19628,
+          "symbol": "M:fa.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 20259,
           "end": 20261,
           "symbol": "C:ja",
@@ -310183,6 +310198,13 @@
           "symbol": "M:fa.<init>()V",
           "original": "fa",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 38296,
+          "end": 38305,
+          "symbol": "M:fa.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -328736,10 +328758,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/chess"
     },
-    "rulesSha256": "9d444b4df0a9e6609b50e58f3688e7852e07f34c5c110585a2c7fd95b86dac75",
+    "rulesSha256": "17cabeffc865e04770aef50a6e4a1f158f0ecbbd55bddf6183d59cdb2a73e651",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
-    "outputTreeSha256": "9f588a92238779dfa7b35d68ee39a2d6514836f9f6d70b4ed13146747dc77b29",
+    "outputTreeSha256": "23002180d12946d47cb216b368a866eacbd77f36f0d46b02c0df4cd2f7689d18",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

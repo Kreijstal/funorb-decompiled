@@ -709,7 +709,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (ua.field_d != 0L) {
-                    stackIn_103_0 = $cfr$lcmp(ua.field_d, fa.a(-42));
+                    stackIn_103_0 = compareLongs(ua.field_d, fa.a(-42));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_103_0 <= 0)) {
@@ -962,7 +962,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         field_b = 0;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

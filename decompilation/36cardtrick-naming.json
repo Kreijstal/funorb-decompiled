@@ -628,6 +628,14 @@
       "renamedSymbol": "M:ek.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:fj.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fj.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:fl.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -142918,9 +142926,9 @@
     },
     {
       "symbol": "M:fj.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:fj.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:fj.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "fj.java",
         "start": 41980,
@@ -173487,7 +173495,7 @@
     },
     {
       "symbol": "P:fj.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:fj.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:fj.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -173498,7 +173506,7 @@
     },
     {
       "symbol": "P:fj.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:fj.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:fj.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -226666,7 +226674,7 @@
       "original": "fj.java",
       "renamed": "fj.java",
       "inputSha256": "d664685fcbf9293fc74e3b313825f3c518d7a62efff4482b388e7f5ba3be842a",
-      "outputSha256": "fdeb96c7f1beac7c7ef2a657caa5ed5263f7033f9211f00b3fc4d1f27a7538d1",
+      "outputSha256": "45a544dc2e98867bb9242c561d3b45c2a4b6e1e7208abe25443edb8fbb3848b4",
       "edits": [
         {
           "start": 1314,
@@ -226723,6 +226731,13 @@
           "symbol": "C:ag",
           "original": "ag",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 11594,
+          "end": 11603,
+          "symbol": "M:fj.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         },
         {
           "start": 11944,
@@ -226898,6 +226913,13 @@
           "symbol": "M:ma.a(Ljava/lang/Throwable;Ljava/lang/String;)Lac;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 41980,
+          "end": 41989,
+          "symbol": "M:fj.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -242234,10 +242256,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/36cardtrick"
     },
-    "rulesSha256": "4c386a7e73fc1fbb11c6f29bb99e6f3031f4ed2764604a485549ce15bf8e4be6",
+    "rulesSha256": "f069804ee01901b287df92eb99298693cfb4f5bd6724a12e3f5c38cb6ff6b3a5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
-    "outputTreeSha256": "68fdce8292c47064fa22345b030a7d86e26893c50f1334cb9976a878a45350ae",
+    "outputTreeSha256": "c28efa171792c9d2d716f1b5bda51b6ac99e96633777a08305437f0bb8b666e2",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

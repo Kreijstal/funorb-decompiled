@@ -519,7 +519,7 @@ final class wj extends ph {
                 }
               }
               for (var13_intLifetime1Lifetime1 = 0; var13_intLifetime1Lifetime1 < 5; var13_intLifetime1Lifetime1++) {
-                stackIn_162_0 = $cfr$dcmpl(Math.random() * 512.0, (double)le.field_D);
+                stackIn_162_0 = compareDoublesNaNResultNegative(Math.random() * 512.0, (double)le.field_D);
                 if (stackIn_162_0 > 0) {
                   jn.field_F[ib.field_c].field_c = Math.random() * 255.0;
                   jn.field_F[ib.field_c].field_j.a((byte) 46, var6);
@@ -809,7 +809,7 @@ final class wj extends ph {
         field_N = new ub();
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

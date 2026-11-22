@@ -463,7 +463,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != lj.field_G) {
-                    stackIn_99_0 = $cfr$lcmp(lj.field_G, je.a(1));
+                    stackIn_99_0 = compareLongs(lj.field_G, je.a(1));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 <= 0)) {
@@ -943,7 +943,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_i = 4;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

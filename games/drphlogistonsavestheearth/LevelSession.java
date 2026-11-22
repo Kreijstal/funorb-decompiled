@@ -3342,7 +3342,7 @@ final class LevelSession {
               vi.field_h[var2][var3_int].a((int)vj.field_f[var2], 3, lh.field_n[var2], -21, 1, (int)tc.field_f[var2]);
               tc.field_f[var2] = tc.field_f[var2] + 0.3;
               vj.field_f[var2] = vj.field_f[var2] + 0.6;
-              stackIn_8_0 = $cfr$dcmpl(vj.field_f[var2], 305.0);
+              stackIn_8_0 = compareDoublesNaNResultNegative(vj.field_f[var2], 305.0);
               if (stackIn_8_0 > 0) {
                 nd.field_M = 256;
                 this.a((int)vj.field_f[var2], -84, (int)tc.field_f[var2]);
@@ -4326,7 +4326,7 @@ final class LevelSession {
         field_Y = "Logging in...";
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

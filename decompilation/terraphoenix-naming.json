@@ -2260,6 +2260,30 @@
       "renamedSymbol": "M:PacketBuffer.backpatchByteLength(II)V"
     },
     {
+      "symbol": "M:dk.$cfr$dcmpg(DD)I",
+      "originalName": "$cfr$dcmpg",
+      "to": "compareDoublesNaNResultPositive",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Double comparisons return+1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelMap.compareDoublesNaNResultPositive(DD)I"
+    },
+    {
+      "symbol": "M:dk.$cfr$dcmpl(DD)I",
+      "originalName": "$cfr$dcmpl",
+      "to": "compareDoublesNaNResultNegative",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Double comparisons return-1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelMap.compareDoublesNaNResultNegative(DD)I"
+    },
+    {
+      "symbol": "M:e.$cfr$dcmpl(DD)I",
+      "originalName": "$cfr$dcmpl",
+      "to": "compareDoublesNaNResultNegative",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Double comparisons return-1 when either operand is NaN, compare signed zeros equal, and preserve original relational/infinity behavior. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleState.compareDoublesNaNResultNegative(DD)I"
+    },
+    {
       "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "to": "throwUnchecked",
@@ -2298,6 +2322,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 5101e8153669369be53f1cddd7deb5f2ee877a0baafb6128578ede56b77a978c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ef.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:eh.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
     },
     {
       "symbol": "M:ei.a(Ljava/lang/Object;ZZ)[B",
@@ -2610,6 +2642,14 @@
       "evidence": "Calls removeMouseWheelListener on the component. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MouseWheelInput.unregister(Ljava/awt/Component;B)V"
+    },
+    {
+      "symbol": "M:jd.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jd.compareLongs(JJ)I"
     },
     {
       "symbol": "M:jd.d(I)V",
@@ -195288,9 +195328,9 @@
     },
     {
       "symbol": "M:dk.$cfr$dcmpg(DD)I",
-      "renamedSymbol": "M:LevelMap.$cfr$dcmpg(DD)I",
+      "renamedSymbol": "M:LevelMap.compareDoublesNaNResultPositive(DD)I",
       "originalName": "$cfr$dcmpg",
-      "renamedName": "$cfr$dcmpg",
+      "renamedName": "compareDoublesNaNResultPositive",
       "declaration": {
         "file": "dk.java",
         "start": 206020,
@@ -195299,9 +195339,9 @@
     },
     {
       "symbol": "M:dk.$cfr$dcmpl(DD)I",
-      "renamedSymbol": "M:LevelMap.$cfr$dcmpl(DD)I",
+      "renamedSymbol": "M:LevelMap.compareDoublesNaNResultNegative(DD)I",
       "originalName": "$cfr$dcmpl",
-      "renamedName": "$cfr$dcmpl",
+      "renamedName": "compareDoublesNaNResultNegative",
       "declaration": {
         "file": "dk.java",
         "start": 206150,
@@ -195805,9 +195845,9 @@
     },
     {
       "symbol": "M:e.$cfr$dcmpl(DD)I",
-      "renamedSymbol": "M:BattleState.$cfr$dcmpl(DD)I",
+      "renamedSymbol": "M:BattleState.compareDoublesNaNResultNegative(DD)I",
       "originalName": "$cfr$dcmpl",
-      "renamedName": "$cfr$dcmpl",
+      "renamedName": "compareDoublesNaNResultNegative",
       "declaration": {
         "file": "e.java",
         "start": 607993,
@@ -196542,9 +196582,9 @@
     },
     {
       "symbol": "M:eh.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "eh.java",
         "start": 37533,
@@ -202735,9 +202775,9 @@
     },
     {
       "symbol": "M:jd.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:jd.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:jd.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "jd.java",
         "start": 12731,
@@ -229047,7 +229087,7 @@
     },
     {
       "symbol": "P:dk.$cfr$dcmpg(DD)I#0",
-      "renamedSymbol": "P:LevelMap.$cfr$dcmpg(DD)I#0",
+      "renamedSymbol": "P:LevelMap.compareDoublesNaNResultPositive(DD)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -229058,7 +229098,7 @@
     },
     {
       "symbol": "P:dk.$cfr$dcmpg(DD)I#1",
-      "renamedSymbol": "P:LevelMap.$cfr$dcmpg(DD)I#1",
+      "renamedSymbol": "P:LevelMap.compareDoublesNaNResultPositive(DD)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -229069,7 +229109,7 @@
     },
     {
       "symbol": "P:dk.$cfr$dcmpl(DD)I#0",
-      "renamedSymbol": "P:LevelMap.$cfr$dcmpl(DD)I#0",
+      "renamedSymbol": "P:LevelMap.compareDoublesNaNResultNegative(DD)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -229080,7 +229120,7 @@
     },
     {
       "symbol": "P:dk.$cfr$dcmpl(DD)I#1",
-      "renamedSymbol": "P:LevelMap.$cfr$dcmpl(DD)I#1",
+      "renamedSymbol": "P:LevelMap.compareDoublesNaNResultNegative(DD)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -230851,7 +230891,7 @@
     },
     {
       "symbol": "P:e.$cfr$dcmpl(DD)I#0",
-      "renamedSymbol": "P:BattleState.$cfr$dcmpl(DD)I#0",
+      "renamedSymbol": "P:BattleState.compareDoublesNaNResultNegative(DD)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -230862,7 +230902,7 @@
     },
     {
       "symbol": "P:e.$cfr$dcmpl(DD)I#1",
-      "renamedSymbol": "P:BattleState.$cfr$dcmpl(DD)I#1",
+      "renamedSymbol": "P:BattleState.compareDoublesNaNResultNegative(DD)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -232710,7 +232750,7 @@
     },
     {
       "symbol": "P:eh.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -232721,7 +232761,7 @@
     },
     {
       "symbol": "P:eh.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -246933,7 +246973,7 @@
     },
     {
       "symbol": "P:jd.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:jd.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:jd.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -246944,7 +246984,7 @@
     },
     {
       "symbol": "P:jd.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:jd.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:jd.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -302142,7 +302182,7 @@
       "original": "dk.java",
       "renamed": "LevelMap.java",
       "inputSha256": "9fa51f571a0ff0cc857771ef8fcfcc067b55157627c02d1c77825cf6500bd540",
-      "outputSha256": "907f0b70c2cc03af667cf1ca4ae69f5e9bb26df0f998f99253588e6d1008da43",
+      "outputSha256": "cf3249b3e9adf744fa22c2c4dd9b515e9c63c236f0084230c9cec24347e1647e",
       "edits": [
         {
           "start": 50,
@@ -302583,6 +302623,13 @@
           "kind": "label"
         },
         {
+          "start": 37831,
+          "end": 37841,
+          "symbol": "M:dk.$cfr$dcmpg(DD)I",
+          "original": "$cfr$dcmpg",
+          "renamed": "compareDoublesNaNResultPositive"
+        },
+        {
           "start": 37931,
           "end": 37934,
           "symbol": "B:dk.a(ILr;Lr;Z)Z#3",
@@ -302591,12 +302638,26 @@
           "kind": "label"
         },
         {
+          "start": 38360,
+          "end": 38370,
+          "symbol": "M:dk.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
+        },
+        {
           "start": 39660,
           "end": 39663,
           "symbol": "B:dk.a(ILr;Lr;Z)Z#4",
           "original": "L82",
           "renamed": "scanLoop5",
           "kind": "label"
+        },
+        {
+          "start": 40422,
+          "end": 40432,
+          "symbol": "M:dk.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         },
         {
           "start": 40530,
@@ -302808,6 +302869,13 @@
           "renamed": "tiles"
         },
         {
+          "start": 49543,
+          "end": 49553,
+          "symbol": "M:dk.$cfr$dcmpg(DD)I",
+          "original": "$cfr$dcmpg",
+          "renamed": "compareDoublesNaNResultPositive"
+        },
+        {
           "start": 49671,
           "end": 49678,
           "symbol": "F:dk.field_f:[[Ldl;",
@@ -303002,6 +303070,13 @@
           "symbol": "F:dk.field_f:[[Ldl;",
           "original": "field_f",
           "renamed": "tiles"
+        },
+        {
+          "start": 53043,
+          "end": 53053,
+          "symbol": "M:dk.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         },
         {
           "start": 53172,
@@ -306899,6 +306974,20 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 206020,
+          "end": 206030,
+          "symbol": "M:dk.$cfr$dcmpg(DD)I",
+          "original": "$cfr$dcmpg",
+          "renamed": "compareDoublesNaNResultPositive"
+        },
+        {
+          "start": 206150,
+          "end": 206160,
+          "symbol": "M:dk.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         }
       ]
     },
@@ -309508,7 +309597,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "68d400a265e4024afe1cdee3a0b72ad7bc9e6c8b20910a70ff17bbba4dd0f355",
+      "outputSha256": "ce4811c656340c3b5374beb7553fccd62cd27aea4cd8da597a635458806eeda6",
       "edits": [
         {
           "start": 50,
@@ -314872,6 +314961,13 @@
           "symbol": "F:e.field_C:[Lr;",
           "original": "field_C",
           "renamed": "units"
+        },
+        {
+          "start": 147502,
+          "end": 147512,
+          "symbol": "M:e.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         },
         {
           "start": 147549,
@@ -331911,6 +332007,13 @@
           "symbol": "M:e.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
           "renamed": "throwUnchecked"
+        },
+        {
+          "start": 607993,
+          "end": 608003,
+          "symbol": "M:e.$cfr$dcmpl(DD)I",
+          "original": "$cfr$dcmpl",
+          "renamed": "compareDoublesNaNResultNegative"
         }
       ]
     },
@@ -332977,7 +333080,7 @@
       "original": "eh.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a5836bea8d5fb734f9ce364de87360fa26e01cbcf40b855df8befdbba8c28da0",
-      "outputSha256": "efe45cf24dd25007c56b8831ba3ce11053eb81ec2df64ebd5abba82a97afdd2f",
+      "outputSha256": "d393bdce30863ebd1a0bf7bdee34e1db2e0ddb6cca08eedb49f1c7a0a14ad411",
       "edits": [
         {
           "start": 79,
@@ -333125,6 +333228,13 @@
           "symbol": "C:he",
           "original": "he",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 12110,
+          "end": 12119,
+          "symbol": "M:eh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         },
         {
           "start": 12719,
@@ -333519,6 +333629,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 37533,
+          "end": 37542,
+          "symbol": "M:eh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -347276,7 +347393,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "95f1a1cbacb518100303cb5277253343f12f5a65a98db774236a0f1002c8bdfd",
-      "outputSha256": "1922619ba2bad76a859dbb92e014854f6bb9b27d4786a5fe45a9c3b47a912914",
+      "outputSha256": "f3ead9fa578dc98af13649cec6b4a7ecd458fb60e555fcf3edbdb49591afd3c8",
       "edits": [
         {
           "start": 286,
@@ -347328,6 +347445,13 @@
           "original": "L0",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 1775,
+          "end": 1784,
+          "symbol": "M:jd.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         },
         {
           "start": 2064,
@@ -347751,6 +347875,13 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 12731,
+          "end": 12740,
+          "symbol": "M:jd.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -380570,10 +380701,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "37bab4b83490979c7b9d59192c1fd07cd52612222ef51c4d8ae271b21a12e4e1",
+    "rulesSha256": "27c141e9f1c870fdecd1f184abb0025c46d0fe941c9b2c17e027be4520b5be61",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "09a70b1c1a5326e3a5e65a64f8cad376be3ebc8666859a7b11690d1835096dff",
+    "outputTreeSha256": "769e457a40406bd959137d0fd50bbe644169a924db9889063d01a76785bc3361",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

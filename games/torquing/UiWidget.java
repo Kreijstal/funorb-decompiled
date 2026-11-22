@@ -191,7 +191,7 @@ class UiWidget extends IntrusiveNode {
           if (var14 != null) {
             var15 = 0;
             while (!(var15 >= ia.field_i)) {
-              stackIn_20_0 = $cfr$dcmpg(5.0 + 1.5 * -go.field_w[var15], var14[var15] * param5);
+              stackIn_20_0 = compareDoublesNaNResultPositive(5.0 + 1.5 * -go.field_w[var15], var14[var15] * param5);
               if (var19 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
@@ -205,7 +205,7 @@ class UiWidget extends IntrusiveNode {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameRemainder0 = (var14 == null))) {
-            stackIn_20_0 = $cfr$dcmpl(param7[3], 0.0);
+            stackIn_20_0 = compareDoublesNaNResultNegative(param7[3], 0.0);
           }
           if (decompiledFrameRemainder0) {
             if (stackIn_20_0 != 0 ||
@@ -221,7 +221,7 @@ class UiWidget extends IntrusiveNode {
               if (var14 != null) {
                 var17_int = 0;
                 while (!(ia.field_i <= var17_int)) {
-                  stackIn_41_0 = $cfr$dcmpl(var14[var17_int] * param5, 2.0 * -go.field_w[var17_int] + 5.0);
+                  stackIn_41_0 = compareDoublesNaNResultNegative(var14[var17_int] * param5, 2.0 * -go.field_w[var17_int] + 5.0);
                   if (var19 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
@@ -247,7 +247,7 @@ class UiWidget extends IntrusiveNode {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var16_int < ia.field_i)))) {
             var17 = var14[var16_int];
-            stackIn_58_0 = $cfr$dcmpl(0.0, var17);
+            stackIn_58_0 = compareDoublesNaNResultNegative(0.0, var17);
             if (var19 == 0) {
               if (stackIn_58_0 != 0) {
                 param8[4] = param8[4] + ie.field_a[var16_int][1] * var17;
@@ -957,11 +957,11 @@ class UiWidget extends IntrusiveNode {
     static {
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNaNResultPositive(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -80,7 +80,7 @@ final class vc {
                 throw new RuntimeException("LOGIC ERROR");
               }
             }
-            stackIn_27_0 = $cfr$lcmp(param2, 0L);
+            stackIn_27_0 = compareLongs(param2, 0L);
             break;
           }
           if (stackIn_27_0 > 0) {
@@ -804,7 +804,7 @@ final class vc {
         field_b = "Password is valid";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

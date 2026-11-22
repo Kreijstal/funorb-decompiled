@@ -144,7 +144,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var6 = param2;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var6 >= var5))) {
-              stackIn_40_0 = $cfr$lcmp(param1.field_k, param0.field_u[param3][var6]);
+              stackIn_40_0 = compareLongs(param1.field_k, param0.field_u[param3][var6]);
               if (var8 == 0) {
                 if (stackIn_40_0 == 0 &&
                   ng.a(param0.field_i[param3][var6], (byte) 7)) {
@@ -683,7 +683,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != dh.field_a) {
-                    stackIn_101_0 = $cfr$lcmp(dh.field_a, lj.a((byte) -93));
+                    stackIn_101_0 = compareLongs(dh.field_a, lj.a((byte) -93));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_101_0 <= 0)) {
@@ -1060,7 +1060,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_g = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

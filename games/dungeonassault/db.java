@@ -747,7 +747,7 @@ final class db extends qe {
           scanLoop1: while (true) {
             if (10 > var14) {
               var15 = var19.field_t[var14];
-              stackIn_21_0 = $cfr$lcmp(-1L, var15);
+              stackIn_21_0 = compareLongs(-1L, var15);
               if (var18 != 0) {
                 break scanLoop1;
               }
@@ -1151,7 +1151,7 @@ final class db extends qe {
         field_u = "Quit to website";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

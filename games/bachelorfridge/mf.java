@@ -107,7 +107,7 @@ class mf extends uda implements WidgetActionListener {
                   this.e(var6, 33);
                   return;
                 }
-                var6.a((WidgetListener) (this), eq.field_i, 19528);
+                var6.a((WidgetListener) (this), AccountServiceResult.field_i, 19528);
               } else {
                 var6.a(7, IterableNodeHashTable.field_b, 9);
               }

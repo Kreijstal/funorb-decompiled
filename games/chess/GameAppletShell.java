@@ -515,7 +515,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != mk.field_b) {
-                    stackIn_95_0 = $cfr$lcmp(mk.field_b, ud.a(2));
+                    stackIn_95_0 = compareLongs(mk.field_b, ud.a(2));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_95_0 <= 0)) {
@@ -1005,7 +1005,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_k = "Back";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

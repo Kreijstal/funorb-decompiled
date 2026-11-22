@@ -780,6 +780,14 @@
       "renamedSymbol": "M:ej.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:fc.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:ff.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -152507,9 +152515,9 @@
     },
     {
       "symbol": "M:fc.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "fc.java",
         "start": 43660,
@@ -183604,7 +183612,7 @@
     },
     {
       "symbol": "P:fc.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -183615,7 +183623,7 @@
     },
     {
       "symbol": "P:fc.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -234409,7 +234417,7 @@
       "original": "fc.java",
       "renamed": "GameApplet.java",
       "inputSha256": "ff7c2bd985bcfcb7fc0c41086883c3e29ac23849212378debb6461dab5dc2004",
-      "outputSha256": "89331e45441324ecb2bf15059fc64f74b4e408949656b9caf8bbbd77abe4ec5d",
+      "outputSha256": "35c0ad5068cc0d00759e25355fb017f691f93be7ee24f2492e5a365be43431fb",
       "edits": [
         {
           "start": 60,
@@ -234473,6 +234481,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 10651,
+          "end": 10660,
+          "symbol": "M:fc.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         },
         {
           "start": 28298,
@@ -234613,6 +234628,13 @@
           "symbol": "M:fc.<init>()V",
           "original": "fc",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 43660,
+          "end": 43669,
+          "symbol": "M:fc.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -255327,10 +255349,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "7a1359300ad06ca74cd8f685011989b459035fade90b16bb984e4d5a241244b6",
+    "rulesSha256": "47b4aa07435651e1b15a993522b0c0fb323dad2a0fea057ff7396dac27af5ffe",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "ff944aeb9570e9d40497de492586b25bff7cf1a08d3080c71227237bd620f23d",
+    "outputTreeSha256": "8cc115239539ae117707130417e155b03372636731e1a3e08d8146e685abb2e0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

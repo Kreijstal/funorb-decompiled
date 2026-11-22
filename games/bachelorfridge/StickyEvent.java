@@ -1161,7 +1161,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "changedisplayname");
                 if (var2 != null) {
-                  eq.field_i = qq.a(var2, param0);
+                  AccountServiceResult.field_i = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "returntohomepage");
                 if (var2 != null) {
@@ -1617,7 +1617,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "login_no_displayname");
                 if (var2 != null) {
-                  eq.field_f = qq.a(var2, param0);
+                  AccountServiceResult.field_f = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_username_tooltip");
                 if (var2 != null) {

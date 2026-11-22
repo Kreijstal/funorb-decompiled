@@ -590,7 +590,7 @@ class UiWidget extends IntrusiveNode {
             var6 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var5 <= var6))) {
-              stackIn_32_0 = $cfr$lcmp(param3.field_r, param1.field_w[param0][var6]);
+              stackIn_32_0 = compareLongs(param3.field_r, param1.field_w[param0][var6]);
               if (var8 == 0) {
                 if (stackIn_32_0 == 0 &&
                   wc.a(param1.field_x[param0][var6], true)) {
@@ -713,7 +713,7 @@ class UiWidget extends IntrusiveNode {
         field_z = "???";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

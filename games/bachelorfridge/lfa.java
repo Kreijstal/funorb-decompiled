@@ -168,7 +168,7 @@ final class lfa extends k {
               var3.field_H = var4;
               if (0 == var3.field_A) {
                 var14 = (Sprite) null;
-                eq.a((Sprite) null, (BattleScreen) (var1), (byte) -111);
+                AccountServiceResult.a((Sprite) null, (BattleScreen) (var1), (byte) -111);
                 sia.field_h = false;
                 lg.a(true, 3, false);
               }

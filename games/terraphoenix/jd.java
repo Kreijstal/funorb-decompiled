@@ -57,7 +57,7 @@ final class jd extends vc {
               this.field_n > this.field_k) {
               continue scanLoop1;
             }
-            stackIn_6_0 = $cfr$lcmp(this.field_k, this.field_n);
+            stackIn_6_0 = compareLongs(this.field_k, this.field_n);
           } while (var5 != 0);
           break;
         }
@@ -393,7 +393,7 @@ final class jd extends vc {
         lm.a(param3, 30, IntrusiveNode.field_f, 0, (byte) 126, param0, var4Lifetime1, 0, 80);
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

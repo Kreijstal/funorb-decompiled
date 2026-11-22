@@ -3,7 +3,7 @@
  */
 abstract class vo {
     int field_e;
-    static eq field_d;
+    static AccountServiceResult field_d;
     int field_f;
     int field_a;
     static UiComponent field_b;

@@ -55,7 +55,7 @@ final class BananarangAnimation extends EventAnimation {
           lfa.field_s = null;
           ska.field_k = null;
           SnowAnimation.field_y = null;
-          eq.field_b = null;
+          AccountServiceResult.field_b = null;
           us.field_b = null;
           BattleState.field_I = null;
           nia.field_l = null;
@@ -88,7 +88,7 @@ final class BananarangAnimation extends EventAnimation {
         lfa.field_s = null;
         ska.field_k = null;
         SnowAnimation.field_y = null;
-        eq.field_b = null;
+        AccountServiceResult.field_b = null;
         us.field_b = null;
         BattleState.field_I = null;
         nia.field_l = null;

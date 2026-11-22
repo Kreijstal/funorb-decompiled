@@ -526,7 +526,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (hk.field_d != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(~ri.a(-3), ~hk.field_d);
+                    stackIn_100_0 = compareLongs(~ri.a(-3), ~hk.field_d);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -945,7 +945,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_d = "Email address is unavailable";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

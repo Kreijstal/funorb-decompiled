@@ -32,7 +32,7 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_G = new vn("", (WidgetListener) null, 12);
         DefaultWidgetRenderer var1 = new DefaultWidgetRenderer(oc.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(eq.field_f, var1, (WidgetListener) null);
+        UiWidget var2 = new UiWidget(AccountServiceResult.field_f, var1, (WidgetListener) null);
         this.field_F = new InteractiveWidget(ne.field_m, (WidgetListener) null);
         this.field_C = new InteractiveWidget(bga.field_f, (WidgetListener) null);
         this.field_G.tooltip = FloodAnimation.field_z;

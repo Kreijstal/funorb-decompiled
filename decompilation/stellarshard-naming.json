@@ -844,6 +844,14 @@
       "renamedSymbol": "M:aa.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ac.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:ad.c()V",
       "originalName": "c",
       "to": "clearStaticReferences",
@@ -154625,9 +154633,9 @@
     },
     {
       "symbol": "M:ac.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "ac.java",
         "start": 34335,
@@ -177549,7 +177557,7 @@
     },
     {
       "symbol": "P:ac.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -177560,7 +177568,7 @@
     },
     {
       "symbol": "P:ac.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -233829,7 +233837,7 @@
       "original": "ac.java",
       "renamed": "GameApplet.java",
       "inputSha256": "e1055997abf1bec6e1599762d738917927e22961cf250fa86e9d71d0ad15a542",
-      "outputSha256": "64de8ee5c6d91dc0cc86bc40c10a25b777b29455d579e0b6139aa2cb16d4d3e9",
+      "outputSha256": "06421a594b107a494a00a679103004abd1067186f348162717cb0e565f47266e",
       "edits": [
         {
           "start": 60,
@@ -233979,6 +233987,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 19304,
+          "end": 19313,
+          "symbol": "M:ac.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 20372,
           "end": 20374,
           "symbol": "C:qe",
@@ -234096,6 +234111,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 34335,
+          "end": 34344,
+          "symbol": "M:ac.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -278493,10 +278515,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "124d276d8d476801b296aebcf3dab5a9f833e18e32897aeb46cfb2d2c2740576",
+    "rulesSha256": "227e384bd9309e41bab9ee23549c7697f09bbfb47e3c2b58049cb315bcbd9289",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "de08ab97e5a8ccb4ad71d66c65a7fa50785c33cf0d979f9ad2d578eb805b94c8",
+    "outputTreeSha256": "fdd81661ba69a6c3dc384b65b9120990c1921b4a274fbb2b9890bc35cb424bfb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

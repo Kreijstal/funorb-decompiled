@@ -615,7 +615,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != ActionRequest.shutdownDeadlineMillis) {
-                    stackIn_102_0 = $cfr$lcmp(ActionRequest.shutdownDeadlineMillis, MonotonicClockSupport.monotonicMillis(-56));
+                    stackIn_102_0 = compareLongs(ActionRequest.shutdownDeadlineMillis, MonotonicClockSupport.monotonicMillis(-56));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -944,7 +944,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_c = "Unable to add friend - system busy";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -1708,6 +1708,14 @@
       "renamedSymbol": "M:td.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:th.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
+    },
+    {
       "symbol": "M:ua.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1754,6 +1762,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 831d30747fbaee9a1ab9b100aec85594fa49e40aa0d6c42c2ce187cecc9c1e12.",
       "confidence": "reviewed",
       "renamedSymbol": "M:vg.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:vh.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp",
+      "to": "compareLongs",
+      "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:vh.compareLongs(JJ)I"
     },
     {
       "symbol": "M:w.b(I)V",
@@ -161469,9 +161485,9 @@
     },
     {
       "symbol": "M:th.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:GameApplet.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:GameApplet.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "th.java",
         "start": 32620,
@@ -163570,9 +163586,9 @@
     },
     {
       "symbol": "M:vh.$cfr$lcmp(JJ)I",
-      "renamedSymbol": "M:vh.$cfr$lcmp(JJ)I",
+      "renamedSymbol": "M:vh.compareLongs(JJ)I",
       "originalName": "$cfr$lcmp",
-      "renamedName": "$cfr$lcmp",
+      "renamedName": "compareLongs",
       "declaration": {
         "file": "vh.java",
         "start": 37831,
@@ -213378,7 +213394,7 @@
     },
     {
       "symbol": "P:th.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -213389,7 +213405,7 @@
     },
     {
       "symbol": "P:th.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:GameApplet.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:GameApplet.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -217943,7 +217959,7 @@
     },
     {
       "symbol": "P:vh.$cfr$lcmp(JJ)I#0",
-      "renamedSymbol": "P:vh.$cfr$lcmp(JJ)I#0",
+      "renamedSymbol": "P:vh.compareLongs(JJ)I#0",
       "originalName": "left",
       "renamedName": "left",
       "declaration": {
@@ -217954,7 +217970,7 @@
     },
     {
       "symbol": "P:vh.$cfr$lcmp(JJ)I#1",
-      "renamedSymbol": "P:vh.$cfr$lcmp(JJ)I#1",
+      "renamedSymbol": "P:vh.compareLongs(JJ)I#1",
       "originalName": "right",
       "renamedName": "right",
       "declaration": {
@@ -250470,7 +250486,7 @@
       "original": "th.java",
       "renamed": "GameApplet.java",
       "inputSha256": "d5972cf4e8e49c5dce58e07daebda5ea0082c7da69a81f99bb90682163bca14d",
-      "outputSha256": "81d5b377426146da6f01bf79711e301b5f959954bb832e83072c1291b579542e",
+      "outputSha256": "c9cafda72ccd35913ca68c3f3a2b952550fa44360bc09989a8e91d0508c99bdc",
       "edits": [
         {
           "start": 60,
@@ -250501,11 +250517,25 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 13490,
+          "end": 13499,
+          "symbol": "M:th.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 30543,
           "end": 30545,
           "symbol": "M:th.<init>()V",
           "original": "th",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 32620,
+          "end": 32629,
+          "symbol": "M:th.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -252376,7 +252406,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "f6ea58ecb45666bd04f5f2cb381e0241624eb3959484934ce7ed74eb5e59d82e",
-      "outputSha256": "eb9872cd662786b20c1924197465d74d02910a77c05a031353600d8fde1a88d7",
+      "outputSha256": "52b89bf6723a69bad82f244b7dd947437d0b2438364a3a1e39d05b06967c20b0",
       "edits": [
         {
           "start": 172,
@@ -252949,6 +252979,20 @@
           "renamed": "readInt"
         },
         {
+          "start": 28173,
+          "end": 28182,
+          "symbol": "M:vh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
+          "start": 29300,
+          "end": 29309,
+          "symbol": "M:vh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
+        },
+        {
           "start": 30500,
           "end": 30502,
           "symbol": "C:rb",
@@ -253073,6 +253117,13 @@
           "symbol": "F:rb.field_g:I",
           "original": "field_g",
           "renamed": "position"
+        },
+        {
+          "start": 37831,
+          "end": 37840,
+          "symbol": "M:vh.$cfr$lcmp(JJ)I",
+          "original": "$cfr$lcmp",
+          "renamed": "compareLongs"
         }
       ]
     },
@@ -255117,10 +255168,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/starcannon"
     },
-    "rulesSha256": "15c1291e234a6c2f1855b15a88a70165832fa44face33c85cba4025998280fdc",
+    "rulesSha256": "33506fb3dd2886a2dc959141b4c5bb58655a8b5ff7567d99c98a4d48912d076a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
-    "outputTreeSha256": "5c26ec035ee56afc3f2532305ea80f62b472831f431a6b50fd85f3f16f4ad334",
+    "outputTreeSha256": "ff1bfbc2762c0f6d855a2cf5ca416e50647b3105316ceac7a5dbf58206594800",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

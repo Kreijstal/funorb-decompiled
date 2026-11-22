@@ -25,7 +25,7 @@ final class nea extends UiComponent {
         }
     }
 
-    final static eq f(byte param0) {
+    final static AccountServiceResult f(byte param0) {
         if (GameClock.field_a == FridgeScreen.field_p) {
           throw new IllegalStateException();
         }

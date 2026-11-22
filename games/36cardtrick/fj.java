@@ -288,7 +288,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (t.field_h != 0L) {
-                    stackIn_102_0 = $cfr$lcmp(id.a(127), t.field_h);
+                    stackIn_102_0 = compareLongs(id.a(127), t.field_h);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 >= 0)) {
@@ -1090,7 +1090,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         field_f = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

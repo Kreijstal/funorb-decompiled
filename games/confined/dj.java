@@ -1539,7 +1539,7 @@ final class dj extends ee {
               (decompiledFrameRemainder1 = !(this.field_yb <= 0))) {
               var2_int = 0;
               while ((this.field_A.field_x.field_a - 2) > var2_int) {
-                stackIn_40_0 = $cfr$dcmpg(this.field_A.field_x.field_r[1 + var2_int], this.field_D);
+                stackIn_40_0 = compareDoublesNaNResultPositive(this.field_A.field_x.field_r[1 + var2_int], this.field_D);
                 if (var9 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1895,7 +1895,7 @@ final class dj extends ee {
           while (!(decompiledNaturalLoopExit4 = (var4 <= 0))) {
             incrementValue$6 = var2_int;
             var2_int--;
-            stackIn_82_0 = $cfr$dcmpg(Math.random() * (double)incrementValue$6, (double)var3);
+            stackIn_82_0 = compareDoublesNaNResultPositive(Math.random() * (double)incrementValue$6, (double)var3);
             if (var5 == 0) {
               if (stackIn_82_0 < 0) {
                 this.field_ub = this.field_ub - 4;
@@ -1918,7 +1918,7 @@ final class dj extends ee {
           while (!(decompiledNaturalLoopExit3 = (0 >= var4Lifetime1))) {
             incrementValue$7 = var2_int;
             var2_int--;
-            stackIn_97_0 = $cfr$dcmpl((double)var3, (double)incrementValue$7 * Math.random());
+            stackIn_97_0 = compareDoublesNaNResultNegative((double)var3, (double)incrementValue$7 * Math.random());
             if (var5 == 0) {
               if (stackIn_97_0 > 0) {
                 var3--;
@@ -1941,7 +1941,7 @@ final class dj extends ee {
           while (!(decompiledNaturalLoopExit2 = (0 >= var4Lifetime2))) {
             incrementValue$8 = var2_int;
             var2_int--;
-            stackIn_110_0 = $cfr$dcmpl((double)var3, Math.random() * (double)incrementValue$8);
+            stackIn_110_0 = compareDoublesNaNResultNegative((double)var3, Math.random() * (double)incrementValue$8);
             if (var5 == 0) {
               if (stackIn_110_0 > 0) {
                 this.field_zb = this.field_zb - 4;
@@ -1964,7 +1964,7 @@ final class dj extends ee {
           while (!(decompiledNaturalLoopExit1 = (var4Lifetime3 <= 0))) {
             incrementValue$9 = var2_int;
             var2_int--;
-            stackIn_120_0 = $cfr$dcmpg(Math.random() * (double)incrementValue$9, (double)var3);
+            stackIn_120_0 = compareDoublesNaNResultPositive(Math.random() * (double)incrementValue$9, (double)var3);
             if (var5 == 0) {
               if (stackIn_120_0 < 0) {
                 this.field_ab = this.field_ab - 1;
@@ -1984,7 +1984,7 @@ final class dj extends ee {
           while (!(decompiledNaturalLoopExit0 = (var4Lifetime4 <= 8))) {
             incrementValue$10 = var2_int;
             var2_int--;
-            stackIn_130_0 = $cfr$dcmpl((double)var3, (double)incrementValue$10 * Math.random());
+            stackIn_130_0 = compareDoublesNaNResultNegative((double)var3, (double)incrementValue$10 * Math.random());
             if (var5 == 0) {
               if (stackIn_130_0 > 0) {
                 this.field_Bb.field_b = this.field_Bb.field_b - 1;
@@ -2200,11 +2200,11 @@ final class dj extends ee {
         field_Ib = "Shield";
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNaNResultPositive(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 
-    private static int $cfr$dcmpl(double left, double right) {
+    private static int compareDoublesNaNResultNegative(double left, double right) {
         return left > right ? 1 : (left == right ? 0 : -1);
     }
 }

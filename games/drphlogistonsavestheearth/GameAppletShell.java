@@ -212,7 +212,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (sf.field_j != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(~la.a(false), ~sf.field_j);
+                    stackIn_100_0 = compareLongs(~la.a(false), ~sf.field_j);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -1055,7 +1055,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_d = "Please send me news and updates (I can unsubscribe at any time)";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

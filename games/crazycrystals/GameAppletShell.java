@@ -154,7 +154,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != tc.field_j) {
-                    stackIn_100_0 = $cfr$lcmp(tc.field_j, lo.a((byte) -120));
+                    stackIn_100_0 = compareLongs(tc.field_j, lo.a((byte) -120));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -876,7 +876,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_f = "Think before you leap. Which wall are these balls following?";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -53,9 +53,9 @@ final class ShieldAnimation extends EventAnimation {
         }
     }
 
-    final static eq a(byte param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResult(byte param0, boolean param1) {
         int var3 = 31 / ((param0 + 55) / 54);
-        eq var2 = new eq(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_h = param1 ? true : false;
         return var2;
     }
@@ -105,9 +105,9 @@ final class ShieldAnimation extends EventAnimation {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static eq $cfr$intArgs$a$262119530e06(int param0, boolean param1) {
+    final static AccountServiceResult createAccountSuccessResultWithIntGuard(int param0, boolean param1) {
         int var3 = 31 / ((param0 + 55) / 54);
-        eq var2 = new eq(true);
+        AccountServiceResult var2 = new AccountServiceResult(true);
         var2.field_h = param1 ? true : false;
         return var2;
     }

@@ -1521,7 +1521,7 @@ final class BattleScreen extends dfa {
         }
         Sprite var2 = new Sprite(640, 480);
         OhNoSpecial.a(480, 640, var2, 0, (byte) 124, 0);
-        eq.a(var2, this, (byte) -111);
+        AccountServiceResult.a(var2, this, (byte) -111);
         sia.field_h = false;
         lg.a(true, 3, false);
     }
@@ -2537,7 +2537,7 @@ final class BattleScreen extends dfa {
               SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
               var3 = new Sprite(640, 480);
               OhNoSpecial.a(480, 640, var3, 0, (byte) -90, 0);
-              eq.a(var3, this, (byte) -111);
+              AccountServiceResult.a(var3, this, (byte) -111);
               sia.field_h = false;
               var2 = 3;
             }

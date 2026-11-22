@@ -718,7 +718,7 @@ final class vh extends eh {
                           if (var11 == 0) {
                             var14_ref = (ra) (this.field_i.a((byte) 125));
                             while (var14_ref != null) {
-                              stackIn_105_0 = $cfr$lcmp(var14_ref.field_j, var12);
+                              stackIn_105_0 = compareLongs(var14_ref.field_j, var12);
                               if (var16 != 0) {
                                 decompiledFrameCompleted3 = false;
                                 break;
@@ -739,7 +739,7 @@ final class vh extends eh {
                             (decompiledFrameCompleted2)) {
                             var14_ref = (ra) (this.field_k.a((byte) 124));
                             while (var14_ref != null) {
-                              stackIn_105_0 = $cfr$lcmp(var12, var14_ref.field_j);
+                              stackIn_105_0 = compareLongs(var12, var14_ref.field_j);
                               if (var16 != 0) {
                                 decompiledFrameCompleted1 = false;
                                 break;
@@ -936,7 +936,7 @@ final class vh extends eh {
         field_t = -1;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -42,7 +42,7 @@ final class tt extends aba {
     }
 
     final jg a(String param0, boolean param1) {
-        eq var3 = null;
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         jg stackIn_3_0 = null;
@@ -95,7 +95,7 @@ final class tt extends aba {
     final String a(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        eq var4_ref_eq = null;
+        AccountServiceResult var4_ref_eq = null;
         int var4 = 0;
         CharSequence var5 = null;
         String stackIn_2_0 = null;

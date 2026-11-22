@@ -8,11 +8,11 @@ final class du {
     static IndexedSprite field_b;
     static int[] field_e;
 
-    final static eq a(String param0, byte param1) {
+    final static AccountServiceResult a(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Object stackIn_4_0 = null;
-        eq stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -25,7 +25,7 @@ final class du {
           }
           if (ReportAbusePanel.field_G == kq.field_j) {
             stackIn_4_0 = null;
-            return (eq) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (ReportAbusePanel.field_G == OhNoAnimation.field_w &&
             param0.equals(BagpipeAnimation.field_w)) {
@@ -37,7 +37,7 @@ final class du {
           ReportAbusePanel.field_G = kq.field_j;
           vo.field_d = null;
           stackIn_10_0 = null;
-          return (eq) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

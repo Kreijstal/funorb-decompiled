@@ -598,7 +598,7 @@ final class ap extends ob {
                           if (var11 != 0) {
                             var14_ref = (ld) (this.field_a.b(120));
                             while (var14_ref != null) {
-                              stackIn_116_0 = $cfr$lcmp(~var14_ref.field_k, ~var12);
+                              stackIn_116_0 = compareLongs(~var14_ref.field_k, ~var12);
                               if (var16 != 0) {
                                 decompiledFrameCompleted2 = false;
                                 break;
@@ -618,7 +618,7 @@ final class ap extends ob {
                             (decompiledFrameCompleted1)) {
                             var14_ref = (ld) (this.field_f.b(114));
                             while (var14_ref != null) {
-                              stackIn_116_0 = $cfr$lcmp(var14_ref.field_k, var12);
+                              stackIn_116_0 = compareLongs(var14_ref.field_k, var12);
                               if (var16 != 0) {
                                 decompiledFrameCompleted0 = false;
                                 break;
@@ -731,7 +731,7 @@ final class ap extends ob {
     static {
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

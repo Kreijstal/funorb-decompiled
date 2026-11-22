@@ -581,7 +581,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != v.field_a) {
-                    stackIn_97_0 = $cfr$lcmp(v.field_a, qg.a(false));
+                    stackIn_97_0 = compareLongs(v.field_a, qg.a(false));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_97_0 <= 0)) {
@@ -958,7 +958,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_m = "Email: ";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

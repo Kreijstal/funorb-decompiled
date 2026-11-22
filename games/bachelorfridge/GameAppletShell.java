@@ -199,7 +199,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != am.field_K) {
-                    stackIn_98_0 = $cfr$lcmp(am.field_K, f.b((byte) 73));
+                    stackIn_98_0 = compareLongs(am.field_K, f.b((byte) 73));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 <= 0)) {
@@ -856,7 +856,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         field_f = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

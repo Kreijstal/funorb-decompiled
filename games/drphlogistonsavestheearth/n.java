@@ -331,7 +331,7 @@ final class n implements Runnable {
             boolean decompiledFrameCompleted0 = true;
             var6 = (bi) (this.field_b.a(true));
             while (var6 != null) {
-              stackIn_17_0 = $cfr$lcmp(~var6.secondaryKey, ~(long)param1);
+              stackIn_17_0 = compareLongs(~var6.secondaryKey, ~(long)param1);
               if (var8 != 0) {
                 decompiledRegionSelector0 = 0;
                 decompiledFrameCompleted0 = false;
@@ -526,7 +526,7 @@ final class n implements Runnable {
         field_f = "Medium";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

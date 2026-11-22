@@ -80,7 +80,7 @@ final class PetAttackAnimation extends EventAnimation {
           }
           stackIn_11_0 = 120;
           stackIn_12_1 = !(fga.field_f >= 13);
-          ZombiesSpecial.field_p = ShieldAnimation.$cfr$intArgs$a$262119530e06(stackIn_11_0, stackIn_12_1);
+          ZombiesSpecial.field_p = ShieldAnimation.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

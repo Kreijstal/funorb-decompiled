@@ -636,7 +636,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lb.field_b != 0L) {
-                    stackIn_105_0 = $cfr$lcmp(~lb.field_b, ~lk.a(0));
+                    stackIn_105_0 = compareLongs(~lb.field_b, ~lk.a(0));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_105_0 >= 0)) {
@@ -893,7 +893,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_g = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

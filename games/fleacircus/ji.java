@@ -26,7 +26,7 @@ final class ji {
         var2 = param0 ? 1 : 0;
         for (var3 = -1 + this.field_e.length; var3 >= 0; var3--) {
           stackIn_7_0 = var2;
-          stackIn_7_1 = $cfr$dcmpg(0.0, this.field_e[var3]);
+          stackIn_7_1 = compareDoublesNaNResultPositive(0.0, this.field_e[var3]);
           if (stackIn_7_1 < 0 &&
             this.field_e[var3] < 640.0 &&
             this.field_g[var3] > 0.0 &&
@@ -175,7 +175,7 @@ final class ji {
         field_i = 1;
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoublesNaNResultPositive(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }
