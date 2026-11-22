@@ -105,7 +105,7 @@ final class ad {
             throw new RuntimeException("");
           }
           if (this.field_i[param2][param0] != null) {
-            var7 = uj.a(43, this.field_i[param2][param0], false);
+            var7 = uj.extractBytes(43, this.field_i[param2][param0], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -323,7 +323,7 @@ final class ad {
         if (this.field_b) {
           this.field_h[param1] = this.field_c.b(-113, param1);
         } else {
-          this.field_h[param1] = p.a(this.field_c.b(-116, param1), (byte) 111, false);
+          this.field_h[param1] = p.storeBytes(this.field_c.b(-116, param1), (byte) 111, false);
         }
     }
 
@@ -414,7 +414,7 @@ final class ad {
             param1[1] != 0 ||
             param1[2] != 0 ||
             0 != param1[3])) {
-            var35 = uj.a(59, this.field_h[param3], true);
+            var35 = uj.extractBytes(59, this.field_h[param3], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -422,7 +422,7 @@ final class ad {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = uj.a(67, this.field_h[param3], false);
+            var9 = uj.extractBytes(67, this.field_h[param3], false);
           }
           try {
             var36 = rc.a(var9, 120);
@@ -485,7 +485,7 @@ final class ad {
                     var21 = var34[var20];
                   }
                   if (param2 == var21) {
-                    gl.a(var43, var17, var44, var14Lifetime1, var19);
+                    gl.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -523,7 +523,7 @@ final class ad {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.readInt(-95);
-                  gl.a(var43, var16, var39[var19], var38[var19], var18);
+                  gl.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -537,7 +537,7 @@ final class ad {
                 if (this.field_e != 0) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = p.a(var39[var17], (byte) 117, false);
+                  var7[var18] = p.storeBytes(var39[var17], (byte) 117, false);
                 }
               }
             }
@@ -551,7 +551,7 @@ final class ad {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = p.a(var43, (byte) 110, false);
+            var7[var11] = p.storeBytes(var43, (byte) 110, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

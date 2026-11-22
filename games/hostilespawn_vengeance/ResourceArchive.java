@@ -609,7 +609,7 @@ final class ResourceArchive {
             param0[1] != 0 ||
             0 != param0[2] ||
             param0[3] != 0)) {
-            var36 = sb.a(true, this.field_d[param1], true);
+            var36 = sb.extractBytes(true, this.field_d[param1], true);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -617,7 +617,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = sb.a(true, this.field_d[param1], false);
+            var10 = sb.extractBytes(true, this.field_d[param1], false);
           }
           try {
             var37 = ml.a(var10, (byte) -76);
@@ -677,7 +677,7 @@ final class ResourceArchive {
                     var22 = var21;
                   }
                   if (param3 == var22) {
-                    kf.a(var44, var18, var45, var15_intLifetime1, var20);
+                    kf.copyByteRange(var44, var18, var45, var15_intLifetime1, var20);
                     var15_intLifetime1 = var15_intLifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -715,7 +715,7 @@ final class ResourceArchive {
                 var19 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
                   var19 = var19 + var32.d(8195);
-                  kf.a(var44, var17, var41[var20], var40[var20], var19);
+                  kf.copyByteRange(var44, var17, var41[var20], var40[var20], var19);
                   var15[var20] = var15[var20] + var19;
                   var17 = var17 + var19;
                 }
@@ -727,7 +727,7 @@ final class ResourceArchive {
                   var19 = var35[var18];
                 }
                 if (this.field_m == 0) {
-                  var7[var19] = ej.a(false, var41[var18], 117);
+                  var7[var19] = ej.storeBytes(false, var41[var18], 117);
                 } else {
                   var7[var19] = var41[var18];
                 }
@@ -743,7 +743,7 @@ final class ResourceArchive {
               var7[var12] = var37;
               return true;
             }
-            var7[var12] = ej.a(false, var44, 112);
+            var7[var12] = ej.storeBytes(false, var44, 112);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -847,7 +847,7 @@ final class ResourceArchive {
           this.a((byte) -10, (String) (this.field_d[0]));
         }
         if (!this.field_i) {
-          this.field_d[param1] = ej.a(false, this.field_c.a((byte) -50, param1), param0 - 20418);
+          this.field_d[param1] = ej.storeBytes(false, this.field_c.a((byte) -50, param1), param0 - 20418);
         } else {
           this.field_d[param1] = this.field_c.a((byte) -50, param1);
         }
@@ -962,7 +962,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_j[param0][param2] != null) {
-            var7 = sb.a(true, this.field_j[param0][param2], false);
+            var7 = sb.extractBytes(true, this.field_j[param0][param2], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

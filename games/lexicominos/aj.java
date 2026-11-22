@@ -97,8 +97,8 @@ final class aj {
           var8 = new byte[var3_int + param1.field_i.length];
           var7 = var8;
           var4 = var7;
-          o.a(param2.field_i, 0, var8, 0, var3_int);
-          o.a(param1.field_i, 0, var4, var3_int, param1.field_i.length);
+          o.copyByteRange(param2.field_i, 0, var8, 0, var3_int);
+          o.copyByteRange(param1.field_i, 0, var4, var3_int, param1.field_i.length);
           for (var5 = 0; var8.length > var5; var5++) {
             var4[var5] = (byte)(var4[var5] * 2);
           }

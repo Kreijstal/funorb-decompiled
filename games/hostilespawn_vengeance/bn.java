@@ -69,7 +69,7 @@ final class bn {
             if (this.field_i != -1L &&
               ((long)param0 + this.field_h) > (this.field_i + (long)this.field_e.length)) {
               var5_int = (int)(-this.field_h + (this.field_i + (long)this.field_e.length));
-              kf.a(param2, param1, this.field_e, (int)(this.field_h - this.field_i), var5_int);
+              kf.copyByteRange(param2, param1, this.field_e, (int)(this.field_h - this.field_i), var5_int);
               param1 = param1 + var5_int;
               this.field_h = this.field_h + (long)var5_int;
               param0 = param0 - var5_int;
@@ -83,7 +83,7 @@ final class bn {
               if (this.field_i == -1L) {
                 this.field_i = this.field_h;
               }
-              kf.a(param2, param1, this.field_e, (int)(this.field_h - this.field_i), param0);
+              kf.copyByteRange(param2, param1, this.field_e, (int)(this.field_h - this.field_i), param0);
               this.field_h = this.field_h + (long)param0;
               if ((long)this.field_m < (this.field_h - this.field_i)) {
                 this.field_m = (int)(this.field_h - this.field_i);
@@ -122,7 +122,7 @@ final class bn {
             if (-1L < var5_long &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              kf.a(param2, (int)(-this.field_h + ((long)param1 + var5_long)), this.field_d, (int)(var5_long - this.field_c), var9);
+              kf.copyByteRange(param2, (int)(-this.field_h + ((long)param1 + var5_long)), this.field_d, (int)(var5_long - this.field_c), var9);
             }
             this.field_h = this.field_h + (long)param0;
             return;
@@ -193,7 +193,7 @@ final class bn {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(-var2 + var4);
-            kf.a(this.field_e, (int)(-this.field_i + var2), this.field_d, (int)(-this.field_c + var2), var6);
+            kf.copyByteRange(this.field_e, (int)(-this.field_i + var2), this.field_d, (int)(-this.field_c + var2), var6);
           }
           this.field_m = 0;
           this.field_i = -1L;
@@ -377,7 +377,7 @@ final class bn {
             if (this.field_i != -1L &&
               this.field_h >= this.field_i &&
               (long)param3 + this.field_h <= this.field_i + (long)this.field_m) {
-              kf.a(this.field_e, (int)(-this.field_i + this.field_h), param0, param2, param3);
+              kf.copyByteRange(this.field_e, (int)(-this.field_i + this.field_h), param0, param2, param3);
               this.field_h = this.field_h + (long)param3;
               return;
             }
@@ -390,7 +390,7 @@ final class bn {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              kf.a(this.field_d, (int)(this.field_h - this.field_c), param0, param2, var9_int);
+              kf.copyByteRange(this.field_d, (int)(this.field_h - this.field_c), param0, param2, var9_int);
               param2 = param2 + var9_int;
               this.field_h = this.field_h + (long)var9_int;
               param3 = param3 - var9_int;
@@ -421,7 +421,7 @@ final class bn {
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              kf.a(this.field_d, 0, param0, param2, var9_intLifetime1Lifetime1);
+              kf.copyByteRange(this.field_d, 0, param0, param2, var9_intLifetime1Lifetime1);
               param3 = param3 - var9_intLifetime1Lifetime1;
               this.field_h = this.field_h + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -464,7 +464,7 @@ final class bn {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(var11 - var9);
-                kf.a(this.field_e, (int)(var9 - this.field_i), param0, var7 + (int)(-var5_long + var9), var13);
+                kf.copyByteRange(this.field_e, (int)(var9 - this.field_i), param0, var7 + (int)(-var5_long + var9), var13);
                 if (this.field_h < var11) {
                   param3 = (int)((long)param3 - (-this.field_h + var11));
                   this.field_h = var11;

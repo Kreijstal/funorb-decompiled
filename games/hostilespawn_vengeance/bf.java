@@ -47,7 +47,7 @@ final class bf {
             this.field_e = this.field_e + 1;
             this.field_i[fieldTemp$1] = (byte) 0;
           }
-          kf.a(this.field_a, 0, this.field_i, 32, 32);
+          kf.copyByteRange(this.field_a, 0, this.field_i, 32, 32);
           this.b((byte) -1);
           if (param2 != -6) {
             return;

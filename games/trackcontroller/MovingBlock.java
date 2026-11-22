@@ -319,7 +319,7 @@ final class MovingBlock extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(boolean param0, int param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, int param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -354,7 +354,7 @@ final class MovingBlock extends IntrusiveNode {
             stackIn_12_0 = var3;
             return stackIn_12_0;
           }
-          stackIn_10_0 = qd.a(var3, (byte) 102);
+          stackIn_10_0 = qd.copyBytes(var3, (byte) 102);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

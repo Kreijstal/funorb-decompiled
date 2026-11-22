@@ -46,7 +46,7 @@ final class AchievementUnlockEvent extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -59,7 +59,7 @@ final class AchievementUnlockEvent extends IntrusiveNode {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          ji.a(param1, 0, var3, 0, var2_int);
+          ji.copyByteRange(param1, 0, var3, 0, var2_int);
           if (param0 != -29) {
             var4 = (String) null;
             AchievementUnlockEvent.a(-109, (String) null);

@@ -18,7 +18,7 @@ final class qd {
           SocketArchiveRequestConnection.field_n.a(param1, -65);
           if (param0) {
             var3 = (byte[]) null;
-            qd.a((byte[]) null, (byte) 113);
+            qd.copyBytes((byte[]) null, (byte) 113);
             return;
           }
           return;
@@ -27,7 +27,7 @@ final class qd {
           return;
         }
         var3Lifetime1 = (byte[]) null;
-        qd.a((byte[]) null, (byte) 113);
+        qd.copyBytes((byte[]) null, (byte) 113);
     }
 
     final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
@@ -67,7 +67,7 @@ final class qd {
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyBytes(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -80,7 +80,7 @@ final class qd {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          pd.a(param0, 0, var3, 0, var2_int);
+          pd.copyByteRange(param0, 0, var3, 0, var2_int);
           var4 = -115 % ((param1 - 2) / 52);
           stackIn_1_0 = var3;
           return stackIn_1_0;
@@ -104,7 +104,7 @@ final class qd {
         field_c = null;
         if (param0 <= 98) {
           byte[] var2 = (byte[]) null;
-          qd.a((byte[]) null, (byte) 37);
+          qd.copyBytes((byte[]) null, (byte) 37);
         }
     }
 

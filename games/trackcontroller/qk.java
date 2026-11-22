@@ -81,7 +81,7 @@ final class qk extends ButtonWidget {
         }
     }
 
-    final static Object a(byte[] param0, boolean param1, byte param2) {
+    final static Object storeBytes(byte[] param0, boolean param1, byte param2) {
         DirectByteStorage var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -104,7 +104,7 @@ final class qk extends ButtonWidget {
           }
           var3_int = 97 / ((72 - param2) / 37);
           if (param1) {
-            stackIn_11_0 = qd.a(param0, (byte) 58);
+            stackIn_11_0 = qd.copyBytes(param0, (byte) 58);
             return stackIn_11_0;
           }
           stackIn_9_0 = (byte[]) (param0);
@@ -224,7 +224,7 @@ final class qk extends ButtonWidget {
     final int k(int param0) {
         if (param0 != 26856) {
           byte[] var3 = (byte[]) null;
-          qk.a((byte[]) null, true, (byte) 68);
+          qk.storeBytes((byte[]) null, true, (byte) 68);
           return this.field_L;
         }
         return this.field_L;

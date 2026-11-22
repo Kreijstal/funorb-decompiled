@@ -21,7 +21,7 @@ final class ch {
         field_d = null;
     }
 
-    final static Object a(int param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(int param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -44,7 +44,7 @@ final class ch {
             return stackIn_6_0;
           }
           if (param1) {
-            stackIn_11_0 = cl.a(0, param2);
+            stackIn_11_0 = cl.copyBytes(0, param2);
             return stackIn_11_0;
           }
           stackIn_9_0 = (byte[]) (param2);

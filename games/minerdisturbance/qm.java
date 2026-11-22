@@ -79,7 +79,7 @@ final class qm {
             this.field_o = this.field_o + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          ai.a(this.field_d, 0, this.field_k, 32, 32);
+          ai.copyByteRange(this.field_d, 0, this.field_k, 32, 32);
           this.a(-63);
           var4_int = 0;
           var5 = param0;

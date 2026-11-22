@@ -117,7 +117,7 @@ final class sd extends am {
           var15 = new short[var3_int];
           var11 = var15;
           var7 = var11;
-          dk.a(param0.field_s, 0, var12, 0, param0.field_k);
+          dk.copyByteRange(param0.field_s, 0, var12, 0, param0.field_k);
           dk.a(param0.field_u, 0, var13, 0, param0.field_k);
           dk.a(param0.field_n, 0, var14, 0, param0.field_k);
           dk.a(param0.field_x, 0, var15, 0, param0.field_k);

@@ -404,7 +404,7 @@ final class kc {
             this.field_i = this.field_i + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          o.a(this.field_g, 0, this.field_k, 32, 32);
+          o.copyByteRange(this.field_g, 0, this.field_k, 32, 32);
           this.b((byte) -122);
           var4_int = 0;
           if (param1) {

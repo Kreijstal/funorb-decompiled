@@ -101,7 +101,7 @@ final class ch {
             if (this.field_a != -1L &&
               this.field_a + (long)this.field_c.length < (long)param3 + this.field_h) {
               var5_int = (int)(-this.field_h - (-this.field_a - (long)this.field_c.length));
-              gl.a(param0, param1, this.field_c, (int)(this.field_h - this.field_a), var5_int);
+              gl.copyByteRange(param0, param1, this.field_c, (int)(this.field_h - this.field_a), var5_int);
               this.field_h = this.field_h + (long)var5_int;
               param1 = param1 + var5_int;
               param3 = param3 - var5_int;
@@ -118,7 +118,7 @@ final class ch {
               if (this.field_a == -1L) {
                 this.field_a = this.field_h;
               }
-              gl.a(param0, param1, this.field_c, (int)(this.field_h - this.field_a), param3);
+              gl.copyByteRange(param0, param1, this.field_c, (int)(this.field_h - this.field_a), param3);
               this.field_h = this.field_h + (long)param3;
               if ((long)this.field_l < -this.field_a + this.field_h) {
                 this.field_l = (int)(this.field_h - this.field_a);
@@ -157,7 +157,7 @@ final class ch {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              gl.a(param0, (int)(-this.field_h + (var5_long + (long)param1)), this.field_k, (int)(-this.field_e + var5_long), var9);
+              gl.copyByteRange(param0, (int)(-this.field_h + (var5_long + (long)param1)), this.field_k, (int)(-this.field_e + var5_long), var9);
             }
             this.field_h = this.field_h + (long)param3;
             return;
@@ -226,7 +226,7 @@ final class ch {
             if (this.field_a != -1L &&
               this.field_h >= this.field_a &&
               (this.field_h + (long)param1) <= ((long)this.field_l + this.field_a)) {
-              gl.a(this.field_c, (int)(-this.field_a + this.field_h), param0, param2, param1);
+              gl.copyByteRange(this.field_c, (int)(-this.field_a + this.field_h), param0, param2, param1);
               this.field_h = this.field_h + (long)param1;
               return;
             }
@@ -239,7 +239,7 @@ final class ch {
               if (param1 < var9_int) {
                 var9_int = param1;
               }
-              gl.a(this.field_k, (int)(this.field_h - this.field_e), param0, param2, var9_int);
+              gl.copyByteRange(this.field_k, (int)(this.field_h - this.field_e), param0, param2, var9_int);
               param1 = param1 - var9_int;
               param2 = param2 + var9_int;
               this.field_h = this.field_h + (long)var9_int;
@@ -270,7 +270,7 @@ final class ch {
               if (this.field_m < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_m;
               }
-              gl.a(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
+              gl.copyByteRange(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.field_h = this.field_h + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -313,7 +313,7 @@ final class ch {
               if (-1L < var9 &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                gl.a(this.field_c, (int)(var9 - this.field_a), param0, var7 + (int)(-var5_long + var9), var13);
+                gl.copyByteRange(this.field_c, (int)(var9 - this.field_a), param0, var7 + (int)(-var5_long + var9), var13);
                 if (this.field_h < var11) {
                   param1 = (int)((long)param1 - (-this.field_h + var11));
                   this.field_h = var11;
@@ -415,7 +415,7 @@ final class ch {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            gl.a(this.field_c, (int)(var2 - this.field_a), this.field_k, (int)(-this.field_e + var2), var6);
+            gl.copyByteRange(this.field_c, (int)(var2 - this.field_a), this.field_k, (int)(-this.field_e + var2), var6);
           }
           this.field_a = -1L;
           this.field_l = 0;

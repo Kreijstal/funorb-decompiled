@@ -6,7 +6,7 @@ final class bk extends IntrusiveNode {
     static int field_f;
     int field_e;
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -18,7 +18,7 @@ final class bk extends IntrusiveNode {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          gl.a(param1, 0, var3, param0, var2_int);
+          gl.copyByteRange(param1, 0, var3, param0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,7 +42,7 @@ final class bk extends IntrusiveNode {
           jk.field_x = new a(pf.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, pf.field_c.field_C, -1, 2147483647, true);
           if (!param0) {
             var2 = (byte[]) null;
-            bk.a(121, (byte[]) null);
+            bk.copyBytes(121, (byte[]) null);
             return jk.field_x;
           }
           return jk.field_x;
@@ -51,7 +51,7 @@ final class bk extends IntrusiveNode {
           return jk.field_x;
         }
         var2Lifetime1 = (byte[]) null;
-        bk.a(121, (byte[]) null);
+        bk.copyBytes(121, (byte[]) null);
         return jk.field_x;
     }
 

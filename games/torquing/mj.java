@@ -132,7 +132,7 @@ final class mj {
             this.field_e = this.field_e + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          dk.a(this.field_c, 0, this.field_h, 32, 32);
+          dk.copyByteRange(this.field_c, 0, this.field_h, 32, 32);
           this.b((byte) 126);
           var4_int = 0;
           var5 = param0;

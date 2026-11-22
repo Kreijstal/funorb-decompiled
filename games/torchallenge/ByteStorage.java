@@ -11,7 +11,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(int param0, byte[] param1);
 
-    final static byte[] a(byte param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -32,7 +32,7 @@ abstract class ByteStorage {
           if (param2 instanceof byte[]) {
             var3 = (byte[]) (param2);
             if (param1) {
-              stackIn_9_0 = ek.a(var3, -43);
+              stackIn_9_0 = ek.copyBytes(var3, -43);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;

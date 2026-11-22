@@ -223,7 +223,7 @@ final class sh {
             throw new RuntimeException("");
           }
           if (this.field_b[param2][param3] != null) {
-            var8 = ByteStorage.a(this.field_b[param2][param3], (byte) -74, false);
+            var8 = ByteStorage.extractBytes(this.field_b[param2][param3], (byte) -74, false);
             var5 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -278,7 +278,7 @@ final class sh {
         if (this.field_i) {
           this.field_j[param0] = this.field_h.a(param0, param1);
         } else {
-          this.field_j[param0] = ri.a(136, this.field_h.a(param0, param1), false);
+          this.field_j[param0] = ri.storeBytes(136, this.field_h.a(param0, param1), false);
         }
         if (!param1) {
           field_f = ((int[]) (((Object[]) (this.field_j[13]))[1]))[8];
@@ -668,7 +668,7 @@ final class sh {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var36 = ByteStorage.a(this.field_j[param0], (byte) -74, true);
+            var36 = ByteStorage.extractBytes(this.field_j[param0], (byte) -74, true);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -676,7 +676,7 @@ final class sh {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = ByteStorage.a(this.field_j[param0], (byte) -74, false);
+            var10 = ByteStorage.extractBytes(this.field_j[param0], (byte) -74, false);
           }
           try {
             var37 = qk.a(65, var10);
@@ -736,7 +736,7 @@ final class sh {
                     var22 = var21;
                   }
                   if (param3 == var22) {
-                    o.a(var44, var18, var45, var15Lifetime1, var20);
+                    o.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
                     var15Lifetime1 = var15Lifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -774,7 +774,7 @@ final class sh {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
                   var19 = var19 + var30.readInt((byte) 19);
-                  o.a(var44, var17, var40[var20], var39[var20], var19);
+                  o.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
                   var17 = var17 + var19;
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                 }
@@ -786,7 +786,7 @@ final class sh {
                   var19 = var18;
                 }
                 if (this.field_c == 0) {
-                  var7[var19] = ri.a(136, var40[var18], false);
+                  var7[var19] = ri.storeBytes(136, var40[var18], false);
                 } else {
                   var7[var19] = var40[var18];
                 }
@@ -799,7 +799,7 @@ final class sh {
               var12 = 0;
             }
             if (this.field_c == 0) {
-              var7[var12] = ri.a(136, var37, false);
+              var7[var12] = ri.storeBytes(136, var37, false);
               return true;
             }
             var7[var12] = var44;

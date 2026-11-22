@@ -57,7 +57,7 @@ abstract class WidgetWrapper extends UiWidget implements dq {
         }
     }
 
-    final static Object a(boolean param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;
@@ -83,7 +83,7 @@ abstract class WidgetWrapper extends UiWidget implements dq {
             return stackIn_9_0;
           }
           if (param0) {
-            stackIn_14_0 = kk.a(param2, (byte) 103);
+            stackIn_14_0 = kk.copyBytes(param2, (byte) 103);
             return stackIn_14_0;
           }
           stackIn_12_0 = (byte[]) (param2);
@@ -435,7 +435,7 @@ abstract class WidgetWrapper extends UiWidget implements dq {
         try {
           if (param0 != -39) {
             var6 = (byte[]) null;
-            WidgetWrapper.a(true, true, (byte[]) null);
+            WidgetWrapper.storeBytes(true, true, (byte[]) null);
           }
           var4_int = param3.a((byte) 123, param2);
           var5 = param3.a(var4_int, param1, 101);

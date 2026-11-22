@@ -245,7 +245,7 @@ final class we {
             this.field_b = this.field_b + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          ri.a(this.field_g, 0, this.field_h, 32, 32);
+          ri.copyByteRange(this.field_g, 0, this.field_h, 32, 32);
           this.a(1);
           var4_int = 0;
           var5 = param1;

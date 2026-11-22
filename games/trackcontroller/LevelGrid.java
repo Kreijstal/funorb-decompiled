@@ -100,7 +100,7 @@ abstract class LevelGrid {
             this.tileFlags = new int[0][0];
           }
           for (var5_int = 0; var5_int < param3.length; var5_int++) {
-            pd.a(param3[var5_int], 0, this.floorKind[var5_int], 0, param3[var5_int].length);
+            pd.copyByteRange(param3[var5_int], 0, this.floorKind[var5_int], 0, param3[var5_int].length);
             pd.a(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
           }
           this.targetLayout = new int[param2.length][param2[0].length];

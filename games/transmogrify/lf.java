@@ -135,7 +135,7 @@ final class lf {
           return var12;
         }
         var7 = (byte[]) null;
-        lf.a((byte) 50, false, (byte[]) null);
+        lf.storeBytes((byte) 50, false, (byte[]) null);
         var9 = (dl) (this.field_b.a(-1, param1));
         if (var9 == null) {
           return null;
@@ -206,7 +206,7 @@ final class lf {
         var1Lifetime2 = 4 / ((param0 - 58) / 47);
     }
 
-    final static Object a(byte param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(byte param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;
@@ -233,7 +233,7 @@ final class lf {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = AchievementUnlockEvent.a((byte) -29, param2);
+          stackIn_11_0 = AchievementUnlockEvent.copyBytes((byte) -29, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

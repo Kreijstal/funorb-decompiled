@@ -85,7 +85,7 @@ final class nd extends qf {
           var6 = var11.field_i.length - var5;
         }
         byte[] var15 = new byte[var6];
-        ug.a(var11.field_i, var5, var15, 0, var6);
+        ug.copyByteRange(var11.field_i, var5, var15, 0, var6);
         int var8 = -var5 + var11.field_h;
         if (var8 < 0) {
           var8 = 0;

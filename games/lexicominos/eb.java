@@ -41,7 +41,7 @@ final class eb {
             array$2 = new byte[var5 + 1];
             this.field_e[var3_int] = array$2;
             this.field_e[var3_int][0] = (byte)var4_int;
-            o.a(param0.payload, param0.position, this.field_e[var3_int], 1, var5);
+            o.copyByteRange(param0.payload, param0.position, this.field_e[var3_int], 1, var5);
             param0.position = param0.position + var5;
           }
           this.field_i = new byte[param0.readVarInt((byte) -104)][];
@@ -54,7 +54,7 @@ final class eb {
             array$1 = new byte[1 + var5Lifetime1];
             this.field_i[var3_intLifetime1] = array$1;
             this.field_i[var3_intLifetime1][0] = (byte)var4_intLifetime1;
-            o.a(param0.payload, param0.position, this.field_i[var3_intLifetime1], 1, var5Lifetime1);
+            o.copyByteRange(param0.payload, param0.position, this.field_i[var3_intLifetime1], 1, var5Lifetime1);
             param0.position = param0.position + var5Lifetime1;
           }
           for (var3_intLifetime2 = 0; this.field_h.length > var3_intLifetime2; var3_intLifetime2++) {

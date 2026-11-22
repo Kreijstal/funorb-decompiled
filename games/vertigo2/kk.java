@@ -129,7 +129,7 @@ final class kk {
         return this.field_l;
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyBytes(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -141,7 +141,7 @@ final class kk {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          qq.a(param0, 0, var3, 0, var2_int);
+          qq.copyByteRange(param0, 0, var3, 0, var2_int);
           if (param1 != 103) {
             field_h = (String) null;
           }

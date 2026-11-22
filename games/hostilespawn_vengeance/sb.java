@@ -96,7 +96,7 @@ final class sb {
         }
     }
 
-    final static byte[] a(boolean param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(boolean param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
@@ -111,7 +111,7 @@ final class sb {
         try {
           if (!param0) {
             var4 = (Object) null;
-            sb.a(true, (Object) null, false);
+            sb.extractBytes(true, (Object) null, false);
           }
           if (param1 == null) {
             return null;
@@ -129,7 +129,7 @@ final class sb {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = dc.a(97, var3);
+          stackIn_8_0 = dc.copyBytes(97, var3);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

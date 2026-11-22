@@ -338,7 +338,7 @@ final class uj implements Runnable {
         }
     }
 
-    final static byte[] a(int param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(int param0, Object param1, boolean param2) {
         byte[] var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -359,7 +359,7 @@ final class uj implements Runnable {
           if (param1 instanceof byte[]) {
             var3 = (byte[]) (param1);
             if (param2) {
-              stackIn_9_0 = bk.a(0, var3);
+              stackIn_9_0 = bk.copyBytes(0, var3);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;

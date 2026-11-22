@@ -223,7 +223,7 @@ final class ResourceArchive {
             param3[1] != 0 ||
             param3[2] != 0 ||
             0 != param3[3])) {
-            var35 = ui.a(true, this.field_f[param2], (byte) 37);
+            var35 = ui.extractBytes(true, this.field_f[param2], (byte) 37);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -231,7 +231,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ui.a(false, this.field_f[param2], (byte) 37);
+            var9 = ui.extractBytes(false, this.field_f[param2], (byte) 37);
           }
           try {
             var36 = l.a(param0 - 2700, var9);
@@ -291,7 +291,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param1 == var21) {
-                    dk.a(var43, var17, var44, var14_intLifetime1, var19);
+                    dk.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -329,7 +329,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var31.readInt((byte) -49);
-                  dk.a(var43, var16, var40[var19], var39[var19], var18);
+                  dk.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }
@@ -341,7 +341,7 @@ final class ResourceArchive {
                   var18 = var17;
                 }
                 if (this.field_l == 0) {
-                  var7[var18] = DelegatingCanvas.a((byte) -5, var40[var17], false);
+                  var7[var18] = DelegatingCanvas.storeBytes((byte) -5, var40[var17], false);
                 } else {
                   var7[var18] = var40[var17];
                 }
@@ -357,7 +357,7 @@ final class ResourceArchive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = DelegatingCanvas.a((byte) -5, var43, false);
+            var7[var11] = DelegatingCanvas.storeBytes((byte) -5, var43, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -449,7 +449,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_d[param1][param2] != null) {
-            var7 = ui.a(false, this.field_d[param1][param2], (byte) 37);
+            var7 = ui.extractBytes(false, this.field_d[param1][param2], (byte) 37);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -611,7 +611,7 @@ final class ResourceArchive {
         if (this.field_i) {
           this.field_f[param0] = this.field_a.a(param0, true);
         } else {
-          this.field_f[param0] = DelegatingCanvas.a((byte) -5, this.field_a.a(param0, true), false);
+          this.field_f[param0] = DelegatingCanvas.storeBytes((byte) -5, this.field_a.a(param0, true), false);
         }
         int var3 = -47 % ((32 - param1) / 62);
     }

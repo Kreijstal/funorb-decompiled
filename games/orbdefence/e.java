@@ -5,7 +5,7 @@ final class e {
     static im field_b;
     static java.awt.Font field_a;
 
-    final static byte[] a(Object param0, boolean param1, int param2) {
+    final static byte[] extractBytes(Object param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -35,7 +35,7 @@ final class e {
           }
           var3 = (byte[]) (param0);
           if (param1) {
-            stackIn_11_0 = n.a(var3, (byte) 117);
+            stackIn_11_0 = n.copyBytes(var3, (byte) 117);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;

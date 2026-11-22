@@ -193,7 +193,7 @@ final class pf {
             throw new RuntimeException("");
           }
           if (null != this.field_d[param1][param0]) {
-            var7 = tf.a(2, false, this.field_d[param1][param0]);
+            var7 = tf.extractBytes(2, false, this.field_d[param1][param0]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -670,7 +670,7 @@ final class pf {
         if (this.field_a) {
           this.field_f[param1] = this.field_e.a((byte) 35, param1);
         } else {
-          this.field_f[param1] = ch.a(136, false, this.field_e.a((byte) 35, param1));
+          this.field_f[param1] = ch.storeBytes(136, false, this.field_e.a((byte) 35, param1));
         }
     }
 
@@ -768,7 +768,7 @@ final class pf {
             param3[1] != 0 ||
             param3[2] != 0 ||
             0 != param3[3])) {
-            var35 = tf.a(2, true, this.field_f[param1]);
+            var35 = tf.extractBytes(2, true, this.field_f[param1]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -776,7 +776,7 @@ final class pf {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = tf.a(2, false, this.field_f[param1]);
+            var9 = tf.extractBytes(2, false, this.field_f[param1]);
           }
           try {
             var36 = GzipDecompressor.decompressArchiveContainer((byte) -76, var9);
@@ -836,7 +836,7 @@ final class pf {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    ri.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ri.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -874,7 +874,7 @@ final class pf {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt(false);
-                  ri.a(var43, var16, var40[var19], var39[var19], var18);
+                  ri.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -888,7 +888,7 @@ final class pf {
                 if (this.field_g != 0) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = ch.a(136, false, var40[var17]);
+                  var7[var18] = ch.storeBytes(136, false, var40[var17]);
                 }
               }
             }
@@ -899,7 +899,7 @@ final class pf {
               var11 = 0;
             }
             if (this.field_g == 0) {
-              var7[var11] = ch.a(ih.a(param0, 136), false, var36);
+              var7[var11] = ch.storeBytes(ih.a(param0, 136), false, var36);
               return true;
             }
             var7[var11] = var43;

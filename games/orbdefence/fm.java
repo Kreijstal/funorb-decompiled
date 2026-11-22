@@ -317,7 +317,7 @@ final class fm {
         }
     }
 
-    final static Object a(byte[] param0, int param1, boolean param2) {
+    final static Object storeBytes(byte[] param0, int param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -343,7 +343,7 @@ final class fm {
             field_d = (int[]) null;
           }
           if (param2) {
-            stackIn_13_0 = n.a(param0, (byte) 118);
+            stackIn_13_0 = n.copyBytes(param0, (byte) 118);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param0);

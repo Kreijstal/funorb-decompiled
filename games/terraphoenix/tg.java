@@ -134,7 +134,7 @@ final class tg {
             this.field_i = this.field_i + 1;
             this.field_b[fieldTemp$1] = (byte) 0;
           }
-          ka.a(this.field_m, 0, this.field_b, 32, 32);
+          ka.copyByteRange(this.field_m, 0, this.field_b, 32, 32);
           this.a((byte) -67);
           if (param1 != 4) {
             this.a((byte) -79);

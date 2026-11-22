@@ -8,7 +8,7 @@ final class qh implements ad {
     static int field_c;
     static String field_b;
 
-    final static Object a(byte param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(byte param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
@@ -34,7 +34,7 @@ final class qh implements ad {
             return stackIn_8_0;
           }
           if (param1) {
-            stackIn_13_0 = kh.a(param2, (byte) -16);
+            stackIn_13_0 = kh.copyBytes(param2, (byte) -16);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param2);

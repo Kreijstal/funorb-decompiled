@@ -21,14 +21,14 @@ final class ui extends IntrusiveNode {
     public static void a(int param0) {
         if (param0 != -22677) {
           Object var2 = (Object) null;
-          ui.a(false, (Object) null, (byte) -121);
+          ui.extractBytes(false, (Object) null, (byte) -121);
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    final static byte[] a(boolean param0, Object param1, byte param2) {
+    final static byte[] extractBytes(boolean param0, Object param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -47,7 +47,7 @@ final class ui extends IntrusiveNode {
           if (param1 instanceof byte[]) {
             var3 = (byte[]) (param1);
             if (param0) {
-              stackIn_8_0 = ch.a(var3, (byte) 115);
+              stackIn_8_0 = ch.copyBytes(var3, (byte) 115);
               return stackIn_8_0;
             }
             stackIn_6_0 = var3;

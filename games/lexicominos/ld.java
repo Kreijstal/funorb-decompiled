@@ -52,7 +52,7 @@ final class ld extends kf {
         return null;
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -69,7 +69,7 @@ final class ld extends kf {
             var4 = (String) null;
             ld.a((Throwable) null, (String) null);
           }
-          o.a(param1, 0, var3, 0, var2_int);
+          o.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

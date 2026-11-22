@@ -36,7 +36,7 @@ final class ResourceArchive {
         if (this.field_d) {
           this.field_i[param1] = this.field_g.a(113, param1);
         } else {
-          this.field_i[param1] = qh.a((byte) 112, false, this.field_g.a(-125, param1));
+          this.field_i[param1] = qh.storeBytes((byte) 112, false, this.field_g.a(-125, param1));
         }
     }
 
@@ -278,7 +278,7 @@ final class ResourceArchive {
             param3[1] != 0 ||
             0 != param3[2] ||
             param3[3] != 0)) {
-            var35 = sc.a(true, true, this.field_i[param0]);
+            var35 = sc.extractBytes(true, true, this.field_i[param0]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -286,7 +286,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = sc.a(false, true, this.field_i[param0]);
+            var9 = sc.extractBytes(false, true, this.field_i[param0]);
           }
           try {
             var36 = in.a(var9, 0);
@@ -346,7 +346,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param1 == var21) {
-                    ai.a(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
+                    ai.copyByteRange(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -385,7 +385,7 @@ final class ResourceArchive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) 61);
-                ai.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
+                ai.copyByteRange(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -399,7 +399,7 @@ final class ResourceArchive {
               if (this.field_j != 0) {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = qh.a((byte) 112, false, var40[var17Lifetime3]);
+                var7[var18Lifetime2] = qh.storeBytes((byte) 112, false, var40[var17Lifetime3]);
               }
             }
           } else {
@@ -409,7 +409,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_j == 0) {
-              var7[var11] = qh.a((byte) 112, false, var43);
+              var7[var11] = qh.storeBytes((byte) 112, false, var43);
             } else {
               var7[var11] = var36;
             }
@@ -460,7 +460,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_b[param1][param2] != null) {
-            var8 = sc.a(false, true, this.field_b[param1][param2]);
+            var8 = sc.extractBytes(false, true, this.field_b[param1][param2]);
             var5 = var8;
             if (var8 == null) {
               throw new RuntimeException("");

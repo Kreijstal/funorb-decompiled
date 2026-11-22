@@ -6,7 +6,7 @@ abstract class ByteStorage {
     static String[] field_a;
     static boolean field_c;
 
-    final static byte[] a(Object param0, byte param1, boolean param2) {
+    final static byte[] extractBytes(Object param0, byte param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -38,7 +38,7 @@ abstract class ByteStorage {
           }
           var3 = (byte[]) (param0);
           if (param2) {
-            stackIn_11_0 = ld.a(120, var3);
+            stackIn_11_0 = ld.copyBytes(120, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;

@@ -44,7 +44,7 @@ final class ki {
             throw new RuntimeException("");
           }
           if (this.field_c[param2][param3] != null) {
-            var7 = e.a(this.field_c[param2][param3], false, 25966);
+            var7 = e.extractBytes(this.field_c[param2][param3], false, 25966);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -80,7 +80,7 @@ final class ki {
 
     private final synchronized void a(int param0, int param1) {
         if (!this.field_g) {
-          this.field_a[param0] = fm.a(this.field_e.a(-15861, param0), 3, false);
+          this.field_a[param0] = fm.storeBytes(this.field_e.a(-15861, param0), 3, false);
         } else {
           this.field_a[param0] = this.field_e.a(-15861, param0);
         }
@@ -554,7 +554,7 @@ final class ki {
             param0[1] != 0 ||
             param0[2] != 0 ||
             param0[3] != 0)) {
-            var35 = e.a(this.field_a[param2], true, 25966);
+            var35 = e.extractBytes(this.field_a[param2], true, 25966);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -562,7 +562,7 @@ final class ki {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = e.a(this.field_a[param2], false, 25966);
+            var9 = e.extractBytes(this.field_a[param2], false, 25966);
           }
           if (param1 != -895) {
             return false;
@@ -625,7 +625,7 @@ final class ki {
                     var21 = var34[var20];
                   }
                   if (param3 == var21) {
-                    mk.a(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    mk.copyByteRange(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -664,7 +664,7 @@ final class ki {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt(0);
-                mk.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                mk.copyByteRange(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
               }
@@ -676,7 +676,7 @@ final class ki {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (this.field_b == 0) {
-                var7[var18Lifetime2] = fm.a(var39[var17Lifetime3], 3, false);
+                var7[var18Lifetime2] = fm.storeBytes(var39[var17Lifetime3], 3, false);
               } else {
                 var7[var18Lifetime2] = var39[var17Lifetime3];
               }
@@ -690,7 +690,7 @@ final class ki {
             if (this.field_b != 0) {
               var7[var11] = var43;
             } else {
-              var7[var11] = fm.a(var23, gi.a(param1, -894), false);
+              var7[var11] = fm.storeBytes(var23, gi.a(param1, -894), false);
             }
           }
           return true;

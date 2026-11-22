@@ -174,7 +174,7 @@ final class WhirlpoolDigest {
             this.field_i = this.field_i + 1;
             this.field_g[fieldTemp$1] = (byte) 0;
           }
-          pd.a(this.field_n, 0, this.field_g, 32, 32);
+          pd.copyByteRange(this.field_n, 0, this.field_g, 32, 32);
           this.b(-2);
           var4_int = 0;
           var5 = param1;

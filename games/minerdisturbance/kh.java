@@ -113,7 +113,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyBytes(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -130,7 +130,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          ai.a(param0, 0, var3, 0, var2_int);
+          ai.copyByteRange(param0, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           if (param1 != 14288) {
             var6 = (byte[]) null;
-            kh.a((byte[]) null, (byte) -81);
+            kh.copyBytes((byte[]) null, (byte) -81);
           }
           PacketBuffer.field_p = var2_intLifetime2;
           fieldTemp$1 = PacketBuffer.field_p;

@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           return;
         }
         byte[] var2 = (byte[]) null;
-        DelegatingCanvas.a((byte) -126, (byte[]) null, true);
+        DelegatingCanvas.storeBytes((byte) -126, (byte[]) null, true);
         field_b = null;
     }
 
@@ -82,7 +82,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static Object a(byte param0, byte[] param1, boolean param2) {
+    final static Object storeBytes(byte param0, byte[] param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -111,7 +111,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             stackIn_14_0 = (byte[]) (param1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ch.a(param1, (byte) 115);
+          stackIn_12_0 = ch.copyBytes(param1, (byte) 115);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

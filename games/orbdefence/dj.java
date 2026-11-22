@@ -66,7 +66,7 @@ final class dj {
           if (-1L < var2 &&
             var4 > var2) {
             var6 = (int)(-var2 + var4);
-            mk.a(this.field_m, (int)(var2 - this.field_h), this.field_g, (int)(-this.field_n + var2), var6);
+            mk.copyByteRange(this.field_m, (int)(var2 - this.field_h), this.field_g, (int)(-this.field_n + var2), var6);
           }
           this.field_h = -1L;
           this.field_d = 0;
@@ -234,7 +234,7 @@ final class dj {
             if (this.field_h != -1L &&
               this.field_a >= this.field_h &&
               this.field_h + (long)this.field_d >= (long)param2 + this.field_a) {
-              mk.a(this.field_m, (int)(-this.field_h + this.field_a), param3, param0, param2);
+              mk.copyByteRange(this.field_m, (int)(-this.field_h + this.field_a), param3, param0, param2);
               this.field_a = this.field_a + (long)param2;
               return;
             }
@@ -248,7 +248,7 @@ final class dj {
               if (var10_int > param2) {
                 var10_int = param2;
               }
-              mk.a(this.field_g, (int)(-this.field_n + this.field_a), param3, param0, var10_int);
+              mk.copyByteRange(this.field_g, (int)(-this.field_n + this.field_a), param3, param0, var10_int);
               this.field_a = this.field_a + (long)var10_int;
               param2 = param2 - var10_int;
               param0 = param0 + var10_int;
@@ -279,7 +279,7 @@ final class dj {
               if (var10_intLifetime1Lifetime1 > this.field_c) {
                 var10_intLifetime1Lifetime1 = this.field_c;
               }
-              mk.a(this.field_g, 0, param3, param0, var10_intLifetime1Lifetime1);
+              mk.copyByteRange(this.field_g, 0, param3, param0, var10_intLifetime1Lifetime1);
               param0 = param0 + var10_intLifetime1Lifetime1;
               this.field_a = this.field_a + (long)var10_intLifetime1Lifetime1;
               param2 = param2 - var10_intLifetime1Lifetime1;
@@ -322,7 +322,7 @@ final class dj {
               if (-1L < var10 &&
                 var12 > var10) {
                 var14 = (int)(-var10 + var12);
-                mk.a(this.field_m, (int)(var10 - this.field_h), param3, var8 + (int)(-var5_long + var10), var14);
+                mk.copyByteRange(this.field_m, (int)(var10 - this.field_h), param3, var8 + (int)(-var5_long + var10), var14);
                 if (var12 > this.field_a) {
                   param2 = (int)((long)param2 - (var12 - this.field_a));
                   this.field_a = var12;
@@ -397,7 +397,7 @@ final class dj {
             if (this.field_h != -1L &&
               ((long)this.field_m.length + this.field_h) < (this.field_a + (long)param2)) {
               var5_int = (int)((long)this.field_m.length + this.field_h - this.field_a);
-              mk.a(param1, param3, this.field_m, (int)(this.field_a - this.field_h), var5_int);
+              mk.copyByteRange(param1, param3, this.field_m, (int)(this.field_a - this.field_h), var5_int);
               param3 = param3 + var5_int;
               this.field_a = this.field_a + (long)var5_int;
               param2 = param2 - var5_int;
@@ -411,7 +411,7 @@ final class dj {
               if (-1L == this.field_h) {
                 this.field_h = this.field_a;
               }
-              mk.a(param1, param3, this.field_m, (int)(this.field_a - this.field_h), param2);
+              mk.copyByteRange(param1, param3, this.field_m, (int)(this.field_a - this.field_h), param2);
               this.field_a = this.field_a + (long)param2;
               if ((long)this.field_d < (-this.field_h + this.field_a)) {
                 this.field_d = (int)(-this.field_h + this.field_a);
@@ -450,7 +450,7 @@ final class dj {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              mk.a(param1, (int)((long)param3 + var5_long - this.field_a), this.field_g, (int)(-this.field_n + var5_long), var9);
+              mk.copyByteRange(param1, (int)((long)param3 + var5_long - this.field_a), this.field_g, (int)(-this.field_n + var5_long), var9);
             }
             this.field_a = this.field_a + (long)param2;
             return;

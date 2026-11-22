@@ -307,7 +307,7 @@ abstract class ei extends kh {
         }
         if (param2 != 82) {
           var17 = (Object) null;
-          ei.a((Object) null, false, true);
+          ei.extractBytes((Object) null, false, true);
         }
         var6Lifetime1 = 169;
         var5Lifetime1 = 194;
@@ -375,7 +375,7 @@ abstract class ei extends kh {
         int var5 = 0;
         if (param0 != -121) {
           Object var6 = (Object) null;
-          ei.a((Object) null, true, false);
+          ei.extractBytes((Object) null, true, false);
         }
         if (this.field_T > 0) {
           var2 = this.field_P;
@@ -426,7 +426,7 @@ abstract class ei extends kh {
         }
     }
 
-    final static byte[] a(Object param0, boolean param1, boolean param2) {
+    final static byte[] extractBytes(Object param0, boolean param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -459,7 +459,7 @@ abstract class ei extends kh {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = li.a(0, var3);
+          stackIn_9_0 = li.copyBytes(0, var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

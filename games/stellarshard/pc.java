@@ -46,7 +46,7 @@ final class pc {
             if (this.field_l != -1L &&
               this.field_c >= this.field_l &&
               (long)param0 + this.field_c <= (long)this.field_d + this.field_l) {
-              ri.a(this.field_k, (int)(this.field_c - this.field_l), param3, param2, param0);
+              ri.copyByteRange(this.field_k, (int)(this.field_c - this.field_l), param3, param2, param0);
               this.field_c = this.field_c + (long)param0;
               return;
             }
@@ -59,7 +59,7 @@ final class pc {
               if (var9_int > param0) {
                 var9_int = param0;
               }
-              ri.a(this.field_h, (int)(-this.field_b + this.field_c), param3, param2, var9_int);
+              ri.copyByteRange(this.field_h, (int)(-this.field_b + this.field_c), param3, param2, var9_int);
               param2 = param2 + var9_int;
               this.field_c = this.field_c + (long)var9_int;
               param0 = param0 - var9_int;
@@ -90,7 +90,7 @@ final class pc {
               if (this.field_j < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_j;
               }
-              ri.a(this.field_h, 0, param3, param2, var9_intLifetime1Lifetime1);
+              ri.copyByteRange(this.field_h, 0, param3, param2, var9_intLifetime1Lifetime1);
               param0 = param0 - var9_intLifetime1Lifetime1;
               this.field_c = this.field_c + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -136,7 +136,7 @@ final class pc {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                ri.a(this.field_k, (int)(var9 - this.field_l), param3, (int)(var9 - var5_long) + var7, var13);
+                ri.copyByteRange(this.field_k, (int)(var9 - this.field_l), param3, (int)(var9 - var5_long) + var7, var13);
                 if (this.field_c < var11) {
                   param0 = (int)((long)param0 - (-this.field_c + var11));
                   this.field_c = var11;
@@ -206,7 +206,7 @@ final class pc {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            ri.a(this.field_k, (int)(var2 - this.field_l), this.field_h, (int)(var2 - this.field_b), var6);
+            ri.copyByteRange(this.field_k, (int)(var2 - this.field_l), this.field_h, (int)(var2 - this.field_b), var6);
           }
           this.field_l = -1L;
           this.field_d = 0;
@@ -343,7 +343,7 @@ final class pc {
             if (this.field_l != -1L &&
               ((long)this.field_k.length + this.field_l) < ((long)param0 + this.field_c)) {
               var5_int = (int)(-this.field_c + (this.field_l + (long)this.field_k.length));
-              ri.a(param3, param1, this.field_k, (int)(-this.field_l + this.field_c), var5_int);
+              ri.copyByteRange(param3, param1, this.field_k, (int)(-this.field_l + this.field_c), var5_int);
               param1 = param1 + var5_int;
               this.field_c = this.field_c + (long)var5_int;
               param0 = param0 - var5_int;
@@ -357,7 +357,7 @@ final class pc {
               if (this.field_l == -1L) {
                 this.field_l = this.field_c;
               }
-              ri.a(param3, param1, this.field_k, (int)(this.field_c - this.field_l), param0);
+              ri.copyByteRange(param3, param1, this.field_k, (int)(this.field_c - this.field_l), param0);
               this.field_c = this.field_c + (long)param0;
               if ((long)this.field_d < (-this.field_l + this.field_c)) {
                 this.field_d = (int)(this.field_c - this.field_l);
@@ -396,7 +396,7 @@ final class pc {
             if (var5_long > -1L &&
               var5_long < var7) {
               var9 = (int)(-var5_long + var7);
-              ri.a(param3, (int)(-this.field_c + ((long)param1 + var5_long)), this.field_h, (int)(var5_long - this.field_b), var9);
+              ri.copyByteRange(param3, (int)(-this.field_c + ((long)param1 + var5_long)), this.field_h, (int)(var5_long - this.field_b), var9);
             }
             this.field_c = this.field_c + (long)param0;
             return;

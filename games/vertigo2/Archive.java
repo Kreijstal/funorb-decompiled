@@ -19,7 +19,7 @@ final class Archive {
           this.field_d = -46;
         }
         if (!this.field_b) {
-          this.field_e[param0] = WidgetWrapper.a(false, true, this.field_a.a(true, param0));
+          this.field_e[param0] = WidgetWrapper.storeBytes(false, true, this.field_a.a(true, param0));
         } else {
           this.field_e[param0] = this.field_a.a(true, param0);
         }
@@ -426,7 +426,7 @@ final class Archive {
             param3[1] != 0 ||
             param3[2] != 0 ||
             param3[3] != 0)) {
-            var35 = pc.a((byte) 6, true, this.field_e[param1]);
+            var35 = pc.extractBytes((byte) 6, true, this.field_e[param1]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -434,7 +434,7 @@ final class Archive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = pc.a((byte) 6, false, this.field_e[param1]);
+            var9 = pc.extractBytes((byte) 6, false, this.field_e[param1]);
           }
           try {
             var36 = hm.a(-20595, var9);
@@ -494,7 +494,7 @@ final class Archive {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    qq.a(var43, var17, var44, var14Lifetime1, var19);
+                    qq.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -532,7 +532,7 @@ final class Archive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var29.readInt(true);
-                  qq.a(var43, var16, var39[var19], var38[var19], var18);
+                  qq.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -546,7 +546,7 @@ final class Archive {
                 if (this.field_d != 0) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = WidgetWrapper.a(false, true, var39[var17]);
+                  var7[var18] = WidgetWrapper.storeBytes(false, true, var39[var17]);
                 }
               }
             }
@@ -560,7 +560,7 @@ final class Archive {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = WidgetWrapper.a(false, true, var43);
+            var7[var11] = WidgetWrapper.storeBytes(false, true, var43);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -674,7 +674,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (null != this.field_i[param0][param1]) {
-            var7 = pc.a((byte) 6, false, this.field_i[param0][param1]);
+            var7 = pc.extractBytes((byte) 6, false, this.field_i[param0][param1]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

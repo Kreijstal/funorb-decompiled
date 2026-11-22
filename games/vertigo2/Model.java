@@ -319,7 +319,7 @@ final class Model extends sb {
               this.field_o[var6Lifetime2] = (byte) 0;
             }
           } else {
-            qq.a(param0.field_o, 0, this.field_o, 0, this.field_z);
+            qq.copyByteRange(param0.field_o, 0, this.field_o, 0, this.field_z);
           }
         } else {
           this.field_o = param0.field_o;

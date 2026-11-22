@@ -56,7 +56,7 @@ final class td {
             this.field_a = this.field_a + 1;
             this.field_b[fieldTemp$1] = (byte) 0;
           }
-          he.a(this.field_d, 0, this.field_b, 32, 32);
+          he.copyByteRange(this.field_d, 0, this.field_b, 32, 32);
           this.b(-106);
           var4_int = 0;
           var5 = param2;

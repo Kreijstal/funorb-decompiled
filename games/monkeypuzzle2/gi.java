@@ -162,7 +162,7 @@ final class gi {
             this.field_d = this.field_d + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          gl.a(this.field_i, 0, this.field_h, 32, 32);
+          gl.copyByteRange(this.field_i, 0, this.field_h, 32, 32);
           this.a(16);
           var4_int = 0;
           if (param1 != -70) {

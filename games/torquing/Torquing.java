@@ -1019,7 +1019,7 @@ public final class Torquing extends tg {
             var63 = new byte[var50.data.length];
             var51 = var63;
             var5_ref_byte__ = var51;
-            dk.a(var50.data, 0, var5_ref_byte__, 0, var63.length);
+            dk.copyByteRange(var50.data, 0, var5_ref_byte__, 0, var63.length);
             th.field_F[5] = new PcmSample(var50.sampleRate, var63, var50.loopStart, var50.loopEnd, var50.field_l);
             bp.field_c = null;
             cf.a(6639);

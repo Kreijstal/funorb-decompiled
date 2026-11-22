@@ -59,7 +59,7 @@ final class ah {
         return 255 & param0;
     }
 
-    final static Object a(boolean param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -90,7 +90,7 @@ final class ah {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = ek.a(param2, -48);
+          stackIn_11_0 = ek.copyBytes(param2, -48);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

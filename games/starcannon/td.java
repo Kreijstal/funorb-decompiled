@@ -69,7 +69,7 @@ final class td {
                 if (var3 > -1L &&
                   var3 < var5) {
                   var7 = (int)(-var3 + var5);
-                  ug.a(this.field_i, (int)(var3 - this.field_d), this.field_g, (int)(var3 - this.field_e), var7);
+                  ug.copyByteRange(this.field_i, (int)(var3 - this.field_d), this.field_g, (int)(var3 - this.field_e), var7);
                 }
                 this.field_d = -1L;
                 this.field_c = 0;
@@ -84,7 +84,7 @@ final class td {
             if (var3 > -1L &&
               var3 < var5) {
               var7Lifetime1 = (int)(-var3 + var5);
-              ug.a(this.field_i, (int)(var3 - this.field_d), this.field_g, (int)(var3 - this.field_e), var7Lifetime1);
+              ug.copyByteRange(this.field_i, (int)(var3 - this.field_d), this.field_g, (int)(var3 - this.field_e), var7Lifetime1);
             }
             this.field_d = -1L;
             this.field_c = 0;
@@ -146,7 +146,7 @@ final class td {
             if (this.field_d != -1L &&
               this.field_d + (long)this.field_i.length < (long)param1 + this.field_l) {
               var5_int = (int)((long)this.field_i.length + this.field_d - this.field_l);
-              ug.a(param3, param0, this.field_i, (int)(-this.field_d + this.field_l), var5_int);
+              ug.copyByteRange(param3, param0, this.field_i, (int)(-this.field_d + this.field_l), var5_int);
               this.field_l = this.field_l + (long)var5_int;
               param1 = param1 - var5_int;
               param0 = param0 + var5_int;
@@ -160,7 +160,7 @@ final class td {
               if (this.field_d == -1L) {
                 this.field_d = this.field_l;
               }
-              ug.a(param3, param0, this.field_i, (int)(this.field_l - this.field_d), param1);
+              ug.copyByteRange(param3, param0, this.field_i, (int)(this.field_l - this.field_d), param1);
               this.field_l = this.field_l + (long)param1;
               if ((long)this.field_c < -this.field_d + this.field_l) {
                 this.field_c = (int)(this.field_l - this.field_d);
@@ -199,7 +199,7 @@ final class td {
             if (var5_long > -1L &&
               var5_long < var7) {
               var9 = (int)(-var5_long + var7);
-              ug.a(param3, (int)(-this.field_l + ((long)param0 + var5_long)), this.field_g, (int)(var5_long - this.field_e), var9);
+              ug.copyByteRange(param3, (int)(-this.field_l + ((long)param0 + var5_long)), this.field_g, (int)(var5_long - this.field_e), var9);
             }
             this.field_l = this.field_l + (long)param1;
             return;
@@ -294,7 +294,7 @@ final class td {
             if (this.field_d != -1L &&
               this.field_d <= this.field_l &&
               this.field_d + (long)this.field_c >= (long)param3 + this.field_l) {
-              ug.a(this.field_i, (int)(this.field_l - this.field_d), param1, param2, param3);
+              ug.copyByteRange(this.field_i, (int)(this.field_l - this.field_d), param1, param2, param3);
               this.field_l = this.field_l + (long)param3;
               return;
             }
@@ -310,7 +310,7 @@ final class td {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              ug.a(this.field_g, (int)(this.field_l - this.field_e), param1, param2, var9_int);
+              ug.copyByteRange(this.field_g, (int)(this.field_l - this.field_e), param1, param2, var9_int);
               param2 = param2 + var9_int;
               param3 = param3 - var9_int;
               this.field_l = this.field_l + (long)var9_int;
@@ -341,7 +341,7 @@ final class td {
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              ug.a(this.field_g, 0, param1, param2, var9_intLifetime1Lifetime1);
+              ug.copyByteRange(this.field_g, 0, param1, param2, var9_intLifetime1Lifetime1);
               param2 = param2 + var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
               this.field_l = this.field_l + (long)var9_intLifetime1Lifetime1;
@@ -384,7 +384,7 @@ final class td {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                ug.a(this.field_i, (int)(-this.field_d + var9), param1, (int)(var9 - var5_long) + var7, var13);
+                ug.copyByteRange(this.field_i, (int)(-this.field_d + var9), param1, (int)(var9 - var5_long) + var7, var13);
                 if (var11 > this.field_l) {
                   param3 = (int)((long)param3 - (var11 - this.field_l));
                   this.field_l = var11;

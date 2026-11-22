@@ -7,7 +7,7 @@ final class w {
     static Sprite[] field_b;
     static String field_d;
 
-    final static Object a(byte[] param0, byte param1, boolean param2) {
+    final static Object storeBytes(byte[] param0, byte param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -38,7 +38,7 @@ final class w {
             stackIn_13_0 = (byte[]) (param0);
             return stackIn_13_0;
           }
-          stackIn_11_0 = na.a(123, param0);
+          stackIn_11_0 = na.copyBytes(123, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

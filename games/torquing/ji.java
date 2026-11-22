@@ -174,7 +174,7 @@ final class ji {
             var24 = var34;
             var15 = var24;
             var8 = var15;
-            dk.a(param0.field_j, 0, var34, 0, var2_intLifetime1);
+            dk.copyByteRange(param0.field_j, 0, var34, 0, var2_intLifetime1);
             param0.field_j = var15;
           }
           if (param0.field_D != null) {
@@ -182,7 +182,7 @@ final class ji {
             var25 = var35;
             var16 = var25;
             var8Lifetime1 = var16;
-            dk.a(param0.field_D, 0, var35, 0, var2_intLifetime1);
+            dk.copyByteRange(param0.field_D, 0, var35, 0, var2_intLifetime1);
             param0.field_D = var16;
           }
           if (param0.field_A == null) {

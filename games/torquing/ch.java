@@ -79,7 +79,7 @@ final class ch extends am {
         return var3;
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyBytes(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -96,7 +96,7 @@ final class ch extends am {
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          dk.a(param0, 0, var3, 0, var2_int);
+          dk.copyByteRange(param0, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

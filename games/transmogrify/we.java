@@ -198,7 +198,7 @@ final class we {
             if (-1L != this.field_c &&
               this.field_f + (long)param1 > this.field_c + (long)this.field_d.length) {
               var5_int = (int)(-this.field_f + (this.field_c + (long)this.field_d.length));
-              ji.a(param0, param3, this.field_d, (int)(-this.field_c + this.field_f), var5_int);
+              ji.copyByteRange(param0, param3, this.field_d, (int)(-this.field_c + this.field_f), var5_int);
               param1 = param1 - var5_int;
               this.field_f = this.field_f + (long)var5_int;
               param3 = param3 + var5_int;
@@ -212,7 +212,7 @@ final class we {
               if (-1L == this.field_c) {
                 this.field_c = this.field_f;
               }
-              ji.a(param0, param3, this.field_d, (int)(this.field_f - this.field_c), param1);
+              ji.copyByteRange(param0, param3, this.field_d, (int)(this.field_f - this.field_c), param1);
               this.field_f = this.field_f + (long)param1;
               if (-this.field_c + this.field_f > (long)this.field_m) {
                 this.field_m = (int)(-this.field_c + this.field_f);
@@ -251,7 +251,7 @@ final class we {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              ji.a(param0, (int)(-this.field_f + (var5_long + (long)param3)), this.field_e, (int)(var5_long - this.field_h), var9);
+              ji.copyByteRange(param0, (int)(-this.field_f + (var5_long + (long)param3)), this.field_e, (int)(var5_long - this.field_h), var9);
             }
             this.field_f = this.field_f + (long)param1;
             return;
@@ -316,7 +316,7 @@ final class we {
                 if (var2 > -1L &&
                   var4 > var2) {
                   var6 = (int)(var4 - var2);
-                  ji.a(this.field_d, (int)(-this.field_c + var2), this.field_e, (int)(-this.field_h + var2), var6);
+                  ji.copyByteRange(this.field_d, (int)(-this.field_c + var2), this.field_e, (int)(-this.field_h + var2), var6);
                 }
                 this.field_c = -1L;
                 this.field_m = 0;
@@ -331,7 +331,7 @@ final class we {
             if (var2 > -1L &&
               var4 > var2) {
               var6Lifetime1 = (int)(var4 - var2);
-              ji.a(this.field_d, (int)(-this.field_c + var2), this.field_e, (int)(-this.field_h + var2), var6Lifetime1);
+              ji.copyByteRange(this.field_d, (int)(-this.field_c + var2), this.field_e, (int)(-this.field_h + var2), var6Lifetime1);
             }
             this.field_c = -1L;
             this.field_m = 0;
@@ -368,7 +368,7 @@ final class we {
             if (-1L != this.field_c &&
               this.field_c <= this.field_f &&
               this.field_c + (long)this.field_m >= this.field_f + (long)param1) {
-              ji.a(this.field_d, (int)(-this.field_c + this.field_f), param2, param0, param1);
+              ji.copyByteRange(this.field_d, (int)(-this.field_c + this.field_f), param2, param0, param1);
               this.field_f = this.field_f + (long)param1;
               return;
             }
@@ -384,7 +384,7 @@ final class we {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              ji.a(this.field_e, (int)(-this.field_h + this.field_f), param2, param0, var9_int);
+              ji.copyByteRange(this.field_e, (int)(-this.field_h + this.field_f), param2, param0, var9_int);
               param0 = param0 + var9_int;
               this.field_f = this.field_f + (long)var9_int;
               param1 = param1 - var9_int;
@@ -415,7 +415,7 @@ final class we {
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              ji.a(this.field_e, 0, param2, param0, var9_intLifetime1Lifetime1);
+              ji.copyByteRange(this.field_e, 0, param2, param0, var9_intLifetime1Lifetime1);
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
               param0 = param0 + var9_intLifetime1Lifetime1;
@@ -458,7 +458,7 @@ final class we {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                ji.a(this.field_d, (int)(var9 - this.field_c), param2, (int)(-var5_long + var9) + var7, var13);
+                ji.copyByteRange(this.field_d, (int)(var9 - this.field_c), param2, (int)(-var5_long + var9) + var7, var13);
                 if (var11 > this.field_f) {
                   param1 = (int)((long)param1 - (var11 - this.field_f));
                   this.field_f = var11;

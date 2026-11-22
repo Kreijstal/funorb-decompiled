@@ -46,7 +46,7 @@ final class bd {
             this.field_m = this.field_m + 1;
             this.field_a[fieldTemp$1] = (byte) 0;
           }
-          qq.a(this.field_j, 0, this.field_a, 32, 32);
+          qq.copyByteRange(this.field_j, 0, this.field_a, 32, 32);
           this.b(120);
           var4_int = 0;
           var5 = param2;

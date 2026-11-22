@@ -25,7 +25,7 @@ final class ci {
         if (this.field_a) {
           this.field_h[param0] = this.field_c.a(param0, 119);
         } else {
-          this.field_h[param0] = lf.a((byte) -43, false, this.field_c.a(param0, 57));
+          this.field_h[param0] = lf.storeBytes((byte) -43, false, this.field_c.a(param0, 57));
         }
         int var3 = 62 / ((-6 - param1) / 62);
     }
@@ -378,7 +378,7 @@ final class ci {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = cf.a(this.field_h[param2], true, (byte) 16);
+            var35 = cf.extractBytes(this.field_h[param2], true, (byte) 16);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -386,7 +386,7 @@ final class ci {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = cf.a(this.field_h[param2], false, (byte) 16);
+            var9 = cf.extractBytes(this.field_h[param2], false, (byte) 16);
           }
           try {
             var36 = lk.a(70, var9);
@@ -446,7 +446,7 @@ final class ci {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    ji.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ji.copyByteRange(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -484,7 +484,7 @@ final class ci {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt((byte) -119);
-                  ji.a(var43, var16, var40[var19], var39[var19], var18);
+                  ji.copyByteRange(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }
@@ -498,7 +498,7 @@ final class ci {
                 if (0 != this.field_e) {
                   var7[var18] = var40[var17];
                 } else {
-                  var7[var18] = lf.a((byte) -43, false, var40[var17]);
+                  var7[var18] = lf.storeBytes((byte) -43, false, var40[var17]);
                 }
               }
             }
@@ -512,7 +512,7 @@ final class ci {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = lf.a((byte) -43, false, var43);
+            var7[var11] = lf.storeBytes((byte) -43, false, var43);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -623,7 +623,7 @@ final class ci {
             throw new RuntimeException("");
           }
           if (this.field_d[param1][param0] != null) {
-            var7 = cf.a(this.field_d[param1][param0], false, (byte) 16);
+            var7 = cf.extractBytes(this.field_d[param1][param0], false, (byte) 16);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

@@ -170,7 +170,7 @@ final class dc {
         return;
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -185,7 +185,7 @@ final class dc {
             field_c = (String) null;
           }
           var3 = new byte[var2_int];
-          kf.a(param1, 0, var3, 0, var2_int);
+          kf.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

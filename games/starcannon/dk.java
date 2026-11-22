@@ -230,7 +230,7 @@ class dk extends UiWidget {
         }
     }
 
-    final static byte[] a(byte param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(byte param0, Object param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -257,7 +257,7 @@ class dk extends UiWidget {
           }
           var4 = (byte[]) (param1);
           if (param2) {
-            stackIn_8_0 = rg.a((byte) 10, var4);
+            stackIn_8_0 = rg.copyBytes((byte) 10, var4);
             return stackIn_8_0;
           }
           stackIn_6_0 = var4;

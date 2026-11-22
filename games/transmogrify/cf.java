@@ -44,7 +44,7 @@ final class cf extends IntrusiveNode {
           return db.field_a == of.field_d ? true : false;
         }
         Object var2 = (Object) null;
-        cf.a((Object) null, true, (byte) 13);
+        cf.extractBytes((Object) null, true, (byte) 13);
         return db.field_a == of.field_d ? true : false;
     }
 
@@ -73,7 +73,7 @@ final class cf extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(Object param0, boolean param1, byte param2) {
+    final static byte[] extractBytes(Object param0, boolean param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -106,7 +106,7 @@ final class cf extends IntrusiveNode {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = AchievementUnlockEvent.a((byte) -29, var3);
+          stackIn_9_0 = AchievementUnlockEvent.copyBytes((byte) -29, var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

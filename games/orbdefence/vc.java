@@ -740,7 +740,7 @@ final class vc {
           }
           do {
             if (this.field_d >= 32) {
-              mk.a(this.field_l, 0, this.field_h, 32, 32);
+              mk.copyByteRange(this.field_l, 0, this.field_h, 32, 32);
               this.a(false);
               break;
             }

@@ -94,7 +94,7 @@ final class nf {
             this.field_g = this.field_g + 1;
             this.field_f[fieldTemp$1] = (byte) 0;
           }
-          ug.a(this.field_h, 0, this.field_f, 32, 32);
+          ug.copyByteRange(this.field_h, 0, this.field_f, 32, 32);
           this.a(true);
           var4_int = 0;
           var5 = param0;

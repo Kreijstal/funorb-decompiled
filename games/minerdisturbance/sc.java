@@ -10,12 +10,12 @@ final class sc {
     public static void a(int param0) {
         if (param0 != 5565) {
           Object var2 = (Object) null;
-          sc.a(true, true, (Object) null);
+          sc.extractBytes(true, true, (Object) null);
         }
         field_a = null;
     }
 
-    final static byte[] a(boolean param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -48,7 +48,7 @@ final class sc {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = kh.a(var3, (byte) -16);
+          stackIn_9_0 = kh.copyBytes(var3, (byte) -16);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

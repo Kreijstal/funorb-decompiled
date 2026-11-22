@@ -67,7 +67,7 @@ final class BufferedCacheFile {
             if (this.field_d != -1L &&
               this.field_e >= this.field_d &&
               this.field_d + (long)this.field_c >= (long)param3 + this.field_e) {
-              fk.a(this.field_g, (int)(-this.field_d + this.field_e), param0, param2, param3);
+              fk.copyByteRange(this.field_g, (int)(-this.field_d + this.field_e), param0, param2, param3);
               this.field_e = this.field_e + (long)param3;
               return;
             }
@@ -80,7 +80,7 @@ final class BufferedCacheFile {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              fk.a(this.field_k, (int)(this.field_e - this.field_f), param0, param2, var9_int);
+              fk.copyByteRange(this.field_k, (int)(this.field_e - this.field_f), param0, param2, var9_int);
               param3 = param3 - var9_int;
               this.field_e = this.field_e + (long)var9_int;
               param2 = param2 + var9_int;
@@ -111,7 +111,7 @@ final class BufferedCacheFile {
               if (this.field_h < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_h;
               }
-              fk.a(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
+              fk.copyByteRange(this.field_k, 0, param0, param2, var9_intLifetime1Lifetime1);
               param2 = param2 + var9_intLifetime1Lifetime1;
               this.field_e = this.field_e + (long)var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
@@ -154,7 +154,7 @@ final class BufferedCacheFile {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                fk.a(this.field_g, (int)(-this.field_d + var9), param0, var7 + (int)(var9 - var5_long), var13);
+                fk.copyByteRange(this.field_g, (int)(-this.field_d + var9), param0, var7 + (int)(var9 - var5_long), var13);
                 if (this.field_e < var11) {
                   param3 = (int)((long)param3 - (var11 - this.field_e));
                   this.field_e = var11;
@@ -697,7 +697,7 @@ final class BufferedCacheFile {
             if (this.field_d != -1L &&
               this.field_d + (long)this.field_g.length < (long)param2 + this.field_e) {
               var5_int = (int)((long)this.field_g.length + (this.field_d - this.field_e));
-              fk.a(param0, param3, this.field_g, (int)(this.field_e - this.field_d), var5_int);
+              fk.copyByteRange(param0, param3, this.field_g, (int)(this.field_e - this.field_d), var5_int);
               param2 = param2 - var5_int;
               this.field_e = this.field_e + (long)var5_int;
               param3 = param3 + var5_int;
@@ -714,7 +714,7 @@ final class BufferedCacheFile {
               if (this.field_d == -1L) {
                 this.field_d = this.field_e;
               }
-              fk.a(param0, param3, this.field_g, (int)(-this.field_d + this.field_e), param2);
+              fk.copyByteRange(param0, param3, this.field_g, (int)(-this.field_d + this.field_e), param2);
               this.field_e = this.field_e + (long)param2;
               if (-this.field_d + this.field_e > (long)this.field_c) {
                 this.field_c = (int)(this.field_e - this.field_d);
@@ -753,7 +753,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              fk.a(param0, (int)(-this.field_e + (var5_long + (long)param3)), this.field_k, (int)(-this.field_f + var5_long), var9);
+              fk.copyByteRange(param0, (int)(-this.field_e + (var5_long + (long)param3)), this.field_k, (int)(-this.field_f + var5_long), var9);
             }
             this.field_e = this.field_e + (long)param2;
             return;
@@ -834,7 +834,7 @@ final class BufferedCacheFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(-var2 + var4);
-            fk.a(this.field_g, (int)(var2 - this.field_d), this.field_k, (int)(var2 - this.field_f), var6);
+            fk.copyByteRange(this.field_g, (int)(var2 - this.field_d), this.field_k, (int)(var2 - this.field_f), var6);
           }
           this.field_c = 0;
           this.field_d = -1L;

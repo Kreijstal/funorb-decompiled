@@ -27,11 +27,11 @@ abstract class ri implements ma {
         this.field_a = rf.c(0);
         if (!param0) {
           byte[] var3 = (byte[]) null;
-          ri.a(123, (byte[]) null, true);
+          ri.storeBytes(123, (byte[]) null, true);
         }
     }
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
+    final static Object storeBytes(int param0, byte[] param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;
@@ -55,7 +55,7 @@ abstract class ri implements ma {
             stackIn_11_0 = (byte[]) (param1);
             return stackIn_11_0;
           }
-          stackIn_9_0 = ld.a(param0 - 30, param1);
+          stackIn_9_0 = ld.copyBytes(param0 - 30, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

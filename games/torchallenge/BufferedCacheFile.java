@@ -53,7 +53,7 @@ final class BufferedCacheFile {
             if (this.field_o != -1L &&
               (long)param3 + this.field_q > this.field_o + (long)this.field_d.length) {
               var5_int = (int)((long)this.field_d.length + this.field_o - this.field_q);
-              he.a(param2, param1, this.field_d, (int)(-this.field_o + this.field_q), var5_int);
+              he.copyByteRange(param2, param1, this.field_d, (int)(-this.field_o + this.field_q), var5_int);
               this.field_q = this.field_q + (long)var5_int;
               param3 = param3 - var5_int;
               param1 = param1 + var5_int;
@@ -70,7 +70,7 @@ final class BufferedCacheFile {
               if (this.field_o == -1L) {
                 this.field_o = this.field_q;
               }
-              he.a(param2, param1, this.field_d, (int)(this.field_q - this.field_o), param3);
+              he.copyByteRange(param2, param1, this.field_d, (int)(this.field_q - this.field_o), param3);
               this.field_q = this.field_q + (long)param3;
               if ((long)this.field_l < (this.field_q - this.field_o)) {
                 this.field_l = (int)(-this.field_o + this.field_q);
@@ -109,7 +109,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              he.a(param2, (int)(var5_long + (long)param1 - this.field_q), this.field_r, (int)(var5_long - this.field_i), var9);
+              he.copyByteRange(param2, (int)(var5_long + (long)param1 - this.field_q), this.field_r, (int)(var5_long - this.field_i), var9);
             }
             this.field_q = this.field_q + (long)param3;
             return;
@@ -173,7 +173,7 @@ final class BufferedCacheFile {
             if (-1L != this.field_o &&
               this.field_o <= this.field_q &&
               (this.field_o + (long)this.field_l) >= (this.field_q + (long)param1)) {
-              he.a(this.field_d, (int)(this.field_q - this.field_o), param3, param0, param1);
+              he.copyByteRange(this.field_d, (int)(this.field_q - this.field_o), param3, param0, param1);
               this.field_q = this.field_q + (long)param1;
               return;
             }
@@ -186,7 +186,7 @@ final class BufferedCacheFile {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              he.a(this.field_r, (int)(this.field_q - this.field_i), param3, param0, var9_int);
+              he.copyByteRange(this.field_r, (int)(this.field_q - this.field_i), param3, param0, var9_int);
               param1 = param1 - var9_int;
               this.field_q = this.field_q + (long)var9_int;
               param0 = param0 + var9_int;
@@ -217,7 +217,7 @@ final class BufferedCacheFile {
               if (this.field_f < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_f;
               }
-              he.a(this.field_r, 0, param3, param0, var9_intLifetime1Lifetime1);
+              he.copyByteRange(this.field_r, 0, param3, param0, var9_intLifetime1Lifetime1);
               param0 = param0 + var9_intLifetime1Lifetime1;
               this.field_q = this.field_q + (long)var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
@@ -260,7 +260,7 @@ final class BufferedCacheFile {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                he.a(this.field_d, (int)(var9 - this.field_o), param3, (int)(-var5_long + var9) + var7, var13);
+                he.copyByteRange(this.field_d, (int)(var9 - this.field_o), param3, (int)(-var5_long + var9) + var7, var13);
                 if (this.field_q < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_q));
                   this.field_q = var11;
@@ -385,7 +385,7 @@ final class BufferedCacheFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(-var2 + var4);
-            he.a(this.field_d, (int)(-this.field_o + var2), this.field_r, (int)(var2 - this.field_i), var6);
+            he.copyByteRange(this.field_d, (int)(-this.field_o + var2), this.field_r, (int)(var2 - this.field_i), var6);
           }
           this.field_l = 0;
           this.field_o = -1L;

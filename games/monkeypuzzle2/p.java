@@ -234,7 +234,7 @@ final class p {
         }
     }
 
-    final static Object a(byte[] param0, byte param1, boolean param2) {
+    final static Object storeBytes(byte[] param0, byte param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -260,7 +260,7 @@ final class p {
             p.clearStaticReferences(39);
           }
           if (param2) {
-            stackIn_13_0 = bk.a(0, param0);
+            stackIn_13_0 = bk.copyBytes(0, param0);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param0);

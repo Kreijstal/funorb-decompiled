@@ -70,7 +70,7 @@ final class na implements Runnable {
         return null;
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -83,7 +83,7 @@ final class na implements Runnable {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          fk.a(param1, 0, var3, 0, var2_int);
+          fk.copyByteRange(param1, 0, var3, 0, var2_int);
           var4 = -87 / ((66 - param0) / 49);
           stackIn_1_0 = var3;
           return stackIn_1_0;

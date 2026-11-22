@@ -7,7 +7,7 @@ final class pc {
     static Sprite field_c;
     static String field_d;
 
-    final static byte[] a(byte param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -25,7 +25,7 @@ final class pc {
           if (param2 instanceof byte[]) {
             var3 = (byte[]) (param2);
             if (param1) {
-              stackIn_9_0 = kk.a(var3, (byte) 103);
+              stackIn_9_0 = kk.copyBytes(var3, (byte) 103);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;
@@ -72,7 +72,7 @@ final class pc {
           lj.field_m = new ne();
           if (param0 < 50) {
             var2 = (Object) null;
-            pc.a((byte) 93, true, (Object) null);
+            pc.extractBytes((byte) 93, true, (Object) null);
             n.field_b.a(false, lj.field_m);
             return;
           }
@@ -85,7 +85,7 @@ final class pc {
           return;
         }
         var2Lifetime1 = (Object) null;
-        pc.a((byte) 93, true, (Object) null);
+        pc.extractBytes((byte) 93, true, (Object) null);
         n.field_b.a(false, lj.field_m);
     }
 

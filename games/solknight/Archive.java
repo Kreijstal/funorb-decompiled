@@ -377,7 +377,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (null != this.field_b[param1][param3]) {
-            var7 = tk.a((byte) -59, false, this.field_b[param1][param3]);
+            var7 = tk.extractBytes((byte) -59, false, this.field_b[param1][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -438,7 +438,7 @@ final class Archive {
         if (this.field_h) {
           this.field_c[param0] = this.field_j.a(param0, 0);
         } else {
-          this.field_c[param0] = w.a(this.field_j.a(param0, 0), (byte) 7, false);
+          this.field_c[param0] = w.storeBytes(this.field_j.a(param0, 0), (byte) 7, false);
         }
     }
 
@@ -731,7 +731,7 @@ final class Archive {
                 param1[3] != 0);
             }
             if (decompiledFrameRemainder0) {
-              var35 = tk.a((byte) -76, true, this.field_c[param2]);
+              var35 = tk.extractBytes((byte) -76, true, this.field_c[param2]);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -740,7 +740,7 @@ final class Archive {
             }
           }
           if (decompiledFrameRemainder1) {
-            var9 = tk.a((byte) -110, false, this.field_c[param2]);
+            var9 = tk.extractBytes((byte) -110, false, this.field_c[param2]);
           }
           try {
             var36 = jh.a(var9, 6);
@@ -803,7 +803,7 @@ final class Archive {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    fk.a(var43, var17, var44, var14Lifetime1, var19);
+                    fk.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -844,7 +844,7 @@ final class Archive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var30.readInt(true);
-                  fk.a(var43, var16, var39[var19], var38[var19], var18);
+                  fk.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                 }
@@ -856,7 +856,7 @@ final class Archive {
                   var18 = var34[var17];
                 }
                 if (this.field_e == 0) {
-                  var7[var18] = w.a(var39[var17], (byte) 7, false);
+                  var7[var18] = w.storeBytes(var39[var17], (byte) 7, false);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -869,7 +869,7 @@ final class Archive {
               var11 = var34[0];
             }
             if (this.field_e == 0) {
-              var7[var11] = w.a(var36, (byte) 7, false);
+              var7[var11] = w.storeBytes(var36, (byte) 7, false);
               return true;
             }
             var7[var11] = var43;

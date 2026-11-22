@@ -36,7 +36,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (null != this.field_f[param3][param2]) {
-            var7 = MovingBlock.a(false, 22692, this.field_f[param3][param2]);
+            var7 = MovingBlock.extractBytes(false, 22692, this.field_f[param3][param2]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -418,7 +418,7 @@ final class Archive {
         if (this.field_e) {
           this.field_d[param1] = this.field_c.a(-1, param1);
         } else {
-          this.field_d[param1] = qk.a(this.field_c.a(-1, param1), false, (byte) -88);
+          this.field_d[param1] = qk.storeBytes(this.field_c.a(-1, param1), false, (byte) -88);
         }
     }
 
@@ -661,7 +661,7 @@ final class Archive {
               decompiledFrameRemainder0 = (stackIn_29_0[3] != 0);
             }
             if (decompiledFrameRemainder0) {
-              var35 = MovingBlock.a(true, 22692, this.field_d[param1]);
+              var35 = MovingBlock.extractBytes(true, 22692, this.field_d[param1]);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -670,7 +670,7 @@ final class Archive {
             }
           }
           if (decompiledFrameRemainder1) {
-            var9 = MovingBlock.a(false, param0 ^ 22688, this.field_d[param1]);
+            var9 = MovingBlock.extractBytes(false, param0 ^ 22688, this.field_d[param1]);
           }
           try {
             var36 = UiWidget.a(-127, var9);
@@ -730,7 +730,7 @@ final class Archive {
                     var21 = var34[var20];
                   }
                   if (param2 == var21) {
-                    pd.a(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
+                    pd.copyByteRange(var43, var17Lifetime4, var44, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -769,7 +769,7 @@ final class Archive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) 113);
-                pd.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
+                pd.copyByteRange(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -781,7 +781,7 @@ final class Archive {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (this.field_i == 0) {
-                var7[var18Lifetime2] = qk.a(var40[var17Lifetime3], false, (byte) -19);
+                var7[var18Lifetime2] = qk.storeBytes(var40[var17Lifetime3], false, (byte) -19);
               } else {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               }
@@ -793,7 +793,7 @@ final class Archive {
               var11 = var34[0];
             }
             if (this.field_i == 0) {
-              var7[var11] = qk.a(var43, false, (byte) 8);
+              var7[var11] = qk.storeBytes(var43, false, (byte) 8);
             } else {
               var7[var11] = var36;
             }

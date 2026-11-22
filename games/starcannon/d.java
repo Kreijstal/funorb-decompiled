@@ -512,7 +512,7 @@ final class d {
         }
     }
 
-    final static Object a(boolean param0, byte param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, byte param1, byte[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         DirectByteStorage var4 = null;
@@ -535,7 +535,7 @@ final class d {
             return stackIn_6_0;
           }
           if (param0) {
-            stackIn_11_0 = rg.a((byte) 10, param2);
+            stackIn_11_0 = rg.copyBytes((byte) 10, param2);
             return stackIn_11_0;
           }
           stackIn_9_0 = (byte[]) (param2);
@@ -562,7 +562,7 @@ final class d {
         field_l = null;
         if (param0 != 32) {
           byte[] var2 = (byte[]) null;
-          d.a(false, (byte) -38, (byte[]) null);
+          d.storeBytes(false, (byte) -38, (byte[]) null);
         }
     }
 

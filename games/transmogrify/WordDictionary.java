@@ -175,7 +175,7 @@ final class WordDictionary {
             array$2 = new byte[1 + var5];
             this.field_h[var3_int] = array$2;
             this.field_h[var3_int][0] = (byte)var4_int;
-            ji.a(param0.payload, param0.position, this.field_h[var3_int], 1, var5);
+            ji.copyByteRange(param0.payload, param0.position, this.field_h[var3_int], 1, var5);
             param0.position = param0.position + var5;
           }
           this.field_g = new byte[param0.readVarInt(17783)][];
@@ -185,7 +185,7 @@ final class WordDictionary {
             array$1 = new byte[1 + var5Lifetime1];
             this.field_g[var3_intLifetime1] = array$1;
             this.field_g[var3_intLifetime1][0] = (byte)var4_intLifetime1;
-            ji.a(param0.payload, param0.position, this.field_g[var3_intLifetime1], 1, var5Lifetime1);
+            ji.copyByteRange(param0.payload, param0.position, this.field_g[var3_intLifetime1], 1, var5Lifetime1);
             param0.position = param0.position + var5Lifetime1;
           }
           var3_intLifetime2 = 0;

@@ -86,7 +86,7 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new PcmSample(param3.field_h, -param2 + param0);
-          ji.a(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
+          ji.copyByteRange(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -308,7 +308,7 @@ final class fi {
             this.field_c = this.field_c + 1;
             this.field_g[fieldTemp$1] = (byte) 0;
           }
-          fk.a(this.field_e, 0, this.field_g, 32, 32);
+          fk.copyByteRange(this.field_e, 0, this.field_g, 32, 32);
           this.c(24843);
           var4_int = 0;
           var5 = param1;

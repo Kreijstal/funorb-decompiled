@@ -26,7 +26,7 @@ abstract class tf {
         int var1 = -17 / ((param0 + 7) / 63);
     }
 
-    final static byte[] a(int param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(int param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -54,7 +54,7 @@ abstract class tf {
           }
           var3 = (byte[]) (param2);
           if (param1) {
-            stackIn_11_0 = cl.a(0, var3);
+            stackIn_11_0 = cl.copyBytes(0, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;

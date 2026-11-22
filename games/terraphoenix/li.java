@@ -68,7 +68,7 @@ final class li {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -80,7 +80,7 @@ final class li {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          ka.a(param1, param0, var3, 0, var2_int);
+          ka.copyByteRange(param1, param0, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
