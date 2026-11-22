@@ -290,16 +290,16 @@ final class fe {
           this.field_f.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.c(false);
+          var4 = param0.readUnsignedSmart(false);
           if (var4 == 0) {
             break;
           }
           this.field_w[var3] = var4;
-          this.field_l[var3] = param0.d(-95);
-          this.field_r[var3] = param0.c(false);
+          this.field_l[var3] = param0.readSignedSmart(-95);
+          this.field_r[var3] = param0.readUnsignedSmart(false);
         }
-        this.field_j = param0.c(false);
-        this.field_s = param0.c(false);
+        this.field_j = param0.readUnsignedSmart(false);
+        this.field_s = param0.readUnsignedSmart(false);
         this.field_n = param0.readUnsignedShort(127);
         this.field_m = param0.readUnsignedShort(-105);
         this.field_k = new tj();

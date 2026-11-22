@@ -114,12 +114,12 @@ final class sc {
             var4_int = var9.readUnsignedByte((byte) 114);
             if (var4_int != 0) {
               var13 = new byte[var4_int];
-              var9.a(var13, var4_int, -122, 0);
+              var9.readBytes(var13, var4_int, -122, 0);
             } else {
               var5 = null;
             }
             var9.position = var9.position + 4;
-            if (!var9.l(-24685)) {
+            if (!var9.verifyCrc32(-24685)) {
               PacketBuffer.a(-1);
               return;
             }

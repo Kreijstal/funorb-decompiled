@@ -25,7 +25,7 @@ final class pn implements Runnable {
               byte[] var13 = new byte[var4];
               byte[] var11 = var13;
               byte[] var5 = var11;
-              var9.a(0, param1 + 7186, var4, var13);
+              var9.readBytes(0, param1 + 7186, var4, var13);
               byte[] stackIn_24_0 = var5;
               return stackIn_24_0;
             }
@@ -82,7 +82,7 @@ final class pn implements Runnable {
               }
             }
             IntrusiveNode.a(10L, false);
-            PacketBuffer.a(5, (Object) null, this.field_f);
+            PacketBuffer.postDummyActionEvent(5, (Object) null, this.field_f);
           }
         } catch (Exception exception) {
           String var5 = (String) null;

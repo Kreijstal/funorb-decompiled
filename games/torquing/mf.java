@@ -97,7 +97,7 @@ final class mf extends am {
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                stackIn_13_1 = (1 == param0.i((byte) -101));
+                stackIn_13_1 = (1 == param0.readUnsignedByte((byte) -101));
                 this.field_p = stackIn_13_1;
               }
             } else {

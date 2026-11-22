@@ -126,7 +126,7 @@ final class ii extends ig {
           var3 = pg.field_fb;
           var3.f(param1, 950);
           var3.writeByte(false, param0.field_q);
-          var3.c(param0.field_n, -115);
+          var3.writeShort(param0.field_n, -115);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ii.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

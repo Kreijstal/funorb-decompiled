@@ -13,7 +13,7 @@ final class ef {
         }
         try {
           var3.writeByte(param0.field_l, (byte) -95);
-          var3.b(param0.field_k, (byte) -122);
+          var3.writeShort(param0.field_k, (byte) -122);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

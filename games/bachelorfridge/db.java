@@ -17,7 +17,7 @@ final class db {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = qi.a(param0, (byte) 115);
-          var3 = param0.b(true);
+          var3 = param0.readByte(true);
           var4 = param0.readSignedShort((byte) -85);
           if (param1 != 95) {
             field_a = (vr) null;

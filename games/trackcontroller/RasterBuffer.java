@@ -201,7 +201,7 @@ abstract class RasterBuffer {
                 }
               }
             }
-            param1.a(var4, false);
+            param1.appendCrc32(var4, false);
             var18.unlink(-79);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

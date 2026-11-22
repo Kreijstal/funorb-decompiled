@@ -26,7 +26,7 @@ final class AdminCheatOverlay {
             if (param2 != -48) {
               field_f = (BattleUnit) null;
             }
-            var3_int = param1.h(-115);
+            var3_int = param1.readUnsignedSmart(-115);
             if (var3_int > param0) {
               var3_int = param0;
             }

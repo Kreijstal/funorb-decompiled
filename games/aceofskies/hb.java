@@ -136,7 +136,7 @@ final class hb {
                             }
                             if (decompiledSharedTail0) {
                               param0.writeByte(-1336879960, 2);
-                              param0.a(-47, (String) (var10));
+                              param0.writeString(-47, (String) (var10));
                               if (var12) {
                                 param0.writeByte(-1336879960, 1);
                                 param0.writeLong((byte) -102, ((Number) (var10)).longValue());

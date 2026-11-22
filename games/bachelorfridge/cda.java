@@ -80,7 +80,7 @@ final class cda {
                         var13 = param1.readInt(-87);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var22[var12_int], var13, 128, 0);
+                        param1.readBytes(var22[var12_int], var13, 128, 0);
                       }
                     }
                     var18.field_g[var5] = var6_int;

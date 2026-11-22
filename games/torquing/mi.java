@@ -85,7 +85,7 @@ final class mi extends am {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              stackIn_9_1 = (1 == param0.i((byte) -101));
+              stackIn_9_1 = (1 == param0.readUnsignedByte((byte) -101));
               this.field_p = stackIn_9_1;
             }
           } else {

@@ -178,20 +178,20 @@ final class IntrusiveDeque {
           var8.b(param2, param0);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.b(1, -49152);
-          var8.c(param1.field_n, 121);
-          var8.c(param1.field_m, 88);
-          var8.c(param1.field_p, 62);
-          var8.a(-803539344, param1.field_o);
-          var8.a(-803539344, param1.field_i);
-          var8.a(-803539344, param1.field_j);
-          var8.a(-803539344, param1.field_l);
-          var8.b(param1.field_f.length, -49152);
+          var8.writeByte(1, -49152);
+          var8.writeShort(param1.field_n, 121);
+          var8.writeShort(param1.field_m, 88);
+          var8.writeShort(param1.field_p, 62);
+          var8.writeInt(-803539344, param1.field_o);
+          var8.writeInt(-803539344, param1.field_i);
+          var8.writeInt(-803539344, param1.field_j);
+          var8.writeInt(-803539344, param1.field_l);
+          var8.writeByte(param1.field_f.length, -49152);
           for (var5 = 0; param1.field_f.length > var5; var5++) {
-            var7.a(-803539344, param1.field_f[var5]);
+            var7.writeInt(-803539344, param1.field_f[var5]);
           }
-          var8.a((byte) -108, var4);
-          var8.a(var8.position - var4, (byte) -124);
+          var8.appendCrc32((byte) -108, var4);
+          var8.backpatchByteLength(var8.position - var4, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "pj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

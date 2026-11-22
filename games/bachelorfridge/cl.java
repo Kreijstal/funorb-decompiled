@@ -68,7 +68,7 @@ final class cl extends vm {
             while (var2 != null) {
               this.field_n.position = 0;
               this.field_n.writeByte(1, 0);
-              this.field_n.a(4096, var2.secondaryKey);
+              this.field_n.writeLong40(4096, var2.secondaryKey);
               this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_a.a(var2, (byte) -64);
               var2 = (qfa) (this.field_f.a((byte) 108));
@@ -80,7 +80,7 @@ final class cl extends vm {
             while (var2Lifetime1 != null) {
               this.field_n.position = 0;
               this.field_n.writeByte(0, 0);
-              this.field_n.a(param0 + 4027, var2Lifetime1.secondaryKey);
+              this.field_n.writeLong40(param0 + 4027, var2Lifetime1.secondaryKey);
               this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_l.a(var2Lifetime1, (byte) 90);
               var2Lifetime1 = (qfa) (this.field_c.a((byte) 94));
@@ -339,7 +339,7 @@ final class cl extends vm {
             this.field_n.position = 0;
             this.field_n.writeByte(6, 0);
             this.field_n.writeMedium(-1607631824, 3);
-            this.field_n.b(0, -124);
+            this.field_n.writeShort(0, -124);
             this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,7 +420,7 @@ final class cl extends vm {
               stackIn_6_1 = 3;
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, 0);
-            this.field_n.a(4096, 0L);
+            this.field_n.writeLong40(4096, 0L);
             this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,17 +23,17 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         var7 = Torquing.field_u;
         try {
-          param1.i((byte) -101);
-          var2_int = param1.i((byte) -101);
+          param1.readUnsignedByte((byte) -101);
+          var2_int = param1.readUnsignedByte((byte) -101);
           var3 = tj.a(var2_int, 37);
-          var3.field_k = param1.i((byte) -101);
-          var4 = param1.i((byte) -101);
+          var3.field_k = param1.readUnsignedByte((byte) -101);
+          var4 = param1.readUnsignedByte((byte) -101);
           if (param0 >= -46) {
             stackIn_3_0 = (am) null;
             return stackIn_3_0;
           }
           for (var5 = 0; var4 > var5; var5++) {
-            var6 = param1.i((byte) -101);
+            var6 = param1.readUnsignedByte((byte) -101);
             var3.a(param1, 35, var6);
           }
           var3.a((byte) 125);

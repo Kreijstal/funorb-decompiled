@@ -37,8 +37,8 @@ final class mh {
           for (var5 = param2; var5 < param0.field_r.length; var5++) {
             var7.writeInt(param0.field_r[var5], 8959);
           }
-          var8.d(var4, 8600);
-          var8.j(-var4 + var8.position, -119);
+          var8.appendCrc32(var4, 8600);
+          var8.backpatchByteLength(-var4 + var8.position, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

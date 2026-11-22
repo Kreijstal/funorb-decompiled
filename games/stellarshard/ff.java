@@ -49,24 +49,24 @@ final class ff extends nh {
           mg.field_y = 0;
         } else {
           mg.field_y = var9.readUnsignedShort((byte) 79);
-          il.field_w = var9.c(true);
+          il.field_w = var9.readUnsignedMedium(true);
         }
         stackIn_9_0 = (var9.readUnsignedByte(4) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        ld.field_z = var9.e((byte) 122);
+        ld.field_z = var9.readString((byte) 122);
         var5 = -101 % ((param1 - 46) / 36);
         if (var4 == 0) {
           oe.field_d = ld.field_z;
         } else {
-          oe.field_d = var9.e((byte) 110);
+          oe.field_d = var9.readString((byte) 110);
         }
         if (ii.field_J == 1) {
           var9.readUnsignedShort((byte) 105);
-          var9.e((byte) 106);
+          var9.readString((byte) 106);
         } else {
           if (ii.field_J == 4) {
             var9.readUnsignedShort((byte) 105);
-            var9.e((byte) 106);
+            var9.readString((byte) 106);
           }
         }
         if (!param0) {

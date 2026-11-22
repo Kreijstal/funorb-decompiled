@@ -100,7 +100,7 @@ final class wq {
             int var7 = this.field_b.readInt((byte) 122);
             int var8 = this.field_b.readInt((byte) 125);
             byte[] var14 = new byte[64];
-            this.field_b.a(0, 7186, 64, var14);
+            this.field_b.readBytes(0, 7186, 64, var14);
             CachedArchiveProvider var10 = new CachedArchiveProvider(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
             this.field_g[param4] = var10;
             CachedArchiveProvider stackIn_10_0 = var10;
@@ -152,7 +152,7 @@ final class wq {
         byte[] var13 = new byte[var10.payload.length - var10.position];
         byte[] var11 = var13;
         byte[] var4 = var11;
-        var10.a(0, 7186, var13.length, var13);
+        var10.readBytes(0, 7186, var13.length, var13);
         if (null != this.field_f &&
           null != this.field_c) {
           java.math.BigInteger var12 = new java.math.BigInteger(var13);

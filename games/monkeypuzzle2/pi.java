@@ -95,7 +95,7 @@ final class pi extends DualLinkNode {
               }
             }
           } else {
-            this.field_n = ma.a(122, '<', param0.f(-1));
+            this.field_n = ma.a(122, '<', param0.readString(-1));
           }
           if (param1 != -305) {
             field_l = (Random) null;

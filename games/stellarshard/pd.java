@@ -326,7 +326,7 @@ final class pd extends vk {
             field_u = (int[]) null;
           }
           var3.writeByte(false, 0);
-          var3.c(param1.field_t, -128);
+          var3.writeShort(param1.field_t, -128);
           var3.writeByte(false, param1.field_q);
           var3.writeByte(false, param1.field_r);
         } catch (RuntimeException runtimeException) {

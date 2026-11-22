@@ -12,7 +12,7 @@ class ec extends kd {
             ec.b((byte) 6);
           }
           param1.writeLong(this.field_e, 2147483647);
-          param1.a(this.field_c, param0 + 27939);
+          param1.writeBase38String(this.field_c, param0 + 27939);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ec.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

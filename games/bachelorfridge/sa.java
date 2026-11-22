@@ -450,12 +450,12 @@ final class sa extends pu {
           }
           ce.field_y = true;
           for (var3Lifetime2 = 0; LevitateEvent.field_r.length > var3Lifetime2; var3Lifetime2++) {
-            LevitateEvent.field_r[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).b(true);
+            LevitateEvent.field_r[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(true);
           }
           tq.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
           ena.field_n = ((PacketBuffer) ((Object) var1)).readUnsignedByte(16711935);
           for (var3Lifetime3 = 0; var3Lifetime3 < MouseWheelInput.field_c.length; var3Lifetime3++) {
-            MouseWheelInput.field_c[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).b(true);
+            MouseWheelInput.field_c[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

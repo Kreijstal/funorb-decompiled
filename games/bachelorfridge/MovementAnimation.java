@@ -13,7 +13,7 @@ abstract class MovementAnimation extends AnimationNode {
     int field_m;
     CreatureRef field_p;
 
-    final static String a(int param0, byte[] param1, int param2, int param3) {
+    final static String decodeLegacyUtf8(int param0, byte[] param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

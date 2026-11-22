@@ -144,7 +144,7 @@ final class rd extends am {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_u = param0.i((byte) -101);
+                this.field_u = param0.readUnsignedByte((byte) -101);
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
@@ -158,7 +158,7 @@ final class rd extends am {
               this.field_w = param0.readUnsignedShort(7088);
             }
           } else {
-            this.field_s = param0.i((byte) -101);
+            this.field_s = param0.readUnsignedByte((byte) -101);
           }
           if (param1 != 35) {
             this.field_u = 81;

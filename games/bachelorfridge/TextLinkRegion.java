@@ -134,7 +134,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var2Lifetime1 = SoftwareRasterizer.field_i;
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ie.field_b);
-            var14 = lga.a(true, new String[]{aa.field_m[SuperSpeedAllEvent.field_q]}, uca.field_c);
+            var14 = lga.a(true, new String[]{aa.field_m[SuperSpeedAllEvent.field_q]}, Crc32Table.field_c);
             var5 = ShuffleEvent.field_q.c(var14, TeleportEvent.field_r);
             var6Lifetime1 = ShuffleEvent.field_q.measureWrappedHeight(var14, TeleportEvent.field_r, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
             var7Lifetime1 = StatusEffectInfo.field_c + (TeleportEvent.field_r - var5) / 2;

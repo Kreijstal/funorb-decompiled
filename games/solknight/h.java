@@ -35,9 +35,9 @@ final class h {
           if (param2 < 76) {
             field_g = -128;
           }
-          var3.c(78, 2);
-          var3.c(5, 0);
-          var3.c(-125, param1.field_k);
+          var3.writeByte(78, 2);
+          var3.writeByte(5, 0);
+          var3.writeByte(-125, param1.field_k);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

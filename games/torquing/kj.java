@@ -28,7 +28,7 @@ abstract class kj {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             GameApplet.a(var1, -2933);
-            wa.field_d.c((byte) 48, -var2 + var1.position);
+            wa.field_d.backpatchByteLength((byte) 48, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

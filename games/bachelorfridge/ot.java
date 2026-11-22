@@ -58,7 +58,7 @@ class ot extends iga {
           if (param1) {
             this.field_f = -1L;
           }
-          param0.a(26, this.field_g);
+          param0.writeBase38String(26, this.field_g);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

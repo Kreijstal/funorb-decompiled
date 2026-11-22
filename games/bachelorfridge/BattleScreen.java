@@ -211,7 +211,7 @@ final class BattleScreen extends dfa {
             this.field_W.c(-80 + var5.field_a, -40 + var5.field_c, -40);
             this.field_J = true;
             this.field_f = 5;
-            uca.a(20, (byte) -63);
+            Crc32Table.a(20, (byte) -63);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -470,9 +470,9 @@ final class BattleScreen extends dfa {
 
     final void c(boolean param0) {
         this.field_M = !this.field_h.field_N ? 1 : 2;
-        uca.a(23, (byte) -54);
+        Crc32Table.a(23, (byte) -54);
         if (!(this.field_h.field_e > 0)) {
-          uca.a(29, (byte) 111);
+          Crc32Table.a(29, (byte) 111);
         }
         this.d((byte) 52);
         if (param0) {
@@ -581,7 +581,7 @@ final class BattleScreen extends dfa {
               ((AttackOrder) (this.field_Z)).field_k = var7Lifetime1 - 1;
               this.k(-1);
               this.field_ab = false;
-              uca.a(25, (byte) 114);
+              Crc32Table.a(25, (byte) 114);
             }
           } else {
             this.m(10);
@@ -747,7 +747,7 @@ final class BattleScreen extends dfa {
           this.field_P.field_s.field_s = param2.field_i;
           this.k(-1);
           this.field_l = false;
-          uca.a(21, (byte) 122);
+          Crc32Table.a(21, (byte) 122);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.TA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -884,7 +884,7 @@ final class BattleScreen extends dfa {
               this.field_R = mk.field_p;
             }
             if (var4 != 0) {
-              uca.a(40, (byte) -126);
+              Crc32Table.a(40, (byte) -126);
             }
           }
           if (this.field_f > 0) {
@@ -2173,7 +2173,7 @@ final class BattleScreen extends dfa {
             this.field_cb = true;
             this.field_J = false;
             this.field_e.a(false, this.field_Y, this.field_h.field_A);
-            uca.a(22, (byte) 103);
+            Crc32Table.a(22, (byte) 103);
             RasterBuffer.a(35, 7758);
           }
           this.field_k = this.field_k - 1;

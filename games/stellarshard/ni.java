@@ -92,7 +92,7 @@ final class ni {
               stackIn_2_0 = (String) null;
               return stackIn_2_0;
             }
-            var3_int = param2.d((byte) 113);
+            var3_int = param2.readUnsignedSmart((byte) 113);
             if (param1 < var3_int) {
               var3_int = param1;
             }

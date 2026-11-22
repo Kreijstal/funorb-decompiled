@@ -141,8 +141,8 @@ final class dc extends a {
         }
         try {
           var3.e(param1, -2147483648);
-          var3.c(36, param0.field_i);
-          var3.c(108, param0.field_h);
+          var3.writeByte(36, param0.field_i);
+          var3.writeByte(108, param0.field_h);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "dc.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

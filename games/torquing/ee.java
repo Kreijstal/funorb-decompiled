@@ -818,10 +818,10 @@ final class ee extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_u = param0.i((byte) -101);
+            this.field_u = param0.readUnsignedByte((byte) -101);
           } else {
             if (var4_int == 1) {
-              stackIn_7_1 = (param0.i((byte) -101) == 1);
+              stackIn_7_1 = (param0.readUnsignedByte((byte) -101) == 1);
               this.field_p = stackIn_7_1;
             }
           }

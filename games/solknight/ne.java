@@ -59,7 +59,7 @@ final class ne {
         var14 = new byte[var11.payload.length - var11.position];
         var12 = var14;
         var4 = var12;
-        var11.a(var14.length, 0, -118, var14);
+        var11.readBytes(var14.length, 0, -118, var14);
         if (null != this.field_c &&
           this.field_e != null) {
           var13 = new java.math.BigInteger(var14);
@@ -116,7 +116,7 @@ final class ne {
             var6_int = this.field_b.readInt(true);
             var7 = this.field_b.readInt(true);
             var13 = new byte[64];
-            this.field_b.a(64, 0, -127, var13);
+            this.field_b.readBytes(64, 0, -127, var13);
             var9 = new CachedArchiveSource(param4, param1, param3, this.field_h, this.field_l, var6_int, var13, var7, param2);
             this.field_k[param4] = var9;
             stackIn_13_0 = var9;

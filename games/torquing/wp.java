@@ -26,11 +26,11 @@ final class wp extends am {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_x = param0.i((byte) -101);
+            this.field_x = param0.readUnsignedByte((byte) -101);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_z = param0.i((byte) -101);
+                this.field_z = param0.readUnsignedByte((byte) -101);
               }
             } else {
               this.field_s = param0.readUnsignedShort(param1 ^ 7059);

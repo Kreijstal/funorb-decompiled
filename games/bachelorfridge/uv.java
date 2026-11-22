@@ -145,7 +145,7 @@ final class uv extends k {
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         try {
-          if (uca.field_a != eia.field_a) {
+          if (Crc32Table.field_a != eia.field_a) {
             return false;
           }
           var2_long = f.b((byte) 73);

@@ -81,16 +81,16 @@ final class SynthInstrument {
           this.field_a.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.h(16711935);
+          var4 = param0.readUnsignedSmart(16711935);
           if (var4 == 0) {
             break;
           }
           this.field_q[var3] = var4;
           this.field_h[var3] = param0.readSignedSmart(-4095);
-          this.field_l[var3] = param0.h(16711935);
+          this.field_l[var3] = param0.readUnsignedSmart(16711935);
         }
-        this.field_s = param0.h(16711935);
-        this.field_w = param0.h(16711935);
+        this.field_s = param0.readUnsignedSmart(16711935);
+        this.field_w = param0.readUnsignedSmart(16711935);
         this.field_b = param0.readUnsignedShort((byte) 45);
         this.field_m = param0.readUnsignedShort((byte) 93);
         this.field_e = new SoundFilter();

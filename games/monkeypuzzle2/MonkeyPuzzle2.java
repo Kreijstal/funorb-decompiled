@@ -73,7 +73,7 @@ public final class MonkeyPuzzle2 extends bi {
           ad.clearStaticReferences((byte) 123);
           el.a(true);
           vj.a(17812);
-          PacketBuffer.n(-74);
+          PacketBuffer.clearBufferStatics(-74);
           pf.a((byte) -118);
           mb.a(-128);
           qg.clearStaticReferences(1);

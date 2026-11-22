@@ -26,7 +26,7 @@ abstract class ArchiveSource {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             SpriteState.a(var1, (byte) -115);
-            id.field_c.b(1, -var2 + var1.position);
+            id.field_c.backpatchByteLength(1, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

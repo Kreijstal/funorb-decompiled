@@ -314,7 +314,7 @@ public final class TrackController extends GameShell {
         BitmapFont.clearStaticReferences();
         e.clearStaticReferences(-1102);
         qf.clearStaticReferences((byte) 98);
-        PacketBuffer.i(3);
+        PacketBuffer.clearBufferStatics(3);
         qg.b(false);
         ai.clearStaticReferences((byte) 116);
         o.b((byte) 88);

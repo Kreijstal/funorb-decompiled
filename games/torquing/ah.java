@@ -50,7 +50,7 @@ class ah extends qf {
           if (!BufferedSocket.a(1, 0)) {
             return false;
           }
-          oo.field_a = kj.field_d.i((byte) -101);
+          oo.field_a = kj.field_d.readUnsignedByte((byte) -101);
           kj.field_d.position = 0;
         }
         if (oo.field_a == -2) {

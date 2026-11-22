@@ -38,7 +38,7 @@ final class j extends jc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = gj.a(param1, 0, 255, param2);
+            stackIn_4_0 = gj.computeCrc32(param1, 0, 255, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = 115;

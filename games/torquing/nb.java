@@ -246,15 +246,15 @@ final class nb extends am {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_18_1 = (param0.i((byte) -101) == 1);
+                stackIn_18_1 = (param0.readUnsignedByte((byte) -101) == 1);
                 this.field_p = stackIn_18_1;
               }
             } else {
-              stackIn_14_1 = (param0.i((byte) -101) == 1);
+              stackIn_14_1 = (param0.readUnsignedByte((byte) -101) == 1);
               this.field_t = stackIn_14_1;
             }
           } else {
-            stackIn_10_1 = (1 == param0.i((byte) -101));
+            stackIn_10_1 = (1 == param0.readUnsignedByte((byte) -101));
             this.field_s = stackIn_10_1;
           }
           if (param1 != 35) {

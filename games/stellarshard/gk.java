@@ -91,11 +91,11 @@ final class gk {
               uc.field_c.position = 0;
               uc.field_c.writeInt(0, pl.field_P.nextInt());
               uc.field_c.writeInt(0, pl.field_P.nextInt());
-              uc.field_c.a(-104, var14);
-              uc.field_c.a(-106, var8);
+              uc.field_c.writePrefixedString(-104, var14);
+              uc.field_c.writePrefixedString(-106, var8);
               var15 = (CharSequence) ((Object) param3);
-              uc.field_c.a(-117, IntrusiveNode.a(var15, param6));
-              uc.field_c.c(param0, -127);
+              uc.field_c.writePrefixedString(-117, IntrusiveNode.a(var15, param6));
+              uc.field_c.writeShort(param0, -127);
               uc.field_c.writeByte(false, param4);
               uc.field_c.writeByte(false, var9);
               pg.field_fb.writeByte(false, 18);
@@ -105,9 +105,9 @@ final class gk {
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              pg.field_fb.b(var11_ref_StringLifetime4, -9799);
+              pg.field_fb.writeString(var11_ref_StringLifetime4, -9799);
               ha.a(fj.field_l, pg.field_fb, uc.field_c, -105, u.field_o);
-              pg.field_fb.d(-1, -var10 + pg.field_fb.position);
+              pg.field_fb.backpatchShortLength(-1, -var10 + pg.field_fb.position);
             } else {
               uc.field_c.position = 0;
               uc.field_c.writeInt(0, pl.field_P.nextInt());
@@ -119,7 +119,7 @@ final class gk {
               } else {
                 stackIn_15_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_14_1, stackIn_15_2);
               stackIn_17_0 = uc.field_c;
               stackIn_17_1 = 126;
               if (!param5.a(5)) {
@@ -127,12 +127,12 @@ final class gk {
               } else {
                 stackIn_18_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_17_1, stackIn_18_2);
               pg.field_fb.writeByte(false, 16);
               pg.field_fb.position = pg.field_fb.position + 1;
               var9 = pg.field_fb.position;
               ha.a(fj.field_l, pg.field_fb, uc.field_c, -121, u.field_o);
-              pg.field_fb.a(pg.field_fb.position - var9, (byte) -94);
+              pg.field_fb.backpatchByteLength(pg.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);
             GzipDecompressor.field_d = i.field_d;
@@ -173,7 +173,7 @@ final class gk {
               if (GameEntity.b(64, var10Lifetime1)) {
                 var11 = fc.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  fc.field_b[var12] = ae.field_N.f((byte) 94);
+                  fc.field_b[var12] = ae.field_N.readPrefixedString((byte) 94);
                 }
                 IntrusiveDeque.c(-2290);
                 ta.field_u = false;
@@ -185,12 +185,12 @@ final class gk {
           if (GzipDecompressor.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
             if (ja.field_t == 255) {
-              var9_ref_String = ae.field_N.a(0);
+              var9_ref_String = ae.field_N.readNullableString(0);
               if (var9_ref_String != null) {
                 dj.a(false, hf.a((byte) -101), var9_ref_String);
               }
             } else {
-              NodeHashTableIterator.field_a = ae.field_N.e((byte) 96);
+              NodeHashTableIterator.field_a = ae.field_N.readString((byte) 96);
             }
             IntrusiveDeque.c(-2290);
             ta.field_u = false;

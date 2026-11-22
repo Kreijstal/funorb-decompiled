@@ -43,15 +43,15 @@ final class pf {
           var6.b(true, param2);
           var6.position = var6.position + 1;
           var5 = var6.position;
-          var6.b(1, -49152);
-          var6.b(param1.field_m, -49152);
-          var6.b(param1.field_n, -49152);
-          var6.a(-803539344, param1.field_l);
-          var6.a(-803539344, param1.field_i);
-          var6.a(-803539344, param1.field_e);
-          var6.a(-803539344, param1.field_k);
-          var6.a((byte) -47, var5);
-          var6.a(-var5 + var6.position, (byte) -116);
+          var6.writeByte(1, -49152);
+          var6.writeByte(param1.field_m, -49152);
+          var6.writeByte(param1.field_n, -49152);
+          var6.writeInt(-803539344, param1.field_l);
+          var6.writeInt(-803539344, param1.field_i);
+          var6.writeInt(-803539344, param1.field_e);
+          var6.writeInt(-803539344, param1.field_k);
+          var6.appendCrc32((byte) -47, var5);
+          var6.backpatchByteLength(-var5 + var6.position, (byte) -116);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "pf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

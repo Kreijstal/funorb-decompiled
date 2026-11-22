@@ -130,7 +130,7 @@ final class vh {
             var6_int = this.field_d.readInt(false);
             var7 = this.field_d.readInt(false);
             var13 = new byte[param0];
-            this.field_d.a(0, (byte) -101, 64, var13);
+            this.field_d.readBytes(0, (byte) -101, 64, var13);
             var9 = new wc(param4, param1, param2, this.field_g, this.field_j, var6_int, var13, var7, param3);
             this.field_a[param4] = var9;
             stackIn_10_0 = var9;
@@ -261,7 +261,7 @@ final class vh {
         var14 = new byte[-var11.position + var11.payload.length];
         var12 = var14;
         var4 = var12;
-        var11.a(0, (byte) -124, var14.length, var14);
+        var11.readBytes(0, (byte) -124, var14.length, var14);
         if (null != this.field_c &&
           null != this.field_b) {
           var6_ref_java_math_BigInteger = new java.math.BigInteger(var14);

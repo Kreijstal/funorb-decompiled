@@ -107,7 +107,7 @@ final class c {
             var3 = (ResourceArchive) null;
             c.a(18, (String) null, (String) null, (String) null, (ResourceArchive) null);
           }
-          stackIn_3_0 = new ll(param1.g(65536), param1.g(65536), param1.g(param0 ^ 65547), param1.g(65536), param1.e((byte) 62), param1.e((byte) 62), param1.i((byte) -101));
+          stackIn_3_0 = new ll(param1.readShort(65536), param1.readShort(65536), param1.readShort(param0 ^ 65547), param1.readShort(65536), param1.readUnsignedMedium((byte) 62), param1.readUnsignedMedium((byte) 62), param1.readUnsignedByte((byte) -101));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

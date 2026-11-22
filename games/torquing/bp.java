@@ -26,19 +26,19 @@ final class bp {
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(90, param1);
-          var8.a(param0.field_q, 118);
-          var8.a(param0.field_n, param1 ^ 58);
-          var8.a(param0.field_m, 88);
-          var8.b((byte) 60, param0.field_p);
-          var8.b((byte) 60, param0.field_r);
-          var8.b((byte) 60, param0.field_o);
-          var8.b((byte) 60, param0.field_j);
+          var8.writeShort(param0.field_q, 118);
+          var8.writeShort(param0.field_n, param1 ^ 58);
+          var8.writeShort(param0.field_m, 88);
+          var8.writeInt((byte) 60, param0.field_p);
+          var8.writeInt((byte) 60, param0.field_r);
+          var8.writeInt((byte) 60, param0.field_o);
+          var8.writeInt((byte) 60, param0.field_j);
           var8.writeByte(90, param0.field_k.length);
           for (var5 = 0; var5 < param0.field_k.length; var5++) {
-            var7.b((byte) 60, param0.field_k[var5]);
+            var7.writeInt((byte) 60, param0.field_k[var5]);
           }
-          var8.a(var4, true);
-          var8.c((byte) 48, var8.position - var4);
+          var8.appendCrc32(var4, true);
+          var8.backpatchByteLength((byte) 48, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

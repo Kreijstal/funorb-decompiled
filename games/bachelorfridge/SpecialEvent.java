@@ -157,7 +157,7 @@ abstract class SpecialEvent extends CreatureEvent {
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          param1.b(this.moveId, -113);
+          param1.writeShort(this.moveId, -113);
           if (param0 > -12) {
             field_n = (al[][]) null;
           }

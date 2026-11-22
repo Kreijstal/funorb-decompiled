@@ -91,13 +91,13 @@ abstract class SpriteState extends DualLinkNode {
               return;
             }
             var4 = param0.position;
-            param0.b(var17.field_o, false);
+            param0.writeInt(var17.field_o, false);
             if (param1 >= -25) {
               SpriteState.clearStaticReferences(false);
             }
             for (var5 = 0; var17.field_h > var5; var5++) {
               if (var17.field_p[var5] != 0) {
-                param0.c(-110, var17.field_p[var5]);
+                param0.writeByte(-110, var17.field_p[var5]);
               } else {
                 try {
                   var6_int = var17.field_r[var5];
@@ -106,20 +106,20 @@ abstract class SpriteState extends DualLinkNode {
                       if (var6_int == 2) {
                         var15 = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
                         var8 = var15.getModifiers();
-                        param0.c(-102, 0);
-                        param0.b(var8, false);
+                        param0.writeByte(-102, 0);
+                        param0.writeInt(var8, false);
                       }
                     } else {
                       var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_m[var5]);
-                      param0.c(-117, 0);
+                      param0.writeByte(-117, 0);
                     }
                   } else {
                     var26 = (java.lang.reflect.Field) (var17.field_k[var5].field_e);
                     var8 = var26.getInt((Object) null);
-                    param0.c(-107, 0);
-                    param0.b(var8, false);
+                    param0.writeByte(-107, 0);
+                    param0.writeInt(var8, false);
                   }
                   if (var6_int == 3) {
                     var27 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
@@ -131,76 +131,76 @@ abstract class SpriteState extends DualLinkNode {
                     }
                     var10 = var27.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.c(-106, 0);
+                      param0.writeByte(-106, 0);
                     } else if (var10 instanceof Number) {
-                      param0.c(-112, 1);
-                      param0.a(((Number) (var10)).longValue(), (byte) 121);
+                      param0.writeByte(-112, 1);
+                      param0.writeLong(((Number) (var10)).longValue(), (byte) 121);
                     } else if (!(var10 instanceof String)) {
-                      param0.c(-101, 4);
+                      param0.writeByte(-101, 4);
                     } else {
-                      param0.c(-105, 2);
-                      param0.a((String) (var10), 0);
+                      param0.writeByte(-105, 2);
+                      param0.writeString((String) (var10), 0);
                     }
                   } else {
                     if (var6_int == 4) {
                       var28 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
                       var8Lifetime1 = var28.getModifiers();
-                      param0.c(-102, 0);
-                      param0.b(var8Lifetime1, false);
+                      param0.writeByte(-102, 0);
+                      param0.writeInt(var8Lifetime1, false);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.c(-123, -10);
+                  param0.writeByte(-123, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.c(24, -11);
+                  param0.writeByte(24, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.c(55, -12);
+                  param0.writeByte(55, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.c(-117, -13);
+                  param0.writeByte(-117, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.c(-116, -14);
+                  param0.writeByte(-116, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.c(-124, -15);
+                  param0.writeByte(-124, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.c(44, -16);
+                  param0.writeByte(44, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.c(116, -17);
+                  param0.writeByte(116, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.c(-101, -18);
+                  param0.writeByte(-101, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.c(40, -19);
+                  param0.writeByte(40, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.c(-109, -20);
+                  param0.writeByte(-109, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.c(-121, -21);
+                  param0.writeByte(-121, -21);
                 }
               }
             }
-            param0.b(true, var4);
+            param0.appendCrc32(true, var4);
             var17.unlink(10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

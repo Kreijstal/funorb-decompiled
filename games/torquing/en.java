@@ -40,7 +40,7 @@ final class en extends d {
         var12 = Torquing.field_u;
         try {
           var14 = kj.field_d;
-          var2 = var14.i((byte) -101);
+          var2 = var14.readUnsignedByte((byte) -101);
           var3_ref = (og) (bh.field_c.b(0));
           while (var3_ref != null) {
             if (var2 != var3_ref.field_j) {
@@ -56,12 +56,12 @@ final class en extends d {
           if (param0 != 50) {
             return;
           }
-          var4 = var14.i((byte) -101);
+          var4 = var14.readUnsignedByte((byte) -101);
           if (0 != var4) {
             var5 = var3_ref.field_l;
             IterableNodeHashTable.field_d[0] = re.field_e;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              IterableNodeHashTable.field_d[var6_int] = var14.h((byte) 124);
+              IterableNodeHashTable.field_d[var6_int] = var14.readString((byte) 124);
             }
             jn.a(var5, 3328, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

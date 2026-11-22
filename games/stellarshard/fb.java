@@ -189,12 +189,12 @@ abstract class fb {
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var7 = param0.e((byte) 106);
-                    var8 = param0.e((byte) 117);
+                    var7 = param0.readString((byte) 106);
+                    var8 = param0.readString((byte) 117);
                     var9 = param0.readUnsignedByte(param3 ^ 16);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.e((byte) 85);
+                      var10[var11_int] = param0.readString((byte) 85);
                     }
                     var20 = new byte[var9][];
                     var19 = var20;
@@ -204,7 +204,7 @@ abstract class fb {
                         var13 = param0.readInt(false);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(0, (byte) -106, var13, var20[var12_int]);
+                        param0.readBytes(0, (byte) -106, var13, var20[var12_int]);
                       }
                     }
                     var18.field_k[var5] = var6_int;
@@ -219,9 +219,9 @@ abstract class fb {
                     var18.field_m[var5] = var20;
                   }
                 } else {
-                  var15 = param0.e((byte) 102);
+                  var15 = param0.readString((byte) 102);
                   var7 = var15;
-                  var16 = param0.e((byte) 102);
+                  var16 = param0.readString((byte) 102);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {

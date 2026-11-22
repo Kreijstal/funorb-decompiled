@@ -122,9 +122,9 @@ final class s extends am {
             s.g((byte) -103);
           }
           if (param2 == 0) {
-            this.field_v = new kj[param0.i((byte) -101)];
+            this.field_v = new kj[param0.readUnsignedByte((byte) -101)];
             for (var4_int = 0; var4_int < this.field_v.length; var4_int++) {
-              var5 = param0.i((byte) -101);
+              var5 = param0.readUnsignedByte((byte) -101);
               var6 = var5;
               if (0 == var6) {
                 this.field_v[var4_int] = (kj) ((Object) tl.a(param0, (byte) -51));
@@ -146,7 +146,7 @@ final class s extends am {
             if (1 != param2) {
               return;
             }
-            stackIn_22_1 = (1 == param0.i((byte) -101));
+            stackIn_22_1 = (1 == param0.readUnsignedByte((byte) -101));
             this.field_p = stackIn_22_1;
           }
           return;

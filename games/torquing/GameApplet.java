@@ -112,7 +112,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               var4 = param0.position;
-              param0.b((byte) 60, var2.field_j);
+              param0.writeInt((byte) 60, var2.field_j);
             }
             var5 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -129,7 +129,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
                         var8 = var7.getInt((Object) null);
                         param0.writeByte(90, 0);
-                        param0.b((byte) 60, var8);
+                        param0.writeInt((byte) 60, var8);
                         break;
                       case 1:
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
@@ -140,7 +140,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
                         var8 = var7.getModifiers();
                         param0.writeByte(90, 0);
-                        param0.b((byte) 60, var8);
+                        param0.writeInt((byte) 60, var8);
                         break;
                       default:
                         break;
@@ -171,14 +171,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             boolean decompiledSharedTail0 = !(var10 instanceof String);
                             if (!decompiledSharedTail0) {
                               param0.writeByte(90, 2);
-                              param0.b((byte) 4, (String) (var10));
+                              param0.writeString((byte) 4, (String) (var10));
                               decompiledSharedTail0 = (var12 != 0);
                             }
                             if (decompiledSharedTail0) {
                               param0.writeByte(90, 4);
                               if (var12 != 0) {
                                 param0.writeByte(90, 1);
-                                param0.a(102, ((Number) (var10)).longValue());
+                                param0.writeLong(102, ((Number) (var10)).longValue());
                                 if (var12 != 0) {
                                   param0.writeByte(90, 0);
                                 }
@@ -186,7 +186,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             }
                           } else {
                             param0.writeByte(90, 1);
-                            param0.a(102, ((Number) (var10)).longValue());
+                            param0.writeLong(102, ((Number) (var10)).longValue());
                             if (var12 != 0) {
                               param0.writeByte(90, 0);
                             }
@@ -199,7 +199,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].result);
                           var8 = var7_ref.getModifiers();
                           param0.writeByte(90, 0);
-                          param0.b((byte) 60, var8);
+                          param0.writeInt((byte) 60, var8);
                         }
                       }
                     } else {
@@ -207,7 +207,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].result);
                         var8 = var7_ref.getModifiers();
                         param0.writeByte(90, 0);
-                        param0.b((byte) 60, var8);
+                        param0.writeInt((byte) 60, var8);
                       }
                     }
                   } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -266,7 +266,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              stackIn_95_0 = param0.a(var4, true);
+              stackIn_95_0 = param0.appendCrc32(var4, true);
             }
             var2.unlink(param1 ^ param1);
             return;

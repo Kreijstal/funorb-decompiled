@@ -108,7 +108,7 @@ class oka extends DefaultWidgetRenderer {
             oka.a((PacketBuffer) null, -126, (byte) 4);
           }
           try {
-            var3_int = param0.h(16711935);
+            var3_int = param0.readUnsignedSmart(16711935);
             if (var3_int > param1) {
               var3_int = param1;
             }

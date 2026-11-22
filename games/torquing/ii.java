@@ -23,13 +23,13 @@ final class ii extends IntrusiveNode {
           var4 = var5.position;
           var5.writeByte(90, 1);
           var5.writeByte(90, param2.field_k);
-          var5.a(param2.field_o, (byte) 106);
-          var5.b((byte) 60, param2.field_n);
-          var5.b((byte) 60, param2.field_m);
-          var5.b((byte) 60, param2.field_s);
-          var5.b((byte) 60, param2.field_j);
-          var5.a(var4, true);
-          var5.c((byte) 48, var5.position - var4);
+          var5.writeSignedSmart(param2.field_o, (byte) 106);
+          var5.writeInt((byte) 60, param2.field_n);
+          var5.writeInt((byte) 60, param2.field_m);
+          var5.writeInt((byte) 60, param2.field_s);
+          var5.writeInt((byte) 60, param2.field_j);
+          var5.appendCrc32(var4, true);
+          var5.backpatchByteLength((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

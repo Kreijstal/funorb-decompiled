@@ -75,8 +75,8 @@ final class ca {
           var4.writeInt(0, param1.field_n);
           var4.writeInt(0, param1.field_q);
           var4.writeInt(0, param1.field_p);
-          var4.c(var5, (byte) -3);
-          var4.a(var4.position - var5, (byte) -94);
+          var4.appendCrc32(var5, (byte) -3);
+          var4.backpatchByteLength(var4.position - var5, (byte) -94);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ca.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -150,7 +150,7 @@ final class ca {
             if (param1 != -23074) {
               field_a = (String) null;
             }
-            param0.a(24, 0, (byte) -13, var2);
+            param0.writeBytes(24, 0, (byte) -13, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

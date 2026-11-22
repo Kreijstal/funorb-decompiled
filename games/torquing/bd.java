@@ -169,10 +169,10 @@ final class bd extends am {
                 this.field_v = param0.readUnsignedShort(param1 + 7053);
               }
             } else {
-              this.field_x = param0.i((byte) -101);
+              this.field_x = param0.readUnsignedByte((byte) -101);
             }
           } else {
-            this.field_u = param0.i((byte) -101);
+            this.field_u = param0.readUnsignedByte((byte) -101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

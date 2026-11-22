@@ -76,29 +76,29 @@ final class vb extends il {
               if (param2) {
                 var9 = var9 | 1;
               }
-              ic.field_z.b(ib.field_i.nextInt(), false);
-              ic.field_z.b(ib.field_i.nextInt(), false);
-              ic.field_z.b(-1955895016, var14);
-              ic.field_z.b(param6 - 1955873256, var8);
+              ic.field_z.writeInt(ib.field_i.nextInt(), false);
+              ic.field_z.writeInt(ib.field_i.nextInt(), false);
+              ic.field_z.writePrefixedString(-1955895016, var14);
+              ic.field_z.writePrefixedString(param6 - 1955873256, var8);
               var15 = (CharSequence) ((Object) param3);
-              ic.field_z.b(-1955895016, sa.a(var15, true));
-              ic.field_z.a(true, param1);
-              ic.field_z.c(-112, param0);
-              ic.field_z.c(105, var9);
-              id.field_c.c(-112, 18);
+              ic.field_z.writePrefixedString(-1955895016, sa.a(var15, true));
+              ic.field_z.writeShort(true, param1);
+              ic.field_z.writeByte(-112, param0);
+              ic.field_z.writeByte(105, var9);
+              id.field_c.writeByte(-112, 18);
               id.field_c.position = id.field_c.position + 2;
               var10 = id.field_c.position;
               var11_ref_StringLifetime2 = hh.a(false, ia.g(-79));
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
-              id.field_c.a(var11_ref_StringLifetime2, 0);
+              id.field_c.writeString(var11_ref_StringLifetime2, 0);
               al.a(ic.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, qa.field_p);
-              id.field_c.a(id.field_c.position - var10, true);
+              id.field_c.backpatchShortLength(id.field_c.position - var10, true);
             } else {
               ic.field_z.position = 0;
-              ic.field_z.b(ib.field_i.nextInt(), false);
-              ic.field_z.b(ib.field_i.nextInt(), false);
+              ic.field_z.writeInt(ib.field_i.nextInt(), false);
+              ic.field_z.writeInt(ib.field_i.nextInt(), false);
               stackIn_11_0 = ic.field_z;
               stackIn_11_1 = -1955895016;
               if (param5.a(true)) {
@@ -106,7 +106,7 @@ final class vb extends il {
               } else {
                 stackIn_12_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = ic.field_z;
               stackIn_14_1 = -1955895016;
               if (param4.a(true)) {
@@ -114,12 +114,12 @@ final class vb extends il {
               } else {
                 stackIn_15_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
-              id.field_c.c(-110, 16);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_14_1, stackIn_15_2);
+              id.field_c.writeByte(-110, 16);
               id.field_c.position = id.field_c.position + 1;
               var9 = id.field_c.position;
               al.a(ic.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, qa.field_p);
-              id.field_c.b(param6 + 21761, id.field_c.position - var9);
+              id.field_c.backpatchByteLength(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);
             ef.field_e = di.field_l;
@@ -160,7 +160,7 @@ final class vb extends il {
               if (bf.c(82, var10Lifetime1)) {
                 var11 = ke.field_O.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ke.field_O[var12] = te.field_N.d(false);
+                  ke.field_O[var12] = te.field_N.readPrefixedString(false);
                 }
                 je.a(false);
                 je.field_c = false;
@@ -174,7 +174,7 @@ final class vb extends il {
             if (ob.field_h != 255) {
               md.field_v = te.field_N.readString(15);
             } else {
-              var9_ref_String = te.field_N.g(86);
+              var9_ref_String = te.field_N.readNullableString(86);
               if (var9_ref_String != null) {
                 MouseInputHandler.a(ia.g(param6 + 21721), var9_ref_String, 13536);
               }

@@ -20,9 +20,9 @@ final class qn extends TileEffect {
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(1, 0);
-          var8.b(param1.field_j, -116);
-          var8.b(param1.field_k, param2 ^ 8591);
-          var8.b(param1.field_f, -113);
+          var8.writeShort(param1.field_j, -116);
+          var8.writeShort(param1.field_k, param2 ^ 8591);
+          var8.writeShort(param1.field_f, -113);
           var8.writeInt(param1.field_h, -1615464796);
           var8.writeInt(param1.field_l, param2 - 1615456104);
           var8.writeInt(param1.field_i, -1615464796);
@@ -34,7 +34,7 @@ final class qn extends TileEffect {
           if (param2 != -8692) {
             field_i = (cf) null;
           }
-          var8.a(var4, 19);
+          var8.appendCrc32(var4, 19);
           var8.writeLengthByte((byte) -108, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

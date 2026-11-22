@@ -251,12 +251,12 @@ public final class AceOfSkies extends NetworkGameClient {
           if (null == var7) {
             var7 = "";
           }
-          q.outgoingPacket.a(param4 ^ 12191, var7);
+          q.outgoingPacket.writeString(param4 ^ 12191, var7);
           if (fb.field_b != null) {
-            q.outgoingPacket.a(false, fb.field_b);
+            q.outgoingPacket.writePrefixedString(false, fb.field_b);
           }
           gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, param4 + 12313);
-          q.outgoingPacket.a(false, q.outgoingPacket.position - var5_int);
+          q.outgoingPacket.backpatchShortLength(false, q.outgoingPacket.position - var5_int);
           fr.a(param4 + 12171, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

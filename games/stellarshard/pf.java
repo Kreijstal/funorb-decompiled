@@ -772,7 +772,7 @@ final class pf {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(99, param3, 5, var26.payload.length);
+            var26.decryptXteaRange(99, param3, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {

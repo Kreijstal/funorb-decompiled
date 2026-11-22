@@ -100,10 +100,10 @@ final class go extends am {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_t = param0.i((byte) -101);
+              this.field_t = param0.readUnsignedByte((byte) -101);
             }
           } else {
-            this.field_u = param0.i((byte) -101);
+            this.field_u = param0.readUnsignedByte((byte) -101);
           }
           if (param1 != 35) {
             field_v = (String) null;

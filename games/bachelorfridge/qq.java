@@ -45,7 +45,7 @@ final class qq extends EventEffect {
           FlirtAnimation.a(this.target, 119, param0);
           var3_int = -74 / ((34 - param1) / 58);
           param0.writeByte(this.field_j, 0);
-          param0.b(this.field_f, -127);
+          param0.writeShort(this.field_f, -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

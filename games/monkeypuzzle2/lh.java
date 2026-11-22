@@ -117,7 +117,7 @@ final class lh {
         if (param0 > -93) {
           field_b = 46;
         }
-        return MonkeyPuzzle2.field_D.f(-1);
+        return MonkeyPuzzle2.field_D.readString(-1);
     }
 
     public static void clearStaticReferences(int param0) {

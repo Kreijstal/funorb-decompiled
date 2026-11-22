@@ -45,8 +45,8 @@ final class l {
           int var4 = 89 / ((-22 - param1) / 49);
           var3 = id.field_c;
           var3.e(param0, -2147483648);
-          var3.c(109, param2.field_j);
-          var3.a(true, param2.field_i);
+          var3.writeByte(109, param2.field_j);
+          var3.writeShort(true, param2.field_i);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "l.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

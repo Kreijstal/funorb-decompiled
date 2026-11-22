@@ -143,13 +143,13 @@ final class th {
           var4 = var5.position;
           var5.writeByte(false, param2);
           var5.writeByte(false, param1.field_l);
-          var5.a((byte) 67, param1.field_p);
+          var5.writeSignedSmart((byte) 67, param1.field_p);
           var5.writeInt(0, param1.field_m);
           var5.writeInt(0, param1.field_s);
           var5.writeInt(0, param1.field_o);
           var5.writeInt(0, param1.field_n);
-          var5.c(var4, (byte) -3);
-          var5.a(-var4 + var5.position, (byte) 80);
+          var5.appendCrc32(var4, (byte) -3);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) 80);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

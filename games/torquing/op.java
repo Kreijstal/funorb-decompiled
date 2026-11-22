@@ -86,9 +86,9 @@ final class op extends wk implements ec {
             Level.field_c = new PacketBuffer(var7_int);
           }
           Level.field_c.position = 0;
-          Level.field_c.a(param4, param6, param5, (byte) -53);
-          Level.field_c.d(var7_int, 114);
-          Level.field_c.a(5479, var13);
+          Level.field_c.writeBytes(param4, param6, param5, (byte) -53);
+          Level.field_c.padZerosTo(var7_int, 114);
+          Level.field_c.encryptXtea(5479, var13);
           if (null == vg.field_k ||
             !(vg.field_k.payload.length >= 100)) {
             vg.field_k = new PacketBuffer(100);
@@ -98,13 +98,13 @@ final class op extends wk implements ec {
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            vg.field_k.b((byte) 60, var13[var11]);
+            vg.field_k.writeInt((byte) 60, var13[var11]);
             var11++;
           }
-          vg.field_k.a(param4, param0 + 52);
-          vg.field_k.a(param2, param3, -64);
-          param1.a(vg.field_k.position, 0, vg.field_k.payload, (byte) -62);
-          param1.a(Level.field_c.position, 0, Level.field_c.payload, (byte) -104);
+          vg.field_k.writeShort(param4, param0 + 52);
+          vg.field_k.applyRsa(param2, param3, -64);
+          param1.writeBytes(vg.field_k.position, 0, vg.field_k.payload, (byte) -62);
+          param1.writeBytes(Level.field_c.position, 0, Level.field_c.payload, (byte) -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

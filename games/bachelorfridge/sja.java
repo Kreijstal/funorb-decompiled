@@ -15,7 +15,7 @@ final class sja extends uda {
         try {
           var3.writeByte(5, 0);
           var3.writeByte(0, 0);
-          var3.b(param1.field_f, -115);
+          var3.writeShort(param1.field_f, -115);
           var3.writeByte(param1.field_h, 0);
           var3.writeByte(param1.field_i, 0);
         } catch (RuntimeException runtimeException) {

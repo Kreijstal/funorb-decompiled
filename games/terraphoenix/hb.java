@@ -117,7 +117,7 @@ class hb extends nb {
     final void a(byte param0, PacketBuffer param1) {
         try {
           param1.writeLong(this.field_k, 76);
-          param1.a(-97, this.field_q);
+          param1.writeBase38String(-97, this.field_q);
           if (param0 != -2) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((byte) -36, (PacketBuffer) null);

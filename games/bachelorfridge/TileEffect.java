@@ -22,7 +22,7 @@ abstract class TileEffect {
           sja.field_fb.writeCipheredByte(78, (byte) 109);
           hb.field_j = true;
           if (param0 == -88) {
-            uca.a(0, (byte) 101);
+            Crc32Table.a(0, (byte) 101);
             return;
           }
           return;
@@ -30,7 +30,7 @@ abstract class TileEffect {
         pma.b(mg.field_m.field_g, 20208);
         FlirtAnimation.e((byte) -93);
         if (param0 == -88) {
-          uca.a(0, (byte) 101);
+          Crc32Table.a(0, (byte) 101);
           return;
         }
     }

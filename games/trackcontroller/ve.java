@@ -321,7 +321,7 @@ final class ve extends ug {
           var4 = 1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 <= var4))) {
-            qe.field_z[var4] = var2.e(8);
+            qe.field_z[var4] = var2.readUnsignedMedium(8);
             stackIn_42_0 = ~qe.field_z[var4];
             stackIn_42_1 = -1;
             if (var15 == 0) {

@@ -58,7 +58,7 @@ final class lg {
         if (param0 < 62) {
           lg.a((byte) 84);
         }
-        cl.field_e = MonkeyPuzzle2.field_D.f(-1);
+        cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) cl.field_e);
         uj.field_f = pl.a((byte) 112, var2);
     }
@@ -166,7 +166,7 @@ final class lg {
             var6 = param0.readUnsignedShort(17277);
             var16 = new byte[var6];
             if (var6 > 0) {
-              param0.a(var16, var6, -121, 0);
+              param0.readBytes(var16, var6, -121, 0);
               this.field_L[var5Lifetime2] = var16;
             }
           }
@@ -221,7 +221,7 @@ final class lg {
               this.field_y[var6Lifetime1] = array$2;
               var10 = 0;
               for (var11 = 0; var8Lifetime1 > var11; var11++) {
-                dupTemp$3 = var10 + param0.h(-129);
+                dupTemp$3 = var10 + param0.readSignedSmart(-129);
                 var10 = dupTemp$3;
                 localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
                 var4Lifetime1Lifetime1 = localTemp$4;
@@ -240,7 +240,7 @@ final class lg {
               var4Lifetime1Lifetime3 = 0;
               var10Lifetime1 = 0;
               for (var11Lifetime2 = 0; var11Lifetime2 < var9; var11Lifetime2++) {
-                dupTemp$8 = var10Lifetime1 + param0.h(-129);
+                dupTemp$8 = var10Lifetime1 + param0.readSignedSmart(-129);
                 var10Lifetime1 = dupTemp$8;
                 localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
                 var4Lifetime1Lifetime3 = localTemp$9;

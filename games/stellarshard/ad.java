@@ -696,7 +696,7 @@ final class ad extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, (byte) -115, var5, var6);
+          var2.readBytes(0, (byte) -115, var5, var6);
           this.field_M[var4] = var6;
         }
     }

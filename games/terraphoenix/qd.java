@@ -33,7 +33,7 @@ final class qd extends IntrusiveNode {
           var4 = var5.position;
           var5.writeByte(1, -95);
           var5.writeByte(param2.field_l, -110);
-          var5.a((byte) -107, param2.field_s);
+          var5.writeSignedSmart((byte) -107, param2.field_s);
           var5.writeInt(param2.field_i, param1 ^ -15940);
           var5.writeInt(param2.field_m, 8959);
           var5.writeInt(param2.field_r, 8959);
@@ -41,8 +41,8 @@ final class qd extends IntrusiveNode {
           if (param1 != -7357) {
             qd.$cfr$intArgs$a$e9dea5688aa5(-69, -70);
           }
-          var5.d(var4, 8600);
-          var5.j(var5.position - var4, -119);
+          var5.appendCrc32(var4, 8600);
+          var5.backpatchByteLength(var5.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -347,7 +347,7 @@ final class qd extends IntrusiveNode {
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.f(2);
+            var4[var5] = var38.readByte(2);
           }
           var38.position = var38.position + 1;
           var3++;
@@ -359,7 +359,7 @@ final class qd extends IntrusiveNode {
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.f(2);
+            var7[var8] = var38.readByte(2);
           }
           var38.position = var38.position + 1;
           var6++;
@@ -371,7 +371,7 @@ final class qd extends IntrusiveNode {
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.f(2);
+            var10[var11_int] = var38.readByte(2);
           }
           var9++;
           var38.position = var38.position + 1;
@@ -437,7 +437,7 @@ final class qd extends IntrusiveNode {
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.f(2);
+            var18[var19] = var38.readByte(2);
           }
           var17++;
           var38.position = var38.position + 1;
@@ -461,7 +461,7 @@ final class qd extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.i((byte) 13);
+              var22 = var38.readVarInt((byte) 13);
             }
             this.field_p[var23] = (short)(this.field_p[var23] + (dg.a(2, var22 - 1) << 14));
             var20Lifetime2--;
@@ -544,23 +544,23 @@ final class qd extends IntrusiveNode {
             var45 = var13[var27Lifetime1];
             if (var45.field_h != null) {
               for (var29 = 1; var45.field_h.length > var29; var29 += 2) {
-                var45.field_h[var29] = var38.f(2);
+                var45.field_h[var29] = var38.readByte(2);
               }
             }
             if (null != var45.field_g) {
               for (var29Lifetime5 = 3; var29Lifetime5 < var45.field_g.length - 2; var29Lifetime5 += 2) {
-                var45.field_g[var29Lifetime5] = var38.f(2);
+                var45.field_g[var29Lifetime5] = var38.readByte(2);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var46.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.f(2);
+              var15[var27Lifetime2] = var38.readByte(2);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var47.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.f(2);
+              var16[var27Lifetime3] = var38.readByte(2);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {

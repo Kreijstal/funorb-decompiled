@@ -24,14 +24,14 @@ final class bka implements WidgetRenderer {
           var2.writeByte(SnowAnimation.field_w.field_Pb, 0);
           var4 = (SnowAnimation.field_w.field_Lb << 6) + SnowAnimation.field_w.field_Kb;
           var2.writeByte(var4, 0);
-          var2.a(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
+          var2.writeBytes(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
           var2.writeLengthByte((byte) -32, -var3 + var2.position);
           return;
         }
         var2.writeByte(SnowAnimation.field_w.field_Pb, 0);
         var4Lifetime1 = (SnowAnimation.field_w.field_Lb << 6) + SnowAnimation.field_w.field_Kb;
         var2.writeByte(var4Lifetime1, 0);
-        var2.a(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
+        var2.writeBytes(0, -77, SnowAnimation.field_w.field_Eb.length, SnowAnimation.field_w.field_Eb);
         var2.writeLengthByte((byte) -32, -var3 + var2.position);
     }
 

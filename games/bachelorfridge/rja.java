@@ -19,7 +19,7 @@ final class rja extends mv {
           var3.writeCipheredByte(param0, (byte) 99);
           var3.writeByte(3, 0);
           var3.writeByte(9, 0);
-          var3.b(param1, -127);
+          var3.writeShort(param1, -127);
           return;
         }
     }

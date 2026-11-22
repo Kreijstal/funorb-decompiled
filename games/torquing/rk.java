@@ -9,12 +9,12 @@ final class rk extends bc {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(this.field_c, (byte) -72);
+          param0.writePrefixedString(this.field_c, (byte) -72);
           if (param1 != -71) {
             int[] var4 = (int[]) null;
             rk.a((byte[]) null, (int[]) null, -81, (byte) 58, -51);
           }
-          param0.a((byte) -107, this.field_b);
+          param0.writeBase38String((byte) -107, this.field_b);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "rk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

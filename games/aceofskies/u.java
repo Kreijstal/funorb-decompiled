@@ -102,10 +102,10 @@ final class u extends RenderEffect {
               }
               fa.field_c.writeInt((byte) 113, vr.field_h.nextInt());
               fa.field_c.writeInt((byte) 115, vr.field_h.nextInt());
-              fa.field_c.a(false, var14);
-              fa.field_c.a(false, var8);
+              fa.field_c.writePrefixedString(false, var14);
+              fa.field_c.writePrefixedString(false, var8);
               CharSequence var15 = (CharSequence) ((Object) param2);
-              fa.field_c.a(false, ArchiveProvider.a((byte) -81, var15));
+              fa.field_c.writePrefixedString(false, ArchiveProvider.a((byte) -81, var15));
               fa.field_c.writeShort(param1, 23385);
               fa.field_c.writeByte(-1336879960, param5);
               fa.field_c.writeByte(-1336879960, var9);
@@ -116,9 +116,9 @@ final class u extends RenderEffect {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              q.outgoingPacket.a(-117, var11_ref_String);
+              q.outgoingPacket.writeString(-117, var11_ref_String);
               gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, 92);
-              q.outgoingPacket.a(false, q.outgoingPacket.position - var10);
+              q.outgoingPacket.backpatchShortLength(false, q.outgoingPacket.position - var10);
             } else {
               fa.field_c.position = 0;
               fa.field_c.writeInt((byte) 88, vr.field_h.nextInt());
@@ -130,7 +130,7 @@ final class u extends RenderEffect {
               } else {
                 stackIn_12_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString(stackIn_11_1, stackIn_12_2);
               PacketBuffer stackIn_14_0 = fa.field_c;
               boolean stackIn_14_1 = false;
               if (!param0.a(-103)) {
@@ -138,7 +138,7 @@ final class u extends RenderEffect {
               } else {
                 stackIn_15_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_14_1, stackIn_15_2);
               q.outgoingPacket.writeByte(-1336879960, 16);
               q.outgoingPacket.position = q.outgoingPacket.position + 1;
               var9 = q.outgoingPacket.position;
@@ -184,7 +184,7 @@ final class u extends RenderEffect {
               if (wo.a(var10Lifetime1, true)) {
                 int var11 = sd.field_j.length;
                 for (int var12 = 0; var11 > var12; var12++) {
-                  sd.field_j[var12] = IntKeyLookup.incomingPacket.d((byte) 77);
+                  sd.field_j[var12] = IntKeyLookup.incomingPacket.readPrefixedString((byte) 77);
                 }
                 te.b(true);
                 ld.field_d = false;
@@ -196,7 +196,7 @@ final class u extends RenderEffect {
           if (cd.field_a == ca.field_f &&
             rm.a(0)) {
             if (qs.field_b == 255) {
-              String var9_ref_String = IntKeyLookup.incomingPacket.e((byte) -109);
+              String var9_ref_String = IntKeyLookup.incomingPacket.readNullableString((byte) -109);
               if (var9_ref_String != null) {
                 sf.a((byte) -125, bm.m(118), var9_ref_String);
               }

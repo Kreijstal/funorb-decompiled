@@ -525,7 +525,7 @@ final class ue {
         }
     }
 
-    final static int a(int param0, CharSequence param1, int param2, int param3, byte[] param4, int param5) {
+    final static int encodeCp1252(int param0, CharSequence param1, int param2, int param3, byte[] param4, int param5) {
         int stackIn_3_0 = 0;
         int stackIn_187_0 = 0;
         RuntimeException stackIn_191_0 = null;

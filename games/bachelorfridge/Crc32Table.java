@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uca {
+final class Crc32Table {
     static du field_b;
-    static int[] field_d;
+    static int[] lookupTable;
     static String field_c;
     static qia field_a;
 
@@ -18,7 +18,7 @@ final class uca {
     public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
-        field_d = null;
+        lookupTable = null;
         field_a = null;
         if (param0) {
           field_a = (qia) null;
@@ -31,7 +31,7 @@ final class uca {
         int var0;
         field_b = new du(6, 0, 4, 2);
         field_c = "From only <%0>/month";
-        field_d = new int[256];
+        lookupTable = new int[256];
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;
           for (var2 = 0; var2 < 8; var2++) {
@@ -41,7 +41,7 @@ final class uca {
               var0 = var0 >>> 1;
             }
           }
-          field_d[var1] = var0;
+          lookupTable[var1] = var0;
         }
         field_a = new qia();
     }

@@ -15,7 +15,7 @@ final class qia {
         if (this == gca.field_f) {
           return true;
         }
-        if (this != uca.field_a) {
+        if (this != Crc32Table.field_a) {
           return false;
         }
         return true;

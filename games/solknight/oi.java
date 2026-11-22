@@ -17,7 +17,7 @@ final class oi {
     }
 
     final void a(int param0) {
-        int var2 = this.field_g.c((byte) 120);
+        int var2 = this.field_g.readVarInt((byte) 120);
         this.field_h[param0] = this.field_h[param0] + var2;
     }
 
@@ -68,7 +68,7 @@ final class oi {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_g.c((byte) 120);
+        var3 = this.field_g.readVarInt((byte) 120);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_g.payload[this.field_g.position] & 255;
@@ -94,7 +94,7 @@ final class oi {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.field_g.readUnsignedByte(255);
-          var4 = this.field_g.c((byte) 120);
+          var4 = this.field_g.readVarInt((byte) 120);
           if (var3 == 47) {
             this.field_g.position = this.field_g.position + var4;
             return 1;

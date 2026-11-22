@@ -12,7 +12,7 @@ final class nn {
           var5.writeByte(-1336879960, 0);
         } else {
           var5.writeByte(-1336879960, param0.field_f.length);
-          var5.a(true, param0.field_f.length, 0, param0.field_f);
+          var5.writeBytes(true, param0.field_f.length, 0, param0.field_f);
         }
         var5.appendCrc32(var4, 16);
         var5.position = var5.position - 4;

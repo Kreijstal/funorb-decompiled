@@ -85,7 +85,7 @@ final class db extends sh {
               var10.readBytes(111, var12, var4, 0);
             }
             var10.position = var10.position + 4;
-            if (!var10.e(0)) {
+            if (!var10.verifyCrc32(0)) {
               ob.b(-90);
               return;
             }

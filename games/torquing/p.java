@@ -36,16 +36,16 @@ final class p extends DualLinkNode {
         var9 = Torquing.field_u;
         try {
           if (param0 == param1) {
-            this.field_r = kc.a('<', param2.h((byte) 122), 0);
+            this.field_r = kc.a('<', param2.readString((byte) 122), 0);
           } else {
             if (param0 == 2) {
-              var4_int = param2.i((byte) -101);
+              var4_int = param2.readUnsignedByte((byte) -101);
               this.field_v = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_v[var5] = param2.readUnsignedShort(7088);
               }
             } else if (param0 == 3) {
-              var4_int = param2.i((byte) -101);
+              var4_int = param2.readUnsignedByte((byte) -101);
               this.field_s = new int[var4_int][];
               this.field_q = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
@@ -95,7 +95,7 @@ final class p extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.i((byte) -101);
+            var3_int = param0.readUnsignedByte((byte) -101);
             if (var3_int == 0) {
               return;
             }

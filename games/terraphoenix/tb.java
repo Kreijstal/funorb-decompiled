@@ -169,19 +169,19 @@ final class tb extends uj {
               } else {
                 stackIn_22_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_21_0).b(stackIn_22_1, -86);
+              ((PacketBuffer) (Object) stackIn_21_0).writePrefixedString(stackIn_22_1, -86);
               stackIn_24_0 = nc.field_c;
               if (param1.c(param5 ^ 97)) {
                 stackIn_25_1 = var8;
               } else {
                 stackIn_25_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_24_0).b(stackIn_25_1, -105);
+              ((PacketBuffer) (Object) stackIn_24_0).writePrefixedString(stackIn_25_1, -105);
               di.field_l.writeByte(16, 59);
               di.field_l.position = di.field_l.position + 1;
               var9 = di.field_l.position;
               ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-              di.field_l.j(di.field_l.position - var9, param5 - 215);
+              di.field_l.backpatchByteLength(di.field_l.position - var9, param5 - 215);
             } else {
               var9 = 0;
               if (param3) {
@@ -190,10 +190,10 @@ final class tb extends uj {
               nc.field_c.position = 0;
               nc.field_c.writeInt(j.field_H.nextInt(), 8959);
               nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
-              nc.field_c.b(var14, -33);
-              nc.field_c.b(var8, -101);
+              nc.field_c.writePrefixedString(var14, -33);
+              nc.field_c.writePrefixedString(var8, -101);
               var15 = (CharSequence) ((Object) param0);
-              nc.field_c.b(nh.a(-31621, var15), -34);
+              nc.field_c.writePrefixedString(nh.a(-31621, var15), -34);
               nc.field_c.writeShort(-1564407352, param4);
               nc.field_c.writeByte(param6, -115);
               nc.field_c.writeByte(var9, -90);
@@ -206,7 +206,7 @@ final class tb extends uj {
               }
               di.field_l.writeString(var11_ref_String, 2295);
               ea.a(ga.field_o, nc.field_c, param5 - 96, dj.field_c, di.field_l);
-              di.field_l.g(-var10 + di.field_l.position, -20125);
+              di.field_l.backpatchShortLength(-var10 + di.field_l.position, -20125);
             }
             bc.a(-1, param5 - 96);
             mh.field_a = ha.field_n;
@@ -247,7 +247,7 @@ final class tb extends uj {
               if (vc.a(param5 ^ -32, var10Lifetime1)) {
                 var11 = RasterBuffer.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  RasterBuffer.field_a[var12] = LevelEditor.field_j.c((byte) 46);
+                  RasterBuffer.field_a[var12] = LevelEditor.field_j.readPrefixedString((byte) 46);
                 }
                 WidgetContainer.g(-17464);
                 vj.field_Q = false;
@@ -261,7 +261,7 @@ final class tb extends uj {
             if (qk.field_b != 255) {
               bh.field_d = LevelEditor.field_j.readString(-1);
             } else {
-              var9_ref_String = LevelEditor.field_j.j(-1915115064);
+              var9_ref_String = LevelEditor.field_j.readNullableString(-1915115064);
               if (var9_ref_String != null) {
                 hk.a(var9_ref_String, (byte) 3, dg.a(false));
               }

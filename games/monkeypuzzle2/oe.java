@@ -37,8 +37,8 @@ final class oe {
         try {
           var3 = gf.field_c;
           var3.b(true, param1);
-          var3.b(param0.field_g, -49152);
-          var3.b(param0.field_j, -49152);
+          var3.writeByte(param0.field_g, -49152);
+          var3.writeByte(param0.field_j, -49152);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "oe.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

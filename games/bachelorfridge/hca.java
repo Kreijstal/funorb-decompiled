@@ -64,7 +64,7 @@ final class hca {
     final void a(int param0) {
         this.field_c.a(19842, true);
         if (this.field_c.field_R == 1) {
-          uca.a(34, (byte) -46);
+          Crc32Table.a(34, (byte) -46);
         }
         int var2 = 74 % ((82 - param0) / 32);
     }

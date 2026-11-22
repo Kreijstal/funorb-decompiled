@@ -100,7 +100,7 @@ abstract class a extends wf implements pi {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.c(param2);
+            var3_int = param0.readUnsignedSmart(param2);
             if (var3_int > param1) {
               var3_int = param1;
             }

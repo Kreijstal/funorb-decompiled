@@ -15,7 +15,7 @@ final class oe implements so {
           param1.writeByte(param2.field_e, 0);
           param1.writeByte(param2.field_h, param0 + 21332);
           param1.writeByte(param2.field_m, 0);
-          param1.b(param2.field_b, -114);
+          param1.writeShort(param2.field_b, -114);
           param1.writeByte(param2.field_a ? 1 : 0, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

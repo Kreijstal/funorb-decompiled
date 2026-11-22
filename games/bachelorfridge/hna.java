@@ -123,7 +123,7 @@ final class hna extends aba {
             field_h = (IndexedSprite) null;
           }
           if (dma.field_b != null && (param0 < 0 ||
-            eia.field_a == uca.field_a)) {
+            eia.field_a == Crc32Table.field_a)) {
             if (0 == sja.field_fb.position &&
               f.b((byte) 73) > (vla.field_v + 10000L)) {
               sja.field_fb.writeCipheredByte(param0, (byte) 99);

@@ -37,7 +37,7 @@ final class RageAnimation extends EventAnimation {
           var6.writeInt(param1.field_h, -1615464796);
           var6.writeInt(param1.field_k, -1615464796);
           var6.writeInt(param1.field_f, -1615464796);
-          var6.a(var4, 19);
+          var6.appendCrc32(var4, 19);
           var6.writeLengthByte((byte) 85, -var4 + var6.position);
           int var5 = 47 % ((1 - param2) / 47);
         } catch (RuntimeException runtimeException) {

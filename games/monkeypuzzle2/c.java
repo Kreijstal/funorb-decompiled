@@ -49,7 +49,7 @@ final class c {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(var4, var13.length, -111, 0);
+        var10.readBytes(var4, var13.length, -111, 0);
         if (null != this.field_d &&
           null != this.field_i) {
           var12 = new java.math.BigInteger(var13);
@@ -306,7 +306,7 @@ final class c {
               this.a(-126, (gf) null, 30, (gf) null, false);
             }
             var14 = new byte[64];
-            this.field_f.a(var14, 64, -86, 0);
+            this.field_f.readBytes(var14, 64, -86, 0);
             var9 = new ca(param2, param3, param1, this.field_e, this.field_c, var6_int, var14, var7, param4);
             this.field_g[param2] = var9;
             stackIn_13_0 = var9;

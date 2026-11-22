@@ -30,7 +30,7 @@ final class qs extends pu {
           var4 = new String[var2_int][var3];
           for (var5 = 0; var5 < var2_int; var5++) {
             for (var6 = 0; var6 < var3; var6++) {
-              var4[var5][var6] = param1.h((byte) 120);
+              var4[var5][var6] = param1.readLegacyUtf8String((byte) 120);
             }
           }
           stackIn_10_0 = var4;

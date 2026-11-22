@@ -295,7 +295,7 @@ final class pg {
             break;
           }
           this.field_b[var3] = var4;
-          this.field_a[var3] = param0.k(127);
+          this.field_a[var3] = param0.readSignedSmart(127);
           this.field_f[var3] = param0.readSmart(-1);
         }
         this.field_h = param0.readSmart(-1);

@@ -18,12 +18,12 @@ final class l {
           var5.writeByte(90, param2);
           var5.writeByte(90, param1.field_p);
           var5.writeByte(90, param1.field_m);
-          var5.b((byte) 60, param1.field_l);
-          var5.b((byte) 60, param1.field_k);
-          var5.b((byte) 60, param1.field_q);
-          var5.b((byte) 60, param1.field_n);
-          var5.a(var4, true);
-          var5.c((byte) 48, var5.position - var4);
+          var5.writeInt((byte) 60, param1.field_l);
+          var5.writeInt((byte) 60, param1.field_k);
+          var5.writeInt((byte) 60, param1.field_q);
+          var5.writeInt((byte) 60, param1.field_n);
+          var5.appendCrc32(var4, true);
+          var5.backpatchByteLength((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -72,19 +72,19 @@ final class l {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.i((byte) -101);
-          var4 = var9.c((byte) -102);
+          var3 = var9.readUnsignedByte((byte) -101);
+          var4 = var9.readInt((byte) -102);
           if (param0 <= var4 && (0 == ee.field_v ||
             !(var4 > ee.field_v))) {
             if (0 == var3) {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(48, var4, var13, 0);
+              var9.readBytes(48, var4, var13, 0);
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.c((byte) -108);
+            var5_int = var9.readInt((byte) -108);
             if (var5_int >= 0 && (ee.field_v == 0 ||
               !(var5_int > ee.field_v))) {
               var12 = new byte[var5_int];
@@ -130,14 +130,14 @@ final class l {
           var5.writeByte(90, param2);
           if (param0.field_j != null) {
             var5.writeByte(90, param0.field_j.length);
-            var5.a(param0.field_j.length, 0, param0.field_j, (byte) -58);
+            var5.writeBytes(param0.field_j.length, 0, param0.field_j, (byte) -58);
           } else {
             var5.writeByte(90, 0);
           }
-          var5.a(var4, true);
+          var5.appendCrc32(var4, true);
           var5.position = var5.position - 4;
-          param0.field_k = var5.c((byte) -88);
-          var5.c((byte) 48, -var4 + var5.position);
+          param0.field_k = var5.readInt((byte) -88);
+          var5.backpatchByteLength((byte) 48, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

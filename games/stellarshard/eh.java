@@ -131,12 +131,12 @@ final class eh {
               var7 = var4.field_r;
               DelegatingCanvas.field_e[0].field_a = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                DelegatingCanvas.field_e[var8_int].field_e = var28.e((byte) 115);
+                DelegatingCanvas.field_e[var8_int].field_e = var28.readString((byte) 115);
                 DelegatingCanvas.field_e[var8_int].field_a = false;
                 if (1 != var28.readUnsignedByte(4)) {
                   DelegatingCanvas.field_e[var8_int].field_d = null;
                 } else {
-                  DelegatingCanvas.field_e[var8_int].field_d = var28.e((byte) 117);
+                  DelegatingCanvas.field_e[var8_int].field_d = var28.readString((byte) 117);
                 }
               }
               dupTemp$0 = new String[3][var6];

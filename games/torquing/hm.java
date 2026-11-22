@@ -319,7 +319,7 @@ final class hm extends am {
               var2 = new PacketBuffer(13);
               IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.writeByte(90, 15);
-              var2.b((byte) 60, gf.field_g);
+              var2.writeInt((byte) 60, gf.field_g);
               up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
               ro.field_v = 30000L + km.b(-1);
@@ -480,14 +480,14 @@ final class hm extends am {
         var6 = Torquing.field_u;
         try {
           if (param2 == 0) {
-            var4_int = param0.i((byte) -101);
+            var4_int = param0.readUnsignedByte((byte) -101);
             if (var4_int == 0) {
-              this.field_w = new int[param0.i((byte) -101)][4];
+              this.field_w = new int[param0.readUnsignedByte((byte) -101)][4];
               for (var5 = 0; this.field_w.length > var5; var5++) {
                 this.field_w[var5][0] = param0.readUnsignedShort(7088);
-                this.field_w[var5][1] = param0.i((byte) -101) << 4;
-                this.field_w[var5][2] = param0.i((byte) -101) << 4;
-                this.field_w[var5][3] = param0.i((byte) -101) << 4;
+                this.field_w[var5][1] = param0.readUnsignedByte((byte) -101) << 4;
+                this.field_w[var5][2] = param0.readUnsignedByte((byte) -101) << 4;
+                this.field_w[var5][3] = param0.readUnsignedByte((byte) -101) << 4;
               }
             } else {
               this.a(var4_int, false);

@@ -65,7 +65,7 @@ final class vb {
             }
             if (en.field_v == ef.field_a &&
               BufferedSocket.a(1, 0)) {
-              var6_intLifetime1 = kj.field_d.i((byte) -101);
+              var6_intLifetime1 = kj.field_d.readUnsignedByte((byte) -101);
               if (0 != var6_intLifetime1) {
                 oo.field_a = -1;
                 ef.field_a = ld.field_e;
@@ -79,14 +79,14 @@ final class vb {
             }
             if (aa.field_U == ef.field_a &&
               BufferedSocket.a(8, 0)) {
-              ij.field_l = kj.field_d.b(48);
+              ij.field_l = kj.field_d.readLong(48);
               kj.field_d.position = 0;
               id.a(eh.field_i, param5, param3, 19, param4);
               ef.field_a = qi.field_a;
             }
             if (ef.field_a == qi.field_a &&
               BufferedSocket.a(1, 0)) {
-              var6_intLifetime2 = kj.field_d.i((byte) -101);
+              var6_intLifetime2 = kj.field_d.readUnsignedByte((byte) -101);
               fa.field_e = var6_intLifetime2;
               kj.field_d.position = 0;
               wh.field_u = null;
@@ -111,12 +111,12 @@ final class vb {
             }
             if (p.field_t == ef.field_a &&
               ah.a(2)) {
-              qd.field_e = kj.field_d.b(param2 + 44);
-              ri.field_E = kj.field_d.i((byte) -101);
-              kj.field_d.i((byte) -101);
+              qd.field_e = kj.field_d.readLong(param2 + 44);
+              ri.field_E = kj.field_d.readUnsignedByte((byte) -101);
+              kj.field_d.readUnsignedByte((byte) -101);
               wp.field_w = kj.field_d.readUnsignedShort(7088);
-              var6 = kj.field_d.a(param2 - 8);
-              var7 = kj.field_d.i((byte) -101);
+              var6 = kj.field_d.readNullableString(param2 - 8);
+              var7 = kj.field_d.readUnsignedByte((byte) -101);
               if (0 != (1 & var7)) {
                 pc.b(false);
               }
@@ -130,14 +130,14 @@ final class vb {
               }
               boolean decompiledFrameCompleted0 = true;
               if (ql.field_t) {
-                kj.field_d.i((byte) -101);
-                kj.field_d.i((byte) -101);
-                kj.field_d.c((byte) -85);
+                kj.field_d.readUnsignedByte((byte) -101);
+                kj.field_d.readUnsignedByte((byte) -101);
+                kj.field_d.readInt((byte) -85);
                 mf.field_w = kj.field_d.readUnsignedShort(param2 ^ 7083);
                 TooltipPanel.field_n = new byte[mf.field_w];
                 var8 = 0;
                 while (!(mf.field_w <= var8)) {
-                  TooltipPanel.field_n[var8] = kj.field_d.f((byte) 111);
+                  TooltipPanel.field_n[var8] = kj.field_d.readByte((byte) 111);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -146,9 +146,9 @@ final class vb {
                 }
               }
               if (decompiledFrameCompleted0) {
-                re.field_e = kj.field_d.h((byte) 126);
+                re.field_e = kj.field_d.readString((byte) 126);
                 tj.field_j = hf.a((CharSequence) ((Object) re.field_e), param2 + 82);
-                pa.field_c = kj.field_d.i((byte) -101);
+                pa.field_c = kj.field_d.readUnsignedByte((byte) -101);
                 ef.field_a = w.field_cb;
               }
               if (eh.field_i.a(false) != im.field_J) {
@@ -219,7 +219,7 @@ final class vb {
               if (fa.field_e == 7) {
                 fa.field_e = 3;
               }
-              pl.field_u = kj.field_d.h((byte) 125);
+              pl.field_u = kj.field_d.readString((byte) 125);
               lh.field_J = false;
               stackIn_135_0 = fa.field_e;
               return stackIn_135_0;

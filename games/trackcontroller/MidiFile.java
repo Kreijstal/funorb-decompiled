@@ -287,7 +287,7 @@ final class MidiFile extends IntrusiveNode {
         var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.m(127);
+          param0.readVarInt(127);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         var15Lifetime2 = param0.position;
@@ -429,9 +429,9 @@ final class MidiFile extends IntrusiveNode {
         } else {
           stackIn_85_1 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).b(stackIn_85_1, (byte) -126);
-        var51.b(var2, (byte) -123);
-        var51.b(var3, (byte) -119);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, (byte) -126);
+        var51.writeShort(var2, (byte) -123);
+        var51.writeShort(var3, (byte) -119);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -452,8 +452,8 @@ final class MidiFile extends IntrusiveNode {
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.m(127);
-            var51.b((byte) -97, var63);
+            var63 = param0.readVarInt(127);
+            var51.writeVarInt((byte) -97, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.payload[incrementValue$0] & 255;
@@ -466,7 +466,7 @@ final class MidiFile extends IntrusiveNode {
               }
               var51.writeByte(47, (byte) -108);
               var51.writeByte(0, (byte) -104);
-              var51.a((byte) 115, var51.position - var61);
+              var51.backpatchIntLength((byte) 115, var51.position - var61);
               var60++;
               break;
             }

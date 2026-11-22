@@ -213,7 +213,7 @@ public final class SolKnight extends ab {
           BitmapFont.clearStaticReferences();
           bk.a((byte) 84);
           vc.clearStaticReferences(true);
-          PacketBuffer.f(-11);
+          PacketBuffer.clearBufferStatics(-11);
           je.a((byte) 64);
           cj.clearStaticReferences(-26497);
           ah.a(true);

@@ -28,7 +28,7 @@ final class wa extends ih {
             var3 = (PacketBuffer) null;
             wa.a(true, (PacketBuffer) null);
           }
-          stackIn_3_0 = new cp(param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.g(65536), param1.e((byte) 62), param1.i((byte) -101));
+          stackIn_3_0 = new cp(param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readShort(65536), param1.readUnsignedMedium((byte) 62), param1.readUnsignedByte((byte) -101));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

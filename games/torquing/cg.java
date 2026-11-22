@@ -56,7 +56,7 @@ final class cg {
         int var3;
         this.field_a = new ma[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.i((byte) -101);
+          var3 = param0.readUnsignedByte((byte) -101);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_a[var2] = new ma();

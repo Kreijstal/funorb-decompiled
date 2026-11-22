@@ -463,12 +463,12 @@ abstract class rh extends WidgetContainer {
             }
             stackIn_11_0 = (var1.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
             var4_int = stackIn_11_0;
-            var5_ref_String = var1.f(-1);
+            var5_ref_String = var1.readString(-1);
             if (var4_int != 0) {
-              var1.f(-1);
+              var1.readString(-1);
             }
             var6_ref = ja.a(var5_ref_String, -1684349368);
-            var7_ref = var1.f(-1);
+            var7_ref = var1.readString(-1);
             var8_ref = pl.a((byte) 115, (CharSequence) ((Object) var5_ref_String));
             if (null == var8_ref) {
               var8_ref = var5_ref_String;
@@ -509,7 +509,7 @@ abstract class rh extends WidgetContainer {
               return;
             }
             ci.field_b = 1;
-            var4 = var1.f(-1);
+            var4 = var1.readString(-1);
             cm.field_G = ((String) (var4)).intern();
             var5 = var1.readUnsignedByte((byte) 114);
             cm.a(var5, (byte) -117);
@@ -519,12 +519,12 @@ abstract class rh extends WidgetContainer {
             IntrusiveDeque.field_a = new vd(128);
             nc.field_f = 0;
           }
-          var4Lifetime1 = var1.f(-1);
+          var4Lifetime1 = var1.readString(-1);
           if (((String) (var4Lifetime1)).equals("")) {
             var4Lifetime1 = null;
           }
-          var5_ref_StringLifetime1 = var1.f(-1);
-          var6 = var1.f(-1);
+          var5_ref_StringLifetime1 = var1.readString(-1);
+          var6 = var1.readString(-1);
           var7 = ch.a(var5_ref_StringLifetime1, -1);
           if (var7 == null) {
             var7 = ch.a(var6, -1);

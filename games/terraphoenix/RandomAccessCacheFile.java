@@ -326,7 +326,7 @@ final class RandomAccessCacheFile {
           var18.position = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
           wb.field_a = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            wb.field_a[var4Lifetime4] = var18.d((byte) -113);
+            wb.field_a[var4Lifetime4] = var18.readUnsignedMedium((byte) -113);
             if (wb.field_a[var4Lifetime4] == 0) {
               wb.field_a[var4Lifetime4] = 1;
             }
@@ -350,11 +350,11 @@ final class RandomAccessCacheFile {
             stackIn_24_1 = var11 & 1;
             if (stackIn_24_0 == stackIn_24_1) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var18.f(2);
+                var8[var12] = var18.readByte(2);
               }
               if (0 != (2 & var11)) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var18.f(2);
+                  dupTemp$0 = var18.readByte(2);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_49_0 = var10;
@@ -369,13 +369,13 @@ final class RandomAccessCacheFile {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var18.f(2);
+                  var8[var12 + var13 * var5] = var18.readByte(2);
                 }
               }
               if (0 != (var11 & 2)) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$1 = var18.f(2);
+                    dupTemp$1 = var18.readByte(2);
                     var9[var12 + var13 * var5] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_38_0 = var10;

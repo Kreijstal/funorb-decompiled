@@ -396,7 +396,7 @@ final class ae extends RenderEffect {
                       int var13 = param1.readInt((byte) 117);
                       byte[] array$0 = new byte[var13];
                       var11[var12_int] = array$0;
-                      param1.a(0, 7186, var13, var22[var12_int]);
+                      param1.readBytes(0, 7186, var13, var22[var12_int]);
                     }
                   }
                   var18.field_l[var5] = var6_int;

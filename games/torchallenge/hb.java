@@ -265,7 +265,7 @@ final class hb {
                 param0.writeByte(var19.field_o[var6], (byte) 122);
               }
             }
-            param0.b(var5, 14430);
+            param0.appendCrc32(var5, 14430);
             var19.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

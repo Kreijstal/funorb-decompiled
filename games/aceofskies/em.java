@@ -22,7 +22,7 @@ final class em {
             byte[] var2 = var18;
             bm.field_C = sf.a(false, -137, var22);
           }
-          byte[] var23 = PacketBuffer.a(false, bm.field_C, -76);
+          byte[] var23 = PacketBuffer.extractByteArray(false, bm.field_C, -76);
           byte[] var20 = var23;
           byte[] var17 = var20;
           byte[] var2Lifetime1 = var17;
@@ -109,9 +109,9 @@ final class em {
             }
             return;
           }
-          byte[] var17 = PacketBuffer.a(false, OpenGlRenderer.field_r, 66);
+          byte[] var17 = PacketBuffer.extractByteArray(false, OpenGlRenderer.field_r, 66);
           this.field_f = this.field_g.a(128, -123, 128, hh.field_c, 16, var17);
-          byte[] var18 = PacketBuffer.a(false, lg.field_l, 101);
+          byte[] var18 = PacketBuffer.extractByteArray(false, lg.field_l, 101);
           this.field_g.a(128, -95, 128, hh.field_c, 16, var18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

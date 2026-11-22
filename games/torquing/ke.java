@@ -87,7 +87,7 @@ final class ke {
 
     final static void a(int param0, PacketBuffer param1) {
         qc.field_bb = param1.readUnsignedShort(7088) << 5;
-        int var2_int = param1.i((byte) -101);
+        int var2_int = param1.readUnsignedByte((byte) -101);
         if (param0 != 225225318) {
           return;
         }
@@ -95,11 +95,11 @@ final class ke {
           um.field_p = 1835008 & var2_int << 18;
           qc.field_bb = qc.field_bb + (var2_int >> 3);
           um.field_p = um.field_p + (param1.readUnsignedShort(param0 ^ 225227222) << 2);
-          var2_int = param1.i((byte) -101);
+          var2_int = param1.readUnsignedByte((byte) -101);
           um.field_p = um.field_p + (var2_int >> 6);
           bf.field_c = (var2_int & 63) << 15;
-          bf.field_c = bf.field_c + (param1.i((byte) -101) << 7);
-          var2_int = param1.i((byte) -101);
+          bf.field_c = bf.field_c + (param1.readUnsignedByte((byte) -101) << 7);
+          var2_int = param1.readUnsignedByte((byte) -101);
           bf.field_c = bf.field_c + (var2_int >> 1);
           eg.field_w = (1 & var2_int) << 16;
           eg.field_w = eg.field_w + param1.readUnsignedShort(7088);

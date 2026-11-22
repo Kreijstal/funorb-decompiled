@@ -130,14 +130,14 @@ final class mma {
                 an.field_t = ig.field_m.readUnsignedShort((byte) 77);
                 AirstrikeSpecial.field_q = new byte[an.field_t];
                 for (var8 = 0; var8 < an.field_t; var8++) {
-                  AirstrikeSpecial.field_q[var8] = ig.field_m.b(true);
+                  AirstrikeSpecial.field_q[var8] = ig.field_m.readByte(true);
                 }
               }
               cha.field_l = ig.field_m.readString(-107);
               var12 = (CharSequence) ((Object) cha.field_l);
               JaggrabDownloader.field_a = HomingMissileSpecial.a(0, var12);
               rja.field_o = ig.field_m.readUnsignedByte(16711935);
-              eia.field_a = uca.field_a;
+              eia.field_a = Crc32Table.field_a;
               if (uaa.field_f.a((byte) -106) == bs.field_g) {
                 DiskCacheRequest.field_u.a(94, nia.d(-31768));
               } else {

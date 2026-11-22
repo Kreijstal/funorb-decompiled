@@ -230,7 +230,7 @@ final class lr extends IntrusiveNode {
           for (var2_int = 0; var2_int < this.field_f; var2_int++) {
             for (var3 = 0; this.field_q > var3; var3++) {
               this.field_o[var2_int][var3] = new BoardTile(param0.readUnsignedByte(16711935));
-              this.field_o[var2_int][var3].field_a = param0.b(true);
+              this.field_o[var2_int][var3].field_a = param0.readByte(true);
             }
           }
           this.field_l = param0.readUnsignedByte(16711935);
@@ -239,12 +239,12 @@ final class lr extends IntrusiveNode {
           param0.readUnsignedByte(16711935);
           this.field_h = new int[this.field_m][2];
           for (var2_intLifetime1 = 0; this.field_m > var2_intLifetime1; var2_intLifetime1++) {
-            this.field_h[var2_intLifetime1] = new int[]{param0.b(true), param0.b(true)};
+            this.field_h[var2_intLifetime1] = new int[]{param0.readByte(true), param0.readByte(true)};
           }
           this.field_p = new int[this.field_l][this.field_n][2];
           for (var2_intLifetime2 = 0; this.field_l > var2_intLifetime2; var2_intLifetime2++) {
             for (var3Lifetime1 = 0; this.field_n > var3Lifetime1; var3Lifetime1++) {
-              this.field_p[var2_intLifetime2][var3Lifetime1] = new int[]{param0.b(true), param0.b(true)};
+              this.field_p[var2_intLifetime2][var3Lifetime1] = new int[]{param0.readByte(true), param0.readByte(true)};
             }
           }
           return;

@@ -69,13 +69,13 @@ final class FishRainEvent extends SpecialEvent {
         ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
         ProxySocketConnector.field_g.writeByte(param3, 0);
         ProxySocketConnector.field_g.writeByte(param2, 0);
-        ProxySocketConnector.field_g.b(param1, -113);
+        ProxySocketConnector.field_g.writeShort(param1, -113);
         ProxySocketConnector.field_g.encryptRsa(SuperSpeedSpecial.field_p, 0, SlowAllEvent.field_q);
         sja.field_fb.writeCipheredByte(18, (byte) 123);
         int fieldTemp$0 = sja.field_fb.position + 1;
         sja.field_fb.position = sja.field_fb.position + 1;
         int var4 = fieldTemp$0;
-        sja.field_fb.a(0, -126, ProxySocketConnector.field_g.position, ProxySocketConnector.field_g.payload);
+        sja.field_fb.writeBytes(0, -126, ProxySocketConnector.field_g.position, ProxySocketConnector.field_g.payload);
         sja.field_fb.writeLengthByte((byte) 118, sja.field_fb.position - var4);
     }
 

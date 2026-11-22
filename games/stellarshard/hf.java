@@ -48,8 +48,8 @@ final class hf extends sk {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a(102, this.field_h);
-          param1.a(false, this.field_d);
+          param1.writePrefixedString(102, this.field_h);
+          param1.writeBase38String(false, this.field_d);
           if (param0 != 95) {
             field_j = (String) null;
           }

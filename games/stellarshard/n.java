@@ -428,12 +428,12 @@ final class n {
             }
             stackIn_12_0 = (var1.readUnsignedByte(4) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.e((byte) 121);
+            var4_ref_String = var1.readString((byte) 121);
             if (var3_int != 0) {
-              var1.e((byte) 106);
+              var1.readString((byte) 106);
             }
             var5_ref = ee.a(var4_ref_String, (byte) -98);
-            var6_ref = var1.e((byte) 83);
+            var6_ref = var1.readString((byte) 83);
             var7_ref = nh.a((CharSequence) ((Object) var4_ref_String), false);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -477,7 +477,7 @@ final class n {
               return;
             }
             bi.field_r = 1;
-            var3 = var1.e((byte) 117);
+            var3 = var1.readString((byte) 117);
             uf.field_f = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(4);
             pl.b((byte) 105, var4);
@@ -487,12 +487,12 @@ final class n {
             GameApplet.field_k = new sb(128);
             ProxySocketConnector.field_i = 0;
           }
-          var3Lifetime1 = var1.e((byte) 83);
+          var3Lifetime1 = var1.readString((byte) 83);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.e((byte) 93);
-          var5 = var1.e((byte) 98);
+          var4_ref_StringLifetime1 = var1.readString((byte) 93);
+          var5 = var1.readString((byte) 98);
           var6 = ck.a(true, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = ck.a(true, var5);

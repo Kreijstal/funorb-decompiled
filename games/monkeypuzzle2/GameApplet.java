@@ -729,23 +729,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var3.b(true, param2);
           var3.position = var3.position + 1;
           var4 = var3.position;
-          var3.b(1, -49152);
+          var3.writeByte(1, -49152);
           if (param1 <= 106) {
             field_j = (te) null;
           }
           if (null != param0.field_g) {
-            var3.b(param0.field_g.length, -49152);
-            var3.b(param0.field_g, param0.field_g.length, -2, 0);
+            var3.writeByte(param0.field_g.length, -49152);
+            var3.writeBytes(param0.field_g, param0.field_g.length, -2, 0);
             if (MonkeyPuzzle2.field_F) {
-              var3.b(0, -49152);
+              var3.writeByte(0, -49152);
             }
           } else {
-            var3.b(0, -49152);
+            var3.writeByte(0, -49152);
           }
-          var3.a((byte) -76, var4);
+          var3.appendCrc32((byte) -76, var4);
           var3.position = var3.position - 4;
           param0.field_e = var3.readInt(126);
-          var3.a(-var4 + var3.position, (byte) 29);
+          var3.backpatchByteLength(-var4 + var3.position, (byte) 29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -51,8 +51,8 @@ final class nh extends IntrusiveNode {
           var15 = Torquing.field_u;
           try {
             var19 = new pm();
-            var19.field_l = param2.i((byte) -101);
-            var19.field_j = param2.c((byte) -121);
+            var19.field_l = param2.readUnsignedByte((byte) -101);
+            var19.field_j = param2.readInt((byte) -121);
             var19.field_t = new int[var19.field_l];
             var19.field_n = new PlatformTask[var19.field_l];
             var19.field_k = new int[var19.field_l];
@@ -62,28 +62,28 @@ final class nh extends IntrusiveNode {
             var6 = 31 / ((param3 + 71) / 33);
             for (var5 = 0; var5 < var19.field_l; var5++) {
               try {
-                var7_int = param2.i((byte) -101);
+                var7_int = param2.readUnsignedByte((byte) -101);
                 if (0 != var7_int &&
                   1 != var7_int &&
                   var7_int != 2) {
                   if (3 == var7_int ||
                     var7_int == 4) {
-                    var21 = param2.h((byte) 116);
-                    var9 = param2.h((byte) 115);
-                    var10 = param2.i((byte) -101);
+                    var21 = param2.readString((byte) 116);
+                    var9 = param2.readString((byte) 115);
+                    var10 = param2.readUnsignedByte((byte) -101);
                     var11 = new String[var10];
                     for (var12_int = 0; var10 > var12_int; var12_int++) {
-                      var11[var12_int] = param2.h((byte) 123);
+                      var11[var12_int] = param2.readString((byte) 123);
                     }
                     var22 = new byte[var10][];
                     var20 = var22;
                     var12 = var20;
                     if (3 == var7_int) {
                       for (var13_int = 0; var10 > var13_int; var13_int++) {
-                        var14 = param2.c((byte) -81);
+                        var14 = param2.readInt((byte) -81);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param2.a(48, var14, var22[var13_int], 0);
+                        param2.readBytes(48, var14, var22[var13_int], 0);
                       }
                     }
                     var19.field_q[var5] = var7_int;
@@ -98,13 +98,13 @@ final class nh extends IntrusiveNode {
                     var19.field_o[var5] = var22;
                   }
                 } else {
-                  var16 = param2.h((byte) 119);
+                  var16 = param2.readString((byte) 119);
                   var8 = var16;
-                  var17 = param2.h((byte) 127);
+                  var17 = param2.readString((byte) 127);
                   var9 = var17;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param2.c((byte) -73);
+                    var10 = param2.readInt((byte) -73);
                   }
                   var19.field_q[var5] = var7_int;
                   var19.field_k[var5] = var10;

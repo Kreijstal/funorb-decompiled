@@ -92,16 +92,16 @@ final class dm {
           this.field_l.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.o(-1);
+          var4 = param0.readUnsignedSmart(-1);
           if (var4 == 0) {
             break;
           }
           this.field_q[var3] = var4;
-          this.field_v[var3] = param0.h(-129);
-          this.field_o[var3] = param0.o(-1);
+          this.field_v[var3] = param0.readSignedSmart(-129);
+          this.field_o[var3] = param0.readUnsignedSmart(-1);
         }
-        this.field_m = param0.o(-1);
-        this.field_d = param0.o(-1);
+        this.field_m = param0.readUnsignedSmart(-1);
+        this.field_d = param0.readUnsignedSmart(-1);
         this.field_i = param0.readUnsignedShort(17277);
         this.field_h = param0.readUnsignedShort(17277);
         this.field_j = new lj();

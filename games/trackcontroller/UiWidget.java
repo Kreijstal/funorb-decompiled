@@ -52,7 +52,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var3 == 0) {
               var5_ref_byte__ = new byte[var4];
-              var9.a(96, var5_ref_byte__, 0, var4);
+              var9.readBytes(96, var5_ref_byte__, 0, var4);
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }

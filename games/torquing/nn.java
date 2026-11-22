@@ -100,7 +100,7 @@ final class nn {
         ol.field_b = ol.field_b.toUpperCase();
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -220,7 +220,7 @@ final class nn {
           qd.field_a = param0;
           if (param1 >= -94) {
             byte[] var3 = (byte[]) null;
-            nn.a(-46, (byte[]) null, -63, -109);
+            nn.computeCrc32(-46, (byte[]) null, -63, -109);
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

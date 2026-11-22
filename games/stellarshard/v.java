@@ -218,7 +218,7 @@ final class v implements Runnable {
             var4.unlink(20);
           } else {
             if (var2 == 1) {
-              var4_int = var10.e(-64);
+              var4_int = var10.readSignedSmart(-64);
               var5_ref_fk = (fk) (ib.field_c.b(-93));
               while (var5_ref_fk != null) {
                 if (var3 != var5_ref_fk.field_l ||

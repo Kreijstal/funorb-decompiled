@@ -81,7 +81,7 @@ final class jh {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(var4, 0, -123, var12);
+              var9.readBytes(var4, 0, -123, var12);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }

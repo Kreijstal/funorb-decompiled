@@ -182,17 +182,17 @@ final class sd extends am {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_v = param0.i((byte) -101);
+            this.field_v = param0.readUnsignedByte((byte) -101);
             return;
           }
           if (var4_int == 1) {
-            this.field_t = param0.i((byte) -101);
+            this.field_t = param0.readUnsignedByte((byte) -101);
             return;
           }
           if (3 != var4_int) {
             return;
           }
-          this.field_u = param0.i((byte) -101);
+          this.field_u = param0.readUnsignedByte((byte) -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

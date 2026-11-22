@@ -31,7 +31,7 @@ final class k {
     private final int a(int param0, int param1) {
         if (param1 == 255) {
           int var3 = this.field_a.readUnsignedByte(70);
-          int var4 = this.field_a.a(116);
+          int var4 = this.field_a.readVarInt(116);
           if (var3 == 47) {
             this.field_a.position = this.field_a.position + var4;
             return 1;
@@ -93,7 +93,7 @@ final class k {
     }
 
     final void c(int param0) {
-        int var2 = this.field_a.a(121);
+        int var2 = this.field_a.readVarInt(121);
         this.field_f[param0] = this.field_f[param0] + var2;
     }
 
@@ -140,7 +140,7 @@ final class k {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        int var3 = this.field_a.a(121);
+        int var3 = this.field_a.readVarInt(121);
         if (var2 == 247 &&
           var3 > 0) {
           int var4 = this.field_a.payload[this.field_a.position] & 255;

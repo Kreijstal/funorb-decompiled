@@ -31,9 +31,9 @@ final class bk {
     final static void a(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.writeByte(param1, 12);
-          param3.c(17, -117);
-          param3.c(param0, -123);
-          param3.c(param2, -117);
+          param3.writeShort(17, -117);
+          param3.writeShort(param0, -123);
+          param3.writeShort(param2, -117);
           param3.writeByte(false, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

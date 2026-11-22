@@ -947,7 +947,7 @@ final class gi {
                 for (var20 = 0; var19 > var20; var20++) {
                   var21 = var28.readUnsignedByte(-16384);
                   var22 = od.field_h[var21].field_f;
-                  var23 = var28.h((byte) 78);
+                  var23 = var28.readLong((byte) 78);
                   var25 = var28.position;
                   if (var7 > var20) {
                     var9[0][var13] = var22;
@@ -996,7 +996,7 @@ final class gi {
           }
           if (var2 == 1) {
             var4Lifetime1 = var28.readUnsignedShort(-25578);
-            var5_long = var28.h((byte) 78);
+            var5_long = var28.readLong((byte) 78);
             var7_ref_fb = (fb) (hd.field_p.beginBackward(9272));
             while (var7_ref_fb != null) {
               if (var7_ref_fb.field_s != var4Lifetime1) {

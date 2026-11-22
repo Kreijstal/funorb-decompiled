@@ -53,7 +53,7 @@ final class mc extends IntrusiveNode {
           var3.f(-71, param1);
           var3.writeByte(90, 5);
           var3.writeByte(90, 0);
-          var3.a(param2.field_s, 93);
+          var3.writeShort(param2.field_s, 93);
           var3.writeByte(90, param2.field_q);
           var3.writeByte(90, param2.field_o);
         } catch (RuntimeException runtimeException) {

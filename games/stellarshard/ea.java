@@ -23,9 +23,9 @@ final class ea extends lk {
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.writeByte(false, 1);
-          var8.c(param1.field_u, -123);
-          var8.c(param1.field_s, -123);
-          var8.c(param1.field_q, -118);
+          var8.writeShort(param1.field_u, -123);
+          var8.writeShort(param1.field_s, -123);
+          var8.writeShort(param1.field_q, -118);
           var8.writeInt(0, param1.field_l);
           var8.writeInt(0, param1.field_p);
           var8.writeInt(0, param1.field_t);
@@ -37,8 +37,8 @@ final class ea extends lk {
           if (param2 != 80) {
             ea.e((byte) 58);
           }
-          var8.c(var4, (byte) -3);
-          var8.a(-var4 + var8.position, (byte) -124);
+          var8.appendCrc32(var4, (byte) -3);
+          var8.backpatchByteLength(-var4 + var8.position, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

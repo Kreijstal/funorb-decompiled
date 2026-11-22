@@ -180,7 +180,7 @@ final class DualLinkDeque implements Iterable {
             var4 = (byte[]) null;
             DualLinkDeque.a(-89, (byte[]) null, 45);
           }
-          stackIn_3_0 = jj.a(0, param1, param0, -64);
+          stackIn_3_0 = jj.computeCrc32(0, param1, param0, -64);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

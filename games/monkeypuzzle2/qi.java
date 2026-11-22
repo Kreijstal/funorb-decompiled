@@ -77,15 +77,15 @@ final class qi extends WidgetContainer implements vc, ql {
     }
 
     final static void a(int param0, PacketBuffer param1, int param2, boolean param3, int param4) {
-        param1.b(12, -49152);
-        param1.c(17, 93);
+        param1.writeByte(12, -49152);
+        param1.writeShort(17, 93);
         if (param3) {
           return;
         }
         try {
-          param1.c(param2, 96);
-          param1.c(param0, 125);
-          param1.b(param4, -49152);
+          param1.writeShort(param2, 96);
+          param1.writeShort(param0, 125);
+          param1.writeByte(param4, -49152);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qi.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

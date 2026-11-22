@@ -86,14 +86,14 @@ final class ArchiveIndex {
             if (var4 < 7) {
               this.field_h = var17.readUnsignedShort(-107);
             } else {
-              this.field_h = var17.e(6715);
+              this.field_h = var17.readUnsignedShortOrInt(6715);
             }
             var8 = 0;
             this.field_f = new int[this.field_h];
             var9 = -1;
             if (var4 >= 7) {
               for (var10 = 0; var10 < this.field_h; var10++) {
-                dupTemp$0 = var8 + var17.e(6715);
+                dupTemp$0 = var8 + var17.readUnsignedShortOrInt(6715);
                 var8 = dupTemp$0;
                 this.field_f[var10] = dupTemp$0;
                 if (var9 < this.field_f[var10]) {
@@ -138,7 +138,7 @@ final class ArchiveIndex {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_h > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, -111, var21);
+                var17.readBytes(64, 0, -111, var21);
                 this.field_q[this.field_f[var10Lifetime3]] = var21;
               }
             }
@@ -173,7 +173,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
-                this.field_r[this.field_f[var10Lifetime5]] = var17.e(6715);
+                this.field_r[this.field_f[var10Lifetime5]] = var17.readUnsignedShortOrInt(6715);
               }
               for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_f[var10Lifetime5];
@@ -183,7 +183,7 @@ final class ArchiveIndex {
                 array$5 = new int[var12];
                 this.field_a[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.e(6715);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShortOrInt(6715);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_a[var11];
                   dupTemp$7[var14] = dupTemp$6;

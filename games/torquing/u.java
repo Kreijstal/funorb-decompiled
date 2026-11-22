@@ -74,7 +74,7 @@ final class u extends am {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_u = (param0.i((byte) -101) << 12) / 255;
+            this.field_u = (param0.readUnsignedByte((byte) -101) << 12) / 255;
           }
           if (param1 == 35) {
             return;

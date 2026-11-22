@@ -49,7 +49,7 @@ final class wh extends am {
             this.field_v = param0.readUnsignedShort(param1 ^ 7059);
           } else {
             if (var4_int == 1) {
-              stackIn_8_1 = (param0.i((byte) -101) == 1);
+              stackIn_8_1 = (param0.readUnsignedByte((byte) -101) == 1);
               this.field_A = stackIn_8_1;
             }
           }
@@ -166,8 +166,8 @@ final class wh extends am {
             wh.a(0, -125, 67, -97, -50, -52);
           }
           var10 = kj.field_d;
-          var2 = var10.i((byte) -101);
-          var3 = var10.i((byte) -101);
+          var2 = var10.readUnsignedByte((byte) -101);
+          var3 = var10.readUnsignedByte((byte) -101);
           if (var2 == 0) {
             var4_ref_h = (h) (to.field_s.b(0));
             if (var4_ref_h == null) {
@@ -182,14 +182,14 @@ final class wh extends am {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.i((byte) -101) << ie.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) -101) << ie.a(768, var7 << 8));
             }
             var4_ref_h.field_n = true;
             var4_ref_h.unlink(0);
             return;
           }
           if (var2 == 1) {
-            var4 = var10.g((byte) -126);
+            var4 = var10.readSignedSmart((byte) -126);
             var5 = (qk) (kc.field_z.b(0));
             while (var5 != null) {
               if (var5.field_k != var3 ||

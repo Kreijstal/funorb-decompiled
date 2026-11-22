@@ -43,12 +43,12 @@ final class rl {
             a.field_b = new PacketBuffer(var7_int);
           }
           a.field_b.position = 0;
-          a.field_b.a(param5, param6, (byte) -13, param4);
+          a.field_b.writeBytes(param5, param6, (byte) -13, param4);
           if (param0 != -13791) {
             return;
           }
-          a.field_b.a(var7_int, -18920);
-          a.field_b.a((byte) 12, var13);
+          a.field_b.padZerosTo(var7_int, -18920);
+          a.field_b.encryptXtea((byte) 12, var13);
           if (null == kl.field_r ||
             !(kl.field_r.payload.length >= 100)) {
             kl.field_r = new PacketBuffer(100);
@@ -61,10 +61,10 @@ final class rl {
             kl.field_r.writeInt(0, var13[var11]);
             var11++;
           }
-          kl.field_r.c(param5, param0 + 13664);
-          kl.field_r.a(false, param2, param3);
-          param1.a(kl.field_r.position, 0, (byte) -13, kl.field_r.payload);
-          param1.a(a.field_b.position, 0, (byte) -13, a.field_b.payload);
+          kl.field_r.writeShort(param5, param0 + 13664);
+          kl.field_r.applyRsa(false, param2, param3);
+          param1.writeBytes(kl.field_r.position, 0, (byte) -13, kl.field_r.payload);
+          param1.writeBytes(a.field_b.position, 0, (byte) -13, a.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

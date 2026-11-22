@@ -83,7 +83,7 @@ final class ArchiveIndex {
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 <= var4) {
-              this.field_s = var17.c(false);
+              this.field_s = var17.readUnsignedShortOrInt(false);
             } else {
               this.field_s = var17.readUnsignedShort((byte) -78);
             }
@@ -106,7 +106,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.field_s > var10; var10++) {
-                dupTemp$1 = var8 + var17.c(false);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(false);
                 var8 = dupTemp$1;
                 this.field_f[var10] = dupTemp$1;
                 if (var9 < this.field_f[var10]) {
@@ -139,7 +139,7 @@ final class ArchiveIndex {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_s > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(89, var21, 0, 64);
+                var17.readBytes(89, var21, 0, 64);
                 this.field_g[this.field_f[var10Lifetime3]] = var21;
               }
             }
@@ -148,7 +148,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
-                this.field_l[this.field_f[var10Lifetime5]] = var17.c(false);
+                this.field_l[this.field_f[var10Lifetime5]] = var17.readUnsignedShortOrInt(false);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
                 var11 = this.field_f[var10Lifetime5];
@@ -158,7 +158,7 @@ final class ArchiveIndex {
                 this.field_r[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.c(false);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(false);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_r[var11];
                   dupTemp$4[var14] = dupTemp$3;

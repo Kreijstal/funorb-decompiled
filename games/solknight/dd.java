@@ -48,12 +48,12 @@ final class dd {
             var4_int = var9.readUnsignedByte(255);
             if (var4_int != 0) {
               var13 = new byte[var4_int];
-              var9.a(var4_int, 0, -122, var13);
+              var9.readBytes(var4_int, 0, -122, var13);
             } else {
               var5 = null;
             }
             var9.position = var9.position + 4;
-            if (!var9.k(4)) {
+            if (!var9.verifyCrc32(4)) {
               je.a(false);
               return;
             }

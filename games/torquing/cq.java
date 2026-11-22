@@ -35,7 +35,7 @@ final class cq extends am {
               } else {
                 if (var5 != 3) {
                   if (var5 == 4) {
-                    var4_int = param0.e((byte) 62);
+                    var4_int = param0.readUnsignedMedium((byte) 62);
                     this.field_z[0] = ie.a(var4_int << 4, 267386880);
                     this.field_z[1] = ie.a(4080, var4_int >> 4);
                     this.field_z[2] = ie.a(255, var4_int) >> 12;

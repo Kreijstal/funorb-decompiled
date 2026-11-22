@@ -621,7 +621,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(Bullet.field_g > var3)) {
                       this.a((byte) 118);
-                      PacketBuffer.a(-116, ci.field_f, pt.field_b);
+                      PacketBuffer.postDummyActionEvent(-116, ci.field_f, pt.field_b);
                       break;
                     }
                     this.c((byte) 111);

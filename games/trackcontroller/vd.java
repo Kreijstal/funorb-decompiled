@@ -553,7 +553,7 @@ final class vd extends td implements jg, ButtonListener, a {
             if (param1 != -69) {
               field_K = -119;
             }
-            param0.a(24, 109, 0, var10);
+            param0.writeBytes(24, 109, 0, var10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

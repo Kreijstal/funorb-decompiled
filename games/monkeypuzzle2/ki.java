@@ -207,26 +207,26 @@ final class ki extends DualLinkNode {
           e.field_b[3] = (int)ld.field_a;
           e.field_b[2] = (int)(ld.field_a >> 32);
           uc.field_a.position = 0;
-          uc.field_a.a(-803539344, e.field_b[0]);
-          uc.field_a.a(-803539344, e.field_b[1]);
-          uc.field_a.a(-803539344, e.field_b[2]);
-          uc.field_a.a(-803539344, e.field_b[3]);
+          uc.field_a.writeInt(-803539344, e.field_b[0]);
+          uc.field_a.writeInt(-803539344, e.field_b[1]);
+          uc.field_a.writeInt(-803539344, e.field_b[2]);
+          uc.field_a.writeInt(-803539344, e.field_b[3]);
           df.a(uc.field_a, false);
-          uc.field_a.c(param0, 80);
+          uc.field_a.writeShort(param0, 80);
           if (!param2) {
             return;
           }
           param1.a(121, uc.field_a);
           gf.field_c.position = 0;
           if (param3) {
-            gf.field_c.b(18, -49152);
+            gf.field_c.writeByte(18, -49152);
           } else {
-            gf.field_c.b(16, -49152);
+            gf.field_c.writeByte(16, -49152);
           }
           gf.field_c.position = gf.field_c.position + 2;
           var5_int = gf.field_c.position;
-          gf.field_c.a(-803539344, mk.field_h);
-          gf.field_c.a(od.field_l, (byte) -102);
+          gf.field_c.writeInt(-803539344, mk.field_h);
+          gf.field_c.writeLong(od.field_l, (byte) -102);
           var6 = 0;
           if (mb.field_c) {
             var6 = var6 | 1;
@@ -240,17 +240,17 @@ final class ki extends DualLinkNode {
           if (null != df.field_o) {
             var6 = var6 | 16;
           }
-          gf.field_c.b(var6, -49152);
+          gf.field_c.writeByte(var6, -49152);
           var7 = lc.a(ii.a(false), (byte) -89);
           if (var7 == null) {
             var7 = "";
           }
-          gf.field_c.a(-119, var7);
+          gf.field_c.writeString(-119, var7);
           if (df.field_o != null) {
-            gf.field_c.a(df.field_o, -57);
+            gf.field_c.writePrefixedString(df.field_o, -57);
           }
           e.a(sd.field_a, fj.field_F, (byte) 92, gf.field_c, uc.field_a);
-          gf.field_c.d(6903, gf.field_c.position - var5_int);
+          gf.field_c.backpatchShortLength(6903, gf.field_c.position - var5_int);
           SocketConnector.a((byte) -71, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

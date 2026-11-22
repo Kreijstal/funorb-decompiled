@@ -61,13 +61,13 @@ final class bm {
         stackIn_5_0 = ((128 & var3) != 0);
         ng.field_s = stackIn_5_0;
         da.field_d = var8.readUnsignedByte(-16384);
-        pl.field_Q = var8.h((byte) 78);
+        pl.field_Q = var8.readLong((byte) 78);
         if (im.field_c != 2) {
           ji.field_k = 0;
           wb.field_c = 0;
         } else {
           wb.field_c = var8.readUnsignedShort(-25578);
-          ji.field_k = var8.d((byte) -114);
+          ji.field_k = var8.readUnsignedMedium((byte) -114);
         }
         stackIn_11_0 = (var8.readUnsignedByte(-16384) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

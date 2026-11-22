@@ -115,7 +115,7 @@ final class wj {
             }
             if (mh.field_a == cb.field_J &&
               vc.a(-110, 8)) {
-              kd.field_c = LevelEditor.field_j.h((byte) 78);
+              kd.field_c = LevelEditor.field_j.readLong((byte) 78);
               LevelEditor.field_j.position = 0;
               gj.a(param0, param4, 1, am.field_K, param5);
               mh.field_a = af.field_b;
@@ -148,11 +148,11 @@ final class wj {
             }
             if (WidgetContainer.field_B == mh.field_a &&
               cm.b((byte) -61)) {
-              SpriteState.field_y = LevelEditor.field_j.h((byte) 78);
+              SpriteState.field_y = LevelEditor.field_j.readLong((byte) 78);
               mm.field_e = LevelEditor.field_j.readUnsignedByte(-16384);
               LevelEditor.field_j.readUnsignedByte(param1 ^ -19754);
               me.field_o = LevelEditor.field_j.readUnsignedShort(param1 - 54976);
-              var6 = LevelEditor.field_j.j(param1 ^ -1915102434);
+              var6 = LevelEditor.field_j.readNullableString(param1 ^ -1915102434);
               var7 = LevelEditor.field_j.readUnsignedByte(param1 ^ -19754);
               if (0 != (var7 & 1)) {
                 wh.b(96);
@@ -172,7 +172,7 @@ final class wj {
                 kf.field_g = LevelEditor.field_j.readUnsignedShort(param1 ^ -4416);
                 BattleUnit.field_O = new byte[kf.field_g];
                 for (var8 = 0; kf.field_g > var8; var8++) {
-                  BattleUnit.field_O[var8] = LevelEditor.field_j.f(2);
+                  BattleUnit.field_O[var8] = LevelEditor.field_j.readByte(2);
                 }
               }
               kj.field_f = LevelEditor.field_j.readString(-1);

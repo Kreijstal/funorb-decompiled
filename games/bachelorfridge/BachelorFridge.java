@@ -629,7 +629,7 @@ public final class BachelorFridge extends NetworkGameClient {
         MouseWheelInput.releaseStatics((byte) -33);
         BitmapFont.releaseStatics();
         vda.releaseStatics((byte) -62);
-        PacketBuffer.d((byte) -19);
+        PacketBuffer.clearStaticReferences((byte) -19);
         f.a(true);
         um.a((byte) 106);
         vw.releaseStatics(7130);
@@ -955,7 +955,7 @@ public final class BachelorFridge extends NetworkGameClient {
         re.releaseStatics(-124);
         du.releaseStatics(8192);
         oea.releaseStatics(-8333);
-        uca.releaseStatics(false);
+        Crc32Table.releaseStatics(false);
         kda.releaseStatics(-1);
         ao.releaseStatics((byte) -44);
         ca.releaseStatics(-64);
@@ -1910,8 +1910,8 @@ public final class BachelorFridge extends NetworkGameClient {
                       continue;
                     }
                     if (ri.field_a == 76) {
-                      ig.field_m.a(3);
-                      ig.field_m.a(3);
+                      ig.field_m.readUnsignedMedium(3);
+                      ig.field_m.readUnsignedMedium(3);
                       var3 = ig.field_m.readUnsignedByte(16711935);
                       var4_ref_jna__ = new jna[var3];
                       var5 = 0;

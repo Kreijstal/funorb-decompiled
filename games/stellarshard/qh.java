@@ -280,12 +280,12 @@ final class qh {
                       param1.writeByte(false, 0);
                     } else if (var10 instanceof Number) {
                       param1.writeByte(false, 1);
-                      param1.a((byte) 120, ((Number) (var10)).longValue());
+                      param1.writeLong((byte) 120, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
                       param1.writeByte(false, 4);
                     } else {
                       param1.writeByte(false, 2);
-                      param1.b((String) (var10), -9799);
+                      param1.writeString((String) (var10), -9799);
                     }
                   } else {
                     if (4 == var6_int) {
@@ -346,7 +346,7 @@ final class qh {
                 }
               }
             }
-            param1.c(var4, (byte) -3);
+            param1.appendCrc32(var4, (byte) -3);
             var17.unlink(20);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

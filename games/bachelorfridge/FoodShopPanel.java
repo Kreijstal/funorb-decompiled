@@ -401,11 +401,11 @@ final class FoodShopPanel {
                 this.c(-67, this.field_p.field_g);
                 this.field_p.field_e = true;
                 if (var8 != 0) {
-                  uca.a(12, (byte) -112);
+                  Crc32Table.a(12, (byte) -112);
                   this.field_p = null;
                 }
               } else {
-                uca.a(12, (byte) -112);
+                Crc32Table.a(12, (byte) -112);
                 this.field_p = null;
               }
               this.field_c.field_h = false;
@@ -694,14 +694,14 @@ final class FoodShopPanel {
         this.field_s.a(19842, true);
         if (this.field_s.field_T) {
           if (af.field_a) {
-            uca.a(2, (byte) -57);
+            Crc32Table.a(2, (byte) -57);
           }
           au.field_c = 3;
         }
         this.field_l.a(19842, true);
         if (af.field_a &&
           this.field_l.field_T) {
-          uca.a(5, (byte) 1);
+          Crc32Table.a(5, (byte) 1);
         }
         this.field_k.a(19842, true);
         this.field_q.a(19842, true);
@@ -710,21 +710,21 @@ final class FoodShopPanel {
           this.field_b < 260) {
           this.field_b = this.field_b + 16;
           if (this.field_b >= 260) {
-            uca.a(13, (byte) 2);
+            Crc32Table.a(13, (byte) 2);
           }
         }
         if (this.field_a == 2 &&
           this.field_b > 0) {
           this.field_b = this.field_b - 16;
           if (0 >= this.field_b) {
-            uca.a(14, (byte) 110);
+            Crc32Table.a(14, (byte) 110);
           }
         }
         if (this.field_a == 0 &&
           this.field_i < 256) {
           this.field_i = this.field_i + 16;
           if (this.field_i >= 256) {
-            uca.a(10, (byte) 102);
+            Crc32Table.a(10, (byte) 102);
           }
         }
         if (2 == this.field_a &&
@@ -754,11 +754,11 @@ final class FoodShopPanel {
                   if (this.field_a != 0) {
                     RasterBuffer.a(25, 7758);
                     if (var3 != 0) {
-                      uca.a(11, (byte) -103);
+                      Crc32Table.a(11, (byte) -103);
                       RasterBuffer.a(21, 7758);
                     }
                   } else {
-                    uca.a(11, (byte) -103);
+                    Crc32Table.a(11, (byte) -103);
                     RasterBuffer.a(21, 7758);
                   }
                   this.field_a = 2;
@@ -837,7 +837,7 @@ final class FoodShopPanel {
           this.field_b > 0) {
           this.field_b = this.field_b - 16;
           if (this.field_b <= 0) {
-            uca.a(14, (byte) -17);
+            Crc32Table.a(14, (byte) -17);
           }
         }
         if (2 == this.field_a &&

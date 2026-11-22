@@ -257,7 +257,7 @@ final class InstrumentPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.a(127);
+              var22 = var38.readVarInt(127);
             }
             this.field_n[var23] = (short)(this.field_n[var23] + pg.a(32768, -1 + var22 << 14));
             var20Lifetime2--;

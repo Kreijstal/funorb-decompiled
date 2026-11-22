@@ -282,16 +282,16 @@ final class pi {
           this.field_j.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.h(-89);
+          var4 = param0.readUnsignedSmart(-89);
           if (var4 == 0) {
             break;
           }
           this.field_p[var3] = var4;
-          this.field_a[var3] = param0.e((byte) 104);
-          this.field_o[var3] = param0.h(117);
+          this.field_a[var3] = param0.readSignedSmart((byte) 104);
+          this.field_o[var3] = param0.readUnsignedSmart(117);
         }
-        this.field_i = param0.h(-110);
-        this.field_t = param0.h(112);
+        this.field_i = param0.readUnsignedSmart(-110);
+        this.field_t = param0.readUnsignedSmart(112);
         this.field_r = param0.readUnsignedShort(-25578);
         this.field_s = param0.readUnsignedShort(-25578);
         this.field_k = new ek();

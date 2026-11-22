@@ -100,8 +100,8 @@ class f extends kc {
         if (param1 != 22492) {
           field_i = (lk) null;
         }
-        var2.b(1, param1 - 71644);
-        var2.b(2, param1 - 71644);
+        var2.writeByte(1, param1 - 71644);
+        var2.writeByte(2, param1 - 71644);
     }
 
     f(long param0, String param1) {
@@ -115,9 +115,9 @@ class f extends kc {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_h, (byte) 117);
+          param1.writeLong(this.field_h, (byte) 117);
           int var3_int = 37 / ((-34 - param0) / 53);
-          param1.a(this.field_k, (byte) 90);
+          param1.writeBase38String(this.field_k, (byte) 90);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "f.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

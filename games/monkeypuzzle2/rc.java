@@ -18,7 +18,7 @@ final class rc extends kc {
         return te.field_a;
     }
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, int param2, byte[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -90,7 +90,7 @@ final class rc extends kc {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var13, var4, -127, 0);
+              var9.readBytes(var13, var4, -127, 0);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
@@ -177,8 +177,8 @@ final class rc extends kc {
     final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = 126 % ((-34 - param0) / 53);
-          param1.a(this.field_e, -45);
-          param1.a(this.field_h, (byte) 57);
+          param1.writePrefixedString(this.field_e, -45);
+          param1.writeBase38String(this.field_h, (byte) 57);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "rc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

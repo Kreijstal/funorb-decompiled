@@ -87,7 +87,7 @@ final class InvincibleEvent extends SpecialEvent {
 
     final static du[] d(int param0) {
         if (param0 == 0) {
-          return new du[]{MidiNote.field_i, DamageTileEffect.field_j, MoveCreatureEffect.field_k, HailEvent.field_u, uca.field_b, wn.field_j, tj.field_d, mj.field_l, PetAttackEvent.field_r, SpiltMilkSpecial.field_p, BananarangSpecial.field_p, ed.field_d, jq.field_l, mda.field_a};
+          return new du[]{MidiNote.field_i, DamageTileEffect.field_j, MoveCreatureEffect.field_k, HailEvent.field_u, Crc32Table.field_b, wn.field_j, tj.field_d, mj.field_l, PetAttackEvent.field_r, SpiltMilkSpecial.field_p, BananarangSpecial.field_p, ed.field_d, jq.field_l, mda.field_a};
         }
         return (du[]) null;
     }

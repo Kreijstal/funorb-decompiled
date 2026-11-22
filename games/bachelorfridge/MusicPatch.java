@@ -259,7 +259,7 @@ final class MusicPatch extends IntrusiveNode {
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.b(true);
+            var4[var5] = var38.readByte(true);
           }
           var3++;
           var38.position = var38.position + 1;
@@ -271,7 +271,7 @@ final class MusicPatch extends IntrusiveNode {
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.b(true);
+            var7[var8] = var38.readByte(true);
           }
           var6++;
           var38.position = var38.position + 1;
@@ -283,7 +283,7 @@ final class MusicPatch extends IntrusiveNode {
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.b(true);
+            var10[var11_int] = var38.readByte(true);
           }
           var9++;
           var38.position = var38.position + 1;
@@ -350,7 +350,7 @@ final class MusicPatch extends IntrusiveNode {
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var19 < var17; var19++) {
-            var18[var19] = var38.b(true);
+            var18[var19] = var38.readByte(true);
           }
           var17++;
           var38.position = var38.position + 1;
@@ -457,23 +457,23 @@ final class MusicPatch extends IntrusiveNode {
             var45 = var13[var27Lifetime1];
             if (null != var45.field_j) {
               for (var29 = 1; var45.field_j.length > var29; var29 += 2) {
-                var45.field_j[var29] = var38.b(true);
+                var45.field_j[var29] = var38.readByte(true);
               }
             }
             if (null != var45.field_b) {
               for (var29Lifetime5 = 3; var29Lifetime5 < var45.field_b.length - 2; var29Lifetime5 += 2) {
-                var45.field_b[var29Lifetime5] = var38.b(true);
+                var45.field_b[var29Lifetime5] = var38.readByte(true);
               }
             }
           }
           if (null != var15) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var58.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.b(true);
+              var15[var27Lifetime2] = var38.readByte(true);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var47.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.b(true);
+              var16[var27Lifetime3] = var38.readByte(true);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {

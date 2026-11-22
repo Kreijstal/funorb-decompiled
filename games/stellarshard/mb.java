@@ -76,7 +76,7 @@ final class mb {
           var17.position = -(3 * (-1 + var3)) + param1.length + (-7 - sb.field_b * 8);
           gj.field_w = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            gj.field_w[var4Lifetime4] = var17.c(true);
+            gj.field_w[var4Lifetime4] = var17.readUnsignedMedium(true);
             if (gj.field_w[var4Lifetime4] == 0) {
               gj.field_w[var4Lifetime4] = 1;
             }

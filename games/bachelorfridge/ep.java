@@ -53,7 +53,7 @@ final class ep extends pu {
         var3.writeByte(3, 0);
         var3.writeByte(8, 0);
         if (!param0) {
-          var3.b(param2, -123);
+          var3.writeShort(param2, -123);
           return;
         }
     }

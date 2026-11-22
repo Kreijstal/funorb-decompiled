@@ -22,7 +22,7 @@ public final class Torquing extends tg {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.a((byte) -114);
+            var3_int = param2.readUnsignedSmart((byte) -114);
             if (var3_int > param1) {
               var3_int = param1;
             }
@@ -117,7 +117,7 @@ public final class Torquing extends tg {
           uc.clearStaticReferences();
           l.a((byte) 88);
           qi.clearStaticReferences(104);
-          PacketBuffer.d((byte) 59);
+          PacketBuffer.clearBufferStatics((byte) 59);
           km.a((byte) -123);
           jo.a(16720);
           tf.a((byte) 81);
@@ -1068,7 +1068,7 @@ public final class Torquing extends tg {
           if (null != he.field_b) {
             IsaacPacketBuffer.a(40.0f, 34, kf.field_D + " - 0%");
             var52 = new PacketBuffer(he.field_b.a(param1 - 18, "levels.tql", ""));
-            var53 = var52.h((byte) 126);
+            var53 = var52.readString((byte) 126);
             var5Lifetime1 = 0;
             var6 = 1;
             for (var7 = 0; var7 < var53.length(); var7++) {
@@ -1144,7 +1144,7 @@ public final class Torquing extends tg {
               return false;
             }
             var57 = new PacketBuffer(var64);
-            var58 = var57.h((byte) 118);
+            var58 = var57.readString((byte) 118);
             var7Lifetime1 = 0;
             var8Lifetime1 = qc.field_ab.length + 1;
             for (var9Lifetime1 = 0; var58.length() > var9Lifetime1; var9Lifetime1++) {

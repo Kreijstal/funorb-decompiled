@@ -58,7 +58,7 @@ final class tf {
           var17.position = -(8 * ti.field_g) - 7 + param1.length;
           fm.field_E = var17.readUnsignedShort(7088);
           rh.field_d = var17.readUnsignedShort(7088);
-          var3 = (255 & var17.i((byte) -101)) + 1;
+          var3 = (255 & var17.readUnsignedByte((byte) -101)) + 1;
           if (param0 < 101) {
             return;
           }
@@ -77,7 +77,7 @@ final class tf {
           var17.position = param1.length - (7 + ti.field_g * 8 + 3 * (-1 + var3));
           cq.field_y = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            cq.field_y[var4Lifetime4] = var17.e((byte) 62);
+            cq.field_y[var4Lifetime4] = var17.readUnsignedMedium((byte) 62);
             if (cq.field_y[var4Lifetime4] == 0) {
               cq.field_y[var4Lifetime4] = 1;
             }
@@ -96,14 +96,14 @@ final class tf {
             var9 = var19;
             fq.field_G[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.i((byte) -101);
+            var11 = var17.readUnsignedByte((byte) -101);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.f((byte) 88);
+                var8[var12] = var17.readByte((byte) 88);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.f((byte) 80);
+                  dupTemp$1 = var17.readByte((byte) 80);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_32_0 = var10;
@@ -118,13 +118,13 @@ final class tf {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var5 * var13 + var12] = var17.f((byte) 103);
+                  var8[var5 * var13 + var12] = var17.readByte((byte) 103);
                 }
               }
               if (0 != (var11 & 2)) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.f((byte) 61);
+                    dupTemp$0 = var17.readByte((byte) 61);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_47_0 = var10;

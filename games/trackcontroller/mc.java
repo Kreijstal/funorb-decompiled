@@ -62,7 +62,7 @@ final class mc extends ok {
           var3.c(param1, 7);
           var3.writeByte(5, (byte) -123);
           var3.writeByte(0, (byte) -114);
-          var3.b(param2.field_i, (byte) -127);
+          var3.writeShort(param2.field_i, (byte) -127);
           var3.writeByte(param2.field_l, (byte) -89);
           var3.writeByte(param2.field_k, (byte) -68);
         } catch (RuntimeException runtimeException) {

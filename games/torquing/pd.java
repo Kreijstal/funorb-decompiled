@@ -16,7 +16,7 @@ final class pd {
             pd.a((cb) null, false, -95);
           }
           var3.writeByte(90, param0.field_k);
-          var3.a(param0.field_l, 61);
+          var3.writeShort(param0.field_l, 61);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

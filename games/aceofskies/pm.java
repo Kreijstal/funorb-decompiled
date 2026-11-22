@@ -35,7 +35,7 @@ class pm extends fn {
     final void a(PacketBuffer param0, boolean param1) {
         try {
           param0.writeLong((byte) -102, this.field_e);
-          param0.b(0, this.field_c);
+          param0.writeBase38String(0, this.field_c);
           if (!param1) {
             this.a(-32);
           }

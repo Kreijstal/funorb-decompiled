@@ -95,7 +95,7 @@ final class cd extends rg {
           uc.field_c.writeInt(0, dj.field_b[2]);
           uc.field_c.writeInt(0, dj.field_b[3]);
           ca.a(uc.field_c, -23074);
-          uc.field_c.c(param3, -113);
+          uc.field_c.writeShort(param3, -113);
           param2.a(95, uc.field_c);
           pg.field_fb.position = 0;
           var5_int = -4 / ((param0 + 7) / 61);
@@ -107,7 +107,7 @@ final class cd extends rg {
           pg.field_fb.position = pg.field_fb.position + 2;
           var6 = pg.field_fb.position;
           pg.field_fb.writeInt(0, t.field_f);
-          pg.field_fb.a((byte) 127, od.field_z);
+          pg.field_fb.writeLong((byte) 127, od.field_z);
           var7 = 0;
           if (uj.field_f) {
             var7 = var7 | 1;
@@ -126,12 +126,12 @@ final class cd extends rg {
           if (var8 == null) {
             var8 = "";
           }
-          pg.field_fb.b(var8, -9799);
+          pg.field_fb.writeString(var8, -9799);
           if (null != pk.field_b) {
-            pg.field_fb.a(126, pk.field_b);
+            pg.field_fb.writePrefixedString(126, pk.field_b);
           }
           ha.a(fj.field_l, pg.field_fb, uc.field_c, -104, u.field_o);
-          pg.field_fb.d(-1, pg.field_fb.position - var6);
+          pg.field_fb.backpatchShortLength(-1, pg.field_fb.position - var6);
           ue.a((byte) -88, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

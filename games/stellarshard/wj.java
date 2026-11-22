@@ -36,7 +36,7 @@ final class wj extends fb {
               stackIn_8_2 = 2;
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_7_1, stackIn_8_2);
-            this.field_c.a(param0 - 24175, 0L);
+            this.field_c.writeLong40(param0 - 24175, 0L);
             this.field_s.a(this.field_c.payload, 0, 121, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class wj extends fb {
               ph.field_D = ae.field_N.readUnsignedByte(4);
               ae.field_N.readUnsignedByte(4);
               mk.field_k = ae.field_N.readUnsignedShort((byte) 56);
-              var7_ref_String = ae.field_N.a(0);
+              var7_ref_String = ae.field_N.readNullableString(0);
               var8 = ae.field_N.readUnsignedByte(4);
               if ((var8 & 1) != 0) {
                 nd.g(-26923);
@@ -186,7 +186,7 @@ final class wj extends fb {
                   bf.field_a[var9] = ae.field_N.readByte(102);
                 }
               }
-              wf.field_b = ae.field_N.e((byte) 97);
+              wf.field_b = ae.field_N.readString((byte) 97);
               var12 = (CharSequence) ((Object) wf.field_b);
               wb.field_b = nh.a(var12, false);
               ag.field_c = ae.field_N.readUnsignedByte(4);
@@ -241,7 +241,7 @@ final class wj extends fb {
               if (7 == ja.field_t) {
                 ja.field_t = 3;
               }
-              NodeHashTableIterator.field_a = ae.field_N.e((byte) 116);
+              NodeHashTableIterator.field_a = ae.field_N.readString((byte) 116);
               ta.field_u = false;
               stackIn_82_0 = ja.field_t;
               return stackIn_82_0;
@@ -349,7 +349,7 @@ final class wj extends fb {
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 1);
-              this.field_c.a(116, var2.field_o);
+              this.field_c.writeLong40(116, var2.field_o);
               this.field_s.a(this.field_c.payload, 0, 107, this.field_c.payload.length);
               this.field_q.a((byte) 125, var2);
               var2 = (ph) (this.field_o.a(-116));
@@ -361,7 +361,7 @@ final class wj extends fb {
             while (var2Lifetime1 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 0);
-              this.field_c.a(param0 - 26250, var2Lifetime1.field_o);
+              this.field_c.writeLong40(param0 - 26250, var2Lifetime1.field_o);
               this.field_s.a(this.field_c.payload, 0, 114, this.field_c.payload.length);
               this.field_k.a((byte) 126, var2Lifetime1);
               var2Lifetime1 = (ph) (this.field_j.a(-121));
@@ -522,8 +522,8 @@ final class wj extends fb {
           try {
             this.field_c.position = 0;
             this.field_c.writeByte(false, 6);
-            this.field_c.b(3, (byte) 119);
-            this.field_c.c(0, -121);
+            this.field_c.writeMedium(3, (byte) 119);
+            this.field_c.writeShort(0, -121);
             this.field_s.a(this.field_c.payload, 0, 110, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

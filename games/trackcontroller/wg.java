@@ -88,7 +88,7 @@ final class wg {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(122, var4, 0, var13.length);
+        var10.readBytes(122, var4, 0, var13.length);
         if (this.field_d != null &&
           this.field_b != null) {
           var12 = new java.math.BigInteger(var13);
@@ -196,7 +196,7 @@ final class wg {
             }
             var7 = this.field_i.readInt((byte) 113);
             var13 = new byte[64];
-            this.field_i.a(102, var13, 0, 64);
+            this.field_i.readBytes(102, var13, 0, 64);
             var9 = new CachedArchiveSource(param1, param4, param2, this.field_a, this.field_f, var6_int, var13, var7, param3);
             this.field_g[param1] = var9;
             stackIn_12_0 = var9;

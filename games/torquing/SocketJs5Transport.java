@@ -133,7 +133,7 @@ final class SocketJs5Transport extends Js5Transport {
                 if (null != var2) {
                   this.field_d.position = 0;
                   this.field_d.writeByte(90, 1);
-                  this.field_d.b(var2.field_l, -19642);
+                  this.field_d.writeLong40(var2.field_l, -19642);
                   this.field_q.a(0, this.field_d.payload, (byte) 77, this.field_d.payload.length);
                   this.field_h.a((byte) 122, var2);
                   var2 = (ac) (this.field_a.c(param0 + 24522));
@@ -150,7 +150,7 @@ final class SocketJs5Transport extends Js5Transport {
               while (null != var2) {
                 this.field_d.position = 0;
                 this.field_d.writeByte(90, 0);
-                this.field_d.b(var2.field_l, param0 ^ -19630);
+                this.field_d.writeLong40(var2.field_l, param0 ^ -19630);
                 this.field_q.a(0, this.field_d.payload, (byte) -101, this.field_d.payload.length);
                 this.field_b.a((byte) 119, var2);
                 var2 = (ac) (this.field_m.c(24542));
@@ -257,10 +257,10 @@ final class SocketJs5Transport extends Js5Transport {
                         var16 != 0) {
                         if (null == this.field_j) {
                           this.field_c.position = 0;
-                          var6Lifetime1Lifetime1 = this.field_c.i((byte) -101);
-                          var7Lifetime1 = this.field_c.c((byte) -117);
-                          var8 = this.field_c.i((byte) -101);
-                          var9 = this.field_c.c((byte) -69);
+                          var6Lifetime1Lifetime1 = this.field_c.readUnsignedByte((byte) -101);
+                          var7Lifetime1 = this.field_c.readInt((byte) -117);
+                          var8 = this.field_c.readUnsignedByte((byte) -101);
+                          var9 = this.field_c.readInt((byte) -69);
                           var10 = var8 & 127;
                           stackIn_97_0 = ((128 & var8) == 0) ? 0 : 1;
                           boolean decompiledFrameCompleted2 = true;
@@ -322,7 +322,7 @@ final class SocketJs5Transport extends Js5Transport {
                           this.field_j = var14_ref;
                           this.field_j.field_z = new PacketBuffer(var15 + var9 + this.field_j.field_y);
                           this.field_j.field_z.writeByte(90, var10);
-                          this.field_j.field_z.b((byte) 60, var9);
+                          this.field_j.field_z.writeInt((byte) 60, var9);
                           this.field_j.field_x = 10;
                           this.field_c.position = 0;
                           decompiledFrameRemainder1 = (var16 != 0);
@@ -474,7 +474,7 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_d.position = 0;
                 this.field_d.writeByte(90, 4);
                 this.field_d.writeByte(90, (int) this.field_f);
-                this.field_d.b((byte) 60, 0);
+                this.field_d.writeInt((byte) 60, 0);
                 this.field_q.a(0, this.field_d.payload, (byte) 54, this.field_d.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -3606,8 +3606,8 @@ final class SocketJs5Transport extends Js5Transport {
             try {
               this.field_d.position = 0;
               this.field_d.writeByte(90, 6);
-              this.field_d.a((byte) -121, 3);
-              this.field_d.a(0, 114);
+              this.field_d.writeMedium((byte) -121, 3);
+              this.field_d.writeShort(0, 114);
               this.field_q.a(0, this.field_d.payload, (byte) -110, this.field_d.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -3661,7 +3661,7 @@ final class SocketJs5Transport extends Js5Transport {
                 stackIn_7_2 = 2;
               }
               ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
-              this.field_d.b(0L, -19642);
+              this.field_d.writeLong40(0L, -19642);
               if (param1 < 126) {
                 return;
               }

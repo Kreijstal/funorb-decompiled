@@ -11,16 +11,16 @@ final class vm extends DualLinkNode {
 
     vm(PacketBuffer param0) {
         this.field_u = new wd(param0);
-        this.field_v = param0.i((byte) -101) == 1 ? true : false;
-        this.field_s = param0.i((byte) -101) == 1 ? true : false;
-        param0.i((byte) -101);
-        param0.i((byte) -101);
-        int var2 = param0.i((byte) -101) & 3;
-        param0.f((byte) 116);
-        param0.f((byte) 123);
-        param0.i((byte) -101);
-        param0.i((byte) -101);
-        param0.i((byte) -101);
+        this.field_v = param0.readUnsignedByte((byte) -101) == 1 ? true : false;
+        this.field_s = param0.readUnsignedByte((byte) -101) == 1 ? true : false;
+        param0.readUnsignedByte((byte) -101);
+        param0.readUnsignedByte((byte) -101);
+        int var2 = param0.readUnsignedByte((byte) -101) & 3;
+        param0.readByte((byte) 116);
+        param0.readByte((byte) 123);
+        param0.readUnsignedByte((byte) -101);
+        param0.readUnsignedByte((byte) -101);
+        param0.readUnsignedByte((byte) -101);
         if (var2 == 1) {
           return;
         }

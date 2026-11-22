@@ -131,9 +131,9 @@ final class SmokeParticle extends FlightBody {
             DualLinkNode.field_l = new PacketBuffer(var7_int);
           }
           DualLinkNode.field_l.position = 0;
-          DualLinkNode.field_l.a(true, param4, param6, param0);
-          DualLinkNode.field_l.a(var7_int, (byte) 88);
-          DualLinkNode.field_l.a(var13, 2097272037);
+          DualLinkNode.field_l.writeBytes(true, param4, param6, param0);
+          DualLinkNode.field_l.padZerosTo(var7_int, (byte) 88);
+          DualLinkNode.field_l.encryptXtea(var13, 2097272037);
           if (ke.field_a == null ||
             !(ke.field_a.payload.length >= 100)) {
             ke.field_a = new PacketBuffer(100);
@@ -147,9 +147,9 @@ final class SmokeParticle extends FlightBody {
             var11++;
           }
           ke.field_a.writeShort(param4, 23385);
-          ke.field_a.a(0, param5, param3);
-          param1.a(true, ke.field_a.position, 0, ke.field_a.payload);
-          param1.a(true, DualLinkNode.field_l.position, 0, DualLinkNode.field_l.payload);
+          ke.field_a.applyRsa(0, param5, param3);
+          param1.writeBytes(true, ke.field_a.position, 0, ke.field_a.payload);
+          param1.writeBytes(true, DualLinkNode.field_l.position, 0, DualLinkNode.field_l.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

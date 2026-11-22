@@ -272,7 +272,7 @@ final class BattleState {
 
     final void write(PacketBuffer param0, byte param1) {
         try {
-          param0.b(this.field_A, -126);
+          param0.writeShort(this.field_A, -126);
           param0.writeByte(this.field_N ? 1 : 0, 0);
           int var3_int = -55 / ((param1 - 85) / 37);
           param0.writeByte(this.field_M, 0);
@@ -327,7 +327,7 @@ final class BattleState {
         try {
           this.field_A = param1.readUnsignedShort((byte) 91);
           this.field_N = ~param1.readUnsignedByte(16711935) != param0 ? false : true;
-          this.field_M = param1.b(true);
+          this.field_M = param1.readByte(true);
           this.field_Q = param1.readUnsignedByte(16711935);
           this.b(-1, param1);
           this.b(param1, 68);
@@ -2395,7 +2395,7 @@ final class BattleState {
               if (this.tiles[var6][var5].field_j == 255) {
                 this.tiles[var6][var5].field_j = -1;
               }
-              this.tiles[var6][var5].field_a = param1.b(true);
+              this.tiles[var6][var5].field_a = param1.readByte(true);
               stackIn_20_0 = this.tiles[var6][var5];
               stackIn_21_1 = (1 == param1.readUnsignedByte(16711935));
               stackIn_20_0.field_m = stackIn_21_1;
@@ -2414,7 +2414,7 @@ final class BattleState {
           if (this.field_o == 2) {
             this.field_i = new int[this.field_L.field_m][3];
             for (var5Lifetime1 = 0; this.field_i.length > var5Lifetime1; var5Lifetime1++) {
-              this.field_i[var5Lifetime1] = new int[]{param1.b(true), param1.b(true), param1.b(true)};
+              this.field_i[var5Lifetime1] = new int[]{param1.readByte(true), param1.readByte(true), param1.readByte(true)};
             }
           }
           if (this.field_o == 3) {

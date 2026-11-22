@@ -121,7 +121,7 @@ final class tc {
         var1.position = param0.length - 7 - var2 * 8;
         var4Lifetime1 = var1.readUnsignedShort(7088);
         var5 = var1.readUnsignedShort(7088);
-        var6 = (var1.i((byte) -101) & 255) + 1;
+        var6 = (var1.readUnsignedByte((byte) -101) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
           var3[var7_int].field_h = var1.readUnsignedShort(7088);
         }
@@ -144,7 +144,7 @@ final class tc {
         var16 = var17;
         var7 = var16;
         for (var8 = 1; var8 < var6; var8++) {
-          var7[var8] = var1.e((byte) 62);
+          var7[var8] = var1.readUnsignedMedium((byte) 62);
           if (var17[var8] == 0) {
             var17[var8] = 1;
           }
@@ -157,16 +157,16 @@ final class tc {
           var9 = var3[var8Lifetime2];
           var10 = var9.field_d * var9.field_e;
           var9.field_i = new byte[var10];
-          var11 = var1.i((byte) -101);
+          var11 = var1.readUnsignedByte((byte) -101);
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {
-                var9.field_i[var12] = var1.f((byte) 23);
+                var9.field_i[var12] = var1.readByte((byte) 23);
               }
             } else {
               for (var12 = 0; var12 < var9.field_d; var12++) {
                 for (var13 = 0; var13 < var9.field_e; var13++) {
-                  var9.field_i[var12 + var13 * var9.field_d] = var1.f((byte) 54);
+                  var9.field_i[var12 + var13 * var9.field_d] = var1.readByte((byte) 54);
                 }
               }
             }
@@ -175,10 +175,10 @@ final class tc {
             var9.field_a = new byte[var10];
             if ((var11 & 1) == 0) {
               for (var13 = 0; var13 < var10; var13++) {
-                var9.field_i[var13] = var1.f((byte) 93);
+                var9.field_i[var13] = var1.readByte((byte) 93);
               }
               for (var13 = 0; var13 < var10; var13++) {
-                dupTemp$1 = var1.f((byte) 59);
+                dupTemp$1 = var1.readByte((byte) 59);
                 var9.field_a[var13] = dupTemp$1;
                 var14 = dupTemp$1;
                 stackIn_53_0 = var12;
@@ -192,12 +192,12 @@ final class tc {
             } else {
               for (var13 = 0; var13 < var9.field_d; var13++) {
                 for (var14 = 0; var14 < var9.field_e; var14++) {
-                  var9.field_i[var13 + var14 * var9.field_d] = var1.f((byte) 23);
+                  var9.field_i[var13 + var14 * var9.field_d] = var1.readByte((byte) 23);
                 }
               }
               for (var13 = 0; var13 < var9.field_d; var13++) {
                 for (var14 = 0; var14 < var9.field_e; var14++) {
-                  dupTemp$0 = var1.f((byte) 22);
+                  dupTemp$0 = var1.readByte((byte) 22);
                   var9.field_a[var13 + var14 * var9.field_d] = dupTemp$0;
                   var15 = dupTemp$0;
                   stackIn_67_0 = var12;

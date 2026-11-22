@@ -318,7 +318,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               stackIn_5_1 = 2;
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, (byte) -127);
-            this.field_g.a(2488, 0L);
+            this.field_g.writeLong40(2488, 0L);
             this.field_q.a(-103, this.field_g.payload, this.field_g.payload.length, param1);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -397,8 +397,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           try {
             this.field_g.position = 0;
             this.field_g.writeByte(6, (byte) -59);
-            this.field_g.c((byte) -38, 3);
-            this.field_g.b(0, (byte) -118);
+            this.field_g.writeMedium((byte) -38, 3);
+            this.field_g.writeShort(0, (byte) -118);
             this.field_q.a(-102, this.field_g.payload, this.field_g.payload.length, 0);
             if (param0 >= -5) {
               avatarSprites = (Sprite[][]) null;
@@ -577,7 +577,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             while (var2 != null) {
               this.field_g.position = 0;
               this.field_g.writeByte(1, (byte) -96);
-              this.field_g.a(2488, var2.field_m);
+              this.field_g.writeLong40(2488, var2.field_m);
               this.field_q.a(-124, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_c.a(var2, true);
               var2 = (hi) (this.field_f.a((byte) 108));
@@ -586,7 +586,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             while (var2Lifetime1 != null) {
               this.field_g.position = 0;
               this.field_g.writeByte(0, (byte) -74);
-              this.field_g.a(2488, var2Lifetime1.field_m);
+              this.field_g.writeLong40(2488, var2Lifetime1.field_m);
               this.field_q.a(-106, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_k.a(var2Lifetime1, true);
               var2Lifetime1 = (hi) (this.field_h.a((byte) 113));

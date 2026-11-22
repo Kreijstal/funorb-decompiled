@@ -27,7 +27,7 @@ final class kg extends h {
               stackIn_6_1 = 3;
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, param0 - 99);
-            this.field_e.b((long)param0, -2108648176);
+            this.field_e.writeLong40((long)param0, -2108648176);
             this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class kg extends h {
             while (var2 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(1, -115);
-              this.field_e.b(var2.secondaryKey, -2108648176);
+              this.field_e.writeLong40(var2.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_m.a(11152, var2);
               var2 = (nh) (this.field_b.a(6273));
@@ -267,7 +267,7 @@ final class kg extends h {
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(0, -124);
-              this.field_e.b(var2Lifetime1.secondaryKey, -2108648176);
+              this.field_e.writeLong40(var2Lifetime1.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_g.a(11152, var2Lifetime1);
               var2Lifetime1 = (nh) (this.field_a.a(6273));

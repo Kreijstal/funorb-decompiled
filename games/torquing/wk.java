@@ -305,47 +305,47 @@ class wk implements si {
           this.field_g = var7.readUnsignedShort(7088);
           this.field_b = new un[this.field_g];
           for (var5 = 0; var5 < this.field_g; var5++) {
-            if (1 == var7.i((byte) -101)) {
+            if (1 == var7.readUnsignedByte((byte) -101)) {
               this.field_b[var5] = new un();
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
             if (this.field_b[var5Lifetime1] != null) {
               stackIn_11_0 = this.field_b[var5Lifetime1];
-              stackIn_12_1 = (var7.i((byte) -101) == 0);
+              stackIn_12_1 = (var7.readUnsignedByte((byte) -101) == 0);
               stackIn_11_0.field_g = stackIn_12_1;
             }
           }
           for (var5Lifetime2 = 0; this.field_g > var5Lifetime2; var5Lifetime2++) {
             if (this.field_b[var5Lifetime2] != null) {
               stackIn_19_0 = this.field_b[var5Lifetime2];
-              stackIn_20_1 = (1 == var7.i((byte) -101));
+              stackIn_20_1 = (1 == var7.readUnsignedByte((byte) -101));
               stackIn_19_0.field_h = stackIn_20_1;
             }
           }
           for (var5Lifetime3 = 0; var5Lifetime3 < this.field_g; var5Lifetime3++) {
             if (this.field_b[var5Lifetime3] != null) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime4 = 0; var5Lifetime4 < this.field_g; var5Lifetime4++) {
             if (null != this.field_b[var5Lifetime4]) {
-              var7.f((byte) 113);
+              var7.readByte((byte) 113);
             }
           }
           for (var5Lifetime5 = 0; this.field_g > var5Lifetime5; var5Lifetime5++) {
             if (null != this.field_b[var5Lifetime5]) {
-              var7.f((byte) 106);
+              var7.readByte((byte) 106);
             }
           }
           for (var5Lifetime6 = 0; this.field_g > var5Lifetime6; var5Lifetime6++) {
             if (null != this.field_b[var5Lifetime6]) {
-              var7.f((byte) 80);
+              var7.readByte((byte) 80);
             }
           }
           for (var5Lifetime7 = 0; this.field_g > var5Lifetime7; var5Lifetime7++) {
             if (null != this.field_b[var5Lifetime7]) {
-              var7.f((byte) 73);
+              var7.readByte((byte) 73);
             }
           }
           for (var5Lifetime8 = 0; this.field_g > var5Lifetime8; var5Lifetime8++) {
@@ -355,59 +355,59 @@ class wk implements si {
           }
           for (var5Lifetime9 = 0; var5Lifetime9 < this.field_g; var5Lifetime9++) {
             if (null != this.field_b[var5Lifetime9]) {
-              var7.f((byte) 93);
+              var7.readByte((byte) 93);
             }
           }
           for (var5Lifetime10 = 0; this.field_g > var5Lifetime10; var5Lifetime10++) {
             if (null != this.field_b[var5Lifetime10]) {
-              var7.f((byte) 30);
+              var7.readByte((byte) 30);
             }
           }
           for (var5Lifetime11 = 0; this.field_g > var5Lifetime11; var5Lifetime11++) {
             if (null != this.field_b[var5Lifetime11]) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime12 = 0; this.field_g > var5Lifetime12; var5Lifetime12++) {
             if (null != this.field_b[var5Lifetime12]) {
               stackIn_72_0 = this.field_b[var5Lifetime12];
-              stackIn_73_1 = (var7.i((byte) -101) == 1);
+              stackIn_73_1 = (var7.readUnsignedByte((byte) -101) == 1);
               stackIn_72_0.field_e = stackIn_73_1;
             }
           }
           for (var5Lifetime13 = 0; this.field_g > var5Lifetime13; var5Lifetime13++) {
             if (this.field_b[var5Lifetime13] != null) {
-              var7.f((byte) 104);
+              var7.readByte((byte) 104);
             }
           }
           for (var5Lifetime14 = 0; var5Lifetime14 < this.field_g; var5Lifetime14++) {
             if (this.field_b[var5Lifetime14] != null) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime15 = 0; this.field_g > var5Lifetime15; var5Lifetime15++) {
             if (null != this.field_b[var5Lifetime15]) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime16 = 0; this.field_g > var5Lifetime16; var5Lifetime16++) {
             if (null != this.field_b[var5Lifetime16]) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime17 = 0; var5Lifetime17 < this.field_g; var5Lifetime17++) {
             if (null != this.field_b[var5Lifetime17]) {
-              var7.i((byte) -101);
+              var7.readUnsignedByte((byte) -101);
             }
           }
           for (var5Lifetime18 = 0; var5Lifetime18 < this.field_g; var5Lifetime18++) {
             if (null != this.field_b[var5Lifetime18]) {
-              var7.c((byte) -56);
+              var7.readInt((byte) -56);
             }
           }
           for (var5Lifetime19 = 0; var5Lifetime19 < this.field_g; var5Lifetime19++) {
             if (this.field_b[var5Lifetime19] != null) {
-              this.field_b[var5Lifetime19].field_j = var7.i((byte) -101);
+              this.field_b[var5Lifetime19].field_j = var7.readUnsignedByte((byte) -101);
             }
           }
           return;

@@ -730,7 +730,7 @@ class af implements j, eg {
                         var13 = param1.readInt(true);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var13, 0, -113, var21[var12_int]);
+                        param1.readBytes(var13, 0, -113, var21[var12_int]);
                       }
                     }
                     var18.field_r[var5] = var6_int;

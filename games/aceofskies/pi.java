@@ -180,7 +180,7 @@ final class pi extends mi {
               ln.field_d = IntKeyLookup.incomingPacket.readUnsignedByte(37);
               IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 103);
               qr.field_a = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
-              String var11 = IntKeyLookup.incomingPacket.e((byte) -122);
+              String var11 = IntKeyLookup.incomingPacket.readNullableString((byte) -122);
               int var7 = IntKeyLookup.incomingPacket.readUnsignedByte(118);
               if (0 != (1 & var7)) {
                 Bullet.b(param2 + 0);

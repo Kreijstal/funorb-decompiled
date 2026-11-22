@@ -88,7 +88,7 @@ final class it {
           this.field_b = 0;
         }
         if (this.field_b == 512) {
-          uca.a(8, (byte) -44);
+          Crc32Table.a(8, (byte) -44);
         }
         if (this.field_f) {
           if (this.field_n > 0) {

@@ -17,7 +17,7 @@ final class RaiseSpecial extends SpecialOrder {
           var3 = sja.field_fb;
           var3.writeCipheredByte(param2, (byte) 127);
           var3.writeByte(param0.field_g, 0);
-          var3.b(param0.field_h, -127);
+          var3.writeShort(param0.field_h, -127);
           if (!param1) {
             field_p = -86;
           }

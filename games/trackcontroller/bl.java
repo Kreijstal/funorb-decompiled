@@ -103,7 +103,7 @@ final class bl {
                         var13 = param3.readInt((byte) 113);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param3.a(105, var21[var12_int], 0, var13);
+                        param3.readBytes(105, var21[var12_int], 0, var13);
                       }
                     }
                     var18.field_m[var5] = var6_int;

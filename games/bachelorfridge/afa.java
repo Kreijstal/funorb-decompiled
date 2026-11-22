@@ -182,7 +182,7 @@ final class afa extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -113) {
-            stackIn_4_0 = new fe(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.a(3), param0.a(3), param0.readUnsignedByte(16711935));
+            stackIn_4_0 = new fe(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readUnsignedMedium(3), param0.readUnsignedMedium(3), param0.readUnsignedByte(16711935));
             return stackIn_4_0;
           }
           stackIn_2_0 = (fe) null;

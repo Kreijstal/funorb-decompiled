@@ -87,7 +87,7 @@ final class dg {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ProxySocketConnector.a(-124, var1);
-            di.field_l.j(var1.position - var2, -119);
+            di.field_l.backpatchByteLength(var1.position - var2, -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

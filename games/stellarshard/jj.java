@@ -41,7 +41,7 @@ final class jj {
     PcmSample[] field_j;
     private int[] field_i;
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -80,7 +80,7 @@ final class jj {
     public static void a(int param0) {
         if (param0 != 18917) {
           byte[] var2 = (byte[]) null;
-          jj.a(-53, (byte[]) null, 76, -35);
+          jj.computeCrc32(-53, (byte[]) null, 76, -35);
         }
         field_k = null;
     }
@@ -137,7 +137,7 @@ final class jj {
           pk.a(4);
           if (!param0) {
             byte[] var15 = (byte[]) null;
-            jj.a(-44, (byte[]) null, -58, 66);
+            jj.computeCrc32(-44, (byte[]) null, -58, 66);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "jj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + (param13 != null ? "{...}" : "null") + ')');
@@ -219,7 +219,7 @@ final class jj {
             var6 = param0.readUnsignedShort((byte) 73);
             var16 = new byte[var6];
             if (var6 > 0) {
-              param0.a(0, (byte) -104, var6, var16);
+              param0.readBytes(0, (byte) -104, var6, var16);
               this.field_y[var5Lifetime2] = var16;
             }
           }
@@ -274,7 +274,7 @@ final class jj {
               var4Lifetime1Lifetime1 = 0;
               var10 = 0;
               for (var11 = 0; var8Lifetime1 > var11; var11++) {
-                dupTemp$3 = var10 + param0.e(-64);
+                dupTemp$3 = var10 + param0.readSignedSmart(-64);
                 var10 = dupTemp$3;
                 localTemp$4 = var4Lifetime1Lifetime1 + dupTemp$3;
                 var4Lifetime1Lifetime1 = localTemp$4;
@@ -293,7 +293,7 @@ final class jj {
               var4Lifetime1Lifetime3 = 0;
               var10Lifetime1 = 0;
               for (var11Lifetime2 = 0; var11Lifetime2 < var9; var11Lifetime2++) {
-                dupTemp$8 = var10Lifetime1 + param0.e(-64);
+                dupTemp$8 = var10Lifetime1 + param0.readSignedSmart(-64);
                 var10Lifetime1 = dupTemp$8;
                 localTemp$9 = var4Lifetime1Lifetime3 + dupTemp$8;
                 var4Lifetime1Lifetime3 = localTemp$9;
@@ -309,9 +309,9 @@ final class jj {
               }
               this.field_b[var6Lifetime1] = param0.readUnsignedShort((byte) 85);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {
-                this.field_m[var5Lifetime4] = param0.c(true);
-                this.field_t[var5Lifetime4] = param0.c(true);
-                this.field_v[var5Lifetime4] = this.field_t[var5Lifetime4] + param0.c(true);
+                this.field_m[var5Lifetime4] = param0.readUnsignedMedium(true);
+                this.field_t[var5Lifetime4] = param0.readUnsignedMedium(true);
+                this.field_v[var5Lifetime4] = this.field_t[var5Lifetime4] + param0.readUnsignedMedium(true);
                 this.field_J[var5Lifetime4] = param0.readUnsignedByte(4);
                 this.field_n[var5Lifetime4] = param0.readByte(110);
                 this.field_c[var5Lifetime4] = param0.readUnsignedByte(4);

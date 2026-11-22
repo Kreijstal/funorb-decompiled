@@ -17,7 +17,7 @@ final class pma extends k {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.a(param1.a(3), true);
+            this.a(param1.readUnsignedMedium(3), true);
           }
           if (param0 != -71) {
             this.field_n = 29;

@@ -372,25 +372,25 @@ final class qg extends am {
                   if (4 != var4_int) {
                     if (var4_int != 5) {
                       if (var4_int == 6) {
-                        this.field_w = param0.i((byte) -101);
+                        this.field_w = param0.readUnsignedByte((byte) -101);
                       }
                     } else {
-                      this.field_D = param0.i((byte) -101);
+                      this.field_D = param0.readUnsignedByte((byte) -101);
                     }
                   } else {
-                    this.field_y = param0.i((byte) -101);
+                    this.field_y = param0.readUnsignedByte((byte) -101);
                   }
                 } else {
-                  this.field_t = param0.i((byte) -101);
+                  this.field_t = param0.readUnsignedByte((byte) -101);
                 }
               } else {
                 this.field_s = param0.readUnsignedShort(7088);
               }
             } else {
-              this.field_x = param0.i((byte) -101);
+              this.field_x = param0.readUnsignedByte((byte) -101);
             }
           } else {
-            dupTemp$0 = param0.i((byte) -101);
+            dupTemp$0 = param0.readUnsignedByte((byte) -101);
             this.field_w = dupTemp$0;
             this.field_D = dupTemp$0;
           }

@@ -724,6 +724,150 @@
       "renamedSymbol": "M:PacketBuffer.readUnsignedByte(B)I"
     },
     {
+      "symbol": "M:gk.a(BI)I",
+      "originalName": "a",
+      "to": "appendCrc32",
+      "evidence": "Complete owned body and constructors reviewed: Compute CRC32 over caller start/current cursor, append big-endian int and return it. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard>=-37 returns-68 before I/O.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.appendCrc32(BI)I"
+    },
+    {
+      "symbol": "M:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
+      "originalName": "a",
+      "to": "applyRsa",
+      "evidence": "Complete owned body and constructors reviewed: Transform signed BigInteger plaintext using supplied exponent/modulus, emit toByteArray with short byte-length prefix. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Signed input; exponentparam1/modulusparam2; reset0/write short length before badguard>-125 sets cursor9 ahead of result copy.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V"
+    },
+    {
+      "symbol": "M:gk.a(IB)V",
+      "originalName": "a",
+      "to": "backpatchByteLength",
+      "evidence": "Complete owned body and constructors reviewed: Patch byte length behind current cursor without canonical cursor advance. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard division before patch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.backpatchByteLength(IB)V"
+    },
+    {
+      "symbol": "M:gk.a(II)V",
+      "originalName": "a",
+      "to": "writeInt",
+      "evidence": "Complete owned body and constructors reviewed: Write32bits big endian. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard changes scalar before writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeInt(II)V"
+    },
+    {
+      "symbol": "M:gk.a(III[I)V",
+      "originalName": "a",
+      "to": "decryptXteaRange",
+      "evidence": "Complete owned body and constructors reviewed: Decrypt complete64-bit blocks in specified range with32 reverse XTEA rounds and initial sum-957401312; normal-only cursor restoration. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Startparam0/endparam1; guard invokes negative-length null copy after all blocks before restore; its guard clears payload even though copy loop is empty. Normal-only restore; mask7088>>>11=3.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.decryptXteaRange(III[I)V"
+    },
+    {
+      "symbol": "M:gk.a(IJ)V",
+      "originalName": "a",
+      "to": "writeLong56",
+      "evidence": "Complete owned body and constructors reviewed: Write low56bits as seven big-endian bytes. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard reads unsigned short after5writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeLong56(IJ)V"
+    },
+    {
+      "symbol": "M:gk.a(ILjava/lang/String;)V",
+      "originalName": "a",
+      "to": "writeString",
+      "evidence": "Complete owned body and constructors reviewed: Reject embedded NUL, encode through original byte helper and append zero. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard modulo after encoding and terminator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeString(ILjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:gk.a(IZ)V",
+      "originalName": "a",
+      "to": "writeSignedSmart",
+      "evidence": "Complete owned body and constructors reviewed: Encode[-64,64) as byte+64 and[-16384,16384) as short+49152; reject other values. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Small byte case returns before trueflag sets cursor-125.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeSignedSmart(IZ)V"
+    },
+    {
+      "symbol": "M:gk.a(I[I)V",
+      "originalName": "a",
+      "to": "encryptXtea",
+      "evidence": "Complete owned body and constructors reviewed: Process64-bit blocks using32 XTEA rounds, delta-1640531527 and four indexed int key words. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Floor(old cursor/8),reset0 before badguard Canvas helper; processed-end cursor; mask8160>>>11=3.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.encryptXtea(I[I)V"
+    },
+    {
+      "symbol": "M:gk.a(JB)V",
+      "originalName": "a",
+      "to": "writeLong",
+      "evidence": "Complete owned body and constructors reviewed: Write64bits big endian. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard modulo after4writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeLong(JB)V"
+    },
+    {
+      "symbol": "M:gk.a(JI)V",
+      "originalName": "a",
+      "to": "writeLong40",
+      "evidence": "Complete owned body and constructors reviewed: Write low40bits as five big-endian bytes. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard clears payload after2writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeLong40(JI)V"
+    },
+    {
+      "symbol": "M:gk.a(Ljava/lang/String;B)V",
+      "originalName": "a",
+      "to": "writeBase38String",
+      "evidence": "Complete owned body and constructors reviewed: Case-fold letters/digits into two ten-character base38 groups, encoded as two56-bit values; preserve20-character truncation, missing positions and other-character mapping. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. String length before bad byte clears static string and before loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeBase38String(Ljava/lang/String;B)V"
+    },
+    {
+      "symbol": "M:gk.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "writePrefixedString",
+      "evidence": "Complete owned body and constructors reviewed: Reject embedded NUL, write leading0, encode through original helper, append0. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard modulo after complete prefix/encoding/terminator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:gk.a(ZI)V",
+      "originalName": "a",
+      "to": "padZerosTo",
+      "evidence": "Complete owned body and constructors reviewed: Write zeros until cursor reaches caller absolute target. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Falseflag invokes Canvas helper after padding.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.padZerosTo(ZI)V"
+    },
+    {
+      "symbol": "M:gk.a([BIII)V",
+      "originalName": "a",
+      "to": "readBytes",
+      "evidence": "Complete owned body and constructors reviewed: Copy payload bytes to caller array range while advancing cursor. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard>-85 returns before copy.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readBytes([BIII)V"
+    },
+    {
+      "symbol": "M:gk.b(B)Ljava/lang/String;",
+      "originalName": "b",
+      "to": "readPrefixedString",
+      "evidence": "Complete owned body and constructors reviewed: Consume/validate prefix then scan/decode zero-terminated string. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard<90 returns null before I/O.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readPrefixedString(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:gk.b(II)V",
+      "originalName": "b",
+      "to": "writeByte",
+      "evidence": "Complete owned body and constructors reviewed: Write low8bits. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard sets cursor61 before write.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeByte(II)V"
+    },
+    {
+      "symbol": "M:gk.b([BIII)V",
+      "originalName": "b",
+      "to": "writeBytes",
+      "evidence": "Complete owned body and constructors reviewed: Copy caller array range into payload while advancing cursor. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard clears payload before loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeBytes([BIII)V"
+    },
+    {
       "symbol": "M:gk.c(B)I",
       "originalName": "c",
       "to": "readUnsignedMedium",
@@ -732,12 +876,60 @@
       "renamedSymbol": "M:PacketBuffer.readUnsignedMedium(B)I"
     },
     {
+      "symbol": "M:gk.c(II)V",
+      "originalName": "c",
+      "to": "writeShort",
+      "evidence": "Complete owned body and constructors reviewed: Write low16bits big endian. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard<=58 returns after first byte.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeShort(II)V"
+    },
+    {
+      "symbol": "M:gk.d(II)V",
+      "originalName": "d",
+      "to": "backpatchShortLength",
+      "evidence": "Complete owned body and constructors reviewed: Patch big-endian short length behind current cursor. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard calls static helper after patches.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.backpatchShortLength(II)V"
+    },
+    {
       "symbol": "M:gk.e(I)I",
       "originalName": "e",
       "to": "readInt",
       "evidence": "PacketBuffer field_g payload and field_h cursor; reviewed big-endian shifts/masks and cursor increments.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PacketBuffer.readInt(I)I"
+    },
+    {
+      "symbol": "M:gk.e(II)V",
+      "originalName": "e",
+      "to": "writeMedium",
+      "evidence": "Complete owned body and constructors reviewed: Write low24bits big endian. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Guard modulo before writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.writeMedium(II)V"
+    },
+    {
+      "symbol": "M:gk.f(I)Ljava/lang/String;",
+      "originalName": "f",
+      "to": "readString",
+      "evidence": "Complete owned body and constructors reviewed: Scan to zero and decode through original helper; consume terminator. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Caller param0 is complement-of-length empty test, canonical-1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readString(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:gk.g(I)Ljava/lang/String;",
+      "originalName": "g",
+      "to": "readNullableString",
+      "evidence": "Complete owned body and constructors reviewed: Consume null marker or delegate original zero-terminated reader. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Wrong guard returns null before peek.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readNullableString(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:gk.h(I)I",
+      "originalName": "h",
+      "to": "readSignedSmart",
+      "evidence": "Complete owned body and constructors reviewed: Peek high bit; unsigned byte minus64 or unsigned short minus49152. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Caller param0 controls complemented threshold comparison, canonical-129.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readSignedSmart(I)I"
     },
     {
       "symbol": "M:gk.i(I)J",
@@ -762,6 +954,38 @@
       "evidence": "PacketBuffer field_g payload and field_h cursor; reviewed big-endian shifts/masks and cursor increments.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PacketBuffer.readByte(I)B"
+    },
+    {
+      "symbol": "M:gk.l(I)Z",
+      "originalName": "l",
+      "to": "verifyCrc32",
+      "evidence": "Complete owned body and constructors reviewed: Rewind to stored checksum, compute preceding CRC32, read stored big-endian int and compare. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Wrong guard returns true before I/O.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.verifyCrc32(I)Z"
+    },
+    {
+      "symbol": "M:gk.m(I)I",
+      "originalName": "m",
+      "to": "readUnsignedShortOrInt",
+      "evidence": "Complete owned body and constructors reviewed: Peek sign bit; unsigned short or int masked2147483647. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard writes int before peek.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedShortOrInt(I)I"
+    },
+    {
+      "symbol": "M:gk.n(I)V",
+      "originalName": "n",
+      "to": "clearBufferStatics",
+      "evidence": "Complete body and owned static declaration identities reviewed. Bad guard clears same static string before unconditional repeated null write; preserve both writes and instance fields.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.clearBufferStatics(I)V"
+    },
+    {
+      "symbol": "M:gk.o(I)I",
+      "originalName": "o",
+      "to": "readUnsignedSmart",
+      "evidence": "Complete owned body and constructors reviewed: Peek high bit; unsigned byte or unsigned short minus32768. Preserve all original guards, global flags, helper calls, cursor ordering, exception wrappers and partial effects. Bad guard writes byte (with cursor61 side effect) before peek.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedSmart(I)I"
     },
     {
       "symbol": "M:hc.a(B)V",
@@ -1074,6 +1298,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a75ee155a31d4ba9048a25f189381d20530069902f8b5103d0ec50b68fbf3ff3.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ra.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:rc.a(III[B)I",
+      "originalName": "a",
+      "to": "computeCrc32",
+      "evidence": "Complete helper/table initialization reviewed:256entries, eight reflected shifts/XORs with polynomial-306674912; seed-1, table[(crc XOR byte)&255] XOR crc>>>8, complemented result. Preserve caller range, original scalar writes/callbacks/sentinels/recursive failures, mutable table, arithmetic and exception wrappers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rc.computeCrc32(III[B)I"
     },
     {
       "symbol": "M:rc.b(B)V",
@@ -67309,7 +67541,7 @@
     },
     {
       "symbol": "L:gk.a(BI)I#0",
-      "renamedSymbol": "L:PacketBuffer.a(BI)I#0",
+      "renamedSymbol": "L:PacketBuffer.appendCrc32(BI)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67320,7 +67552,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -67331,7 +67563,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67342,7 +67574,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67353,7 +67585,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67364,7 +67596,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#4",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67375,7 +67607,7 @@
     },
     {
       "symbol": "L:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#5",
+      "renamedSymbol": "L:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#5",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -67386,7 +67618,7 @@
     },
     {
       "symbol": "L:gk.a(IB)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(IB)V#0",
+      "renamedSymbol": "L:PacketBuffer.backpatchByteLength(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67397,7 +67629,7 @@
     },
     {
       "symbol": "L:gk.a(II)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(II)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -67408,7 +67640,7 @@
     },
     {
       "symbol": "L:gk.a(II)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(II)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -67419,7 +67651,7 @@
     },
     {
       "symbol": "L:gk.a(II)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(II)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -67430,7 +67662,7 @@
     },
     {
       "symbol": "L:gk.a(II)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(II)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeInt(II)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -67441,7 +67673,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#0",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -67452,7 +67684,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#1",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -67463,7 +67695,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#10",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#10",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -67474,7 +67706,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#11",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#11",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -67485,7 +67717,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#12",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#12",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -67496,7 +67728,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#13",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#13",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -67507,7 +67739,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#14",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#14",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -67518,7 +67750,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#15",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#15",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -67529,7 +67761,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#16",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#16",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -67540,7 +67772,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#2",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#2",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -67551,7 +67783,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#3",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#3",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -67562,7 +67794,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#4",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -67573,7 +67805,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#5",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -67584,7 +67816,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#6",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67595,7 +67827,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#7",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67606,7 +67838,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#8",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67617,7 +67849,7 @@
     },
     {
       "symbol": "L:gk.a(III[I)V#9",
-      "renamedSymbol": "L:PacketBuffer.a(III[I)V#9",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(III[I)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67628,7 +67860,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -67639,7 +67871,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -67650,7 +67882,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -67661,7 +67893,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -67672,7 +67904,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#4",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -67683,7 +67915,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#5",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#5",
       "originalName": "fieldTemp$5",
       "renamedName": "fieldTemp$5",
       "declaration": {
@@ -67694,7 +67926,7 @@
     },
     {
       "symbol": "L:gk.a(IJ)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(IJ)V#6",
+      "renamedSymbol": "L:PacketBuffer.writeLong56(IJ)V#6",
       "originalName": "fieldTemp$6",
       "renamedName": "fieldTemp$6",
       "declaration": {
@@ -67705,7 +67937,7 @@
     },
     {
       "symbol": "L:gk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeString(ILjava/lang/String;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -67716,7 +67948,7 @@
     },
     {
       "symbol": "L:gk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeString(ILjava/lang/String;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67727,7 +67959,7 @@
     },
     {
       "symbol": "L:gk.a(ILjava/lang/String;)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(ILjava/lang/String;)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeString(ILjava/lang/String;)V#2",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -67738,7 +67970,7 @@
     },
     {
       "symbol": "L:gk.a(ILjava/lang/String;)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(ILjava/lang/String;)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeString(ILjava/lang/String;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67749,7 +67981,7 @@
     },
     {
       "symbol": "L:gk.a(ILjava/lang/String;)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(ILjava/lang/String;)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeString(ILjava/lang/String;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -67760,7 +67992,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#0",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -67771,7 +68003,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#1",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -67782,7 +68014,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#10",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#10",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67793,7 +68025,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#11",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#11",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67804,7 +68036,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#12",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#12",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -67815,7 +68047,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#13",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#13",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -67826,7 +68058,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#14",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#14",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -67837,7 +68069,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#15",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#15",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -67848,7 +68080,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#2",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -67859,7 +68091,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#3",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#3",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -67870,7 +68102,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#4",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -67881,7 +68113,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#5",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -67892,7 +68124,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#6",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67903,7 +68135,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#7",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67914,7 +68146,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#8",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67925,7 +68157,7 @@
     },
     {
       "symbol": "L:gk.a(I[I)V#9",
-      "renamedSymbol": "L:PacketBuffer.a(I[I)V#9",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea(I[I)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67936,7 +68168,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -67947,7 +68179,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -67958,7 +68190,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -67969,7 +68201,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -67980,7 +68212,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67991,7 +68223,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#5",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#5",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -68002,7 +68234,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#6",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#6",
       "originalName": "fieldTemp$5",
       "renamedName": "fieldTemp$5",
       "declaration": {
@@ -68013,7 +68245,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#7",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#7",
       "originalName": "fieldTemp$6",
       "renamedName": "fieldTemp$6",
       "declaration": {
@@ -68024,7 +68256,7 @@
     },
     {
       "symbol": "L:gk.a(JB)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(JB)V#8",
+      "renamedSymbol": "L:PacketBuffer.writeLong(JB)V#8",
       "originalName": "fieldTemp$7",
       "renamedName": "fieldTemp$7",
       "declaration": {
@@ -68035,7 +68267,7 @@
     },
     {
       "symbol": "L:gk.a(JI)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(JI)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeLong40(JI)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68046,7 +68278,7 @@
     },
     {
       "symbol": "L:gk.a(JI)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(JI)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeLong40(JI)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -68057,7 +68289,7 @@
     },
     {
       "symbol": "L:gk.a(JI)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(JI)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeLong40(JI)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -68068,7 +68300,7 @@
     },
     {
       "symbol": "L:gk.a(JI)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(JI)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeLong40(JI)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -68079,7 +68311,7 @@
     },
     {
       "symbol": "L:gk.a(JI)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(JI)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeLong40(JI)V#4",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -68189,7 +68421,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68200,7 +68432,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#1",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -68211,7 +68443,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#10",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#10",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -68222,7 +68454,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#11",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#11",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68233,7 +68465,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#2",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -68244,7 +68476,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#3",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -68255,7 +68487,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68266,7 +68498,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#5",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#5",
       "originalName": "var3_long",
       "renamedName": "var3_long",
       "declaration": {
@@ -68277,7 +68509,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#6",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68288,7 +68520,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#7",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68299,7 +68531,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#8",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68310,7 +68542,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;B)V#9",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;B)V#9",
+      "renamedSymbol": "L:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -68321,7 +68553,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -68332,7 +68564,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68343,7 +68575,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68354,7 +68586,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#3",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -68365,7 +68597,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68376,7 +68608,7 @@
     },
     {
       "symbol": "L:gk.a(Ljava/lang/String;I)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(Ljava/lang/String;I)V#5",
+      "renamedSymbol": "L:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#5",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -68387,7 +68619,7 @@
     },
     {
       "symbol": "L:gk.a(ZI)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(ZI)V#0",
+      "renamedSymbol": "L:PacketBuffer.padZerosTo(ZI)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68398,7 +68630,7 @@
     },
     {
       "symbol": "L:gk.a(ZI)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(ZI)V#1",
+      "renamedSymbol": "L:PacketBuffer.padZerosTo(ZI)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68409,7 +68641,7 @@
     },
     {
       "symbol": "L:gk.a(ZI)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(ZI)V#2",
+      "renamedSymbol": "L:PacketBuffer.padZerosTo(ZI)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68420,7 +68652,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#0",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#0",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -68431,7 +68663,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#1",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#1",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68442,7 +68674,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#2",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#2",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -68453,7 +68685,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#3",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#3",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -68464,7 +68696,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#4",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#4",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -68475,7 +68707,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#5",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#5",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68486,7 +68718,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#6",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#6",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68497,7 +68729,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#7",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#7",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68508,7 +68740,7 @@
     },
     {
       "symbol": "L:gk.a([BIII)V#8",
-      "renamedSymbol": "L:PacketBuffer.a([BIII)V#8",
+      "renamedSymbol": "L:PacketBuffer.readBytes([BIII)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68519,7 +68751,7 @@
     },
     {
       "symbol": "L:gk.b(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:PacketBuffer.b(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68530,7 +68762,7 @@
     },
     {
       "symbol": "L:gk.b(B)Ljava/lang/String;#1",
-      "renamedSymbol": "L:PacketBuffer.b(B)Ljava/lang/String;#1",
+      "renamedSymbol": "L:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -68541,7 +68773,7 @@
     },
     {
       "symbol": "L:gk.b(B)Ljava/lang/String;#2",
-      "renamedSymbol": "L:PacketBuffer.b(B)Ljava/lang/String;#2",
+      "renamedSymbol": "L:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68552,7 +68784,7 @@
     },
     {
       "symbol": "L:gk.b(B)Ljava/lang/String;#3",
-      "renamedSymbol": "L:PacketBuffer.b(B)Ljava/lang/String;#3",
+      "renamedSymbol": "L:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68563,7 +68795,7 @@
     },
     {
       "symbol": "L:gk.b(B)Ljava/lang/String;#4",
-      "renamedSymbol": "L:PacketBuffer.b(B)Ljava/lang/String;#4",
+      "renamedSymbol": "L:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68574,7 +68806,7 @@
     },
     {
       "symbol": "L:gk.b(II)V#0",
-      "renamedSymbol": "L:PacketBuffer.b(II)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeByte(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68585,7 +68817,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#0",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -68596,7 +68828,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#1",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68607,7 +68839,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#2",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -68618,7 +68850,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#3",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -68629,7 +68861,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#4",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#4",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -68640,7 +68872,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#5",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#5",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68651,7 +68883,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#6",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#6",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68662,7 +68894,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#7",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#7",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68673,7 +68905,7 @@
     },
     {
       "symbol": "L:gk.b([BIII)V#8",
-      "renamedSymbol": "L:PacketBuffer.b([BIII)V#8",
+      "renamedSymbol": "L:PacketBuffer.writeBytes([BIII)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68695,7 +68927,7 @@
     },
     {
       "symbol": "L:gk.c(II)V#0",
-      "renamedSymbol": "L:PacketBuffer.c(II)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeShort(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68706,7 +68938,7 @@
     },
     {
       "symbol": "L:gk.c(II)V#1",
-      "renamedSymbol": "L:PacketBuffer.c(II)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeShort(II)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -68728,7 +68960,7 @@
     },
     {
       "symbol": "L:gk.e(II)V#0",
-      "renamedSymbol": "L:PacketBuffer.e(II)V#0",
+      "renamedSymbol": "L:PacketBuffer.writeMedium(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68739,7 +68971,7 @@
     },
     {
       "symbol": "L:gk.e(II)V#1",
-      "renamedSymbol": "L:PacketBuffer.e(II)V#1",
+      "renamedSymbol": "L:PacketBuffer.writeMedium(II)V#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68750,7 +68982,7 @@
     },
     {
       "symbol": "L:gk.e(II)V#2",
-      "renamedSymbol": "L:PacketBuffer.e(II)V#2",
+      "renamedSymbol": "L:PacketBuffer.writeMedium(II)V#2",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -68761,7 +68993,7 @@
     },
     {
       "symbol": "L:gk.e(II)V#3",
-      "renamedSymbol": "L:PacketBuffer.e(II)V#3",
+      "renamedSymbol": "L:PacketBuffer.writeMedium(II)V#3",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -68772,7 +69004,7 @@
     },
     {
       "symbol": "L:gk.f(I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:PacketBuffer.f(I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:PacketBuffer.readString(I)Ljava/lang/String;#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -68783,7 +69015,7 @@
     },
     {
       "symbol": "L:gk.f(I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:PacketBuffer.f(I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:PacketBuffer.readString(I)Ljava/lang/String;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68794,7 +69026,7 @@
     },
     {
       "symbol": "L:gk.f(I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:PacketBuffer.f(I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:PacketBuffer.readString(I)Ljava/lang/String;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68805,7 +69037,7 @@
     },
     {
       "symbol": "L:gk.h(I)I#0",
-      "renamedSymbol": "L:PacketBuffer.h(I)I#0",
+      "renamedSymbol": "L:PacketBuffer.readSignedSmart(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68860,7 +69092,7 @@
     },
     {
       "symbol": "L:gk.l(I)Z#0",
-      "renamedSymbol": "L:PacketBuffer.l(I)Z#0",
+      "renamedSymbol": "L:PacketBuffer.verifyCrc32(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68871,7 +69103,7 @@
     },
     {
       "symbol": "L:gk.l(I)Z#1",
-      "renamedSymbol": "L:PacketBuffer.l(I)Z#1",
+      "renamedSymbol": "L:PacketBuffer.verifyCrc32(I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -68882,7 +69114,7 @@
     },
     {
       "symbol": "L:gk.o(I)I#0",
-      "renamedSymbol": "L:PacketBuffer.o(I)I#0",
+      "renamedSymbol": "L:PacketBuffer.readUnsignedSmart(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -119438,7 +119670,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#0",
-      "renamedSymbol": "L:rc.a(III[B)I#0",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -119449,7 +119681,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#1",
-      "renamedSymbol": "L:rc.a(III[B)I#1",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -119460,7 +119692,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#10",
-      "renamedSymbol": "L:rc.a(III[B)I#10",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -119471,7 +119703,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#2",
-      "renamedSymbol": "L:rc.a(III[B)I#2",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -119482,7 +119714,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#3",
-      "renamedSymbol": "L:rc.a(III[B)I#3",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -119493,7 +119725,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#4",
-      "renamedSymbol": "L:rc.a(III[B)I#4",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#4",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -119504,7 +119736,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#5",
-      "renamedSymbol": "L:rc.a(III[B)I#5",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -119515,7 +119747,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#6",
-      "renamedSymbol": "L:rc.a(III[B)I#6",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -119526,7 +119758,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#7",
-      "renamedSymbol": "L:rc.a(III[B)I#7",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -119537,7 +119769,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#8",
-      "renamedSymbol": "L:rc.a(III[B)I#8",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -119548,7 +119780,7 @@
     },
     {
       "symbol": "L:rc.a(III[B)I#9",
-      "renamedSymbol": "L:rc.a(III[B)I#9",
+      "renamedSymbol": "L:rc.computeCrc32(III[B)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -153802,9 +154034,9 @@
     },
     {
       "symbol": "M:gk.a(BI)I",
-      "renamedSymbol": "M:PacketBuffer.a(BI)I",
+      "renamedSymbol": "M:PacketBuffer.appendCrc32(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "appendCrc32",
       "declaration": {
         "file": "gk.java",
         "start": 5782,
@@ -153813,9 +154045,9 @@
     },
     {
       "symbol": "M:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
-      "renamedSymbol": "M:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
+      "renamedSymbol": "M:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyRsa",
       "declaration": {
         "file": "gk.java",
         "start": 164,
@@ -153835,9 +154067,9 @@
     },
     {
       "symbol": "M:gk.a(IB)V",
-      "renamedSymbol": "M:PacketBuffer.a(IB)V",
+      "renamedSymbol": "M:PacketBuffer.backpatchByteLength(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "backpatchByteLength",
       "declaration": {
         "file": "gk.java",
         "start": 17582,
@@ -153846,9 +154078,9 @@
     },
     {
       "symbol": "M:gk.a(II)V",
-      "renamedSymbol": "M:PacketBuffer.a(II)V",
+      "renamedSymbol": "M:PacketBuffer.writeInt(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeInt",
       "declaration": {
         "file": "gk.java",
         "start": 6014,
@@ -153857,9 +154089,9 @@
     },
     {
       "symbol": "M:gk.a(III[I)V",
-      "renamedSymbol": "M:PacketBuffer.a(III[I)V",
+      "renamedSymbol": "M:PacketBuffer.decryptXteaRange(III[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decryptXteaRange",
       "declaration": {
         "file": "gk.java",
         "start": 2676,
@@ -153868,9 +154100,9 @@
     },
     {
       "symbol": "M:gk.a(IJ)V",
-      "renamedSymbol": "M:PacketBuffer.a(IJ)V",
+      "renamedSymbol": "M:PacketBuffer.writeLong56(IJ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeLong56",
       "declaration": {
         "file": "gk.java",
         "start": 6926,
@@ -153879,9 +154111,9 @@
     },
     {
       "symbol": "M:gk.a(ILjava/lang/String;)V",
-      "renamedSymbol": "M:PacketBuffer.a(ILjava/lang/String;)V",
+      "renamedSymbol": "M:PacketBuffer.writeString(ILjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeString",
       "declaration": {
         "file": "gk.java",
         "start": 1600,
@@ -153890,9 +154122,9 @@
     },
     {
       "symbol": "M:gk.a(IZ)V",
-      "renamedSymbol": "M:PacketBuffer.a(IZ)V",
+      "renamedSymbol": "M:PacketBuffer.writeSignedSmart(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeSignedSmart",
       "declaration": {
         "file": "gk.java",
         "start": 5107,
@@ -153901,9 +154133,9 @@
     },
     {
       "symbol": "M:gk.a(I[I)V",
-      "renamedSymbol": "M:PacketBuffer.a(I[I)V",
+      "renamedSymbol": "M:PacketBuffer.encryptXtea(I[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encryptXtea",
       "declaration": {
         "file": "gk.java",
         "start": 8887,
@@ -153912,9 +154144,9 @@
     },
     {
       "symbol": "M:gk.a(JB)V",
-      "renamedSymbol": "M:PacketBuffer.a(JB)V",
+      "renamedSymbol": "M:PacketBuffer.writeLong(JB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeLong",
       "declaration": {
         "file": "gk.java",
         "start": 22640,
@@ -153923,9 +154155,9 @@
     },
     {
       "symbol": "M:gk.a(JI)V",
-      "renamedSymbol": "M:PacketBuffer.a(JI)V",
+      "renamedSymbol": "M:PacketBuffer.writeLong40(JI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeLong40",
       "declaration": {
         "file": "gk.java",
         "start": 8038,
@@ -153945,9 +154177,9 @@
     },
     {
       "symbol": "M:gk.a(Ljava/lang/String;B)V",
-      "renamedSymbol": "M:PacketBuffer.a(Ljava/lang/String;B)V",
+      "renamedSymbol": "M:PacketBuffer.writeBase38String(Ljava/lang/String;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeBase38String",
       "declaration": {
         "file": "gk.java",
         "start": 19868,
@@ -153956,9 +154188,9 @@
     },
     {
       "symbol": "M:gk.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:PacketBuffer.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writePrefixedString",
       "declaration": {
         "file": "gk.java",
         "start": 16600,
@@ -153967,9 +154199,9 @@
     },
     {
       "symbol": "M:gk.a(ZI)V",
-      "renamedSymbol": "M:PacketBuffer.a(ZI)V",
+      "renamedSymbol": "M:PacketBuffer.padZerosTo(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "padZerosTo",
       "declaration": {
         "file": "gk.java",
         "start": 24722,
@@ -153978,9 +154210,9 @@
     },
     {
       "symbol": "M:gk.a([BIII)V",
-      "renamedSymbol": "M:PacketBuffer.a([BIII)V",
+      "renamedSymbol": "M:PacketBuffer.readBytes([BIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readBytes",
       "declaration": {
         "file": "gk.java",
         "start": 11498,
@@ -153989,9 +154221,9 @@
     },
     {
       "symbol": "M:gk.b(B)Ljava/lang/String;",
-      "renamedSymbol": "M:PacketBuffer.b(B)Ljava/lang/String;",
+      "renamedSymbol": "M:PacketBuffer.readPrefixedString(B)Ljava/lang/String;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "readPrefixedString",
       "declaration": {
         "file": "gk.java",
         "start": 23883,
@@ -154000,9 +154232,9 @@
     },
     {
       "symbol": "M:gk.b(II)V",
-      "renamedSymbol": "M:PacketBuffer.b(II)V",
+      "renamedSymbol": "M:PacketBuffer.writeByte(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writeByte",
       "declaration": {
         "file": "gk.java",
         "start": 1136,
@@ -154011,9 +154243,9 @@
     },
     {
       "symbol": "M:gk.b([BIII)V",
-      "renamedSymbol": "M:PacketBuffer.b([BIII)V",
+      "renamedSymbol": "M:PacketBuffer.writeBytes([BIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "writeBytes",
       "declaration": {
         "file": "gk.java",
         "start": 12886,
@@ -154033,9 +154265,9 @@
     },
     {
       "symbol": "M:gk.c(II)V",
-      "renamedSymbol": "M:PacketBuffer.c(II)V",
+      "renamedSymbol": "M:PacketBuffer.writeShort(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "writeShort",
       "declaration": {
         "file": "gk.java",
         "start": 11123,
@@ -154044,9 +154276,9 @@
     },
     {
       "symbol": "M:gk.d(II)V",
-      "renamedSymbol": "M:PacketBuffer.d(II)V",
+      "renamedSymbol": "M:PacketBuffer.backpatchShortLength(II)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "backpatchShortLength",
       "declaration": {
         "file": "gk.java",
         "start": 17748,
@@ -154066,9 +154298,9 @@
     },
     {
       "symbol": "M:gk.e(II)V",
-      "renamedSymbol": "M:PacketBuffer.e(II)V",
+      "renamedSymbol": "M:PacketBuffer.writeMedium(II)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "writeMedium",
       "declaration": {
         "file": "gk.java",
         "start": 16095,
@@ -154077,9 +154309,9 @@
     },
     {
       "symbol": "M:gk.f(I)Ljava/lang/String;",
-      "renamedSymbol": "M:PacketBuffer.f(I)Ljava/lang/String;",
+      "renamedSymbol": "M:PacketBuffer.readString(I)Ljava/lang/String;",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "readString",
       "declaration": {
         "file": "gk.java",
         "start": 19435,
@@ -154088,9 +154320,9 @@
     },
     {
       "symbol": "M:gk.g(I)Ljava/lang/String;",
-      "renamedSymbol": "M:PacketBuffer.g(I)Ljava/lang/String;",
+      "renamedSymbol": "M:PacketBuffer.readNullableString(I)Ljava/lang/String;",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "readNullableString",
       "declaration": {
         "file": "gk.java",
         "start": 22373,
@@ -154099,9 +154331,9 @@
     },
     {
       "symbol": "M:gk.h(I)I",
-      "renamedSymbol": "M:PacketBuffer.h(I)I",
+      "renamedSymbol": "M:PacketBuffer.readSignedSmart(I)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "readSignedSmart",
       "declaration": {
         "file": "gk.java",
         "start": 1387,
@@ -154143,9 +154375,9 @@
     },
     {
       "symbol": "M:gk.l(I)Z",
-      "renamedSymbol": "M:PacketBuffer.l(I)Z",
+      "renamedSymbol": "M:PacketBuffer.verifyCrc32(I)Z",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "verifyCrc32",
       "declaration": {
         "file": "gk.java",
         "start": 22051,
@@ -154154,9 +154386,9 @@
     },
     {
       "symbol": "M:gk.m(I)I",
-      "renamedSymbol": "M:PacketBuffer.m(I)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedShortOrInt(I)I",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "readUnsignedShortOrInt",
       "declaration": {
         "file": "gk.java",
         "start": 6682,
@@ -154165,9 +154397,9 @@
     },
     {
       "symbol": "M:gk.n(I)V",
-      "renamedSymbol": "M:PacketBuffer.n(I)V",
+      "renamedSymbol": "M:PacketBuffer.clearBufferStatics(I)V",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "clearBufferStatics",
       "declaration": {
         "file": "gk.java",
         "start": 18008,
@@ -154176,9 +154408,9 @@
     },
     {
       "symbol": "M:gk.o(I)I",
-      "renamedSymbol": "M:PacketBuffer.o(I)I",
+      "renamedSymbol": "M:PacketBuffer.readUnsignedSmart(I)I",
       "originalName": "o",
-      "renamedName": "o",
+      "renamedName": "readUnsignedSmart",
       "declaration": {
         "file": "gk.java",
         "start": 5516,
@@ -164219,9 +164451,9 @@
     },
     {
       "symbol": "M:rc.a(III[B)I",
-      "renamedSymbol": "M:rc.a(III[B)I",
+      "renamedSymbol": "M:rc.computeCrc32(III[B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeCrc32",
       "declaration": {
         "file": "rc.java",
         "start": 422,
@@ -187165,7 +187397,7 @@
     },
     {
       "symbol": "P:gk.a(BI)I#0",
-      "renamedSymbol": "P:PacketBuffer.a(BI)I#0",
+      "renamedSymbol": "P:PacketBuffer.appendCrc32(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187176,7 +187408,7 @@
     },
     {
       "symbol": "P:gk.a(BI)I#1",
-      "renamedSymbol": "P:PacketBuffer.a(BI)I#1",
+      "renamedSymbol": "P:PacketBuffer.appendCrc32(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187187,7 +187419,7 @@
     },
     {
       "symbol": "P:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "P:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187198,7 +187430,7 @@
     },
     {
       "symbol": "P:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+      "renamedSymbol": "P:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187209,7 +187441,7 @@
     },
     {
       "symbol": "P:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
-      "renamedSymbol": "P:PacketBuffer.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+      "renamedSymbol": "P:PacketBuffer.applyRsa(BLjava/math/BigInteger;Ljava/math/BigInteger;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187231,7 +187463,7 @@
     },
     {
       "symbol": "P:gk.a(IB)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(IB)V#0",
+      "renamedSymbol": "P:PacketBuffer.backpatchByteLength(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187242,7 +187474,7 @@
     },
     {
       "symbol": "P:gk.a(IB)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(IB)V#1",
+      "renamedSymbol": "P:PacketBuffer.backpatchByteLength(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187253,7 +187485,7 @@
     },
     {
       "symbol": "P:gk.a(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187264,7 +187496,7 @@
     },
     {
       "symbol": "P:gk.a(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeInt(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187275,7 +187507,7 @@
     },
     {
       "symbol": "P:gk.a(III[I)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(III[I)V#0",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(III[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187286,7 +187518,7 @@
     },
     {
       "symbol": "P:gk.a(III[I)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(III[I)V#1",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(III[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187297,7 +187529,7 @@
     },
     {
       "symbol": "P:gk.a(III[I)V#2",
-      "renamedSymbol": "P:PacketBuffer.a(III[I)V#2",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(III[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187308,7 +187540,7 @@
     },
     {
       "symbol": "P:gk.a(III[I)V#3",
-      "renamedSymbol": "P:PacketBuffer.a(III[I)V#3",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(III[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187319,7 +187551,7 @@
     },
     {
       "symbol": "P:gk.a(IJ)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(IJ)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeLong56(IJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187330,7 +187562,7 @@
     },
     {
       "symbol": "P:gk.a(IJ)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(IJ)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeLong56(IJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187341,7 +187573,7 @@
     },
     {
       "symbol": "P:gk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeString(ILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187352,7 +187584,7 @@
     },
     {
       "symbol": "P:gk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeString(ILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187363,7 +187595,7 @@
     },
     {
       "symbol": "P:gk.a(IZ)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(IZ)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeSignedSmart(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187374,7 +187606,7 @@
     },
     {
       "symbol": "P:gk.a(IZ)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(IZ)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeSignedSmart(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187385,7 +187617,7 @@
     },
     {
       "symbol": "P:gk.a(I[I)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(I[I)V#0",
+      "renamedSymbol": "P:PacketBuffer.encryptXtea(I[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187396,7 +187628,7 @@
     },
     {
       "symbol": "P:gk.a(I[I)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(I[I)V#1",
+      "renamedSymbol": "P:PacketBuffer.encryptXtea(I[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187407,7 +187639,7 @@
     },
     {
       "symbol": "P:gk.a(JB)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(JB)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeLong(JB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187418,7 +187650,7 @@
     },
     {
       "symbol": "P:gk.a(JB)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(JB)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeLong(JB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187429,7 +187661,7 @@
     },
     {
       "symbol": "P:gk.a(JI)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(JI)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeLong40(JI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187440,7 +187672,7 @@
     },
     {
       "symbol": "P:gk.a(JI)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(JI)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeLong40(JI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187484,7 +187716,7 @@
     },
     {
       "symbol": "P:gk.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187495,7 +187727,7 @@
     },
     {
       "symbol": "P:gk.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeBase38String(Ljava/lang/String;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187506,7 +187738,7 @@
     },
     {
       "symbol": "P:gk.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187517,7 +187749,7 @@
     },
     {
       "symbol": "P:gk.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:PacketBuffer.writePrefixedString(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187528,7 +187760,7 @@
     },
     {
       "symbol": "P:gk.a(ZI)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(ZI)V#0",
+      "renamedSymbol": "P:PacketBuffer.padZerosTo(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187539,7 +187771,7 @@
     },
     {
       "symbol": "P:gk.a(ZI)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(ZI)V#1",
+      "renamedSymbol": "P:PacketBuffer.padZerosTo(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187550,7 +187782,7 @@
     },
     {
       "symbol": "P:gk.a([BIII)V#0",
-      "renamedSymbol": "P:PacketBuffer.a([BIII)V#0",
+      "renamedSymbol": "P:PacketBuffer.readBytes([BIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187561,7 +187793,7 @@
     },
     {
       "symbol": "P:gk.a([BIII)V#1",
-      "renamedSymbol": "P:PacketBuffer.a([BIII)V#1",
+      "renamedSymbol": "P:PacketBuffer.readBytes([BIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187572,7 +187804,7 @@
     },
     {
       "symbol": "P:gk.a([BIII)V#2",
-      "renamedSymbol": "P:PacketBuffer.a([BIII)V#2",
+      "renamedSymbol": "P:PacketBuffer.readBytes([BIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187583,7 +187815,7 @@
     },
     {
       "symbol": "P:gk.a([BIII)V#3",
-      "renamedSymbol": "P:PacketBuffer.a([BIII)V#3",
+      "renamedSymbol": "P:PacketBuffer.readBytes([BIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187594,7 +187826,7 @@
     },
     {
       "symbol": "P:gk.b(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PacketBuffer.b(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:PacketBuffer.readPrefixedString(B)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187605,7 +187837,7 @@
     },
     {
       "symbol": "P:gk.b(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.b(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeByte(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187616,7 +187848,7 @@
     },
     {
       "symbol": "P:gk.b(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.b(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeByte(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187627,7 +187859,7 @@
     },
     {
       "symbol": "P:gk.b([BIII)V#0",
-      "renamedSymbol": "P:PacketBuffer.b([BIII)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeBytes([BIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187638,7 +187870,7 @@
     },
     {
       "symbol": "P:gk.b([BIII)V#1",
-      "renamedSymbol": "P:PacketBuffer.b([BIII)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeBytes([BIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187649,7 +187881,7 @@
     },
     {
       "symbol": "P:gk.b([BIII)V#2",
-      "renamedSymbol": "P:PacketBuffer.b([BIII)V#2",
+      "renamedSymbol": "P:PacketBuffer.writeBytes([BIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187660,7 +187892,7 @@
     },
     {
       "symbol": "P:gk.b([BIII)V#3",
-      "renamedSymbol": "P:PacketBuffer.b([BIII)V#3",
+      "renamedSymbol": "P:PacketBuffer.writeBytes([BIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187682,7 +187914,7 @@
     },
     {
       "symbol": "P:gk.c(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.c(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeShort(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187693,7 +187925,7 @@
     },
     {
       "symbol": "P:gk.c(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.c(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeShort(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187704,7 +187936,7 @@
     },
     {
       "symbol": "P:gk.d(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.d(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.backpatchShortLength(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187715,7 +187947,7 @@
     },
     {
       "symbol": "P:gk.d(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.d(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.backpatchShortLength(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187737,7 +187969,7 @@
     },
     {
       "symbol": "P:gk.e(II)V#0",
-      "renamedSymbol": "P:PacketBuffer.e(II)V#0",
+      "renamedSymbol": "P:PacketBuffer.writeMedium(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187748,7 +187980,7 @@
     },
     {
       "symbol": "P:gk.e(II)V#1",
-      "renamedSymbol": "P:PacketBuffer.e(II)V#1",
+      "renamedSymbol": "P:PacketBuffer.writeMedium(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187759,7 +187991,7 @@
     },
     {
       "symbol": "P:gk.f(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PacketBuffer.f(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:PacketBuffer.readString(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187770,7 +188002,7 @@
     },
     {
       "symbol": "P:gk.g(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PacketBuffer.g(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:PacketBuffer.readNullableString(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187781,7 +188013,7 @@
     },
     {
       "symbol": "P:gk.h(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.h(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readSignedSmart(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187825,7 +188057,7 @@
     },
     {
       "symbol": "P:gk.l(I)Z#0",
-      "renamedSymbol": "P:PacketBuffer.l(I)Z#0",
+      "renamedSymbol": "P:PacketBuffer.verifyCrc32(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187836,7 +188068,7 @@
     },
     {
       "symbol": "P:gk.m(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.m(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedShortOrInt(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187847,7 +188079,7 @@
     },
     {
       "symbol": "P:gk.n(I)V#0",
-      "renamedSymbol": "P:PacketBuffer.n(I)V#0",
+      "renamedSymbol": "P:PacketBuffer.clearBufferStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187858,7 +188090,7 @@
     },
     {
       "symbol": "P:gk.o(I)I#0",
-      "renamedSymbol": "P:PacketBuffer.o(I)I#0",
+      "renamedSymbol": "P:PacketBuffer.readUnsignedSmart(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212520,7 +212752,7 @@
     },
     {
       "symbol": "P:rc.a(III[B)I#0",
-      "renamedSymbol": "P:rc.a(III[B)I#0",
+      "renamedSymbol": "P:rc.computeCrc32(III[B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212531,7 +212763,7 @@
     },
     {
       "symbol": "P:rc.a(III[B)I#1",
-      "renamedSymbol": "P:rc.a(III[B)I#1",
+      "renamedSymbol": "P:rc.computeCrc32(III[B)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -212542,7 +212774,7 @@
     },
     {
       "symbol": "P:rc.a(III[B)I#2",
-      "renamedSymbol": "P:rc.a(III[B)I#2",
+      "renamedSymbol": "P:rc.computeCrc32(III[B)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -212553,7 +212785,7 @@
     },
     {
       "symbol": "P:rc.a(III[B)I#3",
-      "renamedSymbol": "P:rc.a(III[B)I#3",
+      "renamedSymbol": "P:rc.computeCrc32(III[B)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -226351,7 +226583,7 @@
       "original": "MonkeyPuzzle2.java",
       "renamed": "MonkeyPuzzle2.java",
       "inputSha256": "305709b718cd67b5c463c11029c13ce2793c4f288f94d74f0d4a9a23b54aed15",
-      "outputSha256": "61524238161b10ee54b187df04e24dd7ada26df6d4c85cd60e1fb394f29a8bb8",
+      "outputSha256": "0331670e5cf13947e0bfeea70e3a24d5771ad0ad20aa6f19ddef6b3b60a8dd3f",
       "edits": [
         {
           "start": 141,
@@ -226401,6 +226633,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2237,
+          "end": 2238,
+          "symbol": "M:gk.n(I)V",
+          "original": "n",
+          "renamed": "clearBufferStatics"
         },
         {
           "start": 2309,
@@ -227595,7 +227834,7 @@
       "original": "ad.java",
       "renamed": "ad.java",
       "inputSha256": "6130c9361129ef588f66e9034d8e8526cfa45d934d052fd2c0d6711a537b7480",
-      "outputSha256": "c18d49e6d3a518daa303bff43a98b6d00a13ac9dbfaad98c2551b557b6cc1302",
+      "outputSha256": "61d71da37b374defa009f7d5ccdf37de3791fe39fb20165d9f62230ba202c0dc",
       "edits": [
         {
           "start": 377,
@@ -227638,6 +227877,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 14336,
+          "end": 14337,
+          "symbol": "M:gk.a(III[I)V",
+          "original": "a",
+          "renamed": "decryptXteaRange"
         },
         {
           "start": 14347,
@@ -227743,6 +227989,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 29605,
+          "end": 29606,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 29645,
+          "end": 29646,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 29647,
@@ -227857,6 +228117,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 31818,
+          "end": 31819,
+          "symbol": "M:gk.g(I)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
+        },
+        {
           "start": 31877,
           "end": 31878,
           "symbol": "M:gk.a(B)I",
@@ -227897,6 +228164,13 @@
           "symbol": "M:gk.k(I)B",
           "original": "k",
           "renamed": "readByte"
+        },
+        {
+          "start": 32786,
+          "end": 32787,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 32954,
@@ -227953,6 +228227,13 @@
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "DequeCursor"
+        },
+        {
+          "start": 35054,
+          "end": 35055,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 35075,
@@ -228539,7 +228820,7 @@
       "original": "be.java",
       "renamed": "be.java",
       "inputSha256": "108eb49e79826003641d008f4d2a1d65355ce76ad313cdac0d08510382bb0a4a",
-      "outputSha256": "d358aca88b81dce66b688bbbc8fd44a3533a7dadffefbd120a36b4f8a26f34f8",
+      "outputSha256": "8eaad3b7ba11e574fe6ce495cd98a0c81a36176509ee0ee8f5e6ed33d44fc310",
       "edits": [
         {
           "start": 684,
@@ -228584,6 +228865,27 @@
           "renamed": "position"
         },
         {
+          "start": 3002,
+          "end": 3003,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
+        },
+        {
+          "start": 3054,
+          "end": 3055,
+          "symbol": "M:gk.a(ZI)V",
+          "original": "a",
+          "renamed": "padZerosTo"
+        },
+        {
+          "start": 3094,
+          "end": 3095,
+          "symbol": "M:gk.a(I[I)V",
+          "original": "a",
+          "renamed": "encryptXtea"
+        },
+        {
           "start": 3194,
           "end": 3201,
           "symbol": "F:gk.field_g:[B",
@@ -228605,11 +228907,46 @@
           "renamed": "position"
         },
         {
+          "start": 3358,
+          "end": 3359,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 3491,
+          "end": 3492,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
           "start": 3637,
           "end": 3639,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3780,
+          "end": 3781,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 3827,
+          "end": 3828,
+          "symbol": "M:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
+          "original": "a",
+          "renamed": "applyRsa"
+        },
+        {
+          "start": 3876,
+          "end": 3877,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
         },
         {
           "start": 3900,
@@ -228624,6 +228961,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 3965,
+          "end": 3966,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
         },
         {
           "start": 3978,
@@ -229205,7 +229549,7 @@
       "original": "c.java",
       "renamed": "c.java",
       "inputSha256": "581cac0e53c73cbe8c48cddd35023847327ffdc57c9ab3bca5da31743223234e",
-      "outputSha256": "a72812fcc0594d64bb75827ec38ed15ba643814b402048365d9967a6dc23894c",
+      "outputSha256": "62365e834a7e590b4f9275c673ba543c1bb04efbb73b1b6b2c6591672ad037c1",
       "edits": [
         {
           "start": 158,
@@ -229269,6 +229613,13 @@
           "symbol": "F:gk.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 1396,
+          "end": 1397,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
         },
         {
           "start": 1924,
@@ -229490,6 +229841,13 @@
           "symbol": "M:gk.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 10104,
+          "end": 10105,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
         }
       ]
     },
@@ -231225,7 +231583,7 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "5a779426d1c71950eb86a31e95f5446ef8706011d5edec28c65b65770f7b704e",
-      "outputSha256": "88a447f99c26a8f92b729323d009571126bbd5b84034be58b5b5a65359e33641",
+      "outputSha256": "6ef351d60ee255417bf15c5099ae3878538b3526f2ac4ca6b0bec5917a8ba17f",
       "edits": [
         {
           "start": 123,
@@ -231275,6 +231633,20 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 8328,
+          "end": 8329,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
+        },
+        {
+          "start": 8910,
+          "end": 8911,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
         },
         {
           "start": 10577,
@@ -231785,7 +232157,7 @@
       "original": "dm.java",
       "renamed": "dm.java",
       "inputSha256": "6ded58d452d4e938f02d01cc11b186deaf9c8b3cad42aa10bcbbe073fa345658",
-      "outputSha256": "42067c7114b44ac48e8150c81527623f0aece76746b85e1cc5e4bca87c3359ca",
+      "outputSha256": "53dac5794c17bee84ebb05d6af94639c740043ea464c0a903e491ef351df8073",
       "edits": [
         {
           "start": 777,
@@ -231863,6 +232235,41 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2547,
+          "end": 2548,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2687,
+          "end": 2688,
+          "symbol": "M:gk.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
+        },
+        {
+          "start": 2734,
+          "end": 2735,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2781,
+          "end": 2782,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 2818,
+          "end": 2819,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
         },
         {
           "start": 2855,
@@ -231948,7 +232355,7 @@
       "original": "ea.java",
       "renamed": "ea.java",
       "inputSha256": "be10bbe21aa543443b2ca9e39eeabb21139c205da80a84fe5d85e828e423f6b8",
-      "outputSha256": "262cd2321c8b968afd6870de4d5073b15ec2b73316e3b9c75801992c325253a0",
+      "outputSha256": "781a190a36ad6204269b9a36337bc24c991da5d8e39240b25fe9822ec56cd690",
       "edits": [
         {
           "start": 192,
@@ -231956,6 +232363,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 679,
+          "end": 680,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
         },
         {
           "start": 899,
@@ -232612,7 +233026,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "493c8418d536339c930d436e7ae72e8f51a866bd10944ead627d01527b09afea",
-      "outputSha256": "e688af4770c5314e29c2aadf350c3e540b7fa5829d93f586841153c97d677186",
+      "outputSha256": "0bab21b0bbc3555ff9f79696b50b406f5c11499ca0521b5ddd76ad0cf4cd0e1c",
       "edits": [
         {
           "start": 2525,
@@ -232634,6 +233048,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2676,
+          "end": 2677,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
         },
         {
           "start": 2683,
@@ -232748,14 +233169,42 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "168d8e24d1601cd6cba98e643ac526481df3cf7e170ea4caf418645fdd6d0e74",
-      "outputSha256": "2a0137e12a33947f89b0faf2d6ca990e494a26ff6456e739d6dbb03454a838a5",
+      "outputSha256": "89599b92a88846821cf9ecbfe5ab7d2370bf8bb2d1b811dc90090477ad36e207",
       "edits": [
+        {
+          "start": 3223,
+          "end": 3224,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 3258,
+          "end": 3259,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
         {
           "start": 3638,
           "end": 3640,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3682,
+          "end": 3683,
+          "symbol": "M:gk.a(JB)V",
+          "original": "a",
+          "renamed": "writeLong"
+        },
+        {
+          "start": 3781,
+          "end": 3782,
+          "symbol": "M:gk.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeBase38String"
         }
       ]
     },
@@ -232763,7 +233212,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "78499ef66d43f219c182dec4a59d86e47f31ff7a2f34a6291cc19125e1087500",
-      "outputSha256": "d6db729e1f238ec977d01df9368cef759227671fc76b1da3e6ddc072f9a519f1",
+      "outputSha256": "28cfdd77adbcbc51c5ddb911b882f5a23fbb5d48ba105bfe93ee005a17b3c1a1",
       "edits": [
         {
           "start": 145,
@@ -232794,6 +233243,20 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 803,
+          "end": 804,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 852,
+          "end": 853,
+          "symbol": "M:gk.a(JI)V",
+          "original": "a",
+          "renamed": "writeLong40"
+        },
+        {
           "start": 912,
           "end": 919,
           "symbol": "F:gk.field_g:[B",
@@ -232822,6 +233285,20 @@
           "renamed": "position"
         },
         {
+          "start": 4498,
+          "end": 4499,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4539,
+          "end": 4540,
+          "symbol": "M:gk.a(JI)V",
+          "original": "a",
+          "renamed": "writeLong40"
+        },
+        {
           "start": 4611,
           "end": 4618,
           "symbol": "F:gk.field_g:[B",
@@ -232841,6 +233318,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 4949,
+          "end": 4950,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4990,
+          "end": 4991,
+          "symbol": "M:gk.a(JI)V",
+          "original": "a",
+          "renamed": "writeLong40"
         },
         {
           "start": 5071,
@@ -232969,6 +233460,20 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 8591,
+          "end": 8592,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 8650,
+          "end": 8651,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
           "start": 8704,
           "end": 8711,
           "symbol": "F:gk.field_h:I",
@@ -233095,6 +233600,27 @@
           "renamed": "position"
         },
         {
+          "start": 13395,
+          "end": 13396,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 13438,
+          "end": 13439,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 13498,
+          "end": 13499,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
           "start": 13560,
           "end": 13567,
           "symbol": "F:gk.field_g:[B",
@@ -233114,6 +233640,27 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 16010,
+          "end": 16011,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 16049,
+          "end": 16050,
+          "symbol": "M:gk.e(II)V",
+          "original": "e",
+          "renamed": "writeMedium"
+        },
+        {
+          "start": 16094,
+          "end": 16095,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
         },
         {
           "start": 16145,
@@ -233157,7 +233704,7 @@
       "original": "fc.java",
       "renamed": "GameApplet.java",
       "inputSha256": "ff7c2bd985bcfcb7fc0c41086883c3e29ac23849212378debb6461dab5dc2004",
-      "outputSha256": "f22a9f5c4d701bcfc2e47266547ed4417b0b44c4ab9750ee8c5d593d1c2850e9",
+      "outputSha256": "4416fef14ec21a043c41ce776a4f67146eba33265bd35dd177dbb6594c21d4c9",
       "edits": [
         {
           "start": 60,
@@ -233244,6 +233791,48 @@
           "renamed": "position"
         },
         {
+          "start": 28372,
+          "end": 28373,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 28519,
+          "end": 28520,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 28570,
+          "end": 28571,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
+        },
+        {
+          "start": 28679,
+          "end": 28680,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 28743,
+          "end": 28744,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 28784,
+          "end": 28785,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
+        },
+        {
           "start": 28820,
           "end": 28827,
           "symbol": "F:gk.field_h:I",
@@ -233263,6 +233852,13 @@
           "symbol": "M:gk.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 28903,
+          "end": 28904,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
         },
         {
           "start": 28918,
@@ -233663,7 +234259,7 @@
       "original": "gd.java",
       "renamed": "gd.java",
       "inputSha256": "052077130fe1c42a124149a00093f907cbd66327068b44c0f0db420a4afd96fa",
-      "outputSha256": "351422c6a07c365c71d2e44a4086a3d3cd446be8b7d50f85871cb41179f33672",
+      "outputSha256": "d053b33aeac134334c7bc8cec6dea707d806a38bc1c3d77bca1e75e9827f2f56",
       "edits": [
         {
           "start": 485,
@@ -233755,6 +234351,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2925,
+          "end": 2926,
+          "symbol": "M:gk.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
         },
         {
           "start": 3263,
@@ -233973,7 +234576,7 @@
       "original": "gk.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "485a022dc7f0c4fdb131f5984522479e4383c2d8259b0ed5f748fb568b670e63",
-      "outputSha256": "87a07d4dd0f7d4a166abcae59fb394e909be77758d51080af92fe46e46048a03",
+      "outputSha256": "508a2149e4733a8a4e1e666a028d2c3366b1b5d8ecd59fc737a3dae015c30c61",
       "edits": [
         {
           "start": 44,
@@ -234004,6 +234607,13 @@
           "renamed": "position"
         },
         {
+          "start": 164,
+          "end": 165,
+          "symbol": "M:gk.a(BLjava/math/BigInteger;Ljava/math/BigInteger;)V",
+          "original": "a",
+          "renamed": "applyRsa"
+        },
+        {
           "start": 445,
           "end": 452,
           "symbol": "F:gk.field_h:I",
@@ -234018,6 +234628,13 @@
           "renamed": "position"
         },
         {
+          "start": 534,
+          "end": 535,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
           "start": 709,
           "end": 716,
           "symbol": "F:gk.field_h:I",
@@ -234025,11 +234642,32 @@
           "renamed": "position"
         },
         {
+          "start": 737,
+          "end": 738,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
           "start": 805,
           "end": 812,
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 845,
+          "end": 846,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
+        },
+        {
+          "start": 1136,
+          "end": 1137,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 1211,
@@ -234067,6 +234705,13 @@
           "renamed": "payload"
         },
         {
+          "start": 1387,
+          "end": 1388,
+          "symbol": "M:gk.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
+        },
+        {
           "start": 1427,
           "end": 1434,
           "symbol": "F:gk.field_g:[B",
@@ -234093,6 +234738,13 @@
           "symbol": "M:gk.a(B)I",
           "original": "a",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 1600,
+          "end": 1601,
+          "symbol": "M:gk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeString"
         },
         {
           "start": 1938,
@@ -234186,6 +234838,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2525,
+          "end": 2526,
+          "symbol": "M:gk.a(ZI)V",
+          "original": "a",
+          "renamed": "padZerosTo"
+        },
+        {
           "start": 2571,
           "end": 2578,
           "symbol": "F:gk.field_g:[B",
@@ -234214,6 +234873,13 @@
           "renamed": "position"
         },
         {
+          "start": 2676,
+          "end": 2677,
+          "symbol": "M:gk.a(III[I)V",
+          "original": "a",
+          "renamed": "decryptXteaRange"
+        },
+        {
           "start": 3308,
           "end": 3315,
           "symbol": "F:gk.field_h:I",
@@ -234226,6 +234892,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 3562,
+          "end": 3563,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
         },
         {
           "start": 3630,
@@ -234263,11 +234936,60 @@
           "renamed": "position"
         },
         {
+          "start": 4348,
+          "end": 4349,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 4386,
+          "end": 4387,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5107,
+          "end": 5108,
+          "symbol": "M:gk.a(IZ)V",
+          "original": "a",
+          "renamed": "writeSignedSmart"
+        },
+        {
+          "start": 5208,
+          "end": 5209,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
           "start": 5297,
           "end": 5304,
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 5398,
+          "end": 5399,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 5516,
+          "end": 5517,
+          "symbol": "M:gk.o(I)I",
+          "original": "o",
+          "renamed": "readUnsignedSmart"
+        },
+        {
+          "start": 5575,
+          "end": 5576,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 5626,
@@ -234298,6 +235020,20 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 5782,
+          "end": 5783,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
+        },
+        {
+          "start": 5894,
+          "end": 5895,
+          "symbol": "M:rc.a(III[B)I",
+          "original": "a",
+          "renamed": "computeCrc32"
+        },
+        {
           "start": 5909,
           "end": 5916,
           "symbol": "F:gk.field_h:I",
@@ -234310,6 +235046,20 @@
           "symbol": "F:gk.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 5950,
+          "end": 5951,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 6014,
+          "end": 6015,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
         },
         {
           "start": 6145,
@@ -234424,6 +235174,20 @@
           "renamed": "payload"
         },
         {
+          "start": 6682,
+          "end": 6683,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
+        },
+        {
+          "start": 6745,
+          "end": 6746,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
           "start": 6788,
           "end": 6795,
           "symbol": "F:gk.field_g:[B",
@@ -234450,6 +235214,13 @@
           "symbol": "M:gk.j(I)I",
           "original": "j",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 6926,
+          "end": 6927,
+          "symbol": "M:gk.a(IJ)V",
+          "original": "a",
+          "renamed": "writeLong56"
         },
         {
           "start": 6986,
@@ -234655,6 +235426,13 @@
           "renamed": "payload"
         },
         {
+          "start": 8038,
+          "end": 8039,
+          "symbol": "M:gk.a(JI)V",
+          "original": "a",
+          "renamed": "writeLong40"
+        },
+        {
           "start": 8098,
           "end": 8105,
           "symbol": "F:gk.field_h:I",
@@ -234802,6 +235580,13 @@
           "renamed": "payload"
         },
         {
+          "start": 8887,
+          "end": 8888,
+          "symbol": "M:gk.a(I[I)V",
+          "original": "a",
+          "renamed": "encryptXtea"
+        },
+        {
           "start": 9479,
           "end": 9486,
           "symbol": "F:gk.field_h:I",
@@ -234849,6 +235634,27 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 10418,
+          "end": 10419,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 10456,
+          "end": 10457,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 11123,
+          "end": 11124,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
         },
         {
           "start": 11182,
@@ -234907,6 +235713,13 @@
           "renamed": "payload"
         },
         {
+          "start": 11498,
+          "end": 11499,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
           "start": 12079,
           "end": 12086,
           "symbol": "F:gk.field_h:I",
@@ -234933,6 +235746,13 @@
           "symbol": "F:gk.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 12886,
+          "end": 12887,
+          "symbol": "M:gk.b([BIII)V",
+          "original": "b",
+          "renamed": "writeBytes"
         },
         {
           "start": 13345,
@@ -234968,6 +235788,13 @@
           "symbol": "F:gk.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 16095,
+          "end": 16096,
+          "symbol": "M:gk.e(II)V",
+          "original": "e",
+          "renamed": "writeMedium"
         },
         {
           "start": 16201,
@@ -235054,6 +235881,13 @@
           "renamed": "payload"
         },
         {
+          "start": 16600,
+          "end": 16601,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
           "start": 16930,
           "end": 16937,
           "symbol": "F:gk.field_h:I",
@@ -235138,6 +235972,13 @@
           "renamed": "payload"
         },
         {
+          "start": 17582,
+          "end": 17583,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
+        },
+        {
           "start": 17671,
           "end": 17678,
           "symbol": "F:gk.field_g:[B",
@@ -235150,6 +235991,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 17748,
+          "end": 17749,
+          "symbol": "M:gk.d(II)V",
+          "original": "d",
+          "renamed": "backpatchShortLength"
         },
         {
           "start": 17789,
@@ -235185,6 +236033,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 18008,
+          "end": 18009,
+          "symbol": "M:gk.n(I)V",
+          "original": "n",
+          "renamed": "clearBufferStatics"
         },
         {
           "start": 18144,
@@ -235255,6 +236110,13 @@
           "symbol": "P:gk.a(B)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 18413,
+          "end": 18414,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
         },
         {
           "start": 18462,
@@ -235488,6 +236350,13 @@
           "renamed": "position"
         },
         {
+          "start": 19435,
+          "end": 19436,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 19536,
           "end": 19543,
           "symbol": "F:gk.field_h:I",
@@ -235537,6 +236406,34 @@
           "renamed": "payload"
         },
         {
+          "start": 19868,
+          "end": 19869,
+          "symbol": "M:gk.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeBase38String"
+        },
+        {
+          "start": 21365,
+          "end": 21366,
+          "symbol": "M:gk.a(IJ)V",
+          "original": "a",
+          "renamed": "writeLong56"
+        },
+        {
+          "start": 21400,
+          "end": 21401,
+          "symbol": "M:gk.a(IJ)V",
+          "original": "a",
+          "renamed": "writeLong56"
+        },
+        {
+          "start": 22051,
+          "end": 22052,
+          "symbol": "M:gk.l(I)Z",
+          "original": "l",
+          "renamed": "verifyCrc32"
+        },
+        {
           "start": 22145,
           "end": 22152,
           "symbol": "F:gk.field_h:I",
@@ -235549,6 +236446,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 22195,
+          "end": 22196,
+          "symbol": "M:rc.a(III[B)I",
+          "original": "a",
+          "renamed": "computeCrc32"
         },
         {
           "start": 22205,
@@ -235570,6 +236474,13 @@
           "symbol": "M:gk.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 22373,
+          "end": 22374,
+          "symbol": "M:gk.g(I)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
         },
         {
           "start": 22485,
@@ -235598,6 +236509,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 22611,
+          "end": 22612,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 22640,
+          "end": 22641,
+          "symbol": "M:gk.a(JB)V",
+          "original": "a",
+          "renamed": "writeLong"
         },
         {
           "start": 22701,
@@ -235824,6 +236749,13 @@
           "renamed": "payload"
         },
         {
+          "start": 23883,
+          "end": 23884,
+          "symbol": "M:gk.b(B)Ljava/lang/String;",
+          "original": "b",
+          "renamed": "readPrefixedString"
+        },
+        {
           "start": 24108,
           "end": 24115,
           "symbol": "F:gk.field_h:I",
@@ -235934,6 +236866,13 @@
           "symbol": "P:gk.<init>(I)V#0",
           "original": "param0",
           "renamed": "capacity"
+        },
+        {
+          "start": 24722,
+          "end": 24723,
+          "symbol": "M:gk.a(ZI)V",
+          "original": "a",
+          "renamed": "padZerosTo"
         },
         {
           "start": 24906,
@@ -237458,7 +238397,7 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "528ed500eb5611af13ee8696f50aada6d534ac6a31e1ed3455c07b4aea523533",
-      "outputSha256": "beb7bce8fefcce6592865375330324001857db411c61557eedbaaadadac95d6d",
+      "outputSha256": "8ca2554881b92cd2809f99b2f4ac1dff18633c8d459728012bb904420114db61",
       "edits": [
         {
           "start": 61,
@@ -237573,6 +238512,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 21233,
+          "end": 21234,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 21283,
+          "end": 21284,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 21324,
           "end": 21325,
           "symbol": "M:gk.a(B)I",
@@ -237580,11 +238533,39 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 21506,
+          "end": 21507,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 21806,
           "end": 21807,
           "symbol": "M:gk.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 21948,
+          "end": 21949,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
+          "start": 22578,
+          "end": 22579,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 22658,
+          "end": 22659,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 22806,
@@ -239268,7 +240249,7 @@
       "original": "ki.java",
       "renamed": "ki.java",
       "inputSha256": "cdf45b3fe02581e6860765e260b34678801d556aaf76f57bfc3e12a918ad9354",
-      "outputSha256": "8b48d3fe4c3628185771692070229f3c1b5174c5b998b22f474d02b0fa141e91",
+      "outputSha256": "cbe42651b23543cf1c9eac1ff177f19012df652795adf8979292c86abe317ed3",
       "edits": [
         {
           "start": 61,
@@ -239313,11 +240294,60 @@
           "renamed": "position"
         },
         {
+          "start": 7132,
+          "end": 7133,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7182,
+          "end": 7183,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7232,
+          "end": 7233,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7282,
+          "end": 7283,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7367,
+          "end": 7368,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
           "start": 7497,
           "end": 7504,
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 7557,
+          "end": 7558,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7614,
+          "end": 7615,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 7662,
@@ -239339,6 +240369,48 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 7758,
+          "end": 7759,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7806,
+          "end": 7807,
+          "symbol": "M:gk.a(JB)V",
+          "original": "a",
+          "renamed": "writeLong"
+        },
+        {
+          "start": 8156,
+          "end": 8157,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 8307,
+          "end": 8308,
+          "symbol": "M:gk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
+          "start": 8381,
+          "end": 8382,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 8508,
+          "end": 8509,
+          "symbol": "M:gk.d(II)V",
+          "original": "d",
+          "renamed": "backpatchShortLength"
         },
         {
           "start": 8527,
@@ -240602,7 +241674,7 @@
       "original": "lf.java",
       "renamed": "lf.java",
       "inputSha256": "514aea2874598f443e7967724142e5deceef9a1650ae315ff2c8082a25c3e2c2",
-      "outputSha256": "0a1fbe468eef4cf3614d12aabade58a9bb2be28ad89e5dbae5016f2980e8c932",
+      "outputSha256": "fcdcc920f9554274d4fec386cea1df16fa4755a54a78be89e56c9270ec57898e",
       "edits": [
         {
           "start": 951,
@@ -240631,6 +241703,20 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1926,
+          "end": 1927,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 1960,
+          "end": 1961,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
         },
         {
           "start": 2009,
@@ -240675,6 +241761,20 @@
           "renamed": "ProxyAuthenticationRequiredException"
         },
         {
+          "start": 3614,
+          "end": 3615,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 3641,
+          "end": 3642,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
           "start": 3776,
           "end": 3777,
           "symbol": "M:lf.a(Z)V",
@@ -240687,7 +241787,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "baa019c4ade14ffc43fd7af7703cf9e2b88e35072a08e5214510836d1f9a287f",
-      "outputSha256": "0bdb018fcb59ea15df5f7e81f063077572deae2131e5912c09877a79dbdfcc4a",
+      "outputSha256": "32a6cc9a8a8d352913fbb8b6727d80c1dceaac869b90c7887b9f355d390817d5",
       "edits": [
         {
           "start": 82,
@@ -240695,6 +241795,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 1252,
+          "end": 1253,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 1482,
@@ -240786,6 +241893,13 @@
           "symbol": "M:gk.j(I)I",
           "original": "j",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 4750,
+          "end": 4751,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
         },
         {
           "start": 5569,
@@ -240886,11 +242000,25 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 7554,
+          "end": 7555,
+          "symbol": "M:gk.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
+        },
+        {
           "start": 8094,
           "end": 8095,
           "symbol": "M:gk.a(B)I",
           "original": "a",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8563,
+          "end": 8564,
+          "symbol": "M:gk.h(I)I",
+          "original": "h",
+          "renamed": "readSignedSmart"
         },
         {
           "start": 9106,
@@ -240982,7 +242110,7 @@
       "original": "lh.java",
       "renamed": "lh.java",
       "inputSha256": "e18f5052d14cb7dc32a77654e172c1295ae9aea3409461358e94e9825cf837f5",
-      "outputSha256": "9dc3f16fc9c71712cc5ee0655c5e68dbf7b6789f2cedae19478fa72914379e07",
+      "outputSha256": "f19d4bad9341018408a00466b8e42f7badcffe48a32b6b04a942d5f959695c4c",
       "edits": [
         {
           "start": 266,
@@ -241067,6 +242195,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4775,
+          "end": 4776,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 4812,
@@ -241955,7 +243090,7 @@
       "original": "m.java",
       "renamed": "m.java",
       "inputSha256": "24ffa18a78c6ea856ac07069a9e8ee3ac90abdef820bb5460b9372faa9fe4285",
-      "outputSha256": "c147c0c43f35e18b787da776e451b7933d8e3effdd427f73195e66e1b877545e",
+      "outputSha256": "c07405ba32d754e3fccf37a7a8843f6318dbec43e3573154f6482d984fb63ea7",
       "edits": [
         {
           "start": 60,
@@ -242012,6 +243147,13 @@
           "symbol": "C:ni",
           "original": "ni",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 9997,
+          "end": 9998,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 10773,
@@ -242950,7 +244092,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "f0cd809b4545f4268371596cc0ff1b0bae2689855b264dd886a717b2c1dae66e",
-      "outputSha256": "e65c6f8f8054039842b101b82d295a74a39c1a5112b7ceda5baec65689b71093",
+      "outputSha256": "b8c6e8fc0fb4041bde31d9cc768db436e33151576a27a6f3e7da3611d2a210a9",
       "edits": [
         {
           "start": 2213,
@@ -242965,6 +244107,202 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 3121,
+          "end": 3122,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 3370,
+          "end": 3371,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 3704,
+          "end": 3705,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 3745,
+          "end": 3746,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 4067,
+          "end": 4068,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4326,
+          "end": 4327,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4371,
+          "end": 4372,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5103,
+          "end": 5104,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5204,
+          "end": 5205,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5247,
+          "end": 5248,
+          "symbol": "M:gk.a(JB)V",
+          "original": "a",
+          "renamed": "writeLong"
+        },
+        {
+          "start": 5383,
+          "end": 5384,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5455,
+          "end": 5456,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5498,
+          "end": 5499,
+          "symbol": "M:gk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
+          "start": 5792,
+          "end": 5793,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5835,
+          "end": 5836,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 6180,
+          "end": 6181,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 6469,
+          "end": 6470,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 6765,
+          "end": 6766,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7055,
+          "end": 7056,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7349,
+          "end": 7350,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7647,
+          "end": 7648,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7973,
+          "end": 7974,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 8257,
+          "end": 8258,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 8527,
+          "end": 8528,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 8817,
+          "end": 8818,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 9088,
+          "end": 9089,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 9338,
+          "end": 9339,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 9421,
+          "end": 9422,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
         },
         {
           "start": 9460,
@@ -243378,7 +244716,7 @@
       "original": "oe.java",
       "renamed": "oe.java",
       "inputSha256": "be2afa45091c058b40f030df76662d2bfe0a2d0dde372b6ef0802f79acd89d88",
-      "outputSha256": "6e1e51d9894b8331717169bddb1ff31ed645936d56a2653471d7bff16dcbe016",
+      "outputSha256": "7c05d23a9c457a19b7c45dcb14d9bbfd0d48a8ee55f8f425dddd167be6f3a037",
       "edits": [
         {
           "start": 394,
@@ -243386,6 +244724,20 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 939,
+          "end": 940,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 981,
+          "end": 982,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 5004,
@@ -243693,7 +245045,7 @@
       "original": "p.java",
       "renamed": "p.java",
       "inputSha256": "390df1b62061ed7d2f174740cd75d3d6c7cdd57a526c7c4aa9035a3a6c55bd60",
-      "outputSha256": "f3aaf0a4df7dbfdb0e45082c0e7bbb33c7acbe7cc7e2967f64ff0fcc62b4343b",
+      "outputSha256": "b289e97ad10a8447962f6beac8f575a92a6b66ac621a898f0bbfa1204c7debd9",
       "edits": [
         {
           "start": 1381,
@@ -243724,11 +245076,25 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 2209,
+          "end": 2210,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 2301,
           "end": 2302,
           "symbol": "M:gk.a(B)I",
           "original": "a",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2453,
+          "end": 2454,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 3075,
@@ -244183,7 +245549,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "0c5c098c75fb8ad16e8a9e80141c9f971ce94ece002a54fbabbd9d58cf5ac001",
-      "outputSha256": "b04d55a53a3d5a9d55dcdb1e83e3725909da44bebe1f3c36ce2992358e549657",
+      "outputSha256": "735b842f6b4a469f014d9b85ae2fe7b12113df31b29542f6480219f70a964a92",
       "edits": [
         {
           "start": 1086,
@@ -244205,6 +245571,69 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 1160,
+          "end": 1161,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 1189,
+          "end": 1190,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 1231,
+          "end": 1232,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 1273,
+          "end": 1274,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1319,
+          "end": 1320,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1365,
+          "end": 1366,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1411,
+          "end": 1412,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 1457,
+          "end": 1458,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
+        },
+        {
+          "start": 1493,
+          "end": 1494,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
         },
         {
           "start": 1508,
@@ -244277,7 +245706,7 @@
       "original": "pi.java",
       "renamed": "pi.java",
       "inputSha256": "539a25bed6980254aa0060da39695ea8f6b4583ad5cfdd60db0c0a5486030c87",
-      "outputSha256": "13777d8966a27b9a41c2180636490eab32af779f2240561d0c48b17c3da4912e",
+      "outputSha256": "6c321e9672b4b8680a502ce428899f17c26d956f1c96af04b5f82c330ad9ad87",
       "edits": [
         {
           "start": 82,
@@ -244364,6 +245793,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 3330,
+          "end": 3331,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 6467,
           "end": 6469,
           "symbol": "C:we",
@@ -244390,7 +245826,7 @@
       "original": "pj.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "4071c5b2d6234794af2d83594a87cbed1db4c0077135dabba9d5c566451160a6",
-      "outputSha256": "5cea2950a691c4975c90bc21be4232006646ee7beb2de27103906974ef48cc12",
+      "outputSha256": "e66e58791aafcaa10386649ca4660a320a1e5502ec6ea0cdee4659382b963638",
       "edits": [
         {
           "start": 50,
@@ -244461,6 +245897,90 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 5637,
+          "end": 5638,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 5666,
+          "end": 5667,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 5705,
+          "end": 5706,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 5743,
+          "end": 5744,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 5781,
+          "end": 5782,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5827,
+          "end": 5828,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5873,
+          "end": 5874,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5919,
+          "end": 5920,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5965,
+          "end": 5966,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 6081,
+          "end": 6082,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 6145,
+          "end": 6146,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
+        },
+        {
+          "start": 6182,
+          "end": 6183,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
         },
         {
           "start": 6189,
@@ -245304,7 +246824,7 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "44334ffde15b1a2e95e63624fde812e6066368f0f63be7c233acbd957275adfb",
-      "outputSha256": "8aec3c60fa1f81a6eb97cf0fc8023d67436294bd5562f8173cb5e144d82b7a95",
+      "outputSha256": "992039962900ee2804e4feac5124b6d5884cb4e3ed326dc75cb1d46c6074ecf2",
       "edits": [
         {
           "start": 169,
@@ -245333,6 +246853,20 @@
           "symbol": "C:we",
           "original": "we",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 972,
+          "end": 973,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 1014,
+          "end": 1015,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
         },
         {
           "start": 1902,
@@ -245507,7 +247041,7 @@
       "original": "qh.java",
       "renamed": "qh.java",
       "inputSha256": "15908de8e398977ec7fb34409e3056a859363eeb8e531c541daf7d6069f1c03c",
-      "outputSha256": "01ac0fa6b6bedc08979030582fc3f1627fbcdc9c84f30af134af909a8da2844b",
+      "outputSha256": "e50ee6235361ae587030c159164b9d52a64548f3aa13813b5ae338bdb2882d8d",
       "edits": [
         {
           "start": 201,
@@ -245587,6 +247121,20 @@
           "renamed": "position"
         },
         {
+          "start": 5862,
+          "end": 5863,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 5924,
+          "end": 5925,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
           "start": 6164,
           "end": 6166,
           "symbol": "C:gk",
@@ -245594,11 +247142,32 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 6191,
+          "end": 6192,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
           "start": 6415,
           "end": 6417,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 6442,
+          "end": 6443,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 6489,
+          "end": 6490,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 6537,
@@ -245622,6 +247191,13 @@
           "renamed": "position"
         },
         {
+          "start": 6716,
+          "end": 6717,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
+        },
+        {
           "start": 6729,
           "end": 6736,
           "symbol": "F:gk.field_h:I",
@@ -245634,6 +247210,69 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 6944,
+          "end": 6945,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7006,
+          "end": 7007,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 7076,
+          "end": 7077,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 7125,
+          "end": 7126,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 7220,
+          "end": 7221,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 7269,
+          "end": 7270,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 7310,
+          "end": 7311,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7362,
+          "end": 7363,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 7404,
+          "end": 7405,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 7452,
@@ -245655,6 +247294,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 7745,
+          "end": 7746,
+          "symbol": "M:gk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeString"
+        },
+        {
+          "start": 7893,
+          "end": 7894,
+          "symbol": "M:gk.d(II)V",
+          "original": "d",
+          "renamed": "backpatchShortLength"
         },
         {
           "start": 7912,
@@ -245720,6 +247373,13 @@
           "renamed": "position"
         },
         {
+          "start": 9563,
+          "end": 9564,
+          "symbol": "M:gk.b(B)Ljava/lang/String;",
+          "original": "b",
+          "renamed": "readPrefixedString"
+        },
+        {
           "start": 9611,
           "end": 9613,
           "symbol": "C:gk",
@@ -245732,6 +247392,20 @@
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "DequeCursor"
+        },
+        {
+          "start": 9934,
+          "end": 9935,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 10016,
+          "end": 10017,
+          "symbol": "M:gk.g(I)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "readNullableString"
         },
         {
           "start": 10184,
@@ -245858,7 +247532,7 @@
       "original": "qi.java",
       "renamed": "qi.java",
       "inputSha256": "e73ae32a5bd4d4a8d73bbc1a6f6ba5b8c6c66f4a5f3c681f631623eaa5a367f1",
-      "outputSha256": "bc73f99ba981e654563000f1aba33b8d1a93ea5595a7f64153e434343b2a10ec",
+      "outputSha256": "3b5817828ce040cdd5679f3616c6d4e3d5918ac90e520b71ea992e23bf9ccb82",
       "edits": [
         {
           "start": 61,
@@ -245922,6 +247596,41 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2677,
+          "end": 2678,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 2707,
+          "end": 2708,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 2799,
+          "end": 2800,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 2831,
+          "end": 2832,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 2864,
+          "end": 2865,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         },
         {
           "start": 3233,
@@ -246242,7 +247951,7 @@
       "original": "rc.java",
       "renamed": "rc.java",
       "inputSha256": "79594d8104bd8e8ba79b0c55610924dc01509cfaca4a4d0a4f62e1bb908aa8ef",
-      "outputSha256": "3218395058de7ad52346b26f9492990affe8187b51b4554d0853aa10291a9ef8",
+      "outputSha256": "2518f86426c444fa18607a9a282c8f41a7bee198e84e52a5c24860ffef6869a0",
       "edits": [
         {
           "start": 206,
@@ -246250,6 +247959,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 422,
+          "end": 423,
+          "symbol": "M:rc.a(III[B)I",
+          "original": "a",
+          "renamed": "computeCrc32"
         },
         {
           "start": 2445,
@@ -246280,6 +247996,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 2998,
+          "end": 2999,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
           "start": 3135,
           "end": 3136,
           "symbol": "M:gk.e(I)I",
@@ -246299,6 +248022,20 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 6055,
+          "end": 6056,
+          "symbol": "M:gk.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "writePrefixedString"
+        },
+        {
+          "start": 6094,
+          "end": 6095,
+          "symbol": "M:gk.a(Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "writeBase38String"
         },
         {
           "start": 6347,
@@ -246406,7 +248143,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "b2b05edc4792cc4916a708788d21f6b2e585bc3a2b140331a0c9db98833aaa4b",
-      "outputSha256": "27b8e14f56c9c950ff35d2b39d08376adefa46305e7464281dba301c9f2a411c",
+      "outputSha256": "507a4db533355631807e48a132f8d69d4c0aca3ff715bde19f0f02b87ed5b83f",
       "edits": [
         {
           "start": 64,
@@ -246472,11 +248209,39 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 17664,
+          "end": 17665,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 17723,
+          "end": 17724,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 17831,
+          "end": 17832,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 19103,
           "end": 19105,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 19201,
+          "end": 19202,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 19285,
@@ -246498,6 +248263,27 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 19514,
+          "end": 19515,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 19664,
+          "end": 19665,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 19693,
+          "end": 19694,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 19864,
@@ -246939,7 +248725,7 @@
       "original": "sc.java",
       "renamed": "sc.java",
       "inputSha256": "f54754d9ae921e8c77a62f5b16510e844dc0bcea213b4f335fa64880d5cac624",
-      "outputSha256": "4b62c0a6a3f970e7c218e45b012852a204bbbd8d62761e857b230685b510b25e",
+      "outputSha256": "0c32aaa3c3ad37e6b98dc68632e82fbdcda62a7e4f79bd9139dec5276a6b3acb",
       "edits": [
         {
           "start": 2920,
@@ -246998,6 +248784,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 3880,
+          "end": 3881,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
           "start": 3988,
           "end": 3995,
           "symbol": "F:gk.field_h:I",
@@ -247010,6 +248803,13 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 4038,
+          "end": 4039,
+          "symbol": "M:gk.l(I)Z",
+          "original": "l",
+          "renamed": "verifyCrc32"
         },
         {
           "start": 4065,
@@ -247067,7 +248867,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "02310d5721b0e0dda582a2379dd3aa0de7a952065a3c17f7a79977634ad99e58",
-      "outputSha256": "2ac8b369274e76e5e27628edb39af190e22041fa84e8ff7283661bdde32abe87",
+      "outputSha256": "7346cddbd3e55a0fa0d22b6072fbe5a2b31d3ee0a533169f376206138df0e03e",
       "edits": [
         {
           "start": 80,
@@ -247131,6 +248931,13 @@
           "symbol": "M:gk.a(B)I",
           "original": "a",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2810,
+          "end": 2811,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
         },
         {
           "start": 20013,
@@ -247209,7 +249016,7 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "20b02b59b3fc1ac1fdd33662be6164082e96951f4a61f18e03157cfab3a63bac",
-      "outputSha256": "5aaa0e524e825c83c0c812a2790ca09bd3da8f8750281df78d729ea39c382891",
+      "outputSha256": "903e1eeb747294e1438d44f477b6d7adc5ac68cc3bb62415a769bbe5ebbca7e8",
       "edits": [
         {
           "start": 958,
@@ -247254,6 +249061,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 1524,
+          "end": 1525,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
+          "start": 1583,
+          "end": 1584,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 1697,
           "end": 1698,
           "symbol": "M:gk.j(I)I",
@@ -247261,11 +249082,25 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 1722,
+          "end": 1723,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
+        },
+        {
           "start": 1796,
           "end": 1797,
           "symbol": "M:gk.j(I)I",
           "original": "j",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1823,
+          "end": 1824,
+          "symbol": "M:gk.f(I)Ljava/lang/String;",
+          "original": "f",
+          "renamed": "readString"
         },
         {
           "start": 2017,
@@ -250188,7 +252023,7 @@
       "original": "vb.java",
       "renamed": "vb.java",
       "inputSha256": "b567cbc6c9baf6d67312cfd40b853cf261abb30730454cb630220946ea9d8ecf",
-      "outputSha256": "92f149a079c1734b5e6d7cbe0b0dd3aa4771fd7d2330e92d3270135ca9d66c5c",
+      "outputSha256": "572ffb0a2cb2ad74f247627d486c63172bbdea2b55797e10fc774d5dceb9bb8b",
       "edits": [
         {
           "start": 55,
@@ -250224,6 +252059,27 @@
           "symbol": "C:dd",
           "original": "dd",
           "renamed": "ClientException"
+        },
+        {
+          "start": 4045,
+          "end": 4046,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4074,
+          "end": 4075,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 4103,
+          "end": 4104,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
         }
       ]
     },
@@ -250871,7 +252727,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "2d9b65f070001e240159ea8ce8f4e13628caf80ef6e6d8cf2bf4f58afdfce8b1",
-      "outputSha256": "0404aac6acc6a2ad28ac2d5507d9f7bfc9cdddeba2104353e0209124a5fe7885",
+      "outputSha256": "7f1578cf6a69b4a9b06edda641e144859e2520a8c2534d881e7fe5b3caa85290",
       "edits": [
         {
           "start": 88,
@@ -250888,6 +252744,41 @@
           "renamed": "Sprite"
         },
         {
+          "start": 658,
+          "end": 659,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 687,
+          "end": 688,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 716,
+          "end": 717,
+          "symbol": "M:gk.c(II)V",
+          "original": "c",
+          "renamed": "writeShort"
+        },
+        {
+          "start": 754,
+          "end": 755,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 796,
+          "end": 797,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
           "start": 1062,
           "end": 1063,
           "symbol": "M:w.a(I)V",
@@ -250900,6 +252791,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4641,
+          "end": 4642,
+          "symbol": "M:rc.a(III[B)I",
+          "original": "a",
+          "renamed": "computeCrc32"
         }
       ]
     },
@@ -251084,7 +252982,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "0a1d04d5010ec0a4a11b445fa3c11974d60c8fae3645493b972e2bbc82ed70a4",
-      "outputSha256": "15ba9da06498bc5ea856269a9c158a4ecf18e397adefac0dbcbd5461244a98d6",
+      "outputSha256": "2db66f2cf94f560b10246a5fe36c6d9986fc81208695f0512bc7ef3b9dd23979",
       "edits": [
         {
           "start": 281,
@@ -251136,6 +253034,20 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 2420,
+          "end": 2421,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
+        },
+        {
+          "start": 2860,
+          "end": 2861,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
+        },
+        {
           "start": 3223,
           "end": 3224,
           "symbol": "M:gk.j(I)I",
@@ -251157,11 +253069,32 @@
           "renamed": "readInt"
         },
         {
+          "start": 4735,
+          "end": 4736,
+          "symbol": "M:gk.a([BIII)V",
+          "original": "a",
+          "renamed": "readBytes"
+        },
+        {
           "start": 5008,
           "end": 5009,
           "symbol": "M:gk.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 5216,
+          "end": 5217,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
+        },
+        {
+          "start": 5694,
+          "end": 5695,
+          "symbol": "M:gk.m(I)I",
+          "original": "m",
+          "renamed": "readUnsignedShortOrInt"
         },
         {
           "start": 6347,
@@ -251880,7 +253813,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "2226f1e72fe3c3da124ee16a779930c842535554cc5ada8712c58a0de76d2795",
-      "outputSha256": "8041009557f62203166605c653dba36126d9ba68bef07231aef4f1faf66d2093",
+      "outputSha256": "cc1b3e8962662ba911225e9bd00e0691ae98eebae6f07571a4bed9bef8087f2e",
       "edits": [
         {
           "start": 998,
@@ -251916,6 +253849,69 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2595,
+          "end": 2596,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 2632,
+          "end": 2633,
+          "symbol": "M:gk.b(II)V",
+          "original": "b",
+          "renamed": "writeByte"
+        },
+        {
+          "start": 2682,
+          "end": 2683,
+          "symbol": "M:gk.a(IZ)V",
+          "original": "a",
+          "renamed": "writeSignedSmart"
+        },
+        {
+          "start": 2723,
+          "end": 2724,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2769,
+          "end": 2770,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2882,
+          "end": 2883,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2928,
+          "end": 2929,
+          "symbol": "M:gk.a(II)V",
+          "original": "a",
+          "renamed": "writeInt"
+        },
+        {
+          "start": 2974,
+          "end": 2975,
+          "symbol": "M:gk.a(BI)I",
+          "original": "a",
+          "renamed": "appendCrc32"
+        },
+        {
+          "start": 3010,
+          "end": 3011,
+          "symbol": "M:gk.a(IB)V",
+          "original": "a",
+          "renamed": "backpatchByteLength"
         },
         {
           "start": 3025,
@@ -252042,10 +254038,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "3a98b63141095b5895d3f81fa830b51653f3af5dcfb2a7dd8750e03f85c68edb",
+    "rulesSha256": "823bfb85bddc385f641ee55754b7b8df48381a08dfe37c0e1cabb31b00db542f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "fd6027d294052b27b7db6884148d837247b972ffe0afe7bf5d705440ea652c56",
+    "outputTreeSha256": "6ea525a8bba92ce111e229b895cbc4efdc959849b713f220cdb97e939aa236eb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

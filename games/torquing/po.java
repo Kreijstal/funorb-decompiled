@@ -29,7 +29,7 @@ final class po extends am {
           if (var4_int != 0) {
             return;
           }
-          this.b(4080, param0.e((byte) 62));
+          this.b(4080, param0.readUnsignedMedium((byte) 62));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

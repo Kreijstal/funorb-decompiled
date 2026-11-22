@@ -273,7 +273,7 @@ final class qfa extends cga {
               var5 = null;
             } else {
               var14 = new byte[var4];
-              var10.a(var14, var4, 128, 0);
+              var10.readBytes(var14, var4, 128, 0);
             }
             var10.position = var10.position + 4;
             if (var10.verifyCrc(4)) {

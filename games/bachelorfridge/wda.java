@@ -182,9 +182,9 @@ final class wda {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_d = param0.b(true);
+          this.field_d = param0.readByte(true);
           this.field_e = param0.readUnsignedByte(16711935);
-          if (param0.b(true) != -1) {
+          if (param0.readByte(true) != -1) {
             param0.position = param0.position - 1;
             this.field_f = new it(param0);
           }

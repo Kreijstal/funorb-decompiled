@@ -93,8 +93,8 @@ final class sc extends kd {
           if (param0 != -6) {
             field_g = 54;
           }
-          param1.b(this.field_c, param0 + 132);
-          param1.a(this.field_e, 27933);
+          param1.writePrefixedString(this.field_c, param0 + 132);
+          param1.writeBase38String(this.field_e, 27933);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

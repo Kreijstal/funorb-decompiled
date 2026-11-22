@@ -168,7 +168,7 @@ class CreatureProfile extends IntrusiveNode {
           var8 = 0;
           var5Lifetime1 = var8;
           while (var8 < 5) {
-            param1.b(this.field_m[var8], -124);
+            param1.writeShort(this.field_m[var8], -124);
             var8++;
           }
           return;
@@ -357,7 +357,7 @@ class CreatureProfile extends IntrusiveNode {
           for (var4 = 0; var4 < var3_int; var4++) {
             this.field_h.a(new ho(fw.field_h[param0.readUnsignedByte(16711935)], param0.readUnsignedByte(16711935)), true);
           }
-          var4Lifetime1 = param0.a(3);
+          var4Lifetime1 = param0.readUnsignedMedium(3);
           this.field_j = new int[rfa.a(param1, var4Lifetime1) + 1];
           this.field_j[1] = this.field_o.field_g.field_b[1];
           this.field_j[0] = this.field_o.field_g.field_b[0];
@@ -468,7 +468,7 @@ class CreatureProfile extends IntrusiveNode {
           var6[var11.length - 1] = this.field_o.field_g.field_b[var5Lifetime1 + 2];
           this.field_j = var6;
           this.field_f = param1.field_b;
-          uca.a(35, (byte) -106);
+          Crc32Table.a(35, (byte) -106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -319,7 +319,7 @@ final class vi extends qm {
               PacketBuffer var6 = (PacketBuffer) null;
               vi.a((byte) -110, (PacketBuffer) null);
             }
-            param1.a(true, 24, 0, var11);
+            param1.writeBytes(true, 24, 0, var11);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

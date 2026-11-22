@@ -109,14 +109,14 @@ final class tf {
             if (var4 < 7) {
               this.field_m = var18.readUnsignedShort(false);
             } else {
-              this.field_m = var18.h(78);
+              this.field_m = var18.readUnsignedShortOrInt(78);
             }
             var8 = 0;
             this.field_y = new int[this.field_m];
             var9 = -1;
             if (var4 >= 7) {
               for (var10 = 0; var10 < this.field_m; var10++) {
-                dupTemp$0 = var8 + var18.h(96);
+                dupTemp$0 = var8 + var18.readUnsignedShortOrInt(96);
                 var8 = dupTemp$0;
                 this.field_y[var10] = dupTemp$0;
                 if (this.field_y[var10] > var9) {
@@ -172,7 +172,7 @@ final class tf {
             }
             if (var4 >= 7) {
               for (var11Lifetime3 = 0; var11Lifetime3 < this.field_m; var11Lifetime3++) {
-                this.field_e[this.field_y[var11Lifetime3]] = var18.h(-76);
+                this.field_e[this.field_y[var11Lifetime3]] = var18.readUnsignedShortOrInt(-76);
               }
               for (var11Lifetime3 = 0; this.field_m > var11Lifetime3; var11Lifetime3++) {
                 var12 = this.field_y[var11Lifetime3];
@@ -182,7 +182,7 @@ final class tf {
                 this.field_A[var12] = array$2;
                 var14 = -1;
                 for (var15 = 0; var15 < var13; var15++) {
-                  dupTemp$3 = var8Lifetime1 + var18.h(-116);
+                  dupTemp$3 = var8Lifetime1 + var18.readUnsignedShortOrInt(-116);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_A[var12];
                   dupTemp$4[var15] = dupTemp$3;

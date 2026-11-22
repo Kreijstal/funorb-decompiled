@@ -145,7 +145,7 @@ final class qo extends am {
               this.field_u = param0.readUnsignedShort(7088);
             } else {
               if (2 == var4_int) {
-                stackIn_11_1 = (param0.i((byte) -101) == 1);
+                stackIn_11_1 = (param0.readUnsignedByte((byte) -101) == 1);
                 this.field_p = stackIn_11_1;
               }
             }

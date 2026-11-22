@@ -151,10 +151,10 @@ final class wt extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_w = (param1.b(true) << 12) / 100;
+              this.field_w = (param1.readByte(true) << 12) / 100;
             } else {
               if (2 == var4_int) {
-                this.field_l = (param1.b(true) << 12) / 100;
+                this.field_l = (param1.readByte(true) << 12) / 100;
               }
             }
           } else {

@@ -267,7 +267,7 @@ final class ProxySocketConnector extends SocketConnector {
                 param1.writeByte(var17.field_r[var5], -109);
               }
             }
-            param1.d(var4, 8600);
+            param1.appendCrc32(var4, 8600);
             var17.unlink((byte) 12);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

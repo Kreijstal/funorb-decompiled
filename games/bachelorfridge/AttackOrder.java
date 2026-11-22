@@ -89,7 +89,7 @@ final class AttackOrder extends CreatureOrder {
           var18.position = param1.length - (7 + 8 * ok.field_vb + (3 * var3 - 3));
           hk.field_f = new int[var3];
           for (var5Lifetime1 = 1; var3 > var5Lifetime1; var5Lifetime1++) {
-            hk.field_f[var5Lifetime1] = var18.a(3);
+            hk.field_f[var5Lifetime1] = var18.readUnsignedMedium(3);
             if (hk.field_f[var5Lifetime1] == 0) {
               hk.field_f[var5Lifetime1] = 1;
             }
@@ -111,11 +111,11 @@ final class AttackOrder extends CreatureOrder {
             var12 = var18.readUnsignedByte(16711935);
             if ((1 & var12) == 0) {
               for (var13 = 0; var8 > var13; var13++) {
-                var9[var13] = var18.b(true);
+                var9[var13] = var18.readByte(true);
               }
               if ((2 & var12) != 0) {
                 for (var13 = 0; var13 < var8; var13++) {
-                  dupTemp$1 = var18.b(true);
+                  dupTemp$1 = var18.readByte(true);
                   var10[var13] = dupTemp$1;
                   var14 = dupTemp$1;
                   stackIn_29_0 = var11;
@@ -130,13 +130,13 @@ final class AttackOrder extends CreatureOrder {
             } else {
               for (var13 = 0; var6 > var13; var13++) {
                 for (var14 = 0; var7 > var14; var14++) {
-                  var9[var13 + var14 * var6] = var18.b(true);
+                  var9[var13 + var14 * var6] = var18.readByte(true);
                 }
               }
               if (0 != (2 & var12)) {
                 for (var13 = 0; var13 < var6; var13++) {
                   for (var14 = 0; var14 < var7; var14++) {
-                    dupTemp$0 = var18.b(true);
+                    dupTemp$0 = var18.readByte(true);
                     var10[var6 * var14 + var13] = dupTemp$0;
                     var15 = dupTemp$0;
                     stackIn_45_0 = var11;

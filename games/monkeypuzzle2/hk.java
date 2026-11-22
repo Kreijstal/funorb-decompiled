@@ -540,12 +540,12 @@ final class hk extends IntrusiveNode {
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param0.f(param2 + 0);
-                    var21 = param0.f(-1);
+                    var20 = param0.readString(param2 + 0);
+                    var21 = param0.readString(-1);
                     var9 = param0.readUnsignedByte((byte) 114);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param0.f(-1);
+                      var10[var11_int] = param0.readString(-1);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -555,7 +555,7 @@ final class hk extends IntrusiveNode {
                         var13 = param0.readInt(126);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(var22[var12_int], var13, -127, 0);
+                        param0.readBytes(var22[var12_int], var13, -127, 0);
                       }
                     }
                     var18.field_q[var5] = var6_int;
@@ -570,9 +570,9 @@ final class hk extends IntrusiveNode {
                     var18.field_f[var5] = var22;
                   }
                 } else {
-                  var15 = param0.f(param2 ^ 0);
+                  var15 = param0.readString(param2 ^ 0);
                   var7 = var15;
-                  var16 = param0.f(param2 ^ 0);
+                  var16 = param0.readString(param2 ^ 0);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {

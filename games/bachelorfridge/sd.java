@@ -86,7 +86,7 @@ final class sd {
           if (param0 != 124) {
             sd.a(62, 123);
           }
-          param1.b(param2.moveId, -112);
+          param1.writeShort(param2.moveId, -112);
           FlirtAnimation.a(param2.creature, 110, param1);
           param2.a(param0 ^ 14, param1);
         } catch (RuntimeException runtimeException) {

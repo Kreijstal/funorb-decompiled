@@ -38,7 +38,7 @@ abstract class o {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             qh.a(124, var1);
-            pg.field_fb.a(var1.position - var2, (byte) -75);
+            pg.field_fb.backpatchByteLength(var1.position - var2, (byte) -75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

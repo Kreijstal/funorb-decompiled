@@ -85,7 +85,7 @@ final class ArchiveIndex {
             boolean stackIn_13_0 = !((var5 & 1) == 0);
             boolean var6 = stackIn_13_0;
             if (var4 >= 7) {
-              this.field_s = var17.c((byte) 127);
+              this.field_s = var17.readUnsignedShortOrInt((byte) 127);
             } else {
               this.field_s = var17.readUnsignedShort((byte) 0);
             }
@@ -96,7 +96,7 @@ final class ArchiveIndex {
             this.field_o = new int[this.field_s];
             if (7 <= var4) {
               for (var10 = 0; this.field_s > var10; var10++) {
-                int dupTemp$0 = var8 + var17.c((byte) 127);
+                int dupTemp$0 = var8 + var17.readUnsignedShortOrInt((byte) 127);
                 var8 = dupTemp$0;
                 this.field_o[var10] = dupTemp$0;
                 if (this.field_o[var10] > var9) {
@@ -138,7 +138,7 @@ final class ArchiveIndex {
             if (var7) {
               for (int var10Lifetime3 = 0; var10Lifetime3 < this.field_s; var10Lifetime3++) {
                 byte[] var21 = new byte[64];
-                var17.a(0, 7186, 64, var21);
+                var17.readBytes(0, 7186, 64, var21);
                 this.field_i[this.field_o[var10Lifetime3]] = var21;
               }
             }
@@ -173,7 +173,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
-                this.field_k[this.field_o[var10Lifetime5]] = var17.c((byte) 126);
+                this.field_k[this.field_o[var10Lifetime5]] = var17.readUnsignedShortOrInt((byte) 126);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {
                 var11 = this.field_o[var10Lifetime5];
@@ -183,7 +183,7 @@ final class ArchiveIndex {
                 this.field_q[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  int dupTemp$6 = var8Lifetime1 + var17.c((byte) 124);
+                  int dupTemp$6 = var8Lifetime1 + var17.readUnsignedShortOrInt((byte) 124);
                   var8Lifetime1 = dupTemp$6;
                   int[] dupTemp$7 = this.field_q[var11];
                   dupTemp$7[var14] = dupTemp$6;

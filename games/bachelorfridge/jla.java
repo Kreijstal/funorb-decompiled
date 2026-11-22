@@ -216,7 +216,7 @@ class jla {
                   var2 = (uu) (mda.field_b.children.c(0));
                   continue;
                 }
-                uca.a(32, (byte) 121);
+                Crc32Table.a(32, (byte) 121);
                 RasterBuffer.a(7, param1 ^ 29576);
                 ImageProducerRasterBuffer.a(param1 - 28204, var2.field_Cb, 1);
               }
@@ -274,7 +274,7 @@ class jla {
                 gs.field_f.a(iea.field_d, 50);
                 pka.a((byte) -107, true);
               }
-              uca.a(33, (byte) 98);
+              Crc32Table.a(33, (byte) 98);
             }
           }
           lfa.field_l.a(19842, true);
@@ -301,56 +301,56 @@ class jla {
           }
           mg.field_l.a(param1 - 8260, true);
           if (mg.field_l.field_R == 1) {
-            uca.a(31, (byte) -127);
+            Crc32Table.a(31, (byte) -127);
             RasterBuffer.a(31, 7758);
             BananarangAnimation.field_Q = 1;
             lf.a(param1 ^ 28154);
           }
           qba.field_l.a(19842, true);
           if (qba.field_l.field_R == 1) {
-            uca.a(31, (byte) -87);
+            Crc32Table.a(31, (byte) -87);
             RasterBuffer.a(31, 7758);
             BananarangAnimation.field_Q = 2;
             lf.a(106);
           }
           dt.field_b.a(19842, true);
           if (dt.field_b.field_R == 1) {
-            uca.a(31, (byte) -10);
+            Crc32Table.a(31, (byte) -10);
             RasterBuffer.a(31, param1 ^ 29576);
             BananarangAnimation.field_Q = 3;
             lf.a(82);
           }
           ClamsEvent.field_u.a(19842, true);
           if (ClamsEvent.field_u.field_R == 1) {
-            uca.a(31, (byte) 105);
+            Crc32Table.a(31, (byte) 105);
             RasterBuffer.a(31, 7758);
             BananarangAnimation.field_Q = 4;
             lf.a(97);
           }
           sea.field_k.a(19842, true);
           if (sea.field_k.field_R == 1) {
-            uca.a(31, (byte) -91);
+            Crc32Table.a(31, (byte) -91);
             RasterBuffer.a(31, param1 ^ 29576);
             BananarangAnimation.field_Q = 5;
             lf.a(76);
           }
           mk.field_h.a(param1 ^ 8260, true);
           if (1 == mk.field_h.field_R) {
-            uca.a(31, (byte) -62);
+            Crc32Table.a(31, (byte) -62);
             RasterBuffer.a(31, 7758);
             BananarangAnimation.field_Q = 6;
             lf.a(114);
           }
           StampedeSpecial.field_q.a(param1 ^ 8260, true);
           if (StampedeSpecial.field_q.field_R == 1) {
-            uca.a(31, (byte) -65);
+            Crc32Table.a(31, (byte) -65);
             RasterBuffer.a(31, 7758);
             BananarangAnimation.field_Q = 7;
             lf.a(param1 ^ 28154);
           }
           rfa.field_b.a(19842, true);
           if (1 == rfa.field_b.field_R) {
-            uca.a(31, (byte) 120);
+            Crc32Table.a(31, (byte) 120);
             RasterBuffer.a(31, param1 ^ 29576);
             BananarangAnimation.field_Q = 8;
             lf.a(103);
@@ -1213,7 +1213,7 @@ class jla {
                 hp.field_c = -3;
                 ((dfa) ((Object) dj.field_c)).a(8, param2);
                 vs.field_d = false;
-                uca.a(39, (byte) -97);
+                Crc32Table.a(39, (byte) -97);
                 if (var9 == 0) {
                   break regionExit2;
                 }

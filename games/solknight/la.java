@@ -253,19 +253,19 @@ final class la extends IntrusiveNode {
         var5.e(param1, -2147483648);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        var5.c(20, 1);
-        var5.c(31, param2.field_n);
-        var5.c(param0 ^ -104, param2.field_j);
-        var5.b(param2.field_q, false);
-        var5.b(param2.field_h, false);
+        var5.writeByte(20, 1);
+        var5.writeByte(31, param2.field_n);
+        var5.writeByte(param0 ^ -104, param2.field_j);
+        var5.writeInt(param2.field_q, false);
+        var5.writeInt(param2.field_h, false);
         if (param0 != 0) {
           return;
         }
         try {
-          var5.b(param2.field_o, false);
-          var5.b(param2.field_l, false);
-          var5.b(true, var4);
-          var5.b(1, -var4 + var5.position);
+          var5.writeInt(param2.field_o, false);
+          var5.writeInt(param2.field_l, false);
+          var5.appendCrc32(true, var4);
+          var5.backpatchByteLength(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "la.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

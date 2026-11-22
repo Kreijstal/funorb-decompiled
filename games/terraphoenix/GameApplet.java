@@ -920,7 +920,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
             }
-            param1.a(-222449912, var2, 24, 0);
+            param1.writeBytes(-222449912, var2, 24, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

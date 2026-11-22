@@ -238,7 +238,7 @@ final class QuickChatMenu {
                         var13 = param2.readInt((byte) -107);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(var13, 0, -37, var22[var12_int]);
+                        param2.readBytes(var13, 0, -37, var22[var12_int]);
                       }
                     }
                     var18.field_k[var5] = var6_int;

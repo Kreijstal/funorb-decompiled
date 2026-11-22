@@ -240,8 +240,8 @@ final class ia extends di {
             ie.field_b = new PacketBuffer(var7_int);
           }
           ie.field_b.position = 0;
-          ie.field_b.a(-222449912, param6, param5, param0);
-          ie.field_b.f(var7_int, -2108648176);
+          ie.field_b.writeBytes(-222449912, param6, param5, param0);
+          ie.field_b.padZerosTo(var7_int, -2108648176);
           ie.field_b.xteaEncrypt(-6716, var12);
           if (null == jc.field_z ||
             !(100 <= jc.field_z.payload.length)) {
@@ -254,9 +254,9 @@ final class ia extends di {
           }
           jc.field_z.writeShort(-1564407352, param5);
           jc.field_z.rsaEncrypt(param4, (byte) -52, param3);
-          param1.a(-222449912, jc.field_z.payload, jc.field_z.position, 0);
+          param1.writeBytes(-222449912, jc.field_z.payload, jc.field_z.position, 0);
           var9Lifetime2 = 39 % ((param2 - 0) / 61);
-          param1.a(-222449912, ie.field_b.payload, ie.field_b.position, 0);
+          param1.writeBytes(-222449912, ie.field_b.payload, ie.field_b.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,14 +318,14 @@ final class ia extends di {
           var5.writeByte(1, -114);
           if (param1.field_h != null) {
             var5.writeByte(param1.field_h.length, -108);
-            var5.a(-222449912, param1.field_h, param1.field_h.length, 0);
+            var5.writeBytes(-222449912, param1.field_h, param1.field_h.length, 0);
           } else {
             var5.writeByte(0, -119);
           }
-          var5.d(var4, 8600);
+          var5.appendCrc32(var4, 8600);
           var5.position = var5.position - 4;
           param1.field_k = var5.readInt((byte) -107);
-          var5.j(var5.position - var4, -119);
+          var5.backpatchByteLength(var5.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ia.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

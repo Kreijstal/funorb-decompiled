@@ -33,15 +33,15 @@ final class ud extends IntrusiveNode {
           var5.e(param2, -2147483648);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(-102, 1);
-          var5.c(106, param1.field_n);
-          var5.a(param1.field_o, (byte) 98);
-          var5.b(param1.field_q, false);
-          var5.b(param1.field_r, false);
-          var5.b(param1.field_j, false);
-          var5.b(param1.field_i, false);
-          var5.b(true, var4);
-          var5.b(1, -var4 + var5.position);
+          var5.writeByte(-102, 1);
+          var5.writeByte(106, param1.field_n);
+          var5.writeSignedSmart(param1.field_o, (byte) 98);
+          var5.writeInt(param1.field_q, false);
+          var5.writeInt(param1.field_r, false);
+          var5.writeInt(param1.field_j, false);
+          var5.writeInt(param1.field_i, false);
+          var5.appendCrc32(true, var4);
+          var5.backpatchByteLength(1, -var4 + var5.position);
           if (param0 < -105) {
             return;
           }

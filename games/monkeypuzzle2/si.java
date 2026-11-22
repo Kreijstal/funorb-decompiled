@@ -53,19 +53,19 @@ final class si extends fb {
         }
         stackIn_11_0 = (var8.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        lc.field_h = var8.f(-1);
+        lc.field_h = var8.readString(-1);
         if (var4 != 0) {
-          i.field_h = var8.f(-1);
+          i.field_h = var8.readString(-1);
         } else {
           i.field_h = lc.field_h;
         }
         if (lf.field_c == 1) {
           var8.readUnsignedShort(17277);
-          var8.f(-1);
+          var8.readString(-1);
         } else {
           if (lf.field_c == 4) {
             var8.readUnsignedShort(17277);
-            var8.f(-1);
+            var8.readString(-1);
           }
         }
         if (!param0) {

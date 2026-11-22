@@ -264,7 +264,7 @@ final class m extends IntrusiveNode {
             var5 = var3.field_j;
             SecondaryNodeDeque.field_d[0] = cl.field_e;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              SecondaryNodeDeque.field_d[var6_int] = var13.f(-1);
+              SecondaryNodeDeque.field_d[var6_int] = var13.readString(-1);
             }
             sb.b(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

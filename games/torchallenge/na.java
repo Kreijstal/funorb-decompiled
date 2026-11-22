@@ -62,7 +62,7 @@ class na extends t {
     final void a(PacketBuffer param0, int param1) {
         try {
           param0.writeLong(true, this.field_h);
-          param0.b(this.field_g, (byte) -73);
+          param0.writeBase38String(this.field_g, (byte) -73);
           if (param1 >= -29) {
             field_e = true;
           }

@@ -29,7 +29,7 @@ final class pj extends db {
         lg.field_a = var8.readLong((byte) 84);
         if (fd.field_e == 2) {
           jb.field_d = var8.readUnsignedShort((byte) -124);
-          ka.field_c = var8.e(8);
+          ka.field_c = var8.readUnsignedMedium(8);
         } else {
           ka.field_c = 0;
           jb.field_d = 0;

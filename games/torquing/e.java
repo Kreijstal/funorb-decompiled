@@ -20,8 +20,8 @@ class e extends bc {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(118, this.field_e);
-          param0.a((byte) 107, this.field_c);
+          param0.writeLong(118, this.field_e);
+          param0.writeBase38String((byte) 107, this.field_c);
           if (param1 != -71) {
             e.clearStaticReferences(true);
           }

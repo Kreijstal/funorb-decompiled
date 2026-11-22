@@ -104,7 +104,7 @@ final class FridgeScreen {
           for (var3 = 0; var3 < this.field_i.length; var3++) {
             if (null != this.field_i[var2Lifetime1][var3].field_f &&
               dc.field_y[this.field_i[var2Lifetime1][var3].field_e].a(this.field_i[var2Lifetime1][var3].field_f.field_p, this.field_i[var2Lifetime1][var3].field_f.field_j, mk.field_p, gd.field_m)) {
-              uca.a(7, (byte) 119);
+              Crc32Table.a(7, (byte) 119);
             }
           }
           var2Lifetime1++;
@@ -514,7 +514,7 @@ final class FridgeScreen {
                   RasterBuffer.a(0, 7758);
                   this.field_m.a(new FridgeCreature(new CreatureProfile(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
                   MartyrAnimation.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (FridgeCreature) (this.field_m.a(6)), var4);
-                  uca.a(9, (byte) 99);
+                  Crc32Table.a(9, (byte) 99);
                   this.field_q.a(new es(this.field_i[var3][var4].field_f.field_p, this.field_i[var3][var4].field_f.field_j, DiveBomberAnimation.a(6, m.field_a, -2147483648)), true);
                   this.field_i[var3][var4].field_f.field_a = false;
                 }
@@ -553,7 +553,7 @@ final class FridgeScreen {
         this.field_a.a(19842, true);
         if (this.field_a.field_T) {
           if (af.field_a) {
-            uca.a(6, (byte) -35);
+            Crc32Table.a(6, (byte) -35);
           }
           au.field_c = 5;
         }
@@ -573,17 +573,17 @@ final class FridgeScreen {
               this.field_f = new mj(100, 150, 440, 160, vu.field_o);
             }
           }
-          uca.a(37, (byte) -115);
+          Crc32Table.a(37, (byte) -115);
         }
         if (this.field_s.field_T) {
           if (af.field_a) {
-            uca.a(1, (byte) 127);
+            Crc32Table.a(1, (byte) 127);
           }
           au.field_c = 2;
         }
         if (this.field_s.field_R == 1 &&
           this.field_k.field_a == 2 && pka.field_f) {
-          uca.a(30, (byte) -35);
+          Crc32Table.a(30, (byte) -35);
           lla.a(true, (byte) 99, 0);
           iu.d(37);
           StatusEffectInfo.a(true);

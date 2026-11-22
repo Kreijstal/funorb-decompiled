@@ -53,7 +53,7 @@ final class kb {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(var4, var13.length, 128, 0);
+        var10.readBytes(var4, var13.length, 128, 0);
         if (null != this.field_b &&
           null != this.field_f) {
           var12 = new java.math.BigInteger(var13);
@@ -107,7 +107,7 @@ final class kb {
             var6_int = this.field_c.readInt(81);
             var7 = this.field_c.readInt(-121);
             var13 = new byte[param4];
-            this.field_c.a(var13, 64, 128, 0);
+            this.field_c.readBytes(var13, 64, 128, 0);
             var9 = new fp(param1, param2, param3, this.field_i, this.field_k, var6_int, var13, var7, param0);
             this.field_a[param1] = var9;
             stackIn_11_0 = var9;

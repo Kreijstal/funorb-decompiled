@@ -30,7 +30,7 @@ abstract class CreatureEvent extends BattleUpdate {
 
     final void write(PacketBuffer param0, int param1) {
         try {
-          param0.b(this.moveId, -121);
+          param0.writeShort(this.moveId, -121);
           FlirtAnimation.a(this.creature, param1 + 132, param0);
           if (param1 != -9) {
             this.moveId = -23;

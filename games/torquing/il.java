@@ -189,7 +189,7 @@ final class il extends gf {
             field_l = -4;
           }
           var27 = kj.field_d;
-          var2 = var27.i((byte) -101);
+          var2 = var27.readUnsignedByte((byte) -101);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(7088);
             var4_ref_bm = (bm) (CachedArchiveSource.field_d.b(0));
@@ -204,7 +204,7 @@ final class il extends gf {
               ih.b(true);
               return;
             }
-            var5 = var27.i((byte) -101);
+            var5 = var27.readUnsignedByte((byte) -101);
             if (var5 != 0) {
               var6_int = var4_ref_bm.field_q;
               cb.field_m[0].field_c = null;
@@ -212,12 +212,12 @@ final class il extends gf {
               cb.field_m[0].field_d = re.field_e;
               var7 = var4_ref_bm.field_o;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                cb.field_m[var8_int].field_d = var27.h((byte) 124);
+                cb.field_m[var8_int].field_d = var27.readString((byte) 124);
                 cb.field_m[var8_int].field_e = false;
-                if (var27.i((byte) -101) != 1) {
+                if (var27.readUnsignedByte((byte) -101) != 1) {
                   cb.field_m[var8_int].field_c = null;
                 } else {
-                  cb.field_m[var8_int].field_c = var27.h((byte) 123);
+                  cb.field_m[var8_int].field_c = var27.readString((byte) 123);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -236,12 +236,12 @@ final class il extends gf {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.i((byte) -101);
+              var18 = var27.readUnsignedByte((byte) -101);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.i((byte) -101);
+                  var20 = var27.readUnsignedByte((byte) -101);
                   var21 = cb.field_m[var20].field_d;
-                  var22 = var27.b(67);
+                  var22 = var27.readLong(67);
                   var24 = var27.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
@@ -251,7 +251,7 @@ final class il extends gf {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.c((byte) -33);
+                      var11[0][incrementValue$3] = var27.readInt((byte) -33);
                     }
                   }
                   if (var21 != null &&
@@ -264,7 +264,7 @@ final class il extends gf {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.c((byte) -76);
+                      var11[1][incrementValue$4] = var27.readInt((byte) -76);
                     }
                   }
                   if (var6_int > var14 &&
@@ -278,7 +278,7 @@ final class il extends gf {
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.c((byte) -55);
+                      var11[2][incrementValue$5] = var27.readInt((byte) -55);
                     }
                   }
                 }
@@ -290,7 +290,7 @@ final class il extends gf {
           }
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(param0 + 37681);
-            var4 = var27.b(68);
+            var4 = var27.readLong(68);
             var6 = (wc) (so.field_t.b(0));
             while (var6 != null) {
               if (var3Lifetime1 != var6.field_q) {

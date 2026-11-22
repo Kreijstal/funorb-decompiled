@@ -355,14 +355,14 @@ abstract class si extends UiWidget implements oh {
 
     final static void a(int param0, byte param1, int param2, int param3, PacketBuffer param4) {
         try {
-          param4.c(-115, 12);
-          param4.a(true, 17);
+          param4.writeByte(-115, 12);
+          param4.writeShort(true, 17);
           if (param1 != 22) {
             field_B = -110;
           }
-          param4.a(true, param3);
-          param4.a(true, param0);
-          param4.c(-119, param2);
+          param4.writeShort(true, param3);
+          param4.writeShort(true, param0);
+          param4.writeByte(-119, param2);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "si.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

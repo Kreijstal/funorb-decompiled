@@ -71,9 +71,9 @@ final class lc extends IntrusiveNode {
             nh.field_eb = new PacketBuffer(var7_int);
           }
           nh.field_eb.position = 0;
-          nh.field_eb.a(param4, param0, param3, -16384);
-          nh.field_eb.c(var7_int, (byte) 36);
-          nh.field_eb.a(var13, (byte) -124);
+          nh.field_eb.writeBytes(param4, param0, param3, -16384);
+          nh.field_eb.padZerosTo(var7_int, (byte) 36);
+          nh.field_eb.encryptXtea(var13, (byte) -124);
           if (null == bi.field_d ||
             !(bi.field_d.payload.length >= 100)) {
             bi.field_d = new PacketBuffer(100);
@@ -87,9 +87,9 @@ final class lc extends IntrusiveNode {
             var11++;
           }
           bi.field_d.writeShort(param4, (byte) 106);
-          bi.field_d.a(param6, true, param5);
-          param1.a(bi.field_d.position, param2, bi.field_d.payload, param2 ^ -16384);
-          param1.a(nh.field_eb.position, 0, nh.field_eb.payload, -16384);
+          bi.field_d.applyRsa(param6, true, param5);
+          param1.writeBytes(bi.field_d.position, param2, bi.field_d.payload, param2 ^ -16384);
+          param1.writeBytes(nh.field_eb.position, 0, nh.field_eb.payload, -16384);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

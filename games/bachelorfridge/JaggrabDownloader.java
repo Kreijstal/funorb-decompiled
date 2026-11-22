@@ -234,7 +234,7 @@ final class JaggrabDownloader implements Runnable {
         }
         try {
           var5.writeInt(param0.field_h, -1615464796);
-          var5.a(var4, 19);
+          var5.appendCrc32(var4, 19);
           var5.writeLengthByte((byte) 124, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

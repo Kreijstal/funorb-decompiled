@@ -22,7 +22,7 @@ final class le {
         try {
           var9 = new IsaacPacketBuffer(param1.a(-125, "", "logo.fo3d"));
           var11 = var9;
-          var3 = var11.i((byte) -101);
+          var3 = var11.readUnsignedByte((byte) -101);
           var11.j((byte) -100);
           ha.field_d = pe.a((byte) -59, var11);
           db.field_a = new VertexMesh[var3];

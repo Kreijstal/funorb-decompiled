@@ -94,7 +94,7 @@ final class sf extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var6, var5, -96, 0);
+          var2.readBytes(var6, var5, -96, 0);
           this.field_o[var4] = var6;
         }
     }

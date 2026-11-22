@@ -25,13 +25,13 @@ final class ue {
     final static void a(byte param0) {
         CharSequence var3 = null;
         if (param0 <= -119) {
-          wf.field_b = ae.field_N.e((byte) 95);
+          wf.field_b = ae.field_N.readString((byte) 95);
           var3 = (CharSequence) ((Object) wf.field_b);
           wb.field_b = nh.a(var3, false);
           return;
         }
         field_c = (IntrusiveDeque) null;
-        wf.field_b = ae.field_N.e((byte) 95);
+        wf.field_b = ae.field_N.readString((byte) 95);
         CharSequence var2 = (CharSequence) ((Object) wf.field_b);
         wb.field_b = nh.a(var2, false);
     }

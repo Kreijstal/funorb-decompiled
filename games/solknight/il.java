@@ -54,8 +54,8 @@ class il extends aa {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a(this.field_a, (byte) 89);
-          param1.a(111, this.field_b);
+          param1.writeLong(this.field_a, (byte) 89);
+          param1.writeBase38String(111, this.field_b);
           if (param0 != -12518) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a(-37, (PacketBuffer) null);

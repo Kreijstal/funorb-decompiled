@@ -161,8 +161,8 @@ final class qc {
           var6.writeInt(param1.field_i, 8959);
           var6.writeInt(param1.field_j, 8959);
           int var5 = 5 / ((param2 - 34) / 34);
-          var6.d(var4, 8600);
-          var6.j(var6.position - var4, -119);
+          var6.appendCrc32(var4, 8600);
+          var6.backpatchByteLength(var6.position - var4, -119);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "qc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

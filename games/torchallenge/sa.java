@@ -69,9 +69,9 @@ final class sa {
             var5.writeByte(0, (byte) 122);
           } else {
             var5.writeByte(param2.field_i.length, (byte) 122);
-            var5.a(param2.field_i.length, 0, param2.field_i, -16384);
+            var5.writeBytes(param2.field_i.length, 0, param2.field_i, -16384);
           }
-          var5.b(var4, 14430);
+          var5.appendCrc32(var4, 14430);
           var5.position = var5.position - 4;
           param2.field_j = var5.readInt(67);
           var5.patchByteLength(var5.position - var4, -112);

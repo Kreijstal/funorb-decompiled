@@ -13,8 +13,8 @@ final class ki extends fn {
           if (!param1) {
             this.a(87);
           }
-          param0.a(!param1 ? true : false, this.field_d);
-          param0.b(0, this.field_f);
+          param0.writePrefixedString(!param1 ? true : false, this.field_d);
+          param0.writeBase38String(0, this.field_f);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ki.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

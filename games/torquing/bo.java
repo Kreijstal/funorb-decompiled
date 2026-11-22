@@ -81,10 +81,10 @@ final class bo {
               return stackIn_9_0;
             }
             this.field_h.position = param2 * 72 + 6;
-            var6_int = this.field_h.c((byte) -127);
-            var7 = this.field_h.c((byte) -49);
+            var6_int = this.field_h.readInt((byte) -127);
+            var7 = this.field_h.readInt((byte) -49);
             var13 = new byte[64];
-            this.field_h.a(48, 64, var13, 0);
+            this.field_h.readBytes(48, 64, var13, 0);
             var9 = new CachedArchiveSource(param2, param0, param3, this.field_g, this.field_c, var6_int, var13, var7, param4);
             this.field_f[param2] = var9;
             if (param1 != 101) {
@@ -144,12 +144,12 @@ final class bo {
           field_l = (IntrusiveDeque) null;
         }
         var10.position = 5;
-        var3 = var10.i((byte) -101);
+        var3 = var10.readUnsignedByte((byte) -101);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(48, var13.length, var13, 0);
+        var10.readBytes(48, var13.length, var13, 0);
         if (null != this.field_j &&
           this.field_a != null) {
           var12 = new java.math.BigInteger(var13);

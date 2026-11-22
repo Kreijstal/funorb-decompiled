@@ -133,13 +133,13 @@ final class na extends jh {
               if (param5) {
                 var9 = var9 | 1;
               }
-              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
-              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
-              jb.field_c.a(var15, (byte) -72);
-              jb.field_c.a(var8, (byte) -72);
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writePrefixedString(var15, (byte) -72);
+              jb.field_c.writePrefixedString(var8, (byte) -72);
               var17 = (CharSequence) ((Object) param1);
-              jb.field_c.a(lp.a(var17, 109), (byte) -72);
-              jb.field_c.a(param6, 109);
+              jb.field_c.writePrefixedString(lp.a(var17, 109), (byte) -72);
+              jb.field_c.writeShort(param6, 109);
               jb.field_c.writeByte(90, param4);
               jb.field_c.writeByte(90, var9);
               wa.field_d.writeByte(90, 18);
@@ -149,32 +149,32 @@ final class na extends jh {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              wa.field_d.b((byte) 4, var11_ref_String);
+              wa.field_d.writeString((byte) 4, var11_ref_String);
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c(-var10 + wa.field_d.position, param2 + 400395746);
+              wa.field_d.backpatchShortLength(-var10 + wa.field_d.position, param2 + 400395746);
             } else {
               jb.field_c.position = 0;
-              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
-              jb.field_c.b((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
+              jb.field_c.writeInt((byte) 60, AudioService.field_d.nextInt());
               stackIn_11_0 = jb.field_c;
               if (!param3.a((byte) 104)) {
                 stackIn_12_1 = "";
               } else {
                 stackIn_12_1 = var15;
               }
-              ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_12_1, (byte) -72);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString(stackIn_12_1, (byte) -72);
               stackIn_14_0 = jb.field_c;
               if (param0.a((byte) -113)) {
                 stackIn_15_1 = var8;
               } else {
                 stackIn_15_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_15_1, (byte) -72);
               wa.field_d.writeByte(90, 16);
               wa.field_d.position = wa.field_d.position + 1;
               var9 = wa.field_d.position;
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-              wa.field_d.c((byte) 48, -var9 + wa.field_d.position);
+              wa.field_d.backpatchByteLength((byte) 48, -var9 + wa.field_d.position);
             }
             jd.a((byte) -118, -1);
             ef.field_a = IntrusiveNode.field_c;
@@ -185,7 +185,7 @@ final class na extends jh {
           }
           if (IntrusiveNode.field_c == ef.field_a &&
             BufferedSocket.a(1, param2 + 25978)) {
-            var9Lifetime1 = kj.field_d.i((byte) -101);
+            var9Lifetime1 = kj.field_d.readUnsignedByte((byte) -101);
             kj.field_d.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
@@ -219,7 +219,7 @@ final class na extends jh {
               if (BufferedSocket.a(var10Lifetime1, 0)) {
                 var11 = Model.field_n.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  Model.field_n[var12] = kj.field_d.d(-7519);
+                  Model.field_n[var12] = kj.field_d.readPrefixedString(-7519);
                 }
                 ih.b(true);
                 lh.field_J = false;
@@ -231,9 +231,9 @@ final class na extends jh {
           if (ef.field_a == ah.field_b &&
             ah.a(param2 + 25980)) {
             if (fa.field_e != 255) {
-              pl.field_u = kj.field_d.h((byte) 124);
+              pl.field_u = kj.field_d.readString((byte) 124);
             } else {
-              var9_ref_String = kj.field_d.a(19);
+              var9_ref_String = kj.field_d.readNullableString(19);
               if (var9_ref_String != null) {
                 om.a((byte) 73, var9_ref_String, ip.a(9));
               }

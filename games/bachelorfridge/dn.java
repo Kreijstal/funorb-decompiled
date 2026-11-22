@@ -29,7 +29,7 @@ final class dn {
             var9 += 128;
           }
           var6.writeByte(var9, 0);
-          var6.a(0, -105, param5.length, param5);
+          var6.writeBytes(0, -105, param5.length, param5);
           var6.writeLengthByte((byte) 77, var6.position - var7);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

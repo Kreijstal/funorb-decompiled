@@ -94,7 +94,7 @@ final class lia extends EventEffect {
     final void write(PacketBuffer param0, byte param1) {
         try {
           FlirtAnimation.a(this.target, 125, param0);
-          param0.b(this.field_f, -113);
+          param0.writeShort(this.field_f, -113);
           param0.writeByte(this.field_k, 0);
           int var3_int = 126 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {

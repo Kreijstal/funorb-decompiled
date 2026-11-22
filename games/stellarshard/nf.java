@@ -51,10 +51,10 @@ final class nf extends IntrusiveNode {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
-              var9.a(0, (byte) -126, var4_int, var13);
+              var9.readBytes(0, (byte) -126, var4_int, var13);
             }
             var9.position = var9.position + 4;
-            if (var9.a(true)) {
+            if (var9.verifyCrc32(true)) {
               var3_ref_mk.unlink(20);
               return;
             }

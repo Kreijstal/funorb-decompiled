@@ -15,14 +15,14 @@ final class qa extends k {
           sia.field_h = false;
           lg.a(true, -4, true);
           if (param0 >= 115) {
-            uca.a(18, (byte) 117);
+            Crc32Table.a(18, (byte) 117);
             return;
           }
           return;
         }
         uq.h(-28716);
         if (param0 >= 115) {
-          uca.a(18, (byte) 117);
+          Crc32Table.a(18, (byte) 117);
           return;
         }
     }

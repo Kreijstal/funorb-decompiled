@@ -43,7 +43,7 @@ final class jc extends DualLinkNode {
               this.field_p = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
                 this.field_u[var5] = param0.readUnsignedShort((byte) 114);
-                var6 = param0.b(true);
+                var6 = param0.readByte(true);
                 stackIn_19_0 = this.field_p;
                 stackIn_19_1 = var5;
                 if (var6 != 0) {
@@ -66,7 +66,7 @@ final class jc extends DualLinkNode {
               this.field_o = new char[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 this.field_q[var5] = param0.readUnsignedShort((byte) 92);
-                var6 = param0.b(true);
+                var6 = param0.readByte(true);
                 stackIn_13_0 = this.field_o;
                 stackIn_13_1 = var5;
                 if (var6 != 0) {

@@ -34,7 +34,7 @@ final class wla extends k {
                   this.field_m = param1.readUnsignedShort((byte) 108);
                 } else {
                   if (var5 == 4) {
-                    var4_int = param1.a(3);
+                    var4_int = param1.readUnsignedMedium(3);
                     this.field_o[0] = dda.a(var4_int, 16711680) << 4;
                     this.field_o[2] = dda.a(var4_int, 255) >> 12;
                     this.field_o[1] = dda.a(4080, var4_int >> 4);

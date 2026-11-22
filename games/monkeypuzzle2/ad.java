@@ -418,7 +418,7 @@ final class ad {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(5, var26.payload.length, -84, param1);
+            var26.decryptXteaRange(5, var26.payload.length, -84, param1);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -844,8 +844,8 @@ final class ad {
                 IntrusiveDeque.field_b = sk.a(param4, ProxySocketConnector.field_f, false, true, (String) null);
               }
               gf.field_c.position = 0;
-              gf.field_c.b(14, -49152);
-              gf.field_c.b(IntrusiveDeque.field_b.a(false).field_b, -49152);
+              gf.field_c.writeByte(14, -49152);
+              gf.field_c.writeByte(IntrusiveDeque.field_b.a(false).field_b, -49152);
               SocketConnector.a((byte) -71, -1);
               dk.field_h = kh.field_a;
             }
@@ -900,7 +900,7 @@ final class ad {
               ec.field_d = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               af.field_c = MonkeyPuzzle2.field_D.readUnsignedShort(17277);
-              var6 = MonkeyPuzzle2.field_D.g(-1185292952);
+              var6 = MonkeyPuzzle2.field_D.readNullableString(-1185292952);
               var7 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               if ((1 & var7) != 0) {
                 gd.b(-594181854);
@@ -923,7 +923,7 @@ final class ad {
                   il.field_g[var8] = MonkeyPuzzle2.field_D.readByte(-91);
                 }
               }
-              cl.field_e = MonkeyPuzzle2.field_D.f(-1);
+              cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
               var12 = (CharSequence) ((Object) cl.field_e);
               uj.field_f = pl.a((byte) 109, var12);
               ue.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
@@ -978,7 +978,7 @@ final class ad {
               if (wk.field_a == 7) {
                 wk.field_a = 3;
               }
-              sl.field_n = MonkeyPuzzle2.field_D.f(-1);
+              sl.field_n = MonkeyPuzzle2.field_D.readString(-1);
               DequeCursor.field_e = false;
               stackIn_86_0 = wk.field_a;
               return stackIn_86_0;

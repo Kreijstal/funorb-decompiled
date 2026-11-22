@@ -19,13 +19,13 @@ final class kc {
             var6.writeByte(0, (byte) -81);
           } else {
             var6.writeByte(param2.field_l.length, (byte) -102);
-            var6.a(param2.field_l.length, 96, 0, param2.field_l);
+            var6.writeBytes(param2.field_l.length, 96, 0, param2.field_l);
           }
-          var6.a(var4, false);
+          var6.appendCrc32(var4, false);
           var6.position = var6.position - 4;
           param2.field_n = var6.readInt((byte) 113);
           int var5 = -14 / ((param1 + 66) / 49);
-          var6.a(true, -var4 + var6.position);
+          var6.backpatchByteLength(true, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

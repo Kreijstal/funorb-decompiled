@@ -131,7 +131,7 @@ final class uh {
         var16 = var17;
         var7 = var16;
         for (var8 = 1; var8 < var6; var8++) {
-          var7[var8] = var1.a(3);
+          var7[var8] = var1.readUnsignedMedium(3);
           if (var17[var8] == 0) {
             var17[var8] = 1;
           }
@@ -148,12 +148,12 @@ final class uh {
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {
-                var9.field_d[var12] = var1.b(true);
+                var9.field_d[var12] = var1.readByte(true);
               }
             } else {
               for (var12 = 0; var12 < var9.field_i; var12++) {
                 for (var13 = 0; var13 < var9.field_a; var13++) {
-                  var9.field_d[var12 + var13 * var9.field_i] = var1.b(true);
+                  var9.field_d[var12 + var13 * var9.field_i] = var1.readByte(true);
                 }
               }
             }
@@ -162,10 +162,10 @@ final class uh {
             var9.field_g = new byte[var10];
             if ((var11 & 1) == 0) {
               for (var13 = 0; var13 < var10; var13++) {
-                var9.field_d[var13] = var1.b(true);
+                var9.field_d[var13] = var1.readByte(true);
               }
               for (var13 = 0; var13 < var10; var13++) {
-                dupTemp$1 = var1.b(true);
+                dupTemp$1 = var1.readByte(true);
                 var9.field_g[var13] = dupTemp$1;
                 var14 = dupTemp$1;
                 stackIn_53_0 = var12;
@@ -179,12 +179,12 @@ final class uh {
             } else {
               for (var13 = 0; var13 < var9.field_i; var13++) {
                 for (var14 = 0; var14 < var9.field_a; var14++) {
-                  var9.field_d[var13 + var14 * var9.field_i] = var1.b(true);
+                  var9.field_d[var13 + var14 * var9.field_i] = var1.readByte(true);
                 }
               }
               for (var13 = 0; var13 < var9.field_i; var13++) {
                 for (var14 = 0; var14 < var9.field_a; var14++) {
-                  dupTemp$0 = var1.b(true);
+                  dupTemp$0 = var1.readByte(true);
                   var9.field_g[var13 + var14 * var9.field_i] = dupTemp$0;
                   var15 = dupTemp$0;
                   stackIn_67_0 = var12;

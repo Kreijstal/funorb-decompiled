@@ -135,12 +135,12 @@ class MeshGeometry extends pa {
         var4.position = param0.length - 18;
         var9 = var4.readUnsignedShort(7088);
         var10 = var4.readUnsignedShort(7088);
-        var11 = var4.i((byte) -101);
-        var12 = var4.i((byte) -101);
-        var13 = var4.i((byte) -101);
-        var14 = var4.i((byte) -101);
-        var15 = var4.i((byte) -101);
-        var16 = var4.i((byte) -101);
+        var11 = var4.readUnsignedByte((byte) -101);
+        var12 = var4.readUnsignedByte((byte) -101);
+        var13 = var4.readUnsignedByte((byte) -101);
+        var14 = var4.readUnsignedByte((byte) -101);
+        var15 = var4.readUnsignedByte((byte) -101);
+        var16 = var4.readUnsignedByte((byte) -101);
         var17 = var4.readUnsignedShort(7088);
         var18 = var4.readUnsignedShort(7088);
         var19 = var4.readUnsignedShort(7088);
@@ -226,18 +226,18 @@ class MeshGeometry extends pa {
         var36 = 0;
         var37 = 0;
         for (var38 = 0; var38 < var9; var38++) {
-          var39 = var4.i((byte) -101);
+          var39 = var4.readUnsignedByte((byte) -101);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.g((byte) -121);
+            var40 = var5.readSignedSmart((byte) -121);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.g((byte) -123);
+            var41 = var6.readSignedSmart((byte) -123);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.g((byte) -116);
+            var42 = var7.readSignedSmart((byte) -116);
           }
           this.field_M[var38] = var35 + var40;
           this.field_B[var38] = var36 + var41;
@@ -246,7 +246,7 @@ class MeshGeometry extends pa {
           var36 = this.field_B[var38];
           var37 = this.field_E[var38];
           if (var16 == 1) {
-            this.field_i[var38] = var8.i((byte) -101);
+            this.field_i[var38] = var8.readUnsignedByte((byte) -101);
           }
         }
         var4.position = var30;
@@ -257,7 +257,7 @@ class MeshGeometry extends pa {
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
           this.field_m[var38Lifetime1] = (short)var4.readUnsignedShort(7088);
           if (var12 == 1) {
-            var39Lifetime1 = var5.i((byte) -101);
+            var39Lifetime1 = var5.readUnsignedByte((byte) -101);
             if ((var39Lifetime1 & 1) != 1) {
               this.field_j[var38Lifetime1] = (byte) 0;
             } else {
@@ -277,13 +277,13 @@ class MeshGeometry extends pa {
             }
           }
           if (var13 == 255) {
-            this.field_G[var38Lifetime1] = var6.f((byte) 69);
+            this.field_G[var38Lifetime1] = var6.readByte((byte) 69);
           }
           if (var14 == 1) {
-            this.field_r[var38Lifetime1] = var7.f((byte) 76);
+            this.field_r[var38Lifetime1] = var7.readByte((byte) 76);
           }
           if (var15 == 1) {
-            this.field_p[var38Lifetime1] = var8.i((byte) -101);
+            this.field_p[var38Lifetime1] = var8.readUnsignedByte((byte) -101);
           }
         }
         this.field_F = -1;
@@ -294,13 +294,13 @@ class MeshGeometry extends pa {
         var40Lifetime1 = 0;
         var41Lifetime1 = 0;
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
-          var43 = var5.i((byte) -101);
+          var43 = var5.readUnsignedByte((byte) -101);
           if (var43 == 1) {
-            var38Lifetime2 = var4.g((byte) -118) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart((byte) -118) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.g((byte) -120) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart((byte) -120) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.g((byte) -121) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) -121) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.vertexX[var42Lifetime1] = var38Lifetime2;
             this.vertexY[var42Lifetime1] = var39Lifetime2;
@@ -317,7 +317,7 @@ class MeshGeometry extends pa {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.g((byte) -118) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) -118) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.vertexX[var42Lifetime1] = var38Lifetime2;
             this.vertexY[var42Lifetime1] = var39Lifetime2;
@@ -328,7 +328,7 @@ class MeshGeometry extends pa {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.g((byte) -122) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) -122) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.vertexX[var42Lifetime1] = var38Lifetime2;
             this.vertexY[var42Lifetime1] = var39Lifetime2;
@@ -341,7 +341,7 @@ class MeshGeometry extends pa {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.g((byte) -117) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) -117) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.vertexX[var42Lifetime1] = var38Lifetime2;
             this.vertexY[var42Lifetime1] = var39Lifetime2;
@@ -612,17 +612,17 @@ class MeshGeometry extends pa {
         var2.position = param0.length - 23;
         var9 = var2.readUnsignedShort(7088);
         var10 = var2.readUnsignedShort(7088);
-        var11 = var2.i((byte) -101);
-        var12 = var2.i((byte) -101);
+        var11 = var2.readUnsignedByte((byte) -101);
+        var12 = var2.readUnsignedByte((byte) -101);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
         var13 = stackIn_3_0;
         stackIn_6_0 = ((var12 & 2) != 2) ? 0 : 1;
         var14 = stackIn_6_0;
-        var15 = var2.i((byte) -101);
-        var16 = var2.i((byte) -101);
-        var17 = var2.i((byte) -101);
-        var18 = var2.i((byte) -101);
-        var19 = var2.i((byte) -101);
+        var15 = var2.readUnsignedByte((byte) -101);
+        var16 = var2.readUnsignedByte((byte) -101);
+        var17 = var2.readUnsignedByte((byte) -101);
+        var18 = var2.readUnsignedByte((byte) -101);
+        var19 = var2.readUnsignedByte((byte) -101);
         var20 = var2.readUnsignedShort(7088);
         var21 = var2.readUnsignedShort(7088);
         var22 = var2.readUnsignedShort(7088);
@@ -635,7 +635,7 @@ class MeshGeometry extends pa {
           this.field_s = new byte[var11];
           var2.position = 0;
           for (var28 = 0; var28 < var11; var28++) {
-            dupTemp$0 = var2.f((byte) 64);
+            dupTemp$0 = var2.readByte((byte) 64);
             this.field_s[var28] = dupTemp$0;
             var29 = dupTemp$0;
             if (var29 == 0) {
@@ -764,18 +764,18 @@ class MeshGeometry extends pa {
         var51 = 0;
         var52 = 0;
         for (var53 = 0; var53 < var9; var53++) {
-          var54 = var2.i((byte) -101);
+          var54 = var2.readUnsignedByte((byte) -101);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.g((byte) -124);
+            var55 = var3.readSignedSmart((byte) -124);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.g((byte) -128);
+            var56 = var4.readSignedSmart((byte) -128);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.g((byte) -125);
+            var57 = var5.readSignedSmart((byte) -125);
           }
           this.field_M[var53] = var50 + var55;
           this.field_B[var53] = var51 + var56;
@@ -784,7 +784,7 @@ class MeshGeometry extends pa {
           var51 = this.field_B[var53];
           var52 = this.field_E[var53];
           if (var19 == 1) {
-            this.field_i[var53] = var6.i((byte) -101);
+            this.field_i[var53] = var6.readUnsignedByte((byte) -101);
           }
         }
         var2.position = var39;
@@ -797,16 +797,16 @@ class MeshGeometry extends pa {
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
           this.field_m[var53Lifetime1] = (short)var2.readUnsignedShort(7088);
           if (var13 != 0) {
-            this.field_j[var53Lifetime1] = var3.f((byte) 78);
+            this.field_j[var53Lifetime1] = var3.readByte((byte) 78);
           }
           if (var15 == 255) {
-            this.field_G[var53Lifetime1] = var4.f((byte) 54);
+            this.field_G[var53Lifetime1] = var4.readByte((byte) 54);
           }
           if (var16 == 1) {
-            this.field_r[var53Lifetime1] = var5.f((byte) 54);
+            this.field_r[var53Lifetime1] = var5.readByte((byte) 54);
           }
           if (var17 == 1) {
-            this.field_p[var53Lifetime1] = var6.i((byte) -101);
+            this.field_p[var53Lifetime1] = var6.readUnsignedByte((byte) -101);
           }
           if (var18 == 1) {
             this.field_A[var53Lifetime1] = (short)(var7.readUnsignedShort(7088) - 1);
@@ -815,7 +815,7 @@ class MeshGeometry extends pa {
             if (this.field_A[var53Lifetime1] == -1) {
               this.field_D[var53Lifetime1] = (byte)-1;
             } else {
-              this.field_D[var53Lifetime1] = (byte)(var8.i((byte) -101) - 1);
+              this.field_D[var53Lifetime1] = (byte)(var8.readUnsignedByte((byte) -101) - 1);
             }
           }
         }
@@ -827,13 +827,13 @@ class MeshGeometry extends pa {
         var55Lifetime1 = 0;
         var56Lifetime1 = 0;
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
-          var58 = var3.i((byte) -101);
+          var58 = var3.readUnsignedByte((byte) -101);
           if (var58 == 1) {
-            var53Lifetime2 = var2.g((byte) -123) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart((byte) -123) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.g((byte) -127) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart((byte) -127) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.g((byte) -116) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) -116) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.vertexX[var57Lifetime1] = var53Lifetime2;
             this.vertexY[var57Lifetime1] = var54Lifetime1;
@@ -850,7 +850,7 @@ class MeshGeometry extends pa {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.g((byte) -127) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) -127) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.vertexX[var57Lifetime1] = var53Lifetime2;
             this.vertexY[var57Lifetime1] = var54Lifetime1;
@@ -861,7 +861,7 @@ class MeshGeometry extends pa {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.g((byte) -118) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) -118) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.vertexX[var57Lifetime1] = var53Lifetime2;
             this.vertexY[var57Lifetime1] = var54Lifetime1;
@@ -874,7 +874,7 @@ class MeshGeometry extends pa {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.g((byte) -121) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) -121) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.vertexX[var57Lifetime1] = var53Lifetime2;
             this.vertexY[var57Lifetime1] = var54Lifetime1;
@@ -905,9 +905,9 @@ class MeshGeometry extends pa {
             this.field_N[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_z[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_K[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
-            this.field_C[var57Lifetime2] = var5.f((byte) 100);
-            this.field_v[var57Lifetime2] = var6.f((byte) 114);
-            this.field_L[var57Lifetime2] = var7.f((byte) 52);
+            this.field_C[var57Lifetime2] = var5.readByte((byte) 100);
+            this.field_v[var57Lifetime2] = var6.readByte((byte) 114);
+            this.field_L[var57Lifetime2] = var7.readByte((byte) 52);
           }
           if (var58Lifetime1 == 2) {
             this.field_u[var57Lifetime2] = (short)var3.readUnsignedShort(7088);
@@ -916,11 +916,11 @@ class MeshGeometry extends pa {
             this.field_N[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_z[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_K[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
-            this.field_C[var57Lifetime2] = var5.f((byte) 51);
-            this.field_v[var57Lifetime2] = var6.f((byte) 74);
-            this.field_L[var57Lifetime2] = var7.f((byte) 86);
-            this.field_Q[var57Lifetime2] = var7.f((byte) 22);
-            this.field_t[var57Lifetime2] = var7.f((byte) 37);
+            this.field_C[var57Lifetime2] = var5.readByte((byte) 51);
+            this.field_v[var57Lifetime2] = var6.readByte((byte) 74);
+            this.field_L[var57Lifetime2] = var7.readByte((byte) 86);
+            this.field_Q[var57Lifetime2] = var7.readByte((byte) 22);
+            this.field_t[var57Lifetime2] = var7.readByte((byte) 37);
           }
           if (var58Lifetime1 == 3) {
             this.field_u[var57Lifetime2] = (short)var3.readUnsignedShort(7088);
@@ -929,18 +929,18 @@ class MeshGeometry extends pa {
             this.field_N[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_z[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
             this.field_K[var57Lifetime2] = (short)var4.readUnsignedShort(7088);
-            this.field_C[var57Lifetime2] = var5.f((byte) 118);
-            this.field_v[var57Lifetime2] = var6.f((byte) 119);
-            this.field_L[var57Lifetime2] = var7.f((byte) 35);
+            this.field_C[var57Lifetime2] = var5.readByte((byte) 118);
+            this.field_v[var57Lifetime2] = var6.readByte((byte) 119);
+            this.field_L[var57Lifetime2] = var7.readByte((byte) 35);
           }
         }
         if (var14 != 0) {
           var2.position = var49;
-          var57Lifetime3 = var2.i((byte) -101);
+          var57Lifetime3 = var2.readUnsignedByte((byte) -101);
           if (var57Lifetime3 > 0) {
             var2.position = var2.position + 4 * var57Lifetime3;
           }
-          var58Lifetime2 = var2.i((byte) -101);
+          var58Lifetime2 = var2.readUnsignedByte((byte) -101);
           if (var58Lifetime2 > 0) {
             var2.position = var2.position + 4 * var58Lifetime2;
           }

@@ -52,7 +52,7 @@ final class vh {
                 }
               }
             }
-            param0.a(8, 24, var2, 0);
+            param0.writeBytes(8, 24, var2, 0);
             if (param1 < 54) {
               vh.a(120, 92);
             }

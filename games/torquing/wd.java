@@ -264,7 +264,7 @@ final class wd extends DualLinkNode {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         try {
-          var2_int = param0.i((byte) -101);
+          var2_int = param0.readUnsignedByte((byte) -101);
           var3 = 0;
           var4 = 0;
           this.field_t = new am[var2_int];
@@ -282,7 +282,7 @@ final class wd extends DualLinkNode {
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var8 > var9; var9++) {
-              var12[var6][var9] = param0.i((byte) -101);
+              var12[var6][var9] = param0.readUnsignedByte((byte) -101);
             }
             this.field_t[var6] = var13;
           }
@@ -310,9 +310,9 @@ final class wd extends DualLinkNode {
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_u = this.field_t[param0.i((byte) -101)];
-          param0.i((byte) -101);
-          param0.i((byte) -101);
+          this.field_u = this.field_t[param0.readUnsignedByte((byte) -101)];
+          param0.readUnsignedByte((byte) -101);
+          param0.readUnsignedByte((byte) -101);
           var5 = (int[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -21,7 +21,7 @@ final class ea {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param1.o(-1);
+            var3_int = param1.readUnsignedSmart(-1);
             if (var3_int > param2) {
               var3_int = param2;
             }

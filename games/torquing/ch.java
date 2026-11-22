@@ -119,7 +119,7 @@ final class ch extends am {
         }
         try {
           if (param2 == 0) {
-            this.field_p = param0.i((byte) -101) == 1 ? true : false;
+            this.field_p = param0.readUnsignedByte((byte) -101) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ch.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

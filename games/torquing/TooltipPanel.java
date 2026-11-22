@@ -291,7 +291,7 @@ final class TooltipPanel {
         if (param0 >= -104) {
           TooltipPanel.clearStaticReferences(45);
         }
-        var1.field_j = new int[]{var2.c((byte) -71), var2.c((byte) -36), var2.c((byte) -100), var2.c((byte) -75)};
+        var1.field_j = new int[]{var2.readInt((byte) -71), var2.readInt((byte) -36), var2.readInt((byte) -100), var2.readInt((byte) -75)};
         var1.unlink(0);
     }
 

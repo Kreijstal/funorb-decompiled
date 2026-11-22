@@ -81,7 +81,7 @@ final class MoveInfoPanel {
                 if (this.field_m.field_M == 1 &&
                   var7 == 2) {
                   this.field_m.a((byte) -30, var10.field_s.b(var3.field_zb, (byte) -116));
-                  uca.a(38, (byte) 108);
+                  Crc32Table.a(38, (byte) 108);
                   return;
                 }
                 if (this.field_m.field_M == 2 &&
@@ -784,7 +784,7 @@ final class MoveInfoPanel {
             MoveInfoPanel.a((byte) 43);
           }
           for (var5 = 0; 5 > var5; var5++) {
-            var4.field_K[var5] = param2.b(true);
+            var4.field_K[var5] = param2.readByte(true);
           }
           var4.shield = param2.readUnsignedByte(16711935);
           stackIn_11_0 = var4;

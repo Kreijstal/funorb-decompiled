@@ -234,15 +234,15 @@ final class te extends am {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_s = param0.i((byte) -101);
+            this.field_s = param0.readUnsignedByte((byte) -101);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_13_1 = (param0.i((byte) -101) == 1);
+                stackIn_13_1 = (param0.readUnsignedByte((byte) -101) == 1);
                 this.field_p = stackIn_13_1;
               }
             } else {
-              this.field_u = param0.i((byte) -101);
+              this.field_u = param0.readUnsignedByte((byte) -101);
             }
           }
           return;

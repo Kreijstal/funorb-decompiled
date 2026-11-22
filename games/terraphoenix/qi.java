@@ -68,7 +68,7 @@ final class qi {
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, 0, 90, var13);
+        var10.readBytes(var13.length, 0, 90, var13);
         if (this.field_g != null &&
           null != this.field_e) {
           var12 = new java.math.BigInteger(var13);
@@ -136,7 +136,7 @@ final class qi {
             if (param4 < 89) {
               this.field_g = (java.math.BigInteger) null;
             }
-            this.field_h.a(64, 0, 91, var13);
+            this.field_h.readBytes(64, 0, 91, var13);
             var9 = new tb(param1, param3, param2, this.field_i, this.field_a, var6_int, var13, var7, param0);
             this.field_c[param1] = var9;
             stackIn_13_0 = var9;

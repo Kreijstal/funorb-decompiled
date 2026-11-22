@@ -25,7 +25,7 @@ final class lj implements ir {
             byte[] var4 = (byte[]) null;
             lj.a(-124, (byte[]) null, 84);
           }
-          int stackIn_3_0 = cl.a(0, param1, param2, (byte) -105);
+          int stackIn_3_0 = cl.computeCrc32(0, param1, param2, (byte) -105);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -63,10 +63,10 @@ final class uk {
               var9 = var10;
               var7 = var9;
               var5 = var7;
-              var8.a(var4_int, 0, 90, var10);
+              var8.readBytes(var4_int, 0, 90, var10);
             }
             var8.position = var8.position + 4;
-            if (!var8.c(0)) {
+            if (!var8.verifyCrc32(0)) {
               WidgetContainer.g(-17464);
               return;
             }

@@ -64,8 +64,8 @@ final class lf {
               ProxyAuthenticationRequiredException.field_a = new BufferedSocket((java.net.Socket) (kd.field_a.field_b), rk.field_g);
               var2 = new PacketBuffer(13);
               qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
-              var2.b(15, -49152);
-              var2.a(param0 - 803539347, mk.field_f);
+              var2.writeByte(15, -49152);
+              var2.writeInt(param0 - 803539347, mk.field_f);
               ProxyAuthenticationRequiredException.field_a.a(var2.payload, 0, (byte) 93, 13);
               ii.field_T = ii.field_T + 1;
               wi.field_f = 30000L + pf.a(0);
@@ -109,8 +109,8 @@ final class lf {
     final static void a(int param0, int param1) {
         hb var2 = gf.field_c;
         var2.b(true, param1);
-        var2.b(1, -49152);
-        var2.b(0, param0 - 74349);
+        var2.writeByte(1, -49152);
+        var2.writeByte(0, param0 - 74349);
         if (param0 == 25197) {
           return;
         }

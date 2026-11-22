@@ -74,7 +74,7 @@ final class UrlRequest implements Runnable {
           return;
         }
         qi.field_c = false;
-        kj.field_d.i((byte) -101);
+        kj.field_d.readUnsignedByte((byte) -101);
     }
 
     final synchronized boolean a(int param0) {

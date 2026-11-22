@@ -33,7 +33,7 @@ final class qg {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var4, 0, 93, var13);
+              var9.readBytes(var4, 0, 93, var13);
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }

@@ -72,12 +72,12 @@ final class p {
               ah.field_a[0].field_c = null;
               ah.field_a[0].field_a = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                ah.field_a[var8_int].field_d = var28.f(-1);
+                ah.field_a[var8_int].field_d = var28.readString(-1);
                 ah.field_a[var8_int].field_a = false;
                 if (1 != var28.readUnsignedByte((byte) 114)) {
                   ah.field_a[var8_int].field_c = null;
                 } else {
-                  ah.field_a[var8_int].field_c = var28.f(-1);
+                  ah.field_a[var8_int].field_c = var28.readString(-1);
                 }
               }
               dupTemp$0 = new String[3][var6];

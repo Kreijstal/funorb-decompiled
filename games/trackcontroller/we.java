@@ -42,9 +42,9 @@ abstract class we {
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte(1, (byte) -119);
-          var9.b(param1.field_q, (byte) -127);
-          var9.b(param1.field_p, (byte) -120);
-          var9.b(param1.field_n, (byte) -119);
+          var9.writeShort(param1.field_q, (byte) -127);
+          var9.writeShort(param1.field_p, (byte) -120);
+          var9.writeShort(param1.field_n, (byte) -119);
           var9.writeInt(false, param1.field_r);
           var9.writeInt(false, param1.field_k);
           var9.writeInt(false, param1.field_l);
@@ -54,8 +54,8 @@ abstract class we {
           for (var6 = 0; param1.field_o.length > var6; var6++) {
             var8.writeInt(false, param1.field_o[var6]);
           }
-          var9.a(var4, false);
-          var9.a(true, var9.position - var4);
+          var9.appendCrc32(var4, false);
+          var9.backpatchByteLength(true, var9.position - var4);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "we.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

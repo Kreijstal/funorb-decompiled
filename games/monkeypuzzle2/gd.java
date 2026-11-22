@@ -86,7 +86,7 @@ final class gd {
             PacketBuffer.a(-1);
             return;
           }
-          var4 = var10.h(-129);
+          var4 = var10.readSignedSmart(-129);
           var5 = (wf) (k.field_l.a((byte) -117));
           while (var5 != null) {
             if (var5.field_e != var3 ||

@@ -130,7 +130,7 @@ final class ol {
         if (param0 <= 100) {
           return (String) null;
         }
-        return kj.field_d.h((byte) 118);
+        return kj.field_d.readString((byte) 118);
     }
 
     final static int b(int param0) {

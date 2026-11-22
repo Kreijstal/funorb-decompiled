@@ -18,7 +18,7 @@ final class cl extends di {
         field_eb = null;
     }
 
-    final static int a(int param0, byte[] param1, int param2, byte param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, byte param3) {
         String stackIn_11_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

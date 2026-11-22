@@ -41,7 +41,7 @@ abstract class vo {
           if (param0 > -37) {
             vo.a((byte) 104);
           }
-          var4 = param1.b(true);
+          var4 = param1.readByte(true);
           stackIn_3_0 = new lia(var2, var3, var4);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

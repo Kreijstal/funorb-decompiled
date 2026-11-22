@@ -217,7 +217,7 @@ final class cl {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

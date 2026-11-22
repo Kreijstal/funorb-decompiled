@@ -501,7 +501,7 @@ final class rg extends am {
                           }
                         }
                       } else {
-                        this.field_x = param0.i((byte) -101);
+                        this.field_x = param0.readUnsignedByte((byte) -101);
                       }
                     } else {
                       this.field_w = param0.readUnsignedShort(7088);
@@ -513,7 +513,7 @@ final class rg extends am {
               }
             }
           } else {
-            this.field_B = param0.i((byte) -101);
+            this.field_B = param0.readUnsignedByte((byte) -101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

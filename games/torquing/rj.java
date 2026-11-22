@@ -209,41 +209,41 @@ final class rj extends am {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            stackIn_18_1 = (param0.i((byte) -101) == 1);
+            stackIn_18_1 = (param0.readUnsignedByte((byte) -101) == 1);
             this.field_B = stackIn_18_1;
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_z = param0.g(65536);
+                this.field_z = param0.readShort(65536);
                 if (0 <= this.field_z) {
                   return;
                 }
                 this.field_x = new short[this.field_C];
                 for (var4_int = 0; var4_int < this.field_C; var4_int++) {
-                  this.field_x[var4_int] = (short)param0.g(65536);
+                  this.field_x[var4_int] = (short)param0.readShort(65536);
                 }
               } else {
                 if (3 == var4_int) {
-                  dupTemp$0 = param0.i((byte) -101);
+                  dupTemp$0 = param0.readUnsignedByte((byte) -101);
                   this.field_u = dupTemp$0;
                   this.field_D = dupTemp$0;
                   return;
                 }
                 if (var4_int == 4) {
-                  this.field_A = param0.i((byte) -101);
+                  this.field_A = param0.readUnsignedByte((byte) -101);
                   return;
                 }
                 if (var4_int == 5) {
-                  this.field_D = param0.i((byte) -101);
+                  this.field_D = param0.readUnsignedByte((byte) -101);
                   return;
                 }
                 if (var4_int == 6) {
-                  this.field_u = param0.i((byte) -101);
+                  this.field_u = param0.readUnsignedByte((byte) -101);
                   return;
                 }
               }
             } else {
-              this.field_C = param0.i((byte) -101);
+              this.field_C = param0.readUnsignedByte((byte) -101);
             }
           }
           return;

@@ -128,9 +128,9 @@ class vb extends DualLinkNode {
         try {
           var3 = gf.field_c;
           var3.b(param2, param0);
-          var3.b(2, -49152);
-          var3.b(0, -49152);
-          var3.b(param1.field_e, -49152);
+          var3.writeByte(2, -49152);
+          var3.writeByte(0, -49152);
+          var3.writeByte(param1.field_e, -49152);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

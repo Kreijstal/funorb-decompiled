@@ -21,7 +21,7 @@ class cia extends IntrusiveNode {
           if (dma.field_b == null) {
             return false;
           }
-          if (uca.field_a == eia.field_a) {
+          if (Crc32Table.field_a == eia.field_a) {
             return true;
           }
           return false;
@@ -29,7 +29,7 @@ class cia extends IntrusiveNode {
         if (dma.field_b == null) {
           return false;
         }
-        if (uca.field_a == eia.field_a) {
+        if (Crc32Table.field_a == eia.field_a) {
           return true;
         }
         return false;

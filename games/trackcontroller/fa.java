@@ -33,7 +33,7 @@ final class fa {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_g.m(127);
+        var3 = this.field_g.readVarInt(127);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_g.payload[this.field_g.position] & 255;
@@ -147,13 +147,13 @@ final class fa {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.field_g.readUnsignedByte(16383);
-          var4 = this.field_g.m(127);
+          var4 = this.field_g.readVarInt(127);
           if (var3 == 47) {
             this.field_g.position = this.field_g.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_g.e(8);
+            var5 = this.field_g.readUnsignedMedium(8);
             var4 -= 3;
             var6 = this.field_b[param0];
             this.field_d = this.field_d + (long)var6 * (long)(this.field_c - var5);
@@ -198,7 +198,7 @@ final class fa {
     }
 
     final void c(int param0) {
-        int var2 = this.field_g.m(127);
+        int var2 = this.field_g.readVarInt(127);
         this.field_b[param0] = this.field_b[param0] + var2;
     }
 

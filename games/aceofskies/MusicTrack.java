@@ -162,7 +162,7 @@ final class MusicTrack extends IntrusiveNode {
         int var13Lifetime1 = param0.position;
         int var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (int var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.a(125);
+          param0.readVarInt(125);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         int var15Lifetime2 = param0.position;
@@ -291,8 +291,8 @@ final class MusicTrack extends IntrusiveNode {
           int var61 = var51.position;
           int var62 = -1;
           while (true) {
-            int var63 = param0.a(120);
-            var51.d(93, var63);
+            int var63 = param0.readVarInt(120);
+            var51.writeVarInt(93, var63);
             int incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             int var64 = param0.payload[incrementValue$0] & 255;
@@ -305,7 +305,7 @@ final class MusicTrack extends IntrusiveNode {
               }
               var51.writeByte(-1336879960, 47);
               var51.writeByte(-1336879960, 0);
-              var51.f(var51.position - var61, 28494);
+              var51.backpatchIntLength(var51.position - var61, 28494);
               var60++;
               break;
             }

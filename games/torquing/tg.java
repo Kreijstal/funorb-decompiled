@@ -474,7 +474,7 @@ abstract class tg extends GameApplet {
     }
 
     private final void k(int param0) {
-        int var2 = kj.field_d.i((byte) -101);
+        int var2 = kj.field_d.readUnsignedByte((byte) -101);
         int var3 = (param0 & var2) != 0 ? 1 : 0;
         int var4 = -1 + oo.field_a;
         byte[] var5 = new byte[var4];

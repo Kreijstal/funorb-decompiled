@@ -47,7 +47,7 @@ final class qja extends bf {
                 if (24 <= var3_int) {
                   throw new IOException();
                 }
-                param1.a(0, param0 - 103, 24, var2);
+                param1.writeBytes(0, param0 - 103, 24, var2);
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class qja extends bf {
                 }
               }
             }
-            param1.a(0, param0 - 103, 24, var2);
+            param1.writeBytes(0, param0 - 103, 24, var2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

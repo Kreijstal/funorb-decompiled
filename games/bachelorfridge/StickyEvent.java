@@ -2670,7 +2670,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "benefits_price");
                 if (null != var2) {
-                  uca.field_c = qq.a(var2, param0);
+                  Crc32Table.field_c = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "members_expansion_benefits,0");
                 if (null != var2) {

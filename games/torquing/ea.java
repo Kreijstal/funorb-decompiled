@@ -106,7 +106,7 @@ final class ea extends am {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_5_1 = (param0.i((byte) -101) == 1);
+            stackIn_5_1 = (param0.readUnsignedByte((byte) -101) == 1);
             this.field_p = stackIn_5_1;
           }
           if (param1 == 35) {

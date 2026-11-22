@@ -183,22 +183,22 @@ class w implements q {
           }
           for (var5Lifetime4 = 0; var5Lifetime4 < this.field_f; var5Lifetime4++) {
             if (this.field_c[var5Lifetime4] != null) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime5 = 0; var5Lifetime5 < this.field_f; var5Lifetime5++) {
             if (this.field_c[var5Lifetime5] != null) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime6 = 0; this.field_f > var5Lifetime6; var5Lifetime6++) {
             if (null != this.field_c[var5Lifetime6]) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime7 = 0; this.field_f > var5Lifetime7; var5Lifetime7++) {
             if (this.field_c[var5Lifetime7] != null) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime8 = 0; var5Lifetime8 < this.field_f; var5Lifetime8++) {
@@ -208,12 +208,12 @@ class w implements q {
           }
           for (var5Lifetime9 = 0; this.field_f > var5Lifetime9; var5Lifetime9++) {
             if (null != this.field_c[var5Lifetime9]) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime10 = 0; var5Lifetime10 < this.field_f; var5Lifetime10++) {
             if (null != this.field_c[var5Lifetime10]) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime11 = 0; this.field_f > var5Lifetime11; var5Lifetime11++) {
@@ -230,7 +230,7 @@ class w implements q {
           }
           for (var5Lifetime13 = 0; var5Lifetime13 < this.field_f; var5Lifetime13++) {
             if (this.field_c[var5Lifetime13] != null) {
-              var7.b(true);
+              var7.readByte(true);
             }
           }
           for (var5Lifetime14 = 0; var5Lifetime14 < this.field_f; var5Lifetime14++) {

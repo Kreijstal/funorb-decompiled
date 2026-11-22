@@ -82,7 +82,7 @@ final class kk extends t {
     final void a(PacketBuffer param0, int param1) {
         try {
           param0.writePrefixedString((byte) 28, this.field_f);
-          param0.b(this.field_g, (byte) -110);
+          param0.writeBase38String(this.field_g, (byte) -110);
           if (param1 >= -29) {
             kk.c(true);
           }

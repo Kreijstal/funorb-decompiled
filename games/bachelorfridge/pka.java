@@ -85,7 +85,7 @@ final class pka implements WidgetRenderer {
           if (param1) {
             field_a = (String) null;
           }
-          stackIn_3_0 = new nga(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.a(3), param0.readUnsignedByte(16711935));
+          stackIn_3_0 = new nga(param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readSignedShort((byte) -85), param0.readUnsignedMedium(3), param0.readUnsignedByte(16711935));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

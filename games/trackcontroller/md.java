@@ -29,7 +29,7 @@ final class md {
           ui.field_p.writeInt(false, pl.field_a[2]);
           ui.field_p.writeInt(false, pl.field_a[3]);
           vd.a(ui.field_p, (byte) -69);
-          ui.field_p.b(param1, (byte) -124);
+          ui.field_p.writeShort(param1, (byte) -124);
           param0.a((byte) -6, ui.field_p);
           LevelView.field_C.position = 0;
           if (!param2) {
@@ -61,10 +61,10 @@ final class md {
           }
           LevelView.field_C.writeString((byte) -57, var7);
           if (null != kg.field_a) {
-            LevelView.field_C.b(kg.field_a, 126);
+            LevelView.field_C.writePrefixedString(kg.field_a, 126);
           }
           NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, ~param3, ui.field_p);
-          LevelView.field_C.c(LevelView.field_C.position - var5_int, (byte) -96);
+          LevelView.field_C.backpatchShortLength(LevelView.field_C.position - var5_int, (byte) -96);
           MovingBlock.a(param3, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,8 +97,8 @@ final class md {
           var6.writeInt(false, param1.field_n);
           var6.writeInt(false, param1.field_l);
           var6.writeInt(false, param1.field_o);
-          var6.a(var5, false);
-          var6.a(true, -var5 + var6.position);
+          var6.appendCrc32(var5, false);
+          var6.backpatchByteLength(true, -var5 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "md.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

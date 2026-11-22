@@ -113,7 +113,7 @@ final class lfa extends k {
                 var2 = ig.field_m.readUnsignedShort((byte) 66);
                 stackIn_45_0 = (ig.field_m.readUnsignedByte(16711935) != 1) ? 0 : 1;
                 var3_int = stackIn_45_0;
-                var4_int = ig.field_m.b(true);
+                var4_int = ig.field_m.readByte(true);
                 var5 = ig.field_m.readUnsignedByte(16711935);
                 var6 = ig.field_m.readUnsignedShort((byte) 127);
                 if (0 == ((BattleScreen) (var1)).field_h.field_A) {
@@ -158,7 +158,7 @@ final class lfa extends k {
               return true;
             }
             if (ri.field_a == 62) {
-              var2Lifetime3 = ig.field_m.b(true);
+              var2Lifetime3 = ig.field_m.readByte(true);
               var3 = ((BattleScreen) (var1)).field_h;
               var4 = new PlayerMatchStats[var3.playerCount];
               for (var5Lifetime2 = 0; var3.playerCount > var5Lifetime2; var5Lifetime2++) {
@@ -214,9 +214,9 @@ final class lfa extends k {
           var4_intLifetime1 = ig.field_m.readUnsignedByte(16711935);
           var5Lifetime1 = ig.field_m.readUnsignedByte(16711935);
           var6_ref_String__ = new String[ig.field_m.readUnsignedByte(16711935)];
-          var7Lifetime1 = ig.field_m.b(true);
+          var7Lifetime1 = ig.field_m.readByte(true);
           for (var8_int = 0; var6_ref_String__.length > var8_int; var8_int++) {
-            var6_ref_String__[var8_int] = ig.field_m.i(0);
+            var6_ref_String__[var8_int] = ig.field_m.readPrefixedString(0);
           }
           var8 = new BattleState(var1_int, var2Lifetime1, var3_intLifetime1, var4_intLifetime1, var5Lifetime1, var6_ref_String__);
           var9 = ig.field_m.readUnsignedShort((byte) 80);

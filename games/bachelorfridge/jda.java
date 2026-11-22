@@ -19,8 +19,8 @@ final class jda extends iga {
           if (param1) {
             this.a((byte) -118);
           }
-          param0.a(this.field_f, 70);
-          param0.a(-117, this.field_e);
+          param0.writePrefixedString(this.field_f, 70);
+          param0.writeBase38String(-117, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jda.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

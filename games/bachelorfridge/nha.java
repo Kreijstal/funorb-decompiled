@@ -20,11 +20,11 @@ final class nha {
           var6.writeByte(1, 0);
           if (param1.field_g != null) {
             var6.writeByte(param1.field_g.length, 0);
-            var6.a(0, -72, param1.field_g.length, param1.field_g);
+            var6.writeBytes(0, -72, param1.field_g.length, param1.field_g);
           } else {
             var6.writeByte(0, 0);
           }
-          var6.a(var4, 19);
+          var6.appendCrc32(var4, 19);
           var6.position = var6.position - 4;
           if (param2 >= -22) {
             bga var5 = (bga) null;

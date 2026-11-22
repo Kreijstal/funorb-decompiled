@@ -50,7 +50,7 @@ final class TileEffectAnimation extends AnimationNode {
           ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[2], -1615464796);
           ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[3], -1615464796);
           qja.b(param1 ^ 24, ProxySocketConnector.field_g);
-          ProxySocketConnector.field_g.b(param0, -125);
+          ProxySocketConnector.field_g.writeShort(param0, -125);
           param2.a(ProxySocketConnector.field_g, false);
           sja.field_fb.position = 0;
           if (!param4) {
@@ -82,7 +82,7 @@ final class TileEffectAnimation extends AnimationNode {
           }
           sja.field_fb.writeString((byte) -50, var7);
           if (null != ij.field_m) {
-            sja.field_fb.a(ij.field_m, 86);
+            sja.field_fb.writePrefixedString(ij.field_m, 86);
           }
           wd.a(SlowAllEvent.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
           sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);

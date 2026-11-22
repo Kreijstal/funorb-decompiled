@@ -227,7 +227,7 @@ final class sia extends TileEffect {
             if (param1 <= 66) {
               field_g = (Sprite) null;
             }
-            param0.a(var4, 19);
+            param0.appendCrc32(var4, 19);
             var18.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

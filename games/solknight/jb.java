@@ -14,8 +14,8 @@ final class jb extends aa {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.b(-1955895016, this.field_b);
-          param1.a(64, this.field_c);
+          param1.writePrefixedString(-1955895016, this.field_b);
+          param1.writeBase38String(64, this.field_c);
           if (param0 != -12518) {
             jb.clearStaticReferences(57);
           }

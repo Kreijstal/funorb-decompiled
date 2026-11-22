@@ -168,7 +168,7 @@ final class BagpipeSpecial extends SpecialOrder {
             var3 = (PacketBuffer) null;
             BagpipeSpecial.a(false, (PacketBuffer) null);
           }
-          stackIn_3_0 = new rj(param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.a(3), param1.readUnsignedByte(16711935));
+          stackIn_3_0 = new rj(param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readUnsignedMedium(3), param1.readUnsignedByte(16711935));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -73,7 +73,7 @@ class SpecialOrder extends CreatureOrder {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(var12, var4, 128, 0);
+              var9.readBytes(var12, var4, 128, 0);
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }

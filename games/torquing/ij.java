@@ -204,29 +204,29 @@ final class ij extends gf {
         var6 = Torquing.field_u;
         try {
           var10 = kj.field_d;
-          var2 = var10.i((byte) -101);
+          var2 = var10.readUnsignedByte((byte) -101);
           if (var2 == 0) {
             var9 = (qa) (qf.field_a.b(0));
             if (var9 == null) {
               ih.b(true);
               return;
             }
-            var4 = var10.i((byte) -101);
+            var4 = var10.readUnsignedByte((byte) -101);
             if (var4 != 0) {
               var14 = new byte[var4];
-              var10.a(48, var4, var14, 0);
+              var10.readBytes(48, var4, var14, 0);
             } else {
               var5 = null;
             }
             var10.position = var10.position + 4;
-            if (!var10.h(-31017)) {
+            if (!var10.verifyCrc32(-31017)) {
               ih.b(true);
               return;
             }
             var9.unlink(0);
           } else {
             if (1 == var2) {
-              var3 = var10.c((byte) -59);
+              var3 = var10.readInt((byte) -59);
               var4_ref_ni = (ni) (vb.field_f.b(param0 ^ 10078));
               while (var4_ref_ni != null) {
                 if (var3 != var4_ref_ni.field_k) {

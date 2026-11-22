@@ -85,7 +85,7 @@ abstract class SpriteState extends DualLinkNode {
           if (param0 != -117) {
             field_x = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = nn.a(7655, param2, 0, param1);
+          stackIn_3_0 = nn.computeCrc32(7655, param2, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

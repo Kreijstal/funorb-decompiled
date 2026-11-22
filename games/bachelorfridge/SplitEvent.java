@@ -87,7 +87,7 @@ final class SplitEvent extends SpecialEvent {
           if (param0 > -12) {
             SplitEvent.d((byte) -18);
           }
-          param1.b(this.moveId, -125);
+          param1.writeShort(this.moveId, -125);
           param1.writeByte(this.effects.g(0), 0);
           var5 = (EventEffect) (this.effects.b((byte) 90));
           while (var5 != null) {

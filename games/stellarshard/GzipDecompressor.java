@@ -78,7 +78,7 @@ final class GzipDecompressor {
               var13 = new byte[var4];
               var11 = var13;
               var5_ref_byte__ = var11;
-              var10.a(0, (byte) -118, var4, var13);
+              var10.readBytes(0, (byte) -118, var4, var13);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }

@@ -274,7 +274,7 @@ final class gl {
           if (param2 <= 92) {
             field_g = (java.util.zip.CRC32) null;
           }
-          stackIn_3_0 = WidgetContainer.a(-27129, param1, param0, 0);
+          stackIn_3_0 = WidgetContainer.computeCrc32(-27129, param1, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

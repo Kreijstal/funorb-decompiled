@@ -160,7 +160,7 @@ final class rj {
             return;
           }
           if (var2 == 1) {
-            var4_int = var10.e((byte) 118);
+            var4_int = var10.readSignedSmart((byte) 118);
             var5_ref_vi = (vi) (pd.field_g.beginBackward(9272));
             while (var5_ref_vi != null) {
               if (var3 != var5_ref_vi.field_l ||

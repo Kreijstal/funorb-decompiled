@@ -165,7 +165,7 @@ final class od extends DualLinkNode {
               }
             }
           } else {
-            this.field_u = qj.a('<', param0.e((byte) 106), 10287);
+            this.field_u = qj.a('<', param0.readString((byte) 106), 10287);
           }
           if (param1 != -11682) {
             var10 = (PacketBuffer) null;

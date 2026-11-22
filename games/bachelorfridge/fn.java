@@ -50,8 +50,8 @@ final class fn extends k {
           if (param0 != -68) {
             field_k = (int[]) null;
           }
-          BuffVendorSpecial.field_p.a(param1, -108, param6, param5);
-          BuffVendorSpecial.field_p.a(var7_int, false);
+          BuffVendorSpecial.field_p.writeBytes(param1, -108, param6, param5);
+          BuffVendorSpecial.field_p.padZerosTo(var7_int, false);
           BuffVendorSpecial.field_p.encryptXtea(var13, 0);
           if (null == gu.field_a ||
             !(gu.field_a.payload.length >= 100)) {
@@ -65,10 +65,10 @@ final class fn extends k {
             gu.field_a.writeInt(var13[var11], -1615464796);
             var11++;
           }
-          gu.field_a.b(param6, param0 ^ 53);
+          gu.field_a.writeShort(param6, param0 ^ 53);
           gu.field_a.encryptRsa(param3, 0, param2);
-          param4.a(0, -82, gu.field_a.position, gu.field_a.payload);
-          param4.a(0, param0 ^ 35, BuffVendorSpecial.field_p.position, BuffVendorSpecial.field_p.payload);
+          param4.writeBytes(0, -82, gu.field_a.position, gu.field_a.payload);
+          param4.writeBytes(0, param0 ^ 35, BuffVendorSpecial.field_p.position, BuffVendorSpecial.field_p.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -24,11 +24,11 @@ final class w {
           if (param0 > -69) {
             field_b = (Sprite[]) null;
           }
-          var3.b(5, -49152);
-          var3.b(0, -49152);
-          var3.c(param2.field_k, 85);
-          var3.b(param2.field_h, -49152);
-          var3.b(param2.field_e, -49152);
+          var3.writeByte(5, -49152);
+          var3.writeByte(0, -49152);
+          var3.writeShort(param2.field_k, 85);
+          var3.writeByte(param2.field_h, -49152);
+          var3.writeByte(param2.field_e, -49152);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "w.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -134,7 +134,7 @@ final class w {
           if (param2 != -18694) {
             w.a(-3, 81, 26, 15);
           }
-          stackIn_3_0 = rc.a(0, param0, 40, param1);
+          stackIn_3_0 = rc.computeCrc32(0, param0, 40, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

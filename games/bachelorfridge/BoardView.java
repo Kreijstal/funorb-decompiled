@@ -2333,16 +2333,16 @@ final class BoardView {
         if (this.field_q != -1) {
           if (-1 != this.field_r) {
             if (this.field_i.field_h.tiles[this.field_q][this.field_r].terrain == 21) {
-              uca.a(27, (byte) 103);
+              Crc32Table.a(27, (byte) 103);
             }
             if (22 == this.field_i.field_h.tiles[this.field_q][this.field_r].terrain) {
-              uca.a(28, (byte) 124);
+              Crc32Table.a(28, (byte) 124);
             }
             if (this.field_i.field_h.tiles[this.field_q][this.field_r].terrain == 6 ||
               this.field_i.field_h.tiles[this.field_q][this.field_r].terrain == 8 ||
               10 == this.field_i.field_h.tiles[this.field_q][this.field_r].terrain ||
               12 == this.field_i.field_h.tiles[this.field_q][this.field_r].terrain) {
-              uca.a(26, (byte) 98);
+              Crc32Table.a(26, (byte) 98);
             }
             if (-1 != this.field_F) {
               fieldTemp$0 = this.field_F + 1;

@@ -100,29 +100,29 @@ final class be {
             jk.field_z = new PacketBuffer(var7_int);
           }
           jk.field_z.position = 0;
-          jk.field_z.b(param6, param4, -2, param3);
-          jk.field_z.a(true, var7_int);
-          jk.field_z.a(30350, var14);
+          jk.field_z.writeBytes(param6, param4, -2, param3);
+          jk.field_z.padZerosTo(true, var7_int);
+          jk.field_z.encryptXtea(30350, var14);
           if (null == MonkeyPuzzle2.field_A ||
             !(MonkeyPuzzle2.field_A.payload.length >= 100)) {
             MonkeyPuzzle2.field_A = new PacketBuffer(100);
           }
           MonkeyPuzzle2.field_A.position = 0;
-          MonkeyPuzzle2.field_A.b(10, -49152);
+          MonkeyPuzzle2.field_A.writeByte(10, -49152);
           var12 = 0;
           var9Lifetime1 = var12;
           while (var12 < 4) {
-            MonkeyPuzzle2.field_A.a(-803539344, var14[var12]);
+            MonkeyPuzzle2.field_A.writeInt(-803539344, var14[var12]);
             var12++;
           }
           if (param2 >= -76) {
             var11 = (byte[]) null;
             be.a((PacketBuffer) null, (java.math.BigInteger) null, 116, -40, -47, (java.math.BigInteger) null, (byte[]) null);
           }
-          MonkeyPuzzle2.field_A.c(param4, 83);
-          MonkeyPuzzle2.field_A.a((byte) -127, param1, param5);
-          param0.b(MonkeyPuzzle2.field_A.payload, MonkeyPuzzle2.field_A.position, -2, 0);
-          param0.b(jk.field_z.payload, jk.field_z.position, -2, 0);
+          MonkeyPuzzle2.field_A.writeShort(param4, 83);
+          MonkeyPuzzle2.field_A.applyRsa((byte) -127, param1, param5);
+          param0.writeBytes(MonkeyPuzzle2.field_A.payload, MonkeyPuzzle2.field_A.position, -2, 0);
+          param0.writeBytes(jk.field_z.payload, jk.field_z.position, -2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

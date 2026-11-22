@@ -11,7 +11,7 @@ final class DamageTileEffect extends EventEffect {
         try {
           int var3_int = -112 % ((34 - param1) / 58);
           super.write(param0, (byte) -32);
-          param0.b(this.field_f, -114);
+          param0.writeShort(this.field_f, -114);
           param0.writeByte(this.field_i, 0);
           param0.writeByte(this.field_l, 0);
         } catch (RuntimeException runtimeException) {

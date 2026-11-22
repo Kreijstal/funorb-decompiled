@@ -163,52 +163,52 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             gf.field_c.position = 0;
             if (param6 == null) {
               uc.field_a.position = 0;
-              uc.field_a.a(-803539344, pi.field_l.nextInt());
-              uc.field_a.a(-803539344, pi.field_l.nextInt());
+              uc.field_a.writeInt(-803539344, pi.field_l.nextInt());
+              uc.field_a.writeInt(-803539344, pi.field_l.nextInt());
               stackIn_19_0 = uc.field_a;
               if (!param4.b(0)) {
                 stackIn_20_1 = "";
               } else {
                 stackIn_20_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, -84);
+              ((PacketBuffer) (Object) stackIn_19_0).writePrefixedString(stackIn_20_1, -84);
               stackIn_22_0 = uc.field_a;
               if (!param1.b(0)) {
                 stackIn_23_1 = "";
               } else {
                 stackIn_23_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_22_0).a(stackIn_23_1, 116);
-              gf.field_c.b(16, param2 - 49151);
+              ((PacketBuffer) (Object) stackIn_22_0).writePrefixedString(stackIn_23_1, 116);
+              gf.field_c.writeByte(16, param2 - 49151);
               gf.field_c.position = gf.field_c.position + 1;
               var9 = gf.field_c.position;
               e.a(sd.field_a, fj.field_F, (byte) 113, gf.field_c, uc.field_a);
-              gf.field_c.a(gf.field_c.position - var9, (byte) -114);
+              gf.field_c.backpatchByteLength(gf.field_c.position - var9, (byte) -114);
             } else {
               var9 = 0;
               uc.field_a.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              uc.field_a.a(-803539344, pi.field_l.nextInt());
-              uc.field_a.a(param2 ^ 803539343, pi.field_l.nextInt());
-              uc.field_a.a(var14, param2 ^ 103);
-              uc.field_a.a(var8, -64);
+              uc.field_a.writeInt(-803539344, pi.field_l.nextInt());
+              uc.field_a.writeInt(param2 ^ 803539343, pi.field_l.nextInt());
+              uc.field_a.writePrefixedString(var14, param2 ^ 103);
+              uc.field_a.writePrefixedString(var8, -64);
               var15 = (CharSequence) ((Object) param6);
-              uc.field_a.a(q.a(var15, 20), 122);
-              uc.field_a.c(param0, 127);
-              uc.field_a.b(param5, param2 - 49151);
-              uc.field_a.b(var9, -49152);
-              gf.field_c.b(18, param2 - 49151);
+              uc.field_a.writePrefixedString(q.a(var15, 20), 122);
+              uc.field_a.writeShort(param0, 127);
+              uc.field_a.writeByte(param5, param2 - 49151);
+              uc.field_a.writeByte(var9, -49152);
+              gf.field_c.writeByte(18, param2 - 49151);
               gf.field_c.position = gf.field_c.position + 2;
               var10 = gf.field_c.position;
               var11_ref_StringLifetime4 = lc.a(ii.a(false), (byte) -89);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              gf.field_c.a(param2 + 69, var11_ref_StringLifetime4);
+              gf.field_c.writeString(param2 + 69, var11_ref_StringLifetime4);
               e.a(sd.field_a, fj.field_F, (byte) -112, gf.field_c, uc.field_a);
-              gf.field_c.d(6903, gf.field_c.position - var10);
+              gf.field_c.backpatchShortLength(6903, gf.field_c.position - var10);
             }
             SocketConnector.a((byte) -71, -1);
             dk.field_h = vd.field_e;
@@ -249,7 +249,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (hj.a(var10Lifetime1, true)) {
                 var11 = cm.field_E.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  cm.field_E[var12] = MonkeyPuzzle2.field_D.b((byte) 93);
+                  cm.field_E[var12] = MonkeyPuzzle2.field_D.readPrefixedString((byte) 93);
                 }
                 PacketBuffer.a(-1);
                 DequeCursor.field_e = false;
@@ -261,9 +261,9 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (dk.field_h == ma.field_d &&
             gb.a(true)) {
             if (wk.field_a != 255) {
-              sl.field_n = MonkeyPuzzle2.field_D.f(-1);
+              sl.field_n = MonkeyPuzzle2.field_D.readString(-1);
             } else {
-              var9_ref_String = MonkeyPuzzle2.field_D.g(-1185292952);
+              var9_ref_String = MonkeyPuzzle2.field_D.readNullableString(-1185292952);
               if (var9_ref_String != null) {
                 pe.a(var9_ref_String, (byte) -108, ii.a(false));
               }

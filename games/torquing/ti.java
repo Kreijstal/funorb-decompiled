@@ -221,7 +221,7 @@ final class ti {
         if (param0 != 1) {
           return;
         }
-        re.field_e = kj.field_d.h((byte) 113);
+        re.field_e = kj.field_d.readString((byte) 113);
         CharSequence var2 = (CharSequence) ((Object) re.field_e);
         tj.field_j = hf.a(var2, 112);
     }

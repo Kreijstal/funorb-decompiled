@@ -252,25 +252,25 @@ class ci extends gf implements ka {
             lc.field_k = new PacketBuffer(var7_int);
           }
           lc.field_k.position = 0;
-          lc.field_k.a(param2, param1, param0, param4);
-          lc.field_k.b((byte) -65, var7_int);
-          lc.field_k.a((byte) 97, var13);
+          lc.field_k.writeBytes(param2, param1, param0, param4);
+          lc.field_k.padZerosTo((byte) -65, var7_int);
+          lc.field_k.encryptXtea((byte) 97, var13);
           if (null == ee.field_h ||
             !(ee.field_h.payload.length >= 100)) {
             ee.field_h = new PacketBuffer(100);
           }
           ee.field_h.position = 0;
-          ee.field_h.c(19, 10);
+          ee.field_h.writeByte(19, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ee.field_h.b(var13[var11], false);
+            ee.field_h.writeInt(var13[var11], false);
             var11++;
           }
-          ee.field_h.a(true, param1);
-          ee.field_h.a(param5, 59769888, param3);
-          param6.a(8, ee.field_h.position, ee.field_h.payload, 0);
-          param6.a(param2 ^ 0, lc.field_k.position, lc.field_k.payload, 0);
+          ee.field_h.writeShort(true, param1);
+          ee.field_h.applyRsa(param5, 59769888, param3);
+          param6.writeBytes(8, ee.field_h.position, ee.field_h.payload, 0);
+          param6.writeBytes(param2 ^ 0, lc.field_k.position, lc.field_k.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -530,23 +530,23 @@ class ci extends gf implements ka {
           ed.field_a[2] = (int)(i.field_H >> 32);
           ic.field_z.position = 0;
           ed.field_a[3] = (int)i.field_H;
-          ic.field_z.b(ed.field_a[0], false);
-          ic.field_z.b(ed.field_a[1], false);
-          ic.field_z.b(ed.field_a[2], false);
-          ic.field_z.b(ed.field_a[3], false);
+          ic.field_z.writeInt(ed.field_a[0], false);
+          ic.field_z.writeInt(ed.field_a[1], false);
+          ic.field_z.writeInt(ed.field_a[2], false);
+          ic.field_z.writeInt(ed.field_a[3], false);
           vh.a(ic.field_z, 107);
-          ic.field_z.a(true, param2);
+          ic.field_z.writeShort(true, param2);
           param3.a(-12518, ic.field_z);
           id.field_c.position = 0;
           if (param1) {
-            id.field_c.c(param0 ^ -25840, 18);
+            id.field_c.writeByte(param0 ^ -25840, 18);
           } else {
-            id.field_c.c(param0 ^ 25812, 16);
+            id.field_c.writeByte(param0 ^ 25812, 16);
           }
           id.field_c.position = id.field_c.position + 2;
           var5_int = id.field_c.position;
-          id.field_c.b(al.field_n, false);
-          id.field_c.a(DelegatingCanvas.field_b, (byte) 63);
+          id.field_c.writeInt(al.field_n, false);
+          id.field_c.writeLong(DelegatingCanvas.field_b, (byte) 63);
           var6 = 0;
           if (cl.field_m) {
             var6 = var6 | 1;
@@ -563,17 +563,17 @@ class ci extends gf implements ka {
           if (param0 != -25776) {
             field_sb = 30;
           }
-          id.field_c.c(-110, var6);
+          id.field_c.writeByte(-110, var6);
           var7 = hh.a(false, ia.g(param0 ^ 25799));
           if (var7 == null) {
             var7 = "";
           }
-          id.field_c.a(var7, 0);
+          id.field_c.writeString(var7, 0);
           if (null != ri.field_a) {
-            id.field_c.b(param0 ^ 1955918408, ri.field_a);
+            id.field_c.writePrefixedString(param0 ^ 1955918408, ri.field_a);
           }
           al.a(ic.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
-          id.field_c.a(id.field_c.position - var5_int, true);
+          id.field_c.backpatchShortLength(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

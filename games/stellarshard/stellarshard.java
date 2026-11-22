@@ -2859,7 +2859,7 @@ public final class stellarshard extends rb implements cf {
           pf.a(30300);
           t.a(param0 ^ 6079);
           wi.clearStaticReferences((byte) -93);
-          PacketBuffer.a((byte) -14);
+          PacketBuffer.clearStaticReferences((byte) -14);
           ih.clearStaticReferences(38858);
           te.a((byte) -84);
           hj.a(121);

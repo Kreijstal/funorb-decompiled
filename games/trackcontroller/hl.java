@@ -34,9 +34,9 @@ abstract class hl extends td {
     final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         try {
           param1.writeByte(12, (byte) -69);
-          param1.b(param2, (byte) -123);
-          param1.b(param3, (byte) -120);
-          param1.b(param0, (byte) -119);
+          param1.writeShort(param2, (byte) -123);
+          param1.writeShort(param3, (byte) -120);
+          param1.writeShort(param0, (byte) -119);
           param1.writeByte(param4, (byte) -59);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hl.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

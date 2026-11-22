@@ -22,11 +22,11 @@ final class fi {
           }
           var3 = id.field_c;
           var3.e(param1, param2 - 2147459603);
-          var3.c(1, 5);
-          var3.c(-113, 0);
-          var3.a(true, param0.field_o);
-          var3.c(50, param0.field_k);
-          var3.c(param2 ^ -24018, param0.field_l);
+          var3.writeByte(1, 5);
+          var3.writeByte(-113, 0);
+          var3.writeShort(true, param0.field_o);
+          var3.writeByte(50, param0.field_k);
+          var3.writeByte(param2 ^ -24018, param0.field_l);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -75,9 +75,9 @@ final class hc extends ng {
                   var2[var4] = (byte)-1;
                 }
               }
-              param0.a(24, 0, var2, -16384);
+              param0.writeBytes(24, 0, var2, -16384);
             } else {
-              param0.a(24, 0, var2, -16384);
+              param0.writeBytes(24, 0, var2, -16384);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

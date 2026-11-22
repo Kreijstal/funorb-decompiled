@@ -35,7 +35,7 @@ final class MidiFileReader {
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_g.a(3);
+            var5 = this.field_g.readUnsignedMedium(3);
             var4 -= 3;
             var6 = this.field_i[param0];
             this.field_e = this.field_e + (long)var6 * (long)(this.field_h - var5);

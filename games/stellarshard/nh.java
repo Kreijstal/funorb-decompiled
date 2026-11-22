@@ -39,11 +39,11 @@ class nh extends sk {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a((byte) 122, this.field_j);
+          param1.writeLong((byte) 122, this.field_j);
           if (param0 != 95) {
             this.a(-10);
           }
-          param1.a(false, this.field_i);
+          param1.writeBase38String(false, this.field_i);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,12 +73,12 @@ class nh extends sk {
             var5.writeByte(false, 0);
           } else {
             var5.writeByte(false, param0.field_p.length);
-            var5.a(param0.field_p.length, 0, (byte) -13, param0.field_p);
+            var5.writeBytes(param0.field_p.length, 0, (byte) -13, param0.field_p);
           }
-          var5.c(var4, (byte) -3);
+          var5.appendCrc32(var4, (byte) -3);
           var5.position = var5.position - 4;
           param0.field_o = var5.readInt(false);
-          var5.a(-var4 + var5.position, (byte) 70);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) 70);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "nh.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

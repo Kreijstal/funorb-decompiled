@@ -541,21 +541,21 @@ class vg extends pj {
         var5.e(param0, -2147483648);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        var5.c(-104, 1);
+        var5.writeByte(-104, 1);
         if (null != param1.field_k) {
-          var5.c(-126, param1.field_k.length);
-          var5.a(8, param1.field_k.length, param1.field_k, 0);
+          var5.writeByte(-126, param1.field_k.length);
+          var5.writeBytes(8, param1.field_k.length, param1.field_k, 0);
         } else {
-          var5.c(126, 0);
+          var5.writeByte(126, 0);
         }
-        var5.b(true, var4);
+        var5.appendCrc32(true, var4);
         var5.position = var5.position - 4;
         if (param2 < 113) {
           return;
         }
         try {
           param1.field_i = var5.readInt(true);
-          var5.b(1, -var4 + var5.position);
+          var5.backpatchByteLength(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "vg.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -130,7 +130,7 @@ final class vd {
           if (param0 != 27912) {
             field_b = (String) null;
           }
-          var2 = var12.i((byte) -101);
+          var2 = var12.readUnsignedByte((byte) -101);
           if (var2 == 0) {
             var10 = kb.a((byte) -84);
             var16 = var10;
@@ -139,9 +139,9 @@ final class vd {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).i((byte) -101);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -101);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).c((byte) -65);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -65);
             }
             var14 = (nh) (to.field_q.b(0));
             if (var14 == null) {

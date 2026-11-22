@@ -14,7 +14,7 @@ final class HazmatSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -31303) {
-            stackIn_4_0 = mk.a(param0, 0, -115, param2);
+            stackIn_4_0 = mk.computeCrc32(param0, 0, -115, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = 34;

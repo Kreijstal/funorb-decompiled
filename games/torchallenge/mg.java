@@ -37,7 +37,7 @@ final class mg {
           var5.writeInt(param1.field_l, false);
           var5.writeInt(param1.field_o, false);
           var5.writeInt(param1.field_q, false);
-          var5.b(var4, 14430);
+          var5.appendCrc32(var4, 14430);
           var5.patchByteLength(var5.position - var4, -127);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "mg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

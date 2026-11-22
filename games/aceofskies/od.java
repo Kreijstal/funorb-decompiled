@@ -39,7 +39,7 @@ final class od extends lg {
           int var4 = var5.position;
           var5.writeByte(-1336879960, 1);
           var5.writeByte(-1336879960, param2.field_i);
-          var5.b(true, param2.field_m);
+          var5.writeSignedSmart(true, param2.field_m);
           var5.writeInt((byte) 71, param2.field_l);
           var5.writeInt((byte) 59, param2.field_h);
           var5.writeInt((byte) 104, param2.field_k);

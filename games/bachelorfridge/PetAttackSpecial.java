@@ -20,7 +20,7 @@ final class PetAttackSpecial extends SpecialOrder {
             var9.writeString((byte) -50, param4);
           }
           if (param3 == null) {
-            var9.b(param0, -127);
+            var9.writeShort(param0, -127);
           } else {
             nu.a(param3, var9, -21840);
           }

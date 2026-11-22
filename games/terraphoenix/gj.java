@@ -4,7 +4,7 @@
 final class gj {
     static int field_a;
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -92,10 +92,10 @@ final class gj {
           }
           di.field_l.writeString(var7, 2295);
           if (og.field_e != null) {
-            di.field_l.b(og.field_e, -108);
+            di.field_l.writePrefixedString(og.field_e, -108);
           }
           ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-          di.field_l.g(-var5_int + di.field_l.position, -20125);
+          di.field_l.backpatchShortLength(-var5_int + di.field_l.position, -20125);
           bc.a(-1, param2 - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

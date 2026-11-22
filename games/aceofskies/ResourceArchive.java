@@ -261,7 +261,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.unpackedFiles[param2][param1]) {
-            byte[] var7 = PacketBuffer.a(false, this.unpackedFiles[param2][param1], -45);
+            byte[] var7 = PacketBuffer.extractByteArray(false, this.unpackedFiles[param2][param1], -45);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -474,15 +474,15 @@ final class ResourceArchive {
             param1[1] != 0 ||
             0 != param1[2] ||
             0 != param1[3])) {
-            byte[] var35 = PacketBuffer.a(true, this.packedGroups[param2], -62);
+            byte[] var35 = PacketBuffer.extractByteArray(true, this.packedGroups[param2], -62);
             byte[] var25 = var35;
             var9 = var25;
             PacketBuffer var26 = new PacketBuffer(var35);
-            var26.a(5, param1, 1515088773, var26.payload.length);
+            var26.decryptXteaRange(5, param1, 1515088773, var26.payload.length);
             boolean decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = PacketBuffer.a(false, this.packedGroups[param2], -84);
+            var9 = PacketBuffer.extractByteArray(false, this.packedGroups[param2], -84);
           }
           if (param3 <= 3) {
             return true;

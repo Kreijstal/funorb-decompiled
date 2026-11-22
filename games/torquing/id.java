@@ -21,12 +21,12 @@ final class id {
           jb.field_c.position = 0;
           od.field_s[2] = (int)(ij.field_l >> 32);
           od.field_s[3] = (int)ij.field_l;
-          jb.field_c.b((byte) 60, od.field_s[0]);
-          jb.field_c.b((byte) 60, od.field_s[1]);
-          jb.field_c.b((byte) 60, od.field_s[2]);
-          jb.field_c.b((byte) 60, od.field_s[3]);
+          jb.field_c.writeInt((byte) 60, od.field_s[0]);
+          jb.field_c.writeInt((byte) 60, od.field_s[1]);
+          jb.field_c.writeInt((byte) 60, od.field_s[2]);
+          jb.field_c.writeInt((byte) 60, od.field_s[3]);
           ClientException.a(jb.field_c, 24);
-          jb.field_c.a(param1, 103);
+          jb.field_c.writeShort(param1, 103);
           param0.a(jb.field_c, (byte) -71);
           wa.field_d.position = 0;
           if (param2) {
@@ -39,8 +39,8 @@ final class id {
           if (param3 <= 6) {
             id.a((byte) 2);
           }
-          wa.field_d.b((byte) 60, rj.field_w);
-          wa.field_d.a(78, MouseInputHandler.field_f);
+          wa.field_d.writeInt((byte) 60, rj.field_w);
+          wa.field_d.writeLong(78, MouseInputHandler.field_f);
           var6 = 0;
           if (SocketConnector.field_b) {
             var6 = var6 | 1;
@@ -59,12 +59,12 @@ final class id {
           if (var7 == null) {
             var7 = "";
           }
-          wa.field_d.b((byte) 4, var7);
+          wa.field_d.writeString((byte) 4, var7);
           if (null != wh.field_u) {
-            wa.field_d.a(wh.field_u, (byte) -72);
+            wa.field_d.writePrefixedString(wh.field_u, (byte) -72);
           }
           ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
-          wa.field_d.c(wa.field_d.position - var5_int, 400369768);
+          wa.field_d.backpatchShortLength(wa.field_d.position - var5_int, 400369768);
           jd.a((byte) -95, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

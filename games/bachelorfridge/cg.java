@@ -16,8 +16,8 @@ final class cg extends DualLinkNode {
         param0.readUnsignedByte(16711935);
         param0.readUnsignedByte(16711935);
         int var2 = param0.readUnsignedByte(16711935) & 3;
-        param0.b(true);
-        param0.b(true);
+        param0.readByte(true);
+        param0.readByte(true);
         param0.readUnsignedByte(16711935);
         param0.readUnsignedByte(16711935);
         param0.readUnsignedByte(16711935);

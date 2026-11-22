@@ -119,7 +119,7 @@ final class qn extends am {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_w = param0.i((byte) -101);
+              this.field_w = param0.readUnsignedByte((byte) -101);
             } else {
               if (var4_int == 2) {
                 this.field_C = param0.readUnsignedShort(7088);
@@ -146,7 +146,7 @@ final class qn extends am {
               }
             }
           } else {
-            this.field_s = param0.i((byte) -101);
+            this.field_s = param0.readUnsignedByte((byte) -101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

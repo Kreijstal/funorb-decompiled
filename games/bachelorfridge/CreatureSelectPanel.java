@@ -309,7 +309,7 @@ final class CreatureSelectPanel {
                         System.gc();
                         this.field_d = true;
                         this.field_g.field_u = false;
-                        uca.a(18, (byte) 119);
+                        Crc32Table.a(18, (byte) 119);
                       }
                       lf.field_c = 0;
                       return;
@@ -393,7 +393,7 @@ final class CreatureSelectPanel {
                   System.gc();
                   this.field_d = true;
                   this.field_g.field_u = false;
-                  uca.a(18, (byte) 119);
+                  Crc32Table.a(18, (byte) 119);
                 }
                 lf.field_c = 0;
                 return;
@@ -451,7 +451,7 @@ final class CreatureSelectPanel {
               System.gc();
               this.field_d = true;
               this.field_g.field_u = false;
-              uca.a(18, (byte) 119);
+              Crc32Table.a(18, (byte) 119);
             }
             lf.field_c = 0;
             return;
@@ -491,7 +491,7 @@ final class CreatureSelectPanel {
                 System.gc();
                 this.field_d = true;
                 this.field_g.field_u = false;
-                uca.a(18, (byte) 119);
+                Crc32Table.a(18, (byte) 119);
                 break scanLoop1;
               }
             }
@@ -561,7 +561,7 @@ final class CreatureSelectPanel {
             System.gc();
             this.field_d = true;
             this.field_g.field_u = false;
-            uca.a(18, (byte) 119);
+            Crc32Table.a(18, (byte) 119);
           }
           lf.field_c = 0;
           return;
@@ -641,7 +641,7 @@ final class CreatureSelectPanel {
           System.gc();
           this.field_d = true;
           this.field_g.field_u = false;
-          uca.a(18, (byte) 119);
+          Crc32Table.a(18, (byte) 119);
         }
         lf.field_c = 0;
         return;

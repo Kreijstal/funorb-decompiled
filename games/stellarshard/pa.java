@@ -200,15 +200,15 @@ final class pa extends tf {
           var39 = var4.readUnsignedByte(4);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.e(-64);
+            var40 = var5.readSignedSmart(-64);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.e(-64);
+            var41 = var6.readSignedSmart(-64);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.e(-64);
+            var42 = var7.readSignedSmart(-64);
           }
           this.field_g[var38] = var35 + var40;
           this.field_F[var38] = var36 + var41;
@@ -267,11 +267,11 @@ final class pa extends tf {
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
           var43 = var5.readUnsignedByte(4);
           if (var43 == 1) {
-            var38Lifetime2 = var4.e(-64) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.e(-64) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.e(-64) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_z[var42Lifetime1] = var38Lifetime2;
             this.field_E[var42Lifetime1] = var39Lifetime2;
@@ -288,7 +288,7 @@ final class pa extends tf {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e(-64) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_z[var42Lifetime1] = var38Lifetime2;
             this.field_E[var42Lifetime1] = var39Lifetime2;
@@ -299,7 +299,7 @@ final class pa extends tf {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e(-64) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_z[var42Lifetime1] = var38Lifetime2;
             this.field_E[var42Lifetime1] = var39Lifetime2;
@@ -312,7 +312,7 @@ final class pa extends tf {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.e(-64) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(-64) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_z[var42Lifetime1] = var38Lifetime2;
             this.field_E[var42Lifetime1] = var39Lifetime2;
@@ -618,15 +618,15 @@ final class pa extends tf {
           var54 = var2.readUnsignedByte(4);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.e(-64);
+            var55 = var3.readSignedSmart(-64);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.e(-64);
+            var56 = var4.readSignedSmart(-64);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.e(-64);
+            var57 = var5.readSignedSmart(-64);
           }
           this.field_g[var53] = var50 + var55;
           this.field_F[var53] = var51 + var56;
@@ -680,11 +680,11 @@ final class pa extends tf {
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
           var58 = var3.readUnsignedByte(4);
           if (var58 == 1) {
-            var53Lifetime2 = var2.e(-64) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.e(-64) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.e(-64) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_z[var57Lifetime1] = var53Lifetime2;
             this.field_E[var57Lifetime1] = var54Lifetime1;
@@ -701,7 +701,7 @@ final class pa extends tf {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.e(-64) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_z[var57Lifetime1] = var53Lifetime2;
             this.field_E[var57Lifetime1] = var54Lifetime1;
@@ -712,7 +712,7 @@ final class pa extends tf {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.e(-64) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_z[var57Lifetime1] = var53Lifetime2;
             this.field_E[var57Lifetime1] = var54Lifetime1;
@@ -725,7 +725,7 @@ final class pa extends tf {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.e(-64) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(-64) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_z[var57Lifetime1] = var53Lifetime2;
             this.field_E[var57Lifetime1] = var54Lifetime1;

@@ -15,7 +15,7 @@ final class o extends EventEffect {
         try {
           int var3_int = 33 / ((param1 - 34) / 58);
           super.write(param0, (byte) 95);
-          param0.b(this.field_f, -115);
+          param0.writeShort(this.field_f, -115);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "o.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

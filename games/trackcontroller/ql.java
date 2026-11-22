@@ -54,7 +54,7 @@ final class ql extends dd {
           if (param0 != 0) {
             ql.c(-93);
           }
-          stackIn_3_0 = cl.a(1, param2, 0, param1);
+          stackIn_3_0 = cl.computeCrc32(1, param2, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -60,8 +60,8 @@ final class fc extends IntrusiveNode {
                 lf.field_a = rj.a(param0, (byte) 102, param4, false);
               }
               id.field_c.position = 0;
-              id.field_c.c(param5 ^ -121, 14);
-              id.field_c.c(-127, lf.field_a.a(77).field_e);
+              id.field_c.writeByte(param5 ^ -121, 14);
+              id.field_c.writeByte(-127, lf.field_a.a(77).field_e);
               qf.a(param5 + 0, -1);
               ef.field_e = gl.field_s;
             }
@@ -116,7 +116,7 @@ final class fc extends IntrusiveNode {
               lh.field_s = te.field_N.readUnsignedByte(255);
               te.field_N.readUnsignedByte(param5 + 255);
               ob.field_l = te.field_N.readUnsignedShort(param5 - 103);
-              var12 = te.field_N.g(87);
+              var12 = te.field_N.readNullableString(87);
               var7 = te.field_N.readUnsignedByte(255);
               if (0 != (var7 & 1)) {
                 uf.d(31911);
@@ -610,7 +610,7 @@ final class fc extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.c((byte) 120);
+              var22 = var38.readVarInt((byte) 120);
             }
             this.field_s[var23] = (short)(this.field_s[var23] + (fi.a(-1 + var22, 2) << 14));
             var20Lifetime2--;

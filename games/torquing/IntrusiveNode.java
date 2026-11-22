@@ -15,9 +15,9 @@ class IntrusiveNode {
     final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.writeByte(90, 12);
-          param3.a(17, 124);
-          param3.a(param2, 120);
-          param3.a(param4, 71);
+          param3.writeShort(17, 124);
+          param3.writeShort(param2, 120);
+          param3.writeShort(param4, 71);
           param3.writeByte(90, param0);
           if (param1 <= 94) {
             PacketBuffer var6 = (PacketBuffer) null;

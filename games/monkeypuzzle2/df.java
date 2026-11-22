@@ -242,7 +242,7 @@ final class df extends wj {
                 if (24 <= var3_int) {
                   throw new IOException();
                 }
-                param0.b(var2, 24, -2, 0);
+                param0.writeBytes(var2, 24, -2, 0);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,7 +256,7 @@ final class df extends wj {
                 return;
               }
             }
-            param0.b(var2, 24, -2, 0);
+            param0.writeBytes(var2, 24, -2, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

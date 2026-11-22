@@ -98,8 +98,8 @@ final class wi extends IntrusiveNode {
     final static void c(int param0, int param1) {
         jd var2 = id.field_c;
         var2.e(param1, -2147483648);
-        var2.c(114, param0);
-        var2.c(75, 0);
+        var2.writeByte(114, param0);
+        var2.writeByte(75, 0);
     }
 
     public static void a(int param0) {

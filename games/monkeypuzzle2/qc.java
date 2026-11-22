@@ -31,8 +31,8 @@ final class qc extends rj implements ag {
             qc.a((me) null, (byte) 35, -2);
           }
           var3.b(true, param2);
-          var3.b(param0.field_k, -49152);
-          var3.c(param0.field_m, 71);
+          var3.writeByte(param0.field_k, -49152);
+          var3.writeShort(param0.field_m, 71);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

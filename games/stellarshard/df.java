@@ -163,7 +163,7 @@ final class df implements uk {
             wj.field_t[0] = wf.field_b;
             var5 = var3.field_t;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              wj.field_t[var6_int] = var14.e((byte) 93);
+              wj.field_t[var6_int] = var14.readString((byte) 93);
             }
             UiWidget.a((byte) -26, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

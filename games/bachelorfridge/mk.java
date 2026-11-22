@@ -136,7 +136,7 @@ final class mk {
           BananarangEvent.field_s.field_g.field_i = 0;
           gs.field_f.field_i = false;
           gs.field_f.field_p = false;
-          uca.a(18, (byte) -19);
+          Crc32Table.a(18, (byte) -19);
         }
         if (this.field_m != null) {
           if (this.field_m.b(0) == 0) {
@@ -176,7 +176,7 @@ final class mk {
                 }
                 if (decompiledFrameCompleted0) {
                   RasterBuffer.a(8, 7758);
-                  uca.a(17, (byte) 105);
+                  Crc32Table.a(17, (byte) 105);
                   BananarangEvent.field_s.field_g.field_m[var6] = this.field_x;
                   decompiledFrameRemainder0 = false;
                 }
@@ -241,7 +241,7 @@ final class mk {
         return stackIn_21_0;
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
+    final static int computeCrc32(byte[] param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -255,7 +255,7 @@ final class mk {
         try {
           var4_int = -1;
           for (var5 = param1; var5 < param3; var5++) {
-            var4_int = var4_int >>> 8 ^ uca.field_d[(param0[var5] ^ var4_int) & 255];
+            var4_int = var4_int >>> 8 ^ Crc32Table.lookupTable[(param0[var5] ^ var4_int) & 255];
           }
           if (param2 > -110) {
             field_y = (String) null;
@@ -788,7 +788,7 @@ final class mk {
           RasterBuffer.a(13, 7758);
           OneEvent.c(0, -121);
           a.a(15843842, 32, 16763049, 16435458);
-          uca.a(16, (byte) -61);
+          Crc32Table.a(16, (byte) -61);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

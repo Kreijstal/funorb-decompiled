@@ -367,13 +367,13 @@ final class mo extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_G = param0.g(param1 + 65501);
+            this.field_G = param0.readShort(param1 + 65501);
           } else {
             if (var4_int == 1) {
-              this.field_t = (param0.f((byte) 23) << 12) / 100;
+              this.field_t = (param0.readByte((byte) 23) << 12) / 100;
             } else {
               if (2 == var4_int) {
-                this.field_z = (param0.f((byte) 77) << 12) / 100;
+                this.field_z = (param0.readByte((byte) 77) << 12) / 100;
               }
             }
           }

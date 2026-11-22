@@ -282,16 +282,16 @@ final class tj {
           this.field_b.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.d((byte) -42);
+          var4 = param0.readUnsignedSmart((byte) -42);
           if (var4 == 0) {
             break;
           }
           this.field_l[var3] = var4;
-          this.field_d[var3] = param0.e(-64);
-          this.field_p[var3] = param0.d((byte) 118);
+          this.field_d[var3] = param0.readSignedSmart(-64);
+          this.field_p[var3] = param0.readUnsignedSmart((byte) 118);
         }
-        this.field_v = param0.d((byte) -30);
-        this.field_m = param0.d((byte) -86);
+        this.field_v = param0.readUnsignedSmart((byte) -30);
+        this.field_m = param0.readUnsignedSmart((byte) -86);
         this.field_u = param0.readUnsignedShort((byte) 80);
         this.field_y = param0.readUnsignedShort((byte) 60);
         this.field_r = new dh();

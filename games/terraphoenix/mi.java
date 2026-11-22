@@ -38,12 +38,12 @@ final class mi extends nb {
     }
 
     final void a(byte param0, PacketBuffer param1) {
-        param1.b(this.field_k, -89);
+        param1.writePrefixedString(this.field_k, -89);
         if (param0 != -2) {
           return;
         }
         try {
-          param1.a(-97, this.field_j);
+          param1.writeBase38String(-97, this.field_j);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -89,13 +89,13 @@ final class MovingBlock extends IntrusiveNode {
           var4 = var5.position;
           var5.writeByte(1, (byte) -59);
           var5.writeByte(param0.field_k, (byte) -61);
-          var5.b(param1 ^ 16, param0.field_q);
+          var5.writeSignedSmart(param1 ^ 16, param0.field_q);
           var5.writeInt(false, param0.field_n);
           var5.writeInt(false, param0.field_o);
           var5.writeInt(false, param0.field_j);
           var5.writeInt(false, param0.field_m);
-          var5.a(var4, false);
-          var5.a(true, -var4 + var5.position);
+          var5.appendCrc32(var4, false);
+          var5.backpatchByteLength(true, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "me.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -172,19 +172,19 @@ final class MovingBlock extends IntrusiveNode {
               } else {
                 stackIn_18_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_17_0).b(stackIn_18_1, 115);
+              ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_18_1, 115);
               stackIn_20_0 = ui.field_p;
               if (!param6.a(-46)) {
                 stackIn_21_1 = "";
               } else {
                 stackIn_21_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_20_0).b(stackIn_21_1, 112);
+              ((PacketBuffer) (Object) stackIn_20_0).writePrefixedString(stackIn_21_1, 112);
               LevelView.field_C.writeByte(16, (byte) -87);
               LevelView.field_C.position = LevelView.field_C.position + 1;
               var9 = LevelView.field_C.position;
               NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
-              LevelView.field_C.a(true, -var9 + LevelView.field_C.position);
+              LevelView.field_C.backpatchByteLength(true, -var9 + LevelView.field_C.position);
             } else {
               var9 = 0;
               ui.field_p.position = 0;
@@ -193,11 +193,11 @@ final class MovingBlock extends IntrusiveNode {
               }
               ui.field_p.writeInt(false, ta.field_c.nextInt());
               ui.field_p.writeInt(false, ta.field_c.nextInt());
-              ui.field_p.b(var14, 106);
-              ui.field_p.b(var8, 124);
+              ui.field_p.writePrefixedString(var14, 106);
+              ui.field_p.writePrefixedString(var8, 124);
               var15 = (CharSequence) ((Object) param0);
-              ui.field_p.b(qk.a(-128, var15), 119);
-              ui.field_p.b(param4, (byte) -119);
+              ui.field_p.writePrefixedString(qk.a(-128, var15), 119);
+              ui.field_p.writeShort(param4, (byte) -119);
               ui.field_p.writeByte(param2, (byte) -98);
               ui.field_p.writeByte(var9, (byte) -66);
               LevelView.field_C.writeByte(18, (byte) -92);
@@ -209,7 +209,7 @@ final class MovingBlock extends IntrusiveNode {
               }
               LevelView.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
               NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
-              LevelView.field_C.c(-var10 + LevelView.field_C.position, (byte) -96);
+              LevelView.field_C.backpatchShortLength(-var10 + LevelView.field_C.position, (byte) -96);
             }
             MovingBlock.a(-1, -1);
             jc.field_a = l.field_m;
@@ -250,7 +250,7 @@ final class MovingBlock extends IntrusiveNode {
               if (DiskArchiveStore.a(var10Lifetime1, false)) {
                 var11 = ca.field_a.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ca.field_a[var12] = ne.field_a.j(-1);
+                  ca.field_a[var12] = ne.field_a.readPrefixedString(-1);
                 }
                 GameKeyHandler.a((byte) 121);
                 kg.field_f = false;

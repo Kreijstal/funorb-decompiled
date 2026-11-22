@@ -105,20 +105,20 @@ final class ld implements WidgetRenderer {
           if (param0 != 123) {
             field_b = (String) null;
           }
-          var2 = var1.i((byte) -101);
+          var2 = var1.readUnsignedByte((byte) -101);
           if (var2 == 0) {
             if (ed.field_c == null) {
               ed.field_c = new uk(128);
               vf.field_d = 0;
             }
-            stackIn_14_0 = (var1.i((byte) -101) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte((byte) -101) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.h((byte) 124);
+            var4_ref_String = var1.readString((byte) 124);
             if (var3_int != 0) {
-              var1.h((byte) 120);
+              var1.readString((byte) 120);
             }
             var5 = ac.a(var4_ref_String, 0);
-            var6 = var1.h((byte) 116);
+            var6 = var1.readString((byte) 116);
             var7 = hf.a((CharSequence) ((Object) var4_ref_String), 121);
             if (null == var7) {
               var7 = var4_ref_String;
@@ -159,9 +159,9 @@ final class ld implements WidgetRenderer {
               return;
             }
             cn.field_b = 1;
-            var3 = var1.h((byte) 116);
+            var3 = var1.readString((byte) 116);
             og.field_m = ((String) (var3)).intern();
-            var4 = var1.i((byte) -101);
+            var4 = var1.readUnsignedByte((byte) -101);
             rf.a(var4, 64);
             return;
           }
@@ -169,12 +169,12 @@ final class ld implements WidgetRenderer {
             sh.field_a = new uk(128);
             UrlRequest.field_g = 0;
           }
-          var3Lifetime1 = var1.h((byte) 124);
+          var3Lifetime1 = var1.readString((byte) 124);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h((byte) 122);
-          var5_ref = var1.h((byte) 124);
+          var4_ref_StringLifetime1 = var1.readString((byte) 122);
+          var5_ref = var1.readString((byte) 124);
           var6_ref = qm.a(var4_ref_StringLifetime1, (byte) 45);
           if (null == var6_ref) {
             var6_ref = qm.a(var5_ref, (byte) 45);

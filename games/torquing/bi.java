@@ -611,7 +611,7 @@ final class bi {
             var3 = (java.applet.Applet) null;
             bi.a((java.applet.Applet) null, (byte) 44);
           }
-          stackIn_3_0 = new we(param0.g(65536), param0.g(65536), param0.g(65536), param0.g(65536), param0.e((byte) 62), param0.e((byte) 62), param0.i((byte) -101));
+          stackIn_3_0 = new we(param0.readShort(65536), param0.readShort(65536), param0.readShort(65536), param0.readShort(65536), param0.readUnsignedMedium((byte) 62), param0.readUnsignedMedium((byte) 62), param0.readUnsignedByte((byte) -101));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

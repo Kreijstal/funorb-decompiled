@@ -1538,8 +1538,8 @@ final class BattleCreature extends CreatureProfile {
         var4 = BachelorFridge.field_y;
         try {
           super.a((byte) -74, param1);
-          param1.b(this.hp, -126);
-          param1.b(this.field_t, -119);
+          param1.writeShort(this.hp, -126);
+          param1.writeShort(this.field_t, -119);
           param1.writeByte(this.ownerIndex, 0);
           param1.writeByte(this.rosterSlot, 0);
           param1.writeByte(this.splitId, 0);

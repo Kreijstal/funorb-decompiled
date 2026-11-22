@@ -46,8 +46,8 @@ final class kc extends am {
             return;
           }
           if (param2 == 0) {
-            this.field_w = param0.i((byte) -101);
-            this.field_s = new int[param0.i((byte) -101)][2];
+            this.field_w = param0.readUnsignedByte((byte) -101);
+            this.field_s = new int[param0.readUnsignedByte((byte) -101)][2];
             for (var4_int = 0; var4_int < this.field_s.length; var4_int++) {
               this.field_s[var4_int][0] = param0.readUnsignedShort(7088);
               this.field_s[var4_int][1] = param0.readUnsignedShort(7088);

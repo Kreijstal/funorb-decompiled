@@ -27,7 +27,7 @@ final class DamageEffect extends EventEffect {
           if (this.field_j) {
             var3_int = var3_int | 32768;
           }
-          param0.b(var3_int, -111);
+          param0.writeShort(var3_int, -111);
           var3_int = var3_int | this.field_l << 5 & 224;
           param0.writeByte(var3_int, 0);
           param0.writeByte(this.field_k, 0);
@@ -196,11 +196,11 @@ final class DamageEffect extends EventEffect {
               }
               ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
               ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
-              ProxySocketConnector.field_g.a(var14, param0 ^ -73);
-              ProxySocketConnector.field_g.a(var8, 104);
+              ProxySocketConnector.field_g.writePrefixedString(var14, param0 ^ -73);
+              ProxySocketConnector.field_g.writePrefixedString(var8, 104);
               var15 = (CharSequence) ((Object) param4);
-              ProxySocketConnector.field_g.a(qfa.a(20, var15), 117);
-              ProxySocketConnector.field_g.b(param1, -119);
+              ProxySocketConnector.field_g.writePrefixedString(qfa.a(20, var15), 117);
+              ProxySocketConnector.field_g.writeShort(param1, -119);
               ProxySocketConnector.field_g.writeByte(param2, param0 + 15);
               ProxySocketConnector.field_g.writeByte(var9, 0);
               sja.field_fb.writeByte(18, 0);
@@ -223,14 +223,14 @@ final class DamageEffect extends EventEffect {
               } else {
                 stackIn_15_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, 90);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString(stackIn_15_1, 90);
               stackIn_17_0 = ProxySocketConnector.field_g;
               if (param6.a(true)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, 74);
+              ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_18_1, 74);
               sja.field_fb.writeByte(16, param0 + 15);
               sja.field_fb.position = sja.field_fb.position + 1;
               var9 = sja.field_fb.position;
@@ -276,7 +276,7 @@ final class DamageEffect extends EventEffect {
               if (CreatureEvent.b(var10Lifetime1, 0)) {
                 var11 = WidgetContainer.field_B.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  WidgetContainer.field_B[var12] = ig.field_m.i(0);
+                  WidgetContainer.field_B[var12] = ig.field_m.readPrefixedString(0);
                 }
                 vc.a((byte) -91);
                 DiskCacheRequest.field_x = false;

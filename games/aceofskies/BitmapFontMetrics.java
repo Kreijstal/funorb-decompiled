@@ -637,7 +637,7 @@ final class BitmapFontMetrics {
           boolean decompiledFrameCompleted0 = true;
           boolean var4 = stackIn_8_0;
           this.glyphAdvances = new byte[256];
-          var2.a(0, 7186, 256, this.glyphAdvances);
+          var2.readBytes(0, 7186, 256, this.glyphAdvances);
           if (var4) {
             int[] var5 = new int[256];
             int[] var6 = new int[256];

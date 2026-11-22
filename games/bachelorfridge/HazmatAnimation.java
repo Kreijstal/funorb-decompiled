@@ -70,9 +70,9 @@ final class HazmatAnimation extends EventAnimation {
         try {
           param0.writeByte(12, 0);
           int var5_int = 51 / ((param2 + 3) / 61);
-          param0.b(17, -114);
-          param0.b(param4, -119);
-          param0.b(param1, -117);
+          param0.writeShort(17, -114);
+          param0.writeShort(param4, -119);
+          param0.writeShort(param1, -117);
           param0.writeByte(param3, 0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

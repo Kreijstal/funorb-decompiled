@@ -36,7 +36,7 @@ abstract class CreatureOrder extends IntrusiveNode {
         var3.writeCipheredByte(param0, (byte) 119);
         var3.writeByte(3, 0);
         var3.writeByte(10, 0);
-        var3.b(param1, -125);
+        var3.writeShort(param1, -125);
         if (!param2) {
           return;
         }

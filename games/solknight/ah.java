@@ -275,20 +275,20 @@ final class ah {
           var8.e(param1, -2147483648);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.c(-118, 1);
-          var8.a(true, param2.field_u);
-          var8.a(true, param2.field_m);
-          var8.a(true, param2.field_p);
-          var8.b(param2.field_k, false);
-          var8.b(param2.field_j, false);
-          var8.b(param2.field_t, false);
-          var8.b(param2.field_q, param0);
-          var8.c(-105, param2.field_r.length);
+          var8.writeByte(-118, 1);
+          var8.writeShort(true, param2.field_u);
+          var8.writeShort(true, param2.field_m);
+          var8.writeShort(true, param2.field_p);
+          var8.writeInt(param2.field_k, false);
+          var8.writeInt(param2.field_j, false);
+          var8.writeInt(param2.field_t, false);
+          var8.writeInt(param2.field_q, param0);
+          var8.writeByte(-105, param2.field_r.length);
           for (var5 = 0; param2.field_r.length > var5; var5++) {
-            var7.b(param2.field_r[var5], false);
+            var7.writeInt(param2.field_r[var5], false);
           }
-          var8.b(true, var4);
-          var8.b(1, -var4 + var8.position);
+          var8.appendCrc32(true, var4);
+          var8.backpatchByteLength(1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

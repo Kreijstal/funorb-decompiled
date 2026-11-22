@@ -77,7 +77,7 @@ final class q {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             RasterBuffer.a(78, var1);
-            LevelView.field_C.a(param0, -var2 + var1.position);
+            LevelView.field_C.backpatchByteLength(param0, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

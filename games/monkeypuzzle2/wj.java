@@ -75,18 +75,18 @@ abstract class wj extends hf implements vc {
           var5.b(true, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(1, param0 - 74685);
-          var5.b(param1.field_e, param0 - 74685);
-          var5.a(param1.field_f, false);
-          var5.a(-803539344, param1.field_g);
-          var5.a(-803539344, param1.field_k);
+          var5.writeByte(1, param0 - 74685);
+          var5.writeByte(param1.field_e, param0 - 74685);
+          var5.writeSignedSmart(param1.field_f, false);
+          var5.writeInt(-803539344, param1.field_g);
+          var5.writeInt(-803539344, param1.field_k);
           if (param0 != 25533) {
             wj.d(80);
           }
-          var5.a(-803539344, param1.field_l);
-          var5.a(-803539344, param1.field_j);
-          var5.a((byte) -59, var4);
-          var5.a(-var4 + var5.position, (byte) -113);
+          var5.writeInt(-803539344, param1.field_l);
+          var5.writeInt(-803539344, param1.field_j);
+          var5.appendCrc32((byte) -59, var4);
+          var5.backpatchByteLength(-var4 + var5.position, (byte) -113);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "wj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

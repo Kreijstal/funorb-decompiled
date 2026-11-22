@@ -77,7 +77,7 @@ final class via implements WidgetRenderer {
         sr.field_a = var8.readLong(-108);
         if (wka.field_a == 2) {
           CreatureActor.field_g = var8.readUnsignedShort((byte) 75);
-          DisableAnimation.field_w = var8.a(param0 ^ -10182);
+          DisableAnimation.field_w = var8.readUnsignedMedium(param0 ^ -10182);
         } else {
           CreatureActor.field_g = 0;
           DisableAnimation.field_w = 0;

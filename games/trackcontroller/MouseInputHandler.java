@@ -315,7 +315,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var5 = var10.readUnsignedByte(16383);
             if (0 != var5) {
               var14 = new byte[var5];
-              var10.a(100, var14, 0, var5);
+              var10.readBytes(100, var14, 0, var5);
             } else {
               var6 = null;
             }

@@ -665,7 +665,7 @@ final class Archive {
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
-              var26.a(5, param3, var26.payload.length, false);
+              var26.decryptXteaRange(5, param3, var26.payload.length, false);
               decompiledFrameRemainder1 = false;
             }
           }

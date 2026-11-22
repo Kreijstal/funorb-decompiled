@@ -79,7 +79,7 @@ final class mf {
             GameKeyHandler.a((byte) 126);
             return;
           }
-          var5 = var10.k(118);
+          var5 = var10.readSignedSmart(118);
           var6 = (dh) (pa.field_c.first(2));
           while (var6 != null) {
             if (var3 != var6.field_k ||

@@ -170,7 +170,7 @@ final class saa {
           if (this.field_d.field_c.field_k.field_a == 2) {
             if (sn.field_m.field_T &&
               af.field_a) {
-              uca.a(3, (byte) 124);
+              Crc32Table.a(3, (byte) 124);
             }
             if (sn.field_m.field_T) {
               au.field_c = 1;
@@ -187,7 +187,7 @@ final class saa {
             }
             if (d.field_H.field_T &&
               af.field_a) {
-              uca.a(4, (byte) -41);
+              Crc32Table.a(4, (byte) -41);
             }
           }
           if (null != this.field_s) {
