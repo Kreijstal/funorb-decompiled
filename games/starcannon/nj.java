@@ -27,8 +27,8 @@ final class nj extends IntrusiveNode {
     private static boolean field_j;
     private static int[] field_n;
     private static float[] field_I;
-    static ib[] field_y;
-    private static l[] field_k;
+    static VorbisCodebook[] field_y;
+    private static VorbisFloor[] field_k;
     private float[] field_J;
     private static byte[] field_i;
     private int field_E;
@@ -254,7 +254,7 @@ final class nj extends IntrusiveNode {
         var14 = field_K[field_f[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_k[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_k[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
@@ -265,7 +265,7 @@ final class nj extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_a;
           var18_int = var14.field_d[var17_intLifetime2];
-          field_k[var18_int].a(field_M, var4 >> 1);
+          field_k[var18_int].applyFloorCurve(field_M, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -716,18 +716,18 @@ final class nj extends IntrusiveNode {
           }
         }
         var1Lifetime1 = nj.a(8) + 1;
-        field_y = new ib[var1Lifetime1];
+        field_y = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_y[var2Lifetime1] = new ib();
+          field_y[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = nj.a(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           nj.a(16);
         }
         var2Lifetime3 = nj.a(6) + 1;
-        field_k = new l[var2Lifetime3];
+        field_k = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_k[var3Lifetime2] = new l();
+          field_k[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = nj.a(6) + 1;
         field_q = new tb[var3Lifetime3];

@@ -2132,7 +2132,7 @@ public final class Main extends c {
           th.b(true);
           hd.clearStaticReferences();
           ig.clearStaticReferences();
-          df.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           da.a(-1703274388);
           vb.clearStaticReferences(-1);
           rj.b(param0 ^ 72);
@@ -2222,7 +2222,7 @@ public final class Main extends c {
           qe.clearStaticReferences((byte) 73);
           se.a(param0 ^ 87);
           h.a(-26526);
-          lj.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           pj.a(param0 ^ -18178);
           e.a(-560430640);
           dj.clearStaticReferences(52);

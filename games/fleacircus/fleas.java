@@ -1048,7 +1048,7 @@ public final class fleas extends NetworkGameClient {
           gd.clearStaticReferences(-1);
           ec.clearStaticReferences(124);
           hk.clearStaticReferences();
-          wl.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           ub.clearStaticReferences(17077);
           uk.clearStaticReferences(-9435);
           hj.clearStaticReferences(-5928);
@@ -1132,7 +1132,7 @@ public final class fleas extends NetworkGameClient {
           sc.a((byte) -73);
           md.a((byte) -101);
           d.j(-1);
-          am.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           dh.a(120);
           j.a(-113);
           DirectByteStorage.c(-1);

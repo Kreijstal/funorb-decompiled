@@ -104,7 +104,7 @@ final class SynthesizedSoundInstrument {
         this.field_a = param0.readUnsignedShort((byte) 0);
         this.field_p = new SoundFilter();
         this.field_e = new SoundEnvelope();
-        this.field_p.a(param0, this.field_e);
+        this.field_p.decode(param0, this.field_e);
     }
 
     final int[] a(int param0, int param1) {
@@ -204,8 +204,8 @@ final class SynthesizedSoundInstrument {
           !(this.field_p.field_d[1] <= 0)) {
           this.field_e.a();
           int var11Lifetime4 = this.field_e.a(param0 + 1);
-          int var12Lifetime3 = this.field_p.a(0, (float)var11Lifetime4 / 65536.0f);
-          int var13Lifetime2 = this.field_p.a(1, (float)var11Lifetime4 / 65536.0f);
+          int var12Lifetime3 = this.field_p.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          int var13Lifetime2 = this.field_p.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             int var14Lifetime2 = 0;
             int var15Lifetime2 = var13Lifetime2;
@@ -242,8 +242,8 @@ final class SynthesizedSoundInstrument {
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_p.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_p.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_p.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_p.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }

@@ -9,18 +9,18 @@ final class VorbisCodebook {
     private float[][] field_a;
     private int[] field_c;
 
-    final float[] b() {
-        return this.field_a[this.a()];
+    final float[] decodeVector() {
+        return this.field_a[this.decodeScalar()];
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; IntrusiveDeque.a((byte) -11, param1, var2) > param0; var2--) {
         }
         return var2;
     }
 
-    private final void c() {
+    private final void buildHuffmanTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -178,7 +178,7 @@ final class VorbisCodebook {
             var14++;
           }
         }
-        this.c();
+        this.buildHuffmanTree();
         var2Lifetime1 = VorbisSample.a(4);
         if (var2Lifetime1 > 0) {
           var3 = VorbisSample.b(VorbisSample.a(32));
@@ -189,7 +189,7 @@ final class VorbisCodebook {
           if (var2Lifetime1 != 1) {
             var7 = this.field_b * this.field_e;
           } else {
-            var7 = VorbisCodebook.a(this.field_b, this.field_e);
+            var7 = VorbisCodebook.lookup1Values(this.field_b, this.field_e);
           }
           this.field_f = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
@@ -227,7 +227,7 @@ final class VorbisCodebook {
         }
     }
 
-    final int a() {
+    final int decodeScalar() {
         int var1 = 0;
         while (this.field_c[var1] >= 0) {
           var1 = VorbisSample.a() != 0 ? this.field_c[var1] : var1 + 1;

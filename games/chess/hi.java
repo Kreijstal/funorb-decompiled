@@ -9,7 +9,7 @@ final class hi extends IntrusiveNode {
     private static int field_A;
     private static float[] field_O;
     private byte[][] field_s;
-    static uf[] field_C;
+    static VorbisCodebook[] field_C;
     private static float[] field_r;
     private static int[] field_J;
     private static float[] field_w;
@@ -18,7 +18,7 @@ final class hi extends IntrusiveNode {
     private int field_y;
     private int field_t;
     private static pn[] field_p;
-    private static dg[] field_n;
+    private static VorbisFloor[] field_n;
     private static int[] field_H;
     private static boolean field_K;
     private int field_o;
@@ -370,7 +370,7 @@ final class hi extends IntrusiveNode {
         var14 = field_I[field_J[var2]];
         var16 = var14.field_d;
         var17_int = var14.field_a[var16];
-        stackIn_22_0 = (field_n[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_n[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_c; var17_intLifetime1++) {
@@ -381,7 +381,7 @@ final class hi extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_d;
           var18_int = var14.field_a[var17_intLifetime2];
-          field_n[var18_int].a(field_O, var4 >> 1);
+          field_n[var18_int].applyFloorCurve(field_O, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -681,18 +681,18 @@ final class hi extends IntrusiveNode {
           }
         }
         var1Lifetime1 = hi.d(8) + 1;
-        field_C = new uf[var1Lifetime1];
+        field_C = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_C[var2Lifetime1] = new uf();
+          field_C[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = hi.d(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           hi.d(16);
         }
         var2Lifetime3 = hi.d(6) + 1;
-        field_n = new dg[var2Lifetime3];
+        field_n = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_n[var3Lifetime2] = new dg();
+          field_n[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = hi.d(6) + 1;
         field_p = new pn[var3Lifetime3];

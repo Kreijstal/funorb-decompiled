@@ -6,7 +6,7 @@ import java.io.*;
 final class tk extends IntrusiveNode {
     private boolean field_p;
     private static int field_J;
-    static jh[] field_B;
+    static VorbisCodebook[] field_B;
     private boolean field_H;
     private static float[] field_u;
     private static int[] field_G;
@@ -37,7 +37,7 @@ final class tk extends IntrusiveNode {
     private static int field_M;
     private int field_m;
     private static jg[] field_L;
-    private static gj[] field_E;
+    private static VorbisFloor[] field_E;
 
     final vk a(int[] param0) {
         int var5 = 0;
@@ -256,7 +256,7 @@ final class tk extends IntrusiveNode {
         var14 = field_L[field_G[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_E[var17_int].a()) ? 0 : 1;
+        stackIn_22_0 = (field_E[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
@@ -267,7 +267,7 @@ final class tk extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_a;
           var18_int = var14.field_d[var17_intLifetime2];
-          field_E[var18_int].a(field_C, var4 >> 1);
+          field_E[var18_int].applyFloorCurve(field_C, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -691,18 +691,18 @@ final class tk extends IntrusiveNode {
           }
         }
         var1Lifetime1 = tk.d(8) + 1;
-        field_B = new jh[var1Lifetime1];
+        field_B = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_B[var2Lifetime1] = new jh();
+          field_B[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = tk.d(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           tk.d(16);
         }
         var2Lifetime3 = tk.d(6) + 1;
-        field_E = new gj[var2Lifetime3];
+        field_E = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_E[var3Lifetime2] = new gj();
+          field_E[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = tk.d(6) + 1;
         field_h = new sk[var3Lifetime3];

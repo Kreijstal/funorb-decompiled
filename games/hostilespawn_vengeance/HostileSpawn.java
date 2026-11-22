@@ -1203,7 +1203,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ni.b(param0 ^ 107);
           qc.a(true);
           qf.clearStaticReferences();
-          rm.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           ok.clearStaticReferences();
           aa.clearStaticReferences((byte) -104);
           wl.a(110);
@@ -1299,7 +1299,7 @@ public final class HostileSpawn extends NetworkGameClient {
           te.j(0);
           g.j(-123);
           tb.e((byte) 83);
-          dj.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           tf.clearStaticReferences(16976);
           mb.c(param0 + 99);
           DirectByteStorage.c((byte) 70);

@@ -24,7 +24,7 @@ final class md {
         int var11;
         int var12;
         int var13;
-        hg var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -50,7 +50,7 @@ final class md {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = VorbisDecoder.field_H[this.field_f].a();
+              var10 = VorbisDecoder.field_H[this.field_f].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_d;
@@ -69,7 +69,7 @@ final class md {
                 if (this.field_e != 0) {
                   var15 = 0;
                   while (var15 < this.field_b) {
-                    var28 = var14.c();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_b; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class md {
                 } else {
                   var15 = this.field_b / var14.field_b;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.c();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_b; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }

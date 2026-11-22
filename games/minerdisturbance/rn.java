@@ -24,7 +24,7 @@ final class rn {
         int var11;
         int var12;
         int var13;
-        vg var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -50,7 +50,7 @@ final class rn {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = b.field_O[this.field_e].b();
+              var10 = b.field_O[this.field_e].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_b;
@@ -69,7 +69,7 @@ final class rn {
                 if (this.field_a != 0) {
                   var15 = 0;
                   while (var15 < this.field_f) {
-                    var28 = var14.a();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_f; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class rn {
                 } else {
                   var15 = this.field_f / var14.field_f;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.a();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_f; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }

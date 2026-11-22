@@ -95,7 +95,7 @@ final class SynthInstrument {
         this.field_m = param0.readUnsignedShort((byte) 93);
         this.field_e = new SoundFilter();
         this.field_c = new SoundEnvelope();
-        this.field_e.a(param0, this.field_c);
+        this.field_e.decode(param0, this.field_c);
     }
 
     public static void releaseStatics() {

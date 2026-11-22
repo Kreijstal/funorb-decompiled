@@ -1480,7 +1480,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           ComponentContainer.performAction0897(116);
           MixedSupport108.clearStaticReferences((byte) -119);
           MixedSupport066.clearStaticReferences(-5161);
-          MixedSupport060.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           MixedSupport128.performAction1633((byte) -128);
           MixedSupport042.clearStaticReferences(29047);
           MixedSupport045.clearStaticReferences((byte) -52);

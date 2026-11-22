@@ -206,7 +206,7 @@ public final class MonkeyPuzzle2 extends bi {
           WidgetContainer.j(0);
           DequeCursor.clearStaticReferences(110);
           ri.a((byte) -66);
-          oj.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           ll.a((byte) 115);
           pi.f(-13739);
           nc.b(124);
@@ -256,7 +256,7 @@ public final class MonkeyPuzzle2 extends bi {
           b.e(116);
           ProxySocketConnector.d((byte) -125);
           gh.clearStaticReferences((byte) 56);
-          lj.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           NodeHashTableIterator.clearStaticReferences((byte) 67);
           SecondaryNodeDequeIterator.clearStaticReferences(127);
           de.a(-6742);

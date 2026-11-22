@@ -13,7 +13,7 @@ final class lg {
     private nk field_g;
     private nk field_n;
     private nk field_h;
-    private uf field_x;
+    private SoundFilter field_x;
     private static int[] field_u;
     int field_d;
     private static int[] field_c;
@@ -104,9 +104,9 @@ final class lg {
         this.field_e = param0.readUnsignedSmart((byte) -11);
         this.field_d = param0.readUnsignedShort((byte) 25);
         this.field_y = param0.readUnsignedShort((byte) 25);
-        this.field_x = new uf();
+        this.field_x = new SoundFilter();
         this.field_g = new nk();
-        this.field_x.a(param0, this.field_g);
+        this.field_x.decode(param0, this.field_g);
     }
 
     final int[] a(int param0, int param1) {
@@ -248,8 +248,8 @@ final class lg {
           !(this.field_x.field_g[1] <= 0)) {
           this.field_g.a();
           var11Lifetime4 = this.field_g.a(param0 + 1);
-          var12Lifetime3 = this.field_x.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_x.a(1, (float)var11Lifetime4 / 65536.0f);
+          var12Lifetime3 = this.field_x.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_x.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -257,12 +257,12 @@ final class lg {
               var15Lifetime2 = param0 - var12Lifetime3;
             }
             while (var14Lifetime2 < var15Lifetime2) {
-              var16Lifetime1 = (int)((long)field_v[var14Lifetime2 + var12Lifetime3] * (long)uf.field_b >> 16);
+              var16Lifetime1 = (int)((long)field_v[var14Lifetime2 + var12Lifetime3] * (long)SoundFilter.field_b >> 16);
               for (var17 = 0; var17 < var12Lifetime3; var17++) {
-                var16Lifetime1 = var16Lifetime1 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)uf.field_f[0][var17] >> 16);
+                var16Lifetime1 = var16Lifetime1 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)SoundFilter.field_f[0][var17] >> 16);
               }
               for (var17Lifetime3 = 0; var17Lifetime3 < var14Lifetime2; var17Lifetime3++) {
-                var16Lifetime1 = var16Lifetime1 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime3] * (long)uf.field_f[1][var17Lifetime3] >> 16);
+                var16Lifetime1 = var16Lifetime1 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime3] * (long)SoundFilter.field_f[1][var17Lifetime3] >> 16);
               }
               field_v[var14Lifetime2] = var16Lifetime1;
               var11Lifetime4 = this.field_g.a(param0 + 1);
@@ -274,20 +274,20 @@ final class lg {
                 var15Lifetime2Lifetime1 = param0 - var12Lifetime3;
               }
               while (var14Lifetime2 < var15Lifetime2Lifetime1) {
-                var16Lifetime1Lifetime1 = (int)((long)field_v[var14Lifetime2 + var12Lifetime3] * (long)uf.field_b >> 16);
+                var16Lifetime1Lifetime1 = (int)((long)field_v[var14Lifetime2 + var12Lifetime3] * (long)SoundFilter.field_b >> 16);
                 for (var17Lifetime1 = 0; var17Lifetime1 < var12Lifetime3; var17Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)uf.field_f[0][var17Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)SoundFilter.field_f[0][var17Lifetime1] >> 16);
                 }
                 for (var17Lifetime1Lifetime1 = 0; var17Lifetime1Lifetime1 < var13Lifetime2; var17Lifetime1Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)uf.field_f[1][var17Lifetime1Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)SoundFilter.field_f[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_v[var14Lifetime2] = var16Lifetime1Lifetime1;
                 var11Lifetime4 = this.field_g.a(param0 + 1);
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_x.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_x.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_x.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_x.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }
@@ -296,10 +296,10 @@ final class lg {
             while (var14Lifetime2 < param0) {
               var16Lifetime1Lifetime2 = 0;
               for (var17Lifetime2 = var14Lifetime2 + var12Lifetime3 - param0; var17Lifetime2 < var12Lifetime3; var17Lifetime2++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)uf.field_f[0][var17Lifetime2] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_v[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)SoundFilter.field_f[0][var17Lifetime2] >> 16);
               }
               for (var17Lifetime2Lifetime1 = 0; var17Lifetime2Lifetime1 < var13Lifetime2; var17Lifetime2Lifetime1++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)uf.field_f[1][var17Lifetime2Lifetime1] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_v[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)SoundFilter.field_f[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_v[var14Lifetime2] = var16Lifetime1Lifetime2;
               var11Lifetime4 = this.field_g.a(param0 + 1);

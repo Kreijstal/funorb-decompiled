@@ -24,7 +24,7 @@ final class MixedSupport012 {
         int integerLocal11;
         int integerLocal12;
         int integerLocal13;
-        MixedSupport064 mixedSupport064Local14;
+        VorbisCodebook mixedSupport064Local14;
         int integerLocal15;
         int[] integerArrayLocal16;
         int[] integerArrayLocal17;
@@ -50,7 +50,7 @@ final class MixedSupport012 {
           integerLocal9 = 0;
           while (integerLocal9 < integerLocal7) {
             if (integerLocal1 == 0) {
-              integerLocal10 = VorbisSample.mixedSupport064ArrayState0001[this.integerState0078].computeInteger0757();
+              integerLocal10 = VorbisSample.mixedSupport064ArrayState0001[this.integerState0078].decodeScalar();
               for (integerLocal11 = integerLocal20 - 1; integerLocal11 >= 0; integerLocal11--) {
                 if (integerLocal9 + integerLocal11 < integerLocal7) {
                   integerArrayLocal8[integerLocal9 + integerLocal11] = integerLocal10 % this.integerState0075;
@@ -69,7 +69,7 @@ final class MixedSupport012 {
                 if (this.integerState0079 != 0) {
                   integerLocal15 = 0;
                   while (integerLocal15 < this.integerState0076) {
-                    floatArrayLocal19 = mixedSupport064Local14.computeFloatArray0759();
+                    floatArrayLocal19 = mixedSupport064Local14.decodeVector();
                     for (integerLocal2 = 0; integerLocal2 < mixedSupport064Local14.integerState0338; integerLocal2++) {
                       floatArrayArgument1[integerLocal13 + integerLocal15] = floatArrayArgument1[integerLocal13 + integerLocal15] + floatArrayLocal19[integerLocal2];
                       integerLocal15++;
@@ -78,7 +78,7 @@ final class MixedSupport012 {
                 } else {
                   integerLocal15 = this.integerState0076 / mixedSupport064Local14.integerState0338;
                   for (integerLocal3 = 0; integerLocal3 < integerLocal15; integerLocal3++) {
-                    floatArrayLocal18 = mixedSupport064Local14.computeFloatArray0759();
+                    floatArrayLocal18 = mixedSupport064Local14.decodeVector();
                     for (integerLocal4 = 0; integerLocal4 < mixedSupport064Local14.integerState0338; integerLocal4++) {
                       floatArrayArgument1[integerLocal13 + integerLocal3 + integerLocal4 * integerLocal15] = floatArrayArgument1[integerLocal13 + integerLocal3 + integerLocal4 * integerLocal15] + floatArrayLocal18[integerLocal4];
                     }

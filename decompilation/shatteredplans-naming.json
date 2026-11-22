@@ -15652,6 +15652,14 @@
       "renamedSymbol": "M:VorbisCodebook.floorRoot(II)I"
     },
     {
+      "symbol": "M:vb.b()V",
+      "originalName": "b",
+      "to": "buildHuffmanTree",
+      "evidence": "Build canonical codewords from per-entry lengths with32-bit shifts/carry updates,then construct the expandable decode tree with complemented leaf indices. Preserve exact growth,aliasing,overflow and allocation/write order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 861f8d3cd44db2c6f04a9bf211783979bca6e242a5173617aa83b24c8d5ef888. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V"
+    },
+    {
       "symbol": "M:vb.c()[F",
       "originalName": "c",
       "to": "decodeVector",
@@ -300430,7 +300438,7 @@
     },
     {
       "symbol": "L:vb.b()V#0",
-      "renamedSymbol": "L:VorbisCodebook.b()V#0",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#0",
       "originalName": "var2_ref_int__",
       "renamedName": "var2_ref_int__",
       "declaration": {
@@ -300441,7 +300449,7 @@
     },
     {
       "symbol": "L:vb.b()V#1",
-      "renamedSymbol": "L:VorbisCodebook.b()V#1",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -300452,7 +300460,7 @@
     },
     {
       "symbol": "L:vb.b()V#10",
-      "renamedSymbol": "L:VorbisCodebook.b()V#10",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -300463,7 +300471,7 @@
     },
     {
       "symbol": "L:vb.b()V#11",
-      "renamedSymbol": "L:VorbisCodebook.b()V#11",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -300474,7 +300482,7 @@
     },
     {
       "symbol": "L:vb.b()V#12",
-      "renamedSymbol": "L:VorbisCodebook.b()V#12",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -300485,7 +300493,7 @@
     },
     {
       "symbol": "L:vb.b()V#13",
-      "renamedSymbol": "L:VorbisCodebook.b()V#13",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -300496,7 +300504,7 @@
     },
     {
       "symbol": "L:vb.b()V#14",
-      "renamedSymbol": "L:VorbisCodebook.b()V#14",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#14",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -300507,7 +300515,7 @@
     },
     {
       "symbol": "L:vb.b()V#15",
-      "renamedSymbol": "L:VorbisCodebook.b()V#15",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -300518,7 +300526,7 @@
     },
     {
       "symbol": "L:vb.b()V#16",
-      "renamedSymbol": "L:VorbisCodebook.b()V#16",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#16",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -300529,7 +300537,7 @@
     },
     {
       "symbol": "L:vb.b()V#17",
-      "renamedSymbol": "L:VorbisCodebook.b()V#17",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -300540,7 +300548,7 @@
     },
     {
       "symbol": "L:vb.b()V#18",
-      "renamedSymbol": "L:VorbisCodebook.b()V#18",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -300551,7 +300559,7 @@
     },
     {
       "symbol": "L:vb.b()V#19",
-      "renamedSymbol": "L:VorbisCodebook.b()V#19",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -300562,7 +300570,7 @@
     },
     {
       "symbol": "L:vb.b()V#2",
-      "renamedSymbol": "L:VorbisCodebook.b()V#2",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -300573,7 +300581,7 @@
     },
     {
       "symbol": "L:vb.b()V#20",
-      "renamedSymbol": "L:VorbisCodebook.b()V#20",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -300584,7 +300592,7 @@
     },
     {
       "symbol": "L:vb.b()V#21",
-      "renamedSymbol": "L:VorbisCodebook.b()V#21",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#21",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -300595,7 +300603,7 @@
     },
     {
       "symbol": "L:vb.b()V#22",
-      "renamedSymbol": "L:VorbisCodebook.b()V#22",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#22",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -300606,7 +300614,7 @@
     },
     {
       "symbol": "L:vb.b()V#23",
-      "renamedSymbol": "L:VorbisCodebook.b()V#23",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#23",
       "originalName": "var9_intLifetime1",
       "renamedName": "var9_intLifetime1",
       "declaration": {
@@ -300617,7 +300625,7 @@
     },
     {
       "symbol": "L:vb.b()V#3",
-      "renamedSymbol": "L:VorbisCodebook.b()V#3",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -300628,7 +300636,7 @@
     },
     {
       "symbol": "L:vb.b()V#4",
-      "renamedSymbol": "L:VorbisCodebook.b()V#4",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -300639,7 +300647,7 @@
     },
     {
       "symbol": "L:vb.b()V#5",
-      "renamedSymbol": "L:VorbisCodebook.b()V#5",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -300650,7 +300658,7 @@
     },
     {
       "symbol": "L:vb.b()V#6",
-      "renamedSymbol": "L:VorbisCodebook.b()V#6",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -300661,7 +300669,7 @@
     },
     {
       "symbol": "L:vb.b()V#7",
-      "renamedSymbol": "L:VorbisCodebook.b()V#7",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -300672,7 +300680,7 @@
     },
     {
       "symbol": "L:vb.b()V#8",
-      "renamedSymbol": "L:VorbisCodebook.b()V#8",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -300683,7 +300691,7 @@
     },
     {
       "symbol": "L:vb.b()V#9",
-      "renamedSymbol": "L:VorbisCodebook.b()V#9",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#9",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -349600,9 +349608,9 @@
     },
     {
       "symbol": "M:vb.b()V",
-      "renamedSymbol": "M:VorbisCodebook.b()V",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "buildHuffmanTree",
       "declaration": {
         "file": "vb.java",
         "start": 747,
@@ -684899,7 +684907,7 @@
       "original": "vb.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "33b12900add73803f1e2e77ed1f9248932c8d923c4619e3cc1ce1b9b363b839c",
-      "outputSha256": "3c86a5c65f0269a47051a4a07285a4e006823eedf0759e4e7877a98d48679409",
+      "outputSha256": "3ae5ad66809353b4665839ef5e32ce022c46a4ab60f8f621851a08369aceb0fd",
       "edits": [
         {
           "start": 50,
@@ -684956,6 +684964,13 @@
           "symbol": "C:em",
           "original": "em",
           "renamed": "ProductionContent"
+        },
+        {
+          "start": 747,
+          "end": 748,
+          "symbol": "M:vb.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
         },
         {
           "start": 4037,
@@ -685096,6 +685111,13 @@
           "symbol": "M:fd.a(I)I",
           "original": "a",
           "renamed": "readBits"
+        },
+        {
+          "start": 5609,
+          "end": 5610,
+          "symbol": "M:vb.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
         },
         {
           "start": 5638,
@@ -712275,10 +712297,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "7972c682cbcb8de8da7e907e03b29d2da1fe54207273264d18104229d3395a28",
+    "rulesSha256": "fb4d7dd28f89c33b74f5fd9c7453d0c3fd2487365a19d772d04b4b8943e04f60",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "6333bbdce3585dd5009c6244f54b2d486f45cfdc163ca69f10384b49c5e7c829",
+    "outputTreeSha256": "333c684f36e71af0886f937d8f6f2a117cd322a81521a9a8e6fe3b11d6899d52",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

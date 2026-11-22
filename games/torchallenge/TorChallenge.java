@@ -1927,7 +1927,7 @@ public final class TorChallenge extends GameClientBase {
           tj.clearStaticReferences(120);
           dc.clearStaticReferences();
           VorbisSample.clearStaticReferences();
-          l.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           sa.a((byte) 104);
           ok.a(32097);
           jj.a((byte) 124);
@@ -2030,7 +2030,7 @@ public final class TorChallenge extends GameClientBase {
           qh.f((byte) -36);
           uc.a(-15087);
           bl.e(false);
-          ce.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           be.clearStaticReferences(3366);
           DirectByteStorage.d(10166);
           fa.b(-3);

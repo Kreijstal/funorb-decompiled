@@ -271,7 +271,7 @@ public final class SolKnight extends ab {
           mb.b(-694484242);
           aj.clearStaticReferences((byte) -63);
           sl.clearStaticReferences();
-          tc.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           fe.clearStaticReferences();
           u.clearStaticReferences(2);
           ch.a(-114);
@@ -366,7 +366,7 @@ public final class SolKnight extends ab {
           qe.i(-28528);
           be.a(-3);
           hh.clearStaticReferences((byte) 54);
-          tj.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           fb.a(true);
           vk.c(-14275);
           DirectByteStorage.clearStaticReferences(0);

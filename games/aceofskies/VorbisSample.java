@@ -164,7 +164,7 @@ final class VorbisSample extends IntrusiveNode {
         VorbisMapping var14 = field_p[field_u[var2]];
         int var16 = var14.field_d;
         int var17_int = var14.field_c[var16];
-        boolean stackIn_22_0 = !(field_D[var17_int].a());
+        boolean stackIn_22_0 = !(field_D[var17_int].decodeFloor());
         boolean var15 = stackIn_22_0;
         boolean var16Lifetime1 = var15;
         for (int var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_a; var17_intLifetime1++) {
@@ -175,7 +175,7 @@ final class VorbisSample extends IntrusiveNode {
         if (!var15) {
           int var17_intLifetime2 = var14.field_d;
           int var18_int = var14.field_c[var17_intLifetime2];
-          field_D[var18_int].a(field_n, var4 >> 1);
+          field_D[var18_int].applyFloorCurve(field_n, var4 >> 1);
         }
         if (var15) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {

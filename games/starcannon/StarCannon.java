@@ -3265,7 +3265,7 @@ public final class StarCannon extends ag {
         ti.a((byte) 13);
         je.clearStaticReferences();
         nj.clearStaticReferences();
-        l.clearStaticReferences();
+        VorbisFloor.clearStaticReferences();
         ja.clearStaticReferences((byte) 80);
         ih.b((byte) -125);
         jf.a(true);
@@ -3356,7 +3356,7 @@ public final class StarCannon extends ag {
         jj.clearStaticReferences(0);
         el.clearStaticReferences((byte) 115);
         sj.f((byte) 126);
-        h.clearStaticReferences();
+        SoundFilter.clearStaticReferences();
         li.clearStaticReferences(-23);
         se.c((byte) -2);
         DirectByteStorage.clearStaticReferences(20756);

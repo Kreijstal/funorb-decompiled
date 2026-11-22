@@ -9,15 +9,15 @@ final class VorbisCodebook {
     private float[][] field_e;
     private int[] field_d;
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; fd.a(1, var2, param1) > param0; var2--) {
         }
         return var2;
     }
 
-    final float[] c() {
-        return this.field_e[this.a()];
+    final float[] decodeVector() {
+        return this.field_e[this.decodeScalar()];
     }
 
     VorbisCodebook() {
@@ -61,7 +61,7 @@ final class VorbisCodebook {
             var14++;
           }
         }
-        this.b();
+        this.buildHuffmanTree();
         int var2Lifetime1 = VorbisSample.d(4);
         if (var2Lifetime1 > 0) {
           float var3 = VorbisSample.e(VorbisSample.d(32));
@@ -72,7 +72,7 @@ final class VorbisCodebook {
           if (var2Lifetime1 != 1) {
             var7 = this.field_c * this.field_b;
           } else {
-            var7 = VorbisCodebook.a(this.field_c, this.field_b);
+            var7 = VorbisCodebook.lookup1Values(this.field_c, this.field_b);
           }
           this.field_d = new int[var7];
           for (int var8 = 0; var8 < var7; var8++) {
@@ -110,7 +110,7 @@ final class VorbisCodebook {
         }
     }
 
-    private final void b() {
+    private final void buildHuffmanTree() {
         int var6;
         int var7;
         int[] var17 = new int[this.field_c];
@@ -188,7 +188,7 @@ final class VorbisCodebook {
         }
     }
 
-    final int a() {
+    final int decodeScalar() {
         int var1 = 0;
         while (this.field_f[var1] >= 0) {
           var1 = VorbisSample.b() != 0 ? this.field_f[var1] : var1 + 1;

@@ -4866,7 +4866,7 @@ public final class MinerDisturbance extends ob {
           om.clearStaticReferences(param0 - 1);
           gl.a(-2869);
           km.a(true);
-          pg.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           wk.clearStaticReferences(true);
           ra.a(-124);
           hb.a(-105);
@@ -4887,7 +4887,7 @@ public final class MinerDisturbance extends ob {
           s.m(param0 - 117);
           ne.a(2);
           nh.a((byte) -76);
-          la.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           lj.a((byte) -69);
           DirectByteStorage.b(param0 - 1);
           bm.clearStaticReferences(0);

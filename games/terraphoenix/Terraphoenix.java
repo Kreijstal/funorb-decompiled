@@ -4372,7 +4372,7 @@ public final class Terraphoenix extends GameShell {
           RandomAccessCacheFile.clearStaticReferences(1);
           pi.clearStaticReferences();
           VorbisDecoder.clearStaticReferences();
-          jk.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           kg.e(7087);
           hl.b(54);
           nh.d(30937);
@@ -4445,7 +4445,7 @@ public final class Terraphoenix extends GameShell {
           cl.g((byte) 123);
           gh.a(-58);
           ig.clearStaticReferences(123);
-          ek.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           ProxySocketConnector.b(-5);
           DirectByteStorage.clearStaticReferences(0);
           rd.clearStaticReferences(125);

@@ -167,7 +167,7 @@ public final class Bounce extends GameClient {
           u.clearStaticReferences(0);
           gg.clearStaticReferences();
           te.clearStaticReferences();
-          fg.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           wa.a(-13268);
           ub.clearStaticReferences((byte) -104);
           mi.clearStaticReferences((byte) -122);
@@ -259,7 +259,7 @@ public final class Bounce extends GameClient {
           eb.b(true);
           fh.a(false);
           d.f((byte) -112);
-          cd.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           kb.a(-9192);
           mb.c(60);
           DirectByteStorage.clearStaticReferences(11041);

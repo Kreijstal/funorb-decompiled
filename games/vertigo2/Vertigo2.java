@@ -912,7 +912,7 @@ public final class Vertigo2 extends GameShell {
           me.a(6457);
           or.clearStaticReferences((byte) 87);
           dn.clearStaticReferences();
-          rd.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           DualLinkNode.g(52);
           fq.clearStaticReferences(-126);
           SpriteState.a((byte) 115);
@@ -975,7 +975,7 @@ public final class Vertigo2 extends GameShell {
           gl.clearStaticReferences(true);
           jr.a((byte) -100);
           oc.clearStaticReferences(-27171);
-          ep.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           va.clearStaticReferences(60);
           uc.a(91);
           kn.clearStaticReferences(true);

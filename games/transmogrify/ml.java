@@ -16,7 +16,7 @@ final class ml extends IntrusiveNode {
     private boolean field_G;
     private int field_H;
     private static float[] field_D;
-    private static mb[] field_N;
+    private static VorbisFloor[] field_N;
     private static float[] field_F;
     private byte[][] field_i;
     private static float[] field_u;
@@ -30,7 +30,7 @@ final class ml extends IntrusiveNode {
     private static byte[] field_I;
     private static int field_j;
     private byte[] field_J;
-    static sl[] field_y;
+    static VorbisCodebook[] field_y;
     private boolean field_A;
     private static int field_q;
     private static qc[] field_g;
@@ -345,7 +345,7 @@ final class ml extends IntrusiveNode {
         var14 = field_g[field_L[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_c[var16];
-        stackIn_22_0 = (field_N[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_N[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
@@ -356,7 +356,7 @@ final class ml extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_a;
           var18_int = var14.field_c[var17_intLifetime2];
-          field_N[var18_int].a(field_K, var4 >> 1);
+          field_N[var18_int].applyFloorCurve(field_K, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -621,18 +621,18 @@ final class ml extends IntrusiveNode {
           }
         }
         var1Lifetime1 = ml.f(8) + 1;
-        field_y = new sl[var1Lifetime1];
+        field_y = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_y[var2Lifetime1] = new sl();
+          field_y[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = ml.f(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           ml.f(16);
         }
         var2Lifetime3 = ml.f(6) + 1;
-        field_N = new mb[var2Lifetime3];
+        field_N = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_N[var3Lifetime2] = new mb();
+          field_N[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = ml.f(6) + 1;
         field_t = new p[var3Lifetime3];

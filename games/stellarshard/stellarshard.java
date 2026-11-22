@@ -2923,7 +2923,7 @@ public final class stellarshard extends rb implements cf {
           qh.clearStaticReferences(param0 - 15392);
           tj.clearStaticReferences();
           ad.clearStaticReferences();
-          mi.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           gk.a(param0 + 129);
           fc.a((byte) 86);
           tf.b(param0 + 22);
@@ -3019,7 +3019,7 @@ public final class stellarshard extends rb implements cf {
           sj.e((byte) 23);
           fg.clearStaticReferences(param0 ^ -128);
           nb.clearStaticReferences((byte) 105);
-          dh.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           sg.clearStaticReferences(-29297);
           pd.clearStaticReferences((byte) 117);
           DirectByteStorage.c(-17002);

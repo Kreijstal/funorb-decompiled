@@ -50,7 +50,7 @@ final class VorbisResidue {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = VorbisSample.field_p[this.field_a].a();
+              var10 = VorbisSample.field_p[this.field_a].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_f;
@@ -69,7 +69,7 @@ final class VorbisResidue {
                 if (this.field_e != 0) {
                   var15 = 0;
                   while (var15 < this.field_c) {
-                    var28 = var14.b();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_e; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class VorbisResidue {
                 } else {
                   var15 = this.field_c / var14.field_e;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.b();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_e; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }

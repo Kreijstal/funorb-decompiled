@@ -437,7 +437,7 @@ public final class TrackController extends GameShell {
         hl.l(param0 ^ -66);
         IntrusiveDequeCursor.clearStaticReferences(param0 ^ -18);
         ie.clearStaticReferences(82);
-        df.clearStaticReferences();
+        VorbisFloor.clearStaticReferences();
         kf.b(-1688814815);
         ob.clearStaticReferences((byte) -68);
         lg.clearStaticReferences(16228);
@@ -468,7 +468,7 @@ public final class TrackController extends GameShell {
         ka.clearStaticReferences(true);
         fe.j(-127);
         qk.clearStaticReferences((byte) 40);
-        vf.clearStaticReferences();
+        SoundFilter.clearStaticReferences();
         f.a((byte) 113);
         DirectByteStorage.b(param0 - 105);
         cj.e(4);

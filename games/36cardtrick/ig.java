@@ -26,12 +26,12 @@ final class ig extends IntrusiveNode {
     private int field_x;
     private static int field_u;
     private float[] field_w;
-    private static df[] field_L;
+    private static VorbisFloor[] field_L;
     private static float[] field_s;
     private static int field_H;
     private byte[] field_p;
     private static float[] field_F;
-    static ql[] field_E;
+    static VorbisCodebook[] field_E;
     private static boolean field_N;
     private static float[] field_J;
     private static int field_g;
@@ -242,18 +242,18 @@ final class ig extends IntrusiveNode {
           }
         }
         var1Lifetime1 = ig.e(8) + 1;
-        field_E = new ql[var1Lifetime1];
+        field_E = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_E[var2Lifetime1] = new ql();
+          field_E[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = ig.e(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           ig.e(16);
         }
         var2Lifetime3 = ig.e(6) + 1;
-        field_L = new df[var2Lifetime3];
+        field_L = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_L[var3Lifetime2] = new df();
+          field_L[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = ig.e(6) + 1;
         field_t = new wj[var3Lifetime3];
@@ -506,7 +506,7 @@ final class ig extends IntrusiveNode {
         var14 = field_A[field_r[var2]];
         var16 = var14.field_d;
         var17_int = var14.field_c[var16];
-        stackIn_22_0 = (field_L[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_L[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
@@ -517,7 +517,7 @@ final class ig extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_d;
           var18_int = var14.field_c[var17_intLifetime2];
-          field_L[var18_int].a(field_o, var4 >> 1);
+          field_L[var18_int].applyFloorCurve(field_o, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {

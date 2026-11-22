@@ -28,7 +28,7 @@ final class VorbisCodebook {
         return var2;
     }
 
-    private final void b() {
+    private final void buildHuffmanTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -186,7 +186,7 @@ final class VorbisCodebook {
             var14++;
           }
         }
-        this.b();
+        this.buildHuffmanTree();
         var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
           var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));

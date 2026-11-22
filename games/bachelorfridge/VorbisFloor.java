@@ -131,7 +131,7 @@ final class VorbisFloor {
         return var3;
     }
 
-    final void a(float[] param0, int param1) {
+    final void applyFloorCurve(float[] param0, int param1) {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -228,7 +228,7 @@ final class VorbisFloor {
         }
     }
 
-    final boolean a() {
+    final boolean decodeFloor() {
         int var6 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;

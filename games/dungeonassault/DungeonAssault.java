@@ -804,7 +804,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ii.e((byte) -21);
           dj.a((byte) 113);
           am.a(30111);
-          nd.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           vb.clearStaticReferences((byte) -69);
           nf.e((byte) 93);
           hk.clearStaticReferences(-73);
@@ -872,7 +872,7 @@ public final class DungeonAssault extends NetworkGameClient {
           rp.b((byte) -68);
           g.g(-101);
           oo.a(13054);
-          bi.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           NodeHashTableIterator.clearStaticReferences(0);
           SecondaryNodeDequeIterator.clearStaticReferences((byte) -90);
           fa.a(-28822);

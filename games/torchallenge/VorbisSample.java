@@ -19,7 +19,7 @@ final class VorbisSample extends IntrusiveNode {
     private int field_A;
     private int field_N;
     static VorbisCodebook[] field_q;
-    private static l[] field_v;
+    private static VorbisFloor[] field_v;
     private static int[] field_L;
     private static float[] field_z;
     private int field_P;
@@ -287,9 +287,9 @@ final class VorbisSample extends IntrusiveNode {
           VorbisSample.d(16);
         }
         var2Lifetime3 = VorbisSample.d(6) + 1;
-        field_v = new l[var2Lifetime3];
+        field_v = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_v[var3Lifetime2] = new l();
+          field_v[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = VorbisSample.d(6) + 1;
         field_I = new lf[var3Lifetime3];
@@ -556,7 +556,7 @@ final class VorbisSample extends IntrusiveNode {
         var14 = field_G[field_o[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_v[var17_int].a()) ? 0 : 1;
+        stackIn_22_0 = (field_v[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_c; var17_intLifetime1++) {
@@ -567,7 +567,7 @@ final class VorbisSample extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_a;
           var18_int = var14.field_d[var17_intLifetime2];
-          field_v[var18_int].a(field_B, var4 >> 1);
+          field_v[var18_int].applyFloorCurve(field_B, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {

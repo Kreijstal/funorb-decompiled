@@ -449,7 +449,7 @@ public final class OrbDefence extends NetworkGameClient {
         ne.clearStaticReferences(-1459);
         kh.clearStaticReferences();
         nj.clearStaticReferences();
-        qa.clearStaticReferences();
+        VorbisFloor.clearStaticReferences();
         sd.a((byte) -30);
         DualLinkNode.a((byte) -128);
         ia.a((byte) 125);
@@ -552,7 +552,7 @@ public final class OrbDefence extends NetworkGameClient {
         qb.a((byte) -83);
         ob.a((byte) -19);
         ue.clearStaticReferences((byte) -13);
-        lk.clearStaticReferences();
+        SoundFilter.clearStaticReferences();
         j.clearStaticReferences(-99);
         gi.a(param0);
         nc.e(8864);

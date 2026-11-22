@@ -17,10 +17,10 @@ final class VorbisSample extends HashNode {
     private int integerState0828;
     private byte[][] byteArrayArrayState0010;
     private static float[] floatArrayState0006;
-    private static MixedSupport060[] mixedSupport060ArrayState0001;
+    private static VorbisFloor[] mixedSupport060ArrayState0001;
     private static MixedSupport012[] mixedSupport012ArrayState0001;
     private static boolean[] booleanArrayState0011;
-    static MixedSupport064[] mixedSupport064ArrayState0001;
+    static VorbisCodebook[] mixedSupport064ArrayState0001;
     private int integerState0829;
     private static float[] floatArrayState0007;
     private byte[] byteArrayState0030;
@@ -127,18 +127,18 @@ final class VorbisSample extends HashNode {
           }
         }
         integerLocal20 = VorbisSample.computeInteger1696(8) + 1;
-        mixedSupport064ArrayState0001 = new MixedSupport064[integerLocal20];
+        mixedSupport064ArrayState0001 = new VorbisCodebook[integerLocal20];
         for (integerLocal21 = 0; integerLocal21 < integerLocal20; integerLocal21++) {
-          mixedSupport064ArrayState0001[integerLocal21] = new MixedSupport064();
+          mixedSupport064ArrayState0001[integerLocal21] = new VorbisCodebook();
         }
         integerLocal22 = VorbisSample.computeInteger1696(6) + 1;
         for (integerLocal24 = 0; integerLocal24 < integerLocal22; integerLocal24++) {
           VorbisSample.computeInteger1696(16);
         }
         integerLocal23 = VorbisSample.computeInteger1696(6) + 1;
-        mixedSupport060ArrayState0001 = new MixedSupport060[integerLocal23];
+        mixedSupport060ArrayState0001 = new VorbisFloor[integerLocal23];
         for (integerLocal25 = 0; integerLocal25 < integerLocal23; integerLocal25++) {
-          mixedSupport060ArrayState0001[integerLocal25] = new MixedSupport060();
+          mixedSupport060ArrayState0001[integerLocal25] = new VorbisFloor();
         }
         integerLocal26 = VorbisSample.computeInteger1696(6) + 1;
         mixedSupport012ArrayState0001 = new MixedSupport012[integerLocal26];
@@ -446,7 +446,7 @@ final class VorbisSample extends HashNode {
         mixedSupport102Local23 = mixedSupport102ArrayState0001[integerArrayState0235[integerLocal11]];
         integerLocal25 = mixedSupport102Local23.integerState0593;
         integerLocal26 = mixedSupport102Local23.integerArrayState0185[integerLocal25];
-        stackIntegerLocal5 = (mixedSupport060ArrayState0001[integerLocal26].computeBoolean0720()) ? 0 : 1;
+        stackIntegerLocal5 = (mixedSupport060ArrayState0001[integerLocal26].decodeFloor()) ? 0 : 1;
         integerLocal24 = stackIntegerLocal5;
         integerLocal70 = integerLocal24;
         for (integerLocal71 = 0; integerLocal71 < mixedSupport102Local23.integerState0594; integerLocal71++) {
@@ -457,7 +457,7 @@ final class VorbisSample extends HashNode {
         if (integerLocal24 == 0) {
           integerLocal72 = mixedSupport102Local23.integerState0593;
           integerLocal28 = mixedSupport102Local23.integerArrayState0185[integerLocal72];
-          mixedSupport060ArrayState0001[integerLocal28].performAction0724(floatArrayState0010, integerLocal13 >> 1);
+          mixedSupport060ArrayState0001[integerLocal28].applyFloorCurve(floatArrayState0010, integerLocal13 >> 1);
         }
         if (integerLocal24 != 0) {
           for (integerLocal73 = integerLocal13 >> 1; integerLocal73 < integerLocal13; integerLocal73++) {

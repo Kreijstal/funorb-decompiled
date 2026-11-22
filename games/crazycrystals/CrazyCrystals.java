@@ -653,7 +653,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           em.b(param0 ^ -66);
           mc.b((byte) 126);
           bl.clearStaticReferences();
-          ej.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           nm.clearStaticReferences();
           r.clearStaticReferences(27);
           ff.c(param0 ^ -18779);
@@ -770,7 +770,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ph.clearStaticReferences(true);
           pa.e((byte) -104);
           dq.clearStaticReferences((byte) -69);
-          bk.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           kj.a(-99);
           DirectByteStorage.clearStaticReferences(0);
           ch.clearStaticReferences(855);

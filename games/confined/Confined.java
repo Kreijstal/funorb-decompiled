@@ -145,7 +145,7 @@ public final class Confined extends i {
           qj.b(0);
           lg.clearStaticReferences();
           ph.clearStaticReferences();
-          sl.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           m.a(27244);
           vh.b(false);
           ji.clearStaticReferences((byte) 102);
@@ -243,7 +243,7 @@ public final class Confined extends i {
           pi.a((byte) -81);
           jh.b(true);
           nj.a((byte) -93);
-          uf.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           fb.clearStaticReferences(false);
           DirectByteStorage.c(-6348);
           c.a((byte) 87);

@@ -6732,12 +6732,68 @@
       "renamedSymbol": "M:an.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ar.a()Z",
+      "originalName": "a",
+      "to": "decodeFloor",
+      "evidence": "Read the floor-presence bit;absent returns false before scratch writes. Present copies x coordinates,decodes initial y and partition/subclass scalar codebook values into shared scratch arrays. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 02c98259fbf539ddcdc99f86a6207804ff039be0f92666894050d296d5fa4dfa. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z"
+    },
+    {
+      "symbol": "M:ar.a(II)V",
+      "originalName": "a",
+      "to": "sortFloorPoints",
+      "evidence": "Quicksort the shared floor x/y/active arrays together by x coordinate,including recursive subranges and original alias/write ordering. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 7721e1e701190c748438510fa83e9afc193415e95e9c65de9c18eeecd2b241a3. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.sortFloorPoints(II)V"
+    },
+    {
+      "symbol": "M:ar.a(IIIII)I",
+      "originalName": "a",
+      "to": "interpolateFloorPoint",
+      "evidence": "Integer interpolation of y between two x/y endpoints at a requested x,preserving signed arithmetic,overflow and division failure. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 494cc4fc2e7efa6e6e8c17bedc6b2fc34e6db8834835d4ca76ce3540a802cc56. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.interpolateFloorPoint(IIIII)I"
+    },
+    {
+      "symbol": "M:ar.a(IIII[FI)V",
+      "originalName": "a",
+      "to": "renderFloorLine",
+      "evidence": "Multiply the spectrum by the inverse-decibel lookup while stepping an integer floor line;preserve the first write before clipping,division and all index/failure behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 039f78ad680248a0b23f53088a14309de1d6e7915cf0341e6c59aa8467d9443c. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.renderFloorLine(IIII[FI)V"
+    },
+    {
+      "symbol": "M:ar.a([FI)V",
+      "originalName": "a",
+      "to": "applyFloorCurve",
+      "evidence": "Predict and unpack floor y values using low/high neighbors,mark active points,sort linked x/y/active state,render each active segment and multiply the remaining tail. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 2d0f8324a656e2f55714e7541b152109a3692b2c70f60c9b254b7ae22ee000c3. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V"
+    },
+    {
+      "symbol": "M:ar.a([II)I",
+      "originalName": "a",
+      "to": "findLowNeighbor",
+      "evidence": "Among earlier points find the greatest x strictly below the current x;retain-1 when absent and original bounds behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 0d79b9c7a05464262f645cb9dd38c6bdfe272bda4f7e71663c78a33843a00e77. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.findLowNeighbor([II)I"
+    },
+    {
       "symbol": "M:ar.b()V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 87fdb8a75513c3f2d1735ab6b532da7353a95032eb37795397eafc83f7860eef.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisFloor.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:ar.b([II)I",
+      "originalName": "b",
+      "to": "findHighNeighbor",
+      "evidence": "Among earlier points find the least x strictly above the current x;retain-1 when absent and original bounds behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 8956efb59bd49d0ce07de6b213b2924966d6d4cb6f1d3f6f92a1c3196a316bf5. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.findHighNeighbor([II)I"
     },
     {
       "symbol": "M:bb.a(I)V",
@@ -7124,6 +7180,38 @@
       "renamedSymbol": "M:RendererBitmapFont.drawGlyph(CIIIZ)V"
     },
     {
+      "symbol": "M:db.a()I",
+      "originalName": "a",
+      "to": "decodeScalar",
+      "evidence": "Walk the Huffman decode tree with each input bit;return complemented leaf entry index. Preserve tree/bit-reader access and failure order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 24eea10bc87a5f5f260b03df5845e9b642cbbc50ef68ec43b5afda616d866064. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.decodeScalar()I"
+    },
+    {
+      "symbol": "M:db.a(II)I",
+      "originalName": "a",
+      "to": "lookup1Values",
+      "evidence": "Estimate entryCount^(1/dimensions)+1,then decrement while the integer-power helper exceeds entryCount. Preserve Java floating casts,int overflow,helper guards and invalid-domain behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 94be07118ce65221bb3bd395ae5d7c435288522d0955244b5411844640175e31. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I"
+    },
+    {
+      "symbol": "M:db.b()V",
+      "originalName": "b",
+      "to": "buildHuffmanTree",
+      "evidence": "Build canonical codewords from per-entry lengths with32-bit shifts/carry updates,then construct the expandable decode tree with complemented leaf indices. Preserve exact growth,aliasing,overflow and allocation/write order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 e1fbc335ed000a32031563db016e9a3b7a412c03bf50c05c806222bf832925cc. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V"
+    },
+    {
+      "symbol": "M:db.c()[F",
+      "originalName": "c",
+      "to": "decodeVector",
+      "evidence": "Decode one scalar entry and return its stored float vector row directly,retaining shared mutable alias and all null/index failures. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 c04460c68dce166d5d0800fc0fb9aff16c8b1c8308c2b93f78a9db1471e0d7be. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F"
+    },
+    {
       "symbol": "M:dd.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -7490,6 +7578,46 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 11dc06c443ee36dd58498ffd4022a0067c26eb292b95c411b8f04ab106a3774d.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoundFilter.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:ge.a(F)F",
+      "originalName": "a",
+      "to": "normalizeFrequency",
+      "evidence": "Convert the logarithmic frequency value through32.70319747924805*2^value and pi/11025,preserving exact literals,casts and FP operations. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 d351ac2d2abe66a9cb99df96dc311b2dd894374720702ea587c7ba45230d35a6. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.normalizeFrequency(F)F"
+    },
+    {
+      "symbol": "M:ge.a(IF)I",
+      "originalName": "a",
+      "to": "computeCoefficients",
+      "evidence": "Interpolate gain and paired pole magnitude/frequency,cascade polynomial coefficients,apply channel0 gain,convert to Q16 integer coefficients and return twice the pair count. Preserve FP evaluation/casts,shared buffers,overflow and all partial updates. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 c2048322103d1943eedda27bde41369728690c3d20cbb2784df8e19671c58623. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.computeCoefficients(IF)I"
+    },
+    {
+      "symbol": "M:ge.a(IIF)F",
+      "originalName": "a",
+      "to": "interpolateFrequency",
+      "evidence": "Interpolate retained phase/frequency values,scale by1/8192 and delegate to the original frequency normalization helper. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 2d4e0e56c92d7852679b348d54e520efab0fdbc5ff8e087930fef69a1928cbf3. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.interpolateFrequency(IIF)F"
+    },
+    {
+      "symbol": "M:ge.a(Lrb;Lwh;)V",
+      "originalName": "a",
+      "to": "decode",
+      "evidence": "Read pair counts from packed nibbles,two gain endpoints,per-pair first-state phase/magnitude and masked second-state overrides;copy unchanged pairs,conditionally decode the envelope segments,or reset both gains for zero counts. Preserve every original reader/envelope guard and read/allocation/write/failure order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 a3993c200d4ac60ad7d260f51316d905d8e46abb88a6560a43b5329ffd4b255b. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V"
+    },
+    {
+      "symbol": "M:ge.b(IIF)F",
+      "originalName": "b",
+      "to": "interpolateMagnitude",
+      "evidence": "Interpolate the two retained magnitude values,scale to decibels and return1-10^(-value/20),preserving exact float/double evaluation and indexing. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 9f40b77d8d23c62bb8be0a6d43c481605267bdfc21a31ef65430b844d325bb74. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.interpolateMagnitude(IIF)F"
     },
     {
       "symbol": "M:gh.b(I)V",
@@ -69868,7 +69996,7 @@
     },
     {
       "symbol": "L:ar.a()Z#0",
-      "renamedSymbol": "L:VorbisFloor.a()Z#0",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#0",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -69879,7 +70007,7 @@
     },
     {
       "symbol": "L:ar.a()Z#1",
-      "renamedSymbol": "L:VorbisFloor.a()Z#1",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -69890,7 +70018,7 @@
     },
     {
       "symbol": "L:ar.a()Z#10",
-      "renamedSymbol": "L:VorbisFloor.a()Z#10",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69901,7 +70029,7 @@
     },
     {
       "symbol": "L:ar.a()Z#11",
-      "renamedSymbol": "L:VorbisFloor.a()Z#11",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69912,7 +70040,7 @@
     },
     {
       "symbol": "L:ar.a()Z#12",
-      "renamedSymbol": "L:VorbisFloor.a()Z#12",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -69923,7 +70051,7 @@
     },
     {
       "symbol": "L:ar.a()Z#13",
-      "renamedSymbol": "L:VorbisFloor.a()Z#13",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -69934,7 +70062,7 @@
     },
     {
       "symbol": "L:ar.a()Z#14",
-      "renamedSymbol": "L:VorbisFloor.a()Z#14",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -69945,7 +70073,7 @@
     },
     {
       "symbol": "L:ar.a()Z#15",
-      "renamedSymbol": "L:VorbisFloor.a()Z#15",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#15",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -69956,7 +70084,7 @@
     },
     {
       "symbol": "L:ar.a()Z#16",
-      "renamedSymbol": "L:VorbisFloor.a()Z#16",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#16",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -69967,7 +70095,7 @@
     },
     {
       "symbol": "L:ar.a()Z#17",
-      "renamedSymbol": "L:VorbisFloor.a()Z#17",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#17",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -69978,7 +70106,7 @@
     },
     {
       "symbol": "L:ar.a()Z#2",
-      "renamedSymbol": "L:VorbisFloor.a()Z#2",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -69989,7 +70117,7 @@
     },
     {
       "symbol": "L:ar.a()Z#3",
-      "renamedSymbol": "L:VorbisFloor.a()Z#3",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -70000,7 +70128,7 @@
     },
     {
       "symbol": "L:ar.a()Z#4",
-      "renamedSymbol": "L:VorbisFloor.a()Z#4",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -70011,7 +70139,7 @@
     },
     {
       "symbol": "L:ar.a()Z#5",
-      "renamedSymbol": "L:VorbisFloor.a()Z#5",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70022,7 +70150,7 @@
     },
     {
       "symbol": "L:ar.a()Z#6",
-      "renamedSymbol": "L:VorbisFloor.a()Z#6",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70033,7 +70161,7 @@
     },
     {
       "symbol": "L:ar.a()Z#7",
-      "renamedSymbol": "L:VorbisFloor.a()Z#7",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70044,7 +70172,7 @@
     },
     {
       "symbol": "L:ar.a()Z#8",
-      "renamedSymbol": "L:VorbisFloor.a()Z#8",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70055,7 +70183,7 @@
     },
     {
       "symbol": "L:ar.a()Z#9",
-      "renamedSymbol": "L:VorbisFloor.a()Z#9",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70066,7 +70194,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#0",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#0",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -70077,7 +70205,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#1",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#1",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70088,7 +70216,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#2",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#2",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70099,7 +70227,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#3",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#3",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70110,7 +70238,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#4",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#4",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70121,7 +70249,7 @@
     },
     {
       "symbol": "L:ar.a(II)V#5",
-      "renamedSymbol": "L:VorbisFloor.a(II)V#5",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70132,7 +70260,7 @@
     },
     {
       "symbol": "L:ar.a(IIIII)I#0",
-      "renamedSymbol": "L:VorbisFloor.a(IIIII)I#0",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70143,7 +70271,7 @@
     },
     {
       "symbol": "L:ar.a(IIIII)I#1",
-      "renamedSymbol": "L:VorbisFloor.a(IIIII)I#1",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70154,7 +70282,7 @@
     },
     {
       "symbol": "L:ar.a(IIIII)I#2",
-      "renamedSymbol": "L:VorbisFloor.a(IIIII)I#2",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70165,7 +70293,7 @@
     },
     {
       "symbol": "L:ar.a(IIIII)I#3",
-      "renamedSymbol": "L:VorbisFloor.a(IIIII)I#3",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70176,7 +70304,7 @@
     },
     {
       "symbol": "L:ar.a(IIIII)I#4",
-      "renamedSymbol": "L:VorbisFloor.a(IIIII)I#4",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70187,7 +70315,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#0",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#0",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70198,7 +70326,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#1",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#1",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70209,7 +70337,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#2",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#2",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70220,7 +70348,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#3",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#3",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70231,7 +70359,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#4",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#4",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -70242,7 +70370,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#5",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#5",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -70253,7 +70381,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#6",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#6",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -70264,7 +70392,7 @@
     },
     {
       "symbol": "L:ar.a(IIII[FI)V#7",
-      "renamedSymbol": "L:VorbisFloor.a(IIII[FI)V#7",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -70275,7 +70403,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#0",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#0",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -70286,7 +70414,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#1",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#1",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -70297,7 +70425,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#10",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#10",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -70308,7 +70436,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#11",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#11",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -70319,7 +70447,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#12",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#12",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#12",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -70330,7 +70458,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#13",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#13",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#13",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -70341,7 +70469,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#14",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#14",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -70352,7 +70480,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#15",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#15",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -70363,7 +70491,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#16",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#16",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#16",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -70374,7 +70502,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#17",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#17",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#17",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -70385,7 +70513,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#18",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#18",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#18",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -70396,7 +70524,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#19",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#19",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#19",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -70407,7 +70535,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#2",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#2",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -70418,7 +70546,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#20",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#20",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#20",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -70429,7 +70557,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#21",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#21",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#21",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -70440,7 +70568,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#22",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#22",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#22",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -70451,7 +70579,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#23",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#23",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#23",
       "originalName": "var8_intLifetime1",
       "renamedName": "var8_intLifetime1",
       "declaration": {
@@ -70462,7 +70590,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#24",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#24",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#24",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -70473,7 +70601,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#25",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#25",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#25",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -70484,7 +70612,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#26",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#26",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#26",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70495,7 +70623,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#27",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#27",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#27",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -70506,7 +70634,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#3",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#3",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70517,7 +70645,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#4",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#4",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70528,7 +70656,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#5",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#5",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70539,7 +70667,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#6",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#6",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70550,7 +70678,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#7",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#7",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#7",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -70561,7 +70689,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#8",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#8",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70572,7 +70700,7 @@
     },
     {
       "symbol": "L:ar.a([FI)V#9",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#9",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70583,7 +70711,7 @@
     },
     {
       "symbol": "L:ar.a([II)I#0",
-      "renamedSymbol": "L:VorbisFloor.a([II)I#0",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -70594,7 +70722,7 @@
     },
     {
       "symbol": "L:ar.a([II)I#1",
-      "renamedSymbol": "L:VorbisFloor.a([II)I#1",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -70605,7 +70733,7 @@
     },
     {
       "symbol": "L:ar.a([II)I#2",
-      "renamedSymbol": "L:VorbisFloor.a([II)I#2",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70616,7 +70744,7 @@
     },
     {
       "symbol": "L:ar.a([II)I#3",
-      "renamedSymbol": "L:VorbisFloor.a([II)I#3",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70627,7 +70755,7 @@
     },
     {
       "symbol": "L:ar.a([II)I#4",
-      "renamedSymbol": "L:VorbisFloor.a([II)I#4",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70638,7 +70766,7 @@
     },
     {
       "symbol": "L:ar.b([II)I#0",
-      "renamedSymbol": "L:VorbisFloor.b([II)I#0",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -70649,7 +70777,7 @@
     },
     {
       "symbol": "L:ar.b([II)I#1",
-      "renamedSymbol": "L:VorbisFloor.b([II)I#1",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -70660,7 +70788,7 @@
     },
     {
       "symbol": "L:ar.b([II)I#2",
-      "renamedSymbol": "L:VorbisFloor.b([II)I#2",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70671,7 +70799,7 @@
     },
     {
       "symbol": "L:ar.b([II)I#3",
-      "renamedSymbol": "L:VorbisFloor.b([II)I#3",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70682,7 +70810,7 @@
     },
     {
       "symbol": "L:ar.b([II)I#4",
-      "renamedSymbol": "L:VorbisFloor.b([II)I#4",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -88095,7 +88223,7 @@
     },
     {
       "symbol": "L:db.a()I#0",
-      "renamedSymbol": "L:VorbisCodebook.a()I#0",
+      "renamedSymbol": "L:VorbisCodebook.decodeScalar()I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -88106,7 +88234,7 @@
     },
     {
       "symbol": "L:db.a(II)I#0",
-      "renamedSymbol": "L:VorbisCodebook.a(II)I#0",
+      "renamedSymbol": "L:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -88117,7 +88245,7 @@
     },
     {
       "symbol": "L:db.b()V#0",
-      "renamedSymbol": "L:VorbisCodebook.b()V#0",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -88128,7 +88256,7 @@
     },
     {
       "symbol": "L:db.b()V#1",
-      "renamedSymbol": "L:VorbisCodebook.b()V#1",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -88139,7 +88267,7 @@
     },
     {
       "symbol": "L:db.b()V#10",
-      "renamedSymbol": "L:VorbisCodebook.b()V#10",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#10",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -88150,7 +88278,7 @@
     },
     {
       "symbol": "L:db.b()V#11",
-      "renamedSymbol": "L:VorbisCodebook.b()V#11",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -88161,7 +88289,7 @@
     },
     {
       "symbol": "L:db.b()V#12",
-      "renamedSymbol": "L:VorbisCodebook.b()V#12",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#12",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -88172,7 +88300,7 @@
     },
     {
       "symbol": "L:db.b()V#13",
-      "renamedSymbol": "L:VorbisCodebook.b()V#13",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#13",
       "originalName": "var9_intLifetime1",
       "renamedName": "var9_intLifetime1",
       "declaration": {
@@ -88183,7 +88311,7 @@
     },
     {
       "symbol": "L:db.b()V#14",
-      "renamedSymbol": "L:VorbisCodebook.b()V#14",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#14",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -88194,7 +88322,7 @@
     },
     {
       "symbol": "L:db.b()V#15",
-      "renamedSymbol": "L:VorbisCodebook.b()V#15",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -88205,7 +88333,7 @@
     },
     {
       "symbol": "L:db.b()V#16",
-      "renamedSymbol": "L:VorbisCodebook.b()V#16",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#16",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -88216,7 +88344,7 @@
     },
     {
       "symbol": "L:db.b()V#17",
-      "renamedSymbol": "L:VorbisCodebook.b()V#17",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -88227,7 +88355,7 @@
     },
     {
       "symbol": "L:db.b()V#18",
-      "renamedSymbol": "L:VorbisCodebook.b()V#18",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -88238,7 +88366,7 @@
     },
     {
       "symbol": "L:db.b()V#19",
-      "renamedSymbol": "L:VorbisCodebook.b()V#19",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -88249,7 +88377,7 @@
     },
     {
       "symbol": "L:db.b()V#2",
-      "renamedSymbol": "L:VorbisCodebook.b()V#2",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#2",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -88260,7 +88388,7 @@
     },
     {
       "symbol": "L:db.b()V#20",
-      "renamedSymbol": "L:VorbisCodebook.b()V#20",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -88271,7 +88399,7 @@
     },
     {
       "symbol": "L:db.b()V#21",
-      "renamedSymbol": "L:VorbisCodebook.b()V#21",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#21",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -88282,7 +88410,7 @@
     },
     {
       "symbol": "L:db.b()V#22",
-      "renamedSymbol": "L:VorbisCodebook.b()V#22",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#22",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -88293,7 +88421,7 @@
     },
     {
       "symbol": "L:db.b()V#23",
-      "renamedSymbol": "L:VorbisCodebook.b()V#23",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#23",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -88304,7 +88432,7 @@
     },
     {
       "symbol": "L:db.b()V#3",
-      "renamedSymbol": "L:VorbisCodebook.b()V#3",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#3",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -88315,7 +88443,7 @@
     },
     {
       "symbol": "L:db.b()V#4",
-      "renamedSymbol": "L:VorbisCodebook.b()V#4",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -88326,7 +88454,7 @@
     },
     {
       "symbol": "L:db.b()V#5",
-      "renamedSymbol": "L:VorbisCodebook.b()V#5",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#5",
       "originalName": "var2_ref_int__",
       "renamedName": "var2_ref_int__",
       "declaration": {
@@ -88337,7 +88465,7 @@
     },
     {
       "symbol": "L:db.b()V#6",
-      "renamedSymbol": "L:VorbisCodebook.b()V#6",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -88348,7 +88476,7 @@
     },
     {
       "symbol": "L:db.b()V#7",
-      "renamedSymbol": "L:VorbisCodebook.b()V#7",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -88359,7 +88487,7 @@
     },
     {
       "symbol": "L:db.b()V#8",
-      "renamedSymbol": "L:VorbisCodebook.b()V#8",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -88370,7 +88498,7 @@
     },
     {
       "symbol": "L:db.b()V#9",
-      "renamedSymbol": "L:VorbisCodebook.b()V#9",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -106179,7 +106307,7 @@
     },
     {
       "symbol": "L:ge.a(F)F#0",
-      "renamedSymbol": "L:SoundFilter.a(F)F#0",
+      "renamedSymbol": "L:SoundFilter.normalizeFrequency(F)F#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -106190,7 +106318,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#0",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#0",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -106201,7 +106329,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#1",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#1",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#1",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -106212,7 +106340,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#10",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#10",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#10",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -106223,7 +106351,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#11",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#11",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#11",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -106234,7 +106362,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#12",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#12",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#12",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -106245,7 +106373,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#2",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#2",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106256,7 +106384,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#3",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#3",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#3",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -106267,7 +106395,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#4",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#4",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -106278,7 +106406,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#5",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#5",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -106289,7 +106417,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#6",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#6",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -106300,7 +106428,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#7",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#7",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#7",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -106311,7 +106439,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#8",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#8",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#8",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -106322,7 +106450,7 @@
     },
     {
       "symbol": "L:ge.a(IF)I#9",
-      "renamedSymbol": "L:SoundFilter.a(IF)I#9",
+      "renamedSymbol": "L:SoundFilter.computeCoefficients(IF)I#9",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -106333,7 +106461,7 @@
     },
     {
       "symbol": "L:ge.a(IIF)F#0",
-      "renamedSymbol": "L:SoundFilter.a(IIF)F#0",
+      "renamedSymbol": "L:SoundFilter.interpolateFrequency(IIF)F#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106344,7 +106472,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#0",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#0",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -106355,7 +106483,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#1",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#1",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106366,7 +106494,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#2",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#2",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -106377,7 +106505,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#3",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#3",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -106388,7 +106516,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#4",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#4",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -106399,7 +106527,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#5",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#5",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -106410,7 +106538,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#6",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#6",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#6",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -106421,7 +106549,7 @@
     },
     {
       "symbol": "L:ge.a(Lrb;Lwh;)V#7",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#7",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -106432,7 +106560,7 @@
     },
     {
       "symbol": "L:ge.b(IIF)F#0",
-      "renamedSymbol": "L:SoundFilter.b(IIF)F#0",
+      "renamedSymbol": "L:SoundFilter.interpolateMagnitude(IIF)F#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241556,9 +241684,9 @@
     },
     {
       "symbol": "M:ar.a()Z",
-      "renamedSymbol": "M:VorbisFloor.a()Z",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeFloor",
       "declaration": {
         "file": "ar.java",
         "start": 4772,
@@ -241567,9 +241695,9 @@
     },
     {
       "symbol": "M:ar.a(II)V",
-      "renamedSymbol": "M:VorbisFloor.a(II)V",
+      "renamedSymbol": "M:VorbisFloor.sortFloorPoints(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sortFloorPoints",
       "declaration": {
         "file": "ar.java",
         "start": 6156,
@@ -241578,9 +241706,9 @@
     },
     {
       "symbol": "M:ar.a(IIIII)I",
-      "renamedSymbol": "M:VorbisFloor.a(IIIII)I",
+      "renamedSymbol": "M:VorbisFloor.interpolateFloorPoint(IIIII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "interpolateFloorPoint",
       "declaration": {
         "file": "ar.java",
         "start": 1478,
@@ -241589,9 +241717,9 @@
     },
     {
       "symbol": "M:ar.a(IIII[FI)V",
-      "renamedSymbol": "M:VorbisFloor.a(IIII[FI)V",
+      "renamedSymbol": "M:VorbisFloor.renderFloorLine(IIII[FI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "renderFloorLine",
       "declaration": {
         "file": "ar.java",
         "start": 600,
@@ -241600,9 +241728,9 @@
     },
     {
       "symbol": "M:ar.a([FI)V",
-      "renamedSymbol": "M:VorbisFloor.a([FI)V",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyFloorCurve",
       "declaration": {
         "file": "ar.java",
         "start": 2208,
@@ -241611,9 +241739,9 @@
     },
     {
       "symbol": "M:ar.a([II)I",
-      "renamedSymbol": "M:VorbisFloor.a([II)I",
+      "renamedSymbol": "M:VorbisFloor.findLowNeighbor([II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findLowNeighbor",
       "declaration": {
         "file": "ar.java",
         "start": 6993,
@@ -241633,9 +241761,9 @@
     },
     {
       "symbol": "M:ar.b([II)I",
-      "renamedSymbol": "M:VorbisFloor.b([II)I",
+      "renamedSymbol": "M:VorbisFloor.findHighNeighbor([II)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "findHighNeighbor",
       "declaration": {
         "file": "ar.java",
         "start": 1831,
@@ -246660,9 +246788,9 @@
     },
     {
       "symbol": "M:db.a()I",
-      "renamedSymbol": "M:VorbisCodebook.a()I",
+      "renamedSymbol": "M:VorbisCodebook.decodeScalar()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeScalar",
       "declaration": {
         "file": "db.java",
         "start": 6430,
@@ -246671,9 +246799,9 @@
     },
     {
       "symbol": "M:db.a(II)I",
-      "renamedSymbol": "M:VorbisCodebook.a(II)I",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "lookup1Values",
       "declaration": {
         "file": "db.java",
         "start": 239,
@@ -246682,9 +246810,9 @@
     },
     {
       "symbol": "M:db.b()V",
-      "renamedSymbol": "M:VorbisCodebook.b()V",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "buildHuffmanTree",
       "declaration": {
         "file": "db.java",
         "start": 3543,
@@ -246693,9 +246821,9 @@
     },
     {
       "symbol": "M:db.c()[F",
-      "renamedSymbol": "M:VorbisCodebook.c()[F",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "decodeVector",
       "declaration": {
         "file": "db.java",
         "start": 464,
@@ -250862,9 +250990,9 @@
     },
     {
       "symbol": "M:ge.a(F)F",
-      "renamedSymbol": "M:SoundFilter.a(F)F",
+      "renamedSymbol": "M:SoundFilter.normalizeFrequency(F)F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "normalizeFrequency",
       "declaration": {
         "file": "ge.java",
         "start": 2798,
@@ -250873,9 +251001,9 @@
     },
     {
       "symbol": "M:ge.a(IF)I",
-      "renamedSymbol": "M:SoundFilter.a(IF)I",
+      "renamedSymbol": "M:SoundFilter.computeCoefficients(IF)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeCoefficients",
       "declaration": {
         "file": "ge.java",
         "start": 695,
@@ -250884,9 +251012,9 @@
     },
     {
       "symbol": "M:ge.a(IIF)F",
-      "renamedSymbol": "M:SoundFilter.a(IIF)F",
+      "renamedSymbol": "M:SoundFilter.interpolateFrequency(IIF)F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "interpolateFrequency",
       "declaration": {
         "file": "ge.java",
         "start": 312,
@@ -250895,9 +251023,9 @@
     },
     {
       "symbol": "M:ge.a(Lrb;Lwh;)V",
-      "renamedSymbol": "M:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V",
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decode",
       "declaration": {
         "file": "ge.java",
         "start": 3303,
@@ -250906,9 +251034,9 @@
     },
     {
       "symbol": "M:ge.b(IIF)F",
-      "renamedSymbol": "M:SoundFilter.b(IIF)F",
+      "renamedSymbol": "M:SoundFilter.interpolateMagnitude(IIF)F",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "interpolateMagnitude",
       "declaration": {
         "file": "ge.java",
         "start": 2981,
@@ -287723,7 +287851,7 @@
     },
     {
       "symbol": "P:ar.a(II)V#0",
-      "renamedSymbol": "P:VorbisFloor.a(II)V#0",
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287734,7 +287862,7 @@
     },
     {
       "symbol": "P:ar.a(II)V#1",
-      "renamedSymbol": "P:VorbisFloor.a(II)V#1",
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287745,7 +287873,7 @@
     },
     {
       "symbol": "P:ar.a(IIIII)I#0",
-      "renamedSymbol": "P:VorbisFloor.a(IIIII)I#0",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287756,7 +287884,7 @@
     },
     {
       "symbol": "P:ar.a(IIIII)I#1",
-      "renamedSymbol": "P:VorbisFloor.a(IIIII)I#1",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287767,7 +287895,7 @@
     },
     {
       "symbol": "P:ar.a(IIIII)I#2",
-      "renamedSymbol": "P:VorbisFloor.a(IIIII)I#2",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -287778,7 +287906,7 @@
     },
     {
       "symbol": "P:ar.a(IIIII)I#3",
-      "renamedSymbol": "P:VorbisFloor.a(IIIII)I#3",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -287789,7 +287917,7 @@
     },
     {
       "symbol": "P:ar.a(IIIII)I#4",
-      "renamedSymbol": "P:VorbisFloor.a(IIIII)I#4",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -287800,7 +287928,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#0",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#0",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287811,7 +287939,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#1",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#1",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287822,7 +287950,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#2",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#2",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -287833,7 +287961,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#3",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#3",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -287844,7 +287972,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#4",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#4",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -287855,7 +287983,7 @@
     },
     {
       "symbol": "P:ar.a(IIII[FI)V#5",
-      "renamedSymbol": "P:VorbisFloor.a(IIII[FI)V#5",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -287866,7 +287994,7 @@
     },
     {
       "symbol": "P:ar.a([FI)V#0",
-      "renamedSymbol": "P:VorbisFloor.a([FI)V#0",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287877,7 +288005,7 @@
     },
     {
       "symbol": "P:ar.a([FI)V#1",
-      "renamedSymbol": "P:VorbisFloor.a([FI)V#1",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287888,7 +288016,7 @@
     },
     {
       "symbol": "P:ar.a([II)I#0",
-      "renamedSymbol": "P:VorbisFloor.a([II)I#0",
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287899,7 +288027,7 @@
     },
     {
       "symbol": "P:ar.a([II)I#1",
-      "renamedSymbol": "P:VorbisFloor.a([II)I#1",
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287910,7 +288038,7 @@
     },
     {
       "symbol": "P:ar.b([II)I#0",
-      "renamedSymbol": "P:VorbisFloor.b([II)I#0",
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287921,7 +288049,7 @@
     },
     {
       "symbol": "P:ar.b([II)I#1",
-      "renamedSymbol": "P:VorbisFloor.b([II)I#1",
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -299966,7 +300094,7 @@
     },
     {
       "symbol": "P:db.a(II)I#0",
-      "renamedSymbol": "P:VorbisCodebook.a(II)I#0",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -299977,7 +300105,7 @@
     },
     {
       "symbol": "P:db.a(II)I#1",
-      "renamedSymbol": "P:VorbisCodebook.a(II)I#1",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309822,7 +309950,7 @@
     },
     {
       "symbol": "P:ge.a(F)F#0",
-      "renamedSymbol": "P:SoundFilter.a(F)F#0",
+      "renamedSymbol": "P:SoundFilter.normalizeFrequency(F)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309833,7 +309961,7 @@
     },
     {
       "symbol": "P:ge.a(IF)I#0",
-      "renamedSymbol": "P:SoundFilter.a(IF)I#0",
+      "renamedSymbol": "P:SoundFilter.computeCoefficients(IF)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309844,7 +309972,7 @@
     },
     {
       "symbol": "P:ge.a(IF)I#1",
-      "renamedSymbol": "P:SoundFilter.a(IF)I#1",
+      "renamedSymbol": "P:SoundFilter.computeCoefficients(IF)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309855,7 +309983,7 @@
     },
     {
       "symbol": "P:ge.a(IIF)F#0",
-      "renamedSymbol": "P:SoundFilter.a(IIF)F#0",
+      "renamedSymbol": "P:SoundFilter.interpolateFrequency(IIF)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309866,7 +309994,7 @@
     },
     {
       "symbol": "P:ge.a(IIF)F#1",
-      "renamedSymbol": "P:SoundFilter.a(IIF)F#1",
+      "renamedSymbol": "P:SoundFilter.interpolateFrequency(IIF)F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309877,7 +310005,7 @@
     },
     {
       "symbol": "P:ge.a(IIF)F#2",
-      "renamedSymbol": "P:SoundFilter.a(IIF)F#2",
+      "renamedSymbol": "P:SoundFilter.interpolateFrequency(IIF)F#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -309888,7 +310016,7 @@
     },
     {
       "symbol": "P:ge.a(Lrb;Lwh;)V#0",
-      "renamedSymbol": "P:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#0",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309899,7 +310027,7 @@
     },
     {
       "symbol": "P:ge.a(Lrb;Lwh;)V#1",
-      "renamedSymbol": "P:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#1",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309910,7 +310038,7 @@
     },
     {
       "symbol": "P:ge.b(IIF)F#0",
-      "renamedSymbol": "P:SoundFilter.b(IIF)F#0",
+      "renamedSymbol": "P:SoundFilter.interpolateMagnitude(IIF)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309921,7 +310049,7 @@
     },
     {
       "symbol": "P:ge.b(IIF)F#1",
-      "renamedSymbol": "P:SoundFilter.b(IIF)F#1",
+      "renamedSymbol": "P:SoundFilter.interpolateMagnitude(IIF)F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309932,7 +310060,7 @@
     },
     {
       "symbol": "P:ge.b(IIF)F#2",
-      "renamedSymbol": "P:SoundFilter.b(IIF)F#2",
+      "renamedSymbol": "P:SoundFilter.interpolateMagnitude(IIF)F#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -401396,7 +401524,7 @@
       "original": "ar.java",
       "renamed": "VorbisFloor.java",
       "inputSha256": "e240491082105b24c81dfae01aefaf435799f2bcfa6c0ad157177b2c7c5f81aa",
-      "outputSha256": "03edefd6dbd15b9f8d22ae27044d46599ba14bcc049e4649baa793f8b77707f5",
+      "outputSha256": "d539d1959f8654954df3857093c3e544ef34d1737ad94f5a0b80d2b4fbdc3da1",
       "edits": [
         {
           "start": 50,
@@ -401413,6 +401541,34 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 600,
+          "end": 601,
+          "symbol": "M:ar.a(IIII[FI)V",
+          "original": "a",
+          "renamed": "renderFloorLine"
+        },
+        {
+          "start": 1478,
+          "end": 1479,
+          "symbol": "M:ar.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateFloorPoint"
+        },
+        {
+          "start": 1831,
+          "end": 1832,
+          "symbol": "M:ar.b([II)I",
+          "original": "b",
+          "renamed": "findHighNeighbor"
+        },
+        {
+          "start": 2208,
+          "end": 2209,
+          "symbol": "M:ar.a([FI)V",
+          "original": "a",
+          "renamed": "applyFloorCurve"
+        },
+        {
           "start": 2542,
           "end": 2544,
           "symbol": "C:ar",
@@ -401420,11 +401576,53 @@
           "renamed": "VorbisFloor"
         },
         {
+          "start": 2545,
+          "end": 2546,
+          "symbol": "M:ar.a([II)I",
+          "original": "a",
+          "renamed": "findLowNeighbor"
+        },
+        {
           "start": 2588,
           "end": 2590,
           "symbol": "C:ar",
           "original": "ar",
           "renamed": "VorbisFloor"
+        },
+        {
+          "start": 2591,
+          "end": 2592,
+          "symbol": "M:ar.b([II)I",
+          "original": "b",
+          "renamed": "findHighNeighbor"
+        },
+        {
+          "start": 2635,
+          "end": 2636,
+          "symbol": "M:ar.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateFloorPoint"
+        },
+        {
+          "start": 3894,
+          "end": 3895,
+          "symbol": "M:ar.a(II)V",
+          "original": "a",
+          "renamed": "sortFloorPoints"
+        },
+        {
+          "start": 4250,
+          "end": 4251,
+          "symbol": "M:ar.a(IIII[FI)V",
+          "original": "a",
+          "renamed": "renderFloorLine"
+        },
+        {
+          "start": 4772,
+          "end": 4773,
+          "symbol": "M:ar.a()Z",
+          "original": "a",
+          "renamed": "decodeFloor"
         },
         {
           "start": 4840,
@@ -401455,11 +401653,53 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5552,
+          "end": 5553,
+          "symbol": "M:db.a()I",
+          "original": "a",
+          "renamed": "decodeScalar"
+        },
+        {
           "start": 5992,
           "end": 5993,
           "symbol": "C:t",
           "original": "t",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 6009,
+          "end": 6010,
+          "symbol": "M:db.a()I",
+          "original": "a",
+          "renamed": "decodeScalar"
+        },
+        {
+          "start": 6156,
+          "end": 6157,
+          "symbol": "M:ar.a(II)V",
+          "original": "a",
+          "renamed": "sortFloorPoints"
+        },
+        {
+          "start": 6902,
+          "end": 6903,
+          "symbol": "M:ar.a(II)V",
+          "original": "a",
+          "renamed": "sortFloorPoints"
+        },
+        {
+          "start": 6936,
+          "end": 6937,
+          "symbol": "M:ar.a(II)V",
+          "original": "a",
+          "renamed": "sortFloorPoints"
+        },
+        {
+          "start": 6993,
+          "end": 6994,
+          "symbol": "M:ar.a([II)I",
+          "original": "a",
+          "renamed": "findLowNeighbor"
         },
         {
           "start": 7360,
@@ -417974,7 +418214,7 @@
       "original": "db.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "77baa6557f9fbefcd8bc25d1a1bebe815afd82fbeb7ec2b483d0cd8cacc709d7",
-      "outputSha256": "32b7b91e01db66acf048625b554bea9527cad78f0ae7766c380a8bfe3b91a940",
+      "outputSha256": "b5b4c2e2af91c590025ed7e451ab6331019d7a9f08e4c849b895779c883e6c0a",
       "edits": [
         {
           "start": 50,
@@ -417982,6 +418222,27 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "VorbisCodebook"
+        },
+        {
+          "start": 239,
+          "end": 240,
+          "symbol": "M:db.a(II)I",
+          "original": "a",
+          "renamed": "lookup1Values"
+        },
+        {
+          "start": 464,
+          "end": 465,
+          "symbol": "M:db.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
+        },
+        {
+          "start": 503,
+          "end": 504,
+          "symbol": "M:db.a()I",
+          "original": "a",
+          "renamed": "decodeScalar"
         },
         {
           "start": 520,
@@ -418054,6 +418315,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 1720,
+          "end": 1721,
+          "symbol": "M:db.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
+        },
+        {
           "start": 1753,
           "end": 1754,
           "symbol": "C:t",
@@ -418110,11 +418378,32 @@
           "renamed": "VorbisCodebook"
         },
         {
+          "start": 2122,
+          "end": 2123,
+          "symbol": "M:db.a(II)I",
+          "original": "a",
+          "renamed": "lookup1Values"
+        },
+        {
           "start": 2290,
           "end": 2291,
           "symbol": "C:t",
           "original": "t",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3543,
+          "end": 3544,
+          "symbol": "M:db.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
+        },
+        {
+          "start": 6430,
+          "end": 6431,
+          "symbol": "M:db.a()I",
+          "original": "a",
+          "renamed": "decodeScalar"
         },
         {
           "start": 6517,
@@ -426965,7 +427254,7 @@
       "original": "fl.java",
       "renamed": "VorbisResidue.java",
       "inputSha256": "d320ff4ed274c23248842dfe6a8cfef1b2f2442f2f61bb66f12944f8ff306f7f",
-      "outputSha256": "43f914eb30f1f20a60abcd1ffb66ca59055b5eeaf1c4075110fd9ca10f378439",
+      "outputSha256": "62343f6451258edfb1ce55d75151cf220301c67af25d88e29db407648f90d48c",
       "edits": [
         {
           "start": 50,
@@ -426989,6 +427278,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 883,
+          "end": 884,
+          "symbol": "M:db.a()I",
+          "original": "a",
+          "renamed": "decodeScalar"
+        },
+        {
           "start": 1526,
           "end": 1528,
           "symbol": "C:db",
@@ -427001,6 +427297,20 @@
           "symbol": "C:t",
           "original": "t",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 1716,
+          "end": 1717,
+          "symbol": "M:db.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
+        },
+        {
+          "start": 2139,
+          "end": 2140,
+          "symbol": "M:db.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
         },
         {
           "start": 2600,
@@ -430659,7 +430969,7 @@
       "original": "ge.java",
       "renamed": "SoundFilter.java",
       "inputSha256": "10a68da348c9090f5267620b3579fa14b96fb4855cdcd986f254010f32720a52",
-      "outputSha256": "de2ea51449180f89a58195f7903303ba11b8181d80f1e951cab64d355709a8bd",
+      "outputSha256": "c36e5cf7bc3bd5b8b35fa2d5a1af222fbdd59c4c34bb1042dad307edd4a99d7a",
       "edits": [
         {
           "start": 50,
@@ -430669,6 +430979,13 @@
           "renamed": "SoundFilter"
         },
         {
+          "start": 312,
+          "end": 313,
+          "symbol": "M:ge.a(IIF)F",
+          "original": "a",
+          "renamed": "interpolateFrequency"
+        },
+        {
           "start": 556,
           "end": 558,
           "symbol": "C:ge",
@@ -430676,11 +430993,74 @@
           "renamed": "SoundFilter"
         },
         {
+          "start": 559,
+          "end": 560,
+          "symbol": "M:ge.a(F)F",
+          "original": "a",
+          "renamed": "normalizeFrequency"
+        },
+        {
           "start": 598,
           "end": 599,
           "symbol": "M:ge.a()V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 695,
+          "end": 696,
+          "symbol": "M:ge.a(IF)I",
+          "original": "a",
+          "renamed": "computeCoefficients"
+        },
+        {
+          "start": 1124,
+          "end": 1125,
+          "symbol": "M:ge.b(IIF)F",
+          "original": "b",
+          "renamed": "interpolateMagnitude"
+        },
+        {
+          "start": 1228,
+          "end": 1229,
+          "symbol": "M:ge.a(IIF)F",
+          "original": "a",
+          "renamed": "interpolateFrequency"
+        },
+        {
+          "start": 1414,
+          "end": 1415,
+          "symbol": "M:ge.b(IIF)F",
+          "original": "b",
+          "renamed": "interpolateMagnitude"
+        },
+        {
+          "start": 1515,
+          "end": 1516,
+          "symbol": "M:ge.a(IIF)F",
+          "original": "a",
+          "renamed": "interpolateFrequency"
+        },
+        {
+          "start": 2798,
+          "end": 2799,
+          "symbol": "M:ge.a(F)F",
+          "original": "a",
+          "renamed": "normalizeFrequency"
+        },
+        {
+          "start": 2981,
+          "end": 2982,
+          "symbol": "M:ge.b(IIF)F",
+          "original": "b",
+          "renamed": "interpolateMagnitude"
+        },
+        {
+          "start": 3303,
+          "end": 3304,
+          "symbol": "M:ge.a(Lrb;Lwh;)V",
+          "original": "a",
+          "renamed": "decode"
         },
         {
           "start": 3305,
@@ -535561,7 +535941,7 @@
       "original": "t.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "94cccde116826768cb6d49b307d0116a8f54a5d4b9118e5fcdf8337eff6ceffd",
-      "outputSha256": "d48a2b51e76fcedfd37ad380cdefbba0365a859ec683b3621f20894839184540",
+      "outputSha256": "6886c56d55f7d61d0c012603faa189b17f3a881b1dae713b4fb8cc2f44b5e522",
       "edits": [
         {
           "start": 69,
@@ -535760,11 +536140,25 @@
           "renamed": "VorbisMapping"
         },
         {
+          "start": 4895,
+          "end": 4896,
+          "symbol": "M:ar.a()Z",
+          "original": "a",
+          "renamed": "decodeFloor"
+        },
+        {
           "start": 5090,
           "end": 5092,
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "VorbisResidue"
+        },
+        {
+          "start": 5407,
+          "end": 5408,
+          "symbol": "M:ar.a([FI)V",
+          "original": "a",
+          "renamed": "applyFloorCurve"
         },
         {
           "start": 17208,
@@ -537179,7 +537573,7 @@
       "original": "th.java",
       "renamed": "SynthesizedSoundInstrument.java",
       "inputSha256": "bfe2192fd45e7422cdd15fe50949187d9b9737d812ce228f66f89f324fcd962a",
-      "outputSha256": "8cf1bf197ff51d53f5f778d2d9677a881a6db1f9b345834a54e472def0cffe78",
+      "outputSha256": "23f9d20182e5e916902b02f9d842b7ae4db5263e6e06a189d5fce98b8544a89b",
       "edits": [
         {
           "start": 71,
@@ -537455,6 +537849,27 @@
           "renamed": "SoundEnvelope"
         },
         {
+          "start": 2955,
+          "end": 2956,
+          "symbol": "M:ge.a(Lrb;Lwh;)V",
+          "original": "a",
+          "renamed": "decode"
+        },
+        {
+          "start": 7551,
+          "end": 7552,
+          "symbol": "M:ge.a(IF)I",
+          "original": "a",
+          "renamed": "computeCoefficients"
+        },
+        {
+          "start": 7635,
+          "end": 7636,
+          "symbol": "M:ge.a(IF)I",
+          "original": "a",
+          "renamed": "computeCoefficients"
+        },
+        {
           "start": 8099,
           "end": 8101,
           "symbol": "C:ge",
@@ -537495,6 +537910,20 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoundFilter"
+        },
+        {
+          "start": 10126,
+          "end": 10127,
+          "symbol": "M:ge.a(IF)I",
+          "original": "a",
+          "renamed": "computeCoefficients"
+        },
+        {
+          "start": 10212,
+          "end": 10213,
+          "symbol": "M:ge.a(IF)I",
+          "original": "a",
+          "renamed": "computeCoefficients"
         },
         {
           "start": 10755,
@@ -562782,10 +563211,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "70a0475f67dca9d689a8b8a1c8eae78a7f6e92302890ebf2134bf57379c7f7a1",
+    "rulesSha256": "da6066865ef88327a5a78d96a91395773aecfc38af406ee31790d0f13b46859b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "049f65e041461405177461853166de5c3e29b9bdcdadb0e6e4f2701335b0e2c7",
+    "outputTreeSha256": "b06c2b79bf8e7d5b4cfd9ec8f04f013fecd8270117acf5e96bd8fd784f675ce1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

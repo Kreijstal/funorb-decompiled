@@ -212,7 +212,7 @@ public final class Torquing extends tg {
           wd.clearStaticReferences(0);
           ma.clearStaticReferences();
           ho.clearStaticReferences();
-          uo.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           lh.b(param0 - 128);
           pn.a(92);
           hf.a(param0 ^ 8);
@@ -298,7 +298,7 @@ public final class Torquing extends tg {
           ro.g((byte) 123);
           od.clearStaticReferences(11860);
           jf.clearStaticReferences(37);
-          lo.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           u.g((byte) -47);
           po.g((byte) 0);
           wn.clearStaticReferences(param0 - 4);

@@ -23,7 +23,7 @@ final class VorbisFloor {
         field_f = null;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
+    private final void renderFloorLine(int param0, int param1, int param2, int param3, float[] param4, int param5) {
         int var7 = param3 - param1;
         int var8 = param2 - param0;
         int var9 = var7 < 0 ? -var7 : var7;
@@ -48,7 +48,7 @@ final class VorbisFloor {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int interpolateFloorPoint(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param3 - param1;
         int var7 = param2 - param0;
         int var8 = var6 < 0 ? -var6 : var6;
@@ -57,7 +57,7 @@ final class VorbisFloor {
         return var6 < 0 ? param1 - var10 : param1 + var10;
     }
 
-    private final static int b(int[] param0, int param1) {
+    private final static int findHighNeighbor(int[] param0, int param1) {
         int var2 = param0[param1];
         int var3 = -1;
         int var4 = 2147483647;
@@ -72,7 +72,7 @@ final class VorbisFloor {
         return var3;
     }
 
-    final void a(float[] param0, int param1) {
+    final void applyFloorCurve(float[] param0, int param1) {
         int stackIn_10_2 = 0;
         int stackIn_15_2 = 0;
         int var3 = this.field_d.length;
@@ -81,9 +81,9 @@ final class VorbisFloor {
         field_f[1] = true;
         var5[0] = true;
         for (int var6 = 2; var6 < var3; var6++) {
-          int var7 = VorbisFloor.a(field_k, var6);
-          int var8_int = VorbisFloor.b(field_k, var6);
-          int var9 = this.a(field_k[var7], field_c[var7], field_k[var8_int], field_c[var8_int], field_k[var6]);
+          int var7 = VorbisFloor.findLowNeighbor(field_k, var6);
+          int var8_int = VorbisFloor.findHighNeighbor(field_k, var6);
+          int var9 = this.interpolateFloorPoint(field_k[var7], field_c[var7], field_k[var8_int], field_c[var8_int], field_k[var6]);
           int var10 = field_c[var6];
           int var11 = var4 - var9;
           int var12 = var9;
@@ -115,7 +115,7 @@ final class VorbisFloor {
             }
           }
         }
-        this.a(0, var3 - 1);
+        this.sortFloorPoints(0, var3 - 1);
         int var6Lifetime1 = 0;
         int var7Lifetime1 = field_c[0] * this.field_a;
         int var16 = 1;
@@ -124,7 +124,7 @@ final class VorbisFloor {
           if (field_f[var16]) {
             int var9Lifetime1 = field_k[var16];
             int var10Lifetime1 = field_c[var16] * this.field_a;
-            this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
+            this.renderFloorLine(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
             if (var9Lifetime1 >= param1) {
               return;
             }
@@ -139,7 +139,7 @@ final class VorbisFloor {
         }
     }
 
-    final boolean a() {
+    final boolean decodeFloor() {
         int stackIn_14_2 = 0;
         boolean stackIn_3_0 = !(VorbisSample.b() == 0);
         boolean var1 = stackIn_3_0;
@@ -160,7 +160,7 @@ final class VorbisFloor {
           int var10 = (1 << var9) - 1;
           int var11 = 0;
           if (var9 > 0) {
-            var11 = VorbisSample.field_q[this.field_b[var7]].a();
+            var11 = VorbisSample.field_q[this.field_b[var7]].decodeScalar();
           }
           for (int var12 = 0; var12 < var8; var12++) {
             int var13 = this.field_i[var7][var11 & var10];
@@ -172,7 +172,7 @@ final class VorbisFloor {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = VorbisSample.field_q[var13].a();
+              stackIn_14_2 = VorbisSample.field_q[var13].decodeScalar();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -180,7 +180,7 @@ final class VorbisFloor {
         return true;
     }
 
-    private final void a(int param0, int param1) {
+    private final void sortFloorPoints(int param0, int param1) {
         if (param0 >= param1) {
           return;
         }
@@ -203,11 +203,11 @@ final class VorbisFloor {
         field_k[var3] = var4;
         field_c[var3] = var5;
         field_f[var3] = (var6);
-        this.a(param0, var3 - 1);
-        this.a(var3 + 1, param1);
+        this.sortFloorPoints(param0, var3 - 1);
+        this.sortFloorPoints(var3 + 1, param1);
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int findLowNeighbor(int[] param0, int param1) {
         int var2 = param0[param1];
         int var3 = -1;
         int var4 = -2147483648;

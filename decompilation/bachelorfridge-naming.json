@@ -4052,6 +4052,14 @@
       "renamedSymbol": "M:SoundFilter.interpolateRadius(IIF)F"
     },
     {
+      "symbol": "M:bc.a(Llu;Lkd;)V",
+      "originalName": "a",
+      "to": "decode",
+      "evidence": "Read pair counts from packed nibbles,two gain endpoints,per-pair first-state phase/magnitude and masked second-state overrides;copy unchanged pairs,conditionally decode the envelope segments,or reset both gains for zero counts. Preserve every original reader/envelope guard and read/allocation/write/failure order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 c2dc70b9efcdc26296819068ecca1281be45dbed33329509aed52f6041e2a125. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V"
+    },
+    {
       "symbol": "M:bc.b(IIF)F",
       "originalName": "b",
       "to": "interpolateFrequency",
@@ -4290,6 +4298,30 @@
       "evidence": "Body is token-identical to the reviewed VorbisCodebook method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisCodebook.decodeScalar()I"
+    },
+    {
+      "symbol": "M:bo.a(II)I",
+      "originalName": "a",
+      "to": "lookup1Values",
+      "evidence": "Estimate entryCount^(1/dimensions)+1,then decrement while the integer-power helper exceeds entryCount. Preserve Java floating casts,int overflow,helper guards and invalid-domain behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 9dc2ef0c62df5992cf44021530afbf95dccd2a3381700e8bae7a5ee848e52ff1. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I"
+    },
+    {
+      "symbol": "M:bo.b()V",
+      "originalName": "b",
+      "to": "buildHuffmanTree",
+      "evidence": "Build canonical codewords from per-entry lengths with32-bit shifts/carry updates,then construct the expandable decode tree with complemented leaf indices. Preserve exact growth,aliasing,overflow and allocation/write order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 fdbeb6139e0d1820dbe86770b6548041750c871029838c8a8a367c7ed7f39f7b. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V"
+    },
+    {
+      "symbol": "M:bo.c()[F",
+      "originalName": "c",
+      "to": "decodeVector",
+      "evidence": "Decode one scalar entry and return its stored float vector row directly,retaining shared mutable alias and all null/index failures. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 e8f64504bc15759c62723d88b904a241c8ecca77bef17ce5b0b6ceec1798e3eb. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F"
     },
     {
       "symbol": "M:bp.c(B)Z",
@@ -9076,6 +9108,14 @@
       "renamedSymbol": "M:mg.releaseStatics(I)V"
     },
     {
+      "symbol": "M:mga.a()Z",
+      "originalName": "a",
+      "to": "decodeFloor",
+      "evidence": "Read the floor-presence bit;absent returns false before scratch writes. Present copies x coordinates,decodes initial y and partition/subclass scalar codebook values into shared scratch arrays. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 1399f4ce7483d2239d6712ea5f0ffca3aca5427ecd6c146fb785f8cad85efc5d. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z"
+    },
+    {
       "symbol": "M:mga.a(II)V",
       "originalName": "a",
       "to": "sortPoints",
@@ -9098,6 +9138,14 @@
       "evidence": "Body is token-identical to the reviewed VorbisFloor method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisFloor.applyLine(IIII[FI)V"
+    },
+    {
+      "symbol": "M:mga.a([FI)V",
+      "originalName": "a",
+      "to": "applyFloorCurve",
+      "evidence": "Predict and unpack floor y values using low/high neighbors,mark active points,sort linked x/y/active state,render each active segment and multiply the remaining tail. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 e0a5d2a69fb137928b0802d620ec5364ed6be9aed0c8e8b584cf9455a0c57256. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V"
     },
     {
       "symbol": "M:mga.a([II)I",
@@ -91900,7 +91948,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#0",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#0",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -91911,7 +91959,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#1",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#1",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -91922,7 +91970,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#2",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#2",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -91933,7 +91981,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#3",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#3",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -91944,7 +91992,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#4",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#4",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -91955,7 +92003,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#5",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#5",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -91966,7 +92014,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#6",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#6",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#6",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -91977,7 +92025,7 @@
     },
     {
       "symbol": "L:bc.a(Llu;Lkd;)V#7",
-      "renamedSymbol": "L:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#7",
+      "renamedSymbol": "L:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#7",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -96520,7 +96568,7 @@
     },
     {
       "symbol": "L:bo.a(II)I#0",
-      "renamedSymbol": "L:VorbisCodebook.a(II)I#0",
+      "renamedSymbol": "L:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -96531,7 +96579,7 @@
     },
     {
       "symbol": "L:bo.b()V#0",
-      "renamedSymbol": "L:VorbisCodebook.b()V#0",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#0",
       "originalName": "var2_ref_int__",
       "renamedName": "var2_ref_int__",
       "declaration": {
@@ -96542,7 +96590,7 @@
     },
     {
       "symbol": "L:bo.b()V#1",
-      "renamedSymbol": "L:VorbisCodebook.b()V#1",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -96553,7 +96601,7 @@
     },
     {
       "symbol": "L:bo.b()V#10",
-      "renamedSymbol": "L:VorbisCodebook.b()V#10",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -96564,7 +96612,7 @@
     },
     {
       "symbol": "L:bo.b()V#11",
-      "renamedSymbol": "L:VorbisCodebook.b()V#11",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -96575,7 +96623,7 @@
     },
     {
       "symbol": "L:bo.b()V#12",
-      "renamedSymbol": "L:VorbisCodebook.b()V#12",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -96586,7 +96634,7 @@
     },
     {
       "symbol": "L:bo.b()V#13",
-      "renamedSymbol": "L:VorbisCodebook.b()V#13",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -96597,7 +96645,7 @@
     },
     {
       "symbol": "L:bo.b()V#14",
-      "renamedSymbol": "L:VorbisCodebook.b()V#14",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#14",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -96608,7 +96656,7 @@
     },
     {
       "symbol": "L:bo.b()V#15",
-      "renamedSymbol": "L:VorbisCodebook.b()V#15",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -96619,7 +96667,7 @@
     },
     {
       "symbol": "L:bo.b()V#16",
-      "renamedSymbol": "L:VorbisCodebook.b()V#16",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#16",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -96630,7 +96678,7 @@
     },
     {
       "symbol": "L:bo.b()V#17",
-      "renamedSymbol": "L:VorbisCodebook.b()V#17",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -96641,7 +96689,7 @@
     },
     {
       "symbol": "L:bo.b()V#18",
-      "renamedSymbol": "L:VorbisCodebook.b()V#18",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -96652,7 +96700,7 @@
     },
     {
       "symbol": "L:bo.b()V#19",
-      "renamedSymbol": "L:VorbisCodebook.b()V#19",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#19",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -96663,7 +96711,7 @@
     },
     {
       "symbol": "L:bo.b()V#2",
-      "renamedSymbol": "L:VorbisCodebook.b()V#2",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -96674,7 +96722,7 @@
     },
     {
       "symbol": "L:bo.b()V#20",
-      "renamedSymbol": "L:VorbisCodebook.b()V#20",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -96685,7 +96733,7 @@
     },
     {
       "symbol": "L:bo.b()V#21",
-      "renamedSymbol": "L:VorbisCodebook.b()V#21",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#21",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -96696,7 +96744,7 @@
     },
     {
       "symbol": "L:bo.b()V#22",
-      "renamedSymbol": "L:VorbisCodebook.b()V#22",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#22",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -96707,7 +96755,7 @@
     },
     {
       "symbol": "L:bo.b()V#23",
-      "renamedSymbol": "L:VorbisCodebook.b()V#23",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#23",
       "originalName": "var9_intLifetime1",
       "renamedName": "var9_intLifetime1",
       "declaration": {
@@ -96718,7 +96766,7 @@
     },
     {
       "symbol": "L:bo.b()V#3",
-      "renamedSymbol": "L:VorbisCodebook.b()V#3",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -96729,7 +96777,7 @@
     },
     {
       "symbol": "L:bo.b()V#4",
-      "renamedSymbol": "L:VorbisCodebook.b()V#4",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -96740,7 +96788,7 @@
     },
     {
       "symbol": "L:bo.b()V#5",
-      "renamedSymbol": "L:VorbisCodebook.b()V#5",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -96751,7 +96799,7 @@
     },
     {
       "symbol": "L:bo.b()V#6",
-      "renamedSymbol": "L:VorbisCodebook.b()V#6",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -96762,7 +96810,7 @@
     },
     {
       "symbol": "L:bo.b()V#7",
-      "renamedSymbol": "L:VorbisCodebook.b()V#7",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -96773,7 +96821,7 @@
     },
     {
       "symbol": "L:bo.b()V#8",
-      "renamedSymbol": "L:VorbisCodebook.b()V#8",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -96784,7 +96832,7 @@
     },
     {
       "symbol": "L:bo.b()V#9",
-      "renamedSymbol": "L:VorbisCodebook.b()V#9",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#9",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -240400,7 +240448,7 @@
     },
     {
       "symbol": "L:mga.a()Z#0",
-      "renamedSymbol": "L:VorbisFloor.a()Z#0",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -240411,7 +240459,7 @@
     },
     {
       "symbol": "L:mga.a()Z#1",
-      "renamedSymbol": "L:VorbisFloor.a()Z#1",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -240422,7 +240470,7 @@
     },
     {
       "symbol": "L:mga.a()Z#10",
-      "renamedSymbol": "L:VorbisFloor.a()Z#10",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -240433,7 +240481,7 @@
     },
     {
       "symbol": "L:mga.a()Z#11",
-      "renamedSymbol": "L:VorbisFloor.a()Z#11",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -240444,7 +240492,7 @@
     },
     {
       "symbol": "L:mga.a()Z#12",
-      "renamedSymbol": "L:VorbisFloor.a()Z#12",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -240455,7 +240503,7 @@
     },
     {
       "symbol": "L:mga.a()Z#13",
-      "renamedSymbol": "L:VorbisFloor.a()Z#13",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -240466,7 +240514,7 @@
     },
     {
       "symbol": "L:mga.a()Z#14",
-      "renamedSymbol": "L:VorbisFloor.a()Z#14",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -240477,7 +240525,7 @@
     },
     {
       "symbol": "L:mga.a()Z#15",
-      "renamedSymbol": "L:VorbisFloor.a()Z#15",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -240488,7 +240536,7 @@
     },
     {
       "symbol": "L:mga.a()Z#16",
-      "renamedSymbol": "L:VorbisFloor.a()Z#16",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -240499,7 +240547,7 @@
     },
     {
       "symbol": "L:mga.a()Z#17",
-      "renamedSymbol": "L:VorbisFloor.a()Z#17",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -240510,7 +240558,7 @@
     },
     {
       "symbol": "L:mga.a()Z#2",
-      "renamedSymbol": "L:VorbisFloor.a()Z#2",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -240521,7 +240569,7 @@
     },
     {
       "symbol": "L:mga.a()Z#3",
-      "renamedSymbol": "L:VorbisFloor.a()Z#3",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -240532,7 +240580,7 @@
     },
     {
       "symbol": "L:mga.a()Z#4",
-      "renamedSymbol": "L:VorbisFloor.a()Z#4",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -240543,7 +240591,7 @@
     },
     {
       "symbol": "L:mga.a()Z#5",
-      "renamedSymbol": "L:VorbisFloor.a()Z#5",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#5",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -240554,7 +240602,7 @@
     },
     {
       "symbol": "L:mga.a()Z#6",
-      "renamedSymbol": "L:VorbisFloor.a()Z#6",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#6",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -240565,7 +240613,7 @@
     },
     {
       "symbol": "L:mga.a()Z#7",
-      "renamedSymbol": "L:VorbisFloor.a()Z#7",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#7",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -240576,7 +240624,7 @@
     },
     {
       "symbol": "L:mga.a()Z#8",
-      "renamedSymbol": "L:VorbisFloor.a()Z#8",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -240587,7 +240635,7 @@
     },
     {
       "symbol": "L:mga.a()Z#9",
-      "renamedSymbol": "L:VorbisFloor.a()Z#9",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -240807,7 +240855,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#0",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#0",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -240818,7 +240866,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#1",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#1",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -240829,7 +240877,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#10",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#10",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -240840,7 +240888,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#11",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#11",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -240851,7 +240899,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#12",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#12",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#12",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -240862,7 +240910,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#13",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#13",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -240873,7 +240921,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#14",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#14",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -240884,7 +240932,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#15",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#15",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -240895,7 +240943,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#16",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#16",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -240906,7 +240954,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#17",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#17",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#17",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -240917,7 +240965,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#18",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#18",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#18",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -240928,7 +240976,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#19",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#19",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#19",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -240939,7 +240987,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#2",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#2",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#2",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -240950,7 +240998,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#20",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#20",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#20",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -240961,7 +241009,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#21",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#21",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#21",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -240972,7 +241020,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#22",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#22",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#22",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -240983,7 +241031,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#23",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#23",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#23",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -240994,7 +241042,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#24",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#24",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#24",
       "originalName": "var8_intLifetime1",
       "renamedName": "var8_intLifetime1",
       "declaration": {
@@ -241005,7 +241053,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#25",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#25",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#25",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -241016,7 +241064,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#26",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#26",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#26",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -241027,7 +241075,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#27",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#27",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#27",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -241038,7 +241086,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#3",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#3",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#3",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -241049,7 +241097,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#4",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#4",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -241060,7 +241108,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#5",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#5",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -241071,7 +241119,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#6",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#6",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -241082,7 +241130,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#7",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#7",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -241093,7 +241141,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#8",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#8",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241104,7 +241152,7 @@
     },
     {
       "symbol": "L:mga.a([FI)V#9",
-      "renamedSymbol": "L:VorbisFloor.a([FI)V#9",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -375304,9 +375352,9 @@
     },
     {
       "symbol": "M:bc.a(Llu;Lkd;)V",
-      "renamedSymbol": "M:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V",
+      "renamedSymbol": "M:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decode",
       "declaration": {
         "file": "bc.java",
         "start": 493,
@@ -376657,9 +376705,9 @@
     },
     {
       "symbol": "M:bo.a(II)I",
-      "renamedSymbol": "M:VorbisCodebook.a(II)I",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "lookup1Values",
       "declaration": {
         "file": "bo.java",
         "start": 239,
@@ -376668,9 +376716,9 @@
     },
     {
       "symbol": "M:bo.b()V",
-      "renamedSymbol": "M:VorbisCodebook.b()V",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "buildHuffmanTree",
       "declaration": {
         "file": "bo.java",
         "start": 477,
@@ -376679,9 +376727,9 @@
     },
     {
       "symbol": "M:bo.c()[F",
-      "renamedSymbol": "M:VorbisCodebook.c()[F",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "decodeVector",
       "declaration": {
         "file": "bo.java",
         "start": 3781,
@@ -405532,9 +405580,9 @@
     },
     {
       "symbol": "M:mga.a()Z",
-      "renamedSymbol": "M:VorbisFloor.a()Z",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeFloor",
       "declaration": {
         "file": "mga.java",
         "start": 6839,
@@ -405576,9 +405624,9 @@
     },
     {
       "symbol": "M:mga.a([FI)V",
-      "renamedSymbol": "M:VorbisFloor.a([FI)V",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyFloorCurve",
       "declaration": {
         "file": "mga.java",
         "start": 3692,
@@ -438268,7 +438316,7 @@
     },
     {
       "symbol": "P:bc.a(Llu;Lkd;)V#0",
-      "renamedSymbol": "P:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#0",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438279,7 +438327,7 @@
     },
     {
       "symbol": "P:bc.a(Llu;Lkd;)V#1",
-      "renamedSymbol": "P:SoundFilter.a(LPacketBuffer;LSoundEnvelope;)V#1",
+      "renamedSymbol": "P:SoundFilter.decode(LPacketBuffer;LSoundEnvelope;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -441139,7 +441187,7 @@
     },
     {
       "symbol": "P:bo.a(II)I#0",
-      "renamedSymbol": "P:VorbisCodebook.a(II)I#0",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -441150,7 +441198,7 @@
     },
     {
       "symbol": "P:bo.a(II)I#1",
-      "renamedSymbol": "P:VorbisCodebook.a(II)I#1",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -508767,7 +508815,7 @@
     },
     {
       "symbol": "P:mga.a([FI)V#0",
-      "renamedSymbol": "P:VorbisFloor.a([FI)V#0",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -508778,7 +508826,7 @@
     },
     {
       "symbol": "P:mga.a([FI)V#1",
-      "renamedSymbol": "P:VorbisFloor.a([FI)V#1",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598915,7 +598963,7 @@
       "original": "bc.java",
       "renamed": "SoundFilter.java",
       "inputSha256": "4ad3026358e82f049eb1d0bc1db54b47618d4077f69338aae3ec39fccf8cf06a",
-      "outputSha256": "1af53ea6c20096f792ff00ecc75e2a2598125571f660132a4bdfb4618e84edc6",
+      "outputSha256": "e14b3a60c151f6bb4cbcdbcb09b804bd326f8163ecf4d87ad6b2eeca17d96922",
       "edits": [
         {
           "start": 50,
@@ -598930,6 +598978,13 @@
           "symbol": "M:bc.a(F)F",
           "original": "a",
           "renamed": "normalizeFrequency"
+        },
+        {
+          "start": 493,
+          "end": 494,
+          "symbol": "M:bc.a(Llu;Lkd;)V",
+          "original": "a",
+          "renamed": "decode"
         },
         {
           "start": 495,
@@ -603376,7 +603431,7 @@
       "original": "bo.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "cde9bef7f7f3907b69bfa658933ffa57e763c2cd04219a9160b773a1e630a949",
-      "outputSha256": "11dd3466b199b2f833a84c74abe45f89b9967ab11c173f728d35d8bd1fe80c60",
+      "outputSha256": "d7cadbdf3b55978d608eb22865d11dc0f48f46a471bc7750768d137c94ee69e4",
       "edits": [
         {
           "start": 50,
@@ -603384,6 +603439,27 @@
           "symbol": "C:bo",
           "original": "bo",
           "renamed": "VorbisCodebook"
+        },
+        {
+          "start": 239,
+          "end": 240,
+          "symbol": "M:bo.a(II)I",
+          "original": "a",
+          "renamed": "lookup1Values"
+        },
+        {
+          "start": 477,
+          "end": 478,
+          "symbol": "M:bo.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
+        },
+        {
+          "start": 3781,
+          "end": 3782,
+          "symbol": "M:bo.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
         },
         {
           "start": 3820,
@@ -603547,6 +603623,13 @@
           "renamed": "readBits"
         },
         {
+          "start": 5609,
+          "end": 5610,
+          "symbol": "M:bo.b()V",
+          "original": "b",
+          "renamed": "buildHuffmanTree"
+        },
+        {
           "start": 5638,
           "end": 5640,
           "symbol": "C:dv",
@@ -603650,6 +603733,13 @@
           "symbol": "C:bo",
           "original": "bo",
           "renamed": "VorbisCodebook"
+        },
+        {
+          "start": 5989,
+          "end": 5990,
+          "symbol": "M:bo.a(II)I",
+          "original": "a",
+          "renamed": "lookup1Values"
         },
         {
           "start": 6153,
@@ -618008,7 +618098,7 @@
       "original": "dv.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "7936abda27e154bc87bbb73c4606883ad2c02b2131894619f2ed3e6a86c0bd7a",
-      "outputSha256": "af8f195505b557f86912f1331d94d63ac95516fead644a05a2a515d24dec3f60",
+      "outputSha256": "b2261f9f98d9264f9399b8083a61ef77133944729c5cd06b783eff71e0e79f44",
       "edits": [
         {
           "start": 69,
@@ -618459,11 +618549,25 @@
           "renamed": "readBit"
         },
         {
+          "start": 13721,
+          "end": 13722,
+          "symbol": "M:mga.a()Z",
+          "original": "a",
+          "renamed": "decodeFloor"
+        },
+        {
           "start": 13999,
           "end": 14000,
           "symbol": "M:qj.a([FIZ)V",
           "original": "a",
           "renamed": "decodeResidue"
+        },
+        {
+          "start": 14209,
+          "end": 14210,
+          "symbol": "M:mga.a([FI)V",
+          "original": "a",
+          "renamed": "applyFloorCurve"
         },
         {
           "start": 25602,
@@ -711261,7 +711365,7 @@
       "original": "mga.java",
       "renamed": "VorbisFloor.java",
       "inputSha256": "a0ca4c2d8b9fcec8fc8b94aa538e2adab7f11153caf552cc39e3e853988e907d",
-      "outputSha256": "02041a918918c0208200a98fc337573617991b26ec04212c72d7a4025bffe839",
+      "outputSha256": "96c03cae54eb1bbcc71b39ea52f6a5c1279f489bfa24a14361befa4a7d6b8dcf",
       "edits": [
         {
           "start": 50,
@@ -711327,6 +711431,13 @@
           "renamed": "lowNeighbour"
         },
         {
+          "start": 3692,
+          "end": 3693,
+          "symbol": "M:mga.a([FI)V",
+          "original": "a",
+          "renamed": "applyFloorCurve"
+        },
+        {
           "start": 4619,
           "end": 4622,
           "symbol": "C:mga",
@@ -711374,6 +711485,13 @@
           "symbol": "M:mga.a(IIII[FI)V",
           "original": "a",
           "renamed": "applyLine"
+        },
+        {
+          "start": 6839,
+          "end": 6840,
+          "symbol": "M:mga.a()Z",
+          "original": "a",
+          "renamed": "decodeFloor"
         },
         {
           "start": 7272,
@@ -757400,7 +757518,7 @@
       "original": "qj.java",
       "renamed": "VorbisResidue.java",
       "inputSha256": "2cf2906d1e0e6a16a3b6ea10f161466c5f8a63713c586fa0e27f46e38e3b8a61",
-      "outputSha256": "c4b419e3e47e0eaab19ffd54af8451cbdcb20dfe273c4d09509b2a90a2f61b01",
+      "outputSha256": "b0dc66f7e570215ccf5b705ceef45869ce6301b4a4ced62dafd27f1e5d294b0e",
       "edits": [
         {
           "start": 50,
@@ -757450,6 +757568,20 @@
           "symbol": "C:dv",
           "original": "dv",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 2114,
+          "end": 2115,
+          "symbol": "M:bo.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
+        },
+        {
+          "start": 2521,
+          "end": 2522,
+          "symbol": "M:bo.c()[F",
+          "original": "c",
+          "renamed": "decodeVector"
         },
         {
           "start": 2978,
@@ -770538,7 +770670,7 @@
       "original": "sda.java",
       "renamed": "SynthInstrument.java",
       "inputSha256": "197255f77d1bd744ba7b121234ddefbe73f58acca69022f5cbe030e7efb0e82f",
-      "outputSha256": "caf00bea75308565d16e701e41a904fe1293fbcaab572724db24e84761b3a72b",
+      "outputSha256": "db752b50553711b992509ac8c57ed4862145832ae1452c74bf1a850bf04ea75c",
       "edits": [
         {
           "start": 71,
@@ -770812,6 +770944,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "SoundEnvelope"
+        },
+        {
+          "start": 2792,
+          "end": 2793,
+          "symbol": "M:bc.a(Llu;Lkd;)V",
+          "original": "a",
+          "renamed": "decode"
         },
         {
           "start": 2847,
@@ -813394,10 +813533,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "c53b80f640609fe64726d290031b24cbc12865f6636d11d4a4bda7f40e8ce09e",
+    "rulesSha256": "efc5af9d73b1a55eabf394c5456c4ccceaff575158cf7763420b8595bd984e82",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "26470633e4e81d3b635107070d78e23b2aa396c0a93513342f29511eb247c25d",
+    "outputTreeSha256": "4dd506760fab3cf72dbd2dbe1ac6272e26f917621507256577c3ced6be8b188f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

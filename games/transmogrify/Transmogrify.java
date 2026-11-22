@@ -1211,7 +1211,7 @@ public final class Transmogrify extends SessionGameApplet {
           jj.a(96);
           mj.clearStaticReferences();
           ml.clearStaticReferences();
-          mb.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           hk.a((byte) 35);
           DualLinkNode.a((byte) 18);
           IndexedSpriteState.a(false);
@@ -1310,7 +1310,7 @@ public final class Transmogrify extends SessionGameApplet {
           ge.n(1843);
           wh.clearStaticReferences(43);
           fk.a((byte) 114);
-          jg.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           AchievementUnlockEvent.a((byte) -110);
           mf.clearStaticReferences(true);
           ProxySocketConnector.d(-114);

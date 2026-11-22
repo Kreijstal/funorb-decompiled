@@ -11,10 +11,10 @@ final class SoundFilter {
     private int[][][] field_a;
     static int field_g;
 
-    private final float a(int param0, int param1, float param2) {
+    private final float interpolateFrequency(int param0, int param1, float param2) {
         float var4 = (float)this.field_a[param0][0][param1] + param2 * (float)(this.field_a[param0][1][param1] - this.field_a[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return SoundFilter.a(var4);
+        return SoundFilter.normalizeFrequency(var4);
     }
 
     public static void clearStaticReferences() {
@@ -22,7 +22,7 @@ final class SoundFilter {
         field_h = (int[][]) null;
     }
 
-    final int a(int param0, float param1) {
+    final int computeCoefficients(int param0, float param1) {
         if (param0 == 0) {
           float var3 = (float)this.field_c[0] + (float)(this.field_c[1] - this.field_c[0]) * param1;
           var3 = var3 * 0.0030517578125f;
@@ -32,12 +32,12 @@ final class SoundFilter {
         if (this.field_d[param0] == 0) {
           return 0;
         }
-        float var3Lifetime1 = this.b(param0, 0, param1);
-        field_e[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.a(param0, 0, param1));
+        float var3Lifetime1 = this.interpolateMagnitude(param0, 0, param1);
+        field_e[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.interpolateFrequency(param0, 0, param1));
         field_e[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (int var4 = 1; var4 < this.field_d[param0]; var4++) {
-          float var3Lifetime2 = this.b(param0, var4, param1);
-          float var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.a(param0, var4, param1));
+          float var3Lifetime2 = this.interpolateMagnitude(param0, var4, param1);
+          float var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.interpolateFrequency(param0, var4, param1));
           float var6 = var3Lifetime2 * var3Lifetime2;
           field_e[param0][var4 * 2 + 1] = field_e[param0][var4 * 2 - 1] * var6;
           field_e[param0][var4 * 2] = field_e[param0][var4 * 2 - 1] * var5 + field_e[param0][var4 * 2 - 2] * var6;
@@ -62,18 +62,18 @@ final class SoundFilter {
         return this.field_d[param0] * 2;
     }
 
-    private final static float a(float param0) {
+    private final static float normalizeFrequency(float param0) {
         float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    private final float b(int param0, int param1, float param2) {
+    private final float interpolateMagnitude(int param0, int param1, float param2) {
         float var4 = (float)this.field_f[param0][0][param1] + param2 * (float)(this.field_f[param0][1][param1] - this.field_f[param0][0][param1]);
         var4 = var4 * 0.00152587890625f;
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    final void a(PacketBuffer param0, SoundEnvelope param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3 = param0.readUnsignedByte(-103);
         this.field_d[0] = var3 >> 4;
         this.field_d[1] = var3 & 15;

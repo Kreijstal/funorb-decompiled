@@ -1462,10 +1462,10 @@
     {
       "symbol": "C:ih",
       "originalName": "ih",
-      "to": "MixedSupport060",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport060"
+      "to": "VorbisFloor",
+      "evidence": "Vorbis floor type1: constructor reads and requires16-bit type1,partition classes,subclass codebooks,multiplier and x coordinates. Owns shared x/y/active scratch and inverse-dB/range tables;decodes presence and scalar y values,unpacks predicted residuals,sorts linked points and applies the floor curve to the spectrum. Full owning constructor,all instance/related static bodies,field associations,own/helper calls and typed consumers reviewed. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:VorbisFloor"
     },
     {
       "symbol": "C:ii",
@@ -1526,10 +1526,10 @@
     {
       "symbol": "C:ja",
       "originalName": "ja",
-      "to": "MixedSupport064",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport064"
+      "to": "VorbisCodebook",
+      "evidence": "Vorbis codebook: constructor consumes24bits without validating them,reads dimensions/entry count and ordered/sparse code lengths,builds a canonical Huffman tree,and reads quantized lookup vectors. Scalar bit traversal returns complemented tree leaf;vector decoding returns the retained vector row by alias;lookup1 uses the original integer-power helper. Full owning constructor,all instance/related static bodies,field associations,own/helper calls and typed consumers reviewed. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:VorbisCodebook"
     },
     {
       "symbol": "C:jb",
@@ -12441,7 +12441,7 @@
       "to": "integerArrayState0104",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0104:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0104:[I"
     },
     {
       "symbol": "F:ih.field_b:[I",
@@ -12449,7 +12449,7 @@
       "to": "integerArrayState0103",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0103:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0103:[I"
     },
     {
       "symbol": "F:ih.field_c:[F",
@@ -12457,7 +12457,7 @@
       "to": "floatArrayState0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.floatArrayState0001:[F"
+      "renamedSymbol": "F:VorbisFloor.floatArrayState0001:[F"
     },
     {
       "symbol": "F:ih.field_d:[I",
@@ -12465,7 +12465,7 @@
       "to": "integerArrayState0106",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0106:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0106:[I"
     },
     {
       "symbol": "F:ih.field_e:[Z",
@@ -12473,7 +12473,7 @@
       "to": "booleanArrayState0006",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.booleanArrayState0006:[Z"
+      "renamedSymbol": "F:VorbisFloor.booleanArrayState0006:[Z"
     },
     {
       "symbol": "F:ih.field_f:[I",
@@ -12481,7 +12481,7 @@
       "to": "integerArrayState0107",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0107:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0107:[I"
     },
     {
       "symbol": "F:ih.field_g:[I",
@@ -12489,7 +12489,7 @@
       "to": "integerArrayState0109",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0109:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0109:[I"
     },
     {
       "symbol": "F:ih.field_h:[I",
@@ -12497,7 +12497,7 @@
       "to": "integerArrayState0105",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0105:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0105:[I"
     },
     {
       "symbol": "F:ih.field_i:[I",
@@ -12505,7 +12505,7 @@
       "to": "integerArrayState0102",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0102:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0102:[I"
     },
     {
       "symbol": "F:ih.field_j:I",
@@ -12513,7 +12513,7 @@
       "to": "integerState0331",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerState0331:I"
+      "renamedSymbol": "F:VorbisFloor.integerState0331:I"
     },
     {
       "symbol": "F:ih.field_k:[[I",
@@ -12521,7 +12521,7 @@
       "to": "integerArrayArrayState0011",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayArrayState0011:[[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayArrayState0011:[[I"
     },
     {
       "symbol": "F:ih.field_l:[I",
@@ -12529,7 +12529,7 @@
       "to": "integerArrayState0108",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0108:[I"
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0108:[I"
     },
     {
       "symbol": "F:ii.field_p:Ljava/lang/String;",
@@ -12873,7 +12873,7 @@
       "to": "integerArrayState0114",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0114:[I"
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0114:[I"
     },
     {
       "symbol": "F:ja.field_b:[I",
@@ -12881,7 +12881,7 @@
       "to": "integerArrayState0112",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0112:[I"
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0112:[I"
     },
     {
       "symbol": "F:ja.field_c:[I",
@@ -12889,7 +12889,7 @@
       "to": "integerArrayState0113",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0113:[I"
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0113:[I"
     },
     {
       "symbol": "F:ja.field_d:I",
@@ -12897,7 +12897,7 @@
       "to": "integerState0338",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.integerState0338:I"
+      "renamedSymbol": "F:VorbisCodebook.integerState0338:I"
     },
     {
       "symbol": "F:ja.field_e:I",
@@ -12905,7 +12905,7 @@
       "to": "integerState0337",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.integerState0337:I"
+      "renamedSymbol": "F:VorbisCodebook.integerState0337:I"
     },
     {
       "symbol": "F:ja.field_f:[[F",
@@ -12913,7 +12913,7 @@
       "to": "floatArrayArrayState0002",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport064.floatArrayArrayState0002:[[F"
+      "renamedSymbol": "F:VorbisCodebook.floatArrayArrayState0002:[[F"
     },
     {
       "symbol": "F:jb.field_a:Z",
@@ -25841,7 +25841,7 @@
       "to": "mixedSupport060ArrayState0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:VorbisSample.mixedSupport060ArrayState0001:[LMixedSupport060;"
+      "renamedSymbol": "F:VorbisSample.mixedSupport060ArrayState0001:[LVorbisFloor;"
     },
     {
       "symbol": "F:va.field_S:[Lja;",
@@ -25849,7 +25849,7 @@
       "to": "mixedSupport064ArrayState0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:VorbisSample.mixedSupport064ArrayState0001:[LMixedSupport064;"
+      "renamedSymbol": "F:VorbisSample.mixedSupport064ArrayState0001:[LVorbisCodebook;"
     },
     {
       "symbol": "F:va.field_T:I",
@@ -68993,7 +68993,7 @@
       "to": "cachedIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#0"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#0"
     },
     {
       "symbol": "L:ih.<init>()V#1",
@@ -69001,7 +69001,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#1"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#1"
     },
     {
       "symbol": "L:ih.<init>()V#10",
@@ -69009,7 +69009,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#10"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#10"
     },
     {
       "symbol": "L:ih.<init>()V#11",
@@ -69017,7 +69017,7 @@
       "to": "integerArrayLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#11"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#11"
     },
     {
       "symbol": "L:ih.<init>()V#12",
@@ -69025,7 +69025,7 @@
       "to": "integerArrayLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#12"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#12"
     },
     {
       "symbol": "L:ih.<init>()V#13",
@@ -69033,7 +69033,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#13"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#13"
     },
     {
       "symbol": "L:ih.<init>()V#14",
@@ -69041,7 +69041,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#14"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#14"
     },
     {
       "symbol": "L:ih.<init>()V#15",
@@ -69049,7 +69049,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#15"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#15"
     },
     {
       "symbol": "L:ih.<init>()V#16",
@@ -69057,7 +69057,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#16"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#16"
     },
     {
       "symbol": "L:ih.<init>()V#17",
@@ -69065,7 +69065,7 @@
       "to": "integerLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#17"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#17"
     },
     {
       "symbol": "L:ih.<init>()V#18",
@@ -69073,7 +69073,7 @@
       "to": "integerLocal19",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#18"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#18"
     },
     {
       "symbol": "L:ih.<init>()V#19",
@@ -69081,7 +69081,7 @@
       "to": "integerLocal20",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#19"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#19"
     },
     {
       "symbol": "L:ih.<init>()V#2",
@@ -69089,7 +69089,7 @@
       "to": "previousIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#2"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#2"
     },
     {
       "symbol": "L:ih.<init>()V#3",
@@ -69097,7 +69097,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#3"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#3"
     },
     {
       "symbol": "L:ih.<init>()V#4",
@@ -69105,7 +69105,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#4"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#4"
     },
     {
       "symbol": "L:ih.<init>()V#5",
@@ -69113,7 +69113,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#5"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#5"
     },
     {
       "symbol": "L:ih.<init>()V#6",
@@ -69121,7 +69121,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#6"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#6"
     },
     {
       "symbol": "L:ih.<init>()V#7",
@@ -69129,7 +69129,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#7"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#7"
     },
     {
       "symbol": "L:ih.<init>()V#8",
@@ -69137,7 +69137,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#8"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#8"
     },
     {
       "symbol": "L:ih.<init>()V#9",
@@ -69145,7 +69145,7 @@
       "to": "integerArrayLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#9"
+      "renamedSymbol": "L:VorbisFloor.<init>()V#9"
     },
     {
       "symbol": "L:ih.a()Z#0",
@@ -69153,7 +69153,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#0"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#0"
     },
     {
       "symbol": "L:ih.a()Z#1",
@@ -69161,7 +69161,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#1"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#1"
     },
     {
       "symbol": "L:ih.a()Z#10",
@@ -69169,7 +69169,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#10"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#10"
     },
     {
       "symbol": "L:ih.a()Z#11",
@@ -69177,7 +69177,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#11"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#11"
     },
     {
       "symbol": "L:ih.a()Z#12",
@@ -69185,7 +69185,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#12"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#12"
     },
     {
       "symbol": "L:ih.a()Z#13",
@@ -69193,7 +69193,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#13"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#13"
     },
     {
       "symbol": "L:ih.a()Z#14",
@@ -69201,7 +69201,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#14"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#14"
     },
     {
       "symbol": "L:ih.a()Z#15",
@@ -69209,7 +69209,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#15"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#15"
     },
     {
       "symbol": "L:ih.a()Z#16",
@@ -69217,7 +69217,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#16"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#16"
     },
     {
       "symbol": "L:ih.a()Z#17",
@@ -69225,7 +69225,7 @@
       "to": "integerLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#17"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#17"
     },
     {
       "symbol": "L:ih.a()Z#2",
@@ -69233,7 +69233,7 @@
       "to": "previousIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#2"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#2"
     },
     {
       "symbol": "L:ih.a()Z#3",
@@ -69241,7 +69241,7 @@
       "to": "stackIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#3"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#3"
     },
     {
       "symbol": "L:ih.a()Z#4",
@@ -69249,7 +69249,7 @@
       "to": "stackIntegerArrayLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#4"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#4"
     },
     {
       "symbol": "L:ih.a()Z#5",
@@ -69257,7 +69257,7 @@
       "to": "stackIntegerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#5"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#5"
     },
     {
       "symbol": "L:ih.a()Z#6",
@@ -69265,7 +69265,7 @@
       "to": "stackIntegerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#6"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#6"
     },
     {
       "symbol": "L:ih.a()Z#7",
@@ -69273,7 +69273,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#7"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#7"
     },
     {
       "symbol": "L:ih.a()Z#8",
@@ -69281,7 +69281,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#8"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#8"
     },
     {
       "symbol": "L:ih.a()Z#9",
@@ -69289,7 +69289,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#9"
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#9"
     },
     {
       "symbol": "L:ih.a(II)V#0",
@@ -69297,7 +69297,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#0"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#0"
     },
     {
       "symbol": "L:ih.a(II)V#1",
@@ -69305,7 +69305,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#1"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#1"
     },
     {
       "symbol": "L:ih.a(II)V#2",
@@ -69313,7 +69313,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#2"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#2"
     },
     {
       "symbol": "L:ih.a(II)V#3",
@@ -69321,7 +69321,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#3"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#3"
     },
     {
       "symbol": "L:ih.a(II)V#4",
@@ -69329,7 +69329,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#4"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#4"
     },
     {
       "symbol": "L:ih.a(II)V#5",
@@ -69337,7 +69337,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#5"
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#5"
     },
     {
       "symbol": "L:ih.a(IIIII)I#0",
@@ -69345,7 +69345,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#0"
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#0"
     },
     {
       "symbol": "L:ih.a(IIIII)I#1",
@@ -69353,7 +69353,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#1"
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#1"
     },
     {
       "symbol": "L:ih.a(IIIII)I#2",
@@ -69361,7 +69361,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#2"
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#2"
     },
     {
       "symbol": "L:ih.a(IIIII)I#3",
@@ -69369,7 +69369,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#3"
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#3"
     },
     {
       "symbol": "L:ih.a(IIIII)I#4",
@@ -69377,7 +69377,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#4"
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#4"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#0",
@@ -69385,7 +69385,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#0"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#0"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#1",
@@ -69393,7 +69393,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#1"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#1"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#2",
@@ -69401,7 +69401,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#2"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#2"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#3",
@@ -69409,7 +69409,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#3"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#3"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#4",
@@ -69417,7 +69417,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#4"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#4"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#5",
@@ -69425,7 +69425,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#5"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#5"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#6",
@@ -69433,7 +69433,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#6"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#6"
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#7",
@@ -69441,7 +69441,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#7"
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#7"
     },
     {
       "symbol": "L:ih.a([FI)V#0",
@@ -69449,7 +69449,7 @@
       "to": "stackIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#0"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#0"
     },
     {
       "symbol": "L:ih.a([FI)V#1",
@@ -69457,7 +69457,7 @@
       "to": "stackIntegerArrayLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#1"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#1"
     },
     {
       "symbol": "L:ih.a([FI)V#10",
@@ -69465,7 +69465,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#10"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#10"
     },
     {
       "symbol": "L:ih.a([FI)V#11",
@@ -69473,7 +69473,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#11"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#11"
     },
     {
       "symbol": "L:ih.a([FI)V#12",
@@ -69481,7 +69481,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#12"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#12"
     },
     {
       "symbol": "L:ih.a([FI)V#13",
@@ -69489,7 +69489,7 @@
       "to": "floatLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#13"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#13"
     },
     {
       "symbol": "L:ih.a([FI)V#14",
@@ -69497,7 +69497,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#14"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#14"
     },
     {
       "symbol": "L:ih.a([FI)V#15",
@@ -69505,7 +69505,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#15"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#15"
     },
     {
       "symbol": "L:ih.a([FI)V#16",
@@ -69513,7 +69513,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#16"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#16"
     },
     {
       "symbol": "L:ih.a([FI)V#17",
@@ -69521,7 +69521,7 @@
       "to": "integerLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#17"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#17"
     },
     {
       "symbol": "L:ih.a([FI)V#18",
@@ -69529,7 +69529,7 @@
       "to": "integerLocal19",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#18"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#18"
     },
     {
       "symbol": "L:ih.a([FI)V#19",
@@ -69537,7 +69537,7 @@
       "to": "booleanArrayLocal20",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#19"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#19"
     },
     {
       "symbol": "L:ih.a([FI)V#2",
@@ -69545,7 +69545,7 @@
       "to": "stackIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#2"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#2"
     },
     {
       "symbol": "L:ih.a([FI)V#20",
@@ -69553,7 +69553,7 @@
       "to": "integerLocal21",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#20"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#20"
     },
     {
       "symbol": "L:ih.a([FI)V#21",
@@ -69561,7 +69561,7 @@
       "to": "integerLocal22",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#21"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#21"
     },
     {
       "symbol": "L:ih.a([FI)V#22",
@@ -69569,7 +69569,7 @@
       "to": "integerLocal23",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#22"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#22"
     },
     {
       "symbol": "L:ih.a([FI)V#23",
@@ -69577,7 +69577,7 @@
       "to": "integerLocal24",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#23"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#23"
     },
     {
       "symbol": "L:ih.a([FI)V#24",
@@ -69585,7 +69585,7 @@
       "to": "integerLocal25",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#24"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#24"
     },
     {
       "symbol": "L:ih.a([FI)V#25",
@@ -69593,7 +69593,7 @@
       "to": "integerLocal26",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#25"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#25"
     },
     {
       "symbol": "L:ih.a([FI)V#26",
@@ -69601,7 +69601,7 @@
       "to": "integerLocal27",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#26"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#26"
     },
     {
       "symbol": "L:ih.a([FI)V#27",
@@ -69609,7 +69609,7 @@
       "to": "integerLocal28",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#27"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#27"
     },
     {
       "symbol": "L:ih.a([FI)V#3",
@@ -69617,7 +69617,7 @@
       "to": "stackIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#3"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#3"
     },
     {
       "symbol": "L:ih.a([FI)V#4",
@@ -69625,7 +69625,7 @@
       "to": "stackIntegerArrayLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#4"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#4"
     },
     {
       "symbol": "L:ih.a([FI)V#5",
@@ -69633,7 +69633,7 @@
       "to": "stackIntegerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#5"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#5"
     },
     {
       "symbol": "L:ih.a([FI)V#6",
@@ -69641,7 +69641,7 @@
       "to": "stackIntegerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#6"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#6"
     },
     {
       "symbol": "L:ih.a([FI)V#7",
@@ -69649,7 +69649,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#7"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#7"
     },
     {
       "symbol": "L:ih.a([FI)V#8",
@@ -69657,7 +69657,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#8"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#8"
     },
     {
       "symbol": "L:ih.a([FI)V#9",
@@ -69665,7 +69665,7 @@
       "to": "booleanArrayLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#9"
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#9"
     },
     {
       "symbol": "L:ih.a([II)I#0",
@@ -69673,7 +69673,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#0"
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#0"
     },
     {
       "symbol": "L:ih.a([II)I#1",
@@ -69681,7 +69681,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#1"
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#1"
     },
     {
       "symbol": "L:ih.a([II)I#2",
@@ -69689,7 +69689,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#2"
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#2"
     },
     {
       "symbol": "L:ih.a([II)I#3",
@@ -69697,7 +69697,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#3"
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#3"
     },
     {
       "symbol": "L:ih.a([II)I#4",
@@ -69705,7 +69705,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#4"
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#4"
     },
     {
       "symbol": "L:ih.b([II)I#0",
@@ -69713,7 +69713,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#0"
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#0"
     },
     {
       "symbol": "L:ih.b([II)I#1",
@@ -69721,7 +69721,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#1"
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#1"
     },
     {
       "symbol": "L:ih.b([II)I#2",
@@ -69729,7 +69729,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#2"
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#2"
     },
     {
       "symbol": "L:ih.b([II)I#3",
@@ -69737,7 +69737,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#3"
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#3"
     },
     {
       "symbol": "L:ih.b([II)I#4",
@@ -69745,7 +69745,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#4"
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#4"
     },
     {
       "symbol": "L:ii.a(Ljava/lang/String;B)Ljava/lang/String;#0",
@@ -72649,7 +72649,7 @@
       "to": "previousIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#0"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#0"
     },
     {
       "symbol": "L:ja.<init>()V#1",
@@ -72657,7 +72657,7 @@
       "to": "stackIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#1"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#1"
     },
     {
       "symbol": "L:ja.<init>()V#10",
@@ -72665,7 +72665,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#10"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#10"
     },
     {
       "symbol": "L:ja.<init>()V#11",
@@ -72673,7 +72673,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#11"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#11"
     },
     {
       "symbol": "L:ja.<init>()V#12",
@@ -72681,7 +72681,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#12"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#12"
     },
     {
       "symbol": "L:ja.<init>()V#13",
@@ -72689,7 +72689,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#13"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#13"
     },
     {
       "symbol": "L:ja.<init>()V#14",
@@ -72697,7 +72697,7 @@
       "to": "floatLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#14"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#14"
     },
     {
       "symbol": "L:ja.<init>()V#15",
@@ -72705,7 +72705,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#15"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#15"
     },
     {
       "symbol": "L:ja.<init>()V#16",
@@ -72713,7 +72713,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#16"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#16"
     },
     {
       "symbol": "L:ja.<init>()V#17",
@@ -72721,7 +72721,7 @@
       "to": "floatLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#17"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#17"
     },
     {
       "symbol": "L:ja.<init>()V#18",
@@ -72729,7 +72729,7 @@
       "to": "integerLocal19",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#18"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#18"
     },
     {
       "symbol": "L:ja.<init>()V#19",
@@ -72737,7 +72737,7 @@
       "to": "floatLocal20",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#19"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#19"
     },
     {
       "symbol": "L:ja.<init>()V#2",
@@ -72745,7 +72745,7 @@
       "to": "stackIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#2"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#2"
     },
     {
       "symbol": "L:ja.<init>()V#20",
@@ -72753,7 +72753,7 @@
       "to": "integerLocal21",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#20"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#20"
     },
     {
       "symbol": "L:ja.<init>()V#21",
@@ -72761,7 +72761,7 @@
       "to": "integerLocal22",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#21"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#21"
     },
     {
       "symbol": "L:ja.<init>()V#22",
@@ -72769,7 +72769,7 @@
       "to": "integerLocal23",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#22"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#22"
     },
     {
       "symbol": "L:ja.<init>()V#23",
@@ -72777,7 +72777,7 @@
       "to": "integerLocal24",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#23"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#23"
     },
     {
       "symbol": "L:ja.<init>()V#3",
@@ -72785,7 +72785,7 @@
       "to": "stackIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#3"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#3"
     },
     {
       "symbol": "L:ja.<init>()V#4",
@@ -72793,7 +72793,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#4"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#4"
     },
     {
       "symbol": "L:ja.<init>()V#5",
@@ -72801,7 +72801,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#5"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#5"
     },
     {
       "symbol": "L:ja.<init>()V#6",
@@ -72809,7 +72809,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#6"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#6"
     },
     {
       "symbol": "L:ja.<init>()V#7",
@@ -72817,7 +72817,7 @@
       "to": "floatLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#7"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#7"
     },
     {
       "symbol": "L:ja.<init>()V#8",
@@ -72825,7 +72825,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#8"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#8"
     },
     {
       "symbol": "L:ja.<init>()V#9",
@@ -72833,7 +72833,7 @@
       "to": "floatLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#9"
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#9"
     },
     {
       "symbol": "L:ja.a()I#0",
@@ -72841,7 +72841,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.computeInteger0757()I#0"
+      "renamedSymbol": "L:VorbisCodebook.decodeScalar()I#0"
     },
     {
       "symbol": "L:ja.a(II)I#0",
@@ -72849,7 +72849,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.computeInteger0758(II)I#0"
+      "renamedSymbol": "L:VorbisCodebook.lookup1Values(II)I#0"
     },
     {
       "symbol": "L:ja.c()V#0",
@@ -72857,7 +72857,7 @@
       "to": "integerArrayLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#0"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#0"
     },
     {
       "symbol": "L:ja.c()V#1",
@@ -72865,7 +72865,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#1"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#1"
     },
     {
       "symbol": "L:ja.c()V#10",
@@ -72873,7 +72873,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#10"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#10"
     },
     {
       "symbol": "L:ja.c()V#11",
@@ -72881,7 +72881,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#11"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#11"
     },
     {
       "symbol": "L:ja.c()V#12",
@@ -72889,7 +72889,7 @@
       "to": "integerArrayLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#12"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#12"
     },
     {
       "symbol": "L:ja.c()V#13",
@@ -72897,7 +72897,7 @@
       "to": "integerArrayLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#13"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#13"
     },
     {
       "symbol": "L:ja.c()V#14",
@@ -72905,7 +72905,7 @@
       "to": "integerArrayLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#14"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#14"
     },
     {
       "symbol": "L:ja.c()V#15",
@@ -72913,7 +72913,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#15"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#15"
     },
     {
       "symbol": "L:ja.c()V#16",
@@ -72921,7 +72921,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#16"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#16"
     },
     {
       "symbol": "L:ja.c()V#17",
@@ -72929,7 +72929,7 @@
       "to": "integerLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#17"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#17"
     },
     {
       "symbol": "L:ja.c()V#18",
@@ -72937,7 +72937,7 @@
       "to": "integerLocal19",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#18"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#18"
     },
     {
       "symbol": "L:ja.c()V#19",
@@ -72945,7 +72945,7 @@
       "to": "integerLocal20",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#19"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#19"
     },
     {
       "symbol": "L:ja.c()V#2",
@@ -72953,7 +72953,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#2"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#2"
     },
     {
       "symbol": "L:ja.c()V#20",
@@ -72961,7 +72961,7 @@
       "to": "integerLocal21",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#20"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#20"
     },
     {
       "symbol": "L:ja.c()V#21",
@@ -72969,7 +72969,7 @@
       "to": "integerLocal22",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#21"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#21"
     },
     {
       "symbol": "L:ja.c()V#22",
@@ -72977,7 +72977,7 @@
       "to": "integerLocal23",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#22"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#22"
     },
     {
       "symbol": "L:ja.c()V#23",
@@ -72985,7 +72985,7 @@
       "to": "integerLocal24",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#23"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#23"
     },
     {
       "symbol": "L:ja.c()V#3",
@@ -72993,7 +72993,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#3"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#3"
     },
     {
       "symbol": "L:ja.c()V#4",
@@ -73001,7 +73001,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#4"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#4"
     },
     {
       "symbol": "L:ja.c()V#5",
@@ -73009,7 +73009,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#5"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#5"
     },
     {
       "symbol": "L:ja.c()V#6",
@@ -73017,7 +73017,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#6"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#6"
     },
     {
       "symbol": "L:ja.c()V#7",
@@ -73025,7 +73025,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#7"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#7"
     },
     {
       "symbol": "L:ja.c()V#8",
@@ -73033,7 +73033,7 @@
       "to": "integerArrayLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#8"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#8"
     },
     {
       "symbol": "L:ja.c()V#9",
@@ -73041,7 +73041,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#9"
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#9"
     },
     {
       "symbol": "L:jb.a(BB)C#0",
@@ -154150,50 +154150,50 @@
     {
       "symbol": "M:ih.a()Z",
       "originalName": "a",
-      "to": "computeBoolean0720",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.computeBoolean0720()Z"
+      "to": "decodeFloor",
+      "evidence": "Read the floor-presence bit;absent returns false before scratch writes. Present copies x coordinates,decodes initial y and partition/subclass scalar codebook values into shared scratch arrays. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 9b47f0a9b6ba6197cecd856231d85ca97af7ba663c42b5a2229f3931b0bf24c6. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z"
     },
     {
       "symbol": "M:ih.a(II)V",
       "originalName": "a",
-      "to": "performAction0721",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.performAction0721(II)V"
+      "to": "sortFloorPoints",
+      "evidence": "Quicksort the shared floor x/y/active arrays together by x coordinate,including recursive subranges and original alias/write ordering. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 dda2d62855221aa58c271ae2c9d805e4cac9c5a016615e1472d95c6ff18a0c59. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.sortFloorPoints(II)V"
     },
     {
       "symbol": "M:ih.a(IIIII)I",
       "originalName": "a",
-      "to": "computeInteger0722",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0722(IIIII)I"
+      "to": "interpolateFloorPoint",
+      "evidence": "Integer interpolation of y between two x/y endpoints at a requested x,preserving signed arithmetic,overflow and division failure. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 2d186b8bc9eb6e61d0e74f742b7c2a29c86a20c3b3c49a5095cc8202f60e8299. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.interpolateFloorPoint(IIIII)I"
     },
     {
       "symbol": "M:ih.a(IIII[FI)V",
       "originalName": "a",
-      "to": "performAction0723",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.performAction0723(IIII[FI)V"
+      "to": "renderFloorLine",
+      "evidence": "Multiply the spectrum by the inverse-decibel lookup while stepping an integer floor line;preserve the first write before clipping,division and all index/failure behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 cdf8a83b48a9ee2bfb1c44d72dd50f730c732d731b922c318a931e0d0e24dbc4. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.renderFloorLine(IIII[FI)V"
     },
     {
       "symbol": "M:ih.a([FI)V",
       "originalName": "a",
-      "to": "performAction0724",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.performAction0724([FI)V"
+      "to": "applyFloorCurve",
+      "evidence": "Predict and unpack floor y values using low/high neighbors,mark active points,sort linked x/y/active state,render each active segment and multiply the remaining tail. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 647c30c21fc46fbd6e02945fab095550781356ab104b2e6d6ce984a0861bad72. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V"
     },
     {
       "symbol": "M:ih.a([II)I",
       "originalName": "a",
-      "to": "computeInteger0725",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0725([II)I"
+      "to": "findHighNeighbor",
+      "evidence": "Among earlier points find the least x strictly above the current x;retain-1 when absent and original bounds behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 3f57678c987f78bcb17c276df16755bcf78c75368c6af341132f3799bac42c71. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.findHighNeighbor([II)I"
     },
     {
       "symbol": "M:ih.b()V",
@@ -154201,15 +154201,15 @@
       "to": "clearStaticReferences",
       "evidence": "Reviewed complete statement classification and resolved field bindings: 5 null writes to 5 own static reference fields; only parameter guards, returns and braces otherwise. Preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 ee675efc49c01465a652aff69ce53b504c0d5bc4db8e5af82588dd9761d36c7a.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport060.clearStaticReferences()V"
+      "renamedSymbol": "M:VorbisFloor.clearStaticReferences()V"
     },
     {
       "symbol": "M:ih.b([II)I",
       "originalName": "b",
-      "to": "computeInteger0726",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0726([II)I"
+      "to": "findLowNeighbor",
+      "evidence": "Among earlier points find the greatest x strictly below the current x;retain-1 when absent and original bounds behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 d955c3746b17f2200667ea4ee05beab0f2e8d146e98ed2ee61af3d0904b91466. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisFloor.findLowNeighbor([II)I"
     },
     {
       "symbol": "M:ii.a(Ljava/lang/String;B)Ljava/lang/String;",
@@ -154526,34 +154526,34 @@
     {
       "symbol": "M:ja.a()I",
       "originalName": "a",
-      "to": "computeInteger0757",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport064.computeInteger0757()I"
+      "to": "decodeScalar",
+      "evidence": "Walk the Huffman decode tree with each input bit;return complemented leaf entry index. Preserve tree/bit-reader access and failure order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 bc3c0b5446f48f081affdf02d58672f09ec130ba68cea697290754133be4e5f5. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.decodeScalar()I"
     },
     {
       "symbol": "M:ja.a(II)I",
       "originalName": "a",
-      "to": "computeInteger0758",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport064.computeInteger0758(II)I"
+      "to": "lookup1Values",
+      "evidence": "Estimate entryCount^(1/dimensions)+1,then decrement while the integer-power helper exceeds entryCount. Preserve Java floating casts,int overflow,helper guards and invalid-domain behavior. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 536dd0c3c9609f5132aaa3939283358338ae3d05fd8ecedd1bdff36366c8d06c. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I"
     },
     {
       "symbol": "M:ja.b()[F",
       "originalName": "b",
-      "to": "computeFloatArray0759",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport064.computeFloatArray0759()[F"
+      "to": "decodeVector",
+      "evidence": "Decode one scalar entry and return its stored float vector row directly,retaining shared mutable alias and all null/index failures. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 2ec02a1c38277e3389687b5f151cb01d33d6698d38a3df30f5b9d39ea7268001. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F"
     },
     {
       "symbol": "M:ja.c()V",
       "originalName": "c",
-      "to": "performAction0760",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport064.performAction0760()V"
+      "to": "buildHuffmanTree",
+      "evidence": "Build canonical codewords from per-entry lengths with32-bit shifts/carry updates,then construct the expandable decode tree with complemented leaf indices. Preserve exact growth,aliasing,overflow and allocation/write order. Complete owning audio context and exact dependency/consumer bindings reviewed. Pre-rename body SHA256 2f5f035588ee522ebfc207a05b025d96eb26be321c0779ed7d05f8724aea35d2. Identifier-only naming change. Preserve all original argument widths,guards,integer overflow,FP evaluation/casts,partial writes,shared aliases,allocation/call/exception order,modifiers and override bindings. Existing meaningful names and native signatures stay unchanged. No whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V"
     },
     {
       "symbol": "M:jb.a(B)V",
@@ -187897,7 +187897,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0721(II)V#0"
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#0"
     },
     {
       "symbol": "P:ih.a(II)V#1",
@@ -187905,7 +187905,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0721(II)V#1"
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#1"
     },
     {
       "symbol": "P:ih.a(IIIII)I#0",
@@ -187913,7 +187913,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#0"
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#0"
     },
     {
       "symbol": "P:ih.a(IIIII)I#1",
@@ -187921,7 +187921,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#1"
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#1"
     },
     {
       "symbol": "P:ih.a(IIIII)I#2",
@@ -187929,7 +187929,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#2"
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#2"
     },
     {
       "symbol": "P:ih.a(IIIII)I#3",
@@ -187937,7 +187937,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#3"
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#3"
     },
     {
       "symbol": "P:ih.a(IIIII)I#4",
@@ -187945,7 +187945,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#4"
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#4"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#0",
@@ -187953,7 +187953,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#0"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#0"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#1",
@@ -187961,7 +187961,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#1"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#1"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#2",
@@ -187969,7 +187969,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#2"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#2"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#3",
@@ -187977,7 +187977,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#3"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#3"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#4",
@@ -187985,7 +187985,7 @@
       "to": "floatArrayArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#4"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#4"
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#5",
@@ -187993,7 +187993,7 @@
       "to": "integerArgument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#5"
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#5"
     },
     {
       "symbol": "P:ih.a([FI)V#0",
@@ -188001,7 +188001,7 @@
       "to": "floatArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0724([FI)V#0"
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#0"
     },
     {
       "symbol": "P:ih.a([FI)V#1",
@@ -188009,7 +188009,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.performAction0724([FI)V#1"
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#1"
     },
     {
       "symbol": "P:ih.a([II)I#0",
@@ -188017,7 +188017,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0725([II)I#0"
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#0"
     },
     {
       "symbol": "P:ih.a([II)I#1",
@@ -188025,7 +188025,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0725([II)I#1"
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#1"
     },
     {
       "symbol": "P:ih.b([II)I#0",
@@ -188033,7 +188033,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0726([II)I#0"
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#0"
     },
     {
       "symbol": "P:ih.b([II)I#1",
@@ -188041,7 +188041,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0726([II)I#1"
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#1"
     },
     {
       "symbol": "P:ii.<init>(Lrk;)V#0",
@@ -189177,7 +189177,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport064.computeInteger0758(II)I#0"
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#0"
     },
     {
       "symbol": "P:ja.a(II)I#1",
@@ -189185,7 +189185,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport064.computeInteger0758(II)I#1"
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#1"
     },
     {
       "symbol": "P:jb.<init>(Ljava/lang/Throwable;Ljava/lang/String;)V#0",
@@ -224553,9 +224553,9 @@
     },
     {
       "symbol": "C:ih",
-      "renamedSymbol": "C:MixedSupport060",
+      "renamedSymbol": "C:VorbisFloor",
       "originalName": "ih",
-      "renamedName": "MixedSupport060",
+      "renamedName": "VorbisFloor",
       "declaration": {
         "file": "ih.java",
         "start": 50,
@@ -224641,9 +224641,9 @@
     },
     {
       "symbol": "C:ja",
-      "renamedSymbol": "C:MixedSupport064",
+      "renamedSymbol": "C:VorbisCodebook",
       "originalName": "ja",
-      "renamedName": "MixedSupport064",
+      "renamedName": "VorbisCodebook",
       "declaration": {
         "file": "ja.java",
         "start": 50,
@@ -239656,7 +239656,7 @@
     },
     {
       "symbol": "F:ih.field_a:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0104:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0104:[I",
       "originalName": "field_a",
       "renamedName": "integerArrayState0104",
       "declaration": {
@@ -239667,7 +239667,7 @@
     },
     {
       "symbol": "F:ih.field_b:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0103:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0103:[I",
       "originalName": "field_b",
       "renamedName": "integerArrayState0103",
       "declaration": {
@@ -239678,7 +239678,7 @@
     },
     {
       "symbol": "F:ih.field_c:[F",
-      "renamedSymbol": "F:MixedSupport060.floatArrayState0001:[F",
+      "renamedSymbol": "F:VorbisFloor.floatArrayState0001:[F",
       "originalName": "field_c",
       "renamedName": "floatArrayState0001",
       "declaration": {
@@ -239689,7 +239689,7 @@
     },
     {
       "symbol": "F:ih.field_d:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0106:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0106:[I",
       "originalName": "field_d",
       "renamedName": "integerArrayState0106",
       "declaration": {
@@ -239700,7 +239700,7 @@
     },
     {
       "symbol": "F:ih.field_e:[Z",
-      "renamedSymbol": "F:MixedSupport060.booleanArrayState0006:[Z",
+      "renamedSymbol": "F:VorbisFloor.booleanArrayState0006:[Z",
       "originalName": "field_e",
       "renamedName": "booleanArrayState0006",
       "declaration": {
@@ -239711,7 +239711,7 @@
     },
     {
       "symbol": "F:ih.field_f:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0107:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0107:[I",
       "originalName": "field_f",
       "renamedName": "integerArrayState0107",
       "declaration": {
@@ -239722,7 +239722,7 @@
     },
     {
       "symbol": "F:ih.field_g:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0109:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0109:[I",
       "originalName": "field_g",
       "renamedName": "integerArrayState0109",
       "declaration": {
@@ -239733,7 +239733,7 @@
     },
     {
       "symbol": "F:ih.field_h:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0105:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0105:[I",
       "originalName": "field_h",
       "renamedName": "integerArrayState0105",
       "declaration": {
@@ -239744,7 +239744,7 @@
     },
     {
       "symbol": "F:ih.field_i:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0102:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0102:[I",
       "originalName": "field_i",
       "renamedName": "integerArrayState0102",
       "declaration": {
@@ -239755,7 +239755,7 @@
     },
     {
       "symbol": "F:ih.field_j:I",
-      "renamedSymbol": "F:MixedSupport060.integerState0331:I",
+      "renamedSymbol": "F:VorbisFloor.integerState0331:I",
       "originalName": "field_j",
       "renamedName": "integerState0331",
       "declaration": {
@@ -239766,7 +239766,7 @@
     },
     {
       "symbol": "F:ih.field_k:[[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayArrayState0011:[[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayArrayState0011:[[I",
       "originalName": "field_k",
       "renamedName": "integerArrayArrayState0011",
       "declaration": {
@@ -239777,7 +239777,7 @@
     },
     {
       "symbol": "F:ih.field_l:[I",
-      "renamedSymbol": "F:MixedSupport060.integerArrayState0108:[I",
+      "renamedSymbol": "F:VorbisFloor.integerArrayState0108:[I",
       "originalName": "field_l",
       "renamedName": "integerArrayState0108",
       "declaration": {
@@ -240250,7 +240250,7 @@
     },
     {
       "symbol": "F:ja.field_a:[I",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0114:[I",
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0114:[I",
       "originalName": "field_a",
       "renamedName": "integerArrayState0114",
       "declaration": {
@@ -240261,7 +240261,7 @@
     },
     {
       "symbol": "F:ja.field_b:[I",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0112:[I",
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0112:[I",
       "originalName": "field_b",
       "renamedName": "integerArrayState0112",
       "declaration": {
@@ -240272,7 +240272,7 @@
     },
     {
       "symbol": "F:ja.field_c:[I",
-      "renamedSymbol": "F:MixedSupport064.integerArrayState0113:[I",
+      "renamedSymbol": "F:VorbisCodebook.integerArrayState0113:[I",
       "originalName": "field_c",
       "renamedName": "integerArrayState0113",
       "declaration": {
@@ -240283,7 +240283,7 @@
     },
     {
       "symbol": "F:ja.field_d:I",
-      "renamedSymbol": "F:MixedSupport064.integerState0338:I",
+      "renamedSymbol": "F:VorbisCodebook.integerState0338:I",
       "originalName": "field_d",
       "renamedName": "integerState0338",
       "declaration": {
@@ -240294,7 +240294,7 @@
     },
     {
       "symbol": "F:ja.field_e:I",
-      "renamedSymbol": "F:MixedSupport064.integerState0337:I",
+      "renamedSymbol": "F:VorbisCodebook.integerState0337:I",
       "originalName": "field_e",
       "renamedName": "integerState0337",
       "declaration": {
@@ -240305,7 +240305,7 @@
     },
     {
       "symbol": "F:ja.field_f:[[F",
-      "renamedSymbol": "F:MixedSupport064.floatArrayArrayState0002:[[F",
+      "renamedSymbol": "F:VorbisCodebook.floatArrayArrayState0002:[[F",
       "originalName": "field_f",
       "renamedName": "floatArrayArrayState0002",
       "declaration": {
@@ -258081,7 +258081,7 @@
     },
     {
       "symbol": "F:va.field_R:[Lih;",
-      "renamedSymbol": "F:VorbisSample.mixedSupport060ArrayState0001:[LMixedSupport060;",
+      "renamedSymbol": "F:VorbisSample.mixedSupport060ArrayState0001:[LVorbisFloor;",
       "originalName": "field_R",
       "renamedName": "mixedSupport060ArrayState0001",
       "declaration": {
@@ -258092,7 +258092,7 @@
     },
     {
       "symbol": "F:va.field_S:[Lja;",
-      "renamedSymbol": "F:VorbisSample.mixedSupport064ArrayState0001:[LMixedSupport064;",
+      "renamedSymbol": "F:VorbisSample.mixedSupport064ArrayState0001:[LVorbisCodebook;",
       "originalName": "field_S",
       "renamedName": "mixedSupport064ArrayState0001",
       "declaration": {
@@ -319384,7 +319384,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#0",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#0",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#0",
       "originalName": "dupTemp$1",
       "renamedName": "cachedIntegerLocal1",
       "declaration": {
@@ -319395,7 +319395,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#1",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#1",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#1",
       "originalName": "var8",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -319406,7 +319406,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#10",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#10",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#10",
       "originalName": "var7",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -319417,7 +319417,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#11",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#11",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#11",
       "originalName": "var9",
       "renamedName": "integerArrayLocal12",
       "declaration": {
@@ -319428,7 +319428,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#12",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#12",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#12",
       "originalName": "var10",
       "renamedName": "integerArrayLocal13",
       "declaration": {
@@ -319439,7 +319439,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#13",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#13",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#13",
       "originalName": "var4Lifetime1",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -319450,7 +319450,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#14",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#14",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#14",
       "originalName": "var4Lifetime2",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -319461,7 +319461,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#15",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#15",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#15",
       "originalName": "var6Lifetime1",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -319472,7 +319472,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#16",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#16",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#16",
       "originalName": "var7Lifetime1",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -319483,7 +319483,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#17",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#17",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "integerLocal18",
       "declaration": {
@@ -319494,7 +319494,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#18",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#18",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#18",
       "originalName": "var5Lifetime2",
       "renamedName": "integerLocal19",
       "declaration": {
@@ -319505,7 +319505,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#19",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#19",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#19",
       "originalName": "var5Lifetime3",
       "renamedName": "integerLocal20",
       "declaration": {
@@ -319516,7 +319516,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#2",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#2",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#2",
       "originalName": "incrementValue$0",
       "renamedName": "previousIntegerLocal3",
       "declaration": {
@@ -319527,7 +319527,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#3",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#3",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#3",
       "originalName": "var1",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -319538,7 +319538,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#4",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#4",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#4",
       "originalName": "var2",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -319549,7 +319549,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#5",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#5",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#5",
       "originalName": "var3",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -319560,7 +319560,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#6",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#6",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#6",
       "originalName": "var4",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -319571,7 +319571,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#7",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#7",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#7",
       "originalName": "var5",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -319582,7 +319582,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#8",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#8",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#8",
       "originalName": "var6",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -319593,7 +319593,7 @@
     },
     {
       "symbol": "L:ih.<init>()V#9",
-      "renamedSymbol": "L:MixedSupport060.<init>()V#9",
+      "renamedSymbol": "L:VorbisFloor.<init>()V#9",
       "originalName": "var6_ref_int__",
       "renamedName": "integerArrayLocal10",
       "declaration": {
@@ -319604,7 +319604,7 @@
     },
     {
       "symbol": "L:ih.a()Z#0",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#0",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#0",
       "originalName": "var6",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -319615,7 +319615,7 @@
     },
     {
       "symbol": "L:ih.a()Z#1",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#1",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#1",
       "originalName": "var12",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -319626,7 +319626,7 @@
     },
     {
       "symbol": "L:ih.a()Z#10",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#10",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#10",
       "originalName": "var4",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -319637,7 +319637,7 @@
     },
     {
       "symbol": "L:ih.a()Z#11",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#11",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#11",
       "originalName": "var5",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -319648,7 +319648,7 @@
     },
     {
       "symbol": "L:ih.a()Z#12",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#12",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#12",
       "originalName": "var7",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -319659,7 +319659,7 @@
     },
     {
       "symbol": "L:ih.a()Z#13",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#13",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#13",
       "originalName": "var8",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -319670,7 +319670,7 @@
     },
     {
       "symbol": "L:ih.a()Z#14",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#14",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#14",
       "originalName": "var9",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -319681,7 +319681,7 @@
     },
     {
       "symbol": "L:ih.a()Z#15",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#15",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#15",
       "originalName": "var10",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -319692,7 +319692,7 @@
     },
     {
       "symbol": "L:ih.a()Z#16",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#16",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#16",
       "originalName": "var11",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -319703,7 +319703,7 @@
     },
     {
       "symbol": "L:ih.a()Z#17",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#17",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#17",
       "originalName": "var13",
       "renamedName": "integerLocal18",
       "declaration": {
@@ -319714,7 +319714,7 @@
     },
     {
       "symbol": "L:ih.a()Z#2",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#2",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#2",
       "originalName": "incrementValue$0",
       "renamedName": "previousIntegerLocal3",
       "declaration": {
@@ -319725,7 +319725,7 @@
     },
     {
       "symbol": "L:ih.a()Z#3",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#3",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIntegerLocal4",
       "declaration": {
@@ -319736,7 +319736,7 @@
     },
     {
       "symbol": "L:ih.a()Z#4",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#4",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIntegerArrayLocal5",
       "declaration": {
@@ -319747,7 +319747,7 @@
     },
     {
       "symbol": "L:ih.a()Z#5",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#5",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#5",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIntegerLocal6",
       "declaration": {
@@ -319758,7 +319758,7 @@
     },
     {
       "symbol": "L:ih.a()Z#6",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#6",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#6",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIntegerLocal7",
       "declaration": {
@@ -319769,7 +319769,7 @@
     },
     {
       "symbol": "L:ih.a()Z#7",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#7",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#7",
       "originalName": "var1",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -319780,7 +319780,7 @@
     },
     {
       "symbol": "L:ih.a()Z#8",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#8",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#8",
       "originalName": "var2",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -319791,7 +319791,7 @@
     },
     {
       "symbol": "L:ih.a()Z#9",
-      "renamedSymbol": "L:MixedSupport060.computeBoolean0720()Z#9",
+      "renamedSymbol": "L:VorbisFloor.decodeFloor()Z#9",
       "originalName": "var3",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -319802,7 +319802,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#0",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#0",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#0",
       "originalName": "var7",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -319813,7 +319813,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#1",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#1",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#1",
       "originalName": "var3",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -319824,7 +319824,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#2",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#2",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#2",
       "originalName": "var4",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -319835,7 +319835,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#3",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#3",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#3",
       "originalName": "var5",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -319846,7 +319846,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#4",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#4",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#4",
       "originalName": "var6",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -319857,7 +319857,7 @@
     },
     {
       "symbol": "L:ih.a(II)V#5",
-      "renamedSymbol": "L:MixedSupport060.performAction0721(II)V#5",
+      "renamedSymbol": "L:VorbisFloor.sortFloorPoints(II)V#5",
       "originalName": "var8",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -319868,7 +319868,7 @@
     },
     {
       "symbol": "L:ih.a(IIIII)I#0",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#0",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#0",
       "originalName": "var6",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -319879,7 +319879,7 @@
     },
     {
       "symbol": "L:ih.a(IIIII)I#1",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#1",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#1",
       "originalName": "var7",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -319890,7 +319890,7 @@
     },
     {
       "symbol": "L:ih.a(IIIII)I#2",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#2",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#2",
       "originalName": "var8",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -319901,7 +319901,7 @@
     },
     {
       "symbol": "L:ih.a(IIIII)I#3",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#3",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#3",
       "originalName": "var9",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -319912,7 +319912,7 @@
     },
     {
       "symbol": "L:ih.a(IIIII)I#4",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0722(IIIII)I#4",
+      "renamedSymbol": "L:VorbisFloor.interpolateFloorPoint(IIIII)I#4",
       "originalName": "var10",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -319923,7 +319923,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#0",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#0",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#0",
       "originalName": "var14",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -319934,7 +319934,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#1",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#1",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#1",
       "originalName": "var7",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -319945,7 +319945,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#2",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#2",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#2",
       "originalName": "var8",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -319956,7 +319956,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#3",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#3",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#3",
       "originalName": "var9",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -319967,7 +319967,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#4",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#4",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#4",
       "originalName": "var10",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -319978,7 +319978,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#5",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#5",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#5",
       "originalName": "var11",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -319989,7 +319989,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#6",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#6",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#6",
       "originalName": "var12",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -320000,7 +320000,7 @@
     },
     {
       "symbol": "L:ih.a(IIII[FI)V#7",
-      "renamedSymbol": "L:MixedSupport060.performAction0723(IIII[FI)V#7",
+      "renamedSymbol": "L:VorbisFloor.renderFloorLine(IIII[FI)V#7",
       "originalName": "var13",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -320011,7 +320011,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#0",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#0",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIntegerLocal1",
       "declaration": {
@@ -320022,7 +320022,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#1",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#1",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIntegerArrayLocal2",
       "declaration": {
@@ -320033,7 +320033,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#10",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#10",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#10",
       "originalName": "var6",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -320044,7 +320044,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#11",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#11",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#11",
       "originalName": "var7",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -320055,7 +320055,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#12",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#12",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#12",
       "originalName": "var8_int",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -320066,7 +320066,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#13",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#13",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#13",
       "originalName": "var8",
       "renamedName": "floatLocal14",
       "declaration": {
@@ -320077,7 +320077,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#14",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#14",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#14",
       "originalName": "var9",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -320088,7 +320088,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#15",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#15",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#15",
       "originalName": "var10",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -320099,7 +320099,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#16",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#16",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#16",
       "originalName": "var11",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -320110,7 +320110,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#17",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#17",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#17",
       "originalName": "var12",
       "renamedName": "integerLocal18",
       "declaration": {
@@ -320121,7 +320121,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#18",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#18",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#18",
       "originalName": "var13",
       "renamedName": "integerLocal19",
       "declaration": {
@@ -320132,7 +320132,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#19",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#19",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#19",
       "originalName": "var14",
       "renamedName": "booleanArrayLocal20",
       "declaration": {
@@ -320143,7 +320143,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#2",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#2",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#2",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIntegerLocal3",
       "declaration": {
@@ -320154,7 +320154,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#20",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#20",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#20",
       "originalName": "var15",
       "renamedName": "integerLocal21",
       "declaration": {
@@ -320165,7 +320165,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#21",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#21",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#21",
       "originalName": "var16",
       "renamedName": "integerLocal22",
       "declaration": {
@@ -320176,7 +320176,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#22",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#22",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#22",
       "originalName": "var6Lifetime1",
       "renamedName": "integerLocal23",
       "declaration": {
@@ -320187,7 +320187,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#23",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#23",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#23",
       "originalName": "var7Lifetime1",
       "renamedName": "integerLocal24",
       "declaration": {
@@ -320198,7 +320198,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#24",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#24",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#24",
       "originalName": "var8_intLifetime1",
       "renamedName": "integerLocal25",
       "declaration": {
@@ -320209,7 +320209,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#25",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#25",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#25",
       "originalName": "var9Lifetime1",
       "renamedName": "integerLocal26",
       "declaration": {
@@ -320220,7 +320220,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#26",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#26",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#26",
       "originalName": "var9Lifetime2",
       "renamedName": "integerLocal27",
       "declaration": {
@@ -320231,7 +320231,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#27",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#27",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#27",
       "originalName": "var10Lifetime1",
       "renamedName": "integerLocal28",
       "declaration": {
@@ -320242,7 +320242,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#3",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#3",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#3",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIntegerLocal4",
       "declaration": {
@@ -320253,7 +320253,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#4",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#4",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIntegerArrayLocal5",
       "declaration": {
@@ -320264,7 +320264,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#5",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#5",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIntegerLocal6",
       "declaration": {
@@ -320275,7 +320275,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#6",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#6",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#6",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIntegerLocal7",
       "declaration": {
@@ -320286,7 +320286,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#7",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#7",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#7",
       "originalName": "var3",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -320297,7 +320297,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#8",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#8",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#8",
       "originalName": "var4",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -320308,7 +320308,7 @@
     },
     {
       "symbol": "L:ih.a([FI)V#9",
-      "renamedSymbol": "L:MixedSupport060.performAction0724([FI)V#9",
+      "renamedSymbol": "L:VorbisFloor.applyFloorCurve([FI)V#9",
       "originalName": "var5",
       "renamedName": "booleanArrayLocal10",
       "declaration": {
@@ -320319,7 +320319,7 @@
     },
     {
       "symbol": "L:ih.a([II)I#0",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#0",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#0",
       "originalName": "var5",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -320330,7 +320330,7 @@
     },
     {
       "symbol": "L:ih.a([II)I#1",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#1",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -320341,7 +320341,7 @@
     },
     {
       "symbol": "L:ih.a([II)I#2",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#2",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -320352,7 +320352,7 @@
     },
     {
       "symbol": "L:ih.a([II)I#3",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#3",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#3",
       "originalName": "var4",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -320363,7 +320363,7 @@
     },
     {
       "symbol": "L:ih.a([II)I#4",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0725([II)I#4",
+      "renamedSymbol": "L:VorbisFloor.findHighNeighbor([II)I#4",
       "originalName": "var6",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -320374,7 +320374,7 @@
     },
     {
       "symbol": "L:ih.b([II)I#0",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#0",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#0",
       "originalName": "var5",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -320385,7 +320385,7 @@
     },
     {
       "symbol": "L:ih.b([II)I#1",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#1",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -320396,7 +320396,7 @@
     },
     {
       "symbol": "L:ih.b([II)I#2",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#2",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -320407,7 +320407,7 @@
     },
     {
       "symbol": "L:ih.b([II)I#3",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#3",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#3",
       "originalName": "var4",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -320418,7 +320418,7 @@
     },
     {
       "symbol": "L:ih.b([II)I#4",
-      "renamedSymbol": "L:MixedSupport060.computeInteger0726([II)I#4",
+      "renamedSymbol": "L:VorbisFloor.findLowNeighbor([II)I#4",
       "originalName": "var6",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -324521,7 +324521,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#0",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#0",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#0",
       "originalName": "incrementValue$0",
       "renamedName": "previousIntegerLocal1",
       "declaration": {
@@ -324532,7 +324532,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#1",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#1",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIntegerLocal2",
       "declaration": {
@@ -324543,7 +324543,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#10",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#10",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#10",
       "originalName": "var5",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -324554,7 +324554,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#11",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#11",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#11",
       "originalName": "var6",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -324565,7 +324565,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#12",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#12",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#12",
       "originalName": "var7",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -324576,7 +324576,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#13",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#13",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#13",
       "originalName": "var8",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -324587,7 +324587,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#14",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#14",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#14",
       "originalName": "var9",
       "renamedName": "floatLocal15",
       "declaration": {
@@ -324598,7 +324598,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#15",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#15",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#15",
       "originalName": "var10",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -324609,7 +324609,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#16",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#16",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#16",
       "originalName": "var11",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -324620,7 +324620,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#17",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#17",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#17",
       "originalName": "var12",
       "renamedName": "floatLocal18",
       "declaration": {
@@ -324631,7 +324631,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#18",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#18",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#18",
       "originalName": "var12_int",
       "renamedName": "integerLocal19",
       "declaration": {
@@ -324642,7 +324642,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#19",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#19",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#19",
       "originalName": "var13",
       "renamedName": "floatLocal20",
       "declaration": {
@@ -324653,7 +324653,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#2",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#2",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIntegerLocal3",
       "declaration": {
@@ -324664,7 +324664,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#20",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#20",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#20",
       "originalName": "var14",
       "renamedName": "integerLocal21",
       "declaration": {
@@ -324675,7 +324675,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#21",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#21",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#21",
       "originalName": "var2Lifetime1",
       "renamedName": "integerLocal22",
       "declaration": {
@@ -324686,7 +324686,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#22",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#22",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#22",
       "originalName": "var5Lifetime1",
       "renamedName": "integerLocal23",
       "declaration": {
@@ -324697,7 +324697,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#23",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#23",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#23",
       "originalName": "var8Lifetime1",
       "renamedName": "integerLocal24",
       "declaration": {
@@ -324708,7 +324708,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#3",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#3",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#3",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIntegerLocal4",
       "declaration": {
@@ -324719,7 +324719,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#4",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#4",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#4",
       "originalName": "var1",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -324730,7 +324730,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#5",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#5",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#5",
       "originalName": "var2",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -324741,7 +324741,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#6",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#6",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#6",
       "originalName": "var3_int",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -324752,7 +324752,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#7",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#7",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#7",
       "originalName": "var3",
       "renamedName": "floatLocal8",
       "declaration": {
@@ -324763,7 +324763,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#8",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#8",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#8",
       "originalName": "var4_int",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -324774,7 +324774,7 @@
     },
     {
       "symbol": "L:ja.<init>()V#9",
-      "renamedSymbol": "L:MixedSupport064.<init>()V#9",
+      "renamedSymbol": "L:VorbisCodebook.<init>()V#9",
       "originalName": "var4",
       "renamedName": "floatLocal10",
       "declaration": {
@@ -324785,7 +324785,7 @@
     },
     {
       "symbol": "L:ja.a()I#0",
-      "renamedSymbol": "L:MixedSupport064.computeInteger0757()I#0",
+      "renamedSymbol": "L:VorbisCodebook.decodeScalar()I#0",
       "originalName": "var1",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -324796,7 +324796,7 @@
     },
     {
       "symbol": "L:ja.a(II)I#0",
-      "renamedSymbol": "L:MixedSupport064.computeInteger0758(II)I#0",
+      "renamedSymbol": "L:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -324807,7 +324807,7 @@
     },
     {
       "symbol": "L:ja.c()V#0",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#0",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#0",
       "originalName": "var2_ref_int__",
       "renamedName": "integerArrayLocal1",
       "declaration": {
@@ -324818,7 +324818,7 @@
     },
     {
       "symbol": "L:ja.c()V#1",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#1",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -324829,7 +324829,7 @@
     },
     {
       "symbol": "L:ja.c()V#10",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#10",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#10",
       "originalName": "var10",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -324840,7 +324840,7 @@
     },
     {
       "symbol": "L:ja.c()V#11",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#11",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#11",
       "originalName": "var11",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -324851,7 +324851,7 @@
     },
     {
       "symbol": "L:ja.c()V#12",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#12",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#12",
       "originalName": "var12",
       "renamedName": "integerArrayLocal13",
       "declaration": {
@@ -324862,7 +324862,7 @@
     },
     {
       "symbol": "L:ja.c()V#13",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#13",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#13",
       "originalName": "var14",
       "renamedName": "integerArrayLocal14",
       "declaration": {
@@ -324873,7 +324873,7 @@
     },
     {
       "symbol": "L:ja.c()V#14",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#14",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#14",
       "originalName": "var17",
       "renamedName": "integerArrayLocal15",
       "declaration": {
@@ -324884,7 +324884,7 @@
     },
     {
       "symbol": "L:ja.c()V#15",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#15",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -324895,7 +324895,7 @@
     },
     {
       "symbol": "L:ja.c()V#16",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#16",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#16",
       "originalName": "var4Lifetime1",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -324906,7 +324906,7 @@
     },
     {
       "symbol": "L:ja.c()V#17",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#17",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#17",
       "originalName": "var5Lifetime1",
       "renamedName": "integerLocal18",
       "declaration": {
@@ -324917,7 +324917,7 @@
     },
     {
       "symbol": "L:ja.c()V#18",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#18",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "integerLocal19",
       "declaration": {
@@ -324928,7 +324928,7 @@
     },
     {
       "symbol": "L:ja.c()V#19",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#19",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#19",
       "originalName": "var7Lifetime1",
       "renamedName": "integerLocal20",
       "declaration": {
@@ -324939,7 +324939,7 @@
     },
     {
       "symbol": "L:ja.c()V#2",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#2",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -324950,7 +324950,7 @@
     },
     {
       "symbol": "L:ja.c()V#20",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#20",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#20",
       "originalName": "var8Lifetime1",
       "renamedName": "integerLocal21",
       "declaration": {
@@ -324961,7 +324961,7 @@
     },
     {
       "symbol": "L:ja.c()V#21",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#21",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#21",
       "originalName": "var10Lifetime1",
       "renamedName": "integerLocal22",
       "declaration": {
@@ -324972,7 +324972,7 @@
     },
     {
       "symbol": "L:ja.c()V#22",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#22",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#22",
       "originalName": "var8Lifetime2",
       "renamedName": "integerLocal23",
       "declaration": {
@@ -324983,7 +324983,7 @@
     },
     {
       "symbol": "L:ja.c()V#23",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#23",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#23",
       "originalName": "var9_intLifetime1",
       "renamedName": "integerLocal24",
       "declaration": {
@@ -324994,7 +324994,7 @@
     },
     {
       "symbol": "L:ja.c()V#3",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#3",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#3",
       "originalName": "var4",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -325005,7 +325005,7 @@
     },
     {
       "symbol": "L:ja.c()V#4",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#4",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#4",
       "originalName": "var5",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -325016,7 +325016,7 @@
     },
     {
       "symbol": "L:ja.c()V#5",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#5",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#5",
       "originalName": "var6",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -325027,7 +325027,7 @@
     },
     {
       "symbol": "L:ja.c()V#6",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#6",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#6",
       "originalName": "var7",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -325038,7 +325038,7 @@
     },
     {
       "symbol": "L:ja.c()V#7",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#7",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#7",
       "originalName": "var8",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -325049,7 +325049,7 @@
     },
     {
       "symbol": "L:ja.c()V#8",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#8",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#8",
       "originalName": "var9",
       "renamedName": "integerArrayLocal9",
       "declaration": {
@@ -325060,7 +325060,7 @@
     },
     {
       "symbol": "L:ja.c()V#9",
-      "renamedSymbol": "L:MixedSupport064.performAction0760()V#9",
+      "renamedSymbol": "L:VorbisCodebook.buildHuffmanTree()V#9",
       "originalName": "var9_int",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -440835,9 +440835,9 @@
     },
     {
       "symbol": "M:ih.<init>()V",
-      "renamedSymbol": "M:MixedSupport060.<init>()V",
+      "renamedSymbol": "M:VorbisFloor.<init>()V",
       "originalName": "ih",
-      "renamedName": "MixedSupport060",
+      "renamedName": "VorbisFloor",
       "declaration": {
         "file": "ih.java",
         "start": 8510,
@@ -440846,9 +440846,9 @@
     },
     {
       "symbol": "M:ih.a()Z",
-      "renamedSymbol": "M:MixedSupport060.computeBoolean0720()Z",
+      "renamedSymbol": "M:VorbisFloor.decodeFloor()Z",
       "originalName": "a",
-      "renamedName": "computeBoolean0720",
+      "renamedName": "decodeFloor",
       "declaration": {
         "file": "ih.java",
         "start": 1828,
@@ -440857,9 +440857,9 @@
     },
     {
       "symbol": "M:ih.a(II)V",
-      "renamedSymbol": "M:MixedSupport060.performAction0721(II)V",
+      "renamedSymbol": "M:VorbisFloor.sortFloorPoints(II)V",
       "originalName": "a",
-      "renamedName": "performAction0721",
+      "renamedName": "sortFloorPoints",
       "declaration": {
         "file": "ih.java",
         "start": 444,
@@ -440868,9 +440868,9 @@
     },
     {
       "symbol": "M:ih.a(IIIII)I",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0722(IIIII)I",
+      "renamedSymbol": "M:VorbisFloor.interpolateFloorPoint(IIIII)I",
       "originalName": "a",
-      "renamedName": "computeInteger0722",
+      "renamedName": "interpolateFloorPoint",
       "declaration": {
         "file": "ih.java",
         "start": 3520,
@@ -440879,9 +440879,9 @@
     },
     {
       "symbol": "M:ih.a(IIII[FI)V",
-      "renamedSymbol": "M:MixedSupport060.performAction0723(IIII[FI)V",
+      "renamedSymbol": "M:VorbisFloor.renderFloorLine(IIII[FI)V",
       "originalName": "a",
-      "renamedName": "performAction0723",
+      "renamedName": "renderFloorLine",
       "declaration": {
         "file": "ih.java",
         "start": 4489,
@@ -440890,9 +440890,9 @@
     },
     {
       "symbol": "M:ih.a([FI)V",
-      "renamedSymbol": "M:MixedSupport060.performAction0724([FI)V",
+      "renamedSymbol": "M:VorbisFloor.applyFloorCurve([FI)V",
       "originalName": "a",
-      "renamedName": "performAction0724",
+      "renamedName": "applyFloorCurve",
       "declaration": {
         "file": "ih.java",
         "start": 5379,
@@ -440901,9 +440901,9 @@
     },
     {
       "symbol": "M:ih.a([II)I",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0725([II)I",
+      "renamedSymbol": "M:VorbisFloor.findHighNeighbor([II)I",
       "originalName": "a",
-      "renamedName": "computeInteger0725",
+      "renamedName": "findHighNeighbor",
       "declaration": {
         "file": "ih.java",
         "start": 1374,
@@ -440912,7 +440912,7 @@
     },
     {
       "symbol": "M:ih.b()V",
-      "renamedSymbol": "M:MixedSupport060.clearStaticReferences()V",
+      "renamedSymbol": "M:VorbisFloor.clearStaticReferences()V",
       "originalName": "b",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -440923,9 +440923,9 @@
     },
     {
       "symbol": "M:ih.b([II)I",
-      "renamedSymbol": "M:MixedSupport060.computeInteger0726([II)I",
+      "renamedSymbol": "M:VorbisFloor.findLowNeighbor([II)I",
       "originalName": "b",
-      "renamedName": "computeInteger0726",
+      "renamedName": "findLowNeighbor",
       "declaration": {
         "file": "ih.java",
         "start": 3873,
@@ -441473,9 +441473,9 @@
     },
     {
       "symbol": "M:ja.<init>()V",
-      "renamedSymbol": "M:MixedSupport064.<init>()V",
+      "renamedSymbol": "M:VorbisCodebook.<init>()V",
       "originalName": "ja",
-      "renamedName": "MixedSupport064",
+      "renamedName": "VorbisCodebook",
       "declaration": {
         "file": "ja.java",
         "start": 3833,
@@ -441484,9 +441484,9 @@
     },
     {
       "symbol": "M:ja.a()I",
-      "renamedSymbol": "M:MixedSupport064.computeInteger0757()I",
+      "renamedSymbol": "M:VorbisCodebook.decodeScalar()I",
       "originalName": "a",
-      "renamedName": "computeInteger0757",
+      "renamedName": "decodeScalar",
       "declaration": {
         "file": "ja.java",
         "start": 7195,
@@ -441495,9 +441495,9 @@
     },
     {
       "symbol": "M:ja.a(II)I",
-      "renamedSymbol": "M:MixedSupport064.computeInteger0758(II)I",
+      "renamedSymbol": "M:VorbisCodebook.lookup1Values(II)I",
       "originalName": "a",
-      "renamedName": "computeInteger0758",
+      "renamedName": "lookup1Values",
       "declaration": {
         "file": "ja.java",
         "start": 239,
@@ -441506,9 +441506,9 @@
     },
     {
       "symbol": "M:ja.b()[F",
-      "renamedSymbol": "M:MixedSupport064.computeFloatArray0759()[F",
+      "renamedSymbol": "M:VorbisCodebook.decodeVector()[F",
       "originalName": "b",
-      "renamedName": "computeFloatArray0759",
+      "renamedName": "decodeVector",
       "declaration": {
         "file": "ja.java",
         "start": 3777,
@@ -441517,9 +441517,9 @@
     },
     {
       "symbol": "M:ja.c()V",
-      "renamedSymbol": "M:MixedSupport064.performAction0760()V",
+      "renamedSymbol": "M:VorbisCodebook.buildHuffmanTree()V",
       "originalName": "c",
-      "renamedName": "performAction0760",
+      "renamedName": "buildHuffmanTree",
       "declaration": {
         "file": "ja.java",
         "start": 473,
@@ -489521,7 +489521,7 @@
     },
     {
       "symbol": "P:ih.a(II)V#0",
-      "renamedSymbol": "P:MixedSupport060.performAction0721(II)V#0",
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -489532,7 +489532,7 @@
     },
     {
       "symbol": "P:ih.a(II)V#1",
-      "renamedSymbol": "P:MixedSupport060.performAction0721(II)V#1",
+      "renamedSymbol": "P:VorbisFloor.sortFloorPoints(II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -489543,7 +489543,7 @@
     },
     {
       "symbol": "P:ih.a(IIIII)I#0",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#0",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -489554,7 +489554,7 @@
     },
     {
       "symbol": "P:ih.a(IIIII)I#1",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#1",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -489565,7 +489565,7 @@
     },
     {
       "symbol": "P:ih.a(IIIII)I#2",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#2",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -489576,7 +489576,7 @@
     },
     {
       "symbol": "P:ih.a(IIIII)I#3",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#3",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -489587,7 +489587,7 @@
     },
     {
       "symbol": "P:ih.a(IIIII)I#4",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0722(IIIII)I#4",
+      "renamedSymbol": "P:VorbisFloor.interpolateFloorPoint(IIIII)I#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -489598,7 +489598,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#0",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#0",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -489609,7 +489609,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#1",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#1",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -489620,7 +489620,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#2",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#2",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -489631,7 +489631,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#3",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#3",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -489642,7 +489642,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#4",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#4",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#4",
       "originalName": "param4",
       "renamedName": "floatArrayArgument5",
       "declaration": {
@@ -489653,7 +489653,7 @@
     },
     {
       "symbol": "P:ih.a(IIII[FI)V#5",
-      "renamedSymbol": "P:MixedSupport060.performAction0723(IIII[FI)V#5",
+      "renamedSymbol": "P:VorbisFloor.renderFloorLine(IIII[FI)V#5",
       "originalName": "param5",
       "renamedName": "integerArgument6",
       "declaration": {
@@ -489664,7 +489664,7 @@
     },
     {
       "symbol": "P:ih.a([FI)V#0",
-      "renamedSymbol": "P:MixedSupport060.performAction0724([FI)V#0",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#0",
       "originalName": "param0",
       "renamedName": "floatArrayArgument1",
       "declaration": {
@@ -489675,7 +489675,7 @@
     },
     {
       "symbol": "P:ih.a([FI)V#1",
-      "renamedSymbol": "P:MixedSupport060.performAction0724([FI)V#1",
+      "renamedSymbol": "P:VorbisFloor.applyFloorCurve([FI)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -489686,7 +489686,7 @@
     },
     {
       "symbol": "P:ih.a([II)I#0",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0725([II)I#0",
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -489697,7 +489697,7 @@
     },
     {
       "symbol": "P:ih.a([II)I#1",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0725([II)I#1",
+      "renamedSymbol": "P:VorbisFloor.findHighNeighbor([II)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -489708,7 +489708,7 @@
     },
     {
       "symbol": "P:ih.b([II)I#0",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0726([II)I#0",
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -489719,7 +489719,7 @@
     },
     {
       "symbol": "P:ih.b([II)I#1",
-      "renamedSymbol": "P:MixedSupport060.computeInteger0726([II)I#1",
+      "renamedSymbol": "P:VorbisFloor.findLowNeighbor([II)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -491281,7 +491281,7 @@
     },
     {
       "symbol": "P:ja.a(II)I#0",
-      "renamedSymbol": "P:MixedSupport064.computeInteger0758(II)I#0",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -491292,7 +491292,7 @@
     },
     {
       "symbol": "P:ja.a(II)I#1",
-      "renamedSymbol": "P:MixedSupport064.computeInteger0758(II)I#1",
+      "renamedSymbol": "P:VorbisCodebook.lookup1Values(II)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -622112,7 +622112,7 @@
       "original": "bm.java",
       "renamed": "MixedSupport012.java",
       "inputSha256": "cc60e8a24a7df62a660dc7449ac2081a5ac59fdd222744a76e8ddb3e1dc499a1",
-      "outputSha256": "7d3b1b754759093499d139a93ee970ff7e242ec6dd64316fecc14664c0917930",
+      "outputSha256": "8c9ac761a5e73e4d389c3c119545a794132dc9c37fcf96aa12d1dc1a87c1c5d8",
       "edits": [
         {
           "start": 50,
@@ -622294,7 +622294,7 @@
           "end": 565,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 566,
@@ -622616,7 +622616,7 @@
           "end": 1318,
           "symbol": "M:ja.a()I",
           "original": "a",
-          "renamed": "computeInteger0757"
+          "renamed": "decodeScalar"
         },
         {
           "start": 1341,
@@ -622917,7 +622917,7 @@
           "end": 2115,
           "symbol": "M:ja.b()[F",
           "original": "b",
-          "renamed": "computeFloatArray0759"
+          "renamed": "decodeVector"
         },
         {
           "start": 2144,
@@ -623092,7 +623092,7 @@
           "end": 2522,
           "symbol": "M:ja.b()[F",
           "original": "b",
-          "renamed": "computeFloatArray0759"
+          "renamed": "decodeVector"
         },
         {
           "start": 2551,
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "34ae103889edf149c3482614dbdc2f604c4e71eca96200651de71fd1278410f7",
+      "outputSha256": "dac419a0f3252fcacefc91d37b12085e58863fa9ae21a8f6a6e00774f9f41241",
       "edits": [
         {
           "start": 57,
@@ -727665,7 +727665,7 @@
           "end": 54318,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 54319,
@@ -979473,16 +979473,16 @@
     },
     {
       "original": "ih.java",
-      "renamed": "MixedSupport060.java",
+      "renamed": "VorbisFloor.java",
       "inputSha256": "dc4ea4c4f02fea6785fbda37f3ff86ca63b5e753baa288f0d8600bfe8aae628e",
-      "outputSha256": "24faf5d684017d79197880f4cded28ec4ddf0845926ae978f01af7d48f5dd2d1",
+      "outputSha256": "e39905bfe3ab00a21c206752495d37a327807cd1964a671047aa40a39e1d0344",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 80,
@@ -979573,7 +979573,7 @@
           "end": 445,
           "symbol": "M:ih.a(II)V",
           "original": "a",
-          "renamed": "performAction0721"
+          "renamed": "sortFloorPoints"
         },
         {
           "start": 450,
@@ -980028,7 +980028,7 @@
           "end": 1284,
           "symbol": "M:ih.a(II)V",
           "original": "a",
-          "renamed": "performAction0721"
+          "renamed": "sortFloorPoints"
         },
         {
           "start": 1285,
@@ -980049,7 +980049,7 @@
           "end": 1318,
           "symbol": "M:ih.a(II)V",
           "original": "a",
-          "renamed": "performAction0721"
+          "renamed": "sortFloorPoints"
         },
         {
           "start": 1319,
@@ -980070,7 +980070,7 @@
           "end": 1375,
           "symbol": "M:ih.a([II)I",
           "original": "a",
-          "renamed": "computeInteger0725"
+          "renamed": "findHighNeighbor"
         },
         {
           "start": 1382,
@@ -980273,7 +980273,7 @@
           "end": 1829,
           "symbol": "M:ih.a()Z",
           "original": "a",
-          "renamed": "computeBoolean0720"
+          "renamed": "decodeFloor"
         },
         {
           "start": 1846,
@@ -980749,7 +980749,7 @@
           "end": 2939,
           "symbol": "M:ja.a()I",
           "original": "a",
-          "renamed": "computeInteger0757"
+          "renamed": "decodeScalar"
         },
         {
           "start": 2970,
@@ -980931,7 +980931,7 @@
           "end": 3375,
           "symbol": "M:ja.a()I",
           "original": "a",
-          "renamed": "computeInteger0757"
+          "renamed": "decodeScalar"
         },
         {
           "start": 3405,
@@ -980959,7 +980959,7 @@
           "end": 3521,
           "symbol": "M:ih.a(IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0722"
+          "renamed": "interpolateFloorPoint"
         },
         {
           "start": 3526,
@@ -981155,7 +981155,7 @@
           "end": 3874,
           "symbol": "M:ih.b([II)I",
           "original": "b",
-          "renamed": "computeInteger0726"
+          "renamed": "findLowNeighbor"
         },
         {
           "start": 3881,
@@ -981400,7 +981400,7 @@
           "end": 4490,
           "symbol": "M:ih.a(IIII[FI)V",
           "original": "a",
-          "renamed": "performAction0723"
+          "renamed": "renderFloorLine"
         },
         {
           "start": 4495,
@@ -981883,7 +981883,7 @@
           "end": 5380,
           "symbol": "M:ih.a([FI)V",
           "original": "a",
-          "renamed": "performAction0724"
+          "renamed": "applyFloorCurve"
         },
         {
           "start": 5389,
@@ -982198,14 +982198,14 @@
           "end": 6308,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 6309,
           "end": 6310,
           "symbol": "M:ih.b([II)I",
           "original": "b",
-          "renamed": "computeInteger0726"
+          "renamed": "findLowNeighbor"
         },
         {
           "start": 6311,
@@ -982233,14 +982233,14 @@
           "end": 6350,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 6351,
           "end": 6352,
           "symbol": "M:ih.a([II)I",
           "original": "a",
-          "renamed": "computeInteger0725"
+          "renamed": "findHighNeighbor"
         },
         {
           "start": 6353,
@@ -982268,7 +982268,7 @@
           "end": 6392,
           "symbol": "M:ih.a(IIIII)I",
           "original": "a",
-          "renamed": "computeInteger0722"
+          "renamed": "interpolateFloorPoint"
         },
         {
           "start": 6393,
@@ -982793,7 +982793,7 @@
           "end": 7681,
           "symbol": "M:ih.a(II)V",
           "original": "a",
-          "renamed": "performAction0721"
+          "renamed": "sortFloorPoints"
         },
         {
           "start": 7685,
@@ -982933,7 +982933,7 @@
           "end": 8013,
           "symbol": "M:ih.a(IIII[FI)V",
           "original": "a",
-          "renamed": "performAction0723"
+          "renamed": "renderFloorLine"
         },
         {
           "start": 8014,
@@ -983122,7 +983122,7 @@
           "end": 8512,
           "symbol": "M:ih.<init>()V",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 8529,
@@ -1006298,16 +1006298,16 @@
     },
     {
       "original": "ja.java",
-      "renamed": "MixedSupport064.java",
+      "renamed": "VorbisCodebook.java",
       "inputSha256": "3522d054ec50551b268de4f2d663feb367fd15329993b00d8c25541f585a5b5f",
-      "outputSha256": "a22de21e47faf499e0bd4e5e25044ff8ce3f5c499f3f84146aca55241133e3bd",
+      "outputSha256": "3d73e425fc3dc37d91c14da76a970abdefba68c8e9053fdfaef6c1a8e19b36ff",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 73,
@@ -1006356,7 +1006356,7 @@
           "end": 240,
           "symbol": "M:ja.a(II)I",
           "original": "a",
-          "renamed": "computeInteger0758"
+          "renamed": "lookup1Values"
         },
         {
           "start": 245,
@@ -1006454,7 +1006454,7 @@
           "end": 474,
           "symbol": "M:ja.c()V",
           "original": "c",
-          "renamed": "performAction0760"
+          "renamed": "buildHuffmanTree"
         },
         {
           "start": 493,
@@ -1007490,7 +1007490,7 @@
           "end": 3778,
           "symbol": "M:ja.b()[F",
           "original": "b",
-          "renamed": "computeFloatArray0759"
+          "renamed": "decodeVector"
         },
         {
           "start": 3803,
@@ -1007504,14 +1007504,14 @@
           "end": 3817,
           "symbol": "M:ja.a()I",
           "original": "a",
-          "renamed": "computeInteger0757"
+          "renamed": "decodeScalar"
         },
         {
           "start": 3833,
           "end": 3835,
           "symbol": "M:ja.<init>()V",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 3852,
@@ -1008106,7 +1008106,7 @@
           "end": 5413,
           "symbol": "M:ja.c()V",
           "original": "c",
-          "renamed": "performAction0760"
+          "renamed": "buildHuffmanTree"
         },
         {
           "start": 5425,
@@ -1008302,14 +1008302,14 @@
           "end": 5791,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 5792,
           "end": 5793,
           "symbol": "M:ja.a(II)I",
           "original": "a",
-          "renamed": "computeInteger0758"
+          "renamed": "lookup1Values"
         },
         {
           "start": 5799,
@@ -1008827,7 +1008827,7 @@
           "end": 7196,
           "symbol": "M:ja.a()I",
           "original": "a",
-          "renamed": "computeInteger0757"
+          "renamed": "decodeScalar"
         },
         {
           "start": 7213,
@@ -1682805,7 +1682805,7 @@
       "original": "va.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "2f16eeab9de4cdc5ce2b234a983fff5658a3a1ad6e4fc6ed1178cb4b1537c271",
-      "outputSha256": "cc85fab0b61331d007d72d0f4a089e52e4061e1344532f8865cd10a0cdbef499",
+      "outputSha256": "b4e7c78a51f54b4167efedb45318b127bfac5bd32572b3fbe7e55be5edae53ad",
       "edits": [
         {
           "start": 69,
@@ -1682917,7 +1682917,7 @@
           "end": 514,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 517,
@@ -1682952,7 +1682952,7 @@
           "end": 610,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 613,
@@ -1684149,7 +1684149,7 @@
           "end": 4292,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 4293,
@@ -1684205,7 +1684205,7 @@
           "end": 4432,
           "symbol": "C:ja",
           "original": "ja",
-          "renamed": "MixedSupport064"
+          "renamed": "VorbisCodebook"
         },
         {
           "start": 4454,
@@ -1684303,7 +1684303,7 @@
           "end": 4656,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 4657,
@@ -1684359,7 +1684359,7 @@
           "end": 4796,
           "symbol": "C:ih",
           "original": "ih",
-          "renamed": "MixedSupport060"
+          "renamed": "VorbisFloor"
         },
         {
           "start": 4818,
@@ -1687509,7 +1687509,7 @@
           "end": 13695,
           "symbol": "M:ih.a()Z",
           "original": "a",
-          "renamed": "computeBoolean0720"
+          "renamed": "decodeFloor"
         },
         {
           "start": 13716,
@@ -1687733,7 +1687733,7 @@
           "end": 14183,
           "symbol": "M:ih.a([FI)V",
           "original": "a",
-          "renamed": "performAction0724"
+          "renamed": "applyFloorCurve"
         },
         {
           "start": 14184,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "db07d6f67bd11a4a93c0dccec22ff97904ed5174ec9fa4874406e5ef39c3983b",
+    "rulesSha256": "1f3bdff592c1d04ac569903487b9b98a6820299a3638659915aee7d769d947b3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "43a6553f88a72ce3e211a52d65f563ae931df1fea8f4f0f4c6b05571bf9e040e",
+    "outputTreeSha256": "58446c887371910c2df068b972c4c103b6ffca2f01730074c87fec42b059d8c4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

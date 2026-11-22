@@ -580,7 +580,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           nk.clearStaticReferences();
           sg.clearStaticReferences((byte) -57);
           tk.clearStaticReferences();
-          gj.clearStaticReferences();
+          VorbisFloor.clearStaticReferences();
           ha.clearStaticReferences((byte) 69);
           pe.b(0);
           be.clearStaticReferences();
@@ -672,7 +672,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ih.l(288);
           nd.b(true);
           tl.clearStaticReferences((byte) -39);
-          da.clearStaticReferences();
+          SoundFilter.clearStaticReferences();
           hh.a(false);
           o.a((byte) 99);
           DirectByteStorage.c((byte) 56);

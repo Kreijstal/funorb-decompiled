@@ -10,7 +10,7 @@ final class b extends IntrusiveNode {
     private int field_L;
     private static byte[] field_p;
     private static float[] field_R;
-    private static pg[] field_n;
+    private static VorbisFloor[] field_n;
     private static boolean field_G;
     private static int[] field_M;
     private int field_B;
@@ -28,7 +28,7 @@ final class b extends IntrusiveNode {
     private static float[] field_D;
     private int field_x;
     private static int field_y;
-    static vg[] field_O;
+    static VorbisCodebook[] field_O;
     private static int field_P;
     private int field_Q;
     private static ua[] field_E;
@@ -267,18 +267,18 @@ final class b extends IntrusiveNode {
           }
         }
         var1Lifetime1 = b.f(8) + 1;
-        field_O = new vg[var1Lifetime1];
+        field_O = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_O[var2Lifetime1] = new vg();
+          field_O[var2Lifetime1] = new VorbisCodebook();
         }
         var2Lifetime2 = b.f(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           b.f(16);
         }
         var2Lifetime3 = b.f(6) + 1;
-        field_n = new pg[var2Lifetime3];
+        field_n = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_n[var3Lifetime2] = new pg();
+          field_n[var3Lifetime2] = new VorbisFloor();
         }
         var3Lifetime3 = b.f(6) + 1;
         field_v = new rn[var3Lifetime3];
@@ -525,7 +525,7 @@ final class b extends IntrusiveNode {
         var14 = field_E[field_U[var2]];
         var16 = var14.field_c;
         var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_n[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_n[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_a; var17_intLifetime1++) {
@@ -536,7 +536,7 @@ final class b extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_c;
           var18_int = var14.field_d[var17_intLifetime2];
-          field_n[var18_int].a(field_q, var4 >> 1);
+          field_n[var18_int].applyFloorCurve(field_q, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {

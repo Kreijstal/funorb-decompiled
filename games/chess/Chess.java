@@ -1725,7 +1725,7 @@ public final class Chess extends gb {
         ma.clearStaticReferences((byte) -96);
         qj.a(124);
         m.clearStaticReferences(false);
-        dg.clearStaticReferences();
+        VorbisFloor.clearStaticReferences();
         ib.clearStaticReferences(-12374);
         qf.a((byte) -46);
         th.a(0);
@@ -1784,7 +1784,7 @@ public final class Chess extends gb {
         hg.clearStaticReferences((byte) -76);
         el.e((byte) 125);
         mn.a(32768);
-        gn.clearStaticReferences();
+        SoundFilter.clearStaticReferences();
         bd.clearStaticReferences(-40);
         NodeHashTableIterator.clearStaticReferences((byte) -120);
         SecondaryNodeDequeIterator.clearStaticReferences(false);
