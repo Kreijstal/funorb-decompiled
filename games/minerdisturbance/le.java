@@ -39,15 +39,15 @@ final class le implements uj {
     }
 
     final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
-        param1.c(12, 25564);
-        param1.b((byte) 121, 17);
-        param1.b((byte) 122, param0);
-        param1.b((byte) 121, param3);
+        param1.writeByte(12, 25564);
+        param1.writeShort((byte) 121, 17);
+        param1.writeShort((byte) 122, param0);
+        param1.writeShort((byte) 121, param3);
         if (param4 >= -34) {
           return;
         }
         try {
-          param1.c(param2, 25564);
+          param1.writeByte(param2, 25564);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "le.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

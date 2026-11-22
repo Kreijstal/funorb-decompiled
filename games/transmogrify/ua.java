@@ -273,8 +273,8 @@ final class ua {
               ua.a(-89);
             }
             var18 = new ba();
-            var18.field_p = param3.d((byte) 101);
-            var18.field_i = param3.c((byte) -127);
+            var18.field_p = param3.readUnsignedByte((byte) 101);
+            var18.field_i = param3.readInt((byte) -127);
             var18.field_o = new PlatformTask[var18.field_p];
             var18.field_j = new int[var18.field_p];
             var18.field_k = new int[var18.field_p];
@@ -283,28 +283,28 @@ final class ua {
             var18.field_g = new byte[var18.field_p][][];
             for (var5 = 0; var18.field_p > var5; var5++) {
               try {
-                var6_int = param3.d((byte) 26);
+                var6_int = param3.readUnsignedByte((byte) 26);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param3.g(12248);
-                    var21 = param3.g(12248);
-                    var9 = param3.d((byte) 116);
+                    var20 = param3.readString(12248);
+                    var21 = param3.readString(12248);
+                    var9 = param3.readUnsignedByte((byte) 116);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param3.g(param2 + 34883);
+                      var10[var11_int] = param3.readString(param2 + 34883);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param3.c((byte) -126);
+                        var13 = param3.readInt((byte) -126);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param3.a(var13, 2, var22[var12_int], 0);
+                        param3.readBytes(var13, 2, var22[var12_int], 0);
                       }
                     }
                     var18.field_j[var5] = var6_int;
@@ -319,11 +319,11 @@ final class ua {
                     var18.field_g[var5] = var22;
                   }
                 } else {
-                  var16 = param3.g(param2 + 34883);
-                  var15 = param3.g(12248);
+                  var16 = param3.readString(param2 + 34883);
+                  var15 = param3.readString(12248);
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param3.c((byte) -121);
+                    var9 = param3.readInt((byte) -121);
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_h[var5] = var9;

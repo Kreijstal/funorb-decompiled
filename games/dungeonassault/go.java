@@ -570,8 +570,8 @@ final class go extends qe {
         String var8Lifetime2;
         var10 = DungeonAssault.field_K;
         try {
-          var4_int = param1.c(true);
-          var5 = param1.c(true);
+          var4_int = param1.readUnsignedByte(true);
+          var5 = param1.readUnsignedByte(true);
           if (-1 == var5) {
             stackIn_4_0 = null;
           } else {
@@ -585,7 +585,7 @@ final class go extends qe {
             var7 = var12;
             this.field_Y.field_h[var4_int] = var11;
             var12.field_c = new wd(var12.field_h.field_d);
-            var8_int = param1.c(true);
+            var8_int = param1.readUnsignedByte(true);
             this.a(var8_int, -31959, var4_int);
           }
           if (!this.field_Y.field_p.a(var4_int, (byte) 77)) {
@@ -1111,7 +1111,7 @@ final class go extends qe {
         var13 = DungeonAssault.field_K;
         try {
           this.field_y = null;
-          var15 = this.field_Y.field_A[param1.c(true)];
+          var15 = this.field_Y.field_A[param1.readUnsignedByte(true)];
           var4 = var15;
           if (param0 != -67) {
             var14 = (PacketBuffer) null;
@@ -1122,15 +1122,15 @@ final class go extends qe {
             var5 != ob.field_Nb) {
             if (var5 == ob.field_Lb) {
               var6 = param1.position;
-              var7 = param1.c(true);
-              var8_int = param1.c(true);
+              var7 = param1.readUnsignedByte(true);
+              var8_int = param1.readUnsignedByte(true);
               if (!param2) {
                 var9_ref_ai = bl.a(true, param1, false);
                 var9_ref_ai.field_c = new wd(var9_ref_ai.field_h.field_d);
-                var10 = param1.c(true);
+                var10 = param1.readUnsignedByte(true);
                 var11 = bl.a(true, param1, false);
                 var11.field_c = new wd(var11.field_h.field_d);
-                var12 = param1.c(true);
+                var12 = param1.readUnsignedByte(true);
                 this.field_Y.field_h[var7] = var9_ref_ai;
                 this.field_Y.field_h[var8_int] = var11;
                 this.a(var10, -31959, var7);
@@ -1149,7 +1149,7 @@ final class go extends qe {
               var5 != ob.field_Zb) {
               if (var5 == ob.field_Mb) {
                 var6 = param1.position;
-                var16 = this.field_Y.field_A[param1.c(true)];
+                var16 = this.field_Y.field_A[param1.readUnsignedByte(true)];
                 var16.field_b.a(rf.field_M, var16.field_n.field_t, -10872);
                 param1.position = var6;
               } else if (var5 == ob.field_lc ||
@@ -1159,7 +1159,7 @@ final class go extends qe {
               }
             } else {
               var6 = param1.position;
-              var17 = this.field_Y.field_A[param1.c(true)];
+              var17 = this.field_Y.field_A[param1.readUnsignedByte(true)];
               var17.field_b.a(li.field_h, var17.field_n.field_l, -10872);
               param1.position = var6;
               if (null != var17.field_n.field_g) {
@@ -1169,11 +1169,11 @@ final class go extends qe {
             }
           } else {
             var6 = param1.position;
-            var7 = param1.c(true);
+            var7 = param1.readUnsignedByte(true);
             if (!param2) {
               var8 = bl.a(true, param1, false);
               var8.field_c = new wd(var8.field_h.field_d);
-              var9 = param1.c(true);
+              var9 = param1.readUnsignedByte(true);
               this.field_Y.field_h[var7] = var8;
               this.a(var9, -31959, var7);
             }
@@ -2390,9 +2390,9 @@ final class go extends qe {
         }
         if (hc.field_c == 67) {
           this.e(false);
-          this.field_Y.field_o = ((PacketBuffer) ((Object) var2)).f(-118);
-          this.field_Y.field_y = ((PacketBuffer) ((Object) var2)).f(-97);
-          this.field_Y.field_l = ((PacketBuffer) ((Object) var2)).f(-119);
+          this.field_Y.field_o = ((PacketBuffer) ((Object) var2)).readUnsignedMedium(-118);
+          this.field_Y.field_y = ((PacketBuffer) ((Object) var2)).readUnsignedMedium(-97);
+          this.field_Y.field_l = ((PacketBuffer) ((Object) var2)).readUnsignedMedium(-119);
           this.i(104);
           return true;
         }
@@ -2498,7 +2498,7 @@ final class go extends qe {
           }
           ac.field_B.d((byte) -114, 64);
           ac.field_B.writeByte(6, param0.position);
-          ac.field_B.a(param0.payload, 1, param0.position, 0);
+          ac.field_B.writeBytes(param0.payload, 1, param0.position, 0);
           return;
         }
         try {
@@ -2549,8 +2549,8 @@ final class go extends qe {
         var7 = DungeonAssault.field_K;
         try {
           var4_int = 18 % ((71 - param2) / 49);
-          this.field_C = param1.k(0);
-          var5 = param1.c(true);
+          this.field_C = param1.readUnsignedShort(0);
+          var5 = param1.readUnsignedByte(true);
           if (this.field_b instanceof ro) {
             var6 = (ro) (this.field_b);
           } else {
@@ -2741,7 +2741,7 @@ final class go extends qe {
         int var8Lifetime1;
         var17 = DungeonAssault.field_K;
         try {
-          var5_int = param1.k(param3 - 4743);
+          var5_int = param1.readUnsignedShort(param3 - 4743);
           if (param3 != 4743) {
             field_V = (String) null;
           }

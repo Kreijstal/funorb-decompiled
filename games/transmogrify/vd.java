@@ -357,9 +357,9 @@ final class vd {
         var26 = Transmogrify.field_A ? 1 : 0;
         try {
           var28 = WordLanguage.field_l;
-          var2 = var28.d((byte) 114);
+          var2 = var28.readUnsignedByte((byte) 114);
           if (var2 == 0) {
-            var3 = var28.a((byte) -97);
+            var3 = var28.readUnsignedShort((byte) -97);
             var4 = (o) (mh.field_a.a((byte) -95));
             while (var4 != null) {
               if (~var3 != ~var4.field_j) {
@@ -372,7 +372,7 @@ final class vd {
               pc.a(param0 ^ 17);
               return;
             }
-            var5 = var28.d((byte) 53);
+            var5 = var28.readUnsignedByte((byte) 53);
             if (0 != var5) {
               var6 = var4.field_h;
               od.field_l[0].field_a = null;
@@ -380,10 +380,10 @@ final class vd {
               od.field_l[0].field_c = false;
               var7 = var4.field_n;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                od.field_l[var8_int].field_e = var28.g(12248);
+                od.field_l[var8_int].field_e = var28.readString(12248);
                 od.field_l[var8_int].field_c = false;
-                if (var28.d((byte) 72) == 1) {
-                  od.field_l[var8_int].field_a = var28.g(12248);
+                if (var28.readUnsignedByte((byte) 72) == 1) {
+                  od.field_l[var8_int].field_a = var28.readString(12248);
                 } else {
                   od.field_l[var8_int].field_a = null;
                 }
@@ -404,12 +404,12 @@ final class vd {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.d((byte) 41);
+              var18 = var28.readUnsignedByte((byte) 41);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.d((byte) 102);
+                  var20 = var28.readUnsignedByte((byte) 102);
                   var21 = od.field_l[var20].field_e;
-                  var22 = var28.e((byte) 115);
+                  var22 = var28.readLong((byte) 115);
                   var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
@@ -419,7 +419,7 @@ final class vd {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.c((byte) -126);
+                      var11[0][incrementValue$3] = var28.readInt((byte) -126);
                     }
                   }
                   if (var21 != null &&
@@ -432,7 +432,7 @@ final class vd {
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.c((byte) -115);
+                      var11[1][incrementValue$4] = var28.readInt((byte) -115);
                     }
                   }
                   if (var6 > var14 &&
@@ -446,7 +446,7 @@ final class vd {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.c((byte) -110);
+                      var11[2][incrementValue$5] = var28.readInt((byte) -110);
                     }
                   }
                 }
@@ -455,8 +455,8 @@ final class vd {
             var4.field_k = true;
             var4.c(5);
           } else if (var2 == 1) {
-            var3 = var28.a((byte) -96);
-            var4_long = var28.e((byte) 110);
+            var3 = var28.readUnsignedShort((byte) -96);
+            var4_long = var28.readLong((byte) 110);
             var6_ref_am = (am) (SocketConnector.field_b.a((byte) -95));
             while (var6_ref_am != null) {
               if (~var3 != ~var6_ref_am.field_p) {

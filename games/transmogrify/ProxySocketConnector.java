@@ -269,7 +269,7 @@ final class ProxySocketConnector extends SocketConnector {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           var1 = WordLanguage.field_l;
-          var2 = var1.d((byte) 29);
+          var2 = var1.readUnsignedByte((byte) 29);
           if (param0 != -7) {
             ProxySocketConnector.d(-7);
           }
@@ -278,14 +278,14 @@ final class ProxySocketConnector extends SocketConnector {
               rb.field_b = new wb(128);
               fc.field_d = 0;
             }
-            stackIn_15_0 = (1 != var1.d((byte) 113)) ? 0 : 1;
+            stackIn_15_0 = (1 != var1.readUnsignedByte((byte) 113)) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.g(12248);
+            var4_ref_String = var1.readString(12248);
             if (var3_int != 0) {
-              var1.g(param0 ^ -12255);
+              var1.readString(param0 ^ -12255);
             }
             var5_ref = fi.b(var4_ref_String, (byte) 51);
-            var6_ref = var1.g(12248);
+            var6_ref = var1.readString(12248);
             var7_ref = hj.a((byte) -128, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -326,9 +326,9 @@ final class ProxySocketConnector extends SocketConnector {
               return;
             }
             ContextualRuntimeException.field_c = 1;
-            var3 = var1.g(12248);
+            var3 = var1.readString(12248);
             bd.field_v = ((String) (var3)).intern();
-            var4 = var1.d((byte) 37);
+            var4 = var1.readUnsignedByte((byte) 37);
             wc.a(param0 + 9, var4);
             return;
           }
@@ -336,12 +336,12 @@ final class ProxySocketConnector extends SocketConnector {
             LetterTile.field_u = new wb(128);
             vl.field_A = 0;
           }
-          var3Lifetime1 = var1.g(12248);
+          var3Lifetime1 = var1.readString(12248);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.g(param0 + 12255);
-          var5 = var1.g(param0 + 12255);
+          var4_ref_StringLifetime1 = var1.readString(param0 + 12255);
+          var5 = var1.readString(param0 + 12255);
           var6 = mk.a(124, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = mk.a(param0 ^ -111, var5);

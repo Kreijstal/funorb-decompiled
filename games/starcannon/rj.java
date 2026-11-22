@@ -12,7 +12,7 @@ final class rj extends IntrusiveNode {
     static int field_j;
     int field_k;
 
-    final static int a(int param0, int param1, byte param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, byte param2, byte[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

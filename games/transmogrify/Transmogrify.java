@@ -201,7 +201,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (param0 != 72) {
             field_D = -63;
           }
-          stackIn_3_0 = WordLanguage.field_l.g(12248);
+          stackIn_3_0 = WordLanguage.field_l.readString(12248);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -229,7 +229,7 @@ public final class Transmogrify extends SessionGameApplet {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             lc.a((byte) 65, var1);
-            ff.field_D.a((byte) -42, var1.position - var2);
+            ff.field_D.backpatchByteLength((byte) -42, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1156,7 +1156,7 @@ public final class Transmogrify extends SessionGameApplet {
           sb.a();
           mh.a(0);
           gb.clearStaticReferences(param0 - 5);
-          PacketBuffer.b((byte) -99);
+          PacketBuffer.clearStaticReferences((byte) -99);
           lk.a((byte) -124);
           bc.a(122);
           n.a(false);

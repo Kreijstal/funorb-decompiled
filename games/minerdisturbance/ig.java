@@ -34,17 +34,17 @@ final class ig {
         try {
           var3 = sn.field_c;
           var3.d((byte) -77, param0);
-          var3.field_o = var3.field_o + 1;
-          var4 = var3.field_o;
-          var3.c(param1, 25564);
-          var3.c(param2.field_r, 25564);
-          var3.d(-87, param2.field_p);
-          var3.a((byte) 110, param2.field_o);
-          var3.a((byte) 82, param2.field_q);
-          var3.a((byte) 106, param2.field_u);
-          var3.a((byte) 121, param2.field_w);
-          var3.e(-128, var4);
-          var3.g(-1, var3.field_o - var4);
+          var3.position = var3.position + 1;
+          var4 = var3.position;
+          var3.writeByte(param1, 25564);
+          var3.writeByte(param2.field_r, 25564);
+          var3.writeSignedSmart(-87, param2.field_p);
+          var3.writeInt((byte) 110, param2.field_o);
+          var3.writeInt((byte) 82, param2.field_q);
+          var3.writeInt((byte) 106, param2.field_u);
+          var3.writeInt((byte) 121, param2.field_w);
+          var3.appendCrc32(-128, var4);
+          var3.backpatchByteLength(-1, var3.position - var4);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

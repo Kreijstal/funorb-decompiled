@@ -62,36 +62,36 @@ final class j implements Runnable {
           }
           if (qd.field_Q == cm.field_p) {
             IsaacRandom.field_a = null;
-            sn.field_c.field_o = 0;
+            sn.field_c.position = 0;
             if (param5 != null) {
               var9 = 0;
-              rf.field_c.field_o = 0;
+              rf.field_c.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
-              rf.field_c.a((byte) 106, dk.field_a.nextInt());
-              rf.field_c.a((byte) 96, dk.field_a.nextInt());
-              rf.field_c.a(8, var14);
-              rf.field_c.a(8, var8);
+              rf.field_c.writeInt((byte) 106, dk.field_a.nextInt());
+              rf.field_c.writeInt((byte) 96, dk.field_a.nextInt());
+              rf.field_c.writePrefixedString(8, var14);
+              rf.field_c.writePrefixedString(8, var8);
               var15 = (CharSequence) ((Object) param5);
-              rf.field_c.a(8, tk.a(732, var15));
-              rf.field_c.b((byte) 123, param3);
-              rf.field_c.c(param0, 25564);
-              rf.field_c.c(var9, 25564);
-              sn.field_c.c(18, 25564);
-              sn.field_c.field_o = sn.field_c.field_o + 2;
-              var10 = sn.field_c.field_o;
+              rf.field_c.writePrefixedString(8, tk.a(732, var15));
+              rf.field_c.writeShort((byte) 123, param3);
+              rf.field_c.writeByte(param0, 25564);
+              rf.field_c.writeByte(var9, 25564);
+              sn.field_c.writeByte(18, 25564);
+              sn.field_c.position = sn.field_c.position + 2;
+              var10 = sn.field_c.position;
               var11_ref_String = ag.a(bm.c(-104), true);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              sn.field_c.b(23446, var11_ref_String);
+              sn.field_c.writeString(23446, var11_ref_String);
               jg.a(kc.field_b, -121, rf.field_c, ph.field_g, sn.field_c);
-              sn.field_c.b(-var10 + sn.field_c.field_o, -506270856);
+              sn.field_c.backpatchShortLength(-var10 + sn.field_c.position, -506270856);
             } else {
-              rf.field_c.field_o = 0;
-              rf.field_c.a((byte) 124, dk.field_a.nextInt());
-              rf.field_c.a((byte) 127, dk.field_a.nextInt());
+              rf.field_c.position = 0;
+              rf.field_c.writeInt((byte) 124, dk.field_a.nextInt());
+              rf.field_c.writeInt((byte) 127, dk.field_a.nextInt());
               stackIn_12_0 = rf.field_c;
               stackIn_12_1 = 8;
               if (!param6.b((byte) 112)) {
@@ -99,7 +99,7 @@ final class j implements Runnable {
               } else {
                 stackIn_13_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).writePrefixedString(stackIn_12_1, stackIn_13_2);
               stackIn_15_0 = rf.field_c;
               stackIn_15_1 = 8;
               if (param4.b((byte) 88)) {
@@ -107,20 +107,20 @@ final class j implements Runnable {
               } else {
                 stackIn_16_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
-              sn.field_c.c(16, 25564);
-              sn.field_c.field_o = sn.field_c.field_o + 1;
-              var9 = sn.field_c.field_o;
+              ((PacketBuffer) (Object) stackIn_15_0).writePrefixedString(stackIn_15_1, stackIn_16_2);
+              sn.field_c.writeByte(16, 25564);
+              sn.field_c.position = sn.field_c.position + 1;
+              var9 = sn.field_c.position;
               jg.a(kc.field_b, -127, rf.field_c, ph.field_g, sn.field_c);
-              sn.field_c.g(-1, sn.field_c.field_o - var9);
+              sn.field_c.backpatchByteLength(-1, sn.field_c.position - var9);
             }
             bk.a((byte) -114, -1);
             qd.field_Q = jn.field_r;
           }
           if (qd.field_Q == jn.field_r &&
             IntrusiveDeque.a(0, 1)) {
-            var9Lifetime1 = kj.field_a.d((byte) -54);
-            kj.field_a.field_o = 0;
+            var9Lifetime1 = kj.field_a.readUnsignedByte((byte) -54);
+            kj.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               qd.field_Q = lm.field_M;
@@ -141,19 +141,19 @@ final class j implements Runnable {
               } else {
                 IntrusiveDeque.a(0, hl.a(-92));
                 IsaacRandom.field_a = new Boolean(bh.a(kj.field_a, -29320));
-                kj.field_a.field_o = 0;
+                kj.field_a.position = 0;
               }
             }
           }
           if (lm.field_M == qd.field_Q) {
             var9Lifetime2 = 2;
             if (IntrusiveDeque.a(0, var9Lifetime2)) {
-              var10Lifetime1 = kj.field_a.e(-25);
-              kj.field_a.field_o = 0;
+              var10Lifetime1 = kj.field_a.readUnsignedShort(-25);
+              kj.field_a.position = 0;
               if (IntrusiveDeque.a(0, var10Lifetime1)) {
                 var11 = vh.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  vh.field_i[var12] = kj.field_a.g(-1);
+                  vh.field_i[var12] = kj.field_a.readPrefixedString(-1);
                 }
                 si.a(-34);
                 ek.field_c = false;
@@ -165,9 +165,9 @@ final class j implements Runnable {
           if (qd.field_Q == aa.field_l &&
             kj.b(-9319)) {
             if (oj.field_K != 255) {
-              nf.field_g = kj.field_a.a(false);
+              nf.field_g = kj.field_a.readString(false);
             } else {
-              var9_ref_String = kj.field_a.j(81);
+              var9_ref_String = kj.field_a.readNullableString(81);
               if (var9_ref_String != null) {
                 nc.a(bm.c(-76), var9_ref_String, (byte) 115);
               }

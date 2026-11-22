@@ -17,16 +17,16 @@ final class ee extends em {
           if (this.field_C) {
             throw new RuntimeException();
           }
-          if (this.field_G.field_o >= this.field_G.field_u.length - this.field_I) {
-            return this.field_G.field_u;
+          if (this.field_G.position >= this.field_G.payload.length - this.field_I) {
+            return this.field_G.payload;
           }
           throw new RuntimeException();
         }
         if (this.field_C) {
           throw new RuntimeException();
         }
-        if (this.field_G.field_o >= this.field_G.field_u.length - this.field_I) {
-          return this.field_G.field_u;
+        if (this.field_G.position >= this.field_G.payload.length - this.field_I) {
+          return this.field_G.payload;
         }
         throw new RuntimeException();
     }
@@ -36,7 +36,7 @@ final class ee extends em {
           return 0;
         }
         if (param0 == 100) {
-          return this.field_G.field_o * 100 / (-this.field_I + this.field_G.field_u.length);
+          return this.field_G.position * 100 / (-this.field_I + this.field_G.payload.length);
         }
         return -24;
     }

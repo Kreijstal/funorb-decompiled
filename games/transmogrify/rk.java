@@ -136,7 +136,7 @@ final class rk extends DualLinkNode {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.d((byte) 102);
+            var3_int = param0.readUnsignedByte((byte) 102);
             if (var3_int != 0) {
               this.a(32512, var3_int, param0);
               continue;
@@ -193,24 +193,24 @@ final class rk extends DualLinkNode {
           }
           if (param1 != 1) {
             if (param1 == 2) {
-              var4_int = param2.d((byte) 55);
+              var4_int = param2.readUnsignedByte((byte) 55);
               this.field_m = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_m[var5] = param2.a((byte) -113);
+                this.field_m[var5] = param2.readUnsignedShort((byte) -113);
               }
             } else if (param1 == 3) {
-              var4_int = param2.d((byte) 110);
+              var4_int = param2.readUnsignedByte((byte) 110);
               this.field_l = new int[var4_int][];
               this.field_o = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param2.a((byte) -126);
+                var6 = param2.readUnsignedShort((byte) -126);
                 var7 = kb.a(var6, true);
                 if (var7 != null) {
                   this.field_o[var5] = var6;
                   array$0 = new int[var7.field_b];
                   this.field_l[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_b; var8++) {
-                    this.field_l[var5][var8] = param2.a((byte) -108);
+                    this.field_l[var5][var8] = param2.readUnsignedShort((byte) -108);
                   }
                 }
               }
@@ -220,7 +220,7 @@ final class rk extends DualLinkNode {
               }
             }
           } else {
-            this.field_s = IterableNodeHashTable.a('<', param2.g(param0 - 20264), 0);
+            this.field_s = IterableNodeHashTable.a('<', param2.readString(param0 - 20264), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -389,7 +389,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 var2 = var18;
                 var10 = var2;
                 var4_ref_wj = ra.field_c;
-                var5 = ((PacketBuffer) ((Object) var4_ref_wj)).c(true);
+                var5 = ((PacketBuffer) ((Object) var4_ref_wj)).readUnsignedByte(true);
                 for (var6 = 0; var6 < var5; var6++) {
                   var10[var6] = ((PacketBuffer) ((Object) var4_ref_wj)).readInt(-48);
                 }
@@ -451,11 +451,11 @@ public final class DungeonAssault extends NetworkGameClient {
                   continue scanLoop1;
                 }
                 if (61 == hc.field_c) {
-                  var20 = ra.field_c.a(-21030);
-                  var3Lifetime2 = ra.field_c.k(0);
-                  var4 = ra.field_c.c(true);
+                  var20 = ra.field_c.readPrefixedString(-21030);
+                  var3Lifetime2 = ra.field_c.readUnsignedShort(0);
+                  var4 = ra.field_c.readUnsignedByte(true);
                   var5Lifetime1 = ra.field_c.readInt(-111);
-                  stackIn_220_0 = (ra.field_c.c(true) != 1) ? 0 : 1;
+                  stackIn_220_0 = (ra.field_c.readUnsignedByte(true) != 1) ? 0 : 1;
                   var6Lifetime1 = stackIn_220_0;
                   if (2 != dc.field_z) {
                     continue scanLoop1;
@@ -497,9 +497,9 @@ public final class DungeonAssault extends NetworkGameClient {
                 kh.field_s = false;
                 continue scanLoop1;
               }
-              var2_intLifetime1 = ra.field_c.f(-123);
-              var3Lifetime3 = ra.field_c.f(-124);
-              var4Lifetime1 = ra.field_c.c(true);
+              var2_intLifetime1 = ra.field_c.readUnsignedMedium(-123);
+              var3Lifetime3 = ra.field_c.readUnsignedMedium(-124);
+              var4Lifetime1 = ra.field_c.readUnsignedByte(true);
               var5_ref_di__ = new di[var4Lifetime1];
               for (var6Lifetime2 = 0; var4Lifetime1 > var6Lifetime2; var6Lifetime2++) {
                 var5_ref_di__[var6Lifetime2] = mm.a(ra.field_c, false);
@@ -645,7 +645,7 @@ public final class DungeonAssault extends NetworkGameClient {
           se.clearStaticReferences();
           ig.a(-2898);
           dm.clearStaticReferences(0);
-          PacketBuffer.i(25);
+          PacketBuffer.clearStaticReferences(25);
           kd.clearStaticReferences((byte) -101);
           sp.a(true);
           ml.clearStaticReferences((byte) 63);

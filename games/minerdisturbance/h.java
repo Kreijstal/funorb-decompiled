@@ -299,25 +299,25 @@ final class h {
             var7 = (int[]) null;
             h.a(66, 0, (int[]) null, -109, -10, 74, -76, 25, -33);
           }
-          var2 = var10.d((byte) -54);
+          var2 = var10.readUnsignedByte((byte) -54);
           if (0 == var2) {
             var9 = (af) (ag.field_b.b(108));
             if (var9 == null) {
               si.a(-37);
               return;
             }
-            var4 = var10.d((byte) -54);
+            var4 = var10.readUnsignedByte((byte) -54);
             if (0 != var4) {
               var12 = new byte[var4];
               var11 = var12;
               var8 = var11;
               var5 = var8;
-              var10.a(var12, (byte) -120, 0, var4);
+              var10.readBytes(var12, (byte) -120, 0, var4);
             } else {
               var5 = null;
             }
-            var10.field_o = var10.field_o + 4;
-            if (!var10.f(0)) {
+            var10.position = var10.position + 4;
+            if (!var10.verifyCrc32(0)) {
               si.a(-56);
               return;
             }
@@ -326,7 +326,7 @@ final class h {
             var9.b(34);
           } else {
             if (var2 == 1) {
-              var3 = var10.b((byte) 119);
+              var3 = var10.readInt((byte) 119);
               var4_ref_hf = (hf) (kk.field_a.b(109));
               while (var4_ref_hf != null) {
                 if (var3 != var4_ref_hf.field_o) {

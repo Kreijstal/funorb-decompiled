@@ -198,10 +198,10 @@ final class ClientException extends RuntimeException {
           ta.field_c.position = 0;
           n.field_f[2] = (int)(o.field_j >> 32);
           n.field_f[3] = (int)o.field_j;
-          ta.field_c.a((byte) 63, n.field_f[0]);
-          ta.field_c.a((byte) 63, n.field_f[1]);
-          ta.field_c.a((byte) 63, n.field_f[2]);
-          ta.field_c.a((byte) 63, n.field_f[3]);
+          ta.field_c.writeInt((byte) 63, n.field_f[0]);
+          ta.field_c.writeInt((byte) 63, n.field_f[1]);
+          ta.field_c.writeInt((byte) 63, n.field_f[2]);
+          ta.field_c.writeInt((byte) 63, n.field_f[3]);
           mf.a(-30463, ta.field_c);
           ta.field_c.writeShort(param3, -112);
           param0.a(ta.field_c, (byte) -79);
@@ -218,8 +218,8 @@ final class ClientException extends RuntimeException {
           }
           ac.field_B.position = ac.field_B.position + 2;
           var5_int = ac.field_B.position;
-          ac.field_B.a((byte) 63, la.field_c);
-          ac.field_B.a(58, dn.field_Q);
+          ac.field_B.writeInt((byte) 63, la.field_c);
+          ac.field_B.writeLong(58, dn.field_Q);
           var6 = 0;
           if (ld.field_g) {
             var6 = var6 | 1;
@@ -238,12 +238,12 @@ final class ClientException extends RuntimeException {
           if (null == var7) {
             var7 = "";
           }
-          ac.field_B.b(var7, (byte) -20);
+          ac.field_B.writeString(var7, (byte) -20);
           if (null != pd.field_E) {
-            ac.field_B.a(2, pd.field_E);
+            ac.field_B.writePrefixedString(2, pd.field_E);
           }
           of.a(ac.field_B, kd.field_d, om.field_c, (byte) -114, ta.field_c);
-          ac.field_B.b(-var5_int + ac.field_B.position, 1);
+          ac.field_B.backpatchShortLength(-var5_int + ac.field_B.position, 1);
           op.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

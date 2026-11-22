@@ -168,20 +168,20 @@ final class WordDictionary {
         int var5Lifetime1;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_h = new byte[param0.i(17783)][];
+          this.field_h = new byte[param0.readVarInt(17783)][];
           for (var3_int = 0; this.field_h.length > var3_int; var3_int++) {
-            var4_int = (byte)param0.d((byte) 84);
-            var5 = param0.c((byte) -124);
+            var4_int = (byte)param0.readUnsignedByte((byte) 84);
+            var5 = param0.readInt((byte) -124);
             array$2 = new byte[1 + var5];
             this.field_h[var3_int] = array$2;
             this.field_h[var3_int][0] = (byte)var4_int;
             ji.a(param0.payload, param0.position, this.field_h[var3_int], 1, var5);
             param0.position = param0.position + var5;
           }
-          this.field_g = new byte[param0.i(17783)][];
+          this.field_g = new byte[param0.readVarInt(17783)][];
           for (var3_intLifetime1 = 0; this.field_g.length > var3_intLifetime1; var3_intLifetime1++) {
-            var4_intLifetime1 = (byte)param0.d((byte) 104);
-            var5Lifetime1 = param0.c((byte) -117);
+            var4_intLifetime1 = (byte)param0.readUnsignedByte((byte) 104);
+            var5Lifetime1 = param0.readInt((byte) -117);
             array$1 = new byte[1 + var5Lifetime1];
             this.field_g[var3_intLifetime1] = array$1;
             this.field_g[var3_intLifetime1][0] = (byte)var4_intLifetime1;
@@ -193,10 +193,10 @@ final class WordDictionary {
             return;
           }
           while (this.field_a.length > var3_intLifetime2) {
-            array$0 = new byte[param0.c((byte) -109)];
+            array$0 = new byte[param0.readInt((byte) -109)];
             this.field_a[var3_intLifetime2] = array$0;
             var4 = array$0;
-            param0.a(var4.length, param1 + 1, var4, 0);
+            param0.readBytes(var4.length, param1 + 1, var4, 0);
             var3_intLifetime2++;
           }
           return;
@@ -255,9 +255,9 @@ final class WordDictionary {
           var6 = -1;
           var7 = -1;
           while (var5_int > var6) {
-            var7 = am.field_q.i(param0 ^ 17783);
+            var7 = am.field_q.readVarInt(param0 ^ 17783);
             if (var7 == 0) {
-              var6 = var6 + (am.field_q.i(param0 ^ 17783) + 1);
+              var6 = var6 + (am.field_q.readVarInt(param0 ^ 17783) + 1);
               continue;
             }
             var6++;

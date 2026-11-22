@@ -69,8 +69,8 @@ final class kj {
           if (!IntrusiveDeque.a(0, 1)) {
             return false;
           }
-          rj.field_d = field_a.d((byte) -54);
-          field_a.field_o = 0;
+          rj.field_d = field_a.readUnsignedByte((byte) -54);
+          field_a.position = 0;
         }
         if (param0 != -9319) {
           field_b = (String) null;
@@ -78,8 +78,8 @@ final class kj {
             return IntrusiveDeque.a(0, rj.field_d);
           }
           if (IntrusiveDeque.a(0, 2)) {
-            rj.field_d = field_a.e(-81);
-            field_a.field_o = 0;
+            rj.field_d = field_a.readUnsignedShort(-81);
+            field_a.position = 0;
             return IntrusiveDeque.a(0, rj.field_d);
           }
           return false;
@@ -88,8 +88,8 @@ final class kj {
           return IntrusiveDeque.a(0, rj.field_d);
         }
         if (IntrusiveDeque.a(0, 2)) {
-          rj.field_d = field_a.e(-81);
-          field_a.field_o = 0;
+          rj.field_d = field_a.readUnsignedShort(-81);
+          field_a.position = 0;
           return IntrusiveDeque.a(0, rj.field_d);
         }
         return false;

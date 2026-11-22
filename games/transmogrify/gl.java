@@ -71,25 +71,25 @@ final class gl extends fi {
             pg.field_b = new PacketBuffer(var7_int);
           }
           pg.field_b.position = 0;
-          pg.field_b.a((byte) -10, param3, param5, param6);
-          pg.field_b.h(-30190, var7_int);
-          pg.field_b.a(var13, 111);
+          pg.field_b.writeBytes((byte) -10, param3, param5, param6);
+          pg.field_b.padZerosTo(-30190, var7_int);
+          pg.field_b.encryptXtea(var13, 111);
           if (kd.field_c == null ||
             !(kd.field_c.payload.length >= 100)) {
             kd.field_c = new PacketBuffer(100);
           }
           kd.field_c.position = 0;
-          kd.field_c.f(6389, 10);
+          kd.field_c.writeByte(6389, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            kd.field_c.a(-119, var13[var11]);
+            kd.field_c.writeInt(-119, var13[var11]);
             var11++;
           }
-          kd.field_c.c(param5, -159688920);
-          kd.field_c.a(param2, -119, param1);
-          param4.a((byte) -29, kd.field_c.payload, kd.field_c.position, 0);
-          param4.a((byte) -108, pg.field_b.payload, pg.field_b.position, 0);
+          kd.field_c.writeShort(param5, -159688920);
+          kd.field_c.applyRsa(param2, -119, param1);
+          param4.writeBytes((byte) -29, kd.field_c.payload, kd.field_c.position, 0);
+          param4.writeBytes((byte) -108, pg.field_b.payload, pg.field_b.position, 0);
           if (param0 >= -116) {
             field_B = (pg) null;
           }

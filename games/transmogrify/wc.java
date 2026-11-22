@@ -69,14 +69,14 @@ final class wc {
                 ll.field_V = bf.a(param5, (byte) 41, false, param2);
               }
               ff.field_D.position = 0;
-              ff.field_D.f(6389, 14);
-              ff.field_D.f(6389, ll.field_V.a(-184).field_a);
+              ff.field_D.writeByte(6389, 14);
+              ff.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
               rb.a(-1, -377);
               lj.field_z = g.field_y;
             }
             if (g.field_y == lj.field_z &&
               ue.a(1, 0)) {
-              var6_int = WordLanguage.field_l.d((byte) 125);
+              var6_int = WordLanguage.field_l.readUnsignedByte((byte) 125);
               if (var6_int == 0) {
                 lj.field_z = lb.field_e;
               } else {
@@ -88,7 +88,7 @@ final class wc {
             }
             if (lj.field_z == lb.field_e &&
               ue.a(8, 0)) {
-              fd.field_g = WordLanguage.field_l.e((byte) -115);
+              fd.field_g = WordLanguage.field_l.readLong((byte) -115);
               WordLanguage.field_l.position = 0;
               tb.a(ll.field_V, param0, param3, param4, 122);
               lj.field_z = ck.field_I;
@@ -97,7 +97,7 @@ final class wc {
             var6_intLifetime1 = -17 / ((-59 - param1) / 55);
             if (lj.field_z == ck.field_I &&
               ue.a(1, 0)) {
-              var7 = WordLanguage.field_l.d((byte) 110);
+              var7 = WordLanguage.field_l.readUnsignedByte((byte) 110);
               ca.field_e = var7;
               e.field_I = null;
               WordLanguage.field_l.position = 0;
@@ -122,12 +122,12 @@ final class wc {
             }
             if (lj.field_z == pj.field_w &&
               GameKeyHandler.a(0)) {
-              ac.field_j = WordLanguage.field_l.e((byte) 117);
-              va.field_j = WordLanguage.field_l.d((byte) 58);
-              WordLanguage.field_l.d((byte) 93);
-              wj.field_o = WordLanguage.field_l.a((byte) -118);
-              var7_ref_String = WordLanguage.field_l.j(-1640531527);
-              var8 = WordLanguage.field_l.d((byte) 82);
+              ac.field_j = WordLanguage.field_l.readLong((byte) 117);
+              va.field_j = WordLanguage.field_l.readUnsignedByte((byte) 58);
+              WordLanguage.field_l.readUnsignedByte((byte) 93);
+              wj.field_o = WordLanguage.field_l.readUnsignedShort((byte) -118);
+              var7_ref_String = WordLanguage.field_l.readNullableString(-1640531527);
+              var8 = WordLanguage.field_l.readUnsignedByte((byte) 82);
               if ((1 & var8) != 0) {
                 rb.a((byte) -114);
               }
@@ -140,19 +140,19 @@ final class wc {
                 }
               }
               if (kc.field_D) {
-                WordLanguage.field_l.d((byte) 63);
-                WordLanguage.field_l.d((byte) 33);
-                WordLanguage.field_l.c((byte) -119);
-                ai.field_c = WordLanguage.field_l.a((byte) -119);
+                WordLanguage.field_l.readUnsignedByte((byte) 63);
+                WordLanguage.field_l.readUnsignedByte((byte) 33);
+                WordLanguage.field_l.readInt((byte) -119);
+                ai.field_c = WordLanguage.field_l.readUnsignedShort((byte) -119);
                 td.field_c = new byte[ai.field_c];
                 for (var9 = 0; var9 < ai.field_c; var9++) {
-                  td.field_c[var9] = WordLanguage.field_l.b(true);
+                  td.field_c[var9] = WordLanguage.field_l.readByte(true);
                 }
               }
-              NodeHashTableIterator.field_a = WordLanguage.field_l.g(12248);
+              NodeHashTableIterator.field_a = WordLanguage.field_l.readString(12248);
               var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
               kf.field_e = hj.a((byte) -128, var12);
-              db.field_d = WordLanguage.field_l.d((byte) 123);
+              db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
               lj.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
                 if (ll.field_V.a(-184) == vc.field_G) {
@@ -204,7 +204,7 @@ final class wc {
               if (7 == ca.field_e) {
                 ca.field_e = 3;
               }
-              Transmogrify.field_B = WordLanguage.field_l.g(12248);
+              Transmogrify.field_B = WordLanguage.field_l.readString(12248);
               ej.field_k = false;
               stackIn_84_0 = ca.field_e;
               return stackIn_84_0;
@@ -368,7 +368,7 @@ final class wc {
         try {
           var14 = WordLanguage.field_l;
           var16 = var14;
-          var2 = var16.d((byte) 108);
+          var2 = var16.readUnsignedByte((byte) 108);
           var3 = (ng) (kf.field_o.a((byte) -95));
           while (var3 != null) {
             if (var2 != var3.field_m) {
@@ -382,12 +382,12 @@ final class wc {
             return;
           }
           var5 = -102 % ((77 - param0) / 39);
-          var4 = var16.d((byte) 78);
+          var4 = var16.readUnsignedByte((byte) 78);
           if (0 != var4) {
             var6 = var3.field_k;
             kf.field_k[0] = NodeHashTableIterator.field_a;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
-              kf.field_k[var7_int] = var14.g(12248);
+              kf.field_k[var7_int] = var14.readString(12248);
             }
             he.a(var6, var4, 24070);
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var4; var7_intLifetime1++) {

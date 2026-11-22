@@ -58,7 +58,7 @@ final class hi extends java.awt.Canvas {
           var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.position = -2 + param0.length;
-          bj.field_b = var17.i(-1174051992);
+          bj.field_b = var17.readUnsignedShort(-1174051992);
           hc.field_a = new boolean[bj.field_b];
           gh.field_C = new int[bj.field_b];
           gg.field_d = new int[bj.field_b];
@@ -67,25 +67,25 @@ final class hi extends java.awt.Canvas {
           qd.field_H = new int[bj.field_b];
           fc.field_d = new int[bj.field_b];
           var17.position = -(bj.field_b * 8) + (-7 + param0.length);
-          td.field_m = var17.i(-1174051992);
-          gb.field_w = var17.i(-1174051992);
-          var3 = 1 + (255 & var17.j(7909));
+          td.field_m = var17.readUnsignedShort(-1174051992);
+          gb.field_w = var17.readUnsignedShort(-1174051992);
+          var3 = 1 + (255 & var17.readUnsignedByte(7909));
           for (var4 = 0; bj.field_b > var4; var4++) {
-            fc.field_d[var4] = var16.i(param1 - 1174051992);
+            fc.field_d[var4] = var16.readUnsignedShort(param1 - 1174051992);
           }
           for (var4Lifetime1 = 0; bj.field_b > var4Lifetime1; var4Lifetime1++) {
-            qd.field_H[var4Lifetime1] = var17.i(-1174051992);
+            qd.field_H[var4Lifetime1] = var17.readUnsignedShort(-1174051992);
           }
           for (var4Lifetime2 = 0; bj.field_b > var4Lifetime2; var4Lifetime2++) {
-            gg.field_d[var4Lifetime2] = var17.i(-1174051992);
+            gg.field_d[var4Lifetime2] = var17.readUnsignedShort(-1174051992);
           }
           for (var4Lifetime3 = 0; bj.field_b > var4Lifetime3; var4Lifetime3++) {
-            gh.field_C[var4Lifetime3] = var17.i(-1174051992);
+            gh.field_C[var4Lifetime3] = var17.readUnsignedShort(-1174051992);
           }
           var17.position = -((-1 + var3) * 3) + (-7 + param0.length) - 8 * bj.field_b;
           of.field_g = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            of.field_g[var4Lifetime4] = var17.g(-115);
+            of.field_g[var4Lifetime4] = var17.readUnsignedMedium(-115);
             if (of.field_g[var4Lifetime4] == 0) {
               of.field_g[var4Lifetime4] = 1;
             }
@@ -104,14 +104,14 @@ final class hi extends java.awt.Canvas {
             var9 = var19;
             ac.field_d[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.j(7909);
+            var11 = var17.readUnsignedByte(7909);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.a(false);
+                var8[var12] = var17.readByte(false);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.a(false);
+                  dupTemp$1 = var17.readByte(false);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_30_0 = var10;
@@ -126,13 +126,13 @@ final class hi extends java.awt.Canvas {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var17.a(false);
+                  var8[var13 * var5 + var12] = var17.readByte(false);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.a(false);
+                    dupTemp$0 = var17.readByte(false);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_46_0 = var10;

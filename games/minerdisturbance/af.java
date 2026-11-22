@@ -51,8 +51,8 @@ final class af extends IntrusiveNode {
           var4 = 0;
           var5 = -1;
           while (true) {
-            if (param0.field_u.length > param0.field_o) {
-              var5 = param0.d((byte) -54);
+            if (param0.payload.length > param0.position) {
+              var5 = param0.readUnsignedByte((byte) -54);
               if ((~nn.field_l != ~var5 ||
                 var4 != 0) &&
                 (!ne.a(var5, uf.field_q, param0, (byte) -99) ||
@@ -63,22 +63,22 @@ final class af extends IntrusiveNode {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (var4 != 0) {
-                  if (param0.field_o + 1 == param0.field_u.length) {
+                  if (param0.position + 1 == param0.payload.length) {
                     throw new RuntimeException("Unterminated quote!");
                   }
-                  var6 = param0.m(4);
+                  var6 = param0.readByte(4);
                   if (!ne.a(var6, uf.field_q, param0, (byte) -81) &&
                     nn.field_l != var6) {
                     if (var6 == el.field_d) {
                       discarded$1 = var8.append((char)var6);
                     } else {
-                      param0.field_o = param0.field_o - 1;
+                      param0.position = param0.position - 1;
                       discarded$2 = var8.append((char)var5);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    param0.field_o = param0.field_o - 1;
+                    param0.position = param0.position - 1;
                   }
                 }
                 stackIn_25_0 = (var4 != 0) ? 0 : 1;

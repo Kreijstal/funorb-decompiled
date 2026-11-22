@@ -87,11 +87,11 @@ final class ef implements Runnable {
           return;
         }
         ia var2 = se.field_p;
-        var2.f((byte) -118);
-        var2.f((byte) -93);
-        var2.f((byte) -104);
+        var2.readInt((byte) -118);
+        var2.readInt((byte) -93);
+        var2.readInt((byte) -104);
         if (param0 == -57) {
-          var2.f((byte) -110);
+          var2.readInt((byte) -110);
           var1.unlink(4);
           return;
         }

@@ -75,21 +75,21 @@ final class ak {
         var16 = StarCannon.field_A;
         try {
           var17 = new PacketBuffer(hc.a((byte) 51, param0));
-          var4 = var17.j(7909);
+          var4 = var17.readUnsignedByte(7909);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_q = 0;
             } else {
-              this.field_q = var17.f((byte) -84);
+              this.field_q = var17.readInt((byte) -84);
             }
-            var5 = var17.j(7909);
+            var5 = var17.readUnsignedByte(7909);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 < 7) {
-              this.field_o = var17.i(-1174051992);
+              this.field_o = var17.readUnsignedShort(-1174051992);
             } else {
-              this.field_o = var17.e(113);
+              this.field_o = var17.readUnsignedShortOrInt(113);
             }
             stackIn_17_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -101,7 +101,7 @@ final class ak {
             var9 = -1;
             if (7 > var4) {
               for (var10 = 0; this.field_o > var10; var10++) {
-                dupTemp$0 = var8 + var17.i(-1174051992);
+                dupTemp$0 = var8 + var17.readUnsignedShort(-1174051992);
                 var8 = dupTemp$0;
                 this.field_g[var10] = dupTemp$0;
                 if (var9 < this.field_g[var10]) {
@@ -110,7 +110,7 @@ final class ak {
               }
             } else {
               for (var10 = 0; var10 < this.field_o; var10++) {
-                dupTemp$1 = var8 + var17.e(90);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(90);
                 var8 = dupTemp$1;
                 this.field_g[var10] = dupTemp$1;
                 if (this.field_g[var10] > var9) {
@@ -133,26 +133,26 @@ final class ak {
                 this.field_r[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_o > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_r[this.field_g[var10Lifetime1Lifetime1]] = var17.f((byte) -109);
+                this.field_r[this.field_g[var10Lifetime1Lifetime1]] = var17.readInt((byte) -109);
               }
               this.field_l = new dl(this.field_r);
             }
             for (var10Lifetime2 = 0; this.field_o > var10Lifetime2; var10Lifetime2++) {
-              this.field_c[this.field_g[var10Lifetime2]] = var17.f((byte) -107);
+              this.field_c[this.field_g[var10Lifetime2]] = var17.readInt((byte) -107);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_o > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, (byte) 88, var21, 0);
+                var17.readBytes(64, (byte) 88, var21, 0);
                 this.field_p[this.field_g[var10Lifetime3]] = var21;
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_o; var10Lifetime4++) {
-              this.field_d[this.field_g[var10Lifetime4]] = var17.f((byte) -115);
+              this.field_d[this.field_g[var10Lifetime4]] = var17.readInt((byte) -115);
             }
             if (7 > var4) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_o; var10Lifetime5++) {
-                this.field_i[this.field_g[var10Lifetime5]] = var17.i(-1174051992);
+                this.field_i[this.field_g[var10Lifetime5]] = var17.readUnsignedShort(-1174051992);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_o; var10Lifetime5++) {
                 var11 = this.field_g[var10Lifetime5];
@@ -162,7 +162,7 @@ final class ak {
                 this.field_k[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.i(-1174051992);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort(-1174051992);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_k[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -178,7 +178,7 @@ final class ak {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_o; var10Lifetime5++) {
-                this.field_i[this.field_g[var10Lifetime5]] = var17.e(-116);
+                this.field_i[this.field_g[var10Lifetime5]] = var17.readUnsignedShortOrInt(-116);
               }
               for (var10Lifetime5 = 0; this.field_o > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_g[var10Lifetime5];
@@ -188,7 +188,7 @@ final class ak {
                 array$5 = new int[var12];
                 this.field_k[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.e(74);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShortOrInt(74);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_k[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -220,7 +220,7 @@ final class ak {
                   } else {
                     var14Lifetime1 = this.field_k[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_a[var11Lifetime1][var14Lifetime1] = var17.f((byte) -108);
+                  this.field_a[var11Lifetime1][var14Lifetime1] = var17.readInt((byte) -108);
                 }
                 this.field_s[var11Lifetime1] = new dl(this.field_a[var11Lifetime1]);
               }
@@ -288,9 +288,9 @@ final class ak {
         try {
           var1_int = -2 % ((param0 + 38) / 55);
           var2 = se.field_p;
-          var3 = var2.j(7909);
+          var3 = var2.readUnsignedByte(7909);
           if (var3 == 0) {
-            var4 = var2.i(-1174051992);
+            var4 = var2.readUnsignedShort(-1174051992);
             var5 = (vc) (ne.field_c.c(-3905));
             while (var5 != null) {
               if (var4 != var5.field_i) {
@@ -303,7 +303,7 @@ final class ak {
               ec.a((byte) 27);
               return;
             }
-            var6 = var2.j(7909);
+            var6 = var2.readUnsignedByte(7909);
             if (var6 != 0) {
               var7 = var5.field_h;
               ok.field_rb[0].field_f = null;
@@ -311,12 +311,12 @@ final class ak {
               var8 = var5.field_l;
               ok.field_rb[0].field_e = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                ok.field_rb[var9_int].field_a = var2.a(-24);
+                ok.field_rb[var9_int].field_a = var2.readString(-24);
                 ok.field_rb[var9_int].field_e = false;
-                if (1 != var2.j(7909)) {
+                if (1 != var2.readUnsignedByte(7909)) {
                   ok.field_rb[var9_int].field_f = null;
                 } else {
-                  ok.field_rb[var9_int].field_f = var2.a(-33);
+                  ok.field_rb[var9_int].field_f = var2.readString(-33);
                 }
               }
               dupTemp$0 = new String[3][var7];
@@ -335,12 +335,12 @@ final class ak {
               var16 = 0;
               var17 = 0;
               var18 = 0;
-              var19 = var2.j(7909);
+              var19 = var2.readUnsignedByte(7909);
               if (var19 > 0) {
                 for (var20 = 0; var19 > var20; var20++) {
-                  var21 = var2.j(7909);
+                  var21 = var2.readUnsignedByte(7909);
                   var22 = ok.field_rb[var21].field_a;
-                  var23 = var2.c((byte) 5);
+                  var23 = var2.readLong((byte) 5);
                   var25 = var2.position;
                   if (var7 > var20) {
                     var9[0][var13] = var22;
@@ -350,7 +350,7 @@ final class ak {
                     for (var26 = 0; var8 > var26; var26++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var12[0][incrementValue$3] = var2.f((byte) -101);
+                      var12[0][incrementValue$3] = var2.readInt((byte) -101);
                     }
                   }
                   if (var22 != null &&
@@ -363,7 +363,7 @@ final class ak {
                     for (var26Lifetime1 = 0; var8 > var26Lifetime1; var26Lifetime1++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var12[1][incrementValue$4] = var2.f((byte) -94);
+                      var12[1][incrementValue$4] = var2.readInt((byte) -94);
                     }
                   }
                   if (var15 < var7 &&
@@ -377,7 +377,7 @@ final class ak {
                     for (var26Lifetime2 = 0; var26Lifetime2 < var8; var26Lifetime2++) {
                       incrementValue$5 = var18;
                       var18++;
-                      var12[2][incrementValue$5] = var2.f((byte) -99);
+                      var12[2][incrementValue$5] = var2.readInt((byte) -99);
                     }
                   }
                 }
@@ -388,8 +388,8 @@ final class ak {
             return;
           }
           if (var3 == 1) {
-            var4Lifetime1 = var2.i(-1174051992);
-            var5_long = var2.c((byte) 5);
+            var4Lifetime1 = var2.readUnsignedShort(-1174051992);
+            var5_long = var2.readLong((byte) 5);
             var7_ref_re = (re) (s.field_e.c(-3905));
             while (var7_ref_re != null) {
               if (var7_ref_re.field_g != var4Lifetime1) {

@@ -36,34 +36,34 @@ final class tb implements uj {
         fc var9 = null;
         var7 = MinerDisturbance.field_ab;
         var8 = kj.field_a;
-        var3 = var8.d((byte) -54);
+        var3 = var8.readUnsignedByte((byte) -54);
         pf.field_i = var3 & 127;
         stackIn_3_0 = ((128 & var3) != 0);
         sa.field_u = stackIn_3_0;
-        mk.field_a = var8.d((byte) -54);
-        il.field_v = var8.h(param1 + 120);
+        mk.field_a = var8.readUnsignedByte((byte) -54);
+        il.field_v = var8.readLong(param1 + 120);
         if (pf.field_i == 2) {
-          pl.field_c = var8.e(param1 ^ 32);
-          ig.field_e = var8.i(3);
+          pl.field_c = var8.readUnsignedShort(param1 ^ 32);
+          ig.field_e = var8.readUnsignedMedium(3);
         } else {
           pl.field_c = 0;
           ig.field_e = 0;
         }
-        stackIn_9_0 = (var8.d((byte) -54) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) -54) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        lm.field_L = var8.a(false);
+        lm.field_L = var8.readString(false);
         if (var4 == 0) {
           vd.field_x = lm.field_L;
         } else {
-          vd.field_x = var8.a(false);
+          vd.field_x = var8.readString(false);
         }
         if (~pf.field_i == param1) {
-          var8.e(-76);
-          var8.a(false);
+          var8.readUnsignedShort(-76);
+          var8.readString(false);
         } else {
           if (pf.field_i == 4) {
-            var8.e(-76);
-            var8.a(false);
+            var8.readUnsignedShort(-76);
+            var8.readString(false);
           }
         }
         if (!param0) {
@@ -71,7 +71,7 @@ final class tb implements uj {
           IntrusiveNode.field_l = null;
           return new id(param0);
         }
-        var5 = var8.e(param1 ^ 50);
+        var5 = var8.readUnsignedShort(param1 ^ 50);
         try {
           var9 = lf.field_b.a(param1 ^ -25461, var5);
           bf.field_c = var9.f(1);

@@ -29,7 +29,7 @@ final class nb {
         try {
           var8 = new ia(param0.a("logo.fo3d", (byte) -119, ""));
           var10 = var8;
-          var3 = var10.j(7909);
+          var3 = var10.readUnsignedByte(7909);
           var10.c(true);
           uc.field_d = BufferedSocket.a(var10, (byte) 107);
           ci.field_g = new lb[var3];

@@ -67,7 +67,7 @@ final class kd {
           }
           var8 = new CipherPacketBuffer(param1.a("logo.fo3d", "", (byte) -113));
           var10 = var8;
-          var3 = var10.c(true);
+          var3 = var10.readUnsignedByte(true);
           var10.e(false);
           ch.field_n = lo.a(var10, (byte) -128);
           ih.field_w = new qh[var3];

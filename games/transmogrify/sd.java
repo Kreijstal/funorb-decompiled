@@ -129,7 +129,7 @@ final class sd extends bi {
         try {
           var9 = new hj(param0.a("", (byte) 124, "logo.fo3d"));
           var11 = var9;
-          var3 = var11.d((byte) 121);
+          var3 = var11.readUnsignedByte((byte) 121);
           var11.h((byte) 106);
           if (!param1) {
             var8 = (ci) null;

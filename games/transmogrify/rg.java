@@ -567,7 +567,7 @@ class rg extends lj {
 
     final static void n(int param0) {
         ub.field_d = false;
-        WordLanguage.field_l.d((byte) 29);
+        WordLanguage.field_l.readUnsignedByte((byte) 29);
         if (param0 < 66) {
           rg.n(74);
         }

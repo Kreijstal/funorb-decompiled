@@ -18,16 +18,16 @@ final class hb extends IntrusiveNode {
           var6.d((byte) 52, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a(1, -84);
-          var6.a(param2.field_f, -60);
-          var6.a(param2.field_l, -114);
-          var6.c((byte) -114, param2.field_i);
+          var6.writeByte(1, -84);
+          var6.writeByte(param2.field_f, -60);
+          var6.writeByte(param2.field_l, -114);
+          var6.writeInt((byte) -114, param2.field_i);
           int var5 = 122 % ((40 - param0) / 43);
-          var6.c((byte) -107, param2.field_h);
-          var6.c((byte) -93, param2.field_k);
-          var6.c((byte) -118, param2.field_j);
-          var6.b((byte) -101, var4);
-          var6.b(var6.position - var4, 31700);
+          var6.writeInt((byte) -107, param2.field_h);
+          var6.writeInt((byte) -93, param2.field_k);
+          var6.writeInt((byte) -118, param2.field_j);
+          var6.appendCrc32((byte) -101, var4);
+          var6.backpatchByteLength(var6.position - var4, 31700);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

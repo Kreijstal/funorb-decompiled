@@ -120,18 +120,18 @@ final class wd {
           var6.writeByte(6, 1);
           if (null != param2.field_l) {
             var6.writeByte(6, param2.field_l.length);
-            var6.a(param2.field_l, 1, param2.field_l.length, 0);
+            var6.writeBytes(param2.field_l, 1, param2.field_l.length, 0);
           } else {
             var6.writeByte(6, 0);
           }
-          var6.c((byte) -106, var4);
+          var6.appendCrc32((byte) -106, var4);
           var6.position = var6.position - 4;
           if (param0 >= -68) {
             ue var5 = (ue) null;
             wd.a((byte) -67, -90, (ue) null);
           }
           param2.field_k = var6.readInt(-31);
-          var6.c(var6.position - var4, -1);
+          var6.backpatchByteLength(var6.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "wd.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

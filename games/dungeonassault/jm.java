@@ -246,15 +246,15 @@ final class jm {
         }
         if (!jn.field_c) {
           ac.field_B.d((byte) -80, 70);
-          ac.field_B.b((byte) -106, ke.field_b);
+          ac.field_B.writeMedium((byte) -106, ke.field_b);
           ac.field_B.writeByte(6, oh.field_s);
         } else {
           ac.field_B.d((byte) -113, 71);
           ac.field_B.position = ac.field_B.position + 1;
           var1 = ac.field_B.position;
-          ac.field_B.a(2, ip.field_j);
+          ac.field_B.writePrefixedString(2, ip.field_j);
           ac.field_B.writeByte(6, oh.field_s);
-          ac.field_B.c(ac.field_B.position - var1, -1);
+          ac.field_B.backpatchByteLength(ac.field_B.position - var1, -1);
         }
         if (param0 != -17573) {
           jm.a(false);

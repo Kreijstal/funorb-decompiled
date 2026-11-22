@@ -3202,7 +3202,7 @@ public final class StarCannon extends ag {
         qe.clearStaticReferences();
         oh.clearStaticReferences(-1);
         ec.a(82);
-        PacketBuffer.g((byte) -59);
+        PacketBuffer.clearStaticReferences((byte) -59);
         dd.clearStaticReferences(-121);
         qa.a(-5504);
         mf.a(23675);

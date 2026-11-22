@@ -87,8 +87,8 @@ final class ff {
           var14 = MinerDisturbance.field_ab;
           try {
             var18 = new gl();
-            var18.field_y = param1.d((byte) -54);
-            var18.field_n = param1.b((byte) 27);
+            var18.field_y = param1.readUnsignedByte((byte) -54);
+            var18.field_n = param1.readInt((byte) 27);
             var18.field_r = new ia[var18.field_y];
             var18.field_s = new int[var18.field_y];
             var18.field_p = new int[var18.field_y];
@@ -97,7 +97,7 @@ final class ff {
             var18.field_v = new byte[var18.field_y][][];
             for (var5 = 0; var5 < var18.field_y; var5++) {
               try {
-                var6_int = param1.d((byte) -54);
+                var6_int = param1.readUnsignedByte((byte) -54);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -105,22 +105,22 @@ final class ff {
                     var6_int == 4) {
                     stackIn_13_0 = (PacketBuffer) (param1);
                     stackIn_14_1 = !(param3);
-                    var20 = ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1);
-                    var8 = param1.a(false);
-                    var9 = param1.d((byte) -54);
+                    var20 = ((PacketBuffer) (Object) stackIn_13_0).readString(stackIn_14_1);
+                    var8 = param1.readString(false);
+                    var9 = param1.readUnsignedByte((byte) -54);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.a(false);
+                      var10[var11_int] = param1.readString(false);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.b((byte) 15);
+                        var13 = param1.readInt((byte) 15);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var21[var12_int], (byte) -120, 0, var13);
+                        param1.readBytes(var21[var12_int], (byte) -120, 0, var13);
                       }
                     }
                     var18.field_s[var5] = var6_int;
@@ -135,13 +135,13 @@ final class ff {
                     var18.field_v[var5] = var21;
                   }
                 } else {
-                  var15 = param1.a(false);
-                  dupTemp$1 = param1.a(false);
+                  var15 = param1.readString(false);
+                  dupTemp$1 = param1.readString(false);
                   var16 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param1.b((byte) 90);
+                    var9 = param1.readInt((byte) 90);
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_p[var5] = var9;

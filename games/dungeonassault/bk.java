@@ -78,7 +78,7 @@ final class bk implements Runnable {
               var2 = new PacketBuffer(13);
               rg.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
               var2.writeByte(6, 15);
-              var2.a((byte) 63, ng.field_I);
+              var2.writeInt((byte) 63, ng.field_I);
               pe.field_l.b(var2.payload, false, 0, 13);
               ba.field_f = ba.field_f + 1;
               ce.field_s = kd.c(param0 - 2456) + 30000L;

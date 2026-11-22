@@ -220,8 +220,8 @@ final class vh extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.c(true);
-        var3 = param0.k(0);
+        var2 = param0.readUnsignedByte(true);
+        var3 = param0.readUnsignedShort(0);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -236,7 +236,7 @@ final class vh extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.c(true);
+            var15 = param0.readUnsignedByte(true);
             if (var15 != var14) {
               var4++;
             }
@@ -285,7 +285,7 @@ final class vh extends IntrusiveNode {
         var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.e(-651413500);
+          param0.readVarInt(-651413500);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         var15Lifetime2 = param0.position;
@@ -303,7 +303,7 @@ final class vh extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.c(true) & 127;
+          var28 = var28 + param0.readUnsignedByte(true) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -419,8 +419,8 @@ final class vh extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.field_i = new byte[var4];
         var51 = new PacketBuffer(this.field_i);
-        var51.a((byte) 63, 1297377380);
-        var51.a((byte) 63, 6);
+        var51.writeInt((byte) 63, 1297377380);
+        var51.writeInt((byte) 63, 6);
         stackIn_84_0 = var51;
         if (var2 <= 1) {
           stackIn_85_1 = 0;
@@ -445,13 +445,13 @@ final class vh extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.a((byte) 63, 1297379947);
+          var51.writeInt((byte) 63, 1297379947);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.e(-651413500);
-            var51.e(-268435456, var63);
+            var63 = param0.readVarInt(-651413500);
+            var51.writeVarInt(-268435456, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.payload[incrementValue$0] & 255;
@@ -464,7 +464,7 @@ final class vh extends IntrusiveNode {
               }
               var51.writeByte(6, 47);
               var51.writeByte(6, 0);
-              var51.d(1, var51.position - var61);
+              var51.backpatchIntLength(1, var51.position - var61);
               var60++;
               break;
             }

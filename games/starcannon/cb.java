@@ -139,7 +139,7 @@ final class cb {
         try {
           var12 = se.field_p;
           var15 = var12;
-          var2 = var15.j(7909);
+          var2 = var15.readUnsignedByte(7909);
           var3 = (oj) (uc.field_b.c(-3905));
           while (var3 != null) {
             if (var3.field_i != var2) {
@@ -155,12 +155,12 @@ final class cb {
           if (param0 > -93) {
             cb.b(false);
           }
-          var4 = var15.j(7909);
+          var4 = var15.readUnsignedByte(7909);
           if (0 != var4) {
             var5 = var3.field_h;
             ef.field_f[0] = we.field_i;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              ef.field_f[var6_int] = var12.a(-103);
+              ef.field_f[var6_int] = var12.readString(-103);
             }
             ai.a(var5, false, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

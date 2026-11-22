@@ -17,18 +17,18 @@ final class gh extends IntrusiveNode {
           return;
         }
         hj var2 = WordLanguage.field_l;
-        var2.c((byte) -126);
+        var2.readInt((byte) -126);
         if (param0 == 0) {
-          var2.c((byte) -108);
-          var2.c((byte) -105);
-          var2.c((byte) -119);
+          var2.readInt((byte) -108);
+          var2.readInt((byte) -105);
+          var2.readInt((byte) -119);
           var1.c(param0 + 5);
           return;
         }
         gh.e(38);
-        var2.c((byte) -108);
-        var2.c((byte) -105);
-        var2.c((byte) -119);
+        var2.readInt((byte) -108);
+        var2.readInt((byte) -105);
+        var2.readInt((byte) -119);
         var1.c(param0 + 5);
     }
 

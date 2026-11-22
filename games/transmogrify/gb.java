@@ -256,7 +256,7 @@ final class gb {
                 if (24 <= var3_int) {
                   throw new IOException();
                 }
-                param0.a((byte) -89, var2, 24, 0);
+                param0.writeBytes((byte) -89, var2, 24, 0);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -270,7 +270,7 @@ final class gb {
                 return;
               }
             }
-            param0.a((byte) -89, var2, 24, 0);
+            param0.writeBytes((byte) -89, var2, 24, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -40,14 +40,14 @@ final class vm {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_a.c(true);
-          var4 = this.field_a.e(-651413500);
+          var3 = this.field_a.readUnsignedByte(true);
+          var4 = this.field_a.readVarInt(-651413500);
           if (var3 == 47) {
             this.field_a.position = this.field_a.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_a.f(-116);
+            var5 = this.field_a.readUnsignedMedium(-116);
             var4 -= 3;
             var6 = this.field_d[param0];
             this.field_b = this.field_b + (long)var6 * (long)(this.field_h - var5);
@@ -61,16 +61,16 @@ final class vm {
         var3Lifetime1 = field_g[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.c(true) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(true) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.c(true) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(true) << 16;
         }
         return var4Lifetime1;
     }
 
     final void b(int param0) {
-        int var2 = this.field_a.e(-651413500);
+        int var2 = this.field_a.readVarInt(-651413500);
         this.field_d[param0] = this.field_d[param0] + var2;
     }
 
@@ -80,8 +80,8 @@ final class vm {
         int var3Lifetime1;
         this.field_a.payload = param0;
         this.field_a.position = 10;
-        int var2 = this.field_a.k(0);
-        this.field_c = this.field_a.k(0);
+        int var2 = this.field_a.readUnsignedShort(0);
+        this.field_c = this.field_a.readUnsignedShort(0);
         this.field_h = 500000;
         this.field_i = new int[var2];
         int var3 = 0;
@@ -166,7 +166,7 @@ final class vm {
           var2 != 247) {
           return this.a(param0, var2);
         }
-        var3 = this.field_a.e(-651413500);
+        var3 = this.field_a.readVarInt(-651413500);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.field_a.payload[this.field_a.position] & 255;

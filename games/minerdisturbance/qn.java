@@ -7,7 +7,7 @@ final class qn extends hc {
     static int field_K;
     static Sprite field_J;
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -23,7 +23,7 @@ final class qn extends hc {
           var4_int = -1;
           if (param0 != -1648911295) {
             var7 = (byte[]) null;
-            qn.a(74, 37, -101, (byte[]) null);
+            qn.computeCrc32(74, 37, -101, (byte[]) null);
           }
           for (var5 = param1; param2 > var5; var5++) {
             var4_int = ei.field_J[(var4_int ^ param3[var5]) & 255] ^ var4_int >>> 8;

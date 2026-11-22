@@ -309,22 +309,22 @@ final class dj {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          dh.field_g = param0.k(0) << 5;
+          dh.field_g = param0.readUnsignedShort(0) << 5;
           if (param1 < 122) {
             dj.a((byte) -97);
           }
-          var2_int = param0.c(true);
+          var2_int = param0.readUnsignedByte(true);
           dh.field_g = dh.field_g + (var2_int >> 3);
           cm.field_P = var2_int << 18 & 1835008;
-          cm.field_P = cm.field_P + (param0.k(0) << 2);
-          var2_intLifetime1 = param0.c(true);
+          cm.field_P = cm.field_P + (param0.readUnsignedShort(0) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(true);
           fm.field_g = 2064384 & var2_intLifetime1 << 15;
           cm.field_P = cm.field_P + (var2_intLifetime1 >> 6);
-          fm.field_g = fm.field_g + (param0.c(true) << 7);
-          var2_intLifetime2 = param0.c(true);
+          fm.field_g = fm.field_g + (param0.readUnsignedByte(true) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte(true);
           fm.field_g = fm.field_g + (var2_intLifetime2 >> 1);
           ln.field_e = 65536 & var2_intLifetime2 << 16;
-          ln.field_e = ln.field_e + param0.k(0);
+          ln.field_e = ln.field_e + param0.readUnsignedShort(0);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "dj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -83,8 +83,8 @@ final class ac {
           field_B.d((byte) -114, 60);
           field_B.position = field_B.position + 1;
           var2_int = field_B.position;
-          field_B.a(param1 ^ 2, param0);
-          field_B.c(-var2_int + field_B.position, -1);
+          field_B.writePrefixedString(param1 ^ 2, param0);
+          field_B.backpatchByteLength(-var2_int + field_B.position, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "ac.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

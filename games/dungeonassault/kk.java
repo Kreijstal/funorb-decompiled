@@ -433,7 +433,7 @@ final class kk extends IntrusiveNode {
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.a((byte) 2);
+            var4[var5] = var38.readByte((byte) 2);
           }
           var3++;
           var38.position = var38.position + 1;
@@ -445,7 +445,7 @@ final class kk extends IntrusiveNode {
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.a((byte) 2);
+            var7[var8] = var38.readByte((byte) 2);
           }
           var38.position = var38.position + 1;
           var6++;
@@ -457,7 +457,7 @@ final class kk extends IntrusiveNode {
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.a((byte) 2);
+            var10[var11_int] = var38.readByte((byte) 2);
           }
           var38.position = var38.position + 1;
           var9++;
@@ -469,7 +469,7 @@ final class kk extends IntrusiveNode {
             var12 = 2;
             var13_int = 1;
             for (var14 = 2; var14 < var9; var14++) {
-              var15_int = var38.c(true);
+              var15_int = var38.readUnsignedByte(true);
               if (var15_int != 0) {
                 if (var13_int >= var15_int) {
                   var15_int--;
@@ -491,17 +491,17 @@ final class kk extends IntrusiveNode {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.c(true);
+            var16_int = var38.readUnsignedByte(true);
             if (var16_int > 0) {
               var15_ref.field_n = new byte[var16_int * 2];
             }
-            var16_intLifetime1 = var38.c(true);
+            var16_intLifetime1 = var38.readUnsignedByte(true);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_o = new byte[var16_intLifetime1 * 2 + 2];
               var40.field_o[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.c(true);
+          var14Lifetime2 = var38.readUnsignedByte(true);
           if (var14Lifetime2 > 0) {
             stackIn_39_0 = new byte[var14Lifetime2 * 2];
           } else {
@@ -510,7 +510,7 @@ final class kk extends IntrusiveNode {
           var58 = stackIn_39_0;
           var46 = var58;
           var15 = var46;
-          var14Lifetime3 = var38.c(true);
+          var14Lifetime3 = var38.readUnsignedByte(true);
           if (var14Lifetime3 <= 0) {
             stackIn_42_0 = null;
           } else {
@@ -524,18 +524,18 @@ final class kk extends IntrusiveNode {
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.a((byte) 2);
+            var18[var19] = var38.readByte((byte) 2);
           }
           var17++;
           var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.c(true);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(true);
             this.field_r[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.c(true);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(true);
             this.field_r[var20Lifetime1] = (short)(this.field_r[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -548,7 +548,7 @@ final class kk extends IntrusiveNode {
               } else {
                 var20Lifetime2 = -1;
               }
-              var22 = var38.e(-651413500);
+              var22 = var38.readVarInt(-651413500);
             }
             this.field_r[var23] = (short)(this.field_r[var23] + (nb.a(-1 + var22, 2) << 14));
             this.field_q[var23] = var22;
@@ -620,34 +620,34 @@ final class kk extends IntrusiveNode {
                 var20Lifetime6 = -1;
               }
               if (0 < this.field_q[var27]) {
-                var26Lifetime1 = var38.c(true) + 1;
+                var26Lifetime1 = var38.readUnsignedByte(true) + 1;
               }
             }
             var20Lifetime6--;
             this.field_m[var27] = (byte)var26Lifetime1;
           }
-          this.field_j = 1 + var38.c(true);
+          this.field_j = 1 + var38.readUnsignedByte(true);
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_n != null) {
               for (var29 = 1; var45.field_n.length > var29; var29 += 2) {
-                var45.field_n[var29] = var38.a((byte) 2);
+                var45.field_n[var29] = var38.readByte((byte) 2);
               }
             }
             if (var45.field_o != null) {
               for (var29Lifetime5 = 3; -2 + var45.field_o.length > var29Lifetime5; var29Lifetime5 += 2) {
-                var45.field_o[var29Lifetime5] = var38.a((byte) 2);
+                var45.field_o[var29Lifetime5] = var38.readByte((byte) 2);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var58.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.a((byte) 2);
+              var15[var27Lifetime2] = var38.readByte((byte) 2);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var47.length > var27Lifetime3; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.a((byte) 2);
+              var16[var27Lifetime3] = var38.readByte((byte) 2);
             }
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {
@@ -655,7 +655,7 @@ final class kk extends IntrusiveNode {
             if (var48.field_o != null) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_o.length; var29Lifetime1 += 2) {
-                var19Lifetime3 = var38.c(true) + var19Lifetime3 + 1;
+                var19Lifetime3 = var38.readUnsignedByte(true) + var19Lifetime3 + 1;
                 var48.field_o[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -665,16 +665,16 @@ final class kk extends IntrusiveNode {
             if (var49.field_n != null) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_n.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = 1 + (var19Lifetime4 + var38.c(true));
+                var19Lifetime4 = 1 + (var19Lifetime4 + var38.readUnsignedByte(true));
                 var49.field_n[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.c(true);
+            var19Lifetime5 = var38.readUnsignedByte(true);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var58.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = var38.c(true) + (1 + var19Lifetime5);
+              var19Lifetime5 = var38.readUnsignedByte(true) + (1 + var19Lifetime5);
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var58[0];
@@ -703,13 +703,13 @@ final class kk extends IntrusiveNode {
           }
           if (var16 == null) {
             for (var27Lifetime7 = 0; var12 > var27Lifetime7; var27Lifetime7++) {
-              var13[var27Lifetime7].field_c = var38.c(true);
+              var13[var27Lifetime7].field_c = var38.readUnsignedByte(true);
             }
           } else {
-            var19Lifetime6 = var38.c(true);
+            var19Lifetime6 = var38.readUnsignedByte(true);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var27Lifetime7 < var47.length; var27Lifetime7 += 2) {
-              var19Lifetime6 = 1 + var19Lifetime6 + var38.c(true);
+              var19Lifetime6 = 1 + var19Lifetime6 + var38.readUnsignedByte(true);
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7 = var47[0];
@@ -758,34 +758,34 @@ final class kk extends IntrusiveNode {
               this.field_p[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             for (var27Lifetime7 = 0; var12 > var27Lifetime7; var27Lifetime7++) {
-              var13[var27Lifetime7].field_c = var38.c(true);
+              var13[var27Lifetime7].field_c = var38.readUnsignedByte(true);
             }
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
             var50 = var13[var27Lifetime8];
             if (null != var50.field_n) {
-              var50.field_e = var38.c(true);
+              var50.field_e = var38.readUnsignedByte(true);
             }
             if (null != var50.field_o) {
-              var50.field_m = var38.c(true);
+              var50.field_m = var38.readUnsignedByte(true);
             }
             if (var50.field_c > 0) {
-              var50.field_b = var38.c(true);
+              var50.field_b = var38.readUnsignedByte(true);
             }
           }
           for (var27Lifetime9 = 0; var12 > var27Lifetime9; var27Lifetime9++) {
-            var13[var27Lifetime9].field_i = var38.c(true);
+            var13[var27Lifetime9].field_i = var38.readUnsignedByte(true);
           }
           for (var27Lifetime10 = 0; var27Lifetime10 < var12; var27Lifetime10++) {
             var51 = var13[var27Lifetime10];
             if (var51.field_i > 0) {
-              var51.field_h = var38.c(true);
+              var51.field_h = var38.readUnsignedByte(true);
             }
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var52 = var13[var27Lifetime11];
             if (var52.field_h > 0) {
-              var52.field_a = var38.c(true);
+              var52.field_a = var38.readUnsignedByte(true);
             }
           }
           return;

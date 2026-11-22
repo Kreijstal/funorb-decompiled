@@ -46,9 +46,9 @@ final class cb {
             wa.field_b = new PacketBuffer(var7_int);
           }
           wa.field_b.position = 0;
-          wa.field_b.a(param2, 1, param1, param6);
+          wa.field_b.writeBytes(param2, 1, param1, param6);
           wa.field_b.padWithZeros(param4 - 5468, var7_int);
-          wa.field_b.a(var13, true);
+          wa.field_b.encryptXtea(var13, true);
           if (t.field_d == null ||
             !(t.field_d.payload.length >= 100)) {
             t.field_d = new PacketBuffer(100);
@@ -58,13 +58,13 @@ final class cb {
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            t.field_d.a((byte) 63, var13[var11]);
+            t.field_d.writeInt((byte) 63, var13[var11]);
             var11++;
           }
           t.field_d.writeShort(param1, param4 ^ -5422);
-          t.field_d.a(param0, 2, param5);
-          param3.a(t.field_d.payload, 1, t.field_d.position, 0);
-          param3.a(wa.field_b.payload, param4 ^ 5470, wa.field_b.position, 0);
+          t.field_d.applyRsa(param0, 2, param5);
+          param3.writeBytes(t.field_d.payload, 1, t.field_d.position, 0);
+          param3.writeBytes(wa.field_b.payload, param4 ^ 5470, wa.field_b.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

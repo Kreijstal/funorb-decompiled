@@ -103,7 +103,7 @@ final class le extends IOException {
           if (jj.field_F <= 0) {
             return false;
           }
-          if (!PacketBuffer.e((byte) -72)) {
+          if (!PacketBuffer.alwaysTrue((byte) -72)) {
             return true;
           }
           return false;
@@ -117,7 +117,7 @@ final class le extends IOException {
         if (jj.field_F <= 0) {
           return false;
         }
-        if (!PacketBuffer.e((byte) -72)) {
+        if (!PacketBuffer.alwaysTrue((byte) -72)) {
           return true;
         }
         return false;

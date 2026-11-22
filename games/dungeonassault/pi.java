@@ -383,7 +383,7 @@ final class pi {
           oi.field_J.writeShort(var9Lifetime1, param1 - 108);
           for (var10_intLifetime2 = 0; var10_intLifetime2 < 4; var10_intLifetime2++) {
             if (var23[var10_intLifetime2] != null) {
-              oi.field_J.a(var23[var10_intLifetime2], 1, var23[var10_intLifetime2].length, 0);
+              oi.field_J.writeBytes(var23[var10_intLifetime2], 1, var23[var10_intLifetime2].length, 0);
             }
           }
           oi.field_J.writeByte(6, 255);
@@ -418,7 +418,7 @@ final class pi {
           oi.field_J.writeShort(var9Lifetime2, -100);
           for (var11_intLifetime1 = 0; var11_intLifetime1 < 32; var11_intLifetime1++) {
             if (var24[var11_intLifetime1] != null) {
-              oi.field_J.a(var24[var11_intLifetime1], param1 ^ 1, var24[var11_intLifetime1].length, 0);
+              oi.field_J.writeBytes(var24[var11_intLifetime1], param1 ^ 1, var24[var11_intLifetime1].length, 0);
             }
           }
           oi.field_J.writeByte(6, 255);

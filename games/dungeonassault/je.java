@@ -112,12 +112,12 @@ final class je {
         }
         var10 = new PacketBuffer(this.field_m.b(true));
         var10.position = 5;
-        var3 = var10.c(true);
+        var3 = var10.readUnsignedByte(true);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a((byte) -105, 0, var13.length, var13);
+        var10.readBytes((byte) -105, 0, var13.length, var13);
         if (null != this.field_j &&
           this.field_e != null) {
           var12 = new java.math.BigInteger(var13);
@@ -169,7 +169,7 @@ final class je {
             var6_int = this.field_n.readInt(-31);
             var7 = this.field_n.readInt(-54);
             var13 = new byte[64];
-            this.field_n.a((byte) -117, 0, 64, var13);
+            this.field_n.readBytes((byte) -117, 0, 64, var13);
             var9 = new ti(param2, param4, param3, this.field_h, this.field_g, var6_int, var13, var7, param0);
             this.field_k[param2] = var9;
             if (param1 == 4210752) {

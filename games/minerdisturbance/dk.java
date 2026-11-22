@@ -58,10 +58,10 @@ final class dk {
           return;
         }
         CipherPacketBuffer var2 = kj.field_a;
-        var2.b((byte) 46);
-        var2.b((byte) 19);
-        var2.b((byte) 117);
-        var2.b((byte) 49);
+        var2.readInt((byte) 46);
+        var2.readInt((byte) 19);
+        var2.readInt((byte) 117);
+        var2.readInt((byte) 49);
         if (param0 == 22288) {
           var1.b(param0 ^ 22322);
           return;

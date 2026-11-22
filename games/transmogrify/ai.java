@@ -48,8 +48,8 @@ final class ai {
               re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
               var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
-              var2.f(param0 + 6387, 15);
-              var2.a(-109, dk.field_h);
+              var2.writeByte(param0 + 6387, 15);
+              var2.writeInt(-109, dk.field_h);
               re.field_y.a((byte) 9, var2.payload, 13, 0);
               cl.field_A = cl.field_A + 1;
               ob.field_G = 30000L + lk.a(param0 ^ 2);

@@ -8,8 +8,8 @@ final class ki extends h {
     final static void a(boolean param0, int param1) {
         hj var2 = ff.field_D;
         var2.a(param0, param1);
-        var2.f(6389, 1);
-        var2.f(6389, 0);
+        var2.writeByte(6389, 1);
+        var2.writeByte(6389, 0);
     }
 
     final static boolean b(boolean param0) {

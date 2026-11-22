@@ -54,7 +54,7 @@ abstract class hn {
     }
 
     final static void a(byte param0) {
-        ti.field_J = kj.field_a.a(false);
+        ti.field_J = kj.field_a.readString(false);
         CharSequence var2 = (CharSequence) ((Object) ti.field_J);
         in.field_b = cl.a(-95, var2);
         if (param0 > -22) {

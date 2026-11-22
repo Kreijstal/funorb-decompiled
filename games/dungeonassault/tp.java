@@ -119,7 +119,7 @@ final class tp extends bb {
             while (var2 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(6, 1);
-              this.field_o.writeLong(var2.field_o, 836);
+              this.field_o.writeLong40(var2.field_o, 836);
               this.field_D.b(this.field_o.payload, false, 0, this.field_o.payload.length);
               this.field_p.a(var2, -32711);
               var2 = (em) (this.field_g.a((byte) 111));
@@ -128,7 +128,7 @@ final class tp extends bb {
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(6, 0);
-              this.field_o.writeLong(var2Lifetime1.field_o, 836);
+              this.field_o.writeLong40(var2Lifetime1.field_o, 836);
               this.field_D.b(this.field_o.payload, false, 0, this.field_o.payload.length);
               this.field_s.a(var2Lifetime1, -32711);
               var2Lifetime1 = (em) (this.field_d.a((byte) 102));
@@ -173,9 +173,9 @@ final class tp extends bb {
                       }
                     } else {
                       this.field_m.position = 0;
-                      var6 = this.field_m.c(true);
+                      var6 = this.field_m.readUnsignedByte(true);
                       var7 = this.field_m.readInt(-87);
-                      var8 = this.field_m.c(true);
+                      var8 = this.field_m.readUnsignedByte(true);
                       var9 = this.field_m.readInt(-100);
                       var10 = var8 & 127;
                       stackIn_63_0 = ((128 & var8) == 0) ? 0 : 1;
@@ -213,7 +213,7 @@ final class tp extends bb {
                       this.field_i = var14_ref;
                       this.field_i.field_D = new PacketBuffer(this.field_i.field_E + var15 + var9);
                       this.field_i.field_D.writeByte(6, var10);
-                      this.field_i.field_D.a((byte) 63, var9);
+                      this.field_i.field_D.writeInt((byte) 63, var9);
                       this.field_i.field_G = 10;
                       this.field_m.position = 0;
                     }
@@ -289,7 +289,7 @@ final class tp extends bb {
           try {
             this.field_o.position = 0;
             this.field_o.writeByte(6, 6);
-            this.field_o.b((byte) -106, 3);
+            this.field_o.writeMedium((byte) -106, 3);
             this.field_o.writeShort(0, -95);
             this.field_D.b(this.field_o.payload, false, 0, this.field_o.payload.length);
             if (param0 != -30001) {
@@ -381,7 +381,7 @@ final class tp extends bb {
                 this.field_o.position = 0;
                 this.field_o.writeByte(6, 4);
                 this.field_o.writeByte(6, (int) this.field_j);
-                this.field_o.a((byte) 63, 0);
+                this.field_o.writeInt((byte) 63, 0);
                 this.field_D.b(this.field_o.payload, false, 0, this.field_o.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -440,7 +440,7 @@ final class tp extends bb {
               stackIn_5_2 = 3;
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_4_1, stackIn_5_2);
-            this.field_o.writeLong(0L, 836);
+            this.field_o.writeLong40(0L, 836);
             this.field_D.b(this.field_o.payload, false, 0, this.field_o.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -502,11 +502,11 @@ final class tp extends bb {
           var13.field_l = null;
           var13.field_f = 0;
           var13.field_k = new int[var13.field_c];
-          var13.field_g = var6.k(0);
-          var13.field_m = var6.k(0);
+          var13.field_g = var6.readUnsignedShort(0);
+          var13.field_m = var6.readUnsignedShort(0);
           for (var7 = 0; var13.field_c > var7; var7++) {
-            var8 = var6.c(true);
-            var9 = 10 * var6.c(true);
+            var8 = var6.readUnsignedByte(true);
+            var9 = 10 * var6.readUnsignedByte(true);
             var11.field_k[var7] = var8;
             var11.field_j[var7] = var9;
             var13.field_f = var13.field_f + var9;

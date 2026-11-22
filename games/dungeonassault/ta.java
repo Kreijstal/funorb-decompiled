@@ -98,7 +98,7 @@ final class ta {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ed.a(false, var1);
-            ac.field_B.c(var1.position - var2, -1);
+            ac.field_B.backpatchByteLength(var1.position - var2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

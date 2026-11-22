@@ -78,8 +78,8 @@ final class ck implements Runnable {
               ok.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.field_f), ij.field_f);
               var2 = new PacketBuffer(13);
               oe.a(wj.field_b, 32, var2, kc.field_M, ld.field_fb);
-              var2.a(15, -122);
-              var2.c((byte) -113, ac.field_e);
+              var2.writeByte(15, -122);
+              var2.writeInt((byte) -113, ac.field_e);
               ok.field_sb.a(0, var2.payload, (byte) 87, 13);
               KeyboardInput.field_a = KeyboardInput.field_a + 1;
               wf.field_f = dd.b(69) + 30000L;

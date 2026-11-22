@@ -173,7 +173,7 @@ class bh extends ck {
             }
             if (pd.field_A == ik.field_b &&
               oi.a(-12929, 1)) {
-              var6_int = ra.field_c.c(true);
+              var6_int = ra.field_c.readUnsignedByte(true);
               if (var6_int != 0) {
                 hc.field_c = var6_int;
                 nj.field_b = -1;
@@ -185,7 +185,7 @@ class bh extends ck {
             }
             if (MouseInput.field_c == pd.field_A &&
               oi.a(-12929, 8)) {
-              o.field_j = ra.field_c.c((byte) 105);
+              o.field_j = ra.field_c.readLong((byte) 105);
               ra.field_c.position = 0;
               ClientException.a(be.field_n, param0, (byte) -27, param3, param4);
               pd.field_A = rp.field_d;
@@ -193,7 +193,7 @@ class bh extends ck {
             boolean decompiledFrameRemainder0 = true;
             if (rp.field_d == pd.field_A &&
               oi.a(-12929, 1)) {
-              var6_intLifetime1 = ra.field_c.c(true);
+              var6_intLifetime1 = ra.field_c.readUnsignedByte(true);
               ra.field_c.position = 0;
               hc.field_c = var6_intLifetime1;
               pd.field_E = null;
@@ -221,12 +221,12 @@ class bh extends ck {
             }
             if (k.field_e == pd.field_A &&
               kh.d((byte) -86)) {
-              hg.field_s = ra.field_c.c((byte) 53);
-              ResourceArchive.field_k = ra.field_c.c(true);
-              ra.field_c.c(true);
-              pb.field_G = ra.field_c.k(0);
-              var6 = ra.field_c.b(true);
-              var7 = ra.field_c.c(true);
+              hg.field_s = ra.field_c.readLong((byte) 53);
+              ResourceArchive.field_k = ra.field_c.readUnsignedByte(true);
+              ra.field_c.readUnsignedByte(true);
+              pb.field_G = ra.field_c.readUnsignedShort(0);
+              var6 = ra.field_c.readNullableString(true);
+              var7 = ra.field_c.readUnsignedByte(true);
               if ((1 & var7) != 0) {
                 l.b(false);
               }
@@ -239,19 +239,19 @@ class bh extends ck {
                 }
               }
               if (fa.field_j) {
-                ra.field_c.c(true);
-                ra.field_c.c(true);
+                ra.field_c.readUnsignedByte(true);
+                ra.field_c.readUnsignedByte(true);
                 ra.field_c.readInt(-59);
-                ao.field_k = ra.field_c.k(0);
+                ao.field_k = ra.field_c.readUnsignedShort(0);
                 ti.field_q = new byte[ao.field_k];
                 for (var8 = 0; var8 < ao.field_k; var8++) {
-                  ti.field_q[var8] = ra.field_c.a((byte) 2);
+                  ti.field_q[var8] = ra.field_c.readByte((byte) 2);
                 }
               }
-              tc.field_u = ra.field_c.d(-98);
+              tc.field_u = ra.field_c.readString(-98);
               var11 = (CharSequence) ((Object) tc.field_u);
               nn.field_k = jm.a((byte) 59, var11);
-              hf.field_sb = ra.field_c.c(true);
+              hf.field_sb = ra.field_c.readUnsignedByte(true);
               pd.field_A = qa.field_c;
               if (be.field_n.b(65) != pe.field_j) {
                 if (be.field_n.b(-104) == MidiPcmStream.field_w) {
@@ -303,7 +303,7 @@ class bh extends ck {
               if (hc.field_c == 7) {
                 hc.field_c = 3;
               }
-              tp.field_v = ra.field_c.d(-96);
+              tp.field_v = ra.field_c.readString(-96);
               ResourceArchive.field_e = false;
               stackIn_87_0 = hc.field_c;
               return stackIn_87_0;

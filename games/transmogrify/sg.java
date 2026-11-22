@@ -41,7 +41,7 @@ final class sg {
           return 0;
         }
         var3 = (byte[]) null;
-        sg.a(97, (byte) 55, 108, (byte[]) null);
+        sg.computeCrc32(97, (byte) 55, 108, (byte[]) null);
         if (this.field_g) {
           return 2;
         }
@@ -61,7 +61,7 @@ final class sg {
         return 0;
     }
 
-    final static int a(int param0, byte param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, byte param1, int param2, byte[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -108,7 +108,7 @@ final class sg {
           return;
         }
         byte[] var2 = (byte[]) null;
-        sg.a(27, (byte) 105, -29, (byte[]) null);
+        sg.computeCrc32(27, (byte) 105, -29, (byte[]) null);
         varietyBonusLabel = null;
         field_a = null;
         field_d = null;

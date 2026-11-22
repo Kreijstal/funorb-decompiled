@@ -20,7 +20,7 @@ final class oh extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.d((byte) 101);
+          var2_int = param1.readUnsignedByte((byte) 101);
           if (param0 > -20) {
             var4 = (PacketBuffer) null;
             oh.a((byte) 95, (PacketBuffer) null);

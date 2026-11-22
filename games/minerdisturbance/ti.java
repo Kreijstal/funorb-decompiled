@@ -80,9 +80,9 @@ final class ti extends hc {
         try {
           var3 = sn.field_c;
           var3.d((byte) -61, param2);
-          var3.c(2, 25564);
-          var3.c(0, 25564);
-          var3.c(param0.field_n, 25564);
+          var3.writeByte(2, 25564);
+          var3.writeByte(0, 25564);
+          var3.writeByte(param0.field_n, 25564);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ti.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

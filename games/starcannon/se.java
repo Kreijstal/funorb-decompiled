@@ -87,23 +87,23 @@ final class se extends bd {
           ck.field_g.position = 0;
           jl.field_b[3] = (int)mi.field_o;
           jl.field_b[2] = (int)(mi.field_o >> 32);
-          ck.field_g.c((byte) -113, jl.field_b[0]);
-          ck.field_g.c((byte) -71, jl.field_b[1]);
-          ck.field_g.c((byte) -109, jl.field_b[2]);
-          ck.field_g.c((byte) -107, jl.field_b[3]);
+          ck.field_g.writeInt((byte) -113, jl.field_b[0]);
+          ck.field_g.writeInt((byte) -71, jl.field_b[1]);
+          ck.field_g.writeInt((byte) -109, jl.field_b[2]);
+          ck.field_g.writeInt((byte) -107, jl.field_b[3]);
           fd.a(ck.field_g, (byte) -111);
-          ck.field_g.c(param3, param2 - 306);
+          ck.field_g.writeShort(param3, param2 - 306);
           param1.a((byte) 69, ck.field_g);
           d.field_b.position = 0;
           if (!param0) {
-            d.field_b.a(16, -110);
+            d.field_b.writeByte(16, -110);
           } else {
-            d.field_b.a(18, -108);
+            d.field_b.writeByte(18, -108);
           }
           d.field_b.position = d.field_b.position + 2;
           var5_int = d.field_b.position;
-          d.field_b.c((byte) -123, ce.field_b);
-          d.field_b.a(true, gh.field_B);
+          d.field_b.writeInt((byte) -123, ce.field_b);
+          d.field_b.writeLong(true, gh.field_B);
           var6 = 0;
           if (ah.field_i) {
             var6 = var6 | 1;
@@ -117,17 +117,17 @@ final class se extends bd {
           if (lj.field_c != null) {
             var6 = var6 | 16;
           }
-          d.field_b.a(var6, param2 - 93);
+          d.field_b.writeByte(var6, param2 - 93);
           var7 = UiWidget.a(ll.b(125), 61);
           if (var7 == null) {
             var7 = "";
           }
-          d.field_b.b(false, var7);
+          d.field_b.writeString(false, var7);
           if (null != lj.field_c) {
-            d.field_b.a(false, lj.field_c);
+            d.field_b.writePrefixedString(false, lj.field_c);
           }
           fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-          d.field_b.a((byte) 88, -var5_int + d.field_b.position);
+          d.field_b.backpatchShortLength((byte) 88, -var5_int + d.field_b.position);
           nf.a(-1, (byte) 95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

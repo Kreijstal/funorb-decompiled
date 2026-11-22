@@ -29,8 +29,8 @@ final class ac extends kk {
           if (param0 >= -50) {
             ac.clearStaticReferences((byte) -2);
           }
-          param1.a(this.field_l, 124);
-          param1.a((byte) 118, this.field_i);
+          param1.writePrefixedString(this.field_l, 124);
+          param1.writeBase38String((byte) 118, this.field_i);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ac.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -84,13 +84,13 @@ final class GzipDecompressor {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param0.field_u[param0.field_o] == 31 &&
-              param0.field_u[1 + param0.field_o] == -117) {
+            if (param0.payload[param0.position] == 31 &&
+              param0.payload[1 + param0.position] == -117) {
               if (null == this.field_c) {
                 this.field_c = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_c.setInput(param0.field_u, param0.field_o + 10, param0.field_u.length + (-18 - param0.field_o));
+                this.field_c.setInput(param0.payload, param0.position + 10, param0.payload.length + (-18 - param0.position));
                 this.field_c.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

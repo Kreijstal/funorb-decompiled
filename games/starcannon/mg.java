@@ -151,8 +151,8 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
           }
           var3 = d.field_b;
           var3.d((byte) 25, param2);
-          var3.a(param1.field_i, -50);
-          var3.a(param1.field_h, -123);
+          var3.writeByte(param1.field_i, -50);
+          var3.writeByte(param1.field_h, -123);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "mg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -176,7 +176,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= -64) {
-            stackIn_4_0 = rj.a(0, param0, (byte) 93, param1);
+            stackIn_4_0 = rj.computeCrc32(0, param0, (byte) 93, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -2;

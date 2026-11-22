@@ -211,8 +211,8 @@ final class hd {
             field_j = (int[]) null;
           }
           var9 = ra.field_c;
-          var2 = var9.c(true);
-          var3 = var9.c(true);
+          var2 = var9.readUnsignedByte(true);
+          var3 = var9.readUnsignedByte(true);
           if (var2 == 0) {
             var4_ref_kj = (kj) (cc.field_i.e(-24172));
             if (var4_ref_kj == null) {
@@ -227,13 +227,13 @@ final class hd {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.c(true) << nb.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(true) << nb.a(768, var7 << 8));
             }
             var4_ref_kj.unlink(false);
             return;
           }
           if (1 == var2) {
-            var4 = var9.l(0);
+            var4 = var9.readSignedSmart(0);
             var5 = (mm) (m.field_a.e(-24172));
             while (var5 != null) {
               if (var3 != var5.field_p ||

@@ -892,32 +892,32 @@ class eg implements ad, cf {
             var8[var9] = ae.field_d.nextInt();
           }
           if (null == bd.field_f ||
-            !(var7_int <= bd.field_f.field_u.length)) {
+            !(var7_int <= bd.field_f.payload.length)) {
             bd.field_f = new PacketBuffer(var7_int);
           }
-          bd.field_f.field_o = 0;
-          bd.field_f.a(param0, param3, true, param2);
-          bd.field_f.a(-1, var7_int);
-          bd.field_f.a(var13, 31747);
+          bd.field_f.position = 0;
+          bd.field_f.writeBytes(param0, param3, true, param2);
+          bd.field_f.padZerosTo(-1, var7_int);
+          bd.field_f.encryptXtea(var13, 31747);
           if (null == c.field_a ||
-            !(c.field_a.field_u.length >= 100)) {
+            !(c.field_a.payload.length >= 100)) {
             c.field_a = new PacketBuffer(100);
           }
-          c.field_a.field_o = 0;
-          c.field_a.c(10, 25564);
+          c.field_a.position = 0;
+          c.field_a.writeByte(10, 25564);
           if (param1 <= 8) {
             return;
           }
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            c.field_a.a((byte) 84, var13[var11]);
+            c.field_a.writeInt((byte) 84, var13[var11]);
             var11++;
           }
-          c.field_a.b((byte) 122, param3);
-          c.field_a.a((byte) -49, param4, param6);
-          param5.a(0, c.field_a.field_o, true, c.field_a.field_u);
-          param5.a(0, bd.field_f.field_o, true, bd.field_f.field_u);
+          c.field_a.writeShort((byte) 122, param3);
+          c.field_a.applyRsa((byte) -49, param4, param6);
+          param5.writeBytes(0, c.field_a.position, true, c.field_a.payload);
+          param5.writeBytes(0, bd.field_f.position, true, bd.field_f.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

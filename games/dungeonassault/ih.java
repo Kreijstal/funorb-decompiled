@@ -486,7 +486,7 @@ final class ih extends qe {
     }
 
     final static void a(byte param0) {
-        tc.field_u = ra.field_c.d(param0 ^ -92);
+        tc.field_u = ra.field_c.readString(param0 ^ -92);
         CharSequence var2 = (CharSequence) ((Object) tc.field_u);
         nn.field_k = jm.a(param0, var2);
     }

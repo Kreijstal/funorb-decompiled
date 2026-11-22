@@ -100,13 +100,13 @@ final class oj {
             field_b = true;
           }
           var5.writeByte(6, param1.field_p);
-          var5.f(-65, param1.field_r);
-          var5.a((byte) 63, param1.field_i);
-          var5.a((byte) 63, param1.field_l);
-          var5.a((byte) 63, param1.field_n);
-          var5.a((byte) 63, param1.field_o);
-          var5.c((byte) -106, var4);
-          var5.c(-var4 + var5.position, -1);
+          var5.writeSignedSmart(-65, param1.field_r);
+          var5.writeInt((byte) 63, param1.field_i);
+          var5.writeInt((byte) 63, param1.field_l);
+          var5.writeInt((byte) 63, param1.field_n);
+          var5.writeInt((byte) 63, param1.field_o);
+          var5.appendCrc32((byte) -106, var4);
+          var5.backpatchByteLength(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "oj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

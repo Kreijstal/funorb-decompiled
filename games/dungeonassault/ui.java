@@ -75,9 +75,9 @@ final class ui {
             return;
           }
           var27 = ra.field_c;
-          var2 = var27.c(true);
+          var2 = var27.readUnsignedByte(true);
           if (var2 == 0) {
-            var3 = var27.k(param0 - 30592);
+            var3 = var27.readUnsignedShort(param0 - 30592);
             var4_ref = (al) (hg.field_n.e(-24172));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_k) {
@@ -90,7 +90,7 @@ final class ui {
               tl.a(-68);
               return;
             }
-            var5 = var27.c(true);
+            var5 = var27.readUnsignedByte(true);
             if (var5 == 0) {
               var4_ref.unlink(false);
               return;
@@ -101,12 +101,12 @@ final class ui {
             lg.field_x[0].field_a = tc.field_u;
             var7 = var4_ref.field_p;
             for (var8_int = 1; var5 > var8_int; var8_int++) {
-              lg.field_x[var8_int].field_a = var27.d(-122);
+              lg.field_x[var8_int].field_a = var27.readString(-122);
               lg.field_x[var8_int].field_e = false;
-              if (var27.c(true) != 1) {
+              if (var27.readUnsignedByte(true) != 1) {
                 lg.field_x[var8_int].field_d = null;
               } else {
-                lg.field_x[var8_int].field_d = var27.d(-125);
+                lg.field_x[var8_int].field_d = var27.readString(-125);
               }
             }
             var8 = new String[3][var6];
@@ -119,15 +119,15 @@ final class ui {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var27.c(true);
+            var18 = var27.readUnsignedByte(true);
             if (var18 <= 0) {
               var4_ref.unlink(false);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
-              var20 = var27.c(true);
+              var20 = var27.readUnsignedByte(true);
               var21 = lg.field_x[var20].field_a;
-              var22 = var27.c((byte) 89);
+              var22 = var27.readLong((byte) 89);
               var24 = var27.position;
               if (var19 < var6) {
                 var8[0][var12] = var21;
@@ -172,8 +172,8 @@ final class ui {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.k(param0 - 30592);
-            var27.c((byte) 68);
+            var3Lifetime1 = var27.readUnsignedShort(param0 - 30592);
+            var27.readLong((byte) 68);
             var4 = (fn) (cb.field_a.e(-24172));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_r) {

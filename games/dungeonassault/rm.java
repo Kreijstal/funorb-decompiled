@@ -302,7 +302,7 @@ class rm extends ck {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.c(true);
+          var2_int = param0.readUnsignedByte(true);
           if (var2_int == 255) {
             var2_int = ek.field_c;
           }
@@ -583,22 +583,22 @@ class rm extends ck {
           if (param0 != -5705) {
             field_T = -87;
           }
-          var2 = var9.c(true);
+          var2 = var9.readUnsignedByte(true);
           if (var2 == 0) {
             var8 = (ub) (bg.field_s.e(-24172));
             if (var8 == null) {
               tl.a(-86);
               return;
             }
-            var4 = var9.c(true);
+            var4 = var9.readUnsignedByte(true);
             if (0 == var4) {
               var5 = null;
             } else {
               var13 = new byte[var4];
-              var9.a((byte) -111, 0, var4, var13);
+              var9.readBytes((byte) -111, 0, var4, var13);
             }
             var9.position = var9.position + 4;
-            if (!var9.d(true)) {
+            if (!var9.verifyCrc32(true)) {
               tl.a(param0 ^ -5667);
               return;
             }

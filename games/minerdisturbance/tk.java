@@ -68,11 +68,11 @@ final class tk implements uj {
         try {
           var3 = sn.field_c;
           var3.d((byte) -82, param1);
-          var3.c(param0.field_o, 25564);
+          var3.writeByte(param0.field_o, 25564);
           if (param2 != -102) {
             tk.b(true);
           }
-          var3.b((byte) 124, param0.field_n);
+          var3.writeShort((byte) 124, param0.field_n);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

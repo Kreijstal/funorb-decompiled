@@ -16,8 +16,8 @@ final class ca extends ek {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = sn.field_c;
         var2.d((byte) -112, param0);
-        var2.c(param1, 25564);
-        var2.c(0, 25564);
+        var2.writeByte(param1, 25564);
+        var2.writeByte(0, 25564);
     }
 
     final long a(int param0) {
@@ -75,7 +75,7 @@ final class ca extends ek {
 
     final static String b(byte param0) {
         int var1 = -47 % ((-77 - param0) / 39);
-        return kj.field_a.a(false);
+        return kj.field_a.readString(false);
     }
 
     final static boolean c(int param0) {

@@ -89,7 +89,7 @@ final class v {
           if (param2 != 40) {
             field_a = (Calendar) null;
           }
-          stackIn_3_0 = sg.a(0, (byte) 93, param1, param0);
+          stackIn_3_0 = sg.computeCrc32(0, (byte) 93, param1, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

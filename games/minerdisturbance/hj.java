@@ -35,7 +35,7 @@ final class hj {
           for (var2 = 0; rj.field_d > var2; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
-            var3 = kj.field_a.field_u[var2] & 255;
+            var3 = kj.field_a.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -80,7 +80,7 @@ final class hj {
           }
           var8 = new CipherPacketBuffer(param0.a("", 0, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.d((byte) -54);
+          var3 = var10.readUnsignedByte((byte) -54);
           var10.f((byte) 16);
           bl.field_v = tk.a(-123, var10);
           aj.field_b = new pb[var3];

@@ -34,23 +34,23 @@ final class ei {
           ((hj) (Object) stackIn_3_0).a(stackIn_4_1, param1);
           var8.position = var8.position + 1;
           var4 = var8.position;
-          var8.f(6389, 1);
-          var8.c(param2.field_p, -159688920);
-          var8.c(param2.field_j, -159688920);
-          var8.c(param2.field_i, -159688920);
-          var8.a(-117, param2.field_g);
+          var8.writeByte(6389, 1);
+          var8.writeShort(param2.field_p, -159688920);
+          var8.writeShort(param2.field_j, -159688920);
+          var8.writeShort(param2.field_i, -159688920);
+          var8.writeInt(-117, param2.field_g);
           if (!param0) {
             field_a = (String[]) null;
           }
-          var8.a(-124, param2.field_k);
-          var8.a(-119, param2.field_h);
-          var8.a(-119, param2.field_l);
-          var8.f(6389, param2.field_m.length);
+          var8.writeInt(-124, param2.field_k);
+          var8.writeInt(-119, param2.field_h);
+          var8.writeInt(-119, param2.field_l);
+          var8.writeByte(6389, param2.field_m.length);
           for (var5 = 0; var5 < param2.field_m.length; var5++) {
-            var7.a(-117, param2.field_m[var5]);
+            var7.writeInt(-117, param2.field_m[var5]);
           }
-          var8.d(var4, -1323322296);
-          var8.a((byte) -42, var8.position - var4);
+          var8.appendCrc32(var4, -1323322296);
+          var8.backpatchByteLength((byte) -42, var8.position - var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

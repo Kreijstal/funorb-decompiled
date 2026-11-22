@@ -140,8 +140,8 @@ final class ed {
             try {
               ci.field_i = new ll((java.net.Socket) (dk.field_b.field_a), mm.field_b);
               var4 = kj.field_a;
-              sn.field_c.field_o = 0;
-              var4.field_o = 0;
+              sn.field_c.position = 0;
+              var4.position = 0;
               stackIn_9_0 = (!param0) ? -1 : -2;
               lc.field_s = stackIn_9_0;
               rd.field_a = stackIn_9_0;

@@ -420,7 +420,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -28859) {
           this.f((byte) 39);
         }
-        int var2 = ra.field_c.c(true);
+        int var2 = ra.field_c.readUnsignedByte(true);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = nj.field_b - 1;
         byte[] var5 = new byte[var4];

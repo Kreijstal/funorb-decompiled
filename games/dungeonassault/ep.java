@@ -49,20 +49,20 @@ final class ep extends un {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.c(true);
+          var3_int = param2.readUnsignedByte(true);
           if (param1 == ~var3_int) {
-            param2.readLong((byte) 80);
+            param2.readLong56((byte) 80);
             stackIn_3_0 = null;
             return (Raider) (stackIn_3_0);
           }
           var4 = new Raider(param0, var3_int);
-          var4.field_e = param2.c(true);
-          var4.field_g = param2.c(true);
-          var4.field_f = param2.c(true);
-          var4.field_k = param2.c(true);
-          var4.field_o = param2.c(true);
-          var4.field_d = param2.c(true);
-          var4.field_p = param2.c(true);
+          var4.field_e = param2.readUnsignedByte(true);
+          var4.field_g = param2.readUnsignedByte(true);
+          var4.field_f = param2.readUnsignedByte(true);
+          var4.field_k = param2.readUnsignedByte(true);
+          var4.field_o = param2.readUnsignedByte(true);
+          var4.field_d = param2.readUnsignedByte(true);
+          var4.field_p = param2.readUnsignedByte(true);
           stackIn_5_0 = var4;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

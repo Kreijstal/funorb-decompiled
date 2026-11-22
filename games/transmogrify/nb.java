@@ -17,21 +17,21 @@ final class nb {
           var6.a(false, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.f(6389, 1);
+          var6.writeByte(6389, 1);
           if (null != param1.field_k) {
-            var6.f(6389, param1.field_k.length);
-            var6.a((byte) -65, param1.field_k, param1.field_k.length, 0);
+            var6.writeByte(6389, param1.field_k.length);
+            var6.writeBytes((byte) -65, param1.field_k, param1.field_k.length, 0);
           } else {
-            var6.f(6389, 0);
+            var6.writeByte(6389, 0);
           }
-          var6.d(var4, param2 ^ -1323322296);
+          var6.appendCrc32(var4, param2 ^ -1323322296);
           if (param2 != 0) {
             gh var5 = (gh) null;
             nb.a(-41, (gh) null, 68);
           }
           var6.position = var6.position - 4;
-          param1.field_j = var6.c((byte) -121);
-          var6.a((byte) -42, -var4 + var6.position);
+          param1.field_j = var6.readInt((byte) -121);
+          var6.backpatchByteLength((byte) -42, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

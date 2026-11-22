@@ -265,7 +265,7 @@ final class wg {
         this.field_d.b(param0);
         this.field_m = new fh();
         this.field_m.b(param0);
-        int var2 = param0.c(true);
+        int var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_n = new fh();
@@ -273,7 +273,7 @@ final class wg {
           this.field_v = new fh();
           this.field_v.b(param0);
         }
-        var2 = param0.c(true);
+        var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_p = new fh();
@@ -281,7 +281,7 @@ final class wg {
           this.field_c = new fh();
           this.field_c.b(param0);
         }
-        var2 = param0.c(true);
+        var2 = param0.readUnsignedByte(true);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_i = new fh();
@@ -290,18 +290,18 @@ final class wg {
           this.field_l.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.d((byte) 58);
+          var4 = param0.readUnsignedSmart((byte) 58);
           if (var4 == 0) {
             break;
           }
           this.field_g[var3] = var4;
-          this.field_h[var3] = param0.l(0);
-          this.field_u[var3] = param0.d((byte) 58);
+          this.field_h[var3] = param0.readSignedSmart(0);
+          this.field_u[var3] = param0.readUnsignedSmart((byte) 58);
         }
-        this.field_k = param0.d((byte) 58);
-        this.field_t = param0.d((byte) 58);
-        this.field_s = param0.k(0);
-        this.field_o = param0.k(0);
+        this.field_k = param0.readUnsignedSmart((byte) 58);
+        this.field_t = param0.readUnsignedSmart((byte) 58);
+        this.field_s = param0.readUnsignedShort(0);
+        this.field_o = param0.readUnsignedShort(0);
         this.field_x = new bi();
         this.field_f = new fh();
         this.field_x.a(param0, this.field_f);

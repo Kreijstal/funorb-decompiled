@@ -75,25 +75,25 @@ final class vj extends kc implements ga {
             dd.field_a = new PacketBuffer(var7_int);
           }
           dd.field_a.position = 0;
-          dd.field_a.a(param0, param4, param5 - 20243, param1);
-          dd.field_a.a(var7_int, true);
-          dd.field_a.a((byte) -81, var12);
+          dd.field_a.writeBytes(param0, param4, param5 - 20243, param1);
+          dd.field_a.padZerosTo(var7_int, true);
+          dd.field_a.encryptXtea((byte) -81, var12);
           if (GameApplet.field_d == null ||
             !(GameApplet.field_d.payload.length >= 100)) {
             GameApplet.field_d = new PacketBuffer(100);
           }
           GameApplet.field_d.position = 0;
-          GameApplet.field_d.a(10, param5 - 224);
+          GameApplet.field_d.writeByte(10, param5 - 224);
           var10 = 0;
           var9Lifetime1 = var10;
           while (var10 < 4) {
-            GameApplet.field_d.c((byte) -106, var12[var10]);
+            GameApplet.field_d.writeInt((byte) -106, var12[var10]);
             var10++;
           }
-          GameApplet.field_d.c(param4, -306);
-          GameApplet.field_d.a(param2, param6, param5 - 8498);
-          param3.a(GameApplet.field_d.payload, GameApplet.field_d.position, -20144, 0);
-          param3.a(dd.field_a.payload, dd.field_a.position, -20144, 0);
+          GameApplet.field_d.writeShort(param4, -306);
+          GameApplet.field_d.applyRsa(param2, param6, param5 - 8498);
+          param3.writeBytes(GameApplet.field_d.payload, GameApplet.field_d.position, -20144, 0);
+          param3.writeBytes(dd.field_a.payload, dd.field_a.position, -20144, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -77,7 +77,7 @@ final class nf extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.c(true);
+            var3_int = param0.readUnsignedByte(true);
             if (var3_int == 0) {
               return;
             }
@@ -190,28 +190,28 @@ final class nf extends DualLinkNode {
         var9 = DungeonAssault.field_K;
         try {
           if (param2 == 1) {
-            this.field_z = ih.a(97, '<', param0.d(-117));
+            this.field_z = ih.a(97, '<', param0.readString(-117));
           } else {
             if (param2 == 2) {
-              var4_int = param0.c(true);
+              var4_int = param0.readUnsignedByte(true);
               this.field_D = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_D[var5] = param0.k(0);
+                this.field_D[var5] = param0.readUnsignedShort(0);
               }
             } else {
               if (param2 == 3) {
-                var4_int = param0.c(true);
+                var4_int = param0.readUnsignedByte(true);
                 this.field_E = new int[var4_int];
                 this.field_B = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param0.k(0);
+                  var6 = param0.readUnsignedShort(0);
                   var7 = qd.a(96, var6);
                   if (var7 != null) {
                     this.field_E[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_B[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_a; var8++) {
-                      this.field_B[var5][var8] = param0.k(0);
+                      this.field_B[var5][var8] = param0.readUnsignedShort(0);
                     }
                   }
                 }

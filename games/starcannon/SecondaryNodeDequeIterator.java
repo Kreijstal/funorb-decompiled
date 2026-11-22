@@ -19,7 +19,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var1;
         var1 = -85 / ((54 - param0) / 61);
         if (bl.field_a == 10 ||
-          !PacketBuffer.e((byte) -72)) {
+          !PacketBuffer.alwaysTrue((byte) -72)) {
           NodeHashTableIterator.b(81);
           bl.field_a = 11;
         }

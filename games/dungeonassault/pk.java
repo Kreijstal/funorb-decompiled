@@ -60,14 +60,14 @@ final class pk extends kl {
         try {
           var15 = ra.field_c;
           var3 = -99 % ((72 - param0) / 50);
-          var2 = var15.c(true);
+          var2 = var15.readUnsignedByte(true);
           if (var2 == 0) {
             var11 = wa.b(-1);
             var4 = var11;
             var10 = var11;
             var5 = var10;
             var6 = var15;
-            var7 = ((PacketBuffer) ((Object) var6)).c(true);
+            var7 = ((PacketBuffer) ((Object) var6)).readUnsignedByte(true);
             for (var8 = 0; var7 > var8; var8++) {
               var10[var8] = ((PacketBuffer) ((Object) var6)).readInt(-111);
             }

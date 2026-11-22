@@ -126,20 +126,20 @@ abstract class cb extends ok implements wg {
         var8 = MinerDisturbance.field_ab;
         try {
           var1 = kj.field_a;
-          var2 = var1.d((byte) -54);
+          var2 = var1.readUnsignedByte((byte) -54);
           if (var2 == 0) {
             if (tc.field_o == null) {
               tc.field_o = new om(128);
               wd.field_c = 0;
             }
-            stackIn_12_0 = (var1.d((byte) -54) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte((byte) -54) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.a(param0);
+            var4_ref_String = var1.readString(param0);
             if (var3_int != 0) {
-              var1.a(false);
+              var1.readString(false);
             }
             var5_ref = BoundedRandomAccessFile.a((byte) -97, var4_ref_String);
-            var6_ref = var1.a(false);
+            var6_ref = var1.readString(false);
             var7_ref = cl.a(-95, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
@@ -183,9 +183,9 @@ abstract class cb extends ok implements wg {
               return;
             }
             ha.field_g = 1;
-            var3 = var1.a(false);
+            var3 = var1.readString(false);
             bd.field_j = ((String) (var3)).intern();
-            var4 = var1.d((byte) -54);
+            var4 = var1.readUnsignedByte((byte) -54);
             ArchiveIndex.a(var4, 2);
             return;
           }
@@ -193,12 +193,12 @@ abstract class cb extends ok implements wg {
             ae.field_a = new om(128);
             r.field_c = 0;
           }
-          var3Lifetime1 = var1.a(false);
+          var3Lifetime1 = var1.readString(false);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.a(false);
-          var5 = var1.a(false);
+          var4_ref_StringLifetime1 = var1.readString(false);
+          var5 = var1.readString(false);
           var6 = nd.a(1, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = nd.a(1, var5);

@@ -10,15 +10,15 @@ final class en {
         CipherPacketBuffer var1Lifetime1;
         if (param0 == -92) {
           var1 = new CipherPacketBuffer(10);
-          var1.c(2, 25564);
+          var1.writeByte(2, 25564);
           aa.field_j.b(param0 + 27529, var1);
-          return var1.field_u;
+          return var1.payload;
         }
         field_a = (String[]) null;
         var1Lifetime1 = new CipherPacketBuffer(10);
-        var1Lifetime1.c(2, 25564);
+        var1Lifetime1.writeByte(2, 25564);
         aa.field_j.b(param0 + 27529, var1Lifetime1);
-        return var1Lifetime1.field_u;
+        return var1Lifetime1.payload;
     }
 
     final static void a(String[] args, int param1) {

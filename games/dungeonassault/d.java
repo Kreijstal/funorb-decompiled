@@ -41,34 +41,34 @@ final class d {
           d.a(-103, -28, 93, -59, false);
         }
         var8 = ra.field_c;
-        var3 = var8.c(true);
+        var3 = var8.readUnsignedByte(true);
         GzipDecompressor.field_a = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         ac.field_l = stackIn_5_0;
-        wd.field_j = var8.c(true);
-        gg.field_d = var8.c((byte) 69);
+        wd.field_j = var8.readUnsignedByte(true);
+        gg.field_d = var8.readLong((byte) 69);
         if (GzipDecompressor.field_a != 2) {
           di.field_d = 0;
           ce.field_w = 0;
         } else {
-          di.field_d = var8.k(0);
-          ce.field_w = var8.f(-114);
+          di.field_d = var8.readUnsignedShort(0);
+          ce.field_w = var8.readUnsignedMedium(-114);
         }
-        stackIn_11_0 = (var8.c(true) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(true) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        ri.field_f = var8.d(-124);
+        ri.field_f = var8.readString(-124);
         if (var4 == 0) {
           tk.field_v = ri.field_f;
         } else {
-          tk.field_v = var8.d(-96);
+          tk.field_v = var8.readString(-96);
         }
         if (GzipDecompressor.field_a == 1) {
-          var8.k(0);
-          var8.d(-101);
+          var8.readUnsignedShort(0);
+          var8.readString(-101);
         } else {
           if (GzipDecompressor.field_a == 4) {
-            var8.k(0);
-            var8.d(-101);
+            var8.readUnsignedShort(0);
+            var8.readString(-101);
           }
         }
         if (!param0) {
@@ -76,7 +76,7 @@ final class d {
           kp.field_a = null;
           return new la(param0);
         }
-        var5 = var8.k(0);
+        var5 = var8.readUnsignedShort(0);
         try {
           var9 = fm.field_f.a(var5, -19256);
           sa.field_t = var9.c((byte) -122);

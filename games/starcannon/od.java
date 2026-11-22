@@ -95,8 +95,8 @@ class od extends hh {
           if (param0 != 69) {
             this.field_e = (String) null;
           }
-          param1.a(true, this.field_g);
-          param1.a((byte) -86, this.field_e);
+          param1.writeLong(true, this.field_g);
+          param1.writeBase38String((byte) -86, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "od.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

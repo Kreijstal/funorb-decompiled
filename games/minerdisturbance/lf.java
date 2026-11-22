@@ -25,16 +25,16 @@ final class lf implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = MinerDisturbance.field_ab;
           try {
-            while (this.field_g.field_o < this.field_g.field_u.length) {
-              var1_int = this.field_a.read(this.field_g.field_u, this.field_g.field_o, this.field_g.field_u.length - this.field_g.field_o);
+            while (this.field_g.position < this.field_g.payload.length) {
+              var1_int = this.field_a.read(this.field_g.payload, this.field_g.position, this.field_g.payload.length - this.field_g.position);
               if (var1_int >= 0) {
-                this.field_g.field_o = this.field_g.field_o + var1_int;
+                this.field_g.position = this.field_g.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_g.field_u.length == this.field_g.field_o) {
-              throw lf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_u.length + " " + this.field_h));
+            if (this.field_g.payload.length == this.field_g.position) {
+              throw lf.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_h));
             }
             var1 = this;
             synchronized (var1) {
@@ -141,7 +141,7 @@ final class lf implements Runnable {
                 var3.write(ic.a(false, var5));
                 this.field_a = new DataInputStream(var4.getInputStream());
               }
-              this.field_g.field_o = 0;
+              this.field_g.position = 0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

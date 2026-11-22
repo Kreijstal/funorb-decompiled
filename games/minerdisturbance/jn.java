@@ -46,7 +46,7 @@ final class jn extends IntrusiveNode {
         var12 = MinerDisturbance.field_ab;
         try {
           var14 = kj.field_a;
-          var2 = var14.d((byte) -54);
+          var2 = var14.readUnsignedByte((byte) -54);
           if (param0 != -105) {
             return;
           }
@@ -62,12 +62,12 @@ final class jn extends IntrusiveNode {
             si.a(-68);
             return;
           }
-          var4 = var14.d((byte) -54);
+          var4 = var14.readUnsignedByte((byte) -54);
           if (0 != var4) {
             var5 = var3.field_q;
             fl.field_b[0] = ti.field_J;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              fl.field_b[var6_int] = var14.a(false);
+              fl.field_b[var6_int] = var14.readString(false);
             }
             pn.a(var4, 11760, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

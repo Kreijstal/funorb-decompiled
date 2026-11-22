@@ -19,16 +19,16 @@ abstract class oe {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param2.a(12, param1 ^ -79);
-          param2.c(17, -306);
-          param2.c(param3, -306);
-          param2.c(param0, -306);
+          param2.writeByte(12, param1 ^ -79);
+          param2.writeShort(17, -306);
+          param2.writeShort(param3, -306);
+          param2.writeShort(param0, -306);
           if (param1 != 32) {
             var6 = (PacketBuffer) null;
             oe.a(-101, 110, (PacketBuffer) null, -119, 60);
-            param2.a(param4, -61);
+            param2.writeByte(param4, -61);
           } else {
-            param2.a(param4, -61);
+            param2.writeByte(param4, -61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

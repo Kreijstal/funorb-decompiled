@@ -26,37 +26,37 @@ final class pb {
         var7 = StarCannon.field_A;
         var8 = se.field_p;
         var2 = var8;
-        var3 = var8.j(7909);
+        var3 = var8.readUnsignedByte(7909);
         if (param0 != 13607) {
           return (fb) null;
         }
         pf.field_e = var3 & 127;
         stackIn_5_0 = ((var3 & 128) != 0);
         cf.field_r = stackIn_5_0;
-        lj.field_i = var8.j(7909);
-        ne.field_d = var8.c((byte) 5);
+        lj.field_i = var8.readUnsignedByte(7909);
+        ne.field_d = var8.readLong((byte) 5);
         if (pf.field_e == 2) {
-          wc.field_f = var8.i(-1174051992);
-          tk.field_e = var8.g(127);
+          wc.field_f = var8.readUnsignedShort(-1174051992);
+          tk.field_e = var8.readUnsignedMedium(127);
         } else {
           wc.field_f = 0;
           tk.field_e = 0;
         }
-        stackIn_11_0 = (1 != var8.j(7909)) ? 0 : 1;
+        stackIn_11_0 = (1 != var8.readUnsignedByte(7909)) ? 0 : 1;
         var4 = stackIn_11_0;
-        ee.field_d = var8.a(-117);
+        ee.field_d = var8.readString(-117);
         if (var4 != 0) {
-          fb.field_e = var8.a(-72);
+          fb.field_e = var8.readString(-72);
         } else {
           fb.field_e = ee.field_d;
         }
         if (1 == pf.field_e) {
-          var8.i(-1174051992);
-          var8.a(-95);
+          var8.readUnsignedShort(-1174051992);
+          var8.readString(-95);
         } else {
           if (pf.field_e == 4) {
-            var8.i(-1174051992);
-            var8.a(-95);
+            var8.readUnsignedShort(-1174051992);
+            var8.readString(-95);
           }
         }
         if (!param1) {
@@ -64,7 +64,7 @@ final class pb {
           se.field_o = null;
           return new fb(param1);
         }
-        var5 = var8.i(param0 - 1174065599);
+        var5 = var8.readUnsignedShort(param0 - 1174065599);
         try {
           var9 = ad.field_C.a(var5, -32769);
           vd.field_e = var9.e(-95);

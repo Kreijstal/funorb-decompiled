@@ -704,15 +704,15 @@ final class ml extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_E = var2.c((byte) -128);
-        this.field_s = var2.c((byte) -127);
-        this.field_l = var2.c((byte) -127);
-        this.field_z = var2.c((byte) -104);
+        this.field_E = var2.readInt((byte) -128);
+        this.field_s = var2.readInt((byte) -127);
+        this.field_l = var2.readInt((byte) -127);
+        this.field_z = var2.readInt((byte) -104);
         if (this.field_z < 0) {
           this.field_z = ~this.field_z;
           this.field_A = true;
         }
-        int var3 = var2.c((byte) -124);
+        int var3 = var2.readInt((byte) -124);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -720,11 +720,11 @@ final class ml extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d((byte) 37);
+            var6_int = var2.readUnsignedByte((byte) 37);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var5, 2, var6, 0);
+          var2.readBytes(var5, 2, var6, 0);
           this.field_i[var4] = var6;
         }
     }

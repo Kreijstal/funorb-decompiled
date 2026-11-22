@@ -472,8 +472,8 @@ final class vd extends PcmStream {
             field_y = -61;
           }
           var3.d((byte) -93, param0);
-          var3.c(param2.field_r, 25564);
-          var3.c(param2.field_q, 25564);
+          var3.writeByte(param2.field_r, 25564);
+          var3.writeByte(param2.field_q, 25564);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

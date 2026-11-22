@@ -106,7 +106,7 @@ class vk extends UiWidget implements ch {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           var1 = se.field_p;
-          var2 = var1.j(7909);
+          var2 = var1.readUnsignedByte(7909);
           if (var2 != 0) {
             if (var2 != 1) {
               if (2 != var2) {
@@ -142,10 +142,10 @@ class vk extends UiWidget implements ch {
             var3_array = wa.a((byte) -77);
             var4 = var3_array;
             var5 = var1;
-            var6 = ((PacketBuffer) ((Object) var5)).j(7909);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(7909);
             var7 = 0;
             while (var7 < var6) {
-              var4[var7] = ((PacketBuffer) ((Object) var5)).f((byte) -125);
+              var4[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -125);
               var7++;
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1108,20 +1108,20 @@ class vk extends UiWidget implements ch {
         try {
           var1 = se.field_p;
           var3 = 82 / ((-41 - param0) / 54);
-          var2 = var1.j(7909);
+          var2 = var1.readUnsignedByte(7909);
           if (var2 == 0) {
             if (td.field_o == null) {
               td.field_o = new ai(128);
               hi.field_b = 0;
             }
-            stackIn_11_0 = (1 != var1.j(7909)) ? 0 : 1;
+            stackIn_11_0 = (1 != var1.readUnsignedByte(7909)) ? 0 : 1;
             var4_int = stackIn_11_0;
-            var5_ref_String = var1.a(-120);
+            var5_ref_String = var1.readString(-120);
             if (var4_int != 0) {
-              var1.a(-71);
+              var1.readString(-71);
             }
             var6 = MouseInput.a(var5_ref_String, 92);
-            var7 = var1.a(-79);
+            var7 = var1.readString(-79);
             var8 = ni.a(126, (CharSequence) ((Object) var5_ref_String));
             if (var8 == null) {
               var8 = var5_ref_String;
@@ -1162,9 +1162,9 @@ class vk extends UiWidget implements ch {
               return;
             }
             bd.field_f = 1;
-            var4 = var1.a(-72);
+            var4 = var1.readString(-72);
             wg.field_a = ((String) (var4)).intern();
-            var5 = var1.j(7909);
+            var5 = var1.readUnsignedByte(7909);
             ej.b(true, var5);
             return;
           }
@@ -1172,12 +1172,12 @@ class vk extends UiWidget implements ch {
             m.field_d = new ai(128);
             ec.field_b = 0;
           }
-          var4Lifetime1 = var1.a(-42);
+          var4Lifetime1 = var1.readString(-42);
           if (((String) (var4Lifetime1)).equals("")) {
             var4Lifetime1 = null;
           }
-          var5_ref_StringLifetime1 = var1.a(-39);
-          var6_ref = var1.a(-107);
+          var5_ref_StringLifetime1 = var1.readString(-39);
+          var6_ref = var1.readString(-107);
           var7_ref = hg.a(120, var5_ref_StringLifetime1);
           if (var7_ref == null) {
             var7_ref = hg.a(120, var6_ref);

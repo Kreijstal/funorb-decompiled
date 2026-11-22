@@ -42,12 +42,12 @@ final class dl {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.b(true);
+            var3_int = param0.readUnsignedSmart(true);
             if (var3_int > param1) {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_o = param0.field_o + hf.field_q.a(param0.field_o, 0, var3_int, param0.field_u, var4, 256);
+            param0.position = param0.position + hf.field_q.a(param0.position, 0, var3_int, param0.payload, var4, 256);
             var5 = ph.a((byte) 54, var3_int, var4, 0);
             if (param2 != -27898) {
               dl.b(48);

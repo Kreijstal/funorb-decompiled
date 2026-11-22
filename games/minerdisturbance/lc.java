@@ -48,11 +48,11 @@ final class lc extends IntrusiveNode {
         try {
           var3 = sn.field_c;
           var3.d((byte) -111, param1);
-          var3.c(5, param0 + 25438);
-          var3.c(0, 25564);
-          var3.b(param0, param2.field_q);
-          var3.c(param2.field_r, 25564);
-          var3.c(param2.field_v, 25564);
+          var3.writeByte(5, param0 + 25438);
+          var3.writeByte(0, 25564);
+          var3.writeShort(param0, param2.field_q);
+          var3.writeByte(param2.field_r, 25564);
+          var3.writeByte(param2.field_v, 25564);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "lc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

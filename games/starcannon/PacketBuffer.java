@@ -7,10 +7,10 @@ class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     static int field_i;
 
-    final void a(int param0, boolean param1) {
+    final void padZerosTo(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         if (!param1) {
-          this.g(63);
+          this.readUnsignedMedium(63);
         }
         while (param0 > this.position) {
           fieldTemp$0 = this.position;
@@ -19,7 +19,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, String param1) {
+    final void writeBase38String(byte param0, String param1) {
         int var8 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -62,10 +62,10 @@ class PacketBuffer extends IntrusiveNode {
               var3_long = 0L;
             }
           }
-          this.a(65, var3_long);
-          this.a(-127, var5);
+          this.writeLong56(65, var3_long);
+          this.writeLong56(-127, var5);
           if (param0 != -86) {
-            this.f((byte) 81);
+            this.readInt((byte) 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,18 +82,18 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final int d(byte param0) {
+    final int readSignedSmart(byte param0) {
         int var2 = this.payload[this.position] & 255;
         if (param0 <= 17) {
-          this.f((byte) 10);
+          this.readInt((byte) 10);
         }
         if (var2 < 128) {
-          return -64 + this.j(7909);
+          return -64 + this.readUnsignedByte(7909);
         }
-        return -49152 + this.i(-1174051992);
+        return -49152 + this.readUnsignedShort(-1174051992);
     }
 
-    private final void a(int param0, long param1) {
+    private final void writeLong56(int param0, long param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
@@ -154,7 +154,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void c(byte param0, int param1) {
+    final void writeInt(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param1 >> 24);
@@ -165,49 +165,49 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0 >= -67) {
-          this.a(90, 18);
+          this.writeByte(90, 18);
         }
         int fieldTemp$3 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$3] = (byte)param1;
     }
 
-    final void b(int param0, int param1) {
+    final void backpatchByteLength(int param0, int param1) {
         this.payload[-1 + (this.position - param0)] = (byte)param0;
         if (param1 != 31700) {
           field_i = 5;
         }
     }
 
-    final int g(int param0) {
+    final int readUnsignedMedium(int param0) {
         int var2 = -39 % ((-27 - param0) / 60);
         this.position = this.position + 3;
         return (65280 & this.payload[this.position - 2] << 8) + ((16711680 & this.payload[this.position - 3] << 16) + (255 & this.payload[-1 + this.position]));
     }
 
-    final void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2) {
+    final void applyRsa(java.math.BigInteger param0, java.math.BigInteger param1, int param2) {
         int var4_int = this.position;
         this.position = 0;
         byte[] var5 = new byte[var4_int];
-        this.a(var4_int, (byte) 88, var5, 0);
+        this.readBytes(var4_int, (byte) 88, var5, 0);
         java.math.BigInteger var6 = new java.math.BigInteger(var5);
         java.math.BigInteger var7 = var6.modPow(param0, param1);
         byte[] var8 = var7.toByteArray();
         this.position = 0;
-        this.c(var8.length, param2 + 8093);
+        this.writeShort(var8.length, param2 + 8093);
         if (param2 != -8399) {
           return;
         }
         try {
-          this.a(var8, var8.length, -20144, 0);
+          this.writeBytes(var8, var8.length, -20144, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rb.OA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void writeMedium(int param0, byte param1) {
         if (param1 != -39) {
-          this.a((byte) -99, 27);
+          this.backpatchShortLength((byte) -99, 27);
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -220,15 +220,15 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$2] = (byte)param0;
     }
 
-    final int d(int param0) {
+    final int readUnsignedSmart(int param0) {
         int var2 = 255 & this.payload[this.position];
         if (var2 < param0) {
-          return this.j(7909);
+          return this.readUnsignedByte(7909);
         }
-        return this.i(-1174051992) - 32768;
+        return this.readUnsignedShort(-1174051992) - 32768;
     }
 
-    final void a(byte param0, long param1) {
+    final void writeLong40(byte param0, long param1) {
         if (param0 > -41) {
           return;
         }
@@ -249,7 +249,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$4] = (byte)(int)param1;
     }
 
-    final byte a(boolean param0) {
+    final byte readByte(boolean param0) {
         if (param0) {
           field_i = -29;
         }
@@ -258,7 +258,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.payload[fieldTemp$0];
     }
 
-    final void a(byte param0, int param1) {
+    final void backpatchShortLength(byte param0, int param1) {
         if (param0 != 88) {
           field_i = 116;
         }
@@ -266,7 +266,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-1 + (this.position - param1)] = (byte)param1;
     }
 
-    final static boolean e(byte param0) {
+    final static boolean alwaysTrue(byte param0) {
         if (param0 != -72) {
           field_i = 68;
           return true;
@@ -274,16 +274,16 @@ class PacketBuffer extends IntrusiveNode {
         return true;
     }
 
-    final int b(byte param0, int param1) {
+    final int appendCrc32(byte param0, int param1) {
         if (param0 > -46) {
           return -57;
         }
-        int var3 = rj.a(param1, this.position, (byte) 123, this.payload);
-        this.c((byte) -89, var3);
+        int var3 = rj.computeCrc32(param1, this.position, (byte) 123, this.payload);
+        this.writeInt((byte) -89, var3);
         return var3;
     }
 
-    final void a(int[] param0, int param1, int param2, int param3) {
+    final void decryptXteaRange(int[] param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -304,7 +304,7 @@ class PacketBuffer extends IntrusiveNode {
           var5_int = this.position;
           this.position = param3;
           if (param2 > -30) {
-            this.a(false);
+            this.readByte(false);
           }
           var6 = (-param3 + param1) / 8;
           var7 = 0;
@@ -313,8 +313,8 @@ class PacketBuffer extends IntrusiveNode {
               this.position = var5_int;
               return;
             }
-            var8 = this.f((byte) -128);
-            var9 = this.f((byte) -123);
+            var8 = this.readInt((byte) -128);
+            var9 = this.readInt((byte) -123);
             var10 = -957401312;
             var11 = -1640531527;
             var12 = 32;
@@ -330,8 +330,8 @@ class PacketBuffer extends IntrusiveNode {
               break;
             }
             this.position = this.position - 8;
-            this.c((byte) -69, var8);
-            this.c((byte) -75, var9);
+            this.writeInt((byte) -69, var8);
+            this.writeInt((byte) -75, var9);
             var7++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -348,22 +348,22 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final String b(byte param0) {
+    final String readNullableString(byte param0) {
         if (this.payload[this.position] == 0) {
           this.position = this.position + 1;
           return null;
         }
         int var2 = 118 % ((-18 - param0) / 37);
-        return this.a(-38);
+        return this.readString(-38);
     }
 
-    final String a(int param0) {
+    final String readString(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
         var2 = this.position;
         if (param0 >= -7) {
-          this.a(15, 52L);
+          this.writeLong56(15, 52L);
         }
         do {
           fieldTemp$0 = this.position;
@@ -376,25 +376,25 @@ class PacketBuffer extends IntrusiveNode {
         return "";
     }
 
-    final int i(int param0) {
+    final int readUnsignedShort(int param0) {
         this.position = this.position + 2;
         if (param0 != -1174051992) {
-          this.j(82);
+          this.readUnsignedByte(82);
         }
         return (this.payload[-2 + this.position] << 8 & 65280) + (255 & this.payload[-1 + this.position]);
     }
 
-    final boolean f(int param0) {
+    final boolean verifyCrc32(int param0) {
         this.position = this.position - 4;
-        int var2 = rj.a(param0, this.position, (byte) 94, this.payload);
-        int var3 = this.f((byte) -89);
+        int var2 = rj.computeCrc32(param0, this.position, (byte) 94, this.payload);
+        int var3 = this.readInt((byte) -89);
         if (var2 == var3) {
           return true;
         }
         return false;
     }
 
-    final void a(boolean param0, long param1) {
+    final void writeLong(boolean param0, long param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
@@ -424,7 +424,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
-    final String h(int param0) {
+    final String readPrefixedString(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -450,7 +450,7 @@ class PacketBuffer extends IntrusiveNode {
         return "";
     }
 
-    final void a(int param0, int param1) {
+    final void writeByte(int param0, int param1) {
         if (param1 >= -49) {
           return;
         }
@@ -459,7 +459,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$0] = (byte)param0;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void writeBytes(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -491,23 +491,23 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 != -59) {
           field_i = -113;
         }
     }
 
-    final int j(int param0) {
+    final int readUnsignedByte(int param0) {
         if (param0 != 7909) {
-          this.a((byte) 45, -105);
+          this.backpatchShortLength((byte) 45, -105);
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         return this.payload[fieldTemp$0] & 255;
     }
 
-    final void b(boolean param0, String param1) {
+    final void writeString(boolean param0, String param1) {
         int var3_int = 0;
         CharSequence var4 = null;
         int fieldTemp$0 = 0;
@@ -529,7 +529,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, int[] param1) {
+    final void encryptXtea(byte param0, int[] param1) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -548,7 +548,7 @@ class PacketBuffer extends IntrusiveNode {
           var3_int = this.position / 8;
           if (param0 > -22) {
             var10 = (byte[]) null;
-            this.a((byte[]) null, -6, -89, 118);
+            this.writeBytes((byte[]) null, -6, -89, 118);
           }
           this.position = 0;
           var4 = 0;
@@ -556,8 +556,8 @@ class PacketBuffer extends IntrusiveNode {
             if (var3_int <= var4) {
               return;
             }
-            var5 = this.f((byte) -121);
-            var6 = this.f((byte) -107);
+            var5 = this.readInt((byte) -121);
+            var6 = this.readInt((byte) -107);
             var7 = 0;
             var8 = -1640531527;
             var9 = 32;
@@ -573,8 +573,8 @@ class PacketBuffer extends IntrusiveNode {
               break;
             }
             this.position = this.position - 8;
-            this.c((byte) -102, var5);
-            this.c((byte) -95, var6);
+            this.writeInt((byte) -102, var5);
+            this.writeInt((byte) -95, var6);
             var4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -591,7 +591,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, byte param1, byte[] param2, int param3) {
+    final void readBytes(int param0, byte param1, byte[] param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -623,7 +623,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(boolean param0, String param1) {
+    final void writePrefixedString(boolean param0, String param1) {
         int fieldTemp$0 = 0;
         CharSequence var4 = null;
         int fieldTemp$1 = 0;
@@ -648,12 +648,12 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void writeShort(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param0 >> 8);
         if (param1 != -306) {
-          this.c((byte) 114, -102);
+          this.writeInt((byte) 114, -102);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
@@ -665,12 +665,12 @@ class PacketBuffer extends IntrusiveNode {
         this.position = 0;
     }
 
-    final int e(int param0) {
+    final int readUnsignedShortOrInt(int param0) {
         int var2 = 109 % ((param0 - 12) / 47);
         if (this.payload[this.position] >= 0) {
-          return this.i(-1174051992);
+          return this.readUnsignedShort(-1174051992);
         }
-        return 2147483647 & this.f((byte) -109);
+        return 2147483647 & this.readInt((byte) -109);
     }
 
     PacketBuffer(byte[] param0) {
@@ -682,16 +682,16 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final long c(byte param0) {
-        long var2 = (long)this.f((byte) -126) & 4294967295L;
+    final long readLong(byte param0) {
+        long var2 = (long)this.readInt((byte) -126) & 4294967295L;
         if (param0 != 5) {
           field_i = 82;
         }
-        long var4 = 4294967295L & (long)this.f((byte) -104);
+        long var4 = 4294967295L & (long)this.readInt((byte) -104);
         return var4 + (var2 << 32);
     }
 
-    final int f(byte param0) {
+    final int readInt(byte param0) {
         this.position = this.position + 4;
         if (param0 >= -78) {
           return -5;
@@ -699,10 +699,10 @@ class PacketBuffer extends IntrusiveNode {
         return ((this.payload[this.position - 2] & 255) << 8) + (this.payload[-4 + this.position] << 24 & -16777216) - (-((255 & this.payload[this.position - 3]) << 16) - (this.payload[-1 + this.position] & 255));
     }
 
-    final void d(int param0, int param1) {
+    final void writeSignedSmart(int param0, int param1) {
         if (param1 < 64 &&
           param1 >= -64) {
-          this.a(64 + param1, -66);
+          this.writeByte(64 + param1, -66);
           return;
         }
         if (param0 != 5918) {
@@ -710,7 +710,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         if (16384 > param1 &&
           -16384 <= param1) {
-          this.c(49152 + param1, -306);
+          this.writeShort(49152 + param1, -306);
           return;
         }
         throw new IllegalArgumentException();

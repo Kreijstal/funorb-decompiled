@@ -72,21 +72,21 @@ final class el {
         var16 = Transmogrify.field_A ? 1 : 0;
         try {
           var17 = new PacketBuffer(lk.a(-110, param0));
-          var4 = var17.d((byte) 85);
+          var4 = var17.readUnsignedByte((byte) 85);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (6 <= var4) {
-              this.field_b = var17.c((byte) -108);
+              this.field_b = var17.readInt((byte) -108);
             } else {
               this.field_b = 0;
             }
-            var5 = var17.d((byte) 52);
+            var5 = var17.readUnsignedByte((byte) 52);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
-              this.field_u = var17.h(-16777216);
+              this.field_u = var17.readUnsignedShortOrInt(-16777216);
             } else {
-              this.field_u = var17.a((byte) -102);
+              this.field_u = var17.readUnsignedShort((byte) -102);
             }
             stackIn_17_0 = (0 == (var5 & 2)) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -95,7 +95,7 @@ final class el {
             var9 = -1;
             if (var4 < 7) {
               for (var10 = 0; this.field_u > var10; var10++) {
-                dupTemp$0 = var8 + var17.a((byte) -95);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) -95);
                 var8 = dupTemp$0;
                 this.field_c[var10] = dupTemp$0;
                 if (this.field_c[var10] > var9) {
@@ -104,7 +104,7 @@ final class el {
               }
             } else {
               for (var10 = 0; this.field_u > var10; var10++) {
-                dupTemp$1 = var8 + var17.h(-16777216);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(-16777216);
                 var8 = dupTemp$1;
                 this.field_c[var10] = dupTemp$1;
                 if (var9 < this.field_c[var10]) {
@@ -127,7 +127,7 @@ final class el {
                 this.field_k[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_u; var10Lifetime1Lifetime1++) {
-                this.field_k[this.field_c[var10Lifetime1Lifetime1]] = var17.c((byte) -128);
+                this.field_k[this.field_c[var10Lifetime1Lifetime1]] = var17.readInt((byte) -128);
               }
               this.field_h = new db(this.field_k);
             }
@@ -135,21 +135,21 @@ final class el {
               el.a(-92);
             }
             for (var10Lifetime2 = 0; this.field_u > var10Lifetime2; var10Lifetime2++) {
-              this.field_j[this.field_c[var10Lifetime2]] = var17.c((byte) -127);
+              this.field_j[this.field_c[var10Lifetime2]] = var17.readInt((byte) -127);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_u > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 2, var21, 0);
+                var17.readBytes(64, 2, var21, 0);
                 this.field_p[this.field_c[var10Lifetime3]] = var21;
               }
             }
             for (var10Lifetime4 = 0; this.field_u > var10Lifetime4; var10Lifetime4++) {
-              this.field_q[this.field_c[var10Lifetime4]] = var17.c((byte) -123);
+              this.field_q[this.field_c[var10Lifetime4]] = var17.readInt((byte) -123);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_u; var10Lifetime5++) {
-                this.field_s[this.field_c[var10Lifetime5]] = var17.h(-16777216);
+                this.field_s[this.field_c[var10Lifetime5]] = var17.readUnsignedShortOrInt(-16777216);
               }
               for (var10Lifetime5 = 0; this.field_u > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_c[var10Lifetime5];
@@ -159,7 +159,7 @@ final class el {
                 this.field_f[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.h(-16777216);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(-16777216);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_f[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -175,7 +175,7 @@ final class el {
               }
             } else {
               for (var10Lifetime5 = 0; this.field_u > var10Lifetime5; var10Lifetime5++) {
-                this.field_s[this.field_c[var10Lifetime5]] = var17.a((byte) -121);
+                this.field_s[this.field_c[var10Lifetime5]] = var17.readUnsignedShort((byte) -121);
               }
               for (var10Lifetime5 = 0; this.field_u > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_c[var10Lifetime5];
@@ -185,7 +185,7 @@ final class el {
                 this.field_f[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.a((byte) -96);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort((byte) -96);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_f[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -217,7 +217,7 @@ final class el {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_o[var11Lifetime1][var14Lifetime1] = var17.c((byte) -126);
+                  this.field_o[var11Lifetime1][var14Lifetime1] = var17.readInt((byte) -126);
                 }
                 this.field_t[var11Lifetime1] = new db(this.field_o[var11Lifetime1]);
               }

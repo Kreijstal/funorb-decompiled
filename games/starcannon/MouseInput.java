@@ -177,8 +177,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var14 = StarCannon.field_A;
           try {
             var18 = new va();
-            var18.field_n = param1.j(7909);
-            var18.field_k = param1.f((byte) -79);
+            var18.field_n = param1.readUnsignedByte(7909);
+            var18.field_k = param1.readInt((byte) -79);
             var18.field_r = new int[var18.field_n];
             var18.field_i = new bk[var18.field_n];
             var18.field_l = new byte[var18.field_n][][];
@@ -190,28 +190,28 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             }
             for (var5 = 0; var5 < var18.field_n; var5++) {
               try {
-                var6_int = param1.j(7909);
+                var6_int = param1.readUnsignedByte(7909);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param1.a(-73);
-                    var21 = param1.a(-114);
-                    var9 = param1.j(7909);
+                    var20 = param1.readString(-73);
+                    var21 = param1.readString(-114);
+                    var9 = param1.readUnsignedByte(7909);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param1.a(-121);
+                      var10[var11_int] = param1.readString(-121);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param1.f((byte) -101);
+                        var13 = param1.readInt((byte) -101);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(var13, (byte) 88, var22[var12_int], 0);
+                        param1.readBytes(var13, (byte) 88, var22[var12_int], 0);
                       }
                     }
                     var18.field_r[var5] = var6_int;
@@ -226,11 +226,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
                     var18.field_l[var5] = var22;
                   }
                 } else {
-                  var15 = param1.a(-58);
-                  var16 = param1.a(-20);
+                  var15 = param1.readString(-58);
+                  var16 = param1.readString(-20);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.f((byte) -87);
+                    var9 = param1.readInt((byte) -87);
                   }
                   var18.field_r[var5] = var6_int;
                   var18.field_q[var5] = var9;

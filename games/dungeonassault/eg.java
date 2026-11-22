@@ -54,9 +54,9 @@ final class eg {
     final static String a(int param0) {
         if (param0 > -4) {
           field_d = 71;
-          return ra.field_c.d(-104);
+          return ra.field_c.readString(-104);
         }
-        return ra.field_c.d(-104);
+        return ra.field_c.readString(-104);
     }
 
     final static int c(int param0) {

@@ -78,9 +78,9 @@ final class la {
         try {
           var3 = d.field_b;
           var3.d((byte) 73, param2);
-          var3.a(2, -111);
-          var3.a(param0, -73);
-          var3.a(param1.field_g, -86);
+          var3.writeByte(2, -111);
+          var3.writeByte(param0, -73);
+          var3.writeByte(param1.field_g, -86);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

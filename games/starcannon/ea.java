@@ -35,29 +35,29 @@ final class ea {
             return;
           }
           var9 = se.field_p;
-          var2 = var9.j(7909);
+          var2 = var9.readUnsignedByte(7909);
           if (var2 == 0) {
             var8 = (pg) (ab.field_H.c(-3905));
             if (var8 == null) {
               ec.a((byte) 27);
               return;
             }
-            var4 = var9.j(7909);
+            var4 = var9.readUnsignedByte(7909);
             if (var4 == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4];
-              var9.a(var4, (byte) 88, var13, 0);
+              var9.readBytes(var4, (byte) 88, var13, 0);
             }
             var9.position = var9.position + 4;
-            if (!var9.f(0)) {
+            if (!var9.verifyCrc32(0)) {
               ec.a((byte) 27);
               return;
             }
             var8.unlink(4);
           } else {
             if (1 == var2) {
-              var3 = var9.f((byte) -91);
+              var3 = var9.readInt((byte) -91);
               var4_ref_of = (of) (fi.field_c.c(-3905));
               while (var4_ref_of != null) {
                 if (var4_ref_of.field_h != var3) {
@@ -103,11 +103,11 @@ final class ea {
           }
           var3 = d.field_b;
           var3.d((byte) 74, param2);
-          var3.a(5, -70);
-          var3.a(0, -120);
-          var3.c(param1.field_i, -306);
-          var3.a(param1.field_h, -50);
-          var3.a(param1.field_l, -80);
+          var3.writeByte(5, -70);
+          var3.writeByte(0, -120);
+          var3.writeShort(param1.field_i, -306);
+          var3.writeByte(param1.field_h, -50);
+          var3.writeByte(param1.field_l, -80);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ea.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -282,7 +282,7 @@ final class ResourceArchive {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(5, var26.field_u.length, param3, true);
+            var26.decryptXteaRange(5, var26.payload.length, param3, true);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -312,12 +312,12 @@ final class ResourceArchive {
               var11 = var11 - 4 * var5_int * var12;
               var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_o = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.b((byte) 81);
+                  var17 = var17 + var29.readInt((byte) 81);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -334,12 +334,12 @@ final class ResourceArchive {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_o = var11;
+              var29.position = var11;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.b((byte) 97);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt((byte) 97);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -363,11 +363,11 @@ final class ResourceArchive {
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
-            var31.field_o = var11;
+            var31.position = var11;
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.b((byte) 47);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt((byte) 47);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -379,12 +379,12 @@ final class ResourceArchive {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_o = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.b((byte) 61);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) 61);
                 ai.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;

@@ -28,16 +28,16 @@ final class ki extends IntrusiveNode {
             field_n = -89;
           }
           var13 = kj.field_a;
-          var2 = var13.d((byte) -54);
+          var2 = var13.readUnsignedByte((byte) -54);
           if (0 == var2) {
             var10 = hk.b(0);
             var3 = var10;
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).d((byte) -54);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -54);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).b((byte) 118);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 118);
             }
             var12 = (ki) (on.field_v.b(110));
             if (var12 == null) {

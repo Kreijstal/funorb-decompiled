@@ -62,22 +62,22 @@ final class ai {
             stackIn_2_0 = (Raider) null;
             return stackIn_2_0;
           }
-          var4_int = param0.c(true);
+          var4_int = param0.readUnsignedByte(true);
           if (0 == var4_int) {
             param0.readInt(param2 - 94);
             if (param3 >= 11) {
-              param0.c(true);
+              param0.readUnsignedByte(true);
             }
             stackIn_8_0 = null;
             return (Raider) (stackIn_8_0);
           }
           var5 = new Raider(param1, var4_int);
-          var5.field_e = param0.c(true);
-          var5.field_g = param0.c(true);
-          var5.field_f = param0.c(true);
-          var5.field_k = param0.c(true);
+          var5.field_e = param0.readUnsignedByte(true);
+          var5.field_g = param0.readUnsignedByte(true);
+          var5.field_f = param0.readUnsignedByte(true);
+          var5.field_k = param0.readUnsignedByte(true);
           if (11 <= param3) {
-            var5.field_p = param0.c(true);
+            var5.field_p = param0.readUnsignedByte(true);
           } else {
             var5.field_p = 0;
           }

@@ -39,8 +39,8 @@ final class vd extends hh {
 
     final void a(byte param0, PacketBuffer param1) {
         try {
-          param1.a(false, this.field_k);
-          param1.a((byte) -86, this.field_i);
+          param1.writePrefixedString(false, this.field_k);
+          param1.writeBase38String((byte) -86, this.field_i);
           if (param0 != 69) {
             field_g = (long[]) null;
           }

@@ -58,15 +58,15 @@ abstract class em extends DualLinkNode {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = kj.field_a;
-          var2 = var9.d((byte) -54);
-          var3 = var9.d((byte) -54);
+          var2 = var9.readUnsignedByte((byte) -54);
+          var3 = var9.readUnsignedByte((byte) -54);
           if (var2 == 0) {
             var4 = (jb) (sd.field_a.b(param0 ^ -62));
             if (var4 == null) {
               si.a(-36);
               return;
             }
-            var5 = rj.field_d - var9.field_o;
+            var5 = rj.field_d - var9.position;
             var11 = var4.field_r;
             var10 = var11;
             var6 = var10;
@@ -74,12 +74,12 @@ abstract class em extends DualLinkNode {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -54) << c.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -54) << c.a(768, var7 << 8));
             }
             var4.b(34);
           } else {
             if (var2 == 1) {
-              var4_int = var9.c((byte) 127);
+              var4_int = var9.readSignedSmart((byte) 127);
               var5_ref_il = (il) (IsaacRandom.field_h.b(119));
               while (var5_ref_il != null) {
                 if (~var3 != ~var5_ref_il.field_r ||

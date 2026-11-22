@@ -37,8 +37,8 @@ class pc extends hn {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.b(-1, this.field_j);
-          param0.a((byte) 97, this.field_h);
+          param0.writeLong(-1, this.field_j);
+          param0.writeBase38String((byte) 97, this.field_h);
           if (param1 > -85) {
             field_k = -121;
           }

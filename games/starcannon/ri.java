@@ -67,7 +67,7 @@ final class ri {
 
     final static void b(int param0) {
         CharSequence var3 = null;
-        we.field_i = se.field_p.a(-104);
+        we.field_i = se.field_p.readString(-104);
         if (param0 == 12000) {
           var3 = (CharSequence) ((Object) we.field_i);
           ba.field_e = ni.a(param0 - 11877, var3);

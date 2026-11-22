@@ -692,11 +692,11 @@ final class jp extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.c(true);
+            var6_int = var2.readUnsignedByte(true);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a((byte) -88, 0, var5, var6);
+          var2.readBytes((byte) -88, 0, var5, var6);
           this.field_L[var4] = var6;
         }
     }

@@ -101,7 +101,7 @@ final class Raider {
           var14 = DungeonAssault.field_K;
           try {
             var18 = new oe();
-            var18.field_q = param1.c(true);
+            var18.field_q = param1.readUnsignedByte(true);
             var18.field_j = param1.readInt(-43);
             var18.field_o = new pn[var18.field_q];
             var18.field_l = new int[var18.field_q];
@@ -114,18 +114,18 @@ final class Raider {
             var18.field_n = new int[var18.field_q];
             for (var5 = 0; var5 < var18.field_q; var5++) {
               try {
-                var6_int = param1.c(true);
+                var6_int = param1.readUnsignedByte(true);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   2 != var6_int) {
                   if (var6_int == 3 ||
                     4 == var6_int) {
-                    var20 = param1.d(-111);
-                    var21 = param1.d(-127);
-                    var9 = param1.c(true);
+                    var20 = param1.readString(-111);
+                    var21 = param1.readString(-127);
+                    var9 = param1.readUnsignedByte(true);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.d(-116);
+                      var10[var11_int] = param1.readString(-116);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -135,7 +135,7 @@ final class Raider {
                         var13 = param1.readInt(-58);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a((byte) -98, 0, var13, var22[var12_int]);
+                        param1.readBytes((byte) -98, 0, var13, var22[var12_int]);
                       }
                     }
                     var18.field_n[var5] = var6_int;
@@ -150,8 +150,8 @@ final class Raider {
                     var18.field_k[var5] = var22;
                   }
                 } else {
-                  var15 = param1.d(-119);
-                  var16 = param1.d(-114);
+                  var15 = param1.readString(-119);
+                  var16 = param1.readString(-114);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param1.readInt(-46);

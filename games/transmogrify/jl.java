@@ -71,8 +71,8 @@ final class jl extends IntrusiveNode {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = WordLanguage.field_l;
-          var2 = var9.d((byte) 78);
-          var3 = var9.d((byte) 106);
+          var2 = var9.readUnsignedByte((byte) 78);
+          var3 = var9.readUnsignedByte((byte) 106);
           if (var2 == 0) {
             var4_ref_oi = (oi) (GzipDecompressor.field_d.a((byte) -95));
             if (var4_ref_oi == null) {
@@ -87,12 +87,12 @@ final class jl extends IntrusiveNode {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) 126) << (vg.c(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 126) << (vg.c(var7, 3) << 8));
             }
             var4_ref_oi.c(5);
           } else {
             if (var2 == 1) {
-              var4 = var9.k(128);
+              var4 = var9.readSignedSmart(128);
               var5 = (jl) (ll.field_T.a((byte) -95));
               while (var5 != null) {
                 if (~var5.field_m != ~var3 ||

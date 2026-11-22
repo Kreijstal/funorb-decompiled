@@ -15,9 +15,9 @@ final class lh {
     int field_b;
 
     final void a(PacketBuffer param0) {
-        this.field_d = param0.d((byte) 112);
-        this.field_h = param0.c((byte) -105);
-        this.field_b = param0.c((byte) -110);
+        this.field_d = param0.readUnsignedByte((byte) 112);
+        this.field_h = param0.readInt((byte) -105);
+        this.field_b = param0.readInt((byte) -110);
         this.b(param0);
     }
 
@@ -50,12 +50,12 @@ final class lh {
 
     final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_c = param0.d((byte) 93);
+        this.field_c = param0.readUnsignedByte((byte) 93);
         this.field_e = new int[this.field_c];
         this.field_i = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
-          this.field_e[var2] = param0.a((byte) -110);
-          this.field_i[var2] = param0.a((byte) -91);
+          this.field_e[var2] = param0.readUnsignedShort((byte) -110);
+          this.field_i[var2] = param0.readUnsignedShort((byte) -91);
         }
     }
 

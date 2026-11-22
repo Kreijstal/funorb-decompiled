@@ -297,8 +297,8 @@ final class oc extends hn {
           return;
         }
         try {
-          param0.a(8, this.field_g);
-          param0.a((byte) 97, this.field_k);
+          param0.writePrefixedString(8, this.field_g);
+          param0.writeBase38String((byte) 97, this.field_k);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "oc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

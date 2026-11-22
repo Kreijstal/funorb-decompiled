@@ -108,20 +108,20 @@ final class di {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          this.field_i = param0.a(-21030);
+          this.field_i = param0.readPrefixedString(-21030);
           if (param1 != -1) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((PacketBuffer) null, -21);
           }
-          this.field_g = param0.a(-21030);
-          this.field_c = param0.a(-21030);
-          param0.a(param1 ^ 21029);
+          this.field_g = param0.readPrefixedString(-21030);
+          this.field_c = param0.readPrefixedString(-21030);
+          param0.readPrefixedString(param1 ^ 21029);
           this.field_j = rm.a(param0, 6065);
           rm.a(param0, 6065);
           rm.a(param0, param1 + 6066);
-          this.field_a = param0.f(param1 - 101);
-          this.field_f = param0.f(param1 ^ 125);
-          this.field_h = param0.f(-117);
+          this.field_a = param0.readUnsignedMedium(param1 - 101);
+          this.field_f = param0.readUnsignedMedium(param1 ^ 125);
+          this.field_h = param0.readUnsignedMedium(-117);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "di.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

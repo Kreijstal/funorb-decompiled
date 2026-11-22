@@ -67,19 +67,19 @@ final class lk {
         try {
           var3 = -27 % ((param0 - 13) / 43);
           var10 = new PacketBuffer(param1);
-          var4 = var10.d((byte) 57);
-          var5 = var10.c((byte) -126);
+          var4 = var10.readUnsignedByte((byte) 57);
+          var5 = var10.readInt((byte) -126);
           if (var5 >= 0 && (ll.field_R == 0 ||
             !(ll.field_R < var5))) {
             if (var4 == 0) {
               var13 = new byte[var5];
               var11 = var13;
               var6_ref_byte__ = var11;
-              var10.a(var5, 2, var13, 0);
+              var10.readBytes(var5, 2, var13, 0);
               stackIn_7_0 = var6_ref_byte__;
               return stackIn_7_0;
             }
-            var6 = var10.c((byte) -116);
+            var6 = var10.readInt((byte) -116);
             if (var6 >= 0 && (ll.field_R == 0 ||
               !(ll.field_R < var6))) {
               var14 = new byte[var6];

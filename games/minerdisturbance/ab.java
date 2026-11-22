@@ -12,26 +12,26 @@ final class ab {
         CipherPacketBuffer var7 = sn.field_c;
         CipherPacketBuffer var8 = var7;
         var8.d((byte) -82, param1);
-        var8.field_o = var8.field_o + 1;
-        int var4 = var8.field_o;
-        var8.c(1, 25564);
-        var8.b((byte) 121, param2.field_w);
-        var8.b((byte) 124, param2.field_v);
-        var8.b((byte) 124, param2.field_s);
-        var8.a((byte) 120, param2.field_u);
-        var8.a((byte) 80, param2.field_o);
-        var8.a((byte) 108, param2.field_t);
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
+        var8.writeByte(1, 25564);
+        var8.writeShort((byte) 121, param2.field_w);
+        var8.writeShort((byte) 124, param2.field_v);
+        var8.writeShort((byte) 124, param2.field_s);
+        var8.writeInt((byte) 120, param2.field_u);
+        var8.writeInt((byte) 80, param2.field_o);
+        var8.writeInt((byte) 108, param2.field_t);
         if (param0 != -20680) {
           return;
         }
         try {
-          var8.a((byte) 93, param2.field_n);
-          var8.c(param2.field_r.length, 25564);
+          var8.writeInt((byte) 93, param2.field_n);
+          var8.writeByte(param2.field_r.length, 25564);
           for (var5 = 0; var5 < param2.field_r.length; var5++) {
-            var7.a((byte) 109, param2.field_r[var5]);
+            var7.writeInt((byte) 109, param2.field_r[var5]);
           }
-          var8.e(-118, var4);
-          var8.g(-1, -var4 + var8.field_o);
+          var8.appendCrc32(-118, var4);
+          var8.backpatchByteLength(-1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ab.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

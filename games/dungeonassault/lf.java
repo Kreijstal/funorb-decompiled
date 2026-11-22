@@ -138,20 +138,20 @@ final class lf extends kl {
         var8 = DungeonAssault.field_K;
         try {
           var1 = ra.field_c;
-          var2 = var1.c(true);
+          var2 = var1.readUnsignedByte(true);
           if (var2 == 0) {
             if (null == lh.field_p) {
               lh.field_p = new tb(128);
               kp.field_e = 0;
             }
-            stackIn_11_0 = (var1.c(true) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(true) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.d(-119);
+            var4_ref_String = var1.readString(-119);
             if (var3_int != 0) {
-              var1.d(-103);
+              var1.readString(-103);
             }
             var5 = vj.a(var4_ref_String, 49);
-            var6 = var1.d(-99);
+            var6 = var1.readString(-99);
             var7 = jm.a((byte) 59, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
@@ -195,9 +195,9 @@ final class lf extends kl {
               return;
             }
             ke.field_d = 1;
-            var3 = var1.d(param0 - 247);
+            var3 = var1.readString(param0 - 247);
             gm.field_b = ((String) (var3)).intern();
-            var4 = var1.c(true);
+            var4 = var1.readUnsignedByte(true);
             r.a((byte) -112, var4);
             return;
           }
@@ -205,12 +205,12 @@ final class lf extends kl {
             fk.field_v = new tb(128);
             o.field_m = 0;
           }
-          var3Lifetime1 = var1.d(-127);
+          var3Lifetime1 = var1.readString(-127);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.d(param0 - 230);
-          var5_ref = var1.d(-117);
+          var4_ref_StringLifetime1 = var1.readString(param0 - 230);
+          var5_ref = var1.readString(-117);
           var6_ref = DualLinkNode.a(var4_ref_StringLifetime1, (byte) -47);
           if (null == var6_ref) {
             var6_ref = DualLinkNode.a(var5_ref, (byte) -47);

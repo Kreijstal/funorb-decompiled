@@ -162,55 +162,55 @@ final class jd extends IOException {
                 var9 = var9 | 1;
               }
               d.field_d.position = 0;
-              d.field_d.a(param2 - 94, d.field_c.nextInt());
-              d.field_d.a(param2 ^ 110, d.field_c.nextInt());
-              d.field_d.a(var14, 123);
-              d.field_d.a(var8, 125);
+              d.field_d.writeInt(param2 - 94, d.field_c.nextInt());
+              d.field_d.writeInt(param2 ^ 110, d.field_c.nextInt());
+              d.field_d.writePrefixedString(var14, 123);
+              d.field_d.writePrefixedString(var8, 125);
               var15 = (CharSequence) ((Object) param3);
-              d.field_d.a(ob.a((byte) 107, var15), param2 ^ -120);
-              d.field_d.c(param4, -159688920);
-              d.field_d.f(6389, param0);
-              d.field_d.f(6389, var9);
-              ff.field_D.f(6389, 18);
+              d.field_d.writePrefixedString(ob.a((byte) 107, var15), param2 ^ -120);
+              d.field_d.writeShort(param4, -159688920);
+              d.field_d.writeByte(6389, param0);
+              d.field_d.writeByte(6389, var9);
+              ff.field_D.writeByte(6389, 18);
               ff.field_D.position = ff.field_D.position + 2;
               var10 = ff.field_D.position;
               var11_ref_String = wk.a(ha.b(116), (byte) -45);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              ff.field_D.a(92, var11_ref_String);
+              ff.field_D.writeString(92, var11_ref_String);
               bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -123, d.field_d);
-              ff.field_D.b(-109, ff.field_D.position - var10);
+              ff.field_D.backpatchShortLength(-109, ff.field_D.position - var10);
             } else {
               d.field_d.position = 0;
-              d.field_d.a(param2 - 96, d.field_c.nextInt());
-              d.field_d.a(-103, d.field_c.nextInt());
+              d.field_d.writeInt(param2 - 96, d.field_c.nextInt());
+              d.field_d.writeInt(-103, d.field_c.nextInt());
               stackIn_13_0 = d.field_d;
               if (param6.a((byte) -121)) {
                 stackIn_14_1 = var14;
               } else {
                 stackIn_14_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 126);
+              ((PacketBuffer) (Object) stackIn_13_0).writePrefixedString(stackIn_14_1, 126);
               stackIn_16_0 = d.field_d;
               if (param1.a((byte) -121)) {
                 stackIn_17_1 = var8;
               } else {
                 stackIn_17_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_17_1, param2 ^ -117);
-              ff.field_D.f(6389, 16);
+              ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_17_1, param2 ^ -117);
+              ff.field_D.writeByte(6389, 16);
               ff.field_D.position = ff.field_D.position + 1;
               var9 = ff.field_D.position;
               bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -108, d.field_d);
-              ff.field_D.a((byte) -42, -var9 + ff.field_D.position);
+              ff.field_D.backpatchByteLength((byte) -42, -var9 + ff.field_D.position);
             }
             rb.a(-1, -377);
             lj.field_z = vf.field_b;
           }
           if (vf.field_b == lj.field_z &&
             ue.a(1, 0)) {
-            var9Lifetime1 = WordLanguage.field_l.d((byte) 97);
+            var9Lifetime1 = WordLanguage.field_l.readUnsignedByte((byte) 97);
             WordLanguage.field_l.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -239,12 +239,12 @@ final class jd extends IOException {
           if (aa.field_b == lj.field_z) {
             var9Lifetime2 = 2;
             if (ue.a(var9Lifetime2, 0)) {
-              var10Lifetime1 = WordLanguage.field_l.a((byte) -102);
+              var10Lifetime1 = WordLanguage.field_l.readUnsignedShort((byte) -102);
               WordLanguage.field_l.position = 0;
               if (ue.a(var10Lifetime1, 0)) {
                 var11 = wh.field_F.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  wh.field_F[var12] = WordLanguage.field_l.e(26);
+                  wh.field_F[var12] = WordLanguage.field_l.readPrefixedString(26);
                 }
                 pc.a(1);
                 ej.field_k = false;
@@ -256,12 +256,12 @@ final class jd extends IOException {
           if (gg.field_f == lj.field_z &&
             GameKeyHandler.a(0)) {
             if (ca.field_e == 255) {
-              var9_ref_String = WordLanguage.field_l.j(-1640531527);
+              var9_ref_String = WordLanguage.field_l.readNullableString(-1640531527);
               if (var9_ref_String != null) {
                 v.a(0, var9_ref_String, ha.b(114));
               }
             } else {
-              Transmogrify.field_B = WordLanguage.field_l.g(param2 + 12257);
+              Transmogrify.field_B = WordLanguage.field_l.readString(param2 + 12257);
             }
             pc.a(1);
             ej.field_k = false;

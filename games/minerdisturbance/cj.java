@@ -16,12 +16,12 @@ final class cj {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_a = param0.d((byte) -54);
+        this.field_a = param0.readUnsignedByte((byte) -54);
         this.field_c = new int[this.field_a];
         this.field_d = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_c[var2] = param0.e(-12);
-          this.field_d[var2] = param0.e(-23);
+          this.field_c[var2] = param0.readUnsignedShort(-12);
+          this.field_d[var2] = param0.readUnsignedShort(-23);
         }
     }
 
@@ -53,9 +53,9 @@ final class cj {
     }
 
     final void b(PacketBuffer param0) {
-        this.field_e = param0.d((byte) -54);
-        this.field_f = param0.b((byte) 57);
-        this.field_b = param0.b((byte) 70);
+        this.field_e = param0.readUnsignedByte((byte) -54);
+        this.field_f = param0.readInt((byte) 57);
+        this.field_b = param0.readInt((byte) 70);
         this.a(param0);
     }
 

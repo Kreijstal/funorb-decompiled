@@ -240,7 +240,7 @@ final class bf {
         try {
           var13 = ra.field_c;
           var15 = var13;
-          var2 = var15.c(true);
+          var2 = var15.readUnsignedByte(true);
           if (param0 != 19664) {
             field_k = -97;
           }
@@ -256,12 +256,12 @@ final class bf {
             tl.a(param0 ^ -19664);
             return;
           }
-          var4 = var15.c(true);
+          var4 = var15.readUnsignedByte(true);
           if (var4 != 0) {
             ah.field_c[0] = tc.field_u;
             var5 = var3.field_i;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ah.field_c[var6_int] = var13.d(-108);
+              ah.field_c[var6_int] = var13.readString(-108);
             }
             hg.a(param0 + 12087, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

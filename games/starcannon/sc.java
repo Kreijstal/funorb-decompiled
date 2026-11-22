@@ -71,11 +71,11 @@ final class sc {
     final static void a(int param0, int param1) {
         ia var2 = d.field_b;
         var2.d((byte) 28, param1);
-        var2.a(1, -63);
+        var2.writeByte(1, -63);
         if (param0 != 32395) {
           return;
         }
-        var2.a(0, param0 ^ -32447);
+        var2.writeByte(0, param0 ^ -32447);
     }
 
     final static void a(int param0, int[] param1, int param2, int param3) {

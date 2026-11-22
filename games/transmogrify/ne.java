@@ -81,15 +81,15 @@ final class ne {
         try {
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(6389, 1);
-          var5.f(6389, param1.field_h);
-          var5.f(param0 + 6382, param1.field_o);
-          var5.a(-106, param1.field_j);
-          var5.a(-104, param1.field_i);
-          var5.a(-128, param1.field_p);
-          var5.a(param0 - 108, param1.field_g);
-          var5.d(var4, -1323322296);
-          var5.a((byte) -42, var5.position - var4);
+          var5.writeByte(6389, 1);
+          var5.writeByte(6389, param1.field_h);
+          var5.writeByte(param0 + 6382, param1.field_o);
+          var5.writeInt(-106, param1.field_j);
+          var5.writeInt(-104, param1.field_i);
+          var5.writeInt(-128, param1.field_p);
+          var5.writeInt(param0 - 108, param1.field_g);
+          var5.appendCrc32(var4, -1323322296);
+          var5.backpatchByteLength((byte) -42, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ne.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

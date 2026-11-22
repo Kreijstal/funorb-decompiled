@@ -255,10 +255,10 @@ final class dk {
               return stackIn_9_0;
             }
             this.field_l.position = 6 + 72 * param0;
-            var6_int = this.field_l.c((byte) -112);
-            var7 = this.field_l.c((byte) -108);
+            var6_int = this.field_l.readInt((byte) -112);
+            var7 = this.field_l.readInt((byte) -108);
             var13 = new byte[64];
-            this.field_l.a(64, 2, var13, 0);
+            this.field_l.readBytes(64, 2, var13, 0);
             if (param2 != 24108) {
               field_b = true;
             }
@@ -329,12 +329,12 @@ final class dk {
         }
         var10 = new PacketBuffer(this.field_f.e(256));
         var10.position = 5;
-        var3 = var10.d((byte) 30);
+        var3 = var10.readUnsignedByte((byte) 30);
         var10.position = var10.position + var3 * 72;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var13.length, 2, var13, 0);
+        var10.readBytes(var13.length, 2, var13, 0);
         if (param0) {
           return true;
         }

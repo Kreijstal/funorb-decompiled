@@ -35,7 +35,7 @@ final class jc {
         }
         var9 = new PacketBuffer(this.field_a.f(0));
         var9.position = 5;
-        var3 = var9.j(7909);
+        var3 = var9.readUnsignedByte(7909);
         var9.position = var9.position + 72 * var3;
         if (param0 != -6) {
           return true;
@@ -43,7 +43,7 @@ final class jc {
         var12 = new byte[var9.payload.length - var9.position];
         var10 = var12;
         var4 = var10;
-        var9.a(var12.length, (byte) 88, var12, 0);
+        var9.readBytes(var12.length, (byte) 88, var12, 0);
         if (null != this.field_b &&
           this.field_c != null) {
           var11 = new java.math.BigInteger(var12);
@@ -100,10 +100,10 @@ final class jc {
               return stackIn_12_0;
             }
             this.field_d.position = 72 * param3 + 6;
-            var6_int = this.field_d.f((byte) -83);
-            var7 = this.field_d.f((byte) -118);
+            var6_int = this.field_d.readInt((byte) -83);
+            var7 = this.field_d.readInt((byte) -118);
             var13 = new byte[64];
-            this.field_d.a(64, (byte) 88, var13, 0);
+            this.field_d.readBytes(64, (byte) 88, var13, 0);
             var9 = new t(param3, param2, param4, this.field_g, this.field_f, var6_int, var13, var7, param0);
             this.field_e[param3] = var9;
             stackIn_14_0 = var9;

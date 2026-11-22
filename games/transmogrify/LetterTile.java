@@ -280,15 +280,15 @@ final class LetterTile extends IntrusiveNode {
           var5.a(false, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(6389, 1);
-          var5.f(6389, param2.field_m);
-          var5.g(-21770, param2.field_i);
-          var5.a(param0 + 7711, param2.field_h);
-          var5.a(-108, param2.field_g);
-          var5.a(-123, param2.field_n);
-          var5.a(-113, param2.field_k);
-          var5.d(var4, -1323322296);
-          var5.a((byte) -42, var5.position - var4);
+          var5.writeByte(6389, 1);
+          var5.writeByte(6389, param2.field_m);
+          var5.writeSignedSmart(-21770, param2.field_i);
+          var5.writeInt(param0 + 7711, param2.field_h);
+          var5.writeInt(-108, param2.field_g);
+          var5.writeInt(-123, param2.field_n);
+          var5.writeInt(-113, param2.field_k);
+          var5.appendCrc32(var4, -1323322296);
+          var5.backpatchByteLength((byte) -42, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -12,8 +12,8 @@ final class vl extends hl {
           return;
         }
         try {
-          param0.a(2, this.field_o);
-          param0.a(this.field_n, (byte) 101);
+          param0.writePrefixedString(2, this.field_o);
+          param0.writeBase38String(this.field_n, (byte) 101);
         } catch (RuntimeException runtimeException) {
           throw vk.a((Throwable) ((Object) runtimeException), "vl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

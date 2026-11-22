@@ -127,7 +127,7 @@ final class vf {
           if (param1 != 0) {
             field_a = (String) null;
           }
-          var2_int = param0.j(7909);
+          var2_int = param0.readUnsignedByte(7909);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

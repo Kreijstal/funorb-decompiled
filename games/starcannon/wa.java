@@ -163,8 +163,8 @@ final class wa implements de {
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = se.field_p;
-          var2 = var9.j(7909);
-          var3 = var9.j(7909);
+          var2 = var9.readUnsignedByte(7909);
+          var3 = var9.readUnsignedByte(7909);
           if (var2 == 0) {
             var4_ref_we = (we) (ma.field_h.c(param0 - 3804));
             if (var4_ref_we == null) {
@@ -179,12 +179,12 @@ final class wa implements de {
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.j(7909) << (w.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(7909) << (w.a(var7, 3) << 8));
             }
             var4_ref_we.unlink(4);
           } else {
             if (var2 == 1) {
-              var4 = var9.d((byte) 43);
+              var4 = var9.readSignedSmart((byte) 43);
               var5 = (dg) (vb.field_k.c(param0 ^ 3876));
               while (var5 != null) {
                 if (var5.field_k != var3 ||

@@ -73,19 +73,19 @@ final class ag {
             ag.a((java.applet.Applet) null, false);
           }
           var6.d((byte) -46, param1);
-          var6.field_o = var6.field_o + 1;
-          var4 = var6.field_o;
-          var6.c(1, 25564);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, 25564);
           if (null == param0.field_n) {
-            var6.c(0, 25564);
+            var6.writeByte(0, 25564);
           } else {
-            var6.c(param0.field_n.length, 25564);
-            var6.a(0, param0.field_n.length, true, param0.field_n);
+            var6.writeByte(param0.field_n.length, 25564);
+            var6.writeBytes(0, param0.field_n.length, true, param0.field_n);
           }
-          var6.e(74, var4);
-          var6.field_o = var6.field_o - 4;
-          param0.field_o = var6.b((byte) 51);
-          var6.g(-1, -var4 + var6.field_o);
+          var6.appendCrc32(74, var4);
+          var6.position = var6.position - 4;
+          param0.field_o = var6.readInt((byte) 51);
+          var6.backpatchByteLength(-1, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

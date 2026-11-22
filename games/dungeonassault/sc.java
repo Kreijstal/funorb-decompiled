@@ -33,7 +33,7 @@ final class sc extends ch {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param1.d((byte) 58);
+            var3_int = param1.readUnsignedSmart((byte) 58);
             if (var3_int > param0) {
               var3_int = param0;
             }

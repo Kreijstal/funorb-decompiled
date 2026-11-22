@@ -802,7 +802,7 @@ abstract class ag extends GameApplet {
     }
 
     private final void i(byte param0) {
-        int var2 = se.field_p.j(7909);
+        int var2 = se.field_p.readUnsignedByte(7909);
         if (param0 < 20) {
           this.a(true, -88);
         }

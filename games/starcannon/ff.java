@@ -94,24 +94,24 @@ final class ff extends DualLinkNode {
           var4_int = -121 % ((1 - param2) / 57);
           if (param1 != 1) {
             if (param1 == 2) {
-              var5 = param0.j(7909);
+              var5 = param0.readUnsignedByte(7909);
               this.field_s = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                this.field_s[var6] = param0.i(-1174051992);
+                this.field_s[var6] = param0.readUnsignedShort(-1174051992);
               }
             } else if (param1 == 3) {
-              var5 = param0.j(7909);
+              var5 = param0.readUnsignedByte(7909);
               this.field_n = new int[var5][];
               this.field_r = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
-                var7 = param0.i(-1174051992);
+                var7 = param0.readUnsignedShort(-1174051992);
                 var8 = qf.a(var7, 0);
                 if (var8 != null) {
                   this.field_r[var6] = var7;
                   array$0 = new int[var8.field_a];
                   this.field_n[var6] = array$0;
                   for (var9 = 0; var8.field_a > var9; var9++) {
-                    this.field_n[var6][var9] = param0.i(-1174051992);
+                    this.field_n[var6][var9] = param0.readUnsignedShort(-1174051992);
                   }
                 }
               }
@@ -121,7 +121,7 @@ final class ff extends DualLinkNode {
               }
             }
           } else {
-            this.field_t = UiWidget.a(-46, '<', param0.a(-50));
+            this.field_t = UiWidget.a(-46, '<', param0.readString(-50));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,7 +149,7 @@ final class ff extends DualLinkNode {
         var4 = StarCannon.field_A;
         try {
           while (true) {
-            var3_int = param0.j(7909);
+            var3_int = param0.readUnsignedByte(7909);
             if (var3_int != 0) {
               this.a(param0, var3_int, (byte) 99);
               continue;

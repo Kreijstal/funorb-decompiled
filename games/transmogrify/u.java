@@ -142,7 +142,7 @@ final class u {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.f(-120);
+            var3_int = param2.readUnsignedSmart(-120);
             if (var3_int > param1) {
               var3_int = param1;
             }

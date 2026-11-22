@@ -220,11 +220,11 @@ final class qb implements Runnable {
 
     final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
-          param2.f(6389, 12);
-          param2.c(17, -159688920);
-          param2.c(param4, -159688920);
-          param2.c(param1, -159688920);
-          param2.f(6389, param3);
+          param2.writeByte(6389, 12);
+          param2.writeShort(17, -159688920);
+          param2.writeShort(param4, -159688920);
+          param2.writeShort(param1, -159688920);
+          param2.writeByte(6389, param3);
           if (param0 < 112) {
             field_k = -61L;
           }

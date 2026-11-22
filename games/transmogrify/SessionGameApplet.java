@@ -811,7 +811,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (param0 < 62) {
           this.field_w = 125;
         }
-        int var2 = WordLanguage.field_l.d((byte) 110);
+        int var2 = WordLanguage.field_l.readUnsignedByte((byte) 110);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = tg.field_a - 1;
         byte[] var5 = new byte[var4];

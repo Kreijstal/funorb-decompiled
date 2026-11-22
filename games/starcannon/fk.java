@@ -78,14 +78,14 @@ final class fk {
           if (!ag.a(126, 1)) {
             return false;
           }
-          il.field_g = se.field_p.j(7909);
+          il.field_g = se.field_p.readUnsignedByte(7909);
           se.field_p.position = 0;
         }
         if (-2 != il.field_g) {
           return ag.a(125, il.field_g);
         }
         if (ag.a(125, 2)) {
-          il.field_g = se.field_p.i(-1174051992);
+          il.field_g = se.field_p.readUnsignedShort(-1174051992);
           se.field_p.position = 0;
           return ag.a(125, il.field_g);
         }

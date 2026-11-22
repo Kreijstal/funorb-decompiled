@@ -64,21 +64,21 @@ final class nj {
           if (null != w.field_W) {
             try {
               w.field_W.a((byte) 115, 0L);
-              w.field_W.a(kj.field_a.field_u, 24, kj.field_a.field_o, true);
+              w.field_W.a(kj.field_a.payload, 24, kj.field_a.position, true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 != 89) {
                 return;
               }
-              kj.field_a.field_o = kj.field_a.field_o + 24;
+              kj.field_a.position = kj.field_a.position + 24;
               return;
             }
           }
           if (param0 != 89) {
             return;
           }
-          kj.field_a.field_o = kj.field_a.field_o + 24;
+          kj.field_a.position = kj.field_a.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

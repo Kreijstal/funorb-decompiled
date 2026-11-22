@@ -327,21 +327,21 @@ final class ArchiveIndex {
         var16 = MinerDisturbance.field_ab;
         try {
           var17 = new PacketBuffer(in.a(param1, param0 - 2));
-          var4 = var17.d((byte) -54);
+          var4 = var17.readUnsignedByte((byte) -54);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_r = var17.b((byte) 91);
+              this.field_r = var17.readInt((byte) 91);
             } else {
               this.field_r = 0;
             }
-            var5 = var17.d((byte) -54);
+            var5 = var17.readUnsignedByte((byte) -54);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 > var4) {
-              this.field_g = var17.e(param0 ^ -108);
+              this.field_g = var17.readUnsignedShort(param0 ^ -108);
             } else {
-              this.field_g = var17.a((byte) -120);
+              this.field_g = var17.readUnsignedShortOrInt((byte) -120);
             }
             stackIn_17_0 = ((var5 & param0) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -350,7 +350,7 @@ final class ArchiveIndex {
             var9 = -1;
             if (var4 >= 7) {
               for (var10 = 0; this.field_g > var10; var10++) {
-                dupTemp$0 = var8 + var17.a((byte) -117);
+                dupTemp$0 = var8 + var17.readUnsignedShortOrInt((byte) -117);
                 var8 = dupTemp$0;
                 this.field_t[var10] = dupTemp$0;
                 if (var9 < this.field_t[var10]) {
@@ -359,7 +359,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; var10 < this.field_g; var10++) {
-                dupTemp$1 = var8 + var17.e(-68);
+                dupTemp$1 = var8 + var17.readUnsignedShort(-68);
                 var8 = dupTemp$1;
                 this.field_t[var10] = dupTemp$1;
                 if (this.field_t[var10] > var9) {
@@ -382,30 +382,30 @@ final class ArchiveIndex {
                 this.field_m[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_g; var10Lifetime1Lifetime1++) {
-                this.field_m[this.field_t[var10Lifetime1Lifetime1]] = var17.b((byte) 119);
+                this.field_m[this.field_t[var10Lifetime1Lifetime1]] = var17.readInt((byte) 119);
               }
               this.field_s = new da(this.field_m);
             }
             for (var10Lifetime2 = 0; this.field_g > var10Lifetime2; var10Lifetime2++) {
-              this.field_h[this.field_t[var10Lifetime2]] = var17.b((byte) 49);
+              this.field_h[this.field_t[var10Lifetime2]] = var17.readInt((byte) 49);
             }
             if (var7 == 0) {
               for (var10Lifetime3 = 0; this.field_g > var10Lifetime3; var10Lifetime3++) {
-                this.field_q[this.field_t[var10Lifetime3]] = var17.b((byte) 84);
+                this.field_q[this.field_t[var10Lifetime3]] = var17.readInt((byte) 84);
               }
             } else {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_g; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(var21, (byte) -120, 0, 64);
+                var17.readBytes(var21, (byte) -120, 0, 64);
                 this.field_l[this.field_t[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; this.field_g > var10Lifetime3; var10Lifetime3++) {
-                this.field_q[this.field_t[var10Lifetime3]] = var17.b((byte) 84);
+                this.field_q[this.field_t[var10Lifetime3]] = var17.readInt((byte) 84);
               }
             }
             if (var4 >= 7) {
               for (var10Lifetime4 = 0; this.field_g > var10Lifetime4; var10Lifetime4++) {
-                this.field_d[this.field_t[var10Lifetime4]] = var17.a((byte) -124);
+                this.field_d[this.field_t[var10Lifetime4]] = var17.readUnsignedShortOrInt((byte) -124);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_g; var10Lifetime4++) {
                 var11 = this.field_t[var10Lifetime4];
@@ -415,7 +415,7 @@ final class ArchiveIndex {
                 this.field_p[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.a((byte) -119);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt((byte) -119);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_p[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -431,7 +431,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_g; var10Lifetime4++) {
-                this.field_d[this.field_t[var10Lifetime4]] = var17.e(-10);
+                this.field_d[this.field_t[var10Lifetime4]] = var17.readUnsignedShort(-10);
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_g; var10Lifetime4++) {
                 var11 = this.field_t[var10Lifetime4];
@@ -441,7 +441,7 @@ final class ArchiveIndex {
                 array$5 = new int[var12];
                 this.field_p[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.e(eg.a(param0, -71));
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(eg.a(param0, -71));
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_p[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -473,7 +473,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = this.field_p[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_i[var11Lifetime1][var14Lifetime1] = var17.b((byte) 100);
+                  this.field_i[var11Lifetime1][var14Lifetime1] = var17.readInt((byte) 100);
                 }
                 this.field_n[var11Lifetime1] = new da(this.field_i[var11Lifetime1]);
               }

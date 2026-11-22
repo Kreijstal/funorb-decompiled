@@ -76,8 +76,8 @@ final class tj extends uh {
             var2 = (pj) (this.field_c.b((byte) 125));
             while (var2 != null) {
               this.field_i.position = 0;
-              this.field_i.f(6389, 1);
-              this.field_i.a(var2.field_j, true);
+              this.field_i.writeByte(6389, 1);
+              this.field_i.writeLong40(var2.field_j, true);
               this.field_x.a((byte) 9, this.field_i.payload, this.field_i.payload.length, 0);
               this.field_h.a((byte) -128, var2);
               var2 = (pj) (this.field_c.a(97));
@@ -85,8 +85,8 @@ final class tj extends uh {
             var2Lifetime1 = (pj) (this.field_a.b((byte) 114));
             while (var2Lifetime1 != null) {
               this.field_i.position = 0;
-              this.field_i.f(6389, 0);
-              this.field_i.a(var2Lifetime1.field_j, true);
+              this.field_i.writeByte(6389, 0);
+              this.field_i.writeLong40(var2Lifetime1.field_j, true);
               this.field_x.a((byte) 9, this.field_i.payload, this.field_i.payload.length, 0);
               this.field_n.a((byte) -128, var2Lifetime1);
               var2Lifetime1 = (pj) (this.field_a.a(104));
@@ -121,10 +121,10 @@ final class tj extends uh {
                   if (var4 <= this.field_g.position) {
                     if (this.field_e == null) {
                       this.field_g.position = 0;
-                      var6 = this.field_g.d((byte) 56);
-                      var7 = this.field_g.c((byte) -125);
-                      var8 = this.field_g.d((byte) 90);
-                      var9 = this.field_g.c((byte) -104);
+                      var6 = this.field_g.readUnsignedByte((byte) 56);
+                      var7 = this.field_g.readInt((byte) -125);
+                      var8 = this.field_g.readUnsignedByte((byte) 90);
+                      var9 = this.field_g.readInt((byte) -104);
                       var10 = 127 & var8;
                       stackIn_65_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -160,8 +160,8 @@ final class tj extends uh {
                       stackIn_81_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_81_0;
                       this.field_e.field_B = new PacketBuffer(var15 + (var9 + this.field_e.field_z));
-                      this.field_e.field_B.f(6389, var10);
-                      this.field_e.field_B.a(-112, var9);
+                      this.field_e.field_B.writeByte(6389, var10);
+                      this.field_e.field_B.writeInt(-112, var9);
                       this.field_g.position = 0;
                       this.field_e.field_C = 10;
                     } else {
@@ -284,9 +284,9 @@ final class tj extends uh {
             if (this.field_m != 0) {
               try {
                 this.field_i.position = 0;
-                this.field_i.f(6389, 4);
-                this.field_i.f(6389, (int) this.field_m);
-                this.field_i.a(-122, 0);
+                this.field_i.writeByte(6389, 4);
+                this.field_i.writeByte(6389, (int) this.field_m);
+                this.field_i.writeInt(-122, 0);
                 this.field_x.a((byte) 9, this.field_i.payload, this.field_i.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -359,8 +359,8 @@ final class tj extends uh {
             } else {
               stackIn_7_2 = 3;
             }
-            ((PacketBuffer) (Object) stackIn_6_0).f(stackIn_6_1, stackIn_7_2);
-            this.field_i.a(0L, true);
+            ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
+            this.field_i.writeLong40(0L, true);
             this.field_x.a((byte) 9, this.field_i.payload, this.field_i.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -397,9 +397,9 @@ final class tj extends uh {
           }
           try {
             this.field_i.position = 0;
-            this.field_i.f(6389, 6);
-            this.field_i.i(3, 45);
-            this.field_i.c(0, -159688920);
+            this.field_i.writeByte(6389, 6);
+            this.field_i.writeMedium(3, 45);
+            this.field_i.writeShort(0, -159688920);
             this.field_x.a((byte) 9, this.field_i.payload, this.field_i.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

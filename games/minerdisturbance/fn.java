@@ -51,9 +51,9 @@ final class fn extends IntrusiveNode {
               mb.field_c = new ll((java.net.Socket) (em.field_B.field_a), jl.field_fb);
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
-              var2.c(15, 25564);
-              var2.a((byte) 120, gd.field_y);
-              mb.field_c.a((byte) 104, var2.field_u, 13, 0);
+              var2.writeByte(15, 25564);
+              var2.writeInt((byte) 120, gd.field_y);
+              mb.field_c.a((byte) 104, var2.payload, 13, 0);
               tl.field_m = tl.field_m + 1;
               sk.field_a = 30000L + sf.a((byte) -54);
             }
@@ -135,9 +135,9 @@ final class fn extends IntrusiveNode {
         var26 = MinerDisturbance.field_ab;
         try {
           var27 = kj.field_a;
-          var2 = var27.d((byte) -54);
+          var2 = var27.readUnsignedByte((byte) -54);
           if (var2 == param0) {
-            var3 = var27.e(-78);
+            var3 = var27.readUnsignedShort(-78);
             var4_ref = (lc) (sj.field_g.b(115));
             while (var4_ref != null) {
               if (~var4_ref.field_q != ~var3) {
@@ -150,7 +150,7 @@ final class fn extends IntrusiveNode {
               si.a(param0 ^ -32);
               return;
             }
-            var5 = var27.d((byte) -54);
+            var5 = var27.readUnsignedByte((byte) -54);
             if (var5 != 0) {
               var6 = var4_ref.field_r;
               fm.field_S[0].field_f = null;
@@ -158,10 +158,10 @@ final class fn extends IntrusiveNode {
               var7 = var4_ref.field_v;
               fm.field_S[0].field_a = ti.field_J;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                fm.field_S[var8_int].field_a = var27.a(false);
+                fm.field_S[var8_int].field_a = var27.readString(false);
                 fm.field_S[var8_int].field_g = false;
-                if (1 == var27.d((byte) -54)) {
-                  fm.field_S[var8_int].field_f = var27.a(false);
+                if (1 == var27.readUnsignedByte((byte) -54)) {
+                  fm.field_S[var8_int].field_f = var27.readString(false);
                 } else {
                   fm.field_S[var8_int].field_f = null;
                 }
@@ -180,13 +180,13 @@ final class fn extends IntrusiveNode {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.d((byte) -54);
+              var18 = var27.readUnsignedByte((byte) -54);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.d((byte) -54);
+                  var20 = var27.readUnsignedByte((byte) -54);
                   var21 = fm.field_S[var20].field_a;
-                  var22 = var27.h(65);
-                  var24 = var27.field_o;
+                  var22 = var27.readLong(65);
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = fm.field_S[var20].field_f;
@@ -194,7 +194,7 @@ final class fn extends IntrusiveNode {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$2 = var15;
                       var15++;
-                      var11[0][incrementValue$2] = var27.b((byte) 76);
+                      var11[0][incrementValue$2] = var27.readInt((byte) 76);
                     }
                     var12++;
                   }
@@ -204,11 +204,11 @@ final class fn extends IntrusiveNode {
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
                     var13++;
-                    var27.field_o = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var11[1][incrementValue$3] = var27.b((byte) 40);
+                      var11[1][incrementValue$3] = var27.readInt((byte) 40);
                     }
                   }
                   if (var6 > var14 &&
@@ -218,11 +218,11 @@ final class fn extends IntrusiveNode {
                     var9[2][var14] = fm.field_S[var20].field_f;
                     var31[2][var14] = var22;
                     var14++;
-                    var27.field_o = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var11[2][incrementValue$4] = var27.b((byte) 15);
+                      var11[2][incrementValue$4] = var27.readInt((byte) 15);
                     }
                   }
                 }
@@ -233,8 +233,8 @@ final class fn extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.e(param0 - 89);
-            var27.h(99);
+            var3Lifetime1 = var27.readUnsignedShort(param0 - 89);
+            var27.readLong(99);
             var4 = (wb) (hj.field_k.b(71));
             while (var4 != null) {
               if (~var4.field_w != ~var3Lifetime1) {
@@ -344,7 +344,7 @@ final class fn extends IntrusiveNode {
           fn.a(100);
         }
         CipherPacketBuffer var2 = new CipherPacketBuffer(param0);
-        if (var2.d((byte) -54) != 2) {
+        if (var2.readUnsignedByte((byte) -54) != 2) {
           aa.field_j = new th();
           return;
         }

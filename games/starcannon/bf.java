@@ -1429,29 +1429,29 @@ final class bf extends IntrusiveNode {
                 var9 = var9 | 1;
               }
               ck.field_g.position = 0;
-              ck.field_g.c((byte) -113, di.field_l.nextInt());
-              ck.field_g.c((byte) -125, di.field_l.nextInt());
-              ck.field_g.a(false, var13);
-              ck.field_g.a(false, var8);
+              ck.field_g.writeInt((byte) -113, di.field_l.nextInt());
+              ck.field_g.writeInt((byte) -125, di.field_l.nextInt());
+              ck.field_g.writePrefixedString(false, var13);
+              ck.field_g.writePrefixedString(false, var8);
               var14 = (CharSequence) ((Object) param2);
-              ck.field_g.a(false, cc.a(20755, var14));
-              ck.field_g.c(param6, -306);
-              ck.field_g.a(param0, param3 - 133);
-              ck.field_g.a(var9, -107);
-              d.field_b.a(18, -116);
+              ck.field_g.writePrefixedString(false, cc.a(20755, var14));
+              ck.field_g.writeShort(param6, -306);
+              ck.field_g.writeByte(param0, param3 - 133);
+              ck.field_g.writeByte(var9, -107);
+              d.field_b.writeByte(18, -116);
               d.field_b.position = d.field_b.position + 2;
               var10 = d.field_b.position;
               var11_ref_String = UiWidget.a(ll.b(112), 61);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              d.field_b.b(false, var11_ref_String);
+              d.field_b.writeString(false, var11_ref_String);
               fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-              d.field_b.a((byte) 88, -var10 + d.field_b.position);
+              d.field_b.backpatchShortLength((byte) 88, -var10 + d.field_b.position);
             } else {
               ck.field_g.position = 0;
-              ck.field_g.c((byte) -86, di.field_l.nextInt());
-              ck.field_g.c((byte) -95, di.field_l.nextInt());
+              ck.field_g.writeInt((byte) -86, di.field_l.nextInt());
+              ck.field_g.writeInt((byte) -95, di.field_l.nextInt());
               stackIn_9_0 = ck.field_g;
               stackIn_9_1 = false;
               if (param5.c(param3 ^ 6)) {
@@ -1459,7 +1459,7 @@ final class bf extends IntrusiveNode {
               } else {
                 stackIn_10_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+              ((PacketBuffer) (Object) stackIn_9_0).writePrefixedString(stackIn_9_1, stackIn_10_2);
               stackIn_12_0 = ck.field_g;
               stackIn_12_1 = false;
               if (param4.c(0)) {
@@ -1467,19 +1467,19 @@ final class bf extends IntrusiveNode {
               } else {
                 stackIn_13_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
-              d.field_b.a(16, param3 ^ -64);
+              ((PacketBuffer) (Object) stackIn_12_0).writePrefixedString(stackIn_12_1, stackIn_13_2);
+              d.field_b.writeByte(16, param3 ^ -64);
               d.field_b.position = d.field_b.position + 1;
               var9 = d.field_b.position;
               fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-              d.field_b.b(d.field_b.position - var9, 31700);
+              d.field_b.backpatchByteLength(d.field_b.position - var9, 31700);
             }
             nf.a(-1, (byte) 95);
             r.field_c = eb.field_a;
           }
           if (eb.field_a == r.field_c &&
             ag.a(param3 ^ 122, 1)) {
-            var9Lifetime1 = se.field_p.j(param3 ^ 7907);
+            var9Lifetime1 = se.field_p.readUnsignedByte(param3 ^ 7907);
             se.field_p.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -1508,12 +1508,12 @@ final class bf extends IntrusiveNode {
           if (dh.field_a == r.field_c) {
             var9Lifetime2 = 2;
             if (ag.a(125, var9Lifetime2)) {
-              var10Lifetime1 = se.field_p.i(param3 ^ -1174051986);
+              var10Lifetime1 = se.field_p.readUnsignedShort(param3 ^ -1174051986);
               se.field_p.position = 0;
               if (ag.a(126, var10Lifetime1)) {
                 var11 = ph.field_nb.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ph.field_nb[var12] = se.field_p.h(-12287);
+                  ph.field_nb[var12] = se.field_p.readPrefixedString(-12287);
                 }
                 ec.a((byte) 27);
                 eb.field_f = false;
@@ -1528,12 +1528,12 @@ final class bf extends IntrusiveNode {
           if (r.field_c == ab.field_F &&
             fk.a(false)) {
             if (255 == vh.field_t) {
-              var9_ref_String = se.field_p.b((byte) -86);
+              var9_ref_String = se.field_p.readNullableString((byte) -86);
               if (var9_ref_String != null) {
                 lj.a(var9_ref_String, param3 ^ 121, ll.b(111));
               }
             } else {
-              UiWidget.field_r = se.field_p.a(-125);
+              UiWidget.field_r = se.field_p.readString(-125);
             }
             ec.a((byte) 27);
             eb.field_f = false;

@@ -144,12 +144,12 @@ final class lm extends kn implements f, sh {
         var5 = MinerDisturbance.field_ab;
         try {
           var2 = new IntrusiveDeque();
-          while (param0.field_u.length > param0.field_o) {
+          while (param0.payload.length > param0.position) {
             var3_int = af.a(param0, var2, -113);
             if (!ne.a(var3_int, uf.field_q, param0, (byte) -87)) {
               continue;
             }
-            param0.field_o = param0.field_o + (uf.field_q.length - 1);
+            param0.position = param0.position + (uf.field_q.length - 1);
             break;
           }
           var3 = new String[var2.c((byte) -121)];

@@ -38,8 +38,8 @@ final class tc extends IntrusiveNode {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = sn.field_c;
         var2.d((byte) -87, param1);
-        var2.c(param0, 25564);
-        var2.c(2, 25564);
+        var2.writeByte(param0, 25564);
+        var2.writeByte(2, 25564);
     }
 
     tc(uj param0, int param1, int param2) {

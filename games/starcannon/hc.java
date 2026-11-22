@@ -50,19 +50,19 @@ final class hc {
             return stackIn_2_0;
           }
           var9 = new PacketBuffer(param1);
-          var3 = var9.j(7909);
-          var4 = var9.f((byte) -97);
+          var3 = var9.readUnsignedByte(7909);
+          var4 = var9.readInt((byte) -97);
           if (var4 >= 0 && (qi.field_c == 0 ||
             !(qi.field_c < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var4, (byte) 88, var13, 0);
+              var9.readBytes(var4, (byte) 88, var13, 0);
               stackIn_24_0 = var5;
               return stackIn_24_0;
             }
-            var5_int = var9.f((byte) -104);
+            var5_int = var9.readInt((byte) -104);
             if (var5_int >= 0 && (qi.field_c == 0 ||
               !(qi.field_c < var5_int))) {
               var12 = new byte[var5_int];

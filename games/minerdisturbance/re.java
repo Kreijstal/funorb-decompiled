@@ -154,16 +154,16 @@ final class re implements uj {
               } else {
                 tb.field_d = sl.a((byte) 86, param3, param5, false);
               }
-              sn.field_c.field_o = 0;
-              sn.field_c.c(14, 25564);
-              sn.field_c.c(tb.field_d.b(0).field_a, 25564);
+              sn.field_c.position = 0;
+              sn.field_c.writeByte(14, 25564);
+              sn.field_c.writeByte(tb.field_d.b(0).field_a, 25564);
               bk.a((byte) -104, -1);
               qd.field_Q = ra.field_c;
             }
             if (qd.field_Q == ra.field_c &&
               IntrusiveDeque.a(0, 1)) {
-              var6_int = kj.field_a.d((byte) -54);
-              kj.field_a.field_o = 0;
+              var6_int = kj.field_a.readUnsignedByte((byte) -54);
+              kj.field_a.position = 0;
               if (var6_int == 0) {
                 qd.field_Q = ka.field_d;
               } else {
@@ -174,18 +174,18 @@ final class re implements uj {
             }
             if (qd.field_Q == ka.field_d &&
               IntrusiveDeque.a(0, 8)) {
-              gd.field_s = kj.field_a.h(81);
-              kj.field_a.field_o = 0;
+              gd.field_s = kj.field_a.readLong(81);
+              kj.field_a.position = 0;
               cm.a((byte) 6, param4, param0, tb.field_d, param2);
               qd.field_Q = nn.field_m;
             }
             boolean decompiledFrameRemainder0 = true;
             if (qd.field_Q == nn.field_m &&
               IntrusiveDeque.a(0, 1)) {
-              var6_intLifetime1 = kj.field_a.d((byte) -54);
+              var6_intLifetime1 = kj.field_a.readUnsignedByte((byte) -54);
               ag.field_d = null;
               oj.field_K = var6_intLifetime1;
-              kj.field_a.field_o = 0;
+              kj.field_a.position = 0;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -207,12 +207,12 @@ final class re implements uj {
             }
             if (qd.field_Q == wi.field_s &&
               kj.b(-9319)) {
-              ne.field_Q = kj.field_a.h(71);
-              wj.field_j = kj.field_a.d((byte) -54);
-              kj.field_a.d((byte) -54);
-              pj.field_a = kj.field_a.e(-96);
-              var11 = kj.field_a.j(103);
-              var7 = kj.field_a.d((byte) -54);
+              ne.field_Q = kj.field_a.readLong(71);
+              wj.field_j = kj.field_a.readUnsignedByte((byte) -54);
+              kj.field_a.readUnsignedByte((byte) -54);
+              pj.field_a = kj.field_a.readUnsignedShort(-96);
+              var11 = kj.field_a.readNullableString(103);
+              var7 = kj.field_a.readUnsignedByte((byte) -54);
               if ((1 & var7) != 0) {
                 nj.a((byte) 89);
               }
@@ -225,19 +225,19 @@ final class re implements uj {
                 }
               }
               if (ei.field_L) {
-                kj.field_a.d((byte) -54);
-                kj.field_a.d((byte) -54);
-                kj.field_a.b((byte) 33);
-                ArchiveIndex.field_k = kj.field_a.e(-47);
+                kj.field_a.readUnsignedByte((byte) -54);
+                kj.field_a.readUnsignedByte((byte) -54);
+                kj.field_a.readInt((byte) 33);
+                ArchiveIndex.field_k = kj.field_a.readUnsignedShort(-47);
                 ja.field_v = new byte[ArchiveIndex.field_k];
                 for (var8 = 0; ArchiveIndex.field_k > var8; var8++) {
-                  ja.field_v[var8] = kj.field_a.m(4);
+                  ja.field_v[var8] = kj.field_a.readByte(4);
                 }
               }
-              ti.field_J = kj.field_a.a(false);
+              ti.field_J = kj.field_a.readString(false);
               var12 = (CharSequence) ((Object) ti.field_J);
               in.field_b = cl.a(-95, var12);
-              a.field_d = kj.field_a.d((byte) -54);
+              a.field_d = kj.field_a.readUnsignedByte((byte) -54);
               qd.field_Q = pb.field_c;
               if (tb.field_d.b(0) == hk.field_i) {
                 ak.field_b.a(bm.c(-122), 447616545);
@@ -293,7 +293,7 @@ final class re implements uj {
               if (7 == oj.field_K) {
                 oj.field_K = 3;
               }
-              nf.field_g = kj.field_a.a(false);
+              nf.field_g = kj.field_a.readString(false);
               ek.field_c = false;
               stackIn_86_0 = oj.field_K;
               return stackIn_86_0;

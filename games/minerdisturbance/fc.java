@@ -25,25 +25,25 @@ final class fc extends DualLinkNode {
         try {
           if (param0 != 1) {
             if (2 == param0) {
-              var4_int = param2.d((byte) -54);
+              var4_int = param2.readUnsignedByte((byte) -54);
               this.field_y = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_y[var5] = param2.e(-64);
+                this.field_y[var5] = param2.readUnsignedShort(-64);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.d((byte) -54);
+                var4_int = param2.readUnsignedByte((byte) -54);
                 this.field_x = new int[var4_int];
                 this.field_v = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param2.e(-103);
+                  var6 = param2.readUnsignedShort(-103);
                   var7 = in.a(var6, (byte) 77);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_v[var5] = array$0;
                     for (var8 = 0; var7.field_a > var8; var8++) {
-                      this.field_v[var5][var8] = param2.e(-55);
+                      this.field_v[var5][var8] = param2.readUnsignedShort(-55);
                     }
                   }
                 }
@@ -53,7 +53,7 @@ final class fc extends DualLinkNode {
               }
             }
           } else {
-            this.field_w = h.a('<', true, param2.a(false));
+            this.field_w = h.a('<', true, param2.readString(false));
           }
           if (param1 <= 91) {
             this.field_v = (int[][]) null;
@@ -134,7 +134,7 @@ final class fc extends DualLinkNode {
         var4 = MinerDisturbance.field_ab;
         try {
           while (true) {
-            var3_int = param1.d((byte) -54);
+            var3_int = param1.readUnsignedByte((byte) -54);
             if (var3_int != 0) {
               this.a(var3_int, (byte) 119, param1);
               continue;

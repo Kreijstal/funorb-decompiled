@@ -37,11 +37,11 @@ final class bk {
               stackIn_8_0 = this.field_a[param0];
               return stackIn_8_0;
             }
-            this.field_d.field_o = 6 + 72 * param0;
-            var6_int = this.field_d.b((byte) 76);
-            var7 = this.field_d.b((byte) 33);
+            this.field_d.position = 6 + 72 * param0;
+            var6_int = this.field_d.readInt((byte) 76);
+            var7 = this.field_d.readInt((byte) 33);
             var13 = new byte[64];
-            this.field_d.a(var13, (byte) -120, param3, 64);
+            this.field_d.readBytes(var13, (byte) -120, param3, 64);
             var9 = new ij(param0, param1, param4, this.field_c, this.field_e, var6_int, var13, var7, param2);
             this.field_a[param0] = var9;
             stackIn_10_0 = var9;
@@ -98,13 +98,13 @@ final class bk {
           return false;
         }
         var10 = new PacketBuffer(this.field_h.c((byte) -115));
-        var10.field_o = 5;
-        var3 = var10.d((byte) -54);
-        var10.field_o = var10.field_o + var3 * 72;
-        var13 = new byte[var10.field_u.length - var10.field_o];
+        var10.position = 5;
+        var3 = var10.readUnsignedByte((byte) -54);
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(var4, (byte) -120, 0, var13.length);
+        var10.readBytes(var4, (byte) -120, 0, var13.length);
         if (this.field_g != null &&
           this.field_f != null) {
           var12 = new java.math.BigInteger(var13);
@@ -116,7 +116,7 @@ final class bk {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = wb.a(-5 - var13.length + var10.field_o, 5, var10.field_u, 18738);
+        var15 = wb.a(-5 - var13.length + var10.position, 5, var10.payload, 18738);
         if (param0 != 16) {
           this.field_c = (ch) null;
         }
@@ -165,24 +165,24 @@ final class bk {
           if (null != ci.field_i && (0 > param1 ||
             pb.field_c == qd.field_Q)) {
             var2 = -19 % ((-8 - param0) / 45);
-            if (sn.field_c.field_o == 0 &&
+            if (sn.field_c.position == 0 &&
               10000L + ck.field_d < sf.a((byte) 116)) {
               sn.field_c.d((byte) -69, param1);
             }
-            if (sn.field_c.field_o > 0) {
+            if (sn.field_c.position > 0) {
               try {
-                ci.field_i.a((byte) 124, sn.field_c.field_u, sn.field_c.field_o, 0);
+                ci.field_i.a((byte) 124, sn.field_c.payload, sn.field_c.position, 0);
                 ck.field_d = sf.a((byte) 115);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 si.a(-95);
               }
-              sn.field_c.field_o = 0;
+              sn.field_c.position = 0;
             }
             return;
           }
-          sn.field_c.field_o = 0;
+          sn.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

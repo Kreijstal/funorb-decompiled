@@ -95,17 +95,17 @@ final class fg {
         }
         try {
           var5.d((byte) -81, param2);
-          var5.field_o = var5.field_o + 1;
-          var4 = var5.field_o;
-          var5.c(1, param0 ^ 25561);
-          var5.c(param1.field_n, 25564);
-          var5.c(param1.field_p, param0 ^ 25561);
-          var5.a((byte) 122, param1.field_t);
-          var5.a((byte) 120, param1.field_s);
-          var5.a((byte) 117, param1.field_r);
-          var5.a((byte) 94, param1.field_o);
-          var5.e(86, var4);
-          var5.g(-1, var5.field_o - var4);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, param0 ^ 25561);
+          var5.writeByte(param1.field_n, 25564);
+          var5.writeByte(param1.field_p, param0 ^ 25561);
+          var5.writeInt((byte) 122, param1.field_t);
+          var5.writeInt((byte) 120, param1.field_s);
+          var5.writeInt((byte) 117, param1.field_r);
+          var5.writeInt((byte) 94, param1.field_o);
+          var5.appendCrc32(86, var4);
+          var5.backpatchByteLength(-1, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "fg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -128,7 +128,7 @@ final class fg {
             fg.a(-58);
           }
           var2 = new IntrusiveDeque();
-          while (param1.field_u.length > param1.field_o) {
+          while (param1.payload.length > param1.position) {
             var2.a((byte) -124, new fn(lm.a(param1, (byte) -101)));
           }
           var3 = new String[var2.c((byte) -119)][];
@@ -156,22 +156,22 @@ final class fg {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ah.field_b = param1.e(-25) << 5;
-          var2_int = param1.d((byte) -54);
+          ah.field_b = param1.readUnsignedShort(-25) << 5;
+          var2_int = param1.readUnsignedByte((byte) -54);
           ArchiveProvider.field_b = (var2_int & 7) << 18;
           ah.field_b = ah.field_b + (var2_int >> 3);
-          ArchiveProvider.field_b = ArchiveProvider.field_b + (param1.e(param0 ^ 41) << 2);
-          var2_intLifetime1 = param1.d((byte) -54);
+          ArchiveProvider.field_b = ArchiveProvider.field_b + (param1.readUnsignedShort(param0 ^ 41) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) -54);
           tk.field_h = var2_intLifetime1 << 15 & 2064384;
           ArchiveProvider.field_b = ArchiveProvider.field_b + (var2_intLifetime1 >> 6);
-          tk.field_h = tk.field_h + (param1.d((byte) -54) << 7);
+          tk.field_h = tk.field_h + (param1.readUnsignedByte((byte) -54) << 7);
           if (param0 != -86) {
             field_e = (String) null;
           }
-          var2_intLifetime2 = param1.d((byte) -54);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) -54);
           tk.field_h = tk.field_h + (var2_intLifetime2 >> 1);
           fl.field_c = var2_intLifetime2 << 16 & 65536;
-          fl.field_c = fl.field_c + param1.e(param0 + 40);
+          fl.field_c = fl.field_c + param1.readUnsignedShort(param0 + 40);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

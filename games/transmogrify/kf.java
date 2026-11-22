@@ -109,7 +109,7 @@ final class kf extends td {
           var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.position = param0.length - 2;
-          ih.field_b = var17.a((byte) -126);
+          ih.field_b = var17.readUnsignedShort((byte) -126);
           wk.field_b = new int[ih.field_b];
           ld.field_e = new byte[ih.field_b][];
           ql.field_b = new int[ih.field_b];
@@ -118,28 +118,28 @@ final class kf extends td {
           cc.field_e = new boolean[ih.field_b];
           re.field_K = new byte[ih.field_b][];
           var17.position = param0.length - (7 + ih.field_b * 8);
-          pj.field_y = var17.a((byte) -122);
-          ll.field_U = var17.a((byte) -100);
-          var3 = (var17.d((byte) 102) & 255) + 1;
+          pj.field_y = var17.readUnsignedShort((byte) -122);
+          ll.field_U = var17.readUnsignedShort((byte) -100);
+          var3 = (var17.readUnsignedByte((byte) 102) & 255) + 1;
           for (var4 = 0; ih.field_b > var4; var4++) {
-            BufferedSocket.field_j[var4] = var16.a((byte) -93);
+            BufferedSocket.field_j[var4] = var16.readUnsignedShort((byte) -93);
           }
           var4Lifetime1 = 0;
           var5 = 22 % ((param1 - 19) / 47);
           while (var4Lifetime1 < ih.field_b) {
-            re.field_a[var4Lifetime1] = var17.a((byte) -118);
+            re.field_a[var4Lifetime1] = var17.readUnsignedShort((byte) -118);
             var4Lifetime1++;
           }
           for (var4Lifetime2 = 0; ih.field_b > var4Lifetime2; var4Lifetime2++) {
-            ql.field_b[var4Lifetime2] = var17.a((byte) -115);
+            ql.field_b[var4Lifetime2] = var17.readUnsignedShort((byte) -115);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < ih.field_b; var4Lifetime3++) {
-            wk.field_b[var4Lifetime3] = var17.a((byte) -112);
+            wk.field_b[var4Lifetime3] = var17.readUnsignedShort((byte) -112);
           }
           var17.position = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
           rg.field_D = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            rg.field_D[var4Lifetime4] = var17.g((byte) 124);
+            rg.field_D[var4Lifetime4] = var17.readUnsignedMedium((byte) 124);
             if (0 == rg.field_D[var4Lifetime4]) {
               rg.field_D[var4Lifetime4] = 1;
             }
@@ -158,14 +158,14 @@ final class kf extends td {
             var9 = var19;
             ld.field_e[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.d((byte) 40);
+            var11 = var17.readUnsignedByte((byte) 40);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.b(true);
+                var8[var12] = var17.readByte(true);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.b(true);
+                  dupTemp$1 = var17.readByte(true);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_29_0 = var10;
@@ -180,13 +180,13 @@ final class kf extends td {
             } else {
               for (var12 = 0; var12 < var5Lifetime1; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var5Lifetime1 * var13] = var17.b(true);
+                  var8[var12 + var5Lifetime1 * var13] = var17.readByte(true);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5Lifetime1 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.b(true);
+                    dupTemp$0 = var17.readByte(true);
                     var9[var12 + var5Lifetime1 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_44_0 = var10;

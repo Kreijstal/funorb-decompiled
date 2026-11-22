@@ -23,7 +23,7 @@ final class ha {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.d(param2 + 128);
+            var3_int = param0.readUnsignedSmart(param2 + 128);
             if (var3_int > param1) {
               var3_int = param1;
             }
@@ -97,8 +97,8 @@ final class ha {
         try {
           var3 = d.field_b;
           var3.d((byte) 38, param0);
-          var3.a(param2.field_k, -110);
-          var3.c(param2.field_l, -306);
+          var3.writeByte(param2.field_k, -110);
+          var3.writeShort(param2.field_l, -306);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

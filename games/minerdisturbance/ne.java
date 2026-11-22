@@ -206,13 +206,13 @@ final class ne extends hc {
           if (param0 != param1[0]) {
             return false;
           }
-          var4_int = param2.field_o;
+          var4_int = param2.position;
           var5 = 1;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var5) {
-              stackIn_9_0 = param2.field_o;
-              stackIn_9_1 = param2.field_u.length;
+              stackIn_9_0 = param2.position;
+              stackIn_9_1 = param2.payload.length;
               if (var6 != 0) {
                 if (stackIn_9_0 < stackIn_9_1) {
                   break scanLoop1;
@@ -221,11 +221,11 @@ final class ne extends hc {
               }
               else {
                 if (stackIn_9_0 != stackIn_9_1 &&
-                  param2.m(4) == param1[var5]) {
+                  param2.readByte(4) == param1[var5]) {
                   var5++;
                   continue;
                 } else {
-                  param2.field_o = var4_int;
+                  param2.position = var4_int;
                   return false;
                 }
               }
@@ -237,7 +237,7 @@ final class ne extends hc {
             ne.a(false);
             break;
           }
-          param2.field_o = var4_int;
+          param2.position = var4_int;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

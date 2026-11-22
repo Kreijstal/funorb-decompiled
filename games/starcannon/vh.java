@@ -133,8 +133,8 @@ final class vh extends eh {
               } else {
                 stackIn_10_1 = 2;
               }
-              ((PacketBuffer) (Object) stackIn_9_0).a(stackIn_10_1, -125);
-              this.field_g.a((byte) -116, 0L);
+              ((PacketBuffer) (Object) stackIn_9_0).writeByte(stackIn_10_1, -125);
+              this.field_g.writeLong40((byte) -116, 0L);
               this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,25 +178,25 @@ final class vh extends eh {
           var3.d((byte) 81, param0);
           var3.position = var3.position + 1;
           var4 = var3.position;
-          var3.a(1, -65);
-          var3.c(param1.field_g, -306);
-          var3.c(param1.field_n, -306);
-          var3.c(param1.field_h, -306);
-          var3.c((byte) -70, param1.field_i);
-          var3.c((byte) -119, param1.field_m);
-          var3.c((byte) -116, param1.field_p);
-          var3.c((byte) -97, param1.field_j);
-          var3.a(param1.field_o.length, -91);
+          var3.writeByte(1, -65);
+          var3.writeShort(param1.field_g, -306);
+          var3.writeShort(param1.field_n, -306);
+          var3.writeShort(param1.field_h, -306);
+          var3.writeInt((byte) -70, param1.field_i);
+          var3.writeInt((byte) -119, param1.field_m);
+          var3.writeInt((byte) -116, param1.field_p);
+          var3.writeInt((byte) -97, param1.field_j);
+          var3.writeByte(param1.field_o.length, -91);
           var5 = param2;
           while (param1.field_o.length > var5) {
-            var3.c((byte) -117, param1.field_o[var5]);
+            var3.writeInt((byte) -117, param1.field_o[var5]);
             var5++;
             if (var6 != 0) {
               return;
             }
           }
-          var3.b((byte) -75, var4);
-          var3.b(var3.position - var4, 31700);
+          var3.appendCrc32((byte) -75, var4);
+          var3.backpatchByteLength(var3.position - var4, 31700);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,9 +293,9 @@ final class vh extends eh {
             if (this.field_b != 0) {
               try {
                 this.field_g.position = 0;
-                this.field_g.a(4, -125);
-                this.field_g.a((int) this.field_b, -87);
-                this.field_g.c((byte) -85, 0);
+                this.field_g.writeByte(4, -125);
+                this.field_g.writeByte((int) this.field_b, -87);
+                this.field_g.writeInt((byte) -85, 0);
                 this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -517,9 +517,9 @@ final class vh extends eh {
             }
             try {
               this.field_g.position = 0;
-              this.field_g.a(6, -67);
-              this.field_g.a(3, (byte) -39);
-              this.field_g.c(0, -306);
+              this.field_g.writeByte(6, -67);
+              this.field_g.writeMedium(3, (byte) -39);
+              this.field_g.writeShort(0, -306);
               this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -612,8 +612,8 @@ final class vh extends eh {
               scanLoop1: while (true) {
                 if (var2 != null) {
                   this.field_g.position = 0;
-                  this.field_g.a(1, -97);
-                  this.field_g.a((byte) -50, var2.field_j);
+                  this.field_g.writeByte(1, -97);
+                  this.field_g.writeLong40((byte) -50, var2.field_j);
                   this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
                   this.field_i.a(22197, var2);
                   var2 = (ra) (this.field_m.a(-99));
@@ -630,8 +630,8 @@ final class vh extends eh {
               scanLoop2: while (true) {
                 if (null != var2) {
                   this.field_g.position = 0;
-                  this.field_g.a(0, param0 - 55);
-                  this.field_g.a((byte) -78, var2.field_j);
+                  this.field_g.writeByte(0, param0 - 55);
+                  this.field_g.writeLong40((byte) -78, var2.field_j);
                   this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
                   this.field_k.a(22197, var2);
                   var2 = (ra) (this.field_o.a(-88));
@@ -702,10 +702,10 @@ final class vh extends eh {
                       if (decompiledFrameRemainder1) {
                         if (this.field_a == null) {
                           this.field_f.position = 0;
-                          var6Lifetime2 = this.field_f.j(param0 ^ -7897);
-                          var7 = this.field_f.f((byte) -114);
-                          var8 = this.field_f.j(7909);
-                          var9 = this.field_f.f((byte) -114);
+                          var6Lifetime2 = this.field_f.readUnsignedByte(param0 ^ -7897);
+                          var7 = this.field_f.readInt((byte) -114);
+                          var8 = this.field_f.readUnsignedByte(7909);
+                          var9 = this.field_f.readInt((byte) -114);
                           var10 = 127 & var8;
                           stackIn_80_0 = ((128 & var8) == 0) ? 0 : 1;
                           boolean decompiledFrameCompleted3 = true;
@@ -765,8 +765,8 @@ final class vh extends eh {
                           var15 = stackIn_109_0;
                           this.field_a = var14_ref;
                           this.field_a.field_u = new PacketBuffer(var9 + var15 + this.field_a.field_w);
-                          this.field_a.field_u.a(var10, -96);
-                          this.field_a.field_u.c((byte) -105, var9);
+                          this.field_a.field_u.writeByte(var10, -96);
+                          this.field_a.field_u.writeInt((byte) -105, var9);
                           this.field_f.position = 0;
                           this.field_a.field_v = 10;
                           decompiledFrameRemainder1 = (var16 != 0);

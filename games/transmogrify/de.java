@@ -26,9 +26,9 @@ final class de {
         try {
           var3 = ff.field_D;
           var3.a(false, param1);
-          var3.f(6389, param2);
-          var3.f(6389, 0);
-          var3.f(param2 + 6387, param0.field_h);
+          var3.writeByte(6389, param2);
+          var3.writeByte(6389, 0);
+          var3.writeByte(param2 + 6387, param0.field_h);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -324,9 +324,9 @@ final class ij extends ArchiveProvider {
                   var2[var4] = (byte)-1;
                 }
               }
-              param1.a(0, 24, param0, var2);
+              param1.writeBytes(0, 24, param0, var2);
             } else {
-              param1.a(0, 24, param0, var2);
+              param1.writeBytes(0, 24, param0, var2);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

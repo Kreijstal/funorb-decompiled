@@ -26,10 +26,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           var8 = WordLanguage.field_l;
-          var2 = var8.d((byte) 59);
+          var2 = var8.readUnsignedByte((byte) 59);
           if (var2 != 0) {
             if (1 == var2) {
-              var3 = var8.c((byte) -122);
+              var3 = var8.readInt((byte) -122);
               var4 = (gh) (mf.field_b.a((byte) -95));
               while (var4 != null) {
                 if (var4.field_j != var3) {
@@ -53,15 +53,15 @@ final class SecondaryNodeDequeIterator implements Iterator {
               pc.a(param0 ^ 5);
               return;
             }
-            var4_int = var8.d((byte) 85);
+            var4_int = var8.readUnsignedByte((byte) 85);
             if (0 != var4_int) {
               var12 = new byte[var4_int];
-              var8.a(var4_int, 2, var12, 0);
+              var8.readBytes(var4_int, 2, var12, 0);
             } else {
               var5 = null;
             }
             var8.position = var8.position + 4;
-            if (!var8.d(5432)) {
+            if (!var8.verifyCrc32(5432)) {
               pc.a(param0 - 3);
               return;
             }

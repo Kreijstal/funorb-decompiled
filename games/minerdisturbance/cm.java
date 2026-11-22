@@ -21,26 +21,26 @@ final class cm extends IntrusiveNode {
         try {
           v.field_b[0] = dk.field_a.nextInt();
           v.field_b[1] = dk.field_a.nextInt();
-          rf.field_c.field_o = 0;
+          rf.field_c.position = 0;
           v.field_b[2] = (int)(gd.field_s >> 32);
           v.field_b[3] = (int)gd.field_s;
-          rf.field_c.a((byte) 81, v.field_b[0]);
-          rf.field_c.a((byte) 125, v.field_b[1]);
-          rf.field_c.a((byte) 119, v.field_b[2]);
-          rf.field_c.a((byte) 114, v.field_b[3]);
+          rf.field_c.writeInt((byte) 81, v.field_b[0]);
+          rf.field_c.writeInt((byte) 125, v.field_b[1]);
+          rf.field_c.writeInt((byte) 119, v.field_b[2]);
+          rf.field_c.writeInt((byte) 114, v.field_b[3]);
           ij.a(true, rf.field_c);
-          rf.field_c.b((byte) 125, param2);
+          rf.field_c.writeShort((byte) 125, param2);
           param3.a(rf.field_c, (byte) -87);
-          sn.field_c.field_o = 0;
+          sn.field_c.position = 0;
           if (param1) {
-            sn.field_c.c(18, 25564);
+            sn.field_c.writeByte(18, 25564);
           } else {
-            sn.field_c.c(16, 25564);
+            sn.field_c.writeByte(16, 25564);
           }
-          sn.field_c.field_o = sn.field_c.field_o + 2;
-          var5_int = sn.field_c.field_o;
-          sn.field_c.a((byte) 106, mh.field_c);
-          sn.field_c.b(-1, ResourceArchive.field_a);
+          sn.field_c.position = sn.field_c.position + 2;
+          var5_int = sn.field_c.position;
+          sn.field_c.writeInt((byte) 106, mh.field_c);
+          sn.field_c.writeLong(-1, ResourceArchive.field_a);
           var6 = 0;
           if (v.field_e) {
             var6 = var6 | 1;
@@ -54,7 +54,7 @@ final class cm extends IntrusiveNode {
           if (ag.field_d != null) {
             var6 = var6 | 16;
           }
-          sn.field_c.c(var6, 25564);
+          sn.field_c.writeByte(var6, 25564);
           if (param0 != 6) {
             return;
           }
@@ -62,12 +62,12 @@ final class cm extends IntrusiveNode {
           if (var7 == null) {
             var7 = "";
           }
-          sn.field_c.b(23446, var7);
+          sn.field_c.writeString(23446, var7);
           if (null != ag.field_d) {
-            sn.field_c.a(8, ag.field_d);
+            sn.field_c.writePrefixedString(8, ag.field_d);
           }
           jg.a(kc.field_b, param0 - 108, rf.field_c, ph.field_g, sn.field_c);
-          sn.field_c.b(sn.field_c.field_o - var5_int, param0 - 506270862);
+          sn.field_c.backpatchShortLength(sn.field_c.position - var5_int, param0 - 506270862);
           bk.a((byte) -64, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,11 +111,11 @@ final class cm extends IntrusiveNode {
           var1 = sn.field_c;
           while (ub.a(14921)) {
             var1.d((byte) -51, 8);
-            fieldTemp$0 = var1.field_o + 1;
-            var1.field_o = var1.field_o + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             pj.a((byte) 119, var1);
-            sn.field_c.g(-1, var1.field_o - var2);
+            sn.field_c.backpatchByteLength(-1, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -204,19 +204,19 @@ final class gk extends ii implements mg, vg {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.c(true);
+          var2_int = param0.readUnsignedByte(true);
           var3 = new ai(var2_int);
-          dupTemp$4 = param0.c(true);
+          dupTemp$4 = param0.readUnsignedByte(true);
           var3.field_j = dupTemp$4;
           var3.field_p = dupTemp$4;
-          dupTemp$5 = param0.c(true);
+          dupTemp$5 = param0.readUnsignedByte(true);
           var3.field_l = dupTemp$5;
           var3.field_g = dupTemp$5;
-          dupTemp$6 = param0.c(true);
+          dupTemp$6 = param0.readUnsignedByte(true);
           var3.field_s = dupTemp$6;
           var3.field_r = dupTemp$6;
           var4 = 58 / ((66 - param1) / 38);
-          dupTemp$7 = param0.c(true);
+          dupTemp$7 = param0.readUnsignedByte(true);
           var3.field_o = dupTemp$7;
           var3.field_q = dupTemp$7;
           stackIn_1_0 = var3;

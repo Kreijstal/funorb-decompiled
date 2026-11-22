@@ -330,9 +330,9 @@ final class CombatState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          param0.field_f[0] = param1.f(param2 + 22957);
-          param0.field_f[1] = param1.k(0);
-          var4_int = param1.c(true);
+          param0.field_f[0] = param1.readUnsignedMedium(param2 + 22957);
+          param0.field_f[1] = param1.readUnsignedShort(0);
+          var4_int = param1.readUnsignedByte(true);
           param0.field_f[1] = mp.a(param0.field_f[1], nb.a(var4_int << 16, 65536));
           param0.field_f[0] = mp.a(param0.field_f[0], nb.a(254, var4_int) << 24);
           if (param2 != -23082) {
@@ -445,31 +445,31 @@ final class CombatState {
           }
           this.a(this.field_p, param2, -23082);
           this.a(this.field_j, param2, -23082);
-          this.field_q = param2.a((byte) 2);
-          this.field_B = param2.a((byte) 2);
+          this.field_q = param2.readByte((byte) 2);
+          this.field_B = param2.readByte((byte) 2);
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 4; var4_intLifetime1++) {
             this.field_A[var4_intLifetime1] = ep.a(var4_intLifetime1, -1, param2);
           }
           if (param0 < 57) {
             this.field_y = 110;
           }
-          var4_intLifetime2 = param2.c(true);
+          var4_intLifetime2 = param2.readUnsignedByte(true);
           if (4 > var4_intLifetime2) {
             stackIn_19_1 = this.field_A[var4_intLifetime2];
           } else {
             stackIn_19_1 = null;
           }
           this.field_u = stackIn_19_1;
-          this.field_g = param2.c(true);
-          this.a(false, param2.c(true));
-          this.field_t = param2.c(true);
-          this.field_s = param2.c(true);
+          this.field_g = param2.readUnsignedByte(true);
+          this.a(false, param2.readUnsignedByte(true));
+          this.field_t = param2.readUnsignedByte(true);
+          this.field_s = param2.readUnsignedByte(true);
           if (param1) {
-            this.field_f = param2.a(-21030);
+            this.field_f = param2.readPrefixedString(-21030);
           } else {
-            this.field_o = param2.f(-110);
-            this.field_y = param2.f(-94);
-            this.field_l = param2.f(-107);
+            this.field_o = param2.readUnsignedMedium(-110);
+            this.field_y = param2.readUnsignedMedium(-94);
+            this.field_l = param2.readUnsignedMedium(-107);
             this.a(this.field_d, param2, -23082);
           }
           if (this.field_q != -1) {
@@ -1970,7 +1970,7 @@ final class CombatState {
           param0.field_o = param0.field_o | 1;
           var4_int = param0.field_n.field_s;
           if (ob.field_Mb == var4_int) {
-            var12 = this.field_A[param1.c(true)];
+            var12 = this.field_A[param1.readUnsignedByte(true)];
             var12.field_o = var12.field_o & -5;
             var12.a(3);
             if (128 != this.field_k) {
@@ -1990,7 +1990,7 @@ final class CombatState {
             if (var4_int != ob.field_nc &&
               var4_int != ob.field_Ib) {
               if (var4_int == ob.field_Zb) {
-                var17 = this.field_A[param1.c(true)];
+                var17 = this.field_A[param1.readUnsignedByte(true)];
                 var17.a(false);
                 param0.field_o = param0.field_o & -2;
                 this.a(false);
@@ -2013,8 +2013,8 @@ final class CombatState {
                   return stackIn_33_0;
                 }
                 if (var4_int == ob.field_Lb) {
-                  var5 = param1.c(true);
-                  var6 = param1.c(true);
+                  var5 = param1.readUnsignedByte(true);
+                  var6 = param1.readUnsignedByte(true);
                   this.field_p.a(var5, -88);
                   this.field_p.a(var6, -119);
                   this.a(false, this.field_k);
@@ -2046,8 +2046,8 @@ final class CombatState {
                   if (var4_int != ob.field_Ub) {
                     throw new IllegalStateException("Invalid ability use!");
                   }
-                  var5Lifetime2 = param1.c(true);
-                  var6Lifetime1 = param1.c(true);
+                  var5Lifetime2 = param1.readUnsignedByte(true);
+                  var6Lifetime1 = param1.readUnsignedByte(true);
                   param0.field_e = var5Lifetime2;
                   param0.field_g = var6Lifetime1;
                   var25 = new PacketBuffer(4);
@@ -2058,7 +2058,7 @@ final class CombatState {
                   stackIn_57_0 = new mo(65, var25);
                   return stackIn_57_0;
                 }
-                var23 = this.field_A[param1.c(true)];
+                var23 = this.field_A[param1.readUnsignedByte(true)];
                 if (var4_int == ob.field_fc) {
                   var23.field_d = var23.field_d | 1;
                 } else {
@@ -2091,7 +2091,7 @@ final class CombatState {
               stackIn_30_0 = new mo(65, var19);
               return stackIn_30_0;
             }
-            var15 = this.field_A[param1.c(true)];
+            var15 = this.field_A[param1.readUnsignedByte(true)];
             var15.a(false);
             param0.field_o = param0.field_o & -7;
             param0.field_o = param0.field_o & -2;
@@ -2103,7 +2103,7 @@ final class CombatState {
             stackIn_21_0 = new mo(65, var16);
             return stackIn_21_0;
           }
-          var5Lifetime1 = param1.c(true);
+          var5Lifetime1 = param1.readUnsignedByte(true);
           this.field_p.a(var5Lifetime1, -128);
           if (ob.field_Nb == var4_int) {
             this.a(var5Lifetime1, false, -12331);

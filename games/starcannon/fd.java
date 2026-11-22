@@ -110,9 +110,9 @@ final class fd {
                   var5[var4] = (byte)-1;
                 }
               }
-              param0.a(var2, 24, -20144, 0);
+              param0.writeBytes(var2, 24, -20144, 0);
             } else {
-              param0.a(var2, 24, -20144, 0);
+              param0.writeBytes(var2, 24, -20144, 0);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

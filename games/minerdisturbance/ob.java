@@ -473,7 +473,7 @@ abstract class ob extends GameAppletShell {
     }
 
     private final void h(int param0) {
-        int var2 = kj.field_a.d((byte) -54);
+        int var2 = kj.field_a.readUnsignedByte((byte) -54);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = rj.field_d - 1;
         byte[] var5 = new byte[var4];
@@ -668,7 +668,7 @@ abstract class ob extends GameAppletShell {
               if (hf.field_u.a((byte) 105)) {
                 var11 = hf.field_u.a(0);
                 if (var11 != null) {
-                  var7 = ph.a((byte) 31, var11.field_o, var11.field_u, 0);
+                  var7 = ph.a((byte) 31, var11.position, var11.payload, 0);
                   stackIn_63_0 = var7;
                   stackIn_64_1 = !(param0);
                   fm.a(stackIn_63_0, stackIn_64_1);

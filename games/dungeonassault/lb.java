@@ -90,17 +90,17 @@ final class lb {
         int var5Lifetime7;
         var7 = DungeonAssault.field_K;
         try {
-          var4_int = param0.c(true);
+          var4_int = param0.readUnsignedByte(true);
           stackIn_4_1 = ((var4_int & 1) != 0);
           this.field_H = stackIn_4_1;
           if (param2 < 19) {
-            this.field_N = param0.f(-121);
+            this.field_N = param0.readUnsignedMedium(-121);
           } else {
             this.field_N = param0.readInt(-46);
           }
           if (param2 < 1) {
-            param0.f(-127);
-            this.field_s = param0.f(-106);
+            param0.readUnsignedMedium(-127);
+            this.field_s = param0.readUnsignedMedium(-106);
             this.field_m = this.field_N;
             this.field_l = this.field_N;
             this.field_b = 0;
@@ -110,12 +110,12 @@ final class lb {
               this.field_s = param0.readInt(-107);
               this.field_m = param0.readInt(-35);
             } else {
-              this.field_l = param0.f(-128);
-              this.field_s = param0.f(-98);
+              this.field_l = param0.readUnsignedMedium(-128);
+              this.field_s = param0.readUnsignedMedium(-98);
               if (param2 < 5) {
                 this.field_m = this.field_N;
               } else {
-                this.field_m = param0.f(-114);
+                this.field_m = param0.readUnsignedMedium(-114);
               }
             }
             this.field_b = -this.field_N + this.field_l;
@@ -127,23 +127,23 @@ final class lb {
             this.field_q = -1;
           }
           if (param2 >= 8) {
-            this.field_K = param0.c(true);
+            this.field_K = param0.readUnsignedByte(true);
           } else {
             this.field_K = 0;
           }
-          this.field_B = param0.f(-122);
-          this.field_h = param0.f(-119);
-          this.field_D = param0.k(0);
-          this.field_y = param0.f(param1 + 13077);
-          this.field_r = param0.f(-121);
-          this.field_I = param0.k(0);
+          this.field_B = param0.readUnsignedMedium(-122);
+          this.field_h = param0.readUnsignedMedium(-119);
+          this.field_D = param0.readUnsignedShort(0);
+          this.field_y = param0.readUnsignedMedium(param1 + 13077);
+          this.field_r = param0.readUnsignedMedium(-121);
+          this.field_I = param0.readUnsignedShort(0);
           if (param2 < 2) {
             this.field_w = ek.field_c;
           } else {
             this.field_w = rm.a(param0, 6065);
           }
           if (param2 >= 4) {
-            param0.c(true);
+            param0.readUnsignedByte(true);
           }
           for (var5 = 0; var5 < this.field_k.field_f.length; var5++) {
             this.field_k.field_f[var5] = param0.readInt(IntrusiveDeque.b(param1, 13096));
@@ -186,19 +186,19 @@ final class lb {
             this.field_A = -1;
           } else {
             for (var5Lifetime3 = 0; var5Lifetime3 < 6; var5Lifetime3++) {
-              this.field_J[var5Lifetime3] = param0.k(0);
+              this.field_J[var5Lifetime3] = param0.readUnsignedShort(0);
             }
             for (var5Lifetime3 = 0; var5Lifetime3 < 6; var5Lifetime3++) {
-              var6 = param0.c(true);
+              var6 = param0.readUnsignedByte(true);
               this.field_F[var5Lifetime3] = var6;
               this.field_e = this.field_e + var6;
             }
-            this.field_f = param0.k(param1 + 13182);
+            this.field_f = param0.readUnsignedShort(param1 + 13182);
             this.field_A = param0.readInt(-75);
-            this.field_z = param0.c(true);
+            this.field_z = param0.readUnsignedByte(true);
           }
           for (var5Lifetime4 = 0; 10 > var5Lifetime4; var5Lifetime4++) {
-            this.field_c[var5Lifetime4] = param0.c((byte) 56);
+            this.field_c[var5Lifetime4] = param0.readLong((byte) 56);
             if (param2 >= 10) {
               this.field_G[var5Lifetime4] = param0.readSignedMedium((byte) 114);
             } else {
@@ -206,7 +206,7 @@ final class lb {
             }
           }
           for (var5Lifetime5 = 0; var5Lifetime5 < 10; var5Lifetime5++) {
-            this.field_t[var5Lifetime5] = param0.c((byte) 113);
+            this.field_t[var5Lifetime5] = param0.readLong((byte) 113);
             if (param2 < 10) {
               this.field_n[var5Lifetime5] = 0;
             } else {
@@ -230,7 +230,7 @@ final class lb {
             }
           } else {
             for (var5Lifetime7 = 0; var5Lifetime7 < 10; var5Lifetime7++) {
-              this.field_j[var5Lifetime7] = param0.c((byte) 63);
+              this.field_j[var5Lifetime7] = param0.readLong((byte) 63);
               if (param2 >= 15) {
                 this.field_M[var5Lifetime7] = param0.readInt(-74);
               } else {
@@ -239,8 +239,8 @@ final class lb {
             }
           }
           if (param2 >= 18) {
-            this.field_u = param0.c(true);
-            param0.k(0);
+            this.field_u = param0.readUnsignedByte(true);
+            param0.readUnsignedShort(0);
             this.field_g = param0.readInt(-125);
             this.field_i = param0.readInt(-76);
             this.field_p = param0.readInt(param1 ^ 13114);

@@ -25,37 +25,37 @@ final class id {
         rk var9 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         var8 = WordLanguage.field_l;
-        var3 = var8.d((byte) 95);
+        var3 = var8.readUnsignedByte((byte) 95);
         kd.field_a = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
         a.field_bb = stackIn_3_0;
-        sh.field_b = var8.d((byte) 106);
-        LetterTile.field_m = var8.e((byte) -51);
+        sh.field_b = var8.readUnsignedByte((byte) 106);
+        LetterTile.field_m = var8.readLong((byte) -51);
         if (kd.field_a != 2) {
           jd.field_b = 0;
           u.field_d = 0;
         } else {
-          u.field_d = var8.a((byte) -108);
-          jd.field_b = var8.g((byte) 124);
+          u.field_d = var8.readUnsignedShort((byte) -108);
+          jd.field_b = var8.readUnsignedMedium((byte) 124);
         }
         if (param1 != 9) {
           id.a(true, (byte) -86);
         }
-        stackIn_11_0 = (var8.d((byte) 92) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte((byte) 92) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        kb.field_o = var8.g(12248);
+        kb.field_o = var8.readString(12248);
         if (var4 != 0) {
-          fd.field_i = var8.g(param1 ^ 12241);
+          fd.field_i = var8.readString(param1 ^ 12241);
         } else {
           fd.field_i = kb.field_o;
         }
         if (kd.field_a == 1) {
-          var8.a((byte) -90);
-          var8.g(12248);
+          var8.readUnsignedShort((byte) -90);
+          var8.readString(12248);
         } else {
           if (kd.field_a == 4) {
-            var8.a((byte) -90);
-            var8.g(12248);
+            var8.readUnsignedShort((byte) -90);
+            var8.readString(12248);
           }
         }
         if (!param0) {
@@ -63,7 +63,7 @@ final class id {
           a.field_T = null;
           return new sg(param0);
         }
-        var5 = var8.a((byte) -110);
+        var5 = var8.readUnsignedShort((byte) -110);
         try {
           var9 = vl.field_C.b(1, var5);
           l.field_c = var9.d((byte) -127);

@@ -243,7 +243,7 @@ final class fm {
           if (param1 > -55) {
             field_f = (gb) null;
           }
-          var2_int = param0.c(true);
+          var2_int = param0.readUnsignedByte(true);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;
@@ -271,7 +271,7 @@ final class fm {
         return stackIn_6_0;
     }
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int computeCrc32(int param0, int param1, int param2, byte[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

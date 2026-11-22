@@ -70,7 +70,7 @@ final class tm {
         var16 = DungeonAssault.field_K;
         try {
           var17 = new PacketBuffer(lc.a(param0, 50166));
-          var4 = var17.c(true);
+          var4 = var17.readUnsignedByte(true);
           if (5 <= var4 &&
             7 >= var4) {
             if (param1 <= 97) {
@@ -81,22 +81,22 @@ final class tm {
             } else {
               this.field_s = var17.readInt(-42);
             }
-            var5 = var17.c(true);
+            var5 = var17.readUnsignedByte(true);
             stackIn_13_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_13_0;
             stackIn_16_0 = (0 == (var5 & 2)) ? 0 : 1;
             var7 = stackIn_16_0;
             if (var4 >= 7) {
-              this.field_h = var17.j(1);
+              this.field_h = var17.readUnsignedShortOrInt(1);
             } else {
-              this.field_h = var17.k(0);
+              this.field_h = var17.readUnsignedShort(0);
             }
             var8 = 0;
             var9 = -1;
             this.field_j = new int[this.field_h];
             if (7 > var4) {
               for (var10 = 0; this.field_h > var10; var10++) {
-                dupTemp$0 = var8 + var17.k(0);
+                dupTemp$0 = var8 + var17.readUnsignedShort(0);
                 var8 = dupTemp$0;
                 this.field_j[var10] = dupTemp$0;
                 if (this.field_j[var10] > var9) {
@@ -105,7 +105,7 @@ final class tm {
               }
             } else {
               for (var10 = 0; this.field_h > var10; var10++) {
-                dupTemp$1 = var8 + var17.j(1);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(1);
                 var8 = dupTemp$1;
                 this.field_j[var10] = dupTemp$1;
                 if (var9 < this.field_j[var10]) {
@@ -138,7 +138,7 @@ final class tm {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_h > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a((byte) -124, 0, 64, var21);
+                var17.readBytes((byte) -124, 0, 64, var21);
                 this.field_g[this.field_j[var10Lifetime3]] = var21;
               }
             }
@@ -147,7 +147,7 @@ final class tm {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
-                this.field_k[this.field_j[var10Lifetime5]] = var17.j(1);
+                this.field_k[this.field_j[var10Lifetime5]] = var17.readUnsignedShortOrInt(1);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
                 var11 = this.field_j[var10Lifetime5];
@@ -157,7 +157,7 @@ final class tm {
                 array$2 = new int[var12];
                 this.field_m[var11] = array$2;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.j(1);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(1);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_m[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -173,7 +173,7 @@ final class tm {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
-                this.field_k[this.field_j[var10Lifetime5]] = var17.k(0);
+                this.field_k[this.field_j[var10Lifetime5]] = var17.readUnsignedShort(0);
               }
               for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_j[var10Lifetime5];
@@ -183,7 +183,7 @@ final class tm {
                 this.field_m[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.k(0);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(0);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_m[var11];
                   dupTemp$7[var14] = dupTemp$6;

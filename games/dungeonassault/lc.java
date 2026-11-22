@@ -276,7 +276,7 @@ final class lc {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.c(true);
+          var3 = var9.readUnsignedByte(true);
           var4 = var9.readInt(-116);
           if (param1 != 50166) {
             field_h = (int[]) null;
@@ -287,7 +287,7 @@ final class lc {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a((byte) -95, 0, var4, var12);
+              var9.readBytes((byte) -95, 0, var4, var12);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }

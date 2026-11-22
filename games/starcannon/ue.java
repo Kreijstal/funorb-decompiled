@@ -560,7 +560,7 @@ final class ue {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(param3, var26.payload.length, -84, 5);
+            var26.decryptXteaRange(param3, var26.payload.length, -84, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -598,7 +598,7 @@ final class ue {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.f((byte) -119);
+                  var17 = var17 + var29.readInt((byte) -119);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -620,7 +620,7 @@ final class ue {
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.f((byte) -87);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt((byte) -87);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -648,7 +648,7 @@ final class ue {
             for (var15_intLifetime1 = 0; var15_intLifetime1 < var12Lifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.f((byte) -79);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt((byte) -79);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -665,7 +665,7 @@ final class ue {
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.f((byte) -100);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt((byte) -100);
                 ug.a(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;

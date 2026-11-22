@@ -24,11 +24,11 @@ class wj extends kk {
 
     final void a(byte param0, PacketBuffer param1) {
         try {
-          param1.b(1908720528, this.field_m);
+          param1.writeLong(1908720528, this.field_m);
           if (param0 > -50) {
             wj.b(-65);
           }
-          param1.a((byte) 112, this.field_n);
+          param1.writeBase38String((byte) 112, this.field_n);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

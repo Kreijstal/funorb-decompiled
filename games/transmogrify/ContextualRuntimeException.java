@@ -3283,10 +3283,10 @@ final class ContextualRuntimeException extends RuntimeException {
           var3 = new PacketBuffer(param1.a("", (byte) 92, "index"));
           scanLoop1: while (true) {
             if (var3.position < var3.payload.length) {
-              var4 = var3.d((byte) 89);
-              var5 = var3.a((byte) -120);
-              var6 = var3.d((byte) 92);
-              var7 = new WordDictionary(var4, var3.a((byte) -106));
+              var4 = var3.readUnsignedByte((byte) 89);
+              var5 = var3.readUnsignedShort((byte) -120);
+              var6 = var3.readUnsignedByte((byte) 92);
+              var7 = new WordDictionary(var4, var3.readUnsignedShort((byte) -106));
               var2[var7.field_d] = var7;
               stackIn_13_0 = 0;
               if (var9 != 0) {
@@ -3294,8 +3294,8 @@ final class ContextualRuntimeException extends RuntimeException {
               }
               var8 = stackIn_13_0;
               while (var8 < var7.field_c.length) {
-                var7.field_c[var8][0] = var3.g(12248);
-                var7.field_c[var8][1] = var3.g(12248);
+                var7.field_c[var8][0] = var3.readString(12248);
+                var7.field_c[var8][1] = var3.readString(12248);
                 var8++;
               }
               var7.a(new PacketBuffer(param1.a((byte) -93, var6, var5)), 1);

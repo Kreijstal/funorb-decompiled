@@ -331,7 +331,7 @@ final class qh {
           if (param0 != 16777215) {
             qh.a(-67, 5);
           }
-          stackIn_3_0 = fm.a(param2, 101, 0, param1);
+          stackIn_3_0 = fm.computeCrc32(param2, 101, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

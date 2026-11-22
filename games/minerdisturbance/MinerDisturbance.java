@@ -4719,7 +4719,7 @@ public final class MinerDisturbance extends ob {
           ja.f(param0 ^ 151);
           bf.a(param0 ^ 49);
           wd.a(param0 - 98);
-          PacketBuffer.l(109);
+          PacketBuffer.clearStaticReferences(109);
           ClientException.a((byte) 84);
           lf.a(false);
           oe.clearStaticReferences((byte) 124);

@@ -62,7 +62,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final void c(boolean param0) {
-        this.field_u[this.field_o] = (byte) 0;
+        this.payload[this.position] = (byte) 0;
         if (param0) {
           this.field_z = 8;
           return;
@@ -74,7 +74,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void n(int param0) {
         if (8 > this.field_z) {
           this.field_z = 8;
-          this.field_o = this.field_o + 1;
+          this.position = this.position + 1;
         }
         int var2 = 55 / ((param0 + 5) / 39);
     }
@@ -86,9 +86,9 @@ final class CipherPacketBuffer extends PacketBuffer {
     final int e(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == 0) {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          return this.field_u[fieldTemp$0] - this.field_v.b(4) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_v.b(4) & 255;
         }
         return -16;
     }
@@ -112,21 +112,21 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (true) {
             if (param1 <= var4) {
               if (param1 == var4) {
-                var5 = var5 + (pl.field_b[var4] & this.field_u[var3]);
+                var5 = var5 + (pl.field_b[var4] & this.payload[var3]);
               }
               if (param1 != var4 ||
                 var6 != 0) {
-                var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                var5 = var5 + (this.payload[var3] >> -param1 + var4 & pl.field_b[param1]);
               }
               return var5;
             }
             incrementValue$2 = var3;
             var3++;
-            var5 = var5 + ((this.field_u[incrementValue$2] & pl.field_b[var4]) << -var4 + param1);
+            var5 = var5 + ((this.payload[incrementValue$2] & pl.field_b[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
             if (var6 != 0) {
-              var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+              var5 = var5 + (this.payload[var3] >> -param1 + var4 & pl.field_b[param1]);
               return var5;
             }
           }
@@ -139,21 +139,21 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (true) {
           if (param1 <= var4Lifetime1) {
             if (param1 == var4Lifetime1) {
-              var5Lifetime1 = var5Lifetime1 + (pl.field_b[var4Lifetime1] & this.field_u[var3Lifetime1]);
+              var5Lifetime1 = var5Lifetime1 + (pl.field_b[var4Lifetime1] & this.payload[var3Lifetime1]);
             }
             if (param1 != var4Lifetime1 ||
               var6 != 0) {
-              var5Lifetime1 = var5Lifetime1 + (this.field_u[var3Lifetime1] >> -param1 + var4Lifetime1 & pl.field_b[param1]);
+              var5Lifetime1 = var5Lifetime1 + (this.payload[var3Lifetime1] >> -param1 + var4Lifetime1 & pl.field_b[param1]);
             }
             return var5Lifetime1;
           }
           incrementValue$3 = var3Lifetime1;
           var3Lifetime1++;
-          var5Lifetime1 = var5Lifetime1 + ((this.field_u[incrementValue$3] & pl.field_b[var4Lifetime1]) << -var4Lifetime1 + param1);
+          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$3] & pl.field_b[var4Lifetime1]) << -var4Lifetime1 + param1);
           param1 = param1 - var4Lifetime1;
           var4Lifetime1 = 8;
           if (var6 != 0) {
-            var5Lifetime1 = var5Lifetime1 + (this.field_u[var3Lifetime1] >> -param1 + var4Lifetime1 & pl.field_b[param1]);
+            var5Lifetime1 = var5Lifetime1 + (this.payload[var3Lifetime1] >> -param1 + var4Lifetime1 & pl.field_b[param1]);
             return var5Lifetime1;
           }
         }
@@ -162,29 +162,29 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void d(byte param0, int param1) {
         int fieldTemp$0 = 0;
         if (param0 < -42) {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_u[fieldTemp$0] = (byte)(param1 + this.field_v.b(4));
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.b(4));
           return;
         }
         field_x = (Sprite) null;
-        int fieldTemp$1 = this.field_o;
-        this.field_o = this.field_o + 1;
-        this.field_u[fieldTemp$1] = (byte)(param1 + this.field_v.b(4));
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 + this.field_v.b(4));
     }
 
     final void o(int param0) {
-        this.field_o = (7 + this.field_y) / 8;
+        this.position = (7 + this.field_y) / 8;
         int var2 = -128 % ((param0 + 39) / 54);
     }
 
     final void f(byte param0) {
         if (param0 == 16) {
-          this.field_y = 8 * this.field_o;
+          this.field_y = 8 * this.position;
           return;
         }
         field_w = -62;
-        this.field_y = 8 * this.field_o;
+        this.field_y = 8 * this.position;
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
@@ -202,9 +202,9 @@ final class CipherPacketBuffer extends PacketBuffer {
           var5_int = 0;
           var6 = -2 / ((62 - param1) / 47);
           while (param2 > var5_int) {
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            param0[var5_int + param3] = (byte)(this.field_u[fieldTemp$0] - this.field_v.b(4));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param0[var5_int + param3] = (byte)(this.payload[fieldTemp$0] - this.field_v.b(4));
             var5_int++;
             if (var7 != 0) {
               return;
@@ -255,30 +255,30 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (true) {
             if (this.field_z >= param2) {
               if (param2 == this.field_z) {
-                fieldTemp$0 = this.field_o;
-                this.field_o = this.field_o + 1;
-                this.field_u[fieldTemp$0] = (byte)(this.field_u[fieldTemp$0] + param0);
-                this.field_u[this.field_o] = (byte) 0;
+                fieldTemp$0 = this.position;
+                this.position = this.position + 1;
+                this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param0);
+                this.payload[this.position] = (byte) 0;
                 this.field_z = 8;
                 return;
               }
               this.field_z = this.field_z - param2;
-              this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+              this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_z));
               if (var5 == 0) {
                 return;
               }
-              fieldTemp$1 = this.field_o;
-              this.field_o = this.field_o + 1;
-              this.field_u[fieldTemp$1] = (byte)(this.field_u[fieldTemp$1] + param0);
-              this.field_u[this.field_o] = (byte) 0;
+              fieldTemp$1 = this.position;
+              this.position = this.position + 1;
+              this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + param0);
+              this.payload[this.position] = (byte) 0;
               this.field_z = 8;
               return;
             }
             param2 = param2 - this.field_z;
-            fieldTemp$2 = this.field_o;
-            this.field_o = this.field_o + 1;
-            this.field_u[fieldTemp$2] = (byte)(this.field_u[fieldTemp$2] + (param0 >>> param2));
-            this.field_u[this.field_o] = (byte) 0;
+            fieldTemp$2 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$2] = (byte)(this.payload[fieldTemp$2] + (param0 >>> param2));
+            this.payload[this.position] = (byte) 0;
             this.field_z = 8;
             if (var5 != 0) {
               this.field_z = 8;
@@ -291,30 +291,30 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (true) {
           if (this.field_z >= param2) {
             if (param2 == this.field_z) {
-              fieldTemp$9 = this.field_o;
-              this.field_o = this.field_o + 1;
-              this.field_u[fieldTemp$9] = (byte)(this.field_u[fieldTemp$9] + param0);
-              this.field_u[this.field_o] = (byte) 0;
+              fieldTemp$9 = this.position;
+              this.position = this.position + 1;
+              this.payload[fieldTemp$9] = (byte)(this.payload[fieldTemp$9] + param0);
+              this.payload[this.position] = (byte) 0;
               this.field_z = 8;
               return;
             }
             this.field_z = this.field_z - param2;
-            this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+            this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_z));
             if (var5 == 0) {
               return;
             }
-            fieldTemp$8 = this.field_o;
-            this.field_o = this.field_o + 1;
-            this.field_u[fieldTemp$8] = (byte)(this.field_u[fieldTemp$8] + param0);
-            this.field_u[this.field_o] = (byte) 0;
+            fieldTemp$8 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$8] = (byte)(this.payload[fieldTemp$8] + param0);
+            this.payload[this.position] = (byte) 0;
             this.field_z = 8;
             return;
           }
           param2 = param2 - this.field_z;
-          fieldTemp$5 = this.field_o;
-          this.field_o = this.field_o + 1;
-          this.field_u[fieldTemp$5] = (byte)(this.field_u[fieldTemp$5] + (param0 >>> param2));
-          this.field_u[this.field_o] = (byte) 0;
+          fieldTemp$5 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$5] = (byte)(this.payload[fieldTemp$5] + (param0 >>> param2));
+          this.payload[this.position] = (byte) 0;
           this.field_z = 8;
           if (var5 != 0) {
             this.field_z = 8;

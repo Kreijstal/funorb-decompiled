@@ -55,7 +55,7 @@ final class mf {
                 }
               }
             }
-            param1.a(var10, 1, 24, 0);
+            param1.writeBytes(var10, 1, 24, 0);
             if (param0 != -30463) {
               mf.a(114, 83, 37, -91, (byte) -11);
             }

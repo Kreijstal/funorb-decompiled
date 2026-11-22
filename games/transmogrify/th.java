@@ -16,8 +16,8 @@ final class th {
             field_a = -12;
           }
           var3.a(false, param1);
-          var3.f(6389, param2.field_m);
-          var3.f(6389, param2.field_k);
+          var3.writeByte(6389, param2.field_m);
+          var3.writeByte(6389, param2.field_k);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "th.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -28,22 +28,22 @@ final class th {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ia.field_j = param1.a((byte) -116) << 5;
-          var2_int = param1.d((byte) 41);
+          ia.field_j = param1.readUnsignedShort((byte) -116) << 5;
+          var2_int = param1.readUnsignedByte((byte) 41);
           cl.field_x = (var2_int & 7) << 18;
           ia.field_j = ia.field_j + (var2_int >> 3);
-          cl.field_x = cl.field_x + (param1.a((byte) -112) << 2);
-          var2_intLifetime1 = param1.d((byte) 64);
+          cl.field_x = cl.field_x + (param1.readUnsignedShort((byte) -112) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) 64);
           cl.field_x = cl.field_x + (var2_intLifetime1 >> 6);
           ug.field_b = 2064384 & var2_intLifetime1 << 15;
-          ug.field_b = ug.field_b + (param1.d((byte) 41) << 7);
+          ug.field_b = ug.field_b + (param1.readUnsignedByte((byte) 41) << 7);
           if (param0 < 91) {
             field_e = (String) null;
           }
-          var2_intLifetime2 = param1.d((byte) 127);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) 127);
           di.field_e = 65536 & var2_intLifetime2 << 16;
           ug.field_b = ug.field_b + (var2_intLifetime2 >> 1);
-          di.field_e = di.field_e + param1.a((byte) -104);
+          di.field_e = di.field_e + param1.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "th.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

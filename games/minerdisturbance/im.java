@@ -52,9 +52,9 @@ final class im {
               var2_long > var4_ref_jn.field_o) {
               var4_ref_jn.b(34);
               rj.field_d = var4_ref_jn.field_s.length;
-              kj.field_a.field_o = 0;
+              kj.field_a.position = 0;
               for (var5_int = 0; rj.field_d > var5_int; var5_int++) {
-                kj.field_a.field_u[var5_int] = var4_ref_jn.field_s[var5_int];
+                kj.field_a.payload[var5_int] = var4_ref_jn.field_s[var5_int];
               }
               lc.field_s = rd.field_a;
               rd.field_a = ud.field_a;
@@ -65,12 +65,12 @@ final class im {
           }
           while (true) {
             if (0 > qh.field_a) {
-              kj.field_a.field_o = 0;
+              kj.field_a.position = 0;
               if (!IntrusiveDeque.a(param1 ^ 0, 1)) {
                 return false;
               }
               qh.field_a = kj.field_a.e((byte) 0);
-              kj.field_a.field_o = 0;
+              kj.field_a.position = 0;
               rj.field_d = param0[qh.field_a];
             }
             if (!kj.b(-9319)) {
@@ -93,7 +93,7 @@ final class im {
             }
             var5 = new jn((long)var4 + var2_long, qh.field_a, new byte[rj.field_d]);
             for (var6 = 0; rj.field_d > var6; var6++) {
-              var5.field_s[var6] = kj.field_a.field_u[var6];
+              var5.field_s[var6] = kj.field_a.payload[var6];
             }
             mc.field_m.a((byte) 50, var5);
             qh.field_a = -1;
@@ -206,8 +206,8 @@ final class im {
         try {
           var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_o = -2 + param1.length;
-          sc.field_d = var17.e(-120);
+          var17.position = -2 + param1.length;
+          sc.field_d = var17.readUnsignedShort(-120);
           ClientException.field_b = new byte[sc.field_d][];
           jk.field_gb = new boolean[sc.field_d];
           oc.field_e = new int[sc.field_d];
@@ -215,34 +215,34 @@ final class im {
           ng.field_e = new int[sc.field_d];
           qk.field_b = new int[sc.field_d];
           ci.field_a = new byte[sc.field_d][];
-          var17.field_o = -(8 * sc.field_d) + param1.length - 7;
-          pf.field_c = var17.e(-72);
-          wd.field_a = var17.e(-68);
-          var3 = 1 + (var17.d((byte) -54) & 255);
+          var17.position = -(8 * sc.field_d) + param1.length - 7;
+          pf.field_c = var17.readUnsignedShort(-72);
+          wd.field_a = var17.readUnsignedShort(-68);
+          var3 = 1 + (var17.readUnsignedByte((byte) -54) & 255);
           for (var4 = 0; sc.field_d > var4; var4++) {
-            bg.field_d[var4] = var16.e(-89);
+            bg.field_d[var4] = var16.readUnsignedShort(-89);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < sc.field_d; var4Lifetime1++) {
-            oc.field_e[var4Lifetime1] = var17.e(-43);
+            oc.field_e[var4Lifetime1] = var17.readUnsignedShort(-43);
           }
           if (param0 > -4) {
             field_a = (id[]) null;
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < sc.field_d; var4Lifetime2++) {
-            qk.field_b[var4Lifetime2] = var17.e(-120);
+            qk.field_b[var4Lifetime2] = var17.readUnsignedShort(-120);
           }
           for (var4Lifetime3 = 0; sc.field_d > var4Lifetime3; var4Lifetime3++) {
-            ng.field_e[var4Lifetime3] = var17.e(-118);
+            ng.field_e[var4Lifetime3] = var17.readUnsignedShort(-118);
           }
-          var17.field_o = -(var3 * 3) + (3 + (-(sc.field_d * 8) + param1.length) - 7);
+          var17.position = -(var3 * 3) + (3 + (-(sc.field_d * 8) + param1.length) - 7);
           af.field_p = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            af.field_p[var4Lifetime4] = var17.i(71);
+            af.field_p[var4Lifetime4] = var17.readUnsignedMedium(71);
             if (af.field_p[var4Lifetime4] == 0) {
               af.field_p[var4Lifetime4] = 1;
             }
           }
-          var17.field_o = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; sc.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = qk.field_b[var4Lifetime5];
             var6 = ng.field_e[var4Lifetime5];
@@ -256,14 +256,14 @@ final class im {
             var9 = var19;
             ci.field_a[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.d((byte) -54);
+            var11 = var17.readUnsignedByte((byte) -54);
             if ((var11 & 1) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.m(4);
+                var8[var12] = var17.readByte(4);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.m(4);
+                  dupTemp$1 = var17.readByte(4);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_32_0 = var10;
@@ -278,13 +278,13 @@ final class im {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var12 + var5 * var13] = var17.m(4);
+                  var8[var12 + var5 * var13] = var17.readByte(4);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var13 < var6; var13++) {
-                    dupTemp$0 = var17.m(4);
+                    dupTemp$0 = var17.readByte(4);
                     var9[var5 * var13 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;

@@ -27,19 +27,19 @@ final class in {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.d((byte) -54);
-          var4 = var9.b((byte) 69);
+          var3 = var9.readUnsignedByte((byte) -54);
+          var4 = var9.readInt((byte) 69);
           if (var4 >= 0 && (eg.field_h == 0 ||
             !(var4 > eg.field_h))) {
             if (var3 == param1) {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var13, (byte) -120, 0, var4);
+              var9.readBytes(var13, (byte) -120, 0, var4);
               stackIn_21_0 = var5;
               return stackIn_21_0;
             }
-            var5_int = var9.b((byte) 20);
+            var5_int = var9.readInt((byte) 20);
             if (0 <= var5_int && (eg.field_h == 0 ||
               !(var5_int > eg.field_h))) {
               var12 = new byte[var5_int];

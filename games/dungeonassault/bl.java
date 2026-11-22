@@ -606,20 +606,20 @@ final class bl {
             var5 = (PacketBuffer) null;
             bl.a(false, (PacketBuffer) null, true);
           }
-          var3_int = param1.c(true);
+          var3_int = param1.readUnsignedByte(true);
           var4 = new ai(var3_int);
-          var4.field_p = param1.c(true);
-          var4.field_g = param1.c(true);
-          var4.field_r = param1.c(true);
-          var4.field_q = param1.c(true);
+          var4.field_p = param1.readUnsignedByte(true);
+          var4.field_g = param1.readUnsignedByte(true);
+          var4.field_r = param1.readUnsignedByte(true);
+          var4.field_q = param1.readUnsignedByte(true);
           if (!param0) {
-            var4.field_j = param1.c(true);
-            var4.field_l = param1.c(true);
+            var4.field_j = param1.readUnsignedByte(true);
+            var4.field_l = param1.readUnsignedByte(true);
             stackIn_5_0 = var4;
             stackIn_5_1 = (PacketBuffer) (param1);
             stackIn_6_2 = !(param2);
-            stackIn_5_0.field_s = ((PacketBuffer) (Object) stackIn_5_1).c(stackIn_6_2);
-            var4.field_o = param1.c(true);
+            stackIn_5_0.field_s = ((PacketBuffer) (Object) stackIn_5_1).readUnsignedByte(stackIn_6_2);
+            var4.field_o = param1.readUnsignedByte(true);
           }
           stackIn_8_0 = var4;
           return stackIn_8_0;

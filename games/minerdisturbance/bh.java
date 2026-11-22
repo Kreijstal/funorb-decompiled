@@ -211,7 +211,7 @@ final class bh extends wf implements sh {
           if (param1 != -29320) {
             field_db = (char[]) null;
           }
-          var2_int = param0.d((byte) -54);
+          var2_int = param0.readUnsignedByte((byte) -54);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

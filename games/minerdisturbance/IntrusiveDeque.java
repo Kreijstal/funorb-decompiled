@@ -14,7 +14,7 @@ final class IntrusiveDeque {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (kj.field_a.field_o >= param1) {
+          if (kj.field_a.position >= param1) {
             return true;
           }
           if (ci.field_i == null) {
@@ -22,16 +22,16 @@ final class IntrusiveDeque {
           }
           int var2_int = ci.field_i.c(0);
           if (var2_int > 0) {
-            if (var2_int > param1 - kj.field_a.field_o) {
-              var2_int = -kj.field_a.field_o + param1;
+            if (var2_int > param1 - kj.field_a.position) {
+              var2_int = -kj.field_a.position + param1;
             }
-            ci.field_i.a(false, kj.field_a.field_u, kj.field_a.field_o, var2_int);
+            ci.field_i.a(false, kj.field_a.payload, kj.field_a.position, var2_int);
             sk.field_c = sf.a((byte) -15);
-            kj.field_a.field_o = kj.field_a.field_o + var2_int;
-            if (kj.field_a.field_o < param1) {
+            kj.field_a.position = kj.field_a.position + var2_int;
+            if (kj.field_a.position < param1) {
               return false;
             }
-            kj.field_a.field_o = 0;
+            kj.field_a.position = 0;
             return true;
           }
           try {

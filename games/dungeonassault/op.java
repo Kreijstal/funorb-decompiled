@@ -105,12 +105,12 @@ final class op {
                 var9 = var9 | 1;
               }
               ta.field_c.position = 0;
-              ta.field_c.a((byte) 63, bl.field_i.nextInt());
-              ta.field_c.a((byte) 63, bl.field_i.nextInt());
-              ta.field_c.a(2, var14);
-              ta.field_c.a(2, var8);
+              ta.field_c.writeInt((byte) 63, bl.field_i.nextInt());
+              ta.field_c.writeInt((byte) 63, bl.field_i.nextInt());
+              ta.field_c.writePrefixedString(2, var14);
+              ta.field_c.writePrefixedString(2, var8);
               var15 = (CharSequence) ((Object) param4);
-              ta.field_c.a(2, qf.a(var15, -1));
+              ta.field_c.writePrefixedString(2, qf.a(var15, -1));
               ta.field_c.writeShort(param1, -86);
               ta.field_c.writeByte(6, param2);
               ta.field_c.writeByte(6, var9);
@@ -121,13 +121,13 @@ final class op {
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ac.field_B.b(var11_ref_StringLifetime4, (byte) -20);
+              ac.field_B.writeString(var11_ref_StringLifetime4, (byte) -20);
               of.a(ac.field_B, kd.field_d, om.field_c, (byte) -120, ta.field_c);
-              ac.field_B.b(-var10 + ac.field_B.position, 1);
+              ac.field_B.backpatchShortLength(-var10 + ac.field_B.position, 1);
             } else {
               ta.field_c.position = 0;
-              ta.field_c.a((byte) 63, bl.field_i.nextInt());
-              ta.field_c.a((byte) 63, bl.field_i.nextInt());
+              ta.field_c.writeInt((byte) 63, bl.field_i.nextInt());
+              ta.field_c.writeInt((byte) 63, bl.field_i.nextInt());
               stackIn_12_0 = ta.field_c;
               stackIn_12_1 = 2;
               if (!param0.a((byte) -102)) {
@@ -135,7 +135,7 @@ final class op {
               } else {
                 stackIn_13_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).writePrefixedString(stackIn_12_1, stackIn_13_2);
               stackIn_15_0 = ta.field_c;
               stackIn_15_1 = 2;
               if (param3.a((byte) 123)) {
@@ -143,19 +143,19 @@ final class op {
               } else {
                 stackIn_16_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
+              ((PacketBuffer) (Object) stackIn_15_0).writePrefixedString(stackIn_15_1, stackIn_16_2);
               ac.field_B.writeByte(6, 16);
               ac.field_B.position = ac.field_B.position + 1;
               var9 = ac.field_B.position;
               of.a(ac.field_B, kd.field_d, om.field_c, (byte) -116, ta.field_c);
-              ac.field_B.c(ac.field_B.position - var9, -1);
+              ac.field_B.backpatchByteLength(ac.field_B.position - var9, -1);
             }
             op.a(0, -1);
             pd.field_A = kp.field_b;
           }
           if (pd.field_A == kp.field_b &&
             oi.a(-12929, 1)) {
-            var9Lifetime1 = ra.field_c.c(true);
+            var9Lifetime1 = ra.field_c.readUnsignedByte(true);
             ra.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
@@ -184,12 +184,12 @@ final class op {
           if (pd.field_A == jg.field_a) {
             var9Lifetime2 = 2;
             if (oi.a(-12929, var9Lifetime2)) {
-              var10Lifetime1 = ra.field_c.k(0);
+              var10Lifetime1 = ra.field_c.readUnsignedShort(0);
               ra.field_c.position = 0;
               if (oi.a(-12929, var10Lifetime1)) {
                 var11 = mf.field_c.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  mf.field_c[var12] = ra.field_c.a(-21030);
+                  mf.field_c[var12] = ra.field_c.readPrefixedString(-21030);
                 }
                 tl.a(-60);
                 ResourceArchive.field_e = false;
@@ -201,9 +201,9 @@ final class op {
           if (pd.field_A == sd.field_G &&
             kh.d((byte) -75)) {
             if (hc.field_c != 255) {
-              tp.field_v = ra.field_c.d(-101);
+              tp.field_v = ra.field_c.readString(-101);
             } else {
-              var9_ref_String = ra.field_c.b(true);
+              var9_ref_String = ra.field_c.readNullableString(true);
               if (var9_ref_String != null) {
                 jb.a(true, var9_ref_String, m.c(true));
               }

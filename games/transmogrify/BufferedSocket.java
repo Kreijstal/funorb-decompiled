@@ -242,12 +242,12 @@ final class BufferedSocket implements Runnable {
     final static void a(byte param0, cf param1, int param2) {
         hj var3 = ff.field_D;
         var3.a(false, param2);
-        var3.f(param0 + 6306, param1.field_g);
+        var3.writeByte(param0 + 6306, param1.field_g);
         if (param0 != 83) {
           return;
         }
         try {
-          var3.c(param1.field_h, -159688920);
+          var3.writeShort(param1.field_h, -159688920);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "gj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
