@@ -249,20 +249,20 @@ final class kl implements Runnable {
         }
     }
 
-    kl(ab param0) {
-        ei var2 = null;
+    kl(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_a = new ci();
         this.field_d = false;
         this.field_c = 0;
         try {
-          var2 = param0.a((Runnable) (this), false, 5);
-          while (0 == var2.field_b) {
+          var2 = param0.requestThreadStart((Runnable) (this), false, 5);
+          while (0 == var2.status) {
             ge.a(0, 10L);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_b = (Thread) (var2.field_g);
+          this.field_b = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

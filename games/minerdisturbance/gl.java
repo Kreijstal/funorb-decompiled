@@ -6,13 +6,13 @@ final class gl extends IntrusiveNode {
     int[] field_s;
     int field_n;
     int[] field_p;
-    ia[] field_r;
+    PlatformTask[] field_r;
     int field_y;
     int[] field_w;
     static boolean field_o;
     static String field_t;
     byte[][][] field_v;
-    ia[] field_q;
+    PlatformTask[] field_q;
     static String[] field_x;
 
     final static void a(int param0, int param1) {

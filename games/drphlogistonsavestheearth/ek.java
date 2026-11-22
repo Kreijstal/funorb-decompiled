@@ -50,19 +50,19 @@ final class ek extends IntrusiveNode {
           lh var4 = null;
           lh var5 = null;
           if (null == de.field_q) {
-            de.field_q = pi.field_I.a(ml.field_n, ei.field_o, 105);
+            de.field_q = pi.field_I.requestDirectSocket(ml.field_n, ei.field_o, 105);
           }
-          if (de.field_q.field_b == 0) {
+          if (de.field_q.status == 0) {
             return false;
           }
           dupTemp$0 = la.a(false);
           ck.field_e = dupTemp$0;
           el.field_rb = dupTemp$0;
-          if (de.field_q.field_b != 1) {
+          if (de.field_q.status != 1) {
             tl.field_O = sg.field_b;
           } else {
             try {
-              uj.field_j = new qe((java.net.Socket) (de.field_q.field_g), pi.field_I);
+              uj.field_j = new qe((java.net.Socket) (de.field_q.result), pi.field_I);
               var4 = dh.field_N;
               var5 = var4;
               nj.field_p.position = 0;

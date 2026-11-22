@@ -8,7 +8,7 @@ final class jl extends wf {
     private String field_db;
     private boolean field_eb;
     static int[] field_gb;
-    static vf field_fb;
+    static PlatformTaskDispatcher field_fb;
     private oi field_cb;
 
     final void r(int param0) {

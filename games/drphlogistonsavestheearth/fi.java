@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class fi implements Runnable {
-    private il field_c;
-    private bl field_i;
+    private PlatformTask field_c;
+    private PlatformTaskDispatcher field_i;
     private DataInputStream field_a;
     private int field_g;
     static int[] field_h;
     private PacketBuffer field_j;
-    private il field_f;
+    private PlatformTask field_f;
     private java.net.URL field_d;
-    private il field_b;
+    private PlatformTask field_b;
     static he[] field_e;
 
     final static String a(int param0, byte param1, int param2, CharSequence[] param3) {
@@ -93,7 +93,7 @@ final class fi implements Runnable {
 
     final PacketBuffer a(byte param0) {
         if (param0 < 121) {
-          this.field_c = (il) null;
+          this.field_c = (PlatformTask) null;
         }
         if (3 != this.field_g) {
           return null;
@@ -162,12 +162,12 @@ final class fi implements Runnable {
         }
         if (0 == this.field_g) {
           if (null == this.field_c) {
-            this.field_c = this.field_i.a(98, this.field_d);
+            this.field_c = this.field_i.requestUrlStream(98, this.field_d);
           }
-          if (this.field_c.field_b == 0) {
+          if (this.field_c.status == 0) {
             return false;
           }
-          if (1 != this.field_c.field_b) {
+          if (1 != this.field_c.status) {
             this.field_g = this.field_g + 1;
             this.field_c = null;
             return false;
@@ -175,12 +175,12 @@ final class fi implements Runnable {
         }
         if (param0 == this.field_g) {
           if (null == this.field_f) {
-            this.field_f = this.field_i.a(this.field_d.getHost(), 443, 44);
+            this.field_f = this.field_i.requestDirectSocket(this.field_d.getHost(), 443, 44);
           }
-          if (this.field_f.field_b == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (this.field_f.field_b != 1) {
+          if (this.field_f.status != 1) {
             this.field_g = this.field_g + 1;
             this.field_f = null;
             return false;
@@ -189,10 +189,10 @@ final class fi implements Runnable {
         if (null == this.field_a) {
           try {
             if (0 == this.field_g) {
-              this.field_a = (DataInputStream) (this.field_c.field_g);
+              this.field_a = (DataInputStream) (this.field_c.result);
             }
             if (1 == this.field_g) {
-              var4 = (java.net.Socket) (this.field_f.field_g);
+              var4 = (java.net.Socket) (this.field_f.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -209,12 +209,12 @@ final class fi implements Runnable {
           }
         }
         if (null == this.field_b) {
-          this.field_b = this.field_i.a((Runnable) (this), 5, (byte) 28);
+          this.field_b = this.field_i.requestThreadStart((Runnable) (this), 5, (byte) 28);
         }
-        if (this.field_b.field_b == 0) {
+        if (this.field_b.status == 0) {
           return false;
         }
-        if (this.field_b.field_b == 1) {
+        if (this.field_b.status == 1) {
           return false;
         }
         this.finalize();
@@ -224,18 +224,18 @@ final class fi implements Runnable {
 
     protected final void finalize() {
         if (this.field_c != null) {
-          if (null != this.field_c.field_g) {
+          if (null != this.field_c.result) {
             try {
-              ((DataInputStream) (this.field_c.field_g)).close();
+              ((DataInputStream) (this.field_c.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_c = null;
         }
         if (this.field_f != null) {
-          if (null != this.field_f.field_g) {
+          if (null != this.field_f.result) {
             try {
-              ((java.net.Socket) (this.field_f.field_g)).close();
+              ((java.net.Socket) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -251,7 +251,7 @@ final class fi implements Runnable {
         this.field_b = null;
     }
 
-    fi(bl param0, java.net.URL param1, int param2) {
+    fi(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_i = param0;
           this.field_d = param1;

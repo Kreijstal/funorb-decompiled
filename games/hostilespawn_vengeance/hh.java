@@ -91,7 +91,7 @@ final class hh {
             FullscreenFocusCanvas.field_k[0] = 5;
           } else if (2 != be.field_e) {
             if (be.field_e == 3) {
-              if (gf.field_b.field_k) {
+              if (gf.field_b.privilegedTasksEnabled) {
                 var3_int = fa.a(gf.field_c, cg.field_a, 98, lj.field_u, kc.field_e);
               } else {
                 var3_int = fa.a(gf.field_c, cg.field_a, 50, lj.field_u, he.field_z);
@@ -313,7 +313,7 @@ final class hh {
         }
     }
 
-    final static void a(int param0, int param1, fd param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         try {
           hn.field_a = param6;
           AccountServiceResult.field_k = param2;

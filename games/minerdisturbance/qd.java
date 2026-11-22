@@ -217,7 +217,7 @@ final class qd extends kn implements sh {
             wf.field_P[0] = 5;
           } else if (ti.field_M != 2) {
             if (ti.field_M == 3) {
-              if (qa.field_a.field_a) {
+              if (qa.field_a.privilegedTasksEnabled) {
                 var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
               } else {
                 var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);

@@ -101,7 +101,7 @@ final class wc extends IntrusiveNode {
         field_p = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, ce param4, int param5, String param6, boolean param7, int param8, int param9, int param10, long param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, boolean param3, PlatformTaskDispatcher param4, int param5, String param6, boolean param7, int param8, int param9, int param10, long param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

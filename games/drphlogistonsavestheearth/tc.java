@@ -11,7 +11,7 @@ final class tc implements Iterable {
     static double[] field_f;
     int field_c;
     IntrusiveNode[] field_h;
-    static il field_e;
+    static PlatformTask field_e;
     static String[] field_b;
 
     public static void clearStaticReferences(int param0) {

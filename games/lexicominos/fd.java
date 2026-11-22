@@ -6,7 +6,7 @@ final class fd implements Runnable {
     static int field_g;
     volatile boolean field_d;
     volatile boolean field_c;
-    ab field_b;
+    PlatformTaskDispatcher field_b;
     static String field_a;
     volatile AudioOutput[] field_f;
 

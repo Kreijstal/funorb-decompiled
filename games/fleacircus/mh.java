@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mh extends aa {
-    static ce field_x;
+    static PlatformTaskDispatcher field_x;
     static int field_w;
     static int field_u;
     static String field_v;

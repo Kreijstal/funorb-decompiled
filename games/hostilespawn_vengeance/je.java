@@ -15,20 +15,20 @@ final class je {
           field_b = null;
           return;
         }
-        fd var2 = (fd) null;
-        je.a((fd) null, 44);
+        PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+        je.a((PlatformTaskDispatcher) null, 44);
         field_a = null;
         field_b = null;
     }
 
-    final static ak[] a(fd param0, int param1) {
+    final static ak[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
         ak[] var4 = null;
         ak var6 = null;
         int var7 = 0;
-        kk var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         ak[] stackIn_4_0 = null;
@@ -40,19 +40,19 @@ final class je {
         RuntimeException decompiledCaughtException = null;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (!param0.a(true)) {
+          if (!param0.isFullscreenAvailable(true)) {
             stackIn_4_0 = new ak[]{};
             return stackIn_4_0;
           }
-          var8 = param0.a(param1 ^ -83);
-          while (var8.field_f == 0) {
+          var8 = param0.requestDisplayModes(param1 ^ -83);
+          while (var8.status == 0) {
             vj.a(10L, (byte) -49);
           }
-          if (param1 == var8.field_f) {
+          if (param1 == var8.status) {
             stackIn_11_0 = new ak[]{};
             return stackIn_11_0;
           }
-          var10 = (int[]) (var8.field_c);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new ak[var10.length >> 2];

@@ -24,7 +24,7 @@ final class i {
         field_e = null;
     }
 
-    final static void a(int param0, PacketBuffer param1, fd param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -72,8 +72,8 @@ final class i {
             var18.field_q = new int[var18.field_t];
             var18.field_m = new int[var18.field_t];
             var18.field_o = new byte[var18.field_t][][];
-            var18.field_j = new kk[var18.field_t];
-            var18.field_r = new kk[var18.field_t];
+            var18.field_j = new PlatformTask[var18.field_t];
+            var18.field_r = new PlatformTask[var18.field_t];
             for (var5 = 0; var5 < var18.field_t; var5++) {
               try {
                 var6_int = param1.l(param0 ^ 2675);
@@ -108,7 +108,7 @@ final class i {
                       var12[var17] = FullscreenFocusCanvas.a(0, var10[var17]);
                       var17++;
                     }
-                    var18.field_j[var5] = param2.a(var12, FullscreenFocusCanvas.a(0, var20), var21, 115);
+                    var18.field_j[var5] = param2.requestDeclaredMethod(var12, FullscreenFocusCanvas.a(0, var20), var21, 115);
                     var18.field_o[var5] = var22;
                   }
                 } else {
@@ -122,7 +122,7 @@ final class i {
                   }
                   var18.field_q[var5] = var6_int;
                   var18.field_n[var5] = var9;
-                  var18.field_r[var5] = param2.a((byte) 104, FullscreenFocusCanvas.a(0, var15), var16);
+                  var18.field_r[var5] = param2.requestDeclaredField((byte) 104, FullscreenFocusCanvas.a(0, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

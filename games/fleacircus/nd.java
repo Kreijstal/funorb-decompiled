@@ -17,7 +17,7 @@ final class nd extends jj {
         }
     }
 
-    final static hf[] a(boolean param0, ce param1) {
+    final static hf[] a(boolean param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         hf[] stackIn_3_0 = null;
         hf[] stackIn_12_0 = null;
@@ -31,29 +31,29 @@ final class nd extends jj {
         hf[] var4 = null;
         hf var6 = null;
         int var7 = 0;
-        ce var8 = null;
-        od var9 = null;
+        PlatformTaskDispatcher var8 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = fleas.field_A ? 1 : 0;
         try {
-          if (!param1.a(125)) {
+          if (!param1.isFullscreenAvailable(125)) {
             stackIn_3_0 = new hf[]{};
             return stackIn_3_0;
           }
           if (!param0) {
-            var8 = (ce) null;
-            nd.a(false, (ce) null);
+            var8 = (PlatformTaskDispatcher) null;
+            nd.a(false, (PlatformTaskDispatcher) null);
           }
-          var9 = param1.b((byte) 122);
-          while (0 == var9.field_b) {
+          var9 = param1.requestDisplayModes((byte) 122);
+          while (0 == var9.status) {
             vh.a(10L, 38);
           }
-          if (2 == var9.field_b) {
+          if (2 == var9.status) {
             stackIn_12_0 = new hf[]{};
             return stackIn_12_0;
           }
-          var11 = (int[]) (var9.field_e);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new hf[var11.length >> 2];

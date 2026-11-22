@@ -11,7 +11,7 @@ final class s {
     static int field_g;
     static CipherPacketBuffer field_b;
 
-    final static void a(int param0, fd param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, kd param4, java.awt.Component param5, boolean param6, int param7) {
         try {
           ug.a(param3, param6, 10);
           uj.field_m = ug.a(param1, param5, 0, param0);
@@ -22,7 +22,7 @@ final class s {
           ha.field_w = param4;
           if (param7 >= -84) {
             java.awt.Component var9 = (java.awt.Component) null;
-            s.a(-53, (fd) null, 23, -48, (kd) null, (java.awt.Component) null, false, -17);
+            s.a(-53, (PlatformTaskDispatcher) null, 23, -48, (kd) null, (java.awt.Component) null, false, -17);
           }
           ha.field_w.a(ga.field_b, true);
           uj.field_m.a(ha.field_w);

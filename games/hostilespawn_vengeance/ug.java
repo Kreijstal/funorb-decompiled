@@ -122,7 +122,7 @@ class ug {
         }
     }
 
-    final static ug a(fd param0, java.awt.Component param1, int param2, int param3) {
+    final static ug a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           af var4 = null;
           Throwable var4_ref = null;
@@ -162,7 +162,7 @@ class ug {
                 field_j == null) {
                 field_j = new ua();
                 field_j.field_b = param0;
-                param0.a(field_q, (Runnable) ((Object) field_j), 84);
+                param0.requestThreadStart(field_q, (Runnable) ((Object) field_j), 84);
               }
               if (field_j != null) {
                 if (field_j.field_g[param2] != null) {

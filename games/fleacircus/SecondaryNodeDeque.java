@@ -70,7 +70,7 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, ce param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

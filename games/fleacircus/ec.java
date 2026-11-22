@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ec implements Runnable {
     volatile boolean field_h;
-    ce field_f;
+    PlatformTaskDispatcher field_f;
     volatile boolean field_g;
     static fh field_b;
     volatile la[] field_c;
@@ -80,18 +80,18 @@ final class ec implements Runnable {
             var3 = param1 ? 1 : 0;
             for (var4 = 0; var17.field_k > var4; var4++) {
               if (null != var13.field_n[var4]) {
-                if (2 == var13.field_n[var4].field_b) {
+                if (2 == var13.field_n[var4].status) {
                   var13.field_r[var4] = -5;
                 }
-                if (0 == var13.field_n[var4].field_b) {
+                if (0 == var13.field_n[var4].status) {
                   var3 = 1;
                 }
               }
               if (var13.field_s[var4] != null) {
-                if (2 == var13.field_s[var4].field_b) {
+                if (2 == var13.field_s[var4].status) {
                   var13.field_r[var4] = -6;
                 }
-                if (var13.field_s[var4].field_b == 0) {
+                if (var13.field_s[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -110,25 +110,25 @@ final class ec implements Runnable {
                   if (var6_int != 0) {
                     if (var6_int != 1) {
                       if (2 == var6_int) {
-                        var15 = (java.lang.reflect.Field) (var17.field_n[var5].field_e);
+                        var15 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                         var8 = var15.getModifiers();
                         param0.writeByte(-11, 0);
                         param0.writeInt(var8, (byte) -18);
                       }
                     } else {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].field_e);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_n[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_p[var5]);
                       param0.writeByte(-11, 0);
                     }
                   } else {
-                    var26 = (java.lang.reflect.Field) (var17.field_n[var5].field_e);
+                    var26 = (java.lang.reflect.Field) (var17.field_n[var5].result);
                     var8 = var26.getInt((Object) null);
                     param0.writeByte(-11, 0);
                     param0.writeInt(var8, (byte) -58);
                   }
                   if (var6_int == 3) {
-                    var27 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
+                    var27 = (java.lang.reflect.Method) (var17.field_s[var5].result);
                     var25 = var17.field_w[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -149,7 +149,7 @@ final class ec implements Runnable {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var28 = (java.lang.reflect.Method) (var17.field_s[var5].field_e);
+                      var28 = (java.lang.reflect.Method) (var17.field_s[var5].result);
                       var8Lifetime1 = var28.getModifiers();
                       param0.writeByte(-11, 0);
                       param0.writeInt(var8Lifetime1, (byte) -32);

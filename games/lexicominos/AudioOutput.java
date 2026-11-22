@@ -146,7 +146,7 @@ class AudioOutput {
         return this.field_f;
     }
 
-    final static AudioOutput a(ab param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           sl var4 = null;
           Throwable var4_ref = null;
@@ -186,7 +186,7 @@ class AudioOutput {
                 field_t == null) {
                 field_t = new fd();
                 field_t.field_b = param0;
-                param0.a((Runnable) ((Object) field_t), false, field_l);
+                param0.requestThreadStart((Runnable) ((Object) field_t), false, field_l);
               }
               if (field_t != null) {
                 if (field_t.field_f[param2] != null) {

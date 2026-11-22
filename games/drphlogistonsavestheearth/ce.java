@@ -9,8 +9,8 @@ final class ce {
     static long field_f;
     static vh field_e;
 
-    final static void exitFullscreenFrame(bl param0, java.awt.Frame param1, byte param2) {
-        il var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, byte param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -23,11 +23,11 @@ final class ce {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param1, (byte) -124);
-            while (var3.field_b == 0) {
+            var3 = param0.requestFullscreenExit(param1, (byte) -124);
+            while (var3.status == 0) {
               kk.a(10L, true);
             }
-            if (1 != var3.field_b) {
+            if (1 != var3.status) {
               kk.a(100L, true);
               continue;
             }

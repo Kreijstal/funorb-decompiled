@@ -3,7 +3,7 @@
  */
 final class mm implements uj {
     static vm field_a;
-    static vf field_b;
+    static PlatformTaskDispatcher field_b;
 
     final static boolean b(byte param0) {
         Object var1 = null;
@@ -12,7 +12,7 @@ final class mm implements uj {
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         if (param0 < 32) {
-          field_b = (vf) null;
+          field_b = (PlatformTaskDispatcher) null;
         }
         var1_ref = di.field_O;
         synchronized (var1_ref) {

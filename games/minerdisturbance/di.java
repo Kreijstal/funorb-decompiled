@@ -973,7 +973,7 @@ final class di extends PcmStream {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          vf stackIn_12_0;
+          PlatformTaskDispatcher stackIn_12_0;
           int stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -985,7 +985,7 @@ final class di extends PcmStream {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          ia var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -1024,12 +1024,12 @@ final class di extends PcmStream {
               stackIn_13_3 = null;
               stackIn_13_6 = kf.field_a;
             }
-            var4 = ((vf) (Object) stackIn_12_0).a((byte) stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(vf.field_s).append("&v2=").append(vf.field_b).append("&e=").append(var7).toString()));
-            while (var4.field_c == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream((byte) stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_s).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var7).toString()));
+            while (var4.status == 0) {
               gf.a(1L, param1 - 10310);
             }
-            if (var4.field_c == 1) {
-              var5 = (DataInputStream) (var4.field_a);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

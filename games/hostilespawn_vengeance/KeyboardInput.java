@@ -211,7 +211,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, byte param1, fd param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, byte param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

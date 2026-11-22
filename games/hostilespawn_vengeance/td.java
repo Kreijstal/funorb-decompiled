@@ -12,10 +12,10 @@ final class td implements Runnable {
     static java.util.zip.CRC32 field_a;
     private OutputStream field_q;
     private int field_j;
-    private kk field_k;
+    private PlatformTask field_k;
     static bd field_f;
     private int field_i;
-    private fd field_g;
+    private PlatformTaskDispatcher field_g;
     static int[] field_d;
     static long field_c;
     static vl field_o;
@@ -23,7 +23,7 @@ final class td implements Runnable {
     private java.net.Socket field_n;
     private byte[] field_l;
 
-    td(java.net.Socket param0, fd param1) throws IOException {
+    td(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -39,12 +39,12 @@ final class td implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_k) {
-            while (this.field_k.field_f == 0) {
+            while (this.field_k.status == 0) {
               vj.a(1L, (byte) -49);
             }
-            if (this.field_k.field_f == 1) {
+            if (this.field_k.status == 1) {
               try {
-                ((Thread) (this.field_k.field_c)).join();
+                ((Thread) (this.field_k.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -321,7 +321,7 @@ final class td implements Runnable {
               }
             }
             if (null == this.field_k) {
-              this.field_k = this.field_g.a(3, (Runnable) (this), 85);
+              this.field_k = this.field_g.requestThreadStart(3, (Runnable) (this), 85);
             }
             this.notifyAll();
           }
@@ -340,7 +340,7 @@ final class td implements Runnable {
         }
     }
 
-    private td(java.net.Socket param0, fd param1, int param2) throws IOException {
+    private td(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_h = false;
         this.field_e = false;
         this.field_i = 0;

@@ -79,18 +79,18 @@ final class pj implements uj {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_y; var4++) {
               if (var13.field_r[var4] != null) {
-                if (var13.field_r[var4].field_c == 2) {
+                if (var13.field_r[var4].status == 2) {
                   var13.field_w[var4] = -5;
                 }
-                if (var13.field_r[var4].field_c == 0) {
+                if (var13.field_r[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_q[var4]) {
-                if (var13.field_q[var4].field_c == 2) {
+                if (var13.field_q[var4].status == 2) {
                   var13.field_w[var4] = -6;
                 }
-                if (0 == var13.field_q[var4].field_c) {
+                if (0 == var13.field_q[var4].status) {
                   var3 = 1;
                 }
               }
@@ -109,25 +109,25 @@ final class pj implements uj {
                   if (var6_int != 0) {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var15 = (java.lang.reflect.Field) (var17.field_r[var5].field_a);
+                        var15 = (java.lang.reflect.Field) (var17.field_r[var5].result);
                         var8 = var15.getModifiers();
                         param1.writeByte(0, 25564);
                         param1.writeInt((byte) 95, var8);
                       }
                     } else {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_r[var5].field_a);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_r[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_p[var5]);
                       param1.writeByte(0, 25564);
                     }
                   } else {
-                    var26 = (java.lang.reflect.Field) (var17.field_r[var5].field_a);
+                    var26 = (java.lang.reflect.Field) (var17.field_r[var5].result);
                     var8 = var26.getInt((Object) null);
                     param1.writeByte(0, 25564);
                     param1.writeInt((byte) 120, var8);
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_q[var5].field_a);
+                    var28 = (java.lang.reflect.Method) (var17.field_q[var5].result);
                     var25 = var17.field_v[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -148,7 +148,7 @@ final class pj implements uj {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_q[var5].field_a);
+                      var27 = (java.lang.reflect.Method) (var17.field_q[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param1.writeByte(0, 25564);
                       param1.writeInt((byte) 108, var8Lifetime1);

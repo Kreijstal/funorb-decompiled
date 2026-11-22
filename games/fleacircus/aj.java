@@ -114,7 +114,7 @@ final class aj extends DualLinkNode {
         return var2.toString();
     }
 
-    final static void a(byte param0, Object param1, ce param2) {
+    final static void a(byte param0, Object param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -310,7 +310,7 @@ final class aj extends DualLinkNode {
 
     final static ve a(String param0, int param1) {
         RuntimeException var2 = null;
-        ce var3 = null;
+        PlatformTaskDispatcher var3 = null;
         ve stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -322,8 +322,8 @@ final class aj extends DualLinkNode {
             uc.field_c = pk.a((byte) 68, param0);
           }
           if (param1 != -1) {
-            var3 = (ce) null;
-            aj.a((byte) -26, (Object) null, (ce) null);
+            var3 = (PlatformTaskDispatcher) null;
+            aj.a((byte) -26, (Object) null, (PlatformTaskDispatcher) null);
           }
           stackIn_7_0 = uc.field_c;
           return stackIn_7_0;

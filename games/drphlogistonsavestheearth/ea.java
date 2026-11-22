@@ -84,7 +84,7 @@ final class ea {
         }
     }
 
-    final static boolean a(bl param0, int param1) {
+    final static boolean a(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -93,7 +93,7 @@ final class ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = param0.a(param1 ^ -20);
+            stackIn_4_0 = param0.isFullscreenAvailable(param1 ^ -20);
             return stackIn_4_0;
           }
           return false;

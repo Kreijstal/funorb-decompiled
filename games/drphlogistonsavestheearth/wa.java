@@ -108,7 +108,7 @@ final class wa extends pj implements kd, ke {
             if (param3 != 9) {
               wa.a((byte) 5);
             }
-            if (bl.field_r.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_r.startsWith("win") &&
               AccountServiceResult.a(param0, 0)) {
               return;
             }

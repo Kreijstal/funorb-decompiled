@@ -123,20 +123,20 @@ final class pc extends tj {
           }
           try {
             if (gj.field_t == param0) {
-              lj.field_b = sa.field_g.a(rc.field_i, (byte) 121, fl.field_d);
+              lj.field_b = sa.field_g.requestDirectSocket(rc.field_i, (byte) 121, fl.field_d);
               gj.field_t = gj.field_t + 1;
             }
             if (gj.field_t == 1) {
-              if (lj.field_b.field_b == 2) {
+              if (lj.field_b.status == 2) {
                 stackIn_13_0 = ca.a(-51, -1);
                 return stackIn_13_0;
               }
-              if (lj.field_b.field_b == 1) {
+              if (lj.field_b.status == 1) {
                 gj.field_t = gj.field_t + 1;
               }
             }
             if (gj.field_t == 2) {
-              re.field_X = new ge((java.net.Socket) (lj.field_b.field_g), sa.field_g);
+              re.field_X = new ge((java.net.Socket) (lj.field_b.result), sa.field_g);
               var2 = new PacketBuffer(13);
               la.a((byte) -48, ni.field_e, var2, fc.field_q, qd.field_b);
               var2.writeByte(15, ~param0);

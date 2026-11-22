@@ -153,7 +153,7 @@ abstract class jk extends wf {
         int var1 = -24 / ((10 - param0) / 39);
     }
 
-    final static void a(int param0, vf param1, Object param2) {
+    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

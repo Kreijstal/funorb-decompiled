@@ -45,7 +45,7 @@ final class ArchiveIndex {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (fd.field_c.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_c.startsWith("win") &&
               lm.a(26, param1)) {
               return;
             }

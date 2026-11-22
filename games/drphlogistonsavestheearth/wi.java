@@ -148,7 +148,7 @@ final class wi {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, PlatformTaskDispatcher param6, int param7, int param8) {
         try {
           MouseWheelInput.field_e = param6;
           LevelSession.field_ib = param0;

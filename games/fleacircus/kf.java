@@ -28,7 +28,7 @@ final class kf extends IntrusiveNode {
         return s.field_c[var4];
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, ce param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -71,9 +71,9 @@ final class kf extends IntrusiveNode {
             var18.field_w = new byte[var18.field_k][][];
             var18.field_p = new int[var18.field_k];
             var18.field_o = new int[var18.field_k];
-            var18.field_n = new od[var18.field_k];
+            var18.field_n = new PlatformTask[var18.field_k];
             var18.field_r = new int[var18.field_k];
-            var18.field_s = new od[var18.field_k];
+            var18.field_s = new PlatformTask[var18.field_k];
             if (param1 != -3) {
               kf.a(-63);
             }
@@ -111,7 +111,7 @@ final class kf extends IntrusiveNode {
                       var12[var17] = nc.a((byte) -121, var10[var17]);
                       var17++;
                     }
-                    var18.field_s[var5] = param3.a(var12, var8, nc.a((byte) -90, var20), 0);
+                    var18.field_s[var5] = param3.requestDeclaredMethod(var12, var8, nc.a((byte) -90, var20), 0);
                     var18.field_w[var5] = var21;
                   }
                 } else {
@@ -125,7 +125,7 @@ final class kf extends IntrusiveNode {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_p[var5] = var9;
-                  var18.field_n[var5] = param3.a((byte) 109, var15, nc.a((byte) -110, var16));
+                  var18.field_n[var5] = param3.requestDeclaredField((byte) 109, var15, nc.a((byte) -110, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

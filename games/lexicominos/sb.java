@@ -32,7 +32,7 @@ final class sb {
         field_c = null;
     }
 
-    final static void a(long param0, ab param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, String param10, int param11, int param12, boolean param13) {
+    final static void a(long param0, PlatformTaskDispatcher param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, String param10, int param11, int param12, boolean param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

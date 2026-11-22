@@ -8,7 +8,7 @@ final class de extends wd {
     private byte[] field_x;
     private int field_i;
     private tg field_v;
-    static il field_q;
+    static PlatformTask field_q;
     private byte[] field_m;
     private n field_s;
     private ik field_j;

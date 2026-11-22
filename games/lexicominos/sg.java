@@ -325,7 +325,7 @@ final class sg {
         }
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, int param4, ab param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

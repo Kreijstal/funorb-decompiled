@@ -7,14 +7,14 @@ final class qe implements Runnable {
     private java.net.Socket field_j;
     static m field_e;
     private InputStream field_q;
-    private il field_m;
+    private PlatformTask field_m;
     private int field_f;
     static int field_c;
     static he field_k;
     private boolean field_n;
     private OutputStream field_b;
     private boolean field_i;
-    private bl field_h;
+    private PlatformTaskDispatcher field_h;
     private int field_d;
     private int field_p;
     private byte[] field_o;
@@ -36,7 +36,7 @@ final class qe implements Runnable {
             return;
           }
           if (param0 != -14) {
-            this.field_h = (bl) null;
+            this.field_h = (PlatformTaskDispatcher) null;
           }
           while (param3 > 0) {
             var5_int = this.field_q.read(param1, param2, param3);
@@ -200,12 +200,12 @@ final class qe implements Runnable {
             this.notifyAll();
           }
           if (this.field_m != null) {
-            while (this.field_m.field_b == 0) {
+            while (this.field_m.status == 0) {
               kk.a(1L, true);
             }
-            if (this.field_m.field_b == 1) {
+            if (this.field_m.status == 1) {
               try {
-                ((Thread) (this.field_m.field_g)).join();
+                ((Thread) (this.field_m.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (InterruptedException) (Object) decompiledCaughtException;
@@ -269,7 +269,7 @@ final class qe implements Runnable {
               }
             }
             if (this.field_m == null) {
-              this.field_m = this.field_h.a((Runnable) (this), 3, (byte) -126);
+              this.field_m = this.field_h.requestThreadStart((Runnable) (this), 3, (byte) -126);
             }
             this.notifyAll();
           }
@@ -302,7 +302,7 @@ final class qe implements Runnable {
         }
     }
 
-    qe(java.net.Socket param0, bl param1) throws IOException {
+    qe(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -355,7 +355,7 @@ final class qe implements Runnable {
         }
     }
 
-    private qe(java.net.Socket param0, bl param1, int param2) throws IOException {
+    private qe(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_f = 0;
         this.field_n = false;
         this.field_i = false;

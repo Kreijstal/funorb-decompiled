@@ -7,14 +7,14 @@ final class BufferedSocket implements Runnable {
     private OutputStream field_d;
     static long[][] field_f;
     private InputStream field_n;
-    private od field_q;
+    private PlatformTask field_q;
     private int field_r;
     private boolean field_a;
     static int field_i;
     private boolean field_l;
     private int field_b;
     static long[] field_c;
-    private ce field_p;
+    private PlatformTaskDispatcher field_p;
     private byte[] field_h;
     private int field_e;
     static dd field_m;
@@ -225,12 +225,12 @@ final class BufferedSocket implements Runnable {
             return;
           }
           if (null != this.field_q) {
-            while (this.field_q.field_b == 0) {
+            while (this.field_q.status == 0) {
               vh.a(1L, param0 + 104);
             }
-            if (1 == this.field_q.field_b) {
+            if (1 == this.field_q.status) {
               try {
-                ((Thread) (this.field_q.field_e)).join();
+                ((Thread) (this.field_q.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -299,7 +299,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    BufferedSocket(java.net.Socket param0, ce param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -337,7 +337,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_q) {
-              this.field_q = this.field_p.a(4532, (Runnable) (this), 3);
+              this.field_q = this.field_p.requestThreadStart(4532, (Runnable) (this), 3);
             }
             this.notifyAll();
           }
@@ -442,7 +442,7 @@ final class BufferedSocket implements Runnable {
         return this.field_n.available();
     }
 
-    private BufferedSocket(java.net.Socket param0, ce param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_b = 0;
         this.field_e = 0;
         this.field_l = false;

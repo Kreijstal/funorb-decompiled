@@ -27,19 +27,19 @@ final class id {
             return false;
           }
           if (gg.field_e == null) {
-            gg.field_e = af.field_f.a(be.field_b, (byte) 32, a.field_d);
+            gg.field_e = af.field_f.requestDirectSocket(be.field_b, (byte) 32, a.field_d);
           }
-          if (0 == gg.field_e.field_b) {
+          if (0 == gg.field_e.status) {
             return false;
           }
           dupTemp$1 = lj.a((byte) -47);
           jd.field_n = dupTemp$1;
           ug.field_d = dupTemp$1;
-          if (1 != gg.field_e.field_b) {
+          if (1 != gg.field_e.status) {
             ResourceArchive.field_k = NetworkGameClient.field_q;
           } else {
             try {
-              sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.field_e), af.field_f);
+              sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.result), af.field_f);
               ud.field_b.position = 0;
               var4 = AccountRequestState.field_a;
               var5 = var4;

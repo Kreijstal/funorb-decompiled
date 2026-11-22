@@ -5,10 +5,10 @@ import java.io.*;
 
 final class sc implements Runnable {
     private PacketBuffer field_m;
-    private kk field_f;
+    private PlatformTask field_f;
     private java.net.URL field_o;
     static int field_c;
-    private fd field_e;
+    private PlatformTaskDispatcher field_e;
     static String field_p;
     static String field_h;
     private DataInputStream field_d;
@@ -17,24 +17,24 @@ final class sc implements Runnable {
     static String field_k;
     static bd field_l;
     static CipherPacketBuffer field_g;
-    private kk field_n;
+    private PlatformTask field_n;
     private int field_b;
-    private kk field_j;
+    private PlatformTask field_j;
 
     protected final void finalize() {
         if (null != this.field_n) {
-          if (null != this.field_n.field_c) {
+          if (null != this.field_n.result) {
             try {
-              ((DataInputStream) (this.field_n.field_c)).close();
+              ((DataInputStream) (this.field_n.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_n = null;
         }
         if (this.field_j != null) {
-          if (this.field_j.field_c != null) {
+          if (this.field_j.result != null) {
             try {
-              ((java.net.Socket) (this.field_j.field_c)).close();
+              ((java.net.Socket) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -128,12 +128,12 @@ final class sc implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         if (this.field_b == 0) {
           if (null == this.field_n) {
-            this.field_n = this.field_e.a(30085, this.field_o);
+            this.field_n = this.field_e.requestUrlStream(30085, this.field_o);
           }
-          if (this.field_n.field_f == 0) {
+          if (this.field_n.status == 0) {
             return false;
           }
-          if (this.field_n.field_f != 1) {
+          if (this.field_n.status != 1) {
             this.field_n = null;
             decompiledFrameRemainder0 = false;
           }
@@ -141,12 +141,12 @@ final class sc implements Runnable {
         if (decompiledFrameRemainder0) {
           if (this.field_b == 1) {
             if (this.field_j == null) {
-              this.field_j = this.field_e.a(this.field_o.getHost(), 96, 443);
+              this.field_j = this.field_e.requestDirectSocket(this.field_o.getHost(), 96, 443);
             }
-            if (0 == this.field_j.field_f) {
+            if (0 == this.field_j.status) {
               return false;
             }
-            if (1 != this.field_j.field_f) {
+            if (1 != this.field_j.status) {
               this.field_b = this.field_b + 1;
               this.field_j = null;
               return false;
@@ -155,10 +155,10 @@ final class sc implements Runnable {
           if (this.field_d == null) {
             try {
               if (this.field_b == 0) {
-                this.field_d = (DataInputStream) (this.field_n.field_c);
+                this.field_d = (DataInputStream) (this.field_n.result);
               }
               if (this.field_b == 1) {
-                var4 = (java.net.Socket) (this.field_j.field_c);
+                var4 = (java.net.Socket) (this.field_j.result);
                 var4.setSoTimeout(10000);
                 var3 = var4.getOutputStream();
                 var3.write(17);
@@ -175,12 +175,12 @@ final class sc implements Runnable {
             }
           }
           if (this.field_f == null) {
-            this.field_f = this.field_e.a(5, (Runnable) (this), -102);
+            this.field_f = this.field_e.requestThreadStart(5, (Runnable) (this), -102);
           }
-          if (this.field_f.field_f == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (1 == this.field_f.field_f) {
+          if (1 == this.field_f.status) {
             return false;
           }
           this.finalize();
@@ -227,7 +227,7 @@ final class sc implements Runnable {
         u.field_f[8] = m.field_m[0];
     }
 
-    sc(fd param0, java.net.URL param1, int param2) {
+    sc(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_o = param1;
           this.field_e = param0;

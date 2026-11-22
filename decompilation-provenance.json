@@ -10708,17 +10708,17 @@
       "inputTreeSha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b",
       "sources": {
         "files": 306,
-        "sha256": "20a2e700214e094146182469338c1f24c1c6e7aeb437d2071cc6e0b1308695e4"
+        "sha256": "fd95812688d07d816cf6f3cc174bcf522cdba2929860560528e272fde67cee96"
       },
       "dictionary": {
         "path": "decompilation/drphlogistonsavestheearth-naming.json",
-        "sha256": "f2b29cdd67c033e4f9e1b41e9339e7f6902936f0dec835217709e322e32c7411"
+        "sha256": "fba2c09502a65897ed5d8e7c65bf9bea67959f58cec1ce6e5e2067ad1fdbb718"
       },
       "readingGuide": {
         "path": "games/drphlogistonsavestheearth/README.md",
-        "sha256": "e2abba645c21273d40225ad43c56bc6ba0b35cd466753215a4efe1d00eb6a7e0"
+        "sha256": "52f93190e211690c48f8f31a63a6ec53bab9532903260012461cb3fa99b43fc5"
       },
-      "rulesSha256": "34c936f29cb8d5fb29853386dde730e053c7016c53978ea99a16eaf82209eee1",
+      "rulesSha256": "416d9c2258bde58605a8d5d9e74fc679c61837e58b9b08e8498b336e23730dfb",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10756,17 +10756,17 @@
       "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
       "sources": {
         "files": 306,
-        "sha256": "48c946f1ce3535c0e3aaac6235eaa455613bf916a5108bb22ac880d72c764db3"
+        "sha256": "71c7040a2e5cff9e5e302c08437cdf897b4cbe5dea47f736843ea4cac1a92562"
       },
       "dictionary": {
         "path": "decompilation/fleacircus-naming.json",
-        "sha256": "66fdd2b47361cdc0c680372f2dfa4a6eaf18e4f85b8802fabff9abafe0e081d2"
+        "sha256": "d21731fda0605abebea3365b5bed6f265675a5cc55b7105197aeb4d2024b28e5"
       },
       "readingGuide": {
         "path": "games/fleacircus/README.md",
-        "sha256": "1dd0e26c2695abf244379e5371435db1ed91b3445f65abc402b633f0dac5276b"
+        "sha256": "e65c33af40bdeb44b2212adc84ca6bbcd985f2f567bc991219435ae1a8bc7f25"
       },
-      "rulesSha256": "fb276ed1b28e4bb1cd60c16e182bac9776f5cefcf35fefe46e6034ab74f1ba9b",
+      "rulesSha256": "52037c89b6ce0e70f0b6afccb28da8650ca2404f02f8aa673955b0abe7943111",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10828,17 +10828,17 @@
       "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
       "sources": {
         "files": 297,
-        "sha256": "c74419d2036f73acdea19fb5f1d925d4828fa22dfed75c41c9d14a55fbcf4664"
+        "sha256": "ee390f836eb60dd16841a4b37860904ca319ded2ef8878aa44837862fa1784a2"
       },
       "dictionary": {
         "path": "decompilation/lexicominos-naming.json",
-        "sha256": "784663a3931edd0db90de84f3ee5944d79eaf39f0c0b24960eb90e13aafa1e6d"
+        "sha256": "879f4252873231d90001ad5067229c7c8cb804426fc5be6a519113cb3fd7a05e"
       },
       "readingGuide": {
         "path": "games/lexicominos/README.md",
-        "sha256": "906de3653c0834a6ab5341d2d5c4122863a23eb524a465999b15b72b749496e5"
+        "sha256": "c3995877b43b14c804ddbde5e0331d965ec531660a50011c60a823a3cf908996"
       },
-      "rulesSha256": "475f3251c0c7450638f1236997b7896abdcb1c3a4aafce86f5ccb98b44f47284",
+      "rulesSha256": "b7d166b23dd6f1a6d557a95b6c3c7b256c18a0f1e91f6c7e20a154c66c033bd7",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10852,17 +10852,17 @@
       "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
       "sources": {
         "files": 341,
-        "sha256": "a864d24186a019f9a6a8c4b8791ae70d81c780572a9754985305c99e7f32009d"
+        "sha256": "d8109edb0160ccb7832df382a3232626cfd532cce31a5be7dd7e6fba2d3a4fc4"
       },
       "dictionary": {
         "path": "decompilation/minerdisturbance-naming.json",
-        "sha256": "16c9894ce9fa85d8da71d693ce89e497bb6132711632400cfdb00be363c18c9f"
+        "sha256": "ab6e79f13d2ac039a515a20ebab46db1ea682fc076d1cd528bf7f224f48617a0"
       },
       "readingGuide": {
         "path": "games/minerdisturbance/README.md",
-        "sha256": "a35ea4bc3ef956c87be116ec999eabef56312473e40c90273215e2eeac5b5b28"
+        "sha256": "a96d0c353ef1ab1409ebc933ff59c3d46a737af38dd9a7eed05887d8519612a8"
       },
-      "rulesSha256": "6846f0877fbdbed991381610913b104fc2f83d43686c6cb623ec697d7299c8d9",
+      "rulesSha256": "077fce89e7bf9e59e18b10f901247f10b9303bab2b3a9011ca865bda003ccbea",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10924,17 +10924,17 @@
       "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
       "sources": {
         "files": 335,
-        "sha256": "c3fac0b7000117786472d1aca4cc4257b2cd8a9523dd8e69822228d7c88f8660"
+        "sha256": "d6dde19e62e269ac20e24066b559c70b442f977f740a5f4ad748e71533cd9496"
       },
       "dictionary": {
         "path": "decompilation/hostilespawn_vengeance-naming.json",
-        "sha256": "715965b3709192f7794b0640cc935773cc6530d03fe0d92b9a6f1f39c9dcb202"
+        "sha256": "6e9ec9b312d0b8bf7f81882cbdb336998f6813c1a4c27ad69ad6609d0b60f9f4"
       },
       "readingGuide": {
         "path": "games/hostilespawn_vengeance/README.md",
-        "sha256": "2b08e1dd14847b5333681c80e660bf02aaf6d46a087d009d0e7b58d312bd4421"
+        "sha256": "1dd72f4dee0b80398794c41dccd514374401068ec7ca5ef601693ad442e09186"
       },
-      "rulesSha256": "7c33ca800d37ebb429f5c83672a4496131fb194b2a447f4a70799f1c32304fd6",
+      "rulesSha256": "fa6ab3768ff86254ed103687b726213d537fbabacd9502044e0667f8cd7d9cfc",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12136,7 +12136,7 @@
         },
         "publishedSources": {
           "files": 306,
-          "sha256": "20a2e700214e094146182469338c1f24c1c6e7aeb437d2071cc6e0b1308695e4"
+          "sha256": "fd95812688d07d816cf6f3cc174bcf522cdba2929860560528e272fde67cee96"
         }
       },
       "dungeonassault": {
@@ -12378,7 +12378,7 @@
         },
         "publishedSources": {
           "files": 306,
-          "sha256": "48c946f1ce3535c0e3aaac6235eaa455613bf916a5108bb22ac880d72c764db3"
+          "sha256": "71c7040a2e5cff9e5e302c08437cdf897b4cbe5dea47f736843ea4cac1a92562"
         }
       },
       "geoblox": {
@@ -12528,7 +12528,7 @@
         },
         "publishedSources": {
           "files": 335,
-          "sha256": "c3fac0b7000117786472d1aca4cc4257b2cd8a9523dd8e69822228d7c88f8660"
+          "sha256": "d6dde19e62e269ac20e24066b559c70b442f977f740a5f4ad748e71533cd9496"
         }
       },
       "kickabout": {
@@ -12628,7 +12628,7 @@
         },
         "publishedSources": {
           "files": 297,
-          "sha256": "c74419d2036f73acdea19fb5f1d925d4828fa22dfed75c41c9d14a55fbcf4664"
+          "sha256": "ee390f836eb60dd16841a4b37860904ca319ded2ef8878aa44837862fa1784a2"
         }
       },
       "minerdisturbance": {
@@ -12678,7 +12678,7 @@
         },
         "publishedSources": {
           "files": 341,
-          "sha256": "a864d24186a019f9a6a8c4b8791ae70d81c780572a9754985305c99e7f32009d"
+          "sha256": "d8109edb0160ccb7832df382a3232626cfd532cce31a5be7dd7e6fba2d3a4fc4"
         }
       },
       "monkeypuzzle2": {

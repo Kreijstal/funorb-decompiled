@@ -208,7 +208,7 @@ final class jk extends si {
             mi.field_g[0] = 5;
           } else if (2 != re.field_g) {
             if (re.field_g == 3) {
-              if (sb.field_d.field_o) {
+              if (sb.field_d.privilegedTasksEnabled) {
                 var3_int = ab.a(ol.field_h, rc.field_h, pj.field_A, uj.field_i, 14074);
               } else {
                 var3_int = ab.a(ol.field_h, of.field_u, pj.field_A, uj.field_i, 14074);

@@ -35,20 +35,20 @@ final class fn extends IntrusiveNode {
           }
           try {
             if (tl.field_m == 0) {
-              em.field_B = jl.field_fb.a(fb.field_a, kb.field_a, (byte) 60);
+              em.field_B = jl.field_fb.requestDirectSocket(fb.field_a, kb.field_a, (byte) 60);
               tl.field_m = tl.field_m + 1;
             }
             if (1 == tl.field_m) {
-              if (em.field_B.field_c == 2) {
+              if (em.field_B.status == 2) {
                 stackIn_15_0 = tg.a(-1, -106);
                 return stackIn_15_0;
               }
-              if (em.field_B.field_c == 1) {
+              if (em.field_B.status == 1) {
                 tl.field_m = tl.field_m + 1;
               }
             }
             if (tl.field_m == 2) {
-              mb.field_c = new ll((java.net.Socket) (em.field_B.field_a), jl.field_fb);
+              mb.field_c = new ll((java.net.Socket) (em.field_B.result), jl.field_fb);
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.writeByte(15, 25564);

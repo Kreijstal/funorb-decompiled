@@ -27,7 +27,7 @@ final class TriangleMesh {
     byte[] field_J;
     short[] field_q;
     short[] field_s;
-    static ab field_n;
+    static PlatformTaskDispatcher field_n;
     short[] field_g;
     short[] field_k;
     int field_G;
@@ -64,7 +64,7 @@ final class TriangleMesh {
         int var10;
         int var11;
         int var12;
-        ab var13;
+        PlatformTaskDispatcher var13;
         var12 = Lexicominos.field_L ? 1 : 0;
         if (this.field_f) {
           return;
@@ -104,8 +104,8 @@ final class TriangleMesh {
         this.field_v = var5;
         this.field_G = var6;
         if (param0 != -50) {
-          var13 = (ab) null;
-          TriangleMesh.a((ab) null, 77);
+          var13 = (PlatformTaskDispatcher) null;
+          TriangleMesh.a((PlatformTaskDispatcher) null, 77);
         }
         this.field_M = var3;
         this.field_O = var4;
@@ -118,7 +118,7 @@ final class TriangleMesh {
         }
     }
 
-    final static boolean a(ab param0, int param1) {
+    final static boolean a(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -129,7 +129,7 @@ final class TriangleMesh {
           if (param1 >= -74) {
             TriangleMesh.a(-91);
           }
-          stackIn_3_0 = param0.b(0);
+          stackIn_3_0 = param0.isFullscreenAvailable(0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class TriangleMesh {
         try {
           var5_int = param2 + param4;
           if (param3 != 1) {
-            field_n = (ab) null;
+            field_n = (PlatformTaskDispatcher) null;
           }
           var6 = param1 + param0;
           if (SoftwareRasterizer.field_g < param2) {

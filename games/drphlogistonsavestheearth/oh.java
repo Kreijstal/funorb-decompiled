@@ -18,7 +18,7 @@ final class oh {
     final static boolean a(int param0) {
         if (param0 != 0) {
           Object var2 = (Object) null;
-          oh.a((bl) null, -112, (Object) null);
+          oh.a((PlatformTaskDispatcher) null, -112, (Object) null);
         }
         return gf.field_G;
     }
@@ -31,7 +31,7 @@ final class oh {
         oc.field_B = param1;
     }
 
-    final static void a(bl param0, int param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, int param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

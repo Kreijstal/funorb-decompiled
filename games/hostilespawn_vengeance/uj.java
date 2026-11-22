@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj extends IntrusiveNode {
-    static fd field_k;
+    static PlatformTaskDispatcher field_k;
     boolean field_j;
     static int field_l;
     static oc field_p;
@@ -26,7 +26,7 @@ final class uj extends IntrusiveNode {
           field_p = null;
           return;
         }
-        field_k = (fd) null;
+        field_k = (PlatformTaskDispatcher) null;
         field_p = null;
     }
 

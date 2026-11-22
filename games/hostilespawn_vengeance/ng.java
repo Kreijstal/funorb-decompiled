@@ -9,11 +9,11 @@ final class ng extends IntrusiveNode {
     static int[] field_l;
     static bd field_v;
     int[] field_q;
-    kk[] field_j;
+    PlatformTask[] field_j;
     static bd field_s;
     static bd field_i;
     static bd[][] field_p;
-    kk[] field_r;
+    PlatformTask[] field_r;
     int[] field_m;
     int field_t;
     int field_h;

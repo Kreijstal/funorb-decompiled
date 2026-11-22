@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class fd implements Runnable {
-    private boolean field_o;
+final class PlatformTaskDispatcher implements Runnable {
+    private boolean shutdownRequested;
     ee field_q;
     private sl field_r;
     ee field_l;
@@ -14,36 +14,36 @@ final class fd implements Runnable {
     private static volatile long field_x;
     private static String field_m;
     static java.lang.reflect.Method field_i;
-    private kk field_s;
+    private PlatformTask queueHead;
     ee field_f;
-    boolean field_k;
+    boolean privilegedTasksEnabled;
     private static String field_e;
-    private kk field_n;
+    private PlatformTask queueTail;
     private tl field_a;
     static String field_h;
     private static int field_t;
     private static String field_g;
-    private boolean field_b;
-    private Thread field_w;
+    private boolean microsoftJvm;
+    private Thread workerThread;
     static String field_u;
     private Object field_j;
     java.awt.EventQueue field_d;
 
-    private final kk a(boolean param0, String param1, int param2, int param3) {
+    private final PlatformTask requestSocketConnection(boolean param0, String param1, int param2, int param3) {
         if (param3 != 20691) {
           field_u = (String) null;
         }
-        return this.a(!param0 ? 1 : 22, param1, false, 0, param2);
+        return this.enqueueTask(!param0 ? 1 : 22, param1, false, 0, param2);
     }
 
-    final kk a(String param0, int param1, int param2) {
+    final PlatformTask requestDirectSocket(String param0, int param1, int param2) {
         if (param1 <= 47) {
-          this.field_o = true;
+          this.shutdownRequested = true;
         }
-        return this.a(false, param0, param2, 20691);
+        return this.requestSocketConnection(false, param0, param2, 20691);
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte param0) {
         try {
           InterruptedException interruptedException = null;
           IOException iOException = null;
@@ -53,11 +53,11 @@ final class fd implements Runnable {
           IOException var3 = null;
           var2_ref_Object = this;
           synchronized (var2_ref_Object) {
-            this.field_o = true;
+            this.shutdownRequested = true;
             this.notifyAll();
           }
           try {
-            this.field_w.join();
+            this.workerThread.join();
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             interruptedException = (InterruptedException) (Object) decompiledCaughtException;
@@ -106,31 +106,31 @@ final class fd implements Runnable {
         }
     }
 
-    final kk a(boolean param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask requestFullscreenEnter(boolean param0, int param1, int param2, int param3, int param4) {
         if (param0) {
-          return (kk) null;
+          return (PlatformTask) null;
         }
-        return this.a(6, (Object) null, param0, param2 + (param4 << 16), (param1 << 16) + param3);
+        return this.enqueueTask(6, (Object) null, param0, param2 + (param4 << 16), (param1 << 16) + param3);
     }
 
-    final boolean a(boolean param0) {
+    final boolean isFullscreenAvailable(boolean param0) {
         if (!param0) {
           return false;
         }
-        if (!this.field_k) {
+        if (!this.privilegedTasksEnabled) {
           return false;
         }
-        if (!this.field_b) {
+        if (!this.microsoftJvm) {
           return null != this.field_p ? true : false;
         }
         return null != this.field_r ? true : false;
     }
 
-    final kk a(int param0, java.awt.Frame param1) {
+    final PlatformTask requestFullscreenExit(int param0, java.awt.Frame param1) {
         if (param0 != 7) {
-          return (kk) null;
+          return (PlatformTask) null;
         }
-        return this.a(7, param1, false, 0, 0);
+        return this.enqueueTask(7, param1, false, 0, 0);
     }
 
     private final static ee a(int param0, String param1, String param2, int param3) {
@@ -178,13 +178,13 @@ final class fd implements Runnable {
         }
     }
 
-    final kk a(int param0, java.net.URL param1) {
-        kk discarded$0 = null;
+    final PlatformTask requestUrlStream(int param0, java.net.URL param1) {
+        PlatformTask discarded$0 = null;
         if (param0 != 30085) {
           String var4 = (String) null;
-          discarded$0 = this.a(true, (String) null, -77, -50);
+          discarded$0 = this.requestSocketConnection(true, (String) null, -77, -50);
         }
-        return this.a(4, param1, false, 0, 0);
+        return this.enqueueTask(4, param1, false, 0, 0);
     }
 
     public final void run() {
@@ -204,7 +204,7 @@ final class fd implements Runnable {
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
-          kk var8 = null;
+          PlatformTask var8 = null;
           Object[] var9 = null;
           java.awt.Component var10 = null;
           String var11 = null;
@@ -219,12 +219,12 @@ final class fd implements Runnable {
             var2 = this;
             synchronized (var2) {
               boolean decompiledFrameCompleted0 = true;
-              while (!this.field_o) {
-                if (null != this.field_s) {
-                  var8 = this.field_s;
-                  this.field_s = this.field_s.field_e;
-                  if (this.field_s == null) {
-                    this.field_n = null;
+              while (!this.shutdownRequested) {
+                if (null != this.queueHead) {
+                  var8 = this.queueHead;
+                  this.queueHead = this.queueHead.next;
+                  if (this.queueHead == null) {
+                    this.queueTail = null;
                   }
                   decompiledFrameCompleted0 = false;
                   break;
@@ -242,13 +242,13 @@ final class fd implements Runnable {
             }
             try {
               {
-                var2_int = var8.field_g;
+                var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
                     if (field_x > hn.a((byte) 80)) {
                       throw new IOException();
                     }
-                    var8.field_c = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_a)), var8.field_b);
+                    var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 22:
                     if (hn.a((byte) 80) < field_x) {
@@ -256,166 +256,166 @@ final class fd implements Runnable {
                     }
                     try {
                       if (false) throw (ab) null;
-                      var8.field_c = qj.a(27, (String) (var8.field_a), var8.field_b).a(31067);
+                      var8.result = qj.a(27, (String) (var8.objectArgument), var8.intArgument).a(31067);
                     } catch (ab decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ab) (Object) decompiledCaughtException;
-                      var8.field_c = var3_ref.getMessage();
+                      var8.result = var3_ref.getMessage();
                       throw var3_ref;
                     }
                     break;
                   case 2:
-                    var18 = new Thread((Runnable) (var8.field_a));
+                    var18 = new Thread((Runnable) (var8.objectArgument));
                     var18.setDaemon(true);
                     var18.start();
-                    var18.setPriority(var8.field_b);
-                    var8.field_c = var18;
+                    var18.setPriority(var8.intArgument);
+                    var8.result = var18;
                     break;
                   case 4:
                     if (hn.a((byte) 80) < field_x) {
                       throw new IOException();
                     }
-                    var8.field_c = new DataInputStream(((java.net.URL) (var8.field_a)).openStream());
+                    var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
                     break;
                   case 9:
-                    var17 = (Object[]) (var8.field_a);
-                    if (this.field_k &&
+                    var17 = (Object[]) (var8.objectArgument);
+                    if (this.privilegedTasksEnabled &&
                       ((Class) (var17[0])).getClassLoader() == null) {
                       throw new SecurityException();
                     }
-                    var8.field_c = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
+                    var8.result = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
                     break;
                   case 18:
                     var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                    var8.field_c = var16.getContents((Object) null);
+                    var8.result = var16.getContents((Object) null);
                     break;
                   case 19:
-                    var7 = (java.awt.datatransfer.Transferable) (var8.field_a);
+                    var7 = (java.awt.datatransfer.Transferable) (var8.objectArgument);
                     var15 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
                     var15.setContents(var7, (java.awt.datatransfer.ClipboardOwner) null);
                     break;
                   case 16:
                   default:
-                    if (!this.field_k) {
-                      throw fd.<RuntimeException>throwUnchecked(new Exception(""));
+                    if (!this.privilegedTasksEnabled) {
+                      throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
                         if (hn.a((byte) 80) < field_x) {
                           throw new IOException();
                         }
-                        var14 = (255 & var8.field_b >> 24) + "." + ((var8.field_b & 16770738) >> 16) + "." + ((var8.field_b & 65486) >> 8) + "." + (255 & var8.field_b);
-                        var8.field_c = java.net.InetAddress.getByName(var14).getHostName();
+                        var14 = (255 & var8.intArgument >> 24) + "." + ((var8.intArgument & 16770738) >> 16) + "." + ((var8.intArgument & 65486) >> 8) + "." + (255 & var8.intArgument);
+                        var8.result = java.net.InetAddress.getByName(var14).getHostName();
                         break;
                       case 21:
                         if (hn.a((byte) 80) < field_x) {
                           throw new IOException();
                         }
-                        var8.field_c = java.net.InetAddress.getByName((String) (var8.field_a)).getAddress();
+                        var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
                         break;
                       case 5:
-                        if (!this.field_b) {
-                          var8.field_c = Class.forName("hc").getMethod("listmodes", new Class[]{}).invoke(this.field_p, new Object[]{});
+                        if (!this.microsoftJvm) {
+                          var8.result = Class.forName("hc").getMethod("listmodes", new Class[]{}).invoke(this.field_p, new Object[]{});
                         } else {
-                          var8.field_c = this.field_r.a((byte) 113);
+                          var8.result = this.field_r.a((byte) 113);
                         }
                         break;
                       case 6:
                         var13 = new java.awt.Frame("Jagex Full Screen");
-                        var8.field_c = var13;
+                        var8.result = var13;
                         var13.setResizable(false);
-                        if (this.field_b) {
-                          this.field_r.a(65535 & var8.field_b, var8.field_b >>> 16, -7018, 65535 & var8.field_d, var13, var8.field_d >> 16);
+                        if (this.microsoftJvm) {
+                          this.field_r.a(65535 & var8.intArgument, var8.intArgument >>> 16, -7018, 65535 & var8.secondaryIntArgument, var13, var8.secondaryIntArgument >> 16);
                         } else {
-                          Class.forName("hc").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_p, new Object[]{var13, new Integer(var8.field_b >>> 16), new Integer(var8.field_b & 65535), new Integer(var8.field_d >> 16), new Integer(65535 & var8.field_d)});
+                          Class.forName("hc").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_p, new Object[]{var13, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondaryIntArgument >> 16), new Integer(65535 & var8.secondaryIntArgument)});
                         }
                         break;
                       case 7:
-                        if (this.field_b) {
-                          this.field_r.a((java.awt.Frame) (var8.field_a), -7738);
+                        if (this.microsoftJvm) {
+                          this.field_r.a((java.awt.Frame) (var8.objectArgument), -7738);
                         } else {
                           Class.forName("hc").getMethod("exit", new Class[]{}).invoke(this.field_p, new Object[]{});
                         }
                         break;
                       case 12:
-                        var3_ref2 = fd.a(field_t, (String) (var8.field_a), field_m, -7);
-                        var8.field_c = var3_ref2;
+                        var3_ref2 = PlatformTaskDispatcher.a(field_t, (String) (var8.objectArgument), field_m, -7);
+                        var8.result = var3_ref2;
                         break;
                       case 16:
                       default:
-                        if (this.field_k &&
+                        if (this.privilegedTasksEnabled &&
                           14 == var2_int) {
-                          var3_int = var8.field_b;
-                          var4_int = var8.field_d;
-                          if (!this.field_b) {
+                          var3_int = var8.intArgument;
+                          var4_int = var8.secondaryIntArgument;
+                          if (!this.microsoftJvm) {
                             Class.forName("dm").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_j, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           } else {
                             this.field_a.a(var4_int, -93, var3_int);
                           }
                           break;
                         }
-                        if (this.field_k &&
+                        if (this.privilegedTasksEnabled &&
                           15 == var2_int) {
-                          stackIn_50_0 = (var8.field_b == 0) ? 0 : 1;
+                          stackIn_50_0 = (var8.intArgument == 0) ? 0 : 1;
                           var3_int = stackIn_50_0;
-                          var10 = (java.awt.Component) (var8.field_a);
-                          if (this.field_b) {
+                          var10 = (java.awt.Component) (var8.objectArgument);
+                          if (this.microsoftJvm) {
                             this.field_a.a(0, var3_int != 0, var10);
                           } else {
                             Class.forName("dm").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_j, new Object[]{var10, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
-                        if (!this.field_b &&
+                        if (!this.microsoftJvm &&
                           var2_int == 17) {
-                          var12 = (Object[]) (var8.field_a);
-                          Class.forName("dm").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_j, new Object[]{var12[0], var12[1], new Integer(var8.field_b), new Integer(var8.field_d), var12[2]});
+                          var12 = (Object[]) (var8.objectArgument);
+                          Class.forName("dm").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_j, new Object[]{var12[0], var12[1], new Integer(var8.intArgument), new Integer(var8.secondaryIntArgument), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw fd.<RuntimeException>throwUnchecked(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_c.startsWith("win")) {
-                              throw fd.<RuntimeException>throwUnchecked(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                             }
-                            var11 = (String) (var8.field_a);
+                            var11 = (String) (var8.objectArgument);
                             if (!var11.startsWith("http://") &&
                               !var11.startsWith("https://")) {
-                              throw fd.<RuntimeException>throwUnchecked(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var11.length(); var5++) {
                               if (var4.indexOf((int) var11.charAt(var5)) == -1) {
-                                throw fd.<RuntimeException>throwUnchecked(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var11 + "\"");
-                            var8.field_c = null;
+                            var8.result = null;
                           } catch (java.lang.Exception decompiledCaughtParameter2) {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
-                            var8.field_c = var3_ref3;
-                            throw fd.<RuntimeException>throwUnchecked(var3_ref3);
+                            var8.result = var3_ref3;
+                            throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(var3_ref3);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref2 = fd.a(field_t, (String) (var8.field_a), "", -7);
-                        var8.field_c = var3_ref2;
+                        var3_ref2 = PlatformTaskDispatcher.a(field_t, (String) (var8.objectArgument), "", -7);
+                        var8.result = var3_ref2;
                         break;
                     }
                     break;
                   case 8:
-                    var9 = (Object[]) (var8.field_a);
-                    if (this.field_k &&
+                    var9 = (Object[]) (var8.objectArgument);
+                    if (this.privilegedTasksEnabled &&
                       null == ((Class) (var9[0])).getClassLoader()) {
                       throw new SecurityException();
                     }
-                    var8.field_c = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
+                    var8.result = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                 }
               }
-              var8.field_f = 1;
+              var8.status = 1;
             } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var2_ref = (ThreadDeath) (Object) decompiledCaughtException;
@@ -423,7 +423,7 @@ final class fd implements Runnable {
             } catch (java.lang.Throwable decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = decompiledCaughtException;
-              var8.field_f = 2;
+              var8.status = 2;
             }
             var2 = var8;
             synchronized (var2) {
@@ -437,74 +437,74 @@ final class fd implements Runnable {
         }
     }
 
-    final kk a(byte param0, Class param1, String param2) {
+    final PlatformTask requestDeclaredField(byte param0, Class param1, String param2) {
         if (param0 <= 91) {
-          this.field_s = (kk) null;
+          this.queueHead = (PlatformTask) null;
         }
-        return this.a(9, new Object[]{param1, param2}, false, 0, 0);
+        return this.enqueueTask(9, new Object[]{param1, param2}, false, 0, 0);
     }
 
-    private final kk a(int param0, Object param1, boolean param2, int param3, int param4) {
-        kk var6 = null;
+    private final PlatformTask enqueueTask(int param0, Object param1, boolean param2, int param3, int param4) {
+        PlatformTask var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new kk();
+        var6 = new PlatformTask();
         if (param2) {
           field_c = (String) null;
         }
-        var6.field_d = param3;
-        var6.field_b = param4;
-        var6.field_a = param1;
-        var6.field_g = param0;
+        var6.secondaryIntArgument = param3;
+        var6.intArgument = param4;
+        var6.objectArgument = param1;
+        var6.requestType = param0;
         var7 = this;
         synchronized (var7) {
-          if (null != this.field_n) {
-            this.field_n.field_e = var6;
-            this.field_n = var6;
+          if (null != this.queueTail) {
+            this.queueTail.next = var6;
+            this.queueTail = var6;
           } else {
-            this.field_s = var6;
-            this.field_n = var6;
+            this.queueHead = var6;
+            this.queueTail = var6;
           }
           this.notify();
         }
         return var6;
     }
 
-    final kk a(int param0, Runnable param1, int param2) {
+    final PlatformTask requestThreadStart(int param0, Runnable param1, int param2) {
         int var4 = -31 / ((9 - param2) / 44);
-        return this.a(2, param1, false, 0, param0);
+        return this.enqueueTask(2, param1, false, 0, param0);
     }
 
-    final kk a(int param0) {
+    final PlatformTask requestDisplayModes(int param0) {
         int var2 = 102 % ((-15 - param0) / 43);
-        return this.a(5, (Object) null, false, 0, 0);
+        return this.enqueueTask(5, (Object) null, false, 0, 0);
     }
 
-    final kk a(Class[] param0, Class param1, String param2, int param3) {
+    final PlatformTask requestDeclaredMethod(Class[] param0, Class param1, String param2, int param3) {
         if (param3 < 104) {
-          this.field_w = (Thread) null;
+          this.workerThread = (Thread) null;
         }
-        return this.a(8, new Object[]{param1, param2, param0}, false, 0, 0);
+        return this.enqueueTask(8, new Object[]{param1, param2, param0}, false, 0, 0);
     }
 
-    fd(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
         sl var6 = null;
-        this.field_o = false;
+        this.shutdownRequested = false;
         this.field_q = null;
-        this.field_n = null;
-        this.field_k = false;
-        this.field_b = false;
+        this.queueTail = null;
+        this.privilegedTasksEnabled = false;
+        this.microsoftJvm = false;
         this.field_f = null;
         this.field_l = null;
-        this.field_s = null;
+        this.queueHead = null;
         field_m = param1;
         stackIn_3_1 = (param3);
-        this.field_k = stackIn_3_1;
+        this.privilegedTasksEnabled = stackIn_3_1;
         field_u = "Unknown";
         field_t = param0;
         field_h = "1.1";
@@ -516,7 +516,7 @@ final class fd implements Runnable {
           exception = (Exception) (Object) decompiledCaughtException;
         }
         if (field_u.toLowerCase().indexOf("microsoft") != -1) {
-          this.field_b = true;
+          this.microsoftJvm = true;
         }
         try {
           field_e = System.getProperty("os.name");
@@ -556,7 +556,7 @@ final class fd implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter5;
           throwable = decompiledCaughtException;
         }
-        if (!this.field_b) {
+        if (!this.microsoftJvm) {
           try {
             Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
           } catch (java.lang.Exception decompiledCaughtParameter6) {
@@ -571,7 +571,7 @@ final class fd implements Runnable {
           }
         }
         qd.a(-1, field_t, field_m);
-        if (this.field_k) {
+        if (this.privilegedTasksEnabled) {
           this.field_q = new ee(qd.a(field_t, (String) null, "random.dat", true), "rw", 25L);
           this.field_l = new ee(qd.a("main_file_cache.dat2", -19005), "rw", 314572800L);
           this.field_f = new ee(qd.a("main_file_cache.idx255", -19005), "rw", 1048576L);
@@ -579,7 +579,7 @@ final class fd implements Runnable {
           for (var5_int = 0; var5_int < param2; var5_int++) {
             this.field_v[var5_int] = new ee(qd.a("main_file_cache.idx" + var5_int, -19005), "rw", 1048576L);
           }
-          if (this.field_b) {
+          if (this.microsoftJvm) {
             try {
               Class.forName("qe").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
@@ -588,7 +588,7 @@ final class fd implements Runnable {
             }
           }
           try {
-            if (this.field_b) {
+            if (this.microsoftJvm) {
               var6 = new sl();
               this.field_r = var6;
             } else {
@@ -599,7 +599,7 @@ final class fd implements Runnable {
             throwable = decompiledCaughtException;
           }
           try {
-            if (!this.field_b) {
+            if (!this.microsoftJvm) {
               this.field_j = Class.forName("dm").newInstance();
             } else {
               this.field_a = new tl();
@@ -609,11 +609,11 @@ final class fd implements Runnable {
             throwable = decompiledCaughtException;
           }
         }
-        this.field_o = false;
-        this.field_w = new Thread((Runnable) (this));
-        this.field_w.setPriority(10);
-        this.field_w.setDaemon(true);
-        this.field_w.start();
+        this.shutdownRequested = false;
+        this.workerThread = new Thread((Runnable) (this));
+        this.workerThread.setPriority(10);
+        this.workerThread.setDaemon(true);
+        this.workerThread.start();
     }
 
     static {

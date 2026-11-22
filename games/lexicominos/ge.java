@@ -8,10 +8,10 @@ final class ge implements Runnable {
     private InputStream field_b;
     private int field_i;
     private int field_k;
-    private ab field_d;
+    private PlatformTaskDispatcher field_d;
     private byte[] field_f;
     private java.net.Socket field_g;
-    private ei field_c;
+    private PlatformTask field_c;
     private boolean field_l;
     private OutputStream field_h;
     private boolean field_j;
@@ -60,7 +60,7 @@ final class ge implements Runnable {
         this.b(58);
     }
 
-    ge(java.net.Socket param0, ab param1) throws IOException {
+    ge(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -180,7 +180,7 @@ final class ge implements Runnable {
         }
     }
 
-    final static void a(byte param0, int param1, PacketBuffer param2, ab param3) {
+    final static void a(byte param0, int param1, PacketBuffer param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -225,8 +225,8 @@ final class ge implements Runnable {
             if (param0 > -120) {
               ge.clearStaticReferences((byte) -107);
             }
-            var18.field_i = new ei[var18.field_p];
-            var18.field_k = new ei[var18.field_p];
+            var18.field_i = new PlatformTask[var18.field_p];
+            var18.field_k = new PlatformTask[var18.field_p];
             var18.field_m = new int[var18.field_p];
             var18.field_o = new byte[var18.field_p][][];
             for (var5 = 0; var18.field_p > var5; var5++) {
@@ -263,7 +263,7 @@ final class ge implements Runnable {
                       var12[var17] = qf.a(-4174, var10[var17]);
                       var17++;
                     }
-                    var18.field_i[var5] = param3.a(var8, qf.a(-4174, var20), var12, (byte) 113);
+                    var18.field_i[var5] = param3.requestDeclaredMethod(var8, qf.a(-4174, var20), var12, (byte) 113);
                     var18.field_o[var5] = var21;
                   }
                 } else {
@@ -277,7 +277,7 @@ final class ge implements Runnable {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_k[var5] = param3.a(var15, 2, qf.a(-4174, var16));
+                  var18.field_k[var5] = param3.requestDeclaredField(var15, 2, qf.a(-4174, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -527,7 +527,7 @@ final class ge implements Runnable {
               }
             }
             if (this.field_c == null) {
-              this.field_c = this.field_d.a((Runnable) (this), false, 3);
+              this.field_c = this.field_d.requestThreadStart((Runnable) (this), false, 3);
             }
             this.notifyAll();
           }
@@ -554,19 +554,19 @@ final class ge implements Runnable {
             return;
           }
           if (param0 <= 13) {
-            this.field_d = (ab) null;
+            this.field_d = (PlatformTaskDispatcher) null;
           }
           synchronized (this) {
             this.field_l = true;
             this.notifyAll();
           }
           if (this.field_c != null) {
-            while (this.field_c.field_b == 0) {
+            while (this.field_c.status == 0) {
               ge.a(0, 1L);
             }
-            if (1 == this.field_c.field_b) {
+            if (1 == this.field_c.status) {
               try {
-                ((Thread) (this.field_c.field_g)).join();
+                ((Thread) (this.field_c.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -604,7 +604,7 @@ final class ge implements Runnable {
         }
     }
 
-    private ge(java.net.Socket param0, ab param1, int param2) throws IOException {
+    private ge(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_k = 0;
         this.field_i = 0;
         this.field_l = false;

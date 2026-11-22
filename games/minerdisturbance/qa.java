@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa {
-    static vf field_a;
+    static PlatformTaskDispatcher field_a;
     static int[] field_c;
     static byte[][] field_b;
 
@@ -20,7 +20,7 @@ final class qa {
           fg.a((byte) 5, var8, param5);
           return var8;
         }
-        field_a = (vf) null;
+        field_a = (PlatformTaskDispatcher) null;
         tc.field_v.a((byte) -98, var8);
         fg.a((byte) 5, var8, param5);
         return var8;

@@ -34,15 +34,15 @@ final class dg {
           return true;
         }
         if (null == al.field_H) {
-          al.field_H = vl.field_a.a(nj.field_a, (byte) -58, AccountNameAvailabilityValidator.field_n);
+          al.field_H = vl.field_a.requestDirectSocket(nj.field_a, (byte) -58, AccountNameAvailabilityValidator.field_n);
         }
-        if (0 == al.field_H.field_b) {
+        if (0 == al.field_H.status) {
           return false;
         }
         dupTemp$2 = rf.c(0);
         p.field_c = dupTemp$2;
         ta.field_e = dupTemp$2;
-        if (al.field_H.field_b != 1) {
+        if (al.field_H.status != 1) {
         }
         uf.field_m = rh.field_r;
         al.field_H = null;

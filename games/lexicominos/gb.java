@@ -58,7 +58,7 @@ final class gb {
         return null;
     }
 
-    final static we[] a(byte param0, ab param1) {
+    final static we[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         we[] stackIn_6_0 = null;
         we[] stackIn_13_0 = null;
@@ -72,29 +72,29 @@ final class gb {
         we[] var4 = null;
         we var6 = null;
         int var7 = 0;
-        ab var8 = null;
-        ei var9 = null;
+        PlatformTaskDispatcher var8 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param0 >= -66) {
-            var8 = (ab) null;
-            gb.a((byte) 108, (ab) null);
+            var8 = (PlatformTaskDispatcher) null;
+            gb.a((byte) 108, (PlatformTaskDispatcher) null);
           }
-          if (!param1.b(0)) {
+          if (!param1.isFullscreenAvailable(0)) {
             stackIn_6_0 = new we[]{};
             return stackIn_6_0;
           }
-          var9 = param1.a((byte) 127);
-          while (var9.field_b == 0) {
+          var9 = param1.requestDisplayModes((byte) 127);
+          while (var9.status == 0) {
             ge.a(0, 10L);
           }
-          if (2 == var9.field_b) {
+          if (2 == var9.status) {
             stackIn_13_0 = new we[]{};
             return stackIn_13_0;
           }
-          var11 = (int[]) (var9.field_g);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new we[var11.length >> 2];

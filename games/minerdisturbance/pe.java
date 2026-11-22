@@ -17,7 +17,7 @@ final class pe extends fd {
         field_qb = null;
     }
 
-    final static FullscreenFocusCanvas a(byte param0, int param1, int param2, int param3, int param4, vf param5) {
+    final static FullscreenFocusCanvas a(byte param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -62,7 +62,7 @@ final class pe extends fd {
         }
     }
 
-    final static void a(vf param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
         try {
           fj.a(param7, param4, 10);
           mj.field_o = fj.a(param0, param5, 0, param1);

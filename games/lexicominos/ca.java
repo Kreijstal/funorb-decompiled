@@ -75,8 +75,8 @@ class ca extends kd {
         return MouseWheelInput.field_c == field_i ? true : false;
     }
 
-    final static void exitFullscreenFrame(ab param0, int param1, java.awt.Frame param2) {
-        ei var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -89,11 +89,11 @@ class ca extends kd {
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param1 - 15232, param2);
-            while (0 == var3.field_b) {
+            var3 = param0.requestFullscreenExit(param1 - 15232, param2);
+            while (0 == var3.status) {
               ge.a(0, 10L);
             }
-            if (1 != var3.field_b) {
+            if (1 != var3.status) {
               ge.a(0, 100L);
               continue;
             }

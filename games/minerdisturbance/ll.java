@@ -10,12 +10,12 @@ final class ll implements Runnable {
     private int field_m;
     static int field_h;
     private OutputStream field_o;
-    private ia field_b;
+    private PlatformTask field_b;
     private byte[] field_c;
     static String field_e;
     private boolean field_l;
     private java.net.Socket field_j;
-    private vf field_n;
+    private PlatformTaskDispatcher field_n;
     static hm field_a;
     private boolean field_f;
     static int field_d;
@@ -25,7 +25,7 @@ final class ll implements Runnable {
         this.b(120);
     }
 
-    ll(java.net.Socket param0, vf param1) throws IOException {
+    ll(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -63,7 +63,7 @@ final class ll implements Runnable {
               }
             }
             if (null == this.field_b) {
-              this.field_b = this.field_n.a((Runnable) (this), (byte) 44, 3);
+              this.field_b = this.field_n.requestThreadStart((Runnable) (this), (byte) 44, 3);
             }
             this.notifyAll();
           }
@@ -101,12 +101,12 @@ final class ll implements Runnable {
             this.notifyAll();
           }
           if (this.field_b != null) {
-            while (this.field_b.field_c == 0) {
+            while (this.field_b.status == 0) {
               gf.a(1L, -10309);
             }
-            if (this.field_b.field_c == 1) {
+            if (this.field_b.status == 1) {
               try {
-                ((Thread) (this.field_b.field_a)).join();
+                ((Thread) (this.field_b.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (InterruptedException) (Object) decompiledCaughtException;
@@ -328,7 +328,7 @@ final class ll implements Runnable {
         throw new IOException();
     }
 
-    private ll(java.net.Socket param0, vf param1, int param2) throws IOException {
+    private ll(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = false;
         this.field_f = false;
         this.field_m = 0;

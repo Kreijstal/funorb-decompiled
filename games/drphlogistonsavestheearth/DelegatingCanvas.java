@@ -64,7 +64,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, int param3, int param4, bl param5, int param6, int param7, String param8, int param9, int param10, boolean param11, long param12, int param13) {
+    final static void a(boolean param0, int param1, byte param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, String param8, int param9, int param10, boolean param11, long param12, int param13) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;

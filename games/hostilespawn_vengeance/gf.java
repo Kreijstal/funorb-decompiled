@@ -8,7 +8,7 @@ final class gf {
     static String[] field_c;
     static na field_e;
     static bd field_g;
-    static fd field_b;
+    static PlatformTaskDispatcher field_b;
     static int field_i;
     static long field_h;
     static bd field_a;

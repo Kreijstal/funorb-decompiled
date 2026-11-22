@@ -14,8 +14,8 @@ abstract class aj {
 
     final static String b(int param0) {
         if (param0 != -30519) {
-          fd var2 = (fd) null;
-          aj.a((kd) null, 30, 86, (java.awt.Component) null, false, (fd) null);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          aj.a((kd) null, 30, 86, (java.awt.Component) null, false, (PlatformTaskDispatcher) null);
           if (qg.field_r == null) {
             return "";
           }
@@ -27,7 +27,7 @@ abstract class aj {
         return qg.field_r;
     }
 
-    final static void a(kd param0, int param1, int param2, java.awt.Component param3, boolean param4, fd param5) {
+    final static void a(kd param0, int param1, int param2, java.awt.Component param3, boolean param4, PlatformTaskDispatcher param5) {
         try {
           s.a(param2, param5, 1024, param2, param0, param3, param4, -87);
           if (param1 != -25127) {

@@ -7,16 +7,16 @@ final class fg extends IntrusiveNode {
     static sf field_l;
     static ia field_x;
     int field_v;
-    od[] field_s;
+    PlatformTask[] field_s;
     int[] field_r;
     static vc field_t;
-    static ce field_q;
+    static PlatformTaskDispatcher field_q;
     int[] field_p;
-    static ce field_i;
+    static PlatformTaskDispatcher field_i;
     static dd field_j;
     static int[] field_u;
     byte[][][] field_w;
-    od[] field_n;
+    PlatformTask[] field_n;
     static String field_m;
 
     final static void a(byte param0) {
@@ -155,7 +155,7 @@ final class fg extends IntrusiveNode {
         field_u = null;
         field_t = null;
         if (param0 != -5) {
-          field_i = (ce) null;
+          field_i = (PlatformTaskDispatcher) null;
         }
         field_m = null;
         field_l = null;

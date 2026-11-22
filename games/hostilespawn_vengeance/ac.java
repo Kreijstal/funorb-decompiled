@@ -272,11 +272,11 @@ final class ac {
           }
           for (var2 = 0; var1.field_t > var2; var2++) {
             if (null != var4.field_r[var2] &&
-              var4.field_r[var2].field_f == 0) {
+              var4.field_r[var2].status == 0) {
               return false;
             }
             if (null != var4.field_j[var2] &&
-              var4.field_j[var2].field_f == 0) {
+              var4.field_j[var2].status == 0) {
               return false;
             }
           }

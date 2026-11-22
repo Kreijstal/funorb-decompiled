@@ -36,7 +36,7 @@ final class m extends IntrusiveNode {
         return stackIn_4_0;
     }
 
-    final static void a(int param0, boolean param1, fd param2, int param3, int param4, int param5, int param6, int param7, int param8, long param9, String param10, int param11, int param12, boolean param13) {
+    final static void a(int param0, boolean param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, int param8, long param9, String param10, int param11, int param12, boolean param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -56,7 +56,7 @@ final class m extends IntrusiveNode {
             uc.field_d = param10;
             if (param11 >= -22) {
               var16 = (String) null;
-              m.a(90, false, (fd) null, 122, -120, -27, -1, 13, 18, -21L, (String) null, 69, -50, true);
+              m.a(90, false, (PlatformTaskDispatcher) null, 122, -120, -27, -1, 13, 18, -21L, (String) null, 69, -50, true);
             }
             le.field_bb = param12;
             cb.field_c = param3;

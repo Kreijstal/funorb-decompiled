@@ -110,7 +110,7 @@ class id extends ik {
             ik.field_g[0] = 5;
           } else if (sh.field_a != 2) {
             if (sh.field_a == 3) {
-              if (jh.field_a.field_e) {
+              if (jh.field_a.privilegedTasksEnabled) {
                 var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, GameAppletShell.field_m, nb.field_x);
               } else {
                 var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, lb.field_a, nb.field_x);

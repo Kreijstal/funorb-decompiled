@@ -5,7 +5,7 @@ final class ua implements Runnable {
     volatile boolean field_e;
     volatile boolean field_d;
     volatile ug[] field_g;
-    fd field_b;
+    PlatformTaskDispatcher field_b;
     static ji field_f;
     static String field_a;
     static jb[] field_c;

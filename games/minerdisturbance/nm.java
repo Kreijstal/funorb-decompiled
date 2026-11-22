@@ -299,20 +299,20 @@ final class nm implements Runnable {
         }
     }
 
-    nm(vf param0) {
-        ia var2 = null;
+    nm(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_d = new wa();
         this.field_b = 0;
         this.field_i = false;
         try {
-          var2 = param0.a((Runnable) (this), (byte) 58, 5);
-          while (0 == var2.field_c) {
+          var2 = param0.requestThreadStart((Runnable) (this), (byte) 58, 5);
+          while (0 == var2.status) {
             gf.a(10L, -10309);
           }
-          if (var2.field_c == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_a);
+          this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

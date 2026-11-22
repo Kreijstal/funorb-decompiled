@@ -6,11 +6,11 @@ import java.io.*;
 final class lf implements Runnable {
     private java.net.URL field_h;
     static hb field_b;
-    private ia field_d;
-    private ia field_j;
+    private PlatformTask field_d;
+    private PlatformTask field_j;
     static String[][] field_i;
-    private vf field_f;
-    private ia field_e;
+    private PlatformTaskDispatcher field_f;
+    private PlatformTask field_e;
     private int field_c;
     private DataInputStream field_a;
     private PacketBuffer field_g;
@@ -61,18 +61,18 @@ final class lf implements Runnable {
 
     protected final void finalize() {
         if (this.field_d != null) {
-          if (null != this.field_d.field_a) {
+          if (null != this.field_d.result) {
             try {
-              ((DataInputStream) (this.field_d.field_a)).close();
+              ((DataInputStream) (this.field_d.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_d = null;
         }
         if (this.field_e != null) {
-          if (null != this.field_e.field_a) {
+          if (null != this.field_e.result) {
             try {
-              ((java.net.Socket) (this.field_e.field_a)).close();
+              ((java.net.Socket) (this.field_e.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -103,12 +103,12 @@ final class lf implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         if (this.field_c == 0) {
           if (null == this.field_d) {
-            this.field_d = this.field_f.a((byte) -83, this.field_h);
+            this.field_d = this.field_f.requestUrlStream((byte) -83, this.field_h);
           }
-          if (this.field_d.field_c == 0) {
+          if (this.field_d.status == 0) {
             return false;
           }
-          if (this.field_d.field_c != 1) {
+          if (this.field_d.status != 1) {
             this.field_d = null;
             decompiledFrameRemainder0 = false;
           }
@@ -116,12 +116,12 @@ final class lf implements Runnable {
         if (decompiledFrameRemainder0) {
           if (1 == this.field_c) {
             if (null == this.field_e) {
-              this.field_e = this.field_f.a(this.field_h.getHost(), 443, (byte) 15);
+              this.field_e = this.field_f.requestDirectSocket(this.field_h.getHost(), 443, (byte) 15);
             }
-            if (0 == this.field_e.field_c) {
+            if (0 == this.field_e.status) {
               return false;
             }
-            if (this.field_e.field_c != 1) {
+            if (this.field_e.status != 1) {
               this.field_c = this.field_c + 1;
               this.field_e = null;
               return false;
@@ -130,10 +130,10 @@ final class lf implements Runnable {
           if (null == this.field_a) {
             try {
               if (this.field_c == 0) {
-                this.field_a = (DataInputStream) (this.field_d.field_a);
+                this.field_a = (DataInputStream) (this.field_d.result);
               }
               if (this.field_c == 1) {
-                var4 = (java.net.Socket) (this.field_e.field_a);
+                var4 = (java.net.Socket) (this.field_e.result);
                 var4.setSoTimeout(10000);
                 var3 = var4.getOutputStream();
                 var3.write(17);
@@ -150,12 +150,12 @@ final class lf implements Runnable {
             }
           }
           if (this.field_j == null) {
-            this.field_j = this.field_f.a((Runnable) (this), (byte) 1, 5);
+            this.field_j = this.field_f.requestThreadStart((Runnable) (this), (byte) 1, 5);
           }
-          if (this.field_j.field_c == 0) {
+          if (this.field_j.status == 0) {
             return false;
           }
-          if (1 == this.field_j.field_c) {
+          if (1 == this.field_j.status) {
             return false;
           }
           this.finalize();
@@ -197,7 +197,7 @@ final class lf implements Runnable {
         }
     }
 
-    lf(vf param0, java.net.URL param1, int param2) {
+    lf(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param1;
           this.field_f = param0;

@@ -94,7 +94,7 @@ final class g extends ph {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, byte param2, fd param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, byte param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_24_0 = null;
@@ -111,10 +111,10 @@ final class g extends ph {
         java.awt.Frame var7 = null;
         int var9 = 0;
         ak[] var10 = null;
-        kk var11 = null;
+        PlatformTask var11 = null;
         var9 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (!param3.a(true)) {
+          if (!param3.isFullscreenAvailable(true)) {
             return null;
           }
           if (0 == param4) {
@@ -140,11 +140,11 @@ final class g extends ph {
               return (java.awt.Frame) (stackIn_24_0);
             }
           }
-          var11 = param3.a(false, param5, param1, param0, param4);
-          while (var11.field_f == 0) {
+          var11 = param3.requestFullscreenEnter(false, param5, param1, param0, param4);
+          while (var11.status == 0) {
             vj.a(10L, (byte) -49);
           }
-          var7 = (java.awt.Frame) (var11.field_c);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_30_0 = null;
             return (java.awt.Frame) (stackIn_30_0);
@@ -152,7 +152,7 @@ final class g extends ph {
           if (param2 < 11) {
             field_N = (String) null;
           }
-          if (2 != var11.field_f) {
+          if (2 != var11.status) {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }

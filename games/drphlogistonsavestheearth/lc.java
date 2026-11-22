@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lc extends IntrusiveNode {
-    il[] field_o;
+    PlatformTask[] field_o;
     static he field_s;
-    il[] field_n;
+    PlatformTask[] field_n;
     static int field_v;
     static int[] field_u;
     int field_l;

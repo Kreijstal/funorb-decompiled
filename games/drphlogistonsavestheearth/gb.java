@@ -85,7 +85,7 @@ abstract class gb {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          bl stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           int stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -97,7 +97,7 @@ abstract class gb {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          il var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -142,14 +142,14 @@ abstract class gb {
               stackIn_14_3 = null;
               stackIn_14_6 = bi.field_J;
             }
-            var4 = ((bl) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(bl.field_n).append("&v2=").append(bl.field_t).append("&e=").append(var10).toString()));
-            while (var4.field_b == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_n).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               kk.a(1L, true);
             }
-            if (var4.field_b != 1) {
+            if (var4.status != 1) {
               return;
             }
-            var5 = (DataInputStream) (var4.field_g);
+            var5 = (DataInputStream) (var4.result);
             var5.read();
             var5.close();
             return;

@@ -103,7 +103,7 @@ final class cn {
             if (param2 != 11050) {
               return;
             }
-            if (vf.field_j.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_j.startsWith("win") &&
               uh.a((byte) 115, param1)) {
               return;
             }

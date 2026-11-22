@@ -59,7 +59,7 @@ final class AccountRequestState {
         return qg.field_d;
     }
 
-    final static void a(Object param0, ab param1, int param2) {
+    final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

@@ -6,7 +6,7 @@ abstract class lj extends DualLinkNode {
     static vm field_u;
     int field_s;
     static int field_q;
-    static fd field_t;
+    static PlatformTaskDispatcher field_t;
 
     abstract boolean e(int param0);
 

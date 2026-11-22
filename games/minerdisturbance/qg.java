@@ -133,7 +133,7 @@ final class qg implements ad {
         }
     }
 
-    final static void a(vf param0, int param1, int param2, int param3, int param4, long param5, int param6, String param7, boolean param8, int param9, boolean param10, boolean param11, int param12, int param13) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, long param5, int param6, String param7, boolean param8, int param9, boolean param10, boolean param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;

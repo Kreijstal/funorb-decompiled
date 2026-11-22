@@ -10,7 +10,7 @@ abstract class MouseWheelInput {
     static nh field_d;
     static he[] field_g;
     static boolean field_c;
-    static bl field_e;
+    static PlatformTaskDispatcher field_e;
     static he field_f;
 
     final static int a(int param0, byte param1) {

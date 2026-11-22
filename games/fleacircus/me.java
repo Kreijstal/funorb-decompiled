@@ -88,7 +88,7 @@ final class me implements ComponentLayout {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (ce.field_d.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_d.startsWith("win") &&
               DelegatingCanvas.a(122, param2)) {
               return;
             }

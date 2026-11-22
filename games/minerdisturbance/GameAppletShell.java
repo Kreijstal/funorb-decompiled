@@ -264,11 +264,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != vf.field_s) {
-                var1 = vf.field_s.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_s) {
+                var1 = PlatformTaskDispatcher.field_s.toLowerCase();
                 if (-1 != ((String) (var1)).indexOf("sun") ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = vf.field_b;
+                  var2 = PlatformTaskDispatcher.field_b;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -310,8 +310,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (vf.field_b != null))) {
-                stackIn_68_0 = vf.field_b.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_b != null))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_b.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -320,8 +320,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < vf.field_b.length()) {
-                    var3 = vf.field_b.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_b.length()) {
+                    var3 = PlatformTaskDispatcher.field_b.charAt(var1_int);
                     stackIn_84_0 = -49;
                     stackIn_84_1 = ~var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -348,7 +348,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (of.field_b != null) {
                   var1 = of.field_b;
                 }
-                var2_ref = vf.field_h;
+                var2_ref = PlatformTaskDispatcher.field_h;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -443,7 +443,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (qa.field_a != null) {
             try {
-              qa.field_a.a(-29109);
+              qa.field_a.shutdown(-29109);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -794,12 +794,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         try {
-          vf dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          ia var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -827,12 +827,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               j.field_h = this;
               aj.field_d = bm.c(-108);
-              dupTemp$0 = new vf(param6, param4, param1, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param6, param4, param1, true);
               qa.field_a = dupTemp$0;
               hd.field_g = dupTemp$0;
-              var8 = qa.field_a.a((Runnable) (this), (byte) 52, 1);
+              var8 = qa.field_a.requestThreadStart((Runnable) (this), (byte) 52, 1);
               while (true) {
-                if (0 == var8.field_c) {
+                if (0 == var8.status) {
                   gf.a(10L, -10309);
                   if (var9 == 0) {
                     continue;

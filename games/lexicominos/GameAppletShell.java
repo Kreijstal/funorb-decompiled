@@ -63,12 +63,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         try {
-          ab dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          ei var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -93,12 +93,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               fi.field_j = param2;
               AccountRequestState.field_f = param0;
               tg.field_i = kk.c(-14047);
-              dupTemp$0 = new ab(param5, param6, param1, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param5, param6, param1, true);
               jh.field_a = dupTemp$0;
               TriangleMesh.field_n = dupTemp$0;
-              var8 = jh.field_a.a((Runnable) (this), false, 1);
+              var8 = jh.field_a.requestThreadStart((Runnable) (this), false, 1);
               while (true) {
-                if (var8.field_b == 0) {
+                if (var8.status == 0) {
                   ge.a(0, 10L);
                   if (var9 == 0) {
                     continue;
@@ -272,7 +272,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (jh.field_a != null) {
             try {
-              jh.field_a.a(-265);
+              jh.field_a.shutdown(-265);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -581,11 +581,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (ab.field_j != null) {
-                var1 = ab.field_j.toLowerCase();
+              if (PlatformTaskDispatcher.field_j != null) {
+                var1 = PlatformTaskDispatcher.field_j.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = ab.field_v;
+                  var2 = PlatformTaskDispatcher.field_v;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -627,8 +627,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != ab.field_v))) {
-                stackIn_70_0 = ab.field_v.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_v))) {
+                stackIn_70_0 = PlatformTaskDispatcher.field_v.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -637,8 +637,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (ab.field_v.length() > var1_int) {
-                    var3 = ab.field_v.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_v.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_v.charAt(var1_int);
                     stackIn_83_0 = ~var3;
                     stackIn_83_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -665,7 +665,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (null != pg.field_b) {
                   var1 = pg.field_b;
                 }
-                var2_ref = ab.field_x;
+                var2_ref = PlatformTaskDispatcher.field_x;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});

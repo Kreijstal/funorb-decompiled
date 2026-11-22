@@ -6,8 +6,8 @@ final class tf {
     static int field_a;
     static Sprite[] field_c;
 
-    final static void a(byte param0, vf param1, java.awt.Frame param2) {
-        ia var3 = null;
+    final static void a(byte param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -20,11 +20,11 @@ final class tf {
         var4 = MinerDisturbance.field_ab;
         try {
           while (true) {
-            var3 = param1.a(param2, true);
-            while (var3.field_c == 0) {
+            var3 = param1.requestFullscreenExit(param2, true);
+            while (var3.status == 0) {
               gf.a(10L, -10309);
             }
-            if (var3.field_c != 1) {
+            if (var3.status != 1) {
               gf.a(100L, -10309);
               continue;
             }

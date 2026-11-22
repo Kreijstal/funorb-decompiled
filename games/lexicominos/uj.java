@@ -40,7 +40,7 @@ final class uj implements rd {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          ab stackIn_12_0;
+          PlatformTaskDispatcher stackIn_12_0;
           int stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -52,7 +52,7 @@ final class uj implements rd {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          ei var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -94,12 +94,12 @@ final class uj implements rd {
               stackIn_13_3 = null;
               stackIn_13_6 = "" + d.field_a;
             }
-            var4 = ((ab) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(ab.field_j).append("&v2=").append(ab.field_v).append("&e=").append(var10).toString()));
-            while (var4.field_b == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               ge.a(param2 - 1, 1L);
             }
-            if (var4.field_b == param2) {
-              var5 = (DataInputStream) (var4.field_g);
+            if (var4.status == param2) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

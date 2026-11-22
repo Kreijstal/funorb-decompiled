@@ -114,7 +114,7 @@ final class pk {
         }
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, int param3, vf param4, int param5) {
+    final static java.awt.Frame a(byte param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         Object stackIn_24_0 = null;
         Object stackIn_34_0 = null;
         java.awt.Frame stackIn_36_0 = null;
@@ -129,11 +129,11 @@ final class pk {
         int var8 = 0;
         int var9 = 0;
         vk[] var10 = null;
-        ia var11 = null;
+        PlatformTask var11 = null;
         int var8Lifetime1;
         var9 = MinerDisturbance.field_ab;
         try {
-          if (!param4.b((byte) 73)) {
+          if (!param4.isFullscreenAvailable((byte) 73)) {
             return null;
           }
           if (param1 == 0) {
@@ -158,15 +158,15 @@ final class pk {
               return (java.awt.Frame) (stackIn_24_0);
             }
           }
-          var11 = param4.a(param1, param5, param2, param3, (byte) -122);
-          while (0 == var11.field_c) {
+          var11 = param4.requestFullscreenEnter(param1, param5, param2, param3, (byte) -122);
+          while (0 == var11.status) {
             gf.a(10L, -10309);
           }
-          var7 = (java.awt.Frame) (var11.field_a);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_c == 2) {
+          if (var11.status == 2) {
             tf.a((byte) 108, param4, var7);
             stackIn_34_0 = null;
             return (java.awt.Frame) (stackIn_34_0);

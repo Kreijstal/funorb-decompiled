@@ -6,7 +6,7 @@ final class fb implements Runnable {
     static int[] field_b;
     static String field_a;
     static vd field_g;
-    bl field_d;
+    PlatformTaskDispatcher field_d;
     static int[] field_c;
     volatile boolean field_h;
     volatile boolean field_f;

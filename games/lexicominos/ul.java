@@ -521,7 +521,7 @@ final class ul extends kd {
             return false;
           }
           try {
-            if (!ab.field_b.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_b.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

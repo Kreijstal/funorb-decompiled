@@ -6,7 +6,7 @@ final class oh {
     static String field_a;
     static int field_b;
 
-    final static java.awt.Frame a(int param0, int param1, int param2, byte param3, int param4, ab param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, byte param3, int param4, PlatformTaskDispatcher param5) {
         int var8_int = 0;
         Object stackIn_33_0 = null;
         Object stackIn_36_0 = null;
@@ -21,11 +21,11 @@ final class oh {
         java.awt.Frame var8 = null;
         int var9 = 0;
         we[] var10 = null;
-        ei var11 = null;
+        PlatformTask var11 = null;
         int var7Lifetime1;
         var9 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (!param5.b(0)) {
+          if (!param5.isFullscreenAvailable(0)) {
             return null;
           }
           if (param4 == 0) {
@@ -49,17 +49,17 @@ final class oh {
               return null;
             }
           }
-          var11 = param5.a(28460, param1, param0, param4, param2);
+          var11 = param5.requestFullscreenEnter(28460, param1, param0, param4, param2);
           var7Lifetime1 = -55 / ((param3 + 61) / 63);
-          while (var11.field_b == 0) {
+          while (var11.status == 0) {
             ge.a(0, 10L);
           }
-          var8 = (java.awt.Frame) (var11.field_g);
+          var8 = (java.awt.Frame) (var11.result);
           if (var8 == null) {
             stackIn_33_0 = null;
             return (java.awt.Frame) (stackIn_33_0);
           }
-          if (var11.field_b != 2) {
+          if (var11.status != 2) {
             stackIn_38_0 = var8;
             return stackIn_38_0;
           }
@@ -112,7 +112,7 @@ final class oh {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var6 = 0;
-        ab var7 = null;
+        PlatformTaskDispatcher var7 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -122,8 +122,8 @@ final class oh {
         try {
           var4_int = -1;
           if (param2) {
-            var7 = (ab) null;
-            oh.a(-37, 109, 83, (byte) 108, 101, (ab) null);
+            var7 = (PlatformTaskDispatcher) null;
+            oh.a(-37, 109, 83, (byte) 108, 101, (PlatformTaskDispatcher) null);
           }
           for (var5 = param0; var5 < param3; var5++) {
             var4_int = var4_int >>> 8 ^ d.field_c[255 & (param1[var5] ^ var4_int)];
@@ -148,8 +148,8 @@ final class oh {
     final static void a(int param0, db param1, boolean param2, String param3, int param4, int param5) {
         try {
           if (param2) {
-            ab var7 = (ab) null;
-            oh.a(-85, -81, 63, (byte) 46, 52, (ab) null);
+            PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
+            oh.a(-85, -81, 63, (byte) 46, 52, (PlatformTaskDispatcher) null);
           }
           eh.a(param4, param1, param5 - 24 * (param3.length() - 1), 0, param3, param0);
         } catch (RuntimeException runtimeException) {

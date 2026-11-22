@@ -88,7 +88,7 @@ final class m {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (ab.field_b.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_b.startsWith("win") &&
               ul.a(param2, 14080)) {
               return;
             }

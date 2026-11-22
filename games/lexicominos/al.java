@@ -8,7 +8,7 @@ abstract class al extends nb {
     private int field_E;
     static String field_G;
     static GzipDecompressor field_F;
-    static ei field_H;
+    static PlatformTask field_H;
 
     private final int g(int param0) {
         if (param0 < -70) {
@@ -179,7 +179,7 @@ abstract class al extends nb {
     final void b(int param0, int param1, int param2) {
         this.a(param2, param0, true, -param2 + kg.field_C >> 1, ql.field_O - param0 >> 1);
         if (param1 >= -94) {
-          field_H = (ei) null;
+          field_H = (PlatformTask) null;
         }
     }
 

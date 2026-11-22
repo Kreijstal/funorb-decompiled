@@ -353,7 +353,7 @@ class id {
         this.field_l = param0;
     }
 
-    final static id a(bl param0, java.awt.Component param1, int param2, int param3) {
+    final static id a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           ed var4 = null;
           Throwable var4_ref = null;
@@ -393,7 +393,7 @@ class id {
                 field_g == null) {
                 field_g = new fb();
                 field_g.field_d = param0;
-                param0.a((Runnable) ((Object) field_g), field_o, (byte) -8);
+                param0.requestThreadStart((Runnable) ((Object) field_g), field_o, (byte) -8);
               }
               if (field_g != null) {
                 if (field_g.field_i[param2] != null) {

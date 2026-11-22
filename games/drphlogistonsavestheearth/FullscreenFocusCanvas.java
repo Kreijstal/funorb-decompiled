@@ -750,7 +750,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void exitFullscreen(bl param0, boolean param1) {
+    final void exitFullscreen(PlatformTaskDispatcher param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

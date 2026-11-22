@@ -86,22 +86,22 @@ abstract class me extends wb {
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == oa.field_l) {
-            oa.field_l = uj.field_k.a(uc.field_d, 101, cb.field_c);
+            oa.field_l = uj.field_k.requestDirectSocket(uc.field_d, 101, cb.field_c);
           }
           if (param1 < 87) {
             return true;
           }
-          if (oa.field_l.field_f == 0) {
+          if (oa.field_l.status == 0) {
             return false;
           }
           dupTemp$1 = hn.a((byte) 80);
           gf.field_h = dupTemp$1;
           bb.field_c = dupTemp$1;
-          if (oa.field_l.field_f != 1) {
+          if (oa.field_l.status != 1) {
             rc.field_a = sg.field_c;
           } else {
             try {
-              ag.field_t = new td((java.net.Socket) (oa.field_l.field_c), uj.field_k);
+              ag.field_t = new td((java.net.Socket) (oa.field_l.result), uj.field_k);
               s.field_b.field_i = 0;
               var2 = sc.field_g;
               stackIn_11_0 = (param0) ? -2 : -1;

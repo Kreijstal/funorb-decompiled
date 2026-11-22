@@ -279,7 +279,7 @@ final class nj {
         return tf.field_nb[var4];
     }
 
-    final static java.awt.Frame a(int param0, int param1, bl param2, boolean param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, boolean param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_34_0 = null;
@@ -295,10 +295,10 @@ final class nj {
         java.awt.Frame var7 = null;
         int var9 = 0;
         fl[] var10 = null;
-        il var11 = null;
+        PlatformTask var11 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (!param2.a(-20)) {
+          if (!param2.isFullscreenAvailable(-20)) {
             return null;
           }
           if (param1 == 0) {
@@ -323,19 +323,19 @@ final class nj {
               return null;
             }
           }
-          var11 = param2.a(param4, param5, param0, 0, param1);
+          var11 = param2.requestFullscreenEnter(param4, param5, param0, 0, param1);
           if (param3) {
             field_o = (he) null;
           }
-          while (var11.field_b == 0) {
+          while (var11.status == 0) {
             kk.a(10L, true);
           }
-          var7 = (java.awt.Frame) (var11.field_g);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_34_0 = null;
             return (java.awt.Frame) (stackIn_34_0);
           }
-          if (var11.field_b != 2) {
+          if (var11.status != 2) {
             stackIn_39_0 = var7;
             return stackIn_39_0;
           }
@@ -364,7 +364,7 @@ final class nj {
         int var4;
         int var5;
         int var6;
-        bl var7;
+        PlatformTaskDispatcher var7;
         int var8;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -420,8 +420,8 @@ final class nj {
           }
         }
         if (param0 != 8) {
-          var7 = (bl) null;
-          nj.a(118, 34, (bl) null, false, -72, 58);
+          var7 = (PlatformTaskDispatcher) null;
+          nj.a(118, 34, (PlatformTaskDispatcher) null, false, -72, 58);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           this.field_n[var2Lifetime3] = ff.a(this.field_n[var2Lifetime3], ff.a(this.field_l[var2Lifetime3], this.field_h[var2Lifetime3]));

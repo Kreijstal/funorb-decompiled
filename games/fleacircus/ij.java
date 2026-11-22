@@ -82,20 +82,20 @@ final class ij extends gj implements da {
           }
           try {
             if (lc.field_r == 0) {
-              nj.field_a = mh.field_x.a(il.field_g, (byte) 32, fh.field_g);
+              nj.field_a = mh.field_x.requestDirectSocket(il.field_g, (byte) 32, fh.field_g);
               lc.field_r = lc.field_r + 1;
             }
             if (lc.field_r == 1) {
-              if (2 == nj.field_a.field_b) {
+              if (2 == nj.field_a.status) {
                 stackIn_14_0 = NetworkGameClient.a(-1, 5);
                 return stackIn_14_0;
               }
-              if (nj.field_a.field_b == 1) {
+              if (nj.field_a.status == 1) {
                 lc.field_r = lc.field_r + 1;
               }
             }
             if (lc.field_r == 2) {
-              jj.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.field_e), mh.field_x);
+              jj.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.result), mh.field_x);
               var2 = new PacketBuffer(13);
               ob.a(wj.field_d, of.field_b, (byte) -19, b.field_a, var2);
               var2.writeByte(-11, 15);

@@ -33,7 +33,7 @@ final class AccountServiceResult {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           try {
-            if (!bl.field_r.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_r.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

@@ -380,7 +380,7 @@ final class uh {
         var4 = MinerDisturbance.field_ab;
         try {
           try {
-            if (!vf.field_j.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_j.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

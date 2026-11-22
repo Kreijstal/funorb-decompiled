@@ -16,7 +16,7 @@ final class pf {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, ce param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_36_0 = null;
@@ -32,10 +32,10 @@ final class pf {
         java.awt.Frame var7 = null;
         int var9 = 0;
         hf[] var10 = null;
-        od var11 = null;
+        PlatformTask var11 = null;
         var9 = fleas.field_A ? 1 : 0;
         try {
-          if (!param3.a(107)) {
+          if (!param3.isFullscreenAvailable(107)) {
             return null;
           }
           if (param5 == 0) {
@@ -60,15 +60,15 @@ final class pf {
               return null;
             }
           }
-          var11 = param3.a(param4, (byte) -50, param2, param5, param1);
-          while (var11.field_b == 0) {
+          var11 = param3.requestFullscreenEnter(param4, (byte) -50, param2, param5, param1);
+          while (var11.status == 0) {
             vh.a(10L, -88);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_b == 2) {
+          if (var11.status == 2) {
             hi.exitFullscreenFrame(param3, var7, (byte) 52);
             stackIn_36_0 = null;
             return (java.awt.Frame) (stackIn_36_0);
@@ -191,7 +191,7 @@ final class pf {
             em.field_e[0] = 5;
           } else if (vc.field_a != 2) {
             if (vc.field_a == 3) {
-              if (!fg.field_q.field_e) {
+              if (!fg.field_q.privilegedTasksEnabled) {
                 var3_int = nb.a(sa.field_b, vh.field_l, pb.field_e, sc.field_d, 1);
               } else {
                 var3_int = nb.a(aj.field_x, vh.field_l, pb.field_e, sc.field_d, 1);

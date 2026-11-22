@@ -36,7 +36,7 @@ final class lm extends ae {
             if (param0 != 26) {
               lm.e(77);
             }
-            if (!fd.field_c.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_c.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

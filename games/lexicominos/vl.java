@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl {
-    static ab field_a;
+    static PlatformTaskDispatcher field_a;
     static int field_b;
 
     public static void clearStaticReferences(int param0) {

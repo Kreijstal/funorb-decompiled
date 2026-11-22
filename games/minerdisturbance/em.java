@@ -3,7 +3,7 @@
  */
 abstract class em extends DualLinkNode {
     static boolean field_w;
-    static ia field_B;
+    static PlatformTask field_B;
     boolean field_z;
     boolean field_v;
     static String field_u;

@@ -5,7 +5,7 @@ final class jh {
     static int field_c;
     static db[] field_b;
     static BinaryBitmapFont field_d;
-    static ab field_a;
+    static PlatformTaskDispatcher field_a;
     static int field_e;
 
     public static void clearStaticReferences(boolean param0) {

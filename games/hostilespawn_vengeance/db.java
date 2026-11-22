@@ -5,7 +5,7 @@ final class db extends hi {
     private ig field_q;
     private ig field_p;
     static java.awt.Frame field_r;
-    static kk field_o;
+    static PlatformTask field_o;
     static int[] field_t;
     static String field_u;
     static int[] field_s;

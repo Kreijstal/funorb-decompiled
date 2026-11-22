@@ -64,7 +64,7 @@ abstract class ByteStorage {
         }
         if (param2 != -27794) {
           var9 = (java.awt.Component) null;
-          ByteStorage.a(-21, (ei) null, 14, -111, -71, (ce) null, (java.awt.Component) null, false);
+          ByteStorage.a(-21, (ei) null, 14, -111, -71, (PlatformTaskDispatcher) null, (java.awt.Component) null, false);
         }
         var6Lifetime1 = vg.field_z - 140;
         if (var6Lifetime1 > 0) {
@@ -99,7 +99,7 @@ abstract class ByteStorage {
           var2 = ck.a(-5174, "jagex-last-login-method", param1);
           if (!param0) {
             var7 = (java.awt.Component) null;
-            ByteStorage.a(98, (ei) null, -46, 17, -94, (ce) null, (java.awt.Component) null, true);
+            ByteStorage.a(98, (ei) null, -46, 17, -94, (PlatformTaskDispatcher) null, (java.awt.Component) null, true);
           }
           if (var2 == null) {
             stackIn_6_0 = bf.field_a;
@@ -152,11 +152,11 @@ abstract class ByteStorage {
           }
           for (var2 = 0; var2 < var1.field_k; var2++) {
             if (var4.field_n[var2] != null &&
-              var4.field_n[var2].field_b == 0) {
+              var4.field_n[var2].status == 0) {
               return false;
             }
             if (var4.field_s[var2] != null &&
-              var4.field_s[var2].field_b == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
           }
@@ -182,7 +182,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int param0);
 
-    final static void a(int param0, ei param1, int param2, int param3, int param4, ce param5, java.awt.Component param6, boolean param7) {
+    final static void a(int param0, ei param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, java.awt.Component param6, boolean param7) {
         la.a(param4, param7, 10);
         db.field_J = la.a(param5, param6, 0, param2);
         if (param3 < 2) {

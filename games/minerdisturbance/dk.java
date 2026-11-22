@@ -5,7 +5,7 @@ import java.util.*;
 
 final class dk {
     static ae field_c;
-    static ia field_b;
+    static PlatformTask field_b;
     static byte[][][] field_d;
     static Random field_a;
     static int field_e;
@@ -78,7 +78,7 @@ final class dk {
           field_a = null;
           return;
         }
-        field_b = (ia) null;
+        field_b = (PlatformTask) null;
         field_d = (byte[][][]) null;
         field_c = null;
         field_b = null;

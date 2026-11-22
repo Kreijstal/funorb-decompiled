@@ -28,7 +28,7 @@ final class ic extends IntrusiveNode {
 
     final static void a(byte param0, String param1, Throwable param2) {
         try {
-          fd stackIn_12_0;
+          PlatformTaskDispatcher stackIn_12_0;
           int stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -40,7 +40,7 @@ final class ic extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          kk var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -82,15 +82,15 @@ final class ic extends IntrusiveNode {
               stackIn_13_3 = null;
               stackIn_13_6 = "" + AccountCreationResultPanel.field_yb;
             }
-            var4 = ((fd) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(fd.field_u).append("&v2=").append(fd.field_h).append("&e=").append(var10).toString()));
-            while (var4.field_f == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_h).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               vj.a(1L, (byte) -49);
             }
             if (param0 >= -114) {
               return;
             }
-            if (1 == var4.field_f) {
-              var5 = (DataInputStream) (var4.field_c);
+            if (1 == var4.status) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

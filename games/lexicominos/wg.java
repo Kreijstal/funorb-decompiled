@@ -7,28 +7,28 @@ final class wg implements Runnable {
     static int[] field_j;
     private DataInputStream field_g;
     private PacketBuffer field_i;
-    private ei field_f;
+    private PlatformTask field_f;
     private int field_d;
-    private ei field_h;
-    private ab field_a;
+    private PlatformTask field_h;
+    private PlatformTaskDispatcher field_a;
     static int field_e;
     private java.net.URL field_c;
-    private ei field_b;
+    private PlatformTask field_b;
 
     protected final void finalize() {
         if (null != this.field_f) {
-          if (this.field_f.field_g != null) {
+          if (this.field_f.result != null) {
             try {
-              ((DataInputStream) (this.field_f.field_g)).close();
+              ((DataInputStream) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_f = null;
         }
         if (null != this.field_h) {
-          if (null != this.field_h.field_g) {
+          if (null != this.field_h.result) {
             try {
-              ((java.net.Socket) (this.field_h.field_g)).close();
+              ((java.net.Socket) (this.field_h.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -82,12 +82,12 @@ final class wg implements Runnable {
         }
         if (0 == this.field_d) {
           if (null == this.field_f) {
-            this.field_f = this.field_a.a(-23816, this.field_c);
+            this.field_f = this.field_a.requestUrlStream(-23816, this.field_c);
           }
-          if (0 == this.field_f.field_b) {
+          if (0 == this.field_f.status) {
             return false;
           }
-          if (1 != this.field_f.field_b) {
+          if (1 != this.field_f.status) {
             this.field_d = this.field_d + 1;
             this.field_f = null;
             return false;
@@ -98,12 +98,12 @@ final class wg implements Runnable {
         }
         if (this.field_d == 1) {
           if (null == this.field_h) {
-            this.field_h = this.field_a.a(443, (byte) 125, this.field_c.getHost());
+            this.field_h = this.field_a.requestDirectSocket(443, (byte) 125, this.field_c.getHost());
           }
-          if (0 == this.field_h.field_b) {
+          if (0 == this.field_h.status) {
             return false;
           }
-          if (this.field_h.field_b != 1) {
+          if (this.field_h.status != 1) {
             this.field_d = this.field_d + 1;
             this.field_h = null;
             return false;
@@ -111,12 +111,12 @@ final class wg implements Runnable {
         }
         if (null != this.field_g) {
           if (this.field_b == null) {
-            this.field_b = this.field_a.a((Runnable) (this), false, 5);
+            this.field_b = this.field_a.requestThreadStart((Runnable) (this), false, 5);
           }
-          if (this.field_b.field_b == 0) {
+          if (this.field_b.status == 0) {
             return false;
           }
-          if (this.field_b.field_b == 1) {
+          if (this.field_b.status == 1) {
             return false;
           }
           this.finalize();
@@ -125,10 +125,10 @@ final class wg implements Runnable {
         }
         try {
           if (this.field_d == 0) {
-            this.field_g = (DataInputStream) (this.field_f.field_g);
+            this.field_g = (DataInputStream) (this.field_f.result);
           }
           if (this.field_d == 1) {
-            var4 = (java.net.Socket) (this.field_h.field_g);
+            var4 = (java.net.Socket) (this.field_h.result);
             var4.setSoTimeout(10000);
             var3 = var4.getOutputStream();
             var3.write(17);
@@ -143,12 +143,12 @@ final class wg implements Runnable {
           this.finalize();
           this.field_d = this.field_d + 1;
           if (this.field_b == null) {
-            this.field_b = this.field_a.a((Runnable) (this), false, 5);
+            this.field_b = this.field_a.requestThreadStart((Runnable) (this), false, 5);
           }
-          if (this.field_b.field_b == 0) {
+          if (this.field_b.status == 0) {
             return false;
           }
-          if (this.field_b.field_b == 1) {
+          if (this.field_b.status == 1) {
             return false;
           }
           this.finalize();
@@ -156,12 +156,12 @@ final class wg implements Runnable {
           return false;
         }
         if (this.field_b == null) {
-          this.field_b = this.field_a.a((Runnable) (this), false, 5);
+          this.field_b = this.field_a.requestThreadStart((Runnable) (this), false, 5);
         }
-        if (this.field_b.field_b == 0) {
+        if (this.field_b.status == 0) {
           return false;
         }
-        if (this.field_b.field_b != 1) {
+        if (this.field_b.status != 1) {
           this.finalize();
           this.field_d = this.field_d + 1;
         }
@@ -212,7 +212,7 @@ final class wg implements Runnable {
         }
     }
 
-    wg(ab param0, java.net.URL param1, int param2) {
+    wg(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_a = param0;
           this.field_c = param1;

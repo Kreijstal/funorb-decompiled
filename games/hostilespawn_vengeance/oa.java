@@ -13,7 +13,7 @@ final class oa {
     static bd field_i;
     static p field_d;
     static int field_a;
-    static kk field_l;
+    static PlatformTask field_l;
     static bd field_e;
 
     public static void clearStaticReferences(int param0) {

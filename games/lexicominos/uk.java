@@ -10,7 +10,7 @@ final class uk extends ql {
     private boolean field_S;
     private String field_W;
 
-    final static void a(int param0, int param1, int param2, ab param3, int param4, byte param5, int param6, int param7, String param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, byte param5, int param6, int param7, String param8) {
         qd.field_b = param2;
         if (param5 != -92) {
           return;

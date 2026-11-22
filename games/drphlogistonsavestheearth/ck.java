@@ -49,11 +49,11 @@ final class ck {
           }
           for (var2 = 0; var2 < var1.field_r; var2++) {
             if (var4.field_n[var2] != null &&
-              var4.field_n[var2].field_b == 0) {
+              var4.field_n[var2].status == 0) {
               return false;
             }
             if (var4.field_o[var2] != null &&
-              var4.field_o[var2].field_b == 0) {
+              var4.field_o[var2].status == 0) {
               return false;
             }
           }

@@ -10,7 +10,7 @@ final class nj {
     private int field_c;
     static String field_d;
     private int field_g;
-    static od field_a;
+    static PlatformTask field_a;
 
     public static void a(byte param0) {
         field_d = null;

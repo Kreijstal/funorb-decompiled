@@ -952,20 +952,20 @@ final class vj {
           }
           try {
             if (hf.field_C == 0) {
-              tc.field_e = MouseWheelInput.field_e.a(g.field_r, LevelSession.field_ib, 35);
+              tc.field_e = MouseWheelInput.field_e.requestDirectSocket(g.field_r, LevelSession.field_ib, 35);
               hf.field_C = hf.field_C + 1;
             }
             if (hf.field_C == 1) {
-              if (tc.field_e.field_b == 2) {
+              if (tc.field_e.status == 2) {
                 stackIn_12_0 = uj.a((byte) 85, -1);
                 return stackIn_12_0;
               }
-              if (tc.field_e.field_b == 1) {
+              if (tc.field_e.status == 1) {
                 hf.field_C = hf.field_C + 1;
               }
             }
             if (hf.field_C == 2) {
-              ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), MouseWheelInput.field_e);
+              ea.field_a = new qe((java.net.Socket) (tc.field_e.result), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
               FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);

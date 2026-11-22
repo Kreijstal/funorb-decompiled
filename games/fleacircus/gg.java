@@ -9,7 +9,7 @@ abstract class gg implements jb {
     static boolean[] field_i;
     static ei field_h;
     private long field_c;
-    static od field_e;
+    static PlatformTask field_e;
     static String field_d;
 
     public final wd a(boolean param0) {

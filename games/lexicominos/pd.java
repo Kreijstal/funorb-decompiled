@@ -3,11 +3,11 @@
  */
 final class pd extends kd {
     int field_p;
-    ei[] field_k;
+    PlatformTask[] field_k;
     int[] field_m;
     int[] field_n;
     byte[][][] field_o;
-    ei[] field_i;
+    PlatformTask[] field_i;
     int field_j;
     static int[] field_l;
     int[] field_h;

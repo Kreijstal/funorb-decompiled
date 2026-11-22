@@ -44,11 +44,11 @@ final class ub implements uj {
           }
           for (var2 = 0; var1.field_y > var2; var2++) {
             if (var4.field_r[var2] != null &&
-              var4.field_r[var2].field_c == 0) {
+              var4.field_r[var2].status == 0) {
               return false;
             }
             if (null != var4.field_q[var2] &&
-              var4.field_q[var2].field_c == 0) {
+              var4.field_q[var2].status == 0) {
               return false;
             }
           }

@@ -12,7 +12,7 @@ final class AccountServiceResult {
     static String field_i;
     boolean success;
     String message;
-    static fd field_k;
+    static PlatformTaskDispatcher field_k;
     String[] suggestions;
 
     final static void a(byte param0, String[] param1) {

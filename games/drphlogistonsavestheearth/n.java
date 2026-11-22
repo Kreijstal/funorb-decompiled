@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n implements Runnable {
-    static bl field_h;
+    static PlatformTaskDispatcher field_h;
     static String field_f;
     static java.awt.Canvas field_g;
     private hl field_b;
@@ -259,7 +259,7 @@ final class n implements Runnable {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 64) {
-          n.createFullscreenCanvas(31, (bl) null, -33, -104, -11, -95);
+          n.createFullscreenCanvas(31, (PlatformTaskDispatcher) null, -33, -104, -11, -95);
         }
         stackIn_6_0 = (null != uj.field_j) && (tl.field_O == ik.field_d);
         return stackIn_6_0;
@@ -376,7 +376,7 @@ final class n implements Runnable {
         }
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, bl param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -479,9 +479,9 @@ final class n implements Runnable {
         }
     }
 
-    n(bl param0) {
+    n(PlatformTaskDispatcher param0) {
         RuntimeException runtimeException = null;
-        il var2 = null;
+        PlatformTask var2 = null;
         int var3 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -492,9 +492,9 @@ final class n implements Runnable {
         this.field_a = false;
         this.field_e = 0;
         try {
-          var2 = param0.a((Runnable) (this), 5, (byte) 127);
+          var2 = param0.requestThreadStart((Runnable) (this), 5, (byte) 127);
           while (true) {
-            if (var2.field_b == 0) {
+            if (var2.status == 0) {
               kk.a(10L, true);
               if (var3 != 0) {
                 return;
@@ -503,10 +503,10 @@ final class n implements Runnable {
             }
             break;
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_g);
+          this.field_d = (Thread) (var2.result);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

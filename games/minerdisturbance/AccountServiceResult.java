@@ -125,20 +125,20 @@ final class AccountServiceResult {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (dk.field_b == null) {
-            dk.field_b = mm.field_b.a(wf.field_U, jc.field_E, (byte) 73);
+            dk.field_b = mm.field_b.requestDirectSocket(wf.field_U, jc.field_E, (byte) 73);
           }
           var2 = -97 % ((-24 - param1) / 56);
-          if (dk.field_b.field_c == 0) {
+          if (dk.field_b.status == 0) {
             return false;
           }
           dupTemp$1 = sf.a((byte) -121);
           ck.field_d = dupTemp$1;
           sk.field_c = dupTemp$1;
-          if (dk.field_b.field_c != 1) {
+          if (dk.field_b.status != 1) {
             qd.field_Q = dk.field_c;
           } else {
             try {
-              ci.field_i = new ll((java.net.Socket) (dk.field_b.field_a), mm.field_b);
+              ci.field_i = new ll((java.net.Socket) (dk.field_b.result), mm.field_b);
               var4 = kj.field_a;
               sn.field_c.position = 0;
               var4.position = 0;

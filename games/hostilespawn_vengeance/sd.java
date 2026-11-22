@@ -32,7 +32,7 @@ class sd extends cn {
         field_v = null;
         if (param0 != -822203935) {
           java.awt.Frame var2 = (java.awt.Frame) null;
-          sd.exitFullscreenFrame((fd) null, -34, (java.awt.Frame) null);
+          sd.exitFullscreenFrame((PlatformTaskDispatcher) null, -34, (java.awt.Frame) null);
         }
         field_t = null;
         field_w = null;
@@ -100,8 +100,8 @@ class sd extends cn {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_y, -1, 2147483647, false);
     }
 
-    final static void exitFullscreenFrame(fd param0, int param1, java.awt.Frame param2) {
-        kk var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -114,11 +114,11 @@ class sd extends cn {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(7, param2);
-            while (var3.field_f == 0) {
+            var3 = param0.requestFullscreenExit(7, param2);
+            while (var3.status == 0) {
               vj.a(10L, (byte) -49);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               vj.a(100L, (byte) -49);
               continue;
             }
@@ -128,7 +128,7 @@ class sd extends cn {
           param2.dispose();
           if (param1 >= -98) {
             var5 = (java.awt.Frame) null;
-            sd.exitFullscreenFrame((fd) null, 120, (java.awt.Frame) null);
+            sd.exitFullscreenFrame((PlatformTaskDispatcher) null, 120, (java.awt.Frame) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

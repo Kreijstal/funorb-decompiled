@@ -3,7 +3,7 @@
  */
 final class j implements Runnable {
     volatile fj[] field_g;
-    vf field_c;
+    PlatformTaskDispatcher field_c;
     static GameAppletShell field_h;
     static long field_f;
     static String field_e;

@@ -9,7 +9,7 @@ final class eb {
     static ug field_e;
     static String field_f;
 
-    final static void a(fd param0, int param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, int param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

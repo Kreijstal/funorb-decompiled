@@ -14,7 +14,7 @@ final class pi extends si {
     static String field_W;
     static String field_J;
     static sa field_N;
-    static bl field_I;
+    static PlatformTaskDispatcher field_I;
     static wg field_V;
     static int field_Q;
     static he[] field_S;

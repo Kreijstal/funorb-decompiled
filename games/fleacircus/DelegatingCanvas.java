@@ -40,7 +40,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           var2_int = -89 % ((73 - param0) / 41);
           try {
-            if (!ce.field_d.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_d.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

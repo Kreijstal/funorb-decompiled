@@ -41,7 +41,7 @@ final class gn {
         return lc.a(param2, 1, param1, param0, (byte) 127);
     }
 
-    final static vk[] a(int param0, vf param1) {
+    final static vk[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         vk[] stackIn_4_0 = null;
         vk[] stackIn_12_0 = null;
@@ -55,27 +55,27 @@ final class gn {
         vk[] var4 = null;
         vk var6 = null;
         int var7 = 0;
-        ia var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          if (!param1.b((byte) 104)) {
+          if (!param1.isFullscreenAvailable((byte) 104)) {
             stackIn_4_0 = new vk[]{};
             return stackIn_4_0;
           }
-          var8 = param1.a((byte) -114);
+          var8 = param1.requestDisplayModes((byte) -114);
           if (param0 != -591) {
             field_b = (String) null;
           }
-          while (var8.field_c == 0) {
+          while (var8.status == 0) {
             gf.a(10L, param0 - 9718);
           }
-          if (var8.field_c == 2) {
+          if (var8.status == 2) {
             stackIn_12_0 = new vk[]{};
             return stackIn_12_0;
           }
-          var10 = (int[]) (var8.field_a);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new vk[var10.length >> 2];

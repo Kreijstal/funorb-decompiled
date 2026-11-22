@@ -187,7 +187,7 @@ class fj {
         this.field_p = true;
     }
 
-    final static fj a(vf param0, java.awt.Component param1, int param2, int param3) {
+    final static fj a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           sm var4 = null;
           Throwable var4_ref = null;
@@ -227,7 +227,7 @@ class fj {
                 field_b == null) {
                 field_b = new j();
                 field_b.field_c = param0;
-                param0.a((Runnable) ((Object) field_b), (byte) 18, field_d);
+                param0.requestThreadStart((Runnable) ((Object) field_b), (byte) 18, field_d);
               }
               if (field_b != null) {
                 if (field_b.field_g[param2] != null) {

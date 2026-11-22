@@ -32,8 +32,8 @@ final class hi extends IntrusiveNode {
         }
     }
 
-    final static void exitFullscreenFrame(ce param0, java.awt.Frame param1, byte param2) {
-        od var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, byte param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -45,11 +45,11 @@ final class hi extends IntrusiveNode {
         var4 = fleas.field_A ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param1, (byte) -34);
-            while (var3.field_b == 0) {
+            var3 = param0.requestFullscreenExit(param1, (byte) -34);
+            while (var3.status == 0) {
               vh.a(10L, 120);
             }
-            if (var3.field_b != 1) {
+            if (var3.status != 1) {
               vh.a(100L, 101);
               continue;
             }

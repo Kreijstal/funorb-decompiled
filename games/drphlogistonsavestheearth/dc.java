@@ -10,7 +10,7 @@ abstract class dc implements qi {
     static nh field_a;
     static String field_g;
 
-    final static void a(bl param0, int param1, boolean param2, ug param3, byte param4, java.awt.Component param5) {
+    final static void a(PlatformTaskDispatcher param0, int param1, boolean param2, ug param3, byte param4, java.awt.Component param5) {
         try {
           if (param4 > -91) {
             field_b = (String) null;

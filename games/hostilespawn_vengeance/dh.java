@@ -312,20 +312,20 @@ final class dh implements Runnable {
         }
     }
 
-    dh(fd param0) {
-        kk var2 = null;
+    dh(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_d = new bh();
         this.field_b = false;
         this.field_e = 0;
         try {
-          var2 = param0.a(5, (Runnable) (this), 62);
-          while (var2.field_f == 0) {
+          var2 = param0.requestThreadStart(5, (Runnable) (this), 62);
+          while (var2.status == 0) {
             vj.a(10L, (byte) -49);
           }
-          if (2 == var2.field_f) {
+          if (2 == var2.status) {
             throw new RuntimeException();
           }
-          this.field_f = (Thread) (var2.field_c);
+          this.field_f = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

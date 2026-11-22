@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lj {
-    static ei field_b;
+    static PlatformTask field_b;
     static volatile int field_a;
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -10,7 +10,7 @@ final class lj {
           gg.a(true, param0, "");
           rf.a(20104, param0);
           if (param1 < 120) {
-            field_b = (ei) null;
+            field_b = (PlatformTask) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -38,7 +38,7 @@ final class lj {
           if (param3 < -127) {
             return;
           }
-          field_b = (ei) null;
+          field_b = (PlatformTask) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -91,7 +91,7 @@ final class lj {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          field_b = (ei) null;
+          field_b = (PlatformTask) null;
           field_b = null;
           return;
         }

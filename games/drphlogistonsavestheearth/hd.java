@@ -22,8 +22,8 @@ final class hd extends vg {
         this.field_G = 8355711 & param1 >> 1;
         this.field_K = (param2 & 16711422) >> 1;
         if (param0) {
-          bl var5 = (bl) null;
-          hd.a((byte) 69, (PacketBuffer) null, (bl) null, 110);
+          PlatformTaskDispatcher var5 = (PlatformTaskDispatcher) null;
+          hd.a((byte) 69, (PacketBuffer) null, (PlatformTaskDispatcher) null, 110);
         }
         this.field_N = param1;
         this.field_A = param2;
@@ -101,7 +101,7 @@ final class hd extends vg {
         }
     }
 
-    final static void a(byte param0, PacketBuffer param1, bl param2, int param3) {
+    final static void a(byte param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -148,8 +148,8 @@ final class hd extends vg {
             var18.field_p = new int[var18.field_r];
             var18.field_w = new int[var18.field_r];
             var18.field_j = new int[var18.field_r];
-            var18.field_n = new il[var18.field_r];
-            var18.field_o = new il[var18.field_r];
+            var18.field_n = new PlatformTask[var18.field_r];
+            var18.field_o = new PlatformTask[var18.field_r];
             for (var5 = 0; var5 < var18.field_r; var5++) {
               try {
                 var6_int = param1.readUnsignedByte(31760);
@@ -184,7 +184,7 @@ final class hd extends vg {
                       var12[var17] = i.a(-32512, var10[var17]);
                       var17++;
                     }
-                    var18.field_o[var5] = param2.a(var8, i.a(-32512, var20), var12, (byte) -39);
+                    var18.field_o[var5] = param2.requestDeclaredMethod(var8, i.a(-32512, var20), var12, (byte) -39);
                     var18.field_t[var5] = var21;
                   }
                 } else {
@@ -198,7 +198,7 @@ final class hd extends vg {
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_w[var5] = var9;
-                  var18.field_n[var5] = param2.a(i.a(-32512, var15), var16, (byte) 14);
+                  var18.field_n[var5] = param2.requestDeclaredField(i.a(-32512, var15), var16, (byte) 14);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

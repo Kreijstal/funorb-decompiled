@@ -5,7 +5,7 @@ final class sb {
     private int field_f;
     private int field_b;
     private uf[] field_j;
-    static bl field_d;
+    static PlatformTaskDispatcher field_d;
     static vj field_g;
     float field_a;
     static vj field_i;
@@ -123,7 +123,7 @@ final class sb {
           de.e(-86);
           MouseWheelInput.b((byte) -120);
           if (param0 != 67) {
-            field_d = (bl) null;
+            field_d = (PlatformTaskDispatcher) null;
             if (DrPhlogistonSavesTheEarth.t(18137)) {
               nj.field_p.d(1, param0 - 18459);
               qj.a(0, param0 + 14589);
@@ -149,7 +149,7 @@ final class sb {
           eg.a((byte) 126);
           return;
         }
-        field_d = (bl) null;
+        field_d = (PlatformTaskDispatcher) null;
         if (DrPhlogistonSavesTheEarth.t(18137)) {
           nj.field_p.d(1, param0 - 18459);
           qj.a(0, param0 + 14589);

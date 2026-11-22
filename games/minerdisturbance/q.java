@@ -12,11 +12,11 @@ final class q {
         field_b = (je[][]) null;
         if (param0 != 20) {
           String var2 = (String) null;
-          q.a(-111, (vf) null, -33, (String) null, 102, -126, -9, 121, -74);
+          q.a(-111, (PlatformTaskDispatcher) null, -33, (String) null, 102, -126, -9, 121, -74);
         }
     }
 
-    final static void a(int param0, vf param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           gd.field_y = param7;
           jl.field_fb = param1;

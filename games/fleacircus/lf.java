@@ -6,7 +6,7 @@ final class lf {
     static String field_c;
     static String field_a;
 
-    final static boolean a(ce param0, int param1) {
+    final static boolean a(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -17,7 +17,7 @@ final class lf {
           if (param1 != 31849) {
             lf.clearStaticReferences((byte) 59);
           }
-          stackIn_3_0 = param0.a(param1 ^ 31758);
+          stackIn_3_0 = param0.isFullscreenAvailable(param1 ^ 31758);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,8 +50,8 @@ final class lf {
           q.field_d = param1;
           bb.field_C = param2;
           if (param3 <= 64) {
-            ce var5 = (ce) null;
-            lf.a((ce) null, 38);
+            PlatformTaskDispatcher var5 = (PlatformTaskDispatcher) null;
+            lf.a((PlatformTaskDispatcher) null, 38);
           }
           di.b(-20667);
         } catch (RuntimeException runtimeException) {

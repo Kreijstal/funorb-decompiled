@@ -47,7 +47,7 @@ final class ff {
         }
     }
 
-    final static void a(vf param0, PacketBuffer param1, int param2, boolean param3) {
+    final static void a(PlatformTaskDispatcher param0, PacketBuffer param1, int param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -89,10 +89,10 @@ final class ff {
             var18 = new gl();
             var18.field_y = param1.readUnsignedByte((byte) -54);
             var18.field_n = param1.readInt((byte) 27);
-            var18.field_r = new ia[var18.field_y];
+            var18.field_r = new PlatformTask[var18.field_y];
             var18.field_s = new int[var18.field_y];
             var18.field_p = new int[var18.field_y];
-            var18.field_q = new ia[var18.field_y];
+            var18.field_q = new PlatformTask[var18.field_y];
             var18.field_w = new int[var18.field_y];
             var18.field_v = new byte[var18.field_y][][];
             for (var5 = 0; var5 < var18.field_y; var5++) {
@@ -131,7 +131,7 @@ final class ff {
                       var12[var17] = di.a((byte) 111, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param0.a(var8, di.a((byte) 122, var20), 75, var12);
+                    var18.field_q[var5] = param0.requestDeclaredMethod(var8, di.a((byte) 122, var20), 75, var12);
                     var18.field_v[var5] = var21;
                   }
                 } else {
@@ -145,7 +145,7 @@ final class ff {
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_p[var5] = var9;
-                  var18.field_r[var5] = param0.a(di.a((byte) 120, var15), var16, 21268);
+                  var18.field_r[var5] = param0.requestDeclaredField(di.a((byte) 120, var15), var16, 21268);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

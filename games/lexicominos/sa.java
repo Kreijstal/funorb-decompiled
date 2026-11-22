@@ -3,7 +3,7 @@
  */
 final class sa {
     static String field_a;
-    static ab field_g;
+    static PlatformTaskDispatcher field_g;
     int field_i;
     String field_f;
     String field_b;

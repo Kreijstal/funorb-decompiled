@@ -3,7 +3,7 @@
  */
 final class af implements Runnable {
     private bf field_e;
-    static ce field_f;
+    static PlatformTaskDispatcher field_f;
     static String field_a;
     static int field_b;
     private boolean field_c;
@@ -371,7 +371,7 @@ final class af implements Runnable {
             }
           }
           if (param4 >= -56) {
-            field_f = (ce) null;
+            field_f = (PlatformTaskDispatcher) null;
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;
@@ -504,20 +504,20 @@ final class af implements Runnable {
         }
     }
 
-    af(ce param0) {
-        od var2 = null;
+    af(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new bf();
         this.field_c = false;
         this.field_d = 0;
         try {
-          var2 = param0.a(4532, (Runnable) (this), 5);
-          while (var2.field_b == 0) {
+          var2 = param0.requestThreadStart(4532, (Runnable) (this), 5);
+          while (var2.status == 0) {
             vh.a(10L, -101);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_e);
+          this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -125,7 +125,7 @@ class la {
     void c() {
     }
 
-    final static la a(ce param0, java.awt.Component param1, int param2, int param3) {
+    final static la a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           kg var4 = null;
           Throwable var4_ref = null;
@@ -165,7 +165,7 @@ class la {
                 field_n == null) {
                 field_n = new ec();
                 field_n.field_f = param0;
-                param0.a(4532, (Runnable) ((Object) field_n), field_k);
+                param0.requestThreadStart(4532, (Runnable) ((Object) field_n), field_k);
               }
               if (field_n != null) {
                 if (field_n.field_c[param2] != null) {

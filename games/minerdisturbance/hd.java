@@ -12,7 +12,7 @@ abstract class hd {
     static Sprite[] field_d;
     static String field_c;
     static java.awt.Frame field_h;
-    static vf field_g;
+    static PlatformTaskDispatcher field_g;
     int field_e;
 
     abstract void a(int param0, int param1);

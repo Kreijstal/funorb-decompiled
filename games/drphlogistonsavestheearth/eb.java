@@ -90,7 +90,7 @@ final class eb {
         }
     }
 
-    final static fl[] a(bl param0, boolean param1) {
+    final static fl[] a(PlatformTaskDispatcher param0, boolean param1) {
         int var5 = 0;
         fl[] stackIn_3_0 = null;
         fl[] stackIn_7_0 = null;
@@ -105,7 +105,7 @@ final class eb {
         fl[] var4 = null;
         fl var6 = null;
         int var7 = 0;
-        il var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -114,19 +114,19 @@ final class eb {
             stackIn_3_0 = (fl[]) null;
             return stackIn_3_0;
           }
-          if (!param0.a(-20)) {
+          if (!param0.isFullscreenAvailable(-20)) {
             stackIn_7_0 = new fl[]{};
             return stackIn_7_0;
           }
-          var8 = param0.a((byte) -107);
-          while (var8.field_b == 0) {
+          var8 = param0.requestDisplayModes((byte) -107);
+          while (var8.status == 0) {
             kk.a(10L, true);
           }
-          if (var8.field_b == 2) {
+          if (var8.status == 2) {
             stackIn_14_0 = new fl[]{};
             return stackIn_14_0;
           }
-          var10 = (int[]) (var8.field_g);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new fl[var10.length >> 2];
