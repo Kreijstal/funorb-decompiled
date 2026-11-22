@@ -87,7 +87,7 @@ final class mo extends am {
           IsaacPacketBuffer var4 = null;
           IsaacPacketBuffer var5 = null;
           if (null == rh.field_b) {
-            rh.field_b = u.field_t.a(ih.field_b, ea.field_t, param0 ^ -369);
+            rh.field_b = u.field_t.requestDirectSocket(ih.field_b, ea.field_t, param0 ^ -369);
           }
           if (rh.field_b.status == 0) {
             return false;

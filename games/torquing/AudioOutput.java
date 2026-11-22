@@ -213,7 +213,7 @@ class AudioOutput {
                 field_u == null) {
                 field_u = new AudioService();
                 field_u.field_b = param0;
-                param0.a((byte) -66, field_o, (Runnable) ((Object) field_u));
+                param0.requestThreadStart((byte) -66, field_o, (Runnable) ((Object) field_u));
               }
               if (field_u != null) {
                 if (field_u.field_c[param2] != null) {

@@ -336,19 +336,19 @@ final class sd implements Runnable {
     }
 
     sd(PlatformTaskDispatcher param0) {
-        ce var2 = null;
+        PlatformTask var2 = null;
         this.field_f = new mb();
         this.field_a = 0;
         this.field_g = false;
         try {
-          var2 = param0.a(5, (Runnable) (this), 94);
-          while (var2.field_f == 0) {
+          var2 = param0.requestThreadStart(5, (Runnable) (this), 94);
+          while (var2.status == 0) {
             wl.a(10L, false);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_e = (Thread) (var2.field_e);
+          this.field_e = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

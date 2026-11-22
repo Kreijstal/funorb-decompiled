@@ -113,11 +113,11 @@ class df extends ng {
               nh.field_jb = nh.field_jb + 1;
             }
             if (nh.field_jb == 1) {
-              if (n.field_cb.field_d == 2) {
+              if (n.field_cb.status == 2) {
                 stackIn_14_0 = je.a(-1, true);
                 return stackIn_14_0;
               }
-              if (n.field_cb.field_d == 1) {
+              if (n.field_cb.status == 1) {
                 nh.field_jb = nh.field_jb + 1;
               }
             }

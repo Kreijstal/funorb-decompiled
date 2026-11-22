@@ -26,11 +26,11 @@ final class lg {
           }
           for (var2 = 0; var2 < var1.field_n; var2++) {
             if (null != var4.field_j[var2] &&
-              var4.field_j[var2].field_f == 0) {
+              var4.field_j[var2].status == 0) {
               return false;
             }
             if (var4.field_v[var2] != null &&
-              var4.field_v[var2].field_f == 0) {
+              var4.field_v[var2].status == 0) {
               return false;
             }
           }

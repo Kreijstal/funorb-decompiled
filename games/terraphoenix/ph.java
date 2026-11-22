@@ -237,7 +237,7 @@ final class ph extends di {
         AsyncRequest var11 = null;
         var9 = Terraphoenix.field_V;
         try {
-          if (!param0.b(2)) {
+          if (!param0.isFullscreenAvailable(2)) {
             return null;
           }
           if (0 == param5) {
@@ -262,7 +262,7 @@ final class ph extends di {
               return (java.awt.Frame) (stackIn_26_0);
             }
           }
-          var11 = param0.a(param5, param2, true, param1, param3);
+          var11 = param0.requestFullscreenEnter(param5, param2, true, param1, param3);
           while (var11.status == 0) {
             gi.a((byte) -63, 10L);
           }

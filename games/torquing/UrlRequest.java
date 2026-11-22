@@ -88,7 +88,7 @@ final class UrlRequest implements Runnable {
         }
         if (this.state == 0) {
           if (this.field_f == null) {
-            this.field_f = this.field_j.a(param0 ^ 3, this.url);
+            this.field_f = this.field_j.requestUrlStream(param0 ^ 3, this.url);
           }
           if (this.field_f.status == 0) {
             return false;
@@ -101,7 +101,7 @@ final class UrlRequest implements Runnable {
         }
         if (this.state == 1) {
           if (null == this.field_b) {
-            this.field_b = this.field_j.a(this.url.getHost(), 443, -60);
+            this.field_b = this.field_j.requestDirectSocket(this.url.getHost(), 443, -60);
           }
           if (this.field_b.status == 0) {
             return false;
@@ -138,7 +138,7 @@ final class UrlRequest implements Runnable {
           return true;
         }
         if (this.field_a == null) {
-          this.field_a = this.field_j.a((byte) -102, 5, (Runnable) (this));
+          this.field_a = this.field_j.requestThreadStart((byte) -102, 5, (Runnable) (this));
         }
         if (this.field_a.status == 0) {
           return false;

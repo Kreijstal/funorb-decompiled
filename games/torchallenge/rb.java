@@ -323,10 +323,10 @@ final class rb implements Runnable {
         this.field_f = false;
         try {
           var2 = param0.requestThread((Runnable) (this), true, 5);
-          while (var2.field_d == 0) {
+          while (var2.status == 0) {
             c.a(-105, 10L);
           }
-          if (var2.field_d == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
           this.field_d = (Thread) (var2.result);

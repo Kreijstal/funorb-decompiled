@@ -74,11 +74,11 @@ final class bl {
             var18 = new kj();
             var18.field_n = param3.readUnsignedByte(16383);
             var18.field_w = param3.readInt((byte) 113);
-            var18.field_j = new ce[var18.field_n];
+            var18.field_j = new PlatformTask[var18.field_n];
             var18.field_u = new int[var18.field_n];
             var18.field_i = new int[var18.field_n];
             var18.field_m = new int[var18.field_n];
-            var18.field_v = new ce[var18.field_n];
+            var18.field_v = new PlatformTask[var18.field_n];
             var18.field_p = new byte[var18.field_n][][];
             for (var5 = param0; var18.field_n > var5; var5++) {
               try {
@@ -114,7 +114,7 @@ final class bl {
                       var12[var17] = ve.a((byte) 11, var10[var17]);
                       var17++;
                     }
-                    var18.field_v[var5] = param2.a(var8, var12, 0, ve.a((byte) 11, var20));
+                    var18.field_v[var5] = param2.requestDeclaredMethod(var8, var12, 0, ve.a((byte) 11, var20));
                     var18.field_p[var5] = var21;
                   }
                 } else {
@@ -128,7 +128,7 @@ final class bl {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_j[var5] = param2.a(ma.a(param0, -26462), var15, ve.a((byte) 11, var16));
+                  var18.field_j[var5] = param2.requestDeclaredField(ma.a(param0, -26462), var15, ve.a((byte) 11, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,15 +205,15 @@ final class bl {
           }
           try {
             if (rf.field_c == 0) {
-              w.field_V = kb.field_d.a(35, IterableNodeHashTable.field_e, IntrusiveNode.field_g);
+              w.field_V = kb.field_d.requestDirectSocket(35, IterableNodeHashTable.field_e, IntrusiveNode.field_g);
               rf.field_c = rf.field_c + 1;
             }
             if (1 == rf.field_c) {
-              if (w.field_V.field_f == 2) {
+              if (w.field_V.status == 2) {
                 stackIn_17_0 = ej.a(40, -1);
                 return stackIn_17_0;
               }
-              if (w.field_V.field_f == 1) {
+              if (w.field_V.status == 1) {
                 rf.field_c = rf.field_c + 1;
               }
             }
@@ -221,7 +221,7 @@ final class bl {
               field_a = (Sprite) null;
             }
             if (rf.field_c == 2) {
-              ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.field_e), kb.field_d);
+              ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.result), kb.field_d);
               var2 = new PacketBuffer(13);
               hl.a(kf.field_a, var2, 17, sa.field_T, GameStringTable.field_j);
               var2.writeByte(15, (byte) -100);

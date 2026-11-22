@@ -553,7 +553,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               u.field_a = dupTemp$0;
               var9 = sh.field_u.requestThread((Runnable) (this), true, 1);
               while (true) {
-                if (var9.field_d == 0) {
+                if (var9.status == 0) {
                   c.a(-123, 10L);
                   if (var10 == 0) {
                     continue;
@@ -726,7 +726,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (sh.field_u != null) {
             try {
-              sh.field_u.a(true);
+              sh.field_u.shutdown(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

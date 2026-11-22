@@ -9,8 +9,8 @@ final class kj extends IntrusiveNode {
     static int[] field_t;
     int[] field_u;
     int field_w;
-    ce[] field_v;
-    ce[] field_j;
+    PlatformTask[] field_v;
+    PlatformTask[] field_j;
     int[] field_m;
     int[] field_i;
     private static long[] field_q;

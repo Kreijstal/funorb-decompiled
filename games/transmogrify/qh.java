@@ -98,7 +98,7 @@ class qh {
                 field_b == null) {
                 field_b = new ef();
                 field_b.field_b = param0;
-                param0.a((Runnable) ((Object) field_b), field_a, 65535);
+                param0.requestThreadStart((Runnable) ((Object) field_b), field_a, 65535);
               }
               if (field_b != null) {
                 if (field_b.field_f[param2] != null) {

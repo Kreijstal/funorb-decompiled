@@ -334,7 +334,7 @@ final class le extends di {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == bd.field_k) {
-            bd.field_k = da.field_g.a(sb.field_i, wa.field_t, (byte) 60);
+            bd.field_k = da.field_g.requestDirectSocket(sb.field_i, wa.field_t, (byte) 60);
           }
           if (param1 <= 82) {
             le.a(false);

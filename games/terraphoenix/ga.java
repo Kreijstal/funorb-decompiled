@@ -55,7 +55,7 @@ final class ga {
           }
           try {
             if (hm.field_N == 0) {
-              bj.field_c = mc.field_b.a(lg.field_h, eb.field_B, (byte) 60);
+              bj.field_c = mc.field_b.requestDirectSocket(lg.field_h, eb.field_B, (byte) 60);
               hm.field_N = hm.field_N + 1;
             }
             if (1 == hm.field_N) {

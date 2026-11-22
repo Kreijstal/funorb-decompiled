@@ -303,14 +303,14 @@ final class cd implements Runnable {
         this.field_d = false;
         this.field_e = 0;
         try {
-          var2 = param0.a((Runnable) (this), 5, 65535);
-          while (var2.field_c == 0) {
+          var2 = param0.requestThreadStart((Runnable) (this), 5, 65535);
+          while (var2.status == 0) {
             pg.a(10L, -95);
           }
-          if (var2.field_c == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_g);
+          this.field_a = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

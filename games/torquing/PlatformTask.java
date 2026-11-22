@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public class PlatformTask {
-    Object field_e;
+    Object objectArgument;
     public volatile int status;
-    int field_g;
-    public int field_b;
+    int requestType;
+    public int intArgument;
     public volatile Object result;
-    PlatformTask field_f;
-    int field_c;
+    PlatformTask next;
+    int secondaryIntArgument;
 
     PlatformTask() {
         this.status = 0;

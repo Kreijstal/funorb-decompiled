@@ -3132,7 +3132,7 @@ final class ContextualRuntimeException extends RuntimeException {
         int var9 = 0;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (!param2.b(5)) {
+          if (!param2.isFullscreenAvailable(5)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -3174,20 +3174,20 @@ final class ContextualRuntimeException extends RuntimeException {
               return (java.awt.Frame) (stackIn_35_0);
             }
           }
-          var6_ref = param2.a(param0, param4, -7573, param3, param5);
-          while (var6_ref.field_c == 0) {
+          var6_ref = param2.requestFullscreenEnter(param0, param4, -7573, param3, param5);
+          while (var6_ref.status == 0) {
             pg.a(10L, -99);
             if (var9 == 0) {
               continue;
             }
             break;
           }
-          var7 = (java.awt.Frame) (var6_ref.field_g);
+          var7 = (java.awt.Frame) (var6_ref.result);
           if (var7 == null) {
             stackIn_43_0 = null;
             return (java.awt.Frame) (stackIn_43_0);
           }
-          if (~var6_ref.field_c != param1) {
+          if (~var6_ref.status != param1) {
             stackIn_50_0 = var7;
             return stackIn_50_0;
           }

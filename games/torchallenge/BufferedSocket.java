@@ -293,10 +293,10 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_h != null) {
-            while (this.field_h.field_d == 0) {
+            while (this.field_h.status == 0) {
               c.a(115, 1L);
             }
-            if (this.field_h.field_d == 1) {
+            if (this.field_h.status == 1) {
               try {
                 ((Thread) (this.field_h.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {

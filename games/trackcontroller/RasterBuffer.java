@@ -71,18 +71,18 @@ abstract class RasterBuffer {
             var3 = 0;
             for (var4 = 0; var4 < var18.field_n; var4++) {
               if (null != var14.field_j[var4]) {
-                if (var14.field_j[var4].field_f == 2) {
+                if (var14.field_j[var4].status == 2) {
                   var14.field_i[var4] = -5;
                 }
-                if (var14.field_j[var4].field_f == 0) {
+                if (var14.field_j[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var14.field_v[var4] != null) {
-                if (var14.field_v[var4].field_f == 2) {
+                if (var14.field_v[var4].status == 2) {
                   var14.field_i[var4] = -6;
                 }
-                if (var14.field_v[var4].field_f == 0) {
+                if (var14.field_v[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -104,26 +104,26 @@ abstract class RasterBuffer {
                   var6_int = var18.field_m[var5];
                   if (var6_int != 0) {
                     if (var6_int == 1) {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_j[var5].field_e);
+                      var17_ref = (java.lang.reflect.Field) (var18.field_j[var5].result);
                       var21 = var17_ref;
                       var21.setInt((Object) null, var18.field_u[var5]);
                       param1.writeByte(0, (byte) -117);
                     } else {
                       if (var6_int == 2) {
-                        var29 = (java.lang.reflect.Field) (var18.field_j[var5].field_e);
+                        var29 = (java.lang.reflect.Field) (var18.field_j[var5].result);
                         var8 = var29.getModifiers();
                         param1.writeByte(0, (byte) -100);
                         param1.writeInt(false, var8);
                       }
                     }
                   } else {
-                    var28 = (java.lang.reflect.Field) (var18.field_j[var5].field_e);
+                    var28 = (java.lang.reflect.Field) (var18.field_j[var5].result);
                     var8 = var28.getInt((Object) null);
                     param1.writeByte(0, (byte) -122);
                     param1.writeInt(false, var8);
                   }
                   if (3 == var6_int) {
-                    var30 = (java.lang.reflect.Method) (var18.field_v[var5].field_e);
+                    var30 = (java.lang.reflect.Method) (var18.field_v[var5].result);
                     var27 = var18.field_p[var5];
                     var9 = new Object[var27.length];
                     for (var10_int = 0; var27.length > var10_int; var10_int++) {
@@ -144,7 +144,7 @@ abstract class RasterBuffer {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var31 = (java.lang.reflect.Method) (var18.field_v[var5].field_e);
+                      var31 = (java.lang.reflect.Method) (var18.field_v[var5].result);
                       var8Lifetime1 = var31.getModifiers();
                       param1.writeByte(0, (byte) -110);
                       param1.writeInt(false, var8Lifetime1);

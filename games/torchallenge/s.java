@@ -72,7 +72,7 @@ final class s extends IntrusiveNode {
           if (null == gf.field_o) {
             gf.field_o = vl.field_a.requestSocket(ae.field_x, ll.field_f, 431890200);
           }
-          if (gf.field_o.field_d == 0) {
+          if (gf.field_o.status == 0) {
             return false;
           }
           if (param0) {
@@ -81,7 +81,7 @@ final class s extends IntrusiveNode {
           dupTemp$1 = ol.a(256);
           AccountNameAvailabilityValidator.field_q = dupTemp$1;
           ac.field_e = dupTemp$1;
-          if (gf.field_o.field_d != 1) {
+          if (gf.field_o.status != 1) {
             aj.field_c = pf.field_b;
           } else {
             try {

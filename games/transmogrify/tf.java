@@ -125,7 +125,7 @@ final class tf {
             AccountServiceResult.field_d[0] = 5;
           } else if (q.field_a != 2) {
             if (q.field_a == 3) {
-              if (!lk.field_b.field_e) {
+              if (!lk.field_b.privilegedTasksEnabled) {
                 var3_int = vd.a(nc.field_r, AchievementNotice.field_m, nh.field_m, GameKeyHandler.field_b, (byte) -103);
               } else {
                 var3_int = vd.a(nc.field_r, AchievementNotice.field_m, e.field_x, GameKeyHandler.field_b, (byte) -118);

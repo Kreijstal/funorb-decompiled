@@ -100,19 +100,19 @@ final class gb {
         int[] var11 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (!param0.b(5)) {
+          if (!param0.isFullscreenAvailable(5)) {
             stackIn_3_0 = new nb[]{};
             return stackIn_3_0;
           }
-          var9 = param0.a(-1);
-          while (var9.field_c == 0) {
+          var9 = param0.requestDisplayModes(-1);
+          while (var9.status == 0) {
             pg.a(10L, -126);
           }
-          if (var9.field_c == 2) {
+          if (var9.status == 2) {
             stackIn_10_0 = new nb[]{};
             return stackIn_10_0;
           }
-          var11 = (int[]) (var9.field_g);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new nb[var11.length >> 2];

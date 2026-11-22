@@ -995,7 +995,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               nk.field_u = dupTemp$0;
               FullscreenFocusCanvas.field_f = dupTemp$0;
               var8_int = 117 % ((param1 - 76) / 34);
-              var9 = nk.field_u.a((byte) -91, 1, (Runnable) (this));
+              var9 = nk.field_u.requestThreadStart((byte) -91, 1, (Runnable) (this));
               while (true) {
                 if (var9.status == 0) {
                   ub.a(1976, 10L);
@@ -1072,7 +1072,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (nk.field_u != null) {
             try {
-              nk.field_u.b(6);
+              nk.field_u.shutdown(6);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

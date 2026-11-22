@@ -94,7 +94,7 @@ final class nh extends IntrusiveNode {
                       var13[var18] = IntrusiveDeque.a((byte) -112, var11[var18]);
                       var18++;
                     }
-                    var19.field_n[var5] = param0.a(var13, -30475, var9, IntrusiveDeque.a((byte) -117, var21));
+                    var19.field_n[var5] = param0.requestDeclaredMethod(var13, -30475, var9, IntrusiveDeque.a((byte) -117, var21));
                     var19.field_o[var5] = var22;
                   }
                 } else {
@@ -108,7 +108,7 @@ final class nh extends IntrusiveNode {
                   }
                   var19.field_q[var5] = var7_int;
                   var19.field_k[var5] = var10;
-                  var19.field_u[var5] = param0.a(IntrusiveDeque.a((byte) -116, var16), true, var17);
+                  var19.field_u[var5] = param0.requestDeclaredField(IntrusiveDeque.a((byte) -116, var16), true, var17);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

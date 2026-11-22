@@ -84,24 +84,24 @@ final class rf {
         ji var6 = null;
         int var7 = 0;
         PlatformTaskDispatcher var8 = null;
-        ce var9 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          if (!param0.b(-4)) {
+          if (!param0.isFullscreenAvailable(-4)) {
             stackIn_4_0 = new ji[]{};
             return stackIn_4_0;
           }
-          var9 = param0.a(75);
-          while (var9.field_f == 0) {
+          var9 = param0.requestDisplayModes(75);
+          while (var9.status == 0) {
             wl.a(10L, false);
           }
-          if (var9.field_f == 2) {
+          if (var9.status == 2) {
             stackIn_10_0 = new ji[]{};
             return stackIn_10_0;
           }
-          var11 = (int[]) (var9.field_e);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new ji[var11.length >> 2];

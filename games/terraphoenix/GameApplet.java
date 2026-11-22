@@ -473,7 +473,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (null != DirectByteStorage.field_l) {
             try {
-              DirectByteStorage.field_l.c(-7538);
+              DirectByteStorage.field_l.shutdown(-7538);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

@@ -302,7 +302,7 @@ final class hm extends am {
           }
           try {
             if (pd.field_c == 0) {
-              rd.field_x = hq.field_a.a(cl.field_d, tl.field_u, -59);
+              rd.field_x = hq.field_a.requestDirectSocket(cl.field_d, tl.field_u, -59);
               pd.field_c = pd.field_c + 1;
             }
             if (pd.field_c == 1) {

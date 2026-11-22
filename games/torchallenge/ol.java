@@ -121,7 +121,7 @@ final class ol {
           if (param0 != -119) {
             ol.b(-70);
           }
-          stackIn_3_0 = param1.a((byte) -76);
+          stackIn_3_0 = param1.isFullscreenAvailable((byte) -76);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

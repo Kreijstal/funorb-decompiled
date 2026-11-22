@@ -12,7 +12,7 @@ final class sg {
     static Archive field_a;
 
     final static void a(java.awt.Frame param0, byte param1, PlatformTaskDispatcher param2) {
-        ce var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -27,11 +27,11 @@ final class sg {
             sg.a(97, 56, -128, -60, -109, -37);
           }
           while (true) {
-            var3 = param2.a(param0, -59);
-            while (var3.field_f == 0) {
+            var3 = param2.requestFullscreenExit(param0, -59);
+            while (var3.status == 0) {
               wl.a(10L, false);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               wl.a(100L, false);
               continue;
             }

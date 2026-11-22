@@ -26,10 +26,10 @@ final class sc extends kd {
         java.awt.Frame var7 = null;
         int var9 = 0;
         ji[] var10 = null;
-        ce var11 = null;
+        PlatformTask var11 = null;
         var9 = TrackController.field_F ? 1 : 0;
         try {
-          if (!param0.b(-4)) {
+          if (!param0.isFullscreenAvailable(-4)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -56,19 +56,19 @@ final class sc extends kd {
               return (java.awt.Frame) (stackIn_27_0);
             }
           }
-          var11 = param0.a(86, param1, param2, param5, param4);
+          var11 = param0.requestFullscreenEnter(86, param1, param2, param5, param4);
           if (param3 <= 85) {
             sc.clearStaticReferences(-111);
           }
-          while (var11.field_f == 0) {
+          while (var11.status == 0) {
             wl.a(10L, false);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_34_0 = null;
             return (java.awt.Frame) (stackIn_34_0);
           }
-          if (var11.field_f != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           sg.a(var7, (byte) -105, param0);

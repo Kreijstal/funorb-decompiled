@@ -942,18 +942,18 @@ final class lc extends PcmStream {
             var3 = 0;
             for (var4 = 0; var4 < var18.field_p; var4++) {
               if (var14.field_m[var4] != null) {
-                if (var14.field_m[var4].field_c == 2) {
+                if (var14.field_m[var4].status == 2) {
                   var14.field_k[var4] = -5;
                 }
-                if (var14.field_m[var4].field_c == 0) {
+                if (var14.field_m[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var14.field_o[var4] != null) {
-                if (var14.field_o[var4].field_c == 2) {
+                if (var14.field_o[var4].status == 2) {
                   var14.field_k[var4] = -6;
                 }
-                if (var14.field_o[var4].field_c == 0) {
+                if (var14.field_o[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -973,25 +973,25 @@ final class lc extends PcmStream {
                   if (0 != var7_int) {
                     if (var7_int != 1) {
                       if (var7_int == 2) {
-                        var28 = (java.lang.reflect.Field) (var18.field_m[var6].field_g);
+                        var28 = (java.lang.reflect.Field) (var18.field_m[var6].result);
                         var9 = var28.getModifiers();
                         param1.writeByte(6389, 0);
                         param1.writeInt(-107, var9);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_m[var6].field_g);
+                      var17_ref = (java.lang.reflect.Field) (var18.field_m[var6].result);
                       var20 = var17_ref;
                       var20.setInt((Object) null, var18.field_h[var6]);
                       param1.writeByte(6389, 0);
                     }
                   } else {
-                    var27 = (java.lang.reflect.Field) (var18.field_m[var6].field_g);
+                    var27 = (java.lang.reflect.Field) (var18.field_m[var6].result);
                     var9 = var27.getInt((Object) null);
                     param1.writeByte(6389, 0);
                     param1.writeInt(-119, var9);
                   }
                   if (var7_int == 3) {
-                    var29 = (java.lang.reflect.Method) (var18.field_o[var6].field_g);
+                    var29 = (java.lang.reflect.Method) (var18.field_o[var6].result);
                     var26 = var18.field_g[var6];
                     var10 = new Object[var26.length];
                     for (var11_int = 0; var26.length > var11_int; var11_int++) {
@@ -1012,7 +1012,7 @@ final class lc extends PcmStream {
                     }
                   } else {
                     if (4 == var7_int) {
-                      var30 = (java.lang.reflect.Method) (var18.field_o[var6].field_g);
+                      var30 = (java.lang.reflect.Method) (var18.field_o[var6].result);
                       var9Lifetime1 = var30.getModifiers();
                       param1.writeByte(6389, 0);
                       param1.writeInt(-107, var9Lifetime1);

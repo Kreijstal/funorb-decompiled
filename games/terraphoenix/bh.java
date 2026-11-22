@@ -103,7 +103,7 @@ final class bh implements Runnable {
         }
         if (this.field_c == 1) {
           if (null == this.field_g) {
-            this.field_g = this.field_o.a(443, this.field_l.getHost(), (byte) 60);
+            this.field_g = this.field_o.requestDirectSocket(443, this.field_l.getHost(), (byte) 60);
           }
           if (0 == this.field_g.status) {
             return false;

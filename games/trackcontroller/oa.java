@@ -263,7 +263,7 @@ class oa {
                 field_q == null) {
                 field_q = new hj();
                 field_q.field_d = param0;
-                param0.a(field_o, (Runnable) ((Object) field_q), 43);
+                param0.requestThreadStart(field_o, (Runnable) ((Object) field_q), 43);
               }
               if (field_q != null) {
                 if (field_q.field_a[param2] != null) {

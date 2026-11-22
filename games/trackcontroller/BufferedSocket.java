@@ -14,7 +14,7 @@ final class BufferedSocket implements Runnable {
     private PlatformTaskDispatcher field_m;
     private boolean field_j;
     static int[][] field_c;
-    private ce field_f;
+    private PlatformTask field_f;
     private byte[] field_e;
     private boolean field_l;
     private int field_i;
@@ -284,12 +284,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_f) {
-            while (this.field_f.field_f == 0) {
+            while (this.field_f.status == 0) {
               wl.a(1L, false);
             }
-            if (this.field_f.field_f == 1) {
+            if (this.field_f.status == 1) {
               try {
-                ((Thread) (this.field_f.field_e)).join();
+                ((Thread) (this.field_f.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -458,7 +458,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (this.field_f == null) {
-              this.field_f = this.field_m.a(3, (Runnable) (this), 17);
+              this.field_f = this.field_m.requestThreadStart(3, (Runnable) (this), 17);
             }
             this.notifyAll();
           }

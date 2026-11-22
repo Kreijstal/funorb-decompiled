@@ -21,19 +21,19 @@ final class gk {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == fk.field_F) {
-            fk.field_F = l.field_b.a(52, ai.field_d, lf.field_c);
+            fk.field_F = l.field_b.requestDirectSocket(52, ai.field_d, lf.field_c);
           }
-          if (fk.field_F.field_c == 0) {
+          if (fk.field_F.status == 0) {
             return false;
           }
           dupTemp$1 = lk.a(0);
           td.field_b = dupTemp$1;
           wi.field_q = dupTemp$1;
-          if (fk.field_F.field_c != 1) {
+          if (fk.field_F.status != 1) {
             lj.field_z = ng.field_j;
           } else {
             try {
-              nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.field_g), l.field_b);
+              nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.result), l.field_b);
               ff.field_D.position = 0;
               var2_ref_hj = WordLanguage.field_l;
               var2_ref_hj.position = 0;

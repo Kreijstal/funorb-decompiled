@@ -464,7 +464,7 @@ abstract class v extends b {
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           var6_int = -121 % ((param3 - 0) / 40);
-          if (!param4.a((byte) -96)) {
+          if (!param4.isFullscreenAvailable((byte) -96)) {
             return null;
           }
           if (param2 == 0) {
@@ -489,15 +489,15 @@ abstract class v extends b {
               return null;
             }
           }
-          var12 = param4.a(param5, param0, param2, param1, -2);
-          while (var12.field_d == 0) {
+          var12 = param4.requestFullscreenEnter(param5, param0, param2, param1, -2);
+          while (var12.status == 0) {
             c.a(127, 10L);
           }
           var8 = (java.awt.Frame) (var12.result);
           if (var8 == null) {
             return null;
           }
-          if (var12.field_d != 2) {
+          if (var12.status != 2) {
             stackIn_37_0 = var8;
             return stackIn_37_0;
           }

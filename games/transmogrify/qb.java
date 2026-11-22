@@ -18,18 +18,18 @@ final class qb implements Runnable {
 
     protected final void finalize() {
         if (this.field_j != null) {
-          if (null != this.field_j.field_g) {
+          if (null != this.field_j.result) {
             try {
-              ((DataInputStream) (this.field_j.field_g)).close();
+              ((DataInputStream) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_j = null;
         }
         if (this.field_d != null) {
-          if (this.field_d.field_g != null) {
+          if (this.field_d.result != null) {
             try {
-              ((java.net.Socket) (this.field_d.field_g)).close();
+              ((java.net.Socket) (this.field_d.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -64,12 +64,12 @@ final class qb implements Runnable {
         }
         if (this.field_c == param0) {
           if (null == this.field_j) {
-            this.field_j = this.field_i.a(-21377, this.field_b);
+            this.field_j = this.field_i.requestUrlStream(-21377, this.field_b);
           }
-          if (this.field_j.field_c == 0) {
+          if (this.field_j.status == 0) {
             return false;
           }
-          if (this.field_j.field_c != 1) {
+          if (this.field_j.status != 1) {
             this.field_j = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -77,12 +77,12 @@ final class qb implements Runnable {
         }
         if (this.field_c == 1) {
           if (null == this.field_d) {
-            this.field_d = this.field_i.a(88, this.field_b.getHost(), 443);
+            this.field_d = this.field_i.requestDirectSocket(88, this.field_b.getHost(), 443);
           }
-          if (this.field_d.field_c == 0) {
+          if (this.field_d.status == 0) {
             return false;
           }
-          if (this.field_d.field_c != 1) {
+          if (this.field_d.status != 1) {
             this.field_d = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -90,12 +90,12 @@ final class qb implements Runnable {
         }
         if (this.field_g != null) {
           if (null == this.field_e) {
-            this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
+            this.field_e = this.field_i.requestThreadStart((Runnable) (this), 5, 65535);
           }
-          if (0 == this.field_e.field_c) {
+          if (0 == this.field_e.status) {
             return false;
           }
-          if (this.field_e.field_c == 1) {
+          if (this.field_e.status == 1) {
             return false;
           }
           this.finalize();
@@ -104,10 +104,10 @@ final class qb implements Runnable {
         }
         try {
           if (this.field_c == 0) {
-            this.field_g = (DataInputStream) (this.field_j.field_g);
+            this.field_g = (DataInputStream) (this.field_j.result);
           }
           if (this.field_c == 1) {
-            var4 = (java.net.Socket) (this.field_d.field_g);
+            var4 = (java.net.Socket) (this.field_d.result);
             var4.setSoTimeout(10000);
             var3 = var4.getOutputStream();
             var3.write(17);
@@ -122,21 +122,21 @@ final class qb implements Runnable {
           this.finalize();
           this.field_c = this.field_c + 1;
           if (null != this.field_e) {
-            if (0 == this.field_e.field_c) {
+            if (0 == this.field_e.status) {
               return false;
             }
-            if (this.field_e.field_c == 1) {
+            if (this.field_e.status == 1) {
               return false;
             }
             this.finalize();
             this.field_c = this.field_c + 1;
             return false;
           }
-          this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
-          if (0 == this.field_e.field_c) {
+          this.field_e = this.field_i.requestThreadStart((Runnable) (this), 5, 65535);
+          if (0 == this.field_e.status) {
             return false;
           }
-          if (this.field_e.field_c == 1) {
+          if (this.field_e.status == 1) {
             return false;
           }
           this.finalize();
@@ -144,12 +144,12 @@ final class qb implements Runnable {
           return false;
         }
         if (null == this.field_e) {
-          this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
+          this.field_e = this.field_i.requestThreadStart((Runnable) (this), 5, 65535);
         }
-        if (0 == this.field_e.field_c) {
+        if (0 == this.field_e.status) {
           return false;
         }
-        if (this.field_e.field_c != 1) {
+        if (this.field_e.status != 1) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }

@@ -54,7 +54,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_b) {
-              this.field_b = this.field_c.a((Runnable) (this), 3, 65535);
+              this.field_b = this.field_c.requestThreadStart((Runnable) (this), 3, 65535);
             }
             this.notifyAll();
           }
@@ -98,12 +98,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_b) {
-            while (0 == this.field_b.field_c) {
+            while (0 == this.field_b.status) {
               pg.a(1L, -94);
             }
-            if (this.field_b.field_c == 1) {
+            if (this.field_b.status == 1) {
               try {
-                ((Thread) (this.field_b.field_g)).join();
+                ((Thread) (this.field_b.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }

@@ -8,7 +8,7 @@ final class IterableNodeHashTable implements Iterable {
     IntrusiveNode[] field_c;
     static String field_f;
     int field_a;
-    static ce field_d;
+    static PlatformTask field_d;
     private IntrusiveNode field_g;
     static boolean[] field_b;
 
@@ -17,7 +17,7 @@ final class IterableNodeHashTable implements Iterable {
         field_f = null;
         field_d = null;
         if (param0 != 72) {
-          field_d = (ce) null;
+          field_d = (PlatformTask) null;
         }
     }
 

@@ -5,7 +5,7 @@ final class w extends wd implements ButtonListener {
     private ButtonWidget field_S;
     static int field_T;
     static double field_U;
-    static ce field_V;
+    static PlatformTask field_V;
 
     public static void b(boolean param0) {
         if (!param0) {

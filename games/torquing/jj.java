@@ -22,7 +22,7 @@ final class jj {
         PlatformTask var12 = null;
         var9 = Torquing.field_u;
         try {
-          if (!param0.a((byte) 13)) {
+          if (!param0.isFullscreenAvailable((byte) 13)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -47,7 +47,7 @@ final class jj {
               return null;
             }
           }
-          var12 = param0.a(true, param2, param1, param5, param4);
+          var12 = param0.requestFullscreenEnter(true, param2, param1, param5, param4);
           while (var12.status == 0) {
             ub.a(1976, 10L);
           }

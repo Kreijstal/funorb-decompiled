@@ -289,7 +289,7 @@ final class ij implements t {
             ac.field_c[0] = 5;
           } else if (di.field_h != 2) {
             if (di.field_h == 3) {
-              if (!rg.field_c.field_l) {
+              if (!rg.field_c.privilegedTasksEnabled) {
                 var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, WhirlpoolDigest.field_c, ok.field_C);
               } else {
                 var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, GameKeyHandler.field_b, ok.field_C);

@@ -5,12 +5,12 @@ public class PlatformTask {
     int secondInt;
     public int firstInt;
     public volatile Object result;
-    PlatformTask field_e;
+    PlatformTask next;
     Object argument;
-    public volatile int field_d;
+    public volatile int status;
     int kind;
 
     PlatformTask() {
-        this.field_d = 0;
+        this.status = 0;
     }
 }

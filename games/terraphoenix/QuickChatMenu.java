@@ -249,7 +249,7 @@ final class QuickChatMenu {
                       var12[var17] = q.a(89, var10[var17]);
                       var17++;
                     }
-                    var18.field_j[var5] = param1.a(92, q.a(78, var20), var21, var12);
+                    var18.field_j[var5] = param1.requestDeclaredMethod(92, q.a(78, var20), var21, var12);
                     var18.field_o[var5] = var22;
                   }
                 } else {
@@ -261,7 +261,7 @@ final class QuickChatMenu {
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_m[var5] = var9;
-                  var18.field_s[var5] = param1.a(q.a(119, var15), -3645, var16);
+                  var18.field_s[var5] = param1.requestDeclaredField(q.a(119, var15), -3645, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

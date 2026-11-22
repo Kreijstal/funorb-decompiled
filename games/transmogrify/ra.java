@@ -18,11 +18,11 @@ final class ra {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(param1, 100);
-            while (var3.field_c == 0) {
+            var3 = param0.requestFullscreenExit(param1, 100);
+            while (var3.status == 0) {
               pg.a(10L, param2 - 225);
             }
-            if (1 != var3.field_c) {
+            if (1 != var3.status) {
               pg.a(100L, -116);
               continue;
             }

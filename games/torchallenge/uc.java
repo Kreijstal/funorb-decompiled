@@ -87,18 +87,18 @@ final class uc extends ng {
         int[] var10 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (!param1.a((byte) -81)) {
+          if (!param1.isFullscreenAvailable((byte) -81)) {
             stackIn_3_0 = new ja[]{};
             return stackIn_3_0;
           }
-          var8 = param1.a(5);
-          while (var8.field_d == 0) {
+          var8 = param1.requestDisplayModes(5);
+          while (var8.status == 0) {
             c.a(46, 10L);
           }
           if (param0 >= -75) {
             uc.a(-124);
           }
-          if (2 == var8.field_d) {
+          if (2 == var8.status) {
             stackIn_12_0 = new ja[]{};
             return stackIn_12_0;
           }

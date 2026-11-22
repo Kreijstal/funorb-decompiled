@@ -272,7 +272,7 @@ final class co implements Runnable {
         this.field_c = false;
         this.field_a = 0;
         try {
-          var2 = param0.a((byte) -126, 5, (Runnable) (this));
+          var2 = param0.requestThreadStart((byte) -126, 5, (Runnable) (this));
           while (var2.status == 0) {
             ub.a(1976, 10L);
           }

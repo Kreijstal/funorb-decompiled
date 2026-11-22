@@ -104,11 +104,11 @@ final class de {
           }
           for (var2 = 0; var1.field_p > var2; var2++) {
             if (null != var4.field_j[var2] &&
-              var4.field_j[var2].field_d == 0) {
+              var4.field_j[var2].status == 0) {
               return false;
             }
             if (null != var4.field_q[var2] &&
-              var4.field_q[var2].field_d == 0) {
+              var4.field_q[var2].status == 0) {
               return false;
             }
           }

@@ -190,7 +190,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (this.field_k == null) {
-              this.field_k = this.field_g.a((byte) -90, 3, (Runnable) (this));
+              this.field_k = this.field_g.requestThreadStart((byte) -90, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -359,14 +359,14 @@ final class BufferedSocket implements Runnable {
         int[] var10 = null;
         var7 = Torquing.field_u;
         try {
-          if (!param0.a((byte) 13)) {
+          if (!param0.isFullscreenAvailable((byte) 13)) {
             stackIn_3_0 = new sf[]{};
             return stackIn_3_0;
           }
           if (param1 > -10) {
             BufferedSocket.b(false);
           }
-          var8 = param0.a(100);
+          var8 = param0.requestDisplayModes(100);
           while (var8.status == 0) {
             ub.a(1976, 10L);
           }

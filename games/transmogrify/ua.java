@@ -315,7 +315,7 @@ final class ua {
                       var12[var17] = ek.a(3249872, var10[var17]);
                       var17++;
                     }
-                    var18.field_o[var5] = param1.a(ek.a(3249872, var20), (byte) 81, var12, var21);
+                    var18.field_o[var5] = param1.requestDeclaredMethod(ek.a(3249872, var20), (byte) 81, var12, var21);
                     var18.field_g[var5] = var22;
                   }
                 } else {
@@ -327,7 +327,7 @@ final class ua {
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_m[var5] = param1.a(ak.a(param2, 22529), var15, ek.a(ak.a(param2, -3264187), var16));
+                  var18.field_m[var5] = param1.requestDeclaredField(ak.a(param2, 22529), var15, ek.a(ak.a(param2, -3264187), var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

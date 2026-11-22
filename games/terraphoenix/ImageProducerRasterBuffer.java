@@ -145,11 +145,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int[] var10 = null;
         var7 = Terraphoenix.field_V;
         try {
-          if (!param0.b(2)) {
+          if (!param0.isFullscreenAvailable(2)) {
             stackIn_3_0 = new ef[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(-84);
+          var8 = param0.requestDisplayModes(-84);
           while (var8.status == 0) {
             gi.a((byte) -64, 10L);
           }

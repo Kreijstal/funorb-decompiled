@@ -32,20 +32,20 @@ final class ai {
           }
           try {
             if (0 == cl.field_A) {
-              wj.field_j = MouseInputHandler.field_a.a(60, WordLanguage.field_i, c.field_b);
+              wj.field_j = MouseInputHandler.field_a.requestDirectSocket(60, WordLanguage.field_i, c.field_b);
               cl.field_A = cl.field_A + 1;
             }
             if (cl.field_A == 1) {
-              if (wj.field_j.field_c == 2) {
+              if (wj.field_j.status == 2) {
                 stackIn_16_0 = og.a(2, -1);
                 return stackIn_16_0;
               }
-              if (1 == wj.field_j.field_c) {
+              if (1 == wj.field_j.status) {
                 cl.field_A = cl.field_A + 1;
               }
             }
             if (cl.field_A == param0) {
-              re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
+              re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.result), MouseInputHandler.field_a);
               var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.writeByte(param0 + 6387, 15);

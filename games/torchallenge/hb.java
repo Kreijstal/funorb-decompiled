@@ -139,18 +139,18 @@ final class hb {
             var3 = 0;
             for (var5 = 0; var19.field_p > var5; var5++) {
               if (null != var14.field_j[var5]) {
-                if (2 == var14.field_j[var5].field_d) {
+                if (2 == var14.field_j[var5].status) {
                   var14.field_o[var5] = -5;
                 }
-                if (0 == var14.field_j[var5].field_d) {
+                if (0 == var14.field_j[var5].status) {
                   var3 = 1;
                 }
               }
               if (null != var14.field_q[var5]) {
-                if (var14.field_q[var5].field_d == 2) {
+                if (var14.field_q[var5].status == 2) {
                   var14.field_o[var5] = -6;
                 }
-                if (0 == var14.field_q[var5].field_d) {
+                if (0 == var14.field_q[var5].status) {
                   var3 = 1;
                 }
               }

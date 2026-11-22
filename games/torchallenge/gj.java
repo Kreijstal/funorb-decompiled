@@ -175,7 +175,7 @@ final class gj {
             pe.field_db[0] = 5;
           } else if (RandomAccessCacheFile.field_c != 2) {
             if (3 == RandomAccessCacheFile.field_c) {
-              if (!sh.field_u.field_g) {
+              if (!sh.field_u.privilegedTasksEnabled) {
                 var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, GameClientBase.field_z);
               } else {
                 var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, cj.field_a);

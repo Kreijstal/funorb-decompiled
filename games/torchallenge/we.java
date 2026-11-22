@@ -94,10 +94,10 @@ final class we implements Runnable {
           if (null == this.field_k) {
             this.field_k = this.field_b.requestUrl(this.field_h, -125);
           }
-          if (this.field_k.field_d == 0) {
+          if (this.field_k.status == 0) {
             return false;
           }
-          if (this.field_k.field_d != 1) {
+          if (this.field_k.status != 1) {
             this.field_k = null;
             this.field_p = this.field_p + 1;
             return false;
@@ -107,10 +107,10 @@ final class we implements Runnable {
           if (this.field_g == null) {
             this.field_g = this.field_b.requestSocket(443, this.field_h.getHost(), 431890200);
           }
-          if (0 == this.field_g.field_d) {
+          if (0 == this.field_g.status) {
             return false;
           }
-          if (this.field_g.field_d != 1) {
+          if (this.field_g.status != 1) {
             this.field_p = this.field_p + 1;
             this.field_g = null;
             return false;
@@ -141,10 +141,10 @@ final class we implements Runnable {
         if (null == this.field_n) {
           this.field_n = this.field_b.requestThread((Runnable) (this), true, 5);
         }
-        if (this.field_n.field_d == 0) {
+        if (this.field_n.status == 0) {
           return false;
         }
-        if (this.field_n.field_d != 1) {
+        if (this.field_n.status != 1) {
           this.finalize();
           this.field_p = this.field_p + 1;
         }
