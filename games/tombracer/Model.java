@@ -86,24 +86,24 @@ final class Model extends ToolkitModel {
     private byte[] field_wb;
     private static String field_Hb;
 
-    private final void e() {
+    private final void refreshLighting() {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (this.field_eb == 0) {
           this.computeLightingLocked(false);
         } else {
           if (this.field_d.field_u <= 1) {
-            this.h();
+            this.refreshFaceColours();
           } else {
             var1 = this;
             synchronized (var1) {
-              this.h();
+              this.refreshFaceColours();
             }
           }
         }
     }
 
-    final void wa() {
+    final void finishAnimation() {
         int var1 = 0;
         if (this.field_S) {
           for (var1 = 0; var1 < this.field_p; var1++) {
@@ -114,13 +114,13 @@ final class Model extends ToolkitModel {
           this.field_S = false;
         }
         if (this.field_L) {
-          this.e();
+          this.refreshLighting();
           this.field_L = false;
         }
         this.field_r = false;
     }
 
-    final void O(int param0, int param1, int param2) {
+    final void scale(int param0, int param1, int param2) {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -528,7 +528,7 @@ final class Model extends ToolkitModel {
         this.field_r = false;
     }
 
-    final void H(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -628,12 +628,12 @@ final class Model extends ToolkitModel {
             if (!param2) {
               var10Lifetime1 = this.field_jb[param0];
               if (var10Lifetime1 == -1) {
-                this.j(param0);
+                this.rasterizeFaceArgb(param0);
               } else {
                 var11 = this.field_e[var10Lifetime1];
                 var12 = this.field_db[var10Lifetime1];
                 if (!var11.field_d) {
-                  this.j(param0);
+                  this.rasterizeFaceArgb(param0);
                 }
                 this.field_d.drawBillboard(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
               }
@@ -641,10 +641,10 @@ final class Model extends ToolkitModel {
               var10Lifetime1 = this.field_jb[param0];
               if (var10Lifetime1 != -1) {
                 if (!this.field_e[var10Lifetime1].field_d) {
-                  this.g(param0);
+                  this.rasterizeFoggedFaceArgb(param0);
                 }
               } else {
-                this.g(param0);
+                this.rasterizeFoggedFaceArgb(param0);
               }
             }
           }
@@ -652,7 +652,7 @@ final class Model extends ToolkitModel {
 
     }
 
-    private final void j(int param0) {
+    private final void rasterizeFaceArgb(int param0) {
         int var2;
         int var3;
         int var4;
@@ -723,14 +723,14 @@ final class Model extends ToolkitModel {
         } else {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
             if (!this.isFaceTransparent(var5Lifetime1) &&
-              !this.h(var5Lifetime1)) {
+              !this.hasFaceBillboard(var5Lifetime1)) {
               this.drawFace(var5Lifetime1, param0, param1);
             }
           }
           if (this.field_wb == null) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
               if (this.isFaceTransparent(var5Lifetime1) ||
-                this.h(var5Lifetime1)) {
+                this.hasFaceBillboard(var5Lifetime1)) {
                 this.drawFace(var5Lifetime1, param0, param1);
               }
             }
@@ -740,7 +740,7 @@ final class Model extends ToolkitModel {
               var6 = var7;
               while (var7 < this.field_g) {
                 if (this.field_wb[var7] == var5Lifetime1 && (this.isFaceTransparent(var7) ||
-                  this.h(var7))) {
+                  this.hasFaceBillboard(var7))) {
                   this.drawFace(var7, param0, param1);
                 }
                 var7++;
@@ -1230,7 +1230,7 @@ final class Model extends ToolkitModel {
         return this.copyInto(var4, var5, param1, param0 != 0 ? true : false, param2);
     }
 
-    private final void i(int param0) {
+    private final void rasterizeFoggedFace(int param0) {
         int var2;
         int var3;
         int var4;
@@ -1328,7 +1328,7 @@ final class Model extends ToolkitModel {
             return;
           }
           if (var8 == 0) {
-            this.f(param0);
+            this.rasterizeFace(param0);
             return;
           }
           if (this.field_h != null) {
@@ -2471,7 +2471,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final boolean h(int param0) {
+    private final boolean hasFaceBillboard(int param0) {
         if (this.field_jb == null) {
           return false;
         }
@@ -2481,7 +2481,7 @@ final class Model extends ToolkitModel {
         return true;
     }
 
-    private final void h() {
+    private final void refreshFaceColours() {
         int var5 = 0;
         int stackIn_5_0 = 0;
         int var1;
@@ -2517,7 +2517,7 @@ final class Model extends ToolkitModel {
         this.field_eb = 2;
     }
 
-    private final void g(int param0) {
+    private final void rasterizeFoggedFaceArgb(int param0) {
         int var2;
         int var3;
         int var4;
@@ -2615,7 +2615,7 @@ final class Model extends ToolkitModel {
             return;
           }
           if (var8 == 0) {
-            this.j(param0);
+            this.rasterizeFaceArgb(param0);
             return;
           }
           if (this.field_h != null) {
@@ -2892,7 +2892,7 @@ final class Model extends ToolkitModel {
         return (param0 & 65408) + param1;
     }
 
-    private final void f(int param0) {
+    private final void rasterizeFace(int param0) {
         int var2;
         int var3;
         int var4;
@@ -2927,7 +2927,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    final void FA(int param0) {
+    final void rotateX(int param0) {
         int var5 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -2951,7 +2951,7 @@ final class Model extends ToolkitModel {
         return;
     }
 
-    final boolean NA() {
+    final boolean prepareAnimation() {
         if (this.field_sb == null) {
           return false;
         }
@@ -3516,14 +3516,14 @@ final class Model extends ToolkitModel {
         } else {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
             if (!this.isFaceTransparent(var5Lifetime1) &&
-              !this.h(var5Lifetime1)) {
+              !this.hasFaceBillboard(var5Lifetime1)) {
               this.drawFaceArgb(var5Lifetime1, param0, param1);
             }
           }
           if (this.field_wb == null) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
               if (this.isFaceTransparent(var5Lifetime1) ||
-                this.h(var5Lifetime1)) {
+                this.hasFaceBillboard(var5Lifetime1)) {
                 this.drawFaceArgb(var5Lifetime1, param0, param1);
               }
             }
@@ -3533,7 +3533,7 @@ final class Model extends ToolkitModel {
               var6 = var7;
               while (var7 < this.field_g) {
                 if (this.field_wb[var7] == var5Lifetime1 && (this.isFaceTransparent(var7) ||
-                  this.h(var7))) {
+                  this.hasFaceBillboard(var7))) {
                   this.drawFaceArgb(var7, param0, param1);
                 }
                 var7++;
@@ -3574,7 +3574,7 @@ final class Model extends ToolkitModel {
         FaceNormal var19;
         FaceNormal var20;
         if (this.field_eb == 1) {
-          this.e();
+          this.refreshLighting();
           return;
         }
         if (this.field_eb == 2) {
@@ -3843,12 +3843,12 @@ final class Model extends ToolkitModel {
             if (!param2) {
               var10Lifetime1 = this.field_jb[param0];
               if (var10Lifetime1 == -1) {
-                this.f(param0);
+                this.rasterizeFace(param0);
               } else {
                 var11 = this.field_e[var10Lifetime1];
                 var12 = this.field_db[var10Lifetime1];
                 if (!var11.field_d) {
-                  this.f(param0);
+                  this.rasterizeFace(param0);
                 }
                 this.field_d.c(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
               }
@@ -3856,10 +3856,10 @@ final class Model extends ToolkitModel {
               var10Lifetime1 = this.field_jb[param0];
               if (var10Lifetime1 != -1) {
                 if (!this.field_e[var10Lifetime1].field_d) {
-                  this.i(param0);
+                  this.rasterizeFoggedFace(param0);
                 }
               } else {
-                this.i(param0);
+                this.rasterizeFoggedFace(param0);
               }
             }
           }

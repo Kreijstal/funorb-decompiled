@@ -68,7 +68,7 @@ final class epa extends MenuScreen {
               vn.field_b.setFieldText(ScrollControlWidget.field_E, 123);
             }
             if (param0 == 10) {
-              ToolkitModel.a((byte) -33);
+              ToolkitModel.openDisplayNameForm((byte) -33);
               var3_int = 0;
             }
             if (var3_int != 0) {

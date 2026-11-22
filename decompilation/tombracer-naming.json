@@ -641,7 +641,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:OpenGlModel.wa()V#0"
+      "renamedSymbol": "B:OpenGlModel.finishAnimation()V#0"
     },
     {
       "symbol": "B:ppa.a(ZI[BZI)Z#0",
@@ -34284,6 +34284,38 @@
       "renamedSymbol": "M:VertexAttribute.loadBasicSprites(LResourceArchive;Z)V"
     },
     {
+      "symbol": "M:gja.FA(I)V",
+      "originalName": "FA",
+      "to": "rotateX",
+      "evidence": "Complete three Java implementations and sine/cosine table initialization reviewed: rotates second/third coordinates, first unchanged, using14-bit trig. Preserve permission guards, integer shifts/overflow, loop debug flags, cache/buffer invalidation and exception strings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareModel.rotateX(I)V"
+    },
+    {
+      "symbol": "M:gja.H(III)V",
+      "originalName": "H",
+      "to": "translate",
+      "evidence": "Complete three Java implementations and model-position callers reviewed: adds three supplied offsets to corresponding coordinates; preserve per-axis permission checks, zero shortcuts, synchronization, debug-loop behavior and invalidation differences.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareModel.translate(III)V"
+    },
+    {
+      "symbol": "M:gja.NA()Z",
+      "originalName": "NA",
+      "to": "prepareAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: returns false if vertex groups absent; otherwise initializes transform pivot, and GPU implementations shift coordinates to4extra fractional bits. Software lazy precision handling retained. Preserve preparation side effects/false result and lock/unlock order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareModel.prepareAnimation()Z"
+    },
+    {
+      "symbol": "M:gja.O(III)V",
+      "originalName": "O",
+      "to": "scale",
+      "evidence": "Complete three Java implementations and ModelAnimator/LoadingStepList callers reviewed: multiply each coordinate by supplied factor then >>7, identity128. Preserve permission checks, overflow, debug-loop/zero/identity behavior and cache invalidation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareModel.scale(III)V"
+    },
+    {
       "symbol": "M:gja.a()V",
       "originalName": "a",
       "to": "lockForUpdate",
@@ -34434,6 +34466,14 @@
       "evidence": "Creates and fills the index buffer from the face indices.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HardwareModel.uploadIndexBuffer(I)Z"
+    },
+    {
+      "symbol": "M:gja.wa()V",
+      "originalName": "wa",
+      "to": "finishAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardwareModel.finishAnimation()V"
     },
     {
       "symbol": "M:gk.a(IB)V",
@@ -38556,6 +38596,38 @@
       "renamedSymbol": "M:hw.releaseStatics(I)V"
     },
     {
+      "symbol": "M:i.FA(I)V",
+      "originalName": "FA",
+      "to": "rotateX",
+      "evidence": "Complete three Java implementations and sine/cosine table initialization reviewed: rotates second/third coordinates, first unchanged, using14-bit trig. Preserve permission guards, integer shifts/overflow, loop debug flags, cache/buffer invalidation and exception strings. Native declaration inspected; role follows shared override contract/callers and Java implementations. Native body equivalence not established; keep native modifier, descriptor and original symbol in dictionary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeToolkitModel.rotateX(I)V"
+    },
+    {
+      "symbol": "M:i.H(III)V",
+      "originalName": "H",
+      "to": "translate",
+      "evidence": "Complete three Java implementations and model-position callers reviewed: adds three supplied offsets to corresponding coordinates; preserve per-axis permission checks, zero shortcuts, synchronization, debug-loop behavior and invalidation differences. Native declaration inspected; role follows shared override contract/callers and Java implementations. Native body equivalence not established; keep native modifier, descriptor and original symbol in dictionary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeToolkitModel.translate(III)V"
+    },
+    {
+      "symbol": "M:i.NA()Z",
+      "originalName": "NA",
+      "to": "prepareAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: returns false if vertex groups absent; otherwise initializes transform pivot, and GPU implementations shift coordinates to4extra fractional bits. Software lazy precision handling retained. Preserve preparation side effects/false result and lock/unlock order. Native declaration inspected; role follows shared override contract/callers and Java implementations. Native body equivalence not established; keep native modifier, descriptor and original symbol in dictionary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeToolkitModel.prepareAnimation()Z"
+    },
+    {
+      "symbol": "M:i.O(III)V",
+      "originalName": "O",
+      "to": "scale",
+      "evidence": "Complete three Java implementations and ModelAnimator/LoadingStepList callers reviewed: multiply each coordinate by supplied factor then >>7, identity128. Preserve permission checks, overflow, debug-loop/zero/identity behavior and cache invalidation. Native declaration inspected; role follows shared override contract/callers and Java implementations. Native body equivalence not established; keep native modifier, descriptor and original symbol in dictionary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeToolkitModel.scale(III)V"
+    },
+    {
       "symbol": "M:i.R(Loa;Lya;II[I[I[I[I[SI[S[S[S[B[B[B[B[S[S[IB[SI[B[S[S[S[I[I[I[B[B[I[I[I[IIIIIII[I)V",
       "originalName": "R",
       "to": "initializeNativeModel",
@@ -38650,6 +38722,14 @@
       "evidence": "Complete queue immediate/deferred calls, eleven implementations and finalizer routes reviewed. Resource-release contract retains boolean flag and descriptor. Source naming/reversal does not establish native binary or whole-runtime equivalence. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NativeToolkitModel.releaseNative(Z)V"
+    },
+    {
+      "symbol": "M:i.wa()V",
+      "originalName": "wa",
+      "to": "finishAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering. Native declaration inspected; role follows shared override contract/callers and Java implementations. Native body equivalence not established; keep native modifier, descriptor and original symbol in dictionary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeToolkitModel.finishAnimation()V"
     },
     {
       "symbol": "M:iaa.a(I)V",
@@ -43628,12 +43708,52 @@
       "renamedSymbol": "M:k.releaseStatics(I)V"
     },
     {
+      "symbol": "M:ka.FA(I)V",
+      "originalName": "FA",
+      "to": "rotateX",
+      "evidence": "Complete three Java implementations and sine/cosine table initialization reviewed: rotates second/third coordinates, first unchanged, using14-bit trig. Preserve permission guards, integer shifts/overflow, loop debug flags, cache/buffer invalidation and exception strings. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.rotateX(I)V"
+    },
+    {
+      "symbol": "M:ka.H(III)V",
+      "originalName": "H",
+      "to": "translate",
+      "evidence": "Complete three Java implementations and model-position callers reviewed: adds three supplied offsets to corresponding coordinates; preserve per-axis permission checks, zero shortcuts, synchronization, debug-loop behavior and invalidation differences. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.translate(III)V"
+    },
+    {
+      "symbol": "M:ka.NA()Z",
+      "originalName": "NA",
+      "to": "prepareAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: returns false if vertex groups absent; otherwise initializes transform pivot, and GPU implementations shift coordinates to4extra fractional bits. Software lazy precision handling retained. Preserve preparation side effects/false result and lock/unlock order. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.prepareAnimation()Z"
+    },
+    {
+      "symbol": "M:ka.O(III)V",
+      "originalName": "O",
+      "to": "scale",
+      "evidence": "Complete three Java implementations and ModelAnimator/LoadingStepList callers reviewed: multiply each coordinate by supplied factor then >>7, identity128. Preserve permission checks, overflow, debug-loop/zero/identity behavior and cache invalidation. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.scale(III)V"
+    },
+    {
       "symbol": "M:ka.a()V",
       "originalName": "a",
       "to": "lockForUpdate",
       "evidence": "The software model waits until no other thread holds it and marks it busy; animate calls it first.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ToolkitModel.lockForUpdate()V"
+    },
+    {
+      "symbol": "M:ka.a(B)V",
+      "originalName": "a",
+      "to": "openDisplayNameForm",
+      "evidence": "Complete body reviewed: wrong byte guard recurses; otherwise dismisses existing message dialog, allocates DisplayNameForm and transitions to content100. Preserve allocation/UI/guard sequence and all unrelated model methods.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.openDisplayNameForm(B)V"
     },
     {
       "symbol": "M:ka.a(BIZ)Lka;",
@@ -43722,6 +43842,14 @@
       "evidence": "The software model clears its busy flag and notifies waiters; animate calls it last.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ToolkitModel.unlockForUpdate()V"
+    },
+    {
+      "symbol": "M:ka.wa()V",
+      "originalName": "wa",
+      "to": "finishAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering. Abstract declaration and animation/position callers reviewed; keep abstract contract and all implementations consistent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ToolkitModel.finishAnimation()V"
     },
     {
       "symbol": "M:kaa.a(IIZ)Z",
@@ -52916,6 +53044,38 @@
       "renamedSymbol": "M:no.releaseStatics(Z)V"
     },
     {
+      "symbol": "M:np.FA(I)V",
+      "originalName": "FA",
+      "to": "rotateX",
+      "evidence": "Complete three Java implementations and sine/cosine table initialization reviewed: rotates second/third coordinates, first unchanged, using14-bit trig. Preserve permission guards, integer shifts/overflow, loop debug flags, cache/buffer invalidation and exception strings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlModel.rotateX(I)V"
+    },
+    {
+      "symbol": "M:np.H(III)V",
+      "originalName": "H",
+      "to": "translate",
+      "evidence": "Complete three Java implementations and model-position callers reviewed: adds three supplied offsets to corresponding coordinates; preserve per-axis permission checks, zero shortcuts, synchronization, debug-loop behavior and invalidation differences.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlModel.translate(III)V"
+    },
+    {
+      "symbol": "M:np.NA()Z",
+      "originalName": "NA",
+      "to": "prepareAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: returns false if vertex groups absent; otherwise initializes transform pivot, and GPU implementations shift coordinates to4extra fractional bits. Software lazy precision handling retained. Preserve preparation side effects/false result and lock/unlock order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlModel.prepareAnimation()Z"
+    },
+    {
+      "symbol": "M:np.O(III)V",
+      "originalName": "O",
+      "to": "scale",
+      "evidence": "Complete three Java implementations and ModelAnimator/LoadingStepList callers reviewed: multiply each coordinate by supplied factor then >>7, identity128. Preserve permission checks, overflow, debug-loop/zero/identity behavior and cache invalidation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlModel.scale(III)V"
+    },
+    {
       "symbol": "M:np.a()V",
       "originalName": "a",
       "to": "lockForUpdate",
@@ -53010,6 +53170,14 @@
       "evidence": "Only nulls static fields, like the other releaseStatics cleanup methods.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlModel.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:np.wa()V",
+      "originalName": "wa",
+      "to": "finishAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlModel.finishAnimation()V"
     },
     {
       "symbol": "M:npa.a(BLffa;)[Lffa;",
@@ -76132,6 +76300,38 @@
       "renamedSymbol": "M:MenuScreen.getItemY(II)I"
     },
     {
+      "symbol": "M:ww.FA(I)V",
+      "originalName": "FA",
+      "to": "rotateX",
+      "evidence": "Complete three Java implementations and sine/cosine table initialization reviewed: rotates second/third coordinates, first unchanged, using14-bit trig. Preserve permission guards, integer shifts/overflow, loop debug flags, cache/buffer invalidation and exception strings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.rotateX(I)V"
+    },
+    {
+      "symbol": "M:ww.H(III)V",
+      "originalName": "H",
+      "to": "translate",
+      "evidence": "Complete three Java implementations and model-position callers reviewed: adds three supplied offsets to corresponding coordinates; preserve per-axis permission checks, zero shortcuts, synchronization, debug-loop behavior and invalidation differences.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.translate(III)V"
+    },
+    {
+      "symbol": "M:ww.NA()Z",
+      "originalName": "NA",
+      "to": "prepareAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: returns false if vertex groups absent; otherwise initializes transform pivot, and GPU implementations shift coordinates to4extra fractional bits. Software lazy precision handling retained. Preserve preparation side effects/false result and lock/unlock order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.prepareAnimation()Z"
+    },
+    {
+      "symbol": "M:ww.O(III)V",
+      "originalName": "O",
+      "to": "scale",
+      "evidence": "Complete three Java implementations and ModelAnimator/LoadingStepList callers reviewed: multiply each coordinate by supplied factor then >>7, identity128. Preserve permission checks, overflow, debug-loop/zero/identity behavior and cache invalidation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.scale(III)V"
+    },
+    {
       "symbol": "M:ww.a()V",
       "originalName": "a",
       "to": "lockForUpdate",
@@ -76324,6 +76524,14 @@
       "renamedSymbol": "M:Model.clampHslLightness(I)I"
     },
     {
+      "symbol": "M:ww.e()V",
+      "originalName": "e",
+      "to": "refreshLighting",
+      "evidence": "Complete wrapper and lighting callees reviewed: computes lighting initially or refreshes face colours; synchronizes only original multithreaded branch. Preserve state choices, monitor and failures.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.refreshLighting()V"
+    },
+    {
       "symbol": "M:ww.e(I)V",
       "originalName": "e",
       "to": "drawClippedFace",
@@ -76340,12 +76548,68 @@
       "renamedSymbol": "M:Model.clearCaches()V"
     },
     {
+      "symbol": "M:ww.f(I)V",
+      "originalName": "f",
+      "to": "rasterizeFace",
+      "evidence": "Complete body and drawFace/fog fallback callers reviewed: dispatches textured/Gouraud/flat triangle with original alpha, materials, UVs/depths and zero fog amounts. Preserve -1sentinel and all renderer arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.rasterizeFace(I)V"
+    },
+    {
       "symbol": "M:ww.g()V",
       "originalName": "g",
       "to": "computeNormalsLocked",
       "evidence": "Runs computeNormals, synchronising on the model when the toolkit has several contexts.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Model.computeNormalsLocked()V"
+    },
+    {
+      "symbol": "M:ww.g(I)V",
+      "originalName": "g",
+      "to": "rasterizeFoggedFaceArgb",
+      "evidence": "Complete body, ARGB face dispatcher and fog setter reviewed: same original per-corner fog/early return/delegation logic with ARGB rasterizers. Preserve all fallthrough guards, mode arithmetic, renderer arguments and colour blending.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.rasterizeFoggedFaceArgb(I)V"
+    },
+    {
+      "symbol": "M:ww.h()V",
+      "originalName": "h",
+      "to": "refreshFaceColours",
+      "evidence": "Complete body reviewed: updates untextured per-face/per-corner lightness/colour preserving packed high bits and -1/-2sentinels, then marks lighting state2. No changes to textured faces, table lookups or arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.refreshFaceColours()V"
+    },
+    {
+      "symbol": "M:ww.h(I)Z",
+      "originalName": "h",
+      "to": "hasFaceBillboard",
+      "evidence": "Complete getter plus model constructor/drawFaces face->billboard mapping reviewed: array absent or entry -1returns false; entry maps face to SoftwareModelBillboard index. Preserve bounds/null/sentinel behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.hasFaceBillboard(I)Z"
+    },
+    {
+      "symbol": "M:ww.i(I)V",
+      "originalName": "i",
+      "to": "rasterizeFoggedFace",
+      "evidence": "Complete body, regular face dispatcher and SoftwareGraphicsToolkit.setFogParameters reviewed: derives fog amounts in both context modes, early-outs full fog, delegates no fog to plain rasterizer, blends fog colour or forwards per-corner fog amounts. Preserve original branch/debug state, integer clamps, colours/texture/depth arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.rasterizeFoggedFace(I)V"
+    },
+    {
+      "symbol": "M:ww.j(I)V",
+      "originalName": "j",
+      "to": "rasterizeFaceArgb",
+      "evidence": "Complete body and drawFaceArgb/fog fallback callers reviewed: ARGB textured/Gouraud/flat dispatch, original alpha and zero fog amounts. Preserve all renderer arguments and sentinels.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.rasterizeFaceArgb(I)V"
+    },
+    {
+      "symbol": "M:ww.wa()V",
+      "originalName": "wa",
+      "to": "finishAnimation",
+      "evidence": "Complete three Java implementations and ToolkitModel.animate reviewed: restores coordinate precision with original(+7)>>4, refreshes software lighting if dirty and invalidates position/bounds as implemented. Preserve lazy flags, exact rounding, debug loops and release ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.finishAnimation()V"
     },
     {
       "symbol": "M:xa.r(II)V",
@@ -77316,7 +77580,7 @@
     },
     {
       "symbol": "B:np.wa()V#0",
-      "renamedSymbol": "B:OpenGlModel.wa()V#0",
+      "renamedSymbol": "B:OpenGlModel.finishAnimation()V#0",
       "originalName": "L1",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -280233,7 +280497,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#0",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#0",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -280244,7 +280508,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#1",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#1",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -280255,7 +280519,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#2",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#2",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -280266,7 +280530,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#3",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#3",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -280277,7 +280541,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#4",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#4",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -280288,7 +280552,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#5",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#5",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -280299,7 +280563,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#6",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#6",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -280310,7 +280574,7 @@
     },
     {
       "symbol": "L:gja.FA(I)V#7",
-      "renamedSymbol": "L:HardwareModel.FA(I)V#7",
+      "renamedSymbol": "L:HardwareModel.rotateX(I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -280321,7 +280585,7 @@
     },
     {
       "symbol": "L:gja.H(III)V#0",
-      "renamedSymbol": "L:HardwareModel.H(III)V#0",
+      "renamedSymbol": "L:HardwareModel.translate(III)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -280332,7 +280596,7 @@
     },
     {
       "symbol": "L:gja.H(III)V#1",
-      "renamedSymbol": "L:HardwareModel.H(III)V#1",
+      "renamedSymbol": "L:HardwareModel.translate(III)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -280343,7 +280607,7 @@
     },
     {
       "symbol": "L:gja.H(III)V#2",
-      "renamedSymbol": "L:HardwareModel.H(III)V#2",
+      "renamedSymbol": "L:HardwareModel.translate(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -280354,7 +280618,7 @@
     },
     {
       "symbol": "L:gja.H(III)V#3",
-      "renamedSymbol": "L:HardwareModel.H(III)V#3",
+      "renamedSymbol": "L:HardwareModel.translate(III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -280365,7 +280629,7 @@
     },
     {
       "symbol": "L:gja.H(III)V#4",
-      "renamedSymbol": "L:HardwareModel.H(III)V#4",
+      "renamedSymbol": "L:HardwareModel.translate(III)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -281542,7 +281806,7 @@
     },
     {
       "symbol": "L:gja.NA()Z#0",
-      "renamedSymbol": "L:HardwareModel.NA()Z#0",
+      "renamedSymbol": "L:HardwareModel.prepareAnimation()Z#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -281553,7 +281817,7 @@
     },
     {
       "symbol": "L:gja.NA()Z#1",
-      "renamedSymbol": "L:HardwareModel.NA()Z#1",
+      "renamedSymbol": "L:HardwareModel.prepareAnimation()Z#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -281564,7 +281828,7 @@
     },
     {
       "symbol": "L:gja.NA()Z#2",
-      "renamedSymbol": "L:HardwareModel.NA()Z#2",
+      "renamedSymbol": "L:HardwareModel.prepareAnimation()Z#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -281575,7 +281839,7 @@
     },
     {
       "symbol": "L:gja.NA()Z#3",
-      "renamedSymbol": "L:HardwareModel.NA()Z#3",
+      "renamedSymbol": "L:HardwareModel.prepareAnimation()Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -281586,7 +281850,7 @@
     },
     {
       "symbol": "L:gja.NA()Z#4",
-      "renamedSymbol": "L:HardwareModel.NA()Z#4",
+      "renamedSymbol": "L:HardwareModel.prepareAnimation()Z#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -281597,7 +281861,7 @@
     },
     {
       "symbol": "L:gja.O(III)V#0",
-      "renamedSymbol": "L:HardwareModel.O(III)V#0",
+      "renamedSymbol": "L:HardwareModel.scale(III)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -281608,7 +281872,7 @@
     },
     {
       "symbol": "L:gja.O(III)V#1",
-      "renamedSymbol": "L:HardwareModel.O(III)V#1",
+      "renamedSymbol": "L:HardwareModel.scale(III)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -281619,7 +281883,7 @@
     },
     {
       "symbol": "L:gja.O(III)V#2",
-      "renamedSymbol": "L:HardwareModel.O(III)V#2",
+      "renamedSymbol": "L:HardwareModel.scale(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -281630,7 +281894,7 @@
     },
     {
       "symbol": "L:gja.O(III)V#3",
-      "renamedSymbol": "L:HardwareModel.O(III)V#3",
+      "renamedSymbol": "L:HardwareModel.scale(III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -281641,7 +281905,7 @@
     },
     {
       "symbol": "L:gja.O(III)V#4",
-      "renamedSymbol": "L:HardwareModel.O(III)V#4",
+      "renamedSymbol": "L:HardwareModel.scale(III)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -285843,7 +286107,7 @@
     },
     {
       "symbol": "L:gja.wa()V#0",
-      "renamedSymbol": "L:HardwareModel.wa()V#0",
+      "renamedSymbol": "L:HardwareModel.finishAnimation()V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -285854,7 +286118,7 @@
     },
     {
       "symbol": "L:gja.wa()V#1",
-      "renamedSymbol": "L:HardwareModel.wa()V#1",
+      "renamedSymbol": "L:HardwareModel.finishAnimation()V#1",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -285865,7 +286129,7 @@
     },
     {
       "symbol": "L:gja.wa()V#2",
-      "renamedSymbol": "L:HardwareModel.wa()V#2",
+      "renamedSymbol": "L:HardwareModel.finishAnimation()V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -285876,7 +286140,7 @@
     },
     {
       "symbol": "L:gja.wa()V#3",
-      "renamedSymbol": "L:HardwareModel.wa()V#3",
+      "renamedSymbol": "L:HardwareModel.finishAnimation()V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -285887,7 +286151,7 @@
     },
     {
       "symbol": "L:gja.wa()V#4",
-      "renamedSymbol": "L:HardwareModel.wa()V#4",
+      "renamedSymbol": "L:HardwareModel.finishAnimation()V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -410022,7 +410286,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#0",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#0",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -410033,7 +410297,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#1",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#1",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -410044,7 +410308,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#2",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#2",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -410055,7 +410319,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#3",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#3",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -410066,7 +410330,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#4",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#4",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -410077,7 +410341,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#5",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#5",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -410088,7 +410352,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#6",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#6",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -410099,7 +410363,7 @@
     },
     {
       "symbol": "L:np.FA(I)V#7",
-      "renamedSymbol": "L:OpenGlModel.FA(I)V#7",
+      "renamedSymbol": "L:OpenGlModel.rotateX(I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -410110,7 +410374,7 @@
     },
     {
       "symbol": "L:np.H(III)V#0",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#0",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -410121,7 +410385,7 @@
     },
     {
       "symbol": "L:np.H(III)V#1",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#1",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -410132,7 +410396,7 @@
     },
     {
       "symbol": "L:np.H(III)V#2",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#2",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -410143,7 +410407,7 @@
     },
     {
       "symbol": "L:np.H(III)V#3",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#3",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -410154,7 +410418,7 @@
     },
     {
       "symbol": "L:np.H(III)V#4",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#4",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#4",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -410165,7 +410429,7 @@
     },
     {
       "symbol": "L:np.H(III)V#5",
-      "renamedSymbol": "L:OpenGlModel.H(III)V#5",
+      "renamedSymbol": "L:OpenGlModel.translate(III)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -411177,7 +411441,7 @@
     },
     {
       "symbol": "L:np.NA()Z#0",
-      "renamedSymbol": "L:OpenGlModel.NA()Z#0",
+      "renamedSymbol": "L:OpenGlModel.prepareAnimation()Z#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -411188,7 +411452,7 @@
     },
     {
       "symbol": "L:np.NA()Z#1",
-      "renamedSymbol": "L:OpenGlModel.NA()Z#1",
+      "renamedSymbol": "L:OpenGlModel.prepareAnimation()Z#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -411199,7 +411463,7 @@
     },
     {
       "symbol": "L:np.NA()Z#2",
-      "renamedSymbol": "L:OpenGlModel.NA()Z#2",
+      "renamedSymbol": "L:OpenGlModel.prepareAnimation()Z#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -411210,7 +411474,7 @@
     },
     {
       "symbol": "L:np.NA()Z#3",
-      "renamedSymbol": "L:OpenGlModel.NA()Z#3",
+      "renamedSymbol": "L:OpenGlModel.prepareAnimation()Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -411221,7 +411485,7 @@
     },
     {
       "symbol": "L:np.NA()Z#4",
-      "renamedSymbol": "L:OpenGlModel.NA()Z#4",
+      "renamedSymbol": "L:OpenGlModel.prepareAnimation()Z#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -411232,7 +411496,7 @@
     },
     {
       "symbol": "L:np.O(III)V#0",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#0",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -411243,7 +411507,7 @@
     },
     {
       "symbol": "L:np.O(III)V#1",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#1",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -411254,7 +411518,7 @@
     },
     {
       "symbol": "L:np.O(III)V#2",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#2",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -411265,7 +411529,7 @@
     },
     {
       "symbol": "L:np.O(III)V#3",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#3",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -411276,7 +411540,7 @@
     },
     {
       "symbol": "L:np.O(III)V#4",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#4",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#4",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -411287,7 +411551,7 @@
     },
     {
       "symbol": "L:np.O(III)V#5",
-      "renamedSymbol": "L:OpenGlModel.O(III)V#5",
+      "renamedSymbol": "L:OpenGlModel.scale(III)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -416182,7 +416446,7 @@
     },
     {
       "symbol": "L:np.wa()V#0",
-      "renamedSymbol": "L:OpenGlModel.wa()V#0",
+      "renamedSymbol": "L:OpenGlModel.finishAnimation()V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -416193,7 +416457,7 @@
     },
     {
       "symbol": "L:np.wa()V#1",
-      "renamedSymbol": "L:OpenGlModel.wa()V#1",
+      "renamedSymbol": "L:OpenGlModel.finishAnimation()V#1",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -416204,7 +416468,7 @@
     },
     {
       "symbol": "L:np.wa()V#2",
-      "renamedSymbol": "L:OpenGlModel.wa()V#2",
+      "renamedSymbol": "L:OpenGlModel.finishAnimation()V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -416215,7 +416479,7 @@
     },
     {
       "symbol": "L:np.wa()V#3",
-      "renamedSymbol": "L:OpenGlModel.wa()V#3",
+      "renamedSymbol": "L:OpenGlModel.finishAnimation()V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -416226,7 +416490,7 @@
     },
     {
       "symbol": "L:np.wa()V#4",
-      "renamedSymbol": "L:OpenGlModel.wa()V#4",
+      "renamedSymbol": "L:OpenGlModel.finishAnimation()V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -577486,7 +577750,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#0",
-      "renamedSymbol": "L:Model.FA(I)V#0",
+      "renamedSymbol": "L:Model.rotateX(I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -577497,7 +577761,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#1",
-      "renamedSymbol": "L:Model.FA(I)V#1",
+      "renamedSymbol": "L:Model.rotateX(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -577508,7 +577772,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#2",
-      "renamedSymbol": "L:Model.FA(I)V#2",
+      "renamedSymbol": "L:Model.rotateX(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -577519,7 +577783,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#3",
-      "renamedSymbol": "L:Model.FA(I)V#3",
+      "renamedSymbol": "L:Model.rotateX(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -577530,7 +577794,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#4",
-      "renamedSymbol": "L:Model.FA(I)V#4",
+      "renamedSymbol": "L:Model.rotateX(I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -577541,7 +577805,7 @@
     },
     {
       "symbol": "L:ww.FA(I)V#5",
-      "renamedSymbol": "L:Model.FA(I)V#5",
+      "renamedSymbol": "L:Model.rotateX(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -577552,7 +577816,7 @@
     },
     {
       "symbol": "L:ww.H(III)V#0",
-      "renamedSymbol": "L:Model.H(III)V#0",
+      "renamedSymbol": "L:Model.translate(III)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -577563,7 +577827,7 @@
     },
     {
       "symbol": "L:ww.H(III)V#1",
-      "renamedSymbol": "L:Model.H(III)V#1",
+      "renamedSymbol": "L:Model.translate(III)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -577574,7 +577838,7 @@
     },
     {
       "symbol": "L:ww.H(III)V#2",
-      "renamedSymbol": "L:Model.H(III)V#2",
+      "renamedSymbol": "L:Model.translate(III)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -579444,7 +579708,7 @@
     },
     {
       "symbol": "L:ww.O(III)V#0",
-      "renamedSymbol": "L:Model.O(III)V#0",
+      "renamedSymbol": "L:Model.scale(III)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -579455,7 +579719,7 @@
     },
     {
       "symbol": "L:ww.O(III)V#1",
-      "renamedSymbol": "L:Model.O(III)V#1",
+      "renamedSymbol": "L:Model.scale(III)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -579466,7 +579730,7 @@
     },
     {
       "symbol": "L:ww.O(III)V#2",
-      "renamedSymbol": "L:Model.O(III)V#2",
+      "renamedSymbol": "L:Model.scale(III)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -583789,7 +584053,7 @@
     },
     {
       "symbol": "L:ww.e()V#0",
-      "renamedSymbol": "L:Model.e()V#0",
+      "renamedSymbol": "L:Model.refreshLighting()V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -583800,7 +584064,7 @@
     },
     {
       "symbol": "L:ww.e()V#1",
-      "renamedSymbol": "L:Model.e()V#1",
+      "renamedSymbol": "L:Model.refreshLighting()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -584328,7 +584592,7 @@
     },
     {
       "symbol": "L:ww.f(I)V#0",
-      "renamedSymbol": "L:Model.f(I)V#0",
+      "renamedSymbol": "L:Model.rasterizeFace(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -584339,7 +584603,7 @@
     },
     {
       "symbol": "L:ww.f(I)V#1",
-      "renamedSymbol": "L:Model.f(I)V#1",
+      "renamedSymbol": "L:Model.rasterizeFace(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -584350,7 +584614,7 @@
     },
     {
       "symbol": "L:ww.f(I)V#2",
-      "renamedSymbol": "L:Model.f(I)V#2",
+      "renamedSymbol": "L:Model.rasterizeFace(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -584361,7 +584625,7 @@
     },
     {
       "symbol": "L:ww.f(I)V#3",
-      "renamedSymbol": "L:Model.f(I)V#3",
+      "renamedSymbol": "L:Model.rasterizeFace(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -584372,7 +584636,7 @@
     },
     {
       "symbol": "L:ww.f(I)V#4",
-      "renamedSymbol": "L:Model.f(I)V#4",
+      "renamedSymbol": "L:Model.rasterizeFace(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -584405,7 +584669,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#0",
-      "renamedSymbol": "L:Model.g(I)V#0",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -584416,7 +584680,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#1",
-      "renamedSymbol": "L:Model.g(I)V#1",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -584427,7 +584691,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#2",
-      "renamedSymbol": "L:Model.g(I)V#2",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -584438,7 +584702,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#3",
-      "renamedSymbol": "L:Model.g(I)V#3",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -584449,7 +584713,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#4",
-      "renamedSymbol": "L:Model.g(I)V#4",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -584460,7 +584724,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#5",
-      "renamedSymbol": "L:Model.g(I)V#5",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -584471,7 +584735,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#6",
-      "renamedSymbol": "L:Model.g(I)V#6",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -584482,7 +584746,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#7",
-      "renamedSymbol": "L:Model.g(I)V#7",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -584493,7 +584757,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#8",
-      "renamedSymbol": "L:Model.g(I)V#8",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -584504,7 +584768,7 @@
     },
     {
       "symbol": "L:ww.g(I)V#9",
-      "renamedSymbol": "L:Model.g(I)V#9",
+      "renamedSymbol": "L:Model.rasterizeFoggedFaceArgb(I)V#9",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -584515,7 +584779,7 @@
     },
     {
       "symbol": "L:ww.h()V#0",
-      "renamedSymbol": "L:Model.h()V#0",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -584526,7 +584790,7 @@
     },
     {
       "symbol": "L:ww.h()V#1",
-      "renamedSymbol": "L:Model.h()V#1",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -584537,7 +584801,7 @@
     },
     {
       "symbol": "L:ww.h()V#2",
-      "renamedSymbol": "L:Model.h()V#2",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -584548,7 +584812,7 @@
     },
     {
       "symbol": "L:ww.h()V#3",
-      "renamedSymbol": "L:Model.h()V#3",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -584559,7 +584823,7 @@
     },
     {
       "symbol": "L:ww.h()V#4",
-      "renamedSymbol": "L:Model.h()V#4",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -584570,7 +584834,7 @@
     },
     {
       "symbol": "L:ww.h()V#5",
-      "renamedSymbol": "L:Model.h()V#5",
+      "renamedSymbol": "L:Model.refreshFaceColours()V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -584581,7 +584845,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#0",
-      "renamedSymbol": "L:Model.i(I)V#0",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -584592,7 +584856,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#1",
-      "renamedSymbol": "L:Model.i(I)V#1",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -584603,7 +584867,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#2",
-      "renamedSymbol": "L:Model.i(I)V#2",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -584614,7 +584878,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#3",
-      "renamedSymbol": "L:Model.i(I)V#3",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -584625,7 +584889,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#4",
-      "renamedSymbol": "L:Model.i(I)V#4",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -584636,7 +584900,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#5",
-      "renamedSymbol": "L:Model.i(I)V#5",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -584647,7 +584911,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#6",
-      "renamedSymbol": "L:Model.i(I)V#6",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -584658,7 +584922,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#7",
-      "renamedSymbol": "L:Model.i(I)V#7",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -584669,7 +584933,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#8",
-      "renamedSymbol": "L:Model.i(I)V#8",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -584680,7 +584944,7 @@
     },
     {
       "symbol": "L:ww.i(I)V#9",
-      "renamedSymbol": "L:Model.i(I)V#9",
+      "renamedSymbol": "L:Model.rasterizeFoggedFace(I)V#9",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -584691,7 +584955,7 @@
     },
     {
       "symbol": "L:ww.j(I)V#0",
-      "renamedSymbol": "L:Model.j(I)V#0",
+      "renamedSymbol": "L:Model.rasterizeFaceArgb(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -584702,7 +584966,7 @@
     },
     {
       "symbol": "L:ww.j(I)V#1",
-      "renamedSymbol": "L:Model.j(I)V#1",
+      "renamedSymbol": "L:Model.rasterizeFaceArgb(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -584713,7 +584977,7 @@
     },
     {
       "symbol": "L:ww.j(I)V#2",
-      "renamedSymbol": "L:Model.j(I)V#2",
+      "renamedSymbol": "L:Model.rasterizeFaceArgb(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -584724,7 +584988,7 @@
     },
     {
       "symbol": "L:ww.j(I)V#3",
-      "renamedSymbol": "L:Model.j(I)V#3",
+      "renamedSymbol": "L:Model.rasterizeFaceArgb(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -584735,7 +584999,7 @@
     },
     {
       "symbol": "L:ww.j(I)V#4",
-      "renamedSymbol": "L:Model.j(I)V#4",
+      "renamedSymbol": "L:Model.rasterizeFaceArgb(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -584746,7 +585010,7 @@
     },
     {
       "symbol": "L:ww.wa()V#0",
-      "renamedSymbol": "L:Model.wa()V#0",
+      "renamedSymbol": "L:Model.finishAnimation()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -617020,9 +617284,9 @@
     },
     {
       "symbol": "M:gja.FA(I)V",
-      "renamedSymbol": "M:HardwareModel.FA(I)V",
+      "renamedSymbol": "M:HardwareModel.rotateX(I)V",
       "originalName": "FA",
-      "renamedName": "FA",
+      "renamedName": "rotateX",
       "declaration": {
         "file": "gja.java",
         "start": 89964,
@@ -617031,9 +617295,9 @@
     },
     {
       "symbol": "M:gja.H(III)V",
-      "renamedSymbol": "M:HardwareModel.H(III)V",
+      "renamedSymbol": "M:HardwareModel.translate(III)V",
       "originalName": "H",
-      "renamedName": "H",
+      "renamedName": "translate",
       "declaration": {
         "file": "gja.java",
         "start": 73513,
@@ -617053,9 +617317,9 @@
     },
     {
       "symbol": "M:gja.NA()Z",
-      "renamedSymbol": "M:HardwareModel.NA()Z",
+      "renamedSymbol": "M:HardwareModel.prepareAnimation()Z",
       "originalName": "NA",
-      "renamedName": "NA",
+      "renamedName": "prepareAnimation",
       "declaration": {
         "file": "gja.java",
         "start": 42060,
@@ -617064,9 +617328,9 @@
     },
     {
       "symbol": "M:gja.O(III)V",
-      "renamedSymbol": "M:HardwareModel.O(III)V",
+      "renamedSymbol": "M:HardwareModel.scale(III)V",
       "originalName": "O",
-      "renamedName": "O",
+      "renamedName": "scale",
       "declaration": {
         "file": "gja.java",
         "start": 88751,
@@ -617317,9 +617581,9 @@
     },
     {
       "symbol": "M:gja.wa()V",
-      "renamedSymbol": "M:HardwareModel.wa()V",
+      "renamedSymbol": "M:HardwareModel.finishAnimation()V",
       "originalName": "wa",
-      "renamedName": "wa",
+      "renamedName": "finishAnimation",
       "declaration": {
         "file": "gja.java",
         "start": 74704,
@@ -624368,9 +624632,9 @@
     },
     {
       "symbol": "M:i.FA(I)V",
-      "renamedSymbol": "M:NativeToolkitModel.FA(I)V",
+      "renamedSymbol": "M:NativeToolkitModel.rotateX(I)V",
       "originalName": "FA",
-      "renamedName": "FA",
+      "renamedName": "rotateX",
       "declaration": {
         "file": "i.java",
         "start": 3354,
@@ -624379,9 +624643,9 @@
     },
     {
       "symbol": "M:i.H(III)V",
-      "renamedSymbol": "M:NativeToolkitModel.H(III)V",
+      "renamedSymbol": "M:NativeToolkitModel.translate(III)V",
       "originalName": "H",
-      "renamedName": "H",
+      "renamedName": "translate",
       "declaration": {
         "file": "i.java",
         "start": 3393,
@@ -624401,9 +624665,9 @@
     },
     {
       "symbol": "M:i.NA()Z",
-      "renamedSymbol": "M:NativeToolkitModel.NA()Z",
+      "renamedSymbol": "M:NativeToolkitModel.prepareAnimation()Z",
       "originalName": "NA",
-      "renamedName": "NA",
+      "renamedName": "prepareAnimation",
       "declaration": {
         "file": "i.java",
         "start": 2196,
@@ -624412,9 +624676,9 @@
     },
     {
       "symbol": "M:i.O(III)V",
-      "renamedSymbol": "M:NativeToolkitModel.O(III)V",
+      "renamedSymbol": "M:NativeToolkitModel.scale(III)V",
       "originalName": "O",
-      "renamedName": "O",
+      "renamedName": "scale",
       "declaration": {
         "file": "i.java",
         "start": 1462,
@@ -624566,9 +624830,9 @@
     },
     {
       "symbol": "M:i.wa()V",
-      "renamedSymbol": "M:NativeToolkitModel.wa()V",
+      "renamedSymbol": "M:NativeToolkitModel.finishAnimation()V",
       "originalName": "wa",
-      "renamedName": "wa",
+      "renamedName": "finishAnimation",
       "declaration": {
         "file": "i.java",
         "start": 503,
@@ -637183,9 +637447,9 @@
     },
     {
       "symbol": "M:ka.FA(I)V",
-      "renamedSymbol": "M:ToolkitModel.FA(I)V",
+      "renamedSymbol": "M:ToolkitModel.rotateX(I)V",
       "originalName": "FA",
-      "renamedName": "FA",
+      "renamedName": "rotateX",
       "declaration": {
         "file": "ka.java",
         "start": 163,
@@ -637194,9 +637458,9 @@
     },
     {
       "symbol": "M:ka.H(III)V",
-      "renamedSymbol": "M:ToolkitModel.H(III)V",
+      "renamedSymbol": "M:ToolkitModel.translate(III)V",
       "originalName": "H",
-      "renamedName": "H",
+      "renamedName": "translate",
       "declaration": {
         "file": "ka.java",
         "start": 17284,
@@ -637216,9 +637480,9 @@
     },
     {
       "symbol": "M:ka.NA()Z",
-      "renamedSymbol": "M:ToolkitModel.NA()Z",
+      "renamedSymbol": "M:ToolkitModel.prepareAnimation()Z",
       "originalName": "NA",
-      "renamedName": "NA",
+      "renamedName": "prepareAnimation",
       "declaration": {
         "file": "ka.java",
         "start": 19059,
@@ -637227,9 +637491,9 @@
     },
     {
       "symbol": "M:ka.O(III)V",
-      "renamedSymbol": "M:ToolkitModel.O(III)V",
+      "renamedSymbol": "M:ToolkitModel.scale(III)V",
       "originalName": "O",
-      "renamedName": "O",
+      "renamedName": "scale",
       "declaration": {
         "file": "ka.java",
         "start": 509,
@@ -637249,9 +637513,9 @@
     },
     {
       "symbol": "M:ka.a(B)V",
-      "renamedSymbol": "M:ToolkitModel.a(B)V",
+      "renamedSymbol": "M:ToolkitModel.openDisplayNameForm(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openDisplayNameForm",
       "declaration": {
         "file": "ka.java",
         "start": 18628,
@@ -637381,9 +637645,9 @@
     },
     {
       "symbol": "M:ka.wa()V",
-      "renamedSymbol": "M:ToolkitModel.wa()V",
+      "renamedSymbol": "M:ToolkitModel.finishAnimation()V",
       "originalName": "wa",
-      "renamedName": "wa",
+      "renamedName": "finishAnimation",
       "declaration": {
         "file": "ka.java",
         "start": 18599,
@@ -652627,9 +652891,9 @@
     },
     {
       "symbol": "M:np.FA(I)V",
-      "renamedSymbol": "M:OpenGlModel.FA(I)V",
+      "renamedSymbol": "M:OpenGlModel.rotateX(I)V",
       "originalName": "FA",
-      "renamedName": "FA",
+      "renamedName": "rotateX",
       "declaration": {
         "file": "np.java",
         "start": 9186,
@@ -652638,9 +652902,9 @@
     },
     {
       "symbol": "M:np.H(III)V",
-      "renamedSymbol": "M:OpenGlModel.H(III)V",
+      "renamedSymbol": "M:OpenGlModel.translate(III)V",
       "originalName": "H",
-      "renamedName": "H",
+      "renamedName": "translate",
       "declaration": {
         "file": "np.java",
         "start": 4678,
@@ -652660,9 +652924,9 @@
     },
     {
       "symbol": "M:np.NA()Z",
-      "renamedSymbol": "M:OpenGlModel.NA()Z",
+      "renamedSymbol": "M:OpenGlModel.prepareAnimation()Z",
       "originalName": "NA",
-      "renamedName": "NA",
+      "renamedName": "prepareAnimation",
       "declaration": {
         "file": "np.java",
         "start": 103292,
@@ -652671,9 +652935,9 @@
     },
     {
       "symbol": "M:np.O(III)V",
-      "renamedSymbol": "M:OpenGlModel.O(III)V",
+      "renamedSymbol": "M:OpenGlModel.scale(III)V",
       "originalName": "O",
-      "renamedName": "O",
+      "renamedName": "scale",
       "declaration": {
         "file": "np.java",
         "start": 132867,
@@ -652880,9 +653144,9 @@
     },
     {
       "symbol": "M:np.wa()V",
-      "renamedSymbol": "M:OpenGlModel.wa()V",
+      "renamedSymbol": "M:OpenGlModel.finishAnimation()V",
       "originalName": "wa",
-      "renamedName": "wa",
+      "renamedName": "finishAnimation",
       "declaration": {
         "file": "np.java",
         "start": 160662,
@@ -692502,9 +692766,9 @@
     },
     {
       "symbol": "M:ww.FA(I)V",
-      "renamedSymbol": "M:Model.FA(I)V",
+      "renamedSymbol": "M:Model.rotateX(I)V",
       "originalName": "FA",
-      "renamedName": "FA",
+      "renamedName": "rotateX",
       "declaration": {
         "file": "ww.java",
         "start": 135378,
@@ -692513,9 +692777,9 @@
     },
     {
       "symbol": "M:ww.H(III)V",
-      "renamedSymbol": "M:Model.H(III)V",
+      "renamedSymbol": "M:Model.translate(III)V",
       "originalName": "H",
-      "renamedName": "H",
+      "renamedName": "translate",
       "declaration": {
         "file": "ww.java",
         "start": 23197,
@@ -692535,9 +692799,9 @@
     },
     {
       "symbol": "M:ww.NA()Z",
-      "renamedSymbol": "M:Model.NA()Z",
+      "renamedSymbol": "M:Model.prepareAnimation()Z",
       "originalName": "NA",
-      "renamedName": "NA",
+      "renamedName": "prepareAnimation",
       "declaration": {
         "file": "ww.java",
         "start": 136133,
@@ -692546,9 +692810,9 @@
     },
     {
       "symbol": "M:ww.O(III)V",
-      "renamedSymbol": "M:Model.O(III)V",
+      "renamedSymbol": "M:Model.scale(III)V",
       "originalName": "O",
-      "renamedName": "O",
+      "renamedName": "scale",
       "declaration": {
         "file": "ww.java",
         "start": 3234,
@@ -692821,9 +693085,9 @@
     },
     {
       "symbol": "M:ww.e()V",
-      "renamedSymbol": "M:Model.e()V",
+      "renamedSymbol": "M:Model.refreshLighting()V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "refreshLighting",
       "declaration": {
         "file": "ww.java",
         "start": 2348,
@@ -692854,9 +693118,9 @@
     },
     {
       "symbol": "M:ww.f(I)V",
-      "renamedSymbol": "M:Model.f(I)V",
+      "renamedSymbol": "M:Model.rasterizeFace(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "rasterizeFace",
       "declaration": {
         "file": "ww.java",
         "start": 132702,
@@ -692876,9 +693140,9 @@
     },
     {
       "symbol": "M:ww.g(I)V",
-      "renamedSymbol": "M:Model.g(I)V",
+      "renamedSymbol": "M:Model.rasterizeFoggedFaceArgb(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "rasterizeFoggedFaceArgb",
       "declaration": {
         "file": "ww.java",
         "start": 110058,
@@ -692887,9 +693151,9 @@
     },
     {
       "symbol": "M:ww.h()V",
-      "renamedSymbol": "M:Model.h()V",
+      "renamedSymbol": "M:Model.refreshFaceColours()V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "refreshFaceColours",
       "declaration": {
         "file": "ww.java",
         "start": 108784,
@@ -692898,9 +693162,9 @@
     },
     {
       "symbol": "M:ww.h(I)Z",
-      "renamedSymbol": "M:Model.h(I)Z",
+      "renamedSymbol": "M:Model.hasFaceBillboard(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "hasFaceBillboard",
       "declaration": {
         "file": "ww.java",
         "start": 108569,
@@ -692909,9 +693173,9 @@
     },
     {
       "symbol": "M:ww.i(I)V",
-      "renamedSymbol": "M:Model.i(I)V",
+      "renamedSymbol": "M:Model.rasterizeFoggedFace(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "rasterizeFoggedFace",
       "declaration": {
         "file": "ww.java",
         "start": 52376,
@@ -692920,9 +693184,9 @@
     },
     {
       "symbol": "M:ww.j(I)V",
-      "renamedSymbol": "M:Model.j(I)V",
+      "renamedSymbol": "M:Model.rasterizeFaceArgb(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "rasterizeFaceArgb",
       "declaration": {
         "file": "ww.java",
         "start": 27334,
@@ -692931,9 +693195,9 @@
     },
     {
       "symbol": "M:ww.wa()V",
-      "renamedSymbol": "M:Model.wa()V",
+      "renamedSymbol": "M:Model.finishAnimation()V",
       "originalName": "wa",
-      "renamedName": "wa",
+      "renamedName": "finishAnimation",
       "declaration": {
         "file": "ww.java",
         "start": 2735,
@@ -761890,7 +762154,7 @@
     },
     {
       "symbol": "P:gja.FA(I)V#0",
-      "renamedSymbol": "P:HardwareModel.FA(I)V#0",
+      "renamedSymbol": "P:HardwareModel.rotateX(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -761901,7 +762165,7 @@
     },
     {
       "symbol": "P:gja.H(III)V#0",
-      "renamedSymbol": "P:HardwareModel.H(III)V#0",
+      "renamedSymbol": "P:HardwareModel.translate(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -761912,7 +762176,7 @@
     },
     {
       "symbol": "P:gja.H(III)V#1",
-      "renamedSymbol": "P:HardwareModel.H(III)V#1",
+      "renamedSymbol": "P:HardwareModel.translate(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -761923,7 +762187,7 @@
     },
     {
       "symbol": "P:gja.H(III)V#2",
-      "renamedSymbol": "P:HardwareModel.H(III)V#2",
+      "renamedSymbol": "P:HardwareModel.translate(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -762022,7 +762286,7 @@
     },
     {
       "symbol": "P:gja.O(III)V#0",
-      "renamedSymbol": "P:HardwareModel.O(III)V#0",
+      "renamedSymbol": "P:HardwareModel.scale(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -762033,7 +762297,7 @@
     },
     {
       "symbol": "P:gja.O(III)V#1",
-      "renamedSymbol": "P:HardwareModel.O(III)V#1",
+      "renamedSymbol": "P:HardwareModel.scale(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -762044,7 +762308,7 @@
     },
     {
       "symbol": "P:gja.O(III)V#2",
-      "renamedSymbol": "P:HardwareModel.O(III)V#2",
+      "renamedSymbol": "P:HardwareModel.scale(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -778346,7 +778610,7 @@
     },
     {
       "symbol": "P:i.FA(I)V#0",
-      "renamedSymbol": "P:NativeToolkitModel.FA(I)V#0",
+      "renamedSymbol": "P:NativeToolkitModel.rotateX(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -778357,7 +778621,7 @@
     },
     {
       "symbol": "P:i.H(III)V#0",
-      "renamedSymbol": "P:NativeToolkitModel.H(III)V#0",
+      "renamedSymbol": "P:NativeToolkitModel.translate(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -778368,7 +778632,7 @@
     },
     {
       "symbol": "P:i.H(III)V#1",
-      "renamedSymbol": "P:NativeToolkitModel.H(III)V#1",
+      "renamedSymbol": "P:NativeToolkitModel.translate(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -778379,7 +778643,7 @@
     },
     {
       "symbol": "P:i.H(III)V#2",
-      "renamedSymbol": "P:NativeToolkitModel.H(III)V#2",
+      "renamedSymbol": "P:NativeToolkitModel.translate(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -778478,7 +778742,7 @@
     },
     {
       "symbol": "P:i.O(III)V#0",
-      "renamedSymbol": "P:NativeToolkitModel.O(III)V#0",
+      "renamedSymbol": "P:NativeToolkitModel.scale(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -778489,7 +778753,7 @@
     },
     {
       "symbol": "P:i.O(III)V#1",
-      "renamedSymbol": "P:NativeToolkitModel.O(III)V#1",
+      "renamedSymbol": "P:NativeToolkitModel.scale(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -778500,7 +778764,7 @@
     },
     {
       "symbol": "P:i.O(III)V#2",
-      "renamedSymbol": "P:NativeToolkitModel.O(III)V#2",
+      "renamedSymbol": "P:NativeToolkitModel.scale(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -813117,7 +813381,7 @@
     },
     {
       "symbol": "P:ka.FA(I)V#0",
-      "renamedSymbol": "P:ToolkitModel.FA(I)V#0",
+      "renamedSymbol": "P:ToolkitModel.rotateX(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -813128,7 +813392,7 @@
     },
     {
       "symbol": "P:ka.H(III)V#0",
-      "renamedSymbol": "P:ToolkitModel.H(III)V#0",
+      "renamedSymbol": "P:ToolkitModel.translate(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -813139,7 +813403,7 @@
     },
     {
       "symbol": "P:ka.H(III)V#1",
-      "renamedSymbol": "P:ToolkitModel.H(III)V#1",
+      "renamedSymbol": "P:ToolkitModel.translate(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -813150,7 +813414,7 @@
     },
     {
       "symbol": "P:ka.H(III)V#2",
-      "renamedSymbol": "P:ToolkitModel.H(III)V#2",
+      "renamedSymbol": "P:ToolkitModel.translate(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -813249,7 +813513,7 @@
     },
     {
       "symbol": "P:ka.O(III)V#0",
-      "renamedSymbol": "P:ToolkitModel.O(III)V#0",
+      "renamedSymbol": "P:ToolkitModel.scale(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -813260,7 +813524,7 @@
     },
     {
       "symbol": "P:ka.O(III)V#1",
-      "renamedSymbol": "P:ToolkitModel.O(III)V#1",
+      "renamedSymbol": "P:ToolkitModel.scale(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -813271,7 +813535,7 @@
     },
     {
       "symbol": "P:ka.O(III)V#2",
-      "renamedSymbol": "P:ToolkitModel.O(III)V#2",
+      "renamedSymbol": "P:ToolkitModel.scale(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -813282,7 +813546,7 @@
     },
     {
       "symbol": "P:ka.a(B)V#0",
-      "renamedSymbol": "P:ToolkitModel.a(B)V#0",
+      "renamedSymbol": "P:ToolkitModel.openDisplayNameForm(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -847943,7 +848207,7 @@
     },
     {
       "symbol": "P:np.FA(I)V#0",
-      "renamedSymbol": "P:OpenGlModel.FA(I)V#0",
+      "renamedSymbol": "P:OpenGlModel.rotateX(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -847954,7 +848218,7 @@
     },
     {
       "symbol": "P:np.H(III)V#0",
-      "renamedSymbol": "P:OpenGlModel.H(III)V#0",
+      "renamedSymbol": "P:OpenGlModel.translate(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -847965,7 +848229,7 @@
     },
     {
       "symbol": "P:np.H(III)V#1",
-      "renamedSymbol": "P:OpenGlModel.H(III)V#1",
+      "renamedSymbol": "P:OpenGlModel.translate(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -847976,7 +848240,7 @@
     },
     {
       "symbol": "P:np.H(III)V#2",
-      "renamedSymbol": "P:OpenGlModel.H(III)V#2",
+      "renamedSymbol": "P:OpenGlModel.translate(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -848075,7 +848339,7 @@
     },
     {
       "symbol": "P:np.O(III)V#0",
-      "renamedSymbol": "P:OpenGlModel.O(III)V#0",
+      "renamedSymbol": "P:OpenGlModel.scale(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -848086,7 +848350,7 @@
     },
     {
       "symbol": "P:np.O(III)V#1",
-      "renamedSymbol": "P:OpenGlModel.O(III)V#1",
+      "renamedSymbol": "P:OpenGlModel.scale(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -848097,7 +848361,7 @@
     },
     {
       "symbol": "P:np.O(III)V#2",
-      "renamedSymbol": "P:OpenGlModel.O(III)V#2",
+      "renamedSymbol": "P:OpenGlModel.scale(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -936988,7 +937252,7 @@
     },
     {
       "symbol": "P:ww.FA(I)V#0",
-      "renamedSymbol": "P:Model.FA(I)V#0",
+      "renamedSymbol": "P:Model.rotateX(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -936999,7 +937263,7 @@
     },
     {
       "symbol": "P:ww.H(III)V#0",
-      "renamedSymbol": "P:Model.H(III)V#0",
+      "renamedSymbol": "P:Model.translate(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937010,7 +937274,7 @@
     },
     {
       "symbol": "P:ww.H(III)V#1",
-      "renamedSymbol": "P:Model.H(III)V#1",
+      "renamedSymbol": "P:Model.translate(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -937021,7 +937285,7 @@
     },
     {
       "symbol": "P:ww.H(III)V#2",
-      "renamedSymbol": "P:Model.H(III)V#2",
+      "renamedSymbol": "P:Model.translate(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -937120,7 +937384,7 @@
     },
     {
       "symbol": "P:ww.O(III)V#0",
-      "renamedSymbol": "P:Model.O(III)V#0",
+      "renamedSymbol": "P:Model.scale(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937131,7 +937395,7 @@
     },
     {
       "symbol": "P:ww.O(III)V#1",
-      "renamedSymbol": "P:Model.O(III)V#1",
+      "renamedSymbol": "P:Model.scale(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -937142,7 +937406,7 @@
     },
     {
       "symbol": "P:ww.O(III)V#2",
-      "renamedSymbol": "P:Model.O(III)V#2",
+      "renamedSymbol": "P:Model.scale(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -937780,7 +938044,7 @@
     },
     {
       "symbol": "P:ww.f(I)V#0",
-      "renamedSymbol": "P:Model.f(I)V#0",
+      "renamedSymbol": "P:Model.rasterizeFace(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937791,7 +938055,7 @@
     },
     {
       "symbol": "P:ww.g(I)V#0",
-      "renamedSymbol": "P:Model.g(I)V#0",
+      "renamedSymbol": "P:Model.rasterizeFoggedFaceArgb(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937802,7 +938066,7 @@
     },
     {
       "symbol": "P:ww.h(I)Z#0",
-      "renamedSymbol": "P:Model.h(I)Z#0",
+      "renamedSymbol": "P:Model.hasFaceBillboard(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937813,7 +938077,7 @@
     },
     {
       "symbol": "P:ww.i(I)V#0",
-      "renamedSymbol": "P:Model.i(I)V#0",
+      "renamedSymbol": "P:Model.rasterizeFoggedFace(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -937824,7 +938088,7 @@
     },
     {
       "symbol": "P:ww.j(I)V#0",
-      "renamedSymbol": "P:Model.j(I)V#0",
+      "renamedSymbol": "P:Model.rasterizeFaceArgb(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -997964,7 +998228,7 @@
       "original": "bua.java",
       "renamed": "ModelAnimator.java",
       "inputSha256": "0c3fe620b2bf6e8bf64d1d4a12e20aace7dd88692ebae57bb739d2ef387d089f",
-      "outputSha256": "beccef008dac65701f0f28634bd4776db977fdce1b7b5bf815585f4449e6f99b",
+      "outputSha256": "e3551cad2859bd99ab7cce39570a6807360cba3b2adf64daa77cf0b0d77ef37a",
       "edits": [
         {
           "start": 50,
@@ -999024,6 +999288,13 @@
           "renamed": "scale"
         },
         {
+          "start": 5835,
+          "end": 5836,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 5842,
           "end": 5849,
           "symbol": "F:bua.field_h:I",
@@ -999084,6 +999355,13 @@
           "end": 6210,
           "symbol": "F:bua.field_h:I",
           "original": "field_h",
+          "renamed": "scale"
+        },
+        {
+          "start": 6260,
+          "end": 6261,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
           "renamed": "scale"
         },
         {
@@ -1094441,7 +1094719,7 @@
       "original": "epa.java",
       "renamed": "epa.java",
       "inputSha256": "67a8bc55f1810655a1659fd1bb26136a2b6678522e64b67c6d5534a884de3c67",
-      "outputSha256": "600440d5dbde4b6fc1e44e163c7bb00d469b8e611ad54cc849ed8e5b363b05c9",
+      "outputSha256": "27c131532ab397fd1517072a7db71a657b90d1b7b8c20199a97cb0fb7735900f",
       "edits": [
         {
           "start": 62,
@@ -1094631,6 +1094909,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 2104,
+          "end": 2105,
+          "symbol": "M:ka.a(B)V",
+          "original": "a",
+          "renamed": "openDisplayNameForm"
         },
         {
           "start": 2212,
@@ -1156424,7 +1156709,7 @@
       "original": "gja.java",
       "renamed": "HardwareModel.java",
       "inputSha256": "e8ec92bea08367d86b514720b6118bbe540714c99e72b84a81da5309bce6fd80",
-      "outputSha256": "8d9f07ee0ad94b2d2a652627a91da32964f9b462d4ddbc1b446bf6c7ef449fc3",
+      "outputSha256": "825427c2652f7d1b1cf9526c74dcca38bf98090c584c038e4d178b5e851d3df0",
       "edits": [
         {
           "start": 69,
@@ -1157385,6 +1157670,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 42060,
+          "end": 42062,
+          "symbol": "M:gja.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
         },
         {
           "start": 42441,
@@ -1158475,6 +1158767,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 73513,
+          "end": 73514,
+          "symbol": "M:gja.H(III)V",
+          "original": "H",
+          "renamed": "translate"
+        },
+        {
           "start": 74301,
           "end": 74302,
           "symbol": "M:gja.d(I)V",
@@ -1158494,6 +1158793,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 74704,
+          "end": 74706,
+          "symbol": "M:gja.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
         },
         {
           "start": 75318,
@@ -1158965,6 +1159271,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 88751,
+          "end": 88752,
+          "symbol": "M:gja.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 89560,
           "end": 89561,
           "symbol": "M:gja.d(I)V",
@@ -1158984,6 +1159297,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 89964,
+          "end": 89966,
+          "symbol": "M:gja.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
         },
         {
           "start": 90281,
@@ -1168995,7 +1169315,7 @@
       "original": "gva.java",
       "renamed": "DefaultRoomObjectRenderer.java",
       "inputSha256": "10944d92ce67825b6fa33fb1362598ca16067ebab34dd0d564c7e68ce2e9bdfc",
-      "outputSha256": "e0b7e9e43c03099524727eee24af4a700cac7bc864a1325ee0efdba6a60e3f90",
+      "outputSha256": "eb36e224278a72486c91e3ccb29edf3d8f392be0f2d93f2ad3b9953d5a3888f1",
       "edits": [
         {
           "start": 50,
@@ -1169471,6 +1169791,13 @@
           "symbol": "M:ka.a(BIZ)Lka;",
           "original": "a",
           "renamed": "copy"
+        },
+        {
+          "start": 5835,
+          "end": 5836,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 5905,
@@ -1170133,6 +1170460,13 @@
           "symbol": "M:ka.a(BIZ)Lka;",
           "original": "a",
           "renamed": "copy"
+        },
+        {
+          "start": 14017,
+          "end": 14018,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 14079,
@@ -1204165,7 +1204499,7 @@
       "original": "i.java",
       "renamed": "NativeToolkitModel.java",
       "inputSha256": "df46539ea748186f02e57987de5c234d01b2e02111102f5f447fb3744b7dbe28",
-      "outputSha256": "6f6b6ef79a7511f41417ee01bdac3bf25480d6f586391c03e02d6ea4b852e936",
+      "outputSha256": "aea36094474ae4bc1976518233a78b8c3a4b1edc62b06781aab1e965a73ef0b7",
       "edits": [
         {
           "start": 50,
@@ -1204273,6 +1204607,13 @@
           "renamed": "NativeSoftwareGraphicsToolkit"
         },
         {
+          "start": 503,
+          "end": 505,
+          "symbol": "M:i.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
+        },
+        {
           "start": 540,
           "end": 541,
           "symbol": "M:i.l(JI[IIIIIZ)V",
@@ -1204357,6 +1204698,13 @@
           "renamed": "NativeToolkitModel"
         },
         {
+          "start": 1462,
+          "end": 1463,
+          "symbol": "M:i.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 1532,
           "end": 1533,
           "symbol": "M:i.R(Loa;Lya;II[I[I[I[I[SI[S[S[S[B[B[B[B[S[S[IB[SI[B[S[S[S[I[I[I[B[B[I[I[I[IIIIIII[I)V",
@@ -1204378,6 +1204726,13 @@
           "renamed": "NativeSoftwareGraphicsHeap"
         },
         {
+          "start": 2196,
+          "end": 2198,
+          "symbol": "M:i.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
+        },
+        {
           "start": 2348,
           "end": 2349,
           "symbol": "M:i.a()V",
@@ -1204397,6 +1204752,20 @@
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "NativeSoftwareGraphicsToolkit"
+        },
+        {
+          "start": 3354,
+          "end": 3356,
+          "symbol": "M:i.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
+        },
+        {
+          "start": 3393,
+          "end": 3394,
+          "symbol": "M:i.H(III)V",
+          "original": "H",
+          "renamed": "translate"
         },
         {
           "start": 3448,
@@ -1216163,7 +1216532,7 @@
       "original": "ina.java",
       "renamed": "LoadingStepList.java",
       "inputSha256": "38a0c1e9ae983065d0b4584b73a94f1bd370205cfe35d02c8826c9309f6393e8",
-      "outputSha256": "a47b0c3269ebb94c12c35255bb6cbd3288607766414250cf7eb4675669dc2acc",
+      "outputSha256": "8450c9f50856cfb928e1bbeb82a3d04ed50d0f62506666fc7deb27b3d86d5894",
       "edits": [
         {
           "start": 50,
@@ -1216523,6 +1216892,13 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 1196,
+          "end": 1197,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 1236,
           "end": 1238,
           "symbol": "C:df",
@@ -1216542,6 +1216918,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 1337,
+          "end": 1338,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 1449,
@@ -1216572,6 +1216955,13 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 1624,
+          "end": 1625,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 1664,
           "end": 1666,
           "symbol": "C:df",
@@ -1216591,6 +1216981,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 1765,
+          "end": 1766,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 1805,
@@ -1216614,6 +1217011,13 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 1906,
+          "end": 1907,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 1939,
           "end": 1941,
           "symbol": "C:ve",
@@ -1216628,11 +1217032,25 @@
           "renamed": "LabelledRow"
         },
         {
+          "start": 1981,
+          "end": 1982,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2010,
           "end": 2012,
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "LabelledRow"
+        },
+        {
+          "start": 2026,
+          "end": 2027,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2055,
@@ -1216642,11 +1217060,25 @@
           "renamed": "LabelledRow"
         },
         {
+          "start": 2071,
+          "end": 2072,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2100,
           "end": 2102,
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "LabelledRow"
+        },
+        {
+          "start": 2116,
+          "end": 2117,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2145,
@@ -1216656,11 +1217088,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2159,
+          "end": 2160,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2186,
           "end": 2188,
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 2201,
+          "end": 2202,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2228,
@@ -1216670,11 +1217116,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2242,
+          "end": 2243,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2269,
           "end": 2271,
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 2284,
+          "end": 2285,
+          "symbol": "M:ka.H(III)V",
+          "original": "H",
+          "renamed": "translate"
         },
         {
           "start": 2309,
@@ -1216684,11 +1217144,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2324,
+          "end": 2325,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2354,
           "end": 2356,
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 2369,
+          "end": 2370,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2399,
@@ -1216698,11 +1217172,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2414,
+          "end": 2415,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2444,
           "end": 2446,
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "PowerUpItemBehaviour"
+        },
+        {
+          "start": 2458,
+          "end": 2459,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2488,
@@ -1216712,11 +1217200,25 @@
           "renamed": "PowerUpItemBehaviour"
         },
         {
+          "start": 2502,
+          "end": 2503,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2532,
           "end": 2534,
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "PowerUpItemBehaviour"
+        },
+        {
+          "start": 2546,
+          "end": 2547,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2576,
@@ -1216726,11 +1217228,25 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 2591,
+          "end": 2592,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2621,
           "end": 2624,
           "symbol": "C:jna",
           "original": "jna",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 2636,
+          "end": 2637,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2666,
@@ -1216740,11 +1217256,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2681,
+          "end": 2682,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2711,
           "end": 2713,
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 2726,
+          "end": 2727,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2756,
@@ -1216754,11 +1217284,25 @@
           "renamed": "RevolverItemComponent"
         },
         {
+          "start": 2771,
+          "end": 2772,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 2798,
           "end": 2800,
           "symbol": "C:df",
           "original": "df",
           "renamed": "RevolverItemComponent"
+        },
+        {
+          "start": 2813,
+          "end": 2814,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2840,
@@ -1216768,11 +1217312,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 2855,
+          "end": 2856,
+          "symbol": "M:ka.H(III)V",
+          "original": "H",
+          "renamed": "translate"
+        },
+        {
           "start": 2880,
           "end": 2883,
           "symbol": "C:koa",
           "original": "koa",
           "renamed": "SwitchLinkList"
+        },
+        {
+          "start": 2895,
+          "end": 2896,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 2925,
@@ -1216782,11 +1217340,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 2940,
+          "end": 2942,
+          "symbol": "M:ka.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
+        },
+        {
           "start": 2962,
           "end": 2965,
           "symbol": "C:koa",
           "original": "koa",
           "renamed": "SwitchLinkList"
+        },
+        {
+          "start": 2977,
+          "end": 2978,
+          "symbol": "M:ka.H(III)V",
+          "original": "H",
+          "renamed": "translate"
         },
         {
           "start": 3002,
@@ -1216796,11 +1217368,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 3017,
+          "end": 3018,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 3047,
           "end": 3050,
           "symbol": "C:koa",
           "original": "koa",
           "renamed": "SwitchLinkList"
+        },
+        {
+          "start": 3062,
+          "end": 3064,
+          "symbol": "M:ka.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
         },
         {
           "start": 3084,
@@ -1216810,11 +1217396,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 3100,
+          "end": 3101,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 3130,
           "end": 3133,
           "symbol": "C:koa",
           "original": "koa",
           "renamed": "SwitchLinkList"
+        },
+        {
+          "start": 3146,
+          "end": 3147,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 3176,
@@ -1216824,6 +1217424,13 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 3192,
+          "end": 3193,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 3222,
           "end": 3225,
           "symbol": "C:koa",
@@ -1216831,11 +1217438,25 @@
           "renamed": "SwitchLinkList"
         },
         {
+          "start": 3238,
+          "end": 3239,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 3268,
           "end": 3271,
           "symbol": "C:koa",
           "original": "koa",
           "renamed": "SwitchLinkList"
+        },
+        {
+          "start": 3283,
+          "end": 3284,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 3313,
@@ -1268696,7 +1269317,7 @@
       "original": "ka.java",
       "renamed": "ToolkitModel.java",
       "inputSha256": "b7b4a5ce3fdb0ba8ac2456ebe6118167c50250849379059e15239cd04b3a3423",
-      "outputSha256": "e65438956955dfee9b5294fab9582bf638c333ce18c4b08c8a3418e5724f507e",
+      "outputSha256": "8a440300869658e3c15bed14a3f589afabcebc6ed4f979c37af30acb39ce8b59",
       "edits": [
         {
           "start": 53,
@@ -1268704,6 +1269325,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 163,
+          "end": 165,
+          "symbol": "M:ka.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
         },
         {
           "start": 329,
@@ -1268720,11 +1269348,25 @@
           "renamed": "ToolkitModel"
         },
         {
+          "start": 435,
+          "end": 436,
+          "symbol": "M:ka.a(B)V",
+          "original": "a",
+          "renamed": "openDisplayNameForm"
+        },
+        {
           "start": 485,
           "end": 486,
           "symbol": "M:ka.b()V",
           "original": "b",
           "renamed": "unlockForUpdate"
+        },
+        {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:ka.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 569,
@@ -1268993,6 +1269635,13 @@
           "renamed": "tintColours"
         },
         {
+          "start": 17284,
+          "end": 17285,
+          "symbol": "M:ka.H(III)V",
+          "original": "H",
+          "renamed": "translate"
+        },
+        {
           "start": 17339,
           "end": 17340,
           "symbol": "M:ka.a(ILena;IIILena;IZI)V",
@@ -1269042,6 +1269691,13 @@
           "renamed": "lockForUpdate"
         },
         {
+          "start": 17651,
+          "end": 17653,
+          "symbol": "M:ka.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
+        },
+        {
           "start": 17674,
           "end": 17675,
           "symbol": "M:ka.b()V",
@@ -1269061,6 +1269717,13 @@
           "symbol": "C:rq",
           "original": "rq",
           "renamed": "AnimationFrame"
+        },
+        {
+          "start": 18217,
+          "end": 18219,
+          "symbol": "M:ka.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
         },
         {
           "start": 18238,
@@ -1269084,11 +1269747,32 @@
           "renamed": "wrapException"
         },
         {
+          "start": 18599,
+          "end": 18601,
+          "symbol": "M:ka.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
+        },
+        {
+          "start": 18628,
+          "end": 18629,
+          "symbol": "M:ka.a(B)V",
+          "original": "a",
+          "renamed": "openDisplayNameForm"
+        },
+        {
           "start": 18684,
           "end": 18686,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 18687,
+          "end": 18688,
+          "symbol": "M:ka.a(B)V",
+          "original": "a",
+          "renamed": "openDisplayNameForm"
         },
         {
           "start": 18723,
@@ -1269152,6 +1269836,13 @@
           "symbol": "M:ka.<init>()V",
           "original": "ka",
           "renamed": "ToolkitModel"
+        },
+        {
+          "start": 19059,
+          "end": 19061,
+          "symbol": "M:ka.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
         }
       ]
     },
@@ -1360186,7 +1360877,7 @@
       "original": "np.java",
       "renamed": "OpenGlModel.java",
       "inputSha256": "5c26c219b1c9559daf84b741364270a1c179b3624bd58c480cf97220eeb9060b",
-      "outputSha256": "b3d63f70c56398ea0daaaf99f4efa21bd8e0a7ea18612e4628e3a70ff5a959c0",
+      "outputSha256": "8e9ec0ba61833fa7da60f70efc694ee61baf1be88213f7cb33589f3c949ef09b",
       "edits": [
         {
           "start": 50,
@@ -1360294,6 +1360985,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 4678,
+          "end": 4679,
+          "symbol": "M:np.H(III)V",
+          "original": "H",
+          "renamed": "translate"
+        },
+        {
           "start": 5993,
           "end": 5996,
           "symbol": "C:tba",
@@ -1360362,6 +1361060,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 9186,
+          "end": 9188,
+          "symbol": "M:np.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
         },
         {
           "start": 9503,
@@ -1362902,6 +1363607,13 @@
           "renamed": "unlockForUpdate"
         },
         {
+          "start": 103292,
+          "end": 103294,
+          "symbol": "M:np.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
+        },
+        {
           "start": 103673,
           "end": 103675,
           "symbol": "C:rp",
@@ -1363541,6 +1364253,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 132867,
+          "end": 132868,
+          "symbol": "M:np.O(III)V",
+          "original": "O",
+          "renamed": "scale"
+        },
+        {
           "start": 134203,
           "end": 134206,
           "symbol": "C:tba",
@@ -1364052,6 +1364771,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 160662,
+          "end": 160664,
+          "symbol": "M:np.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
         },
         {
           "start": 160916,
@@ -1624246,7 +1624972,7 @@
       "original": "ww.java",
       "renamed": "Model.java",
       "inputSha256": "28d3be394b72783da33d6c98af6dcfcd4ec808fb67e748b1271640aceda528d3",
-      "outputSha256": "c1c3b3da8d7a103398f896551894b0e7ae2e73259de4c5744eb11ff37a311a91",
+      "outputSha256": "a5ee0cb6480cdf693c936de92bb506b6cd0e04726ef7450c38091cd13e66f772",
       "edits": [
         {
           "start": 50,
@@ -1624403,11 +1625129,53 @@
           "renamed": "Model"
         },
         {
+          "start": 2348,
+          "end": 2349,
+          "symbol": "M:ww.e()V",
+          "original": "e",
+          "renamed": "refreshLighting"
+        },
+        {
           "start": 2483,
           "end": 2484,
           "symbol": "M:ww.a(Z)V",
           "original": "a",
           "renamed": "computeLightingLocked"
+        },
+        {
+          "start": 2570,
+          "end": 2571,
+          "symbol": "M:ww.h()V",
+          "original": "h",
+          "renamed": "refreshFaceColours"
+        },
+        {
+          "start": 2672,
+          "end": 2673,
+          "symbol": "M:ww.h()V",
+          "original": "h",
+          "renamed": "refreshFaceColours"
+        },
+        {
+          "start": 2735,
+          "end": 2737,
+          "symbol": "M:ww.wa()V",
+          "original": "wa",
+          "renamed": "finishAnimation"
+        },
+        {
+          "start": 3135,
+          "end": 3136,
+          "symbol": "M:ww.e()V",
+          "original": "e",
+          "renamed": "refreshLighting"
+        },
+        {
+          "start": 3234,
+          "end": 3235,
+          "symbol": "M:ww.O(III)V",
+          "original": "O",
+          "renamed": "scale"
         },
         {
           "start": 4135,
@@ -1624832,6 +1625600,13 @@
           "renamed": "clearCaches"
         },
         {
+          "start": 23197,
+          "end": 23198,
+          "symbol": "M:ww.H(III)V",
+          "original": "H",
+          "renamed": "translate"
+        },
+        {
           "start": 24045,
           "end": 24046,
           "symbol": "M:ww.b(IZZ)V",
@@ -1624860,11 +1625635,46 @@
           "renamed": "drawClippedFaceArgb"
         },
         {
+          "start": 26515,
+          "end": 26516,
+          "symbol": "M:ww.j(I)V",
+          "original": "j",
+          "renamed": "rasterizeFaceArgb"
+        },
+        {
+          "start": 26719,
+          "end": 26720,
+          "symbol": "M:ww.j(I)V",
+          "original": "j",
+          "renamed": "rasterizeFaceArgb"
+        },
+        {
           "start": 26777,
           "end": 26778,
           "symbol": "M:sfa.b(IIIIIIIIII)V",
           "original": "b",
           "renamed": "drawBillboard"
+        },
+        {
+          "start": 27167,
+          "end": 27168,
+          "symbol": "M:ww.g(I)V",
+          "original": "g",
+          "renamed": "rasterizeFoggedFaceArgb"
+        },
+        {
+          "start": 27240,
+          "end": 27241,
+          "symbol": "M:ww.g(I)V",
+          "original": "g",
+          "renamed": "rasterizeFoggedFaceArgb"
+        },
+        {
+          "start": 27334,
+          "end": 27335,
+          "symbol": "M:ww.j(I)V",
+          "original": "j",
+          "renamed": "rasterizeFaceArgb"
         },
         {
           "start": 27837,
@@ -1624944,6 +1625754,13 @@
           "renamed": "isFaceTransparent"
         },
         {
+          "start": 31258,
+          "end": 31259,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
+        },
+        {
           "start": 31297,
           "end": 31298,
           "symbol": "M:ww.a(IZZ)V",
@@ -1624958,6 +1625775,13 @@
           "renamed": "isFaceTransparent"
         },
         {
+          "start": 31545,
+          "end": 31546,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
+        },
+        {
           "start": 31586,
           "end": 31587,
           "symbol": "M:ww.a(IZZ)V",
@@ -1624970,6 +1625794,13 @@
           "symbol": "M:ww.c(I)Z",
           "original": "c",
           "renamed": "isFaceTransparent"
+        },
+        {
+          "start": 31939,
+          "end": 31940,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
         },
         {
           "start": 31974,
@@ -1625287,6 +1626118,13 @@
           "renamed": "copyInto"
         },
         {
+          "start": 52376,
+          "end": 52377,
+          "symbol": "M:ww.i(I)V",
+          "original": "i",
+          "renamed": "rasterizeFoggedFace"
+        },
+        {
           "start": 54220,
           "end": 54221,
           "symbol": "M:iua.b(FFFFFFFFFFFFFFFIIIIIIII)V",
@@ -1625439,6 +1626277,13 @@
           "symbol": "C:bt",
           "original": "bt",
           "renamed": "PitSnakeModel"
+        },
+        {
+          "start": 57583,
+          "end": 57584,
+          "symbol": "M:ww.f(I)V",
+          "original": "f",
+          "renamed": "rasterizeFace"
         },
         {
           "start": 58097,
@@ -1625945,6 +1626790,20 @@
           "renamed": "hslToHsv"
         },
         {
+          "start": 108569,
+          "end": 108570,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
+        },
+        {
+          "start": 108784,
+          "end": 108785,
+          "symbol": "M:ww.h()V",
+          "original": "h",
+          "renamed": "refreshFaceColours"
+        },
+        {
           "start": 109294,
           "end": 109295,
           "symbol": "M:tg.a(BI)S",
@@ -1626006,6 +1626865,13 @@
           "symbol": "M:ds.c(III)I",
           "original": "c",
           "renamed": "scaleLightness"
+        },
+        {
+          "start": 110058,
+          "end": 110059,
+          "symbol": "M:ww.g(I)V",
+          "original": "g",
+          "renamed": "rasterizeFoggedFaceArgb"
         },
         {
           "start": 111902,
@@ -1626160,6 +1627026,13 @@
           "symbol": "C:bt",
           "original": "bt",
           "renamed": "PitSnakeModel"
+        },
+        {
+          "start": 115265,
+          "end": 115266,
+          "symbol": "M:ww.j(I)V",
+          "original": "j",
+          "renamed": "rasterizeFaceArgb"
         },
         {
           "start": 115779,
@@ -1626444,6 +1627317,13 @@
           "renamed": "scaleHslLightness"
         },
         {
+          "start": 132702,
+          "end": 132703,
+          "symbol": "M:ww.f(I)V",
+          "original": "f",
+          "renamed": "rasterizeFace"
+        },
+        {
           "start": 133205,
           "end": 133206,
           "symbol": "M:iua.b(FFFFFFFFFFFFFFFIIIIIIII)V",
@@ -1626479,6 +1627359,13 @@
           "renamed": "PitSnakeModel"
         },
         {
+          "start": 135378,
+          "end": 135380,
+          "symbol": "M:ww.FA(I)V",
+          "original": "FA",
+          "renamed": "rotateX"
+        },
+        {
           "start": 135672,
           "end": 135674,
           "symbol": "C:qu",
@@ -1626498,6 +1627385,13 @@
           "symbol": "M:ww.f()V",
           "original": "f",
           "renamed": "clearCaches"
+        },
+        {
+          "start": 136133,
+          "end": 136135,
+          "symbol": "M:ww.NA()Z",
+          "original": "NA",
+          "renamed": "prepareAnimation"
         },
         {
           "start": 136341,
@@ -1626696,6 +1627590,13 @@
           "renamed": "isFaceTransparent"
         },
         {
+          "start": 159235,
+          "end": 159236,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
+        },
+        {
           "start": 159274,
           "end": 159275,
           "symbol": "M:ww.b(IZZ)V",
@@ -1626710,6 +1627611,13 @@
           "renamed": "isFaceTransparent"
         },
         {
+          "start": 159522,
+          "end": 159523,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
+        },
+        {
           "start": 159563,
           "end": 159564,
           "symbol": "M:ww.b(IZZ)V",
@@ -1626722,6 +1627630,13 @@
           "symbol": "M:ww.c(I)Z",
           "original": "c",
           "renamed": "isFaceTransparent"
+        },
+        {
+          "start": 159916,
+          "end": 159917,
+          "symbol": "M:ww.h(I)Z",
+          "original": "h",
+          "renamed": "hasFaceBillboard"
         },
         {
           "start": 159951,
@@ -1626764,6 +1627679,13 @@
           "symbol": "C:gna",
           "original": "gna",
           "renamed": "FaceNormal"
+        },
+        {
+          "start": 160816,
+          "end": 160817,
+          "symbol": "M:ww.e()V",
+          "original": "e",
+          "renamed": "refreshLighting"
         },
         {
           "start": 161121,
@@ -1627225,6 +1628147,34 @@
           "symbol": "M:ww.e(I)V",
           "original": "e",
           "renamed": "drawClippedFace"
+        },
+        {
+          "start": 171710,
+          "end": 171711,
+          "symbol": "M:ww.f(I)V",
+          "original": "f",
+          "renamed": "rasterizeFace"
+        },
+        {
+          "start": 171914,
+          "end": 171915,
+          "symbol": "M:ww.f(I)V",
+          "original": "f",
+          "renamed": "rasterizeFace"
+        },
+        {
+          "start": 172362,
+          "end": 172363,
+          "symbol": "M:ww.i(I)V",
+          "original": "i",
+          "renamed": "rasterizeFoggedFace"
+        },
+        {
+          "start": 172435,
+          "end": 172436,
+          "symbol": "M:ww.i(I)V",
+          "original": "i",
+          "renamed": "rasterizeFoggedFace"
         },
         {
           "start": 172510,
@@ -1628073,10 +1629023,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "8f3aeb23ba8376fcecf656b490bf8a996b8bf34d4b273703dba53e969720a7df",
+    "rulesSha256": "1bc91965fb5118a5235384f9e0bc33dd0dabf3534823d12b1843cb5053ae5ac5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "a3761499ee05a3d553b6f3d6a6e4e9216c359533ce73b31eebd0fa786b3528fa",
+    "outputTreeSha256": "ecf2053a893e475b9816dccf66c35298f9985374d3dd1b831b70f8ccbde30d73",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

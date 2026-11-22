@@ -6,7 +6,7 @@ abstract class ToolkitModel {
     boolean field_a;
     private static String[] field_c;
 
-    abstract void FA(int param0);
+    abstract void rotateX(int param0);
 
     abstract void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
@@ -14,13 +14,13 @@ abstract class ToolkitModel {
         field_c = null;
         field_b = null;
         if (param0 != -11) {
-          ToolkitModel.a((byte) -43);
+          ToolkitModel.openDisplayNameForm((byte) -43);
         }
     }
 
     abstract void unlockForUpdate();
 
-    abstract void O(int param0, int param1, int param2);
+    abstract void scale(int param0, int param1, int param2);
 
     final static pr compileShader(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
         Object stackIn_14_0 = null;
@@ -447,7 +447,7 @@ abstract class ToolkitModel {
 
     abstract void tintColours(int param0, int param1, int param2, int param3);
 
-    abstract void H(int param0, int param1, int param2);
+    abstract void translate(int param0, int param1, int param2);
 
     final void animate(int param0, AnimationFrameSet param1, int param2, int param3, int param4, AnimationFrameSet param5, int param6, boolean param7, int param8) {
         AnimationFrame var14 = null;
@@ -458,7 +458,7 @@ abstract class ToolkitModel {
           return;
         }
         this.lockForUpdate();
-        if (!this.NA()) {
+        if (!this.prepareAnimation()) {
           this.unlockForUpdate();
           return;
         }
@@ -475,18 +475,18 @@ abstract class ToolkitModel {
           }
           int var13 = -124 / ((-85 - param0) / 35);
           this.applyAnimationFrames(param4, false, param7, var14, param8, (int[]) null, 65535, var11, (AnimationFrame) (var12), param6, (boolean[]) null, false);
-          this.wa();
+          this.finishAnimation();
           this.unlockForUpdate();
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    abstract void wa();
+    abstract void finishAnimation();
 
-    final static void a(byte param0) {
+    final static void openDisplayNameForm(byte param0) {
         if (param0 != -33) {
-          ToolkitModel.a((byte) 65);
+          ToolkitModel.openDisplayNameForm((byte) 65);
         }
         if (TextureOperator.field_l != null) {
           TextureOperator.field_l.dismiss((byte) -7);
@@ -501,7 +501,7 @@ abstract class ToolkitModel {
         this.field_a = false;
     }
 
-    abstract boolean NA();
+    abstract boolean prepareAnimation();
 
     static {
         int var0 = 0;

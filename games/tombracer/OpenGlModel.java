@@ -158,7 +158,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void H(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -280,7 +280,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void FA(int param0) {
+    final void rotateX(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -2569,7 +2569,7 @@ final class OpenGlModel extends ToolkitModel {
     final void unlockForUpdate() {
     }
 
-    final boolean NA() {
+    final boolean prepareAnimation() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -3309,7 +3309,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void O(int param0, int param1, int param2) {
+    final void scale(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -3973,7 +3973,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    final void wa() {
+    final void finishAnimation() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;

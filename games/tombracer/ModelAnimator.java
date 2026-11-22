@@ -188,7 +188,7 @@ final class ModelAnimator {
           if (128 == this.scale) {
             return var7;
           }
-          var7.O(this.scale, this.scale, this.scale);
+          var7.scale(this.scale, this.scale, this.scale);
           return var7;
         }
         if (this.scale == 128) {
@@ -204,7 +204,7 @@ final class ModelAnimator {
         if (128 == this.scale) {
           return var8;
         }
-        var8.O(this.scale, this.scale, this.scale);
+        var8.scale(this.scale, this.scale, this.scale);
         return var8;
     }
 

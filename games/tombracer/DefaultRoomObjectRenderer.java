@@ -160,7 +160,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
               var28 = SpawnerBehaviour.getCategoryModel(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
-              var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
+              var28.scale(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.tintColours(-1, 10, 30, var26Lifetime2);
               ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
@@ -361,7 +361,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                 var11 = 15;
               }
               var13 = SpawnerBehaviour.getCategoryModel(var11, 12166, 7).copy((byte) 1, 526343, true);
-              var13.O(var10 << 2, 512, var10 << 2);
+              var13.scale(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
               ChatMessage.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));

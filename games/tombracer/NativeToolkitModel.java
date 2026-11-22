@@ -17,7 +17,7 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
         }
     }
 
-    final native void wa();
+    final native void finishAnimation();
 
     private final native void applyTransformNative(long param0, int param1, int[] param2, int param3, int param4, int param5, int param6, boolean param7);
 
@@ -46,11 +46,11 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
 
     final native void copyInto(NativeToolkitModel param0, NativeToolkitModel param1, int param2, boolean param3, boolean param4);
 
-    final native void O(int param0, int param1, int param2);
+    final native void scale(int param0, int param1, int param2);
 
     private final native void initializeNativeModel(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
 
-    final native boolean NA();
+    final native boolean prepareAnimation();
 
     final native void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
@@ -82,9 +82,9 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
 
     private final native void initializeEmptyNativeModel(NativeSoftwareGraphicsToolkit param0);
 
-    final native void FA(int param0);
+    final native void rotateX(int param0);
 
-    final native void H(int param0, int param1, int param2);
+    final native void translate(int param0, int param1, int param2);
 
     final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         if (param1 == null) {
